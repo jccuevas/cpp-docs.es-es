@@ -1,13 +1,10 @@
 ---
 title: Ver clases (Windows) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>Clases de vistas (Windows)
-`CView`y sus clases derivadas son ventanas secundarias que representan el área cliente de una ventana de marco. Vistas muestran los datos y aceptan la entrada de un documento.  
+`CView` y sus clases derivadas son ventanas secundarias que representan el área cliente de una ventana de marco. Vistas muestran los datos y aceptan la entrada de un documento.  
   
  Una clase de vista está asociada a una clase de documento y una clase de ventana de marco utilizando un objeto de plantilla de documento.  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  Una vista que contiene un control de árbol de Windows (consulte [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Un control de árbol muestra una lista jerárquica de los iconos y etiquetas organizadas de forma similar al panel izquierdo del explorador de archivos.  
   
 ## <a name="related-classes"></a>Clases relacionadas  
- `CSplitterWnd`le permite tener varias vistas dentro de una sola ventana de marco. `CPrintDialog`y `CPrintInfo` admiten la capacidad de impresión y la vista preliminar de vistas. `CRichEditDoc`y `CRichEditCntrItem` se usan con `CRichEditView` para implementar capacidades de contenedor OLE.  
+ `CSplitterWnd` le permite tener varias vistas dentro de una sola ventana de marco. `CPrintDialog` y `CPrintInfo` admiten la capacidad de impresión y la vista preliminar de vistas. `CRichEditDoc` y `CRichEditCntrItem` se usan con `CRichEditView` para implementar capacidades de contenedor OLE.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  Una ventana que el usuario puede dividir en varios paneles. Estos paneles se puede cambiar el tamaño por el usuario o un tamaño fijo.  

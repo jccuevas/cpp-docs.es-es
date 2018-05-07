@@ -1,12 +1,9 @@
 ---
 title: Clase CMDITabInfo | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDITabInfo
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b670b26855f5edcfb955d3dd0f8150a999f3a8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95706603c8fe8a8f53be8cd0db405cd649271f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmditabinfo-class"></a>Clase CMDITabInfo
 El `CMDITabInfo` clase se utiliza para pasar parámetros a [CMDIFrameWndEx:: Enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) método. Establezca miembros de esta clase para controlar el comportamiento de MDI con grupos con pestañas.  
@@ -102,7 +97,7 @@ class CMDITabInfo
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxmdiclientareawnd.h  
   
-##  <a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
+##  <a name="m_bactivetabclosebutton_"></a>  CMDITabInfo::m_bActiveTabCloseButton;  
  Especifica si un **cerrar** botón se muestra en la etiqueta de la pestaña activa.  
   
 ```  
@@ -112,7 +107,7 @@ BOOL m_bActiveTabCloseButton;
 ### <a name="remarks"></a>Comentarios  
  Si `TRUE`, se mostrará la etiqueta de la pestaña activa una **cerrar** botón. El **cerrar** botón se quitará de la esquina superior derecha del área de ficha. En caso contrario, no se mostrará la etiqueta de la pestaña activa una **cerrar** botón. El **cerrar** botón aparecerá en la esquina superior derecha del área de ficha.  
   
-##  <a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
+##  <a name="m_bautocolor"></a>  CMDITabInfo::m_bAutoColor  
  Especifica si cada ficha MDI tiene su propio color.  
   
 ```  
@@ -122,7 +117,7 @@ BOOL m_bAutoColor;
 ### <a name="remarks"></a>Comentarios  
  Si `TRUE`, cada ficha tendrá su propio color. El conjunto de colores se administra mediante la biblioteca MFC. En caso contrario, se muestran las fichas en blanco. El valor predeterminado es `FALSE`.  
   
-##  <a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
+##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu  
  Especifica si cada pestaña muestra un menú emergente que muestra una lista de los documentos abiertos en el borde derecho del área de ficha.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL m_bDocumentMenu;
 ### <a name="remarks"></a>Comentarios  
  Si `TRUE`, cada windows ficha muestra un menú emergente que muestra una lista de los documentos abiertos en el borde derecho del área de ficha; En caso contrario, la ventana de pestaña muestra los botones de desplazamiento en el borde derecho del área de ficha. El valor predeterminado es `FALSE`.  
   
-##  <a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
+##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap  
  Especifica si el usuario puede intercambiar las posiciones de las pestañas arrastrando.  
   
 ```  
@@ -142,14 +137,14 @@ BOOL m_bEnableTabSwap;
 ### <a name="remarks"></a>Comentarios  
  Si `TRUE`, el usuario puede cambiar las posiciones de las pestañas arrastrando las pestañas. En caso contrario, el usuario no puede cambiar las posiciones de las pestañas. El valor predeterminado es `TRUE`.  
   
-##  <a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
+##  <a name="m_bflatframe"></a>  CMDITabInfo::m_bFlatFrame  
  Especifica si cada ventana de la ficha tiene un período sin formato.  
   
 ```  
 BOOL m_bFlatFrame;  
 ```  
   
-##  <a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
+##  <a name="m_btabclosebutton"></a>  CMDITabInfo::m_bTabCloseButton  
  Especifica si cada ventana de la ficha muestra un **cerrar** botón.  
   
 ```  
@@ -159,7 +154,7 @@ BOOL m_bTabCloseButton;
 ### <a name="remarks"></a>Comentarios  
  Si `TRUE`, cada ventana de pestaña muestra la **cerrar** botón en el borde derecho de la pestaña. En caso contrario, el **cerrar** no se muestra el botón. El valor predeterminado es `TRUE`.  
   
-##  <a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
+##  <a name="m_btabcustomtooltips"></a>  CMDITabInfo::m_bTabCustomTooltips  
  Especifica si las pestañas muestran información sobre herramientas.  
   
 ```  
@@ -169,7 +164,7 @@ BOOL m_bTabCustomTooltips;
 ### <a name="remarks"></a>Comentarios  
  Si `TRUE`, la aplicación envía una `AFX_WM_ON_GET_TAB_TOOLTIP` mensaje al marco principal. Puede controlar este mensaje mediante el `ON_REGISTERED_MESSAGE` macro.  
   
-##  <a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
+##  <a name="m_btabicons"></a>  CMDITabInfo::m_bTabIcons  
  Especifica si se debe mostrar iconos en las fichas MDI.  
   
 ```  
@@ -179,7 +174,7 @@ BOOL m_bTabIcons;
 ### <a name="remarks"></a>Comentarios  
  Si `TRUE`, iconos se muestran en cada ficha MDI. En caso contrario, los iconos no se muestran en pestañas. El valor predeterminado es `FALSE`.  
   
-##  <a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
+##  <a name="m_ntabbordersize"></a>  CMDITabInfo::m_nTabBorderSize  
  Especifica el tamaño del borde, en píxeles, de cada ventana de la ficha.  
   
 ```  
@@ -189,7 +184,7 @@ int m_nTabBorderSize;
 ### <a name="remarks"></a>Comentarios  
  [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) devuelve el valor predeterminado.  
   
-##  <a name="m_style"></a>CMDITabInfo::m_style  
+##  <a name="m_style"></a>  CMDITabInfo::m_style  
  Especifica el estilo de las etiquetas de pestaña.  
   
 ```  
@@ -217,7 +212,7 @@ CMFCTabCtrl::Style m_style
  `STYLE_3D_ROUNDED_SCROLL`  
  Estilo 3D con etiquetas de pestaña redondear.  
   
-##  <a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
+##  <a name="m_tablocation"></a>  CMDITabInfo::m_tabLocation  
  Especifica si las etiquetas de las pestañas se encuentran en la parte superior o inferior de la página.  
   
 ```  
@@ -231,7 +226,7 @@ CMFCTabCtrl::Location m_tabLocation;
   
 -   LOCATION_TOP: las etiquetas de las pestañas se encuentran en la parte superior de la página  
   
-##  <a name="serialize"></a>CMDITabInfo::Serialize  
+##  <a name="serialize"></a>  CMDITabInfo::Serialize  
  Lee o escribe este objeto desde un archivo o en un archivo.  
   
 ```  

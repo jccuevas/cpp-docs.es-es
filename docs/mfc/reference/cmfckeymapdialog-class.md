@@ -1,12 +1,9 @@
 ---
 title: Clase CMFCKeyMapDialog | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCKeyMapDialog
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1965e5dd2d522175b3709449df9a0b8575e20c59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfckeymapdialog-class"></a>Clase CMFCKeyMapDialog
 La `CMFCKeyMapDialog` clase es compatible con un control que asigna comandos a teclas del teclado.  
@@ -104,7 +99,7 @@ class CMFCKeyMapDialog : public CDialogEx
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxkeymapdialog.h  
   
-##  <a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
+##  <a name="cmfckeymapdialog"></a>  CMFCKeyMapDialog::CMFCKeyMapDialog  
  Construye un objeto `CMFCKeyMapDialog`.  
   
 ```  
@@ -118,7 +113,7 @@ CMFCKeyMapDialog(
  Un puntero a la ventana primaria de la `CMFCKeyMapDialog` objeto.  
   
  [in] `bEnablePrint`  
- `TRUE`Si se puede imprimir la lista de teclas de aceleración; en caso contrario, `FALSE`. De manera predeterminada, es `FALSE`.  
+ `TRUE` Si se puede imprimir la lista de teclas de aceleración; en caso contrario, `FALSE`. De manera predeterminada, es `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -127,7 +122,7 @@ CMFCKeyMapDialog(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CMFCKeyMapDialog::DoModal  
+##  <a name="domodal"></a>  CMFCKeyMapDialog::DoModal  
  Muestra un cuadro de diálogo de asignación de teclado.  
   
 ```  
@@ -140,7 +135,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>Comentarios  
  El cuadro de diálogo de asignación de teclado permite seleccionar y asignar teclas de aceleración a varias categorías de comandos. Además, puede copiar las teclas de aceleración seleccionado y su descripción en el Portapapeles.  
   
-##  <a name="formatitem"></a>CMFCKeyMapDialog::FormatItem  
+##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem  
  Lo llama el marco para generar una cadena que describe una asignación de claves. De forma predeterminada, la cadena contiene el nombre de comando, las teclas de método abreviado que se utiliza y la descripción de la clave de acceso directo.  
   
 ```  
@@ -156,7 +151,7 @@ virtual CString FormatItem(int nItem) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys  
+##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys  
  Recupera un valor de cadena. La cadena contiene una lista de teclas de método abreviado que están asociados a un comando especificado.  
   
 ```  
@@ -172,7 +167,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem  
+##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem  
  Llamado por el marco de trabajo antes de que se inserta un nuevo elemento en un control de lista interna que admite el control de asignación de teclado.  
   
 ```  
@@ -190,7 +185,7 @@ virtual void OnInsertItem(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader  
+##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader  
  Lo llama el marco de trabajo para imprimir el encabezado para la asignación de teclado en una página nueva.  
   
 ```  
@@ -216,7 +211,7 @@ virtual int OnPrintHeader(
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo utiliza este método para imprimir la asignación de teclado. De forma predeterminada, este método imprime el número de página, el nombre de la aplicación y el título del cuadro de diálogo.  
   
-##  <a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem  
+##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem  
  Lo llama el marco de trabajo para imprimir un elemento de asignación de teclado.  
   
 ```  
@@ -242,7 +237,7 @@ virtual int OnPrintItem(
  El desplazamiento horizontal entre la izquierda de la página y la posición del elemento.  
   
  [in] `bCalcHeight`  
- `TRUE`para calcular el alto recomendado para el elemento de impresión; `FALSE` para truncar el elemento de impresión para que se ajuste el espacio predeterminado.  
+ `TRUE` para calcular el alto recomendado para el elemento de impresión; `FALSE` para truncar el elemento de impresión para que se ajuste el espacio predeterminado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El alto del elemento impreso.  
@@ -250,7 +245,7 @@ virtual int OnPrintItem(
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a este método para imprimir un elemento de cuadro de diálogo de mapa de claves. De forma predeterminada, este método imprime el nombre de comando del elemento, teclas de método abreviado y descripción del comando.  
   
-##  <a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns  
+##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns  
  Lo llama el marco para establecer los títulos de las columnas en el control de lista interna que admite el control de asignación de teclado.  
   
 ```  
@@ -260,7 +255,7 @@ virtual void OnSetColumns();
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, este método obtiene los títulos de las columnas de tres recursos. El título de columna de comando es de IDS_AFXBARRES_COMMAND, el título de columna de clave es de IDS_AFXBARRES_KEYS y el título de columna de descripción es de IDS_AFXBARRES_DESCRIPTION.  
   
-##  <a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap  
+##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap  
  Lo llama el marco cuando un usuario hace clic en el **impresión** botón.  
   
 ```  
@@ -270,7 +265,7 @@ virtual void PrintKeyMap();
 ### <a name="remarks"></a>Comentarios  
  El `PrintKeyMap` método imprime el mapa de claves. Se inicia un nuevo trabajo de impresión y, a continuación, se llama repetidamente el [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) y [CMFCKeyMapDialog::OnPrintItem](#onprintitem) métodos hasta que se imprimen todas las asignaciones de clave.  
   
-##  <a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth  
+##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth  
  Lo llama el marco para establecer el ancho de las columnas en el control de lista interna que admite el control de asignación de teclado.  
   
 ```  

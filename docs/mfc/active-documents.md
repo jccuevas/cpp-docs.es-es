@@ -1,13 +1,10 @@
 ---
 title: Documentos activos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents"></a>Documentos activos
 Documentos activos amplían la tecnología de documentos compuestos de OLE. Estas extensiones se proporcionan en forma de interfaces adicionales que administran vistas, para que funcione dentro de los contenedores y mantengan el control de su presentación y las funciones de impresión objetos. Este proceso permite mostrar documentos en marcos externos (por ejemplo, el enlazador de Microsoft Office o Microsoft Internet Explorer) y en marcos nativos (por ejemplo, los puertos de vista del producto).  
@@ -58,7 +53,7 @@ interface IOleDocument : IUnknown
   
  Un documento activo puede crear uno o más tipos de [vistas](#requirements_for_view_objects) de sus datos (por ejemplo, normal, esquema, diseño de página y así sucesivamente). Las vistas actúan como filtros a través del cual se pueden ver los datos. Incluso si el documento tiene solo un tipo de vista, todavía puede admitir varias vistas como medio para admitir la nueva funcionalidad de la ventana (por ejemplo, el **nueva ventana** de elemento en el **ventana** menú de Office aplicaciones).  
   
-##  <a name="requirements_for_active_documents"></a>Requisitos de documentos activos  
+##  <a name="requirements_for_active_documents"></a> Requisitos de documentos activos  
  Un documento activo que se pueden mostrar en un contenedor de documentos activos debe:  
   
 -   Usar archivos compuestos de OLE como mecanismo de almacenamiento mediante la implementación de `IPersistStorage`.  
@@ -71,7 +66,7 @@ interface IOleDocument : IUnknown
   
  El conocimiento de cuándo y cómo usar las interfaces del contenedor está implícito en estos requisitos.  
   
-##  <a name="requirements_for_view_objects"></a>Requisitos para los objetos de vista  
+##  <a name="requirements_for_view_objects"></a> Requisitos para los objetos de vista  
  Un documento activo puede crear una o varias vistas de sus datos. Funcionalmente, estas vistas son similares a los puertos a un método concreto para mostrar los datos. Si un documento activo sólo admite una vista única, el documento activo y esa vista solo se pueden implementar mediante una sola clase. **IOleDocument:: CreateView** devuelve el mismo objeto `IOleDocumentView` puntero de interfaz.  
   
  Para representar dentro de un contenedor de documentos activos, debe ser compatible con un componente de vista **IOleInPlaceObject** y **IOleInPlaceActiveObject** además `IOleDocumentView`:  

@@ -1,13 +1,10 @@
 ---
 title: 'Servidores: Implementar documentos de servidor | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4b8618e4951ac499d504cc68b0552ea45eed03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-server-documents"></a>Servidores: Implementar documentos de servidor
 En este artículo se explica los pasos que debe seguir para implementar correctamente un documento de servidor si no se especificó la opción de servidor OLE en el Asistente para aplicaciones.  
@@ -39,7 +34,7 @@ En este artículo se explica los pasos que debe seguir para implementar correcta
   
 3.  Implemente el `OnGetEmbeddedItem` función de miembro de la clase de documento de servidor.  
   
-     `OnGetEmbeddedItem`se llama cuando el usuario de una aplicación de contenedor crea o edita un elemento incrustado. Debe devolver un elemento que representa todo el documento. Debe ser un objeto de su `COleServerItem`-clase derivada.  
+     `OnGetEmbeddedItem` se llama cuando el usuario de una aplicación de contenedor crea o edita un elemento incrustado. Debe devolver un elemento que representa todo el documento. Debe ser un objeto de su `COleServerItem`-clase derivada.  
   
 4.  Invalidar el `Serialize` función de miembro para serializar el contenido del documento. No es necesario serializar la lista de elementos del servidor a menos que esté usando para representar los datos nativos en el documento. Para obtener más información, consulte *implementar elementos de servidor* en el artículo [servidores: elementos de servidor](../mfc/servers-server-items.md).  
   

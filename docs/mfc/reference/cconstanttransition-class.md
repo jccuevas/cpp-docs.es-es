@@ -1,12 +1,9 @@
 ---
 title: Clase CConstantTransition | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CConstantTransition
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafd1276b8d4476f5021b3d83a84a1884d78870d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aae427499f443246fe5b8e1c40ac9c3e7334c37d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconstanttransition-class"></a>Clase CConstantTransition
 Encapsula una transición constante.  
@@ -75,7 +70,7 @@ class CConstantTransition : public CBaseTransition;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxanimationcontroller.h  
   
-##  <a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
+##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
  Construye un objeto de transición e inicializa su duración.  
   
 ```  
@@ -86,7 +81,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
  `duration`  
  La duración de la transición.  
   
-##  <a name="create"></a>CConstantTransition::Create  
+##  <a name="create"></a>  CConstantTransition::Create  
  Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
   
 ```  
@@ -102,7 +97,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la transición se crea correctamente; en caso contrario, FALSE.  
   
-##  <a name="m_duration"></a>CConstantTransition::m_duration  
+##  <a name="m_duration"></a>  CConstantTransition::m_duration  
  La duración de la transición.  
   
 ```  

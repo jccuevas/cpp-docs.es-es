@@ -1,13 +1,10 @@
 ---
 title: Compilar en el marco | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44101d4b0c9ab9bf5766514a75ef510bc5b8d7e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c10b9d0903901cfe564b161a250d58078d5a08c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-on-the-framework"></a>Compilar en el marco
 Su rol en la configuración de una aplicación con el marco de trabajo MFC es proporcionar el código de origen específica de la aplicación y para conectar los componentes definiendo qué mensajes y comandos a los que responden. Usar el lenguaje C++ y las técnicas estándar de C++ para derivar sus propias clases específicas de la aplicación de los proporcionados por la biblioteca de clases y para reemplazar y extender el comportamiento de la clase base.  

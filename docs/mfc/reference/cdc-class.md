@@ -2,11 +2,8 @@
 title: CDC (clase) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>CDC (clase)
 Define una clase de objetos en el contexto del dispositivo.  
@@ -449,10 +444,10 @@ class CDC : public CObject
 |[CDC::AddMetaFileComment](#addmetafilecomment)|Copia el comentario de un búfer en un metarchivo de formato mejorado.|  
 |[CDC::AlphaBlend](#alphablend)|Muestra los mapas de bits que tienen píxeles transparentes o semitransparentes.|  
 |[CDC::AngleArc](#anglearc)|Dibuja un segmento de línea y un arco y mueve la posición actual hasta el punto final del arco.|  
-|[CDC::Arc](#arc)|Dibuja un arco elíptico.|  
+|[CDC::ARC](#arc)|Dibuja un arco elíptico.|  
 |[CDC::ArcTo](#arcto)|Dibuja un arco elíptico. Esta función es similar a `Arc`, excepto en que se actualiza la posición actual.|  
 |[CDC::Attach](#attach)|Asocia un contexto de dispositivo de Windows a este `CDC` objeto.|  
-|[CDC::BeginPath](#beginpath)|Abre un corchete de cierre de la ruta de acceso en el contexto de dispositivo.|  
+|[CDC:: beginpath](#beginpath)|Abre un corchete de cierre de la ruta de acceso en el contexto de dispositivo.|  
 |[CDC::BitBlt](#bitblt)|Copia un mapa de bits de un contexto de dispositivo especificado.|  
 |[CDC::Chord](#chord)|Dibuja una cuerda (una figura cerrada limitada por la intersección de una elipse y un segmento de línea).|  
 |[CDC::CloseFigure](#closefigure)|Cierra una figura abierta en una ruta de acceso.|  
@@ -478,14 +473,14 @@ class CDC : public CObject
 |[CDC::EndDoc](#enddoc)|Finaliza un trabajo de impresión iniciado por el `StartDoc` función miembro.|  
 |[CDC::EndPage](#endpage)|Indica al controlador de dispositivo que está finalizando una página.|  
 |[CDC::EndPath](#endpath)|Cierra un corchete de cierre de la ruta de acceso y selecciona la ruta de acceso definido por el corchete de cierre en el contexto de dispositivo.|  
-|[CDC::EnumObjects](#enumobjects)|Enumera los lápices y pinceles disponibles en un contexto de dispositivo.|  
+|[CDC:: EnumObjects](#enumobjects)|Enumera los lápices y pinceles disponibles en un contexto de dispositivo.|  
 |[CDC::Escape](#escape)|Permite a las aplicaciones tener acceso a funciones que no están disponibles directamente desde un dispositivo determinado a través de GDI. También permite el acceso a las funciones de escape de Windows. Escape las llamadas realizadas por una aplicación se convierten y se envían al controlador de dispositivo.|  
 |[CDC::ExcludeClipRect](#excludecliprect)|Crea una nueva región de recorte que consta de la región de recorte existente menos el rectángulo especificado.|  
 |[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Evita dibujo en áreas no válidas de una ventana mediante la exclusión de una región actualizada en la ventana de una región de recorte.|  
 |[CDC::ExtFloodFill](#extfloodfill)|Rellena un área con el pincel actual. Proporciona más flexibilidad que la [CDC::FloodFill](#floodfill) función miembro.|  
 |[CDC::ExtTextOut](#exttextout)|Escribe una cadena de caracteres dentro de una región rectangular con la fuente seleccionada actualmente.|  
 |[CDC::FillPath](#fillpath)|Las figuras abiertas en la ruta de acceso actual se cierra y rellena el interior de la ruta de acceso con el pincel actual y el modo de relleno de polígono.|  
-|[CDC::FillRect](#fillrect)|Rellena un rectángulo especificado mediante el uso de un pincel concreto.|  
+|[CDC::fillRect](#fillrect)|Rellena un rectángulo especificado mediante el uso de un pincel concreto.|  
 |[CDC::FillRgn](#fillrgn)|Rellena una región específica con el pincel especificado.|  
 |[CDC::FillSolidRect](#fillsolidrect)|Rellena un rectángulo con un color sólido.|  
 |[CDC::FlattenPath](#flattenpath)|Transforma las curvas de la ruta seleccionada en el contexto de dispositivo actual y cada curva se convierte en una secuencia de líneas.|  
@@ -530,7 +525,7 @@ class CDC : public CObject
 |[CDC::GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|Calcula el ancho y alto de una cadena de caracteres en el contexto de dispositivo de salida.|  
 |[CDC::GetOutputTextExtent](#getoutputtextextent)|Calcula el ancho y alto de una línea de texto en el contexto de dispositivo de salida con la fuente actual para determinar las dimensiones.|  
 |[CDC::GetOutputTextMetrics](#getoutputtextmetrics)|Recupera las métricas para la fuente actual desde el contexto de dispositivo de salida.|  
-|[CDC::GetPath](#getpath)|Recupera las coordenadas que definen los extremos de líneas y los puntos de control de curvas que se encuentra en la ruta de acceso que se ha seleccionado en el contexto de dispositivo.|  
+|[CDC::getPath](#getpath)|Recupera las coordenadas que definen los extremos de líneas y los puntos de control de curvas que se encuentra en la ruta de acceso que se ha seleccionado en el contexto de dispositivo.|  
 |[CDC::GetPixel](#getpixel)|Recupera el valor de color RGB del píxel en el punto especificado.|  
 |[CDC::GetPolyFillMode](#getpolyfillmode)|Recupera el modo de relleno de polígono actual.|  
 |[CDC::GetROP2](#getrop2)|Recupera el modo de dibujo actual.|  
@@ -552,7 +547,7 @@ class CDC : public CObject
 |[CDC::GetWindowOrg](#getwindoworg)|Recupera las coordenadas x e y del origen de la ventana asociada.|  
 |[CDC::GetWorldTransform](#getworldtransform)|Recupera el espacio universal actual a la transformación de espacio en la página.|  
 |[CDC::GradientFill](#gradientfill)|Rellena las estructuras de triángulo y el rectángulo con un color gradating.|  
-|[CDC::GrayString](#graystring)|Dibuja atenuado texto (gris) en la ubicación especificada.|  
+|[CDC:: graystring](#graystring)|Dibuja atenuado texto (gris) en la ubicación especificada.|  
 |[CDC::HIMETRICtoDP](#himetrictodp)|Convierte **HIMETRIC** unidades en unidades del dispositivo.|  
 |[CDC::HIMETRICtoLP](#himetrictolp)|Convierte **HIMETRIC** unidades en unidades lógicas.|  
 |[CDC::IntersectClipRect](#intersectcliprect)|Crea una nueva región de recorte que forman la intersección de la región actual y un rectángulo.|  
@@ -570,7 +565,7 @@ class CDC : public CObject
 |[CDC::OffsetWindowOrg](#offsetwindoworg)|Modifica el origen de la ventana con respecto a las coordenadas del origen de ventana actual.|  
 |[CDC::PaintRgn](#paintrgn)|Rellena una región con el pincel seleccionado.|  
 |[CDC::PatBlt](#patblt)|Crea un patrón de bits.|  
-|[CDC::Pie](#pie)|Dibuja una cuña en forma de gráfico circular.|  
+|[CDC::pie](#pie)|Dibuja una cuña en forma de gráfico circular.|  
 |[CDC::PlayMetaFile](#playmetafile)|Reproduce el contenido del metarchivo especificado en el dispositivo especificado. La versión mejorada de `PlayMetaFile` muestra la imagen almacenada en el metarchivo con formato mejorado determinado. Metarchivo se puede reproducir cualquier número de veces.|  
 |[CDC::PlgBlt](#plgblt)|Realiza a una transferencia de bloque de bits de los bits de datos de color desde el rectángulo especificado en el contexto de dispositivo de origen al paralelogramo especificado en el contexto de dispositivo especificado.|  
 |[CDC::PolyBezier](#polybezier)|Dibuja una o varias Bzier b-spline. La posición actual no se utiliza ni se actualiza.|  
@@ -853,7 +848,7 @@ BOOL AngleArc(
   
  Si el ángulo de barrido es mayor que 360 grados el arco se trazará varias veces. Esta función dibuja líneas mediante el uso de la pluma actual. No se ha rellenado la ilustración.  
   
-##  <a name="arc"></a>  CDC::Arc  
+##  <a name="arc"></a>  CDC::ARC  
  Dibuja un arco elíptico.  
   
 ```  
@@ -999,7 +994,7 @@ BOOL Attach(HDC hDC);
 ### <a name="remarks"></a>Comentarios  
  El `hDC` se almacena tanto en `m_hDC`, el contexto de dispositivo de salida y en `m_hAttribDC`, el contexto de dispositivo de atributo.  
   
-##  <a name="beginpath"></a>  CDC::BeginPath  
+##  <a name="beginpath"></a>  CDC:: beginpath  
  Abre un corchete de cierre de la ruta de acceso en el contexto de dispositivo.  
   
 ```  
@@ -1017,7 +1012,7 @@ BOOL BeginPath();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#30](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]  
   
-##  <a name="bitblt"></a>  CDC::BitBlt  
+##  <a name="bitblt"></a>  CDC:: BitBlt  
  Copia un mapa de bits desde el contexto de dispositivo de origen en este contexto de dispositivo actual.  
   
 ```  
@@ -1370,7 +1365,7 @@ void Draw3dRect(
  *y*  
  Especifica la coordenada y lógica de la esquina superior izquierda del rectángulo tridimensional.  
   
- cx  
+ CX  
  Especifica el ancho del rectángulo tridimensional.  
   
  CY  
@@ -1723,7 +1718,7 @@ BOOL DrawState(
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-##  <a name="drawtext"></a>  CDC::DrawText  
+##  <a name="drawtext"></a>  CDC:: DrawText  
  Llame a esta función miembro para dar formato al texto en el rectángulo especificado. Para especificar opciones de formato adicionales, use [CDC::DrawTextEx](#drawtextex).  
   
 ```  
@@ -1911,7 +1906,7 @@ BOOL EndPath();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CDC:: beginpath](#beginpath).  
   
-##  <a name="enumobjects"></a>  CDC::EnumObjects  
+##  <a name="enumobjects"></a>  CDC:: EnumObjects  
  Enumera los lápices y pinceles disponibles en un contexto de dispositivo.  
   
 ```  
@@ -1954,7 +1949,7 @@ int EnumObjects(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#35](../../mfc/codesnippet/cpp/cdc-class_7.cpp)]  
   
-##  <a name="escape"></a>  CDC::Escape  
+##  <a name="escape"></a>  CDC::escape  
  Esta función miembro es prácticamente obsoleta para la programación de Win32.  
   
 ```  
@@ -2212,7 +2207,7 @@ BOOL FillPath();
 ### <a name="remarks"></a>Comentarios  
  Después de que se rellena el interior, se descarta la ruta de acceso desde el contexto de dispositivo.  
   
-##  <a name="fillrect"></a>  CDC::FillRect  
+##  <a name="fillrect"></a>  CDC::fillRect  
  Llame a esta función miembro para rellenar un rectángulo determinado con el pincel especificado.  
   
 ```  
@@ -2343,7 +2338,7 @@ BOOL FloodFill(
   
  El `ExtFloodFill` función ofrece una funcionalidad similar pero más flexibilidad.  
   
-##  <a name="framerect"></a>  CDC::FrameRect  
+##  <a name="framerect"></a>  FrameRect  
  Dibuja un borde alrededor del rectángulo especificado por `lpRect`.  
   
 ```  
@@ -2852,7 +2847,7 @@ COLORREF GetDCPenColor() const;
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro usa la función de Win32 [GetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd144875), tal y como se describe en el SDK de Windows.  
   
-##  <a name="getdevicecaps"></a>  CDC::GetDeviceCaps  
+##  <a name="getdevicecaps"></a>  CDC:: GetDeviceCaps  
  Recupera una amplia gama de información específica del dispositivo sobre el dispositivo de pantalla.  
   
 ```  
@@ -3217,7 +3212,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la función se realiza correctamente; de lo contrario, es 0.  
   
-##  <a name="getpath"></a>  CDC::GetPath  
+##  <a name="getpath"></a>  CDC::getPath  
  Recupera las coordenadas que definen los extremos de líneas y los puntos de control de curvas que se encuentra en la ruta de acceso que se ha seleccionado en el contexto de dispositivo.  
   
 ```  
@@ -3258,7 +3253,7 @@ int GetPath(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CDC:: beginpath](#beginpath).  
   
-##  <a name="getpixel"></a>  CDC::GetPixel  
+##  <a name="getpixel"></a>  CDC::getPixel  
  Recupera el valor de color RGB del píxel en el punto especificado por *x* y *y*.  
   
 ```  
@@ -3702,7 +3697,7 @@ BOOL GradientFill(
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, vea `GradientFill` en el SDK de Windows.  
   
-##  <a name="graystring"></a>  CDC::GrayString  
+##  <a name="graystring"></a>  CDC:: graystring  
  Dibuja atenuado texto (gris) en la ubicación especificada por escribir el texto en un mapa de bits de memoria, atenuar el mapa de bits y, a continuación, copia el mapa de bits a la pantalla.  
   
 ```  
@@ -4237,7 +4232,7 @@ BOOL PatBlt(
   
  No todos los contextos de dispositivo admiten la `PatBlt` función. Para determinar si un contexto de dispositivo es compatible con `PatBlt`, llame a la `GetDeviceCaps` función miembro con el **RASTERCAPS** de índice y compruebe el valor devuelto para la **RC_BITBLT** marca.  
   
-##  <a name="pie"></a>  CDC::Pie  
+##  <a name="pie"></a>  CDC::pie  
  Dibuja una cuña en forma de gráfico circular dibujando un arco elíptico cuyo centro y dos puntos de conexión están unidos por líneas.  
   
 ```  
@@ -4648,7 +4643,7 @@ BOOL PtVisible(POINT point) const;
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el punto especificado está dentro de la región de recorte; en caso contrario es 0.  
   
-##  <a name="queryabort"></a>  CDC::QueryAbort  
+##  <a name="queryabort"></a>  CDC:: QueryAbort  
  Llama a la función de anulación instalada por la [ayudar a](#setabortproc) función miembro para una aplicación de impresión y las consultas si se debe finalizar la impresión.  
   
 ```  
@@ -5050,7 +5045,7 @@ int SelectClipRgn(
   
  Pueden usar las aplicaciones que deben realizar el escalado de objetos gráficos en el GDI la **GETSCALINGFACTOR** escape de impresora para determinar el factor de escala. Este factor de escala afecta a recorte. Si se usa una región de recorte de gráficos, GDI divide las coordenadas según el factor de escala. Si se usa la región de recorte de texto, GDI no realiza ningún ajuste de escala. Un factor de escala de 1 hace que las coordenadas se divida por 2. un factor de escala de 2 hace que las coordenadas que se divide por 4; y así sucesivamente.  
   
-##  <a name="selectobject"></a>  CDC::SelectObject  
+##  <a name="selectobject"></a>  CDC:: SelectObject  
  Selecciona un objeto en el contexto de dispositivo.  
   
 ```  
@@ -5173,7 +5168,7 @@ virtual CGdiObject* SelectStockObject(int nIndex);
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la `CGdiObject` objeto que se ha reemplazado si la función se realiza correctamente. Es el objeto real al que señala un [CPen](../../mfc/reference/cpen-class.md), [CBrush](../../mfc/reference/cbrush-class.md), o [CFont](../../mfc/reference/cfont-class.md) objeto. Si la llamada se realiza correctamente, el valor devuelto es **NULL**.  
   
-##  <a name="setabortproc"></a>  CDC::SetAbortProc  
+##  <a name="setabortproc"></a>  CDC:: SETABORTPROC  
  Instala el procedimiento de anulación para el trabajo de impresión.  
   
 ```  
@@ -5233,9 +5228,9 @@ int SetArcDirection(int nArcDirection);
   
 |Arco|Circular|  
 |---------|---------|  
-|`ArcTo`|**Rectangle**|  
+|`ArcTo`|**rectángulo**|  
 |`Chord`|`RoundRect`|  
-|**Ellipse**||  
+|**elipse**||  
   
 ##  <a name="setattribdc"></a>  CDC::SetAttribDC  
  Llame a esta función para establecer el contexto de dispositivo de atributo, `m_hAttribDC`.  
@@ -5710,7 +5705,7 @@ int SetStretchBltMode(int nStretchMode);
 |-----------|-----------------|  
 |**BLACKONWHITE**|Realiza una operación AND booleana mediante los valores de color de los píxeles se eliminaron y existentes. Si el mapa de bits es un mapa de bits monocromo, este modo conserva píxeles negros a costa de píxeles blancos.|  
 |**COLORONCOLOR**|Elimina los píxeles. Este modo elimina se eliminaron todas las líneas de píxeles sin intentar conservar su información.|  
-|**HALFTONE**|Asigna píxeles desde el rectángulo de origen en bloques de píxeles en el rectángulo de destino. El color medio sobre el bloque de destino de píxeles aproxima el color de los píxeles de origen.|  
+|**MEDIOS TONOS**|Asigna píxeles desde el rectángulo de origen en bloques de píxeles en el rectángulo de destino. El color medio sobre el bloque de destino de píxeles aproxima el color de los píxeles de origen.|  
 ||Después de establecer el **medios TONOS** ajuste modo, una aplicación debe llamar a la función de Win32 [SetBrushOrgEx](http://msdn.microsoft.com/library/windows/desktop/dd162967) para establecer el origen del pincel. Si se produce un error al hacerlo, se produce desalineación de pincel.|  
 |**STRETCH_ANDSCANS**|**Windows 95 ó 98**: igual que **BLACKONWHITE**|  
 |**STRETCH_DELETESCANS**|**Windows 95 ó 98**: igual que **COLORONCOLOR**|  
@@ -6237,7 +6232,7 @@ CSize TabbedTextOut(
   
  De forma predeterminada, la función no usa ni actualiza la posición actual. Si una aplicación necesita actualizar la posición actual cuando llama a la función, la aplicación puede llamar a la [SetTextAlign](#settextalign) función miembro con `nFlags` establecido en **TA_UPDATECP**. Cuando se establece esta marca, Windows pasa por alto el *x* y *y* parámetros en las llamadas subsiguientes a `TabbedTextOut`, utilizando la posición actual en su lugar.  
   
-##  <a name="textout"></a>  CDC::TextOut  
+##  <a name="textout"></a>  CDC:: TextOut  
  Escribe una cadena de caracteres en la ubicación especificada usando la fuente seleccionada actualmente.  
   
 ```  

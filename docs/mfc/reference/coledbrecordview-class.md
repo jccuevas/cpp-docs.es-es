@@ -1,12 +1,9 @@
 ---
 title: COleDBRecordView (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDBRecordView
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd827d729af5186d6872536cdaa3d8863d1f8d10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (clase)
 Una vista que muestra registros de una base de datos en controles.  
@@ -58,14 +53,14 @@ class COleDBRecordView : public CFormView
 |[COleDBRecordView::OnMove](#onmove)|Actualiza el registro actual (si se ha cambiado) en el origen de datos y, a continuación, se mueve al registro especificado (siguiente, anterior, primera o última).|  
   
 ## <a name="remarks"></a>Comentarios  
- La vista es una vista de formulario directamente conectada a un `CRowset` objeto. La vista se crea a partir de un recurso de plantilla de cuadro de diálogo y muestra los campos de la `CRowset` objeto en los controles de la plantilla de cuadro de diálogo. El `COleDBRecordView` objeto utiliza el intercambio de datos de cuadros de diálogo (DDX) y la funcionalidad de exploración integrada en `CRowset`, para automatizar el movimiento de datos entre los controles en el formulario y los campos del conjunto de filas. `COleDBRecordView`También proporciona una implementación predeterminada para desplazarse a la primera, siguiente, anterior o el último registro y una interfaz para actualizar el registro actualmente en la vista.  
+ La vista es una vista de formulario directamente conectada a un `CRowset` objeto. La vista se crea a partir de un recurso de plantilla de cuadro de diálogo y muestra los campos de la `CRowset` objeto en los controles de la plantilla de cuadro de diálogo. El `COleDBRecordView` objeto utiliza el intercambio de datos de cuadros de diálogo (DDX) y la funcionalidad de exploración integrada en `CRowset`, para automatizar el movimiento de datos entre los controles en el formulario y los campos del conjunto de filas. `COleDBRecordView` También proporciona una implementación predeterminada para desplazarse a la primera, siguiente, anterior o el último registro y una interfaz para actualizar el registro actualmente en la vista.  
   
- Puede utilizar funciones DDX con **COleDbRecordView** para obtener datos directamente desde el conjunto de registros de base de datos y mostrarlos en un control de cuadro de diálogo. Debe utilizar el **DDX_\***  métodos (como `DDX_Text`), no el **DDX_Field\***  funciones (como `DDX_FieldText`) con **COleDbRecordView** . `DDX_FieldText`no funcionará con **COleDbRecordView** porque `DDX_FieldText` toma un argumento adicional de tipo **CRecordset\***  (para `CRecordView`) o **CDaoRecordset \***  (para `CDaoRecordView`).  
+ Puede utilizar funciones DDX con **COleDbRecordView** para obtener datos directamente desde el conjunto de registros de base de datos y mostrarlos en un control de cuadro de diálogo. Debe utilizar el **DDX_\***  métodos (como `DDX_Text`), no el **DDX_Field\***  funciones (como `DDX_FieldText`) con **COleDbRecordView** . `DDX_FieldText` no funcionará con **COleDbRecordView** porque `DDX_FieldText` toma un argumento adicional de tipo **CRecordset\***  (para `CRecordView`) o **CDaoRecordset\***  (para `CDaoRecordView`).  
   
 > [!NOTE]
 >  Si está trabajando con las clases de Data Access Objects (DAO) en lugar de las clases de plantilla de consumidor OLE DB, utilice la clase [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) en su lugar. Para obtener más información, vea el artículo [información general: programación de base de datos](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView`realiza un seguimiento de la posición del usuario en el conjunto de filas para que la vista de registros pueda actualizar la interfaz de usuario. Cuando el usuario se desplaza a cualquiera de los extremos del conjunto de filas, la vista de registros deshabilita objetos de la interfaz de usuario, como botones de barra de herramientas o elementos de menú, para mover más en la misma dirección.  
+ `COleDBRecordView` realiza un seguimiento de la posición del usuario en el conjunto de filas para que la vista de registros pueda actualizar la interfaz de usuario. Cuando el usuario se desplaza a cualquiera de los extremos del conjunto de filas, la vista de registros deshabilita objetos de la interfaz de usuario, como botones de barra de herramientas o elementos de menú, para mover más en la misma dirección.  
   
  Para obtener más información acerca de las clases de conjunto de filas, vea el [utilizando OLE DB plantillas de consumidor](../../data/oledb/ole-db-consumer-templates-cpp.md) artículo.  
   
@@ -87,7 +82,7 @@ class COleDBRecordView : public CFormView
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxoledb.h  
   
-##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
+##  <a name="coledbrecordview"></a>  COleDBRecordView::COleDBRecordView  
  Construye un objeto `COleDBRecordView`.  
   
 ```  
@@ -108,7 +103,7 @@ COleDBRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  La clase derivada *debe* proporcionar su propio constructor. En el constructor, invocar el constructor, `COleDBRecordView::COleDBRecordView`, con el nombre del recurso o el identificador como un argumento.  
   
-##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
+##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset  
  Devuelve un identificador para el **<> CRowset** objeto asociado a la vista de registros.  
   
 ```  
@@ -130,7 +125,7 @@ virtual CRowset<>* OnGetRowset() = 0;
   
  Para obtener más información y ejemplos, vea el artículo [vistas de registros: utilizar una vista de registros](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>COleDBRecordView::OnMove  
+##  <a name="onmove"></a>  COleDBRecordView::OnMove  
  Se desplaza a un registro diferente en el conjunto de filas y mostrar sus campos en los controles del registro ver.  
   
 ```  
@@ -141,13 +136,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Uno de los siguientes valores de Id. de comando estándar:  
   
-- `ID_RECORD_FIRST`Migre al primer registro del conjunto de registros.  
+- `ID_RECORD_FIRST` Migre al primer registro del conjunto de registros.  
   
-- `ID_RECORD_LAST`Mueva hasta el último registro en el conjunto de registros.  
+- `ID_RECORD_LAST` Mueva hasta el último registro en el conjunto de registros.  
   
-- `ID_RECORD_NEXT`Mueva hasta el siguiente registro del conjunto de registros.  
+- `ID_RECORD_NEXT` Mueva hasta el siguiente registro del conjunto de registros.  
   
-- `ID_RECORD_PREV`Migre al registro anterior en el conjunto de registros.  
+- `ID_RECORD_PREV` Migre al registro anterior en el conjunto de registros.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el movimiento se realizó correctamente; en caso contrario es 0 si se denegó la solicitud de movimiento.  

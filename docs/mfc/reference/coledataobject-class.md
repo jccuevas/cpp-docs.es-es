@@ -1,12 +1,9 @@
 ---
 title: Clase COleDataObject | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDataObject
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f85a1e6992e8d679401f4e0f97080efcf991446
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledataobject-class"></a>Clase COleDataObject
 Se utiliza en las transferencias de datos para recuperar datos en diferentes formatos del Portapapeles, mediante arrastrar y colocar o a partir de un elemento OLE incrustado.  
@@ -82,7 +77,7 @@ class COleDataObject
 |[COleDataObject::Release](#release)|Desasocia y libera asociado `IDataObject` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `COleDataObject`no tiene una clase base.  
+ `COleDataObject` no tiene una clase base.  
   
  Estos tipos de transferencias de datos incluyen un origen y un destino. El origen de datos se implementa como un objeto de la [COleDataSource](../../mfc/reference/coledatasource-class.md) clase. Cada vez que una aplicación de destino tiene datos colocados en él o se solicitará que realice una operación de pegar desde el Portapapeles, un objeto de la `COleDataObject` debe crearse la clase.  
   
@@ -98,7 +93,7 @@ class COleDataObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxole.h  
   
-##  <a name="attach"></a>COleDataObject::Attach  
+##  <a name="attach"></a>  COleDataObject::Attach  
  Llame a esta función para asociar el `COleDataObject` objeto con un objeto de datos OLE.  
   
 ```  
@@ -117,7 +112,7 @@ void Attach(
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) del SDK de Windows.  
   
-##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard  
+##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard  
  Llame a esta función para asociar el objeto de datos que se encuentra actualmente en el Portapapeles para la `COleDataObject` objeto.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL AttachClipboard();
 > [!NOTE]
 >  Llamar a esta función bloquea el Portapapeles hasta que se libere este objeto de datos. Se libera el objeto de datos en el destructor para la `COleDataObject`. Para obtener más información, consulte [llamar a OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) y [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) en la documentación de Win32.  
   
-##  <a name="beginenumformats"></a>COleDataObject:: BeginEnumFormats  
+##  <a name="beginenumformats"></a>  COleDataObject:: BeginEnumFormats  
  Llame a esta función para prepararse para las llamadas subsiguientes a `GetNextFormat` para recuperar una lista de formatos de datos desde el elemento.  
   
 ```  
@@ -146,7 +141,7 @@ void BeginEnumFormats();
   
  Para obtener más información, consulte [IDataObject:: EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) del SDK de Windows.  
   
-##  <a name="coledataobject"></a>COleDataObject::COleDataObject  
+##  <a name="coledataobject"></a>  COleDataObject::COleDataObject  
  Construye un objeto `COleDataObject`.  
   
 ```  
@@ -159,7 +154,7 @@ COleDataObject();
 > [!NOTE]
 >  Dado que uno de los parámetros a los controladores de arrastrar y colocar es un puntero a un `COleDataObject`, no es necesario llamar a este constructor para admitir de arrastrar y colocar.  
   
-##  <a name="detach"></a>COleDataObject::Detach  
+##  <a name="detach"></a>  COleDataObject::Detach  
  Llame a esta función para separar el `COleDataObject` objeto de su objeto de datos OLE asociado sin liberar el objeto de datos.  
   
 ```  
@@ -171,7 +166,7 @@ LPDATAOBJECT Detach();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getdata"></a>COleDataObject::GetData  
+##  <a name="getdata"></a>  COleDataObject::GetData  
  Llame a esta función para recuperar datos desde el elemento en el formato especificado.  
   
 ```  
@@ -199,7 +194,7 @@ BOOL GetData(
   
  Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) del SDK de Windows.  
   
-##  <a name="getfiledata"></a>COleDataObject::GetFileData  
+##  <a name="getfiledata"></a>  COleDataObject::GetFileData  
  Llame a esta función para crear un `CFile` o `CFile`-objeto derivado y recuperar datos en el formato especificado en un `CFile` puntero.  
   
 ```  
@@ -228,7 +223,7 @@ CFile* GetFileData(
   
  Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) del SDK de Windows.  
   
-##  <a name="getglobaldata"></a>COleDataObject::GetGlobalData  
+##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData  
  Llame a esta función para asignar un bloque de memoria global y recuperar datos en el formato especificado en un `HGLOBAL`.  
   
 ```  
@@ -252,7 +247,7 @@ HGLOBAL GetGlobalData(
   
  Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) del SDK de Windows.  
   
-##  <a name="getnextformat"></a>COleDataObject::GetNextFormat  
+##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat  
  Llame a esta función repetidamente con el fin de obtener todos los formatos disponibles para recuperar datos desde el elemento.  
   
 ```  
@@ -273,7 +268,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
  Para obtener más información, consulte [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) en el SDK de Windows.  
   
-##  <a name="isdataavailable"></a>COleDataObject:: IsDataAvailable  
+##  <a name="isdataavailable"></a>  COleDataObject:: IsDataAvailable  
  Llame a esta función para determinar si un formato determinado está disponible para recuperar datos desde el elemento OLE.  
   
 ```  
@@ -302,7 +297,7 @@ BOOL IsDataAvailable(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).  
   
-##  <a name="release"></a>COleDataObject::Release  
+##  <a name="release"></a>  COleDataObject::Release  
  Llame a esta función para liberar la propiedad de la [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) objeto que estaba asociado previamente a la `COleDataObject` objeto.  
   
 ```  

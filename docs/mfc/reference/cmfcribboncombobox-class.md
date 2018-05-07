@@ -1,12 +1,9 @@
 ---
 title: Clase CMFCRibbonComboBox | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonComboBox
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f748630549c0a26a2818bc7c96e5162d7d36ed4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncombobox-class"></a>Clase CMFCRibbonComboBox
 La `CMFCRibbonComboBox` clase implementa un control de cuadro combinado que se puede agregar a una barra de cinta de opciones, un panel de cinta o un menú emergente de la cinta de opciones.  
@@ -121,7 +116,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxribboncombobox.h  
   
-##  <a name="additem"></a>CMFCRibbonComboBox::AddItem  
+##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem  
  Anexa un elemento único en el cuadro de lista.  
   
 ```  
@@ -140,7 +135,7 @@ virtual INT_PTR AddItem(
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero del elemento anexado.  
   
-##  <a name="cmfcribboncombobox"></a>CMFCRibbonComboBox::CMFCRibbonComboBox  
+##  <a name="cmfcribboncombobox"></a>  CMFCRibbonComboBox::CMFCRibbonComboBox  
  Construye un objeto `CMFCRibbonComboBox`.  
   
 ```  
@@ -161,7 +156,7 @@ CMFCRibbonComboBox();
  El identificador del cuadro combinado.  
   
  [in] `bHasEditBox`  
- `TRUE`Si desea que un cuadro de edición dentro del control. `FALSE` en caso contrario.  
+ `TRUE` Si desea que un cuadro de edición dentro del control. `FALSE` en caso contrario.  
   
  [in] `nWidth`  
  Ancho del cuadro combinado en píxeles; o -1 para el ancho predeterminado.  
@@ -175,7 +170,7 @@ CMFCRibbonComboBox();
 ### <a name="remarks"></a>Comentarios  
  El ancho predeterminado es de 108 píxeles.  
   
-##  <a name="deleteitem"></a>CMFCRibbonComboBox::DeleteItem  
+##  <a name="deleteitem"></a>  CMFCRibbonComboBox::DeleteItem  
  Elimina un elemento especificado en el cuadro de lista.  
   
 ```  
@@ -196,11 +191,11 @@ BOOL DeleteItem(LPCTSTR lpszText);
  La cadena del elemento que se va a eliminar. Si hay varios elementos con la misma cadena, se elimina el primer elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si se ha eliminado el elemento especificado; en caso contrario, `FALSE`.  
+ `TRUE` Si se ha eliminado el elemento especificado; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="enabledropdownlistresize"></a>CMFCRibbonComboBox::EnableDropDownListResize  
+##  <a name="enabledropdownlistresize"></a>  CMFCRibbonComboBox::EnableDropDownListResize  
  Especifica si el cuadro de lista puede cambiar el tamaño cuando coloca hacia abajo.  
   
 ```  
@@ -209,12 +204,12 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bEnable`  
- `TRUE`Para habilitar el cambio de tamaño; `FALSE` para deshabilitar el cambio de tamaño.  
+ `TRUE` Para habilitar el cambio de tamaño; `FALSE` para deshabilitar el cambio de tamaño.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando se habilita el cambio de tamaño, el cuadro de lista cambiará de tamaño para ajustarse a los elementos que muestra.  
   
-##  <a name="finditem"></a>CMFCRibbonComboBox::FindItem  
+##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem  
  Devuelve el índice del primer elemento en el cuadro de lista que coincide con una cadena especificada.  
   
 ```  
@@ -230,7 +225,7 @@ int FindItem(LPCTSTR lpszText) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getcount"></a>CMFCRibbonComboBox::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonComboBox::GetCount  
  Devuelve el número de elementos en el cuadro de lista.  
   
 ```  
@@ -242,7 +237,7 @@ INT_PTR GetCount() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getcursel"></a>CMFCRibbonComboBox::GetCurSel  
+##  <a name="getcursel"></a>  CMFCRibbonComboBox::GetCurSel  
  Obtiene el índice del elemento actualmente seleccionado en el cuadro de lista.  
   
 ```  
@@ -252,7 +247,7 @@ int GetCurSel() const;
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero del elemento actualmente seleccionado en el cuadro de lista; o -1 si ningún elemento seleccionado.  
   
-##  <a name="getdropdownheight"></a>CMFCRibbonComboBox::GetDropDownHeight  
+##  <a name="getdropdownheight"></a>  CMFCRibbonComboBox::GetDropDownHeight  
  Obtiene el alto del cuadro de lista cuando se quita el cuadro de lista hacia abajo.  
   
 ```  
@@ -264,7 +259,7 @@ int GetDropDownHeight();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonComboBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize  
  Devuelve el tamaño del cuadro combinado, tal y como se muestra en el modo intermedio.  
   
 ```  
@@ -281,7 +276,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>Comentarios  
  El tamaño devuelto se basa en el tamaño del cuadro combinado cuando muestra imágenes pequeñas.  
   
-##  <a name="getitem"></a>CMFCRibbonComboBox::GetItem  
+##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem  
  Devuelve la cadena asociada a un elemento en el índice especificado en el cuadro de lista.  
   
 ```  
@@ -297,7 +292,7 @@ LPCTSTR GetItem(int iIndex) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getitemdata"></a>CMFCRibbonComboBox::GetItemData  
+##  <a name="getitemdata"></a>  CMFCRibbonComboBox::GetItemData  
  Devuelve los datos asociados a un elemento en el índice especificado en el cuadro de lista.  
   
 ```  
@@ -311,7 +306,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="return-value"></a>Valor devuelto  
  Los datos asociados con el elemento; o 0 si el elemento no existe, o si el parámetro de índice es -1 y no hay ningún elemento seleccionado en el cuadro de lista.  
   
-##  <a name="haseditbox"></a>CMFCRibbonComboBox::HasEditBox  
+##  <a name="haseditbox"></a>  CMFCRibbonComboBox::HasEditBox  
  Indica si el control contiene un cuadro de edición.  
   
 ```  
@@ -319,11 +314,11 @@ BOOL HasEditBox() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el control contiene un cuadro de edición; en caso contrario, `FALSE`.  
+ `TRUE` Si el control contiene un cuadro de edición; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="isresizedropdownlist"></a>CMFCRibbonComboBox::IsResizeDropDownList  
+##  <a name="isresizedropdownlist"></a>  CMFCRibbonComboBox::IsResizeDropDownList  
  Indica si no se puede cambiar el tamaño del cuadro de lista.  
   
 ```  
@@ -331,12 +326,12 @@ BOOL IsResizeDropDownList() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el cuadro de lista puede cambiarse de tamaño; en caso contrario, `FALSE`. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
+ `TRUE` Si el cuadro de lista puede cambiarse de tamaño; en caso contrario, `FALSE`. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
   
 ### <a name="remarks"></a>Comentarios  
  Puede habilitar cambiar el tamaño del cuadro de lista mediante el uso de la [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize) método.  
   
-##  <a name="onselectitem"></a>CMFCRibbonComboBox::OnSelectItem  
+##  <a name="onselectitem"></a>  CMFCRibbonComboBox::OnSelectItem  
  Lo llama el marco cuando un usuario selecciona un elemento en el cuadro de lista.  
   
 ```  
@@ -350,7 +345,7 @@ virtual void OnSelectItem(int nItem);
 ### <a name="remarks"></a>Comentarios  
  Invalide este método si desea procesar una selección de entrada del usuario.  
   
-##  <a name="removeallitems"></a>CMFCRibbonComboBox::RemoveAllItems  
+##  <a name="removeallitems"></a>  CMFCRibbonComboBox::RemoveAllItems  
  Elimina todos los elementos del cuadro de lista y borra el cuadro de edición.  
   
 ```  
@@ -359,7 +354,7 @@ void RemoveAllItems();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="selectitem"></a>CMFCRibbonComboBox::SelectItem  
+##  <a name="selectitem"></a>  CMFCRibbonComboBox::SelectItem  
  Selecciona un elemento en el cuadro de lista.  
   
 ```  
@@ -380,11 +375,11 @@ BOOL SelectItem(LPCTSTR lpszText);
  La cadena de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el método se realizó correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si el método se realizó correctamente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="setdropdownheight"></a>CMFCRibbonComboBox::SetDropDownHeight  
+##  <a name="setdropdownheight"></a>  CMFCRibbonComboBox::SetDropDownHeight  
  Establece el alto del cuadro de lista cuando se coloca hacia abajo.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Macros de la aplicación auxiliar de DDX_DHtml | Documentos de Microsoft"
-ms.custom: 
+title: Macros de la aplicación auxiliar de DDX_DHtml | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - AFXDHTML/DDX_DHtml_ElementValue
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d5a69e08d06a53dcb2f3a4be58618e9829e8c8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ddxdhtml-helper-macros"></a>Macros de la aplicación auxiliar de DDX_DHtml
 Las macros de la aplicación auxiliar de DDX_DHtml permiten un acceso sencillo a las propiedades utilizadas de controles en una página HTML.  
@@ -57,7 +52,7 @@ Las macros de la aplicación auxiliar de DDX_DHtml permiten un acceso sencillo a
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdhtml.h  
 
-## <a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
+## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 Establece o recupera el punto de dirección URL o los delimitadores de destino.  
   
   
@@ -82,7 +77,7 @@ DDX_DHtml_Anchor_Href(
 ## <a name="remarks"></a>Comentarios  
  Esta macro llama a la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) función mediante el DISPID_IHTMLANCHORELEMENT_HREF enviar Id.
 
-## <a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
+## <a name="ddx_dhtml_anchor_target"></a>  DDX_DHtml_Anchor_Target
  Establece o recupera la ventana de destino o el marco.  
     
 ```  
@@ -105,7 +100,7 @@ DDX_DHtml_Anchor_Target(
 ## <a name="remarks"></a>Comentarios  
  Esta macro llama a la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) función mediante el DISPID_IHTMLANCHORELEMENT_TARGET enviar Id.  
 
-## <a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
+## <a name="ddx_dhtml_elementinnerhtml"></a>  DDX_DHtml_ElementInnerHtml
  Establece o recupera el código HTML entre las etiquetas inicial y final del elemento actual.  
   
   
@@ -131,7 +126,7 @@ DDX_DHtml_ElementInnerHtml(
  Esta macro llama a la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) función mediante el DISPID_IHTMLELEMENT_INNERHTML enviar Id.  
   
 
-## <a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
+## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
 Establece o recupera el texto entre las etiquetas inicial y final del elemento actual.  
   
   
@@ -156,7 +151,7 @@ DDX_DHtml_ElementInnerText(
 ## <a name="remarks"></a>Comentarios  
  Esta macro llama a la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) función mediante el DISPID_IHTMLELEMENT_INNERTEXT enviar Id. 
 
-## <a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue  
+## <a name="ddx_dhtml_elementvalue"></a> DDX_DHtml_ElementValue  
 Establece o recupera la propiedad Value del control seleccionado.  
  
 ```  
@@ -181,7 +176,7 @@ DDX_DHtml_ElementValue(
   
  Esta macro llama a la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) función mediante el DISPID_A_VALUE enviar Id.  
 
-## <a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
+## <a name="ddx_dhtml_frame_src"></a> DDX_DHtml_Frame_Src
 Establece o recupera la dirección URL de marco asociado.  
   
 ```  
@@ -204,7 +199,7 @@ DDX_DHtml_Frame_Src(
 ## <a name="remarks"></a>Comentarios  
  Esta macro llama a la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) función mediante el DISPID_IHTMLFRAMEBASE_SRC enviar Id.  
 
-## <a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
+## <a name="ddx_dhtml_iframe_src"></a> DDX_DHtml_IFrame_Src
 Establece o recupera la dirección URL de marco asociado.  
   
   

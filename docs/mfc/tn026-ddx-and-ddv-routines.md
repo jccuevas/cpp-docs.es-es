@@ -1,13 +1,10 @@
 ---
 title: 'TN026: Rutinas DDX y DDV | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: Rutinas DDX y DDV
 > [!NOTE]
@@ -78,7 +73,7 @@ DDV_Custom(pDX,
   
  Los valores iniciales de los datos se establecen en el constructor de C++ estándar, por lo general en un bloque con `//{{AFX_DATA_INIT` y `//}}AFX_DATA_INIT` comentarios.  
   
- `CWnd::UpdateData`es la operación que realiza la inicialización y el error control alrededor de la llamada a `DoDataExchange`.  
+ `CWnd::UpdateData` es la operación que realiza la inicialización y el error control alrededor de la llamada a `DoDataExchange`.  
   
  Puede llamar a `CWnd::UpdateData` en cualquier momento para realizar el intercambio de datos y la validación. De forma predeterminada `UpdateData`(TRUE) se llama en el valor predeterminado `CDialog::OnOK` controlador y `UpdateData`(FALSE) se llama en el valor predeterminado `CDialog::OnInitDialog`.  
   
@@ -99,7 +94,7 @@ DDV_Custom(pDX,
   
 - `m_pDlgWnd`: La ventana (normalmente un cuadro de diálogo) que contiene los controles. Esto es para impedir que los llamadores de las funciones globales DDX_ y DDV_ tener que pasar 'this' en todas las rutinas DDX/DDV.  
   
-- `PrepareCtrl`, y `PrepareEditCtrl`: prepara un control de cuadro de diálogo para el intercambio de datos. Almacena el identificador de ese control para establecer el foco si se produce un error en la validación. `PrepareCtrl`se utiliza para los controles de nonedit y `PrepareEditCtrl` se usa para controles de edición.  
+- `PrepareCtrl`, y `PrepareEditCtrl`: prepara un control de cuadro de diálogo para el intercambio de datos. Almacena el identificador de ese control para establecer el foco si se produce un error en la validación. `PrepareCtrl` se utiliza para los controles de nonedit y `PrepareEditCtrl` se usa para controles de edición.  
   
 - **Producirá un error en**: llama después de abrir un cuadro de mensaje al usuario los errores de entrada de alertas. Esta rutina restaurará el foco al último control (la última llamada a `PrepareCtrl` / `PrepareEditCtrl`) e inicia una excepción. Esta función miembro puede llamarse desde rutinas DDX_ y DDV_.  
   

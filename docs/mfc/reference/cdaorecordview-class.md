@@ -1,12 +1,9 @@
 ---
 title: CDaoRecordView (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoRecordView
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fffeed33d5b966faf511f60da740c39f2b91581
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView (clase)
 Una vista que muestra registros de una base de datos en controles.  
@@ -64,7 +59,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 |[CDaoRecordView::OnMove](#onmove)|Si ha cambiado el registro actual, se actualiza en el origen de datos, a continuación, se mueve al registro especificado (siguiente, anterior, primera o última).|  
   
 ## <a name="remarks"></a>Comentarios  
- La vista es una vista de formulario directamente conectada a un `CDaoRecordset` objeto. La vista se crea a partir de un recurso de plantilla de cuadro de diálogo y muestra los campos de la `CDaoRecordset` objeto en los controles de la plantilla de cuadro de diálogo. La `CDaoRecordView` objeto utiliza intercambio de datos de cuadros de diálogo (DDX) y de intercambio de campos de registros DAO (DFX) para automatizar el movimiento de datos entre los controles en el formulario y los campos del conjunto de registros. `CDaoRecordView`También proporciona una implementación predeterminada para desplazarse a la primera, siguiente, anterior o el último registro y una interfaz para actualizar el registro actualmente en la vista.  
+ La vista es una vista de formulario directamente conectada a un `CDaoRecordset` objeto. La vista se crea a partir de un recurso de plantilla de cuadro de diálogo y muestra los campos de la `CDaoRecordset` objeto en los controles de la plantilla de cuadro de diálogo. La `CDaoRecordView` objeto utiliza intercambio de datos de cuadros de diálogo (DDX) y de intercambio de campos de registros DAO (DFX) para automatizar el movimiento de datos entre los controles en el formulario y los campos del conjunto de registros. `CDaoRecordView` También proporciona una implementación predeterminada para desplazarse a la primera, siguiente, anterior o el último registro y una interfaz para actualizar el registro actualmente en la vista.  
   
 > [!NOTE]
 >  Las clases de base de datos DAO son distintas de las clases de base de datos MFC basadas en Open Database Connectivity (ODBC). Todos los nombres de clase de base de datos DAO tienen el prefijo "CDao". Todavía podrá acceso a orígenes de datos ODBC con las clases DAO; Generalmente, las clases DAO ofrecen capacidades de superior porque usan el motor de base de datos de Microsoft Jet.  
@@ -77,7 +72,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
  Para obtener información acerca de la implementación predeterminada para desplazarse por los registros, vea `IsOnFirstRecord` y `IsOnLastRecord` y el artículo [mediante una vista de registros](../../data/using-a-record-view-mfc-data-access.md), que se aplica a ambos `CRecordView` y `CDaoRecordView`.  
   
- `CDaoRecordView`realiza un seguimiento de la posición del usuario en el conjunto de registros para que la vista de registros pueda actualizar la interfaz de usuario. Cuando el usuario se desplaza a cualquiera de los extremos del conjunto de registros, la vista de registros deshabilita objetos de la interfaz de usuario, como botones de barra de herramientas o elementos de menú, para mover más en la misma dirección.  
+ `CDaoRecordView` realiza un seguimiento de la posición del usuario en el conjunto de registros para que la vista de registros pueda actualizar la interfaz de usuario. Cuando el usuario se desplaza a cualquiera de los extremos del conjunto de registros, la vista de registros deshabilita objetos de la interfaz de usuario, como botones de barra de herramientas o elementos de menú, para mover más en la misma dirección.  
   
  Para obtener más información sobre cómo declarar y usar la vista de registros y las clases de conjunto de registros, vea "Diseñar y crear una vista de registro" en el artículo [vistas de registros](../../data/record-views-mfc-data-access.md). Para obtener más información acerca de cómo registro presenta el trabajo y cómo usarlas, vea el artículo [mediante una vista de registros](../../data/using-a-record-view-mfc-data-access.md). Todos los artículos mencionados anteriormente se aplican a ambos `CRecordView` y `CDaoRecordView`.  
   
@@ -99,7 +94,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdao.h  
   
-##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
+##  <a name="cdaorecordview"></a>  CDaoRecordView::CDaoRecordView  
  Cuando se crea un objeto de un tipo derivado de `CDaoRecordView`, llamar a cualquiera de las formas del constructor para inicializar el objeto de vista e identificar el recurso de cuadro de diálogo en el que se basa la vista.  
   
 ```  
@@ -127,7 +122,7 @@ explicit CDaoRecordView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
-##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>  CDaoRecordView::IsOnFirstRecord  
  Llame a esta función miembro para determinar si el registro actual es el primer registro en el objeto de conjunto de registros asociado a esta vista de registros.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL IsOnFirstRecord();
   
  Si el usuario se mueve al primer registro, la deshabilita framework ninguna interfaz de usuario los objetos (por ejemplo, elementos de menú o botones de barra de herramientas) tiene para moverse a la primera o en el registro anterior.  
   
-##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>  CDaoRecordView::IsOnLastRecord  
  Llame a esta función miembro para determinar si el registro actual es el último registro en el objeto de conjunto de registros asociado a esta vista de registros.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  El resultado de esta función es confiable, salvo que la vista no pueda detectar el final del conjunto de registros hasta que el usuario se desplazó más allá de él. El usuario que necesite mover más allá del último registro antes de la vista de registros puede indicar que deben deshabilitar los objetos de interfaz de usuario para moverse a la siguiente o el último registro. Si el usuario mueve más allá del último registro y, a continuación, desplaza hasta el último registro (o antes de él), la vista de registros puede realizar un seguimiento de la posición del usuario en el conjunto de registros y deshabilitar correctamente los objetos de la interfaz de usuario.  
   
-##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>  CDaoRecordView::OnGetRecordset  
  Devuelve un puntero a la `CDaoRecordset`-derivadas objeto asociado a la vista de registros.  
   
 ```  
@@ -173,7 +168,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
   
  Para obtener más información y ejemplos, vea el artículo [vistas de registros: utilizar una vista de registros](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>CDaoRecordView::OnMove  
+##  <a name="onmove"></a>  CDaoRecordView::OnMove  
  Llame a esta función miembro para moverse a un registro diferente del conjunto de registros y mostrar sus campos en los controles de la vista de registros.  
   
 ```  
@@ -184,13 +179,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Uno de los siguientes valores de Id. de comando estándar:  
   
-- `ID_RECORD_FIRST`Mover al primer registro del conjunto de registros.  
+- `ID_RECORD_FIRST` Mover al primer registro del conjunto de registros.  
   
-- `ID_RECORD_LAST`Mover hasta el último registro en el conjunto de registros.  
+- `ID_RECORD_LAST` Mover hasta el último registro en el conjunto de registros.  
   
-- `ID_RECORD_NEXT`Mover hasta el siguiente registro del conjunto de registros.  
+- `ID_RECORD_NEXT` Mover hasta el siguiente registro del conjunto de registros.  
   
-- `ID_RECORD_PREV`Mover al registro anterior en el conjunto de registros.  
+- `ID_RECORD_PREV` Mover al registro anterior en el conjunto de registros.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el movimiento se realizó correctamente; en caso contrario es 0 si se denegó la solicitud de movimiento.  

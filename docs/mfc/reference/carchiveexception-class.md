@@ -1,12 +1,9 @@
 ---
 title: Clase CArchiveException | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CArchiveException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2ca798bf3cac50e00627fc3986072af7b2ff94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carchiveexception-class"></a>Clase CArchiveException
 Representa una condición de excepción de serialización  
@@ -60,7 +55,7 @@ class CArchiveException : public CException
 ## <a name="remarks"></a>Comentarios  
  La `CArchiveException` clase incluye un miembro de datos públicos que indica la causa de la excepción.  
   
- `CArchiveException`los objetos se construyen y se produce dentro de [CArchive](../../mfc/reference/carchive-class.md) funciones miembro. Puede tener acceso a estos objetos dentro del ámbito de un **CATCH** expresión. El código de la causa es independiente del sistema operativo. Para obtener más información sobre el procesamiento de excepciones, vea [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ `CArchiveException` los objetos se construyen y se produce dentro de [CArchive](../../mfc/reference/carchive-class.md) funciones miembro. Puede tener acceso a estos objetos dentro del ámbito de un **CATCH** expresión. El código de la causa es independiente del sistema operativo. Para obtener más información sobre el procesamiento de excepciones, vea [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -72,7 +67,7 @@ class CArchiveException : public CException
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h  
   
-##  <a name="carchiveexception"></a>CArchiveException::CArchiveException  
+##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
  Construye un `CArchiveException` objeto, que almacena el valor de `cause` en el objeto.  
   
 ```  
@@ -93,7 +88,7 @@ CArchiveException(
   
  No utilice este constructor directamente; en su lugar, llame a la función global `AfxThrowArchiveException`.  
   
-##  <a name="m_cause"></a>CArchiveException::m_cause  
+##  <a name="m_cause"></a>  CArchiveException::m_cause  
  Especifica la causa de la excepción.  
   
 ```  
@@ -125,7 +120,7 @@ int m_cause;
     > [!NOTE]
     > **CArchiveException::generic** está en desuso. Use **genericException** en su lugar. Si **genérico** se utiliza en una aplicación y se compila con/CLR, habrá errores de sintaxis que no son fáciles de descifrar.  
   
-##  <a name="m_strfilename"></a>CArchiveException::m_strFileName  
+##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName  
  Especifica el nombre del archivo para esta condición de excepción.  
   
 ```  

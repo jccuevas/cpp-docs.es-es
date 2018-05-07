@@ -1,13 +1,10 @@
 ---
 title: Clases de barra de control | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.control
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - control bars [MFC], classes
 ms.assetid: 11009103-cad8-4309-85ce-3d2e858e1818
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44fcecbf1d7ddb6c46469f25349d972c8b317809
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4974b7ba3b71e60b8edf2a73ea5f06fab64ddfb7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-bar-classes"></a>Clases de barra de control
 Barras de control están conectadas a una ventana de marco. Contienen botones, paneles de estado o una plantilla de cuadro de diálogo. Barras de control flotantes, también denominadas las paletas de herramientas, se implementan mediante una asociación a una [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) objeto.  

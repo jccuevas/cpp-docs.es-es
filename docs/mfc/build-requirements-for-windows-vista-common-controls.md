@@ -1,30 +1,25 @@
 ---
-title: "Requisitos de compilación para controles comunes de Windows Vista | Documentos de Microsoft"
-ms.custom: 
+title: Requisitos de compilación para controles comunes de Windows Vista | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - common controls (MFC), build requirements
 - common controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76919bcdd416ed7195e94ed1fa0b2e3f3a4d573d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08d86af5f54fb9dfe81327b4589d60e5290b2610
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Requisitos de compilación para los controles comunes de Windows Vista
 La biblioteca (Microsoft Foundation Classes) admite la versión 6.1 de controles comunes de Windows. Los controles comunes se incluyen en [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] y la biblioteca se incluye en el [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. La biblioteca proporciona nuevos métodos que mejoran las clases existentes y nuevas clases y métodos que admiten [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] controles comunes. Cuando se compila la aplicación, debe cumplir los requisitos de compilación y la migración que se describen en las secciones siguientes.  

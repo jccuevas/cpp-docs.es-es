@@ -1,13 +1,10 @@
 ---
 title: Clases MFC para crear aplicaciones cliente de Internet | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ddbab63bb587ac726337ee719cfab03a760a305
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab361463a975a2a8794b3648a8f86c36e6026379
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>Clases de MFC para crear aplicaciones cliente de Internet
-MFC proporciona las siguientes clases y funciones globales para escribir aplicaciones cliente de Internet. Sangría indica que una clase se deriva de la clase situada un nivel por encima de él. `CGopherFile`y `CHttpFile` derivan de `CInternetFile`, por ejemplo. Estas clases y funciones globales se declaran en AFXINET. H, excepto `CFileFind`, que se declara en AFX. H.  
+MFC proporciona las siguientes clases y funciones globales para escribir aplicaciones cliente de Internet. Sangría indica que una clase se deriva de la clase situada un nivel por encima de él. `CGopherFile` y `CHttpFile` derivan de `CInternetFile`, por ejemplo. Estas clases y funciones globales se declaran en AFXINET. H, excepto `CFileFind`, que se declara en AFX. H.  
   
 ## <a name="classes"></a>Clases  
   

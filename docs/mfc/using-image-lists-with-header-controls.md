@@ -1,13 +1,10 @@
 ---
-title: "Usar listas de imágenes con controles de encabezado | Documentos de Microsoft"
-ms.custom: 
+title: Usar listas de imágenes con controles de encabezado | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7a51aadc10a7722875597813e24ceb5960ab459
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2da3737b54c53903f8fc8ff30cccba6165cbde45
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-image-lists-with-header-controls"></a>Usar listas de imágenes con controles de encabezado
 Elementos de encabezado tienen la capacidad para mostrar una imagen dentro de un elemento de encabezado. Esta imagen, almacenada en una lista de imágenes asociada, es de 16 x 16 píxeles y tiene las mismas características que las imágenes de icono utilizadas en un control de vista de lista. Para implementar correctamente este comportamiento, debe crear en primer lugar e inicializar la lista de imágenes, asociar la lista con el control de encabezado y, a continuación, modifique los atributos del elemento de encabezado que se mostrará la imagen.  

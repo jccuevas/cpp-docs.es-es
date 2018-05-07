@@ -1,13 +1,10 @@
 ---
-title: "TN038: Implementación de IUnknown en MFC OLE | Documentos de Microsoft"
-ms.custom: 
+title: 'TN038: Implementación de IUnknown en MFC OLE | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: Implementación de IUnknown en MFC/OLE
 > [!NOTE]
@@ -295,7 +290,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
  Para obtener más información sobre la agregación, vea el [agregación](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx) tema.  
   
- La compatibilidad con el mapa de interfaz de MFC se basa en la clase `CCmdTarget`. `CCmdTarget`"*tiene un*" hacen referencia a recuento, así como todas las funciones miembro asociadas con la [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementación (por ejemplo, el recuento de referencias es en `CCmdTarget`). Para crear una clase compatible con OLE y COM, derive una clase de `CCmdTarget` y use varias macros, así como funciones miembro de `CCmdTarget` para implementar las interfaces deseadas. La implementación de MFC usa clases anidadas para definir cada implementación de interfaz de manera muy similar al ejemplo anterior. Esto se facilita mediante una implementación estándar de IUnknown y mediante varias macros que eliminan parte del código repetitivo.  
+ La compatibilidad con el mapa de interfaz de MFC se basa en la clase `CCmdTarget`. `CCmdTarget` "*tiene un*" hacen referencia a recuento, así como todas las funciones miembro asociadas con la [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementación (por ejemplo, el recuento de referencias es en `CCmdTarget`). Para crear una clase compatible con OLE y COM, derive una clase de `CCmdTarget` y use varias macros, así como funciones miembro de `CCmdTarget` para implementar las interfaces deseadas. La implementación de MFC usa clases anidadas para definir cada implementación de interfaz de manera muy similar al ejemplo anterior. Esto se facilita mediante una implementación estándar de IUnknown y mediante varias macros que eliminan parte del código repetitivo.  
   
 ## <a name="interface-map-basics"></a>Conceptos básicos de mapa de interfaz  
   
@@ -315,7 +310,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 7.  Use la macro `METHOD_PROLOGUE` para acceder al objeto principal derivado de `CCmdTarget`.  
   
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [versión](http://msdn.microsoft.com/library/windows/desktop/ms682317), y [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) puede delegar en el `CCmdTarget` implementación de estas funciones (`ExternalAddRef`, `ExternalRelease`, y `ExternalQueryInterface` ).  
+8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [versión](http://msdn.microsoft.com/library/windows/desktop/ms682317), y [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) puede delegar en el `CCmdTarget` implementación de estas funciones (`ExternalAddRef`, `ExternalRelease`, y `ExternalQueryInterface`).  
   
  El ejemplo CPrintEditObj expuesto anteriormente podría implementarse de la siguiente manera:  
   

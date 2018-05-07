@@ -1,29 +1,24 @@
 ---
-title: "Cómo: personalizar la barra de herramientas de acceso rápido | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: personalizar la barra de herramientas de acceso rápido | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f67d46640a1a4fadc6750ca34b05910902679440
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0faa3a0fb66c4379824a6be190175b10e0415474
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Cómo: Personalizar la barra de herramientas de acceso rápido
 La barra de herramientas de acceso rápido (QAT) es una barra de herramientas personalizable que contiene un conjunto de comandos que se muestran situada junto al botón de la aplicación o en las fichas de categoría. La siguiente ilustración muestra una barra de herramientas de acceso rápido típico.  
@@ -43,7 +38,7 @@ La barra de herramientas de acceso rápido (QAT) es una barra de herramientas pe
 ## <a name="quick-access-toolbar-properties"></a>Propiedades de la barra de herramientas de acceso rápido  
  En la tabla siguiente define las propiedades de la barra de herramientas de acceso rápido.  
   
-|Property|Definición|  
+|Property|de esquema JSON|  
 |--------------|----------------|  
 |Posición de QAT|Especifica la posición de la barra de herramientas de acceso rápido al iniciar la aplicación. La posición puede ser **anteriormente** o **a continuación** el control de la cinta de opciones.|  
 |Elementos QAT|Especifica los comandos que están disponibles para la barra de herramientas de acceso rápido.|  

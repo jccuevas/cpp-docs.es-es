@@ -1,13 +1,10 @@
 ---
-title: "Seleccionar un objeto gráfico en un contexto de dispositivo | Documentos de Microsoft"
-ms.custom: 
+title: Seleccionar un objeto gráfico en un contexto de dispositivo | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - device contexts, selecting graphic objects into
 - device contexts, graphic objects [MFC]
 ms.assetid: cf54a330-63ef-421f-83eb-90ec7bd82eef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5909625b816deb1303821aaec4034fa24f29be5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc605be317d51c985e32fbad038d846b056e5fe6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>Seleccionar un objeto gráfico en un contexto de dispositivo
 En este tema se aplica al uso de objetos gráficos en contexto de dispositivo de una ventana. Después de [crear un objeto de dibujo](../mfc/one-stage-and-two-stage-construction-of-objects.md), debe seleccionarlo en el contexto de dispositivo en lugar del objeto predeterminado que se almacenan allí:  

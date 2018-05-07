@@ -1,12 +1,9 @@
 ---
 title: Clase CPropExchange | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropExchange
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deea89ccc9c340537b1b33563455ea91b46fe8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropexchange-class"></a>Clase CPropExchange
 Admite la implementación de persistencia para controles OLE.  
@@ -68,7 +63,7 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::IsLoading](#isloading)|Indica si las propiedades se están cargado en el control o se guardó desde él.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CPropExchange`no tiene una clase base.  
+ `CPropExchange` no tiene una clase base.  
   
  Establece el contexto y la dirección de un cambio de propiedad.  
   
@@ -78,7 +73,7 @@ class AFX_NOVTABLE CPropExchange
   
  El marco de trabajo pasa un puntero a este `CPropExchange` objeto para el control `DoPropExchange` (función). Si usa un Asistente para crear los archivos de inicio para el control, el control `DoPropExchange` llamadas a funciones `COleControl::DoPropExchange`. La versión de la clase base intercambia las propiedades del control estándar; modificar la versión de la clase derivada a las propiedades de exchange que ha agregado al control.  
   
- `CPropExchange`puede utilizarse para serializar las propiedades de un control o inicializar las propiedades de un control durante la carga o la creación de un control. El `ExchangeProp` y `ExchangeFontProp` las funciones miembro de `CPropExchange` pueden almacenar propiedades de para y cargarlos desde un medio diferente.  
+ `CPropExchange` puede utilizarse para serializar las propiedades de un control o inicializar las propiedades de un control durante la carga o la creación de un control. El `ExchangeProp` y `ExchangeFontProp` las funciones miembro de `CPropExchange` pueden almacenar propiedades de para y cargarlos desde un medio diferente.  
   
  Para obtener más información sobre el uso de `CPropExchange`, vea el artículo [controles ActiveX MFC: páginas de propiedades](../../mfc/mfc-activex-controls-property-pages.md).  
   
@@ -88,7 +83,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxctl.h  
   
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
  Serializa una propiedad que almacena los datos de objeto binario grande (BLOB).  
   
 ```  
@@ -116,7 +111,7 @@ virtual BOOL ExchangeBlobProp(
   
  Las funciones **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, y **CPropsetPropExchange::ExchangeBlobProp** invalidar Esta función virtual pura.  
   
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp  
  Intercambia una font (propiedad) entre un medio de almacenamiento y el control.  
   
 ```  
@@ -148,7 +143,7 @@ virtual BOOL ExchangeFontProp(
   
  Las funciones **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, y **CPropsetPropExchange::ExchangeFontProp** invalidar Esta función virtual pura.  
   
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp  
  Intercambia una propiedad entre el control y un archivo.  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL ExchangePersistentProp(
   
  Las funciones **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, y **CPropsetPropExchange::ExchangePersistentProp** invalidan esta función virtual pura.  
   
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp  
  Intercambia una propiedad entre un medio de almacenamiento y el control.  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL ExchangeProp(
   
  Las funciones **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, y **CPropsetPropExchange::ExchangeProp** este pura de invalidación función virtual.  
   
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion  
  Lo llama el marco de trabajo para controlar la persistencia de un número de versión.  
   
 ```  
@@ -245,7 +240,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la función se realiza correctamente; en caso contrario es 0.  
   
-##  <a name="getversion"></a>CPropExchange:: GetVersion  
+##  <a name="getversion"></a>  CPropExchange:: GetVersion  
  Llame a esta función para recuperar el número de versión del control.  
   
 ```  
@@ -255,7 +250,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>Valor devuelto  
  El número de versión del control.  
   
-##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous  
  Determina si se realizan asincrónicamente de intercambios de propiedad.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si son propiedades intercambia de forma asincrónica, lo contrario, FALSE.  
   
-##  <a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>  CPropExchange::IsLoading  
  Llame a esta función para determinar si las propiedades se están cargadas en el control o se guardó desde él.  
   
 ```  
@@ -277,7 +272,7 @@ BOOL IsLoading();
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
- [COleControl:: DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
+ [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
 
 
 

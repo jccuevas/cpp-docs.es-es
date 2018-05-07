@@ -1,13 +1,10 @@
 ---
-title: "Estilos de Control de árbol | Documentos de Microsoft"
-ms.custom: 
+title: Estilos de Control de árbol | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TVS_SINGLEEXPAND
 - TVS_LINESATROOT
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141a2b0db673f8d3c5f2c116de5b5d2ec81a8ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-styles"></a>Estilos de control de árbol
 Control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) estilos controlan aspectos de la apariencia de un control de árbol. Establecer los estilos iniciales cuando se crea el control de árbol. Puede recuperar y cambiar los estilos después de crear el control de árbol utilizando la [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) y [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) funciones de Windows, especificar **GWL_STYLE** para el `nIndex` parámetro. Para obtener una lista completa de los estilos, consulte [estilos de ventana de Control de vista de árbol](http://msdn.microsoft.com/library/windows/desktop/bb760013) del SDK de Windows.  

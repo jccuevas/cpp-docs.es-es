@@ -1,12 +1,9 @@
 ---
 title: Clase COleServerItem | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleServerItem
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd64d6a2cf4fe36e62f5c6599521780c4ee002ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d3165a11aace54ce2062a6321acc7f911fbdc39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleserveritem-class"></a>Clase COleServerItem
 Proporciona la interfaz del servidor a elementos OLE.  
@@ -181,7 +176,7 @@ class COleServerItem : public CDocItem
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxole.h  
   
-##  <a name="addotherclipboarddata"></a>COleServerItem::AddOtherClipboardData  
+##  <a name="addotherclipboarddata"></a>  COleServerItem::AddOtherClipboardData  
  Llame a esta función para colocar los formatos de presentación y conversión para el elemento OLE especificado `COleDataSource` objeto.  
   
 ```  
@@ -195,7 +190,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ### <a name="remarks"></a>Comentarios  
  Se debe haber implementado el [OnDraw](#ondraw) función de miembro para proporcionar el formato de presentación (una imagen de metarchivo) para el elemento. Para admitir otros formatos de conversión, regístrelos con el [COleDataSource](../../mfc/reference/coledatasource-class.md) objeto devuelto por [GetDataSource](#getdatasource) e invalide el [OnRenderData](#onrenderdata) función miembro proporcionar datos en los formatos que desee admitir.  
   
-##  <a name="coleserveritem"></a>COleServerItem::COleServerItem  
+##  <a name="coleserveritem"></a>  COleServerItem::COleServerItem  
  Construye un `COleServerItem` objeto y lo agrega a la colección del documento de servidor de elementos de documento.  
   
 ```  
@@ -211,7 +206,7 @@ COleServerItem(
  `bAutoDelete`  
  Marca que indica si se puede eliminar el objeto cuando se suelta un vínculo a él. Establezca esta propiedad en **FALSE** si la `COleServerItem` objeto es una parte integral de los datos del documento que deben eliminar. Establezca esta propiedad en **TRUE** si el objeto es una estructura secundaria que se usa para identificar un intervalo en los datos del documento que se pueden eliminar mediante el marco de trabajo.  
   
-##  <a name="copytoclipboard"></a>COleServerItem::CopyToClipboard  
+##  <a name="copytoclipboard"></a>  COleServerItem::CopyToClipboard  
  Llame a esta función para copiar el elemento OLE en el Portapapeles.  
   
 ```  
@@ -225,7 +220,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ### <a name="remarks"></a>Comentarios  
  La función utiliza la [OnGetClipboardData](#ongetclipboarddata) función de miembro para crear un [COleDataSource](../../mfc/reference/coledatasource-class.md) objeto que contiene los datos del elemento OLE en los formatos admitidos. La función, a continuación, coloca el `COleDataSource` objeto en el Portapapeles mediante el uso de la [COleDataSource:: SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) función. El `COleDataSource` objeto incluye datos nativos del elemento y su representación en `CF_METAFILEPICT` formato, así como datos en los formatos de conversión decide admitir. Se debe haber implementado [Serialize](../../mfc/reference/cobject-class.md#serialize) y [OnDraw](#ondraw) para esta función miembro para que funcione.  
   
-##  <a name="dodragdrop"></a>COleServerItem:: DoDragDrop  
+##  <a name="dodragdrop"></a>  COleServerItem:: DoDragDrop  
  Llame a la `DoDragDrop` función de miembro para realizar una operación de arrastrar y colocar.  
   
 ```  
@@ -269,7 +264,7 @@ DROPEFFECT DoDragDrop(
   
  Para obtener más información acerca de cómo arrastrar información de retraso se almacena en el registro o la. El archivo INI, consulte [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) en el SDK de Windows.  
   
-##  <a name="getclipboarddata"></a>COleServerItem::GetClipboardData  
+##  <a name="getclipboarddata"></a>  COleServerItem::GetClipboardData  
  Llame a esta función para rellenar especificado [COleDataSource](../../mfc/reference/coledatasource-class.md) objeto con todos los datos que se van a copiar en el Portapapeles si llamado [CopyToClipboard](#copytoclipboard) (también se transferirán los mismos datos si se llama a [DoDragDrop](#dodragdrop)).  
   
 ```  
@@ -298,7 +293,7 @@ void GetClipboardData(
   
  Reemplace esta función si desea colocar formatos un `COleDataSource` objeto antes o después de los formatos proporcionados por `CopyToClipboard`.  
   
-##  <a name="getdatasource"></a>COleServerItem::GetDataSource  
+##  <a name="getdatasource"></a>  COleServerItem::GetDataSource  
  Llame a esta función para obtener el [COleDataSource](../../mfc/reference/coledatasource-class.md) objeto que se usa para almacenar los formatos de conversión que admite la aplicación de servidor.  
   
 ```  
@@ -311,7 +306,7 @@ COleDataSource* GetDataSource();
 ### <a name="remarks"></a>Comentarios  
  Si desea que la aplicación de servidor para ofrecer datos en una variedad de formatos durante la transferencia de datos de operaciones, registrar estos formatos con la `COleDataSource` objeto devuelto por esta función. Por ejemplo, si desea proporcionar un **CF_TEXT** representación del elemento OLE para las operaciones de arrastrar y colocar o Portapapeles, debería registrar el formato con el `COleDataSource` esta función devuelve el objeto y, a continuación, reemplace el  **OnRenderXxxData** función de miembro para proporcionar los datos.  
   
-##  <a name="getdocument"></a>COleServerItem::GetDocument  
+##  <a name="getdocument"></a>  COleServerItem::GetDocument  
  Llame a esta función para obtener un puntero al documento que contiene el elemento.  
   
 ```  
@@ -324,7 +319,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>Comentarios  
  Esto permite el acceso al documento del servidor que se pasa como un argumento a la `COleServerItem` constructor.  
   
-##  <a name="getembedsourcedata"></a>COleServerItem::GetEmbedSourceData  
+##  <a name="getembedsourcedata"></a>  COleServerItem::GetEmbedSourceData  
  Llame a esta función para obtener el **CF_EMBEDSOURCE** datos de un elemento OLE.  
   
 ```  
@@ -342,7 +337,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
   
  Para obtener más información, consulte [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) del SDK de Windows.  
   
-##  <a name="getitemname"></a>COleServerItem::GetItemName  
+##  <a name="getitemname"></a>  COleServerItem::GetItemName  
  Llame a esta función para obtener el nombre del elemento.  
   
 ```  
@@ -355,7 +350,7 @@ const CString& GetItemName() const;
 ### <a name="remarks"></a>Comentarios  
  Se suele llamar a esta función solo para los elementos vinculados.  
   
-##  <a name="getlinksourcedata"></a>COleServerItem::GetLinkSourceData  
+##  <a name="getlinksourcedata"></a>  COleServerItem::GetLinkSourceData  
  Llame a esta función para obtener el `CF_LINKSOURCE` datos de un elemento OLE.  
   
 ```  
@@ -376,7 +371,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
  Para obtener más información, consulte [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) del SDK de Windows.  
   
-##  <a name="getobjectdescriptordata"></a>COleServerItem::GetObjectDescriptorData  
+##  <a name="getobjectdescriptordata"></a>  COleServerItem::GetObjectDescriptorData  
  Llame a esta función para obtener el **CF_OBJECTDESCRIPTOR** datos de un elemento OLE.  
   
 ```  
@@ -401,7 +396,7 @@ void GetObjectDescriptorData(
   
  Para obtener más información, consulte [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) del SDK de Windows.  
   
-##  <a name="isconnected"></a>COleServerItem::IsConnected  
+##  <a name="isconnected"></a>  COleServerItem::IsConnected  
  Llame a esta función para ver si está conectado el elemento OLE.  
   
 ```  
@@ -414,7 +409,7 @@ BOOL IsConnected() const;
 ### <a name="remarks"></a>Comentarios  
  Se considera un elemento OLE conectado si uno o varios contenedores tienen referencias al elemento. Está conectado a un elemento si su recuento de referencias es mayor que 0 o si es un elemento incrustado.  
   
-##  <a name="islinkeditem"></a>COleServerItem::IsLinkedItem  
+##  <a name="islinkeditem"></a>  COleServerItem::IsLinkedItem  
  Llame a esta función para ver si el elemento OLE es un elemento vinculado.  
   
 ```  
@@ -427,9 +422,9 @@ BOOL IsLinkedItem() const;
 ### <a name="remarks"></a>Comentarios  
  Si el elemento es válido y no se devuelve en la lista del documento de los elementos incrustados, está enlazado un elemento. Un elemento vinculado podría o no esté conectado a un contenedor.  
   
- Es habitual usar la misma clase para elementos vinculados e incrustados. `IsLinkedItem`le permite hacer que los elementos vinculados se comportan de forma diferente a los elementos incrustados, aunque hay muchas veces el código común.  
+ Es habitual usar la misma clase para elementos vinculados e incrustados. `IsLinkedItem` le permite hacer que los elementos vinculados se comportan de forma diferente a los elementos incrustados, aunque hay muchas veces el código común.  
   
-##  <a name="m_sizeextent"></a>COleServerItem::m_sizeExtent  
+##  <a name="m_sizeextent"></a>  COleServerItem::m_sizeExtent  
  Este miembro indica al servidor la cantidad del objeto está visible en el documento contenedor.  
   
 ```  
@@ -439,7 +434,7 @@ CSize m_sizeExtent;
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de [OnSetExtent](#onsetextent) establece este miembro.  
   
-##  <a name="notifychanged"></a>COleServerItem::NotifyChanged  
+##  <a name="notifychanged"></a>  COleServerItem::NotifyChanged  
  Llame a esta función después de que se ha cambiado el elemento vinculado.  
   
 ```  
@@ -450,18 +445,18 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
  `nDrawAspect`  
  Un valor comprendido entre el `DVASPECT` enumeración que indica qué aspecto del elemento OLE ha cambiado. Este parámetro puede tener cualquiera de los siguientes valores:  
   
-- `DVASPECT_CONTENT`Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
+- `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
   
-- `DVASPECT_THUMBNAIL`Elemento se representa en una representación en forma de "vista en miniatura", por lo que puede mostrarse en una herramienta de exploración.  
+- `DVASPECT_THUMBNAIL` Elemento se representa en una representación en forma de "vista en miniatura", por lo que puede mostrarse en una herramienta de exploración.  
   
-- `DVASPECT_ICON`Elemento se representa mediante un icono.  
+- `DVASPECT_ICON` Elemento se representa mediante un icono.  
   
-- `DVASPECT_DOCPRINT`Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
+- `DVASPECT_DOCPRINT` Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
   
 ### <a name="remarks"></a>Comentarios  
  Si un elemento contenedor está vinculado al documento con un vínculo automático, el elemento se actualiza para reflejar los cambios. En las aplicaciones de contenedor escritas mediante la biblioteca Microsoft Foundation Class, [COleClientItem](../../mfc/reference/coleclientitem-class.md#onchange) se llama en respuesta.  
   
-##  <a name="ondoverb"></a>COleServerItem::OnDoVerb  
+##  <a name="ondoverb"></a>  COleServerItem::OnDoVerb  
  Lo llama el marco de trabajo para ejecutar el verbo especificado.  
   
 ```  
@@ -489,7 +484,7 @@ virtual void OnDoVerb(LONG iVerb);
   
  Para obtener más información, consulte [DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) del SDK de Windows.  
   
-##  <a name="ondraw"></a>COleServerItem:: OnDraw  
+##  <a name="ondraw"></a>  COleServerItem:: OnDraw  
  Lo llama el marco de trabajo para representar el elemento OLE en un metarchivo.  
   
 ```  
@@ -511,7 +506,7 @@ virtual BOOL OnDraw(
 ### <a name="remarks"></a>Comentarios  
  La representación del metarchivo del elemento OLE se utiliza para mostrar el elemento en la aplicación contenedora. Si la aplicación contenedora se escribió con la biblioteca Microsoft Foundation Class, metarchivo utilizan el [dibujar](../../mfc/reference/coleclientitem-class.md#draw) función de miembro de los correspondientes [COleClientItem](../../mfc/reference/coleclientitem-class.md) objeto. No hay ninguna implementación predeterminada. Se debe reemplazar esta función para dibujar el elemento en el contexto de dispositivo especificado.  
   
-##  <a name="ondrawex"></a>COleServerItem::OnDrawEx  
+##  <a name="ondrawex"></a>  COleServerItem::OnDrawEx  
  Lo llama el marco de trabajo para todos los dibujos.  
   
 ```  
@@ -528,13 +523,13 @@ virtual BOOL OnDrawEx(
  `nDrawAspect`  
  Un valor de la enumeración `DVASPECT`. Este parámetro puede tener cualquiera de los siguientes valores:  
   
-- `DVASPECT_CONTENT`Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
+- `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
   
-- `DVASPECT_THUMBNAIL`Elemento se representa en una representación en forma de "vista en miniatura", por lo que puede mostrarse en una herramienta de exploración.  
+- `DVASPECT_THUMBNAIL` Elemento se representa en una representación en forma de "vista en miniatura", por lo que puede mostrarse en una herramienta de exploración.  
   
-- `DVASPECT_ICON`Elemento se representa mediante un icono.  
+- `DVASPECT_ICON` Elemento se representa mediante un icono.  
   
-- `DVASPECT_DOCPRINT`Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
+- `DVASPECT_DOCPRINT` Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
   
  `rSize`  
  Tamaño del elemento en **HIMETRIC** unidades.  
@@ -547,7 +542,7 @@ virtual BOOL OnDrawEx(
   
  Reemplace esta función para proporcionar datos de la presentación para aspectos distintos de `DVASPECT_CONTENT`, como `DVASPECT_ICON` o `DVASPECT_THUMBNAIL`.  
   
-##  <a name="ongetclipboarddata"></a>COleServerItem::OnGetClipboardData  
+##  <a name="ongetclipboarddata"></a>  COleServerItem::OnGetClipboardData  
  Lo llama el marco para obtener un `COleDataSource` objeto que contiene todos los datos que se van a colocar en el Portapapeles mediante una llamada a la [CopyToClipboard](#copytoclipboard) función miembro.  
   
 ```  
@@ -573,7 +568,7 @@ virtual COleDataSource* OnGetClipboardData(
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de esta función llama [GetClipboardData](#getclipboarddata).  
   
-##  <a name="ongetextent"></a>COleServerItem::OnGetExtent  
+##  <a name="ongetextent"></a>  COleServerItem::OnGetExtent  
  Lo llama el marco para recuperar el tamaño, en **HIMETRIC** unidades del elemento OLE.  
   
 ```  
@@ -586,13 +581,13 @@ virtual BOOL OnGetExtent(
  `nDrawAspect`  
  Especifica el aspecto del producto OLE cuyos límites se van a recuperar. Este parámetro puede tener cualquiera de los siguientes valores:  
   
-- `DVASPECT_CONTENT`Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
+- `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
   
-- `DVASPECT_THUMBNAIL`Elemento se representa en una representación en forma de "vista en miniatura", por lo que puede mostrarse en una herramienta de exploración.  
+- `DVASPECT_THUMBNAIL` Elemento se representa en una representación en forma de "vista en miniatura", por lo que puede mostrarse en una herramienta de exploración.  
   
-- `DVASPECT_ICON`Elemento se representa mediante un icono.  
+- `DVASPECT_ICON` Elemento se representa mediante un icono.  
   
-- `DVASPECT_DOCPRINT`Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
+- `DVASPECT_DOCPRINT` Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
   
  `rSize`  
  Referencia a un `CSize` objeto que va a recibir el tamaño del elemento OLE.  
@@ -603,7 +598,7 @@ virtual BOOL OnGetExtent(
 ### <a name="remarks"></a>Comentarios  
  Si la aplicación contenedora se escribió con la biblioteca Microsoft Foundation Class, esta función se invoca cuando el [GetExtent](../../mfc/reference/coleclientitem-class.md#getextent) función de miembro de los correspondientes `COleClientItem` se denomina objeto. La implementación predeterminada no hace nada. Debe implementar, usted mismo. Reemplace esta función si desea realizar un procesamiento especial cuando controla una solicitud para el tamaño del elemento OLE.  
   
-##  <a name="onhide"></a>COleServerItem::OnHide  
+##  <a name="onhide"></a>  COleServerItem::OnHide  
  Lo llama el marco para ocultar el elemento OLE.  
   
 ```  
@@ -613,7 +608,7 @@ virtual void OnHide();
 ### <a name="remarks"></a>Comentarios  
  Las llamadas de forma predeterminada **COleServerDoc::OnShowDocument (FALSE)**. La función también notifica al contenedor que se ha ocultado el elemento OLE. Reemplace esta función si desea realizar un procesamiento especial cuando cuando se oculta un elemento OLE.  
   
-##  <a name="oninitfromdata"></a>COleServerItem::OnInitFromData  
+##  <a name="oninitfromdata"></a>  COleServerItem::OnInitFromData  
  Lo llama el marco para inicializar un elemento OLE mediante el contenido de `pDataObject`.  
   
 ```  
@@ -637,7 +632,7 @@ virtual BOOL OnInitFromData(
   
  Para obtener más información, consulte [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) en el SDK de Windows.  
   
-##  <a name="onopen"></a>COleServerItem::OnOpen  
+##  <a name="onopen"></a>  COleServerItem::OnOpen  
  Lo llama el marco de trabajo para mostrar el elemento OLE en una instancia independiente de la aplicación de servidor, en lugar de en su lugar.  
   
 ```  
@@ -651,7 +646,7 @@ virtual void OnOpen();
   
  Para obtener más información, consulte [IOleClientSite::OnShowWindow](http://msdn.microsoft.com/library/windows/desktop/ms688658) en el SDK de Windows.  
   
-##  <a name="onqueryupdateitems"></a>COleServerItem::OnQueryUpdateItems  
+##  <a name="onqueryupdateitems"></a>  COleServerItem::OnQueryUpdateItems  
  Lo llama el marco de trabajo para determinar si los elementos vinculados en el documento del servidor actual no están actualizados.  
   
 ```  
@@ -664,7 +659,7 @@ virtual BOOL OnQueryUpdateItems();
 ### <a name="remarks"></a>Comentarios  
  Un elemento está anticuado si se cambió su documento de origen, pero el elemento vinculado no se ha actualizado para reflejar los cambios en el documento.  
   
-##  <a name="onrenderdata"></a>COleServerItem::OnRenderData  
+##  <a name="onrenderdata"></a>  COleServerItem::OnRenderData  
  Lo llama el marco de trabajo para recuperar datos en el formato especificado.  
   
 ```  
@@ -692,7 +687,7 @@ virtual BOOL OnRenderData(
   
  Para obtener más información, consulte [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), y [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) del SDK de Windows.  
   
-##  <a name="onrenderfiledata"></a>COleServerItem::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>  COleServerItem::OnRenderFileData  
  Lo llama el marco de trabajo para recuperar datos en el formato especificado cuando el medio de almacenamiento es un archivo.  
   
 ```  
@@ -718,7 +713,7 @@ virtual BOOL OnRenderFileData(
   
  Para obtener más información, consulte [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) y [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) del SDK de Windows.  
   
-##  <a name="onrenderglobaldata"></a>COleServerItem::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>  COleServerItem::OnRenderGlobalData  
  Lo llama el marco de trabajo para recuperar datos en el formato especificado cuando el medio de almacenamiento especificado es una memoria global.  
   
 ```  
@@ -746,7 +741,7 @@ virtual BOOL OnRenderGlobalData(
   
  Para obtener más información, consulte [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) y [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) del SDK de Windows.  
   
-##  <a name="onsetcolorscheme"></a>COleServerItem::OnSetColorScheme  
+##  <a name="onsetcolorscheme"></a>  COleServerItem::OnSetColorScheme  
  Lo llama el marco de trabajo para especificar una paleta de colores que se utilizará al editar el elemento OLE.  
   
 ```  
@@ -765,7 +760,7 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
   
  Para obtener más información, consulte [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) en el SDK de Windows.  
   
-##  <a name="onsetdata"></a>COleServerItem::OnSetData  
+##  <a name="onsetdata"></a>  COleServerItem::OnSetData  
  Lo llama el marco de trabajo para reemplazar los datos del elemento OLE con los datos especificados.  
   
 ```  
@@ -795,7 +790,7 @@ virtual BOOL OnSetData(
   
  Para obtener más información, consulte [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), y [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) del SDK de Windows.  
   
-##  <a name="onsetextent"></a>COleServerItem::OnSetExtent  
+##  <a name="onsetextent"></a>  COleServerItem::OnSetExtent  
  Lo llama el marco de trabajo para indicar que el elemento OLE cuánto espacio hay disponible en el documento contenedor.  
   
 ```  
@@ -808,13 +803,13 @@ virtual BOOL OnSetExtent(
  `nDrawAspect`  
  Especifica el aspecto del elemento OLE cuyos límites se especifican. Este parámetro puede tener cualquiera de los siguientes valores:  
   
-- `DVASPECT_CONTENT`Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
+- `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
   
-- `DVASPECT_THUMBNAIL`Elemento se representa en una representación en forma de "vista en miniatura", por lo que puede mostrarse en una herramienta de exploración.  
+- `DVASPECT_THUMBNAIL` Elemento se representa en una representación en forma de "vista en miniatura", por lo que puede mostrarse en una herramienta de exploración.  
   
-- `DVASPECT_ICON`Elemento se representa mediante un icono.  
+- `DVASPECT_ICON` Elemento se representa mediante un icono.  
   
-- `DVASPECT_DOCPRINT`Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
+- `DVASPECT_DOCPRINT` Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
   
  `size`  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) estructura que especifica el nuevo tamaño del elemento OLE.  
@@ -825,7 +820,7 @@ virtual BOOL OnSetExtent(
 ### <a name="remarks"></a>Comentarios  
  Si la aplicación contenedora se escribió con la biblioteca Microsoft Foundation Class, esta función se invoca cuando el [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) función de miembro de los correspondientes `COleClientItem` se denomina objeto. La implementación predeterminada configura el [m_sizeExtent](#m_sizeextent) miembro al tamaño especificado si `nDrawAspect` es `DVASPECT_CONTENT`; en caso contrario, devuelve 0. Reemplace esta función para realizar un procesamiento especial cuando se cambia el tamaño del elemento.  
   
-##  <a name="onshow"></a>COleServerItem::OnShow  
+##  <a name="onshow"></a>  COleServerItem::OnShow  
  Lo llama el marco para indicar a la aplicación de servidor para mostrar el elemento OLE en contexto.  
   
 ```  
@@ -837,7 +832,7 @@ virtual void OnShow();
   
  Reemplace esta función si desea realizar un procesamiento especial cuando se muestre un elemento OLE.  
   
-##  <a name="onupdate"></a>COleServerItem::OnUpdate  
+##  <a name="onupdate"></a>  COleServerItem::OnUpdate  
  Llamado por el marco de trabajo cuando se ha modificado un elemento.  
   
 ```  
@@ -861,18 +856,18 @@ virtual void OnUpdate(
  `nDrawAspect`  
  Un valor de la enumeración `DVASPECT`. Este parámetro puede tener uno de los siguientes valores:  
   
-- `DVASPECT_CONTENT`Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
+- `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
   
-- `DVASPECT_THUMBNAIL`Elemento se representa en una representación en forma de "vista en miniatura", por lo que puede mostrarse en una herramienta de exploración.  
+- `DVASPECT_THUMBNAIL` Elemento se representa en una representación en forma de "vista en miniatura", por lo que puede mostrarse en una herramienta de exploración.  
   
-- `DVASPECT_ICON`Elemento se representa mediante un icono.  
+- `DVASPECT_ICON` Elemento se representa mediante un icono.  
   
-- `DVASPECT_DOCPRINT`Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
+- `DVASPECT_DOCPRINT` Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
   
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada llama [NotifyChanged](#notifychanged), independientemente de la sugerencia o remitente.  
   
-##  <a name="onupdateitems"></a>COleServerItem::OnUpdateItems  
+##  <a name="onupdateitems"></a>  COleServerItem::OnUpdateItems  
  Lo llama el marco de trabajo para actualizar todos los elementos en el documento de servidor.  
   
 ```  
@@ -882,7 +877,7 @@ virtual void OnUpdateItems();
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada llama [UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink) para todos los `COleClientItem` objetos en el documento.  
   
-##  <a name="setitemname"></a>COleServerItem::SetItemName  
+##  <a name="setitemname"></a>  COleServerItem::SetItemName  
  Llame a esta función cuando se crea un elemento vinculado para establecer su nombre.  
   
 ```  

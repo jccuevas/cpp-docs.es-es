@@ -1,12 +1,9 @@
 ---
 title: Clase COccManager | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COccManager
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - COccManager [MFC], SetDefaultButton
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffa16b7a210bc53f178e3ec437aefb6cede766a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b292196eb6ac8178ba43f0e66bd4814368c916fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coccmanager-class"></a>Clase COccManager
 Administra distintos sitios de control personalizado; implementado por objetos `COleControlContainer` y `COleControlSite` .  
@@ -90,7 +85,7 @@ class COccManager : public CNoTrackObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxocc.h  
   
-##  <a name="createcontainer"></a>COccManager::CreateContainer  
+##  <a name="createcontainer"></a>  COccManager::CreateContainer  
  Lo llama el marco para crear un contenedor de control.  
   
 ```  
@@ -107,7 +102,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información sobre la creación de sitios personalizados, vea [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
   
-##  <a name="createdlgcontrols"></a>COccManager::CreateDlgControls  
+##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls  
  Llame a esta función para crear controles ActiveX especificados por el `pOccDialogInfo` parámetro.  
   
 ```  
@@ -139,7 +134,7 @@ virtual BOOL CreateDlgControls(
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el control se creó correctamente; cero en caso contrario.  
   
-##  <a name="createsite"></a>COccManager::CreateSite  
+##  <a name="createsite"></a>  COccManager::CreateSite  
  Lo llama el marco para crear un sitio de control, hospedado por el contenedor que señala `pCtrlCont`.  
   
 ```  
@@ -158,7 +153,7 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
   
  Cada contenedor de control puede hospedar varios sitios. Crear sitios adicionales en varias llamadas a `CreateSite`.  
   
-##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode  
+##  <a name="getdefbtncode"></a>  COccManager::GetDefBtnCode  
  Llame a esta función para determinar si el control es un botón de comando predeterminado.  
   
 ```  
@@ -178,7 +173,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
   
 - **0** control no es un botón.  
   
-##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage  
+##  <a name="isdialogmessage"></a>  COccManager::IsDialogMessage  
  Lo llama el marco de trabajo para determinar si un mensaje está diseñado para el cuadro de diálogo especificado y, si es así, procesa el mensaje.  
   
 ```  
@@ -202,7 +197,7 @@ virtual BOOL IsDialogMessage(
   
  Reemplace esta función para proporcionar un comportamiento personalizado para los mensajes enviados al cuadro de diálogo especificado.  
   
-##  <a name="islabelcontrol"></a>COccManager::IsLabelControl  
+##  <a name="islabelcontrol"></a>  COccManager::IsLabelControl  
  Llame a esta función para determinar si el control especificado es un control de etiqueta.  
   
 ```  
@@ -220,7 +215,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ### <a name="remarks"></a>Comentarios  
  Un control label es aquel que actúa como una etiqueta para cualquier control que es el siguiente en la ordenación.  
   
-##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic  
+##  <a name="ismatchingmnemonic"></a>  COccManager::IsMatchingMnemonic  
  Llame a esta función para determinar si la tecla de acceso actual coincide con el representado por el control.  
   
 ```  
@@ -246,7 +241,7 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="onevent"></a>COccManager::OnEvent  
+##  <a name="onevent"></a>  COccManager::OnEvent  
  Lo llama el marco de trabajo para controlar el evento especificado.  
   
 ```  
@@ -276,7 +271,7 @@ virtual BOOL OnEvent(
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función para personalizar el proceso de control de eventos de forma predeterminada.  
   
-##  <a name="precreatedialog"></a>COccManager::PreCreateDialog  
+##  <a name="precreatedialog"></a>  COccManager::PreCreateDialog  
  Lo llama el marco de trabajo para procesar una plantilla de cuadro de diálogo para controles ActiveX antes de crear el cuadro de diálogo real.  
   
 ```  
@@ -300,7 +295,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
   
  Reemplace esta función para personalizar el proceso de creación de un cuadro de diálogo hospedar controles ActiveX.  
   
-##  <a name="postcreatedialog"></a>COccManager::PostCreateDialog  
+##  <a name="postcreatedialog"></a>  COccManager::PostCreateDialog  
  Lo llama el marco para liberar memoria asignada para la plantilla de cuadro de diálogo.  
   
 ```  
@@ -316,7 +311,7 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
   
  Reemplace esta función para personalizar el proceso de limpiar los recursos utilizados por el objeto de cuadro de diálogo.  
   
-##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton  
+##  <a name="setdefaultbutton"></a>  COccManager::SetDefaultButton  
  Llame a esta función para establecer el control como el botón predeterminado.  
   
 ```  
@@ -340,7 +335,7 @@ static void AFX_CDECL SetDefaultButton(
 > [!NOTE]
 >  El control debe tener la **OLEMISC_ACTSLIKEBUTTON** conjunto de bits de estado. Para obtener más información sobre **OLEMISC** marcas, consulte el [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) tema en el SDK de Windows.  
   
-##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate  
+##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
  Lo llama el marco para dividir los controles ActiveX de los controles de cuadro de diálogo comunes.  
   
 ```  

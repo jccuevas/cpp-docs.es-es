@@ -1,13 +1,10 @@
 ---
-title: "Eliminar todos los objetos de una colección CObject | Documentos de Microsoft"
-ms.custom: 
+title: Eliminar todos los objetos de una colección CObject | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1edc7f181bdb23e050d2fa608c9b3a2056749
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f57e503e43bdb637b85e4642349203b9f2e8aa6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Eliminar todos los objetos de una colección CObject
 En este artículo se explica cómo eliminar todos los objetos de una colección (sin eliminar el propio objeto de colección).  
@@ -47,7 +42,7 @@ En este artículo se explica cómo eliminar todos los objetos de una colección 
   
 -   [Un mapa](#_core_to_delete_all_elements_in_a_map)  
   
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>Para eliminar todos los objetos en una lista de punteros a CObject  
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  Para eliminar todos los objetos en una lista de punteros a CObject  
   
 1.  Use `GetHeadPosition` y `GetNext` para recorrer en iteración la lista.  
   
@@ -63,7 +58,7 @@ En este artículo se explica cómo eliminar todos los objetos de una colección 
   
  Tenga en cuenta la diferencia entre eliminar un objeto de un elemento y quitar el propio elemento. Quitar un elemento de la lista simplemente quita la referencia de la lista para el objeto. El objeto sigue existiendo en la memoria. Cuando se elimina un objeto, deja de existir y su memoria se recupera. Por lo tanto, es importante quitar un elemento inmediatamente después de que se ha eliminado el objeto del elemento para que la lista no intente tener acceso a objetos que ya no existen.  
   
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>Para eliminar todos los elementos de una matriz  
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  Para eliminar todos los elementos de una matriz  
   
 1.  Use `GetSize` y valores de índice de entero para recorrer en iteración la matriz.  
   
@@ -77,7 +72,7 @@ En este artículo se explica cómo eliminar todos los objetos de una colección 
   
  Como con el ejemplo de lista anterior, puede llamar a `RemoveAll` para quitar todos los elementos de una matriz o `RemoveAt` para quitar un elemento individual.  
   
-#### <a name="_core_to_delete_all_elements_in_a_map"></a>Para eliminar todos los elementos de un mapa  
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> Para eliminar todos los elementos de un mapa  
   
 1.  Use `GetStartPosition` y `GetNextAssoc` para recorrer en iteración la matriz.  
   

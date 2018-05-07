@@ -1,13 +1,10 @@
 ---
 title: Agregar una clase (Visual C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes.adding
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - classes [C++], creating
 - classes [C++], adding
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac87368f2bd38c32425799103fa3999dd11b3298
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 14e16d8b5c15939adb792a96a828bafd07ba4041
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-class-visual-c"></a>Agregar una clase (Visual C++)
 Para agregar una clase en un proyecto de Visual C++, en **el Explorador de soluciones**, haga clic en el proyecto, haga clic en **agregar**y, a continuación, haga clic en **clase**. Se abrirá la [cuadro de diálogo Agregar clase](../ide/add-class-dialog-box.md) cuadro de diálogo.  

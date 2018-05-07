@@ -1,13 +1,10 @@
 ---
 title: 'Controles ActiveX MFC: Utilizar enlace de datos en un Control ActiveX | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controles ActiveX de MFC: utilizar enlace de datos en un control ActiveX
 Uno de los usos más eficaces de controles ActiveX es el enlace de datos, lo que permite una propiedad del control para enlazar con un campo específico de una base de datos. Cuando un usuario modifica los datos en la propiedad enlazada, el control notifica a la base de datos y las solicitudes que se actualiza el campo de registro. La base de datos, a continuación, notifica el control del éxito o error de la solicitud.  
   
  Este artículo trata del lado del control de la tarea. La implementación de las interacciones de enlace de datos con la base de datos es responsabilidad del contenedor del control. Cómo administrar las interacciones de la base de datos en el contenedor queda fuera del ámbito de esta documentación. En el resto de este artículo se explica cómo preparar el control para el enlace de datos.  
   
- ![Diagrama conceptual de datos &#45; control enlazado](../mfc/media/vc374v1.gif "vc374v1")  
+ ![Diagrama conceptual de los datos&#45;control enlazado a](../mfc/media/vc374v1.gif "vc374v1")  
 Diagrama conceptual de un Control enlazado a datos  
   
  La `COleControl` clase proporciona dos funciones miembro que hacen que un proceso sencillo para implementar de enlace de datos. La primera función [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), se utiliza para solicitar permiso para cambiar el valor de propiedad. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), la segunda función, se llama después de que el valor de propiedad se haya cambiado correctamente.  
@@ -51,7 +46,7 @@ Diagrama conceptual de un Control enlazado a datos
   
 -   [Crear un método Get/Set enlazable](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>Crear una propiedad estándar enlazable  
+##  <a name="vchowcreatingbindablestockproperty"></a> Crear una propiedad estándar enlazable  
  Es posible crear una propiedad estándar enlazada a datos, aunque es más probable que desee un [método get/set enlazable](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ Diagrama conceptual de un Control enlazado a datos
   
  Ahora puede compilar el proyecto, que se registrará el control. Al insertar el control en un cuadro de diálogo, el **campo de datos** y **origen de datos** propiedades se habrán agregadas y ahora puede seleccionar un origen de datos y un campo que se muestra en el control.  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>Crear un método Get/Set enlazable  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> Crear un método Get/Set enlazable  
  Además de un enlace de datos método get/set, también puede crear un [propiedad estándar enlazable](#vchowcreatingbindablestockproperty).  
   
 > [!NOTE]

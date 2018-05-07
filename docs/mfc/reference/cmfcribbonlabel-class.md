@@ -1,12 +1,9 @@
 ---
 title: Clase CMFCRibbonLabel | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlabel-class"></a>Clase CMFCRibbonLabel
 Implementa una etiqueta de texto no seleccionable en una cinta.  
@@ -74,7 +69,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
  Construye e inicializa un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objeto que muestra la cadena de texto especificado.  
   
 ```  
@@ -88,9 +83,9 @@ CMFCRibbonLabel(
  El texto que aparecerá en la etiqueta.  
   
  [in] `bIsMultiLine`  
- `TRUE`para especificar que la etiqueta es una etiqueta de varias líneas; en caso contrario, `FALSE`.  
+ `TRUE` para especificar que la etiqueta es una etiqueta de varias líneas; en caso contrario, `FALSE`.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Determina los datos de accesibilidad para el elemento de etiqueta de cinta actual.  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL SetACCData(
  Un objeto del tipo `CAccessibilityData` que se rellena con los datos de accesibilidad de la etiqueta de cinta actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el `data` parámetro se rellena con los datos de accesibilidad de la etiqueta de cinta actual correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si el `data` parámetro se rellena con los datos de accesibilidad de la etiqueta de cinta actual correctamente; en caso contrario, `FALSE`.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

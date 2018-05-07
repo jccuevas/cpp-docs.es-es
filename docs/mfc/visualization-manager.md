@@ -1,29 +1,24 @@
 ---
-title: "Administrador de visualización | Documentos de Microsoft"
-ms.custom: 
+title: Administrador de visualización | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654ffc0f3fb4c33f153f3389442486ffa86b74a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 40d16e1373d347b4a715cd6f073211796913bd21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visualization-manager"></a>Administrador de visualización
 El administrador visual es un objeto que controla el aspecto de toda la aplicación. Actúa como una sola clase donde se puede incluir todo el código de dibujo de la aplicación. La biblioteca de MFC incluye varios administradores visuales. También puede crear su propio administrador visual si desea crear una vista personalizada de la aplicación. Las siguientes imágenes muestran la misma aplicación cuando se habilitan diferentes administradores visuales:  

@@ -1,13 +1,10 @@
 ---
-title: "Página de propiedades de paso de compilación personalizada: General | Documentos de Microsoft"
-ms.custom: 
+title: 'Página de propiedades de paso de compilación personalizada: General | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildStep.AdditionalInputs
 - VC.Project.VCCustomBuildStep.CustomBuildAfterTargets
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e57d6cf00843cd6604ef269235602ea1b5b5e9b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5d88bd738711058794a525217ba2640e8d52356d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-build-step-property-page-general"></a>Paso de compilación personalizada (Página de propiedades): General
 Para cada combinación de configuración y plataforma de destino del proyecto, puede especificar un paso personalizado que se realizará cuando se compile el proyecto.  
@@ -45,7 +40,7 @@ Para la versión de Linux de esta página, vea [propiedades de paso de compilaci
  **Descripción**  
  Mensaje que se muestra cuando se ejecuta el paso de compilación personalizada.  
   
- **Outputs**  
+ **Salidas**  
  Archivo de salida que genera el paso de compilación personalizada. Este valor es necesario para que las compilaciones incrementales funcionen correctamente.  
   
  **Dependencias adicionales**  

@@ -1,29 +1,24 @@
 ---
-title: "Tutorial: Actualizar la aplicación Scribble MFC (parte 2) | Documentos de Microsoft"
-ms.custom: 
+title: 'Tutorial: Actualizar la aplicación Scribble MFC (parte 2) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Tutorial: Actualizar la aplicación Scribble de MFC (Parte 2)
 [Parte 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) de este tutorial ha mostrado cómo agregar una cinta de Office Fluent en el clásico Scribble de aplicación. Esta parte muestra cómo agregar controles que los usuarios pueden usar en lugar de los menús y comandos y paneles de cinta de opciones.  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 - [Inicializar lápices y guardar las preferencias](#initpensave)  
   
-##  <a name="addnewpanel"></a>Agregar nuevos paneles a la cinta de opciones  
+##  <a name="addnewpanel"></a> Agregar nuevos paneles a la cinta de opciones  
  Estos pasos muestran cómo agregar un **vista** panel que contiene dos casillas de verificación que controlan la visibilidad de la barra de herramientas y la barra de estado, y también un **ventana** panel que contiene una división una orientación vertical botón que controla la creación y disposición de las ventanas de interfaz de múltiples documentos (MDI).  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Para agregar un panel de vista y el panel de ventana a la barra de cinta  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Secciones](#top)]  
   
-##  <a name="addhelppanel"></a>Agregar un Panel de ayuda a la cinta de opciones  
+##  <a name="addhelppanel"></a> Agregar un Panel de ayuda a la cinta de opciones  
  Ahora, puede asignar dos elementos de menú que se definen en la aplicación Scribble para botones de la cinta que se denominan **temas de Ayuda** y **acerca de Scribble**. Los botones se agregan a un nuevo panel denominado **ayuda**.  
   
 #### <a name="to-add-a-help-panel"></a>Para agregar un panel de ayuda  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Secciones](#top)]  
   
-##  <a name="addpenpanel"></a>Agregar un Panel de lápiz a la cinta de opciones  
+##  <a name="addpenpanel"></a> Agregar un Panel de lápiz a la cinta de opciones  
  Ahora, agregue un panel para mostrar botones que controlan el grosor y el color del lápiz. Este panel contiene una casilla de verificación que alterne entre lápices gruesas y finas. Su funcionalidad se parece al de la **línea gruesa** elemento de menú en la aplicación Scribble.  
   
  La aplicación original Scribble permite al usuario seleccionar el ancho del lápiz en un cuadro de diálogo que aparece cuando el usuario hace clic en **grosores de lápiz** en el menú. Dado que la barra de cinta tiene suficiente espacio para nuevos controles, puede reemplazar el cuadro de diálogo mediante dos cuadros combinados en la cinta de opciones. Un cuadro combinado ajusta el ancho del lápiz fino y el otro cuadro combinado ajusta el ancho del lápiz grueso.  
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[Secciones](#top)]  
   
-##  <a name="addcolorbutton"></a>Agregar un botón de Color en el Panel de lápiz  
+##  <a name="addcolorbutton"></a> Agregar un botón de Color en el Panel de lápiz  
  A continuación, agregue un [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) objeto que permite al usuario scribble en color.  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Para agregar un botón de color en el panel de lápiz  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[Secciones](#top)]  
   
-##  <a name="addcolormember"></a>Agregar a un miembro de Color a la clase de documento  
- Dado que la aplicación original Scribble no tienen lápices de color, debe escribir una implementación para ellos. Para almacenar el color del lápiz del documento, agregue a un nuevo miembro a la clase de documento,`CscribbleDoc.`  
+##  <a name="addcolormember"></a> Agregar a un miembro de Color a la clase de documento  
+ Dado que la aplicación original Scribble no tienen lápices de color, debe escribir una implementación para ellos. Para almacenar el color del lápiz del documento, agregue a un nuevo miembro a la clase de documento, `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>Para agregar a un miembro de color a la clase de documento  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[Secciones](#top)]  
   
-##  <a name="initpensave"></a>Inicializar lápices y guardar las preferencias  
+##  <a name="initpensave"></a> Inicializar lápices y guardar las preferencias  
  A continuación, inicialice el color y el ancho de los lápices. Por último, guardar y cargar un color de un archivo de dibujo.  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Para inicializar los controles en la barra de cinta  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      Agregue el código siguiente a scribdoc.cpp, en la `CScribbleDoc::InitDocument` (método), después el `m_sizeDoc = CSize(200,200)` instrucción.  
   
- ```*/ / Restablecer la interfaz de usuario de la cinta de opciones en sus valores iniciales CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
+ ``` *Restablecer la interfaz de usuario de la cinta de opciones en sus valores iniciales CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
 
  CMFCRibbonColorButton * pColorBtn = DYNAMIC_DOWNCAST (CMFCRibbonColorButton, pRibbon -> FindByID(ID_PEN_COLOR)); * / / Establecer ColorButton en negro  
     pColorBtn -> SetColor (RGB (0, 0, 0));

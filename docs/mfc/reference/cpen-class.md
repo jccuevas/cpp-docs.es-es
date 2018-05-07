@@ -1,12 +1,9 @@
 ---
 title: CPen (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPen
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51ea9aadc5d5ca8fb5a5a253d2ddb5972bf0dfdc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpen-class"></a>CPen (clase)
 Encapsula un lápiz de la Interfaz de dispositivo gráfico (GDI) de Windows.  
@@ -85,7 +80,7 @@ class CPen : public CGdiObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="cpen"></a>CPen::CPen  
+##  <a name="cpen"></a>  CPen::CPen  
  Construye un objeto `CPen`.  
   
 ```  
@@ -124,7 +119,7 @@ CPen(
   
 - **PS_INSIDEFRAME** crea un lápiz que dibuja una línea dentro del marco de las formas cerradas generados por las funciones de salida de GDI de Windows que especifican un rectángulo delimitador (por ejemplo, el **elipse**, **rectángulo** , `RoundRect`, `Pie`, y `Chord` funciones miembro). Cuando se utiliza este estilo con funciones de salida de GDI de Windows que no especifican un rectángulo delimitador (por ejemplo, el `LineTo` función miembro), el área de dibujo del lápiz no está limitado por un marco.  
   
- La segunda versión de la `CPen` constructor especifica una combinación de tipo, estilo, extremo y atributos de combinación. Los valores de cada categoría deben combinarse con el operador OR bit a bit (&#124;). El tipo de lápiz puede ser uno de los valores siguientes:  
+ La segunda versión de la `CPen` constructor especifica una combinación de tipo, estilo, extremo y atributos de combinación. Los valores de cada categoría deben combinarse mediante el operador OR bit a bit (&#124;). El tipo de lápiz puede ser uno de los valores siguientes:  
   
 - **PS_GEOMETRIC** crea un lápiz geométrico.  
   
@@ -179,7 +174,7 @@ CPen(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
   
-##  <a name="createpen"></a>CPen::CreatePen  
+##  <a name="createpen"></a>  CPen::CreatePen  
  Crea un lápiz cosmético o geométrico lógico con el estilo especificado, el ancho y el pincel atributos y se adjunta a la `CPen` objeto.  
   
 ```  
@@ -243,7 +238,7 @@ BOOL CreatePen(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
-##  <a name="createpenindirect"></a>CPen::CreatePenIndirect  
+##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
  Inicializa un lápiz que tiene el estilo, ancho y color proporcionado en la estructura que señala `lpLogPen`.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
   
-##  <a name="fromhandle"></a>CPen::FromHandle  
+##  <a name="fromhandle"></a>  CPen::FromHandle  
  Devuelve un puntero a un `CPen` objeto especifica un identificador a un objeto de lápiz GDI de Windows.  
   
 ```  
@@ -274,7 +269,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
   
 ### <a name="parameters"></a>Parámetros  
  *hPen*  
- `HPEN`identificador de lápiz GDI de Windows.  
+ `HPEN` identificador de lápiz GDI de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un `CPen` objeto si es correcto; en caso contrario **NULL**.  
@@ -285,7 +280,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
   
-##  <a name="getextlogpen"></a>CPen::GetExtLogPen  
+##  <a name="getextlogpen"></a>  CPen::GetExtLogPen  
  Obtiene un **EXTLOGPEN** estructura subyacente.  
   
 ```  
@@ -317,7 +312,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
   
-##  <a name="getlogpen"></a>CPen::GetLogPen  
+##  <a name="getlogpen"></a>  CPen::GetLogPen  
  Obtiene un `LOGPEN` estructura subyacente.  
   
 ```  
@@ -347,7 +342,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
   
-##  <a name="operator_hpen"></a>CPen::operator HPEN  
+##  <a name="operator_hpen"></a>  CPen::operator HPEN  
  Obtiene el identificador de GDI de Windows asociado de la `CPen` objeto.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Clases de arquitectura de aplicación MFC | Documentos de Microsoft"
-ms.custom: 
+title: Clases de arquitectura de aplicación MFC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - classes [MFC], MFC
 - application architecture classes [MFC]
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623775d6c3306ba4afdb01eb78ea70b05f7a3365
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1174a994f345f4b7733e82603b5a49ed8977651
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-application-architecture-classes"></a>Clases de arquitectura de aplicaciones MFC
 Clases de esta categoría contribuyen a la arquitectura de una aplicación de marco de trabajo. Proporciona funcionalidad común para la mayoría de las aplicaciones. Rellene el marco de trabajo para agregar la funcionalidad específica de la aplicación. Normalmente, para ello, derivar nuevas clases de las clases de arquitectura y, a continuación, agregar los nuevos miembros o reemplazar las funciones miembro existentes.  

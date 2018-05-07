@@ -1,13 +1,10 @@
 ---
 title: 'TN043: Rutinas RFX | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - RFX
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19bb44653c03505d954318a01a6e34c1a297dba7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6a46867edc4ea2f314c167da4215b869af3ab17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn043-rfx-routines"></a>TN043: Rutinas RFX
 > [!NOTE]
@@ -99,15 +94,15 @@ RFX_Custom(pFX, "Col2",
   
 - **Valor** : anexar "" seguido de separador, al igual que ',' o ' '  
   
-- `SetFieldDirty`: Establezca el campo de estado bits desfasadas (es decir, cambiado)  
+- `SetFieldDirty` : Establezca el campo de estado bits desfasadas (es decir, cambiado)  
   
-- `SetFieldNull`: Establezca el bit de estado que indica el valor null para el campo  
+- `SetFieldNull` : Establezca el bit de estado que indica el valor null para el campo  
   
-- `IsFieldDirty`: Devuelve el valor de bit de integridad de estado  
+- `IsFieldDirty` : Devuelve el valor de bit de integridad de estado  
   
-- `IsFieldNull`: Devuelve el valor de bit de estado null  
+- `IsFieldNull` : Devuelve el valor de bit de estado null  
   
-- `IsFieldNullable`: Devuelve TRUE si el campo puede contener valores NULL  
+- `IsFieldNullable` : Devuelve TRUE si el campo puede contener valores NULL  
   
 - **StoreField** : valor de campo de archivo  
   

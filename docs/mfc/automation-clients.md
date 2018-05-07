@@ -1,13 +1,10 @@
 ---
-title: "Los clientes de automatización | Documentos de Microsoft"
-ms.custom: 
+title: Los clientes de automatización | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cfb6aae5c947d1f36019e548c72b22a3304aa12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-clients"></a>clientes de automatización
 Automatización permite a la aplicación para manipular objetos implementados en otra aplicación o exponga objetos para que se puedan manipular. Un cliente de automatización es una aplicación que puede manipular objetos expuestos por otra aplicación. La aplicación que expone los objetos se denomina servidor de automatización. El cliente usa los objetos de la aplicación de servidor mediante el acceso a funciones y propiedades de esos objetos.  
@@ -47,7 +42,7 @@ Automatización permite a la aplicación para manipular objetos implementados en
  A continuación, especifique el archivo de biblioteca de tipos que describe las propiedades y funciones del objeto de la aplicación de servidor. El cuadro de diálogo Agregar elemento leerá este archivo y crea el `COleDispatchDriver`-clase derivada, con funciones miembro que la aplicación puede llamar para obtener acceso a objetos de la aplicación de servidor en C++ de una manera de seguridad de tipos. Funcionalidad adicional que se hereda de `COleDispatchDriver` simplifica el proceso de llamada al servidor de automatización adecuado.  
   
 ### <a name="handling-events-in-automation-clients"></a>Control de eventos en los clientes de automatización  
- Si desea controlar los eventos en el cliente de automatización, debe agregar una interfaz de receptor. MFC proporciona compatibilidad de Asistente para agregar las interfaces de receptor para controles ActiveX, pero no se admite para los otros servidores COM. Para obtener información sobre cómo agregar una interfaz de receptor en un cliente MFC para las interfaces de origen descrito por los servidores COM, vea Cómo: crear una interfaz de receptor en el cliente de COM MFC-Based (KB 181845) en [http://support.microsoft.com/default.aspxscid=kb;en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
+ Si desea controlar los eventos en el cliente de automatización, debe agregar una interfaz de receptor. MFC proporciona compatibilidad de Asistente para agregar las interfaces de receptor para controles ActiveX, pero no se admite para los otros servidores COM. Para obtener información sobre cómo agregar una interfaz de receptor en un cliente MFC para las interfaces de origen descrito por los servidores COM, vea Cómo: crear una interfaz de receptor en el cliente de COM MFC-Based (KB 181845) en [ http://support.microsoft.com/default.aspxscid=kb; en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
   
 ## <a name="see-also"></a>Vea también  
  [Los clientes de automatización: Usar bibliotecas de tipos](../mfc/automation-clients-using-type-libraries.md)   

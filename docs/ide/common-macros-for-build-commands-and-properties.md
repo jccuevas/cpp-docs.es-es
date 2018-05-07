@@ -1,13 +1,10 @@
 ---
-title: "Común Macros para propiedades y comandos de compilación | Documentos de Microsoft"
-ms.custom: 
+title: Común Macros para propiedades y comandos de compilación | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -101,24 +98,22 @@ helpviewer_keywords:
 - $(PlatformName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96e403516d6f85804fa798d7a0c28575482ff43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b94347e48a7b8b134915456c92aea3397f97a1b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>Común Macros para propiedades y comandos de compilación
 Dependiendo de las opciones de instalación, Visual Studio puede hacer cientos de macros disponibles para usted. Estos se corresponden con las propiedades de MSBuild que se establecen de forma predeterminada, o en los archivos .props o .targets o en la configuración del proyecto. Estas macros pueden usarse en cualquier parte del cuadro de diálogo **Páginas de propiedades** de un proyecto donde se aceptan cadenas. Estas macros no distinguen mayúsculas de minúsculas.  
   
  Para mostrar las macros disponibles actualmente, en la columna situada a la derecha de un nombre de propiedad, haga clic en la flecha de lista desplegable. Si **Editar** está disponible, haga clic en él y luego en el cuadro de diálogo de edición, haga clic en **Macros**. Para obtener más información, vea la sección **Specifying User-Defined Values** de [Páginas de propiedades](../ide/property-pages-visual-cpp.md).  
   
- Las macros que se identifican como "En desuso" se dejaron de usar o se reemplazaron por una [macro de metadatos de elemento](/visualstudio/msbuild/itemmetadata-element-msbuild) equivalente (**%(***nombre***)**). Las macros que se identifican como "En desuso; migrada" también se dejaron de usar. Además, si el proyecto que contiene la macro se migra desde Visual Studio 2008, Visual Studio convierte la macro a la macro equivalente actual.  
+ Las macros que se identifican como "En desuso" ya no se utilizan o se han reemplazado por un equivalente [macro de metadatos de elemento](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***nombre***)**). Las macros que se identifican como "En desuso; migrada" también se dejaron de usar. Además, si el proyecto que contiene la macro se migra desde Visual Studio 2008, Visual Studio convierte la macro a la macro equivalente actual.  
   
  En la tabla siguiente describe un subconjunto de uso frecuente de las macros disponibles. Esta lista no es exhaustiva. Para obtener detalles sobre cómo se crean y se utilizan como macros en .props y .targets, archivos .vcxproj definiciones de propiedad de MSBuild, vea [propiedades de MSBuild](/visualstudio/msbuild/msbuild-properties).  
   

@@ -1,12 +1,9 @@
 ---
 title: Clase CMapStringToString | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapStringToString
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 142a000b5521458e3bdace8f840295efd07209fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a196e2f3f4641d94bbbbda57dd1471066fb1dfa2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapstringtostring-class"></a>Clase CMapStringToString
 Admite mapas de objetos `CString` con clave de objetos `CString` .  
@@ -121,7 +116,7 @@ class CMapStringToString : public CObject
 |[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CMapStringToString` incorpora la macro `IMPLEMENT_SERIAL` para admitir la serialización y el volcado de sus elementos. Cada elemento se serializa a su vez si una asignación se almacena en un archivo, ya sea con la inserción sobrecargada (  **<<** ) operador o con el `Serialize` función miembro.  
+ `CMapStringToString` incorpora la macro `IMPLEMENT_SERIAL` para admitir la serialización y el volcado de sus elementos. Cada elemento se serializa a su vez si una asignación se almacena en un archivo, ya sea con la inserción sobrecargada ( **<<**) operador o con el `Serialize` función miembro.  
   
  Si se necesita un volcado de persona `CString` -  `CString` elementos, debe establecer la profundidad del contexto de volcado en 1 o mayor.  
   
@@ -137,7 +132,7 @@ class CMapStringToString : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcoll.h  
   
-##  <a name="cpair"></a>CMapStringToString::CPair  
+##  <a name="cpair"></a>  CMapStringToString::CPair  
  Contiene un valor de clave y el valor del objeto string asociado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -154,7 +149,7 @@ class CMapStringToString : public CObject
 ### <a name="example"></a>Ejemplo  
   Para obtener un ejemplo de uso, vea el ejemplo de [CMapStringToString::PLookup](#plookup).  
   
-##  <a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>  CMapStringToString::PGetFirstAssoc  
  Devuelve la primera entrada del objeto map.  
   
 ```  
@@ -172,7 +167,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc  
  Recupera el elemento de mapa que señala `pAssocRec`.  
   
 ```  
@@ -194,7 +189,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc).  
   
-##  <a name="plookup"></a>CMapStringToString::PLookup  
+##  <a name="plookup"></a>  CMapStringToString::PLookup  
  Busca el valor asignado a una clave determinada.  
   
 ```  

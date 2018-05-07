@@ -1,13 +1,10 @@
 ---
-title: "Control elementos primarios y secundarios de árbol | Documentos de Microsoft"
-ms.custom: 
+title: Control elementos primarios y secundarios de árbol | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], parent and child items
 - tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: feaf59932da66be2bf269316c7ee9587d4037b3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 260cbf640f6c57e4b145d01e8f883025a4dc6507
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-parent-and-child-items"></a>Elementos primario y secundario del control de árbol
 Cualquier elemento de un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) puede tener una lista de subelementos, que se denominan elementos secundarios, asociados a él. Un elemento que tiene uno o más elementos secundarios se denomina un elemento primario. Un elemento secundario se muestra debajo de su elemento primario y se aplica una sangría para indicar que es subordinado al elemento primario. Un elemento que no tiene elemento primario está en la parte superior de la jerarquía y se llama a un elemento raíz.  

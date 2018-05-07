@@ -1,13 +1,10 @@
 ---
-title: "Clases de cuadro de diálogo comunes OLE | Documentos de Microsoft"
-ms.custom: 
+title: Clases de cuadro de diálogo comunes OLE | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -18,28 +15,26 @@ helpviewer_keywords:
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0617354337e75e2c2431df894c054722349e2306
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e3cedbe3cd08a425bd2bde2b4a6ca8c5a493c72
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-common-dialog-classes"></a>Clases de cuadros de diálogo comunes OLE
 Estas clases controlen tareas comunes de OLE mediante la implementación de un número de cuadros de diálogo OLE estándar. También proporcionan una interfaz de usuario coherente para la funcionalidad OLE.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Utiliza el marco de trabajo para contener las implementaciones comunes para todos los cuadros de diálogo OLE. Todas las clases de cuadro de diálogo de la categoría de la interfaz de usuario se derivan de esta clase base. `COleDialog`no se puede usar directamente.  
+ Utiliza el marco de trabajo para contener las implementaciones comunes para todos los cuadros de diálogo OLE. Todas las clases de cuadro de diálogo de la categoría de la interfaz de usuario se derivan de esta clase base. `COleDialog` no se puede usar directamente.  
   
  [Clase COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  Muestra el cuadro de diálogo Insertar objeto, la interfaz de usuario estándar para insertar nuevo OLE elementos vinculados o incrustados.  
   
- [Clase COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
+ [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
  Muestra el cuadro de diálogo Pegado especial, la interfaz de usuario estándar para implementar el comando Editar Pegado especial.  
   
  [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)  

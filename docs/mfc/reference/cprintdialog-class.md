@@ -1,12 +1,9 @@
 ---
 title: Clase CPrintDialog | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialog-class"></a>Clase CPrintDialog
 Encapsula los servicios proporcionados por el cuadro de diálogo común de Windows para imprimir.  
@@ -120,7 +115,7 @@ class CPrintDialog : public CCommonDialog
   
  Si no proporciona sus propio identificadores en `m_pd` para el **hDevMode** y **hDevNames** miembros, no olvide llamar a la función de Windows **GlobalFree** estos identificadores Cuando haya terminado con el cuadro de diálogo. Cuando se usa la implementación de instalación de impresión del marco de trabajo proporcionada por `CWinApp::OnFilePrintSetup`, no es necesario liberar estos identificadores. Los identificadores se mantienen por `CWinApp` y se liberan en `CWinApp`del destructor. Solo es necesario liberar estos identificadores cuando se usa `CPrintDialog` independiente.  
   
- Después de inicializar los controles de cuadro de diálogo, llame a la `DoModal` función de miembro para mostrar el cuadro de diálogo y permitir al usuario seleccionar las opciones de impresión. `DoModal`Devuelve si el usuario selecciona Aceptar ( **IDOK**) o Cancelar ( **IDCANCEL**) botón.  
+ Después de inicializar los controles de cuadro de diálogo, llame a la `DoModal` función de miembro para mostrar el cuadro de diálogo y permitir al usuario seleccionar las opciones de impresión. `DoModal` Devuelve si el usuario selecciona Aceptar ( **IDOK**) o Cancelar ( **IDCANCEL**) botón.  
   
  Si `DoModal` devuelve **IDOK**, puede usar uno de `CPrintDialog`de funciones de miembro para recuperar la información de entrada por el usuario.  
   
@@ -128,7 +123,7 @@ class CPrintDialog : public CCommonDialog
   
  Puede utilizar las ventanas **CommDlgExtendedError** función para determinar si se produjo un error durante la inicialización del cuadro de diálogo y para obtener más información sobre el error. Para obtener más información sobre esta función, consulte el SDK de Windows.  
   
- `CPrintDialog`se basa en el COMMDLG. Archivo DLL que se incluye con las versiones 3.1 y posteriores de Windows.  
+ `CPrintDialog` se basa en el COMMDLG. Archivo DLL que se incluye con las versiones 3.1 y posteriores de Windows.  
   
  Para personalizar el cuadro de diálogo, derive una clase de `CPrintDialog`, proporcione una plantilla de cuadro de diálogo personalizado y agregar un mapa de mensajes para procesar los mensajes de notificación de los controles extendidos. Los mensajes no procesados se deben pasar a la clase base. Personalizar la función de enlace no es necesario.  
   

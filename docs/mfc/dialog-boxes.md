@@ -1,13 +1,10 @@
 ---
-title: "Cuadros de diálogo | Documentos de Microsoft"
-ms.custom: 
+title: Cuadros de diálogo | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8117d175d59859c97a360ca6a6d2af559b403e32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c8de283d81aa9d260b891f285f06555dc67895f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-boxes"></a>Cuadros de diálogo
 Frecuencia de comunicación de aplicaciones para Windows con el usuario a través de los cuadros de diálogo. Clase [CDialog](../mfc/reference/cdialog-class.md) proporciona una interfaz para administrar cuadros de diálogo, el editor de cuadro de diálogo de Visual C++ facilita el proceso diseñar cuadros de diálogo y crear sus recursos de plantilla de cuadro de diálogo y asistentes para código simplifican el proceso de inicialización y validación de los controles en un cuadro de diálogo y de recopilación de los valores especificados por el usuario.  

@@ -1,12 +1,9 @@
 ---
 title: CHeaderCtrl (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHeaderCtrl
@@ -73,17 +70,15 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3731d6d7a1455dc51ee03ea942666cbfc0f48e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (clase)
 Proporciona la funcionalidad del control común de encabezado de Windows.  
@@ -166,7 +161,7 @@ class CHeaderCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcmn.h  
   
-##  <a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
+##  <a name="cheaderctrl"></a>  CHeaderCtrl::CHeaderCtrl  
  Construye un objeto `CHeaderCtrl`.  
   
 ```  
@@ -176,7 +171,7 @@ CHeaderCtrl();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]  
   
-##  <a name="clearallfilters"></a>CHeaderCtrl::ClearAllFilters  
+##  <a name="clearallfilters"></a>  CHeaderCtrl::ClearAllFilters  
  Borra todos los filtros de un control de encabezado.  
   
 ```  
@@ -184,7 +179,7 @@ BOOL ClearAllFilters();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si este método se realiza correctamente; en caso contrario, `false`.  
+ `true` Si este método se realiza correctamente; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método implementa el comportamiento del mensaje de Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) con un valor de columna de -1, como se describe en el SDK de Windows.  
@@ -192,7 +187,7 @@ BOOL ClearAllFilters();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
   
-##  <a name="clearfilter"></a>CHeaderCtrl::ClearFilter  
+##  <a name="clearfilter"></a>  CHeaderCtrl::ClearFilter  
  Borra el filtro para un control de encabezado.  
   
 ```  
@@ -204,7 +199,7 @@ BOOL ClearFilter(int nColumn);
  Valor de la columna que indica que se filtran para borrar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si este método se realiza correctamente; en caso contrario, `false`.  
+ `true` Si este método se realiza correctamente; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método implementa el comportamiento del mensaje de Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306), tal y como se describe en el SDK de Windows.  
@@ -212,7 +207,7 @@ BOOL ClearFilter(int nColumn);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
   
-##  <a name="create"></a>CHeaderCtrl:: Create  
+##  <a name="create"></a>  CHeaderCtrl:: Create  
  Crea un control de encabezado y lo adjunta a un `CHeaderCtrl` objeto.  
   
 ```  
@@ -244,17 +239,17 @@ virtual BOOL Create(
   
  Además de los estilos de control de encabezado, puede usar los siguientes estilos de control comunes para determinar cómo el control de encabezado se coloca y cambia de tamaño (vea [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) para obtener más información):  
   
-- `CCS_BOTTOM`Hace que el control se coloque en la parte inferior del área de cliente de la ventana primaria y establece el ancho para ser el mismo que el elemento primario de ancho de la ventana.  
+- `CCS_BOTTOM` Hace que el control se coloque en la parte inferior del área de cliente de la ventana primaria y establece el ancho para ser el mismo que el elemento primario de ancho de la ventana.  
   
-- `CCS_NODIVIDER`Impide que un resaltado dos píxeles que se va a dibujar en la parte superior del control.  
+- `CCS_NODIVIDER` Impide que un resaltado dos píxeles que se va a dibujar en la parte superior del control.  
   
-- `CCS_NOMOVEY`Hace que el control cambiar el tamaño y mover propio horizontalmente, pero no verticalmente, en respuesta a un `WM_SIZE` mensaje. Si el `CCS_NORESIZE` estilo se utiliza, no se aplica este estilo. Controles de encabezado tienen este estilo de forma predeterminada.  
+- `CCS_NOMOVEY` Hace que el control cambiar el tamaño y mover propio horizontalmente, pero no verticalmente, en respuesta a un `WM_SIZE` mensaje. Si el `CCS_NORESIZE` estilo se utiliza, no se aplica este estilo. Controles de encabezado tienen este estilo de forma predeterminada.  
   
-- `CCS_NOPARENTALIGN`Impide que el control consiste en mover automáticamente a la parte superior o inferior de la ventana primaria. En su lugar, el control mantiene su posición dentro de la ventana primaria a pesar de los cambios en el tamaño de la ventana primaria. Si el `CCS_TOP` o `CCS_BOTTOM` también se utiliza el estilo, el alto se ajusta a la predeterminada, pero la posición y el ancho permanecen sin cambios.  
+- `CCS_NOPARENTALIGN` Impide que el control consiste en mover automáticamente a la parte superior o inferior de la ventana primaria. En su lugar, el control mantiene su posición dentro de la ventana primaria a pesar de los cambios en el tamaño de la ventana primaria. Si el `CCS_TOP` o `CCS_BOTTOM` también se utiliza el estilo, el alto se ajusta a la predeterminada, pero la posición y el ancho permanecen sin cambios.  
   
-- `CCS_NORESIZE`Impide que usen el ancho y alto predeterminados al establecer su tamaño inicial o un nuevo tamaño del control. En su lugar, el control utiliza el ancho y alto que se especificó en la solicitud de creación o cambio de tamaño.  
+- `CCS_NORESIZE` Impide que usen el ancho y alto predeterminados al establecer su tamaño inicial o un nuevo tamaño del control. En su lugar, el control utiliza el ancho y alto que se especificó en la solicitud de creación o cambio de tamaño.  
   
-- `CCS_TOP`Hace que el control se coloque en la parte superior del área de cliente de la ventana primaria y establece el ancho para ser el mismo que el elemento primario de ancho de la ventana.  
+- `CCS_TOP` Hace que el control se coloque en la parte superior del área de cliente de la ventana primaria y establece el ancho para ser el mismo que el elemento primario de ancho de la ventana.  
   
  También puede aplicar los estilos de ventana siguiente a un control de encabezado (vea [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) para obtener más información):  
   
@@ -273,7 +268,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
   
-##  <a name="createex"></a>CHeaderCtrl::CreateEx  
+##  <a name="createex"></a>  CHeaderCtrl::CreateEx  
  Crea un control (una ventana secundaria) y asociarlo con el `CHeaderCtrl` objeto.  
   
 ```  
@@ -307,7 +302,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentarios  
  Use `CreateEx` en lugar de **crear** para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
   
-##  <a name="createdragimage"></a>CHeaderCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
  Crea una versión transparente de la imagen de un elemento dentro de un control de encabezado.  
   
 ```  
@@ -326,7 +321,7 @@ CImageList* CreateDragImage(int nIndex);
   
  La `CImageList` objeto al que señala el puntero devuelto es un objeto temporal y se elimina en el siguiente procesamiento de tiempo de inactividad.  
   
-##  <a name="deleteitem"></a>CHeaderCtrl::DeleteItem  
+##  <a name="deleteitem"></a>  CHeaderCtrl::DeleteItem  
  Elimina un elemento de un control de encabezado.  
   
 ```  
@@ -343,7 +338,7 @@ BOOL DeleteItem(int nPos);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
   
-##  <a name="drawitem"></a>CHeaderCtrl::DrawItem  
+##  <a name="drawitem"></a>  CHeaderCtrl::DrawItem  
  Lo llama el marco cuando un aspecto visual de un cambios de control de encabezado dibujados por el propietario.  
   
 ```  
@@ -364,7 +359,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
   
-##  <a name="editfilter"></a>CHeaderCtrl::EditFilter  
+##  <a name="editfilter"></a>  CHeaderCtrl::EditFilter  
  Empieza a editar el filtro especificado de un control de encabezado.  
   
 ```  
@@ -383,7 +378,7 @@ BOOL EditFilter(
  Especifique `true` para descartar los cambios realizados por el usuario, o `false` para aceptar los cambios realizados por el usuario.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si este método se realiza correctamente; en caso contrario, `false`.  
+ `true` Si este método se realiza correctamente; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método implementa el comportamiento del mensaje de Win32 [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312), tal y como se describe en el SDK de Windows.  
@@ -391,7 +386,7 @@ BOOL EditFilter(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
   
-##  <a name="getbitmapmargin"></a>CHeaderCtrl::GetBitmapMargin  
+##  <a name="getbitmapmargin"></a>  CHeaderCtrl::GetBitmapMargin  
  Recupera el ancho del margen de un mapa de bits en un control de encabezado.  
   
 ```  
@@ -407,7 +402,7 @@ int GetBitmapMargin() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
   
-##  <a name="getfocuseditem"></a>CHeaderCtrl::GetFocusedItem  
+##  <a name="getfocuseditem"></a>  CHeaderCtrl::GetFocusedItem  
  Obtiene el índice del elemento que tiene el foco en el control de encabezado actual.  
   
 ```  
@@ -430,7 +425,7 @@ int GetFocusedItem() const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="getimagelist"></a>CHeaderCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CHeaderCtrl::GetImageList  
  Recupera el identificador de una lista de imágenes que se utiliza para dibujar elementos de encabezado en un control de encabezado.  
   
 ```  
@@ -446,7 +441,7 @@ CImageList* GetImageList() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
   
-##  <a name="getitem"></a>CHeaderCtrl:: GetItem  
+##  <a name="getitem"></a>  CHeaderCtrl:: GetItem  
  Recupera información sobre un elemento de control de encabezado.  
   
 ```  
@@ -468,7 +463,7 @@ BOOL GetItem(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#10](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
   
-##  <a name="getitemcount"></a>CHeaderCtrl::GetItemCount  
+##  <a name="getitemcount"></a>  CHeaderCtrl::GetItemCount  
  Recupera un recuento de los elementos de un control de encabezado.  
   
 ```  
@@ -481,7 +476,7 @@ int GetItemCount() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CHeaderCtrl::DeleteItem](#deleteitem).  
   
-##  <a name="getitemdropdownrect"></a>CHeaderCtrl::GetItemDropDownRect  
+##  <a name="getitemdropdownrect"></a>  CHeaderCtrl::GetItemDropDownRect  
  Obtiene el rectángulo delimitador del botón de lista desplegable de un elemento de encabezado en el control de encabezado actual.  
   
 ```  
@@ -498,7 +493,7 @@ BOOL GetItemDropDownRect(
 |[out] `lpRect`|Puntero a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura para recibir la información del rectángulo delimitador.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si esta función se realiza correctamente; en caso contrario, `false`.  
+ `true` Si esta función se realiza correctamente; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) mensaje, que se describe en el SDK de Windows.  
@@ -513,7 +508,7 @@ BOOL GetItemDropDownRect(
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
   
-##  <a name="getitemrect"></a>CHeaderCtrl::GetItemRect  
+##  <a name="getitemrect"></a>  CHeaderCtrl::GetItemRect  
  Recupera el rectángulo delimitador para un elemento determinado en un control de encabezado.  
   
 ```  
@@ -535,7 +530,7 @@ BOOL GetItemRect(
 ### <a name="remarks"></a>Comentarios  
  Este método implementa el comportamiento del mensaje de Win32 [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), tal y como se describe en el SDK de Windows.  
   
-##  <a name="getorderarray"></a>CHeaderCtrl:: GetOrderArray  
+##  <a name="getorderarray"></a>  CHeaderCtrl:: GetOrderArray  
  Recupera el orden de izquierda a derecha de los elementos de un control de encabezado.  
   
 ```  
@@ -560,7 +555,7 @@ BOOL GetOrderArray(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
   
-##  <a name="getoverflowrect"></a>CHeaderCtrl::GetOverflowRect  
+##  <a name="getoverflowrect"></a>  CHeaderCtrl::GetOverflowRect  
  Obtiene el rectángulo delimitador del botón de desbordamiento del control de encabezado actual.  
   
 ```  
@@ -574,7 +569,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 |[out] `lpRect`|Puntero a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe la información del rectángulo delimitador.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si esta función se realiza correctamente; en caso contrario, `false`.  
+ `true` Si esta función se realiza correctamente; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Si el control de encabezado contiene más elementos que se pueden mostrar simultáneamente, el control puede mostrar un botón de desbordamiento se desplaza a elementos que no están visibles. El control de encabezado debe tener la `HDS_OVERFLOW` y `HDF_SPLITBUTTON` estilos para mostrar el botón de desbordamiento. El rectángulo delimitador adjunta el botón de desbordamiento y existe únicamente cuando se muestra el botón de desbordamiento. Para obtener más información, consulte [estilos de Control de encabezado](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
@@ -591,7 +586,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
   
-##  <a name="hittest"></a>CHeaderCtrl::HitTest  
+##  <a name="hittest"></a>  CHeaderCtrl::HitTest  
  Determina qué elemento de encabezado, si los hay, se encuentra en un punto especificado.  
   
 ```  
@@ -620,7 +615,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
   
-##  <a name="insertitem"></a>:: InsertItem  
+##  <a name="insertitem"></a>  :: InsertItem  
  Inserta un nuevo elemento en un control de encabezado en el índice especificado.  
   
 ```  
@@ -642,7 +637,7 @@ int InsertItem(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
   
-##  <a name="layout"></a>CHeaderCtrl:: Layout  
+##  <a name="layout"></a>  CHeaderCtrl:: Layout  
  Recupera el tamaño y la posición de un control de encabezado dentro de un rectángulo determinado.  
   
 ```  
@@ -662,7 +657,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
   
-##  <a name="ordertoindex"></a>CHeaderCtrl::OrderToIndex  
+##  <a name="ordertoindex"></a>  CHeaderCtrl::OrderToIndex  
  Recupera el valor de índice de un elemento basándose en su orden en el control de encabezado.  
   
 ```  
@@ -679,7 +674,7 @@ int OrderToIndex(int nOrder) const;
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento de la macro de Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), tal y como se describe en el SDK de Windows. Se proporciona para permitir la ordenación de elemento de encabezado.  
   
-##  <a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
+##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
  Establece el ancho del margen de un mapa de bits en un control de encabezado.  
   
 ```  
@@ -699,7 +694,7 @@ int SetBitmapMargin(int nWidth);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
-##  <a name="setfilterchangetimeout"></a>CHeaderCtrl::SetFilterChangeTimeout  
+##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
  Establece el intervalo de tiempo de espera entre el momento en que un cambio realiza en los atributos de filtro y el registro de un [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) notificación.  
   
 ```  
@@ -719,7 +714,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
   
-##  <a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem  
+##  <a name="setfocuseditem"></a>  CHeaderCtrl::SetFocusedItem  
  Establece el foco a un elemento de encabezado especificado en el control de encabezado actual.  
   
 ```  
@@ -733,7 +728,7 @@ BOOL SetFocusedItem(int iItem);
 |[in] `iItem`|Índice de base cero de un elemento de encabezado.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si este método se realiza correctamente; en caso contrario, `false`.  
+ `true` Si este método se realiza correctamente; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) mensaje, que se describe en el SDK de Windows.  
@@ -748,7 +743,7 @@ BOOL SetFocusedItem(int iItem);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="sethotdivider"></a>CHeaderCtrl::SetHotDivider  
+##  <a name="sethotdivider"></a>  CHeaderCtrl::SetHotDivider  
  Arrastre el divisor entre elementos de encabezado para indicar un manual de cambios y eliminación de un elemento de encabezado.  
   
 ```  
@@ -772,7 +767,7 @@ int SetHotDivider(int nIndex);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
   
-##  <a name="setimagelist"></a>CHeaderCtrl:: SetImageList  
+##  <a name="setimagelist"></a>  CHeaderCtrl:: SetImageList  
  Asigna una lista de imágenes a un control de encabezado.  
   
 ```  
@@ -792,7 +787,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CHeaderCtrl::GetImageList](#getimagelist).  
   
-##  <a name="setitem"></a>CHeaderCtrl:: SetItem  
+##  <a name="setitem"></a>  CHeaderCtrl:: SetItem  
  Establece los atributos del elemento especificado en un control de encabezado.  
   
 ```  
@@ -814,7 +809,7 @@ BOOL SetItem(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CHeaderCtrl:: GetItem](#getitem).  
   
-##  <a name="setorderarray"></a>CHeaderCtrl:: SetOrderArray  
+##  <a name="setorderarray"></a>  CHeaderCtrl:: SetOrderArray  
  Establece el orden de izquierda a derecha de los elementos en un control de encabezado.  
   
 ```  

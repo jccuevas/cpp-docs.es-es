@@ -1,30 +1,25 @@
 ---
-title: "Información de elementos de Control de árbol | Documentos de Microsoft"
-ms.custom: 
+title: Información de elementos de Control de árbol | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - tree controls [MFC], item information
 - CTreeCtrl class [MFC], item information
 ms.assetid: 8dcab855-27de-49e9-95d8-f78ba963ea71
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16e4a707c4bc1f0fde76ab3a146424d2d34d5ec8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724e9d7c4e0ee7db80f024c30e363612cb40fed1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-item-information"></a>Información de elementos de control de árbol
 Controles de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) tiene un número de funciones de miembro que recuperan información sobre los elementos del control. El [GetItem](../mfc/reference/ctreectrl-class.md#getitem) función miembro recupera algunos o todos los datos asociados a un elemento. Estos datos podrían incluir el texto del elemento, estado, imágenes, recuento de elementos secundarios y un valor de datos definido por la aplicación de 32 bits. También hay un [SetItem](../mfc/reference/ctreectrl-class.md#setitem) función que puede establecer algunos o todos los datos asociados a un elemento.  

@@ -1,12 +1,9 @@
 ---
-title: "Error de línea de comandos D8016 | Documentos de Microsoft"
-ms.custom: 
+title: Error de línea de comandos D8016 | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - D8016
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - D8016
 ms.assetid: eec51312-7471-4f92-94b2-d517cafc8ef5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 463de86acf0446f125b66ec1cdc3768c6238b630
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6f9709da189403f2594d76751430d30554bffe5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-line-error-d8016"></a>Error de la línea de comandos D8016
 Opciones de línea de comandos 'opción1' y 'opción2' son incompatibles  

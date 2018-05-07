@@ -1,12 +1,9 @@
 ---
 title: 'Idbpropertiesimpl:: SetProperties | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBPropertiesImpl.SetProperties
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - SetProperties method
 ms.assetid: 2f9fc1de-7f35-4bca-bab3-7b427bf92c26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f556cf112f9364cd2459bd4d1fdc30691281ca30
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5067173da531bb8a4f437666ccfc9c9c61bb47f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbpropertiesimplsetproperties"></a>IDBPropertiesImpl::SetProperties
 Establece propiedades en los grupos de propiedades origen de datos y la inicialización de objetos de origen de datos, o el grupo de propiedades de inicialización de los enumeradores.  
@@ -51,5 +46,5 @@ Establece propiedades en los grupos de propiedades origen de datos y la iniciali
   
 ## <a name="see-also"></a>Vea también  
  [IDBPropertiesImpl (clase)](../../data/oledb/idbpropertiesimpl-class.md)   
- [IDBPropertiesImpl::GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)   
+ [Idbpropertiesimpl:: GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)   
  [IDBPropertiesImpl::GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)

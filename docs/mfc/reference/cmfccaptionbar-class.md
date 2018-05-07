@@ -1,12 +1,9 @@
 ---
 title: CMFCCaptionBar (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCaptionBar
@@ -75,17 +72,15 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c23129c1ac857e812b0da837b19322741087934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c40f4d836d662bde1f49b9a0639b771d10db667
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar (clase)
 Un `CMFCCaptionBar` objeto es una barra de controles que se puede mostrar tres elementos: un botón, una etiqueta de texto y un mapa de bits. Puede mostrar un solo elemento de cada tipo al mismo tiempo. Puede alinear cada elemento al borde izquierdo o derecho del control o al centro. También puede aplicar un estilo plano o 3D a los bordes superior e inferior de la barra de título.  
@@ -180,7 +175,7 @@ class CMFCCaptionBar : public CPane
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcaptionbar.h  
   
-##  <a name="create"></a>CMFCCaptionBar::Create  
+##  <a name="create"></a>  CMFCCaptionBar::Create  
  Crea el control de barra de título y se adjunta a la `CMFCCaptionBar` objeto.  
   
 ```  
@@ -206,15 +201,15 @@ BOOL Create(
  El alto, en píxeles, del control de barra de título. Si es -1, el alto se calcula según el alto del icono, el texto y el botón que muestra el control de barra de título.  
   
  `bIsMessageBarMode`  
- `TRUE`Si la barra de título está en el modo de barra de mensajes; `FALSE` en caso contrario.  
+ `TRUE` Si la barra de título está en el modo de barra de mensajes; `FALSE` en caso contrario.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el control de barra de título se crea correctamente; `FALSE` en caso contrario.  
+ `TRUE` Si el control de barra de título se crea correctamente; `FALSE` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Crear un `CMFCCaptionBar` objeto en dos pasos. En primer lugar llame al constructor y, a continuación, se llama a la `Create` método, que crea el control de Windows y lo adjunta a la `CMFCCaptionBar` objeto.  
   
-##  <a name="doesallowdyninsertbefore"></a>CMFCCaptionBar::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>  CMFCCaptionBar::DoesAllowDynInsertBefore  
  Indica si se puede insertar otro panel dinámicamente entre la barra de título y su marco principal.  
   
 ```  
@@ -226,7 +221,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="enablebutton"></a>CMFCCaptionBar::EnableButton  
+##  <a name="enablebutton"></a>  CMFCCaptionBar::EnableButton  
  Habilita o deshabilita el botón en la barra de título.  
   
 ```  
@@ -235,9 +230,9 @@ void EnableButton(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bEnable`  
- `TRUE`Para habilitar el botón `FALSE` para deshabilitar el botón.  
+ `TRUE` Para habilitar el botón `FALSE` para deshabilitar el botón.  
   
-##  <a name="getalignment"></a>CMFCCaptionBar::GetAlignment  
+##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
  Devuelve la alineación del elemento especificado.  
   
 ```  
@@ -262,7 +257,7 @@ BarElementAlignment GetAlignment(BarElement elem);
   
 -   ALIGN_CENTER  
   
-##  <a name="getbordersize"></a>CMFCCaptionBar::GetBorderSize  
+##  <a name="getbordersize"></a>  CMFCCaptionBar::GetBorderSize  
  Devuelve el tamaño del borde de la barra de título.  
   
 ```  
@@ -272,7 +267,7 @@ int GetBorderSize() const;
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño, en píxeles, del borde.  
   
-##  <a name="getbuttonrect"></a>CMFCCaptionBar::GetButtonRect  
+##  <a name="getbuttonrect"></a>  CMFCCaptionBar::GetButtonRect  
  Recupera el rectángulo delimitador del botón en la barra de título.  
   
 ```  
@@ -282,7 +277,7 @@ CRect GetButtonRect() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un `CRect` objeto que contiene las coordenadas del rectángulo delimitador del botón en la barra de título.  
   
-##  <a name="getmargin"></a>CMFCCaptionBar::GetMargin  
+##  <a name="getmargin"></a>  CMFCCaptionBar::GetMargin  
  Devuelve la distancia entre el borde de los elementos de la barra de título y el borde del control de barra de título.  
   
 ```  
@@ -292,7 +287,7 @@ int GetMargin() const;
 ### <a name="return-value"></a>Valor devuelto  
  La distancia, en píxeles, entre el borde de los elementos de la barra de título y el borde del control de barra de título.  
   
-##  <a name="ismessagebarmode"></a>CMFCCaptionBar::IsMessageBarMode  
+##  <a name="ismessagebarmode"></a>  CMFCCaptionBar::IsMessageBarMode  
  Especifica si la barra de título está en el modo de la barra de mensajes.  
   
 ```  
@@ -300,33 +295,33 @@ BOOL IsMessageBarMode() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si la barra de título está en el modo de barra de mensajes; `FALSE` en caso contrario.  
+ `TRUE` Si la barra de título está en el modo de barra de mensajes; `FALSE` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  En el modo de barra de mensajes, la barra de título muestra una imagen con una información sobre herramientas, un mensaje de texto y un botón.  
   
-##  <a name="m_clrbarbackground"></a>CMFCCaptionBar::m_clrBarBackground  
+##  <a name="m_clrbarbackground"></a>  CMFCCaptionBar::m_clrBarBackground  
  El color de fondo de la barra de título.  
   
 ```  
 COLORREF m_clrBarBackground  
 ```  
   
-##  <a name="m_clrbarborder"></a>CMFCCaptionBar::m_clrBarBorder  
+##  <a name="m_clrbarborder"></a>  CMFCCaptionBar::m_clrBarBorder  
  El color del borde de la barra de título.  
   
 ```  
 COLORREF m_clrBarBorder  
 ```  
   
-##  <a name="m_clrbartext"></a>CMFCCaptionBar::m_clrBarText  
+##  <a name="m_clrbartext"></a>  CMFCCaptionBar::m_clrBarText  
  El color del texto de la barra de título.  
   
 ```  
 COLORREF m_clrBarText  
 ```  
   
-##  <a name="ondrawbackground"></a>CMFCCaptionBar::OnDrawBackground  
+##  <a name="ondrawbackground"></a>  CMFCCaptionBar::OnDrawBackground  
  Lo llama el marco de trabajo para rellenar el fondo de la barra de título.  
   
 ```  
@@ -347,7 +342,7 @@ virtual void OnDrawBackground(
   
  Invalide este método en un `CMFCCaptionBar` clase derivada para personalizar la apariencia de la barra de título.  
   
-##  <a name="ondrawborder"></a>CMFCCaptionBar::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCCaptionBar::OnDrawBorder  
  Lo llama el marco de trabajo para dibujar el borde de la barra de título.  
   
 ```  
@@ -368,7 +363,7 @@ virtual void OnDrawBorder(
   
  Invalide este método en un `CMFCCaptionBar` clase derivada para personalizar la apariencia de los bordes de la barra de título.  
   
-##  <a name="ondrawbutton"></a>CMFCCaptionBar::OnDrawButton  
+##  <a name="ondrawbutton"></a>  CMFCCaptionBar::OnDrawButton  
  Lo llama el marco de trabajo para dibujar el botón de barra de título.  
   
 ```  
@@ -390,12 +385,12 @@ virtual void OnDrawButton(
  Etiqueta de texto del botón.  
   
  [in] `bEnabled`  
- `TRUE`Si el botón está habilitado; `FALSE` en caso contrario.  
+ `TRUE` Si el botón está habilitado; `FALSE` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en un `CMFCCaptionBar` clase derivada para personalizar la apariencia del botón de la barra de título.  
   
-##  <a name="ondrawimage"></a>CMFCCaptionBar::OnDrawImage  
+##  <a name="ondrawimage"></a>  CMFCCaptionBar::OnDrawImage  
  Lo llama el marco de trabajo para dibujar la imagen de la barra de título.  
   
 ```  
@@ -414,7 +409,7 @@ virtual void OnDrawImage(
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en un `CMFCCaptionBar` clase derivada para personalizar la apariencia de la imagen.  
   
-##  <a name="ondrawtext"></a>CMFCCaptionBar::OnDrawText  
+##  <a name="ondrawtext"></a>  CMFCCaptionBar::OnDrawText  
  Lo llama el marco de trabajo para dibujar el texto de la barra de título.  
   
 ```  
@@ -439,14 +434,14 @@ virtual void OnDrawText(
   
  Invalide este método en un `CMFCCaptionBar` clase derivada para personalizar la apariencia del texto de la barra de título.  
   
-##  <a name="removebitmap"></a>CMFCCaptionBar::RemoveBitmap  
+##  <a name="removebitmap"></a>  CMFCCaptionBar::RemoveBitmap  
  Quita la imagen de mapa de bits de la barra de título.  
   
 ```  
 void RemoveBitmap();
 ```  
   
-##  <a name="removebutton"></a>CMFCCaptionBar::RemoveButton  
+##  <a name="removebutton"></a>  CMFCCaptionBar::RemoveButton  
  Quita el botón de la barra de título.  
   
 ```  
@@ -456,21 +451,21 @@ void RemoveButton();
 ### <a name="remarks"></a>Comentarios  
  El diseño de elementos de la barra de título se ajustan automáticamente.  
   
-##  <a name="removeicon"></a>CMFCCaptionBar::RemoveIcon  
+##  <a name="removeicon"></a>  CMFCCaptionBar::RemoveIcon  
  Quita el icono de la barra de título.  
   
 ```  
 void RemoveIcon();
 ```  
   
-##  <a name="removetext"></a>CMFCCaptionBar::RemoveText  
+##  <a name="removetext"></a>  CMFCCaptionBar::RemoveText  
  Quita la etiqueta de texto de la barra de título.  
   
 ```  
 void RemoveText();
 ```  
   
-##  <a name="setbitmap"></a>CMFCCaptionBar::SetBitmap  
+##  <a name="setbitmap"></a>  CMFCCaptionBar::SetBitmap  
  Establece la imagen de mapa de bits de la barra de título.  
   
 ```  
@@ -516,7 +511,7 @@ void SetBitmap(
   
 -   ALIGN_CENTER  
   
-##  <a name="setbordersize"></a>CMFCCaptionBar::SetBorderSize  
+##  <a name="setbordersize"></a>  CMFCCaptionBar::SetBorderSize  
  Establece el tamaño del borde de la barra de título.  
   
 ```  
@@ -527,7 +522,7 @@ void SetBorderSize(int nSize);
  [in] `nSize`  
  El nuevo tamaño, en píxeles, del borde de la barra de título.  
   
-##  <a name="setbutton"></a>CMFCCaptionBar::SetButton  
+##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
  Establece el botón de la barra de título.  
   
 ```  
@@ -549,9 +544,9 @@ void SetButton(
  Alineación del botón.  
   
  `bHasDropDownArrow`  
- `TRUE`Si el botón muestra una flecha desplegable `FALSE` en caso contrario.  
+ `TRUE` Si el botón muestra una flecha desplegable `FALSE` en caso contrario.  
   
-##  <a name="setbuttonpressed"></a>CMFCCaptionBar::SetButtonPressed  
+##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed  
  Especifica si se mantiene presionado el botón.  
   
 ```  
@@ -560,9 +555,9 @@ void SetButtonPressed(BOOL bPresed=TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  `bPresed`  
- `TRUE`Si el botón mantiene su estado presionado, `FALSE` en caso contrario.  
+ `TRUE` Si el botón mantiene su estado presionado, `FALSE` en caso contrario.  
   
-##  <a name="setbuttontooltip"></a>CMFCCaptionBar::SetButtonToolTip  
+##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip  
  Establece la información sobre herramientas para el botón.  
   
 ```  
@@ -578,7 +573,7 @@ void SetButtonToolTip(
  [in] `lpszDescription`  
  La descripción de la información sobre herramientas.  
   
-##  <a name="setflatborder"></a>CMFCCaptionBar::SetFlatBorder  
+##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
  Establece el estilo de borde de la barra de título.  
   
 ```  
@@ -587,9 +582,9 @@ void SetFlatBorder(BOOL bFlat=TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bFlat`  
- `TRUE`Si el borde de una barra de título es plana. `FALSE`Si el borde es 3D.  
+ `TRUE` Si el borde de una barra de título es plana. `FALSE` Si el borde es 3D.  
   
-##  <a name="seticon"></a>CMFCCaptionBar::SetIcon  
+##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
  Establece el icono de una barra de título.  
   
 ```  
@@ -618,7 +613,7 @@ void SetIcon(
   
 -   ALIGN_CENTER  
   
-##  <a name="setimagetooltip"></a>CMFCCaptionBar::SetImageToolTip  
+##  <a name="setimagetooltip"></a>  CMFCCaptionBar::SetImageToolTip  
  Establece la información sobre herramientas para la imagen en la barra de título.  
   
 ```  
@@ -634,7 +629,7 @@ void SetImageToolTip(
  [in] `lpszDescription`  
  La descripción de la información sobre herramientas.  
   
-##  <a name="setmargin"></a>CMFCCaptionBar::SetMargin  
+##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
  Establece la distancia entre el borde del elemento de barra de título y el borde del control de barra de título.  
   
 ```  
@@ -645,7 +640,7 @@ void SetMargin(int nMargin);
  [in] `nMargin`  
  La distancia, en píxeles, entre el borde de los elementos de la barra de título y el borde del control de barra de título.  
   
-##  <a name="settext"></a>CMFCCaptionBar::SetText  
+##  <a name="settext"></a>  CMFCCaptionBar::SetText  
  Establece la etiqueta de texto de la barra de título.  
   
 ```  

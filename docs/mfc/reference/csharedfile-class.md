@@ -1,12 +1,9 @@
 ---
 title: Clase CSharedFile | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSharedFile
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c749f86f9e3fbd310fd03b3a82768d58632087
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csharedfile-class"></a>Clase CSharedFile
 El [CMemFile](../../mfc/reference/cmemfile-class.md)-clase derivada que es compatible con archivos de memoria compartida.  
@@ -66,7 +61,7 @@ class CSharedFile : public CMemFile
   
  Tenga en cuenta que `CSharedFile` no asignado a la memoria de uso de archivos y los datos no se puede compartir directamente entre los procesos.  
   
- `CSharedFile`objetos pueden asignar automáticamente su propia memoria o bien puede asociar su propio bloque de memoria a la `CSharedFile` objeto mediante una llamada a [CSharedFile::SetHandle](#sethandle). En cualquier caso, se asigna memoria para aumentar automáticamente el archivo de memoria en `nGrowBytes`-tamaño incrementos si `nGrowBytes` no es cero.  
+ `CSharedFile` objetos pueden asignar automáticamente su propia memoria o bien puede asociar su propio bloque de memoria a la `CSharedFile` objeto mediante una llamada a [CSharedFile::SetHandle](#sethandle). En cualquier caso, se asigna memoria para aumentar automáticamente el archivo de memoria en `nGrowBytes`-tamaño incrementos si `nGrowBytes` no es cero.  
   
  Para obtener más información, vea el artículo [archivos en MFC](../../mfc/files-in-mfc.md) y [archivo control](../../c-runtime-library/file-handling.md) en el *referencia de la biblioteca de tiempo de ejecución*.  
   
@@ -82,7 +77,7 @@ class CSharedFile : public CMemFile
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxadv.h  
   
-##  <a name="csharedfile"></a>CSharedFile::CSharedFile  
+##  <a name="csharedfile"></a>  CSharedFile::CSharedFile  
  Construye un `CSharedFile` de objetos y le asigna memoria.  
   
 ```  
@@ -98,7 +93,7 @@ CSharedFile(
  `nGrowBytes`  
  El incremento de la asignación de memoria en bytes.  
   
-##  <a name="detach"></a>CSharedFile::Detach  
+##  <a name="detach"></a>  CSharedFile::Detach  
  Llame a esta función para cerrar el archivo de memoria y desconectar desde el bloque de memoria.  
   
 ```  
@@ -111,7 +106,7 @@ HGLOBAL Detach();
 ### <a name="remarks"></a>Comentarios  
  Puede volver a abrirlo mediante una llamada a [SetHandle](#sethandle), utilizando el identificador devuelto por **separar**.  
   
-##  <a name="sethandle"></a>CSharedFile::SetHandle  
+##  <a name="sethandle"></a>  CSharedFile::SetHandle  
  Llame a esta función para adjuntar un bloque de memoria global para la `CSharedFile` objeto.  
   
 ```  

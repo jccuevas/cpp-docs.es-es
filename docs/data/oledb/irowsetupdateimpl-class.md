@@ -1,12 +1,9 @@
 ---
 title: IRowsetUpdateImpl (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetUpdateImpl
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - IRowsetUpdateImpl class
 - updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c49782328ed51afe6a6501ed239d0800221864c3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 34efd252f67a0e3da9827ef97cff8bcab0a45532
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl (Clase)
 La implementación de plantillas OLE DB de la [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) interfaz.  
@@ -85,7 +80,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|Obtiene los datos transmitidos a más recientemente u obtenido del origen de datos, pasando por alto los cambios pendientes.|  
 |[GetPendingRows](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|Devuelve una lista de filas con cambios pendientes.|  
 |[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|Devuelve el estado de las filas especificadas.|  
-|[Undo](../../data/oledb/irowsetupdateimpl-undo.md)|Deshace los cambios realizados en la fila desde la última captura o de actualización.|  
+|[Deshacer](../../data/oledb/irowsetupdateimpl-undo.md)|Deshace los cambios realizados en la fila desde la última captura o de actualización.|  
 |[Actualizar](../../data/oledb/irowsetupdateimpl-update.md)|Transmite los cambios realizados en la fila desde la última captura o de actualización.|  
   
 ### <a name="implementation-methods-callback"></a>Métodos de implementación (devolución de llamada)  

@@ -1,30 +1,25 @@
 ---
 title: Crear el Control de lista | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CListCtrl class [MFC], creating control
 - list controls [MFC]
 ms.assetid: a4cb1729-31b6-4d2b-a44b-367474848a39
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85afbe49943e06a66cf2fa914cc87f07b0fa8c52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42457e223bb7e12da64be54d757e05d0bac3a028
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-list-control"></a>Crear el control de lista
 Cómo controlar la lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) se crea depende de si está utilizando el control directamente o utilizando la clase [CListView](../mfc/reference/clistview-class.md) en su lugar. Si usa `CListView`, el marco de trabajo construye la vista como parte de su secuencia de creación de documento/vista. Crear la vista de lista, crea el control de la lista también (los dos son lo mismo). El control se crea en la vista [OnCreate](../mfc/reference/cwnd-class.md#oncreate) función de controlador. En este caso, el control está listo para agregar elementos a través de una llamada a [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  

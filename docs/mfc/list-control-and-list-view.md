@@ -1,13 +1,10 @@
 ---
 title: Control de lista y vista de lista | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - list views [MFC]
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c9d559d642b6edf926b9feb49332ef7ec2924a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3279ae5edc02ec52ded065c4a45d18e3236802f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="list-control-and-list-view"></a>Control de lista y vista de lista
 Para mayor comodidad, MFC encapsula el control de lista de dos maneras. Puede usar controles de lista:  
@@ -36,7 +31,7 @@ Para mayor comodidad, MFC encapsula el control de lista de dos maneras. Puede us
   
 -   De forma indirecta, mediante el uso de la clase [CListView](../mfc/reference/clistview-class.md).  
   
- `CListView`facilita la integración de un control de lista con la arquitectura documento/vista MFC, encapsulando el control gran parte como [CEditView](../mfc/reference/ceditview-class.md) encapsula un control de edición: el control rellena el área de superficie completo de una vista MFC. (La vista *es* el control, se convierte en `CListView`.)  
+ `CListView` facilita la integración de un control de lista con la arquitectura documento/vista MFC, encapsulando el control gran parte como [CEditView](../mfc/reference/ceditview-class.md) encapsula un control de edición: el control rellena el área de superficie completo de una vista MFC. (La vista *es* el control, se convierte en `CListView`.)  
   
  A `CListView` objeto hereda de [CCtrlView](../mfc/reference/cctrlview-class.md) y su base de clases y agrega una función miembro para recuperar el control de lista subyacente. Usar miembros de vista para trabajar con la vista como una vista. Use la [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl) función de miembro para obtener acceso a funciones miembro del control de lista. Utilice a estos miembros para:  
   

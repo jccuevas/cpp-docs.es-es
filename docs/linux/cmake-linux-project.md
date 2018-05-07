@@ -1,11 +1,12 @@
 ---
-title: "Configuración de un proyecto de CMake de Linux en Visual Studio | Microsoft Docs"
-ms.custom: 
+title: Configuración de un proyecto de CMake de Linux en Visual Studio | Microsoft Docs
+ms.custom: ''
 ms.date: 10/25/2107
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-linux
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 author: corob-msft
@@ -14,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 67665f3271caf71d16788b2e102d0e756d9f702f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 961419e9ffcd5dede0db01f81e1b1eedc3290436
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configuración de un proyecto de CMake de Linux
   
@@ -103,19 +104,13 @@ cmake -E capabilities
 
 En la salida, busque "serverMode":true. Tenga en cuenta que aunque compile CMake a partir del origen tal y como se describe a continuación, debe comprobar las capacidades cuando haya finalizado. El sistema Linux puede tener limitaciones que impidan la habilitación del modo servidor.
 
-Para empezar a compilar desde el origen en el shell de su sistema Linux, asegúrese de que el administrador de paquetes está actualizado y que git y cmake están disponibles. En primer lugar, clone los orígenes de CMake:
+Para empezar a compilar desde el origen en el shell de su sistema Linux, asegúrese de que el administrador de paquetes está actualizado y que git y cmake están disponibles. En primer lugar, clone los orígenes de CMake de nuestro repositorio que usamos para la compatibilidad con CMake de Visual Studio:
 
 ```cmd
 sudo apt-get update
 sudo apt-get install -y git cmake
-git clone https://github.com/Kitware/CMake.git
+git clone https://github.com/Microsoft/CMake.git
 cd CMake
-```
-
-A continuación, asegúrese de que se encuentra en una versión compatible de CMake para Visual Studio. Si bien realizamos un seguimiento activo del desarrollo de CMake, no es posible garantizar la compatibilidad con la versión más reciente. Para compilar CMake 3.9.0 (por ejemplo), primero ejecute:
-
-```cmd
-git checkout tags/v3.9.0
 ```
 
 A continuación, ejecute los siguientes comandos:

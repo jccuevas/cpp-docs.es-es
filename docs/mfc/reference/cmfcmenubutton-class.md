@@ -1,12 +1,9 @@
 ---
 title: CMFCMenuButton (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCMenuButton
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac8fe59fe5dbfb101ec0881dbf17925cf048caa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton (clase)
 Un botón que muestra un menú emergente e informes en las selecciones de menú del usuario.  
@@ -80,7 +75,7 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="remarks"></a>Comentarios  
  El `CMFCMenuButton` clase se deriva de la [CMFCButton clase](../../mfc/reference/cmfcbutton-class.md) que es, a su vez, deriva de la [CButton clase](../../mfc/reference/cbutton-class.md). Por lo tanto, puede usar `CMFCMenuButton` en el código de la misma manera que usaría `CButton`.  
   
- Cuando se crea un `CMFCMenuButton`, debe pasar un identificador para el menú emergente asociado. A continuación, llame a la función `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent`comprueba que el tamaño del botón es suficiente para incluir una flecha que apunta a la ubicación donde la ventana emergente aparecerá -; es decir, debajo o a la derecha del botón.  
+ Cuando se crea un `CMFCMenuButton`, debe pasar un identificador para el menú emergente asociado. A continuación, llame a la función `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent` comprueba que el tamaño del botón es suficiente para incluir una flecha que apunta a la ubicación donde la ventana emergente aparecerá -; es decir, debajo o a la derecha del botón.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo establecer el identificador del menú asociado al botón, cambiar el tamaño del botón según su tamaño de texto e imagen y el menú emergente que se muestra el marco de trabajo. Este fragmento de código forma parte de la [ejemplo nuevos controles](../../visual-cpp-samples.md).  
@@ -104,14 +99,14 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxmenubutton.h  
   
-##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
+##  <a name="cmfcmenubutton"></a>  CMFCMenuButton::CMFCMenuButton  
  Construye un nuevo [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) objeto.  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
+##  <a name="m_bosmenu"></a>  CMFCMenuButton::m_bOSMenu  
  Una variable de miembro de tipo Boolean que indica qué menú emergente que muestra el marco de trabajo.  
   
 ```  
@@ -121,7 +116,7 @@ BOOL m_bOSMenu;
 ### <a name="remarks"></a>Comentarios  
  Si `m_bOSMenu` es `TRUE`, el marco llama a los heredados `TrackPopupMenu` método para este objeto. En caso contrario, el marco llama a [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).  
   
-##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
+##  <a name="m_brightarrow"></a>  CMFCMenuButton::m_bRightArrow  
  Una variable de miembro de tipo Boolean que indica la ubicación del menú emergente.  
   
 ```  
@@ -131,7 +126,7 @@ BOOL m_bRightArrow;
 ### <a name="remarks"></a>Comentarios  
  Cuando el usuario presiona el botón de menú, la aplicación muestra un menú emergente. El marco de trabajo mostrará el menú emergente bajo el botón o a la derecha del botón. El botón también tiene una pequeña flecha que indica dónde se mostrará el menú emergente. Si `m_bRightArrow` es `TRUE`, el marco de trabajo muestra el menú emergente a la derecha del botón. En caso contrario, muestra el menú emergente, bajo el botón.  
   
-##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
+##  <a name="m_bstaypressed"></a>  CMFCMenuButton::m_bStayPressed  
  Una variable de miembro de tipo Boolean que indica si aparece el botón de menú presionado mientras el usuario realiza una selección en el menú emergente.  
   
 ```  
@@ -143,7 +138,7 @@ BOOL m_bStayPressed;
   
  Si el `m_bStayPressed` miembro es `TRUE`, se convierte en presiona el botón de menú cuando el usuario hace clic en el botón. Se mantiene presionada hasta después de que el usuario cierra el menú emergente, por hacer una selección o Cancelar.  
   
-##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
+##  <a name="m_hmenu"></a>  CMFCMenuButton::m_hMenu  
  El identificador del menú adjunto.  
   
 ```  
@@ -153,7 +148,7 @@ HMENU m_hMenu;
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo muestra el menú indicado por esta variable miembro cuando el usuario hace clic en el botón de menú.  
   
-##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult  
  Un entero que indica el elemento que el usuario selecciona en el menú emergente.  
   
 ```  
@@ -163,7 +158,7 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Comentarios  
  El valor de esta variable miembro es cero si el usuario cancela el menú sin realizar una selección o si se produce un error.  
   
-##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage  
  Lo llama el marco para traducir los mensajes de ventana antes de enviarlos.  
   
 ```  
@@ -179,7 +174,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCMenuButton::SizeToContent  
  Cambia el tamaño del botón según su tamaño de texto y el tamaño de la imagen.  
   
 ```  

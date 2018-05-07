@@ -1,12 +1,9 @@
 ---
 title: CTypedPtrArray (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrArray
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e08749341bd7865c89e397e36aeff3a6ccc0d71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrarray-class"></a>Clase CTypedPtrArray
 Proporciona un "contenedor" con seguridad de tipos para objetos de clase `CPtrArray` o `CObArray`.  
@@ -98,7 +93,7 @@ class CTypedPtrArray : public BASE_CLASS
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtempl.h  
   
-##  <a name="add"></a>CTypedPtrArray::Add  
+##  <a name="add"></a>  CTypedPtrArray::Add  
  Llama a esta función miembro `BASE_CLASS` **:: Add**.  
   
 ```  
@@ -118,7 +113,7 @@ INT_PTR Add(TYPE newElement);
 ### <a name="remarks"></a>Comentarios  
  Para obtener comentarios más detallada, vea [CObArray::Add](../../mfc/reference/cobarray-class.md#add).  
   
-##  <a name="append"></a>CTypedPtrArray::Append  
+##  <a name="append"></a>  CTypedPtrArray::Append  
  Llama a esta función miembro `BASE_CLASS` **:: Append**.  
   
 ```  
@@ -141,7 +136,7 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>Comentarios  
  Para obtener comentarios más detallada, vea [CObArray::Append](../../mfc/reference/cobarray-class.md#append).  
   
-##  <a name="copy"></a>CTypedPtrArray::Copy  
+##  <a name="copy"></a>  CTypedPtrArray::Copy  
  Llama a esta función miembro `BASE_CLASS` **:: copia**.  
   
 ```  
@@ -161,7 +156,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>Comentarios  
  Para obtener comentarios más detallada, vea [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy).  
   
-##  <a name="elementat"></a>CTypedPtrArray::ElementAt  
+##  <a name="elementat"></a>  CTypedPtrArray::ElementAt  
  Esta función insertada se llama `BASE_CLASS` **:: ElementAt**.  
   
 ```  
@@ -181,7 +176,7 @@ TYPE& ElementAt(INT_PTR nIndex);
 ### <a name="remarks"></a>Comentarios  
  Para obtener comentarios más detallada, vea [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).  
   
-##  <a name="getat"></a>CTypedPtrArray::GetAt  
+##  <a name="getat"></a>  CTypedPtrArray::GetAt  
  Esta función insertada se llama `BASE_CLASS` **:: GetAt**.  
   
 ```  
@@ -201,7 +196,7 @@ TYPE GetAt(INT_PTR nIndex) const;
 ### <a name="remarks"></a>Comentarios  
  Para obtener comentarios más detallada, vea [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
   
-##  <a name="insertat"></a>CTypedPtrArray::InsertAt  
+##  <a name="insertat"></a>  CTypedPtrArray::InsertAt  
  Llama a esta función miembro `BASE_CLASS` **:: InsertAt**.  
   
 ```  
@@ -241,7 +236,7 @@ void InsertAt(
 ### <a name="remarks"></a>Comentarios  
  Para obtener comentarios más detallada, vea [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).  
   
-##  <a name="operator_at"></a>[] CTypedPtrArray::operator  
+##  <a name="operator_at"></a>  [] CTypedPtrArray::operator  
  Llamar estos operadores inline `BASE_CLASS` **:: [] operador**.  
   
 ```  
@@ -261,7 +256,7 @@ TYPE operator[ ](int_ptr nindex) const;
   
  La versión de la biblioteca de depuración valida si el subíndice (ya sea en el lado izquierdo o derecho de una instrucción de asignación) está fuera de límites.  
   
-##  <a name="setat"></a>CTypedPtrArray::SetAt  
+##  <a name="setat"></a>  CTypedPtrArray::SetAt  
  Llama a esta función miembro `BASE_CLASS` **:: SetAt**.  
   
 ```  
@@ -283,7 +278,7 @@ void SetAt(
 ### <a name="remarks"></a>Comentarios  
  Para obtener comentarios más detallada, vea [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat).  
   
-##  <a name="setatgrow"></a>CTypedPtrArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CTypedPtrArray::SetAtGrow  
  Llama a esta función miembro `BASE_CLASS` **:: SetAtGrow**.  
   
 ```  

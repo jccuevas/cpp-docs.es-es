@@ -1,13 +1,10 @@
 ---
 title: Barras de control | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3550043e5b85247d4188c830873099c6ea9831a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-bars"></a>Barras de controles
 "Barra de control" es el nombre general para las barras de herramientas, barras de estado y barras de cuadro de diálogo. Clases MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, y **CReBar** derivan de la clase [CControlBar](../mfc/reference/ccontrolbar-class.md), que implementa su funcionalidad común.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
  Siga breve introducción a los tipos de barra de control. Para obtener más información, vea los vínculos siguientes.  
   
 ## <a name="control-bars"></a>Barras de controles  
- Barras de control mejoran en gran medida facilidad de uso de un programa proporcionando rápida, las acciones de comando de un solo paso. Clase `CControlBar` proporciona la funcionalidad común de todas las barras de herramientas, barras de estado y las barras de cuadro de diálogo. `CControlBar`proporciona la funcionalidad para la colocación de la barra de controles en su ventana de marco principal. Dado que una barra de controles es normalmente una ventana secundaria de una ventana de marco principal, es un elemento "relacionado" a la vista de cliente o el cliente MDI de la ventana de marco. Un objeto de barra de controles utiliza información sobre el rectángulo de cliente de su ventana primaria para colocarse. A continuación, modifica rectángulo restantes de la ventana de cliente del elemento primario para que la vista de cliente o la ventana de cliente MDI rellena el resto de la ventana del cliente.  
+ Barras de control mejoran en gran medida facilidad de uso de un programa proporcionando rápida, las acciones de comando de un solo paso. Clase `CControlBar` proporciona la funcionalidad común de todas las barras de herramientas, barras de estado y las barras de cuadro de diálogo. `CControlBar` proporciona la funcionalidad para la colocación de la barra de controles en su ventana de marco principal. Dado que una barra de controles es normalmente una ventana secundaria de una ventana de marco principal, es un elemento "relacionado" a la vista de cliente o el cliente MDI de la ventana de marco. Un objeto de barra de controles utiliza información sobre el rectángulo de cliente de su ventana primaria para colocarse. A continuación, modifica rectángulo restantes de la ventana de cliente del elemento primario para que la vista de cliente o la ventana de cliente MDI rellena el resto de la ventana del cliente.  
   
 > [!NOTE]
 >  Si no tiene un botón en la barra de control una **comando** o **UPDATE_COMMAND_UI** controlador, el marco de trabajo deshabilita automáticamente el botón.  

@@ -1,12 +1,9 @@
 ---
 title: Clase CObArray | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b73299c64d6657d099b3dea9817c08649080df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cobarray-class"></a>CObArray (clase)
 Admite matrices de punteros `CObject` .  
@@ -139,7 +134,7 @@ class CObArray : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcoll.h  
   
-##  <a name="add"></a>CObArray::Add  
+##  <a name="add"></a>  CObArray::Add  
  Agrega un nuevo elemento al final de una matriz, aumentando la matriz en 1.  
   
 ```  
@@ -180,7 +175,7 @@ INT_PTR Add(CObject* newElement);
   
  `[1] = a CAge at $4468 40`  
   
-##  <a name="append"></a>CObArray::Append  
+##  <a name="append"></a>  CObArray::Append  
  Llame a esta función miembro para agregar el contenido de otra matriz hasta el final de la matriz.  
   
 ```  
@@ -215,7 +210,7 @@ INT_PTR Append(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
-##  <a name="copy"></a>CObArray::Copy  
+##  <a name="copy"></a>  CObArray::Copy  
  Llame a esta función miembro para sobrescribir los elementos de la matriz con los elementos de otra matriz del mismo tipo.  
   
 ```  
@@ -245,7 +240,7 @@ void Copy(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
-##  <a name="cobarray"></a>CObArray::CObArray  
+##  <a name="cobarray"></a>  CObArray::CObArray  
  Construye un vacío `CObject` matriz de puntero.  
   
 ```  
@@ -269,7 +264,7 @@ CObArray();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#78](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CObArray::ElementAt  
+##  <a name="elementat"></a>  CObArray::ElementAt  
  Devuelve una referencia temporal al puntero del elemento dentro de la matriz.  
   
 ```  
@@ -300,7 +295,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CObArray::GetSize](#getsize).  
   
-##  <a name="freeextra"></a>CObArray::FreeExtra  
+##  <a name="freeextra"></a>  CObArray::FreeExtra  
  Libera la memoria adicional que se asignó mientras se ha aumentado la matriz.  
   
 ```  
@@ -324,7 +319,7 @@ void FreeExtra();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CObArray::GetData](#getdata).  
   
-##  <a name="getat"></a>CObArray::GetAt  
+##  <a name="getat"></a>  CObArray::GetAt  
  Devuelve el elemento de matriz en el índice especificado.  
   
 ```  
@@ -359,7 +354,7 @@ CObject* GetAt(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CObArray::GetCount  
+##  <a name="getcount"></a>  CObArray::GetCount  
  Devuelve el número de elementos de matriz.  
   
 ```  
@@ -388,7 +383,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CObArray::GetData  
+##  <a name="getdata"></a>  CObArray::GetData  
  Utilice esta función miembro para tener acceso directo a los elementos de la matriz.  
   
 ```  
@@ -421,7 +416,7 @@ CObject** GetData();
   
  [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CObArray::GetSize  
+##  <a name="getsize"></a>  CObArray::GetSize  
  Devuelve el tamaño de la matriz.  
   
 ```  
@@ -447,7 +442,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CObArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CObArray::GetUpperBound  
  Devuelve el límite superior actual de esta matriz.  
   
 ```  
@@ -478,7 +473,7 @@ INT_PTR GetUpperBound() const;
   
  [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
-##  <a name="insertat"></a>CObArray::InsertAt  
+##  <a name="insertat"></a>  CObArray::InsertAt  
  Inserta un elemento (o todos los elementos de otra matriz) en un índice especificado.  
   
 ```  
@@ -542,7 +537,7 @@ void InsertAt(
   
  `[2] = a CAge at $4606 40`  
   
-##  <a name="isempty"></a>CObArray::IsEmpty  
+##  <a name="isempty"></a>  CObArray::IsEmpty  
  Determina si la matriz está vacía.  
   
 ```  
@@ -552,7 +547,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la matriz está vacía; en caso contrario es 0.  
   
-##  <a name="operator_at"></a>[] CObArray::operator  
+##  <a name="operator_at"></a>  [] CObArray::operator  
  Estos operadores de subíndice son un sustituto adecuado para la `SetAt` y `GetAt` funciones.  
   
 ```  
@@ -581,7 +576,7 @@ CObject* operator[](int_ptr nindex) const;
   
  [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
-##  <a name="removeall"></a>CObArray::RemoveAll  
+##  <a name="removeall"></a>  CObArray::RemoveAll  
  Quita todos los punteros de esta matriz, pero no se eliminan realmente el `CObject` objetos.  
   
 ```  
@@ -609,7 +604,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
-##  <a name="removeat"></a>CObArray::RemoveAt  
+##  <a name="removeat"></a>  CObArray::RemoveAt  
  Quita uno o más elementos, empezando por un índice especificado en una matriz.  
   
 ```  
@@ -654,7 +649,7 @@ void RemoveAt(
   
  `[0] = a CAge at $4606 40`  
   
-##  <a name="setat"></a>CObArray::SetAt  
+##  <a name="setat"></a>  CObArray::SetAt  
  Establece el elemento de matriz en el índice especificado.  
   
 ```  
@@ -671,7 +666,7 @@ void SetAt(
  Puntero de objeto que se van a insertar en esta matriz. A **NULL** se permite el valor.  
   
 ### <a name="remarks"></a>Comentarios  
- `SetAt`no se hará que la matriz crezca. Use `SetAtGrow` si desea que la matriz para crecer automáticamente.  
+ `SetAt` no se hará que la matriz crezca. Use `SetAtGrow` si desea que la matriz para crecer automáticamente.  
   
  Debe asegurarse de que el valor de índice representa una posición válida en la matriz. Si no fuera de los límites, se valida la versión de la biblioteca de depuración.  
   
@@ -699,7 +694,7 @@ void SetAt(
   
  `[1] = a CAge at $47A0 40`  
   
-##  <a name="setatgrow"></a>CObArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CObArray::SetAtGrow  
  Establece el elemento de matriz en el índice especificado.  
   
 ```  
@@ -746,7 +741,7 @@ void SetAtGrow(
   
  `[3] = a CAge at $4840 65`  
   
-##  <a name="setsize"></a>CObArray::SetSize  
+##  <a name="setsize"></a>  CObArray::SetSize  
  Establece el tamaño de una matriz vacía o existente; asigna memoria si es necesario.  
   
 ```  

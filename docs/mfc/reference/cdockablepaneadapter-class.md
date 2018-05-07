@@ -1,12 +1,9 @@
 ---
 title: Clase CDockablePaneAdapter | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDockablePaneAdapter
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb0e10490a381784e40167e16d1c7ec4e7e1a19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdockablepaneadapter-class"></a>Clase CDockablePaneAdapter
 Proporciona compatibilidad para paneles derivados de `CWnd`.  
@@ -70,7 +65,7 @@ class CDockablePaneAdapter : public CDockablePane
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxDockablePaneAdapter.h  
   
-##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
+##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
  Devuelve la ventana subyacente para el adaptador de panel acoplable.  
   
 ```  
@@ -83,7 +78,7 @@ virtual CWnd* GetWrappedWnd() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para tener acceso a la ventana ajustada.  
   
-##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
+##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
  Carga el estado del panel desde el registro.  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
+##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState  
  Guarda el estado del panel en el registro.  
   
 ```  
@@ -131,7 +126,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
+##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
  Establece la ventana subyacente para el adaptador de panel acoplable.  
   
 ```  

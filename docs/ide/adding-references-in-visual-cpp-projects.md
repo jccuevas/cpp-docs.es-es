@@ -1,13 +1,10 @@
 ---
 title: Agregar referencias en proyectos de Visual C++ | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.References
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Agregar referencias en proyectos de Visual C++
 Es muy común que los programas llamen a las API de otros archivos binarios como, por ejemplo, los archivos DLL, los componentes en tiempo de ejecución de Windows, los SDK de extensiones, los componentes COM y los ensamblados .NET. La forma en que el programa busca esos otros archivos binarios depende tanto del tipo de proyecto como del tipo de binario.  
@@ -37,7 +32,7 @@ Es muy común que los programas llamen a las API de otros archivos binarios como
   
  En un proyecto de C++ nativo (ATL) el concepto de *referencias* solo se aplica a otros proyectos de la solución, incluidos los proyectos compartidos, de modo que eso es todo lo que muestra en **Administrador de referencias**:  
   
- ![Visual C# 43; &#43; Administrador de referencias &#40; ATL (proyectos) &#41; ] (../ide/media/visual-c---reference-manager--atl-projects-.png "Administrador de referencias de visual C++ (proyectos ATL)")  
+ ![Visual C&#43; &#43; Administrador de referencias &#40;ATL (proyectos)&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Administrador de referencias de Visual C++ (proyectos ATL)")  
   
  En un proyecto de C++/CLI o de Plataforma universal de Windows, el concepto de referencias se aplica a más tipos de binarios además de a otros proyectos de la solución.  Todos ellos se exponen en **Administrador de referencias**.
   

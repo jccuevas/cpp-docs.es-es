@@ -1,29 +1,24 @@
 ---
 title: Nombres, Asistente para agregar propiedades | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.overview
 dev_langs:
 - C++
 ms.assetid: 0453b7ea-89cb-41a1-80a2-d45f61589c0a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c1728dfda3ec29e8df2b7f5480e9bffb161da7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c3fd5cfc86f76fcdc1c301bd92bb1fdfac3b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="names-add-property-wizard"></a>Nombres, Asistente para agregar propiedades
 Use este asistente para agregar una propiedad a una interfaz.  
@@ -40,7 +35,7 @@ Use este asistente para agregar una propiedad a una interfaz.
 |Dispinterface MFC, dispinterface de controles ActiveX en MFC|Proporcione un nombre de propiedad o seleccione una propiedad estándar de la lista. Si selecciona una propiedad de la lista, el valor apropiado aparecerá en el **tipo de propiedad** cuadro. Puede cambiar este tipo, según su selección en **tipo de implementación**.|  
   
  **Tipo de valor devuelto**  
- Interfaces ATL. Establece el tipo de valor devuelto para la propiedad. Para interfaces duales `HRESULT` siempre es el tipo de valor devuelto, y este cuadro no está disponible. Para las interfaces personalizadas, puede seleccionar un tipo de valor devuelto de la lista. `HRESULT`todavía se se recomienda, ya que proporciona una manera estándar de devolver errores.  
+ Interfaces ATL. Establece el tipo de valor devuelto para la propiedad. Para interfaces duales `HRESULT` siempre es el tipo de valor devuelto, y este cuadro no está disponible. Para las interfaces personalizadas, puede seleccionar un tipo de valor devuelto de la lista. `HRESULT` todavía se se recomienda, ya que proporciona una manera estándar de devolver errores.  
   
  **Nombre de variable**  
  MFC interfaces dispinterface solo. Disponible únicamente si se especifica **variable miembro** en **tipo de implementación**. Establece el nombre de la variable de miembro con el que se asocia la propiedad. De forma predeterminada, se establece el nombre de variable toma el valor m_*PropertyName*. Puede modificar este nombre.  
@@ -51,7 +46,7 @@ Use este asistente para agregar una propiedad a una interfaz.
  **Get (función)**  
  Para interfaces dispinterface MFC. Disponible únicamente si se especifica **métodos Get/Set** en **tipo de implementación**. Establece el nombre de la función que se va a obtener la propiedad. De forma predeterminada, el nombre de la función Get se establece en Get*PropertyName*. Puede modificar este nombre. Si elimina el nombre, la función [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) se inserta en el mapa de envíos de interfaz. Get*PropertyName* función especifica que la propiedad se puede leer.  
   
- **Función de conjunto**  
+ **función de conjunto**  
  MFC interfaces dispinterface solo. Disponible únicamente si se especifica **métodos Get/Set** en **tipo de implementación**. Establece el nombre de la función para establecer la propiedad. De forma predeterminada, se establece el nombre de la función de conjunto a conjunto*PropertyName*. Puede modificar este nombre. Si elimina el nombre, la función [SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported) se inserta en el mapa de envíos de interfaz. El conjunto de*PropertyName* función indica que la propiedad se puede escribir.  
   
  **Tipo de implementación**  

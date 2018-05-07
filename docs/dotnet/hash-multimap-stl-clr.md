@@ -2,11 +2,8 @@
 title: hash_multimap (STL/CLR) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/hash_map> header [STL/CLR]
 - <hash_map> header [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b6927b25d627874f5a3d649099a4ed5e099bc6cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 027ed43936e4335819f95d10050de37570e6a679
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso bidireccional. Utilice el contenedor de `hash_multimap` para administrar una secuencia de elementos como una tabla hash, cada entrada de la tabla almacenar un bidireccional vinculado lista de nodos y cada nodo de almacenar un elemento. Un elemento consta de una clave, para ordenar la secuencia y un valor asignado, que va a lo largo de la transferencia.  
@@ -39,9 +34,9 @@ La clase de plantilla describe un objeto que controla una secuencia de longitud 
   
  donde:  
   
- `GKey`es el mismo que `Key` a menos que el segundo es un tipo de referencia, en cuyo caso es`Key^`  
+ `GKey` es el mismo que `Key` a menos que el segundo es un tipo de referencia, en cuyo caso es `Key^`  
   
- `GMapped`es el mismo que `Mapped` a menos que el segundo es un tipo de referencia, en cuyo caso es`Mapped^`  
+ `GMapped` es el mismo que `Mapped` a menos que el segundo es un tipo de referencia, en cuyo caso es `Mapped^`  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -140,7 +135,7 @@ template<typename Key,
   
  Se accede al objeto de delegado almacenado mediante una llamada a la función miembro [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Este tipo de objeto de delegado debe definir una ordenación equivalente entre las claves de tipo [hash_set:: KEY_TYPE (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Es decir, para las dos claves `X` y `Y`:  
   
- `key_comp()(X, Y)`Devuelve el valor booleano mismo resultado en cada llamada.  
+ `key_comp()(X, Y)` Devuelve el valor booleano mismo resultado en cada llamada.  
   
  Si `key_comp()(X, Y) && key_comp()(Y, X)` es true, a continuación, `X` y `Y` se dice que tienen una ordenación equivalente.  
   
@@ -150,7 +145,7 @@ template<typename Key,
   
  El objeto determina qué cubo debe contener una clave de ordenación determinada mediante una llamada a un objeto de delegado almacenado de tipo [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Tener acceso a este objeto almacenado llamando a la función miembro [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` para obtener un valor entero que depende del valor de clave. Puede especificar el objeto de delegado almacenado cuando se construye el objeto hash_set; Si no se especifica ningún objeto de delegado, el valor predeterminado es la función `System::Object::hash_value(key_type)`. Es decir, para las claves `X` y `Y`:  
   
- `hash_delegate()(X)`Devuelve el mismo resultado entero en cada llamada.  
+ `hash_delegate()(X)` Devuelve el mismo resultado entero en cada llamada.  
   
  Si `X` y `Y` tienen una ordenación equivalente, a continuación, `hash_delegate()(X)` debe devolver el mismo resultado entero que `hash_delegate()(Y)`.  
   

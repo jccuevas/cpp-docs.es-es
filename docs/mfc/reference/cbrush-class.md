@@ -1,12 +1,9 @@
 ---
 title: CBrush (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBrush
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c60be4501e14c1a3b55789905be1fb6e753731
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbrush-class"></a>CBrush (clase)
 Encapsula un pincel de la Interfaz de dispositivo gráfico (GDI) de Windows.  
@@ -98,7 +93,7 @@ class CBrush : public CGdiObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
+##  <a name="cbrush"></a>  CBrush::CBrush  
  Construye un objeto `CBrush`.  
   
 ```  
@@ -115,23 +110,23 @@ explicit CBrush(CBitmap* pBitmap);
  `nIndex`  
  Especifica el estilo de trama del pincel. Puede ser cualquiera de los siguientes valores:  
   
-- `HS_BDIAGONAL`Sombreado descendente (de izquierda a derecha) en 45 grados  
+- `HS_BDIAGONAL` Sombreado descendente (de izquierda a derecha) en 45 grados  
   
-- `HS_CROSS`Sombreado horizontal y vertical  
+- `HS_CROSS` Sombreado horizontal y vertical  
   
-- `HS_DIAGCROSS`Sombreado doble de 45 grados  
+- `HS_DIAGCROSS` Sombreado doble de 45 grados  
   
-- `HS_FDIAGONAL`Sombreado ascendente (de izquierda a derecha) en 45 grados  
+- `HS_FDIAGONAL` Sombreado ascendente (de izquierda a derecha) en 45 grados  
   
-- `HS_HORIZONTAL`Sombreado horizontal  
+- `HS_HORIZONTAL` Sombreado horizontal  
   
-- `HS_VERTICAL`Sombreado vertical  
+- `HS_VERTICAL` Sombreado vertical  
   
  `pBitmap`  
  Apunta a un `CBitmap` objeto que especifica un mapa de bits con el que pinta el pincel.  
   
 ### <a name="remarks"></a>Comentarios  
- `CBrush`tiene cuatro sobrecargados constructores. El constructor sin argumentos crea una sin inicializar `CBrush` objeto que debe inicializarse antes de poder utilizarlo.  
+ `CBrush` tiene cuatro sobrecargados constructores. El constructor sin argumentos crea una sin inicializar `CBrush` objeto que debe inicializarse antes de poder utilizarlo.  
   
  Si utiliza el constructor sin argumentos, debe inicializar resultante `CBrush` objeto con [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), o [CreateDIBPatternBrush](#createdibpatternbrush). Si utiliza uno de los constructores que toma argumentos, a continuación, ninguna otra inicialización es necesaria. Los constructores con argumentos pueden producir una excepción si se encuentran errores, mientras que el constructor sin argumentos siempre se realizará correctamente.  
   
@@ -144,7 +139,7 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
  Inicializa un pincel con un estilo, el color y el patrón especificado en un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estructura.  
   
 ```  
@@ -166,7 +161,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
  Inicializa un pincel con el patrón especificado por un mapa de bits independiente del dispositivo (DIB).  
   
 ```  
@@ -221,7 +216,7 @@ BOOL CreateDIBPatternBrush(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
  Inicializa un pincel con el modelo sombreado especificado y el color.  
   
 ```  
@@ -234,17 +229,17 @@ BOOL CreateHatchBrush(
  `nIndex`  
  Especifica el estilo de trama del pincel. Puede ser cualquiera de los siguientes valores:  
   
-- `HS_BDIAGONAL`Sombreado descendente (de izquierda a derecha) en 45 grados  
+- `HS_BDIAGONAL` Sombreado descendente (de izquierda a derecha) en 45 grados  
   
-- `HS_CROSS`Sombreado horizontal y vertical  
+- `HS_CROSS` Sombreado horizontal y vertical  
   
-- `HS_DIAGCROSS`Sombreado doble de 45 grados  
+- `HS_DIAGCROSS` Sombreado doble de 45 grados  
   
-- `HS_FDIAGONAL`Sombreado ascendente (de izquierda a derecha) en 45 grados  
+- `HS_FDIAGONAL` Sombreado ascendente (de izquierda a derecha) en 45 grados  
   
-- `HS_HORIZONTAL`Sombreado horizontal  
+- `HS_HORIZONTAL` Sombreado horizontal  
   
-- `HS_VERTICAL`Sombreado vertical  
+- `HS_VERTICAL` Sombreado vertical  
   
  `crColor`  
  Especifica el color de primer plano del pincel como un color RGB (el color de las escotillas). Vea [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) en el SDK de Windows para obtener más información.  
@@ -258,7 +253,7 @@ BOOL CreateHatchBrush(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
  Inicializa un pincel con un patrón especificado por un mapa de bits.  
   
 ```  
@@ -286,7 +281,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
  Inicializa un pincel con un color sólido especificado.  
   
 ```  
@@ -308,7 +303,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CBrush::CBrush](#cbrush).  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
  Inicializa un color de pincel.  
   
 ```  
@@ -330,7 +325,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
  Devuelve un puntero a un `CBrush` objeto cuando se especifica un identificador a una ventana de [HBRUSH](#operator_hbrush) objeto.  
   
 ```  
@@ -339,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
   
 ### <a name="parameters"></a>Parámetros  
  `hBrush`  
- `HANDLE`en un pincel de GDI de Windows.  
+ `HANDLE` en un pincel de GDI de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un `CBrush` objeto si es correcto; en caso contrario **NULL**.  
@@ -352,7 +347,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CBrush::CBrush](#cbrush).  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
  Llame a esta función miembro para recuperar el `LOGBRUSH` estructura.  
   
 ```  
@@ -378,7 +373,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>CBrush::operator HBRUSH  
+##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH  
  Utilice este operador para obtener el identificador de GDI de Windows asociado de la `CBrush` objeto.  
   
 ```  

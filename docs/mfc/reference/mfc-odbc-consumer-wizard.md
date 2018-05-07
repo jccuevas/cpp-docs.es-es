@@ -1,13 +1,10 @@
 ---
 title: Asistente para consumidores ODBC MFC | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.consumer.overview
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad9e4aeb15d2af04987883b6554d569e3cc16b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8a707df6878cd0031cb2ec9b06285e568503992
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Asistente para consumidores ODBC MFC
 Inserte aquí "Búsqueda de resumen de los resultados".  
@@ -42,7 +37,7 @@ Inserte aquí "Búsqueda de resumen de los resultados".
      Para crear un nuevo origen de datos de archivo desde este cuadro de diálogo, haga clic en `New` para especificar un nombre DSN; la **Create New Data Source** aparece el cuadro de diálogo. En el **Create New Data Source** diálogo cuadro, seleccione un controlador apropiado y haga clic en `Next`; haga clic en **examinar**y seleccione el nombre del archivo que se usará como un origen de datos (tiene que seleccionar "Todos los archivos" en ver archivos no DSN, como los archivos .xls); Haga clic en `Next`y, a continuación, haga clic en **finalizar**. (Si ha seleccionado un archivo no DSN, obtendrá un cuadro de diálogo específico del controlador, como "ODBC Microsoft Excel Setup", lo que convertirá el archivo a un DSN.)  
   
     > [!NOTE]
-    >  También puede crear un nuevo origen de datos de archivo con antelación mediante el Administrador de orígenes de datos ODBC. Desde el **iniciar** menú, seleccione **configuración**, **el Panel de Control**, **herramientas administrativas**, **deorígenesdedatos(ODBC)**y, a continuación, **Administrador de orígenes de datos ODBC**.  
+    >  También puede crear un nuevo origen de datos de archivo con antelación mediante el Administrador de orígenes de datos ODBC. Desde el **iniciar** menú, seleccione **configuración**, **el Panel de Control**, **herramientas administrativas**, **deorígenesdedatos(ODBC)** y, a continuación, **Administrador de orígenes de datos ODBC**.  
   
      El **nombre DSN** cuadro le permite especificar un nombre para el origen de datos de archivo. Debe asegurarse de que el nombre DSN termina con la extensión de archivo adecuado, como .xls para archivos de Excel o .mdb para acceder a los archivos.  
   

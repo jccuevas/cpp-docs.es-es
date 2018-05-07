@@ -1,12 +1,9 @@
 ---
 title: Clase CMFCFontInfo | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFontInfo
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ea0572667ef45264fd52934cd2d4ee750a6d4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9e4c1031ba06eaabe67418a018f95d689f71d1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfontinfo-class"></a>Clase CMFCFontInfo
 La `CMFCFontInfo` clase describe el nombre y otros atributos de una fuente.  
@@ -83,7 +78,7 @@ class CMFCFontInfo : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo  
+##  <a name="cmfcfontinfo"></a>  CMFCFontInfo::CMFCFontInfo  
  Construye un objeto `CMFCFontInfo`.  
   
 ```  
@@ -121,7 +116,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="remarks"></a>Comentarios  
  Esta documentación, utilizan los términos *juego de caracteres* y *script* indistintamente. A *secuencia de comandos*, que también se denomina es un sistema de escritura, es una colección de reglas para escribir los caracteres en uno o más idiomas y caracteres. El conjunto de caracteres que incluye el alfabeto y puntuación que se usa en el script. Por ejemplo, alfabeto latino se usa para inglés como se habla en Estados Unidos y su alfabeto incluye los caracteres de la A la Z. El `lfCharSet` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura especifica un juego de caracteres. Por ejemplo, el valor `ANSI_CHARSET` especifica la [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] juego de caracteres, que incluye el alfabeto del alfabeto latino.  
   
-##  <a name="getfullname"></a>CMFCFontInfo::GetFullName  
+##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Recupera los nombres concatenados de una fuente y el carácter del conjunto (script).  
   
 ```  
@@ -134,7 +129,7 @@ CString GetFullName() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para obtener el nombre completo de la fuente. Por ejemplo, si es el nombre de la fuente es `Arial` y la secuencia de comandos de la fuente es `Cyrillic`, este método devuelve "Arial (cirílico)".  
   
-##  <a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet  
+##  <a name="m_ncharset"></a>  CMFCFontInfo::m_nCharSet  
  Un valor que especifica el juego de caracteres (script) asociado a la fuente.  
   
 ```  
@@ -144,7 +139,7 @@ const BYTE m_nCharSet;
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte el `nCharSet` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily  
+##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
  Un valor que especifica el tono (tamaño de punto) y la familia (por ejemplo, serif, sans-serif y monospace) de la fuente.  
   
 ```  
@@ -154,7 +149,7 @@ const BYTE m_nPitchAndFamily;
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte el `nPitchAndFamily` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="m_ntype"></a>CMFCFontInfo::m_nType  
+##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  Un valor que especifica el tipo de la fuente.  
   
 ```  
@@ -164,7 +159,7 @@ const int m_nType;
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte el `nType` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="m_strname"></a>CMFCFontInfo::m_strName  
+##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  El nombre de la fuente: por ejemplo, **Arial**.  
   
 ```  
@@ -174,7 +169,7 @@ const CString m_strName;
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte el `lpszName` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="m_strscript"></a>CMFCFontInfo::m_strScript  
+##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
  El nombre de un juego de caracteres (script) asociado a la fuente.  
   
 ```  

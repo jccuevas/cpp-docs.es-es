@@ -20,15 +20,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f78b7c09a1ce004b1d685c86eaaeb98580aa8e3
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 358f47716ee998d5070e226ee71f865d6bfc64a4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="math-and-floating-point-support"></a>Compatibilidad con cálculos matemáticos y el punto flotante
 
-La biblioteca en tiempo de ejecución de Microsoft C (CRT) ofrece muchas funciones de la biblioteca matemática de punto flotante, incluidas todas las necesarias en ISO C99. Estas funciones se implementan para equilibrar el rendimiento con exactitud. Dado que es posible que producir el resultado redondeado correctamente sea excesivamente costoso, estas funciones están diseñadas para generar con eficacia una buena aproximación al resultado redondeado correctamente. En la mayoría de los casos, el resultado producido se encuentra dentro de +/-1 ulp del resultado redondeado correctamente, aunque puede haber casos en los que la falta de precisión sea mayor.
+La biblioteca en tiempo de ejecución Universal C (UCRT) ofrece muchas funciones de la biblioteca matemática de punto flotante e integrales, incluidas todas las necesarias en ISO C99. Las funciones de punto flotante se implementan para equilibrar el rendimiento con exactitud. Dado que es posible que producir el resultado redondeado correctamente sea excesivamente costoso, estas funciones están diseñadas para generar con eficacia una buena aproximación al resultado redondeado correctamente. En la mayoría de los casos, el resultado producido se encuentra dentro de +/-1 ulp del resultado redondeado correctamente, aunque puede haber casos en los que la falta de precisión sea mayor.
 
 Muchas de las funciones de la biblioteca matemática de punto flotante tienen implementaciones diferentes para distintas arquitecturas de CPU. Por ejemplo, puede que el CRT x86 de 32 bits tenga una implementación distinta que el CRT x64 de 64 bits. Además, algunas de las funciones pueden tener varias implementaciones para una determinada arquitectura de CPU. La implementación más eficaz se selecciona dinámicamente en tiempo de ejecución en función de los conjuntos de instrucciones compatibles con la CPU. Por ejemplo, en el CRT x86 de 32 bits, algunas funciones tienen una implementación x87 y una implementación SSE2. Cuando se ejecuta en una CPU que admite SSE2, se usa la implementación SSE2 más rápida. Cuando se ejecuta en una CPU que no admite SSE2, se usa la implementación x87 más lenta. Dado que es posible que diferentes implementaciones de las funciones de la biblioteca matemática usen distintas instrucciones de CPU y distintos algoritmos para generar sus resultados, puede que las funciones generen diferentes resultados en las CPU. En la mayoría de los casos, los resultados se encuentran dentro de +/-1 ulp del resultado redondeado correctamente, pero los resultados reales pueden variar de una CPU a otra.
 
@@ -36,224 +36,112 @@ Las versiones anteriores de 16 bits de Microsoft C/C++ y Microsoft Visual C++ ad
 
 ## <a name="supported-math-and-floating-point-routines"></a>Rutinas admitidas de cálculos matemáticos y punto flotante
 
-[abs, labs, llabs, _abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)
-
-[acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)
-
-[acosh, acoshf, acoshl](../c-runtime-library/reference/acosh-acoshf-acoshl.md)
-
-[asin, asinf, asinl](../c-runtime-library/reference/asin-asinf-asinl.md)
-
-[asinh, asinhf, asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)
-
-[atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)
-
-[atanh, atanhf, atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)
-
-[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
-
-[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
-
-[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
-
-[cbrt, cbrtf, cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)
-
-[ceil, ceilf, ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)
-
-[_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)
-
-[_clear87, _clearfp](../c-runtime-library/reference/clear87-clearfp.md)
-
-[conj, conjf, conjl](../c-runtime-library/reference/conj-conjf-conjl.md)
-
-[_control87, \__control87_2, _controlfp](../c-runtime-library/reference/control87-controlfp-control87-2.md)
-
-[_controlfp_s](../c-runtime-library/reference/controlfp-s.md)
-
-[copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
-
-[cos, cosf, cosl](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)
-
-[cosh, coshf, coshl](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)
-
-[div](../c-runtime-library/reference/div.md)
-
-[_ecvt](../c-runtime-library/reference/ecvt.md)
-
-[ecvt](../c-runtime-library/reference/posix-ecvt.md)
-
-[_ecvt_s](../c-runtime-library/reference/ecvt-s.md)
-
-[erf, erff, erfl, erfc, erfcf, erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)
-
-[exp, expf, expl](../c-runtime-library/reference/exp-expf.md)
-
-[exp2, exp2f, exp2l](../c-runtime-library/reference/exp2-exp2f-exp2l.md)
-
-[expm1, expm1f, expm1l](../c-runtime-library/reference/expm1-expm1f-expm1l.md)
-
-[fabs, fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)
-
-[_fcvt](../c-runtime-library/reference/fcvt.md)
-
-[fcvt](../c-runtime-library/reference/posix-fcvt.md)
-
-[_fcvt_s](../c-runtime-library/reference/fcvt-s.md)
-
-[fdim, fdimf, fdiml](../c-runtime-library/reference/fdim-fdimf-fdiml.md)
-
-[feclearexcept](../c-runtime-library/reference/feclearexcept1.md)
-
-[fegetenv](../c-runtime-library/reference/fegetenv1.md)
-
-[fegetexceptflag](../c-runtime-library/reference/fegetexceptflag2.md)
-
-[fegetround](../c-runtime-library/reference/fegetround-fesetround2.md)
-
-[feholdexcept](../c-runtime-library/reference/feholdexcept2.md)
-
-[feraiseexcept](../c-runtime-library/reference/feraiseexcept.md)
-
-[ferror](../c-runtime-library/reference/ferror.md)
-
-[fesetenv](../c-runtime-library/reference/fesetenv1.md)
-
-[fesetexceptflag](../c-runtime-library/reference/fesetexceptflag2.md)
-
-[fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)
-
-[fetestexcept](../c-runtime-library/reference/fetestexcept1.md)
-
-[feupdateenv](../c-runtime-library/reference/feupdateenv.md)
-
-[_finite, _finitef](../c-runtime-library/reference/finite-finitef.md)
-
-[floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)
-
-[fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)
-
-[fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)
-
-[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)
-
-[fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)
-
-[_fpclass, _fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)
-
-[fpclassify](../c-runtime-library/reference/fpclassify.md)
-
-[_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)
-
-[_fpreset](../c-runtime-library/reference/fpreset.md)
-
-[frexp](../c-runtime-library/reference/frexp.md)
-
-[gcvt](../c-runtime-library/reference/posix-gcvt.md)
-
-[_gcvt](../c-runtime-library/reference/gcvt.md)
-
-[_gcvt_s](../c-runtime-library/reference/gcvt-s.md)
-
-[_get_FMA3_enable, _set_FMA3_enable](../c-runtime-library/reference/get-fma3-enable-set-fma3-enable.md)
-
-[hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl](../c-runtime-library/reference/hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)
-
-[ilogb, ilogbf, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)
-
-[imaxabs](../c-runtime-library/reference/imaxabs.md)
-
-[imaxdiv](../c-runtime-library/reference/imaxdiv.md)
-
-[isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)
-
-[_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)
-
-[ldexp](../c-runtime-library/reference/ldexp.md)
-
-[ldiv, lldiv](../c-runtime-library/reference/ldiv-lldiv.md)
-
-[lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)
-
-[llrint, llrintf, llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)
-
-[llround, llroundf, llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)
-
-[log, logf, log10, log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)
-
-[log1p, log1pf, log1pl](../c-runtime-library/reference/log1p-log1pf-log1pl2.md)
-
-[log2, log2f, log2l](../c-runtime-library/reference/log2-log2f-log2l.md)
-
-[logb, logbf, logbl, _logb, _logbf](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)
-
-[lrint, lrintf, lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)
-
-[_lrotl, _lrotr](../c-runtime-library/reference/lrotl-lrotr.md)
-
-[lround, lroundf, lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)
-
-[_matherr](../c-runtime-library/reference/matherr.md)
-
-[__max](../c-runtime-library/reference/max.md)
-
-[__min](../c-runtime-library/reference/min.md)
-
-[modf, modff](../c-runtime-library/reference/modf-modff-modfl.md)
-
-[nan, nanf, nanl](../c-runtime-library/reference/nan-nanf-nanl.md)
-
-[nanf](../c-runtime-library/reference/nan-nanf-nanl.md)
-
-[nanl](../c-runtime-library/reference/nan-nanf-nanl.md)
-
-[nearbyint, nearbyintf, nearbyintl](../c-runtime-library/reference/nearbyint-nearbyintf-nearbyintl1.md)
-
-[nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl](../c-runtime-library/reference/nextafter-functions.md)
-
-[pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)
-
-[remainder, remainderf, remainderl](../c-runtime-library/reference/remainder-remainderf-remainderl.md)
-
-[remquo, remquof, remquol](../c-runtime-library/reference/remquo-remquof-remquol.md)
-
-[rint, rintf, rintl](../c-runtime-library/reference/rint-rintf-rintl.md)
-
-[_rotl, _rotl64, _rotr, _rotr64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)
-
-[round, roundf, roundl](../c-runtime-library/reference/round-roundf-roundl.md)
-
-[_scalb](../c-runtime-library/reference/scalb.md)
-
-[scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)
-
-[_set_controlfp](../c-runtime-library/reference/set-controlfp.md)
-
-[_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)
-
-[sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)
-
-[sinh, sinhf, sinhl](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)
-
-[sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)
-
-[_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)
-
-[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)
-
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)
-
-[tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)
-
-[tanh, tanhf, tanhl](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)
-
-[tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)
-
-[trunc, truncf, truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)
-
-[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
-
-[_y0, _y1, _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)
+|Rutina|Usar|
+|-|-|
+[abs, labs, llabs, _abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Calcula el valor absoluto de un tipo de entero
+[acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|Calcula el arcocoseno
+[acosh, acoshf, acoshl](../c-runtime-library/reference/acosh-acoshf-acoshl.md)|Calcula el arcocoseno hiperbólico
+[asin, asinf, asinl](../c-runtime-library/reference/asin-asinf-asinl.md)|Calcula el arcoseno
+[asinh, asinhf, asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|Calcula el arcoseno hiperbólico
+[atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Calcula el arco tangente
+[atanh, atanhf, atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|Calcula el arco tangente hiperbólico
+[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Convierte una cadena específica de la configuración regional en un **double**
+[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convierte una cadena en un **double**
+[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Convierte una cadena específica de la configuración regional en un **float** o **long double**
+[cbrt, cbrtf, cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|Calcula la raíz cúbica
+[ceil, ceilf, ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Calcula el límite superior
+[_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|Calcula el inverso aditivo
+[_clear87, _clearfp](../c-runtime-library/reference/clear87-clearfp.md)|Obtiene y borra el registro de estado de punto flotante
+[_control87, \__control87_2, _controlfp](../c-runtime-library/reference/control87-controlfp-control87-2.md)|Obtiene y establece la palabra de control de punto flotante
+[_controlfp_s](../c-runtime-library/reference/controlfp-s.md)|Versión segura de **_controlfp**
+[copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)|Devuelve un valor que tiene la magnitud de un argumento y el signo de otro
+[cos, cosf, cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|Calcula el seno
+[cosh, coshf, coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|Calcula el seno hiperbólico
+[div, ldiv, lldiv](../c-runtime-library/reference/div.md)|Calcula el cociente y el resto de dos valores enteros
+[_ecvt](../c-runtime-library/reference/ecvt.md), [ecvt](../c-runtime-library/reference/posix-ecvt.md)|Convierte un **double** en una cadena
+[_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|Versión segura de **_ecvt**
+[erf, erff, erfl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|Calcula la función de error
+[erfc, erfcf, erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|Calcula la función de error complementaria
+[exp, expf, expl](../c-runtime-library/reference/exp-expf.md)|Calcula el valor exponencial de *e*<sup>x</sup>
+[exp2, exp2f, exp2l](../c-runtime-library/reference/exp2-exp2f-exp2l.md)|Calcula el valor exponencial de 2<sup>x</sup>
+[expm1, expm1f, expm1l](../c-runtime-library/reference/expm1-expm1f-expm1l.md)|Calcula *e*<sup>x</sup>-1
+[fabs, fabsf, fabsl](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|Calcula el valor absoluto de un tipo de punto flotante
+[_fcvt](../c-runtime-library/reference/fcvt.md), [fcvt](../c-runtime-library/reference/posix-fcvt.md)|Convertir un número de punto flotante en una cadena
+[_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|Versión segura de **_fcvt**
+[fdim, fdimf, fdiml](../c-runtime-library/reference/fdim-fdimf-fdiml.md)|Determina la diferencia positiva entre dos valores
+[feclearexcept](../c-runtime-library/reference/feclearexcept1.md)|Borra las excepciones de punto flotante especificadas
+[fegetenv](../c-runtime-library/reference/fegetenv1.md)|Almacena el entorno actual de punto flotante
+[fegetexceptflag](../c-runtime-library/reference/fegetexceptflag2.md)|Obtiene el estado de las excepciones de punto flotante especificadas
+[fegetround](../c-runtime-library/reference/fegetround-fesetround2.md)|Obtiene el modo de redondeo de punto flotante
+[feholdexcept](../c-runtime-library/reference/feholdexcept2.md)|Establece el modo sin interrupción de excepción de punto flotante
+[feraiseexcept](../c-runtime-library/reference/feraiseexcept.md)|Genera las excepciones de punto flotante especificadas
+[fesetenv](../c-runtime-library/reference/fesetenv1.md)|Establece el entorno actual de punto flotante
+[fesetexceptflag](../c-runtime-library/reference/fesetexceptflag2.md)|Establece las marcas de estado de punto flotante especificadas
+[fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|Establece el modo de redondeo de punto flotante especificado
+[fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|Determina las marcas de estado de excepción de punto flotante que se establecen
+[feupdateenv](../c-runtime-library/reference/feupdateenv.md)|Restaura un entorno de punto flotante y después genera excepciones anteriores
+[_finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Determina si un valor es finito
+[floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Calcula el límite inferior
+[fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Calcula una multiplicación y suma fusionadas
+[fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Calcula el máximo de los argumentos
+[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|Calcula el mínimo de los argumentos
+[fmod, fmodf, fmodl](../c-runtime-library/reference/fmod-fmodf.md)|Calcula el resto de punto flotante
+[_fpclass, _fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)|Devuelve la clasificación de un valor de punto flotante
+[fpclassify](../c-runtime-library/reference/fpclassify.md)|Devuelve la clasificación de un valor de punto flotante
+[_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)|Establece un controlador de excepciones de punto flotante
+[_fpreset](../c-runtime-library/reference/fpreset.md)|Restablece el entorno de punto flotante
+[frexp, frexpf, frexpl](../c-runtime-library/reference/frexp.md)|Obtiene la mantisa y el exponente de un número de punto flotante
+[_gcvt](../c-runtime-library/reference/gcvt.md), [gcvt](../c-runtime-library/reference/posix-gcvt.md)|Convertir un número de punto flotante en una cadena
+[_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|Versión segura de **_gcvt**
+[_get_FMA3_enable, _set_FMA3_enable](../c-runtime-library/reference/get-fma3-enable-set-fma3-enable.md)|Obtiene o establece una marca para el uso de instrucciones de FMA3 en x64
+[hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl](../c-runtime-library/reference/hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)|Calcula la hipotenusa
+[ilogb, ilogbf, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|Calcula el exponente en base 2 del entero
+[imaxabs](../c-runtime-library/reference/imaxabs.md)|Calcula el valor absoluto de un tipo de entero
+[imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Calcula el cociente y el resto de dos valores enteros
+[isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Prueba un valor de punto flotante para NaN
+[_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcula la función Bessel
+[ldexp, ldexpf, ldexpl](../c-runtime-library/reference/ldexp.md)|Calcula x*2<sup>n</sup>
+[lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|Calcula el logaritmo natural del valor absoluto de la función gamma
+[llrint, llrintf, llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|Redondea un valor de punto flotante al valor **long long** más cercano
+[llround, llroundf, llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|Redondea un valor de punto flotante al valor **long long** más cercano
+[log, logf, logl, log10, log10f, log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|Calcula el logaritmo natural o en base 10
+[log1p, log1pf, log1pl](../c-runtime-library/reference/log1p-log1pf-log1pl2.md)|Calcula el logaritmo natural de 1+x
+[log2, log2f, log2l](../c-runtime-library/reference/log2-log2f-log2l.md)|Calcula el logaritmo en base 2
+[logb, logbf, logbl, _logb, _logbf](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)|Devuelve el exponente de un valor de punto flotante
+[lrint, lrintf, lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|Redondea un valor de punto flotante al valor **long** más cercano
+[_lrotl, _lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|Gira un valor entero a la izquierda o derecha
+[lround, lroundf, lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|Redondea un valor de punto flotante al valor **long** más cercano
+[_matherr](../c-runtime-library/reference/matherr.md)|Controlador de errores matemáticos predeterminado
+[__max](../c-runtime-library/reference/max.md)|Macro que devuelve el mayor de dos valores
+[__min](../c-runtime-library/reference/min.md)|Macro que devuelve el menor de dos valores
+[modf, modff, modfl](../c-runtime-library/reference/modf-modff-modfl.md)|Divide un valor de punto flotante en partes fraccionarias y enteras
+[nan, nanf, nanl](../c-runtime-library/reference/nan-nanf-nanl.md)|Devuelve un valor NaN reservado
+[nearbyint, nearbyintf, nearbyintl](../c-runtime-library/reference/nearbyint-nearbyintf-nearbyintl1.md)|Devuelve el valor redondeado
+[nextafter, nextafterf, nextafterl, _nextafter, _nextafterf](../c-runtime-library/reference/nextafter-functions.md)|Devuelve el siguiente valor de punto flotante que se pueda representar
+[nexttoward, nexttowardf, nexttowardl](../c-runtime-library/reference/nextafter-functions.md)|Devuelve el siguiente valor de punto flotante que se pueda representar
+[pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)|Devuelve el valor de *x*<sup>*y*</sup>
+[remainder, remainderf, remainderl](../c-runtime-library/reference/remainder-remainderf-remainderl.md)|Calcula el resto del cociente de dos valores de punto flotante
+[remquo, remquof, remquol](../c-runtime-library/reference/remquo-remquof-remquol.md)|Calcula el resto de dos valores enteros
+[rint, rintf, rintl](../c-runtime-library/reference/rint-rintf-rintl.md)|Redondea un valor de punto flotante
+[_rotl, _rotl64, _rotr, _rotr64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|Gira bits en tipos enteros
+[round, roundf, roundl](../c-runtime-library/reference/round-roundf-roundl.md)|Redondea un valor de punto flotante
+[_scalb, _scalbf](../c-runtime-library/reference/scalb.md)|Escala el argumento por una potencia de 2
+[scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Multiplica un número de punto flotante por una potencia integral de **FLT_RADIX**
+[_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Establece la palabra de control de punto flotante
+[_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Habilita o deshabilita las instrucciones de SSE2
+[sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Calcula el seno
+[sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Calcula el seno hiperbólico
+[sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcula la raíz cuadrada
+[_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Obtiene la palabra de estado de punto flotante
+[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Convierte una cadena en un **float**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Convierte una cadena en un **long** **double**
+[tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Calcula la tangente
+[tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Calcula la tangente hiperbólica
+[tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Calcula la función gamma
+[trunc, truncf, truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|Trunca la parte fraccionaria
+[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convierte una cadena de caracteres anchos en un **double**
+[_y0, _y1, _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcula la función Bessel
 
 ## <a name="see-also"></a>Vea también
 
-[Rutinas en tiempo de ejecución por categoría](../c-runtime-library/run-time-routines-by-category.md)
+[Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

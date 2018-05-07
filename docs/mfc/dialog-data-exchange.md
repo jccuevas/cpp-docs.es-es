@@ -1,13 +1,10 @@
 ---
-title: "Intercambio de datos de cuadros de diálogo | Documentos de Microsoft"
-ms.custom: 
+title: Intercambio de datos de cuadros de diálogo | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f280228d523c7401e2a90ca395a79a9c87cd51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange"></a>Intercambio de datos de cuadro de diálogo
 Si utiliza el mecanismo DDX, se establecen los valores iniciales del cuadro de diálogo variables de miembro del objeto, por lo general en su `OnInitDialog` controlador o el constructor del cuadro de diálogo. Inmediatamente antes de que se muestre el cuadro de diálogo, mecanismo DDX del marco de trabajo transfiere los valores de las variables de miembro para los controles en el cuadro de diálogo, donde aparecen cuando el propio cuadro de diálogo aparezca en respuesta a `DoModal` o **crear** . La implementación predeterminada de `OnInitDialog` en `CDialog` llamadas el `UpdateData` función miembro de clase `CWnd` para inicializar los controles en el cuadro de diálogo.  
@@ -50,7 +45,7 @@ Si utiliza el mecanismo DDX, se establecen los valores iniciales del cuadro de d
  ![Intercambio de datos de cuadro de diálogo](../mfc/media/vc379d1.gif "vc379d1")  
 Intercambio de datos de cuadro de diálogo  
   
- `UpdateData`funciona en ambas direcciones, según lo especificado por el **BOOL** parámetro se pasa a él. Para llevar a cabo el intercambio, `UpdateData` configura un `CDataExchange` objeto y llamadas a la invalidación de la clase de cuadro de diálogo `CDialog`del `DoDataExchange` función miembro. `DoDataExchange`toma un argumento de tipo `CDataExchange`. El `CDataExchange` objeto pasa a `UpdateData` representa el contexto del intercambio, definiendo dicha información como la dirección del intercambio.  
+ `UpdateData` funciona en ambas direcciones, según lo especificado por el **BOOL** parámetro se pasa a él. Para llevar a cabo el intercambio, `UpdateData` configura un `CDataExchange` objeto y llamadas a la invalidación de la clase de cuadro de diálogo `CDialog`del `DoDataExchange` función miembro. `DoDataExchange` toma un argumento de tipo `CDataExchange`. El `CDataExchange` objeto pasa a `UpdateData` representa el contexto del intercambio, definiendo dicha información como la dirección del intercambio.  
   
  Cuando usted (o un Asistente para código) reemplaza `DoDataExchange`, especificar una llamada a una función DDX por miembro de datos (control). Cada función DDX sabe cómo intercambiar datos en ambas direcciones basados en el contexto proporcionado por el `CDataExchange` argumento pasado a la `DoDataExchange` por `UpdateData`.  
   

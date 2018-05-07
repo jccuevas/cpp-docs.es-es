@@ -1,13 +1,10 @@
 ---
 title: Agregar una clase MFC desde una biblioteca de tipos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1efc61e097d7e1136fdb7b6ef740dc00342077e4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 349d06d7fecb82af64fbf2d3b2ebe54689b3b292
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Agregar una clase MFC desde una biblioteca de tipos
 Use este asistente para crear una clase MFC desde una interfaz en una biblioteca de tipos disponibles. Puede agregar una clase MFC a un [aplicación MFC](../../mfc/reference/creating-an-mfc-application.md), [DLL de MFC](../../mfc/reference/creating-an-mfc-dll-project.md), o un [control ActiveX de MFC](../../mfc/reference/creating-an-mfc-activex-control.md).  
@@ -45,7 +40,7 @@ Use este asistente para crear una clase MFC desde una interfaz en una biblioteca
   
  En el asistente, puede agregar más de una clase en una biblioteca de tipos. Del mismo modo, puede agregar clases de más de una biblioteca de tipos en una única sesión del asistente.  
   
- El asistente crea una clase MFC, derivada de [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), para cada interfaz que agregue de la biblioteca de tipos seleccionada. `COleDispatchDriver`implementa el cliente de automatización OLE.  
+ El asistente crea una clase MFC, derivada de [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), para cada interfaz que agregue de la biblioteca de tipos seleccionada. `COleDispatchDriver` implementa el cliente de automatización OLE.  
   
 ## <a name="see-also"></a>Vea también  
  [Clientes de automatización](../../mfc/automation-clients.md)   

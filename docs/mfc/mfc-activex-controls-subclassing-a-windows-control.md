@@ -1,13 +1,10 @@
 ---
 title: 'Controles ActiveX MFC: Crear subclases de un Control de Windows | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - precreatewindow
 - IsSubclassed
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e41eefdf1c1be2d0e91061e0efce5f5408c1848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95d6109bdc6ae28b748ee0be78e14ab62bba10fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controles ActiveX MFC: Creación de subclases de un control de Windows
 En este artículo se describe el proceso de creación de subclases de un control común de Windows para crear un control ActiveX. Creación de subclases de un Windows existente control es un método rápido para desarrollar un control ActiveX. El nuevo control tendrán las capacidades del control de Windows con subclases, tales como dibujar y responder a clics del mouse. Ejemplo de controles de ActiveX de MFC [botón](../visual-cpp-samples.md) es un ejemplo de creación de subclases de un control de Windows.  
@@ -53,7 +48,7 @@ En este artículo se describe el proceso de creación de subclases de un control
   
  Vea el artículo de Knowledge Base Q243454 para obtener más información sobre la creación de subclases de un control.  
   
-##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a>Reemplazar IsSubclassedControl y PreCreateWindow  
+##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Reemplazar IsSubclassedControl y PreCreateWindow  
  Para invalidar `PreCreateWindow` y `IsSubclassedControl`, agregue las siguientes líneas de código para el `protected` sección de la declaración de clase de control:  
   
  [!code-cpp[NVC_MFC_AxSub#1](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]  
@@ -70,7 +65,7 @@ En este artículo se describe el proceso de creación de subclases de un control
   
  Esta operación agrega la **BS_CHECKBOX** estilo marca, dejando el indicador de estilo predeterminado (**WS_CHILD**) de la clase `COleControl` intacta.  
   
-##  <a name="_core_modifying_the_ondraw_member_function"></a>Modificar la función miembro OnDraw  
+##  <a name="_core_modifying_the_ondraw_member_function"></a> Modificar la función miembro OnDraw  
  Si desea que el control con subclases para mantener la misma apariencia que el control de Windows correspondiente, el `OnDraw` función de miembro para el control debe contener sólo una llamada a la `DoSuperclassPaint` función de miembro, como en el ejemplo siguiente:  
   
  [!code-cpp[NVC_MFC_AxSub#4](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_4.cpp)]  
@@ -80,12 +75,12 @@ En este artículo se describe el proceso de creación de subclases de un control
 > [!NOTE]
 >  El `DoSuperclassPaint` función miembro solo funcionarán con los tipos de control que permiten a un contexto de dispositivo que se pasará como el **wParam** de un `WM_PAINT` mensaje. Esto incluye algunos de los controles de Windows estándares, como **barra de desplazamiento** y **botón**y todos los controles comunes. Para los controles que no admiten este comportamiento, tendrá que proporcionar su propio código para mostrar correctamente un control inactivo.  
   
-##  <a name="_core_handling_reflected_window_messages"></a>Controlar los mensajes de ventana reflejados  
+##  <a name="_core_handling_reflected_window_messages"></a> Controlar los mensajes de ventana reflejados  
  Controles de Windows normalmente envían determinados mensajes de ventana a su ventana primaria. Algunos de estos mensajes, como **WM_COMMAND**, proporcionar una notificación de una acción por el usuario. Otros, como `WM_CTLCOLOR`, se utilizan para obtener información de la ventana primaria. Un control ActiveX normalmente se comunica con la ventana primaria por otros medios. Las notificaciones se comunican mediante eventos activadores (enviando notificaciones de eventos) y obtener información sobre el contenedor del control se obtiene mediante el acceso a propiedades de ambiente del contenedor. Dado que estas técnicas de comunicación existen, contenedores de controles ActiveX no se esperan para procesar los mensajes de ventana enviados por el control.  
   
  Para evitar el contenedor reciba los mensajes de ventana enviados por un control de Windows crearon subclases, `COleControl` crea una ventana adicional para actuar como elemento primario del control. Esta ventana adicional, denominada "reflector", se crea solo para un control ActiveX que las subclases de una ventana de controlan y tiene el mismo tamaño y la posición que la ventana de control. La ventana de reflector intercepta determinados mensajes de ventana y envía de nuevo al control. El control, en el procedimiento de ventana, a continuación, puede procesar estos mensajes reflejados realizando acciones apropiadas para un control ActiveX (por ejemplo, desencadenar un evento). Vea [identificadores de mensajes de ventana reflejados](../mfc/reflected-window-message-ids.md) para obtener una lista de windows interceptados mensajes y sus correspondientes mensajes reflejan.  
   
- Un contenedor de controles ActiveX puede estar diseñado para realizar la reflexión de mensajes, lo que elimina la necesidad de `COleControl` para crear la ventana de reflector y reducir el tiempo de ejecución sobrecarga para un control de Windows con subclases. `COleControl`detecta si el contenedor admite esta capacidad mediante la comprobación de una propiedad de ambiente MessageReflect con un valor de **TRUE**.  
+ Un contenedor de controles ActiveX puede estar diseñado para realizar la reflexión de mensajes, lo que elimina la necesidad de `COleControl` para crear la ventana de reflector y reducir el tiempo de ejecución sobrecarga para un control de Windows con subclases. `COleControl` detecta si el contenedor admite esta capacidad mediante la comprobación de una propiedad de ambiente MessageReflect con un valor de **TRUE**.  
   
  Para controlar un mensaje de ventana reflejado, agregue una entrada para el mapa de mensajes de control e implementar una función de controlador. Dado que mensajes reflejados no forman parte del conjunto estándar de mensajes definidos por Windows, vista de clases no admite la adición de estos controladores de mensajes. Sin embargo, no es difícil agregar un controlador manualmente.  
   

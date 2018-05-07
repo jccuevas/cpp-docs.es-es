@@ -1,12 +1,9 @@
 ---
 title: Compilador (nivel 4) de la advertencia C4463 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4463
@@ -15,23 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b438de515a4fd01e7714de685ee0a89adb609e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c13e0a79c667ecedbf3fd065338892d3af9c2ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4463"></a>Compilador (nivel 4) de la advertencia C4463  
   
 > desbordamiento; asignar *valor* al campo de bits que solo puede contener valores de *low_value* a *high_value*  
   
-Asignado *valor* está fuera del intervalo de valores que puede contener el campo de bits. Tipos de campo de bits con signo usan el orden de alta bit para el inicio de sesión, por lo que si  *n*  es el tamaño de un campo de bits, el intervalo de campos de bits con signo es -2<sup>n-1</sup> a 2<sup>n-1</sup>-1, mientras que campos de bits sin signo tienen un intervalo de 0 a 2<sup>n</sup>-1.  
+Asignado *valor* está fuera del intervalo de valores que puede contener el campo de bits. Tipos de campo de bits con signo usan el orden de alta bit para el inicio de sesión, por lo que si *n* es el tamaño de un campo de bits, el intervalo de campos de bits con signo es -2<sup>n-1</sup> a 2<sup>n-1</sup>-1, mientras que sin signo campos de bits tienen un intervalo de 0 a 2<sup>n</sup>-1.  
   
 ## <a name="example"></a>Ejemplo  
   

@@ -1,12 +1,9 @@
 ---
 title: Clase de objeto CGopherConnection | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGopherConnection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d669ebc954b73d848e22dc373704ab3434074274
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d3dc5dae7758c77d335cf6e1255d8caba28df9f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgopherconnection-class"></a>Clase de objeto CGopherConnection
 Administra la conexión a un servidor de Internet de gopher.  
@@ -59,9 +54,9 @@ class CGopherConnection : public CInternetConnection
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CGopherConnection::CreateLocator](#createlocator)|Crea un [objeto CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objeto para buscar archivos en un servidor gopher.|  
+|[CGopherConnection:: CreateLocator](#createlocator)|Crea un [objeto CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objeto para buscar archivos en un servidor gopher.|  
 |[CGopherConnection::GetAttribute](#getattribute)|Recupera información de atributo sobre el objeto de gopher.|  
-|[CGopherConnection::OpenFile](#openfile)|Abre un archivo gopher.|  
+|[CGopherConnection:: OpenFile](#openfile)|Abre un archivo gopher.|  
   
 ## <a name="remarks"></a>Comentarios  
  El servicio gopher es uno de los tres servicios de Internet que reconoce las clases WinInet de MFC.  
@@ -123,7 +118,7 @@ CGopherConnection(
   
 |`pstrUserName`|`pstrPassword`|Nombre de usuario que se envía al servidor FTP|Contraseña que se envían al servidor FTP|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** o ""|**NULL** o ""|"anonymous"|Nombre de correo electrónico del usuario|  
+|**NULL** o ""|**NULL** o ""|"anónimo"|Nombre de correo electrónico del usuario|  
 |No- **NULL** cadena|**NULL** o ""|`pstrUserName`|" "|  
 |**NULL** no **NULL** cadena|**ERROR**|**ERROR**||  
 |No- **NULL** cadena|No- **NULL** cadena|`pstrUserName`|`pstrPassword`|  
@@ -134,7 +129,7 @@ CGopherConnection(
 ### <a name="remarks"></a>Comentarios  
  No cree nunca un `CGopherConnection` directamente. En su lugar, llame a [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), lo que se crea un `CGopherConnection` de objetos y devuelve un puntero a ella.  
   
-##  <a name="createlocator"></a>  CGopherConnection::CreateLocator  
+##  <a name="createlocator"></a>  CGopherConnection:: CreateLocator  
  Llame a esta función miembro para crear un localizador gopher para buscar o identificar un archivo en un servidor gopher.  
   
 ```  
@@ -203,7 +198,7 @@ BOOL GetAttribute(
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.  
   
-##  <a name="openfile"></a>  CGopherConnection::OpenFile  
+##  <a name="openfile"></a>  CGopherConnection:: OpenFile  
  Llame a esta función miembro para abrir un archivo en un servidor gopher.  
   
 ```  

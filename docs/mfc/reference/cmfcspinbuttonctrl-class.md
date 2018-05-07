@@ -1,12 +1,9 @@
 ---
 title: Clase CMFCSpinButtonCtrl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCSpinButtonCtrl
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd6ef1957b1f4994bafa9546581e2588e33d11a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b8c602882036d77105bb619069a6e43d73ceeb6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>Clase CMFCSpinButtonCtrl
 La `CMFCSpinButtonCtrl` clase es compatible con un administrador visual que dibuja un control de botón de número.  
@@ -75,7 +70,7 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxspinbuttonctrl.h  
   
-##  <a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
+##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw  
  Vuelve a dibujar el control de botón de número actual.  
   
 ```  

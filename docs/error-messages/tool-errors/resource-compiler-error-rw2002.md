@@ -2,11 +2,8 @@
 title: Error del compilador de recursos RW2002 | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - RW2002
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db322791c3804f387c452b3839260826585a2e30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb42298a7140439e3578281de60075f540b09175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-compiler-error-rw2002"></a>Error del compilador de recursos RW2002
 Error de análisis  
@@ -56,7 +51,7 @@ Error de análisis
   
      El **comenzar** palabra clave debe seguir inmediatamente el **STRINGTABLE** palabra clave.  
   
-7.  **No se puede volver a usar las constantes de cadena**  
+7.  **no se puede volver a usar las constantes de cadena**  
   
      Usa el mismo valor dos veces en un **STRINGTABLE** instrucción. Asegúrese de que no mezcla superpuestos valores decimales y hexadecimales. Cada identificador en un **STRINGTABLE** deben ser únicos. Para mejorar la eficacia máxima, utilice constantes contiguas que comiencen con un múltiplo de 16.  
   
@@ -64,7 +59,7 @@ Error de análisis
   
      Un carácter de control en la instrucción **ACELERAtors** no es válido. El carácter que sigue al símbolo de intercalación (**^**) debe estar comprendido entre A y Z, ambos inclusive.  
   
-9. **Menús vacíos no permitidos**  
+9. **menús vacíos no permitidos**  
   
      Un **final** palabra clave aparece antes de que los elementos de menú se definen en el **menú** instrucción. El compilador de recursos no permite menús vacíos. Asegúrese de que no tiene ningún signo de comillas abierto dentro de la **menú** instrucción.  
   
@@ -80,7 +75,7 @@ Error de análisis
   
      El compilador de recursos requiere una coma entre los campos `event` idvalue *y* de la instrucción **ACCELERATORS** .  
   
-13. **Nombre de la clase de control esperado**  
+13. **nombre de la clase de control esperado**  
   
      El `class` campo de un **CONTROL** instrucción en el **diálogo** instrucción debe ser uno de los siguientes tipos: BUTTON, COMBOBOX, EDIT, LISTBOX, barra de desplazamiento, estático, o definido por el usuario. Asegúrese de que la clase se ha escrito correctamente.  
   
@@ -108,7 +103,7 @@ Error de análisis
   
      El campo *pointsize* de la opción FONT en la instrucción **DIALOG** debe ser un valor entero de tamaño de punto.  
   
-20. **Se esperaba una constante de diálogo numérica**  
+20. **se esperaba una constante de diálogo numérica**  
   
      A **diálogo** instrucción requiere valores enteros para la *x, y, ancho*, y *alto* campos. Asegúrese de que estos valores se incluyen después de la **diálogo** palabra clave y que no sean negativos.  
   
@@ -120,7 +115,7 @@ Error de análisis
   
      El compilador de recursos no pudo determinar qué tipo de clave se va a configurar para el acelerador. El campo `event` de la instrucción **ACCELERATOS** podría no ser válido.  
   
-23. **Se espera un número para el Id.**  
+23. **se espera un número para el Id.**  
   
      Se esperaba un número para el `id` campo de una instrucción de control en el **diálogo** instrucción. Asegúrese de que tiene un número o `#define` instrucción para el identificador del control.  
   
@@ -148,11 +143,11 @@ Error de análisis
   
      El campo `type` de la instrucción **ACCELERATORS** debe contener el valor ASCII o VIRTKEY.  
   
-30. **Carácter de control no válido**  
+30. **carácter de control no válido**  
   
      Un carácter de control en la instrucción **ACELERAtors** no es válido. Un carácter de control válido se compone de una letra (solo) después de un símbolo de intercalación (^).  
   
-31. **Tipo de control no válido.**  
+31. **tipo de control no válido.**  
   
      Cada instrucción de control en un **diálogo** instrucción debe ser uno de los siguientes: CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, icono, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, barra de desplazamiento. Asegúrese de que estas instrucciones de control estén escritas correctamente.  
   
@@ -172,6 +167,6 @@ Error de análisis
   
      Los valores de *datos sin procesar* de la instrucción **RCDATA** deben ser enteros o cadenas, separados por una coma. Compruebe que no olvidó una coma o unas comillas de una cadena.  
   
-36. **Subtipo de menú desconocido**  
+36. **subtipo de menú desconocido**  
   
      El *definición de elemento* campo de la **menú** instrucción solo puede contener **MENUITEM** y **emergente** instrucciones.

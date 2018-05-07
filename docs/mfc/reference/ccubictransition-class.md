@@ -1,12 +1,9 @@
 ---
 title: Clase CCubicTransition | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCubicTransition
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CCubicTransition [MFC], m_dblFinalVelocity
 - CCubicTransition [MFC], m_duration
 ms.assetid: 4fc30e9c-160c-45e1-bdbe-51adf8fee9c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 806a8b92867d120a9ae099b96ecaf6fecfca4ea6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 001a1e66707544f6446a5bc54e70269f94108654
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccubictransition-class"></a>Clase CCubicTransition
 Encapsula una transición cúbica.  
@@ -81,7 +76,7 @@ class CCubicTransition : public CBaseTransition;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxanimationcontroller.h  
   
-##  <a name="ccubictransition"></a>CCubicTransition::CCubicTransition  
+##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition  
  Construye un objeto de transición y se inicializan sus parámetros.  
   
 ```  
@@ -101,7 +96,7 @@ CCubicTransition(
  `finalVelocity`  
  El progreso de la variable al final de la transición.  
   
-##  <a name="create"></a>CCubicTransition::Create  
+##  <a name="create"></a>  CCubicTransition::Create  
  Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
   
 ```  
@@ -117,21 +112,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la transición se crea correctamente; en caso contrario, FALSE.  
   
-##  <a name="m_dblfinalvalue"></a>CCubicTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue  
  El valor de la variable de animación al final de la transición.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblfinalvelocity"></a>CCubicTransition::m_dblFinalVelocity  
+##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity  
  El progreso de la variable al final de la transición.  
   
 ```  
 DOUBLE m_dblFinalVelocity;  
 ```  
   
-##  <a name="m_duration"></a>CCubicTransition::m_duration  
+##  <a name="m_duration"></a>  CCubicTransition::m_duration  
  La duración de la transición.  
   
 ```  

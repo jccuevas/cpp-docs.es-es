@@ -1,13 +1,10 @@
 ---
 title: 'Tutorial: Depurar un proyecto (C++) | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9789a7deafacf09ad615f416a446da4eba8150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecfda5e2549b3aa9be1f0471e301cc2a21c6fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Tutorial: Depurar un proyecto (C++)
 En este tutorial, modificará el programa para corregir el problema que detectó al probar el proyecto.  
@@ -65,7 +60,7 @@ En este tutorial, modificará el programa para corregir el problema que detectó
 7.  Continuar la ejecución paso a paso el programa hasta que se cierre o deje que se ejecute eligiendo **depurar**, **ejecutar** en la barra de menús, o eligiendo la tecla F5.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- **Anterior:** [Tutorial: probar un proyecto (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **Siguiente:**[Tutorial: implementar el programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
+ **Anterior:** [Tutorial: probar un proyecto (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **siguiente:**[Tutorial: implementar el programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)   

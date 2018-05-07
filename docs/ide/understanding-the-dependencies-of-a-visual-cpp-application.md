@@ -1,13 +1,10 @@
 ---
-title: "Descripción de las dependencias de una aplicación de Visual C++ | Documentos de Microsoft"
-ms.custom: 
+title: Descripción de las dependencias de una aplicación de Visual C++ | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2aadeba69a8be29627650ba6ef24516098a8e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Descripción de las dependencias de una aplicación de Visual C++
 Para determinar qué bibliotecas de Visual C++ depende de una aplicación, puede ver las propiedades del proyecto. (En el Explorador de soluciones, haga doble clic en el proyecto y elija **propiedades** para abrir el **páginas de propiedades** cuadro de diálogo.) También puede usar Dependency Walker (depends.exe), que proporciona una imagen más completa de las dependencias.  
   
- En el **páginas de propiedades** cuadro de diálogo, puede examinar diversas páginas de **propiedades de configuración** para comprender las dependencias. Por ejemplo, si el proyecto utiliza las bibliotecas MFC y elige **uso de MFC**, **utilizar MFC en un archivo DLL compartido** en el **propiedades de configuración**, **General**  página, la aplicación en tiempo de ejecución depende de archivos DLL de MFC como mfc\<versión > .dll. Si la aplicación no usa MFC, podría dependiendo de la biblioteca CRT si elige un **biblioteca en tiempo de ejecución** valo **DLL de depuración multiproceso (/ MDd)** o **DLL multiproceso (/ MD)**en la **propiedades de configuración**, **C/C++**, **generación de código** página.  
+ En el **páginas de propiedades** cuadro de diálogo, puede examinar diversas páginas de **propiedades de configuración** para comprender las dependencias. Por ejemplo, si el proyecto utiliza las bibliotecas MFC y elige **uso de MFC**, **utilizar MFC en un archivo DLL compartido** en el **propiedades de configuración**, **General**  página, la aplicación en tiempo de ejecución depende de archivos DLL de MFC como mfc\<versión > .dll. Si la aplicación no usa MFC, podría dependiendo de la biblioteca CRT si elige un **biblioteca en tiempo de ejecución** valo **DLL de depuración multiproceso (/ MDd)** o **DLL multiproceso (/ MD)** en la **propiedades de configuración**, **C/C++**, **generación de código** página.  
   
  Una forma más completa de determinar los archivos DLL de los que depende la aplicación consiste en usar Dependency Walker (depends.exe) para abrirla. Puede descargar la herramienta desde el [Dependency Walker](http://go.microsoft.com/fwlink/p/?LinkId=132640) sitio web.  
   

@@ -1,12 +1,9 @@
 ---
 title: Clase CTooltipManager | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTooltipManager
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2adb62f107cb50ade529d552ce1735c57f74b171
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78b191766e33d291317ef50a4d5373dc26428577
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctooltipmanager-class"></a>Clase CTooltipManager
 Mantiene información de tiempo de ejecución sobre información sobre herramientas. La clase `CTooltipManager` se crea una vez por cada aplicación.  
@@ -69,7 +64,7 @@ class CTooltipManager : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtooltipmanager.h  
   
-##  <a name="createtooltip"></a>CTooltipManager::CreateToolTip  
+##  <a name="createtooltip"></a>  CTooltipManager::CreateToolTip  
  Crea un control de información sobre herramientas.  
   
 ```  
@@ -113,7 +108,7 @@ static BOOL CreateToolTip(
 |AFX_TOOLTIP_TYPE_TOOLBAR|Una barra de herramientas.|CMFCToolBar, CMFCPopupMenuBar|  
 |AFX_TOOLTIP_TYPE_TOOLBOX|Un cuadro de herramientas.|Ninguno.|  
   
-##  <a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
+##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip  
  Elimina el control de información sobre herramientas.  
   
 ```  
@@ -127,7 +122,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ### <a name="remarks"></a>Comentarios  
  Llamar a este método para cada [CToolTipCtrl (clase)](../../mfc/reference/ctooltipctrl-class.md) creado por [CTooltipManager::CreateToolTip](#createtooltip). El control primario debe llamar a este método desde su `OnDestroy` controlador. Esto es necesario para quitar correctamente la información sobre herramientas en el marco de trabajo. Este método establece `pToolTip` a `NULL` antes de regresar.  
   
-##  <a name="settooltipparams"></a>Ctooltipmanager:: Settooltipparams  
+##  <a name="settooltipparams"></a>  Ctooltipmanager:: Settooltipparams  
  Personaliza la apariencia del control de información sobre herramientas para los tipos de control de Windows especificados.  
   
 ```  
@@ -152,14 +147,14 @@ void SetTooltipParams(
   
  Cuando se llama a este método, todos los propietarios de información sobre herramientas existentes reciban el mensaje AFX_WM_UPDATETOOLTIPS y debe volver a crear su información sobre herramientas mediante el uso de [CTooltipManager::CreateToolTip](#createtooltip).  
   
- `nTypes`puede ser cualquier combinación de la información sobre herramientas válido tipos que [CTooltipManager::CreateToolTip](#createtooltip) utiliza, o puede ser AFX_TOOLTIP_TYPE_ALL. Si se pasa AFX_TOOLTIP_TYPE_ALL, se ven afectados todos los tipos de información sobre herramientas.  
+ `nTypes` puede ser cualquier combinación de la información sobre herramientas válido tipos que [CTooltipManager::CreateToolTip](#createtooltip) utiliza, o puede ser AFX_TOOLTIP_TYPE_ALL. Si se pasa AFX_TOOLTIP_TYPE_ALL, se ven afectados todos los tipos de información sobre herramientas.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo utilizar el `SetTooltipParams` método de la `CTooltipManager` clase. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]  
   
-##  <a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
+##  <a name="settooltiptext"></a>  CTooltipManager::SetTooltipText  
  Establece el texto y una descripción para una información sobre herramientas.  
   
 ```  
@@ -190,7 +185,7 @@ static void SetTooltipText(
 ### <a name="remarks"></a>Comentarios  
  El valor de `nType` debe ser el mismo valor que el `nType` parámetro de [CTooltipManager::CreateToolTip](#createtooltip) cuando creó la información sobre herramientas.  
   
-##  <a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
+##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: CTabCtrl (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTabCtrl
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed981a2f7345a59f3df479bcd82b9326fd84de12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e46a7d5720be765f2523ebde5d40655fb47b057
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl (clase)
 Proporciona la funcionalidad del control de pestaña común de Windows.  
@@ -166,7 +161,7 @@ class CTabCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcmn.h  
   
-##  <a name="adjustrect"></a>CTabCtrl::AdjustRect  
+##  <a name="adjustrect"></a>  CTabCtrl::AdjustRect  
  Calcula el área de presentación de un control de ficha tiene un rectángulo de la ventana, o calcula el rectángulo de ventana que corresponde a un área de presentación determinado.  
   
 ```  
@@ -183,7 +178,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
   
-##  <a name="create"></a>CTabCtrl::Create  
+##  <a name="create"></a>  CTabCtrl::Create  
  Crea un control de pestaña y lo adjunta a una instancia de un `CTabCtrl` objeto.  
   
 ```  
@@ -230,7 +225,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
   
-##  <a name="createex"></a>CTabCtrl::CreateEx  
+##  <a name="createex"></a>  CTabCtrl::CreateEx  
  Crea un control (una ventana secundaria) y lo asocia a la `CTabCtrl` objeto.  
   
 ```  
@@ -264,16 +259,16 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentarios  
  Use `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
   
- `CreateEx`crea el control con los estilos extendidos de Windows especificados por `dwExStyle`. Conjunto específico de un control mediante estilos extendidos [SetExtendedStyle](#setextendedstyle). Por ejemplo, utilice `CreateEx` para establecer estos estilos como **WS_EX_CONTEXTHELP**, pero usar `SetExtendedStyle` para establecer estos estilos como **TCS_EX_FLATSEPARATORS**. Para obtener más información, vea los estilos que se describe en [estilos extendidos de Control de pestaña](http://msdn.microsoft.com/library/windows/desktop/bb760546) del SDK de Windows.  
+ `CreateEx` crea el control con los estilos extendidos de Windows especificados por `dwExStyle`. Conjunto específico de un control mediante estilos extendidos [SetExtendedStyle](#setextendedstyle). Por ejemplo, utilice `CreateEx` para establecer estos estilos como **WS_EX_CONTEXTHELP**, pero usar `SetExtendedStyle` para establecer estos estilos como **TCS_EX_FLATSEPARATORS**. Para obtener más información, vea los estilos que se describe en [estilos extendidos de Control de pestaña](http://msdn.microsoft.com/library/windows/desktop/bb760546) del SDK de Windows.  
   
-##  <a name="ctabctrl"></a>CTabCtrl::CTabCtrl  
+##  <a name="ctabctrl"></a>  CTabCtrl::CTabCtrl  
  Construye un objeto `CTabCtrl`.  
   
 ```  
 CTabCtrl();
 ```  
   
-##  <a name="deleteallitems"></a>CTabCtrl::DeleteAllItems  
+##  <a name="deleteallitems"></a>  CTabCtrl::DeleteAllItems  
  Quita todos los elementos de un control de pestaña.  
   
 ```  
@@ -283,7 +278,7 @@ BOOL DeleteAllItems();
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-##  <a name="deleteitem"></a>CTabCtrl::DeleteItem  
+##  <a name="deleteitem"></a>  CTabCtrl::DeleteItem  
  Quita el elemento especificado de un control de pestaña.  
   
 ```  
@@ -300,7 +295,7 @@ BOOL DeleteItem(int nItem);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
   
-##  <a name="deselectall"></a>CTabCtrl::DeselectAll  
+##  <a name="deselectall"></a>  CTabCtrl::DeselectAll  
  Restablece los elementos en un control de ficha, desactivación que se presionó.  
   
 ```  
@@ -314,7 +309,7 @@ void DeselectAll(BOOL fExcludeFocus);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32, [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), tal y como se describe en el SDK de Windows.  
   
-##  <a name="drawitem"></a>CTabCtrl::DrawItem  
+##  <a name="drawitem"></a>  CTabCtrl::DrawItem  
  Lo llama el marco cuando un aspecto visual de un cambios de control de ficha dibujado por el propietario.  
   
 ```  
@@ -332,7 +327,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  La aplicación debe restaurar todos los objetos de interfaz (GDI) de dispositivo de gráficos seleccionados para proporciona el contexto de presentación en `lpDrawItemStruct` antes de este miembro de la función finaliza.  
   
-##  <a name="getcurfocus"></a>CTabCtrl::GetCurFocus  
+##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus  
  Recupera el índice de la pestaña con el foco actual.  
   
 ```  
@@ -342,7 +337,7 @@ int GetCurFocus() const;
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero de la pestaña con el foco actual.  
   
-##  <a name="getcursel"></a>CTabCtrl::GetCurSel  
+##  <a name="getcursel"></a>  CTabCtrl::GetCurSel  
  Recupera la pestaña seleccionada actualmente en un control de pestaña.  
   
 ```  
@@ -352,7 +347,7 @@ int GetCurSel() const;
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero de la pestaña seleccionada si es correcto o - 1 si no se selecciona ninguna ficha.  
   
-##  <a name="getextendedstyle"></a>CTabCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>  CTabCtrl::GetExtendedStyle  
  Recupera los estilos extendidos que están actualmente en uso para el control de ficha.  
   
 ```  
@@ -365,7 +360,7 @@ DWORD GetExtendedStyle();
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585), tal y como se describe en el SDK de Windows.  
   
-##  <a name="getimagelist"></a>CTabCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CTabCtrl::GetImageList  
  Recupera la lista de imágenes asociada a un control de pestaña.  
   
 ```  
@@ -375,7 +370,7 @@ CImageList* GetImageList() const;
 ### <a name="return-value"></a>Valor devuelto  
  Si se realiza correctamente, un puntero a la lista de imágenes de la pestaña de control; en caso contrario, **NULL**.  
   
-##  <a name="getitem"></a>CTabCtrl::GetItem  
+##  <a name="getitem"></a>  CTabCtrl::GetItem  
  Recupera información sobre una pestaña en un control de pestaña.  
   
 ```  
@@ -398,15 +393,15 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
  **máscara**  
  Valor que especifica que `TCITEM` la estructura de los miembros para recuperar o establecer. Este miembro puede ser cero o una combinación de los siguientes valores:  
   
-- `TCIF_TEXT`El **pszText** miembro es válido.  
+- `TCIF_TEXT` El **pszText** miembro es válido.  
   
-- `TCIF_IMAGE`El `iImage` miembro es válido.  
+- `TCIF_IMAGE` El `iImage` miembro es válido.  
   
-- `TCIF_PARAM`El **lParam** miembro es válido.  
+- `TCIF_PARAM` El **lParam** miembro es válido.  
   
-- `TCIF_RTLREADING`El texto de **pszText** se muestra con orden de lectura de derecha a izquierda en los sistemas hebreo o árabe.  
+- `TCIF_RTLREADING` El texto de **pszText** se muestra con orden de lectura de derecha a izquierda en los sistemas hebreo o árabe.  
   
-- `TCIF_STATE`El **"_mfc_CTabCtrl.3a3a.GetItem"** miembro es válido.  
+- `TCIF_STATE` El **"_mfc_CTabCtrl.3a3a.GetItem"** miembro es válido.  
   
  **pszText**  
  Puntero a una cadena terminada en null que contiene el texto de la ficha si la estructura contiene información acerca de una pestaña. Si la estructura está recibiendo información, este miembro especifica la dirección del búfer que recibe el texto de la pestaña.  
@@ -423,7 +418,7 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
   
-##  <a name="getitemcount"></a>CTabCtrl::GetItemCount  
+##  <a name="getitemcount"></a>  CTabCtrl::GetItemCount  
  Recupera el número de fichas del control de ficha.  
   
 ```  
@@ -436,7 +431,7 @@ int GetItemCount() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="getitemrect"></a>CTabCtrl::GetItemRect  
+##  <a name="getitemrect"></a>  CTabCtrl::GetItemRect  
  Recupera el rectángulo delimitador de la ficha especificada en un control de pestaña.  
   
 ```  
@@ -456,7 +451,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="getitemstate"></a>CTabCtrl::GetItemState  
+##  <a name="getitemstate"></a>  CTabCtrl::GetItemState  
  Recupera el estado del elemento de control de pestaña identificado por `nItem`.  
   
 ```  
@@ -483,7 +478,7 @@ DWORD GetItemState(
 ### <a name="remarks"></a>Comentarios  
  Estado de un elemento especificado por la **"_mfc_CTabCtrl.3a3a.GetItem"** miembro de la `TCITEM` estructura.  
   
-##  <a name="getrowcount"></a>CTabCtrl::GetRowCount  
+##  <a name="getrowcount"></a>  CTabCtrl::GetRowCount  
  Recupera el número actual de filas de un control de pestaña.  
   
 ```  
@@ -496,7 +491,7 @@ int GetRowCount() const;
 ### <a name="remarks"></a>Comentarios  
  Pestaña solo los controles que tienen la **TCS_MULTILINE** estilo puede tener varias filas de fichas.  
   
-##  <a name="gettooltips"></a>CTabCtrl::GetToolTips  
+##  <a name="gettooltips"></a>  CTabCtrl::GetToolTips  
  Recupera el identificador del control de información sobre herramienta asociado a un control de pestaña.  
   
 ```  
@@ -509,7 +504,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="remarks"></a>Comentarios  
  Un control de pestaña crea un control de información sobre herramientas si tiene la **TCS_TOOLTIPS** estilo. También puede asignar un control de información sobre herramientas para un control de ficha mediante el `SetToolTips` función miembro.  
   
-##  <a name="highlightitem"></a>CTabCtrl::HighlightItem  
+##  <a name="highlightitem"></a>  CTabCtrl::HighlightItem  
  Establece el estado de resaltado de un elemento de ficha.  
   
 ```  
@@ -529,7 +524,7 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el mensaje de Win32 [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602), tal y como se describe en el SDK de Windows.  
   
-##  <a name="hittest"></a>CTabCtrl::HitTest  
+##  <a name="hittest"></a>  CTabCtrl::HitTest  
  Determina qué ficha, si existe, está en la posición de pantalla especificadas.  
   
 ```  
@@ -543,7 +538,7 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el índice de base cero de la ficha o - 1 si ninguna ficha está en la posición especificada.  
   
-##  <a name="insertitem"></a>CTabCtrl:: InsertItem  
+##  <a name="insertitem"></a>  CTabCtrl:: InsertItem  
  Inserta una nueva pestaña en un control de ficha existente.  
   
 ```  
@@ -597,15 +592,15 @@ LONG InsertItem(
  `nMask`  
  Especifica qué `TCITEM` atributos para establecer la estructura. Puede ser cero o una combinación de los siguientes valores:  
   
-- `TCIF_TEXT`El **pszText** miembro es válido.  
+- `TCIF_TEXT` El **pszText** miembro es válido.  
   
-- `TCIF_IMAGE`El `iImage` miembro es válido.  
+- `TCIF_IMAGE` El `iImage` miembro es válido.  
   
-- `TCIF_PARAM`El **lParam** miembro es válido.  
+- `TCIF_PARAM` El **lParam** miembro es válido.  
   
-- `TCIF_RTLREADING`El texto de **pszText** se muestra con orden de lectura de derecha a izquierda en los sistemas hebreo o árabe.  
+- `TCIF_RTLREADING` El texto de **pszText** se muestra con orden de lectura de derecha a izquierda en los sistemas hebreo o árabe.  
   
-- `TCIF_STATE`El **"_mfc_CTabCtrl.3a3a.GetItem"** miembro es válido.  
+- `TCIF_STATE` El **"_mfc_CTabCtrl.3a3a.GetItem"** miembro es válido.  
   
  `lParam`  
  Datos definidos por la aplicación asociadas a la pestaña.  
@@ -622,7 +617,7 @@ LONG InsertItem(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
   
-##  <a name="removeimage"></a>CTabCtrl::RemoveImage  
+##  <a name="removeimage"></a>  CTabCtrl::RemoveImage  
  Quita la imagen especificada de la lista de imágenes de un control de ficha.  
   
 ```  
@@ -636,7 +631,7 @@ void RemoveImage(int nImage);
 ### <a name="remarks"></a>Comentarios  
  El control de pestaña actualiza el índice de imagen de la ficha para que cada pestaña permanezca asociado a la misma imagen.  
   
-##  <a name="setcurfocus"></a>CTabCtrl::SetCurFocus  
+##  <a name="setcurfocus"></a>  CTabCtrl::SetCurFocus  
  Establece el foco en una pestaña especificada en un control de pestaña.  
   
 ```  
@@ -650,7 +645,7 @@ void SetCurFocus(int nItem);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610), tal y como se describe en el SDK de Windows.  
   
-##  <a name="setcursel"></a>CTabCtrl::SetCurSel  
+##  <a name="setcursel"></a>  CTabCtrl::SetCurSel  
  Selecciona una ficha en un control de pestaña.  
   
 ```  
@@ -667,7 +662,7 @@ int SetCurSel(int nItem);
 ### <a name="remarks"></a>Comentarios  
  Un control de ficha no envía una **TCN_SELCHANGING** o **TCN_SELCHANGE** recibe un mensaje de notificación cuando se selecciona una ficha mediante esta función. Estas notificaciones se envían mediante **WM_NOTIFY**, cuando el usuario hace clic en o usa el teclado para cambiar las pestañas.  
   
-##  <a name="setextendedstyle"></a>CTabCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle  
  Establece los estilos extendidos para un control de pestaña.  
   
 ```  
@@ -687,7 +682,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 ### <a name="return-value"></a>Valor devuelto  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), tal y como se describe en el SDK de Windows.  
   
-##  <a name="setimagelist"></a>CTabCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CTabCtrl::SetImageList  
  Asigna una lista de imágenes a un control de pestaña.  
   
 ```  
@@ -701,7 +696,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un puntero a la lista de la imagen anterior o **NULL** si no hay ninguna lista de imágenes anteriores.  
   
-##  <a name="setitem"></a>CTabCtrl::SetItem  
+##  <a name="setitem"></a>  CTabCtrl::SetItem  
  Establece algunos o todos los atributos de una ficha.  
   
 ```  
@@ -721,7 +716,7 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [GetItem](#getitem).  
   
-##  <a name="setitemextra"></a>CTabCtrl::SetItemExtra  
+##  <a name="setitemextra"></a>  CTabCtrl::SetItemExtra  
  Establece el número de bytes por pestaña reservado para los datos definidos por la aplicación en un control de pestaña.  
   
 ```  
@@ -738,7 +733,7 @@ BOOL SetItemExtra(int nBytes);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633), tal y como se describe en el SDK de Windows.  
   
-##  <a name="setitemsize"></a>CTabCtrl::SetItemSize  
+##  <a name="setitemsize"></a>  CTabCtrl::SetItemSize  
  Establece el ancho y alto de los elementos de control de pestaña.  
   
 ```  
@@ -752,7 +747,7 @@ CSize SetItemSize(CSize size);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el ancho y el alto antiguos de los elementos de control de pestaña.  
   
-##  <a name="setitemstate"></a>CTabCtrl::SetItemState  
+##  <a name="setitemstate"></a>  CTabCtrl::SetItemState  
  Establece el estado del elemento de control de pestaña identificado por `nItem`.  
   
 ```  
@@ -780,7 +775,7 @@ BOOL SetItemState(
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-##  <a name="setmintabwidth"></a>CTabCtrl::SetMinTabWidth  
+##  <a name="setmintabwidth"></a>  CTabCtrl::SetMinTabWidth  
  Establece el ancho mínimo de elementos en un control de pestaña.  
   
 ```  
@@ -797,7 +792,7 @@ int SetMinTabWidth(int cx);
 ### <a name="return-value"></a>Valor devuelto  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637), tal y como se describe en el SDK de Windows.  
   
-##  <a name="setpadding"></a>CTabCtrl::SetPadding  
+##  <a name="setpadding"></a>  CTabCtrl::SetPadding  
  Establece la cantidad de espacio (relleno) alrededor de cada pestaña icono y una etiqueta en un control de pestaña.  
   
 ```  
@@ -808,7 +803,7 @@ void SetPadding(CSize size);
  `size`  
  Establece la cantidad de espacio (relleno) alrededor de cada pestaña icono y una etiqueta en un control de pestaña.  
   
-##  <a name="settooltips"></a>CTabCtrl::SetToolTips  
+##  <a name="settooltips"></a>  CTabCtrl::SetToolTips  
  Asigna un control de información sobre herramientas a un control de pestaña.  
   
 ```  

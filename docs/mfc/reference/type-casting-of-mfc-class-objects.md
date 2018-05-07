@@ -1,13 +1,10 @@
 ---
-title: "Tipo de conversión de los objetos de clase MFC | Documentos de Microsoft"
-ms.custom: 
+title: Tipo de conversión de los objetos de clase MFC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc887ad855b00b525c74b66bfc70f2adb3312e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 217be53a78a65a0f617438127b922b20c950853d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Conversión de tipos de objetos de clase de MFC
 Macros de conversión de tipo proporcionan una forma de convertir un puntero especificado a un puntero que señala a un objeto de clase específica, con o sin comprobar que la conversión es legal.  
@@ -43,7 +38,7 @@ Macros de conversión de tipo proporcionan una forma de convertir un puntero esp
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|Convierte un puntero a un puntero a un objeto de clase al comprobar para ver si la conversión es válida.|  
 |[STATIC_DOWNCAST](#static_downcast)|Convierte un puntero a un objeto de una clase a un puntero de un tipo relacionado. En una compilación de depuración hace un **ASSERT** si el objeto no es un "tipo de" el tipo de destino.|  
   
-##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+##  <a name="dynamic_downcast"></a>  DYNAMIC_DOWNCAST  
  Proporciona una forma práctica para convertir un puntero a un puntero a un objeto de clase al comprobar para ver si la conversión es válida.  
   
 ```   
@@ -62,7 +57,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  Si el objeto al que hace referencia el puntero es un "tipo de" la clase identificada, la macro devuelve el puntero adecuado. Si no es una conversión válidas, la macro devuelve **NULL**.  
   
-##  <a name="static_downcast"></a>STATIC_DOWNCAST  
+##  <a name="static_downcast"></a>  STATIC_DOWNCAST  
  Conversiones *pobject* en un puntero a un *class_name* objeto.  
   
 ```   

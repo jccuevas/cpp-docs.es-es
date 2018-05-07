@@ -1,30 +1,25 @@
 ---
 title: 'Controles ActiveX MFC: Agregar propiedades personalizadas | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64154142c4c5f0fb3f24dc63120799132983880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controles ActiveX MFC: Agregar propiedades personalizadas
 Propiedades personalizadas se diferencian de las propiedades estándar en que propiedades personalizadas no están ya implementadas por la `COleControl` clase. Una propiedad personalizada se utiliza para exponer un cierto estado o aspecto de un control ActiveX al programador que utiliza el control.  
@@ -53,7 +48,7 @@ Propiedades personalizadas se diferencian de las propiedades estándar en que pr
   
      Implementación parametrizada es compatible con el Asistente para agregar propiedades. Una propiedad con parámetros (a veces denominada una matriz de propiedad) se puede utilizar para tener acceso a un conjunto de valores a través de una sola propiedad del control. La macro de entrada de mapa de envíos para esta implementación es `DISP_PROPERTY_PARAM`. Para obtener más información sobre cómo implementar este tipo, consulte [implementar una propiedad con parámetros](../mfc/mfc-activex-controls-advanced-topics.md) en el artículo controles ActiveX: temas avanzados.  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a>Mediante el Asistente para agregar propiedades para agregar una propiedad personalizada  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Mediante el Asistente para agregar propiedades para agregar una propiedad personalizada  
  El siguiente procedimiento muestra cómo agregar una propiedad personalizada, CircleOffset, que utiliza la implementación de métodos Get/Set. La propiedad personalizada CircleOffset permite que el usuario del control desplazar el círculo desde el centro del rectángulo delimitador del control. El procedimiento para agregar propiedades personalizadas con una implementación que no sea de métodos Get/Set es muy similar.  
   
  También se puede utilizar este mismo procedimiento para agregar otras propiedades personalizadas que desee. Sustituya el nombre de propiedad personalizada para el nombre de la propiedad CircleOffset y los parámetros.  
@@ -80,7 +75,7 @@ Propiedades personalizadas se diferencian de las propiedades estándar en que pr
   
 9. Haga clic en **Finalizar**.  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a>Agregar propiedad cambios del Asistente para propiedades personalizadas  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> Agregar propiedad cambios del Asistente para propiedades personalizadas  
  Cuando se agrega la propiedad personalizada CircleOffset, el Asistente para agregar propiedades realiza cambios en el encabezado (. (H) y la implementación (. Archivos CPP) de la clase de control.  
   
  Las líneas siguientes se agregan a la. Archivo H para declarar dos funciones denominadas `GetCircleOffset` y `SetCircleOffset`:  

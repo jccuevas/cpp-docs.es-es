@@ -1,13 +1,10 @@
 ---
 title: 'TN024: Mensajes definidos por MFC y recursos | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.messages
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aadfd089d6917cd8cded239287034026ff7ad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Mensajes y recursos definidos por MFC
 > [!NOTE]
@@ -130,7 +125,7 @@ ms.lasthandoff: 12/21/2017
   
  **WM_SIZECHILD**  
   
- Este mensaje se envía por `COleResizeBar` a su ventana propietaria (a través de `GetOwner`) cuando el usuario cambia el tamaño de la barra de cambio de tamaño con los controladores de tamaño. `COleIPFrameWnd`responde a este mensaje al intentar cambiar la posición de la ventana de marco tal y como se ha solicitado el usuario.  
+ Este mensaje se envía por `COleResizeBar` a su ventana propietaria (a través de `GetOwner`) cuando el usuario cambia el tamaño de la barra de cambio de tamaño con los controladores de tamaño. `COleIPFrameWnd` responde a este mensaje al intentar cambiar la posición de la ventana de marco tal y como se ha solicitado el usuario.  
   
  LParam apunta en el nuevo rectángulo, en coordenadas de cliente en relación con la ventana de marco que contiene la barra de cambio de tamaño.  
   
@@ -161,7 +156,7 @@ ms.lasthandoff: 12/21/2017
 |wParam|Es uno de los siguientes valores:<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
 |lParam|No se utiliza (0)|  
   
- El valor devuelto debe ser distinto de cero si **FS_SYNCACTIVE** está establecida y la ventana sincroniza su activación con el marco primario. `CMiniFrameWnd`Devuelve distinto de cero cuando se establece el estilo en **MFS_SYNCACTIVE.**  
+ El valor devuelto debe ser distinto de cero si **FS_SYNCACTIVE** está establecida y la ventana sincroniza su activación con el marco primario. `CMiniFrameWnd` Devuelve distinto de cero cuando se establece el estilo en **MFS_SYNCACTIVE.**  
   
  Para obtener más información, vea la implementación de `CMiniFrameWnd`.  
   

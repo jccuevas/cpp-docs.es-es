@@ -1,12 +1,9 @@
 ---
 title: CCriticalSection (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCriticalSection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16364843ca5d85181b84e56f56b43ca4856a1667
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d6e713f6d5238d99af8f9311eb05a4b2dd39f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection (clase)
 Representa una "sección crítica", un objeto de sincronización que permite que un subproceso a la vez para tener acceso a un recurso o sección de código.  
@@ -99,7 +94,7 @@ class CCriticalSection : public CSyncObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxmt.h  
   
-##  <a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
+##  <a name="ccriticalsection"></a>  CCriticalSection::CCriticalSection  
  Construye un objeto `CCriticalSection`.  
   
 ```  
@@ -114,7 +109,7 @@ CCriticalSection();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CCriticalSection::Lock](#lock).  
   
-##  <a name="lock"></a>CCriticalSection::Lock  
+##  <a name="lock"></a>  CCriticalSection::Lock  
  Llame a esta función miembro para tener acceso al objeto de sección crítica.  
   
 ```  
@@ -124,13 +119,13 @@ BOOL Lock(DWORD dwTimeout);
   
 ### <a name="parameters"></a>Parámetros  
  `dwTimeout`  
- `Lock`omite este valor de parámetro.  
+ `Lock` omite este valor de parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la función se realizó correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- `Lock`es una llamada de bloqueo que no devolverá hasta que se señaliza el objeto de sección crítica (disponible).  
+ `Lock` es una llamada de bloqueo que no devolverá hasta que se señaliza el objeto de sección crítica (disponible).  
   
  Si se necesitan esperas cronometradas, puede usar un [CMutex](../../mfc/reference/cmutex-class.md) en lugar del objeto un `CCriticalSection` objeto.  
   
@@ -141,14 +136,14 @@ BOOL Lock(DWORD dwTimeout);
   
  [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
-##  <a name="m_sect"></a>CCriticalSection::m_sect  
+##  <a name="m_sect"></a>  CCriticalSection::m_sect  
  Contiene un objeto de sección crítica que se utiliza en todos los `CCriticalSection` métodos.  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
+##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION *  
  Recupera un **CRITICAL_SECTION** objeto.  
   
 ```  
@@ -158,7 +153,7 @@ operator CRITICAL_SECTION*();
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función para recuperar un puntero a interno **CRITICAL_SECTION** objeto.  
   
-##  <a name="unlock"></a>CCriticalSection::Unlock  
+##  <a name="unlock"></a>  CCriticalSection::Unlock  
  Las versiones del `CCriticalSection` objeto para su uso por otro subproceso.  
   
 ```  

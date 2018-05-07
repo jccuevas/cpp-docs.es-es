@@ -2,12 +2,9 @@
 title: Información general de los Estados de elemento de Control de árbol | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - tree controls [MFC], item states overview
 - CTreeCtrl class [MFC], item states
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6311169c0c8f9ee59f3582559f07ba85f997beff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3bc62308642492aa00a139fb15cc9e6cdcfc3247
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-item-states-overview"></a>Información general sobre los estados de los elementos de control de árbol
 Cada elemento de un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) tiene un estado actual. Por ejemplo, se puede seleccionar un elemento, deshabilitado, expandida y así sucesivamente. En su mayor parte, el control de árbol establece automáticamente el estado de un elemento para reflejar las acciones del usuario, como la selección de un elemento. Sin embargo, también puede establecer el estado de un elemento mediante la [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) función miembro y recuperar el estado actual de un elemento mediante el uso de la [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) función miembro. Para obtener una lista completa de los Estados de elemento, vea [constantes del Control de vista de árbol](http://msdn.microsoft.com/library/windows/desktop/bb759985) del SDK de Windows.  

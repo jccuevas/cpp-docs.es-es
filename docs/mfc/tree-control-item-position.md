@@ -1,13 +1,10 @@
 ---
-title: "Posición del elemento de Control de árbol | Documentos de Microsoft"
-ms.custom: 
+title: Posición del elemento de Control de árbol | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - tree controls [MFC], item position
 - position, CTreeCtrl items
 ms.assetid: cd264344-2cf9-4d90-9ea8-c6900b6f60e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db47e27ad0b556e08f51685bf84b6bd998722239
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7b7576786f456320a355920a7a9ef9e4935ab03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-item-position"></a>Posición de los elementos del control de árbol
 Posición inicial de un elemento se establece cuando el elemento se agrega al control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) mediante el uso de la `InsertItem` función miembro. La llamada de función miembro especifica el identificador del elemento primario y el identificador del elemento después del cual se va a insertar el nuevo elemento. El segundo identificador debe identificar un elemento secundario del primario dado o uno de estos valores: `TVI_FIRST`, `TVI_LAST`, o `TVI_SORT`.  

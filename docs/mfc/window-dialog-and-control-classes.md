@@ -1,13 +1,10 @@
 ---
-title: "Clases de ventana, cuadro de diálogo y Control | Documentos de Microsoft"
-ms.custom: 
+title: Clases de ventana, cuadro de diálogo y Control | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - windows [MFC], dialog and control classes
 ms.assetid: b3610da6-9644-49b7-adbf-0e04f0d6d2b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17df01174e78b0064d59802b39e3c1823ce223a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 94a5e197909a55e5c634bd31ec359a848293c001
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="window-dialog-and-control-classes"></a>Clases de ventana, cuadro de diálogo y control
-Clase `CWnd` y sus clases derivadas encapsulan un `HWND`, un identificador de una ventana de Windows. `CWnd`puede utilizarse por sí sola o como base para derivar nuevas clases. Las clases derivadas proporcionadas por la biblioteca de clases representan varios tipos de windows.  
+Clase `CWnd` y sus clases derivadas encapsulan un `HWND`, un identificador de una ventana de Windows. `CWnd` puede utilizarse por sí sola o como base para derivar nuevas clases. Las clases derivadas proporcionadas por la biblioteca de clases representan varios tipos de windows.  
   
  [CWnd](../mfc/reference/cwnd-class.md)  
  La clase base para todas las ventanas. Puede usar una de las clases derivadas de `CWnd` o derivar las clases propias directamente de él.  

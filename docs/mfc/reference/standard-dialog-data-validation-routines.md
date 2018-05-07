@@ -1,29 +1,24 @@
 ---
-title: "Rutinas de validación de datos de cuadros de diálogo estándar | Documentos de Microsoft"
-ms.custom: 
+title: Rutinas de validación de datos de cuadros de diálogo estándar | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33566bcdfab1a618dc8ff79deb375b3f9d1221f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17b99d87db2fee3cf80c25157cdb2b2d2b54903b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rutinas de validación de datos de cuadros de diálogo estándar
 Este tema enumeran las rutinas de validación (DDV) de datos de cuadro de diálogo estándar utilizadas para los controles de cuadro de diálogo comunes de MFC.  
@@ -53,7 +48,7 @@ Este tema enumeran las rutinas de validación (DDV) de datos de cuadro de diálo
   
 
   
-##  <a name="ddv_maxchars"></a>DDV_MaxChars  
+##  <a name="ddv_maxchars"></a>  DDV_MaxChars  
  Llame a `DDV_MaxChars` para comprobar que la cantidad de caracteres en el control asociado *valor* no supere los *nChars*.  
   
 ```   
@@ -79,7 +74,7 @@ void AFXAPI DDV_MaxChars(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxbyte"></a>DDV_MinMaxByte  
+##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte  
  Llame a `DDV_MinMaxByte` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
   
 ```   
@@ -109,7 +104,7 @@ void AFXAPI DDV_MinMaxByte(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime  
+##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime  
  Llame a `DDV_MinMaxDateTime` para comprobar que el valor de fecha y hora en el selector de fecha y hora control ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) asociado a *refValue* se sitúa entre `refMinRange` y `refMaxRange`.  
   
 ```   
@@ -145,7 +140,7 @@ void AFXAPI DDV_MinMaxDateTime(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble  
+##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble  
  Llame a `DDV_MinMaxDouble` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
   
 ```   
@@ -175,7 +170,7 @@ void AFXAPI DDV_MinMaxDouble(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxdword"></a>DDV_MinMaxDWord  
+##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord  
  Llame a `DDV_MinMaxDWord` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
   
 ```   
@@ -205,7 +200,7 @@ void AFXAPI DDV_MinMaxDWord(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat  
+##  <a name="ddv_minmaxfloat"></a>  DDV_MinMaxFloat  
  Llame a `DDV_MinMaxFloat` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
   
 ```   
@@ -235,7 +230,7 @@ void AFXAPI DDV_MinMaxFloat(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxint"></a>DDV_MinMaxInt  
+##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt  
  Llame a `DDV_MinMaxInt` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
   
 ```   
@@ -265,7 +260,7 @@ void AFXAPI DDV_MinMaxInt(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxlong"></a>DDV_MinMaxLong  
+##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong  
  Llame a `DDV_MinMaxLong` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
   
 ```   
@@ -295,7 +290,7 @@ void AFXAPI DDV_MinMaxLong(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong  
+##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong  
  Llame a `DDV_MinMaxLongLong` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
   
 ```   
@@ -325,7 +320,7 @@ void AFXAPI DDV_MinMaxLongLong(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth  
+##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth  
  Llame a `DDV_MinMaxMonth` para comprobar que el valor de fecha y hora en el calendario mensual control ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) asociado a *refValue* se sitúa entre `refMinRange` y `refMaxRange`.  
   
 ```   
@@ -361,7 +356,7 @@ void AFXAPI DDV_MinMaxMonth(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxshort"></a>DDV_MinMaxShort  
+##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort  
  Llame a `DDV_MinMaxShort` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
   
 ```   
@@ -391,7 +386,7 @@ void AFXAPI DDV_MinMaxShort(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxslider"></a>DDV_MinMaxSlider  
+##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider  
  Llame a `DDV_MinMaxSlider` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
   
 ```   
@@ -421,7 +416,7 @@ void AFXAPI DDV_MinMaxSlider(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxuint"></a>DDV_MinMaxUInt  
+##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt  
  Llame a `DDV_MinMaxUInt` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
   
 ```   
@@ -451,7 +446,7 @@ void AFXAPI DDV_MinMaxUInt(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdd_.h  
   
-##  <a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong  
+##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong  
  Llame a `DDV_MinMaxULongLong` para comprobar que el valor en el control asociado *valor* se sitúa entre `minVal` y `maxVal`.  
   
 ```   

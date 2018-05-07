@@ -1,13 +1,10 @@
 ---
 title: Clases de compatibilidad de aplicaciones y subprocesos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.support
 dev_langs:
@@ -20,24 +17,22 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443c2393d9d3a8a0f61df6adddb2c83e7672723
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-and-thread-support-classes"></a>Clases de aplicación y de compatibilidad con subprocesos
 Cada aplicación tiene uno y solo un objeto de aplicación; Este objeto coordina otros objetos en el programa en ejecución y se deriva de `CWinApp`.  
   
  La biblioteca (Microsoft Foundation Classes) es compatible con varios subprocesos de ejecución dentro de una aplicación. Todas las aplicaciones que deben tener al menos un subproceso; el subproceso utilizado por su `CWinApp` objeto es el subproceso principal.  
   
- `CWinThread`Encapsula una parte de las capacidades de subprocesos del sistema operativo. Para hacer que sea más fácil el uso de varios subprocesos, MFC proporciona también sincronización de las clases de objeto para proporcionar una interfaz de C++ para objetos de sincronización de Win32.  
+ `CWinThread` Encapsula una parte de las capacidades de subprocesos del sistema operativo. Para hacer que sea más fácil el uso de varios subprocesos, MFC proporciona también sincronización de las clases de objeto para proporcionar una interfaz de C++ para objetos de sincronización de Win32.  
   
 ## <a name="application-and-thread-classes"></a>Clases de aplicación y subprocesos  
  [CWinApp](../mfc/reference/cwinapp-class.md)  

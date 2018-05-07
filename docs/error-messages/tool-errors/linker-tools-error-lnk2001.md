@@ -1,12 +1,9 @@
 ---
 title: Las herramientas del vinculador LNK2001 Error | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2001
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f78f436d0e19779d0ebca499a559a60d12bcf9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78dc0c0a3a030ecb88d7138484e2c64e145f69ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2001"></a>Error de las herramientas del vinculador LNK2001
 símbolo externo sin resolver "*símbolo*"  
@@ -76,7 +71,7 @@ Este error puede producirse si crea un vínculo a las bibliotecas de modo de lan
   
 Este error puede producirse si el código hace referencia a un símbolo de una versión de una biblioteca, pero se proporciona una versión diferente de la biblioteca al vinculador. Por lo general, no puede combinar archivos objeto o bibliotecas que se generan para las diferentes versiones del compilador. Las bibliotecas que se incluyen en una nueva versión pueden contener símbolos que no se encuentra en las bibliotecas incluidas con versiones anteriores y viceversa. Para corregir este problema, compile todos los archivos objeto y bibliotecas con la misma versión del compilador antes de vincularlas.  
   
--  Las herramientas &#124; Opciones &#124; Proyectos &#124; Cuadro de diálogo directorios de VC ++, en la selección de archivos de biblioteca, puede cambiar el orden de búsqueda de la biblioteca. La carpeta vinculador del cuadro de diálogo páginas de propiedades del proyecto también puede contener rutas de acceso que podrían estar obsoletas.  
+-  Las herramientas de &#124; opciones &#124; proyectos &#124; cuadro de diálogo directorios de VC ++, en la selección de archivos de biblioteca, permite cambiar el orden de búsqueda de la biblioteca. La carpeta vinculador del cuadro de diálogo páginas de propiedades del proyecto también puede contener rutas de acceso que podrían estar obsoletas.  
   
 -  Este problema puede aparecer cuando se instala un nuevo SDK (quizás en una ubicación diferente), y el orden de búsqueda no se actualiza para señalar a la nueva ubicación. Normalmente, se debe colocar la ruta de acceso para el nuevo SDK include y lib directorios delante de la ubicación de Visual C++ de forma predeterminada. Además, si un proyecto contiene rutas de acceso incrustadas puede continuar señalando a rutas antiguas que son válidas, pero actualizada para la nueva funcionalidad agregada por la nueva versión que se instala en una ubicación diferente.  
   

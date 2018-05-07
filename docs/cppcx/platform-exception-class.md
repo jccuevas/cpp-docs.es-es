@@ -1,11 +1,8 @@
 ---
 title: Exception (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformexception-class"></a>Platform::Exception (Clase)
 Representa los errores que se producen durante la ejecución de una aplicación. Las clases de excepción personalizadas no se pueden derivar de `Platform::Exception`. Si necesitas una excepción personalizada, puedes utilizar `Platform::COMException` y especificar un HRESULT específico de la aplicación.  
@@ -54,15 +49,15 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|[Exception::CreateException](#createexception)|Crea una excepción que representa el valor HRESULT especificado.|  
+|[Exception:: CreateException](#createexception)|Crea una excepción que representa el valor HRESULT especificado.|  
   
 ### <a name="properties"></a>Propiedades  
  La clase Exception también tiene las propiedades siguientes.  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|[Exception::HResult](#hresult)|HRESULT correspondiente a la excepción.|  
-|[Exception::Message](#message)|Un mensaje que describe la excepción. Este valor es de solo lectura y se no puede modificarse después de que se haya generado `Exception` .|  
+|[Exception](#hresult)|HRESULT correspondiente a la excepción.|  
+|[Exception](#message)|Un mensaje que describe la excepción. Este valor es de solo lectura y se no puede modificarse después de que se haya generado `Exception` .|  
   
 ### <a name="requirements"></a>Requisitos  
  **Cliente mínimo admitido:** Windows 8  

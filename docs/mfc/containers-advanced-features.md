@@ -1,13 +1,10 @@
 ---
-title: "Contenedores: Características avanzadas | Documentos de Microsoft"
-ms.custom: 
+title: 'Contenedores: Características avanzadas | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e79b1c88996e835a907129fa5810d4c4dca0770
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-advanced-features"></a>Contenedores: Características avanzadas
 Este artículo describen los pasos necesarios para incorporar características avanzadas adicionales a aplicaciones contenedoras existentes. Estas características son:  
@@ -40,7 +35,7 @@ Este artículo describen los pasos necesarios para incorporar características a
   
 -   [Un vínculo OLE a un objeto incrustado](#_core_links_to_embedded_objects)  
   
-##  <a name="_core_creating_a_container_server_application"></a>Crear una aplicación de contenedor y servidor  
+##  <a name="_core_creating_a_container_server_application"></a> Crear una aplicación de contenedor y servidor  
  Una aplicación contenedor/servidor es una aplicación que actúa como un contenedor y un servidor. Microsoft Word para Windows es un ejemplo de esto. Puede incrustar documentos de Word para Windows en otras aplicaciones, y también puede incrustar elementos en documentos de Word para Windows. El proceso para modificar la aplicación de contenedor para ser un contenedor y un servidor completo (no se puede crear una aplicación de combinación contenedor/miniservidor) es similar al proceso para crear un servidor completo.  
   
  El artículo [servidores: implementar un servidor](../mfc/servers-implementing-a-server.md) enumera una serie de tareas necesarias para implementar una aplicación de servidor. Si convierte una aplicación de contenedor para una aplicación de contenedor/servidor, deberá realizar algunas de estas mismas tareas, agregando código al contenedor. A continuación enumeran los aspectos importantes a tener en cuenta:  
@@ -57,7 +52,7 @@ Este artículo describen los pasos necesarios para incorporar características a
   
  Tenga en cuenta que no se puede insertar una aplicación MDI en sí mismo. Una aplicación que es un contenedor/servidor no se pueden insertar en sí mismo a menos que sea una aplicación SDI.  
   
-##  <a name="_core_links_to_embedded_objects"></a>Vínculos a objetos incrustados  
+##  <a name="_core_links_to_embedded_objects"></a> Vínculos a objetos incrustados  
  Los vínculos en función de los objetos incrustados permite a un usuario crear un documento con un vínculo OLE a un objeto incrustado dentro de la aplicación contenedora. Por ejemplo, puede crear un documento en un procesador de textos que contiene una hoja de cálculo incrustada. Si la aplicación admite vínculos a objetos incrustados, podrá pegar un vínculo a la hoja de cálculo contenida en el documento del procesador de textos. Esta característica permite a la aplicación utilizar la información contenida en la hoja de cálculo sin necesidad de saber que el procesador de textos obtuvo.  
   
 #### <a name="to-link-to-embedded-objects-in-your-application"></a>Para vincular a los objetos incrustados en la aplicación  

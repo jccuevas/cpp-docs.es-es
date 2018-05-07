@@ -1,12 +1,9 @@
 ---
 title: Clase CSettingsStore | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Incluye las funciones API de Windows, proporcionando una interfaz orientada a objetos que se utiliza para tener acceso al registro.  
@@ -88,7 +83,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>  CSettingsStore::Close  
  Cierra la clave del registro abierta.  
   
 ```  
@@ -98,7 +93,7 @@ virtual void Close();
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, se llama a este método desde el destructor de la [clase CSettingsStore](../../mfc/reference/csettingsstore-class.md).  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
  Se abre una clave del registro o lo crea si no existe.  
   
 ```  
@@ -113,9 +108,9 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
  0 si es correcto; en caso contrario, un valor distinto de cero.  
   
 ### <a name="remarks"></a>Comentarios  
- `CreateKey`usa `m_hKey` como la raíz de las consultas del registro. Busca `pszPath` como una subclave de `m_hKey`. Si la clave no existe, `CreateKey` lo crea. En caso contrario, se abre la clave. `CreateKey`a continuación, establece `m_hKey` a la clave creada o abierta.  
+ `CreateKey` usa `m_hKey` como la raíz de las consultas del registro. Busca `pszPath` como una subclave de `m_hKey`. Si la clave no existe, `CreateKey` lo crea. En caso contrario, se abre la clave. `CreateKey` a continuación, establece `m_hKey` a la clave creada o abierta.  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  Crea un objeto `CSettngsStore`.  
   
 ```  
@@ -138,7 +133,7 @@ CSettingsStore(
   
  El destructor de `CSettingsStore` libera `m_hKey` automáticamente.  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
  Elimina una clave y todos sus elementos secundarios del registro.  
   
 ```  
@@ -162,7 +157,7 @@ virtual BOOL DeleteKey(
   
  Si el parámetro `bAdmin` es cero, `DeleteKey` busca la clave eliminar en `HKEY_CURRENT_USER`. Si `bAdmin` es distinto de cero, `DeleteKey` busca la clave eliminar en `HKEY_LOCAL_MACHINE`.  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  Elimina un valor de `m_hKey`.  
   
 ```  
@@ -176,7 +171,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-##  <a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>  CSettingsStore::Open  
  Se abre una clave del registro.  
   
 ```  
@@ -193,7 +188,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>Comentarios  
  Después de que este método abre correctamente la clave especificada, establece `m_hKey` para el identificador de esta clave.  
   
-##  <a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>  CSettingsStore::Read  
  Lee un valor de una clave en el registro.  
   
 ```  
@@ -321,9 +316,9 @@ virtual BOOL Read(
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- `Read`busca `pszKey` como una subclave de `m_hKey`.  
+ `Read` busca `pszKey` como una subclave de `m_hKey`.  
   
-##  <a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>  CSettingsStore::Write  
  Escribe un valor en la clave del registro de abierto.  
   
 ```  

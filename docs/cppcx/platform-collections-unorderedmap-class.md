@@ -1,26 +1,21 @@
 ---
 title: Unorderedmap (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fbc1905023f64c4983cf041eda244b28ce507abc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap (Clase)
 
@@ -72,15 +67,15 @@ Para obtener más información, consulte [colecciones](../cppcx/collections-c-cx
 
 |Name|Descripción|
 |----------|-----------------|
-|[UnorderedMap::UnorderedMap](#ctor)|Inicializa una nueva instancia de la clase Map.|
+|[Unorderedmap](#ctor)|Inicializa una nueva instancia de la clase Map.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[UnorderedMap::Clear](#clear)|Quita todos los pares clave-valor del objeto Map actual.|
+|[Unorderedmap:: Clear](#clear)|Quita todos los pares clave-valor del objeto Map actual.|
 |[UnorderedMap::First](#first)|Devuelve un iterador que especifica el primer elemento del objeto Map.|
-|[UnorderedMap::GetView](#getview)|Devuelve una vista de solo lectura del objeto Map actual; es decir, una clase Platform::Collections::UnorderedMapView.|
+|[Unorderedmap:: GetView](#getview)|Devuelve una vista de solo lectura del objeto Map actual; es decir, una clase Platform::Collections::UnorderedMapView.|
 |[UnorderedMap::HasKey](#haskey)|Determina si el objeto Map actual contiene la clave especificada.|
 |[UnorderedMap::Insert](#insert)|Agrega el par clave-valor especificado al objeto Map actual.|
 |[UnorderedMap::Lookup](#lookup)|Recupera el elemento en la clave especificada del objeto Map actual.|
@@ -148,7 +143,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Un objeto `UnorderedMapView`.
 
-## <a name="haskey"></a>  UnorderedMap::HasKey Method
+## <a name="haskey"></a>  Unorderedmap:: Haskey (método)
 
 Determina si el objeto UnorderedMap actual contiene la clave especificada.
 
@@ -215,7 +210,7 @@ Clave usada para buscar un elemento en el objeto UnorderedMap. El tipo de *clave
 
 El valor que se empareja con el *clave*. El tipo del valor devuelto es typename *V*.
 
-## <a name="mapchanged"></a>  UnorderedMap::MapChanged
+## <a name="mapchanged"></a>  Unorderedmap:: Mapchanged
 
 Se produce cuando un elemento se inserta en el mapa o se quita del mapa.
 
@@ -367,7 +362,7 @@ Una referencia o [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a
 *first*  
 El iterador de entrada del primer elemento en un intervalo de elementos utilizados para inicializar el objeto UnorderedMap actual.
 
-*last*  
+*último*  
 El iterador de entrada del primer elemento tras un intervalo de elementos utilizados para inicializar el objeto UnorderedMap actual.
 
 ## <a name="see-also"></a>Vea también

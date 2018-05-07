@@ -1,13 +1,10 @@
 ---
-title: "Nociones OLE: Implementación de MFC | Documentos de Microsoft"
-ms.custom: 
+title: 'Nociones OLE: Implementación de MFC | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IMarshall
 - IMoniker
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 530cc14135fd38e2177e00dc87974e96ffe24b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 124bec9bfdbdc4e39bab71a80f77d7a06d8444a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-mfc-implementation"></a>Nociones de OLE: Implementación de MFC
 Debido al tamaño y complejidad de la API básica de OLE, llamarla directamente para programar aplicaciones OLE puede ser muy lento. El objetivo de la implementación de la biblioteca Microsoft Foundation Class de OLE es reducir la cantidad de trabajo que tiene que hacer para escribir aplicaciones compatibles con OLE, completa.  
   
  En este artículo se explica las partes de la API de OLE que no se ha implementado dentro de MFC. También se explica cómo lo que está implementado asigna a la sección OLE del SDK de Windows.  
   
-##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a>Algunas partes de OLE no implementadas por la biblioteca de clases  
+##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Algunas partes de OLE no implementadas por la biblioteca de clases  
  Algunas características de OLE e interfaces no se proporcionan directamente por MFC. Si desea usar estas características, puede llamar a la API de OLE directamente.  
   
  IMoniker (interfaz)  

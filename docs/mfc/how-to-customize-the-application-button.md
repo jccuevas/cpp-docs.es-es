@@ -1,29 +1,24 @@
 ---
-title: "Cómo: personalizar el botón aplicación | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: personalizar el botón aplicación | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4a150985bd5c552b361620df87e34511ef8027
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 828886e6a5c4891e1fd7e1d820ee00542e052cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-the-application-button"></a>Cómo: Personalizar el botón Aplicación
 Al hacer clic en el botón de la aplicación, se muestra un menú de comandos. Normalmente, el menú contiene comandos relacionados con el archivo como **abiertos**, **guardar**, **impresión**, y **Exit**.  
@@ -43,7 +38,7 @@ Al hacer clic en el botón de la aplicación, se muestra un menú de comandos. N
 ## <a name="application-button-properties"></a>Propiedades de botón de la aplicación  
  En la tabla siguiente define las propiedades del botón de aplicación.  
   
-|Property|Definición|  
+|Property|de esquema JSON|  
 |--------------|----------------|  
 |**Botones**|Contiene la colección de hasta tres botones que aparecen en la esquina inferior derecha del menú de aplicación.|  
 |**Título**|Especifica el texto del control. A diferencia de otros elementos de la cinta de opciones, el botón de la aplicación no muestra el texto del título. En su lugar, el texto se utiliza para mejorar la accesibilidad.|  

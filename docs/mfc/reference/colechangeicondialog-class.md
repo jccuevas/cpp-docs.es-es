@@ -1,12 +1,9 @@
 ---
 title: Clase de la clase COleChangeIconDialog | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e6f43ce49c5e5b51a6f69a3a8952608f5bfe49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangeicondialog-class"></a>Clase de la clase COleChangeIconDialog
 Se utiliza en el cuadro de diálogo Cambiar icono de OLE.  
@@ -93,7 +88,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxodlgs.h  
   
-##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
  Esta función solo crea una `COleChangeIconDialog` objeto.  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleChangeIconDialog(
   
  Para obtener más información, consulte el [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) estructura en el SDK de Windows.  
   
-##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  Llame a esta función para cambiar el icono que representa el elemento a la que está seleccionado en el cuadro de diálogo después de [DoModal](#domodal) devuelve **IDOK**.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el cambio es correcto; en caso contrario es 0.  
   
-##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeIconDialog::DoModal  
  Llame a esta función para mostrar el cuadro de diálogo de OLE Cambiar icono.  
   
 ```  
@@ -163,7 +158,7 @@ virtual INT_PTR DoModal();
   
  Si `DoModal` devuelve **IDOK**, puede llamar a otro miembro funciones para recuperar los valores de configuración o la información que se ha especificado por el usuario en el cuadro de diálogo.  
   
-##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile  
  Llame a esta función para obtener un identificador de metarchivo que contiene el icono aspecto del elemento seleccionado.  
   
 ```  
@@ -173,7 +168,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Valor devuelto  
  El identificador del metarchivo que contiene el aspecto del icono del nuevo icono, si el cuadro de diálogo descartar eligiendo **Aceptar**; en caso contrario, el icono tal y como estaba antes de que se muestre el cuadro de diálogo.  
   
-##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci  
  Estructura de tipo **OLEUICHANGEICON** utilizado para controlar el comportamiento del cuadro de diálogo Cambiar icono.  
   
 ```  

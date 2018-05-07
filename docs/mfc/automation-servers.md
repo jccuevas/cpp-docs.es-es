@@ -1,13 +1,10 @@
 ---
-title: "Servidores de automatización | Documentos de Microsoft"
-ms.custom: 
+title: Servidores de automatización | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337d5a1ec25e8fc80cf867aecef0452b1d03fb2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers"></a>Servidores de automatización
 Automatización permite a la aplicación para manipular objetos implementados en otra aplicación o exponga objetos para que se puedan manipular. Un servidor de automatización es una aplicación que expone objetos programables (llamados objetos de automatización) a otras aplicaciones (denominado [los clientes de automatización](../mfc/automation-clients.md)). Servidores de automatización se denominan componentes de automatización.  
@@ -40,7 +35,7 @@ Automatización permite a la aplicación para manipular objetos implementados en
   
  Al exponer la funcionalidad de la aplicación a través de una interfaz común y bien definida, automatización permite crear aplicaciones en un único lenguaje de programación general como Microsoft Visual Basic en lugar de en macro diverso, específica de la aplicación Idiomas.  
   
-##  <a name="_core_support_for_automation_servers"></a>Compatibilidad con servidores de automatización  
+##  <a name="_core_support_for_automation_servers"></a> Compatibilidad con servidores de automatización  
  Visual C++ y el marco de trabajo MFC proporcionan una amplia compatibilidad para servidores de automatización. Administran gran parte de la sobrecarga implicada en la creación de un servidor de automatización, por lo que se pueda centrar sus esfuerzos en la funcionalidad de la aplicación.  
   
  Mecanismo de entidad de seguridad del marco de trabajo para admitir la automatización es el mapa de envíos, un conjunto de macros que se expande en las declaraciones y las llamadas necesarias para exponer métodos y propiedades para OLE. Un mapa de envíos típico tiene el siguiente aspecto:  

@@ -1,13 +1,10 @@
 ---
 title: LOGBRUSH (estructura) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LOGBRUSH
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6cc9b61f837db4c9766c077fa60f4d9c2b95bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logbrush-structure"></a>LOGBRUSH (Estructura)
 El `LOGBRUSH` estructura define el estilo, el color y el patrón de un pincel de diseño físico. Se utiliza por las ventanas [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) y [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) funciones.  
@@ -68,17 +63,17 @@ typedef struct tag LOGBRUSH { /* lb */
  *lbHatch*  
  Especifica un estilo de trama. El significado depende en el estilo de pincel definido por `lbStyle`. Si `lbStyle` es **BS_DIBPATTERN**, **lbHatch** miembro contiene un identificador de un DIB empaquetado. Si `lbStyle` es **BS_DIBPATTERNPT**, **lbHatch** miembro contiene un puntero a un DIB empaquetado. Si `lbStyle` es **BS_HATCHED**, **lbHatch** miembro especifica la orientación de las líneas que se utiliza para crear la trama. Puede ser uno de los siguientes valores:  
   
-- `HS_BDIAGONAL`Una trama de 45 grados hacia arriba, de izquierda a derecha  
+- `HS_BDIAGONAL` Una trama de 45 grados hacia arriba, de izquierda a derecha  
   
-- `HS_CROSS`Sombreado horizontal y vertical  
+- `HS_CROSS` Sombreado horizontal y vertical  
   
-- `HS_DIAGCROSS`sombreado de 45 grados  
+- `HS_DIAGCROSS` sombreado de 45 grados  
   
-- `HS_FDIAGONAL`Una trama de 45 grados hacia abajo y de izquierda a derecha  
+- `HS_FDIAGONAL` Una trama de 45 grados hacia abajo y de izquierda a derecha  
   
-- `HS_HORIZONTAL`Sombreado horizontal  
+- `HS_HORIZONTAL` Sombreado horizontal  
   
-- `HS_VERTICAL`Sombreado vertical  
+- `HS_VERTICAL` Sombreado vertical  
   
  Si `lbStyle` es **BS_PATTERN**, **lbHatch** es un identificador para el mapa de bits que define el patrón. Si `lbStyle` es **BS_SOLID** o **BS_HOLLOW**, **lbHatch** se omite.  
   

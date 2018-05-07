@@ -18,11 +18,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12574f9a8a2da2072d1196cbd769ac87cf31c2f7
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: f06153b4c4f037172e96e3ce1222311a82c71772
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="data-conversion"></a>Conversión de datos
 
@@ -30,7 +30,7 @@ Estas rutinas cambian el formato de los datos a otro distinto. Estas rutinas se 
 
 ## <a name="data-conversion-routines"></a>Rutinas de conversión de datos
 
-|Rutina|Uso|
+|Rutina|Usar|
 |-------------|---------|
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Busca el valor absoluto de un entero|
 |[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convierte la cadena a **float**|
@@ -71,4 +71,4 @@ Estas rutinas cambian el formato de los datos a otro distinto. Estas rutinas se 
 
 ## <a name="see-also"></a>Vea también
 
-[Rutinas en tiempo de ejecución por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

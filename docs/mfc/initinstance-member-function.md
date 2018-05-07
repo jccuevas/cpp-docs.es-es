@@ -1,13 +1,10 @@
 ---
-title: "Función miembro InitInstance | Documentos de Microsoft"
-ms.custom: 
+title: Función miembro InitInstance | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - InitInstance
 dev_langs:
@@ -18,20 +15,18 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96042b4d2931fb3709f992f6e43e408c919fe014
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda38c7173feeccf878ee7befc3d27c0061ddb1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initinstance-member-function"></a>InitInstance Member (Función)
-El sistema operativo Windows permite ejecutar más de una copia o "instancia" de la misma aplicación. `WinMain`llamadas [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) cada vez que inicia una nueva instancia de la aplicación.  
+El sistema operativo Windows permite ejecutar más de una copia o "instancia" de la misma aplicación. `WinMain` llamadas [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) cada vez que inicia una nueva instancia de la aplicación.  
   
  El estándar `InitInstance` implementación creada por el Asistente para aplicaciones MFC realiza las tareas siguientes:  
   
@@ -48,7 +43,7 @@ El sistema operativo Windows permite ejecutar más de una copia o "instancia" de
  Puede agregar su propio código de inicialización o modificar el código escrito por el asistente.  
   
 > [!NOTE]
->  Las aplicaciones MFC deben inicializarse como contenedor uniproceso (STA). Si se llama a [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) en su `InitInstance` invalidar, especifique `COINIT_APARTMENTTHREADED` (en lugar de `COINIT_MULTITHREADED`). Para obtener más información, vea PRB: aplicación MFC deja de responder cuando se inicializa la aplicación como un multiproceso apartamento (828643) en [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  Las aplicaciones MFC deben inicializarse como contenedor uniproceso (STA). Si se llama a [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) en su `InitInstance` invalidar, especifique `COINIT_APARTMENTTHREADED` (en lugar de `COINIT_MULTITHREADED`). Para obtener más información, vea PRB: aplicación MFC deja de responder cuando se inicializa la aplicación como un multiproceso apartamento (828643) en [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
   
 ## <a name="see-also"></a>Vea también  
  [CWinApp: la clase Application](../mfc/cwinapp-the-application-class.md)

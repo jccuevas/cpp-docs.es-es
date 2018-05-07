@@ -1,13 +1,10 @@
 ---
 title: Destinos de comando y control de mensajes | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
 dev_langs:
@@ -18,24 +15,22 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 - command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ec1f2a1f419715a3e8e9fbac2fcba3c7584a9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7184a6e8df67dfd220173c42bfa3e0580bd2cd3f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-handling-and-command-targets"></a>Control de mensajes y destinos de comando
 La interfaz de envío de comandos `IOleCommandTarget` define un mecanismo sencillo y extensible para consultar y ejecutar comandos. Este mecanismo es más sencillo que de automatización `IDispatch` porque se basa completamente en un conjunto estándar de comandos; comandos no suelen tienen argumentos, y no está implicada ninguna información de tipo (seguridad de tipos se reduce para argumentos del comando).  
   
  En el diseño de interfaz de envío de comandos, cada comando pertenece a un grupo de comandos"" propio identificado con un **GUID**. Por lo tanto, cualquiera puede definir un grupo nuevo y definir todos los comandos dentro de ese grupo sin necesidad de coordinar con Microsoft o cualquier otro proveedor. (Esto es esencialmente el mismo tipo de definición como un **dispinterface** más **DISPID** en automatización. Hay superposición en este caso, aunque este mecanismo de enrutamiento de comandos es solo para el enrutamiento de comandos y no para secuencias de comandos o para la programación a gran escala como identificadores de automatización.)  
   
- `IOleCommandTarget`controla los siguientes escenarios:  
+ `IOleCommandTarget` controla los siguientes escenarios:  
   
 -   Cuando un objeto está activado, sólo se muestran generalmente las barras de herramientas del objeto y las barras de herramientas del objeto pueden tener botones para algunos de los comandos del contenedor como in situ **impresión**, **vista previa de impresión**,  **Guardar**, `New`, **Zoom**y otros. (Activación en contexto estándares recomienda que los objetos quiten estos botones de sus barras de herramientas, o en menos deshabiliten. Este diseño permite que estos comandos estén habilitados y se enruten al controlador correcto.) Actualmente, no hay ningún mecanismo para el objeto que se va a enviar estos comandos para el contenedor.  
   

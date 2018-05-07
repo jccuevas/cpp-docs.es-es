@@ -1,12 +1,9 @@
 ---
 title: Advertencia del compiladors C4200 C4399 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4203
@@ -42,17 +39,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f0d58a0d7a348abd0b85d8d5dee41db28ed4f9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 41adf86af231a3f6dfc1f0ecdb14418dea78ec7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Advertencia del compiladors C4200 C4399
 
@@ -175,7 +170,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|importar la biblioteca de tipos '*biblioteca1*'antes de importar'*biblioteca2*'|
 |[Advertencia del compilador (nivel 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|la biblioteca de tipos '*biblioteca1*'en'*biblioteca2*' se importa automáticamente|
 |Advertencia del compilador (nivel 4) C4338|#pragma *directiva*: sección estándar '*sección*' se usa|
-|[Advertencia del compilador (nivel 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*tipo*': el uso de un tipo no definido detectado en ' WinRT &#124; CLR' meta-data - uso de este tipo puede provocar una excepción en tiempo de ejecución|
+|[Advertencia del compilador (nivel 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*tipo*': el uso de un tipo no definido detectado en ' WinRT&#124;CLR' meta-data - uso de este tipo puede provocar una excepción en tiempo de ejecución|
 |[Advertencia del compilador (nivel 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*valor*': valor ajustado de positivo en un valor negativo|
 |[Advertencia del compilador (nivel 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|cambio de comportamiento: '*función*' llama, pero en versiones anteriores se llamaba a un operador de miembro|
 |Advertencia del compilador (nivel 4) C4343|#pragma optimize("g",off) invalida la opción /Og|

@@ -1,12 +1,9 @@
 ---
 title: Clase CSimpleException | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSimpleException
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7730fdd356b8145b771a85b8449974c2c8fa007
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csimpleexception-class"></a>Clase CSimpleException
 Esta clase es una clase base para excepciones MFC de recursos críticos.  
@@ -55,7 +50,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 |[CSimpleException::GetErrorMessage](#geterrormessage)|Proporciona información sobre un error que se ha producido.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CSimpleException`es la clase base para excepciones de MFC de recursos críticos y controla la propiedad y la inicialización de un mensaje de error. Las siguientes clases utilizan `CSimpleException` como su clase base:  
+ `CSimpleException` es la clase base para excepciones de MFC de recursos críticos y controla la propiedad y la inicialización de un mensaje de error. Las siguientes clases utilizan `CSimpleException` como su clase base:  
   
 |||  
 |-|-|  
@@ -79,7 +74,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h  
   
-##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
+##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
  El constructor.  
   
 ```  
@@ -94,7 +89,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="remarks"></a>Comentarios  
  General, nunca se necesita llamar directamente a este constructor. Una función que produce una excepción debe crearse una instancia de un `CException`-clase derivada y llamar a su constructor, o bien debe usar uno de lo MFC iniciar funciones, como [AfxThrowFileException](exception-processing.md#afxthrowfileexception), se producirá un tipo predefinido.  
   
-##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
  Llame a esta función miembro para proporcionar el texto sobre un error que se ha producido.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: CLongBinary (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CLongBinary
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49661932192a32550d50edfbbc52d7967cb78dcd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7030fdcb59166c0e70a7b2c2471273c913fe459
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clongbinary-class"></a>CLongBinary (clase)
 Simplifica el trabajo con objetos de datos binarios de gran tamaño (a menudo denominados BLOB, u "objetos binarios grandes") en una base de datos.  
@@ -75,14 +70,14 @@ class CLongBinary : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdb_.h  
   
-##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
+##  <a name="clongbinary"></a>  CLongBinary::CLongBinary  
  Construye un objeto `CLongBinary`.  
   
 ```  
 CLongBinary();
 ```  
   
-##  <a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
+##  <a name="m_dwdatalength"></a>  CLongBinary::m_dwDataLength  
  Almacena el tamaño real en bytes de los datos almacenados en el `HGLOBAL` controlar en `m_hData`.  
   
 ```  
@@ -92,7 +87,7 @@ SQLULEN m_dwDataLength;
 ### <a name="remarks"></a>Comentarios  
  Este tamaño puede ser menor que el tamaño del bloque de memoria asignado para los datos. Llamar a Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) función para obtener el tamaño asignado.  
   
-##  <a name="m_hdata"></a>CLongBinary::m_hData  
+##  <a name="m_hdata"></a>  CLongBinary::m_hData  
  Almacena un Windows `HGLOBAL` administrar a los datos reales de objetos binarios grandes.  
   
 ```  

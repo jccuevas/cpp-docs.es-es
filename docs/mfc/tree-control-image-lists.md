@@ -1,13 +1,10 @@
 ---
-title: "Listas de imágenes del Control de árbol | Documentos de Microsoft"
-ms.custom: 
+title: Listas de imágenes del Control de árbol | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5015a001bf2c15f3144303ba5e19b2a9ea8c34f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef74b656cc85fbdcc29c7965b9398a5cbd2f44e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-image-lists"></a>Listas de imágenes del control de árbol
 Cada elemento de un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) puede tener un par de imágenes de mapa de bits asociado con él. Las imágenes aparecerán en el lado izquierdo de la etiqueta de un elemento. Una imagen se muestra cuando se selecciona el elemento y la otra se muestra cuando el elemento no está seleccionado. Por ejemplo, un elemento puede mostrar una carpeta abierta cuando se selecciona y una carpeta cerrada cuando no está seleccionada.  

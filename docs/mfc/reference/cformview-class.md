@@ -1,12 +1,9 @@
 ---
 title: Clase CFormView | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFormView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 386e28631d20721f22eb2b778ffbe2e1d4b1824d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3486285b7b6430e9cd6f0e4a936aa3341bd72e0f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cformview-class"></a>Clase CFormView
 La clase base utilizada para las vistas de formulario.  
@@ -79,7 +74,7 @@ class CFormView : public CScrollView
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxext.h  
   
-##  <a name="cformview"></a>CFormView::CFormView  
+##  <a name="cformview"></a>  CFormView::CFormView  
  Construye un objeto `CFormView`.  
   
 ```  
@@ -97,7 +92,7 @@ CFormView(UINT nIDTemplate);
 ### <a name="remarks"></a>Comentarios  
  Cuando se crea un objeto de un tipo derivado de `CFormView`, invocar uno de los constructores para crear el objeto de vista e identificar el recurso de cuadro de diálogo en el que se basa la vista. Puede identificar el recurso por su nombre (pasa una cadena como argumento al constructor) o por su identificador (pase un entero sin signo como argumento).  
   
- Los controles de ventana y secundario de la vista de formulario no se crean hasta que `CWnd::Create` se llama. `CWnd::Create`se llama el marco de trabajo como parte del proceso de creación documento y vista, que se controla mediante la plantilla de documento.  
+ Los controles de ventana y secundario de la vista de formulario no se crean hasta que `CWnd::Create` se llama. `CWnd::Create` se llama el marco de trabajo como parte del proceso de creación documento y vista, que se controla mediante la plantilla de documento.  
   
 > [!NOTE]
 >  La clase derivada *debe* proporcionar su propio constructor. En el constructor, invocar el constructor, `CFormView::CFormView`, con el nombre del recurso o el identificador como un argumento tal como se muestra en la anterior información de clase.  
@@ -107,7 +102,7 @@ CFormView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]  
   
-##  <a name="isinitdlgcompleted"></a>CFormView::IsInitDlgCompleted  
+##  <a name="isinitdlgcompleted"></a>  CFormView::IsInitDlgCompleted  
  Usado por MFC para garantizar que la inicialización se complete antes de llevar a cabo otras operaciones.  
   
 ```  

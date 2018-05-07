@@ -1,13 +1,10 @@
 ---
-title: "Excepciones: Cambios en las Macros de excepción en la versión 3.0 | Documentos de Microsoft"
-ms.custom: 
+title: 'Excepciones: Cambios en las Macros de excepción en la versión 3.0 | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Excepciones: Cambios en las macros de excepción en la versión 3.0
 Se trata de un tema avanzado.  
@@ -56,7 +51,7 @@ Se trata de un tema avanzado.
   
  es true, el primer bloque catch detecta la excepción. En la versión 3.0, que usa las excepciones de C++ para implementar muchas de las macros de control de excepciones, el segundo bloque catch coincide con la produce `CException`.  
   
- Código parecido a esto es poco habitual. Normalmente aparece cuando se pasa un objeto de excepción a otra función que acepta un tipo genérico **CException\***realiza el procesamiento de "previo a throw" y, por último, se produce la excepción.  
+ Código parecido a esto es poco habitual. Normalmente aparece cuando se pasa un objeto de excepción a otra función que acepta un tipo genérico **CException\*** realiza el procesamiento de "previo a throw" y, por último, se produce la excepción.  
   
  Para solucionar este problema, mueva la expresión throw desde la función al código de llamada y producirá una excepción del tipo real conocida por el compilador en el momento en que se generó la excepción.  
   

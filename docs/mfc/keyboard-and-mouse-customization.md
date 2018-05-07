@@ -1,30 +1,25 @@
 ---
-title: "Personalización del teclado y mouse (ratón) | Documentos de Microsoft"
-ms.custom: 
+title: Personalización del teclado y mouse (ratón) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b031c4af05df7ad2b8c0850cefb116d4ac249d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personalización del teclado y del mouse
 MFC permite al usuario de la aplicación para personalizar cómo controla el teclado y mouse de entrada. El usuario puede personalizar la entrada de teclado mediante la asignación de métodos abreviados de teclado para los comandos. El usuario también puede personalizar la entrada de mouse (ratón) seleccionando el comando que se debe ejecutar cuando el usuario hace doble clic dentro de windows específicos de la aplicación. En este tema se explica cómo personalizar la entrada de la aplicación.  

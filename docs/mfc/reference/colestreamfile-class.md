@@ -1,12 +1,9 @@
 ---
 title: Clase COleStreamFile | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colestreamfile-class"></a>Clase COleStreamFile
 Representa un flujo de datos ( `IStream`) en un archivo compuesto como parte de almacenamiento estructurado OLE.  
@@ -72,7 +67,7 @@ class COleStreamFile : public CFile
 ## <a name="remarks"></a>Comentarios  
  Un `IStorage` el objeto debe existir antes de que la secuencia se puede abrir o crear a menos que sea una secuencia de memoria.  
   
- `COleStreamFile`exactamente igual que se manipulan los objetos [CFile](../../mfc/reference/cfile-class.md) objetos.  
+ `COleStreamFile` exactamente igual que se manipulan los objetos [CFile](../../mfc/reference/cfile-class.md) objetos.  
   
  Para obtener más información sobre cómo manipular los flujos y almacenamiento, vea el artículo [contenedores: archivos compuestos](../../mfc/containers-compound-files.md)...  
   
@@ -88,7 +83,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxole.h  
   
-##  <a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>  COleStreamFile::Attach  
  Asocia la secuencia OLE suministrada con el `COleStreamFile` objeto.  
   
 ```  
@@ -104,7 +99,7 @@ void Attach(LPSTREAM lpStream);
   
  Para obtener más información, consulte [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) del SDK de Windows.  
   
-##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  Crea un objeto `COleStreamFile`.  
   
 ```  
@@ -120,7 +115,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  Para obtener más información, consulte [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) del SDK de Windows.  
   
-##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  Con seguridad crea una nueva secuencia de memoria compartida global donde un error es una condición normal, se esperaba.  
   
 ```  
@@ -139,7 +134,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  Para obtener más información, consulte [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) del SDK de Windows.  
   
-##  <a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  Con seguridad crea una nueva secuencia en el objeto de almacenamiento proporcionado donde un error es una condición normal, se esperaba.  
   
 ```  
@@ -171,7 +166,7 @@ BOOL CreateStream(
   
  Para obtener más información, consulte [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) en el SDK de Windows.  
   
-##  <a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>  COleStreamFile::Detach  
  Desasocia el flujo del objeto sin cerrar la secuencia.  
   
 ```  
@@ -186,7 +181,7 @@ LPSTREAM Detach();
   
  Para obtener más información, consulte [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) del SDK de Windows.  
   
-##  <a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>  COleStreamFile::GetStream  
  Llame a esta función para devolver un puntero a la secuencia actual.  
   
 ```  
@@ -196,7 +191,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la interfaz de secuencia actual ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  Abre un flujo existente.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: CSpinButtonCtrl (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b00fc554c6ca677756cf6a9a9c7fa83cd9d255f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (clase)
 Proporciona la funcionalidad del control de botón de número común de Windows.  
@@ -112,7 +107,7 @@ class CSpinButtonCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcmn.h  
   
-##  <a name="create"></a>CSpinButtonCtrl::Create  
+##  <a name="create"></a>  CSpinButtonCtrl::Create  
  Crea un control de botón de número y lo adjunta a un `CSpinButtonCtrl` objeto...  
   
 ```  
@@ -144,7 +139,7 @@ virtual BOOL Create(
   
  Para crear un control de botón de número con estilos de ventana extendidos, llame a [CSpinButtonCtrl::CreateEx](#createex) en lugar de **crear**.  
   
-##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
+##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Crea un control (una ventana secundaria) y lo asocia a la `CSpinButtonCtrl` objeto.  
   
 ```  
@@ -178,14 +173,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentarios  
  Use `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
   
-##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
+##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Construye un objeto `CSpinButtonCtrl`.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
+##  <a name="getaccel"></a>  CSpinButtonCtrl::GetAccel  
  Recupera información de aceleración para un control de botón de número.  
   
 ```  
@@ -204,7 +199,7 @@ UINT GetAccel(
 ### <a name="return-value"></a>Valor devuelto  
  Recupera el número de estructuras de aceleración.  
   
-##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
+##  <a name="getbase"></a>  CSpinButtonCtrl::GetBase  
  Recupera la base actual para un control de botón de número.  
   
 ```  
@@ -214,7 +209,7 @@ UINT GetBase() const;
 ### <a name="return-value"></a>Valor devuelto  
  El valor base actual.  
   
-##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
+##  <a name="getbuddy"></a>  CSpinButtonCtrl::GetBuddy  
  Recupera un puntero a la ventana relacionada actual.  
   
 ```  
@@ -224,7 +219,7 @@ CWnd* GetBuddy() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la ventana relacionada actual.  
   
-##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
+##  <a name="getpos"></a>  CSpinButtonCtrl::GetPos  
  Recupera la posición actual de un control de botón de número.  
   
 ```  
@@ -243,7 +238,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
 ### <a name="remarks"></a>Comentarios  
  Cuando procesa el valor devuelto, el control actualiza su posición actual basándose en el título de la ventana relacionada. El control devuelve un error si no hay ninguna ventana relacionada o si el título especifica un valor no válido o fuera de intervalo.  
   
-##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
+##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
  Recupera los límites superiores e inferiores (intervalo) para un control de botón de número.  
   
 ```  
@@ -259,7 +254,7 @@ void GetRange32(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *inferior*  
+ *Inferior*  
  Referencia a un entero que recibe el límite inferior para el control.  
   
  *superior*  
@@ -271,7 +266,7 @@ void GetRange32(
 ### <a name="remarks"></a>Comentarios  
  La función miembro `GetRange32` recupera el intervalo del control de botón de número como un entero de 32 bits.  
   
-##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
+##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
  Establece la aceleración de un control de botón de número.  
   
 ```  
@@ -290,7 +285,7 @@ BOOL SetAccel(
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
+##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
  Establece la base para un control de botón de número.  
   
 ```  
@@ -307,7 +302,7 @@ int SetBase(int nBase);
 ### <a name="remarks"></a>Comentarios  
  El valor base determina si la ventana relacionada muestra los números de dígitos decimales o hexadecimales. Números hexadecimales siempre están firmados; se firman los números decimales.  
   
-##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
+##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
  Establece la ventana relacionada para un control de botón de número.  
   
 ```  
@@ -324,7 +319,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ### <a name="remarks"></a>Comentarios  
  Un control de número casi siempre se asocia con otra ventana, por ejemplo, un control de edición, que muestra la parte del contenido. Esta otra ventana se denomina a "conocidos" del control de número.  
   
-##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
+##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
  Establece la posición actual de un control de botón de número.  
   
 ```  
@@ -340,9 +335,9 @@ int SetPos32(int nPos);
  La posición anterior (precisión de 16 bits para `SetPos`, 32 bits precisión para `SetPos32`).  
   
 ### <a name="remarks"></a>Comentarios  
- `SetPos32`establece la posición de 32 bits.  
+ `SetPos32` establece la posición de 32 bits.  
   
-##  <a name="setrange"></a>CSpinButtonCtrl:: SetRange  
+##  <a name="setrange"></a>  CSpinButtonCtrl:: SetRange  
  Establece los límites superiores e inferiores (intervalo) para un control de botón de número.  
   
 ```  
@@ -358,7 +353,7 @@ void SetRange32(
   
 ### <a name="parameters"></a>Parámetros  
  `nLower` y `nUpper`  
- Límites superior e inferior del control. Para `SetRange`, ningún límite puede ser mayor que **UD_MAXVAL** o menor que **UD_MINVAL**; Además, no puede superar la diferencia entre los dos límites **UD_MAXVAL**. `SetRange32`impone ninguna restricción sobre los límites; utilizar los enteros.  
+ Límites superior e inferior del control. Para `SetRange`, ningún límite puede ser mayor que **UD_MAXVAL** o menor que **UD_MINVAL**; Además, no puede superar la diferencia entre los dos límites **UD_MAXVAL**. `SetRange32` impone ninguna restricción sobre los límites; utilizar los enteros.  
   
 ### <a name="remarks"></a>Comentarios  
  La función miembro `SetRange32` establece el intervalo de 32 bits para el control de botón de número.  

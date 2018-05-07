@@ -1,12 +1,9 @@
 ---
 title: Clase CMFCDropDownFrame | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownFrame
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01b3e5b56621d7bf8d42aad12e216208338bbacd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1680305b359bb273ba492083dd2e99703e2d930d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdropdownframe-class"></a>Clase CMFCDropDownFrame
 Proporciona funcionalidad de la ventana de marco de la lista desplegable para las barras de herramientas de la lista desplegable y botones de barra de herramientas de lista desplegable.  
@@ -95,7 +90,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdropdowntoolbar.h  
   
-##  <a name="create"></a>CMFCDropDownFrame::Create  
+##  <a name="create"></a>  CMFCDropDownFrame::Create  
  Crea un objeto `CMFCDropDownFrame`.  
   
 ```  
@@ -117,14 +112,14 @@ virtual BOOL Create(
 |[in] `pWndOriginToolbar`|La barra de herramientas que incluye los botones de lista desplegable que utiliza este método para rellenar el nuevo objeto de marco de la lista desplegable.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el marco de la lista desplegable se creó correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si el marco de la lista desplegable se creó correctamente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método llama a la base de [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) método para crear la ventana de marco de la lista desplegable con los `WS_POPUP` estilo. Aparecerá la ventana de marco de la lista desplegable en las coordenadas de pantalla especificadas. Este método produce un error si la [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) método `FALSE`.  
   
  El `CMFCDropDownFrame` clase crea una copia de proporcionado `CMFCDropDownToolBar` parámetro. Este método copia las imágenes de botón y los Estados de los botones de la `pWndOriginToolbar` parámetro para el `m_pWndOriginToolbar` miembro de datos.  
   
-##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>  CMFCDropDownFrame::GetParentMenuBar  
  Recupera la barra de menús principal del marco de lista desplegable.  
   
 ```  
@@ -137,7 +132,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 ### <a name="remarks"></a>Comentarios  
  Este método recupera la barra de menús principal en el botón primario. Este método devuelve `NULL` si el marco de la lista desplegable no tiene ningún botón primario o el botón primario no tiene ninguna barra de menús principal.  
   
-##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>  CMFCDropDownFrame::GetParentPopupMenu  
  Recupera el menú emergente principal del marco de lista desplegable.  
   
 ```  
@@ -150,7 +145,7 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 ### <a name="remarks"></a>Comentarios  
  Este método recupera del menú primario en el botón primario. Este método devuelve `NULL` si el marco de la lista desplegable no tiene ningún botón primario o el botón primario no tiene ningún menú primario.  
   
-##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCDropDownFrame::RecalcLayout  
  Cambia de posición el marco de la lista desplegable.  
   
 ```  
@@ -167,7 +162,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a este método cuando se crea el marco de la lista desplegable o se cambia el tamaño de la ventana primaria. Este método calcula la posición y el tamaño del marco de lista desplegable mediante el uso de la posición y el tamaño de la ventana primaria.  
   
-##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
+##  <a name="setautodestroy"></a>  CMFCDropDownFrame::SetAutoDestroy  
  Establece si la ventana de la barra de herramientas desplegable secundaria se destruye automáticamente.  
   
 ```  
@@ -176,7 +171,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bAutoDestroy`  
- `TRUE`para destruir automáticamente la ventana de la barra de herramientas de lista desplegable asociada; en caso contrario, `FALSE`.  
+ `TRUE` para destruir automáticamente la ventana de la barra de herramientas de lista desplegable asociada; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Si `bAutoDestroy` es `TRUE`, la `CMFCDropDownFrame` destructor destruye la ventana de la barra de herramientas de lista desplegable asociada. El valor predeterminado es `TRUE`.  

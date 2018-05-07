@@ -1,13 +1,10 @@
 ---
 title: Sugerencia de archivos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hint-files"></a>Archivos de indicaciones
 A *archivo de indicaciones* ayuda a Visual Studio el entorno de desarrollo integrado (IDE) interpretar los identificadores de Visual C++, como los nombres de funciones y macros. Al abrir un proyecto de Visual C++, el IDE *analizar sistema* analiza el código en cada archivo de código fuente en el proyecto y recopila información sobre cada identificador. A continuación, el IDE usa dicha información para admitir características como la **vista de clases** explorador y **barra de navegación**.  
@@ -107,12 +102,12 @@ STDMETHOD(myMethod)(int parameter1);
   
 |Sintaxis|Significado|  
 |------------|-------------|  
-|`#define`*nombre sugerencia* *cadena de reemplazo*<br /><br /> `#define`*nombre sugerencia* `(` *parámetro*,... `)` *cadena de reemplazo*|Una directiva de preprocesador que define una nueva sugerencia o vuelve a definir una sugerencia existente. Después de la directiva, el preprocesador reemplaza cada aparición del *nombre sugerencia* en el código fuente con *cadena de reemplazo*.<br /><br /> El segundo formato de sintaxis define una sugerencia de tipo de función. Si se produce una sugerencia de tipo de función en el código fuente, el preprocesador reemplaza cada aparición de en primer lugar *parámetro* en *cadena de reemplazo* con el argumento correspondiente en el código fuente y, a continuación, reemplaza a *nombre sugerencia* con *cadena de reemplazo*.|  
+|`#define` *nombre de la sugerencia* *cadena de reemplazo*<br /><br /> `#define` *nombre de la sugerencia* `(` *parámetro*,... `)` *cadena de reemplazo*|Una directiva de preprocesador que define una nueva sugerencia o vuelve a definir una sugerencia existente. Después de la directiva, el preprocesador reemplaza cada aparición del *nombre sugerencia* en el código fuente con *cadena de reemplazo*.<br /><br /> El segundo formato de sintaxis define una sugerencia de tipo de función. Si se produce una sugerencia de tipo de función en el código fuente, el preprocesador reemplaza cada aparición de en primer lugar *parámetro* en *cadena de reemplazo* con el argumento correspondiente en el código fuente y, a continuación, reemplaza a *nombre sugerencia* con *cadena de reemplazo*.|  
 |`@<`|Un determinado archivo de indicaciones *cadena de reemplazo* que indica el inicio de un conjunto de elementos de mapa.|  
 |`@=`|Un determinado archivo de indicaciones *cadena de reemplazo* que indica un elemento de mapa intermedio. Un mapa puede tener varios elementos de mapa.|  
 |`@>`|Un determinado archivo de indicaciones *cadena de reemplazo* que indica el final de un conjunto de elementos de mapa.|  
-|`#undef`*nombre de sugerencia*|La directiva de preprocesador que elimina una sugerencia existente. El nombre de la sugerencia es proporcionado por el *nombre sugerencia* identificador.|  
-|`//`*comentario*|Una línea de comentario.|  
+|`#undef` *nombre de la sugerencia*|La directiva de preprocesador que elimina una sugerencia existente. El nombre de la sugerencia es proporcionado por el *nombre sugerencia* identificador.|  
+|`//` *Comentario*|Una línea de comentario.|  
 |`/*` *comentario* `*/`|Un comentario multilínea.|  
   
 ## <a name="what-macros-require-a-hint"></a>¿Qué Macros que requieren una sugerencia?  
@@ -244,7 +239,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
  La siguiente ilustración muestra algunos de los directorios físicos en un proyecto de Visual C++. Archivos de sugerencia se encuentran en el `vcpackages`, `Debug`, `A1`, y `A2` directorios.  
   
 ### <a name="hint-file-directories"></a>Directorios de archivos de sugerencia  
- ![Comunes y proyecto &#45; directorios de archivos de sugerencia específico. ] (../ide/media/hintfile.png "HintFile")  
+ ![Comunes y proyecto&#45;directorios de archivos de sugerencia específico. ] (../ide/media/hintfile.png "HintFile")  
   
 ### <a name="directories-and-hint-file-contents"></a>Directorios y el contenido del archivo de sugerencia  
  En la lista siguiente muestra los directorios de este proyecto que contienen archivos de sugerencia y el contenido de los archivos de sugerencia. Solo algunas de las muchas sugerencias en el `vcpackages` se enumeran los directorios de archivos de sugerencia.  

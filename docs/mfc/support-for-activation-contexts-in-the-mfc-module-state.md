@@ -1,30 +1,25 @@
 ---
-title: "Compatibilidad con contextos de activación en el estado del módulo MFC | Documentos de Microsoft"
-ms.custom: 
+title: Compatibilidad con contextos de activación en el estado del módulo MFC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - activation contexts [MFC]
 - activation contexts [MFC], MFC support
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41aa0987a6fad48e57544ebbdd708d60c000382e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2713e0025c0587a4ab76813d4d07eed0825db447
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Compatibilidad con los contextos de activación en el estado del módulo MFC
 MFC crea un contexto de activación con un recurso del manifiesto proporcionado por el módulo de usuario. Para obtener más información sobre cómo se crean los contextos de activación, vea los temas siguientes:  
@@ -50,7 +45,7 @@ MFC crea un contexto de activación con un recurso del manifiesto proporcionado 
   
  Se crea el contexto de activación en [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit). Se destruye en el `AFX_MODULE_STATE` destructor. Un identificador de contexto de activación se mantiene en `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` se describe en [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate).)  
   
- El [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro activa y desactiva el contexto de activación. `AFX_MANAGE_STATE`se habilita para que bibliotecas estáticas de MFC, así como archivos DLL de MFC, para permitir que el código MFC ejecutar en el contexto de activación correcta seleccionado por el archivo DLL de usuario.  
+ El [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro activa y desactiva el contexto de activación. `AFX_MANAGE_STATE` se habilita para que bibliotecas estáticas de MFC, así como archivos DLL de MFC, para permitir que el código MFC ejecutar en el contexto de activación correcta seleccionado por el archivo DLL de usuario.  
   
 ## <a name="see-also"></a>Vea también  
  [Contextos de activación](http://msdn.microsoft.com/library/aa374153)   

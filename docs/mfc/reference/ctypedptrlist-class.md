@@ -1,12 +1,9 @@
 ---
 title: CTypedPtrList (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318373755ff05667d94b051dabf42822b34894b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrlist-class"></a>Clase CTypedPtrList
 Proporciona un "contenedor" de tipo seguro para objetos de clase `CPtrList`.  
@@ -111,7 +106,7 @@ class CTypedPtrList : public BASE_CLASS
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxtempl.h  
   
-##  <a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>  CTypedPtrList::AddHead  
  Llama a esta función miembro `BASE_CLASS` **:: AddHead**.  
   
 ```  
@@ -138,7 +133,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Comentarios  
  La primera versión agrega un nuevo elemento delante del encabezado de la lista. La segunda versión agrega otra lista de elementos antes de la cabeza.  
   
-##  <a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>  CTypedPtrList::AddTail  
  Llama a esta función miembro `BASE_CLASS` **:: AddTail**.  
   
 ```  
@@ -165,7 +160,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Comentarios  
  La primera versión, agrega un nuevo elemento después del final de la lista. La segunda versión agrega otra lista de elementos después del final de la lista.  
   
-##  <a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>  CTypedPtrList::GetAt  
  Una variable de tipo **posición** es una clave para la lista.  
   
 ```  
@@ -177,7 +172,7 @@ TYPE GetAt(POSITION position) const;
  *TIPO DE*  
  Parámetro de plantilla que especifica el tipo de elementos almacenados en la lista.  
   
- *posición*  
+ *Posición*  
  A **posición** valor devuelto por un anterior `GetHeadPosition` o **buscar** llamada a función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -186,13 +181,13 @@ TYPE GetAt(POSITION position) const;
  Si se tiene acceso a la lista directamente o a través de un puntero a un `CTypedPtrList`, a continuación, `GetAt` devuelve una referencia a un puntero de tipo especificado por el parámetro de plantilla *tipo*. Esto permite la función que se utilizará en cada lado de una instrucción de asignación y, por tanto, permite que las entradas de lista a modificarse.  
   
 ### <a name="remarks"></a>Comentarios  
- No es lo mismo que un índice, y no puede funcionar en un **posición** valor usted mismo. `GetAt`Recupera el `CObject` puntero asociado a una posición especificada.  
+ No es lo mismo que un índice, y no puede funcionar en un **posición** valor usted mismo. `GetAt` Recupera el `CObject` puntero asociado a una posición especificada.  
   
  Debe asegurarse de que su **posición** valor representa una posición válida en la lista. Si no es válido, se valida la versión de depuración de la biblioteca Microsoft Foundation Class.  
   
  Esta función insertada se llama `BASE_CLASS` **:: GetAt**.  
   
-##  <a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>  CTypedPtrList::GetHead  
  Obtiene el puntero que representa el elemento principal de esta lista.  
   
 ```  
@@ -212,7 +207,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>Comentarios  
  Debe asegurarse de que la lista no está vacía antes de llamar a `GetHead`. Si la lista está vacía, se valida la versión de depuración de la biblioteca Microsoft Foundation Class. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) para comprobar que la lista contiene elementos.  
   
-##  <a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>  CTypedPtrList::GetNext  
  Obtiene el elemento de lista identificado por `rPosition`, a continuación, establece `rPosition` a la **posición** valor de la entrada siguiente en la lista.  
   
 ```  
@@ -241,7 +236,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  Es posible quitar un elemento durante una iteración. Vea el ejemplo de [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
   
-##  <a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
  Obtiene el elemento de lista identificado por `rPosition`, a continuación, establece `rPosition` a la **posición** valor de la entrada anterior en la lista.  
   
 ```  
@@ -268,7 +263,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  Si el elemento recuperado es el primer elemento de la lista, a continuación, el nuevo valor de `rPosition` está establecido en **NULL**.  
   
-##  <a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  Obtiene el puntero que representa el elemento principal de esta lista.  
   
 ```  
@@ -288,7 +283,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>Comentarios  
  Debe asegurarse de que la lista no está vacía antes de llamar a `GetTail`. Si la lista está vacía, se valida la versión de depuración de la biblioteca Microsoft Foundation Class. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) para comprobar que la lista contiene elementos.  
   
-##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>  CTypedPtrList::RemoveHead  
  Quita el elemento del encabezado de la lista y lo devuelve.  
   
 ```  
@@ -305,7 +300,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>Comentarios  
  Debe asegurarse de que la lista no está vacía antes de llamar a `RemoveHead`. Si la lista está vacía, se valida la versión de depuración de la biblioteca Microsoft Foundation Class. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) para comprobar que la lista contiene elementos.  
   
-##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>  CTypedPtrList::RemoveTail  
  Quita el elemento de la cola de la lista y lo devuelve.  
   
 ```  
@@ -322,7 +317,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>Comentarios  
  Debe asegurarse de que la lista no está vacía antes de llamar a `RemoveTail`. Si la lista está vacía, se valida la versión de depuración de la biblioteca Microsoft Foundation Class. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) para comprobar que la lista contiene elementos.  
   
-##  <a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>  CTypedPtrList::SetAt  
  Llama a esta función miembro `BASE_CLASS` **:: SetAt**.  
   
 ```  
@@ -340,7 +335,7 @@ void SetAt(POSITION pos, TYPE newElement);
  El puntero de objeto se escriban en la lista.  
   
 ### <a name="remarks"></a>Comentarios  
- Una variable de tipo **posición** es una clave para la lista. No es lo mismo que un índice, y no puede funcionar en un **posición** valor usted mismo. `SetAt`Escribe el puntero de objeto a la posición especificada en la lista.  
+ Una variable de tipo **posición** es una clave para la lista. No es lo mismo que un índice, y no puede funcionar en un **posición** valor usted mismo. `SetAt` Escribe el puntero de objeto a la posición especificada en la lista.  
   
  Debe asegurarse de que su **posición** valor representa una posición válida en la lista. Si no es válido, se valida la versión de depuración de la biblioteca Microsoft Foundation Class.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Información sobre herramientas de barra de herramientas | Documentos de Microsoft"
-ms.custom: 
+title: Información sobre herramientas de barra de herramientas | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,28 +19,26 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - flyby status bar updates
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 248c975c51a2f44f6c9b17094d6b05082a9016a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7024284a1be22aed211e8cf58f8366df88aa917
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-tool-tips"></a>Información sobre herramientas de la barra de herramientas
 Información sobre herramientas es esa pequeña ventana emergente que muestra una breve descripción del propósito de un botón de barra de herramientas cuando coloca el mouse sobre un botón durante un período de tiempo. Cuando se crea una aplicación con el Asistente para la aplicación que tiene una barra de herramientas, se proporciona compatibilidad con información sobre la herramienta para usted. Este artículo explica tanto la información sobre compatibilidad con herramientas creado por el Asistente para aplicaciones y cómo agregar compatibilidad con la sugerencia de herramienta a la aplicación.  
   
- Este artículo se tratan:  
+ En este artículo se tratan los aspectos siguientes:  
   
 -   [Activar información sobre herramientas](#_core_activating_tool_tips)  
   
 -   [Actualizaciones de barra de estado por proximidad](#_core_fly_by_status_bar_updates)  
   
-##  <a name="_core_activating_tool_tips"></a>Activar información sobre herramientas  
+##  <a name="_core_activating_tool_tips"></a> Activar información sobre herramientas  
  Para activar la información sobre herramientas en la aplicación, debe hacer dos cosas:  
   
 -   Agregar el `CBRS_TOOLTIPS` estilo a los demás estilos (como **WS_CHILD**, **WS_VISIBLE**y otros **CBRS_** estilos) pasa como el `dwStyle` parámetro para el [ CToolBar:: Create](../mfc/reference/ctoolbar-class.md#create) función o en [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
@@ -65,7 +60,7 @@ Información sobre herramientas es esa pequeña ventana emergente que muestra un
   
 -   La entrada de tabla de cadenas con el mismo identificador que el control secundario en el archivo de recursos tiene una cadena de información sobre herramientas.  
   
-##  <a name="_core_fly_by_status_bar_updates"></a>Actualizaciones de la barra de estado por proximidad  
+##  <a name="_core_fly_by_status_bar_updates"></a> Actualizaciones de la barra de estado por proximidad  
  Una característica relacionada con la información sobre herramientas es estado "por proximidad" actualización de la barra. De forma predeterminada, el mensaje en la barra de estado describe sólo un botón de barra de herramientas determinada cuando se activa el botón. Mediante la inclusión de `CBRS_FLYBY` en la lista de estilos que se pasan a `CToolBar::Create`, puede tener actualizar estos mensajes cuando el cursor del mouse pasa por encima de la barra de herramientas sin activar realmente el botón.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  

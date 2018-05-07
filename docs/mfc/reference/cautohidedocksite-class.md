@@ -1,12 +1,9 @@
 ---
 title: Clase CAutoHideDockSite | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAutoHideDockSite
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8cc4e9158ae9ff2ef6fd4d48483aa5a75dd9617
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4abdb76523f0b7b1ab87beb6daaf723c4dff5cc8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cautohidedocksite-class"></a>Clase CAutoHideDockSite
 El `CAutoHideDockSite` amplía la [clase CDockSite](../../mfc/reference/cdocksite-class.md) para implementar paneles de acoplamiento de ocultación automática.  
@@ -107,7 +102,7 @@ class CAutoHideDockSite : public CDockSite
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxautohidedocksite.h  
   
-##  <a name="canacceptpane"></a>CAutoHideDockSite::CanAcceptPane  
+##  <a name="canacceptpane"></a>  CAutoHideDockSite::CanAcceptPane  
  Determina si un panel de base es un [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objeto o derivado de `CMFCAutoHideBar`.  
   
 ```  
@@ -122,12 +117,12 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |[in] `pBar`|El panel de base que el marco de pruebas.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si `pBar` se deriva de `CMFCAutoHideBar`; `FALSE` en caso contrario.  
+ `TRUE` Si `pBar` se deriva de `CMFCAutoHideBar`; `FALSE` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Si se deriva un objeto de panel base `CMFCAutoHideBar`, puede contener una `CAutoHideDockSite`.  
   
-##  <a name="dockpane"></a>CAutoHideDockSite::DockPane  
+##  <a name="dockpane"></a>  CAutoHideDockSite::DockPane  
  Acopla un panel a este [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) objeto.  
   
 ```  
@@ -151,7 +146,7 @@ virtual void DockPane(
   
  Si `lpRect` es `NULL`, el marco de trabajo coloca el panel en la ubicación predeterminada en el sitio de vinculación. Si el sitio de vinculación es horizontal, la ubicación predeterminada es en el extremo izquierdo del sitio de vinculación. En caso contrario, la ubicación predeterminada es la parte superior del sitio de vinculación.  
   
-##  <a name="getalignrect"></a>CAutoHideDockSite::GetAlignRect  
+##  <a name="getalignrect"></a>  CAutoHideDockSite::GetAlignRect  
  Recupera el tamaño del sitio acoplar en coordenadas de pantalla.  
   
 ```  
@@ -168,7 +163,7 @@ void GetAlignRect(CRect& rect) const;
 ### <a name="remarks"></a>Comentarios  
  El rectángulo se ajusta para los márgenes de desplazamiento para que no se incluyen.  
   
-##  <a name="m_nextraspace"></a>CAutoHideDockSite::m_nExtraSpace  
+##  <a name="m_nextraspace"></a>  CAutoHideDockSite::m_nExtraSpace  
  El tamaño del espacio entre los bordes de la [clase CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) y [clase CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objetos.  
   
 ```  
@@ -178,7 +173,7 @@ static int m_nExtraSpace;
 ### <a name="remarks"></a>Comentarios  
  Cuando un `CMFCAutoHideBar` se acopla en un `CAutoHideDockSite`, no debe ocupar el sitio de vinculación todo. Esta variable global controla el espacio adicional entre el borde izquierdo o superior de la `CMFCAutoHideBar` y correspondiente `CAutoHideDockSite` borde. Si se utiliza el borde superior o izquierdo depende de la alineación actual.  
   
-##  <a name="setoffsetleft"></a>CAutoHideDockSite::SetOffsetLeft  
+##  <a name="setoffsetleft"></a>  CAutoHideDockSite::SetOffsetLeft  
  Establece el margen en el lado izquierdo de la barra de acoplamiento.  
   
 ```  
@@ -192,7 +187,7 @@ void SetOffsetLeft(int nOffset);
 ### <a name="remarks"></a>Comentarios  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objetos se colocan de forma estática en la `CAutoHideDockSite` objeto. Esto significa que el usuario no puede cambiar manualmente la ubicación de `CMFCAutoHideBar` objetos. El `SetOffsetLeft` método controla el espaciado entre el lado izquierdo del extremo izquierdo `CMFCAutoHideBar` y el lado izquierdo de la `CAutoHideDockSite`.  
   
-##  <a name="setoffsetright"></a>CAutoHideDockSite::SetOffsetRight  
+##  <a name="setoffsetright"></a>  CAutoHideDockSite::SetOffsetRight  
  Establece el margen en el lado derecho de la barra de acoplamiento.  
   
 ```  
@@ -206,7 +201,7 @@ void SetOffsetRight(int nOffset);
 ### <a name="remarks"></a>Comentarios  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objetos se colocan de forma estática en la `CAutoHideDockSite` objeto. Esto significa que el usuario no puede cambiar manualmente la ubicación de la `CMFCAutoHideBar` objetos. El `SetOffsetRight` método controla el espaciado entre el lado derecho del extremo derecho `CMFCAutoHideBar` y el lado derecho de la `CAutoHideDockSite`.  
   
-##  <a name="repositionpanes"></a>CAutoHideDockSite::RepositionPanes  
+##  <a name="repositionpanes"></a>  CAutoHideDockSite::RepositionPanes  
  Vuelve a dibujar los paneles en la [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md).  
   
 ```  
@@ -223,7 +218,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada no utiliza `rectNewClientArea`. Vuelve a dibujar los paneles con los márgenes de la barra de herramientas global y el espaciado de botón.  
   
-##  <a name="unsetautohidemode"></a>CAutoHideDockSite::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CAutoHideDockSite::UnSetAutoHideMode  
  Llamadas [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) para los objetos en el sitio de vinculación.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: Windows Sockets en MFC | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - WSOCK32.DLL
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187a58e719ad320975deba7429d6ec04a70143ac
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 84fc25ab6515b22fa647b3cc32833c791b59f2b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows Sockets en MFC
 > [!NOTE]
@@ -39,7 +34,7 @@ ms.lasthandoff: 02/09/2018
   
  Para obtener información acerca de Windows Sockets, incluida una explicación del concepto de socket, consulte [Windows Sockets: fondo](../mfc/windows-sockets-background.md).  
   
-##  <a name="_core_sockets_programming_models"></a>Modelos de programación de sockets  
+##  <a name="_core_sockets_programming_models"></a> Modelos de programación de sockets  
  Los Sockets de Windows de MFC dos modelos de programación son compatibles con las clases siguientes:  
   
 -   `CAsyncSocket`  
@@ -52,7 +47,7 @@ ms.lasthandoff: 02/09/2018
   
  Crear y usar `CSocket` y `CAsyncSocket` objetos se describe en [Windows Sockets: usar Sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md) y [Windows Sockets: usar clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md).  
   
-##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a>Archivos DLL de Windows Sockets  
+##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> Archivos DLL de Windows Sockets  
  Los sistemas operativos Microsoft Windows proporcionan las bibliotecas de vínculos dinámicos (DLL) de Windows Sockets. Visual C++ proporciona los archivos de encabezado adecuado y bibliotecas y la especificación de Windows Sockets.  
   
  Para obtener más información acerca de Windows Sockets, vea:  

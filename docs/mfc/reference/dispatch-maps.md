@@ -1,13 +1,10 @@
 ---
-title: "Mapas de envío | Documentos de Microsoft"
-ms.custom: 
+title: Mapas de envío | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3112c092a4e1d6eb970fb50153c543baa98ee853
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-maps"></a>Mapas de envío
 Automatización OLE proporciona métodos para llamar a métodos y tener acceso a propiedades en todas las aplicaciones. El mecanismo proporcionado por la biblioteca Microsoft Foundation Class para enviar estas solicitudes es el "mapa de envíos", que designa los nombres internos y externos de funciones de objetos y propiedades, así como los tipos de datos de las propiedades en Sí y de argumentos de función.  
@@ -46,7 +41,7 @@ Automatización OLE proporciona métodos para llamar a métodos y tener acceso a
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Define una propiedad de automatización OLE que toma parámetros y nombres de las funciones Get y Set.|  
 |[DISP_DEFVALUE](#disp_defvalue)|Convierte el valor predeterminado de un objeto de una propiedad existente.|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP  
  Si un `CCmdTarget`-clase derivada en el programa es compatible con la automatización OLE, que la clase debe proporcionar un mapa de envíos para exponer sus métodos y propiedades.  
   
 ```   
@@ -67,7 +62,7 @@ DECLARE_DISPATCH_MAP()
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP  
  Declara la definición de su mapa de envíos.  
   
 ```  
@@ -87,7 +82,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP  
  Termina la definición de su mapa de envíos.  
   
 ```   
@@ -100,7 +95,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION  
+##  <a name="disp_function"></a>  DISP_FUNCTION  
  Define una función de automatización OLE en un mapa de envíos.  
   
 ```   
@@ -169,10 +164,10 @@ DISP_FUNCTION(
 |**VTS_BOOL**|**BOOL**|  
 |**VTS_VARIANT**|**VARIANTE const\***  o **VARIANT &**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**corto\***|  
+|**VTS_PI2**|**Corto\***|  
 |**VTS_PI4**|**Long\***|  
-|**VTS_PR4**|**float\***|  
-|**VTS_PR8**|**doble\***|  
+|**VTS_PR4**|**Float\***|  
+|**VTS_PR8**|**Doble\***|  
 |**VTS_PCY**|**CY\***|  
 |**VTS_PDATE**|**FECHA\***|  
 |**VTS_PBSTR**|**BSTR\***|  
@@ -186,7 +181,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY  
+##  <a name="disp_property"></a>  DISP_PROPERTY  
  Define una propiedad de automatización OLE en un mapa de envíos.  
   
 ```   
@@ -233,7 +228,7 @@ DISP_PROPERTY(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX  
  Define una propiedad de automatización OLE y el nombre de las funciones utilizadas para obtener y establecer el valor de propiedad en un mapa de envíos.  
   
 ```   
@@ -269,7 +264,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY  
  Define una propiedad de automatización OLE con notificación en un mapa de envíos.  
   
 ```   
@@ -320,7 +315,7 @@ DISP_PROPERTY_NOTIFY(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM  
  Define una propiedad que se obtiene acceso con independiente **obtener** y `Set` funciones miembro.  
   
 ```   
@@ -375,7 +370,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE  
  Convierte el valor predeterminado de un objeto de una propiedad existente.  
   
 ```   

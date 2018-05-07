@@ -1,29 +1,24 @@
 ---
 title: Compatibilidad con documentos, Asistente para aplicaciones MFC compuestos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 dev_langs:
 - C++
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9390f3849cd7511054f1248205c5d2c408cb7e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 361ad662ed0bc0f499b35c102502f86d063b8e5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Compatibilidad con documentos compuestos, Asistente para aplicaciones MFC
 En esta página del Asistente para aplicaciones MFC, indicar a qué nivel de la aplicación proporciona compatibilidad con documentos compuestos y activa. La aplicación debe admitir la arquitectura documento/vista para admitir los documentos compuestos y plantillas de documento.  
@@ -40,7 +35,7 @@ En esta página del Asistente para aplicaciones MFC, indicar a qué nivel de la 
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Ninguno**|Indica ninguna compatibilidad para el objeto de vinculación e incrustación de objetos (OLE). De forma predeterminada, el Asistente para aplicaciones crea una aplicación sin compatibilidad con ActiveX.|  
-|**Contenedor**|Contiene objetos vinculados e incrustados.|  
+|**contenedor**|Contiene objetos vinculados e incrustados.|  
 |**Miniservidor**|Indica que la aplicación puede crear y administrar objetos de documento compuesto. Tenga en cuenta que no se pueden ejecutar servidores mini actuar por sí sola y sólo admiten objetos incrustados.|  
 |**Servidor completo**|Indica que la aplicación puede crear y administrar objetos de documento compuesto. Servidores completos son capaces de ejecutar de forma independiente y admiten tanto objetos vinculados como elementos incrustan.|  
 |**Contenedor o servidor completo**|Indica que la aplicación puede ser un contenedor y un servidor. Un contenedor es una aplicación que puede incorporar elementos incrustados o vinculados en sus propios documentos. Un servidor es una aplicación que puede crear elementos de automatización para su uso por aplicaciones de contenedor.|  

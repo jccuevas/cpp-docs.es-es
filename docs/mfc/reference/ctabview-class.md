@@ -1,12 +1,9 @@
 ---
 title: Clase CTabView | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTabView
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbb5d92387634356f1185cee73d5969944ac27a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctabview-class"></a>Clase CTabView
 El `CTabView` clase simplifica el uso de la clase de control de pestaña ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) en las aplicaciones que utilizan la arquitectura documento/vista de MFC.  
@@ -73,7 +68,7 @@ class CTabbedView : public CView
 |[CTabView::OnActivateView](#onactivateview)|Lo llama el marco cuando se realiza la vista de la pestaña activa o inactiva.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase resulta muy sencillo colocar una vista con pestañas en una aplicación de documento/vista. `CTabView`es un `CView`-clase derivada que contiene un incrustado `CMFCTabCtrl` objeto. `CTabView`administra todos los mensajes necesarios para admitir la `CMFCTabCtrl` objeto. Simplemente derive una clase de `CTabView` y conectarlo a la aplicación, a continuación, agregue `CView`-derivar clases mediante el `AddView` método. El control de pestaña mostrará esas vistas como fichas.  
+ Esta clase resulta muy sencillo colocar una vista con pestañas en una aplicación de documento/vista. `CTabView` es un `CView`-clase derivada que contiene un incrustado `CMFCTabCtrl` objeto. `CTabView` administra todos los mensajes necesarios para admitir la `CMFCTabCtrl` objeto. Simplemente derive una clase de `CTabView` y conectarlo a la aplicación, a continuación, agregue `CView`-derivar clases mediante el `AddView` método. El control de pestaña mostrará esas vistas como fichas.  
   
  Por ejemplo, podría tener un documento que se puede representar de maneras diferentes: como una hoja de cálculo, un gráfico, un formulario editable y así sucesivamente. Puede crear vistas individuales dibujar los datos según sea necesario, insertarlos en la `CTabView`-objeto derivado de y concentrarlos por pestañas sin ninguna codificación adicional.  
   
@@ -87,7 +82,7 @@ class CTabbedView : public CView
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxTabView.h  
   
-##  <a name="addview"></a>CTabView::AddView  
+##  <a name="addview"></a>  CTabView::AddView  
  Agrega una vista para el control de ficha.  
   
 ```  
@@ -117,7 +112,7 @@ int AddView(
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función para agregar una vista para el control de ficha que se incrusta en un marco.  
   
-##  <a name="findtab"></a>CTabView::FindTab  
+##  <a name="findtab"></a>  CTabView::FindTab  
  Devuelve el índice de la vista especificada en el control de ficha.  
   
 ```  
@@ -134,7 +129,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función para recuperar el índice de una vista que tiene el identificador especificado.  
   
-##  <a name="getactiveview"></a>CTabView::GetActiveView  
+##  <a name="getactiveview"></a>  CTabView::GetActiveView  
  Devuelve un puntero a la vista activa.  
   
 ```  
@@ -146,7 +141,7 @@ CView* GetActiveView() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
+##  <a name="gettabcontrol"></a>  CTabView::GetTabControl  
  Devuelve una referencia al control de ficha asociado a la vista.  
   
 ```  
@@ -156,7 +151,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia al control de ficha asociado a la vista.  
   
-##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
+##  <a name="isscrollbar"></a>  CTabView::IsScrollBar  
  Lo llama el marco al crear una vista de ficha para determinar si la vista de ficha tiene una barra de desplazamiento horizontal compartida.  
   
 ```  
@@ -164,14 +159,14 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si la vista de ficha debe crearse junto con una barra de desplazamiento compartido. En caso contrario, es `FALSE`.  
+ `TRUE` Si la vista de ficha debe crearse junto con una barra de desplazamiento compartido. En caso contrario, es `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a este método cuando un `CTabView` se crea el objeto.  
   
  Invalidar el `IsScrollBar` método en un `CTabView`-derivados de clase y devolver `TRUE` si desea crear una vista que tiene una barra de desplazamiento horizontal compartida.  
   
-##  <a name="onactivateview"></a>CTabView::OnActivateView  
+##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  Lo llama el marco cuando se realiza la vista de la pestaña activa o inactiva.  
   
 ```  
@@ -185,7 +180,7 @@ virtual void OnActivateView(CView* view);
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada no hace nada. Invalide este método en un `CTabView`-clase derivada para procesar esta notificación.  
   
-##  <a name="removeview"></a>CTabView::RemoveView  
+##  <a name="removeview"></a>  CTabView::RemoveView  
  Quita la vista de control de pestaña.  
   
 ```  
@@ -201,7 +196,7 @@ BOOL RemoveView(int iTabNum);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="setactiveview"></a>CTabView::SetActiveView  
+##  <a name="setactiveview"></a>  CTabView::SetActiveView  
  Activa una vista.  
   
 ```  
@@ -213,7 +208,7 @@ BOOL SetActiveView(int iTabNum);
  Índice de base cero de la vista de ficha.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si la vista especificada se realizó activa, `FALSE` si el índice de la vista no es válido.  
+ `TRUE` Si la vista especificada se realizó activa, `FALSE` si el índice de la vista no es válido.  
   
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  

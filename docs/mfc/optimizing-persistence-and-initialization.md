@@ -1,13 +1,10 @@
 ---
-title: "Optimizar la persistencia y la inicialización | Documentos de Microsoft"
-ms.custom: 
+title: Optimizar la persistencia y la inicialización | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - optimization, ActiveX controls
 - optimizing performance, ActiveX controls
 ms.assetid: e821e19e-b9eb-49ab-b719-0743420ba80b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeddfe4c67de2e96d42c7714619463ae3be45187
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optimizar la persistencia y la inicialización
 De forma predeterminada, persistencia y la inicialización en un control se controlan mediante la `DoPropExchange` función miembro. En un control típico, esta función contiene llamadas a varios **PX_** funciones (`PX_Color`, `PX_Font`, etc.), uno para cada propiedad.  

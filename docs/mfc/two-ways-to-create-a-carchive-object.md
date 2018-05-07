@@ -1,13 +1,10 @@
 ---
 title: Dos maneras de crear un objeto CArchive? | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b1db549544d421600ed6dae1a8a987006c2ab6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dos maneras de crear un objeto CArchive
 Hay dos maneras de crear un `CArchive` objeto:  
@@ -41,7 +36,7 @@ Hay dos maneras de crear un `CArchive` objeto:
   
 -   [¿Creación explícita de un objeto CArchive?](#_core_explicit_creation_of_a_carchive_object)  
   
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>Creación implícita de un objeto CArchive mediante el marco de trabajo  
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> Creación implícita de un objeto CArchive mediante el marco de trabajo  
  La manera más común y más sencilla, es dejar que el marco de trabajo cree una `CArchive` objeto para el documento en nombre del guardar, guardar como y comandos de apertura en el menú archivo.  
   
  Esto es lo que hace el marco de trabajo cuando el usuario de la aplicación emite el comando Guardar como en el menú archivo:  
@@ -58,7 +53,7 @@ Hay dos maneras de crear un `CArchive` objeto:
   
  Por lo tanto, si permite que el marco de trabajo cree el `CArchive` de objeto para el documento, lo único que debe hacer es implementar el documento `Serialize` función a la que se escribe y lee hacia y desde el archivo. También tiene que implementar `Serialize` para cualquier `CObject`-objetos derivados que el documento `Serialize` función serializa a su vez directa o indirectamente.  
   
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>¿Creación explícita de un objeto CArchive?  
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> ¿Creación explícita de un objeto CArchive?  
  Además de serializar un documento mediante el marco de trabajo, hay otras ocasiones cuando necesite una `CArchive` objeto. Por ejemplo, desea serializar datos desde y hacia el Portapapeles, representado por un `CSharedFile` objeto. O bien, puede que desee utilizar una interfaz de usuario para guardar un archivo que es diferente de la que ofrece el marco de trabajo. En este caso, puede crear explícitamente un `CArchive` objeto. Para ello la misma manera que el marco de trabajo, utilizando el procedimiento siguiente.  
   
 #### <a name="to-explicitly-create-a-carchive-object"></a>¿Para crear explícitamente un objeto CArchive?  

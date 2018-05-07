@@ -1,13 +1,10 @@
 ---
 title: 'Windows Sockets: Usar Sockets con archivos | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9956e48f88988dfec7e04cda5bba95e514ec109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7ad4e5b94403582f9073e4d3bd3542f8aa75d08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Usar sockets con archivos
-Este artículo se describe la [modelo de programación de CSocket](#_core_the_csocket_programming_model). Clase [CSocket](../mfc/reference/csocket-class.md) proporciona compatibilidad con el socket en un nivel más alto de abstracción de clase [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket`utiliza una versión del protocolo de serialización de MFC para transferir datos hacia y desde un objeto de socket a través de MFC [CArchive](../mfc/reference/carchive-class.md) objeto. `CSocket`proporciona bloqueo (mientras administra el procesamiento en segundo plano de los mensajes de Windows) y le da acceso a `CArchive`, que administra muchos aspectos de la comunicación que tendría que hacer usted mismo mediante la API básica o la clase `CAsyncSocket`.  
+Este artículo se describe la [modelo de programación de CSocket](#_core_the_csocket_programming_model). Clase [CSocket](../mfc/reference/csocket-class.md) proporciona compatibilidad con el socket en un nivel más alto de abstracción de clase [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` utiliza una versión del protocolo de serialización de MFC para transferir datos hacia y desde un objeto de socket a través de MFC [CArchive](../mfc/reference/carchive-class.md) objeto. `CSocket` proporciona bloqueo (mientras administra el procesamiento en segundo plano de los mensajes de Windows) y le da acceso a `CArchive`, que administra muchos aspectos de la comunicación que tendría que hacer usted mismo mediante la API básica o la clase `CAsyncSocket`.  
   
 > [!TIP]
 >  Puede utilizar la clase `CSocket` por sí mismo, como una versión más cómoda de `CAsyncSocket`, pero el modelo de programación más sencillo es usar `CSocket` con un `CArchive` objeto.  
@@ -39,7 +34,7 @@ Este artículo se describe la [modelo de programación de CSocket](#_core_the_cs
 > [!NOTE]
 >  Si está escribiendo un programa de cliente MFC para comunicarse con servidores establecidos (no basados en MFC), no enviar objetos de C++ a través del archivo. A menos que el servidor es una aplicación MFC que entienda los tipos de objetos que desea enviar, no podrá recibir ni deserializar los objetos. Para consultar material relacionado con el asunto de la comunicación con aplicaciones no están basados en MFC, vea también el artículo [Windows Sockets: orden de bytes](../mfc/windows-sockets-byte-ordering.md).  
   
-##  <a name="_core_the_csocket_programming_model"></a>El modelo de programación de CSocket  
+##  <a name="_core_the_csocket_programming_model"></a> El modelo de programación de CSocket  
  Mediante un `CSocket` objeto implica la creación y asociación de varios objetos de clase MFC. En el procedimiento general siguiente, cada paso se realiza por el socket de servidor y el socket de cliente, excepto el paso 3, en el que cada tipo de socket requiere una acción diferente.  
   
 > [!TIP]
@@ -54,11 +49,11 @@ Este artículo se describe la [modelo de programación de CSocket](#_core_the_cs
      Para una `CSocket` objeto de cliente, normalmente, debe usar los parámetros predeterminados para [crear](../mfc/reference/casyncsocket-class.md#create), a menos que necesite un socket de datagrama. Para una `CSocket` objeto de servidor, debe especificar un puerto en el **crear** llamar.  
   
     > [!NOTE]
-    >  `CArchive`no funciona con sockets de datagramas. Si desea usar `CSocket` para un socket de datagrama, debe usar la clase que se utilizaría `CAsyncSocket`, es decir, sin un archivo. Dado que los datagramas no son confiables (no garantiza que llegan y se puede repetir o desordenados), no son compatibles con la serialización a través de un archivo. Esperar a que una operación de serialización para completar de forma confiable y en orden. Si intenta usar `CSocket` con una `CArchive` de objeto para un datagrama, se produce un error en una aserción de MFC.  
+    >  `CArchive` no funciona con sockets de datagramas. Si desea usar `CSocket` para un socket de datagrama, debe usar la clase que se utilizaría `CAsyncSocket`, es decir, sin un archivo. Dado que los datagramas no son confiables (no garantiza que llegan y se puede repetir o desordenados), no son compatibles con la serialización a través de un archivo. Esperar a que una operación de serialización para completar de forma confiable y en orden. Si intenta usar `CSocket` con una `CArchive` de objeto para un datagrama, se produce un error en una aserción de MFC.  
   
 3.  Si el socket es un cliente, llame a [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect) para conectar el objeto de socket para un socket de servidor.  
   
-     O bien  
+     -o bien-  
   
      Si el socket es un servidor, llame a [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen) para empezar a realizar escuchas de intentos de conexión desde un cliente. Al recibir una solicitud de conexión, aceptarla mediante una llamada a [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).  
   

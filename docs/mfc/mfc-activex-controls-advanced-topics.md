@@ -1,13 +1,10 @@
 ---
 title: 'Controles ActiveX MFC: Temas avanzados | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2205862a438099c08801556f511ebf3c5e93a277
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Controles ActiveX MFC: Temas avanzados
 Este artículo tratan temas avanzados relacionados con el desarrollo de controles ActiveX. Se incluyen los siguientes:  
@@ -46,7 +41,7 @@ Este artículo tratan temas avanzados relacionados con el desarrollo de controle
   
 -   [Obtener acceso a los controles de cuadro de diálogo que no son visibles en tiempo de ejecución](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
   
-##  <a name="_core_using_database_classes_in_activex_controls"></a>Utilizar clases de base de datos en controles ActiveX  
+##  <a name="_core_using_database_classes_in_activex_controls"></a> Utilizar clases de base de datos en controles ActiveX  
  Dado que las clases de controles ActiveX forman parte de la biblioteca de clases, puede aplicar los mismos procedimientos y reglas de uso de las clases de base de datos en una aplicación de MFC estándar para desarrollar controles ActiveX que utilizan las clases de base de datos MFC.  
   
  Para obtener una descripción general de las clases de base de datos MFC, vea [clases de base de datos MFC (DAO y ODBC)](../data/mfc-database-classes-odbc-and-dao.md). El artículo detallan las clases ODBC de MFC y DAO de MFC, clases y le dirige a obtener más detalles sobre cualquiera.  
@@ -54,7 +49,7 @@ Este artículo tratan temas avanzados relacionados con el desarrollo de controle
 > [!NOTE]
 >  El entorno de Visual C++ y los asistentes no admiten DAO (aunque las clases DAO están incluidas y puede seguir usándolos). Microsoft recomienda que utilice [plantillas OLE DB](../data/oledb/ole-db-programming.md) o [ODBC y MFC](../data/odbc/odbc-and-mfc.md) para los nuevos proyectos. Solo debería utilizar DAO para mantener las aplicaciones existentes.  
   
-##  <a name="_core_implementing_a_parameterized_property"></a>Implementar una propiedad con parámetros  
+##  <a name="_core_implementing_a_parameterized_property"></a> Implementar una propiedad con parámetros  
  Una propiedad con parámetros (también conocida como una matriz de propiedades) es un método para exponer una colección homogénea de valores como una única propiedad del control. Por ejemplo, puede utilizar una propiedad parametrizada para exponer una matriz o un diccionario como una propiedad. En Visual Basic, se tiene acceso a esta propiedad mediante la notación de matriz:  
   
  [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]  
@@ -106,7 +101,7 @@ Este artículo tratan temas avanzados relacionados con el desarrollo de controle
   
  Para que esta propiedad para que sea útil, podría declarar una variable de miembro de matriz bidimensional en la clase de tipo de control, **corto**, para almacenar valores para la propiedad con parámetros. A continuación, podría modificar la función Get para devolver el valor almacenado en la fila y columna apropiadas, tal como se indica por los parámetros y modificar la función de conjunto para actualizar el valor que se hace referencia a los parámetros de fila y columna.  
   
-##  <a name="_core_handling_errors_in_your_activex_control"></a>Control de errores en el Control ActiveX  
+##  <a name="_core_handling_errors_in_your_activex_control"></a> Control de errores en el Control ActiveX  
  Si se producen condiciones de error en el control, debe notificar el error al contenedor del control. Existen dos métodos para notificar errores, según la situación en la que se produce el error. Si el error se produce dentro de una propiedad Get o Set (función), o dentro de la implementación de un método de automatización OLE, el control debe llamar a [COleControl:: ThrowError](../mfc/reference/colecontrol-class.md#throwerror), que señala al usuario del control que se ha producido un error. Si el error se produce en cualquier otro momento, el control debe llamar a [COleControl:: FireError](../mfc/reference/colecontrol-class.md#fireerror), que desencadena un evento de Error estándar.  
   
  Para indicar el tipo de error que se ha producido, el control debe pasar un código de error a `ThrowError` o `FireError`. Un código de error es un código de estado OLE, que tiene un valor de 32 bits. Cuando sea posible, elija un código de error en el conjunto estándar de códigos definidos en el OLECTL. Archivo de encabezado de H. En la tabla siguiente se resume estos códigos.  
@@ -162,7 +157,7 @@ Este artículo tratan temas avanzados relacionados con el desarrollo de controle
   
  Si va a crear un control ActiveX para reemplazar un control VBX existente, defina los códigos de error del control ActiveX con los mismos valores numéricos que utiliza el control VBX para asegurarse de que los códigos de error son compatibles.  
   
-##  <a name="_core_handling_special_keys_in_your_control"></a>Trabajar con teclas especiales en el Control  
+##  <a name="_core_handling_special_keys_in_your_control"></a> Trabajar con teclas especiales en el Control  
  En algunos casos puede que desee controlar ciertas combinaciones de teclas de una manera especial; Por ejemplo, insertar una nueva línea cuando se presiona la tecla ENTRAR en un texto multilínea control de cuadro o se muevan entre un grupo de edición cuando controla una direccional presionado el identificador de la clave.  
   
  Si la clase base del control ActiveX es `COleControl`, puede invalidar [CWnd:: PreTranslateMessage](../mfc/reference/cwnd-class.md#pretranslatemessage) para controlar los mensajes antes de que el contenedor los procese. Cuando se utiliza esta técnica, siempre devuelven **TRUE** si controla el mensaje en el reemplazo de `PreTranslateMessage`.  
@@ -173,12 +168,12 @@ Este artículo tratan temas avanzados relacionados con el desarrollo de controle
   
  Para obtener más información sobre cómo controlar las interfaces de teclado para un control ActiveX, vea la documentación de SDK de ActiveX.  
   
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>Obtener acceso a los controles de cuadro de diálogo que no son visibles en tiempo de ejecución  
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Obtener acceso a los controles de cuadro de diálogo que no son visibles en tiempo de ejecución  
  Puede crear controles de cuadro de diálogo que no tienen ninguna interfaz de usuario y no son visibles en tiempo de ejecución. Si agrega un invisible en tiempo de ejecución control ActiveX en un cuadro de diálogo y utilizar [CWnd:: GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem) para el control de acceso, el control no funcionará correctamente. En su lugar, debe usar una de las siguientes técnicas para obtener un objeto que representa el control:  
   
 -   Con el miembro Asistente para agregar variables, seleccione **Control Variable** y, a continuación, seleccione el identificador. del control Escriba un nombre de variable de miembro y seleccione la clase del control contenedor como el **tipo de Control**.  
   
-     O bien  
+     -o bien-  
   
 -   Declare una variable local y una subclase como el elemento de cuadro de diálogo. Inserte código similar al siguiente (`CMyCtrl` es la clase contenedora, `IDC_MYCTRL1` es el identificador del control):  
   

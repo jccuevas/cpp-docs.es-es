@@ -1,12 +1,9 @@
 ---
 title: Clase CD2DRectF | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DRectF
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b0919780e4fcad86772892bb0b300a735df81e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec43e6bb14b9c5629bde60faec80d9e31e2e5188
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2drectf-class"></a>Clase CD2DRectF
 Contenedor para `D2D1_RECT_F`.  
@@ -68,7 +63,7 @@ class CD2DRectF : public D2D1_RECT_F;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxrendertarget.h  
   
-##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
+##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
  Construye un objeto CD2DRectF del objeto CRect.  
   
 ```  
@@ -100,7 +95,7 @@ CD2DRectF(
  `fBottom`  
  Coordenada inferior de origen  
   
-##  <a name="isnull"></a>CD2DRectF::IsNull  
+##  <a name="isnull"></a>  CD2DRectF::IsNull  
  Devuelve un valor booleano que indica si una expresión no contiene datos válidos (Null).  
   
 ```  
@@ -110,7 +105,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la parte superior del rectángulo, izquierda, inferior y derecho valores son iguales a 0; en caso contrario, FALSE.  
   
-##  <a name="operator_crect"></a>CRect CD2DRectF::operator  
+##  <a name="operator_crect"></a>  CRect CD2DRectF::operator  
  Convierte CD2DRectF al objeto CRect.  
   
 ```  

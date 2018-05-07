@@ -1,12 +1,9 @@
 ---
 title: Clase CAnimationTimerEventHandler | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationTimerEventHandler
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f47caa836a93ecce28e77f9bf768aeb4d1ea3d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc0fe5a59a5efedc00850da03be84bb212d4a51f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationtimereventhandler-class"></a>Clase CAnimationTimerEventHandler
 Implementa una devolución de llamada, a la que llama la API de animación cuando se producen eventos de control de tiempo.  
@@ -71,7 +66,7 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxanimationcontroller.h  
   
-##  <a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance  
+##  <a name="createinstance"></a>  CAnimationTimerEventHandler::CreateInstance  
  Crea una instancia de devolución de llamada de CAnimationTimerEventHandler.  
   
 ```  
@@ -89,7 +84,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se realiza correctamente, devuelve S_OK. En caso contrario, devuelve un código de error HRESULT.  
   
-##  <a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate  
+##  <a name="onpostupdate"></a>  CAnimationTimerEventHandler::OnPostUpdate  
  Controla los eventos que se producen una vez finalizada una actualización de la animación.  
   
 ```  
@@ -99,7 +94,7 @@ IFACEMETHOD(OnPostUpdate)();
 ### <a name="return-value"></a>Valor devuelto  
  S_OK si el método tiene éxito; en caso contrario E_FAIL.  
   
-##  <a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate  
+##  <a name="onpreupdate"></a>  CAnimationTimerEventHandler::OnPreUpdate  
  Controla los eventos que se producen antes de que comience una actualización de la animación.  
   
 ```  
@@ -109,7 +104,7 @@ IFACEMETHOD(OnPreUpdate)();
 ### <a name="return-value"></a>Valor devuelto  
  S_OK si el método tiene éxito; en caso contrario E_FAIL.  
   
-##  <a name="onrenderingtooslow"></a>CAnimationTimerEventHandler::OnRenderingTooSlow  
+##  <a name="onrenderingtooslow"></a>  CAnimationTimerEventHandler::OnRenderingTooSlow  
  Controla los eventos que se producen cuando la velocidad de fotogramas de representación para una animación cae por debajo de la velocidad de fotogramas deseable mínimo.  
   
 ```  
@@ -122,7 +117,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ### <a name="return-value"></a>Valor devuelto  
  S_OK si el método tiene éxito; en caso contrario E_FAIL.  
   
-##  <a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>  CAnimationTimerEventHandler::SetAnimationController  
  Almacena un puntero al controlador de animación para eventos de ruta.  
   
 ```  

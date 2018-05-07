@@ -1,12 +1,9 @@
 ---
 title: Clase CBitmapButton | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d926e538cf9f9f1cb4935a1d53ba6c1fd7f4696e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmapbutton-class"></a>Clase CBitmapButton
 Crea controles de botón de comando etiquetados con imágenes de mapa de bits en lugar de texto.  
@@ -61,7 +56,7 @@ class CBitmapButton : public CButton
 |[CBitmapButton::SizeToContent](#sizetocontent)|Cambia el tamaño del botón para acomodar el mapa de bits.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CBitmapButton`los objetos contienen hasta cuatro mapas de bits que contengan imágenes para los diferentes Estados que puede suponer un botón: arriba (o normal), hacia abajo (o seleccionada), enfocada a deshabilitado. El primer mapa de bits es necesario; los otros son opcionales.  
+ `CBitmapButton` los objetos contienen hasta cuatro mapas de bits que contengan imágenes para los diferentes Estados que puede suponer un botón: arriba (o normal), hacia abajo (o seleccionada), enfocada a deshabilitado. El primer mapa de bits es necesario; los otros son opcionales.  
   
  Imágenes de mapa de bits del botón incluyen el borde alrededor de la imagen, así como la propia imagen. Normalmente, el borde juega un papel en que muestra el estado del botón. Por ejemplo, el mapa de bits para el estado tiene el foco suele como uno para el estado arriba, pero con un margen de rectángulo discontinua desde el borde o una línea gruesa en el borde. El mapa de bits para el deshabilitado estado normalmente es similar a uno para el estado arriba, pero tiene contraste inferior (por ejemplo, una selección de menú atenuados o no accesible).  
   
@@ -122,7 +117,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxext.h  
   
-##  <a name="autoload"></a>CBitmapButton:: Autoload  
+##  <a name="autoload"></a>  CBitmapButton:: Autoload  
  Asocia un botón en un cuadro de diálogo con un objeto de la `CBitmapButton` (clase), carga el bitmap(s) por nombre y cambia el tamaño del botón para ajustar el mapa de bits.  
   
 ```  
@@ -147,7 +142,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
  Crea un objeto `CBitmapButton`.  
   
 ```  
@@ -160,7 +155,7 @@ CBitmapButton();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="loadbitmaps"></a>CBitmapButton:: LoadBitmaps  
+##  <a name="loadbitmaps"></a>  CBitmapButton:: LoadBitmaps  
  Use esta función cuando desea cargar imágenes de mapa de bits identificadas por sus nombres de recursos o números de identificación, o cuando no se puede utilizar el `AutoLoad` función como, por ejemplo, está creando un botón de mapa de bits que no forma parte de un cuadro de diálogo.  
   
 ```  
@@ -209,7 +204,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
  Llame a esta función para cambiar el tamaño de un botón de mapa de bits para el tamaño del mapa de bits.  
   
 ```  

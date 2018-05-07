@@ -1,13 +1,10 @@
 ---
-title: "Implementar el Asistente para puntos de conexión | Documentos de Microsoft"
-ms.custom: 
+title: Implementar el Asistente para puntos de conexión | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.impl.cp.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Implement Connection Point Wizard [C++]
 ms.assetid: c117f6c6-30f0-4adb-82b4-b1f34e0f0fa8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f29b4f25d937c2f538373ff85819f7315150e712
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef2f7efa92de3714170e403ea50b5f486c8367d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-connection-point-wizard"></a>Asistente para implementar puntos de conexión
 Este asistente implementa un punto de conexión para un objeto COM. Un objeto conectable (es decir, un origen) puede exponer un punto de conexión para sus propias interfaces o para cualquier interfaz de salida. Visual C++ y Windows proporcionan las bibliotecas de tipos que tienen interfaces de salida. Cada interfaz de salida puede ser implementada por un cliente en un objeto (es decir, un receptor).  

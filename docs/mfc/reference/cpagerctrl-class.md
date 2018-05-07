@@ -2,11 +2,8 @@
 title: Clase CPagerCtrl | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPagerCtrl
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79fa877023c7a01c4814f61d75a54cb0dd64b51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpagerctrl-class"></a>Clase CPagerCtrl
 La clase `CPagerCtrl` ajusta el control de paginación de Windows, que puede desplazar en la vista una ventana contenida que no cabe en la ventana contenedora.  
@@ -130,7 +125,7 @@ class CPagerCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcmn.h  
   
-##  <a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl  
+##  <a name="cpagerctrl"></a>  CPagerCtrl::CPagerCtrl  
  Construye un objeto `CPagerCtrl`.  
   
 ```  
@@ -140,7 +135,7 @@ CPagerCtrl();
 ### <a name="remarks"></a>Comentarios  
  Use la [CPagerCtrl::Create](#create) o [CPagerCtrl::CreateEx](#createex) método para crear un control de paginación y adjuntarla a la `CPagerCtrl` objeto.  
   
-##  <a name="create"></a>CPagerCtrl::Create  
+##  <a name="create"></a>  CPagerCtrl::Create  
  Crea un control de paginación con estilos especificados y lo adjunta a la corriente `CPagerCtrl` objeto.  
   
 ```  
@@ -161,7 +156,7 @@ virtual BOOL Create(
 |[in] `nID`|El identificador del control.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si este método se realiza correctamente; en caso contrario, `false`.  
+ `true` Si este método se realiza correctamente; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Para crear un control de paginación, declare un `CPagerCtrl` variable, a continuación, llame a la [CPagerCtrl::Create](#create) o [CPagerCtrl::CreateEx](#createex) método en esa variable.  
@@ -171,7 +166,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CPagerCtrl::CreateEx  
+##  <a name="createex"></a>  CPagerCtrl::CreateEx  
  Crea un control de paginación con estilos extendidos especificados y lo adjunta a la corriente `CPagerCtrl` objeto.  
   
 ```  
@@ -194,12 +189,12 @@ virtual BOOL CreateEx(
 |[in] `nID`|El identificador del control.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si este método se realiza correctamente; en caso contrario, `false`.  
+ `true` Si este método se realiza correctamente; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Para crear un control de paginación, declare un `CPagerCtrl` variable, a continuación, llame a la [CPagerCtrl::Create](#create) o [CPagerCtrl::CreateEx](#createex) método en esa variable.  
   
-##  <a name="forwardmouse"></a>CPagerCtrl::ForwardMouse  
+##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
  Habilita o deshabilita el reenvío [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) mensajes en la ventana que se encuentra en el control de paginación actual.  
   
 ```  
@@ -210,12 +205,12 @@ void ForwardMouse(BOOL bForward);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `bForward`|`true`para reenviar mensajes de mouse, o `false` no reenviar los mensajes de mouse (ratón).|  
+|[in] `bForward`|`true` para reenviar mensajes de mouse, o `false` no reenviar los mensajes de mouse (ratón).|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) mensaje, que se describe en el SDK de Windows.  
   
-##  <a name="getborder"></a>CPagerCtrl::GetBorder  
+##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
  Recupera el tamaño del borde del control de elemento de paginación actual.  
   
 ```  
@@ -233,7 +228,7 @@ int GetBorder() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
-##  <a name="getbkcolor"></a>CPagerCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CPagerCtrl::GetBkColor  
  Recupera el color de fondo del control de elemento de paginación actual.  
   
 ```  
@@ -251,7 +246,7 @@ COLORREF GetBkColor() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize  
+##  <a name="getbuttonsize"></a>  CPagerCtrl::GetButtonSize  
  Recupera el tamaño de los botones del control de elemento de paginación actual.  
   
 ```  
@@ -266,7 +261,7 @@ int GetButtonSize() const;
   
  Si el control de paginación tiene la `PGS_HORZ` estilo, el tamaño del botón determina el ancho de los botones de buscapersonas, y si el control de paginación tiene la `PGS_VERT` estilo, el tamaño del botón determina el alto de los botones de buscapersonas. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
-##  <a name="getbuttonstate"></a>CPagerCtrl::GetButtonState  
+##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
  Recupera el estado del botón de desplazamiento especificada en el control de paginación actual.  
   
 ```  
@@ -285,7 +280,7 @@ DWORD GetButtonState(int iButton) const;
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje, que se describe en el SDK de Windows.  
   
-##  <a name="getdroptarget"></a>CPagerCtrl::GetDropTarget  
+##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
  Recupera el [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfaz para el control de paginación actual.  
   
 ```  
@@ -296,11 +291,11 @@ IDropTarget* GetDropTarget() const;
  Un puntero a la `IDropTarget` interfaz para el control de paginación actual.  
   
 ### <a name="remarks"></a>Comentarios  
- `IDropTarget`es una de las interfaces que se implementan para admitir las operaciones de arrastrar y colocar en la aplicación.  
+ `IDropTarget` es una de las interfaces que se implementan para admitir las operaciones de arrastrar y colocar en la aplicación.  
   
  Este método envía el [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) mensaje, que se describe en el SDK de Windows. El llamador de este método es responsable de llamar a la `Release` miembro de la [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) cuando ya no se necesita la interfaz de la interfaz.  
   
-##  <a name="getscrollpos"></a>CPagerCtrl::GetScrollPos  
+##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
  Recupera la posición de desplazamiento del control de elemento de paginación actual.  
   
 ```  
@@ -318,7 +313,7 @@ int GetScrollPos() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
-##  <a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed  
+##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed  
  Indica si el botón de desplazamiento especificada del control de elemento de paginación actual está en estado presionado.  
   
 ```  
@@ -332,12 +327,12 @@ BOOL IsButtonDepressed(int iButton) const;
 |[in] `iButton`|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el botón especificado está en estado presionado; en caso contrario, `false`.  
+ `true` Si el botón especificado está en estado presionado; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje, que se describe en el SDK de Windows. A continuación, comprueba si el estado que se devuelve es `PGF_DEPRESSED`. Para obtener más información, vea la sección de valor devuelto de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje.  
   
-##  <a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed  
+##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
  Indica si el botón de desplazamiento especificada del control de elemento de paginación actual está en estado atenuado.  
   
 ```  
@@ -351,12 +346,12 @@ BOOL IsButtonGrayed(int iButton) const;
 |[in] `iButton`|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el botón especificado está en estado atenuado; en caso contrario, `false`.  
+ `true` Si el botón especificado está en estado atenuado; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje, que se describe en el SDK de Windows. A continuación, comprueba si el estado que se devuelve es `PGF_GRAYED`. Para obtener más información, vea la sección de valor devuelto de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje.  
   
-##  <a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot  
+##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
  Indica si el botón de desplazamiento especificada del control de elemento de paginación actual está en estado activo.  
   
 ```  
@@ -370,12 +365,12 @@ BOOL IsButtonHot(int iButton) const;
 |[in] `iButton`|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el botón especificado está en estado activo; en caso contrario, `false`.  
+ `true` Si el botón especificado está en estado activo; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje, que se describe en el SDK de Windows. A continuación, comprueba si el estado que se devuelve es `PGF_HOT`. Para obtener más información, vea la sección de valor devuelto de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje.  
   
-##  <a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonInvisible  
+##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
  Indica si el botón de desplazamiento especificada del control de elemento de paginación actual está en estado invisible.  
   
 ```  
@@ -389,7 +384,7 @@ BOOL IsButtonInvisible(int iButton) const;
 |[in] `iButton`|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el botón especificado está en estado invisible; en caso contrario, `false`.  
+ `true` Si el botón especificado está en estado invisible; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Windows oculta el botón de desplazamiento en una dirección determinada cuando se desplaza la ventana contenida en su alcance más alejado porque al hacer clic en el botón más no puede poner más de la ventana contenida en la vista.  
@@ -401,7 +396,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
-##  <a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal  
+##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal  
  Indica si el botón de desplazamiento especificada del control de elemento de paginación actual está en estado normal.  
   
 ```  
@@ -415,12 +410,12 @@ BOOL IsButtonNormal(int iButton) const;
 |[in] `iButton`|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el botón especificado está en estado normal; en caso contrario, `false`.  
+ `true` Si el botón especificado está en estado normal; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje, que se describe en el SDK de Windows. A continuación, comprueba si el estado que se devuelve es `PGF_NORMAL`. Para obtener más información, vea la sección de valor devuelto de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje.  
   
-##  <a name="recalcsize"></a>CPagerCtrl::RecalcSize  
+##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
  Hace que el control de paginación actual para volver a calcular el tamaño de la ventana independiente.  
   
 ```  
@@ -440,7 +435,7 @@ void RecalcSize();
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
-##  <a name="setbkcolor"></a>CPagerCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CPagerCtrl::SetBkColor  
  Establece el color de fondo del control de elemento de paginación actual.  
   
 ```  
@@ -464,7 +459,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="setborder"></a>CPagerCtrl::SetBorder  
+##  <a name="setborder"></a>  CPagerCtrl::SetBorder  
  Establece el tamaño del borde del control de elemento de paginación actual.  
   
 ```  
@@ -488,7 +483,7 @@ int SetBorder(int iBorder);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize  
+##  <a name="setbuttonsize"></a>  CPagerCtrl::SetButtonSize  
  Establece el tamaño de los botones del control de elemento de paginación actual.  
   
 ```  
@@ -514,7 +509,7 @@ int SetButtonSize(int iButtonSize);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setchild"></a>CPagerCtrl::SetChild  
+##  <a name="setchild"></a>  CPagerCtrl::SetChild  
  Establece la ventana independiente para el control de paginación actual.  
   
 ```  
@@ -537,7 +532,7 @@ void SetChild(HWND hwndChild);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setscrollpos"></a>CPagerCtrl::SetScrollPos  
+##  <a name="setscrollpos"></a>  CPagerCtrl::SetScrollPos  
  Establece la posición de desplazamiento del control de elemento de paginación actual.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: Mapas de eventos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 130e4ecf7534b16ecabf4c35665a4dabe9eee34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db309833604b4e833dfd22a090a8f258333da360
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-maps"></a>Mapas de eventos
 Cada vez que un control desea notificar a su contenedor que se ha producido alguna acción (determinado por el desarrollador del control) (por ejemplo, una pulsación de tecla, haga clic de mouse (ratón) o un cambio en el estado del control) llama a una función de activación de eventos. Esta función notifica el contenedor del control que se ha producido alguna acción importante activando el evento relacionado.  
@@ -62,7 +57,7 @@ Cada vez que un control desea notificar a su contenedor que se ha producido algu
 |[ON_OLEVERB](#on_oleverb)|Indica un verbo personalizado que administra el control OLE.|  
 |[ON_STDOLEVERB](#on_stdoleverb)|Invalida una asignación de verbo estándar del control OLE.|  
   
-##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
+##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP  
  Cada `COleControl`-clase derivada en el programa puede proporcionar un mapa de eventos para especificar los eventos que se activará el control.  
   
 ```   
@@ -77,7 +72,7 @@ DECLARE_EVENT_MAP()
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
+##  <a name="begin_event_map"></a>  BEGIN_EVENT_MAP  
  Comienza la definición de la asignación de eventos.  
   
 ```   
@@ -99,7 +94,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="end_event_map"></a>END_EVENT_MAP  
+##  <a name="end_event_map"></a>  END_EVENT_MAP  
  Use la `END_EVENT_MAP` macro para finalizar la definición de la asignación de eventos.  
   
 ```   
@@ -109,7 +104,7 @@ END_EVENT_MAP()
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="event_custom"></a>EVENT_CUSTOM  
+##  <a name="event_custom"></a>  EVENT_CUSTOM  
  Define una entrada de mapa de eventos para un evento personalizado.  
   
 ```   
@@ -171,7 +166,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
+##  <a name="event_custom_id"></a>  EVENT_CUSTOM_ID  
  Define un función de un evento personalizado que pertenecen al especificado por el identificador de envío que desencadenó el evento `dispid`.  
   
 ```   
@@ -208,7 +203,7 @@ EVENT_CUSTOM_ID(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="on_oleverb"></a>ON_OLEVERB  
+##  <a name="on_oleverb"></a>  ON_OLEVERB  
  Esta macro define una entrada de mapa de mensajes que se asigna un verbo personalizado a una función miembro específico del control.  
   
 ```   
@@ -237,7 +232,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxole.h  
   
-##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
+##  <a name="on_stdoleverb"></a>  ON_STDOLEVERB  
  Use esta macro para invalidar el comportamiento predeterminado de un verbo estándar.  
   
 ```   

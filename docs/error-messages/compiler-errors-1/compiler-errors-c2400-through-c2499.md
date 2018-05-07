@@ -1,16 +1,12 @@
 ---
 title: ': De errores del compilador C2400 a C2499 | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>: De errores del compilador C2400 a C2499
 
@@ -88,7 +81,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2426](compiler-error-c2426.md)|'*token*': operador no válido en '*contexto*'|
 |[Error del compilador C2427](compiler-error-c2427.md)|'*clase*': no se puede definir la clase en este ámbito|
 |[Error del compilador C2428](compiler-error-c2428.md)|'*operación*': no se permite en un operando de tipo 'booleano'|
-|C2429 de Error del compilador|*Contexto* '*contexto*'requiere la marca de compilador'*opción*'|
+|[C2429 de Error del compilador](compiler-error-c2429.md)|'*característica de lenguaje*'requiere la marca de compilador'*opción del compilador*'|
 |[Error del compilador C2430](compiler-error-c2430.md)|más de un registro de índice en '*contexto*'|
 |[Error del compilador C2431](compiler-error-c2431.md)|registro de índice no válido en '*contexto*'|
 |[Error del compilador C2432](compiler-error-c2432.md)|referencia no válida a datos de 16 bits en '*contexto*'|
@@ -149,7 +142,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2491](compiler-error-c2491.md)|'*identificador*': definición de dllimport *función* no permitido|
 |[Error del compilador C2492](compiler-error-c2492.md)|'*variable*': datos con duración de almacenamiento de subprocesos no pueden tener una interfaz dll|
 |[Error del compilador C2493](compiler-error-c2493.md)|formato no válido de __based|
-|[Error del compilador C2494](compiler-error-c2494.md)|'*palabra clave*' no se puede llamar desde dentro de una expresión de filtro o &#95; &#95; bloque finally/finally|
+|[Error del compilador C2494](compiler-error-c2494.md)|'*palabra clave*' no se puede llamar desde dentro de una expresión de filtro o &#95; &#95;bloque finally/finally|
 |[Error del compilador C2495](compiler-error-c2495.md)|'*identificador*': '__declspec(noexcept)' solo puede aplicarse a definiciones o declaraciones de función|
 |[Error del compilador C2496](compiler-error-c2496.md)|'*identificador*': 'selectany' solo puede aplicarse a los elementos de datos con vinculación externa|
 |C2497 de Error del compilador|'*identificador*': 'implementation_key' solo puede aplicarse a las declaraciones de función|

@@ -1,12 +1,9 @@
 ---
 title: para cada uno, en | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::foreach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="for-each-in"></a>for each, in
 Procesa una iteración a través de una matriz o colección. Esta palabra clave no estándar está disponible en C++/CLI y proyectos nativos de C++. Sin embargo, no se recomienda su uso. Considere el uso de un estándar [basados en intervalos de instrucción (C++)](../cpp/range-based-for-statement-cpp.md) en su lugar.  
@@ -65,7 +60,7 @@ Procesa una iteración a través de una matriz o colección. Esta palabra clave 
   
  El *instrucciones* se ejecutan para cada elemento de la matriz o colección. Cuando la iteración se ha completado en todos los elementos de la colección, el control se transfiere a la instrucción que sigue al bloque `for each`.  
   
- `for each`y `in` son [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `for each` y `in` son [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Para obtener más información:  
   
@@ -124,7 +119,7 @@ Testing
   
  La sintaxis CLR es el mismo que el **todos los Runtimes** sintaxis, excepto como se indica a continuación.  
   
- *expresión*  
+ *Expresión*  
  Expresión o colección de matriz administrada. El elemento de la colección debe ser de tipo que el compilador puede convertir desde <xref:System.Object> a la *identificador* tipo.  
   
  *expresión* se evalúa como un tipo que implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, o un tipo que define un `GetEnumerator` método que devuelve un tipo que implementa <xref:System.Collections.IEnumerator> o declara todos los métodos que se definen en `IEnumerator`.  

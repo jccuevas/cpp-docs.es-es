@@ -1,12 +1,9 @@
 ---
 title: Estructura de CCreateContext | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCreateContext
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccreatecontext-structure"></a>Estructura de CCreateContext
 El marco de trabajo usa el `CCreateContext` estructura al crear las vistas que están asociadas a un documento y ventanas de marco.  
@@ -37,7 +32,7 @@ struct CCreateContext
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- `CCreateContext`es una estructura y no tiene una clase base.  
+ `CCreateContext` es una estructura y no tiene una clase base.  
   
  Cuando se crea una ventana, los valores de esta estructura proporcionan la información utilizada para conectar los componentes de un documento a la vista de sus datos. Solo tiene que usar `CCreateContext` si va a reemplazar partes del proceso de creación.  
   
@@ -45,7 +40,7 @@ struct CCreateContext
   
 |Miembro|Tipo|¿Qué es|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`de la nueva vista que se va a crear.|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` de la nueva vista que se va a crear.|  
 |`m_pCurrentDoc`|`CDocument*`|El documento existente que se asociará con la nueva vista.|  
 |`m_pNewDocTemplate`|`CDocTemplate*`|La plantilla de documento asociada a la creación de una nueva ventana de marco MDI.|  
 |`m_pLastView`|`CView*`|La vista original en el que se modelan vistas adicionales, como se muestra en la creación de vistas de la ventana divisora o la creación de una segunda vista en un documento.|  
@@ -56,7 +51,7 @@ struct CCreateContext
 > [!NOTE]
 >  Todos los punteros de `CCreateContext` son opcionales y pueden ser `NULL` si ha especificado o desconocido.  
   
- `CCreateContext`se utiliza por las funciones de miembro aparecen bajo "Vea también". Si tiene previsto reemplazarlos, consulte las descripciones de estas funciones para obtener información específica.  
+ `CCreateContext` se utiliza por las funciones de miembro aparecen bajo "Vea también". Si tiene previsto reemplazarlos, consulte las descripciones de estas funciones para obtener información específica.  
   
  Estas son algunas directrices generales:  
   

@@ -1,13 +1,10 @@
 ---
 title: Recibir notificaciones de controles comunes | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], notifications
 - WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58131874ed039378a312acaaa238388f335f8e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30e89c8d25d78477ed98bae0fd06a704e32d3906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="receiving-notification-from-common-controls"></a>Recibir notificaciones de los controles comunes
 Controles comunes son ventanas secundarias que envían mensajes de notificación a la ventana primaria cuando se producen eventos, como la entrada del usuario, en el control.  
@@ -48,7 +43,7 @@ Controles comunes son ventanas secundarias que envían mensajes de notificación
  Hay una manera sencilla de lograrlo mediante una llamada a `CWnd::GetCurrentMessage`. Sin embargo, este método sólo recupera la posición del cursor en el momento en que se envió el mensaje. Dado que el cursor se haya movido desde que se envió el mensaje se debe llamar a **CWnd:: GetCursorPos** para obtener la posición actual del cursor.  
   
 > [!NOTE]
->  `CWnd::GetCurrentMessage`solo debe llamarse en un controlador de mensajes.  
+>  `CWnd::GetCurrentMessage` solo debe llamarse en un controlador de mensajes.  
   
  Agregue el código siguiente al cuerpo del controlador de mensajes de notificación (en este ejemplo, **NM_RCLICK**):  
   

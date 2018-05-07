@@ -1,12 +1,9 @@
 ---
 title: CView (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CView
@@ -61,17 +58,15 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 843417508fc43f99b0027873988746d03a7863cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ca94e9d1f870fe028faec413a79f13d8a3b8eaa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cview-class"></a>CView (clase)
 Proporciona la funcionalidad básica para las clases de vista definidas por el usuario.  
@@ -173,7 +168,7 @@ class AFX_NOVTABLE CView : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="cview"></a>CView::CView  
+##  <a name="cview"></a>  CView::CView  
  Construye un objeto `CView`.  
   
 ```  
@@ -183,7 +178,7 @@ CView();
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama al constructor cuando se crea una nueva ventana de marco o una ventana se divide. Invalidar el [OnInitialUpdate](#oninitialupdate) función de miembro para inicializar la vista después de que se adjunta el documento.  
   
-##  <a name="doprepareprinting"></a>CView::DoPreparePrinting  
+##  <a name="doprepareprinting"></a>  CView::DoPreparePrinting  
  Llame a esta función desde el reemplazo de [OnPreparePrinting](#onprepareprinting) para invocar el cuadro de diálogo Imprimir y crear un contexto de dispositivo de impresora.  
   
 ```  
@@ -202,7 +197,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
   
  Si un archivo está abierto en vista previa, esta función crea un contexto de dispositivo de impresora mediante la configuración actual de la impresora; este contexto de dispositivo se utiliza para simular la impresora durante la vista previa.  
   
-##  <a name="getdocument"></a>CView::GetDocument  
+##  <a name="getdocument"></a>  CView::GetDocument  
  Llame a esta función para obtener un puntero al documento de la vista.  
   
 ```  
@@ -215,7 +210,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>Comentarios  
  Esto le permite llamar a funciones de miembro del documento.  
   
-##  <a name="isselected"></a>CView::IsSelected  
+##  <a name="isselected"></a>  CView::IsSelected  
  Lo llama el marco de trabajo para comprobar si se selecciona el elemento de documento especificado.  
   
 ```  
@@ -232,7 +227,7 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de esta función devuelve **FALSE**. Reemplace esta función si está implementando selección usando [CDocItem](../../mfc/reference/cdocitem-class.md) objetos. Se debe reemplazar esta función si la vista contiene elementos OLE.  
   
-##  <a name="onactivateframe"></a>CView::OnActivateFrame  
+##  <a name="onactivateframe"></a>  CView::OnActivateFrame  
  Lo llama el marco de trabajo cuando se activa o desactiva la ventana de marco que contiene la vista.  
   
 ```  
@@ -257,7 +252,7 @@ virtual void OnActivateFrame(
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función miembro si desea realizar un procesamiento especial cuando se activa o desactiva la ventana de marco asociada a la vista. Por ejemplo, [CFormView](../../mfc/reference/cformview-class.md) realiza esta invalidación cuando se guarda y restaura el control que tiene el foco.  
   
-##  <a name="onactivateview"></a>CView::OnActivateView  
+##  <a name="onactivateview"></a>  CView::OnActivateView  
  Lo llama el marco de trabajo cuando se activa o desactiva una vista.  
   
 ```  
@@ -284,7 +279,7 @@ virtual void OnActivateView(
   
  Estos parámetros se diferencian cuando [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) se llama con una vista que es diferente de lo que [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) devolvería. Esto suele ocurrir con las ventanas divisoras.  
   
-##  <a name="onbeginprinting"></a>CView:: OnBeginPrinting  
+##  <a name="onbeginprinting"></a>  CView:: OnBeginPrinting  
  Lo llama el marco al comenzar un trabajo de impresión o de vista previa de impresión, después de llamar a `OnPreparePrinting` .  
   
 ```  
@@ -305,7 +300,7 @@ virtual void OnBeginPrinting(
   
  También puede usar esta función para realizar inicializaciones que dependan de las propiedades del contexto del dispositivo de impresora. Por ejemplo, el número de páginas necesarias para imprimir el documento puede depender de la configuración que especificó el usuario en el cuadro de diálogo Imprimir (por ejemplo, la longitud de la página). En esta situación, no se puede especificar la longitud del documento en el [OnPreparePrinting](#onprepareprinting) función miembro, donde, por lo que lo haría normalmente; debe esperar a que el contexto de dispositivo de impresora se ha creado en función de la configuración del cuadro de diálogo. [OnBeginPrinting](#onbeginprinting) es la primera función reemplazable que proporciona acceso a la [CDC](../../mfc/reference/cdc-class.md) objeto que representa el contexto de dispositivo de impresora, por lo que puede establecer la longitud del documento desde esta función. Tenga en cuenta que si no se especifica la longitud del documento en este momento, no se muestra una barra de desplazamiento durante la vista previa de impresión.  
   
-##  <a name="ondragenter"></a>CView::OnDragEnter  
+##  <a name="ondragenter"></a>  CView::OnDragEnter  
  Lo llama el marco cuando el mouse entra por primera vez la región sin desplazamiento de la ventana de destino de colocación.  
   
 ```  
@@ -328,13 +323,13 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="return-value"></a>Valor devuelto  
  Un valor comprendido entre el `DROPEFFECT` tipo enumerado, lo que indica el tipo de colocación que se producirían si el usuario quita el objeto en esta posición. El tipo de colocación suele depende del estado de la clave actual indicado por `dwKeyState`. Una asignación estándar de Estados para `DROPEFFECT` valores son:  
   
-- `DROPEFFECT_NONE`No se puede quitar el objeto de datos en esta ventana.  
+- `DROPEFFECT_NONE` No se puede quitar el objeto de datos en esta ventana.  
   
-- `DROPEFFECT_LINK`para **MK_CONTROL &#124; MK_SHIFT** crea un vínculo entre el objeto y su servidor.  
+- `DROPEFFECT_LINK` para **MK_CONTROL &#124; MK_SHIFT** crea un vínculo entre el objeto y su servidor.  
   
-- `DROPEFFECT_COPY`para **MK_CONTROL** crea una copia del objeto eliminado.  
+- `DROPEFFECT_COPY` para **MK_CONTROL** crea una copia del objeto eliminado.  
   
-- `DROPEFFECT_MOVE`para **MK_ALT** crea una copia del objeto quitado y eliminar el objeto original. Esto suele ser el efecto de colocar de forma predeterminada, cuando la vista puede aceptar este objeto de datos.  
+- `DROPEFFECT_MOVE` para **MK_ALT** crea una copia del objeto quitado y eliminar el objeto original. Esto suele ser el efecto de colocar de forma predeterminada, cuando la vista puede aceptar este objeto de datos.  
   
  Para obtener más información, vea el ejemplo de conceptos avanzados de MFC [OCLIENT](../../visual-cpp-samples.md).  
   
@@ -343,7 +338,7 @@ virtual DROPEFFECT OnDragEnter(
   
  Anular esta función para prepararse para las futuras llamadas a la [OnDragOver](#ondragover) función miembro. Se deben recuperar los datos necesarios del objeto de datos en este momento para su uso posterior en el `OnDragOver` función miembro. La vista también debe actualizarse en este momento para proporcionar información visual al usuario. Para obtener más información, vea el artículo [arrastrar y colocar: implementar un destino de Drop](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="ondragleave"></a>CView::OnDragLeave  
+##  <a name="ondragleave"></a>  CView::OnDragLeave  
  Lo llama el marco durante una operación de arrastre cuando el mouse se mueve fuera del área de colocación válidos para esa ventana.  
   
 ```  
@@ -353,7 +348,7 @@ virtual void OnDragLeave();
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función si la vista actual es necesario limpiar las acciones realizadas durante la [OnDragEnter](#ondragenter) o [OnDragOver](#ondragover) llamadas, como quitar cualquier información visual al usuario mientras el objeto se arrastrar y colocar .  
   
-##  <a name="ondragover"></a>CView::OnDragOver  
+##  <a name="ondragover"></a>  CView::OnDragOver  
  Lo llama el marco de trabajo durante una operación de arrastre cuando se mueve el mouse sobre la ventana de destino de colocación.  
   
 ```  
@@ -376,13 +371,13 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="return-value"></a>Valor devuelto  
  Un valor comprendido entre el `DROPEFFECT` tipo enumerado, lo que indica el tipo de colocación que se producirían si el usuario quita el objeto en esta posición. El tipo de colocación depende a menudo en el estado actual de la clave como se indica por `dwKeyState`. Una asignación estándar de Estados para `DROPEFFECT` valores son:  
   
-- `DROPEFFECT_NONE`No se puede quitar el objeto de datos en esta ventana.  
+- `DROPEFFECT_NONE` No se puede quitar el objeto de datos en esta ventana.  
   
-- `DROPEFFECT_LINK`para **MK_CONTROL &#124; MK_SHIFT** crea un vínculo entre el objeto y su servidor.  
+- `DROPEFFECT_LINK` para **MK_CONTROL &#124; MK_SHIFT** crea un vínculo entre el objeto y su servidor.  
   
-- `DROPEFFECT_COPY`para **MK_CONTROL** crea una copia del objeto eliminado.  
+- `DROPEFFECT_COPY` para **MK_CONTROL** crea una copia del objeto eliminado.  
   
-- `DROPEFFECT_MOVE`para **MK_ALT** crea una copia del objeto quitado y eliminar el objeto original. Esto suele ser el efecto de colocar de forma predeterminada, cuando la vista puede aceptar el objeto de datos.  
+- `DROPEFFECT_MOVE` para **MK_ALT** crea una copia del objeto quitado y eliminar el objeto original. Esto suele ser el efecto de colocar de forma predeterminada, cuando la vista puede aceptar el objeto de datos.  
   
  Para obtener más información, vea el ejemplo de conceptos avanzados de MFC [OCLIENT](../../visual-cpp-samples.md).  
   
@@ -391,7 +386,7 @@ virtual DROPEFFECT OnDragOver(
   
  Reemplace esta función para proporcionar al usuario información visual durante la operación de arrastre. Puesto que esta función se invoca de forma continua, cualquier código incluido dentro de él se debería optimizar tanto como sea posible. Para obtener más información, vea el artículo [arrastrar y colocar: implementar un destino de Drop](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="ondragscroll"></a>CView::OnDragScroll  
+##  <a name="ondragscroll"></a>  CView::OnDragScroll  
  Lo llama el marco antes de llamar a [OnDragEnter](#ondragenter) o [OnDragOver](#ondragover) para determinar si el punto está en la región desplazable.  
   
 ```  
@@ -410,22 +405,22 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="return-value"></a>Valor devuelto  
  Un valor comprendido entre el `DROPEFFECT` tipo enumerado, lo que indica el tipo de colocación que se producirían si el usuario quita el objeto en esta posición. El tipo de colocación suele depende del estado de la clave actual indicado por `dwKeyState`. Una asignación estándar de Estados para `DROPEFFECT` valores son:  
   
-- `DROPEFFECT_NONE`No se puede quitar el objeto de datos en esta ventana.  
+- `DROPEFFECT_NONE` No se puede quitar el objeto de datos en esta ventana.  
   
-- `DROPEFFECT_LINK`para **MK_CONTROL &#124; MK_SHIFT** crea un vínculo entre el objeto y su servidor.  
+- `DROPEFFECT_LINK` para **MK_CONTROL &#124; MK_SHIFT** crea un vínculo entre el objeto y su servidor.  
   
-- `DROPEFFECT_COPY`para **MK_CONTROL** crea una copia del objeto eliminado.  
+- `DROPEFFECT_COPY` para **MK_CONTROL** crea una copia del objeto eliminado.  
   
-- `DROPEFFECT_MOVE`para **MK_ALT** crea una copia del objeto quitado y eliminar el objeto original.  
+- `DROPEFFECT_MOVE` para **MK_ALT** crea una copia del objeto quitado y eliminar el objeto original.  
   
-- `DROPEFFECT_SCROLL`Indica que una operación de arrastre del desplazamiento está a punto de producirse o se está produciendo en la vista de destino.  
+- `DROPEFFECT_SCROLL` Indica que una operación de arrastre del desplazamiento está a punto de producirse o se está produciendo en la vista de destino.  
   
  Para obtener más información, vea el ejemplo de conceptos avanzados de MFC [OCLIENT](../../visual-cpp-samples.md).  
   
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función cuando desea proporcionar un comportamiento especial para este evento. La implementación predeterminada desplaza automáticamente windows cuando se arrastra el cursor en la región de desplazamiento predeterminado dentro del borde de cada ventana. Para obtener más información, vea el artículo [arrastrar y colocar: implementar un destino de Drop](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="ondraw"></a>CView:: OnDraw  
+##  <a name="ondraw"></a>  CView:: OnDraw  
  Lo llama el marco de trabajo para representar una imagen del documento.  
   
 ```  
@@ -443,7 +438,7 @@ virtual void OnDraw(CDC* pDC) = 0;
   
  Para optimizar el dibujo, llame a la [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) función de miembro del contexto de dispositivo para averiguar si se dibujará un rectángulo especificado. Si necesita distinguir entre la presentación en pantalla normal e impresión, llame a la [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) función de miembro del contexto del dispositivo.  
   
-##  <a name="ondrop"></a>CView::OnDrop  
+##  <a name="ondrop"></a>  CView::OnDrop  
  Lo llama el marco cuando el usuario suelta un objeto de datos en un destino de colocación válido.  
   
 ```  
@@ -460,11 +455,11 @@ virtual BOOL OnDrop(
  `dropEffect`  
  El efecto de colocar el usuario ha solicitado.  
   
-- `DROPEFFECT_COPY`Crea una copia del objeto de datos que se va a quitar.  
+- `DROPEFFECT_COPY` Crea una copia del objeto de datos que se va a quitar.  
   
-- `DROPEFFECT_MOVE`Mueve el objeto de datos a la ubicación del mouse actual.  
+- `DROPEFFECT_MOVE` Mueve el objeto de datos a la ubicación del mouse actual.  
   
-- `DROPEFFECT_LINK`Crea un vínculo entre un objeto de datos y su servidor.  
+- `DROPEFFECT_LINK` Crea un vínculo entre un objeto de datos y su servidor.  
   
  `point`  
  La posición del mouse actual en relación con el área de cliente de vista.  
@@ -480,7 +475,7 @@ virtual BOOL OnDrop(
 > [!NOTE]
 >  El marco de trabajo no llame a esta función si no hay una invalidación para [OnDropEx](#ondropex) en esta clase de vista.  
   
-##  <a name="ondropex"></a>CView::OnDropEx  
+##  <a name="ondropex"></a>  CView::OnDropEx  
  Lo llama el marco cuando el usuario suelta un objeto de datos en un destino de colocación válido.  
   
 ```  
@@ -528,19 +523,19 @@ virtual DROPEFFECT OnDropEx(
   
  La acción asociada con una operación de colocar describen los efectos de colocación. Vea la siguiente lista de efectos de colocar:  
   
-- `DROPEFFECT_NONE`Una caída no estarían permitida.  
+- `DROPEFFECT_NONE` Una caída no estarían permitida.  
   
-- `DROPEFFECT_COPY`Se realizará una operación de copia.  
+- `DROPEFFECT_COPY` Se realizará una operación de copia.  
   
-- `DROPEFFECT_MOVE`Se realizará una operación de movimiento.  
+- `DROPEFFECT_MOVE` Se realizará una operación de movimiento.  
   
-- `DROPEFFECT_LINK`Se puede establecer un vínculo de los datos perdidos a los datos originales.  
+- `DROPEFFECT_LINK` Se puede establecer un vínculo de los datos perdidos a los datos originales.  
   
-- `DROPEFFECT_SCROLL`Indica que una operación de arrastre del desplazamiento está a punto de producirse o se está produciendo en el destino.  
+- `DROPEFFECT_SCROLL` Indica que una operación de arrastre del desplazamiento está a punto de producirse o se está produciendo en el destino.  
   
  Para obtener más información acerca de cómo configurar el comando de menú predeterminado, consulte [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) en el SDK de Windows y [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) en este volumen.  
   
-##  <a name="onendprinting"></a>OnEndPrinting  
+##  <a name="onendprinting"></a>  OnEndPrinting  
  Llamado por el marco de trabajo cuando un documento se imprime o muestra una vista previa.  
   
 ```  
@@ -559,7 +554,7 @@ virtual void OnEndPrinting(
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de esta función no hace nada. Reemplace esta función para liberar los recursos GDI asignados en el [OnBeginPrinting](#onbeginprinting) función miembro.  
   
-##  <a name="onendprintpreview"></a>CView::OnEndPrintPreview  
+##  <a name="onendprintpreview"></a>  CView::OnEndPrintPreview  
  Llamado por el marco de trabajo cuando el usuario sale del modo de vista previa de impresión.  
   
 ```  
@@ -588,7 +583,7 @@ virtual void OnEndPrintPreview(
   
  Llame siempre a la versión de la clase base de `OnEndPrintPreview` desde el reemplazo, normalmente al final de la función.  
   
-##  <a name="oninitialupdate"></a>CView:: OnInitialUpdate  
+##  <a name="oninitialupdate"></a>  CView:: OnInitialUpdate  
  Lo llama el marco de trabajo después de la vista se adjunta al documento en primer lugar, pero antes de la vista se muestra inicialmente.  
   
 ```  
@@ -598,7 +593,7 @@ virtual void OnInitialUpdate();
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de esta función llama el [OnUpdate](#onupdate) función miembro sin información de sugerencia (es decir, usando los valores predeterminados de 0 para el `lHint` parámetro y **NULL** para el `pHint` parámetro). Reemplace esta función para realizar cualquier inicialización de un solo uso que requiere información sobre el documento. Por ejemplo, si la aplicación tiene documentos de tamaño fijo, puede usar esta función para inicializar los límites de desplazamiento de la vista según el tamaño del documento. Si la aplicación admite documentos de tamaño variable, use [OnUpdate](#onupdate) actualizar el desplazamiento limita cada vez que los cambios en el documento.  
   
-##  <a name="onpreparedc"></a>CView::OnPrepareDC  
+##  <a name="onpreparedc"></a>  CView::OnPrepareDC  
  Lo llama el marco antes de la [OnDraw](#ondraw) se llama la función miembro para la presentación de pantalla y antes de la [OnPrint](#onprint) durante la vista previa de impresión o función miembro se llama para cada página.  
   
 ```  
@@ -632,7 +627,7 @@ virtual void OnPrepareDC(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]  
   
-##  <a name="onprepareprinting"></a>CView:: OnPreparePrinting  
+##  <a name="onprepareprinting"></a>  CView:: OnPreparePrinting  
  Llamado por el marco de trabajo antes de que un documento se imprime o muestra una vista previa.  
   
 ```  
@@ -651,7 +646,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
   
  Se debe reemplazar esta función para habilitar la impresión y vista previa. Llame a la [DoPreparePrinting](#doprepareprinting) función miembro, pasándole el `pInfo` parámetro y, a continuación, devolver su valor devuelto; `DoPreparePrinting` muestra el cuadro de diálogo Imprimir y crea un contexto de dispositivo de impresora. Si desea inicializar el cuadro de diálogo Imprimir con valores distintos de los predeterminados, asigne valores a los miembros de `pInfo`. Por ejemplo, si conoce la longitud del documento, pasar el valor a la [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) función miembro de `pInfo` antes de llamar a `DoPreparePrinting`. Este valor se muestra en el campo para: cuadro en la parte del intervalo del cuadro de diálogo Imprimir.  
   
- `DoPreparePrinting`no muestra el cuadro de diálogo de impresión de un trabajo de vista previa. Si desea omitir el cuadro de diálogo de impresión de un trabajo de impresión, compruebe que la **m_bPreview** miembro de `pInfo` es **FALSE** y, a continuación, establézcalo en **TRUE** antes de pasarlo a `DoPreparePrinting`; restablecerlo a **FALSE** posteriormente.  
+ `DoPreparePrinting` no muestra el cuadro de diálogo de impresión de un trabajo de vista previa. Si desea omitir el cuadro de diálogo de impresión de un trabajo de impresión, compruebe que la **m_bPreview** miembro de `pInfo` es **FALSE** y, a continuación, establézcalo en **TRUE** antes de pasarlo a `DoPreparePrinting`; restablecerlo a **FALSE** posteriormente.  
   
  Si necesita realizar inicializaciones que requieren acceso a la `CDC` reemplazar el objeto que representa el contexto de dispositivo de impresora (por ejemplo, si tiene que conocer el tamaño de página antes de especificar la longitud del documento), el `OnBeginPrinting` miembro función.  
   
@@ -666,7 +661,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
   
  [!code-cpp[NVC_MFCDocView#185](../../mfc/codesnippet/cpp/cview-class_3.cpp)]  
   
-##  <a name="onprint"></a>CView::OnPrint  
+##  <a name="onprint"></a>  CView::OnPrint  
  Lo llama el marco de trabajo para imprimir o para obtener una vista previa una página del documento.  
   
 ```  
@@ -706,7 +701,7 @@ virtual void OnPrint(
   
  Para obtener otro ejemplo, vea [CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect).  
   
-##  <a name="onscroll"></a>CView::OnScroll  
+##  <a name="onscroll"></a>  CView::OnScroll  
  Lo llama el marco para determinar si el desplazamiento es posible.  
   
 ```  
@@ -746,7 +741,7 @@ virtual BOOL OnScroll(
 ### <a name="remarks"></a>Comentarios  
  En un caso con el marco de trabajo llama a esta función `bDoScroll` establecido en **TRUE** cuando la vista recibe un mensaje de la barra de desplazamiento. En este caso, debe desplazar realmente la vista. En el caso anterior, esta función se invoca con `bDoScroll` establecido en **FALSE** cuando un elemento OLE inicialmente se arrastra dentro de la región de desplazamiento automático de un destino de colocación antes de desplazamiento realiza realmente. En este caso, se debe realmente se desplaza la vista.  
   
-##  <a name="onscrollby"></a>CView::OnScrollBy  
+##  <a name="onscrollby"></a>  CView::OnScrollBy  
  Lo llama el marco cuando el usuario ve un área más allá de la vista actual del documento, arrastrando un elemento OLE en los bordes de la vista actual o mediante la manipulación de las barras de desplazamiento vertical u horizontal.  
   
 ```  
@@ -772,7 +767,7 @@ virtual BOOL OnScrollBy(
   
  Si el documento ancho o alto supera 32767 píxeles, desplazarse más allá de 32767 se producirá un error porque `OnScrollBy` se llama con un válido `sizeScroll` argumento.  
   
-##  <a name="onupdate"></a>CView::OnUpdate  
+##  <a name="onupdate"></a>  CView::OnUpdate  
  Es llamado por el marco de trabajo cuando se ha modificado el documento de la vista; Esta función se invoca [UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) y permite que la vista actualice su presentación para reflejar las modificaciones.  
   
 ```  

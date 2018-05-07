@@ -1,12 +1,9 @@
 ---
 title: C2800 de errores del compilador a C2899 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2816
@@ -51,17 +48,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00357e68e831e58057faac1b4609ac34fadc1c8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc85ab15a262a5f4976fcdc7278401a0d9a128d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>C2800 de errores del compilador a C2899
 
@@ -88,7 +83,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2812](compiler-error-c2812.md)|no se admite #import con/CLR: pure y/CLR: safe|
 |[Error del compilador C2813](compiler-error-c2813.md)|No se admite #import con /MP|
 |[Error del compilador C2814](compiler-error-c2814.md)|'*miembro*': un tipo nativo no se puede anidar dentro de un tipo administrado o WinRT '*clase*'|
-|[Error del compilador C2815](compiler-error-c2815.md)|'operador delete': el primer parámetro formal debe ser ' void *', pero '*tipo *' se usó|
+|[Error del compilador C2815](compiler-error-c2815.md)|'operador delete': el primer parámetro formal debe ser ' void *', pero '* tipo *' se usó|
 |C2816 de Error del compilador|Obsoleto.|
 |[Error del compilador C2817](compiler-error-c2817.md)|tipo de valor devuelto para 'operator delete' debe ser 'void'|
 |[Error del compilador C2818](compiler-error-c2818.md)|aplicación de sobrecargado 'operator ->' es recursiva mediante el tipo '*clase*'|

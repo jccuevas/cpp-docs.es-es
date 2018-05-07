@@ -1,29 +1,24 @@
 ---
 title: Secuencia de operaciones para compilar aplicaciones MFC | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1169b438a181e22696502352c19353421469b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bafcec75643c292a887b54de1b852609dd251c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Secuencia de operaciones para compilar aplicaciones MFC
 En la tabla siguiente se explica la secuencia general que normalmente puede seguir a medida que desarrolla la aplicación MFC.  
@@ -50,7 +45,7 @@ En la tabla siguiente se explica la secuencia general que normalmente puede segu
 |Agregar el desplazamiento.|Si tiene que admite el desplazamiento, derive la clase de vista o clases de [CScrollView](../mfc/reference/cscrollview-class.md).|La vista agrega automáticamente barras de desplazamiento cuando la ventana de vista se hace demasiado pequeña.|  
 |Crear vistas de formulario.|Si desea basar las vistas en recursos de plantilla de cuadro de diálogo, derive la clase de vista o clases de [CFormView](../mfc/reference/cformview-class.md).|La vista utiliza el recurso de plantilla de cuadro de diálogo para mostrar los controles. El usuario puede cambiar mediante tabulación desde el control al control en la vista.|  
 |Crear formularios de base de datos.|Si desea que una aplicación de acceso a datos basado en formularios, derive su clase de vista de [CRecordView](../mfc/reference/crecordview-class.md) (para programar con ODBC).|La vista funciona como una vista de formulario, pero sus controles están conectados a los campos de un [CRecordset](../mfc/reference/crecordset-class.md) objeto que representa una tabla de base de datos. MFC mueve datos entre los controles y el conjunto de registros.|  
-|Crear editor de texto simple.|Si desea que la vista como un editor de texto simple, derive la clase de vista o clases de [CEditView](../mfc/reference/ceditview-class.md) o [CRichEditView](../mfc/reference/cricheditview-class.md).|La vista proporciona Editar funciones, compatibilidad con el Portapapeles y entrada/salida de archivos. `CRichEditView`Proporciona texto con estilo.|  
+|Crear editor de texto simple.|Si desea que la vista como un editor de texto simple, derive la clase de vista o clases de [CEditView](../mfc/reference/ceditview-class.md) o [CRichEditView](../mfc/reference/cricheditview-class.md).|La vista proporciona Editar funciones, compatibilidad con el Portapapeles y entrada/salida de archivos. `CRichEditView` Proporciona texto con estilo.|  
 |Agregar ventanas divisoras.|Si desea admitir la división de ventanas, agregue un [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) el objeto a la ventana de marco SDI o ventana secundaria MDI y enlazar en la ventana [OnCreateClient](../mfc/reference/cframewnd-class.md#oncreateclient) función miembro.|El marco de trabajo proporciona controles de cuadro divisor junto a las barras de desplazamiento y administra la división de la vista en varios paneles. Si el usuario divide una ventana, el marco de trabajo crea y asocia objetos de vista adicionales al documento.|  
 |Compilar, probar y depurar la aplicación.|Utilice las funciones de Visual C++ para compilar, probar y depurar la aplicación.|Visual C++ permite ajustar la compilación, vínculo y otras opciones. También le permite examinar la estructura de código y la clase de origen.|  
   

@@ -1,12 +1,9 @@
 ---
 title: Clase CSmoothStopTransition | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSmoothStopTransition
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSmoothStopTransition [MFC], m_dblFinalValue
 - CSmoothStopTransition [MFC], m_maximumDuration
 ms.assetid: e1a4b476-6f96-43dd-90db-870a64406b85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50753ab65b960ac590c3f859133adf9da903aeda
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7f87c83b9f4c3840318b27922f758787d929d1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csmoothstoptransition-class"></a>Clase CSmoothStopTransition
 Encapsula una transición de pausa suavizada.  
@@ -78,7 +73,7 @@ class CSmoothStopTransition : public CBaseTransition;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxanimationcontroller.h  
   
-##  <a name="create"></a>CSmoothStopTransition::Create  
+##  <a name="create"></a>  CSmoothStopTransition::Create  
  Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.  
   
 ```  
@@ -94,7 +89,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la transición se crea correctamente; en caso contrario, FALSE.  
   
-##  <a name="csmoothstoptransition"></a>CSmoothStopTransition::CSmoothStopTransition  
+##  <a name="csmoothstoptransition"></a>  CSmoothStopTransition::CSmoothStopTransition  
  Construye una transición de pausa suavizada e inicializa su duración máxima y el valor final.  
   
 ```  
@@ -110,14 +105,14 @@ CSmoothStopTransition(
  `dblFinalValue`  
  El valor de la variable de animación al final de la transición.  
   
-##  <a name="m_dblfinalvalue"></a>CSmoothStopTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue  
  El valor de la variable de animación al final de la transición.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_maximumduration"></a>CSmoothStopTransition::m_maximumDuration  
+##  <a name="m_maximumduration"></a>  CSmoothStopTransition::m_maximumDuration  
  La duración máxima de la transición.  
   
 ```  

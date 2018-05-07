@@ -1,13 +1,10 @@
 ---
-title: "TN022: Implementación de comandos estándar | Documentos de Microsoft"
-ms.custom: 
+title: 'TN022: Implementación de comandos estándar | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.commands
 dev_langs:
@@ -68,17 +65,15 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e5e927ebfcb1584913d6415349c473bde4463c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dea42f4bd33281e65696791677bdd81a921a59e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: Implementación de comandos estándar
 > [!NOTE]
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Debe conectarse a su `CWinApp`-derivados de mapa de mensajes de la clase para habilitar esta funcionalidad.  
   
-     `CWinApp::OnFileNew`Este comando de forma diferente dependiendo del número de plantillas de documento se implementa en la aplicación. Si solo hay un `CDocTemplate`, `CWinApp::OnFileNew` creará un nuevo documento de ese tipo, así como la clase de marco y vista apropiada.  
+     `CWinApp::OnFileNew` Este comando de forma diferente dependiendo del número de plantillas de documento se implementa en la aplicación. Si solo hay un `CDocTemplate`, `CWinApp::OnFileNew` creará un nuevo documento de ese tipo, así como la clase de marco y vista apropiada.  
   
      Si hay más de un `CDocTemplate`, `CWinApp::OnFileNew` pedirá al usuario un cuadro de diálogo (**AFX_IDD_NEWTYPEDLG**) lo que permite seleccionar qué tipo de documento que se usará. Seleccionado `CDocTemplate` se utiliza para crear el documento.  
   
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Debe conectarse a su `CWinApp`-derivados de mapa de mensajes de la clase para habilitar esta funcionalidad.  
   
-     `CWinApp::OnFileOpen`tiene una implementación muy sencilla de llamar al método **CWinApp::DoPromptFileName** seguido `CWinApp::OpenDocumentFile` con el nombre de archivo o ruta de acceso del archivo que se abre. El `CWinApp` rutina de implementación **DoPromptFileName** , se abrirá el cuadro de diálogo FileOpen estándar y se rellena con las extensiones de archivo que se obtienen de las plantillas de documento actual.  
+     `CWinApp::OnFileOpen` tiene una implementación muy sencilla de llamar al método **CWinApp::DoPromptFileName** seguido `CWinApp::OpenDocumentFile` con el nombre de archivo o ruta de acceso del archivo que se abre. El `CWinApp` rutina de implementación **DoPromptFileName** , se abrirá el cuadro de diálogo FileOpen estándar y se rellena con las extensiones de archivo que se obtienen de las plantillas de documento actual.  
   
      Una personalización común de `ID_FILE_OPEN` es para personalizar el cuadro de diálogo FileOpen o agregar filtros de archivo adicionales. Es la manera recomendada para personalizarlo reemplazar la implementación predeterminada con su propio cuadro de diálogo FileOpen y llamada `CWinApp::OpenDocumentFile` con el nombre de archivo o ruta de acceso del documento. No hay ninguna necesidad de llamar a la clase base.  
   
@@ -183,7 +178,7 @@ ms.lasthandoff: 12/21/2017
   
      Este comando, invoca el cuadro de diálogo de configuración de impresión estándar que permite al usuario personalizar la impresora y la configuración de impresión para al menos en este documento o a lo sumo todos los documentos en esta aplicación. Debe usar el Panel de Control para cambiar la configuración de impresora predeterminada para todo el sistema.  
   
-     `CWinApp::OnFilePrintSetup`tiene una implementación muy sencilla de crear un `CPrintDialog` objeto y llamar a la **CWinApp::DoPrintDialog** función de la implementación. Esto establece la configuración de impresora de aplicación predeterminada.  
+     `CWinApp::OnFilePrintSetup` tiene una implementación muy sencilla de crear un `CPrintDialog` objeto y llamar a la **CWinApp::DoPrintDialog** función de la implementación. Esto establece la configuración de impresora de aplicación predeterminada.  
   
      La necesidad común para personalizar este comando es permitir la configuración de la impresora de cada documento, que se debe almacenar con el documento cuando se guarda. Para ello debe agregar un controlador de mapa de mensajes en su **CDocument** clase que crea una `CPrintDialog` de objetos, lo inicializa con los atributos de impresora adecuada (normalmente **hDevMode** y **hDevNames**), llame a la **CPrintDialog::DoModal,** y guardar la configuración de impresora modificada. Para una implementación sólida, debe considerar la implementación de **CWinApp::DoPrintDialog** para detectar errores y **CWinApp::UpdatePrinterSelection** para tratar los valores predeterminados razonables y seguimiento de cambios de la impresora de todo el sistema.  
   
@@ -221,7 +216,7 @@ ms.lasthandoff: 12/21/2017
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `CEditView`Proporciona una implementación de este comando mediante `CEdit::Clear`. El comando está deshabilitado si no hay ninguna selección actual.  
+     `CEditView` Proporciona una implementación de este comando mediante `CEdit::Clear`. El comando está deshabilitado si no hay ninguna selección actual.  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -235,7 +230,7 @@ ms.lasthandoff: 12/21/2017
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `CEditView`Proporciona una implementación de este comando, que copia el texto seleccionado actualmente en el Portapapeles como CF_TEXT mediante `CEdit::Copy`. El comando está deshabilitado si no hay ninguna selección actual.  
+     `CEditView` Proporciona una implementación de este comando, que copia el texto seleccionado actualmente en el Portapapeles como CF_TEXT mediante `CEdit::Copy`. El comando está deshabilitado si no hay ninguna selección actual.  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -243,7 +238,7 @@ ms.lasthandoff: 12/21/2017
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `CEditView`Proporciona una implementación de este comando, que corta el texto seleccionado actualmente en el Portapapeles como CF_TEXT mediante `CEdit::Cut`. El comando está deshabilitado si no hay ninguna selección actual.  
+     `CEditView` Proporciona una implementación de este comando, que corta el texto seleccionado actualmente en el Portapapeles como CF_TEXT mediante `CEdit::Cut`. El comando está deshabilitado si no hay ninguna selección actual.  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -251,7 +246,7 @@ ms.lasthandoff: 12/21/2017
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `CEditView`Proporciona una implementación de este comando, que llama a la función de aplicación auxiliar de implementación **OnEditFindReplace** para utilizar y almacenar la configuración de búsqueda y reemplazo anterior en variables de implementación privada. La `CFindReplaceDialog` clase se utiliza para administrar el cuadro de diálogo no modal para preguntar al usuario.  
+     `CEditView` Proporciona una implementación de este comando, que llama a la función de aplicación auxiliar de implementación **OnEditFindReplace** para utilizar y almacenar la configuración de búsqueda y reemplazo anterior en variables de implementación privada. La `CFindReplaceDialog` clase se utiliza para administrar el cuadro de diálogo no modal para preguntar al usuario.  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -259,7 +254,7 @@ ms.lasthandoff: 12/21/2017
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `CEditView`Proporciona una implementación de este comando, que copia los datos del Portapapeles actuales reemplazando el texto seleccionado con `CEdit::Paste`. El comando está deshabilitado si no hay ningún **CF_TEXT** en el Portapapeles.  
+     `CEditView` Proporciona una implementación de este comando, que copia los datos del Portapapeles actuales reemplazando el texto seleccionado con `CEdit::Paste`. El comando está deshabilitado si no hay ningún **CF_TEXT** en el Portapapeles.  
   
      **COleClientDoc** simplemente proporciona un controlador de interfaz de usuario de comando de actualización para este comando. Si el Portapapeles no contiene un elemento OLE incrustable/objeto, se deshabilitará el comando. Usted es responsable de escribir el controlador para el comando real para realizar el pegado real. Si una aplicación OLE también puede pegar a otros formatos, debe proporcionar su propio controlador de interfaz de usuario de comando de actualización en la vista o el documento (es decir, en algún lugar antes de **COleClientDoc** en la ruta de destino de comando).  
   
@@ -271,7 +266,7 @@ ms.lasthandoff: 12/21/2017
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `COleDocument`simplemente proporciona un controlador de interfaz de usuario de comando de actualización para este comando. Si el Portapapeles no contiene linkable elemento/objeto OLE, se deshabilitará el comando. Usted es responsable de escribir el controlador para el comando real para realizar el pegado real. Si una aplicación OLE también puede pegar a otros formatos, debe proporcionar su propio controlador de interfaz de usuario de comando de actualización en la vista o el documento (es decir, en algún lugar antes de `COleDocument` en la ruta de destino de comando).  
+     `COleDocument` simplemente proporciona un controlador de interfaz de usuario de comando de actualización para este comando. Si el Portapapeles no contiene linkable elemento/objeto OLE, se deshabilitará el comando. Usted es responsable de escribir el controlador para el comando real para realizar el pegado real. Si una aplicación OLE también puede pegar a otros formatos, debe proporcionar su propio controlador de interfaz de usuario de comando de actualización en la vista o el documento (es decir, en algún lugar antes de `COleDocument` en la ruta de destino de comando).  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -287,7 +282,7 @@ ms.lasthandoff: 12/21/2017
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `CEditView`Proporciona una implementación de este comando para repetir la última operación de búsqueda. Se utilizan las variables de implementación privada de la última búsqueda. El comando está deshabilitado si no se puede intentar una operación de búsqueda.  
+     `CEditView` Proporciona una implementación de este comando para repetir la última operación de búsqueda. Se utilizan las variables de implementación privada de la última búsqueda. El comando está deshabilitado si no se puede intentar una operación de búsqueda.  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -295,7 +290,7 @@ ms.lasthandoff: 12/21/2017
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `CEditView`Proporciona una implementación de este comando, que llama a la función de aplicación auxiliar de implementación **OnEditFindReplace** para utilizar y almacenar la configuración de búsqueda y reemplazo anterior en variables de implementación privada. La `CFindReplaceDialog` clase se utiliza para administrar el cuadro de diálogo no modal que pide al usuario.  
+     `CEditView` Proporciona una implementación de este comando, que llama a la función de aplicación auxiliar de implementación **OnEditFindReplace** para utilizar y almacenar la configuración de búsqueda y reemplazo anterior en variables de implementación privada. La `CFindReplaceDialog` clase se utiliza para administrar el cuadro de diálogo no modal que pide al usuario.  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -303,7 +298,7 @@ ms.lasthandoff: 12/21/2017
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `CEditView`Proporciona una implementación de este comando, que selecciona todo el texto del documento. El comando está deshabilitado si no hay ningún texto que desea seleccionar.  
+     `CEditView` Proporciona una implementación de este comando, que selecciona todo el texto del documento. El comando está deshabilitado si no hay ningún texto que desea seleccionar.  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -311,7 +306,7 @@ ms.lasthandoff: 12/21/2017
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `CEditView`Proporciona una implementación de este comando, mediante `CEdit::Undo`. El comando está deshabilitado si `CEdit::CanUndo` devuelve FALSE.  
+     `CEditView` Proporciona una implementación de este comando, mediante `CEdit::Undo`. El comando está deshabilitado si `CEdit::CanUndo` devuelve FALSE.  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -331,7 +326,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_WINDOW_ARRANGE organiza los iconos en la parte inferior de una ventana MDI.  
   
-     `CMDIFrameWnd`implementa este comando estándar de MDI en una función de aplicación auxiliar de implementación **OnMDIWindowCmd**. Esta aplicación auxiliar asigna identificadores de comando a los mensajes de ventanas MDI y, por tanto, puede compartir una gran cantidad de código.  
+     `CMDIFrameWnd` implementa este comando estándar de MDI en una función de aplicación auxiliar de implementación **OnMDIWindowCmd**. Esta aplicación auxiliar asigna identificadores de comando a los mensajes de ventanas MDI y, por tanto, puede compartir una gran cantidad de código.  
   
      Al igual que la mayoría de los comandos de menú de ventana MDI, el comando está deshabilitado si no hay ninguna ventana secundaria MDI activa.  
   
@@ -339,7 +334,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Ventanas en cascada ID_WINDOW_CASCADE para que se superpongan.  
   
-     `CMDIFrameWnd`implementa este comando estándar de MDI en una función de aplicación auxiliar de implementación **OnMDIWindowCmd**. Esta aplicación auxiliar asigna identificadores de comando a los mensajes de ventanas MDI y, por tanto, puede compartir una gran cantidad de código.  
+     `CMDIFrameWnd` implementa este comando estándar de MDI en una función de aplicación auxiliar de implementación **OnMDIWindowCmd**. Esta aplicación auxiliar asigna identificadores de comando a los mensajes de ventanas MDI y, por tanto, puede compartir una gran cantidad de código.  
   
      Al igual que la mayoría de los comandos de menú de ventana MDI, el comando está deshabilitado si no hay ninguna ventana secundaria MDI activa.  
   
@@ -359,7 +354,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Interfaz de teclado ID_WINDOW_SPLIT al divisor.  
   
-     `CView`controla este comando para el `CSplitterWnd` implementación. Si la vista es parte de una ventana divisora, este comando va a delegar a la función de la implementación `CSplitterWnd::DoKeyboardSplit`. Esto colocará el divisor en un modo que permitirá a los usuarios de teclado dividir o eliminar las divisiones de una ventana divisora.  
+     `CView` controla este comando para el `CSplitterWnd` implementación. Si la vista es parte de una ventana divisora, este comando va a delegar a la función de la implementación `CSplitterWnd::DoKeyboardSplit`. Esto colocará el divisor en un modo que permitirá a los usuarios de teclado dividir o eliminar las divisiones de una ventana divisora.  
   
      Este comando está deshabilitado si la vista no está en un divisor.  
   
@@ -384,7 +379,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Debe conectarse a su `CWinApp`-derivados de mapa de mensajes de la clase para habilitar esta funcionalidad.  
   
-     `CWinApp::OnHelpIndex`controla este comando llamando trivial `CWinApp::WinHelp`.  
+     `CWinApp::OnHelpIndex` controla este comando llamando trivial `CWinApp::WinHelp`.  
   
      No se recomienda la personalización de este controlador de comandos.  
   
@@ -393,7 +388,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Debe conectarse a su `CWinApp`-derivados de mapa de mensajes de la clase para habilitar esta funcionalidad.  
   
-     `CWinApp::OnHelpUsing`controla este comando llamando trivial `CWinApp::WinHelp`.  
+     `CWinApp::OnHelpUsing` controla este comando llamando trivial `CWinApp::WinHelp`.  
   
      No se recomienda la personalización de este controlador de comandos.  
   
@@ -402,7 +397,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Debe conectarse a su `CWinApp`-derivados de mapa de mensajes de la clase para habilitar esta funcionalidad.  
   
-     `CWinApp::OnContextHelp`Este comando se controla estableciendo el cursor del modo de ayuda, escribir un bucle modal y esperando al usuario seleccionar una ventana para obtener ayuda sobre. Consulte [28 de nota técnica](../mfc/tn028-context-sensitive-help-support.md) para obtener más detalles sobre la implementación de la Ayuda de MFC.  
+     `CWinApp::OnContextHelp` Este comando se controla estableciendo el cursor del modo de ayuda, escribir un bucle modal y esperando al usuario seleccionar una ventana para obtener ayuda sobre. Consulte [28 de nota técnica](../mfc/tn028-context-sensitive-help-support.md) para obtener más detalles sobre la implementación de la Ayuda de MFC.  
   
      No se recomienda la personalización de este controlador de comandos.  
   
@@ -411,7 +406,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Debe conectarse a su `CWinApp`-derivados de mapa de mensajes de la clase para habilitar esta funcionalidad.  
   
-     `CWinApp::OnHelp`gestiona este comando al obtener el contexto de ayuda adecuada para el contexto de aplicación actual. Esto controla simple ayuda de F1, ayuda en cuadros de mensaje y así sucesivamente. Consulte [28 de nota técnica](../mfc/tn028-context-sensitive-help-support.md) para obtener más detalles sobre la MFC de implementación de la Ayuda.  
+     `CWinApp::OnHelp` gestiona este comando al obtener el contexto de ayuda adecuada para el contexto de aplicación actual. Esto controla simple ayuda de F1, ayuda en cuadros de mensaje y así sucesivamente. Consulte [28 de nota técnica](../mfc/tn028-context-sensitive-help-support.md) para obtener más detalles sobre la MFC de implementación de la Ayuda.  
   
      No se recomienda la personalización de este controlador de comandos.  
   
@@ -426,7 +421,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_NEXT_PANE va al siguiente panel  
   
-     `CView`controla este comando para el `CSplitterWnd` implementación. Si la vista es parte de una ventana divisora, este comando va a delegar a la función de la implementación **CSplitterWnd::OnNextPaneCmd**. Este proceso moverá la vista activa al siguiente panel en el divisor.  
+     `CView` controla este comando para el `CSplitterWnd` implementación. Si la vista es parte de una ventana divisora, este comando va a delegar a la función de la implementación **CSplitterWnd::OnNextPaneCmd**. Este proceso moverá la vista activa al siguiente panel en el divisor.  
   
      Este comando está deshabilitado si la vista no está en un divisor o no hay ningún panel siguiente para ir a.  
   
@@ -434,7 +429,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_PREV_PANE va al panel anterior  
   
-     `CView`controla este comando para el `CSplitterWnd` implementación. Si la vista es parte de una ventana divisora, este comando va a delegar a la función de la implementación **CSplitterWnd::OnNextPaneCmd**. Este proceso moverá la vista activa al panel anterior en el divisor.  
+     `CView` controla este comando para el `CSplitterWnd` implementación. Si la vista es parte de una ventana divisora, este comando va a delegar a la función de la implementación **CSplitterWnd::OnNextPaneCmd**. Este proceso moverá la vista activa al panel anterior en el divisor.  
   
      Este comando está deshabilitado si la vista no está en un divisor o no hay ningún panel anterior para ir a.  
   
@@ -450,13 +445,13 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_OLE_EDIT_LINKS edita vínculos OLE  
   
-     `COleDocument`Este comando se controla mediante la implementación proporcionada por MFC del cuadro de diálogo estándar de vínculos OLE. La implementación de este cuadro de diálogo se tiene acceso a través de la `COleLinksDialog` clase. Si el documento actual no contiene ningún vínculo, se deshabilita el comando.  
+     `COleDocument` Este comando se controla mediante la implementación proporcionada por MFC del cuadro de diálogo estándar de vínculos OLE. La implementación de este cuadro de diálogo se tiene acceso a través de la `COleLinksDialog` clase. Si el documento actual no contiene ningún vínculo, se deshabilita el comando.  
   
      No se recomienda la personalización de este controlador de comandos.  
   
 -   ID_OLE_VERB_FIRST... ÚLTIMO intervalo de un identificador para los verbos OLE  
   
-     `COleDocument`usa este intervalo de Id. de comando para los verbos admitidos por el elemento/objeto OLE actualmente seleccionado. Esto debe ser un intervalo como un tipo de elemento u objeto OLE determinado puede admitir verbos personalizados de cero o más. En el menú de la aplicación, debe tener un elemento de menú con el Id. de **ID_OLE_VERB_FIRST**. Cuando se ejecuta el programa, el menú se actualizará con la descripción del verbo de menú correspondiente (o menú emergente con muchos verbos). La administración del menú OLE se controla mediante `AfxOleSetEditMenu`hecho en el controlador de interfaz de usuario de comandos de actualización para este comando.  
+     `COleDocument` usa este intervalo de Id. de comando para los verbos admitidos por el elemento/objeto OLE actualmente seleccionado. Esto debe ser un intervalo como un tipo de elemento u objeto OLE determinado puede admitir verbos personalizados de cero o más. En el menú de la aplicación, debe tener un elemento de menú con el Id. de **ID_OLE_VERB_FIRST**. Cuando se ejecuta el programa, el menú se actualizará con la descripción del verbo de menú correspondiente (o menú emergente con muchos verbos). La administración del menú OLE se controla mediante `AfxOleSetEditMenu`hecho en el controlador de interfaz de usuario de comandos de actualización para este comando.  
   
      No hay ningún controlador de comando explícito para controlar cada uno de identificador del comando en este intervalo. **COleDocument::OnCmdMsg** se invalida para interceptar todos los identificadores de comando de este intervalo, convertirlas en números de verbo basado en cero e iniciar el servidor para ese verbo (mediante `COleClientItem::DoVerb`).  
   
@@ -464,7 +459,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_VIEW_TOOLBAR alterna la barra de herramientas, activar y desactivar  
   
-     `CFrameWnd`controla este comando y el controlador de interfaz de usuario de comandos de actualización para alternar el estado de visibilidad de la barra de herramientas. La barra de herramientas debe ser una ventana secundaria del marco con el identificador de ventana secundaria de `AFX_IDW_TOOLBAR`. El controlador de comandos realmente alterna la visibilidad de la ventana de la barra de herramientas. `CFrameWnd::RecalcLayout`se utiliza para volver a dibujar la ventana de marco con la barra de herramientas en su nuevo estado. El controlador de interfaz de usuario de comando de actualización comprueba el elemento de menú cuando la barra de herramientas está visible.  
+     `CFrameWnd` controla este comando y el controlador de interfaz de usuario de comandos de actualización para alternar el estado de visibilidad de la barra de herramientas. La barra de herramientas debe ser una ventana secundaria del marco con el identificador de ventana secundaria de `AFX_IDW_TOOLBAR`. El controlador de comandos realmente alterna la visibilidad de la ventana de la barra de herramientas. `CFrameWnd::RecalcLayout` se utiliza para volver a dibujar la ventana de marco con la barra de herramientas en su nuevo estado. El controlador de interfaz de usuario de comando de actualización comprueba el elemento de menú cuando la barra de herramientas está visible.  
   
      No se recomienda la personalización de este controlador de comandos. Si desea agregar barras de herramientas adicionales, desea clonar y modificar el controlador de comandos y el controlador de interfaz de usuario de comando de actualización para este comando.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Filosofía general de diseño de clase | Documentos de Microsoft"
-ms.custom: 
+title: Filosofía general de diseño de clase | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - classes [MFC], MFC class design
 - Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c174b06b27e78ca61d2608b8e04205068ac436e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b2d0915c4b2940e93b781e7a56e2640c64a7f20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-class-design-philosophy"></a>Filosofía general de diseño de clases
 Microsoft Windows se diseñó mucho antes de que se hizo popular del lenguaje C++. Dado que miles de aplicaciones utilizan la interfaz de programación de aplicaciones (API) de Windows del lenguaje C, se mantendrá esa interfaz en el futuro. Cualquier interfaz de Windows de C++, por tanto, debe generarse sobre la API del lenguaje C procedimientos. Esto garantiza que las aplicaciones de C++ pueda coexistir con aplicaciones de C.  

@@ -1,13 +1,10 @@
 ---
-title: "Escribir una aplicación de cliente de Internet mediante clases WinInet de MFC | Documentos de Microsoft"
-ms.custom: 
+title: Escribir una aplicación de cliente de Internet mediante clases WinInet de MFC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], client applications
 - MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b97d4af18ff560a48aadb3ba71b61609f82a85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Escribir una aplicación cliente de Internet mediante clases WinInet de MFC
 La base de cada aplicación de cliente de Internet es la sesión de Internet. MFC implementa las sesiones de Internet como objetos de clase [CInternetSession](../mfc/reference/cinternetsession-class.md). Con esta clase, puede crear una sesión de Internet o varias sesiones simultáneas.  
@@ -39,7 +34,7 @@ La base de cada aplicación de cliente de Internet es la sesión de Internet. MF
   
 -   Para una sesión de Internet, debe crear una instancia de [CInternetSession](../mfc/reference/cinternetsession-class.md).  
   
--   Si la sesión de Internet lee o escribe datos, debe crear una instancia de `CInternetFile` (o sus subclases [CHttpFile](../mfc/reference/chttpfile-class.md) o [CGopherFile](../mfc/reference/cgopherfile-class.md)). La manera más fácil de leer datos es llamar a [CInternetSession:: OpenURL](../mfc/reference/cinternetsession-class.md#openurl). Esta función analiza un localizador Universal de recursos (URL) proporcionado por el usuario, abre una conexión con el servidor especificado por la dirección URL y devuelve solo lectura `CInternetFile` objeto. `CInternetSession::OpenURL`no es específico de un tipo de protocolo: la misma llamada funciona para cualquier dirección URL de FTP, HTTP o gopher. `CInternetSession::OpenURL`funciona incluso con archivos locales (devolver un `CStdioFile` en lugar de un `CInternetFile`).  
+-   Si la sesión de Internet lee o escribe datos, debe crear una instancia de `CInternetFile` (o sus subclases [CHttpFile](../mfc/reference/chttpfile-class.md) o [CGopherFile](../mfc/reference/cgopherfile-class.md)). La manera más fácil de leer datos es llamar a [CInternetSession:: OpenURL](../mfc/reference/cinternetsession-class.md#openurl). Esta función analiza un localizador Universal de recursos (URL) proporcionado por el usuario, abre una conexión con el servidor especificado por la dirección URL y devuelve solo lectura `CInternetFile` objeto. `CInternetSession::OpenURL` no es específico de un tipo de protocolo: la misma llamada funciona para cualquier dirección URL de FTP, HTTP o gopher. `CInternetSession::OpenURL` funciona incluso con archivos locales (devolver un `CStdioFile` en lugar de un `CInternetFile`).  
   
 -   Si la sesión de leer o escribir datos, no a Internet pero realiza otras tareas, como la eliminación de un archivo en un directorio FTP, no debe crear una instancia de `CInternetFile`.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Combinar el menú Ayuda | Documentos de Microsoft"
-ms.custom: 
+title: Combinar el menú Ayuda | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d3ae9509edcbe79417bb37d02f4f585b2da653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce8d5212f78546c08734aed6fd7e236fa4446007
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-menu-merging"></a>Combinar el menú Ayuda
 Cuando un objeto está activo dentro de un contenedor, el menú combinación de protocolo de documentos OLE proporciona el objeto control total sobre la **ayuda** menú. Como resultado, los temas de Ayuda del contenedor no están disponibles a menos que el usuario desactiva el objeto. La arquitectura de contención de documentos activos se expande en las reglas de combinación para permitir que el contenedor y un documento activo que está activo para compartir el menú de menús en contexto. Las nuevas reglas son simples normas adicionales acerca de qué componente es propietario de qué parte del menú y cómo se crea el menú compartido.  

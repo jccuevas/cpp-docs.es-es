@@ -1,13 +1,10 @@
 ---
-title: "Características de la interfaz de usuario, Asistente para aplicaciones MFC | Documentos de Microsoft"
-ms.custom: 
+title: Características de la interfaz de usuario, Asistente para aplicaciones MFC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.ui
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5906cf607e09df536825eed88e7b1be59d8fdee2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42196e437c8ff2ee43f733e1826b2a19c5dbb0a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Características de la interfaz de usuario, Asistente para aplicaciones MFC
 En este tema se explica las opciones que puede usar para especificar la apariencia de la aplicación. Las características de interfaz de usuario disponibles para el proyecto dependen del tipo de aplicación que haya especificado en el [tipo de aplicación, Asistente para aplicaciones MFC](../../mfc/reference/application-type-mfc-application-wizard.md) página del Asistente para aplicaciones MFC. Por ejemplo, si crea una aplicación de interfaz de único documento, no se puede agregar estilos de marco secundario.  

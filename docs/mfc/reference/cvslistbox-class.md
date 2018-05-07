@@ -1,12 +1,9 @@
 ---
 title: Clase CVSListBox | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CVSListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97d55b0b23302920e71dfd35766bfa0a4294d97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cvslistbox-class"></a>Clase CVSListBox
 La `CVSListBox` clase es compatible con un control de lista modificable.  
@@ -117,7 +112,7 @@ class CVSListBox : public CVSListBoxBase
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxvslistbox.h  
   
-##  <a name="additem"></a>CVSListBox::AddItem  
+##  <a name="additem"></a>  CVSListBox::AddItem  
  Agrega una cadena a un control de lista.  
   
 ```  
@@ -143,7 +138,7 @@ virtual int AddItem(
 ### <a name="remarks"></a>Comentarios  
  Use la [CVSListBox::GetItemData](#getitemdata) método para recuperar el valor especificado por el `dwData` parámetro. Este valor puede ser un entero específico de la aplicación o un puntero a otros datos.  
   
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
+##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  Construye un objeto `CVSListBox`.  
   
 ```  
@@ -154,7 +149,7 @@ CVSListBox();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="edititem"></a>CVSListBox::EditItem  
+##  <a name="edititem"></a>  CVSListBox::EditItem  
  Inicia una operación de edición en el texto de un elemento de control de lista.  
   
 ```  
@@ -166,12 +161,12 @@ virtual BOOL EditItem(int iIndex);
  Índice de base cero de un elemento de control de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si la operación de edición se inicia correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si la operación de edición se inicia correctamente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  El usuario inicia una operación de edición haciendo doble clic en la etiqueta de un elemento, o bien presionando el **F2** o **barra espaciadora** clave cuando un elemento tiene el foco.  
   
-##  <a name="getcount"></a>CVSListBox::GetCount  
+##  <a name="getcount"></a>  CVSListBox::GetCount  
  Recupera el número de cadenas en un control de lista modificable.  
   
 ```  
@@ -184,7 +179,7 @@ virtual int GetCount() const;
 ### <a name="remarks"></a>Comentarios  
  Tenga en cuenta que el recuento es mayor que el valor de índice del último elemento porque el índice está basado en cero.  
   
-##  <a name="getitemdata"></a>CVSListBox::GetItemData  
+##  <a name="getitemdata"></a>  CVSListBox::GetItemData  
  Recupera un valor de 32 bits específica de la aplicación que está asociado a un elemento de control de lista modificable.  
   
 ```  
@@ -201,7 +196,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="remarks"></a>Comentarios  
  Use la [CVSListBox::SetItemData](#setitemdata) o [CVSListBox::AddItem](#additem) método para asociar el valor de 32 bits con el elemento de control de lista. Este valor puede ser un entero específico de la aplicación o un puntero a otros datos.  
   
-##  <a name="getitemtext"></a>CVSListBox::GetItemText  
+##  <a name="getitemtext"></a>  CVSListBox::GetItemText  
  Recupera el texto de un elemento de control de lista modificable.  
   
 ```  
@@ -217,7 +212,7 @@ virtual CString GetItemText(int iIndex) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
+##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd  
  Devuelve el identificador para el control de vista de lista incrustada actual.  
   
 ```  
@@ -230,7 +225,7 @@ virtual HWND GetListHwnd() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para recuperar un identificador para el control de vista de lista incrustada que admite la `CVSListBox` clase.  
   
-##  <a name="getselitem"></a>CVSListBox::GetSelItem  
+##  <a name="getselitem"></a>  CVSListBox::GetSelItem  
  Recupera el índice de base cero del elemento actualmente seleccionado en un control de lista modificable.  
   
 ```  
@@ -242,7 +237,7 @@ virtual int GetSelItem() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="removeitem"></a>CVSListBox::RemoveItem  
+##  <a name="removeitem"></a>  CVSListBox::RemoveItem  
  Quita un elemento de un control de lista modificable.  
   
 ```  
@@ -254,11 +249,11 @@ virtual BOOL RemoveItem(int iIndex);
  Índice de base cero de un elemento de control de lista modificable.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si se quita el elemento especificado; en caso contrario, `FALSE`.  
+ `TRUE` Si se quita el elemento especificado; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="selectitem"></a>CVSListBox::SelectItem  
+##  <a name="selectitem"></a>  CVSListBox::SelectItem  
  Selecciona una cadena de control de lista modificable.  
   
 ```  
@@ -270,12 +265,12 @@ virtual BOOL SelectItem(int iItem);
  Índice de base cero de un elemento de control de lista modificable.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si este método se realiza correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si este método se realiza correctamente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método selecciona el elemento especificado y, si es necesario, desplaza el elemento en la vista.  
   
-##  <a name="setitemdata"></a>CVSListBox::SetItemData  
+##  <a name="setitemdata"></a>  CVSListBox::SetItemData  
  Asocia un valor de 32 bits específica de la aplicación a un elemento de control de lista modificable.  
   
 ```  

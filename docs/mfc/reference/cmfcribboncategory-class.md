@@ -1,12 +1,9 @@
 ---
 title: Clase CMFCRibbonCategory | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCategory
@@ -139,17 +136,15 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c4e78017946ef335e04c8190b6ec4cd20e74ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91dbbe3b3207eba50fd9206719de2fd4afd5cc5b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncategory-class"></a>Clase de CMFCRibbonCategory
 El `CMFCRibbonCategory` clase implementa una pestaña de cinta que contiene un grupo de [paneles de la cinta de opciones](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -271,7 +266,7 @@ class CMFCRibbonCategory : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxribboncategory.h  
   
-##  <a name="addhidden"></a>CMFCRibbonCategory::AddHidden  
+##  <a name="addhidden"></a>  CMFCRibbonCategory::AddHidden  
  Agrega el elemento especificado de la cinta de opciones a la matriz de elementos de la cinta de opciones que se muestran en el cuadro de diálogo de personalización.  
   
 ```  
@@ -285,7 +280,7 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ### <a name="remarks"></a>Comentarios  
  Elementos de la cinta de opciones en el cuadro de diálogo de personalización son los comandos que se pueden agregar a la barra de herramientas de acceso rápido.  
   
-##  <a name="addpanel"></a>CMFCRibbonCategory::AddPanel  
+##  <a name="addpanel"></a>  CMFCRibbonCategory::AddPanel  
  Crea un panel de cinta de opciones para la categoría de cinta de opciones.  
   
 ```  
@@ -318,7 +313,7 @@ CMFCRibbonPanel* AddPanel(
   
  [!code-cpp[NVC_MFC_RibbonApp#10](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_1.cpp)]  
   
-##  <a name="cmfcribboncategory"></a>CMFCRibbonCategory::CMFCRibbonCategory  
+##  <a name="cmfcribboncategory"></a>  CMFCRibbonCategory::CMFCRibbonCategory  
  Construye e inicializa un [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) objeto.  
   
 ```  
@@ -352,7 +347,7 @@ CMFCRibbonCategory(
  [in] `sizeLargeImage`  
  Tamaño de imágenes de gran tamaño para los elementos de la cinta de opciones en la categoría de cinta predeterminado.  
   
-##  <a name="copyfrom"></a>CMFCRibbonCategory::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
  Copia el estado del elemento especificado [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) al actual [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) objeto.  
   
 ```  
@@ -365,7 +360,7 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="findbydata"></a>CMFCRibbonCategory::FindByData  
+##  <a name="findbydata"></a>  CMFCRibbonCategory::FindByData  
  Recupera el elemento de la cinta de opciones asociado a los datos especificados.  
   
 ```  
@@ -379,14 +374,14 @@ CMFCRibbonBaseElement* FindByData(
  Los datos asociados con un elemento de la cinta de opciones.  
   
  [in] `bVisibleOnly`  
- `TRUE`para incluir los elementos de la cinta de opciones de acceso rápido en la búsqueda; `FALSE` para excluir elementos de la cinta de opciones de acceso rápido en la búsqueda.  
+ `TRUE` para incluir los elementos de la cinta de opciones de acceso rápido en la búsqueda; `FALSE` para excluir elementos de la cinta de opciones de acceso rápido en la búsqueda.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a un elemento de la cinta si el método se realizó correctamente; en caso contrario, `NULL`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="findbyid"></a>CMFCRibbonCategory::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonCategory::FindByID  
  Recupera el elemento de la cinta de opciones asociado al identificador de comando especificado.  
   
 ```  
@@ -400,14 +395,14 @@ CMFCRibbonBaseElement* FindByID(
  Identificador de comando asociado a un elemento de la cinta de opciones.  
   
  [in] `bVisibleOnly`  
- `TRUE`para incluir los elementos de la cinta de opciones de acceso rápido en la búsqueda; `FALSE` para excluir elementos de la cinta de opciones de acceso rápido en la búsqueda.  
+ `TRUE` para incluir los elementos de la cinta de opciones de acceso rápido en la búsqueda; `FALSE` para excluir elementos de la cinta de opciones de acceso rápido en la búsqueda.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a un elemento de la cinta si el método se realizó correctamente; en caso contrario, `NULL`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="findpanelwithelem"></a>CMFCRibbonCategory::FindPanelWithElem  
+##  <a name="findpanelwithelem"></a>  CMFCRibbonCategory::FindPanelWithElem  
  Recupera el panel de la cinta que contiene el elemento especificado de la cinta de opciones.  
   
 ```  
@@ -423,7 +418,7 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getcontextid"></a>CMFCRibbonCategory::GetContextID  
+##  <a name="getcontextid"></a>  CMFCRibbonCategory::GetContextID  
  Recupera el identificador de contexto de la categoría de cinta de opciones.  
   
 ```  
@@ -436,7 +431,7 @@ UINT GetContextID() const;
 ### <a name="remarks"></a>Comentarios  
  El identificador de contexto es 0 si la categoría de cinta de opciones no es una categoría de cinta de opciones de contexto.  
   
-##  <a name="getdata"></a>CMFCRibbonCategory::GetData  
+##  <a name="getdata"></a>  CMFCRibbonCategory::GetData  
  Recupera los datos definidos por el usuario que está asociados a la categoría de cinta de opciones.  
   
 ```  
@@ -446,7 +441,7 @@ DWORD_PTR GetData() const;
 ### <a name="return-value"></a>Valor devuelto  
  Los datos definidos por el usuario que está asociados a la categoría de cinta de opciones.  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonCategory::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonCategory::GetDroppedDown  
  Recupera un puntero al elemento de la cinta de opciones que tiene actualmente el menú emergente que se muestra.  
   
 ```  
@@ -458,7 +453,7 @@ CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getelements"></a>CMFCRibbonCategory::GetElements  
+##  <a name="getelements"></a>  CMFCRibbonCategory::GetElements  
  Recupera todos los elementos de la cinta de opciones en la categoría de cinta de opciones.  
   
 ```  
@@ -473,7 +468,7 @@ void GetElements(
 ### <a name="remarks"></a>Comentarios  
  Elementos de la cinta de opciones que están diseñados para su uso en la barra de herramientas de acceso rápido se incluyen en la matriz.  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonCategory::GetElementsByID  
+##  <a name="getelementsbyid"></a>  CMFCRibbonCategory::GetElementsByID  
  Recupera todos los elementos de la cinta de opciones que están asociados con el identificador de comando especificado.  
   
 ```  
@@ -492,7 +487,7 @@ void GetElementsByID(
 ### <a name="remarks"></a>Comentarios  
  Elementos de la cinta de opciones que están diseñados para su uso en la barra de herramientas de acceso rápido se incluyen en la matriz.  
   
-##  <a name="getfirstvisibleelement"></a>CMFCRibbonCategory::GetFirstVisibleElement  
+##  <a name="getfirstvisibleelement"></a>  CMFCRibbonCategory::GetFirstVisibleElement  
  Recupera el primer elemento visible que pertenece a la categoría de cinta de opciones.  
   
 ```  
@@ -504,7 +499,7 @@ CMFCRibbonBaseElement* GetFirstVisibleElement() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getfocused"></a>CMFCRibbonCategory::GetFocused  
+##  <a name="getfocused"></a>  CMFCRibbonCategory::GetFocused  
  Devuelve un elemento que tiene el foco.  
   
 ```  
@@ -516,7 +511,7 @@ CMFCRibbonBaseElement* GetFocused();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="gethighlighted"></a>CMFCRibbonCategory::GetHighlighted  
+##  <a name="gethighlighted"></a>  CMFCRibbonCategory::GetHighlighted  
  Devuelve un elemento resaltado.  
   
 ```  
@@ -528,7 +523,7 @@ CMFCRibbonBaseElement* GetHighlighted();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getimagecount"></a>CMFCRibbonCategory::GetImageCount  
+##  <a name="getimagecount"></a>  CMFCRibbonCategory::GetImageCount  
  Recupera el número de imágenes en la lista de imágenes especificado que se encuentra en la categoría de cinta de opciones.  
   
 ```  
@@ -537,14 +532,14 @@ int GetImageCount(BOOL bIsLargeImage) const;
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bIsLargeImage`  
- `TRUE`el número de imágenes en la lista de imágenes de gran tamaño; `FALSE` para el número de imágenes en la lista de imágenes pequeñas.  
+ `TRUE` el número de imágenes en la lista de imágenes de gran tamaño; `FALSE` para el número de imágenes en la lista de imágenes pequeñas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El número de imágenes en la lista de imágenes especificado.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getimagesize"></a>CMFCRibbonCategory::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCRibbonCategory::GetImageSize  
  Recupera el tamaño de una imagen en la lista de imágenes especificado que se encuentra en la categoría de cinta de opciones.  
   
 ```  
@@ -553,7 +548,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bIsLargeImage`  
- `TRUE`el tamaño de imágenes de gran tamaño; `FALSE` para el tamaño de imágenes pequeñas.  
+ `TRUE` el tamaño de imágenes de gran tamaño; `FALSE` para el tamaño de imágenes pequeñas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño de una imagen en la lista de imágenes especificado.  
@@ -561,7 +556,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ### <a name="remarks"></a>Comentarios  
  El tamaño recuperar incluye el factor de escala de imagen global.  
   
-##  <a name="getitemidslist"></a>CMFCRibbonCategory::GetItemIDsList  
+##  <a name="getitemidslist"></a>  CMFCRibbonCategory::GetItemIDsList  
  Recupera los identificadores de comando para los elementos de la cinta de opciones que se encuentran en la categoría de cinta de opciones.  
   
 ```  
@@ -575,11 +570,11 @@ void GetItemIDsList(
  La lista de identificadores de comando para los elementos de la cinta de opciones en la categoría de cinta de opciones.  
   
  [in] `bHiddenOnly`  
- `TRUE`Para excluir elementos de cinta de opciones que se muestran en los paneles de cinta de opciones en la categoría de cinta de opciones; `FALSE` para incluir todos los elementos de la cinta de opciones en la categoría de cinta de opciones.  
+ `TRUE` Para excluir elementos de cinta de opciones que se muestran en los paneles de cinta de opciones en la categoría de cinta de opciones; `FALSE` para incluir todos los elementos de la cinta de opciones en la categoría de cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getlargeimages"></a>CMFCRibbonCategory::GetLargeImages  
+##  <a name="getlargeimages"></a>  CMFCRibbonCategory::GetLargeImages  
  Recupera la lista de imágenes de gran tamaño que se encuentran en la categoría de cinta de opciones.  
   
 ```  
@@ -589,7 +584,7 @@ CMFCToolBarImages& GetLargeImages();
 ### <a name="return-value"></a>Valor devuelto  
  La lista de imágenes de gran tamaño que se encuentran en la categoría de cinta de opciones.  
   
-##  <a name="getlastvisibleelement"></a>CMFCRibbonCategory::GetLastVisibleElement  
+##  <a name="getlastvisibleelement"></a>  CMFCRibbonCategory::GetLastVisibleElement  
  Recupera el último elemento visible que pertenece a la categoría de cinta de opciones.  
   
 ```  
@@ -601,7 +596,7 @@ CMFCRibbonBaseElement* GetLastVisibleElement() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getmaxheight"></a>CMFCRibbonCategory::GetMaxHeight  
+##  <a name="getmaxheight"></a>  CMFCRibbonCategory::GetMaxHeight  
  Recupera el alto máximo de los paneles de cinta de opciones que se encuentran en la categoría de cinta de opciones.  
   
 ```  
@@ -618,7 +613,7 @@ int GetMaxHeight(CDC* pDC);
 ### <a name="remarks"></a>Comentarios  
  El valor recuperado incluye el alto de los márgenes superior e inferior de los paneles de cinta de opciones.  
   
-##  <a name="getname"></a>CMFCRibbonCategory::GetName  
+##  <a name="getname"></a>  CMFCRibbonCategory::GetName  
  Recupera el nombre de la categoría de cinta de opciones.  
   
 ```  
@@ -630,7 +625,7 @@ LPCTSTR GetName() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getpanel"></a>CMFCRibbonCategory::GetPanel  
+##  <a name="getpanel"></a>  CMFCRibbonCategory::GetPanel  
  Devuelve un puntero al panel de cinta de opciones que se encuentra en el índice especificado.  
   
 ```  
@@ -647,7 +642,7 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ### <a name="remarks"></a>Comentarios  
  Se produce una excepción si `nIndex` está fuera del intervalo.  
   
-##  <a name="getpanelcount"></a>CMFCRibbonCategory::GetPanelCount  
+##  <a name="getpanelcount"></a>  CMFCRibbonCategory::GetPanelCount  
  Devuelve el número de paneles de cinta en la categoría de cinta de opciones.  
   
 ```  
@@ -657,7 +652,7 @@ int GetPanelCount() const;
 ### <a name="return-value"></a>Valor devuelto  
  El número de paneles de cinta de opciones en la categoría de cinta de opciones.  
   
-##  <a name="getpanelfrompoint"></a>CMFCRibbonCategory::GetPanelFromPoint  
+##  <a name="getpanelfrompoint"></a>  CMFCRibbonCategory::GetPanelFromPoint  
  Recupera un puntero a un panel de la cinta si el punto especificado se encuentra en ella.  
   
 ```  
@@ -674,7 +669,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ### <a name="remarks"></a>Comentarios  
  Se admiten los paneles de cinta que se encuentran en la categoría de cinta de opciones.  
   
-##  <a name="getpanelindex"></a>CMFCRibbonCategory::GetPanelIndex  
+##  <a name="getpanelindex"></a>  CMFCRibbonCategory::GetPanelIndex  
  Recupera el índice de base cero del panel de la cinta especificada.  
   
 ```  
@@ -691,7 +686,7 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ### <a name="remarks"></a>Comentarios  
  Se busca en paneles de cinta que se encuentran en la categoría de cinta de opciones.  
   
-##  <a name="getparentbutton"></a>CMFCRibbonCategory::GetParentButton  
+##  <a name="getparentbutton"></a>  CMFCRibbonCategory::GetParentButton  
  Recupera el elemento primario de la cinta de la categoría de cinta de opciones.  
   
 ```  
@@ -703,7 +698,7 @@ CMFCRibbonBaseElement* GetParentButton() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getparentmenubar"></a>CMFCRibbonCategory::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>  CMFCRibbonCategory::GetParentMenuBar  
  Devuelve un puntero a la barra de menús principal de la `CMFCRibbonCategory` objeto.  
   
 ```  
@@ -715,7 +710,7 @@ CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getparentribbonbar"></a>CMFCRibbonCategory::GetParentRibbonBar  
+##  <a name="getparentribbonbar"></a>  CMFCRibbonCategory::GetParentRibbonBar  
  Recupera la barra de cinta primario para la categoría de cinta de opciones.  
   
 ```  
@@ -727,7 +722,7 @@ CMFCRibbonBar* GetParentRibbonBar() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getrect"></a>CMFCRibbonCategory::GetRect  
+##  <a name="getrect"></a>  CMFCRibbonCategory::GetRect  
  Recupera el rectángulo de presentación de la categoría de cinta de opciones.  
   
 ```  
@@ -740,7 +735,7 @@ CRect GetRect() const;
 ### <a name="remarks"></a>Comentarios  
  El rectángulo de presentación de la categoría de cinta de opciones no incluye la pestaña de categoría.  
   
-##  <a name="getsmallimages"></a>CMFCRibbonCategory::GetSmallImages  
+##  <a name="getsmallimages"></a>  CMFCRibbonCategory::GetSmallImages  
  Recupera la lista de imágenes más pequeñas que se encuentran en la categoría de cinta de opciones.  
   
 ```  
@@ -750,7 +745,7 @@ CMFCToolBarImages& GetSmallImages();
 ### <a name="return-value"></a>Valor devuelto  
  La lista de imágenes más pequeñas que se encuentran en la categoría de cinta de opciones.  
   
-##  <a name="gettabcolor"></a>CMFCRibbonCategory::GetTabColor  
+##  <a name="gettabcolor"></a>  CMFCRibbonCategory::GetTabColor  
  Devuelve el color actual de la pestaña de categoría de cinta de opciones.  
   
 ```  
@@ -777,7 +772,7 @@ AFX_RibbonCategoryColor GetTabColor() const;
   
 -   AFX_CategoryColor_Violet  
   
-##  <a name="gettabrect"></a>CMFCRibbonCategory::GetTabRect  
+##  <a name="gettabrect"></a>  CMFCRibbonCategory::GetTabRect  
  Recupera el rectángulo de presentación de la pestaña de categoría de cinta de opciones.  
   
 ```  
@@ -789,7 +784,7 @@ CRect GetTabRect() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="gettexttopline"></a>CMFCRibbonCategory::GetTextTopLine  
+##  <a name="gettexttopline"></a>  CMFCRibbonCategory::GetTextTopLine  
  Recupera la ubicación vertical del texto en los botones de la cinta de opciones en la categoría de cinta de opciones que se muestran imágenes de gran tamaño.  
   
 ```  
@@ -801,7 +796,7 @@ int GetTextTopLine() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getvisibleelements"></a>CMFCRibbonCategory::GetVisibleElements  
+##  <a name="getvisibleelements"></a>  CMFCRibbonCategory::GetVisibleElements  
  Recupera todos los elementos visibles que pertenecen a la categoría de cinta de opciones.  
   
 ```  
@@ -816,7 +811,7 @@ void GetVisibleElements(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="highlightpanel"></a>CMFCRibbonCategory::HighlightPanel  
+##  <a name="highlightpanel"></a>  CMFCRibbonCategory::HighlightPanel  
  Resalta el panel de la cinta especificada.  
   
 ```  
@@ -838,7 +833,7 @@ CMFCRibbonPanel* HighlightPanel(
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información sobre cómo resaltar un panel de cinta de opciones, vea [CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight).  
   
-##  <a name="hittest"></a>CMFCRibbonCategory::HitTest  
+##  <a name="hittest"></a>  CMFCRibbonCategory::HitTest  
  Recupera un puntero a un elemento de la cinta si el punto especificado se encuentra en ella.  
   
 ```  
@@ -852,7 +847,7 @@ CMFCRibbonBaseElement* HitTest(
  Las coordenadas x e y del puntero del mouse, en relación con la esquina superior izquierda de la ventana.  
   
  [in] `bCheckPanelCaption`  
- `TRUE`Para probar el título del panel de cinta de opciones; `FALSE` para excluir el título del panel de cinta de opciones.  
+ `TRUE` Para probar el título del panel de cinta de opciones; `FALSE` para excluir el título del panel de cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a un elemento de la cinta si el método se realizó correctamente; en caso contrario, `NULL`.  
@@ -860,7 +855,7 @@ CMFCRibbonBaseElement* HitTest(
 ### <a name="remarks"></a>Comentarios  
  Solo los elementos de la cinta de opciones que se encuentran en la categoría de cinta de opciones se prueban.  
   
-##  <a name="hittestex"></a>CMFCRibbonCategory::HitTestEx  
+##  <a name="hittestex"></a>  CMFCRibbonCategory::HitTestEx  
  Recupera el índice de base cero de un elemento de la cinta si el punto especificado se encuentra en ella.  
   
 ```  
@@ -877,7 +872,7 @@ int HitTestEx(CPoint point) const;
 ### <a name="remarks"></a>Comentarios  
  Solo los elementos de la cinta de opciones que se encuentran en la categoría de cinta de opciones se prueban.  
   
-##  <a name="hittestscrollbuttons"></a>CMFCRibbonCategory::HitTestScrollButtons  
+##  <a name="hittestscrollbuttons"></a>  CMFCRibbonCategory::HitTestScrollButtons  
  Si un punto se encuentra dentro de botón de desplazamiento izquierdo o derecho de la categoría de cinta de opciones, devuelve un puntero a ese botón.  
   
 ```  
@@ -893,7 +888,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="isactive"></a>CMFCRibbonCategory::IsActive  
+##  <a name="isactive"></a>  CMFCRibbonCategory::IsActive  
  Indica si la categoría de cinta de opciones es la categoría activa en la barra de cinta de opciones.  
   
 ```  
@@ -901,12 +896,12 @@ BOOL IsActive() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si la categoría de cinta de opciones es la categoría activa; en caso contrario, `FALSE`.  
+ `TRUE` Si la categoría de cinta de opciones es la categoría activa; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  La categoría de cinta de opciones active muestra sus paneles de cinta.  
   
-##  <a name="isvisible"></a>CMFCRibbonCategory::IsVisible  
+##  <a name="isvisible"></a>  CMFCRibbonCategory::IsVisible  
  Indica si la categoría de cinta de opciones está visible.  
   
 ```  
@@ -914,12 +909,12 @@ BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si la categoría de cinta de opciones está visible; en caso contrario, `FALSE`.  
+ `TRUE` Si la categoría de cinta de opciones está visible; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Categorías de cinta de opciones que aparecen muestra una pestaña de categoría.  
   
-##  <a name="iswindows7look"></a>CMFCRibbonCategory::IsWindows7Look  
+##  <a name="iswindows7look"></a>  CMFCRibbonCategory::IsWindows7Look  
  Indica si la cinta de opciones de elemento primario tiene Windows 7 buscar (botón de aplicación rectangular pequeño).  
   
 ```  
@@ -927,11 +922,11 @@ BOOL IsWindows7Look() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si la cinta de opciones de elemento primario tiene Windows 7 buscar; en caso contrario, `FALSE`.  
+ `TRUE` Si la cinta de opciones de elemento primario tiene Windows 7 buscar; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="notifycontrolcommand"></a>CMFCRibbonCategory::NotifyControlCommand  
+##  <a name="notifycontrolcommand"></a>  CMFCRibbonCategory::NotifyControlCommand  
  Entrega un mensaje de comando WM_NOTIFY a todos los `CMFCRibbonPanel` elementos en el `CMFCRibbonCategory` hasta que se controla el mensaje.  
   
 ```  
@@ -944,7 +939,7 @@ virtual BOOL NotifyControlCommand(
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bAccelerator`  
- `TRUE`Si este comando se originó en un acelerador o `FALSE` en caso contrario.  
+ `TRUE` Si este comando se originó en un acelerador o `FALSE` en caso contrario.  
   
  [in] `nNotifyCode`  
  El código de notificación.  
@@ -960,7 +955,7 @@ virtual BOOL NotifyControlCommand(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="oncancelmode"></a>CMFCRibbonCategory::OnCancelMode  
+##  <a name="oncancelmode"></a>  CMFCRibbonCategory::OnCancelMode  
  Invoca el modo de cancelar en todos los `CMFCRibbonPanel` elementos de la `CMFCRibbonCategory`.  
   
 ```  
@@ -969,7 +964,7 @@ virtual void OnCancelMode();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="ondraw"></a>CMFCRibbonCategory::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonCategory::OnDraw  
  Lo llama el marco de trabajo para dibujar la categoría de cinta de opciones.  
   
 ```  
@@ -982,7 +977,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="ondrawimage"></a>CMFCRibbonCategory::OnDrawImage  
+##  <a name="ondrawimage"></a>  CMFCRibbonCategory::OnDrawImage  
  Lo llama el marco de trabajo para dibujar la imagen especificada en la categoría de cinta de opciones.  
   
 ```  
@@ -1006,20 +1001,20 @@ virtual BOOL OnDrawImage(
  Puntero al elemento de la cinta de opciones que contiene la imagen.  
   
  [in] `bIsLargeImage`  
- `TRUE`Si la imagen es el gran tamaño; `FALSE` si la imagen es el tamaño pequeño.  
+ `TRUE` Si la imagen es el gran tamaño; `FALSE` si la imagen es el tamaño pequeño.  
   
  [in] `nImageIndex`  
  Índice de base cero de la imagen en la matriz de imagen que se encuentra en la categoría de cinta de opciones.  
   
  [in] `bCenter`  
- `TRUE`Para centrar la imagen en el rectángulo de presentación; `FALSE` para dibujar la imagen en la esquina superior izquierda del rectángulo de presentación.  
+ `TRUE` Para centrar la imagen en el rectángulo de presentación; `FALSE` para dibujar la imagen en la esquina superior izquierda del rectángulo de presentación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el método se realizó correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si el método se realizó correctamente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="ondrawmenuborder"></a>CMFCRibbonCategory::OnDrawMenuBorder  
+##  <a name="ondrawmenuborder"></a>  CMFCRibbonCategory::OnDrawMenuBorder  
  Lo llama el marco de trabajo para dibujar el borde de un menú emergente.  
   
 ```  
@@ -1038,7 +1033,7 @@ virtual void OnDrawMenuBorder(
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada este método no hace nada. Invalide este método para dibujar el borde de un menú emergente.  
   
-##  <a name="onkey"></a>CMFCRibbonCategory::OnKey  
+##  <a name="onkey"></a>  CMFCRibbonCategory::OnKey  
  Lo llama el marco cuando el usuario presiona un botón de teclado.  
   
 ```  
@@ -1051,7 +1046,7 @@ virtual BOOL OnKey(UINT nChar);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="onlbuttondown"></a>CMFCRibbonCategory::OnLButtonDown  
+##  <a name="onlbuttondown"></a>  CMFCRibbonCategory::OnLButtonDown  
  Lo llama el marco de trabajo para recuperar el elemento de la cinta de opciones en el punto especificado cuando el usuario presiona el botón primario del mouse.  
   
 ```  
@@ -1067,7 +1062,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="onlbuttonup"></a>CMFCRibbonCategory::OnLButtonUp  
+##  <a name="onlbuttonup"></a>  CMFCRibbonCategory::OnLButtonUp  
  Lo llama el marco de trabajo cuando el usuario suelta el botón primario del mouse y el puntero está sobre la categoría de cinta de opciones.  
   
 ```  
@@ -1080,7 +1075,7 @@ virtual void OnLButtonUp(CPoint point);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="onmousemove"></a>CMFCRibbonCategory::OnMouseMove  
+##  <a name="onmousemove"></a>  CMFCRibbonCategory::OnMouseMove  
  Llamado por el marco de trabajo cuando se mueve el puntero en la barra de cinta de opciones para actualizar la presentación de la categoría de cinta de opciones.  
   
 ```  
@@ -1093,7 +1088,7 @@ virtual void OnMouseMove(CPoint point);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonCategory::OnRTLChanged  
+##  <a name="onrtlchanged"></a>  CMFCRibbonCategory::OnRTLChanged  
  Lo llama el marco cuando cambia el diseño de la dirección.  
   
 ```  
@@ -1102,12 +1097,12 @@ virtual void OnRTLChanged(BOOL bIsRTL);
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bIsRTL`  
- `TRUE`Si el diseño es de derecha a izquierda; `FALSE` si el diseño es de izquierda a derecha.  
+ `TRUE` Si el diseño es de derecha a izquierda; `FALSE` si el diseño es de izquierda a derecha.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método ajusta el diseño de todos los paneles de cinta y los elementos de la cinta de opciones que figuran en la categoría de cinta de opciones.  
   
-##  <a name="onscrollhorz"></a>CMFCRibbonCategory::OnScrollHorz  
+##  <a name="onscrollhorz"></a>  CMFCRibbonCategory::OnScrollHorz  
  Se desplaza a la categoría de cinta de opciones en dirección horizontal.  
   
 ```  
@@ -1118,17 +1113,17 @@ virtual BOOL OnScrollHorz(
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bScrollLeft`  
- `TRUE`para desplazarse a la izquierda; `FALSE` para desplazarse a la derecha.  
+ `TRUE` para desplazarse a la izquierda; `FALSE` para desplazarse a la derecha.  
   
  [in] `nScrollOffset`  
  La distancia de desplazamiento, en píxeles.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si la categoría de cinta de opciones se mueve en dirección horizontal; en caso contrario, `FALSE`.  
+ `TRUE` Si la categoría de cinta de opciones se mueve en dirección horizontal; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="onupdatecmdui"></a>CMFCRibbonCategory::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCRibbonCategory::OnUpdateCmdUI  
  Llamadas el `OnUpdateCmdUI` función miembro en cada uno de los `CMFCRibbonPanel` elementos de la `CMFCRibbonCategory` para habilitar o deshabilitar los elementos de interfaz de usuario en ellos.  
   
 ```  
@@ -1146,11 +1141,11 @@ virtual void OnUpdateCmdUI(
  Puntero a la ventana que controla la habilitación o deshabilitación de los elementos de interfaz de usuario.  
   
  [in] `bDisableIfNoHndler`  
- `TRUE`Para deshabilitar el elemento de interfaz de usuario si no hay ningún controlador se define en un mapa de mensajes; en caso contrario, `FALSE`.  
+ `TRUE` Para deshabilitar el elemento de interfaz de usuario si no hay ningún controlador se define en un mapa de mensajes; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="recalclayout"></a>CMFCRibbonCategory::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCRibbonCategory::RecalcLayout  
  Ajusta el diseño de todos los controles en la categoría de cinta de opciones.  
   
 ```  
@@ -1163,7 +1158,7 @@ virtual void RecalcLayout(CDC* pDC);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="removepanel"></a>CMFCRibbonCategory::RemovePanel  
+##  <a name="removepanel"></a>  CMFCRibbonCategory::RemovePanel  
  Quita un panel de cinta de opciones de la categoría de cinta de opciones.  
   
 ```cpp  
@@ -1177,12 +1172,12 @@ BOOL RemovePanel(
  El número de índice del panel que se va a quitar. Obtenido mediante una llamada a la [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) método.  
   
  [in] `bDelete`  
- `TRUE`Para eliminar el objeto de panel de la memoria; `FALSE` para eliminar el objeto de panel sin eliminarla.  
+ `TRUE` Para eliminar el objeto de panel de la memoria; `FALSE` para eliminar el objeto de panel sin eliminarla.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es `TRUE` si el método es correcto; en caso contrario, es `FALSE`.  
   
-##  <a name="repospanels"></a>CMFCRibbonCategory::ReposPanels  
+##  <a name="repospanels"></a>  CMFCRibbonCategory::ReposPanels  
  Ajusta el diseño de todos los controles en los paneles de cinta de opciones que se encuentran en la categoría de cinta de opciones.  
   
 ```  
@@ -1195,7 +1190,7 @@ virtual void ReposPanels(CDC* pDC);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="setcollapseorder"></a>CMFCRibbonCategory::SetCollapseOrder  
+##  <a name="setcollapseorder"></a>  CMFCRibbonCategory::SetCollapseOrder  
  Define el orden en que se contraen los paneles de cinta de opciones de la categoría de cinta de opciones.  
   
 ```  
@@ -1218,7 +1213,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
   
  [!code-cpp[NVC_MFC_RibbonApp#13](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_2.cpp)]  
   
-##  <a name="setdata"></a>CMFCRibbonCategory::SetData  
+##  <a name="setdata"></a>  CMFCRibbonCategory::SetData  
  Establece los datos definidos por el usuario que desee asociar a la categoría de cinta de opciones.  
   
 ```  
@@ -1229,7 +1224,7 @@ void SetData(DWORD_PTR dwData);
  [in] `dwData`  
  Los datos definidos por el usuario.  
   
-##  <a name="setkeys"></a>CMFCRibbonCategory::SetKeys  
+##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
  Asigna keytip a la categoría de cinta de opciones.  
   
 ```  
@@ -1243,7 +1238,7 @@ void SetKeys(LPCTSTR lpszKeys);
 ### <a name="remarks"></a>Comentarios  
  Sugerencias de teclas se muestran cuando el usuario presiona la tecla Alt o la tecla F10.  
   
-##  <a name="setname"></a>CMFCRibbonCategory::SetName  
+##  <a name="setname"></a>  CMFCRibbonCategory::SetName  
  Asigna un nombre y la keytip a la categoría de cinta de opciones.  
   
 ```  
@@ -1257,7 +1252,7 @@ void SetName(LPCTSTR lpszName);
 ### <a name="remarks"></a>Comentarios  
  Para establecer la keytip para la categoría de cinta de opciones, anexar una secuencia de escape de nueva línea seguida por los caracteres de keytip a `lpszName`.  
   
-##  <a name="settabcolor"></a>CMFCRibbonCategory:: Settabcolor  
+##  <a name="settabcolor"></a>  CMFCRibbonCategory:: Settabcolor  
  Establece el color de la categoría de cinta de opciones.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Servicios de diagnóstico | Documentos de Microsoft"
-ms.custom: 
+title: Servicios de diagnóstico | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c9e8e7cd2b9396592416ea9845c97d75a7d648
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2332090032a93152b6c841336538bf9d45984300
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostic-services"></a>Servicios de diagnóstico
 La biblioteca MFC (Microsoft Foundation Class) ofrece muchos servicios de diagnóstico que facilitan la depuración de los programas con mayor facilidad. Estos servicios de diagnóstico incluyen macros y funciones globales que le permiten realizar un seguimiento de las asignaciones de memoria de su programa, volcar el contenido de los objetos en tiempo de ejecución e imprimir mensajes de depuración en tiempo de ejecución. Las macros y funciones globales para servicios de diagnóstico se agrupan en las siguientes categorías:  
@@ -106,7 +101,7 @@ La biblioteca MFC (Microsoft Foundation Class) ofrece muchos servicios de diagn�
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Suprime las advertencias del compilador para el uso de funciones en desuso de MFC.|  
 
 
-## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS
+## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 Suprime las advertencias del compilador para el uso de funciones en desuso de MFC.  
    
 ### <a name="syntax"></a>Sintaxis   
@@ -128,7 +123,7 @@ char sz[256];
 pRichEdit->GetSelText(sz);
 ```
 
-## <a name="afxdebugbreak"></a>AfxDebugBreak
+## <a name="afxdebugbreak"></a> AfxDebugBreak
 Llame a esta función para producir una interrupción (en la ubicación de la llamada a `AfxDebugBreak`) en la ejecución de la versión de depuración de la aplicación MFC.  
 
 ### <a name="syntax"></a>Sintaxis    
@@ -137,7 +132,7 @@ void AfxDebugBreak( );
 ```  
    
 ### <a name="remarks"></a>Comentarios  
- `AfxDebugBreak`no tiene ningún efecto en las versiones de lanzamiento de una aplicación MFC y se debería quitar. Esta función sólo debe utilizarse en aplicaciones MFC. Usar la versión de API de Win32, **DebugBreak**, para producir una interrupción en las aplicaciones no están basados en MFC.  
+ `AfxDebugBreak` no tiene ningún efecto en las versiones de lanzamiento de una aplicación MFC y se debería quitar. Esta función sólo debe utilizarse en aplicaciones MFC. Usar la versión de API de Win32, **DebugBreak**, para producir una interrupción en las aplicaciones no están basados en MFC.  
    
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxver_.h   
@@ -216,7 +211,7 @@ ASSERT_VALID(pObject)
  Especifica un objeto de una clase derivada de `CObject` que tiene una versión de reemplazo de la `AssertValid` función miembro.  
   
 ### <a name="remarks"></a>Comentarios  
- `ASSERT_VALID`llamadas a la `AssertValid` función de miembro del objeto pasado como argumento.  
+ `ASSERT_VALID` llamadas a la `AssertValid` función de miembro del objeto pasado como argumento.  
   
  En la versión de lanzamiento de MFC, `ASSERT_VALID` no hace nada. En la versión de depuración, valida el puntero, se realiza una comprobación contra **NULL**y llama a propia del objeto `AssertValid` funciones miembro. Si cualquiera de estas pruebas se produce un error, se muestra un mensaje de alerta en la misma manera que [ASSERT](#assert).  
   
@@ -273,7 +268,7 @@ DEBUG_ONLY(expression)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h
 
- ### <a name="ensure"></a>Asegúrese de que y ENSURE_VALID
+ ### <a name="ensure"></a>  Asegúrese de que y ENSURE_VALID
 Usar para validar la corrección de datos.  
    
 ### <a name="syntax"></a>Sintaxis    
@@ -303,7 +298,7 @@ ENSURE_VALID( booleanExpression  )
  [COMPROBAR](#verify)   
  [ATLENSURE](#altensure)
 
-## <a name="this_file"></a>THIS_FILE
+## <a name="this_file"></a> THIS_FILE
 Se expande al nombre del archivo que se está compilando.  
    
 ### <a name="syntax"></a>Sintaxis    
@@ -380,7 +375,7 @@ VERIFY(booleanExpression)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h
 
-##  <a name="cdumpcontext_in_mfc"></a>afxDump (CDumpContext en MFC)  
+##  <a name="cdumpcontext_in_mfc"></a>  afxDump (CDumpContext en MFC)  
  Proporciona funcionalidad básica volcado de objetos en la aplicación.  
   
 ```   
@@ -388,7 +383,7 @@ CDumpContext  afxDump;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `afxDump`está predefinido [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objeto que le permite enviar `CDumpContext` información en la ventana de salida del depurador o en un terminal de depuración. Por lo general, proporcionar `afxDump` como un parámetro a `CObject::Dump`.  
+ `afxDump` está predefinido [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objeto que le permite enviar `CDumpContext` información en la ventana de salida del depurador o en un terminal de depuración. Por lo general, proporcionar `afxDump` como un parámetro a `CObject::Dump`.  
   
  En Windows NT y todas las versiones de Windows, `afxDump` la salida se envía a la ventana de salida de depuración de Visual C++ cuando se depura la aplicación.  
   
@@ -401,7 +396,7 @@ CDumpContext  afxDump;
  **Encabezado:** afx.h
 
 
-## <a name="afxdump"></a>AfxDump (interno)
+## <a name="afxdump"></a> AfxDump (interno)
 Función interna que utiliza MFC para volcar el estado de un objeto durante la depuración.  
 
 ### <a name="syntax"></a>Sintaxis    
@@ -433,7 +428,7 @@ int  afxMemDF;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `afxMemDF`puede tener los valores siguientes según lo especificado por la enumeración `afxMemDF`:  
+ `afxMemDF` puede tener los valores siguientes según lo especificado por la enumeración `afxMemDF`:  
   
 - **allocMemDF** activa el asignador de depuración (valor predeterminado en la biblioteca de depuración).  
   
@@ -502,7 +497,7 @@ BOOL  AfxCheckMemory();
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h  
  
-##  <a name="afxdump"></a>AfxDump (MFC)  
+##  <a name="afxdump"></a>  AfxDump (MFC)  
  Llame a esta función en el depurador para volcar el estado de un objeto durante la depuración.  
   
 ```   
@@ -605,7 +600,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 |`void AfxDumpStack(unsigned long)`|El prototipo de función se llama.|  
 |`+ 181 bytes`|Desplazamiento en bytes de la dirección del prototipo de función (en este caso, `void AfxDumpStack(unsigned long)`) a la dirección de retorno (en este caso, `00427D55`).|  
   
- `AfxDumpStack`está disponible en versiones de depuración y nondebug de las bibliotecas MFC; Sin embargo, la función siempre está vinculada estáticamente, incluso cuando el archivo ejecutable utiliza MFC en un archivo DLL compartido. En implementaciones de biblioteca compartida, la función se encuentra en la MFCS42. Biblioteca LIB (y sus variantes).  
+ `AfxDumpStack` está disponible en versiones de depuración y nondebug de las bibliotecas MFC; Sin embargo, la función siempre está vinculada estáticamente, incluso cuando el archivo ejecutable utiliza MFC en un archivo DLL compartido. En implementaciones de biblioteca compartida, la función se encuentra en la MFCS42. Biblioteca LIB (y sus variantes).  
   
  Para usar esta función correctamente:  
   
@@ -615,7 +610,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h 
 
-##  <a name="afxenablememoryleakdump"></a>AfxEnableMemoryLeakDump  
+##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump  
  Habilita y deshabilita el volcado de pérdida de memoria en el destructor `AFX_DEBUG_STATE` .  
   
 ```  

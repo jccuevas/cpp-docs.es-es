@@ -1,12 +1,9 @@
 ---
 title: Clase CMFCRibbonCheckBox | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCheckBox
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc46d934c99e24b63ef314ef1f63402893c6bb18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncheckbox-class"></a>Clase CMFCRibbonCheckBox
 La clase `CMFCRibbonCheckBox` implementa una casilla que se puede agregar a un menú emergente, a la barra de herramientas de acceso rápido o al panel de cinta de opciones.  
@@ -97,7 +92,7 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxribboncheckbox.h  
   
-##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
+##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
  Constructor de un objeto de casilla de verificación de la cinta de opciones  
   
 ```  
@@ -121,7 +116,7 @@ CMFCRibbonCheckBox(
   
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
-##  <a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize  
  Cuando se reemplaza, obtiene el tamaño compacto de la casilla de verificación.  
   
 ```  
@@ -138,7 +133,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>Comentarios  
  Si no se reemplaza, devuelve el tamaño de la casilla de verificación intermedio.  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize  
  Obtiene el tamaño de la casilla de verificación intermedio.  
   
 ```  
@@ -155,7 +150,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>Comentarios  
  Si no se reemplaza, calcula el tamaño intermedio como el tamaño de la casilla de verificación predeterminado ( `AFX_CHECK_BOX_DEFAULT_SIZE`) más el tamaño del texto, además de los márgenes.  
   
-##  <a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize  
  Obtiene el tamaño normal de la casilla de verificación.  
   
 ```  
@@ -172,7 +167,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>Comentarios  
  Si no se reemplaza, devuelve el tamaño de la casilla de verificación intermedio.  
   
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage  
  Indica si hay una imagen de información sobre herramientas asociada a la casilla de verificación.  
   
 ```  
@@ -184,7 +179,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw  
  Lo llama el marco de trabajo para dibujar la casilla de verificación Usar un contexto de dispositivo especificado.  
   
 ```  
@@ -197,7 +192,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
  Lo llama el marco de trabajo para dibujar una imagen del menú de la casilla.  
   
 ```  
@@ -217,7 +212,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ### <a name="remarks"></a>Comentarios  
  Si no se reemplaza, devuelve `FALSE`.  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
  Lo llama el marco de trabajo para dibujar la casilla de verificación en un cuadro de lista de comandos.  
   
 ```  
@@ -244,14 +239,14 @@ virtual void OnDrawOnList(
  El rectángulo de presentación de la casilla.  
   
  [in] `bIsSelected`  
- `TRUE`Si se selecciona la casilla de verificación, o `FALSE` si no es así.  
+ `TRUE` Si se selecciona la casilla de verificación, o `FALSE` si no es así.  
   
  [in] `bHighlighted`  
- `TRUE`Si la casilla de verificación está resaltado, o `FALSE` si no es así.  
+ `TRUE` Si la casilla de verificación está resaltado, o `FALSE` si no es así.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonCheckBox::SetACCData  
  Establece los datos de accesibilidad de la casilla.  
   
 ```  

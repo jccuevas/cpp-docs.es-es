@@ -2,11 +2,8 @@
 title: Clase CHttpFile | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHttpFile
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e9af23bb74ba8e96f29a5b7cc4139d2932df8c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chttpfile-class"></a>Clase CHttpFile
 Proporciona la funcionalidad para solicitar y leer archivos en un servidor HTTP.  
@@ -97,7 +92,7 @@ class CHttpFile : public CInternetFile
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxinet.h  
   
-##  <a name="addrequestheaders"></a>CHttpFile:: AddRequestHeaders  
+##  <a name="addrequestheaders"></a>  CHttpFile:: AddRequestHeaders  
  Llame a esta función miembro para agregar uno o más encabezados de solicitud HTTP para la solicitud HTTP controlen.  
   
 ```  
@@ -119,13 +114,13 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  Modifica la semántica de los encabezados de nuevo. Puede ser uno de los siguientes:  
   
-- `HTTP_ADDREQ_FLAG_COALESCE`Combina los encabezados del mismo nombre, con la marca para agregar el primer encabezado detectado que el encabezado posterior. Por ejemplo, "Accept: texto / *" seguido de "Accept: audio /\*" da como resultado la formación de solo encabezado "Accept: texto /\*, audio /\*". Depende de la aplicación que realiza la llamada para garantizar un esquema coherente con respecto a los datos que recibe las solicitudes enviadas con encabezados combinados o en otra diferentes.  
+- `HTTP_ADDREQ_FLAG_COALESCE` Combina los encabezados del mismo nombre, con la marca para agregar el primer encabezado detectado que el encabezado posterior. Por ejemplo, "Accept: texto / *" seguido de "Accept: audio /\*" da como resultado la formación de solo encabezado "Accept: texto /\*, audio /\*". Depende de la aplicación que realiza la llamada para garantizar un esquema coherente con respecto a los datos que recibe las solicitudes enviadas con encabezados combinados o en otra diferentes.  
   
-- `HTTP_ADDREQ_FLAG_REPLACE`Realiza una eliminación y agregar para reemplazar el encabezado actual. El nombre del encabezado que se usará para quitar el encabezado actual y el valor completo se usará para agregar el nuevo encabezado. Si el valor de encabezado está vacío y se encuentra el encabezado, se quita. Si no está vacío, se reemplaza el valor del encabezado.  
+- `HTTP_ADDREQ_FLAG_REPLACE` Realiza una eliminación y agregar para reemplazar el encabezado actual. El nombre del encabezado que se usará para quitar el encabezado actual y el valor completo se usará para agregar el nuevo encabezado. Si el valor de encabezado está vacío y se encuentra el encabezado, se quita. Si no está vacío, se reemplaza el valor del encabezado.  
   
-- `HTTP_ADDREQ_FLAG_ADD_IF_NEW`Solo agrega el encabezado si aún no existe. Si existe, se devuelve un error.  
+- `HTTP_ADDREQ_FLAG_ADD_IF_NEW` Solo agrega el encabezado si aún no existe. Si existe, se devuelve un error.  
   
-- `HTTP_ADDREQ_FLAG_ADD`Se utiliza con reemplazo. Agrega el encabezado si no existe.  
+- `HTTP_ADDREQ_FLAG_ADD` Se utiliza con reemplazo. Agrega el encabezado si no existe.  
   
  `dwHeadersLen`  
  La longitud, en caracteres, de `pstrHeaders`. Si se trata a continuación, en-1 L `pstrHeaders` se supone que termina en cero y se calcula la longitud.  
@@ -137,12 +132,12 @@ BOOL AddRequestHeaders(
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.  
   
 ### <a name="remarks"></a>Comentarios  
- `AddRequestHeaders`anexa encabezados adicionales y formato libre para el controlador de la solicitud HTTP. Está diseñado para su uso por los clientes sofisticados que necesitan un control detallado sobre la solicitud exacta enviada al servidor HTTP.  
+ `AddRequestHeaders` anexa encabezados adicionales y formato libre para el controlador de la solicitud HTTP. Está diseñado para su uso por los clientes sofisticados que necesitan un control detallado sobre la solicitud exacta enviada al servidor HTTP.  
   
 > [!NOTE]
 >  La aplicación puede pasar varios encabezados en `pstrHeaders` o `str` para un `AddRequestHeaders` llama mediante `HTTP_ADDREQ_FLAG_ADD` o `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Si la aplicación intenta quitar o reemplazar un encabezado mediante **HTTP_ADDREQ_FLAG_REMOVE** o `HTTP_ADDREQ_FLAG_REPLACE`, se puede proporcionar un único encabezado en `lpszHeaders`.  
   
-##  <a name="chttpfile"></a>CHttpFile::CHttpFile  
+##  <a name="chttpfile"></a>  CHttpFile::CHttpFile  
  Se llama a esta función miembro para construir un `CHttpFile` objeto.  
   
 ```  
@@ -189,7 +184,7 @@ CHttpFile(
   
  El valor predeterminado de `dwContext` se envía por MFC para la `CHttpFile` objeto desde el [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto que creó el `CHttpFile` objeto. Cuando se llama a `CInternetSession::OpenURL` o `CHttpConnection` para construir un `CHttpFile` de objeto, puede invalidar el valor predeterminado para establecer el identificador de contexto en un valor de su elección. El identificador de contexto se devuelve al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para proporcionar el estado en el objeto con el que se identifica. Vea el artículo [primeros pasos de Internet: WinInet](../../mfc/wininet-basics.md) para obtener más información sobre el identificador de contexto.  
   
-##  <a name="endrequest"></a>CHttpFile::EndRequest  
+##  <a name="endrequest"></a>  CHttpFile::EndRequest  
  Llame a esta función miembro para finalizar una solicitud enviada a un servidor HTTP con el [SendRequestEx](#sendrequestex) función miembro.  
   
 ```  
@@ -215,7 +210,7 @@ BOOL EndRequest(
 ### <a name="remarks"></a>Comentarios  
  El valor predeterminado de `dwContext` se envía por MFC para la `CHttpFile` objeto desde el [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto que creó el `CHttpFile` objeto. Cuando se llama a [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) o [CHttpConnection](../../mfc/reference/chttpconnection-class.md) para construir un `CHttpFile` de objeto, puede invalidar el valor predeterminado para establecer el identificador de contexto en un valor de su elección. El identificador de contexto se devuelve al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para proporcionar el estado en el objeto con el que se identifica. Vea el artículo [primeros pasos de Internet: WinInet](../../mfc/wininet-basics.md) para obtener más información sobre el identificador de contexto.  
   
-##  <a name="getfileurl"></a>CHttpFile::GetFileURL  
+##  <a name="getfileurl"></a>  CHttpFile::GetFileURL  
  Llame a esta función miembro para obtener el nombre del archivo como una dirección URL HTTP.  
   
 ```  
@@ -228,7 +223,7 @@ virtual CString GetFileURL() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función miembro sólo después de una llamada correcta a [SendRequest](#sendrequest) o en un `CHttpFile` objeto creado correctamente haciendo [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="getobject"></a>CHttpFile::GetObject  
+##  <a name="getobject"></a>  CHttpFile::GetObject  
  Llame a esta función miembro para obtener el nombre del objeto asociado a este `CHttpFile`.  
   
 ```  
@@ -241,7 +236,7 @@ CString GetObject() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función miembro sólo después de una llamada correcta a [SendRequest](#sendrequest) o en un `CHttpFile` objeto creado correctamente haciendo [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="getverb"></a>CHttpFile::GetVerb  
+##  <a name="getverb"></a>  CHttpFile::GetVerb  
  Llame a esta función miembro para obtener el verbo HTTP (o método) asociado a este `CHttpFile`.  
   
 ```  
@@ -254,7 +249,7 @@ CString GetVerb() const;
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función miembro sólo después de una llamada correcta a [SendRequest](#sendrequest) o en un `CHttpFile` objeto creado correctamente haciendo [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
-##  <a name="queryinfo"></a>QueryInfo  
+##  <a name="queryinfo"></a>  QueryInfo  
  Llame a esta función miembro para devolver la respuesta o encabezados de solicitud de una solicitud HTTP.  
   
 ```  
@@ -317,9 +312,9 @@ BOOL QueryInfo(
   
 -   cadenas (valor predeterminado)  
   
-- `SYSTEMTIME`(para "datos:" "Expires:" encabezados etcetera,)  
+- `SYSTEMTIME` (para "datos:" "Expires:" encabezados etcetera,)  
   
-- `DWORD`(para **STATUS_CODE**, **CONTENT_LENGTH**, etcetera.)  
+- `DWORD` (para **STATUS_CODE**, **CONTENT_LENGTH**, etcetera.)  
   
  Cuando se escribe una cadena en el búfer y la función miembro se realiza correctamente, `lpdwBufferLength` contiene la longitud de la cadena en caracteres menos 1 para la terminación **NULL** caracteres.  
   
@@ -371,7 +366,7 @@ BOOL QueryInfo(
   
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
-##  <a name="queryinfostatuscode"></a>QueryInfoStatusCode  
+##  <a name="queryinfostatuscode"></a>  QueryInfoStatusCode  
  Llame a esta función miembro para obtener el código de estado asociado a una solicitud HTTP y colocarlo en proporcionado `dwStatusCode` parámetro.  
   
 ```  
@@ -408,7 +403,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 |500|Error desconocido del servidor|  
 |503|Se alcanzó la capacidad de servidor|  
   
-##  <a name="sendrequest"></a>CHttpFile:: SendRequest  
+##  <a name="sendrequest"></a>  CHttpFile:: SendRequest  
  Llame a esta función miembro para enviar una solicitud a un servidor HTTP.  
   
 ```  
@@ -444,7 +439,7 @@ BOOL SendRequest(
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, determinar la causa del error examinando el produce [CInternetException](../../mfc/reference/cinternetexception-class.md) objeto.  
   
-##  <a name="sendrequestex"></a>CHttpFile::SendRequestEx  
+##  <a name="sendrequestex"></a>  CHttpFile::SendRequestEx  
  Llame a esta función miembro para enviar una solicitud a un servidor HTTP.  
   
 ```  

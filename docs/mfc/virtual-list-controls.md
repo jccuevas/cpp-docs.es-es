@@ -1,13 +1,10 @@
 ---
 title: Controles de lista virtual | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b580e455aab7ff95beb85c02b8e3ca79dfa8a46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-list-controls"></a>Controles de lista virtual
 Un control de lista virtual es un control de vista de lista que tiene el **LVS_OWNERDATA** estilo. Este estilo permite al control admitir un recuento de elementos de un `DWORD` (el número de elementos de manera predeterminada sólo se extiende a un `int`). Sin embargo, la ventaja principal proporcionada por este estilo es la capacidad para tener sólo un subconjunto de elementos de datos en memoria en cualquier momento. Esto permite que el control de vista de lista virtual conducir por sí mismo para su uso con grandes bases de datos de información, donde los métodos específicos de acceso a los datos ya están en su lugar.  
@@ -43,15 +38,15 @@ Un control de lista virtual es un control de vista de lista que tiene el **LVS_O
   
  En el controlador para el **LVN_GETDISPINFO** mensaje de notificación, debe comprobar para ver qué tipo de información que se solicita. Los valores posibles son:  
   
--   `LVIF_TEXT`El `pszText` debe rellenarse miembro.  
+-   `LVIF_TEXT` El `pszText` debe rellenarse miembro.  
   
--   `LVIF_IMAGE`El `iImage` debe rellenarse miembro.  
+-   `LVIF_IMAGE` El `iImage` debe rellenarse miembro.  
   
 -   **LVIF_INDENT** el *iIndent* miembro debe rellenarse.  
   
--   `LVIF_PARAM`El *lParam* miembro debe rellenarse. (No presente para elementos secundarios).  
+-   `LVIF_PARAM` El *lParam* miembro debe rellenarse. (No presente para elementos secundarios).  
   
--   `LVIF_STATE`El *estado* miembro debe rellenarse.  
+-   `LVIF_STATE` El *estado* miembro debe rellenarse.  
   
  A continuación, también debe proporcionar la información que se solicita hacia el marco de trabajo.  
   

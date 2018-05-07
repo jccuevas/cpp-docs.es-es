@@ -1,13 +1,10 @@
 ---
-title: "Páginas de propiedades MIDL: Avanzadas | Documentos de Microsoft"
-ms.custom: 
+title: 'Páginas de propiedades MIDL: Avanzadas | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCMidlTool.ErrorCheckBounds
 - VC.Project.VCMidlTool.ErrorCheckStubData
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: d1c92e01-f403-4ed6-ab45-4043a3c9c6bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e7dde047c3311c6fd694a91c7a63fcfbcc95d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="midl-property-pages-advanced"></a>Páginas de propiedades MIDL: Avanzadas
 El **avanzadas** página de propiedades de la **MIDL** carpeta especifica las opciones del compilador MIDL siguientes:  
@@ -62,7 +57,7 @@ El **avanzadas** página de propiedades de la **MIDL** carpeta especifica las op
   
 -   Anular definiciones del preprocesador ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
- \*/ es sólido únicamente para su uso al compilar para una máquina posterior o Windows 2000. Si compila un proyecto ATL y desea utilizar / robust, cambie esta línea en el archivo dlldatax.c:  
+ \* / es sólido únicamente para su uso al compilar para una máquina posterior o Windows 2000. Si compila un proyecto ATL y desea utilizar / robust, cambie esta línea en el archivo dlldatax.c:  
   
 ```  
 #define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM  

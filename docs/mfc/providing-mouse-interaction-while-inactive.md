@@ -1,29 +1,24 @@
 ---
-title: "Proporcionar interacción con el mouse (ratón) mientras está inactivo | Documentos de Microsoft"
-ms.custom: 
+title: Proporcionar interacción con el mouse (ratón) mientras está inactivo | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], mouse interaction
 ms.assetid: b09106bf-44c7-4b9b-a6d9-0d624f16f5b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f8991b6cc827c35c94b0989ef82e32422fd5c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faf1ea1958d6a6381bbe1c6e7d3db26f5f5b7c17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>Proporcionar interacción con el mouse mientras está inactivo
 Si el control no se activa inmediatamente, aún puede procesar `WM_SETCURSOR` y `WM_MOUSEMOVE` mensajes, incluso si el control no tiene ninguna ventana propia. Esto puede realizarse habilitando `COleControl`de implementación de la `IPointerInactive` interfaz, que está deshabilitada de forma predeterminada. (Consulte la *ActiveX SDK* para obtener una descripción de esta interfaz.) Para habilitarla, incluya el `pointerInactive` marca en el conjunto de indicadores devuelto por [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  

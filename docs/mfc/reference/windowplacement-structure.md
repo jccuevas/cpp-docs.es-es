@@ -1,13 +1,10 @@
 ---
 title: WINDOWPLACEMENT (estructura) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPLACEMENT
 dev_langs:
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPLACEMENT structure [MFC]
 ms.assetid: ea7d61f6-eb57-478e-9b08-7c1d07091aa8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e73065cdf20d68b1da4ba77d1ad555e2bf95e937
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 829b3c90acb089bd91d71c498df5906fff919f22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowplacement-structure"></a>WINDOWPLACEMENT (Estructura)
-El `WINDOWPLACEMENT` estructura contiene información acerca de la ubicación de una ventana en la pantalla**.**  
+El `WINDOWPLACEMENT` estructura contiene información acerca de la ubicación de una ventana en la pantalla **.**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,12 +40,12 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
   
 #### <a name="parameters"></a>Parámetros  
  *length*  
- Especifica la longitud, en bytes, de la estructura**.**  
+ Especifica la longitud, en bytes, de la estructura **.**  
   
  `flags`  
  Especifica las marcas que controlan la posición de la ventana minimizada y el método por el que se restaura la ventana. Este miembro puede ser uno o ambos de los siguientes indicadores:  
   
-- **WPF_SETMINPOSITION** especifica que se pueden especificar las posiciones x e y de la ventana minimizada**.** Debe ser esta marca especifica si las coordenadas se establecen los **ptMinPosition** miembro.  
+- **WPF_SETMINPOSITION** especifica que se pueden especificar las posiciones x e y de la ventana minimizada **.** Debe ser esta marca especifica si las coordenadas se establecen los **ptMinPosition** miembro.  
   
 - **WPF_RESTORETOMAXIMIZED** especifica que se maximiza la ventana restaurada, independientemente de si se estaba maximizada antes de se minimiza. Esta opción es válida sólo la próxima vez que se restaura la ventana. No cambia el comportamiento de restauración predeterminado. Esta marca solo es válido cuando el **SW_SHOWMINIMIZED** se ha indicado el **showCmd** miembro.  
   

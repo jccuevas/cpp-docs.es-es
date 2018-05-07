@@ -1,12 +1,9 @@
 ---
 title: Clase CD2DBitmapBrush | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DBitmapBrush
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd588a26b73fb6e5f1b205b20f21aab8272c439
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dbitmapbrush-class"></a>Clase CD2DBitmapBrush
 Un contenedor para ID2D1BitmapBrush.  
@@ -131,14 +126,14 @@ class CD2DBitmapBrush : public CD2DBrush;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxrendertarget.h  
   
-##  <a name="dtor"></a>CD2DBitmapBrush:: ~ CD2DBitmapBrush  
+##  <a name="dtor"></a>  CD2DBitmapBrush:: ~ CD2DBitmapBrush  
  Destructor. Se llama cuando se destruye un objeto de pincel de mapa de bits de D2D.  
   
 ```  
 virtual ~CD2DBitmapBrush();
 ```  
   
-##  <a name="attach"></a>CD2DBitmapBrush::Attach  
+##  <a name="attach"></a>  CD2DBitmapBrush::Attach  
  Adjunta existente de la interfaz de recurso para el objeto  
   
 ```  
@@ -149,7 +144,7 @@ void Attach(ID2D1BitmapBrush* pResource);
  `pResource`  
  Interfaz de recursos existente. No puede ser NULL  
   
-##  <a name="cd2dbitmapbrush"></a>CD2DBitmapBrush::CD2DBitmapBrush  
+##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
  Construye un objeto CD2DBitmapBrush.  
   
 ```  
@@ -204,7 +199,7 @@ CD2DBitmapBrush(
  `lpszImagePath`  
  Puntero a una cadena terminada en null que contiene el nombre del archivo.  
   
-##  <a name="commoninit"></a>CD2DBitmapBrush::CommonInit  
+##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
  Inicializa el objeto  
   
 ```  
@@ -215,7 +210,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
  `pBitmapBrushProperties`  
  Un puntero a las propiedades de pincel de mapa de bits.  
   
-##  <a name="create"></a>CD2DBitmapBrush::Create  
+##  <a name="create"></a>  CD2DBitmapBrush::Create  
  Crea un CD2DBitmapBrush.  
   
 ```  
@@ -229,14 +224,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se realiza correctamente, devuelve S_OK. En caso contrario, devuelve un código de error HRESULT.  
   
-##  <a name="destroy"></a>CD2DBitmapBrush::Destroy  
+##  <a name="destroy"></a>  CD2DBitmapBrush::Destroy  
  Destruye un objeto CD2DBitmapBrush.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DBitmapBrush::Detach  
+##  <a name="detach"></a>  CD2DBitmapBrush::Detach  
  Separa la interfaz de recurso del objeto  
   
 ```  
@@ -246,7 +241,7 @@ ID2D1BitmapBrush* Detach();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a interfaz recursos separados.  
   
-##  <a name="get"></a>CD2DBitmapBrush::Get  
+##  <a name="get"></a>  CD2DBitmapBrush::Get  
  Interfaz de ID2D1BitmapBrush devuelve  
   
 ```  
@@ -256,7 +251,7 @@ ID2D1BitmapBrush* Get();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a una interfaz ID2D1BitmapBrush o NULL si el objeto todavía no está inicializado.  
   
-##  <a name="getbitmap"></a>CD2DBitmapBrush::GetBitmap  
+##  <a name="getbitmap"></a>  CD2DBitmapBrush::GetBitmap  
  Obtiene el origen del mapa de bits que usa este pincel para dibujar  
   
 ```  
@@ -266,7 +261,7 @@ CD2DBitmap* GetBitmap();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a un objeto CD2DBitmap o NULL si el objeto todavía no está inicializado.  
   
-##  <a name="getextendmodex"></a>CD2DBitmapBrush::GetExtendModeX  
+##  <a name="getextendmodex"></a>  CD2DBitmapBrush::GetExtendModeX  
  Obtiene el método mediante el cual el pincel mosaicos horizontalmente esas áreas que se extienden más allá de su mapa de bits  
   
 ```  
@@ -276,7 +271,7 @@ D2D1_EXTEND_MODE GetExtendModeX() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un valor que especifica cómo el pincel horizontalmente iconos esas áreas que se extienden más allá de su mapa de bits  
   
-##  <a name="getextendmodey"></a>CD2DBitmapBrush::GetExtendModeY  
+##  <a name="getextendmodey"></a>  CD2DBitmapBrush::GetExtendModeY  
  Obtiene el método mediante el cual el pincel iconos verticalmente las áreas que se extienden más allá de su mapa de bits  
   
 ```  
@@ -286,7 +281,7 @@ D2D1_EXTEND_MODE GetExtendModeY() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un valor que especifica cómo el pincel iconos verticalmente las áreas que se extienden más allá de su mapa de bits  
   
-##  <a name="getinterpolationmode"></a>CD2DBitmapBrush::GetInterpolationMode  
+##  <a name="getinterpolationmode"></a>  CD2DBitmapBrush::GetInterpolationMode  
  Obtiene el método de interpolación utilizado cuando se escala o gira el mapa de bits de pincel  
   
 ```  
@@ -296,28 +291,28 @@ D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;
 ### <a name="return-value"></a>Valor devuelto  
  El método de interpolación utilizado cuando se escala o gira el mapa de bits de pincel  
   
-##  <a name="m_pbitmap"></a>CD2DBitmapBrush::m_pBitmap  
+##  <a name="m_pbitmap"></a>  CD2DBitmapBrush::m_pBitmap  
  Almacena un puntero a un objeto CD2DBitmap.  
   
 ```  
 CD2DBitmap* m_pBitmap;  
 ```  
   
-##  <a name="m_pbitmapbrush"></a>CD2DBitmapBrush::m_pBitmapBrush  
+##  <a name="m_pbitmapbrush"></a>  CD2DBitmapBrush::m_pBitmapBrush  
  Almacena un puntero a un objeto ID2D1BitmapBrush.  
   
 ```  
 ID2D1BitmapBrush* m_pBitmapBrush;  
 ```  
   
-##  <a name="m_pbitmapbrushproperties"></a>CD2DBitmapBrush::m_pBitmapBrushProperties  
+##  <a name="m_pbitmapbrushproperties"></a>  CD2DBitmapBrush::m_pBitmapBrushProperties  
  Propiedades del pincel de mapa de bits.  
   
 ```  
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1bitmapbrush_star"></a>CD2DBitmapBrush::operator ID2D1BitmapBrush *  
+##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush *  
  Interfaz de ID2D1BitmapBrush devuelve  
   
 ```  
@@ -327,7 +322,7 @@ operator ID2D1BitmapBrush*();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a una interfaz ID2D1BitmapBrush o NULL si el objeto todavía no está inicializado.  
   
-##  <a name="setbitmap"></a>CD2DBitmapBrush::SetBitmap  
+##  <a name="setbitmap"></a>  CD2DBitmapBrush::SetBitmap  
  Especifica el origen del mapa de bits que usa este pincel para dibujar  
   
 ```  
@@ -338,7 +333,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
  `pBitmap`  
  El origen de mapa de bits que se usa el pincel  
   
-##  <a name="setextendmodex"></a>CD2DBitmapBrush::SetExtendModeX  
+##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
  Especifica cómo el pincel horizontalmente iconos esas áreas que se extienden más allá de su mapa de bits  
   
 ```  
@@ -349,7 +344,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
  `extendModeX`  
  Un valor que especifica cómo el pincel horizontalmente iconos esas áreas que se extienden más allá de su mapa de bits  
   
-##  <a name="setextendmodey"></a>CD2DBitmapBrush::SetExtendModeY  
+##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
  Especifica cómo el pincel iconos verticalmente las áreas que se extienden más allá de su mapa de bits  
   
 ```  
@@ -360,7 +355,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
  `extendModeY`  
  Un valor que especifica cómo el pincel iconos verticalmente las áreas que se extienden más allá de su mapa de bits  
   
-##  <a name="setinterpolationmode"></a>CD2DBitmapBrush::SetInterpolationMode  
+##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
  Especifica el modo de interpolación usado cuando se escala o gira el mapa de bits de pincel  
   
 ```  

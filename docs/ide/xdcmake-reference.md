@@ -1,13 +1,10 @@
 ---
 title: XDCMake (referencia) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - xdcmake
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea635d701b4dea2471067072083d9568f11f3d82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 383347dc5cd1ce0dcadff6bdee802b90fd52e85d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xdcmake-reference"></a>XDCMake (Referencia)
 xdcmake.exe es un programa que se compila el archivo .xdc en un archivo .xml. Se crea un archivo .xdc por el compilador de Visual C++ para cada archivo de código fuente cuando se compila código fuente con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) y cuando el archivo de código fuente contiene comentarios de documentación marcados con etiquetas XML.  
@@ -42,7 +37,7 @@ xdcmake.exe es un programa que se compila el archivo .xdc en un archivo .xml. Se
 >  Opciones de XDCMake.exe en la línea de comandos difieren de las opciones cuando se utiliza xdcmake.exe en el entorno de desarrollo (páginas de propiedades). Para obtener información sobre cómo utilizar xdcmake.exe en el entorno de desarrollo, consulte [XML Document Generator Tool Property Pages](../ide/xml-document-generator-tool-property-pages.md).  
   
 ## <a name="syntax"></a>Sintaxis  
- XDCMake`input_filename options`  
+ XDCMake `input_filename options`  
   
 ## <a name="parameters"></a>Parámetros  
  donde:  

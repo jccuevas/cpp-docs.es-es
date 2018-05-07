@@ -1,12 +1,9 @@
 ---
 title: Clase COleTemplateServer | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleTemplateServer
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4bf5f696eeff3e4e26a9d77714c0d5a6f093aaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coletemplateserver-class"></a>Clase COleTemplateServer
 Se utiliza para servidores de edición visual OLE, servidores de automatización y contenedores de vínculos (aplicaciones que admiten vínculos con incrustaciones).  
@@ -61,9 +56,9 @@ class COleTemplateServer : public COleObjectFactory
 |[COleTemplateServer:: UpdateRegistry](#updateregistry)|Registra el tipo de documento con el registro del sistema OLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase se deriva de la clase [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); por lo general, puede usar `COleTemplateServer` directamente en lugar de derivar su propia clase. `COleTemplateServer`usa un [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objeto para administrar los documentos de servidor. Use `COleTemplateServer` al implementar un servidor completo, es decir, un servidor que se pueden ejecutar como una aplicación independiente. Servidores completos suelen ser aplicaciones de múltiples documentos (MDI) de la interfaz, aunque se admiten las aplicaciones de único documento (SDI) de la interfaz. Una `COleTemplateServer` objeto es necesario para cada tipo de documento de servidor que admite una aplicación; es decir, si la aplicación de servidor es compatible con las hojas de cálculo y gráficos, debe tener dos `COleTemplateServer` objetos.  
+ Esta clase se deriva de la clase [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); por lo general, puede usar `COleTemplateServer` directamente en lugar de derivar su propia clase. `COleTemplateServer` usa un [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objeto para administrar los documentos de servidor. Use `COleTemplateServer` al implementar un servidor completo, es decir, un servidor que se pueden ejecutar como una aplicación independiente. Servidores completos suelen ser aplicaciones de múltiples documentos (MDI) de la interfaz, aunque se admiten las aplicaciones de único documento (SDI) de la interfaz. Una `COleTemplateServer` objeto es necesario para cada tipo de documento de servidor que admite una aplicación; es decir, si la aplicación de servidor es compatible con las hojas de cálculo y gráficos, debe tener dos `COleTemplateServer` objetos.  
   
- `COleTemplateServer`invalida el `OnCreateInstance` función de miembro definida por `COleObjectFactory`. Esta función miembro se llama el marco de trabajo para crear un objeto de C++ del tipo adecuado.  
+ `COleTemplateServer` invalida el `OnCreateInstance` función de miembro definida por `COleObjectFactory`. Esta función miembro se llama el marco de trabajo para crear un objeto de C++ del tipo adecuado.  
   
  Para obtener más información acerca de los servidores, vea el artículo [servidores: implementar un servidor](../../mfc/servers-implementing-a-server.md).  
   
@@ -79,7 +74,7 @@ class COleTemplateServer : public COleObjectFactory
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h  
   
-##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
+##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer  
  Construye un objeto `COleTemplateServer`.  
   
 ```  
@@ -89,7 +84,7 @@ COleTemplateServer();
 ### <a name="remarks"></a>Comentarios  
  Para obtener una breve descripción del uso de la `COleTemplateServer` de clases, consulte la [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) general sobre la clase.  
   
-##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
+##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
  Se conecta a la plantilla de documento que señala `pDocTemplate` al subyacente [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) objeto.  
   
 ```  
@@ -112,7 +107,7 @@ void ConnectTemplate(
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [clave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) del SDK de Windows.  
   
-##  <a name="unregister"></a>COleTemplateServer::Unregister  
+##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  Anula el registro de la plantilla de documento asociado.  
   
 ```  
@@ -125,7 +120,7 @@ BOOL Unregister();
 ### <a name="remarks"></a>Comentarios  
  EnterRemarks  
   
-##  <a name="updateregistry"></a>COleTemplateServer:: UpdateRegistry  
+##  <a name="updateregistry"></a>  COleTemplateServer:: UpdateRegistry  
  Carga la información de tipo de archivo de la cadena de plantilla de documento y coloca dicha información en el registro del sistema OLE.  
   
 ```  
@@ -140,13 +135,13 @@ void UpdateRegistry(
  `nAppType`  
  Un valor de la **OLE_APPTYPE** enumeración, que se define en AFXDISP. H. Puede tener uno de los siguientes valores:  
   
-- `OAT_INPLACE_SERVER`Servidor tiene interfaz de usuario completa del servidor.  
+- `OAT_INPLACE_SERVER` Servidor tiene interfaz de usuario completa del servidor.  
   
-- `OAT_SERVER`El servidor admite solo incrustar.  
+- `OAT_SERVER` El servidor admite solo incrustar.  
   
-- `OAT_CONTAINER`Contenedor admite vínculos a objetos incrustados.  
+- `OAT_CONTAINER` Contenedor admite vínculos a objetos incrustados.  
   
-- `OAT_DISPATCH_OBJECT`Objeto es `IDispatch`-compatibles con.  
+- `OAT_DISPATCH_OBJECT` Objeto es `IDispatch`-compatibles con.  
   
 - **OAT_DOC_OBJECT_SERVER** Server admite tanto incrustación y el modelo de componente de objetos de documento.  
   

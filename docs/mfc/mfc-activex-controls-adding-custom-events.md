@@ -1,13 +1,10 @@
 ---
 title: 'Controles ActiveX MFC: Agregar eventos personalizados | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,22 +21,20 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Controles ActiveX MFC: Agregar eventos personalizados
 Eventos personalizados se diferencian de los eventos estándar en que no se activan automáticamente por la clase `COleControl`. Un evento personalizado reconoce una acción determinada, determinada por el desarrollador del control, como un evento. Las entradas del mapa de eventos para los eventos personalizados se representan mediante el `EVENT_CUSTOM` macro. En la siguiente sección implementa un evento personalizado para un proyecto de control ActiveX que se creó mediante el Asistente para controles ActiveX.  
   
-##  <a name="_core_adding_a_custom_event_with_classwizard"></a>Agregar un evento personalizado con el Asistente para agregar eventos  
+##  <a name="_core_adding_a_custom_event_with_classwizard"></a> Agregar un evento personalizado con el Asistente para agregar eventos  
  El siguiente procedimiento agrega un evento personalizado específico, ClickIn. Puede usar este procedimiento para agregar otros eventos personalizados. Sustituya el nombre del evento personalizado y sus parámetros para el nombre del evento ClickIn y los parámetros.  
   
 #### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>Para agregar el evento personalizado ClickIn mediante el Asistente para agregar eventos  
@@ -62,7 +57,7 @@ Eventos personalizados se diferencian de los eventos estándar en que no se acti
   
 8.  Haga clic en **finalizar** para crear el evento.  
   
-##  <a name="_core_classwizard_changes_for_custom_events"></a>Agregar los cambios del Asistente para eventos para los eventos personalizados  
+##  <a name="_core_classwizard_changes_for_custom_events"></a> Agregar los cambios del Asistente para eventos para los eventos personalizados  
  Cuando se agrega un evento personalizado, el Asistente para agregar eventos realiza cambios en la clase de control. H. CPP, y. IDL (archivos). Los ejemplos de código siguientes son específicos del evento ClickIn.  
   
  Las líneas siguientes se agregan al encabezado (. (H) del archivo de la clase del control:  
@@ -83,7 +78,7 @@ Eventos personalizados se diferencian de los eventos estándar en que no se acti
   
  Esta línea asigna al evento ClickIn un número de identificador específico, obtenido desde la posición del evento en la lista de eventos del Asistente para agregar eventos. La entrada en la lista de eventos permite que un contenedor prever el evento. Por ejemplo, puede proporcionar el código del controlador que se ejecuta cuando se desencadena el evento.  
   
-##  <a name="_core_calling_fireclickin"></a>Llamar a FireClickIn  
+##  <a name="_core_calling_fireclickin"></a> Llamar a FireClickIn  
  Ahora que ha agregado el evento personalizado ClickIn mediante el Asistente para agregar eventos, debe decidir si este evento es que se deben activar. Para ello, al llamar a `FireClickIn` cuando se produce la acción apropiada. Para este análisis, el control usa la `InCircle` función dentro de un `WM_LBUTTONDOWN` el controlador de mensajes para desencadenar el evento ClickIn cuando un usuario hace clic dentro de una región circular o elíptica. El procedimiento siguiente se agrega el `WM_LBUTTONDOWN` controlador.  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Para agregar un controlador de mensajes con el Asistente para agregar eventos  
@@ -117,7 +112,7 @@ Eventos personalizados se diferencian de los eventos estándar en que no se acti
   
  [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]  
   
-##  <a name="_core_custom_events_with_stock_names"></a>Eventos personalizados con nombres de cotizaciones  
+##  <a name="_core_custom_events_with_stock_names"></a> Eventos personalizados con nombres de cotizaciones  
  Puede crear eventos personalizados con el mismo nombre que los eventos estándar, sin embargo, no se pueden implementar tanto en el mismo control. Por ejemplo, puede crear un evento personalizado denominado Click que no se activa cuando el evento estándar haga clic en normalmente volvería a activarlo. A continuación, se desencadena el evento Click en cualquier momento llamando a su función de activación.  
   
  El siguiente procedimiento agrega un Click personalizado eventos.  

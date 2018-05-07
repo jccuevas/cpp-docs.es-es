@@ -1,13 +1,10 @@
 ---
 title: Generadores de clases y licencias | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79710cb1fa67ec8315fe287364126f88b4b498d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-factories-and-licensing"></a>Generadores de clases y licencias
 Para crear una instancia del control OLE, una aplicación de contenedor llama a una función miembro de fábrica de clase del control. Dado que el control es un objeto OLE real, el generador de clases es responsable de crear instancias del control. Cada clase de control OLE debe tener un generador de clases.  
@@ -44,7 +39,7 @@ Para crear una instancia del control OLE, una aplicación de contenedor llama a 
 |[END_OLEFACTORY](#end_olefactory)|Finaliza la declaración de las funciones de licencias.|  
 |[AfxVerifyLicFile](#afxverifylicfile)|Comprueba si un control tiene licencia para su uso en un equipo determinado.|  
   
-##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
+##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX  
  Declara un generador de clases y la `GetClassID` función miembro de la clase del control.  
   
 ```   
@@ -65,7 +60,7 @@ DECLARE_OLECREATE_EX(class_name)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
+##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX  
  Implementa el generador de clases del control y la [GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) función miembro de la clase del control.  
   
 ```   
@@ -101,7 +96,7 @@ IMPLEMENT_OLECREATE_EX(
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
+##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
  Comienza la declaración de la fábrica de clase en el archivo de encabezado de la clase del control.  
   
 ``` 
@@ -118,7 +113,7 @@ BEGIN_OLEFACTORY(class_name)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="end_olefactory"></a>END_OLEFACTORY  
+##  <a name="end_olefactory"></a>  END_OLEFACTORY  
  Finaliza la declaración de generador de clases del control.  
   
 ```  
@@ -132,7 +127,7 @@ END_OLEFACTORY(class_name)
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxctl.h  
   
-##  <a name="afxverifylicfile"></a>AfxVerifyLicFile  
+##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
  Llame a esta función para comprobar que el archivo de licencia con el nombre por `pszLicFileName` es válido para el control OLE.  
   
 ```   

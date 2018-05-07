@@ -1,13 +1,10 @@
 ---
 title: Agregar una clase MFC | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.adding.mfc
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - classes [MFC], adding MFC
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab339ce7dc883c80941f0fe7f72da7ef852af52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ae1f1585170026f7c99c024ba9c82c26cbece3c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-mfc-class"></a>Agregar una clase MFC
 Para agregar clases derivadas de las clases de biblioteca (Microsoft Foundation Classes) a su proyecto, use la **Agregar clase** comando disponible en [vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Especifique el nombre de la nueva clase, seleccione la clase base y seleccione el identificador del cuadro de diálogo con el que está asociado (si existe). El Asistente de código crea un archivo de encabezado y un archivo de implementación y agrega al proyecto.  

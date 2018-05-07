@@ -1,12 +1,9 @@
 ---
 title: Clase CFtpFileFind | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFtpFileFind
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4fe3b188d5b03c9e727349b9e30982cf52006c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind (clase)
 Ayuda en las búsquedas del archivo de Internet de servidores FTP.  
@@ -61,7 +56,7 @@ class CFtpFileFind : public CFileFind
 |[CFtpFileFind::GetFileURL](#getfileurl)|Obtiene la dirección URL, incluida la ruta de acceso del archivo se encuentra.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CFtpFileFind`incluye funciones miembro que iniciar una búsqueda, busque un archivo y devuelvan la dirección URL u otra información descriptiva acerca del archivo.  
+ `CFtpFileFind` incluye funciones miembro que iniciar una búsqueda, busque un archivo y devuelvan la dirección URL u otra información descriptiva acerca del archivo.  
   
  Otras clases MFC diseñados para Internet y archivo local buscadas incluyen [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) y [CFileFind](../../mfc/reference/cfilefind-class.md). Junto con `CFtpFileFind`, estas clases proporcionan un mecanismo sin problemas para el cliente buscar archivos específicos, independientemente del servidor de tipo de archivo o protocolo (un equipo local o un servidor remoto). Tenga en cuenta que no hay ninguna clase MFC para las búsquedas en servidores HTTP porque HTTP no admite la manipulación directa del archivo necesaria para realizar búsquedas.  
   
@@ -82,7 +77,7 @@ class CFtpFileFind : public CFileFind
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxinet.h  
   
-##  <a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
+##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind  
  Se llama a esta función miembro para construir un `CFtpFileFind` objeto.  
   
 ```  
@@ -104,7 +99,7 @@ explicit CFtpFileFind(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de la información general de la clase anteriormente en este tema.  
   
-##  <a name="findfile"></a>CFtpFileFind:: FindFile  
+##  <a name="findfile"></a>  CFtpFileFind:: FindFile  
  Llame a esta función miembro para encontrar un archivo de FTP.  
   
 ```  
@@ -139,7 +134,7 @@ virtual BOOL FindFile(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo anterior de este tema.  
   
-##  <a name="findnextfile"></a>CFtpFileFind:: FindNextFile  
+##  <a name="findnextfile"></a>  CFtpFileFind:: FindNextFile  
  Llame a esta función miembro para continuar una búsqueda de archivo iniciada con una llamada a la [FindFile](#findfile) función miembro.  
   
 ```  
@@ -152,12 +147,12 @@ virtual BOOL FindNextFile();
 ### <a name="remarks"></a>Comentarios  
  Debe llamar a esta función al menos una vez antes de llamar a cualquier función de atributo (consulte [CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).  
   
- `FindNextFile`ajusta la función de Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
+ `FindNextFile` ajusta la función de Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo anteriormente en este tema.  
   
-##  <a name="getfileurl"></a>CFtpFileFind::GetFileURL  
+##  <a name="getfileurl"></a>  CFtpFileFind::GetFileURL  
  Llame a esta función miembro para obtener la dirección URL del archivo especificado.  
   
 ```  
@@ -168,7 +163,7 @@ CString GetFileURL() const;
  El archivo y la ruta de acceso del localizador de recursos Universal (URL).  
   
 ### <a name="remarks"></a>Comentarios  
- `GetFileURL`es similar a la función miembro [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), excepto en que devuelve la dirección URL en el formulario `ftp://moose/dir/file.txt`.  
+ `GetFileURL` es similar a la función miembro [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), excepto en que devuelve la dirección URL en el formulario `ftp://moose/dir/file.txt`.  
   
 ## <a name="see-also"></a>Vea también  
  [Clase CFileFind](../../mfc/reference/cfilefind-class.md)   

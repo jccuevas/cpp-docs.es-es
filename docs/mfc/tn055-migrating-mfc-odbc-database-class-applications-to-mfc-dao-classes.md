@@ -1,13 +1,10 @@
 ---
 title: 'TN055: Migrar aplicaciones de clase de base de datos ODBC de MFC a clases DAO de MFC | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da778dbadf312a6fef18ec8fa0b62a1c7aa6030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa9c7870492fed78e65c3ac25f74726acf35b7eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrar aplicaciones de clase de base de datos ODBC de MFC a clases DAO de MFC
 > [!NOTE]
@@ -89,12 +84,12 @@ ms.lasthandoff: 12/21/2017
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX_Date\***|**DFX_Date** (`COleDateTime`-según)|  
+|**RFX_Date \***|**DFX_Date** (`COleDateTime`-según)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \*El `RFX_Date` función se basa en `CTime` y **TIMESTAMP_STRUCT**.  
+ \*    El `RFX_Date` función se basa en `CTime` y **TIMESTAMP_STRUCT**.  
   
  Los cambios más importantes a la funcionalidad que pueden afectar a la aplicación y requieren cambios en el nombre de más de simple se enumeran a continuación.  
   
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Ha cambiado la clase de excepción. **Excepciones CDBException** se producen en las clases ODBC y **CDaoExceptions** en las clases DAO.  
   
--   `RFX_Date`usa `CTime` y **TIMESTAMP_STRUCT** objetos mientras **DFX_Date** utiliza `COleDateTime`. El `COleDateTime` es casi idéntica a `CTime`, pero se basa en una OLE de 8 bytes **fecha** en lugar de 4 bytes `time_t` por lo que puede almacenar una gama mucho más grande de datos.  
+-   `RFX_Date` usa `CTime` y **TIMESTAMP_STRUCT** objetos mientras **DFX_Date** utiliza `COleDateTime`. El `COleDateTime` es casi idéntica a `CTime`, pero se basa en una OLE de 8 bytes **fecha** en lugar de 4 bytes `time_t` por lo que puede almacenar una gama mucho más grande de datos.  
   
     > [!NOTE]
     >  DAO (`CDaoRecordset`) las instantáneas son de solo lectura mientras ODBC (`CRecordset`) pueden ser instantáneas actualizables según el controlador y el uso de la biblioteca de cursores ODBC. Si usas la biblioteca de cursores, `CRecordset` instantáneas son actualizables. Si usa cualquiera de los controladores de Microsoft de 3.0 de módulo de controlador de escritorio sin la biblioteca de cursores ODBC, el `CRecordset` instantáneas son de solo lectura. Si está utilizando otro controlador, compruebe la documentación del controlador para ver si las instantáneas (**STATIC_CURSORS**) son de solo lectura.  

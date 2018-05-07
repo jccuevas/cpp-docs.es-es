@@ -1,12 +1,9 @@
 ---
-title: "Compilador C3200 de errores a través de la advertencia C3299 | Documentos de Microsoft"
-ms.custom: 
+title: Compilador C3200 de errores a través de la advertencia C3299 | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3220
@@ -43,17 +40,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 339a4e0f1337e120d192515cecd4dba4e04e310e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 831f51981ff72a67a55698693514dce0a3d87535
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>Compilador C3200 de errores a través de la advertencia C3299
 
@@ -139,9 +134,9 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3271](compiler-error-c3271.md)|'*campo*': valor no válido '*número*' para el atributo FieldOffset|
 |[Error del compilador C3272](compiler-error-c3272.md)|'*símbolo*': símbolo requiere FieldOffset, ya que es un miembro de clase o struct *type_name* definido con StructLayout(LayoutKind::Explicit)|
 |[Error del compilador C3273](compiler-error-c3273.md)|'*palabra clave*': no se permite en el bloque try de C++|
-|[Error del compilador C3274](compiler-error-c3274.md)|Por último / &#95; &#95; finally sin el correspondiente try|
+|[Error del compilador C3274](compiler-error-c3274.md)|Por último /&#95;&#95;finally sin el correspondiente try|
 |[Error del compilador C3275](compiler-error-c3275.md)|'*identificador*': no se puede usar este símbolo sin calificador|
-|[Error del compilador C3276](compiler-error-c3276.md)|'*palabra clave*': saltar fuera de finalmente / &#95; &#95; por último bloque tiene un comportamiento indefinido durante el control de terminación|
+|[Error del compilador C3276](compiler-error-c3276.md)|'*palabra clave*': saltar fuera de finalmente /&#95;&#95;finalmente bloque tiene un comportamiento indefinido durante el control de terminación|
 |[Error del compilador C3277](compiler-error-c3277.md)|no se puede definir una enumeración no administrada '*enumeración*'interior administrada'*tipo*'|
 |[Error del compilador C3278](compiler-error-c3278.md)|llamada de interfaz o un método puro directa '*función*' se producirá un error en tiempo de ejecución|
 |[Error del compilador C3279](compiler-error-c3279.md)|no se permiten especializaciones parciales o explícitas ni creaciones de instancias explícitas de plantillas de clase declaradas en el espacio de nombres cli|

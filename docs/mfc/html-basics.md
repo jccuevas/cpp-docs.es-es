@@ -1,29 +1,24 @@
 ---
-title: "Conceptos básicos de HTML | Documentos de Microsoft"
-ms.custom: 
+title: Conceptos básicos de HTML | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852a4894478d139013d70813316976a20e99dd41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="html-basics"></a>Conceptos básicos de HTML
 Mayoría de los exploradores tiene la capacidad de examinar el código fuente HTML de las páginas que examina. Al ver el origen, verá un número de etiquetas HTML (lenguaje de marcado de hipertexto), incluido entre corchetes angulares (<>), entremezclados con texto.  
@@ -120,7 +115,7 @@ Life is good.
   
  Para obtener una descripción completa de etiquetas, atributos y extensiones, vea la especificación de lenguaje de marcado de hipertexto (HTML):  
   
- [http://www.w3.org/pub/www/MarkUp/](http://www.w3.org/pub/www/markup/)  
+ [http://www.w3.org/pub/WWW/MarkUp/](http://www.w3.org/pub/www/markup/)  
   
 ## <a name="see-also"></a>Vea también  
  [Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)

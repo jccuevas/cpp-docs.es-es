@@ -1,12 +1,9 @@
 ---
 title: CCmdTarget (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCmdTarget
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bdca1e4193be46a28739b01aed6e26e0e388b13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget (clase)
 La clase base para la arquitectura de mapa de mensajes de la biblioteca Microsoft Foundation Class.  
@@ -115,7 +110,7 @@ class CCmdTarget : public CObject
   
  Para obtener información general de destinos de comando y `OnCmdMsg` el enrutamiento, consulte [destinos de comando](../../mfc/command-targets.md), [enrutamiento de comandos](../../mfc/command-routing.md), y [asignar mensajes](../../mfc/mapping-messages.md).  
   
- `CCmdTarget`incluye funciones miembro que administrar la presentación de un cursor de reloj de arena. Mostrar el cursor de reloj de arena cuando creas un comando para adquirir un intervalo de tiempo notable para ejecutar.  
+ `CCmdTarget` incluye funciones miembro que administrar la presentación de un cursor de reloj de arena. Mostrar el cursor de reloj de arena cuando creas un comando para adquirir un intervalo de tiempo notable para ejecutar.  
   
  Mapas, similares a mapas de mensajes de envío, se utilizan para exponer la automatización OLE `IDispatch` funcionalidad. Al exponer esta interfaz, otras aplicaciones (como Visual Basic) pueden llamar a la aplicación.  
   
@@ -127,7 +122,7 @@ class CCmdTarget : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="beginwaitcursor"></a>CCmdTarget::BeginWaitCursor  
+##  <a name="beginwaitcursor"></a>  CCmdTarget::BeginWaitCursor  
  Llame a esta función para mostrar el cursor como un reloj de arena cuando creas un comando para adquirir un intervalo de tiempo notable para ejecutar.  
   
 ```  
@@ -144,14 +139,14 @@ void BeginWaitCursor();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="ccmdtarget"></a>CCmdTarget::CCmdTarget  
+##  <a name="ccmdtarget"></a>  CCmdTarget::CCmdTarget  
  Construye un objeto `CCmdTarget`.  
   
 ```  
 CCmdTarget();
 ```  
   
-##  <a name="dooleverb"></a>CCmdTarget::DoOleVerb  
+##  <a name="dooleverb"></a>  CCmdTarget::DoOleVerb  
  Hace que una acción especificada por un verbo OLE que se realice.  
   
 ```  
@@ -181,7 +176,7 @@ BOOL DoOleVerb(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro básicamente es una implementación de [DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508). Las posibles acciones se enumeran por [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
   
-##  <a name="enableautomation"></a>CCmdTarget::EnableAutomation  
+##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  Llame a esta función para habilitar la automatización OLE de un objeto.  
   
 ```  
@@ -191,7 +186,7 @@ void EnableAutomation();
 ### <a name="remarks"></a>Comentarios  
  Esta función normalmente se llama desde el constructor del objeto y solo se debe llamar si se ha declarado un mapa de envíos para la clase. Para obtener más información acerca de la automatización, vea los artículos [los clientes de automatización](../../mfc/automation-clients.md) y [servidores de automatización](../../mfc/automation-servers.md).  
   
-##  <a name="enableconnections"></a>CCmdTarget::EnableConnections  
+##  <a name="enableconnections"></a>  CCmdTarget::EnableConnections  
  Habilita la activación de eventos a través de puntos de conexión.  
   
 ```  
@@ -201,7 +196,7 @@ void EnableConnections();
 ### <a name="remarks"></a>Comentarios  
  Para habilitar los puntos de conexión, llame a esta función miembro en el constructor de la clase derivada.  
   
-##  <a name="enabletypelib"></a>CCmdTarget::EnableTypeLib  
+##  <a name="enabletypelib"></a>  CCmdTarget::EnableTypeLib  
  Habilita la biblioteca de tipos de un objeto.  
   
 ```  
@@ -209,9 +204,9 @@ void EnableTypeLib();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a esta función miembro en el constructor de la `CCmdTarget`-objeto derivado si proporciona información de tipo. Para obtener más información, vea el artículo de Knowledge Base Q185720, "HOWTO: proporcionar información de tipo de un servidor de automatización de MFC." Artículos de Knowledge Base están disponibles en [http://support.microsoft.com](http://support.microsoft.com/).  
+ Llame a esta función miembro en el constructor de la `CCmdTarget`-objeto derivado si proporciona información de tipo. Para obtener más información, vea el artículo de Knowledge Base Q185720, "HOWTO: proporcionar información de tipo de un servidor de automatización de MFC." Artículos de Knowledge Base están disponibles en [ http://support.microsoft.com ](http://support.microsoft.com/).  
   
-##  <a name="endwaitcursor"></a>CCmdTarget::EndWaitCursor  
+##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor  
  Llame a esta función después de haber llamado el `BeginWaitCursor` función de miembro para devolver desde el cursor de reloj de arena hasta el cursor anterior.  
   
 ```  
@@ -224,7 +219,7 @@ void EndWaitCursor();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="enumoleverbs"></a>CCmdTarget::EnumOleVerbs  
+##  <a name="enumoleverbs"></a>  CCmdTarget::EnumOleVerbs  
  Enumera los verbos de un objeto OLE.  
   
 ```  
@@ -241,7 +236,7 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro básicamente es una implementación de [IOleObject:: EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
   
-##  <a name="fromidispatch"></a>CCmdTarget::FromIDispatch  
+##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  Llame a esta función para asignar un `IDispatch` puntero, procedente de las funciones de miembro de automatización de una clase, en la `CCmdTarget` objeto que implementa las interfaces de la `IDispatch` objeto.  
   
 ```  
@@ -258,7 +253,7 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ### <a name="remarks"></a>Comentarios  
  El resultado de esta función es el inverso de una llamada a la función miembro `GetIDispatch`.  
   
-##  <a name="getdispatchiid"></a>CCmdTarget::GetDispatchIID  
+##  <a name="getdispatchiid"></a>  CCmdTarget::GetDispatchIID  
  Obtiene el identificador de interfaz de envío principal.  
   
 ```  
@@ -275,9 +270,9 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="remarks"></a>Comentarios  
  Las clases derivadas deben invalidar esta función miembro (si no se reemplaza, `GetDispatchIID` devuelve FALSE). Vea [COleControl](../../mfc/reference/colecontrol-class.md).  
   
- Para obtener más información, vea el artículo de Knowledge Base Q185720, "HOWTO: proporcionar información de tipo de un servidor de automatización de MFC." Artículos de Knowledge Base están disponibles en [http://support.microsoft.com](http://support.microsoft.com/).  
+ Para obtener más información, vea el artículo de Knowledge Base Q185720, "HOWTO: proporcionar información de tipo de un servidor de automatización de MFC." Artículos de Knowledge Base están disponibles en [ http://support.microsoft.com ](http://support.microsoft.com/).  
   
-##  <a name="getidispatch"></a>CCmdTarget::GetIDispatch  
+##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch  
  Llame a esta función miembro para recuperar el `IDispatch` puntero desde un método de automatización que devuelve un `IDispatch` puntero o toma un `IDispatch` puntero por referencia.  
   
 ```  
@@ -294,7 +289,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
 ### <a name="remarks"></a>Comentarios  
  Para los objetos que llaman `EnableAutomation` en sus constructores, haciéndolos automatización habilitada, esta función devuelve un puntero a la implementación de clase Foundation `IDispatch` utilizado por los clientes que se comunican a través de la `IDispatch` interfaz. Llamar a esta función automáticamente agrega una referencia al puntero, por lo que no es necesario realizar una llamada a [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  
   
-##  <a name="gettypeinfocount"></a>CCmdTarget::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  Recupera el número de interfaces de información de tipo que proporciona un objeto.  
   
 ```  
@@ -309,7 +304,7 @@ virtual UINT GetTypeInfoCount();
   
  Las clases derivadas deben invalidar esta función para devolver el número de interfaces de información de tipo proporcionado (0 ó 1). Si no se reemplaza, **GetTypeInfoCount** devuelve 0. Para invalidar, use la [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, que también implementa `GetTypeLib` y `GetTypeLibCache`.  
   
-##  <a name="gettypeinfoofguid"></a>CCmdTarget::GetTypeInfoOfGuid  
+##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  Recupera la descripción del tipo que se corresponde con el GUID especificado.  
   
 ```  
@@ -332,7 +327,7 @@ HRESULT GetTypeInfoOfGuid(
 ### <a name="return-value"></a>Valor devuelto  
  HRESULT que indica el éxito o fracaso de la llamada. Si es correcto, * `ppTypeInfo` señala a la interfaz de información de tipo.  
   
-##  <a name="gettypelib"></a>CCmdTarget::GetTypeLib  
+##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  Obtiene un puntero a una biblioteca de tipos.  
   
 ```  
@@ -354,7 +349,7 @@ virtual HRESULT GetTypeLib(
 ### <a name="remarks"></a>Comentarios  
  Las clases derivadas deben invalidar esta función miembro (si no se reemplaza, `GetTypeLib` devuelve TYPE_E_CANTLOADLIBRARY). Use la [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, que también implementa `GetTypeInfoCount` y `GetTypeLibCache`.  
   
-##  <a name="gettypelibcache"></a>CCmdTarget::GetTypeLibCache  
+##  <a name="gettypelibcache"></a>  CCmdTarget::GetTypeLibCache  
  Obtiene la caché de la biblioteca de tipos.  
   
 ```  
@@ -367,7 +362,7 @@ virtual CTypeLibCache* GetTypeLibCache();
 ### <a name="remarks"></a>Comentarios  
  Las clases derivadas deben invalidar esta función miembro (si no se reemplaza, **GetTypeLibCache** devuelve NULL). Use la [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, que también implementa `GetTypeInfoCount` y `GetTypeLib`.  
   
-##  <a name="isinvokeallowed"></a>CCmdTarget::IsInvokeAllowed  
+##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
  Esta función se invoca mediante la implementación de MFC de **IDispatch:: Invoke** para determinar si un método de automatización determinado (identificada por `dispid`) se puede invocar.  
   
 ```  
@@ -386,7 +381,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
   
  Las clases derivadas pueden invalidar esta función para devolver los valores adecuados (si no se reemplaza, `IsInvokeAllowed` devuelve TRUE). Vea en particular [COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).  
   
-##  <a name="isresultexpected"></a>CCmdTarget::IsResultExpected  
+##  <a name="isresultexpected"></a>  CCmdTarget::IsResultExpected  
  Utilice `IsResultExpected` para determinar si un cliente espera un valor devuelto de la llamada a una función de automatización.  
   
 ```  
@@ -401,9 +396,9 @@ BOOL IsResultExpected();
   
  Esta función devuelve 0 solo una vez para que obtendrá los valores válidos de valor devueltos de otras funciones de automatización si llamarlas desde la función de automatización de la el cliente ha llamado.  
   
- `IsResultExpected`Devuelve un valor distinto de cero si se llama cuando una llamada de función de automatización no está en curso.  
+ `IsResultExpected` Devuelve un valor distinto de cero si se llama cuando una llamada de función de automatización no está en curso.  
   
-##  <a name="oncmdmsg"></a>CCmdTarget:: OnCmdMsg  
+##  <a name="oncmdmsg"></a>  CCmdTarget:: OnCmdMsg  
  Lo llama el marco de trabajo para enrutar y enviar los mensajes de comando y para controlar la actualización de los objetos de interfaz de usuario de comando.  
   
 ```  
@@ -452,7 +447,7 @@ virtual BOOL OnCmdMsg(
   
  [!code-cpp[NVC_MFCDocView#45](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]  
   
-##  <a name="onfinalrelease"></a>CCmdTarget:: OnFinalRelease  
+##  <a name="onfinalrelease"></a>  CCmdTarget:: OnFinalRelease  
  Llamado por el marco de trabajo cuando se libera la última referencia OLE hacia o desde el objeto.  
   
 ```  
@@ -462,7 +457,7 @@ virtual void OnFinalRelease();
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función para proporcionar un control especial para esta situación. La implementación predeterminada, elimina el objeto.  
   
-##  <a name="restorewaitcursor"></a>CCmdTarget::RestoreWaitCursor  
+##  <a name="restorewaitcursor"></a>  CCmdTarget::RestoreWaitCursor  
  Llame a esta función para restaurar el cursor de reloj de arena adecuado después de cambia el cursor del sistema (por ejemplo, después de un cuadro de mensaje se ha abierto y, a continuación, se cierra mientras se esté realizando una operación larga).  
   
 ```  

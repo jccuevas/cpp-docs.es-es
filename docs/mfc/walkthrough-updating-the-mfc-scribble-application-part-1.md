@@ -1,13 +1,10 @@
 ---
-title: "Tutorial: Actualizar la aplicación Scribble MFC (parte 1) | Documentos de Microsoft"
-ms.custom: 
+title: 'Tutorial: Actualizar la aplicación Scribble MFC (parte 1) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Tutorial: Actualizar la aplicación Scribble MFC (parte 1)
 Este tutorial muestra cómo modificar una aplicación MFC existente para utilizar la interfaz de usuario de la cinta de opciones. Visual Studio admite la cinta de Office 2007 y la cinta de Windows 7 Scenic. Para obtener más información acerca de la interfaz de usuario de la cinta de opciones, vea [cintas](http://go.microsoft.com/fwlink/p/?linkid=129233) en el sitio Web de MSDN.  
@@ -55,7 +50,7 @@ Este tutorial muestra cómo modificar una aplicación MFC existente para utiliza
   
 - [Configurar la apariencia de la aplicación](#setlook)  
   
-##  <a name="replaceclass"></a>Reemplazar las clases Base  
+##  <a name="replaceclass"></a> Reemplazar las clases Base  
  Para convertir una aplicación que admite un menú en una aplicación que admite una cinta, la aplicación, la ventana marco y las clases de barra de herramientas deben derivarse de clases base actualizadas. (Sugerimos no modificar el ejemplo original Scribble; en su lugar, limpie el proyecto Scribble, cópielo a otro directorio y, a continuación, modifique la copia).  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Para reemplazar las clases base de la aplicación Scribble  
@@ -130,7 +125,7 @@ Este tutorial muestra cómo modificar una aplicación MFC existente para utiliza
   
  [[Secciones](#top)]  
   
-##  <a name="addbitmap"></a>Agregar mapas de bits al proyecto  
+##  <a name="addbitmap"></a> Agregar mapas de bits al proyecto  
  Los siguientes cuatro pasos de este tutorial requieren recursos de mapa de bits. Puede obtener los mapas de bits adecuados de varias maneras:  
   
 -   Use la [editores de recursos](../windows/resource-editors.md) inventar sus propios mapas de bits. O bien, utilice los editores de recursos para ensamblar mapas de bits a partir de las imágenes PNG (Portable Network Graphics) que se incluyen con [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Estas imágenes se encuentran en el `VS2008ImageLibrary` directory.  
@@ -175,7 +170,7 @@ Este tutorial muestra cómo modificar una aplicación MFC existente para utiliza
   
  [[Secciones](#top)]  
   
-##  <a name="addribbon"></a>Agregar un recurso de cinta al proyecto  
+##  <a name="addribbon"></a> Agregar un recurso de cinta al proyecto  
  Al convertir una aplicación que utiliza los menús de una aplicación que tiene una cinta, no es necesario quitar o deshabilitar los menús existentes. En su lugar, cree un recurso de cinta, agregue los botones de la cinta y, a continuación, asocie los nuevos botones con los elementos de menú existentes. Aunque los menús no estén visibles, los mensajes de la barra de cinta se enrutan a través de los menús. Además, los accesos directos de menú siguen funcionando.  
   
  Una cinta consta del botón Aplicación, que es el botón grande del lado superior izquierdo de la cinta, y una o varias pestañas de categoría. Cada pestaña de categoría contiene uno o varios paneles que actúan como contenedores para los botones y los controles de la cinta. En el procedimiento siguiente se muestra cómo crear un recurso de cinta y, después, personalizar el botón Aplicación.  
@@ -226,7 +221,7 @@ Este tutorial muestra cómo modificar una aplicación MFC existente para utiliza
   
  [[Secciones](#top)]  
   
-##  <a name="createinstance"></a>Crear una instancia de la barra de cinta  
+##  <a name="createinstance"></a> Crear una instancia de la barra de cinta  
  En los pasos siguientes se muestra cómo crear una instancia de la barra de cinta cuando se inicia la aplicación. Para agregar una barra de cinta a una aplicación, declare la barra de cinta en el archivo mainfrm.h. A continuación, en el archivo mainfrm.cpp, escriba código para cargar el recurso de cinta.  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Para crear una instancia de la barra de cinta  
@@ -250,7 +245,7 @@ Este tutorial muestra cómo modificar una aplicación MFC existente para utiliza
   
  [[Secciones](#top)]  
   
-##  <a name="addcategory"></a>Personalizar el recurso de cinta  
+##  <a name="addcategory"></a> Personalizar el recurso de cinta  
  Ahora que ha creado el botón Aplicación, puede agregar elementos a la cinta.  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ Este tutorial muestra cómo modificar una aplicación MFC existente para utiliza
   
  [[Secciones](#top)]  
   
-##  <a name="setlook"></a>Configurar la apariencia de la aplicación  
+##  <a name="setlook"></a> Configurar la apariencia de la aplicación  
  A *Administrador visual* es un objeto global que controla todo el dibujo de una aplicación. Dado que la aplicación original Scribble utiliza el estilo de la interfaz de usuario de Office 2000, la aplicación puede parecer antigua. Puede restablecer la aplicación para utilizar el administrador visual de Office 2007 de modo sea similar a una aplicación de Office 2007.  
   
 #### <a name="to-set-the-look-of-the-application"></a>Para establecer la apariencia de la aplicación  

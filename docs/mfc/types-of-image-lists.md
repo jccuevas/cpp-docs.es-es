@@ -1,13 +1,10 @@
 ---
-title: "Tipos de listas de imágenes | Documentos de Microsoft"
-ms.custom: 
+title: Tipos de listas de imágenes | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - image lists [MFC], types of
 - CImageList class [MFC], types
 ms.assetid: bee5e7c3-78f5-4037-a136-9c50d67cdee5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84a2118978d5ebd722d4fe56cdeec2aa0f74a94e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8988dc55bbbaa1d446ee14bf78a0cd799b422834
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-image-lists"></a>Tipos de listas de imágenes
 Hay dos tipos de listas de imágenes ([CImageList](../mfc/reference/cimagelist-class.md)): no enmascaradas y enmascaradas. Una "lista de imágenes no enmascarada" se compone de un mapa de bits de color que contiene una o más imágenes. Una "lista de imágenes enmascarada" se compone de dos mapas de bits del mismo tamaño. El primero es un mapa de bits de color que contiene las imágenes y el segundo es un mapa de bits monocromo que contiene una serie de máscaras: uno para cada imagen del primer mapa de bits.  

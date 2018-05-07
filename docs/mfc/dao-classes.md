@@ -1,13 +1,10 @@
 ---
 title: Clases DAO | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c80351071318b88956fa3717875561bdf30232dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f43595ca5f688372a70999231ceebec5282cd3b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dao-classes"></a>Clases de DAO
 Estas clases funcionan con las otras clases de framework de aplicación para proporcionar acceso fácil a las bases de datos de objeto de acceso a datos (DAO), que usan el mismo motor de base de datos como Microsoft Visual Basic y Microsoft Access. Las clases DAO también pueden tener acceso a una amplia variedad de bases de datos para los que están disponibles los controladores de conectividad abierta de base de datos (ODBC).  
@@ -62,7 +57,7 @@ Estas clases funcionan con las otras clases de framework de aplicación para pro
   
 ## <a name="related-classes"></a>Clases relacionadas  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Encapsula un identificador de almacenamiento para un objeto binario grande (BLOB), como un mapa de bits. `CLongBinary`los objetos se usan para administrar objetos de gran cantidad de datos almacenados en tablas de base de datos.  
+ Encapsula un identificador de almacenamiento para un objeto binario grande (BLOB), como un mapa de bits. `CLongBinary` los objetos se usan para administrar objetos de gran cantidad de datos almacenados en tablas de base de datos.  
   
  [COleCurrency](../mfc/reference/colecurrency-class.md)  
  Contenedor para el tipo de automatización OLE **moneda**, un tipo aritmético punto fijo, con 15 dígitos que hay delante del separador decimal y 4 dígitos después.  

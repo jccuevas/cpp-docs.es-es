@@ -1,13 +1,10 @@
 ---
-title: "Aspectos básicos de la barra de herramientas | Documentos de Microsoft"
-ms.custom: 
+title: Aspectos básicos de la barra de herramientas | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - RT_TOOLBAR
 dev_langs:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b9f5dd36c9e4092b8e5c15ac1738541cf71f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-fundamentals"></a>Fundamentos de las barras de herramientas
 En este artículo se describe la implementación de MFC fundamental que le permite agregar una barra de herramientas de forma predeterminada a la aplicación seleccionando una opción en el Asistente para aplicaciones. Los temas tratados son:  
@@ -52,14 +47,14 @@ En este artículo se describe la implementación de MFC fundamental que le permi
   
 -   [Varias barras de herramientas](#_core_multiple_toolbars)  
   
-##  <a name="_core_the_appwizard_toolbar_option"></a>La opción de barra de herramientas del Asistente para aplicaciones  
+##  <a name="_core_the_appwizard_toolbar_option"></a> La opción de barra de herramientas del Asistente para aplicaciones  
  Para obtener una sola barra de herramientas con botones predeterminados, seleccione la opción de barra de herramientas de acoplamiento estándar en la página características de la interfaz de usuario de la etiqueta. Esto agrega código a la aplicación que:  
   
 -   Crea el objeto de barra de herramientas.  
   
 -   Administra la barra de herramientas, incluida su capacidad para acoplar o flotante.  
   
-##  <a name="_core_the_toolbar_in_code"></a>La barra de herramientas en el código  
+##  <a name="_core_the_toolbar_in_code"></a> La barra de herramientas en el código  
  La barra de herramientas es un [CToolBar](../mfc/reference/ctoolbar-class.md) objeto declarado como un miembro de datos de la aplicación **CMainFrame** clase. En otras palabras, el objeto de barra de herramientas está incrustado en el objeto de ventana de marco principal. Esto significa que MFC crea la barra de herramientas cuando se crea la ventana de marco y se destruye la barra de herramientas cuando destruye la ventana de marco. La siguiente declaración de clase parcial, para una aplicación de múltiples documentos (MDI) de la interfaz, muestra a los miembros de datos de una barra de herramientas incrustada y una barra de estado incrustada. También muestra la invalidación de la `OnCreate` función miembro.  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
@@ -77,7 +72,7 @@ En este artículo se describe la implementación de MFC fundamental que le permi
   
  El acoplamiento, flotante y llamadas de sugerencias de herramienta son opcionales. Puede quitar esas líneas de `OnCreate` si lo prefiere. El resultado es una barra de herramientas que permanece fijo, no se ha podido float o volver a acoplarse y no se puede mostrar información sobre herramientas.  
   
-##  <a name="_core_editing_the_toolbar_resource"></a>Editar el recurso de barra de herramientas  
+##  <a name="_core_editing_the_toolbar_resource"></a> Editar el recurso de barra de herramientas  
  La barra de herramientas predeterminada que se obtienen con el Asistente para aplicaciones se basa en un **RT_TOOLBAR** recurso personalizado, que se introdujo en la versión 4.0 de MFC. Puede editar este recurso con el [editor de la barra de herramientas](../windows/toolbar-editor.md). El editor permite agregar, eliminar y reorganizar botones fácilmente. Contiene un editor gráfico para los botones que es muy similares al editor de gráficos general de Visual C++. Si edita las barras de herramientas en versiones anteriores de Visual C++, encontrará la tarea mucho más fácil ahora.  
   
  Para conectar un botón de barra de herramientas a un comando, se le da al botón un identificador de comando, como `ID_MYCOMMAND`. Especifique el identificador de comando en la página de propiedades del botón en el editor de la barra de herramientas. A continuación, cree una función de controlador para el comando (vea [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md) para obtener más información).  
@@ -86,7 +81,7 @@ En este artículo se describe la implementación de MFC fundamental que le permi
   
  Para obtener más información acerca de cómo utilizar el editor de la barra de herramientas, consulte [barra de herramientas del Editor](../windows/toolbar-editor.md).  
   
-##  <a name="_core_multiple_toolbars"></a>Varias barras de herramientas  
+##  <a name="_core_multiple_toolbars"></a> Varias barras de herramientas  
  El Asistente para aplicaciones proporciona una barra de herramientas de un valor predeterminado. Si necesita más de una barra de herramientas en la aplicación, puede modelar su código de barras de herramientas adicionales en función del código generado por el Asistente para la barra de herramientas predeterminada.  
   
  Si desea mostrar una barra de herramientas como el resultado de un comando, debe:  

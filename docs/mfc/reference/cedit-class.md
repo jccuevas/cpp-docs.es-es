@@ -1,12 +1,9 @@
 ---
 title: Clase CEdit | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEdit
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 Proporciona la funcionalidad de un control de edición de Windows.  
@@ -193,7 +188,7 @@ class CEdit : public CWnd
   
  Cada entrada de mapa de mensajes tiene el formato siguiente:  
   
- **ON_**notificación **(** *memberFxn ***, Id.)**  
+ **ON_** notificación **(** *memberFxn ***, Id.)**  
   
  donde `id` especifica el identificador de ventana secundaria de envío de notificaciones, el control de edición y `memberFxn` es el nombre de la función de miembro primario haya terminado de escribir para controlar la notificación.  
   
@@ -1067,7 +1062,7 @@ void SetPasswordChar(TCHAR ch);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *ch*  
+ *CH*  
  Especifica el carácter que se mostrará en lugar del carácter escrito por el usuario. Si *ch* es 0, se muestran los caracteres reales escritos por el usuario.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1077,7 +1072,7 @@ void SetPasswordChar(TCHAR ch);
   
  Cuando el `SetPasswordChar` se llama la función miembro, `CEdit` se volverá a dibujar todos los caracteres visibles mediante el carácter especificado por *ch*.  
   
- Si el control de edición se crea con el [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) estilo, el carácter de contraseña predeterminado se establece en un asterisco (  **\*** ). Este estilo se quitará si `SetPasswordChar` se llama con *ch* establecido en 0.  
+ Si el control de edición se crea con el [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) estilo, el carácter de contraseña predeterminado se establece en un asterisco ( **\***). Este estilo se quitará si `SetPasswordChar` se llama con *ch* establecido en 0.  
   
  Para obtener más información, consulte [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) en el SDK de Windows.  
   

@@ -1,13 +1,10 @@
 ---
 title: Funciones de intercambio de campos de registro | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 564d797a30e4b2d8518c73c5f7589aae205b6907
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-functions"></a>Funciones de intercambio de campos de registros
 Este tema enumeran el intercambio de campos de registro (RFX, RFX masivo y DFX) funciones que se usan para automatizar la transferencia de datos entre un objeto de conjunto de registros y su origen de datos y realizar otras operaciones en los datos.  
@@ -438,7 +433,7 @@ void RFX_Text(
  Se utiliza principalmente para los parámetros. Un entero que indica el tipo de datos del parámetro. El tipo es un tipo de datos ODBC del formulario **SQL_XXX**.  
   
  `nScale`  
- Especifica la escala de valores de tipo ODBC **SQL_DECIMAL** o **SQL_NUMERIC**. `nScale`sólo es útil al establecer los valores de parámetro. Para obtener más información, vea el tema "Precisión, escala, longitud y tamaño de presentación" en el apéndice D de la *referencia del programador del SDK de ODBC*.  
+ Especifica la escala de valores de tipo ODBC **SQL_DECIMAL** o **SQL_NUMERIC**. `nScale` sólo es útil al establecer los valores de parámetro. Para obtener más información, vea el tema "Precisión, escala, longitud y tamaño de presentación" en el apéndice D de la *referencia del programador del SDK de ODBC*.  
   
 ### <a name="remarks"></a>Comentarios  
  Los datos del origen de datos de todos estos tipos se asignan a y desde `CString` en el conjunto de registros.  
@@ -1046,7 +1041,7 @@ void AFXAPI DFX_DateTime(
  Los datos se asignan entre tipo **DAO_DATE** en DAO y escriba [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) en el conjunto de registros.  
   
 > [!NOTE]
->  `COleDateTime`reemplaza [CTime](../../atl-mfc-shared/reference/ctime-class.md) y **TIMESTAMP_STRUCT** para este propósito en las clases DAO. `CTime`y **TIMESTAMP_STRUCT** son todavía se utiliza para las clases de acceso de datos basadas en ODBC.  
+>  `COleDateTime` reemplaza [CTime](../../atl-mfc-shared/reference/ctime-class.md) y **TIMESTAMP_STRUCT** para este propósito en las clases DAO. `CTime` y **TIMESTAMP_STRUCT** son todavía se utiliza para las clases de acceso de datos basadas en ODBC.  
   
 ### <a name="example"></a>Ejemplo  
  Vea [DFX_Text](#dfx_text).  
@@ -1165,7 +1160,7 @@ void AFXAPI DFX_LongBinary(
 >  Puede controlar si los datos están dobles almacenamiento en búfer de forma predeterminada estableciendo [CDaoRecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
 ### <a name="remarks"></a>Comentarios  
- `DFX_LongBinary`se proporciona por compatibilidad con las clases ODBC de MFC. El `DFX_LongBinary` función transfiere datos binarios objetos grandes (BLOB) mediante la clase `CLongBinary` entre los miembros de datos de campo de un [CDaoRecordset](cdaorecordset-class.md) objeto y las columnas de un registro en el origen de datos. Los datos se asignan entre tipo **DAO_BYTES** en DAO y escriba [CLongBinary](clongbinary-class.md) en el conjunto de registros.  
+ `DFX_LongBinary` se proporciona por compatibilidad con las clases ODBC de MFC. El `DFX_LongBinary` función transfiere datos binarios objetos grandes (BLOB) mediante la clase `CLongBinary` entre los miembros de datos de campo de un [CDaoRecordset](cdaorecordset-class.md) objeto y las columnas de un registro en el origen de datos. Los datos se asignan entre tipo **DAO_BYTES** en DAO y escriba [CLongBinary](clongbinary-class.md) en el conjunto de registros.  
   
 ### <a name="example"></a>Ejemplo  
  Vea [DFX_Text](#dfx_text).  
@@ -1206,7 +1201,7 @@ void AFXAPI DFX_Short(
  Los datos se asignan entre tipo **DAO_I2** en DAO y escriba **breve** en el conjunto de registros.  
   
 > [!NOTE]
->  `DFX_Short`es equivalente a [RFX_Int](#rfx_int) para las clases basadas en ODBC.  
+>  `DFX_Short` es equivalente a [RFX_Int](#rfx_int) para las clases basadas en ODBC.  
   
 ### <a name="example"></a>Ejemplo  
  Vea [DFX_Text](#dfx_text).  

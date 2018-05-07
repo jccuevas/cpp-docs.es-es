@@ -1,13 +1,10 @@
 ---
-title: "TN040: MFC OLE en contexto de cambio de tamaño y zoom | Documentos de Microsoft"
-ms.custom: 
+title: 'TN040: MFC OLE en contexto de cambio de tamaño y zoom | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1113da01e58ec00cd4420aab4424b1c20e127e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: Cambio de tamaño y zoom en contexto de MFC/OLE
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  Para obtener un ejemplo de zoom correctamente, vea el ejemplo de MFC OLE [HIERSVR](../visual-cpp-samples.md). Acercar HIERSVR resulta complicada por el hecho de que se muestre texto y texto, por lo general, no se ajusta de forma lineal (sugerencias, convenciones tipográficas, diseño, alto y el ancho todos complicar la cuestión). Aún así, HIERSVR es una referencia razonable para implementar zoom correctamente y, por lo que es el Tutorial de MFC [SCRIBBLE](../visual-cpp-samples.md) (paso 7).  
   
- `COleServerDoc::GetZoomFactor`Determina el factor de zoom en función de un número de diferentes métricas disponibles desde el contenedor o desde la implementación de su `COleServerItem` y `COleServerDoc` clases. En resumen, el factor de zoom actual viene determinado por la fórmula siguiente:  
+ `COleServerDoc::GetZoomFactor` Determina el factor de zoom en función de un número de diferentes métricas disponibles desde el contenedor o desde la implementación de su `COleServerItem` y `COleServerDoc` clases. En resumen, el factor de zoom actual viene determinado por la fórmula siguiente:  
   
 ```  
 Position Rectangle (PR) / Container Extent (CE)  
@@ -64,7 +59,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  La extensión de contenedor es ligeramente más compleja para calcular. Si el contenedor se denomina `COleServerItem::OnSetExtent` (con una llamada a `COleClientItem::SetExtent`), a continuación, la extensión de contenedor es este valor convertido en píxeles en función del número de píxeles por pulgada lógica. Si el contenedor no llamado SetExtent (que suele ser el caso), la extensión de contenedor es el tamaño devuelto desde `COleServerItem::OnGetExtent`. Por lo tanto, si el contenedor no llamado SetExtent, el marco de trabajo se da por supuesto que si lo hiciera el contenedor habría lo han llamado con 100% de la extensión natural (el valor devuelto de **COleServerItem::GetExtent**). Expresado de otra forma, el marco de trabajo, se da por supuesto que el contenedor muestra 100% (no más, pero no menos) del elemento.  
   
- Es importante tener en cuenta que aunque `COleServerItem::OnSetExtent` y `COleServerItem::OnGetExtent` tienen nombres similares, no controlará el mismo atributo del elemento. `OnSetExtent`se llama para comunicar el servidor de la cantidad del objeto está visible en el contenedor (sin tener en cuenta el factor de zoom) y `OnGetExtent` se llama por el contenedor para determinar el tamaño ideal del objeto.  
+ Es importante tener en cuenta que aunque `COleServerItem::OnSetExtent` y `COleServerItem::OnGetExtent` tienen nombres similares, no controlará el mismo atributo del elemento. `OnSetExtent` se llama para comunicar el servidor de la cantidad del objeto está visible en el contenedor (sin tener en cuenta el factor de zoom) y `OnGetExtent` se llama por el contenedor para determinar el tamaño ideal del objeto.  
   
  Si se observan en cada una de las API implicadas, puede obtener una imagen más clara:  
   

@@ -1,12 +1,9 @@
 ---
 title: CArray (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e7bf9518ad96e5a67f2d19d3729e5813d3f84d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carray-class"></a>CArray (clase)
 Admite matrices que son como las matrices de C, pero pueden reducir y crecer según sea necesario dinámicamente.  
@@ -75,10 +70,10 @@ class CArray : public CObject
   
 #### <a name="parameters"></a>Parámetros  
  `TYPE`  
- Parámetro de plantilla que especifica el tipo de los objetos almacenados en la matriz. `TYPE`es un parámetro que es devuelto por `CArray`.  
+ Parámetro de plantilla que especifica el tipo de los objetos almacenados en la matriz. `TYPE` es un parámetro que es devuelto por `CArray`.  
   
  `ARG` *_* `TYPE`  
- Parámetro de plantilla que especifica el tipo de argumento que se usa para tener acceso a objetos almacenados en la matriz. A menudo una referencia a `TYPE`. `ARG_TYPE`es un parámetro que se pasa a `CArray`.  
+ Parámetro de plantilla que especifica el tipo de argumento que se usa para tener acceso a objetos almacenados en la matriz. A menudo una referencia a `TYPE`. `ARG_TYPE` es un parámetro que se pasa a `CArray`.  
   
 ## <a name="members"></a>Miembros  
   
@@ -141,9 +136,9 @@ class CArray : public CObject
  `CArray`  
   
 ## <a name="requirements"></a>Requisitos  
- `Header:`afxtempl.h  
+ `Header:` afxtempl.h  
   
-##  <a name="add"></a>CArray::Add  
+##  <a name="add"></a>  CArray::Add  
  Agrega un nuevo elemento al final de una matriz, aumentando la matriz en 1.  
   
 ```  
@@ -166,7 +161,7 @@ INT_PTR Add(ARG_TYPE newElement);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
   
-##  <a name="append"></a>CArray::Append  
+##  <a name="append"></a>  CArray::Append  
  Llame a esta función miembro para agregar el contenido de una matriz al final de la otra.  
   
 ```  
@@ -188,7 +183,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
   
-##  <a name="carray"></a>CArray::CArray  
+##  <a name="carray"></a>  CArray::CArray  
  Construye una matriz vacía.  
   
 ```  
@@ -201,7 +196,7 @@ CArray();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
   
-##  <a name="copy"></a>CArray::Copy  
+##  <a name="copy"></a>  CArray::Copy  
  Utilice esta función miembro para copiar los elementos de una matriz a otra.  
   
 ```  
@@ -220,7 +215,7 @@ void Copy(const CArray& src);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CArray::ElementAt  
+##  <a name="elementat"></a>  CArray::ElementAt  
  Devuelve una referencia temporal en el elemento especificado de la matriz.  
   
 ```  
@@ -241,7 +236,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [GetSize](#getsize).  
   
-##  <a name="freeextra"></a>CArray::FreeExtra  
+##  <a name="freeextra"></a>  CArray::FreeExtra  
  Libera la memoria adicional que se asignó mientras se ha aumentado la matriz.  
   
 ```  
@@ -254,7 +249,7 @@ void FreeExtra();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [GetData](#getdata).  
   
-##  <a name="getat"></a>CArray::GetAt  
+##  <a name="getat"></a>  CArray::GetAt  
  Devuelve el elemento de matriz en el índice especificado.  
   
 ```  
@@ -278,7 +273,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CArray::GetCount  
+##  <a name="getcount"></a>  CArray::GetCount  
  Devuelve el número de elementos de matriz.  
   
 ```  
@@ -294,7 +289,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CArray::GetData  
+##  <a name="getdata"></a>  CArray::GetData  
  Utilice esta función miembro para tener acceso directo a los elementos de una matriz.  
   
 ```  
@@ -317,7 +312,7 @@ TYPE* GetData();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CArray::GetSize  
+##  <a name="getsize"></a>  CArray::GetSize  
  Devuelve el tamaño de la matriz.  
   
 ```  
@@ -330,7 +325,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CArray::GetUpperBound  
  Devuelve el límite superior actual de esta matriz.  
   
 ```  
@@ -345,7 +340,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CArray::GetAt](#getat).  
   
-##  <a name="insertat"></a>CArray::InsertAt  
+##  <a name="insertat"></a>  CArray::InsertAt  
  La primera versión de `InsertAt` inserta un elemento (o varias copias de un elemento) en el índice especificado en una matriz.  
   
 ```  
@@ -388,7 +383,7 @@ void InsertAt(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
   
-##  <a name="isempty"></a>CArray::IsEmpty  
+##  <a name="isempty"></a>  CArray::IsEmpty  
  Determina si la matriz está vacía.  
   
 ```  
@@ -398,7 +393,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la matriz no contiene elementos; en caso contrario es 0.  
   
-##  <a name="operator_at"></a>CArray::operator\[\]  
+##  <a name="operator_at"></a>  CArray::operator \[\]  
  Estos operadores de subíndice son un sustituto adecuado para la [SetAt](#setat) y [GetAt](#getat) funciones.  
   
 ```  
@@ -421,7 +416,7 @@ const TYPE& operator[](int_ptr nindex) const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
   
-##  <a name="relocateelements"></a>CArray::RelocateElements  
+##  <a name="relocateelements"></a>  CArray::RelocateElements  
  Reubica los datos a un nuevo búfer cuando se debe aumentar o reducir la matriz.  
   
 ```  
@@ -443,13 +438,13 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
  Número de elementos de la matriz anterior.  
   
 ### <a name="remarks"></a>Comentarios  
- `pNewData`siempre es lo suficientemente grande como para contener todos los `pData` elementos.  
+ `pNewData` siempre es lo suficientemente grande como para contener todos los `pData` elementos.  
   
  El [CArray](../../mfc/reference/carray-class.md) implementación utiliza este método para copiar los datos antiguos a un nuevo búfer cuando la matriz debe aumentar o reducir (cuando [SetSize](#setsize) o [FreeExtra](#freeextra) se denominan). La implementación predeterminada sólo copia los datos.  
   
  Para las matrices en el que un elemento no contiene un puntero a uno de sus miembros u otra estructura contiene un puntero a uno de los elementos de matriz, los punteros no se actualizan en copia sin formato. En este caso, puede corregir punteros mediante la implementación de una especialización de `RelocateElements` con los tipos pertinentes. También son responsables de copiar los datos.  
   
-##  <a name="removeall"></a>CArray::RemoveAll  
+##  <a name="removeall"></a>  CArray::RemoveAll  
  Quita todos los elementos de esta matriz.  
   
 ```  
@@ -462,7 +457,7 @@ void RemoveAll();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
   
-##  <a name="removeat"></a>CArray::RemoveAt  
+##  <a name="removeat"></a>  CArray::RemoveAt  
  Quita uno o más elementos, empezando por un índice especificado en una matriz.  
   
 ```  
@@ -486,7 +481,7 @@ void RemoveAt(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
   
-##  <a name="setat"></a>CArray::SetAt  
+##  <a name="setat"></a>  CArray::SetAt  
  Establece el elemento de matriz en el índice especificado.  
   
 ```  
@@ -504,14 +499,14 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
  El nuevo valor del elemento que se almacenará en la posición especificada.  
   
 ### <a name="remarks"></a>Comentarios  
- `SetAt`no se hará que la matriz crezca. Use [SetAtGrow](#setatgrow) si desea que la matriz para crecer automáticamente.  
+ `SetAt` no se hará que la matriz crezca. Use [SetAtGrow](#setatgrow) si desea que la matriz para crecer automáticamente.  
   
  Debe asegurarse de que el valor de índice representa una posición válida en la matriz. Si no fuera de los límites, se valida la versión de la biblioteca de depuración.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [GetAt](#getat).  
   
-##  <a name="setatgrow"></a>CArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CArray::SetAtGrow  
  Establece el elemento de matriz en el índice especificado.  
   
 ```  
@@ -534,7 +529,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
   
-##  <a name="setsize"></a>CArray  
+##  <a name="setsize"></a>  CArray  
  Establece el tamaño de una matriz vacía o existente; asigna memoria si es necesario.  
   
 ```  

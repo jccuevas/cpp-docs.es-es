@@ -1,13 +1,10 @@
 ---
-title: "TN039: Implementación de automatización OLE de MFC | Documentos de Microsoft"
-ms.custom: 
+title: 'TN039: Implementación de automatización OLE de MFC | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a5962c9b9254233b0990f19cdc1ff4f562d9cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: Implementación de Automation MFC/OLE
 > [!NOTE]
@@ -273,7 +268,7 @@ void CMyObject::SetItem(short row,
  Una cadena de espacio separados VTS_ para cada parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
- Estas macros permiten especificar un **DISPID** en lugar de dejar que MFC automáticamente asignar uno. Estas macros de avanzadas tienen los mismos nombres pero ese identificador se anexa al nombre de la macro (p. ej. **DISP_PROPERTY_ID**) y el identificador se determina mediante el parámetro especificado justo después del `pszName` parámetro. Vea AFXDISP. H para obtener más información sobre estas macros. El **_ID** entradas deben colocarse al final del mapa de envíos. Afecten a automático **DISPID** generación de la misma manera que no**_ID** ¿versión de la macro (la **DISPID**s se determinan por posición). Por ejemplo:  
+ Estas macros permiten especificar un **DISPID** en lugar de dejar que MFC automáticamente asignar uno. Estas macros de avanzadas tienen los mismos nombres pero ese identificador se anexa al nombre de la macro (p. ej. **DISP_PROPERTY_ID**) y el identificador se determina mediante el parámetro especificado justo después del `pszName` parámetro. Vea AFXDISP. H para obtener más información sobre estas macros. El **_ID** entradas deben colocarse al final del mapa de envíos. Afecten a automático **DISPID** generación de la misma manera que no **_ID** ¿versión de la macro (la **DISPID**s se determinan por posición). Por ejemplo:  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,

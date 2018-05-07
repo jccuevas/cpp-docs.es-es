@@ -1,12 +1,9 @@
 ---
 title: Clase CSplitterWnd | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSplitterWnd
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 706425dd8d729937d310da9cc2f09eac8ec1ad57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 071eaeef6fbdbe4967d184936f5fb7bffb7786b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd (clase)
 Proporciona la funcionalidad de una ventana divisora, que es una ventana que contiene varios paneles.  
@@ -207,7 +202,7 @@ class CSplitterWnd : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxext.h  
   
-##  <a name="activatenext"></a>CSplitterWnd::ActivateNext  
+##  <a name="activatenext"></a>  CSplitterWnd::ActivateNext  
  Lo llama el marco de trabajo para realizar el comando panel siguiente o anterior.  
   
 ```  
@@ -221,7 +216,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro es un comando de alto nivel que se usa por la [CView](../../mfc/reference/cview-class.md) clase delegar en el `CSplitterWnd` implementación.  
   
-##  <a name="canactivatenext"></a>CSplitterWnd::CanActivateNext  
+##  <a name="canactivatenext"></a>  CSplitterWnd::CanActivateNext  
  Lo llama el marco de trabajo para comprobar si el comando panel siguiente o panel anterior actualmente es posible.  
   
 ```  
@@ -238,7 +233,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro es un comando de alto nivel que se usa por la [CView](../../mfc/reference/cview-class.md) clase delegar en el `CSplitterWnd` implementación.  
   
-##  <a name="create"></a>CSplitterWnd:: Create  
+##  <a name="create"></a>  CSplitterWnd:: Create  
  Para crear una ventana divisora dinámica, llame a la **crear** función miembro.  
   
 ```  
@@ -295,7 +290,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#125](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]  
   
-##  <a name="createscrollbarctrl"></a>CSplitterWnd::CreateScrollBarCtrl  
+##  <a name="createscrollbarctrl"></a>  CSplitterWnd::CreateScrollBarCtrl  
  Lo llama el marco para crear un control de barra de desplazamiento compartido.  
   
 ```  
@@ -317,7 +312,7 @@ virtual BOOL CreateScrollBarCtrl(
 ### <a name="remarks"></a>Comentarios  
  Invalidar `CreateScrollBarCtrl` para incluir controles adicionales al lado de una barra de desplazamiento. El comportamiento predeterminado consiste en crear controles de barra de desplazamiento de Windows normales.  
   
-##  <a name="createstatic"></a>CSplitterWnd:: CreateStatic  
+##  <a name="createstatic"></a>  CSplitterWnd:: CreateStatic  
  Para crear una ventana divisora estática, llame a la `CreateStatic` función miembro.  
   
 ```  
@@ -367,7 +362,7 @@ virtual BOOL CreateStatic(
   
  Consulte "Ventanas divisoras" en el artículo [varios tipos de documentos, vistas y ventanas de marco](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 de nota técnica](../../mfc/tn029-splitter-windows.md)y el `CSplitterWnd` general sobre la clase para obtener más información sobre las ventanas divisoras estáticas.  
   
-##  <a name="createview"></a>CSplitterWnd:: CreateView  
+##  <a name="createview"></a>  CSplitterWnd:: CreateView  
  Crea los paneles de una ventana divisora estática.  
   
 ```  
@@ -406,7 +401,7 @@ virtual BOOL CreateView(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#4](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]  
   
-##  <a name="csplitterwnd"></a>CSplitterWnd::CSplitterWnd  
+##  <a name="csplitterwnd"></a>  CSplitterWnd::CSplitterWnd  
  Llamada a construir un `CSplitterWnd` objeto.  
   
 ```  
@@ -416,7 +411,7 @@ CSplitterWnd();
 ### <a name="remarks"></a>Comentarios  
  Construir un `CSplitterWnd` objeto en dos pasos. En primer lugar, llame al constructor, que crea el `CSplitterWnd` objeto y, a continuación, llame a la [crear](#create) función de miembro, que crea la ventana divisora y lo adjunta a la `CSplitterWnd` objeto.  
   
-##  <a name="deletecolumn"></a>CSplitterWnd::DeleteColumn  
+##  <a name="deletecolumn"></a>  CSplitterWnd::DeleteColumn  
  Elimina una columna de la ventana divisora.  
   
 ```  
@@ -430,7 +425,7 @@ virtual void DeleteColumn(int colDelete);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro se llama el marco de trabajo para implementar la lógica de la ventana divisora dinámica (es decir, si la ventana divisora tiene la **SPLS_DYNAMIC_SPLIT** estilo). Se puede personalizar, junto con la función virtual [CreateView](#createview)para implementar divisores dinámicas más avanzadas.  
   
-##  <a name="deleterow"></a>CSplitterWnd::DeleteRow  
+##  <a name="deleterow"></a>  CSplitterWnd::DeleteRow  
  Elimina una fila de la ventana divisora.  
   
 ```  
@@ -444,7 +439,7 @@ virtual void DeleteRow(int rowDelete);
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro se llama el marco de trabajo para implementar la lógica de la ventana divisora dinámica (es decir, si la ventana divisora tiene la **SPLS_DYNAMIC_SPLIT** estilo). Se puede personalizar, junto con la función virtual [CreateView](#createview)para implementar divisores dinámicas más avanzadas.  
   
-##  <a name="deleteview"></a>CSplitterWnd::DeleteView  
+##  <a name="deleteview"></a>  CSplitterWnd::DeleteView  
  Elimina una vista de la ventana divisora.  
   
 ```  
@@ -465,7 +460,7 @@ virtual void DeleteView(
   
  Esta función miembro se llama el marco de trabajo para implementar la lógica de la ventana divisora dinámica (es decir, si la ventana divisora tiene la **SPLS_DYNAMIC_SPLIT** estilo). Se puede personalizar, junto con la función virtual [CreateView](#createview)para implementar divisores dinámicas más avanzadas.  
   
-##  <a name="dokeyboardsplit"></a>CSplitterWnd::DoKeyboardSplit  
+##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit  
  Realiza el teclado dividir comando, normalmente "división de ventana".  
   
 ```  
@@ -478,7 +473,7 @@ virtual BOOL DoKeyboardSplit();
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro es un comando de alto nivel que se usa por la [CView](../../mfc/reference/cview-class.md) clase delegar en el `CSplitterWnd` implementación.  
   
-##  <a name="doscroll"></a>CSplitterWnd::DoScroll  
+##  <a name="doscroll"></a>  CSplitterWnd::DoScroll  
  Realiza el desplazamiento sincronizado de ventanas de división.  
   
 ```  
@@ -516,7 +511,7 @@ virtual BOOL DoScroll(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro se llama el marco de trabajo para realizar un desplazamiento sincronizado de división windows cuando la vista recibe un mensaje de desplazamiento. Reemplace este valor para requerir una acción del usuario antes de que se permite el desplazamiento sincronizado.  
   
-##  <a name="doscrollby"></a>CSplitterWnd::DoScrollBy  
+##  <a name="doscrollby"></a>  CSplitterWnd::DoScrollBy  
  Desplaza ventanas divididas un número determinado de píxeles.  
   
 ```  
@@ -544,7 +539,7 @@ virtual BOOL DoScrollBy(
   
  Invalidar para requerir la intervención del usuario antes de permitir el desplazamiento.  
   
-##  <a name="getactivepane"></a>CSplitterWnd::GetActivePane  
+##  <a name="getactivepane"></a>  CSplitterWnd::GetActivePane  
  Determina el panel activo del foco o la vista activa en el marco.  
   
 ```  
@@ -566,7 +561,7 @@ virtual CWnd* GetActivePane(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro se llama el marco de trabajo para determinar el panel activo en una ventana divisora. Invalidar para requerir la intervención del usuario antes de obtener el panel activo.  
   
-##  <a name="getcolumncount"></a>CSplitterWnd::GetColumnCount  
+##  <a name="getcolumncount"></a>  CSplitterWnd::GetColumnCount  
  Devuelve el número de columnas del panel actual.  
   
 ```  
@@ -576,7 +571,7 @@ int GetColumnCount() const;
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el número actual de columnas en el divisor. Para un divisoras estáticas, también será el número máximo de columnas.  
   
-##  <a name="getcolumninfo"></a>CSplitterWnd::GetColumnInfo  
+##  <a name="getcolumninfo"></a>  CSplitterWnd::GetColumnInfo  
  Devuelve información sobre la columna especificada.  
   
 ```  
@@ -596,7 +591,7 @@ void GetColumnInfo(
  `cxMin`  
  Una referencia a un `int` se establezca en el ancho mínimo actual de la columna.  
   
-##  <a name="getpane"></a>CSplitterWnd::GetPane  
+##  <a name="getpane"></a>  CSplitterWnd::GetPane  
  Devuelve el panel, en la fila y columna especificadas.  
   
 ```  
@@ -615,7 +610,7 @@ CWnd* GetPane(
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el panel, en la fila y columna especificadas. El panel devuelto es normalmente un [CView](../../mfc/reference/cview-class.md)-clase derivada.  
   
-##  <a name="getrowcount"></a>CSplitterWnd::GetRowCount  
+##  <a name="getrowcount"></a>  CSplitterWnd::GetRowCount  
  Devuelve el recuento de filas del panel actual.  
   
 ```  
@@ -625,7 +620,7 @@ int GetRowCount() const;
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el número actual de filas en la ventana divisora. Para una ventana divisora estática, también será el número máximo de filas.  
   
-##  <a name="getrowinfo"></a>CSplitterWnd::GetRowInfo  
+##  <a name="getrowinfo"></a>  CSplitterWnd::GetRowInfo  
  Devuelve información sobre la fila especificada.  
   
 ```  
@@ -648,7 +643,7 @@ void GetRowInfo(
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función miembro para obtener información acerca de la fila especificada. El `cyCur` parámetro se rellena con el alto actual de la fila especificada, y `cyMin` se rellena con el alto mínimo de la fila.  
   
-##  <a name="getscrollstyle"></a>CSplitterWnd::GetScrollStyle  
+##  <a name="getscrollstyle"></a>  CSplitterWnd::GetScrollStyle  
  Devuelve el estilo de barra de desplazamiento compartido para la ventana divisora.  
   
 ```  
@@ -664,7 +659,7 @@ DWORD GetScrollStyle() const;
   
  Si es cero, la ventana divisora no administra actualmente las barras de desplazamiento compartido.  
   
-##  <a name="idfromrowcol"></a>CSplitterWnd::IdFromRowCol  
+##  <a name="idfromrowcol"></a>  CSplitterWnd::IdFromRowCol  
  Obtiene al elemento secundario Id. de ventana para el panel en la fila y columna especificadas.  
   
 ```  
@@ -689,7 +684,7 @@ int IdFromRowCol(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
-##  <a name="ischildpane"></a>CSplitterWnd::IsChildPane  
+##  <a name="ischildpane"></a>  CSplitterWnd::IsChildPane  
  Determina si `pWnd` es actualmente un panel secundario de esta ventana divisora.  
   
 ```  
@@ -719,7 +714,7 @@ BOOL IsChildPane(
   
  Esta versión ahora está obsoleta y no debe usarse.  
   
-##  <a name="istracking"></a>CSplitterWnd::IsTracking  
+##  <a name="istracking"></a>  CSplitterWnd::IsTracking  
  Llame a esta función miembro para determinar si actualmente se está moviendo la barra de división en la ventana.  
   
 ```  
@@ -729,7 +724,7 @@ BOOL IsTracking();
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si una operación de división está en curso; en caso contrario es 0.  
   
-##  <a name="ondrawsplitter"></a>CSplitterWnd::OnDrawSplitter  
+##  <a name="ondrawsplitter"></a>  CSplitterWnd::OnDrawSplitter  
  Representa una imagen de una ventana dividida.  
   
 ```  
@@ -748,7 +743,7 @@ virtual void OnDrawSplitter(
   
 - **splitBox** el divisor arrastre el cuadro.  
   
-- `splitBar`La barra que aparece entre las ventanas de la división de dos.  
+- `splitBar` La barra que aparece entre las ventanas de la división de dos.  
   
 - **splitIntersection** la intersección de las ventanas de división. Este elemento no se llamará cuando se ejecuta en Windows 95 ó 98.  
   
@@ -762,7 +757,7 @@ virtual void OnDrawSplitter(
   
  Para obtener más información sobre las ventanas divisoras dinámicas, consulte "Ventanas divisoras" en el artículo [varios tipos de documentos, vistas y ventanas de marco](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 de nota técnica](../../mfc/tn029-splitter-windows.md)y el `CSplitterWnd` general sobre la clase.  
   
-##  <a name="oninverttracker"></a>CSplitterWnd::OnInvertTracker  
+##  <a name="oninverttracker"></a>  CSplitterWnd::OnInvertTracker  
  Representa la imagen de una ventana dividida para que tenga el mismo tamaño y la misma forma que la ventana de marco.  
   
 ```  
@@ -778,7 +773,7 @@ virtual void OnInvertTracker(const CRect& rect);
   
  Para obtener más información sobre las ventanas divisoras dinámicas, consulte "Ventanas divisoras" en el artículo [varios tipos de documentos, vistas y ventanas de marco](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 de nota técnica](../../mfc/tn029-splitter-windows.md)y el `CSplitterWnd` general sobre la clase.  
   
-##  <a name="recalclayout"></a>CSplitterWnd::RecalcLayout  
+##  <a name="recalclayout"></a>  CSplitterWnd::RecalcLayout  
  Llamada a volver a mostrar la ventana divisora después de ajustar el tamaño de fila o columna.  
   
 ```  
@@ -793,7 +788,7 @@ virtual void RecalcLayout();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CSplitterWnd::SetColumnInfo](#setcolumninfo).  
   
-##  <a name="setactivepane"></a>CSplitterWnd::SetActivePane  
+##  <a name="setactivepane"></a>  CSplitterWnd::SetActivePane  
  Establece un panel que se van a los activos en el marco.  
   
 ```  
@@ -818,7 +813,7 @@ virtual void SetActivePane(
   
  Especificar panel proporcionando la fila y columna, **o** proporcionando `pWnd`.  
   
-##  <a name="setcolumninfo"></a>CSplitterWnd::SetColumnInfo  
+##  <a name="setcolumninfo"></a>  CSplitterWnd::SetColumnInfo  
  La llamada para establecer la información de la columna especificada.  
   
 ```  
@@ -846,7 +841,7 @@ void SetColumnInfo(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#6](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]  
   
-##  <a name="setrowinfo"></a>CSplitterWnd::SetRowInfo  
+##  <a name="setrowinfo"></a>  CSplitterWnd::SetRowInfo  
  La llamada para establecer la información de la fila especificada.  
   
 ```  
@@ -871,7 +866,7 @@ void SetRowInfo(
   
  Cuando el marco de trabajo muestra la ventana divisora, distribuye los paneles en columnas y filas según sus dimensiones ideales, trabajan en la parte superior izquierda a la esquina inferior derecha del área de cliente de la ventana divisora.  
   
-##  <a name="setscrollstyle"></a>CSplitterWnd::SetScrollStyle  
+##  <a name="setscrollstyle"></a>  CSplitterWnd::SetScrollStyle  
  Especifica que el nuevo estilo de desplazamiento de la ventana divisora compartido soporte técnico de la barra de desplazamiento.  
   
 ```  
@@ -889,7 +884,7 @@ void SetScrollStyle(DWORD dwStyle);
 ### <a name="remarks"></a>Comentarios  
  Una vez que se crea una barra de desplazamiento no se destruirán aun cuando `SetScrollStyle` se llama sin ese estilo; en su lugar, se ocultan las barras de desplazamiento. Esto permite que las barras de desplazamiento conservar su estado, incluso si están ocultos. Después de llamar a `SetScrollStyle` es necesario llamar a [RecalcLayout](#recalclayout) para todos los cambios surtan efecto.  
   
-##  <a name="splitcolumn"></a>CSplitterWnd::SplitColumn  
+##  <a name="splitcolumn"></a>  CSplitterWnd::SplitColumn  
  Indica dónde se divide verticalmente una ventana de marco.  
   
 ```  
@@ -904,11 +899,11 @@ virtual BOOL SplitColumn(int cxBefore);
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro se llama cuando se crea una ventana divisora vertical. `SplitColumn`indica la ubicación predeterminada donde se produce la división.  
+ Esta función miembro se llama cuando se crea una ventana divisora vertical. `SplitColumn` indica la ubicación predeterminada donde se produce la división.  
   
- `SplitColumn`se llama el marco de trabajo para implementar la lógica de la ventana divisora dinámica (es decir, si la ventana divisora tiene la **SPLS_DYNAMIC_SPLIT** estilo). Se puede personalizar, junto con la función virtual [CreateView](#createview)para implementar divisores dinámicas más avanzadas.  
+ `SplitColumn` se llama el marco de trabajo para implementar la lógica de la ventana divisora dinámica (es decir, si la ventana divisora tiene la **SPLS_DYNAMIC_SPLIT** estilo). Se puede personalizar, junto con la función virtual [CreateView](#createview)para implementar divisores dinámicas más avanzadas.  
   
-##  <a name="splitrow"></a>CSplitterWnd::SplitRow  
+##  <a name="splitrow"></a>  CSplitterWnd::SplitRow  
  Indica dónde se divide horizontalmente una ventana de marco.  
   
 ```  
@@ -923,11 +918,11 @@ virtual BOOL SplitRow(int cyBefore);
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro se llama cuando se crea una ventana divisora horizontal. `SplitRow`indica la ubicación predeterminada donde se produce la división.  
+ Esta función miembro se llama cuando se crea una ventana divisora horizontal. `SplitRow` indica la ubicación predeterminada donde se produce la división.  
   
- `SplitRow`se llama el marco de trabajo para implementar la lógica de la ventana divisora dinámica (es decir, si la ventana divisora tiene la **SPLS_DYNAMIC_SPLIT** estilo). Se puede personalizar, junto con la función virtual [CreateView](#createview)para implementar divisores dinámicas más avanzadas.  
+ `SplitRow` se llama el marco de trabajo para implementar la lógica de la ventana divisora dinámica (es decir, si la ventana divisora tiene la **SPLS_DYNAMIC_SPLIT** estilo). Se puede personalizar, junto con la función virtual [CreateView](#createview)para implementar divisores dinámicas más avanzadas.  
   
-##  <a name="ondraw"></a>CSplitterWnd::OnDraw  
+##  <a name="ondraw"></a>  CSplitterWnd::OnDraw  
  Lo llama el marco de trabajo para dibujar la ventana divisora.  
   
 ```  

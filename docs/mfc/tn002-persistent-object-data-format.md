@@ -1,13 +1,10 @@
 ---
 title: 'TN002: Formato de datos de objetos persistentes | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: Formato de datos de objetos persistentes
 Esta nota describe las rutinas MFC que admiten objetos persistentes de C++ y el formato de los datos del objeto cuando se almacena en un archivo. Esto se aplica únicamente a las clases con el [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) y [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) macros.  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  Si el objeto no se ha guardado antes, existen dos posibilidades para tener en cuenta: el objeto y el tipo exacto (es decir, (clase) del objeto están familiarizados con este contexto de archivo o el objeto es de un tipo exacto que ya se ha visto. Para determinar si el tipo se ha visto, las consultas de código la `m_pStoreMap` para un [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) objeto que coincide con el `CRuntimeClass` objeto asociado con el objeto que se va a guardar. Si se encuentra una coincidencia, `WriteObject` inserta una etiqueta que es el bit a bit `OR` de `wOldClassTag` y este índice. Si el `CRuntimeClass` es una novedad de este contexto de archivo, `WriteObject` asigna un PID nuevo a esa clase y lo inserta en el archivo, precedido por el `wNewClassTag` valor.  
   
- El descriptor de esta clase, a continuación, se inserta en el archivo usando el `CRuntimeClass::Store` método. `CRuntimeClass::Store`Inserta el número de esquema de la clase (ver abajo) y el nombre de texto ASCII de la clase. Tenga en cuenta que el uso del nombre de texto ASCII no garantiza la unicidad del archivo en todas las aplicaciones. Por lo tanto, debe etiquetar los archivos de datos para evitar daños. Después de la inserción de la información de clase, el archivo coloca el objeto en el `m_pStoreMap` y, a continuación, llama a la `Serialize` método para insertar datos específicos de la clase. Colocar el objeto en el `m_pStoreMap` antes de llamar a `Serialize` evita que varias copias del objeto que se va a guardar en el almacén.  
+ El descriptor de esta clase, a continuación, se inserta en el archivo usando el `CRuntimeClass::Store` método. `CRuntimeClass::Store` Inserta el número de esquema de la clase (ver abajo) y el nombre de texto ASCII de la clase. Tenga en cuenta que el uso del nombre de texto ASCII no garantiza la unicidad del archivo en todas las aplicaciones. Por lo tanto, debe etiquetar los archivos de datos para evitar daños. Después de la inserción de la información de clase, el archivo coloca el objeto en el `m_pStoreMap` y, a continuación, llama a la `Serialize` método para insertar datos específicos de la clase. Colocar el objeto en el `m_pStoreMap` antes de llamar a `Serialize` evita que varias copias del objeto que se va a guardar en el almacén.  
   
  Cuando se devuelve al llamador inicial (normalmente, la raíz de la red de objetos), debe llamar a [CArchive::Close](../mfc/reference/carchive-class.md#close). Si tiene previsto realizar otras [CFile](../mfc/reference/cfile-class.md)operaciones, se debe llamar a la `CArchive` método [vaciar](../mfc/reference/carchive-class.md#flush) para evitar daños en el archivo.  
   

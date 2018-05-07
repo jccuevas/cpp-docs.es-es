@@ -1,13 +1,10 @@
 ---
 title: Usar CDateTimeCtrl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CDateTimeCtrl
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab0f8c64b953a9ddaffa3382863762256b90c6c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60b41c31c2fa8985953515700cc2e3c802aced31
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cdatetimectrl"></a>Usar CDateTimeCtrl
 El control de selector de fecha y hora ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementa un método intuitivo y reconocible de escribir o seleccionar una fecha concreta. La interfaz principal del control es una funcionalidad similar a un cuadro combinado. Sin embargo, si el usuario expande el control, aparece un control de calendario mensual (de forma predeterminada), lo que permite al usuario especificar una fecha determinada. Cuando se elige una fecha, el control de calendario mensual desaparece automáticamente.  

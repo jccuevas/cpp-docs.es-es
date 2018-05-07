@@ -1,13 +1,10 @@
 ---
-title: "Habilitar la información sobre herramientas | Documentos de Microsoft"
-ms.custom: 
+title: Habilitar la información sobre herramientas | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - tool tips [MFC], initializing
 - tool tips [MFC], enabling
 ms.assetid: 06b7c889-7722-4ce6-8b88-9efa50fe6369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0555af785d75c9247eb365a03a51161441a4722a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 598583360eca2a65a5352fc9d284d8d359ac021c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-tool-tips"></a>Habilitar la información sobre herramientas
 Puede habilitar la compatibilidad de la sugerencia de herramienta para los controles secundarios de una ventana (por ejemplo, los controles en un cuadro de diálogo o la vista de formulario).  

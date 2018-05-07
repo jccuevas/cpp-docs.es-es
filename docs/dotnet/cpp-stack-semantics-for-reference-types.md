@@ -1,30 +1,25 @@
 ---
-title: "Semántica de pila de C++ para tipos de referencia | Documentos de Microsoft"
-ms.custom: 
+title: Semántica de pila de C++ para tipos de referencia | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8f4bf38fa6512b0dc86edad43c893d2dd09a97a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3ed886d1bdeb4972122049854b5d288767aa5b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semántica de pila de C++ para los tipos de referencia
 Antes de Visual C++ 2005, una instancia de un tipo de referencia sólo se creara con el `new` montón restante de operador, que se creó el objeto en los elementos no utilizados. Sin embargo, ahora puede crear una instancia de un tipo de referencia con la misma sintaxis que utilizaría para crear una instancia de un tipo nativo en la pila. Por lo tanto, no es necesario usar [gcnew nueva, ref](../windows/ref-new-gcnew-cpp-component-extensions.md) para crear un objeto de un tipo de referencia. Y cuando el objeto queda fuera del ámbito, el compilador llama al destructor del objeto.  

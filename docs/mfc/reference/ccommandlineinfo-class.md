@@ -1,12 +1,9 @@
 ---
 title: Clase CCommandLineInfo | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5f24ccf18f39ef231f19aa5b837914104b57c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommandlineinfo-class"></a>Clase CCommandLineInfo
 Ayuda a analizar la línea de comandos al iniciar la aplicación.  
@@ -97,11 +92,11 @@ class CCommandLineInfo : public CObject
 |*aplicación* nombre de archivo|Archivos abiertos.|  
 |*aplicación* `/p` nombre de archivo|Archivo de impresión a la impresora predeterminada.|  
 |*aplicación* `/pt` puerto de controlador de impresora de nombre de archivo|Archivo de impresión a la impresora especificada.|  
-|*aplicación*`/dde`|Se inician y await comando DDE.|  
-|*aplicación*`/Automation`|Se inician como un servidor de automatización OLE.|  
-|*aplicación*`/Embedding`|Se inician editar un elemento OLE incrustado.|  
-|*aplicación*`/Register`<br /><br /> *aplicación*`/Regserver`|Informa a la aplicación para realizar las tareas de registro.|  
-|*aplicación*`/Unregister`<br /><br /> *aplicación*`/Unregserver`|Informa a la aplicación para realizar cualquier tarea de eliminación de registro.|  
+|*Aplicación* `/dde`|Se inician y await comando DDE.|  
+|*Aplicación* `/Automation`|Se inician como un servidor de automatización OLE.|  
+|*Aplicación* `/Embedding`|Se inician editar un elemento OLE incrustado.|  
+|*Aplicación* `/Register`<br /><br /> *Aplicación* `/Regserver`|Informa a la aplicación para realizar las tareas de registro.|  
+|*Aplicación* `/Unregister`<br /><br /> *Aplicación* `/Unregserver`|Informa a la aplicación para realizar cualquier tarea de eliminación de registro.|  
   
  Derive una nueva clase de `CCommandLineInfo` para controlar otras marcas y los valores de parámetro. Invalidar [ParseParam](#parseparam) para controlar las marcas de nuevo.  
   
@@ -113,7 +108,7 @@ class CCommandLineInfo : public CObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
+##  <a name="ccommandlineinfo"></a>  CCommandLineInfo::CCommandLineInfo  
  Este constructor crea un `CCommandLineInfo` objeto con valores predeterminados.  
   
 ```  
@@ -128,7 +123,7 @@ CCommandLineInfo();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#54](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
+##  <a name="m_brunautomated"></a>  CCommandLineInfo::m_bRunAutomated  
  Indica que el `/Automation` marca no se encontró en la línea de comandos.  
   
 ```  
@@ -138,7 +133,7 @@ BOOL m_bRunAutomated;
 ### <a name="remarks"></a>Comentarios  
  Si `TRUE`, esto significa que se inician como un servidor de automatización OLE.  
   
-##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
+##  <a name="m_brunembedded"></a>  CCommandLineInfo::m_bRunEmbedded  
  Indica que el `/Embedding` marca no se encontró en la línea de comandos.  
   
 ```  
@@ -148,7 +143,7 @@ BOOL m_bRunEmbedded;
 ### <a name="remarks"></a>Comentarios  
  Si `TRUE`, esto significa que se inician para editar un elemento OLE incrustado.  
   
-##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
+##  <a name="m_bshowsplash"></a>  CCommandLineInfo::m_bShowSplash  
  Indica que se debe mostrar la pantalla de presentación.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL m_bShowSplash;
 ### <a name="remarks"></a>Comentarios  
  Si `TRUE`, esto significa que la pantalla de presentación para esta aplicación debe mostrarse durante el inicio. La implementación predeterminada de [ParseParam](#parseparam) este miembro de datos se establece en `TRUE` si [m_nShellCommand](#m_nshellcommand) es igual a `CCommandLineInfo::FileNew`.  
   
-##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
+##  <a name="m_nshellcommand"></a>  CCommandLineInfo::m_nShellCommand  
  Indica que el comando de shell para esta instancia de la aplicación.  
   
 ```  
@@ -184,28 +179,28 @@ enum {
   
  Para obtener una breve descripción de estos valores, vea la siguiente lista.  
   
-- `CCommandLineInfo::FileNew`Indica que no se encontró ningún nombre de archivo en la línea de comandos.  
+- `CCommandLineInfo::FileNew` Indica que no se encontró ningún nombre de archivo en la línea de comandos.  
   
-- `CCommandLineInfo::FileOpen`Indica que se encontró un nombre de archivo en la línea de comandos y que ninguno de los indicadores siguientes se encuentra en la línea de comandos: `/p`, `/pt`, `/dde`.  
+- `CCommandLineInfo::FileOpen` Indica que se encontró un nombre de archivo en la línea de comandos y que ninguno de los indicadores siguientes se encuentra en la línea de comandos: `/p`, `/pt`, `/dde`.  
   
-- `CCommandLineInfo::FilePrint`Indica que el `/p` marca no se encontró en la línea de comandos.  
+- `CCommandLineInfo::FilePrint` Indica que el `/p` marca no se encontró en la línea de comandos.  
   
-- `CCommandLineInfo::FilePrintTo`Indica que el `/pt` marca no se encontró en la línea de comandos.  
+- `CCommandLineInfo::FilePrintTo` Indica que el `/pt` marca no se encontró en la línea de comandos.  
   
-- `CCommandLineInfo::FileDDE`Indica que el `/dde` marca no se encontró en la línea de comandos.  
+- `CCommandLineInfo::FileDDE` Indica que el `/dde` marca no se encontró en la línea de comandos.  
   
-- `CCommandLineInfo::AppRegister`Indica que la `/Register` o `/Regserver` marca no se encontró en la línea de comandos y se solicita a registrar la aplicación.  
+- `CCommandLineInfo::AppRegister` Indica que la `/Register` o `/Regserver` marca no se encontró en la línea de comandos y se solicita a registrar la aplicación.  
   
-- `CCommandLineInfo::AppUnregister`Indica que la `/Unregister` o `/Unregserver` se solicita a anular el registro de aplicación.  
+- `CCommandLineInfo::AppUnregister` Indica que la `/Unregister` o `/Unregserver` se solicita a anular el registro de aplicación.  
   
-- `CCommandLineInfo::RestartByRestartManager`Indica que la aplicación se reinició por el Administrador de reinicio.  
+- `CCommandLineInfo::RestartByRestartManager` Indica que la aplicación se reinició por el Administrador de reinicio.  
   
-- `CCommandLineInfo::FileNothing`Desactiva la presentación de una nueva ventana secundaria MDI en el inicio. De forma predeterminada, las aplicaciones MDI generados por el Asistente de la aplicación muestran una nueva ventana secundaria al iniciarse. Para desactivar esta característica, puede usar una aplicación `CCommandLineInfo::FileNothing` que el comando de shell cuando llama a [ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand). `ProcessShellCommand`llama a la `InitInstance( )` de todos los `CWinApp` las clases derivadas.  
+- `CCommandLineInfo::FileNothing` Desactiva la presentación de una nueva ventana secundaria MDI en el inicio. De forma predeterminada, las aplicaciones MDI generados por el Asistente de la aplicación muestran una nueva ventana secundaria al iniciarse. Para desactivar esta característica, puede usar una aplicación `CCommandLineInfo::FileNothing` que el comando de shell cuando llama a [ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand). `ProcessShellCommand` llama a la `InitInstance( )` de todos los `CWinApp` las clases derivadas.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#55](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
+##  <a name="m_strdrivername"></a>  CCommandLineInfo::m_strDriverName  
  Almacena el valor del tercer parámetro no marca en la línea de comandos.  
   
 ```  
@@ -215,7 +210,7 @@ CString m_strDriverName;
 ### <a name="remarks"></a>Comentarios  
  Este parámetro normalmente es el nombre del controlador de impresora para un comando de shell para la impresión. La implementación predeterminada de [ParseParam](#parseparam) establece este si solo del miembro de datos el `/pt` marca no se encontró en la línea de comandos.  
   
-##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
+##  <a name="m_strfilename"></a>  CCommandLineInfo::m_strFileName  
  El valor del primer parámetro de marca no se almacena en la línea de comandos.  
   
 ```  
@@ -225,7 +220,7 @@ CString m_strFileName;
 ### <a name="remarks"></a>Comentarios  
  Normalmente, este parámetro es el nombre del archivo que se abre.  
   
-##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
+##  <a name="m_strportname"></a>  CCommandLineInfo::m_strPortName  
  Almacena el valor del cuarto parámetro no marca en la línea de comandos.  
   
 ```  
@@ -235,7 +230,7 @@ CString m_strPortName;
 ### <a name="remarks"></a>Comentarios  
  Este parámetro normalmente es el nombre del puerto de impresora para un comando de shell para la impresión. La implementación predeterminada de [ParseParam](#parseparam) establece este si solo del miembro de datos el `/pt` marca no se encontró en la línea de comandos.  
   
-##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
+##  <a name="m_strprintername"></a>  CCommandLineInfo::m_strPrinterName  
  El valor del segundo parámetro de marca no se almacena en la línea de comandos.  
   
 ```  
@@ -245,7 +240,7 @@ CString m_strPrinterName;
 ### <a name="remarks"></a>Comentarios  
  Este parámetro normalmente es el nombre de la impresora para un comando de shell para la impresión. La implementación predeterminada de [ParseParam](#parseparam) establece este si solo del miembro de datos el `/pt` marca no se encontró en la línea de comandos.  
   
-##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
+##  <a name="m_strrestartidentifier"></a>  CCommandLineInfo::m_strRestartIdentifier  
  El único reinicie identificador en la línea de comandos.  
   
 ```  
@@ -257,7 +252,7 @@ CString m_strRestartIdentifier;
   
  Si el Administrador de reinicio sale de la aplicación y está configurado para reiniciar, el Administrador de reinicio ejecuta la aplicación desde la línea de comandos con el identificador de reinicio como un parámetro opcional. Cuando el Administrador de reinicio usa el identificador de reinicio, la aplicación puede volver a abrir los documentos abiertos previamente y recuperar archivos de autoguardado.  
   
-##  <a name="parseparam"></a>CCommandLineInfo::ParseParam  
+##  <a name="parseparam"></a>  CCommandLineInfo::ParseParam  
  El marco de trabajo llama a esta función para el análisis/interpretar los parámetros individuales desde la línea de comandos. La segunda versión es distinto del primero solo en los proyectos de Unicode.  
   
 ```  
@@ -284,7 +279,7 @@ virtual void ParseParam(
  Indica si se trata del último parámetro o marca en la línea de comandos.  
   
 ### <a name="remarks"></a>Comentarios  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) llamadas `ParseParam` una vez para cada parámetro o una marca en la línea de comandos, pase el argumento para `pszParam`. Si el primer carácter del parámetro es un '  **-** 'o'  **/** ', a continuación, se quita y *bFlag* está establecido en `TRUE`. Al analizar el parámetro final, `bLast` está establecido en `TRUE`.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) llamadas `ParseParam` una vez para cada parámetro o una marca en la línea de comandos, pase el argumento para `pszParam`. Si el primer carácter del parámetro es un ' **-**'o' **/**', a continuación, se quita y *bFlag* está establecido en `TRUE`. Al analizar el parámetro final, `bLast` está establecido en `TRUE`.  
   
  La implementación predeterminada de esta función reconoce los siguientes indicadores: `/p`, `/pt`, `/dde`, `/Automation`, y `/Embedding`, tal y como se muestra en la tabla siguiente:  
   
@@ -294,13 +289,13 @@ virtual void ParseParam(
 |*aplicación* nombre de archivo|Archivos abiertos.|  
 |*aplicación* `/p` nombre de archivo|Archivo de impresión a la impresora predeterminada.|  
 |*aplicación* `/pt` puerto de controlador de impresora de nombre de archivo|Archivo de impresión a la impresora especificada.|  
-|*aplicación*`/dde`|Se inician y await comando DDE.|  
-|*aplicación*`/Automation`|Se inician como un servidor de automatización OLE.|  
-|*aplicación*`/Embedding`|Se inician editar un elemento OLE incrustado.|  
-|*aplicación*`/Register`<br /><br /> *aplicación*`/Regserver`|Informa a la aplicación para realizar las tareas de registro.|  
-|*aplicación*`/Unregister`<br /><br /> *aplicación*`/Unregserver`|Informa a la aplicación para realizar cualquier tarea de eliminación de registro.|  
+|*Aplicación* `/dde`|Se inician y await comando DDE.|  
+|*Aplicación* `/Automation`|Se inician como un servidor de automatización OLE.|  
+|*Aplicación* `/Embedding`|Se inician editar un elemento OLE incrustado.|  
+|*Aplicación* `/Register`<br /><br /> *Aplicación* `/Regserver`|Informa a la aplicación para realizar las tareas de registro.|  
+|*Aplicación* `/Unregister`<br /><br /> *Aplicación* `/Unregserver`|Informa a la aplicación para realizar cualquier tarea de eliminación de registro.|  
   
- Esta información se almacena en [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), y [m_nShellCommand](#m_nshellcommand). Marcas se marcan, ya sea por una barra diagonal '  **/** 'o guión'  **-** '.  
+ Esta información se almacena en [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), y [m_nShellCommand](#m_nshellcommand). Marcas se marcan, ya sea por una barra diagonal ' **/**'o guión' **-**'.  
   
  La implementación predeterminada hace que el primer parámetro de marca no en [m_strFileName](#m_strfilename). En el caso de los `/pt` marca, la implementación predeterminada hace que el segundo, tercer y cuarto parámetros no marca en [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), y [m_ strPortName](#m_strportname), respectivamente.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Contención de documentos activos | Documentos de Microsoft"
-ms.custom: 
+title: Contención de documentos activos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74ad16aa453c6fa0df2c84bd0a0a789b05f83169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containment"></a>Contención de documentos activos
 Contención de documentos activos es una tecnología que proporciona un marco único en el que se va a trabajar con documentos, en lugar de obligarle a crear y usar varios marcos de aplicación para cada tipo de documento. Difiere de la tecnología OLE básica en que OLE funciona con objetos incrustados en un documento compuesto en el que solo un único fragmento de contenido puede estar activo. Mediante la contención de documentos activos, puede activar un documento completo (es decir, una aplicación completa, incluidos menús asociados, las barras de herramientas etc.) en el contexto de un solo fotograma.  

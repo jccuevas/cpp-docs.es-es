@@ -1,13 +1,10 @@
 ---
 title: Trabajar con propiedades del proyecto | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,41 +13,39 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c33a18ff0d492ef3a870a342c9d8ff292007748
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-project-properties"></a>Trabajar con configuraciones de proyecto
-En el IDE, toda la información que se necesita para compilar un proyecto se expone como *propiedades*. Esta información incluye el nombre de la aplicación, extensión (por ejemplo, DLL, LIB, EXE), opciones del compilador, opciones del vinculador, configuración del depurador, pasos de compilación personalizada y muchas otras cosas. Normalmente, se utiliza *páginas de propiedades* ( **proyecto &#124; Propiedades**) para ver y modificar estas propiedades. 
+En el IDE, toda la información que se necesita para compilar un proyecto se expone como *propiedades*. Esta información incluye el nombre de la aplicación, extensión (por ejemplo, DLL, LIB, EXE), opciones del compilador, opciones del vinculador, configuración del depurador, pasos de compilación personalizada y muchas otras cosas. Normalmente, se utiliza *páginas de propiedades* ( **proyecto &#124; propiedades**) para ver y modificar estas propiedades. 
   
  Cuando crea un proyecto, el sistema asigna valores a varias propiedades. Los valores predeterminados varían ligeramente según el tipo de proyecto y las opciones elija en el Asistente para aplicaciones. Por ejemplo, un proyecto ATL tiene propiedades relacionadas con los archivos MIDL, pero éstos están presentes en una aplicación de consola básica. Las propiedades predeterminadas se muestran en el panel General de las páginas de propiedades:  
   
- ![Visual C# 43; &#43; Los valores predeterminados del proyecto](../ide/media/visual-c---project-defaults.png "valores predeterminados del proyecto Visual C++")  
+ ![Visual C&#43; &#43; los valores predeterminados del proyecto](../ide/media/visual-c---project-defaults.png "valores predeterminados del proyecto Visual C++")  
   
  Algunas propiedades, como el nombre de la aplicación, se aplican a todas las variaciones de compilación, independientemente de la plataforma de destino o si es una compilación debug o release. Pero la mayoría de las propiedades es dependientes de la configuración. Esto es porque el compilador tiene que saber qué plataforma concreta, el programa se ejecutará en y qué específica del compilador opciones que se usará para generar el código correcto. Por lo tanto, cuando se establece una propiedad, es importante prestar atención a la configuración y la plataforma que se debe aplicar el nuevo valor para que. ¿Debe aplicar solo a las compilaciones de depuración Win32 o debe también se aplican a depurar ARM y depuración x64? Por ejemplo, el **optimización** propiedad, de forma predeterminada, está establecida en **maximizar velocidad (/ O2)** en una configuración de lanzamiento, pero está deshabilitado en la configuración de depuración.  
   
  Las páginas de propiedades están diseñadas para que siempre pueden ver y, si es necesario modifica, configuración y la plataforma que un valor de propiedad debe aplicar al. En la siguiente ilustración muestra las páginas de propiedades con la información de la plataforma y la configuración en los cuadros de lista en la parte superior. Cuando el **optimización** propiedad se establece a continuación, se aplica solo a las compilaciones de depuración Win32, que es la configuración activa, como se muestra en las flechas rojas.  
   
- ![Visual C# 43; &#43; Páginas de propiedades que muestra la configuración activa](../ide/media/visual-c---property-pages-showing-active-configuration.png "configuración activa que muestra de páginas de propiedades de Visual C++")  
+ ![Visual C&#43; &#43; configuración activa de páginas de propiedades que muestra](../ide/media/visual-c---property-pages-showing-active-configuration.png "configuración activa que muestra de páginas de propiedades de Visual C++")  
   
  La ilustración siguiente muestra la misma página de propiedades de proyecto, pero la configuración se ha cambiado a la versión. Tenga en cuenta un valor diferente para la propiedad de optimización. Tenga en cuenta que la configuración activa todavía es Debug. Puede establecer las propiedades de configuración aquí; no tiene que ser el activo.  
   
- ![Visual C# 43; &#43; Configuración de páginas de propiedades que muestra la versión](../ide/media/visual-c---property-pages-showing-release-config.png "configuración de versión que muestra páginas de propiedades de Visual C++")  
+ ![Visual C&#43; &#43; configuración de lanzamiento de páginas de propiedades que muestra](../ide/media/visual-c---property-pages-showing-release-config.png "configuración de versión que muestra páginas de propiedades de Visual C++")  
   
  El sistema del proyecto se basa en MSBuild, que define los formatos de archivo y las reglas para la creación de proyectos de cualquier tipo. MSBuild administra gran parte de la complejidad de la generación para varias plataformas y configuraciones, pero debe comprender un poco acerca de cómo funciona. Esto es especialmente importante si desea definir configuraciones personalizadas o crear conjuntos reutilizables de propiedades que puede compartir e importar en varios proyectos.  
   
  Propiedades del proyecto se almacenan directamente en el archivo de proyecto (*.vcxproj) o en otros archivos .xml o .props que las importaciones del archivo de proyecto y que proporcionan los valores predeterminados. Como se muestra anteriormente, la misma propiedad para la misma configuración puede asignarse un valor diferente en distintos archivos. Cuando se compila un proyecto, el motor de MSBuild evalúa el archivo de proyecto y todos los archivos importados en un orden bien definido (se describe a continuación). Tal y como se evalúa cada archivo, los valores de propiedad definidos en ese archivo invalidará los valores existentes. Los valores que no se especifican se heredan de archivos que se han evaluado anteriormente. Por lo tanto, cuando se establece una propiedad con páginas de propiedades, también es importante prestar atención a donde se establecen. Si se establece una propiedad a "X" en un archivo .props, pero la propiedad se establece en "Y" en el archivo de proyecto, el proyecto se compilará con la propiedad establecida en "Y". Si la misma propiedad se establece en "Z" en un elemento de proyecto, como un archivo .cpp, el motor de MSBuild usará el valor de "Z". Para obtener más información, consulte [herencia de propiedades](#bkmkPropertyInheritance) más adelante en este artículo.  
   
 ## <a name="build-configurations"></a>Configuraciones de compilación  
- Una configuración es solo un grupo arbitrario de propiedades que se les asigna un nombre. Visual Studio proporciona configuraciones Debug y Release y cada uno de ellos establece varias propiedades de forma adecuada para una compilación de depuración o versión de lanzamiento. Puede usar el **Configuration Manager** para definir configuraciones personalizadas como una manera cómoda de propiedades de grupo para un tipo específico de compilación. El Administrador de propiedades se utiliza para trabajar avanzada con las propiedades, pero se incluye aquí porque ayuda a visualizar las configuraciones de propiedad. Puede acceder a ella desde **vista &#124;  Administrador de propiedades** o **vista &#124; Otras ventanas &#124; Administrador de propiedades** dependiendo de su configuración. Tiene nodos para cada par de configuración o plataforma en el proyecto. En cada uno de estos nodos son nodos de hojas de propiedades (archivos .props) que establecer algunas propiedades específicas para dicha configuración.  
+ Una configuración es solo un grupo arbitrario de propiedades que se les asigna un nombre. Visual Studio proporciona configuraciones Debug y Release y cada uno de ellos establece varias propiedades de forma adecuada para una compilación de depuración o versión de lanzamiento. Puede usar el **Configuration Manager** para definir configuraciones personalizadas como una manera cómoda de propiedades de grupo para un tipo específico de compilación. El Administrador de propiedades se utiliza para trabajar avanzada con las propiedades, pero se incluye aquí porque ayuda a visualizar las configuraciones de propiedad. Puede acceder a ella desde **vista &#124; Administrador de propiedades** o **vista &#124; otras ventanas &#124; Administrador de propiedades** dependiendo de su configuración. Tiene nodos para cada par de configuración o plataforma en el proyecto. En cada uno de estos nodos son nodos de hojas de propiedades (archivos .props) que establecer algunas propiedades específicas para dicha configuración.  
   
  ![Administrador de propiedades](../ide/media/property-manager.png "Administrador de propiedades")  
   
@@ -69,7 +64,7 @@ En el IDE, toda la información que se necesita para compilar un proyecto se exp
 ## <a name="property-pages"></a>páginas de propiedades  
  Como se mencionó anteriormente, el sistema de proyectos de Visual C++ se basa en [MSBuild](/visualstudio/msbuild/msbuild-properties) y los valores se almacenan en el archivo de proyecto XML, archivos .props y .targets de forma predeterminada. Para Visual Studio 2015, estos archivos se encuentran en **archivos \Program (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Para Visual Studio de 2017, estos archivos se encuentran en  **\\archivos de programa (x86)\\Microsoft Visual Studio\\2017\\_edición_\\Common7\\ IDE\\VC\\VCTargets**, donde _edición_ es la edición de Visual Studio instalada. Propiedades también se almacenan en los archivos .props personalizado que se pueden agregar a su propio proyecto. Recomendamos encarecidamente que no modificar esos archivos manualmente y en su lugar, utilice las páginas de propiedades en el IDE para modificar todas las propiedades, especialmente las que participan en la herencia, a menos que tenga un conocimiento excelente de MSBuild.  
   
- La ilustración siguiente muestra las páginas de propiedades de un proyecto de Visual C++. En el panel izquierdo, el **directorios de VC ++***regla* está seleccionada, y el panel derecho muestran las propiedades que están asociadas a esa regla. El `$(...)` valores Lamentablemente se denominan *macros*. Se trata de *no* macros de C o C++ pero constantes en tiempo de compilación simplemente. Las macros se tratan en la [macros de la página de propiedades](#bkmkPropertiesVersusMacros) sección más adelante en este artículo.)  
+ La ilustración siguiente muestra las páginas de propiedades de un proyecto de Visual C++. En el panel izquierdo, el **directorios de VC ++ *** regla* está seleccionada, y el panel derecho muestran las propiedades que están asociadas a esa regla. El `$(...)` valores Lamentablemente se denominan *macros*. Se trata de *no* macros de C o C++ pero constantes en tiempo de compilación simplemente. Las macros se tratan en la [macros de la página de propiedades](#bkmkPropertiesVersusMacros) sección más adelante en este artículo.)  
   
  ![Páginas de propiedades del proyecto](../ide/media/project_property_pages_vc.png "Project_Property_Pages_VC")  
   
@@ -78,7 +73,7 @@ En el IDE, toda la información que se necesita para compilar un proyecto se exp
   
 #### <a name="to-set-a-property-for-a-project"></a>Para establecer una propiedad de un proyecto  
   
-1.  Para la mayoría de los escenarios, puede establecer propiedades en el nivel de proyecto sin crear una hoja de propiedades personalizadas. En el menú principal, elija **proyecto &#124; Propiedades**, o haga doble clic en el nodo del proyecto en **el Explorador de soluciones** y elija **propiedades**.  
+1.  Para la mayoría de los escenarios, puede establecer propiedades en el nivel de proyecto sin crear una hoja de propiedades personalizadas. En el menú principal, elija **proyecto &#124; propiedades**, o haga doble clic en el nodo del proyecto en **el Explorador de soluciones** y elija **propiedades**.  
   
 2.  Use la **configuración** y **plataforma** cuadros en la parte superior del cuadro de diálogo para especificar qué grupos de propiedad deben aplicar los cambios de lista. En muchos casos **todas las plataformas** y **todas las configuraciones de** son la elección correcta. Para establecer las propiedades solo para algunas configuraciones, una selección múltiple de ellas en **Administrador de propiedades**y, a continuación, abra el menú contextual y elija **propiedades**.  
   
@@ -120,7 +115,7 @@ En el IDE, toda la información que se necesita para compilar un proyecto se exp
  v:  
  Busque solo en los valores (subcadena sin distinción entre mayúsculas y minúsculas).  
   
-##  <a name="bkmkPropertiesVersusMacros"></a>Macros de la página de propiedades  
+##  <a name="bkmkPropertiesVersusMacros"></a> Macros de la página de propiedades  
  A *macro* es una constante de tiempo de compilación que puede hacer referencia a un valor que se define por Visual Studio o el sistema MSBuild, o un valor definido por el usuario. Al utilizar macros en lugar de los valores incluidos en el código como, por ejemplo, rutas de directorio, le resultará más fácil compartir valores de propiedades entre máquinas y versiones de Visual Studio. Asimismo, podrá asegurarse de que la configuración del proyecto participa correctamente en la herencia de propiedades. Puede usar el Editor de propiedades para ver los valores de todas las macros disponibles.  
   
 ### <a name="predefined-macros"></a>Macros predefinidas  
@@ -146,13 +141,13 @@ En el IDE, toda la información que se necesita para compilar un proyecto se exp
 ## <a name="property-editor"></a>Editor de propiedades  
  Puede utilizar el editor de propiedades para modificar determinadas propiedades de cadena y seleccionar macros como valores. Para tener acceso al editor de propiedades, seleccione una propiedad en una página de propiedades y elija el botón de flecha abajo de la derecha. Si la lista desplegable contiene  **\<Editar >**, puede decidir si desea mostrar el Editor de propiedades para esa propiedad.  
   
- ![Propiedad &#95; Editor de &#95; desplegable](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
+ ![Propiedad&#95;Editor&#95;desplegable](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
   
  En el Editor de propiedades, puede elegir la **Macros** botón para ver las macros disponibles y sus valores actuales. La ilustración siguiente muestra el Editor de propiedades para el **directorios de inclusión adicionales** propiedad después de la **Macros** fue objeto del botón. Cuando el **heredar de primario o valores pred.** casilla está activada y agregue un nuevo valor, se anexa a cualquier valor que se está heredando actualmente. Si desactiva la casilla, el nuevo valor reemplaza los valores heredados. En la mayoría de los casos, deje la casilla activada.  
   
- ![Editor de propiedades, Visual C# 43; &#43; ] (../ide/media/propertyeditorvc.png "PropertyEditorVC")  
+ ![Editor de propiedades, Visual C&#43;&#43;](../ide/media/propertyeditorvc.png "PropertyEditorVC")  
   
-##  <a name="bkmkPropertySheets"></a>Crear configuraciones de propiedad reutilizables  
+##  <a name="bkmkPropertySheets"></a> Crear configuraciones de propiedad reutilizables  
  Aunque puede establecer propiedades "globales" por usuario y equipo, este es un proceso que ya no se recomienda. En su lugar, recomendamos que use **Administrador de propiedades** para crear un *hoja de propiedades* para almacenar la configuración para cada tipo de proyecto que desea poder reutilizar o compartir con otros usuarios. Las hojas de propiedades también hacen menos probable que la configuración de propiedades a otros tipos de proyecto se modifique accidentalmente. Hojas de propiedades se describen con más detalle [crear configuraciones de propiedad reutilizables](#bkmkPropertySheets).  
   
 > [!IMPORTANT]
@@ -191,7 +186,7 @@ En el IDE, toda la información que se necesita para compilar un proyecto se exp
   
 3.  En **Administrador de propiedades**, abra la nueva hoja de propiedades y, a continuación, establezca las propiedades que van a incluir.  
   
-##  <a name="bkmkPropertyInheritance"></a>Herencia de propiedades  
+##  <a name="bkmkPropertyInheritance"></a> Herencia de propiedades  
  Las propiedades de proyecto se dividen en capas. Cada capa hereda los valores de la capa anterior; sin embargo, un valor heredado puede invalidarse estableciendo la propiedad explícitamente. Este es el árbol básico de herencia:  
   
 1.  Configuración predeterminada del conjunto de herramientas de MSBuild CPP (..\Archivos de programa\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.Default.props, que importa el archivo .vcxproj).  

@@ -1,13 +1,10 @@
 ---
-title: "Herramientas de compilación especificando personalizado | Documentos de Microsoft"
-ms.custom: 
+title: Herramientas de compilación especificando personalizado | Documentos de Microsoft
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
 - VC.Project.VCCustomBuildTool.Outputs
@@ -26,14 +23,13 @@ helpviewer_keywords:
 - builds (C++), custom build tools
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4edd3b1fdb2b6d09be6f5fcd9a6c9d08ba7a6994
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-custom-build-tools"></a>Especificar las herramientas de compilación personalizadas
 
@@ -65,7 +61,7 @@ Para obtener información general sobre las herramientas de compilación persona
 
       Varios archivos de entrada y salidos se pueden especificar simbólicamente con macros MSBuild. Para obtener información sobre cómo especificar la ubicación de archivos o los nombres de los conjuntos de archivos, consulte [comunes Macros para propiedades y comandos de generación](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Dado que el carácter '%' está reservado por MSBuild, si especifica una variable de entorno reemplaza cada  **%**  carácter con escape la **% 25** secuencia de escape hexadecimal. Por ejemplo, reemplace **% WINDIR %** con **25WINDIR % 25**. MSBuild reemplaza cada **% 25** de secuencia con el  **%**  antes de tener acceso a la variable de entorno de caracteres.
+      Dado que el carácter '%' está reservado por MSBuild, si especifica una variable de entorno reemplaza cada **%** carácter con escape la **% 25** secuencia de escape hexadecimal. Por ejemplo, reemplace **% WINDIR %** con **25WINDIR % 25**. MSBuild reemplaza cada **% 25** de secuencia con el **%** antes de tener acceso a la variable de entorno de caracteres.
 
    - En **descripción**, escriba un mensaje descriptivo sobre esta herramienta de compilación personalizada. El mensaje se imprime en la **salida** ventana cuando el sistema de compilación procesa esta herramienta.
 

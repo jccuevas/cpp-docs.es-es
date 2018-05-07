@@ -1,13 +1,10 @@
 ---
 title: Controles ActiveX en Internet | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-controls-on-the-internet"></a>Controles ActiveX en Internet
 Los controles ActiveX son la versión actualizada de la especificación de control OLE. Los controles son una arquitectura principal para desarrollar componentes de software programables que pueden utilizarse en una variedad de distintos contenedores, incluidos los exploradores Web compatibles con COM en Internet. Cualquier control de ActiveX puede ser un control de Internet y puede agregar su funcionalidad a un documento activo o formar parte de una página Web. Controles de una página Web pueden comunicarse entre sí mediante secuencias de comandos.  
@@ -165,9 +160,9 @@ Los controles ActiveX son la versión actualizada de la especificación de contr
   
  Implementar [monikers asincrónicos](../mfc/asynchronous-monikers-on-the-internet.md) mediante la `CAsyncMonikerFile` clase. Sin embargo, pueden utilizar los controles ActiveX la `CDataPathProperty` (clase), que se deriva de `CAsyncMonikerFile`, para ayudar a implementar propiedades de control asincrónico.  
   
- El ejemplo ASYNDOWN muestra cómo configurar un bucle asincrónico usando temporizadores para leer los datos. ASYNDOWN se describe en detalle en el artículo de Knowledge Base "HOWTO: AsyncDown muestra Asynchronous Data Download" (Q177244) y está disponible para su descarga desde Microsoft Download Center. (Para obtener más información acerca de cómo descargar archivos desde Microsoft Download Center, consulte el artículo "How to obtener Microsoft compatibilidad con archivos de Online Services" (Q119591) en Microsoft Knowledge Base.) Encontrará artículos de Knowledge Base en [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+ El ejemplo ASYNDOWN muestra cómo configurar un bucle asincrónico usando temporizadores para leer los datos. ASYNDOWN se describe en detalle en el artículo de Knowledge Base "HOWTO: AsyncDown muestra Asynchronous Data Download" (Q177244) y está disponible para su descarga desde Microsoft Download Center. (Para obtener más información acerca de cómo descargar archivos desde Microsoft Download Center, consulte el artículo "How to obtener Microsoft compatibilidad con archivos de Online Services" (Q119591) en Microsoft Knowledge Base.) Encontrará artículos de Knowledge Base en [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
- La técnica básica utilizada en ASYNDOWN consiste en establecer un temporizador en **CDataPathProperty:: ondataavailable** para indicar cuando los datos están disponibles. Cuando se recibe el mensaje de temporizador, la aplicación lee en bloques de 128 bytes de datos y llena un control de edición. Si los datos no están disponibles cuando se controla el mensaje de temporizador, el temporizador se ha desactivado. `OnDataAvailable`activa el temporizador si llegan más datos más adelante.  
+ La técnica básica utilizada en ASYNDOWN consiste en establecer un temporizador en **CDataPathProperty:: ondataavailable** para indicar cuando los datos están disponibles. Cuando se recibe el mensaje de temporizador, la aplicación lee en bloques de 128 bytes de datos y llena un control de edición. Si los datos no están disponibles cuando se controla el mensaje de temporizador, el temporizador se ha desactivado. `OnDataAvailable` activa el temporizador si llegan más datos más adelante.  
   
 ## <a name="displaying-a-control-on-a-web-page"></a>Mostrar un Control en una página Web  
  Este es un ejemplo de una etiqueta de objeto y atributos para insertar un control en una página Web.  

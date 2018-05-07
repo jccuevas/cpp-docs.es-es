@@ -1,13 +1,10 @@
 ---
-title: "Menús y recursos: adiciones de contenedor | Documentos de Microsoft"
-ms.custom: 
+title: 'Menús y recursos: adiciones de contenedor | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IDP_OLE_INIT_FAILED
 - IDP_FAILED_TO_CREATE
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-container-additions"></a>Menús y recursos: Adiciones de contenedor
 En este artículo se describen los cambios que deben realizarse en los menús y otros recursos en una aplicación de contenedor de edición visual.  
@@ -52,7 +47,7 @@ En este artículo se describen los cambios que deben realizarse en los menús y 
   
 -   [Agregar tablas de cadenas](#_core_string_table_additions_for_container_applications)  
   
-##  <a name="_core_container_menu_additions"></a>Adiciones de menú de contenedor  
+##  <a name="_core_container_menu_additions"></a> Adiciones de menú de contenedor  
  Debe agregar los siguientes elementos al menú Edición:  
   
 |Elemento|Propósito|  
@@ -66,7 +61,7 @@ En este artículo se describen los cambios que deben realizarse en los menús y 
   
  Debe crear un nuevo menú de la aplicación contenedora si desea admitir la activación en contexto de elementos contenidos. Este menú está formada por el mismo menú archivo y menús emergentes que utiliza cuando los archivos están abiertos, pero tiene dos separadores entre ellos. Estos separadores se utilizan para indicar que el elemento del servidor (componente) (aplicación) debe colocar sus menús cuando se activan en su lugar. Para obtener más información sobre esta técnica de combinación de menús, consulte [menús y recursos: combinación de menús](../mfc/menus-and-resources-menu-merging.md).  
   
-##  <a name="_core_container_application_accelerator_table_additions"></a>Adiciones de tabla de aceleradores de aplicaciones de contenedor  
+##  <a name="_core_container_application_accelerator_table_additions"></a> Adiciones de tabla de aceleradores de aplicaciones de contenedor  
  Los pequeños cambios en recursos de tabla de aceleradores de la aplicación contenedora son necesarios si son compatibles con la activación en contexto. El primer cambio permite al usuario que presione la tecla escape (ESC) para cancelar el modo de edición en contexto. Agregue la siguiente entrada en la tabla de aceleradores principales:  
   
 |Id.|Key|Tipo|  
@@ -85,7 +80,7 @@ En este artículo se describen los cambios que deben realizarse en los menús y 
 |**ID_PREV_PANE**|MAYÚS + VK_F6|**VIRTKEY**|  
 |**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
   
-##  <a name="_core_string_table_additions_for_container_applications"></a>Agregar tablas de cadenas para aplicaciones de contenedor  
+##  <a name="_core_string_table_additions_for_container_applications"></a> Agregar tablas de cadenas para aplicaciones de contenedor  
  La mayoría de los cambios en las tablas de cadenas para aplicaciones contenedoras corresponde a los elementos de menú adicionales mencionados en [adiciones de menú de contenedor](#_core_container_menu_additions). Que suministran el texto mostrado en la barra de estado cuando se muestra cada elemento de menú. Por ejemplo, aquí están las entradas de tabla de cadenas que genera el Asistente para aplicaciones:  
   
 |Id.|String|  

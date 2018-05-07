@@ -1,12 +1,9 @@
 ---
 title: Clase CMDIChildWndEx | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDIChildWndEx
@@ -121,17 +118,15 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b302c14d2b4aa17b2818e489a1400230332521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eecc1a08a3e0dcf8d8b3f1c31594488901a848f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (clase)
 La `CMDIChildWndEx` clase proporciona la funcionalidad de una ventana de ventana secundaria MDI (interfaz) de varios documentos. Extiende la funcionalidad de [CMDIChildWnd (clase)](../../mfc/reference/cmdichildwnd-class.md). El marco requiere esta clase cuando una aplicación MDI utiliza determinadas clases MFC.  
@@ -233,7 +228,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxMDIChildWndEx.h  
   
-##  <a name="addpane"></a>CMDIChildWndEx::AddPane  
+##  <a name="addpane"></a>  CMDIChildWndEx::AddPane  
  Agrega un panel.  
   
 ```  
@@ -247,12 +242,12 @@ BOOL AddPane(
  Un puntero al panel.  
   
  [in] `bTail`  
- `TRUE`Para agregar el panel al final de la lista de paneles para el Administrador de acoplamiento; en caso contrario, `FALSE`.  
+ `TRUE` Para agregar el panel al final de la lista de paneles para el Administrador de acoplamiento; en caso contrario, `FALSE`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el panel se registró correctamente con el Administrador de acoplamiento; en caso contrario, `FALSE`.  
+ `TRUE` Si el panel se registró correctamente con el Administrador de acoplamiento; en caso contrario, `FALSE`.  
   
-##  <a name="addtabbedpane"></a>CMDIChildWndEx::AddTabbedPane  
+##  <a name="addtabbedpane"></a>  CMDIChildWndEx::AddTabbedPane  
  Agrega un panel con fichas.  
   
 ```  
@@ -263,7 +258,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
  [in] `pControlBar`  
  Un puntero al panel.  
   
-##  <a name="adjustdockinglayout"></a>CMDIChildWndEx::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  Ajusta el diseño de acoplamiento.  
   
 ```  
@@ -274,7 +269,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
  [in] `hdwp`  
  Identificador de una estructura de posición de la ventana diferida.  
   
-##  <a name="canshowonmditabs"></a>CMDIChildWndEx::CanShowOnMDITabs  
+##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
   
 ```  
@@ -285,7 +280,7 @@ virtual BOOL CanShowOnMDITabs();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="canshowonwindowslist"></a>CMDIChildWndEx::CanShowOnWindowsList  
+##  <a name="canshowonwindowslist"></a>  CMDIChildWndEx::CanShowOnWindowsList  
  Especifica si se puede mostrar el nombre de ventana secundaria MDI en la [CMFCWindowsManagerDialog clase](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) cuadro de diálogo.  
   
 ```  
@@ -293,12 +288,12 @@ virtual BOOL CanShowOnWindowsList();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si se puede mostrar la ventana en la **Windows** cuadro de diálogo; en caso contrario, `FALSE`.  
+ `TRUE` Si se puede mostrar la ventana en la **Windows** cuadro de diálogo; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada y devolver `FALSE` si no se debe mostrar la ventana en la **Windows** cuadro de diálogo. Esta función se llama desde `CMFCWindowsManagerDialog`.  
   
-##  <a name="dockpane"></a>CMDIChildWndEx::DockPane  
+##  <a name="dockpane"></a>  CMDIChildWndEx::DockPane  
  Acopla un panel.  
   
 ```  
@@ -321,7 +316,7 @@ void DockPane(
 ### <a name="remarks"></a>Comentarios  
  El `lpRect` parámetro no se utiliza.  
   
-##  <a name="dockpaneleftof"></a>CMDIChildWndEx::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
  Acopla un panel a la izquierda de otro panel.  
   
 ```  
@@ -338,14 +333,14 @@ BOOL DockPaneLeftOf(
  Un puntero al panel que actúa como el punto de referencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si se ejecuta correctamente, `FALSE` en caso de error.  
+ `TRUE` Si se ejecuta correctamente, `FALSE` en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método toma el panel especificado por `pBar` y lo acopla en el lado izquierdo del panel especificado por `pLeftOf`.  
   
  Llamar a este método cuando desea acoplar varios paneles en orden predefinido.  
   
-##  <a name="enableautohidepanes"></a>CMDIChildWndEx::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>  CMDIChildWndEx::EnableAutoHidePanes  
  Habilita el modo de ocultación automática para los paneles al que se acoplan a los lados de la ventana especificados.  
   
 ```  
@@ -365,9 +360,9 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 - `CBRS_ALIGN_BOTTOM`  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el método tiene éxito; en caso contrario, `FALSE`.  
+ `TRUE` Si el método tiene éxito; en caso contrario, `FALSE`.  
   
-##  <a name="enabledocking"></a>CMDIChildWndEx::EnableDocking  
+##  <a name="enabledocking"></a>  CMDIChildWndEx::EnableDocking  
  Habilita el acoplamiento de la ventana secundaria para el marco principal.  
   
 ```  
@@ -379,12 +374,12 @@ BOOL EnableDocking(DWORD dwDockStyle);
  Especifica la alineación de acoplamiento para habilitar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el método tiene éxito; en caso contrario, `FALSE`.  
+ `TRUE` Si el método tiene éxito; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a este método para activar la alineación de acoplamiento para el marco principal. Puede pasar una combinación de marcas CBRS_ALIGN_ (para obtener más información, consulte [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
-##  <a name="getdockingmanager"></a>CMDIChildWndEx::GetDockingManager  
+##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager  
 
   
 ```  
@@ -395,7 +390,7 @@ CDockingManager* GetDockingManager();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getdocumentname"></a>CMDIChildWndEx::GetDocumentName  
+##  <a name="getdocumentname"></a>  CMDIChildWndEx::GetDocumentName  
  Devuelve el nombre del documento que se muestra en la ventana secundaria MDI.  
   
 ```  
@@ -410,7 +405,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
   
  Si la ventana muestra un documento que no se carga desde un archivo, invalide este método en una clase derivada y devolver un identificador de documento único.  
   
- `GetDocumentName`se llama el marco de trabajo cuando guarda el estado de todos los documentos abiertos. La cadena devuelta se escribe en el registro.  
+ `GetDocumentName` se llama el marco de trabajo cuando guarda el estado de todos los documentos abiertos. La cadena devuelta se escribe en el registro.  
   
  Cuando el marco de trabajo es restaurar el estado más adelante, el nombre del documento se lee desde el registro y pasa a [CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow). Invalide este método en un [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-clase derivada y crear o abrir un documento que tiene este nombre y leer el archivo que tiene este nombre. Si el documento no se basa en un archivo, crear del documento basándose en el propio identificador de documento. Debe realizar las acciones anteriores sólo si desea guardar y restaurar los documentos.  
   
@@ -419,7 +414,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]  
   
-##  <a name="getframeicon"></a>CMDIChildWndEx::GetFrameIcon  
+##  <a name="getframeicon"></a>  CMDIChildWndEx::GetFrameIcon  
  Lo llama el marco de trabajo para recuperar el icono de la ventana secundaria MDI.  
   
 ```  
@@ -434,7 +429,7 @@ virtual HICON GetFrameIcon() const;
   
  De forma predeterminada, este método devuelve el icono de la ventana. Invalidar `GetFrameIcon` en un `CMDIChildWndEx`-clase derivada para personalizar este comportamiento.  
   
-##  <a name="getframetext"></a>CMDIChildWndEx::GetFrameText  
+##  <a name="getframetext"></a>  CMDIChildWndEx::GetFrameText  
  Lo llama el marco de trabajo para recuperar el texto de la ventana secundaria MDI.  
   
 ```  
@@ -449,7 +444,7 @@ virtual CString GetFrameText() const;
   
  De forma predeterminada, este método devuelve el texto de la ventana. Invalidar `GetFrameText` en un `CMDIChildWndEx`-clase derivada para personalizar este comportamiento.  
   
-##  <a name="getpane"></a>CMDIChildWndEx::GetPane  
+##  <a name="getpane"></a>  CMDIChildWndEx::GetPane  
  Busca un panel con el identificador del control especificado.  
   
 ```  
@@ -463,7 +458,7 @@ CBasePane* GetPane(UINT nID);
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al panel si encuentra, de lo contrario `NULL`.  
   
-##  <a name="getrelatedtabgroup"></a>CMDIChildWndEx::GetRelatedTabGroup  
+##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup  
 
   
 ```  
@@ -474,7 +469,7 @@ CMFCTabCtrl* GetRelatedTabGroup();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="gettabbedpane"></a>CMDIChildWndEx::GetTabbedPane  
+##  <a name="gettabbedpane"></a>  CMDIChildWndEx::GetTabbedPane  
  Devuelve un puntero a un panel acoplable que forma parte de un grupo de MDI pestañas.  
   
 ```  
@@ -484,7 +479,7 @@ CDockablePane* GetTabbedPane() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un panel acoplable que forma parte de un grupo de MDI documentos con fichas.  
   
-##  <a name="gettoolbarbuttontooltiptext"></a>CMDIChildWndEx::GetToolbarButtonToolTipText  
+##  <a name="gettoolbarbuttontooltiptext"></a>  CMDIChildWndEx::GetToolbarButtonToolTipText  
  Lo llama el marco de trabajo para recuperar información sobre herramientas para un botón de barra de herramientas.  
   
 ```  
@@ -494,12 +489,12 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si se ha mostrado la información sobre herramientas. La implementación predeterminada devuelve `FALSE`.  
+ `TRUE` Si se ha mostrado la información sobre herramientas. La implementación predeterminada devuelve `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método si desea mostrar información sobre herramientas personalizada para los botones de barra de herramientas.  
   
-##  <a name="insertpane"></a>CMDIChildWndEx::InsertPane  
+##  <a name="insertpane"></a>  CMDIChildWndEx::InsertPane  
  Registra el panel especificado con el Administrador de acoplamiento.  
   
 ```  
@@ -520,9 +515,9 @@ BOOL InsertPane(
  Si `TRUE`, `pControlBar` se insertan una vez `pTarget`. Si `FALSE`, `pControlBar` se inserta delante `pTarget`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el método tiene éxito, `FALSE` en caso contrario.  
+ `TRUE` Si el método tiene éxito, `FALSE` en caso contrario.  
   
-##  <a name="ispointneardocksite"></a>CMDIChildWndEx::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>  CMDIChildWndEx::IsPointNearDockSite  
  Determina si un punto especificado se encuentra cerca del sitio de vinculación.  
   
 ```  
@@ -537,18 +532,18 @@ BOOL IsPointNearDockSite(
  El punto especificado.  
   
  [in] `dwBarAlignment`  
- Especifica cuál es el punto de cerca de los bordes. Los valores posibles son `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, y`CBRS_ALIGN_BOTTOM`  
+ Especifica cuál es el punto de cerca de los bordes. Los valores posibles son `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, y `CBRS_ALIGN_BOTTOM`  
   
  [in] `bOuterEdge`  
- `TRUE`Si el punto está cerca del borde exterior del sitio de vinculación; `FALSE` en caso contrario.  
+ `TRUE` Si el punto está cerca del borde exterior del sitio de vinculación; `FALSE` en caso contrario.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el punto está cerca del sitio de vinculación; en caso contrario, `FALSE`.  
+ `TRUE` Si el punto está cerca del sitio de vinculación; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  El punto está cerca del sitio de vinculación cuando está dentro de la sensibilidad establecida en el Administrador de acoplamiento. La confidencialidad del valor predeterminado es 15 píxeles.  
   
-##  <a name="isreadonly"></a>CMDIChildWndEx::IsReadOnly  
+##  <a name="isreadonly"></a>  CMDIChildWndEx::IsReadOnly  
  Especifica si el documento que se muestra en la ventana secundaria es de solo lectura.  
   
 ```  
@@ -556,7 +551,7 @@ virtual BOOL IsReadOnly();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el documento es de solo lectura; en caso contrario, `FALSE`.  
+ `TRUE` Si el documento es de solo lectura; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función se utiliza para evitar que se guarden de documentos de sólo lectura.  
@@ -566,7 +561,7 @@ virtual BOOL IsReadOnly();
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]  
   
-##  <a name="istabbedpane"></a>CMDIChildWndEx::IsTabbedPane  
+##  <a name="istabbedpane"></a>  CMDIChildWndEx::IsTabbedPane  
  Especifica si la ventana secundaria MDI contiene un panel acoplable.  
   
 ```  
@@ -574,9 +569,9 @@ BOOL IsTabbedPane() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si la ventana secundaria MDI contiene un panel acoplable que se convirtió en un documento con pestañas; en caso contrario, `FALSE`.  
+ `TRUE` Si la ventana secundaria MDI contiene un panel acoplable que se convirtió en un documento con pestañas; en caso contrario, `FALSE`.  
   
-##  <a name="onmoveminiframe"></a>CMDIChildWndEx::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>  CMDIChildWndEx::OnMoveMiniFrame  
  Lo llama el marco para mover una ventana de marco reducido.  
   
 ```  
@@ -588,9 +583,9 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
  Un puntero a una ventana de marco reducido.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el método tiene éxito, de lo contrario `FALSE`.  
+ `TRUE` Si el método tiene éxito, de lo contrario `FALSE`.  
   
-##  <a name="onsetpreviewmode"></a>CMDIChildWndEx::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>  CMDIChildWndEx::OnSetPreviewMode  
  Lo llama el marco para entrar o salir del modo de vista previa de impresión.  
   
 ```  
@@ -606,7 +601,7 @@ virtual void OnSetPreviewMode(
  [in] `pState`  
  Un puntero a la estructura de estado de vista previa de impresión.  
   
-##  <a name="onupdateframetitle"></a>CMDIChildWndEx::OnUpdateFrameTitle  
+##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  Lo llama el marco de trabajo para actualizar el título de marco.  
   
 ```  
@@ -617,7 +612,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
  [in] `bAddToTitle`  
  Si `TRUE`, agregue el nombre del documento al título.  
   
-##  <a name="panefrompoint"></a>CMDIChildWndEx::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  Devuelve el panel que contiene el punto especificado.  
   
 ```  
@@ -642,7 +637,7 @@ CBasePane* PaneFromPoint(
  Aumentar el área de búsqueda en esta cantidad. Un panel satisface los criterios de búsqueda si el punto especificado se encuentra en el área de mayor.  
   
  [in] `bExactBar`  
- `TRUE`para pasar por alto la `nSensitivity` parámetro; en caso contrario, `FALSE`.  
+ `TRUE` para pasar por alto la `nSensitivity` parámetro; en caso contrario, `FALSE`.  
   
  [in] `pRTCBarType`  
  Si no `NULL`, el método busca únicamente los paneles del tipo especificado.  
@@ -658,7 +653,7 @@ CBasePane* PaneFromPoint(
   
  Cuando la función devuelve y se ha encontrado un panel, `dwAlignment` contiene la alineación del punto especificado. Por ejemplo, si el punto es más cercano a la parte superior del panel, `dwAlignment` está establecido en `CBRS_ALIGN_TOP`.  
   
-##  <a name="recalclayout"></a>CMDIChildWndEx::RecalcLayout  
+##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  Vuelve a calcular el diseño de la ventana.  
   
 ```  
@@ -669,7 +664,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
  [in] `bNotify`  
  Si `TRUE`, el elemento en el contexto activo de la ventana recibe la notificación del cambio de diseño.  
   
-##  <a name="removepanefromdockmanager"></a>CMDIChildWndEx::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  Quita un panel desde el Administrador de acoplamiento.  
   
 ```  
@@ -697,7 +692,7 @@ void RemovePaneFromDockManager(
  [in] `pBarReplacement`  
  Un puntero a un panel que reemplaza el panel quitado.  
   
-##  <a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup  
+##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
   
 ```  
@@ -709,7 +704,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="showpane"></a>CMDIChildWndEx::ShowPane  
+##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane  
 
   
 ```  
@@ -728,7 +723,7 @@ void ShowPane(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="updatetaskbartabicon"></a>CMDIChildWndEx::UpdateTaskbarTabIcon  
+##  <a name="updatetaskbartabicon"></a>  CMDIChildWndEx::UpdateTaskbarTabIcon  
  Actualiza el icono de tabulación de la barra de tareas de Windows 7.  
   
 ```  
@@ -741,7 +736,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="unregistertaskbartab"></a>CMDIChildWndEx::UnregisterTaskbarTab  
+##  <a name="unregistertaskbartab"></a>  CMDIChildWndEx::UnregisterTaskbarTab  
  Quita al elemento secundario MDI de pestañas de la barra de tareas de Windows 7.  
   
 ```  
@@ -754,7 +749,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="settaskbarthumbnailcliprect"></a>CMDIChildWndEx::SetTaskbarThumbnailClipRect  
+##  <a name="settaskbarthumbnailcliprect"></a>  CMDIChildWndEx::SetTaskbarThumbnailClipRect  
  Lo llama el marco para establecer el rectángulo de recorte para seleccionar una parte del área de cliente de una ventana para mostrar como miniatura de la ventana en la barra de tareas.  
   
 ```  
@@ -770,7 +765,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="settaskbartabproperties"></a>CMDIChildWndEx::SetTaskbarTabProperties  
+##  <a name="settaskbartabproperties"></a>  CMDIChildWndEx::SetTaskbarTabProperties  
  Establece las propiedades de una pestaña de la barra de tareas de Windows 7.  
   
 ```  
@@ -783,7 +778,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="settaskbartaborder"></a>CMDIChildWndEx::SetTaskbarTabOrder  
+##  <a name="settaskbartaborder"></a>  CMDIChildWndEx::SetTaskbarTabOrder  
  Inserta al elemento secundario MDI antes de la ventana especificada en las fichas de la barra de tareas de Windows 7.  
   
 ```  
@@ -796,7 +791,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="settaskbartabactive"></a>CMDIChildWndEx::SetTaskbarTabActive  
+##  <a name="settaskbartabactive"></a>  CMDIChildWndEx::SetTaskbarTabActive  
  Activa la pestaña correspondiente de barra de tareas de Windows 7.  
   
 ```  
@@ -805,7 +800,7 @@ void SetTaskbarTabActive();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="registertaskbartab"></a>CMDIChildWndEx::RegisterTaskbarTab  
+##  <a name="registertaskbartab"></a>  CMDIChildWndEx::RegisterTaskbarTab  
  Registra al formulario secundario MDI con fichas de la barra de tareas de Windows 7.  
   
 ```  
@@ -818,7 +813,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="ontaskbartabthumbnailstretch"></a>CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
+##  <a name="ontaskbartabthumbnailstretch"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
  Lo llama el marco cuando sea necesario ajustar un mapa de bits para una Windows 7 barra de tareas ficha Vista previa en miniatura de la ventana secundaria MDI.  
   
 ```  
@@ -845,7 +840,7 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ### <a name="remarks"></a>Comentarios  
  Requirementher o le sí sí sí le le le **:** afxmdichildwndex.h  
   
-##  <a name="ontaskbartabthumbnailmouseactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
+##  <a name="ontaskbartabthumbnailmouseactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
  Llamado por el marco de trabajo cuando la miniatura de pestañas de la barra de tareas debe procesar el mensaje WM_MOUSEACTIVATE.  
   
 ```  
@@ -868,7 +863,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada activa del marco MDI secundario relacionado.  
   
-##  <a name="ontaskbartabthumbnailactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailActivate  
+##  <a name="ontaskbartabthumbnailactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailActivate  
  Llamado por el marco de trabajo cuando la miniatura de pestañas de la barra de tareas debe procesar el mensaje WM_ACTIVATE.  
   
 ```  
@@ -891,7 +886,7 @@ virtual void OnTaskbarTabThumbnailActivate(
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada activa del marco MDI secundario relacionado.  
   
-##  <a name="onpresstaskbarthmbnailclosebutton"></a>CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton  
+##  <a name="onpresstaskbarthmbnailclosebutton"></a>  CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton  
  Lo llama el marco cuando el usuario presiona el botón de cierre en la miniatura de pestañas de la barra de tareas.  
   
 ```  
@@ -900,7 +895,7 @@ virtual void OnPressTaskbarThmbnailCloseButton();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="ongeticonicthumbnail"></a>CMDIChildWndEx::OnGetIconicThumbnail  
+##  <a name="ongeticonicthumbnail"></a>  CMDIChildWndEx::OnGetIconicThumbnail  
  Lo llama el marco cuando sea necesario obtener un mapa de bits para la miniatura del icono de la ventana secundaria MDI.  
   
 ```  
@@ -918,7 +913,7 @@ virtual HBITMAP OnGetIconicThumbnail(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="ongeticoniclivepreviewbitmap"></a>CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
+##  <a name="ongeticoniclivepreviewbitmap"></a>  CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
  Lo llama el marco cuando sea necesario obtener un mapa de bits para la previsualización de la ventana secundaria MDI.  
   
 ```  
@@ -940,7 +935,7 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada y devolver un mapa de bits de 32 bpp válido para la previsualización del elemento secundario MDI. Se llama a este método solo cuando se muestra el formulario secundario MDI en fichas de la barra de tareas de Windows 7. Si devuelve `NULL`, MFC llama a los controladores predeterminados y obtenga con mapas de bits `PrintClient` o `PrintWindow`.  
   
-##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
+##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>  CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
  Una combinación de marcas, que se pasa por el marco de trabajo para el `SetTaskbarTabProperties` método, cuando se está registrando una pestaña (elemento secundario MDI) con pestañas de la barra de tareas de Windows 7.  
   
 ```  
@@ -950,7 +945,7 @@ AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;
 ### <a name="remarks"></a>Comentarios  
  La combinación predeterminada es STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.  
   
-##  <a name="istaskbarthumbnailcliprectenabled"></a>CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
+##  <a name="istaskbarthumbnailcliprectenabled"></a>  CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
  Indica si la selección automática de una parte del área de cliente de una ventana para mostrar como miniatura de la ventana en la barra de tareas está habilitada o deshabilitada.  
   
 ```  
@@ -962,7 +957,7 @@ BOOL IsTaskbarThumbnailClipRectEnabled() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="istaskbartabssupportenabled"></a>CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
+##  <a name="istaskbartabssupportenabled"></a>  CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
  Indica si el formulario secundario MDI puede aparecer en las fichas de la barra de tareas de Windows 7.  
   
 ```  
@@ -970,11 +965,11 @@ BOOL IsTaskbarTabsSupportEnabled();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el formulario secundario MDI puede aparecer en las fichas de la barra de tareas de Windows 7; `FALSE` si la ventana secundaria MDI no puede aparecer en las pestañas de barra de tareas de Windows 7.  
+ `TRUE` Si el formulario secundario MDI puede aparecer en las fichas de la barra de tareas de Windows 7; `FALSE` si la ventana secundaria MDI no puede aparecer en las pestañas de barra de tareas de Windows 7.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="isregisteredwithtaskbartabs"></a>CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
+##  <a name="isregisteredwithtaskbartabs"></a>  CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
  Devuelve `TRUE` si la ventana secundaria MDI se registró correctamente con pestañas de la barra de tareas de Windows 7.  
   
 ```  
@@ -982,11 +977,11 @@ BOOL IsRegisteredWithTaskbarTabs();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si la ventana secundaria MDI se registra con pestañas de la barra de tareas de Windows 7; en caso contrario, `FALSE`.  
+ `TRUE` Si la ventana secundaria MDI se registra con pestañas de la barra de tareas de Windows 7; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="invalidateiconicbitmaps"></a>CMDIChildWndEx::InvalidateIconicBitmaps  
+##  <a name="invalidateiconicbitmaps"></a>  CMDIChildWndEx::InvalidateIconicBitmaps  
  Invalida una representación de icono de mapa de bits de un elemento secundario MDI.  
   
 ```  
@@ -999,7 +994,7 @@ BOOL InvalidateIconicBitmaps();
 ### <a name="remarks"></a>Comentarios  
  Debe llamarse cuando ha cambiado el contenido en directo o el tamaño de un elemento secundario MDI.  
   
-##  <a name="gettaskbarthumbnailcliprect"></a>CMDIChildWndEx::GetTaskbarThumbnailClipRect  
+##  <a name="gettaskbarthumbnailcliprect"></a>  CMDIChildWndEx::GetTaskbarThumbnailClipRect  
  Lo llama el marco cuando sea necesario seleccionar una parte del área de cliente de una ventana para mostrar como miniatura de la ventana en la barra de tareas.  
   
 ```  
@@ -1011,7 +1006,7 @@ virtual CRect GetTaskbarThumbnailClipRect() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="gettaskbarpreviewwnd"></a>CMDIChildWndEx::GetTaskbarPreviewWnd  
+##  <a name="gettaskbarpreviewwnd"></a>  CMDIChildWndEx::GetTaskbarPreviewWnd  
  Lo llama el marco cuando sea necesario obtener una ventana secundaria (normalmente una ventana de vista o divisor) que se muestre en una miniatura de pestañas de la barra de tareas de Windows 7.  
   
 ```  
@@ -1023,7 +1018,7 @@ virtual CWnd* GetTaskbarPreviewWnd();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="gettabproxywnd"></a>CMDIChildWndEx::GetTabProxyWnd  
+##  <a name="gettabproxywnd"></a>  CMDIChildWndEx::GetTabProxyWnd  
  Devuelve la ventana de proxy de la pestaña registrada con pestañas de la barra de tareas de Windows 7.  
   
 ```  
@@ -1035,7 +1030,7 @@ CMDITabProxyWnd* GetTabProxyWnd();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="enabletaskbarthumbnailcliprect"></a>CMDIChildWndEx::EnableTaskbarThumbnailClipRect  
+##  <a name="enabletaskbarthumbnailcliprect"></a>  CMDIChildWndEx::EnableTaskbarThumbnailClipRect  
  Habilita o deshabilita la selección automática de una parte del área de cliente de una ventana para mostrar como miniatura de la ventana en la barra de tareas.  
   
 ```  
@@ -1048,7 +1043,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="canshowontaskbartabs"></a>CMDIChildWndEx::CanShowOnTaskBarTabs  
+##  <a name="canshowontaskbartabs"></a>  CMDIChildWndEx::CanShowOnTaskBarTabs  
  Indica que el marco de trabajo si se puede mostrar este elemento secundario MDI en fichas de la barra de tareas de Windows 7.  
   
 ```  
@@ -1056,12 +1051,12 @@ virtual BOOL CanShowOnTaskBarTabs();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el contenido de la ventana secundaria MDI se puede mostrar en vistas en miniatura de la barra de tareas de Windows 7.  
+ `TRUE` Si el contenido de la ventana secundaria MDI se puede mostrar en vistas en miniatura de la barra de tareas de Windows 7.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada y devolver `FALSE` para deshabilitar la apariencia de este elemento secundario MDI en fichas de la barra de tareas de Windows 7.  
   
-##  <a name="activatetoplevelframe"></a>CMDIChildWndEx::ActivateTopLevelFrame  
+##  <a name="activatetoplevelframe"></a>  CMDIChildWndEx::ActivateTopLevelFrame  
  Lo llama el marco de trabajo para activar el marco de nivel superior cuando se activa la aplicación de una pestaña de la barra de tareas.  
   
 ```  

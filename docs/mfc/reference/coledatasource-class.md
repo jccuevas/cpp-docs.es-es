@@ -1,12 +1,9 @@
 ---
 title: Clase COleDataSource | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDataSource
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce9abdccba549e0b0fd3c55bfb7fbaee6a11e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledatasource-class"></a>COleDataSource (clase)
 Actúa como una memoria caché donde una aplicación coloca los datos que proporcionará durante las operaciones de transferencia de datos, tales como las operaciones del Portapapeles y de arrastrar y colocar.  
@@ -110,7 +105,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxole.h  
   
-##  <a name="cachedata"></a>:: CacheData  
+##  <a name="cachedata"></a>  :: CacheData  
  Llame a esta función para especificar un formato en el que datos se ofrezcan las operaciones de transferencia de datos.  
   
 ```  
@@ -143,7 +138,7 @@ void CacheData(
   
  Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) del SDK de Windows.  
   
-##  <a name="cacheglobaldata"></a>COleDataSource:: CacheGlobalData  
+##  <a name="cacheglobaldata"></a>  COleDataSource:: CacheGlobalData  
  Llame a esta función para especificar un formato en el que datos se ofrezcan las operaciones de transferencia de datos.  
   
 ```  
@@ -172,14 +167,14 @@ void CacheGlobalData(
   
  Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) del SDK de Windows.  
   
-##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
+##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  Construye un objeto `COleDataSource`.  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="delayrenderdata"></a>COleDataSource:: DelayRenderData  
+##  <a name="delayrenderdata"></a>  COleDataSource:: DelayRenderData  
  Llame a esta función para especificar un formato en el que datos se ofrezcan las operaciones de transferencia de datos.  
   
 ```  
@@ -206,7 +201,7 @@ void DelayRenderData(
   
  Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) del SDK de Windows.  
   
-##  <a name="delayrenderfiledata"></a>COleDataSource:: DelayRenderFileData  
+##  <a name="delayrenderfiledata"></a>  COleDataSource:: DelayRenderFileData  
  Llame a esta función para especificar un formato en el que datos se ofrezcan las operaciones de transferencia de datos.  
   
 ```  
@@ -233,7 +228,7 @@ void DelayRenderFileData(
   
  Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) del SDK de Windows.  
   
-##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
+##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
  Llame a esta función para admitir el cambio del contenido del origen de datos.  
   
 ```  
@@ -250,13 +245,13 @@ void DelaySetData(
  Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se reemplazarán los datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si es **NULL**, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="remarks"></a>Comentarios  
- [OnSetData](#onsetdata) llamará el marco de trabajo cuando esto ocurre. Solo se utiliza cuando el marco de trabajo devuelve el origen de datos de [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Si `DelaySetData` no se llama a su `OnSetData` función nunca se llamará. `DelaySetData`se debe llamar para cada Portapapeles o **FORMATETC** compatibilidad con el formato.  
+ [OnSetData](#onsetdata) llamará el marco de trabajo cuando esto ocurre. Solo se utiliza cuando el marco de trabajo devuelve el origen de datos de [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Si `DelaySetData` no se llama a su `OnSetData` función nunca se llamará. `DelaySetData` se debe llamar para cada Portapapeles o **FORMATETC** compatibilidad con el formato.  
   
  Para obtener más información, consulte el [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura en el SDK de Windows.  
   
  Para obtener más información, consulte [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) del SDK de Windows.  
   
-##  <a name="dodragdrop"></a>COleDataSource:: DoDragDrop  
+##  <a name="dodragdrop"></a>  COleDataSource:: DoDragDrop  
  Llame a la `DoDragDrop` función de miembro para realizar una operación de arrastrar y colocar para este origen de datos, normalmente en un [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) controlador.  
   
 ```  
@@ -270,13 +265,13 @@ DROPEFFECT DoDragDrop(
  `dwEffects`  
  Operaciones de arrastrar y colocar permitidas en este origen de datos. Puede tener uno o varios de los siguientes:  
   
-- `DROPEFFECT_COPY`Se pudo realizar una operación de copia.  
+- `DROPEFFECT_COPY` Se pudo realizar una operación de copia.  
   
-- `DROPEFFECT_MOVE`Se pudo realizar una operación de movimiento.  
+- `DROPEFFECT_MOVE` Se pudo realizar una operación de movimiento.  
   
-- `DROPEFFECT_LINK`Se puede establecer un vínculo de los datos perdidos a los datos originales.  
+- `DROPEFFECT_LINK` Se puede establecer un vínculo de los datos perdidos a los datos originales.  
   
-- `DROPEFFECT_SCROLL`Indica que podría producirse una operación de desplazamiento de arrastre.  
+- `DROPEFFECT_SCROLL` Indica que podría producirse una operación de desplazamiento de arrastre.  
   
  `lpRectStartDrag`  
  Puntero al rectángulo que define donde realmente comienza la operación de arrastre. Para obtener más información, vea la sección Comentarios que se muestra más adelante.  
@@ -302,7 +297,7 @@ DROPEFFECT DoDragDrop(
   
  Para obtener más información, vea el artículo [arrastrar y colocar: implementar un origen de Drop](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
-##  <a name="empty"></a>COleDataSource::Empty  
+##  <a name="empty"></a>  COleDataSource::Empty  
  Llame a esta función para vaciar el `COleDataSource` objeto de datos.  
   
 ```  
@@ -314,7 +309,7 @@ void Empty();
   
  Para obtener más información, consulte [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) del SDK de Windows.  
   
-##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
+##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
  Representa los datos que se encuentra en el Portapapeles y, a continuación, le permite pegar datos del Portapapeles después de cerrar la aplicación.  
   
 ```  
@@ -324,7 +319,7 @@ static void PASCAL FlushClipboard();
 ### <a name="remarks"></a>Comentarios  
  Use [SetClipboard](#setclipboard) colocar datos en el Portapapeles.  
   
-##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
+##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner  
  Determina si los datos en el Portapapeles ha cambiado desde [SetClipboard](#setclipboard) se llame por última vez y, si es así, identifica al propietario actual.  
   
 ```  
@@ -334,7 +329,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 ### <a name="return-value"></a>Valor devuelto  
  El origen de datos actualmente en el Portapapeles, o **NULL** si no hay nada en el Portapapeles o si el Portapapeles no pertenece a la aplicación que realiza la llamada.  
   
-##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
+##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData  
  Lo llama el marco de trabajo para recuperar datos en el formato especificado.  
   
 ```  
@@ -362,7 +357,7 @@ virtual BOOL OnRenderData(
   
  Para obtener más información, consulte el [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) y [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructuras, la [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) tipo de enumeración, y [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) en el SDK de Windows.  
   
-##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
  Lo llama el marco de trabajo para recuperar datos en el formato especificado cuando el medio de almacenamiento especificado es un archivo.  
   
 ```  
@@ -388,7 +383,7 @@ virtual BOOL OnRenderFileData(
   
  Para obtener más información, consulte el [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura y [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) del SDK de Windows.  
   
-##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
  Lo llama el marco de trabajo para recuperar datos en el formato especificado cuando el medio de almacenamiento especificado es una memoria global.  
   
 ```  
@@ -416,7 +411,7 @@ virtual BOOL OnRenderGlobalData(
   
  Para obtener más información, consulte el [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura y [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) del SDK de Windows.  
   
-##  <a name="onsetdata"></a>COleDataSource::OnSetData  
+##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
  Lo llama el marco para establecer o reemplazar los datos de la `COleDataSource` objeto en el formato especificado.  
   
 ```  
@@ -446,7 +441,7 @@ virtual BOOL OnSetData(
   
  Para obtener más información, consulte el [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) y [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructuras y los [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) y [IDataObject:: GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) funciones del SDK de Windows.  
   
-##  <a name="setclipboard"></a>COleDataSource:: SetClipboard  
+##  <a name="setclipboard"></a>  COleDataSource:: SetClipboard  
  Coloca los datos contenidos en el `COleDataSource` objeto en el Portapapeles después de llamar a una de las siguientes funciones: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), o [DelayRenderFileData](#delayrenderfiledata).  
   
 ```  

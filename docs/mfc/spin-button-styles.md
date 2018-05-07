@@ -1,13 +1,10 @@
 ---
-title: "Estilos de botón de número | Documentos de Microsoft"
-ms.custom: 
+title: Estilos de botón de número | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - styles [MFC], spin button control
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa4b2ae42175e2d4fc2ddb3317ef76b6b4dec8d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b559fcda4825aec71ba4b5c1dd8c3cd319b83d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spin-button-styles"></a>Estilos de botón de cuadro de número
 Muchas de las configuraciones de un botón de número ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) se controlan mediante estilos. Puede establecer los siguientes estilos utilizando el **propiedades** ventana en el editor de cuadro de diálogo.  
@@ -42,7 +37,7 @@ Muchas de las configuraciones de un botón de número ([CSpinButtonCtrl](../mfc/
 -   **No hay miles** no inserta los miles separador en el valor en el título de la ventana relacionada. Asociado con el `UDS_NOTHOUSANDS` estilo.  
   
     > [!NOTE]
-    >  Establezca este estilo si desea utilizar intercambio de datos de cuadros de diálogo (DDX) para obtener el valor entero del control relacionado. `DDX_Text`no acepta separadores de miles incrustados.  
+    >  Establezca este estilo si desea utilizar intercambio de datos de cuadros de diálogo (DDX) para obtener el valor entero del control relacionado. `DDX_Text` no acepta separadores de miles incrustados.  
   
 -   **Ajustar** hace que la posición de "ajustar" si el valor se incrementa o disminuye más allá del intervalo del control. Asociado con el `UDS_WRAP` estilo.  
   

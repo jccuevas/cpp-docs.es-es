@@ -2,11 +2,8 @@
 title: Estructura de CMemoryState | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMemoryState
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20f4c2d7d33d07a5eca5a980c376056c3fe68e2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmemorystate-structure"></a>Estructura de CMemoryState
 Proporciona una manera cómoda para detectar pérdidas de memoria en el programa.  
@@ -56,7 +51,7 @@ struct CMemoryState
 |[CMemoryState:: DumpStatistics](#dumpstatistics)|Imprime las estadísticas de la asignación de memoria para un `CMemoryState` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CMemoryState`es una estructura y no tiene una clase base.  
+ `CMemoryState` es una estructura y no tiene una clase base.  
   
  Una "pérdida de memoria" se produce cuando un objeto de memoria se asigna en el montón pero no cancela la asignación cuando ya no sea necesario. Finalmente, tales pérdidas de memoria pueden conducir a errores de memoria insuficiente. Hay varias formas de asignar y desasignar memoria en el programa:  
   
@@ -66,13 +61,13 @@ struct CMemoryState
   
 -   En C++ **nueva** y **eliminar** operadores.  
   
- El `CMemoryState` diagnóstico sólo ayuda a detectar memoria pérdidas producidas cuando asignó la memoria con el **nueva** operador no se desasigna mediante **eliminar**. Los otros dos grupos de funciones de administración de memoria son para los programas de C++ no y mezclar con **nueva** y **eliminar** no se recomienda en el mismo programa. Una macro adicional, `DEBUG_NEW`, se proporciona para reemplazar la **nueva** operador cuando necesite archivo y número de línea de seguimiento de las asignaciones de memoria. `DEBUG_NEW`se usa siempre que usaría normalmente la **nueva** operador.  
+ El `CMemoryState` diagnóstico sólo ayuda a detectar memoria pérdidas producidas cuando asignó la memoria con el **nueva** operador no se desasigna mediante **eliminar**. Los otros dos grupos de funciones de administración de memoria son para los programas de C++ no y mezclar con **nueva** y **eliminar** no se recomienda en el mismo programa. Una macro adicional, `DEBUG_NEW`, se proporciona para reemplazar la **nueva** operador cuando necesite archivo y número de línea de seguimiento de las asignaciones de memoria. `DEBUG_NEW` se usa siempre que usaría normalmente la **nueva** operador.  
   
  Al igual que con otros diagnósticos, el `CMemoryState` diagnósticos solo están disponibles en versiones de depuración del programa. Debe tener una versión de depuración del **_DEBUG** constante definida.  
   
  Si sospecha que el programa tiene una fuga de memoria, puede usar el `Checkpoint`, **diferencia**, y `DumpStatistics` funciones para detectar la diferencia entre el estado de memoria (objetos asignados) en dos puntos distintos del programa ejecución. Esta información puede ser útil para determinar si una función es limpiar todos los objetos que asigna.  
   
- Si simplemente saber dónde se produce el desequilibrio en la asignación y desasignación no proporciona suficiente información, puede usar el `DumpAllObjectsSince` función para volcar todos los objetos asignados desde la llamada anterior a `Checkpoint`. Este volcado muestra el orden de asignación, el archivo de código fuente y la línea donde se ha asignado el objeto (si está utilizando `DEBUG_NEW` para la asignación) y la derivación del objeto, su dirección y su tamaño. `DumpAllObjectsSince`También llama a cada objeto `Dump` función para proporcionar información sobre su estado actual.  
+ Si simplemente saber dónde se produce el desequilibrio en la asignación y desasignación no proporciona suficiente información, puede usar el `DumpAllObjectsSince` función para volcar todos los objetos asignados desde la llamada anterior a `Checkpoint`. Este volcado muestra el orden de asignación, el archivo de código fuente y la línea donde se ha asignado el objeto (si está utilizando `DEBUG_NEW` para la asignación) y la derivación del objeto, su dirección y su tamaño. `DumpAllObjectsSince` También llama a cada objeto `Dump` función para proporcionar información sobre su estado actual.  
   
  Para obtener más información sobre cómo usar `CMemoryState` y otros diagnósticos, vea [depurar aplicaciones de MFC](/visualstudio/debugger/mfc-debugging-techniques).  
   
@@ -85,7 +80,7 @@ struct CMemoryState
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h  
   
-##  <a name="checkpoint"></a>CMemoryState:: Checkpoint  
+##  <a name="checkpoint"></a>  CMemoryState:: Checkpoint  
  Toma una instantánea resumen de memoria y lo almacena en esta `CMemoryState` objeto.  
   
 ```  
@@ -98,7 +93,7 @@ void Checkpoint();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de la [CMemoryState](#cmemorystate) constructor.  
   
-##  <a name="cmemorystate"></a>CMemoryState::CMemoryState  
+##  <a name="cmemorystate"></a>  CMemoryState::CMemoryState  
  Construye un vacío `CMemoryState` objeto que se debe rellenar por la [punto de comprobación](#checkpoint) o [diferencia](#difference) función miembro.  
   
 ```  
@@ -108,7 +103,7 @@ CMemoryState();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]  
   
-##  <a name="difference"></a>CMemoryState:: Difference  
+##  <a name="difference"></a>  CMemoryState:: Difference  
  Compara dos `CMemoryState` objetos, a continuación, almacena la diferencia en esta `CMemoryState` objeto.  
   
 ```  
@@ -133,7 +128,7 @@ BOOL Difference(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de la [CMemoryState](#cmemorystate) constructor.  
   
-##  <a name="dumpallobjectssince"></a>CMemoryState:: DumpAllObjectsSince  
+##  <a name="dumpallobjectssince"></a>  CMemoryState:: DumpAllObjectsSince  
  Llamadas el `Dump` función para todos los objetos de un tipo derivado de la clase `CObject` que se asignaron (y todavía se asignan) desde la última [punto de comprobación](#checkpoint) llamar para este `CMemoryState` objeto.  
   
 ```  
@@ -148,7 +143,7 @@ void DumpAllObjectsSince() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de la [CMemoryState](#cmemorystate) constructor.  
   
-##  <a name="dumpstatistics"></a>CMemoryState:: DumpStatistics  
+##  <a name="dumpstatistics"></a>  CMemoryState:: DumpStatistics  
  Imprime un informe de estadísticas de memoria concisa desde una `CMemoryState` objeto que se rellena mediante la [diferencia](#difference) función miembro.  
   
 ```  

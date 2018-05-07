@@ -1,30 +1,25 @@
 ---
 title: 'Controles ActiveX MFC: Pintar un Control ActiveX | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2a2dc7b0cebbfaa6f6fe7dbe7dc69e5d4f80121
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: Pintar un control ActiveX
 Este artículo describe el proceso de dibujo del control ActiveX y cómo puede modificar el código para optimizar el proceso. (Consulte [optimizar el dibujo de controles](../mfc/optimizing-control-drawing.md) para conocer las técnicas optimizar el dibujo al no tener controles individualmente restauración objetos GDI previamente seleccionados. Después de han dibujado todos los controles, el contenedor puede restaurar automáticamente los objetos originales.)  
@@ -39,7 +34,7 @@ Este artículo describe el proceso de dibujo del control ActiveX y cómo puede m
   
 -   [Cómo dibujar el control usando metarchivos](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a>El proceso de dibujo de un Control ActiveX  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> El proceso de dibujo de un Control ActiveX  
  Cuando se muestran inicialmente o se vuelven a dibujar controles ActiveX, siguen un proceso similar de otras aplicaciones desarrolladas mediante MFC, con una diferencia importante: los controles ActiveX pueden estar en un activo o un estado inactivo.  
   
  Un control activo se representa en un contenedor de controles ActiveX mediante una ventana secundaria. Al igual que otras ventanas, es responsable de dibujar propio cuando un `WM_PAINT` recibirlo. La clase del control base, [COleControl](../mfc/reference/colecontrol-class.md), controla este mensaje en su `OnPaint` función. Esta implementación predeterminada llama el `OnDraw` función del control.  
@@ -62,14 +57,14 @@ Este artículo describe el proceso de dibujo del control ActiveX y cómo puede m
 > [!NOTE]
 >  Al dibujar un control, no debe realizar suposiciones sobre el estado del contexto de dispositivo que se pasa como el *pdc* parámetro para el `OnDraw` función. En ocasiones, el contexto de dispositivo proporcionado por la aplicación contenedora y no necesariamente se inicializarán al estado predeterminado. En particular, seleccione explícitamente los lápices, pinceles, colores, fuentes y otros recursos que depende su código de dibujo.  
   
-##  <a name="_core_optimizing_your_paint_code"></a>Optimizar el código de dibujo  
+##  <a name="_core_optimizing_your_paint_code"></a> Optimizar el código de dibujo  
  Después de que el control se dibuje correctamente, el siguiente paso es optimizar la `OnDraw` función.  
   
  La implementación predeterminada de dibujo de controles ActiveX pinta la zona de todo el control. Esto es suficiente para controles sencillos, pero en muchos casos volver a dibujarse el control sería más rápido si sólo la parte que sea necesario actualizar se vuelve a dibujar, en lugar de todo el control.  
   
  El `OnDraw` función proporciona un método sencillo de optimización pasando `rcInvalid`, el área rectangular del control que es necesario volver a dibujar. Utilice este área, suele ser menor que el área de todo el control, para acelerar el proceso de dibujo.  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a>Dibujar el Control usando metarchivos  
+##  <a name="_core_painting_your_control_using_metafiles"></a> Dibujar el Control usando metarchivos  
  En la mayoría de los casos la `pdc` parámetro para el `OnDraw` función apunta a un contexto de dispositivo de pantalla (DC). Sin embargo, al imprimir imágenes del control o durante una sesión de vista previa de impresión, el controlador de dominio que se recibió para la representación es un tipo especial denominado "DC de metarchivo". A diferencia de un DC de pantalla, que controla inmediatamente las solicitudes enviadas a él, un DC de metarchivo almacena las solicitudes que se reproducirá en un momento posterior. Algunas aplicaciones de contenedor también pueden elegir representar la imagen del control mediante un controlador de dominio en modo de diseño de metarchivo.  
   
  Metarchivo solicitudes de dibujo se puede realizar por el contenedor a través de dos funciones de interfaz: **IViewObject::Draw** (esta función también se puede llamar para dibujar no metarchivo) y **IDataObject:: GetData**. Cuando un metarchivo de controlador de dominio se pasa como uno de los parámetros, el marco de trabajo MFC realiza una llamada a [COleControl:: OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Puesto que se trata de una función miembro virtual, reemplazar esta función en la clase de control para realizar cualquier procesamiento especial. Las llamadas de comportamiento predeterminado `COleControl::OnDraw`.  
@@ -80,11 +75,11 @@ Este artículo describe el proceso de dibujo del control ActiveX y cómo puede m
   
 |Arco|BibBlt|Cuerda|  
 |---------|------------|-----------|  
-|**Elipse**|**Escape**|`ExcludeClipRect`|  
+|**elipse**|**Escape**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
-|`Pie`|**Polígono**|`Polyline`|  
+|`Pie`|**polígono**|`Polyline`|  
 |`PolyPolygon`|`RealizePalette`|`RestoreDC`|  
 |`RoundRect`|`SaveDC`|`ScaleViewportExt`|  
 |`ScaleWindowExt`|`SelectClipRgn`|`SelectObject`|  

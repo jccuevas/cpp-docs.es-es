@@ -1,13 +1,10 @@
 ---
-title: "TN016: Usar la herencia múltiple de C++ con MFC | Documentos de Microsoft"
-ms.custom: 
+title: 'TN016: Usar la herencia múltiple de C++ con MFC | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.inheritance
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MI (Multiple Inheritance)
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b276e316ffc8ce04577532ac3b15400ee28f9f33
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: Usar la herencia múltiple de C++ con MFC
 Esta nota describe cómo usar la herencia múltiple (MI) con Microsoft Foundation Classes. El uso de MI no es necesario con MFC. MI no se utiliza en todas las clases MFC y no es necesario escribir una biblioteca de clases.  
@@ -46,7 +41,7 @@ Esta nota describe cómo usar la herencia múltiple (MI) con Microsoft Foundatio
  Una alternativa consiste en utilizar el `dynamic_cast` operador. Convertir un objeto con MI a uno de sus clases base, se forzará al compilador que utilice las funciones de la clase base proporcionada. Para obtener más información, consulte [dynamic_cast (operador)](../cpp/dynamic-cast-operator.md).  
   
 ## <a name="cobject---the-root-of-all-classes"></a>CObject - la raíz de todas las clases  
- Todas las clases importantes derivan directa o indirectamente de clase `CObject`. `CObject`Does no tiene ningún dato de miembro, pero tiene algunas funciones de forma predeterminada. Al utilizar MI, normalmente se heredan de dos o más `CObject`-las clases derivadas. En el ejemplo siguiente se muestra cómo una clase puede heredar de un [CFrameWnd](../mfc/reference/cframewnd-class.md) y un [CObList](../mfc/reference/coblist-class.md):  
+ Todas las clases importantes derivan directa o indirectamente de clase `CObject`. `CObject` Does no tiene ningún dato de miembro, pero tiene algunas funciones de forma predeterminada. Al utilizar MI, normalmente se heredan de dos o más `CObject`-las clases derivadas. En el ejemplo siguiente se muestra cómo una clase puede heredar de un [CFrameWnd](../mfc/reference/cframewnd-class.md) y un [CObList](../mfc/reference/coblist-class.md):  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  

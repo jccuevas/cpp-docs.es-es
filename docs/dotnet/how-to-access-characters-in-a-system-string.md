@@ -1,13 +1,10 @@
 ---
-title: "Cómo: obtener acceso a caracteres en un System:: String | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: obtener acceso a caracteres en un System:: String | Documentos de Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9682492eedc915919758d42d5594560cb4a83a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Cómo: Tener acceso a caracteres en un objeto System::String
 Puede obtener acceso a caracteres de un <xref:System.String> objeto para las llamadas de alto rendimiento a no administrado, las funciones que toman `wchar_t*` cadenas. El método produce un puntero interior al primer carácter de la <xref:System.String> objeto. This (puntero) se puede manipular directamente o anclado y pasa a una función que espera un normal `wchar_t` cadena.  
   
 ## <a name="example"></a>Ejemplo  
- `PtrToStringChars`Devuelve un <xref:System.Char>, que es un puntero interior (también conocido como un `byref`). Por lo tanto, resulta sujeta a la colección de elementos no utilizados. No tienes que anclar this (puntero), a menos que va a pasar a una función nativa.  
+ `PtrToStringChars` Devuelve un <xref:System.Char>, que es un puntero interior (también conocido como un `byref`). Por lo tanto, resulta sujeta a la colección de elementos no utilizados. No tienes que anclar this (puntero), a menos que va a pasar a una función nativa.  
   
  Observe el código siguiente.  Fijar no es necesaria porque `ppchar` es un puntero interior y, si el recolector de elementos no utilizados mueve la cadena que señala, también actualizará `ppchar`. Sin un [pin_ptr (C++ / CLI)](../windows/pin-ptr-cpp-cli.md), el código funcionará y no tendrá el rendimiento potencial debido con anclados.  
   

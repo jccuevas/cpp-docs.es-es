@@ -1,12 +1,9 @@
 ---
 title: Compilador advertencia (niveles 1 y 3) C4793 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4793
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca10ae4303a77d65c7ad88ba08b20e06a31e4bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56b60a028f3fa1a847d4242c0768f8082d6a686e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Advertencia del compilador (niveles 1 y 3) C4793
 'función': función está compilada como código nativo: 'reason'  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |Mensaje motivo|Comentarios|  
 |--------------------|-------------|  
 |No se admiten tipos de datos alineados en código administrado|El CLR debe ser capaz de asignar los datos según sea necesario, que podría no ser posible si los datos están alineados con declaraciones como [__m128](../../cpp/m128.md) o [alinear](../../cpp/align-cpp.md).|  
-|Las funciones que usan '__ImageBase' no se admiten en código administrado|`__ImageBase`es un símbolo de vinculador especial que normalmente se usa código nativo de bajo nivel para cargar un archivo DLL.|  
+|Las funciones que usan '__ImageBase' no se admiten en código administrado|`__ImageBase` es un símbolo de vinculador especial que normalmente se usa código nativo de bajo nivel para cargar un archivo DLL.|  
 |varargs no son compatibles con el ' / clr' opción del compilador|Las funciones nativas no pueden llamar a funciones administradas que tienen [listas de argumentos variables](../../cpp/functions-with-variable-argument-lists-cpp.md) (varargs) porque las funciones tienen requisitos de diseño de pila diferente. Sin embargo, si especifica el `/clr:pure` opción del compilador, los argumentos de variable listas son compatibles porque el ensamblado puede contener solo funciones administradas. Para obtener más información, consulte [código puro y comprobable (C++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).|  
 |El CLR de 64 bits no admite datos declarados con el modificador __ptr32|Un puntero debe ser el mismo tamaño que un puntero nativo en la plataforma actual. Para obtener más información, consulte [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  
 |El CLR de 32 bits no admite datos declarados con el modificador __ptr64|Un puntero debe ser el mismo tamaño que un puntero nativo en la plataforma actual. Para obtener más información, consulte [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md).|  

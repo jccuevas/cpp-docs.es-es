@@ -1,13 +1,10 @@
 ---
 title: Agregar varias vistas a un solo documento | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 865b30ac7b4c8910e92d14274f1224c25e7f74d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb40b356b5601e19c33083c7b731a1dc411de3c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Agregar varias vistas a un solo documento
 En una aplicación de interfaz de único documento (SDI) creada con la biblioteca (Microsoft Foundation Classes), cada tipo de documento está asociado con un tipo de vista única. En algunos casos, es conveniente tener la posibilidad de cambiar la vista actual de un documento con una nueva vista.  
@@ -52,9 +47,9 @@ En una aplicación de interfaz de único documento (SDI) creada con la bibliotec
   
 -   El nombre de la `CWinApp`-objeto derivada es `CMyWinApp`, y `CMyWinApp` se declara y define en MYWINAPP. H y MYWINAPP. CPP.  
   
--   `CNewView`es el nombre del nuevo `CView`-objeto, derivado y `CNewView` se declara y define en NEWVIEW. H y NEWVIEW. CPP.  
+-   `CNewView` es el nombre del nuevo `CView`-objeto, derivado y `CNewView` se declara y define en NEWVIEW. H y NEWVIEW. CPP.  
   
-##  <a name="vcconmodifyexistingapplicationa1"></a>Modifique la clase de aplicación existente  
+##  <a name="vcconmodifyexistingapplicationa1"></a> Modifique la clase de aplicación existente  
  Para que cambiar entre las vistas de la aplicación, debe modificar la clase de aplicación agregando variables miembro para almacenar las vistas y un método para cambiarlas.  
   
  Agregue el código siguiente a la declaración de `CMyWinApp` en MYWINAPP. H:  
@@ -71,7 +66,7 @@ En una aplicación de interfaz de único documento (SDI) creada con la bibliotec
   
  Guarde los cambios y continúe con el paso siguiente.  
   
-##  <a name="vcconnewviewclassa2"></a>Crear y modificar la nueva clase de vista  
+##  <a name="vcconnewviewclassa2"></a> Crear y modificar la nueva clase de vista  
  Crear la nueva clase de vista se facilita mediante el uso de la **nueva clase** comandos disponibles en la vista de clases. El único requisito para esta clase es que se derive de `CView`. Agregar a esta nueva clase a la aplicación. Para obtener información específica acerca de cómo agregar una nueva clase al proyecto, vea [agregar una clase](../ide/adding-a-class-visual-cpp.md).  
   
  Cuando haya agregado la clase al proyecto, debe cambiar la accesibilidad de algunos miembros de clase de vista.  
@@ -80,7 +75,7 @@ En una aplicación de interfaz de único documento (SDI) creada con la bibliotec
   
  Guarde los cambios y continúe con el paso siguiente.  
   
-##  <a name="vcconattachnewviewa3"></a>Crear y asociar la nueva vista  
+##  <a name="vcconattachnewviewa3"></a> Crear y asociar la nueva vista  
  Para crear y asociar la nueva vista, debe modificar el `InitInstance` función de la clase de aplicación. La modificación agrega nuevo código que crea un nuevo objeto de vista y, a continuación, inicializa dos `m_pOldView` y `m_pNewView` con los dos objetos de vista existente.  
   
  Dado que la nueva vista se crea dentro de la `InitInstance` función, las vistas nuevas y existentes se conservan durante la vigencia de la aplicación. Sin embargo, la aplicación podría crear fácilmente la nueva vista dinámicamente.  
@@ -91,7 +86,7 @@ En una aplicación de interfaz de único documento (SDI) creada con la bibliotec
   
  Guarde los cambios y continúe con el paso siguiente.  
   
-##  <a name="vcconswitchingfunctiona4"></a>Implementar la función Switch  
+##  <a name="vcconswitchingfunctiona4"></a> Implementar la función Switch  
  En el paso anterior, agregó código que crea e inicializa un nuevo objeto de vista. La última parte importante consiste en implementar el método switch, `SwitchView`.  
   
  Al final del archivo de implementación para la clase de aplicación (MYWINAPP. (CPP), agregue la siguiente definición de método:  
@@ -100,7 +95,7 @@ En una aplicación de interfaz de único documento (SDI) creada con la bibliotec
   
  Guarde los cambios y continúe con el paso siguiente.  
   
-##  <a name="vcconswitchingtheviewa5"></a>Agregar compatibilidad para cambiar la vista  
+##  <a name="vcconswitchingtheviewa5"></a> Agregar compatibilidad para cambiar la vista  
  El último paso consiste en Agregar código que llama el `SwitchView` método cuando la aplicación debe pasar de una vista. Esto puede hacerse de varias maneras: agregando un nuevo elemento de menú para el usuario elija o cambiando las vistas internamente cuando se cumplen determinadas condiciones.  
   
  Para obtener más información sobre cómo agregar nuevos elementos de menú y las funciones de controlador de comandos, consulte [controladores de comandos y notificaciones del Control](../mfc/handlers-for-commands-and-control-notifications.md).  

@@ -1,12 +1,9 @@
 ---
 title: Clase CD2DLinearGradientBrush | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DLinearGradientBrush
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19c060c846d8dfd12a8b783f0b01153c9a424cfe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 94609d9ee589d42c440324cb8782c35720b23214
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dlineargradientbrush-class"></a>Clase CD2DLinearGradientBrush
 Un contenedor para ID2D1LinearGradientBrush.  
@@ -110,14 +105,14 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dlineargradientbrush"></a>CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush  
+##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush  
  Destructor. Se llama cuando se destruye un objeto de pincel de degradado lineal D2D.  
   
 ```  
 virtual ~CD2DLinearGradientBrush();
 ```  
   
-##  <a name="attach"></a>CD2DLinearGradientBrush::Attach  
+##  <a name="attach"></a>  CD2DLinearGradientBrush::Attach  
  Adjunta existente de la interfaz de recurso para el objeto  
   
 ```  
@@ -128,7 +123,7 @@ void Attach(ID2D1LinearGradientBrush* pResource);
  `pResource`  
  Interfaz de recursos existente. No puede ser NULL  
   
-##  <a name="cd2dlineargradientbrush"></a>CD2DLinearGradientBrush::CD2DLinearGradientBrush  
+##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush  
  Construye un objeto CD2DLinearGradientBrush.  
   
 ```  
@@ -168,7 +163,7 @@ CD2DLinearGradientBrush(
  `bAutoDestroy`  
  Indica que se destruirá el objeto propietario (pParentTarget).  
   
-##  <a name="create"></a>CD2DLinearGradientBrush::Create  
+##  <a name="create"></a>  CD2DLinearGradientBrush::Create  
  Crea un CD2DLinearGradientBrush.  
   
 ```  
@@ -182,14 +177,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se realiza correctamente, devuelve S_OK. En caso contrario, devuelve un código de error HRESULT.  
   
-##  <a name="destroy"></a>CD2DLinearGradientBrush::Destroy  
+##  <a name="destroy"></a>  CD2DLinearGradientBrush::Destroy  
  Destruye un objeto CD2DLinearGradientBrush.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DLinearGradientBrush::Detach  
+##  <a name="detach"></a>  CD2DLinearGradientBrush::Detach  
  Separa la interfaz de recurso del objeto  
   
 ```  
@@ -199,7 +194,7 @@ ID2D1LinearGradientBrush* Detach();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a interfaz recursos separados.  
   
-##  <a name="get"></a>CD2DLinearGradientBrush::Get  
+##  <a name="get"></a>  CD2DLinearGradientBrush::Get  
  Interfaz de ID2D1LinearGradientBrush devuelve  
   
 ```  
@@ -209,7 +204,7 @@ ID2D1LinearGradientBrush* Get();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a una interfaz ID2D1LinearGradientBrush o NULL si el objeto todavía no está inicializado.  
   
-##  <a name="getendpoint"></a>CD2DLinearGradientBrush::GetEndPoint  
+##  <a name="getendpoint"></a>  CD2DLinearGradientBrush::GetEndPoint  
  Recupera las coordenadas finales del degradado lineal  
   
 ```  
@@ -219,7 +214,7 @@ CD2DPointF GetEndPoint() const;
 ### <a name="return-value"></a>Valor devuelto  
  Las coordenadas bidimensionales finales del degradado lineal, en el espacio de coordenadas del pincel  
   
-##  <a name="getstartpoint"></a>CD2DLinearGradientBrush::GetStartPoint  
+##  <a name="getstartpoint"></a>  CD2DLinearGradientBrush::GetStartPoint  
  Recupera las coordenadas iniciales del degradado lineal  
   
 ```  
@@ -229,21 +224,21 @@ CD2DPointF GetStartPoint() const;
 ### <a name="return-value"></a>Valor devuelto  
  Las coordenadas bidimensionales iniciales del degradado lineal, en el espacio de coordenadas del pincel  
   
-##  <a name="m_lineargradientbrushproperties"></a>CD2DLinearGradientBrush::m_LinearGradientBrushProperties  
+##  <a name="m_lineargradientbrushproperties"></a>  CD2DLinearGradientBrush::m_LinearGradientBrushProperties  
  Los puntos inicial y final del degradado.  
   
 ```  
 D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES m_LinearGradientBrushProperties;  
 ```  
   
-##  <a name="m_plineargradientbrush"></a>CD2DLinearGradientBrush::m_pLinearGradientBrush  
+##  <a name="m_plineargradientbrush"></a>  CD2DLinearGradientBrush::m_pLinearGradientBrush  
  Un puntero a un ID2D1LinearGradientBrush.  
   
 ```  
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;  
 ```  
   
-##  <a name="operator_id2d1lineargradientbrush_star"></a>CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *  
+##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *  
  Interfaz de ID2D1LinearGradientBrush devuelve  
   
 ```  
@@ -253,7 +248,7 @@ operator ID2D1LinearGradientBrush*();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a una interfaz ID2D1LinearGradientBrush o NULL si el objeto todavía no está inicializado.  
   
-##  <a name="setendpoint"></a>CD2DLinearGradientBrush::SetEndPoint  
+##  <a name="setendpoint"></a>  CD2DLinearGradientBrush::SetEndPoint  
  Establece las coordenadas finales del degradado lineal en el espacio de coordenadas del pincel  
   
 ```  
@@ -264,7 +259,7 @@ void SetEndPoint(CD2DPointF point);
  `point`  
  Las coordenadas bidimensionales finales del degradado lineal, en el espacio de coordenadas del pincel  
   
-##  <a name="setstartpoint"></a>CD2DLinearGradientBrush::SetStartPoint  
+##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint  
  Establece las coordenadas iniciales del degradado lineal en el espacio de coordenadas del pincel  
   
 ```  

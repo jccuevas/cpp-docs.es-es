@@ -1,12 +1,9 @@
 ---
 title: Las herramientas del vinculador LNK1104 Error | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1104
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91853fe3310d8e577ac884545f86d1f4e1d4521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2b832d4bceab88fbf3fbe8325a414669d11073c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1104"></a>Error de las herramientas del vinculador LNK1104
 
@@ -101,4 +96,4 @@ Este error puede producirse si tiene permisos de archivo insuficientes para tene
 
 El error puede producirse cuando no hay suficiente espacio en disco. El enlazador usa archivos temporales en varios casos. Aunque tenga suficiente espacio en disco, un vínculo muy grande puede disminuir o fragmentar el espacio en disco disponible. Considere el uso de la [especificación /OPT (optimizaciones)](../../build/reference/opt-optimizations.md) opción; realizar lecturas de eliminación transitivas de COMDAT todos los archivos objeto varias veces.
 
-Si el *filename* se denomina LNK*nnn*, que es un nombre de archivo generado por el vinculador para un archivo temporal, que no exista el directorio especificado en la variable de entorno TMP, o más de una se puede especificar el directorio para la variable de entorno TMP. Debe especificarse solo una ruta de acceso para la variable de entorno TMP.
+Si el *filename* se denomina LNK*nnn*, que es un nombre de archivo generado por el vinculador para un archivo temporal, puede que no exista el directorio especificado en la variable de entorno TMP, o puede ser más de un directorio especificado para la variable de entorno TMP. Debe especificarse solo una ruta de acceso para la variable de entorno TMP.

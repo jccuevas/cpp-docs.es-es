@@ -2,12 +2,9 @@
 title: CDaoTableDefInfo (estructura) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoTableDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e949cb0348cb55fcee5a940b5753a5a8197e600b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53e20ca3f483bd9c00b298c69a526d8f5dd31cdb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo (Estructura)
 El `CDaoTableDefInfo` estructura contiene información sobre un objeto de definición de tabla definido para objetos de acceso a datos (DAO).  
@@ -54,7 +49,7 @@ struct CDaoTableDefInfo
  Identifica inequívocamente el objeto de definición de tabla. Para recuperar el valor de esta propiedad directamente, llaman al objeto de definición de tabla [GetName](../../mfc/reference/cdaotabledef-class.md#getname) función miembro. Para obtener más información, vea el tema "Nombre de propiedad" en la Ayuda de DAO.  
   
  `m_bUpdatable`  
- Indica si se pueden realizar cambios a la tabla. La forma más rápida para determinar si una tabla es actualizable es abrir un `CDaoTableDef` para la tabla de objetos y llamar al objeto [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) función miembro. `CanUpdate`siempre devuelve es distinto de cero (**TRUE**) para un objeto de definición de tabla recién creada y 0 (**FALSE**) de un objeto tabledef adjunto. Un nuevo objeto de definición de tabla se puede anexar únicamente a una base de datos para el que el usuario actual tiene permiso de escritura. Si la tabla contiene solo los campos no actualizable, `CanUpdate` devuelve 0. Cuando uno o más campos son actualizables, `CanUpdate` devuelve es distinto de cero. Puede editar sólo los campos actualizables. Para obtener más información, vea el tema "Propiedad actualizable" en la Ayuda de DAO.  
+ Indica si se pueden realizar cambios a la tabla. La forma más rápida para determinar si una tabla es actualizable es abrir un `CDaoTableDef` para la tabla de objetos y llamar al objeto [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) función miembro. `CanUpdate` siempre devuelve es distinto de cero (**TRUE**) para un objeto de definición de tabla recién creada y 0 (**FALSE**) de un objeto tabledef adjunto. Un nuevo objeto de definición de tabla se puede anexar únicamente a una base de datos para el que el usuario actual tiene permiso de escritura. Si la tabla contiene solo los campos no actualizable, `CanUpdate` devuelve 0. Cuando uno o más campos son actualizables, `CanUpdate` devuelve es distinto de cero. Puede editar sólo los campos actualizables. Para obtener más información, vea el tema "Propiedad actualizable" en la Ayuda de DAO.  
   
  `m_lAttributes`  
  Especifica las características de la tabla representada por el objeto de definición de tabla. Para recuperar los atributos actuales de una definición de tabla, llame a su [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) función miembro. El valor devuelto puede ser una combinación de estas constantes largo (mediante la operación bit a bit OR (**&#124;**) operador):  
@@ -95,7 +90,7 @@ struct CDaoTableDefInfo
 ## <a name="remarks"></a>Comentarios  
  La definición de tabla es un objeto de clase [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). Las referencias a principal, secundaria y todo lo anterior indican cómo se devuelve la información de la [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) función de miembro de clase `CDaoDatabase`.  
   
- La información recuperada por la [CDaoDatabase:: GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) función miembro se almacena en un `CDaoTableDefInfo` estructura. Llame a la `GetTableDefInfo` función miembro de la `CDaoDatabase` objeto en cuya colección de definiciones de tabla se almacena el objeto de definición de tabla. `CDaoTableDefInfo`También define un `Dump` compila la función miembro en versiones de depuración. Puede usar `Dump` para volcar el contenido de un `CDaoTableDefInfo` objeto.  
+ La información recuperada por la [CDaoDatabase:: GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) función miembro se almacena en un `CDaoTableDefInfo` estructura. Llame a la `GetTableDefInfo` función miembro de la `CDaoDatabase` objeto en cuya colección de definiciones de tabla se almacena el objeto de definición de tabla. `CDaoTableDefInfo` También define un `Dump` compila la función miembro en versiones de depuración. Puede usar `Dump` para volcar el contenido de un `CDaoTableDefInfo` objeto.  
   
  La configuración de fecha y hora se deriva del equipo en el que se creó o actualizó por última vez la tabla base. En un entorno multiusuario, los usuarios deben obtener estos valores directamente desde el servidor de archivos para evitar discrepancias en la DateCreated y LastUpdated valores de las propiedades.  
   

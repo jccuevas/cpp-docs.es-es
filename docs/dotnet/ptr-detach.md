@@ -1,12 +1,9 @@
 ---
 title: PTR::Detach | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.Detach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::Detach
 ms.assetid: 23370c8a-8f79-4880-9fa1-46e110c1a92c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24e5c71a20b3bffebd9cd25bf2795fd309491d11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 Proporciona una propiedad del objeto COM, devuelve un puntero al objeto.  
@@ -49,7 +44,7 @@ _interface_type * Detach();
  Internamente, `QueryInterface` se llama en el propio objeto COM y cualquier error `HRESULT` se convierte en una excepción por <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Comentarios  
- `Detach`primero se agrega una referencia al objeto COM en nombre del llamador y, a continuación, libera todas las referencias que pertenecen a la `com::ptr`.  El llamador debe liberar en última instancia el objeto devuelto para destruirla.  
+ `Detach` primero se agrega una referencia al objeto COM en nombre del llamador y, a continuación, libera todas las referencias que pertenecen a la `com::ptr`.  El llamador debe liberar en última instancia el objeto devuelto para destruirla.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto.  El `DetachDocument` llamadas a funciones miembro `Detach` para abandonar la propiedad del objeto COM y devolver un puntero al llamador.  
