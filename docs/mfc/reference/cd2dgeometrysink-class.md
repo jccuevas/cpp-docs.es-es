@@ -1,12 +1,9 @@
 ---
 title: Clase CD2DGeometrySink | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DGeometrySink
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89286aaccd2c59efb2bac14978a2d8838af7a4e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b67aa3345f8739714cb6758f8363c3d2054dd4e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dgeometrysink-class"></a>Clase CD2DGeometrySink
 Un contenedor para ID2D1GeometrySink.  
@@ -114,14 +109,14 @@ class CD2DGeometrySink;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgeometrysink"></a>CD2DGeometrySink:: ~ CD2DGeometrySink  
+##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink:: ~ CD2DGeometrySink  
  Destructor. Se llama cuando se destruye un objeto de receptor de geometría de D2D.  
   
 ```  
 virtual ~CD2DGeometrySink();
 ```  
   
-##  <a name="addarc"></a>CD2DGeometrySink::AddArc  
+##  <a name="addarc"></a>  CD2DGeometrySink::AddArc  
  Agrega un arco único a la geometría de trayecto  
   
 ```  
@@ -132,7 +127,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
  `arc`  
  El segmento de arco para agregar a la ilustración  
   
-##  <a name="addbezier"></a>CD2DGeometrySink::AddBezier  
+##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
  Crea una curva Bézier cúbica entre el punto actual y el punto final especificado.  
   
 ```  
@@ -143,7 +138,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
  `bezier`  
  Una estructura que describe los puntos de control y el punto final de la curva de Bézier a agregar.  
   
-##  <a name="addbeziers"></a>CD2DGeometrySink::AddBeziers  
+##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
  Crea una secuencia de curvas de Bézier cúbicas y los agrega al receptor de geometría.  
   
 ```  
@@ -156,7 +151,7 @@ void AddBeziers(
  `beziers`  
  Una matriz de segmentos de Bézier que describe las curvas de Bézier a crear. Se dibuja una curva desde el punto actual del receptor de geometría (el punto final del último segmento dibuja o la ubicación especificada por a BeginFigure) hasta el punto final del primer segmento de Bézier en la matriz. Si la matriz contiene los segmentos de curva adicionales, cada segmento Bézier posterior usa el punto final del segmento Bézier anterior como punto de inicio.  
   
-##  <a name="addline"></a>CD2DGeometrySink::AddLine  
+##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
  Crea un segmento de línea entre el punto actual y el punto final especificado y lo agrega al receptor de geometría.  
   
 ```  
@@ -167,7 +162,7 @@ void AddLine(CD2DPointF point);
  `point`  
  El punto final de la línea para dibujar.  
   
-##  <a name="addlines"></a>CD2DGeometrySink::AddLines  
+##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
  Crea una secuencia de líneas con los puntos especificados y los agrega al receptor de geometría.  
   
 ```  
@@ -180,7 +175,7 @@ void AddLines(
  `points`  
  Una matriz de uno o varios puntos que describen las líneas para dibujar. Una línea se dibuja desde el punto actual del receptor de geometría (el punto final del último segmento dibuja o la ubicación especificada por a BeginFigure) hasta el primer punto de la matriz. Si la matriz contiene puntos adicionales, se dibuja una línea desde el primer punto hasta el segundo punto de la matriz, desde el punto de segundo para el tercer punto y así sucesivamente. Una matriz de una secuencia de los dos puntos finales de las líneas para dibujar.  
   
-##  <a name="addquadraticbezier"></a>CD2DGeometrySink::AddQuadraticBezier  
+##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
  Crea una curva Bézier cuadrática entre el punto actual y el punto final especificado.  
   
 ```  
@@ -191,7 +186,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
  `bezier`  
  Una estructura que describe el punto de control y el punto final de la curva de Bézier cuadrática a agregar.  
   
-##  <a name="addquadraticbeziers"></a>CD2DGeometrySink::AddQuadraticBeziers  
+##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
  Agrega una secuencia de segmentos de Bézier cuadrática como una matriz en una sola llamada.  
   
 ```  
@@ -204,7 +199,7 @@ void AddQuadraticBeziers(
  `beziers`  
  Una matriz de una secuencia de segmentos de Bézier cuadrática.  
   
-##  <a name="beginfigure"></a>CD2DGeometrySink::BeginFigure  
+##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
  Inicia una nueva figura en el punto especificado.  
   
 ```  
@@ -220,7 +215,7 @@ void BeginFigure(
  `figureBegin`  
  Si debe ser la nueva figura vacío o se rellenará.  
   
-##  <a name="cd2dgeometrysink"></a>CD2DGeometrySink::CD2DGeometrySink  
+##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
  Construye un objeto CD2DGeometrySink del objeto CD2DPathGeometry.  
   
 ```  
@@ -231,7 +226,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
  `pathGeometry`  
  Un objeto CD2DPathGeometry existente.  
   
-##  <a name="close"></a>CD2DGeometrySink::Close  
+##  <a name="close"></a>  CD2DGeometrySink::Close  
  Cierra el receptor de geometría  
   
 ```  
@@ -241,7 +236,7 @@ BOOL Close();
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si se realiza correctamente; en caso contrario, FALSE.  
   
-##  <a name="endfigure"></a>CD2DGeometrySink::EndFigure  
+##  <a name="endfigure"></a>  CD2DGeometrySink::EndFigure  
  Finaliza la figura actual; Si lo desea, lo cierra.  
   
 ```  
@@ -252,7 +247,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
  `figureEnd`  
  Un valor que indica si se cierra la figura actual. Si se cierra la ilustración, se dibuja una línea entre el punto actual y el punto de inicio especificado por a BeginFigure.  
   
-##  <a name="get"></a>CD2DGeometrySink::Get  
+##  <a name="get"></a>  CD2DGeometrySink::Get  
  Interfaz de ID2D1GeometrySink devuelve  
   
 ```  
@@ -262,7 +257,7 @@ ID2D1GeometrySink* Get();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a una interfaz ID2D1GeometrySink o NULL si el objeto todavía no está inicializado.  
   
-##  <a name="isvalid"></a>CD2DGeometrySink::IsValid  
+##  <a name="isvalid"></a>  CD2DGeometrySink::IsValid  
  Comprueba la validez del receptor de geometría  
   
 ```  
@@ -272,14 +267,14 @@ BOOL IsValid() const;
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si el receptor de geometry es válido; en caso contrario, FALSE.  
   
-##  <a name="m_psink"></a>CD2DGeometrySink::m_pSink  
+##  <a name="m_psink"></a>  CD2DGeometrySink::m_pSink  
  Un puntero a un ID2D1GeometrySink.  
   
 ```  
 ID2D1GeometrySink* m_pSink;  
 ```  
   
-##  <a name="operator_id2d1geometrysink_star"></a>CD2DGeometrySink::operator ID2D1GeometrySink *  
+##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink *  
  Interfaz de ID2D1GeometrySink devuelve  
   
 ```  
@@ -289,7 +284,7 @@ operator ID2D1GeometrySink*();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a una interfaz ID2D1GeometrySink o NULL si el objeto todavía no está inicializado.  
   
-##  <a name="setfillmode"></a>CD2DGeometrySink::SetFillMode  
+##  <a name="setfillmode"></a>  CD2DGeometrySink::SetFillMode  
  Especifica el método utilizado para determinar qué puntos están dentro de la geometría descrita por este receptor de geometría y que son puntos fuera.  
   
 ```  
@@ -300,7 +295,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
  `fillMode`  
  El método utilizado para determinar si un punto determinado forma parte de la geometría.  
   
-##  <a name="setsegmentflags"></a>CD2DGeometrySink::SetSegmentFlags  
+##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
  Especifica las opciones de trazo y combinación que se aplicará a nuevos segmentos que se agrega al receptor de geometría.  
   
 ```  

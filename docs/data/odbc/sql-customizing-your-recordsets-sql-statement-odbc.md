@@ -2,12 +2,9 @@
 title: 'SQL: Personalizar la instrucción de SQL del conjunto de registros (ODBC) | Documentos de Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3099fbf6b97f3ad18a28c071fcd08ec8280fa24a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f385127d1b61e1453eb7a079963da727f82f1874
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: Personalizar la instrucción SQL del conjunto de registros (ODBC)
 En este tema se explica:  
@@ -69,7 +64,7 @@ SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
 > [!NOTE]
 >  Si utiliza cadenas literales en los filtros (u otras partes de la instrucción SQL), es posible que deba "quote" (incluir entre delimitadores especificados) esas cadenas con un prefijo literal específicos del DBMS y literales sufijo caracteres (o caracteres).  
   
- También podría producir requisitos sintácticos especiales para operaciones como las combinaciones externas, según el DBMS. Usar funciones ODBC para obtener esta información desde el controlador del DBMS. Por ejemplo, llamar a **:: SQLGetTypeInfo** para un tipo de datos determinado, como **SQL_VARCHAR**, para solicitar la **caracteres LITERAL_PREFIX** y **LITERAL_SUFFIX** caracteres. Si está escribiendo código independiente de la base de datos, consulte el apéndice C en el *el SDK de ODBC**referencia del programador* en el CD de MSDN Library para obtener información de sintaxis detallada.  
+ También podría producir requisitos sintácticos especiales para operaciones como las combinaciones externas, según el DBMS. Usar funciones ODBC para obtener esta información desde el controlador del DBMS. Por ejemplo, llamar a **:: SQLGetTypeInfo** para un tipo de datos determinado, como **SQL_VARCHAR**, para solicitar la **caracteres LITERAL_PREFIX** y **LITERAL_SUFFIX** caracteres. Si está escribiendo código independiente de la base de datos, consulte el apéndice C en el *el SDK de ODBC ** referencia del programador* en el CD de MSDN Library para obtener información de sintaxis detallada.  
   
  Un objeto de conjunto de registros crea la instrucción SQL que utiliza para seleccionar registros a menos que se pase una instrucción SQL personalizada. Cómo llevarlo a cabo depende principalmente del valor se pasa en el `lpszSQL` parámetro de la **abiertos** función miembro.  
   
@@ -98,13 +93,13 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
   
 |Caso|Se pasa en lpszSQL|La instrucción SELECT resultante.|  
 |----------|------------------------------|------------------------------------|  
-|1|**NULL**|**Seleccione** *lista de campos de rfx* **FROM** *nombre de la tabla*<br /><br /> `CRecordset::Open`llamadas `GetDefaultSQL` para obtener el nombre de tabla. La cadena resultante es uno de los casos 2 a 5, dependiendo de lo que `GetDefaultSQL` devuelve.|  
+|1|**NULL**|**Seleccione** *lista de campos de rfx* **FROM** *nombre de la tabla*<br /><br /> `CRecordset::Open` llamadas `GetDefaultSQL` para obtener el nombre de tabla. La cadena resultante es uno de los casos 2 a 5, dependiendo de lo que `GetDefaultSQL` devuelve.|  
 |2|Un nombre de tabla|**Seleccione** *lista de campos de rfx* **FROM** *nombre de la tabla*<br /><br /> La lista de campos se toma de las instrucciones RFX en `DoFieldExchange`. Si **m_strFilter** y `m_strSort` no están vacíos, agrega el **donde** o **ORDER BY** cláusulas.|  
 |3 *|Una completa **seleccione** instrucción pero sin un **donde** o **ORDER BY** cláusula|Tal y como se pasa. Si **m_strFilter** y `m_strSort` no están vacíos, agrega el **donde** o **ORDER BY** cláusulas.|  
 |4 *|Una completa **seleccione** instrucción con un **donde** o **ORDER BY** cláusula|Tal y como se pasa. **m_strFilter** o `m_strSort` deben permanecer vacíos o un filtro de dos o se producen instrucciones de ordenación.|  
 |5 *|Una llamada a un procedimiento almacenado|Tal y como se pasa.|  
   
- \*`m_nFields` debe ser menor o igual que el número de columnas especificadas en el **seleccione** instrucción. El tipo de datos de cada columna especificada en el **seleccione** instrucción debe ser el mismo que el tipo de datos de la columna de salida RFX correspondiente.  
+ \* `m_nFields` debe ser menor o igual que el número de columnas especificadas en el **seleccione** instrucción. El tipo de datos de cada columna especificada en el **seleccione** instrucción debe ser el mismo que el tipo de datos de la columna de salida RFX correspondiente.  
   
 ### <a name="case-1---lpszsql--null"></a>Caso 1 lpszSQL = NULL  
  La selección de conjunto de registros depende de lo que `GetDefaultSQL` devuelve cuando `CRecordset::Open` lo llama. Las cadenas posibles describen los casos 2 a 5.  

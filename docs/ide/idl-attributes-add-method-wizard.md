@@ -1,13 +1,10 @@
 ---
-title: "Atributos IDL, Asistente para agregar métodos | Documentos de Microsoft"
-ms.custom: 
+title: Atributos IDL, Asistente para agregar métodos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.idlattrib
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - IDL attributes, Add Method Wizard
 ms.assetid: f80c3bc1-b515-4d6c-83ee-98c2c21ba902
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9792f8b7758ff5a1e5742b6643d9f73931bce6f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a7a1e8fe89f64ad5909e7c1415545e3b3d80196
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idl-attributes-add-method-wizard"></a>Atributos IDL, Asistente para agregar métodos
 Utilice esta página del Asistente para agregar método para especificar la configuración de idioma (IDL) de definición de interfaz para el método.  
@@ -57,7 +52,7 @@ Utilice esta página del Asistente para agregar método para especificar la conf
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |**hidden**|Indica que el método existe pero no se debe mostrar en un explorador orientado al usuario. Vea [oculto](http://msdn.microsoft.com/library/windows/desktop/aa366861) en el *MIDL referencia*.|  
-|**origen**|Indica que un miembro del método es un origen de eventos. Vea [origen](http://msdn.microsoft.com/library/windows/desktop/aa367166) en el *MIDL referencia*.|  
+|**Origen**|Indica que un miembro del método es un origen de eventos. Vea [origen](http://msdn.microsoft.com/library/windows/desktop/aa367166) en el *MIDL referencia*.|  
 |`local`|Especifica que el compilador MIDL que el método no es remoto. Vea [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) en el *MIDL referencia*.|  
 |**restricted**|Especifica que el método no se puede llamar arbitrariamente. Vea [restringido](http://msdn.microsoft.com/library/windows/desktop/aa367157) en el *MIDL referencia*.|  
 |**vararg**|Especifica que el método toma un número variable de argumentos. Para lograr esto, el último argumento debe ser una matriz segura de **VARIANT** tipo que contiene todos los argumentos restantes. Vea [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) en el *MIDL referencia*.|  

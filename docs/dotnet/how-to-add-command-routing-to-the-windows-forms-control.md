@@ -1,31 +1,26 @@
 ---
-title: "Cómo: agregar comandos enrutamiento a Windows Forms Control | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: agregar comandos enrutamiento a Windows Forms Control | Documentos de Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bcd082b22c61e2444d70d936c225e538c2429222
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c13b0bedf7c81431449aaed8d4fa8f067cdf3d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Cómo: Agregar enrutamientos de comandos al control de Windows Forms
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) enruta los comandos y mensajes de interfaz de usuario de comando de actualización para el control de usuario para que pueda controlar los comandos MFC (por ejemplo, elementos de menú de marco y botones de barra de herramientas).  

@@ -1,13 +1,10 @@
 ---
 title: Abrir carpeta de los proyectos de Visual C++ | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Abrir carpeta de los proyectos en Visual C++
 Visual Studio de 2017 presenta la característica de "Abrir carpeta", que le permite abrir una carpeta de archivos de origen e inmediatamente comenzar a codificar con compatibilidad con IntelliSense, exploración, refactorización, depuración y así sucesivamente. No se ha cargado ningún archivo .sln o .vcxproj; Si es necesario, puede especificar las tareas personalizadas así como crear y los parámetros de inicio a través de los archivos .json simple. Con la tecnología de carpeta abierta, Visual C++ ahora puede admitir no solo malas recopilaciones de archivos, sino también a prácticamente cualquier sistema de compilación, incluidos CMake, Ninja, QMake (para los proyectos de Qt), gyp, SCons, Gradle, Buck, creación y mucho más. 
 
-Para usar la carpeta abierta, en el menú principal seleccione *archivo | Abra | Carpeta* o presione *Ctrl + Mayús + Alt + O*. El Explorador de soluciones muestra inmediatamente todos los archivos en la carpeta. Puede hacer clic en cualquier archivo comience a editarlo. En segundo plano, Visual Studio inicia la indización de los archivos para habilitar IntelliSense, navegación y características de refactorización. Como editar, crear, mover o eliminar archivos, Visual Studio realiza automáticamente un seguimiento de los cambios y actualiza continuamente su índice de IntelliSense. 
+Para usar la carpeta abierta, en el menú principal seleccione *archivo | Abra | Carpeta* o presione *Ctrl + Mayús + Alt + O*. El Explorador de soluciones muestra inmediatamente todos los archivos en la carpeta. Puede hacer clic en cualquier archivo para comenzar a editarlo. En segundo plano, Visual Studio comienza a indexar los archivos para habilitar las características de refactorización, navegación e IntelliSense. A medida que edita, crea, mueve o elimina archivos, Visual Studio hace seguimiento de manera automática de los cambios y actualiza de manera continua su indice de IntelliSense. 
   
 ## <a name="cmake-projects"></a>Proyectos de CMake
 CMake está integrado en el IDE de Visual Studio como CMake Tools para Visual C++, un componente de la carga de trabajo de escritorio de C++. Para obtener más información, consulte [Herramientas de CMake para Visual C++](cmake-tools-for-visual-cpp.md).
@@ -35,7 +31,7 @@ CMake está integrado en el IDE de Visual Studio como CMake Tools para Visual C+
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>QMake proyectos que tienen como destino el marco de trabajo de Qt
 Puede usar herramientas CMake para Visual C++ para destino Qt para compilar proyectos Qt, o puede usar la extensión Qt de Visual Studio. Nota: A partir de agosto de 2017 el [compatibilidad de extensión de Visual Studio Qt para Visual Studio de 2017](https://download.qt.io/development_releases/vsaddin/) está disponible como una versión beta.
 
-## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck, etc
+## <a name="gyp-cons-scons-buck-etc"></a>gyp, inconvenientes, SCons, Buck, etcetera
 Puede usar cualquier sistema de compilación en Visual C++ y seguir disfrutando de las ventajas del IDE de Visual C++ y depurador. Cuando se abre la carpeta raíz del proyecto, Visual C++ utiliza la heurística para indizar los archivos de origen IntelliSense y la exploración. Puede proporcionar sugerencias acerca de la estructura del código al editar el archivo CppProperties.json. De forma similar, puede configurar el programa de compilación editando el archivo launch.vs.json. 
 
 ## <a name="configuring-open-folder-projects"></a>Configurar los proyectos de la carpeta abierta
@@ -43,8 +39,8 @@ Puede personalizar un proyecto de la carpeta abierta a través de tres archivos 
 |||
 |-|-|
 |CppProperties.json|Especifique la información de configuración personalizada para la exploración. Crear este archivo, si es necesario, en la carpeta raíz del proyecto.|
-|launch.vs.json|Especifique los argumentos de línea de comandos. Se accede a través de la **el Explorador de soluciones** elemento de menú contextual **iniciar configuración y depuración**.|
-|tasks.vs.json|Especificar los comandos de compilación personalizada y los modificadores del compilador. Se accede a través de la **el Explorador de soluciones** elemento de menú contextual **configurar tareas**.|
+|Launch.VS.JSON|Especifique los argumentos de línea de comandos. Se accede a través del elemento del menú contextual del **Explorador de soluciones** **Configuración de depuración e inicio**.|
+|Tasks.VS.JSON|Especificar los comandos de compilación personalizada y los modificadores del compilador. Se accede a través del elemento del menú contextual del **Explorador de soluciones** **Configurar tareas**.|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>Configurar IntelliSense con CppProperties.json
 IntelliSense y el comportamiento de la búsqueda en parte depende de la configuración de compilación activa, que define #include rutas de acceso, los modificadores del compilador y otros parámetros. De forma predeterminada, Visual Studio proporciona configuraciones Debug y Release. Para algunos proyectos, debe crear una configuración personalizada en orden para IntelliSense y las características de exploración para comprender totalmente el código. Para definir una nueva configuración, cree un archivo denominado CppProperties.json en la carpeta raíz. A continuación se muestra un ejemplo:
@@ -76,13 +72,13 @@ Una configuración puede tener cualquiera de las siguientes propiedades:
 |`undefines`|la lista de macros como no definido (se asigna a /U para MSVC)|
 |`intelliSenseMode`|el motor de IntelliSense para usarse. Puede especificar las variantes específicas de la arquitectura para MSVC, gcc o Clang:
 - MSVC-x86 (valor predeterminado)
-- msvc-x64
-- msvc-arm
-- windows-clang-x86
+- MSVC x64
+- MSVC arm
+- Windows-clang-x86
 - windows-clang-x64
-- windows-clang-arm
-- Linux-x64
-- Linux-x86
+- Windows-clang-arm
+- Linux x64
+- Linux x86
 - Arm de Linux
 - gccarm
 
@@ -248,12 +244,12 @@ Puede crear cualquier número de configuraciones en CppProperties.json. Cada una
   ]
 }
 ```
-### <a name="define-tasks-with-tasksvsjson"></a>Definir las tareas con tasks.vs.json
-Puede automatizar scripts de compilación ni ninguna otra operación externos en los archivos en el área de trabajo actual mediante la ejecución de ellos como tareas directamente en el IDE. Puede configurar una nueva tarea, haga doble clic en un archivo o carpeta y seleccione **configurar tareas**. 
+### <a name="define-tasks-with-tasksvsjson"></a>Definición de tareas con tasks.vs.json
+Puede automatizar los scripts de compilación o cualquier otra operación externa en los archivos que tiene en el área de trabajo actual al ejecutarlos directamente en el IDE. Para configurar una tarea nueva, haga clic con el botón derecho en un archivo o una carpeta y seleccione **Configurar tareas**. 
 
 ![Abrir carpeta configurar tareas](media/open-folder-config-tasks.png)
 
-Esto crea (o abre) el `tasks.vs.json` archivo en la carpeta de VS que Visual Studio crea en la carpeta raíz del proyecto. Puede definir cualquier tarea arbitrario en este archivo y, a continuación, invocarlo desde el **el Explorador de soluciones** menú contextual. En el ejemplo siguiente se muestra un archivo tasks.vs.json que define una sola tarea. `taskName`define el nombre que aparece en el menú contextual. `appliesTo`define qué archivos se pueden realizar el comando en. El `command` propiedad hace referencia a la variable de entorno COMSPEC, que identifica la ruta de acceso de la consola (cmd.exe en Windows). También puede hacer referencia a variables de entorno que se declaran en CppProperties.json o CMakeSettings.json. El `args` propiedad especifica la línea de comandos que se debe invocar. El `${file}` macro recupera el archivo seleccionado en **el Explorador de soluciones**. En el ejemplo siguiente se muestra el nombre de archivo del archivo .cpp seleccionada actualmente.
+Esto crea (o abre) el `tasks.vs.json` archivo en la carpeta de VS que Visual Studio crea en la carpeta raíz del proyecto. Puede definir cualquier tarea arbitrario en este archivo y, a continuación, invocarlo desde el **el Explorador de soluciones** menú contextual. En el ejemplo siguiente se muestra un archivo tasks.vs.json que define una sola tarea. `taskName` define el nombre que aparece en el menú contextual. `appliesTo` define qué archivos se pueden realizar el comando en. El `command` propiedad hace referencia a la variable de entorno COMSPEC, que identifica la ruta de acceso de la consola (cmd.exe en Windows). También puede hacer referencia a variables de entorno que se declaran en CppProperties.json o CMakeSettings.json. El `args` propiedad especifica la línea de comandos que se debe invocar. La macro `${file}` recupera el archivo seleccionado en el **Explorador de soluciones**. En el ejemplo siguiente se muestra el nombre de archivo del archivo .cpp seleccionada actualmente.
 
 ```json
 {
@@ -274,16 +270,16 @@ Después de guardar tasks.vs.json, puede haga clic en cualquier archivo .cpp en 
 
 
 #### <a name="appliesto"></a>appliesTo
-Puede crear tareas para cualquier archivo o carpeta especificando su nombre en el `appliesTo` campo, por ejemplo `"appliesTo" : "hello.cpp"`. Las máscaras de archivo siguientes se pueden usar como valores:
+Puede crear tareas para cualquier archivo o carpeta si especifica su nombre en el campo `appliesTo`, por ejemplo `"appliesTo" : "hello.cpp"`. Las máscaras de archivo siguientes se pueden usar como valores:
 |||
 |-|-|
-|`"*"`| tarea está disponible para todos los archivos y carpetas en el área de trabajo|
-|`"*/"`| tarea está disponible para todas las carpetas en el área de trabajo|
+|`"*"`| tarea disponible para todos los archivos y carpetas del área de trabajo|
+|`"*/"`| tarea disponible para todas las carpetas del área de trabajo|
 |`"*.cpp"`| tarea está disponible para todos los archivos con la extensión .cpp en el área de trabajo|
 |`"/*.cpp"`| tarea está disponible para todos los archivos con la extensión .cpp en la raíz del área de trabajo|
-|`"src/*/"`| tarea está disponible para todas las subcarpetas de la carpeta "src"|
-|`"makefile"`| tarea está disponible para todos los archivos MAKE en el área de trabajo|
-|`"/makefile"`| tarea solo está disponible para el archivo MAKE en la raíz del área de trabajo|
+|`"src/*/"`| tarea disponible para todas las subcarpetas de la carpeta "src"|
+|`"makefile"`| tarea disponible para todos los archivos Make del área de trabajo|
+|`"/makefile"`| tarea disponible solo para el archivo Make que se encuentra en la raíz del área de trabajo|
 
 #### <a name="output"></a>salida
 Use la `output` propiedad para especificar el archivo ejecutable que se iniciará cuando se presiona **F5**. Por ejemplo:
@@ -292,11 +288,11 @@ Use la `output` propiedad para especificar el archivo ejecutable que se iniciar�
       "output": "${workspaceRoot}\\bin\\hellomake.exe" 
 ```
 
-#### <a name="macros-for-tasksvsjson"></a>Macros para tasks.vs.json
+#### <a name="macros-for-tasksvsjson"></a>Macros de tasks.vs.json
 
 |||
 |-|-|
-|`${env.<VARIABLE>}`| Especifica las variables de entorno (por ejemplo, ${env. Ruta de acceso} ${env.COMSPEC} y así sucesivamente) que se establece para el símbolo del sistema para desarrolladores. Para obtener más información, consulte [símbolo del sistema para desarrolladores de Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
+|`${env.<VARIABLE>}`| Especifica las variables de entorno (por ejemplo, ${env. Ruta de acceso} ${env.COMSPEC} y así sucesivamente) que se establece para el símbolo del sistema para desarrolladores. Para más información, consulte [Símbolo del sistema para desarrolladores de Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
 |`${workspaceRoot}`| la ruta de acceso completa a la carpeta de área de trabajo (por ejemplo, "C:\sources\hello")|
 |`${file}`| la ruta de acceso completa del archivo o carpeta seleccionado para ejecutar esta tarea (por ejemplo, "C:\sources\hello\src\hello.cpp")|
 |`${relativeFile}`| la ruta de acceso relativa al archivo o carpeta (por ejemplo, "src\hello.cpp")|

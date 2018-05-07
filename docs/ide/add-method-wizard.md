@@ -1,13 +1,10 @@
 ---
-title: "Asistente para agregar métodos | Documentos de Microsoft"
-ms.custom: 
+title: Asistente para agregar métodos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
 dev_langs:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63595fe7fda434b7ee16161bd3afdaf8a46fad82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-method-wizard"></a>Asistente para agregar métodos
 Use este asistente para agregar un método a una interfaz. Según el tipo de proyecto o tipo de interfaz a la que va a agregar un método, el asistente mostrará opciones diferentes.  
   
 ## <a name="names"></a>Nombres  
  **Tipo de valor devuelto**  
- El tipo de datos devuelto por el método. `HRESULT`se recomienda para todos los tipos de interfaz, ya que proporciona una manera estándar de devolver errores.  
+ El tipo de datos devuelto por el método. `HRESULT` se recomienda para todos los tipos de interfaz, ya que proporciona una manera estándar de devolver errores.  
   
 |Tipo de interfaz|Descripción|  
 |--------------------|-----------------|  
@@ -78,7 +73,7 @@ Use este asistente para agregar un método a una interfaz. Según el tipo de pro
 |-------------------------|-----------------|--------------------------|  
 |**In**|Indica que el parámetro se pasa desde el procedimiento que realiza la llamada al procedimiento llamado.|**en** sólo<br /><br /> **en** y **out**|  
 |**Out**|Indica que el parámetro de puntero se devuelve desde el procedimiento llamado al procedimiento que realiza la llamada (desde el servidor al cliente).|**out** solo<br /><br /> **en** y **out**<br /><br /> **out** y **retval**|  
-|**Retval**|Indica que el parámetro recibe el valor devuelto del miembro.|**retval** y out|  
+|**retval**|Indica que el parámetro recibe el valor devuelto del miembro.|**retval** y out|  
   
  **Tipo de parámetro**  
  Establece el tipo de datos del parámetro. Seleccione el tipo de la lista.  

@@ -1,13 +1,10 @@
 ---
-title: "Conjunto de registros: Enlazar dinámicamente columnas de datos (ODBC) | Documentos de Microsoft"
-ms.custom: 
+title: 'Conjunto de registros: Enlazar dinámicamente columnas de datos (ODBC) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e834820266e83d2c07bbe46f07e2ac48b0d18e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fe71707de20ba02228039e5693cab9c9401d560
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Conjunto de registros: Enlazar dinámicamente columnas de datos (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
@@ -42,7 +37,7 @@ Este tema es aplicable a las clases ODBC de MFC.
 > [!NOTE]
 >  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Las técnicas descritas por lo general no se recomiendan si se utiliza la obtención masiva de filas. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_when_you_might_bind_columns_dynamically"></a>Cuando se pueden enlazar columnas dinámicamente  
+##  <a name="_core_when_you_might_bind_columns_dynamically"></a> Cuando se pueden enlazar columnas dinámicamente  
  En tiempo de diseño, el Asistente para aplicaciones MFC o [Asistente para consumidores ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (de **Agregar clase**) crea clases de conjunto de registros basadas en las tablas y columnas conocidas en el origen de datos. Las bases de datos pueden cambiar entre cuando su diseño a una versión posterior cuando la aplicación utiliza las tablas y columnas en tiempo de ejecución. Usted u otro usuario podría agregar o quitar una tabla o agregar o quitar columnas de una tabla que dependa de conjunto de registros de la aplicación. Esto probablemente no constituye un problema para todas las aplicaciones de acceso a datos, pero si lo es para su aplicación, ¿cómo puede afrontar los cambios en el esquema de base de datos, no sea rediseñar y volver a compilar? El propósito de este tema es responder a esta pregunta.  
   
  Este tema describe el caso más común en el que se pueden enlazar columnas dinámicamente: cuando se comienza con un conjunto de registros basado en un esquema de base de datos conocido, que desea trabajar con columnas adicionales en tiempo de ejecución. Aún más el tema se da por supuesto que están asignados a las columnas adicionales `CString` campo miembros de datos, el caso más habitual, si bien se proporcionan sugerencias para ayudarle a administrar otros tipos de datos.  
@@ -57,12 +52,12 @@ Este tema es aplicable a las clases ODBC de MFC.
   
  Este tema no tratan otros casos de enlace dinámico, como tablas o columnas eliminadas. En esos casos, debe utilizar llamadas a la API de ODBC más directamente. Para obtener información, vea el SDK de ODBC *referencia del programador* en el CD de MSDN Library.  
   
-##  <a name="_core_how_to_bind_columns_dynamically"></a>Cómo enlazar columnas dinámicamente  
+##  <a name="_core_how_to_bind_columns_dynamically"></a> Cómo enlazar columnas dinámicamente  
  Para enlazar columnas dinámicamente, debe conocer (o poder determinar) los nombres de las columnas adicionales. También debe asignar el almacenamiento para los miembros de datos de campo adicionales, especificar sus nombres y sus tipos y especificar el número de columnas que se va a agregar.  
   
  La siguiente discusión menciona dos conjuntos de registros diferentes. El primero es el conjunto de registros principal que selecciona los registros de la tabla de destino. El segundo es un conjunto de registros de columna especial que se utiliza para obtener información acerca de las columnas en la tabla de destino.  
   
-###  <a name="_core_the_general_process"></a>Proceso general  
+###  <a name="_core_the_general_process"></a> Proceso general  
  En el nivel más general, siga estos pasos:  
   
 1.  Crear un objeto de conjunto de registros principal.  
@@ -77,7 +72,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
      El conjunto de registros selecciona los registros y utiliza el intercambio de campos de registros (RFX) para enlazar las columnas estáticas (las asignadas a miembros de datos de campo de conjunto de registros) y las columnas dinámicas (asignadas a almacenamiento adicional que asigne).  
   
-###  <a name="_core_adding_the_columns"></a>Al agregar las columnas  
+###  <a name="_core_adding_the_columns"></a> Al agregar las columnas  
  Enlazar dinámicamente, se agrega columnas en tiempo de ejecución requiere los pasos siguientes:  
   
 1.  Determinar en tiempo de ejecución qué columnas se encuentran en la tabla de destino. Extraiga una lista de las columnas que se han agregado a la tabla desde que se diseñó la clase de conjunto de registros de esa información.  
@@ -94,7 +89,7 @@ Compilar listas de columnas para enlazarlas dinámicamente
   
      Un enfoque consiste en Agregar un bucle a su conjunto de registros principal `DoFieldExchange` función que recorra la lista de las columnas nuevas, una llamada a la función RFX correspondiente para cada columna en la lista. En cada llamada RFX, pase un nombre de columna de la lista de nombres de columna y una ubicación de almacenamiento en el miembro correspondiente de la lista de valores de resultado.  
   
-###  <a name="_core_lists_of_columns"></a>Listas de columnas  
+###  <a name="_core_lists_of_columns"></a> Listas de columnas  
  Las cuatro listas con que necesita trabajar se muestran en la tabla siguiente.  
   
  **Columnas de la tabla actual (lista 1 en la ilustración)** una lista de las columnas actualmente en la tabla del origen de datos. Esta lista podría coincidir con la lista de columnas enlazadas actualmente en el conjunto de registros.  
@@ -108,7 +103,7 @@ Compilar listas de columnas para enlazarlas dinámicamente
  **Valores de columna dinámicos (lista 4 en la ilustración)**  
  Una lista que contiene almacenamiento para los valores recuperados de las columnas que enlaza dinámicamente. Elementos de esta lista corresponden a las de columnas-a-enlazar dinámicamente, uno a uno.  
   
-###  <a name="_core_building_your_lists"></a>Generar las listas  
+###  <a name="_core_building_your_lists"></a> Generar las listas  
  Con una estrategia general de cuenta, puede activar los detalles. Los procedimientos en el resto de este tema muestran cómo generar las listas que aparecen en [listas de columnas](#_core_lists_of_columns). Los procedimientos le guiarán a través de:  
   
 -   [Determinar los nombres de columnas no está en el conjunto de registros](#_core_determining_which_table_columns_are_not_in_your_recordset).  
@@ -117,7 +112,7 @@ Compilar listas de columnas para enlazarlas dinámicamente
   
 -   [Agregar dinámicamente llamadas RFX para las nuevas columnas](#_core_adding_rfx_calls_to_bind_the_columns).  
   
-###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a>Determinar qué tabla columnas no se encuentran en el conjunto de registros  
+###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> Determinar qué tabla columnas no se encuentran en el conjunto de registros  
  Generar una lista (columnas enlazadas del conjunto de registros, como en la lista 2 en la ilustración) que contiene una lista de las columnas ya enlazadas en el conjunto de registros principal. A continuación, generar una lista (columnas para enlazar-dinámicamente, derivado de columnas de la tabla actual y columnas enlazadas del conjunto de registros) que contiene los nombres de columna que están en la tabla del origen de datos pero no en el conjunto de registros principal.  
   
 ##### <a name="to-determine-the-names-of-columns-not-in-the-recordset-columns-to-bind-dynamically"></a>Para determinar los nombres de columnas no está en el conjunto de registros (columnas para enlazar dinámicamente)  
@@ -138,7 +133,7 @@ Compilar listas de columnas para enlazarlas dinámicamente
   
      Los elementos de esta lista los desempeñan una función de conjunto de registros nuevos miembros de datos de campo. Son las ubicaciones de almacenamiento al que se enlazan las columnas dinámicas. Para obtener descripciones de las listas, vea [listas de columnas](#_core_lists_of_columns).  
   
-###  <a name="_core_providing_storage_for_the_new_columns"></a>Proporcionar almacenamiento para las nuevas columnas  
+###  <a name="_core_providing_storage_for_the_new_columns"></a> Proporcionar almacenamiento para las nuevas columnas  
  A continuación, configurar las ubicaciones de almacenamiento para las columnas que se enlazarán dinámicamente. La idea es proporcionar un elemento de lista en el que se va a almacenar el valor de cada columna. Las variables de miembro del conjunto de registros, que almacenan las columnas enlazadas normalmente corresponden con estas ubicaciones de almacenamiento.  
   
 ##### <a name="to-provide-dynamic-storage-for-new-columns-dynamic-column-values"></a>Para proporcionar almacenamiento dinámico para nuevas columnas (valores de columna dinámicos)  
@@ -154,7 +149,7 @@ Compilar listas de columnas para enlazarlas dinámicamente
 > [!TIP]
 >  Si las nuevas columnas no son todas del mismo tipo de datos, conviene una lista paralela adicional que contiene elementos que definan el tipo de cada elemento correspondiente en la lista de columnas. (Puede usar los valores **AFX_RFX_BOOL**, **AFX_RFX_BYTE**, y así sucesivamente, este si desea. Estas constantes se definen en AFXDB. H.) Elija un tipo de lista en función de cómo se representan los tipos de datos de columna.  
   
-###  <a name="_core_adding_rfx_calls_to_bind_the_columns"></a>Agregar llamadas RFX para enlazar las columnas  
+###  <a name="_core_adding_rfx_calls_to_bind_the_columns"></a> Agregar llamadas RFX para enlazar las columnas  
  Por último, prepare el enlace dinámico colocando llamadas RFX para las nuevas columnas en su `DoFieldExchange` función.  
   
 ##### <a name="to-dynamically-add-rfx-calls-for-new-columns"></a>Para agregar dinámicamente llamadas RFX para nuevas columnas  

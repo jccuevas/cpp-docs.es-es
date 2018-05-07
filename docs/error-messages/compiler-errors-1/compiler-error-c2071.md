@@ -2,11 +2,8 @@
 title: Compilador Error C2071 | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2071
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - C2071
 ms.assetid: f8c09255-a5c4-47e3-8089-3d875ae43cc5
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb7d80f016250d289a70456f6fbfe2011c9410b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faee56023d14e9b010d1c691af654ffcbc31dc78
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2071"></a>Error C2071 de Error del compilador
 'identificador': clase de almacenamiento no válida  
   
- `identifier`se ha declarado con un válido [clase de almacenamiento](../../c-language/c-storage-classes.md). Este error puede producirse cuando se especifica más de una clase de almacenamiento para un identificador, o cuando la definición no es compatible con la declaración de clase de almacenamiento.  
+ `identifier` se ha declarado con un válido [clase de almacenamiento](../../c-language/c-storage-classes.md). Este error puede producirse cuando se especifica más de una clase de almacenamiento para un identificador, o cuando la definición no es compatible con la declaración de clase de almacenamiento.  
   
  Para corregir este problema, comprender la clase de almacenamiento previsto del identificador, por ejemplo, `static` o `extern`y corrija la declaración debe coincidir.  
   

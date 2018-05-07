@@ -1,12 +1,9 @@
 ---
 title: Clase de la clase COleBusyDialog | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e57881dad305a5a0d5cec25ddcc93f82eca5f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colebusydialog-class"></a>Clase de la clase COleBusyDialog
 Se utiliza en los cuadros de diálogo que indican que el servidor OLE no responde o el servidor está ocupado.  
@@ -93,7 +88,7 @@ class COleBusyDialog : public COleDialog
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxodlgs.h  
   
-##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
  Esta función solo se crea un `COleBusyDialog` objeto.  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleBusyDialog(
   
  Para obtener más información, consulte el [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) estructura en el SDK de Windows.  
   
-##  <a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  Llame a esta función para mostrar el cuadro de diálogo de OLE servidor ocupado o servidor no responde.  
   
 ```  
@@ -149,7 +144,7 @@ virtual INT_PTR DoModal();
   
  Si `DoModal` devuelve **IDOK**, puede llamar a otro miembro funciones para recuperar los valores de configuración o la información que se ha especificado por el usuario en el cuadro de diálogo.  
   
-##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
  Llame a esta función para obtener el tipo de selección elegido por el usuario en el cuadro de diálogo servidor ocupado.  
   
 ```  
@@ -178,7 +173,7 @@ enum Selection {
   
 - **COleBusyDialog::callUnblocked** llamada para activar el servidor ahora está desbloqueado.  
   
-##  <a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
  Estructura de tipo **OLEUIBUSY** utilizado para controlar el comportamiento del cuadro de diálogo servidor ocupado.  
   
 ```  

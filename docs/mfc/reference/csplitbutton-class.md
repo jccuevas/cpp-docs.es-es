@@ -1,12 +1,9 @@
 ---
 title: Clase CSplitButton | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSplitButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4188647b821fc233835ea4780804848c4b03228
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac4241bb19c6abc0fbbf489bf4efb43f56ede72e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csplitbutton-class"></a>Clase CSplitButton
 La `CSplitButton` clase representa un control de botón de división. El control de botón de expansión realiza un comportamiento predeterminado cuando un usuario hace clic en la parte principal del botón y muestra un menú desplegable cuando un usuario hace clic en la flecha de lista desplegable del botón.  
@@ -90,7 +85,7 @@ class CSplitButton : public CButton
   
  Requisitos adicionales para esta clase se describen en [crear requisitos para Windows Vista controles comunes](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="create"></a>CSplitButton::Create  
+##  <a name="create"></a>  CSplitButton::Create  
  Crea un control de botón de división con estilos especificados y lo adjunta a la corriente `CSplitButton` objeto.  
   
 ```  
@@ -111,9 +106,9 @@ virtual BOOL Create(
 |[in] `nID`|El identificador del control.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si este método se realiza correctamente; en caso contrario, `false`.  
+ `true` Si este método se realiza correctamente; en caso contrario, `false`.  
   
-##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
+##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton  
  Construye un objeto `CSplitButton`. Los parámetros del constructor especifican un submenú que se muestra cuando un usuario hace clic en la flecha de lista desplegable del control de botón de división.  
   
 ```  
@@ -137,7 +132,7 @@ CSplitButton(CMenu* pMenu)
 ### <a name="remarks"></a>Comentarios  
  Use la [CSplitButton::Create](#create) método para crear un control de botón de división y adjuntarla a la `CSplitButton` objeto.  
   
-##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
+##  <a name="ondropdown"></a>  CSplitButton::OnDropDown  
  Controla el `BCN_DROPDOWN` notificación de que el sistema envía cuando un usuario hace clic en la flecha de lista desplegable del control de botón de división actual.  
   
 ```  
@@ -167,7 +162,7 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
+##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu  
  Establece el menú desplegable que se muestra cuando un usuario hace clic en la flecha de lista desplegable del control de botón de división actual.  
   
 ```  

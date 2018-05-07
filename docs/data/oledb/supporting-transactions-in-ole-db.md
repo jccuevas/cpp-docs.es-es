@@ -1,12 +1,9 @@
 ---
 title: Admitir transacciones en OLE DB | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84849b2d9bfd899a0ffd8a5d8eafe12f91a4adce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ecd5b7274e62508289a83d6c0420d5f76e239e4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Admitir transacciones en OLE DB
 A [transacciones](../../data/transactions-mfc-data-access.md) es una forma Agrupar, o por lotes, una serie de actualizaciones a un origen de datos para que todas correctamente y se confirman al mismo tiempo o (si alguna de ellos se produce un error) no se confirmará ninguno y se revierte la transacción entera. Este proceso garantiza la integridad del resultado en el origen de datos.  
@@ -38,9 +33,9 @@ A [transacciones](../../data/transactions-mfc-data-access.md) es una forma Agrup
   
 -   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
   
--   [ITransaction::Commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
+-   [ITransaction:: Commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
   
--   [ITransaction::Abort](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
+-   [ITransaction:: Abort](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Relación de sesiones y transacciones  
  Un objeto de origen de datos solo puede crear uno o varios objetos de sesión, cada uno de los cuales puede encontrarse dentro o fuera del ámbito de una transacción en un momento dado.  

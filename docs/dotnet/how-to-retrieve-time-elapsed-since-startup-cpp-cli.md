@@ -1,13 +1,10 @@
 ---
-title: "Cómo: recuperar el tiempo transcurrido desde el inicio (C++ / CLI) | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: recuperar el tiempo transcurrido desde el inicio (C++ / CLI) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - tick counts
 - startup
 ms.assetid: a31fdecc-099e-4dd1-a176-f682289c5dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2929cd6466b0e05cf2ae029eaee0cbe214d3a17c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4bebd086d24c741f0c5287e8a7fd0de6b535dfc6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Cómo: Recuperar el tiempo transcurrido desde el inicio (C++/CLI)
 En el ejemplo de código siguiente se muestra cómo determinar el recuento de pasos, o se haya iniciado el número de milisegundos que han transcurrido desde Windows. Este valor se almacena en la <xref:System.Environment.TickCount%2A?displayProperty=fullName> miembro y, dado que es un valor de 32 bits, se restablece a cero cada 24,9 días aproximadamente.  

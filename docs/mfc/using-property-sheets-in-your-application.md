@@ -1,13 +1,10 @@
 ---
-title: "Usar hojas de propiedades de la aplicación | Documentos de Microsoft"
-ms.custom: 
+title: Usar hojas de propiedades de la aplicación | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4247a40fa364774674c1c79845625df51ecd34ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74e63faf5b1cac5e0cb841a28fd59ecee47c9970
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-property-sheets-in-your-application"></a>Usar hojas de propiedades en una aplicación
 Para utilizar una hoja de propiedades de la aplicación, complete los pasos siguientes:  
@@ -63,7 +58,7 @@ Para utilizar una hoja de propiedades de la aplicación, complete los pasos sigu
   
     -   Llame a [CPropertySheet:: AddPage](../mfc/reference/cpropertysheet-class.md#addpage) para cada página.  
   
-     Normalmente, el objeto que crea la `CPropertySheet` también crea el `CPropertyPage` objetos en este paso. Sin embargo, si implementa un `CPropertySheet`-clase derivada, se puede incrustar el `CPropertyPage` objetos en el `CPropertySheet` objeto y llame al método `AddPage` para cada página de la `CPropertySheet`-derivado constructor de clase. `AddPage`Agrega el `CPropertyPage` el objeto a la lista de la hoja de propiedades de páginas, pero no crea realmente la ventana para esa página. Por lo tanto, no es necesario que espere hasta que la creación de la ventana de la hoja de propiedades para llamar a `AddPage`; puede llamar a `AddPage` desde el constructor de la hoja de propiedades.  
+     Normalmente, el objeto que crea la `CPropertySheet` también crea el `CPropertyPage` objetos en este paso. Sin embargo, si implementa un `CPropertySheet`-clase derivada, se puede incrustar el `CPropertyPage` objetos en el `CPropertySheet` objeto y llame al método `AddPage` para cada página de la `CPropertySheet`-derivado constructor de clase. `AddPage` Agrega el `CPropertyPage` el objeto a la lista de la hoja de propiedades de páginas, pero no crea realmente la ventana para esa página. Por lo tanto, no es necesario que espere hasta que la creación de la ventana de la hoja de propiedades para llamar a `AddPage`; puede llamar a `AddPage` desde el constructor de la hoja de propiedades.  
   
      De forma predeterminada, si una hoja de propiedades tiene más fichas que caben en una sola fila de la hoja de propiedades, las fichas se apilan en varias filas. Para deshabilitar el apilado, llame a [CPropertySheet:: EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) con el parámetro establecido en **FALSE**. Debe llamar a `EnableStackedTabs` cuando se crea la hoja de propiedades.  
   

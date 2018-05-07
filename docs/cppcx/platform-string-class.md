@@ -1,11 +1,8 @@
 ---
 title: 'Clase Platform:: String | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Platform::String (Clase)
 Representa una cadena es una colección secuencial de caracteres Unicode que se utiliza para representar texto. Para obtener más información y ejemplos, vea [cadenas](../cppcx/strings-c-cx.md).  
@@ -68,7 +63,7 @@ public ref class String sealed : Object,
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|[String::String](#ctor)|Inicializa una nueva instancia de la clase String.|  
+|[String](#ctor)|Inicializa una nueva instancia de la clase String.|  
   
  **Métodos**  
   
@@ -76,17 +71,17 @@ public ref class String sealed : Object,
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[String::Begin](#begin)|Devuelve un puntero al principio de la cadena actual.|  
+|[String:: begin](#begin)|Devuelve un puntero al principio de la cadena actual.|  
 |[String::CompareOrdinal](#compareordinal)|Compara dos objetos `String` mediante la evaluación de los valores numéricos de los caracteres correspondientes en los dos valores alfanuméricos representados por los objetos.|  
-|[String::Concat](#concat)|Concatena los valores de dos objetos String.|  
-|[String::Data](#data)|Devuelve un puntero al principio de la cadena actual.|  
-|[String::Dispose](#dispose)|Libera recursos.|  
-|[String::End](#end)|Devuelve un puntero después del final de la cadena actual.|  
-|[String::Equals](#equals)|Indica si el objeto especificado es igual al objeto actual.|  
+|[String:: Concat](#concat)|Concatena los valores de dos objetos String.|  
+|[String:: Data](#data)|Devuelve un puntero al principio de la cadena actual.|  
+|[String:: Dispose](#dispose)|Libera recursos.|  
+|[String:: end](#end)|Devuelve un puntero después del final de la cadena actual.|  
+|[String:: Equals](#equals)|Indica si el objeto especificado es igual al objeto actual.|  
 |[String::GetHashCode](#gethashcode)|Devuelve el código hash de esta instancia.|  
-|[String::IsEmpty](#isempty)|Indica si el objeto String actual está vacío.|  
-|[String::IsFastPass](#isfastpass)|Indica si el objeto String actual participa en una operación *rápida de paso* . En una operación rápida de paso, se suspende el recuento de referencias.|  
-|[String::Length](#length)|Recupera la longitud del objeto String actual.|  
+|[String:: IsEmpty](#isempty)|Indica si el objeto String actual está vacío.|  
+|[String:: isfastpass](#isfastpass)|Indica si el objeto String actual participa en una operación *rápida de paso* . En una operación rápida de paso, se suspende el recuento de referencias.|  
+|[String:: Length](#length)|Recupera la longitud del objeto String actual.|  
 |[String::ToString](#tostring)|Devuelve un objeto String cuyo valor es igual al de la cadena actual.|  
   
  **Operadores**  
@@ -95,12 +90,12 @@ public ref class String sealed : Object,
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|[String::operator== Operator](#operator-equality)|Indica si dos objetos String especificados tienen el mismo valor.|  
+|[String:: operator == (operador)](#operator-equality)|Indica si dos objetos String especificados tienen el mismo valor.|  
 |[operator+ (Operador)](#operator-plus)|Concatena dos objetos String en un nuevo objeto String.|  
-|[String::operator> Operator](#operator-greater-than)|Indica si el valor de un objeto String es mayor que el valor de un segundo objeto String.|  
-|[String::operator>= Operator](#operator-greater-than-or-equals)|Indica si el valor de un objeto String es mayor o igual que el valor de un segundo objeto String.|  
-|[String::operator!= Operator](#operator-inequality)|Indica si dos objetos String especificados tienen valores diferentes.|  
-|[String::operator< Operator](#operator-less-than)|Indica si el valor de un objeto String es menor que el valor de un segundo objeto String.|  
+|[String:: operator > (operador)](#operator-greater-than)|Indica si el valor de un objeto String es mayor que el valor de un segundo objeto String.|  
+|[String:: operator > = (operador)](#operator-greater-than-or-equals)|Indica si el valor de un objeto String es mayor o igual que el valor de un segundo objeto String.|  
+|[String:: operator! = (operador)](#operator-inequality)|Indica si dos objetos String especificados tienen valores diferentes.|  
+|[String:: operator < (operador)](#operator-less-than)|Indica si el valor de un objeto String es menor que el valor de un segundo objeto String.|  
   
 ### <a name="requirements"></a>Requisitos  
  **Cliente mínimo admitido:** Windows 8  
@@ -125,7 +120,7 @@ char16* Begin()
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al principio de la cadena actual.  
   
-## <a name="compareordinal"></a>  String::CompareOrdinal Method
+## <a name="compareordinal"></a>  String:: CompareOrdinal (método)
 Compara dos objetos `String` mediante la evaluación de los valores numéricos de los caracteres correspondientes en los dos valores alfanuméricos representados por los objetos.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -249,7 +244,7 @@ bool String::Equals(String^ str);
   
 
 
-## <a name="gethashcode"></a>  String::GetHashCode Method
+## <a name="gethashcode"></a>  String:: GetHashCode (método)
 Devuelve el código hash de esta instancia.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -319,7 +314,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>  String::operator+ Operator
+## <a name="operator-plus"></a>  String:: operator + (operador)
 Concatena dos [cadena](../cppcx/platform-string-class.md) objetos en un nuevo [cadena](../cppcx/platform-string-class.md) objeto.
   
 ### <a name="syntax"></a>Sintaxis  
@@ -342,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>Comentarios  
  Este operador crea un objeto `String^` que contiene los datos de los operandos. Úsalo por comodidad cuando no sea necesario un rendimiento extreme. Es probable que algunas llamadas a "`+`" en una función no produzcan efectos apreciables, pero si estás manipulando objetos grandes o datos de texto en un bucle ajustado, usa los mecanismos y los tipos estándar de C++.  
   
-##  <a name="operator-equality"></a> String::operator== Operator
+##  <a name="operator-equality"></a> String:: operator == (operador)
 Indica si dos objetos String especificados tienen el mismo valor de texto.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -366,7 +361,7 @@ bool String::operator==( String^ str1, String^ str2)
   
 
 
-##  <a name="operator-greater-than"></a>  String::operator&gt; 
+##  <a name="operator-greater-than"></a>  String:: operator&gt; 
 Indica si el valor de un objeto String es mayor que el valor de un segundo objeto String.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -390,7 +385,7 @@ bool String::operator>( String^ str1, String^ str2)
   
 
 
-## <a name="operator-greater-than-or-equals"></a> String::operator&gt;= 
+## <a name="operator-greater-than-or-equals"></a> String:: operator&gt;= 
 Indica si el valor de un objeto String es mayor o igual que el valor de un segundo objeto String.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -411,7 +406,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a> String::operator!= 
+## <a name="operator-inequality"></a> String:: operator! = 
 Indica si dos objetos String especificados tienen valores diferentes.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -431,7 +426,7 @@ bool String::operator!=( String^ str1, String^ str2)
  Es `true` si `str1` no es igual a `str2`; en caso contrario, es `false`.   
 
 
-## <a name="operator-less-than"></a> String::operator&lt; 
+## <a name="operator-less-than"></a> String:: operator&lt; 
 Indica si el valor de un objeto String es menor que el valor de un segundo objeto String.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -476,7 +471,7 @@ String(char16* s, unsigned int n)
 String^ s = L"Hello!";  
 ```  
   
-## <a name="tostring"></a> String::ToString
+## <a name="tostring"></a> String:: ToString
 Devuelve un objeto String cuyo valor es igual al de la cadena actual.  
   
 ### <a name="syntax"></a>Sintaxis  

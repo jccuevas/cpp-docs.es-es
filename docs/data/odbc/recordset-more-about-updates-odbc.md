@@ -1,13 +1,10 @@
 ---
-title: "Conjunto de registros: Más información acerca de las actualizaciones (ODBC) | Documentos de Microsoft"
-ms.custom: 
+title: 'Conjunto de registros: Más información acerca de las actualizaciones (ODBC) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ad9042c4001fc1a0e0c8c8d19e5ac53b6312875
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea46e0462f3763e04ec18ad9bff2b0d3ded1deee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-more-about-updates-odbc"></a>Conjunto de registros: Información adicional sobre las actualizaciones (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
@@ -46,26 +41,26 @@ Este tema es aplicable a las clases ODBC de MFC.
 > [!NOTE]
 >  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si ha implementado la obtención masiva de filas, parte de la información no se aplica. Por ejemplo, no se puede llamar a la `AddNew`, **editar**, **eliminar**, y **actualización** funciones de miembro; sin embargo, puede realizar transacciones. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_how_other_operations_affect_updates"></a>Cómo afectan otras operaciones a las actualizaciones  
+##  <a name="_core_how_other_operations_affect_updates"></a> Cómo afectan otras operaciones a las actualizaciones  
  Las actualizaciones se ven afectadas por las transacciones en vigor en el momento de la actualización, cerrando el conjunto de registros antes de completar una transacción y mediante el desplazamiento antes de completar una transacción.  
   
-###  <a name="_core_how_transactions_affect_updates"></a>¿Cómo afectan las transacciones a las actualizaciones  
+###  <a name="_core_how_transactions_affect_updates"></a> ¿Cómo afectan las transacciones a las actualizaciones  
  Más allá de comprender cómo `AddNew`, **editar**, y **eliminar** trabajo, es importante entender cómo la **BeginTrans**, **CommitTrans**, y **reversión** las funciones miembro de [CDatabase](../../mfc/reference/cdatabase-class.md) funcionan con las funciones de actualización de [CRecordset](../../mfc/reference/crecordset-class.md).  
   
  De forma predeterminada, las llamadas a `AddNew` y **editar** afectan a los datos de origen inmediatamente cuando se llama **actualización**. **Eliminar** llamadas surten efecto inmediatamente. Pero puede establecer una transacción y ejecutar un lote de este tipo de llamadas. Las actualizaciones no son permanentes hasta que los confirme. Si cambia de opinión, puede revertir la transacción en lugar de confirmarla.  
   
  Para obtener más información acerca de las transacciones, vea [transacción (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-###  <a name="_core_how_closing_the_recordset_affects_updates"></a>Cómo cerrar el conjunto de registros que afecta a las actualizaciones  
+###  <a name="_core_how_closing_the_recordset_affects_updates"></a> Cómo cerrar el conjunto de registros que afecta a las actualizaciones  
  Si cierra un conjunto de registros o su asociado `CDatabase` objeto, con una transacción en curso (no ha llamado [CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) o [CDatabase::Rollback](../../mfc/reference/cdatabase-class.md#rollback)), se revierte la transacción realice una copia de forma automática (a menos que el back-end de base de datos es el motor de base de datos de Microsoft Jet).  
   
 > [!CAUTION]
 >  Si está utilizando el motor de base de datos de Microsoft Jet, cerrar un conjunto de registros dentro de una transacción explícita no da como resultado la liberación de ninguna de las filas modificadas o bloqueos que se colocaron hasta que se confirma o revierte la transacción explícita. Se recomienda abrir y cerrar siempre los conjuntos de registros dentro o fuera de una transacción Jet explícita.  
   
-###  <a name="_core_how_scrolling_affects_updates"></a>Cómo afecta el desplazamiento a las actualizaciones  
+###  <a name="_core_how_scrolling_affects_updates"></a> Cómo afecta el desplazamiento a las actualizaciones  
  Cuando se [conjunto de registros: desplazamiento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) en un conjunto de registros, el búfer de edición se llena con cada nuevo registro actual (el registro anterior no se almacena en primer lugar). El desplazamiento pasa por los registros que se haya eliminado previamente. Si produce un desplazamiento después un `AddNew` o **editar** llamada sin llamar a **actualización**, **CommitTrans**, o **reversión** en primer lugar, los cambios se pierden (sin ninguna advertencia para usted) como un nuevo registro se pone en el búfer de edición. El búfer de edición se llena con el registro que se desplaza, se libera el registro almacenado y se produce ningún cambio en el origen de datos. Esto se aplica a ambos `AddNew` y **editar**.  
   
-##  <a name="_core_your_updates_and_the_updates_of_other_users"></a>Las actualizaciones y las actualizaciones de otros usuarios  
+##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Las actualizaciones y las actualizaciones de otros usuarios  
  Cuando se usa un conjunto de registros para actualizar datos, sus actualizaciones afectan a otros usuarios. De forma similar, las actualizaciones de otros usuarios durante la duración del conjunto de registros le afectan.  
   
  En un entorno multiusuario, otros usuarios pueden abrir conjuntos de registros que contienen algunos de los mismos registros que seleccionó en el conjunto de registros. Los cambios en un registro antes de recuperarlo se reflejan en el conjunto de registros. Debido a conjuntos de registros dinámicos recuperan un registro cada vez que se desplaza a él, conjuntos de registros dinámicos reflejan los cambios cada vez que se desplaza a un registro. Las instantáneas de recuperan un registro de la primera vez que se desplaza a él, por lo que las instantáneas sólo reflejan los cambios que se producen antes de que se desplaza al registro inicialmente.  
@@ -73,11 +68,11 @@ Este tema es aplicable a las clases ODBC de MFC.
  Los registros agregados por otros usuarios después de abrir el conjunto de registros no se muestran en el conjunto de registros, a menos que repita la consulta. Si el conjunto de registros es un conjunto de registros dinámicos, las modificaciones realizadas en los registros existentes por otros usuarios se muestran en el conjunto de registros dinámicos cuando se desplaza al registro afectado. Si el conjunto de registros es una instantánea, las modificaciones no se muestran hasta una nueva consulta de la instantánea. Si desea ver los registros agregados o eliminados por otros usuarios en una instantánea, o los registros agregados por otros usuarios en el conjunto de registros dinámicos, llame a [CRecordset:: Requery](../../mfc/reference/crecordset-class.md#requery) volver a generar el conjunto de registros. (Tenga en cuenta que las eliminaciones de otros usuarios se mostrarán en el conjunto de registros dinámicos). También puede llamar a **Requery** para ver los registros agregue, pero no para ver las eliminaciones.  
   
 > [!TIP]
->  Para forzar el almacenamiento en caché de toda una instantánea a la vez, llame a `MoveLast` inmediatamente después de abrir la instantánea. A continuación, llame a **MoveFirst** para empezar a trabajar con los registros. `MoveLast`es equivalente a desplazarse por todos los registros, pero recupera todos a la vez. Sin embargo, tenga en cuenta que esto puede reducir el rendimiento y no será necesario para algunos controladores.  
+>  Para forzar el almacenamiento en caché de toda una instantánea a la vez, llame a `MoveLast` inmediatamente después de abrir la instantánea. A continuación, llame a **MoveFirst** para empezar a trabajar con los registros. `MoveLast` es equivalente a desplazarse por todos los registros, pero recupera todos a la vez. Sin embargo, tenga en cuenta que esto puede reducir el rendimiento y no será necesario para algunos controladores.  
   
  Los efectos de las actualizaciones en otros usuarios son similares a sus efectos depende de usted.  
   
-##  <a name="_core_more_about_update_and_delete"></a>Más información acerca de Update y Delete  
+##  <a name="_core_more_about_update_and_delete"></a> Más información acerca de Update y Delete  
  Esta sección proporciona información adicional para ayudarle a trabajar con **actualización** y **eliminar**.  
   
 ### <a name="update-success-and-failure"></a>Actualización correctos y erróneos  

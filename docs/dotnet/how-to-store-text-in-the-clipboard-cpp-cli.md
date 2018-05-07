@@ -1,31 +1,26 @@
 ---
-title: "Cómo: almacenar texto en el Portapapeles (C++ / CLI) | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: almacenar texto en el Portapapeles (C++ / CLI) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - text, storing in Clipboard
 - Clipboard, storing text
 ms.assetid: 9996023f-b700-47ad-8ad9-1ba201eaa5a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 05544d3ea65ee68fc6df8731e5de084be6d460ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ac33eb31dbda97d3c695847344cd857d2e77675
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>Cómo: Almacenar texto en el Portapapeles (C++/CLI)
 El siguiente ejemplo de código utiliza el <xref:System.Windows.Forms.Clipboard> objeto definido en el <xref:System.Windows.Forms> espacio de nombres para almacenar una cadena. Este objeto proporciona dos funciones miembro: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> y <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Datos se almacenan en el Portapapeles mediante el envío de cualquier objeto derivado de <xref:System.Object> a <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  

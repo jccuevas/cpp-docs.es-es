@@ -1,12 +1,9 @@
 ---
 title: CAccessorRowset (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CAccessorRowset
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CAccessorRowset class
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9da490873c14ea04f55f223e38009ac1952fe6d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27d2153c6f600c3a5c75c1218e8751baaabcf030
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset (Clase)
 Encapsula un conjunto de filas y sus descriptores de acceso asociados en una sola clase.  
@@ -54,11 +49,11 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[Bind](../../data/oledb/caccessorrowset-bind.md)|Crea enlaces (se usa cuando **bBind** se especifica como false en [CCommand:: Open](../../data/oledb/ccommand-open.md)).|  
+|[Enlazar](../../data/oledb/caccessorrowset-bind.md)|Crea enlaces (se usa cuando **bBind** se especifica como false en [CCommand:: Open](../../data/oledb/ccommand-open.md)).|  
 |[CAccessorRowset](../../data/oledb/caccessorrowset-caccessorrowset.md)|Constructor.|  
 |[Cerrar](../../data/oledb/caccessorrowset-close.md)|Cierra el conjunto de filas y los descriptores de acceso.|  
 |[FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md)|Libera las columnas en el registro actual que deben ser liberados.|  
-|[GetColumnInfo](../../data/oledb/caccessorrowset-getcolumninfo.md)|Implements [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
+|[GetColumnInfo](../../data/oledb/caccessorrowset-getcolumninfo.md)|Implementa [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
   
 ## <a name="remarks"></a>Comentarios  
  Clase `TAccessor` administra el descriptor de acceso. Clase *TRowset* administra el conjunto de filas.  

@@ -1,22 +1,20 @@
 ---
 title: Convertir en Literal de cadena sin formato | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 12aa512270ecce4564561634f99be9cbf155448a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="convert-to-raw-string-literal"></a>Convertir en literal de cadena sin formato
 **¿Qué:** le permite convertir cualquier cadena en una cadena sin formato de C++ literal.
@@ -25,13 +23,13 @@ ms.lasthandoff: 12/21/2017
 
 **Por este motivo:** pudo caracteres de doble escape, pero a menudo hace que las cadenas confusas y no se puede leer.  Usan literales de cadena sin formato hace que las cadenas son mucho más fáciles de leer.
 
-**Cómo:**
+**Cómo**:
 
 1. Coloque el cursor de texto o el mouse sobre la cadena de escape para convertir.
 
-   ![Código que aparece resaltado](images/stringliteral_highlight.png)
+   ![Código resaltado](images/stringliteral_highlight.png)
 
-1. A continuación, realice una de las siguientes acciones:
+1. A continuación, realice alguno de los siguientes procedimientos:
    * **Teclado**
      * Presione **Ctrl +.** Para activar el **acciones rápidas y refactorizaciones** menú y seleccione **convertir en Literal de cadena sin formato** en el menú contextual.
    * **Mouse**

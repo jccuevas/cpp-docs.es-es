@@ -1,24 +1,19 @@
 ---
-title: "Conversión (C++ / CX) | Documentos de Microsoft"
-ms.custom: 
+title: Conversión (C++ / CX) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f71be537ecc0dc0cb58a3ada13612dbe8cbd7d3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casting-ccx"></a>Convertir (C++/CX)
 Aplican cuatro operadores de conversión diferentes a los tipos en tiempo de ejecución de Windows: [static_cast (operador)](../cpp/static-cast-operator.md), [dynamic_cast (operador)](../cpp/dynamic-cast-operator.md), **safe_cast (operador)**, y [ reinterpret_cast (operador)](../cpp/reinterpret-cast-operator.md). `safe_cast` y `static_cast` producen una excepción cuando no se puede realizar la conversión; el [operador static_cast](../cpp/static-cast-operator.md) también realiza la comprobación de tipos en tiempo de compilación. `dynamic_cast` devuelve `nullptr` si no puede convertir el tipo. Aunque `reinterpret_cast` devuelve un valor no NULL, puede no ser válido. Por eso, recomendamos que no uses `reinterpret_cast` a menos que sepas que la conversión se realizará correctamente. Además, se recomienda no usar conversiones de estilo C en su C++ / CX código porque son idénticas a `reinterpret_cast`.  

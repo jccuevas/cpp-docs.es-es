@@ -1,13 +1,10 @@
 ---
 title: 'Excepciones: Usar Macros MFC y las excepciones de C++ | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6597f43deee73addff8e8f2045a38d7b1109fc0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c50e7358d29e04c81a5e443d5b1a03881fed7f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Excepciones: Usar macros de MFC y excepciones de C++
 En este artículo se describe consideraciones para escribir código que utiliza las macros de control de excepciones de MFC y las palabras clave de control de excepciones de C++.  
@@ -46,7 +41,7 @@ En este artículo se describe consideraciones para escribir código que utiliza 
   
 -   [Bloques try dentro de bloques catch](#_core_try_blocks_inside_catch_blocks)  
   
-##  <a name="_core_mixing_exception_keywords_and_macros"></a>Cómo mezclar Macros y palabras clave de excepción  
+##  <a name="_core_mixing_exception_keywords_and_macros"></a> Cómo mezclar Macros y palabras clave de excepción  
  Puede mezclar macros de excepción de MFC y palabras clave de excepciones de C++ en el mismo programa. Pero no se pueden mezclar macros de MFC con palabras clave de excepciones de C++ en el mismo bloque porque las macros eliminan objetos de excepción automáticamente cuando salen del ámbito, mientras que las palabras clave de control de excepciones de código no lo hace. Para obtener más información, vea el artículo [excepciones: detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
  La diferencia principal entre las macros y las palabras clave es que las macros eliminan "automáticamente" una excepción detectada cuando ésta sale del ámbito. Código que utiliza las palabras clave no lo hace; las excepciones detectadas en un bloque catch se deben eliminar explícitamente. Cómo mezclar macros y palabras clave de excepción de C++ puede provocar pérdidas de memoria cuando no se elimina un objeto de excepción o daños en un montón cuando una excepción se elimina dos veces.  
@@ -59,7 +54,7 @@ En este artículo se describe consideraciones para escribir código que utiliza 
   
  [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   
-##  <a name="_core_try_blocks_inside_catch_blocks"></a>Intente bloques dentro de los bloques Catch  
+##  <a name="_core_try_blocks_inside_catch_blocks"></a> Intente bloques dentro de los bloques Catch  
  No puede volver a producir la excepción actual desde una **intente** bloque que está dentro de un **CATCH** bloque. En el ejemplo siguiente no es válido:  
   
  [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]  

@@ -1,13 +1,10 @@
 ---
-title: "Instantánea | Documentos de Microsoft"
-ms.custom: 
+title: Instantánea | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,20 +17,18 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c31e08fdda3cef526f46946e45ef956f9ad1adaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 309c81e8d370b61ba3a44d9253cda4fa9b84b6cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="snapshot"></a>Instantánea
+# <a name="snapshot"></a>Depurador de
 Una instantánea es un conjunto de registros que refleja una vista estática de los datos tal como se encontraban en el momento en que se creó la instantánea. Al abrir la instantánea y mover a todos los registros, el conjunto de registros que contiene y sus valores no cambian hasta que se vuelve a generar la instantánea mediante una llamada a **Requery**.  
   
 > [!NOTE]

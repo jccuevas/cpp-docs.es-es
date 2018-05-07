@@ -1,12 +1,9 @@
 ---
-title: "Advertencia C3400 de errores del compilador a través de C3499 | Documentos de Microsoft"
-ms.custom: 
+title: Advertencia C3400 de errores del compilador a través de C3499 | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3401
@@ -107,17 +104,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3842530bdec6a1247e8a6f5a4fc1f99d13a537ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcc3a06a5c39aff2fea0850879a8d95f757e1b66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>Advertencia C3400 de errores del compilador a través de C3499
 
@@ -173,8 +168,8 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |C3441 de Error del compilador|'*declaración*': '*palabra clave*' no se puede aplicar una vez definida la clase|
 |C3442 de Error del compilador|Inicialización de varios miembros de unión: '*member1*'y'*member2*'|
 |C3443 de Error del compilador|El inicializador de miembro predeterminado para '*clase*' es recursiva|
-|C3444 de Error del compilador|Vacía de la clase de agregado*clase*' debe inicializarse con {'}'.|
-|C3445 de Error del compilador|lista de inicialización de copia de '*tipo*' no se puede utilizar un constructor explícito|
+|C3444 de Error del compilador|Vacía de la clase de agregado*clase*'debe inicializarse con'{}'|
+|[C3445 de Error del compilador](compiler-error-c3445.md)|lista de inicialización de copia de '*tipo*' no se puede utilizar un constructor explícito|
 |[Error del compilador C3446](compiler-error-c3446.md)|'*clase*': no se permite un inicializador de miembro predeterminado para un miembro de una clase de valor|
 |C3447 de Error del compilador|Obsoleto.|
 |C3448 de Error del compilador|Obsoleto.|

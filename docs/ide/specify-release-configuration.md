@@ -1,29 +1,24 @@
 ---
-title: "Nuevo proyecto del código existente de la versión configuración | Documentos de Microsoft"
-ms.custom: 
+title: Nuevo proyecto del código existente de la versión configuración | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.importwiz.releasesettings
 dev_langs:
 - C++
 ms.assetid: 3e2fc73c-bdbd-4790-b2bd-d31731f0cece
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff208af8bb89dbcb7df00b37ce542a5adae5fa23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f3995b1a7227e4d2f0a531c86726b84e960d8ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Especifique los valores de configuración de Release, Asistente para crear nuevo proyecto de archivos de código fuente existentes.
 Utilice esta página del Asistente Crear nuevo proyecto de archivos de código existentes para especificar la configuración de proyecto de versión.  

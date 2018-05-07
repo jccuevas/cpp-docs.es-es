@@ -1,11 +1,8 @@
 ---
 title: 'Clase Platform:: Type | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Type::GetTypeCode
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabfa3d382d44448b2c06d0a16864a4fdd0e66bf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 358bd57dc1c7272818b1dc542991caa59d3663d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformtype-class"></a>Platform::Type (Clase)
 Contiene información en tiempo de ejecución sobre un tipo, en concreto, un nombre de cadena y un typecode. Obtenido mediante una llamada a [Object:: GetType](../cppcx/platform-object-class.md#gettype) en cualquier objeto u o mediante el [typeid](../windows/typeid-cpp-component-extensions.md) operador en un nombre de clase o struct.  
@@ -53,7 +48,7 @@ public ref class Platform::Type :
   
 |||  
 |-|-|  
-|[Type::FullName](#fullname)|Devuelve una [clase Platform::String](../cppcx/platform-string-class.md)^ que representa el nombre completo del tipo y usa . (punto) como separador, no:: (dos puntos), por ejemplo, `MyNamespace.MyClass`.|  
+|[FullName](#fullname)|Devuelve una [clase Platform::String](../cppcx/platform-string-class.md)^ que representa el nombre completo del tipo y usa . (punto) como separador, no:: (dos puntos), por ejemplo, `MyNamespace.MyClass`.|  
   
 ## <a name="conversion-operators"></a>Operadores de conversión  
   
@@ -114,7 +109,7 @@ Platform::TypeCode GetTypeCode();
 ### <a name="remarks"></a>Comentarios  
  El equivalente del método miembro GetTypeCode() es la `typeid` propiedad.
 
-## <a name="tostring">Type::ToString (método)</a>
+## <a name="tostring"></a> Type::ToString (método)
 Recupera un el nombre del tipo.  
   
 ### <a name="syntax"></a>Sintaxis  

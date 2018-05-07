@@ -1,12 +1,9 @@
 ---
 title: Clase CMiniFrameWnd | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cminiframewnd-class"></a>Clase CMiniFrameWnd
 Representa una ventana de marco de altura media, como las que se suelen ver alrededor de las barras de herramientas flotantes.  
@@ -78,7 +73,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
  Construye un `CMiniFrameWnd` de objeto, pero no crea la ventana.  
   
 ```  
@@ -88,7 +83,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>Comentarios  
  Para crear la ventana, llame a [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
  Crea la ventana de marco reducido de Windows y lo adjunta a la `CMiniFrameWnd` objeto.  
   
 ```  
@@ -133,7 +128,7 @@ virtual BOOL Create(
   
 - **MFS_BLOCKSYSMENU** deshabilita el acceso al menú de sistema y el menú de control y los convierte en parte de la leyenda (barra de título).  
   
- Vea [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) para obtener una descripción de los valores de estilo de ventana posible. La combinación típica utilizada para ventanas de marco reducido es **WS_POPUP &#124; WS_CAPTION &#124; WS_SYSMENU**.  
+ Vea [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) para obtener una descripción de los valores de estilo de ventana posible. La combinación típica utilizada para ventanas de marco reducido es **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
  `rect`  
  Un `RECT` estructura que especifica las dimensiones deseadas de la ventana.  
@@ -150,7 +145,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Comentarios  
  **Crear** inicializa el nombre de clase y el nombre de la ventana de la ventana y registra los valores predeterminados para el estilo y el elemento primario.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  Crea un objeto `CMiniFrameWnd`.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL CreateEx(
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- El `CreateEx` los parámetros especifican el **WNDCLASS**, estilo de ventana y posición inicial (opcionalmente) y el tamaño de la ventana. `CreateEx`También especifica primario (si existe) y el Id. de la ventana  
+ El `CreateEx` los parámetros especifican el **WNDCLASS**, estilo de ventana y posición inicial (opcionalmente) y el tamaño de la ventana. `CreateEx` También especifica primario (si existe) y el Id. de la ventana  
   
  Cuando `CreateEx` se ejecuta, Windows envía la [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), y [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) mensajes en la ventana.  
   
  Para extender el control de mensajes de forma predeterminada, derive una clase de `CMiniFrameWnd`, agregue un mapa de mensajes a la nueva clase y proporcionan funciones miembro para los mensajes anteriores. Invalidar `OnCreate`, por ejemplo, para realizar la inicialización necesaria para una nueva clase.  
   
- Invalidar más **en***mensaje* controladores para agregar más funcionalidad a la clase derivada de mensaje.  
+ Invalidar más **en *** mensaje* controladores para agregar más funcionalidad a la clase derivada de mensaje.  
   
  Si el **WS_VISIBLE** estilo se proporciona, Windows envía todos los mensajes necesarios para activar y mostrar la ventana de la ventana. Si el estilo de ventana especifica una barra de título, el título de ventana que señala el `lpszWindowName` parámetro aparece en la barra de título.  
   

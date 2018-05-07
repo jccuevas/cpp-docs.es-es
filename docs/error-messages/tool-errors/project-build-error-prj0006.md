@@ -1,12 +1,9 @@
 ---
 title: Error PRJ0006 al compilar del proyecto | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - PRJ0006
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - PRJ0006
 ms.assetid: ce092be4-1652-414f-8cb5-b97ef5841f89
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 817450fb6b72f985d7ff49f7e65f9dfa0933b4d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 151c22bf13c13de21e89a5c96185cf1c4c1ca349
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-build-error-prj0006"></a>Error PRJ0006 al compilar el proyecto
 No se pudo abrir el archivo temporal 'archivo'. Asegúrese de que el archivo existe y que el directorio no está protegido contra escritura.  

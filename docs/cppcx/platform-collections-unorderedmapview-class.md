@@ -1,26 +1,21 @@
 ---
 title: Unorderedmapview (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView (Clase)
 Representa una vista de solo lectura en un *mapa*, que es una colección de pares clave-valor.  
@@ -43,7 +38,7 @@ ref class UnorderedMapView sealed;
  Tipo del valor del par clave-valor.  
   
  `C`  
- Un tipo que proporciona un objeto de función que puede comparar dos valores de clave para determinar si son iguales. By default, [std::equal_to\<K>](../standard-library/equal-to-struct.md)  
+ Un tipo que proporciona un objeto de función que puede comparar dos valores de clave para determinar si son iguales. De forma predeterminada, [std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Comentarios  
  UnorderedMapView es una implementación concreta de C++ de la [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interfaz que se pasa a través de la interfaz binaria de aplicaciones (ABI). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).  
@@ -54,7 +49,7 @@ ref class UnorderedMapView sealed;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[UnorderedMapView::UnorderedMapView](#ctor)|Inicializa una nueva instancia de la clase UnorderedMapView.|  
+|[Unorderedmapview](#ctor)|Inicializa una nueva instancia de la clase UnorderedMapView.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   

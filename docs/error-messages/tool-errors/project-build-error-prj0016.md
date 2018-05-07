@@ -2,11 +2,8 @@
 title: Error PRJ0016 al compilar del proyecto | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - PRJ0016
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 056a033ce95926ca8bbf59e6bbc7b11656fcd015
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6184e5bb251a2b74e8500cc195a38f2d814c1b5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-build-error-prj0016"></a>Error PRJ0016 al compilar el proyecto
 Configuración de seguridad del usuario impide que el proceso que se está creando. Esta configuración es necesaria para la compilación.  
@@ -42,6 +37,6 @@ Configuración de seguridad del usuario impide que el proceso que se está crean
   
  Para obtener más información, vea:  
   
--   Artículo de Knowledge Base 324153, que está disponible en [http://support.microsoft.com/default.aspx?scid=kb;en-us;324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
+-   Artículo de Knowledge Base 324153, que está disponible en [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153).  
   
 -   [Cumplir con la configuración de directiva de sistema](http://msdn.microsoft.com/library/aa372139), la sección en "Ejecutar sólo aplicaciones permitidas de Windows".

@@ -1,27 +1,22 @@
 ---
-title: "Diseño dinámico | Documentos de Microsoft"
-ms.custom: 
+title: Diseño dinámico | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e309d8ef023346c0e37babeabe23f7e6e1762939
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-layout"></a>Diseño dinámico
 Con MFC en Visual Studio 2015, puede crear cuadros de diálogo que el usuario puede cambiar el tamaño y se puede controlar la manera en que el diseño se ajusta al cambio de tamaño. Por ejemplo, puede adjuntar los botones de la parte inferior de un diálogo al borde inferior para que permanezcan siempre en la parte inferior. También puede configurar ciertos controles, como cuadros de lista, cuadros de edición y campos de texto, para que se expandan cuando el usuario expanda el diálogo.  
@@ -46,7 +41,7 @@ Con MFC en Visual Studio 2015, puede crear cuadros de diálogo que el usuario pu
   
      ![Abra el cuadro de diálogo en el editor de recursos. ] (../mfc/media/mfcdynamiclayout3.png "mfcdynamiclayout3")  
   
-2.  Seleccione un control y en la ventana de propiedades, configure las propiedades del diseño dinámico. El **diseño dinámico** sección en la ventana Propiedades contiene las propiedades **tipo móvil**, **tipo de ajuste de tamaño**y, dependiendo de los valores seleccionados para las propiedades propiedades específicas que definen cuánto controles mover o cambiar el tamaño. **Tipo móvil** determina cómo se mueve un control como se cambia el tamaño del cuadro de diálogo; **Tipo de ajuste de tamaño** determina cómo se cambia el tamaño de un control como se cambia el tamaño del cuadro de diálogo. **Tipo móvil** y **tipo de ajuste de tamaño** puede ser **Horizontal**, **Vertical**, **ambos**, o **ninguno** según las dimensiones que desea cambiar de forma dinámica. Horizontal es la dimensión X, mientras que Vertical es la dirección del eje Y.  
+2.  Seleccione un control y en la ventana de propiedades, configure las propiedades del diseño dinámico. El **diseño dinámico** sección en la ventana Propiedades contiene las propiedades **tipo móvil**, **tipo de ajuste de tamaño**y, dependiendo de los valores seleccionados para las propiedades propiedades específicas que definen cuánto controles mover o cambiar el tamaño. **Tipo móvil** determina cómo se mueve un control como se cambia el tamaño del cuadro de diálogo; **Tipo de ajuste de tamaño** determina cómo se cambia el tamaño de un control como se cambia el tamaño del cuadro de diálogo. **Tipo móvil** y **tipo de ajuste de tamaño** puede ser **Horizontal**, **Vertical**, **ambos**, o **ninguno**según las dimensiones que desea cambiar de forma dinámica. Horizontal es la dimensión X, mientras que Vertical es la dirección del eje Y.  
   
 3.  Si desea que un control como un botón en un tamaño fijo y permanece en la parte inferior derecha, como es habitual para los **Aceptar** o **cancelar** botones, establezca la **tipo de ajuste de tamaño** a  **Ninguno**y establezca el **tipo móvil** a **ambos**. Para el **X móvil** y **Y móvil** valores en **tipo móvil**, establezca el 100% para que el control permanezca a una distancia fija desde la parte inferior derecha.  
   

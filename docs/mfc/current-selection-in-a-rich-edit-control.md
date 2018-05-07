@@ -2,12 +2,9 @@
 title: Selección actual en un Control Rich Edit | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - rich edit controls [MFC], current selection in
 - selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5f0d9332d1118809ae3d62c187ec848ec95ffbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 782984bc53bc16f8dc89e4e705811fef24b8931e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Selección actual en un control Rich Edit
 El usuario puede seleccionar texto en un control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) mediante el mouse o el teclado. La selección actual es el intervalo de caracteres seleccionados o la posición del punto de inserción si no hay caracteres seleccionados. Una aplicación puede obtener información acerca de la selección actual, establecer la selección actual, determinar cuándo resaltar los cambios de selección actual y mostrar u ocultar la selección.  

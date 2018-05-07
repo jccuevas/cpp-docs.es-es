@@ -1,13 +1,10 @@
 ---
 title: Varios tipos de documentos, vistas y ventanas de marco | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab8bff6484f81c482ddd8629ff33772fab1aeba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5640c3bb66bee0641b0c153ae10dc146bb1c1dd8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Varios tipos de documentos, vistas y ventanas de marco
 La relación estándar entre un documento, su vista y su ventana de marco se describe en [Document/View Creation](../mfc/document-view-creation.md)(Creación de documentos/vistas). Muchas aplicaciones admiten un único tipo de documento (aunque probablemente permitan que haya muchos documentos abiertos de ese tipo) con una sola vista en el documento y una sola ventana de marco por documento. Pero puede que algunas aplicaciones necesiten modificar uno o varios de estos valores predeterminados.  
@@ -75,7 +70,7 @@ La relación estándar entre un documento, su vista y su ventana de marco se des
   
  En la siguiente imagen, dividida en las partes a, b y c, se muestran los tres modelos de interfaz de usuario en el orden descrito anteriormente.  
   
- ![Varios &#45; interfaces de usuario de vista](../mfc/media/vc37a71.gif "vc37a71")  
+ ![Varios&#45;ver las interfaces de usuario](../mfc/media/vc37a71.gif "vc37a71")  
 Interfaces de usuarios de varias vistas  
   
  Para proporcionar estos modelos, el marco de trabajo implementa el comando Nueva ventana y proporciona la clase [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), como se describe en [Ventanas divisoras](#_core_splitter_windows). Se pueden implementar otros modelos teniendo estos como punto de partida. Para ver programas de ejemplo que ilustran distintas configuraciones de vistas, ventanas de marco y divisores, vea [MFC Samples](../visual-cpp-samples.md)(Ejemplos de MFC).  

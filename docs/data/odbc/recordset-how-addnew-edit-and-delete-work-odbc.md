@@ -2,12 +2,9 @@
 title: 'Conjunto de registros: Cómo AddNew, Edit y Delete funcionan (ODBC) | Documentos de Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dbbf224797bd7d2eed2b085a6a7dd8eb1865de1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Conjunto de registros: Funcionamiento de AddNew, Edit y Delete (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
@@ -57,7 +52,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
  Como un complemento, debe leer [intercambio de campos de registros: funcionamiento de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), que describe el papel correspondiente de RFX en las operaciones de actualización.  
   
-##  <a name="_core_adding_a_record"></a>Agregar un registro  
+##  <a name="_core_adding_a_record"></a> Agregar un registro  
 
  Agregar un nuevo registro a un conjunto de registros implica llamar a la función miembro [AddNew](../../mfc/reference/crecordset-class.md#addnew) , establecer los valores de los miembros de datos de campo del nuevo registro y una llamada a función miembro la [actualización](../../mfc/reference/crecordset-class.md#update) función de miembro para escribir el registro para el origen de datos.  
   
@@ -95,7 +90,7 @@ Este tema es aplicable a las clases ODBC de MFC.
     > [!TIP]
     >  Para detectar si los miembros de datos del conjunto de registros cambian el valor, MFC utiliza un **PSEUDO_NULL** valor adecuado para cada tipo de datos que se puede almacenar en un conjunto de registros. Si se debe establecer explícitamente un campo en el **PSEUDO_NULL** value y el campo parece ya estén marcadas como Null, también debe llamar a `SetFieldNull`, pasa la dirección del campo en el primer parámetro y **FALSE**en el segundo parámetro.  
   
-##  <a name="_core_visibility_of_added_records"></a>Visibilidad de los registros agregados  
+##  <a name="_core_visibility_of_added_records"></a> Visibilidad de los registros agregados  
  ¿Cuándo es visible para el conjunto de registros un registro agregado? Los registros agregados a veces se mostrarán y a veces no están visibles, dependiendo de dos factores:  
   
 -   El controlador de qué es capaz de.  
@@ -104,7 +99,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
  Si el controlador ODBC admite la **:: SQLSetPos** función de la API de ODBC, MFC usa la función para agregar registros. Con **:: SQLSetPos**, registros agregados son visibles para cualquier conjunto de registros MFC actualizable. Sin compatibilidad con la función, agregados no son visibles los registros y se debe llamar a **Requery** para verlos. Usar **:: SQLSetPos** también es más eficaz.  
   
-##  <a name="_core_editing_an_existing_record"></a>Editar un registro existente  
+##  <a name="_core_editing_an_existing_record"></a> Editar un registro existente  
  Editar un registro existente en un conjunto de registros implica desplazarse al registro, el conjunto de registros de llamada [editar](../../mfc/reference/crecordset-class.md#edit) , establecer los valores de los miembros de datos de campo del nuevo registro y una llamada a función miembro la [actualizar](../../mfc/reference/crecordset-class.md#update)función de miembro para escribir el registro modificado en el origen de datos.  
   
  Como condición previa para llamar a **editar**, el conjunto de registros debe ser actualizable y hallarse en un registro. El `CanUpdate` y `IsDeleted` funciones miembro permiten determinar estas condiciones. También, el registro actual no puede haber sido eliminado todavía, y debe haber registros en el conjunto de registros (ambos `IsBOF` y `IsEOF` devuelven 0).  
@@ -122,7 +117,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
 -   Si el controlador ODBC admite la **:: SQLSetPos** función de la API de ODBC, MFC usa la función para actualizar el registro en el origen de datos. Con **:: SQLSetPos**, el controlador compara el búfer de edición con el registro correspondiente en el servidor, actualizar el registro en el servidor si los dos son diferentes. Con **:: SQLSetPos**, MFC puede actualizar un registro de forma más eficaz porque no tiene que crear y procesar una instrucción SQL.  
   
-     O bien  
+     -o bien-  
   
 -   Si **:: SQLSetPos** no puede ser utilizado, MFC hace lo siguiente:  
   
@@ -140,7 +135,7 @@ Este tema es aplicable a las clases ODBC de MFC.
     > [!TIP]
     >  Si se llama a `AddNew` o **editar** después de haber llamado a cualquier función anteriormente pero antes de llamar a **actualización**, el búfer de edición se actualiza con el registro almacenado, reemplazando el registro nuevo o editado en progreso. Este comportamiento proporciona una forma para anular una `AddNew` o **editar** y comenzar una nueva: si se determina que el registro en proceso presenta error, basta con llamar a **editar** o `AddNew` nuevo.  
   
-##  <a name="_core_deleting_a_record"></a>Eliminar un registro  
+##  <a name="_core_deleting_a_record"></a> Eliminar un registro  
  Eliminar un registro de un conjunto de registros implica desplazarse al registro y el conjunto de registros de llamada [eliminar](../../mfc/reference/crecordset-class.md#delete) función miembro. A diferencia de `AddNew` y **editar**, **eliminar** no requiere una llamada similar a **actualización**.  
   
  Como condición previa para llamar a **eliminar**, el conjunto de registros debe ser actualizable y debe estar en un registro. El `CanUpdate`, `IsBOF`, `IsEOF`, y `IsDeleted` funciones miembro permiten determinar estas condiciones.  
@@ -149,7 +144,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
 -   Si el controlador ODBC admite la **:: SQLSetPos** función de la API de ODBC, MFC usa la función para eliminar el registro en el origen de datos. Usar **:: SQLSetPos** suele ser más eficaz que el uso de SQL.  
   
-     O bien  
+     -o bien-  
   
 -   Si **:: SQLSetPos** no puede ser utilizado, MFC hace lo siguiente:  
   

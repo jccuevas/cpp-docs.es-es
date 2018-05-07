@@ -1,13 +1,10 @@
 ---
 title: WINDOWPOS estructura-1 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPOS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db3991a6767e33c73857daf40a977ac5f6f0b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS estructura-1
 El `WINDOWPOS` estructura contiene información sobre el tamaño y la posición de una ventana.  
@@ -72,15 +67,15 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_HIDEWINDOW** oculta la ventana.  
   
-- `SWP_NOACTIVATE`No se activa la ventana.  
+- `SWP_NOACTIVATE` No se activa la ventana.  
   
 - **SWP_NOCOPYBITS** descarta todo el contenido del área de cliente. Si no se especifica este marcador, el contenido del área de cliente válido se guarda y se copian en el área de cliente después de la ventana es de tamaño o mover.  
   
-- `SWP_NOMOVE`Conserva la posición actual (pasa por alto el **x** y **y** miembros).  
+- `SWP_NOMOVE` Conserva la posición actual (pasa por alto el **x** y **y** miembros).  
   
 - **SWP_NOOWNERZORDER** no cambia la posición de la ventana propietaria del orden Z.  
   
-- `SWP_NOSIZE`Conserva el tamaño actual (pasa por alto el **cx** y **cy** miembros).  
+- `SWP_NOSIZE` Conserva el tamaño actual (pasa por alto el **cx** y **cy** miembros).  
   
 - **SWP_NOREDRAW** no volver a dibujarse cambios.  
   
@@ -88,7 +83,7 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_NOSENDCHANGING** impide que la ventana de recepción el `WM_WINDOWPOSCHANGING` mensaje.  
   
-- `SWP_NOZORDER`Conserva la ordenación actual (pasa por alto el **hwndInsertAfter** miembro).  
+- `SWP_NOZORDER` Conserva la ordenación actual (pasa por alto el **hwndInsertAfter** miembro).  
   
 - **SWP_SHOWWINDOW** muestra la ventana.  
   

@@ -1,31 +1,26 @@
 ---
-title: "Cómo: recuperar la versión de Windows (C++ / CLI) | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: recuperar la versión de Windows (C++ / CLI) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Windows [C++], version
 - Windows [C++], retrieving version using Visual C++
 ms.assetid: 7e6f567b-d378-49bb-aa59-2240f69a022d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b29d77b7bcc56baa9866c2855065052b1d2607c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf602bd9fbd0765c54f9955fbb2cfcc3588e96dc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-the-windows-version-ccli"></a>Cómo: Recuperar la versión de Windows (C++/CLI)
 En el ejemplo de código siguiente se muestra cómo recuperar la información de plataforma y la versión del sistema operativo actual. Esta información se almacena en la <xref:System.Environment.OSVersion%2A?displayProperty=fullName> propiedad y consta de una enumeración que describe la versión de Windows en términos generales y un <xref:System.Environment.Version%2A> objeto que contiene la versión exacta del sistema operativo.  

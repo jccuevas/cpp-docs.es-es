@@ -1,13 +1,10 @@
 ---
 title: SQL | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df1563d8bb3d53bb405fbb0d89b2b26cc964bd44
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql"></a>SQL
 SQL (lenguaje de consulta estructurado) es una manera para comunicarse con una base de datos relacional que permite definir, consultar, modificar y controlar los datos. Mediante la sintaxis SQL, puede construir una instrucción que extraiga los registros según los criterios que especifique.  
@@ -47,10 +42,10 @@ SQL (lenguaje de consulta estructurado) es una manera para comunicarse con una b
   
 -   [Cómo utilizan las clases de base de datos SQL](#_core_how_the_database_classes_use_sql).  
   
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a>Open Database Connectivity (ODBC)  
+##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)  
  Las clases de base de datos se implementan con ODBC, que utiliza SQL en una interfaz de nivel de llamada en lugar de incrustar comandos SQL en el código. ODBC utiliza SQL para comunicarse con un [origen de datos](../../data/odbc/data-source-odbc.md) mediante controladores ODBC. Estos controladores interpretan el código SQL y traducen, si es necesario, para su uso con un formato de base de datos concreta, como Microsoft Access. Para obtener más información sobre cómo utiliza ODBC SQL, consulte [ODBC](../../data/odbc/odbc-basics.md) y el SDK de ODBC *referencia del programador* en el CD de MSDN Library.  
   
-##  <a name="_core_the_database_classes"></a>Clases de base de datos  
+##  <a name="_core_the_database_classes"></a> Clases de base de datos  
  Las clases de base de datos están diseñadas para permitirle manipular y actualizar datos en una existente [origen de datos](../../data/odbc/data-source-odbc.md). El [Asistente para aplicaciones MFC](../../mfc/reference/database-support-mfc-application-wizard.md), el [Asistente para consumidores ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (acceso a través de **Agregar clase**), y las clases de base de datos crean la mayoría de las instrucciones SQL para el programador.  
   
  Las clases de base de datos utilizan una parte de SQL conocida como lenguaje de manipulación de datos (DML). Estos comandos permiten trabajar con la totalidad o parte del origen de datos, agregar nuevos registros, modificar registros y eliminar registros. En la tabla siguiente se enumera las palabras clave SQL más comunes y las formas de las clases de base de datos usan.  
@@ -79,7 +74,7 @@ SQL (lenguaje de consulta estructurado) es una manera para comunicarse con una b
   
  También puede encontrar más información acerca de SQL, incluida una lista de instrucciones SQL compatibles, tipos de datos, gramática básica de SQL y una lista de lectura de publicaciones recomendadas acerca de SQL, en la *el SDK de ODBC* *referencia del programador*  en el CD de MSDN Library.  
   
-##  <a name="_core_how_the_database_classes_use_sql"></a>Cómo utilizan las clases de base de datos SQL  
+##  <a name="_core_how_the_database_classes_use_sql"></a> Cómo utilizan las clases de base de datos SQL  
  Los conjuntos de registros que se derivan de las clases de base de datos utilizan ODBC para comunicarse con un origen de datos, y ODBC recupera los registros del origen de datos mediante el envío de instrucciones SQL. Este tema explica la relación entre las clases de base de datos y SQL.  
   
  Un conjunto de registros crea una instrucción SQL con la construcción de las partes de una instrucción SQL en un `CString`. La cadena se construye como una **seleccione** instrucción, que devuelve un conjunto de registros.  

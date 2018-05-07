@@ -2,12 +2,9 @@
 title: 'Conjunto de registros: Marcadores y posiciones absolutas (ODBC) | Documentos de Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SetAbsolutePosition
 dev_langs:
@@ -30,18 +27,16 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4b206e5d09d86613af0585df7510b0f88397984a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5e45d2f9dd942e76ccce4231e8280a142e66e56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Conjunto de registros: Marcadores y posiciones absolutas (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
@@ -54,7 +49,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
 -   [Cómo establecer el registro actual usando posiciones absolutas](#_core_absolute_positions_in_mfc_odbc).  
   
-##  <a name="_core_bookmarks_in_mfc_odbc"></a>Marcadores en ODBC de MFC  
+##  <a name="_core_bookmarks_in_mfc_odbc"></a> Marcadores en ODBC de MFC  
  Un marcador identifica de forma única un registro. Al navegar a través de un conjunto de registros, no puede confiar siempre en la posición absoluta de un registro porque se pueden eliminar los registros del conjunto de registros. La manera confiable de realizar un seguimiento de la posición de un registro es utilizar su correspondiente marcador. Clase `CRecordset` proporciona funciones miembro para:  
   
 -   Obtener el marcador del registro actual, por lo que puede guardarlo en una variable ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
@@ -81,7 +76,7 @@ rs.SetBookmark( varRecordToReturnTo );
 > [!NOTE]
 >  Dependiendo del controlador ODBC y el tipo de conjunto de registros, se podrían no admitir marcadores. Se puede determinar con facilidad si se admiten marcadores mediante una llamada a [CRecordset:: CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Además, si se admiten marcadores, debe elegir explícitamente implementarlos especificando la **CRecordset:: useBookmarks** opción en el [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) función miembro. También debe comprobar la persistencia de los marcadores después de ciertas operaciones de conjunto de registros. Por ejemplo, si se **Requery** un conjunto de registros, los marcadores ya no podrían ser válidos. Llame a [CDatabase:: GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) para comprobar si puede llamar con seguridad a `SetBookmark`.  
   
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a>Posiciones absolutas en ODBC de MFC  
+##  <a name="_core_absolute_positions_in_mfc_odbc"></a> Posiciones absolutas en ODBC de MFC  
  Además de los marcadores, clase `CRecordset` permite establecer el registro actual especificando una posición ordinal. Esto se denomina posición absoluta.  
   
 > [!NOTE]

@@ -1,13 +1,10 @@
 ---
 title: 'Windows Sockets: Secuencia de operaciones | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70765d94b0104cf905130ce043c2b0e35b26a41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93fe2221e25951a53340d5da97f7d5c48ce477cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Secuencia de operaciones
 En este artículo se muestra, en paralelo, la secuencia de operaciones para un socket de servidor y un socket de cliente. Como los sockets utilizan `CArchive` objetos, son necesariamente [sockets de secuencia](../mfc/windows-sockets-stream-sockets.md).  
@@ -45,8 +40,8 @@ En este artículo se muestra, en paralelo, la secuencia de operaciones para un s
 ||`// seek a connection`<br /><br /> `sockClient.Connect(strAddr, nPort);`3,4|  
 |`// construct a new, empty socket`<br /><br /> `CSocket sockRecv;`<br /><br /> `// accept connection`<br /><br /> `sockSrvr.Accept( sockRecv );` 5||  
 |`// construct file object`<br /><br /> `CSocketFile file(&sockRecv);`|`// construct file object`<br /><br /> `CSocketFile file(&sockClient);`|  
-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> O bien<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - o ambos:|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> O bien<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - o ambos:|  
-|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> O bien<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> O bien<br /><br /> `arOut << dwValue;`6|  
+|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -o bien-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - o ambos:|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -o bien-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - o ambos:|  
+|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -o bien-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -o bien-<br /><br /> `arOut << dwValue;`6|  
   
  1. Donde `nPort` es un número de puerto. Vea [Windows Sockets: puertos y direcciones de Socket](../mfc/windows-sockets-ports-and-socket-addresses.md) para obtener más información acerca de los puertos.  
   

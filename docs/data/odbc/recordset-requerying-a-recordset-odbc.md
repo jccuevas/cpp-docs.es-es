@@ -2,12 +2,9 @@
 title: 'Conjunto de registros: Volver a consultar un conjunto de registros (ODBC) | Documentos de Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Conjunto de registros: Volver a consultar un conjunto de registros (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
@@ -41,16 +36,16 @@ Este tema es aplicable a las clases ODBC de MFC.
   
 -   Actualizar el conjunto de registros basándose en los valores de parámetros de variables.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a>Volver a poner el conjunto de registros de seguridad hasta la fecha  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> Volver a poner el conjunto de registros de seguridad hasta la fecha  
  Con frecuencia, deberá volver a consultar el objeto de conjunto de registros para ponerla al día. En un entorno de base de datos multiusuario, otros usuarios pueden realizar cambios a los datos durante la vida del conjunto de registros. Para obtener más información acerca de si el conjunto de registros refleja los cambios realizados por otros usuarios y cuando los conjuntos de registros de otros usuarios reflejan los cambios, consulte [conjunto de registros: actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) y [Dynaset](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a>Volver a consultar basada en nuevos parámetros  
+##  <a name="_core_requerying_based_on_new_parameters"></a> Volver a consultar basada en nuevos parámetros  
  Otro uso frecuente e igualmente importante: el uso de [Requery](../../mfc/reference/crecordset-class.md#requery) consiste en seleccionar un nuevo conjunto de registros basados en valores de parámetro diferentes.  
   
 > [!TIP]
 >  Velocidad de consulta es probablemente mucho más rápida si se llama a **Requery** con el cambio de valores de parámetro que si se llama a **abiertos** nuevo.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>Volver a consultar conjuntos de registros dinámicos vs. Instantáneas  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Volver a consultar conjuntos de registros dinámicos vs. Instantáneas  
  Como conjuntos de registros dinámicos están diseñados para mostrar un conjunto de registros con datos dinámicos y actualizados, es conveniente volver a consultar conjuntos de registros dinámicos a menudo si desea reflejar las adiciones de otros usuarios. Las instantáneas, por otro lado, son útiles porque se puede confiar en su contenido estático mientras preparar informes, calcular totales y así sucesivamente. No obstante, a veces puede volver a consultar también una instantánea. En un entorno multiusuario, datos de la instantánea podrían perder la sincronización con el origen de datos como otros usuarios modifican la base de datos.  
   
 #### <a name="to-requery-a-recordset-object"></a>Para volver a consultar un objeto de conjunto de registros  

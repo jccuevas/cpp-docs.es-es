@@ -1,13 +1,10 @@
 ---
-title: "Conjunto de registros dinámicos | Documentos de Microsoft"
-ms.custom: 
+title: Conjunto de registros dinámicos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - recordsets [C++], dynasets
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f0f2f7ddd4a1b4021dfff8d533bb81acd84129a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec71b5b00b26564f9c8dc3c2d98f53f8182b0ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynaset"></a>Conjunto de registros dinámicos
 Este tema describe los conjuntos de registros dinámicos y explica su [disponibilidad](#_core_availability_of_dynasets).  
@@ -52,7 +47,7 @@ Este tema describe los conjuntos de registros dinámicos y explica su [disponibi
 > [!NOTE]
 >  Para conjuntos de registros dinámicos actualizables, el controlador ODBC debe admitir instrucciones de actualización por posición o el **:: SQLSetPos** función de la API de ODBC. Si se admiten ambas, MFC utiliza **:: SQLSetPos** para mejorar la eficacia.  
   
-##  <a name="_core_availability_of_dynasets"></a>Disponibilidad de los conjuntos de registros dinámicos  
+##  <a name="_core_availability_of_dynasets"></a> Disponibilidad de los conjuntos de registros dinámicos  
  Las clases de base de datos MFC admiten conjuntos de registros dinámicos si se cumplen los requisitos siguientes:  
   
 -   La biblioteca de cursores ODBC DLL no debe estar en uso para este origen de datos.  

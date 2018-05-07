@@ -1,12 +1,9 @@
 ---
 title: 'CBookmark:: SetBookmark | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CBookmark<0>::SetBookmark
@@ -23,18 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - SetBookmark method
 ms.assetid: bcd26831-6045-4e69-96d6-abf8037fc18d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f6b1f74cc1a7648ac20b3873f69faca8b1707f36
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6d8f4402a6caf01f4d813e6ee8f9fd2d95512394
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbookmarksetbookmark"></a>CBookmark::SetBookmark
 Copia el valor de marcador al que hace referencia `pBuffer` a la `CBookmark` almacenar en búfer y se establece el tamaño de búfer en `nSize`.  

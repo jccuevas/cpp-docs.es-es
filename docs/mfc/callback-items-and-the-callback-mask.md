@@ -1,30 +1,25 @@
 ---
-title: "Elementos de devolución de llamada y la máscara de devolución de llamada | Documentos de Microsoft"
-ms.custom: 
+title: Elementos de devolución de llamada y la máscara de devolución de llamada | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - callback items in CListCtrl class [MFC]
 - CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24d9992b8a9db679b30624d85ede1a35bfd9826d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95c896308970ffc6a2040657927dc127eee278ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Elementos de devolución de llamada y máscara de devolución de llamada
 Para cada uno de sus elementos, un control de vista de lista suele almacena el texto de etiqueta, el índice de la lista de imágenes de iconos del elemento, y marcas de un conjunto de bits para el estado del elemento. Puede definir elementos individuales como elementos de devolución de llamada, que son útiles si la aplicación ya almacena parte de la información de un elemento.  
@@ -33,13 +28,13 @@ Para cada uno de sus elementos, un control de vista de lista suele almacena el t
   
  Además de definir elementos de devolución de llamada, también puede modificar la máscara de devolución de llamada del control. Esta máscara es un conjunto de marcadores de bits que especifica los Estados de elemento para el que la aplicación, en lugar de control, almacena los datos actuales. La máscara de devolución de llamada se aplica a todos los elementos del control, a diferencia de la designación de elemento de devolución de llamada, que se aplica a un elemento específico. La máscara de devolución de llamada es cero de forma predeterminada, lo que significa que el control realiza un seguimiento de todos los Estados del elemento. Para cambiar este comportamiento predeterminado, inicialice la máscara para cualquier combinación de los siguientes valores:  
   
--   `LVIS_CUT`El elemento se marca para una operación de cortar y pegar.  
+-   `LVIS_CUT` El elemento se marca para una operación de cortar y pegar.  
   
--   `LVIS_DROPHILITED`Se resalta el elemento como un destino de arrastrar y colocar.  
+-   `LVIS_DROPHILITED` Se resalta el elemento como un destino de arrastrar y colocar.  
   
--   `LVIS_FOCUSED`El elemento tiene el foco.  
+-   `LVIS_FOCUSED` El elemento tiene el foco.  
   
--   `LVIS_SELECTED`El elemento está seleccionado.  
+-   `LVIS_SELECTED` El elemento está seleccionado.  
   
 -   **LVIS_OVERLAYMASK** la aplicación almacena el índice de la imagen de superposición actual para cada elemento de lista de imágenes.  
   

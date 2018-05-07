@@ -1,11 +1,8 @@
 ---
 title: Mapview (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView (Clase)
 Representa una vista de solo lectura en un *mapa*, que es una colección de pares clave-valor.  
@@ -63,17 +58,17 @@ ref class MapView sealed;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[MapView::MapView](#ctor)|Inicializa una nueva instancia de la clase MapView.|  
+|[Mapview](#ctor)|Inicializa una nueva instancia de la clase MapView.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[MapView::First](#first)|Devuelve un iterador que se inicializa el primer elemento en la vista de mapa.|  
+|[Mapview:: First](#first)|Devuelve un iterador que se inicializa el primer elemento en la vista de mapa.|  
 |[MapView::HasKey](#haskey)|Determina si el objeto MapView actual contiene la clave especificada.|  
-|[MapView::Lookup](#lookup)|Recupera el elemento en la clave especificada del objeto MapView actual.|  
-|[MapView::Size](#size)|Devuelve el número de elementos del objeto MapView actual.|  
-|[MapView::Split](#split)|Divide un objeto MapView original en dos objetos MapView.|  
+|[Mapview:: Lookup](#lookup)|Recupera el elemento en la clave especificada del objeto MapView actual.|  
+|[Mapview:: Size](#size)|Devuelve el número de elementos del objeto MapView actual.|  
+|[Mapview:: Split](#split)|Divide un objeto MapView original en dos objetos MapView.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `MapView`  
@@ -102,7 +97,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>  MapView::HasKey Method
+## <a name="haskey"></a>  Mapview:: Haskey (método)
 Determina si el objeto MapView actual contiene la clave especificada.  
   
 ### <a name="syntax"></a>Sintaxis  

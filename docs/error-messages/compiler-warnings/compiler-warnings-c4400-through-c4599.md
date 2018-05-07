@@ -1,8 +1,8 @@
 ---
-title: "C4400 de advertencias del compilador a través de C4599 | Documentos de Microsoft"
+title: C4400 de advertencias del compilador a través de C4599 | Documentos de Microsoft
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -147,14 +147,13 @@ dev_langs:
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 de advertencias del compilador a través de C4599
 
@@ -182,7 +181,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'*función*': función firma contiene el tipo '*tipo*'; Los objetos de C++ son no es seguro pasar entre código puro y mixto o nativo.|
 |C4413 de advertencia del compilador|'classname::member': miembro de referencia se inicializa en un archivo temporal que no se conserva después de que salga el constructor|
 |[Advertencia del compilador (nivel 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*función*': salto short a la función ha convertido en near|
-|Advertencia del compilador (nivel 1) C4415|duplicate __declspec(code_seg('*name*'))|
+|Advertencia del compilador (nivel 1) C4415|duplicados __declspec (code_seg ('*nombre*'))|
 |Advertencia del compilador (nivel 1) C4416|__declspec(code_seg(...)) contiene una cadena vacía: omite|
 |Advertencia del compilador (nivel 1) C4417|una instancia de plantilla explícita no puede tener __declspec(code_seg(...)): omite|
 |Advertencia del compilador (nivel 1) C4418|__declspec(code_seg(...)) omitido en una enumeración|

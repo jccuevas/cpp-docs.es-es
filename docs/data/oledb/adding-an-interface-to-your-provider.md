@@ -1,30 +1,25 @@
 ---
 title: Agregar una interfaz a un proveedor | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d62f3e4fc3a12c1aeb58f4d6d42ded38d4dfe58
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3d6bc5d1b6c47d2ffa26bffa98d47b930d6ed193
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Agregar una interfaz a un proveedor
 Determinar qué objeto que desea agregar la interfaz a (normalmente datos origen, conjunto de filas, comando o sesión objetos creados por el Asistente para proveedores OLE DB). Es posible que el objeto que se debe agregar a la interfaz es que el proveedor no admite actualmente. En ese caso, ejecute el Asistente para proveedores OLE DB ATL para crear el objeto. Haga clic en el proyecto en la vista de clases, haga clic en **Agregar clase** desde el **agregar** menú y, a continuación, haga clic en **proveedor OLE DB ATL**. Puede colocar el código de interfaz en un directorio independiente y, a continuación, copie los archivos en el proyecto de proveedor.  

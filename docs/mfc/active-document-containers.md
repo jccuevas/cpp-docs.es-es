@@ -1,13 +1,10 @@
 ---
 title: Contenedores de documentos activos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87546f3c02025438b3e60cd2038fdc885dfedf9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containers"></a>Contenedores de documentos activos
 Un contenedor de documentos activos, como cuaderno de Microsoft Office o Internet Explorer, permite trabajar con varios documentos de diferentes tipos de aplicaciones en un solo marco (en lugar de obligarle a crear y usar varios marcos de aplicación para cada uno tipo de documento).  
@@ -49,7 +44,7 @@ Un contenedor de documentos activos, como cuaderno de Microsoft Office o Interne
   
 -   [Destinos de comando](../mfc/message-handling-and-command-targets.md)  
   
-##  <a name="container_requirements"></a>Requisitos de los contenedores  
+##  <a name="container_requirements"></a> Requisitos de los contenedores  
  Compatibilidad con documentos activos en un contenedor de documentos activos implica algo más que las implementaciones de interfaces: también requiere un conocimiento del uso de las interfaces de un objeto independiente. Lo mismo se aplica a las extensiones de documento activo, donde el contenedor también debe saber cómo usar esas interfaces de extensión en los documentos activos.  
   
  Un contenedor de documentos activos que integre documentos activos debe:  
@@ -70,7 +65,7 @@ Un contenedor de documentos activos, como cuaderno de Microsoft Office o Interne
   
  Un documento que admite una sola vista puede implementar los componentes de la vista y el documento (es decir, sus interfaces correspondientes) en una sola clase concreta. Además, un sitio de contenedor que sólo admite una vista a la vez puede combinar el sitio de documento y el sitio de vista en una clase de sitio concreta. Objeto de marco del contenedor, sin embargo, debe permanecer distinto y componente de documento del contenedor sólo se incluye aquí para ofrecer una imagen completa de la arquitectura; no se ve afectado por la arquitectura de contención de documentos activos.  
   
-##  <a name="document_site_objects"></a>Objetos de sitio de documento  
+##  <a name="document_site_objects"></a> Objetos de sitio de documento  
  En la arquitectura de contención de documentos activos, un sitio de documento es el mismo que un objeto de sitio de cliente en los documentos OLE con la adición de la `IOleDocument` interfaz:  
   
  `interface IOleDocumentSite : IUnknown`  
@@ -83,12 +78,12 @@ Un contenedor de documentos activos, como cuaderno de Microsoft Office o Interne
   
  El sitio de documento es conceptualmente el contenedor para uno o varios objetos de "sitio de vista". Cada objeto de sitio de la vista está asociado a los objetos de vista individuales del documento administrado por el sitio de documento. Si el contenedor sólo admite una única vista por cada sitio de documento, puede implementar el sitio de documento y el sitio de vista con una sola clase concreta.  
   
-##  <a name="view_site_objects"></a>Objetos de vista de sitio  
+##  <a name="view_site_objects"></a> Objetos de vista de sitio  
  Objeto de sitio de vista de un contenedor administra el espacio de visualización para una vista concreta de un documento. Además de admitir el estándar `IOleInPlaceSite` interfaz, un sitio de vista también suele implementa `IContinueCallback` para controlar la impresión mediante programación. (Tenga en cuenta que el objeto de vista nunca consulta `IContinueCallback` por lo que realmente se pueden implementar en cualquier otro objeto del contenedor de deseos.)  
   
  Un contenedor que admite varias vistas debe ser capaz de crear vista de varios objetos de sitio en el sitio de documento. Esto proporciona cada vista con servicios de activación y desactivación independientes, tal y como se proporcionan a través de `IOleInPlaceSite`.  
   
-##  <a name="frame_object"></a>Objeto de marco  
+##  <a name="frame_object"></a> Objeto de marco  
  Objeto de marco del contenedor es, en su mayor parte, el mismo marco que se utiliza para la activación en contexto de documentos OLE, es decir, que gestiona la negociación de menú y barra de herramientas. Un objeto de vista tiene acceso a este objeto de marco a través de **IOleInPlaceSite::GetWindowContext**, que también proporciona acceso al objeto de contenedor que representa el documento contenedor (que puede gestionar la negociación de la barra de herramientas del panel de nivel y enumeración de los objetos contenidos).  
   
  Un contenedor de documentos activos puede ampliar el marco agregando `IOleCommandTarget`. Esto le permite recibir comandos que se originan en la interfaz de usuario del documento activo en la misma manera que esta interfaz puede permitir que un contenedor enviar los mismos comandos (como **nuevo archivo**, **abiertos**,  **Guardar como**, **impresión**; **Editar una copia**, **pegar**, **deshacer**etc.) a un documento activo. Para obtener más información, consulte [destinos de comando](../mfc/message-handling-and-command-targets.md).  

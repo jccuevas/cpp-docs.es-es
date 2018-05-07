@@ -1,12 +1,9 @@
 ---
 title: Error del compilador C2392 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2392
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04fecba855d986c735a64ada77d81a28485fc161
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ffb2ce4ef752d91eaadc66d17aadf3838ee560df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2392"></a>Error del compilador C2392
 'method1': devueltos de covariante no se admiten tipos en administrado o WinRTtypes, de lo contrario 'method2' se reemplazaría  

@@ -2,12 +2,9 @@
 title: Funciones de devolución de llamada usadas por MFC | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funciones de devolución de llamada usadas por MFC
 Tres funciones de devolución de llamada aparecen en la biblioteca Microsoft Foundation Class. Estas funciones de devolución de llamada se pasan a [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), y [CDC:: SETABORTPROC](../../mfc/reference/cdc-class.md#setabortproc). Tenga en cuenta que todas las funciones de devolución de llamada deben capturar excepciones de MFC antes de volver a Windows, puesto que no se puede iniciar excepciones en los límites de devolución de llamada. Para obtener más información sobre las excepciones, vea el artículo [excepciones](../../mfc/exception-handling-in-mfc.md).  
@@ -42,7 +37,7 @@ Tres funciones de devolución de llamada aparecen en la biblioteca Microsoft Fou
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h 
 
-## <a name="enum_objects"></a>Función de devolución de llamada para CDC:: EnumObjects
+## <a name="enum_objects"></a> Función de devolución de llamada para CDC:: EnumObjects
 El *ObjectFunc* nombre es un marcador de posición para el nombre de la función proporcionada por la aplicación.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -66,7 +61,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="remarks"></a>Comentarios  
  El nombre real debe exportarse.  
   
-## <a name="graystring"></a>Función de devolución de llamada para CDC:: graystring
+## <a name="graystring"></a>  Función de devolución de llamada para CDC:: graystring
 *OutputFunc* es un marcador de posición para el nombre de la función de devolución de llamada proporcionada por la aplicación.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -94,7 +89,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="remarks"></a>Comentarios  
  La función de devolución de llamada (*OutputFunc*) debe dibujar una imagen en relación con las coordenadas (0,0) en lugar de (*x*, *y*).  
 
-## <a name="setabortproc"></a>Función de devolución de llamada para CDC:: SETABORTPROC
+## <a name="setabortproc"></a>  Función de devolución de llamada para CDC:: SETABORTPROC
 El nombre *AbortFunc* es un marcador de posición para el nombre de la función proporcionada por la aplicación.  
   
 ### <a name="syntax"></a>Sintaxis  

@@ -1,13 +1,10 @@
 ---
 title: Crear vistas (MFC) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e784858c17c01c8a538edebdb15a89863d16438
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87775c8afa1fa6eec8fbbdbbaa11bc9b5e6f1faa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="form-views-mfc"></a>Vistas de formulario (MFC)
 Puede agregar formularios a cualquier aplicación de Visual C++ que admita las bibliotecas MFC, incluida una [aplicación basada en formularios](../mfc/reference/creating-a-forms-based-mfc-application.md) (uno cuya clase de vista se deriva de `CFormView`). Si no creó inicialmente la aplicación que admita formularios, Visual C++ agregará esta compatibilidad automáticamente al insertar un nuevo formulario. En una aplicación SDI o MDI, que implementa el valor predeterminado [arquitectura documento/vista](../mfc/document-view-architecture.md), cuando el usuario elige el `New` comando (de forma predeterminada, en la **archivo** menú), Visual C++ solicita al usuario que elegir entre los formatos disponibles.  
@@ -35,7 +30,7 @@ Puede agregar formularios a cualquier aplicación de Visual C++ que admita las b
  Con una aplicación SDI, cuando el usuario elige el `New` comando, la instancia actual del formulario sigue ejecutándose, pero se crea una nueva instancia de la aplicación con el formulario seleccionado si no lo encuentra. En una aplicación MDI, la instancia actual del formulario sigue ejecutándose cuando el usuario elige el `New` comando.  
   
 > [!NOTE]
->  Puede insertar un formulario en una aplicación basada en el cuadro de diálogo (uno cuya clase de cuadro de diálogo se basa en `CDialog` y otro en ninguna vista de qué clase se implementa). Sin embargo, sin la arquitectura documento/vista, Visual C++ no implementa automáticamente la **archivo**&#124; **Nueva** funcionalidad. Debe crear una manera para que el usuario pueda ver formularios adicionales, como mediante la implementación de un cuadro de diálogo con fichas con diversas páginas de propiedades.  
+>  Puede insertar un formulario en una aplicación basada en el cuadro de diálogo (uno cuya clase de cuadro de diálogo se basa en `CDialog` y otro en ninguna vista de qué clase se implementa). Sin embargo, sin la arquitectura documento/vista, Visual C++ no implementa automáticamente la **archivo**&#124;**New** funcionalidad. Debe crear una manera para que el usuario pueda ver formularios adicionales, como mediante la implementación de un cuadro de diálogo con fichas con diversas páginas de propiedades.  
   
  Cuando se inserta un nuevo formulario en la aplicación, Visual C++ hace lo siguiente:  
   
@@ -51,7 +46,7 @@ Puede agregar formularios a cualquier aplicación de Visual C++ que admita las b
   
      **WS_VISIBLE**= Off  
   
-     **WS_CAPTION =**Off  
+     **WS_CAPTION =** Off  
   
  Para aplicaciones basadas en la arquitectura documento/vista, la **nuevo formulario** comando (menú contextual en la vista de clases) también:  
   

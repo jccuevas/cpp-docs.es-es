@@ -1,13 +1,10 @@
 ---
 title: Base de datos, Asistente para aplicaciones MFC | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.database
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b7c9aaa6389f5e86a51348a8b5423260c4c76e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86c6cd679b69bf84504d6735ca39d572bd48ff07
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-support-mfc-application-wizard"></a>Compatibilidad con bases de datos, Asistente para aplicaciones MFC
 Esta página proporciona opciones que le permiten especificar el nivel de base de datos admite (más de un origen de datos, si es necesario) para el proyecto.  
@@ -78,7 +73,7 @@ Esta página proporciona opciones que le permiten especificar el nivel de base d
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Conjunto de registros dinámicos**|Especifica que el conjunto de registros es un conjunto de registros dinámicos. Un conjunto de registros dinámicos es el resultado de una consulta que proporciona una vista indizada en datos la base de consultada. Un conjunto de registros dinámicos se almacena en memoria caché solo un índice entero a los datos originales y, por tanto, ofrece un rendimiento obtener a través de una instantánea. El índice apunta directamente a cada registro encontrados como resultado de una consulta y se indica si se elimina un registro. También tienen acceso a la información actualizada en los registros consultados.|  
-|Instantánea|Especifica que el conjunto de registros es una instantánea. Una instantánea es el resultado de una consulta y es una vista en una base de datos en un punto en el tiempo. Todos los registros encontrados como resultado de la consulta se almacenan en caché, por lo que no verá los cambios realizados en los registros originales.|  
+|Depurador de|Especifica que el conjunto de registros es una instantánea. Una instantánea es el resultado de una consulta y es una vista en una base de datos en un punto en el tiempo. Todos los registros encontrados como resultado de la consulta se almacenan en caché, por lo que no verá los cambios realizados en los registros originales.|  
   
 ## <a name="see-also"></a>Vea también  
  [Asistente para aplicaciones MFC](../../mfc/reference/mfc-application-wizard.md)

@@ -1,12 +1,9 @@
 ---
 title: 'CDBPropSet:: CDBPropSet | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDBPropSet.CDBPropSet
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - CDBPropSet class, constructor
 ms.assetid: 02ae5d9e-c067-47ca-8111-a03e86b5626b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: db118c9c814d957c43f11414ee583a2ccc7a416b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 58c3639d6c849a4b57ba1b0a75a7840def977556
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbpropsetcdbpropset"></a>CDBPropSet::CDBPropSet
 El constructor. Inicializa el **rgProperties**, **cProperties**, y **guidPropertySet** campos de la [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) estructura.  
@@ -48,7 +43,7 @@ CDBPropSet();
  `guid`  
  [in] Un GUID que se utiliza para inicializar el **guidPropertySet** campo.  
   
- *propset*  
+ *conjunto de propiedades*  
  [in] Otro `CDBPropSet` objeto para la construcción de copia.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -56,5 +51,5 @@ CDBPropSet();
   
 ## <a name="see-also"></a>Vea también  
  [CDBPropSet (clase)](../../data/oledb/cdbpropset-class.md)   
- [CDBPropSet::SetGUID](../../data/oledb/cdbpropset-setguid.md)   
+ [CDBPropSet:: SetGuid](../../data/oledb/cdbpropset-setguid.md)   
  [Estructura DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx)

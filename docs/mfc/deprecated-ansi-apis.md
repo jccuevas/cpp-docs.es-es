@@ -1,29 +1,24 @@
 ---
 title: API ANSI en desuso | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ba520f133ff020b6a1a51e8be7ae75b6fcdb969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deprecated-ansi-apis"></a>API ANSI en desuso
 La biblioteca (Microsoft Foundation Classes) está migrando hacia las clases y métodos que se basan en el juego de caracteres Unicode. Por lo tanto, las versiones ANSI de los diversos métodos MFC están en desuso. Utilice las versiones de Unicode de estos métodos en las aplicaciones futuras.  

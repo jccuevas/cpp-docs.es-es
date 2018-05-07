@@ -1,13 +1,10 @@
 ---
-title: "La semántica de tipos de valor | Documentos de Microsoft"
-ms.custom: 
+title: La semántica de tipos de valor | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 - __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44662f2ad8e79712b4aab17e2784a72e01ec4116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-type-semantics"></a>Semántica de los tipos de valor
 La semántica de tipos de valor ha cambiado de extensiones administradas para C++ a Visual C++.  
@@ -51,7 +46,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>Invocar métodos virtuales heredados  
- `Form (1)`es el objeto de valor canónico, y se entiende razonablemente bien, excepto cuando alguien intenta invocar un método virtual heredado como `ToString()`. Por ejemplo:  
+ `Form (1)` es el objeto de valor canónico, y se entiende razonablemente bien, excepto cuando alguien intenta invocar un método virtual heredado como `ToString()`. Por ejemplo:  
   
 ```  
 v.ToString(); // error!  
@@ -91,7 +86,7 @@ v.ToString(); // new syntax
  Nos gustaría que va a contener una pequeña clase nativa en un tipo de valor en lugar de un tipo de referencia para evitar una doble asignación de montones: el montón nativo para albergar el tipo nativo y el montón CLR para albergar el contenedor administrado. Una clase nativa dentro de un tipo de valor de ajuste permite evitar el montón administrado, pero no proporciona ninguna manera para automatizar la recuperación de la memoria de montón nativo. Tipos de referencia son el único tipo administrado en el que se va a ajustar las clases nativas no triviales.  
   
 ## <a name="interior-pointers"></a>Punteros interiores  
- `Form (2)`y `Form (3)` versiones posteriores pueden direccionar casi cualquier cosa (es decir, cualquier elemento administrado o nativo). Por ejemplo, por lo tanto, se permiten todos los requisitos siguientes en extensiones administradas:  
+ `Form (2)` y `Form (3)` versiones posteriores pueden direccionar casi cualquier cosa (es decir, cualquier elemento administrado o nativo). Por ejemplo, por lo tanto, se permiten todos los requisitos siguientes en extensiones administradas:  
   
 ```  
 __value struct V { int i; };  
@@ -126,7 +121,7 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)`y `Form (3)` de extensiones administradas se asignan en `interior_ptr<V>`. `Form (4)`es un controlador de seguimiento. Trata de todo el objeto que se ha aplicado conversión boxing dentro del montón administrado. Se traduce en la nueva sintaxis en una `V^`,  
+ `Form (2)` y `Form (3)` de extensiones administradas se asignan en `interior_ptr<V>`. `Form (4)` es un controlador de seguimiento. Trata de todo el objeto que se ha aplicado conversión boxing dentro del montón administrado. Se traduce en la nueva sintaxis en una `V^`,  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    

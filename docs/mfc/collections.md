@@ -1,13 +1,10 @@
 ---
 title: Colecciones | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e980f3f8fe86b621cb1494b08aec3fcdcb49f54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: beae5370c86bf0142b29f029778083f3042ae931
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections"></a>Colecciones
 La biblioteca Microsoft Foundation Class proporciona clases de colección para administrar grupos de objetos. Estas clases son de dos tipos:  
@@ -48,7 +43,7 @@ La biblioteca Microsoft Foundation Class proporciona clases de colección para a
 > [!NOTE]
 >  Si el código ya utiliza las clases de colección sin plantilla, aún puede utilizarlos. Si escribe nuevas clases de colección con seguridad de tipos para sus propios tipos de datos, se recomienda usar las nuevas clases basadas en plantillas.  
   
-##  <a name="_core_collection_shapes"></a>Formas de colección  
+##  <a name="_core_collection_shapes"></a> Formas de colección  
  Una clase de colección se caracteriza por su "forma" y por los tipos de sus elementos. La forma hace referencia a la forma en que los objetos se organizan y almacenan en la colección. MFC proporciona tres formas de colección básicas: listas, matrices y mapas (también conocidos como diccionarios). Puede elegir la forma de colección más adecuado para su problema concreto de programación.  
   
  Cada una de las tres formas de colección proporcionado se describe brevemente más adelante en este tema. Para comparar las características de las formas para ayudarle a decidir cuál es mejor para el programa, vea [recomendaciones para elegir una clase de colección](../mfc/recommendations-for-choosing-a-collection-class.md).  
@@ -65,7 +60,7 @@ La biblioteca Microsoft Foundation Class proporciona clases de colección para a
   
      Un mapa es una colección que se asocia a un objeto de clave de un objeto de valor.  
   
-##  <a name="_core_the_template_based_collection_classes"></a>Las clases de colección basadas en plantillas  
+##  <a name="_core_the_template_based_collection_classes"></a> Las clases de colección basadas en plantillas  
  La manera más fácil de implementar una colección con seguridad de tipos que contiene objetos de cualquier tipo es usar una de las clases basadas en plantillas MFC. Para obtener ejemplos de estas clases, vea el ejemplo MFC [recopilar](../visual-cpp-samples.md).  
   
  En la tabla siguiente se enumera las clases de colección basadas en plantillas MFC.  
@@ -77,7 +72,7 @@ La biblioteca Microsoft Foundation Class proporciona clases de colección para a
 |Colecciones de objetos de cualquier tipo|`CArray`|`CList`|`CMap`|  
 |Colecciones de punteros a objetos de cualquier tipo|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a>Las clases de colección no basadas en plantillas  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> Las clases de colección no basadas en plantillas  
  Si la aplicación ya utiliza clases sin plantilla MFC, puede continuar usarlos. Sin embargo, para las nuevas colecciones, se recomienda que se utilizan las clases basadas en plantillas. En la tabla siguiente se enumera las clases de colección de MFC que no se basan en plantillas.  
   
 ### <a name="nontemplate-collection-classes"></a>Clases de colección no es de plantilla  

@@ -1,13 +1,10 @@
 ---
-title: "Objetos de datos y orígenes de datos: manipulación | Documentos de Microsoft"
-ms.custom: 
+title: 'Objetos de datos y orígenes de datos: manipulación | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objetos de datos y orígenes de datos: manipulación
 Una vez creado un objeto de datos o un origen de datos, puede realizar una serie de operaciones comunes en los datos, como insertar y eliminar datos, enumerar los formatos de que los datos están en y mucho más. Este artículo describen las técnicas necesarias para completar las operaciones más habituales. Entre los temas se incluyen los siguientes:  
@@ -42,14 +37,14 @@ Una vez creado un objeto de datos o un origen de datos, puede realizar una serie
   
 -   [Recuperación de datos de un objeto de datos](#_core_retrieving_data_from_a_data_object)  
   
-##  <a name="_core_inserting_data_into_a_data_source"></a>Insertar datos en un origen de datos  
+##  <a name="_core_inserting_data_into_a_data_source"></a> Insertar datos en un origen de datos  
  ¿Cómo se insertan los datos en un origen de datos depende de si los datos se suministran inmediatamente o a petición y medio en que se proporciona. Las posibilidades son como se indica a continuación.  
   
 ### <a name="supplying-data-immediately-immediate-rendering"></a>Suministrar datos inmediatamente (procesamiento inmediato)  
   
 -   Llame a `COleDataSource::CacheGlobalData` repetidamente para cada formato de Portapapeles en el que está proporcionando los datos. Pase el formato de Portapapeles para usarse, un identificador de la memoria que contiene los datos y, opcionalmente, un **FORMATETC** estructura que describa los datos.  
   
-     O bien  
+     -o bien-  
   
 -   Si desea trabajar directamente con **STGMEDIUM** estructuras, se llama a `COleDataSource::CacheData` en lugar de `COleDataSource::CacheGlobalData` en la opción anterior.  
   
@@ -58,11 +53,11 @@ Una vez creado un objeto de datos o un origen de datos, puede realizar una serie
   
 -   Llame a `COleDataSource::DelayRenderData` repetidamente para cada formato de Portapapeles en el que está proporcionando los datos. Pase el formato de Portapapeles para usarse y, opcionalmente, un **FORMATETC** estructura que describa los datos. Cuando se solicitan los datos, el marco llamará `COleDataSource::OnRenderData`, que es necesario reemplazar.  
   
-     O bien  
+     -o bien-  
   
 -   Si utiliza un `CFile` objeto que se va a proporcionar los datos, llame a `COleDataSource::DelayRenderFileData` en lugar de `COleDataSource::DelayRenderData` en la opción anterior. Cuando se solicitan los datos, el marco llamará `COleDataSource::OnRenderFileData`, que es necesario reemplazar.  
   
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>Determinar los formatos disponibles en un objeto de datos  
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Determinar los formatos disponibles en un objeto de datos  
  Antes de que una aplicación permite al usuario pegar datos en él, debe saber si hay formatos que puede controlar en el Portapapeles. Para ello, la aplicación debe hacer lo siguiente:  
   
 1.  Crear un `COleDataObject` objeto y un **FORMATETC** estructura.  
@@ -73,13 +68,13 @@ Una vez creado un objeto de datos o un origen de datos, puede realizar una serie
   
     -   Llamar al objeto de datos `IsDataAvailable` necesario la función de miembro si hay solo uno o dos formatos. Esto le permitirá ahorrar tiempo en casos donde los datos en el Portapapeles es compatible con muchos más formatos que la aplicación.  
   
-         O bien  
+         -o bien-  
   
     -   Llamar al objeto de datos `BeginEnumFormats` función de miembro para empezar a enumerar los formatos disponibles en el Portapapeles. A continuación, llame a `GetNextFormat` hasta que el Portapapeles devuelva un formato de la aplicación admite o no hay ningún formato más.  
   
  Si utilizas `ON_UPDATE_COMMAND_UI`, ahora puede habilitar la pegar y, posiblemente, elementos de pegado especial en el menú Edición. Para ello, llame a `CMenu::EnableMenuItem` o `CCmdUI::Enable`. Para obtener más información acerca de qué contenedor deben hacer con los elementos de menú y, vea aplicaciones [menús y recursos: adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).  
   
-##  <a name="_core_retrieving_data_from_a_data_object"></a>Recuperación de datos de un objeto de datos  
+##  <a name="_core_retrieving_data_from_a_data_object"></a> Recuperación de datos de un objeto de datos  
  Una vez que haya decidido en un formato de datos, lo único que queda es recuperar los datos del objeto de datos. Para ello, el usuario decide dónde colocar los datos y la aplicación llama a la función adecuada. Los datos estarán disponibles en uno de los siguientes medios:  
   
 |Medium|Función que se llama|  

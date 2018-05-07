@@ -1,12 +1,9 @@
 ---
 title: BEGIN_ACCESSOR | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BEGIN_ACCESSOR
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - BEGIN_ACCESSOR macro, syntax
 - BEGIN_ACCESSOR macro
 ms.assetid: 59d0ff3e-7cfd-4ce8-9a1c-d664c0892a52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac11ee19a626a945500bd9acb95cbe8ce0823d82
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0ffb1d506a198586a5a625664f21c29954aada40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginaccessor"></a>BEGIN_ACCESSOR
 Marca el principio de una entrada de descriptor de acceso.  
@@ -42,7 +37,7 @@ BEGIN_ACCESSOR(num, bAuto)
  *num*  
  [in] El número de desplazamiento cero para el descriptor de acceso en este mapa de descriptor de acceso.  
   
- *bAuto*  
+ *bSelección*  
  [in] Especifica si este descriptor de acceso es un descriptor de acceso automático o un descriptor de acceso manual. Si **true**, el descriptor de acceso es automático; si **false**, el descriptor de acceso es manual. Un descriptor de acceso automático significa datos se capturan automáticamente en las operaciones de movimiento.  
   
 ## <a name="remarks"></a>Comentarios  

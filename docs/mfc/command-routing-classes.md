@@ -1,13 +1,10 @@
 ---
 title: Clases de enrutamiento de comandos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.command
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC, command routing
 - command routing [MFC], classes
 ms.assetid: 4b50e689-2c54-4e6c-90f0-37333e22b2a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7e49c92b909abb01f3daec9e16f0e08b2a31c89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3e05046ac6754dd585bb1fbf51420ef862af7be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-routing-classes"></a>Clases de enrutamiento de comandos
 Cuando el usuario interactúa con la aplicación eligiendo los menús o botones de barra de control con el mouse, la aplicación envía mensajes desde el objeto de interfaz de usuario afectado a un objeto de destino del comando adecuado. Destino del comando clases derivadas de `CCmdTarget` incluyen [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), y las clases que derivan de ellos. El marco de trabajo admite el enrutamiento de comandos automática para que los comandos pueden ser controlados por el objeto más adecuado actualmente activo en la aplicación.  

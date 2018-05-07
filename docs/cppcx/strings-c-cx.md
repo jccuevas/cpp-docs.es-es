@@ -1,24 +1,19 @@
 ---
 title: Cadenas (C++ / CX) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70f5fc5478d0950a7287da690822046621e517b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f5c5e4cfe13f72585a2566773c88724f3618784
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strings-ccx"></a>Cadenas (C++/CX)
 Texto en el tiempo de ejecución de Windows se representa en C++ / CX por la [clase Platform:: String](../cppcx/platform-string-class.md). Use la `Platform::String Class` al pasar cadenas y hacia atrás a los métodos de clases en tiempo de ejecución de Windows, o cuando estés interactuando con otros componentes en tiempo de ejecución de Windows a través del límite de interfaz binaria (ABI) de la aplicación. La clase `Platform::String Class` proporciona métodos para varias operaciones de cadena comunes, pero no está diseñada para ser una clase de cadena completa. En el módulo de C++, utiliza los tipos de cadena de C++ estándar tales como [wstring](../standard-library/basic-string-class.md) para cualquier procesamiento de texto significativo y, a continuación, convierte el resultado final a [Platform::String^](../cppcx/platform-string-class.md) antes de pasarlo a o desde una interfaz pública. La conversión entre `wstring` o `wchar_t*` y `Platform::String`es un proceso sencillo y eficaz.  

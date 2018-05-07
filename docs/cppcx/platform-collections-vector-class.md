@@ -1,11 +1,8 @@
 ---
 title: Clase Platform::Collections::vector | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector (Clase)
 
@@ -83,25 +78,25 @@ Si intenta usar un **Vector** tipo en un valor devuelto público o un parámetro
 
 |Name|Descripción|
 |----------|-----------------|
-|[Vector::Vector](#ctor)|Inicializa una nueva instancia de la clase Vector.|
+|[Vector:: vector](#ctor)|Inicializa una nueva instancia de la clase Vector.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Vector::Append](#append)|Inserta el elemento especificado a continuación del último elemento en el objeto Vector actual.|
-|[Vector::Clear](#clear)|Elimina todos los elementos del Vector actual.|
-|[Vector::First](#first)|Devuelve un iterador que especifica el primer elemento del objeto Vector.|
-|[Vector::GetAt](#getat)|Recupera el elemento del objeto Vector actual identificado por el índice especificado.|
-|[Vector::GetMany](#getmany)|Recupera una secuencia de elementos del objeto Vector actual, empezando en el índice especificado.|
-|[Vector::GetView](#getview)|Devuelve una vista de solo lectura de una clase Vector; es decir, [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
-|[Vector::IndexOf](#indexof)|Busca el elemento especificado en el objeto Vector actual y, si lo encuentra, devuelve el índice del elemento.|
-|[Vector::InsertAt](#insertat)|Inserta el elemento especificado en el objeto Vector actual detrás del elemento identificado por el índice especificado.|
-|[Vector::ReplaceAll](#replaceall)|Elimina los elementos del objeto Vector actual y después inserta los elementos de la matriz especificada.|
-|[Vector::RemoveAt](#removeat)|Elimina el elemento identificado por el índice especificado del objeto Vector actual.|
-|[Vector::RemoveAtEnd](#removeatend)|Elimina el elemento al final del objeto Vector actual.|
-|[Vector::SetAt](#setat)|Asigna el valor especificado al elemento del objeto Vector actual identificado por el índice especificado.|
-|[Vector::Size](#size)|Devuelve el número de elementos del objeto Vector actual.|
+|[Vector:: Append](#append)|Inserta el elemento especificado a continuación del último elemento en el objeto Vector actual.|
+|[Vector:: Clear](#clear)|Elimina todos los elementos del Vector actual.|
+|[Vector:: First](#first)|Devuelve un iterador que especifica el primer elemento del objeto Vector.|
+|[Vector:: GetAt](#getat)|Recupera el elemento del objeto Vector actual identificado por el índice especificado.|
+|[Vector:: getmany](#getmany)|Recupera una secuencia de elementos del objeto Vector actual, empezando en el índice especificado.|
+|[Vector:: GetView](#getview)|Devuelve una vista de solo lectura de una clase Vector; es decir, [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
+|[Vector:: IndexOf](#indexof)|Busca el elemento especificado en el objeto Vector actual y, si lo encuentra, devuelve el índice del elemento.|
+|[Vector:: InsertAt](#insertat)|Inserta el elemento especificado en el objeto Vector actual detrás del elemento identificado por el índice especificado.|
+|[Vector:: ReplaceAll](#replaceall)|Elimina los elementos del objeto Vector actual y después inserta los elementos de la matriz especificada.|
+|[Vector:: RemoveAt](#removeat)|Elimina el elemento identificado por el índice especificado del objeto Vector actual.|
+|[Vector:: removeatend](#removeatend)|Elimina el elemento al final del objeto Vector actual.|
+|[Vector:: SetAt](#setat)|Asigna el valor especificado al elemento del objeto Vector actual identificado por el índice especificado.|
+|[Vector:: Size](#size)|Devuelve el número de elementos del objeto Vector actual.|
 
 ### <a name="events"></a>Eventos
 
@@ -269,7 +264,7 @@ virtual void InsertAt(unsigned int index, T item)
 *index*  
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
-*item*  
+*Elemento*  
 Un elemento a insertar en el objeto Vector detrás del elemento especificado por *índice*. El tipo de *elemento* está definida por el *T* typename.
 
 ## <a name="removeat"></a>  Vector:: RemoveAt (método)
@@ -327,7 +322,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*  
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
-*item*  
+*Elemento*  
 El valor que se va a asignar al elemento especificado. El tipo de *elemento* está definida por el *T* typename.
 
 ## <a name="size"></a>  Vector:: Size (método)
@@ -378,7 +373,7 @@ A [Platform:: Array](../cppcx/platform-array-class.md) que se utilizará para in
 *InIt*  
 El tipo de una colección de objetos que se utiliza para inicializar el objeto Vector actual.
 
-*il*  
+*IL*  
 A [std:: initializer_list](../standard-library/initializer-list-class.md) de objetos de tipo *T* que se utilizará para inicializar el objeto Vector.
 
 *N*  
@@ -399,7 +394,7 @@ Puntero a un objeto `std::vector` que se usa para inicializar el objeto Vector a
 *first*  
 El primer elemento de una secuencia de objetos que se utilizan para inicializar el objeto Vector actual. El tipo de *primer* se pasa por medio de *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*last*  
+*último*  
 El último elemento de una secuencia de objetos que se utilizan para inicializar el objeto Vector actual. El tipo de *última* se pasa por medio de *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Vea también

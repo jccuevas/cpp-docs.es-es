@@ -1,13 +1,10 @@
 ---
-title: "Hospedaje de una ventana de formulario el Control de usuario en un cuadro de diálogo MFC | Documentos de Microsoft"
-ms.custom: 
+title: Hospedaje de una ventana de formulario el Control de usuario en un cuadro de diálogo MFC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da8e8a54947b329fe36eea5c80bdc13ba5cdfa74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 291c0856e9d305e0b2b31c6bc233005b111592a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hospedar un control de usuario de Windows Forms en un cuadro de diálogo MFC
 MFC hospeda un control de formularios Windows Forms como un tipo especial de control ActiveX y se comunica con el control mediante interfaces de ActiveX y propiedades y métodos de la <xref:System.Windows.Forms.Control> clase. Se recomienda usar métodos y propiedades de .NET Framework para operar en el control.  
@@ -44,7 +39,7 @@ MFC hospeda un control de formularios Windows Forms como un tipo especial de con
  [Cómo: Recibir eventos de Windows Forms de clases nativas de C++](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)  
   
 ## <a name="reference"></a>Referencia  
- [Clase CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog (clase)](../mfc/reference/cdialog-class.md) &#124; [CWnd (clase)](../mfc/reference/cwnd-class.md) &#124;<xref:System.Windows.Forms.Control>  
+ [Clase CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog (clase)](../mfc/reference/cdialog-class.md) &#124; [CWnd (clase)](../mfc/reference/cwnd-class.md)&#124; <xref:System.Windows.Forms.Control>  
   
 ## <a name="see-also"></a>Vea también  
  [Uso de un Control de usuario de Windows Forms en MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   

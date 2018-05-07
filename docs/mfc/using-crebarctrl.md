@@ -2,12 +2,9 @@
 title: Usar CReBarCtrl | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CReBarCtrl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70e2fd6d436120b6bae0cf02600a6d8866e11b39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5fbd58954e5b5b0bf16a052e3a667e28f6bc981
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-crebarctrl"></a>Usar CReBarCtrl
 Un control rebar actúa como un contenedor para ventanas secundarias. Estas ventanas secundarias, a menudo otros controles, se asignan a una banda de control rebar. Un control rebar puede contener una o más bandas, con cada banda puede tener cualquier combinación de una barra de controles, un mapa de bits, una etiqueta de texto y una ventana secundaria. Sin embargo, las bandas no pueden contener más de una ventana secundaria.  

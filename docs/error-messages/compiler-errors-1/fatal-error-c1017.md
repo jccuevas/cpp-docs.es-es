@@ -1,12 +1,9 @@
 ---
 title: Error irrecuperable C1017 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1017
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e28a4b09ef4d62edd97d734e4a3ad64b8a0c2f86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08433109a959b324621e9c837e67cf529d9f6fdb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1017"></a>Error irrecuperable C1017
 expresión constante de tipo entero no válida  
@@ -55,7 +50,7 @@ expresión constante de tipo entero no válida
   
  Dado que `CONSTANT_NAME` se evalúa como una cadena y no es un entero, el `#if` directiva generará el error irrecuperable C1017.  
   
- En otros casos, el preprocesador se evalúa como una constante definida como cero. Esto puede provocar resultados no deseados, tal como se muestra en el ejemplo siguiente. `YES`no está definido, por lo que se evalúa como cero. La expresión `#if` `CONSTANT_NAME` se evalúa como false y el código que se utilizará en `YES` sea quitado por el preprocesador. `NO`También está definido (cero), de modo que `#elif` `CONSTANT_NAME==NO` se evalúa como true (`0 == 0`), lo que el preprocesador dejará el código en el `#elif` parte de la instrucción, justo lo contrario de lo esperado.  
+ En otros casos, el preprocesador se evalúa como una constante definida como cero. Esto puede provocar resultados no deseados, tal como se muestra en el ejemplo siguiente. `YES` no está definido, por lo que se evalúa como cero. La expresión `#if` `CONSTANT_NAME` se evalúa como false y el código que se utilizará en `YES` sea quitado por el preprocesador. `NO` También está definido (cero), de modo que `#elif` `CONSTANT_NAME==NO` se evalúa como true (`0 == 0`), lo que el preprocesador dejará el código en el `#elif` parte de la instrucción, justo lo contrario de lo esperado.  
   
 ```  
 // C1017c.cpp  

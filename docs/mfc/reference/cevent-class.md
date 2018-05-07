@@ -1,12 +1,9 @@
 ---
 title: CEvent (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEvent
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0646e703f172777817aa569fa28d3430624ccae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cevent-class"></a>CEvent (clase)
 Representa un evento, que es un objeto de sincronización que permite que un subproceso notifique a otro que se ha producido un evento.  
@@ -66,7 +61,7 @@ class CEvent : public CSyncObject
 ## <a name="remarks"></a>Comentarios  
  Los eventos resultan útiles cuando un subproceso debe saber cuándo se debe realizar su tarea. Por ejemplo, a un subproceso que copia datos en un archivo de datos debe recibir una notificación cuando hay nuevos datos disponibles. Mediante el uso de un `CEvent` objeto que se va a notificar el subproceso de copia cuando hay nuevos datos disponibles, el subproceso puede realizar su tarea tan pronto como sea posible.  
   
- `CEvent`los objetos tienen dos tipos: manual y automática.  
+ `CEvent` los objetos tienen dos tipos: manual y automática.  
   
  Automáticos `CEvent` objeto vuelve automáticamente a un estado (no disponible) no señalado después del lanzamiento de al menos un subproceso. De forma predeterminada, un `CEvent` objeto es automático a menos que sitúe `TRUE` para el `bManualReset` parámetro durante la construcción.  
   
@@ -95,7 +90,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxmt.h  
   
-##  <a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>  CEvent::CEvent  
  Construye una con o sin nombre `CEvent` objeto.  
   
 ```  
@@ -127,7 +122,7 @@ CEvent(
 > [!IMPORTANT]
 >  Después de crear el `CEvent` objeto, utilice [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para asegurarse de que la exclusión mutua no existe. Si la exclusión mutua existía inesperadamente, puede indicar un proceso rogue es uso inapropiado y puede pretende utilizar la exclusión mutua de forma malintencionada. En este caso, el procedimiento recomendado de preocupado por la seguridad es cerrar el identificador y continuar como si se produjo un error en la creación del objeto.  
   
-##  <a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  Establece el estado del evento en señalado (disponible), libera todos los subprocesos en espera y que no señalado (no disponible) se restablece automáticamente.  
   
 ```  
@@ -142,9 +137,9 @@ BOOL PulseEvent();
   
  Si ningún subproceso en espera o no se pueden liberar inmediatamente, no hay ningún subproceso `PulseEvent` establece el estado del evento en no señalado y devuelve.  
   
- `PulseEvent`usa el Win32 subyacente `PulseEvent` función, que se puede quitar en breve desde el estado de espera por una llamada a procedimiento asincrónico de modo kernel. Por lo tanto, `PulseEvent` es confiable y no se debe usar en nuevas aplicaciones. Para obtener más información, consulte el [PulseEvent función](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
+ `PulseEvent` usa el Win32 subyacente `PulseEvent` función, que se puede quitar en breve desde el estado de espera por una llamada a procedimiento asincrónico de modo kernel. Por lo tanto, `PulseEvent` es confiable y no se debe usar en nuevas aplicaciones. Para obtener más información, consulte el [PulseEvent función](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
   
-##  <a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>  CEvent::ResetEvent  
  Establece el estado del evento en no señalado hasta que establezca explícitamente como señalado por el [SetEvent](#setevent) función miembro.  
   
 ```  
@@ -159,7 +154,7 @@ BOOL ResetEvent();
   
  Esta función miembro no se utiliza por eventos automáticos.  
   
-##  <a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>  CEvent::SetEvent  
  Establece el estado del evento en señalado, liberar los subprocesos en espera.  
   
 ```  
@@ -172,7 +167,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>Comentarios  
  Si el evento es manual, el evento permanecerá señalado hasta [ResetEvent](#resetevent) se llama. Más de un subproceso puede liberarse en este caso. Si el evento es automático, el evento permanecerá señalado hasta que se libera un único subproceso. El sistema, a continuación, establecerá el estado del evento en no señalado. Si no hay ningún subproceso en espera, el estado permanece señalado hasta que se libere un subproceso.  
   
-##  <a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>  CEvent::Unlock  
  Libera el objeto de evento.  
   
 ```  

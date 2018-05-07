@@ -1,12 +1,9 @@
 ---
 title: IDBInitializeImpl (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IDBInitializeImpl<T>
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - IDBInitializeImpl class
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60fba7a37147a4ab5bb6847a945bf9ffec3706da
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4e18d220b8ca7da0e76ac1434cebf851ef40ad67
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl (Clase)
 Proporciona una implementación para el [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx) interfaz.  
@@ -59,7 +54,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 |||  
 |-|-|  
 |[Initialize](../../data/oledb/idbinitializeimpl-initialize.md)|Inicia el proveedor.|  
-|[Uninitialize](../../data/oledb/idbinitializeimpl-uninitialize.md)|Detiene el proveedor.|  
+|[Cancelar la inicialización](../../data/oledb/idbinitializeimpl-uninitialize.md)|Detiene el proveedor.|  
   
 ### <a name="data-members"></a>Miembros de datos  
   

@@ -1,11 +1,8 @@
 ---
 title: Clase Platform::Collections::Map | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map (Clase)
 
@@ -86,27 +81,27 @@ Para obtener más información, consulte [colecciones](../cppcx/collections-c-cx
 
 |Name|Descripción|
 |----------|-----------------|
-|[Map::Map](#ctor)|Inicializa una nueva instancia de la clase Map.|
+|[Map](#ctor)|Inicializa una nueva instancia de la clase Map.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Map::Clear](#clear)|Quita todos los pares clave-valor del objeto Map actual.|
+|[Map:: Clear](#clear)|Quita todos los pares clave-valor del objeto Map actual.|
 |[Map::First](#first)|Devuelve un iterador que especifica el primer elemento del objeto Map.|
-|[Map::GetView](#getview)|Devuelve una vista de solo lectura del objeto Map actual; es decir, [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md).|
+|[Map:: GetView](#getview)|Devuelve una vista de solo lectura del objeto Map actual; es decir, [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md).|
 |[Map::HasKey](#haskey)|Determina si el objeto Map actual contiene la clave especificada.|
-|[Map::Insert](#insert)|Agrega el par clave-valor especificado al objeto Map actual.|
-|[Map::Lookup](#lookup)|Recupera el elemento en la clave especificada del objeto Map actual.|
-|[Map::Remove](#remove)|Elimina el par clave-valor especificado del objeto Map actual.|
-|[Map::Size](#size)|Devuelve el número de elementos del objeto Map actual.|
+|[Map:: Insert](#insert)|Agrega el par clave-valor especificado al objeto Map actual.|
+|[Map:: Lookup](#lookup)|Recupera el elemento en la clave especificada del objeto Map actual.|
+|[Map:: Remove](#remove)|Elimina el par clave-valor especificado del objeto Map actual.|
+|[Map:: Size](#size)|Devuelve el número de elementos del objeto Map actual.|
 
 ### <a name="events"></a>Eventos
 
 |||
 |-|-|
 |nombre|Descripción|
-|[Map::MapChanged](#mapchanged-event.md) `event`|Se produce cuando cambia la asignación.|
+|[Mapchanged](#mapchanged-event.md) `event`|Se produce cuando cambia la asignación.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -161,7 +156,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Un objeto `MapView`.
 
-## <a name="haskey"></a>  Map::HasKey Method
+## <a name="haskey"></a>  Map:: haskey (método)
 
 Determina si el objeto Map actual contiene la clave especificada.
 
@@ -256,7 +251,7 @@ Una referencia o [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a
 *first*  
 El iterador de entrada del primer elemento en un intervalo de elementos utilizados para inicializar el objeto Map actual.
 
-*last*  
+*último*  
 El iterador de entrada del primer elemento tras un intervalo de elementos utilizados para inicializar el objeto Map actual.
 
 ## <a name="mapchanged"></a>  Mapchanged (evento)

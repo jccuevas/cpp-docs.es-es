@@ -1,29 +1,24 @@
 ---
-title: "Cómo busca el marco los mapas de mensajes | Documentos de Microsoft"
-ms.custom: 
+title: Cómo busca el marco los mapas de mensajes | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message maps [MFC], searching
 ms.assetid: fd1df878-5601-45d7-bd1f-b8f8e65b9a17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9bea3e2a0b79e8e38fbdb61c851f5a1ab72f01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1fc80573b110c3eacc790082b837a87815283f55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Cómo busca el marco los mapas de mensajes
 El marco de trabajo busca en la tabla de mapa de mensajes para buscar coincidencias con los mensajes entrantes. Una vez que se escribe una entrada de mapa de mensajes para cada mensaje que desea que una clase para controlar y escribir los controladores correspondientes, el marco de trabajo llamará automáticamente a los controladores. Los siguientes temas explican la búsqueda de mapa de mensajes:  
