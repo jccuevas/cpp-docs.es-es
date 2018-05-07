@@ -1,13 +1,10 @@
 ---
 title: Usar CHotKeyCtrl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CHotKeyCtrl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d577369dea4f5fe2fffa9801bbd8ae8501f71a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3678d95ff0748c1854e509d898dfa89778c9a5f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-chotkeyctrl"></a>Usar CHotKeyCtrl
 Un control hot key, representado por la clase [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), es una ventana que muestra una representación de texto de la combinación de teclas que el usuario escribe en él, por ejemplo, CTRL + MAYÚS + Q. También mantiene una representación interna de esta clave en el formato de un código de tecla virtual y un conjunto de marcas que representan el estado de desplazamiento. El control de tecla de acceso rápido realmente no se establece la tecla de acceso rápido: hacer que depende de su programa. (Para obtener una lista de códigos de tecla virtuales estándares, vea Winuser.h.)  

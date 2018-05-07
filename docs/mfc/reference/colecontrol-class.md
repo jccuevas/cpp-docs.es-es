@@ -1,12 +1,9 @@
 ---
 title: COleControl (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControl
@@ -343,17 +340,15 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0b2a9f7a506c5ebc1d6fdf1a37960a9322fde131
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrol-class"></a>COleControl (clase)
 Una clase base eficaz para desarrollar controles OLE.  
@@ -530,7 +525,7 @@ class COleControl : public CWnd
 |[COleControl::SetNotSupported](#setnotsupported)|Se impide la modificación al valor de propiedad de un control por el usuario.|  
 |[COleControl::SetRectInContainer](#setrectincontainer)|Establece el rectángulo del control con respecto a su contenedor.|  
 |[COleControl::SetText](#settext)|Establece el valor de la propiedad de texto o de leyenda estándar.|  
-|[COleControl::ThrowError](#throwerror)|Indica que se ha producido un error en un control OLE.|  
+|[COleControl:: ThrowError](#throwerror)|Indica que se ha producido un error en un control OLE.|  
 |[COleControl::TransformCoords](#transformcoords)|Transformaciones valores entre un contenedor y el control de las coordenadas.|  
 |[COleControl::TranslateColor](#translatecolor)|Convierte un **OLE_COLOR** valor a un **COLORREF** valor.|  
 |[COleControl::WillAmbientsBeValidDuringLoad](#willambientsbevalidduringload)|Determina si las propiedades de ambiente estará disponibles la próxima vez que se cargue el control.|  
@@ -633,7 +628,7 @@ OLE_COLOR AmbientForeColor();
 ### <a name="remarks"></a>Comentarios  
  La propiedad de color de primer plano ambiente está disponible para todos los controles y se define por el contenedor. Tenga en cuenta que el contenedor no es necesario para admitir esta propiedad.  
   
-##  <a name="ambientlocaleid"></a>  COleControl::AmbientLocaleID  
+##  <a name="ambientlocaleid"></a>  COleControl:: AmbientLocaleID  
  Devuelve el identificador de configuración regional. del contenedor  
   
 ```  
@@ -854,7 +849,7 @@ virtual void DisplayError(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *scode*  
+ *SCODE*  
  El valor de código de estado que se notificarán. Para obtener una lista completa de los posibles códigos, vea el artículo [controles ActiveX: temas avanzados](../../mfc/mfc-activex-controls-advanced-topics.md).  
   
  `lpszDescription`  
@@ -886,7 +881,7 @@ void DoClick();
   
  Esta función es compatible con la `COleControl` clase base como un método estándar, denominado DoClick. Para obtener más información, vea el artículo [controles ActiveX: métodos](../../mfc/mfc-activex-controls-methods.md).  
   
-##  <a name="dopropexchange"></a>  COleControl::DoPropExchange  
+##  <a name="dopropexchange"></a>  COleControl:: DoPropExchange  
  Lo llama el marco al cargar o almacenar un control desde una representación de un almacenamiento persistente, como un conjunto de flujo o la propiedad.  
   
 ```  
@@ -999,7 +994,7 @@ void ExchangeStockProps(CPropExchange* pPX);
 ### <a name="remarks"></a>Comentarios  
  Esta función normalmente se llama por la implementación predeterminada de `COleControl::DoPropExchange`.  
   
-##  <a name="exchangeversion"></a>  COleControl::ExchangeVersion  
+##  <a name="exchangeversion"></a>  COleControl:: ExchangeVersion  
  Serializa o inicializa el estado de un control información de versión.  
   
 ```  
@@ -1051,7 +1046,7 @@ void FireDblClick();
   
  Para la activación automática de los que se produzca un evento DblClick, mapa de eventos del control debe tener un evento DblClick cotizaciones definido.  
   
-##  <a name="fireerror"></a>  COleControl::FireError  
+##  <a name="fireerror"></a>  COleControl:: FireError  
  Se desencadena el evento de Error estándar.  
   
 ```  
@@ -1062,7 +1057,7 @@ void FireError(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *scode*  
+ *SCODE*  
  El valor de código de estado que se notificarán. Para obtener una lista completa de los posibles códigos, vea el artículo [controles ActiveX: temas avanzados](../../mfc/mfc-activex-controls-advanced-topics.md).  
   
  `lpszDescription`  
@@ -1080,7 +1075,7 @@ void FireError(
   
  Para solucionar este problema, cambie manualmente el `SCODE` parámetro en el control. Archivos ODL a un **largo**. Además, cualquier evento personalizado, método o propiedad que utiliza un `SCODE` parámetro también provoca el mismo problema.  
   
-##  <a name="fireevent"></a>  COleControl::FireEvent  
+##  <a name="fireevent"></a>  A COleControl:: FireEvent  
  Se desencadena un evento definido por el usuario desde el control con cualquier número de argumentos opcionales.  
   
 ```  
@@ -1346,7 +1341,7 @@ void FireReadyStateChange();
   
  [Adecuado](#internalsetreadystate) cambia el estado Listo al valor proporcionado, a continuación, llama a `FireReadyStateChange`.  
   
-##  <a name="getactivationpolicy"></a>  COleControl::GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>  COleControl:: GetActivationPolicy  
  Modifica el comportamiento de activación predeterminada de un control que admite el `IPointerInactive` interfaz.  
   
 ```  
@@ -1388,7 +1383,7 @@ virtual DWORD GetActivationPolicy();
   
  [!code-cpp[NVC_MFCAxCtl#10](../../mfc/reference/codesnippet/cpp/colecontrol-class_2.cpp)]  
   
-##  <a name="getambientproperty"></a>  COleControl::GetAmbientProperty  
+##  <a name="getambientproperty"></a>  COleControl:: GetAmbientProperty  
  Obtiene el valor de una propiedad de ambiente del contenedor.  
   
 ```  
@@ -1412,10 +1407,10 @@ BOOL GetAmbientProperty(
 |------------|--------------------|  
 |`VT_BOOL`|**BOOL\***|  
 |`VT_BSTR`|**CString\***|  
-|`VT_I2`|**short\***|  
+|`VT_I2`|**Corto\***|  
 |`VT_I4`|**Long\***|  
-|`VT_R4`|**float\***|  
-|`VT_R8`|**double\***|  
+|`VT_R4`|**Float\***|  
+|`VT_R8`|**Doble\***|  
 |`VT_CY`|**CY\***|  
 |**VT_COLOR**|**OLE_COLOR\***|  
 |**VT_DISPATCH**|**LPDISPATCH\***|  
@@ -1482,7 +1477,7 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *pclsid*  
+ *pTypeInfo*  
  Puntero a la ubicación del identificador de clase.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1532,7 +1527,7 @@ LPOLECLIENTSITE GetClientSite();
 ### <a name="remarks"></a>Comentarios  
  El puntero devuelto apunta a una instancia de `IOleClientSite`. El `IOleClientSite` interfaz implementada por contenedores, es la vista del objeto de su contexto de: donde se está anclada en el documento, donde obtiene su almacenamiento, la interfaz de usuario y otros recursos.  
   
-##  <a name="getcontrolflags"></a>  COleControl::GetControlFlags  
+##  <a name="getcontrolflags"></a>  COleControl:: GetControlFlags  
  Recupera la configuración del indicador de control.  
   
 ```  
@@ -1586,7 +1581,7 @@ void GetControlSize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *pcx*  
+ *PCX*  
  Especifica el ancho del control en píxeles.  
   
  *PCY*  
@@ -1823,7 +1818,7 @@ BSTR GetText();
 ### <a name="remarks"></a>Comentarios  
  Tenga en cuenta que el llamador de esta función debe llamar a `SysFreeString` en la cadena devuelta para gratis el recurso. En la implementación del control, use `InternalGetText` para tener acceso a las propiedades estándar de texto o el título del control.  
   
-##  <a name="getwindowlessdroptarget"></a>  COleControl::GetWindowlessDropTarget  
+##  <a name="getwindowlessdroptarget"></a>  COleControl:: GetWindowlessDropTarget  
  Invalidar `GetWindowlessDropTarget` cuando desee un control sin ventana sea el destino de una OLE operación arrastrar y colocar.  
   
 ```  
@@ -1877,7 +1872,7 @@ const CString& InternalGetText();
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a la cadena de texto del control.  
   
-##  <a name="internalsetreadystate"></a>  COleControl::InternalSetReadyState  
+##  <a name="internalsetreadystate"></a>  COleControl:: InternalSetReadyState  
  Establece el estado de preparación del control.  
   
 ```  
@@ -2167,7 +2162,7 @@ virtual BOOL OnDoVerb(
   
  Reemplace esta función para cambiar el procesamiento predeterminado de verbo.  
   
-##  <a name="ondraw"></a>  COleControl::OnDraw  
+##  <a name="ondraw"></a>  COleControl:: OnDraw  
  Lo llama el marco de trabajo para dibujar el control OLE en el rectángulo delimitador especificado utilizando el contexto de dispositivo especificado.  
   
 ```  
@@ -2190,7 +2185,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Comentarios  
  `OnDraw` Normalmente, se llama para su presentación en pantalla, pasar un contexto de dispositivo de pantalla como `pDC`. El `rcBounds` parámetro identifica el rectángulo en el contexto de dispositivo de destino (en relación con el modo de asignación actual). El `rcInvalid` parámetro es el rectángulo real que no es válido. En algunos casos se trata de un área menor que `rcBounds`.  
   
-##  <a name="ondrawmetafile"></a>  COleControl::OnDrawMetafile  
+##  <a name="ondrawmetafile"></a>  COleControl:: OnDrawMetafile  
  Lo llama el marco de trabajo para dibujar el control OLE en el rectángulo delimitador especificado utilizando el contexto de dispositivo de metarchivo especificado.  
   
 ```  
@@ -2418,7 +2413,7 @@ virtual BOOL OnGetNaturalExtent(
  `dwAspect`  
  Especifica cómo se va a representar el objeto. Representaciones incluyen contenido, un icono, una vista en miniatura o un documento impreso. Los valores válidos se toman de la enumeración [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) o **DVASPECT2**.  
   
- *lindex*  
+ *lIndex*  
  La parte del objeto que es de interés. Actualmente, sólo -1 es válido.  
   
  `ptd`  
@@ -2521,7 +2516,7 @@ virtual BOOL OnGetViewExtent(
  *dwDrawAspect*  
  `DWORD` Describir qué formulario o aspecto, de un objeto es que se mostrará. Los valores válidos se toman de la enumeración [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) o **DVASPECT2**.  
   
- *lindex*  
+ *lIndex*  
  La parte del objeto que es de interés. Actualmente, sólo -1 es válido.  
   
  `ptd`  
@@ -2951,7 +2946,7 @@ virtual BOOL OnRenderGlobalData(
   
  Para obtener más información, consulte el **FORMATETC** estructura en el SDK de Windows.  
   
-##  <a name="onresetstate"></a>  COleControl::OnResetState  
+##  <a name="onresetstate"></a>  COleControl:: OnResetState  
  Lo llama el marco cuando las propiedades del control deben establecerse en sus valores predeterminados.  
   
 ```  
@@ -2963,7 +2958,7 @@ virtual void OnResetState();
   
  El sistema de escritura de control puede insertar código de inicialización para el control OLE en este reemplazable. Esta función se invoca cuando [IPersistStream:: Load](http://msdn.microsoft.com/library/windows/desktop/ms680568) o [IPersistStorage:: Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) se produce un error, o [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) o [IPersistStorage: : InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) se llama, sin llamar primero a cualquiera **IPersistStream:: Load** o **IPersistStorage:: Load**.  
   
-##  <a name="onsetclientsite"></a>  COleControl::OnSetClientSite  
+##  <a name="onsetclientsite"></a>  COleControl:: OnSetClientSite  
  Lo llama el marco de trabajo cuando el contenedor denomina el control **IOleControl::SetClientSite** (función).  
   
 ```  
@@ -3345,7 +3340,7 @@ CFont* SelectFontObject(
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la fuente seleccionada anteriormente. Cuando el llamador ha terminado todas las operaciones de dibujo que utilizan *fontHolder,* debe volver a la fuente seleccionada anteriormente si se pasa como un parámetro a [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject).  
   
-##  <a name="selectstockfont"></a>  COleControl::SelectStockFont  
+##  <a name="selectstockfont"></a>  COleControl:: SelectStockFont  
  Selecciona la propiedad Font estándar en un contexto de dispositivo.  
   
 ```  
@@ -3592,7 +3587,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ### <a name="remarks"></a>Comentarios  
  Llamada a esta función siempre que produce un cambio que afectaría al estado persistente del control. Por ejemplo, si cambia el valor de una propiedad persistente, llame a esta función con `bModified` **TRUE**.  
   
-##  <a name="setnotpermitted"></a>  COleControl::SetNotPermitted  
+##  <a name="setnotpermitted"></a>  COleControl:: SetNotPermitted  
  Indica que ha fallado una solicitud de edición.  
   
 ```  
@@ -3643,7 +3638,7 @@ void SetText(LPCTSTR pszText);
 ### <a name="remarks"></a>Comentarios  
  Tenga en cuenta que tanto las propiedades estándar de título y el texto se asignan en el mismo valor. Esto significa que los cambios realizados en cualquiera de estas propiedades cambiará automáticamente ambas propiedades. En general, un control debe admitir las existencias título o propiedad de texto, pero no ambos.  
   
-##  <a name="throwerror"></a>  COleControl::ThrowError  
+##  <a name="throwerror"></a>  COleControl:: ThrowError  
  Indica la aparición de un error en el control.  
   
 ```  

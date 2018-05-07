@@ -1,13 +1,10 @@
 ---
 title: Probar aplicaciones de Internet | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - debugging [MFC], Web applications
 - Internet debugging and testing
 ms.assetid: ac4c74e3-d4ad-4e19-8f6c-e270de067f01
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cc214eb98b8aa9e927fd471ba313e4cade426a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61ffc5b11783806555b210b8561cbe6cdd2878ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-internet-applications"></a>Probar aplicaciones para Internet
 Hay algunos desafíos únicos de pruebas en Internet, especialmente para las aplicaciones que se ejecutan en un servidor Web. Las pruebas iniciales suelen llevarse a cabo mediante un cliente de usuario único que se conecta a un servidor de prueba. Esto será útil para depurar el código.  
