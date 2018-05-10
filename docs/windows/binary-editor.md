@@ -1,13 +1,10 @@
 ---
 title: Editor binario | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary.F1
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - resource editors, Binary editor
 - Binary editor
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4dade674fb32615e23904e6dbaf03d6c6ee0a371
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d5deb511069830de5ea7aa542bb010f57be5af9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="binary-editor"></a>Editor binario
 > [!WARNING]
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  El Editor binario permite editar cualquier recurso, a nivel binario, en formato ASCII o hexadecimal. También se puede utilizar el [comando Buscar](/visualstudio/ide/reference/find-command) para buscar cadenas ASCII o bytes hexadecimales. Solo se debe utilizar el Editor binario cuando sea necesario ver o realizar pequeños cambios en recursos personalizados o en tipos de recursos no admitidos en el entorno de Visual Studio.  
   
- Para abrir el Editor binario, elija **archivo &#124; Nuevo &#124; Archivo** en el menú principal, seleccione el archivo que desee editar y, después, haga clic en la flecha desplegable situada junto a la **abiertos** botón y elija **abrir con &#124; Editor binario**.  
+ Para abrir el Editor binario, elija **archivo &#124; New &#124; archivo** en el menú principal, seleccione el archivo que desee editar y, después, haga clic en la flecha desplegable situada junto a la **abrir** botón y elija **Abrir con &#124; Editor binario**.  
   
 > [!CAUTION]
 >  Es peligroso editar recursos como cuadros de diálogo, imágenes o menús en el Editor binario. Una edición incorrecta podría dañar el recurso y hacerlo ilegible en su editor nativo.  

@@ -1,13 +1,10 @@
 ---
-title: "Elegir un fondo transparente u opaco (Editor de imágenes para iconos) | Documentos de Microsoft"
-ms.custom: 
+title: Elegir un fondo transparente u opaco (Editor de imágenes para iconos) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,25 +19,23 @@ helpviewer_keywords:
 - transparency, background
 - transparent backgrounds, images
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e73ac7122b31ab6880d7d27387937113dee70f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 244e6a63bc16b5e83bb8419dbe1b53741d566e56
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Elegir un fondo transparente u opaco (Editor de imágenes para iconos)
 Al mover o copiar una selección de una imagen, los píxeles de la selección que coinciden con el color de fondo actual son, de forma predeterminada, transparente; no ocultan los píxeles de la ubicación de destino.  
   
  Puede alternar entre un fondo transparente (valor predeterminado) y un fondo opaco y volver. Cuando se usa una herramienta de selección, el **fondo transparente** y **fondo opaco** opciones que aparecen en el selector de opciones en la **Editor de imágenes** barra de herramientas (como se muestra a continuación).  
   
- ![Opciones &#45; en segundo plano opaco o transparente](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+ ![Opciones de fondo &#45; opaco o transparente](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
 Opciones transparentes y opacos en la barra de herramientas del Editor de imágenes  
   
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Para alternar entre un fondo transparente y opaco  

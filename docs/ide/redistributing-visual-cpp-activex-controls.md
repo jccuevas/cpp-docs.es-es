@@ -1,30 +1,25 @@
 ---
 title: Redistribuir controles ActiveX de Visual C++ | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520d365a259c36baab8edeb9049aab9ac89925a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redistribuir controles ActiveX de Visual C++
 Visual C++ 6.0 proporciona controles ActiveX que puede usar en aplicaciones que se va a redistribuir. Estos controles no se incluyen en Visual C++. Según los contratos de licencia para Visual C++ 6.0, puede redistribuir estos controles con las aplicaciones desarrolladas en Visual C++.  
@@ -46,7 +41,7 @@ Visual C++ 6.0 proporciona controles ActiveX que puede usar en aplicaciones que 
   
 -   Stdole2.tlb  
   
- Si estos archivos DLL no están disponibles en el sistema de destino, debe obtener una copia actualizada con el mecanismo indicado para actualizar el sistema operativo correspondiente. Puede descargar el service Pack más recientes para los sistemas operativos de Windows de [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com).  
+ Si estos archivos DLL no están disponibles en el sistema de destino, debe obtener una copia actualizada con el mecanismo indicado para actualizar el sistema operativo correspondiente. Puede descargar el service Pack más recientes para los sistemas operativos de Windows de [ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com).  
   
  Si su aplicación utiliza uno de los controles ActiveX que se conecta a una base de datos, debe tener los componentes de acceso de datos de Microsoft (MDAC) instalado en el sistema de destino. Para obtener más información, consulte [redistribuir archivos de compatibilidad de base de datos](../ide/redistributing-database-support-files.md).  
   

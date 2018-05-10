@@ -1,12 +1,9 @@
 ---
 title: double_2 (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::set_x
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c447587fcefbd922cbe6c1ba5f63ef1d3a2efce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d049ef7207871382fa343dd3e2034a7e7abef0ac
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="double2-class"></a>double_2 (Clase)
 Representa un vector corto de 2 dobles.  
@@ -70,23 +65,23 @@ class double_2;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[double_2 Constructor](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
+|[Constructor double_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|double_2::get_x||  
+|double_2:: get_X||  
 |double_2::get_xy||  
-|double_2::get_y||  
+|double_2:: get_Y||  
 |double_2::get_yx||  
-|double_2::ref_g||  
+|double_2:: ref_g||  
 |double_2::ref_r||  
-|double_2::ref_x||  
-|double_2::ref_y||  
+|double_2:: ref_x||  
+|double_2:: ref_y||  
 |double_2::set_x||  
 |double_2::set_xy||  
-|double_2::set_y||  
+|double_2:: set_y||  
 |double_2::set_yx||  
   
 ### <a name="public-operators"></a>Operadores públicos  
@@ -96,8 +91,8 @@ class double_2;
 |double_2::operator-||  
 |double_2::operator--||  
 |double_2::operator*=||  
-|double_2::operator/=||  
-|double_2::operator++||  
+|double_2:: operator / =||  
+|double_2:: operator ++||  
 |double_2::operator+=||  
 |double_2::operator=||  
 |double_2::operator-=||  
@@ -112,14 +107,14 @@ class double_2;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|double_2::g||  
-|double_2::gr||  
-|double_2::r||  
-|double_2::rg||  
-|double_2::x||  
-|double_2::xy||  
-|double_2::y||  
-|double_2::yx||  
+|double_2:: g||  
+|double_2:: GR||  
+|double_2:: r||  
+|double_2:: RG||  
+|double_2:: x||  
+|double_2:: XY||  
+|double_2:: y||  
+|double_2:: YX||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `double_2`  

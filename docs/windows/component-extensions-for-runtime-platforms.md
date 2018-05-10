@@ -1,13 +1,10 @@
 ---
-title: "Extensiones de componentes para plataformas de tiempo de ejecución | Documentos de Microsoft"
-ms.custom: 
+title: Extensiones de componentes para plataformas de tiempo de ejecución | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Extensiones de componentes para plataformas de tiempo de ejecución
 Visual C++ proporciona extensiones de lenguaje para ayudarle a programar en plataformas del runtime. Mediante el uso de C++ / CX, puede programar aplicaciones de plataforma Universal de Windows y componentes que se compilan en código nativo. Aunque puede crear aplicaciones de la plataforma Universal de Windows programando directamente en las interfaces COM de Windows en tiempo de ejecución, mediante el uso de C++ / CX, puede trabajar con constructores, excepciones y otras expresiones de programación moderna de C++. Para habilitar la programación de C++ en un entorno de ejecución administrado en la plataforma. NET, puede utilizar C++ / CLI.  
@@ -86,7 +81,7 @@ Visual C++ proporciona extensiones de lenguaje para ayudarle a programar en plat
 |`gcnew`|No|Asigna tipos en el montón de recolección de elementos no utilizados. Úselo en lugar de `new` y `delete`.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`ref new`|Sí|Asigna un tipo en tiempo de ejecución de Windows. Úselo en lugar de `new` y `delete`.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`initonly`|Sí|Indica que un miembro solo se puede inicializar en la declaración o en un constructor estático.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|  
-|`literal`|Sí|Crea una variable literal.|[literal](../windows/literal-cpp-component-extensions.md)|  
+|`literal`|Sí|Crea una variable literal.|[Literal](../windows/literal-cpp-component-extensions.md)|  
 |`nullptr`|No|Indica que un identificador o un puntero no señalan un objeto.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Construcciones de plantilla  

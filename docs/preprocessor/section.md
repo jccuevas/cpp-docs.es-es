@@ -1,12 +1,9 @@
 ---
-title: "sección | Documentos de Microsoft"
-ms.custom: 
+title: sección | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - section_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5783c6712852bfb53f457cea174f699c01ea0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a8d113c10ea8370a46560ba8668546c74b19c6f8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="section"></a>section
 Crea una sección en un archivo .obj.  
@@ -54,16 +49,16 @@ Crea una sección en un archivo .obj.
  **write**  
  Permite operaciones de escritura en los datos.  
   
- **execute**  
+ **Ejecutar**  
  Permite que el código se ejecute.  
   
- **shared**  
+ **Compartido**  
  Comparte la sección entre todos los procesos que cargan la imagen.  
   
  **nopage**  
  Marca la sección como no paginable; útil para controladores de dispositivo de Win32.  
   
- **nocache**  
+ **NoCache**  
  Marca la sección como no almacenable en caché; útil para controladores de dispositivo de Win32.  
   
  **discard**  

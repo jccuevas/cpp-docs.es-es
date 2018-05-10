@@ -1,13 +1,10 @@
 ---
-title: "Las advertencias del compilador por versión del compilador | Documentos de Microsoft"
-ms.custom: 
+title: Las advertencias del compilador por versión del compilador | Documentos de Microsoft
+ms.custom: ''
 ms.date: 01/31/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: error-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 - cl.exe compiler, setting warning options
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Advertencias del compilador por versión del compilador
 
@@ -234,7 +230,7 @@ Estas advertencias y todas las advertencias en versiones posteriores se suprimen
 |||
 |-|-|
 C4330|atributo '*atributo*'para la sección'*sección*' omite
-C4415|duplicate __declspec(code_seg('*name*'))
+C4415|duplicados __declspec (code_seg ('*nombre*'))
 C4416|__declspec(code_seg(...)) contiene una cadena vacía: omite
 C4417|una instancia de plantilla explícita no puede tener __declspec(code_seg(...)): omite
 C4418|__declspec(code_seg(...)) omitido en una enumeración

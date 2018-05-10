@@ -1,12 +1,9 @@
 ---
 title: NORM (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - norm
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d462b023d85222601d0f5c59b6b256ff525c7985
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f23ea5d40ecca7ee47d7eae659bfd3da286d8831
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm-class"></a>norm (Clase)
 Representa un número de norma. Cada elemento flotante es un número de punto en el intervalo de [-1.0f, 1.0f].  
@@ -48,15 +43,15 @@ class norm;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|norm::operator-||  
-|norm::operator--||  
+|NORM::operator-||  
+|NORM::operator:||  
 |float NORM::operator|Operador de conversión. Convertir el número de la norma en flotante valor de punto.|  
-|norm::operator*=||  
-|norm::operator/=||  
-|norm::operator++||  
-|norm::operator+=||  
-|norm::operator=||  
-|norm::operator-=||  
+|NORM::operator * =||  
+|NORM::operator / =||  
+|NORM::operator ++||  
+|NORM::operator +=||  
+|NORM::operator =||  
+|NORM::operator =||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `norm`  

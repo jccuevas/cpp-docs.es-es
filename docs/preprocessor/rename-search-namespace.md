@@ -1,12 +1,9 @@
 ---
-title: rename_search_namespace | Microsoft Docs
-ms.custom: 
+title: rename_search_namespace | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - rename_search_namespace
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc6a14ded5d4834dc254a41e2b68e156c48f892a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 367294991b9cbb07ee7c852d757842a20c51cc30
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="renamesearchnamespace"></a>rename_search_namespace
-**C++ Specific**  
+**Específicos de C++**  
   
  Tiene la misma funcionalidad que la [rename_namespace](../preprocessor/rename-namespace.md) atributo pero se usa en las bibliotecas de tipos que utilizan la directiva #import con el [auto_search](../preprocessor/auto-search.md) atributo.  
   

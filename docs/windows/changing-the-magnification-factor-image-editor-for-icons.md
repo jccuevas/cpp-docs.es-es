@@ -1,13 +1,10 @@
 ---
-title: "Cambiar el Factor de ampliación (Editor de imágenes para iconos) | Documentos de Microsoft"
-ms.custom: 
+title: Cambiar el Factor de ampliación (Editor de imágenes para iconos) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - magnification, Image editor
 - Image editor [C++], magnification
 ms.assetid: d1b0c9e0-fe54-4b2a-b75e-ffa0fa7c8cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a1192219bce3fa51177f14ae1345740d0ab53a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d7cb78eb93a5817656b6d576a7ee5f88b7aa9e9c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Cambiar el factor de ampliación (Editor de imágenes para iconos)
 De forma predeterminada, el editor de imágenes muestra la vista en el panel izquierdo en tamaño real y la vista en el panel derecho a 6 veces el tamaño real. El factor de ampliación (que se muestra en la barra de estado en la parte inferior del área de trabajo) es la relación entre el tamaño real de la imagen y el tamaño presentado. El factor predeterminado es 6 y el intervalo es de 1 a 10.  

@@ -1,13 +1,10 @@
 ---
 title: Instrucciones (C) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - Visual C, statements
 - statements
 ms.assetid: df3891cd-6195-4663-aecf-7fe7dc3ed9c3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c855dfd8ce8db503e47864e574e9d433ab00e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24eec5b9420d8a9eaf643b42e29fabd803c8a8a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statements-c"></a>Instrucciones (C)
 Las instrucciones de un programa de C controlan el flujo de ejecución del programa. En C, como en otros lenguajes de programación, hay varias clases de instrucciones disponibles para realizar bucles, seleccionar otras instrucciones para que se ejecuten y transferir el control. Después de una breve [información general sobre la sintaxis de la instrucción](../c-language/overview-of-c-statements.md), esta sección describe las instrucciones de C en orden alfabético:  

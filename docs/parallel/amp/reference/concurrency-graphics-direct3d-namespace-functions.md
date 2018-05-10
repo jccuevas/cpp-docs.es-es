@@ -1,10 +1,7 @@
 ---
 title: Las funciones del espacio de nombres de Concurrency::Graphics::Direct3D | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
@@ -13,17 +10,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7628f5e0f91d1cf4064c0f802e242138acf9de3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2ed95ed8df8a42dc62684c71a3005c2f33fecd18
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funciones del espacio de nombres de Concurrency::Graphics::Direct3D
 ||||  
@@ -32,7 +27,7 @@ ms.lasthandoff: 02/23/2018
 |[make_texture](#make_texture)|[msad4](#msad4)|  
 
  
-##  <a name="get_sampler"></a>  get_sampler  
+##  <a name="get_sampler"></a>  get_sampler)  
  Obtener la interfaz de estado de la muestra de D3D en el Acelerador determinado ver que representa el objeto de muestra especificado.  
   
 ```  
@@ -51,7 +46,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>Valor devuelto  
  Puntero de interfaz IUnknown que se corresponde con el estado de la muestra de D3D que representa la muestra de determinado.  
   
-##  <a name="get_texture"></a>  get_texture  
+##  <a name="get_texture"></a>  get_texture)  
  Obtiene la interfaz de textura Direct3D subyacente especificado [textura](texture-class.md) objeto.  
   
 ```  

@@ -1,36 +1,31 @@
 ---
-title: "return (Instrucción) (C) | Microsoft Docs"
-ms.custom: 
+title: return (Instrucción) (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d5ec29b7348d858b502f292efd797020a17bfa0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08407f26e3c3d9064fded1620538262b0c91e2ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-statement-c"></a>return (Instrucción) (C)
 La instrucción `return` finaliza la ejecución de una función y devuelve el control a la función de llamada. La ejecución se reanuda en la función de llamada, en el punto que sigue inmediatamente a la llamada. Una instrucción `return` puede devolver también un valor a la función de llamada. Consulte [Tipo de valor devuelto](../c-language/return-type.md) para obtener más información.  
   
 ## <a name="syntax"></a>Sintaxis  
  *jump-statement*:  
- **return** *expression* opt**;**  
+ **return** *expression* opt **;**  
   
  El valor de *expression*, si existe, se devuelve a la función que llama. Si *expression* se omite, el valor devuelto de la función es indefinido. El valor de expression, si está presente, se evalúa y después se convierte al tipo devuelto por la función. Si la función se declaró con el tipo de valor devuelto `void`, una instrucción `return` que contiene una expresión genera una advertencia y la expresión no se evalúa.  
   

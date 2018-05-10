@@ -1,12 +1,9 @@
 ---
 title: '##define (directiva) (C/C ++) | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#define'
@@ -19,25 +16,23 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d06a24d969f0ae7545f1b9ec0401e098a2bcf54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8875c2b2c744a16f936fd2220826f23413a0e6c9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="define-directive-cc"></a>#define (Directiva) (C/C++)
 El `#define` crea un *macro*, que es la asociación de un identificador o identificador parametrizado con una cadena de token. Una vez definida la macro, el compilador puede sustituir la cadena de token para cada aparición del identificador del archivo de código fuente.  
   
 ## <a name="syntax"></a>Sintaxis  
- `#define` *identifier* *token-string*opt  
+ `#define` *identificador* *token-string*participar  
   
- `#define` *identifier* `(` *identifier*opt`,`*...*`,`*identifier*opt`)`*token-string*opt  
+ `#define` *identificador* `(` *identificador*opt`,`*...*  `,` *identificador*opt`)`*token-string*participar  
   
 ## <a name="remarks"></a>Comentarios  
  El `#define` directiva hace que el compilador que sustituya *token-string* por cada aparición de *identificador* en el archivo de origen. El *identificador* se sustituirá solo cuando se crea un token. Es decir, *identificador* no se reemplaza si aparece en un comentario, en una cadena o como parte de un identificador mayor. Para obtener más información, consulte [Tokens](../cpp/tokens-cpp.md).  

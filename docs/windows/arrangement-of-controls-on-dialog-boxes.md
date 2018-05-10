@@ -1,13 +1,10 @@
 ---
-title: "Organización de los controles de cuadros de diálogo | Documentos de Microsoft"
-ms.custom: 
+title: Organización de los controles de cuadros de diálogo | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - dialog box controls, placement
 - Dialog editor, arranging controls
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 600a4fcf49328c4cfd2bd31e8c36b02cacd9609c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a449fef82b536cdea484a49a52fece86fac21604
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Distribución de los controles en los cuadros de diálogo
 El editor de cuadro de diálogo proporciona herramientas de diseño que alinearán y ajustar automáticamente el tamaño de controles. Para la mayoría de las tareas, puede usar el [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Todos los comandos de barra de herramientas del Editor de cuadro de diálogo también están disponibles en el menú Formato, y la mayoría tienen [teclas de método abreviado](../windows/accelerator-keys-for-the-dialog-editor.md).  

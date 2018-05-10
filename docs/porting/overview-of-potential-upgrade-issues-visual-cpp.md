@@ -1,23 +1,18 @@
 ---
-title: "Información general sobre posibles problemas de actualización (Visual C++) | Microsoft Docs"
-ms.custom: 
+title: Información general sobre posibles problemas de actualización (Visual C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e5cdded022a495b85570ba7f1ad86179b6210356
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Información general sobre posibles problemas de actualización (Visual C++)
 
@@ -110,7 +105,7 @@ En la tabla siguiente se muestran las bibliotecas cuyos nombres han cambiado a p
 |msvcrt.lib|ucrt.lib, vcruntime.lib|
 |msvcrtd.lib|ucrtd.lib, vcruntimed.lib|
 
-El mismo problema se aplica si usa la opción**/ENTRY** o la opción **/NOENTRY**, que también permiten omitir las bibliotecas predeterminadas.
+El mismo problema se aplica si usa la opción **/ENTRY** o la opción **/NOENTRY**, que también permiten omitir las bibliotecas predeterminadas.
 
 ## <a name="errors-due-to-improved-language-conformance"></a>Errores debidos a la conformidad de lenguaje mejorada
 

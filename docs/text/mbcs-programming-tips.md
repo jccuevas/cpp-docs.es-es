@@ -1,13 +1,10 @@
 ---
-title: "Sugerencias de programación para MBCS | Documentos de Microsoft"
-ms.custom: 
+title: Sugerencias de programación para MBCS | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - multibyte characters [C++]
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dc9c5dfd0dafe96e2d37b789b64c8215aa454e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7eb6e298961580c959235a97f37793df41d1124f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mbcs-programming-tips"></a>Sugerencias de programación para MBCS
 En el nuevo desarrollo, debe utilizar la codificación de caracteres Unicode para todas las cadenas que los usuarios finales pueden ver posiblemente. MBCS es una tecnología heredada reemplazada por Unicode. En esta sección se proporcionan sugerencias para los desarrolladores que deben mantener programas existentes que utilizan MBCS y donde no es práctico convertir a Unicode. Los consejos se refieren a aplicaciones MFC y aplicaciones creadas sin MFC. Entre los temas se incluyen los siguientes:  

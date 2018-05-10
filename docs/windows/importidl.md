@@ -1,13 +1,10 @@
 ---
 title: importidl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.importidl
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3fb56898107b1eca7cd30e06d75d253a02655e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="importidl"></a>importidl
 Inserta el archivo .idl especificado en el archivo .idl generado.  
@@ -74,7 +69,7 @@ Inserta el archivo .idl especificado en el archivo .idl generado.
 ## <a name="see-also"></a>Vea también  
  [Atributos de compilador](../windows/compiler-attributes.md)   
  [Atributos independientes](../windows/stand-alone-attributes.md)   
- [importar](../windows/import.md)   
+ [Importación](../windows/import.md)   
  [importlib](../windows/importlib.md)   
- [incluir](../windows/include-cpp.md)   
+ [Incluir](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   

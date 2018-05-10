@@ -1,13 +1,10 @@
 ---
 title: Visual C++ en Visual Studio | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,14 +15,13 @@ helpviewer_keywords:
 - Visual C++, reference
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7d4f09ebe0cfaca9bb742baa902a256ac0f92996
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ en Visual Studio
 
@@ -33,69 +29,69 @@ Microsoft Visual C++, con frecuencia abreviado como Visual C++ o MSVC, es el nom
 
 ## <a name="general-information-about-visual-c"></a>Información general sobre Visual C++
 
-[Novedades de Visual C++](what-s-new-for-visual-cpp-in-visual-studio.md)  
+[Novedades de Visual C++](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 Descubra las novedades de Visual C++.
 
-[Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md)  
+[Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
 Obtenga más información sobre las mejoras de conformidad de C++ en Visual Studio 2017.
 
-[Conformidad del lenguaje Visual C++](visual-cpp-language-conformance.md)  
+[Conformidad del lenguaje Visual C++](visual-cpp-language-conformance.md)<br/>
 Lista de estados de conformidad por característica del Compilador de Microsoft Visual C++.
 
-[Historial de cambios en Visual C++ 2003-2015](porting/visual-cpp-change-history-2003-2015.md)  
+[Historial de cambios en Visual C++ 2003-2015](porting/visual-cpp-change-history-2003-2015.md)<br/>
 Obtenga información sobre los cambios importantes de versiones anteriores.
 
-[Aquí está otra vez C++](cpp/welcome-back-to-cpp-modern-cpp.md)  
+[Aquí está otra vez C++](cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 Obtenga más información sobre técnicas de programación modernas de C++ basadas en C++11 y C++14 que le permiten escribir código seguro y rápido, y evite muchos de los problemas de programación de estilo C.
 
-[Cómo notificar un problema con el conjunto de herramientas de Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)  
- Aprenda a crear informes de error eficaces en el conjunto de herramientas de Visual C++ (compilador, enlazador y otras herramientas) y las formas de enviar el informe.
+[Cómo notificar un problema con el conjunto de herramientas de Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
+Aprenda a crear informes de error eficaces en el conjunto de herramientas de Visual C++ (compilador, enlazador y otras herramientas) y las formas de enviar el informe.
 
-[Guía de migración y actualización de Visual C++](porting/visual-cpp-porting-and-upgrading-guide.md)  
+[Guía de migración y actualización de Visual C++](porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
 Guía para migrar el código y actualizar proyectos a Visual Studio 2017, incluida la migración del código de C++ a Windows 10 y a la Plataforma universal de Windows.
 
-[Blog del equipo de Visual C++](http://blogs.msdn.com/b/vcblog/)  
- Obtenga más información acerca de las nuevas características y la información más reciente de los desarrolladores de [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)].
+[Blog del equipo de Visual C++](http://blogs.msdn.com/b/vcblog/)<br/>
+Obtenga más información acerca de las nuevas características y la información más reciente de los desarrolladores de [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)].
 
-[Descargas de Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=235233)  
+[Descargas de Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=235233)<br/>
 Descargar Visual Studio.
 
-[Herramientas y características de Visual C++ en las ediciones de Visual Studio](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)  
+[Herramientas y características de Visual C++ en las ediciones de Visual Studio](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 Obtenga información sobre diferentes ediciones de Visual Studio.
 
-[Plataformas compatibles](supported-platforms-visual-cpp.md)  
+[Plataformas compatibles](supported-platforms-visual-cpp.md)<br/>
 Compruebe cuáles son las plataformas admitidas.
 
-[Ejemplos de Visual C++](visual-cpp-samples.md)  
+[Ejemplos de Visual C++](visual-cpp-samples.md)<br/>
 Información acerca de los ejemplos.
 
-[Comunidad de desarrolladores de Visual Studio](https://developercommunity.visualstudio.com/)  
+[Comunidad de desarrolladores de Visual Studio](https://developercommunity.visualstudio.com/)<br/>
 Descubra cómo obtener ayuda, errores de archivo y hacer sugerencias para Visual Studio.
 
 ## <a name="writing-applications-in-c"></a>Escritura de aplicaciones en C++
 
-[Aplicaciones Windows universales](windows/universal-windows-apps-cpp.md)  
+[Aplicaciones Windows universales](windows/universal-windows-apps-cpp.md)<br/>
 Encuentre guías y contenido de referencia en el Centro de desarrollo de Windows. Para obtener información sobre cómo desarrollar aplicaciones para la Plataforma universal de Windows, vea [Introducción a la plataforma Universal de Windows](/windows/uwp/get-started/universal-application-platform-guide) y [Create your first UWP app using C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp) (Creación de la primera aplicación para la Plataforma universal de Windows con C++).
 
-[Aplicaciones de escritorio (C++)](windows/desktop-applications-visual-cpp.md)  
+[Aplicaciones de escritorio (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 Obtenga información sobre cómo crear aplicaciones de escritorio que tienen un bucle de mensajes y devoluciones de llamada.
 
-[Archivos DLL en Visual C++](build/dlls-in-visual-cpp.md)  
+[Archivos DLL en Visual C++](build/dlls-in-visual-cpp.md)<br/>
 Descubra cómo utilizar Win32, ATL y MFC para crear archivos DLL de escritorio de Windows, e información sobre cómo compilar y registrar un archivo DLL.
 
-[Programación en paralelo](parallel/parallel-programming-in-visual-cpp.md)  
+[Programación en paralelo](parallel/parallel-programming-in-visual-cpp.md)<br/>
 Obtenga información sobre el uso de la Biblioteca de patrones de procesamiento paralelo, C++ AMP, OpenMP y otras características relacionadas con multithreading en Windows.
 
-[Procedimientos recomendados para la seguridad](security/security-best-practices-for-cpp.md)  
+[Procedimientos recomendados para la seguridad](security/security-best-practices-for-cpp.md)<br/>
 Obtenga información sobre cómo proteger las aplicaciones del código malintencionado y el uso no autorizado.
 
-[Programación web y para la nube](cloud/cloud-and-web-programming-in-visual-cpp.md)  
+[Programación web y para la nube](cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
 En C++, existen varias opciones para conectarse a la Web y a la nube.
 
-[Acceso a datos](http://msdn.microsoft.com/Library/a9455752-39c4-4457-b14e-197772d3df0b)  
+[Acceso a datos](data/data-access-in-cpp.md)<br/>
 Conectarse a bases de datos mediante ODBC y otras tecnologías de acceso a bases de datos.
 
-[Texto y cadenas](text/text-and-strings-in-visual-cpp.md)  
+[Texto y cadenas](text/text-and-strings-in-visual-cpp.md)<br/>
 Obtenga información sobre cómo trabajar con diferentes codificaciones y formatos de texto y cadenas para el desarrollo local e internacional.
 
 ## <a name="c-development-tools"></a>Herramientas de desarrollo de C++
@@ -112,28 +108,28 @@ Para obtener información sobre el preprocesador de C++, vea [C/C++ Preprocessor
 
 En las secciones siguientes se proporciona información sobre las distintas bibliotecas de C y C++ que se incluyen en Visual Studio.
 
-[Referencia de la biblioteca en tiempo de ejecución de C](c-runtime-library/c-run-time-library-reference.md)  
+[Referencia de la biblioteca en tiempo de ejecución de C](c-runtime-library/c-run-time-library-reference.md)<br/>
 Incluye alternativas de seguridad mejoradas a las funciones que tienen problemas de seguridad conocidos.
 
-[Biblioteca estándar de C++](standard-library/cpp-standard-library-reference.md)  
+[Biblioteca estándar de C++](standard-library/cpp-standard-library-reference.md)<br/>
 La biblioteca estándar de C++.
 
-[Biblioteca de plantillas activas (ATL)](atl/atl-com-desktop-components.md)  
+[Biblioteca de plantillas activas (ATL)](atl/atl-com-desktop-components.md)<br/>
 Compatibilidad con aplicaciones y componentes COM.
 
-[Bibliotecas de Microsoft Foundation Class (MFC)](mfc/mfc-desktop-applications.md)  
+[Bibliotecas de Microsoft Foundation Class (MFC)](mfc/mfc-desktop-applications.md)<br/>
 Compatibilidad para la creación de aplicaciones de escritorio que tienen interfaces de usuario tradicionales o del estilo de Office.
 
-[Biblioteca de patrones de procesamiento paralelo (PPL)](parallel/concrt/parallel-patterns-library-ppl.md)  
+[Biblioteca de patrones de procesamiento paralelo (PPL)](parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 Algoritmos asincrónicos y paralelos que se ejecutan en la CPU.
 
-[C++ AMP (C++ Accelerated Massive Parallelism)](parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
+[C++ AMP (C++ Accelerated Massive Parallelism)](parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 Algoritmos con gran paralelismo que se ejecutan en la GPU.
 
-[Biblioteca de plantillas de Windows Runtime (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
+[Biblioteca de plantillas de Windows Runtime (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)<br/>
 Aplicaciones y componentes de la Plataforma universal de Windows (UWP).
 
-[Programación de .NET con C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+[Programación de .NET con C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 Programación para Common Language Runtime (CLR).
 
 Vea también la documentación de [STL/CLR](dotnet/stl-clr-library-reference.md) y la [C++ Support Library](dotnet/cpp-support-library.md).
@@ -144,14 +140,14 @@ Puede utilizar la herramienta de línea de comandos vcpkg para simplificar notab
 
 ## <a name="more-resources"></a>Más recursos
 
-[Standard C++](http://isocpp.org/)  
+[Standard C++](http://isocpp.org/)<br/>
 Obtenga información sobre C++, obtenga información general sobre Modern C++, así como vínculos a libros, artículos, conferencias y eventos
 
-[Aprender Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
+[Aprender Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)<br/>
 Comience el aprendizaje de C++.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia del lenguaje C](c-language/c-language-reference.md)   
-[Referencia de la biblioteca en tiempo de ejecución de C](c-runtime-library/c-run-time-library-reference.md)   
-[Intrínsecos del compilador y lenguaje ensamblador](intrinsics/compiler-intrinsics-and-assembly-language.md)
+- [Referencia del lenguaje C](c-language/c-language-reference.md)
+- [Referencia de la biblioteca en tiempo de ejecución de C](c-runtime-library/c-run-time-library-reference.md)
+- [Intrínsecos del compilador y lenguaje ensamblador](intrinsics/compiler-intrinsics-and-assembly-language.md)

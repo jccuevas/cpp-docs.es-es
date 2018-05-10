@@ -1,13 +1,10 @@
 ---
 title: Definiciones de funciones de C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-function-definitions"></a>Definiciones de funciones de C
 Una definición de función especifica el nombre de la función, los tipos y el número de parámetros que espera recibir, y su tipo de valor devuelto. Una definición de función también incluye un cuerpo de la función con las declaraciones de las variables locales y las instrucciones que determinan lo que hace la función.  
@@ -72,7 +67,7 @@ Una definición de función especifica el nombre de la función, los tipos y el 
  *direct-declarator*: /\* Un declarador de función \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* Declarador de estilo nuevo \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* Declarador de estilo obsoleto \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* Declarador de estilo obsoleto \*/  
   
  La lista de parámetros de una definición utiliza esta sintaxis:  
   
@@ -101,7 +96,7 @@ Una definición de función especifica el nombre de la función, los tipos y el 
  La sintaxis para el cuerpo de la función es:  
   
  *compound-statement*: /\* cuerpo de la función \*/  
- **{**  `declaration`-*list* opt*statement-list* opt**}**  
+ **{**  `declaration`-*list* opt*statement-list* opt **}**  
   
  Los únicos especificadores de clase de almacenamiento que pueden modificar una declaración de función son `extern` y **static**. El especificador `extern` significa que se puede hacer referencia a la función desde otros archivos; es decir, el nombre de función se exporta al vinculador. El especificador **static** significa que no se puede hacer referencia a la función desde otros archivos; es decir, el vinculador no exporta el nombre. Si no aparece ninguna clase de almacenamiento en una definición de función, se supone `extern`. En cualquier caso, la función siempre es visible desde el punto de definición hasta el final del archivo.  
   

@@ -1,8 +1,8 @@
 ---
-title: "C4600 de advertencias del compilador a través de C4799 | Documentos de Microsoft"
+title: C4600 de advertencias del compilador a través de C4799 | Documentos de Microsoft
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4602
@@ -68,14 +68,13 @@ dev_langs:
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ad29989e89bfe60f2180ee48c411ebd4d3098ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>C4600 de advertencias del compilador a través de C4799
 
@@ -164,7 +163,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia (Error) del compilador C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'clase': una clase abstracta sealed no puede implementar una interfaz 'interfaz'|
 |Advertencia del compilador (nivel 1) C4688|'constraint': la lista de restricciones contiene un tipo privado de ensamblado 'type'|
 |Advertencia del compilador (nivel 1) C4689|'%c': no se admite caracteres de #pragma detect_mismatch; #pragma omitidas|
-|Advertencia del compilador (nivel 4) C4690|[emitidl (pop)]: más elementos POP que Push|
+|Advertencia del compilador (nivel 4) C4690|[ emitidl ( pop ) ]: más elementos POP que Push|
 |[Advertencia del compilador (nivel 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type': se esperaba el tipo al que hace referencia en el ensamblado sin referencia 'archivo', tipo definido en la unidad de traducción actual utilizado en su lugar|
 |[Advertencia del compilador (nivel 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'función': la firma de un miembro no privado contiene un tipo nativo privado de ensamblado 'tipo_nativo'|
 |[Advertencia del compilador (nivel 1, Error) Advertencia C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|'clase': una clase abstracta sealed no puede tener cualquier instancia de 'miembro de instancia' miembros|
@@ -204,7 +203,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'var' tiene una alineación diferente en 'archivo1' y 'archivo2': número y número|
 |[Advertencia del compilador (nivel 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' tiene un tamaño diferente en 'archivo1' y 'archivo2': número y el número de bytes|
 |[Advertencia del compilador (nivel 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' tiene un tipo diferente en 'archivo1' y 'archivo2': 'type1' y 'type2'|
-|[Advertencia del compilador C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|acceso volátil de '*expresión*' está sujeta a /volatile:\<iso &#124; ms > establecer; considere el uso de funciones intrínsecas de __iso_volatile_load/almacén|
+|[Advertencia del compilador C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|acceso volátil de '*expresión*' está sujeta a /volatile:\<iso&#124;ms > establecer; considere el uso de funciones intrínsecas de __iso_volatile_load/almacén|
 |[Advertencia del compilador (nivel 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Al llamar a 'entrypoint' administrado: no se puede ejecutar código administrado en un bloqueo del cargador, incluido el punto de entrada DLL y las llamadas alcanzadas desde el punto de entrada DLL|
 |Advertencia del compilador (nivel 4) C4749|admite condicionalmente: offsetof aplicado al tipo de diseño de standard sin '*tipo*'|
 |Advertencia del compilador (nivel 1) C4750|'identificador': función con _alloca() insertada en un bucle|

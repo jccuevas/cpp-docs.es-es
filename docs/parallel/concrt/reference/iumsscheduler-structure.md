@@ -1,12 +1,9 @@
 ---
 title: IUMSScheduler (estructura) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSScheduler
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da35fe5ae8d00ee537674fd689fd7f27074b0355
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 489978a97d42439e5560a75e429c38be10c18c29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler (Estructura)
 Una interfaz a una abstracción de un programador de trabajo que desea que el Administrador de recursos del runtime de simultaneidad controle los subprocesos programables de modo de usuario (UMS). El Administrador de recursos usa esta interfaz para comunicarse con los programadores de subprocesos UMS. La interfaz `IUMSScheduler` hereda de la interfaz `IScheduler`.  
@@ -44,7 +39,7 @@ struct IUMSScheduler : public IScheduler;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[IUMSScheduler::SetCompletionList](#setcompletionlist)|Asigna un `IUMSCompletionList` interfaz a un programador de subproceso UMS.|  
+|[IUMSScheduler:: SetCompletionList](#setcompletionlist)|Asigna un `IUMSCompletionList` interfaz a un programador de subproceso UMS.|  
   
 ## <a name="remarks"></a>Comentarios  
  Si está implementando un programador personalizado que se comunica con el Administrador de recursos, y desea que los subprocesos UMS que se va a pasar a su programador en lugar de subprocesos de Win32 normales, debe proporcionar una implementación de la `IUMSScheduler` interfaz. Además, debe establecer el valor de directiva para la clave de directiva de programador `SchedulerKind` como `UmsThreadDefault`. Si la directiva especifica subproceso UMS, el `IScheduler` interfaz que se pasa como un parámetro a la [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) método debe ser un `IUMSScheduler` interfaz.  

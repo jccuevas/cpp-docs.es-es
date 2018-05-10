@@ -1,12 +1,9 @@
 ---
 title: Clase Choice | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - choice
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 56b936e1ecb3864b7a7bb95f3e552c16d2ce81d0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choice-class"></a>Clase choice
 Un bloque de mensajería `choice` es un bloque de varios orígenes y de destino único que representa una interacción del flujo de control con un conjunto de orígenes. El bloque de elección esperará a cualquiera de los orígenes para generar un mensaje y propagará el índice del origen que generó el mensaje.  
@@ -69,16 +64,16 @@ class choice: public ISource<size_t>;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[choice](#ctor)|Sobrecargado. Construye un bloque de mensajería `choice` .|  
+|[Elección](#ctor)|Sobrecargado. Construye un bloque de mensajería `choice` .|  
 |[~ choice (destructor)](#dtor)|Destruye el `choice` bloque de mensajería.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[accept](#accept)|Acepta un mensaje que fue proporcionado por este `choice` bloque, transferir la propiedad al llamador.|  
+|[Aceptar](#accept)|Acepta un mensaje que fue proporcionado por este `choice` bloque, transferir la propiedad al llamador.|  
 |[acquire_ref](#acquire_ref)|Adquiere un recuento de referencias en el objeto `choice` bloque de mensajería, para evitar la eliminación.|  
-|[consume](#consume)|Consume un mensaje ofrecido previamente por este `choice` bloque de mensajería y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|  
+|[Consumir](#consume)|Consume un mensaje ofrecido previamente por este `choice` bloque de mensajería y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|  
 |[has_value](#has_value)|Comprueba si este `choice` bloque de mensajería se ha inicializado con un valor aún.|  
 |[index](#index)|Devuelve un índice en la `tuple` que representa el elemento seleccionado por el `choice` bloque de mensajería.|  
 |[link_target](#link_target)|Vincula un bloque de destino a esta `choice` bloque de mensajería.|  

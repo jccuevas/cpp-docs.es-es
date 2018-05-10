@@ -1,12 +1,9 @@
 ---
 title: '#if, #elif, #else y #endif directivas (C/C ++) | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else, and #endif (Directivas) (C/C++)
 La directiva `#if`, con las directivas `#elif`, `#else` y `#endif`, controla la compilación de partes de un archivo de código fuente. Si la expresión que se escribe (después de `#if`) tiene un valor distinto de cero, el grupo de líneas inmediatamente después de la directiva `#if` se conserva en la unidad de traducción.  
@@ -53,11 +48,11 @@ La directiva `#if`, con las directivas `#elif`, `#else` y `#endif`, controla la 
  *texto de la línea de If*  
   
  *línea de IF* :  
- **#if**  *constant-expression*  
+ **#if***expresión constante*   
   
- **#ifdef***identificador*   
+ **#ifdef***identificador*  
   
- **#ifndef***identificador*   
+ **#ifndef***identificador*  
   
  *elif partes* :  
  *texto de la línea de elif*  
@@ -65,9 +60,9 @@ La directiva `#if`, con las directivas `#elif`, `#else` y `#endif`, controla la 
  *texto de línea elif elif partes*  
   
  *elif línea* :  
- **#elif**  *constant-expression*  
+ **#elif***expresión constante*   
   
- *else-part* :  
+ *parte Else* :  
  *texto de línea Else*  
   
  *línea Else* :  
@@ -88,7 +83,7 @@ La directiva `#if`, con las directivas `#elif`, `#else` y `#endif`, controla la 
   
  El preprocesador procesa seleccionado *texto* y lo pasa al compilador. Si *texto* contiene directivas de preprocesador, el preprocesador ejecuta esas directivas. Solo se compilan los bloques de texto seleccionados por el preprocesador.  
   
- El preprocesador selecciona una sola *texto* elemento mediante la evaluación de la expresión constante que sigue a cada `#if` o `#elif` directiva hasta que encuentra una expresión de constante true (distinto de cero). Selecciona todo el texto (incluidas otras directivas de preprocesador que comiencen con  **#** ) hasta su asociado `#elif`, `#else`, o `#endif`.  
+ El preprocesador selecciona una sola *texto* elemento mediante la evaluación de la expresión constante que sigue a cada `#if` o `#elif` directiva hasta que encuentra una expresión de constante true (distinto de cero). Selecciona todo el texto (incluidas otras directivas de preprocesador que comiencen con **#**) hasta su asociado `#elif`, `#else`, o `#endif`.  
   
  Si todas las apariciones de *expresión constante* son false, o si no hay ningún `#elif` aparecen directivas, el preprocesador selecciona el bloque de texto después de la `#else` cláusula. Si el `#else` se omite la cláusula y todas las instancias de *expresión constante* en el `#if` bloque son false, no se selecciona ningún bloque de texto.  
   

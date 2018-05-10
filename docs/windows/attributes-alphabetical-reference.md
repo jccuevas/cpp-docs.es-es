@@ -1,13 +1,10 @@
 ---
-title: "Atributos de referencia alfabética | Documentos de Microsoft"
-ms.custom: 
+title: Atributos de referencia alfabética | Documentos de Microsoft
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 f1_keywords:
 - vc.attributes
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - attributes [C++]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2420ba0d023272a1e6a66687f567bf881b8af35f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b8e0f40e0633d0ebabbbe2f5f226e0311b1c977
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributes-alphabetical-reference"></a>Referencia alfabética de los atributos
 Los siguientes atributos están disponibles en Visual C++.  
@@ -45,7 +40,7 @@ Los siguientes atributos están disponibles en Visual C++.
 |[COM_INTERFACE_ENTRY](../windows/com-interface-entry-cpp.md)|Agrega una entrada de la interfaz a un mapa COM.|  
 |[control](../windows/control.md)|Especifica que el tipo definido por el usuario es un control.|  
 |[cpp_quote](../windows/cpp-quote.md)|Emite la cadena especificada, sin los caracteres de comillas, en el archivo de encabezado generado.|  
-|[personalizado](../windows/custom-cpp.md)|Le permite definir sus propios atributos.|  
+|[Personalizada](../windows/custom-cpp.md)|Le permite definir sus propios atributos.|  
 |[db_accessor](../windows/db-accessor.md)|Enlaza las columnas de un conjunto de filas y se enlazan a las asignaciones de descriptor de acceso correspondiente.|  
 |[db_column](../windows/db-column.md)|Enlaza una columna especificada en el conjunto de filas.|  
 |[db_command](../windows/db-command.md)|Ejecuta un comando de OLE DB.|  
@@ -76,7 +71,7 @@ Los siguientes atributos están disponibles en Visual C++.
 |[idl_quote](../windows/idl-quote.md)|Le permite usar atributos o IDL construcciones que no se admiten en la versión actual de Visual C++.|  
 |[iid_is](../windows/iid-is.md)|Especifica el IID de la interfaz COM que señala un puntero de interfaz.|  
 |[immediatebind](../windows/immediatebind.md)|Indica que se notificará inmediatamente a la base de datos de todos los cambios a una propiedad de un objeto enlazado a datos.|  
-|[implementa](../windows/implements-cpp.md)|Especifica las interfaces de envío que se convierten obligatoriamente a ser miembros de la coclase IDL.|  
+|[Implementa](../windows/implements-cpp.md)|Especifica las interfaces de envío que se convierten obligatoriamente a ser miembros de la coclase IDL.|  
 |[implements_category](../windows/implements-category.md)|Especifica las categorías de componentes implementados para la clase.|  
 |[import](../windows/import.md)|Especifica otro archivo de encabezado, .odl o .idl que contiene las definiciones que desea hacer referencia desde el archivo .idl principal.|  
 |[importidl](../windows/importidl.md)|Inserta el archivo .idl especificado en el archivo .idl generado.|  
@@ -89,9 +84,9 @@ Los siguientes atributos están disponibles en Visual C++.
 |[length_is](../windows/length-is.md)|Especifica el número de elementos de la matriz que se transmitan.|  
 |[library_block](../windows/library-block.md)|Coloca una construcción en bloque de biblioteca del archivo .idl.|  
 |[licensed](../windows/licensed.md)|Indica que la coclase al que se aplica se autoriza el uso y se debe crear instancias con **IClassFactory2**.|  
-|[local](../windows/local-cpp.md)|Permite usar el compilador MIDL como un generador de encabezado cuando se utiliza en el encabezado de la interfaz. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.|  
+|[Local](../windows/local-cpp.md)|Permite usar el compilador MIDL como un generador de encabezado cuando se utiliza en el encabezado de la interfaz. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.|  
 |[max_is](../windows/max-is.md)|Designa el valor máximo para un índice de matriz válida.|  
-|[módulo](../windows/module-cpp.md)|Define el bloque de biblioteca en el archivo .idl.|  
+|[Módulo](../windows/module-cpp.md)|Define el bloque de biblioteca en el archivo .idl.|  
 |[ms_union](../windows/ms-union.md)|Controla la alineación de representación de datos de red de uniones nonencapsulated.|  
 |[no_injected_text](../windows/no-injected-text.md)|Evita que el compilador inserte código como resultado del uso de atributos.|  
 |[nonbrowsable](../windows/nonbrowsable.md)|Indica que un miembro de interfaz no debe mostrarse en un explorador de propiedades.|  
@@ -100,7 +95,7 @@ Los siguientes atributos están disponibles en Visual C++.
 |[object](../windows/object-cpp.md)|Identifica una interfaz personalizada; es sinónimo de atributo personalizado.|  
 |[odl](../windows/odl.md)|Identifica una interfaz como una interfaz de lenguaje de descripción de objetos (ODL).|  
 |[oleautomation](../windows/oleautomation.md)|Indica que una interfaz es compatible con la automatización.|  
-|[opcional](../windows/optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|  
+|[Opcional](../windows/optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|  
 |[out](../windows/out-cpp.md)|Identifica los parámetros de puntero devueltos desde el procedimiento llamado al procedimiento que realiza la llamada (desde el servidor al cliente).|  
 |[pointer_default](../windows/pointer-default.md)|Especifica el atributo de puntero predeterminado para todos los punteros excepto los punteros de nivel superior que aparecen en las listas de parámetros.|  
 |[pragma](../windows/pragma.md)|Emite la cadena especificada, sin los caracteres de comillas, en el archivo .idl generado.|  
@@ -121,18 +116,18 @@ Los siguientes atributos están disponibles en Visual C++.
 |[retval](../windows/retval.md)|Designa el parámetro que recibe el valor devuelto del miembro.|  
 |[satype](../windows/satype.md)|Especifica el tipo de datos de la **SAFEARRAY**.|  
 |[size_is](../windows/size-is.md)|Especifica el tamaño de memoria asignada para los punteros de tamaño, tamaño de punteros a punteros de tamaño y solo o matrices multidimensionales.|  
-|[origen](../windows/source-cpp.md)|Indica que un miembro de una clase, propiedad o método es un origen de eventos.|  
+|[Origen](../windows/source-cpp.md)|Indica que un miembro de una clase, propiedad o método es un origen de eventos.|  
 |[string](../windows/string-cpp.md)|Indica que unidimensional `char`, `wchar_t`, **bytes**, o equivalente matriz o el puntero a una matriz de este tipo debe tratarse como una cadena.|  
 |[support_error_info](../windows/support-error-info.md)|Admite informes de errores para el objeto de destino.|  
 |[switch_is](../windows/switch-is.md)|Especifica la expresión o el identificador que actúa como la unión discriminante que selecciona al miembro de unión.|  
 |[switch_type](../windows/switch-type.md)|Identifica el tipo de la variable utilizada como la unión discriminante.|  
 |[synchronize](../windows/synchronize.md)|Sincroniza el acceso a un método.|  
-|[subprocesamiento](../windows/threading-cpp.md)|Especifica el modelo de subprocesos de un objeto COM.|  
+|[Subprocesamiento](../windows/threading-cpp.md)|Especifica el modelo de subprocesos de un objeto COM.|  
 |[transmit_as](../windows/transmit-as.md)|Indica al compilador para asociar un tipo presentado, manipulan las aplicaciones cliente y servidor, con un tipo de la información transmitido.|  
 |[uidefault](../windows/uidefault.md)|Indica que el miembro de la información de tipo es el miembro predeterminado para su presentación en la interfaz de usuario.|  
 |[unique](../windows/unique-cpp.md)|Especifica un puntero único.|  
 |[usesgetlasterror](../windows/usesgetlasterror.md)|Indica que el llamador que si se produce un error al llamar a esa función, el llamador puede, a continuación, llamar a `GetLastError` para recuperar el código de error.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|  
 |[v1_enum](../windows/v1-enum.md)|Indica que el tipo enumerado especificado se transmiten como una entidad de 32 bits, en lugar de con el valor predeterminado de 16 bits.|  
 |[vararg](../windows/vararg.md)|Especifica que la función toma un número variable de argumentos.|  
 |[version](../windows/version-cpp.md)|Identifica una versión determinada entre varias versiones de una interfaz o clase.|  

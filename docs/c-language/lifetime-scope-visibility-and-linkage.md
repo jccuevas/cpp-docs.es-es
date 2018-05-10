@@ -1,27 +1,22 @@
 ---
-title: "Duración, ámbito, visibilidad y vinculación | Microsoft Docs"
-ms.custom: 
+title: Duración, ámbito, visibilidad y vinculación | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: c7678bb8-9d79-40ed-b352-abab876f0b17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 680d3a97cec7971bf31605997e3ab2afdfae2cdf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7394de248075473c6956821023361014a543201d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>Duración, ámbito, visibilidad y vinculación
 Para entender cómo funciona un programa de C, debe comprender las reglas que determinan cómo se puede usar variables y funciones en el programa. Algunos conceptos son cruciales para entender estas reglas:  
