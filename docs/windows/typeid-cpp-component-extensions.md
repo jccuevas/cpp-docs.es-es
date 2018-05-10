@@ -1,30 +1,25 @@
 ---
 title: typeid (extensiones de componentes de C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20a3b1153bbb8a8502a54aa74998817abf191860
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (Extensiones de componentes de C++)
 Obtiene un valor que indica el tipo de un objeto.  
@@ -83,7 +78,7 @@ type::typeid
   
  `typeid` debe poder evaluar un nombre de tipo (type) en tiempo de compilación, mientras que GetType evalúa el tipo que se va a devolver en tiempo de ejecución.  
   
- `typeid`puede tomar un nombre de tipo nativo o el alias de en tiempo de ejecución de lenguaje común para el nombre de tipo nativo; vea [equivalentes de .NET Framework para tipos nativos de C++ (C++ / CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) para obtener más información.  
+ `typeid` puede tomar un nombre de tipo nativo o el alias de en tiempo de ejecución de lenguaje común para el nombre de tipo nativo; vea [equivalentes de .NET Framework para tipos nativos de C++ (C++ / CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) para obtener más información.  
   
  `typeid` también funciona con los tipos nativos, aunque todavía devuelve System::Type.  Para obtener una estructura type_info, use [typeid (operador)](../cpp/typeid-operator.md).  
   

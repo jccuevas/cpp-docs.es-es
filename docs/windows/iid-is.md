@@ -1,13 +1,10 @@
 ---
 title: iid_is | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.iid_is
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2caa675f222ad1e2940117c60eb5a83d6a4f976f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9ef3a14211e223b9902dc9843639d217ceaf1b3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="iidis"></a>iid_is
 Especifica el IID de la interfaz COM que señala un puntero de interfaz.  
@@ -41,7 +36,7 @@ Especifica el IID de la interfaz COM que señala un puntero de interfaz.
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *expresión*  
+ *Expresión*  
  Una expresión de lenguaje C que especifica un IID de una interfaz COM que señala un puntero de interfaz.  
   
 ## <a name="remarks"></a>Comentarios  

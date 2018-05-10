@@ -1,31 +1,26 @@
 ---
-title: "Editar una imagen fuera de un proyecto (Editor de imágenes para iconos) | Documentos de Microsoft"
-ms.custom: 
+title: Editar una imagen fuera de un proyecto (Editor de imágenes para iconos) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Image editor [C++], editing images
 - images [C++], editing
 ms.assetid: ac297b51-95c2-4512-a07f-b5d1596fc61e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c45a813e34aa04ee41487cf6d25a8a7eab152741
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e376aef574c1daa700ca98e714825a6cf7e4c66d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>Editar una imagen fuera de un proyecto (Editor de imágenes para iconos)
 Puede abrir y editar imágenes en el entorno de desarrollo como haría en cualquier aplicación de gráficos. Las imágenes con que se trabaja no necesitan ser parte de un proyecto de Visual Studio para edición independiente.  

@@ -1,13 +1,10 @@
 ---
-title: "Cambiar el tamaño de una imagen (Editor de imágenes para iconos) | Documentos de Microsoft"
-ms.custom: 
+title: Cambiar el tamaño de una imagen (Editor de imágenes para iconos) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - images [C++], resizing
 - resizing images
 ms.assetid: d83a02c4-4dfe-4586-a0df-51a50c2ba71d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f856c5cf825fd9032ce64afbd09d3bed83ea40f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6636e1f92907c301c6e66abd63f744375bffeb8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Cambiar el tamaño de una imagen (Editor de imágenes para iconos)
 El comportamiento del editor de imágenes al cambiar el tamaño de una imagen depende de si ha [seleccionado](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) la imagen completa o sólo una parte del mismo.  

@@ -1,13 +1,10 @@
 ---
-title: "Cómo: copiar recursos | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: copiar recursos | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.resvw.resource.copying
 - vs.resvw.resource.copying
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - .rc files, copying resources between
 - rc files, copying resources between
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ac30e57c0c833f5d26cf9aa8a9ed4ba43946bb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b173be24e9f177a3156f740fcb07240c30fec75
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-copy-resources"></a>Cómo: Copiar recursos
 Puede copiar recursos de un archivo a otro sin modificarlas o puede [cambiar el idioma o la condición de un recurso al copiarlo](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  

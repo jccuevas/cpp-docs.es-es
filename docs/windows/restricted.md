@@ -1,13 +1,10 @@
 ---
 title: restringido | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.restricted
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 569d57da691f40857f54dcae1c383ff7758564f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="restricted"></a>restricted
 Especifica que no se puede llamar a un miembro de un módulo, interfaz o dispinterface arbitrariamente.  
@@ -79,7 +74,7 @@ class c : public a, public b
   
 |||  
 |-|-|  
-|**Se aplica a**|Método, la interfaz `interface`, **clase**,`struct`|  
+|**Se aplica a**|Método, la interfaz `interface`, **clase**, `struct`|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|**coclase** (cuando se aplica a **clase** o `struct`)|  
 |**Atributos no válidos**|Ninguna|  

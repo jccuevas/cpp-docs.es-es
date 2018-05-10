@@ -1,13 +1,10 @@
 ---
-title: "Mostrar u ocultar la barra de herramientas (Editor de imágenes para iconos) | Documentos de Microsoft"
-ms.custom: 
+title: Mostrar u ocultar la barra de herramientas (Editor de imágenes para iconos) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - toolbars [C++], showing
 - toolbars [C++], hiding
 ms.assetid: 78d25184-a8f4-457f-aa6f-069a5a27bcf8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85927d747735bcf66251a5112775cc5a67214cfb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d00610d4366f76e07b6f62b5a65416bf37182e2a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Mostrar u ocultar la barra de herramientas (Editor de imágenes para iconos)
 Puesto que muchas de las herramientas de dibujo están disponibles desde el [teclado](../windows/accelerator-keys-image-editor-for-icons.md), a veces resulta útil ocultar la barra de herramientas del Editor de imágenes.  

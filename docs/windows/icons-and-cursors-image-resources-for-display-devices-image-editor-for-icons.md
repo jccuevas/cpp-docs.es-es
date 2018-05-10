@@ -1,13 +1,10 @@
 ---
-title: "Iconos y cursores: recursos de imagen para dispositivos de presentación (Editor de imágenes para iconos) | Documentos de Microsoft"
-ms.custom: 
+title: 'Iconos y cursores: recursos de imagen para dispositivos de presentación (Editor de imágenes para iconos) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
 dev_langs:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ed2e99c3a08b473dcc786ed47bc088b8fd8a4f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Iconos y cursores: recursos de imagen para dispositivos de presentación (Editor de imágenes para iconos)
 Los iconos y cursores son recursos gráficos que pueden contener varias imágenes de diferentes tamaños y combinaciones de colores para distintos tipos de dispositivos de pantalla. Además, un cursor tiene una "zona activa", la ubicación que Windows usa para realizar un seguimiento de su posición. Tanto los iconos como los cursores se crean y se editan en el editor de imágenes, al igual que los mapas de bits y otras imágenes.  
@@ -86,6 +81,6 @@ Los iconos y cursores son recursos gráficos que pueden contener varias imágene
   
 ## <a name="see-also"></a>Vea también  
  [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)   
- [Iconos](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
+ [iconos](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [Cursores](http://msdn.microsoft.com/library/windows/desktop/ms646970)
 

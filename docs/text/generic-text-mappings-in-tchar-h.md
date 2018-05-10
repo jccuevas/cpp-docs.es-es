@@ -1,13 +1,10 @@
 ---
-title: "Asignaciones de texto genérico en Tchar.h | Documentos de Microsoft"
-ms.custom: 
+title: Asignaciones de texto genérico en Tchar.h | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Asignaciones de texto genérico en TCHAR.H
 Para simplificar la conversión de código para uso internacional, la biblioteca en tiempo de ejecución de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] proporciona asignaciones de texto genérico específicas de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] para muchos tipos de datos, rutinas y otros objetos. Se pueden usar estas asignaciones, que están definidas en Tchar.h, para crear código genérico que se puede compilar para juegos de caracteres de un solo byte, multibyte o [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)], en función de la constante de manifiesto que se defina con la instrucción `#define`. Las asignaciones de texto genérico son extensiones de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] que no son compatibles con [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)].  

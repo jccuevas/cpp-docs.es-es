@@ -1,13 +1,10 @@
 ---
-title: "Editor de imágenes para iconos | Documentos de Microsoft"
-ms.custom: 
+title: Editor de imágenes para iconos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - Image editor [C++]
 - resource editors, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 932afdf219e302459d7c1908cb2220e754d68ddf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41c4bf71d8d3479f8353c1f57e725f07926dee47
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="image-editor-for-icons"></a>Editor de imágenes para iconos
 El Editor de imágenes dispone de un completo conjunto de herramientas para crear y editar imágenes, así como características que facilitan la creación de mapas de bits de barras de herramientas. Además de mapas de bits, iconos y cursores, pueden editarse imágenes en formato GIF o JPEG mediante los comandos del menú **Imagen** y las herramientas de la barra de herramientas del **Editor de imágenes** .  

@@ -1,12 +1,10 @@
 ---
-title: "Tutorial: Crear una aplicación de escritorio de Windows tradicional (C++) | Documentos de Microsoft"
-ms.custom: 
+title: 'Tutorial: Crear una aplicación de escritorio de Windows tradicional (C++) | Documentos de Microsoft'
+ms.custom: get-started-article
 ms.date: 1/11/2018
-ms.reviewer: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +13,14 @@ helpviewer_keywords:
 - Windows API [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Tutorial: Crear una aplicación de escritorio de Windows tradicional (C++)
 
@@ -74,11 +71,11 @@ Siga estos pasos para crear su primer proyecto de escritorio de Windows y escrib
 
 Ahora se crea el proyecto y el archivo de código fuente se abre en el editor. Para continuar, ir directamente a [crear el código](#create-the-code).
 
-### <a id="create-in-vs2017-rtm"></a>Para crear un proyecto de escritorio de Windows en Visual Studio de 2017 RTM
+### <a id="create-in-vs2017-rtm"></a> Para crear un proyecto de escritorio de Windows en Visual Studio de 2017 RTM
 
 1. En el menú **Archivo**, elija **Nuevo** y después **Proyecto**.
 
-1. En el **nuevo proyecto** cuadro de diálogo, en el panel izquierdo, expanda **instalado**, **plantillas**, **Visual C++**y, a continuación, seleccione **Win32**. En el panel central, seleccione **Proyecto Win32**.
+1. En el **nuevo proyecto** cuadro de diálogo, en el panel izquierdo, expanda **instalado**, **plantillas**, **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Proyecto Win32**.
 
    En el **nombre** , escriba un nombre para el proyecto, por ejemplo, *DesktopApp*. Elija **Aceptar**.
 
@@ -369,7 +366,7 @@ A continuación, aprenderá a crear el código para una aplicación de escritori
    }
    ```
 
-   `HDC`en este código es un identificador de un contexto de dispositivo, que es una estructura de datos que Windows usa para habilitar la aplicación para comunicarse con el subsistema de gráficos. El `BeginPaint` y `EndPaint` funciones Asegúrese de que la aplicación se comporta como un buen ciudadano y no usa el contexto de dispositivo durante más tiempo de lo necesario. Esto ayuda a asegurarse de que el subsistema de gráficos está disponible para su uso por otras aplicaciones.
+   `HDC` en este código es un identificador de un contexto de dispositivo, que es una estructura de datos que Windows usa para habilitar la aplicación para comunicarse con el subsistema de gráficos. El `BeginPaint` y `EndPaint` funciones Asegúrese de que la aplicación se comporta como un buen ciudadano y no usa el contexto de dispositivo durante más tiempo de lo necesario. Esto ayuda a asegurarse de que el subsistema de gráficos está disponible para su uso por otras aplicaciones.
 
 1. Una aplicación normalmente controla muchos otros mensajes, por ejemplo, [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) cuando se crea una ventana por primera vez, y [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) cuando se cierra la ventana. El código siguiente muestra una función `WndProc` básica pero completa.
 

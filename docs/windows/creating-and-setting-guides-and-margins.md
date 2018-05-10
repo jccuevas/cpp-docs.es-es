@@ -1,13 +1,10 @@
 ---
-title: "Crear y establecer las guías y márgenes | Documentos de Microsoft"
-ms.custom: 
+title: Crear y establecer las guías y márgenes | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - guides, moving
 - margins, moving
 ms.assetid: fafa4545-8f00-436f-b590-300e76601156
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e767eaa8fbb91f0cf49c63d5d7aca3a05c5dd518
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b548f48fc079fe26ae43c0553bef27f2348bad6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Crear y establecer las guías y los márgenes
 Si va a mover controles, agregar controles o reorganizar un diseño actual, guías pueden ayudar a alinear los controles con precisión dentro de un cuadro de diálogo. Las guías aparecen como líneas de puntos azul en el cuadro de diálogo que se muestra en el editor y sus flechas correspondientes en las reglas (en la parte superior y en el lado izquierdo del editor de cuadro de diálogo).  

@@ -2,32 +2,27 @@
 title: Aplicaciones de escritorio (Visual C++) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicaciones de escritorio (Visual C++)
 A *aplicación de escritorio* en C++ es una aplicación nativa que se puede acceder al conjunto completo de API de Windows y ambos se ejecuta en una ventana o en la consola del sistema. Aplicaciones de escritorio de C++ pueden ejecutar en Windows XP y Windows 10 (Aunque oficialmente no se admite Windows XP y hay muchas de las API de Windows que se han introducido desde ese momento).   Una aplicación de escritorio es distinta de una aplicación de plataforma Universal de Windows (UWP), que se puede ejecutar en equipos que ejecutan Windows 10 y también en XBox, Windows Phone, Surface Hub y otros dispositivos. Para obtener más información acerca de vs de escritorio. Las aplicaciones de UWP, vea [elegir la tecnología](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
   
- **Terminology**  
+ **Terminología**  
   
 -   A *Win32* aplicación es una aplicación de escritorio de C++ que pueden hacer uso de nativo de Windows [las API de C de Windows o COM APIs](https://msdn.microsoft.com/en-us/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT y las API de biblioteca estándar y 3rd bibliotecas de entidad. Una aplicación de Win32 que se ejecuta en una ventana exige al programador que funciona de forma explícita con los mensajes de Windows dentro de una función de procedimiento de Windows. A pesar del nombre, una aplicación de Win32 puede compilarse como una (x86) 32 bits o 64 bits (x64) binario. En el IDE de Visual Studio, los términos x86 y Win32 son sinónimos.  
   

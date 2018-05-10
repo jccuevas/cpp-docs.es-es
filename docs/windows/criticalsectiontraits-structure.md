@@ -1,12 +1,9 @@
 ---
 title: CriticalSectionTraits (estructura) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CriticalSectionTraits structure
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c24d8dea31a87094329276af3ebfaf9f06136adc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits (estructura)
 Se especializa en un objeto CriticalSection para admitir una sección crítica no válida o una función para liberar una sección crítica.  
@@ -43,7 +38,7 @@ struct CriticalSectionTraits;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|`Type`|Un `typedef` que define un puntero a una sección crítica. `Type`se define como `typedef CRITICAL_SECTION* Type;`.|  
+|`Type`|Un `typedef` que define un puntero a una sección crítica. `Type` se define como `typedef CRITICAL_SECTION* Type;`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   

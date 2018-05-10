@@ -1,13 +1,10 @@
 ---
-title: "Crear un nuevo botón de barra de herramientas | Documentos de Microsoft"
-ms.custom: 
+title: Crear un nuevo botón de barra de herramientas | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - toolbar buttons (in Toolbar editor), creating
 - toolbar buttons (in Toolbar editor)
 ms.assetid: 46c120fe-4f2a-4887-a08f-bd1fea04b3f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b89d88d931603f1f8dfd65f08cb78210eac19a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d883fbb34fe45be2ad84860ea7564350346749f2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-new-toolbar-button"></a>Crear un nuevo botón de la barra de herramientas
 ### <a name="to-create-a-new-toolbar-button"></a>Para crear un nuevo botón de barra de herramientas  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  Asignar un identificador para el botón en blanco en el extremo derecho de la barra de herramientas. Puede hacerlo mediante la edición de la **identificador** propiedad en el [ventana propiedades](/visualstudio/ide/reference/properties-window). Por ejemplo, puede que desee proporcionar el mismo identificador como una opción de menú a un botón de barra de herramientas. En este caso, utilice el cuadro de lista desplegable para seleccionar la **ID** de la opción de menú.  
   
-     O bien  
+     -o bien-  
   
      Seleccione el botón en blanco en el extremo derecho de la barra de herramientas (en el panel de vista de la barra de herramientas) y empiece a dibujar. Se asigna un identificador de comando del botón predeterminado (ID\<n >).  
   

@@ -1,13 +1,10 @@
 ---
-title: "Pestaña de Editor de cuadro de diálogo, cuadro de herramientas | Documentos de Microsoft"
-ms.custom: 
+title: Pestaña de Editor de cuadro de diálogo, cuadro de herramientas | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - Dialog editor, creating controls
 - controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9db31d6e152be10f2c4934b7b1f239d1e08387f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Editor de cuadros de diálogo (Ficha, Cuadro de herramientas)
 La pestaña del Editor de cuadro de diálogo aparece en la [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox) cuando esté trabajando en el editor de cuadro de diálogo. Para agregar controles a un cuadro de diálogo nuevo, arrastre controles desde el cuadro de herramientas al cuadro de diálogo que está creando (para obtener más información, consulte [agregar un Control a un cuadro de diálogo](adding-a-control-to-a-dialog-box.md)). Después, puede mover los controles o cambiar su tamaño y su forma.  

@@ -1,13 +1,10 @@
 ---
 title: safe_cast (extensiones de componentes de C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (Extensiones de componentes de C++)
 La operación `safe_cast`, si es correcta, devuelve la expresión especificada como el tipo especificado; en caso contrario, produce una `InvalidCastException`.  
@@ -69,11 +64,11 @@ expression
  *identificador de tipo*  
  El tipo se debe convertir *expresión* a. Identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.  
   
- *expresión*  
+ *Expresión*  
  Expresión que evalúa a un identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.  
   
 ### <a name="remarks"></a>Comentarios  
- `safe_cast`produce `InvalidCastException` si no se puede convertir *expresión* al tipo especificado por *identificador de tipo*. Para detectar `InvalidCastException`, especifique el [/EH (modelo de control de excepciones)](../build/reference/eh-exception-handling-model.md) opción del compilador y use una instrucción try/catch.  
+ `safe_cast` produce `InvalidCastException` si no se puede convertir *expresión* al tipo especificado por *identificador de tipo*. Para detectar `InvalidCastException`, especifique el [/EH (modelo de control de excepciones)](../build/reference/eh-exception-handling-model.md) opción del compilador y use una instrucción try/catch.  
   
 ### <a name="requirements"></a>Requisitos  
  Opción del compilador: **/ZW**  
@@ -133,7 +128,7 @@ expression
  *identificador de tipo*  
  Identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.  
   
- *expresión*  
+ *Expresión*  
  Expresión que evalúa a un identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -145,7 +140,7 @@ expression
   
  Para obtener más información sobre conversiones, vea [operadores de conversión](../cpp/casting-operators.md).  
   
- `safe_cast`no se aplica un **const_cast** (desechar **const**).  
+ `safe_cast` no se aplica un **const_cast** (desechar **const**).  
   
  `safe_cast` se encuentra en el espacio de nombres cli.  Vea [plataforma, predeterminado y cli espacios de nombres](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) para obtener más información.  
   

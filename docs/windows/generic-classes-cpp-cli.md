@@ -1,13 +1,10 @@
 ---
-title: "Clases genéricas (C++ / CLI) | Documentos de Microsoft"
-ms.custom: 
+title: Clases genéricas (C++ / CLI) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-classes-ccli"></a>Clases genéricas (C++/CLI)
 Se declaró una clase genérica con el formato siguiente:  
@@ -53,7 +48,7 @@ class-body
  Información de declaración adicional. Para obtener más información sobre atributos y clases de atributos, vea atributos.  
   
  *clave de la clase*  
- Ya sea `class` o`typename`  
+ Ya sea `class` o `typename`  
   
  *tipo: parámetro-identificadores*,  
  Lista separada por comas de identificadores especificando los nombres de los parámetros de tipo.  
@@ -81,10 +76,10 @@ class-body
  *cuerpo de la clase*  
  El cuerpo de la clase, que contiene los campos, las funciones miembro, etcetera.  
   
- *declaradores*  
+ *Declaradores*  
  Declaraciones de las variables de este tipo. Por ejemplo: `^` *identificador*[`,` ...]  
   
- Puede declarar clases genéricas como los siguientes (tenga en cuenta que la palabra clave **clase** puede usarse en lugar de **typename**). En este ejemplo, `ItemType`, `KeyType` y `ValueType` son tipos desconocidos especificados en el punto donde el tipo. `HashTable<int, int>`es un tipo del tipo genérico construido `HashTable<KeyType, ValueType>`. Un número de diferentes tipos construidos puede construirse a partir un tipo genérico único. Tipos construidos construidos a partir de las clases genéricas se tratan como cualquier otro tipo de clase ref.  
+ Puede declarar clases genéricas como los siguientes (tenga en cuenta que la palabra clave **clase** puede usarse en lugar de **typename**). En este ejemplo, `ItemType`, `KeyType` y `ValueType` son tipos desconocidos especificados en el punto donde el tipo. `HashTable<int, int>` es un tipo del tipo genérico construido `HashTable<KeyType, ValueType>`. Un número de diferentes tipos construidos puede construirse a partir un tipo genérico único. Tipos construidos construidos a partir de las clases genéricas se tratan como cualquier otro tipo de clase ref.  
   
 ```  
 // generic_classes_1.cpp  

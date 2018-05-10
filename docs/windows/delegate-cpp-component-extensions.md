@@ -1,13 +1,10 @@
 ---
 title: Delegate (extensiones de componentes de C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - delegate_cpp
 - delegate
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30fd64fd37fb30c34b5d4f5901f16143fb1cd701
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73d40bb33509f89273b37f7704cd1922a8d5adc2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (Extensiones de componentes de C++)
 Declara un tipo que representa un puntero a función.  
@@ -60,13 +55,13 @@ delegate-type-identifier
  *access*  
  (opcional) La accesibilidad del delegado, que puede ser `public` (valor predeterminado) o `private`. El prototipo de función también se puede calificar con el `const` o `volatile` palabras clave.  
   
- *tipo de valor devuelto*  
+ *Tipo de valor devuelto*  
  El tipo de valor devuelto del prototipo de función.  
   
  *identificador de tipo de delegado*  
  El nombre del tipo de delegado declarado.  
   
- *parámetros*  
+ *Parámetros*  
  (Opcional) Los tipos y los identificadores del prototipo de función.  
   
 ### <a name="remarks"></a>Comentarios  

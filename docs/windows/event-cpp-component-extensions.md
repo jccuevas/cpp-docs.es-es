@@ -1,13 +1,10 @@
 ---
 title: eventos (extensiones de componentes de C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="event--c-component-extensions"></a>event (Extensiones de componentes de C++)
 El `event` palabra clave declara una *eventos*, que es una notificación a los suscriptores registrados (*controladores de eventos*) que se ha producido algo de interés.  
@@ -53,19 +48,19 @@ modifiereventdelegate^ event_name
   
  **Parámetros**  
   
- *modificador*  
+ *Modificador*  
  Un modificador que se puede utilizar en la declaración de evento o un método de descriptor de acceso de eventos.  Los valores posibles son `static` y `virtual`.  
   
  *delegate*  
  El [delegar](../windows/delegate-cpp-component-extensions.md), cuya signatura debe coincidir con el controlador de eventos.  
   
- *event_name*  
+ *Event_name*  
  Nombre del evento.  
   
  *valor_devuelto*  
  El valor devuelto del método de descriptor de acceso del evento.  Para que sea comprobable, el tipo devuelto debe ser `void`.  
   
- *parámetros*  
+ *Parámetros*  
  (opcional) Parámetros para la `raise` método, que coincide con la firma de la *delegar* parámetro.  
   
  **Comentarios**  
@@ -82,7 +77,7 @@ modifiereventdelegate^ event_name
   
  Puede utilizar `operators+=` y `operator-=` para agregar y quitar un controlador de eventos, o llamar a los métodos `add()` y `remove()` explícitamente.  
   
- `event`es una palabra clave contextual; vea [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obtener más información.  
+ `event` es una palabra clave contextual; vea [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obtener más información.  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
   
@@ -115,19 +110,19 @@ modifiereventdelegate^ event_name
   
  **Parámetros**  
   
- *modificador*  
+ *Modificador*  
  Un modificador que se puede utilizar en la declaración de evento o un método de descriptor de acceso de eventos.  Los valores posibles son `static` y `virtual`.  
   
  *delegate*  
  El [delegar](../windows/delegate-cpp-component-extensions.md), cuya signatura debe coincidir con el controlador de eventos.  
   
- *event_name*  
+ *Event_name*  
  Nombre del evento.  
   
  *valor_devuelto*  
  El valor devuelto del método de descriptor de acceso del evento.  Para que sea comprobable, el tipo devuelto debe ser `void`.  
   
- *parámetros*  
+ *Parámetros*  
  (opcional) Parámetros para la `raise` método, que coincide con la firma de la *delegar* parámetro.  
   
  **Comentarios**  

@@ -1,13 +1,10 @@
 ---
-title: "Cómo: usar plantillas de recursos | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: usar plantillas de recursos | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - resources [Visual Studio], templates
 - .rct files
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bace4f6d8835d9aece7679fa1bb89af3d7a20ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 534a86d10a4bcbc34e6cef29fbb77d7caa2c64b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-resource-templates"></a>Cómo: Usar plantillas de recursos
 Una plantilla de recursos es un recurso personalizado que ha guardado como un archivo .rct. Por lo tanto, una plantilla de recursos puede servir como punto de partida para crear otros recursos. Las plantillas de recursos ahorran tiempo en el desarrollo de recursos adicionales o grupos de recursos que comparten características, como los controles estándar y otros elementos repetidos. Por ejemplo, debe incluir un botón de ayuda y el icono del logotipo de una empresa en varios cuadros de diálogo. Para hacerlo de una forma rápida, cree una nueva plantilla de cuadro de diálogo y personalícela con el logotipo y el botón de ayuda.  
@@ -61,7 +56,7 @@ Una plantilla de recursos es un recurso personalizado que ha guardado como un ar
   
 1.  [Abra el archivo .rc como un archivo independiente](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-2.  En el **archivo** menú, haga clic en  **guardar \<* el nombre de archivo*> como **.  
+2.  En el **archivo** menú, haga clic en **guardar \< *el nombre de archivo*> como**.  
   
 3.  Especifique una ubicación y haga clic en **Aceptar**.  
   

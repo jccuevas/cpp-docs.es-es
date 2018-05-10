@@ -1,31 +1,26 @@
 ---
-title: "Atributos de método | Documentos de Microsoft"
-ms.custom: 
+title: Atributos de método | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d2efe55058ab2ace7530afee7255b2ba08377b0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="method-attributes"></a>Atributos de método
 Los siguientes atributos se aplican a los métodos en una clase, coclase o interfaz.  
@@ -34,7 +29,7 @@ Los siguientes atributos se aplican a los métodos en una clase, coclase o inter
 |---------------|-----------------|  
 |[bindable](../windows/bindable.md)|Indica que la propiedad admite enlace de datos.|  
 |[call_as](../windows/call-as.md)|Permite que una función utilizables que debe asignarse a una función remota.|  
-|[personalizado](../windows/custom-cpp.md)|Le permite definir su propio atributo.|  
+|[Personalizada](../windows/custom-cpp.md)|Le permite definir su propio atributo.|  
 |[db_column](../windows/db-column.md)|Enlaza una columna especificada en el conjunto de filas.|  
 |[db_command](../windows/db-command.md)|Crea un comando OLE DB.|  
 |[db_param](../windows/db-param.md)|La variable de miembro especificado se asocia con un parámetro de entrada o de salida y delimita la variable.|  
@@ -52,7 +47,7 @@ Los siguientes atributos se aplican a los métodos en una clase, coclase o inter
 |[identificador](../windows/id.md)|Especifica un identificador DISPID de una función miembro (una propiedad o un método en una interfaz o dispinterface).|  
 |[immediatebind](../windows/immediatebind.md)|Indica que se notificará inmediatamente a la base de datos de todos los cambios a una propiedad de un objeto enlazado a datos.|  
 |[in](../windows/in-cpp.md)|Indica que es un parámetro que se pasan desde el procedimiento que realiza la llamada a procedimiento llamado.|  
-|[local](../windows/local-cpp.md)|Permite usar el compilador MIDL como un generador de encabezado cuando se utiliza en el encabezado de la interfaz. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.|  
+|[Local](../windows/local-cpp.md)|Permite usar el compilador MIDL como un generador de encabezado cuando se utiliza en el encabezado de la interfaz. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.|  
 |[nonbrowsable](../windows/nonbrowsable.md)|Indica que un miembro de interfaz no debe mostrarse en un explorador de propiedades.|  
 |[propget](../windows/propget.md)|Especifica una función de descriptor de acceso de propiedad.|  
 |[propput](../windows/propput.md)|Especifica una función de la configuración de la propiedad.|  
@@ -62,7 +57,7 @@ Los siguientes atributos se aplican a los métodos en una clase, coclase o inter
 |[requestedit](../windows/requestedit.md)|Indica que la propiedad admite la **OnRequestEdit** notificación.|  
 |[restricted](../windows/restricted.md)|Especifica que no se puede llamar a un miembro de un módulo, interfaz o dispinterface arbitrariamente.|  
 |[satype](../windows/satype.md)|Especifica el tipo de datos de la **SAFEARRAY** estructura.|  
-|[origen](../windows/source-cpp.md)|Especifica las interfaces de código fuente del control de puntos de conexión en una clase. En una propiedad o método, el **origen** atributo indica que el miembro devuelve un objeto o una variante que consiste en un origen de eventos.|  
+|[Origen](../windows/source-cpp.md)|Especifica las interfaces de código fuente del control de puntos de conexión en una clase. En una propiedad o método, el **origen** atributo indica que el miembro devuelve un objeto o una variante que consiste en un origen de eventos.|  
 |[synchronize](../windows/synchronize.md)|Sincroniza el acceso al método de destino.|  
 |[vararg](../windows/vararg.md)|Especifica que la función toma un número variable de argumentos.|  
   

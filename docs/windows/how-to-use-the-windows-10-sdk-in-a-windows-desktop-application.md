@@ -1,28 +1,23 @@
 ---
 title: 'Cómo: utilizar las ventanas de 10 SDK en una aplicación de escritorio de Windows | Documentos de Microsoft'
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 04/19/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6cd358be2e9c28dae5c495d2a18cbbb7a0976ea7
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
+ms.openlocfilehash: 2dae6f31082176c94cdf12cf0cdb42ba13aa93fe
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procedimiento de uso del SDK de Windows 10 en una aplicación de escritorio de Windows
 Cuando crea un proyecto de escritorio clásico de Windows en Visual Studio de 2017, se configura de forma predeterminada para compilar con la versión del SDK de Windows 10 que estaba instalado cuando se instaló o actualizó por última vez la carga de trabajo de escritorio de C++. Esta versión del SDK de Windows es compatible con todas las versiones recientes de Windows. Si desea tener como destino una versión anterior del SDK, puede abrir proyecto | Propiedades y elija una de las otras versiones del SDK disponibles en la lista desplegable de versión del SDK de Windows.  

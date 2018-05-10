@@ -2,11 +2,8 @@
 title: MakeAllocator (clase) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAllocator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - MakeAllocator class
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33ba172099fd2554709cc539eeee8999c0e42cef
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="makeallocator-class"></a>MakeAllocator (clase)
 Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
@@ -84,7 +79,7 @@ class MakeAllocator<T, true>;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Namespace:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
 ## <a name="see-also"></a>Vea también  
  [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

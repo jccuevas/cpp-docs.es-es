@@ -1,28 +1,23 @@
 ---
-title: "Cómo: usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de windows | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de windows | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb17a3c60f7b3f9271ed5ff569d9cd139ce80fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Cómo: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows
 Winmdidl.exe y midlrt.exe permiten la interacción de nivel COM entre el código de C++ nativo y los componentes de Windows Runtime. Winmdidl.exe toma como entrada un archivo .winmd que contiene los metadatos para un componente de Windows Runtime y genera un archivo IDL. Midlrt.exe convierte ese archivo IDL en archivos de encabezado que el código de C++ puede utilizar. Ambas herramientas se ejecutan en la línea de comandos.  
@@ -54,7 +49,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  Muestra el tiempo de ejecución total en el resultado de la consola.  
   
  / outdir:\<dir >  
- Especifica un directorio de salida. Si la ruta de acceso contiene espacios en blanco, utilice comillas. El directorio de salida predeterminado es  *\<unidad >*: \Users\\*\<nombre de usuario >*\AppData\Local\VirtualStore\Program archivos (x86) \Microsoft Visual Studio 12.0\\.  
+ Especifica un directorio de salida. Si la ruta de acceso contiene espacios en blanco, utilice comillas. El directorio de salida predeterminado es  *\<unidad >*: \Users\\*\<nombre de usuario >* \AppData\Local\VirtualStore\Program archivos (x86) \Microsoft Visual Studio 12.0\\.  
   
  `/banner:<file>`  
  Especifica un archivo que contiene el texto personalizado que se va a anteponer al mensaje de copyright predeterminado y al número de versión de winmdidl en la parte superior del archivo .idl generado. Si la ruta de acceso contiene espacios en blanco, utilice comillas.  

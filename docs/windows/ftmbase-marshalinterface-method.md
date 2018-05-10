@@ -1,12 +1,9 @@
 ---
-title: "Ftmbase:: MarshalInterface (método) | Documentos de Microsoft"
-ms.custom: 
+title: 'Ftmbase:: MarshalInterface (método) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ftm/Microsoft::WRL::FtmBase::MarshalInterface
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - MarshalInterface method
 ms.assetid: fc8421b4-06e4-4925-b908-c285fe4790d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9df1e5d7559b434c1af0f1feff3b73b8141a8865
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc22b83aee62b03ec5e664d08440b00718325272
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface (Método)
 Escribe en una secuencia los datos necesarios para inicializar un objeto de proxy en algún proceso de cliente.  

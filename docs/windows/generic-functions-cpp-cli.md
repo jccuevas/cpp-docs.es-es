@@ -1,13 +1,10 @@
 ---
-title: "Funciones genéricas (C++ / CLI) | Documentos de Microsoft"
-ms.custom: 
+title: Funciones genéricas (C++ / CLI) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-functions-ccli"></a>Funciones genéricas (C++/CLI)
 Una función genérica es una función que se declara con parámetros de tipo. Cuando se llama, se usan tipos reales en lugar de los parámetros de tipo.  
@@ -66,9 +61,9 @@ return-type identifier<type-parameter identifier(s)>
  Información de declaración adicional. Para obtener más información sobre atributos y clases de atributos, vea atributos.  
   
  *modificadores* (opcional)  
- Un modificador de la función, como estático.  `virtual`no se permite porque los métodos virtuales no pueden ser genéricos.  
+ Un modificador de la función, como estático.  `virtual` no se permite porque los métodos virtuales no pueden ser genéricos.  
   
- *tipo de valor devuelto*  
+ *Tipo de valor devuelto*  
  Tipo devuelto por el método. Si el tipo de valor devuelto es void, no se necesita ningún valor devuelto.  
   
  *identifier*  
@@ -153,7 +148,7 @@ ref struct MyClass {
   
  **Ejemplo**  
   
- En el ejemplo siguiente se usa una función genérica para buscar el primer elemento en una matriz. Declara `MyClass`, que hereda de la clase base `MyBaseClass`. `MyClass`contiene una función genérica, `MyFunction`, que llama a otra función genérica, `MyBaseClassFunction`, dentro de la clase base. En **principal**, la función genérica, `MyFunction`, se llama con argumentos de tipo diferente.  
+ En el ejemplo siguiente se usa una función genérica para buscar el primer elemento en una matriz. Declara `MyClass`, que hereda de la clase base `MyBaseClass`. `MyClass` contiene una función genérica, `MyFunction`, que llama a otra función genérica, `MyBaseClassFunction`, dentro de la clase base. En **principal**, la función genérica, `MyFunction`, se llama con argumentos de tipo diferente.  
   
 ```  
 // generics_generic_function_3.cpp  

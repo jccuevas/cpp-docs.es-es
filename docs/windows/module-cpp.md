@@ -1,13 +1,10 @@
 ---
-title: "módulo (C++) | Documentos de Microsoft"
-ms.custom: 
+title: módulo (C++) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.module
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b41ea146096a60210918b5f21e7b6278e35001
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce7925fd15a7a332dbfb18e2a22dc104783300b7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="module-c"></a>module (C++)
 Define el bloque de biblioteca en el archivo .idl.  
@@ -73,7 +68,7 @@ Define el bloque de biblioteca en el archivo .idl.
  Número de versión que quiere asignar al bloque de biblioteca. El valor predeterminado es 1,0.  
   
  `uuid`  
- Identificador único para la biblioteca. Si omite este parámetro, se generará automáticamente un identificador para la biblioteca. Es posible que necesite recuperar el *uuid* del bloque de biblioteca, lo que puede hacer con el identificador **__uuidof (***nombreDeBiblioteca***)**.  
+ Identificador único para la biblioteca. Si omite este parámetro, se generará automáticamente un identificador para la biblioteca. Puede que necesite recuperar el *uuid* de su bloque de biblioteca, lo que puede hacer mediante el identificador **__uuidof (***nombrebiblioteca***)**.  
   
  **lcid**  
  Parámetro de localización. Consulte [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) para obtener más información.  
@@ -193,7 +188,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
  [Atributos independientes](../windows/stand-alone-attributes.md)   
  [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [usesgetlasterror](../windows/usesgetlasterror.md)   
- [biblioteca de](http://msdn.microsoft.com/library/windows/desktop/aa367069)   
+ [Biblioteca de](http://msdn.microsoft.com/library/windows/desktop/aa367069)   
  [HelpContext](../windows/helpcontext.md)   
  [helpstring](../windows/helpstring.md)   
  [HelpFile](../windows/helpfile.md)   

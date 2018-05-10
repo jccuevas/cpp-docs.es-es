@@ -1,13 +1,10 @@
 ---
 title: Atributos IDL | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IDL files, attributes
 - .idl files
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 447c4369d7a80348dfb6c5eee54c49d76c1e8a4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c522c039a0471240ba319561485e8cc7f348aaa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idl-attributes"></a>Atributos IDL
 Tradicionalmente, el mantenimiento de un archivo .idl significaba que tenía que:  
@@ -84,9 +79,9 @@ Tradicionalmente, el mantenimiento de un archivo .idl significaba que tenía que
 |[lcid](../windows/lcid.md)|Le permite pasar un identificador de configuración regional a una función.|  
 |[length_is](../windows/length-is.md)|Especifica el número de elementos de la matriz que se transmitan.|  
 |[licensed](../windows/licensed.md)|Indica que la coclase al que se aplica se autoriza el uso y se debe crear instancias con **IClassFactory2**.|  
-|[local](../windows/local-cpp.md)|Permite usar el compilador MIDL como un generador de encabezado cuando se utiliza en el encabezado de la interfaz. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.|  
+|[Local](../windows/local-cpp.md)|Permite usar el compilador MIDL como un generador de encabezado cuando se utiliza en el encabezado de la interfaz. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.|  
 |[max_is](../windows/max-is.md)|Designa el valor máximo para un índice de matriz válida.|  
-|[módulo](../windows/module-cpp.md)|Define el bloque de biblioteca en el archivo .idl.|  
+|[Módulo](../windows/module-cpp.md)|Define el bloque de biblioteca en el archivo .idl.|  
 |[ms_union](../windows/ms-union.md)|Controla la alineación de representación de datos de red de uniones nonencapsulated.|  
 |[no_injected_text](../windows/no-injected-text.md)|Evita que el compilador inserte código como resultado del uso de atributos.|  
 |[nonbrowsable](../windows/nonbrowsable.md)|Indica que un miembro de interfaz no debe mostrarse en un explorador de propiedades.|  
@@ -95,7 +90,7 @@ Tradicionalmente, el mantenimiento de un archivo .idl significaba que tenía que
 |[object](../windows/object-cpp.md)|Identifica una interfaz personalizada; es sinónimo de atributo personalizado.|  
 |[odl](../windows/odl.md)|Identifica una interfaz como una interfaz de lenguaje de descripción de objetos (ODL).|  
 |[oleautomation](../windows/oleautomation.md)|Indica que una interfaz es compatible con la automatización.|  
-|[opcional](../windows/optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|  
+|[Opcional](../windows/optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|  
 |[out](../windows/out-cpp.md)|Identifica los parámetros de puntero devueltos desde el procedimiento llamado al procedimiento que realiza la llamada (desde el servidor al cliente).|  
 |[pointer_default](../windows/pointer-default.md)|Especifica el atributo de puntero predeterminado para todos los punteros excepto los punteros de nivel superior que aparecen en las listas de parámetros.|  
 |[pragma](../windows/pragma.md)|Emite la cadena especificada, sin los caracteres de comillas, en el archivo .idl generado.|  
@@ -112,7 +107,7 @@ Tradicionalmente, el mantenimiento de un archivo .idl significaba que tenía que
 |[restricted](../windows/restricted.md)|Especifica que una biblioteca o miembro de un módulo, interfaz o dispinterface no se puede llamar arbitrariamente.|  
 |[retval](../windows/retval.md)|Designa el parámetro que recibe el valor devuelto del miembro.|  
 |[size_is](../windows/size-is.md)|Especifica el tamaño de memoria asignada para los punteros de tamaño, tamaño de punteros a punteros de tamaño y solo o matrices multidimensionales.|  
-|[origen](../windows/source-cpp.md)|Indica que un miembro de una clase, propiedad o método es un origen de eventos.|  
+|[Origen](../windows/source-cpp.md)|Indica que un miembro de una clase, propiedad o método es un origen de eventos.|  
 |[string](../windows/string-cpp.md)|Indica que unidimensional `char`, `wchar_t`, **bytes**, o equivalente matriz o el puntero a una matriz de este tipo debe tratarse como una cadena.|  
 |[switch_is](../windows/switch-is.md)|Especifica la expresión o el identificador que actúa como la unión discriminante que selecciona al miembro de unión.|  
 |[switch_type](../windows/switch-type.md)|Identifica el tipo de la variable utilizada como la unión discriminante.|  
@@ -120,7 +115,7 @@ Tradicionalmente, el mantenimiento de un archivo .idl significaba que tenía que
 |[uidefault](../windows/uidefault.md)|Indica que el miembro de la información de tipo es el miembro predeterminado para su presentación en la interfaz de usuario.|  
 |[unique](../windows/unique-cpp.md)|Especifica un puntero único.|  
 |[usesgetlasterror](../windows/usesgetlasterror.md)|Indica que el llamador que si se produce un error al llamar a esa función, el llamador puede, a continuación, llamar a `GetLastError` para recuperar el código de error.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|  
 |[v1_enum](../windows/v1-enum.md)|Indica que el tipo enumerado especificado se transmiten como una entidad de 32 bits, en lugar de con el valor predeterminado de 16 bits.|  
 |[vararg](../windows/vararg.md)|Especifica que la función toma un número variable de argumentos.|  
 |[vi_progid](../windows/vi-progid.md)|Especifica una forma independiente de la versión de ProgID.|  

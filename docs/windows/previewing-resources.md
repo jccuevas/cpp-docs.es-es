@@ -1,13 +1,10 @@
 ---
 title: Vista previa de recursos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.resvw.resource.previewing
 - vs.resvw.resource.previewing
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - resource previews
 - code, viewing
 ms.assetid: d6abda66-0e2b-4ac3-a59a-a57b8c6fb70b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0eca56e607c916e28afc7bf513d853bcf6d94b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32d0082d050ceb391a4346e2a4a38ff71c3cf2a3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="previewing-resources"></a>Vista previa de recursos
 Vista previa de los recursos permite ver recursos gráficos sin abrirlos. Obtener una vista previa también es útil para los archivos ejecutables después de que ha compilado porque los identificadores de recursos cambian a números. Puesto que estos identificadores numéricos a menudo no proporcionan suficiente información, obtener una vista previa de los recursos ayuda a identificarlos con rapidez.  

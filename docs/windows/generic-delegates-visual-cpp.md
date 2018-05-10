@@ -2,30 +2,25 @@
 title: Delegados genéricos (Visual C++) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5e1635afb2c11dbb7835244eae776fabdaea9c0
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: ecbfebc49f76eee7bb753af3d07052d1e05d73be
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-delegates-visual-c"></a>Delegados genéricos (Visual C++)
 Puede usar parámetros de tipo genérico con los delegados. Para obtener más información sobre los delegados, vea [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).  
@@ -44,7 +39,7 @@ generic < [class | typename] type-parameter-identifiers>
  `attributes` (Opcional)  
  Información de declaración adicional. Para obtener más información sobre atributos y clases de atributos, vea atributos.  
   
- *type-parameter-identifier(s)*  
+ *tipo: parámetro-identificadores*  
  Lista separada por comas de identificadores para los parámetros de tipo.  
   
  `type-parameter-constraints-clauses`  
@@ -53,7 +48,7 @@ generic < [class | typename] type-parameter-identifiers>
  *modificadores de accesibilidad* (opcional)  
  Modificadores de accesibilidad (por ejemplo, **público**, `private`).  
   
- *result-type*  
+ *tipo de resultado*  
  Tipo de valor devuelto del delegado.  
   
  *identifier*  

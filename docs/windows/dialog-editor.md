@@ -1,13 +1,10 @@
 ---
-title: "Cuadro de diálogo Editor | Documentos de Microsoft"
-ms.custom: 
+title: Cuadro de diálogo Editor | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -19,21 +16,19 @@ helpviewer_keywords:
 - Dialog editor
 - dialog boxes, editing
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a18ed3aad1d3a9ea697ac815658b5eba8d99bff1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b8cb99b2002dab3fb04ffa8c5b117a49d23adc1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor"></a>Editor de cuadros de diálogo
-El Editor de cuadros de diálogo permite crear o editar recursos de cuadro de diálogo. Para abrir el editor de cuadro de diálogo haciendo doble clic en el archivo .rc de un cuadro de diálogo en la ventana Vista de recursos (**vista &#124; Vista de recursos**). Tenga en cuenta que la Vista de recursos no está disponible en las ediciones Express.  
+El Editor de cuadros de diálogo permite crear o editar recursos de cuadro de diálogo. Para abrir el editor de cuadro de diálogo haciendo doble clic en el archivo .rc de un cuadro de diálogo en la ventana Vista de recursos (**vista &#124; vista de recursos**). Tenga en cuenta que la Vista de recursos no está disponible en las ediciones Express.  
   
  Uno de los primeros pasos para crear un cuadro de diálogo nuevo (o una plantilla de cuadro de diálogo) consiste en agregar controles. En el Editor de cuadros de diálogo, se pueden organizar los controles de forma que se ajusten a un tamaño, forma o alineación determinados, o bien se puede desplazar para trabajar dentro del cuadro de diálogo. También es fácil eliminar un control.  
   
