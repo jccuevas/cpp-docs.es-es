@@ -1,12 +1,9 @@
 ---
 title: Accelerator (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMPRT/accelerator
@@ -49,17 +46,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc98e31a9f5ae1f1ac347bfe312c0fddd9ddf7a8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b40177af3796a17d32e78e628c41ea694f69ed9f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accelerator-class"></a>accelerator (Clase)
 Un acelerador es una capacidad de hardware que está optimizada para el cálculo de datos en paralelo. Una tecla de aceleración puede ser un dispositivo conectado a un bus PCIe (por ejemplo, una GPU) o puede ser una instrucción extendida establecer en la CPU principal.  
@@ -83,7 +78,7 @@ class accelerator;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[create_view](#create_view)|Crea y devuelve un `accelerator_view` objeto en este acelerador.|  
+|[CREATE_VIEW](#create_view)|Crea y devuelve un `accelerator_view` objeto en este acelerador.|  
 |[get_all](#get_all)|Devuelve un vector de `accelerator` objetos que representan todos los aceleradores disponibles.|  
 |[get_auto_selection_view](#get_auto_selection_view)|Devuelve la selección automática `accelerator_view`.|  
 |[get_dedicated_memory](#get_dedicated_memory)|Devuelve la memoria dedicada para la `accelerator`, en kilobytes.|  
@@ -480,7 +475,7 @@ bool operator!= (const accelerator& _Other) const;
 ### <a name="return-value"></a>Valor devuelto  
  `false` Si los dos `accelerator` objetos son iguales; en caso contrario, `true`.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
  Copia el contenido del elemento especificado `accelerator` objeto a este.  
   
@@ -724,7 +719,7 @@ bool operator!= (const accelerator_view& _Other) const;
 ### <a name="return-value"></a>Valor devuelto  
  `false` si los dos objetos son iguales; de lo contrario, `true`.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
  Copia el contenido del elemento especificado [accelerator_view](accelerator-view-class.md) objeto en éste.  
   

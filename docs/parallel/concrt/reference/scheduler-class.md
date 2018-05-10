@@ -1,12 +1,9 @@
 ---
 title: Scheduler (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Scheduler
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 97abec33d5fa4b372bc26874fd37397a2b78bb29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-class"></a>Scheduler (Clase)
 Representa una abstracción para un programador del runtime de simultaneidad.  
@@ -69,7 +64,7 @@ class Scheduler;
 |[CreateScheduleGroup](#createschedulegroup)|Sobrecargado. Crea un nuevo grupo de programación dentro del programador. La versión que toma el parámetro `_Placement` hace que las tareas dentro del grupo de programación recién creado para ser inclinación hacia la ejecución en la ubicación especificada por ese parámetro.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Devuelve el número actual de procesadores virtuales para el programador.|  
 |[GetPolicy](#getpolicy)|Devuelve una copia de la directiva que se creó el programador con.|  
-|[Id](#id)|Devuelve un identificador único para el programador.|  
+|[Id.](#id)|Devuelve un identificador único para el programador.|  
 |[IsAvailableLocation](#isavailablelocation)|Determina si una ubicación especificada está disponible en el programador.|  
 |[Referencia](#reference)|Incrementa el recuento de referencias del programador.|  
 |[RegisterShutdownEvent](#registershutdownevent)|Hace que el controlador de eventos de Windows pasa el `_Event` parámetro hasta que se señaliza cuando el programador se cierra y se destruye. En el momento en que se señala el evento, todo el trabajo que está programado para el programador está completando. Se pueden registrar varios eventos de apagado a través de este método.|  
@@ -174,7 +169,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  Una copia de la directiva que se creó el programador con.  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> Id. 
 
  Devuelve un identificador único para el programador.  
   
@@ -256,7 +251,7 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 ### <a name="remarks"></a>Comentarios  
  Puede llamar a este método mientras exista un programador predeterminado dentro del proceso. No afectará a la directiva del programador predeterminado existente. Sin embargo, si el programador predeterminado se cierre y un nuevo valor predeterminado que se crean en un momento posterior, el nuevo programador usaría la configuración de directiva en tiempo de ejecución predeterminado.  
   
-##  <a name="ctor">Programador</a> 
+##  <a name="ctor"></a> Programador 
 
  Un objeto de la `Scheduler` clase solo se puede crear mediante métodos de fábrica, o implícitamente.  
   

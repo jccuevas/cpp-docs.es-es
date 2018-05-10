@@ -1,12 +1,9 @@
 ---
 title: task_handle (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task_handle
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fcc201007a26a111f50036b273cab2850b28a3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3fa72ed19a691015214fe263033e07f8d6a74c34
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="taskhandle-class"></a>task_handle (Clase)
 La clase `task_handle` representa un elemento de trabajo individual paralelo. Encapsula las instrucciones y los datos necesarios para ejecutar una parte del trabajo.  
@@ -52,13 +47,13 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 |Name|Descripción|  
 |----------|-----------------|  
 |[task_handle](#ctor)|Construye un nuevo objeto `task_handle`. El trabajo de la tarea se realiza invocando la función especificada como un parámetro al constructor.|  
-|[~task_handle Destructor](#dtor)|Destruye el objeto `task_handle`.|  
+|[~ task_handle (destructor)](#dtor)|Destruye el objeto `task_handle`.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[operator()](#task_handle__operator_call)|El operador de llamada de función que invoca el tiempo de ejecución para realizar el trabajo del identificador de tarea.|  
+|[Operator()](#task_handle__operator_call)|El operador de llamada de función que invoca el tiempo de ejecución para realizar el trabajo del identificador de tarea.|  
   
 ## <a name="remarks"></a>Comentarios  
  `task_handle` objetos que pueden utilizarse junto con un `structured_task_group` o un más general `task_group` objeto, para descomponer el trabajo en tareas paralelas. Para obtener más información, consulte [paralelismo de tareas](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
@@ -102,7 +97,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>Comentarios  
  El tiempo de ejecución crea una copia de la función de trabajo que se pasa al constructor. Por lo tanto, cualquier cambio de estado que se produce en una función de objeto que se pasa a un `task_handle` objeto no aparecerán en la copia de ese objeto de función.  
   
-##  <a name="dtor"></a> ~task_handle 
+##  <a name="dtor"></a> ~ task_handle 
 
  Destruye el objeto `task_handle`.  
   

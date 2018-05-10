@@ -1,12 +1,9 @@
 ---
 title: SchedulerPolicy (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - SchedulerPolicy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fc8873fc4516b3c79685eacc91d3d4426b80901
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9f23e95bafa9920c520fa7c01518873769945770
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy (Clase)
 La clase `SchedulerPolicy` contiene un conjunto de pares clave-valor, uno para cada elemento de directiva, que controla el comportamiento de una instancia del programador.  
@@ -93,7 +88,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ### <a name="remarks"></a>Comentarios  
  El método producirá [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) para una clave de directiva no válida.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
  Asigna la directiva de programador a partir de otra directiva de programador.  
   
@@ -148,7 +143,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```  
   
-##  <a name="setconcurrencylimits">SetConcurrencyLimits</a> 
+##  <a name="setconcurrencylimits"></a> SetConcurrencyLimits 
 
  Simultáneamente establece las directivas `MinConcurrency` y `MaxConcurrency` en el objeto `SchedulerPolicy`.  
   

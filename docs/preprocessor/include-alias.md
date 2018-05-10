@@ -1,12 +1,9 @@
 ---
-title: include_alias | Microsoft Docs
-ms.custom: 
+title: include_alias | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.include_alias
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2e3b6f6b8bbbc17073b5bf43b54fff3a619793
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="includealias"></a>include_alias
 
@@ -35,8 +30,8 @@ Especifica que *short_filename* es que se usará como un alias para *long_filena
 
 ## <a name="syntax"></a>Sintaxis
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias("*long_filename*", "*short_filename*")  
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias(*long_filename*, *short_filename*)
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias ("*long_filename*","*short_filename*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (*long_filename*, *short_filename*)
 
 ## <a name="remarks"></a>Comentarios
 
@@ -94,7 +89,7 @@ Además, la directiva siguiente genera un error:
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-Tenga en cuenta que el nombre de archivo indica en los mensajes de error, o como el valor de predefinido **&#95; &#95; ARCHIVO de &#95; &#95;**  (macro), es el nombre del archivo después de haber realizado la sustitución. Por ejemplo, ver los resultados después de las siguientes directivas:
+Tenga en cuenta que el nombre de archivo indicado en mensajes de error, o como el valor de la **&#95; &#95;archivo&#95; &#95;** (macro), es el nombre del archivo después de haber realizado la sustitución. Por ejemplo, ver los resultados después de las siguientes directivas:
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )

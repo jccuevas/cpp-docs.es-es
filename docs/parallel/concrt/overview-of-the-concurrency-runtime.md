@@ -1,13 +1,10 @@
 ---
-title: "Información general sobre el Runtime de simultaneidad | Documentos de Microsoft"
-ms.custom: 
+title: Información general sobre el Runtime de simultaneidad | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 67f0497f600cf5d528b2c41601b7a02c08771861
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Información general sobre el runtime de simultaneidad
 En este documento se proporciona información general sobre el Runtime de simultaneidad. Se describen las ventajas del Runtime de simultaneidad, cuándo usarlo, y cómo interactúan sus componentes entre sí y con el sistema operativo y las aplicaciones.  
@@ -45,7 +40,7 @@ En este documento se proporciona información general sobre el Runtime de simult
   
 -   [Requisitos](#requirements)  
   
-##  <a name="runtime">¿Por qué un Runtime de simultaneidad es importante</a>  
+##  <a name="runtime"></a> ¿Por qué un Runtime de simultaneidad es importante  
  Un Runtime de simultaneidad proporciona uniformidad y previsibilidad a las aplicaciones y a los componentes de aplicación que se ejecutan simultáneamente. Dos ejemplos de las ventajas del Runtime de simultaneidad son *programación de tareas cooperativa* y *bloqueo cooperativo*.  
   
  El Runtime de simultaneidad usa un programador de tareas cooperativo que implementa un algoritmo de robo de trabajo para distribuir el trabajo de forma eficaz entre los recursos informáticos. Pensemos, por ejemplo, en una aplicación que tenga dos subprocesos, ambos administrados por el mismo runtime. Si un subproceso finaliza su tarea programada, puede descargar de trabajo al otro subproceso. Este mecanismo equilibra la carga de trabajo total de la aplicación.  
@@ -98,7 +93,7 @@ En este documento se proporciona información general sobre el Runtime de simult
   
  [[Arriba](#top)]  
   
-##  <a name="lambda">Expresiones Lambda de C++</a>  
+##  <a name="lambda"></a> Expresiones Lambda de C++  
  Muchos de los tipos y algoritmos que se definen en el Runtime de simultaneidad se implementan como plantillas de C++. Algunos de estos tipos y algoritmos toman como parámetro una rutina que realiza trabajo. Este parámetro puede ser una función lambda, un objeto de función o un puntero a una función. Estas entidades también se conocen como *funciones de trabajo* o *rutinas de trabajo*.  
   
  Las expresiones lambda son una característica nueva e importante del lenguaje Visual C++ porque proporcionan una manera concisa de definir funciones de trabajo para el procesamiento paralelo. Los objetos de función y los punteros a función permiten usar el Runtime de simultaneidad con el código existente. Sin embargo, se recomienda usar expresiones lambda al escribir código nuevo debido a las ventajas de seguridad y productividad que proporcionan.  

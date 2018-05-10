@@ -1,12 +1,9 @@
 ---
 title: combinable (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - combinable
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 695081e6513965a89222d1108c632e2f22580184
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="combinable-class"></a>Clase combinable
 El objeto `combinable<T>` está diseñado para proporcionar copias de subprocesos privados de datos, para realizar subcálculos de subprocesos locales sin bloqueos durante algoritmos paralelos. Al final de la operación paralela, los subcálculos de subprocesos privados pueden combinarse en un resultado final. Esta clase se puede utilizar en lugar de una variable compartida y puede dar lugar a una mejora en el rendimiento que, de lo contrario, daría lugar a mucha contención en esa variable compartida.  
@@ -53,7 +48,7 @@ class combinable;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[combinable](#ctor)|Sobrecargado. Construye un nuevo objeto `combinable`.|  
+|[clase combinable](#ctor)|Sobrecargado. Construye un nuevo objeto `combinable`.|  
 |[~ combinable (destructor)](#dtor)|Destruye un objeto `combinable`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -63,7 +58,7 @@ class combinable;
 |[clear](#clear)|Borra los resultados intermedios de cálculo de un uso anterior.|  
 |[combine](#combine)|Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación.|  
 |[combine_each](#combine_each)|Calcula un valor final del conjunto de subprocesos locales sin bloqueos llamando al functor de combinación una vez por cada cálculo secundario local de subprocesos. El resultado final se acumula por el objeto de función.|  
-|[local](#local)|Sobrecargado. Devuelve una referencia para el cálculo de subcarpetas de subprocesos privados.|  
+|[Local](#local)|Sobrecargado. Devuelve una referencia para el cálculo de subcarpetas de subprocesos privados.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -180,7 +175,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia para el cálculo de subcarpetas de subprocesos privados.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
  Asigna a un `combinable` objeto desde otro `combinable` objeto.  
   

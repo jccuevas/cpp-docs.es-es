@@ -1,12 +1,9 @@
 ---
 title: Extent (clase) (C++ AMP) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - extent
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 901ba590d208db7c9cf3803e77e8481a2b896ea2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extent-class-c-amp"></a>extent (Clase) (C++ AMP)
 Representa un vector de *N* valores enteros que especifican los límites de un *N*-espacio de dimensiones que tiene un origen de 0. Los valores del vector se ordenan de la más importante a la menos importante.  
@@ -66,7 +61,7 @@ class extent;
 |----------|-----------------|  
 |[contiene](#contains)|Comprueba que el especificado `extent` objeto tiene el rango especificado.|  
 |[size](#size)|Devuelve el tamaño total lineal de la extensión (en unidades de elementos).|  
-|[tile](#tile)|Genera un `tiled_extent` especificó el objeto con las extensiones de mosaico proporcionado por dimensiones.|  
+|[icono](#tile)|Genera un `tiled_extent` especificó el objeto con las extensiones de mosaico proporcionado por dimensiones.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -77,7 +72,7 @@ class extent;
 |[operator%=](#operator_mod_eq)|Calcula el módulo (resto) de cada elemento de la `extent` del objeto cuando dicho elemento se divide por un número.|  
 |[operator*=](#operator_star_eq)|Multiplica cada elemento de la `extent` objeto mediante un número.|  
 |[operator/=](#operator_min_eq)|Divide cada elemento de la `extent` objeto mediante un número.|  
-|[extent::operator\[\]](#operator_at)|Devuelve el elemento situado en el índice especificado.|  
+|[Extent:: operator\[\]](#operator_at)|Devuelve el elemento situado en el índice especificado.|  
 |[operator+](#operator_add)|Devuelve un nuevo `extent` objeto que se crea agregando correspondiente `index` y `extent` elementos.|  
 |[operator++](#operator_add_add)|Incrementa cada elemento de la `extent` objeto.|  
 |[operator+=](#operator_add_eq)|Suma el número especificado para cada elemento de la `extent` objeto.|  
@@ -95,7 +90,7 @@ class extent;
  `extent`  
 
 
-## <a name="contains">contiene</a> 
+## <a name="contains"></a> contiene 
 
 Indica si el texto especificado [índice](index-class.md) valor se encuentra dentro del objeto 'extensión'.  
   
@@ -302,7 +297,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Valor devuelto  
  El objeto `extent` resultante.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
 Copia el contenido de otro objeto de 'extensión' en éste.  
   

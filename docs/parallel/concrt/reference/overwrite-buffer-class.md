@@ -1,12 +1,9 @@
 ---
 title: Clase overwrite_buffer | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - overwrite_buffer
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59eeadecdcf5d1a6333f08b68f98976ce9e6ea78
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dccde651898bf5ff0986dc2e577a1d2ee5765e3f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overwritebuffer-class"></a>Clase overwrite_buffer
 Un bloque de mensajería `overwrite_buffer` es un bloque `propagator_block` de destino único, de varios orígenes y ordenado que es capaz de almacenar un único mensaje cada vez. Los nuevos mensajes sobrescriben a los retenidos previamente.  
@@ -62,7 +57,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |Name|Descripción|  
 |----------|-----------------|  
 |[overwrite_buffer](#ctor)|Sobrecargado. Construye un `overwrite_buffer` bloque de mensajería.|  
-|[~overwrite_buffer Destructor](#dtor)|Destruye el `overwrite_buffer` bloque de mensajería.|  
+|[~ overwrite_buffer (destructor)](#dtor)|Destruye el `overwrite_buffer` bloque de mensajería.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -84,7 +79,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |[reserve_message](#reserve_message)|Reserva un mensaje ofrecido previamente por este `overwrite_buffer` bloque de mensajería. (Invalida [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
 |[resume_propagation](#resume_propagation)|Reanuda la propagación después de que se ha liberado una reserva. (Invalida [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
 |[send_message](#send_message)|Un mensaje de forma sincrónica, pasa un `ISource` bloque a este `overwrite_buffer` bloque de mensajería. Se invoca con el `send` método, cuando se llama a un bloque de origen.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado. (Overrides [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[supports_anonymous_source](#supports_anonymous_source)|Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado. (Invalida [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Comentarios  
  Un `overwrite_buffer` bloque de mensajería propaga las copias de su mensaje almacenado a cada uno de sus destinos.  
@@ -96,7 +91,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
  [ITarget](itarget-class.md)  
   
- [source_block](source-block-class.md)  
+ [source_block)](source-block-class.md)  
   
  [propagator_block](propagator-block-class.md)  
   
@@ -166,7 +161,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Un puntero al destino recién vinculado.  
   
-##  <a name="dtor"></a> ~overwrite_buffer 
+##  <a name="dtor"></a> ~ overwrite_buffer 
 
  Destruye el `overwrite_buffer` bloque de mensajería.  
   

@@ -1,12 +1,9 @@
 ---
 title: Event (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - event
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2301e06554d99529c7d4e4e5215208dc4265970
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fb02865b20d1603be38192e770eb26627e6900e7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-class"></a>event (Clase)
 Un evento de reinicio manual que es explícitamente consciente del runtime de simultaneidad.  
@@ -56,7 +51,7 @@ class event;
 |----------|-----------------|  
 |[reset](#reset)|Restablece el evento a un estado no señalado.|  
 |[set](#set)|Señala el evento.|  
-|[wait](#wait)|Espera a que se señale el evento.|  
+|[espera](#wait)|Espera a que se señale el evento.|  
 |[wait_for_multiple](#wait_for_multiple)|Espera a que se señalen varios eventos.|  
   
 ### <a name="public-constants"></a>Constantes públicas  

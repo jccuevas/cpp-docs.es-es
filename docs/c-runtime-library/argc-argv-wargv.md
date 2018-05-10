@@ -1,13 +1,10 @@
 ---
 title: __argc, __argv, __wargv | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - __wargv
 - __argv
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e1a7e98e3d152d54c1d7d3d8f47671f71129cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d5d9762f02a06e697ce164910755431e8a59009
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
 La variable global `__argc` es un recuento del número de argumentos de línea de comandos que se pasa al programa. `__argv` es un puntero a una matriz de cadenas de carácter de un solo byte o de carácter multibyte que contienen los argumentos del programa, mientras que `__wargv` es un puntero a una matriz de cadenas de carácter ancho que contienen los argumentos del programa. Estas variables globales proporcionan los argumentos para `main` o `wmain`.  

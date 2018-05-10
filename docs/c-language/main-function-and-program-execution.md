@@ -1,13 +1,10 @@
 ---
-title: "Función main y ejecución del programa | Microsoft Docs"
-ms.custom: 
+title: Función main y ejecución del programa | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9967481734c49d40d3121f825783b1824ad6f4f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca08ecc5be82ec256320c87a9a49e354dccd40f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="main-function-and-program-execution"></a>Función main y ejecución del programa
 Cada programa de C tiene una función principal que se debe llamar **main**. Si su código sigue el modelo de programación Unicode, puede utilizar la versión de carácter ancho de **main**, **wmain**. La función **main** sirve como punto de partida para la ejecución del programa. Normalmente, controla la ejecución del programa dirigiendo las llamadas a otras funciones del programa. Un programa deja de ejecutarse normalmente al final de **main**, aunque puede finalizar en otros puntos del programa por distintos motivos. A veces, quizás cuando se detecta un error, puede resultar conveniente forzar la finalización de un programa. Para ello, utilice la función **exit**. Vea la *Referencia de la biblioteca en tiempo de ejecución* para obtener información y un ejemplo sobre cómo usar la función [exit](../c-runtime-library/reference/exit-exit-exit.md).  

@@ -1,13 +1,10 @@
 ---
 title: Los procedimientos recomendados en la biblioteca de modelos paralelos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ce3a4745b52c518484d14eafd483625eed2a0da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Procedimientos recomendados en la biblioteca de modelos paralelos
 En este documento se describe la mejor forma de usar eficazmente la biblioteca de patrones de procesamiento paralelos (PPL). PPL proporciona algoritmos, objetos y contenedores de propósito general para realizar paralelismos específicos.  
@@ -56,7 +51,7 @@ En este documento se describe la mejor forma de usar eficazmente la biblioteca d
   
 - [Asegúrese de que las Variables son válidas durante toda la duración de una tarea](#lifetime)  
   
-##  <a name="small-loops"></a>No establezca paralelismos en cuerpos de bucle pequeños  
+##  <a name="small-loops"></a> No establezca paralelismos en cuerpos de bucle pequeños  
  La ejecución en paralelo de cuerpos de bucle relativamente pequeños puede hacer que la sobrecarga de programación asociada supere a las ventajas del procesamiento en paralelo. Considere el ejemplo siguiente, que agrega cada par de elementos en dos matrices.  
   
  [!code-cpp[concrt-small-loops#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_1.cpp)]  
@@ -65,7 +60,7 @@ En este documento se describe la mejor forma de usar eficazmente la biblioteca d
   
  [[Arriba](#top)]  
   
-##  <a name="highest"></a>Exprese el paralelismo en el nivel más alto posible  
+##  <a name="highest"></a> Exprese el paralelismo en el nivel más alto posible  
  Cuando se paraleliza código solamente en el nivel inferior, se puede introducir una construcción del tipo bifurcar-combinar que no crece cuando aumenta el número de procesadores. A *bifurcar-recombinar* es una construcción que una tarea divide su trabajo en subtareas menores paralelas y espera a que finalicen esas subtareas. Cada subtarea puede dividirse de forma recursiva en subtareas adicionales.  
   
  Aunque el modelo del tipo bifurcar-recombinar puede ser útil para resolver diversos problemas, hay situaciones en las que la sobrecarga de la sincronización puede disminuir la escalabilidad. Por ejemplo, considere el siguiente código en serie que procesa datos de imagen.  
@@ -92,7 +87,7 @@ En este documento se describe la mejor forma de usar eficazmente la biblioteca d
   
  [[Arriba](#top)]  
   
-##  <a name="divide-and-conquer"></a>Usar parallel_invoke para resolver problemas de Divide y vencerás  
+##  <a name="divide-and-conquer"></a> Usar parallel_invoke para resolver problemas de Divide y vencerás  
 
  A *divide y vencerás* problema es una forma de la construcción bifurcar-recombinar que usa la recursividad para dividir una tarea en subtareas. Además el [Concurrency:: task_group](reference/task-group-class.md) y [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) clases, también puede utilizar el [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo a solucionar problemas de divide y vencerás. El algoritmo `parallel_invoke` tiene una sintaxis más concisa que los objetos de grupo de tareas y es útil cuando se tiene un número fijo de tareas paralelas.  
   
@@ -106,7 +101,7 @@ En este documento se describe la mejor forma de usar eficazmente la biblioteca d
   
  [[Arriba](#top)]  
   
-##  <a name="breaking-loops"></a>Use la cancelación o control para interrumpir un bucle paralelo de excepciones  
+##  <a name="breaking-loops"></a> Use la cancelación o control para interrumpir un bucle paralelo de excepciones  
  PPL proporciona dos mecanismos para cancelar el trabajo paralelo que realiza un algoritmo paralelo o un grupo de tareas. Es una manera de usar el mecanismo de cancelación proporcionada por el [Concurrency:: task_group](reference/task-group-class.md) y [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) clases. El otro mecanismo consiste en producir una excepción en el cuerpo de la función de trabajo de una tarea. El mecanismo de cancelación es más eficaz que el control de excepciones para cancelar un árbol de trabajo paralelo. A *árbol de trabajo paralelo* es un grupo de grupos de tareas relacionadas en el que algunos grupos de tareas contienen otros grupos de tareas. El mecanismo de cancelación cancela un grupo de tareas y sus grupos de tareas secundarios de forma descendente. Por el contrario, el control de excepciones funciona de manera ascendente y debe cancelar cada grupo de tareas secundario por separado a medida que la excepción se propaga hacia arriba.  
   
 
@@ -132,7 +127,7 @@ En este documento se describe la mejor forma de usar eficazmente la biblioteca d
   
  [[Arriba](#top)]  
   
-##  <a name="object-destruction"></a>Comprender cómo afectan cancelación y control de excepciones a la destrucción de objetos  
+##  <a name="object-destruction"></a> Comprender cómo afectan cancelación y control de excepciones a la destrucción de objetos  
  En un árbol de trabajo paralelo, una tarea que se cancela impide que se ejecuten las tareas secundarias. Esto puede causar problemas si una de las tareas secundarias realiza una operación que tiene importancia para la aplicación, como liberar un recurso. Además, la cancelación de tareas puede hacer que una excepción se propague a través de un destructor de objeto y provoque un comportamiento no definido en la aplicación.  
   
  En el ejemplo siguiente, la clase `Resource` describe un recurso y la clase `Container` describe un contenedor que contiene los recursos. En su destructor, la clase `Container` llama al `cleanup` método en dos de sus miembros `Resource` en paralelo y, a continuación, llama al método `cleanup` en su tercer miembro `Resource`.  
@@ -162,7 +157,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Arriba](#top)]  
   
-##  <a name="repeated-blocking"></a>No use bloqueos repetidamente en un bucle paralelo  
+##  <a name="repeated-blocking"></a> No use bloqueos repetidamente en un bucle paralelo  
 
  Un bucle paralelo como [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) o [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) que esté dominado por bloqueo de operaciones pueden hacer que el tiempo de ejecución cree muchos subprocesos en poco tiempo.  
 
@@ -179,7 +174,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Arriba](#top)]  
   
-##  <a name="blocking"></a>No realice operaciones de bloqueo al cancelar el trabajo paralelo  
+##  <a name="blocking"></a> No realice operaciones de bloqueo al cancelar el trabajo paralelo  
 
  Cuando sea posible, no realizar las operaciones de bloqueo antes de llamar a la [concurrency::task_group::cancel](reference/task-group-class.md#cancel) o [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) método para cancelar el trabajo paralelo.  
 
@@ -203,7 +198,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Arriba](#top)]  
   
-##  <a name="shared-writes"></a>No se escriben a los datos compartidos en un bucle paralelo  
+##  <a name="shared-writes"></a> No se escriben a los datos compartidos en un bucle paralelo  
  El Runtime de simultaneidad proporciona varias estructuras de datos, por ejemplo, [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), que sincronizan el acceso simultáneo a los datos compartidos. Estas estructuras de datos son útiles en muchos casos; por ejemplo, cuando varias tareas requieren con poca frecuencia acceso compartido a un recurso.  
   
  Considere el siguiente ejemplo que utiliza el [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo y un `critical_section` objeto que se va a calcular el recuento de números primos en un [std:: Array](../../standard-library/array-class-stl.md) objeto. Este ejemplo no se escala porque cada subproceso debe esperar para obtener acceso a la variable compartida `prime_sum`.  
@@ -224,7 +219,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Arriba](#top)]  
   
-##  <a name="false-sharing"></a>Cuando sea posible, evite el uso compartido falso  
+##  <a name="false-sharing"></a> Cuando sea posible, evite el uso compartido falso  
  *Uso compartido falso* se produce cuando varias tareas simultáneas que se ejecutan en procesadores separados escriben en variables que se encuentran en la misma línea de caché. Cuando una tarea escribe en una de las variables, se invalida la línea de caché de las dos variables. Cada procesador debe volver a cargar la línea de caché cada vez que esta se invalida. Por lo tanto, el uso compartido falso puede causar una disminución del rendimiento de la aplicación.  
   
  El siguiente ejemplo básico se muestra dos tareas simultáneas, cada una de las cuales incrementa una variable de contador compartida.  
@@ -245,7 +240,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Arriba](#top)]  
   
-##  <a name="lifetime"></a>Asegúrese de que las Variables son válidas durante toda la duración de una tarea  
+##  <a name="lifetime"></a> Asegúrese de que las Variables son válidas durante toda la duración de una tarea  
  Al proporcionar una expresión lambda a un grupo de tareas o algoritmo paralelo, la cláusula de captura especifica si el cuerpo de la expresión lambda tiene acceso a las variables del ámbito de inclusión por valor o por referencia. Si pasa variables por referencia a una expresión lambda, debe garantizar que esas variables se conserven hasta que finalice la tarea.  
   
  Considere el ejemplo siguiente que define la clase `object` y la función `perform_action`. La función `perform_action` crea una variable `object` y realiza alguna acción en esa variable de forma asincrónica. Dado que no se garantiza que la tarea finalice antes de que la función `perform_action` se resuelva, el programa se bloqueará o mostrará un comportamiento no especificado si la variable `object` se destruye mientras se ejecuta la tarea.  

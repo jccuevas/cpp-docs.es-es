@@ -1,13 +1,10 @@
 ---
-title: "TN033: Versión de DLL de MFC | Documentos de Microsoft"
-ms.custom: 
+title: 'TN033: Versión de DLL de MFC | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a247ffc36b3e0eb3e52c6f04949c693597d73064
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: Versión de DLL de MFC
 Esta nota describe cómo se puede utilizar el compartidas MFCxx.DLL y MFCxxD.DLL (donde x es el número de versión MFC) bibliotecas de vínculos dinámicos con aplicaciones MFC y archivos DLL de extensión MFC. Para obtener más información sobre archivos DLL de MFC estándar, consulte [utilizar MFC como parte de un archivo DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
@@ -97,7 +92,7 @@ Esta nota describe cómo se puede utilizar el compartidas MFCxx.DLL y MFCxxD.DLL
   
 -   Una aplicación que utiliza la biblioteca compartida de envío requiere que incluyen MFCxx.DLL (y otros) biblioteca con el programa. MFCxx.DLL es puede redistribuir libremente como muchos archivos DLL, pero todavía debe instalar la DLL en el programa de instalación. Además, debe distribuir la MSVCRTxx.DLL, que contiene la biblioteca en tiempo de ejecución de C que se está usando el programa y los mismos archivos DLL de MFC.  
   
-##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a>Cómo escribir un archivo DLL de extensión MFC  
+##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a> Cómo escribir un archivo DLL de extensión MFC  
  Una DLL de extensión de MFC es un archivo DLL que contiene las clases y funciones escritas para adornar la funcionalidad de las clases MFC. Una DLL de extensión de MFC utiliza los archivos DLL de MFC compartida de la misma manera que una aplicación utiliza, con unas consideraciones adicionales:  
   
 -   El proceso de compilación es similar a crear una aplicación que utiliza las bibliotecas compartidas de MFC con unos cuantos más opciones del compilador y del vinculador.  
@@ -146,7 +141,7 @@ Esta nota describe cómo se puede utilizar el compartidas MFCxx.DLL y MFCxxD.DLL
   
  Para ello debe asegurarse de que cada una de las funciones miembro se marca como importar o exportar según corresponda. Esto requiere declaraciones especiales: **__declspec (dllexport)** y **__declspec (dllimport)**. Cuando se utilizan las clases de las aplicaciones de cliente, que desea que se declara como **__declspec (dllimport)**. Cuando se está generando el propio archivo DLL de extensión de MFC, debe declararse como **__declspec (dllexport)**. Además, las funciones deben ser realmente exportadas, para que los programas de cliente se enlazan a ellos en tiempo de carga.  
   
- Para exportar toda la clase, use **AFX_EXT_CLASS** en la definición de clase. Esta macro se define mediante el marco de trabajo como **__declspec (dllexport)** cuando **_AFXDLL** y `_AFXEXT` está definido, pero se define como **__declspec (dllimport)** cuando `_AFXEXT` no está definido. `_AFXEXT`como se describió anteriormente, solo se define al crear el archivo DLL de extensión MFC. Por ejemplo:  
+ Para exportar toda la clase, use **AFX_EXT_CLASS** en la definición de clase. Esta macro se define mediante el marco de trabajo como **__declspec (dllexport)** cuando **_AFXDLL** y `_AFXEXT` está definido, pero se define como **__declspec (dllimport)** cuando `_AFXEXT` no está definido. `_AFXEXT` como se describió anteriormente, solo se define al crear el archivo DLL de extensión MFC. Por ejemplo:  
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
@@ -389,7 +384,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  Recorrer la lista tiene la desventaja de que es un proceso un poco más lento y requiere administrar intervalos de identificadores de recursos. Tiene la ventaja de que una aplicación de cliente que se vincula a varios archivos DLL de extensión MFC puede utilizar cualquier recurso proporcionado por el archivo DLL sin tener que especificar el identificador de instancia del archivo DLL. `AfxFindResourceHandle` es una API que se usa para recorrer la lista de recursos a fin de buscar una coincidencia determinada. Para ello, utiliza el nombre y el tipo de recurso, y devuelve el identificador de recurso donde se encontró por primera vez (o el valor NULL).  
   
-##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a>Escribir una aplicación que utiliza la versión del archivo DLL  
+##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a> Escribir una aplicación que utiliza la versión del archivo DLL  
   
 ### <a name="application-requirements"></a>Requisitos de la aplicación  
  Una aplicación que utiliza la versión compartida de MFC debe seguir unas reglas sencillas:  
@@ -446,7 +441,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  No se recomienda volver a generar los archivos DLL de MFC.  
   
-##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a>Cómo se implementa MFCxx.DLL  
+##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a> Cómo se implementa MFCxx.DLL  
  La siguiente sección describe cómo se implementa la DLL de MFC (MFCxx.DLL y MFCxxD.DLL). Descripción de que los detalles aquí también no son importante si todo lo que desea hacer es utilizar la DLL de MFC con la aplicación. Los detalles aquí no son esenciales para comprender cómo escribir un archivo DLL de extensión MFC, pero la descripción de esta implementación puede ayudarle a escribir su propio archivo DLL.  
   
 ### <a name="implementation-overview"></a>Información general de implementación  

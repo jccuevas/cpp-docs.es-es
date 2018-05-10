@@ -1,12 +1,9 @@
 ---
 title: reader_writer_lock (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - reader_writer_lock
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bea63c6e2f73ebd58434874758c4f20444958a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4a2f48a80efca0ec6e85a315b355a6482fb2096b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock (Clase)
 Un bloqueo de lectura o escritura basado en cola, con preferencia del sistema de escritura y con giro solo local. El bloqueo permite el acceso primero en entrar, primero en salir (FIFO) a los sistemas de escritura y lectores agotados bajo una carga continua de sistemas de escritura.  
@@ -51,15 +46,15 @@ class reader_writer_lock;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[reader_writer_lock::scoped_lock Class](#scoped_lock_class)|Una excepción segura del contenedor RAII que puede usarse para adquirir `reader_writer_lock` bloquear objetos como un sistema de escritura.|  
-|[reader_writer_lock::scoped_lock_read Class](#scoped_lock_read_class)|Una excepción segura del contenedor RAII que puede usarse para adquirir `reader_writer_lock` bloquear objetos como un lector.|  
+|[reader_writer_lock:: scoped_lock (clase)](#scoped_lock_class)|Una excepción segura del contenedor RAII que puede usarse para adquirir `reader_writer_lock` bloquear objetos como un sistema de escritura.|  
+|[reader_writer_lock:: scoped_lock_read (clase)](#scoped_lock_read_class)|Una excepción segura del contenedor RAII que puede usarse para adquirir `reader_writer_lock` bloquear objetos como un lector.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
 |[reader_writer_lock](#ctor)|Construye un nuevo objeto `reader_writer_lock`.|  
-|[~reader_writer_lock Destructor](#dtor)|Destruye el objeto `reader_writer_lock`.|  
+|[~ reader_writer_lock (destructor)](#dtor)|Destruye el objeto `reader_writer_lock`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -112,7 +107,7 @@ void lock_read();
   
  Si hay sistemas de escritura que se esperan en el bloqueo, el lector esperará hasta que todos los sistemas de escritura en línea hayan adquirido y liberado el bloqueo. Este bloqueo está orientado hacia los sistemas de escritura y puede agotar a los lectores bajo una carga continua de sistemas de escritura.  
   
-##  <a name="ctor"></a> reader_writer_lock 
+##  <a name="ctor"></a> reader_writer_lock) 
 
  Construye un nuevo objeto `reader_writer_lock`.  
   
@@ -120,7 +115,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="dtor"></a> ~reader_writer_lock 
+##  <a name="dtor"></a> ~ reader_writer_lock 
 
  Destruye el objeto `reader_writer_lock`.  
   
@@ -131,7 +126,7 @@ reader_writer_lock();
 ### <a name="remarks"></a>Comentarios  
  Se espera que ya no se mantiene el bloqueo cuando se ejecuta el destructor. Lo que permite el bloqueo de escritor de lector se destruya con el bloqueo, sigue dando resultados en un comportamiento indefinido.  
   
-##  <a name="scoped_lock_class"></a>  reader_writer_lock::scoped_lock Class  
+##  <a name="scoped_lock_class"></a>  reader_writer_lock:: scoped_lock (clase)  
  Una excepción segura del contenedor RAII que puede usarse para adquirir `reader_writer_lock` bloquear objetos como un sistema de escritura.  
   
 ```
@@ -150,7 +145,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  La `reader_writer_lock` objeto que se va a adquirir como un sistema de escritura.  
   
-## <a name="scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
+## <a name="scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock 
 
 Destruye un `reader_writer_lock` de objetos y libera el bloqueo proporcionado en su constructor.   
 
@@ -158,7 +153,7 @@ Destruye un `reader_writer_lock` de objetos y libera el bloqueo proporcionado en
 ~scoped_lock();
 ```  
   
-##  <a name="scoped_lock_read_class"></a>  reader_writer_lock::scoped_lock_read Class  
+##  <a name="scoped_lock_read_class"></a>  reader_writer_lock:: scoped_lock_read (clase)  
  Una excepción segura del contenedor RAII que puede usarse para adquirir `reader_writer_lock` bloquear objetos como un lector.  
   
 ```
@@ -181,7 +176,7 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  La `reader_writer_lock` objeto que se va a adquirir como un lector.  
   
-## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock::scoped_lock_read::~scoped_lock_read Destructor
+## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock:: scoped_lock_read:: ~ scoped_lock_read (destructor)
 Destruye un `scoped_lock_read` de objetos y libera el bloqueo proporcionado en su constructor.  
 
 ```

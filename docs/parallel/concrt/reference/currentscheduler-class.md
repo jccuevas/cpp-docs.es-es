@@ -1,12 +1,9 @@
 ---
 title: CurrentScheduler (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - CurrentScheduler
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 71ca69f645e548b1913904f692eb1c5fae167a9a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler (Clase)
 Representa una abstracción para el programador actual asociado al contexto de la llamada.  
@@ -59,7 +54,7 @@ class CurrentScheduler;
 |[Get](#get)|Devuelve un puntero al programador asociado con el contexto de la llamada, que también se denomina el programador actual.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Devuelve el número actual de procesadores virtuales para el programador asociado con el contexto de llamada.|  
 |[GetPolicy](#getpolicy)|Devuelve una copia de la directiva que se creó el programador actual con.|  
-|[Id](#id)|Devuelve un identificador único para el programador actual.|  
+|[Id.](#id)|Devuelve un identificador único para el programador actual.|  
 |[IsAvailableLocation](#isavailablelocation)|Determina si una ubicación especificada está disponible en el programador actual.|  
 |[RegisterShutdownEvent](#registershutdownevent)|Hace que el controlador de eventos de Windows pasa el `_ShutdownEvent` parámetro hasta que se señaliza cuando el programador asociado al contexto actual se cierra y se destruye. En el momento en que se señala el evento, todo el trabajo que está programado para el programador está completando. Se pueden registrar varios eventos de apagado a través de este método.|  
 |[ScheduleTask](#scheduletask)|Sobrecargado. Programa una tarea ligera dentro del programador asociado al contexto llamado. La tarea ligera se colocarán en un grupo de programación determinado por el tiempo de ejecución. La versión que toma el parámetro `_Placement` hace que la tarea se inclina a ejecutar en la ubicación especificada.|  
@@ -75,7 +70,7 @@ class CurrentScheduler;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="create">Crear</a> 
+##  <a name="create"></a> Crear 
 
  Crea un nuevo programador cuyo comportamiento se describe en el `_Policy` parámetro y lo adjunta al contexto de la llamada. El programador creado recientemente se convertirá en el programador actual para el contexto de llamada.  
   
@@ -179,7 +174,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>Comentarios  
  Este método hará que se cree el programador predeterminado del proceso y se adjunte al contexto de la llamada si no hay ningún programador asociado actualmente con el contexto de la llamada.  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> Id. 
 
  Devuelve un identificador único para el programador actual.  
   

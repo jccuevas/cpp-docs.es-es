@@ -1,12 +1,9 @@
 ---
 title: improper_lock (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - improper_lock
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37cf615460cda6d0f33f0431e258cac843f456c4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 903a24a6007eb8693584cfd4eed96bd12ef3cdda
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="improperlock-class"></a>improper_lock (Clase)
 Esta clase describe una excepción que se produce cuando se realiza un bloqueo de forma incorrecta.  
@@ -44,7 +39,7 @@ class improper_lock : public std::exception;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[improper_lock](#ctor)|Sobrecargado. Construye un objeto `improper_lock exception`.|  
+|[improper_lock)](#ctor)|Sobrecargado. Construye un objeto `improper_lock exception`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Normalmente, esta excepción se produce cuando se realiza un intento de adquirir un bloqueo no reentrante de forma recursiva en el mismo contexto.  

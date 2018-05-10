@@ -1,12 +1,9 @@
 ---
 title: tiled_index (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_index
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledindex-class"></a>tiled_index (Clase)
 Proporciona un índice en una [tiled_extent](tiled-extent-class.md) objeto. Esta clase tiene propiedades para tener acceso a elementos con respecto al origen de icono local y con respecto al origen global. Para obtener más información sobre los espacios de mosaico, consulte [usando iconos](../../../parallel/amp/using-tiles.md).  
@@ -102,10 +97,10 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |[local (constante)](#tiled_index__local)|Almacena un `index` objeto de índice de rango 1, 2 o 3 que representa la relación en el mosaico actual de un [tiled_extent](tiled-extent-class.md) objeto.|  
 |[Rank (constante)](#tiled_index__rank)|Almacena el rango de la `tiled_index` objeto.|  
 |[Tile (constante)](#tiled_index__tile)|Almacena un `index` objeto de rango de 1, 2 o 3 que representa las coordenadas del mosaico actual de un `tiled_extent` objeto.|  
-|[tile_dim0 Constant](#tiled_index__tile_dim0)|Almacena la longitud de la dimensión más significativa.|  
-|[tile_dim1 Constant](#tiled_index__tile_dim1)|Almacena la longitud de la dimensión importante siguiente a la mayoría.|  
-|[tile_dim2 Constant](#tiled_index__tile_dim2)|Almacena la longitud de la dimensión menos significativa.|  
-|[tile_origin Constant](#tiled_index__tile_origin)|Almacena un `index` objeto de coordenadas de rango 1, 2 o 3 que representa la información global del origen del icono actual en un `tiled_extent` objeto.|  
+|[tile_dim0 (constante)](#tiled_index__tile_dim0)|Almacena la longitud de la dimensión más significativa.|  
+|[tile_dim1 (constante)](#tiled_index__tile_dim1)|Almacena la longitud de la dimensión importante siguiente a la mayoría.|  
+|[tile_dim2 (constante)](#tiled_index__tile_dim2)|Almacena la longitud de la dimensión menos significativa.|  
+|[tile_origin (constante)](#tiled_index__tile_origin)|Almacena un `index` objeto de coordenadas de rango 1, 2 o 3 que representa la información global del origen del icono actual en un `tiled_extent` objeto.|  
 
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
@@ -192,7 +187,7 @@ Almacena un [tile_barrier](tile-barrier-class.md) objeto que representa una barr
 const tile_barrier barrier;  
 ```  
 
-## <a name="tiled_index__global"></a>  global   
+## <a name="tiled_index__global"></a>  Global   
 Almacena un [índice](index-class.md) objeto de rango 1, 2 o 3, que representa el índice de un objeto global.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -201,7 +196,7 @@ Almacena un [índice](index-class.md) objeto de rango 1, 2 o 3, que representa e
 const index<rank> global;  
 ```  
   
-## <a name="tiled_index__local"></a>  local   
+## <a name="tiled_index__local"></a>  Local   
 Almacena un [índice](index-class.md) objeto de índice de rango 1, 2 o 3 que representa la relación en el mosaico actual de un [tiled_extent](tiled-extent-class.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxis  

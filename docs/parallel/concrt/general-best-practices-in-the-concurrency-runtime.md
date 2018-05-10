@@ -1,29 +1,24 @@
 ---
 title: Procedimientos recomendados de generales en el Runtime de simultaneidad | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5c2c626ceb0243e91e56d70f0d8ae71208b157f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2cd9cffa76ce179f478422af9c8efce380a2465
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Procedimientos recomendados generales con el Runtime de simultaneidad
 En este documento se describen los procedimientos recomendados que se aplican a varias áreas del runtime de simultaneidad.  
@@ -45,12 +40,12 @@ En este documento se describen los procedimientos recomendados que se aplican a 
   
 - [No usar objetos de simultaneidad en segmentos de datos compartidos](#shared-data)  
   
-##  <a name="synchronization"></a>Usar las construcciones cooperativas de sincronización cuando sea posible  
+##  <a name="synchronization"></a> Usar las construcciones cooperativas de sincronización cuando sea posible  
  El runtime de simultaneidad proporciona muchas construcciones seguras para simultaneidad que no requieren un objeto de sincronización externo. Por ejemplo, el [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) clase proporciona anexar seguro para simultaneidad y el acceso a las operaciones de elemento. Sin embargo, para los casos que requieren acceso exclusivo a un recurso, el tiempo de ejecución proporciona la [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md), y [simultaneidad :: eventos](../../parallel/concrt/reference/event-class.md) clases. Estos tipos se comportan de forma cooperativa; por consiguiente, el programador de tareas puede reasignar los recursos de procesamiento a otro contexto mientras la primera tarea espera los datos. Cuando sea posible, use estos tipos de sincronización en lugar de otros mecanismos de sincronización, como los proporcionados por la API de Windows, que no se comportan de manera cooperativa. Para obtener más información acerca de estos tipos de sincronización y ver un ejemplo de código, vea [estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md) y [comparar estructuras de datos de sincronización con la API de Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).  
   
  [[Arriba](#top)]  
   
-##  <a name="yield"></a>Evitar las tareas largas que no producen resultados  
+##  <a name="yield"></a> Evitar las tareas largas que no producen resultados  
  Dado que el programador de tareas se comporta de forma cooperativa, no es ecuánime entre las tareas. Por consiguiente, una tarea puede evitar que se inicien otras tareas. Aunque esto es aceptable en algunos casos, en otros puede producir un interbloqueo o un colapso.  
   
  En el siguiente ejemplo se realizan más tareas que el número de recursos de procesamiento asignados. La primera tarea no produce resultados en el programador de tareas y, por consiguiente, la segunda tarea no se inicia hasta que finaliza la primera tarea.  
@@ -86,7 +81,7 @@ En este documento se describen los procedimientos recomendados que se aplican a 
   
  [[Arriba](#top)]  
   
-##  <a name="oversubscription"></a>Usar la sobresuscripción para desplazar las operaciones que se bloquean o tienen alta latencia  
+##  <a name="oversubscription"></a> Usar la sobresuscripción para desplazar las operaciones que se bloquean o tienen alta latencia  
  El Runtime de simultaneidad proporciona tipos primitivos de sincronización, como [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), que permiten que las tareas se bloqueen de forma cooperativa y produzcan resultados entre sí. Cuando una tarea se bloquea de forma cooperativa o produce resultados, el programador de tareas puede reasignar los recursos de procesamiento a otro contexto mientras la primera tarea espera los datos.  
   
  Hay casos en los que no se puede usar el mecanismo de bloqueo cooperativo que el runtime de simultaneidad proporciona. Por ejemplo, una biblioteca externa que usa podría emplear un mecanismos de sincronización diferente. Otro ejemplo es el caso en el que realiza una operación que podría tener mucha latencia, por ejemplo, cuando se usa la función de la API de Windows `ReadFile` para leer datos de una conexión de red. En estos casos, la sobresuscripción puede permitir que otras tareas se ejecuten cuando otra tarea está inactiva. La sobresuscripción le permite crear más subprocesos que el número de subprocesos de hardware disponibles.  
@@ -99,7 +94,7 @@ En este documento se describen los procedimientos recomendados que se aplican a 
   
  [[Arriba](#top)]  
   
-##  <a name="memory"></a>Usar las funciones de administración de memoria simultáneas cuando sea posible  
+##  <a name="memory"></a> Usar las funciones de administración de memoria simultáneas cuando sea posible  
 
  Use las funciones de administración de memoria, [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) y [Concurrency:: Free](reference/concurrency-namespace-functions.md#free), cuando tenga tareas específicas que asignen a menudo objetos pequeños que tienen una duración relativamente corta. El runtime de simultaneidad contiene una memoria caché independiente para cada subproceso en ejecución. Las funciones `Alloc` y `Free` asignan y liberan memoria de estas memorias caché sin el uso de bloqueos ni barreras de memoria.  
   
@@ -107,7 +102,7 @@ En este documento se describen los procedimientos recomendados que se aplican a 
   
  [[Arriba](#top)]  
   
-##  <a name="raii"></a>Usar RAII para administrar la vigencia de objetos de simultaneidad  
+##  <a name="raii"></a> Usar RAII para administrar la vigencia de objetos de simultaneidad  
  El runtime de simultaneidad usa el control de excepciones para implementar características como la cancelación. Por consiguiente, escriba el código seguro para excepciones cuando se llama al runtime o a otra biblioteca que llama al runtime.  
   
  El *Resource Acquisition Is Initialization* modelo (RAII) es una manera de administrar la duración de un objeto de simultaneidad en un ámbito determinado de forma segura. Bajo el modelo RAII, se asigna una estructura de datos en la pila. Esa estructura de datos se inicializa o adquiere un recurso cuando se crea, y destruye o libera ese recurso cuando se destruye la estructura de datos. El modelo RAII garantiza que se llama al destructor antes de que el ámbito de inclusión salga. Este modelo resulta útil cuando una función contiene varias instrucciones `return`. Este modelo también le ayuda a escribir código seguro para excepciones. Cuando una instrucción `throw` hace que la pila se desenrede, se llama al destructor del objeto RAII; por consiguiente, el recurso siempre se elimina o se libera correctamente.  
@@ -138,7 +133,7 @@ Error details:
   
  [[Arriba](#top)]  
   
-##  <a name="global-scope"></a>No cree objetos de simultaneidad en el ámbito Global  
+##  <a name="global-scope"></a> No cree objetos de simultaneidad en el ámbito Global  
  Cuando se crea un objeto de simultaneidad en el ámbito global, pueden surgir problemas en la aplicación, como infracciones de acceso a la memoria o interbloqueo.  
   
  Por ejemplo, cuando se crea un objeto de runtime de simultaneidad, el runtime crea un programador predeterminado para el usuario si aún no se había creado. Un objeto en tiempo de ejecución creado durante la construcción de objetos globales provocará que el runtime cree este programador predeterminado. Sin embargo, este proceso utiliza un bloqueo interno, lo que puede interferir con la inicialización de otros objetos que admiten la infraestructura del runtime de simultaneidad. Otro objeto de la infraestructura que aún no se haya inicializado podría requerir este bloqueo interno y provocar, por tanto, un interbloqueo en la aplicación.  
@@ -151,7 +146,7 @@ Error details:
   
  [[Arriba](#top)]  
   
-##  <a name="shared-data"></a>No usar objetos de simultaneidad en segmentos de datos compartidos  
+##  <a name="shared-data"></a> No usar objetos de simultaneidad en segmentos de datos compartidos  
  El Runtime de simultaneidad no admite el uso de objetos de simultaneidad en una sección de datos compartido, por ejemplo, una sección de datos que se crea mediante la [data_seg](../../preprocessor/data-seg.md) `#pragma` directiva. Un objeto de simultaneidad que se comparte entre los límites del proceso puede colocar el runtime en un estado incoherente o no válido.  
   
  [[Arriba](#top)]  

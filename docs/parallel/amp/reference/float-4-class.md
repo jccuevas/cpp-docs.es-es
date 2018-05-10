@@ -1,12 +1,9 @@
 ---
-title: float_4 Class | Microsoft Docs
-ms.custom: 
+title: float_4 (clase) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f4e168215270cca2112efa43b7faa225b972c34
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f5420cbaf6710f12852575926fc6280e1a33ce66
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="float4-class"></a>float_4 (Clase)
 Representa un vector corto de cuatro valores de coma flotante.  
@@ -310,7 +305,7 @@ class float_4;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[float_4 Constructor](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
+|[Constructor float_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -334,10 +329,10 @@ class float_4;
 |float_4::get_wzyx||  
 |float_4::get_x||  
 |float_4::get_xw||  
-|float_4::get_xwy||  
+|float_4:: get_xwy||  
 |float_4::get_xwyz||  
 |float_4::get_xwz||  
-|float_4::get_xwzy||  
+|float_4:: get_xwzy||  
 |float_4::get_xy||  
 |float_4::get_xyw||  
 |float_4::get_xywz||  
@@ -345,11 +340,11 @@ class float_4;
 |float_4::get_xyzw||  
 |float_4::get_xz||  
 |float_4::get_xzw||  
-|float_4::get_xzwy||  
-|float_4::get_xzy||  
+|float_4:: get_xzwy||  
+|float_4:: get_xzy||  
 |float_4::get_xzyw||  
-|float_4::get_y||  
-|float_4::get_yw||  
+|float_4:: get_Y||  
+|float_4:: get_yw||  
 |float_4::get_ywx||  
 |float_4::get_ywxz||  
 |float_4::get_ywz||  
@@ -360,7 +355,7 @@ class float_4;
 |float_4::get_yxz||  
 |float_4::get_yxzw||  
 |float_4::get_yz||  
-|float_4::get_yzw||  
+|float_4:: get_yzw||  
 |float_4::get_yzwx||  
 |float_4::get_yzx||  
 |float_4::get_yzxw||  
@@ -386,7 +381,7 @@ class float_4;
 |float_4::ref_r||  
 |float_4::ref_w||  
 |float_4::ref_x||  
-|float_4::ref_y||  
+|float_4:: ref_y||  
 |float_4::ref_z||  
 |float_4::set_w||  
 |float_4::set_wx||  
@@ -406,22 +401,22 @@ class float_4;
 |float_4::set_wzyx||  
 |float_4::set_x||  
 |float_4::set_xw||  
-|float_4::set_xwy||  
-|float_4::set_xwyz||  
+|float_4:: set_xwy||  
+|float_4:: set_xwyz||  
 |float_4::set_xwz||  
-|float_4::set_xwzy||  
-|float_4::set_xy||  
-|float_4::set_xyw||  
+|float_4:: set_xwzy||  
+|float_4:: set_xy||  
+|float_4:: set_xyw||  
 |float_4::set_xywz||  
 |float_4::set_xyz||  
-|float_4::set_xyzw||  
+|float_4:: set_xyzw||  
 |float_4::set_xz||  
 |float_4::set_xzw||  
-|float_4::set_xzwy||  
-|float_4::set_xzy||  
+|float_4:: set_xzwy||  
+|float_4:: set_xzy||  
 |float_4::set_xzyw||  
-|float_4::set_y||  
-|float_4::set_yw||  
+|float_4:: set_y||  
+|float_4:: set_yw||  
 |float_4::set_ywx||  
 |float_4::set_ywxz||  
 |float_4::set_ywz||  
@@ -432,7 +427,7 @@ class float_4;
 |float_4::set_yxz||  
 |float_4::set_yxzw||  
 |float_4::set_yz||  
-|float_4::set_yzw||  
+|float_4:: set_yzw||  
 |float_4::set_yzwx||  
 |float_4::set_yzx||  
 |float_4::set_yzxw||  
@@ -482,20 +477,20 @@ class float_4;
 |float_4::abgr||  
 |float_4::abr||  
 |float_4::abrg||  
-|float_4::ag||  
-|float_4::agb||  
+|float_4:: AG||  
+|float_4:: agb||  
 |float_4::agbr||  
-|float_4::agr||  
-|float_4::agrb||  
+|float_4:: Agr||  
+|float_4:: agrb||  
 |float_4::ar||  
 |float_4::arb||  
 |float_4::arbg||  
 |float_4::arg||  
-|float_4::argb||  
-|float_4::b||  
+|float_4:: ARGB||  
+|float_4:: b||  
 |float_4::ba||  
-|float_4::bag||  
-|float_4::bagr||  
+|float_4:: bag||  
+|float_4:: bagr||  
 |float_4::bar||  
 |float_4::barg||  
 |float_4::bg||  
@@ -529,10 +524,10 @@ class float_4;
 |float_4::rab||  
 |float_4::rabg||  
 |float_4::rag||  
-|float_4::ragb||  
+|float_4:: ragb||  
 |float_4::rb||  
 |float_4::rba||  
-|float_4::rbag||  
+|float_4:: rbag||  
 |float_4::rbg||  
 |float_4::rbga||  
 |float_4::rg||  
@@ -540,70 +535,70 @@ class float_4;
 |float_4::rgab||  
 |float_4::rgb||  
 |float_4::rgba||  
-|float_4::w||  
-|float_4::wx||  
-|float_4::wxy||  
-|float_4::wxyz||  
-|float_4::wxz||  
-|float_4::wxzy||  
-|float_4::wy||  
-|float_4::wyx||  
-|float_4::wyxz||  
-|float_4::wyz||  
-|float_4::wyzx||  
-|float_4::wz||  
+|float_4:: w||  
+|float_4:: WX||  
+|float_4:: WXY||  
+|float_4:: wxyz||  
+|float_4:: wxz||  
+|float_4:: wxzy||  
+|float_4:: WY||  
+|float_4:: wyx||  
+|float_4:: wyxz||  
+|float_4:: WYZ||  
+|float_4:: wyzx||  
+|float_4:: wZ||  
 |float_4::wzx||  
-|float_4::wzxy||  
-|float_4::wzy||  
-|float_4::wzyx||  
-|float_4::x||  
-|float_4::xw||  
-|float_4::xwy||  
-|float_4::xwyz||  
+|float_4:: wzxy||  
+|float_4:: wzy||  
+|float_4:: wzyx||  
+|float_4:: x||  
+|float_4:: xw||  
+|float_4:: xwy||  
+|float_4:: xwyz||  
 |float_4::xwz||  
-|float_4::xwzy||  
-|float_4::xy||  
-|float_4::xyw||  
-|float_4::xywz||  
-|float_4::xyz||  
-|float_4::xyzw||  
+|float_4:: xwzy||  
+|float_4:: XY||  
+|float_4:: xyw||  
+|float_4:: xywz||  
+|float_4:: XYZ||  
+|float_4:: xyzw||  
 |float_4::xz||  
-|float_4::xzw||  
-|float_4::xzwy||  
-|float_4::xzy||  
-|float_4::xzyw||  
-|float_4::y||  
-|float_4::yw||  
-|float_4::ywx||  
+|float_4:: xzw||  
+|float_4:: xzwy||  
+|float_4:: xzy||  
+|float_4:: xzyw||  
+|float_4:: y||  
+|float_4:: yw||  
+|float_4:: ywx||  
 |float_4::ywxz||  
-|float_4::ywz||  
+|float_4:: ywz||  
 |float_4::ywzx||  
-|float_4::yx||  
-|float_4::yxw||  
+|float_4:: YX||  
+|float_4:: yxw||  
 |float_4::yxwz||  
-|float_4::yxz||  
-|float_4::yxzw||  
-|float_4::yz||  
-|float_4::yzw||  
-|float_4::yzwx||  
-|float_4::yzx||  
-|float_4::yzxw||  
+|float_4:: YXZ||  
+|float_4:: yxzw||  
+|float_4:: YZ||  
+|float_4:: yzw||  
+|float_4:: yzwx||  
+|float_4:: yzx||  
+|float_4:: yzxw||  
 |float_4::z||  
-|float_4::zw||  
-|float_4::zwx||  
-|float_4::zwxy||  
-|float_4::zwy||  
-|float_4::zwyx||  
+|float_4:: ZW||  
+|float_4:: zwx||  
+|float_4:: zwxy||  
+|float_4:: zwy||  
+|float_4:: zwyx||  
 |float_4::zx||  
 |float_4::zxw||  
-|float_4::zxwy||  
-|float_4::zxy||  
-|float_4::zxyw||  
-|float_4::zy||  
-|float_4::zyw||  
-|float_4::zywx||  
-|float_4::zyx||  
-|float_4::zyxw||  
+|float_4:: zxwy||  
+|float_4:: zxy||  
+|float_4:: zxyw||  
+|float_4:: ZY||  
+|float_4:: zyw||  
+|float_4:: zywx||  
+|float_4:: ZYX||  
+|float_4:: zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `float_4`  

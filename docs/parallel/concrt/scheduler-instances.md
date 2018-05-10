@@ -1,29 +1,24 @@
 ---
 title: Instancias del programador | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f09a5708fd9140619eea60fb8e483c2e26165d1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-instances"></a>Instancias de Scheduler
 Este documento describe el rol de instancias del programador en el Runtime de simultaneidad y cómo usar el [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) y [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) clases para crear y administrar instancias del programador. Instancias del programador son útiles cuando desea asociar directivas de programación explícitas con tipos concretos de cargas de trabajo. Por ejemplo, puede crear una instancia de programador para ejecutar algunas tareas con una prioridad elevada de subproceso y usar el programador predeterminado para ejecutar con otras tareas con la prioridad normal de subproceso.  
@@ -43,7 +38,7 @@ Este documento describe el rol de instancias del programador en el Runtime de si
   
 -   [Ejemplo](#example)  
   
-##  <a name="classes"></a>Las clases CurrentScheduler y Scheduler  
+##  <a name="classes"></a> Las clases CurrentScheduler y Scheduler  
  El programador de tareas permite a las aplicaciones usar uno o varios *instancias del programador* para programar el trabajo. El [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) clase representa una instancia del programador y encapsula la funcionalidad relacionada con la programación de tareas.  
   
  Un subproceso que se adjunta a un programador se conoce como un *contexto de ejecución*, o simplemente *contexto*. Un programador puede estar activo en el contexto actual en cualquier momento. El programador activo también es conocido como el *programador actual*. El Runtime de simultaneidad usa el [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) clase para proporcionar acceso al programador actual. El programador actual para un contexto puede ser diferente del programador actual de otro contexto. El tiempo de ejecución no proporciona una representación de nivel de proceso del programador actual.  
@@ -54,7 +49,7 @@ Este documento describe el rol de instancias del programador en el Runtime de si
   
  [[Arriba](#top)]  
   
-##  <a name="creating"></a>Crear una instancia del programador  
+##  <a name="creating"></a> Crear una instancia del programador  
  Hay tres maneras de crear un `Scheduler` objeto:  
   
 -   Si no existe ningún programador, el runtime crea a un programador predeterminado automáticamente cuando se usa la funcionalidad en tiempo de ejecución, por ejemplo, un algoritmo paralelo, para realizar el trabajo. El programador predeterminado se convierte en el programador actual para el contexto que inicia el trabajo paralelo.  
@@ -69,7 +64,7 @@ Este documento describe el rol de instancias del programador en el Runtime de si
   
  [[Arriba](#top)]  
   
-##  <a name="managing"></a>Administrar la duración de una instancia del programador  
+##  <a name="managing"></a> Administrar la duración de una instancia del programador  
  El runtime usa un mecanismo de recuento de referencias para controlar la duración de `Scheduler` objetos.  
   
 
@@ -98,7 +93,7 @@ Este documento describe el rol de instancias del programador en el Runtime de si
   
  [[Arriba](#top)]  
   
-##  <a name="features"></a>Métodos y características  
+##  <a name="features"></a> Métodos y características  
  En esta sección se resume los métodos importantes de la `CurrentScheduler` y `Scheduler` clases.  
   
  Piense en la `CurrentScheduler` clase como una aplicación auxiliar para crear un programador para su uso en el contexto actual. La `Scheduler` clase le permite controlar un programador que pertenece a otro contexto.  

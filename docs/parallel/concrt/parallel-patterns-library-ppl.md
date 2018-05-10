@@ -1,29 +1,24 @@
 ---
 title: Patterns Library (PPL) en paralelo | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a13acdf07e2f6055326aea2097cb923baa153a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7263d764014fa3532c3234bd4c7a0d4f1ff8d3c3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-patterns-library-ppl"></a>Parallel Patterns Library (PPL)
 La Biblioteca de patrones de procesamiento paralelo (PPL) proporciona un modelo de programación imperativo que favorece la escalabilidad y facilidad de uso para desarrollar aplicaciones simultáneas. PPL se basa en los componentes de administración de recursos y programación del Runtime de simultaneidad. Eleva el nivel de abstracción entre el código de aplicación y el mecanismo de subprocesamiento subyacente proporcionando contenedores y algoritmos genéricos, con seguridad de tipos, que actúan sobre los datos en paralelo. PPL también permite desarrollar aplicaciones que escalan proporcionando alternativas al estado compartido.  

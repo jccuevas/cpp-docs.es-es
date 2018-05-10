@@ -1,12 +1,9 @@
 ---
-title: concurrent_priority_queue Class | Microsoft Docs
-ms.custom: 
+title: concurrent_priority_queue (clase) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a9114278cd9559a0a21191faeb87ee34b5a5df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue (Clase)
 La clase `concurrent_priority_queue` es un contenedor que permite que varios subprocesos inserten y extraigan elementos de forma simultánea. Los elementos se extraen en orden de prioridad donde la prioridad viene determinada por un functor proporcionado como un argumento de plantilla.  
@@ -102,7 +97,7 @@ template <typename T,
  `concurrent_priority_queue`  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** concurrent_priority_queue.h  
+ **Encabezado:** concurrent_priority_queue.h  
   
  **Espacio de nombres:** simultaneidad  
   
@@ -117,7 +112,7 @@ void clear();
 ### <a name="remarks"></a>Comentarios  
  `clear` no es seguro para simultaneidad. Debe asegurarse de que ningún otro subproceso invoca métodos en la cola de prioridad simultáneas cuando se llama a este método. `clear` no libera memoria.  
   
-##  <a name="ctor"></a> concurrent_priority_queue 
+##  <a name="ctor"></a> concurrent_priority_queue) 
 
  Crea una cola de prioridad simultáneas.  
   
@@ -203,7 +198,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valor devuelto  
  Una copia del asignador usada para construir la `concurrent_priority_queue` objeto.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
  Asigna el contenido de otro objeto `concurrent_priority_queue` a este. Este método no es seguro para la simultaneidad.  
   

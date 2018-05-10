@@ -1,12 +1,9 @@
 ---
-title: uint_3 Class | Microsoft Docs
-ms.custom: 
+title: uint_3 (clase) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::get_xz
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434089802bcb054bf07c7b20a48bc384d06693e3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cfa05f5895c21f5ffdf00020efe1d1b1b881fec4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="uint3-class"></a>uint_3 (Clase)
 Representa un vector corto de tres enteros sin signo.  
@@ -114,7 +109,7 @@ class uint_3;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[uint_3 Constructor](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
+|[Constructor uint_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -124,8 +119,8 @@ class uint_3;
 |uint_3::get_xy||  
 |uint_3::get_xyz||  
 |uint_3::get_xz||  
-|uint_3::get_xzy||  
-|uint_3::get_y||  
+|uint_3:: get_xzy||  
+|uint_3:: get_Y||  
 |uint_3::get_yx||  
 |uint_3::get_yxz||  
 |uint_3::get_yz||  
@@ -142,11 +137,11 @@ class uint_3;
 |uint_t::ref_y||  
 |uint_t::ref_z||  
 |uint_3::set_x||  
-|uint_3::set_xy||  
+|uint_3:: set_xy||  
 |uint_3::set_xyz||  
 |uint_3::set_xz||  
-|uint_3::set_xzy||  
-|uint_3::set_y||  
+|uint_3:: set_xzy||  
+|uint_3:: set_y||  
 |uint_3::set_yx||  
 |uint_3::set_yxz||  
 |uint_3::set_yz||  
@@ -186,36 +181,36 @@ class uint_3;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|uint_3::b||  
-|uint_3::bg||  
-|uint_3::bgr||  
-|uint_3::br||  
+|uint_3:: b||  
+|uint_3:: BG||  
+|uint_3:: BGR||  
+|uint_3:: br||  
 |uint_3::brg||  
-|uint_3::g||  
-|uint_3::gb||  
+|uint_3:: g||  
+|uint_3:: GB||  
 |uint_3::gbr||  
-|uint_3::gr||  
-|uint_3::grb||  
-|uint_3::r||  
-|uint_3::rb||  
+|uint_3:: GR||  
+|uint_3:: GRB||  
+|uint_3:: r||  
+|uint_3:: RB||  
 |uint_3::rbg||  
-|uint_3::rg||  
-|uint_3::rgb||  
-|uint_3::x||  
-|uint_3::xy||  
-|uint_3::xyz||  
-|uint_3::xz||  
-|uint_3::xzy||  
-|uint_3::y||  
-|uint_3::yx||  
-|uint_3::yxz||  
-|uint_3::yz||  
-|uint_3::yzx||  
-|uint_3::z||  
+|uint_3:: RG||  
+|uint_3:: RGB||  
+|uint_3:: x||  
+|uint_3:: XY||  
+|uint_3:: XYZ||  
+|uint_3:: XZ||  
+|uint_3:: xzy||  
+|uint_3:: y||  
+|uint_3:: YX||  
+|uint_3:: YXZ||  
+|uint_3:: YZ||  
+|uint_3:: yzx||  
+|uint_3:: z||  
 |uint_3::zx||  
-|uint_3::zxy||  
-|uint_3::zy||  
-|uint_3::zyx||  
+|uint_3:: zxy||  
+|uint_3:: ZY||  
+|uint_3:: ZYX||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `uint_3`  

@@ -1,30 +1,25 @@
 ---
-title: "Cómo: crear una tarea que finaliza después de un retraso | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: crear una tarea que finaliza después de un retraso | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9547bb5e586c20a22ce79d1227fa5f15b3ea305
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fca1ba3874f02b44f96fd795b531536a23c8d462
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Cómo: Crear una tarea que se complete después de un retardo
 Este ejemplo muestra cómo utilizar el [Concurrency:: Task](../../parallel/concrt/reference/task-class.md), [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [Concurrency:: Timer](../../parallel/concrt/reference/timer-class.md), y [Concurrency:: call](../../parallel/concrt/reference/call-class.md) clases para crear una tarea que finaliza después de un retraso. Puede usar este método para crear bucles que ocasionalmente sondean en busca de datos, introducen los tiempos de espera, retrasar el control de entrada de usuario durante un tiempo predeterminado y así sucesivamente.  

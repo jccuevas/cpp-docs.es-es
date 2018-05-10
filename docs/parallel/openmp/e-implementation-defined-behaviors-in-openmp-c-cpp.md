@@ -1,27 +1,22 @@
 ---
-title: "E. Comportamientos de OpenMP C/C++ definido por la implementación | Documentos de Microsoft"
-ms.custom: 
+title: E. Comportamientos de OpenMP C/C++ definido por la implementación | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b8d660ca-9bb3-4b6b-87af-45c67d43a731
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe890248ad2eb3bcee024bf12ccf4039484e7b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 598964ec6a12ac4c357efc04df78bfbe3af798a5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. Comportamientos definido por la implementación de OpenMP C o C++
 Este apéndice resume los comportamientos que se describen como "definido por la implementación" en esta API.  Cada comportamiento se referencia cruzada en su descripción en la especificación principal.  
@@ -65,14 +60,14 @@ Este apéndice resume los comportamientos que se describen como "definido por la
   
      En Visual C++, el número de subprocesos está determinado por el sistema operativo.  
   
--   `OMP_SCHEDULE`variable de entorno: el valor predeterminado de esta variable de entorno es definido por la implementación (vea [sección 4.1](../../parallel/openmp/4-1-omp-schedule.md) en página 48).  
+-   `OMP_SCHEDULE` variable de entorno: el valor predeterminado de esta variable de entorno es definido por la implementación (vea [sección 4.1](../../parallel/openmp/4-1-omp-schedule.md) en página 48).  
   
      En Visual C++, es el tipo de programación `static` con ningún tamaño de fragmento.  
   
--   `OMP_NUM_THREADS`variable de entorno: si se especifica ningún valor para el `OMP_NUM_THREADS` variable de entorno, o si el valor especificado no es un entero positivo, o si el valor es mayor que el número máximo de subprocesos que puede admitir el sistema, es el número de subprocesos que se utilizarán definido por la implementación (vea [sección 4.2](../../parallel/openmp/4-2-omp-num-threads.md) en página 48).  
+-   `OMP_NUM_THREADS` variable de entorno: si se especifica ningún valor para el `OMP_NUM_THREADS` variable de entorno, o si el valor especificado no es un entero positivo, o si el valor es mayor que el número máximo de subprocesos que puede admitir el sistema, es el número de subprocesos que se utilizarán definido por la implementación (vea [sección 4.2](../../parallel/openmp/4-2-omp-num-threads.md) en página 48).  
   
      En Visual C++, si se especifica el valor es cero o menos, el número de subprocesos es igual al número de procesadores.  Si el valor es mayor que 64, el número de subprocesos es 64.  
   
--   `OMP_DYNAMIC`variable de entorno: el valor predeterminado es definido por la implementación (vea [sección 4.3](../../parallel/openmp/4-3-omp-dynamic.md) en la página 49).  
+-   `OMP_DYNAMIC` variable de entorno: el valor predeterminado es definido por la implementación (vea [sección 4.3](../../parallel/openmp/4-3-omp-dynamic.md) en la página 49).  
   
      En Visual C++, el valor predeterminado es `FALSE`.

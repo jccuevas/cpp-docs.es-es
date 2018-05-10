@@ -1,27 +1,22 @@
 ---
-title: "Cláusulas de OpenMP | Documentos de Microsoft"
-ms.custom: 
+title: Cláusulas de OpenMP | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a63dacb8da2b7c4b1c7264cfccc6d2839db1b8b1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7abe5a637a2a32c696f19f5ab9988f1be361f647
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="openmp-clauses"></a>Cláusulas de OpenMP
 Proporciona vínculos a las cláusulas que se utilizan en la API de OpenMP.  
@@ -38,11 +33,11 @@ Proporciona vínculos a las cláusulas que se utilizan en la API de OpenMP.
 |[lastprivate](../../../parallel/openmp/reference/lastprivate.md)|Especifica que la versión del contexto envolvente de la variable se establece igual que la versión privada del cualquier subproceso ejecuta la última iteración (construcción de bucle for) o la última sección (#pragma secciones).|  
 |[nowait](../../../parallel/openmp/reference/nowait.md)|Invalida la barrera implícita en una directiva.|  
 |[num_threads](../../../parallel/openmp/reference/num-threads.md)|Establece el número de subprocesos en un equipo de subproceso.|  
-|[ordered](../../../parallel/openmp/reference/ordered-openmp-clauses.md)|Obligatorio en un paralelo [para](../../../parallel/openmp/reference/for-openmp.md) instrucción si un [ordenados](../../../parallel/openmp/reference/ordered-openmp-directives.md) directiva es para su uso en el bucle.|  
+|[ordenada](../../../parallel/openmp/reference/ordered-openmp-clauses.md)|Obligatorio en un paralelo [para](../../../parallel/openmp/reference/for-openmp.md) instrucción si un [ordenados](../../../parallel/openmp/reference/ordered-openmp-directives.md) directiva es para su uso en el bucle.|  
 |[private](../../../parallel/openmp/reference/private-openmp.md)|Especifica que cada subproceso debe tener su propia instancia de una variable.|  
 |[reduction](../../../parallel/openmp/reference/reduction.md)|Especifica que una o más variables que son privadas para cada subproceso son el asunto de una operación de reducción al final de la región paralela.|  
 |[schedule](../../../parallel/openmp/reference/schedule.md)|Se aplica a la [para](../../../parallel/openmp/reference/for-openmp.md) directiva.|  
-|[shared](../../../parallel/openmp/reference/shared-openmp.md)|Especifica que una o más variables deben compartirse entre todos los subprocesos.|  
+|[Compartido](../../../parallel/openmp/reference/shared-openmp.md)|Especifica que una o más variables deben compartirse entre todos los subprocesos.|  
   
 ## <a name="see-also"></a>Vea también  
  [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)   

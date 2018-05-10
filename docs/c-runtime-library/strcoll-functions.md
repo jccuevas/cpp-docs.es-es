@@ -1,13 +1,10 @@
 ---
 title: strcoll (Funciones) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e97e16ec3360764411b36bf129c344a3455ce6a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strcoll-functions"></a>strcoll (Funciones)
 Cada una de las funciones `strcoll` y `wcscoll` compara dos cadenas según la configuración de la categoría `LC_COLLATE` de la página de código de configuración regional actualmente en uso. Cada una de las funciones `_mbscoll` compara dos cadenas según la página de códigos multibyte actualmente en uso. Use las funciones `coll` para las comparaciones de cadenas cuando haya alguna diferencia entre el orden del juego de caracteres y el orden lexicográfico de los caracteres en la página de códigos actual y dicha diferencia influya en la comparación. Use las funciones `cmp` correspondientes para probar solo las cadenas que son iguales.  

@@ -1,13 +1,10 @@
 ---
-title: "Cómo: usar Parallel.Invoke para escribir una rutina de ordenación en paralelo | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: usar Parallel.Invoke para escribir una rutina de ordenación en paralelo | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b9699c7ee5d2bd4775f2d6b97dc4d1c5155ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Cómo: Usar parallel.invoke para escribir una rutina de ordenación en paralelo
 Este documento describe cómo utilizar el [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmo para mejorar el rendimiento del algoritmo de ordenación bitónica. Este algoritmo divide de forma recursiva la secuencia de entrada en particiones ordenadas más pequeñas. Se puede ejecutar en paralelo porque cada operación de partición es independiente de las demás operaciones.  
@@ -44,14 +39,14 @@ Este documento describe cómo utilizar el [parallel_invoke](../../parallel/concr
   
 - [Usar parallel_invoke para realizar la ordenación bitónica en paralelo](#parallel)  
   
-##  <a name="serial"></a>Realizar la ordenación bitónica en serie  
+##  <a name="serial"></a> Realizar la ordenación bitónica en serie  
  En el siguiente ejemplo se muestra la versión en serie del algoritmo de ordenación bitónica. La función `bitonic_sort` divide la secuencia en dos particiones, ordena estas particiones en direcciones opuestas y, a continuación, combina los resultados. Esta función se llama a sí misma dos veces de forma recursiva para ordenar cada partición.  
   
  [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]  
   
  [[Arriba](#top)]  
   
-##  <a name="parallel"></a>Usar parallel_invoke para realizar la ordenación bitónica en paralelo  
+##  <a name="parallel"></a> Usar parallel_invoke para realizar la ordenación bitónica en paralelo  
  En esta sección se describe cómo usar el algoritmo `parallel_invoke` para realizar el algoritmo de ordenación bitónica en paralelo.  
   
 ### <a name="procedures"></a>Procedimientos  

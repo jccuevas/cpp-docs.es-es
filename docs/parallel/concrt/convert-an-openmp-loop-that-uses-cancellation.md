@@ -1,30 +1,25 @@
 ---
-title: "Cómo: convertir un bucle OpenMP que usa la cancelación para usar el Runtime de simultaneidad | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: convertir un bucle OpenMP que usa la cancelación para usar el Runtime de simultaneidad | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4d37dfe5182e375e7581d6f5ef8188b922e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dae22a46d6570d7ef7abbdfc08cb2c6d76d0c08
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Cómo: Convertir un bucle OpenMP que usa la cancelación para usar el runtime de simultaneidad
 Algunos bucles paralelos no necesitan que se ejecuten todas las iteraciones. Por ejemplo, un algoritmo que busca un valor puede finalizar una vez que se encuentra el valor. OpenMP no proporciona ningún mecanismo para interrumpir un bucle paralelo. Sin embargo, puede usar un valor booleano, o marca, para permitir que una iteración del bucle indique que se ha encontrado la solución. El runtime de simultaneidad proporciona funcionalidad que permite a una tarea cancelar otras tareas que todavía no se han iniciado.  

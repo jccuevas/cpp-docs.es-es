@@ -1,12 +1,9 @@
 ---
-title: int_2 Class | Microsoft Docs
-ms.custom: 
+title: int_2 (clase) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::y
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5abe11c29263817c8530d01fb3e190ba5866326
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7368607fd3041895d2f84553d64395ed1bd54820
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="int2-class"></a>int_2 (Clase)
 Representa un vector corto de dos enteros.  
@@ -70,7 +65,7 @@ class int_2;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[int_2 Constructor](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
+|[Constructor int_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -82,8 +77,8 @@ class int_2;
 |int_2::get_yx||  
 |int_2::ref_g||  
 |int_2::ref_r||  
-|int_2::ref_x||  
-|int_2::ref_y||  
+|int_2:: ref_x||  
+|int_2:: ref_y||  
 |int_2::set_x||  
 |int_2::set_xy||  
 |int_2::set_y||  
@@ -123,10 +118,10 @@ class int_2;
 |int_2::gr||  
 |int_2::r||  
 |int_2::rg||  
-|int_2::x||  
-|int_2::xy||  
-|int_2::y||  
-|int_2::yx||  
+|int_2:: x||  
+|int_2:: XY||  
+|int_2:: y||  
+|int_2:: YX||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `int_2`  

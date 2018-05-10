@@ -1,13 +1,10 @@
 ---
 title: Crear un programa Win32 multiproceso | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,22 +20,20 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ede0e6dc1740f93f4905dc69b1927aee0d1a7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d88add7830316ae192a728f9c9ff10320657eaf
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Crear un programa Win32 multiproceso
 Cuando se escribe un programa con varios subprocesos, es preciso coordinar su comportamiento y [el uso de los recursos del programa](#_core_sharing_common_resources_between_threads). También debe asegurarse de que cada subproceso dispone [su propia pila](#_core_thread_stacks).  
   
-##  <a name="_core_sharing_common_resources_between_threads"></a>Compartir recursos comunes entre subprocesos  
+##  <a name="_core_sharing_common_resources_between_threads"></a> Compartir recursos comunes entre subprocesos  
   
 > [!NOTE]
 >  Para obtener una discusión similar desde el punto de vista MFC, vea [subprocesamiento múltiple: sugerencias de programación](../parallel/multithreading-programming-tips.md) y [Multithreading: cuándo utilizar las clases de sincronización](../parallel/multithreading-when-to-use-the-synchronization-classes.md).  
@@ -62,7 +57,7 @@ fwrite( data, sizeof( data ), 1, fp );
 ReleaseMutex( hIOMutex);  
 ```  
   
-##  <a name="_core_thread_stacks"></a>Pilas de subprocesos  
+##  <a name="_core_thread_stacks"></a> Pilas de subprocesos  
  Todo el espacio de pila predeterminado de una aplicación se asigna al primer subproceso de ejecución, conocido como subproceso 1. En consecuencia, deberá especificar qué cantidad de memoria desea asignar para una pila independiente para cada subproceso adicional que necesite el programa. El sistema operativo asigna espacio de pila adicional para el subproceso (si es necesario), pero debe especificar un valor predeterminado.  
   
  El primer argumento de la `_beginthread` llamada es un puntero a la **BounceProc** función, que ejecuta los subprocesos. El segundo argumento especifica el tamaño de pila predeterminado para el subproceso. El último argumento es un número de identificación que se pasa a **BounceProc**. **BounceProc** el número de identificación se utiliza para inicializar el generador de números aleatorios y para seleccionar el atributo de color del subproceso y mostrar caracteres.  

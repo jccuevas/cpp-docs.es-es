@@ -1,12 +1,9 @@
 ---
 title: Agent (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - agent
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4617007525fdd924dce7b09f1d351c7c18cc96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="agent-class"></a>agent (Clase)
 Una clase diseñada para usarse como una clase base para todos los agentes independientes. Se usa para ocultar el estado de otros agentes e interactuar con el paso de mensajes.  
@@ -53,18 +48,18 @@ class agent;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[agent](#ctor)|Sobrecargado. Construye a un agente.|  
+|[Agente](#ctor)|Sobrecargado. Construye a un agente.|  
 |[~ agent (destructor)](#dtor)|Destruye al agente.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[cancel](#cancel)|Mueve un agente desde el `agent_created` o `agent_runnable` indica a la `agent_canceled` estado.|  
+|[Cancelar](#cancel)|Mueve un agente desde el `agent_created` o `agent_runnable` indica a la `agent_canceled` estado.|  
 |[start](#start)|Mueve un agente de la `agent_created` estado para el `agent_runnable` de estado y el programa para su ejecución.|  
 |[status](#status)|Un origen sincrónico de la información de estado del agente.|  
 |[status_port](#status_port)|Un origen asincrónico de la información de estado del agente.|  
-|[wait](#wait)|Espera a que un agente completar su tarea.|  
+|[espera](#wait)|Espera a que un agente completar su tarea.|  
 |[wait_for_all](#wait_for_all)|Espera a que todos los agentes especificados para completar sus tareas.|  
 |[wait_for_one](#wait_for_one)|Espera a que cualquiera de los agentes especificados para completar su tarea.|  
   
@@ -72,7 +67,7 @@ class agent;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[done](#done)|Mueve un agente en el `agent_done` estado, que indica que el agente se ha completado.|  
+|[Realiza](#done)|Mueve un agente en el `agent_done` estado, que indica que el agente se ha completado.|  
 |[run](#run)|Representa la tarea principal de un agente. `run` se debe invalidar en una clase derivada y especifica lo que debe hacer el agente después de que se ha iniciado.|  
   
 ## <a name="remarks"></a>Comentarios  

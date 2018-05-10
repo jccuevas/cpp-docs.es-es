@@ -1,13 +1,10 @@
 ---
 title: 'Tutorial: Usar la clase join para evitar un interbloqueo | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5deb501cc05c2a771b6e14d5091b1baa95f2f622
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Tutorial: Usar la clase join para evitar un interbloqueo
-En este tema usa el problema cena de los filósofos para ilustrar cómo se usa el [Concurrency:: join](../../parallel/concrt/reference/join-class.md) clase para evitar el interbloqueo en la aplicación. En una aplicación de software, *interbloqueo* se produce cuando dos o más procesos mantienen un recurso y esperan mutuamente a que otro proceso libere algún otro recurso.  
+En este tema usa el problema cena de los filósofos para ilustrar cómo se usa el [Concurrency:: join](../../parallel/concrt/reference/join-class.md) clase para evitar el interbloqueo en la aplicación. En una aplicación de software, el *interbloqueo* se produce cuando dos o más procesos mantienen un recurso y esperan mutuamente a que el otro proceso libere algún otro recurso.  
   
  El problema de la cena de los filósofos es un ejemplo concreto del conjunto general de problemas que se pueden producir cuando se comparte un conjunto de recursos entre varios procesos simultáneos.  
   
@@ -55,7 +50,7 @@ En este tema usa el problema cena de los filósofos para ilustrar cómo se usa e
   
 - [Usar la clase join para evitar un interbloqueo](#solution)  
   
-##  <a name="problem"></a>El problema cena de los filósofos  
+##  <a name="problem"></a> El problema cena de los filósofos  
  El problema de la cena de los filósofos ilustra cómo se produce el interbloqueo en una aplicación. En este problema, cinco filósofos están sentados a una mesa redonda. Cada filósofo alterna entre pensar y comer. Cada filósofo debe compartir un palillo con el vecino sentado a la izquierda y otro palillo con el vecino sentado a la derecha. En la siguiente ilustración se muestra este diseño.  
   
  ![El problema de los filósofos carta](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
@@ -64,7 +59,7 @@ En este tema usa el problema cena de los filósofos para ilustrar cómo se usa e
   
  [[Arriba](#top)]  
   
-##  <a name="deadlock"></a>Una implementación sencilla  
+##  <a name="deadlock"></a> Una implementación sencilla  
  En el siguiente ejemplo se muestra una implementación sencilla del problema de la cena de los filósofos. El `philosopher` (clase), que se deriva de [Concurrency](../../parallel/concrt/reference/agent-class.md), permite que cada filósofo actúe de forma independiente. En el ejemplo se usa una matriz compartida de [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) objetos para proporcionar a cada uno de ellos `philosopher` objeto acceso exclusivo a un par de palillos.  
   
  Para relacionar la implementación con la ilustración, la clase `philosopher` representa a un filósofo. Una variable `int` representa cada palillo. Los objetos `critical_section` sirven como contenedores en los que se encuentran los palillos. El método `run` simula la vida del filósofo. El método `think` simula el acto de pensar y el método `eat` simula el acto de comer.  
@@ -87,7 +82,7 @@ En este tema usa el problema cena de los filósofos para ilustrar cómo se usa e
   
  [[Arriba](#top)]  
   
-##  <a name="solution"></a>Usar la clase join para evitar un interbloqueo  
+##  <a name="solution"></a> Usar la clase join para evitar un interbloqueo  
  En esta sección se muestra cómo usar los búferes de mensajes y las funciones de paso de mensajes para eliminar la oportunidad de que se produzcan interbloqueos.  
   
  Para relacionar este ejemplo con el anterior, el `philosopher` clase reemplaza cada `critical_section` objeto mediante el uso de un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto y un `join` objeto. El objeto `join` sirve como un árbitro que proporciona los palillos al filósofo.  

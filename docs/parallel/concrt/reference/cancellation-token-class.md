@@ -1,12 +1,9 @@
 ---
 title: cancellation_token (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e95bfb264b1c6fbc4230cf38fc26b7b6a2c12a1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token (Clase)
 La clase `cancellation_token` representa la capacidad para determinar si se ha solicitado la cancelación de alguna operación. Se puede asociar un determinado símbolo con un objeto `task_group`, `structured_task_group` o `task` para proporcionar una cancelación implícita. Este token también puede sondearse para la cancelación o puede hacer que se registre una devolución únicamente si se cancela el objeto `cancellation_token_source` asociado.  
@@ -49,8 +44,8 @@ class cancellation_token;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[cancellation_token](#ctor)||  
-|[~cancellation_token Destructor](#dtor)||  
+|[cancellation_token)](#ctor)||  
+|[~ cancellation_token (destructor)](#dtor)||  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -74,11 +69,11 @@ class cancellation_token;
  `cancellation_token`  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** pplcancellation_token.h  
+ **Encabezado:** pplcancellation_token.h  
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="dtor"></a> ~cancellation_token 
+##  <a name="dtor"></a> ~ cancellation_token 
 
 ```
 ~cancellation_token();
@@ -151,7 +146,7 @@ bool operator!= (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
 ```
 cancellation_token& operator= (const cancellation_token& _Src);

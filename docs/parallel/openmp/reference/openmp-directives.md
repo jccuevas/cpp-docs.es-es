@@ -1,27 +1,22 @@
 ---
 title: Directivas de OpenMP | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e8d47e6376b3786b27305e65bdb55f0c292995d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d7421f397b39c6d26c2e60042b25f37277afa5fd
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="openmp-directives"></a>Directivas de OpenMP
 Proporciona vínculos a las directivas que se utilizan en la API de OpenMP.  
@@ -36,7 +31,7 @@ Proporciona vínculos a las directivas que se utilizan en la API de OpenMP.
 |[flush](../../../parallel/openmp/reference/flush-openmp.md)|Especifica que todos los subprocesos tienen la misma vista de memoria para todos los objetos compartidos.|  
 |[for](../../../parallel/openmp/reference/for-openmp.md)|Hace que el trabajo realizado un bucle dentro de una región paralela va a dividir entre subprocesos.|  
 |[master](../../../parallel/openmp/reference/master.md)|Especifica que sólo lo threadshould maestro ejecutará una sección del programa.|  
-|[ordered](../../../parallel/openmp/reference/ordered-openmp-directives.md)|Especifica que el código en una ejecución en paralelo para bucle debe ejecutarse como un bucle secuencial.|  
+|[ordenada](../../../parallel/openmp/reference/ordered-openmp-directives.md)|Especifica que el código en una ejecución en paralelo para bucle debe ejecutarse como un bucle secuencial.|  
 |[parallel](../../../parallel/openmp/reference/parallel.md)|Define una región paralela, que es código que se ejecutará por varios subprocesos en paralelo.|  
 |[Secciones](../../../parallel/openmp/reference/sections-openmp.md)|Identifica las secciones de código para ser dividido entre todos los subprocesos.|  
 |[single](../../../parallel/openmp/reference/single.md)|Le permite especificar que una sección de código debe ejecutarse en un solo subproceso, no necesariamente el subproceso principal.|  

@@ -1,27 +1,22 @@
 ---
-title: "Paralelización y vectorización automática | Documentos de Microsoft"
-ms.custom: 
+title: Paralelización y vectorización automática | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b458dbe06bd69817c659c3bfec1d1ab7a216d1f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0b1ec19065647f78b4d9b2665003c0aa3a2795ba
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Paralelización y vectorización automáticas
 El paralelizador automático y el vectorizador automático se han diseñado para proporcionar mejoras automáticas de rendimiento de los bucles en el código.  

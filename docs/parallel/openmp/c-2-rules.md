@@ -1,32 +1,27 @@
 ---
 title: C.2 reglas | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 Reglas
 La notación se describe en la sección 6.1 del estándar C. Este apéndice gramática muestra las extensiones de la gramática del lenguaje de base para las directivas de OpenMP C y C++.  
   
- **/\*en C++ (ISO/IEC 14882: 1998)\*/**  
+ **/\* en C++ (ISO/IEC 14882: 1998) \*/**  
   
  *instrucción-seq*:  
   
@@ -38,7 +33,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *instrucción-seq directiva de openmp*  
   
- **/\*en C90 ISO/IEC 9899 (puede: en 1990)\*/**  
+ **/\* en C90 ISO/IEC 9899 (puede: en 1990) \*/**  
   
  *statement-list*:  
   
@@ -50,7 +45,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *lista de instrucciones de directiva de openmp*  
   
- **/\*en C99 (ISO/IEC 9899: 1999)\*/**  
+ **/\* en C99 (ISO/IEC 9899: 1999) \*/**  
   
  *elemento de bloque*:  
   
@@ -62,7 +57,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *statement*:  
   
- **/\*instrucciones estándar\*/**  
+ **/\* instrucciones estándar \*/**  
   
  *construcción de OpenMP*  
   
@@ -150,7 +145,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  **guiadas por perfiles**  
   
- **en tiempo de ejecución**  
+ **En tiempo de ejecución**  
   
  *construcción de secciones*:  
   
@@ -272,9 +267,9 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  **# pragma omp ordenados** *nueva línea*  
   
- *declaración*:  
+ *Declaración*:  
   
- **/\*declaraciones estándares\*/**  
+ **/\* declaraciones estándares \*/**  
   
  *Directiva threadprivate*  
   
@@ -304,9 +299,9 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *operador de reducción*:  
   
- *Uno de*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
+ *Uno de*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
   
- **/\*en C\*/**  
+ **/\* en C \*/**  
   
  *lista de variables*:  
   
@@ -314,7 +309,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *lista de variables* **,** *identificador*  
   
- **/\*en C++\*/**  
+ **/\* en C++ \*/**  
   
  *lista de variables*:  
   

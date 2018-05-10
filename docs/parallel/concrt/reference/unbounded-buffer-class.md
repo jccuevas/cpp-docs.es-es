@@ -1,12 +1,9 @@
 ---
 title: Clase unbounded_buffer | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - unbounded_buffer
@@ -28,17 +25,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecddf2327e3b2e29dd3c9a857227c03d9e880ef4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: de5b268ca3f962461ecc7e64159efeeb56414ebe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 Un bloque de mensajería `unbounded_buffer` es un bloque `propagator_block` de destino único, de varios orígenes y ordenado capaz de almacenar un número ilimitado de mensajes.  
   
@@ -68,8 +63,8 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[dequeue](#dequeue)|Quita un elemento de la `unbounded_buffer` bloque de mensajería.|  
-|[enqueue](#enqueue)|Agrega un elemento a la `unbounded_buffer` bloque de mensajería.|  
+|[Eliminación de cola](#dequeue)|Quita un elemento de la `unbounded_buffer` bloque de mensajería.|  
+|[Poner en cola](#enqueue)|Agrega un elemento a la `unbounded_buffer` bloque de mensajería.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
@@ -80,12 +75,12 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 |[link_target_notification](#link_target_notification)|Una devolución de llamada que notifica que se ha vinculado un nuevo destino a este `unbounded_buffer` bloque de mensajería.|  
 |[process_input_messages](#process_input_messages)|Coloca el `message` `_PMessage` en este `unbounded_buffer` bloque de mensajería e intenta ofrecerlo a todos los destinos vinculados.|  
 |[propagate_message](#propagate_message)|Un mensaje de forma asincrónica, pasa un `ISource` bloque a este `unbounded_buffer` bloque de mensajería. Se invoca con el `propagate` método, cuando se llama a un bloque de origen.|  
-|[propagate_output_messages](#propagate_output_messages)|Coloca el `message` `_PMessage` en este `unbounded_buffer` bloque de mensajería e intenta ofrecerlo a todos los destinos vinculados. (Overrides [source_block::propagate_output_messages](source-block-class.md#propagate_output_messages).)|  
+|[propagate_output_messages](#propagate_output_messages)|Coloca el `message` `_PMessage` en este `unbounded_buffer` bloque de mensajería e intenta ofrecerlo a todos los destinos vinculados. (Invalida [source_block:: propagate_output_messages](source-block-class.md#propagate_output_messages).)|  
 |[release_message](#release_message)|Libera una reserva de mensaje anterior. (Invalida [source_block:: release_message](source-block-class.md#release_message).)|  
 |[reserve_message](#reserve_message)|Reserva un mensaje ofrecido previamente por este `unbounded_buffer` bloque de mensajería. (Invalida [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
 |[resume_propagation](#resume_propagation)|Reanuda la propagación después de que se ha liberado una reserva. (Invalida [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
 |[send_message](#send_message)|Un mensaje de forma sincrónica, pasa un `ISource` bloque a este `unbounded_buffer` bloque de mensajería. Se invoca con el `send` método, cuando se llama a un bloque de origen.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado. (Overrides [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[supports_anonymous_source](#supports_anonymous_source)|Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado. (Invalida [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
 
  Para obtener más información, consulte [los bloques de mensajes asincrónicos](../asynchronous-message-blocks.md).  
   
@@ -94,7 +89,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
   
  [ITarget](itarget-class.md)  
   
- [source_block](source-block-class.md)  
+ [source_block)](source-block-class.md)  
   
  [propagator_block](propagator-block-class.md)  
   
@@ -348,7 +343,7 @@ unbounded_buffer(
   
  El tipo `filter_method` es un functor con firma `bool (_Type const &)` que es invocado por este `unbounded_buffer` bloque de mensajería para determinar si debe aceptar un mensaje proporcionado.  
   
-##  <a name="dtor"></a> ~unbounded_buffer 
+##  <a name="dtor"></a> ~ unbounded_buffer 
 
  Destruye el `unbounded_buffer` bloque de mensajería.  
   

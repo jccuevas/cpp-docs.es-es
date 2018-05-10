@@ -1,12 +1,9 @@
 ---
 title: IScheduler (estructura) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IScheduler
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c78d02ccd5639369ad8b4d0183458da2ba85269
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ischeduler-structure"></a>IScheduler (Estructura)
 Una interfaz a una abstracción de un programador de trabajo. El Administrador de recursos del runtime de simultaneidad usa esta interfaz para comunicarse con programadores de trabajo.  
@@ -50,13 +45,13 @@ struct IScheduler;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Proporciona a un programador con un conjunto de raíces de procesador virtual para su uso. Cada `IVirtualProcessorRoot` interfaz representa el derecho para ejecutar un subproceso único que puede realizar el trabajo en nombre del programador.|  
-|[IScheduler::GetId](#getid)|Devuelve un identificador único para el programador.|  
-|[IScheduler::GetPolicy](#getpolicy)|Devuelve una copia de la directiva del programador. Para obtener más información sobre las directivas de programador, consulte [SchedulerPolicy](schedulerpolicy-class.md).|  
-|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Notifica a este programador que los subprocesos del hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` ahora están siendo utilizados por otros programadores.|  
-|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Notifica a este programador que los subprocesos del hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` no están siendo utilizados por otros programadores.|  
-|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|Inicia la eliminación de raíces de procesador virtual que se asignaron previamente a este programador.|  
-|[IScheduler::Statistics](#statistics)|Proporciona información relacionada con la tasa de llegada y finalización de tarea y cambio de longitud de cola para un programador.|  
+|[IScheduler:: AddVirtualProcessors](#addvirtualprocessors)|Proporciona a un programador con un conjunto de raíces de procesador virtual para su uso. Cada `IVirtualProcessorRoot` interfaz representa el derecho para ejecutar un subproceso único que puede realizar el trabajo en nombre del programador.|  
+|[IScheduler:: GetId](#getid)|Devuelve un identificador único para el programador.|  
+|[IScheduler:: GetPolicy](#getpolicy)|Devuelve una copia de la directiva del programador. Para obtener más información sobre las directivas de programador, consulte [SchedulerPolicy](schedulerpolicy-class.md).|  
+|[IScheduler:: NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Notifica a este programador que los subprocesos del hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` ahora están siendo utilizados por otros programadores.|  
+|[IScheduler:: NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Notifica a este programador que los subprocesos del hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` no están siendo utilizados por otros programadores.|  
+|[IScheduler:: RemoveVirtualProcessors](#removevirtualprocessors)|Inicia la eliminación de raíces de procesador virtual que se asignaron previamente a este programador.|  
+|[IScheduler:: STATISTICS](#statistics)|Proporciona información relacionada con la tasa de llegada y finalización de tarea y cambio de longitud de cola para un programador.|  
   
 ## <a name="remarks"></a>Comentarios  
  Si está implementando un programador personalizado que se comunica con el Administrador de recursos, también debe proporcionar una implementación de la `IScheduler` interfaz. Esta interfaz es uno de los extremos de un canal bidireccional de comunicación entre un programador y el Administrador de recursos. El otro extremo se representa mediante el `IResourceManager` y `ISchedulerProxy` interfaces que se implementan mediante el Administrador de recursos.  

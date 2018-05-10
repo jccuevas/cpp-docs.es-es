@@ -2,11 +2,8 @@
 title: en desuso) (C/C ++) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vc-pragma.deprecated
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65333f72f71ded1338956ab1a3c51c2be980cb1a
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 2280d5245292625bfc29815475eaca63d4d500bd
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="deprecated-cc"></a>(C/C++) en desuso
 El **en desuso** permite de pragma que indique que un tipo de función o cualquier otro identificador puede ya no admitirse en una futura versión o ya no debe usarse.  

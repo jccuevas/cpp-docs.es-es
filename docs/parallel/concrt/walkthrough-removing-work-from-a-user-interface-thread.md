@@ -1,30 +1,25 @@
 ---
 title: 'Tutorial: Quitar trabajo de un subproceso de interfaz de usuario | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0502ce728c35b08d927cea48ee5b82756980aec5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Tutorial: Quitar trabajo de un subproceso de la interfaz de usuario
 Este documento muestra cómo usar el Runtime de simultaneidad para mover el trabajo que se realiza mediante el subproceso de interfaz de usuario (UI) en una aplicación de Microsoft Foundation Classes (MFC) para un subproceso de trabajo. Este documento también muestra cómo mejorar el rendimiento de una operación de dibujo prolongada.  
@@ -59,14 +54,14 @@ Este documento muestra cómo usar el Runtime de simultaneidad para mover el trab
   
 -   [Agregar compatibilidad para cancelación](#cancellation)  
   
-##  <a name="application"></a>Crear la aplicación MFC  
+##  <a name="application"></a> Crear la aplicación MFC  
  En esta sección se describe cómo crear la aplicación MFC básica.  
   
 ### <a name="to-create-a-visual-c-mfc-application"></a>Para crear una aplicación MFC de Visual C++  
   
 1.  En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, haga clic en **Proyecto**.  
   
-2.  En el **nuevo proyecto** cuadro de diálogo, en la **plantillas instaladas** panel, seleccione **Visual C++**y, a continuación, en la **plantillas** panel, seleccione **Aplicación MFC**. Escriba un nombre para el proyecto, por ejemplo, `Mandelbrot`y, a continuación, haga clic en **Aceptar** para mostrar la **Asistente para aplicaciones MFC**.  
+2.  En el **nuevo proyecto** cuadro de diálogo, en la **plantillas instaladas** panel, seleccione **Visual C++** y, a continuación, en la **plantillas** panel, seleccione **Aplicación MFC**. Escriba un nombre para el proyecto, por ejemplo, `Mandelbrot`y, a continuación, haga clic en **Aceptar** para mostrar la **Asistente para aplicaciones MFC**.  
   
 3.  En el **tipo de aplicación** panel, seleccione **único documento**. Asegúrese de que el **compatibilidad con la arquitectura documento/vista** casilla de verificación está desactivada.  
   
@@ -74,7 +69,7 @@ Este documento muestra cómo usar el Runtime de simultaneidad para mover el trab
   
      Compruebe que la aplicación se creó correctamente; para ello, compílela y ejecútela. Para compilar la aplicación, en la **generar** menú, haga clic en **generar solución**. Si la aplicación se compila correctamente, ejecute la aplicación haciendo clic en **Iniciar depuración** en el **depurar** menú.  
   
-##  <a name="serial"></a>Implementación de la versión en serie de la aplicación Mandelbrot  
+##  <a name="serial"></a> Implementación de la versión en serie de la aplicación Mandelbrot  
  Esta sección describe cómo dibujar el fractal de Mandelbrot. Esta versión dibuja el fractal de Mandelbrot para un [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [mapa de bits](https://msdn.microsoft.com/library/ms534420.aspx) de objeto y, a continuación, copia el contenido del mapa de bits en la ventana del cliente.  
   
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Para implementar la versión en serie de la aplicación Mandelbrot  
@@ -123,7 +118,7 @@ Este documento muestra cómo usar el Runtime de simultaneidad para mover el trab
   
  [[Arriba](#top)]  
   
-##  <a name="removing-work"></a>Quitar trabajo desde el subproceso de interfaz de usuario  
+##  <a name="removing-work"></a> Quitar trabajo desde el subproceso de interfaz de usuario  
  En esta sección se muestra cómo quitar el trabajo de dibujo del subproceso de interfaz de usuario en la aplicación Mandelbrot. Al mover el trabajo de dibujo desde el subproceso de interfaz de usuario a un subproceso de trabajo, el subproceso de interfaz de usuario puede procesar mensajes como el subproceso de trabajo genera la imagen en segundo plano.  
   
  El Runtime de simultaneidad proporciona tres maneras de ejecutar tareas: [grupos de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [agentes asincrónicos](../../parallel/concrt/asynchronous-agents.md), y [tareas ligeras](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Aunque puede usar cualquiera de estos mecanismos para quitar el trabajo desde el subproceso de interfaz de usuario, este ejemplo se utiliza un [Concurrency:: task_group](reference/task-group-class.md) objeto porque los grupos de tareas admiten la cancelación. Más adelante en este tutorial usa la cancelación para reducir la cantidad de trabajo que se realiza cuando se cambia el tamaño de la ventana de cliente y debe realizar una limpieza cuando se destruye la ventana.  
@@ -162,7 +157,7 @@ Este documento muestra cómo usar el Runtime de simultaneidad para mover el trab
   
  [[Arriba](#top)]  
   
-##  <a name="performance"></a>Mejorar el rendimiento de dibujo  
+##  <a name="performance"></a> Mejorar el rendimiento de dibujo  
 
  La generación del fractal de Mandelbrot es un buen candidato para la ejecución en paralelo porque el cálculo de cada píxel es independiente de todos los demás cálculos. Para paralelizar el procedimiento de dibujo, convertir el exterior `for` un bucle en el `CChildView::DrawMandelbrot` método a una llamada a la [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo, como se indica a continuación.  
 
@@ -173,7 +168,7 @@ Este documento muestra cómo usar el Runtime de simultaneidad para mover el trab
   
  [[Arriba](#top)]  
   
-##  <a name="cancellation"></a>Agregar compatibilidad para cancelación  
+##  <a name="cancellation"></a> Agregar compatibilidad para cancelación  
  Esta sección describe cómo controlar el cambio de tamaño de ventana y cómo cancelar las tareas de dibujo activas cuando se destruye la ventana.  
   
  El documento [cancelación en la biblioteca PPL](cancellation-in-the-ppl.md) explica cómo funciona la cancelación en el tiempo de ejecución. La cancelación es cooperativa; por lo tanto, esto no sucede inmediatamente. Para detener una tarea cancelada, el runtime produce una excepción interna durante una llamada posterior de la tarea en el tiempo de ejecución. La sección anterior muestra cómo utilizar el `parallel_for` algoritmo para mejorar el rendimiento de la tarea de dibujo. La llamada a `parallel_for` permite que el tiempo de ejecución detener la tarea y, por tanto, que la cancelación para trabajar.  

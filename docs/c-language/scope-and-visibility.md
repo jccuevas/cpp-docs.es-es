@@ -1,13 +1,10 @@
 ---
-title: "Ámbito y visibilidad | Microsoft Docs"
-ms.custom: 
+title: Ámbito y visibilidad | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61d9c6f38851e48335f83cccfeb5a8bf4aba448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b85f0ca180fc60b1281440845289d2f2a39d71af
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-and-visibility"></a>Ámbito y visibilidad
 La "visibilidad" de un identificador determina las partes del programa en las que se puede hacer referencia a él (su "ámbito"). Un identificador está visible (es decir, se puede utilizar) solo en las partes de un programa enmarcado por su "ámbito", que se puede limitar (en orden de restricción creciente) al archivo, función, bloque o prototipo de función en que aparece. El ámbito de un identificador es la parte del programa en que se puede usar el nombre. Esto a veces se denomina "ámbito léxico". Hay cuatro tipos de ámbito: función, archivo, bloque y prototipo de función.  

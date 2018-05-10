@@ -1,27 +1,22 @@
 ---
-title: "Tutorial: Multiplicación de matrices | Documentos de Microsoft"
-ms.custom: 
+title: 'Tutorial: Multiplicación de matrices | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0c61bff6251d5ae833611161ef7b1bb06e6f39a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Tutorial: Multiplicación de matrices
 Este tutorial muestra, paso a paso, cómo utilizar C++ AMP para acelerar la ejecución de la multiplicación de matrices. Se presentan dos algoritmos, uno sin mosaico y otro con mosaico.  
@@ -52,13 +47,13 @@ Este tutorial muestra, paso a paso, cómo utilizar C++ AMP para acelerar la ejec
 ## <a name="multiplication-without-tiling"></a>Multiplicación sin mosaico  
  En esta sección, considere la multiplicación de dos matrices, A y B, que se definen a continuación:  
   
- ![3 &#45; por &#45; 2 matriz](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
+ ![3&#45;por&#45;matriz 2](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
   
- ![2 &#45; por &#45; 3 matriz](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
+ ![2&#45;por&#45;matriz 3](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
   
  A es una matriz de 3 por 2 y B es una matriz de 2 por 3. El producto de multiplicar A por B es la siguiente matriz de 3 por 3. El producto se calcula multiplicando las filas de A por las columnas de B elemento por elemento.  
   
- ![3 &#45; por &#45; 3 matriz](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
+ ![3&#45;por&#45;matriz 3](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
   
 ### <a name="to-multiply-without-using-c-amp"></a>Para multiplicar sin usar C++ AMP  
   
@@ -172,21 +167,21 @@ void main() {
   
  Para aprovechar las ventajas del mosaico en la multiplicación de matrices, el algoritmo debe dividir la matriz en mosaicos y luego copiar los datos de los mosaicos en variables `tile_static` para un acceso más rápido. En este ejemplo, la matriz se divide en submatrices de igual tamaño. El producto se obtiene multiplicando las submatrices. En este ejemplo, las dos matrices y su producto son:  
   
- ![4 &#45; por &#45; 4 matriz](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
+ ![4&#45;por&#45;matriz 4](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
   
- ![4 &#45; por &#45; 4 matriz](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
+ ![4&#45;por&#45;matriz 4](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
   
- ![4 &#45; por &#45; 4 matriz](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
+ ![4&#45;por&#45;matriz 4](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
   
  Las matrices se dividen en cuatro matrices de 2 por 2, que se definen a continuación:  
   
- ![4 &#45; por &#45; matriz 4 dividida en 2 &#45; &#45; 2 sub &#45; matrices](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
+ ![4&#45;por&#45;matriz 4 dividida en 2&#45;por&#45;sub 2&#45;matrices](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
   
- ![4 &#45; por &#45; matriz 4 dividida en 2 &#45; &#45; 2 sub &#45; matrices](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
+ ![4&#45;por&#45;matriz 4 dividida en 2&#45;por&#45;sub 2&#45;matrices](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
   
  El producto de A y B ahora se puede escribir y calcular tal y como se muestra a continuación:  
   
- ![4 &#45; por &#45; matriz 4 dividida en 2 &#45; &#45; 2 sub &#45; matrices](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
+ ![4&#45;por&#45;matriz 4 dividida en 2&#45;por&#45;sub 2&#45;matrices](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
   
  Dado que las matrices de `a` a `h` son matrices de 2x2, todos sus productos y sumas también son matrices de 2x2. También se deduce que A*B es una matriz de 4x4, tal y como se esperaba. Para comprobar rápidamente el algoritmo, calcule el valor del elemento de la primera fila y la primera columna en el producto. En el ejemplo, este sería el valor del elemento de la primera fila y la primera columna de `ae + bg`. Solo tiene que calcular la primera columna y la primera fila de `ae` y `bg` para cada término. El valor para `ae` es `1*1 + 2*5 = 11`. El valor de `bg` es `3*1 + 4*5 = 23`. El valor total es `11 + 23 = 34`, que es correcto.  
   

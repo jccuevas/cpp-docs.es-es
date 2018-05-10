@@ -1,12 +1,9 @@
 ---
 title: propagator_block (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - propagator_block
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff6e543702fc366e72f1473f0f70608a1daabc6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eb908bf108bb3ddff375506225b9be97b2898ca5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagatorblock-class"></a>propagator_block (Clase)
 La clase `propagator_block` es una clase base abstracta para los bloques de mensaje que son un bloque de origen y de destino. Combina la funcionalidad de las clases `source_block` y `target_block`.  
@@ -76,13 +71,13 @@ class propagator_block : public source_block<_TargetLinkRegistry,
 |Name|Descripción|  
 |----------|-----------------|  
 |[propagator_block](#ctor)|Construye un objeto `propagator_block`.|  
-|[~propagator_block Destructor](#dtor)|Destruye un objeto `propagator_block`.|  
+|[~ propagator_block (destructor)](#dtor)|Destruye un objeto `propagator_block`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[propagate](#propagate)|Forma asincrónica, pasa un mensaje desde un bloque de origen a este bloque de destino.|  
+|[propagar](#propagate)|Forma asincrónica, pasa un mensaje desde un bloque de origen a este bloque de destino.|  
 |[send](#send)|Inicia sincrónicamente un mensaje a este bloque. Llama a un `ISource` bloque. Cuando esta función se completa, el mensaje ya se habrá propagado en el bloque.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
@@ -108,7 +103,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
  [ITarget](itarget-class.md)  
   
- [source_block](source-block-class.md)  
+ [source_block)](source-block-class.md)  
   
  `propagator_block`  
   
@@ -213,7 +208,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Valor devuelto  
  A [message_status](concurrency-namespace-enums.md) indicación de lo que el destino decidió hacer con el mensaje.  
   
-##  <a name="ctor"></a> propagator_block 
+##  <a name="ctor"></a> propagator_block) 
 
  Construye un objeto `propagator_block`.  
   
@@ -221,7 +216,7 @@ virtual message_status propagate_message(
 propagator_block();
 ```  
   
-##  <a name="dtor"></a> ~propagator_block 
+##  <a name="dtor"></a> ~ propagator_block) 
 
  Destruye un objeto `propagator_block`.  
   

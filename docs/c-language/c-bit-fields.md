@@ -1,30 +1,25 @@
 ---
 title: Campos de bits de C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af47bbebdf3b3a71e2b63b07a1fa467801728061
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Campos de bits de C
 Además de los declaradores para los miembros de una estructura o unión, un declarador de estructura también puede ser un número especificado de bits, denominado un "campo de bits". Su longitud se establece en el declarador del nombre de campo mediante un signo de dos puntos. Un campo de bits se interpreta como un tipo entero.  
@@ -33,7 +28,7 @@ Además de los declaradores para los miembros de una estructura o unión, un dec
  *struct-declarator*:  
  *declarator*  
   
- *type-specifier declarator* opt**:** *constant-expression*  
+ *type-specifier declarator* opt **:** *constant-expression*  
   
  *constant-expression* especifica el ancho del campo en bits. El especificador *type-specifier* para `declarator` debe ser `unsigned int`, **signed int** o `int`, y *constant-expression* debe ser un valor entero no negativo. Si el valor es cero, la declaración no tiene ningún `declarator`. No se permiten matrices de campos de bits, punteros a campos de bits ni funciones que devuelvan campos de bits. El `declarator` opcional asigna el nombre del campo de bits. Los campos de bits solo se pueden declarar como parte de una estructura. No se puede aplicar el operator address-of (**&**) a los componentes de campos de bits.  
   

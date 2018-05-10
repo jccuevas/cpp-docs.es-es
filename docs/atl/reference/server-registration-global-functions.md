@@ -1,12 +1,9 @@
 ---
 title: Funciones globales de registro de servidor | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-registration-global-functions"></a>Funciones globales de registro de servidor
 Estas funciones proporcionan compatibilidad para registrar y anular el registro de los objetos de servidor en el mapa de objetos.  
@@ -46,7 +41,7 @@ Estas funciones proporcionan compatibilidad para registrar y anular el registro 
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
    
-##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer  
  Esta función se invoca para registrar todos los objetos del mapa de objetos.  
   
 ```
@@ -70,11 +65,11 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
  Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- `AtlComModuleRegisterServer`recorre el mapa de objetos ATL generado automáticamente y registra cada objeto en el mapa. Si `pCLSID` no es NULL y, a continuación, solo el objeto al que hace referencia `pCLSID` está registrado; en caso contrario, todos los objetos están registrados.  
+ `AtlComModuleRegisterServer` recorre el mapa de objetos ATL generado automáticamente y registra cada objeto en el mapa. Si `pCLSID` no es NULL y, a continuación, solo el objeto al que hace referencia `pCLSID` está registrado; en caso contrario, todos los objetos están registrados.  
   
  Esta función se invoca [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).  
   
-##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer  
  Esta función se invoca para anular el registro de todos los objetos del mapa de objetos.  
   
 ```
@@ -98,11 +93,11 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
  Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- `AtlComModuleUnregisterServer`recorre el mapa de objetos ATL y anula el registro de cada objeto en el mapa. Si `pCLSID` no es NULL y, a continuación, solo el objeto al que hace referencia `pCLSID` está registrada; de lo contrario todos los objetos se eliminan del registrados.  
+ `AtlComModuleUnregisterServer` recorre el mapa de objetos ATL y anula el registro de cada objeto en el mapa. Si `pCLSID` no es NULL y, a continuación, solo el objeto al que hace referencia `pCLSID` está registrada; de lo contrario todos los objetos se eliminan del registrados.  
   
  Esta función se invoca [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).  
   
-##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects  
  Esta función se invoca para registrar los objetos de clase.  
   
 ```
@@ -128,7 +123,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>Comentarios  
  Esta función auxiliar es usada por [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsoleta en ATL 7.0) y [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).  
   
-##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects  
  Esta función se invoca para quitar el generador o generadores de clases de la tabla de objetos en ejecución.  
   
 ```
@@ -145,7 +140,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>Comentarios  
  Esta función auxiliar es usada por [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsoleta en ATL 7.0) y [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).  
   
-##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject  
  Esta función se invoca para devolver el generador de clases.  
   
 ```

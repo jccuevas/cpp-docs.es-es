@@ -1,13 +1,10 @@
 ---
-title: "Nombres de configuración regional, idiomas y cadenas de país/región | Microsoft Docs"
-ms.custom: 
+title: Nombres de configuración regional, idiomas y cadenas de país/región | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f98014ae0a610c1618e971cd833523ff9535b6ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aeaeb21dfabac173b639fe4b3e1518b276c629a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Nombres de configuración regional, idiomas y cadenas de país/región
 El argumento de *locale* para las funciones `setlocale` y `_create_locale` se puede establecer usando los nombres, los idiomas, los códigos de país o región, y las páginas de códigos de la configuración regional compatibles con la API NLS de Windows. El argumento de *locale* tiene el formato siguiente:  

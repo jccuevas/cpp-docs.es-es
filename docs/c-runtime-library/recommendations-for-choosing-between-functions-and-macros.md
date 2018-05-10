@@ -1,13 +1,10 @@
 ---
 title: Recomendaciones para elegir entre funciones y macros | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.functions
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 810a4c2dbf5c80688dd739c48df0056ab394cafd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4577ac1a0e1cac90a3436809722978d119c6b557
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Recomendaciones para elegir entre funciones y macros
 La mayoría de las rutinas de la biblioteca en tiempo de ejecución de Microsoft son funciones compiladas o ensambladas, aunque algunas rutinas se implementan como macros. Cuando un archivo de encabezado declara una función y una versión de macro de una rutina, la definición de macro tiene prioridad, porque siempre aparece después de la declaración de función. Cuando se invoca una rutina que se implementa como una función y como una macro, puede forzar al compilador a que utilice la versión de función de dos maneras:  

@@ -1,12 +1,9 @@
 ---
-title: norm_4 Class | Microsoft Docs
-ms.custom: 
+title: norm_4 (clase) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::grab
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e15af7601483fd1d69462291c9c45dc62b5aded4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm4-class"></a>norm_4 (Clase)
 Representa un vector corto de cuatro números normales.  
@@ -310,7 +305,7 @@ class norm_4;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[norm_4 Constructor](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
+|[Constructor norm_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -482,16 +477,16 @@ class norm_4;
 |norm_4::abgr||  
 |norm_4::abr||  
 |norm_4::abrg||  
-|norm_4::ag||  
-|norm_4::agb||  
-|norm_4::agbr||  
-|norm_4::agr||  
-|norm_4::agrb||  
-|norm_4::ar||  
+|norm_4:: AG||  
+|norm_4:: agb||  
+|norm_4:: agbr||  
+|norm_4:: Agr||  
+|norm_4:: agrb||  
+|norm_4:: ar||  
 |norm_4::arb||  
 |norm_4::arbg||  
 |norm_4::arg||  
-|norm_4::argb||  
+|norm_4:: ARGB||  
 |norm_4::b||  
 |norm_4::ba||  
 |norm_4::bag||  
@@ -505,7 +500,7 @@ class norm_4;
 |norm_4::bgra||  
 |norm_4::br||  
 |norm_4::bra||  
-|norm_4::brag||  
+|norm_4:: brag||  
 |norm_4::brg||  
 |norm_4::brga||  
 |norm_4::g||  
@@ -519,17 +514,17 @@ class norm_4;
 |norm_4::gbar||  
 |norm_4::gbr||  
 |norm_4::gbra||  
-|norm_4::gr||  
+|norm_4:: GR||  
 |norm_4::gra||  
 |norm_4::grab||  
 |norm_4::grb||  
 |norm_4::grba||  
-|norm_4::r||  
+|norm_4:: r||  
 |norm_4::ra||  
 |norm_4::rab||  
 |norm_4::rabg||  
-|norm_4::rag||  
-|norm_4::ragb||  
+|norm_4:: rag||  
+|norm_4:: ragb||  
 |norm_4::rb||  
 |norm_4::rba||  
 |norm_4::rbag||  
@@ -540,66 +535,66 @@ class norm_4;
 |norm_4::rgab||  
 |norm_4::rgb||  
 |norm_4::rgba||  
-|norm_4::w||  
-|norm_4::wx||  
-|norm_4::wxy||  
-|norm_4::wxyz||  
-|norm_4::wxz||  
-|norm_4::wxzy||  
-|norm_4::wy||  
-|norm_4::wyx||  
+|norm_4:: w||  
+|norm_4:: WX||  
+|norm_4:: WXY||  
+|norm_4:: wxyz||  
+|norm_4:: wxz||  
+|norm_4:: wxzy||  
+|norm_4:: WY||  
+|norm_4:: wyx||  
 |norm_4::wyxz||  
-|norm_4::wyz||  
-|norm_4::wyzx||  
+|norm_4:: WYZ||  
+|norm_4:: wyzx||  
 |norm_4::wz||  
 |norm_4::wzx||  
-|norm_4::wzxy||  
-|norm_4::wzy||  
-|norm_4::wzyx||  
-|norm_4::x||  
-|norm_4::xw||  
-|norm_4::xwy||  
-|norm_4::xwyz||  
+|norm_4:: wzxy||  
+|norm_4:: wzy||  
+|norm_4:: wzyx||  
+|norm_4:: x||  
+|norm_4:: xw||  
+|norm_4:: xwy||  
+|norm_4:: xwyz||  
 |norm_4::xwz||  
-|norm_4::xwzy||  
-|norm_4::xy||  
-|norm_4::xyw||  
+|norm_4:: xwzy||  
+|norm_4:: XY||  
+|norm_4:: xyw||  
 |norm_4::xywz||  
 |norm_4::xyz||  
-|norm_4::xyzw||  
+|norm_4:: xyzw||  
 |norm_4::xz||  
 |norm_4::xzw||  
-|norm_4::xzwy||  
-|norm_4::xzy||  
+|norm_4:: xzwy||  
+|norm_4:: xzy||  
 |norm_4::xzyw||  
-|norm_4::y||  
-|norm_4::yw||  
-|norm_4::ywx||  
+|norm_4:: y||  
+|norm_4:: yw||  
+|norm_4:: ywx||  
 |norm_4::ywxz||  
 |norm_4::ywz||  
 |norm_4::ywzx||  
-|norm_4::yx||  
-|norm_4::yxw||  
+|norm_4:: YX||  
+|norm_4:: yxw||  
 |norm_4::yxwz||  
 |norm_4::yxz||  
-|norm_4::yxzw||  
-|norm_4::yz||  
-|norm_4::yzw||  
-|norm_4::yzwx||  
-|norm_4::yzx||  
+|norm_4:: yxzw||  
+|norm_4:: YZ||  
+|norm_4:: yzw||  
+|norm_4:: yzwx||  
+|norm_4:: yzx||  
 |norm_4::yzxw||  
 |norm_4::z||  
 |norm_4::zw||  
 |norm_4::zwx||  
 |norm_4::zwxy||  
-|norm_4::zwy||  
+|norm_4:: zwy||  
 |norm_4::zwyx||  
 |norm_4::zx||  
 |norm_4::zxw||  
 |norm_4::zxwy||  
 |norm_4::zxy||  
 |norm_4::zxyw||  
-|norm_4::zy||  
+|norm_4:: ZY||  
 |norm_4::zyw||  
 |norm_4::zywx||  
 |norm_4::zyx||  

@@ -2,11 +2,8 @@
 title: Context (clase) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Context
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 4bf574fc679b879e2fa9084ed6fbd4ed82e66f70
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="context-class"></a>Context (Clase)
 Representa una abstracción para un contexto de ejecución.  
@@ -67,12 +62,12 @@ class Context;
 |[GetId](#getid)|Devuelve un identificador para el contexto que es único dentro del programador al que pertenece el contexto.|  
 |[GetScheduleGroupId](#getschedulegroupid)|Devuelve un identificador para el grupo de programación en el que el contexto está trabajando actualmente.|  
 |[GetVirtualProcessorId](#getvirtualprocessorid)|Devuelve un identificador para el procesador virtual en el que el contexto se está ejecutando actualmente.|  
-|[Id](#id)|Devuelve un identificador para el contexto actual que es único dentro del programador al que pertenece el contexto actual.|  
+|[Id.](#id)|Devuelve un identificador para el contexto actual que es único dentro del programador al que pertenece el contexto actual.|  
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Devuelve una indicación de si la colección de tareas que actualmente se ejecuta alineada en el contexto actual, está en medio de una cancelación activa (o lo estará pronto).|  
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Determina si el contexto está o no bloqueado de forma sincrónica. Se considera que un contexto está bloqueado de forma sincrónica si realizó una acción que condujo al bloqueo explícitamente.|  
 |[Suscribir en exceso](#oversubscribe)|Inserta un procesador virtual adicional en un programador para la duración de un bloque de código cuando se invoca en un contexto que se ejecuta en uno de los procesadores virtuales de ese programador.|  
 |[ScheduleGroupId](#schedulegroupid)|Devuelve un identificador para el grupo de programación en el que el contexto actual está trabajando.|  
-|[Unblock](#unblock)|Desbloquea el contexto y hace que se convierta en ejecutable.|  
+|[Desbloquear](#unblock)|Desbloquea el contexto y hace que se convierta en ejecutable.|  
 |[VirtualProcessorId](#virtualprocessorid)|Devuelve un identificador para el procesador virtual en el que el contexto actual se está ejecutando.|  
 |[Yield](#yield)|Genera la ejecución para que otro contexto se pueda ejecutar. Si no hay ningún otro contexto disponible para dar prioridad, el programador puede dar prioridad a otro subproceso del sistema operativo.|  
   

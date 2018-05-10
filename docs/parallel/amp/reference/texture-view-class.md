@@ -1,12 +1,9 @@
 ---
 title: texture_view (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture_view
@@ -23,17 +20,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="textureview-class"></a>texture_view (Clase)
 Proporciona acceso de lectura y escritura en una textura. `texture_view` solo puede usarse para leer las texturas cuyo tipo de valor es `int`, `unsigned int`, o `float` que tienen bpse de 32 bits de forma predeterminada. Para leer otros formatos de textura, utilice `texture_view<const value_type, _Rank>`.  
@@ -75,7 +70,7 @@ class texture_view<const value_type, _Rank>
 |Name|Descripción|  
 |----------|-----------------|  
 |[texture_view Constructor](#ctor)|Sobrecargado. Construye un `texture_view` instancia.|  
-|[~texture_view Destructor](#ctor)|Destruye el `texture_view` instancia.|  
+|[~ texture_view (destructor)](#ctor)|Destruye el `texture_view` instancia.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -86,14 +81,14 @@ class texture_view<const value_type, _Rank>
 |[gather_green](#gather_green)|Sobrecargado. Ejemplos de la textura en las coordenadas especificadas mediante la configuración de muestreo especificada y devuelve los componentes de color verde (y) de los cuatro elementos de textura muestreadas.|  
 |[gather_red](#gather_red)|Sobrecargado. Ejemplos de la textura en las coordenadas especificadas mediante la configuración de muestreo especificada y devuelve los componentes rojo (x) de los cuatro elementos de textura muestreadas.|  
 |[get](#get)|Sobrecargado. Obtiene el valor del elemento por índice.|  
-|[sample](#sample)|Sobrecargado. Ejemplos de la textura en el nivel de detalle y las coordenadas especificadas mediante la configuración de muestreo especificada.|  
+|[Ejemplo](#sample)|Sobrecargado. Ejemplos de la textura en el nivel de detalle y las coordenadas especificadas mediante la configuración de muestreo especificada.|  
 |[set](#set)|Establece el valor de un elemento por su índice.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[operator()](#operator_call)|Sobrecargado. Obtiene el valor del elemento por índice.|  
+|[Operator()](#operator_call)|Sobrecargado. Obtiene el valor del elemento por índice.|  
 |[operator[]](#operator_at)|Sobrecargado. Obtiene el valor del elemento por índice.|  
 |[operator=](#operator_eq)|Sobrecargado. Operador de asignación.|  
   
@@ -327,7 +322,7 @@ value_type get(
 ### <a name="return-value"></a>Valor devuelto  
  Valor del elemento.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
  Asigna una vista de la misma textura especificado `texture_view` a este `texture_view` instancia.  
   

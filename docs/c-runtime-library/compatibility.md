@@ -1,13 +1,10 @@
 ---
 title: Compatibilidad | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.programs
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bed3ebc3723bfe6af8e3d12fc3702ecb0dda7b4f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b3933f6b4a40250ea099f4de4ce640a9505b2072
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility"></a>Compatibilidad
 La biblioteca en tiempo de ejecución de C Universal (UCRT) admite la mayor parte de la biblioteca estándar de C requerida para la conformidad con C++. Implementa la biblioteca C99 (ISO/IEC 9899:1999), con las excepciones de las macros de tipo genérico definidas en \<tgmath.h> y la compatibilidad de tipos estricta en \<complex.h>. La UCRT también implementa un gran subconjunto de la biblioteca de C POSIX.1 (ISO/IEC 9945-1:1996, la interfaz de programación de aplicaciones de sistema de POSIX), pero no cumple totalmente ningún estándar POSIX concreto.  Además, la UCRT implementa varias macros y funciones específicas de Microsoft que no forman parte de un estándar.  

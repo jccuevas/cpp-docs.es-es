@@ -1,12 +1,9 @@
 ---
 title: IThreadProxy (estructura) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IThreadProxy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbf59302a73374f08f1c226c1e7e56202654dcfb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy (Estructura)
 Una abstracción para un subproceso de ejecución. Dependiendo de la clave de directiva `SchedulerType` del programador que se crea, el Administrador de recursos concederá al usuario un proxy del subproceso que está respaldado por un subproceso de Win32 normal o por un subproceso programable de modo de usuario (UMS). Los subprocesos UMS se admiten en sistemas operativos de 64 bits con Windows 7 o una versión posterior.  
@@ -47,9 +42,9 @@ struct IThreadProxy;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[IThreadProxy::GetId](#getid)|Devuelve un identificador único para el proxy del subproceso.|  
-|[IThreadProxy::SwitchOut](#switchout)|Desasocia el contexto de la raíz del procesador virtual subyacente.|  
-|[IThreadProxy::SwitchTo](#switchto)|Realiza un cambio de contexto cooperativo desde el contexto está ejecutando actualmente por otra distinta.|  
+|[IThreadProxy:: GetId](#getid)|Devuelve un identificador único para el proxy del subproceso.|  
+|[IThreadProxy:: SwitchOut](#switchout)|Desasocia el contexto de la raíz del procesador virtual subyacente.|  
+|[IThreadProxy:: SwitchTo](#switchto)|Realiza un cambio de contexto cooperativo desde el contexto está ejecutando actualmente por otra distinta.|  
 |[IThreadProxy::YieldToSystem](#yieldtosystem)|Hace que el subproceso que realiza la llamada ceda la ejecución a otro subproceso que está listo para ejecutarse en el procesador actual. El sistema operativo selecciona el siguiente subproceso que se ejecuta.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -97,7 +92,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  En las bibliotecas y los encabezados incluidos con Visual Studio 2010, este método no tomaba un parámetro y no reinicializaba la raíz del procesador virtual. Para conservar el comportamiento anterior, se proporciona el valor de parámetro predeterminado de `Blocking`.  
   
-##  <a name="switchto"></a>  IThreadProxy::SwitchTo Method  
+##  <a name="switchto"></a>  IThreadProxy:: SwitchTo (método)  
  Realiza un cambio de contexto cooperativo desde el contexto está ejecutando actualmente por otra distinta.  
   
 ```
@@ -124,7 +119,7 @@ virtual void SwitchTo(
   
  Se debe llamar a `SwitchTo` en la interfaz `IThreadProxy` que representa el subproceso actualmente en ejecución o los resultados no se definen. La función produce `invalid_argument` si el parámetro `pContext` está establecido en `NULL`.  
   
-##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem Method  
+##  <a name="yieldtosystem"></a>  IThreadProxy:: YieldToSystem (método)  
  Hace que el subproceso que realiza la llamada ceda la ejecución a otro subproceso que está listo para ejecutarse en el procesador actual. El sistema operativo selecciona el siguiente subproceso que se ejecuta.  
   
 ```

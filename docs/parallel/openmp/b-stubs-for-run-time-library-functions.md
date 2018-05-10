@@ -1,27 +1,22 @@
 ---
-title: "B. Códigos auxiliares para las funciones de la biblioteca de tiempo de ejecución | Documentos de Microsoft"
-ms.custom: 
+title: B. Códigos auxiliares para las funciones de la biblioteca de tiempo de ejecución | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1207f943560fdc6a22c62a9a8deafa213400f172
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Códigos auxiliares para las funciones de la biblioteca de tiempo de ejecución
 Esta sección proporciona código auxiliar para las funciones de biblioteca en tiempo de ejecución definidas en OpenMP C y C++ API. El código auxiliar se proporciona para habilitar la portabilidad para plataformas que no son compatibles con OpenMP C y C++ API. En estas plataformas, programas de OpenMP deben vincularse a una biblioteca que contiene estas funciones de código auxiliar. Las funciones de código auxiliar se supone que se omiten las directivas en el programa de OpenMP. Por lo tanto, imitan la semántica de la serie.  

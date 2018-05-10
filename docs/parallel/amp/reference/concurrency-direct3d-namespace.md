@@ -1,12 +1,9 @@
 ---
 title: Namespace Concurrency::Direct3D | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 607a3f25c2dfea5eee833f3608021547d8cd7c44
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d (Espacio de nombres)
 El `direct3d` espacio de nombres proporciona funciones que admiten interoperabilidad de D3D. Permite el uso sin problemas de los recursos D3D para el cálculo en el código de AMP, así como permitir el uso de recursos creados con AMP en código D3D, sin necesidad de crear copias intermedias redundantes. Incrementalmente puede acelerar las secciones de proceso intensivo de las aplicaciones DirectX mediante C++ AMP y usar la API D3D en los datos creados a partir de cálculos de AMP.  
@@ -73,10 +68,10 @@ namespace direct3d;
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Devuelve una marca booleana que indica si el tiempo de espera está deshabilitada para el accelerator_view especificado.|  
 |[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Sobrecargado. Realiza una operación aritmética de multiplicar/agregar en tres argumentos: _X * _Y + _Z|  
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Crear una matriz de un puntero de interfaz de búfer de D3D.|  
-|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Genera un valor aleatorio mediante el algoritmo de ruido de Perlin|  
-|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Convierte _X de grados en radianes|  
+|[ruido](concurrency-direct3d-namespace-functions-amp.md#noise)|Genera un valor aleatorio mediante el algoritmo de ruido de Perlin|  
+|[radianes](concurrency-direct3d-namespace-functions-amp.md#radians)|Convierte _X de grados en radianes|  
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcula un recíproco rápido, aproximado del argumento|  
-|[reversebits)](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Invierte el orden de los bits de _X|  
+|[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Invierte el orden de los bits de _X|  
 |[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Fija _X dentro del intervalo de 0 a 1|  
 |[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Sobrecargado. Devuelve el signo del argumento|  
 |[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Devuelve una interpolación Hermite suave entre 0 y 1, si _X está en el intervalo [_Min, _Max].|  

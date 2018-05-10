@@ -1,27 +1,22 @@
 ---
 title: 2.6.5 flush (directiva) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a2ec5f74-9c37-424a-8376-47ab4a5829a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7607070692941606b863be9248b2d69f093f3a13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad3b34195015f57955c5be685807ec43f0a8f8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="265-flush-directive"></a>2.6.5 flush (Directiva)
 El **vaciar** directiva, ya sea explícita o implícita, especifica un punto de secuencia "entre subprocesos" en el que debe asegurarse de que todos los subprocesos de un equipo tienen una vista coherente de ciertos objetos (especificadas a continuación) en la implementación memoria. Esto significa que las anteriores evaluaciones de expresiones que hacen referencia a esos objetos están completos y las evaluaciones subsiguientes no han comenzado aún. Por ejemplo, los compiladores deben restaurar los valores de los objetos de registros en la memoria y hardware que necesite vaciar los búferes de escritura en la memoria y volver a cargar los valores de los objetos de la memoria.  
@@ -40,7 +35,7 @@ El **vaciar** directiva, ya sea explícita o implícita, especifica un punto de 
   
 -   En la entrada y la salida de **crítico**  
   
--   En la entrada y la salida de`ordered`  
+-   En la entrada y la salida de `ordered`  
   
 -   En la entrada y la salida de **paralelas**  
   

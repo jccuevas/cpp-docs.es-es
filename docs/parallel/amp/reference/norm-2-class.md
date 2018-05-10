@@ -1,12 +1,9 @@
 ---
-title: norm_2 Class | Microsoft Docs
-ms.custom: 
+title: norm_2 (clase) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::set_x
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8a3cf125ab89c159f27fe212018780699926e79
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2bcdb86d63af4f920e1df3dffd920195aa7a00d8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm2-class"></a>norm_2 (Clase)
 Representa un vector corto de dos números normales.  
@@ -70,7 +65,7 @@ class norm_2;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[norm_2 Constructor](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
+|[Constructor norm_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -83,7 +78,7 @@ class norm_2;
 |norm_2::ref_g||  
 |norm_2::ref_r||  
 |norm_2::ref_x||  
-|norm_2::ref_y||  
+|norm_2:: ref_y||  
 |norm_2::set_x||  
 |norm_2::set_xy||  
 |norm_2::set_y||  
@@ -112,14 +107,14 @@ class norm_2;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|norm_2::g||  
-|norm_2::gr||  
-|norm_2::r||  
-|norm_2::rg||  
-|norm_2::x||  
-|norm_2::xy||  
-|norm_2::y||  
-|norm_2::yx||  
+|norm_2:: g||  
+|norm_2:: GR||  
+|norm_2:: r||  
+|norm_2:: RG||  
+|norm_2:: x||  
+|norm_2:: XY||  
+|norm_2:: y||  
+|norm_2:: YX||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `norm_2`  

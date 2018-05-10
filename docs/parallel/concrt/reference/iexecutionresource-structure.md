@@ -1,12 +1,9 @@
 ---
 title: IExecutionResource (estructura) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IExecutionResource
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4ad0b6f9038d78ae94b5ab1dcb148ebd628edc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dc69c30f30d25179427ee8e59c536bb7cb5b483d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource (Estructura)
 Una abstracción para un subproceso del hardware.  
@@ -47,10 +42,10 @@ struct IExecutionResource;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Devuelve el número de procesador virtual activadas raíces y suscrito subprocesos externos actualmente asociados a este recurso de ejecución representa el subproceso del hardware subyacente.|  
-|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Devuelve un identificador único para el subproceso del hardware que representa este recurso de ejecución.|  
-|[IExecutionResource::GetNodeId](#getnodeid)|Devuelve un identificador único para el nodo del procesador que pertenece este recurso de ejecución.|  
-|[IExecutionResource::Remove](#remove)|Devuelve este recurso de ejecución para el Administrador de recursos.|  
+|[IExecutionResource:: CurrentSubscriptionLevel](#currentsubscriptionlevel)|Devuelve el número de procesador virtual activadas raíces y suscrito subprocesos externos actualmente asociados a este recurso de ejecución representa el subproceso del hardware subyacente.|  
+|[IExecutionResource:: GetExecutionResourceId](#getexecutionresourceid)|Devuelve un identificador único para el subproceso del hardware que representa este recurso de ejecución.|  
+|[IExecutionResource:: GetNodeId](#getnodeid)|Devuelve un identificador único para el nodo del procesador que pertenece este recurso de ejecución.|  
+|[IExecutionResource:: Remove](#remove)|Devuelve este recurso de ejecución para el Administrador de recursos.|  
   
 ## <a name="remarks"></a>Comentarios  
  Recursos de ejecución pueden ser independientes o asociados a raíces del procesador virtual. Se crea un recurso de ejecución independiente cuando un subproceso en la aplicación crea una suscripción del subproceso. Los métodos [ISchedulerProxy:: SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) y [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) crean suscripciones del subproceso y devuelven un `IExecutionResource` interfaz que representa la suscripción. Crear una suscripción del subproceso es una manera de informar al administrador de recursos que un subproceso determinado participará en el trabajo en cola a un programador, junto con las raíces de procesador virtual en el Administrador de recursos asigna al programador. El Administrador de recursos usa la información para evitar la sobresuscripción de subprocesos de hardware siempre sea posible.  

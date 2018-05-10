@@ -2,12 +2,9 @@
 title: Almacenamiento Local (TLS) para el subproceso | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b01bd50fa50a449128842755898d703f7bafe76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4cd0897a04ec2e07f1f8f3b660d092e0075ac0b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="thread-local-storage-tls"></a>Almacenamiento local para el subproceso (TLS)
 El almacenamiento local para el subproceso (TLS) es el método por el que cada subproceso de un determinado proceso con subproceso puede asignar ubicaciones en las que almacenar los datos específicos de esos subproceso. Datos específicos del subproceso de límite (tiempo de ejecución) se admiten dinámicamente por medio de la API de TLS ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), y [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Para obtener más información acerca de cómo se implementa el almacenamiento local de subprocesos en Windows, consulte [almacenamiento Local de subprocesos (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 y el compilador de Visual C++ ahora son compatibles con datos por subproceso que se enlazan estáticamente (en tiempo de carga) además de la implementación existente de la API.  

@@ -1,13 +1,10 @@
 ---
 title: Declaraciones typedef | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 851776be55ce485d660aa46f4338235c3a1a413a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 192f7ab037362219261852cfdb0a5eac53e5df9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="typedef-declarations"></a>Declaraciones typedef
 Una declaración typedef es una declaración con typedef como clase de almacenamiento. El declarador se convierte en un nuevo tipo. Puede utilizar declaraciones typedef para construir nombres más cortos o más significativos para tipos ya definidos por C o para tipos que haya declarado. Los nombres de typedef permiten encapsular detalles de la implementación que pueden cambiar.  
@@ -34,7 +29,7 @@ Una declaración typedef es una declaración con typedef como clase de almacenam
   
 ## <a name="syntax"></a>Sintaxis  
  `declaration`:  
- *declaration-specifiers init-declarator-list* opt**;**  
+ *declaration-specifiers init-declarator-list* opt **;**  
   
  *declaration-specifiers*:  
  *storage-class-specifier declaration-specifiers* opt  

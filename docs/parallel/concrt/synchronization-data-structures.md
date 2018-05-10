@@ -1,29 +1,24 @@
 ---
-title: "Estructuras de datos de sincronización | Documentos de Microsoft"
-ms.custom: 
+title: Estructuras de datos de sincronización | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f64acda5fe11cae3a40e4affc403ebb61d876de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronization-data-structures"></a>Estructuras de datos de sincronización
 El Runtime de simultaneidad proporciona varias estructuras de datos que permiten sincronizar el acceso a los datos compartidos desde varios subprocesos. Estas estructuras de datos son útiles cuando se comparten los datos que modifican con poca frecuencia. Un objeto de sincronización, por ejemplo, una sección crítica, hace que otros subprocesos esperar hasta que el recurso compartido está disponible. Por lo tanto, si usa este tipo de objeto para sincronizar el acceso a datos que se utilizan con frecuencia, puede perder la escalabilidad de la aplicación. El [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) proporciona el [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (clase), que le permite compartir un recurso entre varios subprocesos o tareas sin la necesidad de sincronización. Para obtener más información sobre la `combinable` de clases, consulte [contenedores y objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -31,15 +26,15 @@ El Runtime de simultaneidad proporciona varias estructuras de datos que permiten
 ##  <a name="top"></a> Secciones  
  En este tema se describe los siguientes tipos de bloques de mensajes asincrónicos en detalle:  
   
--   [critical_section)](#critical_section)  
+-   [critical_section](#critical_section)  
   
--   [reader_writer_lock)](#reader_writer_lock)  
+-   [reader_writer_lock](#reader_writer_lock)  
   
 -   [scoped_lock y scoped_lock_read](#scoped_lock)  
   
 -   [event](#event)  
   
-##  <a name="critical_section"></a>critical_section)  
+##  <a name="critical_section"></a> critical_section)  
  El [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) clase representa un objeto cooperativo de exclusión mutua que cede a otras tareas en lugar de adelantarse a ellas. Las secciones críticas son útiles cuando varios subprocesos requieren exclusivo acceso de lectura y escritura a los datos compartidos.  
 
  La `critical_section` clase no es reentrante. El [concurrency::critical_section::lock](reference/critical-section-class.md#lock) método produce una excepción de tipo [concurrency::improper_lock](../../parallel/concrt/reference/improper-lock-class.md) si es llamado por el subproceso que ya posee el bloqueo.  
@@ -57,7 +52,7 @@ El Runtime de simultaneidad proporciona varias estructuras de datos que permiten
   
  [[Arriba](#top)]  
   
-##  <a name="reader_writer_lock"></a>reader_writer_lock)  
+##  <a name="reader_writer_lock"></a> reader_writer_lock)  
  El [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) clase proporciona las operaciones de lectura/escritura de subprocesos a los datos compartidos. Usar bloqueos de lector/escritor cuando varios subprocesos requieren acceso de lectura simultánea a un recurso compartido pero apenas escriben en dicho recurso compartido. Esta clase proporciona solo un subproceso tenga acceso de escritura a un objeto en cualquier momento.  
   
  El `reader_writer_lock` clase puede realizar mejor que la `critical_section` clase porque un `critical_section` objeto adquiere acceso exclusivo a un recurso compartido, lo que impide el acceso de lectura simultáneo.  
@@ -86,7 +81,7 @@ El Runtime de simultaneidad proporciona varias estructuras de datos que permiten
   
  [[Arriba](#top)]  
   
-##  <a name="scoped_lock"></a>scoped_lock y scoped_lock_read  
+##  <a name="scoped_lock"></a> scoped_lock y scoped_lock_read  
  El `critical_section` y `reader_writer_lock` clases proporcionan clases anidadas auxiliares que simplifican la forma de trabajar con objetos de exclusión mutua. Estas clases auxiliares se denominan *bloqueos con ámbito*.  
   
  El `critical_section` clase contiene la [concurrency::critical_section::scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class) clase. El constructor adquiere el acceso al proporcionado `critical_section` objeto; el destructor libera el acceso a dicho objeto. El `reader_writer_lock` clase contiene la [concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class) (clase), que es similar a `critical_section::scoped_lock`, excepto en que administra el acceso de escritura al proporcionado `reader_writer_lock` objeto. El `reader_writer_lock` clase también contiene el [concurrency::reader_writer_lock::scoped_lock_read](reference/reader-writer-lock-class.md#scoped_lock_read_class) clase. Esta clase administra el acceso de lectura al proporcionado `reader_writer_lock` objeto.  
@@ -97,7 +92,7 @@ El Runtime de simultaneidad proporciona varias estructuras de datos que permiten
 > [!NOTE]
 >  Cuando se usa el `critical_section::scoped_lock`, `reader_writer_lock::scoped_lock`, y `reader_writer_lock::scoped_lock_read` las clases, no libere manualmente el acceso al objeto subyacente para la exclusión mutua. Esto puede colocar el tiempo de ejecución en un estado no válido.  
   
-##  <a name="event"></a>evento  
+##  <a name="event"></a> Evento  
  El [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) clase representa un objeto de sincronización cuyo estado puede ser señalado o no señalado. A diferencia de los objetos de sincronización, por ejemplo, secciones críticas, cuya finalidad es proteger el acceso a los datos compartidos, los eventos sincronizan el flujo de ejecución.  
   
  La `event` clase es útil cuando una tarea ha completado el trabajo de otra tarea. Por ejemplo, una tarea podría señalar a otra tarea que ha leído datos desde una conexión de red o desde un archivo.  

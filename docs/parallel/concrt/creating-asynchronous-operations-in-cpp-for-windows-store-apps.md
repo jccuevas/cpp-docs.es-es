@@ -1,30 +1,25 @@
 ---
-title: "Crear operaciones asincrónicas en C++ para aplicaciones UWP | Documentos de Microsoft"
-ms.custom: 
+title: Crear operaciones asincrónicas en C++ para aplicaciones UWP | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99251cbf6627d07075dad3d7dfa3fd4d9651fea8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24ea9cc47ea9fa78c5efaf6c922f9f01dd3ff963
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Crear operaciones asincrónicas en C++ para aplicaciones UWP
 Este documento describen algunos de los puntos clave a tener en cuenta al utilizar la clase de tarea para generar operaciones asincrónicas basadas en subprocesos de Windows en una aplicación en tiempo de ejecución Universal de Windows (UWP).  
@@ -68,13 +63,13 @@ Este documento describen algunos de los puntos clave a tener en cuenta al utiliz
  [Windows::Foundation::IAsyncAction](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
  Representa una acción asincrónica.  
   
- [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
+ [Windows::Foundation::IAsyncActionWithProgress\<TProgress >](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  Representa una acción asincrónica que informa sobre el progreso.  
   
- [Windows::Foundation::IAsyncOperation\<TResult>](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
+ [Windows::Foundation::IAsyncOperation\<TResult >](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  Representa una operación asincrónica que devuelve un resultado.  
   
- [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
+ [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
  Representa una operación asincrónica que devuelve un resultado e informa sobre el progreso.  
   
  El concepto de una *acción* significa que la tarea asincrónica no genera un valor (piense en una función que devuelve `void`). El concepto de una *operación* significa que la tarea asincrónica genera un valor. El concepto de *progreso* significa que la tarea puede informar sobre mensajes de progreso al llamador. JavaScript, .NET Framework y Visual C++ proporcionan su propia manera de crear instancias de estas interfaces para su uso a través del límite de ABI. Para Visual C++, la PPL proporciona la función [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) . Esta función crea una acción asincrónica en tiempo de ejecución de Windows o la operación que representa la finalización de una tarea. El `create_async` función toma una función de trabajo (normalmente una expresión lambda), crea internamente un `task` objeto y ajusta esa tarea en una de las cuatro interfaces asincrónicas de Windows en tiempo de ejecución.  
@@ -168,7 +163,7 @@ Este documento describen algunos de los puntos clave a tener en cuenta al utiliz
 
 >  No llame a [concurrency::task::wait](reference/task-class.md#wait) en el cuerpo de una continuación que se ejecuta en el STA. De lo contrario, el runtime produce [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) porque este método bloquea el subproceso actual y pueden provocar que la aplicación no responda. Sin embargo, puede llamar al método [concurrency::task::get](reference/task-class.md#get) para recibir el resultado de la tarea anterior en una continuación basada en tareas.  
   
-##  <a name="example-app">Ejemplo: Controlar la ejecución en una aplicación en tiempo de ejecución de Windows con C++ y XAML</a>  
+##  <a name="example-app"></a> Ejemplo: Controlar la ejecución en una aplicación en tiempo de ejecución de Windows con C++ y XAML  
  Piense en una aplicación XAML de C++ que lee un archivo desde el disco, encuentra la mayoría de las palabras comunes en ese archivo y, a continuación, muestran los resultados en la interfaz de usuario. Para crear esta aplicación, comience, en Visual Studio, creando un **aplicación vacía (Windows Universal)** proyecto y asígnele el nombre `CommonWords`. En el manifiesto de la aplicación, especifique la capacidad de la **Biblioteca de documentos** para permitir que la aplicación obtenga acceso a la carpeta de documentos. Agregue también el tipo de archivo de texto (.txt) a la sección de declaraciones del manifiesto de la aplicación. Para obtener más información sobre las funciones y declaraciones de la aplicación, consulte [Implementación y paquetes de aplicaciones (aplicaciones de Windows en tiempo de ejecución)](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
   
  Actualice el elemento `Grid` en MainPage.xaml para incluir un elemento `ProgressRing` y un elemento `TextBlock` . `ProgressRing` indica que la operación está en curso y `TextBlock` muestra los resultados del cálculo.  

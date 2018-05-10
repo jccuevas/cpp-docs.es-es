@@ -1,13 +1,10 @@
 ---
 title: OpenMP en Visual C++ | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - explicit parallelization
 - explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 734b118cfdd1523379e9fb1e5e157bf9da9824af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bfcf0d83aeffbb4f40e5786b867afcf87aa84cb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="openmp-in-visual-c"></a>OpenMP en Visual C++
 La interfaz de programación de aplicaciones de OpenMP C y C++ le permite escribir aplicaciones que utilicen efectivamente varios procesadores. Visual C++ admite el estándar de OpenMP 2.0.  
@@ -44,7 +39,7 @@ La interfaz de programación de aplicaciones de OpenMP C y C++ le permite escrib
  Describe las OpenMP C y C++ API, como se documenta en la especificación de la versión 2.0 desde el panel de revisión de arquitectura de OpenMP.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [/OpenMP (habilitar la compatibilidad con OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)  
+ [/openmp (Habilitar la compatibilidad con OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)  
  Hace que el compilador pueda procesarlo `#pragma omp`.  
   
  [Macros predefinidas](../../preprocessor/predefined-macros.md)  

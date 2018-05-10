@@ -2,9 +2,6 @@
 title: las funciones del espacio de nombres de simultaneidad | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
@@ -40,22 +37,20 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 9e1eed6fdbf5f676e5a7177affb7c38cd016fa4c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-functions"></a>funciones del espacio de nombres de simultaneidad
 ||||  
 |-|-|-|  
-|[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
+|[Asignación](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
 |[EnableTracing](#enabletracing)|[Libre](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|  
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|  
@@ -68,10 +63,10 @@ ms.lasthandoff: 04/10/2018
 |[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|  
 |[run_with_cancellation_token](#run_with_cancellation_token)|[send](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|  
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|  
-|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|  
+|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[espera](#wait)|  
 |[when_all](#when_all)|[when_any](#when_any)|  
   
-##  <a name="alloc"></a>  Alloc  
+##  <a name="alloc"></a>  Asignación  
  Asigna un bloque de memoria del tamaño especificado del subasignador de almacenamiento en caché del runtime de simultaneidad.  
   
 ```
@@ -1423,7 +1418,7 @@ inline void swap(
  El vector simultáneo que proporciona los elementos deben intercambiar o el vector cuyos elementos se van a intercambiar con los del vector simultáneo `_A`.  
   
 ### <a name="remarks"></a>Comentarios  
- La función de plantilla es un algoritmo especializado en la clase de contenedor `concurrent_vector` para ejecutar la función miembro `_A`. [concurrent_vector::swap](concurrent-vector-class.md#swap)( `_B`). Se trata de instancias de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla, `template <class T> void swap(T&, T&)`, en el algoritmo funciona mediante la asignación de clase y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.  
+ La función de plantilla es un algoritmo especializado en la clase de contenedor `concurrent_vector` para ejecutar la función miembro `_A`. [concurrent_vector:: swap](concurrent-vector-class.md#swap)( `_B`). Se trata de instancias de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla, `template <class T> void swap(T&, T&)`, en el algoritmo funciona mediante la asignación de clase y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.  
   
  Este método no es seguro para la simultaneidad. Debe asegurarse de que otros subprocesos no están realizando operaciones en cualquiera de los vectores simultáneos cuando se llama a este método.  
   
@@ -1485,7 +1480,7 @@ void Trace_agents_register_name(
  `_Name`  
  El nombre para el objeto especificado.  
   
-##  <a name="try_receive"></a>  try_receive  
+##  <a name="try_receive"></a>  try_receive)  
  Una implementación try-receive general, que permite a un contexto buscar datos exactamente de un origen y filtrar los valores que se aceptan. Si los datos no están listos, este método devolverá false.  
   
 ``` 
@@ -1527,7 +1522,7 @@ bool try_receive(
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [Message Passing Functions](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="wait"></a>  wait  
+##  <a name="wait"></a>  espera  
  Hace una pausa en el contexto actual para un periodo de tiempo indicado.  
   
 ```
@@ -1541,7 +1536,7 @@ void __cdecl wait(unsigned int _Milliseconds);
 ### <a name="remarks"></a>Comentarios  
  Si se llama a este método en un contexto de programador del Runtime de simultaneidad, el programador encontrará un contexto diferente para ejecutarse en el recurso subyacente. Dado que el programador es cooperativo por su naturaleza, este contexto no se puede reanudar exactamente después del número de milisegundos especificado. Si el programador está ocupado ejecutando otras tareas que no realiza de forma cooperativa en el programador, el período de espera podría ser indefinido.  
   
-##  <a name="when_all"></a>  when_all  
+##  <a name="when_all"></a>  when_all)  
  Crea una tarea que se completará correctamente cuando todas las tareas proporcionadas como argumentos se completen correctamente.  
   
 ```

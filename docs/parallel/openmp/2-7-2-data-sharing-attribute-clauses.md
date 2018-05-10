@@ -1,27 +1,22 @@
 ---
-title: "2.7.2 cláusulas de atributos de datos compartidos | Documentos de Microsoft"
-ms.custom: 
+title: 2.7.2 cláusulas de atributos de datos compartidos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 47347d3c-18bd-441f-99cf-7737564c417f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c63ece0feea0426fffbafa600f578e342e85fc2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecc6efac6e3d7356e51dc0ec57009ca9e5a71890
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Cláusulas de atributos de uso compartido de datos
 Varias directivas aceptan las cláusulas que permiten a un usuario controlar los atributos de uso compartido de variables para la duración de la región. Cláusulas de atributos de uso compartido sólo se aplican a las variables de la extensión de la directiva en el que aparece la cláusula léxica. Todas las cláusulas siguientes no se permiten en todas las directivas. La lista de cláusulas que son válidos en una directiva determinada se describen con la directiva.  

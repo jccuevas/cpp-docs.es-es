@@ -1,12 +1,9 @@
 ---
-title: concurrent_unordered_multiset Class | Microsoft Docs
-ms.custom: 
+title: concurrent_unordered_multiset (clase) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_multiset
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48b73be3a16fd42da097ed402588df988415c8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdfb187e49302f9d885c8810636f1ed638257675
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset (Clase)
 La `concurrent_unordered_multiset` clase es un contenedor seguro para simultaneidad que controla una secuencia de longitud variable de elementos de tipo K. La secuencia se representa de una manera que habilita seguro para simultaneidad anexar, acceso de elemento, acceso de iterador y las operaciones de recorrido de iterador.  
@@ -122,7 +117,7 @@ template <typename K,
  `concurrent_unordered_multiset`  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** concurrent_unordered_set.h  
+ **Encabezado:** concurrent_unordered_set.h  
   
  **Espacio de nombres:** simultaneidad  
   
@@ -169,7 +164,7 @@ const_iterator cend() const;
 void clear();
 ```  
   
-##  <a name="ctor"></a> concurrent_unordered_multiset 
+##  <a name="ctor"></a> concurrent_unordered_multiset) 
 
  Construye un conjunto múltiple desordenado simultáneo.  
   
@@ -452,7 +447,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>Comentarios  
  Este valor de límite superior realmente puede ser mayor que lo que realmente puede contener el contenedor.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
  Asigna el contenido de otro objeto `concurrent_unordered_multiset` a este. Este método no es seguro para la simultaneidad.  
   

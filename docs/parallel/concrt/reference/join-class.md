@@ -1,12 +1,9 @@
 ---
 title: Join (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - join
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ee69daa9ec5570d89d407c980e4ff20deca6360
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a37b6d3dce5d41578999aa54c8dff2dd2271fe9e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="join-class"></a>join (Clase)
 Un bloque de mensajería `join` es un bloque `propagator_block` de destino único y de varios orígenes ordenado, que combina los mensajes de tipo `T` de cada uno de sus orígenes.  
@@ -86,7 +81,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
  [ITarget](itarget-class.md)  
   
- [source_block](source-block-class.md)  
+ [source_block)](source-block-class.md)  
   
  [propagator_block](propagator-block-class.md)  
   
@@ -179,7 +174,7 @@ join(
   
  El tipo `filter_method` es un functor con firma `bool (T const &)` que es invocado por este `join` bloque de mensajería para determinar si debe aceptar un mensaje proporcionado.  
   
-##  <a name="dtor"></a> ~join 
+##  <a name="dtor"></a> ~ join 
 
  Destruye el `join` bloque.  
   

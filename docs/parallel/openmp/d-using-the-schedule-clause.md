@@ -1,27 +1,22 @@
 ---
-title: "D. Mediante la cláusula de programación | Documentos de Microsoft"
-ms.custom: 
+title: D. Mediante la cláusula de programación | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8987c4505adfde8534d57346cd6725231efa022f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Mediante la cláusula de programación
 Una región paralela tiene al menos una barrera, en su extremo y puede incluir otras barreras adicionales dentro de él. En cada barrera, los demás miembros del equipo deben esperar el último subproceso a que llegue. Para minimizar este tiempo de espera, se debe distribuir trabajo compartidas para que todos los subprocesos llegan a la barrera en aproximadamente al mismo tiempo. Si algunos de los que comparten el trabajo se encuentra en **para** construye, la `schedule` cláusula se puede usar para este propósito.  
@@ -84,7 +79,7 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- Al igual que **dinámica**, **interactiva** programar garantiza que ningún subproceso espera en la barrera más tiempo del necesario otro subproceso para ejecutar su última iteración, o final *k* iteraciones si un tamaño de fragmento de *k* se especifica. Entre estas programaciones, el **interactiva** programación se caracteriza por la propiedad que requiere la menor cantidad sincronizaciones. Para el tamaño del fragmento *k*, asignará una implementación típica *q = ceiling(n/p)* establecer iteraciones para el primer subproceso disponible,  *n*  en el mayor de *n-q* y *p\*k*y repita hasta que se asignan todas las iteraciones.  
+ Al igual que **dinámica**, **interactiva** programar garantiza que ningún subproceso espera en la barrera más tiempo del necesario otro subproceso para ejecutar su última iteración, o final *k* iteraciones si un tamaño de fragmento de *k* se especifica. Entre estas programaciones, el **interactiva** programación se caracteriza por la propiedad que requiere la menor cantidad sincronizaciones. Para el tamaño del fragmento *k*, asignará una implementación típica *q = ceiling(n/p)* establecer iteraciones para el primer subproceso disponible, *n* en el mayor de *n-q* y *p\*k*y repita hasta que se asignan todas las iteraciones.  
   
  Cuando la opción de la programación óptima no es tan sencilla como para estos ejemplos, el **en tiempo de ejecución** programación resulta útil para experimentar con distintas programaciones y tamaños de fragmento sin tener que modificar y volver a compilar el programa. También puede ser útil cuando el plan óptimo depende (de alguna manera predecible) los datos de entrada a la que se aplica el programa.  
   

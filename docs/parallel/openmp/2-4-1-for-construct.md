@@ -1,27 +1,22 @@
 ---
-title: "2.4.1 for (construcción) | Documentos de Microsoft"
-ms.custom: 
+title: 2.4.1 for (construcción) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5165c21f0bf6f2b9757550208d5e8e26a2bd3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="241-for-construct"></a>2.4.1 for (Construcción)
 El **para** directiva identifica una construcción de uso compartido de trabajo iterativa que especifica que las iteraciones del bucle asociado se ejecutarán en paralelo. Las iteraciones de la **para** bucle se distribuyen entre varios subprocesos que ya existen en el equipo que ejecuta la construcción paralela a la que se enlaza. La sintaxis de la **para** construcción es como sigue:  
@@ -32,13 +27,13 @@ El **para** directiva identifica una construcción de uso compartido de trabajo 
   
  La cláusula es uno de los siguientes:  
   
- **privada (** *lista de variables* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *lista de variables* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **lastprivate (** *lista de variables* **)**  
+ **lastprivate(** *variable-list* **)**  
   
- **reducción (** *operador* **:** *lista de variables***)**  
+ **reducción (** *operador* **:** *variable-lista ***)**  
   
  **ordenada**  
   
@@ -48,7 +43,7 @@ El **para** directiva identifica una construcción de uso compartido de trabajo 
   
  El **para** directiva impone restricciones en la estructura de los correspondientes **para** bucle. En concreto, la correspondiente **para** bucle debe tener la forma canónica:  
   
- **para (** *init-expr* **;** *var lógico op b*; *incr expr***)**  
+ **para (** *init-expr* **;** *var lógico op b*; *incr-expr ***)**  
   
  *Init-expr*  
  Uno de los siguientes:  
@@ -60,11 +55,11 @@ El **para** directiva identifica una construcción de uso compartido de trabajo 
  *incr expr*  
  Uno de los siguientes:  
   
- ++*var*  
+ ++*Var*  
   
  *var* ++  
   
- -- *var*  
+ -- *Var*  
   
  *var* --  
   
@@ -103,9 +98,9 @@ El **para** directiva identifica una construcción de uso compartido de trabajo 
   
 |||  
 |-|-|  
-|estático|Cuando **programación (estático,** *chunk_size***)** se especifica, iteraciones se dividen en fragmentos de un tamaño especificado por *chunk_size*. Los fragmentos se asignaron estáticamente a subprocesos en el equipo en un modo round-robin en el orden del número de subprocesos. Si no *chunk_size* se especifica, el espacio de la iteración se divide en fragmentos que son aproximadamente iguales en tamaño, con un fragmento que se asigna a cada subproceso.|  
-|dynamic|Cuando **programación (dinámicos,** *chunk_size***)** se especifica, las iteraciones se dividen en una serie de fragmentos, cada uno con *chunk_size* iteraciones. Cada fragmento se asigna a un subproceso que está esperando una asignación. El subproceso ejecuta el fragmento de iteraciones y, a continuación, espera su asignación siguiente, hasta que no queden ningún fragmento al que se asignará. Tenga en cuenta que el último fragmento que se asignará puede tener un menor número de iteraciones. Si no *chunk_size* se especifica, el valor predeterminado es 1.|  
-|guiadas por perfiles|Cuando **programación (interactiva,** *chunk_size***)** se especifica, las iteraciones se asignan a los subprocesos en fragmentos con decrecientes tamaños. Cuando un subproceso finaliza su bloque asignado de iteraciones, se asigna dinámicamente otro fragmento, hasta que no queda ninguna. Para una *chunk_size* de 1, el tamaño de cada fragmento es aproximadamente igual al número de iteraciones sin asignar dividido por el número de subprocesos. Estos tamaños aproximadamente disminuyen exponencialmente en 1. Para una *chunk_size* con valor *k* mayor que 1, los tamaños de aproximadamente disminuir exponencialmente a *k*, excepto en que el último fragmento puede tener menos de  *k* iteraciones. Si no *chunk_size* se especifica, el valor predeterminado es 1.|  
+|estático|Cuando **programación (estático,** *chunk_size ***)** se especifica, iteraciones se dividen en fragmentos de un tamaño especificado por *chunk_size*. Los fragmentos se asignaron estáticamente a subprocesos en el equipo en un modo round-robin en el orden del número de subprocesos. Si no *chunk_size* se especifica, el espacio de la iteración se divide en fragmentos que son aproximadamente iguales en tamaño, con un fragmento que se asigna a cada subproceso.|  
+|dynamic|Cuando **programación (dinámicos,** *chunk_size ***)** se especifica, las iteraciones se dividen en una serie de fragmentos, cada uno con *chunk_size* iteraciones. Cada fragmento se asigna a un subproceso que está esperando una asignación. El subproceso ejecuta el fragmento de iteraciones y, a continuación, espera su asignación siguiente, hasta que no queden ningún fragmento al que se asignará. Tenga en cuenta que el último fragmento que se asignará puede tener un menor número de iteraciones. Si no *chunk_size* se especifica, el valor predeterminado es 1.|  
+|guiadas por perfiles|Cuando **programación (interactiva,** *chunk_size ***)** se especifica, las iteraciones se asignan a los subprocesos en fragmentos con decrecientes tamaños. Cuando un subproceso finaliza su bloque asignado de iteraciones, se asigna dinámicamente otro fragmento, hasta que no queda ninguna. Para una *chunk_size* de 1, el tamaño de cada fragmento es aproximadamente igual al número de iteraciones sin asignar dividido por el número de subprocesos. Estos tamaños aproximadamente disminuyen exponencialmente en 1. Para una *chunk_size* con valor *k* mayor que 1, los tamaños de aproximadamente disminuir exponencialmente a *k*, excepto en que el último fragmento puede tener menos de  *k* iteraciones. Si no *chunk_size* se especifica, el valor predeterminado es 1.|  
 |motor en tiempo de ejecución|Cuando **schedule(runtime)** se especifica, la decisión sobre la programación se retrasa hasta el tiempo de ejecución. La programación *tipo* y tamaño de los fragmentos se puede seleccionar en tiempo de ejecución estableciendo la variable de entorno **OMP_SCHEDULE**. Si no se establece esta variable de entorno, la programación resultante está definido por la implementación. Cuando **schedule(runtime)** se especifica, *chunk_size* no se debe especificar.|  
   
  En ausencia de definido explícitamente **programación** cláusula, el valor predeterminado **programación** define la implementación.  

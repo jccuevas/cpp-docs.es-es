@@ -2,9 +2,6 @@
 title: Funciones de espacio de nombres Concurrency::Direct3D (AMP) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -27,17 +24,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funciones de espacio de nombres Concurrency::Direct3D (AMP)
 ||||  
@@ -47,8 +42,8 @@ ms.lasthandoff: 04/10/2018
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
-|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|  
-|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[mad](#mad)|[make_array](#make_array)|[ruido](#noise)|  
+|[radianes](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
 |[step](#step)|[umax](#umax)|[umin](#umin)|  
 
@@ -69,7 +64,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el valor absoluto del argumento.  
   
-##  <a name="clamp"></a>  clamp  
+##  <a name="clamp"></a>  Clamp  
  Calcula el valor del primer argumento especificado que se fija en un intervalo definido por el segundo y tercer argumento especificado.  
   
 ```  
@@ -260,7 +255,7 @@ inline int imax(
 ### <a name="return-value"></a>Valor devuelto  
  Devolver el valor numérico máximo de los argumentos  
   
-##  <a name="imin"></a>  imin  
+##  <a name="imin"></a>  Imín  
  Determinar el valor numérico mínimo de los argumentos  
   
 ```  
@@ -367,7 +362,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>Valor devuelto  
  Una matriz que se crea utilizando el búfer proporcionado de Direct3D.  
   
-##  <a name="noise"></a>  noise  
+##  <a name="noise"></a>  ruido  
  Genera un valor aleatorio mediante el algoritmo de ruido de Perlin  
   
 ```  
@@ -381,7 +376,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el valor de ruido de Perlin el dentro de un intervalo comprendido entre -1 y 1  
   
-##  <a name="radians"></a>  radians  
+##  <a name="radians"></a>  radianes  
  Convierte _X de grados en radianes  
   
 ```  
@@ -412,7 +407,7 @@ inline double rcp(double _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  El inverso del argumento especificado.  
   
-##  <a name="reversebits"></a>  reversebits  
+##  <a name="reversebits"></a>  reversebits)  
  Invierte el orden de los bits de _X  
   
 ```  

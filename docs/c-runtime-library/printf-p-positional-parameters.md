@@ -1,13 +1,10 @@
 ---
-title: "printf_p (Parámetros de posición) | Microsoft Docs"
-ms.custom: 
+title: printf_p (Parámetros de posición) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr110.dll
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - _printf_p function, positional parameters
 - printf_p function, positional parameters
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d48a899b2d2e6ad644c385c2b2116353c20f8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe36bbc00615f4f78bf20cdef3f1c8dc1fb0db4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="printfp-positional-parameters"></a>printf_p (Parámetros de posición)
 Los parámetros de posición permiten especificar mediante número cuál de los argumentos se debe sustituir en un campo en una cadena de formato. Las siguientes funciones `printf` de parámetros de posición están disponibles:  

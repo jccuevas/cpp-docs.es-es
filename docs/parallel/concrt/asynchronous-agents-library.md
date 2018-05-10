@@ -1,30 +1,25 @@
 ---
-title: "Biblioteca de agentes asincrónicos | Documentos de Microsoft"
-ms.custom: 
+title: Biblioteca de agentes asincrónicos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be12f47a6fb33350137a8f9b1c78ff75519c8af7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8bb1ce7a0c449d5c09e49ad16435e7732ddfcc1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-agents-library"></a>biblioteca de agentes asincrónicos
 La biblioteca de agentes asincrónicos (o simplemente *biblioteca de agentes*) proporciona un modelo de programación que le permite aumentar la solidez del desarrollo de aplicaciones habilitadas para simultaneidad. La biblioteca de agentes es una biblioteca de plantillas de C++ que promueve un modelo de programación basado en actores y el paso de mensajes en proceso para tareas genéricas de flujo de datos y canalización. La Biblioteca de agentes se basa en los componentes de programación y administración de recursos del Runtime de simultaneidad.  
@@ -36,7 +31,7 @@ La biblioteca de agentes asincrónicos (o simplemente *biblioteca de agentes*) p
   
  La biblioteca de agentes se compone de tres componentes: *agentes asincrónicos*, *bloques de mensajes asincrónicos*, y *funciones de paso de mensajes*. Los agentes mantienen el estado y utilizan bloques de mensajes así como funciones de paso de mensajes para comunicarse entre sí y con componentes externos. Las funciones de paso de mensajes permiten a los agentes enviar y recibir mensajes de los componentes externos. Los bloques de mensajes asincrónicos contienen mensajes y permiten a los agentes comunicar de manera sincronizada.  
   
- En la siguiente ilustración, se muestra cómo dos agentes utilizan bloques de mensajes y funciones de paso de mensajes para comunicar. En esta ilustración, `agent1` envía un mensaje a `agent2` mediante el uso de la [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) función y un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto. `agent2`usa el [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) función para leer el mensaje. `agent2` utiliza el mismo método para enviar un mensaje a `agent1`. Las flechas de líneas discontinuas representan el flujo de datos entre los agentes. Las flechas de líneas continuas conectan los agentes con los bloques de mensajes en los que escriben o que leen.  
+ En la siguiente ilustración, se muestra cómo dos agentes utilizan bloques de mensajes y funciones de paso de mensajes para comunicar. En esta ilustración, `agent1` envía un mensaje a `agent2` mediante el uso de la [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) función y un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto. `agent2` usa el [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) función para leer el mensaje. `agent2` utiliza el mismo método para enviar un mensaje a `agent1`. Las flechas de líneas discontinuas representan el flujo de datos entre los agentes. Las flechas de líneas continuas conectan los agentes con los bloques de mensajes en los que escriben o que leen.  
   
  ![Los componentes de la biblioteca de agentes](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")  
   

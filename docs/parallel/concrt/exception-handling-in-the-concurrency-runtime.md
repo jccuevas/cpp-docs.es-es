@@ -1,13 +1,10 @@
 ---
 title: Control de excepciones en el Runtime de simultaneidad | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72cde17c0bcb6a3582305167e6358f761c16f248
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f30c98a8800c3aeaaf5ff1dab5bee9bdba971a6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Control de excepciones en el runtime de simultaneidad
 El Runtime de simultaneidad usa el control de excepciones de C++ para comunicar muchas modalidades de errores. Entre estos errores, se incluyen el uso no válido del runtime, errores de runtime, como el que se produce al no poder adquirir un recurso, y errores que afectan a funciones de trabajo que el usuario proporciona a las tareas y los grupos de tareas. Cuando una tarea o un grupo de tareas produce una excepción, el runtime mantiene esa excepción y calcula las referencias en el contexto que espera a que finalice la tarea o el grupo de tareas. En el caso de componentes tales como tareas ligeras y agentes, el runtime no administra las excepciones en nombre del usuario. En estos casos, debe implementar su propio mecanismo del control de excepciones. En este tema se describe cómo controla el runtime las excepciones que producen las tareas, los grupos de tareas, las tareas ligeras y los agentes asincrónicos, y cómo se responde a las excepciones en las aplicaciones.  
@@ -47,7 +42,7 @@ El Runtime de simultaneidad usa el control de excepciones de C++ para comunicar 
   
 -   El runtime no administra excepciones para los agentes y las tareas ligeras.  
   
-##  <a name="top"></a>En este documento  
+##  <a name="top"></a> En este documento  
   
 - [Tareas y continuaciones](#tasks)  
   
@@ -63,7 +58,7 @@ El Runtime de simultaneidad usa el control de excepciones de C++ para comunicar 
   
 - [Agentes asincrónicos](#agents)  
   
-##  <a name="tasks"></a>Tareas y continuaciones  
+##  <a name="tasks"></a> Tareas y continuaciones  
  Esta sección describe cómo el runtime controla las excepciones producidas por [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) objetos y sus continuaciones. Para obtener más información sobre el modelo de tarea y a continuación, consulte [paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
  Cuando se produce una excepción en el cuerpo de una función de trabajo que se pasa a un `task` de objeto, el runtime almacena esa excepción y calcula las referencias en el contexto que llama [concurrency::task::get](reference/task-class.md#get) o [simultaneidad:: Task:: wait](reference/task-class.md#wait). El documento [paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md) describe basado en tareas frente a continuaciones basadas en valores, pero al resumen, una continuación basada en valores que toma un parámetro de tipo `T` y una continuación basada en tareas toma un parámetro de tipo `task<T>`. Si una tarea que se inicia tiene una o varias continuaciones basadas en valores, dichas continuaciones no se programan para su ejecución. En el siguiente ejemplo, se muestra este comportamiento:  
@@ -97,7 +92,7 @@ El Runtime de simultaneidad usa el control de excepciones de C++ para comunicar 
   
  [[Arriba](#top)]  
   
-##  <a name="task_groups"></a>Grupos de tareas y algoritmos paralelos  
+##  <a name="task_groups"></a> Grupos de tareas y algoritmos paralelos  
 
  En esta sección se describe cómo controla el runtime las excepciones que producen los grupos de tareas. En esta sección también se aplica a algoritmos paralelos como [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for), ya que estos algoritmos se basan en grupos de tareas.  
   
@@ -123,7 +118,7 @@ X = 15, Y = 30Caught exception: point is NULL.
   
  [[Arriba](#top)]  
   
-##  <a name="runtime"></a>Excepciones producidas por el tiempo de ejecución  
+##  <a name="runtime"></a> Excepciones producidas por el tiempo de ejecución  
  Una excepción puede ser el resultado de una llamada al runtime. La mayoría de los tipos de excepción, salvo por [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md) y [Concurrency:: operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md), indican un error de programación. Normalmente, estos errores son irrecuperables y, por consiguiente, no se deben detectar ni administrar en el código de aplicación. Sugerimos sólo detectar o controlar los errores irrecuperables en el código de aplicación si es necesario diagnosticar errores de programación. Sin embargo, conocer los tipos de excepciones que define el runtime puede ayudar a diagnosticar los errores de programación.  
   
  El mecanismo de control de excepciones es el mismo para las excepciones que produce el runtime y las excepciones que producen las funciones de trabajo. Por ejemplo, el [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) función produce `operation_timed_out` cuando no recibe un mensaje en el período de tiempo especificado. Si `receive` produce una excepción en una función de trabajo que se pasa a un grupo de tareas, el runtime almacena esa excepción y calcula las referencias en el contexto que llama a `task_group::wait`, `structured_task_group::wait`, `task_group::run_and_wait` o `structured_task_group::run_and_wait`.  
@@ -142,7 +137,7 @@ The operation timed out.
   
  [[Arriba](#top)]  
   
-##  <a name="multiple"></a>Varias excepciones  
+##  <a name="multiple"></a> Varias excepciones  
  Si una tarea o algoritmo paralelo recibe varias excepciones, el runtime serializa las referencias sólo de una de esas excepciones en el contexto de la llamada. El runtime no garantiza para qué excepción se calculan las referencias.  
   
  En el ejemplo siguiente se usa el algoritmo `parallel_for` para imprimir números en la consola. Produce una excepción si el valor de entrada es menor que un determinado valor mínimo o mayor que un determinado valor máximo. En este ejemplo, varias funciones de trabajo pueden producir una excepción.  
@@ -157,17 +152,17 @@ The operation timed out.
   
  [[Arriba](#top)]  
   
-##  <a name="cancellation"></a>Cancelación  
+##  <a name="cancellation"></a> Cancelación  
  No todas las excepciones indican un error. Por ejemplo, un algoritmo de búsqueda podría utilizar el control de excepciones para detener su tarea asociada cuando encuentra el resultado. Para obtener más información acerca de cómo usar los mecanismos de cancelación en el código, vea [cancelación en la biblioteca PPL](../../parallel/concrt/cancellation-in-the-ppl.md).  
   
  [[Arriba](#top)]  
   
-##  <a name="lwts"></a>Tareas ligeras  
+##  <a name="lwts"></a> Tareas ligeras  
  Una tarea ligera es una tarea que se programa directamente desde un [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) objeto. Las tareas ligeras implican una menor sobrecarga que las tareas ordinarias. Sin embargo, el runtime no detecta las excepciones producidas por las tareas ligeras. En su lugar, el controlador de excepciones no controladas, que de forma predeterminada finaliza el proceso, detecta la excepción. Por consiguiente, use un mecanismo de control de errores adecuado en su aplicación. Para obtener más información acerca de las tareas ligeras, vea [programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
  [[Arriba](#top)]  
   
-##  <a name="agents"></a>Agentes asincrónicos  
+##  <a name="agents"></a> Agentes asincrónicos  
  Como sucede con las tareas ligeras, el runtime no controla las excepciones producidas por agentes asincrónicos.  
   
  En el ejemplo siguiente se muestra una manera de controlar las excepciones producidas en una clase que deriva de [Concurrency](../../parallel/concrt/reference/agent-class.md). En este ejemplo se define la clase `points_agent`. El método `points_agent::run` lee los objetos `point` del búfer de mensajes y los imprime en la consola. El método `run` produce una excepción si recibe un puntero `NULL`.  

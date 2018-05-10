@@ -1,12 +1,9 @@
 ---
-title: unorm_4 Class | Microsoft Docs
-ms.custom: 
+title: unorm_4 (clase) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::set_yxzw
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8c22389a739f5beafe1ff1a38799c9d1848ba9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e3186200fb01e13fcf3d79d162439a900abf6f4a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unorm4-class"></a>unorm_4 (Clase)
 Representa un vector corto de cuatro números normales sin signo.  
@@ -310,7 +305,7 @@ class unorm_4;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[unorm_4 Constructor](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
+|[Constructor unorm_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -482,33 +477,33 @@ class unorm_4;
 |unorm_4::abgr||  
 |unorm_4::abr||  
 |unorm_4::abrg||  
-|unorm_4::ag||  
-|unorm_4::agb||  
-|unorm_4::agbr||  
-|unorm_4::agr||  
-|unorm_4::agrb||  
-|unorm_4::ar||  
-|unorm_4::arb||  
+|unorm_4:: AG||  
+|unorm_4:: agb||  
+|unorm_4:: agbr||  
+|unorm_4:: Agr||  
+|unorm_4:: agrb||  
+|unorm_4:: ar||  
+|unorm_4:: ARB||  
 |unorm_4::arbg||  
-|unorm_4::arg||  
-|unorm_4::argb||  
-|unorm_4::b||  
+|unorm_4:: arg||  
+|unorm_4:: ARGB||  
+|unorm_4:: b||  
 |unorm_4::ba||  
 |unorm_4::bag||  
 |unorm_4::bagr||  
 |unorm_4::bar||  
 |unorm_4::barg||  
-|unorm_4::bg||  
+|unorm_4:: BG||  
 |unorm_4::bga||  
 |unorm_4::bgar||  
 |unorm_4::bgr||  
 |unorm_4::bgra||  
 |unorm_4::br||  
 |unorm_4::bra||  
-|unorm_4::brag||  
+|unorm_4:: brag||  
 |unorm_4::brg||  
 |unorm_4::brga||  
-|unorm_4::g||  
+|unorm_4:: g||  
 |unorm_4::ga||  
 |unorm_4::gab||  
 |unorm_4::gabr||  
@@ -519,17 +514,17 @@ class unorm_4;
 |unorm_4::gbar||  
 |unorm_4::gbr||  
 |unorm_4::gbra||  
-|unorm_4::gr||  
+|unorm_4:: GR||  
 |unorm_4::gra||  
 |unorm_4::grab||  
 |unorm_4::grb||  
 |unorm_4::grba||  
-|unorm_4::r||  
+|unorm_4:: r||  
 |unorm_4::ra||  
 |unorm_4::rab||  
 |unorm_4::rabg||  
-|unorm_4::rag||  
-|unorm_4::ragb||  
+|unorm_4:: rag||  
+|unorm_4:: ragb||  
 |unorm_4::rb||  
 |unorm_4::rba||  
 |unorm_4::rbag||  
@@ -540,69 +535,69 @@ class unorm_4;
 |unorm_4::rgab||  
 |unorm_4::rgb||  
 |unorm_4::rgba||  
-|unorm_4::w||  
-|unorm_4::wx||  
-|unorm_4::wxy||  
-|unorm_4::wxyz||  
-|unorm_4::wxz||  
-|unorm_4::wxzy||  
-|unorm_4::wy||  
-|unorm_4::wyx||  
-|unorm_4::wyxz||  
-|unorm_4::wyz||  
-|unorm_4::wyzx||  
-|unorm_4::wz||  
+|unorm_4:: w||  
+|unorm_4:: WX||  
+|unorm_4:: WXY||  
+|unorm_4:: wxyz||  
+|unorm_4:: wxz||  
+|unorm_4:: wxzy||  
+|unorm_4:: WY||  
+|unorm_4:: wyx||  
+|unorm_4:: wyxz||  
+|unorm_4:: WYZ||  
+|unorm_4:: wyzx||  
+|unorm_4:: wZ||  
 |unorm_4::wzx||  
-|unorm_4::wzxy||  
-|unorm_4::wzy||  
-|unorm_4::wzyx||  
-|unorm_4::x||  
-|unorm_4::xw||  
-|unorm_4::xwy||  
-|unorm_4::xwyz||  
+|unorm_4:: wzxy||  
+|unorm_4:: wzy||  
+|unorm_4:: wzyx||  
+|unorm_4:: x||  
+|unorm_4:: xw||  
+|unorm_4:: xwy||  
+|unorm_4:: xwyz||  
 |unorm_4::xwz||  
-|unorm_4::xwzy||  
-|unorm_4::xy||  
-|unorm_4::xyw||  
+|unorm_4:: xwzy||  
+|unorm_4:: XY||  
+|unorm_4:: xyw||  
 |unorm_4::xywz||  
-|unorm_4::xyz||  
-|unorm_4::xyzw||  
+|unorm_4:: XYZ||  
+|unorm_4:: xyzw||  
 |unorm_4::xz||  
-|unorm_4::xzw||  
-|unorm_4::xzwy||  
-|unorm_4::xzy||  
+|unorm_4:: xzw||  
+|unorm_4:: xzwy||  
+|unorm_4:: xzy||  
 |unorm_4::xzyw||  
-|unorm_4::y||  
-|unorm_4::yw||  
-|unorm_4::ywx||  
+|unorm_4:: y||  
+|unorm_4:: yw||  
+|unorm_4:: ywx||  
 |unorm_4::ywxz||  
 |unorm_4::ywz||  
 |unorm_4::ywzx||  
-|unorm_4::yx||  
-|unorm_4::yxw||  
+|unorm_4:: YX||  
+|unorm_4:: yxw||  
 |unorm_4::yxwz||  
 |unorm_4::yxz||  
-|unorm_4::yxzw||  
-|unorm_4::yz||  
-|unorm_4::yzw||  
-|unorm_4::yzwx||  
-|unorm_4::yzx||  
+|unorm_4:: yxzw||  
+|unorm_4:: YZ||  
+|unorm_4:: yzw||  
+|unorm_4:: yzwx||  
+|unorm_4:: yzx||  
 |unorm_4::yzxw||  
 |unorm_4::z||  
-|unorm_4::zw||  
+|unorm_4:: ZW||  
 |unorm_4::zwx||  
 |unorm_4::zwxy||  
-|unorm_4::zwy||  
+|unorm_4:: zwy||  
 |unorm_4::zwyx||  
 |unorm_4::zx||  
 |unorm_4::zxw||  
 |unorm_4::zxwy||  
 |unorm_4::zxy||  
 |unorm_4::zxyw||  
-|unorm_4::zy||  
+|unorm_4:: ZY||  
 |unorm_4::zyw||  
 |unorm_4::zywx||  
-|unorm_4::zyx||  
+|unorm_4:: ZYX||  
 |unorm_4::zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  

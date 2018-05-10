@@ -1,12 +1,9 @@
 ---
 title: Clase Timer | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - timer
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5263c8bf156f190ba5572eacd8ff327be5e3f7a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8372e32b408b97a6ac652b0ff2ff5cc19de69b54
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="timer-class"></a>Clase timer
 Un bloque de mensajería `timer` es un bloque `source_block` con destino único, capaz de enviar un mensaje a su destino cuando un período de tiempo especificado ha transcurrido o en intervalos concretos.  
@@ -59,16 +54,16 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[timer](#ctor)|Sobrecargado. Construye un `timer` bloque de mensajería que desencadenará un mensaje determinado después de un intervalo especificado.|  
+|[Temporizador](#ctor)|Sobrecargado. Construye un `timer` bloque de mensajería que desencadenará un mensaje determinado después de un intervalo especificado.|  
 |[~ timer (destructor)](#dtor)|Destruye un `timer` bloque de mensajería.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[pause](#pause)|Se detiene la `timer` bloque de mensajería. Si es una repetición `timer` bloque de mensajería, se puede reiniciar con una posterior `start()` llamar. Para no repetir temporizadores, esto tiene el mismo efecto que una `stop` llamar.|  
+|[Pausar](#pause)|Se detiene la `timer` bloque de mensajería. Si es una repetición `timer` bloque de mensajería, se puede reiniciar con una posterior `start()` llamar. Para no repetir temporizadores, esto tiene el mismo efecto que una `stop` llamar.|  
 |[start](#start)|Inicia el `timer` bloque de mensajería. Se llama el número especificado de milisegundos después de esto, el valor especificado se propagará siguen en la cadena como un `message`.|  
-|[stop](#stop)|Se detiene la `timer` bloque de mensajería.|  
+|[Detener](#stop)|Se detiene la `timer` bloque de mensajería.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
@@ -88,7 +83,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [ISource](isource-class.md)  
   
- [source_block](source-block-class.md)  
+ [source_block)](source-block-class.md)  
   
  `timer`  
   

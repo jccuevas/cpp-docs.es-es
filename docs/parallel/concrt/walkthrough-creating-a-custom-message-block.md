@@ -1,30 +1,25 @@
 ---
 title: 'Tutorial: Crear un bloque de mensajes personalizado | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff7dd60dbb91d88377f481510ea0e213f18098a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa70cf40851815ff92f01405d47015afd2e3e444
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Tutorial: Crear un bloque de mensajes personalizado
 En este documento se describe cómo crear un tipo de bloque de mensajes personalizado que ordena los mensajes entrantes por prioridad.  
@@ -47,7 +42,7 @@ En este documento se describe cómo crear un tipo de bloque de mensajes personal
   
 - [Ejemplo completo](#complete)  
   
-##  <a name="design"></a>Diseñar un bloque de mensajes personalizado  
+##  <a name="design"></a> Diseñar un bloque de mensajes personalizado  
  Los bloques de mensajes participan en el acto de enviar y recibir mensajes. Un bloque de mensajes que envía los mensajes se conoce como un *bloque de origen*. Un bloque de mensajes que recibe los mensajes se conoce como un *bloque de destino*. Un bloque de mensajes que envía y recibe los mensajes se conoce como un *bloque propagador*. La biblioteca de agentes usa la clase abstracta [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) para representar bloques de origen y la clase abstracta [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) para representar bloques de destino. Los tipos de bloques de mensajes que actúan como orígenes derivan de `ISource`; los tipos de bloques de mensajes que actúan como destinos derivan de `ITarget`.  
   
  Aunque puede derivar el tipo de bloque de mensajes directamente de `ISource` y `ITarget`, la Biblioteca de agentes define tres clases base que realizan gran parte de la funcionalidad común a todos los tipos de bloques de mensajes; por ejemplo, control de errores y conexión de los bloques de mensajes de manera segura para simultaneidad. El [Concurrency:: source_block](../../parallel/concrt/reference/source-block-class.md) clase se deriva de `ISource` y envía mensajes a otros bloques. El [Concurrency:: target_block](../../parallel/concrt/reference/target-block-class.md) clase se deriva de `ITarget` y recibe los mensajes de otros bloques. El [Concurrency:: propagator_block](../../parallel/concrt/reference/propagator-block-class.md) clase se deriva de `ISource` y `ITarget` y envía mensajes a otros bloques y recibe los mensajes de otros bloques. Se recomienda usar estas tres clases base para controlar los detalles de infraestructura de modo que se pueda centrar en el comportamiento del bloque de mensajes.  
@@ -73,7 +68,7 @@ En este documento se describe cómo crear un tipo de bloque de mensajes personal
   
  [[Arriba](#top)]  
   
-##  <a name="class"></a>Definir la clase priority_buffer  
+##  <a name="class"></a> Definir la clase priority_buffer  
  La clase `priority_buffer` es un tipo de bloque de mensajes personalizado que ordena los mensajes entrantes primero por prioridad y, a continuación, en el orden en que se reciben los mensajes. El `priority_buffer` es similar a la [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) porque contiene una cola de mensajes y también porque actúa como un origen y un bloque de mensajes de destino y puede tener varios orígenes y varios destinos. Sin embargo, `unbounded_buffer` basa la propagación de mensaje solo en el orden en que recibe mensajes de sus orígenes.  
   
  El `priority_buffer` clase recibe mensajes de tipo std::[tupla](../../standard-library/tuple-class.md) que contienen `PriorityType` y `Type` elementos. `PriorityType` se refiere al tipo que contiene la prioridad de cada mensaje; `Type` se refiere a la parte de datos del mensaje. La clase `priority_buffer` envía mensajes de tipo `Type`. El `priority_buffer` clase también administra dos colas de mensajes: un [std:: priority_queue](../../standard-library/priority-queue-class.md) objeto para los mensajes entrantes y std::[cola](../../standard-library/queue-class.md) objeto para los mensajes salientes. Ordenar los mensajes por prioridad es útil cuando un objeto `priority_buffer` recibe varios mensajes simultáneamente o cuando recibe varios mensajes antes de que los consumidores lean cualquier mensaje.  
@@ -193,7 +188,7 @@ En este documento se describe cómo crear un tipo de bloque de mensajes personal
   
  [[Arriba](#top)]  
   
-##  <a name="complete"></a>El ejemplo completo  
+##  <a name="complete"></a> El ejemplo completo  
  En el ejemplo siguiente se muestra la definición completa de la clase `priority_buffer`.  
   
  [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]  

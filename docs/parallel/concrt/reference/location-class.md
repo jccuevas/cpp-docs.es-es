@@ -1,12 +1,9 @@
 ---
 title: Location (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - location
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16362cb8cecff32db1802dd6dea187d047d59294
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="location-class"></a>location (Clase)
 Una abstracción de una ubicación física en el hardware.  
@@ -53,7 +48,7 @@ class location;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[current](#current)|Devuelve un `location` objeto que representa el lugar más específico que se está ejecutando el subproceso que realiza la llamada.|  
+|[Actual](#current)|Devuelve un `location` objeto que representa el lugar más específico que se está ejecutando el subproceso que realiza la llamada.|  
 |[from_numa_node](#from_numa_node)|Devuelve un `location` el objeto que representa un nodo NUMA.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
@@ -106,7 +101,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ### <a name="return-value"></a>Valor devuelto  
  Una ubicación que representa el nodo NUMA especificado por el `_NumaNodeNumber` parámetro.  
   
-##  <a name="ctor">Ubicación</a> 
+##  <a name="ctor"></a> Ubicación 
 
  Construye un objeto `location`.  
   
@@ -147,7 +142,7 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si son diferentes, las dos ubicaciones `false` en caso contrario.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
  Asigna el contenido de otra matriz `location` objeto a este.  
   

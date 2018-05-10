@@ -1,32 +1,27 @@
 ---
 title: Usar mosaicos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e3d1e37562e9e14bbbeda5a01198358b4615d3c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tiles"></a>Usar mosaicos
 Puede usar disposición en mosaico para maximizar la aceleración de la aplicación. Mosaico divide subprocesos en subconjuntos rectangulares iguales o *iconos*. Si utiliza un tamaño de icono adecuado y el algoritmo de mosaico, puede obtener aún más la aceleración desde el código de C++ AMP. Son los componentes básicos de disposición en mosaico:  
   
-- `tile_static`variables. La principal ventaja del mosaico es la mejora del rendimiento de `tile_static` acceso. Acceso a datos en `tile_static` memoria puede ser mucho más rápida que el acceso a los datos en el espacio global (`array` o `array_view` objetos). Se crea una instancia de la variable `tile_static` para cada mosaico y todos los subprocesos del mosaico tienen acceso a la variable. En un algoritmo de mosaico típico, los datos se copian en `tile_static` memoria una vez de la memoria global y, a continuación, obtener acceso a muchas veces desde la `tile_static` memoria.  
+- `tile_static` Variables. La principal ventaja del mosaico es la mejora del rendimiento de `tile_static` acceso. Acceso a datos en `tile_static` memoria puede ser mucho más rápida que el acceso a los datos en el espacio global (`array` o `array_view` objetos). Se crea una instancia de la variable `tile_static` para cada mosaico y todos los subprocesos del mosaico tienen acceso a la variable. En un algoritmo de mosaico típico, los datos se copian en `tile_static` memoria una vez de la memoria global y, a continuación, obtener acceso a muchas veces desde la `tile_static` memoria.  
   
 - [tile_barrier:: Wait (método)](reference/tile-barrier-class.md#wait). Una llamada a `tile_barrier::wait` suspende la ejecución del subproceso actual hasta que todos los subprocesos en el mismo icono llegar a la llamada a `tile_barrier::wait`. No se puede garantizar el orden en que los subprocesos se ejecutarán en, solo que no hay ningún subproceso en el icono se ejecutará más allá de la llamada a `tile_barrier::wait` hasta que todos los subprocesos hayan alcanzado la llamada. Esto significa que, mediante el uso de la `tile_barrier::wait` método, puede realizar tareas en forma de mosaico con mosaicos en lugar de hacerlo por subproceso. Un algoritmo de disposición en mosaico típico tiene código para inicializar la `tile_static` memoria para el icono todo seguido por una llamada a `tile_barrer::wait`. Código que sigue a `tile_barrier::wait` contiene cálculos que requieren acceso a todos los `tile_static` valores.  
 
@@ -40,7 +35,7 @@ Puede usar disposición en mosaico para maximizar la aceleración de la aplicaci
 ## <a name="example-of-global-tile-and-local-indices"></a>Ejemplo de información Global, icono e índices Local  
  El siguiente diagrama representa una matriz de 8 x 9 de datos que se organizan en mosaicos de 2 x 3.  
   
- ![8 &#45; por &#45; matriz 9 dividido en 2 &#45; &#45; 3 iconos](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
+ ![8&#45;por&#45;matriz 9 dividido en 2&#45;por&#45;3 iconos](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
   
  En el ejemplo siguiente se muestra el icono global, y coloca en mosaico índices locales de esta matriz. Un `array_view` objeto se crea mediante el uso de elementos de tipo `Description`. El `Description` contiene la información global, icono e índices locales del elemento de la matriz. El código en la llamada a `parallel_for_each` establece los valores de la información global, icono e índices locales de cada elemento. La salida muestra los valores de la `Description` estructuras.  
   

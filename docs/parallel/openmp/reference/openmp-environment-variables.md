@@ -1,27 +1,22 @@
 ---
 title: Las Variables de entorno de OpenMP | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7e0089399cd1a6d91a1324d8c986ea22c1fae63
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 02248b7725f2a4312f26984c798e7248463d2615
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="openmp-environment-variables"></a>Variables de entorno de OpenMP
 Proporciona vínculos a las variables de entorno que se utilizan en la API de OpenMP.  

@@ -1,12 +1,9 @@
 ---
 title: critical_section (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - critical_section
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b5bd48039cdf2cc477035abd2904387e194ee2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="criticalsection-class"></a>critical_section (Clase)
 Una exclusión mutua no reentrante que es explícitamente consciente del runtime de simultaneidad.  
@@ -56,14 +51,14 @@ class critical_section;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[critical_section::scoped_lock Class](#critical_section__scoped_lock_class)|Una excepción segura del contenedor RAII para un `critical_section` objeto.|  
+|[critical_section:: scoped_lock (clase)](#critical_section__scoped_lock_class)|Una excepción segura del contenedor RAII para un `critical_section` objeto.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
 |[critical_section](#ctor)|Crea una nueva sección crítica.|  
-|[~critical_section Destructor](#dtor)|Destruye una sección crítica.|  
+|[~ critical_section (destructor)](#dtor)|Destruye una sección crítica.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -94,7 +89,7 @@ class critical_section;
 critical_section();
 ```  
   
-##  <a name="dtor"></a> ~critical_section 
+##  <a name="dtor"></a> ~ critical_section 
 
  Destruye una sección crítica.  
   
@@ -151,7 +146,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
  `_Critical_section`  
  La sección crítica para bloquear.  
   
-##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
+##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock 
 
  Destruye un `scoped_lock` de objetos y libera la sección crítica proporcionada en su constructor.  
   

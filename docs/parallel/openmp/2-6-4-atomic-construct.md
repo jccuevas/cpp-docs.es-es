@@ -1,27 +1,22 @@
 ---
-title: "2.6.4 atomic (construcción) | Documentos de Microsoft"
-ms.custom: 
+title: 2.6.4 atomic (construcción) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e4232ef1-4058-42ce-9de0-0ca788312aba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629fff5b0bef507b775fbe1b5bfabadd50b790be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic (Construcción)
 El `atomic` Directiva garantiza que una ubicación de memoria específica se actualiza de forma atómica, en lugar de exponer a la posibilidad de que varios subprocesos de escritura simultáneas. La sintaxis de la `atomic` directiva es como sigue:  
@@ -48,7 +43,7 @@ El `atomic` Directiva garantiza que una ubicación de memoria específica se act
   
 -   *Expr* es una expresión con un tipo escalar y no hace referencia el objeto designado por *x*.  
   
--   `binop`no es un operador sobrecargado y es uno de +, *, -, / &, ^, &#124; <\<, o >>.  
+-   `binop` no es un operador sobrecargado y es uno de +, *, -, / &, ^, &#124;, <\<, o >>.  
   
  Aunque es definido por la implementación si una implementación reemplaza todas `atomic` directivas con **crítico** directivas que tengan el mismo único *nombre*, el `atomic` (directiva) permite una mejor optimización. A menudo las instrucciones de hardware están disponibles que puede realizar la actualización atómica con la menor carga.  
   

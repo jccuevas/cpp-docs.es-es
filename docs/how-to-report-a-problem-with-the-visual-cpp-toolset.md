@@ -1,22 +1,20 @@
 ---
-title: "Cómo notificar un problema con el conjunto de herramientas de Visual C++ | Microsoft Docs"
+title: Cómo notificar un problema con el conjunto de herramientas de Visual C++ | Microsoft Docs
 ms.date: 1/11/2018
 ms.technology:
-- cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Cómo notificar un problema con el conjunto de herramientas de Visual C++
 
@@ -108,7 +106,7 @@ Una reproducción es un ejemplo de código fuente autocontenido y completo que m
 
 A continuación encontrará lo que se considera una buena reproducción:
 
-- **Es mínima.** Las reproducciones deben ser lo más pequeñas posible, pero mostrar exactamente el problema detectado. No es necesario que sean complejas o realistas, sino que solo deben mostrar código que cumpla con el estándar o la implementación del compilador documentada. O bien, en el caso de que falte un diagnóstico, el código que no sea conforme. Las reproducciones simples y concisas que contienen suficiente código para mostrar el problema son las mejores. Si puede eliminar o simplificar el código de forma que siga siendo conforme y dejar, a la vez, el problema sin cambios, también puede hacerlo. No es necesario incluir contraejemplos del código que funciona. 
+- **Es mínima.** Las reproducciones deben ser lo más pequeñas posible, pero mostrar exactamente el problema detectado. No es necesario que sean complejas o realistas, sino que solo deben mostrar código que cumpla con el estándar o la implementación del compilador documentada. O bien, en el caso de que falte un diagnóstico, el código que no sea conforme. Las reproducciones simples y concisas que contienen suficiente código para mostrar el problema son las mejores. Si puede eliminar o simplificar el código de forma que siga siendo conforme y dejar, a la vez, el problema sin cambios, también puede hacerlo. No es necesario incluir contraejemplos del código que funciona.
 
 - **Es autocontenida.** Las reproducciones deben evitar las dependencias innecesarias. Si puede reproducir el problema sin bibliotecas de terceros, hágalo. Si puede reproducir el problema sin código de biblioteca, además de proporcionar instrucciones de salida simples (por ejemplo, si `puts("this shouldn't compile");`, `std::cout << value;` y `printf("%d\n", value);` funcionan), hágalo. La mejor opción es condensar un ejemplo en un único archivo de código fuente sin hacer referencia a ningún encabezado de usuario. Nos resulta extremadamente útil que reduzca la cantidad de código que debemos tener en cuenta como posible causante del problema.
 
@@ -116,13 +114,13 @@ A continuación encontrará lo que se considera una buena reproducción:
 
 - Si procede, **conviene realizar comprobaciones con otros compiladores**. Las reproducciones que implican código C++ portátil deben comprobar su comportamiento con otros compiladores si es posible. En última instancia, el estándar determina la corrección de un programa. Ningún compilador es perfecto, aunque cuando Clang y GCC acepten su código sin diagnóstico y MSVC no lo haga, es probable que se trate de un error en el compilador. Existen otras posibilidades, como las diferencias entre el comportamiento de Unix y Windows o los distintos niveles de implementación de los estándares de C++, entre otras. Por otra parte, si todos los compiladores rechazan su código, es probable que este no sea correcto. Consultar distintos mensajes de error puede ayudarle a diagnosticar el problema.
 
-   Encontrará listas de compiladores en línea para probar su código en los [compiladores en línea de C++](https://isocpp.org/blog/2013/01/online-c-compilers) del sitio web del estándar ISO C++, o bien en esta [lista de compiladores en línea de C++](https://arnemertz.github.io/online-compilers/) de GitHub. Algunos ejemplos específicos son [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) y [Coliru](http://coliru.stacked-crooked.com/). 
+   Encontrará listas de compiladores en línea para probar su código en los [compiladores en línea de C++](https://isocpp.org/blog/2013/01/online-c-compilers) del sitio web del estándar ISO C++, o bien en esta [lista de compiladores en línea de C++](https://arnemertz.github.io/online-compilers/) de GitHub. Algunos ejemplos específicos son [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) y [Coliru](http://coliru.stacked-crooked.com/).
 
    > [!NOTE]
    > Los sitios web de compiladores en línea no están afiliados a Microsoft. Muchos de estos sitios web de compiladores en línea se ejecutan como proyectos personales, y puede que algunos de ellos no estén disponibles cuando lea este artículo. Haga una búsqueda para encontrar otros que pueda usar.
 
 Los problemas que se producen en compiladores, enlazadores o bibliotecas suelen mostrarse de una forma particular. El tipo de problema que ha experimentado determinará el tipo de reproducción que debe incluir en el informe. Sin una reproducción adecuada, no tenemos nada para investigar. Aquí encontrará algunos de los tipos de problemas que puede detectar, así como las instrucciones para generar los tipos de reproducciones que debe utilizar para informar de cada uno de los problemas.
- 
+
 #### <a name="frontend-parser-crash"></a>Bloqueo de front-end (analizador)
 
 Los bloqueos de front-end se producen durante la fase de análisis del compilador. Normalmente, el compilador emitirá el mensaje [Error irrecuperable C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) y hará referencia al archivo de código fuente y al número de línea en el que se produjo el error. A menudo mencionará un archivo msc1.cpp, pero puede pasar por alto este detalle.

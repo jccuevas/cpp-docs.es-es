@@ -1,10 +1,7 @@
 ---
 title: las enumeraciones del espacio de nombres de simultaneidad | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 068aa89c10e92203ce0e826e3aaca101f4786cbb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums"></a>enumeraciones del espacio de nombres de simultaneidad
 ||||  
@@ -85,7 +80,7 @@ enum Agents_EventType;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h
 
-##  <a name="concrt_eventtype"></a>  ConcRT_EventType Enumeration  
+##  <a name="concrt_eventtype"></a>  ConcRT_EventType (enumeración)  
  Los tipos de eventos a los que se puede realizar un seguimiento utilizando la funcionalidad de seguimiento proporcionada por el runtime de simultaneidad.  
   
 ```
@@ -108,7 +103,7 @@ enum ConcRT_EventType;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h **Namespace:** simultaneidad
 
-##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration  
+##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags (enumeración)  
  Marcas de seguimiento para los tipos de evento  
   
 ```

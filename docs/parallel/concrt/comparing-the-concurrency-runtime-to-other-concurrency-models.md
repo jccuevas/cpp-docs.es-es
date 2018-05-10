@@ -1,29 +1,24 @@
 ---
 title: Comparar el Runtime de simultaneidad con otros modelos de simultaneidad | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparar el runtime de simultaneidad con otros modelos de simultaneidad
 En este documento se describen las diferencias entre las características y los modelos de programación del Runtime de simultaneidad y otras tecnologías. Si compara las ventajas del Runtime de simultaneidad con las ventajas de otros modelos de programación, podrá seleccionar la tecnología que mejor satisfaga los requisitos de sus aplicaciones.  
@@ -44,7 +39,7 @@ En este documento se describen las diferencias entre las características y los 
  Los modelos de programación preferente y cooperativa son dos métodos comunes para que varias tareas compartan recursos informáticos (por ejemplo, procesadores o subprocesos de hardware).  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>Programación preferente y cooperativa  
- La*programación preferente* es un mecanismo round robin basado en la prioridad que proporciona a todas las tareas acceso exclusivo a un recurso informático durante un período determinado y, luego, pasa a otra tarea. Este tipo de programación es habitual en los sistemas operativos de multitarea, como Windows*. La programación cooperativa* es un mecanismo que proporciona a todas las tareas acceso exclusivo a un recurso informático hasta que la tarea finaliza o cede su acceso al recurso. El Runtime de simultaneidad usa la programación cooperativa junto con el programador preferente del sistema operativo. De este modo, consigue el mayor uso posible de los recursos de procesamiento.  
+ La*programación preferente* es un mecanismo round robin basado en la prioridad que proporciona a todas las tareas acceso exclusivo a un recurso informático durante un período determinado y, luego, pasa a otra tarea. Este tipo de programación es habitual en los sistemas operativos de multitarea, como Windows *. La programación cooperativa* es un mecanismo que proporciona a todas las tareas acceso exclusivo a un recurso informático hasta que la tarea finaliza o cede su acceso al recurso. El Runtime de simultaneidad usa la programación cooperativa junto con el programador preferente del sistema operativo. De este modo, consigue el mayor uso posible de los recursos de procesamiento.  
   
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Diferencias entre los programadores preferente y cooperativo  
  Los programadores preferentes buscan dar a varios subprocesos el mismo acceso a los recursos informáticos para garantizar que cada subproceso progrese. En los equipos que tienen muchos recursos informáticos, el hecho de garantizar un acceso equitativo es menos problemático que garantizar que los recursos se usen de forma eficaz.  

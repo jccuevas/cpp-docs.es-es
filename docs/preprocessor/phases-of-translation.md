@@ -1,12 +1,9 @@
 ---
-title: "Fases de traducción | Documentos de Microsoft"
-ms.custom: 
+title: Fases de traducción | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21cf6efeba83758bed8abe45aba36f025ace16f4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27e8e3a84d425966908bc1be37268c91cbbd34d8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="phases-of-translation"></a>Fases de traducción
 Los programas de C y C++ constan de uno o más archivos de código fuente, cada uno de los cuales contiene parte del texto de programa. Un archivo de código fuente, junto con sus archivos de inclusión (archivos que se incluyen mediante la directiva de preprocesador `#include`) pero sin incluir las secciones de código que se quitan mediante directivas de compilación condicional como `#if`, se denomina “unidad de traducción”.  
@@ -67,7 +62,7 @@ Los programas de C y C++ constan de uno o más archivos de código fuente, cada 
  *Concatenación de cadenas*  
  Se concatenan todos los literales adyacentes de cadena y cadena de caracteres anchos. Por ejemplo, `"String " "concatenation"` se convierte en `"String concatenation"`.  
   
- *Translation*  
+ *Traducción*  
  Todos los tokens se analizan sintáctica y semánticamente; estos tokens se convierten en código de objeto.  
   
  *Vinculación*  

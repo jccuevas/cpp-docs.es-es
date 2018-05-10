@@ -1,12 +1,9 @@
 ---
 title: IVirtualProcessorRoot (estructura) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IVirtualProcessorRoot
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a385bc12d3add9dd445243794135083c7cc1b3c1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9620ee391b525356bfdb50b00d7e76c03b480815
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot (Estructura)
 Una abstracción para un subproceso de hardware en el que un proxy del subproceso puede ejecutarse.  
@@ -67,7 +62,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="activate"></a>  IVirtualProcessorRoot::Activate Method  
+##  <a name="activate"></a>  IVirtualProcessorRoot:: Activate (método)  
  Hace que el proxy del subproceso asociado a la interfaz de contexto de ejecución `pContext` para empezar a ejecutar en esta raíz del procesador virtual.  
   
 ```
@@ -93,7 +88,7 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
   
  El hecho de activar una raíz del procesador virtual aumenta el nivel de suscripción del subproceso de hardware subyacente por uno. Para obtener más información sobre los niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="deactivate"></a>  IVirtualProcessorRoot::Deactivate Method  
+##  <a name="deactivate"></a>  IVirtualProcessorRoot:: Deactivate (método)  
  Hace que el proxy del subproceso está ejecutando actualmente en esta raíz del procesador virtual deje de enviar el contexto de ejecución. El proxy del subproceso reanudará la ejecución en una llamada a la `Activate` método.  
   
 ```
@@ -120,7 +115,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
   
  La acción de desactivación de una raíz del procesador virtual disminuye el nivel de suscripción del subproceso de hardware subyacente por uno. Para obtener más información sobre los niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="ensurealltasksvisible"></a>  IVirtualProcessorRoot::EnsureAllTasksVisible Method  
+##  <a name="ensurealltasksvisible"></a>  IVirtualProcessorRoot:: EnsureAllTasksVisible (método)  
  Hace que los datos almacenados en la jerarquía de memoria de procesadores individuales que se hacen visibles para todos los procesadores en el sistema. Se asegura de que se ha ejecutado una barrera de memoria completa en todos los procesadores antes de que el método devuelve.  
   
 ```

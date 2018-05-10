@@ -1,12 +1,9 @@
 ---
 title: source_link_manager (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_link_manager
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager (Clase)
 El objeto `source_link_manager` administra los vínculos de red del bloque de mensajería para los bloques `ISource`.  
@@ -68,7 +63,7 @@ class source_link_manager;
 |Name|Descripción|  
 |----------|-----------------|  
 |[source_link_manager](#ctor)|Construye un objeto `source_link_manager`.|  
-|[~source_link_manager Destructor](#dtor)|Destruye el objeto `source_link_manager`.|  
+|[~ source_link_manager (destructor)](#dtor)|Destruye el objeto `source_link_manager`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -202,7 +197,7 @@ void set_bound(size_t _MaxLinks);
  `_MaxLinks`  
  El número máximo de vínculos.  
   
-##  <a name="ctor"></a> source_link_manager 
+##  <a name="ctor"></a> source_link_manager) 
 
  Construye un objeto `source_link_manager`.  
   
@@ -210,7 +205,7 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```  
   
-##  <a name="dtor"></a> ~source_link_manager 
+##  <a name="dtor"></a> ~ source_link_manager) 
 
  Destruye el objeto `source_link_manager`.  
   

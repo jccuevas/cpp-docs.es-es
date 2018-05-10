@@ -1,12 +1,9 @@
 ---
 title: target_block (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - target_block
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2827e7bbb9a2c23804d90ccb729e990b84f3a442
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 754bc6add99974ff204c977e47f35486cc830d95
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="targetblock-class"></a>target_block (Clase)
 La clase `target_block` es una clase base abstracta que proporciona funcionalidad de administración de vínculo básica y comprueba errores solo para bloques de destino.  
@@ -76,13 +71,13 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
 |Name|Descripción|  
 |----------|-----------------|  
 |[target_block](#ctor)|Construye un objeto `target_block`.|  
-|[~target_block Destructor](#dtor)|Destruye el objeto `target_block`.|  
+|[~ target_block (destructor)](#dtor)|Destruye el objeto `target_block`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[propagate](#propagate)|Forma asincrónica, pasa un mensaje desde un bloque de origen a este bloque de destino.|  
+|[propagar](#propagate)|Forma asincrónica, pasa un mensaje desde un bloque de origen a este bloque de destino.|  
 |[send](#send)|Forma sincrónica, pasa un mensaje desde un bloque de origen a este bloque de destino.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
@@ -326,7 +321,7 @@ void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
 target_block();
 ```  
   
-##  <a name="dtor"></a> ~target_block 
+##  <a name="dtor"></a> ~ target_block) 
 
  Destruye el objeto `target_block`.  
   

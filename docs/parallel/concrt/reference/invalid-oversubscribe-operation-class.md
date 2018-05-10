@@ -1,12 +1,9 @@
 ---
 title: invalid_oversubscribe_operation (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - invalid_oversubscribe_operation
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 584cda20a30ea413afebc9fda00191e32dec9635
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 612a5658e0ef678253ec493f23b71cc564288904
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation (Clase)
 Esta clase describe una excepción cuando se llama al método `Context::Oversubscribe` con el parámetro `_BeginOversubscription` establecido en `false` sin realizar antes una llamada al método `Context::Oversubscribe` con el parámetro `_BeginOversubscription` establecido en `true`.  
@@ -56,7 +51,7 @@ class invalid_oversubscribe_operation : public std::exception;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="ctor"></a> invalid_oversubscribe_operation 
+##  <a name="ctor"></a> invalid_oversubscribe_operation) 
 
  Construye un objeto `invalid_oversubscribe_operation`.  
   

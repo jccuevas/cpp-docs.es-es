@@ -1,12 +1,9 @@
 ---
 title: Call (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - call
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a63873b7666e4f75ddd39fbf684ebb80c1f85e8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 47f72948621e9311f05af74f75d80cd35c1deddc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="call-class"></a>Clase call
 Un bloque de mensajería `call` es un `target_block` con varios orígenes y ordenado, que invoca una función especificada al recibir un mensaje.  
@@ -57,7 +52,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[call](#ctor)|Sobrecargado. Construye un `call` bloque de mensajería.|  
+|[Llamar a](#ctor)|Sobrecargado. Construye un `call` bloque de mensajería.|  
 |[~ Llame al Destructor](#dtor)|Destruye el `call` bloque de mensajería.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
@@ -68,7 +63,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 |[process_message](#process_message)|Procesa un mensaje que fue aceptado por este `call` bloque de mensajería.|  
 |[propagate_message](#propagate_message)|Un mensaje de forma asincrónica, pasa un `ISource` bloque a este `call` bloque de mensajería. Se invoca con el `propagate` método, cuando se llama a un bloque de origen.|  
 |[send_message](#send_message)|Un mensaje de forma sincrónica, pasa un `ISource` bloque a este `call` bloque de mensajería. Se invoca con el `send` método, cuando se llama a un bloque de origen.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado. (Overrides [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[supports_anonymous_source](#supports_anonymous_source)|Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado. (Invalida [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [los bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -136,7 +131,7 @@ call(
   
  El tipo `filter_method` es un functor con firma `bool (T const &)` que es invocado por este `call` bloque de mensajería para determinar si debe aceptar un mensaje proporcionado.  
   
-##  <a name="dtor"></a> ~call 
+##  <a name="dtor"></a> ~ llamar a 
 
  Destruye el `call` bloque de mensajería.  
   

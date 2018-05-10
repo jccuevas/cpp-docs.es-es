@@ -1,30 +1,25 @@
 ---
-title: "Tutorial: Crear una red de procesamiento de imágenes | Documentos de Microsoft"
-ms.custom: 
+title: 'Tutorial: Crear una red de procesamiento de imágenes | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Tutorial: Crear una red de procesamiento de imagen
 Este documento muestra cómo crear una red de bloques de mensajes asincrónicos que realizan procesamiento de imágenes.  
@@ -53,7 +48,7 @@ Este documento muestra cómo crear una red de bloques de mensajes asincrónicos 
   
 -   [Ejemplo completo](#complete)  
   
-##  <a name="functionality"></a>Definir la funcionalidad de procesamiento de imágenes  
+##  <a name="functionality"></a> Definir la funcionalidad de procesamiento de imágenes  
  Esta sección muestra las funciones de compatibilidad con la red de procesamiento de imágenes que se usa para trabajar con imágenes que se leen del disco.  
   
  Las siguientes funciones, `GetRGB` y `MakeColor`, extraer y para combinar los componentes individuales del color determinado, respectivamente.  
@@ -80,7 +75,7 @@ Este documento muestra cómo crear una red de bloques de mensajes asincrónicos 
   
  [[Arriba](#top)]  
   
-##  <a name="network"></a>Creación de la red de procesamiento de imágenes  
+##  <a name="network"></a> Creación de la red de procesamiento de imágenes  
  Esta sección describe cómo crear una red de bloques de mensajes asincrónicos que realizan procesamiento de imágenes en cada [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] imagen (.jpg) en un directorio determinado. La red realiza las siguientes operaciones de procesamiento de imágenes:  
   
 1.  Para cualquier imagen que se crearon por Tom, convertir en escala de grises.  
@@ -135,7 +130,7 @@ Este documento muestra cómo crear una red de bloques de mensajes asincrónicos 
 |`colormask`|Un `transformer` objeto que quita los componentes de color verde y azul de imágenes que tengan rojo como color dominante.|  
 |`darken`|Un `transformer` objeto que se oscurece imágenes que tengan rojo como color dominante.|  
 |`sepiatone`|Un `transformer` objeto que aplica un tono sepia a las imágenes que no se crean por Tom y no son fundamentalmente rojo.|  
-|`save_bitmap`|A `transformer` objeto que guarda los procesamos `image` en el disco como un mapa de bits. `save_bitmap`Recupera el nombre de archivo original de la `map` de objetos y cambia la extensión de archivo a los bmp.|  
+|`save_bitmap`|A `transformer` objeto que guarda los procesamos `image` en el disco como un mapa de bits. `save_bitmap` Recupera el nombre de archivo original de la `map` de objetos y cambia la extensión de archivo a los bmp.|  
 |`delete_bitmap`|Un `transformer` objeto que libera la memoria para las imágenes.|  
 |`decrement`|A [Concurrency:: call](../../parallel/concrt/reference/call-class.md) objeto que actúa como el nodo terminal de la red. Se reduce la `countdown_event` objeto para indicar a la aplicación principal que se ha procesado una imagen.|  
   
@@ -155,7 +150,7 @@ Este documento muestra cómo crear una red de bloques de mensajes asincrónicos 
   
  [[Arriba](#top)]  
   
-##  <a name="complete"></a>El ejemplo completo  
+##  <a name="complete"></a> El ejemplo completo  
  En el código siguiente se muestra el ejemplo completo. El `wmain` administra la función la [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] biblioteca y llama el `ProcessImages` función al proceso de la [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] archivos en el `Sample Pictures` directory.  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ Este documento muestra cómo crear una red de bloques de mensajes asincrónicos 
   
  ![Ejemplo de resultado del ejemplo](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse`se creó por Tom Alphin y, por tanto, se convierte en escala de grises. `Chrysanthemum`, `Desert`, `Koala`, y `Tulips` tienen rojo como color dominante y, por tanto, los componentes de color azul y verde quitados y se oscurecerá. `Hydrangeas`, `Jellyfish`, y `Penguins` coinciden con los criterios predeterminados y, por tanto, son sepia tonos.  
+ `Lighthouse` se creó por Tom Alphin y, por tanto, se convierte en escala de grises. `Chrysanthemum`, `Desert`, `Koala`, y `Tulips` tienen rojo como color dominante y, por tanto, los componentes de color azul y verde quitados y se oscurecerá. `Hydrangeas`, `Jellyfish`, y `Penguins` coinciden con los criterios predeterminados y, por tanto, son sepia tonos.  
   
  [[Arriba](#top)]  
   

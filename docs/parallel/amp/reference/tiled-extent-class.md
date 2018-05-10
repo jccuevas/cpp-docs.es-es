@@ -2,11 +2,8 @@
 title: tiled_extent (clase) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +19,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent (Clase)
 A `tiled_extent` objeto es un `extent` objeto de uno a tres dimensiones que divide el espacio de la extensión en uno, dos o iconos tridimensionales.  
@@ -153,7 +148,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  Un `extent` objeto que captura las dimensiones de esta `tiled_extent` instancia.  
   
 
-## <a name="pad"> </a>  pad   
+## <a name="pad"> </a>  panel   
 Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas seguridad para ser divisible por las dimensiones del mosaico.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -164,7 +159,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Valor devuelto  
  El nuevo `tiled_extent` objeto por valor. 
-## <a name="truncate"> </a>  truncate   
+## <a name="truncate"> </a>  truncar   
 Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas hacia abajo para ser divisible por las dimensiones del mosaico.  
   
 ### <a name="syntax"></a>Sintaxis  

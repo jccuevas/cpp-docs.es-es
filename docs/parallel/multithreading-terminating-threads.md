@@ -1,13 +1,10 @@
 ---
 title: 'Multithreading: Finalizar subprocesos | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bdf9376e9f8c9e9d74d88d0bef40dc71fd43d51f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: Finalizar subprocesos
 Dos situaciones normales que un subproceso terminar: la función controladora finaliza o el subproceso no puede ejecutarse hasta su finalización. Si un procesador de textos, se utiliza un subproceso para impresión en segundo plano, la función controladora terminaría normalmente si la impresión se completa correctamente. Si el usuario desea cancelar la impresión, sin embargo, el subproceso en segundo plano impresión tiene finalizó de forma prematura. Este tema explica cómo implementar cada situación y cómo obtener el código de salida de un subproceso después de que termine.  
@@ -43,17 +38,17 @@ Dos situaciones normales que un subproceso terminar: la función controladora fi
   
 -   [Recuperar el código de salida de un subproceso](#_core_retrieving_the_exit_code_of_a_thread)  
   
-##  <a name="_core_normal_thread_termination"></a>Terminación normal de subproceso  
+##  <a name="_core_normal_thread_termination"></a> Terminación normal de subproceso  
  Para un subproceso de trabajo, la terminación normal de subproceso es simple: salir de la función controladora y devolver un valor que indica la razón de finalización. Puede usar el [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) función o un `return` instrucción. Normalmente, 0 significa terminación sin error, pero que depende de usted.  
   
  Para un subproceso de interfaz de usuario, el proceso es simple: desde el subproceso de interfaz de usuario, debe llamar a [función PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) en el [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. El único parámetro que **función PostQuitMessage** toma es el código de salida del subproceso. Para subprocesos de trabajo, 0 suele significar finalización correcta.  
   
-##  <a name="_core_premature_thread_termination"></a>Terminación prematura de subprocesos  
+##  <a name="_core_premature_thread_termination"></a> Terminación prematura de subprocesos  
  Finaliza un subproceso de forma prematura es casi tan sencillo: llamar a [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) desde dentro del subproceso. Pase el código de salida deseado como único parámetro. Esto detiene la ejecución del subproceso, cancela la asignación de la pila del subproceso, desasocia todos los archivos DLL que se adjunta al subproceso y elimina el objeto de subproceso de la memoria.  
   
- `AfxEndThread`se debe invocar desde dentro del subproceso que debe finalizar. Si desea terminar un subproceso desde otro subproceso, debe configurar un método de comunicación entre los dos subprocesos.  
+ `AfxEndThread` Se debe invocar desde dentro del subproceso que debe finalizar. Si desea terminar un subproceso desde otro subproceso, debe configurar un método de comunicación entre los dos subprocesos.  
   
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a>Recuperar el código de salida de un subproceso  
+##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Recuperar el código de salida de un subproceso  
  Para obtener el código de salida del trabajo o el subproceso de interfaz de usuario, llame a la [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) función. Para obtener información acerca de esta función, vea la [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Esta función recibe el identificador del subproceso (almacenado en el `m_hThread` miembro de datos de `CWinThread` objetos) y la dirección de un `DWORD`.  
   
  Si el subproceso está aún activo, **GetExitCodeThread** coloca **STILL_ACTIVE** en proporcionado `DWORD` dirección; de lo contrario, el código de salida se coloca en esta dirección.  

@@ -1,12 +1,9 @@
 ---
-title: concurrent_unordered_map Class | Microsoft Docs
-ms.custom: 
+title: concurrent_unordered_map (clase) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_map
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37feb147cc0604081479bfae0afca933c251bc8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 932cfe232b07a9020af450ad33bb34101827ac79
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map (Clase)
 La clase `concurrent_unordered_map` es un contenedor seguro para simultaneidad que controla una secuencia de variación de longitud de elementos del tipo `std::pair<const K, _Element_type>`. La secuencia se representa de una manera que habilita la anexión segura para simultaneidad, el acceso a elementos, el acceso a iterador y las operaciones de recorrido de iterador.  
@@ -133,7 +128,7 @@ template <typename K,
  `concurrent_unordered_map`  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** concurrent_unordered_map.h  
+ **Encabezado:** concurrent_unordered_map.h  
   
  **Espacio de nombres:** simultaneidad  
   
@@ -200,7 +195,7 @@ const_iterator cend() const;
 void clear();
 ```  
   
-##  <a name="ctor"></a> concurrent_unordered_map 
+##  <a name="ctor"></a> concurrent_unordered_map) 
 
  Construye un mapa no ordenado simultáneo.  
   
@@ -515,7 +510,7 @@ mapped_type& operator[](key_type&& kval);
   
  Cuando se emplea `operator[]` para insertar elementos, la referencia devuelta no indica si una inserción cambia un elemento ya existente o crea uno nuevo. Las funciones miembro `find` y [insertar](#insert) puede utilizarse para determinar si un elemento con una clave especificada ya está presente antes de una inserción.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
  Asigna el contenido de otro objeto `concurrent_unordered_map` a este. Este método no es seguro para la simultaneidad.  
   

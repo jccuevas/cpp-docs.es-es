@@ -1,12 +1,9 @@
 ---
 title: Clase scoped_d3d_access_lock | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - scoped_d3d_access_lock
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a592249221129bce35f8592dcec56ff2379472d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0053fa89139ac806a3d8ae0572cd053dd6bec72c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock (Clase)
 Contenedor RAII para un bloqueo de acceso de D3D en un objeto accelerator_view.  
@@ -42,8 +37,8 @@ class scoped_d3d_access_lock;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[scoped_d3d_access_lock Constructor](#ctor)|Sobrecargado. Construye un objeto `scoped_d3d_access_lock`. El bloqueo se libera cuando este objeto se sale del ámbito.|  
-|[~scoped_d3d_access_lock Destructor](#dtor)|Libera el bloqueo de acceso de D3D en asociado `accelerator_view` objeto.|  
+|[Constructor scoped_d3d_access_lock](#ctor)|Sobrecargado. Construye un objeto `scoped_d3d_access_lock`. El bloqueo se libera cuando este objeto se sale del ámbito.|  
+|[~ scoped_d3d_access_lock (destructor)](#dtor)|Libera el bloqueo de acceso de D3D en asociado `accelerator_view` objeto.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -105,7 +100,7 @@ scoped_d3d_access_lock(// [3] move constructor
 ```  
 ~scoped_d3d_access_lock();
 ```  
-## <a name="operator_eq"></a> operador = 
+## <a name="operator_eq"></a> operator= 
 
 Toma posesión de un bloqueo de acceso de D3D desde otro `scoped_d3d_access_lock` objeto, lo que libera el bloqueo anterior.  
  

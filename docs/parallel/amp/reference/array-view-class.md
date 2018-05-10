@@ -1,12 +1,9 @@
 ---
 title: array_view (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array_view
@@ -35,17 +32,15 @@ dev_langs:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2e53b4927b102fc64a32f73ca5be78e71954b45f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="arrayview-class"></a>array_view (Clase)
 Representa una vista de N dimensiones a través de los datos contenidos en otro contenedor.  
@@ -92,7 +87,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |[get_extent](#get_extent)|Devuelve el objeto de extensión del objeto array_view.|  
 |[get_ref](#get_ref)|Devuelve una referencia al elemento indizado.|  
 |[get_source_accelerator_view](#get_source_accelerator_view)|Devuelve el [accelerator_view](accelerator-view-class.md) donde el origen de datos de la `array_view` se encuentra.|  
-|[refresh](#refresh)|Notifica a la `array_view` objeto que su memoria enlazado se ha modificado fuera de la `array_view` interfaz. Una llamada a este método representa toda la información almacenada en caché obsoletos.|  
+|[Actualización](#refresh)|Notifica a la `array_view` objeto que su memoria enlazado se ha modificado fuera de la `array_view` interfaz. Una llamada a este método representa toda la información almacenada en caché obsoletos.|  
 |[reinterpret_as](#reinterpret_as)|Devuelve una matriz unidimensional que contiene todos los elementos de la `array_view` objeto.|  
 |[section](#section)|Devuelve una subsección de la `array_view` objeto que está en el origen especificado y, opcionalmente, que tiene la extensión especificada.|  
 |[synchronize](#synchronize)|Sincroniza todas las modificaciones realizadas a la `array_view` objeto a su origen de datos.|  
@@ -105,7 +100,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[operator()](#operator_call)|Devuelve el valor del elemento especificado por el parámetro o parámetros.|  
+|[Operator()](#operator_call)|Devuelve el valor del elemento especificado por el parámetro o parámetros.|  
 |[operator[]](#operator_at)|Devuelve el elemento especificado por los parámetros.|  
 |[operator=](#operator_eq)|Copia el contenido del elemento especificado `array_view` objeto en éste.|  
   
@@ -551,7 +546,7 @@ value_type& operator[] (
 ### <a name="return-value"></a>Valor devuelto  
  El valor del elemento en el índice, o un `array_view` proyectados en la dimensión más significativo.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
  Copia el contenido del elemento especificado `array_view` objeto a este.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Subprocesamiento múltiple: Cómo usar las clases de sincronización | Documentos de Microsoft"
-ms.custom: 
+title: 'Subprocesamiento múltiple: Cómo usar las clases de sincronización | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d85ea58588ea889fc8294b23604d47aef725135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49b0737a794216c4899b280bc049a1cdc0fe0948
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>Subprocesamiento múltiple: Uso de las clases de sincronización
 Sincronizar el acceso a los recursos entre subprocesos es un problema habitual cuando se escriben aplicaciones multiproceso. Si dos o más subprocesos tienen acceso a los mismos datos simultáneamente, se pueden producir resultados impredecibles y no deseados. Por ejemplo, un subproceso podría estar actualizando el contenido de una estructura mientras que otro está leyendo el contenido de la misma estructura. No se puede saber qué datos recibirá el proceso de lectura: los datos antiguos, los datos recién escritos o, posiblemente, una mezcla de ambos. MFC proporciona una serie de clases de sincronización y de sincronización de acceso para contribuir a resolver este problema. Este tema describe las clases disponibles y su uso con el fin de crear clases seguras para subprocesos en una aplicación multiproceso típica.  
@@ -43,7 +38,7 @@ Sincronizar el acceso a los recursos entre subprocesos es un problema habitual c
   
  Esta aplicación de ejemplo utiliza los tres tipos de clases de sincronización. Porque permite hasta tres cuentas examinar al mismo tiempo, usa [CSemaphore](../mfc/reference/csemaphore-class.md) para limitar el acceso a tres objetos de vista. Cuando se produce un intento de ver una cuarta cuenta, la aplicación espera a que se cierre una de las tres primeras ventanas o bien genera un error. Cuando se actualiza una cuenta, la aplicación utiliza [CCriticalSection](../mfc/reference/ccriticalsection-class.md) para asegurarse de que se actualiza una cuenta a la vez. La actualización se realiza correctamente, la aplicación señaliza [CEvent](../mfc/reference/cevent-class.md), lo cual permite liberar un subproceso que espera del evento que se va a señalar. Este subproceso envía los nuevos datos al archivo de almacenamiento de datos.  
   
-##  <a name="_mfc_designing_a_thread.2d.safe_class"></a>Diseñar una clase segura para subprocesos  
+##  <a name="_mfc_designing_a_thread.2d.safe_class"></a> Diseñar una clase segura para subprocesos  
  Para hacer que una clase sea completamente segura para la ejecución de subprocesos, primero agregue la clase de sincronización apropiada a las clases compartidas como un miembro de datos. En el ejemplo anterior de administración de cuentas, un **CSemaphore** miembro de datos se debe agregar a la clase de vista, un `CCriticalSection` miembro de datos se debe agregar a la clase de lista vinculada y un `CEvent` miembro de datos se debe agregar a los datos clase de almacenamiento.  
   
  A continuación, agregue llamadas de sincronización a todas las funciones miembro que modifican los datos de la clase o que tienen acceso a un recurso controlado. En cada función, debe crear un [CSingleLock](../mfc/reference/csinglelock-class.md) o [CMultiLock](../mfc/reference/cmultilock-class.md) objeto y llamar a ese objeto `Lock` función. Cuando el objeto de bloqueo queda fuera de ámbito y se destruye, el destructor del objeto llama automáticamente a `Unlock` y libera el recurso. No obstante, puede realizar una llamada a `Unlock` directamente si lo desea.  

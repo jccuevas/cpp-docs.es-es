@@ -43,11 +43,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d89363e49b2f8a1691ee897c6acae6b4f67f5b9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="assignment-operators"></a>Operadores de asignación
 ## <a name="syntax"></a>Sintaxis  
@@ -73,15 +73,15 @@ Todos los operadores de asignación en la tabla siguiente excepción la = y & & 
 |--------------|-------------|  
 |**=**|Almacena el valor del segundo operando en el objeto especificado por el primer operando (asignación simple).|  
 |**\*=**|Multiplica el valor del primer operando por el valor del segundo operando; almacena el resultado en el objeto especificado por el primer operando.|  
-|`/=`|Divide el valor del primer operando por el valor del segundo operando; almacena el resultado en el objeto especificado por el primer operando.|  
-|`%=`|Toma el módulo del primer operando especificado por el valor del segundo operando; almacena el resultado en el objeto especificado por el primer operando.|  
-|`+=`|Suma el valor del segundo operando al valor del primer operando; almacena el resultado en el objeto especificado por el primer operando.|  
+|**/=**|Divide el valor del primer operando por el valor del segundo operando; almacena el resultado en el objeto especificado por el primer operando.|  
+|**%=**|Toma el módulo del primer operando especificado por el valor del segundo operando; almacena el resultado en el objeto especificado por el primer operando.|  
+|**+=**|Suma el valor del segundo operando al valor del primer operando; almacena el resultado en el objeto especificado por el primer operando.|  
 |**-=**|Resta el valor del segundo operando del valor del primer operando; almacena el resultado en el objeto especificado por el primer operando.|  
 |**<\<=**|Desplaza a la izquierda el valor del primer operando el número de bits especificado por el valor del segundo operando; almacena el resultado en el objeto especificado por el primer operando.|  
 |**>>=**|Desplaza a la derecha el valor del primer operando el número de bits especificado por el valor del segundo operando; almacena el resultado en el objeto especificado por el primer operando.|  
 |**&=**|Obtiene el AND bit a bit del primer y el segundo operandos; almacena el resultado en el objeto especificado por el primer operando.|  
-|`^=`|Obtiene el OR exclusivo bit a bit del primer y el segundo operandos; almacena el resultado en el objeto especificado por el primer operando.|  
-|`&#124;=`|Obtiene el OR inclusivo bit a bit del primer y el segundo operandos; almacena el resultado en el objeto especificado por el primer operando.|
+|**^=**|Obtiene el OR exclusivo bit a bit del primer y el segundo operandos; almacena el resultado en el objeto especificado por el primer operando.|  
+|**\|=**|Obtiene el OR inclusivo bit a bit del primer y el segundo operandos; almacena el resultado en el objeto especificado por el primer operando.|
 |**&&=**| Operador de asignación de movimiento (para tipos de clase). Si el segundo operando es un valor r, mueva sus recursos al primer operando (sin copiarlos). Vea [constructores de movimiento y operadores de asignación de movimiento](move-constructors-and-move-assignment-operators-cpp.md) para obtener más información.|
   
  **Palabras clave de operador**  
@@ -91,8 +91,8 @@ Todos los operadores de asignación en la tabla siguiente excepción la = y & & 
 |Operador|Equivalente|  
 |--------------|----------------|  
 |**&=**|`and_eq`|  
-|`&#124;=`|`or_eq`|  
-|`^=`|`xor_eq`|  
+|**\|=**|`or_eq`|  
+|**^=**|`xor_eq`|  
   
  Hay dos maneras de obtener acceso a estas palabras clave de operador en los programas: incluir el archivo de encabezado `iso646.h`, o compilar con la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador (deshabilitar extensiones de lenguaje).  
   

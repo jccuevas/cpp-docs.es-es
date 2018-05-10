@@ -1,13 +1,10 @@
 ---
-title: "Los procedimientos recomendados en la biblioteca de agentes asincrónicos | Documentos de Microsoft"
-ms.custom: 
+title: Los procedimientos recomendados en la biblioteca de agentes asincrónicos | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d4b52839675334ab343adf48790bdce390dd5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8f1b20342ad6bb64c653a211f9af2fb9e9130286
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Procedimientos recomendados en la biblioteca de agentes asincrónicos
 En este documento se describe cómo hacer un uso eficaz de la biblioteca de agentes asincrónicos. La biblioteca de agentes promueve un modelo de programación basado en actores y en el paso de mensajes en proceso para el flujo de datos general y las tareas de canalización.  
@@ -46,7 +41,7 @@ En este documento se describe cómo hacer un uso eficaz de la biblioteca de agen
   
 - [Usar shared_ptr en una datos red cuando la propiedad no está definida](#ownership)  
   
-##  <a name="isolation"></a>Usar a agentes para aislar el estado  
+##  <a name="isolation"></a> Usar a agentes para aislar el estado  
  La biblioteca de agentes proporciona alternativas al estado compartido al permitir conectar componentes aislados a través de un mecanismo de paso de mensajes asincrónico. Los agentes asincrónicos son más eficaces cuando aíslan su estado interno de otros componentes. Al aislar el estado, varios componentes no actúan normalmente en los datos compartidos. El aislamiento del estado puede permitir escalar la aplicación porque reduce la contención en la memoria compartida. El aislamiento del estado también reduce la posibilidad de condiciones de carrera e interbloqueo porque los componentes no tienen que sincronizar el acceso a los datos compartidos.  
   
  Normalmente, para aislar el estado en un agente, se conservan los miembros de datos en las secciones `private` o `protected` de la clase de agente y se usan los búferes de mensajes para comunicar los cambios de estado. El siguiente ejemplo se muestra la `basic_agent` (clase), que se deriva de [Concurrency](../../parallel/concrt/reference/agent-class.md). La clase `basic_agent` usa dos búferes de mensajes para comunicarse con los componentes externos. Un búfer de mensajes contiene los mensajes entrantes; el otro búfer de mensajes contiene los mensajes de salida.  
@@ -57,7 +52,7 @@ En este documento se describe cómo hacer un uso eficaz de la biblioteca de agen
   
  [[Arriba](#top)]  
   
-##  <a name="throttling"></a>Usar un mecanismo de limitación para limitar el número de mensajes en una canalización de datos  
+##  <a name="throttling"></a> Usar un mecanismo de limitación para limitar el número de mensajes en una canalización de datos  
  Muchos tipos de búfer de mensajes, como [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md), puede contener un número ilimitado de mensajes. Cuando un productor de mensajes envía mensajes a una canalización de datos más rápidamente de lo que el consumidor puede procesarlos, la aplicación puede entrar en un estado de memoria insuficiente. Puede usar un mecanismo de limitación, por ejemplo, un semáforo, para limitar el número de mensajes que están activos en paralelo en una canalización de datos.  
   
  En el siguiente ejemplo básico se muestra cómo usar un semáforo para limitar el número de mensajes en una canalización de datos. La canalización de datos utiliza el [Concurrency:: wait](reference/concurrency-namespace-functions.md#wait) función para simular una operación que tiene al menos 100 milisegundos. Dado que el remitente muestra los mensajes más rápidamente de lo que el consumidor puede procesarlos, en este ejemplo se define la clase `semaphore` para que la aplicación pueda limitar el número de mensajes activos.  
@@ -72,14 +67,14 @@ En este documento se describe cómo hacer un uso eficaz de la biblioteca de agen
   
  [[Arriba](#top)]  
   
-##  <a name="fine-grained"></a>No realizar trabajo específico en una canalización de datos  
+##  <a name="fine-grained"></a> No realizar trabajo específico en una canalización de datos  
  La biblioteca de agentes es muy útil cuando el trabajo que realiza una canalización de datos es bastante general. Por ejemplo, un componente de la aplicación podría leer los datos de un archivo o una conexión de red y enviar ocasionalmente esos datos a otro componente. El protocolo que usa la biblioteca de agentes para propagar los mensajes hace que el mecanismo de paso de mensajes tenga más sobrecarga que las construcciones paralelas de tareas que se proporcionan con el [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). Por consiguiente, asegúrese de que el trabajo que realiza una canalización de datos es suficientemente larga para desplazar esta sobrecarga.  
   
  Aunque una canalización de datos es más eficaz cuando sus tareas son generales, cada fase de la canalización de datos puede usar las construcciones de PPL como grupos de tareas y algoritmos paralelos para realizar un trabajo más específico. Para obtener un ejemplo de una red de datos de grano grueso que usa un paralelismo pormenorizado en cada fase de procesamiento, vea [Tutorial: crear una red de procesamiento de imágenes](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
   
  [[Arriba](#top)]  
   
-##  <a name="large-payloads"></a>No pasar cargas grandes de mensaje por valor  
+##  <a name="large-payloads"></a> No pasar cargas grandes de mensaje por valor  
 
  En algunos casos, el runtime crea una copia de cada mensaje que pasa de un búfer de mensajes a otro búfer de mensajes. Por ejemplo, el [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) clase ofrece una copia de cada mensaje que recibe a cada uno de sus destinos. El tiempo de ejecución crea también una copia de los datos del mensaje cuando se utilizan funciones de paso de mensajes como [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) y [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) para escribir y leer los mensajes de un mensaje búfer. Aunque este mecanismo ayuda a eliminar el riesgo de escribir simultáneamente en los datos compartidos, podría dar lugar a un rendimiento deficiente de memoria cuando la carga del mensaje es relativamente grande.  
   
@@ -100,7 +95,7 @@ took 47ms.
   
  [[Arriba](#top)]  
   
-##  <a name="ownership"></a>Usar shared_ptr en una datos red cuando la propiedad no está definida  
+##  <a name="ownership"></a> Usar shared_ptr en una datos red cuando la propiedad no está definida  
  Cuando se envían mensajes mediante un puntero a través de una canalización o una red de paso de mensajes, normalmente se asigna la memoria para cada mensaje al principio de la red y se libera esa memoria en el extremo de la red. Aunque este mecanismo funciona bien con frecuencia, hay casos en los que resulta difícil o imposible utilizarlo. Por ejemplo, considere el caso en el que la red de datos contiene varios nodos finales. En este caso, no hay ninguna ubicación clara para liberar la memoria para los mensajes.  
   
  Para solucionar este problema, puede usar un mecanismo, por ejemplo, [std:: shared_ptr](../../standard-library/shared-ptr-class.md), que permite a un puntero a pertenecer a varios componentes. Cuando se destruye el objeto final `shared_ptr` que posee un recurso, se libera el recurso también.  

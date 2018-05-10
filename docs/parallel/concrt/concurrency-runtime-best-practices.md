@@ -1,13 +1,10 @@
 ---
 title: Procedimientos recomendados del Runtime de simultaneidad | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - practices to avoid [Concurrency Runtime]
 - Concurrency Runtime, best practices
 ms.assetid: 7231d4be-d1e3-401d-8b66-94fd51b587c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9fa2236702b47b214ea076305e0e6a1c03ce778
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 422abd1c4c60b0094165587d25b7ebe825fabc38
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-runtime-best-practices"></a>Procedimientos recomendados del Runtime de simultaneidad
 En esta sección se describen los procedimientos recomendados que pueden ayudarle a usar el runtime de simultaneidad con eficacia. Estas recomendaciones se aplican a la [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL), el [biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)y el [programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
