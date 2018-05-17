@@ -2,11 +2,8 @@
 title: bitset (Clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - bitset/std::bitset
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a9ee19b580d63b0df2cef66c6754c4cd13b1303
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
-ms.translationtype: HT
+ms.openlocfilehash: 0515bc45f0791960b3eb62ada243f792ba48922d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bitset-class"></a>bitset (Clase)
 
@@ -1209,7 +1204,7 @@ public:
 
 `val` El valor del objeto del tipo `bool` que se asignará a un poco de un bitset.
 
-`_Bitref` Una referencia del formulario *x [i]* con el bit en la posición ** BitSet *x*.
+`_Bitref` Una referencia del formulario *x [i]* con el bit en la posición *i* BitSet *x*.
 
 ### <a name="return-value"></a>Valor devuelto
 
