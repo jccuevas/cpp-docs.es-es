@@ -1,13 +1,10 @@
 ---
-title: "Almacenamiento y alineación de estructuras | Microsoft Docs"
-ms.custom: 
+title: Almacenamiento y alineación de estructuras | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb5ec55ed3125ac86b0042812ba7fc25388a155
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4a70ab5fbeb4a1672279e7e9b617e3b4de1c1b5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-and-alignment-of-structures"></a>Almacenamiento y alineación de estructuras
 **Específicos de Microsoft**  
@@ -45,11 +40,11 @@ ms.lasthandoff: 12/21/2017
 min( n, sizeof( item ) )  
 ```  
   
- donde *n* es el tamaño de empaquetado expresado con la opción /Zp[*n*] e *item* es el miembro de la estructura. El tamaño de empaquetado predeterminado es /Zp8.  
+ donde *n* es el tamaño de empaquetado expresado con la opción /Zp [*n*] e *item* es el miembro de estructura. El tamaño de empaquetado predeterminado es /Zp8.  
   
  Si desea utilizar la instrucción pragma `pack` para especificar un empaquetado distinto del empaquetado especificado en la línea de comandos para una estructura determinada, especifique la instrucción pragma `pack`, con el tamaño de empaquetado 1, 2, 4, 8 o 16, delante de la estructura. Para restablecer el empaquetado especificado en la línea de comandos, especifique la instrucción pragma `pack` sin argumentos.  
   
- Los campos de bits tienen como valor predeterminado el tamaño **long** en el compilador de C de Microsoft. Los miembros de la estructura se alinean de acuerdo con el tamaño del tipo o el tamaño de /Zp[*n*], lo que sea menor. El tamaño predeterminado es 4.  
+ Los campos de bits tienen como valor predeterminado el tamaño **long** en el compilador de C de Microsoft. Los miembros de la estructura se alinean de acuerdo con el tamaño del tipo o el tamaño de /Zp [*n*], lo que sea menor. El tamaño predeterminado es 4.  
   
  **FIN de Específicos de Microsoft**  
   

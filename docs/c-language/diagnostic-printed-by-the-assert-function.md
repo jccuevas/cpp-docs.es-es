@@ -1,34 +1,29 @@
 ---
-title: "Diagnóstico impreso por la función assert | Microsoft Docs"
-ms.custom: 
+title: Diagnóstico impreso por la función assert | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 78b64200-520d-40da-9a61-71553f411d4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243956f1d85b07b5d5b810ebfd112b2cbfe16242
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c219669d018dc8c4cb038e90dffd1137877f422
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Diagnóstico impreso por la función assert
 **ANSI 4.2** El diagnóstico impreso por la función **assert** y su comportamiento de finalización  
   
  La función **assert** imprime un mensaje de diagnóstico y llama a la rutina **abort** si la expresión es false (0). El mensaje de diagnóstico tiene la forma  
   
- **Error de aserción**: *expression***, archivo** *filename***, línea** *linenumber*  
+ **Error de aserción**: *expression***, archivo** *filename***, línea* * *linenumber*  
   
  donde filename es el nombre del archivo de código fuente y linenumber es el número de línea de la aserción que produjo un error en el archivo de código fuente. No se realiza ninguna acción si la expresión es true (distinto de cero).  
   

@@ -96,11 +96,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 863d0c84d772de389affc8167e3a0f69b0e0fabe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 25dffabfe01bb68af180d67b5b47dfee44ce30ff
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="multimap-class"></a>multimap (Clase)
 
@@ -124,7 +124,7 @@ class multimap;
 
 `Traits` El tipo que proporciona un objeto de función que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo en la asignación múltiple. El predicado binario `less<Key>` es el valor predeterminado.
 
-En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
+En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14).
 
 `Allocator` El tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la asignación. Este argumento es opcional y el valor predeterminado es `allocator<pair <const Key, Type> >`.
 

@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="fastcall"></a>__fastcall
 **Específicos de Microsoft**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|--------------------|  
 |Orden de paso de argumento|Los primeros dos argumentos DWORD o menores que se encuentran en la lista de argumentos de izquierda a derecha se pasan en registros ECX y EDX; el resto de los argumentos se pasan en la pila de derecha a izquierda.|  
 |Responsabilidad de mantenimiento de pila|Al llamar a la función aparece el argumento de la pila.|  
-|Convención de creación de nombres representativos|El signo de arroba (@) suele usarse como prefijo para los nombres y el signo de arroba seguido del número de bytes (en formato decimal) en la lista de parámetros se utiliza como sufijo de los nombres.|  
+|Convención de creación de nombres representativos|En el inicio de sesión (\@) tiene como prefijo para los nombres una arroba seguido del número de bytes (en formato decimal) en el parámetro se utiliza como sufijo de lista a los nombres.|  
 |Convención de traducción de mayúsculas y minúsculas|No se lleva a cabo una traducción de mayúsculas y minúsculas.|  
   
 > [!NOTE]

@@ -1,13 +1,10 @@
 ---
-title: "scanf (Especificación de ancho) | Microsoft Docs"
-ms.custom: 
+title: scanf (Especificación de ancho) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0052f4b270366b2f3aa1e1550f790efcb860597
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scanf-width-specification"></a>scanf (Especificación de ancho)
 Esta información se aplica a la interpretación de cadenas de formato en la familia de funciones `scanf`, incluidas las versiones seguras, como `scanf_s`. Por lo general, estas funciones asumen que la secuencia de entrada se divide en una secuencia de tokens. Los tokens está separados por espacios en blanco (espacio, tabulación o nueva línea), o en el caso de los tipos numéricos, mediante el final natural de un tipo de datos numéricos, tal como se indica mediante el primer carácter que no se puede convertir en texto numérico. Sin embargo, la especificación de ancho puede utilizarse para hacer que se detenga el análisis de la entrada antes del fin natural de un token.  

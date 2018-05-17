@@ -1,12 +1,9 @@
 ---
-title: "Operadores de adición: + y - | Documentos de Microsoft"
-ms.custom: 
+title: 'Operadores de adición: + y - | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additive-operators--and--"></a>Operadores de adición: + y -
 ## <a name="syntax"></a>Sintaxis  
@@ -58,21 +53,21 @@ expression - expression
   
 |Tipo|Significado|  
 |----------|-------------|  
-|*arithmetic*|Los tipos enteros y de punto flotante se denominan colectivamente tipos “aritméticos”.|  
-|*integral*|Los tipos char e int de todos los tamaños (long, short) y las enumeraciones son tipos “enteros”.|  
-|*scalar*|Los operandos escalares son operandos de tipo aritmético o puntero.|  
+|*Operaciones aritméticas*|Los tipos enteros y de punto flotante se denominan colectivamente tipos “aritméticos”.|  
+|*entero*|Los tipos char e int de todos los tamaños (long, short) y las enumeraciones son tipos “enteros”.|  
+|*escalar*|Los operandos escalares son operandos de tipo aritmético o puntero.|  
   
  Las combinaciones válidas para estos operadores son:  
   
- *arithmetic* + *arithmetic*  
+ *aritmética* + *aritmético*  
   
- *scalar* + *integral*  
+ *escalar* + *integral*  
   
- *integral* + *scalar*  
+ *entero* + *escalares*  
   
- *arithmetic* - *arithmetic*  
+ *aritmética* - *aritmético*  
   
- *scalar* - *scalar*  
+ *escalar* - *escalares*  
   
  Tenga en cuenta que la suma y resta no son operaciones equivalentes.  
   
@@ -121,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>Resta de puntero  
  Si ambos operandos son punteros, el resultado de la resta es la diferencia (en elementos de matriz) entre los operandos. La expresión de resta produce un resultado entero con signo de tipo ptrdiff_t (definido en el archivo de inclusión estándar \<stddef.h >).  
   
- Uno de los operandos puede ser de tipo entero, siempre y cuando sea el segundo operando. El resultado de la resta es del mismo tipo que el puntero original. El valor de la resta es un puntero a la (*n* - *i*) elemento de la matriz de n, donde  *n*  es el elemento al que señala el puntero original y *i* es el valor entero del segundo operando.  
+ Uno de los operandos puede ser de tipo entero, siempre y cuando sea el segundo operando. El resultado de la resta es del mismo tipo que el puntero original. El valor de la resta es un puntero a la (*n* - *i*) elemento de la matriz de n, donde *n* es el elemento al que señala el puntero original y *i* es el valor entero del segundo operando.  
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones con operadores binarios](../cpp/expressions-with-binary-operators.md)   

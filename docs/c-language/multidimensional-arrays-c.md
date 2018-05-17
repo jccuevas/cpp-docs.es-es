@@ -1,13 +1,10 @@
 ---
 title: Matrices multidimensionales (C) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3b067db3812fbe7e5db1d367635eedc5362527
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 25ca58d9818782b51e6c07bb6bb758948adab3ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-arrays-c"></a>Matrices multidimensionales (C)
 Una expresión de subíndice también puede tener varios subíndices, como se indica a continuación:  
@@ -40,7 +35,7 @@ expression3
 ]...  
 ```  
   
- Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice más a la izquierda, * expression1***[***expression2 ***]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (**\***) se aplica después de que se evalúe la última expresión de subíndice, a menos que el valor del puntero final apunte a un tipo de matriz (véanse los ejemplos a continuación).  
+ Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice del extremo izquierdo, expression1 ***[*** expression2***]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (**\***) se aplica después de que se evalúe la última expresión de subíndice, a menos que el valor del puntero final apunte a un tipo de matriz (véanse los ejemplos a continuación).  
   
  Las expresiones con varios subíndices hacen referencia a elementos de “matrices multidimensionales”. Una matriz multidimensional es una matriz cuyos elementos son matrices. Por ejemplo, el primer elemento de una matriz tridimensional es una matriz con dos dimensiones.  
   
