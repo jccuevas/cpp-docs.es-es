@@ -1,7 +1,7 @@
 ---
 title: Implementación en Visual C++ | Documentos de Microsoft
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 05/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-in-visual-c"></a>Implementación en Visual C++
 
 Instalación de la aplicación en un equipo que no sea el equipo de desarrollo se conoce como *implementación*. Al implementar una aplicación de Visual C++ a otro equipo, debe instalar la aplicación y los archivos de biblioteca que depende. Visual Studio ofrece tres maneras de implementar las bibliotecas de Visual C++ junto con la aplicación: *implementación central*, *implementación local*, y *vinculación estática*. Implementación central coloca los archivos de biblioteca en el directorio de Windows, donde el servicio Windows Update puede actualizarlos automáticamente. Implementación local coloca los archivos de biblioteca en el mismo directorio que la aplicación. Debe volver a implementar las bibliotecas implementadas localmente para actualizarlos. Vinculación estática, enlaza el código de biblioteca en la aplicación. Debe volver a compilar e implementar la aplicación para aprovechar las ventajas de las actualizaciones a las bibliotecas cuando se usa la vinculación estática.
+
+En Visual Studio 2015, la biblioteca en tiempo de ejecución de C de Microsoft se ha refactorizado en componentes específicos de la versión de biblioteca local y una nueva biblioteca de tiempo de ejecución de C Universal que ahora forma parte de Windows. Para obtener más información acerca de la implementación de CRT Universal, consulte [implementación de CRT Universal](universal-crt-deployment.md).
 
 ## <a name="central-deployment"></a>Implementación central
 
@@ -59,4 +61,5 @@ El orden de carga de las bibliotecas de Visual C++ es dependiente del sistema. P
 
 ## <a name="see-also"></a>Vea también
 
-[Implementar aplicaciones de escritorio](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Implementar aplicaciones de escritorio](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Implementación de CRT universal](universal-crt-deployment.md)

@@ -142,11 +142,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61335113bde8c2a9e76ca828921f94cbfb806e5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c52d2912edc1632dc2fbe4fe330def6d357f16d2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (clase)
 Encapsula el cuadro de diálogo común que se utiliza para abrir el archivo o para guardar las operaciones de archivos.  
@@ -1074,8 +1074,8 @@ virtual void OnControlActivating(DWORD dwIDCtl);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="onfilenamechange"></a>  CFileDialog::OnFileNY` `cambio  
- Invalide este método si desea controlar la `WM_NOTIFY` `CDN_SELCHANGE` mensaje.  
+##  <a name="onfilenamechange"></a>  CFileDialog::OnFileNameChange  
+Invalide este método si desea controlar la `WM_NOTIFY` `CDN_SELCHANGE` mensaje.  
   
 ```  
 virtual void OnFileNameChange();

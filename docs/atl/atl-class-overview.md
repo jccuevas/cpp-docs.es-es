@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab373cbce85e05d7780ed827f546b649d40ce62f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eaa712ba8954b8b9b755f8045a81296bb345685
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-class-overview"></a>Introducción a la clase ATL
 Las clases en Active Template Library (ATL) se pueden clasificar como sigue:  
@@ -49,11 +49,10 @@ Las clases en Active Template Library (ATL) se pueden clasificar como sigue:
  Para obtener información sobre las clases adicionales que puede usarse en proyectos ATL, vea [clases compartidas](../atl-mfc-shared/atl-mfc-shared-classes.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Clases](../atl/reference/atl-classes.md)   
- [Componentes de escritorio COM de ATL](../atl/atl-com-desktop-components.md)   
+ [Clases y structs](../atl/reference/atl-classes.md)   
+ [Componentes de escritorio COM de ATL](../atl/atl-com-desktop-components.md)  
  [Funciones](../atl/reference/atl-functions.md)   
  [Variables globales](../atl/reference/atl-global-variables.md)   
  [Macros](../atl/reference/atl-macros.md)   
- [Estructuras](../atl/reference/atl-structures.md)   
  [Typedefs](../atl/reference/atl-typedefs.md)
 

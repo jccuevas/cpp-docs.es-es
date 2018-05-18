@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d50ca37b90251a797f70129e4b8ce1778b4d73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-com-desktop-components"></a>Componentes de escritorio COM de ATL
 La referencia de ATL documenta Active Template Library (ATL), un conjunto de clases de C++ basadas en plantillas que simplifica la programación de objetos de modelo de objetos componentes (COM). Para sacar el máximo provecho de ATL, una familiaridad con COM es muy recomendable.  
@@ -28,8 +28,8 @@ La referencia de ATL documenta Active Template Library (ATL), un conjunto de cla
  [Información general de clases ATL](../atl/atl-class-overview.md)  
  Proporciona vínculos a y descripciones breves de las clases ATL organizadas por categorías.  
   
- [Clases ATL](../atl/reference/atl-classes.md)  
- Proporciona material de referencia sobre las clases que se ordenan alfabéticamente.  
+ [Clases y structs ATL](../atl/reference/atl-classes.md)  
+ Proporciona material de referencia sobre las clases y structs ordenados alfabéticamente.  
   
  [Funciones ATL](../atl/reference/atl-functions.md)  
  Proporciona material de referencia sobre las funciones globales que se ordenan alfabéticamente. Incluye temas sobre las funciones de la organización en categorías.  
@@ -40,14 +40,11 @@ La referencia de ATL documenta Active Template Library (ATL), un conjunto de cla
  [Macros ATL](../atl/reference/atl-macros.md)  
  Proporciona material de referencia acerca de las macros que se ordenan alfabéticamente. Incluye temas de la organización de las macros en categorías.  
   
- [Estructuras ATL](../atl/reference/atl-structures.md)  
- Proporciona material de referencia sobre las estructuras que se ordenan alfabéticamente.  
-  
  [Definiciones de tipo ATL](../atl/reference/atl-typedefs.md)  
  Proporciona material de referencia en las definiciones de tipo que se ordenan alfabéticamente  
   
- [Archetypes](../atl/reference/atl-archetypes.md)  
- Proporciona vínculos a la archetypes ATL, que son clases teóricas que proporciona una colección de métodos, miembros de datos, funciones estáticas, definiciones de tipo y otras características, que se muestran en orden alfabético.  
+ [Worker (arquetipo)](../atl/reference/worker-archetype.md)  
+ Proporciona vínculos a la Arquetipo de trabajo de ATL.  
   
  [Temas ATL obsoleta](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
  Proporciona material de referencia sobre las clases, las macros y funciones que están obsoletos o desusados.  
