@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="security-best-practices-for-c"></a>Procedimientos recomendados para la seguridad en C++
 
@@ -99,8 +99,7 @@ Este artículo contiene información sobre las herramientas y las prácticas de 
 
 Para obtener información acerca de cómo identificar y mitigar el riesgo de vulnerabilidades de hardware de canal de lado de ejecución especulativa en software de C++, vea [instrucciones para desarrolladores de C++ para los canales de lado de ejecución especulativa](developer-guidance-speculative-execution.md).
 
-  
 ## <a name="see-also"></a>Vea también  
- <xref:System.Security>   
- [Seguridad](/dotnet/standard/security/index)   
- [Cómo el Control de cuentas de usuario (UAC) afecta a la aplicación](how-user-account-control-uac-affects-your-application.md)
+- <xref:System.Security>   
+- [Seguridad](/dotnet/standard/security/index)   
+- [Cómo el Control de cuentas de usuario (UAC) afecta a la aplicación](how-user-account-control-uac-affects-your-application.md)
