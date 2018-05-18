@@ -1,7 +1,7 @@
 ---
 title: Estilos utilizados por MFC | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,19 +206,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1e891c8b24e52b56bd6bed8fb7f931fdd8fb863
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="styles-used-by-mfc"></a>Estilos utilizados por MFC  
   
 Use los siguientes indicadores de estilo para especificar el comportamiento y apariencia de ventana o un control cuando se crea el objeto MFC correspondiente. En la mayoría de los casos, estos estilos se establecen en los `dwStyle` parámetro de la clase `Create` (función).  
   
-<a name="button-styles"></a>  
-  
-## <a name="button-styles"></a>Estilos de botón  
+## <a name="button-styles"></a> Estilos de botón  
   
 Estilos de botón que se aplican a [CButton clase](../../mfc/reference/cbutton-class.md) comprobación de objetos, como botones de radio, cuadros y botones de comando. Especificar una combinación de estilos en el `dwStyle` parámetro de [CButton::Create](../../mfc/reference/cbutton-class.md#create). Para obtener más información sobre los estilos de botón de Windows, vea [estilos de botón (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
@@ -287,9 +285,7 @@ En la tabla siguiente se enumera otras opciones adicionales que puede usar con c
 |`BS_MULTILINE`|Ajusta el texto del botón a varias líneas si la cadena de texto es demasiado larga para caber en una sola línea en el rectángulo de botón.|  
 |`BS_NOTIFY`|Habilita un botón Enviar `BN_DBLCLK`, `BN_KILLFOCUS`, y `BN_SETFOCUS` mensajes de notificación a su ventana primaria. Tenga en cuenta que los botones de envío el `BN_CLICKED` notificación independientemente de si se ha especificado este estilo.|  
   
-<a name="combo-box-styles"></a>  
-  
-## <a name="combo-box-styles"></a>Estilos de cuadro combinado  
+## <a name="combo-box-styles"></a>  Estilos de cuadro combinado  
   
 Los siguientes estilos de cuadro combinado están disponibles en MFC. Para obtener más información sobre los estilos de cuadro combinado de Windows, vea [estilos de cuadro combinado (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
   
@@ -309,9 +305,7 @@ Los siguientes estilos de cuadro combinado están disponibles en MFC. Para obten
 |`CBS_SORT`|Se ordena automáticamente las cadenas especificadas en el cuadro de lista.|  
 |`CBS_UPPERCASE`|Convierte a mayúsculas todo el texto en el campo de selección y en la lista.|  
   
-<a name="edit-styles"></a>  
-  
-## <a name="edit-styles"></a>Estilos de edición  
+## <a name="edit-styles"></a>  Estilos de edición  
   
 Editar estilos se aplican a [clase CEdit](../../mfc/reference/cedit-class.md) objetos. Especificar una combinación de estilos en el `dwStyle` parámetro de [CEdit::Create](../../mfc/reference/cedit-class.md#create). Para obtener más información sobre los estilos de control de edición en Windows, consulte [estilos de Control de edición (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
@@ -332,9 +326,7 @@ Editar estilos se aplican a [clase CEdit](../../mfc/reference/cedit-class.md) ob
 |`ES_UPPERCASE`|Convierte todos los caracteres a mayúsculas cuando se escriben en el control de edición.|  
 |`ES_WANTRETURN`|Especifica que se insertó un retorno de carro cuando el usuario presiona la tecla ENTRAR al escribir texto en un control de edición de varias líneas en un cuadro de diálogo. Sin este estilo, al presionar la tecla ENTRAR tiene el mismo efecto que si se presiona el pulsador predeterminado de cuadros de diálogo. Este estilo no tiene ningún efecto en una sola línea control de edición.|  
   
-<a name="frame-window-styles-mfc"></a>  
-  
-## <a name="frame-window-styles"></a>Estilos de ventana de marco  
+## <a name="frame-window-styles-mfc"></a> Estilos de ventana de marco  
   
 Estilos de ventana de marco se aplican a [CFrameWnd (clase)](../../mfc/reference/cframewnd-class.md) objetos. Especificar una combinación de estilos en el `dwStyle` parámetro de [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create).  
   
@@ -342,11 +334,9 @@ Estilos de ventana de marco se aplican a [CFrameWnd (clase)](../../mfc/reference
 |-----------|-----------------|  
 |`FWS_ADDTOTITLE`|Especifica la información que se anexará al final de un título de ventana de marco. Por ejemplo, "Microsoft dibujar – dibujo en Document1". Puede especificar las cadenas que se muestran en la ficha de cadenas de plantillas de documento en el Asistente para aplicaciones. Si tiene que desactivar esta opción, invalide el `CWnd::PreCreateWindow` función miembro.|  
 |`FWS_PREFIXTITLE`|Muestra el nombre del documento antes del nombre de la aplicación en un título de ventana de marco. Por ejemplo, "documento – WordPad". Puede especificar las cadenas que se muestran en la ficha de cadenas de plantillas de documento en el Asistente para aplicaciones. Si tiene que desactivar esta opción, invalide el `CWnd::PreCreateWindow` función miembro.|  
-|`FWS_SNAPTOBARS`|Ajuste de tamaño de controles de la ventana de marco que rodea un control de barra cuando está en una ventana flotante en lugar de acoplada a una ventana de marco. Este estilo cambia el tamaño de la ventana para ajustarlo a la barra de control.|  
+|`FWS_SNAPTOBARS`|Ajuste de tamaño de controles de la ventana de marco que rodea un control de barra cuando está en una ventana flotante en lugar de acoplada a una ventana de marco. Este estilo cambia el tamaño de la ventana para ajustarlo a la barra de control.|
   
-<a name="list-box-styles"></a>  
-  
-## <a name="list-box-styles"></a>Estilos de cuadro de lista  
+## <a name="list-box-styles"></a> Estilos de cuadro de lista  
   
 Estilos de cuadro de lista se aplican a [CListBox (clase)](../../mfc/reference/clistbox-class.md) objetos. Especificar una combinación de estilos en el `dwStyle` parámetro de [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Para obtener más información sobre los estilos de cuadro de lista en Windows, consulte [estilos de cuadro de lista (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
   
@@ -369,9 +359,7 @@ Estilos de cuadro de lista se aplican a [CListBox (clase)](../../mfc/reference/c
 |`LBS_USETABSTOPS`|Permite que un cuadro de lista reconozca y expanda los caracteres de tabulación al dibujar sus cadenas. Las posiciones de tabulación predeterminada son 32 unidades de cuadro de diálogo. (Una unidad de cuadro de diálogo es una distancia horizontal o vertical. Una unidad de cuadro de diálogo horizontal equivale a una cuarta parte de la unidad de base de ancho del cuadro de diálogo actual. Las unidades de base del cuadro de diálogo se calculan basándose en el alto y ancho de la fuente del sistema actual. El `GetDialogBaseUnits` la función de Windows devuelve el cuadro de diálogo actual unidades base en píxeles.) Este estilo no debe usarse con `LBS_OWNERDRAWFIXED`.|  
 |`LBS_WANTKEYBOARDINPUT`|El propietario del cuadro de lista recibe `WM_VKEYTOITEM` o `WM_CHARTOITEM` mensajes cada vez que el usuario presiona una tecla mientras el cuadro de lista tiene foco de entrada. Esto permite que una aplicación realizar un procesamiento especial en la entrada del teclado.|  
   
-<a name="message-box-styles"></a>  
-  
-## <a name="message-box-styles"></a>Estilos de cuadro de mensaje  
+##<a name="message-box-styles"></a>  Estilos de cuadro de mensaje  
   
 Estilos de cuadro de mensaje que se aplican a [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) elementos. Especificar una combinación de estilos en el `nType` parámetro de `AfxMessageBox`. Para obtener más información sobre los estilos de cuadro de mensaje en Windows, consulte [función MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
   
@@ -412,9 +400,7 @@ Están disponibles los siguientes estilos de cuadro de mensaje.
 |`MB_DEFBUTTON2`|El segundo botón es el valor predeterminado.|  
 |`MB_DEFBUTTON3`|El tercer botón es el valor predeterminado.|  
   
-<a name="scroll-bar-styles"></a>  
-  
-## <a name="scroll-bar-styles"></a>Estilos de barra de desplazamiento  
+## <a name="scroll-bar-styles"></a> Estilos de barra de desplazamiento  
   
 Estilos de barra de desplazamiento se aplican a [CScrollBar clase](../../mfc/reference/cscrollbar-class.md) objetos. Especificar una combinación de estilos en el `dwStyle` parámetro de [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Para obtener más información acerca de desplazamiento de la barra estilos de control de Windows, vea [estilos de Control de barra de desplazamiento (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
@@ -431,9 +417,7 @@ Estilos de barra de desplazamiento se aplican a [CScrollBar clase](../../mfc/ref
 |`SBS_TOPALIGN`|Usar con el `SBS_HORZ` estilo. El borde superior de la barra de desplazamiento se alinea con el borde superior del rectángulo especificado en el `Create` función miembro. La barra de desplazamiento tiene el alto predeterminado para las barras de desplazamiento de sistema.|  
 |`SBS_VERT`|Designa una barra de desplazamiento vertical. Si no la `SBS_RIGHTALIGN` ni `SBS_LEFTALIGN` estilo se especifica, la barra de desplazamiento tiene el alto, el ancho y la posición en la `Create` función miembro.|  
   
-<a name="static-styles"></a>  
-  
-## <a name="static-styles"></a>Estilos estáticos  
+## <a name="static-styles"></a> Estilos estáticos  
   
 Estilos estáticos se aplican a [CStatic clase](../../mfc/reference/cstatic-class.md) objetos. Especificar una combinación de estilos en el `dwStyle` parámetro de [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Para obtener más información sobre los estilos de control estático de Windows, vea [estilos de Control estática (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
@@ -467,9 +451,7 @@ Estilos estáticos se aplican a [CStatic clase](../../mfc/reference/cstatic-clas
 |`SS_WHITERECT`|Especifica un rectángulo rellenado con el color usado para rellenar el fondo de la ventana. El valor predeterminado es blanco.|  
 |`SS_WORDELLIPSIS`|Trunca el texto que no se ajusta y agrega puntos suspensivos.|  
   
-<a name="window-styles"></a>  
-  
-## <a name="window-styles"></a>Estilos de ventana  
+## <a name="window-styles"></a> Estilos de ventana  
   
 Estilos de ventana se aplican a [CWnd (clase)](../../mfc/reference/cwnd-class.md) objetos. Especificar una combinación de estilos en el `dwStyle` parámetro de [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) o [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Para obtener más información sobre los estilos de ventana de Windows, vea [estilos de ventana (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
@@ -503,9 +485,7 @@ Estilos de ventana se aplican a [CWnd (clase)](../../mfc/reference/cwnd-class.md
 |`WS_VISIBLE`|Crea una ventana que esté visible inicialmente.|  
 |`WS_VSCROLL`|Crea una ventana que tiene una barra de desplazamiento vertical.|  
   
-<a name="extended-window-styles"></a>  
-  
-## <a name="extended-window-styles"></a>Estilos de ventana extendidos  
+## <a name="extended-window-styles"></a> Estilos de ventana extendidos  
   
 Aplican estilos de ventana extendidos a [CWnd (clase)](../../mfc/reference/cwnd-class.md) objetos. Especificar una combinación de estilos en el `dwExStyle` parámetro de [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Para obtener más información sobre los estilos de ventana extendidos en Windows, consulte [estilos de ventana extendidos (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
   
