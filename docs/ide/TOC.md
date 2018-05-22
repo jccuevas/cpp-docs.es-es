@@ -71,6 +71,7 @@
 ## [Descripción de las dependencias de una aplicación de Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md)
 ## [Determinar qué archivos DLL se redistribuirán](determining-which-dlls-to-redistribute.md)
 ## [Elegir un método de implementación](choosing-a-deployment-method.md)
+## [Implementación de CRT universal](universal-crt-deployment.md)
 ## [Redistribuir archivos de Visual C++](redistributing-visual-cpp-files.md)
 ### [Redistribuir componentes mediante módulos de combinación](redistributing-components-by-using-merge-modules.md)
 ### [Redistribuir controles ActiveX de Visual C++](redistributing-visual-cpp-activex-controls.md)
