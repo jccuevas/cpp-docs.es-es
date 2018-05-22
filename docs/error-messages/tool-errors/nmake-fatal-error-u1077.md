@@ -24,7 +24,7 @@ ms.lasthandoff: 05/04/2018
 ---
 # <a name="nmake-fatal-error-u1077"></a>Error grave de NMAKE U1077
 'programa': código devuelto 'valor'  
-  
- El comando determinado o un programa llamado por NMAKE no pudo y devolvió el código de salida determinado.  
-  
- Para suprimir este error y continuar la sesión NMAKE, utilice la opción/i, la **. OMITIR** directiva de punto o el guión (**-**) modificador de comando. Para continuar la sesión NMAKE para partes no relacionadas del árbol de dependencia, use la opción/k.
+ 
+El comando o programa llamado por NMAKE falló y devolvió el código de error dado.
+
+Para suprimir este error y continuar con la sesión de NMAKE, utilice la opción /I, la directiva **.IGNORE**, o el guión (**-**) modificador de comandos. Para continuar con la sesión de NMAKE para partes no relacionadas con el árbol de dependencia, utilice la opción /K.
