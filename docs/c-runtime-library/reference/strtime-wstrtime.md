@@ -43,11 +43,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2881cc0b026225674096127eba165b622483de3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -85,7 +85,7 @@ Devuelve un puntero a la cadena de caracteres resultante *timestr*.
 
 El **_strtime** función copia la hora local actual en el búfer señalado por *timestr*. La hora se formatea como **hh** donde **hh** es de dos dígitos que representa la hora en la notación de 24 horas, **mm** es de dos dígitos que representa los minutos transcurridos tras la hora y **ss** es de dos dígitos que representa los segundos. Por ejemplo, la cadena **18:23:44** representa 23 minutos y 44 segundos más allá de 6 p. M. La longitud del búfer debe ser de 9 bytes como mínimo.
 
-**_wstrtime** es una versión con caracteres anchos de **_strtime**; el argumento y el valor devuelto de **_wstrtime** son cadenas de caracteres anchos. Estas funciones se comportan exactamente igual. Si *timestr* es **NULL** puntero o si *timestr* tiene un formato incorrecto, no válido se invoca el controlador de parámetros, como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la excepción puede continuar, estas funciones devuelven un valor NULL y el conjunto **errno** a **EINVAL** si *timestr* era un valor NULL o establecer **errno**a **ERANGE** si *timestr* tiene un formato incorrecto.
+**_wstrtime** es una versión con caracteres anchos de **_strtime**; el argumento y el valor devuelto de **_wstrtime** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual. Si *timestr* es un **NULL** puntero o si *timestr* tiene un formato incorrecto, no válido se invoca el controlador de parámetros, como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la excepción puede continuar, estas funciones devuelven un **NULL** y establecer **errno** a **EINVAL** si *timestr* era una **NULL** o establecer **errno** a **ERANGE** si *timestr* tiene un formato incorrecto.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

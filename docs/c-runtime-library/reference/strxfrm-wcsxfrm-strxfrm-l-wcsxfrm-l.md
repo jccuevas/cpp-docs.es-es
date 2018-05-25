@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -108,7 +108,7 @@ Después de la transformación, una llamada a **strcmp** con las dos cadenas tra
 
 **wcsxfrm** es una versión con caracteres anchos de **strxfrm**; los argumentos de cadena de **wcsxfrm** son punteros de caracteres anchos. Para **wcsxfrm**, después la transformación de cadena, una llamada a **wcscmp** con las dos cadenas transformadas produce resultados idénticos a los de una llamada a **wcscoll** aplicado a la dos cadenas originales. **wcsxfrm** y **strxfrm** se comportan exactamente igual. **wcsxfrm** utiliza la configuración regional actual de su comportamiento dependiente de la configuración regional; **_wcsxfrm_l** usa la configuración regional pasada en lugar de la configuración regional actual.
 
-Estas funciones validan sus parámetros. Si *strSource* es un puntero nulo, o *strDest* es un puntero NULL (a menos que el recuento es cero), o si *recuento* es mayor que **INT_MAX**, el se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **INT_MAX**.
+Estas funciones validan sus parámetros. Si *strSource* es un puntero nulo, o *strDest* es un **NULL** puntero (a menos que el recuento es cero), o si *recuento* es mayor que **INT_MAX**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **INT_MAX**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

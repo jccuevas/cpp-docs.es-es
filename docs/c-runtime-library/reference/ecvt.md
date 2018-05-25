@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 302cfae33e1567c2dc94c73156df005fcbb667f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -71,7 +71,7 @@ Signo del número que se convierte.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ecvt** devuelve un puntero a la cadena de dígitos; Es NULL si se produjo un error.
+**_ecvt** devuelve un puntero a la cadena de dígitos; **NULL** si se produjo un error.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -85,7 +85,7 @@ La diferencia entre **_ecvt** y **_fcvt** está en la interpretación de la *rec
 
 **_ecvt** y **_fcvt** utilice un único búfer asignado estáticamente para la conversión. Cada llamada a una de estas rutinas destruye el resultado de la llamada anterior.
 
-Esta función valida sus parámetros. Si *dec* o *inicio de sesión* es NULL, o *recuento* es 0, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y se devuelve NULL.
+Esta función valida sus parámetros. Si *dec* o *inicio de sesión* es **NULL**, o *recuento* es 0, se invoca el controlador de parámetros no válidos, tal y como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y **NULL** se devuelve.
 
 ## <a name="requirements"></a>Requisitos
 

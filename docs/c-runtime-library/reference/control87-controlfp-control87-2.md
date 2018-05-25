@@ -48,11 +48,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 098e5760718e4e2d2a9063700b09d0381e76df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48d0c3107bf2edc09017ea138e4c8024ce328dd8
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -128,7 +128,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-En plataformas ARM, el **_control87** y **_controlfp** aplican las funciones para el registro fpscr. En x64 arquitecturas, solo la palabra de control de SSE2 se almacena en el MXCSR se ve afectado el registro. En x86 plataformas, **_control87** y **_controlfp** afectan a las palabras de control de x87 y SSE2, si está presente. La función **__control87_2** permite x87 y unidades de punto flotante SSE2 controlar conjuntamente o por separado. Si desea que afecte a las unidades, pase las direcciones de dos enteros a **x86_cw** y **sse2_cw**. Si desea que solo se vea afectada una unidad, pase una dirección para ese parámetro y pase 0 para el otro. Si se pasa 0 para uno de estos parámetros, la función no tiene ningún efecto en esa unidad de punto flotante. Esta funcionalidad podría ser útil en situaciones en la que parte del código usa la unidad de punto flotante x87 y otra parte usa la unidad de punto flotante SSE2. Si usa **__control87_2** en una parte de un programa y establecer valores diferentes para las palabras de control de punto flotante y, a continuación, utilizar **_control87** o **_controlfp** para seguir manipular la palabra de control, a continuación, **_control87** y **_controlfp** es posible que pueda devolver una sola palabra de control para representar el estado de las unidades de punto flotante. En tal caso, estas funciones establecen los **EM_AMBIGUOUS** marca en el valor entero devuelto para indicar que hay una incoherencia entre las dos palabras de control. Se trata de una forma de advertir que la palabra de control devuelta podría no representar con precisión el estado de las dos palabras de control de punto flotante.
+En plataformas ARM, el **_control87** y **_controlfp** aplican las funciones para el registro fpscr. En x64 arquitecturas, solo la palabra de control de SSE2 se almacena en el MXCSR se ve afectado el registro. En x86 plataformas, **_control87** y **_controlfp** afectan a las palabras de control de x87 y SSE2, si está presente. La función **__control87_2** permite x87 y unidades de punto flotante SSE2 controlar conjuntamente o por separado. Si desea que afecte a las unidades, pase las direcciones de dos enteros a **x86_cw** y **sse2_cw**. Si solo desea afectar a una unidad, pase una dirección para ese parámetro y pase 0 (**NULL**) para los demás. Si se pasa 0 para uno de estos parámetros, la función no tiene ningún efecto en esa unidad de punto flotante. Esta funcionalidad podría ser útil en situaciones en la que parte del código usa la unidad de punto flotante x87 y otra parte usa la unidad de punto flotante SSE2. Si usa **__control87_2** en una parte de un programa y establecer valores diferentes para las palabras de control de punto flotante y, a continuación, utilizar **_control87** o **_controlfp** para seguir manipular la palabra de control, a continuación, **_control87** y **_controlfp** es posible que pueda devolver una sola palabra de control para representar el estado de las unidades de punto flotante. En tal caso, estas funciones establecen los **EM_AMBIGUOUS** marca en el valor entero devuelto para indicar que hay una incoherencia entre las dos palabras de control. Se trata de una forma de advertir que la palabra de control devuelta podría no representar con precisión el estado de las dos palabras de control de punto flotante.
 
 En el BRAZO y x64 arquitecturas, cambiar el modo de infinito o la precisión de punto flotante no es compatible. Si se usa la máscara de control de precisión en la x64 plataforma, la función genera una aserción y se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 

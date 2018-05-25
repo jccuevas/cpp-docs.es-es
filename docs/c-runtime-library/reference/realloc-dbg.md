@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d04e78c6f3521c56cd74968a761a2d436e36bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c4bb3eab58807805ec3c4fbc35611d268bbeee9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -69,16 +69,16 @@ Tamaño solicitado para el bloque reasignado (bytes).
 Tipo solicitado para el bloque reasignado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntero al nombre del archivo de origen que solicitó el **realloc** operación o NULL.
+Puntero al nombre del archivo de origen que solicitó el **realloc** operación o **NULL**.
 
 *linenumber*<br/>
-Número de línea en el archivo de código fuente donde el **realloc** operación se ha solicitado o NULL.
+Número de línea en el archivo de código fuente donde el **realloc** se solicitó la operación o **NULL**.
 
 El *filename* y *linenumber* parámetros solo están disponibles cuando **_realloc_dbg** se ha llamado explícitamente o [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) se ha definido la constante de preprocesador.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cuando se lleva a cabo correctamente, esta función devuelve un puntero a la parte del usuario del bloque de memoria reasignado, llama a la nueva función de controlador o devuelve NULL. Para obtener una descripción completa del comportamiento de retorno, vea la sección de comentarios más abajo. Para obtener más información sobre cómo se usa la nueva función de controlador, vea la función [realloc](realloc.md).
+Cuando se finaliza correctamente, esta función devuelve un puntero a la parte de usuario del bloque de memoria reasignado, llama a la nueva función de controlador o devuelve **NULL**. Para obtener una descripción completa del comportamiento de retorno, vea la sección de comentarios más abajo. Para obtener más información sobre cómo se usa la nueva función de controlador, vea la función [realloc](realloc.md).
 
 ## <a name="remarks"></a>Comentarios
 

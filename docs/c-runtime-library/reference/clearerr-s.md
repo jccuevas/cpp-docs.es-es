@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03259f0eff64eb23af87ae18dc68272b5a0bd02f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -58,13 +58,13 @@ Puntero a **archivo** estructura
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si es correcto; **EINVAL** si *flujo* es NULL.
+Cero si es correcto; **EINVAL** si *flujo* es **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 
 El **clearerr_s** función restablece el indicador de error y el indicador de fin de archivo para *flujo*. Indicadores de error no se borran automáticamente; una vez que se establece el indicador de error de una secuencia especificada, las operaciones en ese flujo continuar devolver un valor de error hasta que **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, o [rebobinar](rewind.md) se llama.
 
-Si *flujo* es NULL, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
+Si *flujo* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

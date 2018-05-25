@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f523ba11902f3eaa74fc649791313ee9388824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -120,7 +120,7 @@ Durante el inicio del programa, se ejecuta el equivalente de la instrucción sig
 
 `setlocale( LC_ALL, "C" );`
 
-El *configuración regional* argumento puede tomar un nombre de configuración regional, una cadena de idioma, una cadena de idioma y el código de país o región, una página de códigos, o una cadena de idioma, el código de país o región y página de códigos. El conjunto de nombres de configuración regional, idiomas, códigos de país o región y páginas de códigos disponibles contiene todos los admitidos por la API NLS de Windows, excepto las páginas de códigos que requieren más de dos bytes por carácter, como UTF-7 y UTF-8. Si proporciona un valor de la página de códigos de UTF-7 o UTF-8, **setlocale** se producirá un error, devuelve NULL. El conjunto de nombres de configuración regional compatibles con **setlocale** se describen en [nombres de configuración regional, idiomas y cadenas de país/región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). El conjunto de cadenas de idioma y país o región admitidas por **setlocale** se enumeran en [cadenas de idioma](../../c-runtime-library/language-strings.md) y [cadenas de país/región](../../c-runtime-library/country-region-strings.md). Se recomienda emplear el formato del nombre de la configuración regional para mejorar el rendimiento y simplificar el mantenimiento de las cadenas de configuración regional insertadas en código o serializadas en el almacenamiento. Es menos probable que una actualización del sistema operativo cambie las cadenas de nombre de configuración regional que el formato de nombre de idioma y de país o región.
+El *configuración regional* argumento puede tomar un nombre de configuración regional, una cadena de idioma, una cadena de idioma y el código de país o región, una página de códigos, o una cadena de idioma, el código de país o región y página de códigos. El conjunto de nombres de configuración regional, idiomas, códigos de país o región y páginas de códigos disponibles contiene todos los admitidos por la API NLS de Windows, excepto las páginas de códigos que requieren más de dos bytes por carácter, como UTF-7 y UTF-8. Si proporciona un valor de la página de códigos de UTF-7 o UTF-8, **setlocale** producirá y devolverá **NULL**. El conjunto de nombres de configuración regional compatibles con **setlocale** se describen en [nombres de configuración regional, idiomas y cadenas de país/región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). El conjunto de cadenas de idioma y país o región admitidas por **setlocale** se enumeran en [cadenas de idioma](../../c-runtime-library/language-strings.md) y [cadenas de país/región](../../c-runtime-library/country-region-strings.md). Se recomienda emplear el formato del nombre de la configuración regional para mejorar el rendimiento y simplificar el mantenimiento de las cadenas de configuración regional insertadas en código o serializadas en el almacenamiento. Es menos probable que una actualización del sistema operativo cambie las cadenas de nombre de configuración regional que el formato de nombre de idioma y de país o región.
 
 Un puntero null que se pasa como el *configuración regional* argumento indica **setlocale** para consultar en lugar de establecer el entorno internacional. Si el *configuración regional* argumento es un puntero nulo, no se cambia la configuración regional actual del programa. En su lugar, **setlocale** devuelve un puntero a la cadena que está asociada el *categoría* de configuración regional del subproceso. Si el *categoría* argumento es **LC_ALL**, la función devuelve una cadena que indica el valor actual de cada categoría, separadas por punto y coma. Por ejemplo, la secuencia de llamadas
 

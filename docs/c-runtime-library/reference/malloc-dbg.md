@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1522b292f04f1148722ddb0c85473c560372e88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -63,16 +63,16 @@ Tamaño solicitado del bloque de memoria (en bytes).
 Tipo del bloque de memoria solicitado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o valor NULL.
+Puntero al nombre del archivo de origen que solicitó la operación de asignación o **NULL**.
 
 *linenumber*<br/>
-Número de línea del archivo de código fuente en la que se solicitó la operación de asignación o valor NULL.
+Número de línea en el archivo de origen que se solicitó la operación de asignación o **NULL**.
 
 El *filename* y *linenumber* parámetros solo están disponibles cuando **_malloc_dbg** se ha llamado explícitamente o [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)se ha definido la constante de preprocesador.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cuando se lleva a cabo correctamente, esta función devuelve un puntero a la parte del usuario del último bloque de memoria asignado, llama a la nueva función de controlador o devuelve NULL. Para obtener una descripción completa del comportamiento de retorno, vea la sección de comentarios más abajo. Para obtener más información sobre cómo se usa la nueva función de controlador, vea la función [malloc](malloc.md).
+Cuando se finaliza correctamente, esta función devuelve un puntero a la parte de usuario del bloque de memoria asignado, llama a la nueva función de controlador o devuelve **NULL**. Para obtener una descripción completa del comportamiento de retorno, vea la sección de comentarios más abajo. Para obtener más información sobre cómo se usa la nueva función de controlador, vea la función [malloc](malloc.md).
 
 ## <a name="remarks"></a>Comentarios
 

@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387d8165ad157f5d4b8936b79590d8e3ebbc2810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -103,7 +103,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero al siguiente token que se encuentra en *strToken*. Devuelven **NULL** cuando no se encuentren más tokens. Cada llamada modifica *strToken* al sustituir una **NULL** caracteres para el primer delimitador que aparece después del token devuelto.
+Devuelve un puntero al siguiente token que se encuentra en *strToken*. Devuelven **NULL** cuando no se encuentren más tokens. Cada llamada modifica *strToken* sustituyendo un carácter nulo para el primer delimitador que aparece después del token devuelto.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -114,7 +114,7 @@ El **strtok** función busca el siguiente token en *strToken*. El juego de carac
 
 En la primera llamada a **strtok**, la función omite los delimitadores iniciales y devuelve un puntero al primer token de *strToken*, finaliza el token con un carácter nulo. Más tokens se pueden extraer el resto de *strToken* mediante una serie de llamadas a **strtok**. Cada llamada a **strtok** modifica *strToken* insertando un carácter nulo después de la **token** devuelto por la llamada. Para leer el token siguiente de *strToken*, llame a **strtok** con un **NULL** valor para el *strToken* argumento. El **NULL** *strToken* argumento causas **strtok** para buscar el siguiente token en modificados *strToken*. El *strDelimit* argumento acepta cualquier valor de una llamada a la siguiente para que el juego de delimitadores puede variar.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Cada función usa una variable estática local de subproceso para dividir la cadena en tokens. Por consiguiente, varios subprocesos pueden llamar simultáneamente a estas funciones sin que se produzcan efectos no deseados. Sin embargo, dentro de un único subproceso, la intercalación de llamadas a una de estas funciones generará probablemente daños en los datos y resultados poco precisos. Al analizar diferentes cadenas, termine de analizar una cadena antes de empezar a analizar la siguiente. Además, tenga en cuenta el riesgo que puede existir al llamar a una de estas funciones dentro de un bucle donde se llama a otra función. Si la otra función usa una de estas funciones, se producirá una secuencia intercalada de llamadas y se generarán daños en los datos.

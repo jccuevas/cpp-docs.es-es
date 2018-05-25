@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d300ae9d0b03f5d6b8549026afe106aef32d62d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5e6f768d6f384e5b3b39e8d2884a7a7cb0362915
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getunexpected"></a>_get_unexpected
 
@@ -52,7 +52,7 @@ unexpected_function _get_unexpected( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a la función registrada por [set_unexpected](set-unexpected-crt.md). Si no se ha establecido ninguna función, el valor devuelto puede usarse para restaurar el comportamiento predeterminado; puede que este valor sea NULL.
+Devuelve un puntero a la función registrada por [set_unexpected](set-unexpected-crt.md). Si no se ha establecido ninguna función, el valor devuelto puede utilizarse para restaurar el comportamiento predeterminado; Este valor puede ser **NULL**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1bf80276b5434804651bcc4507397e9479f6e494
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Tutorial: Depurar una aplicación de C++ AMP
 Este tema muestra cómo depurar una aplicación que usa C++ Accelerated Massive Parallelism (C++ AMP) para aprovechar las ventajas de la unidad de procesamiento de gráficos (GPU). Usa un programa de reducción paralelo que realiza la suma de una matriz grande de enteros. En este tutorial se muestran las tareas siguientes:  
@@ -228,7 +228,9 @@ Puntos de interrupción de CPU
   
 3.  En el **depurador para iniciar** lista, seleccione **depurador Local de Windows**.  
   
-4.  En el **tipo de depurador** lista, seleccione **solo GPU**.  
+4.  En el **tipo de depurador** lista, compruebe que **automática** está seleccionada.
+
+    **Auto** es el valor predeterminado. Antes de Windows 10, **solo GPU** es el valor necesario en lugar de **automática**.
   
 5.  Elija el botón **Aceptar** .  
   

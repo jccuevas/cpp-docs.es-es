@@ -60,11 +60,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9bebda262bde4dd3bb2484a95b7b57a6960d99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -126,11 +126,11 @@ Configuración regional que se va a usar.
 
 **_mbsnbcnt** y **_mbsnbcnt_l** contar el número de bytes que se encuentran en la primera *recuento* de caracteres multibyte de *str*. **_mbsnbcnt** y **_mbsnbcnt_l** reemplazar **mtob** y debe utilizarse en lugar de **mtob**.
 
-**_mbsnccnt** y **_mbsnccnt_l** contar el número de caracteres que se encuentran en la primera *recuento* de bytes de *str*. Si **_mbsnccnt** y **_mbsnccnt_l** se produce un valor NULL en el segundo byte de un carácter de doble byte, el primer byte también se considera NULL y no se incluye en el valor de recuento devuelto. **_mbsnccnt** y **_mbsnccnt_l** reemplazar **btom** y debe utilizarse en lugar de **btom**.
+**_mbsnccnt** y **_mbsnccnt_l** contar el número de caracteres que se encuentran en la primera *recuento* de bytes de *str*. Si **_mbsnccnt** y **_mbsnccnt_l** detecta un carácter nulo en el segundo byte de un carácter de doble byte, el primer byte también se considera null y no se incluye en el valor de recuento devuelto. **_mbsnccnt** y **_mbsnccnt_l** reemplazar **btom** y debe utilizarse en lugar de **btom**.
 
-Si *str* es un puntero nulo o es *recuento* es 0, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md), **errno** se establece en **EINVAL**, y la función devuelve 0.
+Si *str* es un **NULL** puntero o es *recuento* es 0, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md), **errno** está establecido en **EINVAL**, y la función devuelve 0.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

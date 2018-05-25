@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -77,7 +77,7 @@ Puntero al número de línea en el archivo de origen o **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_CrtIsMemoryBlock** función comprueba que un bloque de memoria especificado está ubicado en el montón local de la aplicación y que tiene un identificador de tipo de bloque válido. Esta función también se puede usar para obtener el número de orden de la asignación de objetos, y el nombre y el número de línea del archivo de código fuente en el que se solicitó la asignación del bloque de memoria originalmente. Pasar valores no NULL la *requestNumber*, *filename*, o *linenumber* causas de parámetros **_CrtIsMemoryBlock** establecer Estos parámetros a los valores en el bloque de memoria de depuración encabezado, si encuentra el bloque en el montón local. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtIsMemoryBlock** se quitan durante el preprocesamiento.
+El **_CrtIsMemoryBlock** función comprueba que un bloque de memoria especificado está ubicado en el montón local de la aplicación y que tiene un identificador de tipo de bloque válido. Esta función también se puede usar para obtener el número de orden de la asignación de objetos, y el nombre y el número de línea del archivo de código fuente en el que se solicitó la asignación del bloque de memoria originalmente. Pasar no -**NULL** los valores para la *requestNumber*, *filename*, o *linenumber* causas de parámetros **_ CrtIsMemoryBlock** para establecer estos parámetros a los valores de encabezado de depuración del bloque de memoria, si encuentra el bloque en el montón local. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtIsMemoryBlock** se quitan durante el preprocesamiento.
 
 Si **_CrtIsMemoryBlock** produce un error, devuelve **FALSE** y los parámetros de salida se inicializan con valores predeterminados: *requestNumber* y **lineNumber**  se establecen en 0 y *filename* está establecido en **NULL**.
 

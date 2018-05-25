@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e0b0838f75e8fa95d19ed3abfe13b014157a217
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd938b935ff5e69adf4d4e56cd70693cfd1a872d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -66,10 +66,10 @@ Valor de la alineación, que debe ser un entero potencia de 2.
 Desplazamiento en la asignación de memoria para imponer la alineación.
 
 *filename*<br/>
-Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o valor NULL.
+Puntero al nombre del archivo de origen que solicitó la operación de asignación o **NULL**.
 
 *linenumber*<br/>
-Número de línea del archivo de código fuente en la que se solicitó la operación de asignación o valor NULL.
+Número de línea en el archivo de origen que se solicitó la operación de asignación o **NULL**.
 
 ## <a name="return-value"></a>Valor devuelto
 

@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b82eae4826bd6a359f2cf0d4e74bccd32f81b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be098cb1fe53e1345f0c4f40212657f4bfd97f4f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 
@@ -85,13 +85,13 @@ Configuración regional que se va a usar.
 |**_MBC_SINGLE** (0)|Carácter de un solo byte. Por ejemplo, en la página de códigos 932, **_mbsbtype** devuelve 0 si el byte especificado está dentro del intervalo 0 x 20-0x7E o 0xA1 - 0xDF.|
 |**_MBC_LEAD** (1)|Byte inicial de un carácter multibyte. Por ejemplo, en la página de códigos 932, **_mbsbtype** devuelve 1 si el byte especificado está dentro del intervalo 0 x 81-0x9F o 0xE0 - 0xFC.|
 |**_MBC_TRAIL** (2)|Byte final de un carácter multibyte. Por ejemplo, en la página de códigos 932, **_mbsbtype** devuelve 2 si el byte especificado está dentro del intervalo 0 x 40-0x7E o 0 x 80 - 0xFC.|
-|**_MBC_ILLEGAL** (-1)|**NULL** cadena, un carácter no válido, o **NULL** encontrado antes del byte en el desplazamiento de bytes *recuento* en *mbstr*.|
+|**_MBC_ILLEGAL** (-1)|**NULL** cadena, carácter no válido o byte nulo encontrado antes del byte en el desplazamiento *recuento* en *mbstr*.|
 
 ## <a name="remarks"></a>Comentarios
 
 El **_mbsbtype** función determina el tipo de un byte de una cadena de caracteres multibyte. La función solo examina el byte en el desplazamiento *recuento* en *mbstr*, omitiendo los caracteres no válidos anteriores al byte especificado.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el **_l** sufijo usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el **_l** sufijo es idéntico, salvo que usa el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el **_l** sufijo usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el **_l** sufijo es idéntico, salvo que usa el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 Si la cadena de entrada es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **_MBC_ILLEGAL**.
 

@@ -30,11 +30,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14034c598c3f7e77bc6bc650b275ee1e035d084c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 413592bcf3af01c898a72d0ca70239364ee432f9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -55,7 +55,7 @@ Puntero a una variable [mbstate_t](../../c-runtime-library/standard-types.md).
 
 ## <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si *ps* es NULL o si no en el medio de una conversión.
+Distinto de cero si *ps* es **NULL** o si no en el medio de una conversión.
 
 ## <a name="remarks"></a>Comentarios
 

@@ -1,7 +1,9 @@
 ---
 title: Configuración de un proyecto de C++ de Linux en Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2017
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 799eb17ec5cb34cdd0e266f389ad77cb427c7577
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-project"></a>Configurar un proyecto de Linux
 En este tema se describe cómo configurar un proyecto de Linux en Visual Studio. Para obtener información sobre los proyectos de Linux de CMake, consulte [Configure a Linux CMake Project](cmake-linux-project.md) (Configuración de un proyecto de CMake de Linux).
@@ -40,8 +42,10 @@ Para cambiar la configuración correspondiente al equipo Linux remoto, configure
 > [!NOTE]
 > Para cambiar el valor predeterminado de los compiladores de C y C++, o el enlazador y el archivador usados para compilar el proyecto, use las entradas pertinentes de la sección **C/C++ > General** y en la sección **Enlazador > General**.  Podrían establecerse para usar una versión determinada de GCC o incluso el compilador Clang, por ejemplo.
 
-## <a name="vc-directories"></a>Directorios de VC++
-De forma predeterminada, Visual Studio no incluye ningún archivo de inclusión de nivel de sistema del equipo Linux.  Por ejemplo, los elementos del directorio **/usr/include** no están presentes en Visual Studio.  Para una compatibilidad total con [IntelliSense](/visualstudio/ide/using-intellisense), tendrá que copiar esos archivos en alguna ubicación del equipo de desarrollo y apuntar Visual Studio a esta ubicación.  Una opción es usar scp (Secure Copy) para copiar los archivos.  En Windows 10, puede usar [Bash en Windows](https://msdn.microsoft.com/commandline/wsl/about) para ejecutar scp.  En versiones anteriores de Windows, podría usar algo como [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+## <a name="include-directories-and-intellisense-support"></a>Directorios de inclusión y compatibilidad con IntelliSense
+
+**Visual Studio 2017 versión 15.6 y anteriores:** de forma predeterminada, Visual Studio no incluye los archivos de inclusión de nivel de sistema del equipo Linux.  Por ejemplo, los elementos del directorio **/usr/include** no están presentes en Visual Studio.
+Para una compatibilidad total con [IntelliSense](/visualstudio/ide/using-intellisense), tendrá que copiar esos archivos en alguna ubicación del equipo de desarrollo y apuntar Visual Studio a esta ubicación.  Una opción es usar scp (Secure Copy) para copiar los archivos.  En Windows 10, puede usar [Bash en Windows](https://msdn.microsoft.com/commandline/wsl/about) para ejecutar scp.  En versiones anteriores de Windows, podría usar algo como [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Puede copiar los archivos mediante un comando similar al siguiente:
 
@@ -52,6 +56,8 @@ Por supuesto, reemplace los valores **linux_username** y **remote_host** anterio
 Una vez copiados los archivos, use el elemento **Directorios de VC++** de las propiedades del proyecto para indicarle a Visual Studio dónde encontrar los archivos de inclusión adicionales que se acaban de copiar.
 
 ![Directorios de VC++](media/settings_directories.png)
+
+**Visual Studio 2017 15.7 y versiones posteriores:** vea [Administrar encabezados remotos para IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Copiar orígenes
 Al compilar, los archivos de origen del equipo de desarrollo se copian en el equipo Linux y se compilan allí.  De forma predeterminada, se copian todos los orígenes del proyecto de Visual Studio en las ubicaciones establecidas en la configuración anterior.  Pero también pueden agregarse a la lista orígenes adicionales o se puede desactivar por completo la copia de orígenes, que es el valor predeterminado para un proyecto de archivos Make.
@@ -68,6 +74,20 @@ Al compilar, los archivos de origen del equipo de desarrollo se copian en el equ
 Dado que toda la compilación se produce en un equipo remoto, se han agregado varios eventos de compilación adicionales a la sección Eventos de compilación de las propiedades del proyecto.  Estos son **Evento remoto anterior a la compilación**, **Evento remoto anterior a la vinculación** y **Evento remoto posterior a la compilación**, y se producirán en el equipo remoto antes o después de los pasos individuales del proceso.
 
 ![Eventos de compilación](media/settings_buildevents.png)
+
+## <a name="remote_intellisense"></a> IntelliSense para los encabezados remotos (Visual Studio 2017 15.7 y versiones posteriores)
+
+Cuando se agrega una conexión nueva en **Connection Manager**, Visual Studio detecta automáticamente los directorios de inclusión para el compilador en el sistema remoto. Luego, Visual Studio comprime y copia esos archivos en un directorio en el equipo Windows local. Después de eso, cuando se use esa conexión en un proyecto de Visual Studio o CMake, se usan los encabezados de esos directorios para proporcionar IntelliSense.
+
+Esta funcionalidad depende de que el equipo Linux tenga instalado zip. Puede instalar zip mediante este comando apt-get:
+
+```cmd
+apt install zip
+```
+
+Para administrar la caché de encabezados, vaya a **Herramientas > Opciones, multiplataforma > Connection Manager > Administrador de IntelliSense de encabezados remotos**. Para actualizar la caché de encabezados después de realizar cambios en el equipo Linux, seleccione la conexión remota y, después, haga clic en **Actualizar**. Haga clic en **Eliminar** para quitar los encabezados sin eliminar la propia conexión. Haga clic en **Explorar** para abrir el directorio local en el **Explorador de archivos**. Trate a esta carpeta como de solo lectura. Para descargar los encabezados de una conexión existente que se creó antes de la versión 15.3, seleccione la conexión y, después, haga clic en **Descargar**.
+
+![IntelliSense de encabezados remotos](media/remote-header-intellisense.png)
 
 ## <a name="see-also"></a>Vea también
 [Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)  

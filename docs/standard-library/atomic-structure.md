@@ -14,11 +14,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298fe2751cf25355e2075a2870c34bf17cedc222
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7308c127bebd2185429509315ebafb3d83a7efea
+ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="atomic-structure"></a>atomic (Estructura)
 
@@ -63,7 +63,7 @@ struct atomic;
 
 El tipo *Ty* debe ser *copiar de forma trivial*. Es decir, usando [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) copiar sus bytes debe generar válido *Ty* objeto que es igual al objeto original. El [compare_exchange_weak](#compare_exchange_weak) y [compare_exchange_strong](#compare_exchange_strong) funciones miembro utilizan [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) para determinar si dos *Ty* valores son iguales. Estas funciones no utilizarán un *Ty*-definido **operador ==**. Las funciones miembro de **atómica** usar **memcpy** se copian los valores de tipo *Ty*.
 
-Una especialización parcial, ** atómica\<Ty * > **, existe para todos los tipos de puntero. La especialización permite sumar un desplazamiento al valor del puntero administrado o restar un desplazamiento del mismo. Las operaciones aritméticas toman un argumento de tipo **ptrdiff_t** y ajustan ese argumento según el tamaño de *Ty* sea coherente con la aritmética normal de dirección.
+Una especialización parcial, **atómica\<Ty \* >** , existe para todos los tipos de puntero. La especialización permite sumar un desplazamiento al valor del puntero administrado o restar un desplazamiento del mismo. Las operaciones aritméticas toman un argumento de tipo **ptrdiff_t** y ajustan ese argumento según el tamaño de *Ty* sea coherente con la aritmética normal de dirección.
 
 Existe una especialización para cada tipo integral excepto **bool**. Cada especialización proporciona un conjunto completo de métodos para operaciones aritméticas y lógicas atómicas.
 

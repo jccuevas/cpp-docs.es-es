@@ -41,11 +41,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e4a4791092b93d04b06432a5294a11200ed879
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b6e8f5f4634ec93cab619c1e073fa8071691fe6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
 
@@ -77,10 +77,10 @@ Cadena de origen terminada en NULL.
 Tipo de bloque de memoria solicitado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o NULL.
+Puntero al nombre de archivo de código fuente que solicitó la operación de asignación o **NULL**.
 
 *linenumber*<br/>
-Número de línea del archivo de código fuente en la que se solicitó la operación de asignación o valor NULL.
+Número de línea en el archivo de código fuente que se solicitó la operación de asignación o **NULL**.
 
 ## <a name="return-value"></a>Valor devuelto
 

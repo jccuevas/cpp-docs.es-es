@@ -52,11 +52,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a97dc0d1e52cb23e26eeb46e86c684b6bee9d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -118,11 +118,11 @@ El número de caracteres escritos, o -1 si se produjo un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_sprintf_p** función da formato y almacena una serie de caracteres y valores en *búfer*. Cada argumento de la *argument_list* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El *formato* argumento utiliza la [formato de sintaxis de especificación de funciones de printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A **NULL** carácter se anexa después del último carácter escrito. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido. La diferencia entre **_sprintf_p** y **sprintf_s** es que **_sprintf_p** admite parámetros posicionales, lo que permite especificar el orden en que los argumentos son se utiliza en la cadena de formato. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).
+El **_sprintf_p** función da formato y almacena una serie de caracteres y valores en *búfer*. Cada argumento de la *argument_list* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El *formato* argumento utiliza la [formato de sintaxis de especificación de funciones de printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un carácter null se anexa después del último carácter escrito. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido. La diferencia entre **_sprintf_p** y **sprintf_s** es que **_sprintf_p** admite parámetros posicionales, lo que permite especificar el orden en que los argumentos son se utiliza en la cadena de formato. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).
 
 **_swprintf_p** es una versión con caracteres anchos de **_sprintf_p**; los argumentos de puntero a **_swprintf_p** son cadenas de caracteres anchos. Detección de errores en de codificación **_swprintf_p** pueden diferir de la de **_sprintf_p**. **_swprintf_p** y **fwprintf_p** se comportan exactamente igual, salvo que **_swprintf_p** escribe los resultados en una cadena en lugar de a un destino de tipo **archivo**, y **_swprintf_p** requiere el *recuento* parámetro para especificar el número máximo de caracteres que se va a escribir. Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
 
-**_sprintf_p** devuelve el número de bytes almacenados en *búfer*, sin contar el carácter final **NULL** caracteres. **_swprintf_p** devuelve el número de caracteres anchos almacenados en *búfer*, sin contar el carácter final **NULL** carácter ancho. Si *búfer* o *formato* es un puntero nulo, o si la cadena de formato contiene caracteres de formato no válidos, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros ](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen **errno** a **EINVAL**.
+**_sprintf_p** devuelve el número de bytes almacenados en *búfer*, sin contar el carácter nulo de terminación. **_swprintf_p** devuelve el número de caracteres anchos almacenados en *búfer*, sin contar el carácter ancho final null. Si *búfer* o *formato* es un puntero nulo, o si la cadena de formato contiene caracteres de formato no válidos, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros ](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen **errno** a **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

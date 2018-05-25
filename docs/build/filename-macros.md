@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e49c65a642dcee3e0f04fb5000a390fccae98ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e28ba5923d8b62973860c0ba503d13682b3c5e79
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="filename-macros"></a>Macros de nombre de archivo
 Las macros de nombre de archivo están predefinidas como nombres de archivo especificados en la dependencia (especificaciones de nombre de archivo no completa en el disco). Estas macros no tienen que incluirse entre paréntesis cuando se invoca; Especifique solo un $ tal como se muestra.  
@@ -29,8 +29,8 @@ Las macros de nombre de archivo están predefinidas como nombres de archivo espe
 |-----------|-------------|  
 |**$@**|Nombre del destino actual completa (ruta de acceso, nombre base, extensión), como se especifica actualmente.|  
 |**$$@**|Nombre del destino actual completa (ruta de acceso, nombre base, extensión), como se especifica actualmente. Válido solo como una dependencia en una dependencia.|  
-|**$\***|Nombre del destino actual ruta de acceso y base sin extensión de archivo.|  
-|**$\*\***|Todos los dependientes del destino actual.|  
+|**$&#42;**|Nombre del destino actual ruta de acceso y base sin extensión de archivo.|  
+|**$&#42;&#42;**|Todos los dependientes del destino actual.|  
 |**$?**|Todos los dependientes con una marca de tiempo posterior que el destino actual.|  
 |**$<**|Archivo dependiente con una marca de tiempo posterior que el destino actual. Válido únicamente en comandos en reglas de inferencia.|  
   

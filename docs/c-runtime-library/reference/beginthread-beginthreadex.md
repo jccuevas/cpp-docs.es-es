@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -89,22 +89,22 @@ Dirección de inicio de una rutina que comienza la ejecución de un nuevo subpro
 Tamaño de la pila de un subproceso nuevo, o 0.
 
 *arglist*<br/>
-Lista de argumentos que se van a pasar a un nuevo subproceso, o NULL.
+Lista de argumentos que se pasan a un nuevo subproceso, o **NULL**.
 
 *Seguridad*<br/>
-Puntero a una estructura de [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) que determina si el identificador devuelto se puede heredar de procesos secundarios. Si *seguridad* es NULL, el identificador no puede heredarse. Debe ser NULL para aplicaciones de Windows 95.
+Puntero a una estructura de [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) que determina si el identificador devuelto se puede heredar de procesos secundarios. Si *seguridad* es **NULL**, el identificador no puede heredarse. Debe ser **NULL** para aplicaciones de Windows 95.
 
 *initflag*<br/>
 Marcas que controlan el estado inicial de un nuevo subproceso. Establecer *initflag* en 0 para que se ejecute inmediatamente o en **CREATE_SUSPENDED** para crear el subproceso en un estado suspendido; use [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) para ejecutar el subproceso. Establecer *initflag* a **STACK_SIZE_PARAM_IS_A_RESERVATION** marca para usar *stack_size* como inicial reservar el tamaño de la pila en bytes; si es esta marca no se especifica, *stack_size* especifica el tamaño de confirmación.
 
 *thrdaddr*<br/>
-Señala a una variable de 32 bits que recibe el identificador del subproceso. Si es NULL, no se utiliza.
+Señala a una variable de 32 bits que recibe el identificador del subproceso. Si es **NULL**, no se utiliza.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Si es correcto, cada una de estas funciones devuelve un identificador al subproceso recién creado; Sin embargo, si el subproceso recién creado sale demasiado rápido, **_beginthread** no puede devolver un identificador válido. (Vea la explicación en la sección Comentarios). Produce un error, **_beginthread** devuelve-1 L y **errno** está establecido en **EAGAIN** si hay demasiados subprocesos, en **EINVAL** si el argumento es no válido o el tamaño de pila es incorrecto, o a **EACCES** si no hay suficientes recursos (como memoria). Produce un error, **_beginthreadex** devuelve 0, y **errno** y **_doserrno** están establecidos.
 
-Si *start_address* es NULL, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1.
+Si *start_address* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1.
 
 Para obtener más información sobre estos y otros códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -137,7 +137,7 @@ Puede llamar a [_endthread](endthread-endthreadex.md) o **_endthreadex** explíc
 
 El sistema operativo controla la asignación de la pila cuando cualquier **_beginthread** o **_beginthreadex** se denomina; no tiene que pasar la dirección de la pila del subproceso a ninguna de estas funciones. Además, el *stack_size* argumento puede ser 0, en cuyo caso el sistema operativo utiliza el mismo valor que la pila que se especifica para el subproceso principal.
 
-*arglist* es un parámetro que se pasa al subproceso recién creado. Normalmente, es la dirección de un elemento de datos, como una cadena de caracteres. *arglist* puede ser NULL si no es necesaria, pero **_beginthread** y **_beginthreadex** se debe proporcionar algún valor para pasar al nuevo subproceso. Se terminan todos los subprocesos si cualquier subproceso llama [anular](abort.md), **salir**, **_exit**, o **ExitProcess**.
+*arglist* es un parámetro que se pasa al subproceso recién creado. Normalmente, es la dirección de un elemento de datos, como una cadena de caracteres. *arglist* puede ser **NULL** si no es necesaria, pero **_beginthread** y **_beginthreadex** se debe proporcionar algún valor para pasar al nuevo subproceso. Se terminan todos los subprocesos si cualquier subproceso llama [anular](abort.md), **salir**, **_exit**, o **ExitProcess**.
 
 La configuración regional del nuevo subproceso se inicializa con la información de configuración regional de actual global por proceso. Si está habilitada la configuración regional por subproceso mediante una llamada a [_configthreadlocale](configthreadlocale.md) (tanto globalmente como para nuevos subprocesos solamente), el subproceso puede cambiar su configuración regional independientemente de otros subprocesos mediante una llamada a **setlocale** o **_wsetlocale**. Subprocesos que no tienen el indicador de configuración regional por subproceso establece pueden afectar a la información de configuración regional en todos los demás subprocesos que tampoco tiene el indicador de configuración regional por subproceso establecido, así como todos los subprocesos recién creado. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 

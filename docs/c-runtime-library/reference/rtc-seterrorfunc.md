@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f288a54f6260584fb30a52d427396f583afacdbb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e146f699f9026260470b1c540c7567f074896a38
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
 
@@ -57,7 +57,7 @@ La dirección de la función que controlará las comprobaciones de errores en ti
 
 ## <a name="return-value"></a>Valor devuelto
 
-La función de error definida previamente. Si no hay ninguna función definida previamente, devuelve NULL.
+La función de error definida previamente. Si no hay ninguna función definida previamente, devuelve **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 

@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -96,7 +96,7 @@ Cada función devuelve un puntero a un búfer que contiene el nombre de ruta de 
 
 ## <a name="remarks"></a>Comentarios
 
-El **_fullpath_dbg** y **_wfullpath_dbg** funciones son idénticas a **_fullpath** y **_wfullpath** salvo que, cuando **_DEBUG** está definido, estas funciones usan la versión de depuración **malloc**, **_malloc_dbg**, para asignar memoria si se pasa NULL como el primer parámetro. Para obtener información sobre las características de depuración de **_malloc_dbg**, consulte [_malloc_dbg](malloc-dbg.md).
+El **_fullpath_dbg** y **_wfullpath_dbg** funciones son idénticas a **_fullpath** y **_wfullpath** salvo que, cuando **_DEBUG** está definido, estas funciones usan la versión de depuración **malloc**, **_malloc_dbg**, para asignar memoria si **NULL** se pasa como el primer parámetro. Para obtener información sobre las características de depuración de **_malloc_dbg**, consulte [_malloc_dbg](malloc-dbg.md).
 
 En la mayoría de los casos, no es necesario llamar a estas funciones explícitamente en la mayoría. En su lugar, puede definir la **_CRTDBG_MAP_ALLOC** marca. Cuando **_CRTDBG_MAP_ALLOC** está definido, las llamadas a **_fullpath** y **_wfullpath** se reasignan a **_fullpath_dbg** y **_wfullpath_dbg**, respectivamente, con el *existen* establecido en **_NORMAL_BLOCK**. Por lo tanto, no es necesario llamar a estas funciones explícitamente a menos que desee marcar los bloques del montón como **_CLIENT_BLOCK**. Para obtener más información, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).
 

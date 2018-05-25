@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -106,7 +106,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve el número de caracteres en *str*, sin incluir el terminal **NULL**. No se reserva ningún valor devuelto para indicar un error, excepto para **_mbstrlen** y **_mbstrlen_l**, que devuelven `((size_t)(-1))` si la cadena contiene un carácter multibyte no válido.
+Cada una de estas funciones devuelve el número de caracteres en *str*, sin incluir el carácter null de terminal. No se reserva ningún valor devuelto para indicar un error, excepto para **_mbstrlen** y **_mbstrlen_l**, que devuelven `((size_t)(-1))` si la cadena contiene un carácter multibyte no válido.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -124,7 +124,7 @@ Cada una de estas funciones devuelve el número de caracteres en *str*, sin incl
 
 **_mbslen** y **_mbslen_l** devuelve el número de caracteres multibyte en una cadena de caracteres multibyte, pero no comprueban la validez de los caracteres multibyte. **_mbstrlen** y **_mbstrlen_l** comprobar la validez del carácter multibyte y reconoce secuencias de caracteres multibyte. Si la cadena pasada a **_mbstrlen** o **_mbstrlen_l** contiene un carácter multibyte no válido para la página de códigos, la función devuelve -1 y conjuntos de **errno** a **EILSEQ**.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

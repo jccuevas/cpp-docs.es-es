@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e538ff94a6cd49e4d766dfbca2798aa0daf0e462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -68,7 +68,7 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>Parámetros
 
 *absPath*<br/>
-Puntero a un búfer que contiene el nombre de ruta de acceso absoluta o completa, o bien NULL.
+Puntero a un búfer que contiene el nombre de ruta de acceso absoluta o completa, o **NULL**.
 
 *relPath*<br/>
 Nombre de ruta de acceso relativa.
@@ -82,7 +82,7 @@ Cada una de estas funciones devuelve un puntero a un búfer que contiene el nomb
 
 ## <a name="remarks"></a>Comentarios
 
-El **_fullpath** función expande el nombre de ruta de acceso relativa en *relPath* a su ruta de acceso completa o absoluta y almacena este nombre en *absPath*. Si *absPath* es NULL, **malloc** se utiliza para asignar un búfer de longitud suficiente para contener el nombre de ruta de acceso. Es responsabilidad del autor de llamada liberar este búfer. Un nombre de ruta de acceso relativa especifica una ruta de acceso a otra ubicación desde la ubicación actual (como el directorio de trabajo actual: "."). Un nombre de ruta de acceso absoluta es la expansión de un nombre de ruta de acceso relativa que indica toda la ruta de acceso necesaria para llegar a la ubicación que se quiere desde la raíz del sistema de archivos. A diferencia de **_makepath**, **_fullpath** puede utilizarse para obtener el nombre de ruta de acceso absoluta para rutas de acceso relativas (*relPath*) que incluyen ". /"o".. / "en sus nombres.
+El **_fullpath** función expande el nombre de ruta de acceso relativa en *relPath* a su ruta de acceso completa o absoluta y almacena este nombre en *absPath*. Si *absPath* es **NULL**, **malloc** se utiliza para asignar un búfer de longitud suficiente para contener el nombre de ruta de acceso. Es responsabilidad del autor de llamada liberar este búfer. Un nombre de ruta de acceso relativa especifica una ruta de acceso a otra ubicación desde la ubicación actual (como el directorio de trabajo actual: "."). Un nombre de ruta de acceso absoluta es la expansión de un nombre de ruta de acceso relativa que indica toda la ruta de acceso necesaria para llegar a la ubicación que se quiere desde la raíz del sistema de archivos. A diferencia de **_makepath**, **_fullpath** puede utilizarse para obtener el nombre de ruta de acceso absoluta para rutas de acceso relativas (*relPath*) que incluyen ". /"o".. / "en sus nombres.
 
 Por ejemplo, para usar rutinas en tiempo de ejecución de C, la aplicación debe incluir los archivos de encabezado que contienen las declaraciones de las rutinas. Cada archivo de encabezado incluye una instrucción que hace referencia a la ubicación del archivo de forma relativa (desde el directorio de trabajo de la aplicación):
 

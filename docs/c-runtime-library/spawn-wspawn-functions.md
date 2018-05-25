@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298e2a1abddc477e406bca17bce04999c6e09415
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="spawn-wspawn-functions"></a>Funciones _spawn y _wspawn
 Cada una de las funciones `_spawn` crea y ejecuta un nuevo proceso:  
@@ -137,12 +137,12 @@ Cada una de las funciones `_spawn` crea y ejecuta un nuevo proceso:
   
  Puede pasar punteros de argumento como argumentos independientes (en `_spawnl`, `_spawnle`, `_spawnlp` y `_spawnlpe`) o como una matriz de punteros (en `_spawnv`, `_spawnve`, `_spawnvp` y `_spawnvpe`). Debe pasar al menos un argumento, `arg0` o `argv`[0], al proceso generado. Por convención, este argumento es el nombre del programa que se escribiría en la línea de comandos. Un valor diferente no genera un error.  
   
- Las llamadas a `_spawnl`, `_spawnle`, `_spawnlp` y `_spawnlpe` se suelen usar en aquellos casos en los que el número de argumentos se conoce de antemano. El argumento `arg0` suele ser un puntero a `cmdname`. Los argumentos `arg1` a `argn` son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. Después de `argn`, debe haber un puntero `NULL` para marcar el final de la lista de argumentos.  
+ Las llamadas a `_spawnl`, `_spawnle`, `_spawnlp` y `_spawnlpe` se suelen usar en aquellos casos en los que el número de argumentos se conoce de antemano. El argumento `arg0` suele ser un puntero a `cmdname`. Los argumentos `arg1` a `argn` son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. Después de `argn`, debe haber un puntero **NULL** para marcar el final de la lista de argumentos.  
   
- Las llamadas a `_spawnv`, `_spawnve`, `_spawnvp` y `_spawnvpe` resultan útiles cuando existe un número variable de argumentos para el nuevo proceso. Los punteros a los argumentos se pasan como matriz, `argv`*.* El argumento `argv`[0] suele ser un puntero a una ruta de acceso en modo real o al nombre del programa en modo protegido; de `argv`[1] a `argv`[`n`] son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. El argumento `argv`[`n` +1] debe ser un puntero `NULL` para marcar el final de la lista de argumentos.  
+ Las llamadas a `_spawnv`, `_spawnve`, `_spawnvp` y `_spawnvpe` resultan útiles cuando existe un número variable de argumentos para el nuevo proceso. Los punteros a los argumentos se pasan como matriz, `argv`*.* El argumento `argv`[0] suele ser un puntero a una ruta de acceso en modo real o al nombre del programa en modo protegido; de `argv`[1] a `argv`[`n`] son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. El argumento `argv`[`n` +1] debe ser un puntero **NULL** para marcar el final de la lista de argumentos.  
   
 ## <a name="environment-of-the-spawned-process"></a>Entorno del proceso generado  
- Los archivos que están abiertos cuando se realiza una llamada a `_spawn` permanecen abiertos en el nuevo proceso. En las llamadas a `_spawnl`, `_spawnlp`, `_spawnv` y `_spawnvp`, el nuevo proceso hereda el entorno del proceso de llamada. Puede usar las llamadas a `_spawnle`, `_spawnlpe`, `_spawnve` y `_spawnvpe` para modificar el entorno del nuevo proceso pasando una lista de configuración de entorno con el argumento `envp`. El argumento `envp` es una matriz de punteros de caracteres, en la que cada elemento (salvo el elemento final) señala a una cadena finalizada en NULL que define una variable de entorno. Esta cadena suele tener el formato `NAME`=`value`, donde `NAME` es el nombre de una variable de entorno y `value` es el valor de cadena en el que se establece la variable. (Observe que `value` no está entre comillas). El último elemento de la matriz de `envp` debe ser `NULL`. Cuando `envp` es `NULL`, el proceso generado hereda la configuración de entorno del proceso primario.  
+ Los archivos que están abiertos cuando se realiza una llamada a `_spawn` permanecen abiertos en el nuevo proceso. En las llamadas a `_spawnl`, `_spawnlp`, `_spawnv` y `_spawnvp`, el nuevo proceso hereda el entorno del proceso de llamada. Puede usar las llamadas a `_spawnle`, `_spawnlpe`, `_spawnve` y `_spawnvpe` para modificar el entorno del nuevo proceso pasando una lista de configuración de entorno con el argumento `envp`. El argumento `envp` es una matriz de punteros de caracteres, en la que cada elemento (salvo el elemento final) señala a una cadena finalizada en NULL que define una variable de entorno. Esta cadena suele tener el formato `NAME`=`value`, donde `NAME` es el nombre de una variable de entorno y `value` es el valor de cadena en el que se establece la variable. (Observe que `value` no está entre comillas). El elemento final de la matriz `envp` debe ser **NULL**. Cuando `envp` es **NULL**, el proceso generado hereda la configuración del entorno del proceso primario.  
   
  Las funciones `_spawn` pueden pasar toda la información sobre los archivos abiertos, incluido el modo de traducción, al nuevo proceso. Esta información se pasa en modo real a través de la entrada `C_FILE_INFO` del entorno. El código de inicio normalmente procesa esta entrada y luego la elimina del entorno. En cambio, si una función `_spawn` genera un proceso que no sea de C, esta entrada permanece en el entorno. Al imprimir el entorno se muestran caracteres gráficos en la cadena de definición de esta entrada porque la información del entorno se pasa en formato binario en modo real. No debe tener ningún otro efecto en las operaciones normales. En modo protegido, la información del entorno se pasa en forma de texto y, por tanto, no contiene ningún carácter gráfico.  
   

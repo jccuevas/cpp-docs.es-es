@@ -30,11 +30,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e162c6b16e9ce9d0ea6763f5fb4c75d7975dc7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13707791b78de2c000535d60ed3f298046e4576c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
 Invoca al análisis de línea de comandos y vuelve a copiar los argumentos en `main()` mediante los punteros que se pasan.  
@@ -63,10 +63,10 @@ _startupinfo * _StartInfo);
  Un entero que contiene el número de argumentos que aparecen detrás de `argv`. El parámetro `argc` es siempre mayor o igual que 1.  
   
  `_Argv`  
- Una matriz de cadenas terminadas en null que representan los argumentos de la línea de comandos especificados por el usuario del programa. Por convención, `argv[0]` es el comando con el que se invoca al programa, argv[1] es el primer argumento de la línea de comandos, etc., hasta argv[argc], que siempre es NULL. El primer argumento de la línea de comandos siempre es `argv[1]` y el último es `argv[argc - 1]`.  
+ Una matriz de cadenas terminadas en null que representan los argumentos de la línea de comandos especificados por el usuario del programa. Por convención, `argv[0]` es el comando con el que se invoca el programa, argv[1] es el primer argumento de la línea de comandos, y así sucesivamente, hasta argv[argc], que siempre es **NULL**. El primer argumento de la línea de comandos siempre es `argv[1]` y el último es `argv[argc - 1]`.  
   
  `_Env`  
- Una matriz de cadenas que representan las variables establecidas en el entorno del usuario. Esta matriz finaliza mediante una entrada NULL.  
+ Una matriz de cadenas que representan las variables establecidas en el entorno del usuario. Esta matriz termina con una entrada **NULL**.  
   
  `_DoWildCard`  
  Un entero que si se establece en 1 expande los caracteres comodín en los argumentos de línea de comandos y si se establece en 0 no hace nada.  

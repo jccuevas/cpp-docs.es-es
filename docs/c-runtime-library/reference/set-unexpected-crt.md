@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c97f46a66a26f107061676dba313b068e9aebf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7af5cce0b17747beb8c136f75489025d741f864a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setunexpected-crt"></a>set_unexpected (CRT)
 
@@ -55,7 +55,7 @@ Puntero a una función que se escribe para reemplazar la **inesperado** función
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a la función de finalización anterior registrado por **_set_unexpected** para que la función anterior puede restaurarse más tarde. Si no se ha establecido ninguna función anterior, el valor devuelto se puede usar para restaurar el comportamiento predeterminado; puede que este valor sea NULL.
+Devuelve un puntero a la función de finalización anterior registrado por **_set_unexpected** para que la función anterior puede restaurarse más tarde. Si no se ha establecido ninguna función anterior, el valor devuelto puede utilizarse para restaurar el comportamiento predeterminado; Este valor puede ser **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 

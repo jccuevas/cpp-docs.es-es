@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4a762689907330b671e2720cf743ee957526a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9be41a2d156a522c74349c3457295502ae6d4f43
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 
@@ -94,7 +94,7 @@ Esta función valida el *categoría* y *configuración regional* parámetros. Si
 
 El *configuración regional* argumento es un puntero a una cadena que especifica la configuración regional. Para obtener información acerca del formato de la *configuración regional* argumento, vea [nombres de configuración regional, idiomas y cadenas de país/región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-El *configuración regional* argumento puede tomar un nombre de configuración regional, una cadena de idioma, una cadena de idioma y el código de país o región, una página de códigos, o una cadena de idioma, el código de país o región y página de códigos. El conjunto de nombres de configuración regional, idiomas, códigos de país o región y páginas de códigos disponibles contiene todos los admitidos por la API NLS de Windows, excepto las páginas de códigos que requieren más de dos bytes por carácter, por ejemplo UTF-7 y UTF-8. Si se proporciona una página de códigos como UTF-7 o UTF-8, **_create_locale** se producirá un error y devolverá NULL. El conjunto de nombres de configuración regional compatibles con **_create_locale** se describen en [nombres de configuración regional, idiomas y cadenas de país/región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). El conjunto de cadenas de idioma y país o región admitidas por **_create_locale** se enumeran en [cadenas de idioma](../../c-runtime-library/language-strings.md) y [cadenas de país/región](../../c-runtime-library/country-region-strings.md).
+El *configuración regional* argumento puede tomar un nombre de configuración regional, una cadena de idioma, una cadena de idioma y el código de país o región, una página de códigos, o una cadena de idioma, el código de país o región y página de códigos. El conjunto de nombres de configuración regional, idiomas, códigos de país o región y páginas de códigos disponibles contiene todos los admitidos por la API NLS de Windows, excepto las páginas de códigos que requieren más de dos bytes por carácter, por ejemplo UTF-7 y UTF-8. Si se proporciona una página de códigos como UTF-7 o UTF-8, **_create_locale** provocarán errores y devolverán **NULL**. El conjunto de nombres de configuración regional compatibles con **_create_locale** se describen en [nombres de configuración regional, idiomas y cadenas de país/región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). El conjunto de cadenas de idioma y país o región admitidas por **_create_locale** se enumeran en [cadenas de idioma](../../c-runtime-library/language-strings.md) y [cadenas de país/región](../../c-runtime-library/country-region-strings.md).
 
 Para obtener más información sobre la configuración regional, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 

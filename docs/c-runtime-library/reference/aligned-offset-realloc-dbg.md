@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969de605ca02959d64795a6c8b09b80d4b6b6695
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee9dec91e8e5173d3933b8637ec767bd160cc225
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 
@@ -70,10 +70,10 @@ Valor de la alineación, que debe ser un entero potencia de 2.
 Desplazamiento en la asignación de memoria para imponer la alineación.
 
 *filename*<br/>
-Puntero al nombre del archivo de origen que solicitó el **aligned_offset_realloc** operación o NULL.
+Puntero al nombre del archivo de origen que solicitó el **aligned_offset_realloc** operación o **NULL**.
 
 *linenumber*<br/>
-Número de línea en el archivo de código fuente donde el **aligned_offset_realloc** operación se ha solicitado o NULL.
+Número de línea en el archivo de código fuente donde el **aligned_offset_realloc** se solicitó la operación o **NULL**.
 
 ## <a name="return-value"></a>Valor devuelto
 

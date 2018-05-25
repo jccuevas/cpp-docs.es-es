@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfaa3b8e7fd8705f23b78b7b4ba4238631cfa4cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 Escribe datos con formato en una cadena. Hay disponibles versiones más seguras de estas funciones; vea [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
@@ -174,7 +174,7 @@ Para obtener información sobre estos y otros códigos de error, vea [errno, _do
 El **snprintf** función y la **_snprintf** familia de funciones formato y almacenan *recuento* caracteres o menos en *búfer*. El **snprintf** función siempre almacena un carácter nulo de terminación, trunca el resultado si es necesario. El **_snprintf** familia de funciones solo anexa un carácter null final si la longitud de cadena con formato es estrictamente menor que *recuento* caracteres. Cada *argumento* (si existe) se convierte y se muestra según la especificación de formato correspondiente de *formato*. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el *formato* argumento para [printf](printf-printf-l-wprintf-wprintf-l.md). Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
 > [!IMPORTANT]
-> Asegúrese de que *format* no es una cadena definida por el usuario. Dado que la **_snprintf** funciones no garantizan la finalización en NULL, en particular, cuando el valor devuelto es *recuento*: asegúrese de que vayan seguidas de código que agrega el terminador nulo. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Asegúrese de que *format* no es una cadena definida por el usuario. Dado que el **_snprintf** funciones no garantizan la terminación null, en particular, cuando el valor devuelto es *recuento*: asegúrese de que vayan seguidas de código que agrega el terminador nulo. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
 
 A partir del ucrt de Visual Studio 2015 y Windows 10, **snprintf** ya no es idéntico a **_snprintf**. El **snprintf** comportamiento de la función ahora es compatible con el estándar C99.
 
@@ -234,7 +234,7 @@ int main(void)
 #else
    const double fp = 1.7320534;
 #endif
-   /* !subtract one to prevent "squeezing out" the terminal nul! */
+   /* !subtract one to prevent "squeezing out" the terminal null! */
    const int bufferSize = sizeof(buffer)/sizeof(buffer[0]) - 1;
    int bufferUsed = 0;
    int bufferLeft = bufferSize - bufferUsed;
@@ -290,8 +290,8 @@ int main(void)
    }
    else
    {
-      /* !store nul because _snprintf doesn't necessarily (if the string
-       * fits without the terminal nul, but not with it)!
+      /* !store null because _snprintf doesn't necessarily (if the string
+       * fits without the terminal null, but not with it)!
        * bufferUsed might be as large as bufferSize, which normally is
        * like going one element beyond a buffer, but in this case
        * subtracted one from bufferSize, so we're ok.

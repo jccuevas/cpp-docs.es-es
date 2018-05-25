@@ -14,14 +14,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a89ec2cd0b360f498e52af7e49bd5c6571521e2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d39011149de0b2fb81b70d58d768a06dc8a95355
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="parameter-validation"></a>Validación de parámetros
-La mayoría de las funciones de CRT con seguridad mejorada y muchas de las funciones existentes validan sus parámetros. Esto puede incluir la comprobación de punteros NULL, la comprobación de que los enteros están comprendidos en un intervalo válido o la comprobación de que los valores de enumeración son válidos. Cuando se encuentre un parámetro no válido, se ejecutará el controlador de parámetros no válidos.  
+La mayoría de las funciones de CRT con seguridad mejorada y muchas de las funciones existentes validan sus parámetros. Esto podría incluir la comprobación de punteros para **NULL**, de que los enteros pertenecen a un intervalo válido, o bien de que los valores de enumeración son válidos. Cuando se encuentre un parámetro no válido, se ejecutará el controlador de parámetros no válidos.  
   
 ## <a name="invalid-parameter-handler-routine"></a>Rutina de controlador de parámetros no válidos  
  Cuando una función de biblioteca en tiempo de ejecución de C detecta un parámetro no válido, captura información sobre el error y llama a una macro que encapsula una función de distribución del controlador de parámetros no válidos, una de las funciones [_invalid_parameter](../c-runtime-library/reference/invalid-parameter-functions.md), [_invalid_parameter_noinfo](../c-runtime-library/reference/invalid-parameter-functions.md) o [_invalid_parameter_noinfo_noreturn](../c-runtime-library/reference/invalid-parameter-functions.md). La función de distribución que se llame depende de que el código sea, respectivamente, una compilación de depuración o una compilación comercial, o que el error no se considere recuperable. 

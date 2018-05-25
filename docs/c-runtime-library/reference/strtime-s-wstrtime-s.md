@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a18b9ffe4fac351d73e0a78a6e25a71625a47b9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 
@@ -96,7 +96,7 @@ Si se produce una condición de error, se invoca al controlador de parámetros n
 
 ## <a name="security-issues"></a>Problemas de seguridad
 
-Pasa un valor distinto de NULL no válido para el búfer se produciría una infracción de acceso si el *numberOfElements* parámetro es mayor que 9.
+Pasar a un no válido no es**NULL** valor para el búfer se produciría una infracción de acceso si el *numberOfElements* parámetro es mayor que 9.
 
 Se pasa un valor *numberOfElements* que es mayor que el tamaño real del búfer dará como resultado de saturación del búfer.
 

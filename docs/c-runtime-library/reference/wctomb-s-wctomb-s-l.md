@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb0a44414b01d0105f911732bc3dd2662a278158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -102,7 +102,7 @@ Si se da alguna de las condiciones de error anteriores, se invoca al controlador
 
 El **wctomb_s** función convierte su *wchar* argumento en el carácter multibyte correspondiente y almacena el resultado en *mbchar*. Puede llamar a la función desde cualquier ubicación de cualquier programa.
 
-Si **wctomb_s** convierte el carácter ancho en un carácter multibyte, coloca el número de bytes (que nunca es mayor que **MB_CUR_MAX**) en el carácter ancho en el entero que señala *pRetValue*. Si *wchar* es el carácter null de caracteres anchos (L '\0'), **wctomb_s** rellena *pRetValue* con 1. Si el puntero de destino *mbchar* es NULL, **wctomb_s** coloca 0 en *pRetValue*. Si la conversión no es posible en la configuración regional actual, **wctomb_s** pone -1 en *pRetValue*.
+Si **wctomb_s** convierte el carácter ancho en un carácter multibyte, coloca el número de bytes (que nunca es mayor que **MB_CUR_MAX**) en el carácter ancho en el entero que señala *pRetValue*. Si *wchar* es el carácter null de caracteres anchos (L '\0'), **wctomb_s** rellena *pRetValue* con 1. Si el puntero de destino *mbchar* es **NULL**, **wctomb_s** coloca 0 en *pRetValue*. Si la conversión no es posible en la configuración regional actual, **wctomb_s** pone -1 en *pRetValue*.
 
 **wctomb_s** utiliza la configuración regional actual para obtener información de dependiente de la configuración regional; **_wctomb_s_l** es idéntica, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 

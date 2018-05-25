@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8195e9a7e37ac9fa9186118889d7717698d2b784
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="security-features-in-the-crt"></a>Características de seguridad de CRT
 Muchas funciones anteriores de CRT tienen versiones nuevas y más seguras. Si existe una función segura, la versión anterior y menos segura está marcada como desusada y la nueva versión presenta el sufijo `_s` ("segura").  
@@ -70,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Parameter Validation`. Se validan los parámetros transferidos a las funciones de CRT, tanto en las funciones seguras como en muchas versiones preexistentes de las funciones. Estas validaciones incluyen:  
   
-    -   Comprobar los valores `NULL` transferidos a las funciones.  
+    -   Comprobar los valores **NULL** que se pasan a las funciones.  
   
     -   Comprobar la validez de los valores enumerados.  
   
@@ -82,7 +82,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Sized Buffers`. Las funciones seguras requieren que el tamaño del búfer se transfiera a cualquier función que escribe en un búfer. Las versiones seguras validan que el búfer es suficientemente grande antes de escribir en él, de tal forma que se evitan así errores peligrosos de saturación del búfer que podrían permitir la ejecución de código malintencionado. Estas funciones suelen devolver un tipo `errno` de código de error e invocar al controlador de parámetros no válidos si el tamaño del búfer es demasiado pequeño. Las funciones que leen de los búferes de entrada, como `gets`, tienen versiones seguras que requieren que se especifique un tamaño máximo.  
   
--   `Null termination`. Algunas funciones que dejaron cadenas potencialmente no terminadas tienen versiones seguras que garantizan que las cadenas terminan correctamente en null.  
+-   `Null termination`. Algunas funciones que dejan cadenas potencialmente sin terminar tienen versiones seguras que garantizan que las cadenas se terminan correctamente en NULL.  
   
 -   `Enhanced error reporting`. Las funciones seguras devuelven códigos de error con más información sobre el error de la que estaba disponible con las funciones preexistentes. Las funciones seguras y muchas de las funciones preexistentes ahora establecen `errno` y también suelen devolver un tipo de código `errno`, a fin de ofrecer más información sobre los errores.  
   

@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a61c2ecd0546162a689278cebd45fe38c92f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -110,7 +110,7 @@ Número de campos que se convirtieron y asignaron correctamente. El valor devuel
 
 El **_cscanf** función lee los datos directamente desde la consola en las ubicaciones especificadas por *argumento*. La función [_getche](getch-getwch.md) se usa para leer caracteres. Cada parámetro opcional debe ser un puntero a una variable con un tipo que se corresponde con un especificador de tipo en *formato*. El formato controla la interpretación de la entrada campos y tiene el mismo formato y función que el *formato* parámetro para el [scanf](scanf-scanf-l-wscanf-wscanf-l.md) función. Mientras **_cscanf** suele repetir el carácter de entrada, no lo hace si se hizo la última llamada a **_ungetch**.
 
-Esta función valida sus parámetros. Si el formato es NULL, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **EOF**.
+Esta función valida sus parámetros. Si el formato es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **EOF**.
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
 

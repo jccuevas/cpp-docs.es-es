@@ -23,11 +23,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f66e0aa847c0835290895aa7412410b2350d617
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 La variable `_environ` es un puntero a una matriz de punteros a las cadenas de caracteres multibyte que constituyen el entorno de proceso. Esta variable global ha quedado en desuso en las versiones funcionales más seguras [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) y [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), que deben utilizarse en lugar de la variable global. `_environ` está declarado en Stdlib.h.  
@@ -56,9 +56,9 @@ extern wchar_t **_wenviron;
   
  es una versión con caracteres anchos de `_environ`. En un programa que usa la función `wmain`, `_wenviron` se inicializa al inicio del programa según la configuración efectuada en el entorno del sistema operativo.  
   
- En un programa que usa `main`, `_wenviron` es inicialmente `NULL` porque el entorno está formado por cadenas de caracteres multibyte. En la primera llamada a `_wgetenv` o `_wputenv`, se crea un entorno de cadena de caracteres anchos que apunta a `_wenviron`.  
+ En un programa que usa `main`, `_wenviron` es **NULL** inicialmente porque el entorno está formado por cadenas de caracteres multibyte. En la primera llamada a `_wgetenv` o `_wputenv`, se crea un entorno de cadena de caracteres anchos que apunta a `_wenviron`.  
   
- De forma similar, en un programa que usa `wmain`, `_environ` es inicialmente `NULL` porque el entorno está formado por cadenas de caracteres anchos. En la primera llamada a `_getenv` o `_putenv`, se crea un entorno de cadena de caracteres multibyte que apunta a `_environ`.  
+ Del mismo modo, en un programa que usa `wmain`, `_environ` es **NULL** inicialmente porque el entorno está formado por cadenas de caracteres anchos. En la primera llamada a `_getenv` o `_putenv`, se crea un entorno de cadena de caracteres multibyte que apunta a `_environ`.  
   
  Si dos copias del entorno (MBCS y Unicode) existen simultáneamente en un programa, el sistema en tiempo de ejecución debe mantener las dos copias, lo que ralentiza el tiempo de ejecución. Por ejemplo, cada vez que se llame a `_putenv`, se ejecuta automáticamente una llamada a `_wputenv`, de forma que se correspondan las dos cadenas de entorno.  
   

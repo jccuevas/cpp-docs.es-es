@@ -12,11 +12,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fda9359da6ddc48248874227d58f0c184af45c54
+ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Agregar una propiedad al control (Tutorial de ATL, Parte 3)
 `IPolyCtl` es la interfaz que contiene las propiedades y los métodos del control personalizado y lo agregará una propiedad en.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
      [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]  
   
- El `get_Sides` método devuelve el valor actual de la `Sides` propiedad a través de la `pVal` puntero. En el `put_Sides` método, el código garantiza el usuario establezca la `Sides` propiedad a un valor aceptable. El valor mínimo debe ser 2, y dado que se usará una matriz de puntos para cada lado, 100 es un límite razonable para un valor máximo.  
+ El `get_Sides` método devuelve el valor actual de la `Sides` propiedad a través de la `pVal` puntero. En el `put_Sides` método, el código garantiza el usuario establezca la `Sides` propiedad a un valor aceptable. El valor mínimo debe ser 3 y porque se usará una matriz de puntos para cada lado, 100 es un límite razonable para un valor máximo.  
   
  Ahora tiene una propiedad denominada `Sides`. En el paso siguiente, cambiará el código de dibujo para usarlo.  
   

@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facc4855d1e36965eff7af70c5cb48f8fb77d419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -94,11 +94,11 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si **wcstombs** convierte correctamente la cadena multibyte, devuelve el número de bytes escritos en la cadena de salida multibyte, sin incluir el carácter final **NULL** (si existe). Si el *mbstr* argumento es **NULL**, **wcstombs** devuelve el tamaño necesario de bytes de la cadena de destino. Si **wcstombs** encuentra un carácter ancho que no se puede convertir en un carácter multibyte, devuelve -1 que se convierte al tipo **size_t** y establece **errno** a **EILSEQ** .
+Si **wcstombs** convierte correctamente la cadena multibyte, devuelve el número de bytes escritos en la cadena de salida multibyte, sin incluir el carácter null final (si existe). Si el *mbstr* argumento es **NULL**, **wcstombs** devuelve el tamaño necesario de bytes de la cadena de destino. Si **wcstombs** encuentra un carácter ancho que no se puede convertir en un carácter multibyte, devuelve -1 que se convierte al tipo **size_t** y establece **errno** a **EILSEQ** .
 
 ## <a name="remarks"></a>Comentarios
 
-El **wcstombs** función convierte la cadena de caracteres anchos que apunta *wcstr* a multibyte correspondiente caracteres y almacena los resultados en la *mbstr* matriz. El *recuento* parámetro indica el número máximo de bytes que se pueden almacenar en la cadena multibyte de salida (es decir, el tamaño de *mbstr*). En general, no se conoce el número de bytes que se necesitarán al convertir una cadena de caracteres anchos. Algunos caracteres anchos necesitarán un solo byte de la cadena de salida; otros necesitarán dos. Si hay dos bytes en la cadena multibyte de salida para cada carácter ancho en la cadena de entrada (incluido el carácter ancho **NULL**), el resultado se garantiza para ajustarse.
+El **wcstombs** función convierte la cadena de caracteres anchos que apunta *wcstr* a multibyte correspondiente caracteres y almacena los resultados en la *mbstr* matriz. El *recuento* parámetro indica el número máximo de bytes que se pueden almacenar en la cadena multibyte de salida (es decir, el tamaño de *mbstr*). En general, no se conoce el número de bytes que se necesitarán al convertir una cadena de caracteres anchos. Algunos caracteres anchos necesitarán un solo byte de la cadena de salida; otros necesitarán dos. Si hay dos bytes en la cadena multibyte de salida para cada carácter ancho en la cadena de entrada (incluido el carácter null de caracteres anchos), se garantiza que el resultado para ajustarse.
 
 Si **wcstombs** encuentra el carácter nulo de caracteres anchos (L '\0') antes o al *recuento* se produce, convierte en un 0 de 8 bits y se detiene. Por lo tanto, la cadena de caracteres multibyte en *mbstr* está terminada en null solo si **wcstombs** encuentra un carácter nulo de caracteres anchos durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcstombs** no está definido.
 
