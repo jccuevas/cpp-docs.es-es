@@ -1,4 +1,4 @@
----
+﻿---
 title: Error grave de NMAKE U1077 | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
@@ -25,7 +25,7 @@ ms.locfileid: "33316269"
 ---
 # <a name="nmake-fatal-error-u1077"></a>Error grave de NMAKE U1077
 'programa': código devuelto 'valor'  
-  
+ 
  El comando o programa en cuestión al que ha llamado NMAKE ha producido un error y ha devuelto el código de salida proporcionado.  
-  
+
  Para suprimir este error y continuar con la sesión de NMAKE, use la opción /I, la directiva dot **.IGNORE** o el modificador de comandos de guión (**-**).  Para continuar con la sesión de NMAKE de partes no relacionadas del árbol de dependencias, use la opción /K.
