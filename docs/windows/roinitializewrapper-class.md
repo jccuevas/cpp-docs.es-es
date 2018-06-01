@@ -1,7 +1,7 @@
 ---
 title: RoInitializeWrapper (clase) | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/20/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,11 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a4479686d3ca591a9fdd1c0659549a2e0db6e1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705597"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper (Clase)
 Inicializa el tiempo de ejecución de Windows.  
@@ -31,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- RoInitializeWrapper es la comodidad que inicializa el tiempo de ejecución de Windows y devuelve un HRESULT que indica si la operación se realizó correctamente.  
+ RoInitializeWrapper es la comodidad que inicializa el tiempo de ejecución de Windows y devuelve un HRESULT que indica si la operación se realizó correctamente. Dado que llama al destructor de clase `::Windows::Foundation::Uninitialize`, instancias de `RoInitializeWrapper` debe declararse en el ámbito global o de nivel superior.  
   
 ## <a name="members"></a>Miembros  
   

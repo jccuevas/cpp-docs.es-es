@@ -1,6 +1,6 @@
 ---
 title: C4800 de advertencias del compilador a través de C5999 | Documentos de Microsoft
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -106,11 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704755"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 de advertencias del compilador a través de C5999
 
@@ -242,10 +243,10 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |C5035 de advertencia del compilador|el uso de la característica '*característica*' hace función *función* se compile como código de invitado|
 |Advertencia del compilador (nivel 1) C5036|varargs función de conversión de puntero cuando se compila con /hybrid:x86arm64 '*type1*'to'*type2*'|
 |Advertencia del compilador C5037 (error)|'*una función miembro*': una definición fuera de línea de un miembro de una plantilla de clase no puede tener argumentos predeterminados|
-|[C5038 de advertencia del compilador](c5038.md)|miembro de datos '*member1*'se inicializará después del miembro de datos'*member2*'|
-|C5039 de advertencia del compilador|'*función*': puntero o referencia a producir potencialmente función pasado a la función extern C bajo - /EHc. Puede producirse un comportamiento indefinido si esta función produce una excepción.|
-|C5040 de advertencia del compilador|especificaciones de excepciones dinámicos son válidas solo en C ++ 14 y versiones anteriores; tratar como noexcept (false)|
-|C5041 de advertencia del compilador|'*definición*': definición fuera de línea para el miembro de datos estáticos de constexpr no es necesaria y está en desuso en C ++ 17|
-|C5042 de advertencia del compilador|'*declaración*': las declaraciones de función en el ámbito de bloque no se puede 'inline' especificado en C++ estándar, quite el especificador 'inline'|
-|C5043 de advertencia del compilador|'*especificación*': especificación de excepción no coincide con la declaración anterior.|
-|C5044 de advertencia del compilador|Argumento pasado a la opción de línea de comandos *opción* apunta a una ruta de acceso '*ruta de acceso*' que no existe|
+|[Advertencia del compilador (nivel 4) C5038](c5038.md)|miembro de datos '*member1*'se inicializará después del miembro de datos'*member2*'|
+|Advertencia del compilador (nivel 4) C5039|'*función*': puntero o referencia a producir potencialmente función pasado a la función extern C bajo - /EHc. Puede producirse un comportamiento indefinido si esta función produce una excepción.|
+|Advertencia del compilador (nivel 3) C5040|especificaciones de excepciones dinámicos son válidas solo en C ++ 14 y versiones anteriores; tratar como noexcept (false)|
+|Advertencia del compilador (nivel 1) C5041|'*definición*': definición fuera de línea para el miembro de datos estáticos de constexpr no es necesaria y está en desuso en C ++ 17|
+|Advertencia del compilador (nivel 3) C5042|'*declaración*': las declaraciones de función en el ámbito de bloque no se puede 'inline' especificado en C++ estándar, quite el especificador 'inline'|
+|Advertencia del compilador (nivel 2) C5043|'*especificación*': especificación de excepción no coincide con la declaración anterior.|
+|Advertencia del compilador (nivel 4) C5044|Argumento pasado a la opción de línea de comandos *opción* apunta a una ruta de acceso '*ruta de acceso*' que no existe|

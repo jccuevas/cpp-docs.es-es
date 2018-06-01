@@ -17,11 +17,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a326db5400d8dfb335f9c9e20867a26db59b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704677"
 ---
 # <a name="platformarray-class"></a>Platform::Array (Clase)
 Representa una matriz unidimensional modificable que se puede recibir y pasar a través de la interfaz binaria de aplicación (ABI).  
@@ -62,7 +63,7 @@ private ref class Array<TArg, 1> :
   
  El sistema de tipos en tiempo de ejecución de Windows no admite el concepto de matrices escalonadas y, por tanto, no se puede pasar un IVector < platform:: Array\<T >> como un parámetro de método o valor devuelto. Para pasar una matriz escalonada o un grupo de secuencias a través de la ABI, usa `IVector<IVector<T>^>`.  
   
- Esta clase se define en el encabezado de vccorlib.h, que se incluye automáticamente por el compilador. Es visible en IntelliSense pero no en el Examinador de objetos porque no es un tipo público definido en platform.winmd.  
+ Esta clase se define en el encabezado de vccorlib.h, que se incluye automáticamente por el compilador. Está visible en IntelliSense pero no en el Examinador de objetos porque no es un tipo público definido en platform.winmd.  
   
 ### <a name="requirements"></a>Requisitos  
  Opción del compilador: **/ZW**  

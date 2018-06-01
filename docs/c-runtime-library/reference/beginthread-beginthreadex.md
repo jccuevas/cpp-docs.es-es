@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704664"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -141,7 +142,7 @@ El sistema operativo controla la asignación de la pila cuando cualquier **_begi
 
 La configuración regional del nuevo subproceso se inicializa con la información de configuración regional de actual global por proceso. Si está habilitada la configuración regional por subproceso mediante una llamada a [_configthreadlocale](configthreadlocale.md) (tanto globalmente como para nuevos subprocesos solamente), el subproceso puede cambiar su configuración regional independientemente de otros subprocesos mediante una llamada a **setlocale** o **_wsetlocale**. Subprocesos que no tienen el indicador de configuración regional por subproceso establece pueden afectar a la información de configuración regional en todos los demás subprocesos que tampoco tiene el indicador de configuración regional por subproceso establecido, así como todos los subprocesos recién creado. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Para código mixto y puro, **_beginthread** y **_beginthreadex** tienen dos sobrecargas. Una toma un puntero a función de convención de llamada nativa y la otra toma un **__clrcall** puntero de función. La primera sobrecarga no es una aplicación de dominio seguro y nunca lo será. Si está escribiendo código mixto o puro, debe asegurarse de que el nuevo subproceso entra en el dominio de aplicación correcto antes de tener acceso a recursos administrados. Para ello, por ejemplo, use [call_in_appdomain (Función)](../../dotnet/call-in-appdomain-function.md). La segunda sobrecarga es una aplicación de dominio seguro; el subproceso recién creado finalizará siempre en el dominio de aplicación del autor de la llamada de **_beginthread** o **_beginthreadex**.
+Para **/CLR** código, **_beginthread** y **_beginthreadex** tienen dos sobrecargas. Una toma un puntero a función de convención de llamada nativa y la otra toma un **__clrcall** puntero de función. La primera sobrecarga no es una aplicación de dominio seguro y nunca lo será. Si está escribiendo **/CLR** código debe asegurarse de que el nuevo subproceso entra en el dominio de aplicación correcto antes de tener acceso a los recursos administrados. Para ello, por ejemplo, use [call_in_appdomain (Función)](../../dotnet/call-in-appdomain-function.md). La segunda sobrecarga es una aplicación de dominio seguro; el subproceso recién creado finalizará siempre en el dominio de aplicación del autor de la llamada de **_beginthread** o **_beginthreadex**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -330,8 +331,8 @@ Counter should be 1000000; it is-> 1000000
 
 ## <a name="see-also"></a>Vea también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
-[abort](abort.md)<br/>
-[exit, _Exit, _exit](exit-exit-exit.md)<br/>
-[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>
+- [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)
+- [_endthread, _endthreadex](endthread-endthreadex.md)
+- [abort](abort.md)
+- [exit, _Exit, _exit](exit-exit-exit.md)
+- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
