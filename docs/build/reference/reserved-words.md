@@ -27,42 +27,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe67e1804d436dbd44257f6d7670a71b7f74889
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 132bd8e5ba66cbf9486a6da4747994c667e2f6e7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705665"
 ---
 # <a name="reserved-words"></a>Palabras reservadas
-Las siguientes palabras están reservadas por el vinculador. Estos nombres pueden utilizarse como argumentos en [las instrucciones de definición de módulo](../../build/reference/module-definition-dot-def-files.md) solo si el nombre se incluye entre comillas dobles ("").  
-  
-||||  
-|-|-|-|  
-|**OBJETO APPLOADER**1|**INITINSTANCE**2|**PRECARGA**|  
-|**BASE**|**IOPL**|**PRIVADA**|  
-|**CÓDIGO**|**BIBLIOTECA**1|**PROTMODE**2|  
-|**CONFORME**|**LOADONCALL**1|**PURO**1|  
-|**DATOS**|**LONGNAMES**2|**SOLO LECTURA**|  
-|**DESCRIPCIÓN**|**PUEDE MOVER**1|**LECTURA Y ESCRITURA**|  
-|**DEV386**|**MOVEABLE**1|**REALMODE**1|  
-|**DESCARTABLE**|**VARIOS**|**RESIDENTE**|  
-|**DINÁMICA**|**NOMBRE**|**RESIDENTNAME**1|  
-|**SOLO PARA EJECUTAR**|**NEWFILES**2|**SECCIONES**|  
-|**EXECUTEONLY**|**NODATA**1|**SEGMENTOS**|  
-|**EJECUCIÓNLECTURA**|**NOIOPL**1|**COMPARTIDO**|  
-|**EXETYPE**|**NONAME**|**ÚNICO**|  
-|**EXPORTS**|**NO COMPATIBLE**1|**STACKSIZE**|  
-|**FIJO**1|**NONDISCARDABLE**|**STUB**|  
-|**FUNCIONES**2|**NINGUNO**|**VERSIÓN**|  
-|**HEAPSIZE**|**NO COMPARTIDOS**|**WINDOWAPI**|  
-|**IMPORTACIONES**|**NOTWINDOWCOMPAT**1|**WINDOWCOMPAT**|  
-|**IMPURAS**1|**OBJETOS**|**WINDOWS**|  
-|**INCLUIR**2|**ANTIGUO**1||  
-  
- 1 el vinculador emite una advertencia ("omitida") cuando encuentra este término. Sin embargo, la palabra se sigue reserva.  
-  
- 2 el vinculador omite esta palabra, pero no genera ninguna advertencia.  
-  
-## <a name="see-also"></a>Vea también  
- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
- [Opciones del vinculador](../../build/reference/linker-options.md)
+
+Las siguientes palabras están reservadas por el vinculador. Estos nombres pueden utilizarse como argumentos en [las instrucciones de definición de módulo](../../build/reference/module-definition-dot-def-files.md) solo si el nombre se incluye entre comillas dobles ("").
+
+||||
+|-|-|-|
+|**APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**PRECARGA**|
+|**BASE**|**IOPL**|**PRIVADA**|
+|**CÓDIGO**|**BIBLIOTECA**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
+|**CONFORME**|**LOADONCALL**<sup>1</sup>|**PURO**<sup>1</sup>|
+|**DATOS**|**LONGNAMES**<sup>2</sup>|**SOLO LECTURA**|
+|**DESCRIPCIÓN**|**PUEDE MOVER**<sup>1</sup>|**LECTURA Y ESCRITURA**|
+|**DEV386**|**MOVEABLE**<sup>1</sup>|**REALMODE**<sup>1</sup>|
+|**DESCARTABLE**|**VARIOS**|**RESIDENTE**|
+|**DINÁMICA**|**NOMBRE**|**RESIDENTNAME**<sup>1</sup>|
+|**SOLO PARA EJECUTAR**|**NEWFILES**<sup>2</sup>|**SECCIONES**|
+|**EXECUTEONLY**|**NODATA**<sup>1</sup>|**SEGMENTOS**|
+|**EJECUCIÓNLECTURA**|**NOIOPL**<sup>1</sup>|**COMPARTIDO**|
+|**EXETYPE**|**NONAME**|**ÚNICO**|
+|**EXPORTS**|**NO CUMPLEN LAS ESPECIFICACIONES**<sup>1</sup>|**STACKSIZE**|
+|**FIJO**<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
+|**FUNCIONES**<sup>2</sup>|**NINGUNO**|**VERSIÓN**|
+|**HEAPSIZE**|**NO COMPARTIDOS**|**WINDOWAPI**|
+|**IMPORTACIONES**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
+|**IMPURAS**<sup>1</sup>|**OBJETOS**|**WINDOWS**|
+|**INCLUIR**<sup>2</sup>|**ANTIGUO**<sup>1</sup>||
+
+<sup>1</sup> el vinculador emite una advertencia ("omitida") cuando encuentra este término. Sin embargo, la palabra se sigue reserva.
+
+<sup>2</sup> el vinculador omite esta palabra, pero no genera ninguna advertencia.
+
+## <a name="see-also"></a>Vea también
+
+- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)
+- [Opciones del vinculador](../../build/reference/linker-options.md)

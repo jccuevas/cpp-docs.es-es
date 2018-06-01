@@ -12,22 +12,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09da159d982c0a286af36c9345299656772d1b50
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a280d4dfe19d4f8c31e282a8138fc41152f9786a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704924"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Manuales de programación de los fabricantes de procesadores
 Este artículo contiene vínculos a sitios Web que puede contener información de programación acerca de los procesadores que no se ha fabricado, vendidas o se compatible con Microsoft. Microsoft no posee o controlar los sitios Web o el contenido en ellos.  
   
 ## <a name="processor-manufacturer-websites"></a>Sitios Web del fabricante de procesador  
   
--   [AMD64 Conjunto de instrucciones manuales de referencia](http://go.microsoft.com/fwlink/p/?LinkID=219796)  
-  
--   [Manuales de desarrollador de Software de arquitecturas de 64 e IA-32 de Intel](http://go.microsoft.com/fwlink/p/?LinkID=219798)  
-  
--   [Intel avanzada (AVX) las extensiones de Vector](http://go.microsoft.com/fwlink/p/?LinkID=219800)  
+- [AMD64 Conjunto de instrucciones manuales de referencia](https://developer.amd.com/resources/developer-guides-manuals/)  
+
+- [Manuales de desarrollador de Software de arquitecturas de 64 e IA-32 de Intel](https://software.intel.com/en-us/documentation)  
+
+- [Intel avanzada (AVX) las extensiones de Vector](https://software.intel.com/en-us/articles/introduction-to-intel-advanced-vector-extensions)  
   
 ## <a name="remarks"></a>Comentarios  
  Ni [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] ni Microsoft Macro Assembler son compatibles con todos los procesadores.  

@@ -1,6 +1,6 @@
 ---
 title: C4400 de advertencias del compilador a través de C4599 | Documentos de Microsoft
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -149,11 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71dbf1817c43c5511f8ee711abf3ff3566f314c9
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704690"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 de advertencias del compilador a través de C4599
 
@@ -319,7 +320,8 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 4) C4574|'*Identificador*'se define como ' 0': ¿pretendía usar '#if identificador'?|
 |Advertencia del compilador (nivel 1) C4575|'__vectorcall' es incompatible con el ' / clr' opción: convertir a '__stdcall'|
 |Advertencia del compilador (nivel 1, Error) C4576|un tipo entre paréntesis seguido de una lista de inicializadores es una sintaxis de conversión de tipos explícita no estándar|
-|Advertencia del compilador (nivel 1, Error) C4578|'abs': conversión de '*type1*'to'*type2*', posible pérdida de datos (¿quiso decir llamar a '*función*' o a #include <cmath>?)|
+|Advertencia del compilador (nivel 1, Off) C4577|'noexcept' usar con ningún modo especificado; de control de excepciones no se garantiza la finalización en la excepción. Especifique/EHsc|
+|Advertencia del compilador (nivel 1, Error) C4578|'abs': conversión de '*type1*'to'*type2*', posible pérdida de datos (¿quiso decir llamar a '*función*' o a #include \<cmath >?)|
 |[Advertencia del compilador (nivel 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] está en desuso; especifique en su lugar System::Attribute o Platform::Metadata como clase base|
 |[Advertencia del compilador (nivel 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|comportamiento en desuso: ' "*cadena*"' reemplazado por '*cadena*' para procesar el atributo|
 |Advertencia del compilador (nivel 4) C4582|'*tipo*': no se llama implícitamente a constructor|
