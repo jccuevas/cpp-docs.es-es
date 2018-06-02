@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
+ms.sourcegitcommit: 3c1930dc1e7e69fdbb431029cd3e9b9b00a140cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34686856"
 ---
 # <a name="pointers-to-members"></a>Punteros a miembros
 Las declaraciones de punteros a miembros son casos especiales de declaraciones de puntero.  Se declaran mediante la siguiente secuencia:  
@@ -90,7 +91,7 @@ int main()
 }  
 ```  
   
- En el ejemplo anterior, `pwCaption` es un puntero a cualquier miembro de clase `Window` que tiene el tipo de **char\***. El tipo de `pwCaption` es `char * Window::*`. El siguiente fragmento de código declara punteros a las funciones miembro `SetCaption` y `GetCaption`.  
+ En el ejemplo anterior, `pwCaption` es un puntero a cualquier miembro de clase `Window` que tiene el tipo de **char\***. El tipo de `pwCaption` es `char * Window::* `. El siguiente fragmento de código declara punteros a las funciones miembro `SetCaption` y `GetCaption`.  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
