@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b014ccc46434fd0c3f13689e579ed4798ebcdb2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569815"
 ---
 # <a name="fatal-error-c1083"></a>Error irrecuperable C1083
 
@@ -106,6 +107,8 @@ Cuando se configura un proyecto para usar encabezados precompilados, los archivo
 
 - El archivo se compila mediante un diferentes **/ analyze** valor de la opción de compilador que se usa para precompilar los encabezados. Cuando los encabezados para un proyecto se precompilan, todos deben usar la misma **/ analyze** configuración. Para obtener más información, consulte [/analize (Análisis de código)](../../build/reference/analyze-code-analysis.md).
 
+- Se creó el archivo o directorio por el subsistema de Windows para Linux, se habilita por directorio entre mayúsculas y minúsculas y el caso de una ruta de acceso o archivo especificado no coincide con el caso de la ruta de acceso o el archivo en el disco.
+
 - El archivo, el directorio o el disco es de solo lectura.
 
 - Visual Studio o las herramientas de línea de comandos no tiene permisos suficientes para leer el archivo o el directorio. Esto puede ocurrir, por ejemplo, cuando los archivos del proyecto tienen una propiedad diferente que el proceso se ejecuta Visual Studio o las herramientas de línea de comandos. A veces se puede corregir este problema mediante la ejecución de Visual Studio o el símbolo del sistema para desarrolladores como administrador.
@@ -127,4 +130,4 @@ Para obtener información sobre cómo compilar proyectos de C o C++ en el IDE o 
 
 ## <a name="see-also"></a>Vea también
 
-[Propiedades de MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Propiedades de MSBuild](/visualstudio/msbuild/msbuild-properties)
