@@ -1,7 +1,7 @@
 ---
 title: x64 (amd64) lista de intrínsecos | Documentos de Microsoft
 ms.custom: ''
-ms.date: 1/02/2018
+ms.date: 06/01/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9412d7f0d464c6d8b795214cba900f1ae24ab27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76fc614bae4e94ddfd0c2245971315be5f7e5ddf
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753700"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) (Lista de intrínsecos)
 
@@ -31,13 +32,13 @@ Para obtener información sobre funciones intrínsecas individuales, vea estos r
 
 - [Guía sobre intrínsecos de Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Use el cuadro de búsqueda para buscar los intrínsecos concretos.
 
-- [Manuales de desarrollador de Software de arquitecturas de 64 e IA-32 de Intel](https://software.intel.com/articles/intel-sdm)
+- [Manuales de desarrollador de Software de arquitecturas de 64 e IA-32 de Intel](https://go.microsoft.com/fwlink/p/?LinkID=510021)
 
-- [Referencia de programación de extensiones de conjuntos de instrucciones de arquitectura Intel](https://software.intel.com/en-us/isa-extensions)
+- [Referencia de programación de extensiones de conjuntos de instrucciones de arquitectura Intel](https://go.microsoft.com/fwlink/p/?linkid=874960)
 
-- [Intel AVX](https://www.intel.com/content/www/us/en/architecture-and-technology/avx-512-overview.html)
+- [Introducción a Intel Advanced extensiones de Vector](https://go.microsoft.com/fwlink/p/?linkid=874961)
 
-- [Guías para desarrolladores de AMD, manuales y documentos ISA](https://developer.amd.com/resources/developer-guides-manuals/)
+- [Guías para desarrolladores de AMD, manuales y documentos ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
 
 La tabla siguiente enumera los intrínsecos disponibles en procesadores x64. La columna Tecnología muestra la compatibilidad requerida con el conjunto de instrucciones. Use el intrínseco [__cpuid](../intrinsics/cpuid-cpuidex.md) para determinar la compatibilidad con el conjunto de instrucciones en tiempo de ejecución. Si hay dos entradas en una fila, representan puntos de entrada diferentes para el mismo intrínseco. [1] indica que el intrínseco solo está disponible en procesadores AMD. [2] indica que el intrínseco solo está disponible en procesadores Intel. [3] indica que el prototipo es una macro. El encabezado necesario para el prototipo de función aparece en la columna Header. El encabezado intrin.h incluye immintrin.h y ammintrin.h por motivos de simplicidad.
 

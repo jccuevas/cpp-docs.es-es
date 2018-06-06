@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82cf4fb475f9c89a4a088cac9d5ee0e1231d436e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4562fcb738cc7f692c1bffe1b4b06e413392dd60
+ms.sourcegitcommit: ee9fb774e82dfbda1dfaeb197aed36b97e408978
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34755776"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Cómo: Crear y usar instancias de unique_ptr
 A [unique_ptr](../standard-library/unique-ptr-class.md) no comparte el puntero. No se pueden copiar a otro `unique_ptr`, pasan por valor a una función o usar en cualquier algoritmo de la biblioteca estándar de C++ que requiera hacer copias. Un `unique_ptr` solo se puede mover. Esto significa que la propiedad del recurso de memoria se transfiere a otro `unique_ptr` y el `unique_ptr` original deja de poseerlo. Se recomienda limitar un objeto a un propietario, porque la propiedad múltiple agrega complejidad a la lógica del programa. Por lo tanto, si necesita un puntero inteligente para un objeto de C++ sin formato, utilice `unique_ptr`, y cuando construya una `unique_ptr`, use la [make_unique](../standard-library/memory-functions.md#make_unique) función auxiliar.  
@@ -25,7 +26,7 @@ A [unique_ptr](../standard-library/unique-ptr-class.md) no comparte el puntero. 
   
  ![Transferencia de la propiedad de un único&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr` se define en el `<memory>` encabezado en la biblioteca estándar de C++. Es exactamente es eficaz como un puntero sin formato y puede utilizarse en contenedores de la biblioteca estándar de C++. La adición de `unique_ptr` instancias a los contenedores de la biblioteca estándar de C++ es eficaz porque el constructor de movimiento de la `unique_ptr` elimina la necesidad de una operación de copia.  
+ `unique_ptr` se define en el `<memory>` encabezado en la biblioteca estándar de C++. Es exactamente tan eficaz como un puntero sin formato y puede utilizarse en contenedores de la biblioteca estándar de C++. La adición de `unique_ptr` instancias a los contenedores de la biblioteca estándar de C++ es eficaz porque el constructor de movimiento de la `unique_ptr` elimina la necesidad de una operación de copia.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo crear instancias de `unique_ptr` y pasarlas entre funciones.  
