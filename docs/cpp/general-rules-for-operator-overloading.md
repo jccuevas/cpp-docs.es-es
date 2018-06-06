@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705431"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814344"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Reglas generales para la sobrecarga de operadores
 Las reglas siguientes restringen la forma en que se implementan los operadores sobrecargados. Sin embargo, no se aplican a la [nueva](../cpp/new-operator-cpp.md) y [eliminar](../cpp/delete-operator-cpp.md) operadores, que se tratan por separado.  
@@ -55,7 +55,7 @@ Las reglas siguientes restringen la forma en que se implementan los operadores s
   
 -   Los operadores binarios declarados como funciones miembro toman un argumento; si se declaran como funciones globales, toman dos argumentos.  
   
--   Si un operador puede usarse como unario o un operador binario (**&**, **\***, **+**, y **-**), puede sobrecargar por separado cada uso.  
+-   Si un operador puede usarse como unario o un operador binario (__&__, __*__, __+__, y __-__), puede sobrecargar por separado cada uso.  
   
 -   Los operadores sobrecargados no pueden tener argumentos predeterminados.  
   
