@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7bcc003811a747569f22f6b2603faf72096dd049
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38f30c497fc8640b1f88f4ffb3fc6f14bed55a3e
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814357"
 ---
 # <a name="ftmbase-class"></a>FtmBase (clase)
 Representa un objeto de cálculo de referencias con subprocesamiento libre.  
@@ -36,7 +37,7 @@ class FtmBase : public Microsoft::WRL::Implements<
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información, vea el tema "IMarshal" en el tema "Interfaces COM" del tema "Referencia de COM" en MSDN Library.  
+ Para obtener más información, consulte [RuntimeClass (clase)](runtimeclass-class.md).  
   
 ## <a name="members"></a>Miembros  
   
