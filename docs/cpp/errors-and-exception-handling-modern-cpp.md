@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eab4199415974c995aa9b71ad53db41b7695827
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94a9e75770e822c89ea65a745a2fca491f175d95
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569867"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Controlar errores y excepciones (C++ moderno)
 En C++ moderno, en la mayoría de los escenarios, la mejor manera para notificar y controlar los errores lógicos y errores en tiempo de ejecución es utilizar excepciones. Esto es especialmente cierto cuando la pila puede contener varias llamadas de función entre la función que detecta el error y la función que tiene el contexto para saber cómo controlarla. Las excepciones proporcionan una manera formal y bien definida para el código que detecta errores para pasar la información de la pila de llamadas.  
@@ -46,7 +47,7 @@ class MyClass
 public:  
    void MyFunc(char c)  
    {  
-      if(c < numeric_limits<char>::max())  
+      if(c > numeric_limits<char>::max())  
          throw invalid_argument("MyFunc argument too large.");  
       //...  
    }  

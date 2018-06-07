@@ -13,14 +13,22 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e7d3612cd306dc2235b9fb4e6051415cba699c5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569799"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicaciones de escritorio (Visual C++)
-A *aplicación de escritorio* en C++ es una aplicación nativa que se puede acceder al conjunto completo de API de Windows y ambos se ejecuta en una ventana o en la consola del sistema. Aplicaciones de escritorio de C++ pueden ejecutar en Windows XP y Windows 10 (Aunque oficialmente no se admite Windows XP y hay muchas de las API de Windows que se han introducido desde ese momento).   Una aplicación de escritorio es distinta de una aplicación de plataforma Universal de Windows (UWP), que se puede ejecutar en equipos que ejecutan Windows 10 y también en XBox, Windows Phone, Surface Hub y otros dispositivos. Para obtener más información acerca de vs de escritorio. Las aplicaciones de UWP, vea [elegir la tecnología](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+A *aplicación de escritorio* en C++ es una aplicación nativa que se puede acceder al conjunto completo de API de Windows y ambos se ejecuta en una ventana o en la consola del sistema. Aplicaciones de escritorio de C++ pueden ejecutar en Windows XP y Windows 10 (Aunque oficialmente no se admite Windows XP y hay muchas de las API de Windows que se han introducido desde ese momento).
+
+Una aplicación de escritorio es distinta de una aplicación de plataforma Universal de Windows (UWP), que se puede ejecutar en equipos que ejecutan Windows 10 y también en XBox, Windows Phone, Surface Hub y otros dispositivos. Para obtener más información acerca de vs de escritorio. Las aplicaciones de UWP, vea [elegir la tecnología](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+
+
+**Puente de escritorio** conjunto de API de Windows en Windows 10 puede empaquetar la aplicación de escritorio existente o el objeto COM como una aplicación de UWP y agregar UWP características como tocar ni llamar a las API desde el moderno. También puede agregar una aplicación de UWP para una solución de sobremesa en Visual Studio y el paquete ellos juntos en un único paquete y usan las API de Windows para comunicarse entre ellos.  
+   
+En Visual Studio 2017 15,4 y versiones posteriores, puede crear un proyecto de paquete de aplicación de Windows para simplificar en gran medida el trabajo de empaquetar la aplicación de escritorio existente. Se aplican algunas restricciones con respecto a qué registro se llama o usa las API de la aplicación de escritorio, pero en muchos casos puede crear rutas de acceso del código alternativo para lograr una funcionalidad similar mientras se ejecuta en un paquete de aplicación. Para obtener más información, consulte [Desktop puente](/windows-uwp/porting/desktop-to-uwp-root).  
   
  **Terminología**  
   
