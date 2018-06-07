@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753635"
 ---
 # <a name="linker-options"></a>Opciones del enlazador
 
@@ -67,6 +68,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|Controla la carga retrasada de DLL.|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Provoca la carga retrasada de la DLL especificada.|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Firma parcialmente un ensamblado.|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Establece marcas predeterminadas en las cargas de archivos DLL dependientes.|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|Compila una DLL.|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Crea un controlador modo kernel.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Especifica si se generará una imagen ejecutable que se pueda reorganizar aleatoriamente en el momento de la carga con la característica de selección aleatoria del diseño del espacio de direcciones (ASLR).|
@@ -116,7 +118,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Utiliza una ubicación alternativa para guardar un archivo PDB.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Crea un archivo de base de datos de programa (PDB) sin símbolos privados.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Especifica un archivo .pgd para las Optimizaciones guiadas por perfiles.|
-|[/ POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Obsoleta** crea una compilación instrumentada con PGO de subprocesos.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Obsoleta** crea una compilación instrumentada con PGO de subprocesos.|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|Produce un archivo de salida que se puede usar con el generador de perfiles de Herramientas de rendimiento.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Establece la suma de comprobación en el encabezado del .exe.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Especifica que la imagen contendrá una tabla de controladores de excepciones seguros.|
@@ -128,7 +130,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Especifica el identificador de recurso de la biblioteca de tipos generados por el enlazador.|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Especifica el nombre del archivo .tlb y otros archivos de salida MIDL.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Crea una aplicación diseñada específicamente para ejecutarse en Terminal Server.|
-|[/ USEPROFILE](../../build/reference/useprofile.md)|Datos de entrenamiento de optimización utiliza guiada por perfiles para crear una imagen optimizada.|
+|[/USEPROFILE](../../build/reference/useprofile.md)|Datos de entrenamiento de optimización utiliza guiada por perfiles para crear una imagen optimizada.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Imprime los mensajes de progreso del enlazador.|
 |[/VERSION](../../build/reference/version-version-information.md)|Asigna un número de versión.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Incluye todos los archivos objeto de bibliotecas estáticas especificados.|
