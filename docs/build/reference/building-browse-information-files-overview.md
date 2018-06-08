@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843080"
 ---
 # <a name="building-browse-information-files-overview"></a>Compilar archivos de información de examen: información general
 Para crear información de exploración para la exploración de símbolos, el compilador crea un archivo .sbr para cada archivo de código fuente en el proyecto, a continuación, BSCMAKE. EXE concatena los archivos .sbr en un archivo .bsc.  
@@ -49,7 +50,7 @@ Para crear información de exploración para la exploración de símbolos, el co
   
 1.  No generar el archivo .bsc en el nivel de proyecto o usar el modificador /n para impedir que los archivos .sbr que se va a truncar.  
   
-2.  Después de que se generan todos los proyectos, ejecute BSCMAKE con todos los archivos .sbr como entrada. Se acepta caracteres comodín. Por ejemplo, si tenía directorios del proyecto C:\X, C:\Y y C:\Z con archivos .sbr en ellos y se desea combinar todos ellos en un archivo .bsc, utilice BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*. SBR /o c:\whatever_directory\combined.bsc para generar el archivo .bsc combinado.  
+2.  Después de que se generan todos los proyectos, ejecute BSCMAKE con todos los archivos .sbr como entrada. Se acepta caracteres comodín. Por ejemplo, si tenía directorios del proyecto C:\X, C:\Y y C:\Z con archivos .sbr en ellos y se desea combinar todos ellos en un archivo .bsc, utilice BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\ \*.sbr /o c:\whatever_directory\combined.bsc para generar el archivo .bsc combinado.  
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de compilación de C/c ++](../../build/reference/c-cpp-build-tools.md)   
