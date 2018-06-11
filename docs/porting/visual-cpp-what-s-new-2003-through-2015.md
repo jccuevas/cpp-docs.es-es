@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705610"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
@@ -1936,7 +1937,7 @@ El compilador tiene cambios importantes en esta versión.
 - Compiladores cruzados y nativos de 64 bits.
 - Se ha agregado la opción del compilador /analyze (análisis de código de empresa).
 - Se ha agregado la opción del compilador /bigobj.
-- Se han agregado /clr:pure, /clr:safe y /clr:oldSyntax. (Posteriormente en desuso en Visual Studio 2015).
+- Se han agregado /clr:pure, /clr:safe y /clr:oldSyntax. (Las versiones posteriores están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017).
 - Opciones del compilador en desuso: muchas opciones del compilador han quedado en desuso en esta versión; para obtener más información, vea Opciones obsoletas del compilador.
 - Se ha reducido la aplicación doble de código thunk en código /clr; para obtener más información, vea Doble thunk (C++).
 - Ya no se pueden usar /EH (modelo de control de excepciones) o /EHs para detectar una excepción que se inicia con un valor que no sea throw; use /EHa.

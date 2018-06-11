@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d4c4aeeaf79172950aae6d06c5e8a1246064246
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705691"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
 
@@ -92,7 +93,7 @@ Al actualizar a una nueva versión de Visual Studio, se pueden producir errores 
   
 -   **new y delete** In previous versions of the library, the implementation-defined operator new y delete functions were exported from the runtime library DLL (for example, msvcr120.dll). Ahora, estas funciones de operador siempre se vinculan estáticamente en los archivos binarios, incluso cuando se usan las DLL de la biblioteca en tiempo de ejecución.  
   
-     Esto no supone un cambio importante del código nativo o mixto (/clr); en cambio, para código compilado como [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), puede provocar que este no se compile. Si compila código como /clr:pure, quizá deba agregar #include \<new> o #include \<new.h> para evitar los errores de compilación debidos a este cambio. Tenga en cuenta que /clr:pure ha quedado en desuso en Visual Studio 2015 y es posible que desaparezca en futuras versiones. El código que tenga que ser puro se debe portar a C#.  
+     Esto no supone un cambio importante del código nativo o mixto (/clr); en cambio, para código compilado como [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), puede provocar que este no se compile. Si compila código como /clr:pure, quizá deba agregar #include \<new> o #include \<new.h> para evitar los errores de compilación debidos a este cambio. Tenga en cuenta que /clr:pure está en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017. El código que tenga que ser puro se debe portar a C#.  
   
 #### <a name="processh"></a>\<process.h>  
   

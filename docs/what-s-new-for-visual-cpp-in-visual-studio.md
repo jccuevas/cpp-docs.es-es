@@ -9,11 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569699"
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Novedades de Visual C++ en [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
@@ -394,12 +395,10 @@ Ahora puede crear y depurar aplicaciones móviles con Visual Studio que pueden t
 C++ viene como un componente opcional de la carga de trabajo de la Aplicación Windows universal.  Actualmente, la actualización de proyectos de C++ se debe hacer de forma manual. Si abre un proyecto de UWP orientado a v140 en Visual Studio 2017, deberá seleccionar el conjunto de herramientas de la plataforma v141 en las páginas de propiedades del proyecto si no tiene instalado Visual Studio 2015.
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nuevas opciones de C++ en la Plataforma universal de Windows (UWP)
+Ahora dispone de nuevas opciones para escribir y empaquetar aplicaciones de C++ para la Plataforma universal de Windows y la Tienda Windows: puede usar la infraestructura Puente de dispositivo de escritorio para empaquetar la aplicación de escritorio existente para su implementación a través de la Tienda Windows o a través de los canales existentes mediante la instalación de prueba. Las nuevas capacidades de Windows 10 le permiten agregar funcionalidad de Plataforma universal de Windows a su aplicación de escritorio de varias maneras. Para obtener más información, vea [Puente de dispositivo de escritorio](/windows/uwp/porting/desktop-to-uwp-root).
 
-Ahora tiene nuevas opciones para escribir y empaquetar aplicaciones de C++ para la Plataforma universal de Windows y Microsoft Store. Puede utilizar Desktop App Converter para empaquetar su aplicación de escritorio existente para la implementación mediante Microsoft Store. Para obtener más información, vea [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/) (Usar el tiempo de ejecución de Visual C++ en el proyecto Centennial) y [Convertir la aplicación de escritorio en una aplicación para Plataforma universal de Windows (UWP) con el puente de escritorio](/windows/uwp/porting/desktop-to-uwp-root).
-
-**Versión 15.5 de Visual Studio 2017**:
-
-Se ha agregado una plantilla de proyecto **Proyecto de empaquetado de aplicaciones de Windows**, lo que permite empaquetar aplicaciones de escritorio mediante el uso de Desktop Bridge. Está disponible en **Archivo > Nuevo > Proyecto**, en **Instaladas > Visual C++ > Plataforma universal de Windows**, siempre que la carga de trabajo Aplicación universal de Windows esté instalada.
+**Versión 15.5 de Visual Studio 2017**  
+Se ha agregado una plantilla de proyecto **Proyecto de empaquetado de aplicaciones de Windows**, lo que simplifica en gran medida la tarea de empaquetar aplicaciones de escritorio mediante el uso del Puente de dispositivo de escritorio. Está disponible en **Archivo | Nuevo | Proyecto | Instalado | Visual C++ | Plataforma universal de Windows**. Para obtener más información, consulte [Empaquetar una aplicación mediante Visual Studio (Puente de dispositivo de escritorio a UWP)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Al escribir código nuevo, ahora puede usar C++/WinRT, una proyección del lenguaje C++ estándar para Windows Runtime que se implementa solamente en los archivos de encabezado. Permite crear y usar las API de Windows Runtime con cualquier compilador de C++ conforme a los estándares. C++/WinRT está diseñado para proporcionar a los desarrolladores de C++ acceso de primera a la API de Windows moderna. Para obtener más información, vea [C++/WinRT Available on GitHub](https://moderncpp.com/) (C++/WinRT está disponible en GitHub).
 
