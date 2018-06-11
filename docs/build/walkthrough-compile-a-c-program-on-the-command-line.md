@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Compilar un programa de C en la línea de comandos | Documentos de Microsoft'
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -15,28 +15,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 033c29ff9871a427222b59fbf5c8350794a9bbe2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27e303a9e1618c73d173e9d23c614cfc506ec68a
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253794"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Tutorial: Compilar un programa de C en la línea de comandos
 Visual C++ incluye un compilador de C que puede usar para crear cualquier cosa, desde los programas de consola básicas hasta completas aplicaciones de escritorio de Windows, aplicaciones móviles y mucho más.  
   
  Este tutorial muestra cómo crear un básico, "Hello, World"-programa de C de estilo mediante un texto editor y, a continuación, compilarlo en la línea de comandos. Si prefiere trabajar en C++ en la línea de comandos, consulte [Tutorial: compilar un programa de C++ nativo en la línea de comandos](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Si le gustaría intentarlo el IDE de Visual Studio en lugar de usar la línea de comandos, consulte [Tutorial: trabajar con proyectos y soluciones (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) o [mediante el IDE de Visual Studio para el desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="prerequisites"></a>Requisitos previos  
- Para completar este tutorial, debe haber instalado Visual Studio y los componentes opcionales de Visual C++ o Microsoft Visual C++ generar herramientas.  
+## <a name="prerequisites"></a>Requisitos previos
+
+Para completar este tutorial, deben haber instalado Visual Studio y los componentes opcionales de Visual C++ o las herramientas de compilación para Visual Studio.  
   
- Visual Studio es un entorno de desarrollo integrado que admite un editor con todas las características, los administradores de recursos, depuradores y compiladores para muchos lenguajes y plataformas. Para obtener información sobre estas características y cómo descargar e instalar Visual Studio, incluida la edición de Visual Studio Community gratis, consulte [VisualStudio.com](https://www.visualstudio.com/).  
+Visual Studio es un entorno de desarrollo integrado que admite un editor con todas las características, los administradores de recursos, depuradores y compiladores para muchos lenguajes y plataformas. Para obtener información sobre estas características y cómo descargar e instalar Visual Studio, incluida la edición de Visual Studio Community gratis, consulte [instalar Visual Studio](/visualstudio/install/install-visual-studio).  
   
- Las herramientas de compilación de Visual Studio instala los compiladores de línea de comandos, herramientas y las bibliotecas que necesita para compilar programas de C y C++. Es perfecto para los laboratorios de compilación o aula ejercita e instala relativamente rápidamente. Para instalar solamente las herramientas de línea de comandos, descargue [herramientas de compilación de Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=840931) y ejecute el programa de instalación. Para obtener más información, consulte [herramientas de compilación de Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+Las herramientas de compilación de versión de Visual Studio de Visual Studio instala solo el conjunto de herramientas de línea de comandos, compiladores, herramientas y las bibliotecas que necesita para compilar programas de C y C++. Es perfecto para los laboratorios de compilación o aula ejercita e instala relativamente rápidamente. Para instalar solo el conjunto de herramientas de línea de comandos, descargue [Build Tools para Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=840931) y ejecute el programa de instalación.  
   
- Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar que se instalan las herramientas, y que puede tener acceso a ellos desde la línea de comandos. Visual C++ tiene requisitos complejos para el entorno de línea de comandos para encontrar herramientas, encabezados y bibliotecas que utiliza. **No se puede usar Visual C++ en una ventana del símbolo del sistema sin formato**. Necesita un *símbolo* ventana, que es una ventana de símbolo del sistema normal que tiene todas las variables de entorno necesarias establecido. Afortunadamente, Visual C++ instala accesos directos para iniciar el símbolo del sistema de desarrollador que tienen el entorno configurada para compilaciones de línea de comandos. Desgraciadamente, los nombres de los accesos directos del símbolo del sistema para desarrolladores y dónde se encuentran son diferentes en casi todas las versiones de Visual C++ y en diferentes versiones de Windows. La primera tarea del tutorial consiste en buscar el método abreviado de derecho a usar.  
+Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar que se instalan las herramientas, y que puede tener acceso a ellos desde la línea de comandos. Visual C++ tiene requisitos complejos para el entorno de línea de comandos para encontrar herramientas, encabezados y bibliotecas que utiliza. **No se puede usar Visual C++ en una ventana del símbolo del sistema sin formato**. Necesita un *símbolo* ventana, que es una ventana de símbolo del sistema normal que tiene todas las variables de entorno necesarias establecido. Afortunadamente, Visual C++ instala accesos directos para iniciar el símbolo del sistema de desarrollador que tienen el entorno configurada para compilaciones de línea de comandos. Desgraciadamente, los nombres de los accesos directos del símbolo del sistema para desarrolladores y dónde se encuentran son diferentes en casi todas las versiones de Visual C++ y en diferentes versiones de Windows. La primera tarea del tutorial consiste en buscar el método abreviado de derecho a usar.  
   
 > [!NOTE]
->  Un acceso directo del símbolo para desarrolladores establece automáticamente las rutas de acceso correcta para el compilador y las herramientas y para los encabezados necesarios y bibliotecas. Algunos de estos valores son diferentes para cada configuración de compilación. Debe establecer estos valores de entorno de usted mismo si no usa uno de los métodos abreviados. Para obtener más información, consulte [establecer la ruta de acceso y las Variables de entorno para compilaciones de línea de comandos](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Dado que el entorno de compilación es complejo, se recomienda encarecidamente que utilizar un acceso directo del símbolo para desarrolladores en lugar de generar su propia.  
+> Un acceso directo del símbolo para desarrolladores establece automáticamente las rutas de acceso correcta para el compilador y las herramientas y para los encabezados necesarios y bibliotecas. Algunos de estos valores son diferentes para cada configuración de compilación. Debe establecer estos valores de entorno de usted mismo si no usa uno de los métodos abreviados. Para obtener más información, consulte [establecer la ruta de acceso y las Variables de entorno para compilaciones de línea de comandos](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Dado que el entorno de compilación es complejo, se recomienda encarecidamente que utilizar un acceso directo del símbolo para desarrolladores en lugar de generar su propia.  
   
 ## <a name="open-a-developer-command-prompt"></a>Abra un símbolo del sistema para desarrolladores  
   
@@ -63,7 +65,7 @@ Visual C++ incluye un compilador de C que puede usar para crear cualquier cosa, 
     > [!NOTE]
     >  Si se produce un error, como "'cl' no se reconoce como un comando interno o externo, programa operable o archivo por lotes,", o los errores C1034 o LNK1104 al ejecutar el **cl** comando, a continuación, ya sea que no usa un símbolo del sistema, o algo no funciona correctamente con la instalación de Visual C++. Debe corregir este problema antes de continuar.  
   
-     Si no se puede encontrar el programador acceso directo del símbolo del sistema, o si recibe un mensaje de error al escribir `cl`, a continuación, la instalación de Visual C++ puede tener un problema. Intente volver a instalar el componente de Visual C++ en Visual Studio, o volver a instalar las herramientas de compilación de Visual Studio. No vaya a la sección siguiente hasta que esto funcione. Para obtener más información sobre la instalación y solución de problemas de Visual C++, vea [instalar Visual Studio](/visualstudio/install/install-visual-studio).  
+     Si no se puede encontrar el programador acceso directo del símbolo del sistema, o si recibe un mensaje de error al escribir `cl`, a continuación, la instalación de Visual C++ puede tener un problema. Intente volver a instalar el componente de Visual C++ en Visual Studio, o volver a instalar las herramientas de compilación de Visual Studio. No vaya a la sección siguiente hasta que esto funcione. Para obtener más información sobre la instalación y solución de problemas de Visual Studio, vea [instalar Visual Studio](/visualstudio/install/install-visual-studio).  
   
     > [!NOTE]
     >  Según la versión de Windows en el equipo y la configuración de seguridad del sistema, es posible que deba haga clic en para abrir el menú contextual para el acceso directo del símbolo desarrollador y, a continuación, elija **ejecutar como administrador** para compilar y ejecutar el programa que se crea siguiendo este tutorial correctamente.  

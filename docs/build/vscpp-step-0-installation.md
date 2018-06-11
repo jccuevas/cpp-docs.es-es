@@ -2,7 +2,7 @@
 title: Instalar compatibilidad de C++ en Visual Studio | Documentos de Microsoft
 description: Instalar la compatibilidad de Visual Studio para Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 06/08/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69092cdd6d79197fb7a2cbdc60b783174b70950b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4fd04450b75083152d058aef4a85d83f5635c8d9
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253761"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalar compatibilidad de C++ en Visual Studio
 
@@ -32,17 +33,17 @@ Si no ha descargado e instalado Visual Studio y las herramientas de Visual C++ a
 
 - Suficiente espacio libre en disco. Visual Studio requiere al menos 7GB de espacio en disco y puede tardar 50GB o más si se instalan muchas opciones comunes. Se recomienda que instale en la unidad C:.
 
-Para obtener detalles sobre los requisitos de sistema operativo y espacio en disco, consulte [requisitos de sistema de Visual Studio de 2017](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs). El programa de instalación indica cuánto espacio en disco necesario para las opciones que seleccione.
+Para obtener detalles sobre los requisitos de sistema operativo y espacio en disco, consulte [requisitos del sistema de la familia de producto de Visual Studio](/visualstudio/productinfo/vs2017-system-requirements-vs). El programa de instalación indica cuánto espacio en disco necesario para las opciones que seleccione.
 
 ## <a name="installation"></a>Instalación
 
 1. Descargar al instalador de Visual Studio de 2017 más reciente de Windows.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">Instalar Visual Studio 2017 Community</a>
+   > <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Instalar Visual Studio 2017 Community</a>
 
    >[!Tip]
-   > La edición Community es para desarrolladores individuales, aprendizaje en el aula, investigación académica y desarrollo de código abierto. Para otros usos, instale <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Professional</a> o <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a>.
+   > La edición Community es para desarrolladores individuales, aprendizaje en el aula, investigación académica y desarrollo de código abierto. Para otros usos, instale <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> o <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
 
 1. Busque el archivo de instalador descargado y ejecútelo. Puede mostrarse en el explorador, o se puede encontrar en la carpeta de descargas. El instalador necesita privilegios de administrador para ejecutar. Es posible que vea una **User Account Control** cuadro de diálogo que le pide que conceder permiso para permitir que el programa de instalación realizar cambios en el sistema; elegir **Sí**. Si tiene problemas, busque el archivo descargado en el Explorador de archivos, haga doble clic en el icono de programa de instalación y elija **ejecutar como administrador** en el menú contextual.
 

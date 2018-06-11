@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Compilar un programa de C++ nativo en la línea de comandos | Documentos de Microsoft'
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2ba3d1da27b3300f6299e902c35157cfe421f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd65dff0a354ebbed4435b8867271091211279d
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253836"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Tutorial: Compilar un programa nativo de C++ en la línea de comandos
 Visual C++ incluye un compilador de C++ de línea de comandos que puede usar para crear cualquier cosa, desde aplicaciones de consola básica para aplicaciones de la plataforma Universal de Windows, aplicaciones de escritorio, controladores de dispositivos y componentes. NET.  
@@ -31,13 +32,13 @@ Visual C++ incluye un compilador de C++ de línea de comandos que puede usar par
  En este tutorial, puede usar su propio programa de Visual C++ en lugar de escribir el que se muestra o usar un código de ejemplo de Visual C++ de otro artículo de ayuda.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Para completar este tutorial, debe haber instalado Visual Studio y los componentes opcionales de Visual C++ o Microsoft Visual C++ generar herramientas.  
+ Para completar este tutorial, deben haber instalado Visual Studio y el desarrollo de escritorio opcional con cargas de trabajo de C++ o las herramientas de línea de comandos de compilación para Visual Studio.  
   
- Visual Studio es un entorno de desarrollo integrado que admite un editor con todas las características, los administradores de recursos, depuradores y compiladores para muchos lenguajes y plataformas. Para obtener información sobre estas características y cómo descargar e instalar Visual Studio, incluida la edición de Visual Studio Community gratis, consulte [VisualStudio.com](https://www.visualstudio.com/).  
+ Visual Studio es un entorno de desarrollo integrado (IDE) que es compatible con un editor con todas las características, los administradores de recursos, depuradores y compiladores para muchos lenguajes y plataformas. Para obtener información acerca de cómo descargar e instalar Visual Studio, incluida la edición gratuita de Visual Studio Community e incluir compatibilidad para el desarrollo de C o C++, vea [compatibilidad instalar C++ en Visual Studio](../build/vscpp-step-0-installation.md).  
   
- Las herramientas de compilación de Visual Studio instala los compiladores de línea de comandos, herramientas y las bibliotecas que necesita para compilar programas de C y C++. Es perfecto para los laboratorios de compilación o aula ejercita e instala relativamente rápidamente. Para instalar solamente las herramientas de línea de comandos, descargue [herramientas de compilación de Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=840931) y ejecute el programa de instalación. Para obtener más información, consulte [herramientas de compilación de Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+ Las herramientas de compilación de Visual Studio instala los compiladores de línea de comandos, herramientas y las bibliotecas que necesita para compilar programas de C y C++. Es perfecto para los laboratorios de compilación o aula ejercita e instala relativamente rápidamente. Para instalar solamente las herramientas de línea de comandos, descargue [Build Tools para Visual Studio de 2017](https://go.microsoft.com/fwlink/p/?linkid=840931).  
   
- Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar que se instalan las herramientas, y que puede tener acceso a ellos desde la línea de comandos. Visual C++ tiene requisitos complejos para el entorno de línea de comandos para encontrar herramientas, encabezados y bibliotecas que utiliza. **No se puede usar Visual C++ en una ventana del símbolo del sistema sin formato**. Afortunadamente, Visual C++ instala accesos directos para iniciar un símbolo que tiene el entorno configurada para compilaciones de línea de comandos. Desgraciadamente, los nombres de los accesos directos del símbolo del sistema para desarrolladores y dónde se encuentran son diferentes en casi todas las versiones de Visual C++ y en diferentes versiones de Windows. La primera tarea del tutorial detecta uno derecho para que se utilice.  
+ Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar que se instalan las herramientas, y que puede tener acceso a ellos desde la línea de comandos. Visual C++ tiene requisitos complejos para el entorno de línea de comandos para encontrar herramientas, encabezados y bibliotecas que utiliza. **No se puede usar Visual C++ en una ventana del símbolo del sistema sin formato** sin tener que realizar cierta preparación. Afortunadamente, Visual C++ instala accesos directos para iniciar un símbolo que tiene el entorno configurada para compilaciones de línea de comandos. Desgraciadamente, los nombres de los accesos directos del símbolo del sistema para desarrolladores y dónde se encuentran son diferentes en casi todas las versiones de Visual C++ y en diferentes versiones de Windows. La primera tarea del tutorial detecta uno derecho para que se utilice.  
   
 > [!NOTE]
 >  Un acceso directo del símbolo para desarrolladores establece automáticamente las rutas de acceso correcta para el compilador y las herramientas y para los encabezados necesarios y bibliotecas. Debe establecer estos valores de entorno de por sí mismo si se utiliza una ventana de símbolo del sistema normal. Para obtener más información, consulte [establecer la ruta de acceso y las Variables de entorno para compilaciones de línea de comandos](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Se recomienda que utilizar un acceso directo del símbolo para desarrolladores en lugar de generar su propia.  
