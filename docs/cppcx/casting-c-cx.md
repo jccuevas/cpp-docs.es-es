@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090962"
 ---
 # <a name="casting-ccx"></a>Convertir (C++/CX)
 Aplican cuatro operadores de conversión diferentes a los tipos en tiempo de ejecución de Windows: [static_cast (operador)](../cpp/static-cast-operator.md), [dynamic_cast (operador)](../cpp/dynamic-cast-operator.md), **safe_cast (operador)**, y [ reinterpret_cast (operador)](../cpp/reinterpret-cast-operator.md). `safe_cast` y `static_cast` producen una excepción cuando no se puede realizar la conversión; el [operador static_cast](../cpp/static-cast-operator.md) también realiza la comprobación de tipos en tiempo de compilación. `dynamic_cast` devuelve `nullptr` si no puede convertir el tipo. Aunque `reinterpret_cast` devuelve un valor no NULL, puede no ser válido. Por eso, recomendamos que no uses `reinterpret_cast` a menos que sepas que la conversión se realizará correctamente. Además, se recomienda no usar conversiones de estilo C en su C++ / CX código porque son idénticas a `reinterpret_cast`.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377893"
 ---
 # <a name="event-maps"></a>Mapas de eventos
 Cada vez que un control desea notificar a su contenedor que se ha producido alguna acción (determinado por el desarrollador del control) (por ejemplo, una pulsación de tecla, haga clic de mouse (ratón) o un cambio en el estado del control) llama a una función de activación de eventos. Esta función notifica el contenedor del control que se ha producido alguna acción importante activando el evento relacionado.  
