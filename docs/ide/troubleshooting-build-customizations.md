@@ -1,5 +1,5 @@
 ---
-title: Personalizaciones de compilación de la solución de problemas | Documentos de Microsoft
+title: Solucionar problemas de personalizaciones de compilación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,26 +22,27 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: d48e9f7bdcbf422a25fb0bdb40411e6c662fadc2
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330282"
 ---
 # <a name="troubleshooting-build-customizations"></a>Solucionar problemas de personalizaciones de compilación
-Si los pasos de compilación personalizado o eventos no se comportan tal y como esperaba, hay varias cosas que puede hacer para intentar comprender la causa del error.  
+Si los pasos de compilación personalizada o los eventos no se comportan de la forma esperada, se pueden hacer varias cosas para intentar comprender la causa del error.  
   
--   Asegúrese de que los archivos de que los pasos de compilación personalizada generan coinciden con los archivos que se declara como salidas.  
+-   Asegúrese de que los archivos que generan los pasos de compilación personalizada coinciden con los archivos que se declaran como salidas.  
   
--   Si los pasos de compilación personalizada generan los archivos que son entradas o dependencias de otros pasos (personalizadas o no) de compilación, asegúrese de dichos archivos se agregan al proyecto. Y asegúrese de que las herramientas que usan esos archivos ejecutan después de paso de compilación personalizado.  
+-   Si los pasos de compilación personalizada generan archivos que son entradas o dependencias de otros pasos de compilación (personalizada o no), asegúrese de que esos archivos se agregan al proyecto. Y asegúrese de que las herramientas que usan esos archivos se ejecutan después del paso de compilación personalizada.  
   
--   Para mostrar lo que realmente está haciendo el paso de compilación personalizada, agregue `@echo on` como el primer comando. Los eventos de compilación y los pasos de compilación se colocan en un archivo .bat temporal y ejecutar cuando se compila el proyecto. Por lo tanto, puede agregar comprobación de errores a los eventos de compilación o comandos de paso de compilación.  
+-   Para mostrar lo que realmente hace el paso de compilación personalizada, agregue `@echo on` como el primer comando. Los eventos de compilación y los pasos de compilación se colocan en un archivo .bat temporal y se ejecutan cuando se compila el proyecto. Por tanto, se puede agregar comprobación de errores a los eventos de compilación o comandos de paso de compilación.  
   
--   Examine el registro de compilación en el directorio de archivos intermedios para ver lo que realmente se ejecuta. La ruta de acceso y el nombre del registro de compilación se representa mediante el **MSBuild** expresión de macro, **$ (IntDir)\\$(MSBuildProjectName) .log**.  
+-   Examine el registro de compilación en el directorio de archivos intermedio para ver lo que realmente se ha ejecutado. La ruta de acceso y el nombre del registro de compilación se representan mediante la expresión de macro de **MSBuild**, **$(IntDir)\\$(Nombre_Proyecto_MSBuild).log**.  
   
--   Modificar la configuración del proyecto para obtener más información que la cantidad de información en el registro de compilación predeterminada. En el menú **Herramientas** , haga clic en **Opciones**. En el **opciones** cuadro de diálogo, haga clic en el **proyectos y soluciones** nodo y, a continuación, haga clic en el **compilar y ejecutar** nodo. A continuación, en la **contenido de archivo de registro de compilación de proyecto de MSBuild** cuadro, haga clic en **Detailed**.  
+-   Modifique la configuración del proyecto para obtener más información que la predeterminada en el registro de compilación. En el menú **Herramientas** , haga clic en **Opciones**. En el cuadro de diálogo **Opciones**, haga clic en el nodo **Proyectos y soluciones** y después en el nodo **Compilar y ejecutar**. Luego, en el cuadro **Contenido del archivo de registro de compilación del proyecto de MSBuild**, haga clic en **Detallado**.  
   
--   Compruebe que los valores de cualquier archivo directorios o nombres de las macros que usa. Puede repetir las macros individualmente o puede agregar `copy %0 command.bat` al principio del paso de compilación personalizada, que se copiarán los comandos del paso en command.bat con todas las macros expandidas.  
+-   Compruebe los valores de las macros de nombre de archivo o directorio que use. Puede mostrar las macros de forma individual, o bien puede agregar `copy %0 command.bat` al principio del paso de compilación personalizada, lo que copiará los comandos del paso de compilación personalizada a command.bat con todas las macros expandidas.  
   
--   Ejecutar pasos de compilación personalizada y generar eventos de forma individual para comprobar su comportamiento.  
+-   Ejecute los pasos de compilación personalizada y los eventos de compilación de forma individual para comprobar su comportamiento.  
   
 ## <a name="see-also"></a>Vea también  
  [Descripción de los pasos de compilación personalizada y los eventos de compilación](../ide/understanding-custom-build-steps-and-build-events.md)

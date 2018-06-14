@@ -1,5 +1,5 @@
 ---
-title: '&lt;código&gt; (Visual C++) | Documentos de Microsoft'
+title: '&lt;code&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 331828f5c2cd3001cef50a29388a10c0a6a26f1d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330124"
 ---
-# <a name="ltcodegt-visual-c"></a>&lt;código&gt; (Visual C++)
-La \<código > etiqueta ofrece una manera de indicar una o varias líneas como código.  
+# <a name="ltcodegt-visual-c"></a>&lt;code&gt; (Visual C++)
+La etiqueta \<code> proporciona una manera de indicar una o varias líneas como código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +39,7 @@ La \<código > etiqueta ofrece una manera de indicar una o varias líneas como c
  El texto que quiere marcar como código.  
   
 ## <a name="remarks"></a>Comentarios  
- Use [ \<c >](../ide/c-visual-cpp.md) para indicar una parte del texto se debe marcar como código.  
+ Use [\<c>](../ide/c-visual-cpp.md) para indicar que una parte del texto se debe marcar como código.  
   
  Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  
   

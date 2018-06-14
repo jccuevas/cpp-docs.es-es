@@ -1,5 +1,5 @@
 ---
-title: Redistribuir aplicaciones cliente Web | Documentos de Microsoft
+title: Redistribuir aplicaciones cliente web | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,21 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 92bd843b24ee13b3d606ba8bb4f4f1cc265e8e5d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323201"
 ---
 # <a name="redistributing-web-client-applications"></a>Redistribuir aplicaciones cliente web
-Si su aplicación utiliza las clases MFC que implementan el control WebBrowser (por ejemplo, `CHtmlView` o `CHtmlEditView`), Microsoft Internet Explorer 4.0 o posterior debe al menos mínimamente instalarse en el equipo de destino.  
+Si en la aplicación se usan las clases de MFC que implementan el control WebBrowser (por ejemplo, `CHtmlView` o `CHtmlEditView`), en el equipo de destino debe estar instalado Microsoft Internet Explorer 4.0 o una versión posterior como mínimo.  
   
  Instalar la versión más reciente de Internet Explorer también garantiza que el equipo de destino tiene los archivos de control comunes más recientes.  
   
- Información acerca de cómo instalar componentes mínimos de Internet Explorer está disponible en el siguiente artículo de Knowledge Base:  
+ En el artículo de Knowledge Base siguiente obtendrá información sobre cómo instalar los componentes mínimos de Internet Explorer:  
   
--   Q185375, HOWTO: Crear una instalación única EXE de Internet Explorer ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp))  
+-   Q185375, HOWTO: Create a Single EXE Install of Internet Explorer ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp)) (CÓMO: Crear una instalación EXE única de Internet Explorer).  
   
- Encontrará artículos de Knowledge Base en MSDN Library o en [ http://support.microsoft.com ](http://support.microsoft.com).  
+ Puede encontrar los artículos de Knowledge Base en la biblioteca de MSDN o en [http://support.microsoft.com](http://support.microsoft.com).  
   
 ## <a name="see-also"></a>Vea también  
  [Implementar aplicaciones de escritorio](../ide/deploying-native-desktop-applications-visual-cpp.md)

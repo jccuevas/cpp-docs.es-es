@@ -1,5 +1,5 @@
 ---
-title: 'Páginas de propiedades MIDL: General | Documentos de Microsoft'
+title: 'Páginas de propiedades MIDL: General | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,36 +27,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329987"
 ---
 # <a name="midl-property-pages-general"></a>Páginas de propiedades MIDL: General
-El **General** página de propiedades de la **MIDL** carpeta especifica las opciones del compilador MIDL siguientes:  
+En la página de propiedades **General** de la carpeta **MIDL** se especifican las opciones del compilador MIDL siguientes:  
   
--   Definiciones de preprocesador [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
+-   Definiciones del preprocesador [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
--   Otros directorios de inclusión ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
+-   Directorios de inclusión adicionales ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   Ignorar ruta de acceso estándar incluyen ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
+-   Omitir ruta de acceso de inclusión estándar ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
 -   Compatible con MkTypLib ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
 -   Nivel de advertencia ([/W](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
   
--   Advertir como Error ([/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
+-   Advertir como error ([/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
--   Suprimir el titular de inicio ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
+-   Suprimir la pancarta de inicio ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
 -   Tipo de carácter MIDL ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
 -   Entorno de destino ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   Generar proxy sin código auxiliar ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   Generar proxies sin código auxiliar ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
- Para obtener información sobre cómo obtener acceso a la **General** página de propiedades de la **MIDL** carpeta, consulte [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).  
+ Para obtener información sobre cómo acceder a la página de propiedades **General** de la carpeta **MIDL**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
   
- Para obtener información sobre cómo obtener acceso mediante programación a las opciones de MIDL para los proyectos de C++, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> objeto.  
+ Para obtener información sobre cómo acceder mediante programación a las opciones de MIDL para los proyectos de C++, vea el objeto <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
   
 ## <a name="see-also"></a>Vea también  
  [Páginas de propiedades MIDL](../ide/midl-property-pages.md)

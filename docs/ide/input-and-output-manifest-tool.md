@@ -1,5 +1,5 @@
 ---
-title: Manifiesto herramienta propiedades de entrada y salida (Visual C++) | Documentos de Microsoft
+title: Propiedades de entrada y salida de la herramienta Manifiesto (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,53 +22,54 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 15be7636188bb670febd7875974d683c1d78360f
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331563"
 ---
-# <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Entrada y salida, herramienta, propiedades de configuración, manifiesto &lt;Projectname&gt; cuadro de diálogo páginas de propiedades
-Utilice este cuadro de diálogo para especificar opciones de entrada y salidas para [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Entrada y salida, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de &lt;NombreDeProyecto&gt; (Cuadro de diálogo)
+Use este cuadro de diálogo para especificar opciones de entrada y salida para [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Para obtener acceso a este cuadro de diálogo de la página de propiedades, abra las páginas de propiedades para el proyecto o la hoja de propiedades. Expanda el **herramienta manifiesto** nodo bajo **propiedades de configuración**y, a continuación, seleccione **de entrada y salida**.  
+ Para acceder a este cuadro de diálogo de página de propiedades, abra las páginas de propiedades para el proyecto o la hoja de propiedades. Expanda el nodo **Herramienta Manifiesto** bajo **Propiedades de configuración** y, después, seleccione **Entrada y salida**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Archivos de manifiesto adicionales**  
- Usa el **/manifest** opción para especificar las rutas de acceso completas de archivos de manifiesto adicionales que va a procesar la herramienta de manifiesto o de mezcla. Rutas de acceso completas se delimitan mediante un punto y coma.  
+ Usa la opción **/manifest** para especificar las rutas de acceso completas de los archivos de manifiesto adicionales que la herramienta Manifiesto va a procesar o combinar. Las rutas de acceso completas se delimitan mediante un punto y coma.  
   
  **Manifiestos de recursos de entrada**  
- Usa el **/inputresource** opción para especificar la ruta de acceso completa de un recurso de tipo RT_MANIFEST, para introducir en la herramienta de manifiesto. La ruta de acceso puede ir seguido por el identificador de recurso especificado. Por ejemplo:  
+ Usa la opción **/inputresource** para especificar la ruta de acceso completa de un recurso de tipo RT_MANIFEST, para agregar como entrada a la herramienta Manifiesto. La ruta de acceso puede ir seguida por el identificador de recurso especificado. Por ejemplo:  
   
  `dll_with_manifest.dll;#1`  
   
  El identificador de recurso es opcional y tiene como valor predeterminado CREATEPROCESS_MANIFEST_RESOURCE_ID en winuser.h.  
   
  **Incrustar manifiesto**  
- **Sí** especifica que el sistema de proyectos incrustará el archivo de manifiesto de aplicación en el ensamblado.  
+ **Sí** especifica que el sistema de proyectos insertará el archivo de manifiesto de aplicación en el ensamblado.  
   
- **Ya no** especifica que el sistema del proyecto creará el archivo de manifiesto de aplicación como un archivo independiente.  
+ **No** especifica que el sistema de proyectos creará el archivo de manifiesto de aplicación como un archivo independiente.  
   
  **Archivo de manifiesto de salida**  
- Especifica el nombre del archivo de manifiesto de salida. Esta propiedad es opcional cuando sólo un archivo de manifiesto se realizan operaciones con ellos mediante la herramienta de manifiesto.  
+ Especifica el nombre del archivo de manifiesto de salida. Esta propiedad es opcional solo cuando la herramienta Manifiesto realiza operaciones en un archivo de manifiesto.  
   
- **Archivo de recurso del manifiesto**  
- Especifica la salida de los archivos de recursos que se usan para incrustar el manifiesto en la salida del proyecto.  
+ **Archivo de recursos de manifiesto**  
+ Especifica el archivo de recursos de salida que se usa para insertar el manifiesto en la salida del proyecto.  
   
  **Generar archivos de catálogo**  
- Usa el **/makecdfs** opción para especificar que la herramienta de manifiesto generará archivos de definición de catálogo (archivos .cdf), que se utilizan para crear catálogos.  
+ Usa la opción **/makecdfs** para especificar que la herramienta Manifiesto generará archivos de definición de catálogo (archivos .cdf), que se usan para crear catálogos.  
   
- **Generar manifiesto de ManagedAssembly**  
- Genera un manifiesto de un ensamblado administrado. (**- managedassemblyname: *** archivo*).  
+ **Generar manifiesto a partir de ManagedAssembly**  
+ Genera un manifiesto a partir de un ensamblado administrado. (**-nombre_ensamblado_administrado:***archivo*).  
   
  **Suprimir elemento de dependencia**  
- Usar con el **- managedassembly** opción. Esta etiqueta suprime la generación de elementos de dependencia en el manifiesto final.  
+ Se usa con la opción **-ensamblado_administrado**. Esta etiqueta suprime la generación de elementos de dependencia en el manifiesto final.  
   
  **Generar etiquetas de categoría**  
- Usar con el **- managedassembly** opción. Esta etiqueta hace que las etiquetas de categoría que se genere.  
+ Se usa con la opción **-ensamblado_administrado**. Esta etiqueta hace que se generen etiquetas de categoría.  
   
- **Habilitar el reconocimiento de PPP**  
- Especifica si la aplicación es compatible con PPP. De forma predeterminada, el valor es **Sí** para proyectos MFC y **n** porque solo los proyectos MFC han creado en el reconocimiento de PPP, en caso contrario. Puede invalidar la configuración a **Sí** si agrega código para controlar los diferentes valores de PPP. La aplicación puede aparecer borrosa o pequeña si se establece como reconocimiento de PPP cuando no lo está.  
+ **Habilitar reconocimiento de PPP**  
+ Especifica si la aplicación es compatible con PPP. De forma predeterminada, el valor es **Sí** para proyectos MFC y **No** en caso contrario, porque solo los proyectos MFC cuentan con reconocimiento de PPP integrado. Puede reemplazar la configuración por **Sí** si agrega código para controlar otros valores de PPP. Es posible que la aplicación se vea borrosa o pequeña si se establece como compatible con PPP cuando no lo es.  
   
 ## <a name="see-also"></a>Vea también  
  [Manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Páginas de propiedades de la herramienta manifiesto](../ide/manifest-tool-property-pages.md)   
+ [Páginas de propiedades de la herramienta Manifiesto](../ide/manifest-tool-property-pages.md)   
  [Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)   

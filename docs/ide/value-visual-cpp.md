@@ -1,5 +1,5 @@
 ---
-title: '&lt;valor&gt; (Visual C++) | Documentos de Microsoft'
+title: '&lt;value&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325401"
 ---
-# <a name="ltvaluegt-visual-c"></a>&lt;valor&gt; (Visual C++)
-El \<valor > etiqueta permite describir una propiedad y métodos de descriptor de acceso de propiedad. Tenga en cuenta que cuando se agrega una propiedad con un asistente de código en el entorno de desarrollo integrado de Visual Studio, se agregará un [ \<resumen >](../ide/summary-visual-cpp.md) etiqueta para la nueva propiedad. Después, debe agregar manualmente una etiqueta \<value> para describir el valor que representa esa propiedad.  
+# <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
+La etiqueta \<value> permite describir una propiedad y los métodos de descriptor de acceso de propiedad. Tenga en cuenta que cuando agrega una propiedad mediante un asistente de código en el entorno de desarrollo integrado de Visual Studio, agregará una etiqueta [\<summary>](../ide/summary-visual-cpp.md) para la propiedad nueva. Después, debe agregar manualmente una etiqueta \<value> para describir el valor que representa esa propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
   

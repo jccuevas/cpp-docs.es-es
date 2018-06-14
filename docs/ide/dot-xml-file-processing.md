@@ -1,5 +1,5 @@
 ---
-title: . Procesamiento de archivos XML | Documentos de Microsoft
+title: Procesamiento de archivos .xml | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340520"
 ---
 # <a name="xml-file-processing"></a>Procesamiento de archivos .Xml
-El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. Para obtener más información, consulte [recomienda comentarios de documentación de etiquetas](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo .xml pueden usar la cadena de identificador para identificar el .NET Framework metadatos o la reflexión elemento correspondiente a la que se aplica la documentación.  
+El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. Para obtener más información, vea [Etiquetas recomendadas para los comentarios de documentación](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo .xml pueden usar la cadena de identificador para identificar el elemento de reflexión o de metadatos de .NET Framework correspondiente al que se aplica la documentación.  
   
- El archivo .xml no es una representación jerárquica del código, es una lista plana con un identificador generado para cada elemento.  
+ El archivo .xml no es una representación jerárquica del código; es una lista plana con un identificador generado para cada elemento.  
   
  El compilador cumple las siguientes reglas cuando genera las cadenas de identificador:  
   
--   Ningún espacio en blanco se coloca en la cadena.  
+-   No se coloca espacio en blanco en la cadena.  
   
--   La primera parte de la cadena de identificador identifica el tipo de miembro que se identifican con un único carácter seguido de dos puntos. Se utilizan los siguientes tipos de miembros:  
+-   La primera parte de la cadena ID identifica el tipo de miembro identificado, mediante un carácter único seguido de dos puntos. Se utilizan los siguientes tipos de miembros:  
   
-    |Carácter|Descripción|  
+    |Carácter|Description|  
     |---------------|-----------------|  
-    |N|namespace<br /><br /> No se puede agregar comentarios de documentación a un espacio de nombres, referencias cref a un espacio de nombres son posibles.|  
+    |N|namespace<br /><br /> No se pueden agregar comentarios de documentación a un espacio de nombres, pero se admiten referencias cref a un espacio de nombres.|  
     |T|tipo: clase, interfaz, estructura, enumeración y delegado|  
     |D|definición de tipos|  
     |F|campo|  
     |P|propiedad (incluidos indizadores u otras propiedades indizadas)|  
     |M|método (incluidos métodos especiales como constructores, operadores, etc.)|  
     |E|evento|  
-    |!|cadena de error<br /><br /> El resto de la cadena proporciona información sobre el error. El compilador de Visual C++ genera información de error para vínculos que no se puede resolver.|  
+    |!|cadena de error<br /><br /> El resto de la cadena proporciona información sobre el error. El compilador de Visual C++ genera información de error para los vínculos que no se pueden resolver.|  
   
--   La segunda parte de la cadena es el nombre completo del elemento, que empieza por la raíz del espacio de nombres. El nombre del elemento, sus envolvente tipo o tipos y espacio de nombres separados por puntos. Si el nombre del elemento ya contiene puntos, estos se reemplazan por el signo hash ("#"). Se supone que ningún elemento contiene un signo # directamente en su nombre. Por ejemplo, el nombre completo de la `String` constructor sería "# ctor".  
+-   La segunda parte de la cadena es el nombre completo del elemento, que empieza por la raíz del espacio de nombres. El nombre del elemento, su tipo envolvente y el espacio de nombres se separan mediante puntos. Si el nombre del elemento ya contiene puntos, estos se reemplazan por el signo hash ("#"). Se supone que ningún elemento tiene un signo hash directamente en el nombre. Por ejemplo, el nombre completo del constructor de `String` sería "System.String.#ctor".  
   
 -   Para propiedades y métodos, si hay argumentos para el método, sigue la lista de argumentos entre paréntesis. Si no hay ningún argumento, tampoco habrá paréntesis. Los argumentos están separados por comas. La codificación de cada argumento indica directamente cómo se codifica en una firma de .NET Framework:  
   
     -   Tipos base. Los tipos habituales (ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE) se representan como el nombre completo del tipo.  
   
-    -   Los tipos intrínsecos (por ejemplo, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF y ELEMENT_TYPE_VOID) se representan como el nombre completo del tipo completo correspondiente, por ejemplo, **System.Int32** o **System.TypedReference**.  
+    -   Los tipos intrínsecos (por ejemplo, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF y ELEMENT_TYPE_VOID) se representan como el nombre completo del tipo completo correspondiente, por ejemplo **System.Int32** o **System.TypedReference**.  
   
     -   ELEMENT_TYPE_PTR se representa como un "*" después del tipo modificado.  
   
@@ -76,7 +77,7 @@ El compilador genera una cadena de identificador para cada construcción del có
   
     -   ELEMENT_TYPE_SENTINEL  
   
--   Para los operadores de conversión, el valor devuelto del método se codifica como un ' ~' seguido por el tipo de valor devuelto codificado anteriormente.  
+-   Solo para los operadores de conversión, el valor devuelto del método se codifica como "~" seguido por el tipo de valor devuelto, como se ha codificado anteriormente.  
   
 -   Para tipos genéricos, el nombre del tipo irá seguido de una tilde aguda y después de un número que indica el número de parámetros de tipo genérico.  Por ejemplo,  
   
@@ -86,10 +87,10 @@ El compilador genera una cadena de identificador para cada construcción del có
   
      Para un tipo que se define como `public class MyClass<T, U>`.  
   
-     Para métodos que toman tipos genéricos como parámetros, los parámetros de tipo genérico se especifican como números va precedidos de tics atrás (por ejemplo \`0, \`1).  Cada número representa una notación de matriz de base cero para los parámetros genéricos del tipo.  
+     Para los métodos que toman tipos genéricos como parámetros, los parámetros de tipo genérico se especifican como números precedidos por tildes agudas (por ejemplo, \`0, \`1).  Cada número representa una notación de matriz de base cero para los parámetros genéricos del tipo.  
   
 ## <a name="example"></a>Ejemplo  
- Los ejemplos siguientes muestran cómo las cadenas de ID para una clase y sus miembros se generará.  
+ En los ejemplos siguientes se muestra cómo se generarían las cadenas de identificador para una clase y sus miembros.  
   
 ```  
 // xml_id_strings.cpp  

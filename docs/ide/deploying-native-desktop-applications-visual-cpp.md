@@ -1,5 +1,5 @@
 ---
-title: Implementar aplicaciones de escritorio nativas (Visual C++) | Documentos de Microsoft
+title: Implementar aplicaciones de escritorio nativas (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2018
 ms.technology:
@@ -21,17 +21,18 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
 ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259249"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Implementar aplicaciones de escritorio nativas (Visual C++)
 
 La implementación es el proceso mediante el cual se distribuye una aplicación o un componente acabado para instalarse en otros equipos. La planeación de la implementación se inicia cuando se crea una aplicación en el equipo de un desarrollador. La implementación finaliza cuando se instala la aplicación y está preparada para ejecutarse en el equipo del usuario.
 
-Visual Studio proporciona diferentes tecnologías para implementar aplicaciones Windows. Estos incluyen la implementación de ClickOnce y la implementación de Windows Installer.
+Visual Studio proporciona diferentes tecnologías para implementar aplicaciones Windows. Entre ellas se incluyen las implementaciones ClickOnce y Windows Installer.
 
-- Se puede utilizar ClickOnce para implementar aplicaciones de C++ que tienen como destino common language runtime (CLR): ensamblados mixtos, puros y comprobables. Aunque puede usar a Windows Installer para implementar una aplicación administrada, se recomienda usar ClickOnce porque aprovecha las ventajas de las características de seguridad de .NET Framework, como la firma de manifiesto. ClickOnce no admite la implementación de aplicaciones de C++ nativas. Para obtener más información, vea [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md).
+- ClickOnce se puede usar para implementar aplicaciones de C++ destinadas a Common Language Runtime (CLR): ensamblados mixtos, puros y comprobables. Aunque se puede usar Windows Installer para implementar una aplicación administrada, se recomienda usar ClickOnce porque aprovecha las características de seguridad de .NET Framework, como la firma de manifiestos. ClickOnce no admite la implementación de aplicaciones de C++ nativas. Para obtener más información, vea [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md).
 
 - La tecnología de Windows Installer puede usarse para implementar aplicaciones de C++ nativas o aplicaciones de C++ orientadas a CLR.
 
@@ -59,7 +60,7 @@ Los artículos de esta sección de la documentación explican cómo asegurarse d
 
 - [Implementación de ClickOnce para aplicaciones de Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md)
 
-- [Ejecutar una aplicación /clr de C++ en una versión anterior de tiempo de ejecución](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [Ejecutar una aplicación /clr de C++ en una versión anterior del Runtime](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>Secciones relacionadas
 

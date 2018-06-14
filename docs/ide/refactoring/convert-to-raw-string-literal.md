@@ -1,5 +1,5 @@
 ---
-title: Convertir en Literal de cadena sin formato | Documentos de Microsoft
+title: Convertir en literal de cadena sin formato | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,30 +12,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328414"
 ---
 # <a name="convert-to-raw-string-literal"></a>Convertir en literal de cadena sin formato
-**¿Qué:** le permite convertir cualquier cadena en una cadena sin formato de C++ literal.
+**Qué:** Permite convertir cualquier cadena en un literal de cadena sin formato de C++.
 
-**Cuándo:** tiene una cadena con caracteres de escape que no debe procesarse como caracteres de escape.
+**Cuándo:** Tiene una cadena con caracteres de escape que no se deben procesar como caracteres de escape.
 
-**Por este motivo:** pudo caracteres de doble escape, pero a menudo hace que las cadenas confusas y no se puede leer.  Usan literales de cadena sin formato hace que las cadenas son mucho más fáciles de leer.
+**Por qué:** Podría aplicar secuencias de escape doble a los caracteres, pero esto suele generar cadenas confusas e ilegibles.  El uso de literales de cadena sin formato hace que las cadenas sean mucho más fáciles de leer.
 
 **Cómo**:
 
-1. Coloque el cursor de texto o el mouse sobre la cadena de escape para convertir.
+1. Coloque el cursor de texto o el ratón sobre la cadena de escape que se va a convertir.
 
    ![Código resaltado](images/stringliteral_highlight.png)
 
 1. A continuación, realice alguno de los siguientes procedimientos:
    * **Teclado**
-     * Presione **Ctrl +.** Para activar el **acciones rápidas y refactorizaciones** menú y seleccione **convertir en Literal de cadena sin formato** en el menú contextual.
+     * Presione **Ctrl +.** para activar el menú **Acciones rápidas y refactorizaciones** y seleccione **Convertir en literal de cadena sin formato** en el menú contextual.
    * **Mouse**
-     * Haga clic en el código, seleccione la **acciones rápidas y refactorizaciones** menú y seleccione **convertir en Literal de cadena sin formato** en el menú contextual.
-     * Haga clic en el ![bombilla](images/bulb.png) icono que aparece en el margen izquierdo y seleccione **convertir en Literal de cadena sin formato** en el menú contextual.
+     * Haga clic con el botón derecho sobre el código, seleccione el menú **Acciones rápidas y refactorizaciones** y seleccione **Convertir en literal de cadena sin formato** en el menú contextual.
+     * Haga clic en el icono ![Bombilla](images/bulb.png) que aparece en el margen izquierdo y seleccione **Convertir en literal de cadena sin formato** en el menú contextual.
 
-1. La cadena se convertirán inmediatamente en un literal de cadena sin formato.  
+1. La cadena se convertirá inmediatamente en un literal de cadena sin formato.  
 
-   ![Resultado Literal de cadena sin formato](images/stringliteral_result.png)
+   ![Resultado del literal de cadena sin formato](images/stringliteral_result.png)

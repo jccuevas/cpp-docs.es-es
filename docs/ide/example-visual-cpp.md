@@ -1,5 +1,5 @@
 ---
-title: '&lt;en el ejemplo se&gt; (Visual C++) | Documentos de Microsoft'
+title: '&lt;example&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321436"
 ---
-# <a name="ltexamplegt-visual-c"></a>&lt;en el ejemplo se&gt; (Visual C++)
-La etiqueta \<example> le permite especificar un ejemplo de cómo usar un método u otro miembro de biblioteca. Normalmente, esto también supone la utilización de la [ \<código >](../ide/code-visual-cpp.md) etiqueta.  
+# <a name="ltexamplegt-visual-c"></a>&lt;example&gt; (Visual C++)
+La etiqueta \<example> le permite especificar un ejemplo de cómo usar un método u otro miembro de biblioteca. Normalmente, esto también supone el uso de la etiqueta [\<code>](../ide/code-visual-cpp.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   

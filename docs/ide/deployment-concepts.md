@@ -1,5 +1,5 @@
 ---
-title: Conceptos de implementación | Documentos de Microsoft
+title: Conceptos de implementación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,29 +20,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0960e94acdbe660474efbeeddd0f72fa4f0606f6
 ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34257067"
 ---
 # <a name="deployment-concepts"></a>Conceptos de implementación
 
-En esta sección se explica las consideraciones principales para implementar aplicaciones de C++.
+En esta sección se explican las consideraciones principales para la implementación de aplicaciones de C++.
 
 ## <a name="windows-installer-deployment-in-c"></a>Implementación de Windows Installer en C++
 
-Proyectos de Visual C++ suelen utilizan el programa de instalación de Windows Installer tradicional para la implementación. Para preparar una implementación de Windows Installer, empaquetar la aplicación en un archivo setup.exe y distribuir ese archivo, junto con un paquete de instalador (.msi). Los usuarios, a continuación, ejecutan setup.exe para instalar la aplicación.
+En los proyectos de Visual C++ se suele usar el programa de instalación de Windows Installer tradicional para la implementación. Para preparar una implementación de Windows Installer, la aplicación se empaqueta en un archivo setup.exe y se distribuye ese archivo, junto con un paquete de instalador (.msi). Después, los usuarios ejecutan setup.exe para instalar la aplicación.
 
-Empaquetar la aplicación mediante la adición de un proyecto de instalación a la solución; Cuando compila, crea la instalación y el instalador de archivos de paquete que se distribuyen a los usuarios. Para obtener más información, consulte [elegir un método de implementación](../ide/choosing-a-deployment-method.md).
+Para empaquetar la aplicación, se agrega un proyecto de instalación a la solución; cuando se compila, se crean los archivos de paquete de instalación y del instalador que se distribuyen a los usuarios. Para obtener más información, vea [Elegir un método de implementación](../ide/choosing-a-deployment-method.md).
 
 ## <a name="library-dependencies"></a>Dependencias de biblioteca
 
-Cuando se compila una aplicación de C/C ++ mediante la funcionalidad proporcionada por las bibliotecas de Visual C++, se vuelve dependiente de la presencia de dichas bibliotecas en tiempo de ejecución. En orden para ejecutar la aplicación, debe vincular, estática o dinámicamente, a las bibliotecas de Visual C++ es necesarias. Si una aplicación dinámicamente vínculos a una biblioteca de Visual C++, a continuación, cuando se ejecuta dicha biblioteca deben estar presentes para que se puede cargar. Por otro lado, si la aplicación se vincula estáticamente a una biblioteca de Visual C++, a continuación, no es necesario el archivo DLL correspondiente esté presente en el equipo del usuario. Sin embargo, se la vinculación estática, tiene algunos efectos negativos, por ejemplo, el aumento del tamaño de los archivos de aplicación y realizar el mantenimiento sea más difícil. Para obtener más información, consulte [ventajas de utilizar archivos DLL](../build/dlls-in-visual-cpp.md#advantages-of-using-dlls).
+Cuando se compila una aplicación de C/C ++ mediante la funcionalidad proporcionada por las bibliotecas de Visual C++, depende de la presencia de esas bibliotecas en tiempo de ejecución. Para que la aplicación, se pueda ejecutar, se debe vincular, de manera estática o dinámica, a las bibliotecas de Visual C++ necesarias. Si una aplicación se vincula de manera dinámica a una biblioteca de Visual C++, cuando se ejecute, esa biblioteca debe estar presente para que se pueda cargar. Por otro lado, si la aplicación se vincula de manera estática a una biblioteca de Visual C++, no es necesario que los archivos DLL correspondientes estén presentes en el equipo del usuario. Pero la vinculación estática tiene algunos efectos negativos, por ejemplo, el aumento del tamaño de los archivos de aplicación y la dificultad de realizar el mantenimiento. Para obtener más información, vea [Ventajas de usar archivos DLL](../build/dlls-in-visual-cpp.md#advantages-of-using-dlls).
 
 ## <a name="packaging-and-redistributing"></a>Empaquetado y redistribución
 
-Bibliotecas de Visual C++ se empaquetan como archivos DLL y todas las bibliotecas necesarias para las aplicaciones de C o C++ se instalan Visual Studio en el equipo del desarrollador. Sin embargo, al implementar su aplicación a los usuarios, no es factible en la mayoría de los casos a necesario volver a instalar Visual Studio para ejecutar la aplicación. Es importante poder redistribuir solamente las partes de Visual C++ que son requeridas por la aplicación se ejecute correctamente.
+Las bibliotecas de Visual C++ se empaquetan como archivos DLL y Visual Studio instala todas las bibliotecas necesarias para las aplicaciones de C o C++ en el equipo del desarrollador. Pero al implementar la aplicación para los usuarios, en la mayoría de los casos no es factible que tengan que volver a instalar Visual Studio para poder ejecutar la aplicación. Es importante poder redistribuir solamente las partes de Visual C++ que son necesarias para que la aplicación se ejecute de forma correcta.
 
-Para obtener más información sobre cómo empaquetar y redistribuir, vea los temas siguientes:
+Para obtener más información sobre el empaquetado y la redistribución, vea los temas siguientes:
 
 - [Determinar qué archivos DLL se redistribuirán](../ide/determining-which-dlls-to-redistribute.md).
 
@@ -50,11 +51,11 @@ Para obtener más información sobre cómo empaquetar y redistribuir, vea los te
 
 - [Implementación de CRT universal](universal-crt-deployment.md).
 
-Para obtener ejemplos de implementación y sugerencias sobre solución de problemas, consulte:
+Para obtener ejemplos de implementación y sugerencias sobre solución de problemas, vea:
 
 - [Ejemplos de implementación](../ide/deployment-examples.md).
 
-- [Solución de problemas de C o C++ aplicaciones aisladas y ensamblados en paralelo](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md).
+- [Solución de problemas de aplicaciones aisladas y ensamblados simultáneos de C/C++](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md).
 
 ## <a name="see-also"></a>Vea también
 

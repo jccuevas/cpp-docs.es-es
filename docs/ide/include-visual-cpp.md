@@ -1,5 +1,5 @@
 ---
-title: '&lt;incluir&gt; (Visual C++) | Documentos de Microsoft'
+title: '&lt;include&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b4c1a75acb89d9510dd7f489e5d0d582611da8de
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330432"
 ---
-# <a name="ltincludegt-visual-c"></a>&lt;incluir&gt; (Visual C++)
-La etiqueta \<include> le permite hacer referencia a comentarios colocados en otro archivo que describen los tipos y miembros en el código fuente. Esto es una alternativa a colocar los comentarios de documentación directamente en el archivo de código fuente.  Por ejemplo, puede usar \<incluyen > para insertar comentarios estándar "reutilizable" que se utilizan a lo largo de su equipo o empresa.  
+# <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
+La etiqueta \<include> le permite hacer referencia a comentarios colocados en otro archivo que describen los tipos y miembros en el código fuente. Esto es una alternativa a colocar los comentarios de documentación directamente en el archivo de código fuente.  Por ejemplo, se puede usar \<include> para insertar comentarios estándar "reutilizables" que se usen en todo el equipo o la empresa.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,12 +48,12 @@ La etiqueta \<include> le permite hacer referencia a comentarios colocados en ot
  El identificador de la etiqueta que precede a los comentarios.  Ponga el nombre entre comillas simples o dobles.  
   
 ## <a name="remarks"></a>Comentarios  
- La etiqueta \<include> usa la sintaxis de XPath de XML. Consulte la documentación de XPath para formas de personalizar utilizando \<incluyen >.  
+ La etiqueta \<include> usa la sintaxis de XPath de XML. Consulte la documentación de XPath para ver formas de personalización mediante \<include>.  
   
  Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- Este es un ejemplo de múltiples archivos. El primer archivo, que utiliza \<incluyen >, contiene los siguientes comentarios de documentación:  
+ Este es un ejemplo de múltiples archivos. El primer archivo, en el que se usa \<include>, contiene los comentarios de documentación siguientes:  
   
 ```  
 // xml_include_tag.cpp  

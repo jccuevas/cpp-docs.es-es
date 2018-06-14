@@ -1,5 +1,5 @@
 ---
-title: Especificar eventos de compilación | Documentos de Microsoft
+title: Especificar eventos de compilación | Microsoft Docs
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -27,39 +27,40 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334969"
 ---
 # <a name="specifying-build-events"></a>Especificar eventos de compilación
 
-Puede usar eventos de compilación para especificar los comandos que se ejecutan antes de iniciarse la compilación, antes del proceso de vinculación o una vez finalizada la compilación.
+Los eventos de compilación se pueden usar para especificar comandos que se ejecuten antes de que se inicie la compilación, antes del proceso de vinculación o después de que finalice la compilación.
 
-Los eventos de compilación se ejecutan solo si se alcanzan correctamente esos puntos en el proceso de compilación. Si se produce un error en la compilación, el *posterior a la compilación* no producirán eventos; si el error se produce antes de la fase de vinculación, ni la *anterior a la vinculación* ni *posterior a la compilación* eventos se produce. Además, si no hay archivos deben vincularse, el *anterior a la vinculación* no se produce el evento. El *anterior a la vinculación* eventos no está disponible en los proyectos que no contengan un paso de vinculación.
+Los eventos de compilación se ejecutan solo si se alcanzan correctamente esos puntos en el proceso de compilación. Si se produce un error en la compilación, no se produce el evento *posterior a la compilación*; si el error se produce antes de la fase de vinculación, no se producen los eventos *anterior a la vinculación* ni *posterior a la compilación*. Además, si no es necesario vincular ningún archivo, el evento *anterior a la vinculación* no se produce. El evento *anterior a la vinculación* no está disponible en los proyectos que no contengan un paso de vinculación.
 
-Si no hay archivos deben compilarse, se producirá ningún evento de compilación.
+Si no es necesario compilar ningún archivo, no se producirá ningún evento de compilación.
 
-Para obtener información general sobre los eventos de compilación, consulte [Introducción a los pasos de compilación personalizada y eventos de compilación](../ide/understanding-custom-build-steps-and-build-events.md).
+Para obtener información general sobre los eventos de compilación, vea [Descripción de los pasos de compilación personalizada y los eventos de compilación](../ide/understanding-custom-build-steps-and-build-events.md).
 
 ### <a name="to-specify-a-build-event"></a>Para especificar un evento de compilación
 
 1. En el **Explorador de soluciones**, seleccione el proyecto para el que quiere especificar el evento de compilación.
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).
 
-1. En el **eventos de compilación** carpeta, seleccione una página de propiedades de evento de compilación.
+1. En la carpeta **Eventos de compilación**, seleccione una página de propiedades de evento de compilación.
 
 1. Especifique las propiedades asociadas al evento de compilación:
 
-   - En **línea de comandos**, especifique un comando como si estuviera especificándolo en el símbolo del sistema. Especifique un comando válido o archivo por lotes, y cualquier entrada necesaria o archivos de salida. Especifique el **llamar** el comando antes del nombre de un archivo por lotes para garantizar que todos los comandos subsiguientes se ejecutan por lotes.
+   - En **Línea de comandos**, especifique un comando como si estuviera especificándolo en el símbolo del sistema. Especifique un comando o archivo por lotes válido, y los archivos de entrada o salida necesarios. Especifique el comando por lotes **call** antes del nombre de un archivo por lotes para garantizar que se ejecuten todos los comandos siguientes.
 
-      Varios archivos de entrada y salidos se pueden especificar simbólicamente con macros MSBuild. Para obtener información sobre cómo especificar la ubicación de archivos o los nombres de los conjuntos de archivos, consulte [comunes Macros para propiedades y comandos de generación](../ide/common-macros-for-build-commands-and-properties.md).
+      Se pueden especificar varios archivos de entrada y salida simbólicamente mediante macros de MSBuild. Para obtener información sobre cómo especificar la ubicación de los archivos o los nombres de los conjuntos de archivos, vea [Macros comunes para propiedades y comandos de compilación](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Dado que el carácter '%' está reservado por MSBuild, si especifica una variable de entorno reemplaza cada **%** carácter con escape la **% 25** secuencia de escape hexadecimal. Por ejemplo, reemplace **% WINDIR %** con **25WINDIR % 25**. MSBuild reemplaza cada **% 25** de secuencia con el **%** antes de tener acceso a la variable de entorno de caracteres.
+      Como el carácter "%" está reservado por MSBuild, si se especifica una variable de entorno, reemplace todos los caracteres con escape **%** con la secuencia de escape hexadecimal **%25**. Por ejemplo, reemplace **%WINDIR%** con **%25WINDIR%25**. MSBuild reemplaza todas las secuencias **%25** con el carácter **%** antes de acceder a la variable de entorno.
 
-   - En **descripción**, escriba una descripción para este evento. La descripción se imprime en la **salida** ventana cuando se produce este evento.
+   - En **Descripción**, escriba una descripción para este evento. La descripción se imprime en la ventana **Salida** cuando se produce este evento.
 
-   - En **excluir de la generación**, especifique **Sí** si no desea que se ejecute el evento.
+   - En **Excluir de la compilación**, especifique **Sí** si no quiere que el evento se ejecute.
 
 ## <a name="see-also"></a>Vea también
 

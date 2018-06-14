@@ -1,5 +1,5 @@
 ---
-title: Páginas de propiedades recursos | Documentos de Microsoft
+title: Páginas de propiedades Recursos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,16 +23,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322879"
 ---
 # <a name="resources-property-pages"></a>páginas de propiedades Recursos
-Para obtener más información sobre cómo utilizar el compilador de recursos, consulte [utilizar RC (la línea de comandos de RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055).  
+Para obtener más información sobre cómo usar el compilador de recursos, vea [Using RC (The RC Command Line)](http://msdn.microsoft.com/library/windows/desktop/aa381055) (Uso de RC (la línea de comandos de RC)).  
   
- Para obtener información sobre cómo obtener acceso a la **recursos** páginas de propiedades, vea [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).  
+ Para obtener información sobre cómo acceder a las páginas de propiedades **Recursos**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
   
- Para obtener acceso a estas propiedades mediante programación, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
+ Para acceder a estas propiedades mediante programación, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
   
 ## <a name="see-also"></a>Vea también  
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)
