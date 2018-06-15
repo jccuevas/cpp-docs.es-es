@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5ab1ed04b9890fbed8de8b59354ab36d7be063e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340234"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>Archivos de encabezado y código fuente de controles o programas MFC

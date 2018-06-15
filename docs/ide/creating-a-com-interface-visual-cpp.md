@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d2844e9051c5e6adf14085bcd7bfcd8096c6f8f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33332587"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Crear una interfaz COM (Visual C++)
@@ -81,4 +81,4 @@ interface IMyInterface {
   
 ## <a name="see-also"></a>Vea también  
  [Crear proyectos de escritorio con asistentes para aplicaciones](../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Agregar funcionalidad con los asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)
+ [Agregar funcionalidad con los Asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)

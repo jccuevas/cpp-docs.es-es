@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f3995b1a7227e4d2f0a531c86726b84e960d8ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340494"
 ---
 # <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Especifique los valores de configuración de Release, Asistente para crear nuevo proyecto de archivos de código fuente existentes.
