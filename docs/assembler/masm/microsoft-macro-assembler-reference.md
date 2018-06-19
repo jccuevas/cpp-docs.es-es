@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052832"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Referencia de Microsoft Macro Assembler
 Microsoft Macro Assembler (MASM) proporciona varias ventajas con código ensamblador en línea. MASM contiene un lenguaje de macros que tiene características como el procesamiento de cadena de bucle, aritméticos y de texto. MASM también ofrece un mayor control sobre el hardware porque admite los conjuntos de instrucciones de la 386, 486 y procesadores Pentium. Mediante el uso de MASM, también puede reducir la sobrecarga de tiempo y memoria.  

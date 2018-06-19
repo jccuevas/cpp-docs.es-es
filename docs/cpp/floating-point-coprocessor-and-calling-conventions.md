@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410806"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>Coprocesador de punto flotante y convenciones de llamada
 Si está escribiendo ensamblado coprocesador de punto de rutinas para flotante, se debe conservar flotante palabra de control de punto y limpiar la pila del coprocesador a menos que va a devolver un **float** o **doble** valor (lo que la función debe devolver en ST(0)).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050463"
 ---
 # <a name="continue"></a>.CONTINUE
 Genera código para saltar a la parte superior de un [. MIENTRAS](../../assembler/masm/dot-while.md) o [. Repita](../../assembler/masm/dot-repeat.md) bloquear si `condition` es true.  

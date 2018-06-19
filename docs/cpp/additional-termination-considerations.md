@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408151"
 ---
 # <a name="additional-termination-considerations"></a>Consideraciones de finalización adicionales
 Puede finalizar un programa de C++ mediante el uso de **salir**, `return`, o **anular**. Puede agregar procesamiento de salida mediante la función `atexit`. Esto se trata en las siguientes secciones.  

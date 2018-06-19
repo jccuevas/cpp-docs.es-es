@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053095"
 ---
 # <a name="ml-nonfatal-errors"></a>Errores recuperables de ML
 Para obtener más información acerca de errores recuperables de ML, consulte [mensajes de Error de ML](../../assembler/masm/ml-error-messages.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054688"
 ---
 # <a name="ml-fatal-error-a1017"></a>Error irrecuperable A1017 de ML
 **nombre de archivo de origen que faltan**  

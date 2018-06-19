@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055061"
 ---
 # <a name="sizestr"></a>@SizeStr
 Una función de macro que devuelve la longitud de la cadena especificada. Devuelve un entero.  

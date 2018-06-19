@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052965"
 ---
 # <a name="textequ"></a>TEXTEQU
 Asigna *textitem* a *nombre*. El *textitem* puede ser una cadena literal, una constante precedida por un `%`, o la cadena devuelta por una función de macro.  
