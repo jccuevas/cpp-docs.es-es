@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131103"
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Cómo: Analizar cadenas utilizando expresiones regulares (C++/CLI)
 En el siguiente ejemplo de código se muestra el análisis de una cadena sencilla mediante la clase <xref:System.Text.RegularExpressions.Regex> del espacio de nombres <xref:System.Text.RegularExpressions?displayProperty=fullName>. Se crea una cadena que contiene varios tipos de descriptores de palabras. A continuación, se analiza la cadena mediante las clases <xref:System.Text.RegularExpressions.Regex> y <xref:System.Text.RegularExpressions.Match>. Finalmente, se muestran todas las palabras de la frase independientemente.  

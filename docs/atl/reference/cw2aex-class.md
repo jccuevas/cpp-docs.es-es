@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364003"
 ---
 # <a name="cw2aex-class"></a>Clase CW2AEX
 Esta clase se utiliza por las macros de conversión de cadena `CT2AEX`, `CW2TEX`, `CW2CTEX`, y `CT2CAEX`y la definición de tipo **CW2A**.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092393"
 ---
 # <a name="delegates-ccx"></a>Delegados (C++/CX)
 El `delegate` palabra clave se utiliza para declarar un tipo de referencia que es el equivalente de Windows en tiempo de ejecución de un objeto de función en C++ estándar. Una declaración de delegado es similar a una signatura de función; especifica el tipo de valor devuelto y los tipos de parámetros que debe tener la función incluida. Esta es una declaración de delegado definida por el usuario:  

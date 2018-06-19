@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366941"
 ---
 # <a name="dependents"></a>Dependientes
 En una línea de dependencia, especifique cero o más elementos dependientes después del signo de dos puntos (:) o dos puntos dobles (::), utilizando cualquier nombre de archivo válido o [pseudodestino](../build/pseudotargets.md). Separe varios elementos dependientes con uno o más espacios o tabulaciones. Elementos dependientes no distinguen mayúsculas de minúsculas. Se permiten rutas de acceso con nombres de archivo.  

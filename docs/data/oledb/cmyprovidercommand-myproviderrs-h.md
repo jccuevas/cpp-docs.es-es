@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098152"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 La `CMyProviderCommand` clase es la implementación para el objeto de comando de proveedor. Proporciona la implementación para la `IAccessor`, `ICommandText`, y **ICommandProperties** interfaces. La `IAccessor` interfaz es la misma que del conjunto de filas. El objeto de comando utiliza el descriptor de acceso para especificar enlaces de parámetros. El objeto de conjunto de filas los utiliza para especificar enlaces para las columnas de salida. La `ICommandText` interfaz es una forma útil de especificar un comando textualmente. Este ejemplo se utiliza la `ICommandText` interfaz más adelante cuando agrega código personalizado; también invalida la `ICommand::Execute` método. El **ICommandProperties** interfaz controla todas las propiedades de los objetos de comando y el conjunto de filas.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364269"
 ---
 # <a name="cdynamicchain-class"></a>Clase CDynamicChain
 Esta clase proporciona métodos que admiten el encadenamiento dinámico de mapas de mensajes.  

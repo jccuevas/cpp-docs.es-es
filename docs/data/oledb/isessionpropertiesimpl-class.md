@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106055"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl (Clase)
 Proporciona una implementación de la [ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx) interfaz.  

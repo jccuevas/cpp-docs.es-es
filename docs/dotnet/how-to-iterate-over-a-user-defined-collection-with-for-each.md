@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128659"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>Cómo: Iterar por una colección definida por el usuario con for each
 Para que una clase como una colección administrada, necesita una función de GetEnumerator de no privados que devuelve un identificador a una clase de enumerador o una interfaz.  Una clase de enumerador debe contener la declaración de función de MoveNext no estático y propiedad actual.  

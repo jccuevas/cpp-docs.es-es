@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112685"
 ---
 # <a name="testing-the-read-only-provider"></a>Probar el proveedor de sólo lectura
 Para probar un proveedor, se necesita un consumidor. Resulta útil si el consumidor puede coincide con el proveedor. Las plantillas de consumidor OLE DB son un contenedor fino alrededor de OLE DB y coinciden con los objetos COM del proveedor. Dado que el origen se incluye con las plantillas de consumidor, es fácil de depurar un proveedor con ellos. Las plantillas de consumidor también son una forma muy pequeña y rápida para desarrollar aplicaciones de consumidor.  

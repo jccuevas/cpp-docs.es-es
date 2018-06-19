@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130229"
 ---
 # <a name="lock-members"></a>lock (Miembros)
 Los miembros de la [lock (clase)](../dotnet/lock-class.md).  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093682"
 ---
 # <a name="cbookmarksetbookmark"></a>CBookmark::SetBookmark
 Copia el valor de marcador al que hace referencia `pBuffer` a la `CBookmark` almacenar en búfer y se establece el tamaño de búfer en `nSize`.  

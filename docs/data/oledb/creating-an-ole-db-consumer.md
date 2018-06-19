@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096696"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Crear un consumidor OLE DB
 Puede crear un consumidor de plantillas OLE DB con o sin el Asistente para consumidores OLE DB ATL, aunque el uso del asistente es el método recomendado. Un consumidor puede funcionar en cualquier aplicación que admita ATL.  

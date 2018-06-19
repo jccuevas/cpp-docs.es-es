@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458867"
 ---
 # <a name="filename-macros"></a>Macros de nombre de archivo
 Las macros de nombre de archivo están predefinidas como nombres de archivo especificados en la dependencia (especificaciones de nombre de archivo no completa en el disco). Estas macros no tienen que incluirse entre paréntesis cuando se invoca; Especifique solo un $ tal como se muestra.  

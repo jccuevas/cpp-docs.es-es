@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366268"
 ---
 # <a name="arm-exception-handling"></a>Control de excepciones de ARM
 Windows en ARM emplea el mismo mecanismo de control de excepciones estructurado tanto en las excepciones generadas por hardware asincrónicas como en las excepciones generadas por software sincrónicas. Los controladores de excepciones específicos de lenguaje se basan en el control de excepciones estructurado de Windows por medio de funciones auxiliares de lenguaje. En este documento se describe el control de excepciones en Windows en ARM, así como las funciones auxiliares de lenguaje que usa el código generado mediante MASM y el compilador de Visual C++.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095471"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>Convertir datos no compatibles con el proveedor
 Cuando el consumidor solicita un tipo de datos que no es compatible con el proveedor, el código de la plantilla de proveedores OLE DB para `IRowsetImpl::GetData` llama a Msdadc.dll para convertir el tipo de datos.  

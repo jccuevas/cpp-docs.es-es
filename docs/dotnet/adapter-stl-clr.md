@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104527"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 El encabezado STL/CLR `<cliext/adapter>` especifica dos clases de plantilla (`collection_adapter` y `range_adapter`) y la función de plantilla `make_collection`.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370952"
 ---
 # <a name="heapsize"></a>HEAPSIZE
 Expone la misma funcionalidad que la [/en el MONTÓN](../../build/reference/heap-set-heap-size.md) opción del vinculador.  

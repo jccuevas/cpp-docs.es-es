@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089170"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute (Clase)
 Indica que el modelo de subprocesos de una aplicación es un contenedor multiproceso (MTA).  

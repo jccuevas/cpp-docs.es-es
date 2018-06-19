@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110451"
 ---
 # <a name="explicit-override-of-an-interface-member"></a>Reemplazo explícito de un miembro de interfaz
 La sintaxis para declarar un reemplazo explícito de un miembro de interfaz dentro de una clase ha cambiado de extensiones administradas para C++ a Visual C++.  

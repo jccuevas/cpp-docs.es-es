@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086680"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException (Clase)
 Se produce cuando uno de los argumentos proporcionados a un método no es válido.  

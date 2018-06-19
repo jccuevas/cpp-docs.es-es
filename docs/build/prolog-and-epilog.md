@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372014"
 ---
 # <a name="prolog-and-epilog"></a>Prólogo y epílogo
 Cada función que asigna espacio de pila, llama a otras funciones, guarda los registros no volátiles o usa el control de excepciones debe tener un prólogo cuyos límites de direcciones se describen en los datos de desenredo asociados a la entrada de tabla de la función respectiva (vea [(X64) el control de excepciones](../build/exception-handling-x64.md)). El prólogo guarda argumento registros en sus direcciones particulares si es necesario, inserta los registros no volátiles en la pila, asigna la parte fija de la pila para los objetos temporales y variables locales y, opcionalmente, establece un puntero de marco. Datos de desenredo asociado debe describir la acción del prólogo y debe proporcionar la información necesaria para deshacer el efecto del código de prólogo.  

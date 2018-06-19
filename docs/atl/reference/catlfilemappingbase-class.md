@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364449"
 ---
 # <a name="catlfilemappingbase-class"></a>Clase CAtlFileMappingBase
 Esta clase representa un archivo asignado a memoria.  

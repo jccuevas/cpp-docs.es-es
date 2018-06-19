@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089371"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Mostrar y manipular datos en un formulario
 Muchas aplicaciones de acceso a datos seleccione datos y mostrarlos en campos de un formulario. La clase de base de datos [CRecordView](../../mfc/reference/crecordview-class.md) le ofrece un [CFormView](../../mfc/reference/cformview-class.md) objeto conectado directamente a un objeto de conjunto de registros. La vista de registros utiliza [intercambio de datos de cuadros de diálogo (DDX)](../../mfc/dialog-data-exchange-and-validation.md) para mover los valores de los campos del registro actual del conjunto de registros a los controles en el formulario y para mover información actualizada de vuelta al conjunto de registros. El conjunto de registros, a su vez, utiliza el intercambio de campos de registros (RFX) para mover datos entre sus miembros de datos de campo y las columnas correspondientes de una tabla en el origen de datos.  

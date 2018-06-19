@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099477"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Habilitar y deshabilitar servicios OLE DB
 El Administrador de componentes de servicio de OLE DB compara las propiedades especificadas por el consumidor para aquellos admitidos por el proveedor para determinar si se pudieron invocar componentes individuales de servicio para satisfacer la funcionalidad ampliada solicitada por el consumidor. Por ejemplo, si una aplicación solicita un cursor desplazable y el proveedor sólo admite un cursor de solo avance, el Administrador de componentes de servicio invoca al componente de servicio de motor de Cursor de cliente para proporcionar funcionalidad desplazable. Si la aplicación depende de funcionalidad extendida que se admiten de forma predeterminada en el conjunto de filas del proveedor y la aplicación no establece explícitamente las propiedades para solicitar que la funcionalidad, la funcionalidad que no aparezcan en el conjunto de filas devuelto por el cliente Motor de cursor. Para que sea interoperable, las aplicaciones siempre deben establecer propiedades para solicitar explícitamente la funcionalidad extendida cuando sea necesario.  

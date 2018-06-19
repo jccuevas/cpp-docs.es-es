@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104274"
 ---
 # <a name="c-support-library"></a>Biblioteca de compatibilidad de C++
 La biblioteca de C++ admite proporciona clases que admiten la programación administrada en C++.  

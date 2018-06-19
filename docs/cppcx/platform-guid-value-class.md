@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089456"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid (Clase de valor)
 Representa un tipo [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) en el sistema de tipos de Windows en tiempo de ejecución.  

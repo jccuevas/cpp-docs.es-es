@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111190"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Servicios y agrupación de recursos OLE DB
 Para trabajar correctamente con la agrupación de OLE DB, o con cualquier servicio de OLE DB, el proveedor debe admitir la agregación de todos los objetos. Se trata de un requisito de OLE DB 1.5 o posterior proveedor. Es fundamental para aprovechar los servicios. No se puede agrupar los proveedores que no admiten la agregación y no hay servicios adicionales se proporcionan.  

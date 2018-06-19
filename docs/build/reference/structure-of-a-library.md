@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373106"
 ---
 # <a name="structure-of-a-library"></a>Estructura de una biblioteca
 Una biblioteca contiene objetos COFF. Objetos de una biblioteca contienen funciones y datos que pueden hacer referencia externamente otros objetos en un programa. Un objeto en una biblioteca se conoce a veces como un miembro de biblioteca.  

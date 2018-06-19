@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127921"
 ---
 # <a name="how-to-implement-the-lock-c-keyword-ccli"></a>Cómo: Implementar la palabra clave lock de C# (C++/CLI)
 Este tema muestra cómo implementar el C# `lock` palabra clave en Visual C++. 

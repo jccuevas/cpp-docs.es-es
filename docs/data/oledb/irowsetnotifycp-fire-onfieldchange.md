@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106562"
 ---
 # <a name="irowsetnotifycpfireonfieldchange"></a>IRowsetNotifyCP::Fire_OnFieldChange
 Difunde un [OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx) evento para notificar a los consumidores de un cambio en el valor de una columna.  

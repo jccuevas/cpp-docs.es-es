@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098477"
 ---
 # <a name="crowsetsetdata"></a>CRowset::SetData
 Establece los valores de datos en una o varias columnas de una fila.  

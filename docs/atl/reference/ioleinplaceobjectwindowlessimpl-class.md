@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365007"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>Clase IOleInPlaceObjectWindowlessImpl
 Esta clase implementa **IUnknown** y proporciona métodos que permiten un control sin ventana que se va a recibir mensajes de ventana como participar en operaciones de arrastrar y colocar.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097437"
 ---
 # <a name="crestrictionsopen"></a>CRestrictions::Open
 Devuelve un resultado que se establece de acuerdo con las restricciones proporcionadas por el usuario.  

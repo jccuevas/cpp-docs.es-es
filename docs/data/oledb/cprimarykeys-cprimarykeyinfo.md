@@ -48,6 +48,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097320"
 ---
 # <a name="cprimarykeys-cprimarykeyinfo"></a>CPrimaryKeys, CPrimaryKeyInfo
 Llamar a la clase de typedef **CPrimaryKeys** para implementar su clase de parámetro **CPrimaryKeyInfo**.  

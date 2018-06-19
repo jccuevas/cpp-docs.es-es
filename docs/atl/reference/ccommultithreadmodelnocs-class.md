@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364198"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>Clase CComMultiThreadModelNoCS
 `CComMultiThreadModelNoCS` Proporciona métodos de subprocesos para aumentar y disminuir el valor de una variable, sin bloqueo de sección crítica o la funcionalidad de desbloqueo.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093235"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Conjunto de registros: Cómo se seleccionan los registros (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  

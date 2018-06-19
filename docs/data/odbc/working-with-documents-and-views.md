@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092951"
 ---
 # <a name="working-with-documents-and-views"></a>Trabajar con documentos y vistas
 La biblioteca Microsoft Foundation Classes (MFC) se basa en una arquitectura documento/vista para muchas de sus características. Normalmente, un documento almacena los datos y una vista muestra en el área cliente de una ventana de marco y administra la interacción del usuario con los datos. La vista se comunica con el documento para obtener y actualizar los datos. Puede usar las clases de base de datos con el marco de trabajo o sin él.  

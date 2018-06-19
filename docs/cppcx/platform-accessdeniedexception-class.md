@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087619"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Platform::AccessDeniedException (Clase)
 Se produce cuando se deniega el acceso a un recurso o a una característica.  

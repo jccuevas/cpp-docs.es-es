@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108691"
 ---
 # <a name="ccli-migration-primer"></a>Manual de migraciones C++/CLI
 Se trata de una guía para mover los programas de Visual C++ de extensiones administradas para C++ a Visual C++. 

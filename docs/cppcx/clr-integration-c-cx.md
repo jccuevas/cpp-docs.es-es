@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086901"
 ---
 # <a name="clr-integration-ccx"></a>Integración de CLR (C++/CX)
 Algunos tipos de Windows en tiempo de ejecución reciben un tratamiento especial en C++ / CX y los idiomas que se basan en common language runtime (CLR). En este artículo se describe la manera en que varios tipos de un lenguaje se asignan a otro lenguaje. Por ejemplo, CLR asigna Windows.Foundation.IVector to System.Collections.IList, Windows.Foundation.IMap to System.Collections.IDictionary, etc. De forma similar, C++ / CX asigna especialmente tipos como Platform:: Delegate y Platform:: String.  

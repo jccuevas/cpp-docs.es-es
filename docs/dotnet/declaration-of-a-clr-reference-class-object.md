@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112019"
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>Declaración de un objeto de una clase de referencia de CLR
 La sintaxis para declarar y crear instancias de un objeto de un tipo de clase de referencia ha cambiado de extensiones administradas para C++ a Visual C++.  

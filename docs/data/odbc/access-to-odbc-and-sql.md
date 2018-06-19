@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087821"
 ---
 # <a name="access-to-odbc-and-sql"></a>Acceso a ODBC y SQL
 La biblioteca Microsoft Foundation Class encapsula muchas llamadas de API de Windows y aún le permite llamar directamente a cualquier función de la API de Windows. Las clases de base de datos proporcionan la misma flexibilidad con respecto a la API de ODBC. Mientras que protegen a las clases de base de datos de gran parte de la complejidad de ODBC, puede llamar a funciones de la API de ODBC directamente desde cualquier lugar en el programa.  

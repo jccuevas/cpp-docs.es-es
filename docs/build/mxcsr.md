@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368631"
 ---
 # <a name="mxcsr"></a>MxCsr
 El estado del registro también incluye MxCsr. La convención de llamada divide este registro en una parte volátil y una parte no volátil. La parte variable está compuesta de los indicadores de 6 estado, MXCSR [0:5], mientras que el resto del registro, MXCSR [6:15], se considera no volátil.  

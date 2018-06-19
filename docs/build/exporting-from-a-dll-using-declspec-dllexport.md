@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368553"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportar desde un archivo DLL mediante __declspec(dllexport)
 Microsoft introducida **__export** en la versión del compilador de 16 bits de Visual C++ para permitir que el compilador genera automáticamente los nombres de exportación y colocarlos en un archivo .lib. Este archivo .lib puede utilizarse como una biblioteca .lib estática para vincularlo a un archivo DLL.  

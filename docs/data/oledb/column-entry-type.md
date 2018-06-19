@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091549"
 ---
 # <a name="columnentrytype"></a>COLUMN_ENTRY_TYPE
 Representa un enlace a la columna concreta de la base de datos. Admite `type` parámetro.  

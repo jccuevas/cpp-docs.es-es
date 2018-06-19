@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096111"
 ---
 # <a name="cenumerator-class"></a>CEnumerator (Clase)
 Se usa un objeto de enumerador de OLE DB, que expone el [ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx) interfaz para devolver un conjunto de filas que describe todos los orígenes de datos y los enumeradores.  

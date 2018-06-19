@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136449"
 ---
 # <a name="notequalto-stlclr"></a>not_equal_to (STL/CLR)
 La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento no es igual que la segunda. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 4b2c3b0c720aef42bce7e1e5566723b0fec5ec7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34428715"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Guía del desarrollador de C++ para los canales de lado de ejecución especulativa
 

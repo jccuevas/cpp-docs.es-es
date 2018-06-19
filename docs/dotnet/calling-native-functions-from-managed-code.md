@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112048"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Llamar a funciones nativas desde código administrado
 Common language runtime proporciona servicios de invocación de plataforma o PInvoke, que habilita el código administrado llame a funciones de estilo C en bibliotecas de vínculos dinámicos (DLL) nativas. Se utilizan los mismos datos que el cálculo de referencias para interoperabilidad de COM con el tiempo de ejecución y para el mecanismo "It Just Works" o IJW.  

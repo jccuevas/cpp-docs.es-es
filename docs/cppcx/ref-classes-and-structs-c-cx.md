@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092449"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref (Clases y structs) (C++/CX)
 C++ / admite CX definido por el usuario *las clases ref* y *structs ref*, definidos por el usuario *clases de valor* y *valor structs*. Estas estructuras de datos son los contenedores primarios por qué C++ / CX admite el sistema de tipos en tiempo de ejecución de Windows. Su contenido se emite en metadatos de acuerdo con determinadas reglas concretas, y esto permite que se pase entre los componentes de tiempo de ejecución de Windows y aplicaciones de la plataforma Universal de Windows que se escriben en C++ u otros lenguajes.  

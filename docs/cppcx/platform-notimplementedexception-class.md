@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088508"
 ---
 # <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException (Clase)
 Se produce cuando un miembro de interfaz no se implementa en un tipo derivado.  

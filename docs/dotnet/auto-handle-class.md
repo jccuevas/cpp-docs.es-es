@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103283"
 ---
 # <a name="autohandle-class"></a>auto_handle (Clase)
 Administración automática de recursos que puede utilizarse para incrustar un identificador virtual en un tipo administrado.  

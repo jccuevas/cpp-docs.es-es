@@ -19,6 +19,7 @@ ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34476112"
 ---
 # <a name="atomic-structure"></a>atomic (Estructura)
 
