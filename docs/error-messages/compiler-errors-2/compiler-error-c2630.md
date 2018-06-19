@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228688"
 ---
 # <a name="compiler-error-c2630"></a>C2630 de Error del compilador
 'símbolo' encontrado en lo que debe ser una lista separada por comas  

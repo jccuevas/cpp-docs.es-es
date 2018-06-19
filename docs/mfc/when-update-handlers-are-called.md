@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384139"
 ---
 # <a name="when-update-handlers-are-called"></a>Cuándo se llama a los controladores actualizados
 Suponga que el usuario hace clic en el mouse (ratón) en el menú archivo, que genera un `WM_INITMENUPOPUP` mensaje. Mecanismo de actualización del marco de trabajo colectivamente actualiza todos los elementos en el menú archivo antes de que el menú se despliega hacia abajo para que el usuario pueda verla.  

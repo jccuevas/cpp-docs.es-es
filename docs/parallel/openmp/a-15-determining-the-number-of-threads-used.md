@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686391"
 ---
 # <a name="a15---determining-the-number-of-threads-used"></a>A.15 Determinar el número de subprocesos utilizados
 Tenga en cuenta el siguiente ejemplo incorrecto (para [sección 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) en página 37):  

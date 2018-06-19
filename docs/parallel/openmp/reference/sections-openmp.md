@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692082"
 ---
 # <a name="sections-openmp"></a>sections (OpenMP)
 Identifica las secciones de código para ser dividido entre todos los subprocesos.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247314"
 ---
 # <a name="compiler-error-c2844"></a>Error del compilador C2844
 'member': no puede ser un miembro de interfaz 'interfaz'  

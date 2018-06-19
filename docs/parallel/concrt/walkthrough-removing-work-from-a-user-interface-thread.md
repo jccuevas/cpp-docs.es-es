@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694292"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Tutorial: Quitar trabajo de un subproceso de la interfaz de usuario
 Este documento muestra cómo usar el Runtime de simultaneidad para mover el trabajo que se realiza mediante el subproceso de interfaz de usuario (UI) en una aplicación de Microsoft Foundation Classes (MFC) para un subproceso de trabajo. Este documento también muestra cómo mejorar el rendimiento de una operación de dibujo prolongada.  

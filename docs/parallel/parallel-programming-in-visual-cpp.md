@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692243"
 ---
 # <a name="parallel-programming-in-visual-c"></a>Programación en paralelo en Visual C++
 Visual C++ proporciona las siguientes tecnologías para ayudarle a crear multiproceso y programas paralelos que pueda aprovecharse de varios núcleos y utilizar la GPU para general finalidad programación.  

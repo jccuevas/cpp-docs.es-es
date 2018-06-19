@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689498"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime (Función)
 El `omp_get_wtime` función devuelve un valor de punto flotante de precisión doble igual que el tiempo de reloj transcurrido en segundos desde alguna "hora del pasado".  El "tiempo en el pasado" real es arbitrario, pero se garantiza que no cambia durante la ejecución del programa de aplicación. El formato es como se detalla a continuación:  

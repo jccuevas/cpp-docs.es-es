@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169210"
 ---
 # <a name="compiler-error-c2071"></a>Error C2071 de Error del compilador
 'identificador': clase de almacenamiento no válida  

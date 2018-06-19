@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385396"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Tutorial: Actualizar la aplicación Scribble de MFC (Parte 2)
 [Parte 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) de este tutorial ha mostrado cómo agregar una cinta de Office Fluent en el clásico Scribble de aplicación. Esta parte muestra cómo agregar controles que los usuarios pueden usar en lugar de los menús y comandos y paneles de cinta de opciones.  

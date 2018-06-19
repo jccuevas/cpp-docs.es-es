@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696271"
 ---
 # <a name="textureview-class"></a>texture_view (Clase)
 Proporciona acceso de lectura y escritura en una textura. `texture_view` solo puede usarse para leer las texturas cuyo tipo de valor es `int`, `unsigned int`, o `float` que tienen bpse de 32 bits de forma predeterminada. Para leer otros formatos de textura, utilice `texture_view<const value_type, _Rank>`.  

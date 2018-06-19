@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693866"
 ---
 # <a name="scheduler-instances"></a>Instancias de Scheduler
 Este documento describe el rol de instancias del programador en el Runtime de simultaneidad y cómo usar el [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) y [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) clases para crear y administrar instancias del programador. Instancias del programador son útiles cuando desea asociar directivas de programación explícitas con tipos concretos de cargas de trabajo. Por ejemplo, puede crear una instancia de programador para ejecutar algunas tareas con una prioridad elevada de subproceso y usar el programador predeterminado para ejecutar con otras tareas con la prioridad normal de subproceso.  

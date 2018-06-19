@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383154"
 ---
 # <a name="tree-control-item-states-overview"></a>Información general sobre los estados de los elementos de control de árbol
 Cada elemento de un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) tiene un estado actual. Por ejemplo, se puede seleccionar un elemento, deshabilitado, expandida y así sucesivamente. En su mayor parte, el control de árbol establece automáticamente el estado de un elemento para reflejar las acciones del usuario, como la selección de un elemento. Sin embargo, también puede establecer el estado de un elemento mediante la [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) función miembro y recuperar el estado actual de un elemento mediante el uso de la [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) función miembro. Para obtener una lista completa de los Estados de elemento, vea [constantes del Control de vista de árbol](http://msdn.microsoft.com/library/windows/desktop/bb759985) del SDK de Windows.  

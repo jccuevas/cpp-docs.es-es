@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235352"
 ---
 # <a name="compiler-error-c2662"></a>C2662 de Error del compilador
 'función': no se puede convertir el puntero 'this' de 'tipo1' a 'tipo2'  

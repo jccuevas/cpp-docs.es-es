@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385543"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Usar sockets con archivos
 Este artículo se describe la [modelo de programación de CSocket](#_core_the_csocket_programming_model). Clase [CSocket](../mfc/reference/csocket-class.md) proporciona compatibilidad con el socket en un nivel más alto de abstracción de clase [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` utiliza una versión del protocolo de serialización de MFC para transferir datos hacia y desde un objeto de socket a través de MFC [CArchive](../mfc/reference/carchive-class.md) objeto. `CSocket` proporciona bloqueo (mientras administra el procesamiento en segundo plano de los mensajes de Windows) y le da acceso a `CArchive`, que administra muchos aspectos de la comunicación que tendría que hacer usted mismo mediante la API básica o la clase `CAsyncSocket`.  

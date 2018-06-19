@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687236"
 ---
 # <a name="14-compliance"></a>1.4 Conformidad
 Es una implementación de la API de C o C++ OpenMP *compatible con OpenMP* si lo reconoce y conserva la semántica de todos los elementos de esta especificación, tal y como se disponen en los capítulos 1, 2, 3, 4, y apéndice C. apéndices A, B, D, E y F son para información solo con fines y no forman parte de la especificación. Las implementaciones que incluyan solo un subconjunto de la API no son compatibles con OpenMP.  

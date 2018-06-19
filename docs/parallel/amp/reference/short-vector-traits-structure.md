@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688907"
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits (Estructura)
 short_vector_traits permite recuperar la longitud del vector subyacente y tipo escalar de un tipo de vector corto o un tipo escalar  

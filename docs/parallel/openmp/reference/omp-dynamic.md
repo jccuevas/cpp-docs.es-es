@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695816"
 ---
 # <a name="ompdynamic"></a>OMP_DYNAMIC
 Especifica si el tiempo de ejecución de OpenMP puede ajustar el número de subprocesos en una región paralela.  

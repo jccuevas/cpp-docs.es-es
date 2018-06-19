@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689030"
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>Subprocesamiento múltiple: Uso de las clases de sincronización
 Sincronizar el acceso a los recursos entre subprocesos es un problema habitual cuando se escriben aplicaciones multiproceso. Si dos o más subprocesos tienen acceso a los mismos datos simultáneamente, se pueden producir resultados impredecibles y no deseados. Por ejemplo, un subproceso podría estar actualizando el contenido de una estructura mientras que otro está leyendo el contenido de la misma estructura. No se puede saber qué datos recibirá el proceso de lectura: los datos antiguos, los datos recién escritos o, posiblemente, una mezcla de ambos. MFC proporciona una serie de clases de sincronización y de sincronización de acceso para contribuir a resolver este problema. Este tema describe las clases disponibles y su uso con el fin de crear clases seguras para subprocesos en una aplicación multiproceso típica.  

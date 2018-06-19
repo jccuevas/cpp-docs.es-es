@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384483"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Actualizar el texto de un panel de barra de estado
 En este artículo se explica cómo cambiar el texto que aparece en un panel de barra de estado MFC. Una barra de estado, un objeto de ventana de clase [CStatusBar](../mfc/reference/cstatusbar-class.md) : contiene varios "paneles". Cada panel es un área rectangular de la barra de estado que se puede usar para mostrar información. Por ejemplo, muchas aplicaciones mostrar el estado de las teclas BLOQ MAYÚS, BLOQ NUM y otras claves en los paneles más a la derecha. Las aplicaciones también suelen mostrar texto informativo en el panel izquierdo (panel 0), a veces denominado el "panel de mensajes". Por ejemplo, la barra de estado MFC predeterminada usa el panel de mensajes para mostrar una cadena que explica el botón de barra de herramientas o elemento de menú actualmente seleccionado. En la ilustración en [barras de estado](../mfc/status-bar-implementation-in-mfc.md) muestra una barra de estado de una aplicación creada por el Asistente para aplicaciones MFC.  

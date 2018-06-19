@@ -175,6 +175,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377725"
 ---
 # <a name="cmfcpopupmenu-class"></a>Clase CMFCPopupMenu
 Implementa la funcionalidad del menú emergente de Windows y lo prolonga agregando características tales como los menús con barra desplazable e información sobre herramientas.

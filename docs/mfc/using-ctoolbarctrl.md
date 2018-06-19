@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385916"
 ---
 # <a name="using-ctoolbarctrl"></a>Usar CToolBarCtrl
 Puede utilizar el control de barra de herramientas ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) para crear una ventana de control contiene botones y espacios opcionales. Cada botón en la ventana de control de barra de herramientas envía un mensaje de comando a la ventana primaria cuando el usuario elija. Normalmente, los botones de una barra de herramientas corresponden a los elementos de menú de la aplicación, proporcionando una forma adicional y más directa para el usuario tener acceso a los comandos de la aplicación.  

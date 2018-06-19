@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689992"
 ---
 # <a name="multithreading-programming-tips"></a>Subprocesamiento múltiple: Sugerencias de programación
 Las aplicaciones multiproceso requieren un control más estricto que las aplicaciones de un único proceso para el acceso a los datos. Puesto que las aplicaciones multiproceso presentan simultáneamente varios hilos de ejecución independientes, tanto los algoritmos como los datos deben tener en cuenta que los datos pueden ser utilizados por varios procesos al mismo tiempo. Este tema describe técnicas para evitar posibles problemas cuando se programan aplicaciones multiproceso con la biblioteca de MFC (Microsoft Foundation Class).  

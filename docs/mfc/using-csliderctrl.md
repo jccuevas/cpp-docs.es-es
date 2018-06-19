@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385822"
 ---
 # <a name="using-csliderctrl"></a>Usar CSliderCtrl
 El [CSliderCtrl](../mfc/reference/csliderctrl-class.md) clase representa un control deslizante, conocida también como una barra de seguimiento. Un "control deslizante" es una ventana que contiene un control deslizante y graduación opcional marcas. Cuando el usuario mueve el control deslizante, con el mouse o las teclas de dirección, el control deslizante envía mensajes de notificación para indicar el cambio.  

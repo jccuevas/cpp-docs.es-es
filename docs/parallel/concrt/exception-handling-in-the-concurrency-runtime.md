@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695574"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Control de excepciones en el runtime de simultaneidad
 El Runtime de simultaneidad usa el control de excepciones de C++ para comunicar muchas modalidades de errores. Entre estos errores, se incluyen el uso no válido del runtime, errores de runtime, como el que se produce al no poder adquirir un recurso, y errores que afectan a funciones de trabajo que el usuario proporciona a las tareas y los grupos de tareas. Cuando una tarea o un grupo de tareas produce una excepción, el runtime mantiene esa excepción y calcula las referencias en el contexto que espera a que finalice la tarea o el grupo de tareas. En el caso de componentes tales como tareas ligeras y agentes, el runtime no administra las excepciones en nombre del usuario. En estos casos, debe implementar su propio mecanismo del control de excepciones. En este tema se describe cómo controla el runtime las excepciones que producen las tareas, los grupos de tareas, las tareas ligeras y los agentes asincrónicos, y cómo se responde a las excepciones en las aplicaciones.  

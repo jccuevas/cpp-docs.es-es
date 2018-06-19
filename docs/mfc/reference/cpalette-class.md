@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377281"
 ---
 # <a name="cpalette-class"></a>CPalette (clase)
 Encapsula una paleta de colores de Windows.  

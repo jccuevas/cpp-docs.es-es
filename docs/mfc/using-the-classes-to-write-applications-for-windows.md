@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386150"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Usar las clases para escribir aplicaciones para Windows
 Tomadas juntas, las clases de la biblioteca (Microsoft Foundation Classes) constituyen un "marco de aplicación," en el que se compila una aplicación para el sistema operativo Windows. En un nivel muy general, el marco de trabajo define el esqueleto de una aplicación y proporciona implementaciones de interfaz de usuario estándar que se pueden colocar en el esqueleto. Su trabajo como programador consiste en rellenar el resto del esqueleto, ¿cuáles son los aspectos que son específicos de la aplicación. Puede obtener una ventaja a la hora mediante el Asistente para aplicaciones MFC para crear los archivos de una aplicación de inicio muy exhaustiva. Utilice los editores de recursos de Microsoft Visual C++ para diseñar los elementos de interfaz de usuario visualmente, comandos de vista de clases para conectar los elementos de código y la biblioteca de clases para implementar la lógica específica de la aplicación.  

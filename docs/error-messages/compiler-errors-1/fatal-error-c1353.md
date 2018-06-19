@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198851"
 ---
 # <a name="fatal-error-c1353"></a>Error irrecuperable C1353
 no se pudo realizar la operación de metadatos: el runtime no está instalado o la versión no coincide  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695738"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>Compilar y vincular programas multiproceso
 El programa Bounce.c se incorporó en [Sample Multithread C Program](../parallel/sample-multithread-c-program.md).  

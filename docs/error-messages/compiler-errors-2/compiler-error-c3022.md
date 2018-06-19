@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243566"
 ---
 # <a name="compiler-error-c3022"></a>Error del compilador C3022
 'clause': tipo de programación no válida de 'value' en la directiva de OpenMP 'directive'  

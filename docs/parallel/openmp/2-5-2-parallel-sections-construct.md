@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689485"
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 parallel sections (Construcción)
 El **secciones en paralelo** directiva proporciona una forma de acceso directo para especificar un **paralelo** región que contiene solo una **secciones** directiva. La semántica es idéntica a la especificación explícita de un **paralelo** directiva seguido inmediatamente por un **secciones** directiva. La sintaxis de la **secciones en paralelo** directiva es como sigue:  

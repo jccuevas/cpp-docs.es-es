@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686076"
 ---
 # <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num (Función)
 El `omp_get_thread_num` función devuelve el número de subprocesos, dentro de su equipo, de que el subproceso que ejecuta la función. Los archivos de número subproceso entre 0 y **omp_get_num_threads()**-1, ambos inclusive. El subproceso principal del equipo es 0.  
