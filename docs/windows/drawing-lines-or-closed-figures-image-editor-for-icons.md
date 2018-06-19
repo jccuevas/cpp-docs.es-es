@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882780"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Dibujar líneas o figuras cerradas (Editor de imágenes para iconos)
 El editor de imágenes de las herramientas de dibujo de líneas y figuras cerradas todas las funcionan de la misma manera: coloque el punto de inserción en un punto y arrastre a otro. Para las líneas, estos puntos son los puntos de conexión. Figuras cerradas, estos puntos son los vértices opuestos de un rectángulo delimitador en la ilustración.  

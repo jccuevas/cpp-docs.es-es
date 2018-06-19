@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384220"
 ---
 # <a name="visualization-manager"></a>Administrador de visualización
 El administrador visual es un objeto que controla el aspecto de toda la aplicación. Actúa como una sola clase donde se puede incluir todo el código de dibujo de la aplicación. La biblioteca de MFC incluye varios administradores visuales. También puede crear su propio administrador visual si desea crear una vista personalizada de la aplicación. Las siguientes imágenes muestran la misma aplicación cuando se habilitan diferentes administradores visuales:  

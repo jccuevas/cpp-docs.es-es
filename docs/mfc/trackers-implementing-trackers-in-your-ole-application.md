@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381555"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>Seguimiento: Implementar el seguimiento en la aplicación OLE
 Los objetos de seguimiento proporcionan una interfaz gráfica para habilitar a los usuarios interactuar con elementos de cliente OLE. Utilizando estilos diferentes Rastreador, OLE cliente se pueden mostrar los elementos con bordes sombreados, controladores de tamaño o una variedad de otros efectos visuales. Este artículo se describe:  

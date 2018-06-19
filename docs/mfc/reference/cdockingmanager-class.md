@@ -175,6 +175,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377686"
 ---
 # <a name="cdockingmanager-class"></a>Clase CDockingManager
 Implementa la funcionalidad básica que controla el diseño de acoplamiento en una ventana de marco principal.  

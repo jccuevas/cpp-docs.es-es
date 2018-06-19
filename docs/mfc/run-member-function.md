@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379901"
 ---
 # <a name="run-member-function"></a>Run Member (Función)
 Una aplicación de marco de trabajo emplea la mayor parte de su tiempo en el [ejecutar](../mfc/reference/cwinapp-class.md#run) función miembro de clase [CWinApp](../mfc/reference/cwinapp-class.md). Tras la inicialización, `WinMain` llamadas **ejecutar** para procesar el bucle de mensajes.  

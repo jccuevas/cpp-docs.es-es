@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381717"
 ---
 # <a name="tree-control-label-editing"></a>Edición de etiquetas de control de árbol
 El usuario puede editar directamente las etiquetas de elementos en un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) que tiene el **TVS_EDITLABELS** estilo. El usuario comienza a editar haciendo clic en la etiqueta del elemento que tiene el foco. Una aplicación comienza la edición usando el [función miembro EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) función miembro. El control de árbol envía la notificación al editar comienza y cuando se cancela o completado. Cuando se completa la edición, es responsable de actualizar la etiqueta del elemento, si procede.  

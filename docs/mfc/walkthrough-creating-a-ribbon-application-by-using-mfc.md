@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385234"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Tutorial: Crear una aplicación de cinta usando MFC
 Este tutorial muestra cómo utilizar el **Asistente para aplicaciones MFC** para crear una aplicación que tiene una cinta de opciones de forma predeterminada. A continuación, puede expandir la cinta de opciones mediante la adición de un **personalizado** categoría de cinta de opciones que tiene un **favoritos** el panel y, a continuación, agregar algunos comandos en el panel de uso frecuente de la cinta de opciones.  

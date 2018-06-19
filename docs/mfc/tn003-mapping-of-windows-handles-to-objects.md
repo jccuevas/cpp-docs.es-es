@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382978"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Asignar identificadores de Windows a objetos
 Esta nota describe la MFC rutinas que admiten la asignación de Windows objeto identificadores de objetos de C++.  

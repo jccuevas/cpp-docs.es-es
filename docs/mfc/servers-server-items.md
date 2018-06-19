@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382507"
 ---
 # <a name="servers-server-items"></a>Servidores: Elementos de servidor
 Cuando un contenedor inicia un servidor para que un usuario puede editar un elemento OLE incrustado o vinculado, la aplicación de servidor crea un "elemento de servidor". El elemento del servidor, que es un objeto de una clase derivada de `COleServerItem`, proporciona una interfaz entre el documento de servidor y la aplicación contenedora.  

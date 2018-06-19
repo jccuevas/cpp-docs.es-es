@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381093"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementación de barra de estado en MFC
 A [CStatusBar](../mfc/reference/cstatusbar-class.md) objeto es una barra de controles con una fila de paneles de salida de texto. Los paneles de salida se utilizan habitualmente como líneas de mensaje y como indicadores de estado. Algunos ejemplos son las líneas de mensaje de Ayuda de menú que se describe brevemente el comando de menú seleccionado y los indicadores que muestran el estado de Bloq Despl, BLOQ NUM y otras claves.  

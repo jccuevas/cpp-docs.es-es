@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689914"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17 Usar bloqueos anidables
 En el ejemplo siguiente (para [sección 3.2](../../parallel/openmp/3-2-lock-functions.md) en la página 41) muestra cómo se puede utilizar un bloqueo anidable para sincronizar las actualizaciones a una estructura completa y a uno de sus miembros.  

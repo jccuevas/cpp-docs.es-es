@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890195"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Guardar un mapa de bits con formato GIF o JPEG (Editar imágenes para iconos)
 Cuando se crea un mapa de bits, se crea la imagen en formato de mapa de bits (.bmp). Sin embargo, puede guardar la imagen como GIF o JPEG o en otros formatos de gráfico.  

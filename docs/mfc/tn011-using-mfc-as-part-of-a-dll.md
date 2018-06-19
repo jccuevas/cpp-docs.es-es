@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384715"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Usar MFC como parte de un archivo DLL
 Esta nota describe archivos DLL de MFC estándar, que le permiten utilizar la biblioteca MFC como parte de una biblioteca de vínculos dinámicos (DLL) de Windows. Se supone que está familiarizado con los archivos DLL de Windows y cómo crearlos. Para obtener información sobre archivos DLL de extensión MFC, con lo que puede crear extensiones a la biblioteca MFC, vea [versión de DLL de MFC](../mfc/tn033-dll-version-of-mfc.md).  

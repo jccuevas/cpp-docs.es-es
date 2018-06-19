@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381015"
 ---
 # <a name="using-an-unclipped-device-context"></a>Usar un contexto de dispositivo no recortado
 Si se está completamente seguro de que el control no se dibuje fuera su rectángulo de cliente, puede conseguir un aumento de velocidad pequeño pero detectables deshabilitando la llamada a `IntersectClipRect` que se realiza por `COleControl`. Para ello, quite el **clipPaintDC** marca desde el conjunto de indicadores devuelto por [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Por ejemplo:  

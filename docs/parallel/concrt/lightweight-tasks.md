@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687418"
 ---
 # <a name="lightweight-tasks"></a>Tareas ligeras
 Este documento describe el rol de las tareas ligeras en el Runtime de simultaneidad. A *tarea ligera* es una tarea que se programa directamente desde un `concurrency::Scheduler` o `concurrency::ScheduleGroup` objeto. Una tarea ligera es similar a la función que se proporciona a la API de Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) función. Por lo tanto, las tareas ligeras son útiles cuando se adapta código existente para usar la funcionalidad de programación del Runtime de simultaneidad. El propio Runtime de simultaneidad usa tareas ligeras para programar los agentes asincrónicos y enviar mensajes entre los bloques de mensajes asincrónicos.  

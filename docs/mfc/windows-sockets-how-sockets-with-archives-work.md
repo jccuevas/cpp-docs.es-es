@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385221"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Cómo funcionan los Sockets con archivos
 Este artículo se explica cómo un [CSocket](../mfc/reference/csocket-class.md) objeto, un [CSocketFile](../mfc/reference/csocketfile-class.md) objeto y un [CArchive](../mfc/reference/carchive-class.md) objeto se combinan para simplificar enviar y recibir datos a través de una ventana Espera del socket.  

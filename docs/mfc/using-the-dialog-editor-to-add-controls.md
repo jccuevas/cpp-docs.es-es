@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381957"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>Usar el editor de cuadros de diálogo para agregar controles
 Cuando se crea un recurso de plantilla de cuadro de diálogo con el [editor de cuadro de diálogo](../windows/dialog-editor.md), arrastre controles desde una paleta de controles y colóquelos en el cuadro de diálogo. Esto agrega las especificaciones para ese tipo de control para el recurso de plantilla de cuadro de diálogo. Cuando se construyen un objeto de cuadro de diálogo y llaman a su **crear** o `DoModal` función miembro, el marco de trabajo crea un control de Windows y lo coloca en el cuadro de diálogo en pantalla.  

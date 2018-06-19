@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234729"
 ---
 # <a name="compiler-error-c2681"></a>C2681 de Error del compilador
 'type': tipo de expresión no válida para el nombre  

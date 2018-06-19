@@ -119,6 +119,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377776"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 La `CMFCTabCtrl` clase proporciona la funcionalidad para un control de pestaña. El control de pestaña muestra una ventana acoplable con pestañas planas o tridimensionales en la parte superior o inferior. Las pestañas pueden mostrar texto y una imagen y pueden cambiar de color cuando están activas.  

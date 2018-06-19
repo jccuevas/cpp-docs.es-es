@@ -48,6 +48,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379559"
 ---
 # <a name="wm-messages-p---r"></a>Mensajes WM_: P - R
 Las siguientes entradas del mapa se corresponden con los prototipos de función:  

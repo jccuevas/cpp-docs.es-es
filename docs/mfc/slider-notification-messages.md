@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381984"
 ---
 # <a name="slider-notification-messages"></a>Mensajes de notificación de control deslizante
 Un control deslizante notifica a su ventana primaria de las acciones del usuario mediante el envío de primario `WM_HSCROLL` o `WM_VSCROLL` mensajes, dependiendo de la orientación del control deslizante. Para controlar estos mensajes, agregar controladores para la `WM_HSCROLL` y `WM_VSCROLL` mensajes a la ventana primaria. El [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) y [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) un código de notificación, la posición del control deslizante y un puntero a funciones miembro que se le pasará la [CSliderCtrl](../mfc/reference/csliderctrl-class.md) objeto. Tenga en cuenta que el puntero es de tipo **CScrollBar \***  aunque hace referencia a un `CSliderCtrl` objeto. Debe convertir el tipo de este puntero si es necesario manipular el control deslizante.  

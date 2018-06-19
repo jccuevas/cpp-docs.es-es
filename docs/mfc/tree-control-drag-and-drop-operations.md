@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382771"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operaciones de arrastrar y colocar del control de árbol
 Un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envía una notificación cuando el usuario empieza a arrastrar un elemento. El control envía un [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) recibe un mensaje de notificación cuando el usuario comienza a arrastrar un elemento con el botón primario del mouse y un [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) recibe un mensaje de notificación cuando el usuario comienza a arrastrar con el botón derecho. Puede impedir que un control de árbol enviar estas notificaciones proporcionando el control de árbol el **TVS_DISABLEDRAGDROP** estilo.  

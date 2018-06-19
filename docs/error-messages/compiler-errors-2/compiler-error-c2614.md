@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229782"
 ---
 # <a name="compiler-error-c2614"></a>C2614 de Error del compilador
 'clase1': inicialización de miembro no válido: 'clase2' no es una base o miembro  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880324"
 ---
 # <a name="modifying-the-layout-grid"></a>Modificar la cuadrícula de diseño
 Cuando se colocan u organizar controles en un cuadro de diálogo, puede usar la cuadrícula de diseño para colocar más preciso. Cuando la cuadrícula está activada, los controles aparecen "ajuste" a las líneas de puntos de la cuadrícula como si estuvieran imantados. Puede activar y desactivar esta característica "Ajustar a la cuadrícula" y cambiar el tamaño de las celdas de la cuadrícula de diseño.  

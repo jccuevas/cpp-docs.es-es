@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889412"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Establecer un Cursor&#39;zona activa de s (Editor de imágenes para iconos)
 La zona activa de una [cursor](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) es el punto en que Windows hace referencia en el seguimiento de la posición del cursor. De forma predeterminada, la zona activa se establece en la esquina superior izquierda del cursor (coordenadas 0,0). La propiedad de zona activa en el [ventana propiedades](/visualstudio/ide/reference/properties-window) muestra las coordenadas de la zona activa.  

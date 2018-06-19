@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688575"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Subprocesamiento múltiple con C++ y MFC
 La biblioteca (Microsoft Foundation Classes) ofrece compatibilidad con aplicaciones multiproceso. En este tema se describe procesos y subprocesos y el enfoque de MFC multithreading.  
