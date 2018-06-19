@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349058"
 ---
 # <a name="ole-container-classes"></a>Clases de contenedor OLE
 Estas clases se utilizan las aplicaciones de contenedor. Ambos `COleLinkingDoc` y `COleDocument` administrar colecciones de `COleClientItem` objetos. En lugar de derivar la clase de documento de **CDocument**, podrá derivar desde `COleLinkingDoc` o `COleDocument`, dependiendo de si desea soporte técnico para obtener vínculos a objetos incrustados en el documento.  

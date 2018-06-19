@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256619"
 ---
 # <a name="compiler-error-c3391"></a>Error del compilador C3391
 'type_arg': argumento de tipo no válido para el parámetro genérico 'param' de 'generic_type' genérico debe ser un tipo de valor no acepta valores null  

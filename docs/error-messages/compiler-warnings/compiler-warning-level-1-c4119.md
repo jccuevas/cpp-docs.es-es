@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271180"
 ---
 # <a name="compiler-warning-level-1-c4119"></a>Advertencia del compilador (nivel 1) C4119
 se especificaron distintas bases 'base1' y 'base2'  

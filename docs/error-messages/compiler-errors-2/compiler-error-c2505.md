@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227666"
 ---
 # <a name="compiler-error-c2505"></a>Error del compilador C2505
 'símbolo': '__declspec (modifer)' solo puede aplicarse a las declaraciones o definiciones de objetos globales o miembros de datos estáticos  

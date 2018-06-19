@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196693"
 ---
 # <a name="fatal-error-c1038"></a>Error irrecuperable C1038
 límite del compilador: función: el estado de flujo de control es demasiado complejo; simplifique la función.  

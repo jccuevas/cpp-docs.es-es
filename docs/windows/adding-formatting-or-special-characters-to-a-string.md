@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864602"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string"></a>Agregar formato o caracteres especiales a una cadena
 ### <a name="to-add-formatting-or-special-characters-to-a-string"></a>Para agregar formato o caracteres especiales en una cadena  

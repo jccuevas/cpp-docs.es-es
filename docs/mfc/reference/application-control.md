@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355917"
 ---
 # <a name="application-control"></a>Control de la aplicación
 OLE requiere un control considerable sobre las aplicaciones y sus objetos. La DLL del sistema OLE deben ser capaz de iniciar automáticamente la versión de las aplicaciones, coordinar su producción y la modificación de objetos y así sucesivamente. Las funciones en este tema cumplen dichos requisitos. Además de llamarse por la DLL del sistema OLE, estas funciones se deben llamar a veces también las aplicaciones. 

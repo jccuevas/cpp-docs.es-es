@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349057"
 ---
 # <a name="form-views-mfc"></a>Vistas de formulario (MFC)
 Puede agregar formularios a cualquier aplicación de Visual C++ que admita las bibliotecas MFC, incluida una [aplicación basada en formularios](../mfc/reference/creating-a-forms-based-mfc-application.md) (uno cuya clase de vista se deriva de `CFormView`). Si no creó inicialmente la aplicación que admita formularios, Visual C++ agregará esta compatibilidad automáticamente al insertar un nuevo formulario. En una aplicación SDI o MDI, que implementa el valor predeterminado [arquitectura documento/vista](../mfc/document-view-architecture.md), cuando el usuario elige el `New` comando (de forma predeterminada, en la **archivo** menú), Visual C++ solicita al usuario que elegir entre los formatos disponibles.  

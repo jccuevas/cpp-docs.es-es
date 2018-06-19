@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348983"
 ---
 # <a name="handling-reflected-messages"></a>Controlar los mensajes reflejados
 Reflexión de mensajes permite controlar los mensajes para un control, como `WM_CTLCOLOR`, **WM_COMMAND**, y **WM_NOTIFY**, dentro del propio control. Esto hace que el control más independiente y portátil. El mecanismo funciona con controles comunes de Windows, así como con controles ActiveX (anteriormente denominados controles OLE).  

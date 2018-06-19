@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354307"
 ---
 # <a name="exceptions-database-exceptions"></a>Excepciones: Excepciones de base de datos
 En este artículo se explica cómo controlar las excepciones de base de datos. La mayoría de los materiales en este artículo se aplica si está trabajando con las clases MFC para Open Database Connectivity (ODBC) o las clases MFC para Data Access Objects (DAO). Material específico a uno de los modelos se marca explícitamente. Entre los temas se incluyen los siguientes:  

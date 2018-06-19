@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350004"
 ---
 # <a name="ole-background-mfc-implementation"></a>Nociones de OLE: Implementación de MFC
 Debido al tamaño y complejidad de la API básica de OLE, llamarla directamente para programar aplicaciones OLE puede ser muy lento. El objetivo de la implementación de la biblioteca Microsoft Foundation Class de OLE es reducir la cantidad de trabajo que tiene que hacer para escribir aplicaciones compatibles con OLE, completa.  

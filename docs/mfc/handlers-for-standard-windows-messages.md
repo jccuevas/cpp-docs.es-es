@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348225"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Controladores para mensajes estándar de Windows
 Predeterminado controladores para mensajes estándares de Windows (**WM_**) están predefinidas en la clase `CWnd`. La biblioteca de clases basará los nombres de estos controladores en el nombre del mensaje. Por ejemplo, el controlador para el `WM_PAINT` mensaje se declara en `CWnd` como:  

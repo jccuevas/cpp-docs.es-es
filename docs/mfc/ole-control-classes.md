@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355366"
 ---
 # <a name="ole-control-classes"></a>Clases de controles OLE
 Estas son las clases principales que utilizar al escribir controles OLE. El `COleControlModule` clase en un módulo de control OLE es como la [CWinApp](../mfc/reference/cwinapp-class.md) clase en una aplicación. Cada módulo implementa uno o más controles OLE; Estos controles se representan mediante `COleControl` objetos. Estos controles comunican con sus contenedores mediante `CConnectionPoint` objetos.  

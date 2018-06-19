@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348184"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Cómo el marco llama al código
 Es fundamental entender la relación entre el código fuente y el código en el marco de trabajo MFC. Cuando se ejecuta la aplicación, la mayor parte del flujo de control se encuentra en el código del marco de trabajo. El marco de trabajo administra el bucle de mensajes que recibe mensajes de Windows como el usuario selecciona comandos y edita datos en una vista. Eventos que el marco de trabajo puede controlar por sí solo no confían en el código en absoluto. Por ejemplo, el marco de trabajo sabe cómo cerrar ventanas y cómo salir de la aplicación en respuesta a los comandos de usuario. A medida que controla estas tareas, el marco de trabajo usa controladores de mensajes y funciones virtuales de C++ para darle oportunidades para responder a estos eventos también. El código es no en el control, sin embargo; es el marco de trabajo.  

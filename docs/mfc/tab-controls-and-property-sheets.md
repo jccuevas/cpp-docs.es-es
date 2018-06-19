@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385877"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Controles de pestaña y hojas de propiedades
 Hojas de propiedades son cuadros de diálogo de varias páginas o "ficha cuadros de diálogo" que se pueden mostrar hasta 24 recursos de plantilla de cuadro de diálogo al usuario. Para obtener ejemplos de hojas de propiedades, vea el cuadro de diálogo de propiedades de presentación de Windows o la siguiente aplicación de ejemplo MFC:  

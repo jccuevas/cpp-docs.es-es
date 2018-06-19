@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273954"
 ---
 # <a name="compiler-warning-level-1-c4025"></a>Advertencia del compilador (nivel 1) C4025
 'number': el puntero de tipo basado se pasó a la función con los argumentos de variable: parámetro número  
