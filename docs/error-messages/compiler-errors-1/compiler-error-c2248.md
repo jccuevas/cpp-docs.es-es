@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172137"
 ---
 # <a name="compiler-error-c2248"></a>Error del compilador C2248
 '*miembro*': no se puede obtener acceso a '*access_level*'miembro declarado en la clase'*clase*'  

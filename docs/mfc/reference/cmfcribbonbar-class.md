@@ -203,6 +203,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378245"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar (clase)
 La clase `CMFCRibbonBar` implementa una barra de cinta similar a la que se usaba en Office 2007.  

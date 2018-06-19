@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382855"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Usar listas de imágenes en un control de barra de herramientas
 De forma predeterminada, las imágenes utilizadas por los botones en un control de barra de herramientas se almacenan como un solo mapa de bits. Sin embargo, también puede almacenar imágenes de los botones en un conjunto de listas de imágenes. El objeto de control de barra de herramientas puede utilizar hasta tres listas de imágenes independientes:  

@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375228"
 ---
 # <a name="ctabview-class"></a>Clase CTabView
 El `CTabView` clase simplifica el uso de la clase de control de pestaña ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) en las aplicaciones que utilizan la arquitectura documento/vista de MFC.  

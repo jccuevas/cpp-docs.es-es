@@ -109,6 +109,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377576"
 ---
 # <a name="coleipframewndex-class"></a>Clase COleIPFrameWndEx
 La clase `COleIPFrameWndEx` implementa un contenedor OLE compatible con MFC. Es necesario derivar la clase de ventana de marco en contexto de la aplicación desde la clase `COleIPFrameWndEx` en lugar de derivarla desde la clase [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). 

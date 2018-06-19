@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385186"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: Usar la clase CAsyncSocket
 Este artículo explica cómo utilizar la clase [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Tenga en cuenta que esta clase encapsula la API de Windows Sockets en un nivel muy bajo. `CAsyncSocket` está destinado a los programadores que conocer en detalle las comunicaciones de red, pero desean la comodidad de devoluciones de llamada para recibir notificaciones de eventos de la red. Según esta suposición, este artículo proporciona sólo la instrucción básica. Probablemente le convendrá usar `CAsyncSocket` si desea accesibilidad ofrece Windows Sockets de trabajar con varios protocolos de red en una aplicación MFC, pero no desea sacrificar la flexibilidad. También podría notar que puede obtener una mayor eficacia al programar las comunicaciones más directamente por sí mismo de las que podría utilizando el modelo alternativo más general de clase `CSocket`.  

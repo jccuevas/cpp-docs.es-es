@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169704"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 Incluya el encabezado STL/CLR `<cliext/utility>` para definir la clase de plantilla `pair` y varias funciones auxiliares de plantilla.  

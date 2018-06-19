@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366803"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>Clase CMFCSpinButtonCtrl
 La `CMFCSpinButtonCtrl` clase es compatible con un administrador visual que dibuja un control de botón de número.  

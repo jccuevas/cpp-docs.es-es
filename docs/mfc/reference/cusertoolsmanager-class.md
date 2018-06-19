@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376202"
 ---
 # <a name="cusertoolsmanager-class"></a>Clase CUserToolsManager
 Mantiene la colección de [CUserTool clase](../../mfc/reference/cusertool-class.md) objetos en una aplicación. Una herramienta de usuario es un elemento de menú que ejecuta una aplicación externa. El objeto `CUserToolsManager` permite al usuario o al programador agregar nuevas herramientas de usuario a la aplicación. Admite la ejecución de los comandos asociados a las herramientas de usuario y también guarda información sobre las herramientas de usuario en el Registro de Windows.  

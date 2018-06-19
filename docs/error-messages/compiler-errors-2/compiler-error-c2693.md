@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232779"
 ---
 # <a name="compiler-error-c2693"></a>Error C2693 de Error de compilador
 'operador' : comparación no válida de referencias a una matriz administrada o de WinRT  

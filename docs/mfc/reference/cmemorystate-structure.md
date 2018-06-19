@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367976"
 ---
 # <a name="cmemorystate-structure"></a>Estructura de CMemoryState
 Proporciona una manera cómoda para detectar pérdidas de memoria en el programa.  

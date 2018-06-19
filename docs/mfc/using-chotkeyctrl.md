@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381809"
 ---
 # <a name="using-chotkeyctrl"></a>Usar CHotKeyCtrl
 Un control hot key, representado por la clase [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), es una ventana que muestra una representación de texto de la combinación de teclas que el usuario escribe en él, por ejemplo, CTRL + MAYÚS + Q. También mantiene una representación interna de esta clave en el formato de un código de tecla virtual y un conjunto de marcas que representan el estado de desplazamiento. El control de tecla de acceso rápido realmente no se establece la tecla de acceso rápido: hacer que depende de su programa. (Para obtener una lista de códigos de tecla virtuales estándares, vea Winuser.h.)  

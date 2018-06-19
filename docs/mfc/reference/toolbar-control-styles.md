@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373200"
 ---
 # <a name="toolbar-control-styles"></a>Estilos de control ToolBar
 [Clase CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) tiene un conjunto de indicadores de estilo que determinan la apariencia y comportamiento del botón. Puede establecer una combinación de estas marcas mediante una llamada a [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). Este tema enumeran los valores de marca de estilo y sus significados.  

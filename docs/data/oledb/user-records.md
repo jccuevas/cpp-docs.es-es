@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109812"
 ---
 # <a name="user-records"></a>Registros de usuario
 Para usar un descriptor de acceso estática (es decir, un descriptor de acceso se deriva de **CAccessor)**, el consumidor debe poseer un registro de usuario. El registro de usuario es una clase de C++ que contiene elementos de datos que controlan la entrada o salida. El Asistente para consumidores OLE DB ATL genera un registro de usuario para el consumidor. Puede agregar métodos para el registro de usuario para realizar tareas opcionales como control de comandos.  

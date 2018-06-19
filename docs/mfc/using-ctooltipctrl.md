@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385636"
 ---
 # <a name="using-ctooltipctrl"></a>Usar CToolTipCtrl
 El [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) clase encapsula la funcionalidad de un control de información sobre herramientas, una pequeña ventana emergente que muestra una sola línea de texto que describe el propósito de una herramienta de una aplicación. Una información sobre herramientas está oculta la mayoría de los casos, que aparecen solo cuando el usuario coloca el cursor sobre una herramienta y deja ahí durante, aproximadamente, medio segundo. La información sobre herramientas aparece cerca del cursor y desaparece cuando el usuario hace clic en un botón del mouse o mueve el cursor fuera de la herramienta.  

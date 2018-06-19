@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373982"
 ---
 # <a name="cmultilock-class"></a>CMultiLock (clase)
 Representa el mecanismo de control de acceso utilizado para controlar el acceso a los recursos en un programa de multithreading.  

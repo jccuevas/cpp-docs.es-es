@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335517"
 ---
 # <a name="active-documents"></a>Documentos activos
 Documentos activos amplían la tecnología de documentos compuestos de OLE. Estas extensiones se proporcionan en forma de interfaces adicionales que administran vistas, para que funcione dentro de los contenedores y mantengan el control de su presentación y las funciones de impresión objetos. Este proceso permite mostrar documentos en marcos externos (por ejemplo, el enlazador de Microsoft Office o Microsoft Internet Explorer) y en marcos nativos (por ejemplo, los puertos de vista del producto).  

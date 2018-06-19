@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380869"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Servidores: Implementar ventanas de marco en contexto
 Este artículo explica lo que debe hacer para implementar ventanas de marco en contexto en la aplicación de servidor de edición visual si no utiliza al Asistente para aplicaciones para crear la aplicación de servidor. En lugar de seguir el procedimiento descrito en este artículo, podría utilizar una clase de ventana de marco en contexto existente de una aplicación generada por el asistente o un ejemplo que se proporciona con Visual C++.  

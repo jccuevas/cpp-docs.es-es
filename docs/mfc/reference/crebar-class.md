@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371151"
 ---
 # <a name="crebar-class"></a>CReBar (clase)
 Barra de control que proporciona información de diseño, persistencia y estado para controles rebar.  

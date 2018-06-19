@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381216"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>Secuencia de operaciones para crear aplicaciones OLE
 En la tabla siguiente se muestra su rol y trabajo del marco de en la creación de vinculación e incrustación aplicaciones OLE. Estos representan opciones disponibles, en lugar de una secuencia de pasos para realizar.  

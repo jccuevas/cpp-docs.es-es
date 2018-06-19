@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371733"
 ---
 # <a name="cmfclinkctrl-class"></a>Clase CMFCLinkCtrl
 La `CMFCLinkCtrl` clase muestra un botón como un hipervínculo e invoca el destino del vínculo cuando se hace clic en el botón.  

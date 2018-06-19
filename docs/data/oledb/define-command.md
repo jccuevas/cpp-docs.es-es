@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101476"
 ---
 # <a name="definecommand"></a>DEFINE_COMMAND
 Especifica el comando que se usará para crear el conjunto de filas cuando se usa el [CCommand](../../data/oledb/ccommand-class.md) clase. Acepta solo los tipos de cadena que coincida con el tipo de aplicación especificado (ANSI o Unicode).  

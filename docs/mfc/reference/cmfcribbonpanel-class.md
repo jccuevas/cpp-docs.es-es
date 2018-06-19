@@ -129,6 +129,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378048"
 ---
 # <a name="cmfcribbonpanel-class"></a>Clase CMFCRibbonPanel
 Implementa un panel que contiene un conjunto de elementos de cinta. Cuando se dibuja el panel, muestra tantos elementos como es posible, dado el tamaño del panel.  

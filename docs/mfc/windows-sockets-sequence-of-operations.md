@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385263"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Secuencia de operaciones
 En este artículo se muestra, en paralelo, la secuencia de operaciones para un socket de servidor y un socket de cliente. Como los sockets utilizan `CArchive` objetos, son necesariamente [sockets de secuencia](../mfc/windows-sockets-stream-sockets.md).  

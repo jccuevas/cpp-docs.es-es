@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366927"
 ---
 # <a name="cgopherlocator-class"></a>Clase de objeto CGopherLocator
 Obtiene un "localizador gopher" de un servidor gopher, determina el tipo de localizador y pone el localizador a disposición [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  

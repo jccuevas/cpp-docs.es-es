@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369247"
 ---
 # <a name="cmfccmdusagecount-class"></a>Clase CMFCCmdUsageCount
 Realiza un seguimiento del contador de uso de mensajes de Windows, por ejemplo, cuando el usuario selecciona un elemento en un menú.  

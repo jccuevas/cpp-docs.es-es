@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168937"
 ---
 # <a name="compiler-error-c2154"></a>Error del compilador C2154
 'type' : solo se admite el tipo de enumeración como argumento del rasgo de tipo intrínseco del compilador '__underlying_type'  

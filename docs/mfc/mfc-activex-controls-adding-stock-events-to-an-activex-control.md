@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359343"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Controles ActiveX MFC: Agregar eventos estándar a un control ActiveX
 Eventos estándar se diferencian de los eventos personalizados en que se activan automáticamente por clase [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` contiene funciones miembro predefinidas que activan eventos resultantes de acciones comunes. Algunas acciones comunes implementadas por `COleControl` incluir solo - y doble - clicks en el control, los eventos de teclado y los cambios en el estado de los botones del mouse. Entradas del mapa de eventos para eventos estándar siempre están precedidas por la **EVENT_STOCK** prefijo.  

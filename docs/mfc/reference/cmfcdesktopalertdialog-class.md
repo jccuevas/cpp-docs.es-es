@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368175"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>Clase CMFCDesktopAlertDialog
 El `CMFCDesktopAlertDialog` clase se utiliza junto con la [clase CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) para mostrar un cuadro de diálogo personalizado en una ventana emergente.  

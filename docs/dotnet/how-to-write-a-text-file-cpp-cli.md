@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131246"
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>Cómo: Escribir un archivo de texto (C++/CLI)
 En el ejemplo de código siguiente se muestra cómo crear un archivo de texto y escribir texto en él con el <xref:System.IO.StreamWriter> (clase), que se define en el <xref:System.IO> espacio de nombres. El <xref:System.IO.StreamWriter> constructor toma el nombre del archivo que se creará. Si el archivo existe, se sobrescribe (a menos que pase True como el segundo <xref:System.IO.StringWriter> argumento del constructor).  

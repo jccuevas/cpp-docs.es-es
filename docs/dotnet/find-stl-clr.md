@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105795"
 ---
 # <a name="find-stlclr"></a>find (STL/CLR)
 Busca la posición de la primera aparición de un elemento en un intervalo que tiene un valor especificado.  

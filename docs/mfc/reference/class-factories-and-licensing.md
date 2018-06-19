@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367079"
 ---
 # <a name="class-factories-and-licensing"></a>Generadores de clases y licencias
 Para crear una instancia del control OLE, una aplicación de contenedor llama a una función miembro de fábrica de clase del control. Dado que el control es un objeto OLE real, el generador de clases es responsable de crear instancias del control. Cada clase de control OLE debe tener un generador de clases.  

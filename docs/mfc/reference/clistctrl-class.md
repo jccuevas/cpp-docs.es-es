@@ -279,6 +279,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379052"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (clase)
 Encapsula la funcionalidad de un "control de vista de lista", que muestra una colección de elementos cada uno de los cuales consta de un icono (de una lista de imágenes) y una etiqueta.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370173"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Clase CMFCRibbonUndoButton
 La `CMFCRibbonUndoButton` clase implementa un botón de lista desplegable que contiene los comandos de usuario más reciente. Los usuarios pueden seleccionar uno o varios de los comandos más recientes de la lista desplegable para rehacer o deshacer.  

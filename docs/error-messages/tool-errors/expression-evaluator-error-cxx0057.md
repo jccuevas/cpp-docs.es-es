@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295992"
 ---
 # <a name="expression-evaluator-error-cxx0057"></a>Error del evaluador de expresiones CXX0057
 No hay código en el número de línea  

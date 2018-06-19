@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376296"
 ---
 # <a name="cruntimeclass-structure"></a>Estructura de CRuntimeClass
 Cada clase derivada de `CObject` está asociado con un `CRuntimeClass` estructura que puede usar para obtener información sobre un objeto o su clase base en tiempo de ejecución.  

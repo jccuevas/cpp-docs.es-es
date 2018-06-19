@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381795"
 ---
 # <a name="tn066-common-mfc-3x-to-40-porting-issues"></a>TN066: MFC 3.x común para los problemas de portabilidad de 4.0
 Esta nota técnica describe los problemas más comunes que pueden producirse al intentar migrar una aplicación escrita con la MFC 3.x (la MFC que se incluye con Visual C++ 2.x) a MFC 4.0.  

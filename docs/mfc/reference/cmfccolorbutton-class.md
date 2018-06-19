@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371118"
 ---
 # <a name="cmfccolorbutton-class"></a>Clase CMFCColorButton
 El `CMFCColorButton` y [CMFCColorBar clase](../../mfc/reference/cmfccolorbar-class.md) clases se utilizan conjuntamente para implementar un control de selector de color.  

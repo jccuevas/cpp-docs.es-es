@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356691"
 ---
 # <a name="introduction-to-atl-window-classes"></a>Introducción a las clases de ventana ATL
 Las siguientes clases ATL están diseñadas para implementar y manipular las ventanas:  

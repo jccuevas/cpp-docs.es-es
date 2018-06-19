@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33158526"
 ---
 # <a name="param-array-and-ellipsis"></a>Matriz de parámetros y puntos suspensivos
 Prioridad de la matriz de parámetros para resolver llamadas a funciones sobrecargadas ha cambiado de extensiones administradas para C++ a Visual C++.  

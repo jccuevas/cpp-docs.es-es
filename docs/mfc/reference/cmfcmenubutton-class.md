@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375394"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton (clase)
 Un botón que muestra un menú emergente e informes en las selecciones de menú del usuario.  

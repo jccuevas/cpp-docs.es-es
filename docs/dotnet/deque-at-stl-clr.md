@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107056"
 ---
 # <a name="dequeat-stlclr"></a>deque::at (STL/CLR)
 Obtiene acceso a un elemento en una posición especificada.  

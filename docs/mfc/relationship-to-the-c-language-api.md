@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379234"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Relación con la API del lenguaje C
 La característica única que establece la biblioteca (Microsoft Foundation Classes) además de otras bibliotecas de clases para Windows es la asignación muy próxima a la API de Windows escritos en el lenguaje C. Además, puede mezclar generalmente llamadas a la biblioteca de clases libremente con llamadas directas a la API de Windows. Este acceso directo, sin embargo, implica que las clases son un reemplazo completo para la API. Los desarrolladores ocasionalmente deben realizar llamadas directas a algunas funciones de Windows, como [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) y [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385), por ejemplo. Una función de Windows se ajusta mediante una función de miembro de clase solo cuando hay una ventaja clara para hacerlo.  

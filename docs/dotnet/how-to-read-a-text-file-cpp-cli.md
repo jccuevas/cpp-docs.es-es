@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130203"
 ---
 # <a name="how-to-read-a-text-file-ccli"></a>Cómo: Leer un archivo de texto (C++/CLI)
 En el ejemplo de código siguiente se muestra cómo abrir y leer un archivo una línea de texto a la vez, mediante el uso de la <xref:System.IO.StreamReader> clase que se define en el <xref:System.IO?displayProperty=fullName> espacio de nombres. Una instancia de esta clase se utiliza para abrir un archivo de texto y, a continuación, el <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> método se utiliza para recuperar cada línea.  

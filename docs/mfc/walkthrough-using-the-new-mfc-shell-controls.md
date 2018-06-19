@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385101"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Tutorial: Usar los nuevos controles de Shell de MFC
 En este tutorial creará una aplicación similar al Explorador de archivos. Creará una ventana que contendrá dos paneles. El panel izquierdo contendrá un [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) objeto que muestra el escritorio en una vista jerárquica. El panel de la derecha contendrá un [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) que muestra los archivos en la carpeta que está seleccionada en el panel izquierdo.  

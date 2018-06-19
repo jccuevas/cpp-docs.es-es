@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385088"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Tutorial: Poner controles en las barras de herramientas
 En este tema se describe cómo agregar a una barra de herramientas un botón de barra de herramientas que contiene un control de Windows. En MFC, un botón de barra de herramientas debe ser un [CMFCToolBarButton clase](../mfc/reference/cmfctoolbarbutton-class.md)-clase derivada, por ejemplo [CMFCToolBarComboBoxButton clase](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton clase](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton clase](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), o [CMFCToolBarMenuButton clase](../mfc/reference/cmfctoolbarmenubutton-class.md).  

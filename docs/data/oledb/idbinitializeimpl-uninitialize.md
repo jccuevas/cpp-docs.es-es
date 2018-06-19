@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100904"
 ---
 # <a name="idbinitializeimpluninitialize"></a>IDBInitializeImpl::Uninitialize
 Coloca los datos del origen de objeto en un estado no inicializado liberando recursos internos, como el soporte de propiedad.  

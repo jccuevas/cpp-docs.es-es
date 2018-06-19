@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33174901"
 ---
 # <a name="compiler-error-c2309"></a>Error del compilador C2309
 controlador catch esperaba una declaración de excepción entre paréntesis  

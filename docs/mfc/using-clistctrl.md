@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382991"
 ---
 # <a name="using-clistctrl"></a>Usar CListCtrl
 Utilice un control de lista para mostrar cualquier organización de iconos con etiquetas, como en el Explorador de archivos o listas de columnas de texto, con o sin iconos. Para obtener una descripción de las cuatro posibles "vistas" (no debe confundirse con las vistas MFC) puede tener un control de lista, vista de iconos, vista de iconos pequeños, vista de lista y vista de informe, ver las vistas en el [CListCtrl](../mfc/reference/clistctrl-class.md) información general de la clase.  

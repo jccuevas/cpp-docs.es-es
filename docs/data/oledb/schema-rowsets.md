@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104287"
 ---
 # <a name="schema-rowsets"></a>Conjuntos de filas de esquema
 Esquema (o metadatos) son toda la información sobre la estructura o la organización, por ejemplo, información sobre el proveedor, conjunto de filas, tabla, las columnas, de una base de datos u otra información aparte del contenido real de la base de datos. OLE DB permite obtener dicha información sin tener que abrir el conjunto de filas mediante el uso de conjuntos de filas de esquema.  

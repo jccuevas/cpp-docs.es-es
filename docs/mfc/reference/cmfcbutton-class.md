@@ -95,6 +95,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378831"
 ---
 # <a name="cmfcbutton-class"></a>Clase CMFCButton
 El `CMFCButton` clase agrega funcionalidad a la [CButton](../../mfc/reference/cbutton-class.md) clase como alinear el texto del botón, combinar el texto del botón y una imagen, seleccionar un cursor y especificar una información sobre herramientas.  

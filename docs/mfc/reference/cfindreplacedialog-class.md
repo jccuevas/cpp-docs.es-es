@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368987"
 ---
 # <a name="cfindreplacedialog-class"></a>Clase CFindReplaceDialog
 Le permite implementar los cuadros de diálogo Buscar/Reemplazar de cadena estándar en la aplicación.  

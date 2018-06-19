@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372539"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Clase CMFCDropDownToolbarButton
 Un tipo de botón de la barra de herramientas que se comporta como un botón normal cuando se hace clic en él. Sin embargo, abre una barra de herramientas desplegable ( [CMFCDropDownToolBar clase](../../mfc/reference/cmfcdropdowntoolbar-class.md) si el usuario presiona y mantiene presionado el botón de la barra de herramientas.  

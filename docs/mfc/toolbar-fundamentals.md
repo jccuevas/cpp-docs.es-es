@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383979"
 ---
 # <a name="toolbar-fundamentals"></a>Fundamentos de las barras de herramientas
 En este artículo se describe la implementación de MFC fundamental que le permite agregar una barra de herramientas de forma predeterminada a la aplicación seleccionando una opción en el Asistente para aplicaciones. Los temas tratados son:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358487"
 ---
 # <a name="application-information-and-management"></a>Información y administración de aplicaciones
 Cuando se escribe una aplicación, cree un único [CWinApp](../../mfc/reference/cwinapp-class.md)-objeto derivado. En ocasiones, puede que desee obtener información acerca de este objeto desde fuera de la `CWinApp`-objeto derivado. O bien, puede que tenga acceso a otros objetos globales "Manager".

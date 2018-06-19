@@ -133,6 +133,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378644"
 ---
 # <a name="cwinappex-class"></a>Clase CWinAppEx
 `CWinAppEx` Controla el estado de la aplicación, guarda el estado en el registro, carga el estado del registro, inicializa los administradores de la aplicación y proporciona vínculos a esos mismos administradores de la aplicación.  

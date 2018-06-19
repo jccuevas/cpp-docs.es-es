@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369107"
 ---
 # <a name="ckeyboardmanager-class"></a>Clase CKeyboardManager
 Administra las tablas de teclas de método abreviado de la ventana de marco principal y las ventanas de marco secundarias.  

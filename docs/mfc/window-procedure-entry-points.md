@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382078"
 ---
 # <a name="window-procedure-entry-points"></a>Puntos de entrada de procedimiento de ventana
 Para proteger los procedimientos de ventana MFC, un módulo un vínculo estático con una implementación de procedimiento de ventana especial. La vinculación se produce automáticamente cuando el módulo se vincula con MFC. Este procedimiento de ventana se utiliza la `AFX_MANAGE_STATE` macro para establecer correctamente el estado efectivo del módulo, a continuación, llama **AfxWndProc**, que a su vez delega en el `WindowProc` función miembro de la correspondiente `CWnd`-derivado objeto.  

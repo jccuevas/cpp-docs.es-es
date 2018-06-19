@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367443"
 ---
 # <a name="cdockstate-class"></a>Clase CDockState
 Una clase serializada `CObject` que carga, descarga o desactiva el estado de una o más barras de control de acoplamiento en memoria persistente (un archivo).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381587"
 ---
 # <a name="using-cdatetimectrl"></a>Usar CDateTimeCtrl
 El control de selector de fecha y hora ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementa un método intuitivo y reconocible de escribir o seleccionar una fecha concreta. La interfaz principal del control es una funcionalidad similar a un cuadro combinado. Sin embargo, si el usuario expande el control, aparece un control de calendario mensual (de forma predeterminada), lo que permite al usuario especificar una fecha determinada. Cuando se elige una fecha, el control de calendario mensual desaparece automáticamente.  

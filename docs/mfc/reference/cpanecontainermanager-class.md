@@ -121,6 +121,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377114"
 ---
 # <a name="cpanecontainermanager-class"></a>Clase CPaneContainerManager
 La `CPaneContainerManager` clase administra el almacenamiento y la presentación del diseño de acoplamiento actual.  

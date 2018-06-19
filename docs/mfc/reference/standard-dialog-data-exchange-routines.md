@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377660"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rutinas de intercambio de datos de cuadros de diálogo estándar
 Este tema enumeran las rutinas de intercambio (DDX) de datos de cuadros de diálogo estándar utilizadas para los controles de cuadro de diálogo comunes de MFC.  

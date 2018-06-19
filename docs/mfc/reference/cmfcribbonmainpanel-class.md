@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367963"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Clase CMFCRibbonMainPanel
 Implementa un panel de cinta de opciones que se muestra al hacer clic en el [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  

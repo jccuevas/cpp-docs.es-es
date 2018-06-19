@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377906"
 ---
 # <a name="cview-class"></a>CView (clase)
 Proporciona la funcionalidad básica para las clases de vista definidas por el usuario.  

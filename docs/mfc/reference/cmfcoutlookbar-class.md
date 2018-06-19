@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372500"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar (clase)
 Un panel con pestañas con el aspecto visual del **Panel de navegación** en Microsoft Outlook 2000 u Outlook 2003. El `CMFCOutlookBar` objeto contiene un [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md) objeto y una serie de pestañas. Las pestañas pueden ser [CMFCOutlookBarPane clase](../../mfc/reference/cmfcoutlookbarpane-class.md) objetos o `CWnd`-objetos derivados. Para el usuario, la barra de Outlook aparece como una serie de botones y un área de presentación. Cuando el usuario hace clic en un botón, se muestra el panel de control o botón correspondiente .  

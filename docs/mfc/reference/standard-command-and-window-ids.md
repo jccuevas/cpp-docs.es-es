@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371655"
 ---
 # <a name="standard-command-and-window-ids"></a>Identificadores de comandos y ventanas estándar
 La biblioteca Microsoft Foundation Class define una serie de comandos estándar y los identificadores de ventana en Afxres.h. Estos identificadores se usan normalmente en los editores de recursos y la ventana Propiedades para asignar mensajes a las funciones de controlador. Todos los comandos estándares tienen un **ID_** prefijo. Por ejemplo, cuando se utiliza el editor de menús, normalmente enlaza el elemento de menú Abrir archivo para el estándar `ID_FILE_OPEN` identificador de comando.  

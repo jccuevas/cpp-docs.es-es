@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372702"
 ---
 # <a name="cmfcribbonslider-class"></a>Clase CMFCRibbonSlider
 La `CMFCRibbonSlider` clase implementa un control deslizante que puede agregar a una barra de cinta de opciones o la barra de estado de la cinta de opciones. El control deslizante de la cinta es similar a los controles deslizantes del zoom que aparecen en las aplicaciones de Office 2007.  

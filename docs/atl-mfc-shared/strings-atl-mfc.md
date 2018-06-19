@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355485"
 ---
 # <a name="strings-atlmfc"></a>Cadenas (ATL/MFC)
 Casi todos los programas de trabajan con datos de cadena. Visual C++ proporciona varias maneras de administrar estos datos de cadena.  

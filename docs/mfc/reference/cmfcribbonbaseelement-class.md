@@ -247,6 +247,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378686"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Clase CMFCRibbonBaseElement
 El `CMFCRibbonBaseElement` clase es la clase base para todos los elementos que se pueden agregar a un [barra de cinta](../../mfc/reference/cmfcribbonbar-class.md). Los botones, las casillas y los cuadros combinados de la cinta son ejemplos de elementos de la cinta.  

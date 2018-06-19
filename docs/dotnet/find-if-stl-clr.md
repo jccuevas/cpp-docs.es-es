@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106276"
 ---
 # <a name="findif-stlclr"></a>find_if (STL/CLR)
 Busca la posición de la primera aparición de un elemento en un intervalo que cumple una condición especificada.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102545"
 ---
 # <a name="adjacentfind-stlclr"></a>adjacent_find (STL/CLR)
 Busca dos elementos adyacentes que son iguales o cumplen una condición especificada.  

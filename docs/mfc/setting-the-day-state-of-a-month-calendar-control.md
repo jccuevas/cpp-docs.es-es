@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380804"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Establecer Day State en un control de calendario mensual
 Uno de los atributos de un control de calendario mensual es la capacidad para almacenar información, que hace referencia como el estado de día del control, para cada día del mes. Esta información se utiliza para enfatizar ciertas fechas del mes que se muestra actualmente.  

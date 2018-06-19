@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361340"
 ---
 # <a name="mfc-activex-controls"></a>Controles ActiveX MFC
 Un control ActiveX es un componente de software reutilizable, basado en el modelo de objetos componentes (COM), que admite una gran variedad de funciones OLE y se puede personalizar de modo que se adapte a las necesidades del software. Los controles ActiveX están diseñados para su uso tanto en contenedores de controles ActiveX ordinarios como en páginas web de Internet. Puede crear controles ActiveX con MFC, descrita aquí, o con el [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  

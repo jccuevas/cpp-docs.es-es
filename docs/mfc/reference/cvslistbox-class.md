@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373000"
 ---
 # <a name="cvslistbox-class"></a>Clase CVSListBox
 La `CVSListBox` clase es compatible con un control de lista modificable.  

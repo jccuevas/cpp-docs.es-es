@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380089"
 ---
 # <a name="wsadata-structure"></a>WSADATA (Estructura)
 El `WSADATA` estructura se usa para almacenar información de inicialización de Windows Sockets devuelto por una llamada a la `AfxSocketInit` una función global.  

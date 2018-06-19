@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104391"
 ---
 # <a name="output-parameters"></a>Parámetros de salida
 Llamar a un procedimiento almacenado es similar a invocar un comando SQL. La principal diferencia es que los procedimientos almacenados usan parámetros de salida (o "parámetros de salida") y valores devuelven.  

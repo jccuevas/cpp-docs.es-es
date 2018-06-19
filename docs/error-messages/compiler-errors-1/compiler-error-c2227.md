@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169093"
 ---
 # <a name="compiler-error-c2227"></a>Error del compilador C2227
 el operando izquierdo de '->member' debe señalar al tipo class/struct/union/generic  

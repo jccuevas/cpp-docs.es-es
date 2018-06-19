@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367216"
 ---
 # <a name="cdraglistbox-class"></a>Clase CDragListBox
 Además de proporcionar la funcionalidad de un cuadro de lista de Windows, la `CDragListBox` clase permite al usuario mover elementos de cuadro de lista, como los nombres de archivo, en el cuadro de lista.  

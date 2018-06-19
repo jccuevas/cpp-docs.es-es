@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380924"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Establecer el modo de un objeto CStatusBarCtrl
 Existen dos modos para un `CStatusBarCtrl` objeto: simples y no. En la mayoría de los casos, el control de barra de estado tendrá una o varias partes, junto con el texto y quizás un icono o iconos. Esto se le denomina modo. Para obtener más información sobre este modo, vea [inicializar los elementos de un objeto CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
