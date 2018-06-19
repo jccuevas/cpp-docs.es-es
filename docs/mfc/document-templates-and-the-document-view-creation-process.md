@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348096"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Plantillas de documento y el proceso de creación de documentos y vistas
 Para administrar el complejo proceso de creación de documentos con sus vistas asociadas y las ventanas de marco, el marco de trabajo utiliza dos clases de plantilla de documento: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) para aplicaciones SDI y [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) para las aplicaciones MDI. Un `CSingleDocTemplate` puede crear y almacenar un documento de un tipo a la vez. Un `CMultiDocTemplate` mantiene una lista de muchos documentos abiertos de un tipo.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33303594"
 ---
 # <a name="compiler-warning-level-4-c4816"></a>Advertencia del compilador (nivel 4) C4816
 'parámetro': el parámetro tiene una matriz de tamaño cero que se truncará (a menos que el objeto se pase por referencia)  

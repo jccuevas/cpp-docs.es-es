@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317484"
 ---
 # <a name="project-build-error-prj0006"></a>Error PRJ0006 al compilar el proyecto
 No se pudo abrir el archivo temporal 'archivo'. Asegúrese de que el archivo existe y que el directorio no está protegido contra escritura.  

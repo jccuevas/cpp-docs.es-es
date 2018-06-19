@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342152"
 ---
 # <a name="clipboard-adding-other-formats"></a>Portapapeles: Agregar otros formatos
 Este tema explica cómo ampliar la lista de los formatos admitidos, especialmente para compatibilidad con OLE. El tema [Portapapeles: copias y pegar datos](../mfc/clipboard-copying-and-pasting-data.md) describe la implementación mínima necesaria para admitir copiando y pegando desde el Portapapeles. Si esto es todo lo que implemente, los únicos formatos colocados en el Portapapeles son `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**y, posiblemente, `CF_LINKSOURCE`. Mayoría de las aplicaciones necesitará más formatos del Portapapeles que estos tres.  

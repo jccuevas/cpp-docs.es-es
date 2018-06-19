@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690564"
 ---
 # <a name="ompinparallel"></a>omp_in_parallel
 Devuelve un valor distinto de cero si se llama desde dentro de una región paralela.  

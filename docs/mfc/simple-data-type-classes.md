@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382481"
 ---
 # <a name="simple-data-type-classes"></a>Clases de tipos de datos simples
 Las clases siguientes encapsulan dibujo coordenadas, cadenas de caracteres y la hora y la información de fecha, lo que permite cómodo usar sintaxis de C++. Estos objetos se utilizan ampliamente como parámetros a las funciones miembro de clases de Windows en la biblioteca de clases. Dado que `CPoint`, `CSize`, y `CRect` corresponden a la **punto**, **tamaño**, y `RECT` las estructuras, respectivamente, en el SDK de Windows, puede utilizar objetos de estos Siempre que pueda utilizar estas estructuras del lenguaje C, las clases C++. Las clases proporcionan interfaces útiles a través de sus funciones miembro. `CStringT` proporciona las cadenas de caracteres dinámica muy flexible. `CTime`, `COleDateTime`, `CTimeSpan`, y **COleTimeSpan** representan valores de fecha y hora. Para obtener más información sobre estas clases, vea el artículo [fecha y hora](../atl-mfc-shared/date-and-time.md).  

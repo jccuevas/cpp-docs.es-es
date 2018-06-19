@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692095"
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>Cómo: Usar la clase combinable para mejorar el rendimiento
 Este ejemplo muestra cómo utilizar el [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) clase para calcular la suma de los números en un [std:: Array](../../standard-library/array-class-stl.md) objetos que son primos. La clase `combinable` mejora el rendimiento eliminando el estado compartido.  

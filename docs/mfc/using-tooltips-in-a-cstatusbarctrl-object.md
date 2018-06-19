@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385968"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Usar informaciones sobre herramientas en un objeto CStatusBarCtrl
 Para habilitar la información sobre herramientas para un control de barra de estado, cree el `CStatusBarCtrl` objeto con el **SBT_TOOLTIPS** estilo.  

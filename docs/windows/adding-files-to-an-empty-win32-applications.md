@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856897"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Agregar archivos a una aplicación de Win32 vacía
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Para agregar sus archivos a una aplicación de escritorio de Windows vacía  

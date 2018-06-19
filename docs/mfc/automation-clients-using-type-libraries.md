@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342594"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Clientes de Automation: Usar bibliotecas de tipos
 Los clientes de automatización deben tener información sobre propiedades y métodos de objetos de servidor si los clientes son manipular objetos de los servidores. Propiedades tienen tipos de datos; a menudo, los métodos devuelven valores y aceptan parámetros. El cliente requiere información sobre los tipos de datos de todos estos para vincular estáticamente para el tipo de objeto de servidor.  

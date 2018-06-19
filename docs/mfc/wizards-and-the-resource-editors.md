@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383846"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Asistentes y editores de recursos
 Visual C++ incluye a varios asistentes para su uso en la programación de MFC, junto con muchos editores de recursos integrados. La programación, los controles ActiveX la [Asistente para controles ActiveX](../mfc/reference/mfc-activex-control-wizard.md) sirve para un propósito similar a la que el Asistente para aplicaciones MFC. Aunque puede escribir aplicaciones MFC sin usar la mayoría de estas herramientas, las herramientas en gran medida simplificarán y acelerar su trabajo.  

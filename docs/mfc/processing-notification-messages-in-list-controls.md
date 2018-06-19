@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347681"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>Procesar mensajes de notificación en los controles de lista
 Como los usuarios haga clic en los encabezados de columna, arrastre los iconos, edite las etiquetas y así sucesivamente, el control de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) envía mensajes de notificación a su ventana primaria. Controle estos mensajes si desea hacer algo en respuesta. Por ejemplo, cuando el usuario hace clic en un encabezado de columna, puede ordenar los elementos basados en el contenido de la columna seleccionada, como en Microsoft Outlook.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855284"
 ---
 # <a name="mbcs-programming-tips"></a>Sugerencias de programación para MBCS
 En el nuevo desarrollo, debe utilizar la codificación de caracteres Unicode para todas las cadenas que los usuarios finales pueden ver posiblemente. MBCS es una tecnología heredada reemplazada por Unicode. En esta sección se proporcionan sugerencias para los desarrolladores que deben mantener programas existentes que utilizan MBCS y donde no es práctico convertir a Unicode. Los consejos se refieren a aplicaciones MFC y aplicaciones creadas sin MFC. Entre los temas se incluyen los siguientes:  

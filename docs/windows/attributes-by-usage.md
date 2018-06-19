@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860637"
 ---
 # <a name="attributes-by-usage"></a>Atributos por uso
 Este tema enumeran los atributos según los elementos del lenguaje C++ a la que se aplican.  

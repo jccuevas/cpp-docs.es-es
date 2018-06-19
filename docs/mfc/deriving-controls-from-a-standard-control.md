@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344505"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Derivar controles de un control estándar
 Como con cualquier [CWnd](../mfc/reference/cwnd-class.md)-clase derivada, puede modificar el comportamiento de un control derivando una nueva clase de una clase de control existente.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849501"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 Controla la expansión en línea de llamadas de función directas o mutuamente recursivas.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849488"
 ---
 # <a name="function-cc"></a>function (C/C++)
 Especifica que se generen llamadas a funciones especificadas en la lista de argumentos de pragma.  

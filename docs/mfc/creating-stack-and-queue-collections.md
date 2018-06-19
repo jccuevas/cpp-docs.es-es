@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345718"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Crear colecciones de pila y de cola
 Este artículo explica cómo crear otras estructuras de datos, como [pilas](#_core_stacks) y [colas](#_core_queues), lista de clases de MFC. Los ejemplos utilizan las clases derivadas de `CList`, pero puede usar `CList` directamente a menos que necesite agregar funcionalidad.  

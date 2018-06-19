@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346141"
 ---
 # <a name="enabling-tool-tips"></a>Habilitar la información sobre herramientas
 Puede habilitar la compatibilidad de la sugerencia de herramienta para los controles secundarios de una ventana (por ejemplo, los controles en un cuadro de diálogo o la vista de formulario).  

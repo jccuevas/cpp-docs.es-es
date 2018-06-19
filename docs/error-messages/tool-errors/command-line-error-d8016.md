@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300623"
 ---
 # <a name="command-line-error-d8016"></a>Error de la línea de comandos D8016
 Opciones de línea de comandos 'opción1' y 'opción2' son incompatibles  

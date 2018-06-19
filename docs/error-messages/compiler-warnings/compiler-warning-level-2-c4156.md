@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296454"
 ---
 # <a name="compiler-warning-level-2-c4156"></a>Compilador C4156 de advertencia (nivel 2)
 eliminación de una expresión de matriz sin utilizar la forma de matriz de 'delete'; formato de matriz sustituido  

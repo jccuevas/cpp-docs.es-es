@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850299"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 Especifica el juego de caracteres de ejecución utilizado para los literales de cadena y carácter. Esta directiva no es necesaria para los literales marcados con el prefijo u8.  

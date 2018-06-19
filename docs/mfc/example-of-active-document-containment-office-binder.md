@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345966"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Ejemplo de contención de documentos activos: Cuaderno de Office
 Cuaderno de Microsoft Office es un ejemplo de un contenedor de documento activo. Un cuaderno de Office incluye dos paneles principales, como contenedores normalmente lo hacen. El panel izquierdo contiene iconos que corresponden a documentos activos en el enlazador. Cada documento se denomina un *sección* en el enlazador. Por ejemplo, puede contener un enlazador de documentos de Word, archivos de PowerPoint, hojas de cálculo de Excel y así sucesivamente.  

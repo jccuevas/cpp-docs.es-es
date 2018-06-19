@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383502"
 ---
 # <a name="toolbar-tool-tips"></a>Información sobre herramientas de la barra de herramientas
 Información sobre herramientas es esa pequeña ventana emergente que muestra una breve descripción del propósito de un botón de barra de herramientas cuando coloca el mouse sobre un botón durante un período de tiempo. Cuando se crea una aplicación con el Asistente para la aplicación que tiene una barra de herramientas, se proporciona compatibilidad con información sobre la herramienta para usted. Este artículo explica tanto la información sobre compatibilidad con herramientas creado por el Asistente para aplicaciones y cómo agregar compatibilidad con la sugerencia de herramienta a la aplicación.  

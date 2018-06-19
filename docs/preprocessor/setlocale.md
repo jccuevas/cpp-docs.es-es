@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847421"
 ---
 # <a name="setlocale"></a>setlocale
 Define la configuración regional (país o región e idioma) que se utilizará al traducir constantes de caracteres y literales de cadena anchos.  

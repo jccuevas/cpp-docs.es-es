@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347196"
 ---
 # <a name="memory-management-examples"></a>Administración de memoria: Ejemplos
 Este artículo describe cómo realiza MFC la asignación en el marco y las asignaciones del montón para cada uno de los tres tipos típicos de las asignaciones de memoria:  

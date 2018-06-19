@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385994"
 ---
 # <a name="writing-mfc-applications"></a>Escribir aplicaciones MFC
 Este artículo explica los pasos iniciales que seguir para desarrollar su aplicación. En primer lugar, debe decidir qué tipo de aplicación está escribiendo. Algunas de las opciones se trataron en [opciones de diseño de aplicaciones](../mfc/application-design-choices.md). La aplicación puede ser:  

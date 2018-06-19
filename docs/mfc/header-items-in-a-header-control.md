@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344927"
 ---
 # <a name="header-items-in-a-header-control"></a>Elementos de encabezado en un control de encabezado
 Tiene un gran control sobre la apariencia y el comportamiento de los elementos de encabezado que componen un control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Cada elemento de encabezado puede tener una cadena, una imagen de mapa de bits, una imagen de una lista de imágenes asociada o un valor de 32 bits definido por la aplicación asociados a él. La cadena, el mapa de bits o la imagen se muestra en el elemento de encabezado.  

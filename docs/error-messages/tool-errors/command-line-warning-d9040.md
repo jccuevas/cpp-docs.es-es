@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299931"
 ---
 # <a name="command-line-warning-d9040"></a>Advertencia de la línea de comandos D9040
 la opción '/analyze' se omitirá; las advertencias de análisis de código no están disponibles en esta edición del compilador  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345412"
 ---
 # <a name="image-overlays-in-image-lists"></a>Superposiciones de imágenes en las listas de imágenes
 Cada lista de imágenes ([CImageList](../mfc/reference/cimagelist-class.md)) incluye una lista de imágenes que se utilizan como máscaras superpuestas. Una "máscara superpuesta" es una imagen dibujada de forma transparente sobre otra imagen. Cualquier imagen puede usarse como una máscara superpuesta. Puede especificar hasta cuatro máscaras superpuestas por lista de imágenes.  

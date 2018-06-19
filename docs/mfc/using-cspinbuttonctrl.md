@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384405"
 ---
 # <a name="using-cspinbuttonctrl"></a>Usar CSpinButtonCtrl
 El *botón de número* control (también conocido como un *flechas* control) proporciona un par de flechas que un usuario puede hacer clic para ajustar un valor. Este valor se conoce como el *posición actual*. La posición permanece dentro del intervalo del botón de número. Cuando el usuario hace clic en la flecha hacia arriba, la posición se mueve hacia el valor máximo; y cuando el usuario hace clic en la flecha hacia abajo, la posición se mueve hacia el valor mínimo.  

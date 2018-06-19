@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858093"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>Asociar un comando de menú a una tecla de aceleración
 A menudo quiere que un elemento de menú u una combinación de teclado ejecuten el mismo comando de programa. Para ello, use el editor de menús para asignar el mismo identificador de recurso al comando de menú y a una entrada de la tabla de aceleradores de la aplicación. A continuación, edite el [Título](../windows/menu-command-properties.md) del comando de menú para que muestre el nombre del acelerador.  

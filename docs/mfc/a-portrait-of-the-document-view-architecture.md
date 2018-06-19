@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329821"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Un retrato de la arquitectura documento/vista
 En una aplicación típica de MFC están emparejadas de documentos y vistas. Datos se almacenan en el documento, pero la vista tiene privilegios de acceso a los datos. La separación del documento de vista separa el almacenamiento y el mantenimiento de datos de su presentación.  

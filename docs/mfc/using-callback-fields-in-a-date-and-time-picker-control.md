@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383791"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Usar campos de devolución de llamada en un control de selector de fecha y hora
 Además de los caracteres de formato estándar que definen los campos del selector de fecha y hora, puede personalizar la salida mediante la especificación de determinadas partes de una cadena de formato personalizado como campos de devolución de llamada. Para declarar un campo de devolución de llamada, incluya uno o varios caracteres "X" (código ASCII 88) en cualquier lugar en el cuerpo de la cadena de formato. Por ejemplo, la siguiente cadena "' hoy en día es: 'yy' / 'MM' / 'dd' (día 'X')'" hace que el control de selector de fecha y hora mostrar el valor actual como año seguido del mes, fecha y, finalmente, el día del año.  

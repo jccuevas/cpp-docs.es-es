@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861550"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Cambiar el orden de tabulación de los controles
 El orden de tabulación es el orden en el que la tecla TAB mueve el foco de entrada de un control a la siguiente dentro de un cuadro de diálogo. Normalmente en el orden de tabulación se realiza de izquierda a derecha y de arriba a abajo, en un cuadro de diálogo. Cada control tiene un **Tabstop** propiedad que determina si un control recibe el foco de entrada.  

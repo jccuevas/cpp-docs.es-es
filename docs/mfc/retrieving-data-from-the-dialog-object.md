@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380213"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Recuperar datos del objeto de cuadro de diálogo
 El marco de trabajo proporciona una manera sencilla para inicializar los valores de los controles en un cuadro de diálogo y para recuperar los valores de los controles. El enfoque más laborioso manual es llamar a funciones como la `SetDlgItemText` y `GetDlgItemText` funciones miembro de clase `CWnd`, que se aplican a las ventanas de control. Con estas funciones, tener acceso a cada control individualmente para establecer u obtener su valor, llamar a funciones como `SetWindowText` y `GetWindowText`. Enfoque del marco de trabajo automatiza la inicialización y la recuperación.  

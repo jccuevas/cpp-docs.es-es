@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374375"
 ---
 # <a name="colebusydialog-class"></a>Clase de la clase COleBusyDialog
 Se utiliza en los cuadros de diálogo que indican que el servidor OLE no responde o el servidor está ocupado.  

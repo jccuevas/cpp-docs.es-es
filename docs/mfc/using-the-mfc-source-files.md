@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384340"
 ---
 # <a name="using-the-mfc-source-files"></a>Usar los archivos de código fuente de MFC
 La biblioteca (Microsoft Foundation Classes) proporciona el código fuente completo. Archivos de encabezado (. h) están en el directorio \atlmfc\include; archivos de implementación (.cpp) están en el directorio \atlmfc\src\mfc.  

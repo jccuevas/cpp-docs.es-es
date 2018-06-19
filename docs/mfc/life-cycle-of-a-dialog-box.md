@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346186"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>Ciclo de vida de un cuadro de diálogo
 Durante el ciclo de vida de un cuadro de diálogo, el usuario invoca el cuadro de diálogo, normalmente dentro de un controlador de comandos que crea e inicializa el objeto de cuadro de diálogo, el usuario interactúa con el cuadro de diálogo y se cierra el cuadro de diálogo.  
