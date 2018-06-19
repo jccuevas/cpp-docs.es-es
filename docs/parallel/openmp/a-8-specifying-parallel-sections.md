@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694061"
 ---
 # <a name="a8---specifying-parallel-sections"></a>A.8 Especificar secciones paralelas
 En el ejemplo siguiente, (para [sección 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) en la página 14) funciones *xaxis*, *eje y*, y *zaxis* pueden ejecutarse simultáneamente. La primera `section` directiva es opcional.  Tenga en cuenta que todos los `section` directivas tiene que aparecer en la extensión léxica de los `parallel sections` construir.  

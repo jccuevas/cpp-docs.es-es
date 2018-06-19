@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351844"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Controles ActiveX MFC: Implementación de propiedades avanzada
 Este artículo describe temas relacionados con la implementación de propiedades en un control ActiveX avanzadas:  

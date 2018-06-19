@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376400"
 ---
 # <a name="ctypedptrmap-class"></a>Clase CTypedPtrMap
 Proporciona un "contenedor" con seguridad de tipos para objetos de las clases de asignación de puntero `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`y `CMapStringToPtr`.  

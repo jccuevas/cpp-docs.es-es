@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346680"
 ---
 # <a name="dialog-boxes"></a>Cuadros de diálogo
 Frecuencia de comunicación de aplicaciones para Windows con el usuario a través de los cuadros de diálogo. Clase [CDialog](../mfc/reference/cdialog-class.md) proporciona una interfaz para administrar cuadros de diálogo, el editor de cuadro de diálogo de Visual C++ facilita el proceso diseñar cuadros de diálogo y crear sus recursos de plantilla de cuadro de diálogo y asistentes para código simplifican el proceso de inicialización y validación de los controles en un cuadro de diálogo y de recopilación de los valores especificados por el usuario.  

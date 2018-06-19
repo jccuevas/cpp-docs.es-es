@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695764"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Crear operaciones asincrónicas en C++ para aplicaciones UWP
 Este documento describen algunos de los puntos clave a tener en cuenta al utilizar la clase de tarea para generar operaciones asincrónicas basadas en subprocesos de Windows en una aplicación en tiempo de ejecución Universal de Windows (UWP).  

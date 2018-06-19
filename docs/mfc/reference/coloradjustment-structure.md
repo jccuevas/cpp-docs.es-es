@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369969"
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT (Estructura)
 El `COLORADJUSTMENT` estructura define los valores de ajuste de color utilizados por las ventanas `StretchBlt` y **StretchDIBits** funciones cuando la `StretchBlt` modo es **medios TONOS**.  

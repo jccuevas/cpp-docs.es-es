@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374528"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Crear una aplicación MFC estilo explorador web
 Una aplicación estilo explorador Web puede tener acceso a información de Internet (por ejemplo, HTML o documentos activos) o una intranet, así como carpetas en el sistema de archivos local y en una red. Al derivar la clase de vista de la aplicación de [CHtmlView](../../mfc/reference/chtmlview-class.md), eficazmente que un explorador Web de la aplicación proporcionando la vista con el control WebBrowser.  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374758"
 ---
 # <a name="cusertool-class"></a>Clase CUserTool
 Una herramienta de usuario es un elemento de menú que ejecuta una aplicación externa. El **herramientas** pestaña de la **personalizar** cuadro de diálogo ( [CMFCToolBarsCustomizeDialog clase](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permite al usuario agregar herramientas y para especificar el nombre, comando, argumentos, y directorio inicial para cada herramienta de usuario.  

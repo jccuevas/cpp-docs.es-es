@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352745"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo (Estructura)
 El `CDaoDatabaseInfo` estructura contiene información sobre un objeto de base de datos definido para objetos de acceso a datos (DAO).  

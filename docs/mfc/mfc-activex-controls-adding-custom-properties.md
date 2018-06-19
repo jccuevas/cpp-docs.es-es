@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352430"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controles ActiveX MFC: Agregar propiedades personalizadas
 Propiedades personalizadas se diferencian de las propiedades estándar en que propiedades personalizadas no están ya implementadas por la `COleControl` clase. Una propiedad personalizada se utiliza para exponer un cierto estado o aspecto de un control ActiveX al programador que utiliza el control.  

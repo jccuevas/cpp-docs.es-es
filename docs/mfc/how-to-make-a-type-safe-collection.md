@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354444"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Cómo: Crear una colección con seguridad de tipos
 En este artículo se explica cómo hacer que las colecciones con seguridad de tipos para sus propios tipos de datos. Entre los temas se incluyen los siguientes:  

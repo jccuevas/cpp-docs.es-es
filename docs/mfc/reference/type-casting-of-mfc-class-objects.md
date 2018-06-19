@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371166"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Conversión de tipos de objetos de clase de MFC
 Macros de conversión de tipo proporcionan una forma de convertir un puntero especificado a un puntero que señala a un objeto de clase específica, con o sin comprobar que la conversión es legal.  

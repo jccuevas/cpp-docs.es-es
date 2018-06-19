@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355144"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controles ActiveX MFC: Usar fuentes
 Si el control ActiveX muestra texto, puede permitir que el usuario del control cambiar la apariencia del texto cambiando una propiedad de fuente. Propiedades de fuente se implementan como objetos de fuente y puede tener uno de dos tipos: estándar o personalizadas. Propiedades de fuente estándar son propiedades de fuente ya implementadas y que se pueden agregar mediante el Asistente para agregar propiedades. Propiedades de fuente personalizados no están implementadas y el desarrollador del control determina el comportamiento y el uso de la propiedad.  

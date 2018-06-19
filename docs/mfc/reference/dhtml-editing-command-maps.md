@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375140"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mapas de comandos de edición de DHTML
 Las macros siguientes se pueden usar para asignar comandos de edición de DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-las clases derivadas. Para obtener un ejemplo de su uso, consulte [ejemplo HTMLEdit](../../visual-cpp-samples.md).  

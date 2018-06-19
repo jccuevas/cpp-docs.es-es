@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691695"
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25 Ejemplos de la cláusula de atributos de datos copyprivate
 **Ejemplo 1:** el `copyprivate` cláusula ([sección 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) en la página 32) puede usarse para difundir valores adquiridos por un único subproceso directamente para todas las instancias de las variables privadas en los demás subprocesos.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351971"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menús y recursos: Combinación de menús
 En este artículo se detalla los pasos necesarios para aplicaciones de documentos OLE controlar la edición visual y la activación en contexto correctamente. Activación en contexto supone un desafío para el contenedor y servidor de aplicaciones (componente). El usuario permanece en la misma ventana de marco (dentro del contexto del documento contenedor), pero está realmente se está ejecutando otra aplicación (el servidor). Esto requiere la coordinación entre los recursos de las aplicaciones de contenedor y servidor.  

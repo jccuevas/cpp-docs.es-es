@@ -131,6 +131,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377012"
 ---
 # <a name="cdhtmldialog-class"></a>Clase CDHtmlDialog
 Se utiliza para crear cuadros de diálogo que utilizan HTML en lugar de recursos de cuadro de diálogo para implementar la interfaz de usuario.  

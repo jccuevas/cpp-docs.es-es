@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349667"
 ---
 # <a name="mapi-support-in-mfc"></a>Compatibilidad MAPI en MFC
 MFC proporciona compatibilidad con un subconjunto de la Microsoft aplicaciones de mensajería programa interfaz (MAPI) en la clase **CDocument**. En concreto, **CDocument** tiene las funciones de miembro que determinan si la compatibilidad de correo está presente en el equipo del usuario final y, si es así, permite un comando Enviar correo cuyo identificador de comando estándar es **ID_FILE_SEND_MAIL**. La función de controlador MFC para este comando permite al usuario enviar un documento por correo electrónico.  

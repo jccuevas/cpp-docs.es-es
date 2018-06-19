@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341676"
 ---
 # <a name="application-framework"></a>Marco de aplicación
 El núcleo de la biblioteca (Microsoft Foundation Classes) es una encapsulación de una gran parte de la API de Windows en formato de C++. Clases de biblioteca representan windows, cuadros de diálogo, contextos de dispositivo, objetos GDI comunes como pinceles y lápices, controles y otros elementos de Windows estándares. Estas clases proporcionan una cómoda interfaz de funciones miembro de C++ a las estructuras de Windows que encapsulan. Para obtener más información acerca del uso de estas clases, consulte [temas del objeto de ventana](../mfc/window-objects.md).  

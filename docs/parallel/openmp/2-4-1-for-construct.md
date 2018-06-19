@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693554"
 ---
 # <a name="241-for-construct"></a>2.4.1 for (Construcción)
 El **para** directiva identifica una construcción de uso compartido de trabajo iterativa que especifica que las iteraciones del bucle asociado se ejecutarán en paralelo. Las iteraciones de la **para** bucle se distribuyen entre varios subprocesos que ya existen en el equipo que ejecuta la construcción paralela a la que se enlaza. La sintaxis de la **para** construcción es como sigue:  

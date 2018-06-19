@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354922"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Controles ActiveX MFC: Utilizar imágenes en un control ActiveX
 En este artículo se describe el tipo de imagen común y cómo implementarlo en el control ActiveX. Entre los temas se incluyen los siguientes:  

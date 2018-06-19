@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324319"
 ---
 # <a name="resource-compiler-error-rc2165"></a>Error del compilador de recursos RC2165
 cadena que no se encuentra en la instrucción DLGINCLUDE  

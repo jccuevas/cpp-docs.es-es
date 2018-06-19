@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346004"
 ---
 # <a name="list-control-and-list-view"></a>Control de lista y vista de lista
 Para mayor comodidad, MFC encapsula el control de lista de dos maneras. Puede usar controles de lista:  

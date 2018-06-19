@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691421"
 ---
 # <a name="a12---using-the-atomic-directive"></a>A.12 Usar la directiva atomic
 En el ejemplo siguiente, se evita las condiciones de carrera (actualizaciones simultáneas de un elemento de *x* varios subprocesos) mediante el uso de la `atomic` directiva ([sección 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) en la página 19):  

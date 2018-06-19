@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375427"
 ---
 # <a name="uicheckstate-enumeration"></a>UICheckState (Enumeración)
 Describe el estado de activación de un elemento de la interfaz de usuario para el comando.  

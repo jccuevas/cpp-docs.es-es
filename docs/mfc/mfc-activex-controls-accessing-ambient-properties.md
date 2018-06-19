@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348238"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>Controls ActiveX MFC: Acceso a las propiedades de ambiente
 Este artículo describe cómo un control ActiveX puede tener acceso a las propiedades de ambiente de su contenedor de control.  

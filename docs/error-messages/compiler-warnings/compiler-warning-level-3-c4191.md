@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291497"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Advertencia del compilador (nivel 3) C4191
 'operador/operación': conversión no segura de 'tipo de expresión' a 'tipo necesario'  

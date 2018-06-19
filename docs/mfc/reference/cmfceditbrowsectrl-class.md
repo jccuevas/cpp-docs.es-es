@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369328"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Clase CMFCEditBrowseCtrl
 La `CMFCEditBrowseCtrl` clase es compatible con el control de exploración de edición, que es un cuadro de texto editable que contiene opcionalmente un botón Examinar. Cuando el usuario hace clic en el botón Examinar, el control realiza una acción personalizada o muestra un cuadro de diálogo estándar que contiene un explorador de archivos o un explorador de carpetas.  

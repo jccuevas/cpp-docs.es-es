@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349856"
 ---
 # <a name="rebar-controls-and-bands"></a>Controles y bandas Rebar
 El propósito principal de un control rebar es actuar como un contenedor para ventanas secundarias, controles comunes de cuadro de diálogo, menús, barras de herramientas y así sucesivamente. Esta contención es compatible con el concepto de "banda". Cada banda rebar puede contener cualquier combinación de una barra de controles, un mapa de bits, una etiqueta de texto y una ventana secundaria.  

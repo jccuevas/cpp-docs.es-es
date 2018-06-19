@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367456"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Clase CMFCDesktopAlertWndInfo
 El `CMFCDesktopAlertWndInfo` clase se utiliza con la [clase CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md). Especifica los controles que se muestran si emerge la ventana de alerta de escritorio.  

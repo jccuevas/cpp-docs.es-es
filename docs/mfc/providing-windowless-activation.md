@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351815"
 ---
 # <a name="providing-windowless-activation"></a>Proporcionar activación sin ventana
 Código de creación de ventana (es decir, todo lo que ocurre cuando se llama a **CreateWindow**) es costoso para ejecutar. Un control que mantiene una pantalla ventana tiene que administrar los mensajes de la ventana. Controles sin ventana, por tanto, son más rápidos que los controles de windows.  

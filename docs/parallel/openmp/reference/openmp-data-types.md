@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690951"
 ---
 # <a name="openmp-data-types"></a>Tipos de datos de OpenMP
 Proporciona vínculos a los tipos de datos utilizados en la API de OpenMP.  

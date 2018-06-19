@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351668"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personalización del teclado y del mouse
 MFC permite al usuario de la aplicación para personalizar cómo controla el teclado y mouse de entrada. El usuario puede personalizar la entrada de teclado mediante la asignación de métodos abreviados de teclado para los comandos. El usuario también puede personalizar la entrada de mouse (ratón) seleccionando el comando que se debe ejecutar cuando el usuario hace doble clic dentro de windows específicos de la aplicación. En este tema se explica cómo personalizar la entrada de la aplicación.  

@@ -135,6 +135,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378173"
 ---
 # <a name="cpanecontainer-class"></a>Clase CPaneContainer
 La `CPaneContainer` clase es un componente básico del modelo de acoplamiento implementado por MFC. Un objeto de esta clase almacena punteros en dos paneles de acoplamiento o dos instancias de `CPaneContainer.` ; también almacena un puntero divisor que separa los paneles (o contenedores). Anidando contenedores dentro de contenedores, el marco puede compilar un árbol binario que representa diseños complejos de acoplamiento. La raíz del árbol binario se almacena en un [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objeto.  

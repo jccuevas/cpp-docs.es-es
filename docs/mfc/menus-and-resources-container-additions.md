@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350658"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menús y recursos: Adiciones de contenedor
 En este artículo se describen los cambios que deben realizarse en los menús y otros recursos en una aplicación de contenedor de edición visual.  

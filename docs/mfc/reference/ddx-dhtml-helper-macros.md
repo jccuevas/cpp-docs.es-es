@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372080"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Macros de la aplicación auxiliar de DDX_DHtml
 Las macros de la aplicación auxiliar de DDX_DHtml permiten un acceso sencillo a las propiedades utilizadas de controles en una página HTML.  

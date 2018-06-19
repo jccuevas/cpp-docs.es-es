@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380014"
 ---
 # <a name="settings-for-the-progress-control"></a>Configuración del control de progreso
 La configuración básica para el control de progreso ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) es el intervalo y la posición actual. El intervalo representa toda la duración de la operación. La posición actual representa el progreso que la aplicación ha realizado para completar la operación. Los cambios realizados en el intervalo o la posición que el control de progreso vuelva a dibujarse.  

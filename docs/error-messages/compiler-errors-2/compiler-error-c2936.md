@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241940"
 ---
 # <a name="compiler-error-c2936"></a>Error del compilador C2936
 'clase': el id. de clase de plantilla se ha vuelto a definir como variable de datos global  

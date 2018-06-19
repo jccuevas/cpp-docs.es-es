@@ -51,6 +51,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369055"
 ---
 # <a name="cjumplist-class"></a>Clase CJumpList
 A `CJumpList` es la lista de métodos abreviados revelada al hacer haga clic en un icono en la barra de tareas.  

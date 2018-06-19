@@ -197,6 +197,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379000"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (clase)
 Proporciona la funcionalidad del control de barra de herramientas común de Windows.  

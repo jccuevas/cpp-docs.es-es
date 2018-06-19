@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360971"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementación de barra de herramientas de MFC
 Una barra de herramientas es un [barra de control](../mfc/control-bars.md) que contiene las imágenes de mapa de bits de controles. Estas imágenes se comportan como botones de comando, casillas o botones de radio. MFC proporciona la clase [CToolbar](../mfc/reference/ctoolbar-class.md) para administrar las barras de herramientas.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354906"
 ---
 # <a name="idle-loop-processing"></a>Procesamiento de bucles inactivos
 Muchas aplicaciones realizan un procesamiento largo "en"segundo plano. A veces, las consideraciones de rendimiento dictan el uso del subprocesamiento múltiple para dicho trabajo. Subprocesos implican la labor de programación adicional, por lo que no se recomiendan para tareas sencillas, como el trabajo de tiempo de inactividad que realiza MFC en la [OnIdle](../mfc/reference/cwinthread-class.md#onidle) función. En este artículo se centra en el procesamiento en inactividad. Para obtener más información sobre el subprocesamiento múltiple, vea [temas de Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  

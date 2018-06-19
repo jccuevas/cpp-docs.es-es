@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371867"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Configuración del control, Asistente para controles ActiveX MFC
 Utilice esta página del Asistente para especificar cómo desea que el control se comporte. Por ejemplo, puede basar el control en tipos de control de Windows estándar, optimizar su comportamiento y apariencia o indicar que el control puede actuar como un contenedor para otros controles.  

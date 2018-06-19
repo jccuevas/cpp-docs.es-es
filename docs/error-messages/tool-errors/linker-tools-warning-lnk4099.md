@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300818"
 ---
 # <a name="linker-tools-warning-lnk4099"></a>Advertencia de las herramientas del vinculador LNK4099
 No se encontró PDB 'nombredearchivo' con 'object/library' o 'path'; se vinculará el objeto sin información de depuración  

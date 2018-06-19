@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357564"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Controles ActiveX MFC: Agregar propiedades estándar
 Propiedades estándar se diferencian de las propiedades personalizadas en que ya se implementan mediante la clase `COleControl`. `COleControl` contiene funciones miembro predefinidas que admiten propiedades comunes para el control. Algunas propiedades comunes incluyen el título del control y los colores de primer plano y fondo. Para obtener información sobre otras propiedades estándar, vea [propiedades estándar admitidas por el Asistente para agregar propiedades](#_core_stock_properties_supported_by_classwizard) más adelante en este artículo. Las entradas del mapa de envíos para propiedades estándar siempre van precedidas por **DISP_STOCKPROP**.  

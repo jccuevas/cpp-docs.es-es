@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687984"
 ---
 # <a name="asynchronous-agents"></a>Agentes asincrónicos
 Un *agente asincrónico* (o simplemente *agente*) es un componente de aplicación que funciona de forma asincrónica con otros agentes para resolver tareas de computación mayores. Considere un agente como una tarea que tiene un ciclo de vida establecido. Por ejemplo, un agente podría leer datos de un dispositivo de entrada/salida (por ejemplo, el teclado, un archivo de disco o una conexión de red) y otro agente podrían realizar una acción en los datos cuando se encuentre disponible. El primer agente utiliza el paso de mensajes para informar al segundo de que hay más datos disponibles. El programador de tareas del Runtime de simultaneidad proporciona un mecanismo eficaz para permiten a los agentes bloquear y producir de forma cooperativa sin necesidad de adelantamiento menos eficiente.  

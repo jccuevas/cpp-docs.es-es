@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373545"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Cadenas de plantillas de documentos, Asistente para aplicaciones MFC
 En esta página del Asistente para aplicaciones MFC, puede proporcionar o refinar las siguientes opciones para facilitar la localización y administración de documentos. Cadenas de plantillas de documento están disponibles para las aplicaciones que incluyen **compatibilidad con la arquitectura documento/vista** en el [tipo de aplicación](../../mfc/reference/application-type-mfc-application-wizard.md). No están disponibles para los cuadros de diálogo. Dado que la mayoría de las cadenas de plantilla de documento son visibles y son utilizadas por los usuarios de la aplicación, las páginas están localizadas en el **idioma de recurso** indicada en el **tipo de aplicación** página del asistente.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339025"
 ---
 # <a name="compiler-intrinsics"></a>Intrínsecos del controlador
 La mayoría de las funciones está recogida en bibliotecas, pero algunas funciones están incorporadas en el compilador (es decir, son intrínsecas). Estas se conocen como funciones intrínsecas o intrínsecos.  

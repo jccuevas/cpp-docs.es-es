@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688159"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed (Clase)
 La excepción que se produce cuando se produce un error en una llamada de DirectX subyacente porque el mecanismo de detección y recuperación de tiempo de espera de Windows.  

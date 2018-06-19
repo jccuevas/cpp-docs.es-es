@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241917"
 ---
 # <a name="compiler-error-c3011"></a>Error del compilador C3011
 no se permiten ensamblados alineados directamente dentro de una región paralela  

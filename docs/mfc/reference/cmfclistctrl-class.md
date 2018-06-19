@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369627"
 ---
 # <a name="cmfclistctrl-class"></a>Clase CMFCListCtrl
 El `CMFCListCtrl` clase extiende la funcionalidad de [CListCtrl (clase)](../../mfc/reference/clistctrl-class.md) clase ya que admite la funcionalidad de control avanzado de encabezado de la [clase CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).  

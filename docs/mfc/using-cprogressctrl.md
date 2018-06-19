@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381574"
 ---
 # <a name="using-cprogressctrl"></a>Usar CProgressCtrl
 Puede utilizar el control de progreso para indicar el progreso de una operación larga. Es un rectángulo que se rellena gradualmente con el color de resaltado del sistema como la operación progresa.  

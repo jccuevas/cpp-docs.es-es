@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321865"
 ---
 # <a name="project-build-error-prj0035"></a>Error PRJ0035 al compilar el proyecto
 Archivo XML 'archivo' incluye contenido Unicode que no se puede traducir a la página de códigos ANSI del usuario.  

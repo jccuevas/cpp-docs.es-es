@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370326"
 ---
 # <a name="cmfcribboncontextcaption-class"></a>Clase CMFCRibbonContextCaption
 Implementa una leyenda coloreada que aparece en la parte superior de una categoría de la cinta o de una categoría de contexto.  

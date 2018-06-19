@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369536"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey (clase)
 Una clase auxiliar que implementa la asignación de claves virtual y el formato.  

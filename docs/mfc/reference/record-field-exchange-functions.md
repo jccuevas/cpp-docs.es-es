@@ -60,6 +60,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378974"
 ---
 # <a name="record-field-exchange-functions"></a>Funciones de intercambio de campos de registros
 Este tema enumeran el intercambio de campos de registro (RFX, RFX masivo y DFX) funciones que se usan para automatizar la transferencia de datos entre un objeto de conjunto de registros y su origen de datos y realizar otras operaciones en los datos.  

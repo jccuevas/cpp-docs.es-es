@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353991"
 ---
 # <a name="print-preview-architecture"></a>Arquitectura de la vista previa de impresión
 Este artículo explica cómo el marco de trabajo MFC implementa la funcionalidad de vista previa de impresión. Los temas tratados son:  

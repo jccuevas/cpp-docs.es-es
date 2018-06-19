@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380102"
 ---
 # <a name="spin-button-styles"></a>Estilos de botón de cuadro de número
 Muchas de las configuraciones de un botón de número ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) se controlan mediante estilos. Puede establecer los siguientes estilos utilizando el **propiedades** ventana en el editor de cuadro de diálogo.  

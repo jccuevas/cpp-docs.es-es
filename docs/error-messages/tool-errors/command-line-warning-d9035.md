@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296990"
 ---
 # <a name="command-line-warning-d9035"></a>Advertencia de la línea de comandos D9035
 opción 'opción' ha quedado desusada y se quitará en una versión futura  

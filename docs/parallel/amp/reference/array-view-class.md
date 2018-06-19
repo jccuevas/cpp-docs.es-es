@@ -41,6 +41,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694425"
 ---
 # <a name="arrayview-class"></a>array_view (Clase)
 Representa una vista de N dimensiones a través de los datos contenidos en otro contenedor.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273112"
 ---
 # <a name="compiler-error-c3813"></a>Error del compilador C3813
 una declaración de propiedad solo puede aparecer en la definición de un tipo WinRT o administrado  

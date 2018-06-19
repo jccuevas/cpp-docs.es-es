@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354094"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: Pintar un control ActiveX
 Este artículo describe el proceso de dibujo del control ActiveX y cómo puede modificar el código para optimizar el proceso. (Consulte [optimizar el dibujo de controles](../mfc/optimizing-control-drawing.md) para conocer las técnicas optimizar el dibujo al no tener controles individualmente restauración objetos GDI previamente seleccionados. Después de han dibujado todos los controles, el contenedor puede restaurar automáticamente los objetos originales.)  

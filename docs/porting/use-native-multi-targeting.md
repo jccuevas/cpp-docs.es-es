@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846430"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usar compatibilidad nativa con múltiples versiones para compilar proyectos antiguos en Visual Studio
 

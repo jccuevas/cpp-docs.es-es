@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695686"
 ---
 # <a name="unorm-class"></a>unorm (Clase)
 Representa un número de unorm. Cada elemento flotante es un número de punto en el intervalo de [0, 0F, 1.0f].  

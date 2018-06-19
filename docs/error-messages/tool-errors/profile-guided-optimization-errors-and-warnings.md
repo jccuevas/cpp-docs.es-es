@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317325"
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>Errores y advertencias de la optimización guiada por perfiles
 Esta sección hace referencia a los errores generados por las herramientas de compilación. Para obtener ayuda con un mensaje de error concreto, haga clic con el número de error en la ventana de salida y presione F1, escriba el número de error en la **buscar** cuadro en el índice o haga clic en el vínculo apropiado:  

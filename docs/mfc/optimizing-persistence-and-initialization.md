@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355667"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optimizar la persistencia y la inicialización
 De forma predeterminada, persistencia y la inicialización en un control se controlan mediante la `DoPropExchange` función miembro. En un control típico, esta función contiene llamadas a varios **PX_** funciones (`PX_Color`, `PX_Font`, etc.), uno para cada propiedad.  
