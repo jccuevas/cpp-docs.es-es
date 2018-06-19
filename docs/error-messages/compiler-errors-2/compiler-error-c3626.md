@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266173"
 ---
 # <a name="compiler-error-c3626"></a>Error del compilador C3626
 'keyword': palabra clave '__event' solo puede usarse en interfaces COM, funciones miembro y miembros de datos que sean punteros a delegados  

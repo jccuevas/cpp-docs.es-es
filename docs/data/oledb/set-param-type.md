@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107420"
 ---
 # <a name="setparamtype"></a>SET_PARAM_TYPE
 Especifica las macros de `COLUMN_ENTRY` que siguen la entrada, salida o la entrada y salida de macro de `SET_PARAM_TYPE` .  

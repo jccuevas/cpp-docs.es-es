@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248531"
 ---
 # <a name="compiler-error-c3190"></a>C3190 de Error del compilador
 'instancia' con los argumentos de plantilla proporcionados no es la creación de instancias explícita de ninguna función miembro de 'tipo'  

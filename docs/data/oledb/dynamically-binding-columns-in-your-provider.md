@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101697"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Enlazar columnas dinámicamente en un proveedor
 Asegúrese de que realmente necesita enlace dinámico de columnas. Puede necesitarlo si:  

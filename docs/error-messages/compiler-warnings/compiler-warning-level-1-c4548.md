@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279216"
 ---
 # <a name="compiler-warning-level-1-c4548"></a>Advertencia del compilador (nivel 1) C4548
 la expresión antes de la coma no tiene ningún efecto; se esperaba una expresión con efectos secundarios  

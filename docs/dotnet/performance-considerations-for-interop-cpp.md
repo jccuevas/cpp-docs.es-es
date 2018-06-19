@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164055"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Consideraciones de rendimiento para la interoperabilidad (C++)
 Este tema proporciona directrices para reducir el efecto de las transiciones de interoperabilidad administrado y en el rendimiento de tiempo de ejecución.  

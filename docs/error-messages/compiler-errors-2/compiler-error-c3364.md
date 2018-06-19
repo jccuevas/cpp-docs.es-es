@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257852"
 ---
 # <a name="compiler-error-c3364"></a>Error del compilador C3364
 'delegado': constructor delegado: el argumento debe ser el puntero a función miembro de clase administrada o una función global  

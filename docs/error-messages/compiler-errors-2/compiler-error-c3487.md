@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256342"
 ---
 # <a name="compiler-error-c3487"></a>Error del compilador C3487
 'return type': todas las expresiones return deben deducirse como el mismo tipo: antes era 'return type'  

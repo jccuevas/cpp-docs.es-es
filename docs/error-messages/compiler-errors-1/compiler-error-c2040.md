@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167546"
 ---
 # <a name="compiler-error-c2040"></a>Error C2040 de Error del compilador
 'operador': 'identificador1' se diferencia del 'identificador2' en los niveles de direccionamiento indirecto  

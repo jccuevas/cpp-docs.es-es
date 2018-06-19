@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127986"
 ---
 # <a name="how-to-test-for-equality-ccli"></a>Cómo: Probar la igualdad (C++/CLI)
 En el ejemplo siguiente, una prueba de igualdad que usa Extensiones administradas para C++ se basa en lo que hacen referencia los identificadores.  

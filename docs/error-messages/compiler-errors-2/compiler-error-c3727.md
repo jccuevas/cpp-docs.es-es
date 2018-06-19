@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264004"
 ---
 # <a name="compiler-error-c3727"></a>Error del compilador C3727
 'evento': un evento administrado debe ser una función miembro o un miembro de datos que es un puntero a un delegado  

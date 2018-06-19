@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248316"
 ---
 # <a name="compiler-error-c3066"></a>Error del compilador C3066
 Hay varias maneras de que un objeto de este tipo se puede llamar con estos argumentos  

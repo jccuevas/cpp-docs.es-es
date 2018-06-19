@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111541"
 ---
 # <a name="equal-stlclr"></a>equal (STL/CLR)
 Compara dos intervalos elemento a elemento para ver si son iguales o equivalentes según lo especificado por un predicado binario.  

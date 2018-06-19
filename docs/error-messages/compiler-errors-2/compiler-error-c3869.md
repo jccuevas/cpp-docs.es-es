@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267517"
 ---
 # <a name="compiler-error-c3869"></a>Error del compilador C3869
 restricción gcnew le falta la lista de parámetros vacía '()'  

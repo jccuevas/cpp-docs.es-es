@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104794"
 ---
 # <a name="testing-your-provider"></a>Probar un proveedor
 Antes de liberar un proveedor, deberá realizar las pruebas siguientes, en el orden indicado. Estas pruebas garantizan el proveedor funciona correctamente para la mayoría de los usuarios potencial.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103455"
 ---
 # <a name="record-mfc-data-access"></a>Registro (acceso a datos MFC)
 Un registro es una colección de datos de una sola entidad, como una cuenta o un cliente, almacenados en una tabla (una fila de la tabla). Un registro consta de un grupo de columnas contiguas (a veces denominadas campos) que contienen datos de varios tipos. Un conjunto de registros seleccionados de un origen de datos (a menudo llamado conjunto de resultados en términos de base de datos) se denomina conjunto de registros en MFC. Para obtener más información, consulte [conjunto de registros (ODBC)](../data/odbc/recordset-odbc.md).  

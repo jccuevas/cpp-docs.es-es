@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136384"
 ---
 # <a name="operatorlt-queue-stlclr"></a>operador&lt;= (cola) (STL/CLR)
 Menor o igual la cola comparación.  

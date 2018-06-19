@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107443"
 ---
 # <a name="fill-stlclr"></a>fill (STL/CLR)
 Asigna el mismo valor nuevo a cada elemento de un intervalo especificado.  
