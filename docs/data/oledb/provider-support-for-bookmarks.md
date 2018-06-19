@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112513"
 ---
 # <a name="provider-support-for-bookmarks"></a>Compatibilidad del proveedor con los marcadores
 El ejemplo de este tema agrega la `IRowsetLocate` de la interfaz para la `CMyProviderRowset` clase. En casi todos casos, primero debe agregar una interfaz a un objeto COM existente. A continuación, puede probarlo agregando más llamadas de las plantillas de consumidor. El ejemplo se muestra cómo:  

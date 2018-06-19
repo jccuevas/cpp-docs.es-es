@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384998"
 ---
 # <a name="function-declarations-and-definitions"></a>Declaraciones y definiciones de función
 Los prototipos de función establecen el nombre de la función, el tipo de valor devuelto y el tipo y el número de sus parámetros formales. Una definición de función incluye el cuerpo de la función.  

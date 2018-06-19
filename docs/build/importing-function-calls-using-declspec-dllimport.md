@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368540"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Importar llamadas a funciones mediante __declspec(dllimport)
 En el ejemplo de código siguiente se muestra cómo utilizar **_declspec (dllimport)** para importar llamadas a funciones desde un archivo DLL a una aplicación. Se asume que `func1` es una función que reside en un archivo DLL independiente del archivo .exe que contiene el **principal** función.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370441"
 ---
 # <a name="c-compile-without-linking"></a>/c (Compilar sin vincular)
 Evita la llamada automática a LINK.  

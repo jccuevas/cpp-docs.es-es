@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366424"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregación y Macros de fábrica de clase
 Estas macros proporcionan diversas formas de controlar la agregación y de la declaración de los generadores de clases.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357511"
 ---
 # <a name="csecurityattributes-class"></a>Clase de CSecurityAttributes
 Esta clase es un contenedor fino para la estructura de atributos de seguridad.  

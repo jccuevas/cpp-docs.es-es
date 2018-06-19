@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389990"
 ---
 # <a name="type-qualifiers"></a>Calificadores de tipos
 Los calificadores de tipo proporcionan una de dos propiedades a un identificador. El calificador de tipo **const** declara que un objeto no es modificable. El calificador de tipo `volatile` declara un elemento cuyo valor se puede modificar legítimamente por algo que esté más allá del control del programa en el que aparece, por ejemplo, un subproceso que se ejecute en paralelo.  

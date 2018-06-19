@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368231"
 ---
 # <a name="makefile-preprocessing"></a>Preprocesamiento de archivos MAKE
 Puede controlar la sesión NMAKE mediante directivas y expresiones de preprocesamiento. Las instrucciones de preprocesamiento pueden colocarse en el archivo MAKE o en Tools.ini. Directivas using, se puede procesar el archivo MAKE de condicionalmente, mostrar mensajes de error, incluir otros archivos MAKE, anular la definición de una macro y activar o desactivar determinadas opciones.  

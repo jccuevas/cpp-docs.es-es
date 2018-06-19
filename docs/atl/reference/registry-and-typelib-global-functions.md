@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365512"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funciones globales Registry y TypeLib
 Estas funciones proporcionan compatibilidad para cargar y registrar una biblioteca de tipos.  

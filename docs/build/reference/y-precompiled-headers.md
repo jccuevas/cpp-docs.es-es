@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377543"
 ---
 # <a name="y-precompiled-headers"></a>/Y (Encabezados precompilados)
 Las siguientes opciones del compilador afectan a la generación y el uso de encabezados precompilados:  

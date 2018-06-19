@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371361"
 ---
 # <a name="errlook-reference"></a>Referencia de ERRLOOK
 La utilidad ERRLOOK, que está disponible en el menú Herramientas como **búsqueda de errores**, recupera un mensaje de error del sistema o un mensaje de error de módulo basado en el valor especificado. ERRLOOK obtiene el texto del mensaje de error automáticamente si arrastra y coloca un valor decimal o hexadecimal desde el depurador de Visual Studio hasta la **valor** control de edición. También puede especificar un valor escribiéndolo en el **valor** control de edición o pegándolo desde el Portapapeles y haga clic en **buscar**.  

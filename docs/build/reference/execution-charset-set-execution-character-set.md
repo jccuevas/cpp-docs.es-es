@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375957"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/Execution-CharSet (establecer el juego de caracteres en la ejecución)
 Le permite especificar el juego para una aplicación ejecutable de caracteres de ejecución.  

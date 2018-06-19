@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364026"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilar ensamblados simultáneos de C/C++
 A [ensamblado side-by-side](http://msdn.microsoft.com/library/windows/desktop/ff951640) es una colección de recursos: un grupo de archivos DLL, clases de ventanas, servidores COM, bibliotecas de tipos o interfaces: disponibles para una aplicación para usar en tiempo de ejecución. La ventaja principal de volver a empaquetar archivos DLL en ensamblados es que varias versiones de ensamblados pueden ser utilizadas por aplicaciones al mismo tiempo y es posible a los ensamblados de servicio instalado actualmente en el caso de una versión de actualización.  

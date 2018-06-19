@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133436"
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>Cómo: Diagnosticar y resolver los problemas de compatibilidad de los ensamblados (C++/CLI)
 Este tema explica lo que puede suceder cuando la versión de un ensamblado al que hace referencia en tiempo de compilación no coincide con la versión del ensamblado al que hace referencia en tiempo de ejecución y cómo evitar el problema.  

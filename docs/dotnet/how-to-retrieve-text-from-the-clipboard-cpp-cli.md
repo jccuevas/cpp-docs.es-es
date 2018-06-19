@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127908"
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Cómo: Recuperar texto del Portapapeles (C++/CLI)
 El siguiente ejemplo de código utiliza el <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> función de miembro para devolver un puntero a la <xref:System.Windows.Forms.IDataObject> interfaz. Esta interfaz, a continuación, puede consultar para el formato de los datos y que utiliza para recuperar los datos reales.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357563"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>Agregar un proveedor OLE DB de ATL
 Use este asistente para agregar un proveedor OLE DB ATL a un proyecto. Un proveedor OLE DB de ATL consta de un origen de datos, sesiones, comandos y las clases de conjunto de filas. El proyecto se debe haber creado como una aplicación COM de ATL.  

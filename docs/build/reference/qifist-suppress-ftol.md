@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378410"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Suprimir _ftol)
 Desusado. Suprime la llamada de la función auxiliar `_ftol` cuando se requiere la conversión de un tipo de punto flotante a un tipo entero.  

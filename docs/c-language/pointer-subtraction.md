@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383739"
 ---
 # <a name="pointer-subtraction"></a>Resta de puntero
 **ANSI 3.3.6, 4.1.1** Tipo entero necesario para mantener la diferencia entre dos punteros a elementos de la misma matriz, **ptrdiff_t**  

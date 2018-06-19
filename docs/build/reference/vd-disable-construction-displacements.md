@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377602"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Deshabilitar desplazamientos de constructores)
 ## <a name="syntax"></a>Sintaxis  

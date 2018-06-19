@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367633"
 ---
 # <a name="long-filenames-in-a-makefile"></a>Nombres de archivo largos en un archivo MAKE
 Incluya nombres de archivo largos en comillas dobles, como se indica a continuación:  

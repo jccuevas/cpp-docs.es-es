@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371871"
 ---
 # <a name="fast-compilation"></a>Compilación rápida
 Para aumentar la velocidad de las compilaciones:  

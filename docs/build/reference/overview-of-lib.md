@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379203"
 ---
 # <a name="overview-of-lib"></a>Información general sobre LIB
 LIB crea bibliotecas estándar, bibliotecas de importación y exportación de archivos se pueden usar con [vínculo](../../build/reference/linker-options.md) al compilar un programa. LIB se ejecuta desde un símbolo del sistema.  

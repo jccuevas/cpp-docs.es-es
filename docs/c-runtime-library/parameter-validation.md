@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450256"
 ---
 # <a name="parameter-validation"></a>Validación de parámetros
 La mayoría de las funciones de CRT con seguridad mejorada y muchas de las funciones existentes validan sus parámetros. Esto podría incluir la comprobación de punteros para **NULL**, de que los enteros pertenecen a un intervalo válido, o bien de que los valores de enumeración son válidos. Cuando se encuentre un parámetro no válido, se ejecutará el controlador de parámetros no válidos.  

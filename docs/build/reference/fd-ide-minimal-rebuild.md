@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373405"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Recompilación mínima de IDE)
 **/FD** no se expone a los usuarios, excepto en el [línea de comandos](../../ide/command-line-property-pages.md) página de propiedades de un proyecto de C++ **páginas de propiedades** cuadro de diálogo si y solo si [/Gm (habilitar recompilación mínima)](../../build/reference/gm-enable-minimal-rebuild.md) no está también seleccionado. **/FD** no tiene ningún efecto distinto del entorno de desarrollo. **/FD** no se expone en la salida de **cl /?**.  

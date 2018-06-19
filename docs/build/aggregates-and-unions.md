@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363264"
 ---
 # <a name="aggregates-and-unions"></a>Agregados y uniones
 Otros tipos, como matrices, estructuras y uniones, tienen requisitos de alineación más estrictos que garantizan coherente agregada y union almacenamiento y recuperación de datos. Estas son las definiciones de matriz, estructura y unión:  

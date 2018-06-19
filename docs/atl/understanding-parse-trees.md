@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358839"
 ---
 # <a name="understanding-parse-trees"></a>Entender los árboles de análisis
 Puede definir uno o varios árboles de análisis en el script de registrador, donde cada árbol de análisis tiene la forma siguiente:  

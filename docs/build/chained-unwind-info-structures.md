@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366957"
 ---
 # <a name="chained-unwind-info-structures"></a>Estructuras encadenadas de información de desenredo
 Si se establece el indicador UNW_FLAG_CHAININFO, a continuación, una estructura de información de desenredo será secundaria y el campo de dirección controlador/encadenadas de información de la excepción compartida contiene la información de desenredo principal. El código siguiente recupera información, suponiendo que de desenredo de la réplica principal `unwindInfo` es la estructura que tiene el UNW_FLAG_CHAININFO marcador establecido.  

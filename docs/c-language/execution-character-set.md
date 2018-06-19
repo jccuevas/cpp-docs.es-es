@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382830"
 ---
 # <a name="execution-character-set"></a>Juego de caracteres de ejecución
 Este contenido suele hacer referencia al "juego de caracteres de ejecución". El juego de caracteres de ejecución no es necesariamente el mismo que el juego de caracteres de origen utilizado para escribir programas de C. El juego de caracteres de ejecución incluye todos los caracteres del juego de caracteres de origen así como el carácter null, el carácter de nueva línea, retroceso, tabulación horizontal, tabulación vertical, retorno de carro y las secuencias de escape. Los juegos de caracteres de origen y de ejecución pueden diferir en otras implementaciones.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371468"
 ---
 # <a name="other-lib-output"></a>Otros resultados de LIB
 En el modo predeterminado, puede utilizar la opción /LIST para mostrar información acerca de la biblioteca resultante. Puede redirigir esta salida a un archivo.  

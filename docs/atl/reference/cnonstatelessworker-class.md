@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359612"
 ---
 # <a name="cnonstatelessworker-class"></a>Clase CNonStatelessWorker
 Recibe solicitudes de un grupo de subprocesos y los pasa a un objeto de trabajo que se crea y se destruye en cada solicitud.  

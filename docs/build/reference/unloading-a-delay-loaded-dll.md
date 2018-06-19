@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375219"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Descargar un archivo DLL de carga retrasada
 La aplicación auxiliar de carga retrasada proporciona de forma predeterminada se comprueba para ver si los descriptores de carga retrasada tienen un puntero y una copia de la tabla de direcciones de importación (IAT) original en el campo pUnloadIAT. Si es así, guardará un puntero en una lista para el descriptor de retraso de importación. Esto permite que la función auxiliar buscar el archivo DLL por nombre para admitir la descarga explícitamente ese archivo DLL.  

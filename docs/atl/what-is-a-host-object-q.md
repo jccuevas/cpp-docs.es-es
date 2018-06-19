@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357739"
 ---
 # <a name="what-is-a-host-object"></a>¿Qué es un objeto de Host?
 Un objeto de host es un objeto COM que representa el contenedor de controles ActiveX suministrado por ATL para una ventana concreta. El objeto host subclases de la ventana del contenedor para que pueda reflejar mensajes al control, proporciona las interfaces contenedoras necesarias para ser utilizados por el control y expone el [interfaces IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) y [ IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) interfaces para permitirle configurar el entorno del control.  

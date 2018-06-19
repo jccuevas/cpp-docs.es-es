@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376038"
 ---
 # <a name="structure-and-constant-definitions"></a>Definiciones de estructura y de constante
 La rutina auxiliar predeterminada utiliza varias estructuras para comunicarse con las funciones de enlace y durante las excepciones. Estos son los valores de notificación y de error, las estructuras de información y el tipo de puntero a función de enlace que se pasa a los enlaces:  

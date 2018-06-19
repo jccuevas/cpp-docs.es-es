@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375680"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Asignar nombre al archivo #using obligatorio)
 Una opción del compilador que puede usar como alternativa a pasar un nombre de archivo para [#using (directiva)](../../preprocessor/hash-using-directive-cpp.md) en el código fuente.  

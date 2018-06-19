@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365209"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Clase CPrivateObjectSecurityDesc
 Esta clase representa un objeto de descriptor de seguridad de objeto privado.  

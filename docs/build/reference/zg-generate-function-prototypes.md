@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380539"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (Generar prototipos de función)
 Quitado. Crea un prototipo de función para cada función definida en el archivo de origen, pero no compila el archivo de origen.  

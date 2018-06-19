@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367656"
 ---
 # <a name="function-types"></a>Tipos de funciones
 Básicamente hay dos tipos de funciones. Una función que requiere un marco de pila se llama una función de marco. Una función que no requiere un marco de pila se llamó a una función de hoja.  

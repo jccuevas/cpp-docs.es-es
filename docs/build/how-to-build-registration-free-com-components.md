@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367864"
 ---
 # <a name="how-to-build-registration-free-com-components"></a>Cómo: Crear componentes COM de registro gratuito
 Los componentes COM sin registro son componentes COM que tienen los manifiestos integrados en los archivos DLL.  

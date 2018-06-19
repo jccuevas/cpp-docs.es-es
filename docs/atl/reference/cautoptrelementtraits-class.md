@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357452"
 ---
 # <a name="cautoptrelementtraits-class"></a>Clase CAutoPtrElementTraits
 Esta clase proporciona métodos, las funciones estáticas y definiciones de tipos útiles al crear colecciones de punteros inteligentes.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379242"
 ---
 # <a name="understanding-the-helper-function"></a>Descripción de la función auxiliar
 La función auxiliar de carga retrasada admitidos por el vinculador es lo que carga realmente la DLL en tiempo de ejecución. Puede modificar la función auxiliar para personalizar su comportamiento escribiendo su propia función y vincularlo a su programa en lugar de usar la función auxiliar proporcionada en Delayimp.lib. Una función auxiliar sirve a todos los archivos DLL de carga retrasada.  

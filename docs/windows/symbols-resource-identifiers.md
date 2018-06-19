@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891849"
 ---
 # <a name="symbols-resource-identifiers"></a>Símbolos: Identificadores de recursos
 Un símbolo es un identificador de recurso (id.) que consta de dos partes: una cadena de texto (nombre del símbolo) asignada a un valor entero (valor del símbolo). Por ejemplo:  

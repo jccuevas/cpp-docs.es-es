@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373158"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/GH (Habilitar la función de enlace _penter)
 Hace una llamada a la `_penter` función al principio de cada método o función.  

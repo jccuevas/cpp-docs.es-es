@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374832"
 ---
 # <a name="link-input-files"></a>Archivos de entrada de LINK
 Proporcione al vinculador con archivos que contienen objetos, importación y bibliotecas estándar, recursos, definiciones de módulo y entradas de comandos. LINK no usa las extensiones de archivo para realizar suposiciones sobre el contenido de un archivo. En su lugar, vínculo examina cada archivo de entrada para determinar qué tipo de archivo es.  

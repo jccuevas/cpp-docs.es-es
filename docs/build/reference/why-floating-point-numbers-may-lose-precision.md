@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376142"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Por qué los números de punto flotante pierden precisión
 Por lo general valores decimales de punto flotante no tiene una representación binaria exacta. Se trata de un efecto secundario de cómo la CPU representa los datos de punto flotante. Por este motivo, puede experimentar una pérdida de precisión y algunas operaciones de punto flotante pueden producir resultados inesperados.  

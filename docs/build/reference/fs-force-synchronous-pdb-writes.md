@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374796"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (forzar escrituras de PDB sincrónicas)
 Fuerza que se escribe en el archivo de programa (PDB) de la base de datos, creado por [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) o [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md): se serialicen mediante MSPDBSRV. EXE.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132900"
 ---
 # <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
 Divide un intervalo de elementos correctamente situando el `n`elemento de la secuencia en el intervalo para que todos los elementos que hay delante sean menores o iguales que él y todos los elementos que siguen en la secuencia son mayores o iguales que él.  

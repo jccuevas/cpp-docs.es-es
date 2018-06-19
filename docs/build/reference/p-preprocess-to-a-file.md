@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377149"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (Preprocesar y escribir en un archivo)
 Preprocesa archivos de código fuente de C y C++ y escribe el resultado preprocesado en un archivo.  

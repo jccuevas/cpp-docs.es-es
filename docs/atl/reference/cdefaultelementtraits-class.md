@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360967"
 ---
 # <a name="cdefaultelementtraits-class"></a>Clase CDefaultElementTraits
 Esta clase proporciona las funciones y métodos de manera predeterminada para una clase de colección.  

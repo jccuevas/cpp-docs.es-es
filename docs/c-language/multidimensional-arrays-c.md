@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387968"
 ---
 # <a name="multidimensional-arrays-c"></a>Matrices multidimensionales (C)
 Una expresión de subíndice también puede tener varios subíndices, como se indica a continuación:  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110943"
 ---
 # <a name="net-framework-equivalents-to-c-native-types-ccli"></a>Equivalentes de .NET Framework para tipos nativos de C++ (C++/CLI)
 La siguiente tabla muestra las palabras clave para los tipos integrados de Visual C++, que son alias de tipos predefinidos en el **System** espacio de nombres.  

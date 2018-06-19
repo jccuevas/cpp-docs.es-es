@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367971"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 Procesos que se vinculan explícitamente a una llamada DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) para obtener la dirección de una función exportada en el archivo DLL. Utilice el puntero de función devuelto para llamar a la función DLL. **GetProcAddress** toma como parámetros el identificador de módulo del archivo DLL (devuelto por **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) y toma el nombre de la función que desee en la llamada o el ordinal de exportación de la función.  

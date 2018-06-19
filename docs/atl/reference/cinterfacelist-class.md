@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362179"
 ---
 # <a name="cinterfacelist-class"></a>Clase CInterfaceList
 Esta clase proporciona métodos útiles al construir una lista de punteros de interfaz COM.  

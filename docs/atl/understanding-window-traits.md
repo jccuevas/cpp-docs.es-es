@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362373"
 ---
 # <a name="understanding-window-traits"></a>Descripción de los rasgos de las ventanas
 Clases de ventana de rasgos proporcionan un método sencillo para estandarizar los estilos utilizados para la creación de un objeto de ventana ATL. Rasgos de las ventanas se aceptan como parámetros de plantilla por [CWindowImpl](../atl/reference/cwindowimpl-class.md) y otras clases de ventana ATL como una manera de ofrecer predeterminado estilos de ventana en el nivel de clase.  

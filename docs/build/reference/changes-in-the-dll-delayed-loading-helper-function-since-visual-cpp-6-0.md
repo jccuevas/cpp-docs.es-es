@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371858"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Cambios en la función auxiliar de carga retrasada de DLL desde Visual C++ 6.0
 Si tiene varias versiones de Visual C++ en el equipo o si ha definido una función auxiliar personalizada, es podrán que tenga problemas con los cambios realizados en el archivo DLL de carga retrasan función auxiliar. Por ejemplo:  

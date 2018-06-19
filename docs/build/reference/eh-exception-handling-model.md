@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379112"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modelo de control de excepciones)
 Especifica el tipo de control de excepciones que usa el compilador, cuándo deben optimizarse las comprobaciones de excepciones y si se destruirán los objetos de C++ que quedan fuera del ámbito debido a una excepción. Si no se especifica **/EH** , el compilador detectará tanto las excepciones estructuradas asincrónicas como las excepciones de C++, pero no destruirá los objetos de C++ que estén fuera de ámbito debido a una excepción asincrónica.  

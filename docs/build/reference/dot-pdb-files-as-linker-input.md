@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370181"
 ---
 # <a name="pdb-files-as-linker-input"></a>Archivos .Pdb como entrada del vinculador
 Objeto (.obj) compilados con la opción/Zi contienen el nombre de una base de datos de programa (PDB). No especifique el nombre de archivo PDB del objeto al vinculador; VÍNCULO utiliza el nombre incrustado para encontrar el archivo PDB si es necesario. Esto también se aplica a los objetos depurables contenidos en una biblioteca; el archivo PDB para una biblioteca depurable debe estar disponible al vinculador junto con la biblioteca.  

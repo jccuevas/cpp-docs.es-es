@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371286"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Procesar comentarios de documentación) (C/C++)
 Hace que el compilador para procesar los comentarios de documentación en archivos de código fuente y para crear un archivo .xdc por cada archivo de código fuente que tenga comentarios de documentación.  

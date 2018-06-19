@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375846"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Generar funciones intrínsecas)
 Reemplaza algunas llamadas a función con formas intrínsecas o especiales de la función que le ayudan a la aplicación se ejecute más rápido.  

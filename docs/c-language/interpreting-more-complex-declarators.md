@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391670"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretar declaradores más complejos
 Puede incluir cualquier declarador entre paréntesis para especificar una interpretación determinada de un “declarador complejo”. Un declarador complejo es un identificador calificado por más de un modificador de función, puntero o matriz. Puede aplicar varias combinaciones de modificadores de función, puntero y matriz a un único identificador. En general, `typedef` puede utilizarse para simplificar declaraciones. Vea [Declaraciones typedef](../c-language/typedef-declarations.md).  

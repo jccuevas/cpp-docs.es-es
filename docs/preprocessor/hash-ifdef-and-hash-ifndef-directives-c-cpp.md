@@ -26,6 +26,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33954094"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef e #ifndef (Directivas) (C/C++)
 El **#ifdef** y **#ifndef** directivas realizan la misma tarea que el `#if` directiva cuando se usa con **definido**( *identificador* ).  

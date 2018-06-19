@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365486"
 ---
 # <a name="idataobjectimpl-class"></a>Clase IDataObjectImpl
 Esta clase proporciona métodos para admitir la transferencia de datos uniforme y administrar las conexiones.  

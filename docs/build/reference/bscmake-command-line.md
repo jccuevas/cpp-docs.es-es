@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369502"
 ---
 # <a name="bscmake-command-line"></a>Línea de comandos de BSCMAKE
 Para ejecutar BSCMAKE, use la siguiente sintaxis de línea de comandos:  

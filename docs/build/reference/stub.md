@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375206"
 ---
 # <a name="stub"></a>STUB
 Cuando se utiliza en un archivo de definición de módulo que genera un controlador de dispositivo virtual (VxD), permite especificar un nombre de archivo que contiene una estructura IMAGE_DOS_HEADER (definida en WINNT. (H) para su uso en el controlador de dispositivo virtual (VxD), en lugar del encabezado predeterminado.  

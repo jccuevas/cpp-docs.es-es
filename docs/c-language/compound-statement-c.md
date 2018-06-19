@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385730"
 ---
 # <a name="compound-statement-c"></a>Instrucción compuesta (C)
 Una instrucción compuesta (también denominada "bloque") normalmente aparece como el cuerpo de otra instrucción, como la instrucción **if**. [Declaraciones y tipos](../c-language/declarations-and-types.md) describe el formato y significado de las declaraciones que pueden aparecer en el encabezado de una instrucción compuesta.  

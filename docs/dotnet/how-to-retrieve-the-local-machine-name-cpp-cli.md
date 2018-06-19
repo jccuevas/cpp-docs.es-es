@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128646"
 ---
 # <a name="how-to-retrieve-the-local-machine-name-ccli"></a>Cómo: Recuperar el nombre del equipo local (C++/CLI)
 En el ejemplo de código siguiente se muestra la recuperación del nombre del equipo local (el nombre del equipo tal y como aparece en una red). Puede hacerlo mediante la obtención del <xref:System.Environment.MachineName%2A> cadena, que se define en el <xref:System.Environment> espacio de nombres.  

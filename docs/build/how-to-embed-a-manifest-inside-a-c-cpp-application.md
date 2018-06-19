@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369057"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Cómo: Incrustar un manifiesto en una aplicación de C/C++
 Se recomienda que una aplicación de C/C ++ (o biblioteca) tenga su manifiesto incrustado dentro del archivo binario final, porque así garantiza comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios. De forma predeterminada, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] intenta incrustar el manifiesto cuando compila un proyecto de archivos de origen; vea [generación de manifiestos en Visual Studio](../build/manifest-generation-in-visual-studio.md) para obtener más información. Sin embargo si una aplicación compilada con nmake, son necesarios algunos cambios en el archivo MAKE existente. Esta sección muestra cómo cambiar los archivos MAKE existentes para incrustar automáticamente el manifiesto dentro del archivo binario final.  

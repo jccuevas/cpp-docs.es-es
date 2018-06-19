@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374731"
 ---
 # <a name="module-definition-def-files"></a>Archivos de definición de módulos (.Def)
 Archivos de definición de módulos (.def) proporcionan al vinculador información sobre exportaciones, atributos y otra información sobre el programa para vincularse. Un archivo .def es muy útil cuando se crea un archivo DLL. Dado que hay [opciones del vinculador](../../build/reference/linker-options.md) que se puede utilizar en lugar de las instrucciones de definición de módulos, archivos .def normalmente no son necesarios. También puede usar [__declspec (dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) como una manera de especificar las funciones exportadas.  

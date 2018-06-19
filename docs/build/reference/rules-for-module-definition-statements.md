@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376395"
 ---
 # <a name="rules-for-module-definition-statements"></a>Reglas para instrucciones de definición de módulos
 Las siguientes reglas sintácticas se aplican a todas las instrucciones en un archivo .def. Otras reglas que se aplican a determinadas instrucciones se describen con cada instrucción.  

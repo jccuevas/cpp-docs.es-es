@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373834"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Admitir el almacenamiento local de subprocesos para fibra)
 Admite la seguridad de fibras para los datos asignados mediante almacenamiento local de subprocesos estáticos, es decir, datos asignados con `__declspec(thread)`.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373847"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/NOLOGO (Suprimir el titular de inicio) (C/C++)
 Suprime la presentación de la pancarta de copyright cuando se ejecuta el compilador y la presentación de los mensajes informativos durante la compilación.  

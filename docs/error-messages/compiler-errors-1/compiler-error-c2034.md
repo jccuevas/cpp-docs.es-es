@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166380"
 ---
 # <a name="compiler-error-c2034"></a>C2034 de Error del compilador
 'identificador': tipo de campo de bits demasiado pequeño para el número de bits  

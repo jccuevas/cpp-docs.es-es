@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368803"
 ---
 # <a name="language-specific-handler"></a>Controlador específico del lenguaje
 La dirección relativa del controlador específico del lenguaje está presente en UNWIND_INFO cada vez que se establecen indicadores UNW_FLAG_EHANDLER o UNW_FLAG_UHANDLER. Como se describe en la sección anterior, se denomina controlador específico del lenguaje como parte de la búsqueda de un controlador de excepciones o como parte de una operación de desenredo. Tiene el siguiente prototipo:  

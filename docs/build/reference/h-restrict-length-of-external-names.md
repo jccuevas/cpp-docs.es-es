@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377566"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (Restringir la longitud de los nombres externos)
 Desusado. Restringe la longitud de los nombres externos.  

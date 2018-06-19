@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377188"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Método de representación)
 Seleccione el método que usa el compilador para representar los punteros a miembros de clase.  

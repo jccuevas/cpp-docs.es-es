@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371439"
 ---
 # <a name="improving-compiler-throughput"></a>Mejorar el rendimiento del compilador
 Usar archivos de encabezado precompilado para compilar el proyecto con mayor rapidez. Esto es importante si usa ATL, MFC o los archivos de encabezado de Windows SDK.  

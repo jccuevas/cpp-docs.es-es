@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366593"
 ---
 # <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY  
  Estas macros especificar interfaces de un objeto en su mapa de COM para que resulten accesibles por `QueryInterface`. El orden de las entradas del mapa COM es las interfaces de orden que se va a comprobar para hallar una coincidencia **IID** durante `QueryInterface`.  

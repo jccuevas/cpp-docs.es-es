@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163441"
 ---
 # <a name="compiler-error-c2074"></a>Error del compilador C2074
 'identifier': la inicialización de 'class-key' necesita llaves  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111099"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Rol del programador al utilizar una vista de registros (acceso a datos MFC)
 La siguiente tabla muestra qué se debe hacer normalmente para trabajar con una vista de registros y qué tareas realiza el marco de trabajo.  

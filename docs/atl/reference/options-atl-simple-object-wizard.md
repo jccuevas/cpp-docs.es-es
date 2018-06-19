@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364146"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opciones, Asistente para objetos simples ATL
 Use esta página del Asistente para objetos simples ATL para diseñar para una mayor eficiencia y soporte técnico de error para el objeto.  

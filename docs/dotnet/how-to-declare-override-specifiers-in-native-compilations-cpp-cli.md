@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130404"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Cómo: Declarar especificadores de invalidación en las compilaciones nativas (C++/CLI)
 [sellado](../windows/sealed-cpp-component-extensions.md), [abstracta](../windows/abstract-cpp-component-extensions.md), y [invalidar](../windows/override-cpp-component-extensions.md) están disponibles en las compilaciones que no utilizan **/ZW** o [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  

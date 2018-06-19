@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373873"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (Combinar código insertado)
 Genera una copia de cada archivo de origen con código insertado combinado en el origen.  

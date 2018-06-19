@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383087"
 ---
 # <a name="elements-of-c"></a>Elementos de C
 En esta sección se describe los elementos del lenguaje de programación C, incluidos los nombres, números y caracteres utilizados para crear un programa de C. La sintaxis de ANSI C etiqueta estos tokens de componentes.  

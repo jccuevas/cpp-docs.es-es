@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111151"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso aleatorio. Utilice el contenedor de `deque` para administrar una secuencia de elementos que es similar a un bloque contiguo de almacenamiento, pero que puede aumentar o reducir en cualquiera de los extremos sin necesidad de copiar los elementos restantes. Lo que puede implementar eficazmente un `double-ended queue`. (Por lo tanto, el nombre.)  

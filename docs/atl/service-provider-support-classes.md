@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361608"
 ---
 # <a name="service-provider-support-classes"></a>Clases de soporte técnico del proveedor de servicio
 La clase siguiente proporciona compatibilidad para proveedores de servicios:  

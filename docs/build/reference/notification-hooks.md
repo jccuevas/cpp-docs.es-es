@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377824"
 ---
 # <a name="notification-hooks"></a>Enlaces de notificación
 Los enlaces de notificación se llama justo antes de que se realizan las acciones siguientes en la rutina auxiliar:  
