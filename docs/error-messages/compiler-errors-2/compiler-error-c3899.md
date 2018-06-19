@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276001"
 ---
 # <a name="compiler-error-c3899"></a>Error del compilador C3899
 'var': no se permite el uso de valor l del miembro de datos initonly directamente dentro de una región paralela en la clase 'class'  

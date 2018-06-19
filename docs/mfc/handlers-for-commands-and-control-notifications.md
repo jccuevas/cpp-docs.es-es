@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347238"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Controladores de comandos y notificaciones de control
 No hay ningún controlador predeterminado para comandos o mensajes de notificación de control. Por lo tanto, se enlazan solo por la convención de nomenclatura de los controladores para estas categorías de mensajes. Al asignar la notificación de comando o un control a un controlador, la ventana Propiedades propone un nombre basado en el código de Id. o notificación de control de comandos. Puede aceptar el nombre propuesto, cambiarlo o reemplazarlo.  

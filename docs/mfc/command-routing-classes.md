@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341967"
 ---
 # <a name="command-routing-classes"></a>Clases de enrutamiento de comandos
 Cuando el usuario interactúa con la aplicación eligiendo los menús o botones de barra de control con el mouse, la aplicación envía mensajes desde el objeto de interfaz de usuario afectado a un objeto de destino del comando adecuado. Destino del comando clases derivadas de `CCmdTarget` incluyen [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), y las clases que derivan de ellos. El marco de trabajo admite el enrutamiento de comandos automática para que los comandos pueden ser controlados por el objeto más adecuado actualmente activo en la aplicación.  

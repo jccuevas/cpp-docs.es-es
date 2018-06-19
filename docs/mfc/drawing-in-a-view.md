@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346170"
 ---
 # <a name="drawing-in-a-view"></a>Dibujar en una vista
 Casi todos los dibujos en la aplicación se produce en la vista `OnDraw` función de miembro, que se debe reemplazar en la clase de vista. (La excepción es mouse dibujo, que se describe en [interpretación usuario entrada mediante una vista](../mfc/interpreting-user-input-through-a-view.md).) Su `OnDraw` invalidar:  

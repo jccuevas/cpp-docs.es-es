@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341194"
 ---
 # <a name="containers-user-interface-issues"></a>Contenedores: Problemas de la interfaz de usuario
 Debe agregar una serie de características para la interfaz de usuario de la aplicación contenedora para administrar correctamente los elementos vinculados e incrustados. Estas características implican cambios en la estructura de menús y a los eventos que controla la aplicación. Para obtener información detallada acerca de ellos, consulte los artículos siguientes:  

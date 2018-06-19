@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291419"
 ---
 # <a name="compiler-warning-level-3-c4192"></a>Compilador C4192 de advertencia (nivel 3)
 exclusión automática al importar la biblioteca de tipos 'library' de 'name'  

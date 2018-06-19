@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345191"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Excepciones: Detectar y eliminar excepciones
 Las instrucciones y los ejemplos siguientes muestran cómo detectar y eliminar excepciones. Para obtener más información sobre la **intente**, **catch**, y `throw` palabras clave, consulte [control de excepciones de C++](../cpp/cpp-exception-handling.md).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344953"
 ---
 # <a name="file-and-database-classes"></a>Clases de archivo y de base de datos
 Estas clases permiten almacenar información en un archivo de disco o una base de datos. Hay tres conjuntos de clases de base de datos, OLE DB, ODBC y DAO, que proporcionan una funcionalidad similar. El grupo de OLE DB se implementa mediante OLE DB y funciona con las plantillas de consumidor OLE DB, el grupo DAO se implementa mediante el objeto de acceso a datos y el grupo ODBC se implementa mediante la conectividad abierta de base de datos. Hay también un conjunto de clases para la manipulación de archivos estándares, secuencias activas y secuencias HTML.  

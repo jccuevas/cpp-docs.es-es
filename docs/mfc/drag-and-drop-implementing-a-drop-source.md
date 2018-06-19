@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345617"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Arrastrar y colocar: Implementar un origen de colocación
 En este artículo se explica cómo obtener la aplicación para proporcionar datos a una operación de arrastrar y colocar.  

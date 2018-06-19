@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347635"
 ---
 # <a name="message-handlers"></a>Controladores de mensajes
 En MFC, dedicada *controlador* función procesa cada mensaje independiente. Controlador de mensajes son funciones miembro de una clase. Esta documentación, utilizan los términos *función de miembro de controlador de mensajes*, *función de controlador de mensajes*, *controlador de mensajes*, y *controlador*indistintamente. Algunos tipos de controladores de mensajes también se denominan "controladores de comandos".  

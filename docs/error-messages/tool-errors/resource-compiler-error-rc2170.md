@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321644"
 ---
 # <a name="resource-compiler-error-rc2170"></a>Error del compilador de recursos RC2170
 el nombre de archivo del archivo de mapa de bits no tiene formato 3.00  

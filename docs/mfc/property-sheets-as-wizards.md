@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347336"
 ---
 # <a name="property-sheets-as-wizards"></a>Hojas de propiedades como asistentes
 Una característica clave de una hoja de propiedades del asistente es que el desplazamiento viene definido con los botones siguiente o finalizar, Atrás y Cancelar en lugar de fichas. Debe llamar a [CPropertySheet:: SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) antes de llamar a [CPropertySheet:: DoModal](../mfc/reference/cpropertysheet-class.md#domodal) en el objeto de hoja de propiedades para aprovechar esta característica.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342899"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Personalizar el elemento de encabezado&#39;s apariencia
 Estableciendo la *dwStyle* parámetro cuando se crea un control de encabezado ([CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create)), puede definir la apariencia y comportamiento del encabezado de elementos o del encabezado del control.  

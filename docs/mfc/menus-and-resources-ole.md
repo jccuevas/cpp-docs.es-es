@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347099"
 ---
 # <a name="menus-and-resources-ole"></a>Menús y recursos (OLE)
 Este grupo de artículos explica el uso de menús y recursos en aplicaciones de documentos OLE de MFC.  

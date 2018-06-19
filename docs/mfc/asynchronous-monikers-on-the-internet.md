@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343368"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Monikers asincrónicos en Internet
 Internet requiere nuevos enfoques para el diseño de la aplicación debido a su acceso de red lenta. Las aplicaciones deben realizar de forma asincrónica para evitar la demora de la interfaz de usuario acceso a la red. La clase MFC [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) proporciona compatibilidad asincrónica para descargar archivos.  

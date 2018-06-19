@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685806"
 ---
 # <a name="include-files-for-multithreading"></a>Archivos de inclusión para el subprocesamiento múltiple
 Archivos de inclusión estándar declarar funciones de biblioteca en tiempo de ejecución de C tal y como se implementan en las bibliotecas. Si usas el [optimización completa](../build/reference/ox-full-optimization.md) (/ Ox) o [convención de llamada fastcall](../build/reference/gd-gr-gv-gz-calling-convention.md) (/ Gr), el compilador supone que todas las funciones se deberían llamar mediante la convención de llamada de registro. Las funciones de biblioteca en tiempo de ejecución se compilaron con la convención de llamada de C, y las declaraciones en los archivos de inclusión estándar indican al compilador que genera referencias externas correcta para estas funciones.  

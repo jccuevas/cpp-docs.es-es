@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345747"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Administrar menús, barras de control y aceleradores
 La ventana de marco administra la actualización de los objetos de interfaz de usuario, incluidos los menús, botones de barra de herramientas, la barra de estado y aceleradores. También administra el uso compartido de la barra de menús en aplicaciones MDI.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346622"
 ---
 # <a name="document-classes"></a>Clases de documento
 Objetos de clase de documento, creados por objetos de plantilla de documento, administran los datos de la aplicación. Se deriva una clase de los documentos de una de estas clases.  

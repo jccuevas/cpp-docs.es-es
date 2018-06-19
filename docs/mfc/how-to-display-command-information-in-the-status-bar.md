@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346050"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Cómo: Mostrar información de comandos en la barra de estado
 Al ejecutar el Asistente para aplicaciones para crear el esqueleto de la aplicación, puede admitir una barra de herramientas y una barra de estado. Solo una opción en el Asistente para aplicaciones admite ambas opciones. Cuando hay una barra de estado, la aplicación proporciona automáticamente información útil cuando el usuario mueve el puntero sobre los elementos de los menús. La aplicación muestra automáticamente una cadena de mensaje en la barra de estado cuando se resalta el elemento de menú. Por ejemplo, cuando el usuario mueve el puntero sobre la **cortar** comando el **editar** menú, la barra de estado puede mostrar ", se corta la selección y lo coloca en el Portapapeles" en el área de mensajes de la barra de estado. El símbolo del sistema de ayuda al usuario a comprender el propósito del elemento de menú. Esto también funciona cuando el usuario hace clic en un botón de barra de herramientas.  

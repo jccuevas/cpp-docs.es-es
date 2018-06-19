@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346105"
 ---
 # <a name="header-control-and-list-control"></a>Control de encabezado y control de lista
 En la mayoría de los casos, usará el control de encabezado que está incrustado en un [CListCtrl](../mfc/reference/clistctrl-class.md) o [CListView](../mfc/reference/clistview-class.md) objeto. Sin embargo, hay casos donde un objeto de control de encabezado independiente es deseable, como la manipulación de datos, organizados en filas o columnas, con un [CView](../mfc/reference/cview-class.md)-objeto derivado. En estos casos, necesita mayor control sobre la apariencia y el comportamiento predeterminado de un control de encabezado incrustado.  

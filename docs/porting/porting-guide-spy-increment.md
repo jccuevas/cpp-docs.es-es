@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33848783"
 ---
 # <a name="porting-guide-spy"></a>Guía de migración: Spy++
 Este caso práctico de migración está diseñado para que se haga una idea de cómo es un proyecto de migración típico, los tipos de problemas con que puede encontrarse y algunas sugerencias y trucos generales para resolver problemas de migración. No pretende ser una guía definitiva de migración, ya que la experiencia de migración de un proyecto depende en gran medida de los detalles del código.  

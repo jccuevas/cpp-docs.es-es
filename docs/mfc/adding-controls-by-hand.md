@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342480"
 ---
 # <a name="adding-controls-by-hand"></a>Agregar controles a mano
 Puede seleccionar [agregar controles a un cuadro de diálogo con el editor de cuadro de diálogo](../mfc/using-the-dialog-editor-to-add-controls.md) o agréguelos usted mismo, con el código.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343316"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Controles Rich Edit sin límite
 La aplicación puede cambiar el tamaño de un control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) según sea necesario para que siempre sea el mismo tamaño que su contenido. Un control rich edit admite esta funcionalidad como los denominados "sin límite" mediante el envío de su ventana primaria un [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) recibe un mensaje de notificación cada vez que cambia el tamaño de su contenido.  

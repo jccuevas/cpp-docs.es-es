@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850188"
 ---
 # <a name="macros-cc"></a>Macros (C/C++)
 Preprocesamiento expande las macros en todas las líneas que no son directivas de preprocesador (líneas que no tienen un **#** como el primer carácter no sea un espacio en blanco) y en partes de algunas directivas que no se omiten como parte de una compilación condicional. Las directivas de "compilación condicional" permiten suprimir la compilación de partes de un archivo de código fuente mediante la prueba de un identificador o una expresión de constante para determinar qué bloques de texto se pasan al compilador y qué bloques de texto se quitan del archivo de código fuente durante el preprocesamiento.  

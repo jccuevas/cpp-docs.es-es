@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283824"
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>Compilador C3200 de errores a través de la advertencia C3299
 

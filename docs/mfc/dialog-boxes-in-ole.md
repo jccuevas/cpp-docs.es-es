@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347846"
 ---
 # <a name="dialog-boxes-in-ole"></a>Cuadros de diálogo en OLE
 Mientras un usuario ejecuta una aplicación habilitada para OLE, hay ocasiones cuando la aplicación necesita información del usuario con el fin de realizar la operación. Las clases OLE de MFC proporcionan una serie de cuadros de diálogo para recopilar la información necesaria. Este tema enumeran las tareas que se controlan mediante los cuadros de diálogo OLE y las clases necesarias para mostrar los cuadros de diálogo. Para obtener más información sobre los cuadros de diálogo OLE y las estructuras que se usa para personalizar su comportamiento, vea [referencia de MFC](../mfc/mfc-desktop-applications.md).  

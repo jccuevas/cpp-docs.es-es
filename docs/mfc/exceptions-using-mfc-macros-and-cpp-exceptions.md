@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346066"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Excepciones: Usar macros de MFC y excepciones de C++
 En este artículo se describe consideraciones para escribir código que utiliza las macros de control de excepciones de MFC y las palabras clave de control de excepciones de C++.  

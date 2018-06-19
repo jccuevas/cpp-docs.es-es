@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343617"
 ---
 # <a name="dialog-sample-list"></a>Lista de cuadros de diálogo de ejemplo
 Vea los siguientes programas de ejemplo que muestran cuadros de diálogo y hojas de propiedades:  

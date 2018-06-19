@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347891"
 ---
 # <a name="frame-window-classes"></a>Clases de ventana de marco
 Cada aplicación tiene una "ventana de marco principal", una ventana del escritorio que normalmente tiene el nombre de la aplicación en su título. Normalmente, cada documento tiene una "ventana de marco de documento". Una ventana de marco de documento contiene al menos una vista, que presenta los datos del documento.  

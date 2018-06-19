@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344109"
 ---
 # <a name="messages"></a>Mensajes
 El bucle de mensajes en el **ejecutar** función miembro de clase `CWinApp` recupera los mensajes generados por diferentes eventos en cola. Por ejemplo, cuando el usuario hace clic en el mouse, Windows envía varios mensajes relacionados con el mouse (ratón), como `WM_LBUTTONDOWN` cuando se presiona el botón primario del mouse y `WM_LBUTTONUP` cuando se suelta el botón primario del mouse. La implementación del marco de trabajo del bucle de mensajes de la aplicación envía el mensaje a la ventana apropiada.  

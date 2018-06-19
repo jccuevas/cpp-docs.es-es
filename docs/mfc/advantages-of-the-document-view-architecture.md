@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340853"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>Ventajas de la arquitectura documento/vista
 La ventaja clave de la arquitectura documento/vista MFC es que la arquitectura admite varias vistas del mismo documento particularmente bien. (Si no necesita varias vistas y la mínima sobrecarga de documento/vista es excesiva en su aplicación, puede evitar la arquitectura. [Alternativas a la arquitectura documento/vista](../mfc/alternatives-to-the-document-view-architecture.md).)  

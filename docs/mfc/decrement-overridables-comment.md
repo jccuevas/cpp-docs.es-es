@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345393"
 ---
 # <a name="-overridables-comment"></a>// Overridables (Comentario)
 La `// Overridables` sección de una declaración de clase MFC contiene funciones virtuales que se pueden reemplazar en una clase derivada cuando necesite modificar el comportamiento de la clase base. Suelen denominarse comenzando con "On", aunque no es estrictamente necesaria. Funciones aquí están diseñadas para reemplazarse y a menudo implementan o proporcionan a algún tipo de "devolución de llamada" o "enlazar". Normalmente, estos miembros están protegidos.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342542"
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Portapapeles: Usar el mecanismo del Portapapeles de OLE
 OLE utiliza formatos estándar y algunos formatos específicos de OLE para transferir datos a través del Portapapeles.  

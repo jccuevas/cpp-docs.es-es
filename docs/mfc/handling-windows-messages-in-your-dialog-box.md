@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343813"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Controlar mensajes de Windows en un cuadro de diálogo
 Cuadros de diálogo son ventanas, por lo que pueden controlar los mensajes de Windows si proporciona las funciones de controlador adecuado. Cuando se crea la clase de cuadro de diálogo con el Asistente para agregar clases, el asistente agrega un mapa de mensajes vacío a la clase. Utilice la ventana Propiedades para asignar todos los mensajes de Windows o comandos que desea que la clase para administrar.  

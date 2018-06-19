@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344154"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Agregar varias vistas a un solo documento
 En una aplicación de interfaz de único documento (SDI) creada con la biblioteca (Microsoft Foundation Classes), cada tipo de documento está asociado con un tipo de vista única. En algunos casos, es conveniente tener la posibilidad de cambiar la vista actual de un documento con una nueva vista.  

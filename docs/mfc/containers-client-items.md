@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344222"
 ---
 # <a name="containers-client-items"></a>Contenedores: Elementos de cliente
 En este artículo se explica qué son los elementos de cliente y de qué clases debe derivar una aplicación sus elementos de cliente.  

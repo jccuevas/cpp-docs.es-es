@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346381"
 ---
 # <a name="handling-tool-tip-notifications"></a>Controlar las notificaciones de información sobre herramientas
 Cuando se especifica la `TBSTYLE_TOOLTIPS` estilo, la barra de herramientas crea y administra un control de información sobre herramientas. Una información sobre herramientas es una pequeña ventana emergente que contiene una línea de texto que describe un botón de barra de herramientas. La información sobre herramientas está oculta, que aparecen solo cuando el usuario coloca el cursor sobre un botón de barra de herramientas y deja ahí durante, aproximadamente, medio segundo. La información sobre herramientas aparece cerca del cursor.  

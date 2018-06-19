@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343559"
 ---
 # <a name="handling-commands-in-the-document"></a>Controlar comandos en el documento
 La clase de documento también puede controlar ciertos comandos generados por elementos de menú, botones de barra de herramientas o las teclas de aceleración. De forma predeterminada, **CDocument** controla la operación de guardar y guardar como comandos en el menú archivo, usa la serialización. Otros comandos que afectan a los datos también pueden controlarse mediante las funciones miembro de su documento. Por ejemplo, en el programa Scribble, la clase `CScribDoc` proporciona un controlador para el comando editar borrar todo, lo que elimina todos los datos almacenados actualmente en el documento. Documentos pueden tener mapas de mensajes, pero a diferencia de las vistas, los documentos no pueden controlar mensajes de Windows estándares, solo **WM_COMMAND** mensajes o "comandos".  

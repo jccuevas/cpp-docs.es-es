@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345261"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Crear controles de encabezado dibujados por el propietario
 Se pueden definir elementos individuales de un control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) para que sean elementos dibujados por el propietario. Para obtener más información, consulte [controles de encabezado dibujados por el propietario](http://msdn.microsoft.com/library/windows/desktop/bb775238) del SDK de Windows.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344235"
 ---
 # <a name="global-hot-keys"></a>Teclas de acceso directo globales
 Una tecla de acceso rápido global está asociada a una ventana no secundaria específica. Permite al usuario activar la ventana de cualquier parte del sistema. Una aplicación establece una tecla de acceso rápido global para una ventana concreta mediante el envío de la [mensaje WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) mensaje a esa ventana. Por ejemplo, si `m_HotKeyCtrl` es el [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objeto y `pMainWnd` es un puntero a la ventana que se activa cuando se presiona la tecla de acceso rápido, podría utilizar el siguiente código para asociar especificada en el control con la tecla de acceso rápido la ventana señalada por `pMainWnd`.  
