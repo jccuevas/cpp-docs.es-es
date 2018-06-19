@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246759"
 ---
 # <a name="compiler-error-c3028"></a>C3028 de Error del compilador
 'miembro': solo los miembros de datos estáticos o variable se pueden utilizar en una cláusula de uso compartido de datos  

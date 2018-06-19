@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688146"
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock (Clase)
 Contenedor RAII para un bloqueo de acceso de D3D en un objeto accelerator_view.  

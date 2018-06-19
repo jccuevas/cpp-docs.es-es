@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693268"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Cómo: Convertir un bucle OpenMP que usa la cancelación para usar el runtime de simultaneidad
 Algunos bucles paralelos no necesitan que se ejecuten todas las iteraciones. Por ejemplo, un algoritmo que busca un valor puede finalizar una vez que se encuentra el valor. OpenMP no proporciona ningún mecanismo para interrumpir un bucle paralelo. Sin embargo, puede usar un valor booleano, o marca, para permitir que una iteración del bucle indique que se ha encontrado la solución. El runtime de simultaneidad proporciona funcionalidad que permite a una tarea cancelar otras tareas que todavía no se han iniciado.  

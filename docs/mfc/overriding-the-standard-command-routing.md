@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352817"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Invalidar el enrutamiento de comandos estándar
 En raras ocasiones cuando se debe implementar alguna variación del enrutamiento de marco estándar, se puede invalidar. La idea consiste en cambiar el enrutamiento en una o más clases invalidando `OnCmdMsg` en esas clases. Hacer esto:  

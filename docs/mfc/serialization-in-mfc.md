@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381028"
 ---
 # <a name="serialization-in-mfc"></a>Serialización en MFC
 Este artículo se explica el mecanismo de serialización proporcionado en la base clase biblioteca MFC (Microsoft) para permitir que los objetos se conservan entre ejecuciones de un programa.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694074"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparar el runtime de simultaneidad con otros modelos de simultaneidad
 En este documento se describen las diferencias entre las características y los modelos de programación del Runtime de simultaneidad y otras tecnologías. Si compara las ventajas del Runtime de simultaneidad con las ventajas de otros modelos de programación, podrá seleccionar la tecnología que mejor satisfaga los requisitos de sus aplicaciones.  

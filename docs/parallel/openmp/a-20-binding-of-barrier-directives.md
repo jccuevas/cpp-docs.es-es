@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691420"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20 Enlace de directivas barrier
 El enlace de directivas de reglas de llamada para una **barrera** directiva para enlazar a los más próximo incluye `parallel` directiva. Para obtener más información sobre el enlace de directivas, consulte [sección 2.8](../../parallel/openmp/2-8-directive-binding.md) en la página 32.  

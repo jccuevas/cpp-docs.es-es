@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350489"
 ---
 # <a name="output-device-context-classes"></a>Clases de resultados (Contexto de dispositivo)
 Estas clases encapsulan los diferentes tipos de contextos de dispositivo disponibles en Windows.  

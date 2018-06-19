@@ -50,6 +50,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380639"
 ---
 # <a name="wm-message-handlers-a---c"></a>Controladores de mensajes WM_: A - C
 Las siguientes entradas del mapa de la izquierda se corresponden con los prototipos de función de la derecha:  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348856"
 ---
 # <a name="internet-security-c"></a>Seguridad de Internet (C++)
 Seguridad de código es un problema grave para desarrolladores como para los usuarios de aplicaciones de Internet. Puede poner en peligro: código malintencionado, el código que se ha alterado y código sitios desconocidos o que los autores.  

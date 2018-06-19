@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382091"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Información sobre herramientas en ventanas no derivadas de CFrameWnd
 Esta serie de artículos trata habilitar información sobre herramientas para controles contenidos en una ventana que no se deriva de [CFrameWnd](../mfc/reference/cframewnd-class.md). El artículo [información sobre herramientas de las barras de herramientas](../mfc/toolbar-tool-tips.md) proporciona información acerca de la información sobre herramientas para los controles en un `CFrameWnd`.  

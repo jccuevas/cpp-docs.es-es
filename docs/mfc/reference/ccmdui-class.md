@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356693"
 ---
 # <a name="ccmdui-class"></a>CCmdUI (clase)
 Solo se utiliza dentro un `ON_UPDATE_COMMAND_UI` controlador en un `CCmdTarget`-clase derivada.  

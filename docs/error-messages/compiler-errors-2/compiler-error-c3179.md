@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246035"
 ---
 # <a name="compiler-error-c3179"></a>Error C3179 de Error del compilador
 no se permite un tipo administrado sin nombre o WinRT  

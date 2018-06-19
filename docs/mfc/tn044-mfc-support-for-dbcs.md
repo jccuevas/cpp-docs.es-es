@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380310"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044: Compatibilidad de MFC con DBCS
 Esta nota técnica describe la compatibilidad de MFC para "juegos de caracteres de doble byte" o DBCS. Esta información, así como obtener información acerca de MFC compatibilidad con UNICODE ahora está disponible en la *Class Library Reference*.  

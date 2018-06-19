@@ -76,6 +76,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862421"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Compatibilidad de compilador para type traits (Extensiones de componentes de C++)
 El compilador admite *escriba rasgos*, que indican diversas características de un tipo en tiempo de compilación.  

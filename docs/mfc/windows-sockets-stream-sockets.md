@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386111"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Sockets de secuencias
 Este artículo describen los sockets de secuencias, uno de los dos tipos de Socket de Windows disponibles. (El otro tipo es el [socket de datagrama](../mfc/windows-sockets-datagram-sockets.md).)  

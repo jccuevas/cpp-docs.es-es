@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349472"
 ---
 # <a name="message-handling-and-command-targets"></a>Control de mensajes y destinos de comando
 La interfaz de envío de comandos `IOleCommandTarget` define un mecanismo sencillo y extensible para consultar y ejecutar comandos. Este mecanismo es más sencillo que de automatización `IDispatch` porque se basa completamente en un conjunto estándar de comandos; comandos no suelen tienen argumentos, y no está implicada ninguna información de tipo (seguridad de tipos se reduce para argumentos del comando).  

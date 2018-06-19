@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348533"
 ---
 # <a name="message-handling-and-mapping"></a>Controlar y asignar mensajes
 Esta serie de artículos describe cómo se procesan los mensajes y comandos mediante el marco de trabajo MFC y cómo se conecta a sus funciones de controlador.  

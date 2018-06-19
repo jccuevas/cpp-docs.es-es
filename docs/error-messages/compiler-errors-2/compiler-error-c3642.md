@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264522"
 ---
 # <a name="compiler-error-c3642"></a>Error del compilador C3642
 ' return_type/args': no se puede llamar a una función con la convención de llamada de código nativo __clrcall  

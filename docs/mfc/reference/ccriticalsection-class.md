@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353910"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection (clase)
 Representa una "sección crítica", un objeto de sincronización que permite que un subproceso a la vez para tener acceso a un recurso o sección de código.  

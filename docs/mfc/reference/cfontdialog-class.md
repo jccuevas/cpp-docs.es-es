@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368353"
 ---
 # <a name="cfontdialog-class"></a>Clase CFontDialog
 Le permite especificar un cuadro de diálogo de selección de fuente en la aplicación.  

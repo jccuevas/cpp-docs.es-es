@@ -62,6 +62,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353707"
 ---
 # <a name="handling-customization-notifications"></a>Control de notificaciones de personalización
 Un control común de barra de herramientas de Windows tiene características de personalización integradas, incluyendo un cuadro de diálogo de personalización definido por el sistema que permite insertar, eliminar o reorganizar botones de la barra de herramientas. La aplicación determina si las características de personalización están disponibles y controla la medida en que el usuario puede personalizar la barra de herramientas.  

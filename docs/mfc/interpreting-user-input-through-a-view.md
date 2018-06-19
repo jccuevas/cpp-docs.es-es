@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349434"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretar la entrada del usuario a través de una vista
 Otras funciones miembro de la vista de manipular e interpretan todos los datos de usuario de entrada. Normalmente se definirán las funciones miembro de controlador de mensajes en la clase de vista para procesar:  

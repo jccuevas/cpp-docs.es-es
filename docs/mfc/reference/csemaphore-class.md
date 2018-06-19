@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369182"
 ---
 # <a name="csemaphore-class"></a>CSemaphore (clase)
 Un objeto de clase `CSemaphore` representa un "semáforo", un objeto de sincronización que permite un número limitado de subprocesos de uno o varios procesos tengan acceso a mantener un recuento del número de subprocesos que acceden actualmente a un recurso especificado.  

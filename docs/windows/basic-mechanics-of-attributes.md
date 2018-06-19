@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864946"
 ---
 # <a name="basic-mechanics-of-attributes"></a>Mecanismos básicos de los atributos
 Hay tres formas de insertar atributos en el proyecto. En primer lugar, se puede insertarlos manualmente en el código fuente. En segundo lugar, puede insertarlos mediante la cuadrícula de propiedades de un objeto en el proyecto. Por último, puede insertarlos utilizando a los distintos asistentes. Para obtener más información sobre el uso de la ventana Propiedades y los distintos asistentes, vea [crear y administrar proyectos de Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  

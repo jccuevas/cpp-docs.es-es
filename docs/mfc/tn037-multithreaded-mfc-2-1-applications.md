@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382020"
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>TN037: Aplicaciones MFC 2.1 multiproceso
 Esta nota técnica descrita originalmente las limitaciones de los programas multiproceso con MFC 2.1, suministrado originalmente con Visual C++ 1.0 para Windows NT. MFC 3.0 admite multithreading directamente y se documentan. Consulte esa referencia para obtener más información.  

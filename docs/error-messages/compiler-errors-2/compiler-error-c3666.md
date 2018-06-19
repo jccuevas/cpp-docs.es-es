@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264818"
 ---
 # <a name="compiler-error-c3666"></a>Error del compilador C3666
 'constructor': especificador 'palabra clave' no se permite en un constructor de reemplazo  

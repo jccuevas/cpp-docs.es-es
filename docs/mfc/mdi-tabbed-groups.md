@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350359"
 ---
 # <a name="mdi-tabbed-groups"></a>Grupos con pestañas MDI
 La característica de grupos con pestañas de varios documentos MDI (interfaz) permite que varias aplicaciones de MDI (interfaz) del documento mostrar una o varias ventanas con pestañas (o grupos de ventanas con pestañas, conocidos como *grupos con pestañas*) en el área de cliente MDI. Las ventanas con pestañas se puedan Alinear horizontal o verticalmente. Si una aplicación hospeda más de un grupo con pestañas MDI, los grupos se separan mediante separadores.  

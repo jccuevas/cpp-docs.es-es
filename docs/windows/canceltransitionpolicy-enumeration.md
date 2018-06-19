@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860351"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy (Enumeración)
 Indica cómo una operación asincrónica de intentar realizar la transición a un estado terminal de completado o debe comportarse el error con respecto a un estado cancelado solicitada por el cliente.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273428"
 ---
 # <a name="compiler-error-c3893"></a>Error del compilador C3893
 'var': uso de valor l del miembro de datos initonly solamente se permite en un constructor de instancia de clase 'type_name'  

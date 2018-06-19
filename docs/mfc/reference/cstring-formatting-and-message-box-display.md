@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375046"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formato y presentación del cuadro de mensaje CString
 Se proporciona una serie de funciones para dar formato y analizar `CString` objetos. Puede usar estas funciones siempre tiene que manipular `CString` objetos, pero son especialmente útiles para dar formato a cadenas que va a aparecer en el texto de cuadro de mensaje.  

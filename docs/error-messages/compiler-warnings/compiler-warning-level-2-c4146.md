@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296694"
 ---
 # <a name="compiler-warning-level-2-c4146"></a>Advertencia de compilador (nivel 2) de la advertencia C4146
 operador unario menos aplicado a un tipo sin signo, resultado sigue sin firmar  

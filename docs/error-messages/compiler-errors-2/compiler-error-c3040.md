@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246240"
 ---
 # <a name="compiler-error-c3040"></a>Error del compilador C3040
 'var': el tipo de variable de la cláusula 'reduction' no es compatible con el operador de reducción 'operador'  

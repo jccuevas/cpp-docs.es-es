@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695907"
 ---
 # <a name="a16---using-locks"></a>A.16 Usar bloqueos
 En el ejemplo siguiente, (para [sección 3.2](../../parallel/openmp/3-2-lock-functions.md) en la página 41) tenga en cuenta que el argumento de las funciones de bloqueo debe tener tipo `omp_lock_t`, y que no hay ninguna necesidad de vacía.  Las funciones de bloqueo hacen que los subprocesos debe estar inactivo mientras se esperaba para la entrada a la primera sección crítica, pero hacer otro trabajo mientras se espera para que la segunda entrada.  El `omp_set_lock` bloques de función, pero la `omp_test_lock` función no es así, lo que permite el trabajo en skip() realizarse.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692540"
 ---
 # <a name="reduction"></a>reduction
 Especifica que una o más variables que son privadas para cada subproceso son el asunto de una operación de reducción al final de la región paralela.  

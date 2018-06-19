@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354785"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>How to: Create a Message Map for a Template (Clase)
 Asignación de mensajes en MFC proporciona una manera eficaz para dirigir los mensajes de Windows a una instancia de objeto de C++ adecuada. Algunos ejemplos de destinos de mapa de mensajes MFC son las clases de aplicación, clases de documento y vista, clases de controles y así sucesivamente.  

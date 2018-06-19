@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374593"
 ---
 # <a name="ctypedptrlist-class"></a>Clase CTypedPtrList
 Proporciona un "contenedor" de tipo seguro para objetos de clase `CPtrList`.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863338"
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>Cambiar las propiedades de la imagen (Editor de imágenes para iconos)
 Puede establecer o modificar las propiedades de una imagen mediante la [ventana propiedades](/visualstudio/ide/reference/properties-window).  

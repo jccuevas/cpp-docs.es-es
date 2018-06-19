@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864920"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Clases y structs (Extensiones de componentes de C++)
 Declara una clase o struct cuya *duración de los objetos* se administra automáticamente. Cuando el objeto ya no es accesible o se sale del ámbito, Visual C++ descarta automáticamente la memoria asignada al objeto.  

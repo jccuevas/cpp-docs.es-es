@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350502"
 ---
 # <a name="ole-background-implementation-strategies"></a>Nociones de OLE: Estrategias de implementación
 Dependiendo de la aplicación, hay cuatro estrategias de implementación posibles para agregar compatibilidad con OLE:  

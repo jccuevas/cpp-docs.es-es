@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381198"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Pestañas y atributos del control de pestaña
 Tiene un gran control sobre la apariencia y el comportamiento de las fichas que componen un control de pestaña ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Cada pestaña puede tener una etiqueta, un icono, un estado de elemento y un valor de 32 bits definido por la aplicación asociados a él. Para cada pestaña, puede mostrar el icono, la etiqueta o ambos.  

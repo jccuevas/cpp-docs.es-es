@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374807"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Los ayudantes y variables globales de análisis de direcciones URL de Internet
 Cuando un cliente envía una consulta al servidor de Internet, puede utilizar una de la direcciones URL variables globales de análisis para extraer información sobre el cliente. Las funciones auxiliares proporcionan otras funciones de internet.

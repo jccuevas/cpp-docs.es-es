@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380606"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Configurar las imágenes para un elemento individual
 Los distintos tipos de imágenes usadas por el elemento de cuadro combinado extendido se determinan por los valores de la `iImage`, **iSelectedImage**, y **iOverlay** los miembros de la [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) estructura. Cada valor es el índice de una imagen en la lista de imágenes asociadas del control. De forma predeterminada, estos miembros se establecen en 0, haciendo que el control no mostrará ninguna imagen para el elemento. Si desea utilizar imágenes para un elemento específico, puede modificar la estructura en consecuencia, cuando se inserta el elemento de cuadro combinado o mediante la modificación de un elemento de cuadro combinado existente.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349718"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Recibir notificaciones de los controles comunes
 Controles comunes son ventanas secundarias que envían mensajes de notificación a la ventana primaria cuando se producen eventos, como la entrada del usuario, en el control.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295095"
 ---
 # <a name="bscmake-error-bk1515"></a>Error de BSCMAKE BK1515
 archivo_bsc: versión incompatible: no se puede actualizar de forma incremental  

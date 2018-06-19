@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349316"
 ---
 # <a name="memory-management-frame-allocation"></a>Administración de memoria: asignación de marcos
 Asignación en el marco toma su nombre de la "marco de pila" que se establece cada vez que se invoque una función. El marco de pila es un área de memoria que contiene de forma temporal los argumentos para la función, así como las variables que se definen locales para la función. Variables de marco a menudo se denominan "variables"automáticas"porque el compilador asigna automáticamente el espacio para ellos.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353858"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Notificaciones de un control Rich Edit
 Informe de eventos que afectan a un amplio control de edición de mensajes de notificación ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Pueden ser procesados por la ventana primaria o, mediante la reflexión de mensajes, por la amplia editar propio control. Controles Rich edit admiten todos los mensajes de notificación utilizados con controles de edición, así como varios perfiles adicionales. Puede determinar qué mensajes de notificación de un control rich edit envía su ventana primaria estableciendo su "máscara de eventos".  

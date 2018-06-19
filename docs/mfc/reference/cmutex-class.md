@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372465"
 ---
 # <a name="cmutex-class"></a>Clase CMutex
 Representa una "exclusión mutua", un objeto de sincronización que permite que un subproceso tenga acceso mutuamente exclusivo a un recurso.  

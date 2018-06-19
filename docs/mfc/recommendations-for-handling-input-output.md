@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355687"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Recomendaciones para el control de entrada/salida
 Si se usa E/S basada en archivos o no depende de cómo responden a las preguntas del siguiente árbol de decisión:  

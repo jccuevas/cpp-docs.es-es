@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372774"
 ---
 # <a name="cscrollbar-class"></a>Clase CScrollBar
 Proporciona la funcionalidad de un control de barra de desplazamiento de Windows.  

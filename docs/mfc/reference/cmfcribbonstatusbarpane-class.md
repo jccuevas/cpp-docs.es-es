@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369195"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Clase CMFCRibbonStatusBarPane
 La `CMFCRibbonStatusBarPane` clase implementa un elemento de la cinta de opciones que puede agregar a una barra de estado de la cinta de opciones.  

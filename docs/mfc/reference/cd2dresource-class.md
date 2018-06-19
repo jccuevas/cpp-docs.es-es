@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350958"
 ---
 # <a name="cd2dresource-class"></a>Clase CD2DResource
 Una clase abstracta que proporciona una interfaz para crear y administrar recursos de D2D como pinceles, capas y textos.  

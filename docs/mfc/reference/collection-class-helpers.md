@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374843"
 ---
 # <a name="collection-class-helpers"></a>Aplicaciones auxiliares de clase de colección
 Las clases de colección `CMap`, `CList`, y `CArray` usar funciones de aplicación auxiliar con plantilla global para estos fines como comparar, copiar y seleccionar elementos. Como parte de la implementación de clases basadas en `CMap`, `CList`, y `CArray`, debe invalidar estas funciones según sea necesario con las versiones que se adaptan al tipo de datos almacenados en el mapa, lista o matriz. Para obtener información sobre cómo reemplazar las funciones auxiliares como `SerializeElements`, vea el artículo [colecciones: cómo crear una colección con seguridad de tipos](../../mfc/how-to-make-a-type-safe-collection.md). Tenga en cuenta que **ConstructElements** y **DestructElements** han quedado en desuso.  

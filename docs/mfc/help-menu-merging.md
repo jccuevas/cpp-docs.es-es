@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355540"
 ---
 # <a name="help-menu-merging"></a>Combinar el menú Ayuda
 Cuando un objeto está activo dentro de un contenedor, el menú combinación de protocolo de documentos OLE proporciona el objeto control total sobre la **ayuda** menú. Como resultado, los temas de Ayuda del contenedor no están disponibles a menos que el usuario desactiva el objeto. La arquitectura de contención de documentos activos se expande en las reglas de combinación para permitir que el contenedor y un documento activo que está activo para compartir el menú de menús en contexto. Las nuevas reglas son simples normas adicionales acerca de qué componente es propietario de qué parte del menú y cómo se crea el menú compartido.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381750"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Usar una lista de imágenes con un control Rebar
 Cada banda rebar puede contener, entre otras cosas, una imagen de una lista de imágenes asociada. El procedimiento siguiente detallan los pasos necesarios para mostrar una imagen en una banda rebar.  

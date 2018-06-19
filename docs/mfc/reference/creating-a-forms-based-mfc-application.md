@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372452"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Crear una aplicación MFC basada en formularios
 Un formulario es un cuadro de diálogo con controles que permiten a un usuario tener acceso a datos y, posiblemente, modificarlos. Es posible que quiera desarrollar una aplicación en la que el usuario elija entre un conjunto de formularios. Normalmente, una aplicación basada en formularios permite a los formularios de acceso de usuario haciendo clic en **New** desde el **archivo** menú. Una aplicación basada en cuadros de diálogo, que no ofrece a los usuarios acceso a una **New** opción en el **archivo** menú, también se considera una aplicación basada en formularios.  

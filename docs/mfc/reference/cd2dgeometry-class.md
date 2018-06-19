@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357079"
 ---
 # <a name="cd2dgeometry-class"></a>Clase CD2DGeometry
 Un contenedor para ID2D1Geometry.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296902"
 ---
 # <a name="compiler-warning-levels-3-and-4-c4244"></a>Advertencia del compilador (niveles 3 y 4) C4244
 'conversion': conversión de 'type1' a 'type2', posible pérdida de datos  

@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351727"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Controladores para intervalos de mapa de mensajes
 En este artículo se explica cómo asignar un intervalo de mensajes a una función de controlador único mensaje (en lugar de asignar un mensaje a solo una función).  

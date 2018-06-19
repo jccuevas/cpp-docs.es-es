@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863704"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Agregar controladores de eventos para controles de cuadros de diálogo
 Para cuadros de diálogo de proyecto que ya están asociadas a una clase, puede aprovechar las ventajas de algunos métodos abreviados al crear controladores de eventos. Puede crear rápidamente un controlador para el evento de notificación de control predeterminado o para cualquier mensaje de Windows aplicable.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688263"
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>Subprocesamiento múltiple: Cuándo utilizar las clases de sincronización
 Las clases de multiproceso suministradas con MFC se dividen en dos categorías: objetos de sincronización ([CSyncObject](../mfc/reference/csyncobject-class.md), [CSemaphore](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), y [CEvent](../mfc/reference/cevent-class.md)) y obtener acceso a objetos de sincronización ([CMultiLock](../mfc/reference/cmultilock-class.md) y [CSingleLock](../mfc/reference/csinglelock-class.md)).  

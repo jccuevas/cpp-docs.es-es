@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385114"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Tutorial: Actualizar la aplicación Scribble MFC (parte 1)
 Este tutorial muestra cómo modificar una aplicación MFC existente para utilizar la interfaz de usuario de la cinta de opciones. Visual Studio admite la cinta de Office 2007 y la cinta de Windows 7 Scenic. Para obtener más información acerca de la interfaz de usuario de la cinta de opciones, vea [cintas](http://go.microsoft.com/fwlink/p/?linkid=129233) en el sitio Web de MSDN.  

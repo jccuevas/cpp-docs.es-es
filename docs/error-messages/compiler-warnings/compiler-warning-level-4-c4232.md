@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293833"
 ---
 # <a name="compiler-warning-level-4-c4232"></a>Advertencia del compilador (nivel 4) C4232
 ha utilizado una extensión no estándar: 'identificador': la dirección de dllimport 'dllimport' no es estática, no se garantiza la identidad  

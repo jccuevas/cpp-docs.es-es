@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352794"
 ---
 # <a name="docking-and-floating-toolbars"></a>Barras de herramientas de acoplamiento y flotantes
 La biblioteca Microsoft Foundation Class es compatible con las barras de herramientas acoplables. Una barra de herramientas acoplable puede ser, o acoplar, a cualquier lado de su ventana primaria, o se puede separar o dejarla flotando en su propia ventana de marco reducido. En este artículo se explica cómo usar las barras de herramientas acoplables en sus aplicaciones.  

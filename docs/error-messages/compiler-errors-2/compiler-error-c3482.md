@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258639"
 ---
 # <a name="compiler-error-c3482"></a>Error del compilador C3482
 'this' solo se puede usar como captura lambda en una función miembro no estática  

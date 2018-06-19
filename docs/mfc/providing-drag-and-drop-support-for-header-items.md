@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349349"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Proporcionar compatibilidad con arrastrar y colocar para los elementos de encabezado
 Para proporcionar compatibilidad con arrastrar y colocar en elementos de encabezado, especifique el `HDS_DRAGDROP` estilo. Compatibilidad con arrastrar y colocar en elementos de encabezado proporciona al usuario la capacidad para volver a ordenar los elementos de encabezado de un control de encabezado. El comportamiento predeterminado proporciona una imagen de arrastre semitransparente del elemento de encabezado que se están arrastrando y un indicador visual de la nueva posición, si se quita el elemento de encabezado.  
