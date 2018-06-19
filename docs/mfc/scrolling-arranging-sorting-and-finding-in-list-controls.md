@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379195"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Desplazar, organizar, ordenar y buscar en los controles de lista
 Controles de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) son desplazables de forma predeterminada. Para obtener más información, consulte [posición de desplazamiento](http://msdn.microsoft.com/library/windows/desktop/bb774736) en el SDK de Windows y la [desplazamiento](../mfc/reference/clistctrl-class.md#scroll) función miembro.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845913"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guía de migración: Scribble de MFC
 Este es el primero de varios temas que presentan el procedimiento de actualización a Visual Studio 2017 de proyectos de Visual C++ que se crearon en versiones anteriores de Visual Studio. Estos temas muestran el proceso de actualización mediante ejemplos, empezando por un proyecto muy simple y pasando a proyectos un poco más complejos. En este tema mostramos todo el proceso de actualización de un proyecto específico, Scribble de MFC. Es una apropiada introducción básica al proceso de actualización de proyectos de C++.  

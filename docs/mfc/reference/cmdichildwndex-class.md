@@ -127,6 +127,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377628"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (clase)
 La `CMDIChildWndEx` clase proporciona la funcionalidad de una ventana de ventana secundaria MDI (interfaz) de varios documentos. Extiende la funcionalidad de [CMDIChildWnd (clase)](../../mfc/reference/cmdichildwnd-class.md). El marco requiere esta clase cuando una aplicación MDI utiliza determinadas clases MFC.  

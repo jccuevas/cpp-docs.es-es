@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375621"
 ---
 # <a name="coleresizebar-class"></a>Clase COleResizeBar
 Un tipo de barra de control que admite el cambio de tamaño de elementos de OLE en contexto.  

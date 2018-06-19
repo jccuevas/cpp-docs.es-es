@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316162"
 ---
 # <a name="project-build-error-prj0014"></a>Error PRJ0014 al compilar el proyecto
 Error del objeto job utilizado para controlar los procesos de compilación.  No puede continuar la compilación.  

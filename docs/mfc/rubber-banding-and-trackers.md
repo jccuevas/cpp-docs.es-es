@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379247"
 ---
 # <a name="rubber-banding-and-trackers"></a>Efecto de banda elástica y seguimiento
 Otra característica proporcionada con los objetos de seguimiento es la selección de "banda elástica", lo que permite al usuario seleccionar varios elementos OLE arrastrando un rectángulo de ajuste de tamaño alrededor de los elementos que se seleccione. Cuando el usuario suelta el botón primario del mouse, elementos dentro de la región seleccionada por el usuario se seleccionan y se pueden manipular con el usuario. Por ejemplo, el usuario puede arrastrar la selección en otra aplicación de contenedor.  

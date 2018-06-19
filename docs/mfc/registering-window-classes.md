@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379752"
 ---
 # <a name="registering-window-classes"></a>Registrar clases de ventana
 Ventana "classes" en la programación tradicional para Windows definen las características de una "clase" (no una clase de C++) desde que se puede crear cualquier número de windows. Este tipo de clase es una plantilla o un modelo para la creación de windows.  

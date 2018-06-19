@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370661"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 La `CMFCDesktopAlertWnd` clase implementa la funcionalidad de un cuadro de diálogo no modal que aparece en la pantalla para informar al usuario acerca de un evento.  

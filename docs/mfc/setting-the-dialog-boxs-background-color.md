@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379988"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Configurar el color de fondo de un cuadro de diálogo
 Puede establecer el color de fondo de los cuadros de diálogo controlando `WM_CTLCOLOR` mensajes de la ventana de cuadro de diálogo. El color establecido se utiliza para el cuadro de diálogo especificado.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317679"
 ---
 # <a name="project-build-error-prj0020"></a>Error PRJ0020 al compilar el proyecto
 'Herramienta', propiedad 'property' contiene el nombre de archivo no válido 'nombre_archivo'.  
