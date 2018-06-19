@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417189"
 ---
 # <a name="for-statement-c"></a>for (Instrucción) (C++)
 Ejecuta una instrucción repetidamente hasta que la condición es false. Para obtener información sobre el intervalo basado en la instrucción for, vea [basados en intervalos de instrucción (C++)](../cpp/range-based-for-statement-cpp.md).  

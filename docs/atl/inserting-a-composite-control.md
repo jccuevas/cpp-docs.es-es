@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358695"
 ---
 # <a name="inserting-a-composite-control"></a>Insertar un Control compuesto
 El **Agregar clase** cuadro de diálogo permite insertar un objeto ATL en un proyecto. Obtener acceso a este cuadro de diálogo haciendo clic en el nombre del proyecto en el Explorador de soluciones, que señala a **agregar**y, a continuación, haga clic en **Agregar clase**.  

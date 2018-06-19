@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055628"
 ---
 # <a name="operator-low"></a>Operador LOW
 Devuelve los 8 bits inferiores de *expresión*. Expresiones MASM son valores de 64 bits.  

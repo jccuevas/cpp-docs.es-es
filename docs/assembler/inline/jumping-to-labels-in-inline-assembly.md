@@ -24,6 +24,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052244"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Salto a etiquetas en un ensamblado alineado
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  

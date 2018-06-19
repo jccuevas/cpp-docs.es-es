@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411759"
 ---
 # <a name="comments-c"></a>Comentarios (C++)
 Un comentario es texto que el compilador omite pero que es útil para los programadores. Los comentarios se usan normalmente para anotar código para su referencia futura. El compilador los trata como si fueran espacios en blanco. Puede utilizar comentarios en las pruebas para desactivar algunas líneas de código; Sin embargo, `#if` / `#endif` directivas de preprocesador funcionan mejor para esto porque se puede encerrar el código que contiene comentarios, pero no se pueden anidar comentarios.  

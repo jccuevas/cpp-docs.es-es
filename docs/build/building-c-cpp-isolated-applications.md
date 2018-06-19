@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360154"
 ---
 # <a name="building-cc-isolated-applications"></a>Compilar aplicaciones aisladas de C/C++
 Una aplicación aislada sólo depende de ensamblados en paralelo y enlaza a sus dependencias mediante un manifiesto. No es necesaria para la aplicación sea completamente aislado para poder ejecutarse correctamente en Windows; Sin embargo, al invertir en aislar totalmente su aplicación, puede ahorrar tiempo si tiene que mantener la aplicación en el futuro. Para obtener más información sobre las ventajas de aislar totalmente su aplicación, consulte [aplicaciones aisladas](http://msdn.microsoft.com/library/aa375190).  

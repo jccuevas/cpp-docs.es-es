@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052591"
 ---
 # <a name="setframe"></a>.SETFRAME
 Rellenos en el marco de registrar el campo y el desplazamiento en la información de desenredo mediante el registro especificado (`reg`) y el desplazamiento (`offset`). El desplazamiento debe ser un múltiplo de 16 y menor o igual que 240. Esta directiva también genera una `UWOP_SET_FPREG` entrada al código de desenredo para registra especificado utilizando el desplazamiento actual del prólogo.  

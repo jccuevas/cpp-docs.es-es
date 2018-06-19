@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050290"
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
 Marca el final del segmento, una estructura o unión *nombre* iniciada previamente con [segmento](../../assembler/masm/segment.md), [STRUCT](../../assembler/masm/struct-masm.md), [UNION](../../assembler/masm/union.md), o un segmento simplificado Directiva.  

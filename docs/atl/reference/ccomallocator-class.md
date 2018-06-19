@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358282"
 ---
 # <a name="ccomallocator-class"></a>Clase CComAllocator
 Esta clase proporciona métodos para administrar la memoria que usa las rutinas de memoria COM.  

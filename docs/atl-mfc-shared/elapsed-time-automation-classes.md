@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354973"
 ---
 # <a name="elapsed-time-automation-classes"></a>Tiempo transcurrido: Clases de automatización
 Este procedimiento muestra cómo calcular la diferencia entre dos `CTime` objetos y obtener un `CTimeSpan` resultado.  

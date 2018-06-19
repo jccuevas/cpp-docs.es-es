@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054450"
 ---
 # <a name="macro"></a>MACRO
 Marca un bloque de macro denominado *nombre* y establece *parámetro* marcadores de posición para argumentos que se pasan cuando se llama a la macro.  

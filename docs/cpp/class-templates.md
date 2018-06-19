@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415691"
 ---
 # <a name="class-templates"></a>Plantillas de clase
 Este tema describe las reglas que son específicas de las plantillas de clase de C++.  

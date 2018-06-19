@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419851"
 ---
 # <a name="obsolete-calling-conventions"></a>Convenciones de llamada obsoletas
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  
