@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232822"
 ---
 # <a name="compiler-error-c2790"></a>C2790 de Error del compilador
 'super': esta palabra clave solo puede usarse dentro del cuerpo de función miembro de clase  

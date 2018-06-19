@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251165"
 ---
 # <a name="compiler-error-c3383"></a>Error del compilador C3383
 'operator new' no se admite con /clr:safe  

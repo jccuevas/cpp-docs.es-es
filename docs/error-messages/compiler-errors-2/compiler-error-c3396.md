@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252132"
 ---
 # <a name="compiler-error-c3396"></a>Error del compilador C3396
 'atributo': atributo personalizado no encontrado en 'espacioNombres'.  

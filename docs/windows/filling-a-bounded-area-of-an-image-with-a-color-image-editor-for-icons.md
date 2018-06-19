@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880574"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Llenar un área delimitada de una imagen con un color (Editor de imágenes para iconos)
 El editor de imágenes ofrece la **rellenar** herramienta con el que rellenar alguna entre el área de la imagen con el color de dibujo actual o el color de fondo actual.  

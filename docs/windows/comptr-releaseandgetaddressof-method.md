@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883804"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf (Método)
 Libera la interfaz asociada a esta ComPtr y después recupera la dirección del miembro de datos [ptr_](../windows/comptr-ptr-data-member.md) , que contiene un puntero a la interfaz que se liberó.  

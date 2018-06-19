@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257079"
 ---
 # <a name="compiler-error-c3367"></a>Error del compilador C3367
 'función_miembro_estática': no se puede usar la función estática para crear un delegado sin enlazar.  

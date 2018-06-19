@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235381"
 ---
 # <a name="compiler-error-c2775"></a>C2775 de Error del compilador
 'identificador': no hay ningún método 'get' está asociado a esta propiedad  

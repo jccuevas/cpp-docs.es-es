@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268897"
 ---
 # <a name="compiler-error-c3824"></a>Error del compilador C3824
 'member': este tipo no puede aparecer en este contexto (parámetro de función, tipo de valor devuelto o un miembro estático)  

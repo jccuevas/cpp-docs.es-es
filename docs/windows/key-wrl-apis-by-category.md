@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881463"
 ---
 # <a name="key-wrl-apis-by-category"></a>API clave de WRL por categoría
 Las tablas siguientes enumeran principal clases, structs, funciones y macros de biblioteca de plantillas de C++ de Windows en tiempo de ejecución. Se omiten las construcciones en clases y espacios de nombres de aplicación auxiliar. Estas listas aumentan la documentación de API, que está organizada por espacio de nombres.  

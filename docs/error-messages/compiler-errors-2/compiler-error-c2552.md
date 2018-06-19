@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231740"
 ---
 # <a name="compiler-error-c2552"></a>Error del compilador C2552
 “identificador”: los no agregados no se pueden inicializar con la lista de inicializadores  

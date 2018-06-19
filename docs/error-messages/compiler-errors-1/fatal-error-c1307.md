@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227140"
 ---
 # <a name="fatal-error-c1307"></a>Error irrecuperable C1307
 el programa se ha editado desde que se recogieron los datos de perfil  

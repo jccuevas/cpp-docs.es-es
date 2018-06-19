@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876857"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Editar partes de una imagen (Editor de imágenes para iconos)
 Puede realizar operaciones de edición estándares, cortar, copiar, borrar y mover: en un [selección](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), si la selección es la imagen completa o solamente una parte de ella. Dado que el editor de imágenes utiliza el Portapapeles de Windows, pueden transferirse imágenes entre el editor de imágenes y otras aplicaciones para Windows.  

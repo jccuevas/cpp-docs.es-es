@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882698"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Símbolos de la programación para Windows de MFC
 Estos símbolos también forman parte de los archivos de compatibilidad con MFC, pero admiten acciones y funciones de aplicación de Windows estándares. Estos símbolos se utilizan principalmente con menús. Cuando se trabaja con menús en el Editor de menús, estos símbolos aparecen en la ventana Propiedades asociada a los comandos de menú comunes. Por ejemplo, si la aplicación tiene un menú archivo con un comando Exit, ese comando se asocia al símbolo ID_APP_EXIT en la [ventana propiedades](/visualstudio/ide/reference/properties-window).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870824"
 ---
 # <a name="consuming-generics-ccli"></a>Consumir genéricos (C++/CLI)
 Genéricos creados en un lenguaje .NET pueden usarse en otros lenguajes. NET. A diferencia de las plantillas, un tipo genérico en un ensamblado compilado sigue siendo genérico. Por lo tanto, uno puede crear instancias del tipo genérico en un ensamblado diferente e incluso en un idioma distinto del ensamblado en el que se definió el tipo genérico.  

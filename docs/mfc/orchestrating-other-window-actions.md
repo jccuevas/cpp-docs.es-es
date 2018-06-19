@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345646"
 ---
 # <a name="orchestrating-other-window-actions"></a>Orquestar otras acciones de ventana
 La ventana de marco organiza Estados semimodales, como ayuda contextual y vista previa de impresión. Para obtener una descripción del rol de la ventana de marco en vista previa de impresión, consulte [impresión y vista previa de impresión](../mfc/printing-and-print-preview.md).  

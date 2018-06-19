@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274188"
 ---
 # <a name="compiler-warning-level-1-c4047"></a>Compilador advertencia (nivel 1) C4047
 'operador': 'identificador1' se diferencia del 'identificador2' en los niveles de direccionamiento indirecto  

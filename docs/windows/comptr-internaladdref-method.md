@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870291"
 ---
 # <a name="comptrinternaladdref-method"></a>ComPtr::InternalAddRef (Método)
 Incrementa el recuento de referencias de la interfaz asociada a esta ComPtr.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252417"
 ---
 # <a name="compiler-error-c3230"></a>Error del compilador C3230
 'función': el argumento de tipo de plantilla para 'plantilla' no puede contener un parámetro de tipo genérico: 'parámetro'  

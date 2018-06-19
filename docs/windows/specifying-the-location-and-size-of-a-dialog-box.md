@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890582"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Especificar la ubicación y el tamaño de un cuadro de diálogo
 La ubicación y el tamaño de un cuadro de diálogo, así como la ubicación y tamaño de los controles en él, se miden en unidades de cuadro de diálogo. Los valores de los controles individuales y el cuadro de diálogo aparecen en la esquina inferior derecha de la barra cuando se selecciona de estado de Visual Studio.  

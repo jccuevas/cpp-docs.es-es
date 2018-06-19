@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867108"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Asignaciones de texto genérico en TCHAR.H
 Para simplificar la conversión de código para uso internacional, la biblioteca en tiempo de ejecución de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] proporciona asignaciones de texto genérico específicas de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] para muchos tipos de datos, rutinas y otros objetos. Se pueden usar estas asignaciones, que están definidas en Tchar.h, para crear código genérico que se puede compilar para juegos de caracteres de un solo byte, multibyte o [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)], en función de la constante de manifiesto que se defina con la instrucción `#define`. Las asignaciones de texto genérico son extensiones de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] que no son compatibles con [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)].  

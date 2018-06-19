@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870255"
 ---
 # <a name="editable-file-types-for-resources"></a>Tipos de archivos editables para recursos
 Puede abrir los siguientes tipos de archivos y editar los recursos que contienen.  

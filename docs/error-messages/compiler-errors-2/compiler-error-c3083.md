@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253051"
 ---
 # <a name="compiler-error-c3083"></a>Error del compilador C3083
 'función': el símbolo a la izquierda de un '::' debe ser un tipo  

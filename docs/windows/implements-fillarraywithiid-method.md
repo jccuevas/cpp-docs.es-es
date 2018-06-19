@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875726"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid (Método)
 Inserta el identificador de interfaz especificado por el parámetro de plantilla actual de cero en el elemento de la matriz especificada.  

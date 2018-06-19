@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341477"
 ---
 # <a name="command-ids"></a>Identificadores de comando
 Un comando queda descrito completamente por su identificador de comando (codificado en el **WM_COMMAND** mensaje). Este identificador se asigna al objeto de interfaz de usuario que genera el comando. Por lo general, se denominan identificadores para la funcionalidad del objeto de interfaz de usuario que están asignados.  

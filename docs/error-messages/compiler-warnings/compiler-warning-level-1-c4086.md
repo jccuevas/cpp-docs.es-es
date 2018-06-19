@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275215"
 ---
 # <a name="compiler-warning-level-1-c4086"></a>Advertencia del compilador (nivel 1) C4086
 se esperaba que el parámetro de tipo pragma fuera '1', '2', '4', '8' o '16'  

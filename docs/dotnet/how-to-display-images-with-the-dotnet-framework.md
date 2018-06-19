@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128584"
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>Cómo: Mostrar imágenes con .NET Framework
 En el ejemplo de código siguiente se modifica el controlador de eventos OnPaint para recuperar un puntero a la <xref:System.Drawing.Graphics> objeto para el formulario principal. El <xref:System.Windows.Forms.Form.OnPaint%2A> función está diseñado para una aplicación de formularios Windows Forms, probablemente creada con un Asistente para aplicaciones de Visual Studio.  

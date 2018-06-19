@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088485"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opciones del compilador y del vinculador (C++/CX)
 Una variable de entorno, C++ / CX compilador opciones y las opciones del vinculador admiten la compilación de aplicaciones para el tiempo de ejecución de Windows.  

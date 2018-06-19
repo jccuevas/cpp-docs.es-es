@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098009"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transacción: Cómo afectan las transacciones a las actualizaciones (ODBC)
 Las actualizaciones a la [origen de datos](../../data/odbc/data-source-odbc.md) se administran durante las transacciones mediante el uso de un búfer de edición (el mismo método usado fuera de las transacciones). Los miembros de datos de campo de un conjunto de registros actúan en conjunto como un búfer de edición que contiene el registro actual, que el conjunto de registros se realiza una copia temporal durante un `AddNew` o **editar**. Durante una **eliminar** operación, el registro actual no se copia de seguridad dentro de una transacción. Para obtener más información sobre el búfer de edición y el modo en que las actualizaciones almacenan el registro actual, vea [conjunto de registros: actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  

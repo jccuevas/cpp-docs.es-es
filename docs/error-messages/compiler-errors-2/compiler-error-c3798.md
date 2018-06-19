@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269059"
 ---
 # <a name="compiler-error-c3798"></a>Error del compilador C3798
 'especificador': declaración de propiedad no puede tener un especificador de invalidación (debe colocarse en la propiedad en su lugar métodos get/set)  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342467"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Crear y mostrar cuadros de diálogo
 Crear un objeto de cuadro de diálogo es una operación en dos fases. En primer lugar, construya el objeto de cuadro de diálogo, a continuación, el cuadro de diálogo. Cuadros de diálogo modales y no modales difieren ligeramente en el proceso que se utiliza para crear y mostrarlos. La tabla siguiente muestra el cuadro de diálogo modal y no modal cómo cuadros normalmente se construye y se muestran.  

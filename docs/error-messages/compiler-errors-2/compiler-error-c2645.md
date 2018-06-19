@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229153"
 ---
 # <a name="compiler-error-c2645"></a>C2645 de Error del compilador
 ningún nombre completo para puntero a miembro (se encontró ':: *')  

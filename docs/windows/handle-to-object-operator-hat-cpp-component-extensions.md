@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881174"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operador de identificador de objeto (^) (Extensiones de componentes de C++)
 El *declarador del identificador* (`^`, pronunciado "sombrero"), modifica el tipo [especificador](../cpp/overview-of-declarators.md) para indicar que el objeto declarado debe eliminarse automáticamente cuando el sistema determina que el objeto es ya no es accesible.  

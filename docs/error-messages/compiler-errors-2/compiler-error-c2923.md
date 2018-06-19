@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241505"
 ---
 # <a name="compiler-error-c2923"></a>Error del compilador C2923
 'type': 'identifier' no es un argumento de tipo de plantilla válido para el parámetro 'param'  

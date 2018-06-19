@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270285"
 ---
 # <a name="compiler-error-c3920"></a>Error del compilador C3920
 ' operador '': no se puede definir un operador CLR postfijo de llamada o incremento y decremento WinRT operador WinRT o CLR llamará prefijo correspondiente WinRT o CLR operador (op_Increment/op_Decrement), pero con semántica de postfijo  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245740"
 ---
 # <a name="compiler-error-c3135"></a>C3135 de Error del compilador
 'property': una propiedad no puede tener 'const' o 'volatile' Escriba  

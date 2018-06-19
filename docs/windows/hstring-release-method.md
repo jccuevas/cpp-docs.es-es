@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875297"
 ---
 # <a name="hstringrelease-method"></a>HString::Release (Método)
 Elimina el valor de cadena subyacente e inicializa el objeto de HString actual en un valor vacío.  

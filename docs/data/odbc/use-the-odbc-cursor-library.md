@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092889"
 ---
 # <a name="use-the-odbc-cursor-library"></a>Utilizar la biblioteca de cursores ODBC
 ODBC controla el desplazamiento por conjuntos de registros a través de la biblioteca de cursores. Estos temas explica cómo trabajar con la biblioteca de cursores.  

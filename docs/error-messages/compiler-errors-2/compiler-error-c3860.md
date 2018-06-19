@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268323"
 ---
 # <a name="compiler-error-c3860"></a>Error del compilador C3860
 lista de argumentos de tipo que sigue al nombre de tipo de clase debe enumerar los parámetros en el orden utilizado en la lista de parámetros de tipo  

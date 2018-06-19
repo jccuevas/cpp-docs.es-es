@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236110"
 ---
 # <a name="compiler-error-c2726"></a>Error C2726 de Error del compilador
 'gcnew' solo se puede usar para crear un objeto con tipo WinRT o administrado  

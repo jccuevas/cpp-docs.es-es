@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130560"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 **initonly** es una palabra clave contextual que indica la asignación de esa variable se puede producir únicamente como parte de la declaración o en un constructor estático de la misma clase.  
