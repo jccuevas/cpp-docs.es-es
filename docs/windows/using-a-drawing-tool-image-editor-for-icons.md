@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891677"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Usar una herramienta de dibujo (Editor de imágenes para iconos)
 El editor de imágenes a mano alzado del dibujo y el borrado de herramientas de todo el trabajo de la misma manera: seleccione la herramienta y, si es necesario, [seleccionar los colores de primer plano y fondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) y opciones de tamaño y la forma. A continuación, mueva el puntero a la imagen y haga clic en o arrastre para dibujar y borrar.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172676"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Diferencias de programación entre formularios Windows Forms y MFC
 Los temas de [mediante un Control de usuario de Windows Forms en MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) describe la compatibilidad de MFC con formularios Windows Forms. Si no está familiarizado con la programación con .NET Framework o con MFC, este tema proporciona información adicional sobre las diferencias de programación entre ambos.  

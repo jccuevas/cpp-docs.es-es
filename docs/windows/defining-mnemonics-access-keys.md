@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873698"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Definir teclas de acceso
 Normalmente, los usuarios del teclado desplazan el foco de entrada de un control a otro en el cuadro de diálogo con las teclas TAB y flecha. Sin embargo, puede definir una tecla de acceso (un nombre de tecla de acceso o fácil de recordar) que permite a los usuarios elegir un control presionando una sola clave.  

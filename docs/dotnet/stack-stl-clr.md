@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172449"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tenga acceso a la última en salir. Usar el adaptador de contenedor `stack` para administrar un contenedor subyacente como una pila de inserción.  

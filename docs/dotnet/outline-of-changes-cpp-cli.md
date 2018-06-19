@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138306"
 ---
 # <a name="outline-of-changes-ccli"></a>Esquema de cambios (C++/CLI)
 Este tema muestran ejemplos de algunos de los cambios en el lenguaje de extensiones administradas para C++ a Visual C++. Siga el vínculo que acompaña a cada elemento para obtener más información.  

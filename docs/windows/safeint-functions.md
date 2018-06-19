@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889312"
 ---
 # <a name="safeint-functions"></a>SafeInt (Funciones)
 La Biblioteca SafeInt proporciona varias funciones que puede utilizar sin crear una instancia de la [SafeInt (clase)](../windows/safeint-class.md). Si desea proteger una sola operación matemática de desbordamiento de enteros, puede usar estas funciones. Si desea proteger varias operaciones matemáticas, debe crear `SafeInt` objetos. Resulta más eficaz para crear `SafeInt` objetos que estas funciones varias veces.  

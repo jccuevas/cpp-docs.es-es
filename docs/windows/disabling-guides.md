@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882094"
 ---
 # <a name="disabling-guides"></a>Deshabilitar guías
 Puede usar las teclas especiales en conjunción con el mouse para deshabilitar el efecto de ajuste de las guías. Utilizando la tecla ALT, deshabilita el efecto de ajuste de la Guía seleccionada. Mover a una guía con la tecla MAYÚS impide que se muevan a la Guía de controles ajustados.  

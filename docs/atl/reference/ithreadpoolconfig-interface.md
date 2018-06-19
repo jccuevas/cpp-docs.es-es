@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363734"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Interfaz IThreadPoolConfig (interfaz)
 Esta interfaz proporciona métodos para configurar un grupo de subprocesos.  

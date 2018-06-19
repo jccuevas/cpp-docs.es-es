@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872320"
 ---
 # <a name="entry"></a>entry
 Especifica una función exportada o constante en un módulo mediante la identificación de punto de entrada en el archivo DLL.  

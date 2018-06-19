@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881847"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Cómo: Abrir un recurso del manifiesto
 Si abre un recurso de manifiesto desde [Vista de recursos](../windows/resource-view-window.md), el recurso se abrirá en formato binario. Para ver el contenido de un recurso de manifiesto en un formato más inteligible, debe abrir el recurso desde el Explorador de soluciones.  

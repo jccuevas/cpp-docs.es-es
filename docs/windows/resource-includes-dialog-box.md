@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879677"
 ---
 # <a name="resource-includes-dialog-box"></a>Archivos de inclusión de recursos (cuadro de diálogo)
 Puede usar el **incluye recursos** cuadro de diálogo Modificar hábito del entorno de almacenar todos los recursos en el archivo .rc del proyecto y todas las [símbolos](../windows/symbols-resource-identifiers.md) en Resource.h.  

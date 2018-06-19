@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359734"
 ---
 # <a name="registry-entries"></a>Entradas del Registro
 DCOM presentó el concepto de Id. de aplicación (AppID), que agrupa las opciones de configuración de uno o más objetos DCOM en una ubicación centralizada en el registro. Para especificar un AppID, indique su valor en el AppID denominado valor bajo el CLSID del objeto.  

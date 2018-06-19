@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872658"
 ---
 # <a name="eventsourceaddremovelock-data-member"></a>EventSource::addRemoveLock_ (Miembro de datos)
 Sincroniza el acceso a la [targets_](../windows/eventsource-targets-data-member.md) matriz al agregar, quitar o invocar controladores de eventos.  

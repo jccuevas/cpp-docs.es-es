@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873776"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass (Macro)
 Establece el nivel de confianza y de nombre de clase en tiempo de ejecución.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090492"
 ---
 # <a name="cdatasourcegetproperty"></a>CDataSource::GetProperty
 Devuelve el valor de una propiedad especificada para el objeto de origen de datos conectado.  

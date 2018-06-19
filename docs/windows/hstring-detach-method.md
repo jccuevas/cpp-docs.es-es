@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33885459"
 ---
 # <a name="hstringdetach-method"></a>HString::Detach (Método)
 Desasocia el objeto especificado de HString de su valor subyacente.  

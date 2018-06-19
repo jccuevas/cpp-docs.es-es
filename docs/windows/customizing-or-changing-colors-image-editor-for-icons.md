@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871242"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Personalizar o cambiar colores (Editor de imágenes para iconos)
 El editor de imágenes [paleta de colores](../windows/colors-window-image-editor-for-icons.md) muestra inicialmente los 16 colores estándares. Además de los colores mostrados, puede crear sus propios colores personalizados. A continuación, puede [guardar y cargar una paleta de colores personalizada](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  

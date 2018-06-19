@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891368"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime y plantillas administradas (Extensiones de componentes de C++)
 Plantillas le permiten definir un prototipo de un tiempo de ejecución de Windows o un tipo common language runtime y, a continuación, crear instancias de las variaciones de ese tipo mediante el uso de parámetros de tipo de plantilla diferente.  

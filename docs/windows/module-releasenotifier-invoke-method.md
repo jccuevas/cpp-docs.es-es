@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876207"
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Module::ReleaseNotifier::Invoke (Método)
 Cuando se implementa, llama a un controlador de eventos cuando se libera el último objeto en un módulo.  

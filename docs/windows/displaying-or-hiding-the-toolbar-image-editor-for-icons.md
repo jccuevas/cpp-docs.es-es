@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872993"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Mostrar u ocultar la barra de herramientas (Editor de imágenes para iconos)
 Puesto que muchas de las herramientas de dibujo están disponibles desde el [teclado](../windows/accelerator-keys-image-editor-for-icons.md), a veces resulta útil ocultar la barra de herramientas del Editor de imágenes.  

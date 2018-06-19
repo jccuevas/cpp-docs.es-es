@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368670"
 ---
 # <a name="malloc-alignment"></a>Alineación de malloc
 [malloc](../c-runtime-library/reference/malloc.md) se garantiza que devuelven memoria que es como correctamente alineado para almacenar cualquier objeto que tiene una alineación fundamental y que puede caber en la cantidad de memoria que se asigna. A *alineación fundamental* es una opción de alineación que es menor o igual que la alineación mayor que es compatible con la implementación sin una especificación de alineación. (En Visual C++, se trata de la alineación que se requiere para una `double`, u 8 bytes. En el código destinado a las plataformas de 64 bits, son 16 bytes). Por ejemplo, una asignación de cuatro bytes se alinearían en un límite que es compatible con cualquier objeto de cuatro bytes o más pequeño.  

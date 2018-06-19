@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389961"
 ---
 # <a name="trigraphs"></a>Trígrafos
 El juego de caracteres de origen de programas de código fuente C está incluido dentro del juego de caracteres ASCII de 7 bits, pero es un superconjunto del conjunto de códigos invariantes ISO 646-1983. Las secuencias de trígrafos permiten escribir programas de C usando solo el conjunto de códigos invariantes ISO (International Standards Organization). Los trígrafos son secuencias de tres caracteres (introducidos por dos signos de interrogación consecutivos) que el compilador reemplaza por sus caracteres de puntuación correspondientes. Puede usar trígrafos en los archivos de código fuente C con un juego de caracteres que no contenga representaciones gráficas adecuadas para algunos caracteres de puntuación.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874621"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface (Método)
 Escribe en una secuencia los datos necesarios para inicializar un objeto de proxy en algún proceso de cliente.  

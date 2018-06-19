@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880171"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 Declara un *puntero anclado*, que se utiliza únicamente con common language runtime.  

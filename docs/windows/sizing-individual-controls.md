@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890143"
 ---
 # <a name="sizing-individual-controls"></a>Cambiar el tamaño de los controles individuales
 Use los controladores de tamaño para cambiar el tamaño de un control. Cuando el puntero se sitúa en un controlador de tamaño, cambia de forma para indicar las instrucciones que aparecen en el que el control puede cambiar de tamaño. Controladores de tamaño activos son sólidos; Si un controlador de tamaño está vacío, el control no puede cambiarse a lo largo de ese eje.  

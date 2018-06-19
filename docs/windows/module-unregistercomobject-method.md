@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881941"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject (Método)
 Anula el registro de uno o varios objetos COM, lo que impide que otras aplicaciones conectarse a ellos.  

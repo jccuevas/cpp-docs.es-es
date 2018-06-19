@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892779"
 ---
 # <a name="selecting-controls"></a>Seleccionar controles
 Seleccione los controles de tamaño, alinear, mover, copiar, o eliminarlas y, a continuación, realizar la operación que desee. En la mayoría de los casos, debe seleccionar más de un control que se utilizarán las herramientas de ajuste de tamaño y alineación en el [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  

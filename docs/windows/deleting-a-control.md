@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871427"
 ---
 # <a name="deleting-a-control"></a>Eliminar un control
 ### <a name="to-delete-a-control"></a>Para eliminar un control  

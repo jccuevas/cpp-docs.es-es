@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878676"
 ---
 # <a name="previewing-resources"></a>Vista previa de recursos
 Vista previa de los recursos permite ver recursos gráficos sin abrirlos. Obtener una vista previa también es útil para los archivos ejecutables después de que ha compilado porque los identificadores de recursos cambian a números. Puesto que estos identificadores numéricos a menudo no proporcionan suficiente información, obtener una vista previa de los recursos ayuda a identificarlos con rapidez.  

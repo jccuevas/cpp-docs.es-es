@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096225"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults (Clase)
 Si desea que un comando para controlar varios conjuntos de resultados, utilice `CMultipleResults` para el `CCommand` argumento de plantilla *TMultiple*.  

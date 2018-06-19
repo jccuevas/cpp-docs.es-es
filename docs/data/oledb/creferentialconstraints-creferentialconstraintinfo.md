@@ -54,6 +54,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092352"
 ---
 # <a name="creferentialconstraints-creferentialconstraintinfo"></a>CReferentialConstraints, CReferentialConstraintInfo
 Llamar a la clase de typedef **CReferentialConstraints** para implementar su clase de parámetro **CReferentialConstraintInfo**.  

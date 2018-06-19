@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872632"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>Convertir mapas de bits en barras de herramientas
 Puede crear una nueva barra de herramientas mediante la conversión de un mapa de bits. El gráfico del mapa de bits se convierte a las imágenes de botón de una barra de herramientas. Normalmente, el mapa de bits contiene varias imágenes de botón en un mapa de bits única, con una imagen para cada botón. Las imágenes pueden tener cualquier tamaño; el valor predeterminado es 16 píxeles de ancho y el alto de la imagen. Puede especificar el tamaño de las imágenes de botón en el [cuadro de diálogo nuevo recurso de barra de herramientas](../windows/new-toolbar-resource-dialog-box.md) cuando se elige la barra de herramientas del Editor de la **imagen** menú mientras está en el editor de imágenes.  

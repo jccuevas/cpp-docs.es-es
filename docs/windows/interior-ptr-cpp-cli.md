@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879112"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 Un *puntero interior* declara un puntero a dentro de un tipo de referencia, pero no para el propio objeto. Un puntero interior puede apuntar a un identificador de referencia, tipo de valor, el identificador del tipo de conversión boxing, miembro de un tipo administrado, o a un elemento de una matriz administrada.  

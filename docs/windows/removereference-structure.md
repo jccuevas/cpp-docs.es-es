@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881268"
 ---
 # <a name="removereference-structure"></a>RemoveReference (estructura)
 Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  

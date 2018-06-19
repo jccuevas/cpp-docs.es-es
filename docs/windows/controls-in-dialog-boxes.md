@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873126"
 ---
 # <a name="controls-in-dialog-boxes"></a>Controles de cuadros de diálogo
 Puede agregar controles a un cuadro de diálogo mediante la [pestaña del cuadro de diálogo Editor](../windows/dialog-editor-tab-toolbox.md) en el [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox), que le permite elegir el control que desee y arrástrelo hasta el cuadro de diálogo. De forma predeterminada, la ventana de cuadro de herramientas se establece en la opción Ocultar automáticamente. Aparece como una pestaña en el margen izquierdo de la solución cuando se abre el editor de cuadro de diálogo. Sin embargo, puede anclar la ventana cuadro de herramientas en posición haciendo clic en el **Ocultar automáticamente** botón en la esquina superior derecha de la ventana. Para obtener más información sobre cómo controlar el comportamiento de esta ventana, consulte [administración de ventanas](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  

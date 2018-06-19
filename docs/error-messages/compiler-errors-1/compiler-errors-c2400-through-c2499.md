@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33237450"
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>: De errores del compilador C2400 a C2499
 

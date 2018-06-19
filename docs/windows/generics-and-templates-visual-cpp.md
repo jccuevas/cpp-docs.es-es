@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878910"
 ---
 # <a name="generics-and-templates-visual-c"></a>Genéricos y plantillas (Visual C++)
 Genéricos y plantillas son las características del lenguaje que proporcionan compatibilidad para tipos parametrizados. Sin embargo, son diferentes y tienen diferentes usos. Este tema proporciona información general sobre las numerosas diferencias existentes.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232292"
 ---
 # <a name="compiler-error-c2573"></a>Error del compilador C2573
 'clase': no se pueden eliminar punteros a objetos de este tipo; la clase no tiene ninguna sobrecarga no ubicada para 'operador delete'.  

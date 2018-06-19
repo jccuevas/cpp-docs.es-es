@@ -31,6 +31,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255614"
 ---
 # <a name="mfc-internet-programming-basics"></a>Fundamentos de programación para Internet de MFC
 Microsoft proporciona muchas API para programar aplicaciones de cliente y servidor. Se están escribiendo muchas nuevas aplicaciones para Internet y, como las tecnologías, las funciones del explorador y cambio de opciones de seguridad, se escribirán los nuevos tipos de aplicaciones. Los exploradores que se ejecutan en equipos cliente, que proporciona acceso a World Wide Web y mostrar páginas HTML que contienen texto, gráficos, controles ActiveX y documentos. Servidores proporcionan FTP, HTTP y servicios gopher y ejecutan aplicaciones CGI que usan las aplicaciones de extensión de servidor. Su aplicación personalizada puede recuperar la información y proporcionar datos en Internet.  

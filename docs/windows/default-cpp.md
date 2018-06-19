@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872970"
 ---
 # <a name="default-c"></a>default (C++)
 Indica que la interfaz personalizada o dispinterface definida en una coclase representa la interfaz de programación predeterminada.  

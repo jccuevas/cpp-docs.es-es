@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882065"
 ---
 # <a name="mfc-predefined-symbols"></a>Símbolos predefinidos de MFC
 Proyectos de MFC siempre incluyen varios archivos de encabezado que admiten windows. Se agregan a través de #include en el archivo StdAfx.h:  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359599"
 ---
 # <a name="celementtraitsbase-class"></a>Clase CElementTraitsBase
 Esta clase proporciona copia de forma predeterminada y move los métodos de una clase de colección.  

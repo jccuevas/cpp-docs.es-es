@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391918"
 ---
 # <a name="pointer-declarations"></a>Declaraciones de puntero
 Una "declaración de puntero" identifica una variable de puntero y especifica el tipo del objeto al que señala la variable. Una variable declarada como puntero contiene una dirección de memoria.  

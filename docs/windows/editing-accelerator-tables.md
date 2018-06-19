@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872944"
 ---
 # <a name="editing-accelerator-tables"></a>Editar tablas de aceleradores
 En Visual C++, puede editar una tabla de aceleradores directamente con la edición en contexto en el editor de aceleradores.  

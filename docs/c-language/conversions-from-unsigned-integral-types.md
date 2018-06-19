@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391527"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversiones de tipos enteros sin signo
 

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358132"
 ---
 # <a name="date-type"></a>DATE (tipo)
 El **fecha** tipo se implementa mediante un número de punto flotante de 8 bytes. Los días se representan mediante incrementos de números enteros, comenzando por el 30 de diciembre de 1899, medianoche como hora cero. Los valores de hora se expresan como el valor absoluto de la parte fraccionaria del número. En la tabla siguiente se muestra varias fechas junto con sus **fecha** equivalente numérico del tipo:  

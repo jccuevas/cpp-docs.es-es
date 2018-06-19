@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871619"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>Recortar o ampliar una imagen completa (Editor de imágenes para iconos)
 Los procedimientos siguientes se muestra cómo recortar o ampliar una imagen completa.  

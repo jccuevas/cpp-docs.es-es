@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374471"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (El tipo de carácter predeterminado no tiene signo)
 Cambia el valor predeterminado `char` escriba desde `signed char` a `unsigned char`y el `char` tipo es ceros cuando se amplían a un `int` tipo.  

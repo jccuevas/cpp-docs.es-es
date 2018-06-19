@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881122"
 ---
 # <a name="id-property"></a>ID (Propiedad)
 La propiedad ID hace referencia a cada entrada de la tabla de aceleradores en código de programa. Este es el valor de comando que va a recibir el programa cuando el usuario presiona la tecla de aceleración o una combinación de teclas. Para realizar un acelerador igual que un elemento de menú, realice sus identificadores de los mismos (siempre y cuando el identificador de la tabla de aceleradores es el mismo que el identificador para el recurso de menú).  

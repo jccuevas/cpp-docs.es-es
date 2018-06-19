@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875284"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Cómo: Especificar directorios de inclusión para los recursos
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Para especificar directorios de inclusión para un archivo .rc determinado  

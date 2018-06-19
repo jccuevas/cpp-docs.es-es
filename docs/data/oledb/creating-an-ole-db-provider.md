@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097112"
 ---
 # <a name="creating-an-ole-db-provider"></a>Crear un proveedor OLE DB
 La manera recomendada para crear un proveedor OLE DB es usar los asistentes para crear un proyecto ATL COM y un proveedor y, a continuación, modificar los archivos mediante las plantillas OLE DB. Mientras personaliza el proveedor, puede Comente propiedades que no desee y agregar interfaces opcionales.  

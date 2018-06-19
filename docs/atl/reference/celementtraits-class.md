@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359750"
 ---
 # <a name="celementtraits-class"></a>Clase CElementTraits
 Esta clase se utiliza por las clases de colección para proporcionar las funciones y métodos para mover, copiar, comparación y operaciones hash.  

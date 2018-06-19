@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879690"
 ---
 # <a name="hidden"></a>hidden
 Indica que el elemento existe pero no se debe mostrar en un explorador orientado al usuario.  

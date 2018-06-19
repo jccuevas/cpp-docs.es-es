@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883999"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>Crear una aplicación de escritorio de Windows vacía
 ### <a name="to-create-an-empty-windows-desktop-application"></a>Para crear una aplicación de escritorio de Windows vacía  

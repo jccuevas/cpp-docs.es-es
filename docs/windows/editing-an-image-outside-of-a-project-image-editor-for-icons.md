@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873019"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>Editar una imagen fuera de un proyecto (Editor de imágenes para iconos)
 Puede abrir y editar imágenes en el entorno de desarrollo como haría en cualquier aplicación de gráficos. Las imágenes con que se trabaja no necesitan ser parte de un proyecto de Visual Studio para edición independiente.  

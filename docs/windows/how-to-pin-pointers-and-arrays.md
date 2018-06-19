@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873594"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Cómo: Anclar punteros y matrices
 Anclar un subobjeto definido en un objeto administrado tiene el efecto de todo el objeto de anclaje.  Por ejemplo, si se ancla un elemento de una matriz, también se ancla la matriz entera. No hay ninguna extensión del lenguaje para declarar una matriz anclada. Para anclar la matriz, declare un puntero anclado para su tipo de elemento y el pin uno de sus elementos.  

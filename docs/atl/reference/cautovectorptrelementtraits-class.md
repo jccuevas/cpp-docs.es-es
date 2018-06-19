@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357888"
 ---
 # <a name="cautovectorptrelementtraits-class"></a>Clase CAutoVectorPtrElementTraits
 Esta clase proporciona métodos, las funciones estáticas y definiciones de tipos útiles al crear colecciones de punteros inteligentes mediante vector nueva y eliminar operadores.  

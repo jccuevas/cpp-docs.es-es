@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198253"
 ---
 # <a name="fatal-error-c1051"></a>Error irrecuperable C1051
 archivo de base de datos de programa, 'archivo PDB', tiene un formato obsoleto; elimínelo y vuelva a compilar  
