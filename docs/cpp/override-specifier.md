@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420186"
 ---
 # <a name="override-specifier"></a>override (especificador)
 Puede usar la palabra clave `override` para indicar las funciones miembro que invalidan una función virtual en una clase base.  

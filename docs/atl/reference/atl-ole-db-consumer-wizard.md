@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364955"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Asistente para consumidores OLE DB ATL
 Este asistente configura una clase de consumidor OLE DB con los enlaces de datos necesario para tener acceso al origen de datos especificados a través del proveedor OLE DB especificado.  

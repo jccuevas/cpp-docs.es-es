@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357205"
 ---
 # <a name="atlmfc-shared-classes"></a>Clases compartidas de ATL y MFC
 Estas clases de utilidad se pueden utilizar en cualquier proyecto de C++ nativo sin necesidad de las DLL de MFC.  

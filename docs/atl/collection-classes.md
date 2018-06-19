@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361334"
 ---
 # <a name="collection-classes"></a>Clases de colección
 Las clases siguientes proporcionan compatibilidad para matrices, listas, asignaciones y métodos de rasgos para ayudar a con las comparaciones y acceso a los elementos.  

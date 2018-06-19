@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356724"
 ---
 # <a name="multiple-dual-interfaces"></a>Varias Interfaces duales
 Puede que desee combinar las ventajas de una interfaz dual (es decir, la flexibilidad de vtable y enlace de tiempo de ejecución, lo que hace que la clase disponibles para los lenguajes de scripting, así como de C++) con las técnicas de herencia múltiple.  

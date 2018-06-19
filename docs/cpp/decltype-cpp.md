@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418044"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 El especificador de tipo `decltype` produce el tipo de una expresión especificada. El `decltype` escriba especificador, junto con el [palabra clave auto](../cpp/auto-cpp.md), es útil principalmente para los desarrolladores que crean bibliotecas de plantillas. Use `auto` y `decltype` para declarar una función de plantilla cuyo tipo de valor devuelto depende de los tipos de sus argumentos de plantilla. O bien utilice `auto` y `decltype` para declarar una función de plantilla que contenga una llamada a otra función y devuelva el tipo de valor devuelto de la función contenida.  

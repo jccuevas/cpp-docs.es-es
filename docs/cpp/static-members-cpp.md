@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421076"
 ---
 # <a name="static-members-c"></a>Miembros estáticos (C++)
 Las clases pueden contener datos de miembro y funciones miembro estáticos. Cuando se declara un miembro de datos como **estático**, solo una copia de los datos se mantiene para todos los objetos de la clase.

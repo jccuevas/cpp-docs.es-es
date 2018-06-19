@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363974"
 ---
 # <a name="atl-simple-object-wizard"></a>Asistente para objetos simples ATL
 Este asistente inserta en el proyecto un objeto COM mínima. Utilice esta página del Asistente para especificar los nombres que identifican los archivos para el objeto y su funcionalidad COM y la clase de C++.  

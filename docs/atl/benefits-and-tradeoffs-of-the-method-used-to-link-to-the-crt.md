@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355392"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Ventajas e inconvenientes del método utilizado para el vínculo a la biblioteca CRT
 Puede vincular el proyecto con la biblioteca CRT dinámica o estáticamente. En la tabla siguiente se describe las ventajas y los inconvenientes de elegir qué método utilizar.  

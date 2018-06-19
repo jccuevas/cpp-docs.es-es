@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360785"
 ---
 # <a name="bitfields"></a>Campos de bits
 Campos de bits de estructura se limitan a 64 bits y pueden ser de tipo con signo int, int sin signo, int64 o int64 sin signo. Los campos de bits que cruzan el límite de tipo omitirán bits para alinear el campo de bits para la alineación de tipo siguiente. Por ejemplo, los campos de bits de enteros no pueden cruzar un límite de 32 bits.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361308"
 ---
 # <a name="atl-com-10-component-wizard"></a>Asistente para componentes ATL COM+ 1.0
 Use este asistente para agregar un objeto al proyecto que admita servicios de COM + 1.0, incluidas las transacciones.  

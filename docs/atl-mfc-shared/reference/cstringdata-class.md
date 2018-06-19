@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363576"
 ---
 # <a name="cstringdata-class"></a>Clase CStringData
 Esta clase representa los datos de un objeto de cadena.  

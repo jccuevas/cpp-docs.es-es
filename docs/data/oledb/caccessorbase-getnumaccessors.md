@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093277"
 ---
 # <a name="caccessorbasegetnumaccessors"></a>CAccessorBase::GetNumAccessors
 Recupera el número de descriptores de acceso creado por la clase.  

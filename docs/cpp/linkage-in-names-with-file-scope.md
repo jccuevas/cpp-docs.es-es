@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419786"
 ---
 # <a name="linkage-in-names-with-file-scope"></a>Vinculación en nombres con ámbito de archivo
 Las siguientes reglas de vinculación se aplican a los nombres (que no sean `typedef` y nombres de enumerador) con ámbito de archivo:  

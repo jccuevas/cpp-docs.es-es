@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355730"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementación de un administrador de cadenas personalizado (método básico)
 La manera más fácil de personalizar el esquema de asignación de memoria de datos de cadena están utilizar siempre ATL **CAtlStringMgr** clase pero proporcionar su propia memoria rutinas de asignación. El constructor de **CAtlStringMgr** toma un único parámetro: un puntero a un `IAtlMemMgr` objeto. `IAtlMemMgr` es una clase base abstracta que proporciona una interfaz genérica para un montón. Mediante el `IAtlMemMgr` interfaz, el **CAtlStringMgr** asigna, reasigna y libera la memoria utilizada para almacenar datos de cadena. Puede bien implemente la `IAtlMemMgr` interfaz usted mismo o usar una de las cinco clases de administrador de memoria que proporciona ATL. Los administradores de memoria que proporciona ATL simplemente encapsulan las instalaciones existentes de asignación de memoria:  

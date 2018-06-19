@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360941"
 ---
 # <a name="atl-operators"></a>Operadores ATL
 Esta sección contiene los temas de referencia para los operadores globales de ATL.  

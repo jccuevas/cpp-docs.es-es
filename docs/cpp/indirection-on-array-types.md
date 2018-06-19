@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418844"
 ---
 # <a name="indirection-on-array-types"></a>Direccionamiento indirecto en tipos de matriz
 Uso del operador de direccionamiento indirecto (**\***) en un *n*-tipo de matriz unidimensional da como resultado un *n*matriz bidimensional de-1. Si *n* es 1, se produjo un valor escalar (o elemento de matriz).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413913"
 ---
 # <a name="c-exception-handling"></a>Control de excepciones de C++
 El lenguaje C++ proporciona compatibilidad integrada para producir y detectar excepciones. Al programar en C++, casi siempre se debe utilizar la compatibilidad con excepciones de C++ integrada como se describe en esta sección.  

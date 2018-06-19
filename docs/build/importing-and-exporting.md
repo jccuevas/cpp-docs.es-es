@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368878"
 ---
 # <a name="importing-and-exporting"></a>Importar y exportar
 Puede importar símbolos públicos en una aplicación o exportar funciones desde un archivo DLL mediante dos métodos:  

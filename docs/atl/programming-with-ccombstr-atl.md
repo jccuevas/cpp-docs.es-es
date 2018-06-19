@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357862"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programar con CComBSTR (ATL)
 La clase ATL [CComBSTR](../atl/reference/ccombstr-class.md) proporciona un contenedor alrededor del `BSTR` tipo de datos. Mientras `CComBSTR` es una herramienta útil, hay varias situaciones que requieren precaución.  

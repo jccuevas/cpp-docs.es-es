@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356966"
 ---
 # <a name="queryinterface"></a>QueryInterface
 Aunque hay mecanismos mediante el cual un objeto puede expresar la funcionalidad que proporciona estáticamente (antes de que se crean las instancias), el mecanismo COM fundamental es utilizar el **IUnknown** método llamado [QueryInterface ](http://msdn.microsoft.com/library/windows/desktop/ms682521).  

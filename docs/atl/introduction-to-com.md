@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356180"
 ---
 # <a name="introduction-to-com"></a>Introducción a COM
 COM es el "modelo de objetos" fundamental en qué controles ActiveX y OLE que se compilan. COM permite que un objeto exponer su funcionalidad a otros componentes y aplicaciones del host. Define cómo se expone el objeto y el funcionamiento de esta información a través de procesos y redes. COM también define el ciclo de vida del objeto.  

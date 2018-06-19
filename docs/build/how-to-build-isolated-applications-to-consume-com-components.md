@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367890"
 ---
 # <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Cómo: Compilar aplicaciones aisladas que utilicen componentes COM
 Aplicaciones aisladas son aquéllas que tienen manifiestos integrados en el programa. Puede crear aplicaciones aisladas que utilicen componentes COM.  

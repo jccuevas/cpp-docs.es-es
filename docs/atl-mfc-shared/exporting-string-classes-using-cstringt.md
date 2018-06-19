@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356401"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Exportar clases de cadena mediante CStringT
 En el pasado, los desarrolladores de MFC se derivan de `CString` especializar sus propias clases de cadena. En Microsoft Visual C++ .NET (versión 8.0 de MFC), el [CString](../atl-mfc-shared/using-cstring.md) clase ha sido reemplazada por una clase de plantilla denominada [CStringT](../atl-mfc-shared/reference/cstringt-class.md). Esto proporciona varias ventajas:  

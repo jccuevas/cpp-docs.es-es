@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091588"
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Conjunto de registros: Volver a consultar un conjunto de registros (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  

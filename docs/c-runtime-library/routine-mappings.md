@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415499"
 ---
 # <a name="routine-mappings"></a>Asignaciones de rutinas
 Las asignaciones de rutinas de texto genérico se definen en TCHAR.H. `_tccpy` y `_tclen` se asignan a funciones del modelo de MBCS. Se asignan a macros o funciones insertadas en los modelos de SBCS y Unicode por razones de integridad. Para obtener información sobre una rutina de texto genérico, vea el tema de Ayuda sobre la rutina correspondiente de `SBCS`, `_MBCS` o `_UNICODE`.  

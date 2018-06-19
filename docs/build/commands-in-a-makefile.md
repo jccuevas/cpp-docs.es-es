@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366879"
 ---
 # <a name="commands-in-a-makefile"></a>Comandos en un archivo MAKE
 Una regla de inferencia o bloques de descripción Especifica un bloque de comandos que se ejecutarán si la dependencia no está actualizada. NMAKE muestra cada comando antes de ejecutarlo, a menos que/s, **. SILENCIOSA**, **! CMDSWITCHES**, o se utiliza @. NMAKE busca una regla de inferencia coincidente si un bloque de descripción no va seguido de un bloque de comandos.  

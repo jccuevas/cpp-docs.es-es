@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368517"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>Importar datos mediante __declspec(dllimport)
 En el caso de los datos mediante **__declspec (dllimport)** es un elemento de conveniencia que quita una capa de direccionamiento indirecto. Al importar datos desde un archivo DLL, también tendrá que ir a través de la tabla de direcciones de importación. Antes de **__declspec (dllimport)**, esto significaba que tenía que acordarse de realizar un nivel adicional de direccionamiento indirecto al obtener acceso a datos exportados desde el archivo DLL:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419971"
 ---
 # <a name="ordering-of-c-arrays"></a>Orden de las matrices de C++
 Las matrices de C++ se almacenan por orden de fila principal. El orden de fila principal significa que el último subíndice es el que varía más rápidamente.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093290"
 ---
 # <a name="cdbpropidsetoperator-"></a>CDBPropIDSet::operator =
 Asigna el contenido del identificador de una propiedad establecida en otro conjunto de propiedades de identificador.  

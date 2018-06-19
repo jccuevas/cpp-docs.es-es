@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365261"
 ---
 # <a name="ienumonstlimpl-class"></a>Clase IEnumOnSTLImpl
 Esta clase define una interfaz de enumerador basándose en una colección de la biblioteca estándar de C++.  

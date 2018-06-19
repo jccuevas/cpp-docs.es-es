@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367591"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Exportar funciones de C++ para utilizarlas en ejecutables creados en C  
   

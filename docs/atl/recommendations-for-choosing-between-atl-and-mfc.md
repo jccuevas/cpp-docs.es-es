@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357328"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>Recomendaciones para elegir entre ATL y MFC
 Al desarrollar aplicaciones y componentes, puede elegir entre dos enfoques: ATL y MFC (la biblioteca Microsoft Foundation Class).  

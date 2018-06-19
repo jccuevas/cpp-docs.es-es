@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355025"
 ---
 # <a name="creating-an-aggregated-object"></a>Crear un objeto agregado
 Los delegados de agregación **IUnknown** llamadas, proporcionando un puntero para el objeto externo **IUnknown** para el objeto interno.  

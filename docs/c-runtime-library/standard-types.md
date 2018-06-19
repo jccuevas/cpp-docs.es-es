@@ -175,6 +175,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418528"
 ---
 # <a name="standard-types"></a>Tipos estándar
 La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y definiciones de tipo estándar.  

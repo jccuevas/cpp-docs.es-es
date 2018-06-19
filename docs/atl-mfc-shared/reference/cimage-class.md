@@ -69,6 +69,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366320"
 ---
 # <a name="cimage-class"></a>CImage (clase)
 `CImage` Proporciona compatibilidad con mapas de bits mejorada, incluida la capacidad para cargar y guardar imágenes en formatos JPEG, GIF, BMP y gráficos de red portátiles (PNG).  

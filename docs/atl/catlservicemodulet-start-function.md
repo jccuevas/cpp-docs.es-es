@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357282"
 ---
 # <a name="catlservicemoduletstart-function"></a>Función CAtlServiceModuleT:: Start
 Cuando se ejecuta el servicio, **_tWinMain** llamadas **a CAtlServiceModuleT:: WinMain**, que a su vez, llama `CAtlServiceModuleT::Start`.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357263"
 ---
 # <a name="message-maps-atl"></a>Mapas de mensajes (ATL)
 Un mapa de mensajes asocia una función de controlador con un mensaje determinado, un comando o una notificación. Mediante el uso de ATL [macros de mapa de mensajes](../atl/reference/message-map-macros-atl.md), puede especificar un mapa de mensajes de una ventana. Los procedimientos de ventana de `CWindowImpl`, `CDialogImpl`, y `CContainedWindowT` dirigir los mensajes de una ventana a su mapa de mensajes.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356513"
 ---
 # <a name="memory-management-classes"></a>Clases de administración de memoria
 Estas clases proporcionan compatibilidad para punteros de montón, punteros inteligentes y otras rutinas de asignación de memoria.  

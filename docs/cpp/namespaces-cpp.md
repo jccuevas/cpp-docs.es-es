@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423681"
 ---
 # <a name="namespaces-c"></a>Espacios de nombres (C++)
 Un espacio de nombres es una región declarativa que proporciona un ámbito a los identificadores (nombres de tipos, funciones, variables, etc.) de su interior. Los espacios de nombres se utilizan para organizar el código en grupos lógicos y para evitar conflictos de nombres que pueden producirse, especialmente cuando la base de código incluye varias bibliotecas. Todos los identificadores del ámbito del espacio de nombres son visibles entre sí sin calificación. Identificadores fuera del espacio de nombres pueden tener acceso a los miembros con el nombre completo para cada identificador, por ejemplo `std::vector<std::string> vec;`, o bien mediante un [mediante declaración](../cpp/using-declaration.md) para un identificador único (`using std::string`), o un [using (directiva)](../cpp/namespaces-cpp.md#using_directives) para todos los identificadores del espacio de nombres (`using namespace std;`). El código de los archivos de encabezado debe utilizar siempre el nombre completo del espacio de nombres.  

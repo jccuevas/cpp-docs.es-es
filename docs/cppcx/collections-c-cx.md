@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094262"
 ---
 # <a name="collections-ccx"></a>Colecciones (C++/CX)
 En C++ / programa CX, puedes hacer uso libre de contenedores de la biblioteca de plantillas estándar (STL), o cualquier otro tipo de colección definida por el usuario. Sin embargo, cuando pases colecciones y hacia atrás en la interfaz binaria de aplicación de Windows en tiempo de ejecución (ABI), por ejemplo, para un control XAML o a un cliente de JavaScript, debe usar los tipos de colección en tiempo de ejecución de Windows.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367204"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>Ejecutar un programa en el preprocesamiento
 Para usar el código de salida de un comando durante el preprocesamiento, especifique el comando, con los argumentos, entre corchetes ([]). Cualquier macro se expande antes de que se ejecuta el comando. NMAKE reemplaza la especificación de comandos con código de salida del comando, que puede usar en una expresión para controlar el preprocesamiento.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362166"
 ---
 # <a name="ccomapartment-class"></a>Clase CComApartment
 Esta clase proporciona compatibilidad para administrar un apartamento de un módulo de archivo EXE agrupadas por subproceso.  

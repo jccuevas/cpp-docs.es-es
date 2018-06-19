@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356258"
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>Hospedar controles ActiveX mediante AXHost de ATL
 En este tema se muestra cómo crear AXHost y cómo hospedar un control ActiveX mediante varias funciones ATL. También muestra cómo obtener acceso a los eventos de control y el receptor (mediante [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) desde el control hospedado. El ejemplo hospeda el control de calendario en una ventana principal o en una ventana secundaria.  

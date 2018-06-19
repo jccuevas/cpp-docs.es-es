@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361241"
 ---
 # <a name="string-data-management"></a>Administración de datos de cadena
 Visual C++ proporciona varias maneras de administrar los datos de cadena:  

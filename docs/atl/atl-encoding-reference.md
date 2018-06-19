@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358633"
 ---
 # <a name="atl-encoding-reference"></a>Referencia de codificación en ATL
 Codificación en un intervalo común de estándares de Internet, como uuencode, hexadecimal y UTF8 es compatible con el código que se encuentra en atlenc.h.  

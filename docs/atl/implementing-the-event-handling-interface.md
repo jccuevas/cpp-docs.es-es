@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356313"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementar la interfaz de control de eventos
 ATL le ayuda con los tres elementos necesarios para el control de eventos: implementar la interfaz de eventos, aconsejar el origen del evento y desaconsejar el origen del evento. Los pasos precisos que deberá tomar dependen del tipo de la interfaz de eventos y los requisitos de rendimiento de la aplicación.  

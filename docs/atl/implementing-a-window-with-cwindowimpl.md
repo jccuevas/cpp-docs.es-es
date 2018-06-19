@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356552"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implementar una ventana con CWindowImpl
 Para implementar una ventana, derive una clase de `CWindowImpl`. En su clase derivada, declare un mapa de mensajes y las funciones de controlador de mensaje. Ahora puede usar la clase de tres maneras diferentes:  

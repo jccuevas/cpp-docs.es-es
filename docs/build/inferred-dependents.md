@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367903"
 ---
 # <a name="inferred-dependents"></a>Dependientes inferidos
 Un dependiente inferido se deriva de una regla de inferencia y se evalúa antes que dependientes explícitos. Si un dependiente inferido no está actualizado con respecto a su destino, NMAKE invoca el bloque de comandos para la dependencia. Si un dependiente inferido no existe o no está actualizado con respecto a sus propios dependientes, NMAKE actualiza primero el dependiente inferido. Para obtener más información sobre dependientes inferidos, vea [reglas de inferencia](../build/inference-rules.md).  

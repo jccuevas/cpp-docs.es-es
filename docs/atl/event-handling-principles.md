@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355453"
 ---
 # <a name="event-handling-principles"></a>Principios de control de eventos
 Hay tres pasos comunes a todo el control de eventos. Necesitará:  

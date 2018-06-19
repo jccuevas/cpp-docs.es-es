@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359923"
 ---
 # <a name="threading-models-and-critical-sections-classes"></a>Los modelos y las clases de las secciones críticas de subprocesos
 Las clases siguientes definen un subprocesamiento modelo y sección crítica:  
