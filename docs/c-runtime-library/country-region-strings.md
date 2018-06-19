@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391449"
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 Las cadenas de país y la región se pueden combinar con una cadena de idioma para crear una especificación de configuración regional para las funciones `setlocale`, `_wsetlocale`, `_create_locale`y `_wcreate_locale` . Para listas de nombres de países o regiones compatibles con varias versiones del sistema operativo Windows, consulte la [Referencia de la API de compatibilidad con el idioma nacional (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). En las listas, la cadena de país o región puede ser cualquiera de los valores de país en la columna **Configuración regional (país o región de idioma)** o cualquiera de las abreviaturas de la columna de **Abreviatura de nombre de país o región**. Para información adicional sobre compatibilidad de idioma en el sistema operativo Windows por versión, consulte [Apéndice A: Comportamiento del producto](http://msdn.microsoft.com/goglobal/bb896001.aspx) en [MS-LCID]: Referencia de identificador de configuración regional (LCID) de Windows.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391410"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Utilizar archivos DLL de extensión de base de datos, OLE y Sockets de MFC en archivos DLL de MFC estándar
 Cuando se usa una extensión MFC DLL desde una DLL de MFC normal, si la extensión MFC DLL no está conectada a la **CDynLinkLibrary** cadena del objeto de la DLL de MFC regulares, puede ejecutar en uno o más de una serie de problemas relacionados. Dado que admiten las versiones de depuración de la base de datos de MFC, OLE y Sockets archivos DLL se implementan como archivos DLL de extensión MFC, podría ver problemas similares si usa estos MFC características, incluso si explícitamente no usa cualquiera de su propios archivos DLL de extensión MFC. Algunos síntomas son:  

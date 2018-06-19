@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390611"
 ---
 # <a name="declarators-and-variable-declarations"></a>Declaradores y declaraciones de variables
 En el resto de esta sección se describe el formato y el significado de las declaraciones de tipos de variable resumidos en esta lista. En concreto, en las secciones restantes se explica cómo declarar los siguientes elementos:  

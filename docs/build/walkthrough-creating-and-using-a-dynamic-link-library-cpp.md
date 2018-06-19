@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392593"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Tutorial: Crear y utilizar su propia biblioteca de vínculos dinámicos (C++)
 

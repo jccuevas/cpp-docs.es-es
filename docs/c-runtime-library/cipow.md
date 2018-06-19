@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387003"
 ---
 # <a name="cipow"></a>_CIpow
 Calcula *x* elevado a la potencia de *y* en función de los valores superiores de la pila.  

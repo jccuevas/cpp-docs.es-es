@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385811"
 ---
 # <a name="overview-of-functions"></a>Información general de funciones
 Las funciones deben tener una definición y deberían tener una declaración, aunque una definición puede actuar como declaración si la declaración aparece antes de que se llame a la función. La definición de función incluye el cuerpo de la función (el código que se ejecuta cuando se llama a la función).  

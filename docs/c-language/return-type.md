@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390192"
 ---
 # <a name="return-type"></a>Tipo devuelto
 El tipo de valor devuelto de una función establece el tamaño y el tipo de valor devuelto por la función y corresponde al especificador de tipo en la sintaxis siguiente:  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132471"
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>Cómo: Usar referencias de seguimiento en C++/CLI
 Este artículo muestra cómo usar una referencia de seguimiento (%) en C++ / CLI para pasar a common language runtime (CLR) tipos por referencia.  

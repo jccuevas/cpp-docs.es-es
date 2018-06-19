@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135864"
 ---
 # <a name="managed-types-ccl"></a>Tipos administrados (C++/CL)
 La sintaxis de la declaración de tipos administrados y la creación y uso de objetos de estos tipos se ha alterado significativamente desde extensiones administradas para C++ a Visual C++. Esto se hacía para promover su integración en el sistema de tipos de ISO C++. Estos cambios se presentan en detalle en las subsecciones siguientes.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385581"
 ---
 # <a name="truncation-of-text-files"></a>Truncamiento de archivos de texto
 **ANSI 4.9.3** Si una escritura en una secuencia de texto hace que el archivo asociado se trunque después de ese punto  

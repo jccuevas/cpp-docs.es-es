@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386857"
 ---
 # <a name="storage-of-arrays"></a>Almacenamiento de matrices
 El almacenamiento asociado a un tipo de matriz es el almacenamiento necesario para todos sus elementos. Los elementos de una matriz se almacenan en ubicaciones de memoria contiguas y crecientes, del primer elemento al último.  

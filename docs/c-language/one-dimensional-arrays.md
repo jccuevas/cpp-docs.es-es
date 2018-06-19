@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388911"
 ---
 # <a name="one-dimensional-arrays"></a>Matrices unidimensionales
 Una expresión de postfijo seguida de una expresión entre corchetes (**[ ]**) es una representación de subíndice de un elemento de un objeto de matriz. Una expresión de subíndice representa el valor en la dirección, es decir, posiciones de *expression* más allá de *postfix-expression* cuando se expresa como  

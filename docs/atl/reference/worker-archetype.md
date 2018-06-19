@@ -19,6 +19,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255983"
 ---
 # <a name="worker-archetype"></a>Arquetipo de trabajo
 Las clases que se ajustan a la *trabajo* Arquetipo proporcionar el código para procesar elementos de trabajo en cola en un grupo de subprocesos.  

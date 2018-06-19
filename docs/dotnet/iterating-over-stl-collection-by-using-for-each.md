@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131347"
 ---
 # <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>Iterar por la colección de biblioteca estándar de C++ mediante for each
 El `for each` palabra clave puede utilizarse para recorrer en iteración una colección de la biblioteca estándar de C++.  

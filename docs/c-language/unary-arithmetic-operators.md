@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390373"
 ---
 # <a name="unary-arithmetic-operators"></a>Operadores aritméticos unarios
 Los operadores de C unario más, negación aritmética, complemento y negación lógica se analizan en la lista siguiente:  

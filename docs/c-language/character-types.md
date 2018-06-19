@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383698"
 ---
 # <a name="character-types"></a>Tipos de caracteres
 Una constante de caracteres entera no precedida por la letra **L** tiene el tipo `int`. El valor de una constante de caracteres entera que contiene un carácter individual es el valor numérico del carácter interpretado como un entero. Por ejemplo, el valor numérico del carácter `a` es 97 en decimal y 61 en hexadecimal.  

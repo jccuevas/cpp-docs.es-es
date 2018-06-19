@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380267"
 ---
 # <a name="targets"></a>Destinos
 En una línea de dependencia, se pueden especificar uno o varios destinos usando cualquier nombre de archivo válido, el nombre del directorio o [pseudodestino](../build/pseudotargets.md). Separe varios destinos con uno o más espacios o tabulaciones. Destinos no distinguen mayúsculas de minúsculas. Se permiten rutas de acceso con nombres de archivo. Un destino no puede superar los 256 caracteres. Si el destino que precede el carácter de dos puntos es un único carácter, utilice un espacio de separación; de lo contrario, NMAKE interpreta la combinación de letras de dos puntos como un especificador de unidad.  

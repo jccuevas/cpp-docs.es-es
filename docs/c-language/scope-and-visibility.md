@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389194"
 ---
 # <a name="scope-and-visibility"></a>Ámbito y visibilidad
 La "visibilidad" de un identificador determina las partes del programa en las que se puede hacer referencia a él (su "ámbito"). Un identificador está visible (es decir, se puede utilizar) solo en las partes de un programa enmarcado por su "ámbito", que se puede limitar (en orden de restricción creciente) al archivo, función, bloque o prototipo de función en que aparece. El ámbito de un identificador es la parte del programa en que se puede usar el nombre. Esto a veces se denomina "ámbito léxico". Hay cuatro tipos de ámbito: función, archivo, bloque y prototipo de función.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385925"
 ---
 # <a name="using-the-additive-operators"></a>Usar los operadores de adición
 En los ejemplos siguientes, que muestran los operadores de suma y resta, se usan estas declaraciones:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380326"
 ---
 # <a name="return-values-c"></a>Valores devueltos (C++)
 Un valor escalar devuelto que puede caber en 64 bits se devuelve mediante RAX. Esto incluye tipos __m64. Los tipos no escalares como flotantes, dobles y tipos de vector como [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) se devuelven en XMM0. El estado de bits no usados en el valor devuelto en RAX o XMM0 es indefinido.  

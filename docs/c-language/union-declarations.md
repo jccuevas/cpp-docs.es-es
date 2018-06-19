@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391183"
 ---
 # <a name="union-declarations"></a>Declaraciones de unión
 Una "declaración de unión" especifica un conjunto de valores variable y, opcionalmente, una etiqueta que asigna un nombre a la unión. Los valores de variables se denominan "miembros" de la unión y pueden tener diferentes tipos. Las uniones son similares a los "registros de variante" en otros lenguajes.  

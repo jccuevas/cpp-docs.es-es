@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389948"
 ---
 # <a name="c-function-definitions"></a>Definiciones de funciones de C
 Una definición de función especifica el nombre de la función, los tipos y el número de parámetros que espera recibir, y su tipo de valor devuelto. Una definición de función también incluye un cuerpo de la función con las declaraciones de las variables locales y las instrucciones que determinan lo que hace la función.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387796"
 ---
 # <a name="c-multiplicative-operators"></a>Operadores de multiplicación de C
 Los operadores multiplicativos realizan operaciones de multiplicación (**\***), división (**/**) y resto (`%`).  

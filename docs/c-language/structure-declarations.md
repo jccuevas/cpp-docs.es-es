@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391905"
 ---
 # <a name="structure-declarations"></a>Declaraciones de estructura
 Una "declaración de estructura" designa un tipo y especifica una secuencia de valores variables (denominados “miembros” o “campos” de la estructura) que pueden tener diferentes tipos. Un identificador opcional, denominado “etiqueta”, proporciona el nombre del tipo de estructura y se puede usar en referencias posteriores al tipo de estructura. Una variable de este tipo de estructura contiene la secuencia completa definida por el tipo. Las estructuras de C son similares a los tipos denominados "registros" en otros lenguajes.  

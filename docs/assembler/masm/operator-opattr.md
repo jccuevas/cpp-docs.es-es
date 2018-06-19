@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057544"
 ---
 # <a name="operator-opattr"></a>Operador OPATTR
 Devuelve una palabra que define el modo y el ámbito de *expresión*. El byte bajo es idéntico a los bytes devueltos por [. TIPO de](../../assembler/masm/operator-dot-type.md). El byte alto contiene información adicional.  

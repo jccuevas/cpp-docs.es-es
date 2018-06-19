@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383444"
 ---
 # <a name="implementation-defined-behavior"></a>Comportamiento definido por implementación
 ANSI X3.159-1989, *American National Standard for Information Systems* - *Programming Language* - *C*, contiene una sección denominada "Problemas de portabilidad". La sección de ANSI muestra las áreas del lenguaje C que ANSI deja abiertas a cada implementación concreta. En esta sección se describe cómo controla Microsoft C estas áreas del lenguaje C definidas por la implementación.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380513"
 ---
 # <a name="varargs"></a>Varargs
 Si se pasan parámetros a través de varargs (por ejemplo, los argumentos de puntos suspensivos), esencialmente el parámetro normal pasar aplica incluyendo los argumentos quinto y posteriores. Nuevo es responsabilidad del destinatario volcar los argumentos que tomarse la dirección. Para valores de punto flotante, el entero y el registro de punto flotante contendrá el valor flotante en caso de que el destinatario espera el valor en los registros de enteros.  

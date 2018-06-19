@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354438"
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 Una secuencia de comandos del registrador proporciona controladas por datos, en lugar de controlada por la API, acceso al registro del sistema. Acceso controlada por datos es normalmente más eficaz ya que toma solo una o dos líneas en una secuencia de comandos para agregar una clave al registro.  

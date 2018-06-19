@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382151"
 ---
 # <a name="declarators-maximum-number"></a>Declaradores: número máximo
 **ANSI 3.5.4** Número máximo de declaradores que pueden modificar una operación aritmética, una estructura o un tipo de unión  

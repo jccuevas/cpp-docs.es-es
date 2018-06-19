@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137424"
 ---
 # <a name="how-to-marshal-a-safearray-for-adonet-ccli"></a>Cómo: serializar una matriz SAFEARRAY de ADO.NET (C++/CLI)
 Muestra cómo agregar nativo `SAFEARRAY` a una base de datos y cómo calcular las referencias de una matriz administrada de una base de datos a un native `SAFEARRAY`.  

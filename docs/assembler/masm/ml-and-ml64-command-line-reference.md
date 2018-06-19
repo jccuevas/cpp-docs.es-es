@@ -69,6 +69,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057804"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Referencia de la línea de comandos de ML y ML64
 Ensambla y se proporcionan vínculos a uno o más archivos de código fuente de lenguaje de ensamblado. Las opciones de línea de comandos distinguen mayúsculas de minúsculas.  

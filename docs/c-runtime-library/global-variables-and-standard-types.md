@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388999"
 ---
 # <a name="global-variables-and-standard-types"></a>Variables globales y tipos estándar
 La biblioteca en tiempo de ejecución de Microsoft contiene definiciones para [variables globales](../c-runtime-library/global-variables.md), [marcas de control](../c-runtime-library/control-flags.md) y [tipos estándar](../c-runtime-library/standard-types.md) utilizadas por las rutinas de la biblioteca. Puede acceder a estas variables, marcas y tipos si los declara en el programa o si incluye los archivos de encabezado apropiados.  

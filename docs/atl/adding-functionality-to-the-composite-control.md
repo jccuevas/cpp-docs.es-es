@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354187"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>Agregar funcionalidad al Control compuesto
 Una vez que haya insertado todos los controles necesarios en el control compuesto, el siguiente paso implica agregar la nueva funcionalidad. Esta nueva funcionalidad normalmente se divide en dos categorías:  

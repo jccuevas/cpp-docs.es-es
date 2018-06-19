@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383246"
 ---
 # <a name="struct-unwindinfo"></a>UNWIND_INFO (Estructura)
 La estructura de información de datos de desenredo sirve para registrar los efectos de una función en el puntero de pila y donde se guardan los registros no volátiles en la pila:  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379606"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Crear binario en modo kernel)
 Crea un archivo binario que se pueden ejecutar en el kernel de Windows.  

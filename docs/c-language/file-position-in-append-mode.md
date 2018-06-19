@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381673"
 ---
 # <a name="file-position-in-append-mode"></a>Posición de archivo en modo Append
 **ANSI 4.9.3** Indica si el marcador de posición de archivo de una secuencia de modo Append se coloca inicialmente al principio o al final del archivo  

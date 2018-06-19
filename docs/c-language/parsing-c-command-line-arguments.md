@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388606"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analizar los argumentos de la línea de comandos de C
 **Específicos de Microsoft**  

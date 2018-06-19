@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384972"
 ---
 # <a name="zero-length-files"></a>Archivos de longitud cero
 **ANSI 4.9.3** Si un archivo de longitud cero existe realmente  

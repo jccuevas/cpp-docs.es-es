@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354712"
 ---
 # <a name="memory-management-with-cstringt"></a>Administración de memoria con CStringT
 Clase [CStringT](../atl-mfc-shared/reference/cstringt-class.md) es una clase de plantilla usada para manipular las cadenas de caracteres de longitud variable. La memoria para almacenar estas cadenas se asignan y liberan a través de un objeto de administrador de cadenas, asociado a cada instancia de `CStringT`. MFC y ATL proporcionan instancias predeterminadas de `CStringT`, llamado `CString`, `CStringA`, y `CStringW`, que manipulan cadenas de distintos tipos de caracteres. Estos tipos de caracteres son de tipo **TCHAR**, `char`, y `wchar_t`, respectivamente. Estos tipos de cadena predeterminados utilizan un administrador de cadenas que asigna memoria desde el montón de procesos (en ATL) o el montón de CRT (en MFC). En las aplicaciones típicas, este esquema de asignación de memoria es suficiente. Sin embargo, para realizar un uso intensivo de código uso de cadenas (o código multiproceso) que los administradores de memoria predeterminados no pueden tener un óptimo. Este tema describe cómo invalidar el comportamiento predeterminado de administración de memoria de `CStringT`, creando asignadores específicamente optimizado para la tarea en cuestión.  

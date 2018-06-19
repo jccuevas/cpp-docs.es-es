@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391319"
 ---
 # <a name="printfp-positional-parameters"></a>printf_p (Parámetros de posición)
 Los parámetros de posición permiten especificar mediante número cuál de los argumentos se debe sustituir en un campo en una cadena de formato. Las siguientes funciones `printf` de parámetros de posición están disponibles:  

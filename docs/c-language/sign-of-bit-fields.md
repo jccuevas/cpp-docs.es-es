@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385848"
 ---
 # <a name="sign-of-bit-fields"></a>Signo de campos de bits
 **ANSI 3.5.2.1** Si un campo `int` "plain" se trata como un campo de bits **signed int** o como un campo de bits unsigned int  

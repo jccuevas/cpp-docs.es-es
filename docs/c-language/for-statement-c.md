@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389286"
 ---
 # <a name="for-statement-c"></a>for (Instrucción) (C)
 La instrucción **for** permite repetir una instrucción o una instrucción compuesta un número especificado de veces. El cuerpo de una instrucción **for** se ejecuta cero o más veces hasta que una condición opcional sea False. Puede usar expresiones opcionales dentro de la instrucción **for** para inicializar y cambiar valores durante la ejecución de la instrucción **for**.  

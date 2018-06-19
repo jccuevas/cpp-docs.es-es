@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379385"
 ---
 # <a name="decorated-names"></a>Nombres representativos
 Las funciones, los datos y los objetos de los programas C y C++ se representan internamente con sus nombres representativos. A *nombre representativo* es una cadena codificada creada por el compilador durante la compilación de un objeto, datos o definición de función. Registra las convenciones de llamada, los tipos, los parámetros de función y otra información junto con el nombre. Este decoración de nombres, también conocida como *la eliminación de nombres*, facilita que el enlazador encontrar las funciones correctas y los objetos al vincular un ejecutable.  

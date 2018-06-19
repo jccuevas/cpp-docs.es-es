@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388580"
 ---
 # <a name="generic-text-mappings"></a>Asignaciones de texto genérico
 A fin de simplificar la escritura de código para mercados internacionales, se definen asignaciones de texto genérico en TCHAR.H para:  

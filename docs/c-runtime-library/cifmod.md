@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386574"
 ---
 # <a name="cifmod"></a>_CIfmod
 Calcula el resto del punto flotante de los dos valores superiores de la pila.  

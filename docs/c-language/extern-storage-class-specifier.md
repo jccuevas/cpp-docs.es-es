@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388733"
 ---
 # <a name="extern-storage-class-specifier"></a>extern (Especificador de clase de almacenamiento)
 Una variable declarada con el especificador de clase de almacenamiento `extern` es una referencia a una variable con el mismo nombre definido en el nivel externo en cualquiera de los archivos de código fuente del programa. La declaración interna `extern` se utiliza para hacer que la definición de variable de nivel externo esté visible en el bloque. A menos que se declare de otra manera en el nivel externo, una variable declarada con la palabra clave `extern` solo está visible en el bloque en el que se declara.  

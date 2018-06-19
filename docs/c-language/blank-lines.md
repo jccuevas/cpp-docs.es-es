@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380659"
 ---
 # <a name="blank-lines"></a>Líneas en blanco
 **ANSI 4.9.2** Si los caracteres de espacio que se colocan en una secuencia de texto inmediatamente delante de un carácter de nueva línea aparecen al leer  

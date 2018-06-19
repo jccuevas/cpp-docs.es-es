@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354735"
 ---
 # <a name="building-and-testing-the-atl-project"></a>Compilar y probar el proyecto ATL
 Como se mencionó en [insertar un Control compuesto](../atl/inserting-a-composite-control.md), uno de los componentes iniciales del proyecto es una página HTML predeterminada que hospeda el nuevo control compuesto. Cuando termine de modificar el control compuesto, haga clic en **generar solución** o **volver a generar solución** desde el **generar** menú. Una vez que el proyecto se compila correctamente, cargue la página HTML, ubicada en el directorio raíz del proyecto de control compuesto, en Internet Explorer u otro explorador y pruebe la funcionalidad del control.  

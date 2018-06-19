@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391697"
 ---
 # <a name="parameters"></a>Parámetros
 Los argumentos son los nombres de los valores pasados a una función por una llamada de función. Los parámetros son los valores que la función espera recibir. En un prototipo de función, los paréntesis detrás del nombre de la función contienen una lista completa de los parámetros de la función y de sus tipos. Las declaraciones de parámetros especifican los tipos, tamaños e identificadores de los valores almacenados en los parámetros.  

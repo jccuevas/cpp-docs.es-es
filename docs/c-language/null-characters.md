@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383883"
 ---
 # <a name="null-characters"></a>Caracteres null
 **ANSI 4.9.2** El número de caracteres NULL que se pueden anexar a los datos escritos en una secuencia binaria  

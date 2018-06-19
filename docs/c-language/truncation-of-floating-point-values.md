@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385795"
 ---
 # <a name="truncation-of-floating-point-values"></a>Truncamiento de valores de punto flotante
 **ANSI 3.2.1.4** Dirección de truncamiento o redondeo cuando un número de punto flotante se convierte en un número de punto flotante menor  

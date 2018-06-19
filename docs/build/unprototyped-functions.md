@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380477"
 ---
 # <a name="unprototyped-functions"></a>Funciones sin prototipo
 Para las funciones sin prototipos bien definidas, el llamador pasará valores enteros como enteros y valores de punto flotante como de doble precisión. Para valores de punto flotante, tanto el registro entero y el registro de punto flotante contendrá el valor flotante en caso de que el destinatario espera el valor en los registros de enteros.  

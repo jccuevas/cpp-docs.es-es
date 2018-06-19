@@ -101,6 +101,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392151"
 ---
 # <a name="data-type-constants"></a>Constantes de tipo de datos
 Las constantes de tipo de datos son intervalos de valores dependientes de la implementación permitidos para los tipos de datos enteros. Las constantes que se muestran a continuación proporcionan los intervalos para los tipos de datos enteros y se definen en LIMITS.H.  

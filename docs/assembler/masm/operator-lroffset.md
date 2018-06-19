@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056595"
 ---
 # <a name="operator-lroffset"></a>Operador LROFFSET
 Devuelve el desplazamiento de *expresión*. Igual que **desplazamiento**, pero genera un desplazamiento resuelto cargador, lo que permite a Windows reubicar los segmentos de código.  

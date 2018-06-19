@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132559"
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>Cómo: Leer datos en el Registro de Windows (C++/CLI)
 El ejemplo de código siguiente utiliza la clave <xref:Microsoft.Win32.Registry.CurrentUser> para leer los datos del Registro de Windows. En primer lugar, se enumeran las subclaves utilizando el <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> método y, a continuación, en la subclave Identities se abre mediante el <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método. Del mismo modo que las claves raíz, cada subclave se representa mediante la clase <xref:Microsoft.Win32.RegistryKey>. Finalmente, el nuevo objeto <xref:Microsoft.Win32.RegistryKey> se utiliza para enumerar los pares clave/valor.  

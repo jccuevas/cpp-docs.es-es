@@ -22,6 +22,7 @@ ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34463097"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Tutorial: Depurar una aplicación de C++ AMP
 Este tema muestra cómo depurar una aplicación que usa C++ Accelerated Massive Parallelism (C++ AMP) para aprovechar las ventajas de la unidad de procesamiento de gráficos (GPU). Usa un programa de reducción paralelo que realiza la suma de una matriz grande de enteros. En este tutorial se muestran las tareas siguientes:  

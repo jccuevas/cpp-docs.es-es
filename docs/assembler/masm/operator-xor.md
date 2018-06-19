@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057382"
 ---
 # <a name="operator-xor"></a>Operador XOR
 Devuelve el resultado de un bit a bit **XOR** operación para *expression1* y *expression2*.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160060"
 ---
 # <a name="plus-stlclr"></a>plus (STL/CLR)
 La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento y el segundo. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  

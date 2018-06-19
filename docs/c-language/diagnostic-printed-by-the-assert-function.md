@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382882"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Diagnóstico impreso por la función assert
 **ANSI 4.2** El diagnóstico impreso por la función **assert** y su comportamiento de finalización  

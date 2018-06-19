@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135084"
 ---
 # <a name="how-to-enumerate-data-types-in-assemblies-using-reflection-ccli"></a>Cómo: Enumerar tipos de datos en ensamblados mediante reflexión (C++/CLI)
 El código siguiente muestra la enumeración de los tipos públicos y miembros mediante <xref:System.Reflection>.  

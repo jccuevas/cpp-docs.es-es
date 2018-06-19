@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390104"
 ---
 # <a name="struct-unwindcode"></a>UNWIND_CODE (Estructura)
 La matriz de códigos de desenredado se usa para registrar la secuencia de operaciones en el prólogo que afectan a los registros no volátiles y RSP. Cada elemento de código tiene el formato siguiente:  

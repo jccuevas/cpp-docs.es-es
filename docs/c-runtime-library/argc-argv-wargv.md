@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390224"
 ---
 # <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
 La variable global `__argc` es un recuento del número de argumentos de línea de comandos que se pasa al programa. `__argv` es un puntero a una matriz de cadenas de carácter de un solo byte o de carácter multibyte que contienen los argumentos del programa, mientras que `__wargv` es un puntero a una matriz de cadenas de carácter ancho que contienen los argumentos del programa. Estas variables globales proporcionan los argumentos para `main` o `wmain`.  
