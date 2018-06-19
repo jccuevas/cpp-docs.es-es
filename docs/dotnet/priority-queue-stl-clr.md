@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172545"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 La clase de plantilla describe un objeto que controla una longitud variable secuencia de elementos que tiene acceso limitado ordenada. Usar el adaptador de contenedor `priority_queue` para administrar un contenedor subyacente como una cola de prioridad.  

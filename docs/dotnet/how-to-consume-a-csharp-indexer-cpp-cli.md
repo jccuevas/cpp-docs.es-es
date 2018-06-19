@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127411"
 ---
 # <a name="how-to-consume-a-c-indexer-ccli"></a>Cómo: Consumir un indizador de C# (C++/CLI)
 Visual C++ no contiene indizadores; tiene propiedades indizadas. Para consumir un indizador de C#, tener acceso al indizador como si fuera una propiedad indizada.  

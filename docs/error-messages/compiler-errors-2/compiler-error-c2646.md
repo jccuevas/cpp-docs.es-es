@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199884"
 ---
 # <a name="compiler-error-c2646"></a>Error C2646 de Error del compilador
 Una unión o un struct anónimo en un ámbito global o de espacio de nombres se debe declarar como static  

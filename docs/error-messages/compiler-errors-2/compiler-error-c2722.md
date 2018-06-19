@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236383"
 ---
 # <a name="compiler-error-c2722"></a>C2722 de Error del compilador
 ':: operador ': elemento no válido después del comando del operador; Use 'operator operator'  

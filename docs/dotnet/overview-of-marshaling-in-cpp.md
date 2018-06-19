@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137139"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Información general de la serialización en C++
 En modo mixto, deben serializar los datos entre los tipos nativos y los administrados. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] introdujo la biblioteca de cálculo de referencias para ayudarle a calcular y convertir los datos de una manera sencilla.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197915"
 ---
 # <a name="compiler-error-c2392"></a>Error del compilador C2392
 'method1': devueltos de covariante no se admiten tipos en administrado o WinRTtypes, de lo contrario 'method2' se reemplazaría  

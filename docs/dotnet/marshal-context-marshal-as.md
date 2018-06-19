@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136212"
 ---
 # <a name="marshalcontextmarshalas"></a>serializar_context::serializar_as
 Realiza el cálculo de referencias en un objeto de datos específico para convertir entre administrado y un tipo de datos nativos.  

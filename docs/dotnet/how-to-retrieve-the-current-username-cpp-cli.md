@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127827"
 ---
 # <a name="how-to-retrieve-the-current-username-ccli"></a>Cómo: Recuperar el nombre de usuario actual (C++/CLI)
 En el ejemplo de código siguiente se muestra la recuperación del nombre del usuario actual (el nombre del usuario que ha iniciado sesión en Windows). El nombre se almacena en la <xref:System.Environment.UserName%2A> cadena, que se define en el <xref:System.Environment> espacio de nombres.  

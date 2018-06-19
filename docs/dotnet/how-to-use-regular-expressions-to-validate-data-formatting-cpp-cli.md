@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129621"
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Cómo: Utilizar expresiones regulares para validar el formato de los datos (C++/CLI)
 En el ejemplo de código siguiente se muestra el uso de expresiones regulares para comprobar el formato de una cadena. En el ejemplo de código siguiente, la cadena debe contener un número de teléfono válido. En el ejemplo de código siguiente se utiliza la cadena "\d{3}-\d{3}-\d{4}" para indicar que cada campo representa un número de teléfono válido. "D" en la cadena indica un dígito y el argumento después de cada "d" indica el número de dígitos que deben estar presentes. En este caso, el número tiene que estar separados por guiones.  

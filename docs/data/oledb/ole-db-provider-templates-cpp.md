@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112750"
 ---
 # <a name="ole-db-provider-templates-c"></a>Plantillas de proveedores OLE DB (C++)
 OLE DB es una parte importante de la estrategia de Microsoft Universal Data Access. El diseño de OLE DB permite el acceso a datos de alto rendimiento desde cualquier origen de datos. Los datos tabulares están visibles a través de OLE DB, independientemente de si proviene de una base de datos. Esta flexibilidad ofrece una enorme cantidad de energía.  

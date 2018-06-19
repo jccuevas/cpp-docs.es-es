@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135601"
 ---
 # <a name="operatorgt-stack-stlclr"></a>operador&gt;= (pila) (STL/CLR)
 Comparación igual o superior de la pila.  

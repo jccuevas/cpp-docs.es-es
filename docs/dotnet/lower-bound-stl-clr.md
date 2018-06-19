@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129816"
 ---
 # <a name="lowerbound-stlclr"></a>lower_bound (STL/CLR)
 Busca la posición del primer elemento en un intervalo ordenado que tiene un valor menor o equivalente a un valor especificado, donde el criterio de ordenación se puede especificar mediante un predicado binario.  

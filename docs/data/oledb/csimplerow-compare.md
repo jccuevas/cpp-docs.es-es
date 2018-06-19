@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098970"
 ---
 # <a name="csimplerowcompare"></a>CSimpleRow::Compare
 Compara dos filas para comprobar si hacen referencia a la misma instancia de fila.  

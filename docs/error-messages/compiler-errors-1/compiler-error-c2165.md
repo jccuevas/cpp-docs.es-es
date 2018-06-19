@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170484"
 ---
 # <a name="compiler-error-c2165"></a>Error del compilador C2165
 'palabra clave': no se pueden modificar los punteros a datos  

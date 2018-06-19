@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130063"
 ---
 # <a name="how-to-convert-image-file-formats-with-the-net-framework"></a>Cómo: Convertir formatos de archivo de imagen con .NET Framework
 En el ejemplo de código siguiente se muestra la <xref:System.Drawing.Image?displayProperty=fullName> clase y el <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> enumeración que se usa para convertir y guardar archivos de imagen. El siguiente código carga una imagen desde un archivo .jpg y, a continuación, guarda en formatos de archivo .gif y .bmp.  

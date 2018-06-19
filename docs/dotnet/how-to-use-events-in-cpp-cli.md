@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138044"
 ---
 # <a name="how-to-use-events-in-ccli"></a>Cómo: Usar eventos en C++/CLI
 Este artículo muestra cómo utilizar una interfaz que declara un evento y una función para invocar ese evento y el controlador de clase y eventos que implementan la interfaz.  

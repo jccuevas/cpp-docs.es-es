@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134480"
 ---
 # <a name="multiplies-stlclr"></a>multiplies (STL/CLR)
 La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento veces el segundo. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  

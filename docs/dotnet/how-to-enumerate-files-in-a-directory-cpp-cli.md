@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127895"
 ---
 # <a name="how-to-enumerate-files-in-a-directory-ccli"></a>Cómo: Enumerar archivos en un directorio (C++/CLI)
 En el ejemplo de código siguiente se muestra cómo recuperar una lista de los archivos en un directorio. Además, se enumeran los subdirectorios. El siguiente ejemplo de código utiliza el <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> y <xref:System.IO.Directory.GetDirectories%2A> métodos para mostrar el contenido del directorio C:\Windows.  

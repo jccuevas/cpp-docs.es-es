@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33140125"
 ---
 # <a name="marshalcontextmarshalcontext"></a>serializar_context::serializar_context
 Construye un `marshal_context` objeto que se va a usar para la conversión de datos entre los tipos de datos administrados y nativos.  

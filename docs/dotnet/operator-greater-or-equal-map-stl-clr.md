@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137593"
 ---
 # <a name="operatorgt-map-stlclr"></a>operador&gt;= (map) (STL/CLR)
 Comparación igual o mayor de la lista.  

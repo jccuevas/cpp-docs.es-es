@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281981"
 ---
 # <a name="compiler-warning-level-1-c4297"></a>Advertencia del compilador (nivel 1) C4297
 'función': se suponía que la función no iniciaba una excepción, pero lo hace  

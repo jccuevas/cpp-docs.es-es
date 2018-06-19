@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135218"
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Cómo: Implementar una arquitectura de componentes complementarios mediante reflexión (C++/CLI)
 Ejemplos de código siguientes muestran el uso de reflexión para implementar una arquitectura de "complemento" simple. La primera lista es la aplicación y el segundo es el complemento. La aplicación es un formulario de múltiples documentos que se rellena con las clases de basada en formularios que se encuentran en la DLL del complemento proporcionada como un argumento de línea de comandos.  

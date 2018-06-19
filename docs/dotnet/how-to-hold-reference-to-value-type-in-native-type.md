@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129793"
 ---
 # <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Cómo: Mantener la referencia a un tipo de valor en un tipo nativo
 Use `gcroot` en el tipo de conversión boxing para mantener una referencia a un tipo de valor en un tipo nativo.  

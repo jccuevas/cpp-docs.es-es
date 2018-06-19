@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112061"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Referencia de plantillas de consumidor OLE DB
 Las plantillas de consumidor OLE DB contienen las siguientes clases. El material de referencia también incluye temas sobre la [macros para plantillas de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  

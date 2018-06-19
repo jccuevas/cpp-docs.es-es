@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137476"
 ---
 # <a name="how-to-marshal-ansi-strings-for-adonet-ccli"></a>Cómo: serializar cadenas ANSI para ADO.NET (C++/CLI)
 Muestra cómo agregar una cadena nativa (`char *`) a una base de datos y cómo calcular las referencias de un <xref:System.String?displayProperty=fullName> desde una base de datos en una cadena nativa.  

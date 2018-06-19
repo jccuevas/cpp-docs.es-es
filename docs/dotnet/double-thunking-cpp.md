@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111213"
 ---
 # <a name="double-thunking-c"></a>Doble thunk (C++)
 Doble thunk se refiere a la pérdida de rendimiento que pueden surgir al punto de entrada nativo de la función llama a una llamada de función en un contexto administrado llama función administrada de Visual C++ y donde la ejecución del programa para poder llamar a la función administrada. Este tema explica dónde ocurre double thunk y cómo se puede evitar para mejorar el rendimiento.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248080"
 ---
 # <a name="compiler-error-c3173"></a>C3173 de Error del compilador
 Error de coincidencia de versión en la combinación de idl  

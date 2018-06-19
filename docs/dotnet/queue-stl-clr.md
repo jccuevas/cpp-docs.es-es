@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172749"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso primero en salir. Usar el adaptador de contenedor `queue` para administrar un contenedor subyacente como una cola.  

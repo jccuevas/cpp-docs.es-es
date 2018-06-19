@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137268"
 ---
 # <a name="logicalor-stlclr"></a>logical_or (STL/CLR)
 La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento o las pruebas de segundo como true. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  

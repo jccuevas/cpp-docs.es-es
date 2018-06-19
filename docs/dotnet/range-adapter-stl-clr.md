@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162330"
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
 Una clase de plantilla que contenga un par de iteradores que se usan para implementar varias interfaces de la biblioteca de clases Base (BCL). Utilice la range_adapter para manipular un intervalo STL/CLR como si fuera una colección de BCL.  

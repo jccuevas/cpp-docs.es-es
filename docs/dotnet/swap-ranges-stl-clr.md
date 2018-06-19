@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164416"
 ---
 # <a name="swapranges-stlclr"></a>swap_ranges (STL/CLR)
 Intercambia los elementos de un intervalo con los elementos de otro intervalo del mismo tamaño.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137515"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 Adquiere un bloqueo en un objeto, esperando un período de tiempo especificado y devuelve un `bool` para notificar el éxito de adquisición en lugar de producir una excepción.  

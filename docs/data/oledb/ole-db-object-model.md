@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111086"
 ---
 # <a name="ole-db-object-model"></a>Modelo de objetos OLE DB
 El modelo de objetos OLE DB consta de los siguientes objetos o componentes. Los primeros cuatro objetos o componentes (orígenes de datos, sesiones, comandos y conjuntos de filas) permiten conectarse a un origen de datos y verlo. El resto, a partir de los descriptores de acceso, se refieren a trabajar con los datos cuando se muestre.  

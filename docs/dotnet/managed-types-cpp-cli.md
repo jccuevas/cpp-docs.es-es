@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137683"
 ---
 # <a name="managed-types-ccli"></a>Tipos administrados (C++/CLI)
 Visual C++ permite el acceso a las características de .NET mediante tipos administrados, que proporcionan compatibilidad para características de common language runtime y están sujetos a las ventajas y las restricciones de tiempo de ejecución.  
