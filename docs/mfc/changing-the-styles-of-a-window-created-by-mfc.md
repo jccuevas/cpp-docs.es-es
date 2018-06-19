@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345734"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Cambiar los estilos de una ventana creada por MFC
 En su versión de la `WinMain` función, MFC registra varias clases de ventana estándar para usted. Dado que normalmente no editar de MFC `WinMain`, que función da como resultado no hay oportunidad de cambiar los estilos de ventana predeterminados MFC. Este artículo explica cómo puede cambiar los estilos de esta clase de ventana registrada previamente en una aplicación existente.  

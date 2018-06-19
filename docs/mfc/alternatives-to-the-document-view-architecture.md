@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344209"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativas a la arquitectura documento/vista
 Aplicaciones MFC suelen usar la arquitectura documento/vista para administrar la información, formatos de archivo y la representación visual de los datos a los usuarios. Para la mayoría de las aplicaciones de escritorio, la arquitectura documento/vista es una arquitectura de aplicaciones adecuada y eficaz. Esta arquitectura separa los datos de la vista y, en la mayoría de los casos, simplifica la aplicación y reduce el código redundante.  

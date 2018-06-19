@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345799"
 ---
 # <a name="document-template-creation"></a>Clear plantillas de documentos
 Al crear un nuevo documento en respuesta a un `New` o **abiertos** línea de comandos desde el **archivo** menú, la plantilla de documento también crea una nueva ventana de marco a través de la que se va a ver el documento.  

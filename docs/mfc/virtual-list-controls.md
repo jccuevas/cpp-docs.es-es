@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384197"
 ---
 # <a name="virtual-list-controls"></a>Controles de lista virtual
 Un control de lista virtual es un control de vista de lista que tiene el **LVS_OWNERDATA** estilo. Este estilo permite al control admitir un recuento de elementos de un `DWORD` (el número de elementos de manera predeterminada sólo se extiende a un `int`). Sin embargo, la ventaja principal proporcionada por este estilo es la capacidad para tener sólo un subconjunto de elementos de datos en memoria en cualquier momento. Esto permite que el control de vista de lista virtual conducir por sí mismo para su uso con grandes bases de datos de información, donde los métodos específicos de acceso a los datos ya están en su lugar.  

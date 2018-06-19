@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345070"
 ---
 # <a name="frame-window-classes-windows"></a>Clases de ventana de marco (Windows)
 Ventanas de marco son ventanas que una aplicación o una parte de una aplicación de marco. Ventanas de marco suelen contengan otras ventanas, como vistas, barras de herramientas y barras de estado. En el caso de `CMDIFrameWnd`, que pueden contener `CMDIChildWnd` objetos indirectamente.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344940"
 ---
 # <a name="managing-mdi-child-windows"></a>Administrar ventanas secundarias MDI
 Ventanas de marco principal MDI (una por aplicación) contienen una ventana secundaria especial denominada el **MDICLIENT** ventana. El **MDICLIENT** ventana administra el área de cliente de la ventana de marco principal y tiene ventanas secundarias: las ventanas de documento, que se deriva de `CMDIChildWnd`. Dado que las ventanas de documento son ventanas de marco por sí mismos (ventanas secundarias MDI), también pueden tener sus propios elementos secundarios. En todos estos casos, la ventana primaria administra sus ventanas secundarias y reenvía algunos comandos a ellos.  

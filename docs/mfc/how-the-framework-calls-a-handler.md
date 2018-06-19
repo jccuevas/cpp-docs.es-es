@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343624"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Cómo el marco llama a un controlador
 Los temas siguientes en primer lugar examinar cómo el marco de trabajo enruta los comandos, a continuación, examinar cómo se envían otros mensajes y notificaciones del control de Windows:  

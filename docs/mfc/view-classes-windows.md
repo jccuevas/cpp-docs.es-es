@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384184"
 ---
 # <a name="view-classes-windows"></a>Clases de vistas (Windows)
 `CView` y sus clases derivadas son ventanas secundarias que representan el área cliente de una ventana de marco. Vistas muestran los datos y aceptan la entrada de un documento.  

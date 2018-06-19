@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856910"
 ---
 # <a name="asyncuuid"></a>async_uuid
 Especifica el UUID que hace que el compilador MIDL para definir versiones sincrónicas y asincrónicas de una interfaz COM.  

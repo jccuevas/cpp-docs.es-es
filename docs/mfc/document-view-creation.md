@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343530"
 ---
 # <a name="documentview-creation"></a>Crear documentos y vistas
 El marco de trabajo proporciona implementaciones de la `New` y **abiertos** comandos (entre otras cosas) en el **archivo** menú. Creación de un nuevo documento y su vista asociada y la ventana de marco es un esfuerzo cooperativo entre el objeto de aplicación, una plantilla de documento, el documento recién creado y la ventana de marco recién creada. La tabla siguiente resume qué objetos crean qué.  

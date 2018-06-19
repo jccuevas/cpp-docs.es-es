@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346443"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Manipular el control de información sobre herramientas
 Clase `CToolTipCtrl` proporciona un grupo de miembro funciones que controlan los distintos atributos de la `CToolTipCtrl` objeto y la ventana de información sobre herramientas.  

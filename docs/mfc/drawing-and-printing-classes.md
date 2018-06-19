@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344785"
 ---
 # <a name="drawing-and-printing-classes"></a>Clases de dibujo e impresión
 En Windows, todos los resultados gráfico se dibujan en un área de dibujo virtual llamado a un contexto de dispositivo (DC). MFC proporciona clases para encapsular los distintos tipos de controladores de dominio, así como encapsulaciones para herramientas de dibujo de Windows como mapas de bits, pinceles, paletas y lápices.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385929"
 ---
 # <a name="wininet-basics"></a>Fundamentos de WinInet
 Puede usar WinInet para agregar compatibilidad con el FTP para cargar y descargar archivos desde dentro de la aplicación. Puede invalidar [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) y usar el `dwContext` parámetro para proporcionar información de progreso a los usuarios buscar y descargar archivos.  

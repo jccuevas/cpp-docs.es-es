@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346199"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Excepciones: Iniciar excepciones desde sus propias funciones
 Es posible utilizar el paradigma de control de excepciones de MFC solamente para detectar las excepciones producidas por las funciones de MFC o de otras bibliotecas. Además de detectar las excepciones producidas por código de la biblioteca, puede iniciar excepciones desde su propio código si va a escribir las funciones que pueden encontrar situaciones excepcionales.  

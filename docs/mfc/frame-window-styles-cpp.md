@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343766"
 ---
 # <a name="frame-window-styles-c"></a>Estilos de ventana de marco (C++)
 Las ventanas de marco se obtienen con el marco de trabajo son adecuadas para la mayoría de los programas, pero puede tener una flexibilidad adicional mediante las funciones avanzadas [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) y la función global de MFC [AfxRegisterWndClass ](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` es una función miembro de `CWnd`.  

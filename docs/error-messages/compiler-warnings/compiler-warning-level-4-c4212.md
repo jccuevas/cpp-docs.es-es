@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292008"
 ---
 # <a name="compiler-warning-level-4-c4212"></a>Advertencia del compilador (nivel 4) C4212
 ha utilizado una extensión no estándar: declaración de función utilizado puntos suspensivos  

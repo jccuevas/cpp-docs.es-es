@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382007"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Usar cadenas de formato personalizado en un control de selector de fecha y hora
 De forma predeterminada, los controles de selector de fecha y hora proporcionan que tres dar formato a tipos (cada formato corresponde a un estilo único) para mostrar la fecha y hora actuales:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342496"
 ---
 # <a name="automation-clients"></a>clientes de automatización
 Automatización permite a la aplicación para manipular objetos implementados en otra aplicación o exponga objetos para que se puedan manipular. Un cliente de automatización es una aplicación que puede manipular objetos expuestos por otra aplicación. La aplicación que expone los objetos se denomina servidor de automatización. El cliente usa los objetos de la aplicación de servidor mediante el acceso a funciones y propiedades de esos objetos.  

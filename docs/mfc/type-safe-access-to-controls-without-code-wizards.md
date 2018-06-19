@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385770"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>Acceso con seguridad de tipos a los controles sin Asistentes para código
 El primer enfoque para crear acceso con seguridad de tipos a los controles usa una función miembro inline para convertir el tipo de valor devuelto de la clase `CWnd`del `GetDlgItem` función de miembro para el tipo de control de C++ adecuado, como en este ejemplo:  

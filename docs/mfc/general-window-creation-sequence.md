@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346521"
 ---
 # <a name="general-window-creation-sequence"></a>Secuencia de creación de ventanas general
 Cuando se crea una ventana de la ventana de su elección, como un elemento secundario, el marco de trabajo usa mucho el mismo proceso que se describe en [creación de documento/vista](../mfc/document-view-creation.md).  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345031"
 ---
 # <a name="initinstance-member-function"></a>InitInstance Member (Función)
 El sistema operativo Windows permite ejecutar más de una copia o "instancia" de la misma aplicación. `WinMain` llamadas [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) cada vez que inicia una nueva instancia de la aplicación.  

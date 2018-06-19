@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343650"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Omitir el mecanismo de serialización
 Como ha visto, el marco de trabajo proporciona una manera predeterminada para leer y escribir datos en y desde archivos. La serialización a través de un objeto de almacenamiento se adapte a las necesidades de una gran cantidad de aplicaciones. Este tipo de aplicación lee un archivo completamente en la memoria, permite al usuario actualizar el archivo y, a continuación, escribe la versión actualizada en el disco de nuevo.  

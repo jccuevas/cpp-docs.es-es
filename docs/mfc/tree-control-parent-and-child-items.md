@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382520"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Elementos primario y secundario del control de árbol
 Cualquier elemento de un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) puede tener una lista de subelementos, que se denominan elementos secundarios, asociados a él. Un elemento que tiene uno o más elementos secundarios se denomina un elemento primario. Un elemento secundario se muestra debajo de su elemento primario y se aplica una sangría para indicar que es subordinado al elemento primario. Un elemento que no tiene elemento primario está en la parte superior de la jerarquía y se llama a un elemento raíz.  

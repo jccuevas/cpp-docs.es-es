@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319083"
 ---
 # <a name="project-build-error-prj0034"></a>Error PRJ0034 al compilar el proyecto
 La propiedad 'Dependencias adicionales' para el nivel de proyecto personalizado de generación paso contenido 'macro', que evalúa en 'expansión_de_macro'.  

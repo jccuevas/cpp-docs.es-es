@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383038"
 ---
 # <a name="working-with-a-header-control"></a>Trabajar con un control de encabezado
 Una manera fácil de usar un control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) es junto con un control de lista; vea [utilizar CListCtrl](../mfc/using-clistctrl.md) más adelante en este conjunto de temas. También puede utilizar un control de encabezado por sí mismo. Llamadas MFC **a InitCommonControls** para usted. Las tareas clave son los siguientes:  

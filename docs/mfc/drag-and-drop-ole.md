@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344342"
 ---
 # <a name="drag-and-drop-ole"></a>Arrastrar y colocar (OLE)
 La característica de arrastrar y colocar de OLE es principalmente un acceso directo para copiar y pegar los datos. Al usar el Portapapeles para copiar o pegar los datos, una serie de pasos es necesaria. Seleccione los datos, haga clic en **cortar** o **copia** desde el **editar** menú, mover en el archivo de destino, la ventana o la aplicación, coloque el cursor en la ubicación deseada y haga clic en **Pegar** desde el **editar** menú.  

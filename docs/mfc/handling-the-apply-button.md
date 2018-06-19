@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345050"
 ---
 # <a name="handling-the-apply-button"></a>Controlar el botón Aplicar
 Hojas de propiedades tienen una capacidad que no lo hacen de cuadros de diálogo estándar: permiten que el usuario aplicar los cambios que han realizado antes de cerrar la hoja de propiedades. Esto se realiza mediante el botón Aplicar. En este artículo se describe los métodos que puede usar para implementar correctamente esta característica.  

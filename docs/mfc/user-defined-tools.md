@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384353"
 ---
 # <a name="user-defined-tools"></a>Herramientas definidas por el usuario
 MFC admite herramientas definidas por el usuario. Una herramienta definido por el usuario es un comando especial que se ejecuta un programa externo, especificado por el usuario. Puede usar el proceso de personalización para administrar herramientas definidas por el usuario. Sin embargo, no se puede utilizar este proceso si el objeto de aplicación no se deriva de [CWinAppEx Class](../mfc/reference/cwinappex-class.md). Para obtener más información sobre la personalización, consulte [personalización de MFC](../mfc/customization-for-mfc.md).  

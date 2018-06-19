@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689589"
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: Finalizar subprocesos
 Dos situaciones normales que un subproceso terminar: la función controladora finaliza o el subproceso no puede ejecutarse hasta su finalización. Si un procesador de textos, se utiliza un subproceso para impresión en segundo plano, la función controladora terminaría normalmente si la impresión se completa correctamente. Si el usuario desea cancelar la impresión, sin embargo, el subproceso en segundo plano impresión tiene finalizó de forma prematura. Este tema explica cómo implementar cada situación y cómo obtener el código de salida de un subproceso después de que termine.  

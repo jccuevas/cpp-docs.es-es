@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857004"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Cambiar el factor de ampliación (Editor de imágenes para iconos)
 De forma predeterminada, el editor de imágenes muestra la vista en el panel izquierdo en tamaño real y la vista en el panel derecho a 6 veces el tamaño real. El factor de ampliación (que se muestra en la barra de estado en la parte inferior del área de trabajo) es la relación entre el tamaño real de la imagen y el tamaño presentado. El factor predeterminado es 6 y el intervalo es de 1 a 10.  

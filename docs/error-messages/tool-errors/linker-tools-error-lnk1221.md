@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299232"
 ---
 # <a name="linker-tools-error-lnk1221"></a>Error de las herramientas del vinculador LNK1221
 no se pueden inferir de un subsistema y debe definirse  

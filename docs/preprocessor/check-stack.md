@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849774"
 ---
 # <a name="checkstack"></a>check_stack
 Indica al compilador que desactive la opción comprobaciones de la pila si **desactivar** (o **-**) se especifica, o para activar comprobaciones de la pila si **en** (o **+**) se especifica.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299128"
 ---
 # <a name="expression-evaluator-error-cxx0041"></a>Error del evaluador de expresiones CXX0041
 elemento de la clase debe ser miembro estático o una función miembro  

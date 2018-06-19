@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342912"
 ---
 # <a name="month-calendar-control-examples"></a>Ejemplo de control de calendario mensual
 El [CMNCTRL1](../visual-cpp-samples.md) aplicación de ejemplo muestra los distintos atributos de la `CMonthCalCtrl` clase. El control, que se encuentra en una pestaña independiente en el ejemplo, muestra la funcionalidad básica y permite al usuario modificar de forma dinámica ciertos atributos.  

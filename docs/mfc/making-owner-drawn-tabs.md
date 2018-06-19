@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346508"
 ---
 # <a name="making-owner-drawn-tabs"></a>Crear pestañas dibujadas por el propietario
 Puede definir los elementos individuales de un control de pestaña ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) para que sean elementos dibujados por el propietario. Para obtener más información, consulte [pestañas dibujadas por el propietario](http://msdn.microsoft.com/library/windows/desktop/bb760550) del SDK de Windows.  

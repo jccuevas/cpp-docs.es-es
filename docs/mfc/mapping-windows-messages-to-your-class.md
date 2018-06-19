@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346274"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapping Windows Messages to Your (Clase)
 Si necesita el cuadro de diálogo para controlar los mensajes de Windows, reemplace las funciones de controlador adecuado. Para ello, utilice la ventana Propiedades para [asignar los mensajes de](../mfc/reference/mapping-messages-to-functions.md) a la clase de cuadro de diálogo. Se escribe una entrada de mapa de mensajes para cada mensaje y agregan las funciones de miembro de controlador de mensajes a la clase. Utilice el editor de código fuente de Visual C++ para escribir código en los controladores de mensajes.  

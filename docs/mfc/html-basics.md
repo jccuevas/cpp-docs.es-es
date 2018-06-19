@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347222"
 ---
 # <a name="html-basics"></a>Conceptos básicos de HTML
 Mayoría de los exploradores tiene la capacidad de examinar el código fuente HTML de las páginas que examina. Al ver el origen, verá un número de etiquetas HTML (lenguaje de marcado de hipertexto), incluido entre corchetes angulares (<>), entremezclados con texto.  

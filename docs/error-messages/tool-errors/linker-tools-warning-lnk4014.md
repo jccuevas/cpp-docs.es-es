@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300064"
 ---
 # <a name="linker-tools-warning-lnk4014"></a>Advertencia de las herramientas del vinculador LNK4014
 no se puede encontrar el objeto de miembro "objectname"  

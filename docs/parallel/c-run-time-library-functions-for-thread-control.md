@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685767"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funciones de la biblioteca en tiempo de ejecución de C para el control de subprocesos
 Todos los programas Win32 contienen al menos un subproceso. Cualquier subproceso puede crear subprocesos adicionales. Un subproceso puede completar su trabajo rápidamente y después terminar, o bien puede permanecer activo durante toda la vida del programa.  

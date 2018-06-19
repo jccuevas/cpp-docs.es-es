@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856422"
 ---
 # <a name="accelerator-editor"></a>Editor de aceleradores
 Una tabla de aceleradores es un recurso de Windows que contiene una lista de teclas de aceleración (también conocidas como teclas de método abreviado) y los identificadores de comandos asociados con ellas. Un programa puede tener más de una tabla de aceleradores.  

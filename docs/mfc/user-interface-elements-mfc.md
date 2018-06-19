@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383247"
 ---
 # <a name="user-interface-elements-mfc"></a>Elementos de la interfaz de usuario (MFC)
 Para obtener información sobre cómo crear la interfaz de usuario para la aplicación mediante el uso de la biblioteca (Microsoft Foundation Classes), vea los temas siguientes.  

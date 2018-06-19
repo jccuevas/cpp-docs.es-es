@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342984"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Objetos de datos y orígenes de datos (OLE)
 Cuando se realiza una transferencia de datos, ya sea mediante el Portapapeles o arrastrar y colocar los datos tienen un origen y un destino. Una aplicación proporciona los datos para copiar y otra aplicación lo acepta para pegarlo. Cada parte de la transferencia debe realizar distintas operaciones en los mismos datos para la transferencia sea correcta. La biblioteca (Microsoft Foundation Classes) proporciona dos clases que representan cada parte de esta transferencia:  
