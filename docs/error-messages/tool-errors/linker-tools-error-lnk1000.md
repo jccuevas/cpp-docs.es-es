@@ -1,7 +1,7 @@
 ---
 title: Las herramientas del vinculador LNK1000 Error | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f67df9c53b79fabfc9559380b5b57a72e64cb8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a01db36200995813ec4b6862e9ddd04c6f069ba
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298241"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238687"
 ---
 # <a name="linker-tools-error-lnk1000"></a>Error de las herramientas del vinculador LNK1000
-error desconocido; Consulte la documentación para opciones de soporte técnico  
-  
- Anote las circunstancias del error, intente aislar el problema y crear un caso de prueba reproducible, a continuación, póngase en contacto con `Microsoft Product Support Services`. Para obtener información sobre cómo investigar y notificar estos errores, vea [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650).  
-  
- Puede obtener este error si mezcla archivos de encabezado estándar (por ejemplo, dos.h) y sus propios archivos. `#include` los encabezados estándar en primer lugar, seguido de sus propios archivos de encabezado.
+
+> error desconocido; Consulte la documentación para opciones de soporte técnico
+
+Anote las circunstancias del error y, a continuación, intente aislar el problema y crear un caso de prueba reproducible. Para obtener información sobre cómo investigar y notificar estos errores, vea [cómo notificar un problema con el conjunto de herramientas de Visual C++ o documentación](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+
+Puede obtener este error si mezcla archivos de encabezado estándar (por ejemplo, Windows.h) y sus propios archivos. Incluir un encabezado precompilado, si alguna, primero y luego los encabezados estándares, seguido de sus propios archivos de encabezado.
