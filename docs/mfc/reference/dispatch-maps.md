@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5af6a8644514b18af3397fb22d54d42f649eed09
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377101"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271323"
 ---
 # <a name="dispatch-maps"></a>Mapas de envío
 Automatización OLE proporciona métodos para llamar a métodos y tener acceso a propiedades en todas las aplicaciones. El mecanismo proporcionado por la biblioteca Microsoft Foundation Class para enviar estas solicitudes es el "mapa de envíos", que designa los nombres internos y externos de funciones de objetos y propiedades, así como los tipos de datos de las propiedades en Sí y de argumentos de función.  
@@ -163,20 +163,20 @@ DISP_FUNCTION(
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**VARIANTE const\***  o **VARIANT &**|  
+|**VTS_VARIANT**|**VARIANTE const\\ \***  o **VARIANT &**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**Corto\***|  
-|**VTS_PI4**|**Long\***|  
-|**VTS_PR4**|**Float\***|  
-|**VTS_PR8**|**Doble\***|  
-|**VTS_PCY**|**CY\***|  
-|**VTS_PDATE**|**FECHA\***|  
-|**VTS_PBSTR**|**BSTR\***|  
-|**VTS_PDISPATCH**|**LPDISPATCH\***|  
-|**VTS_PSCODE**|**SCODE\***|  
-|**VTS_PBOOL**|**BOOL\***|  
-|**VTS_PVARIANT**|**VARIANT\***|  
-|**VTS_PUNKNOWN**|**LPUNKNOWN\***|  
+|**VTS_PI2**|**Corto\\\***|  
+|**VTS_PI4**|**Long\\\***|  
+|**VTS_PR4**|**Float\\\***|  
+|**VTS_PR8**|**Doble\\\***|  
+|**VTS_PCY**|**CY\\\***|  
+|**VTS_PDATE**|**FECHA\\\***|  
+|**VTS_PBSTR**|**BSTR\\\***|  
+|**VTS_PDISPATCH**|**LPDISPATCH\\\***|  
+|**VTS_PSCODE**|**SCODE\\\***|  
+|**VTS_PBOOL**|**BOOL\\\***|  
+|**VTS_PVARIANT**|**VARIANT\\\***|  
+|**VTS_PUNKNOWN**|**LPUNKNOWN\\\***|  
 |**VTS_NONE**|Sin parámetros|  
 
 ### <a name="requirements"></a>Requisitos  

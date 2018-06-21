@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372624"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271352"
 ---
 # <a name="chttpfile-class"></a>Clase CHttpFile
 Proporciona la funcionalidad para solicitar y leer archivos en un servidor HTTP.  
@@ -115,7 +115,7 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  Modifica la semántica de los encabezados de nuevo. Puede ser uno de los siguientes:  
   
-- `HTTP_ADDREQ_FLAG_COALESCE` Combina los encabezados del mismo nombre, con la marca para agregar el primer encabezado detectado que el encabezado posterior. Por ejemplo, "Accept: texto / *" seguido de "Accept: audio /\*" da como resultado la formación de solo encabezado "Accept: texto /\*, audio /\*". Depende de la aplicación que realiza la llamada para garantizar un esquema coherente con respecto a los datos que recibe las solicitudes enviadas con encabezados combinados o en otra diferentes.  
+- `HTTP_ADDREQ_FLAG_COALESCE` Combina los encabezados del mismo nombre, con la marca para agregar el primer encabezado detectado que el encabezado posterior. Por ejemplo, "Accept: texto /\*" seguido de "Accept: audio /\*" da como resultado la formación de solo encabezado "Accept: texto /\*, audio /\*". Depende de la aplicación que realiza la llamada para garantizar un esquema coherente con respecto a los datos que recibe las solicitudes enviadas con encabezados combinados o en otra diferentes.  
   
 - `HTTP_ADDREQ_FLAG_REPLACE` Realiza una eliminación y agregar para reemplazar el encabezado actual. El nombre del encabezado que se usará para quitar el encabezado actual y el valor completo se usará para agregar el nuevo encabezado. Si el valor de encabezado está vacío y se encuentra el encabezado, se quita. Si no está vacío, se reemplaza el valor del encabezado.  
   
