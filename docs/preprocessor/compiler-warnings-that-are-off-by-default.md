@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c1187d0fcfec45a21a358c8d20c4f3684f17feb3
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705571"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322399"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Advertencias del compilador que están desactivadas de forma predeterminada
 
@@ -89,7 +89,7 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (nivel 1)|'*operator1*': operador antes de la coma no tiene ningún efecto; ¿deseaba '*operator2*'?|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (nivel 1)|la expresión no tiene efecto; se esperaba una expresión con efecto secundario|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (nivel 3)|'__assume' contiene el efecto '*efecto*'|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (nivel 4)|Informativo: la semántica de catch cambiada desde Visual C++ 7.1; ya no se detectan excepciones estructuradas (SEH)|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (nivel 4)|informativo: la semántica de catch cambiada desde Visual C++ 7.1; ya no se detectan excepciones estructuradas (SEH)|
 |C4574 (nivel 4)|'*identificador*'se define como ' 0': ¿pretendía usar ' #if *identificador*'?|
 |C4577 (nivel 1)|'noexcept' usar con ningún modo especificado; de control de excepciones no se garantiza la finalización en la excepción. Especifique/EHsc|
 |C4582 (nivel 4)|'*tipo*': no se llama implícitamente a constructor|
@@ -153,12 +153,14 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 |[C5038](../error-messages/compiler-warnings/c5038.md) (nivel 4)|miembro de datos '*member1*'se inicializará después del miembro de datos'*member2*' <sup>15.3</sup>|
 |C5039 (nivel 4)|'*función*': puntero o referencia a producir potencialmente función pasado a la función extern C bajo - /EHc. Puede producirse un comportamiento indefinido si esta función produce una excepción. <sup>15,5</sup>|
 |C5042 (nivel 3)|'*función*': las declaraciones de función en el ámbito de bloque no se puede 'inline' especificado en el estándar de C++, quite 'inline' especificador <sup>15,5</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|Compilador insertará mitigación Spectre para la carga de memoria si especifica el modificador /Qspectre <sup>15,7</sup>|
 
-<sup>14,1</sup> , esta advertencia está disponible a partir de Visual Studio 2015 Update 1.<br>
-<sup>14.3</sup> , esta advertencia está disponible a partir de Visual Studio 2015 Update 3.<br>
-<sup>15.3</sup> , esta advertencia está disponible a partir de Visual Studio 2017 versión 15.3.<br>
-<sup>15,5</sup> , esta advertencia está disponible a partir de Visual Studio 2017 versión 15,5.<br>
-<sup>Perm</sup> esta advertencia está desactivada a menos que la [/ permisivo-](../build/reference/permissive-standards-conformance.md) se establece la opción del compilador.
+<sup>14,1</sup> , esta advertencia está disponible a partir de Visual Studio 2015 Update 1.  
+<sup>14.3</sup> , esta advertencia está disponible a partir de Visual Studio 2015 Update 3.  
+<sup>15.3</sup> , esta advertencia está disponible a partir de Visual Studio 2017 versión 15.3.  
+<sup>15,5</sup> , esta advertencia está disponible a partir de Visual Studio 2017 versión 15,5.  
+<sup>15,7</sup> , esta advertencia está disponible a partir de Visual Studio 2017 versión 15,7.  
+<sup>Perm</sup> esta advertencia está desactivada a menos que la [/ permisivo-](../build/reference/permissive-standards-conformance.md) se establece la opción del compilador.  
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Advertencias desactivado de forma predeterminada en las versiones anteriores
 

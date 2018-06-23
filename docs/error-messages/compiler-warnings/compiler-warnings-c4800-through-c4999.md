@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d5fb04d31451ac4c49a0a2c11a3699b8a670a6c4
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704755"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322337"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 de advertencias del compilador a través de C5999
 
@@ -250,3 +250,4 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 3) C5042|'*declaración*': las declaraciones de función en el ámbito de bloque no se puede 'inline' especificado en C++ estándar, quite el especificador 'inline'|
 |Advertencia del compilador (nivel 2) C5043|'*especificación*': especificación de excepción no coincide con la declaración anterior.|
 |Advertencia del compilador (nivel 4) C5044|Argumento pasado a la opción de línea de comandos *opción* apunta a una ruta de acceso '*ruta de acceso*' que no existe|
+|[C5045 de advertencia del compilador](c5045.md)|Compilador insertará mitigación Spectre para carga de memoria si cambia de /Qspectre especificado|

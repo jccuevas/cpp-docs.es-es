@@ -1,7 +1,7 @@
 ---
 title: Estilos utilizados por MFC | Documentos de Microsoft
 ms.custom: ''
-ms.date: 05/03/2018
+ms.date: 06/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 9af450071546691778dc607746870084a7b1f346
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271375"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322425"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos utilizados por MFC  
   
@@ -321,7 +321,7 @@ Editar estilos se aplican a [clase CEdit](../../mfc/reference/cedit-class.md) ob
 |`ES_NOHIDESEL`|Normalmente, un control de edición oculta la selección cuando el control pierde el foco de entrada e invierte la selección cuando el control recibe el foco de entrada. Especificar `ES_NOHIDESEL` elimina esta acción predeterminada.|  
 |`ES_NUMBER`|Permite solo dígitos que deben especificarse en el control de edición.|  
 |`ES_OEMCONVERT`|El texto escrito en el control de edición se convierte del juego de caracteres ANSI en el juego de caracteres OEM y de nuevo a ANSI. Esto garantiza la conversión correcta de caracteres cuando la aplicación llama a la `AnsiToOem` la función de Windows para convertir una cadena ANSI en el control de edición en caracteres OEM. Este estilo es muy útil para controles de edición que contienen nombres de archivo.|  
-|`ES_PASSWORD`|Muestra todos los caracteres como un asterisco (**\\\***) mientras se escribe en el control de edición. Una aplicación puede utilizar el `SetPasswordChar` función de miembro para cambiar el carácter que se muestra.|  
+|`ES_PASSWORD`|Muestra todos los caracteres como un asterisco (__\*__) mientras se escribe en el control de edición. Una aplicación puede utilizar el `SetPasswordChar` función de miembro para cambiar el carácter que se muestra.|  
 |`ES_READONLY`|Evita que el usuario escriba o edite texto en el control de edición.|  
 |`ES_RIGHT`|Control de edición de texto alinea a la derecha en una sola línea o varias líneas.|  
 |`ES_UPPERCASE`|Convierte todos los caracteres a mayúsculas cuando se escriben en el control de edición.|  
