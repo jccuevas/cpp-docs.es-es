@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: habilitar IntelliSense para proyectos de archivos MAKE | Documentos de Microsoft'
+title: 'Cómo: Habilitar IntelliSense para proyectos de archivos Make | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de79d56c6e8b6e496c0e7988ada07ed7595ea70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 4b9b11f04f1fe8d201d6d07ca5ed83f9ca7d991b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705467"
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>Cómo: Habilitar IntelliSense para proyectos de archivos MAKE
-IntelliSense no funciona en el IDE para proyectos de archivos MAKE de Visual C++ cuando determinados configuración del proyecto o las opciones del compilador se configuran incorrectamente. Utilice este procedimiento para configurar proyectos de archivos MAKE de Visual C++, de modo que IntelliSense funcione cuando los proyectos de archivo MAKE que estén abiertos en el entorno de desarrollo de Visual Studio.  
+IntelliSense no funciona en el IDE para proyectos de archivos Make de Visual C++ cuando no se configuran de manera correcta determinados valores del proyecto u opciones del compilador. Use este procedimiento para configurar proyectos de archivos Make de Visual C++, de modo que IntelliSense funcione cuando los proyectos de archivos Make se abran en el entorno de desarrollo de Visual Studio.  
   
-### <a name="to-enable-intellisense-for-makefile-projects-in-the-ide"></a>Para habilitar IntelliSense para proyectos de archivos MAKE en el IDE  
+### <a name="to-enable-intellisense-for-makefile-projects-in-the-ide"></a>Para habilitar IntelliSense para proyectos de archivo Make en el IDE  
   
-1.  Abra la **páginas de propiedades** cuadro de diálogo. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades**. Para obtener más información, vea [Trabajar con propiedades del proyecto](../ide/working-with-project-properties.md).  
   
-2.  Expanda el **propiedades de configuración** nodo.  
+2.  Expanda el nodo **Propiedades de configuración**.  
   
-3.  Seleccione el **NMake** propiedad página y, a continuación, modificar las propiedades en **IntelliSense** según corresponda.  
+3.  Seleccione la página de propiedades **NMake** y, después, modifique las propiedades en **IntelliSense** según corresponda.  
   
-    -   Establecer el **definiciones de preprocesador** propiedad para definir los símbolos de preprocesador en el proyecto de archivos MAKE. Vea [/D (definiciones de preprocesador)](../build/reference/d-preprocessor-definitions.md), para obtener más información.  
+    -   Establezca la propiedad **Definiciones de preprocesador** para definir los símbolos de preprocesador en el proyecto de archivo Make. Vea [/D (Definiciones de preprocesador)](../build/reference/d-preprocessor-definitions.md) para obtener más información.  
   
-    -   Establecer el **incluyen la ruta de búsqueda** propiedad para especificar la lista de directorios que el compilador debe buscar para resolver las referencias a archivos que se pasan a directivas de preprocesador en el proyecto de archivos MAKE. Vea [/I (directorios de inclusión adicionales)](../build/reference/i-additional-include-directories.md), para obtener más información.  
+    -   Establezca la propiedad **Ruta de acceso de búsqueda de inclusión** para especificar la lista de directorios en los que el compilador debe buscar para resolver las referencias de archivo que se pasan a las directivas de preprocesador en el proyecto de archivo Make. Vea [/I (Directorios de inclusión adicionales)](../build/reference/i-additional-include-directories.md) para obtener más información.  
   
-         Para los proyectos que se generan mediante CL. EXE desde una ventana de comandos, establezca la **INCLUDE** variable de entorno para especificar los directorios que el compilador debe buscar para resolver las referencias a archivos que se pasan a directivas de preprocesador en el proyecto de archivos MAKE.  
+         Para los proyectos que se compilan mediante CL.EXE desde una ventana de comandos, establezca la variable de entorno **INCLUDE** para especificar los directorios en los que el compilador debe buscar para resolver las referencias de archivo que se pasan a las directivas de preprocesador en el proyecto de archivo Make.  
   
-    -   Establecer el **forzado incluye** propiedad para especificar qué archivos de encabezado al proceso al generar el proyecto de archivos MAKE. Vea [/FI (el nombre Forced Include File)](../build/reference/fi-name-forced-include-file.md), para obtener más información.  
+    -   Establezca la propiedad **Archivos de inclusión forzados** para especificar qué archivos de encabezado se van a procesar al compilar el proyecto de archivo Make. Vea [/FI (Dar nombre al archivo de inclusión obligatorio)](../build/reference/fi-name-forced-include-file.md) para obtener más información.  
   
-    -   Establecer el **ruta de acceso de búsqueda de ensamblado** propiedad para especificar la lista de directorios que el compilador debe buscar para resolver las referencias a ensamblados de .NET en el proyecto. Vea [/AI (especificar directorios de metadatos)](../build/reference/ai-specify-metadata-directories.md), para obtener más información.  
+    -   Establezca la propiedad **Ruta de acceso de búsqueda de ensamblado** para especificar la lista de directorios que el compilador debe buscar para resolver las referencias a los ensamblados .NET del proyecto. Vea [/AI (Especificar directorios de metadatos)](../build/reference/ai-specify-metadata-directories.md) para obtener más información.  
   
-    -   Establecer el **ensamblados de uso forzados** propiedad para especificar qué ensamblados .NET para procesar al generar el proyecto de archivos MAKE. Vea [/FU (Name Forced #using archivo)](../build/reference/fu-name-forced-hash-using-file.md), para obtener más información.  
+    -   Establezca la propiedad **Ensamblados de uso forzados** para especificar qué ensamblados .NET se van a procesar al compilar el proyecto de archivo Make. Vea [/FU (Dar nombre al archivo #using obligatorio)](../build/reference/fu-name-forced-hash-using-file.md) para obtener más información.  
   
-    -   Establecer el **opciones adicionales** propiedad para especificar otros modificadores de compilador que usará Intellisense al analizar los archivos de C++.  
+    -   Establezca la propiedad **Opciones adicionales** para especificar modificadores de compilador adicionales que IntelliSense usará al analizar los archivos de C++.  
   
 4.  Haga clic en **Aceptar** para cerrar las páginas de propiedades.  
   
-5.  Use la **guardar todo** comando para guardar la configuración de proyecto modificado.  
+5.  Use el comando **Guardar todo** para guardar la configuración de proyecto modificada.  
   
- La próxima vez abra el proyecto de archivos MAKE en el entorno de desarrollo de Visual Studio, ejecute el **Limpiar solución** comando y, a continuación, el **generar solución** comando en el proyecto de archivos MAKE. IntelliSense debería funcionar correctamente en el IDE.  
+ La próxima vez que abra el proyecto de archivo Make en el entorno de desarrollo de Visual Studio, ejecute los comandos **Limpiar solución** y **Compilar solución**. IntelliSense debería funcionar correctamente en el IDE.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar IntelliSense](/visualstudio/ide/using-intellisense)   
