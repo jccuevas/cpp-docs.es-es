@@ -22,17 +22,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcdcbad2b7b3e70988579786c1c8cf28f734a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58ddef11e56da760bbecaa47f03dfa6c57dfa3ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344940"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929486"
 ---
 # <a name="managing-mdi-child-windows"></a>Administrar ventanas secundarias MDI
-Ventanas de marco principal MDI (una por aplicación) contienen una ventana secundaria especial denominada el **MDICLIENT** ventana. El **MDICLIENT** ventana administra el área de cliente de la ventana de marco principal y tiene ventanas secundarias: las ventanas de documento, que se deriva de `CMDIChildWnd`. Dado que las ventanas de documento son ventanas de marco por sí mismos (ventanas secundarias MDI), también pueden tener sus propios elementos secundarios. En todos estos casos, la ventana primaria administra sus ventanas secundarias y reenvía algunos comandos a ellos.  
+Ventanas de marco principal MDI (una por aplicación) contienen una ventana secundaria especial denominada ventana MDICLIENT. La ventana MDICLIENT administra el área de cliente de la ventana de marco principal y tiene ventanas secundarias: las ventanas de documento, que se deriva de `CMDIChildWnd`. Dado que las ventanas de documento son ventanas de marco por sí mismos (ventanas secundarias MDI), también pueden tener sus propios elementos secundarios. En todos estos casos, la ventana primaria administra sus ventanas secundarias y reenvía algunos comandos a ellos.  
   
- En una ventana de marco MDI, la ventana de marco administra la **MDICLIENT** ventana, volviéndola a junto con barras de control. El **MDICLIENT** ventana, a su vez, administra todas las ventanas de marco secundarias MDI. En la siguiente ilustración se muestra la relación entre una ventana de marco MDI, su **MDICLIENT** ventana y sus ventanas de marco de documento secundarias.  
+ En una ventana de marco MDI, la ventana de marco administra la ventana MDICLIENT, volviéndola a junto con barras de control. La ventana MDICLIENT, a su vez, administra todas las ventanas de marco secundarias MDI. En la siguiente ilustración muestra la relación entre una ventana de marco MDI, su ventana MDICLIENT y sus ventanas de marco de documento secundarias.  
   
  ![Ventanas secundarias en una ventana de marco MDI](../mfc/media/vc37gb1.gif "vc37gb1")  
 Ventanas marco de MDI y ventanas secundarias  

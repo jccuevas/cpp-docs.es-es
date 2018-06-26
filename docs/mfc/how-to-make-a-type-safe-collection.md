@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cbcdeec6e39e104625d1b5d47c494915a821d38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354444"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930038"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Cómo: Crear una colección con seguridad de tipos
 En este artículo se explica cómo hacer que las colecciones con seguridad de tipos para sus propios tipos de datos. Entre los temas se incluyen los siguientes:  
@@ -52,7 +52,7 @@ En este artículo se explica cómo hacer que las colecciones con seguridad de ti
   
 3.  Si es necesario, implemente el [funciones auxiliares](../mfc/reference/collection-class-helpers.md) y [SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements). Para obtener información sobre la implementación de estas funciones, vea [implementar funciones auxiliares](#_core_implementing_helper_functions).  
   
- En este ejemplo se muestra la declaración de una lista de enteros. El primer parámetro en el paso 1 es el tipo de datos que se almacenan como elementos de la lista. El segundo parámetro especifica cómo los datos se pasarse y devueltos por las funciones miembro de la clase de colección, como **agregar** y `GetAt`.  
+ En este ejemplo se muestra la declaración de una lista de enteros. El primer parámetro en el paso 1 es el tipo de datos que se almacenan como elementos de la lista. El segundo parámetro especifica cómo los datos se pasarse y devueltos por las funciones miembro de la clase de colección, como `Add` y `GetAt`.  
   
 ##  <a name="_core_implementing_helper_functions"></a> Implementar funciones auxiliares  
  Las clases de colección basadas en plantillas `CArray`, `CList`, y `CMap` utilizar cinco funciones auxiliares globales que se pueden personalizar según sea necesario para la clase de colección derivada. Para obtener información sobre estas funciones auxiliares, vea [aplicaciones auxiliares de clase de colección](../mfc/reference/collection-class-helpers.md) en el *referencia de MFC*. Implementación de la función de serialización es necesario para la mayoría de los usos de las clases de colección basadas en plantillas.  
@@ -66,10 +66,10 @@ En este artículo se explica cómo hacer que las colecciones con seguridad de ti
   
  [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]  
   
- Los operadores de inserción sobrecargados para `CArchive` llamar a `CObject::Serialize` (o una función de reemplazo) para cada **CPerson** objeto.  
+ Los operadores de inserción sobrecargados para `CArchive` llamar a `CObject::Serialize` (o una función de reemplazo) para cada `CPerson` objeto.  
   
 ##  <a name="_core_using_nontemplate_collection_classes"></a> Utilizar clases de colección no es de plantilla  
- MFC también es compatible con las clases de colección introducidas con la versión 1.0 de MFC. Estas clases no se basan en plantillas. Pueden usarse para contener datos de los tipos admitidos `CObject*`, **UINT**, `DWORD`, y `CString`. Puede usar estas colecciones predefinidas (como `CObList`) para contener colecciones de cualquier objeto derivado de `CObject`. MFC también proporciona otras colecciones predefinidas para contener los tipos primitivos como **UINT** y anular punteros (`void`*). En general, sin embargo, a menudo resulta útil definir sus propias colecciones con seguridad de tipos para almacenar los objetos de una clase más específica y sus derivados. Tenga en cuenta que si lo hace, con las clases de colección no basada en plantillas es más trabajo que el uso de las clases basadas en plantillas.  
+ MFC también es compatible con las clases de colección introducidas con la versión 1.0 de MFC. Estas clases no se basan en plantillas. Pueden usarse para contener datos de los tipos admitidos `CObject*`, `UINT`, `DWORD`, y `CString`. Puede usar estas colecciones predefinidas (como `CObList`) para contener colecciones de cualquier objeto derivado de `CObject`. MFC también proporciona otras colecciones predefinidas para contener los tipos primitivos como `UINT` y anular punteros (`void`*). En general, sin embargo, a menudo resulta útil definir sus propias colecciones con seguridad de tipos para almacenar los objetos de una clase más específica y sus derivados. Tenga en cuenta que si lo hace, con las clases de colección no basada en plantillas es más trabajo que el uso de las clases basadas en plantillas.  
   
  Hay dos maneras de crear colecciones con seguridad de tipos con las colecciones sin plantilla:  
   

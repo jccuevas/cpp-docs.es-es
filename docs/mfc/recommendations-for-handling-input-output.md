@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e08ea95c9cfe4bd67c0904cc22e6db19dcfb52e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ee88b7784abb6ca622e72a9dfb31efc39fa7816
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355687"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930945"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Recomendaciones para el control de entrada/salida
 Si se usa E/S basada en archivos o no depende de cómo responden a las preguntas del siguiente árbol de decisión:  
@@ -34,9 +34,9 @@ Si se usa E/S basada en archivos o no depende de cómo responden a las preguntas
   
      **La aplicación lee el archivo completo en la memoria en el archivo abierto y reescribir todo el archivo en el disco en guardado de archivo.**  
   
-    -   Sí: Este es el caso de documento MFC predeterminado. Use **CDocument** serialización.  
+    -   Sí: Este es el caso de documento MFC predeterminado. Use `CDocument` serialización.  
   
-    -   No: Normalmente es el caso de basado en transacciones de actualización del archivo. Actualizar el archivo en una base por transacción y no es necesario **CDocument** serialización.  
+    -   No: Normalmente es el caso de basado en transacciones de actualización del archivo. Actualizar el archivo en una base por transacción y no es necesario `CDocument` serialización.  
   
 -   No, los datos principales no residen en un archivo de disco:  
   
@@ -50,7 +50,7 @@ Si se usa E/S basada en archivos o no depende de cómo responden a las preguntas
   
          Ejemplos de este caso: los datos residen en un DBMS no ODBC; se leen los datos a través de algún otro mecanismo, como OLE o DDE.  
   
-         En tales casos, no utilizar la serialización y la aplicación no ha abierto y guardar elementos de menú. Es posible que aún desea usar un **CDocument** como base principal, al igual que un ODBC de MFC aplicación utiliza el documento para almacenar `CRecordset` objetos. Pero no usan la serialización de documentos de abrir archivo/Guardar del marco de trabajo de forma predeterminada.  
+         En tales casos, no utilizar la serialización y la aplicación no ha abierto y guardar elementos de menú. Es posible que aún desea usar un `CDocument` como base principal, al igual que un ODBC de MFC aplicación utiliza el documento para almacenar `CRecordset` objetos. Pero no usan la serialización de documentos de abrir archivo/Guardar del marco de trabajo de forma predeterminada.  
   
  Para admitir la apertura, guardar y guardar como comandos en el menú archivo, el marco de trabajo proporciona la serialización de documentos. Serialización lee y escribe datos, incluidos los objetos derivados de la clase `CObject`, un almacenamiento permanente a, normalmente un archivo de disco. Serialización es fácil de usar y sirve de muchas de sus necesidades, pero puede no ser apropiado en muchas aplicaciones de acceso a datos. Las aplicaciones de acceso a datos suelen actualizan datos en una base por transacción. Actualizan los registros afectados por la transacción en lugar de leer y escribir en un archivo de datos entero a la vez.  
   

@@ -22,22 +22,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1055fd9b1ef75b2090478d85e8251d1800b8b039
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e19cda1869938a854ff03ea83cdda747e8120a0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345747"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929535"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Administrar menús, barras de control y aceleradores
 La ventana de marco administra la actualización de los objetos de interfaz de usuario, incluidos los menús, botones de barra de herramientas, la barra de estado y aceleradores. También administra el uso compartido de la barra de menús en aplicaciones MDI.  
   
 ## <a name="managing-menus"></a>Administrar menús  
- La ventana de marco participa en la actualización de elementos de interfaz de usuario mediante la `ON_UPDATE_COMMAND_UI` mecanismo se describe en [cómo actualizar objetos de interfaz de usuario](../mfc/how-to-update-user-interface-objects.md). Botones de barras de herramientas y otras barras de control se actualizan durante el bucle de inactividad. Elementos de menú en los menús de lista desplegable en la barra de menús se actualizan justo antes de que el menú se despliega hacia abajo.  
+ La ventana de marco participa en la actualización de elementos de interfaz de usuario mediante los mecanismos ON_UPDATE_COMMAND_UI descritos en [cómo actualizar objetos de interfaz de usuario](../mfc/how-to-update-user-interface-objects.md). Botones de barras de herramientas y otras barras de control se actualizan durante el bucle de inactividad. Elementos de menú en los menús de lista desplegable en la barra de menús se actualizan justo antes de que el menú se despliega hacia abajo.  
   
  Para las aplicaciones MDI, la ventana de marco MDI administra la barra de menús y el título. Una ventana de marco MDI posee un menú predeterminado que se utiliza como la barra de menús cuando no hay ningún activas ventanas secundarias MDI. Cuando hay secundarias activas, barra de menús de la ventana de marco MDI se traspasa al menú para la ventana secundaria MDI activa. Si una aplicación MDI admite varios tipos de documentos, como los documentos de gráfico y la hoja de cálculo, cada tipo incluye sus propios menús en la barra de menús y cambia el título de la ventana de marco principal.  
   
- [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) proporciona implementaciones predeterminadas para los comandos estándares del menú Ventana que aparece para las aplicaciones MDI. En particular, el comando nueva ventana (**ID_WINDOW_NEW**) se implementa para crear una nueva ventana de marco y la vista en el documento actual. Debe invalidar estas implementaciones sólo si necesita personalización avanzada.  
+ [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) proporciona implementaciones predeterminadas para los comandos estándares del menú Ventana que aparece para las aplicaciones MDI. En concreto, el comando nueva ventana (ID_WINDOW_NEW) se implementa para crear una nueva ventana de marco y la vista en el documento actual. Debe invalidar estas implementaciones sólo si necesita personalización avanzada.  
   
  Las ventanas secundarias MDI del mismo tipo de documento comparten recursos de menú. Si varias ventanas secundarias MDI se crean mediante la misma plantilla de documento, todas pueden utilizar el mismo recurso de menú, ahorrando recursos de sistema de Windows.  
   

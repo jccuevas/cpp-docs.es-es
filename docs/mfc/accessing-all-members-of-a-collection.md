@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf25b84c4ee9808210d2dbf2f5115319a517c71b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334852"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931943"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Acceso a todos los miembros de una colección
 Las clases de colección de matriz MFC —tanto basadas en plantillas como no— usan índices para obtener acceso a sus elementos. Las clases de colección de listas y mapas MFC (tanto basadas en plantillas como no) usan un indicador de tipo **POSITION** para describir una posición dada dentro de la colección. Para obtener acceso a uno o más miembros de estas colecciones, primero se inicializa el indicador de posición, después se pasa esa posición repetidamente a la colección y luego se le pide que devuelva el elemento siguiente. La colección no es responsable de mantener la información de estado sobre el progreso de la iteración. Esta información se guarda en el indicador de posición. Pero, en una posición concreta, la colección es responsable de devolver el elemento siguiente.  
@@ -51,7 +51,7 @@ Las clases de colección de matriz MFC —tanto basadas en plantillas como no—
   
      Este ejemplo usa una matriz de puntero con tipo que contiene punteros a objetos `CPerson` . La matriz se deriva de la clase `CObArray`, una de las clases predefinidas no basadas en plantillas. `GetAt` devuelve un puntero a un objeto `CPerson` . Para las clases de colección de puntero con tipo (matrices o listas), el primer parámetro especifica la clase base; el segundo parámetro especifica el tipo para almacenar.  
   
-     El `CTypedPtrArray` clase también sobrecargas el **[]** operador para que pueda utilizar la sintaxis habitual de subíndices de matriz para acceder a los elementos de una matriz. Una alternativa a la instrucción del cuerpo del bucle `for` anterior es  
+     El `CTypedPtrArray` clase también sobrecargas el **[]** operador para que pueda utilizar la sintaxis habitual de subíndices de matriz para acceder a los elementos de una matriz. Una alternativa a la instrucción en el cuerpo de la **para** bucle anterior es  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   

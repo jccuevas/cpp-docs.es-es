@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 179e959ce4d6a516f51576712e50408ef41d5c7e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347904"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931796"
 ---
 # <a name="control-bars"></a>Barras de controles
-"Barra de control" es el nombre general para las barras de herramientas, barras de estado y barras de cuadro de diálogo. Clases MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, y **CReBar** derivan de la clase [CControlBar](../mfc/reference/ccontrolbar-class.md), que implementa su funcionalidad común.  
+"Barra de control" es el nombre general para las barras de herramientas, barras de estado y barras de cuadro de diálogo. Clases MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, y `CReBar` derivan de la clase [CControlBar](../mfc/reference/ccontrolbar-class.md), que implementa su funcionalidad común.  
   
  Barras de control son ventanas que muestran filas de controles con el que los usuarios pueden seleccionar opciones, ejecutar comandos u obtener información sobre el programa. Tipos de barras de control incluyen las barras de herramientas, barras de cuadro de diálogo y barras de estado.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33347904"
 -   Barras rebar, dentro de la clase [CReBar](../mfc/reference/crebar-class.md)  
   
 > [!IMPORTANT]
->  A partir de la versión 4.0 de MFC, las barras de herramientas, barras de estado e información sobre herramientas se implementa utilizando la funcionalidad del sistema implementada en el archivo comctl32.dll en lugar de la implementación anterior específica de MFC. En la versión 6.0, MFC **CReBar**, que también ajusta la funcionalidad de comctl32.dll, se ha agregado.  
+>  A partir de la versión 4.0 de MFC, las barras de herramientas, barras de estado y herramienta de sugerencias se implementan utilizando la funcionalidad del sistema implementada en el *comctl32.dll* en lugar de la implementación anterior específica de MFC. En la versión 6.0, MFC `CReBar`, que también ajusta la funcionalidad de comctl32.dll, se ha agregado.  
   
  Siga breve introducción a los tipos de barra de control. Para obtener más información, vea los vínculos siguientes.  
   

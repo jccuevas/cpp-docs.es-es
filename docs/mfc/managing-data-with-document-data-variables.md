@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8048a38c2ec09828c462d5b671cc0c89aec30805
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ca7c673f47510282e129eab2538008400eb2fb9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344966"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929437"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Administrar datos con variables de datos del documento
 Implemente los datos del documento como variables de miembro de la clase de documento. Por ejemplo, el programa Scribble declara un miembro de datos de tipo `CObList` : una lista vinculada que almacena punteros a `CObject` objetos. Esta lista se utiliza para almacenar matrices de puntos que componen un dibujo de línea a mano alzada.  
@@ -35,9 +35,9 @@ Implemente los datos del documento como variables de miembro de la clase de docu
   
  Al definir los datos del documento miembro, normalmente agregará funciones de miembro a la clase de documento para establecer y obtener elementos de datos y realizar otras operaciones útiles sobre ellos.  
   
- Las vistas de acceso al objeto de documento mediante un puntero de la vista al documento, instalado en la vista en tiempo de creación. Puede recuperar un puntero this en funciones de miembro de una vista mediante una llamada a la `CView` función miembro **GetDocument**. No olvide convierte este puntero a su propio tipo de documento. Then you can access public document members through the pointer.  
+ Las vistas de acceso al objeto de documento mediante un puntero de la vista al documento, instalado en la vista en tiempo de creación. Puede recuperar un puntero this en funciones de miembro de una vista mediante una llamada a la `CView` función miembro `GetDocument`. No olvide convierte este puntero a su propio tipo de documento. A continuación, puede tener acceso a miembros públicos del documento a través del puntero.  
   
- If frequent data transfer requires direct access, or you wish to use the nonpublic members of the document class, you may want to make your view class a friend (in C++ terms) of the document class.  
+ Si la transferencia de datos frecuentes que requieren acceso directo, o que se va a usar a los miembros no públicos de la clase de documento, puede hacer que la vista de clase a friend (en términos de C++) de la clase de documento.  
   
 ## <a name="see-also"></a>Vea también  
  [Uso de documentos](../mfc/using-documents.md)

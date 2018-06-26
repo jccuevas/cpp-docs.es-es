@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8df4b584a4e8b0ef940d5934a5968037427c607d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346381"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931819"
 ---
 # <a name="handling-tool-tip-notifications"></a>Controlar las notificaciones de información sobre herramientas
-Cuando se especifica la `TBSTYLE_TOOLTIPS` estilo, la barra de herramientas crea y administra un control de información sobre herramientas. Una información sobre herramientas es una pequeña ventana emergente que contiene una línea de texto que describe un botón de barra de herramientas. La información sobre herramientas está oculta, que aparecen solo cuando el usuario coloca el cursor sobre un botón de barra de herramientas y deja ahí durante, aproximadamente, medio segundo. La información sobre herramientas aparece cerca del cursor.  
+Cuando se especifica la **TBSTYLE_TOOLTIPS** estilo, la barra de herramientas crea y administra un control de información sobre herramientas. Una información sobre herramientas es una pequeña ventana emergente que contiene una línea de texto que describe un botón de barra de herramientas. La información sobre herramientas está oculta, que aparecen solo cuando el usuario coloca el cursor sobre un botón de barra de herramientas y deja ahí durante, aproximadamente, medio segundo. La información sobre herramientas aparece cerca del cursor.  
   
  Antes de que se muestre la información sobre herramientas, el **TTN_NEEDTEXT** mensaje de notificación se envía a la ventana propietaria de la barra de herramientas para recuperar el texto descriptivo para el botón. Si la ventana propietaria de la barra de herramientas es un `CFrameWnd` ventana, herramienta de sugerencias se muestran sin ningún esfuerzo adicional, porque `CFrameWnd` tiene un controlador predeterminado para la **TTN_NEEDTEXT** notificación. Si la ventana propietaria de la barra de herramientas no se deriva de `CFrameWnd`, por ejemplo, una vista de formulario o de cuadro de diálogo, debe agregar una entrada al mapa de mensajes de la ventana propietaria y proporcionar un controlador de notificación en el mapa de mensajes. La entrada al mapa de mensajes de la ventana propietaria es como sigue:  
   

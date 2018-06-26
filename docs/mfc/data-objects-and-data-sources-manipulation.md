@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f276e85be33f3042b19ab7dc6158a4e9f856fb2e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349914"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929866"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objetos de datos y orígenes de datos: manipulación
 Una vez creado un objeto de datos o un origen de datos, puede realizar una serie de operaciones comunes en los datos, como insertar y eliminar datos, enumerar los formatos de que los datos están en y mucho más. Este artículo describen las técnicas necesarias para completar las operaciones más habituales. Entre los temas se incluyen los siguientes:  
@@ -45,7 +45,7 @@ Una vez creado un objeto de datos o un origen de datos, puede realizar una serie
   
 -   Llame a `COleDataSource::CacheGlobalData` repetidamente para cada formato de Portapapeles en el que está proporcionando los datos. Pase el formato de Portapapeles para usarse, un identificador de la memoria que contiene los datos y, opcionalmente, un **FORMATETC** estructura que describa los datos.  
   
-     -o bien-  
+     O bien  
   
 -   Si desea trabajar directamente con **STGMEDIUM** estructuras, se llama a `COleDataSource::CacheData` en lugar de `COleDataSource::CacheGlobalData` en la opción anterior.  
   
@@ -54,7 +54,7 @@ Una vez creado un objeto de datos o un origen de datos, puede realizar una serie
   
 -   Llame a `COleDataSource::DelayRenderData` repetidamente para cada formato de Portapapeles en el que está proporcionando los datos. Pase el formato de Portapapeles para usarse y, opcionalmente, un **FORMATETC** estructura que describa los datos. Cuando se solicitan los datos, el marco llamará `COleDataSource::OnRenderData`, que es necesario reemplazar.  
   
-     -o bien-  
+     O bien  
   
 -   Si utiliza un `CFile` objeto que se va a proporcionar los datos, llame a `COleDataSource::DelayRenderFileData` en lugar de `COleDataSource::DelayRenderData` en la opción anterior. Cuando se solicitan los datos, el marco llamará `COleDataSource::OnRenderFileData`, que es necesario reemplazar.  
   
@@ -69,11 +69,11 @@ Una vez creado un objeto de datos o un origen de datos, puede realizar una serie
   
     -   Llamar al objeto de datos `IsDataAvailable` necesario la función de miembro si hay solo uno o dos formatos. Esto le permitirá ahorrar tiempo en casos donde los datos en el Portapapeles es compatible con muchos más formatos que la aplicación.  
   
-         -o bien-  
+         O bien  
   
     -   Llamar al objeto de datos `BeginEnumFormats` función de miembro para empezar a enumerar los formatos disponibles en el Portapapeles. A continuación, llame a `GetNextFormat` hasta que el Portapapeles devuelva un formato de la aplicación admite o no hay ningún formato más.  
   
- Si utilizas `ON_UPDATE_COMMAND_UI`, ahora puede habilitar la pegar y, posiblemente, elementos de pegado especial en el menú Edición. Para ello, llame a `CMenu::EnableMenuItem` o `CCmdUI::Enable`. Para obtener más información acerca de qué contenedor deben hacer con los elementos de menú y, vea aplicaciones [menús y recursos: adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).  
+ Si utilizas **ON_UPDATE_COMMAND_UI**, ahora puede habilitar la pegar y, posiblemente, elementos de pegado especial en el menú Edición. Para ello, llame a `CMenu::EnableMenuItem` o `CCmdUI::Enable`. Para obtener más información acerca de qué contenedor deben hacer con los elementos de menú y, vea aplicaciones [menús y recursos: adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).  
   
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Recuperación de datos de un objeto de datos  
  Una vez que haya decidido en un formato de datos, lo único que queda es recuperar los datos del objeto de datos. Para ello, el usuario decide dónde colocar los datos y la aplicación llama a la función adecuada. Los datos estarán disponibles en uno de los siguientes medios:  

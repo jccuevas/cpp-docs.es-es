@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de12a21c4b411f3cd1fe25d7d6badd8d26318351
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354094"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929817"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: Pintar un control ActiveX
 Este artículo describe el proceso de dibujo del control ActiveX y cómo puede modificar el código para optimizar el proceso. (Consulte [optimizar el dibujo de controles](../mfc/optimizing-control-drawing.md) para conocer las técnicas optimizar el dibujo al no tener controles individualmente restauración objetos GDI previamente seleccionados. Después de han dibujado todos los controles, el contenedor puede restaurar automáticamente los objetos originales.)  
@@ -38,7 +38,7 @@ Este artículo describe el proceso de dibujo del control ActiveX y cómo puede m
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> El proceso de dibujo de un Control ActiveX  
  Cuando se muestran inicialmente o se vuelven a dibujar controles ActiveX, siguen un proceso similar de otras aplicaciones desarrolladas mediante MFC, con una diferencia importante: los controles ActiveX pueden estar en un activo o un estado inactivo.  
   
- Un control activo se representa en un contenedor de controles ActiveX mediante una ventana secundaria. Al igual que otras ventanas, es responsable de dibujar propio cuando un `WM_PAINT` recibirlo. La clase del control base, [COleControl](../mfc/reference/colecontrol-class.md), controla este mensaje en su `OnPaint` función. Esta implementación predeterminada llama el `OnDraw` función del control.  
+ Un control activo se representa en un contenedor de controles ActiveX mediante una ventana secundaria. Al igual que otras ventanas, es responsable de dibujar a sí mismo cuando se recibe un mensaje WM_PAINT. La clase del control base, [COleControl](../mfc/reference/colecontrol-class.md), controla este mensaje en su `OnPaint` función. Esta implementación predeterminada llama el `OnDraw` función del control.  
   
  Un control inactivo se dibuja de manera diferente. Cuando el control está inactivo, su ventana es invisible o no existe, por lo que no puede recibir un mensaje de dibujo. En su lugar, el contenedor del control llama directamente el `OnDraw` función del control. Esto difiere del proceso de dibujo de un control activo en el que el `OnPaint` nunca se llama la función miembro.  
   
@@ -63,12 +63,12 @@ Este artículo describe el proceso de dibujo del control ActiveX y cómo puede m
   
  La implementación predeterminada de dibujo de controles ActiveX pinta la zona de todo el control. Esto es suficiente para controles sencillos, pero en muchos casos volver a dibujarse el control sería más rápido si sólo la parte que sea necesario actualizar se vuelve a dibujar, en lugar de todo el control.  
   
- El `OnDraw` función proporciona un método sencillo de optimización pasando `rcInvalid`, el área rectangular del control que es necesario volver a dibujar. Utilice este área, suele ser menor que el área de todo el control, para acelerar el proceso de dibujo.  
+ El `OnDraw` función proporciona un método sencillo de optimización pasando *rcInvalid*, el área rectangular del control que es necesario volver a dibujar. Utilice este área, suele ser menor que el área de todo el control, para acelerar el proceso de dibujo.  
   
 ##  <a name="_core_painting_your_control_using_metafiles"></a> Dibujar el Control usando metarchivos  
- En la mayoría de los casos la `pdc` parámetro para el `OnDraw` función apunta a un contexto de dispositivo de pantalla (DC). Sin embargo, al imprimir imágenes del control o durante una sesión de vista previa de impresión, el controlador de dominio que se recibió para la representación es un tipo especial denominado "DC de metarchivo". A diferencia de un DC de pantalla, que controla inmediatamente las solicitudes enviadas a él, un DC de metarchivo almacena las solicitudes que se reproducirá en un momento posterior. Algunas aplicaciones de contenedor también pueden elegir representar la imagen del control mediante un controlador de dominio en modo de diseño de metarchivo.  
+ En la mayoría de los casos la *pdc* parámetro para el `OnDraw` función apunta a un contexto de dispositivo de pantalla (DC). Sin embargo, al imprimir imágenes del control o durante una sesión de vista previa de impresión, el controlador de dominio que se recibió para la representación es un tipo especial denominado "DC de metarchivo". A diferencia de un DC de pantalla, que controla inmediatamente las solicitudes enviadas a él, un DC de metarchivo almacena las solicitudes que se reproducirá en un momento posterior. Algunas aplicaciones de contenedor también pueden elegir representar la imagen del control mediante un controlador de dominio en modo de diseño de metarchivo.  
   
- Metarchivo solicitudes de dibujo se puede realizar por el contenedor a través de dos funciones de interfaz: **IViewObject::Draw** (esta función también se puede llamar para dibujar no metarchivo) y **IDataObject:: GetData**. Cuando un metarchivo de controlador de dominio se pasa como uno de los parámetros, el marco de trabajo MFC realiza una llamada a [COleControl:: OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Puesto que se trata de una función miembro virtual, reemplazar esta función en la clase de control para realizar cualquier procesamiento especial. Las llamadas de comportamiento predeterminado `COleControl::OnDraw`.  
+ Metarchivo solicitudes de dibujo se puede realizar por el contenedor a través de dos funciones de interfaz: `IViewObject::Draw` (esta función también se puede llamar para dibujar no metarchivo) y `IDataObject::GetData`. Cuando un metarchivo de controlador de dominio se pasa como uno de los parámetros, el marco de trabajo MFC realiza una llamada a [COleControl:: OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Puesto que se trata de una función miembro virtual, reemplazar esta función en la clase de control para realizar cualquier procesamiento especial. Las llamadas de comportamiento predeterminado `COleControl::OnDraw`.  
   
  Para asegurarse de que el control se puede dibujar en contextos de dispositivo de pantalla y metarchivo, debe usar solo las funciones de miembro que se admiten en una pantalla y un DC de metarchivo. Tenga en cuenta que no se puede medir el sistema de coordenadas en píxeles.  
   
@@ -76,11 +76,11 @@ Este artículo describe el proceso de dibujo del control ActiveX y cómo puede m
   
 |Arco|BibBlt|Cuerda|  
 |---------|------------|-----------|  
-|**elipse**|**Escape**|`ExcludeClipRect`|  
+|`Ellipse`|`Escape`|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
-|`Pie`|**polígono**|`Polyline`|  
+|`Pie`|`Polygon`|`Polyline`|  
 |`PolyPolygon`|`RealizePalette`|`RestoreDC`|  
 |`RoundRect`|`SaveDC`|`ScaleViewportExt`|  
 |`ScaleWindowExt`|`SelectClipRgn`|`SelectObject`|  
@@ -95,7 +95,7 @@ Este artículo describe el proceso de dibujo del control ActiveX y cómo puede m
   
  Las funciones que no se registran en un metarchivo son: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)y [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Dado que un DC de metarchivo no es realmente asociado con un dispositivo, no puede utilizar SetDIBits, GetDIBits y CreateDIBitmap con un DC de metarchivo. Puede usar SetDIBitsToDevice y StretchDIBits con un DC de metarchivo como destino. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), y [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) no tienen sentido con un DC de metarchivo.  
   
- Otro punto a tener en cuenta cuando se utiliza un DC de metarchivo es que el sistema de coordenadas puede no medirse en píxeles. Por esta razón, todo el código de dibujo se debería ajustar para caber en el rectángulo pasado a `OnDraw` en el `rcBounds` parámetro. Esto evita que accidental dibujar fuera del control porque `rcBounds` representa el tamaño de la ventana del control.  
+ Otro punto a tener en cuenta cuando se utiliza un DC de metarchivo es que el sistema de coordenadas puede no medirse en píxeles. Por esta razón, todo el código de dibujo se debería ajustar para caber en el rectángulo pasado a `OnDraw` en el *rcBounds* parámetro. Esto evita que accidental dibujar fuera del control porque *rcBounds* representa el tamaño de la ventana del control.  
   
  Después de haber implementado la representación del metarchivo para el control, use Test Container para probar el metarchivo. Consulte [Probar propiedades y eventos con un contenedor de prueba](../mfc/testing-properties-and-events-with-test-container.md) para obtener información acerca de cómo acceder al contenedor de prueba.  
   

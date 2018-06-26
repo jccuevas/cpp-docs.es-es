@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d86af5f54fb9dfe81327b4589d60e5290b2610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8f167ac560fd8e2109c149f30841ecbe3c44fc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342165"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930981"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Requisitos de compilación para los controles comunes de Windows Vista
 La biblioteca (Microsoft Foundation Classes) admite la versión 6.1 de controles comunes de Windows. Los controles comunes se incluyen en [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] y la biblioteca se incluye en el [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. La biblioteca proporciona nuevos métodos que mejoran las clases existentes y nuevas clases y métodos que admiten [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] controles comunes. Cuando se compila la aplicación, debe cumplir los requisitos de compilación y la migración que se describen en las secciones siguientes.  
@@ -44,7 +44,7 @@ La biblioteca (Microsoft Foundation Classes) admite la versión 6.1 de controles
  La versión ANSI de varios métodos MFC se han quedado obsoletas a partir de controles comunes de Windows versión 6.1. Para obtener más información, consulte [en desuso API ANSI](../mfc/deprecated-ansi-apis.md).  
   
 ## <a name="migration-requirements"></a>Requisitos de migración  
- Si utiliza el IDE de Visual Studio para crear una nueva aplicación MFC que utiliza la versión 6.1 de controles comunes de Windows, el IDE declara automáticamente un manifiesto adecuado. Sin embargo, si migra una aplicación MFC existente desde una versión anterior de Visual Studio y desea utilizar los nuevos controles comunes, el IDE no proporciona automáticamente información del manifiesto para actualizar la aplicación. En su lugar, debe insertar manualmente el siguiente código fuente en el archivo stdafx.h:  
+ Si utiliza el IDE de Visual Studio para crear una nueva aplicación MFC que utiliza la versión 6.1 de controles comunes de Windows, el IDE declara automáticamente un manifiesto adecuado. Sin embargo, si migra una aplicación MFC existente desde una versión anterior de Visual Studio y desea utilizar los nuevos controles comunes, el IDE no proporciona automáticamente información del manifiesto para actualizar la aplicación. En su lugar, debe insertar manualmente el siguiente código fuente en su **stdafx.h** archivo:  
   
 ```  
 #ifdef UNICODE  

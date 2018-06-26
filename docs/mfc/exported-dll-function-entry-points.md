@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8e9ff08054fbef3f15283395d7eb150551926dc
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343858"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928630"
 ---
 # <a name="exported-dll-function-entry-points"></a>Puntos de entrada de funciones exportadas de un archivo DLL
 Para las funciones exportadas de un archivo DLL, utilice la [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro para mantener el estado global adecuado al cambiar del módulo DLL al archivo DLL de la aplicación que realiza la llamada.  
   
  Cuando se llama, esta macro establece `pModuleState`, un puntero a un `AFX_MODULE_STATE` estructura que contiene datos globales del módulo, como el estado efectivo del módulo para el resto del ámbito contenedor de la función. Al salir del ámbito que contiene la macro, se restaura automáticamente el estado efectivo del módulo anterior.  
   
- Este cambio se logra mediante la creación de una instancia de un **AFX_MODULE_STATE** clase en la pila. En su constructor, esta clase obtiene un puntero al estado actual del módulo y lo almacena en una variable de miembro y, a continuación, establece `pModuleState` como el nuevo estado efectivo del módulo. En su destructor, esta clase restaura el puntero almacenado en su variable miembro como estado efectivo del módulo.  
+ Este cambio se logra mediante la creación de una instancia de un `AFX_MODULE_STATE` clase en la pila. En su constructor, esta clase obtiene un puntero al estado actual del módulo y lo almacena en una variable de miembro y, a continuación, establece `pModuleState` como el nuevo estado efectivo del módulo. En su destructor, esta clase restaura el puntero almacenado en su variable miembro como estado efectivo del módulo.  
   
  Si tiene una función exportada, como uno que se abre un cuadro de diálogo en el archivo DLL, debe agregar el código siguiente al principio de la función:  
   

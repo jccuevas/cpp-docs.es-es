@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9d93511ad4f4ca835e09b6eaa3f612f0888e844
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18d54d22106742cab8d1cdfe9c32adc0a98fb41b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344847"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929548"
 ---
 # <a name="changing-list-control-styles"></a>Cambiar los estilos de control de lista
 Puede cambiar el estilo de ventana de un control de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) en cualquier momento después de crearlo. Al cambiar el estilo de ventana, cambiar el tipo de vista que usa el control. Por ejemplo, para emular el explorador, se podrían proporcionar elementos de menú o botones de barra de herramientas para cambiar el control entre las distintas vistas: vista de iconos, vista de lista y así sucesivamente.  
   
  Por ejemplo, cuando el usuario selecciona el elemento de menú, que podría realizar una llamada a [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) para recuperar el estilo del control actual y, a continuación, llame a [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) para restablecer el estilo. Para obtener más información, consulte [mediante controles de vista de lista](http://msdn.microsoft.com/library/windows/desktop/bb774736) del SDK de Windows.  
   
- Estilos disponibles están enumerados en [crear](../mfc/reference/clistctrl-class.md#create). Los estilos `LVS_ICON`, `LVS_SMALLICON`, `LVS_LIST`, y `LVS_REPORT` designar las vistas de control de cuatro lista.  
+ Estilos disponibles están enumerados en [crear](../mfc/reference/clistctrl-class.md#create). Los estilos **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**, y **LVS_REPORT** designar las vistas de control de cuatro lista.  
   
 ## <a name="extended-styles"></a>Estilos extendidos  
  Además de los estilos estándares para un control de lista, hay otro conjunto, que se conoce como estilos extendidos. Estos estilos, descritos en [estilos extendidos de vista de lista](http://msdn.microsoft.com/library/windows/desktop/bb774732) del SDK de Windows, ofrecen una variedad de características útiles que personalizan el comportamiento del control de lista. Para implementar el comportamiento de un estilo determinado (por ejemplo, la selección al mantener el mouse), realice una llamada a [CListCtrl:: SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle), pasa el estilo necesario. En el ejemplo siguiente se muestra la llamada de función:  

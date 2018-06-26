@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352319"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931982"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controles ActiveX en Internet
 Los controles ActiveX son la versión actualizada de la especificación de control OLE. Los controles son una arquitectura principal para desarrollar componentes de software programables que pueden utilizarse en una variedad de distintos contenedores, incluidos los exploradores Web compatibles con COM en Internet. Cualquier control de ActiveX puede ser un control de Internet y puede agregar su funcionalidad a un documento activo o formar parte de una página Web. Controles de una página Web pueden comunicarse entre sí mediante secuencias de comandos.  
@@ -39,7 +39,7 @@ Los controles ActiveX son la versión actualizada de la especificación de contr
   
  **Para ser un control ActiveX, un control debe:**  
   
--   Compatibilidad con la **IUnknown** interfaz.  
+-   Compatibilidad con la `IUnknown` interfaz.  
   
 -   Ser un objeto COM.  
   
@@ -85,7 +85,7 @@ Los controles ActiveX son la versión actualizada de la especificación de contr
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>Para crear el proyecto mediante el Asistente para controles de ActiveX de MFC  
   
-1.  Haga clic en `New` en el **archivo** menú.  
+1.  Haga clic en **New** en el **archivo** menú.  
   
 2.  Seleccione **Asistente para controles ActiveX de MFC** desde Visual C++ proyectos y el nombre del proyecto.  
   
@@ -129,7 +129,7 @@ Los controles ActiveX son la versión actualizada de la especificación de contr
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  Implemente el **Get/Set** métodos. Para **obtener**, devolver la cadena. Para `Set`, cargar la propiedad y llamar a `SetModifiedFlag`.  
+5.  Implemente los métodos `Get/Set`. Para `Get`, devolver la cadena. Para `Set`, cargar la propiedad y llamar a `SetModifiedFlag`.  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   

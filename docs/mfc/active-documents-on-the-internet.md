@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a18b84b30445060631589e72f6c158ea9b3626f0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334891"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930893"
 ---
 # <a name="active-documents-on-the-internet"></a>Documentos activos en Internet
 Documentos activos proporcionan una extensión para los objetos incrustados tradicionales. Los documentos activos pueden ser varias páginas y se muestran en el área de clientes en su totalidad. No tradicional negociación de menús y se pueden editar en contexto, así como en una ventana abierta en la aplicación de servidor. En lugar de mostrar como un pequeño rectángulo rodeado por un borde sombreado, documentos activos son un marco completo y siempre en el contexto activo.  
@@ -55,7 +55,7 @@ Documentos activos proporcionan una extensión para los objetos incrustados trad
 |-------------------------|---------------------------------|  
 |Utiliza archivos compuestos como mecanismo de almacenamiento.|`IPersistStorage`.|  
 |Es compatible con las características básicas de incrustación de documentos activos, incluida la creación de archivo.|`IPersistFile`, `IOleObject` y `IDataObject`.|  
-|Admite la activación en contexto.|`IOleInPlaceObject` y `IOleInPlaceActiveObject` (usando el contenedor `IOleInPlaceSite` y **IOleInPlaceFrame** interfaces).|  
+|Admite la activación en contexto.|`IOleInPlaceObject` y `IOleInPlaceActiveObject` (usando el contenedor `IOleInPlaceSite` y `IOleInPlaceFrame` interfaces).|  
 |Es compatible con las extensiones de documentos activos que comprenden estas nuevas interfaces. Algunas interfaces son opcionales.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` y `IPrint`.|  
   
  MFC proporciona compatibilidad para ampliar la compatibilidad de servidor incrustado existentes para documentos activos.  
@@ -68,7 +68,7 @@ Documentos activos proporcionan una extensión para los objetos incrustados trad
   
 |Tipo de clase|Anteriormente se deriva de|Cambio de derivar de|  
 |----------------|---------------------------|---------------------------|  
-|Marco en contexto|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|Marco en contexto|`COleIPFrameWnd`|`COleDocIPFrameWnd`|  
 |Elemento|`COleServerItem`|`CDocObjectServerItem`|  
   
  También se cambia la forma de especificar información en el registro y realizar otros cambios. Si la aplicación no tiene actualmente ninguna compatibilidad con componentes de COM, puede agregar compatibilidad con el servidor al ejecutar al Asistente para aplicaciones e integrar el código específico del componente COM con la aplicación existente.  

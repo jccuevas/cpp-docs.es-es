@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b941820b439afc8b914142b412995df30f109c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbcedd8cf217c993511bdb84a89294d7e98d6bab
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351358"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930207"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menús y recursos: Adiciones de servidor
 En este artículo se describen los cambios que deben realizarse en los menús y otros recursos en una aplicación de servidor (componente) de edición visual. Una aplicación de servidor requiere agregar muchos elementos a la estructura de menús y otros recursos porque puede iniciarse en uno de los tres modos: independiente, incrustado, o en su lugar. Como se describe en el [menús y recursos (OLE)](../mfc/menus-and-resources-ole.md) artículo, hay un máximo de cuatro conjuntos de menús. Los cuatro se usan para una aplicación de servidor completo MDI, mientras que sólo se utilizan tres para un miniservidor. El Asistente para aplicaciones creará el diseño de menú necesarios para el tipo de servidor al que desea. Alguna personalización puede ser necesario.  
@@ -63,14 +63,14 @@ En este artículo se describen los cambios que deben realizarse en los menús y 
   
  La segunda tabla es prácticamente una copia exacta de la tabla de aceleradores de la vista. Cualquier diferencia en paralelo los cambios realizados en el menú completamente abierto mencionado en [adiciones de menú de servidor](#_core_server_menu_additions).  
   
- Para obtener un ejemplo de estos cambios de la tabla de aceleradores, compare el **IDR_HIERSVRTYPE_SRVR_IP** y **IDR_HIERSVRTYPE_SRVR_EMB** Acelerador de tablas con **IDR_MAINFRAME** en el ejemplo HIERSVR. Archivo RC incluido en el ejemplo de MFC OLE [HIERSVR](../visual-cpp-samples.md). Faltan los aceleradores de archivo y la ventana de la tabla en contexto y son copias exactas de ellas en la tabla incrustada.  
+ Para obtener un ejemplo de estos cambios de la tabla de aceleradores, compare las tablas de aceleradores IDR_HIERSVRTYPE_SRVR_IP y IDR_HIERSVRTYPE_SRVR_EMB con IDR_MAINFRAME en el archivo HIERSVR. Archivo RC incluido en el ejemplo de MFC OLE [HIERSVR](../visual-cpp-samples.md). Faltan los aceleradores de archivo y la ventana de la tabla en contexto y son copias exactas de ellas en la tabla incrustada.  
   
 ##  <a name="_core_string_table_additions_for_server_applications"></a> Agregar tablas de cadenas para las aplicaciones de servidor  
  Adición de cadena solo una tabla es necesario en una aplicación de servidor: una cadena para indicar que no se pudo la inicialización de OLE. Por ejemplo, aquí es la entrada de tabla de cadenas que genera el Asistente para aplicaciones:  
   
 |Id.|String|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|Error de inicialización de OLE. Asegúrese de que las bibliotecas OLE tienen la versión correcta.|  
+|IDP_OLE_INIT_FAILED|Error de inicialización de OLE. Asegúrese de que las bibliotecas OLE tienen la versión correcta.|  
   
 ##  <a name="_core_mini.2d.server_additions"></a> Adiciones de miniservidor  
  Se aplican las mismas adiciones para miniservidores como los mencionados anteriormente para servidores completos. Dado un miniservidor no se puede ejecutar en modo independiente, el menú principal es mucho menor. El menú principal creado por el Asistente para aplicaciones sólo tiene un menú archivo, que contiene solo los elementos de salida y sobre. Menús en contexto e incrustados y aceleradores para miniservidores son los mismos que los servidores completos.  

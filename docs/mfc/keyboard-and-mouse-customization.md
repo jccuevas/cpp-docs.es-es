@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fda670198dd9bd03a6d944ce4db70542926bf41
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351668"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931585"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personalización del teclado y del mouse
 MFC permite al usuario de la aplicación para personalizar cómo controla el teclado y mouse de entrada. El usuario puede personalizar la entrada de teclado mediante la asignación de métodos abreviados de teclado para los comandos. El usuario también puede personalizar la entrada de mouse (ratón) seleccionando el comando que se debe ejecutar cuando el usuario hace doble clic dentro de windows específicos de la aplicación. En este tema se explica cómo personalizar la entrada de la aplicación.  
@@ -61,7 +61,7 @@ En la ficha personalización del mouse
   
  Después de que la aplicación inicializa el Administrador de mouse (ratón), el marco de trabajo agrega la **Mouse** tabulador para ir a la **personalizar** cuadro de diálogo. Si no agrega todas las vistas, obtener acceso a la ficha provocará una excepción no controlada. Después de haber creado una lista de vistas, el **Mouse** pestaña está disponible para el usuario.  
   
- Cuando se agrega una nueva vista en el administrador del mouse, se proporciona un identificador único. Si desea que admite la personalización de mouse (ratón) de una ventana, debe procesar el `WM_LBUTTONDBLCLICK` mensaje y llaman a la [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) (función). Cuando se llama a esta función, uno de los parámetros es el identificador de esa ventana. Es responsabilidad del programador para realizar un seguimiento de los números de identificador y los objetos asociados con ellos.  
+ Cuando se agrega una nueva vista en el administrador del mouse, se proporciona un identificador único. Si desea que admite la personalización de mouse (ratón) de una ventana, debe procesar el mensaje WM_LBUTTONDBLCLICK y llame a la [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) (función). Cuando se llama a esta función, uno de los parámetros es el identificador de esa ventana. Es responsabilidad del programador para realizar un seguimiento de los números de identificador y los objetos asociados con ellos.  
   
 ## <a name="security-concerns"></a>Cuestiones de seguridad  
  Como se describe en [herramientas definidas por el usuario](../mfc/user-defined-tools.md), el usuario puede asociar un identificador de herramienta definido por el usuario con el evento de doble clic. Cuando el usuario hace doble clic en una vista, la aplicación busca una herramienta de usuario que coincida con el identificador asociado. Si la aplicación encuentra una herramienta de búsqueda de coincidencias, ejecuta la herramienta. Si la aplicación no puede encontrar una herramienta de búsqueda de coincidencias, envía un mensaje WM_COMMAND con el identificador a la vista que se hizo doble clic.  

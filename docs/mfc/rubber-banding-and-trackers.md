@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b1b5b0a49fdb59417be04864c9d1ef5341f849
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4f36a634e4e5e6d4ee6c2618d0d43313c7c8094
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379247"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931741"
 ---
 # <a name="rubber-banding-and-trackers"></a>Efecto de banda elástica y seguimiento
 Otra característica proporcionada con los objetos de seguimiento es la selección de "banda elástica", lo que permite al usuario seleccionar varios elementos OLE arrastrando un rectángulo de ajuste de tamaño alrededor de los elementos que se seleccione. Cuando el usuario suelta el botón primario del mouse, elementos dentro de la región seleccionada por el usuario se seleccionan y se pueden manipular con el usuario. Por ejemplo, el usuario puede arrastrar la selección en otra aplicación de contenedor.  
   
- La implementación de esta característica requiere código adicional en la aplicación `WM_LBUTTONDOWN` función de controlador.  
+ La implementación de esta característica requiere código adicional en función de controlador WM_LBUTTONDOWN de la aplicación.  
   
  El ejemplo de código siguiente implementa la selección de goma elástica y otras características adicionales.  
   

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48825a264b7d82152f47e70c5911bea400c313db
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343699"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932122"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personalizar la apariencia de un control de barra de herramientas
 Clase `CToolBarCtrl` proporciona muchos estilos que afectan a la apariencia (y, en ocasiones, el comportamiento) del objeto de barra de herramientas. Modificar el objeto de barra de herramientas estableciendo el `dwCtrlStyle` parámetro de la `CToolBarCtrl::Create` (o `CToolBar::CreateEx`) función miembro, cuando se crea el control de barra de herramientas.  
@@ -47,17 +47,17 @@ Clase `CToolBarCtrl` proporciona muchos estilos que afectan a la apariencia (y, 
 -   **TBSTYLE_ALTDRAG** permite a los usuarios cambiar la posición de un botón de barra de herramientas, arrastre manteniendo presionada la tecla ALT. Si no se especifica este estilo, el usuario debe mantener presionada la tecla MAYÚS al arrastrar un botón.  
   
     > [!NOTE]
-    >  El `CCS_ADJUSTABLE` estilo debe especificarse para habilitar los botones de barra de herramientas.  
+    >  El **CCS_ADJUSTABLE** estilo debe especificarse para habilitar los botones de barra de herramientas.  
   
 -   **TBSTYLE_REGISTERDROP** genera **TBN_GETOBJECT** notificación de mensajes para solicitar quitan objetos de destino cuando el puntero del mouse pasa por encima de los botones de barra de herramientas.  
   
  Los estilos restantes afectan a aspectos visuales y del objeto de barra de herramientas:  
   
--   `TBSTYLE_WRAPABLE` Crea una barra de herramientas que puede tener varias líneas de botones. Botones de barra de herramientas pueden "ajustarse" a la línea siguiente cuando la barra de herramientas se vuelve demasiado estrecha para incluir todos los botones en la misma línea. Ajuste se produce en los límites y separación.  
+-   **TBSTYLE_WRAPABLE** crea una barra de herramientas que puede tener varias líneas de botones. Botones de barra de herramientas pueden "ajustarse" a la línea siguiente cuando la barra de herramientas se vuelve demasiado estrecha para incluir todos los botones en la misma línea. Ajuste se produce en los límites y separación.  
   
--   **TBSTYLE_CUSTOMERASE** genera **NM_CUSTOMDRAW** cuando procesa los mensajes de notificación `WM_ERASEBKGND` mensajes.  
+-   **TBSTYLE_CUSTOMERASE** genera **NM_CUSTOMDRAW** cuando procesa los mensajes de notificación **WM_ERASEBKGND** mensajes.  
   
--   `TBSTYLE_TOOLTIPS` Crea un control de información sobre herramientas que una aplicación puede utilizar para mostrar texto descriptivo para los botones en la barra de herramientas.  
+-   **TBSTYLE_TOOLTIPS** crea un control de información sobre herramientas que una aplicación puede utilizar para mostrar texto descriptivo para los botones en la barra de herramientas.  
   
  Para obtener una lista completa de los estilos de barra de herramientas y estilos extendidos, vea [Control de barra de herramientas y estilos de botón](http://msdn.microsoft.com/library/windows/desktop/bb760439) y [estilos extendidos de barra de herramientas](http://msdn.microsoft.com/library/windows/desktop/bb760430) en el SDK de Windows.  
   

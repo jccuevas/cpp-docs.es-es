@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 726eba2edbb857784a3a23ddcfb2d69fd8e30a72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43caffe53be180221b4145a03df7cfc41c31828e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348491"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928643"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI (Macro)
-Use la **propiedades** ventana para conectar un objeto de interfaz de usuario a un controlador de actualización de comandos en un objeto de destino del comando. Conectará automáticamente el identificador del objeto de interfaz de usuario para el `ON_UPDATE_COMMAND_UI` macro y crear un controlador en el objeto que controlará la actualización. Vea [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md) para obtener más información.  
+Use la **propiedades** ventana para conectar un objeto de interfaz de usuario a un controlador de actualización de comandos en un objeto de destino del comando. Automáticamente se conectará el Id. del objeto de interfaz de usuario a la macro ON_UPDATE_COMMAND_UI y crear un controlador en el objeto que controlará la actualización. Vea [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md) para obtener más información.  
   
  Por ejemplo, para actualizar un comando Borrar todo en el menú de edición del programa, use la **propiedades** ventana para agregar una entrada de mapa de mensajes en la clase seleccionada, una declaración de función para un controlador de actualización de comandos denominada `OnUpdateEditClearAll` en la clase declaración y una plantilla de función vacía en el archivo de implementación de la clase. El prototipo de función tiene el siguiente aspecto:  
   

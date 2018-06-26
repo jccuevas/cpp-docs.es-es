@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c896308970ffc6a2040657927dc127eee278ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f3608fbc0c7e34de4ae67ae60a12af23e9ac885
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342779"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931693"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Elementos de devolución de llamada y máscara de devolución de llamada
 Para cada uno de sus elementos, un control de vista de lista suele almacena el texto de etiqueta, el índice de la lista de imágenes de iconos del elemento, y marcas de un conjunto de bits para el estado del elemento. Puede definir elementos individuales como elementos de devolución de llamada, que son útiles si la aplicación ya almacena parte de la información de un elemento.  
@@ -29,13 +29,13 @@ Para cada uno de sus elementos, un control de vista de lista suele almacena el t
   
  Además de definir elementos de devolución de llamada, también puede modificar la máscara de devolución de llamada del control. Esta máscara es un conjunto de marcadores de bits que especifica los Estados de elemento para el que la aplicación, en lugar de control, almacena los datos actuales. La máscara de devolución de llamada se aplica a todos los elementos del control, a diferencia de la designación de elemento de devolución de llamada, que se aplica a un elemento específico. La máscara de devolución de llamada es cero de forma predeterminada, lo que significa que el control realiza un seguimiento de todos los Estados del elemento. Para cambiar este comportamiento predeterminado, inicialice la máscara para cualquier combinación de los siguientes valores:  
   
--   `LVIS_CUT` El elemento se marca para una operación de cortar y pegar.  
+-   **LVIS_CUT** el elemento se marca para una operación de cortar y pegar.  
   
--   `LVIS_DROPHILITED` Se resalta el elemento como un destino de arrastrar y colocar.  
+-   **LVIS_DROPHILITED** se resalta el elemento como un destino de arrastrar y colocar.  
   
--   `LVIS_FOCUSED` El elemento tiene el foco.  
+-   **LVIS_FOCUSED** el elemento tiene el foco.  
   
--   `LVIS_SELECTED` El elemento está seleccionado.  
+-   **LVIS_SELECTED** el elemento está seleccionado.  
   
 -   **LVIS_OVERLAYMASK** la aplicación almacena el índice de la imagen de superposición actual para cada elemento de lista de imágenes.  
   

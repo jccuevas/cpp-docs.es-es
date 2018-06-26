@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be1d7d90b4c13a23e2e3456e7371abbae61be4e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a658af47723a9c19218b205a17cb46919d7abd59
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379901"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932291"
 ---
 # <a name="run-member-function"></a>Run Member (Función)
-Una aplicación de marco de trabajo emplea la mayor parte de su tiempo en el [ejecutar](../mfc/reference/cwinapp-class.md#run) función miembro de clase [CWinApp](../mfc/reference/cwinapp-class.md). Tras la inicialización, `WinMain` llamadas **ejecutar** para procesar el bucle de mensajes.  
+Una aplicación de marco de trabajo emplea la mayor parte de su tiempo en el [ejecutar](../mfc/reference/cwinapp-class.md#run) función miembro de clase [CWinApp](../mfc/reference/cwinapp-class.md). Tras la inicialización, `WinMain` llamadas `Run` para procesar el bucle de mensajes.  
   
- **Ejecutar** recorrer un bucle de mensajes, la comprobación de la cola de mensajes para mensajes disponibles. Si hay un mensaje disponible, **ejecutar** envía para la acción. Si no hay mensajes disponibles, que a menudo es true, **ejecutar** llamadas `OnIdle` para realizar cualquier procesamiento de tiempo de inactividad que usted o el marco de trabajo puede necesitar realizada. Si no hay ningún mensaje y ningún procesamiento en inactividad para realizar, la aplicación espera hasta que ocurra algo. Cuando finaliza la aplicación, **ejecutar** llamadas `ExitInstance`. En la ilustración en [función miembro OnIdle](../mfc/onidle-member-function.md) muestra la secuencia de acciones en el bucle de mensajes.  
+ `Run` se desplaza a través de un bucle de mensajes, la comprobación de la cola de mensajes para mensajes disponibles. Si hay un mensaje disponible, `Run` envía para la acción. Si no hay mensajes disponibles, que a menudo es true, `Run` llamadas `OnIdle` para realizar cualquier procesamiento de tiempo de inactividad que usted o el marco de trabajo puede necesitar realizada. Si no hay ningún mensaje y ningún procesamiento en inactividad para realizar, la aplicación espera hasta que ocurra algo. Cuando finaliza la aplicación, `Run` llamadas `ExitInstance`. En la ilustración en [función miembro OnIdle](../mfc/onidle-member-function.md) muestra la secuencia de acciones en el bucle de mensajes.  
   
  Envío de mensajes depende del tipo de mensaje. Para obtener más información, consulte [mensajes y comandos en el marco de trabajo](../mfc/messages-and-commands-in-the-framework.md).  
   

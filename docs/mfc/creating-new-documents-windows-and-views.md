@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d929f4d7419e027a1018c4b0b33a4e42416613
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c0abc53e1a24d822605c9e5bfd7ab8276b32f82
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343420"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931211"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Crear nuevos documentos, ventanas y vistas
 Las ilustraciones siguientes proporcionan información general sobre el proceso de creación de documentos, vistas y ventanas de marco. Otros artículos que se centran en los objetos participantes proporcionan más detalles.  
@@ -55,10 +55,10 @@ Secuencia de creación de una ventana de marco
  ![Secuencia para crear una vista](../mfc/media/vc387l3.gif "vc387l3")  
 Secuencia de creación de una vista  
   
- Para obtener información acerca de cómo el marco de trabajo inicializa el nuevo documento, vista y los objetos de ventana de marco, consulte las clases [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), y [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) en la referencia de la biblioteca MFC. Consulte también [Nota técnica 22](../mfc/tn022-standard-commands-implementation.md), que se explican los procesos de creación e inicialización adicional en su explicación de los comandos estándar del marco de trabajo para el `New` y **abiertos** elementos en la **Archivo** menú.  
+ Para obtener información acerca de cómo el marco de trabajo inicializa el nuevo documento, vista y los objetos de ventana de marco, consulte las clases [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), y [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) en la referencia de la biblioteca MFC. Consulte también [Nota técnica 22](../mfc/tn022-standard-commands-implementation.md), que se explican los procesos de creación e inicialización adicional en su explicación de los comandos estándar del marco de trabajo para el **New** y **abrir** elementos en la **archivo** menú.  
   
 ##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> Inicializar nuestras propias adiciones a estas clases  
- Las ilustraciones precedentes también sugieren los puntos en el que se pueden reemplazar funciones miembro para inicializar los objetos de la aplicación. Una invalidación de `OnInitialUpdate` en la vista de clase es el mejor lugar para inicializar la vista. El `OnInitialUpdate` se produce la llamada inmediatamente después de que se crea la ventana de marco y la vista en la ventana de marco está conectada a su documento. Por ejemplo, si la vista es una vista de desplazamiento (derivado de `CScrollView` en lugar de `CView`), debe establecer el tamaño de la vista según el tamaño del documento en su `OnInitialUpdate` invalidar. (Este proceso se describe en la descripción de la clase [CScrollView](../mfc/reference/cscrollview-class.md).) Puede invalidar la **CDocument** funciones miembro `OnNewDocument` y `OnOpenDocument` para proporcionar inicialización específica de la aplicación del documento. Por lo general, es necesario reemplazar ambos ya que puede crear un documento de dos maneras.  
+ Las ilustraciones precedentes también sugieren los puntos en el que se pueden reemplazar funciones miembro para inicializar los objetos de la aplicación. Una invalidación de `OnInitialUpdate` en la vista de clase es el mejor lugar para inicializar la vista. El `OnInitialUpdate` se produce la llamada inmediatamente después de que se crea la ventana de marco y la vista en la ventana de marco está conectada a su documento. Por ejemplo, si la vista es una vista de desplazamiento (derivado de `CScrollView` en lugar de `CView`), debe establecer el tamaño de la vista según el tamaño del documento en su `OnInitialUpdate` invalidar. (Este proceso se describe en la descripción de la clase [CScrollView](../mfc/reference/cscrollview-class.md).) Puede invalidar la `CDocument` funciones miembro `OnNewDocument` y `OnOpenDocument` para proporcionar inicialización específica de la aplicación del documento. Por lo general, es necesario reemplazar ambos ya que puede crear un documento de dos maneras.  
   
  En la mayoría de los casos, el reemplazo debe llamar a la versión de la clase base. Para obtener más información, vea las funciones miembro con nombre de las clases [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), y [CWinApp](../mfc/reference/cwinapp-class.md) en MFC Referencia de la biblioteca.  
   

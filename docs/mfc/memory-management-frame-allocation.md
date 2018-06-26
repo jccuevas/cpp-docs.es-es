@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f67149e5835ee6f2b8922b29ee92872b24d0ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264a3b5618b1c153219d5dee838af38bd7f49f49
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349316"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931065"
 ---
 # <a name="memory-management-frame-allocation"></a>Administración de memoria: asignación de marcos
 Asignación en el marco toma su nombre de la "marco de pila" que se establece cada vez que se invoque una función. El marco de pila es un área de memoria que contiene de forma temporal los argumentos para la función, así como las variables que se definen locales para la función. Variables de marco a menudo se denominan "variables"automáticas"porque el compilador asigna automáticamente el espacio para ellos.  
@@ -42,7 +42,7 @@ Asignación en el marco toma su nombre de la "marco de pila" que se establece ca
   
  [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- Para las variables de función local, esta transición de ámbito se produce cuando la función se cierra, pero el ámbito de una variable de marco puede ser menor que una función si se utilizan llaves anidadas. Esta eliminación automática de variables de marco es muy importante. En el caso de tipos primitivos simples (como `int` o **bytes**), matrices o estructuras de datos, la eliminación automática simplemente reclama la memoria utilizada por la variable. Puesto que la variable ha salido del ámbito, no puede obtenerse todos modos. Sin embargo, en el caso de objetos de C++, el proceso de eliminación automática es un poco más complicado.  
+ Para las variables de función local, esta transición de ámbito se produce cuando la función se cierra, pero el ámbito de una variable de marco puede ser menor que una función si se utilizan llaves anidadas. Esta eliminación automática de variables de marco es muy importante. En el caso de tipos primitivos simples (como **int** o **bytes**), matrices o estructuras de datos, la eliminación automática simplemente reclama la memoria utilizada por la variable. Puesto que la variable ha salido del ámbito, no puede obtenerse todos modos. Sin embargo, en el caso de objetos de C++, el proceso de eliminación automática es un poco más complicado.  
   
  Cuando un objeto se define como una variable de marco, se invoca automáticamente su constructor en el punto donde se encuentra la definición. Cuando el objeto se sale del ámbito, su destructor se invoca automáticamente antes de la memoria para el objeto se recupera. Esta construcción y destrucción automáticas pueden resultar muy útiles, pero debe ser consciente de las llamadas automáticas, especialmente al destructor.  
   

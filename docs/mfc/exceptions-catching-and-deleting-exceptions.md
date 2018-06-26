@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3527dabab96fe8f2832430f928a922941178ea97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345191"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928774"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Excepciones: Detectar y eliminar excepciones
-Las instrucciones y los ejemplos siguientes muestran cómo detectar y eliminar excepciones. Para obtener más información sobre la **intente**, **catch**, y `throw` palabras clave, consulte [control de excepciones de C++](../cpp/cpp-exception-handling.md).  
+Las instrucciones y los ejemplos siguientes muestran cómo detectar y eliminar excepciones. Para obtener más información sobre la **intente**, **catch**, y **throw** palabras clave, consulte [control de excepciones de C++](../cpp/cpp-exception-handling.md).  
   
  Los controladores de excepciones deben eliminar objetos de excepción que controlan, porque si no se elimina la excepción produce una pérdida de memoria siempre que ese código detecta una excepción.  
   
@@ -42,7 +42,7 @@ Las instrucciones y los ejemplos siguientes muestran cómo detectar y eliminar e
 -   Ejecución devuelve desde el **catch** bloque.  
   
 > [!NOTE]
->  Cuando se elimina un `CException`, use la **eliminar** función de miembro para eliminar la excepción. No utilice la **eliminar** (palabra clave), porque se puede producir un error si la excepción no está en el montón.  
+>  Cuando se elimina un `CException`, use el `Delete` función de miembro para eliminar la excepción. No utilice la **eliminar** (palabra clave), porque se puede producir un error si la excepción no está en el montón.  
   
 #### <a name="to-catch-and-delete-exceptions"></a>Para detectar y eliminar excepciones  
   

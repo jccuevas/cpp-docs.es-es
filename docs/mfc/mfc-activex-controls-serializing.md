@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d62411747dbe920b772b66d11cd1e2a789c5db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9db6ff6c0cdda01875e4968e4d92ca087ad2b57
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353503"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930066"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Controles ActiveX MFC: Serializar
 Este artículo describe cómo serializar un control ActiveX. La serialización es el proceso de leer o escribir en un medio de almacenamiento persistente, como un archivo de disco. La biblioteca (Microsoft Foundation Classes) proporciona compatibilidad integrada para la serialización en la clase `CObject`. `COleControl` extiende esta compatibilidad a controles ActiveX mediante el uso de un mecanismo de intercambio de la propiedad.  
@@ -77,7 +77,7 @@ Este artículo describe cómo serializar un control ActiveX. La serialización e
  Para obtener más información sobre estas funciones de intercambio de propiedad, vea [persistencia de controles OLE](../mfc/reference/persistence-of-ole-controls.md) en el *referencia de MFC*.  
   
 ##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Personalizar el comportamiento predeterminado de DoPropExchange  
- La implementación predeterminada de **DoPropertyExchange** (como se muestra en el tema anterior) realiza una llamada a la clase base `COleControl`. Serializa el conjunto de propiedades admitidas automáticamente por `COleControl`, que utiliza más espacio de almacenamiento que serializar sólo las propiedades personalizadas del control. La eliminación de esta llamada, permite el objeto serializar sólo las propiedades que considere importantes. Los Estados de propiedad estándar ha implementado el control no se serializará al guardar o cargar el objeto de control a menos que agregue explícitamente **PX_** llama para ellos.  
+ La implementación predeterminada de `DoPropertyExchange` (como se muestra en el tema anterior) realiza una llamada a la clase base `COleControl`. Serializa el conjunto de propiedades admitidas automáticamente por `COleControl`, que utiliza más espacio de almacenamiento que serializar sólo las propiedades personalizadas del control. La eliminación de esta llamada, permite el objeto serializar sólo las propiedades que considere importantes. Los Estados de propiedad estándar ha implementado el control no se serializará al guardar o cargar el objeto de control a menos que agregue explícitamente **PX_** llama para ellos.  
   
 ##  <a name="_core_implementing_version_support"></a> Implementar la compatibilidad de versión  
  Compatibilidad de versiones permite un control ActiveX revisado agregar nuevas propiedades persistentes y seguir siendo capaces de detectar y cargar el estado persistente creado por una versión anterior del control. Para que la versión de un control esté disponible como parte de sus datos persistentes, llame a [COleControl:: ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) en el control `DoPropExchange` (función). Esta llamada se inserta automáticamente si el control ActiveX se creó mediante el Asistente para controles ActiveX. Se puede quitar si no es necesaria la compatibilidad de versiones. Sin embargo, el costo de tamaño del control es muy pequeño (4 bytes) para la flexibilidad adicional que proporciona compatibilidad con la versión.  
@@ -87,7 +87,7 @@ Este artículo describe cómo serializar un control ActiveX. La serialización e
  [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- Puede usar cualquier `DWORD` como el número de versión. Los proyectos generados por el Asistente para controles ActiveX utilizan **_wVerMinor** y **_wVerMajor** como el valor predeterminado. Se trata de constantes globales definidas en el archivo de implementación de la clase del control ActiveX del proyecto. En el resto de su `DoPropExchange` función, puede llamar a [CPropExchange:: GetVersion](../mfc/reference/cpropexchange-class.md#getversion) en cualquier momento para recuperar la versión que se va a guardar o recuperar.  
+ Puede usar cualquier **DWORD** como el número de versión. Los proyectos generados por el Asistente para controles ActiveX utilizan `_wVerMinor` y `_wVerMajor` como el valor predeterminado. Se trata de constantes globales definidas en el archivo de implementación de la clase del control ActiveX del proyecto. En el resto de su `DoPropExchange` función, puede llamar a [CPropExchange:: GetVersion](../mfc/reference/cpropexchange-class.md#getversion) en cualquier momento para recuperar la versión que se va a guardar o recuperar.  
   
  En el ejemplo siguiente, la versión 1 de este control de ejemplo tiene sólo una propiedad "ReleaseDate". Versión 2 agrega una propiedad "OriginalDate". Si el control se le solicita que cargue el estado persistente de la versión anterior, inicializa la variable miembro para la nueva propiedad en un valor predeterminado.  
   

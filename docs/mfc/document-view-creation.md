@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb89180db8e1a6cce2c40bbb4bae0965b972afa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 894bb5a0b3a4c86d764fc6f4a0e4b9ae18422669
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343530"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931858"
 ---
 # <a name="documentview-creation"></a>Crear documentos y vistas
-El marco de trabajo proporciona implementaciones de la `New` y **abiertos** comandos (entre otras cosas) en el **archivo** menú. Creación de un nuevo documento y su vista asociada y la ventana de marco es un esfuerzo cooperativo entre el objeto de aplicación, una plantilla de documento, el documento recién creado y la ventana de marco recién creada. La tabla siguiente resume qué objetos crean qué.  
+El marco de trabajo proporciona implementaciones de la **New** y **abiertos** comandos (entre otras cosas) en el **archivo** menú. Creación de un nuevo documento y su vista asociada y la ventana de marco es un esfuerzo cooperativo entre el objeto de aplicación, una plantilla de documento, el documento recién creado y la ventana de marco recién creada. La tabla siguiente resume qué objetos crean qué.  
   
 ### <a name="object-creators"></a>Creadores de objetos  
   

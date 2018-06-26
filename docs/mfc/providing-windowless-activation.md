@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a42d952ade479c4eb117d21921c9b0feafb81cea
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351815"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931956"
 ---
 # <a name="providing-windowless-activation"></a>Proporcionar activación sin ventana
-Código de creación de ventana (es decir, todo lo que ocurre cuando se llama a **CreateWindow**) es costoso para ejecutar. Un control que mantiene una pantalla ventana tiene que administrar los mensajes de la ventana. Controles sin ventana, por tanto, son más rápidos que los controles de windows.  
+Código de creación de ventana (es decir, todo lo que ocurre cuando se llama a `CreateWindow`) es costoso para ejecutar. Un control que mantiene una pantalla ventana tiene que administrar los mensajes de la ventana. Controles sin ventana, por tanto, son más rápidos que los controles de windows.  
   
  Una ventaja adicional de los controles sin ventana es que, a diferencia de los controles con ventanas, controles sin ventana admiten pintura transparente y regiones de pantalla no rectangular. Un ejemplo común de un control transparente es un control de texto con un fondo transparente. Los controles se dibuja el texto pero no en el fondo, para que lo que está bajo el texto se muestra a través de. Formularios más reciente a menudo hacen que el uso de los controles no rectangulares, como flechas y botones de ida y vuelta.  
   
@@ -41,7 +41,7 @@ Código de creación de ventana (es decir, todo lo que ocurre cuando se llama a 
   
  El código para incluir este indicador se genera automáticamente si selecciona la **activación sin ventana** opción el [configuración del Control](../mfc/reference/control-settings-mfc-activex-control-wizard.md) página del Asistente para el Control de ActiveX de MFC.  
   
- Cuando se habilita la activación sin ventana, el contenedor delegará los mensajes de entrada para el control `IOleInPlaceObjectWindowless` interfaz. `COleControl`de la implementación de esta interfaz envía los mensajes a través de mapas de mensajes del control, después de ajustar el mouse coordina adecuadamente. Puede procesar los mensajes como mensajes de ventana normal, agregando las entradas correspondientes al mapa de mensajes. En los controladores para estos mensajes, evite utilizar el `m_hWnd` variable miembro (o cualquier función miembro que lo utilice) sin comprobar primero que su valor no es **NULL**.  
+ Cuando se habilita la activación sin ventana, el contenedor delegará los mensajes de entrada para el control `IOleInPlaceObjectWindowless` interfaz. `COleControl`de la implementación de esta interfaz envía los mensajes a través de mapas de mensajes del control, después de ajustar el mouse coordina adecuadamente. Puede procesar los mensajes como mensajes de ventana normal, agregando las entradas correspondientes al mapa de mensajes. En los controladores para estos mensajes, evite utilizar el *m_hWnd* variable miembro (o cualquier función miembro que lo utilice) sin comprobar primero que su valor no es **NULL**.  
   
  `COleControl` proporciona funciones miembro que invocan la captura del mouse, foco del teclado, desplazamiento y otros servicios de ventana del contenedor según corresponda, incluidas:  
   

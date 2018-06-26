@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333835"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930666"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contenedores de controles ActiveX: Controlar eventos desde un control ActiveX
 Este artículo describe mediante la ventana Propiedades para instalar a controladores de eventos para controles ActiveX en un contenedor de controles ActiveX. Los controladores de eventos se utilizan para recibir notificaciones (desde el control) de ciertos eventos y realizar alguna acción en respuesta. Esta notificación se denomina "activar" el evento.  
@@ -46,7 +46,7 @@ Este artículo describe mediante la ventana Propiedades para instalar a controla
   
  Cuando use la ventana Propiedades para agregar eventos, un evento asignar entrada (`ON_EVENT`) se agrega a la asignación de receptor de eventos y un controlador de eventos se agrega la función a la implementación del contenedor (. Archivo CPP).  
   
- En el ejemplo siguiente se declara un controlador de eventos, denominado `OnClickInCircCtrl`, para el control Circ **ClickIn** eventos:  
+ En el ejemplo siguiente se declara un controlador de eventos, denominado `OnClickInCircCtrl`, para el control Circ `ClickIn` eventos:  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   

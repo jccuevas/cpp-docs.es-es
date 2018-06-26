@@ -51,12 +51,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b8c6c5b6d27bdf4ce4c9ad46a75c21b9f47333
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349787"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930851"
 ---
 # <a name="graphic-objects"></a>Objetos gráficos
 Windows proporciona diversas herramientas de dibujo que se usan en contextos de dispositivo. Incluye lápices para trazar líneas, pinceles para rellenar interiores y fuentes para dibujar texto. MFC proporciona clases de objetos gráficos que equivalen a las herramientas de dibujo de Windows. En la siguiente tabla se recogen las clases disponibles y los tipos de identificador de Interfaz de dispositivo gráfico (GDI) de Windows equivalentes.  
@@ -82,7 +82,7 @@ Windows proporciona diversas herramientas de dibujo que se usan en contextos de 
   
  Cada clase de objeto gráfico en la biblioteca de clases tiene un constructor que permite crear objetos gráficos de esa clase. Este constructor se tiene que inicializar con la función de creación adecuada, como, por ejemplo, `CreatePen`.  
   
- Cada clase de objeto gráfico en la biblioteca de clases tiene un operador de conversión que convierte un objeto MFC en el identificador de Windows asociado. El identificador resultante es válido hasta que el objeto asociado lo desconecta. Usar el objeto **separar** función de miembro para desconectar el identificador.  
+ Cada clase de objeto gráfico en la biblioteca de clases tiene un operador de conversión que convierte un objeto MFC en el identificador de Windows asociado. El identificador resultante es válido hasta que el objeto asociado lo desconecta. Usar el objeto `Detach` función de miembro para desconectar el identificador.  
   
  El siguiente código convierte un objeto `CPen` en un identificador de Windows:  
   

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf5553904c859e38f42423408c0b7bddd9237fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1209353f10e52b13202a91ae120057ba85dfa805
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361340"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930102"
 ---
 # <a name="mfc-activex-controls"></a>Controles ActiveX MFC
 Un control ActiveX es un componente de software reutilizable, basado en el modelo de objetos componentes (COM), que admite una gran variedad de funciones OLE y se puede personalizar de modo que se adapte a las necesidades del software. Los controles ActiveX están diseñados para su uso tanto en contenedores de controles ActiveX ordinarios como en páginas web de Internet. Puede crear controles ActiveX con MFC, descrita aquí, o con el [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
@@ -77,7 +77,7 @@ Comunicación entre un contendor de controles ActiveX y un control ActiveX
   
  En la ilustración anterior se muestra también cómo los controles administran otras interfaces OLE (además de la automatización y los eventos).  
   
- `COleControl` realiza toda la comunicación de un control con el contenedor. Para ocuparse de algunas de las solicitudes del contenedor, **COleControl** se llamar a funciones miembro que se implementan en la clase de control. Todos los métodos y algunas propiedades se controlan de esta manera. La clase del control también puede iniciar la comunicación con el contenedor si se llama a las funciones miembro de `COleControl`. Los eventos se desencadenan de esta manera.  
+ `COleControl` realiza toda la comunicación de un control con el contenedor. Para ocuparse de algunas de las solicitudes del contenedor, `COleControl` se llamar a funciones miembro que se implementan en la clase de control. Todos los métodos y algunas propiedades se controlan de esta manera. La clase del control también puede iniciar la comunicación con el contenedor si se llama a las funciones miembro de `COleControl`. Los eventos se desencadenan de esta manera.  
   
 ##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Estados activos e inactivos de un Control ActiveX  
  Un control tiene dos estados básicos: activo e inactivo. Tradicionalmente, se distinguían por el hecho de que el control tuviera o no una ventana. Un control activo tenía una ventana; un control inactivo no la tenía. Con la introducción de la activación sin ventana, esta distinción ya no es universal, pero sigue aplicándose a muchos controles.  
@@ -89,7 +89,7 @@ Comunicación entre un contendor de controles ActiveX y un control ActiveX
  ![Procesamiento de mensajes en el control ActiveX con ventanas activo](../mfc/media/vc37223.gif "vc37223")  
 Procesamiento de mensajes de ventanas en un control ActiveX con ventanas (cuando esté activo)  
   
-##  <a name="_core_serializing_activex_elements"></a> Serialización  
+##  <a name="_core_serializing_activex_elements"></a> serialización  
  La capacidad de serializar los datos, a la que a veces se hace referencia como persistencia, permite que el control escriba el valor de las propiedades en el almacenamiento persistente. Los controles pueden volver a crearse entonces si se lee el estado del objeto en el almacenamiento.  
   
  Tenga en cuenta que un control no es responsable de obtener acceso al soporte de almacenamiento. En su lugar, el contenedor del control es responsable de proporcionar al control un medio de almacenamiento para usarlo en el momento adecuado. Para obtener más información sobre la serialización, vea el artículo [controles ActiveX MFC: serializar](../mfc/mfc-activex-controls-serializing.md). Para obtener información sobre cómo optimizar la serialización, vea [optimizar la persistencia y la inicialización](../mfc/optimizing-persistence-and-initialization.md) en controles ActiveX: optimización.  

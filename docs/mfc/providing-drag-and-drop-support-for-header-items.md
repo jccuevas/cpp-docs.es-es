@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50cd19d4828269d0591afd0b46768e9917b96906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bf21021e204a6caf298453bab42db2aedff409c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349349"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928425"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Proporcionar compatibilidad con arrastrar y colocar para los elementos de encabezado
-Para proporcionar compatibilidad con arrastrar y colocar en elementos de encabezado, especifique el `HDS_DRAGDROP` estilo. Compatibilidad con arrastrar y colocar en elementos de encabezado proporciona al usuario la capacidad para volver a ordenar los elementos de encabezado de un control de encabezado. El comportamiento predeterminado proporciona una imagen de arrastre semitransparente del elemento de encabezado que se están arrastrando y un indicador visual de la nueva posición, si se quita el elemento de encabezado.  
+Para proporcionar compatibilidad con arrastrar y colocar en elementos de encabezado, especifique el estilo HDS_DRAGDROP. Compatibilidad con arrastrar y colocar en elementos de encabezado proporciona al usuario la capacidad para volver a ordenar los elementos de encabezado de un control de encabezado. El comportamiento predeterminado proporciona una imagen de arrastre semitransparente del elemento de encabezado que se están arrastrando y un indicador visual de la nueva posición, si se quita el elemento de encabezado.  
   
- Como con la funcionalidad común de arrastrar y colocar, puede extender el comportamiento de arrastrar y colocar de forma predeterminada controlando el **igual** y **HDN_ENDDRAG** notificaciones. También puede personalizar la apariencia de la imagen de arrastre invalidando el [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) función miembro.  
+ Como con la funcionalidad común de arrastrar y colocar, puede extender el comportamiento de arrastrar y colocar de forma predeterminada controlando las notificaciones igual y HDN_ENDDRAG. También puede personalizar la apariencia de la imagen de arrastre invalidando el [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) función miembro.  
   
 > [!NOTE]
 >  Si va a proporcionar compatibilidad con arrastrar y colocar para un control de encabezado incrustado en un control de lista, vea la sección estilo extendido en la [cambiar estilos de Control de lista](../mfc/changing-list-control-styles.md) tema.  

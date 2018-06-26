@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351844"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928369"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Controles ActiveX MFC: Implementación de propiedades avanzada
 Este artículo describe temas relacionados con la implementación de propiedades en un control ActiveX avanzadas:  
@@ -66,9 +66,9 @@ Este artículo describe temas relacionados con la implementación de propiedades
  Este ejemplo de código llama `SetNotSupported` si la `m_bReadOnlyMode` miembro de datos es **TRUE**. Si **FALSE**, la propiedad se establece en el nuevo valor.  
   
 ##  <a name="_core_returning_error_codes_from_a_property"></a> Devolver códigos de Error de una propiedad  
- Para indicar que se ha producido un error al intentar obtener o establecer una propiedad, utilice la `COleControl::ThrowError` función, que toma un `SCODE` (código de estado) como parámetro. Puede usar predefinido `SCODE` o definir uno propio. Para obtener una lista de predefinidos `SCODE`s e instrucciones para definir personalizado `SCODE`s, consulte [controlar los errores en el ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) en el artículo controles ActiveX: temas avanzados.  
+ Para indicar que se ha producido un error al intentar obtener o establecer una propiedad, utilice la `COleControl::ThrowError` función, que toma un SCODE (código de estado) como un parámetro. Puede utilizar un SCODE predefinido o definir uno propio. Para obtener una lista de predefinidos SCODEs e instrucciones para definir SCODEs personalizados, consulte [controlar los errores en el ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) en el artículo controles ActiveX: temas avanzados.  
   
- Funciones auxiliares que permiten la más común predefinida `SCODE`s, como [COleControl:: SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), y [COleControl:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
+ Funciones auxiliares existen para la más común predefinidos SCODEs, como [COleControl:: SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), y [COleControl:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
 >  `ThrowError` está pensado para usarse únicamente como un medio para devolver un error desde dentro Get de una propiedad o Set función o un método de automatización. Éstas son las únicas veces que el controlador de excepción apropiado estará presenten en la pila.  

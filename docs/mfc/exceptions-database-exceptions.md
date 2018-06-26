@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83b3f4f54f467ca7f4fbd2a179fdbf01d54dfa89
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354307"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930243"
 ---
 # <a name="exceptions-database-exceptions"></a>Excepciones: Excepciones de base de datos
 En este artículo se explica cómo controlar las excepciones de base de datos. La mayoría de los materiales en este artículo se aplica si está trabajando con las clases MFC para Open Database Connectivity (ODBC) o las clases MFC para Data Access Objects (DAO). Material específico a uno de los modelos se marca explícitamente. Entre los temas se incluyen los siguientes:  
@@ -54,7 +54,7 @@ En este artículo se explica cómo controlar las excepciones de base de datos. L
   
 -   [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) contiene un código de error extendida de las clases DAO de MFC. Estos códigos de error, que tienen nombres de la forma **AFX_DAO_ERROR_XXX**, están documentados en el miembro de datos en `CDaoException`.  
   
--   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) contiene un OLE `SCODE` de DAO, si procede. Rara vez necesitará trabajar con este código de error, sin embargo. Por lo general más información está disponible en los otros dos miembros de datos. Ver el miembro de datos para obtener más información acerca de `SCODE` valores.  
+-   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) contiene un OLE **SCODE** de DAO, si procede. Rara vez necesitará trabajar con este código de error, sin embargo. Por lo general más información está disponible en los otros dos miembros de datos. Ver el miembro de datos para obtener más información acerca de **SCODE** valores.  
   
  Información adicional sobre los errores DAO, el tipo de objeto DAO Error y la colección de errores de DAO está disponible en la clase [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
@@ -62,7 +62,7 @@ En este artículo se explica cómo controlar las excepciones de base de datos. L
  En el ejemplo siguiente se intenta construir una [CRecordset](../mfc/reference/crecordset-class.md)-objeto del montón con derivado la **nueva** operador y, a continuación, abra el conjunto de registros (para un origen de datos ODBC). Para obtener un ejemplo similar para las clases DAO, vea "Ejemplo de excepción DAO" a continuación.  
   
 ### <a name="odbc-exception-example"></a>Ejemplo de excepción ODBC  
- El [abierto](../mfc/reference/crecordset-class.md#open) función miembro podría producir una excepción (de tipo [CDBException](../mfc/reference/cdbexception-class.md) para las clases ODBC), por lo que esta código corchetes el **abierto** llame con un **intente**  bloque. La subsiguiente **catch** bloque detectará un `CDBException`. Puede examinar el objeto de excepción, denominado `e`, pero en este caso resulta suficiente para saber que ha fallado el intento de crear un conjunto de registros. El **catch** bloque muestra un cuadro de mensaje y limpia eliminando el objeto de conjunto de registros.  
+ El [abierto](../mfc/reference/crecordset-class.md#open) función miembro podría producir una excepción (de tipo [CDBException](../mfc/reference/cdbexception-class.md) para las clases ODBC), por lo que esta código corchetes la `Open` llame con un **intente** bloque. La subsiguiente **catch** bloque detectará un `CDBException`. Puede examinar el objeto de excepción, denominado `e`, pero en este caso resulta suficiente para saber que ha fallado el intento de crear un conjunto de registros. El **catch** bloque muestra un cuadro de mensaje y limpia eliminando el objeto de conjunto de registros.  
   
  [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]  
   

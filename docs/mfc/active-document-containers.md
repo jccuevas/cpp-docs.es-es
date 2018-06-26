@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c912b6c703ef7e05825e070d09f0a1b3cd73003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339032"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932164"
 ---
 # <a name="active-document-containers"></a>Contenedores de documentos activos
 Un contenedor de documentos activos, como cuaderno de Microsoft Office o Internet Explorer, permite trabajar con varios documentos de diferentes tipos de aplicaciones en un solo marco (en lugar de obligarle a crear y usar varios marcos de aplicación para cada uno tipo de documento).  
@@ -50,15 +50,15 @@ Un contenedor de documentos activos, como cuaderno de Microsoft Office o Interne
   
  Un contenedor de documentos activos que integre documentos activos debe:  
   
--   Ser capaz de controlar el almacenamiento de objetos a través de la **IPersistStorage** interfaz, es decir, debe proporcionar un `IStorage` instancia para cada documento activo.  
+-   Ser capaz de controlar el almacenamiento de objetos a través de la `IPersistStorage` interfaz, es decir, debe proporcionar un `IStorage` instancia para cada documento activo.  
   
--   Admite las características básicas de incrustación de documentos OLE, que necesita objetos de "sitio" (uno por cada documento o incrustación) que implementan **IOleClientSite** y **IAdviseSink**.  
+-   Admite las características básicas de incrustación de documentos OLE, que necesita objetos de "sitio" (uno por cada documento o incrustación) que implementan `IOleClientSite` y `IAdviseSink`.  
   
--   Admite la activación en contexto de objetos incrustados o documentos activos. Objetos de sitio del contenedor deben implementar `IOleInPlaceSite` y objeto de marco del contenedor debe proporcionar **IOleInPlaceFrame**.  
+-   Admite la activación en contexto de objetos incrustados o documentos activos. Objetos de sitio del contenedor deben implementar `IOleInPlaceSite` y debe proporcionar el objeto de marco del contenedor `IOleInPlaceFrame`.  
   
 -   Compatible con las extensiones de los documentos activos mediante la implementación de `IOleDocumentSite` para proporcionar el mecanismo para el contenedor para comunicarse con el documento. Opcionalmente, el contenedor puede implementar las interfaces de documento activo `IOleCommandTarget` y `IContinueCallback` para recoger comandos sencillos como imprimir o guardar.  
   
- El objeto de marco, los objetos de vista y el objeto contenedor pueden implementar opcionalmente **IOleCommandTarget** para admitir el envío de determinados comandos, como se describe en [destinos de comando](../mfc/message-handling-and-command-targets.md). Opcionalmente, también pueden implementar objetos de vista y de contenedor `IPrint` y `IContinueCallback`, para admitir la impresión mediante programación, como se describe en [imprimir mediante programación](../mfc/programmatic-printing.md).  
+ El objeto de marco, los objetos de vista y el objeto contenedor pueden implementar opcionalmente `IOleCommandTarget` para admitir el envío de determinados comandos, como se describe en [destinos de comando](../mfc/message-handling-and-command-targets.md). Opcionalmente, también pueden implementar objetos de vista y de contenedor `IPrint` y `IContinueCallback`, para admitir la impresión mediante programación, como se describe en [imprimir mediante programación](../mfc/programmatic-printing.md).  
   
  En la siguiente ilustración se muestra las relaciones conceptuales entre un contenedor y sus componentes (a la izquierda) y el documento activo y sus vistas (a la derecha). El documento activo administra el almacenamiento y datos, y la vista muestra o imprime, opcionalmente, esos datos. Las interfaces en negrita son las necesarias para la participación del documento activo; esos negrita y cursiva son opcionales. Todas las demás interfaces son necesarios.  
   
@@ -85,7 +85,7 @@ Un contenedor de documentos activos, como cuaderno de Microsoft Office o Interne
  Un contenedor que admite varias vistas debe ser capaz de crear vista de varios objetos de sitio en el sitio de documento. Esto proporciona cada vista con servicios de activación y desactivación independientes, tal y como se proporcionan a través de `IOleInPlaceSite`.  
   
 ##  <a name="frame_object"></a> Objeto de marco  
- Objeto de marco del contenedor es, en su mayor parte, el mismo marco que se utiliza para la activación en contexto de documentos OLE, es decir, que gestiona la negociación de menú y barra de herramientas. Un objeto de vista tiene acceso a este objeto de marco a través de **IOleInPlaceSite::GetWindowContext**, que también proporciona acceso al objeto de contenedor que representa el documento contenedor (que puede gestionar la negociación de la barra de herramientas del panel de nivel y enumeración de los objetos contenidos).  
+ Objeto de marco del contenedor es, en su mayor parte, el mismo marco que se utiliza para la activación en contexto de documentos OLE, es decir, que gestiona la negociación de menú y barra de herramientas. Un objeto de vista tiene acceso a este objeto de marco a través de `IOleInPlaceSite::GetWindowContext`, que también proporciona acceso al objeto de contenedor que representa el documento contenedor (que puede controlar la negociación de la barra de herramientas del panel de nivel y enumeración de los objetos contenidos).  
   
  Un contenedor de documentos activos puede ampliar el marco agregando `IOleCommandTarget`. Esto le permite recibir comandos que se originan en la interfaz de usuario del documento activo en la misma manera que esta interfaz puede permitir que un contenedor enviar los mismos comandos (como **nuevo archivo**, **abiertos**,  **Guardar como**, **impresión**; **Editar una copia**, **pegar**, **deshacer**etc.) a un documento activo. Para obtener más información, consulte [destinos de comando](../mfc/message-handling-and-command-targets.md).  
   

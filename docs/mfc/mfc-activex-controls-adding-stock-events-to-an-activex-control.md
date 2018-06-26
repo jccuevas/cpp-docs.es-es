@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41445015f30eb953675f763652fb85ef3eeb857a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359343"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930792"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Controles ActiveX MFC: Agregar eventos estándar a un control ActiveX
-Eventos estándar se diferencian de los eventos personalizados en que se activan automáticamente por clase [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` contiene funciones miembro predefinidas que activan eventos resultantes de acciones comunes. Algunas acciones comunes implementadas por `COleControl` incluir solo - y doble - clicks en el control, los eventos de teclado y los cambios en el estado de los botones del mouse. Entradas del mapa de eventos para eventos estándar siempre están precedidas por la **EVENT_STOCK** prefijo.  
+Eventos estándar se diferencian de los eventos personalizados en que se activan automáticamente por clase [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` contiene funciones miembro predefinidas que activan eventos resultantes de acciones comunes. Algunas acciones comunes implementadas por `COleControl` incluir solo - y doble - clicks en el control, los eventos de teclado y los cambios en el estado de los botones del mouse. Entradas de acciones de eventos siempre están precedidos por EVENT_STOCK (prefijo) del mapa de eventos.  
   
 ##  <a name="_core_stock_events_supported_by_classwizard"></a> Eventos estándar admitidos por el Asistente para agregar eventos  
  La `COleControl` clase proporciona diez eventos estándar, que aparecen en la tabla siguiente. Puede especificar los eventos que desee en el control mediante la [Asistente para agregar eventos](../ide/add-event-wizard.md).  
@@ -76,7 +76,7 @@ Eventos estándar se diferencian de los eventos personalizados en que se activan
 |KeyPress|**void FireKeyPress (short\***`pnChar`**)** |Se desencadena cuando una `WM_CHAR` recibirlo.<br /><br /> Entrada del mapa de eventos: **EVENT_STOCK_KEYPRESS)**|  
 |KeyUp|**void FireKeyDown (short** `nChar` **, short**`nShiftState`**)** |Se desencadena cuando una `WM_SYSKEYUP` o `WM_KEYUP` recibirlo.<br /><br /> Entrada del mapa de eventos: **EVENT_STOCK_KEYUP)**|  
 |MouseDown|**void FireMouseDown (short** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |Se desencadena si cualquier **BUTTONDOWN** (izquierda, centro o derecha) que se recibe. El mouse se captura inmediatamente antes de que se desencadena este evento.<br /><br /> Entrada del mapa de eventos: **EVENT_STOCK_MOUSEDOWN)**|  
-|MouseMove|**void FireMouseDown (short** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |Se desencadena cuando una `WM_MOUSEMOVE` recibirlo.<br /><br /> Entrada del mapa de eventos: **EVENT_STOCK_MOUSEMOVE)**|  
+|MouseMove|**void FireMouseDown (short** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |Se desencadena cuando se recibe un mensaje WM_MOUSEMOVE.<br /><br /> Entrada del mapa de eventos: **EVENT_STOCK_MOUSEMOVE)**|  
 |MouseUp|**void FireMouseDown (short** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |Se desencadena si cualquier **BUTTONUP** (izquierda, centro o derecha) que se recibe. La captura del mouse se libera antes de que se desencadena este evento.<br /><br /> Entrada del mapa de eventos: **EVENT_STOCK_MOUSEUP)**|  
 |ReadyStateChange|**void FireReadyStateChange)**|Se desencadena cuando un control vaya hasta el siguiente estado preparado debido a la cantidad de datos recibidos.<br /><br /> Entrada del mapa de eventos: **EVENT_STOCK_READYSTATECHANGE)**|  
   
@@ -102,7 +102,7 @@ Eventos estándar se diferencian de los eventos personalizados en que se activan
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
   
- Agregar este código desencadena un evento KeyPress cuando un `WM_CHAR` se recibe el mensaje y el control está activo. El evento KeyPress puede activarse en otras ocasiones, llamando a su función de activación (por ejemplo, `FireKeyPress`) desde el código del control.  
+ Agregar este código, desencadena un evento KeyPress cuando se recibe un mensaje WM_CHAR y el control está activo. El evento KeyPress puede activarse en otras ocasiones, llamando a su función de activación (por ejemplo, `FireKeyPress`) desde el código del control.  
   
  El Asistente para agregar eventos, se agrega la siguiente línea de código para el control. Este archivo IDL:  
   

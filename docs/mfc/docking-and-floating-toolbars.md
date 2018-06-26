@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 317527d87c12a0c140c4a618ec4500dbe12bb003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352794"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931894"
 ---
 # <a name="docking-and-floating-toolbars"></a>Barras de herramientas de acoplamiento y flotantes
 La biblioteca Microsoft Foundation Class es compatible con las barras de herramientas acoplables. Una barra de herramientas acoplable puede ser, o acoplar, a cualquier lado de su ventana primaria, o se puede separar o dejarla flotando en su propia ventana de marco reducido. En este artículo se explica cómo usar las barras de herramientas acoplables en sus aplicaciones.  
@@ -62,7 +62,7 @@ La biblioteca Microsoft Foundation Class es compatible con las barras de herrami
  Vea el ejemplo General de MFC [DOCKTOOL](../visual-cpp-samples.md) para obtener ejemplos.  
   
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Habilitar el acoplamiento en una ventana de marco  
- Para acoplar barras de herramientas en una ventana de marco, debe habilitarse para acoplar la ventana de marco (o destino). Esto se realiza mediante la [CFrameWnd:: EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) función, que toma una `DWORD` parámetro que es un conjunto de estilo de bits que indica qué lado de la ventana de marco acepta el acoplamiento. Si una barra de herramientas está a punto de ser acoplado y hay varios lados que se pueden acoplar a, los lados indicados en el parámetro pasado a `EnableDocking` se utilizan en el siguiente orden: superior, inferior, izquierda, derecha. Si desea poder acoplar el control de barras desde cualquier lugar, pasar `CBRS_ALIGN_ANY` a `EnableDocking`.  
+ Para acoplar barras de herramientas en una ventana de marco, debe habilitarse para acoplar la ventana de marco (o destino). Esto se realiza mediante la [CFrameWnd:: EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) función, que toma una *DWORD* parámetro que es un conjunto de estilo de bits que indica qué lado de la ventana de marco acepta el acoplamiento. Si una barra de herramientas está a punto de ser acoplado y hay varios lados que se pueden acoplar a, los lados indicados en el parámetro pasado a `EnableDocking` se utilizan en el siguiente orden: superior, inferior, izquierda, derecha. Si desea poder acoplar el control de barras desde cualquier lugar, pasar **CBRS_ALIGN_ANY** a `EnableDocking`.  
   
 ##  <a name="_core_enabling_docking_for_a_toolbar"></a> Habilitar el acoplamiento para una barra de herramientas  
  Después de haber preparado el destino de acoplamiento, debe preparar la barra de herramientas (o el origen) de un modo similar. Llame a [CControlBar:: EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) para cada barra de herramientas que desea acoplar, especificar el destino lados para que debe acoplar la barra de herramientas. Si no hay ninguno de los lados especificados en la llamada a `CControlBar::EnableDocking` coincide con los lados habilitados para el acoplamiento en la ventana de marco, no se puede acoplar la barra de herramientas, flotará. Una vez que se queda flotando, permanece una barra de herramientas flotante, no se puede acoplar en la ventana de marco.  

@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 323903d2e1285a4ee697bbd9d0c3a29c2e1248d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d29f4bc0b62e5824209759d45e63c1d9e2daa6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349596"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928745"
 ---
 # <a name="managing-the-current-view"></a>Administrar la vista actual
 Como parte de la implementación predeterminada de ventanas de marco, una ventana de marco realiza un seguimiento de una vista activa. Si la ventana de marco contiene más de una vista, por ejemplo, en una ventana divisora, la vista actual es la vista más reciente en uso. La vista activa es independiente de la ventana activa de Windows o el foco de entrada actual.  
   
- Cuando se cambia la vista activa, el marco de trabajo notifica a la vista actual mediante una llamada a su [OnActivateView](../mfc/reference/cview-class.md#onactivateview) función miembro. Puede indicar si la vista se está activando o desactivando examinando `OnActivateView`del `bActivate` parámetro. De forma predeterminada, `OnActivateView` establece el foco en la vista actual durante la activación. Puede invalidar `OnActivateView` para realizar cualquier procesamiento especial cuando la vista está activado o desactivada. Por ejemplo, puede proporcionar indicaciones visuales especiales para distinguir la vista activa de otras vistas inactivas.  
+ Cuando se cambia la vista activa, el marco de trabajo notifica a la vista actual mediante una llamada a su [OnActivateView](../mfc/reference/cview-class.md#onactivateview) función miembro. Puede indicar si la vista se está activando o desactivando examinando `OnActivateView`del *bActivate* parámetro. De forma predeterminada, `OnActivateView` establece el foco en la vista actual durante la activación. Puede invalidar `OnActivateView` para realizar cualquier procesamiento especial cuando la vista está activado o desactivada. Por ejemplo, puede proporcionar indicaciones visuales especiales para distinguir la vista activa de otras vistas inactivas.  
   
  Una ventana de marco envía comandos a su vista actual (activa), como se describe en [enrutamiento de comandos](../mfc/command-routing.md), junto con el enrutamiento de comandos estándar.  
   

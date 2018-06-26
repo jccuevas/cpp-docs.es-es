@@ -57,17 +57,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b95af9c0562c4b3210cbcdd7b9ce6216a5d49fb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353707"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930022"
 ---
 # <a name="handling-customization-notifications"></a>Control de notificaciones de personalización
 Un control común de barra de herramientas de Windows tiene características de personalización integradas, incluyendo un cuadro de diálogo de personalización definido por el sistema que permite insertar, eliminar o reorganizar botones de la barra de herramientas. La aplicación determina si las características de personalización están disponibles y controla la medida en que el usuario puede personalizar la barra de herramientas.  
   
- Para que estas características de personalización estén disponibles para el usuario, proporcione a la barra de herramientas el estilo `CCS_ADJUSTABLE` . Las características de personalización permiten al usuario arrastrar un botón a una nueva posición o quitar un botón arrastrándolo fuera de la barra de herramientas. Además, el usuario puede hacer doble clic en la barra de herramientas para mostrar el cuadro de diálogo **Personalizar barra de herramientas** , que permite al usuario agregar, eliminar y reorganizar botones de la barra de herramientas. La aplicación puede mostrar el cuadro de diálogo mediante la función de miembro [Personalizar](../mfc/reference/ctoolbarctrl-class.md#customize) .  
+ Puede que estas características de personalización disponibles para el usuario dando a la barra de herramientas el **CCS_ADJUSTABLE** estilo. Las características de personalización permiten al usuario arrastrar un botón a una nueva posición o quitar un botón arrastrándolo fuera de la barra de herramientas. Además, el usuario puede hacer doble clic en la barra de herramientas para mostrar el cuadro de diálogo **Personalizar barra de herramientas** , que permite al usuario agregar, eliminar y reorganizar botones de la barra de herramientas. La aplicación puede mostrar el cuadro de diálogo mediante la función de miembro [Personalizar](../mfc/reference/ctoolbarctrl-class.md#customize) .  
   
  El control de barra de herramientas envía mensajes de notificación a la ventana primaria en cada paso del proceso de personalización. Si el usuario mantiene presionada la tecla MAYÚS y comienza a arrastrar un botón, la barra de herramientas controla automáticamente la operación de arrastre. La barra de herramientas envía el mensaje de notificación **TBN_QUERYDELETE** a la ventana primaria para determinar si se puede eliminar el botón. La operación de arrastre termina si la ventana primaria devuelve **FALSE**. De lo contrario, la barra de herramientas captura la entrada del mouse y espera a que el usuario suelte el botón del mouse.  
   
@@ -165,7 +165,7 @@ Un control común de barra de herramientas de Windows tiene características de 
  Índice del botón asociado a la notificación.  
   
  **tbButton**  
- `TBBUTTON` estructura que contiene información sobre el botón de barra de herramientas asociado a la notificación.  
+ **TBBUTTON** estructura que contiene información sobre el botón de barra de herramientas asociado a la notificación.  
   
  **cchText**  
  Recuento de caracteres del texto del botón.  

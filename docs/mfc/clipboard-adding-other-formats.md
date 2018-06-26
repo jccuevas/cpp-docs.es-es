@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67004ac43193d47720626da241a8030ba396abdf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342152"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932024"
 ---
 # <a name="clipboard-adding-other-formats"></a>Portapapeles: Agregar otros formatos
-Este tema explica cómo ampliar la lista de los formatos admitidos, especialmente para compatibilidad con OLE. El tema [Portapapeles: copias y pegar datos](../mfc/clipboard-copying-and-pasting-data.md) describe la implementación mínima necesaria para admitir copiando y pegando desde el Portapapeles. Si esto es todo lo que implemente, los únicos formatos colocados en el Portapapeles son `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**y, posiblemente, `CF_LINKSOURCE`. Mayoría de las aplicaciones necesitará más formatos del Portapapeles que estos tres.  
+Este tema explica cómo ampliar la lista de los formatos admitidos, especialmente para compatibilidad con OLE. El tema [Portapapeles: copias y pegar datos](../mfc/clipboard-copying-and-pasting-data.md) describe la implementación mínima necesaria para admitir copiando y pegando desde el Portapapeles. Si esto es todo lo que implemente, los únicos formatos colocados en el Portapapeles son **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**y posiblemente **CF_LINKSOURCE**. Mayoría de las aplicaciones necesitará más formatos del Portapapeles que estos tres.  
   
 ##  <a name="_core_registering_custom_formats"></a> Registrar formatos personalizados  
  Para crear sus propios formatos personalizados, siga el mismo procedimiento que utilizaría para registrar cualquier formato de Portapapeles personalizado: pase el nombre del formato para la **RegisterClipboardFormat** funcionar y utilizar su valor devuelto como el identificador de formato.  

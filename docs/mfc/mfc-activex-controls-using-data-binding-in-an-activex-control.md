@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 267d47b7e061e3bde39b199cd948ba9875dea16b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353278"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929736"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controles ActiveX de MFC: utilizar enlace de datos en un control ActiveX
 Uno de los usos más eficaces de controles ActiveX es el enlace de datos, lo que permite una propiedad del control para enlazar con un campo específico de una base de datos. Cuando un usuario modifica los datos en la propiedad enlazada, el control notifica a la base de datos y las solicitudes que se actualiza el campo de registro. La base de datos, a continuación, notifica el control del éxito o error de la solicitud.  
@@ -51,7 +51,7 @@ Diagrama conceptual de un Control enlazado a datos
  Es posible crear una propiedad estándar enlazada a datos, aunque es más probable que desee un [método get/set enlazable](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
->  Las propiedades estándar tienen la **enlazables** y **requestedit** atributos de forma predeterminada.  
+>  Las propiedades estándar tienen la `bindable` y `requestedit` atributos de forma predeterminada.  
   
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Para agregar una propiedad estándar enlazable mediante el Asistente para agregar propiedades  
   
