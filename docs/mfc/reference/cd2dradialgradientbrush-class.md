@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002b9fd5d919bb277f9546f038e4b81c45380c81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354357"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952279"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Clase CD2DRadialGradientBrush
 Un contenedor para ID2D1RadialGradientBrush.  
@@ -133,7 +133,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pResource`  
+ *pResource*  
  Interfaz de recursos existente. No puede ser NULL  
   
 ##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
@@ -152,28 +152,28 @@ CD2DRadialGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentTarget`  
+ *pParentTarget*  
  Un puntero para el destino de representación.  
   
- `gradientStops`  
+ *gradientStops*  
  Un puntero a una matriz de estructuras D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Un valor mayor o igual a 1 que especifica el número de puntos de degradado de la matriz gradientStops.  
   
- `RadialGradientBrushProperties`  
+ *RadialGradientBrushProperties*  
  El centro, el desplazamiento de degradado de origen y el radio x y la radio y el pincel de degradado.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  El espacio en el color que se realiza una interpolación entre los delimitadores de degradado.  
   
- `extendMode`  
+ *extendMode*  
  El comportamiento del degradado que se encuentra fuera del intervalo [0,1] normalizado.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Un puntero a la opacidad y la transformación de un pincel.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indica que se destruirá el objeto propietario (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
@@ -184,7 +184,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pRenderTarget`  
+ *pRenderTarget*  
  Un puntero para el destino de representación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -289,7 +289,7 @@ void SetCenter(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `point`  
+ *Punto*  
  El centro de la elipse degradado, en el espacio de coordenadas del pincel  
   
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
@@ -300,7 +300,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `gradientOriginOffset`  
+ *gradientOriginOffset*  
  El desplazamiento del origen de degradado desde el centro de la elipse de degradado  
   
 ##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
@@ -311,7 +311,7 @@ void SetRadiusX(FLOAT radiusX);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `radiusX`  
+ *valores de radiusX*  
  El radio x de la elipse del degradado. Este valor está en el espacio de coordenadas del pincel  
   
 ##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
@@ -322,7 +322,7 @@ void SetRadiusY(FLOAT radiusY);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `radiusY`  
+ *radiusY*  
  El radio y de la elipse del degradado. Este valor está en el espacio de coordenadas del pincel  
   
 ## <a name="see-also"></a>Vea también  

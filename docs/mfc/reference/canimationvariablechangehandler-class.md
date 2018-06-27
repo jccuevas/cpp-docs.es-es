@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58646efaaa0087be2bd73e45acd8ade4a16e9767
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350997"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957096"
 ---
 # <a name="canimationvariablechangehandler-class"></a>Clase CAnimationVariableChangeHandler
 Implementa una devolución de llamada, a la que llama la API de animación cuando cambia el valor de una animación.  
@@ -77,16 +77,16 @@ IFACEMETHOD(OnValueChanged) (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `storyboard`  
+ *guión gráfico*  
  El guión gráfico que anima la variable.  
   
- `variable`  
+ *Variable*  
  La variable de animación que se ha actualizado.  
   
- `newValue`  
+ *newValue*  
  Nuevo valor.  
   
- `previousValue`  
+ *previousValue*  
  El valor anterior.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -100,7 +100,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pAnimationController`  
+ *pAnimationController*  
  Un puntero al controlador de animación, que recibe eventos.  
   
 ## <a name="see-also"></a>Vea también  

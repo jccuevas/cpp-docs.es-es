@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8450f4b4105f5302750ea0f369d0e6c1dc2925ab
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367508"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950890"
 ---
 # <a name="cevent-class"></a>CEvent (clase)
 Representa un evento, que es un objeto de sincronización que permite que un subproceso notifique a otro que se ha producido un evento.  
@@ -64,7 +64,7 @@ class CEvent : public CSyncObject
   
  `CEvent` los objetos tienen dos tipos: manual y automática.  
   
- Automáticos `CEvent` objeto vuelve automáticamente a un estado (no disponible) no señalado después del lanzamiento de al menos un subproceso. De forma predeterminada, un `CEvent` objeto es automático a menos que sitúe `TRUE` para el `bManualReset` parámetro durante la construcción.  
+ Automáticos `CEvent` objeto vuelve automáticamente a un estado (no disponible) no señalado después del lanzamiento de al menos un subproceso. De forma predeterminada, un `CEvent` objeto es automático a menos que sitúe `TRUE` para el *bManualReset* parámetro durante la construcción.  
   
  Un manual `CEvent` objeto permanece en el estado establecido [SetEvent](#setevent) o [ResetEvent](#resetevent) hasta que se llama a la otra función. Para crear un manual `CEvent` de objetos, pasar `TRUE` para el `bManualReset` parámetro durante la construcción.  
   
@@ -103,16 +103,16 @@ CEvent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bInitiallyOwn`  
- Si **TRUE**, el subproceso de la **CMultilock** o `CSingleLock` objeto está habilitado. En caso contrario, deben esperar todos los subprocesos que deseen tener acceso al recurso.  
+ *bInitiallyOwn*  
+ Si **TRUE**, el subproceso de la `CMultilock` o `CSingleLock` objeto está habilitado. En caso contrario, deben esperar todos los subprocesos que deseen tener acceso al recurso.  
   
  *bManualReset*  
  Si **TRUE**, especifica que el objeto de evento es un evento manual, de lo contrario, el objeto de evento es un evento automático.  
   
- `lpszName`  
+ *lpszName*  
  Nombre del objeto `CEvent`. Debe especificarse si el objeto se utilizará en los límites del proceso. Si el nombre coincide con un evento existente, el constructor crea un nuevo `CEvent` objeto que hace referencia a los eventos de ese nombre. Si el nombre coincide con un objeto de sincronización existente que no es un evento, se producirá un error en la construcción. Si **NULL**, el nombre será null.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Atributos de seguridad para el objeto de evento. Para obtener una descripción completa de esta estructura, vea [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) del SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  

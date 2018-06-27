@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efaf47ef434e4f6c63b937d1f360851fa9826e3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 207adbba4635b80ba7b60af53f920b1af376e93d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355961"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957304"
 ---
 # <a name="canimationvariable-class"></a>Clase CAnimationVariable
 Representa una variable de animación.  
@@ -141,7 +141,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pTransition`  
+ *pTransition*  
  Un puntero a una transición a agregar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -158,13 +158,13 @@ void ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pController`  
+ *pController*  
  Un puntero al controlador de animación del elemento primario.  
   
- `pStoryboard`  
+ *pStoryboard*  
  Un puntero al guión gráfico.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  Es TRUE si este método debería agregar transiciones que dependen de los fotogramas clave.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -178,7 +178,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Especifica el valor predeterminado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -192,7 +192,7 @@ void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bAutodestroy`  
+ *bAutodestroy*  
  Especifica si este método debe eliminar objetos de transición.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -206,7 +206,7 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pManager`  
+ *pManager*  
  Un puntero al administrador de animación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -225,7 +225,7 @@ BOOL CreateTransitions(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
-`pLibrary`  
+*pLibrary*  
  Un puntero a un [IUIAnimationTransitionLibrary interfaz](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define una biblioteca de transiciones estándares.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -244,10 +244,10 @@ void EnableIntegerValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pController`  
+ *pController*  
  Un puntero al controlador principal.  
   
- `bEnable`  
+ *bHabilitar el*  
  TRUE: Habilitar eventos, FALSE - deshabilitar eventos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -263,10 +263,10 @@ void EnableValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pController`  
+ *pController*  
  Un puntero al controlador principal.  
   
- `bEnable`  
+ *bHabilitar el*  
  TRUE: Habilitar eventos, FALSE - deshabilitar eventos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -307,10 +307,10 @@ HRESULT GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dblValue`  
+ *dblValue*  
  El valor actual de la variable de animación.  
   
- `nValue`  
+ *nvalor*  
  El valor actual de la variable de animación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -378,7 +378,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Especifica el nuevo valor predeterminado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -392,7 +392,7 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentObject`  
+ *pParentObject*  
  Un puntero a un objeto de animación que contiene esta variable.  
   
 ### <a name="remarks"></a>Comentarios  

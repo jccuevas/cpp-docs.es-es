@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d628758f19c36112bf896e11c97df3e1f92cbc47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edb9fe1942f9fe8b462ce9fc6a56e37538866174
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355966"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954993"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane (clase)
 Extiende la funcionalidad de [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) para permitir la creación de ventanas con pestañas.  
@@ -173,23 +173,23 @@ virtual BOOL AddTab(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] [out] `pNewBar`  
+ [in] [out] *pNewBar*  
  Un puntero al panel para agregar. This (puntero) puede no ser válida después de llamar a este método. Para obtener más información, vea la sección Comentarios.  
   
- [in] `bVisible`  
+ [in] *bVisible*  
  `TRUE` Para hacer que la pestaña visible; en caso contrario, `FALSE`.  
   
- [in] `bSetActive`  
+ [in] *bSetActive*  
  `TRUE` para realizar la pestaña de la pestaña activa; en caso contrario, `FALSE`.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  `TRUE` Para hacer que la pestaña desmontable; en caso contrario, `FALSE`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si el panel se ha agregado correctamente como una pestaña y no se destruye en el proceso. `FALSE` Si el panel que se va a agregar es un objeto de tipo `CBaseTabbedPane`. Para obtener más información, vea la sección Comentarios.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para agregar un panel como una nueva pestaña en un panel con fichas. Si `pNewBar` apunta a un objeto de tipo `CBaseTabbedPane`, se copian todas sus pestañas en el panel con fichas y, a continuación, `pNewBar` se destruye. Por lo tanto, `pNewBar` se convierte en un puntero no válido y no debe usarse.  
+ Llamar a este método para agregar un panel como una nueva pestaña en un panel con fichas. Si *pNewBar* apunta a un objeto de tipo `CBaseTabbedPane`, se copian todas sus pestañas en el panel con fichas y, a continuación, *pNewBar* se destruye. Por lo tanto, *pNewBar* se convierte en un puntero no válido y no debe usarse.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
  Especifica si un panel con fichas vacío puede ser destruido.  
@@ -212,7 +212,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bUseTabIndexes`  
+ [in] *bUseTabIndexes*  
  Este parámetro se utiliza internamente por el marco de trabajo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -249,7 +249,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bActiveTabOnly`  
+ [in] *bActiveTabOnly*  
  Al convertir un panel con fichas, especifique `TRUE` para convertir sólo la pestaña activa. Especificar `FALSE` para convertir todas las fichas en el panel.  
   
 ##  <a name="detachpane"></a>  Cbasetabbedpane:: Detachpane  
@@ -262,14 +262,14 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
  Puntero al panel para separar.  
   
- [in] `bHide`  
+ [in] *bHide*  
  Parámetro booleano que especifica si el marco de trabajo oculta el panel después de que ésta se separa.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el marco de trabajo correctamente separa el panel; `FALSE` si `pBar` es `NULL` o hace referencia a un panel que no está en el panel con fichas.  
+ `TRUE` Si el marco de trabajo correctamente separa el panel; `FALSE` si *pBar* es `NULL` o hace referencia a un panel que no está en el panel con fichas.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo queda flotando el panel desasociado si es posible. Para obtener más información, consulte [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).  
@@ -282,7 +282,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  `TRUE` para sincronizar el título del panel con fichas con el título de la pestaña activa; en caso contrario, `FALSE`.  
   
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
@@ -303,14 +303,14 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uBarID`  
+ [in] *uBarID*  
  Especifica el identificador del panel para buscar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al panel si se encuentra; en caso contrario, `NULL`.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método compara todas las fichas en el panel y devuelve el marcado con el identificador especificado por el `uBarID` parámetro.  
+ Este método compara todas las fichas en el panel y devuelve el marcado con el identificador especificado por el *uBarID* parámetro.  
   
 ##  <a name="findbarbytabnumber"></a>  CBaseTabbedPane::FindBarByTabNumber  
  Devuelve un panel que se encuentra en una pestaña.  
@@ -322,17 +322,17 @@ virtual CWnd* FindBarByTabNumber(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nTabNum`  
+ [in] *nTabNum*  
  Especifica el índice de base cero de la pestaña para recuperar.  
   
- [in] `bGetWrappedBar`  
+ [in] *bGetWrappedBar*  
  `TRUE` para devolver la ventana subyacente (ajustada) del panel en lugar del panel sí; en caso contrario, `FALSE`. Esto solo se aplica a los paneles que se deriva de [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si no se encuentra el panel, se devuelve un puntero válido para el panel que se va a buscar; en caso contrario, `NULL`.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para recuperar el panel que residen en la pestaña especificada por el `nTabNum` parámetro.  
+ Llamar a este método para recuperar el panel que residen en la pestaña especificada por el *nTabNum* parámetro.  
   
 ##  <a name="floattab"></a>  Cbasetabbedpane:: Floattab  
  Convierte un panel en flotante, pero solo si el panel se encuentra actualmente en una pestaña desmontable.  
@@ -346,16 +346,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Un puntero al panel a float.  
   
- [in] `nTabID`  
+ [in] *nTabID*  
  Especifica el índice de base cero de la pestaña para float.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Especifica el método que utilice para hacer flotar el panel. Para obtener más información, vea la sección Comentarios.  
   
- [in] `bHide`  
+ [in] *bHide*  
  `TRUE` Para ocultar el panel antes flotante; en caso contrario, `FALSE`.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -364,7 +364,7 @@ virtual BOOL FloatTab(
 ### <a name="remarks"></a>Comentarios  
  Llamar a este método para convertir en flotante un panel que se encuentra actualmente en una pestaña desmontable.  
   
- Si desea desasociar un panel mediante programación, especifique `DM_SHOW` para el `dockMethod` parámetro. Si desea hacer flotar el panel en la misma posición que flota anteriormente, especifique `DM_DBL_CLICK` como el `dockMethod` parámetro.  
+ Si desea desasociar un panel mediante programación, especifique `DM_SHOW` para el *dockMethod* parámetro. Si desea hacer flotar el panel en la misma posición que flota anteriormente, especifique `DM_DBL_CLICK` como el *dockMethod* parámetro.  
   
 ##  <a name="getdefaulttabsorder"></a>  CBaseTabbedPane::GetDefaultTabsOrder  
  Devuelve el orden predeterminado de las pestañas en el panel.  
@@ -387,7 +387,7 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  Una referencia a un entero. Este método escribe el índice de base cero de la primera pestaña mostrado para este parámetro, o -1 si no se muestran se encuentra la ficha.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -401,11 +401,11 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `size`  
+ [out] *tamaño*  
  Un `CSize` objeto que se rellena con el mínimo tamaño permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Si el tratamiento coherente de los tamaños mínimo del panel está activo ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` se rellena con el mínimo tamaño permitido para la pestaña activa. En caso contrario, `size` se rellena con el valor devuelto de [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+ Si el tratamiento coherente de los tamaños mínimo del panel está activo ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *tamaño* se rellena con el mínimo tamaño permitido para la pestaña activa. En caso contrario, *tamaño* se rellena con el valor devuelto de [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
 ##  <a name="getpaneicon"></a>  CBaseTabbedPane::GetPaneIcon  
  Recupera el mínimo tamaño permitido para el panel.  
@@ -415,11 +415,11 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `size`  
+ [out] *tamaño*  
  Un `CSize` objeto que se rellena con el mínimo tamaño permitido.  
   
 ### <a name="remarks"></a>Comentarios  
- Si el tratamiento coherente de los tamaños mínimo del panel está activo ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` se rellena con el mínimo tamaño permitido para la pestaña activa. En caso contrario, `size` se rellena con el valor devuelto de [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+ Si el tratamiento coherente de los tamaños mínimo del panel está activo ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *tamaño* se rellena con el mínimo tamaño permitido para la pestaña activa. En caso contrario, *tamaño* se rellena con el valor devuelto de [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
 ##  <a name="getpanelist"></a>  CBaseTabbedPane::GetPaneList  
  Devuelve una lista de paneles que se encuentran en el panel con fichas.  
@@ -431,10 +431,10 @@ virtual void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `lst`  
+ [out] *lst*  
  Un `CObList` que se rellena con los paneles que se encuentran en el panel con fichas.  
   
- [in] `pRTCFilter`  
+ [in] *pRTCFilter*  
  Si no lo es `NULL`, la lista devuelta contiene solo los paneles que pertenecen a la clase en tiempo de ejecución especificado.  
   
 ##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
@@ -447,10 +447,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  Recibe las coordenadas de pantalla del área de ficha superior.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  Recibe las coordenadas de pantalla de la parte inferior de la pestaña.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -523,14 +523,14 @@ virtual BOOL RemovePane(CWnd* pBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Un puntero al panel para quitar del panel con pestañas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si el panel se ha quitado correctamente desde el panel con pestañas y el panel con fichas sigue siendo válido. `FALSE` Si se ha quitado el último panel desde el panel con pestañas y el panel con pestañas está a punto de ser destruidos. Si el valor devuelto es `FALSE`, no use el panel con fichas más.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para quitar el panel especificado por el `pBar` parámetro desde el panel con pestañas.  
+ Llamar a este método para quitar el panel especificado por el *pBar* parámetro desde el panel con pestañas.  
   
 ##  <a name="setautodestroy"></a>  CBaseTabbedPane::SetAutoDestroy  
  Determina si se destruirán automáticamente la barra de control de pestaña.  
@@ -540,7 +540,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Si el panel con fichas se creó dinámicamente y no se controlan su duración; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -558,23 +558,23 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero al panel para mostrar u ocultar.  
   
- [in] `bShow`  
+ [in] *bMostrar*  
  `TRUE` para mostrar el panel; `FALSE` para ocultar el panel.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` Para retrasar el ajuste del diseño de pestaña; en caso contrario, `FALSE`.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  `TRUE` para realizar la pestaña de la pestaña activa; en caso contrario, `FALSE`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si la ficha se muestra o se oculta correctamente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando se llama a este método, un panel se muestra o se ocultan, según el valor de la `bShow` parámetro. Si ocultar una pestaña y es la última ficha visible en la ventana de la ficha subyacente, se oculta el panel con fichas. Si aparece una ficha cuando anteriormente no había ningún pestañas visible, se muestra el panel con fichas.  
+ Cuando se llama a este método, un panel se muestra o se ocultan, según el valor de la *bMostrar* parámetro. Si ocultar una pestaña y es la última ficha visible en la ventana de la ficha subyacente, se oculta el panel con fichas. Si aparece una ficha cuando anteriormente no había ningún pestañas visible, se muestra el panel con fichas.  
   
 ##  <a name="recalclayout"></a>  CBaseTabbedPane::RecalcLayout  
  Recalcula la información de diseño para el panel.  
@@ -600,16 +600,16 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bMode`  
+ [in] *bMode*  
  `TRUE` Para habilitar el modo de ocultación automática; `FALSE` para habilitar el modo de acoplamiento normal.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Especifica la alineación del panel de ocultación automática que va a crearse. Para obtener una lista de valores posibles, consulte [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
- [in] [out] `pCurrAutoHideBar`  
+ [in] [out] *pCurrAutoHideBar*  
  Un puntero a la barra de herramientas de ocultación automática actual. Puede ser `NULL`.  
   
- [in] `bUseTimer`  
+ [in] *bUseTimer*  
  Especifica si desea utilizar el efecto de ocultación automática cuando el usuario cambia el panel a modo de ocultación automática, o para ocultar el panel inmediatamente.  
   
 ### <a name="return-value"></a>Valor devuelto  

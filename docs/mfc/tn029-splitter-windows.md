@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca18f12c5aa1ae767b8921c28e650f3fb69d9942
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f0419e8f8aea141c3aaa54e320200160dae877f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384728"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957229"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Ventanas divisoras
 Esta nota describe la MFC [CSplitterWnd clase](../mfc/reference/csplitterwnd-class.md), que proporciona la ventana se divide y administra el cambio de tamaño de otras ventanas de panel.  
@@ -66,7 +66,7 @@ Esta nota describe la MFC [CSplitterWnd clase](../mfc/reference/csplitterwnd-cla
  Panel:  
  Una ventana específica de la aplicación que un `CSplitterWnd` administra. Un panel normalmente es un objeto que se deriva de la [CView (clase)](../mfc/reference/cview-class.md), pero puede ser cualquier [CWnd](../mfc/reference/cwnd-class.md) objeto que tiene el identificador de ventana de secundario correspondiente.  
   
- Para usar un `CWnd`-derivados de objetos, pasar la `RUNTIME_CLASS` del objeto que se la `CreateView` funcionando como lo haría si estuviera usando un `CView`-clase derivada. Debe usar la clase `DECLARE_DYNCREATE` y `IMPLEMENT_DYNCREATE` porque el marco de trabajo usa la creación dinámica en tiempo de ejecución. Aunque no hay una gran cantidad de código en `CSplitterWnd` que es específico de la `CView` (clase), [CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof) siempre se utiliza antes de que se llevan a cabo dichas acciones.  
+ Para usar un `CWnd`-derivados de objetos, pasar la RUNTIME_CLASS del objeto para el `CreateView` funcionando como lo haría si estuviera usando un `CView`-clase derivada. La clase debe usar DECLARE_DYNCREATE e IMPLEMENT_DYNCREATE porque el marco de trabajo usa la creación dinámica en tiempo de ejecución. Aunque no hay una gran cantidad de código en `CSplitterWnd` que es específico de la `CView` (clase), [CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof) siempre se utiliza antes de que se llevan a cabo dichas acciones.  
   
  Barra de división:  
  Un control que se coloca entre las filas y columnas de paneles. Se puede usar para ajustar el tamaño de filas o columnas de paneles.  
@@ -88,14 +88,14 @@ Esta nota describe la MFC [CSplitterWnd clase](../mfc/reference/csplitterwnd-cla
 [      ][      ][v]  
 ```  
   
- Cuando el usuario mueve la barra de desplazamiento `WM_VSCROLL` mensajes se enviarán a ambas vistas. Cuando cualquiera de las vistas establece la posición de la barra de desplazamiento, se establecerá la barra de desplazamiento compartido.  
+ Cuando el usuario mueve la barra de desplazamiento, se enviará mensajes WM_VSCROLL en ambas vistas. Cuando cualquiera de las vistas establece la posición de la barra de desplazamiento, se establecerá la barra de desplazamiento compartido.  
   
  Tenga en cuenta que las barras de desplazamiento compartidas son más útiles con los objetos de vista similares. Si mezcla las vistas de tipos diferentes de un divisor, tendrá que escribir código especial para coordinar sus posiciones de desplazamiento. Cualquier `CView`-clase derivada que utiliza el `CWnd` barra de desplazamiento API delegará en la barra de desplazamiento compartido si existe. El `CScrollView` implementación es un ejemplo de un `CView` compartido de clase que es compatible con las barras de desplazamiento. Las clases que no se derivan de `CView`, las clases que se basan en las barras de desplazamiento no sea un control o las clases que utilizan las implementaciones estándar de Windows (por ejemplo, `CEditView`) no funcionarán con la característica de la barra de desplazamiento compartido de `CSplitterWnd`.  
   
 ## <a name="minimum-sizes"></a>Tamaños mínimos  
  Para cada fila hay un alto mínimo de la fila, y para cada columna hay un ancho de columna mínimo. Este valor mínimo garantiza que un panel no es demasiado pequeño para mostrarse en obtener detalles completos.  
   
- Para una ventana divisora estática, el mínimo de la fila inicial alto y ancho de columna es 0. Para una ventana divisora dinámica, el mínimo de la fila inicial alto y ancho de columna se establecen el `sizeMin` parámetro de la `CSplitterWnd::Create` (función).  
+ Para una ventana divisora estática, el mínimo de la fila inicial alto y ancho de columna es 0. Para una ventana divisora dinámica, el mínimo de la fila inicial alto y ancho de columna se establecen el *sizeMin* parámetro de la `CSplitterWnd::Create` (función).  
   
  Puede cambiar estos tamaños mínimos mediante la [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) y [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) funciones.  
   

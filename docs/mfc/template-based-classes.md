@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68d44a66f328465f2c59fb361f9bb6b2a76efa82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 035a50e039b352775cf0f109310f4dac448cb0a1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385482"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954652"
 ---
 # <a name="template-based-classes"></a>Clases basadas en plantillas
 Este artículo explica las clases de colección basadas en plantillas de seguridad de tipos en MFC versión 3.0 y versiones posterior. Uso de estas plantillas para crear colecciones con seguridad de tipos es más cómodo y ayuda a proporciona seguridad de tipos de forma más eficaz que el uso de las clases de colección no basadas en plantillas.  
@@ -62,26 +62,26 @@ Este artículo explica las clases de colección basadas en plantillas de segurid
 ###  <a name="_core_simple_array_and_list_usage"></a> Uso de la lista y matriz simple  
  La matriz simple y la lista de clases, [CArray](../mfc/reference/carray-class.md) y [CList](../mfc/reference/clist-class.md), toman dos parámetros: *tipo* y `ARG_TYPE`. Estas clases pueden almacenar cualquier tipo de datos, que se especifica en el *tipo* parámetro:  
   
--   Tipos de datos fundamentales de C++, como `int`, `char`, y **float**  
+-   Tipos de datos fundamentales de C++, como **int**, **char**, y **float**  
   
 -   Las clases y estructuras de C++  
   
 -   Otros tipos que se definen  
   
- Por comodidad y eficacia, puede usar el `ARG_TYPE` para especificar el tipo de argumentos de función. Normalmente, se especifica `ARG_TYPE` como una referencia al tipo especificado en el *tipo* parámetro. Por ejemplo:  
+ Por comodidad y eficacia, puede usar el *ARG_TYPE* parámetro para especificar el tipo de argumentos de función. Normalmente, se especifica *ARG_TYPE* como una referencia al tipo especificado en el *tipo* parámetro. Por ejemplo:  
   
  [!code-cpp[NVC_MFCCollections#1](../mfc/codesnippet/cpp/template-based-classes_1.cpp)]  
   
- El primer ejemplo declara una colección de matriz, `myArray`, que contiene `int`s. El segundo ejemplo declara una colección de lista, `myList`, que almacena `CPerson` objetos. Algunas funciones de miembro de las clases de colección aceptan argumentos cuyo tipo se especifica mediante el `ARG_TYPE` parámetro de plantilla. Por ejemplo, el **agregar** función miembro de clase `CArray` toma una `ARG_TYPE` argumento:  
+ El primer ejemplo declara una colección de matriz, `myArray`, que contiene **int**s. El segundo ejemplo declara una colección de lista, `myList`, que almacena `CPerson` objetos. Algunas funciones de miembro de las clases de colección aceptan argumentos cuyo tipo se especifica mediante la *ARG_TYPE* parámetro de plantilla. Por ejemplo, el `Add` función miembro de clase `CArray` toma una *ARG_TYPE* argumento:  
   
  [!code-cpp[NVC_MFCCollections#2](../mfc/codesnippet/cpp/template-based-classes_2.cpp)]  
   
 ###  <a name="_core_simple_map_usage"></a> Uso de asignación simple  
- La clase map simple, [CMap](../mfc/reference/cmap-class.md), toma cuatro parámetros: *clave*, `ARG_KEY`, *valor*, y `ARG_VALUE`. Al igual que las clases de matriz y lista, las clases de asignación pueden almacenar cualquier tipo de datos. A diferencia de las matrices y listas, que indizan y ordenan los datos que almacenan, los mapas asocian claves y valores: tener acceso a un valor almacenado en un mapa especificando la clave asociada al valor. El *clave* parámetro especifica el tipo de datos de las claves utilizadas para tener acceso a los datos almacenados en el mapa. Si el tipo de *clave* es una estructura o clase, el `ARG_KEY` parámetro normalmente es una referencia al tipo especificado en *clave*. El *valor* parámetro especifica el tipo de los elementos almacenados en el mapa. Si el tipo de `ARG_VALUE` es una estructura o clase, el `ARG_VALUE` parámetro normalmente es una referencia al tipo especificado en *valor*. Por ejemplo:  
+ La clase map simple, [CMap](../mfc/reference/cmap-class.md), toma cuatro parámetros: *clave*, *ARG_KEY*, *valor*, y *ARG_VALUE*. Al igual que las clases de matriz y lista, las clases de asignación pueden almacenar cualquier tipo de datos. A diferencia de las matrices y listas, que indizan y ordenan los datos que almacenan, los mapas asocian claves y valores: tener acceso a un valor almacenado en un mapa especificando la clave asociada al valor. El *clave* parámetro especifica el tipo de datos de las claves utilizadas para tener acceso a los datos almacenados en el mapa. Si el tipo de *clave* es una estructura o clase, el *ARG_KEY* parámetro normalmente es una referencia al tipo especificado en *clave*. El *valor* parámetro especifica el tipo de los elementos almacenados en el mapa. Si el tipo de *ARG_VALUE* es una estructura o clase, el *ARG_VALUE* parámetro normalmente es una referencia al tipo especificado en *valor*. Por ejemplo:  
   
  [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]  
   
- El primer ejemplo almacena `MY_STRUCT` valores, tiene acceso a ellos mediante `int` claves y devuelve acceso `MY_STRUCT` elementos por referencia. El segundo ejemplo almacena `CPerson` valores, tiene acceso a ellos mediante `CString` claves y devuelve referencias a los elementos que se accede. En este ejemplo podría representar una libreta de direcciones simple, en el que se buscan personas por apellido.  
+ El primer ejemplo almacena `MY_STRUCT` valores, tiene acceso a ellos mediante **int** claves y devuelve acceso `MY_STRUCT` elementos por referencia. El segundo ejemplo almacena `CPerson` valores, tiene acceso a ellos mediante `CString` claves y devuelve referencias a los elementos que se accede. En este ejemplo podría representar una libreta de direcciones simple, en el que se buscan personas por apellido.  
   
  Dado que el *clave* parámetro es de tipo `CString` y la *KEY_TYPE* parámetro es de tipo `LPCSTR`, las claves se almacenan en el mapa como elementos de tipo `CString` , pero se hace referencia en las funciones como `SetAt` mediante punteros de tipo `LPCSTR`. Por ejemplo:  
   
@@ -91,7 +91,7 @@ Este artículo explica las clases de colección basadas en plantillas de segurid
  Para utilizar las plantillas de la colección de puntero con tipo, necesitará saber qué tipos de datos puede almacenar en estas colecciones y qué parámetros que se usarán en las declaraciones de la colección.  
   
 ###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a> Matriz de puntero con tipo y el uso de la lista  
- La matriz de puntero con tipo y la lista de clases, [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) y [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), toman dos parámetros: `BASE_CLASS` y *tipo*. Estas clases pueden almacenar cualquier tipo de datos, que se especifica en el *tipo* parámetro. Se derivan de una de las clases de colección no es de plantilla que almacena punteros; Especifique esta clase base en `BASE_CLASS`. Para las matrices, use `CObArray` o `CPtrArray`. Para las listas, use `CObList` o `CPtrList`.  
+ La matriz de puntero con tipo y la lista de clases, [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) y [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), toman dos parámetros: *clase_base* y *tipo*. Estas clases pueden almacenar cualquier tipo de datos, que se especifica en el *tipo* parámetro. Se derivan de una de las clases de colección no es de plantilla que almacena punteros; Especifique esta clase base en *clase_base*. Para las matrices, use `CObArray` o `CPtrArray`. Para las listas, use `CObList` o `CPtrList`.  
   
  De hecho, cuando se declara una colección basada en, diga `CObList`, la nueva clase hereda no solo los miembros de su clase base, sino que también declara un número del miembro adicional de seguridad de tipos de funciones y operadores que ayudan a proporcionar seguridad de tipos encapsulando llamadas a los miembros de clase base. Estas encapsulaciones administran todas las conversión de tipos necesaria. Por ejemplo:  
   
@@ -102,16 +102,16 @@ Este artículo explica las clases de colección basadas en plantillas de segurid
  El segundo ejemplo declara una lista de puntero con tipo, `myList`, derivado del `CPtrList`. La lista almacena y devuelve punteros a `MY_STRUCT` objetos. Una clase basada en `CPtrList` se utiliza para almacenar punteros a objetos no derivados de `CObject`. `CTypedPtrList` tiene un número de funciones miembro de la seguridad de tipos: `GetHead`, `GetTail`, `RemoveHead`, `RemoveTail`, `GetNext`, `GetPrev`, y `GetAt`.  
   
 ###  <a name="_core_typed.2d.pointer_map_usage"></a> Uso de mapa de puntero con tipo  
- La clase map de puntero con tipo, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), toma tres parámetros: `BASE_CLASS`, *clave*, y *valor*. El `BASE_CLASS` parámetro especifica la clase del que se deriva de la nueva clase: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`, y así sucesivamente. *CLAVE* es análogo a *clave* en `CMap`: especifica el tipo de la clave utilizada para las búsquedas. *VALOR* es análogo a *valor* en `CMap`: especifica el tipo de objeto almacenado en el mapa. Por ejemplo:  
+ La clase map de puntero con tipo, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), toma tres parámetros: *clase_base*, *clave*, y *valor*. El *clase_base* parámetro especifica la clase del que se deriva de la nueva clase: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`, y así sucesivamente. *CLAVE* es análogo a *clave* en `CMap`: especifica el tipo de la clave utilizada para las búsquedas. *VALOR* es análogo a *valor* en `CMap`: especifica el tipo de objeto almacenado en el mapa. Por ejemplo:  
   
  [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]  
   
- El primer ejemplo es un mapa basado en **CMapPtrToPt**r: usa `CString` claves asignadas a punteros a `MY_STRUCT`. Puede buscar un puntero almacenado mediante una llamada a un tipo seguro `Lookup` función miembro. Puede usar el **[]** operador para buscar un puntero almacenado y agregarlo si no se encuentra. Y puede recorrer en iteración la asignación mediante la seguridad de tipos `GetNextAssoc` función. También puede llamar a otro miembro funciones de la clase `CMapPtrToPtr`.  
+ El primer ejemplo es un mapa basado en `CMapPtrToPtr` : usa `CString` claves asignadas a punteros a `MY_STRUCT`. Puede buscar un puntero almacenado mediante una llamada a un tipo seguro `Lookup` función miembro. Puede usar el **[]** operador para buscar un puntero almacenado y agregarlo si no se encuentra. Y puede recorrer en iteración la asignación mediante la seguridad de tipos `GetNextAssoc` función. También puede llamar a otro miembro funciones de la clase `CMapPtrToPtr`.  
   
- El segundo ejemplo es un mapa basado en **CMapStringToO**b, utiliza las claves de cadena asignadas a punteros almacenados a `CMyObject` objetos. Puede usar los mismos miembros con seguridad de tipos se describe en el párrafo anterior, o puede llamar a los miembros de clase `CMapStringToOb`.  
+ El segundo ejemplo es un mapa basado en `CMapStringToOb` : usa claves de cadena asignadas a punteros almacenados a `CMyObject` objetos. Puede usar los mismos miembros con seguridad de tipos se describe en el párrafo anterior, o puede llamar a los miembros de clase `CMapStringToOb`.  
   
 > [!NOTE]
->  Si especifica un **clase** o `struct` escriba para la *valor* parámetro, en lugar de un puntero o referencia al tipo, la clase o estructura debe tener un constructor de copias.  
+>  Si especifica un **clase** o **struct** escriba para la *valor* parámetro, en lugar de un puntero o referencia al tipo, la clase o estructura debe tener un constructor de copias.  
   
  Para obtener más información, consulte [cómo crear una colección con seguridad de tipos](../mfc/how-to-make-a-type-safe-collection.md).  
   

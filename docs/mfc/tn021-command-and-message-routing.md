@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22fcb3f9815e5100251e6bf478c6714fbb0b7df3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384961"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955727"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: Enrutamiento de comandos y mensajes
 > [!NOTE]
@@ -34,11 +34,11 @@ ms.locfileid: "33384961"
  Consulte Visual C++ para obtener información general sobre las arquitecturas aquí descritas, en especial la distinción entre mensajes, las notificaciones del control y los comandos de Windows. Esta nota se supone que está muy familiarizado con los problemas descritos en la documentación impresa y solo trata temas muy avanzados.  
   
 ## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>Funcionalidad de envío y enrutamiento de comandos MFC 1.0 evoluciona a MFC 2.0 arquitectura  
- Windows tiene el **WM_COMMAND** mensaje que se sobrecarga para proporcionar notificaciones de los comandos de menú, teclas de aceleración y notificaciones del control de cuadro de diálogo.  
+ Windows tiene el mensaje WM_COMMAND que se sobrecarga para proporcionar notificaciones de los comandos de menú, teclas de aceleración y notificaciones del control de cuadro de diálogo.  
   
- MFC 1.0 depende de que un poco al permitir que un controlador de comandos (por ejemplo, "OnFileNew") un **CWnd** derivadas de la clase a se llama en respuesta a una determinada **WM_COMMAND**. Esto está pegado junto con una estructura de datos denominada el mapa de mensajes y da como resultado un mecanismo muy eficaz del espacio del comando.  
+ MFC 1.0 depende de que un poco al permitir que un controlador de comandos (por ejemplo, "OnFileNew") un `CWnd` derivados de la clase a se llama en respuesta a un WM_COMMAND específico. Esto está pegado junto con una estructura de datos denominada el mapa de mensajes y da como resultado un mecanismo muy eficaz del espacio del comando.  
   
- MFC 1.0 también proporcionan una funcionalidad adicional para separar las notificaciones del control de mensajes de comando. Comandos se representan mediante un identificador de 16 bits, conocido también como un identificador de comando. Comandos normalmente se inician desde una **CFrameWnd** (es decir, una selección de menú o un acelerador traducido) y se enrutan a una variedad de otras ventanas.  
+ MFC 1.0 también proporcionan una funcionalidad adicional para separar las notificaciones del control de mensajes de comando. Comandos se representan mediante un identificador de 16 bits, conocido también como un identificador de comando. Normalmente, los comandos inician desde un `CFrameWnd` (es decir, una selección de menú o un acelerador traducido) y se enrutan a una variedad de otras ventanas.  
   
  MFC 1.0 utiliza el enrutamiento de comandos en un sentido limitado para la implementación de interfaz de múltiples documentos (MDI). (Una ventana de marco MDI delegar comandos en la ventana de formulario secundario MDI activada).  
   
@@ -63,9 +63,9 @@ ms.locfileid: "33384961"
   
 -   Por ejemplo, en una matriz de Id. que se utiliza para crear una barra de herramientas.  
   
--   En un **ON_COMMAND** macro.  
+-   En un ON_COMMAND (macro).  
   
--   Por ejemplo, en un **ON_UPDATE_COMMAND_UI** macro.  
+-   QUIZÁS en una ON_UPDATE_COMMAND_UI (macro).  
   
  Actualmente, la única implementación de MFC que requiere identificadores de comando ser > = 0 x 8000 es la implementación de los cuadros de diálogo y comandos de GOSUB.  
   
@@ -78,23 +78,23 @@ ms.locfileid: "33384961"
   
  Puede colocar un botón normal en un cuadro de diálogo modal normal con la IDC del botón establecido en el identificador de comando adecuado. Cuando el usuario selecciona el botón, el propietario del cuadro de diálogo (normalmente en la ventana de marco principal) recibe el comando igual que cualquier otro comando. Esto se denomina un comando GoSub '. Puesto que normalmente se usa para abrir otro cuadro de diálogo (GOSUB del primer cuadro de diálogo).  
   
- También puede llamar a la función **CWnd::UpdateDialogControls** en el cuadro de diálogo y pasarle la dirección de la ventana de marco principal. Esta función se habilita o deshabilita los controles de cuadro de diálogo en función de si cuentan con controladores de comandos en el marco. Esta función se invoca automáticamente para usted para las barras de control en el bucle inactivo de la aplicación, pero se debe llamar directamente para los cuadros de diálogo normales que se va a tener esta característica.  
+ También puede llamar a la función `CWnd::UpdateDialogControls` en el cuadro de diálogo y pasarle la dirección de la ventana de marco principal. Esta función se habilita o deshabilita los controles de cuadro de diálogo en función de si cuentan con controladores de comandos en el marco. Esta función se invoca automáticamente para usted para las barras de control en el bucle inactivo de la aplicación, pero se debe llamar directamente para los cuadros de diálogo normales que se va a tener esta característica.  
   
 ## <a name="when-onupdatecommandui-is-called"></a>Cuando se llama a ON_UPDATE_COMMAND_UI  
- Mantener el estado habilitado/comprueba de todos los de un programa elementos de menú en todo momento puede ser un problema consumen muchos recursos. Una técnica común consiste en Habilitar/proteger elementos de menú sólo cuando el usuario selecciona el elemento emergente. La implementación de MFC 2.0 de **CFrameWnd** controla la **WM_INITMENUPOPUP** el mensaje y utiliza la arquitectura de enrutamiento de comandos para determinar los Estados de menús a través de **ON_UPDATE_COMMAND_ Interfaz de usuario** controladores.  
+ Mantener el estado habilitado/comprueba de todos los de un programa elementos de menú en todo momento puede ser un problema consumen muchos recursos. Una técnica común consiste en Habilitar/proteger elementos de menú sólo cuando el usuario selecciona el elemento emergente. La implementación de MFC 2.0 de `CFrameWnd` controla el mensaje WM_INITMENUPOPUP y utiliza la arquitectura de enrutamiento de comandos para determinar los Estados de menús a través de los controladores ON_UPDATE_COMMAND_UI.  
   
- **CFrameWnd** también controla la **WM_ENTERIDLE** mensaje para describir el menú actual elemento seleccionado en el estado de la barra (también conocido como la línea del mensaje).  
+ `CFrameWnd` También controla el mensaje WM_ENTERIDLE para describir el menú actual elemento seleccionado en el estado de la barra (también conocido como la línea del mensaje).  
   
- Estructura de menús de la aplicación y editado por Visual C++, se utiliza para representar los posibles comandos disponibles en **WM_INITMENUPOPUP** tiempo. **ON_UPDATE_COMMAND_UI** controladores pueden modificar el estado o el texto de un menú, o para usos avanzados (por ejemplo, la lista de archivos utilizados más Recientemente o el menú emergente de verbos OLE), modifica realmente la estructura de menú antes de se dibuja el menú.  
+ Estructura de menús de la aplicación y editado por Visual C++, se utiliza para representar los posibles comandos disponibles en el momento WM_INITMENUPOPUP. Los controladores ON_UPDATE_COMMAND_UI pueden modificar el estado o el texto de un menú, o para usos avanzados (por ejemplo, la lista de archivos utilizados más Recientemente o el menú emergente de verbos OLE), modifica realmente la estructura de menú antes de que se dibuja el menú.  
   
- El mismo tipo de **ON_UPDATE_COMMAND_UI** se realiza un procesamiento para las barras de herramientas (y otras barras de control) cuando la aplicación entra en el bucle inactivo. Consulte la *Class Library Reference* y [Nota técnica 31](../mfc/tn031-control-bars.md) para obtener más información sobre las barras de control.  
+ Se realiza el mismo tipo de procesamiento de ON_UPDATE_COMMAND_UI para las barras de herramientas (y otras barras de control) cuando la aplicación entra en el bucle inactivo. Consulte la *Class Library Reference* y [Nota técnica 31](../mfc/tn031-control-bars.md) para obtener más información sobre las barras de control.  
   
 ## <a name="nested-pop-up-menus"></a>Menús emergentes anidados  
- Si se utiliza una estructura de menú anidado, observará que el **ON_UPDATE_COMMAND_UI** se llamará al controlador para el primer elemento de menú en el menú emergente en dos casos diferentes.  
+ Si se utiliza una estructura de menú anidado, observará que se llama al controlador ON_UPDATE_COMMAND_UI del primer elemento de menú en el menú emergente en dos casos diferentes.  
   
- En primer lugar, se llama por el menú emergente. Esto es necesario porque los menús emergentes no tienen identificadores y se utiliza el identificador del primer elemento de menú del menú emergente para hacer referencia a todo el menú emergente. En este caso, el **m_pSubMenu** variable miembro de la **CCmdUI** objeto será distinto de NULL y apuntará al menú emergente.  
+ En primer lugar, se llama por el menú emergente. Esto es necesario porque los menús emergentes no tienen identificadores y se utiliza el identificador del primer elemento de menú del menú emergente para hacer referencia a todo el menú emergente. En este caso, el *m_pSubMenu* variable miembro de la `CCmdUI` objeto será distinto de NULL y apuntará al menú emergente.  
   
- En segundo lugar, se llama justo antes de que los elementos de menú en el menú emergente que se van a dibujar. En este caso, hace referencia el identificador para el primer elemento de menú y la **m_pSubMenu** variable miembro de la **CCmdUI** objeto será NULL.  
+ En segundo lugar, se llama justo antes de que los elementos de menú en el menú emergente que se van a dibujar. En este caso, hace referencia el identificador para el primer elemento de menú y la *m_pSubMenu* variable miembro de la `CCmdUI` objeto será NULL.  
   
  Esto permite habilitar el menú emergente distinto de sus elementos de menú, pero necesita que escriba algún código con reconocimiento de menú. Por ejemplo, en un menú anidado con la estructura siguiente:  
   

@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a85ba03089a9536c8c6512bccd09f1eb34c0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381093"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950453"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementación de barra de estado en MFC
 A [CStatusBar](../mfc/reference/cstatusbar-class.md) objeto es una barra de controles con una fila de paneles de salida de texto. Los paneles de salida se utilizan habitualmente como líneas de mensaje y como indicadores de estado. Algunos ejemplos son las líneas de mensaje de Ayuda de menú que se describe brevemente el comando de menú seleccionado y los indicadores que muestran el estado de Bloq Despl, BLOQ NUM y otras claves.  
   
- A partir de la versión 4.0 de MFC, barras de estado se implementan utilizando la clase [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), que encapsula un control común de la barra de estado. Por compatibilidad con versiones anteriores, MFC mantiene la implementación antigua de barra de estado en la clase **COldStatusBar**. Describe la documentación para las versiones anteriores de MFC **COldStatusBar** en `CStatusBar`.  
+ A partir de la versión 4.0 de MFC, barras de estado se implementan utilizando la clase [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), que encapsula un control común de la barra de estado. Por compatibilidad con versiones anteriores, MFC mantiene la implementación antigua de barra de estado en la clase `COldStatusBar`. Describe la documentación para las versiones anteriores de MFC `COldStatusBar` en `CStatusBar`.  
   
  [CStatusBar:: GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), una función miembro nueva para MFC 4.0, permite aprovechar las ventajas de la compatibilidad del control común de Windows para la barra de estado personalización y funcionalidad adicional. `CStatusBar` funciones de miembro proporcionan la mayor parte de la funcionalidad de los controles comunes de Windows; Sin embargo, cuando se llama a `GetStatusBarCtrl`, puede asignar a las barras de estado aún más las características de una barra de estado. Cuando se llama a `GetStatusBarCtrl`, devolverá una referencia a un `CStatusBarCtrl` objeto. Puede usar dicha referencia para manipular el control de barra de estado.  
   

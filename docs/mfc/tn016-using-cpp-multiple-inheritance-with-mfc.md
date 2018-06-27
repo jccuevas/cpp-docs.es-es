@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba37344a2d065c84e196330e3b4f9d859975102
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384093"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954864"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: Usar la herencia múltiple de C++ con MFC
 Esta nota describe cómo usar la herencia múltiple (MI) con Microsoft Foundation Classes. El uso de MI no es necesario con MFC. MI no se utiliza en todas las clases MFC y no es necesario escribir una biblioteca de clases.  
@@ -52,7 +52,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;  
 ```  
   
- En este caso `CObject` se incluye dos veces. Esto significa que necesita una manera de eliminar la ambigüedad de cualquier referencia a `CObject` métodos u operadores. El `operator new` y [operador delete](../mfc/reference/cobject-class.md#operator_delete) son dos operadores que deben eliminar la ambigüedad. Como otro ejemplo, el código siguiente provoca un error en tiempo de compilación:  
+ En este caso `CObject` se incluye dos veces. Esto significa que necesita una manera de eliminar la ambigüedad de cualquier referencia a `CObject` métodos u operadores. El **new (operador)** y [operador delete](../mfc/reference/cobject-class.md#operator_delete) son dos operadores que deben eliminar la ambigüedad. Como otro ejemplo, el código siguiente provoca un error en tiempo de compilación:  
   
 ```  
 myListWnd.Dump(afxDump);
@@ -60,7 +60,7 @@ myListWnd.Dump(afxDump);
 ```  
   
 ## <a name="reimplementing-cobject-methods"></a>Volviendo a implementar métodos de CObject  
- Cuando se crea una nueva clase que tiene dos o más `CObject` derivadas de las clases base, debe volver a implementar el `CObject` métodos que desea que otros usuarios puedan usar. Operadores `new` y `delete` son obligatorios y [volcar](../mfc/reference/cobject-class.md#dump) se recomienda. El reimplements de ejemplo siguiente la `new` y `delete` operadores y `Dump` método:  
+ Cuando se crea una nueva clase que tiene dos o más `CObject` derivadas de las clases base, debe volver a implementar el `CObject` métodos que desea que otros usuarios puedan usar. Operadores **nueva** y **eliminar** son obligatorios y [volcar](../mfc/reference/cobject-class.md#dump) se recomienda. El reimplements de ejemplo siguiente la **nueva** y **eliminar** operadores y `Dump` método:  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  
@@ -89,9 +89,9 @@ public:
  Podría parecer que heredar prácticamente `CObject` podría solucionar el problema de ambigüedad de función, pero que no es el caso. Porque no hay ningún dato de miembro en `CObject`, no es necesario herencia virtual para evitar que varias copias de los datos de miembro de clase base. En el primer ejemplo que se mostró anteriormente, el `Dump` método virtual es sigue siendo ambiguo porque se implementa de forma distinta en `CFrameWnd` y `CObList`. La mejor manera de evitar la ambigüedad es seguir las recomendaciones que se presentan en la sección anterior.  
   
 ## <a name="cobjectiskindof-and-run-time-typing"></a>CObject:: IsKindOf y escriba el tiempo de ejecución  
- El mecanismo de tipo de tiempo de ejecución compatible con MFC en `CObject` utiliza las macros `DECLARE_DYNAMIC`, `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE`, `IMPLEMENT_DYNCREATE`, `DECLARE_SERIAL` y `IMPLEMENT_SERIAL`. Estas macros pueden realizar una comprobación de tipo en tiempo de ejecución para garantizar las conversiones de restricción seguro.  
+ El mecanismo de tipo de tiempo de ejecución compatible con MFC en `CObject` utiliza las macros DECLARE_DYNAMIC, IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE, DECLARE_SERIAL y IMPLEMENT_SERIAL. Estas macros pueden realizar una comprobación de tipo en tiempo de ejecución para garantizar las conversiones de restricción seguro.  
   
- Estas macros admiten una sola clase base y funcionarán en una forma limitada para las clases heredadas multiplicar. La clase base se especifica en `IMPLEMENT_DYNAMIC` o `IMPLEMENT_SERIAL` debería ser la clase base del primer (o más a la izquierda). Esta ubicación le permitirá la comprobación para el extremo izquierdo base sólo en una clase de tipo. El sistema de tipos de tiempo de ejecución sepa nada acerca de las clases base adicionales. En el ejemplo siguiente, los sistemas de tiempo de ejecución hará escriba comprobación contra `CFrameWnd`, pero sepa nada acerca de `CObList`.  
+ Estas macros admiten una sola clase base y funcionarán en una forma limitada para las clases heredadas multiplicar. La clase base que se especifica en IMPLEMENT_DYNAMIC o IMPLEMENT_SERIAL debe ser la clase base del primer (o más a la izquierda). Esta ubicación le permitirá la comprobación para el extremo izquierdo base sólo en una clase de tipo. El sistema de tipos de tiempo de ejecución sepa nada acerca de las clases base adicionales. En el ejemplo siguiente, los sistemas de tiempo de ejecución hará escriba comprobación contra `CFrameWnd`, pero sepa nada acerca de `CObList`.  
   
 ```  
 class CListWnd : public CFrameWnd,

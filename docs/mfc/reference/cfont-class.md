@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c26cf70ad52037b4ebe88b983e6d9a91273897cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c577a153536b7c9a5def95915e802301841a485b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369673"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955032"
 ---
 # <a name="cfont-class"></a>CFont (clase)
 Encapsula una fuente de la Interfaz de dispositivo gráfico (GDI) de Windows y proporciona funciones miembro para manipular la fuente.  
@@ -123,31 +123,31 @@ BOOL CreateFont(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nHeight`  
- Especifica el alto deseado (en unidades lógicas) de la fuente. Consulte la `lfHeight` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)estructura en el SDK de Windows para obtener una descripción. El valor absoluto de `nHeight` no debe superar los 16.384 unidades del dispositivo después de convertirse. Para todas las comparaciones de alto, el asignador de fuentes busca la fuente más grande que no supere el tamaño solicitado o la fuente más pequeña si todas las fuentes superan el tamaño solicitado.  
+ *nHeight*  
+ Especifica el alto deseado (en unidades lógicas) de la fuente. Consulte la `lfHeight` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)estructura en el SDK de Windows para obtener una descripción. El valor absoluto de *nHeight* no debe superar los 16.384 unidades del dispositivo después de convertirse. Para todas las comparaciones de alto, el asignador de fuentes busca la fuente más grande que no supere el tamaño solicitado o la fuente más pequeña si todas las fuentes superan el tamaño solicitado.  
   
- `nWidth`  
- Especifica el ancho medio (en unidades lógicas) de caracteres en la fuente. Si `nWidth` es 0, la relación de aspecto del dispositivo se comparará con la relación de aspecto de digitalización de las fuentes disponibles para encontrar la coincidencia más cercana, que viene determinada por el valor absoluto de la diferencia.  
+ *nWidth*  
+ Especifica el ancho medio (en unidades lógicas) de caracteres en la fuente. Si *nWidth* es 0, la relación de aspecto del dispositivo se comparará con la relación de aspecto de digitalización de las fuentes disponibles para encontrar la coincidencia más cercana, que viene determinada por el valor absoluto de la diferencia.  
   
- `nEscapement`  
+ *nEscapement*  
  Especifica el ángulo (en unidades de 0,1 grados) entre el vector de escape y el eje x de la superficie de presentación. El vector de escape es la línea a través de los orígenes de los caracteres primeros y últimos en una línea. El ángulo se mide en sentido contrario desde el eje x. Consulte la `lfEscapement` miembro en el `LOGFONT` estructura en el SDK de Windows para obtener más información.  
   
- `nOrientation`  
+ *nOrientation*  
  Especifica el ángulo (en unidades de 0,1 grados) entre la línea de base de un carácter y el eje x. El ángulo se mide en sentido contrario desde el eje x para sistemas de coordenadas en el que es la dirección y hacia abajo y de las agujas del reloj desde el eje x para sistemas de coordenadas en el que la dirección y está activo.  
   
- `nWeight`  
- Especifica el espesor de fuente (en píxeles dibujados por 1000). Consulte la `lfWeight` miembro en el `LOGFONT` estructura en el SDK de Windows para obtener más información. Los valores descritos son aproximados; el aspecto real depende del tipo de letra. Algunas fuentes tienen solo `FW_NORMAL`, `FW_REGULAR`, y `FW_BOLD` pesos. Si `FW_DONTCARE` se especifica, se utiliza un peso predeterminado.  
+ *nWeight*  
+ Especifica el espesor de fuente (en píxeles dibujados por 1000). Consulte la *lfWeight* miembro en el `LOGFONT` estructura en el SDK de Windows para obtener más información. Los valores descritos son aproximados; el aspecto real depende del tipo de letra. Algunas fuentes tienen solo `FW_NORMAL`, `FW_REGULAR`, y `FW_BOLD` pesos. Si `FW_DONTCARE` se especifica, se utiliza un peso predeterminado.  
   
- `bItalic`  
+ *bItalic*  
  Especifica si la fuente está en cursiva.  
   
- `bUnderline`  
+ *bUnderline*  
  Especifica si la fuente está subrayada.  
   
- `cStrikeOut`  
+ *cStrikeOut*  
  Especifica si se tachado caracteres de la fuente. Especifica una fuente de tachado si establece en un valor distinto de cero.  
   
- `nCharSet`  
+ *nCharSet*  
  Especifica setSee de caracteres de la fuente del `lfCharSet` miembro en el `LOGFONT` estructura en el SDK de Windows para obtener una lista de valores.  
   
  El juego de caracteres OEM es dependiente del sistema.  
@@ -156,24 +156,24 @@ BOOL CreateFont(
   
  El asignador de fuentes no usa el `DEFAULT_CHARSET` valor. Una aplicación puede utilizar este valor para permitir que el nombre y el tamaño de una fuente para describir completamente la fuente lógica. Si una fuente con el nombre especificado no existe, se puede sustituir una fuente de cualquier conjunto de caracteres de la fuente especificada. Para evitar resultados inesperados, las aplicaciones deben utilizar la `DEFAULT_CHARSET` valor con moderación.  
   
- `nOutPrecision`  
+ *nOutPrecision*  
  Especifica la precisión del resultado deseado. La precisión del resultado define el grado de cercanía debe coincidir con la salida de alto, ancho, orientación de los caracteres, escape y tono de la fuente solicitada. Consulte la `lfOutPrecision` miembro en el `LOGFONT` estructura en el SDK de Windows para obtener una lista de valores y obtener más información.  
   
- `nClipPrecision`  
+ *nClipPrecision*  
  Especifica la precisión de recorte deseado. La precisión de recorte define cómo recortar caracteres que están parcialmente fuera de la región de recorte. Consulte la `lfClipPrecision` miembro en el `LOGFONT` estructura en el SDK de Windows para obtener una lista de valores.  
   
  Para utilizar una fuente incrustada de sólo lectura, debe especificar una aplicación `CLIP_ENCAPSULATE`.  
   
- Para lograr una rotación coherente de dispositivo, TrueType y fuentes de vector, una aplicación puede utilizar el operador OR para combinar el `CLIP_LH_ANGLES` valor con cualquiera de los demás `nClipPrecision` valores. Si el `CLIP_LH_ANGLES` bit se establece, la rotación de todas las fuentes depende de si la orientación del sistema de coordenadas es zurda o diestro. (Para obtener más información acerca de la orientación de los sistemas de coordenadas, vea la descripción de la `nOrientation` parámetro.) Si `CLIP_LH_ANGLES` no es configurado, las fuentes de dispositivo siempre Girar a la izquierda, pero la rotación de otras fuentes depende de la orientación del sistema de coordenadas.  
+ Para lograr una rotación coherente de dispositivo, TrueType y fuentes de vector, una aplicación puede utilizar el operador OR para combinar el `CLIP_LH_ANGLES` valor con cualquiera de los demás *nClipPrecision* valores. Si el `CLIP_LH_ANGLES` bit se establece, la rotación de todas las fuentes depende de si la orientación del sistema de coordenadas es zurda o diestro. (Para obtener más información acerca de la orientación de los sistemas de coordenadas, vea la descripción de la *nOrientation* parámetro.) Si `CLIP_LH_ANGLES` no es configurado, las fuentes de dispositivo siempre Girar a la izquierda, pero la rotación de otras fuentes depende de la orientación del sistema de coordenadas.  
   
- `nQuality`  
+ *nQuality*  
  Especifica la calidad de salida de la fuente, que define cómo cuidadosamente la GDI debe intentar hacer coincidir los atributos de fuente lógica a los de una fuente física real. Consulte la `lfQuality` miembro en el `LOGFONT` estructura en el SDK de Windows para obtener una lista de valores.  
   
- `nPitchAndFamily`  
+ *nPitchAndFamily*  
  Especifica el tono y la familia de la fuente. Consulte la `lfPitchAndFamily` miembro en el `LOGFONT` estructura en el SDK de Windows para obtener una lista de valores y obtener más información.  
   
- `lpszFacename`  
- Un `CString` o un puntero a una cadena terminada en null que especifica el nombre de tipo de letra de la fuente. La longitud de esta cadena no debe superar los 30 caracteres. Las ventanas [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) función puede utilizarse para enumerar todas las fuentes disponibles actualmente. Si `lpszFacename` es `NULL`, la GDI usa un tipo de letra independientes del dispositivo.  
+ *lpszFacename*  
+ Un `CString` o un puntero a una cadena terminada en null que especifica el nombre de tipo de letra de la fuente. La longitud de esta cadena no debe superar los 30 caracteres. Las ventanas [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) función puede utilizarse para enumerar todas las fuentes disponibles actualmente. Si *lpszFacename* es `NULL`, la GDI usa un tipo de letra independientes del dispositivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -183,7 +183,7 @@ BOOL CreateFont(
   
  El `CreateFont` función no crea una nueva fuente de GDI de Windows. Simplemente se selecciona a la coincidencia más cercana de las fuentes físicas disponibles para la GDI.  
   
- Aplicaciones pueden utilizar la configuración predeterminada para la mayoría de los parámetros cuando se crea una fuente lógica. Los parámetros que siempre se deben proporcionar valores específicos son `nHeight` y `lpszFacename`. Si `nHeight` y `lpszFacename` no se han establecido por la aplicación, la fuente lógica que se crea depende del dispositivo.  
+ Aplicaciones pueden utilizar la configuración predeterminada para la mayoría de los parámetros cuando se crea una fuente lógica. Los parámetros que siempre se deben proporcionar valores específicos son *nHeight* y *lpszFacename*. Si *nHeight* y *lpszFacename* no se han establecido por la aplicación, la fuente lógica que se crea depende del dispositivo.  
   
  Cuando termine con el `CFont` objeto creado por el `CreateFont` funcione, use `CDC::SelectObject` para seleccionar una fuente diferente en el contexto de dispositivo, a continuación, elimine la `CFont` objeto que ya no es necesario.  
   
@@ -198,7 +198,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpLogFont`  
+ *lpLogFont*  
  Apunta a un `LOGFONT` estructura que define las características de la fuente lógica.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -225,20 +225,20 @@ BOOL CreatePointFont(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nPointSize`  
+ *nPointSize*  
  Alto de fuente en décimas de un punto de solicitado. (Por ejemplo, pasar 120 para solicitar una fuente de 12 puntos).  
   
- `lpszFaceName`  
- Un `CString` o un puntero a una cadena terminada en null que especifica el nombre de tipo de letra de la fuente. La longitud de esta cadena no debe superar los 30 caracteres. Las ventanas **EnumFontFamilies** función puede utilizarse para enumerar todas las fuentes disponibles actualmente. Si `lpszFaceName` es **NULL**, la GDI usa un tipo de letra independientes del dispositivo.  
+ *lpszFaceName*  
+ Un `CString` o un puntero a una cadena terminada en null que especifica el nombre de tipo de letra de la fuente. La longitud de esta cadena no debe superar los 30 caracteres. Las ventanas **EnumFontFamilies** función puede utilizarse para enumerar todas las fuentes disponibles actualmente. Si *lpszFaceName* es **NULL**, la GDI usa un tipo de letra independientes del dispositivo.  
   
- `pDC`  
- Puntero a la [CDC](../../mfc/reference/cdc-class.md) objeto que se va a utilizar para convertir el alto en `nPointSize` a unidades lógicas. Si **NULL**, se usa un contexto de dispositivo de pantalla para la conversión.  
+ *pDC*  
+ Puntero a la [CDC](../../mfc/reference/cdc-class.md) objeto que se va a utilizar para convertir el alto en *nPointSize* a unidades lógicas. Si **NULL**, se usa un contexto de dispositivo de pantalla para la conversión.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si se realiza correctamente, en caso contrario, 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Convierte automáticamente el alto en `nPointSize` a unidades lógicas utilizando el `CDC` objeto señalado por `pDC`.  
+ Convierte automáticamente el alto en *nPointSize* a unidades lógicas utilizando el `CDC` objeto señalado por *pDC*.  
   
  Cuando termine con el `CFont` objeto creado por el `CreatePointFont` funcione, primero seleccione la fuente fuera del contexto de dispositivo y luego elimine la `CFont` objeto.  
   
@@ -255,17 +255,17 @@ BOOL CreatePointFontIndirect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpLogFont`  
+ *lpLogFont*  
  Apunta a un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura que define las características de la fuente lógica. El **lfHeight** miembro de la `LOGFONT` estructura se mide en décimas de un punto en lugar de unidades lógicas. (Por ejemplo, establecer **lfHeight** en 120 para solicitar una fuente de 12 puntos.)  
   
- `pDC`  
+ *pDC*  
  Puntero a la [CDC](../../mfc/reference/cdc-class.md) objeto que se va a utilizar para convertir el alto en **lfHeight** a unidades lógicas. Si **NULL**, se usa un contexto de dispositivo de pantalla para la conversión.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si se realiza correctamente, en caso contrario, 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función convierte automáticamente el alto en **lfHeight** a unidades lógicas utilizando el `CDC` objeto señalado por `pDC` antes de pasar el `LOGFONT` estructura en Windows.  
+ Esta función convierte automáticamente el alto en **lfHeight** a unidades lógicas utilizando el `CDC` objeto señalado por *pDC* antes de pasar el `LOGFONT` estructura en Windows.  
   
  Cuando termine con el `CFont` objeto creado por el `CreatePointFontIndirect` funcione, primero seleccione la fuente fuera del contexto de dispositivo y luego elimine la `CFont` objeto.  
   
@@ -280,7 +280,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hFont`  
+ *hFont*  
  Un **HFONT** identificador de una fuente de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  

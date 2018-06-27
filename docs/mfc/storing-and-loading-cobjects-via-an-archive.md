@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5cc426e3494117bff98577f02178709a2588f3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a2dc227815f8888b85784ea92e58b3e91ffc83a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380733"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954980"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Almacenar y cargar CObjects a través de un archivo
 Almacenar y cargar `CObject`s a través de un archivo requiere una consideración adicional. En algunos casos, debe llamar a la `Serialize` función del objeto, donde la `CArchive` objeto es un parámetro de la `Serialize` llamada, en lugar de utilizar el **< \<** o **>>** operador de la `CArchive`. El hecho importante a tener en cuenta es que la `CArchive` **>>** construcciones de operador la `CObject` en la memoria en función de `CRuntimeClass` información escrita anteriormente en el archivo al guardar el almacenamiento.  
@@ -37,7 +37,7 @@ Almacenar y cargar `CObject`s a través de un archivo requiere una consideració
 -   Cuando se deserializa el objeto, ya dispone de memoria asignada para él.  
   
 > [!CAUTION]
->  Si carga el objeto mediante la `Serialize` función, también se debe almacenar el objeto utilizando el `Serialize` función. No lo guarde con el `CArchive` **<<** operador y, a continuación, carga utilizando el `Serialize` de función o almacenar mediante la `Serialize` función y, a continuación, cargue con **CArchive >>** operador.  
+>  Si carga el objeto mediante la `Serialize` función, también se debe almacenar el objeto utilizando el `Serialize` función. No lo guarde con el `CArchive` **<<** operador y, a continuación, carga utilizando el `Serialize` de función o almacenar mediante la `Serialize` función y, a continuación, cargue con `CArchive >>` operador.  
   
  En el ejemplo siguiente se ilustra los casos:  
   
@@ -45,7 +45,7 @@ Almacenar y cargar `CObject`s a través de un archivo requiere una consideració
   
  [!code-cpp[NVC_MFCSerialization#37](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_2.cpp)]  
   
- En resumen, si una clase serializable define incrustada **objeto CObject**t como miembro, debe *no* usar la `CArchive` **< \<** y **>>** operadores para ese objeto, pero debe llamar a la `Serialize` funcione en su lugar. Además, si una clase serializable define un puntero a un `CObject` (o un objeto derivado de `CObject`) como un miembro, pero las construcciones este otro objeto en su propio constructor, también debe llamar a `Serialize`.  
+ En resumen, si una clase serializable define incrustada `CObject` como un miembro, debe *no* usar la `CArchive` **< \<** y **>>** operadores para ese objeto, pero debe llamar a la `Serialize` funcione en su lugar. Además, si una clase serializable define un puntero a un `CObject` (o un objeto derivado de `CObject`) como un miembro, pero las construcciones este otro objeto en su propio constructor, también debe llamar a `Serialize`.  
   
 ## <a name="see-also"></a>Vea también  
  [Serialización: Serializar un objeto](../mfc/serialization-serializing-an-object.md)

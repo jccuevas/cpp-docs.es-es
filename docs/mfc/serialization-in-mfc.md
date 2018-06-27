@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5cf36722dd1ed6ea96dd839bd0935d78df0b32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b46dc8500543ce94b7d8d6a3415b22d019619d83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381028"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952598"
 ---
 # <a name="serialization-in-mfc"></a>Serialización en MFC
 Este artículo se explica el mecanismo de serialización proporcionado en la base clase biblioteca MFC (Microsoft) para permitir que los objetos se conservan entre ejecuciones de un programa.  
@@ -41,7 +41,7 @@ Este artículo se explica el mecanismo de serialización proporcionado en la bas
 > [!NOTE]
 >  No confunda la `CArchive` clase con las clases iostream de propósito general, que son para el formato sólo texto. La `CArchive` clase es para objetos serializados en formato binario.  
   
- Si lo desea, puede omitir la serialización de MFC para crear su propio mecanismo de almacenamiento de datos persistente. Debe reemplazar las funciones miembro de clase que inician la serialización en línea de comandos del usuario. Vea la explicación en [Nota técnica 22](../mfc/tn022-standard-commands-implementation.md) de la `ID_FILE_OPEN`, **ID_FILE_SAVE**, y **ID_FILE_SAVE_AS** comandos estándar.  
+ Si lo desea, puede omitir la serialización de MFC para crear su propio mecanismo de almacenamiento de datos persistente. Debe reemplazar las funciones miembro de clase que inician la serialización en línea de comandos del usuario. Vea la explicación en [Nota técnica 22](../mfc/tn022-standard-commands-implementation.md) de los comandos estándares ID_FILE_OPEN, ID_FILE_SAVE y ID_FILE_SAVE_AS.  
   
  Los artículos siguientes tratan las dos tareas principales necesarias para la serialización:  
   

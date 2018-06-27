@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e20ca3f483bd9c00b298c69a526d8f5dd31cdb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80c1422c4d0e45599ca8bc2e9c86a4263b8ac9b6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367739"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955614"
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo (Estructura)
 El `CDaoTableDefInfo` estructura contiene información sobre un objeto de definición de tabla definido para objetos de acceso a datos (DAO).  
@@ -46,13 +46,13 @@ struct CDaoTableDefInfo
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `m_strName`  
+ *m_strName*  
  Identifica inequívocamente el objeto de definición de tabla. Para recuperar el valor de esta propiedad directamente, llaman al objeto de definición de tabla [GetName](../../mfc/reference/cdaotabledef-class.md#getname) función miembro. Para obtener más información, vea el tema "Nombre de propiedad" en la Ayuda de DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Indica si se pueden realizar cambios a la tabla. La forma más rápida para determinar si una tabla es actualizable es abrir un `CDaoTableDef` para la tabla de objetos y llamar al objeto [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) función miembro. `CanUpdate` siempre devuelve es distinto de cero (**TRUE**) para un objeto de definición de tabla recién creada y 0 (**FALSE**) de un objeto tabledef adjunto. Un nuevo objeto de definición de tabla se puede anexar únicamente a una base de datos para el que el usuario actual tiene permiso de escritura. Si la tabla contiene solo los campos no actualizable, `CanUpdate` devuelve 0. Cuando uno o más campos son actualizables, `CanUpdate` devuelve es distinto de cero. Puede editar sólo los campos actualizables. Para obtener más información, vea el tema "Propiedad actualizable" en la Ayuda de DAO.  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  Especifica las características de la tabla representada por el objeto de definición de tabla. Para recuperar los atributos actuales de una definición de tabla, llame a su [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) función miembro. El valor devuelto puede ser una combinación de estas constantes largo (mediante la operación bit a bit OR (**&#124;**) operador):  
   
 - **dbAttachExclusive** bases de datos que utilizan el motor de base de datos de Microsoft Jet, indica la tabla es una tabla asociada abierta para su uso exclusivo.  
@@ -67,22 +67,22 @@ struct CDaoTableDefInfo
   
 - **dbAttachedODBC** indica la tabla es una tabla asociada desde una base de datos ODBC, como Microsoft SQL Server.  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  La fecha y hora de que creación de la tabla. Para recuperar directamente la fecha de creación de la tabla, llame a la [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) función miembro de la `CDaoTableDef` objeto asociado a la tabla. Para obtener más información, vea comentarios a continuación. Para obtener información relacionada, vea el tema "DateCreated y LastUpdated propiedades" en la Ayuda de DAO.  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  La fecha y hora del cambio más reciente realizado en el diseño de la tabla. Para recuperar directamente la fecha en que se actualizó por última vez la tabla, llame a la [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) función miembro de la `CDaoTableDef` objeto asociado a la tabla. Para obtener más información, vea comentarios a continuación. Para obtener información relacionada, vea el tema "DateCreated y LastUpdated propiedades" en la Ayuda de DAO.  
   
  *m_strSrcTableName*  
  Especifica el nombre de una tabla asociada, si existe. Para recuperar directamente el nombre de la tabla de origen, llame a la [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) función miembro de la `CDaoTableDef` objeto asociado a la tabla.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Proporciona información sobre el origen de una base de datos abierta. Puede comprobar esta propiedad mediante una llamada a la [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) función miembro de su `CDaoTableDef` objeto. Para obtener más información acerca de las cadenas de conexión, consulte `GetConnect`.  
   
- `m_strValidationRule`  
+ *m_strValidationRule*  
  Un valor que valida los datos de los campos de definición de tabla cuando se modifiquen o se agregan a una tabla. Validación solo se admite para las bases de datos que utilizan el motor de base de datos de Microsoft Jet. Para recuperar directamente la regla de validación, llame a la [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) función miembro de la `CDaoTableDef` objeto asociado a la tabla. Para obtener información relacionada, vea el tema "Propiedad ValidationRule" en la Ayuda de DAO.  
   
- `m_strValidationText`  
+ *m_strValidationText*  
  Un valor que especifica el texto del mensaje que la aplicación debe mostrar si no se cumple la regla de validación especificada por la propiedad ValidationRule. Para obtener información relacionada, vea el tema "Propiedad texto de validación" en la Ayuda de DAO.  
   
  *m_lRecordCount*  

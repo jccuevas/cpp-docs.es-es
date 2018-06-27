@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfe91812d178618b1707f99aa10d6bd492109069
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385114"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956800"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Tutorial: Actualizar la aplicación Scribble MFC (parte 1)
 Este tutorial muestra cómo modificar una aplicación MFC existente para utilizar la interfaz de usuario de la cinta de opciones. Visual Studio admite la cinta de Office 2007 y la cinta de Windows 7 Scenic. Para obtener más información acerca de la interfaz de usuario de la cinta de opciones, vea [cintas](http://go.microsoft.com/fwlink/p/?linkid=129233) en el sitio Web de MSDN.  
@@ -186,31 +186,31 @@ Este tutorial muestra cómo modificar una aplicación MFC existente para utiliza
   
 3.  Puede personalizar el botón Aplicación si modifica sus propiedades. Los identificadores de mensaje que se utilizan en este código ya están definidos en el menú para Scribble 1.0.  
   
-4.  En la vista Diseño, haga clic en el botón Aplicación para mostrar sus propiedades. Cambiar valores de propiedad de la manera siguiente: **imagen** a `IDB_RIBBON_MAIN`, **Prompt** a `File`, **claves** a `f`, **imágenes grandes** a `IDB_RIBBON_FILELARGE`, y **imágenes pequeñas** a `IDB_RIBBON_FILESMALL`.  
+4.  En la vista Diseño, haga clic en el botón Aplicación para mostrar sus propiedades. Cambiar valores de propiedad de la manera siguiente: **imagen** a *IDB_RIBBON_MAIN*, **Prompt** a *archivo*, **claves** para *f*, **imágenes grandes** a *IDB_RIBBON_FILELARGE*, y **imágenes pequeñas** a *IDB_RIBBON_ FILESMALL*.  
   
 5.  Las modificaciones siguientes crean el menú que aparece cuando el usuario hace clic en el botón Aplicación. Haga clic en el botón de puntos suspensivos (**...** ) junto a **Main Items** para abrir el **Editor de elementos**.  
   
-    1.  Haga clic en **agregar** para agregar un botón. Cambio **título** a `&New`, **identificador** a `ID_FILE_NEW`, **imagen** a `0`, **imagen grande** a `0`.  
+    1.  Haga clic en **agregar** para agregar un botón. Cambio **título** a *& nuevo*, **identificador** a *ID_FILE_NEW*, **imagen** a *0*, **Imagen grande** a *0*.  
   
-    2.  Haga clic en **agregar** para agregar un segundo botón. Cambio **título** a `&Save`, **identificador** a `ID_FILE_SAVE`, **imagen** a `2`, y **imagen grande** a `2`.  
+    2.  Haga clic en **agregar** para agregar un segundo botón. Cambio **título** a *& Guardar*, **identificador** a *ID_FILE_SAVE*, **imagen** a *2* , y **imagen grande** a *2*.  
   
-    3.  Haga clic en **agregar** para agregar un tercer botón. Cambio **título** a `Save &As`, **identificador** a `ID_FILE_SAVE_AS`, **imagen** a `3`, y **imagen grande** a `3`.  
+    3.  Haga clic en **agregar** para agregar un tercer botón. Cambio **título** a *Guardar & como*, **identificador** a *ID_FILE_SAVE_AS*, **imagen** a *3*, y **imagen grande** a *3*.  
   
-    4.  Haga clic en **agregar** para agregar un cuarto botón. Cambio **título** a `&Print`, **identificador** a `ID_FILE_PRINT`, **imagen** a `4`, y **imagen grande** a `4`.  
+    4.  Haga clic en **agregar** para agregar un cuarto botón. Cambio **título** a *& impresión*, **identificador** a *ID_FILE_PRINT*, **imagen** a *4* , y **imagen grande** a *4*.  
   
     5.  Cambiar el **elemento** escriba a **separador** y, a continuación, haga clic en **agregar**.  
   
-    6.  Cambiar el **elemento** escriba a **botón**. Haga clic en **agregar** para agregar un quinto botón. Cambio **título** a `&Close`, **identificador** a `ID_FILE_CLOSE`, **imagen** a `5`, y **imagen grande** a `5`.  
+    6.  Cambiar el **elemento** escriba a **botón**. Haga clic en **agregar** para agregar un quinto botón. Cambio **título** a *& Cerrar*, **identificador** a *ID_FILE_CLOSE*, **imagen** a *5* , y **imagen grande** a *5*.  
   
 6.  Las modificaciones siguientes crean un submenú del botón Imprimir que creó en el paso anterior.  
   
-    1.  Haga clic en el **impresión** botón, cambie la **elemento** escriba a **etiqueta**y, a continuación, haga clic en **insertar**. Cambio **título** a `Preview and print the document`.  
+    1.  Haga clic en el **impresión** botón, cambie la **elemento** escriba a **etiqueta**y, a continuación, haga clic en **insertar**. Cambio **título** a *vista previa e imprimir el documento*.  
   
-    2.  Haga clic en el **impresión** botón, cambie la **elemento** escriba a **botón**y haga clic en **insertar**. Cambio **título** a `&Print`, **identificador** a `ID_FILE_PRINT`, **imagen** a `4`, y **imagen grande** a `4`.  
+    2.  Haga clic en el **impresión** botón, cambie la **elemento** escriba a **botón**y haga clic en **insertar**. Cambio **título** a *& impresión*, **identificador** a *ID_FILE_PRINT*, **imagen** a *4* , y **imagen grande** a *4*.  
   
-    3.  Haga clic en el **impresión** botón y, a continuación, haga clic en **insertar** para agregar un botón. Cambio **título** a `&Quick Print`, **identificador** a `ID_FILE_PRINT_DIRECT`, **imagen** a `7`, y **imagen grande** a `7`.  
+    3.  Haga clic en el **impresión** botón y, a continuación, haga clic en **insertar** para agregar un botón. Cambio **título** a *& rápida impresión*, **identificador** a *ID_FILE_PRINT_DIRECT*, **imagen** a *7*, y **imagen grande** a *7*.  
   
-    4.  Haga clic en el **impresión** botón y, a continuación, haga clic en **insertar** para agregar otro botón. Cambio **título** a `Print Pre&view`, **identificador** a `ID_FILE_PRINT_PREVIEW`, **imagen** a `6`, y **imagen grande** a `6`.  
+    4.  Haga clic en el **impresión** botón y, a continuación, haga clic en **insertar** para agregar otro botón. Cambio **título** a *& vista previa de impresión*, **identificador** a *ID_FILE_PRINT_PREVIEW*, **imagen** a *6*, y **imagen grande** a *6*.  
   
     5.  Ha modificado el **Main Items**. Haga clic en **cerrar** para salir del **Editor de elementos**.  
   
@@ -218,7 +218,7 @@ Este tutorial muestra cómo modificar una aplicación MFC existente para utiliza
   
     1.  En el **propiedades** ventana, haga clic en el botón de puntos suspensivos (**...** ) junto a **botón** para abrir el **Editor de elementos**.  
   
-    2.  Haga clic en **agregar** para agregar un botón. Cambio **título** a `E&xit`, **identificador** a `ID_APP_EXIT`, **imagen** a `8`.  
+    2.  Haga clic en **agregar** para agregar un botón. Cambio **título** a *& Salir*, **identificador** a *ID_APP_EXIT*, **imagen** a *8* .  
   
  [[Secciones](#top)]  
   
@@ -233,7 +233,7 @@ Este tutorial muestra cómo modificar una aplicación MFC existente para utiliza
     CMFCRibbonBar m_wndRibbonBar;  
  ```  
   
-2.  In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
+2.  In the mainfrm.cpp file, add the following code before the final **return** statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
   
  ``` *// Create the ribbon bar  
     if (!m_wndRibbonBar.Create(this))  
@@ -254,11 +254,11 @@ Este tutorial muestra cómo modificar una aplicación MFC existente para utiliza
   
 #### <a name="to-add-a-home-category-and-edit-panel"></a>Para agregar una categoría Inicio y un panel Edición  
   
-1.  El programa Scribble solo requiere una categoría. En la vista Diseño, haga clic en **categoría** para mostrar sus propiedades. Cambiar valores de propiedad de la manera siguiente: **título** a `&Home`, **Large Images** a `IDB_RIBBON_HOMELARGE`, **imágenes pequeñas** a `IDB_RIBBON_HOMESMALL`.  
+1.  El programa Scribble solo requiere una categoría. En la vista Diseño, haga clic en **categoría** para mostrar sus propiedades. Cambiar valores de propiedad de la manera siguiente: **título** a *& Inicio*, **Large Images** a *IDB_RIBBON_HOMELARGE*,  **Imágenes pequeñas** a *IDB_RIBBON_HOMESMALL*.  
   
-2.  Cada categoría de la cinta está organizada en paneles con nombre. Cada panel contiene un conjunto de controles que realizan operaciones relacionadas. Esta categoría tiene un panel. Haga clic en **Panel**y, a continuación, cambiar **título** a `Edit` y **índice de imagen** a `0`.  
+2.  Cada categoría de la cinta está organizada en paneles con nombre. Cada panel contiene un conjunto de controles que realizan operaciones relacionadas. Esta categoría tiene un panel. Haga clic en **Panel**y, a continuación, cambiar **título** a *editar* y **índice de imagen** a *0*.  
   
-3.  Para el **editar** panel, agregue un botón que se encarga de borrar el contenido del documento. El identificador de mensaje para este botón se ha definido en el recurso de menú IDR_SCRIBBTYPE. Especificar `Clear All` como el texto del botón y el índice del mapa de bits que decora el botón. Abra la **cuadro de herramientas**y, a continuación, arrastre un **botón** a la **editar** panel. Haga clic en el botón y, a continuación, cambiar **título** a `Clear All`, **identificador** a `ID_EDIT_CLEAR_ALL`, **índice de imagen** a `0`, **índice de imagen grande**  a `0`.  
+3.  Para el **editar** panel, agregue un botón que se encarga de borrar el contenido del documento. El identificador de mensaje para este botón se ha definido en el recurso de menú IDR_SCRIBBTYPE. Especifique *Borrar todo* como el texto del botón y el índice del mapa de bits que decora el botón. Abra la **cuadro de herramientas**y, a continuación, arrastre un **botón** a la **editar** panel. Haga clic en el botón y, a continuación, cambiar **título** a *Borrar todo*, **ID** a *ID_EDIT_CLEAR_ALL*, **deíndicedeimagen** a *0*, **índice de imagen grande** a *0*.  
   
 4.  Guarde los cambios y, a continuación, compile y ejecute la aplicación. La aplicación Scribble debería mostrarse y debe tener una barra de cinta en la parte superior de la ventana en lugar de una barra de menús. La barra de cinta debe tener una categoría, **inicio**, y **inicio** debe tener un panel, **editar**. Los botones de la cinta de opciones que ha agregado deberían estar asociados a los controladores de eventos existentes y el **abiertos**, **cerrar**, **guardar**, **impresión**, y **Borrar todo** botones deberían funcionar según lo esperado.  
   

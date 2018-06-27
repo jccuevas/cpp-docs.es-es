@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 476e9b0bc5e9f4c3eec64e5d0d36d3f900988f48
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355868"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954224"
 ---
 # <a name="cbitmap-class"></a>CBitmap (clase)
 Encapsula un mapa de bits de la Interfaz de dispositivo gráfico (GDI) de Windows y proporciona funciones miembro para manipular el mapa de bits.  
@@ -130,26 +130,26 @@ BOOL CreateBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nWidth`  
+ *nWidth*  
  Especifica el ancho (en píxeles) del mapa de bits.  
   
- `nHeight`  
+ *nHeight*  
  Especifica el alto (en píxeles) del mapa de bits.  
   
- `nPlanes`  
+ *nPlanes*  
  Especifica el número de planos de color del mapa de bits.  
   
- `nBitcount`  
+ *nBitcount*  
  Especifica el número de bits de color por píxel de la pantalla.  
   
- `lpBits`  
+ *lpBits*  
  Apunta a una matriz de bytes que contiene los valores de bits de mapa de bits iniciales. Si es **NULL**, el nuevo mapa de bits se deja sin inicializar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Para un mapa de bits de color, el parámetro `nPlanes` o `nBitcount` debe establecerse en 1. Si ambos parámetros se establecen en 1, `CreateBitmap` crea un mapa de bits monocromo.  
+ Para un mapa de bits de color, ya sea el *nPlanes* o *nBitcount* parámetro debe establecerse en 1. Si ambos parámetros se establecen en 1, `CreateBitmap` crea un mapa de bits monocromo.  
   
  Aunque un mapa de bits no se puede seleccionar directamente para un dispositivo de pantalla, puede seleccionarse como el mapa de bits actual para un "contexto de dispositivo de memoria" usando [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) y se copian en cualquier contexto de dispositivo compatibles mediante el uso de la [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) función.  
   
@@ -158,14 +158,14 @@ BOOL CreateBitmap(
  Para más información, vea la descripción del campo **bmBits** en la estructura **BITMAP** . El [mapa de bits](../../mfc/reference/bitmap-structure.md) estructura se describe en el [CBitmap:: Createbitmapindirect](#createbitmapindirect) función miembro.  
   
 ##  <a name="createbitmapindirect"></a>  CBitmap:: Createbitmapindirect  
- Inicializa un mapa de bits que tenga el ancho, el alto y el patrón de bits (si se especifica alguna) proporcionado en la estructura que señala `lpBitmap`.  
+ Inicializa un mapa de bits que tenga el ancho, el alto y el patrón de bits (si se especifica alguna) proporcionado en la estructura que señala *lpBitmap*.  
   
 ```  
 BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpBitmap`  
+ *lpBitmap*  
  Apunta a un [mapa de bits](../../mfc/reference/bitmap-structure.md) estructura que contiene información sobre el mapa de bits.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -174,12 +174,12 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>Comentarios  
  Aunque un mapa de bits no se puede seleccionar directamente para un dispositivo de pantalla, puede seleccionarse como el mapa de bits actual para un contexto de dispositivo de memoria mediante el uso de [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) y se copian en cualquier contexto de dispositivo compatibles mediante el uso de la [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) (función). (El [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) función puede copiar el mapa de bits para el pincel actual directamente en el contexto de dispositivo de pantalla.)  
   
- Si el **mapa de bits** estructura que señala el `lpBitmap` ha sido rellenado parámetro mediante el uso de la `GetObject` función, no se especifican los bits del mapa de bits y el mapa de bits no está inicializado. Para inicializar el mapa de bits, una aplicación puede usar una función como [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) para copiar los bits del mapa de bits identificado por el primer parámetro de `CGdiObject::GetObject` al mapa de bits creado por `CreateBitmapIndirect`.  
+ Si el **mapa de bits** estructura que señala el *lpBitmap* ha sido rellenado parámetro mediante el uso de la `GetObject` función, no se especifican los bits del mapa de bits y el mapa de bits no está inicializado. Para inicializar el mapa de bits, una aplicación puede usar una función como [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) para copiar los bits del mapa de bits identificado por el primer parámetro de `CGdiObject::GetObject` al mapa de bits creado por `CreateBitmapIndirect`.  
   
  Cuando termine con el `CBitmap` objeto creado con `CreateBitmapIndirect` funcione, primero seleccione el mapa de bits fuera del contexto de dispositivo y luego elimine la `CBitmap` objeto.  
   
 ##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
- Inicializa un mapa de bits que es compatible con el dispositivo especificado por `pDC`.  
+ Inicializa un mapa de bits que es compatible con el dispositivo especificado por *pDC*.  
   
 ```  
 BOOL CreateCompatibleBitmap(
@@ -189,22 +189,22 @@ BOOL CreateCompatibleBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Especifica el contexto de dispositivo.  
   
- `nWidth`  
+ *nWidth*  
  Especifica el ancho (en píxeles) del mapa de bits.  
   
- `nHeight`  
+ *nHeight*  
  Especifica el alto (en píxeles) del mapa de bits.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- El mapa de bits no tiene el mismo número de planos de color o el mismo formato de bits por píxel que el contexto de dispositivo especificado. Solo puede seleccionarse como el mapa de bits actual para cualquier dispositivo de memoria que es compatible con la especificada por `pDC`.  
+ El mapa de bits no tiene el mismo número de planos de color o el mismo formato de bits por píxel que el contexto de dispositivo especificado. Solo puede seleccionarse como el mapa de bits actual para cualquier dispositivo de memoria que es compatible con la especificada por *pDC*.  
   
- Si `pDC` es un contexto de dispositivo de memoria, el mapa de bits devuelto tiene el mismo formato que el mapa de bits actualmente seleccionada en ese contexto de dispositivo. Un "contexto de dispositivo de memoria" es un bloque de memoria que representa una superficie de presentación. Se puede utilizar para preparar las imágenes en la memoria antes de copiarlos en la superficie de pantalla real del dispositivo compatible.  
+ Si *pDC* es un contexto de dispositivo de memoria, el mapa de bits devuelto tiene el mismo formato que el mapa de bits actualmente seleccionada en ese contexto de dispositivo. Un "contexto de dispositivo de memoria" es un bloque de memoria que representa una superficie de presentación. Se puede utilizar para preparar las imágenes en la memoria antes de copiarlos en la superficie de pantalla real del dispositivo compatible.  
   
  Cuando se crea un contexto de dispositivo de memoria, GDI selecciona automáticamente un mapa de bits monocromático cotizaciones para él.  
   
@@ -213,7 +213,7 @@ BOOL CreateCompatibleBitmap(
  Cuando termine con el `CBitmap` objeto creado con la `CreateCompatibleBitmap` funcione, primero seleccione el mapa de bits fuera del contexto de dispositivo y luego elimine la `CBitmap` objeto.  
   
 ##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
- Inicializa un mapa de bits no descartable que sea compatible con el contexto de dispositivo identificado por `pDC`.  
+ Inicializa un mapa de bits no descartable que sea compatible con el contexto de dispositivo identificado por *pDC*.  
   
 ```  
 BOOL CreateDiscardableBitmap(
@@ -223,20 +223,20 @@ BOOL CreateDiscardableBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Especifica un contexto de dispositivo.  
   
- `nWidth`  
+ *nWidth*  
  Especifica el ancho (en bits) del mapa de bits.  
   
- `nHeight`  
+ *nHeight*  
  Especifica el alto (en bits) del mapa de bits.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- El mapa de bits no tiene el mismo número de planos de color o el mismo formato de bits por píxel que el contexto de dispositivo especificado. Una aplicación puede seleccionar este mapa de bits como el mapa de bits actual para un dispositivo de memoria que es compatible con la especificada por `pDC`.  
+ El mapa de bits no tiene el mismo número de planos de color o el mismo formato de bits por píxel que el contexto de dispositivo especificado. Una aplicación puede seleccionar este mapa de bits como el mapa de bits actual para un dispositivo de memoria que es compatible con la especificada por *pDC*.  
   
  Windows puede descartar un mapa de bits creado por esta función solo si una aplicación no lo ha seleccionado en un contexto de presentación. Si Windows descarta el mapa de bits cuando no está seleccionada y la aplicación más tarde intenta seleccionarlo, el [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) función devolverá **NULL**.  
   
@@ -250,7 +250,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hBitmap`  
+ *hBitmap*  
  Especifica un mapa de bits de GDI de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -267,7 +267,7 @@ int GetBitmap(BITMAP* pBitMap);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pBitMap`  
+ *pBitMap*  
  Puntero a un [estructura de mapa de bits](../../mfc/reference/bitmap-structure.md) estructura que va a recibir las propiedades de la imagen. Este parámetro no debe ser `NULL`.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -285,10 +285,10 @@ DWORD GetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwCount`  
+ *dwCount*  
  El número de bytes que se deben copiar en el búfer.  
   
- `lpBits`  
+ *lpBits*  
  Puntero al búfer que recibirá el mapa de bits.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -311,7 +311,7 @@ CSize GetBitmapDimension() const;
  El alto y ancho se supone que se ha establecido previamente mediante el uso de la [SetBitmapDimension](#setbitmapdimension) función miembro.  
   
 ##  <a name="loadbitmap"></a>  CBitmap:: LoadBitmap  
- Carga el recurso del mapa de bits denominado por `lpszResourceName` o identificada por el número de identificación en `nIDResource` del archivo ejecutable de la aplicación.  
+ Carga el recurso del mapa de bits denominado por *lpszResourceName* o identificada por el número de identificación en *nIDResource* del archivo ejecutable de la aplicación.  
   
 ```  
 BOOL LoadBitmap(LPCTSTR lpszResourceName);  
@@ -319,10 +319,10 @@ BOOL LoadBitmap(UINT nIDResource);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszResourceName`  
+ *lpszResourceName*  
  Apunta a una cadena terminada en null que contiene el nombre del recurso de mapa de bits.  
   
- `nIDResource`  
+ *nIDResource*  
  Especifica el número de Id. de recurso del recurso de mapa de bits.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -331,7 +331,7 @@ BOOL LoadBitmap(UINT nIDResource);
 ### <a name="remarks"></a>Comentarios  
  El mapa de bits cargado se adjunta a la `CBitmap` objeto.  
   
- Si el mapa de bits identificado por `lpszResourceName` no existe o si no hay memoria suficiente para cargar el mapa de bits, la función devuelve 0.  
+ Si el mapa de bits identificado por *lpszResourceName* no existe o si no hay memoria suficiente para cargar el mapa de bits, la función devuelve 0.  
   
  Puede usar el [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) función para eliminar el mapa de bits cargado por el `LoadBitmap` función, o la `CBitmap` destructor eliminará el objeto para usted.  
   
@@ -356,17 +356,17 @@ BOOL LoadMappedBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDBitmap`  
+ *nIDBitmap*  
  El identificador del recurso de mapa de bits.  
   
- `nFlags`  
+ *nFlags*  
  Una marca para un mapa de bits. Puede ser cero o **CMB_MASKED**.  
   
- `lpColorMap`  
+ *lpColorMap*  
  Un puntero a un **COLORMAP** estructura que contiene la información de color necesaria para asignar los mapas de bits. Si este parámetro es **NULL**, la función utiliza el mapa de colores predeterminada.  
   
  *nMapSize*  
- El número de mapas de colores que señala `lpColorMap`.  
+ El número de mapas de colores que señala *lpColorMap*.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -384,7 +384,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDBitmap`  
+ *nIDBitmap*  
  Número de identificación del mapa de bits de Windows predefinida. Los valores posibles se muestran a continuación de WINDOWS. H:  
   
 |||  
@@ -431,7 +431,7 @@ operator HBITMAP() const;
  Para obtener más información sobre el uso de objetos gráficos, consulte [gráfico de objetos](http://msdn.microsoft.com/library/windows/desktop/dd144962) en el SDK de Windows.  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
- Establece los bits de un mapa de bits en los valores de bit proporcionados por `lpBits`.  
+ Establece los bits de un mapa de bits en los valores de bit proporcionados por *lpBits*.  
   
 ```  
 DWORD SetBitmapBits(
@@ -440,10 +440,10 @@ DWORD SetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwCount`  
- Especifica el número de bytes que señala `lpBits`.  
+ *dwCount*  
+ Especifica el número de bytes que señala *lpBits*.  
   
- `lpBits`  
+ *lpBits*  
  Apunta a la **bytes** matriz que contiene los valores de píxel que se copiará en la `CBitmap` objeto. En orden del mapa de bits poder representar su imagen correctamente, se deben dar formato de los valores para que se ajuste a los valores de profundidad de alto, ancho y color que se especificaron cuando se creó la instancia CBitmap. Para obtener más información, consulte [CBitmap::CreateBitmap](#createbitmap).  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -459,10 +459,10 @@ CSize SetBitmapDimension(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nWidth`  
+ *nWidth*  
  Especifica el ancho del mapa de bits (en unidades de 0,1 milímetros).  
   
- `nHeight`  
+ *nHeight*  
  Especifica el alto del mapa de bits (en unidades de 0,1 milímetros).  
   
 ### <a name="return-value"></a>Valor devuelto  

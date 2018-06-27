@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383846"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951145"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Asistentes y editores de recursos
 Visual C++ incluye a varios asistentes para su uso en la programación de MFC, junto con muchos editores de recursos integrados. La programación, los controles ActiveX la [Asistente para controles ActiveX](../mfc/reference/mfc-activex-control-wizard.md) sirve para un propósito similar a la que el Asistente para aplicaciones MFC. Aunque puede escribir aplicaciones MFC sin usar la mayoría de estas herramientas, las herramientas en gran medida simplificarán y acelerar su trabajo.  
@@ -41,7 +41,7 @@ Visual C++ incluye a varios asistentes para su uso en la programación de MFC, j
 > [!NOTE]
 >  Vista de clases también ayuda a reemplazar funciones virtuales en las clases MFC. Seleccione la clase y la función virtual que desea reemplazar. El resto del proceso es similar al control de mensajes, como se describe en los párrafos siguientes.  
   
- Son aplicaciones que se ejecutan en Windows [controladas por mensajes](../mfc/message-handling-and-mapping.md). Las acciones del usuario y otros eventos que se producen en el programa en ejecución hacen que Windows enviar mensajes a las ventanas en el programa. Por ejemplo, si el usuario hace clic en el mouse en una ventana, Windows envía una `WM_LBUTTONDOWN` mensaje cuando se presiona el botón primario del mouse y un `WM_LBUTTONUP` el mensaje cuando se suelta el botón. Windows también envía **WM_COMMAND** mensajes cuando el usuario selecciona comandos en la barra de menús.  
+ Son aplicaciones que se ejecutan en Windows [controladas por mensajes](../mfc/message-handling-and-mapping.md). Las acciones del usuario y otros eventos que se producen en el programa en ejecución hacen que Windows enviar mensajes a las ventanas en el programa. Por ejemplo, si el usuario hace clic en el mouse en una ventana, Windows envía un mensaje WM_LBUTTONDOWN cuando se presiona el botón primario del mouse y un mensaje WM_LBUTTONUP cuando se suelta el botón. Windows también envía mensajes WM_COMMAND cuando el usuario selecciona comandos en la barra de menús.  
   
  En el marco de trabajo MFC, varios objetos, como documentos, vistas, ventanas de marco, plantillas de documento y el objeto de aplicación, pueden "controlar" mensajes. Este tipo de objeto proporciona una función de controlador"" como uno de sus miembros, funciones y el marco de trabajo asigna el mensaje entrante a su controlador.  
   

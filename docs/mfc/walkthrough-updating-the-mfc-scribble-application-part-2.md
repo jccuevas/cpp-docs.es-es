@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83caf353ca4a45e3ae834a41062de955a91dbb8a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385396"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952442"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Tutorial: Actualizar la aplicación Scribble de MFC (Parte 2)
 [Parte 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) de este tutorial ha mostrado cómo agregar una cinta de Office Fluent en el clásico Scribble de aplicación. Esta parte muestra cómo agregar controles que los usuarios pueden usar en lugar de los menús y comandos y paneles de cinta de opciones.  
@@ -47,31 +47,31 @@ ms.locfileid: "33385396"
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Para agregar un panel de vista y el panel de ventana a la barra de cinta  
   
-1.  Crear un panel denominado `View`, que tiene dos casillas de verificación que activar o desactivar la barra de estado y la barra de herramientas.  
+1.  Crear un panel denominado *vista*, que tiene dos casillas de verificación que activar o desactivar la barra de estado y la barra de herramientas.  
   
     1.  Desde el **cuadro de herramientas**, arrastre un **Panel** a la **inicio** categoría. A continuación, arrastre dos **casillas de verificación** al panel.  
   
-    2.  Haga clic en el panel para modificar sus propiedades. Cambio **título** a `View`.  
+    2.  Haga clic en el panel para modificar sus propiedades. Cambio **título** a *vista*.  
   
-    3.  Haga clic en la primera casilla de verificación para modificar sus propiedades. Cambio **identificador** a `ID_VIEW_TOOLBAR` y **título** a `Toolbar`.  
+    3.  Haga clic en la primera casilla de verificación para modificar sus propiedades. Cambio **identificador** a *ID_VIEW_TOOLBAR* y **título** a *barra de herramientas*.  
   
-    4.  Haga clic en la segunda casilla de verificación para modificar sus propiedades. Cambio **identificador** a `ID_VIEW_STATUS_BAR` y **título** a `Status Bar`.  
+    4.  Haga clic en la segunda casilla de verificación para modificar sus propiedades. Cambio **identificador** a *ID_VIEW_STATUS_BAR* y **título** a *barra de estado*.  
   
-2.  Crear un panel denominado `Window` que tiene un botón de expansión. Cuando un usuario hace clic en el botón de expansión, un menú contextual muestra los tres comandos que ya están definidos en la aplicación Scribble.  
+2.  Crear un panel denominado *ventana* que tiene un botón de expansión. Cuando un usuario hace clic en el botón de expansión, un menú contextual muestra los tres comandos que ya están definidos en la aplicación Scribble.  
   
     1.  Desde el **cuadro de herramientas**, arrastre un **Panel** a la **inicio** categoría. A continuación, arrastre un **botón** al panel.  
   
-    2.  Haga clic en el panel para modificar sus propiedades. Cambio **título** a `Window`.  
+    2.  Haga clic en el panel para modificar sus propiedades. Cambio **título** a *ventana*.  
   
-    3.  Haga clic en el botón. Cambio **título** a `Windows`, **claves** a `w`, **índice de imagen grande** a `1`, y **modo de división** para `False`. A continuación, haga clic en el botón de puntos suspensivos (**...** ) junto a **elementos de menú** para abrir el **Editor de elementos** cuadro de diálogo.  
+    3.  Haga clic en el botón. Cambio **título** a *Windows*, **claves** a *w*, **índice de imagen grande** a *1* , y **modo de división** a *False*. A continuación, haga clic en el botón de puntos suspensivos (**...** ) junto a **elementos de menú** para abrir el **Editor de elementos** cuadro de diálogo.  
   
     4.  Haga clic en **agregar** tres veces para agregar tres botones.  
   
-    5.  Haga clic en el primer botón y, a continuación, cambiar **título** a `New Window`, y **identificador** a `ID_WINDOW_NEW`.  
+    5.  Haga clic en el primer botón y, a continuación, cambiar **título** a *nueva ventana*, y **identificador** a *ID_WINDOW_NEW*.  
   
-    6.  Haga clic en el segundo botón y, a continuación, cambiar **título** a `Cascade`, y **identificador** a `ID_WINDOW_CASCADE`.  
+    6.  Haga clic en el segundo botón y, a continuación, cambiar **título** a *Cascade*, y **identificador** a *ID_WINDOW_CASCADE*.  
   
-    7.  Haga clic en el tercer botón y, a continuación, cambiar **título** a `Tile`, y **identificador** a `ID_WINDOW_TILE_HORZ`.  
+    7.  Haga clic en el tercer botón y, a continuación, cambiar **título** a *icono*, y **identificador** a *ID_WINDOW_TILE_HORZ*.  
   
 3.  Guarde los cambios y, a continuación, compile y ejecute la aplicación. El **vista** y **ventana** paneles deben mostrarse. Haga clic en los botones para confirmar que funcionan correctamente.  
   
@@ -84,11 +84,11 @@ ms.locfileid: "33385396"
   
 1.  Desde el **cuadro de herramientas**, arrastre un **Panel** a la **inicio** categoría. A continuación, arrastre dos **botones** al panel.  
   
-2.  Haga clic en el panel para modificar sus propiedades. Cambio **título** a `Help`.  
+2.  Haga clic en el panel para modificar sus propiedades. Cambio **título** a *ayuda*.  
   
-3.  Haga clic en el primer botón. Cambio **título** a `Help Topics`, y **identificador** a `ID_HELP_FINDER`.  
+3.  Haga clic en el primer botón. Cambio **título** a *temas de Ayuda*, y **identificador** a *ID_HELP_FINDER*.  
   
-4.  Haga clic en el segundo botón. Cambio **título** a `About Scribble...`, y **identificador** a `ID_APP_ABOUT`.  
+4.  Haga clic en el segundo botón. Cambio **título** a *acerca de Scribble...* , y **identificador** a *ID_APP_ABOUT*.  
   
 5.  Guarde los cambios y, a continuación, compile y ejecute la aplicación. A **ayuda** se debe mostrar el panel que contiene dos botones de la cinta de opciones.  
   
@@ -106,21 +106,21 @@ ms.locfileid: "33385396"
   
 1.  Desde el **cuadro de herramientas**, arrastre un **Panel** a la **inicio** categoría. A continuación, arrastre un **casilla de verificación** y dos **cuadros combinados** al panel.  
   
-2.  Haga clic en el panel para modificar sus propiedades. Cambio **título** a `Pen`.  
+2.  Haga clic en el panel para modificar sus propiedades. Cambio **título** a *lápiz*.  
   
-3.  Haga clic en la casilla de verificación. Cambio **título** a `Use Thick`, y **identificador** a `ID_PEN_THICK_OR_THIN`.  
+3.  Haga clic en la casilla de verificación. Cambio **título** a *usar gruesa*, y **identificador** a *ID_PEN_THICK_OR_THIN*.  
   
-4.  Haga clic en el primer cuadro combinado. Cambio **título** a `Thin Pen`, **identificador** a `ID_PEN_THIN_WIDTH`, **texto** a `2`, **tipo** a `Drop List`, y **datos** a `1;2;3;4;5;6;7;8;9;`.  
+4.  Haga clic en el primer cuadro combinado. Cambio **título** a *fino lápiz*, **identificador** a *ID_PEN_THIN_WIDTH*, **texto** a *2* , **Tipo** a *lista desplegable*, y **datos** a *1; 2; 3; 4; 5; 6; 7; 8; 9;*.  
   
-5.  Haga clic en el segundo cuadro combinado. Cambio **título** a `Thick Pen`, **identificador** a `ID_PEN_THICK_WIDTH`, **texto** a `5`, **tipo** a `Drop List`, y **datos** a `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.  
+5.  Haga clic en el segundo cuadro combinado. Cambio **título** a *lápiz grueso*, **identificador** a *ID_PEN_THICK_WIDTH*, **texto** a  *5*, **tipo** a *lista desplegable*, y **datos** a *5 6 7; 8; 9; 10; 11; 12;; 13; 14; 15; 16; 17; 18; 19 20;*.  
   
 6.  Los cuadros combinados nueva no se corresponden con los elementos de menú existentes. Por lo tanto, debe crear un elemento de menú para cada opción de lápiz.  
   
     1.  En el **vista de recursos** ventana, abra el recurso de menú IDR_SCRIBBTYPE.  
   
-    2.  Haga clic en **lápiz** para abrir el p**en** menú. A continuación, haga clic en **escriba aquí** y escriba `Thi&n Pen`.  
+    2.  Haga clic en **lápiz** para abrir el p**en** menú. A continuación, haga clic en **escriba aquí** y tipo *este & brir n*.  
   
-    3.  Haga clic en el texto que acaba de escribir para abrir la **propiedades** ventana y, a continuación, cambiar el identificador de propiedad para `ID_PEN_THIN_WIDTH`.  
+    3.  Haga clic en el texto que acaba de escribir para abrir la **propiedades** ventana y, a continuación, cambiar el identificador de propiedad para *ID_PEN_THIN_WIDTH*.  
   
     4.  También debe crear un controlador de eventos para cada elemento de menú de lápiz. Haga clic en el **este & brir n** elemento de menú que acaba de crear y, a continuación, haga clic en **Agregar controlador de eventos**. El **Asistente para controladores de eventos** se muestra.  
   
@@ -142,9 +142,9 @@ m_nThinWidth = atoi (pThinComboBox -> GetItem(nCurSel));
   
     1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type *Thic&k Pen*.  
   
-    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to *ID_PEN_THICK_WIDTH*.  
   
     4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
@@ -178,11 +178,11 @@ if (nCurSel>= 0)
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Para agregar un botón de color en el panel de lápiz  
   
-1.  Antes de agregar el botón de color, crear un elemento de menú para él. En el **vista de recursos** ventana, abra el recurso de menú IDR_SCRIBBTYPE. Haga clic en el **lápiz** elemento de menú para abrir el menú de lápiz. A continuación, haga clic en **escriba aquí** y escriba `&Color`. Haga clic en el texto que acaba de escribir para mostrar el **propiedades** ventana. Cambie el identificador a `ID_PEN_COLOR`.  
+1.  Antes de agregar el botón de color, crear un elemento de menú para él. En el **vista de recursos** ventana, abra el recurso de menú IDR_SCRIBBTYPE. Haga clic en el **lápiz** elemento de menú para abrir el menú de lápiz. A continuación, haga clic en **escriba aquí** y tipo *& Color*. Haga clic en el texto que acaba de escribir para mostrar el **propiedades** ventana. Cambie el identificador a *ID_PEN_COLOR*.  
   
 2.  Ahora agregue el botón de color. Desde el **cuadro de herramientas**, arrastre un **botón de Color** a la **lápiz** panel.  
   
-3.  Haga clic en el botón de color. Cambio **título** a `Color`, **identificador** a `ID_PEN_COLOR`, **SimpleLook** a `True`, **índice de imagen grande** a `1`, y **modo de división** a `False`.  
+3.  Haga clic en el botón de color. Cambio **título** a *Color*, **identificador** a *ID_PEN_COLOR*, **SimpleLook** a  *True*, **índice de imagen grande** a *1*, y **modo de división** a *False*.  
   
 4.  Guarde los cambios y, a continuación, compile y ejecute la aplicación. El nuevo botón de color se debe mostrar en el **lápiz** panel. Sin embargo, no puede usarse porque no tiene todavía un controlador de eventos. Los pasos siguientes muestran cómo agregar un controlador de eventos para el botón de color.  
   

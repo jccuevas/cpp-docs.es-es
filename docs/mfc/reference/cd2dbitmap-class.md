@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92587d6cad3004c87ee6aee4716888d09c1270a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354287"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954755"
 ---
 # <a name="cd2dbitmap-class"></a>Clase CD2DBitmap
 Un contenedor para ID2D1Bitmap.  
@@ -159,7 +159,7 @@ void Attach(ID2D1Bitmap* pResource);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pResource`  
+ *pResource*  
  Interfaz de recursos existente. No puede ser NULL  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
@@ -194,25 +194,25 @@ CD2DBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentTarget`  
+ *pParentTarget*  
  Un puntero para el destino de representación.  
   
- `uiResID`  
+ *uiResID*  
  El número de Id. de recurso del recurso.  
   
- `lpszType`  
+ *lpszType*  
  Puntero a una cadena terminada en null que contiene el tipo de recurso.  
   
- `sizeDest`  
+ *sizeDest*  
  Tamaño de destino del mapa de bits.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indica que se destruirá el objeto propietario (pParentTarget).  
   
- `lpszPath`  
+ *lpszPath*  
  Puntero a una cadena terminada en null que contiene el nombre del archivo.  
   
- `hbmpSrc`  
+ *hbmpSrc*  
  Identificador del mapa de bits.  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
@@ -233,13 +233,13 @@ HRESULT CopyFromBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pBitmap`  
+ *pBitmap*  
  El mapa de bits que lo copien  
   
- `destPoint`  
+ *destPoint*  
  En el mapa de bits actual, se copia la esquina superior izquierda del área a la que la región especificada por srcRect  
   
- `srcRect`  
+ *srcRect*  
  El área de mapa de bits para copiar  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -256,13 +256,13 @@ HRESULT CopyFromMemory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `srcData`  
+ *srcData*  
  Los datos que se va a copiar  
   
- `pitch`  
+ *tono*  
  Stride o timbre, del mapa de bits de origen almacenados en srcData. El intervalo es el número de bytes de una línea de digitalización (una fila de píxeles en memoria). El intervalo puede calcularse a partir de la siguiente fórmula: ancho de píxel * bytes por píxel + relleno de memoria  
   
- `destRect`  
+ *destRect*  
  En el mapa de bits actual, se copia la esquina superior izquierda del área a la que la región especificada por srcRect  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -279,13 +279,13 @@ HRESULT CopyFromRenderTarget(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pRenderTarget`  
+ *pRenderTarget*  
  El destino de representación que contiene la región para copiar  
   
- `destPoint`  
+ *destPoint*  
  En el mapa de bits actual, se copia la esquina superior izquierda del área a la que la región especificada por srcRect  
   
- `srcRect`  
+ *srcRect*  
  El área de renderTarget para copiar  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -299,7 +299,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pRenderTarget`  
+ *pRenderTarget*  
  Un puntero para el destino de representación.  
   
 ### <a name="return-value"></a>Valor devuelto  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d892ea225e3b1c1089447587eb808e56370bbb69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357395"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952227"
 ---
 # <a name="cconnectionpoint-class"></a>Clase de CConnectionPoint
 Define un tipo especial de interfaz que se utiliza para comunicarse con otros objetos OLE, denominado "punto de conexión".  
@@ -66,7 +66,7 @@ class CConnectionPoint : public CCmdTarget
 |[CConnectionPoint::GetContainer](#getcontainer)|Recupera el contenedor del control que posee el mapa de conexión.|  
 |[CConnectionPoint:: GetIID](#getiid)|Recupera el identificador de interfaz de un punto de conexión.|  
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Recupera el número máximo de puntos de conexión que admite un control.|  
-|[CConnectionPoint:: GetNextConnection](#getnextconnection)|Recupera un puntero al elemento de la conexión `pos`.|  
+|[CConnectionPoint:: GetNextConnection](#getnextconnection)|Recupera un puntero al elemento de la conexión *pos*.|  
 |[CConnectionPoint::GetStartPosition](#getstartposition)|Inicie una iteración de mapa devolviendo un **posición** valor que se puede pasar a un `GetNextConnection` llamar a.|  
 |[CConnectionPoint::OnAdvise](#onadvise)|Lo llama el marco al establecer o interrumpir las conexiones.|  
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Recupera un puntero a la interfaz del receptor solicitado.|  
@@ -82,13 +82,13 @@ class CConnectionPoint : public CCmdTarget
   
  [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- El `BEGIN_CONNECTION_PART` y `END_CONNECTION_PART` macros declaran una clase incrustada, `XSampleConnPt` (derivado de `CConnectionPoint`) que implementa este punto de conexión determinado. Si desea invalidar cualquier `CConnectionPoint` funciones miembro, o agregar funciones miembro de su elección, declárelos entre estas dos macros. Por ejemplo, el `CONNECTION_IID` macro reemplaza el `CConnectionPoint::GetIID` función de miembro al que se encuentra entre estas dos macros.  
+ Las macros BEGIN_CONNECTION_PART y END_CONNECTION_PART declaran una clase incrustada, `XSampleConnPt` (derivado de `CConnectionPoint`) que implementa este punto de conexión determinado. Si desea invalidar cualquier `CConnectionPoint` funciones miembro, o agregar funciones miembro de su elección, declárelos entre estas dos macros. Por ejemplo, la macro CONNECTION_IID reemplaza el `CConnectionPoint::GetIID` función de miembro al que se encuentra entre estas dos macros.  
   
  El segundo fragmento de código se inserta en el archivo de implementación (. CPP) de la clase del control. Este código implementa el mapa de conexión, que incluye el punto de conexión adicionales, `SampleConnPt`:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- Una vez que se han insertado estos fragmentos de código, el control OLE de ejemplo expone un punto de conexión para el **ISampleSink** interfaz.  
+ Una vez que se han insertado estos fragmentos de código, el control OLE de ejemplo expone un punto de conexión para el `ISampleSink` interfaz.  
   
  Por lo general, los puntos de conexión aceptan "multidifusión", que es la capacidad para difundir a varios receptores conectados a la misma interfaz. El fragmento de código siguiente muestra cómo llevar a cabo la multidifusión recorriendo en iteración cada receptor en un punto de conexión:  
   
@@ -136,7 +136,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
  Si se realiza correctamente, un puntero al contenedor; en caso contrario, **NULL**.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función normalmente se implementa mediante la `BEGIN_CONNECTION_PART` macro.  
+ Esta función normalmente se implementa mediante la macro BEGIN_CONNECTION_PART.  
   
 ##  <a name="getiid"></a>  CConnectionPoint:: GetIID  
  Lo llama el marco de trabajo para recuperar el identificador de interfaz de un punto de conexión.  
@@ -167,18 +167,18 @@ virtual int GetMaxConnections();
  Reemplace esta función si desea limitar el número de receptores a los que puede conectarse a su control.  
   
 ##  <a name="getnextconnection"></a>  CConnectionPoint:: GetNextConnection  
- Recupera un puntero al elemento de la conexión `pos`.  
+ Recupera un puntero al elemento de la conexión *pos*.  
   
 ```  
 LPUNKNOWN GetNextConnection(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pos`  
+ *punto de venta*  
  Especifica una referencia a un **posición** valor devuelto por un anterior `GetNextConnection` o [GetStartPosition](#getstartposition) llamar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al elemento de conexión especificado por `pos`, o NULL.  
+ Un puntero al elemento de conexión especificado por *pos*, o NULL.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función es muy útil para recorrer en iteración todos los elementos en el mapa de conexión. Cuando se itera, omite los valores NULL devueltos por esta función.  
@@ -210,7 +210,7 @@ virtual void OnAdvise(BOOL bAdvise);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bAdvise`  
+ *bAdvise*  
  **TRUE**, si una conexión se está establecida; de lo contrario **FALSE**.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -228,11 +228,11 @@ virtual HRESULT QuerySinkInterface(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pUnkSink`  
+ *pUnkSink*  
  El identificador de la interfaz del receptor que se solicita.  
   
- `ppInterface`  
- Un puntero al puntero de interfaz identificado por `pUnkSink`. Si el objeto no admite esta interfaz, \* `ppInterface` está establecido en **NULL**.  
+ *ppInterface*  
+ Un puntero al puntero de interfaz identificado por *pUnkSink*. Si el objeto no admite esta interfaz, \* *ppInterface* está establecido en **NULL**.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352745"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951938"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo (Estructura)
 El `CDaoDatabaseInfo` estructura contiene información sobre un objeto de base de datos definido para objetos de acceso a datos (DAO).  
@@ -43,10 +43,10 @@ struct CDaoDatabaseInfo
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `m_strName`  
+ *m_strName*  
  Identifica inequívocamente el objeto de base de datos. Para recuperar directamente esta propiedad, llame a [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). Para obtener más información, vea el tema "Nombre de propiedad" en la Ayuda de DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Indica si se pueden realizar cambios a la base de datos. Para recuperar directamente esta propiedad, llame a [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). Para obtener más información, vea el tema "Propiedad actualizable" en la Ayuda de DAO.  
   
  *m_bTransactions*  
@@ -55,7 +55,7 @@ struct CDaoDatabaseInfo
  *m_strVersion*  
  Indica la versión del motor de base de datos de Microsoft Jet. Para recuperar el valor de esta propiedad directamente, llaman al objeto de base de datos [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) función miembro. Para obtener más información, vea el tema "Propiedad de versión" en la Ayuda de DAO.  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  Especifica la secuencia del criterio de ordenación en texto para comparación de cadenas u ordenación. Los posibles valores incluyen:  
   
 - **dbSortGeneral** usar el criterio de ordenación General (inglés, francés, alemán, portugués, italiano y español moderno).  
@@ -99,7 +99,7 @@ struct CDaoDatabaseInfo
  *m_nQueryTimeout*  
  El número de segundos que espera a que el motor de base de datos de Microsoft Jet antes de un error de tiempo de espera se produce cuando se ejecuta una consulta en una base de datos ODBC. El valor de tiempo de espera predeterminado es 60 segundos. Cuando QueryTimeout se establece en 0, se produce sin tiempo de espera; Esto puede provocar que el programa deje de responder. Para recuperar el valor de esta propiedad directamente, llaman al objeto de base de datos [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) función miembro. Para obtener más información, vea el tema "Propiedad QueryTimeout" en la Ayuda de DAO.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Proporciona información sobre el origen de una base de datos abierta. Para obtener información acerca las cadenas de conexión y para obtener información acerca de cómo recuperar el valor de esta propiedad directamente, vea la [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) función miembro. Para obtener más información, vea el tema "Conectarse Property" en la Ayuda de DAO.  
   
 ## <a name="remarks"></a>Comentarios  

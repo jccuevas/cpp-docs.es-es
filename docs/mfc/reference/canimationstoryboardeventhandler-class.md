@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb7c89e6441379949386baecbddbb30f7c01ebff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: add30fe8bfe2c19973ff657ae05b739986965a9b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352228"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957122"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>Clase CAnimationStoryboardEventHandler
 Implementa una devolución de llamada, a la que llama la API de animación cuando se cambia el estado de un guión gráfico o se actualiza.  
@@ -89,10 +89,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pAnimationController`  
+ *pAnimationController*  
  Un puntero al controlador de animación, que recibe eventos.  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si el método se realiza correctamente, devuelve S_OK. En caso contrario, devuelve un código de error HRESULT.  
@@ -108,13 +108,13 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `storyboard`  
+ *guión gráfico*  
  Un puntero al guión gráfico cuyo estado ha cambiado.  
   
- `newStatus`  
+ *newStatus*  
  Especifica el nuevo estado de guión gráfico.  
   
- `previousStatus`  
+ *previousStatus*  
  Especifica el estado de guión gráfico anterior.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -128,7 +128,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `storyboard`  
+ *guión gráfico*  
  Un puntero al guión gráfico, que se ha actualizado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -142,7 +142,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pAnimationController`  
+ *pAnimationController*  
  Un puntero al controlador de animación, que recibe eventos.  
   
 ## <a name="see-also"></a>Vea también  

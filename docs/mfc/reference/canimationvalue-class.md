@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b762c3abb5f57574dc2a60d6b2145af2e0c0484b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356543"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952105"
 ---
 # <a name="canimationvalue-class"></a>Clase CAnimationValue
 Implementa la funcionalidad del objeto de animación que tiene un valor.  
@@ -104,7 +104,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pTransition`  
+ *pTransition*  
  Un puntero al objeto de transición.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -125,16 +125,16 @@ CAnimationValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Especifica el valor predeterminado.  
   
- `nGroupID`  
+ *nGroupID*  
  Especifica el identificador de grupo.  
   
- `nObjectID`  
+ *nObjectID*  
  Especifica el identificador de objeto.  
   
- `dwUserData`  
+ *dwUserData*  
  Especifica los datos definidos por el usuario.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -150,7 +150,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lst`  
+ *lst*  
  Cuando la función devuelve, contiene un puntero a CAnimationVariable que representa el valor animado.  
   
 ##  <a name="getvalue"></a>  CAnimationValue::GetValue  
@@ -162,10 +162,10 @@ BOOL GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dblValue`  
+ *dblValue*  
  Salida. Cuando la función devuelve contiene un valor actual de la variable de animación.  
   
- `nValue`  
+ *nvalor*  
  Salida. Cuando la función devuelve contiene un valor actual de la variable de animación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -229,10 +229,10 @@ void operator=(INT32 nVal);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dblVal`  
+ *dblVal*  
  Especifica el valor que se asigna al valor de animación.  
   
- `nVal`  
+ *nVal*  
  Especifica el valor que se asigna al valor de animación.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -246,7 +246,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Especifica el valor predeterminado.  
   
 ### <a name="remarks"></a>Comentarios  

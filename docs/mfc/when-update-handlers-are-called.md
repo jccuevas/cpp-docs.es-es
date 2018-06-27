@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9952ae13b23121fb0b7a188f8136315c342
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c033d33dd6b1e6c0ccd5bbdb4b6af6939521f592
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384139"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956179"
 ---
 # <a name="when-update-handlers-are-called"></a>Cuándo se llama a los controladores actualizados
-Suponga que el usuario hace clic en el mouse (ratón) en el menú archivo, que genera un `WM_INITMENUPOPUP` mensaje. Mecanismo de actualización del marco de trabajo colectivamente actualiza todos los elementos en el menú archivo antes de que el menú se despliega hacia abajo para que el usuario pueda verla.  
+Suponga que el usuario hace clic en el mouse (ratón) en el menú archivo, que genera un mensaje WM_INITMENUPOPUP. Mecanismo de actualización del marco de trabajo colectivamente actualiza todos los elementos en el menú archivo antes de que el menú se despliega hacia abajo para que el usuario pueda verla.  
   
  Para ello, el marco de trabajo enruta comandos de actualización para todos los elementos de menú en el menú emergente junto con el enrutamiento de comandos estándar. Destinos de comando en la ruta tienen la oportunidad de actualizar los elementos del menú haciendo coincidir el comando de actualización con una entrada de mapa de mensajes apropiada (del formulario `ON_UPDATE_COMMAND_UI`) y llama a una función de "controlador de actualización". Por lo tanto, para un menú con seis elementos de menú, seis comandos de actualización se envían. Si existe un controlador de actualización para el identificador de comando del elemento de menú, se llama para realizar la actualización. De lo contrario, el marco de trabajo comprueba la existencia de un controlador para ese identificador de comando y habilita o deshabilita el elemento de menú según corresponda.  
   
@@ -42,7 +42,7 @@ Suponga que el usuario hace clic en el mouse (ratón) en el menú archivo, que g
   
  Es posible deshabilitar la deshabilitación predeterminado de objetos de interfaz de usuario. Para obtener más información, consulte el [miembro m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable) miembro de clase `CFrameWnd` en el *referencia de MFC*.  
   
- Inicialización de menú es automática en el marco de trabajo, que se producen cuando la aplicación recibe un `WM_INITMENUPOPUP` mensaje. Durante el bucle de inactividad, el marco de trabajo busca el enrutamiento de comandos para los controladores del botón de actualización de la misma manera que lo hace para los menús.  
+ Inicialización de menú es automática en el marco de trabajo, que se producen cuando la aplicación recibe un mensaje WM_INITMENUPOPUP. Durante el bucle de inactividad, el marco de trabajo busca el enrutamiento de comandos para los controladores del botón de actualización de la misma manera que lo hace para los menús.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimiento para actualizar objetos de la interfaz de usuario](../mfc/how-to-update-user-interface-objects.md)

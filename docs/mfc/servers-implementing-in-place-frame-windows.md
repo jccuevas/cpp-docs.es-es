@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380869"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956439"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Servidores: Implementar ventanas de marco en contexto
 Este artículo explica lo que debe hacer para implementar ventanas de marco en contexto en la aplicación de servidor de edición visual si no utiliza al Asistente para aplicaciones para crear la aplicación de servidor. En lugar de seguir el procedimiento descrito en este artículo, podría utilizar una clase de ventana de marco en contexto existente de una aplicación generada por el asistente o un ejemplo que se proporciona con Visual C++.  
@@ -32,13 +32,13 @@ Este artículo explica lo que debe hacer para implementar ventanas de marco en c
   
 1.  Derivar una clase de ventana de marco en contexto desde `COleIPFrameWnd`.  
   
-    -   Use la `DECLARE_DYNCREATE` macro en el archivo de encabezado de clase.  
+    -   Use la macro DECLARE_DYNCREATE en el archivo de encabezado de clase.  
   
-    -   Use la `IMPLEMENT_DYNCREATE` macro en el archivo de implementación (.cpp) de la clase. Esto permite que los objetos de esta clase que se creará en el marco de trabajo.  
+    -   Use la macro IMPLEMENT_DYNCREATE en el archivo de implementación (.cpp) de la clase. Esto permite que los objetos de esta clase que se creará en el marco de trabajo.  
   
 2.  Declarar un `COleResizeBar` miembro en la clase de ventana de marco. Esto es necesario si desea admitir el cambio de tamaño en contexto en las aplicaciones de servidor.  
   
-     Declarar un `OnCreate` controlador de mensajes (mediante el **propiedades** ventana) y llame a **crear** para su `COleResizeBar` miembro, si se ha definido.  
+     Declarar un `OnCreate` controlador de mensajes (mediante el **propiedades** ventana) y llame a `Create` para su `COleResizeBar` miembro, si se ha definido.  
   
 3.  Si tiene una barra de herramientas, declare un `CToolBar` miembro en la clase de ventana de marco.  
   

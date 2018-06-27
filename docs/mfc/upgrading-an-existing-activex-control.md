@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385312"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955679"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Actualizar un control ActiveX existente
 Controles ActiveX existente (antes controles OLE) puede utilizarse en Internet sin modificaciones. Sin embargo, puede modificar los controles para mejorar su rendimiento. Cuando se utiliza el control en una página Web, existen consideraciones adicionales. El archivo .ocx y todos los archivos auxiliares deben estar en el equipo de destino o descargarse a través de Internet. Esto hace que el tamaño del código y una consideración importante de tiempo de descarga. Descargas se pueden empaquetar en un archivo .cab firmado. Puede marcar el control como seguros para scripting así como para inicializar.  
@@ -136,9 +136,9 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
  El `-s 6144` parámetro reserva espacio en el archivo CAB para la firma de código.  
   
 ### <a name="the-version-tag"></a>La etiqueta de versión  
- Tenga en cuenta aquí que el `#Version` información especificada con un archivo CAB se aplica al control especificado por la `CLASSID` parámetro de la `<OBJECT>` etiqueta.  
+ Tenga en cuenta aquí que el `#Version` información especificada con un archivo CAB se aplica al control especificado por la *CLASSID* parámetro de la `<OBJECT>` etiqueta.  
   
- Dependiendo de la versión especificada, puede forzar la descarga del control. Para obtener la especificación completa de la `OBJECT` etiqueta incluida la `CODEBASE` parámetro, consulte el W3C la referencia.  
+ Dependiendo de la versión especificada, puede forzar la descarga del control. Para obtener la especificación completa de la `OBJECT` etiqueta incluida la *CODEBASE* parámetro, consulte el W3C la referencia.  
   
 ##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Marcar un Control como seguro para Scripting e inicialización  
  Controles ActiveX usados en páginas Web deben marcarse como seguros para scripting y seguro para la inicialización si de hecho sean seguros. Un control seguro no realizar E/S de disco ni tener acceso a la memoria o los registros de una máquina directamente.  
@@ -236,7 +236,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  En las directrices de programación OCX 96, un control siempre debe realizar su paleta en segundo plano.  
   
- Contenedores más antiguos que no utilice la propiedad de ambiente paleta enviará `WM_QUERYNEWPALETTE` y `WM_PALETTECHANGED` mensajes. Un control puede invalidar `OnQueryNewPalette` y `OnPaletteChanged` para controlar estos mensajes.  
+ Contenedores más antiguos que no utilice la propiedad de ambiente paleta enviará mensajes WM_QUERYNEWPALETTE y WM_PALETTECHANGED. Un control puede invalidar `OnQueryNewPalette` y `OnPaletteChanged` para controlar estos mensajes.  
   
 ##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Niveles de seguridad del explorador de Internet Explorer y el comportamiento de Control  
  Opciones de nivel de seguridad, configurable por el usuario tiene un explorador. Dado que las páginas Web pueden contener contenido activo que podría dañar el equipo de un usuario, exploradores permiten al usuario seleccionar opciones de nivel de seguridad. Dependiendo de la forma en que un explorador implementa los niveles de seguridad, un control no se puede descargar en absoluto, o mostrará un certificado o un mensaje de advertencia para permitir al usuario elegir en tiempo de ejecución si desea descargar el control o no. A continuación se enumera el comportamiento de los controles ActiveX en niveles de seguridad alta, Media y baja en Internet Explorer.  

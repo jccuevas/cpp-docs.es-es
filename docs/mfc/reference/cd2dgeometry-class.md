@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51e3c24464ff74ab262cd241dcdce68037d530f9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357079"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955107"
 ---
 # <a name="cd2dgeometry-class"></a>Clase CD2DGeometry
 Un contenedor para ID2D1Geometry.  
@@ -141,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pResource`  
+ *pResource*  
  Interfaz de recursos existente. No puede ser NULL  
   
 ##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
@@ -154,10 +154,10 @@ CD2DGeometry(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentTarget`  
+ *pParentTarget*  
  Un puntero para el destino de representación.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indica que se destruirá el objeto propietario (pParentTarget).  
   
 ##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
@@ -173,19 +173,19 @@ BOOL CombineWithGeometry(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `inputGeometry`  
+ *inputGeometry*  
  La geometría que se combinará con esta instancia.  
   
- `combineMode`  
+ *combineMode*  
  El tipo de operación de combinación que se realiza.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  Transformación que se aplicará a inputGeometry antes de la combinación.  
   
- `geometrySink`  
+ *geometrySink*  
  El resultado de la operación de combinación.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Los límites máximos de la distancia entre los puntos de la aproximación poligonal de las geometrías. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -202,13 +202,13 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `inputGeometry`  
+ *inputGeometry*  
  Geometría que se va a probar.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  Transformación que se aplicará a inputGeometry.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Los límites máximos de la distancia entre los puntos de la aproximación poligonal de las geometrías. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -225,13 +225,13 @@ BOOL ComputeArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `worldTransform`  
+ *worldTransform*  
  Transformación que se aplicará a esta geometría antes de calcular su área.  
   
- `area`  
+ *Área*  
  Cuando este método vuelve, contiene un puntero al área de la versión transformado y sin estructura jerárquica de esta geometría. Debe asignar almacenamiento para este parámetro.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Los límites máximos de la distancia entre los puntos de la aproximación poligonal de la geometría. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -248,13 +248,13 @@ BOOL ComputeLength(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `worldTransform`  
+ *worldTransform*  
  Transformación que se aplicará a la geometría antes de calcular su longitud.  
   
- `length`  
+ *length*  
  Cuando este método vuelve, contiene un puntero a la longitud de la geometría. Para las geometrías cerradas, la longitud incluye un segmento de cierre implícita. Debe asignar almacenamiento para este parámetro.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Los límites máximos de la distancia entre los puntos de la aproximación poligonal de la geometría. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -273,19 +273,19 @@ BOOL ComputePointAtLength(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `length`  
+ *length*  
  La distancia a lo largo de la geometría del punto y tangente para buscar. Si la distancia es menor, a continuación, 0, este método calcula el primer punto de la geometría. Si la distancia es mayor que la longitud de la geometría, este método calcula el último punto de la geometría.  
   
- `worldTransform`  
+ *worldTransform*  
  Transformación que se aplicará a la geometría antes de calcular el punto especificado y la tangente.  
   
- `point`  
+ *Punto*  
  La ubicación a la distancia a lo largo de la geometría especificada. Si la geometría está vacía, este punto contiene NaN como su x e y valores.  
   
- `unitTangentVector`  
+ *unitTangentVector*  
  Cuando este método vuelve, contiene un puntero al vector tangente a la distancia a lo largo de la geometría especificada. Si la geometría está vacía, este vector contiene NaN como su x e y valores. Debe asignar almacenamiento para este parámetro.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Los límites máximos de la distancia entre los puntos de la aproximación poligonal de la geometría. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -320,16 +320,16 @@ BOOL FillContainsPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `point`  
+ *Punto*  
  El punto de prueba.  
   
- `worldTransform`  
+ *worldTransform*  
  Transformación que se aplicará a la geometría antes de la prueba para la contención.  
   
- `contains`  
+ *Contiene*  
  Cuando este método vuelve, contiene un valor booleano que es TRUE si el área rellenada por la geometría contiene punto; en caso contrario, FALSE. Debe asignar almacenamiento para este parámetro.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  La precisión numérica con la que la ruta geométrica precisa y la intersección de la ruta de acceso se calcula. Falta el relleno por menor que la tolerancia de puntos todavía se consideran dentro. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -354,8 +354,8 @@ CD2DRectF& bounds) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `worldTransform`  
- `bounds`  
+ *worldTransform*  
+ *límites*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -372,19 +372,19 @@ BOOL GetWidenedBounds(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `strokeWidth`  
+ *strokeWidth*  
  La cantidad en la que se va a ampliar la geometría por trazado su contorno.  
   
- `strokeStyle`  
+ *strokeStyle*  
  El estilo del trazo que se amplía la geometría.  
   
- `worldTransform`  
+ *worldTransform*  
  Una transformación para aplicar a la geometría, una vez que se transforma la geometría y la geometría ha sido trazada.  
   
- `bounds`  
+ *límites*  
  Cuando este método vuelve, contiene los límites de la geometría ampliado. Debe asignar almacenamiento para este parámetro.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Los límites máximos de la distancia entre los puntos de la aproximación poligonal de las geometrías. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -428,13 +428,13 @@ BOOL Outline(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `worldTransform`  
+ *worldTransform*  
  Transformación que se aplicará al esquema del objeto geometry.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink a la que se anexa la geometría del esquema transformado.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Los límites máximos de la distancia entre los puntos de la aproximación poligonal de la geometría. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -452,16 +452,16 @@ BOOL Simplify(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `simplificationOption`  
+ *simplificationOption*  
  Un valor que especifica si la geometría simplificada debe contener curvas.  
   
- `worldTransform`  
+ *worldTransform*  
  Transformación que se aplicará a la geometría simplificada.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink a la que se anexa la geometría simplificada.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Los límites máximos de la distancia entre los puntos de la aproximación poligonal de la geometría. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -481,22 +481,22 @@ BOOL StrokeContainsPoint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `point`  
+ *Punto*  
  El punto para comprobar la contención.  
   
- `strokeWidth`  
+ *strokeWidth*  
  Grosor del trazo que se va a aplicar.  
   
- `strokeStyle`  
+ *strokeStyle*  
  El estilo del trazo que se va a aplicar.  
   
- `worldTransform`  
+ *worldTransform*  
  Transformación que se aplicará a la geometría trazar el objeto.  
   
- `contains`  
+ *Contiene*  
  Cuando este método vuelve, contiene un valor booleano que se establece en TRUE si el trazo de la geometría contiene el punto especificado; en caso contrario, FALSE. Debe asignar almacenamiento para este parámetro.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  La precisión numérica con la que la ruta geométrica precisa y la intersección de la ruta de acceso se calcula. Falta el trazo por menor que la tolerancia de puntos todavía se consideran dentro. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -513,13 +513,13 @@ BOOL Tessellate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `worldTransform`  
+ *worldTransform*  
  Transformación que se aplicará a esta geometría, o NULL.  
   
- `tessellationSink`  
+ *tessellationSink*  
  ID2D1TessellationSink a la que se anexan el divididas en mosaicos.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Los límites máximos de la distancia entre los puntos de la aproximación poligonal de la geometría. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -538,19 +538,19 @@ BOOL Widen(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `strokeWidth`  
+ *strokeWidth*  
  La cantidad en la que se va a ampliar la geometría.  
   
- `strokeStyle`  
+ *strokeStyle*  
  El estilo de trazo para aplicar a la geometría, o NULL.  
   
- `worldTransform`  
+ *worldTransform*  
  Transformación que se aplicará a la geometría después de la ampliación se.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink a la que se anexa la geometría ampliada.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Los límites máximos de la distancia entre los puntos de la aproximación poligonal de la geometría. Los valores menores producen resultados más precisos pero producen una ejecución más lenta.  
   
 ### <a name="return-value"></a>Valor devuelto  

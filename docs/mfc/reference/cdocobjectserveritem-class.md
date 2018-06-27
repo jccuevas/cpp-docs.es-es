@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6f990a00fb96195a54ee7ed6906068985b052f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30daf42d54b66d4e3c4ad47a406748ab023be79d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367053"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956639"
 ---
 # <a name="cdocobjectserveritem-class"></a>Clase CDocObjectServerItem
 Implementa verbos de servidor OLE específicamente para servidores de DocObject.  
@@ -90,10 +90,10 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pServerDoc`  
+ *pServerDoc*  
  Un puntero al documento que contendrá el nuevo elemento de DocObject.  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  Indica si se puede eliminar el objeto cuando se suelta un vínculo a él. Establezca el argumento en **FALSE** si la `CDocObjectServerItem` objeto es una parte integral de los datos del documento. Establézcalo en **TRUE** si el objeto es una estructura secundaria que se usa para identificar un intervalo en los datos del documento que se pueden eliminar mediante el marco de trabajo.  
   
 ##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  

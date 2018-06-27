@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a228a545061c4807688014b62907c4c41a82151e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368955"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952309"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView (clase)
 Una vista que muestra registros de una base de datos en controles.  
@@ -104,10 +104,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contiene una cadena terminada en null que es el nombre de un recurso de plantilla de cuadro de diálogo.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contiene el número de identificación de un recurso de plantilla de cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -116,10 +116,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  La clase derivada debe proporcionar su propio constructor. En el constructor de la clase derivada, llame al constructor de `CDaoRecordView::CDaoRecordView` con el nombre del recurso o el identificador como un argumento.  
   
- **CDaoRecordView::OnInitialUpdate** llamadas `CWnd::UpdateData`, que llama `CWnd::DoDataExchange`. Esta llamada inicial a `DoDataExchange` conecta `CDaoRecordView` controla (indirectamente) con `CDaoRecordset` campo los miembros de datos creados por ClassWizard. No se puede usar estos miembros de datos hasta después de llamar a la clase base **CFormView::OnInitialUpdate** función miembro.  
+ `CDaoRecordView::OnInitialUpdate` llamadas `CWnd::UpdateData`, que llama `CWnd::DoDataExchange`. Esta llamada inicial a `DoDataExchange` conecta `CDaoRecordView` controla (indirectamente) con `CDaoRecordset` campo los miembros de datos creados por ClassWizard. No se puede usar estos miembros de datos hasta después de llamar a la clase base `CFormView::OnInitialUpdate` función miembro.  
   
 > [!NOTE]
->  Si usas ClassWizard, el asistente define un `enum` valor `CDaoRecordView::IDD` de la declaración de clase y la utiliza en la inicialización del miembro de lista para el constructor.  
+>  Si usas ClassWizard, el asistente define un **enum** valor `CDaoRecordView::IDD` de la declaración de clase y la utiliza en la inicialización del miembro de lista para el constructor.  
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
@@ -165,7 +165,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
  Un puntero a un `CDaoRecordset`-objeto derivado si el objeto se creó correctamente; en caso contrario un **NULL** puntero.  
   
 ### <a name="remarks"></a>Comentarios  
- Se debe reemplazar esta función miembro para construir u obtenga un objeto de conjunto de registros y devolver un puntero a ella. Si se declara la clase de vista de registros con ClassWizard, el asistente escribe una invalidación de forma predeterminada para usted. Implementación de predeterminada de ClassWizard devuelve el puntero de conjunto de registros almacenado en la vista de registros, si existe uno. Si no es así, construye un objeto de conjunto de registros del tipo especificado con ClassWizard y llama a su **abrir** miembro de función para abrir la tabla o ejecutar la consulta y, a continuación, devuelve un puntero al objeto.  
+ Se debe reemplazar esta función miembro para construir u obtenga un objeto de conjunto de registros y devolver un puntero a ella. Si se declara la clase de vista de registros con ClassWizard, el asistente escribe una invalidación de forma predeterminada para usted. Implementación de predeterminada de ClassWizard devuelve el puntero de conjunto de registros almacenado en la vista de registros, si existe uno. Si no es así, construye un objeto de conjunto de registros del tipo especificado con ClassWizard y llama a su `Open` miembro de función para abrir la tabla o ejecutar la consulta y, a continuación, devuelve un puntero al objeto.  
   
  Para obtener más información y ejemplos, vea el artículo [vistas de registros: utilizar una vista de registros](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -177,7 +177,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  Uno de los siguientes valores de Id. de comando estándar:  
   
 - `ID_RECORD_FIRST` Mover al primer registro del conjunto de registros.  
@@ -201,7 +201,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Si mueve más allá del último registro en el conjunto de registros, la vista de registros continúa mostrando el último registro. Si se mueve hacia atrás más allá del primer registro, la vista de registros continúa mostrando el primer registro.  
   
 > [!CAUTION]
->  Al llamar a `OnMove` produce una excepción si el conjunto de registros no tiene registros. Llame a la función de controlador de actualización de interfaz de usuario correspondiente: **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, o  **OnUpdateRecordPrev** : antes de la correspondiente operación de movimiento para determinar si el conjunto de registros tiene los registros.  
+>  Al llamar a `OnMove` produce una excepción si el conjunto de registros no tiene registros. Llame a la función de controlador de actualización de interfaz de usuario correspondiente: `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, o `OnUpdateRecordPrev` : antes de la correspondiente operación de movimiento para determinar si el conjunto de registros tiene los registros.  
   
 ## <a name="see-also"></a>Vea también  
  [Clase CFormView](../../mfc/reference/cformview-class.md)   

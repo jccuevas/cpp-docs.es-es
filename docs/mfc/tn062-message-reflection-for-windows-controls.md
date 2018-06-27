@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba8e9cac3b7f7997da8c620966234a630b9b9fbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 683281af3d029dca7e8060bb250a49f8e095d597
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384969"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954587"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Reflexión de mensajes para controles de Windows
 > [!NOTE]
@@ -54,25 +54,25 @@ ms.locfileid: "33384969"
   
  **¿Qué es la reflexión de mensajes**  
   
- Controles de Windows con frecuencia envían mensajes de notificación a sus ventanas primarias. Por ejemplo, muchos controles de envían un mensaje de notificación de color de control (`WM_CTLCOLOR` o uno de sus variantes) a su elemento primario para permitir que el elemento primario proporcionar un pincel para pintar el fondo del control.  
+ Controles de Windows con frecuencia envían mensajes de notificación a sus ventanas primarias. Por ejemplo, muchos controles de envían un mensaje de notificación de color del control (WM_CTLCOLOR o uno de sus variantes) a su elemento primario para permitir que el elemento primario proporcionar un pincel para pintar el fondo del control.  
   
  En Windows y MFC antes de la versión 4.0, la ventana primaria, a menudo un cuadro de diálogo, es responsable de controlar estos mensajes. Esto significa que el código para controlar el mensaje debe estar en la clase de la ventana primaria y que tiene que estar duplicada en todas las clases que necesita para administrar ese mensaje. En el caso anterior, cada cuadro de diálogo que deseaba controles con fondos personalizados que controlar el mensaje de notificación de control de color. Sería mucho más fácil reutilizar código si se puede escribir una clase de control que deben controlar su propio color de fondo.  
   
- En MFC 4.0, el mecanismo anterior sigue funcionando: ventanas principales pueden controlar mensajes de notificación. Además, no obstante, MFC 4.0 facilita la reutilización proporcionando una característica denominada "reflexión de mensajes" que permite que estos mensajes de notificación a controlarse en la ventana del control secundario o en la ventana primaria, o en ambos. En el ejemplo de color de fondo de control, ahora puede escribir una clase de control que establece su propio color de fondo controlando el reflejado `WM_CTLCOLOR` mensaje, sin necesidad de confiar en el elemento primario. (Tenga en cuenta que puesto que la reflexión de mensajes se implementa por MFC, no por Windows, la clase de ventana primaria debe derivarse de `CWnd` para la reflexión de mensajes para que funcione.)  
+ En MFC 4.0, el mecanismo anterior sigue funcionando: ventanas principales pueden controlar mensajes de notificación. Además, no obstante, MFC 4.0 facilita la reutilización proporcionando una característica denominada "reflexión de mensajes" que permite que estos mensajes de notificación a controlarse en la ventana del control secundario o en la ventana primaria, o en ambos. En el ejemplo de color de fondo de control, ahora puede escribir una clase de control que establece su propio color de fondo controlando el mensaje WM_CTLCOLOR reflejado, sin necesidad de confiar en el elemento primario. (Tenga en cuenta que puesto que la reflexión de mensajes se implementa por MFC, no por Windows, la clase de ventana primaria debe derivarse de `CWnd` para la reflexión de mensajes para que funcione.)  
   
- Las versiones anteriores de MFC hacía algo similar a la reflexión de mensajes proporcionando funciones virtuales de algunos mensajes, como los mensajes para los cuadros de lista dibujado por el propietario (`WM_DRAWITEM`, y así sucesivamente). El nuevo mecanismo de reflexión de mensajes es generalizado y coherente.  
+ Las versiones anteriores de MFC hacía algo similar a la reflexión de mensajes proporcionando funciones virtuales de algunos mensajes, como los mensajes para los cuadros de lista dibujado por el propietario (WM_DRAWITEM y así sucesivamente). El nuevo mecanismo de reflexión de mensajes es generalizado y coherente.  
   
  Reflexión de mensajes es compatible con el código escrito para las versiones de MFC anterior a la 4.0.  
   
- Si ha proporcionado un controlador para un mensaje concreto o para un intervalo de mensajes, en la clase de la ventana primaria, reemplazará reflejan controladores de mensajes para el mismo mensaje proporcionado por el que no llame a la función de controlador de clase base en su propio controlador. Por ejemplo, si controla `WM_CTLCOLOR` en la clase de cuadro de diálogo, el control reemplazará los controladores de mensajes reflejados.  
+ Si ha proporcionado un controlador para un mensaje concreto o para un intervalo de mensajes, en la clase de la ventana primaria, reemplazará reflejan controladores de mensajes para el mismo mensaje proporcionado por el que no llame a la función de controlador de clase base en su propio controlador. Por ejemplo, si controla WM_CTLCOLOR en la clase de cuadro de diálogo, su control invalidará los controladores de mensajes reflejados.  
   
- Si, en la clase de ventana primaria, proporcione un controlador para un determinado **WM_NOTIFY** mensaje o un intervalo de **WM_NOTIFY** mensajes, el controlador se llamará solo si realiza el control secundario enviar los mensajes no tiene un controlador de mensajes reflejados por **ON_NOTIFY_REFLECT()**. Si usa **ON_NOTIFY_REFLECT_EX()** en el mapa de mensajes, el controlador de mensajes puede o no se permita la ventana primaria para controlar el mensaje. Si el controlador devuelve **FALSE**, el mensaje será procesado por el elemento primario, mientras que una llamada que devuelve **TRUE** no permite que el elemento primario para controlarla. Tenga en cuenta que se controla el mensaje reflejado antes de que el mensaje de notificación.  
+ Si, en la clase de ventana primaria, proporcione un controlador para un mensaje WM_NOTIFY concreto o los mensajes de un intervalo de WM_NOTIFY, el controlador se llamará solo si el control secundario enviar esos mensajes no tiene un controlador de mensajes reflejados por `ON_NOTIFY_REFLECT()`. Si utiliza `ON_NOTIFY_REFLECT_EX()` en el mapa de mensajes, el controlador de mensajes puede o no se permita la ventana primaria para controlar el mensaje. Si el controlador devuelve **FALSE**, el mensaje será procesado por el elemento primario, mientras que una llamada que devuelve **TRUE** no permite que el elemento primario para controlarla. Tenga en cuenta que se controla el mensaje reflejado antes de que el mensaje de notificación.  
   
- Cuando un **WM_NOTIFY** se envía el mensaje, el control se ofrece la posibilidad de administrarla. Si se envía ningún otro mensaje reflejado, la ventana primaria tiene la primera oportunidad para controlarla y el control recibirá el mensaje reflejado. Para ello, necesitará una función de controlador y una entrada correspondiente en el mapa de mensajes de clase del control.  
+ Cuando se envía un mensaje WM_NOTIFY, el control se ofrece la posibilidad de administrarla. Si se envía ningún otro mensaje reflejado, la ventana primaria tiene la primera oportunidad para controlarla y el control recibirá el mensaje reflejado. Para ello, necesitará una función de controlador y una entrada correspondiente en el mapa de mensajes de clase del control.  
   
- La macro de mapa de mensajes para mensajes reflejados es ligeramente distinta para las notificaciones periódicas: tiene **_REFLECT** anexado a su nombre habitual. Por ejemplo, para controlar un **WM_NOTIFY** mensaje en el elemento primario, utilice la macro `ON_NOTIFY` en mapa de mensajes del elemento primario. Para controlar el mensaje reflejado en el control secundario, use la **ON_NOTIFY_REFLECT** macro en el mapa de mensajes del control secundario. En algunos casos, los parámetros son diferentes, también. Tenga en cuenta que ClassWizard normalmente puede agregar las entradas del mapa de mensajes para usted y proporcionar implementaciones de esqueleto de función con los parámetros correctos.  
+ La macro de mapa de mensajes para mensajes reflejados es ligeramente distinta para las notificaciones periódicas: tiene *_REFLECT* anexado a su nombre habitual. Por ejemplo, para controlar un WM_NOTIFY (mensaje) en el elemento primario, utilice la macro ON_NOTIFY en mapa de mensajes del elemento primario. Para controlar el mensaje reflejado en el control secundario, utilice la macro ON_NOTIFY_REFLECT en mapa de mensajes del control secundario. En algunos casos, los parámetros son diferentes, también. Tenga en cuenta que ClassWizard normalmente puede agregar las entradas del mapa de mensajes para usted y proporcionar implementaciones de esqueleto de función con los parámetros correctos.  
   
- Vea [TN061: mensajes ON_NOTIFY y WM_NOTIFY](../mfc/tn061-on-notify-and-wm-notify-messages.md) para obtener información sobre la nueva **WM_NOTIFY** mensaje.  
+ Vea [TN061: mensajes ON_NOTIFY y WM_NOTIFY](../mfc/tn061-on-notify-and-wm-notify-messages.md) para obtener información sobre el nuevo mensaje WM_NOTIFY.  
   
  **Las entradas de mapa de mensajes y los prototipos de función de controlador de mensajes reflejados**  
   
@@ -80,19 +80,19 @@ ms.locfileid: "33384969"
   
  ClassWizard normalmente puede agregar estas entradas de mapa de mensajes para usted y proporcionar las implementaciones de funciones esqueleto. Vea [definir un controlador de mensajes para un mensaje reflejado](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) para obtener información sobre cómo definir controladores de mensajes reflejados.  
   
- Para convertir desde el nombre del mensaje en el nombre de la macro reflejado, anteponga **ON_** y anexar **_REFLECT**. Por ejemplo, `WM_CTLCOLOR` se convierte en **ON_WM_CTLCOLOR_REFLECT**. (Para ver qué mensajes se pueden reflejar, realizan la conversión opuesta en las entradas de macro en la tabla siguiente).  
+ Para convertir desde el nombre del mensaje en el nombre de la macro reflejado, anteponga *ON_* y anexar *_REFLECT*. Por ejemplo, WM_CTLCOLOR se convierte en ON_WM_CTLCOLOR_REFLECT. (Para ver qué mensajes se pueden reflejar, realizan la conversión opuesta en las entradas de macro en la tabla siguiente).  
   
  Las tres excepciones a la regla anterior son los siguientes:  
   
--   La macro de **WM_COMMAND** notificaciones es **ON_CONTROL_REFLECT**.  
+-   La macro para las notificaciones de WM_COMMAND es ON_CONTROL_REFLECT.  
   
--   La macro de **WM_NOTIFY** reflejos es **ON_NOTIFY_REFLECT**.  
+-   La macro de reflejos WM_NOTIFY es ON_NOTIFY_REFLECT.  
   
--   La macro de `ON_UPDATE_COMMAND_UI` reflejos es **ON_UPDATE_COMMAND_UI_REFLECT**.  
+-   La macro de reflejos ON_UPDATE_COMMAND_UI es ON_UPDATE_COMMAND_UI_REFLECT.  
   
  En cada uno de los casos especiales anteriores, debe especificar el nombre de la función de miembro de controlador. En los demás casos, debe utilizar el nombre estándar para la función del controlador.  
   
- Los significados de los parámetros y valores devueltos de las funciones se documentan en el nombre de función o el nombre de la función con **en** antepuesto. Por ejemplo, **CtlColor** se documenta en `OnCtlColor`. Varios controladores de mensajes reflejados necesitan menos parámetros que los controladores similares en una ventana primaria. Solo coinciden con los nombres en la tabla siguiente con los nombres de los parámetros formales en la documentación.  
+ Los significados de los parámetros y valores devueltos de las funciones se documentan en el nombre de función o el nombre de la función con *en* antepuesto. Por ejemplo, `CtlColor` se documenta en `OnCtlColor`. Varios controladores de mensajes reflejados necesitan menos parámetros que los controladores similares en una ventana primaria. Solo coinciden con los nombres en la tabla siguiente con los nombres de los parámetros formales en la documentación.  
   
 |Entrada de mapa|Prototipo de función|  
 |---------------|------------------------|  
@@ -110,7 +110,7 @@ ms.locfileid: "33384969"
 |**(DE ON_WM_VSCROLL_REFLECT)**|**afx_msg void VScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|  
 |**(DE ON_WM_PARENTNOTIFY_REFLECT)**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|  
   
- El **ON_NOTIFY_REFLECT** y **ON_CONTROL_REFLECT** macros tienen variaciones que permiten más de un objeto (por ejemplo, el control y su elemento primario) para controlar un mensaje determinado.  
+ Las macros ON_NOTIFY_REFLECT y ON_CONTROL_REFLECT tienen variaciones que permiten más de un objeto (por ejemplo, el control y su elemento primario) para controlar un mensaje determinado.  
   
 |Entrada de mapa|Prototipo de función|  
 |---------------|------------------------|  
@@ -128,7 +128,7 @@ ms.locfileid: "33384969"
   
 2.  Con el proyecto cargado en Visual C++, use ClassWizard para crear una nueva clase denominada `CYellowEdit` basado en `CEdit`.  
   
-3.  Agregue tres variables de miembro para su `CYellowEdit` clase. Las dos primeras será **COLORREF** variables para que contengan el color del texto y el color de fondo. El tercero será un `CBrush` objeto que contendrá el pincel para pintar el fondo. El `CBrush` objeto le permite crear el pincel una vez, simplemente hace referencia a él después de eso y para destruir el pincel automáticamente cuando el `CYellowEdit` control se destruye.  
+3.  Agregue tres variables de miembro para su `CYellowEdit` clase. Las dos primeras será *COLORREF* variables para que contengan el color del texto y el color de fondo. El tercero será un `CBrush` objeto que contendrá el pincel para pintar el fondo. El `CBrush` objeto le permite crear el pincel una vez, simplemente hace referencia a él después de eso y para destruir el pincel automáticamente cuando el `CYellowEdit` control se destruye.  
   
 4.  Inicializar las variables de miembro escribiendo el constructor de la manera siguiente:  
   
@@ -148,7 +148,7 @@ ms.locfileid: "33384969"
  }  
  ```  
   
-5.  Uso de ClassWizard, agregue un controlador para el reflejado `WM_CTLCOLOR` un mensaje a su `CYellowEdit` clase. Tenga en cuenta que el signo igual delante del nombre del mensaje en la lista de mensajes que puede controlar indica que el mensaje se refleja. Este procedimiento se describe en [definir un controlador de mensajes para un mensaje reflejado](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).  
+5.  Con ClassWizard, agregue un controlador para el mensaje WM_CTLCOLOR reflejado para su `CYellowEdit` clase. Tenga en cuenta que el signo igual delante del nombre del mensaje en la lista de mensajes que puede controlar indica que el mensaje se refleja. Este procedimiento se describe en [definir un controlador de mensajes para un mensaje reflejado](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).  
   
      ClassWizard agrega la siguiente función de macro y esqueleto de mapa de mensajes para usted:  
   

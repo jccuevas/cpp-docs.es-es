@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c6fd065d13d3c61b88cc24144cfc64368020d16
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385585"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953976"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Notificaciones de Socket
 Este artículo describen las funciones de notificación en las clases de socket. Estas funciones miembro son funciones de devolución de llamada que llama el marco de trabajo para notificar al objeto socket eventos importantes. Las funciones de notificación son:  
@@ -43,14 +43,14 @@ Este artículo describen las funciones de notificación en las clases de socket.
   
  Estas funciones son funciones de devolución de llamada reemplazable. `CAsyncSocket` y `CSocket` convertir los mensajes a las notificaciones, pero debe implementar la notificación de funcionamiento de responder si desea usarlas. Se llaman a las funciones de notificación en el momento en que se notifica al socket de un evento de interés, como la presencia de datos que deben leerse.  
   
- MFC llama a las funciones de notificación que le permiten personalizar el comportamiento del socket en el momento de la notificación. Por ejemplo, puede llamar a **recepción** desde su `OnReceive` función de notificación, es decir, en que se ha notificado que hay datos que se va a leer, llamar a **recepción** para leerlo. Este enfoque no es necesario, pero es un escenario válido. Como alternativa, puede utilizar la función de notificación para seguir el progreso, imprimir **seguimiento** mensajes y así sucesivamente.  
+ MFC llama a las funciones de notificación que le permiten personalizar el comportamiento del socket en el momento de la notificación. Por ejemplo, puede llamar a `Receive` desde su `OnReceive` función de notificación, es decir, en que se ha notificado que hay datos que se va a leer, llamar a `Receive` para leerlo. Este enfoque no es necesario, pero es un escenario válido. Como alternativa, puede utilizar la función de notificación para seguir el progreso, imprimir **seguimiento** mensajes y así sucesivamente.  
   
  Puede aprovechar estas notificaciones reemplazando las funciones de notificación en una clase derivada de socket y proporcionar una implementación.  
   
- Durante una operación como la recepción o envío de datos, un `CSocket` objeto pasa a estado sincrónico. Durante el estado sincrónico, las notificaciones para otros sockets se ponen en cola mientras el socket actual espera la notificación que desea. (Por ejemplo, durante una **recepción** llamada, el socket desea leer una notificación.) Una vez que el socket complete la operación sincrónica y pase al estado asincrónico, otros sockets puedan comenzar a recibir las notificaciones en cola.  
+ Durante una operación como la recepción o envío de datos, un `CSocket` objeto pasa a estado sincrónico. Durante el estado sincrónico, las notificaciones para otros sockets se ponen en cola mientras el socket actual espera la notificación que desea. (Por ejemplo, durante un `Receive` llamada, el socket desea leer una notificación.) Una vez que el socket complete la operación sincrónica y pase al estado asincrónico, otros sockets puedan comenzar a recibir las notificaciones en cola.  
   
 > [!NOTE]
->  En `CSocket`, el `OnConnect` nunca se llama la función de notificación. Para las conexiones, se llama a **conectar**, que se devolverá cuando se complete la conexión (éxito o error). Cómo se administran las notificaciones de conexión es un detalle de implementación de MFC.  
+>  En `CSocket`, el `OnConnect` nunca se llama la función de notificación. Para las conexiones, se llama a `Connect`, que se devolverá cuando se complete la conexión (éxito o error). Cómo se administran las notificaciones de conexión es un detalle de implementación de MFC.  
   
  Para obtener más información acerca de cada función de notificación, vea la función en la clase `CAsyncSocket` en el *referencia de MFC*. Para obtener información acerca de los ejemplos MFC y código fuente, consulte [ejemplos de MFC](../visual-cpp-samples.md).  
   

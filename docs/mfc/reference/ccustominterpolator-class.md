@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b093ff87d7f2c8c52b6745be4e2a31580fce0fce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7ab45ad47ad0120fa4e04937e180841bdb5f981
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355804"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955094"
 ---
 # <a name="ccustominterpolator-class"></a>Clase CCustomInterpolator
 Implementa un interpolador básico.  
@@ -116,10 +116,10 @@ CCustomInterpolator(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `duration`  
+ *Duración*  
  La duración de la transición.  
   
- `finalValue`  
+ *finalValue*  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice CCustomInterpolator::Init para inicializar la duración y el valor final más adelante en el código.  
@@ -135,13 +135,13 @@ virtual BOOL GetDependencies(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Salida. Aspectos del interpolador que dependen del valor inicial que se pasan a SetInitialValueAndVelocity.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  Salida. Aspectos del interpolador que dependen de la velocidad inicial pasan a SetInitialValueAndVelocity.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Salida. Aspectos del interpolador que dependen de la duración se pasan a SetDuration.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -155,7 +155,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `duration`  
+ *Duración*  
  Salida. La duración de la transición, en segundos.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -169,7 +169,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `value`  
+ *valor*  
  Salida. El valor final de una variable al final de la transición.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -185,10 +185,10 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `duration`  
+ *Duración*  
  La duración de la transición.  
   
- `finalValue`  
+ *finalValue*  
  El valor final de una variable al final de la transición.  
   
 ##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue  
@@ -201,7 +201,7 @@ virtual BOOL InterpolateValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `value`  
+ *valor*  
  Salida. El valor de interpolación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -217,7 +217,7 @@ virtual BOOL InterpolateVelocity(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `velocity`  
+ *progreso*  
  Salida. El progreso de la variable en el desplazamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -273,7 +273,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `duration`  
+ *Duración*  
  La duración de la transición.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -289,10 +289,10 @@ virtual BOOL SetInitialValueAndVelocity(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `initialValue`  
+ *initialValue*  
  El valor de la variable al principio de la transición.  
   
- `initialVelocity`  
+ *initialVelocity*  
  El progreso de la variable al principio de la transición.  
   
 ### <a name="return-value"></a>Valor devuelto  

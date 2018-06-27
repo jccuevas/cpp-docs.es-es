@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 342edd56ee279de0b854c8e8ceb177b797a03f3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 208d179cb8131a690c0ca842f392c934b4386549
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384616"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951310"
 ---
 # <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Personalizar la impresión y la vista previa de impresión
 > [!NOTE]
 >  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea. Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos. Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.  
   
- Esta nota describe el proceso de personalización de vista previa de impresión y y describe los fines de las rutinas de devolución de llamada que se usa en `CView` y las rutinas de devolución de llamada y las funciones miembro de **CPreviewView**.  
+ Esta nota describe el proceso de personalización de vista previa de impresión y y describe los fines de las rutinas de devolución de llamada que se usa en `CView` y las rutinas de devolución de llamada y las funciones miembro de `CPreviewView`.  
   
 ## <a name="the-problem"></a>El problema  
  MFC proporciona una solución completa para la mayoría de impresión y vista previa de impresión es necesario. En la mayoría de los casos, es necesario tener una vista que se puede imprimir y obtener una vista previa poco código adicional. Sin embargo, hay maneras de optimizar la impresión que requieren un esfuerzo significativo por parte del desarrollador y algunas aplicaciones necesitan agregar elementos de la interfaz de usuario específico para el modo de vista previa de impresión.  
@@ -42,7 +42,7 @@ ms.locfileid: "33384616"
  Desgraciadamente, esto puede ralentizar el proceso de impresión. Si la impresión de la aplicación debe ser más rápida que puede lograrse mediante la técnica estándar, debe implementar bandas manual.  
   
 ## <a name="print-banding"></a>Imprimir bandas  
- Con el fin de orígenes externos manualmente, debe volver implementar el bucle de impresión que `OnPrint` se llama varias veces por página (una por cada banda). El bucle de impresión se implementa en el **OnFilePrint** función en viewprnt.cpp. En su `CView`-clase derivada, se sobrecarga esta función para que la entrada de mapa de mensajes para controlar el comando de impresión llama a la función de impresión. Copia la **OnFilePrint** rutina y cambie el bucle de impresión para implementar bandas. Probablemente también desee pasar el rectángulo bandas a las funciones de impresión para que se puede optimizar el dibujo basado en la sección de la página que se pueda imprimir.  
+ Con el fin de orígenes externos manualmente, debe volver implementar el bucle de impresión que `OnPrint` se llama varias veces por página (una por cada banda). El bucle de impresión se implementa en el `OnFilePrint` función en viewprnt.cpp. En su `CView`-clase derivada, se sobrecarga esta función para que la entrada de mapa de mensajes para controlar el comando de impresión llama a la función de impresión. Copia el `OnFilePrint` rutina y cambie el bucle de impresión para implementar bandas. Probablemente también desee pasar el rectángulo bandas a las funciones de impresión para que se puede optimizar el dibujo basado en la sección de la página que se pueda imprimir.  
   
  En segundo lugar, se debe llamar con frecuencia `QueryAbort` mientras se dibuja la banda. En caso contrario, no se llamará al procedimiento anular y el usuario pueda cancelar el trabajo de impresión.  
   
@@ -54,11 +54,11 @@ ms.locfileid: "33384616"
   
 ## <a name="to-add-ui-to-the-preview-mode"></a>Para agregar la interfaz de usuario para el modo de vista previa  
   
-1.  Derivar una clase de vista de **CPreviewView**.  
+1.  Derivar una clase de vista de `CPreviewView`.  
   
 2.  Agregar controladores de comandos para los aspectos de la interfaz de usuario que desee.  
   
-3.  Si va a agregar aspectos visuales a la pantalla, invalidar `OnDraw` y realizar el dibujo después de llamar a **CPreviewView::OnDraw.**  
+3.  Si va a agregar aspectos visuales a la pantalla, invalidar `OnDraw` y realizar el dibujo después de llamar a `CPreviewView::OnDraw`.  
   
 ## <a name="onfileprintpreview"></a>OnFilePrintPreview  
  Este es el controlador de comandos para la vista previa de impresión. La implementación predeterminada es:  
@@ -86,9 +86,9 @@ void CView::OnFilePrintPreview()
 }  
 ```  
   
- **DoPrintPreview** ocultará el panel principal de la aplicación. Barras de control, como la barra de estado, se pueden conservar especificándolas en el pState ->**dwStates** miembro (se trata de una máscara de bits y los bits de barras de controles individuales se definen mediante **AFX_CONTROLBAR_MASK**(AFX_IDW_MYBAR)). La ventana pState ->**nIDMainPane** es la ventana que se oculta automáticamente y reshown. **DoPrintPreview** , a continuación, creará una barra de botones de la interfaz de usuario estándar de vista previa. Si se necesita control de ventana especial, como ocultar o mostrar otras ventanas, que deben realizarse antes de **DoPrintPreview** se llama.  
+ `DoPrintPreview` ocultará el panel principal de la aplicación. Barras de control, como la barra de estado, se pueden conservar especificándolas en el pState ->*dwStates* miembro (esta es una máscara de bits y los bits de barras de controles individuales se definen por AFX_CONTROLBAR_MASK (AFX_IDW_MYBAR)). La ventana pState ->*nIDMainPane* es la ventana que se oculta automáticamente y reshown. `DoPrintPreview` a continuación, creará una barra de botones de la interfaz de usuario estándar de vista previa. Si se necesita control de ventana especial, como ocultar o mostrar otras ventanas, que deben realizarse antes de `DoPrintPreview` se llama.  
   
- De forma predeterminada, cuando finaliza la vista previa de impresión, devuelve las barras de control a su estado original y el panel principal a visible. Si es necesario un tratamiento especial, se debe hacer en un reemplazo del **EndPrintPreview.** Si **DoPrintPreview** se produce un error, también proporcionan un tratamiento especial.  
+ De forma predeterminada, cuando finaliza la vista previa de impresión, devuelve las barras de control a su estado original y el panel principal a visible. Si es necesario un tratamiento especial, se debe hacer en un reemplazo del `EndPrintPreview`. Si `DoPrintPreview` se produce un error, también proporcionan un tratamiento especial.  
   
  Se llama a DoPrintPreview con:  
   
@@ -104,9 +104,9 @@ void CView::OnFilePrintPreview()
     >  Si se necesita una vista independiente o una clase de vista de compatibilidad con la impresión, se debe pasar un puntero a ese objeto como el segundo parámetro.  
   
 ## <a name="endprintpreview"></a>EndPrintPreview  
- Esto se llama para finalizar el modo de vista previa de impresión. A menudo es conveniente pasar a la página en el documento que se mostró por última vez en vista previa de impresión. **EndPrintPreview** posibilidad de la aplicación para realizar dicha acción. -> PInfo`m_nCurPage` miembro es la página que se mostró por última vez (parte izquierda si se muestran dos páginas) y el puntero es una sugerencia sobre dónde estaba interesado el usuario en la página. Puesto que la estructura de la vista de la aplicación es desconocida para el marco de trabajo, debe proporcionar el código para desplazarse al punto seleccionado.  
+ Esto se llama para finalizar el modo de vista previa de impresión. A menudo es conveniente pasar a la página en el documento que se mostró por última vez en vista previa de impresión. `EndPrintPreview` es la posibilidad de la aplicación para realizar dicha acción. PInfo ->*m_nCurPage* miembro es la página que se mostró por última vez (parte izquierda si se muestran dos páginas) y el puntero es una sugerencia sobre dónde estaba interesado el usuario en la página. Puesto que la estructura de la vista de la aplicación es desconocida para el marco de trabajo, debe proporcionar el código para desplazarse al punto seleccionado.  
   
- Debe realizar la mayoría de las acciones antes de llamar a **CView::EndPrintPreview**. Esta llamada invierte los efectos de **DoPrintPreview** y elimina pView, pDC y pInfo.  
+ Debe realizar la mayoría de las acciones antes de llamar a `CView::EndPrintPreview`. Esta llamada invierte los efectos de `DoPrintPreview` y elimina pView, pDC y pInfo.  
   
 ```  
 // Any further cleanup should be done here.  
@@ -126,7 +126,7 @@ CView::EndPrintPreview(pDC,
   
  Como indica el párrafo de introducción, vista previa de impresión está actuando como una impresora. Por lo tanto, el usuario verá lo que haría derivados de la impresora determinada que está seleccionada. Depende de la vista para determinar qué se imprimirá en cada página.  
   
- La cadena de descripción de la página en el `CPrintInfo` estructura proporciona un medio para mostrar el número de página al usuario si se puede representar como un número por página (como en "Página 1" o "páginas 1-2"). Esta cadena se utiliza la implementación predeterminada de **CPreviewView::OnDisplayPageNumber**. Si se necesita otra pantalla, uno puede invalidar esta función virtual para proporcionar, por ejemplo, "Sheet1, secciones A, B".  
+ La cadena de descripción de la página en el `CPrintInfo` estructura proporciona un medio para mostrar el número de página al usuario si se puede representar como un número por página (como en "Página 1" o "páginas 1-2"). Esta cadena se utiliza la implementación predeterminada de `CPreviewView::OnDisplayPageNumber`. Si se necesita otra pantalla, uno puede invalidar esta función virtual para proporcionar, por ejemplo, "Sheet1, secciones A, B".  
   
 ## <a name="see-also"></a>Vea también  
  [Notas técnicas por número](../mfc/technical-notes-by-number.md)   

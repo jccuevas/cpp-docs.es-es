@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e479c156967addc7add8f048d2ef1c3abab0dd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354199"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956238"
 ---
 # <a name="cd2dgradientbrush-class"></a>Clase CD2DGradientBrush
 La clase base de la CD2DLinearGradientBrush y las clases de CD2DRadialGradientBrush.  
@@ -102,25 +102,25 @@ CD2DGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentTarget`  
+ *pParentTarget*  
  Un puntero para el destino de representación.  
   
- `gradientStops`  
+ *gradientStops*  
  Un puntero a una matriz de estructuras D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Un valor mayor o igual a 1 que especifica el número de puntos de degradado de la matriz gradientStops.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  El espacio en el color que se realiza una interpolación entre los delimitadores de degradado.  
   
- `extendMode`  
+ *extendMode*  
  El comportamiento del degradado que se encuentra fuera del intervalo [0,1] normalizado.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Un puntero a la opacidad y la transformación de un pincel.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indica que se destruirá el objeto propietario (pParentTarget).  
   
 ##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  

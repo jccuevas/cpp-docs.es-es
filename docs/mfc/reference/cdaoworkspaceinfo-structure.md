@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd6979124916e8a9cc1dc723008491bababc0322
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 705c855a817f0c6ca342e51258c7d6c1e61fa392
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366296"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951083"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo (Estructura)
 El `CDaoWorkspaceInfo` estructura contiene información sobre un área de trabajo definido para el acceso a la base de datos de datos acceso a objetos (DAO).  
@@ -39,7 +39,7 @@ struct CDaoWorkspaceInfo
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `m_strName`  
+ *m_strName*  
  Identifica inequívocamente el objeto de área de trabajo. Para recuperar el valor de esta propiedad directamente, llaman al objeto de definición de consulta [GetName](../../mfc/reference/cdaoquerydef-class.md#getname) función miembro. Para obtener más información, vea el tema "Nombre de propiedad" en la Ayuda de DAO.  
   
  *m_strUserName*  

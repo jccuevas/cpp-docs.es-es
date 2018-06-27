@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1dac40e91dd7b0a91c5d76b0d665d075e562267
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357850"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954713"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>Clase CAccelerateDecelerateTransition
 Implementa una transición que aumenta/reduce la velocidad.  
@@ -81,16 +81,16 @@ CAccelerateDecelerateTransition(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `duration`  
+ *Duración*  
  La duración de la transición.  
   
- `finalValue`  
+ *finalValue*  
  El valor de la variable de animación al final de la transición.  
   
- `accelerationRatio`  
+ *accelerationRatio*  
  La proporción del tiempo transcurrido acelerando a la duración.  
   
- `decelerationRatio`  
+ *decelerationRatio*  
  La proporción del tiempo transcurrido desacelerando a la duración.  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
@@ -103,7 +103,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
-`pLibrary`  
+*pLibrary*  
  Un puntero a un [IUIAnimationTransitionLibrary interfaz](https://msdn.microsoft.com/library/windows/desktop/dd371897), que define una biblioteca de transiciones estándares.  
   
 ### <a name="return-value"></a>Valor devuelto  

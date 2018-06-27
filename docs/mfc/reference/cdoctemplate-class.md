@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7674e9a25f4794d40a977fce914ab6ac0131de25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1ee27994a83206b576452d30b108f01c794353
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957510"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate (clase)
 Una clase base abstracta que define la funcionalidad básica para las plantillas de documento.  
@@ -106,7 +107,7 @@ class CDocTemplate : public CCmdTarget
 ## <a name="remarks"></a>Comentarios  
  Se suele crean una o varias plantillas de documento en la implementación de la aplicación `InitInstance` (función). Una plantilla de documento define las relaciones entre los tres tipos de clases:  
   
--   Una clase de documento, que derivan de **CDocument**.  
+-   Una clase de documento, que derivan de `CDocument`.  
   
 -   Una clase de vista, que muestra los datos de la clase de documento mencionado anteriormente. Puede derivar de esta clase desde `CView`, `CScrollView`, `CFormView`, o `CEditView`. (También puede usar `CEditView` directamente.)  
   
@@ -144,7 +145,7 @@ virtual void AddDocument(CDocument* pDoc);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDoc`  
+ *pDoc*  
  Un puntero al documento que se va a agregar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -162,7 +163,7 @@ CDocTemplate (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDResource`  
+ *nIDResource*  
  Especifica el identificador de los recursos utilizados con el tipo de documento. Esto puede incluir menú, icono, tabla de aceleradores y recursos de cadena.  
   
  El recurso de cadena consta de hasta siete subcadenas separados por el carácter '\n' (se necesita el carácter '\n' como marcador de posición si no se incluye una subcadena; sin embargo, no son necesarios los caracteres finales '\n'); Estos subcadenas describen el tipo de documento. Para obtener información sobre las subcadenas, consulte [GetDocString](#getdocstring). Este recurso de cadena se encuentra en el archivo de recursos de la aplicación. Por ejemplo:  
@@ -179,13 +180,13 @@ CDocTemplate (
   
  Tenga en cuenta que la cadena comienza con un carácter '\n'; Esto es porque la primera subcadena no se utiliza para las aplicaciones MDI y por lo tanto, no se incluye. Puede editar esta cadena mediante el editor de cadenas; toda la cadena aparece como una sola entrada en el Editor de cadena, no como siete separe las entradas.  
   
- `pDocClass`  
- Apunta a la `CRuntimeClass` objeto de la clase de documento. Esta clase es un **CDocument**-deriva la clase que defina para representar los documentos.  
+ *pDocClass*  
+ Apunta a la `CRuntimeClass` objeto de la clase de documento. Esta clase es un `CDocument`-deriva la clase que defina para representar los documentos.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Apunta a la `CRuntimeClass` objeto de la clase de ventana de marco. Esta clase puede ser un `CFrameWnd`-clase derivada, o puede ser `CFrameWnd` si desea el comportamiento predeterminado de la ventana de marco principal.  
   
- `pViewClass`  
+ *pViewClass*  
  Apunta a la `CRuntimeClass` objeto de la clase de vista. Esta clase es un `CView`-deriva la clase que defina para mostrar los documentos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -199,8 +200,8 @@ virtual void CloseAllDocuments(BOOL bEndSession);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bEndSession`  
- Especifica si no se finaliza la sesión. Es **TRUE** si se va a la sesión finaliza; en caso contrario **FALSE**.  
+ *bEndSession*  
+ No usado.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro se utiliza normalmente como parte del comando salida de archivo. La implementación predeterminada de esta función llama el [CDocument::DeleteContents](../../mfc/reference/cdocument-class.md#deletecontents) función de miembro para eliminar datos del documento y, a continuación, cierre las ventanas de marco para todas las vistas que se adjuntan al documento.  
@@ -227,19 +228,19 @@ virtual CFrameWnd* CreateNewFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDoc`  
+ *pDoc*  
  El documento a la que debe hacer referencia la nueva ventana de marco. Puede ser **NULL**.  
   
- `pOther`  
+ *pOther*  
  La ventana de marco en el que es basará la nueva ventana de marco. Puede ser **NULL**.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la ventana de marco recién creada, o **NULL** si se produce un error.  
   
 ### <a name="remarks"></a>Comentarios  
- `CreateNewFrame` usa el `CRuntimeClass` objetos pasan al constructor para crear una nueva ventana de marco con una vista y el documento adjunto. Si el `pDoc` parámetro es **NULL**, el marco de trabajo genera un mensaje de seguimiento.  
+ `CreateNewFrame` usa el `CRuntimeClass` objetos pasan al constructor para crear una nueva ventana de marco con una vista y el documento adjunto. Si el *pDoc* parámetro es **NULL**, el marco de trabajo genera un mensaje de seguimiento.  
   
- El `pOther` parámetro se utiliza para implementar el comando nueva ventana. Proporciona una ventana de marco en el que se va a modelar la nueva ventana de marco. La nueva ventana de marco normalmente se crea sea invisible. Llame a esta función para crear ventanas de marco fuera de la implementación estándar de framework de archivo nuevo y abrir archivo.  
+ El *pOther* parámetro se utiliza para implementar el comando nueva ventana. Proporciona una ventana de marco en el que se va a modelar la nueva ventana de marco. La nueva ventana de marco normalmente se crea sea invisible. Llame a esta función para crear ventanas de marco fuera de la implementación estándar de framework de archivo nuevo y abrir archivo.  
   
 ##  <a name="createoleframe"></a>  CDocTemplate::CreateOleFrame  
  Crea una ventana de marco OLE.  
@@ -252,20 +253,20 @@ CFrameWnd* CreateOleFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana del marco principal.  
   
- `pDoc`  
+ *pDoc*  
  Un puntero al documento en el que debe hacer referencia la nueva ventana de marco OLE.  
   
- `bCreateView`  
+ *bCreateView*  
  Determina si se crea una vista junto con el marco.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a una ventana de marco si se realiza correctamente; en caso contrario, **NULL**.  
   
 ### <a name="remarks"></a>Comentarios  
- Si `bCreateView` es cero, se crea un marco vacío.  
+ Si *bCreateView* es cero, se crea un marco vacío.  
   
 ##  <a name="getdocstring"></a>  CDocTemplate::GetDocString  
  Recupera una cadena asociada con el tipo de documento.  
@@ -277,7 +278,7 @@ virtual BOOL GetDocString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rString`  
+ *rString*  
  Una referencia a un `CString` objeto que va a contener la cadena cuando la función devuelve.  
   
  *index*  
@@ -321,7 +322,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) y [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) invalidar esta función virtual pura. Cualquier clase que derive de `CDocTemplate` también debe reemplazar esta función.  
   
 ##  <a name="getnextdoc"></a>  CDocTemplate::GetNextDoc  
- Recupera el elemento de lista identificado por `rPos`, a continuación, establece `rPos` a la **posición** valor de la entrada siguiente en la lista.  
+ Recupera el elemento de lista identificado por *RPO*, a continuación, establece *RPO* a la **posición** valor de la entrada siguiente en la lista.  
   
 ```  
 virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;  
@@ -331,11 +332,11 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
  Un puntero al siguiente documento en la lista de documentos asociados con esta plantilla.  
   
 ### <a name="parameters"></a>Parámetros  
- `rPos`  
+ *RPO*  
  Una referencia a un **posición** valor devuelto por una llamada anterior a [GetFirstDocPosition](#getfirstdocposition) o `GetNextDoc`.  
   
 ### <a name="remarks"></a>Comentarios  
- Si el elemento recuperado es el último en la lista, a continuación, el nuevo valor de `rPos` está establecido en **NULL**.  
+ Si el elemento recuperado es el último en la lista, a continuación, el nuevo valor de *RPO* está establecido en **NULL**.  
   
  Puede usar `GetNextDoc` en un bucle de iteración de avance, si establece la posición inicial con una llamada a [GetFirstDocPosition](#getfirstdocposition).  
   
@@ -352,17 +353,17 @@ virtual void InitialUpdateFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pFrame`  
+ *pFrame*  
  La ventana de marco que necesita la actualización inicial.  
   
- `pDoc`  
+ *pDoc*  
  El documento al que está asociado el marco. Puede ser **NULL**.  
   
- `bMakeVisible`  
+ *bMakeVisible*  
  Indica si el marco debería estar visibles y activas.  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a **IntitialUpdateFrame** después de crear un nuevo marco con `CreateNewFrame`. Llamar a esta función hace que las vistas en la ventana de marco para recibir sus `OnInitialUpdate` llamadas. Además, si anteriormente no era una vista activa, la vista de la ventana de marco principal estará activa; la vista principal es una vista con un identificador secundario de **AFX_IDW_PANE_FIRST**. Por último, la ventana de marco se hace visible si `bMakeVisible` es distinto de cero. Si `bMakeVisible` es cero, el foco actual y el estado de visibilidad de la ventana de marco permanecerán sin cambios.  
+ Llame a **IntitialUpdateFrame** después de crear un nuevo marco con `CreateNewFrame`. Llamar a esta función hace que las vistas en la ventana de marco para recibir sus `OnInitialUpdate` llamadas. Además, si anteriormente no era una vista activa, la vista de la ventana de marco principal estará activa; la vista principal es una vista con un identificador secundario de **AFX_IDW_PANE_FIRST**. Por último, la ventana de marco se hace visible si `bMakeVisible` es distinto de cero. Si *bMakeVisible* es cero, el foco actual y el estado de visibilidad de la ventana de marco permanecerán sin cambios.  
   
  No es necesario llamar a esta función cuando se usa la implementación del marco de trabajo de archivo nuevo y abrir archivo.  
   
@@ -386,11 +387,11 @@ virtual Confidence MatchDocType(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszPathName`  
+ *lpszPathName*  
  Ruta de acceso del archivo cuyo tipo se va a determinar.  
   
- `rpDocMatch`  
- Puntero a un documento que se asigna el documento coincidente, si el archivo especificado por `lpszPathName` ya está abierto.  
+ *rpDocMatch*  
+ Puntero a un documento que se asigna el documento coincidente, si el archivo especificado por *lpszPathName* ya está abierto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor de la **confianza** enumeración, que se define como sigue:  
@@ -410,9 +411,9 @@ enum Confidence
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para determinar el tipo de plantilla de documento que se utilizará para abrir un archivo. Si la aplicación admite varios tipos de archivo, por ejemplo, puede usar esta función para determinar cuál de las plantillas de documento disponible es adecuado para un archivo determinado mediante una llamada a `MatchDocType` para cada plantilla de y elegir una plantilla de acuerdo con Devuelve el valor de confianza.  
   
- Si el archivo especificado por `lpszPathName` ya está abierto, esta función devuelve **CDocTemplate::yesAlreadyOpen** y copia el archivo **CDocument** objeto en el objeto en `rpDocMatch`.  
+ Si el archivo especificado por *lpszPathName* ya está abierto, esta función devuelve **CDocTemplate::yesAlreadyOpen** y copia el archivo **CDocument** objeto en el objeto en *rpDocMatch*.  
   
- Si el archivo no está abierto pero la extensión en `lpszPathName` coincide con la extensión especificada por **CDocTemplate::filterExt**, esta función devuelve **CDocTemplate::yesAttemptNative** y establece `rpDocMatch` a **NULL**. Para obtener más información sobre **CDocTemplate::filterExt**, consulte [CDocTemplate::GetDocString](#getdocstring).  
+ Si el archivo no está abierto pero la extensión en *lpszPathName* coincide con la extensión especificada por **CDocTemplate::filterExt**, esta función devuelve **CDocTemplate::yesAttemptNative** y establece *rpDocMatch* a **NULL**. Para obtener más información sobre **CDocTemplate::filterExt**, consulte [CDocTemplate::GetDocString](#getdocstring).  
   
  Si ningún caso es true, la función devuelve **CDocTemplate::yesAttemptForeign**.  
   
@@ -430,27 +431,27 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszPathName`  
+ [in] *lpszPathName*  
  Puntero a la ruta de acceso del archivo que contiene el documento que se va a abrir.  
   
- [in] `bAddToMRU`  
+ [in] *bAddToMRU*  
  `TRUE` indica que el documento es uno de los archivos más recientes; `FALSE` indica que el documento no es uno de los archivos más recientes.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al documento cuyo archivo se denomina por `lpszPathName`; `NULL` si no lo consigue.  
+ Un puntero al documento cuyo archivo se denomina por *lpszPathName*; `NULL` si no lo consigue.  
   
 ### <a name="remarks"></a>Comentarios  
- Abre el archivo cuya ruta de acceso se especifica por `lpszPathName`. Si `lpszPathName` es `NULL`, se crea un nuevo archivo que contiene un documento del tipo asociado a esta plantilla.  
+ Abre el archivo cuya ruta de acceso se especifica por *lpszPathName*. Si *lpszPathName* es `NULL`, se crea un nuevo archivo que contiene un documento del tipo asociado a esta plantilla.  
   
 ##  <a name="removedocument"></a>  CDocTemplate::RemoveDocument  
- Quita el documento que señala `pDoc` en la lista de documentos asociados con esta plantilla.  
+ Quita el documento que señala *pDoc* en la lista de documentos asociados con esta plantilla.  
   
 ```  
 virtual void RemoveDocument(CDocument* pDoc);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDoc`  
+ *pDoc*  
  Puntero al documento que se va a quitar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -474,13 +475,13 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDOleInPlaceContainer`  
+ *nIDOleInPlaceContainer*  
  El identificador de los recursos que usa cuando se activa un objeto incrustado.  
   
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función para definir los recursos que se utilizará cuando un objeto OLE esté activado en el contexto. Estos recursos pueden incluir los menús y tablas de aceleradores. Esta función se suele llamar el [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) función de la aplicación.  
   
- El menú asociado `nIDOleInPlaceContainer` contiene separadores que permiten el menú del elemento activado en contexto para combinar con el menú de la aplicación contenedora. Para obtener más información acerca de cómo combinar los menús de servidor y un contenedor, consulte el artículo [menús y recursos (OLE)](../../mfc/menus-and-resources-ole.md).  
+ El menú asociado *nIDOleInPlaceContainer* contiene separadores que permiten el menú del elemento activado en contexto para combinar con el menú de la aplicación contenedora. Para obtener más información acerca de cómo combinar los menús de servidor y un contenedor, consulte el artículo [menús y recursos (OLE)](../../mfc/menus-and-resources-ole.md).  
   
 ##  <a name="setdefaulttitle"></a>  CDocTemplate::SetDefaultTitle  
  Llame a esta función para cargar el título del documento predeterminado y mostrarlo en la barra de título del documento.  
@@ -511,7 +512,7 @@ void SetServerInfo(
  *nIDOleEmbedding*  
  El identificador de los recursos que usa cuando se abre un objeto incrustado en una ventana independiente.  
   
- `nIDOleInPlaceServer`  
+ *nIDOleInPlaceServer*  
  El identificador de los recursos que usa cuando un objeto incrustado está activado en contexto.  
   
  *pOleFrameClass*  
@@ -523,7 +524,7 @@ void SetServerInfo(
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función miembro para identificar los recursos que se utilizarán en la aplicación de servidor cuando el usuario solicita la activación de un objeto incrustado. Estos recursos consisten en los menús y tablas de aceleradores. Esta función se suele llamar el `InitInstance` de la aplicación.  
   
- El menú asociado `nIDOleInPlaceServer` contiene separadores que permiten el menú del servidor combinar con el menú del contenedor. Para obtener más información acerca de cómo combinar los menús de servidor y un contenedor, consulte el artículo [menús y recursos (OLE)](../../mfc/menus-and-resources-ole.md).  
+ El menú asociado *nIDOleInPlaceServer* contiene separadores que permiten el menú del servidor combinar con el menú del contenedor. Para obtener más información acerca de cómo combinar los menús de servidor y un contenedor, consulte el artículo [menús y recursos (OLE)](../../mfc/menus-and-resources-ole.md).  
   
 ##  <a name="createpreviewframe"></a>  CDocTemplate::CreatePreviewFrame  
  Crea un marco de secundario usado para la vista previa avanzada.  
@@ -535,10 +536,10 @@ CFrameWnd* CreatePreviewFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a una ventana primaria (normalmente proporcionada por el Shell).  
   
- `pDoc`  
+ *pDoc*  
  Un puntero a un objeto de documento, se mostrará una vista previa cuyo contenido.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -557,13 +558,13 @@ void SetPreviewInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDPreviewFrame`  
+ *nIDPreviewFrame*  
  Especifica un identificador de recursos del marco de vista previa.  
   
- `pPreviewFrameClass`  
+ *pPreviewFrameClass*  
  Especifica un puntero a una estructura de información de clase en tiempo de ejecución del marco de vista previa.  
   
- `pPreviewViewClass`  
+ *pPreviewViewClass*  
  Especifica un puntero a una estructura de información de clase en tiempo de ejecución de la vista previa.  
   
 ### <a name="remarks"></a>Comentarios  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb3bb0d96723f14f6dec56853d52860f0568c03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9407c98183fa923a58ca2939e8c534cd56dc8ef7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357720"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954626"
 ---
 # <a name="ccontextmenumanager-class"></a>Clase CContextMenuManager
 La `CContextMenuManager` objeto administra los menús contextuales, también conocidos como menús contextuales.  
@@ -115,20 +115,20 @@ BOOL AddMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiMenuNameResId`  
+ [in] *uiMenuNameResId*  
  Un identificador de recurso para una cadena que contiene el nombre para el nuevo menú.  
   
- [in] `uiMenuResId`  
+ [in] *uiMenuResId*  
  El identificador de recurso de menú.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Una cadena que contiene el nombre para el nuevo menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el método se realizó correctamente; 0 si se produce un error en el método.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método produce un error si `uiMenuResId` no es válida o si otro menú con el mismo nombre ya está en el `CContextMenuManager`.  
+ Este método produce un error si *uiMenuResId* no es válida o si otro menú con el mismo nombre ya está en el `CContextMenuManager`.  
   
 ##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager  
  Construye un [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) objeto.  
@@ -148,7 +148,7 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nMenuResId`  
+ [in] *nMenuResId*  
  El identificador de recurso para el menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -164,17 +164,17 @@ HMENU GetMenuByName(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszName`  
+ [in] *lpszName*  
  Una cadena que contiene el nombre del menú que se va a recuperar.  
   
- [out] `puiOrigResID`  
+ [out] *puiOrigResID*  
  Puntero a una `UINT`. Este parámetro contiene el identificador de recurso de menú especificado, si se encuentra.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un identificador para el menú que coincide con el nombre que se especificó en `lpszName`. `NULL` Si no hay ningún menú llamado `lpszName`.  
+ Un identificador para el menú que coincide con el nombre que especificó *lpszName*. `NULL` Si no hay ningún menú denominado *lpszName*.  
   
 ### <a name="remarks"></a>Comentarios  
- Si este método busca un menú que coincida con `lpszName`, `GetMenuByName` almacena el identificador de recurso de menú en el parámetro `puiOrigResID`.  
+ Si este método busca un menú que coincida con *lpszName*, `GetMenuByName` almacena el identificador de recurso de menú en el parámetro *puiOrigResID*.  
   
 ##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames  
  Devuelve la lista de nombres de menú que se agregan a la [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
@@ -184,7 +184,7 @@ void GetMenuNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `listOfNames`  
+ [out] *listOfNames*  
  Una referencia a un [objeto CStringList](../../mfc/reference/cstringlist-class.md) parámetro. Este método escribe la lista de nombres de menú para este parámetro.  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
@@ -195,14 +195,14 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el método es correcto; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- El `lpszProfileName` parámetro no es la ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se agrega al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) y [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) respectivamente.  
+ El *lpszProfileName* parámetro no es la ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se agrega al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) y [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) respectivamente.  
   
  Utilice el método [CContextMenuManager::SaveState](#savestate) para guardar los menús contextuales en el registro.  
   
@@ -227,14 +227,14 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el método es correcto; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- El `lpszProfileName` parámetro no es la ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se agrega al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) y [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) respectivamente.  
+ El *lpszProfileName* parámetro no es la ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se agrega al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) y [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) respectivamente.  
   
  Utilice el método [CContextMenuManager::LoadState](#loadstate) para cargar los menús contextuales del registro.  
   
@@ -246,7 +246,7 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bSet`  
+ [in] *bSet*  
  Un parámetro booleano que controla si se debe cerrar el menú emergente activo. Un valor de `TRUE` indica el menú emergente activo no está cerrado. `FALSE` indica que se cierra el menú emergente activo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -276,29 +276,29 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiMenuResId`  
+ [in] *uiMenuResId*  
  El identificador de recurso del menú que se mostrará este método.  
   
- [in] `x`  
+ [in] *x*  
  El desplazamiento del menú contextual en coordenadas de cliente de horizontal.  
   
- [in] `y`  
+ [in] *y*  
  El desplazamiento vertical del menú contextual en coordenadas de cliente  
   
- [in] `pWndOwner`  
+ [in] *pWndOwner*  
  Un puntero a la ventana primaria del menú contextual.  
   
- [in] `bOwnMessage`  
- Un parámetro booleano que indica cómo se enrutan los mensajes. Si `bOwnMessage` es `FALSE`, se usa el enrutamiento de MFC estándar. En caso contrario, `pWndOwner` recibe los mensajes.  
+ [in] *bOwnMessage*  
+ Un parámetro booleano que indica cómo se enrutan los mensajes. Si *bOwnMessage* es `FALSE`, se usa el enrutamiento de MFC estándar. En caso contrario, *pWndOwner* recibe los mensajes.  
   
- [in] `hmenuPopup`  
+ [in] *hmenuPopup*  
  El identificador del menú que se mostrará este método.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  Un parámetro booleano que indica si el menú se destruirán automáticamente.  
   
- [in] `bRightAlign`  
- Un parámetro booleano que indica cómo se alinean los elementos de menú. Si `bRightAlign` es `TRUE`, el menú está alineado a la derecha para el orden de lectura de derecha a izquierda.  
+ [in] *bRightAlign*  
+ Un parámetro booleano que indica cómo se alinean los elementos de menú. Si *bRightAlign* es `TRUE`, el menú está alineado a la derecha para el orden de lectura de derecha a izquierda.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La primera sobrecarga de método devuelve distinto de cero si el método muestra el menú correctamente; en caso contrario es 0. La segunda sobrecarga del método devuelve un puntero a [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) si el menú contextual muestra correctamente; en caso contrario `NULL`.  
@@ -306,7 +306,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ### <a name="remarks"></a>Comentarios  
  Este método es similar al método [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) en que ambos métodos mostrar un menú contextual. Sin embargo, `TrackPopupMenu` devuelve el índice del comando de menú seleccionado.  
   
- Si el parámetro `bAutoDestroy` es `FALSE`, debe llamar manualmente los heredados `DestroyMenu` método para liberar recursos de memoria. La implementación predeterminada de `ShowPopupMenu` no usa el parámetro `bAutoDestroy`. Se proporciona para su uso futuro, o para las clases personalizadas que derivan de la `CContextMenuManager` clase.  
+ Si el parámetro *bAutoDestroy* es `FALSE`, debe llamar manualmente los heredados `DestroyMenu` método para liberar recursos de memoria. La implementación predeterminada de `ShowPopupMenu` no usa el parámetro *bAutoDestroy*. Se proporciona para su uso futuro, o para las clases personalizadas que derivan de la `CContextMenuManager` clase.  
   
 ##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu  
  Muestra el menú contextual especificado y devuelve el índice del comando de menú contextual seleccionado.  
@@ -321,20 +321,20 @@ virtual UINT TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hmenuPopup`  
+ [in] *hmenuPopup*  
  El identificador del menú contextual que muestra este método.  
   
- [in] `x`  
+ [in] *x*  
  El desplazamiento del menú contextual en coordenadas de cliente de horizontal.  
   
- [in] `y`  
+ [in] *y*  
  El desplazamiento del menú contextual en coordenadas de cliente de vertical.  
   
- [in] `pWndOwner`  
+ [in] *pWndOwner*  
  Un puntero a la ventana primaria del menú contextual.  
   
- [in] `bRightAlign`  
- Un parámetro booleano que indica cómo se alinean los elementos de menú. Si `bRightAlign` es `TRUE`, el menú está alineado a la derecha para el orden de lectura de derecha a izquierda. Si `bRightAlign` es `FALSE`, el menú está alineado a la izquierda para el orden de lectura de izquierda a derecha.  
+ [in] *bRightAlign*  
+ Un parámetro booleano que indica cómo se alinean los elementos de menú. Si *bRightAlign* es `TRUE`, el menú está alineado a la derecha para el orden de lectura de derecha a izquierda. Si *bRightAlign* es `FALSE`, el menú está alineado a la izquierda para el orden de lectura de izquierda a derecha.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El identificador de comando de menú del comando que el usuario elige; 0 si el usuario cierra el menú contextual sin seleccionar un comando de menú.  

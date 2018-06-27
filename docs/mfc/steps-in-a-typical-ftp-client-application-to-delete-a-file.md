@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb595dfdc1a73ecd068e251cec5df99d4daaab30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 220d1d38c6be33652a8613c60c4e4baa053a8296
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380570"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951925"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>Pasos de una aplicación cliente FTP típica para eliminar un archivo
 La tabla siguiente muestran los pasos que puede realizar en una aplicación de cliente FTP típica que se elimina un archivo.  
@@ -35,7 +35,7 @@ La tabla siguiente muestran los pasos que puede realizar en una aplicación de c
 |Cambiar a un nuevo directorio FTP en el servidor.|Use [CFtpConnection:: SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|Cambia el directorio que está conectado actualmente en el servidor.|  
 |Buscar el primer archivo en el directorio FTP.|Use [CFtpFileFind:: FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|Busca el primer archivo. Devuelve FALSE si no se encuentran archivos.|  
 |Buscar el siguiente archivo en el directorio FTP.|Use [CFtpFileFind:: FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Busca el siguiente archivo. Devuelve FALSE si no se encuentra el archivo.|  
-|Eliminar el archivo encontrado por **FindFile** o `FindNextFile`.|Use [CFtpConnection:: Remove](../mfc/reference/cftpconnection-class.md#remove), con el nombre de archivo devuelto por **FindFile** o `FindNextFile`.|Elimina el archivo en el servidor para leer o escribir.|  
+|Eliminar el archivo encontrado por `FindFile` o `FindNextFile`.|Use [CFtpConnection:: Remove](../mfc/reference/cftpconnection-class.md#remove), con el nombre de archivo devuelto por `FindFile` o `FindNextFile`.|Elimina el archivo en el servidor para leer o escribir.|  
 |Control de excepciones.|Use la [CInternetException](../mfc/reference/cinternetexception-class.md) clase.|Administra todos los tipos comunes de excepciones de Internet.|  
 |Finalizar la sesión FTP.|Deseche la [CInternetSession](../mfc/reference/cinternetsession-class.md) objeto.|Limpia automáticamente los identificadores de archivos abiertos y conexiones.|  
   

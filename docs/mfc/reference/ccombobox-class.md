@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90495f2eccfb31169653f6dcb09f2cf52e5a05dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb514531e600243fe02f8b5a6a9cd91a30c14542
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357246"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952585"
 ---
 # <a name="ccombobox-class"></a>CComboBox (clase)
 Proporciona la funcionalidad de un cuadro combinado de Windows.  
@@ -254,7 +254,7 @@ class CComboBox : public CWnd
   
  Si incrusta un `CComboBox` objeto dentro de otra ventana del objeto, no es necesario destruirlo. Si crea el `CComboBox` del objeto en la pila, se destruye automáticamente. Si crea el `CComboBox` objeto en el montón mediante el uso de la **nueva** función, se debe llamar a **eliminar** del objeto que se va a destruir cuando se destruye el cuadro combinado de Windows.  
   
- **Tenga en cuenta** si desea controlar `WM_KEYDOWN` y `WM_CHAR` mensajes, tendrá que subclase del cuadro combinado editar y controles de cuadro de lista, derivar clases de `CEdit` y `CListBox`, y agregar controladores para los mensajes a la clase derivada clases. Para obtener más información, consulte [ http://support.microsoft.com/default.aspxscid=kb; en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) y [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
+ **Tenga en cuenta** si desea controlar los mensajes WM_KEYDOWN y WM_CHAR, tendrá que subclase del cuadro combinado editar y controles de cuadro de lista, derivar clases de `CEdit` y `CListBox`, y agregar controladores para los mensajes a las clases derivadas. Para obtener más información, consulte [ http://support.microsoft.com/default.aspxscid=kb; en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) y [CWnd:: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -276,7 +276,7 @@ int AddString(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszString`  
+ *lpszString*  
  Apunta a la cadena terminada en null que se va a agregarse.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -324,7 +324,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpCompareItemStruct`  
+ *lpCompareItemStruct*  
  Un puntero largo a una [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -366,25 +366,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica el estilo del cuadro combinado. Aplicar cualquier combinación de [estilos de cuadro combinado](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) al cuadro.  
   
- `rect`  
+ *Rect*  
  Apunta a la posición y el tamaño del cuadro combinado. Puede ser un [estructura RECT](../../mfc/reference/rect-structure1.md) o un `CRect` objeto.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Especifica la ventana del elemento primario del cuadro combinado (normalmente un `CDialog`). No debe ser **NULL**.  
   
- `nID`  
+ *nID*  
  Especifica el identificador del control. del cuadro combinado  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Crear un `CComboBox` objeto en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a **crear**, que crea el cuadro combinado de Windows y lo adjunta a la `CComboBox` objeto.  
+ Crear un `CComboBox` objeto en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a `Create`, que crea el cuadro combinado de Windows y lo adjunta a la `CComboBox` objeto.  
   
- Cuando **crear** se ejecuta, Windows envía la [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), y [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) mensajes al cuadro combinado.  
+ Cuando `Create` se ejecuta, Windows envía la [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), y [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) mensajes en el cuadro combinado.  
   
  Estos mensajes se controlan de manera predeterminada el [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), y [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) funciones miembro en la `CWnd` clase base. Para extender el control de mensajes de forma predeterminada, derive una clase de `CComboBox`, agregue un mapa de mensajes a la nueva clase y reemplazan las funciones de miembro anterior de controlador de mensajes. Invalidar `OnCreate`, por ejemplo, para realizar la inicialización necesaria para una nueva clase.  
   
@@ -428,7 +428,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpDeleteItemStruct`  
+ *lpDeleteItemStruct*  
  Un puntero largo a una ventana de [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) estructura que contiene información sobre el elemento eliminado. Vea [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) para obtener una descripción de esta estructura.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -438,21 +438,21 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
  [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
 ##  <a name="deletestring"></a>  CComboBox::DeleteString  
- Elimina el elemento en la posición `nIndex` en el cuadro combinado.  
+ Elimina el elemento en la posición *nIndex* en el cuadro combinado.  
   
 ```  
 int DeleteString(UINT nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Especifica el índice de la cadena que se va a eliminar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si el valor devuelto es mayor o igual que 0, es un recuento de las cadenas permanecen en la lista. El valor devuelto es **CB_ERR** si `nIndex` especifica un índice mayor que el número de elementos en la lista.  
+ Si el valor devuelto es mayor o igual que 0, es un recuento de las cadenas permanecen en la lista. El valor devuelto es **CB_ERR** si *nIndex* especifica un índice mayor que el número de elementos en la lista.  
   
 ### <a name="remarks"></a>Comentarios  
- Todos los elementos que siguen a `nIndex` ahora Bajar una posición. Por ejemplo, si un cuadro combinado contiene dos elementos, eliminar el primer elemento hará que el resto de producto esté ahora en la primera posición. `nIndex`= 0 para el elemento en la primera posición.  
+ Todos los elementos que siguen a *nIndex* ahora Bajar una posición. Por ejemplo, si un cuadro combinado contiene dos elementos, eliminar el primer elemento hará que el resto de producto esté ahora en la primera posición. *nIndex*= 0 para el elemento en la primera posición.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
@@ -467,8 +467,8 @@ int Dir(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `attr`  
- Puede ser cualquier combinación de la `enum` describen los valores de [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus) o cualquier combinación de los siguientes valores:  
+ *attr*  
+ Puede ser cualquier combinación de la **enum** describen los valores de [CFile:: GetStatus](../../mfc/reference/cfile-class.md#getstatus) o cualquier combinación de los siguientes valores:  
   
 - **DDL_READWRITE** puede ser de lectura o escrito al archivo.  
   
@@ -478,15 +478,15 @@ int Dir(
   
 - **DDL_SYSTEM** archivo es un archivo de sistema.  
   
-- **DDL_DIRECTORY** el nombre especificado por `lpszWildCard` especifica un directorio.  
+- **DDL_DIRECTORY** el nombre especificado por *lpszWildCard* especifica un directorio.  
   
 - **DDL_ARCHIVE** archivo se ha archivado.  
   
-- **DDL_DRIVES** incluyen todas las unidades que coinciden con el nombre especificado por `lpszWildCard`.  
+- **DDL_DRIVES** incluyen todas las unidades que coinciden con el nombre especificado por *lpszWildCard*.  
   
 - **DDL_EXCLUSIVE** indicador Exclusive. Si se establece la marca exclusiva, se muestran solo los archivos del tipo especificado. En caso contrario, los archivos del tipo especificado se enumeran además de archivos "normales".  
   
- `lpszWildCard`  
+ *lpszWildCard*  
  Apunta a una cadena de especificación de archivo. La cadena puede contener caracteres comodín (por ejemplo, *.\*).  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -506,13 +506,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Un puntero a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estructura que contiene información sobre el tipo de dibujo necesaria.  
   
 ### <a name="remarks"></a>Comentarios  
  El **itemAction** miembro de la `DRAWITEMSTRUCT` estructura define la acción de dibujo que va a realizarse. Vea [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para obtener una descripción de esta estructura.  
   
- De forma predeterminada, esta función miembro no hace nada. Reemplace esta función miembro para implementar el dibujo de un dibujado por el propietario `CComboBox` objeto. Antes de que finalice esta función miembro, la aplicación debe restaurar todos los objetos de interfaz (GDI) de dispositivo de gráficos seleccionados para proporciona el contexto de presentación en `lpDrawItemStruct`.  
+ De forma predeterminada, esta función miembro no hace nada. Reemplace esta función miembro para implementar el dibujo de un dibujado por el propietario `CComboBox` objeto. Antes de que finalice esta función miembro, la aplicación debe restaurar todos los objetos de interfaz (GDI) de dispositivo de gráficos seleccionados para proporciona el contexto de presentación en *lpDrawItemStruct*.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
@@ -527,10 +527,10 @@ int FindString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nStartAfter`  
- Contiene el índice basado en cero del elemento situado delante del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hacia el elemento especificado por `nStartAfter`. Si es-1, el cuadro de lista todo se busca desde el principio.  
+ *nStartAfter*  
+ Contiene el índice basado en cero del elemento situado delante del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hacia el elemento especificado por *nStartAfter*. Si es-1, el cuadro de lista todo se busca desde el principio.  
   
- `lpszString`  
+ *lpszString*  
  Apunta a la cadena terminada en null que contiene el prefijo que se va a buscar. La búsqueda no distingue mayúsculas independiente, por lo que esta cadena puede contener cualquier combinación de letras mayúsculas y minúsculas.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -543,7 +543,7 @@ int FindString(
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
 ##  <a name="findstringexact"></a>  CComboBox::FindStringExact  
- Llame a la `FindStringExact` función de miembro para encontrar la primera cadena de cuadro de lista (en un cuadro combinado) que coincida con la cadena especificada en `lpszFind`.  
+ Llame a la `FindStringExact` función de miembro para encontrar la primera cadena de cuadro de lista (en un cuadro combinado) que coincida con la cadena especificada en *lpszFind*.  
   
 ```  
 int FindStringExact(
@@ -552,17 +552,17 @@ int FindStringExact(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndexStart`  
- Especifica el índice basado en cero del elemento situado delante del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hacia el elemento especificado por `nIndexStart`. Si `nIndexStart` es -1, se busca en el cuadro de lista todo desde el principio.  
+ *nIndexStart*  
+ Especifica el índice basado en cero del elemento situado delante del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hacia el elemento especificado por *nIndexStart*. Si *nIndexStart* es -1, se busca en el cuadro de lista todo desde el principio.  
   
- `lpszFind`  
+ *lpszFind*  
  Apunta a la cadena terminada en null que se buscará. Esta cadena puede contener un nombre de archivo completo, incluida la extensión. La búsqueda no distingue entre mayúsculas y minúsculas, por lo que esta cadena puede contener cualquier combinación de letras mayúsculas y minúsculas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero del elemento coincidente, o **CB_ERR** si la búsqueda se realizó correctamente.  
   
 ### <a name="remarks"></a>Comentarios  
- Si el cuadro combinado se creó con un estilo de dibujo del propietario pero sin la [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo, `FindStringExact` intenta hacer coincidir el valor de palabra doble con respecto al valor de `lpszFind`.  
+ Si el cuadro combinado se creó con un estilo de dibujo del propietario pero sin la [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo, `FindStringExact` intenta hacer coincidir el valor de palabra doble con respecto al valor de *lpszFind*.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
@@ -612,13 +612,13 @@ BOOL GetCueBanner(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[out] `lpszText`|Puntero a un búfer que recibe el texto de titular de indicación.|  
-|[in] `cchText`|Tamaño del búfer que el `lpszText` parámetro señala.|  
+|[out] *lpszText*|Puntero a un búfer que recibe el texto de titular de indicación.|  
+|[in] *cchText*|Tamaño del búfer que el *lpszText* parámetro señala.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  En la primera sobrecarga, un [CString](../../atl-mfc-shared/using-cstring.md) objeto que contiene el texto de titular de indicación de si existe; en caso contrario, un `CString` objeto que tiene una longitud cero.  
   
- -o bien-  
+ O bien  
   
  En la segunda sobrecarga, `true` si este método es correcto; en caso contrario, `false`.  
   
@@ -747,14 +747,14 @@ DWORD_PTR GetItemData(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Contiene el índice de base cero de un elemento de cuadro de lista del cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El valor de 32 bits asociado con el elemento, o **CB_ERR** si se produce un error.  
   
 ### <a name="remarks"></a>Comentarios  
- El valor de 32 bits se puede establecer con el `dwItemData` parámetro de un [SetItemData](#setitemdata) llamada a función miembro. Use la `GetItemDataPtr` función de miembro si el valor de 32 bits que se va a recuperar un puntero ( **void\***).  
+ El valor de 32 bits se puede establecer con el *dwItemData* parámetro de un [SetItemData](#setitemdata) llamada a función miembro. Use la `GetItemDataPtr` función de miembro si el valor de 32 bits que se va a recuperar un puntero ( **void\***).  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
@@ -767,7 +767,7 @@ void* GetItemDataPtr(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Contiene el índice de base cero de un elemento de cuadro de lista del cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -784,8 +784,8 @@ int GetItemHeight(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
- Especifica el componente del cuadro combinado cuyo alto es va a recuperar. Si el `nIndex` parámetro es -1, se recupera el alto de la parte de control de edición (o texto estático) del cuadro combinado. Si el cuadro combinado tiene la [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo, `nIndex` especifica el índice de base cero del elemento de lista cuyo alto es va a recuperar. En caso contrario, `nIndex` debe establecerse en 0.  
+ *nIndex*  
+ Especifica el componente del cuadro combinado cuyo alto es va a recuperar. Si el *nIndex* parámetro es -1, se recupera el alto de la parte de control de edición (o texto estático) del cuadro combinado. Si el cuadro combinado tiene la [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo, *nIndex* especifica el índice de base cero del elemento de lista cuyo alto es va a recuperar. En caso contrario, *nIndex* debe establecerse en 0.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El alto, en píxeles, del elemento especificado en un cuadro combinado. El valor devuelto es **CB_ERR** si se produce un error.  
@@ -807,17 +807,17 @@ void GetLBText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Contiene el índice de base cero de la cadena del cuadro de lista que se copiará.  
   
- `lpszText`  
+ *lpszText*  
  Señala a un búfer que va a recibir la cadena. El búfer debe tener espacio suficiente para la cadena y un carácter nulo de terminación.  
   
- `rString`  
+ *rString*  
  Una referencia a un `CString`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La longitud (en bytes) de la cadena, sin incluir el carácter nulo de terminación. Si `nIndex` no especifica un índice válido, el valor devuelto es **CB_ERR**.  
+ La longitud (en bytes) de la cadena, sin incluir el carácter nulo de terminación. Si *nIndex* no especifica un índice válido, el valor devuelto es **CB_ERR**.  
   
 ### <a name="remarks"></a>Comentarios  
  La segunda forma de este miembro de función rellena un `CString` objeto con el texto del elemento.  
@@ -833,11 +833,11 @@ int GetLBTextLen(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Contiene el índice de base cero de la cadena del cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La longitud de la cadena en bytes, sin incluir el carácter nulo de terminación. Si `nIndex` no especifica un índice válido, el valor devuelto es **CB_ERR**.  
+ La longitud de la cadena en bytes, sin incluir el carácter nulo de terminación. Si *nIndex* no especifica un índice válido, el valor devuelto es **CB_ERR**.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CComboBox::GetLBText](#getlbtext).  
@@ -897,10 +897,10 @@ int InitStorage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nItems`  
+ *nItems*  
  Especifica el número de elementos que se va a agregar.  
   
- `nBytes`  
+ *nBytes*  
  Especifica la cantidad de memoria, en bytes, que se asignan para las cadenas de elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -909,7 +909,7 @@ int InitStorage(
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función antes de agregar un gran número de elementos a la parte de cuadro de lista de los `CComboBox`.  
   
- Windows 95 ó 98 sólo: el `wParam` parámetro está limitado a los valores de 16 bits. Esto significa que los cuadros de lista no pueden contener más de 32.767 elementos. Aunque el número de elementos está restringido, el tamaño total de los elementos de un cuadro de lista está limitado únicamente por la memoria disponible.  
+ Windows 95 ó 98 sólo: el *wParam* parámetro está limitado a los valores de 16 bits. Esto significa que los cuadros de lista no pueden contener más de 32.767 elementos. Aunque el número de elementos está restringido, el tamaño total de los elementos de un cuadro de lista está limitado únicamente por la memoria disponible.  
   
  Esta función le ayuda a acelerar la inicialización de los cuadros de lista que tiene un gran número de elementos (más de 100). Preasigna la cantidad especificada de memoria para que las siguientes [AddString](#addstring), [InsertString](#insertstring), y [Dir](#dir) funciones toman el menor tiempo posible. Puede utilizar las estimaciones para los parámetros. Si sobrestimar, se asigna memoria adicional; Si subestimar, la asignación normal se usa para los elementos que superan la cantidad preasignada.  
   
@@ -926,10 +926,10 @@ int InsertString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Contiene el índice de base cero de la posición en el cuadro de lista que recibirá la cadena. Si este parámetro es -1, la cadena se agrega al final de la lista.  
   
- `lpszString`  
+ *lpszString*  
  Apunta a la cadena terminada en null que se va a insertar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -952,7 +952,7 @@ BOOL LimitText(int nMaxChars);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nMaxChars`  
+ *nMaxChars*  
  Especifica la longitud (en bytes) del texto que el usuario puede escribir. Si este parámetro es 0, se establece la longitud del texto a 65.535 bytes.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -974,7 +974,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  Un puntero largo a una [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) estructura.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1020,10 +1020,10 @@ int SelectString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nStartAfter`  
- Contiene el índice basado en cero del elemento situado delante del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hacia el elemento especificado por `nStartAfter`. Si es-1, el cuadro de lista todo se busca desde el principio.  
+ *nStartAfter*  
+ Contiene el índice basado en cero del elemento situado delante del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hacia el elemento especificado por *nStartAfter*. Si es-1, el cuadro de lista todo se busca desde el principio.  
   
- `lpszString`  
+ *lpszString*  
  Apunta a la cadena terminada en null que contiene el prefijo que se va a buscar. La búsqueda no distingue mayúsculas independiente, por lo que esta cadena puede contener cualquier combinación de letras mayúsculas y minúsculas.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1059,7 +1059,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
  Este método envía el [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) mensaje, que se describe en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se define la variable `m_combobox`, que se usa para obtener acceso mediante programación el control de cuadro combinado. Esta variable se utiliza en el siguiente ejemplo.  
+ En el ejemplo de código siguiente se define la variable *m_combobox*, que se usa para obtener acceso mediante programación el control de cuadro combinado. Esta variable se utiliza en el siguiente ejemplo.  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1076,11 +1076,11 @@ int SetCurSel(int nSelect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nSelect`  
+ *Seleccione*  
  Especifica el índice de base cero de la cadena para seleccionar. Si es-1, se quita cualquier selección actual en el cuadro de lista y se borra el control de edición.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Índice de base cero del elemento seleccionado si el mensaje es correcto. El valor devuelto es **CB_ERR** si `nSelect` es mayor que el número de elementos de la lista o si `nSelect` se establece en -1, que borra la selección.  
+ Índice de base cero del elemento seleccionado si el mensaje es correcto. El valor devuelto es **CB_ERR** si *seleccione* es mayor que el número de elementos de la lista o si *seleccione* se establece en -1, que borra la selección.  
   
 ### <a name="remarks"></a>Comentarios  
  Si es necesario, el cuadro de lista desplaza la cadena en la vista (si el cuadro de lista está visible). El texto en el control de edición del cuadro combinado se cambia para reflejar la nueva selección. Se quita cualquier selección anterior en el cuadro de lista.  
@@ -1096,7 +1096,7 @@ int SetDroppedWidth(UINT nWidth);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nWidth`  
+ *nWidth*  
  El ancho mínimo permitido de la parte de cuadro de lista del cuadro combinado, en píxeles.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1120,10 +1120,10 @@ BOOL SetEditSel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nStartChar`  
+ *nStartChar*  
  Especifica la posición inicial. Si la posición de inicio se establece en -1, se quita cualquier selección existente.  
   
- `nEndChar`  
+ *nEndChar*  
  Especifica la posición final. Si la posición final se establece en -1, a continuación, todo el texto desde la posición de inicio hasta el último carácter en el control de edición está seleccionada.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1191,10 +1191,10 @@ int SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Contiene un índice de base cero para el elemento que se va a establecer.  
   
- `dwItemData`  
+ *dwItemData*  
  Contiene el nuevo valor para asociar al elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1216,10 +1216,10 @@ int SetItemDataPtr(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Contiene un índice de base cero del elemento.  
   
- `pData`  
+ *pData*  
  Contiene el puntero a asociar al elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1241,15 +1241,15 @@ int SetItemHeight(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Especifica si se ha establecido el alto de los elementos de lista o el alto de la parte de control de edición (o texto estático) del cuadro combinado.  
   
- Si el cuadro combinado tiene la [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo, `nIndex` especifica el índice de base cero del elemento de lista cuyo alto se va a ser; de lo contrario, `nIndex` debe ser 0 y el alto de la lista de todos los elementos que se establecerá.  
+ Si el cuadro combinado tiene la [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo, *nIndex* especifica el índice de base cero del elemento de lista cuyo alto se va a ser; de lo contrario, *nIndex* debe ser 0 y se establecerá el alto de todos los elementos de lista.  
   
- Si `nIndex` es -1, el alto del control de edición o parte de texto estático de un cuadro combinado que se va a establecer.  
+ Si *nIndex* es -1, el alto del control de edición o parte de texto estático de un cuadro combinado que se va a establecer.  
   
- `cyItemHeight`  
- Especifica el alto, en píxeles, del componente de cuadro combinado identificado por `nIndex`.  
+ *cyItemHeight*  
+ Especifica el alto, en píxeles, del componente de cuadro combinado identificado por *nIndex*.  
   
 ### <a name="return-value"></a>Valor devuelto  
  **CB_ERR** si el índice o el alto es válido; en caso contrario, 0.  
@@ -1268,7 +1268,7 @@ LCID SetLocale(LCID nNewLocale);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nNewLocale`  
+ *nNewLocale*  
  El nuevo valor de identificador (LCID) de configuración regional para establecer para el cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `iMinVisible`|Especifica el número mínimo de elementos visibles.|  
+|[in] *iMinVisible*|Especifica el número mínimo de elementos visibles.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si este método se realiza correctamente; en caso contrario, `false`.  
@@ -1300,7 +1300,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  Este método envía el [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) mensaje, que se describe en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se define la variable `m_combobox`, que se usa para obtener acceso mediante programación el control de cuadro combinado. Esta variable se utiliza en el siguiente ejemplo.  
+ En el ejemplo de código siguiente se define la variable *m_combobox*, que se usa para obtener acceso mediante programación el control de cuadro combinado. Esta variable se utiliza en el siguiente ejemplo.  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1317,14 +1317,14 @@ int SetTopIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Especifica el índice de base cero del elemento de cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Cero si es correcto, o **CB_ERR** si se produce un error.  
   
 ### <a name="remarks"></a>Comentarios  
- El sistema desplaza el cuadro de lista hasta que el elemento o especificado por `nIndex` aparece en la parte superior de la lista se ha alcanzado cuadro o el intervalo de desplazamiento máximo.  
+ El sistema desplaza el cuadro de lista hasta que el elemento o especificado por *nIndex* aparece en la parte superior de la lista se ha alcanzado cuadro o el intervalo de desplazamiento máximo.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  

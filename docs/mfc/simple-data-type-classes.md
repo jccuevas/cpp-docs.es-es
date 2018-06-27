@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d7f200ee35489f37256023d28bdd3260bf48ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 176ad940e95fbbf18e4ea86800111b483ee32135
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382481"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953601"
 ---
 # <a name="simple-data-type-classes"></a>Clases de tipos de datos simples
-Las clases siguientes encapsulan dibujo coordenadas, cadenas de caracteres y la hora y la información de fecha, lo que permite cómodo usar sintaxis de C++. Estos objetos se utilizan ampliamente como parámetros a las funciones miembro de clases de Windows en la biblioteca de clases. Dado que `CPoint`, `CSize`, y `CRect` corresponden a la **punto**, **tamaño**, y `RECT` las estructuras, respectivamente, en el SDK de Windows, puede utilizar objetos de estos Siempre que pueda utilizar estas estructuras del lenguaje C, las clases C++. Las clases proporcionan interfaces útiles a través de sus funciones miembro. `CStringT` proporciona las cadenas de caracteres dinámica muy flexible. `CTime`, `COleDateTime`, `CTimeSpan`, y **COleTimeSpan** representan valores de fecha y hora. Para obtener más información sobre estas clases, vea el artículo [fecha y hora](../atl-mfc-shared/date-and-time.md).  
+Las clases siguientes encapsulan dibujo coordenadas, cadenas de caracteres y la hora y la información de fecha, lo que permite cómodo usar sintaxis de C++. Estos objetos se utilizan ampliamente como parámetros a las funciones miembro de clases de Windows en la biblioteca de clases. Dado que `CPoint`, `CSize`, y `CRect` corresponden a la **punto**, **tamaño**, y **RECT** estructuras, respectivamente, en el SDK de Windows Puede utilizar objetos de estas clases de C++ siempre que pueda utilizar estas estructuras del lenguaje C. Las clases proporcionan interfaces útiles a través de sus funciones miembro. `CStringT` proporciona las cadenas de caracteres dinámica muy flexible. `CTime`, `COleDateTime`, `CTimeSpan`, y `COleTimeSpan` representan valores de fecha y hora. Para obtener más información sobre estas clases, vea el artículo [fecha y hora](../atl-mfc-shared/date-and-time.md).  
   
- Las clases que comienzan por "**COle**" son encapsulaciones de tipos de datos proporcionados por OLE. Estos tipos de datos se pueden utilizar en programas de Windows, independientemente de si se utilizan otras características OLE.  
+ Las clases que comienzan por "`COle`" son encapsulaciones de tipos de datos proporcionados por OLE. Estos tipos de datos se pueden utilizar en programas de Windows, independientemente de si se utilizan otras características OLE.  
   
  [CStringT (clase)](../atl-mfc-shared/reference/cstringt-class.md)  
  Contiene las cadenas de caracteres.  

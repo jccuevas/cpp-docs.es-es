@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b15d604670ec1c458c6ca8db5b3b4eab51fb8f65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5fb6e03e521b52e47b3c8853e2f6aa632614c55
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371548"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953406"
 ---
 # <a name="ceditview-class"></a>Clase CEditView
 Un tipo de clase de vista que proporciona la funcionalidad de un control de edición de Windows y se puede utilizar para implementar funcionalidad de editor de texto simple.  
@@ -103,7 +103,7 @@ class CEditView : public CCtrlView
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CEditView::dwStyleDefault](#dwstyledefault)|Estilo predeterminado para objetos de tipo **CEditView.**|  
+|[CEditView::dwStyleDefault](#dwstyledefault)|Estilo predeterminado para objetos de tipo `CEditView`.|  
   
 ## <a name="remarks"></a>Comentarios  
  La `CEditView` clase proporciona las siguientes funciones adicionales:  
@@ -160,7 +160,7 @@ CEditView();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Después de crear el objeto, se debe llamar a la [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) función antes de que se usa el control de edición. Si se deriva una clase de `CEditView` y lo agrega a la plantilla desde `CWinApp::AddDocTemplate`, el marco de trabajo llama a este constructor de ambos y **crear** (función).  
+ Después de crear el objeto, se debe llamar a la [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) función antes de que se usa el control de edición. Si se deriva una clase de `CEditView` y lo agrega a la plantilla desde `CWinApp::AddDocTemplate`, el marco de trabajo llama a este constructor de ambos y `Create` (función).  
   
 ##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
  Contiene el estilo predeterminado de la `CEditView` objeto.  
@@ -170,7 +170,7 @@ static const DWORD dwStyleDefault;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Pasar este miembro estático como el `dwStyle` parámetro de la **crear** función para obtener el estilo predeterminado para el `CEditView` objeto.  
+ Pasar este miembro estático como el `dwStyle` parámetro de la `Create` función para obtener el estilo predeterminado para el `CEditView` objeto.  
   
 ##  <a name="findtext"></a>  CEditView::FindText  
  Llame a la `FindText` función para buscar el `CEditView` búfer de texto del objeto.  
@@ -183,20 +183,20 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFind`  
+ *lpszFind*  
  El texto que se encuentra.  
   
- `bNext`  
+ *bSiguiente*  
  Especifica la dirección de la búsqueda. Si **TRUE**, la dirección de búsqueda es hacia el final del búfer. Si **FALSE**, la dirección de búsqueda es hacia el principio del búfer.  
   
- `bCase`  
+ *bCase*  
  Especifica si la búsqueda distingue entre mayúsculas y minúsculas. Si **TRUE**, la búsqueda no distingue entre mayúsculas y minúsculas. Si **FALSE**, la búsqueda no distingue entre mayúsculas y minúsculas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si se encuentra el texto de búsqueda; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función busca en el texto en el búfer para el texto especificado por `lpszFind`, empezando por la selección actual, en la dirección especificada por `bNext`y entre mayúsculas y minúsculas especificados por `bCase`. Si se encuentra el texto, la selección se establece en el texto se encuentra y devuelve un valor distinto de cero. Si no se encuentra el texto, la función devuelve 0.  
+ Esta función busca en el texto en el búfer para el texto especificado por *lpszFind*, empezando por la selección actual, en la dirección especificada por *bSiguiente*y entre mayúsculas y minúsculas especificada por *bCase*. Si se encuentra el texto, la selección se establece en el texto se encuentra y devuelve un valor distinto de cero. Si no se encuentra el texto, la función devuelve 0.  
   
  Normalmente no es necesario llamar a la `FindText` función a menos que invalide `OnFindNext`, que llama `FindText`.  
   
@@ -252,7 +252,7 @@ void GetSelectedText(CString& strResult) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `strResult`  
+ *strResult*  
  Una referencia a la `CString` objeto que va a recibir el texto seleccionado.  
   
 ##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
@@ -266,7 +266,7 @@ LPCTSTR LockBuffer() const;
  Un puntero al búfer del control de edición.  
   
 ##  <a name="onfindnext"></a>  CEditView::OnFindNext  
- Busca el texto en el búfer para el texto especificado por `lpszFind`, en la dirección especificada por `bNext`, con mayúsculas y minúsculas especificados por `bCase`.  
+ Busca el texto en el búfer para el texto especificado por *lpszFind*, en la dirección especificada por *bSiguiente*, con mayúsculas y minúsculas especificada por *bCase*.  
   
 ```  
 virtual void OnFindNext(
@@ -276,13 +276,13 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFind`  
+ *lpszFind*  
  El texto que se encuentra.  
   
- `bNext`  
+ *bSiguiente*  
  Especifica la dirección de la búsqueda. Si **TRUE**, la dirección de búsqueda es hacia el final del búfer. Si **FALSE**, la dirección de búsqueda es hacia el principio del búfer.  
   
- `bCase`  
+ *bCase*  
  Especifica si la búsqueda distingue entre mayúsculas y minúsculas. Si **TRUE**, la búsqueda no distingue entre mayúsculas y minúsculas. Si **FALSE**, la búsqueda no distingue entre mayúsculas y minúsculas.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -301,19 +301,19 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFind`  
+ *lpszFind*  
  El texto que se encuentra.  
   
- `lpszReplace`  
+ *lpszReplace*  
  El texto que reemplazará el texto de búsqueda.  
   
- `bCase`  
+ *bCase*  
  Especifica si la búsqueda distingue mayúsculas de minúsculas. Si **TRUE**, la búsqueda no distingue entre mayúsculas y minúsculas. Si **FALSE**, la búsqueda no distingue entre mayúsculas y minúsculas.  
   
 ### <a name="remarks"></a>Comentarios  
- `OnReplaceAll` busca el texto en el búfer para el texto especificado por `lpszFind`, con mayúsculas y minúsculas especificados por `bCase`. La búsqueda comienza al principio de la selección actual. Cada vez que se encuentra el texto de búsqueda, esta función reemplaza esa aparición del texto con el texto especificado por `lpszReplace`. La búsqueda se logra a través de una llamada a [FindText](#findtext). En la implementación predeterminada, [OnTextNotFound](#ontextnotfound) se llama si no se encuentra el texto.  
+ `OnReplaceAll` busca el texto en el búfer para el texto especificado por *lpszFind*, con mayúsculas y minúsculas especificada por *bCase*. La búsqueda comienza al principio de la selección actual. Cada vez que se encuentra el texto de búsqueda, esta función reemplaza esa aparición del texto con el texto especificado por *lpszReplace*. La búsqueda se logra a través de una llamada a [FindText](#findtext). En la implementación predeterminada, [OnTextNotFound](#ontextnotfound) se llama si no se encuentra el texto.  
   
- Si la selección actual no coincide con `lpszFind`, se actualiza la selección a la primera aparición del texto especificado por `lpszFind` y no se realiza un reemplazo. Esto permite al usuario confirmar que esto es lo desean hacer cuando la selección no coincide con el texto que se debe reemplazar.  
+ Si la selección actual no coincide con *lpszFind*, se actualiza la selección a la primera aparición del texto especificado por *lpszFind* y no se realiza un reemplazo. Esto permite al usuario confirmar que esto es lo desean hacer cuando la selección no coincide con el texto que se debe reemplazar.  
   
  Invalidar `OnReplaceAll` para cambiar la forma en que un `CEditView`-objeto derivado reemplaza el texto.  
   
@@ -329,20 +329,20 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFind`  
+ *lpszFind*  
  El texto que se encuentra.  
   
- `bNext`  
+ *bSiguiente*  
  Especifica la dirección de la búsqueda. Si **TRUE**, la dirección de búsqueda es hacia el final del búfer. Si **FALSE**, la dirección de búsqueda es hacia el principio del búfer.  
   
- `bCase`  
+ *bCase*  
  Especifica si la búsqueda distingue entre mayúsculas y minúsculas. Si **TRUE**, la búsqueda no distingue entre mayúsculas y minúsculas. Si **FALSE**, la búsqueda no distingue entre mayúsculas y minúsculas.  
   
- `lpszReplace`  
+ *lpszReplace*  
  El texto que reemplazará el texto encontrado.  
   
 ### <a name="remarks"></a>Comentarios  
- Después de reemplazar la selección, esta función busca en el búfer para la siguiente repetición del texto especificado por el texto `lpszFind`, en la dirección especificada por `bNext`, con mayúsculas y minúsculas especificados por `bCase`. La búsqueda se logra a través de una llamada a [FindText](#findtext). Si no se encuentra el texto, [OnTextNotFound](#ontextnotfound) se llama.  
+ Después de reemplazar la selección, esta función busca en el búfer para la siguiente repetición del texto especificado por el texto *lpszFind*, en la dirección especificada por *bSiguiente*, con distinción de mayúscula y minúsculas especificado por *bCase*. La búsqueda se logra a través de una llamada a [FindText](#findtext). Si no se encuentra el texto, [OnTextNotFound](#ontextnotfound) se llama.  
   
  Invalidar `OnReplaceSel` para cambiar la forma en que un `CEditView`-objeto derivado reemplaza el texto seleccionado.  
   
@@ -354,7 +354,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFind`  
+ *lpszFind*  
  El texto que se encuentra.  
   
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
@@ -369,16 +369,16 @@ UINT PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Puntero al contexto de dispositivo de impresora.  
   
  *rectLayout*  
  Referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [estructura RECT](../../mfc/reference/rect-structure1.md) especifica el rectángulo en el que es el texto que se representará.  
   
- `nIndexStart`  
+ *nIndexStart*  
  Índice en el búfer del primer carácter que se representará.  
   
- `nIndexStop`  
+ *nIndexStop*  
  Índice en el búfer del carácter siguiente al último carácter que se representará.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -397,21 +397,21 @@ void SerializeRaw(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ar`  
+ *ar*  
  Referencia a la `CArchive` objeto que almacena el texto serializado.  
   
 ### <a name="remarks"></a>Comentarios  
  `SerializeRaw` difiere de `CEditView`de implementación interna de `Serialize` en que se lee y escribe sólo el texto, sin anteponer datos de la descripción del objeto.  
   
 ##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont  
- Llame a `SetPrinterFont` para establecer la fuente de la impresora para la fuente especificada por `pFont`.  
+ Llame a `SetPrinterFont` para establecer la fuente de la impresora para la fuente especificada por *pFont*.  
   
 ```  
 void SetPrinterFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pFont`  
+ *pFont*  
  Un puntero a un objeto de tipo `CFont`. Si **NULL**, la fuente utilizada para la impresión se basa en la fuente de pantalla.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -425,7 +425,7 @@ void SetTabStops(int nTabStops);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nTabStops`  
+ *nTabStops*  
  Ancho de cada tabulación, en unidades de cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  

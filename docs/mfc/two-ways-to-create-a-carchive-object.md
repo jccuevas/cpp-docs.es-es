@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba1596e1dd114dcd46610b824405740a783c21e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386124"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954798"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dos maneras de crear un objeto CArchive
 Hay dos maneras de crear un `CArchive` objeto:  
@@ -48,7 +48,7 @@ Hay dos maneras de crear un `CArchive` objeto:
   
 3.  Crea un `CArchive` objeto que apunta a este `CFile` objeto. En la creación de la `CArchive` del objeto, el marco de trabajo establece el modo de "store" (escribir, serializar), en lugar de "carga" (lectura, deserializar).  
   
-4.  Llamadas a la `Serialize` función definida en su **CDocument**-clase derivada, pasando una referencia a la `CArchive` objeto.  
+4.  Llamadas a la `Serialize` función definida en su `CDocument`-clase derivada, pasando una referencia a la `CArchive` objeto.  
   
  El documento `Serialize` función, a continuación, escribe datos en el `CArchive` de objeto, como se explica en breve. Tras la devolución de su `Serialize` función, el marco de trabajo destruye el `CArchive` objeto y, a continuación, el `CFile` objeto.  
   

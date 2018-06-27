@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f36dae3c383aebedf7e8340188e78961066a30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ae7748c249cb9c7752b55d07bf10278c9c7f4ce
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374619"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955019"
 ---
 # <a name="cdialog-class"></a>CDialog (clase)
 La clase base utilizada para mostrar cuadros de diálogo en la pantalla.  
@@ -97,7 +97,7 @@ class CDialog : public CWnd
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CDialog::OnCancel](#oncancel)|Reemplace este valor para realizar el botón Cancelar o la acción de la tecla ESC. El valor predeterminado cierra el cuadro de diálogo y **DoModal** devuelve **IDCANCEL**.|  
+|[CDialog::OnCancel](#oncancel)|Reemplace este valor para realizar el botón Cancelar o la acción de la tecla ESC. El valor predeterminado cierra el cuadro de diálogo y `DoModal` devuelve **IDCANCEL**.|  
 |[CDialog::OnOK](#onok)|Reemplace este valor para realizar la acción del botón Aceptar en el cuadro de diálogo modal. El valor predeterminado cierra el cuadro de diálogo y `DoModal` devuelve **IDOK**.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -113,7 +113,7 @@ class CDialog : public CWnd
   
  Se genera un mapa de datos para controlar automáticamente el intercambio de datos entre las variables de miembro y los controles del cuadro de diálogo. La asignación de datos proporciona funciones que inicialice los controles en el cuadro de diálogo con los valores adecuados, recuperan los datos y validan los datos.  
   
- Para crear un cuadro de diálogo modal, construya un objeto en la pila utilizando el constructor para la clase de cuadro de diálogo derivada y, a continuación, llame a `DoModal` para crear el cuadro de diálogo y sus controles. Si desea crear un cuadro de diálogo no modal, llame a **crear** en el constructor de la clase de cuadro de diálogo.  
+ Para crear un cuadro de diálogo modal, construya un objeto en la pila utilizando el constructor para la clase de cuadro de diálogo derivada y, a continuación, llame a `DoModal` para crear el cuadro de diálogo y sus controles. Si desea crear un cuadro de diálogo no modal, llame a `Create` en el constructor de la clase de cuadro de diálogo.  
   
  También puede crear una plantilla en la memoria mediante una [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) estructura de datos, como se describe en el SDK de Windows. Después de crear un `CDialog` objeto, llame a [CreateIndirect](#createindirect) para crear un no modal cuadro de diálogo o llamada [InitModalIndirect](#initmodalindirect) y [DoModal](#domodal) para crear un estado modal cuadro de diálogo.  
   
@@ -166,13 +166,13 @@ CDialog();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contiene una cadena terminada en null que es el nombre de un recurso de plantilla de cuadro de diálogo.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contiene el número de identificación de un recurso de plantilla de cuadro de diálogo.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Señala al objeto de ventana primaria o propietaria (de tipo [CWnd](../../mfc/reference/cwnd-class.md)) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, ventana primaria del objeto de cuadro de diálogo se establece en la ventana de la aplicación principal.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -182,10 +182,10 @@ CDialog();
   
  Después de crear un cuadro de diálogo modal con uno de los métodos anteriores, llame a `DoModal`.  
   
- Para construir un cuadro de diálogo no modales, utilice el formato protegido de la `CDialog` constructor. El constructor está protegido porque debe derivar su propia clase de cuadro de diálogo para implementar un cuadro de diálogo no modal. Construcción de un cuadro de diálogo no modal es un proceso de dos pasos. Llame primero al constructor; a continuación, llame a la **crear** función de miembro para crear un cuadro de diálogo basada en recursos, o llamar a `CreateIndirect` para crear el cuadro de diálogo desde una plantilla en la memoria.  
+ Para construir un cuadro de diálogo no modales, utilice el formato protegido de la `CDialog` constructor. El constructor está protegido porque debe derivar su propia clase de cuadro de diálogo para implementar un cuadro de diálogo no modal. Construcción de un cuadro de diálogo no modal es un proceso de dos pasos. Llame primero al constructor; a continuación, llame a la `Create` función de miembro para crear un cuadro de diálogo basada en recursos, o llamar a `CreateIndirect` para crear el cuadro de diálogo desde una plantilla en la memoria.  
   
 ##  <a name="create"></a>  CDialog::Create  
- Llame a **crear** para crear un cuadro de diálogo no modal mediante una plantilla de cuadro de diálogo desde un recurso.  
+ Llame a `Create` para crear un cuadro de diálogo no modal mediante una plantilla de cuadro de diálogo desde un recurso.  
   
 ```  
 virtual BOOL Create(
@@ -199,30 +199,30 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contiene una cadena terminada en null que es el nombre de un recurso de plantilla de cuadro de diálogo.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Señala al objeto de ventana primaria (de tipo [CWnd](../../mfc/reference/cwnd-class.md)) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, ventana primaria del objeto de cuadro de diálogo se establece en la ventana de la aplicación principal.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contiene el número de identificación de un recurso de plantilla de cuadro de diálogo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Ambas formas devuelven distinto de cero si la inicialización y la creación de cuadros de diálogo tuvo éxito; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Puede colocar la llamada a **crear** dentro del constructor o llamada se invoca después del constructor.  
+ Puede colocar la llamada a `Create` dentro del constructor o llamada se invoca después del constructor.  
   
- Dos formas de la **crear** función miembro se proporcionan para el acceso al recurso de plantilla de cuadro de diálogo Nombre de la plantilla o número de Id. de plantilla (por ejemplo, IDD_DIALOG1).  
+ Dos formas de la `Create` función miembro se proporcionan para el acceso al recurso de plantilla de cuadro de diálogo Nombre de la plantilla o número de Id. de plantilla (por ejemplo, IDD_DIALOG1).  
   
- Para cualquiera de las formas, pasar un puntero al objeto de ventana primaria. Si `pParentWnd` es **NULL**, el cuadro de diálogo se creará con su ventana primaria o propietaria establecido en la ventana de la aplicación principal.  
+ Para cualquiera de las formas, pasar un puntero al objeto de ventana primaria. Si *pParentWnd* es **NULL**, el cuadro de diálogo se creará con su ventana primaria o propietaria establecido en la ventana de la aplicación principal.  
   
- El **crear** función miembro devuelve inmediatamente después de crear el cuadro de diálogo.  
+ El `Create` función miembro devuelve inmediatamente después de crear el cuadro de diálogo.  
   
  Use la **WS_VISIBLE** aplicar un estilo en la plantilla de cuadro de diálogo si el cuadro de diálogo aparece cuando se crea la ventana primaria. En caso contrario, debe llamar a `ShowWindow`. Para obtener aún más los estilos de cuadro de diálogo y su aplicación, consulte el [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) estructura en el SDK de Windows y [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) en el *referencia de MFC*.  
   
- Use la `CWnd::DestroyWindow` función para destruir un cuadro de diálogo creado por el **crear** función.  
+ Use la `CWnd::DestroyWindow` función para destruir un cuadro de diálogo creado por el `Create` (función).  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
@@ -243,16 +243,16 @@ virtual BOOL CreateIndirect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  Apunta a la memoria que contiene una plantilla de cuadro de diálogo que se utiliza para crear el cuadro de diálogo. Esta plantilla es en forma de un [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) información de estructura y el control, como se describe en el SDK de Windows.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Señala al objeto de ventana primaria del objeto de cuadro de diálogo (de tipo [CWnd](../../mfc/reference/cwnd-class.md)). Si es **NULL**, ventana primaria del objeto de cuadro de diálogo se establece en la ventana de la aplicación principal.  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  Apunta a un **DLGINIT** recursos.  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  Contiene un identificador de memoria global que contiene una plantilla de cuadro de diálogo. Esta plantilla es en forma de un **DLGTEMPLATE** estructura y los datos para cada control en el cuadro de diálogo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un `int` valor que especifica el valor de la `nResult` parámetro que se pasó a la [CDialog::EndDialog](#enddialog) función de miembro, que se utiliza para cerrar el cuadro de diálogo. El valor devuelto es -1 si la función no pudo crear el cuadro de diálogo o **IDABORT** si se ha producido algún otro error, en cuyo caso la ventana de resultados contendrá información de error de [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Un **int** valor que especifica el valor de la *Nresultado* parámetro que se pasó a la [CDialog::EndDialog](#enddialog) función de miembro, que se utiliza para cerrar el cuadro de diálogo. El valor devuelto es -1 si la función no pudo crear el cuadro de diálogo o **IDABORT** si se ha producido algún otro error, en cuyo caso la ventana de resultados contendrá información de error de [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro controla toda la interacción con el usuario mientras el cuadro de diálogo está activo. Esto es lo que hace que el cuadro de diálogo modal; es decir, el usuario no puede interactuar con otras ventanas hasta que se cierra el cuadro de diálogo.  
@@ -296,11 +296,11 @@ void EndDialog(int nResult);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nResult`  
+ *Nresultado*  
  Contiene el valor que se devuelve desde el cuadro de diálogo al llamador del `DoModal`.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro devuelve `nResult` como el valor devuelto de `DoModal`. Debe utilizar el `EndDialog` función para completar el procesamiento cuando se crea un cuadro de diálogo modal.  
+ Esta función miembro devuelve *Nresultado* como el valor devuelto de `DoModal`. Debe utilizar el `EndDialog` función para completar el procesamiento cuando se crea un cuadro de diálogo modal.  
   
  Puede llamar a `EndDialog` en cualquier momento, incluso en [OnInitDialog](#oninitdialog), en cuyo caso debería cerrar el cuadro de diálogo antes de que se muestra o antes de establece el foco de entrada.  
   
@@ -332,11 +332,11 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pWndCtrl`  
+ *pWndCtrl*  
  Identifica la ventana (control) que va a recibir el foco.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener un puntero al control (ventana secundaria) para pasar como `pWndCtrl`, llame a la `CWnd::GetDlgItem` función de miembro, que devuelve un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto.  
+ Para obtener un puntero al control (ventana secundaria) para pasar como *pWndCtrl*, llame a la `CWnd::GetDlgItem` función de miembro, que devuelve un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd:: GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem).  
@@ -357,16 +357,16 @@ BOOL InitModalIndirect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  Apunta a la memoria que contiene una plantilla de cuadro de diálogo que se utiliza para crear el cuadro de diálogo. Esta plantilla es en forma de un [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) información de estructura y el control, como se describe en el SDK de Windows.  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  Contiene un identificador de memoria global que contiene una plantilla de cuadro de diálogo. Esta plantilla es en forma de un **DLGTEMPLATE** estructura y los datos para cada control en el cuadro de diálogo.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Señala al objeto de ventana primaria o propietaria (de tipo [CWnd](../../mfc/reference/cwnd-class.md)) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, ventana primaria del objeto de cuadro de diálogo se establece en la ventana de la aplicación principal.  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  Apunta a un **DLGINIT** recursos.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -385,7 +385,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpRect`  
+ *lpRect*  
  Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) coordina el objeto que contiene el cuadro de diálogo va a convertir.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -393,7 +393,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  El **GetDialogBaseUnits** función de Windows devuelve información de tamaño de la fuente del sistema, pero puede especificar una fuente diferente para cada cuadro de diálogo si usas el **DS_SETFONT** aplicar un estilo en el archivo de definición de recursos. El `MapDialogRect` la función de Windows usa la fuente adecuada para este cuadro de diálogo.  
   
- El `MapDialogRect` función miembro reemplaza las unidades de cuadro de diálogo de `lpRect` con pantalla unidades (píxeles) para que el rectángulo se puede utilizar para crear un cuadro de diálogo o colocar un control dentro de un cuadro.  
+ El `MapDialogRect` función miembro reemplaza las unidades de cuadro de diálogo de *lpRect* con pantalla unidades (píxeles) para que el rectángulo se puede utilizar para crear un cuadro de diálogo o colocar un control dentro de un cuadro.  
   
 ##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
  Mueve el foco al siguiente control en el cuadro de diálogo.  
@@ -472,7 +472,7 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pFont`  
+ [in] *pFont*  
  Especifica un puntero a la fuente que se usará como la fuente predeterminada para todos los controles de cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -501,7 +501,7 @@ void SetDefID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nID`  
+ *nID*  
  Especifica el identificador del control de botón de comando que se convertirá en el valor predeterminado.  
   
 ##  <a name="sethelpid"></a>  CDialog::SetHelpID  

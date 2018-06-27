@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7024284a1be22aed211e8cf58f8366df88aa917
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90f325df3825b3546616ce145d4477322a1b4eed
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383502"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956299"
 ---
 # <a name="toolbar-tool-tips"></a>Información sobre herramientas de la barra de herramientas
 Información sobre herramientas es esa pequeña ventana emergente que muestra una breve descripción del propósito de un botón de barra de herramientas cuando coloca el mouse sobre un botón durante un período de tiempo. Cuando se crea una aplicación con el Asistente para la aplicación que tiene una barra de herramientas, se proporciona compatibilidad con información sobre la herramienta para usted. Este artículo explica tanto la información sobre compatibilidad con herramientas creado por el Asistente para aplicaciones y cómo agregar compatibilidad con la sugerencia de herramienta a la aplicación.  
@@ -42,7 +42,7 @@ Información sobre herramientas es esa pequeña ventana emergente que muestra un
 ##  <a name="_core_activating_tool_tips"></a> Activar información sobre herramientas  
  Para activar la información sobre herramientas en la aplicación, debe hacer dos cosas:  
   
--   Agregar el `CBRS_TOOLTIPS` estilo a los demás estilos (como **WS_CHILD**, **WS_VISIBLE**y otros **CBRS_** estilos) pasa como el `dwStyle` parámetro para el [ CToolBar:: Create](../mfc/reference/ctoolbar-class.md#create) función o en [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
+-   Agregar el estilo CBRS_TOOLTIPS a los demás estilos (como WS_CHILD, WS_VISIBLE y otros **CBRS_** estilos) pasa como el *dwStyle* parámetro a la [CToolBar:: Create](../mfc/reference/ctoolbar-class.md#create) función o en [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
   
 -   Como se describe en el procedimiento siguiente, anexe el texto de sugerencia de la barra de herramientas, separado por un carácter de nueva línea ('\n'), para el recurso de cadena que contiene el símbolo del sistema de línea de comandos para el comando de barra de herramientas. El recurso de cadena comparte el identificador del botón de barra de herramientas.  
   
@@ -62,7 +62,7 @@ Información sobre herramientas es esa pequeña ventana emergente que muestra un
 -   La entrada de tabla de cadenas con el mismo identificador que el control secundario en el archivo de recursos tiene una cadena de información sobre herramientas.  
   
 ##  <a name="_core_fly_by_status_bar_updates"></a> Actualizaciones de la barra de estado por proximidad  
- Una característica relacionada con la información sobre herramientas es estado "por proximidad" actualización de la barra. De forma predeterminada, el mensaje en la barra de estado describe sólo un botón de barra de herramientas determinada cuando se activa el botón. Mediante la inclusión de `CBRS_FLYBY` en la lista de estilos que se pasan a `CToolBar::Create`, puede tener actualizar estos mensajes cuando el cursor del mouse pasa por encima de la barra de herramientas sin activar realmente el botón.  
+ Una característica relacionada con la información sobre herramientas es estado "por proximidad" actualización de la barra. De forma predeterminada, el mensaje en la barra de estado describe sólo un botón de barra de herramientas determinada cuando se activa el botón. Incluyendo CBRS_FLYBY en la lista de estilos que se pasan a `CToolBar::Create`, puede tener actualizar estos mensajes cuando el cursor del mouse pasa por encima de la barra de herramientas sin activar realmente el botón.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
   

@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 260cbf640f6c57e4b145d01e8f883025a4dc6507
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7937ef604d14c464141c6e432a4d20a9d06e172
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382520"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954512"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Elementos primario y secundario del control de árbol
 Cualquier elemento de un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) puede tener una lista de subelementos, que se denominan elementos secundarios, asociados a él. Un elemento que tiene uno o más elementos secundarios se denomina un elemento primario. Un elemento secundario se muestra debajo de su elemento primario y se aplica una sangría para indicar que es subordinado al elemento primario. Un elemento que no tiene elemento primario está en la parte superior de la jerarquía y se llama a un elemento raíz.  
   
  En un momento dado, el estado de la lista de elementos secundarios del elemento de un primario puede ser expandir o contraer. Cuando se expande el estado, los elementos secundarios se muestran debajo del elemento primario. Cuando esta se contrae, no se muestran los elementos secundarios. La lista alterna automáticamente entre los Estados expandidos y contraídos cuando el usuario hace doble clic en el elemento primario o, si el elemento primario tiene el **TVS_HASBUTTONS** estilo, cuando el usuario hace clic en el botón asociado al elemento primario. Una aplicación puede expandir o contraer los elementos secundarios utilizando la [expandir](../mfc/reference/ctreectrl-class.md#expand) función miembro.  
   
- Agregar un elemento a un control de árbol mediante una llamada a la [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) función miembro. Esta función devuelve un identificador de la **HTREEITEM** tipo, que identifica de forma única el elemento. Al agregar un elemento, debe especificar el identificador del elemento primario del elemento nuevo. Si especifica **NULL** o **TVI_ROOT** valor en lugar de un identificador de elemento primario en el [estructura TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) estructura o `hParent` parámetro, se agrega el elemento raíz elemento.  
+ Agregar un elemento a un control de árbol mediante una llamada a la [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) función miembro. Esta función devuelve un identificador de la **HTREEITEM** tipo, que identifica de forma única el elemento. Al agregar un elemento, debe especificar el identificador del elemento primario del elemento nuevo. Si especifica **NULL** o **TVI_ROOT** valor en lugar de un identificador de elemento primario en el [estructura TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) estructura o *hParent* parámetro, el elemento se agrega como un elemento raíz.  
   
  Un control de árbol envía un [TVN_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) recibe un mensaje de notificación cuando la lista de un elemento primario de los elementos secundarios se va a expandir o contraer. La notificación ofrece la oportunidad para evitar que el cambio o establecer los atributos del elemento primario que dependen del estado de la lista de elementos secundarios. Después de cambiar el estado de la lista, el control de árbol envía un [TVN_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533) mensaje de notificación.  
   
