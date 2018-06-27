@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f925f8b6a5c522e22890ee2c1082ae8d709d2220
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd2129ad4b2dc075893a730c0ba75de96dbebea0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381198"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952864"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Pestañas y atributos del control de pestaña
 Tiene un gran control sobre la apariencia y el comportamiento de las fichas que componen un control de pestaña ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Cada pestaña puede tener una etiqueta, un icono, un estado de elemento y un valor de 32 bits definido por la aplicación asociados a él. Para cada pestaña, puede mostrar el icono, la etiqueta o ambos.  
   
- Además, cada elemento de ficha puede tener tres estados posibles: presionado, no presionado o resaltado. Este estado solo puede establecerse mediante la modificación de un elemento de ficha existente. Para modificar un elemento de ficha existente, recuperar con una llamada a [GetItem](../mfc/reference/ctabctrl-class.md#getitem), modifique la `TCITEM` estructura (específicamente el **"_mfc_CTabCtrl.3a3a.GetItem"** y **dwStateMask** miembros de datos ) y, a continuación, devolver modificados `TCITEM` estructura con una llamada a [SetItem](../mfc/reference/ctabctrl-class.md#setitem). Si necesita borrar los Estados de elemento de todos los elementos de ficha en una `CTabCtrl` de objetos, realizar una llamada a [DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall). Esta función restablece el estado de todos los elementos de ficha o todos los elementos excepto la seleccionada actualmente.  
+ Además, cada elemento de ficha puede tener tres estados posibles: presionado, no presionado o resaltado. Este estado solo puede establecerse mediante la modificación de un elemento de ficha existente. Para modificar un elemento de ficha existente, recuperar con una llamada a [GetItem](../mfc/reference/ctabctrl-class.md#getitem), modifique la `TCITEM` estructura (específicamente el *"_mfc_CTabCtrl.3a3a.GetItem"* y *dwStateMask* miembros de datos ) y, a continuación, devolver modificados `TCITEM` estructura con una llamada a [SetItem](../mfc/reference/ctabctrl-class.md#setitem). Si necesita borrar los Estados de elemento de todos los elementos de ficha en una `CTabCtrl` de objetos, realizar una llamada a [DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall). Esta función restablece el estado de todos los elementos de ficha o todos los elementos excepto la seleccionada actualmente.  
   
  El código siguiente, borra el estado de todos los elementos de ficha y, a continuación, modifica el estado del tercer elemento:  
   

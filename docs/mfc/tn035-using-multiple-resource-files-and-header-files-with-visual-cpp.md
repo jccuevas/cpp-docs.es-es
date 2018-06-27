@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385383"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952420"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Usar varios archivos de recursos y archivos de encabezado con Visual C++
 > [!NOTE]
@@ -227,7 +227,7 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Cuando Visual C++ compila el. Archivo RC, define **APSTUDIO_INVOKED** como **RC_INVOKED**. Si se daña la estructura de archivos creada mediante AppWizard creada y Visual C++ lee la línea #error anterior, notifica un error irrecuperable y anula la lectura del archivo .RC.  
+ Cuando Visual C++ compila el. Archivo RC, define `APSTUDIO_INVOKED` como `RC_INVOKED`. Si se daña la estructura de archivos creada mediante AppWizard creada y Visual C++ lee la línea #error anterior, notifica un error irrecuperable y anula la lectura del archivo .RC.  
   
  **Administrar símbolos compartidos por varios Visual C++ editados. RC (archivos)**  
   
@@ -262,19 +262,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **_APS_NEXT_RESOURCE_VALUE** es el siguiente valor de símbolo que se usará para un recurso de cuadro de diálogo, recurso de menú y así sucesivamente. El intervalo válido para los valores de símbolos de recursos es de 1 a 0x6FFF.  
+ `_APS_NEXT_RESOURCE_VALUE` es el siguiente valor de símbolo que se usará para un recurso de cuadro de diálogo, recurso de menú y así sucesivamente. El intervalo válido para los valores de símbolos de recursos es de 1 a 0x6FFF.  
   
- **_APS_NEXT_COMMAND_VALUE** es el siguiente valor de símbolo que se usará para una identificación de comandos. El intervalo válido para los valores de símbolos de comando es 0x8000 a 0xDFFF.  
+ `_APS_NEXT_COMMAND_VALUE` es el siguiente valor de símbolo que se usará para una identificación de comandos. El intervalo válido para los valores de símbolos de comando es 0x8000 a 0xDFFF.  
   
- **_APS_NEXT_CONTROL_VALUE** es el siguiente valor de símbolo que se usará para un control de cuadro de diálogo. El intervalo válido para los valores de símbolo de control del diálogo es de 8 a 0xDFFF.  
+ `_APS_NEXT_CONTROL_VALUE` es el siguiente valor de símbolo que se usará para un control de cuadro de diálogo. El intervalo válido para los valores de símbolo de control del diálogo es de 8 a 0xDFFF.  
   
- **_APS_NEXT_SYMED_VALUE** es el siguiente valor de símbolo que se emitirá al asignar manualmente un valor de símbolo mediante el comando nuevo en el Explorador de símbolos.  
+ `_APS_NEXT_SYMED_VALUE` es el siguiente valor de símbolo que se emitirá al asignar manualmente un valor de símbolo con el comando nuevo en el Explorador de símbolos.  
   
  Visual C++ comienza con valores ligeramente superiores al valor legal inferior al crear un nuevo archivo .RC. AppWizard también inicializará estos valores a algo más adecuado para aplicaciones MFC. Para obtener más información acerca de los intervalos de valores de Id., vea [Nota técnica 20](../mfc/tn020-id-naming-and-numbering-conventions.md).  
   
- Ahora cada vez que cree un nuevo archivo de recursos, incluso en el mismo proyecto, Visual C++ define la misma **_APS_NEXT\_**  valores. Esto significa que si agrega, por ejemplo, varios diálogos en dos archivos .RC diferentes, es muy probable que se asigne el mismo valor #define a diferentes diálogos. Por ejemplo, IDD_MY_DLG1 en el primer archivo .RC podría estar asignado al mismo número, 101, que IDD_MY_DLG2 en un segundo archivo .RC.  
+ Ahora cada vez que cree un nuevo archivo de recursos, incluso en el mismo proyecto, Visual C++ define la misma `_APS_NEXT_` valores. Esto significa que si agrega, por ejemplo, varios diálogos en dos archivos .RC diferentes, es muy probable que se asigne el mismo valor #define a diferentes diálogos. Por ejemplo, IDD_MY_DLG1 en el primer archivo .RC podría estar asignado al mismo número, 101, que IDD_MY_DLG2 en un segundo archivo .RC.  
   
- Para evitar esto, debe reservar un intervalo numérico independiente para cada uno de los cuatro dominios de id. en los respectivos archivos .RC. Ello, actualice manualmente el **_APS_NEXT** valores en cada uno de los. RC (archivos) `before` empezar a añadir recursos. Por ejemplo, si la primera. Archivo RC usa el valor predeterminado **_APS_NEXT** valores, tal vez le interese asignar los siguientes **_APS_NEXT** valores al segundo. Archivo RC:  
+ Para evitar esto, debe reservar un intervalo numérico independiente para cada uno de los cuatro dominios de id. en los respectivos archivos .RC. Ello, actualice manualmente el `_APS_NEXT` valores en cada uno de los. RC (archivos) **antes de** empezar a añadir recursos. Por ejemplo, si la primera. Archivo RC usa el valor predeterminado `_APS_NEXT` valores, tal vez le interese asignar los siguientes `_APS_NEXT` valores al segundo. Archivo RC:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

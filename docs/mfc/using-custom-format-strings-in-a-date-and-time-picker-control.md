@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2b365439f1681cf72bd58218ea4f55fbb2f44c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aeb6c02041a4ba90f9721f23a1397e17a4cdf81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382007"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955763"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Usar cadenas de formato personalizado en un control de selector de fecha y hora
 De forma predeterminada, los controles de selector de fecha y hora proporcionan que tres dar formato a tipos (cada formato corresponde a un estilo único) para mostrar la fecha y hora actuales:  
@@ -34,7 +34,7 @@ De forma predeterminada, los controles de selector de fecha y hora proporcionan 
   
  Sin embargo, puede personalizar la apariencia de la fecha u hora utilizando una cadena de formato personalizado. La cadena personalizada se compone de los caracteres de formato existente, caracteres sin formato o una combinación de ambos. Una vez generada la cadena personalizada, realice una llamada a [CDateTimeCtrl:: SetFormat](../mfc/reference/cdatetimectrl-class.md#setformat) pasando la cadena personalizada. El control de selector de fecha y hora, a continuación, mostrará el valor actual utilizando la cadena de formato personalizado.  
   
- El código de ejemplo siguiente (donde `m_dtPicker` es la `CDateTimeCtrl` objeto) se muestra una posible solución:  
+ El código de ejemplo siguiente (donde *m_dtPicker* es la `CDateTimeCtrl` objeto) se muestra una posible solución:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/cpp/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]  
   

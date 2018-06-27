@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c51e252157b90423b35152c10a85f972feace72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348912"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954271"
 ---
 # <a name="cclientdc-class"></a>CClientDC (clase)
 Se encarga de llamar a las funciones de Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) en tiempo de construcción y [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) en tiempo de destrucción.  
@@ -66,14 +66,14 @@ class CClientDC : public CDC
  **Encabezado:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- Construye un `CClientDC` objeto que tiene acceso el área cliente de la [CWnd](../../mfc/reference/cwnd-class.md) señalada por `pWnd`.  
+ Construye un `CClientDC` objeto que tiene acceso el área cliente de la [CWnd](../../mfc/reference/cwnd-class.md) que señala *pWnd*.  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pWnd`  
+ *pWnd*  
  La ventana cuyo área de cliente accederá el objeto de contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -92,7 +92,7 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `m_hWnd` es una variable protegida.  
+ *m_hWnd* es una variable protegida.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CClientDC::CClientDC](#cclientdc).  

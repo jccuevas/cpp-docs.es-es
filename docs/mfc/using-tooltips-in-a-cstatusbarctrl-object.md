@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 323f2861da9fcc498e34792c30c763b4dffb2fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cce98e4a3b3ffd506607529b9fea6f0c1114cc3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385968"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951273"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Usar informaciones sobre herramientas en un objeto CStatusBarCtrl
-Para habilitar la información sobre herramientas para un control de barra de estado, cree el `CStatusBarCtrl` objeto con el **SBT_TOOLTIPS** estilo.  
+Para habilitar la información sobre herramientas para un control de barra de estado, cree el `CStatusBarCtrl` objeto con el estilo SBT_TOOLTIPS.  
   
 > [!NOTE]
->  Si usas un `CStatusBar` objeto para implementar la barra de estado, use la `CStatusBar::CreateEx` función. Permite especificar estilos adicionales para el objeto incrustado **CStatusBarCtrl** objeto.  
+>  Si usas un `CStatusBar` objeto para implementar la barra de estado, use la `CStatusBar::CreateEx` función. Permite especificar estilos adicionales para el objeto incrustado `CStatusBarCtrl` objeto.  
   
  Una vez el `CStatusBarCtrl` se ha creado correctamente el objeto, use [CStatusBarCtrl:: SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) y [CStatusBarCtrl:: GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) para establecer y recuperar el texto de sugerencia para un panel específico.  
   

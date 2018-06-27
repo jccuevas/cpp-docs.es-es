@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f322003a36d89927930c0a57fd060078755f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb378bba1505f8bbc3739c070d52abe9ef4f8afc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383024"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953833"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Usar CStatusBarCtrl para crear un objeto CStatusBarCtrl
 Este es un ejemplo de un uso típico de [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):  
@@ -37,7 +37,7 @@ Este es un ejemplo de un uso típico de [CStatusBarCtrl](../mfc/reference/cstatu
   
 4.  Llame a [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) para establecer el número de elementos en un control y la coordenada del borde derecho de cada parte de la barra de estado.  
   
-5.  Llame a [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) para establecer el texto en una parte determinada del control de barra de estado. El mensaje invalida la parte del control que ha cambiado y se muestra el texto nuevo cuando el control siguiente recibe el mensaje `WM_PAINT`.  
+5.  Llame a [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) para establecer el texto en una parte determinada del control de barra de estado. El mensaje invalida la parte del control que ha cambiado, haciendo que se muestre el nuevo texto cuando el control siguiente recibe el mensaje WM_PAINT.  
   
  En algunos casos, la barra de estado sólo necesita para mostrar una línea de texto. En este caso, realice una llamada a [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple). Esto coloca el control de barra de estado en modo "simple", que muestra una sola línea de texto.  
   

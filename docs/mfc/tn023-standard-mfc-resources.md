@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 967485f358d6659d759f2651c80c9390bff0b912
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383180"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952042"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: Recursos de MFC estándar
 Esta nota describe los recursos estándar proporcionada con y necesaria para la biblioteca MFC.  
@@ -45,7 +45,7 @@ Esta nota describe los recursos estándar proporcionada con y necesaria para la 
   
 -   Indicate.rc: Contiene los recursos de cadena para los indicadores de estado de la tecla de barra de estado, como "Extremo" para las teclas BLOQ MAYÚS.  
   
--   Prompts.rc: Contiene los recursos de cadena de mensaje de menú para cada comando predefinido, como "Crear un nuevo documento" para `ID_FILE_NEW`.  
+-   Prompts.rc: Contiene los recursos de cadena de mensaje de menú para cada comando predefinido, por ejemplo, "Crear un nuevo documento" para ID_FILE_NEW.  
   
 -   Commdlg.rc: Archivo de .rc compatible Visual C++ que contiene las plantillas de cuadro de diálogo COMMDLG estándar.  
   
@@ -77,7 +77,7 @@ Esta nota describe los recursos estándar proporcionada con y necesaria para la 
 >  Tenga cuidado de no mover accidentalmente los recursos fuera de Common.rc permanentemente. Si mantiene la tecla CTRL mientras arrastra los recursos, se creará una copia. Si no presionado CTRL mientras arrastra, se moverán los recursos. Si le preocupa que podría accidentalmente realizados cambios en el archivo Common.rc, haga clic en "No" cuando se le pregunte si desea guardar los cambios en Common.rc.  
   
 > [!NOTE]
->  Los archivos de recursos de .rc tienen una clase especial `TEXTINCLUDE` recursos en ellos que impedirán que se guarden accidentalmente encima de los archivos .rc estándar.  
+>  Los archivos de recursos de .rc tienen un recurso TEXTINCLUDE especial en ellos que impedirá que se guarden accidentalmente encima de los archivos .rc estándar.  
   
 ### <a name="customizing-standard-framework-resources"></a>Personalizar recursos del marco estándar  
  Recursos del marco estándar se suelen incluir en una aplicación utilizando el #include comando en el archivo de recursos de la aplicación. AppWizard generará un archivo de recursos. Este archivo incluye los recursos de marco estándar adecuado, según las opciones de Asistente para aplicaciones que seleccione. Puede revisar, agregar o quitar los recursos que se incluyen cambiando las directivas de tiempo de compilación. Para ello, abra el **recursos** menú y seleccione **inclusión**. Vistazo "Directivas de tiempo de compilación" Editar elemento. Por ejemplo:  

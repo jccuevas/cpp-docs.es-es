@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355894"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954109"
 ---
 # <a name="cbrush-class"></a>CBrush (clase)
 Encapsula un pincel de la Interfaz de dispositivo gráfico (GDI) de Windows.  
@@ -105,10 +105,10 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `crColor`  
+ *crColor*  
  Especifica el color de primer plano del pincel como un color RGB. Si el pincel está sombreado, este parámetro especifica el color de la trama.  
   
- `nIndex`  
+ *nIndex*  
  Especifica el estilo de trama del pincel. Puede ser cualquiera de los siguientes valores:  
   
 - `HS_BDIAGONAL` Sombreado descendente (de izquierda a derecha) en 45 grados  
@@ -123,7 +123,7 @@ explicit CBrush(CBitmap* pBitmap);
   
 - `HS_VERTICAL` Sombreado vertical  
   
- `pBitmap`  
+ *pBitmap*  
  Apunta a un `CBitmap` objeto que especifica un mapa de bits con el que pinta el pincel.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -133,7 +133,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  El constructor con un único [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parámetro construye un pincel sólido con el color especificado. El color se especifica un valor RGB y se pueden construir con el `RGB` macro en WINDOWS. H.  
   
- El constructor con dos parámetros, crea un pincel de trama. El `nIndex` parámetro especifica el índice de un modelo de sombreado. El `crColor` parámetro especifica el color.  
+ El constructor con dos parámetros, crea un pincel de trama. El *nIndex* parámetro especifica el índice de un modelo de sombreado. El *crColor* parámetro especifica el color.  
   
  El constructor con un `CBitmap` parámetro construye un pincel de trama. El parámetro identifica un mapa de bits. El mapa de bits se supone que ha creado con [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), o [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). El tamaño mínimo para un mapa de bits que se usará en una trama de relleno es 8 x 8 píxeles.  
   
@@ -198,9 +198,9 @@ BOOL CreateDIBPatternBrush(
   
  Las dos versiones son distintas en la forma de que controlar el DIB:  
   
--   En la primera versión, para obtener un identificador del archivo DIB se llama a las ventanas **GlobalAlloc** función para asignar un bloque de memoria global y, a continuación, rellenar la memoria con el empaquetado DIB.  
+-   En la primera versión, para obtener un identificador del archivo DIB se llama a las ventanas `GlobalAlloc` función para asignar un bloque de memoria global y, a continuación, rellenar la memoria con el empaquetado DIB.  
   
--   En la segunda versión, no es necesario llamar a **GlobalAlloc** asignar memoria para el empaquetado DIB.  
+-   En la segunda versión, no es necesario llamar a `GlobalAlloc` para asignar memoria para el empaquetado DIB.  
   
  DIB empaquetado consta de un `BITMAPINFO` seguido inmediatamente de la matriz de bytes que define los píxeles del mapa de bits de estructura de datos. Mapas de bits que se usa como patrones de relleno deben ser 8 x 8 píxeles. Si el mapa de bits es mayor, Windows crea una trama de relleno con solo los bits correspondientes a las 8 primeras filas y 8 columnas de píxeles en la esquina superior izquierda del mapa de bits.  
   
@@ -208,7 +208,7 @@ BOOL CreateDIBPatternBrush(
   
  Para obtener información sobre el uso de las siguientes funciones de Windows, consulte el SDK de Windows:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (esta función se proporciona únicamente por compatibilidad con aplicaciones escritas para versiones de Windows anteriores a la 3.0; utilice la **CreateDIBPatternBrushPt** función.)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (esta función se proporciona únicamente por compatibilidad con aplicaciones escritas para versiones de Windows anteriores a la 3.0; utilice la `CreateDIBPatternBrushPt` función.)  
   
 - [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (esta función debe usarse para las aplicaciones basadas en Win32).  
   
@@ -227,7 +227,7 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Especifica el estilo de trama del pincel. Puede ser cualquiera de los siguientes valores:  
   
 - `HS_BDIAGONAL` Sombreado descendente (de izquierda a derecha) en 45 grados  
@@ -242,7 +242,7 @@ BOOL CreateHatchBrush(
   
 - `HS_VERTICAL` Sombreado vertical  
   
- `crColor`  
+ *crColor*  
  Especifica el color de primer plano del pincel como un color RGB (el color de las escotillas). Vea [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) en el SDK de Windows para obtener más información.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -262,14 +262,14 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pBitmap`  
+ *pBitmap*  
  Identifica un mapa de bits.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- El pincel posteriormente puede seleccionarse para cualquier contexto de dispositivo que admita operaciones de trama. El mapa de bits identificado por `pBitmap` normalmente se inicializa mediante el [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), o [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) (función).  
+ El pincel posteriormente puede seleccionarse para cualquier contexto de dispositivo que admita operaciones de trama. El mapa de bits identificado por *pBitmap* normalmente se inicializa mediante el [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), o [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) (función).  
   
  Mapas de bits que se usa como patrones de relleno deben ser 8 x 8 píxeles. Si el mapa de bits es mayor, Windows sólo utilizará los bits correspondientes a las 8 primeras filas y columnas de píxeles en la esquina superior izquierda del mapa de bits.  
   
@@ -290,8 +290,8 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `crColor`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) estructura que especifica el color del pincel. El color se especifica un valor RGB y se pueden construir con el `RGB` macro en WINDOWS. H.  
+ *crColor*  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) estructura que especifica el color del pincel. El color especifica un valor RGB y se puede construir con la macro RGB en WINDOWS. H.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -312,7 +312,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Especifica un índice de color. Este valor corresponde al color usado para pintar uno de los elementos de 21 ventana. Vea [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) en el SDK de Windows para obtener una lista de valores.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -334,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hBrush`  
+ *hBrush*  
  `HANDLE` en un pincel de GDI de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -356,13 +356,13 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pLogBrush`  
+ *pLogBrush*  
  Apunta a un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estructura que contiene información sobre el pincel.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si la función se realiza correctamente, y `pLogBrush` es un puntero válido, el valor devuelto es el número de bytes almacenados en el búfer.  
+ Si la función se realiza correctamente, y *pLogBrush* es un puntero válido, el valor devuelto es el número de bytes almacenados en el búfer.  
   
- Si la función se realiza correctamente, y `pLogBrush` es **NULL**, el valor devuelto es el número de bytes necesarios para almacenar la información de la función podría almacenar en el búfer.  
+ Si la función se realiza correctamente, y *pLogBrush* es **NULL**, el valor devuelto es el número de bytes necesarios para almacenar la información de la función podría almacenar en el búfer.  
   
  Si se produce un error en la función, el valor devuelto es 0.  
   

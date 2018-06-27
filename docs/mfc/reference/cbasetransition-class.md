@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db69941b0ee0f2267185604318d240d107604177
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7cdd8f527b8df8ae80896bbb17fab1b15684180
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356385"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953576"
 ---
 # <a name="cbasetransition-class"></a>Clase CBaseTransition
 Representa una transición básica.  
@@ -139,7 +139,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pStoryboard`  
+ *pStoryboard*  
  Un puntero al guión gráfico, que se animará la variable relacionada.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -156,7 +156,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pStoryboard`  
+ *pStoryboard*  
  Un puntero al guión gráfico, que se animará la variable relacionada.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -192,10 +192,10 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pLibrary`  
+ *pLibrary*  
  Un puntero a la biblioteca de transición, que crea transiciones estándares. Puede ser NULL para las transiciones personalizadas.  
   
- `pFactory`  
+ *pFactory*  
  Puntero al generador de transición, que crea transiciones personalizadas. Puede ser NULL para las transiciones estándares.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -255,10 +255,10 @@ IUIAnimationTransition* GetTransition();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pLibrary`  
+ *pLibrary*  
  Un puntero a la biblioteca de transición, que crea transiciones estándares. Puede ser NULL para las transiciones personalizadas.  
   
- `pFactory`  
+ *pFactory*  
  Puntero al generador de transición, que crea transiciones personalizadas. Puede ser NULL para las transiciones estándares.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -345,10 +345,10 @@ void SetKeyframes(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pStart`  
+ *pStart*  
  Un fotograma clave que especifica el comienzo de la transición.  
   
- `pEnd`  
+ *Pendientes*  
  Un fotograma clave que especifica el final de la transición.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -362,7 +362,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pVariable`  
+ *pVariable*  
  Un puntero a la variable de animación relacionados.  
   
 ### <a name="remarks"></a>Comentarios  

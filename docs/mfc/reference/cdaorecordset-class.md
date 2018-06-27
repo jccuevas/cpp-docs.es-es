@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 603cd1658af417dfbb7f2d8aa8022275e866a706
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c7090940699894e6b868c246d90a9c85a8b2795
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378909"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956042"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset (clase)
 Representa un conjunto de registros seleccionados de un origen de datos.  
@@ -215,7 +215,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::Close](#close)|Cierra el conjunto de registros.|  
 |[CDaoRecordset::Delete](#delete)|Elimina el registro actual del conjunto de registros. Explícitamente, debe desplazarse a otro registro después de la eliminación.|  
 |[CDaoRecordset](#dofieldexchange)|Se llama para intercambiar datos (en ambas direcciones) entre los miembros de datos de campo del conjunto de registros y el registro correspondiente en el origen de datos. Implementa DAO campo intercambio registros (DFX).|  
-|[CDaoRecordset:: Edit](#edit)|Se prepara para que los cambios en el registro actual. Llame a **actualización** para completar la edición.|  
+|[CDaoRecordset:: Edit](#edit)|Se prepara para que los cambios en el registro actual. Llame a `Update` para completar la edición.|  
 |[CDaoRecordset:: FillCache](#fillcache)|Llena todo o parte de una caché local para un objeto de conjunto de registros que contiene los datos de un origen de datos ODBC.|  
 |[CDaoRecordset::Find](#find)|Busca la primera, siguiente, anterior, o última ubicación de una cadena concreta en un conjunto de registros de tipo dinámico que satisface los criterios especificados y hace que el registro en el registro actual.|  
 |[CDaoRecordset::FindFirst](#findfirst)|Busca el primer registro de un tipo de conjunto de registros dinámicos o un conjunto de registros de tipo snapshot que satisface los criterios especificados y hace que el registro en el registro actual.|  
@@ -275,7 +275,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::SetParamValue](#setparamvalue)|Establece el valor actual del parámetro especificado almacenado en el objeto subyacente de DAOParameter|  
 |[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|Establece el valor actual del parámetro especificado en Null (no tener ningún valor).|  
 |[CDaoRecordset:: SetPercentPosition](#setpercentposition)|Establece la posición del registro actual en una ubicación correspondiente a un porcentaje del número total de registros en un conjunto de registros.|  
-|[CDaoRecordset::Update](#update)|Completa una `AddNew` o **editar** operación guardando los datos nuevos o modificados del origen de datos.|  
+|[CDaoRecordset::Update](#update)|Completa una `AddNew` o `Edit` operación guardando los datos nuevos o modificados del origen de datos.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
@@ -319,9 +319,9 @@ class CDaoRecordset : public CObject
 > [!NOTE]
 >  Las clases de base de datos DAO son distintas de las clases de base de datos MFC basadas en Open Database Connectivity (ODBC). Todos los nombres de clase de base de datos DAO tienen el prefijo "CDao". Todavía podrá acceso a orígenes de datos ODBC con las clases DAO; por lo general, las clases DAO ofrecen capacidades de superior porque son específicas para el motor de base de datos de Microsoft Jet.  
   
- Puede usar `CDaoRecordset` directamente o derivar una clase de `CDaoRecordset`. Para utilizar una clase de conjunto de registros en cualquier caso, abrir una base de datos y crear un objeto de conjunto de registros, el constructor se pasa un puntero a su `CDaoDatabase` objeto. También se puede construir un `CDaoRecordset` objeto y deje que MFC crear un archivo temporal `CDaoDatabase` objeto automáticamente. A continuación, llame el conjunto de registros [abiertos](#open) función de miembro, que especifica si el objeto es un conjunto de registros de tipo de tabla, un conjunto de registros de tipo dinámico o un conjunto de registros de tipo de instantánea. Al llamar a **abiertos** selecciona datos de la base de datos y recupera el primer registro.  
+ Puede usar `CDaoRecordset` directamente o derivar una clase de `CDaoRecordset`. Para utilizar una clase de conjunto de registros en cualquier caso, abrir una base de datos y crear un objeto de conjunto de registros, el constructor se pasa un puntero a su `CDaoDatabase` objeto. También se puede construir un `CDaoRecordset` objeto y deje que MFC crear un archivo temporal `CDaoDatabase` objeto automáticamente. A continuación, llame el conjunto de registros [abiertos](#open) función de miembro, que especifica si el objeto es un conjunto de registros de tipo de tabla, un conjunto de registros de tipo dinámico o un conjunto de registros de tipo de instantánea. Al llamar a `Open` selecciona datos de la base de datos y recupera el primer registro.  
   
- Usar a miembros de datos y funciones de miembro del objeto para desplazarse por los registros y operar con ellas. Las operaciones disponibles dependen de si el objeto es un conjunto de registros de tipo de tabla, un conjunto de registros de tipo dinámico o un conjunto de registros de tipo de instantánea y, si es actualizable o de solo lectura, esto depende de la capacidad de la base de datos o Open Database Connectivity (ODBC) origen de datos. Para actualizar los registros que se han cambiado o agregado desde el **abiertos** llamada, llamar al objeto [Requery](#requery) función miembro. Llamar al objeto **cerrar** miembro de función y destruir el objeto cuando haya terminado con él.  
+ Usar a miembros de datos y funciones de miembro del objeto para desplazarse por los registros y operar con ellas. Las operaciones disponibles dependen de si el objeto es un conjunto de registros de tipo de tabla, un conjunto de registros de tipo dinámico o un conjunto de registros de tipo de instantánea y, si es actualizable o de solo lectura, esto depende de la capacidad de la base de datos o Open Database Connectivity (ODBC) origen de datos. Para actualizar los registros que se han cambiado o agregado desde el `Open` llamada, llamar al objeto [Requery](#requery) función miembro. Llamar al objeto `Close` miembro de función y destruir el objeto cuando haya terminado con él.  
   
  `CDaoRecordset` intercambio de campos de registros DAO (DFX) se utiliza para permitir la lectura y actualización de los campos de registro a través de los miembros de C++ con seguridad de tipos de su `CDaoRecordset` o `CDaoRecordset`-clase derivada. También puede implementar el enlace dinámico de columnas en una base de datos sin usar el mecanismo DFX utilizando [GetFieldValue](#getfieldvalue) y [SetFieldValue](#setfieldvalue).  
   
@@ -343,10 +343,10 @@ virtual void AddNew();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Los campos del registro son inicialmente Null. (En la terminología de base de datos, Null significa "no having ningún valor" y no es igual a **NULL** en C++.) Para completar la operación, se debe llamar a la [actualización](#update) función miembro. **Actualización** guarda los cambios en el origen de datos.  
+ Los campos del registro son inicialmente Null. (En la terminología de base de datos, Null significa "no having ningún valor" y no es igual a **NULL** en C++.) Para completar la operación, se debe llamar a la [actualización](#update) función miembro. `Update` guarda los cambios en el origen de datos.  
   
 > [!CAUTION]
->  Si edita un registro y, a continuación, desplácese a otro registro sin llamar a **actualización**, los cambios se pierden sin previo aviso.  
+>  Si edita un registro y, a continuación, desplácese a otro registro sin llamar a `Update`, los cambios se pierden sin previo aviso.  
   
  Si agrega un registro a un conjunto de registros de tipo dinámico mediante una llamada a [AddNew](#addnew), el registro es visible en el conjunto de registros y se incluye en la tabla subyacente donde estará visible para cualquier nuevo `CDaoRecordset` objetos.  
   
@@ -369,7 +369,7 @@ virtual void AddNew();
  Si no se utiliza el mecanismo de almacenamiento en búfer doble, a continuación, cambiar el valor del campo no establece automáticamente el campo como modificados. En este caso, será necesario establecer explícitamente el campo de datos sucios. La marca contenida en [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controla la comprobación automática de campos.  
   
 > [!NOTE]
->  Si los registros son doble búfer (es decir, la comprobación automática de campos está habilitada), una llamada a `CancelUpdate` restaurará las variables de miembro para los valores que tenían antes de `AddNew` o **editar** se llamó.  
+>  Si los registros son doble búfer (es decir, la comprobación automática de campos está habilitada), una llamada a `CancelUpdate` restaurará las variables de miembro para los valores que tenían antes de `AddNew` o `Edit` se llamó.  
   
  Para obtener información relacionada, vea los temas "AddNew (método)", "Método CancelUpdate", "Propiedad LastModified" y "Propiedad EditMode" en la Ayuda de DAO.  
   
@@ -409,29 +409,29 @@ virtual void CancelUpdate();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Por ejemplo, si una aplicación llama a la **editar** o `AddNew` función miembro y no se ha llamado [actualización](#update), `CancelUpdate` cancela los cambios efectuados después **editar**o `AddNew` se llamó.  
+ Por ejemplo, si una aplicación llama a la `Edit` o `AddNew` función miembro y no se ha llamado [actualización](#update), `CancelUpdate` cancela los cambios efectuados después `Edit` o `AddNew` se llamó.  
   
 > [!NOTE]
->  Si los registros son doble búfer (es decir, la comprobación automática de campos está habilitada), una llamada a `CancelUpdate` restaurará las variables de miembro para los valores que tenían antes de `AddNew` o **editar** se llamó.  
+>  Si los registros son doble búfer (es decir, la comprobación automática de campos está habilitada), una llamada a `CancelUpdate` restaurará las variables de miembro para los valores que tenían antes de `AddNew` o `Edit` se llamó.  
   
- Si no hay ningún **editar** o `AddNew` operación pendiente, `CancelUpdate` hace MFC producir una excepción. Llame a la [GetEditMode](#geteditmode) función de miembro para determinar si hay una operación pendiente que se puede cancelar.  
+ Si no hay ningún `Edit` o `AddNew` operación pendiente, `CancelUpdate` hace MFC producir una excepción. Llame a la [GetEditMode](#geteditmode) función de miembro para determinar si hay una operación pendiente que se puede cancelar.  
   
  Para obtener información relacionada, vea el tema "Método CancelUpdate" en la Ayuda de DAO.  
   
 ##  <a name="canrestart"></a>  CDaoRecordset::CanRestart  
- Llame a esta función miembro para determinar si el conjunto de registros permite reiniciar su consulta (para actualizar sus registros) mediante una llamada a la **Requery** función miembro.  
+ Llame a esta función miembro para determinar si el conjunto de registros permite reiniciar su consulta (para actualizar sus registros) mediante una llamada a la `Requery` función miembro.  
   
 ```  
 BOOL CanRestart();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si **Requery** puede llamarse para ejecutar la consulta de nuevo, en caso contrario, 0.  
+ Distinto de cero si `Requery` puede llamarse para ejecutar la consulta de nuevo, en caso contrario, 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Conjuntos de registros de tipo de tabla no admiten **Requery**.  
+ Conjuntos de registros de tipo de tabla no admiten `Requery`.  
   
- Si **Requery** no es compatible, llame a [cerrar](#close) , a continuación, [abiertos](#open) para actualizar los datos. Puede llamar a **Requery** actualizar un objeto de conjunto de registros subyacente de la consulta de parámetros después de que se cambiaron los valores de parámetro.  
+ Si `Requery` no es compatible, llame a [cerrar](#close) , a continuación, [abiertos](#open) para actualizar los datos. Puede llamar a `Requery` actualizar un objeto de conjunto de registros subyacente de la consulta de parámetros después de que se cambiaron los valores de parámetro.  
   
  Para obtener información relacionada, vea el tema "Propiedad reiniciables" en la Ayuda de DAO.  
   
@@ -474,7 +474,7 @@ BOOL CanUpdate() const;
  Es distinto de cero si se puede actualizar el conjunto de registros (agregar, actualizar y eliminar registros), en caso contrario, 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Un conjunto de registros puede ser de solo lectura si el origen de datos subyacente es de solo lectura o si especifica **dbReadOnly** para `nOptions` cuando llama a [abiertos](#open) para el conjunto de registros.  
+ Un conjunto de registros puede ser de solo lectura si el origen de datos subyacente es de solo lectura o si especifica **dbReadOnly** para *nOptions* cuando llama a [abiertos](#open) para el conjunto de registros.  
   
  Para obtener información relacionada, vea los temas "AddNew (método)", "Editar método", "Método Delete", "Método de actualización" y "Propiedad actualizable" en la Ayuda de DAO.  
   
@@ -486,8 +486,8 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDatabase`  
- Contiene un puntero a un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objeto o el valor **NULL**. Si no **NULL** y `CDaoDatabase` del objeto **abrir** función miembro no se ha llamado para conectarse al origen de datos, el conjunto de registros intenta abrir automáticamente durante su propio [abrir ](#open) llamar. Si se pasa **NULL**, `CDaoDatabase` objeto se construye y se conecta automáticamente con la información de origen de datos que especificó si deriva de la clase de conjunto de registros de `CDaoRecordset`.  
+ *pDatabase*  
+ Contiene un puntero a un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objeto o el valor **NULL**. Si no **NULL** y `CDaoDatabase` del objeto `Open` función miembro no se ha llamado para conectarse al origen de datos, el conjunto de registros intenta abrir automáticamente durante su propio [abrir](#open) llamar. Si se pasa **NULL**, `CDaoDatabase` objeto se construye y se conecta automáticamente con la información de origen de datos que especificó si deriva de la clase de conjunto de registros de `CDaoRecordset`.  
   
 ### <a name="remarks"></a>Comentarios  
  Puede usar `CDaoRecordset` directamente o derivar una clase específica de la aplicación de `CDaoRecordset`. Puede utilizar ClassWizard para derivar las clases de conjunto de registros.  
@@ -505,11 +505,11 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Porque **cerrar** no destruye el `CDaoRecordset` objeto, puede volver a usar el objeto mediante una llamada a **abiertos** en el mismo origen de datos o un origen de datos diferente.  
+ Porque **cerrar** no destruirá los `CDaoRecordset` objeto, puede volver a usar el objeto mediante una llamada a `Open` en el mismo origen de datos o un origen de datos diferente.  
   
- Todas las pendientes [AddNew](#addnew) o [editar](#edit) instrucciones se cancelan y se revierten todas las transacciones pendientes. Si desea conservar las adiciones o modificaciones pendientes, llame a [actualización](#update) antes de llamar a **cerrar** para cada conjunto de registros.  
+ Todas las pendientes [AddNew](#addnew) o [editar](#edit) instrucciones se cancelan y se revierten todas las transacciones pendientes. Si desea conservar las adiciones o modificaciones pendientes, llame a [actualización](#update) antes de llamar a `Close` para cada conjunto de registros.  
   
- Puede llamar a **abiertos** nuevo después de llamar a **cerrar**. Esto le permite volver a usar el objeto de conjunto de registros. Una alternativa mejor es llamar a [Requery](#requery), si es posible.  
+ Puede llamar a `Open` nuevo después de llamar a `Close`. Esto le permite volver a usar el objeto de conjunto de registros. Una alternativa mejor es llamar a [Requery](#requery), si es posible.  
   
  Para obtener información relacionada, vea el tema "Close (método)" en la Ayuda de DAO.  
   
@@ -521,16 +521,16 @@ virtual void Delete();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Después de una eliminación se realiza correctamente, se establecen los miembros de datos de campo del conjunto de registros en un valor Null, y debe llamar explícitamente a una de las funciones de miembro de navegación de conjunto de registros ( [mover](#move), [Seek](#seek), [ SetBookmark](#setbookmark), y así sucesivamente) con el fin de abandonar el registro eliminado. Cuando se eliminan registros de un conjunto de registros, debe haber un registro actual en el conjunto de registros antes de llamar a **eliminar**; en caso contrario, MFC inicia una excepción.  
+ Después de una eliminación se realiza correctamente, se establecen los miembros de datos de campo del conjunto de registros en un valor Null, y debe llamar explícitamente a una de las funciones de miembro de navegación de conjunto de registros ( [mover](#move), [Seek](#seek), [ SetBookmark](#setbookmark), y así sucesivamente) con el fin de abandonar el registro eliminado. Cuando se eliminan registros de un conjunto de registros, debe haber un registro actual en el conjunto de registros antes de llamar a `Delete`; en caso contrario, MFC inicia una excepción.  
   
- **Eliminar** quita el registro actual y lo convierte en inaccesible. Aunque no se puede editar o utilizar el registro eliminado, sigue estando activo. Cuando se mueva a otro registro, sin embargo, no puede realizar el registro eliminado actual nuevo.  
+ `Delete` Quita el registro actual y lo convierte en inaccesible. Aunque no se puede editar o utilizar el registro eliminado, sigue estando activo. Cuando se mueva a otro registro, sin embargo, no puede realizar el registro eliminado actual nuevo.  
   
 > [!CAUTION]
->  El conjunto de registros debe ser actualizable y debe haber un registro válido actual en el conjunto de registros cuando se llama a **eliminar**. Por ejemplo, si elimina un registro pero se desplaza a un nuevo registro antes de llamar a **eliminar** nuevo, **eliminar** produce una [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+>  El conjunto de registros debe ser actualizable y debe haber un registro válido actual en el conjunto de registros al llamar a `Delete`. Por ejemplo, si elimina un registro pero se desplaza a un nuevo registro antes de llamar a `Delete` nuevo, `Delete` produce una [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
  Puede restaurar un registro si se utilizan transacciones y se llama el [CDaoWorkspace::Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback) función miembro. Si la tabla base es la tabla principal en cascada Eliminar relación, eliminando el registro actual, también puede eliminar uno o más registros de una tabla externa. Para obtener más información, consulte la definición "en cascada" eliminar en la Ayuda de DAO.  
   
- A diferencia de `AddNew` y **editar**, una llamada a **eliminar** no va seguida de una llamada a **actualización**.  
+ A diferencia de `AddNew` y `Edit`, una llamada a `Delete` no va seguida de una llamada a `Update`.  
   
  Para obtener información relacionada, vea los temas "AddNew (método)", "Editar método", "Método Delete", "Método de actualización" y "Propiedad actualizable" en la Ayuda de DAO.  
   
@@ -542,7 +542,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pFX`  
+ *pFX*  
  Contiene un puntero a un `CDaoFieldExchange` objeto. El marco de trabajo ya habrá configurado este objeto para especificar un contexto para la operación de intercambio de campos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -562,10 +562,10 @@ virtual void Edit();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Una vez que se llama a la **editar** función de miembro, los cambios realizados en los campos del registro actual se copian en el búfer de copia. Después de realizar los cambios deseados en el registro, llame a **actualización** para guardar los cambios. **Editar** guarda los valores de los miembros de datos del conjunto de registros. Si se llama a **editar**, realizar cambios, a continuación, llame a **editar** nuevo, los valores del registro se restauran a su estado original antes de la primera **editar** llamar.  
+ Una vez que se llama a la `Edit` función de miembro, los cambios realizados en los campos del registro actual se copian en el búfer de copia. Después de realizar los cambios deseados en el registro, llame a `Update` para guardar los cambios. `Edit` guarda los valores de los miembros de datos del conjunto de registros. Si se llama a `Edit`, realizar cambios, a continuación, llame a `Edit` nuevo, los valores del registro se restauran a su estado original antes de la primera `Edit` llamar.  
   
 > [!CAUTION]
->  Si edita un registro y, a continuación, realizar cualquier operación que se mueve a otro registro sin antes de llamar a **actualización**, los cambios se pierden sin previo aviso. Además, si cierra el conjunto de registros o la base de datos primaria, el registro editado se descarta sin previo aviso.  
+>  Si edita un registro y, a continuación, realizar cualquier operación que se mueve a otro registro sin antes de llamar a `Update`, los cambios se pierden sin previo aviso. Además, si cierra el conjunto de registros o la base de datos primaria, el registro editado se descarta sin previo aviso.  
   
  En algunos casos, puede que desee actualizar una columna por lo que es Null (que contiene ningún dato). Para ello, llame a `SetFieldNull` con un parámetro de **TRUE** para marcar el campo es Null; Esto también hace que la columna que se va a actualizar. Si desea que un campo se escriben en el origen de datos incluso si no ha cambiado su valor, llame a `SetFieldDirty` con un parámetro de **TRUE**. Esto funciona incluso si el campo tiene el valor Null.  
   
@@ -573,12 +573,12 @@ virtual void Edit();
   
  Si no se utiliza el mecanismo de almacenamiento en búfer doble, a continuación, cambiar el valor del campo no establece automáticamente el campo como modificados. En este caso, será necesario establecer explícitamente el campo de datos sucios. La marca contenida en [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controla la comprobación automática de campos.  
   
- Cuando el objeto de conjunto de registros está bloqueado de forma pesimista en un entorno multiusuario, el registro permanece bloqueado desde el momento en que **editar** se usa hasta que finalice la actualización. Si el conjunto de registros está bloqueado de forma optimista, el registro está bloqueado y se compara con el registro antes de ser modificado justo antes de que se actualiza en la base de datos. Si el registro ha cambiado desde que se llamó a **editar**, **actualización** operación provocará un error y MFC produce una excepción. Puede cambiar el modo de bloqueo con `SetLockingMode`.  
+ Cuando el objeto de conjunto de registros está bloqueado de forma pesimista en un entorno multiusuario, el registro permanece bloqueado desde el momento en que `Edit` se usa hasta que finalice la actualización. Si el conjunto de registros está bloqueado de forma optimista, el registro está bloqueado y se compara con el registro antes de ser modificado justo antes de que se actualiza en la base de datos. Si el registro ha cambiado desde que se llamó a `Edit`, el `Update` se produce un error de operación y MFC produce una excepción. Puede cambiar el modo de bloqueo con `SetLockingMode`.  
   
 > [!NOTE]
 >  Bloqueo optimista siempre se utiliza en los formatos de base de datos externa, como ODBC y ISAM instalable.  
   
- El registro actual se mantiene actual después de llamar a **editar**. Para llamar a **editar**, debe haber un registro actual. Si no hay ningún registro actual, o si el conjunto de registros no hace referencia a un tipo de tabla abierta o el objeto de conjunto de registros de tipo de conjunto de registros dinámicos, se produce una excepción. Al llamar a **editar** hace un `CDaoException` que se produzca en las siguientes condiciones:  
+ El registro actual se mantiene actual después de llamar a `Edit`. Para llamar a `Edit`, debe haber un registro actual. Si no hay ningún registro actual, o si el conjunto de registros no hace referencia a un tipo de tabla abierta o el objeto de conjunto de registros de tipo de conjunto de registros dinámicos, se produce una excepción. Al llamar a `Edit` hace un `CDaoException` que se produzca en las siguientes condiciones:  
   
 -   No hay ningún registro actual.  
   
@@ -590,7 +590,7 @@ virtual void Edit();
   
 -   Otro usuario ha bloqueado la página que contiene el registro.  
   
- Si el origen de datos admite transacciones, puede realizar la **editar** llame a parte de una transacción. Tenga en cuenta que debe llamar a `CDaoWorkspace::BeginTrans` antes de llamar a **editar** y después de que se ha abierto el conjunto de registros. Tenga en cuenta también que la llamada a `CDaoWorkspace::CommitTrans` no constituye un sustituto para llamar a **actualización** para completar la **editar** operación. Para obtener más información acerca de las transacciones, vea la clase `CDaoWorkspace`.  
+ Si el origen de datos admite transacciones, puede realizar la `Edit` llame a parte de una transacción. Tenga en cuenta que debe llamar a `CDaoWorkspace::BeginTrans` antes de llamar a `Edit` y después de que se ha abierto el conjunto de registros. Tenga en cuenta también que la llamada a `CDaoWorkspace::CommitTrans` no constituye un sustituto para llamar a `Update` para completar la `Edit` operación. Para obtener más información acerca de las transacciones, vea la clase `CDaoWorkspace`.  
   
  Para obtener información relacionada, vea los temas "AddNew (método)", "Editar método", "Método Delete", "Método de actualización" y "Propiedad actualizable" en la Ayuda de DAO.  
   
@@ -604,10 +604,10 @@ void FillCache(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pSize`  
+ *pSize*  
  Especifica el número de filas en blanco para igualar la memoria caché. Si se omite este parámetro, el valor está determinado por el valor de la propiedad CacheSize del objeto DAO subyacente.  
   
- `pBookmark`  
+ *pBookmark*  
  A [COleVariant](../../mfc/reference/colevariant-class.md) especificar un marcador. La memoria caché se llena a partir del registro indicado por este marcador. Si se omite este parámetro, la memoria caché se llena a partir del registro indicado por la propiedad CacheStart del objeto DAO subyacente.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -615,11 +615,11 @@ void FillCache(
   
  En lugar de esperar la memoria caché se llena con registros, tal y como se han capturado, se puede llenar la memoria caché en cualquier momento mediante una llamada a la `FillCache` función miembro. Se trata de una manera más rápida de llenar la caché porque `FillCache` captura varios registros a la vez en lugar de uno en uno. Por ejemplo, mientras se está mostrando cada pantalla de registros, puede tener la llamada de la aplicación `FillCache` para capturar la siguiente pantalla de registros.  
   
- Cualquier base de datos ODBC que se obtiene acceso con objetos de conjunto de registros puede tener una caché local. Para crear la memoria caché, abra un objeto de conjunto de registros desde el origen de datos remoto y, a continuación, llame a la `SetCacheSize` y `SetCacheStart` funciones de miembro del conjunto de registros. Si `lSize` y *lBookmark* crear un rango que está parcial o totalmente fuera del intervalo especificado por `SetCacheSize` y `SetCacheStart`, la parte del conjunto de registros fuera de este intervalo se omite y no se ha cargado en la memoria caché. Si `FillCache` solicita más registros que permanecen en el origen de datos remoto, sólo los registros restantes se capturan y se inicia ninguna excepción.  
+ Cualquier base de datos ODBC que se obtiene acceso con objetos de conjunto de registros puede tener una caché local. Para crear la memoria caché, abra un objeto de conjunto de registros desde el origen de datos remoto y, a continuación, llame a la `SetCacheSize` y `SetCacheStart` funciones de miembro del conjunto de registros. Si *lSize* y *lBookmark* crear un rango que está parcial o totalmente fuera del intervalo especificado por `SetCacheSize` y `SetCacheStart`, la parte del conjunto de registros fuera de este intervalo se omite y no es carga en la memoria caché. Si `FillCache` solicita más registros que permanecen en el origen de datos remoto, sólo los registros restantes se capturan y se inicia ninguna excepción.  
   
  Registros obtenidos de la memoria caché no reflejan los cambios realizados al mismo tiempo al origen de datos por otros usuarios.  
   
- `FillCache` captura solo los registros ya no almacenado en caché. Para forzar una actualización de todos los datos almacenados en caché, llame a la `SetCacheSize` función miembro con un `lSize` parámetro igual a 0, llamada `SetCacheSize` nuevo con el `lSize` parámetro igual que el tamaño de la memoria caché solicitada originalmente y, a continuación, llamar a `FillCache`.  
+ `FillCache` captura solo los registros ya no almacenado en caché. Para forzar una actualización de todos los datos almacenados en caché, llame a la `SetCacheSize` función miembro con un *lSize* parámetro igual a 0, llamada `SetCacheSize` nuevo con el *lSize* parámetro igual que el tamaño de la memoria caché solicitó originalmente y, a continuación, llamar a `FillCache`.  
   
  Para obtener información relacionada, vea el tema "Método FillCache" en la Ayuda de DAO.  
   
@@ -644,7 +644,7 @@ virtual BOOL Find(
   
 - **Bien AFX_DAO_LAST** buscar la última ubicación de una cadena coincidente.  
   
- `lpszFilter`  
+ *lpszFilter*  
  Una expresión de cadena (como el **donde** cláusula en una instrucción SQL sin la palabra **donde**) utilizado para buscar el registro. Por ejemplo:  
   
  [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
@@ -653,12 +653,12 @@ virtual BOOL Find(
  Es distinto de cero si no se encuentra registros coincidentes, 0 en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- Puede encontrar el primer, siguiente, anterior, o última instancia de la cadena. **Buscar** es una función virtual, por lo que puede invalidarlo y agregar su propia implementación. El `FindFirst`, `FindLast`, `FindNext`, y `FindPrev` funciones miembro llaman a la **buscar** función de miembro, por lo que puede usar **buscar** para controlar el comportamiento de todas las operaciones de búsqueda .  
+ Puede encontrar el primer, siguiente, anterior, o última instancia de la cadena. `Find` es una función virtual, por lo que puede invalidarlo y agregar su propia implementación. El `FindFirst`, `FindLast`, `FindNext`, y `FindPrev` funciones miembro llaman a la `Find` función de miembro, por lo que puede usar `Find` para controlar el comportamiento de todas las operaciones de búsqueda.  
   
  Para buscar un registro en un conjunto de registros de tipo de tabla, llame a la [Seek](#seek) función miembro.  
   
 > [!TIP]
->  Cuanto menor sea el conjunto de registros tiene, aumentará la eficacia **buscar** será. En general y especialmente con datos ODBC, es mejor crear una nueva consulta que recupera solo los registros que desee.  
+>  Cuanto menor sea el conjunto de registros tiene, aumentará la eficacia `Find` será. En general y especialmente con datos ODBC, es mejor crear una nueva consulta que recupera solo los registros que desee.  
   
  Para obtener información relacionada, vea el tema "FindFirst, FindLast, FindNext, FindPrevious métodos" en la Ayuda de DAO.  
   
@@ -670,7 +670,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFilter`  
+ *lpszFilter*  
  Una expresión de cadena (como el **donde** cláusula en una instrucción SQL sin la palabra **donde**) utilizado para buscar el registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -684,31 +684,31 @@ BOOL FindFirst(LPCTSTR lpszFilter);
  Si no se encuentra un registro que cumpla los criterios, el puntero de registro actual es indeterminado, y `FindFirst` devuelve cero. Si el conjunto de registros contiene más de un registro que satisface los criterios, `FindFirst` localiza la primera aparición, `FindNext` busca la siguiente repetición y así sucesivamente.  
   
 > [!CAUTION]
->  Si edita el registro actual, asegúrese de guardar los cambios mediante una llamada a la **actualización** función de miembro antes de continuar con otro registro. Si mueve a otro registro sin actualizar, los cambios se pierden sin previo aviso.  
+>  Si edita el registro actual, asegúrese de guardar los cambios mediante una llamada a la `Update` función de miembro antes de continuar con otro registro. Si mueve a otro registro sin actualizar, los cambios se pierden sin previo aviso.  
   
- El **buscar** funciones miembro buscar desde la ubicación y en la dirección especificada en la tabla siguiente:  
+ El `Find` funciones miembro buscar desde la ubicación y en la dirección especificada en la tabla siguiente:  
   
 |Las operaciones de búsqueda|BEGIN|Dirección de búsqueda|  
 |---------------------|-----------|----------------------|  
 |`FindFirst`|Principio del conjunto de registros|Final del conjunto de registros|  
 |`FindLast`|Final del conjunto de registros|Principio del conjunto de registros|  
 |`FindNext`|Registro actual|Final del conjunto de registros|  
-|**FindPrevious**|Registro actual|Principio del conjunto de registros|  
+|`FindPrevious`|Registro actual|Principio del conjunto de registros|  
   
 > [!NOTE]
 >  Cuando se llama a `FindLast`, el motor de base de datos de Microsoft Jet rellena totalmente el conjunto de registros antes de comenzar la búsqueda, si esto ya no se ha hecho. La primera búsqueda puede tardar más que búsquedas subsiguientes.  
   
- Utilizando una de las operaciones de búsqueda no es el mismo que llamar al método **MoveFirst** o `MoveNext`, sin embargo, que simplemente hace que el primer o siguiente registro actual sin especificar una condición. Puede seguir una operación de búsqueda con una operación de movimiento.  
+ Utilizando una de las operaciones de búsqueda no es el mismo que llamar al método `MoveFirst` o `MoveNext`, sin embargo, que simplemente hace que el primer o siguiente registro actual sin especificar una condición. Puede seguir una operación de búsqueda con una operación de movimiento.  
   
  Al usar las operaciones de búsqueda, tenga en cuenta lo siguiente:  
   
--   Si **buscar** devuelve distinto de cero, el registro actual no está definido. En este caso, debe colocar el puntero de registro actual hacia un registro válido.  
+-   Si `Find` devuelve distinto de cero, el registro actual no está definido. En este caso, debe colocar el puntero de registro actual hacia un registro válido.  
   
 -   No se puede usar una operación de búsqueda con un recordset de tipo snapshot desplazamiento solo hacia delante.  
   
 -   Debe tener el formato de fecha de Estados Unidos (mes-año) cuando busca campos que contienen fechas, incluso si no usa la versión de Estados Unidos del motor de base de datos de Microsoft Jet; en caso contrario, registros coincidentes no se pueden encontrar.  
   
--   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan específico registros indizados.  
+-   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o `CDaoQuerydef` objetos que recuperan registros indizados específicos.  
   
  Para obtener información relacionada, vea el tema "FindFirst, FindLast, FindNext, FindPrevious métodos" en la Ayuda de DAO.  
   
@@ -720,7 +720,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFilter`  
+ *lpszFilter*  
  Una expresión de cadena (como el **donde** cláusula en una instrucción SQL sin la palabra **donde**) utilizado para buscar el registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -734,19 +734,19 @@ BOOL FindLast(LPCTSTR lpszFilter);
  Si no se encuentra un registro que cumpla los criterios, el puntero de registro actual es indeterminado, y `FindLast` devuelve cero. Si el conjunto de registros contiene más de un registro que satisface los criterios, `FindFirst` localiza la primera aparición, `FindNext` busca la siguiente aparición después de la primera aparición y así sucesivamente.  
   
 > [!CAUTION]
->  Si edita el registro actual, asegúrese de guardar los cambios mediante una llamada a la **actualización** función de miembro antes de continuar con otro registro. Si mueve a otro registro sin actualizar, los cambios se pierden sin previo aviso.  
+>  Si edita el registro actual, asegúrese de guardar los cambios mediante una llamada a la `Update` función de miembro antes de continuar con otro registro. Si mueve a otro registro sin actualizar, los cambios se pierden sin previo aviso.  
   
- Utilizando una de las operaciones de búsqueda no es el mismo que llamar al método **MoveFirst** o `MoveNext`, sin embargo, que simplemente hace que el primer o siguiente registro actual sin especificar una condición. Puede seguir una operación de búsqueda con una operación de movimiento.  
+ Utilizando una de las operaciones de búsqueda no es el mismo que llamar al método `MoveFirst` o `MoveNext`, sin embargo, que simplemente hace que el primer o siguiente registro actual sin especificar una condición. Puede seguir una operación de búsqueda con una operación de movimiento.  
   
  Al usar las operaciones de búsqueda, tenga en cuenta lo siguiente:  
   
--   Si **buscar** devuelve distinto de cero, el registro actual no está definido. En este caso, debe colocar el puntero de registro actual hacia un registro válido.  
+-   Si `Find` devuelve distinto de cero, el registro actual no está definido. En este caso, debe colocar el puntero de registro actual hacia un registro válido.  
   
 -   No se puede usar una operación de búsqueda con un recordset de tipo snapshot desplazamiento solo hacia delante.  
   
 -   Debe tener el formato de fecha de Estados Unidos (mes-año) cuando busca campos que contienen fechas, incluso si no usa la versión de Estados Unidos del motor de base de datos de Microsoft Jet; en caso contrario, registros coincidentes no se pueden encontrar.  
   
--   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan específico registros indizados.  
+-   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o `CDaoQuerydef` objetos que recuperan registros indizados específicos.  
   
  Para obtener información relacionada, vea el tema "FindFirst, FindLast, FindNext, FindPrevious métodos" en la Ayuda de DAO.  
   
@@ -758,7 +758,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFilter`  
+ *lpszFilter*  
  Una expresión de cadena (como el **donde** cláusula en una instrucción SQL sin la palabra **donde**) utilizado para buscar el registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -772,19 +772,19 @@ BOOL FindNext(LPCTSTR lpszFilter);
  Si no se encuentra un registro que cumpla los criterios, el puntero de registro actual es indeterminado, y `FindNext` devuelve cero. Si el conjunto de registros contiene más de un registro que satisface los criterios, `FindFirst` localiza la primera aparición, `FindNext` busca la siguiente repetición y así sucesivamente.  
   
 > [!CAUTION]
->  Si edita el registro actual, asegúrese de guardar los cambios mediante una llamada a la **actualización** función de miembro antes de continuar con otro registro. Si mueve a otro registro sin actualizar, los cambios se pierden sin previo aviso.  
+>  Si edita el registro actual, asegúrese de guardar los cambios mediante una llamada a la `Update` función de miembro antes de continuar con otro registro. Si mueve a otro registro sin actualizar, los cambios se pierden sin previo aviso.  
   
- Utilizando una de las operaciones de búsqueda no es el mismo que llamar al método **MoveFirst** o `MoveNext`, sin embargo, que simplemente hace que el primer o siguiente registro actual sin especificar una condición. Puede seguir una operación de búsqueda con una operación de movimiento.  
+ Utilizando una de las operaciones de búsqueda no es el mismo que llamar al método `MoveFirst` o `MoveNext`, sin embargo, que simplemente hace que el primer o siguiente registro actual sin especificar una condición. Puede seguir una operación de búsqueda con una operación de movimiento.  
   
  Al usar las operaciones de búsqueda, tenga en cuenta lo siguiente:  
   
--   Si **buscar** devuelve distinto de cero, el registro actual no está definido. En este caso, debe colocar el puntero de registro actual hacia un registro válido.  
+-   Si `Find` devuelve distinto de cero, el registro actual no está definido. En este caso, debe colocar el puntero de registro actual hacia un registro válido.  
   
 -   No se puede usar una operación de búsqueda con un recordset de tipo snapshot desplazamiento solo hacia delante.  
   
 -   Debe tener el formato de fecha de Estados Unidos (mes-año) cuando busca campos que contienen fechas, incluso si no usa la versión de Estados Unidos del motor de base de datos de Microsoft Jet; en caso contrario, registros coincidentes no se pueden encontrar.  
   
--   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan específico registros indizados.  
+-   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o `CDaoQuerydef` objetos que recuperan registros indizados específicos.  
   
  Para obtener información relacionada, vea el tema "FindFirst, FindLast, FindNext, FindPrevious métodos" en la Ayuda de DAO.  
   
@@ -796,7 +796,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFilter`  
+ *lpszFilter*  
  Una expresión de cadena (como el **donde** cláusula en una instrucción SQL sin la palabra **donde**) utilizado para buscar el registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -810,19 +810,19 @@ BOOL FindPrev(LPCTSTR lpszFilter);
  Si no se encuentra un registro que cumpla los criterios, el puntero de registro actual es indeterminado, y `FindPrev` devuelve cero. Si el conjunto de registros contiene más de un registro que satisface los criterios, `FindFirst` localiza la primera aparición, `FindNext` busca la siguiente repetición y así sucesivamente.  
   
 > [!CAUTION]
->  Si edita el registro actual, asegúrese de guardar los cambios mediante una llamada a la **actualización** función de miembro antes de continuar con otro registro. Si mueve a otro registro sin actualizar, los cambios se pierden sin previo aviso.  
+>  Si edita el registro actual, asegúrese de guardar los cambios mediante una llamada a la `Update` función de miembro antes de continuar con otro registro. Si mueve a otro registro sin actualizar, los cambios se pierden sin previo aviso.  
   
- Utilizando una de las operaciones de búsqueda no es el mismo que llamar al método **MoveFirst** o `MoveNext`, sin embargo, que simplemente hace que el primer o siguiente registro actual sin especificar una condición. Puede seguir una operación de búsqueda con una operación de movimiento.  
+ Utilizando una de las operaciones de búsqueda no es el mismo que llamar al método `MoveFirst` o `MoveNext`, sin embargo, que simplemente hace que el primer o siguiente registro actual sin especificar una condición. Puede seguir una operación de búsqueda con una operación de movimiento.  
   
  Al usar las operaciones de búsqueda, tenga en cuenta lo siguiente:  
   
--   Si **buscar** devuelve distinto de cero, el registro actual no está definido. En este caso, debe colocar el puntero de registro actual hacia un registro válido.  
+-   Si `Find` devuelve distinto de cero, el registro actual no está definido. En este caso, debe colocar el puntero de registro actual hacia un registro válido.  
   
 -   No se puede usar una operación de búsqueda con un recordset de tipo snapshot desplazamiento solo hacia delante.  
   
 -   Debe tener el formato de fecha de Estados Unidos (mes-año) cuando busca campos que contienen fechas, incluso si no usa la versión de Estados Unidos del motor de base de datos de Microsoft Jet; en caso contrario, registros coincidentes no se pueden encontrar.  
   
--   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan específico registros indizados.  
+-   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o `CDaoQuerydef` objetos que recuperan registros indizados específicos.  
   
  Para obtener información relacionada, vea el tema "FindFirst, FindLast, FindNext, FindPrevious métodos" en la Ayuda de DAO.  
   
@@ -1000,7 +1000,7 @@ short GetEditMode();
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**dbEditNone**|No hay ninguna operación de edición está en curso.|  
-|**dbEditInProgress**|**Editar** se ha llamado.|  
+|**dbEditInProgress**|`Edit` se ha llamado.|  
 |**dbEditAdd**|`AddNew` se ha llamado.|  
   
  Para obtener información relacionada, vea el tema "Propiedad EditMode" en la Ayuda de DAO.  
@@ -1035,13 +1035,13 @@ void GetFieldInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Índice de base cero del campo predefinido en la colección de campos del conjunto de registros, para la búsqueda por su índice.  
   
- `fieldinfo`  
+ *FieldInfo*  
  Una referencia a un [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estructura.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Opciones que especifican qué información acerca de los registros que se va a recuperar. A continuación se enumeran las opciones disponibles junto con lo que hacen que la función devuelva. Para obtener el mejor rendimiento, recuperar solo el nivel de información que necesita:  
   
 - `AFX_DAO_PRIMARY_INFO` (Valor predeterminado) Nombre, tipo, tamaño, atributos  
@@ -1050,13 +1050,13 @@ void GetFieldInfo(
   
 - `AFX_DAO_ALL_INFO` Información primaria y secundaria, además de: valor predeterminado, regla de validación, texto de validación  
   
- `lpszName`  
+ *lpszName*  
  Nombre del campo.  
   
 ### <a name="remarks"></a>Comentarios  
  Una versión de la función le permite buscar un campo por su índice. La otra versión le permite buscar un campo por su nombre.  
   
- Para obtener una descripción de la información devuelta, consulte el [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estructura. Esta estructura no tiene miembros que se corresponden con los elementos de información enumerados anteriormente en la descripción de `dwInfoOptions`. Cuando se solicita información en un nivel, obtendrá información para todos los niveles anteriores.  
+ Para obtener una descripción de la información devuelta, consulte el [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estructura. Esta estructura no tiene miembros que se corresponden con los elementos de información enumerados anteriormente en la descripción de *dwInfoOptions*. Cuando se solicita información en un nivel, obtendrá información para todos los niveles anteriores.  
   
  Para obtener información relacionada, vea el tema "Atributos de propiedad" en la Ayuda de DAO.  
   
@@ -1078,13 +1078,13 @@ virtual COleVariant GetFieldValue(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszName`  
+ *lpszName*  
  Un puntero a una cadena que contiene el nombre de un campo.  
   
- `varValue`  
+ *varValue*  
  Una referencia a un `COleVariant` objeto que se va a almacenar el valor de un campo.  
   
- `nIndex`  
+ *nIndex*  
  Índice de base cero del campo en la colección de campos del conjunto de registros, para la búsqueda por su índice.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1134,13 +1134,13 @@ void GetIndexInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Índice de base cero en la colección de índices de la tabla, para la búsqueda por posición numérica.  
   
- `indexinfo`  
+ *indexinfo*  
  Una referencia a un [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) estructura.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Opciones que especifican qué información sobre el índice para recuperar. A continuación se enumeran las opciones disponibles junto con lo que hacen que la función devuelva. Para obtener el mejor rendimiento, recuperar solo el nivel de información que necesita:  
   
 - `AFX_DAO_PRIMARY_INFO` (Valor predeterminado) Campos de nombre, información de campo  
@@ -1149,13 +1149,13 @@ void GetIndexInfo(
   
 - `AFX_DAO_ALL_INFO` Información primaria y secundaria, además de: Distinct Count  
   
- `lpszName`  
+ *lpszName*  
  Un puntero al nombre del objeto de índice, para la búsqueda por nombre.  
   
 ### <a name="remarks"></a>Comentarios  
  Una versión de la función le permite buscar un índice por su posición en la colección. La otra versión le permite buscar un índice por su nombre.  
   
- Para obtener una descripción de la información devuelta, consulte el [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) estructura. Esta estructura no tiene miembros que se corresponden con los elementos de información enumerados anteriormente en la descripción de `dwInfoOptions`. Cuando se solicita información en un nivel, obtendrá información para todos los niveles anteriores.  
+ Para obtener una descripción de la información devuelta, consulte el [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) estructura. Esta estructura no tiene miembros que se corresponden con los elementos de información enumerados anteriormente en la descripción de *dwInfoOptions*. Cuando se solicita información en un nivel, obtendrá información para todos los niveles anteriores.  
   
  Para obtener información relacionada, vea el tema "Atributos de propiedad" en la Ayuda de DAO.  
   
@@ -1189,7 +1189,7 @@ BOOL GetLockingMode();
 ### <a name="remarks"></a>Comentarios  
  Cuando el bloqueo pesimista está activada, la página de datos que contiene el registro que está modificando está bloqueada en cuanto se llama a la [editar](#edit) función miembro. La página se desbloquea cuando se llama a la [actualización](#update) o [cerrar](#close) función miembro o cualquiera de las operaciones de movimiento o búsqueda.  
   
- Cuando está activado un bloqueo optimista, la página de datos que contiene el registro está bloqueada solo mientras se actualiza el registro con el **actualización** función miembro.  
+ Cuando está activado un bloqueo optimista, la página de datos que contiene el registro está bloqueada solo mientras se actualiza el registro con el `Update` función miembro.  
   
  Al trabajar con orígenes de datos ODBC, el modo de bloqueo siempre es optimista.  
   
@@ -1219,10 +1219,10 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  La posición numérica del parámetro en el objeto DAOParameter subyacente.  
   
- `lpszName`  
+ *lpszName*  
  El nombre del parámetro cuyo valor desee.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1271,7 +1271,7 @@ long GetRecordCount();
   
  El valor de `GetRecordCount` de un tipo de tabla refleja el número aproximado de entradas en la tabla de conjunto de registros y se ve afectada inmediatamente cuando se agregan o eliminan registros de la tabla.  
   
- Un conjunto de registros no tienen registros devuelve un valor de 0. Al trabajar con tablas adjuntas o bases de datos ODBC, `GetRecordCount` siempre devuelve - 1. Llamar a la **Requery** función miembro en un conjunto de registros restablece el valor de `GetRecordCount` como si se volverá a ejecutar la consulta.  
+ Un conjunto de registros no tienen registros devuelve un valor de 0. Al trabajar con tablas adjuntas o bases de datos ODBC, `GetRecordCount` siempre devuelve - 1. Llamar a la `Requery` función miembro en un conjunto de registros restablece el valor de `GetRecordCount` como si se volverá a ejecutar la consulta.  
   
  Para obtener información relacionada, vea el tema "Propiedad RecordCount" en la Ayuda de DAO.  
   
@@ -1288,10 +1288,10 @@ CString GetSQL() const;
 ### <a name="remarks"></a>Comentarios  
  Esto suele ser una instancia de SQL **seleccione** instrucción.  
   
- La cadena devuelta por `GetSQL` suele ser distinto de cualquier cadena que se ha pasado para el conjunto de registros en la `lpszSQL` parámetro a la [abiertos](#open) función miembro. Esto es porque el conjunto de registros construye una instrucción SQL completa en función de lo que pasa a **abiertos**, lo que hayas especificado con ClassWizard y lo que puede que haya especificado en el [m_strFilter](#m_strfilter) y [m_strSort](#m_strsort) miembros de datos.  
+ La cadena devuelta por `GetSQL` suele ser distinto de cualquier cadena que se ha pasado para el conjunto de registros en la *lpszSQL* parámetro a la [abiertos](#open) función miembro. Esto es porque el conjunto de registros construye una instrucción SQL completa en función de lo que pasa a `Open`, lo que hayas especificado con ClassWizard y lo que puede que haya especificado en el [m_strFilter](#m_strfilter) y [m_strSort](#m_strsort) miembros de datos.  
   
 > [!NOTE]
->  Llame a esta función miembro solo después de llamar a **abiertos**.  
+>  Llame a esta función miembro solo después de llamar a `Open`.  
   
  Para obtener información relacionada, vea el tema "Propiedad de SQL" en la Ayuda de DAO.  
   
@@ -1355,19 +1355,19 @@ BOOL IsBOF() const;
  Es distinto de cero si el conjunto de registros no contiene registros o si se ha desplazado hacia atrás delante del primer registro; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- También puede llamar a `IsBOF` junto con `IsEOF` para determinar si el conjunto de registros contiene todos los registros o está vacío. Inmediatamente después de llamar a **abiertos**, si el conjunto de registros no contiene registros, `IsBOF` devuelve es distinto de cero. Al abrir un conjunto de registros que tiene al menos un registro, el primer registro es el registro actual y `IsBOF` devuelve 0.  
+ También puede llamar a `IsBOF` junto con `IsEOF` para determinar si el conjunto de registros contiene todos los registros o está vacío. Inmediatamente después de llamar a `Open`, si el conjunto de registros no contiene registros, `IsBOF` devuelve es distinto de cero. Al abrir un conjunto de registros que tiene al menos un registro, el primer registro es el registro actual y `IsBOF` devuelve 0.  
   
  Si el primer registro es el registro actual y se llama `MovePrev`, `IsBOF` posteriormente devolverá es distinto de cero. Si `IsBOF` devuelve es distinto de cero y se llama a `MovePrev`, se produce una excepción. Si `IsBOF` devuelve es distinto de cero, el registro actual no está definido, y cualquier acción que requiere un registro actual se producirá una excepción.  
   
  Efecto de los métodos específicos en `IsBOF` y `IsEOF` configuración:  
   
--   Al llamar a **abiertos** internamente hace que el primer registro en el conjunto de registros el registro actual mediante una llamada a **MoveFirst**. Por lo tanto, al llamar a **abiertos** en un conjunto vacío de causas de registros `IsBOF` y `IsEOF` para devolver un valor distinto de cero. (Consulte la siguiente tabla para el comportamiento de un error **MoveFirst** o `MoveLast` llamar a.)  
+-   Al llamar a `Open*` internamente hace que el primer registro en el conjunto de registros el registro actual mediante una llamada a `MoveFirst`. Por lo tanto, al llamar a `Open` en un conjunto vacío de causas de registros `IsBOF` y `IsEOF` para devolver un valor distinto de cero. (Consulte la siguiente tabla para el comportamiento de un error `MoveFirst` o `MoveLast` llamar a.)  
   
 -   Todas las operaciones de movimiento que se puede encontrar un registro hacen ambos `IsBOF` y `IsEOF` para devolver 0.  
   
--   Un `AddNew` llamada seguido por un **actualización** hará que la llamada que inserta correctamente un nuevo registro `IsBOF` para devolver 0, pero solo si `IsEOF` ya es distinto de cero. El estado de `IsEOF` siempre permanecerá sin cambios. Tal como se define por el motor de base de datos de Microsoft Jet, el puntero del registro actual de un conjunto de registros vacío es al final de un archivo, por lo que se inserta cualquier nuevo registro después del registro actual.  
+-   Un `AddNew` llamada seguido por un `Update` hará que la llamada que inserta correctamente un nuevo registro `IsBOF` para devolver 0, pero solo si `IsEOF` ya es distinto de cero. El estado de `IsEOF` siempre permanecerá sin cambios. Tal como se define por el motor de base de datos de Microsoft Jet, el puntero del registro actual de un conjunto de registros vacío es al final de un archivo, por lo que se inserta cualquier nuevo registro después del registro actual.  
   
--   Cualquier **eliminar** llamada, incluso si quita el registro restante solo de un conjunto de registros, no cambiará el valor de `IsBOF` o `IsEOF`.  
+-   Cualquier `Delete` llamada, incluso si quita el registro restante solo de un conjunto de registros, no cambiará el valor de `IsBOF` o `IsEOF`.  
   
  Esta tabla muestra las operaciones de movimiento permitidas con diferentes combinaciones de `IsBOF` /  `IsEOF`.  
   
@@ -1384,10 +1384,10 @@ BOOL IsBOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**, `MoveLast`|Es distinto de cero|Es distinto de cero|  
-|**Mover** 0|No hay ningún cambio|No hay ningún cambio|  
-|`MovePrev`, **Mover** < 0|Es distinto de cero|No hay ningún cambio|  
-|`MoveNext`, **Mover** > 0|No hay ningún cambio|Es distinto de cero|  
+|`MoveFirst`, `MoveLast`|Es distinto de cero|Es distinto de cero|  
+|`Move` 0|No hay ningún cambio|No hay ningún cambio|  
+|`MovePrev`, `Move` < 0|Es distinto de cero|No hay ningún cambio|  
+|`MoveNext`, `Move` > 0|No hay ningún cambio|Es distinto de cero|  
   
  Para obtener información relacionada, vea el tema "BOF, EOF (propiedades)" en la Ayuda de DAO.  
   
@@ -1422,19 +1422,19 @@ BOOL IsEOF() const;
  Es distinto de cero si el conjunto de registros no contiene registros o si se ha desplazado más allá del último registro; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- También puede llamar a `IsEOF` para determinar si el conjunto de registros contiene todos los registros o está vacío. Inmediatamente después de llamar a **abiertos**, si el conjunto de registros no contiene registros, `IsEOF` devuelve es distinto de cero. Al abrir un conjunto de registros que tiene al menos un registro, el primer registro es el registro actual y `IsEOF` devuelve 0.  
+ También puede llamar a `IsEOF` para determinar si el conjunto de registros contiene todos los registros o está vacío. Inmediatamente después de llamar a `Open`, si el conjunto de registros no contiene registros, `IsEOF` devuelve es distinto de cero. Al abrir un conjunto de registros que tiene al menos un registro, el primer registro es el registro actual y `IsEOF` devuelve 0.  
   
  Si el último registro es el registro actual cuando se llama a `MoveNext`, `IsEOF` posteriormente devolverá es distinto de cero. Si `IsEOF` devuelve es distinto de cero y se llama a `MoveNext`, se produce una excepción. Si `IsEOF` devuelve es distinto de cero, el registro actual no está definido, y cualquier acción que requiere un registro actual se producirá una excepción.  
   
  Efecto de los métodos específicos en `IsBOF` y `IsEOF` configuración:  
   
--   Al llamar a **abiertos** internamente hace que el primer registro en el conjunto de registros el registro actual mediante una llamada a **MoveFirst**. Por lo tanto, al llamar a **abiertos** en un conjunto vacío de causas de registros `IsBOF` y `IsEOF` para devolver un valor distinto de cero. (Consulte la siguiente tabla para el comportamiento de un error **MoveFirst** llamar a.)  
+-   Al llamar a `Open` internamente hace que el primer registro en el conjunto de registros el registro actual mediante una llamada a `MoveFirst`. Por lo tanto, al llamar a `Open` en un conjunto vacío de causas de registros `IsBOF` y `IsEOF` para devolver un valor distinto de cero. (Consulte la siguiente tabla para el comportamiento de un error `MoveFirst` llamar a.)  
   
 -   Todas las operaciones de movimiento que se puede encontrar un registro hacen ambos `IsBOF` y `IsEOF` para devolver 0.  
   
--   Un `AddNew` llamada seguido por un **actualización** hará que la llamada que inserta correctamente un nuevo registro `IsBOF` para devolver 0, pero solo si `IsEOF` ya es distinto de cero. El estado de `IsEOF` siempre permanecerá sin cambios. Tal como se define por el motor de base de datos de Microsoft Jet, el puntero del registro actual de un conjunto de registros vacío es al final de un archivo, por lo que se inserta cualquier nuevo registro después del registro actual.  
+-   Un `AddNew` llamada seguido por un `Update` hará que la llamada que inserta correctamente un nuevo registro `IsBOF` para devolver 0, pero solo si `IsEOF` ya es distinto de cero. El estado de `IsEOF` siempre permanecerá sin cambios. Tal como se define por el motor de base de datos de Microsoft Jet, el puntero del registro actual de un conjunto de registros vacío es al final de un archivo, por lo que se inserta cualquier nuevo registro después del registro actual.  
   
--   Cualquier **eliminar** llamada, incluso si quita el registro restante solo de un conjunto de registros, no cambiará el valor de `IsBOF` o `IsEOF`.  
+-   Cualquier `Delete` llamada, incluso si quita el registro restante solo de un conjunto de registros, no cambiará el valor de `IsBOF` o `IsEOF`.  
   
  Esta tabla muestra las operaciones de movimiento permitidas con diferentes combinaciones de `IsBOF` /  `IsEOF`.  
   
@@ -1451,10 +1451,10 @@ BOOL IsEOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**, `MoveLast`|Es distinto de cero|Es distinto de cero|  
-|**Mover** 0|No hay ningún cambio|No hay ningún cambio|  
-|`MovePrev`, **Mover** < 0|Es distinto de cero|No hay ningún cambio|  
-|`MoveNext`, **Mover** > 0|No hay ningún cambio|Es distinto de cero|  
+|`MoveFirst`, `MoveLast`|Es distinto de cero|Es distinto de cero|  
+|`Move` 0|No hay ningún cambio|No hay ningún cambio|  
+|`MovePrev`, `Move` < 0|Es distinto de cero|No hay ningún cambio|  
+|`MoveNext`, `Move` > 0|No hay ningún cambio|Es distinto de cero|  
   
  Para obtener información relacionada, vea el tema "BOF, EOF (propiedades)" en la Ayuda de DAO.  
   
@@ -1466,14 +1466,14 @@ BOOL IsFieldDirty(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pv`  
+ *PV*  
  Un puntero a miembro de datos del campo cuyo estado desea comprobar, o **NULL** para determinar si cualquiera de los campos están desfasada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el miembro de datos del campo especificado se marca como modificado; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Los datos de todos los miembros de datos de campo modificados se transferirán al registro en el origen de datos cuando se actualiza el registro actual mediante una llamada a la **actualización** función miembro de `CDaoRecordset` (después de una llamada a **editar**o `AddNew`). Con este conocimiento, puede realizar más pasos, como quitar marcadores el miembro de datos de campo para marcar la columna, por lo que no se escribirán en el origen de datos.  
+ Los datos de todos los miembros de datos de campo modificados se transferirán al registro en el origen de datos cuando se actualiza el registro actual mediante una llamada a la `Update` función miembro de `CDaoRecordset` (después de una llamada a `Edit` o `AddNew`). Con este conocimiento, puede realizar más pasos, como quitar marcadores el miembro de datos de campo para marcar la columna, por lo que no se escribirán en el origen de datos.  
   
  `IsFieldDirty` se implementa a través de `DoFieldExchange`.  
   
@@ -1485,7 +1485,7 @@ BOOL IsFieldNull(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pv`  
+ *PV*  
  Un puntero a miembro de datos del campo cuyo estado desea comprobar, o **NULL** para determinar si cualquiera de los campos son Null.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1510,14 +1510,14 @@ BOOL IsFieldNullable(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pv`  
+ *PV*  
  Un puntero a miembro de datos del campo cuyo estado desea comprobar, o **NULL** para determinar si cualquiera de los campos son Null.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el miembro de datos del campo especificado se puede establecer es Null; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Un campo que no puede ser Null debe tener un valor. Si se intenta establecer este tipo de campo como Null al agregar o actualizar un registro, el origen de datos rechaza la adición o la actualización, y **actualizar** se iniciará una excepción. La excepción se produce cuando se llama a **actualización**, no cuando se llama a `SetFieldNull`.  
+ Un campo que no puede ser Null debe tener un valor. Si se intenta establecer este tipo de campo como Null al agregar o actualizar un registro, el origen de datos rechaza la adición o la actualización, y `Update` se iniciará una excepción. La excepción se produce cuando se llama a `Update`, no cuando se llama a `SetFieldNull`.  
   
 ##  <a name="isopen"></a>  CDaoRecordset::IsOpen  
  Llame a esta función miembro para determinar si el conjunto de registros está abierto.  
@@ -1527,7 +1527,7 @@ BOOL IsOpen() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si el objeto de conjunto de registros **abiertos** o **Requery** función miembro se ha llamado anteriormente y el conjunto de registros no se ha cerrado; en caso contrario, 0.  
+ Distinto de cero si el objeto de conjunto de registros `Open` o `Requery` función miembro se ha llamado anteriormente y el conjunto de registros no se ha cerrado; en caso contrario, 0.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1537,7 +1537,7 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>Comentarios  
  Tiene como valor predeterminado de la marca a **TRUE**. La configuración de este miembro de datos controla todo el mecanismo de almacenamiento en búfer doble. Si la marca se establece en **TRUE**, puede desactivar el almacenamiento en caché en forma de campo a campo mediante el mecanismo DFX. Si la marca se establece en **FALSE**, debe llamar a `SetFieldDirty` y `SetFieldNull` usted mismo.  
   
- Establecer este miembro de datos antes de llamar a **abiertos**. Este mecanismo es principalmente para la facilidad de uso. Rendimiento puede ser más lento debido a que el búfer doble de los campos cuando se realizan cambios.  
+ Establecer este miembro de datos antes de llamar a `Open`. Este mecanismo es principalmente para la facilidad de uso. Rendimiento puede ser más lento debido a que el búfer doble de los campos cuando se realizan cambios.  
   
 ##  <a name="m_nfields"></a>  CDaoRecordset::m_nFields  
  Contiene el número de miembros de datos de campo en la clase de conjunto de registros y el número de columnas seleccionadas por el conjunto de registros desde el origen de datos.  
@@ -1556,7 +1556,7 @@ BOOL IsOpen() const;
  Contiene el número de miembros de datos de parámetro en la clase de conjunto de registros: el número de parámetros pasados con la consulta del conjunto de registros.  
   
 ### <a name="remarks"></a>Comentarios  
- Si la clase de conjunto de registros tiene los miembros de datos de parámetro, debe inicializar el constructor de la clase `m_nParams` con el número correcto. El valor de `m_nParams` el valor predeterminado es 0. Si agrega miembros de datos de parámetro, lo que debe realizar manualmente, también debe agregar manualmente una inicialización en el constructor de clase para reflejar el número de parámetros (que debe ser al menos tan grande como el número de '' marcadores de posición en su **m_strFilter**  o `m_strSort` cadena).  
+ Si la clase de conjunto de registros tiene los miembros de datos de parámetro, debe inicializar el constructor de la clase *m_nParams* con el número correcto. El valor de *m_nParams* el valor predeterminado es 0. Si agrega miembros de datos de parámetro, lo que debe realizar manualmente, también debe agregar manualmente una inicialización en el constructor de clase para reflejar el número de parámetros (que debe ser al menos tan grande como el número de '' marcadores de posición en su *m_strFilter*  o *m_strSort* cadena).  
   
  El marco de trabajo utiliza este número cuando parametriza la consulta del conjunto de registros.  
   
@@ -1577,7 +1577,7 @@ BOOL IsOpen() const;
  Contiene un puntero a la `CDaoDatabase` objeto a través del cual el conjunto de registros está conectado a un origen de datos.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta variable se establece de dos maneras. Por lo general, pasar un puntero a una ya está abierto `CDaoDatabase` objeto cuando se construya el objeto de conjunto de registros. Si se pasa **NULL** en su lugar, **CDaoRecordset** crea un `CDaoDatabase` objeto automáticamente y lo abre. En cualquier caso, `CDaoRecordset` almacena el puntero en esta variable.  
+ Esta variable se establece de dos maneras. Por lo general, pasar un puntero a una ya está abierto `CDaoDatabase` objeto cuando se construya el objeto de conjunto de registros. Si se pasa **NULL** en su lugar, `CDaoRecordset` crea un `CDaoDatabase` objeto automáticamente y lo abre. En cualquier caso, `CDaoRecordset` almacena el puntero en esta variable.  
   
  Normalmente no directamente debe usar el puntero almacenado en **m_pDatabase**. Si escribe sus propias extensiones al `CDaoRecordset`, sin embargo, deberá utilizar el puntero. Por ejemplo, podría necesitar el puntero si se produce su propio `CDaoException`(s).  
   
@@ -1601,36 +1601,36 @@ BOOL IsOpen() const;
   
  No se puede ordenar los objetos de conjunto de registros de tipo de tabla. Para determinar el criterio de ordenación de un conjunto de registros de tipo de tabla, llame a [SetCurrentIndex](#setcurrentindex).  
   
- El uso de `m_strSort` no tiene ningún efecto al abrir un conjunto de registros utilizando un `CDaoQueryDef` puntero.  
+ El uso de *m_strSort* no tiene ningún efecto al abrir un conjunto de registros utilizando un `CDaoQueryDef` puntero.  
   
  Para obtener información relacionada, vea el tema "Propiedad de ordenación" en la Ayuda de DAO.  
   
 ##  <a name="move"></a>  CDaoRecordset:: Move  
- Llame a esta función miembro para colocar el conjunto de registros `lRows` registros desde el registro actual.  
+ Llame a esta función miembro para colocar el conjunto de registros *lRows* registros desde el registro actual.  
   
 ```  
 virtual void Move(long lRows);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lRows`  
+ *lRows*  
  El número de registros para desplazarse hacia delante o hacia atrás. Los valores positivos desplazarse hacia delante, hacia el final del conjunto de registros. Los valores negativos hacia atrás, mover hacia el principio.  
   
 ### <a name="remarks"></a>Comentarios  
  Puede mover hacia delante o hacia atrás. `Move( 1 )` es equivalente a `MoveNext`, y `Move( -1 )` es equivalente a `MovePrev`.  
   
 > [!CAUTION]
->  Llamar a cualquiera de los **mover** funciones produce una excepción si el conjunto de registros no tiene registros. En general, llamar a `IsBOF` y `IsEOF` antes de una operación de movimiento para determinar si el conjunto de registros tiene los registros. Después de llamar a **abiertos** o **Requery**, llame a `IsBOF` o `IsEOF`.  
+>  Llamar a cualquiera de los `Move` funciones produce una excepción si el conjunto de registros no tiene registros. En general, llamar a `IsBOF` y `IsEOF` antes de una operación de movimiento para determinar si el conjunto de registros tiene los registros. Después de llamar a `Open` o `Requery`, llame a `IsBOF` o `IsEOF`.  
   
 > [!NOTE]
->  Si se ha desplazado más allá del principio o al final del conjunto de registros ( `IsBOF` o `IsEOF` devuelve un valor distinto de cero), una llamada a **mover** produce una `CDaoException`.  
+>  Si se ha desplazado más allá del principio o al final del conjunto de registros ( `IsBOF` o `IsEOF` devuelve un valor distinto de cero), una llamada a `Move` produce una `CDaoException`.  
   
 > [!NOTE]
->  Si se llama a cualquiera de los **mover** funciona mientras el registro actual se actualiza o agregado, las actualizaciones se pierden sin previo aviso.  
+>  Si se llama a cualquiera de los `Move` funciones mientras el registro actual se actualiza o agregado, las actualizaciones se pierden sin previo aviso.  
   
- Cuando se llama a **mover** en una instantánea con desplazamiento solo hacia delante, la `lRows` parámetro debe ser un entero positivo y no se permiten marcadores, por lo que puede desplazarse hacia delante solo.  
+ Cuando se llama a `Move` en una instantánea con desplazamiento solo hacia delante, la `lRows` parámetro debe ser un entero positivo y no se permiten marcadores, por lo que puede desplazarse hacia delante solo.  
   
- Para hacer que el primero, último, siguiente o anterior grabar en un conjunto de registros de la llamada actual de registros, la **MoveFirst**, `MoveLast`, `MoveNext`, o `MovePrev` función miembro.  
+ Para hacer que el primero, último, siguiente o anterior grabar en un conjunto de registros de la llamada actual de registros, la `MoveFirst`, `MoveLast`, `MoveNext`, o `MovePrev` función miembro.  
   
  Para obtener información relacionada, vea los temas "Método Move" y "MoveFirst, MoveLast, MoveNext, MovePrevious métodos" en la Ayuda de DAO.  
   
@@ -1642,23 +1642,23 @@ void MoveFirst();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- No es necesario llamar a **MoveFirst** inmediatamente después de abrir el conjunto de registros. En ese momento, el primer registro (si existe) es automáticamente el registro actual.  
+ No es necesario llamar a `MoveFirst` inmediatamente después de abrir el conjunto de registros. En ese momento, el primer registro (si existe) es automáticamente el registro actual.  
   
 > [!CAUTION]
->  Llamar a cualquiera de los **mover** funciones produce una excepción si el conjunto de registros no tiene registros. En general, llamar a `IsBOF` y `IsEOF` antes de una operación de movimiento para determinar si el conjunto de registros tiene los registros. Después de llamar a **abiertos** o **Requery**, llame a `IsBOF` o `IsEOF`.  
+>  Llamar a cualquiera de los `Move` funciones produce una excepción si el conjunto de registros no tiene registros. En general, llamar a `IsBOF` y `IsEOF` antes de una operación de movimiento para determinar si el conjunto de registros tiene los registros. Después de llamar a `Open` o `Requery`, llame a `IsBOF` o `IsEOF`.  
   
 > [!NOTE]
->  Si se llama a cualquiera de los **mover** funciona mientras el registro actual se actualiza o agregado, las actualizaciones se pierden sin previo aviso.  
+>  Si se llama a cualquiera de los `Move` funciones mientras el registro actual se actualiza o agregado, las actualizaciones se pierden sin previo aviso.  
   
- Use la **mover** funciones para desplazarse de un registro a otro sin aplicar una condición. Utilice las operaciones de búsqueda para localizar los registros en un tipo de conjunto de registros dinámicos u objeto de conjunto de registros de tipo de instantánea que cumplen una condición determinada. Para buscar un registro en un objeto de conjunto de registros de tipo de tabla, llame a `Seek`.  
+ Use la `Move` funciones para desplazarse de un registro a otro sin aplicar una condición. Utilice las operaciones de búsqueda para localizar los registros en un tipo de conjunto de registros dinámicos u objeto de conjunto de registros de tipo de instantánea que cumplen una condición determinada. Para buscar un registro en un objeto de conjunto de registros de tipo de tabla, llame a `Seek`.  
   
  Si el conjunto de registros hace referencia a un conjunto de registros de tipo de tabla, el desplazamiento sigue índice actual de la tabla. Puede establecer el índice actual mediante la propiedad de índice del objeto DAO subyacente. Si no establece el índice actual, el orden de los registros devueltos es indefinido.  
   
  Si se llama a `MoveLast` en un objeto de conjunto de registros basado en una consulta SQL o la definición de consulta, la consulta se ve obligada a finalizar y el objeto de conjunto de registros esté completa.  
   
- No se puede llamar el **MoveFirst** o `MovePrev` función miembro con una instantánea de desplazamiento solo hacia delante.  
+ No se puede llamar el `MoveFirst` o `MovePrev` función miembro con una instantánea de desplazamiento solo hacia delante.  
   
- Para mover la posición del elemento actual registro de un objeto de conjunto de registros de un determinado número de registros hacia delante o hacia atrás, llame a **mover**.  
+ Para mover la posición del elemento actual registro de un objeto de conjunto de registros de un determinado número de registros hacia delante o hacia atrás, llame a `Move`.  
   
  Para obtener información relacionada, vea los temas "Método Move" y "MoveFirst, MoveLast, MoveNext, MovePrevious métodos" en la Ayuda de DAO.  
   
@@ -1672,18 +1672,18 @@ void MoveLast();
 ### <a name="remarks"></a>Comentarios  
   
 > [!CAUTION]
->  Llamar a cualquiera de los **mover** funciones produce una excepción si el conjunto de registros no tiene registros. En general, llamar a `IsBOF` y `IsEOF` antes de una operación de movimiento para determinar si el conjunto de registros tiene los registros. Después de llamar a **abiertos** o **Requery**, llame a `IsBOF` o `IsEOF`.  
+>  Llamar a cualquiera de los `Move` funciones produce una excepción si el conjunto de registros no tiene registros. En general, llamar a `IsBOF` y `IsEOF` antes de una operación de movimiento para determinar si el conjunto de registros tiene los registros. Después de llamar a `Open` o `Requery`, llame a `IsBOF` o `IsEOF`.  
   
 > [!NOTE]
->  Si se llama a cualquiera de los **mover** funciona mientras el registro actual se actualiza o agregado, las actualizaciones se pierden sin previo aviso.  
+>  Si se llama a cualquiera de los `Move` funciones mientras el registro actual se actualiza o agregado, las actualizaciones se pierden sin previo aviso.  
   
- Use la **mover** funciones para desplazarse de un registro a otro sin aplicar una condición. Utilice las operaciones de búsqueda para localizar los registros en un tipo de conjunto de registros dinámicos u objeto de conjunto de registros de tipo de instantánea que cumplen una condición determinada. Para buscar un registro en un objeto de conjunto de registros de tipo de tabla, llame a `Seek`.  
+ Use la `Move` funciones para desplazarse de un registro a otro sin aplicar una condición. Utilice las operaciones de búsqueda para localizar los registros en un tipo de conjunto de registros dinámicos u objeto de conjunto de registros de tipo de instantánea que cumplen una condición determinada. Para buscar un registro en un objeto de conjunto de registros de tipo de tabla, llame a `Seek`.  
   
  Si el conjunto de registros hace referencia a un conjunto de registros de tipo de tabla, el desplazamiento sigue índice actual de la tabla. Puede establecer el índice actual mediante la propiedad de índice del objeto DAO subyacente. Si no establece el índice actual, el orden de los registros devueltos es indefinido.  
   
  Si se llama a `MoveLast` en un objeto de conjunto de registros basado en una consulta SQL o la definición de consulta, la consulta se ve obligada a finalizar y el objeto de conjunto de registros esté completa.  
   
- Para mover la posición del elemento actual registro de un objeto de conjunto de registros de un determinado número de registros hacia delante o hacia atrás, llame a **mover**.  
+ Para mover la posición del elemento actual registro de un objeto de conjunto de registros de un determinado número de registros hacia delante o hacia atrás, llame a `Move`.  
   
  Para obtener información relacionada, vea los temas "Método Move" y "MoveFirst, MoveLast, MoveNext, MovePrevious métodos" en la Ayuda de DAO.  
   
@@ -1698,16 +1698,16 @@ void MoveNext();
  Se recomienda llamar a `IsBOF` antes de intentar mover al registro anterior. Una llamada a `MovePrev` producirá un `CDaoException` si `IsBOF` devuelve distinto de cero, que indica que ya se haya desplazado delante del primer registro o que no se seleccionaron registros por el conjunto de registros.  
   
 > [!CAUTION]
->  Llamar a cualquiera de los **mover** funciones produce una excepción si el conjunto de registros no tiene registros. En general, llamar a `IsBOF` y `IsEOF` antes de una operación de movimiento para determinar si el conjunto de registros tiene los registros. Después de llamar a **abiertos** o **Requery**, llame a `IsBOF` o `IsEOF`.  
+>  Llamar a cualquiera de los `Move` funciones produce una excepción si el conjunto de registros no tiene registros. En general, llamar a `IsBOF` y `IsEOF` antes de una operación de movimiento para determinar si el conjunto de registros tiene los registros. Después de llamar a `Open` o `Requery`, llame a `IsBOF` o `IsEOF`.  
   
 > [!NOTE]
->  Si se llama a cualquiera de los **mover** funciona mientras el registro actual se actualiza o agregado, las actualizaciones se pierden sin previo aviso.  
+>  Si se llama a cualquiera de los `Move` funciones mientras el registro actual se actualiza o agregado, las actualizaciones se pierden sin previo aviso.  
   
- Use la **mover** funciones para desplazarse de un registro a otro sin aplicar una condición. Utilice las operaciones de búsqueda para localizar los registros en un tipo de conjunto de registros dinámicos u objeto de conjunto de registros de tipo de instantánea que cumplen una condición determinada. Para buscar un registro en un objeto de conjunto de registros de tipo de tabla, llame a `Seek`.  
+ Use la `Move` funciones para desplazarse de un registro a otro sin aplicar una condición. Utilice las operaciones de búsqueda para localizar los registros en un tipo de conjunto de registros dinámicos u objeto de conjunto de registros de tipo de instantánea que cumplen una condición determinada. Para buscar un registro en un objeto de conjunto de registros de tipo de tabla, llame a `Seek`.  
   
  Si el conjunto de registros hace referencia a un conjunto de registros de tipo de tabla, el desplazamiento sigue índice actual de la tabla. Puede establecer el índice actual mediante la propiedad de índice del objeto DAO subyacente. Si no establece el índice actual, el orden de los registros devueltos es indefinido.  
   
- Para mover la posición del elemento actual registro de un objeto de conjunto de registros de un determinado número de registros hacia delante o hacia atrás, llame a **mover**.  
+ Para mover la posición del elemento actual registro de un objeto de conjunto de registros de un determinado número de registros hacia delante o hacia atrás, llame a `Move`.  
   
  Para obtener información relacionada, vea los temas "Método Move" y "MoveFirst, MoveLast, MoveNext, MovePrevious métodos" en la Ayuda de DAO.  
   
@@ -1722,18 +1722,18 @@ void MovePrev();
  Se recomienda llamar a `IsBOF` antes de intentar mover al registro anterior. Una llamada a `MovePrev` producirá un `CDaoException` si `IsBOF` devuelve distinto de cero, que indica que ya se haya desplazado delante del primer registro o que no se seleccionaron registros por el conjunto de registros.  
   
 > [!CAUTION]
->  Llamar a cualquiera de los **mover** funciones produce una excepción si el conjunto de registros no tiene registros. En general, llamar a `IsBOF` y `IsEOF` antes de una operación de movimiento para determinar si el conjunto de registros tiene los registros. Después de llamar a **abiertos** o **Requery**, llame a `IsBOF` o `IsEOF`.  
+>  Llamar a cualquiera de los `Move` funciones produce una excepción si el conjunto de registros no tiene registros. En general, llamar a `IsBOF` y `IsEOF` antes de una operación de movimiento para determinar si el conjunto de registros tiene los registros. Después de llamar a `Open` o `Requery`, llame a `IsBOF` o `IsEOF`.  
   
 > [!NOTE]
->  Si se llama a cualquiera de los **mover** funciona mientras el registro actual se actualiza o agregado, las actualizaciones se pierden sin previo aviso.  
+>  Si se llama a cualquiera de los `Move` funciones mientras el registro actual se actualiza o agregado, las actualizaciones se pierden sin previo aviso.  
   
- Use la **mover** funciones para desplazarse de un registro a otro sin aplicar una condición. Utilice las operaciones de búsqueda para localizar los registros en un tipo de conjunto de registros dinámicos u objeto de conjunto de registros de tipo de instantánea que cumplen una condición determinada. Para buscar un registro en un objeto de conjunto de registros de tipo de tabla, llame a `Seek`.  
+ Use la `Move` funciones para desplazarse de un registro a otro sin aplicar una condición. Utilice las operaciones de búsqueda para localizar los registros en un tipo de conjunto de registros dinámicos u objeto de conjunto de registros de tipo de instantánea que cumplen una condición determinada. Para buscar un registro en un objeto de conjunto de registros de tipo de tabla, llame a `Seek`.  
   
  Si el conjunto de registros hace referencia a un conjunto de registros de tipo de tabla, el desplazamiento sigue índice actual de la tabla. Puede establecer el índice actual mediante la propiedad de índice del objeto DAO subyacente. Si no establece el índice actual, el orden de los registros devueltos es indefinido.  
   
- No se puede llamar el **MoveFirst** o `MovePrev` función miembro con una instantánea de desplazamiento solo hacia delante.  
+ No se puede llamar el `MoveFirst` o `MovePrev` función miembro con una instantánea de desplazamiento solo hacia delante.  
   
- Para mover la posición del elemento actual registro de un objeto de conjunto de registros de un determinado número de registros hacia delante o hacia atrás, llame a **mover**.  
+ Para mover la posición del elemento actual registro de un objeto de conjunto de registros de un determinado número de registros hacia delante o hacia atrás, llame a `Move`.  
   
  Para obtener información relacionada, vea los temas "Método Move" y "MoveFirst, MoveLast, MoveNext, MovePrevious métodos" en la Ayuda de DAO.  
   
@@ -1760,7 +1760,7 @@ virtual void Open(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nOpenType`  
+ *nOpenType*  
  Uno de los siguientes valores:  
   
 - **dbOpenDynaset** un conjunto de registros de tipo dynaset con desplazamiento bidireccional. Este es el valor predeterminado.  
@@ -1769,7 +1769,7 @@ virtual void Open(
   
 - **dbOpenSnapshot** un conjunto de registros de tipo instantánea con desplazamiento bidireccional.  
   
- `lpszSQL`  
+ *lpszSQL*  
  Puntero de cadena que contiene uno de los elementos siguientes:  
   
 -   A **NULL** puntero.  
@@ -1780,7 +1780,7 @@ virtual void Open(
   
 -   Una consulta de paso.  
   
- `nOptions`  
+ *nOptions*  
  Uno o más de las siguientes opciones. El valor predeterminado es 0. Los valores posibles son los siguientes:  
   
 - **dbAppendOnly** sólo se pueden anexar nuevos registros (solo registros de tipo dinámico). Esta opción significa literalmente que solo se pueden anexar los registros. Las clases de base de datos ODBC de MFC tienen una opción de sólo anexar que permite que los registros que recuperan y anexar.  
@@ -1800,7 +1800,7 @@ virtual void Open(
 - **dbConsistent** solo se permiten actualizaciones coherentes (solo registros de tipo dinámico).  
   
 > [!NOTE]
->  Las constantes **dbConsistent** y **dbInconsistent** son mutuamente excluyentes. Puede usar uno o el otro, pero no ambas en una instancia determinada de **abiertos**.  
+>  Las constantes **dbConsistent** y **dbInconsistent** son mutuamente excluyentes. Puede usar uno o el otro, pero no ambas en una instancia determinada de `Open`.  
   
  *pTableDef*  
  Un puntero a un [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) objeto. Esta versión es válida únicamente para los conjuntos de registros de tipo de tabla. Cuando se usa esta opción, el `CDaoDatabase` puntero utilizado para construir el `CDaoRecordset` no se utiliza; en su lugar, se utiliza la base de datos en el que reside la definición de tabla.  
@@ -1809,30 +1809,30 @@ virtual void Open(
  Un puntero a un [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) objeto. Esta versión es válida únicamente para el tipo de conjunto de registros dinámicos y conjuntos de registros de tipo de instantánea. Cuando se usa esta opción, el `CDaoDatabase` puntero utilizado para construir el `CDaoRecordset` no se utiliza; en su lugar, se utiliza la base de datos en el que reside la definición de consulta.  
   
 ### <a name="remarks"></a>Comentarios  
- Antes de llamar a **abiertos**, debe crear el objeto de conjunto de registros. Existen varias formas de hacerlo:  
+ Antes de llamar a `Open`, debe crear el objeto de conjunto de registros. Existen varias formas de hacerlo:  
   
 -   Cuando se crea el objeto de conjunto de registros, puede pasar un puntero a un `CDaoDatabase` objeto que ya está abierto.  
   
 -   Cuando se crea el objeto de conjunto de registros, puede pasar un puntero a un `CDaoDatabase` objeto que no está abierto. El conjunto de registros se abre un `CDaoDatabase` de objeto, pero no se cierre cuando se cierra el objeto de conjunto de registros.  
   
--   Cuando se crea el objeto de conjunto de registros, pasar un **NULL** puntero. Las llamadas del objeto de conjunto de registros `GetDefaultDBName` para obtener el nombre de Microsoft Access. Archivo de Microsoft Access que se abre. El conjunto de registros, a continuación, se abre un `CDaoDatabase` objeto y mantiene y abrirlo siempre que el conjunto de registros está abierto. Cuando se llama a **cerrar** en el conjunto de registros, la `CDaoDatabase` también se cierra el objeto.  
+-   Cuando se crea el objeto de conjunto de registros, pasar un **NULL** puntero. Las llamadas del objeto de conjunto de registros `GetDefaultDBName` para obtener el nombre de Microsoft Access. Archivo de Microsoft Access que se abre. El conjunto de registros, a continuación, se abre un `CDaoDatabase` objeto y mantiene y abrirlo siempre que el conjunto de registros está abierto. Cuando se llama a `Close` en el conjunto de registros, la `CDaoDatabase` también se cierra el objeto.  
   
     > [!NOTE]
     >  Cuando se abre el conjunto de registros el `CDaoDatabase` de objeto, se abre el origen de datos con acceso no exclusivo.  
   
- Para la versión de **abrir** que usa el `lpszSQL` parámetro, una vez abierto el conjunto de registros puede recuperar registros de varias maneras. La primera opción es que las funciones DFX su `DoFieldExchange`. La segunda opción consiste en usar el enlace dinámico mediante una llamada a la `GetFieldValue` función miembro. Estas opciones se pueden implementar por separado o en combinación. Si se combinan, tendrá que pasar en la instrucción SQL por sí mismo en la llamada a **abiertos**.  
+ Para la versión de `Open` que usa el *lpszSQL* parámetro, una vez abierto el conjunto de registros puede recuperar registros de varias maneras. La primera opción es que las funciones DFX su `DoFieldExchange`. La segunda opción consiste en usar el enlace dinámico mediante una llamada a la `GetFieldValue` función miembro. Estas opciones se pueden implementar por separado o en combinación. Si se combinan, tendrá que pasar en la instrucción SQL por sí mismo en la llamada a `Open`.  
   
- Cuando se usa la segunda versión de **abiertos** donde se pasa un `CDaoTableDef` de objetos, las columnas resultantes estará disponibles para enlazar a través de `DoFieldExchange` y el mecanismo DFX, o enlace dinámicamente mediante `GetFieldValue`.  
-  
-> [!NOTE]
->  Solo se puede llamar a **abiertos** mediante un `CDaoTableDef` objeto para conjuntos de registros de tipo de tabla.  
-  
- Cuando se usa la tercera versión de **abiertos** donde se pasa un `CDaoQueryDef` de objeto, que se ejecutará la consulta y las columnas resultantes estará disponibles para enlazar a través de `DoFieldExchange` y el mecanismo DFX, o enlazar dinámicamente a través de `GetFieldValue`.  
+ Cuando se usa la segunda versión de `Open` donde se pasa un `CDaoTableDef` objeto, estarán disponibles para enlazar a través de las columnas resultantes `DoFieldExchange` y el mecanismo DFX, o enlace dinámicamente mediante `GetFieldValue`.  
   
 > [!NOTE]
->  Solo se puede llamar a **abiertos** mediante un `CDaoQueryDef` objeto para el tipo de conjunto de registros dinámicos y conjuntos de registros de tipo de instantánea.  
+>  Solo se puede llamar a `Open` mediante un `CDaoTableDef` objeto para conjuntos de registros de tipo de tabla.  
   
- Para la primera versión de **abiertos** que usa el `lpszSQL` parámetro, los registros son los criterios seleccionados según se muestra en la tabla siguiente.  
+ Cuando se usa la tercera versión de `Open` donde se pasa un `CDaoQueryDef` de objeto, que se ejecutará la consulta y las columnas resultantes estará disponibles para que pueda enlazar mediante `DoFieldExchange` y el mecanismo DFX, o enlace dinámicamente mediante `GetFieldValue`.  
+  
+> [!NOTE]
+>  Solo se puede llamar a `Open` mediante un `CDaoQueryDef` objeto para el tipo de conjunto de registros dinámicos y conjuntos de registros de tipo de instantánea.  
+  
+ Para la primera versión de `Open` que usa el `lpszSQL` parámetro, los registros son los criterios seleccionados según se muestra en la tabla siguiente.  
   
 |Valor del parámetro `lpszSQL`|Los registros seleccionados están determinados por|Ejemplo|  
 |--------------------------------------|----------------------------------------|-------------|  
@@ -1840,17 +1840,17 @@ virtual void Open(
 |Una lista separada por comas de uno o más definiciones de tabla o nombres de definición de consulta.|Todas las columnas se representan en el `DoFieldExchange`.|`"Customer"`|  
 |**Seleccione** lista de columnas **FROM** lista de tablas|Las columnas especificadas del querydef(s) y/o tabledef(s) especificado.|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|  
   
- El procedimiento habitual consiste en pasar **NULL** a **abiertos**; en ese caso, **abiertos** llamadas `GetDefaultSQL`, una función de miembro reemplazables que genera el asistente al crear un `CDaoRecordset`-clase derivada. Este valor proporciona los nombres de tabledef(s) o definición de consulta que especificó en el Asistente para. Se puede especificar otra información en el parámetro `lpszSQL`.  
+ El procedimiento habitual consiste en pasar **NULL** a `Open`; en ese caso, `Open` llamadas `GetDefaultSQL`, una función de miembro reemplazables que genera el asistente al crear un `CDaoRecordset`-clase derivada. Este valor proporciona los nombres de tabledef(s) o definición de consulta que especificó en el Asistente para. En su lugar, puede especificar otra información en el *lpszSQL* parámetro.  
   
- Cualquier valor que pase, **abrir** construye una cadena SQL final para la consulta (la cadena puede tener SQL **donde** y **ORDERBY** anexadas cláusulas a la `lpszSQL` cadena que se pasa) y, a continuación, ejecuta la consulta. Puede examinar la cadena construida mediante una llamada a `GetSQL` después de llamar a **abiertos**.  
+ Cualquier valor que pase, `Open` construye una cadena SQL final para la consulta (la cadena puede tener SQL **donde** y **ORDERBY** anexadas cláusulas a la *lpszSQL* cadena se pasó) y, a continuación, ejecuta la consulta. Puede examinar la cadena construida mediante una llamada a `GetSQL` después de llamar a `Open`.  
   
  Los miembros de datos de campo de la clase de conjunto de registros están enlazados a las columnas de los datos seleccionados. Si se devuelve algún registro, el primer registro se convierte en el registro actual.  
   
- Si desea establecer opciones para el conjunto de registros, por ejemplo, un filtro o una ordenación, establezca `m_strSort` o **m_strFilter** después de crear el objeto de conjunto de registros, pero antes de llamar a **abiertos**. Si desea que los registros del conjunto de registros después de actualizar el conjunto de registros está abierto, llame a **Requery**.  
+ Si desea establecer opciones para el conjunto de registros, por ejemplo, un filtro o una ordenación, establezca **m_strSort** o **m_strFilter** después de crear el objeto de conjunto de registros, pero antes de llamar a `Open`. Si desea que los registros del conjunto de registros después de actualizar el conjunto de registros está abierto, llame a `Requery`.  
   
- Si se llama a **abiertos** en un tipo de conjunto de registros dinámicos o un conjunto de registros de tipo de instantánea, o si el origen de datos hace referencia a una instrucción SQL o una definición de tabla que representa una tabla asociada, no se puede usar **dbOpenTable** para el tipo argumento; Si lo hace, MFC inicia una excepción. Para determinar si un objeto de definición de tabla representa una tabla asociada, cree una [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) objeto y llame a su [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) función miembro.  
+ Si se llama a `Open` en un tipo de conjunto de registros dinámicos o un conjunto de registros de tipo de instantánea, o si el origen de datos hace referencia a una instrucción SQL o una definición de tabla que representa una tabla asociada, no se puede usar **dbOpenTable** para el argumento de tipo; si lo hace, MFC produce una excepción. Para determinar si un objeto de definición de tabla representa una tabla asociada, cree una [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) objeto y llame a su [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) función miembro.  
   
- Use la **dbSeeChanges** marcar si desea volver a capturar los cambios realizados por otro usuario u otro programa en su equipo cuando está modificando o eliminando el registro de la mismo. Por ejemplo, si dos usuarios comenzar a editar el mismo registro, el primer usuario que llame a la **actualización** función miembro se realiza correctamente. Cuando **actualización** llama el segundo usuario, un `CDaoException` se produce. De forma similar, si el segundo usuario intenta llamar a **eliminar** eliminar el registro y ya ha cambiado el primer usuario, un `CDaoException` se produce.  
+ Use la **dbSeeChanges** marcar si desea volver a capturar los cambios realizados por otro usuario u otro programa en su equipo cuando está modificando o eliminando el registro de la mismo. Por ejemplo, si dos usuarios comenzar a editar el mismo registro, el primer usuario que llame a la `Update` función miembro se realiza correctamente. Cuando `Update` llama el segundo usuario, un `CDaoException` se produce. De forma similar, si el segundo usuario intenta llamar a `Delete` eliminar el registro y ya ha cambiado el primer usuario, un `CDaoException` se produce.  
   
  Por lo general, si el usuario obtiene este `CDaoException` durante la actualización, el código debe actualizar el contenido de los campos y recuperar los valores recién modificados. Si se produce la excepción en el proceso de eliminación, el código puede mostrar los datos de registro nuevo para el usuario y un mensaje que indica que los datos han cambiado recientemente. En este momento, el código puede solicitar una confirmación de que el usuario aún desea eliminar el registro.  
   
@@ -1869,21 +1869,21 @@ virtual void Requery();
 ### <a name="remarks"></a>Comentarios  
  Si se devuelve algún registro, el primer registro se convierte en el registro actual.  
   
- En orden para el conjunto de registros reflejar las adiciones y eliminaciones realizados por usted u otros usuarios en el origen de datos, debe volver a crear el conjunto de registros mediante una llamada a **Requery**. Si el conjunto de registros es un conjunto de registros dinámicos, refleja automáticamente las actualizaciones que usted u otros usuarios realicen en sus registros existentes (pero no las adiciones). Si el conjunto de registros es una instantánea, debe llamar a **Requery** para reflejar modificaciones realizadas por otros usuarios, así como las adiciones y eliminaciones.  
+ En orden para el conjunto de registros reflejar las adiciones y eliminaciones realizados por usted u otros usuarios en el origen de datos, debe volver a crear el conjunto de registros mediante una llamada a `Requery`. Si el conjunto de registros es un conjunto de registros dinámicos, refleja automáticamente las actualizaciones que usted u otros usuarios realicen en sus registros existentes (pero no las adiciones). Si el conjunto de registros es una instantánea, debe llamar a `Requery` para reflejar modificaciones realizadas por otros usuarios, así como las adiciones y eliminaciones.  
   
- Para un conjunto de registros dinámicos o en una instantánea, llame a **Requery** siempre que desee volver a generar el conjunto de registros con valores de parámetros. Establezca el filtro o una ordenación estableciendo [m_strFilter](#m_strfilter) y [m_strSort](#m_strsort) antes de llamar a **Requery**. Definir nuevos parámetros asignando nuevos valores a los miembros de datos de parámetro antes de llamar a **Requery**.  
+ Para un conjunto de registros dinámicos o en una instantánea, llame a `Requery` siempre que desee volver a generar el conjunto de registros con valores de parámetros. Establezca el filtro o una ordenación estableciendo [m_strFilter](#m_strfilter) y [m_strSort](#m_strsort) antes de llamar a `Requery`. Definir nuevos parámetros asignando nuevos valores a los miembros de datos de parámetro antes de llamar a `Requery`.  
   
- Si se produce un error en el intento de volver a generar el conjunto de registros, se cierra el conjunto de registros. Antes de llamar a **Requery**, puede determinar si el conjunto de registros puede realizar una nueva consulta mediante una llamada a la [CanRestart](#canrestart) función miembro. `CanRestart` no garantiza que **Requery** se realizará correctamente.  
+ Si se produce un error en el intento de volver a generar el conjunto de registros, se cierra el conjunto de registros. Antes de llamar a `Requery`, puede determinar si el conjunto de registros puede realizar una nueva consulta mediante una llamada a la [CanRestart](#canrestart) función miembro. `CanRestart` no garantiza que `Requery` se realizará correctamente.  
   
 > [!CAUTION]
->  Llame a **Requery** sólo después de haber llamado **abiertos**.  
+>  Llame a `Requery` sólo después de haber llamado `Open`.  
   
 > [!NOTE]
 >  Al llamar a [Requery](#requery) cambia marcadores DAO.  
   
- No se puede llamar **Requery** en un tipo de conjunto de registros dinámicos o un conjunto de registros de tipo snapshot si una llamada a `CanRestart` devuelve 0, ni puede usarla en un conjunto de registros de tipo de tabla.  
+ No se puede llamar `Requery` en un tipo de conjunto de registros dinámicos o un conjunto de registros de tipo snapshot si una llamada a `CanRestart` devuelve 0, ni puede usarla en un conjunto de registros de tipo de tabla.  
   
- Si ambos `IsBOF` y `IsEOF` devolver es distinto de cero después de llamar a **Requery**, la consulta no devolvió ningún registro y el conjunto de registros no contendrá ningún dato.  
+ Si ambos `IsBOF` y `IsEOF` devolver es distinto de cero después de llamar a `Requery`, la consulta no devolvió ningún registro y el conjunto de registros no contendrá ningún dato.  
   
  Para obtener información relacionada, vea el tema "Requery (método)" en la Ayuda de DAO.  
   
@@ -1905,10 +1905,10 @@ BOOL Seek(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszComparison`  
+ *lpszComparison*  
  Una de las siguientes expresiones de cadena: "<","\<=", "=", "> =", o ">".  
   
- `pKey1`  
+ *pKey1*  
  Un puntero a un [COleVariant](../../mfc/reference/colevariant-class.md) cuyo valor corresponde al primer campo en el índice. Requerido.  
   
  *pKey2*  
@@ -1934,11 +1934,11 @@ BOOL Seek(
   
  `Seek` permite buscar en conjuntos de registros de tipo de tabla de índice de alto rendimiento. Debe establecer el índice actual mediante una llamada a `SetCurrentIndex` antes de llamar a `Seek`. Si el índice identifica un único campo o campos clave, `Seek` localiza el primer registro que satisface los criterios. Si no establece un índice, se produce una excepción.  
   
- Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, el `COleVariant` objetos se deben declarar explícitamente ANSI. Esto puede hacerse mediante el uso de la [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** forma de constructor con `vtSrc` establecido en `VT_BSTRT` (ANSI) o mediante el **COleVariant** función [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** con `vtSrc` establecido en `VT_BSTRT`.  
+ Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, el `COleVariant` objetos se deben declarar explícitamente ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
- Cuando se llama a `Seek`, pasar uno o más valores de clave y un operador de comparación ("<","\<=", "=", "> =", o ">"). `Seek` busca en los campos de clave especificados y localiza el primer registro que satisface los criterios especificados por `lpszComparison` y `pKey1`. Una vez encontrado, `Seek` devuelve es distinto de cero y hace que dicho registro actual. Si `Seek` se produce un error al intentar buscar una coincidencia, `Seek` devuelve cero y el registro actual es indefinido. Al utilizar DAO directamente, debe comprobar explícitamente la propiedad NoMatch.  
+ Cuando se llama a `Seek`, pasar uno o más valores de clave y un operador de comparación ("<","\<=", "=", "> =", o ">"). `Seek` busca en los campos de clave especificados y localiza el primer registro que satisface los criterios especificados por *lpszComparison* y *pKey1*. Una vez encontrado, `Seek` devuelve es distinto de cero y hace que dicho registro actual. Si `Seek` se produce un error al intentar buscar una coincidencia, `Seek` devuelve cero y el registro actual es indefinido. Al utilizar DAO directamente, debe comprobar explícitamente la propiedad NoMatch.  
   
- Si `lpszComparison` es "=", "> =", o ">", `Seek` comienza al principio del índice. Si `lpszComparison` es "<" o "< =", `Seek` se inicia al final del índice y busca hacia atrás a menos que haya entradas de índice duplicadas al final. En este caso, `Seek` comienza en una entrada arbitraria entre las entradas de índice duplicadas al final del índice.  
+ Si `lpszComparison` es "=", "> =", o ">", `Seek` comienza al principio del índice. Si *lpszComparison* es "<" o "< =", `Seek` se inicia al final del índice y busca hacia atrás a menos que haya entradas de índice duplicadas al final. En este caso, `Seek` comienza en una entrada arbitraria entre las entradas de índice duplicadas al final del índice.  
   
  No existe no tiene que ser un registro actual cuando se utiliza `Seek`.  
   
@@ -1982,7 +1982,7 @@ void SetBookmark(COleVariant varBookmark);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `varBookmark`  
+ *varBookmark*  
  A [COleVariant](../../mfc/reference/colevariant-class.md) objeto que contiene el valor de marcador para un registro específico.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1991,7 +1991,7 @@ void SetBookmark(COleVariant varBookmark);
 > [!NOTE]
 >  Al llamar a [Requery](#requery) cambia marcadores DAO.  
   
- Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, la `COleVariant` objeto se debe declarar explícitamente ANSI. Esto puede hacerse mediante el uso de la [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** forma de constructor con `vtSrc` establecido en `VT_BSTRT` (ANSI) o mediante el **COleVariant** función [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** con `vtSrc` establecido en `VT_BSTRT`.  
+ Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, la `COleVariant` objeto se debe declarar explícitamente ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
  Para obtener información relacionada, vea los temas "Propiedades de marcador" y admite marcadores"en la Ayuda de DAO.  
   
@@ -2003,13 +2003,13 @@ void SetCacheSize(long lSize);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lSize`  
+ *lSize*  
  Especifica el número de registros. Un valor típico es 100. Un valor de 0 desactiva la caché. El valor debe estar entre 5 y 1200 registros. La memoria caché puede utilizar una cantidad considerable de memoria.  
   
 ### <a name="remarks"></a>Comentarios  
  Una caché es un espacio en la memoria local que contiene los datos recuperados más recientemente desde el servidor en caso de que los datos volverá a solicitarse mientras se ejecuta la aplicación. Almacenamiento en caché de datos mejora el rendimiento de una aplicación que recupera datos de un servidor remoto a través de objetos de conjunto de registros de tipo de conjunto de registros dinámicos. Cuando se solicitan datos, el motor de base de datos de Microsoft Jet comprueba la memoria caché para los datos solicitados en primer lugar, en lugar de recuperar desde el servidor, que requiere más tiempo. Datos que no proceden de un origen de datos ODBC no se guardan en la memoria caché.  
   
- Cualquier origen de datos ODBC, como una tabla asociada, puede tener una caché local. Para crear la memoria caché, abra un objeto de conjunto de registros desde el origen de datos remoto, llamada la `SetCacheSize` y `SetCacheStart` funciones miembro y, después, llame el `FillCache` función miembro o paso a paso por los registros mediante el uso de una de las operaciones de movimiento. El `lSize` parámetro de la `SetCacheSize` función miembro puede basarse en el número de registros de la aplicación puede funcionar al mismo tiempo. Por ejemplo, si usas un conjunto de registros como el origen de los datos que se muestre en pantalla, podría pasar la `SetCacheSize` `lSize` parámetro como 20 para mostrar 20 registros a la vez.  
+ Cualquier origen de datos ODBC, como una tabla asociada, puede tener una caché local. Para crear la memoria caché, abra un objeto de conjunto de registros desde el origen de datos remoto, llamada la `SetCacheSize` y `SetCacheStart` funciones miembro y, después, llame el `FillCache` función miembro o paso a paso por los registros mediante el uso de una de las operaciones de movimiento. El *lSize* parámetro de la `SetCacheSize` función miembro puede basarse en el número de registros de la aplicación puede funcionar al mismo tiempo. Por ejemplo, si usas un conjunto de registros como el origen de los datos que se muestre en pantalla, podría pasar la `SetCacheSize` *lSize* parámetro como 20 para mostrar 20 registros a la vez.  
   
  Para obtener información relacionada, vea el tema "CacheSize, CacheStart (propiedades)" en la Ayuda de DAO.  
   
@@ -2021,19 +2021,19 @@ void SetCacheStart(COleVariant varBookmark);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `varBookmark`  
+ *varBookmark*  
  A [COleVariant](../../mfc/reference/colevariant-class.md) que especifica el marcador del primer registro en el conjunto de registros en la memoria caché.  
   
 ### <a name="remarks"></a>Comentarios  
- Puede utilizar el valor de marcador de todos los registros para el `varBookmark` parámetro de la `SetCacheStart` función miembro. Hacer que el registro que desee comenzar el almacenamiento en caché con el registro actual, establecer un marcador para ese registro mediante [SetBookmark](#setbookmark)y pase el valor de marcador como parámetro para el `SetCacheStart` función miembro.  
+ Puede utilizar el valor de marcador de todos los registros para el *varBookmark* parámetro de la `SetCacheStart` función miembro. Hacer que el registro que desee comenzar el almacenamiento en caché con el registro actual, establecer un marcador para ese registro mediante [SetBookmark](#setbookmark)y pase el valor de marcador como parámetro para el `SetCacheStart` función miembro.  
   
  El motor de base de datos de Microsoft Jet solicita registros dentro del intervalo de memoria caché de la memoria caché y solicita registros fuera del intervalo de memoria caché del servidor.  
   
  Los registros recuperados de la memoria caché no reflejan los cambios realizados al mismo tiempo al origen de datos por otros usuarios.  
   
- Para forzar una actualización de todos los datos almacenados en caché, pasar la `lSize` parámetro de `SetCacheSize` como 0, llame a `SetCacheSize` nuevo con el tamaño de la memoria caché que solicitó originalmente y, a continuación, llame a la `FillCache` función miembro.  
+ Para forzar una actualización de todos los datos almacenados en caché, pasar la *lSize* parámetro de `SetCacheSize` como 0, llame a `SetCacheSize` nuevo con el tamaño de la memoria caché que solicitó originalmente y, a continuación, llame a la `FillCache` función miembro.  
   
- Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, la `COleVariant` objeto se debe declarar explícitamente ANSI. Esto puede hacerse mediante el uso de la [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** forma de constructor con `vtSrc` establecido en `VT_BSTRT` (ANSI) o mediante el **COleVariant** función [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** con `vtSrc` establecido en `VT_BSTRT`.  
+ Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, la `COleVariant` objeto se debe declarar explícitamente ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
  Para obtener información relacionada, vea el tema CacheSize, CacheStart (propiedades)"en la Ayuda de DAO.  
   
@@ -2045,7 +2045,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszIndex`  
+ *lpszIndex*  
  Un puntero que contiene el nombre del índice que se puede establecer.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2067,10 +2067,10 @@ void SetFieldDirty(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pv`  
+ *PV*  
  Contiene la dirección de un miembro de datos de campo del conjunto de registros o **NULL**. Si **NULL**, se marcan todos los miembros de datos de campo del conjunto de registros. (C++ **NULL** no es igual a Null en la terminología de base de datos, lo que significa "no tener ningún valor.")  
   
- `bDirty`  
+ *bDirty*  
  **TRUE** si es miembro de datos del campo se marca como "dirty" (modificado). En caso contrario, **FALSE** si es miembro de datos del campo se marca como "limpiar" (sin cambios).  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2107,10 +2107,10 @@ void SetFieldNull(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pv`  
+ *PV*  
  Contiene la dirección de un miembro de datos de campo del conjunto de registros o **NULL**. Si **NULL**, se marcan todos los miembros de datos de campo del conjunto de registros. (C++ **NULL** no es igual a Null en la terminología de base de datos, lo que significa "no tener ningún valor.")  
   
- `bNull`  
+ *bNull*  
  Es distinto de cero si el miembro de datos de campo está marcado como si tuviera ningún valor (Null). 0 en caso contrario, si el miembro de datos de campo está marcado como no Null.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2118,7 +2118,7 @@ void SetFieldNull(
   
  Cuando se agrega un nuevo registro a un conjunto de registros, todos los miembros de datos de campo se establecen en un valor Null inicialmente y se marca como "dirty" (modificado). Cuando recupera un registro de un origen de datos, sus columnas ya tienen valores o son Null. Si no es adecuado convertir un campo Null, un [CDaoException](../../mfc/reference/cdaoexception-class.md) se produce.  
   
- Si está utilizando el mecanismo de almacenamiento en búfer doble, por ejemplo, si desea específicamente designar un campo del registro actual que no tiene un valor, llame a `SetFieldNull` con `bNull` establecido en **TRUE** para marcar como Null. Si previamente se marcó un campo Null y ahora desea asignarle un valor, basta con establecer su nuevo valor. No tiene que quitar la marca de Null con `SetFieldNull`. Para determinar si el campo puede ser Null, llame a [IsFieldNullable](#isfieldnullable).  
+ Si está utilizando el mecanismo de almacenamiento en búfer doble, por ejemplo, si desea específicamente designar un campo del registro actual que no tiene un valor, llame a `SetFieldNull` con *bNull* establecido en **TRUE** a marca lo como Null. Si previamente se marcó un campo Null y ahora desea asignarle un valor, basta con establecer su nuevo valor. No tiene que quitar la marca de Null con `SetFieldNull`. Para determinar si el campo puede ser Null, llame a [IsFieldNullable](#isfieldnullable).  
   
  Si no se utiliza el mecanismo de almacenamiento en búfer doble, a continuación, cambiar el valor del campo no establece automáticamente el campo como desfasadas y distinto de Null. Específicamente, debe establecer los campos desfasadas y distinto de Null. La marca contenida en [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controla la comprobación automática de campos.  
   
@@ -2158,22 +2158,22 @@ void SetFieldValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszName`  
+ *lpszName*  
  Un puntero a una cadena que contiene el nombre de un campo.  
   
- `varValue`  
+ *varValue*  
  Una referencia a un [COleVariant](../../mfc/reference/colevariant-class.md) objeto que contiene el valor del contenido del campo.  
   
- `nIndex`  
+ *nIndex*  
  Un entero que representa la posición ordinal del campo en la colección de campos del conjunto de registros (basado en cero).  
   
- `lpszValue`  
+ *lpszValue*  
  Un puntero a una cadena que contiene el valor del contenido del campo.  
   
 ### <a name="remarks"></a>Comentarios  
  Use `SetFieldValue` y [GetFieldValue](#getfieldvalue) enlazar campos dinámicamente en tiempo de ejecución en lugar de estáticamente columnas de enlace mediante la [DoFieldExchange](#dofieldexchange) mecanismo.  
   
- Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, se debe usar una forma de `SetFieldValue` que no contiene un `COleVariant` parámetro, o la `COleVariant` objeto se debe declarar explícitamente ANSI. Esto puede hacerse mediante el uso de la [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** forma de constructor con `vtSrc` establecido en `VT_BSTRT` (ANSI) o mediante el **COleVariant** función [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** con `vtSrc` establecido en `VT_BSTRT`.  
+ Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, se debe usar una forma de `SetFieldValue` que no contiene un `COleVariant` parámetro, o la `COleVariant` objeto se debe declarar explícitamente ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
  Para obtener información relacionada, vea los temas "Objeto Field" y "Valor de propiedad" en la Ayuda de DAO.  
   
@@ -2186,10 +2186,10 @@ void SetFieldValueNull(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  El índice del campo en el conjunto de registros, para la búsqueda por su índice basado en cero.  
   
- `lpszName`  
+ *lpszName*  
  El nombre del campo en el conjunto de registros para la búsqueda por nombre.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2209,13 +2209,13 @@ void SetLockingMode(BOOL bPessimistic);
  Una marca que indica el tipo de bloqueo.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando el bloqueo pesimista está activada, la página de 2K que contiene el registro que está modificando se bloquea en cuanto se llama a la **editar** función miembro. La página se desbloquea cuando se llama a la **actualización** o **cerrar** función miembro o cualquiera de las operaciones de movimiento o búsqueda.  
+ Cuando el bloqueo pesimista está activada, la página de 2K que contiene el registro que está modificando se bloquea en cuanto se llama a la `Edit` función miembro. La página se desbloquea cuando se llama a la `Update` o `Close` función miembro o cualquiera de las operaciones de movimiento o búsqueda.  
   
- Cuando está activado un bloqueo optimista, la página de 2K que contiene el registro está bloqueada solo mientras se actualiza el registro con el **actualización** función miembro.  
+ Cuando está activado un bloqueo optimista, la página de 2K que contiene el registro está bloqueada solo mientras se actualiza el registro con el `Update` función miembro.  
   
- Si se bloquea una página, ningún otro usuario puede editar registros en la misma página. Si se llama a `SetLockingMode` y pasar un valor distinto de cero y otro usuario ya ha bloqueado la página, se produce una excepción cuando se llama a **editar**. Otros usuarios pueden leer datos de páginas bloqueadas.  
+ Si se bloquea una página, ningún otro usuario puede editar registros en la misma página. Si se llama a `SetLockingMode` y pasar un valor distinto de cero y otro usuario ya ha bloqueado la página, se produce una excepción cuando se llama a `Edit`. Otros usuarios pueden leer datos de páginas bloqueadas.  
   
- Si se llama a `SetLockingMode` con un valor de cero y versiones posteriores llamadas **actualización** mientras la página está bloqueada por otro usuario, se produce una excepción. Para ver los cambios realizados por otro usuario en el registro (y perder los cambios), llame a la `SetBookmark` función miembro con el valor de marcador del registro actual.  
+ Si se llama a `SetLockingMode` con un valor de cero y versiones posteriores llamadas `Update` mientras la página está bloqueada por otro usuario, se produce una excepción. Para ver los cambios realizados por otro usuario en el registro (y perder los cambios), llame a la `SetBookmark` función miembro con el valor de marcador del registro actual.  
   
  Al trabajar con orígenes de datos ODBC, el modo de bloqueo siempre es optimista.  
   
@@ -2234,19 +2234,19 @@ virtual void SetParamValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  La posición numérica del parámetro en la colección de parámetros de la definición de la consulta.  
   
- `var`  
+ *var*  
  El valor que se va a establecer; vea la sección Comentarios.  
   
- `lpszName`  
+ *lpszName*  
  El nombre del parámetro cuyo valor desea establecer.  
   
 ### <a name="remarks"></a>Comentarios  
  El parámetro ya se debe haber establecido como parte de la cadena de SQL del conjunto de registros. El parámetro puede tener acceso por nombre o por su posición de índice en la colección.  
   
- Especifique el valor que se establecerá como un `COleVariant` objeto. Para obtener información acerca de cómo establecer el valor deseado y el tipo en su `COleVariant` de objetos, vea la clase [COleVariant](../../mfc/reference/colevariant-class.md). Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, la `COleVariant` objeto se debe declarar explícitamente ANSI. Esto puede hacerse mediante el uso de la [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** forma de constructor con `vtSrc` establecido en `VT_BSTRT` (ANSI) o mediante el **COleVariant** función [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** con `vtSrc` establecido en `VT_BSTRT`.  
+ Especifique el valor que se establecerá como un `COleVariant` objeto. Para obtener información acerca de cómo establecer el valor deseado y el tipo en su `COleVariant` de objetos, vea la clase [COleVariant](../../mfc/reference/colevariant-class.md). Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, la `COleVariant` objeto se debe declarar explícitamente ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc***,** *vtSrc* **)** form of constructor with *vtSrc* set to `VT_BSTRT` (ANSI) or by using the `COleVariant` function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc***,** *vtSrc* **)** with *vtSrc* set to `VT_BSTRT`.  
   
 ##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull  
  Llame a esta función miembro para establecer el parámetro en un valor Null.  
@@ -2257,10 +2257,10 @@ void SetParamValueNull(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  El índice del campo en el conjunto de registros, para la búsqueda por su índice basado en cero.  
   
- `lpszName`  
+ *lpszName*  
  El nombre del campo en el conjunto de registros para la búsqueda por nombre.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2288,23 +2288,23 @@ void SetPercentPosition(float fPosition);
  Para obtener información relacionada, vea el tema "PercentPosition (propiedad)" en la Ayuda de DAO.  
   
 ##  <a name="update"></a>  CDaoRecordset::Update  
- Llame a esta función miembro después de llamar a la `AddNew` o **editar** función miembro.  
+ Llame a esta función miembro después de llamar a la `AddNew` o `Edit` función miembro.  
   
 ```  
 virtual void Update();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Esta llamada es necesario para completar la `AddNew` o **editar** operación.  
+ Esta llamada es necesario para completar la `AddNew` o `Edit` operación.  
   
- Ambos `AddNew` y **editar** preparar un búfer de edición en la que se colocan los datos agregados o editados para guardar datos en el origen de datos. **Actualización** guarda los datos. Se actualizan solo esos campos marcados o detectado como modificada.  
+ Ambos `AddNew` y `Edit` preparar un búfer de edición en la que se colocan los datos agregados o editados para guardar datos en el origen de datos. `Update` guarda los datos. Se actualizan solo esos campos marcados o detectado como modificada.  
   
- Si el origen de datos admite transacciones, puede realizar la **actualización** llamar a (y su correspondiente `AddNew` o **editar** llamar) forma parte de una transacción.  
+ Si el origen de datos admite transacciones, puede realizar la `Update` llamar a (y su correspondiente `AddNew` o `Edit` llamar) forma parte de una transacción.  
   
 > [!CAUTION]
->  Si se llama a **actualización** sin primero una llamada a `AddNew` o **editar**, **actualización** produce una `CDaoException`. Si se llama a `AddNew` o **editar**, debe llamar a **actualización** antes de llamar a [MoveNext](#movenext) o cerrar el conjunto de registros o la conexión de origen de datos. En caso contrario, los cambios se pierden sin notificación.  
+>  Si se llama a `Update` sin primero una llamada a `AddNew` o `Edit`, `Update` produce una `CDaoException`. Si se llama a `AddNew` o `Edit`, debe llamar a `Update` antes de llamar a [MoveNext](#movenext) o cerrar el conjunto de registros o la conexión de origen de datos. En caso contrario, los cambios se pierden sin notificación.  
   
- Cuando el objeto de conjunto de registros está bloqueado de forma pesimista en un entorno multiusuario, el registro permanece bloqueado desde el momento en que **editar** se usa hasta que finalice la actualización. Si el conjunto de registros está bloqueado de forma optimista, el registro está bloqueado y se compara con el registro antes de ser modificado justo antes de que se actualiza en la base de datos. Si el registro ha cambiado desde que se llamó a **editar**, **actualización** operación provocará un error y MFC produce una excepción. Puede cambiar el modo de bloqueo con `SetLockingMode`.  
+ Cuando el objeto de conjunto de registros está bloqueado de forma pesimista en un entorno multiusuario, el registro permanece bloqueado desde el momento en que `Edit` se usa hasta que finalice la actualización. Si el conjunto de registros está bloqueado de forma optimista, el registro está bloqueado y se compara con el registro antes de ser modificado justo antes de que se actualiza en la base de datos. Si el registro ha cambiado desde que se llamó a `Edit`, el `Update` se produce un error de operación y MFC produce una excepción. Puede cambiar el modo de bloqueo con `SetLockingMode`.  
   
 > [!NOTE]
 >  Bloqueo optimista siempre se utiliza en los formatos de base de datos externa, como ODBC y ISAM instalable.  

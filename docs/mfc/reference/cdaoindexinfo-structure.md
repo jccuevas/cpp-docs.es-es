@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85e59173ec330d0a5abb968225ce6b2e12263948
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367040"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954070"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo (Estructura)
 El `CDaoIndexInfo` estructura contiene información sobre un objeto de índice definido para objetos de acceso a datos (DAO).  
@@ -48,14 +48,14 @@ struct CDaoIndexInfo {
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `m_strName`  
+ *m_strName*  
  Identifica inequívocamente el objeto de campo. Para obtener más información, vea el tema "Nombre de propiedad" en la Ayuda de DAO.  
   
- `m_pFieldInfos`  
+ *m_pFieldInfos*  
  Un puntero a una matriz de [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) objetos que indica qué campos tabledef o conjunto de registros son campos de clave en un índice. Cada objeto identifica un campo en el índice. El orden de índice predeterminado es el ascendente. Un objeto de índice puede tener uno o varios de los campos que representan las claves de índice para cada registro. Estos pueden ser ascendente, descendente, o una combinación.  
   
- `m_nFields`  
- El número de campos que se almacenan en `m_pFieldInfos`.  
+ *m_nFields*  
+ El número de campos que se almacenan en *m_pFieldInfos*.  
   
  *m_bPrimary*  
  Si la propiedad principal es **TRUE**, el objeto index representa un índice principal. Un índice principal consta de uno o varios campos que identifican de forma única todos los registros de una tabla en un orden predefinido. Dado que el campo de índice debe ser único, también se establece la propiedad Unique del objeto Index en **TRUE** en DAO. Si el índice principal consta de más de un campo, cada campo puede contener valores duplicados, pero cada combinación de valores de todos los campos indizados debe ser única. Un índice principal consta de una clave para la tabla y generalmente contiene los mismos campos que la clave principal.  
@@ -89,7 +89,7 @@ struct CDaoIndexInfo {
   
  Para obtener más información, vea el tema "Propiedad IgnoreNulls" en la Ayuda de DAO.  
   
- `m_bRequired`  
+ *m_bRequired*  
  Indica si un objeto de índice DAO requiere un valor distinto de Null. Si esta propiedad es **TRUE**, el objeto de índice no permite un valor Null. Para obtener más información, vea el tema "Propiedad necesaria" en la Ayuda de DAO.  
   
 > [!TIP]
@@ -106,7 +106,7 @@ struct CDaoIndexInfo {
   
  Objetos de índice no están representados por una clase de MFC. En su lugar, DAO objetos objetos MFC subyacentes de la clase [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) contienen una colección de objetos de índice, llamado a la colección de índices. Estas clases proporcionan funciones de miembro para tener acceso a elementos individuales de la información de índice, o puede tener acceso a ellos a la vez con un `CDaoIndexInfo` objeto mediante una llamada a la `GetIndexInfo` función de miembro del objeto contenedor.  
   
- `CDaoIndexInfo` tiene un constructor y un destructor con el fin de asignar y cancelar la asignación de la información de campo de índice en correctamente `m_pFieldInfos`.  
+ `CDaoIndexInfo` tiene un constructor y un destructor con el fin de asignar y cancelar la asignación de la información de campo de índice en correctamente *m_pFieldInfos*.  
   
  La información recuperada por la `GetIndexInfo` función miembro de un objeto de definición de tabla se almacena en un `CDaoIndexInfo` estructura. Llame a la `GetIndexInfo` función de miembro del objeto contenedor tabledef en cuya colección de índices se almacena el objeto de índice. `CDaoIndexInfo` También define un `Dump` compila la función miembro en versiones de depuración. Puede usar `Dump` para volcar el contenido de un `CDaoIndexInfo` objeto.  
   

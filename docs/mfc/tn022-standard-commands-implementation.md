@@ -69,12 +69,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea42f4bd33281e65696791677bdd81a921a59e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3790e2b4aa5987fbcf66d1913e25de5dfd97ea2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385530"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957216"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: Implementación de comandos estándar
 > [!NOTE]
@@ -90,16 +90,16 @@ ms.locfileid: "33385530"
 ## <a name="contents-of-this-technical-note"></a>Contenido de esta nota técnica  
  Cada identificador de comando se describe en dos secciones:  
   
--   El título: nombre simbólico del identificador de comando (por ejemplo, **ID_FILE_SAVE**) seguido por el propósito del comando (por ejemplo, "se guarda el documento actual") separado por dos puntos.  
+-   El título: el nombre simbólico del identificador de comando (por ejemplo, ID_FILE_SAVE) seguido por el propósito del comando (por ejemplo, "se guarda el documento actual") separados por dos puntos.  
   
 -   Uno o varios de los párrafos que describe las clases que implementan el comando y lo que hace la implementación predeterminada  
   
  Mayoría de las implementaciones de comandos de manera predeterminada se viene cableada en mapa de mensajes de clase base del marco de trabajo. Hay algunas implementaciones de comando que requieren conexión explícita en la clase derivada. Se describen en "Nota". Si opta por las opciones adecuadas en el Asistente para aplicaciones, estos controladores de manera predeterminada se conectará automáticamente en la aplicación esqueleto generada.  
   
 ## <a name="naming-convention"></a>Convención de nomenclatura  
- Comandos estándar siguen una convención de nomenclatura simple que se recomienda que utilice si es posible. Comandos más estándar se encuentran en lugares estándar en la barra de menús de la aplicación. El nombre simbólico del comando empieza por "ID_" seguido del nombre del menú emergente estándar, seguido del nombre de elemento de menú. El nombre simbólico es en mayúsculas con separaciones de palabras de carácter de subrayado. Para los comandos que no tienen nombres de elemento de menú estándar, se define un nombre de comando lógico a partir de "ID_" (por ejemplo, **ID_NEXT_PANE**).  
+ Comandos estándar siguen una convención de nomenclatura simple que se recomienda que utilice si es posible. Comandos más estándar se encuentran en lugares estándar en la barra de menús de la aplicación. El nombre simbólico del comando empieza por "ID_" seguido del nombre del menú emergente estándar, seguido del nombre de elemento de menú. El nombre simbólico es en mayúsculas con separaciones de palabras de carácter de subrayado. Para los comandos que no tienen nombres de elemento de menú estándar, un nombre de comando lógico se define a partir de "ID_" (por ejemplo, ID_NEXT_PANE).  
   
- El prefijo "ID_" se usa para indicar los comandos que están diseñados para enlazar a elementos de menú, botones de barra de herramientas u otros objetos de interfaz de usuario de comandos. Controladores de comandos controlar comandos "ID_" se deben utilizar el `ON_COMMAND` y `ON_UPDATE_COMMAND_UI` arquitectura de comandos de mecanismos de MFC.  
+ El prefijo "ID_" se usa para indicar los comandos que están diseñados para enlazar a elementos de menú, botones de barra de herramientas u otros objetos de interfaz de usuario de comandos. Controladores de comandos controlar comandos "ID_" deben usar los mecanismos ON_COMMAND y ON_UPDATE_COMMAND_UI de la arquitectura de comandos MFC.  
   
  Se recomienda que usar el prefijo "IDM_" estándar para los elementos de menú que no siguen la arquitectura de comandos y necesita un código específico del menú para activarlos y desactivarlos. Por supuesto el número de comandos específicos de menú debe ser pequeño porque después de la arquitectura de comandos MFC no solo aumenta la eficacia de los controladores de comandos (ya que trabajan con las barras de herramientas), pero hacen que el código de controlador de comandos reutilizable.  
   
@@ -120,47 +120,47 @@ ms.locfileid: "33385530"
   
      `CWinApp::OnFileNew` Este comando de forma diferente dependiendo del número de plantillas de documento se implementa en la aplicación. Si solo hay un `CDocTemplate`, `CWinApp::OnFileNew` creará un nuevo documento de ese tipo, así como la clase de marco y vista apropiada.  
   
-     Si hay más de un `CDocTemplate`, `CWinApp::OnFileNew` pedirá al usuario un cuadro de diálogo (**AFX_IDD_NEWTYPEDLG**) lo que permite seleccionar qué tipo de documento que se usará. Seleccionado `CDocTemplate` se utiliza para crear el documento.  
+     Si hay más de un `CDocTemplate`, `CWinApp::OnFileNew` pedirá al usuario un cuadro de diálogo (AFX_IDD_NEWTYPEDLG) que les permite seleccionar qué tipo usar de documento. Seleccionado `CDocTemplate` se utiliza para crear el documento.  
   
-     Una personalización común de `ID_FILE_NEW` es proporcionar una diferente y más opciones gráfico de tipos de documentos. En este caso puede implementar su propia **CMyApp::OnFileNew** y lo coloca en el mapa de mensajes en lugar de `CWinApp::OnFileNew`. No hay ninguna necesidad de llamar a la implementación de la clase base.  
+     Una personalización común de ID_FILE_NEW es proporcionar una diferente y más opciones gráfico de tipos de documentos. En este caso puede implementar su propia `CMyApp::OnFileNew` y lo coloca en el mapa de mensajes en lugar de `CWinApp::OnFileNew`. No hay ninguna necesidad de llamar a la implementación de la clase base.  
   
-     Otra personalización común de `ID_FILE_NEW` es proporcionar un comando independiente para la creación de un documento de cada tipo. En este caso debe definir nuevos identificadores de comando, por ejemplo ID_FILE_NEW_CHART y ID_FILE_NEW_SHEET.  
+     Otra personalización común de ID_FILE_NEW es proporcionar un comando independiente para la creación de un documento de cada tipo. En este caso debe definir nuevos identificadores de comando, por ejemplo ID_FILE_NEW_CHART y ID_FILE_NEW_SHEET.  
   
 -   ID_FILE_OPEN abre un documento existente.  
   
     > [!NOTE]
     >  Debe conectarse a su `CWinApp`-derivados de mapa de mensajes de la clase para habilitar esta funcionalidad.  
   
-     `CWinApp::OnFileOpen` tiene una implementación muy sencilla de llamar al método **CWinApp::DoPromptFileName** seguido `CWinApp::OpenDocumentFile` con el nombre de archivo o ruta de acceso del archivo que se abre. El `CWinApp` rutina de implementación **DoPromptFileName** , se abrirá el cuadro de diálogo FileOpen estándar y se rellena con las extensiones de archivo que se obtienen de las plantillas de documento actual.  
+     `CWinApp::OnFileOpen` tiene una implementación muy sencilla de llamar al método `CWinApp::DoPromptFileName` seguido `CWinApp::OpenDocumentFile` con el nombre de archivo o ruta de acceso del archivo que se abre. El `CWinApp` rutina de implementación `DoPromptFileName` , se abrirá el cuadro de diálogo FileOpen estándar y se rellena con las extensiones de archivo que se obtienen de las plantillas de documento actual.  
   
-     Una personalización común de `ID_FILE_OPEN` es para personalizar el cuadro de diálogo FileOpen o agregar filtros de archivo adicionales. Es la manera recomendada para personalizarlo reemplazar la implementación predeterminada con su propio cuadro de diálogo FileOpen y llamada `CWinApp::OpenDocumentFile` con el nombre de archivo o ruta de acceso del documento. No hay ninguna necesidad de llamar a la clase base.  
+     Es una personalización común de ID_FILE_OPEN personalizar el cuadro de diálogo FileOpen o agregar filtros de archivo adicionales. Es la manera recomendada para personalizarlo reemplazar la implementación predeterminada con su propio cuadro de diálogo FileOpen y llamada `CWinApp::OpenDocumentFile` con el nombre de archivo o ruta de acceso del documento. No hay ninguna necesidad de llamar a la clase base.  
   
 -   ID_FILE_CLOSE cierra el documento abierto actualmente.  
   
-     **CDocument::OnFileClose** llamadas `CDocument::SaveModified` para pedir al usuario que guarde el documento si se ha modificado y, a continuación, llama a `OnCloseDocument`. Toda la lógica de cierre, incluidos destruir el documento, se realiza en el `OnCloseDocument` rutina.  
+     `CDocument::OnFileClose` llamadas `CDocument::SaveModified` para pedir al usuario que guarde el documento si se ha modificado y, a continuación, llama a `OnCloseDocument`. Toda la lógica de cierre, incluidos destruir el documento, se realiza en el `OnCloseDocument` rutina.  
   
     > [!NOTE]
-    >  **ID_FILE_CLOSE** actúa de forma diferente de un `WM_CLOSE` mensaje o un **SC_CLOSE** comando del sistema enviado a la ventana de marco de documentos. Cerrar la ventana se cerrará el documento solo si la última ventana de marco que muestra el documento. Cerrar el documento con **ID_FILE_CLOSE** sólo no cerrará el documento pero se cerrará todas las ventanas de marco que muestra el documento.  
+    >  ID_FILE_CLOSE actúa de manera diferente a un mensaje WM_CLOSE o un comando del sistema SC_CLOSE enviados a la ventana de marco de documentos. Cerrar la ventana se cerrará el documento solo si la última ventana de marco que muestra el documento. Cerrar el documento con ID_FILE_CLOSE solo no cerrará el documento, pero se cerrará todas las ventanas de marco que muestra el documento.  
   
 -   ID_FILE_SAVE guarda el documento actual.  
   
-     La implementación utiliza una rutina auxiliar **CDocument::DoSave** que se usa para **OnFileSave** y **OnFileSaveAs**. Si guarda un documento que no se ha guardado antes (es decir, no tiene un nombre de ruta de acceso, como en el caso de FileNew) o que se han leído desde un documento de sólo lectura, el **OnFileSave** lógica actuará como el **ID_FILE_SAVE_AS** comando y pedir al usuario que especifique un nuevo nombre de archivo. El proceso de abrir el archivo y realizar el almacenamiento real se realiza a través de la función virtual `OnSaveDocument`.  
+     La implementación utiliza una rutina auxiliar `CDocument::DoSave` que se usa para `OnFileSave` y `OnFileSaveAs`. Si guarda un documento que no se ha guardado antes (es decir, no tiene un nombre de ruta de acceso, como en el caso de FileNew) o que se han leído desde un documento de sólo lectura, el `OnFileSave` lógica actuará como el ID_FILE_SAVE_AS comando y pedir al usuario que especifique un nuevo nombre de archivo . El proceso de abrir el archivo y realizar el almacenamiento real se realiza a través de la función virtual `OnSaveDocument`.  
   
-     Hay dos razones comunes para personalizar **ID_FILE_SAVE**. Para los documentos que no guardan, basta con quitar el **ID_FILE_SAVE** elementos de menú y botones de barra de herramientas de la interfaz de usuario. Además, asegúrese de que nunca desfasadas del documento (es decir, no llamar nunca a `CDocument::SetModifiedFlag`) y el marco de trabajo nunca hará que el documento se guarde. Para los documentos que guarde en algún lugar que no sea un archivo de disco, definir un nuevo comando para esa operación.  
+     Hay dos razones comunes para personalizar ID_FILE_SAVE. Para los documentos que no guardan, basta con quitar los elementos de menú ID_FILE_SAVE y botones de barra de herramientas de la interfaz de usuario. Además, asegúrese de que nunca desfasadas del documento (es decir, no llamar nunca a `CDocument::SetModifiedFlag`) y el marco de trabajo nunca hará que el documento se guarde. Para los documentos que guarde en algún lugar que no sea un archivo de disco, definir un nuevo comando para esa operación.  
   
-     En el caso de un `COleServerDoc`, **ID_FILE_SAVE** se usa para guardar archivos (para documentos normales) y la actualización del archivo (para documentos incrustados).  
+     En el caso de un `COleServerDoc`, ID_FILE_SAVE se usa para guardar archivos (para documentos normales) y la actualización del archivo (para documentos incrustados).  
   
-     Si los datos del documento se almacenan en archivos de disco individuales, pero no desea usar el valor predeterminado **CDocument** serializar la implementación, debe invalidar `CDocument::OnSaveDocument` en lugar de **OnFileSave**.  
+     Si los datos del documento se almacenan en archivos de disco individuales, pero no desea usar el valor predeterminado `CDocument` serializar la implementación, debe invalidar `CDocument::OnSaveDocument` en lugar de `OnFileSave`.  
   
 -   ID_FILE_SAVE_AS guarda el documento actual con un nombre de archivo diferente.  
   
-     El **CDocument::OnFileSaveAs** implementación utiliza la misma **CDocument::DoSave** rutina auxiliar como **OnFileSave**. El **OnFileSaveAs** comandos se administran igual que **ID_FILE_SAVE** si los documentos no tenían ningún nombre de archivo antes de guardar. **COleServerDoc::OnFileSaveAs** implementa la lógica para guardar un archivo de datos de documento normal o para guardar un documento de servidor que representa un objeto OLE se incrusta en otra aplicación como un archivo independiente.  
+     El `CDocument::OnFileSaveAs` implementación utiliza la misma `CDocument::DoSave` rutina auxiliar como `OnFileSave`. El `OnFileSaveAs` comando se gestiona igual que ID_FILE_SAVE si los documentos no tenían ningún nombre de archivo antes de guardar. `COleServerDoc::OnFileSaveAs` implementa la lógica para guardar un archivo de datos de documento normal o guardar un documento de servidor que representa un objeto OLE incrustado en otra aplicación como un archivo independiente.  
   
-     Si personaliza la lógica de **ID_FILE_SAVE**, probablemente deseará personalizar **ID_FILE_SAVE_AS** de un modo similar o a la operación de "Guardar como" no puede aplicarse al documento. Puede quitar el elemento de menú de la barra de menús si no es necesario.  
+     Si personaliza la lógica de ID_FILE_SAVE, probablemente deseará personalizar ID_FILE_SAVE_AS de forma similar, o la operación de "Guardar como" no puede aplicar al documento. Puede quitar el elemento de menú de la barra de menús si no es necesario.  
   
 -   ID_FILE_SAVE_COPY_AS guarda un documento de copia actual con un nombre nuevo.  
   
-     El **COleServerDoc::OnFileSaveCopyAs** implementación es muy similar a **CDocument::OnFileSaveAs**, excepto en que el objeto de documento no está "conectado" en el archivo subyacente después de la operación de guardar. Es decir, si el documento en memoria se ha "modificado" antes de guardar, que se sigue "modificar". Además, este comando no tiene ningún efecto en el nombre de ruta de acceso o el título almacenado en el documento.  
+     El `COleServerDoc::OnFileSaveCopyAs` implementación es muy similar a `CDocument::OnFileSaveAs`, excepto en que el objeto de documento no está "conectado" en el archivo subyacente después de la operación de guardar. Es decir, si el documento en memoria se ha "modificado" antes de guardar, que se sigue "modificar". Además, este comando no tiene ningún efecto en el nombre de ruta de acceso o el título almacenado en el documento.  
   
 -   ID_FILE_UPDATE notifica el contenedor para guardar un documento incrustado.  
   
@@ -179,9 +179,9 @@ ms.locfileid: "33385530"
   
      Este comando, invoca el cuadro de diálogo de configuración de impresión estándar que permite al usuario personalizar la impresora y la configuración de impresión para al menos en este documento o a lo sumo todos los documentos en esta aplicación. Debe usar el Panel de Control para cambiar la configuración de impresora predeterminada para todo el sistema.  
   
-     `CWinApp::OnFilePrintSetup` tiene una implementación muy sencilla de crear un `CPrintDialog` objeto y llamar a la **CWinApp::DoPrintDialog** función de la implementación. Esto establece la configuración de impresora de aplicación predeterminada.  
+     `CWinApp::OnFilePrintSetup` tiene una implementación muy sencilla de crear un `CPrintDialog` objeto y llamar a la `CWinApp::DoPrintDialog` función de la implementación. Esto establece la configuración de impresora de aplicación predeterminada.  
   
-     La necesidad común para personalizar este comando es permitir la configuración de la impresora de cada documento, que se debe almacenar con el documento cuando se guarda. Para ello debe agregar un controlador de mapa de mensajes en su **CDocument** clase que crea una `CPrintDialog` de objetos, lo inicializa con los atributos de impresora adecuada (normalmente **hDevMode** y **hDevNames**), llame a la **CPrintDialog::DoModal,** y guardar la configuración de impresora modificada. Para una implementación sólida, debe considerar la implementación de **CWinApp::DoPrintDialog** para detectar errores y **CWinApp::UpdatePrinterSelection** para tratar los valores predeterminados razonables y seguimiento de cambios de la impresora de todo el sistema.  
+     La necesidad común para personalizar este comando es permitir la configuración de la impresora de cada documento, que se debe almacenar con el documento cuando se guarda. Para ello debe agregar un controlador de mapa de mensajes en su `CDocument` clase que crea una `CPrintDialog` de objetos, lo inicializa con los atributos de impresora adecuada (normalmente *hDevMode* y *hDevNames*), llame a la `CPrintDialog::DoModal`y guarde la configuración de impresora modificada. Para una implementación sólida, debe considerar la implementación de `CWinApp::DoPrintDialog` para detectar errores y `CWinApp::UpdatePrinterSelection` para trabajar con valores predeterminados razonables y seguimiento de cambios de la impresora de todo el sistema.  
   
 -   Impresión ID_FILE_PRINT estándar del documento actual  
   
@@ -190,26 +190,26 @@ ms.locfileid: "33385530"
   
      Este comando imprime el documento actual, o más correctamente, inicia el proceso de impresión, lo que implica invocar el cuadro de diálogo de impresión estándar y ejecuta el motor de impresión.  
   
-     **CView::OnFilePrint** implementa este comando y el bucle de impresión principal. Lo llama el virtual `CView::OnPreparePrinting` al símbolo del sistema del usuario con el cuadro de diálogo de impresión. A continuación, se prepara la salida del controlador de dominio para ir a la impresora, se abrirá el cuadro de diálogo de progreso de la impresión (**AFX_IDD_PRINTDLG**) y envía el `StartDoc` escape a la impresora. **CView::OnFilePrint** también contiene el bucle de impresión y orientada a la página principal. Para cada página, llama a virtual `CView::OnPrepareDC` seguido por un `StartPage` escape y llamar a virtual `CView::OnPrint` para esa página. Cuando haya terminado, el virtual `CView::OnEndPrinting` se llama, y se cierra el cuadro de diálogo de progreso de la impresión.  
+     `CView::OnFilePrint` implementa este comando y el bucle de impresión principal. Lo llama el virtual `CView::OnPreparePrinting` al símbolo del sistema del usuario con el cuadro de diálogo de impresión. A continuación, prepara la salida del controlador de dominio para ir a la impresora, se abrirá el cuadro de diálogo de progreso de la impresión (AFX_IDD_PRINTDLG) y devuelve el `StartDoc` escape a la impresora. `CView::OnFilePrint` También contiene el bucle de impresión y orientada a la página principal. Para cada página, llama a virtual `CView::OnPrepareDC` seguido por un `StartPage` escape y llamar a virtual `CView::OnPrint` para esa página. Cuando haya terminado, el virtual `CView::OnEndPrinting` se llama, y se cierra el cuadro de diálogo de progreso de la impresión.  
   
-     La arquitectura de impresión de MFC está diseñada para enlazar de muchas maneras diferentes para la impresión y vista previa. Normalmente, encontrará los distintos `CView` funciones reemplazables adecuadas para las tareas de impresión orientada a páginas. Sólo en el caso de una aplicación que usa la impresora para distintos de páginas orientada a servicios de salida, debe buscar la necesidad de reemplazar el **ID_FILE_PRINT** implementación.  
+     La arquitectura de impresión de MFC está diseñada para enlazar de muchas maneras diferentes para la impresión y vista previa. Normalmente, encontrará los distintos `CView` funciones reemplazables adecuadas para las tareas de impresión orientada a páginas. Sólo en el caso de una aplicación que usa la impresora para la salida orientada a distintos de páginas, debe buscar la necesidad de reemplazar la implementación de ID_FILE_PRINT.  
   
 -   ID_FILE_PRINT_PREVIEW especificar el modo de vista previa de impresión del documento actual.  
   
     > [!NOTE]
     >  Debe conectarse a su `CView`-derivados de mapa de mensajes de la clase para habilitar esta funcionalidad.  
   
-     **CView::OnFilePrintPreview** inicia el modo de vista previa de impresión mediante una llamada a la función auxiliar documentado **CView::DoPrintPreview**. **CView::DoPrintPreview** es el motor principal para el bucle de vista previa de impresión, al igual que **OnFilePrint** es el motor principal para el bucle de impresión.  
+     `CView::OnFilePrintPreview` inicia el modo de vista previa de impresión mediante una llamada a la función auxiliar documentado `CView::DoPrintPreview`. `CView::DoPrintPreview` es el motor principal para el bucle de vista previa de impresión, al igual que `OnFilePrint` es el motor principal para el bucle de impresión.  
   
-     La operación de vista previa de impresión se puede personalizar de varias maneras al pasar parámetros distintos a **DoPrintPreview**. Consulte [30 de nota técnica](../mfc/tn030-customizing-printing-and-print-preview.md), que describen algunos de los detalles de la vista previa de impresión y cómo personalizarlo.  
+     La operación de vista previa de impresión se puede personalizar de varias maneras al pasar parámetros distintos a `DoPrintPreview`. Consulte [30 de nota técnica](../mfc/tn030-customizing-printing-and-print-preview.md), que describen algunos de los detalles de la vista previa de impresión y cómo personalizarlo.  
   
--   **ID_FILE_MRU_FILE1**... **FILE16** un intervalo de identificadores de comandos para el archivo de elementos utilizados Recientemente `list`.  
+-   ID_FILE_MRU_FILE1... FILE16 Un intervalo de identificadores de comandos para el archivo de elementos utilizados Recientemente **lista**.  
   
-     **CWinApp::OnUpdateRecentFileMenu** es un controlador de interfaz de usuario de comandos de actualización que es uno de los usos más avanzados de la `ON_UPDATE_COMMAND_UI` mecanismo. En el recurso de menú, sólo necesita definir un solo elemento de menú con el identificador **ID_FILE_MRU_FILE1**. Ese elemento de menú permanece inicialmente deshabilitado.  
+     `CWinApp::OnUpdateRecentFileMenu` es un controlador de interfaz de usuario de comandos de actualización que es uno de los usos más avanzados de los mecanismos ON_UPDATE_COMMAND_UI. En el recurso de menú, sólo necesita definir un solo elemento de menú con Id. de ID_FILE_MRU_FILE1. Ese elemento de menú permanece inicialmente deshabilitado.  
   
      Como el MRU lista crece, menú más elementos se agregan a la lista. El estándar `CWinApp` implementación tiene como valor predeterminado del límite estándar de los cuatro archivos usados más recientemente. Puede cambiar el valor predeterminado mediante una llamada a `CWinApp::LoadStdProfileSettings` con un valor mayor o menor. La lista de elementos utilizados Recientemente se almacena en la aplicación. Archivo INI. La lista se carga en la aplicación `InitInstance` funcionando si se llama a `LoadStdProfileSettings`y se guarda cuando se cierre la aplicación. El controlador de interfaz de usuario de comandos de actualización MRU también convertirá rutas de acceso absolutas en las rutas de acceso relativas para su presentación en el menú archivo.  
   
-     **CWinApp::OnOpenRecentFile** es el `ON_COMMAND` controlador que ejecutará el comando real. Obtiene simplemente el nombre de archivo en la lista de elementos utilizados Recientemente y llamadas `CWinApp::OpenDocumentFile`, que hace todo el trabajo de abrir el archivo y actualizar la lista de elementos utilizados Recientemente.  
+     `CWinApp::OnOpenRecentFile` es el controlador ON_COMMAND que ejecutará el comando real. Obtiene simplemente el nombre de archivo en la lista de elementos utilizados Recientemente y llamadas `CWinApp::OpenDocumentFile`, que hace todo el trabajo de abrir el archivo y actualizar la lista de elementos utilizados Recientemente.  
   
      No se recomienda la personalización de este controlador de comandos.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "33385530"
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `CEditView` Proporciona una implementación de este comando, que llama a la función de aplicación auxiliar de implementación **OnEditFindReplace** para utilizar y almacenar la configuración de búsqueda y reemplazo anterior en variables de implementación privada. La `CFindReplaceDialog` clase se utiliza para administrar el cuadro de diálogo no modal para preguntar al usuario.  
+     `CEditView` Proporciona una implementación de este comando, que llama a la función de aplicación auxiliar de implementación `OnEditFindReplace` para utilizar y almacenar la configuración de búsqueda y reemplazo anterior en variables de implementación privada. La `CFindReplaceDialog` clase se utiliza para administrar el cuadro de diálogo no modal para preguntar al usuario.  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -257,7 +257,7 @@ ms.locfileid: "33385530"
   
      `CEditView` Proporciona una implementación de este comando, que copia los datos del Portapapeles actuales reemplazando el texto seleccionado con `CEdit::Paste`. El comando está deshabilitado si no hay ningún **CF_TEXT** en el Portapapeles.  
   
-     **COleClientDoc** simplemente proporciona un controlador de interfaz de usuario de comando de actualización para este comando. Si el Portapapeles no contiene un elemento OLE incrustable/objeto, se deshabilitará el comando. Usted es responsable de escribir el controlador para el comando real para realizar el pegado real. Si una aplicación OLE también puede pegar a otros formatos, debe proporcionar su propio controlador de interfaz de usuario de comando de actualización en la vista o el documento (es decir, en algún lugar antes de **COleClientDoc** en la ruta de destino de comando).  
+     `COleClientDoc` simplemente proporciona un controlador de interfaz de usuario de comando de actualización para este comando. Si el Portapapeles no contiene un elemento OLE incrustable/objeto, se deshabilitará el comando. Usted es responsable de escribir el controlador para el comando real para realizar el pegado real. Si una aplicación OLE también puede pegar a otros formatos, debe proporcionar su propio controlador de interfaz de usuario de comando de actualización en la vista o el documento (es decir, en algún lugar antes de `COleClientDoc` en la ruta de destino de comando).  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -291,7 +291,7 @@ ms.locfileid: "33385530"
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para cada `CView`-clase derivada.  
   
-     `CEditView` Proporciona una implementación de este comando, que llama a la función de aplicación auxiliar de implementación **OnEditFindReplace** para utilizar y almacenar la configuración de búsqueda y reemplazo anterior en variables de implementación privada. La `CFindReplaceDialog` clase se utiliza para administrar el cuadro de diálogo no modal que pide al usuario.  
+     `CEditView` Proporciona una implementación de este comando, que llama a la función de aplicación auxiliar de implementación `OnEditFindReplace` para utilizar y almacenar la configuración de búsqueda y reemplazo anterior en variables de implementación privada. La `CFindReplaceDialog` clase se utiliza para administrar el cuadro de diálogo no modal que pide al usuario.  
   
      Si decide implementar este comando, se recomienda que usar este identificador de comando.  
   
@@ -319,15 +319,15 @@ ms.locfileid: "33385530"
   
 -   ID_WINDOW_NEW abre otra ventana en el documento activo.  
   
-     **CMDIFrameWnd::OnWindowNew** implementa esta eficaz característica mediante la plantilla de documento del documento actual para crear otro marco que contiene otra vista del documento actual.  
+     `CMDIFrameWnd::OnWindowNew` Esta eficaz característica se implementa mediante la plantilla de documento del documento actual para crear otro marco que contiene otra vista del documento actual.  
   
      Al igual que la mayoría varios documentos (MDI) de la interfaz ventana comandos de menú, el comando está deshabilitado si no hay ninguna ventana secundaria MDI activa.  
   
-     No se recomienda la personalización de este controlador de comandos. Si desea proporcionar un comando que crea vistas adicionales o ventanas de marco, probablemente será mejor inventar su propio comando. Se puede clonar el código de **CMDIFrameWnd::OnWindowNew** y modifíquelo para las clases concretas de marco y vista de su gusto.  
+     No se recomienda la personalización de este controlador de comandos. Si desea proporcionar un comando que crea vistas adicionales o ventanas de marco, probablemente será mejor inventar su propio comando. Se puede clonar el código de `CMDIFrameWnd::OnWindowNew` y modifíquelo para las clases concretas de marco y vista de su gusto.  
   
 -   ID_WINDOW_ARRANGE organiza los iconos en la parte inferior de una ventana MDI.  
   
-     `CMDIFrameWnd` implementa este comando estándar de MDI en una función de aplicación auxiliar de implementación **OnMDIWindowCmd**. Esta aplicación auxiliar asigna identificadores de comando a los mensajes de ventanas MDI y, por tanto, puede compartir una gran cantidad de código.  
+     `CMDIFrameWnd` implementa este comando estándar de MDI en una función de aplicación auxiliar de implementación `OnMDIWindowCmd`. Esta aplicación auxiliar asigna identificadores de comando a los mensajes de ventanas MDI y, por tanto, puede compartir una gran cantidad de código.  
   
      Al igual que la mayoría de los comandos de menú de ventana MDI, el comando está deshabilitado si no hay ninguna ventana secundaria MDI activa.  
   
@@ -335,7 +335,7 @@ ms.locfileid: "33385530"
   
 -   Ventanas en cascada ID_WINDOW_CASCADE para que se superpongan.  
   
-     `CMDIFrameWnd` implementa este comando estándar de MDI en una función de aplicación auxiliar de implementación **OnMDIWindowCmd**. Esta aplicación auxiliar asigna identificadores de comando a los mensajes de ventanas MDI y, por tanto, puede compartir una gran cantidad de código.  
+     `CMDIFrameWnd` implementa este comando estándar de MDI en una función de aplicación auxiliar de implementación `OnMDIWindowCmd`. Esta aplicación auxiliar asigna identificadores de comando a los mensajes de ventanas MDI y, por tanto, puede compartir una gran cantidad de código.  
   
      Al igual que la mayoría de los comandos de menú de ventana MDI, el comando está deshabilitado si no hay ninguna ventana secundaria MDI activa.  
   
@@ -343,15 +343,15 @@ ms.locfileid: "33385530"
   
 -   Windows ID_WINDOW_TILE_HORZ mosaicos horizontalmente.  
   
-     Este comando se implementa en `CMDIFrameWnd` igual que **ID_WINDOW_CASCADE**, excepto en que se usa un mensaje de ventanas MDI diferente para la operación.  
+     Este comando se implementa en `CMDIFrameWnd` igual que ID_WINDOW_CASCADE, excepto que se usa un mensaje de ventanas MDI diferente para la operación.  
   
-     Debe elegir la orientación de mosaico predeterminado para la aplicación. Puede hacerlo cambiando el identificador para el elemento de menú "Icono" de ventana como **ID_WINDOW_TILE_HORZ** o **ID_WINDOW_TILE_VERT**.  
+     Debe elegir la orientación de mosaico predeterminado para la aplicación. Para ello, cambie el identificador para el elemento de menú de ventana "Icono" ID_WINDOW_TILE_HORZ o ID_WINDOW_TILE_VERT.  
   
 -   Windows ID_WINDOW_TILE_VERT iconos verticalmente.  
   
-     Este comando se implementa en `CMDIFrameWnd` igual que **ID_WINDOW_CASCADE**, excepto en que se usa un mensaje de ventanas MDI diferente para la operación.  
+     Este comando se implementa en `CMDIFrameWnd` igual que ID_WINDOW_CASCADE, excepto que se usa un mensaje de ventanas MDI diferente para la operación.  
   
-     Debe elegir la orientación de mosaico predeterminado para la aplicación. Puede hacerlo cambiando el identificador para el elemento de menú "Icono" de ventana como **ID_WINDOW_TILE_HORZ** o **ID_WINDOW_TILE_VERT**.  
+     Debe elegir la orientación de mosaico predeterminado para la aplicación. Para ello, cambie el identificador para el elemento de menú de ventana "Icono" ID_WINDOW_TILE_HORZ o ID_WINDOW_TILE_VERT.  
   
 -   Interfaz de teclado ID_WINDOW_SPLIT al divisor.  
   
@@ -369,7 +369,7 @@ ms.locfileid: "33385530"
   
 -   ID_APP_EXIT salir de la aplicación.  
   
-     **CWinApp::OnAppExit** controla este comando mediante el envío de un `WM_CLOSE` mensaje en la ventana principal de la aplicación. El estándar de cierre de la aplicación (pedir archivos modificados y así sucesivamente) se controla mediante el `CFrameWnd` implementación.  
+     `CWinApp::OnAppExit` Este comando se controla mediante el envío de un mensaje WM_CLOSE a la ventana principal de la aplicación. El estándar de cierre de la aplicación (pedir archivos modificados y así sucesivamente) se controla mediante el `CFrameWnd` implementación.  
   
      No se recomienda la personalización de este controlador de comandos. Reemplazar `CWinApp::SaveAllModified` o `CFrameWnd` se recomienda la lógica de cierre.  
   
@@ -422,7 +422,7 @@ ms.locfileid: "33385530"
   
 -   ID_NEXT_PANE va al siguiente panel  
   
-     `CView` controla este comando para el `CSplitterWnd` implementación. Si la vista es parte de una ventana divisora, este comando va a delegar a la función de la implementación **CSplitterWnd::OnNextPaneCmd**. Este proceso moverá la vista activa al siguiente panel en el divisor.  
+     `CView` controla este comando para el `CSplitterWnd` implementación. Si la vista es parte de una ventana divisora, este comando va a delegar a la función de la implementación `CSplitterWnd::OnNextPaneCmd`. Este proceso moverá la vista activa al siguiente panel en el divisor.  
   
      Este comando está deshabilitado si la vista no está en un divisor o no hay ningún panel siguiente para ir a.  
   
@@ -430,7 +430,7 @@ ms.locfileid: "33385530"
   
 -   ID_PREV_PANE va al panel anterior  
   
-     `CView` controla este comando para el `CSplitterWnd` implementación. Si la vista es parte de una ventana divisora, este comando va a delegar a la función de la implementación **CSplitterWnd::OnNextPaneCmd**. Este proceso moverá la vista activa al panel anterior en el divisor.  
+     `CView` controla este comando para el `CSplitterWnd` implementación. Si la vista es parte de una ventana divisora, este comando va a delegar a la función de la implementación `CSplitterWnd::OnNextPaneCmd`. Este proceso moverá la vista activa al panel anterior en el divisor.  
   
      Este comando está deshabilitado si la vista no está en un divisor o no hay ningún panel anterior para ir a.  
   
@@ -440,7 +440,7 @@ ms.locfileid: "33385530"
   
      Actualmente no hay ninguna implementación estándar de este comando. Debe hacerlo para su `CView`-clase derivada para insertar un nuevo elemento/objeto OLE en la selección actual.  
   
-     Todas las aplicaciones de cliente OLE deben implementar este comando. El Asistente para aplicaciones, con la opción OLE, creará una implementación esqueleto de **OnInsertObject** en la clase de vista que se deben completar.  
+     Todas las aplicaciones de cliente OLE deben implementar este comando. El Asistente para aplicaciones, con la opción OLE, creará una implementación esqueleto de `OnInsertObject` en la clase de vista que se deben completar.  
   
      Vea el ejemplo de MFC OLE [OCLIENT](../visual-cpp-samples.md) ejemplo para una implementación completa de este comando.  
   
@@ -452,42 +452,42 @@ ms.locfileid: "33385530"
   
 -   ID_OLE_VERB_FIRST... ÚLTIMO intervalo de un identificador para los verbos OLE  
   
-     `COleDocument` usa este intervalo de Id. de comando para los verbos admitidos por el elemento/objeto OLE actualmente seleccionado. Esto debe ser un intervalo como un tipo de elemento u objeto OLE determinado puede admitir verbos personalizados de cero o más. En el menú de la aplicación, debe tener un elemento de menú con el Id. de **ID_OLE_VERB_FIRST**. Cuando se ejecuta el programa, el menú se actualizará con la descripción del verbo de menú correspondiente (o menú emergente con muchos verbos). La administración del menú OLE se controla mediante `AfxOleSetEditMenu`hecho en el controlador de interfaz de usuario de comandos de actualización para este comando.  
+     `COleDocument` usa este intervalo de Id. de comando para los verbos admitidos por el elemento/objeto OLE actualmente seleccionado. Esto debe ser un intervalo como un tipo de elemento u objeto OLE determinado puede admitir verbos personalizados de cero o más. En el menú de la aplicación, debe tener un elemento de menú con el Id. de ID_OLE_VERB_FIRST. Cuando se ejecuta el programa, el menú se actualizará con la descripción del verbo de menú correspondiente (o menú emergente con muchos verbos). La administración del menú OLE se controla mediante `AfxOleSetEditMenu`hecho en el controlador de interfaz de usuario de comandos de actualización para este comando.  
   
-     No hay ningún controlador de comando explícito para controlar cada uno de identificador del comando en este intervalo. **COleDocument::OnCmdMsg** se invalida para interceptar todos los identificadores de comando de este intervalo, convertirlas en números de verbo basado en cero e iniciar el servidor para ese verbo (mediante `COleClientItem::DoVerb`).  
+     No hay ningún controlador de comando explícito para controlar cada uno de identificador del comando en este intervalo. `COleDocument::OnCmdMsg` se invalida para interceptar todos los identificadores de comando de este intervalo, convertirlas en números de verbo basado en cero e iniciar el servidor para ese verbo (mediante `COleClientItem::DoVerb`).  
   
      No se recomienda personalización u otros usos de este intervalo de Id. de comando.  
   
 -   ID_VIEW_TOOLBAR alterna la barra de herramientas, activar y desactivar  
   
-     `CFrameWnd` controla este comando y el controlador de interfaz de usuario de comandos de actualización para alternar el estado de visibilidad de la barra de herramientas. La barra de herramientas debe ser una ventana secundaria del marco con el identificador de ventana secundaria de `AFX_IDW_TOOLBAR`. El controlador de comandos realmente alterna la visibilidad de la ventana de la barra de herramientas. `CFrameWnd::RecalcLayout` se utiliza para volver a dibujar la ventana de marco con la barra de herramientas en su nuevo estado. El controlador de interfaz de usuario de comando de actualización comprueba el elemento de menú cuando la barra de herramientas está visible.  
+     `CFrameWnd` controla este comando y el controlador de interfaz de usuario de comandos de actualización para alternar el estado de visibilidad de la barra de herramientas. La barra de herramientas debe ser una ventana secundaria de la trama con ventana secundaria Id. de AFX_IDW_TOOLBAR. El controlador de comandos realmente alterna la visibilidad de la ventana de la barra de herramientas. `CFrameWnd::RecalcLayout` se utiliza para volver a dibujar la ventana de marco con la barra de herramientas en su nuevo estado. El controlador de interfaz de usuario de comando de actualización comprueba el elemento de menú cuando la barra de herramientas está visible.  
   
      No se recomienda la personalización de este controlador de comandos. Si desea agregar barras de herramientas adicionales, desea clonar y modificar el controlador de comandos y el controlador de interfaz de usuario de comando de actualización para este comando.  
   
 -   ID_VIEW_STATUS_BAR activa o desactiva la barra de estado activar y desactivar  
   
-     Este comando se implementa en `CFrameWnd` igual que **ID_VIEW_TOOLBAR**, excepto un identificador de ventana secundaria diferentes (**AFX_IDW_STATUS_BAR**) se utiliza.  
+     Este comando se implementa en `CFrameWnd` igual que ID_VIEW_TOOLBAR, excepto una ventana secundaria diferentes de identificador (AFX_IDW_STATUS_BAR) se utiliza.  
   
 ## <a name="update-only-command-handlers"></a>Controladores de comandos sólo actualización  
- Se utilizan varios identificadores de comando estándar como indicadores en barras de estado. Estos usan el mismo mecanismo de control de interfaz de usuario de comando de actualización para mostrar su estado visual actual durante el tiempo de inactividad de la aplicación. Puesto que no se pueden seleccionar por el usuario (es decir, no puede insertar un panel de barra de estado), a continuación, no tiene sentido tener un `ON_COMMAND` controlador para estos identificadores de comando.  
+ Se utilizan varios identificadores de comando estándar como indicadores en barras de estado. Estos usan el mismo mecanismo de control de interfaz de usuario de comando de actualización para mostrar su estado visual actual durante el tiempo de inactividad de la aplicación. Puesto que no se pueden seleccionar por el usuario (es decir, no puede insertar un panel de barra de estado), a continuación, no tiene sentido tener un controlador ON_COMMAND para estos identificadores de comando.  
   
--   **ID_INDICATOR_CAPS** : indicador de bloqueo de extremo.  
+-   ID_INDICATOR_CAPS: Indicador de bloqueo extremo.  
   
--   **ID_INDICATOR_NUM** : indicador de BLOQ NUM.  
+-   ID_INDICATOR_NUM: Indicador de bloqueo NUM.  
   
--   **ID_INDICATOR_SCRL** : indicador de bloqueo Bloq Despl.  
+-   ID_INDICATOR_SCRL: Indicador de bloqueo Bloq Despl.  
   
--   **ID_INDICATOR_KANA** : indicador de bloqueo KANA (se aplica sólo a los sistemas japonés).  
+-   ID_INDICATOR_KANA: KANA indicador de bloqueo (se aplica sólo a los sistemas japonés).  
   
- Estas tres cosas se implementan en **CFrameWnd::OnUpdateKeyIndicator**, una aplicación auxiliar de implementación que utiliza el identificador de comando para asignar a la clave Virtual adecuada. Una implementación común habilita o deshabilita (para los paneles de estado deshabilitados = no hay texto) la `CCmdUI` objeto dependiendo de si la tecla Virtual correspondiente está bloqueada actualmente.  
+ Estas tres cosas se implementan en `CFrameWnd::OnUpdateKeyIndicator`, una aplicación auxiliar de implementación que utiliza el identificador de comando para asignar a la clave Virtual adecuada. Una implementación común habilita o deshabilita (para los paneles de estado deshabilitados = no hay texto) la `CCmdUI` objeto dependiendo de si la tecla Virtual correspondiente está bloqueada actualmente.  
   
  No se recomienda la personalización de este controlador de comandos.  
   
--   **ID_INDICATOR_EXT: EXT**indicador seleccione finaliza.  
+-   ID_INDICATOR_EXT: Indicador de select extendido.  
   
--   **ID_INDICATOR_OVR: OV**e**R**strike indicador.  
+-   ID_INDICATOR_OVR: Indicador de sobrescritura.  
   
--   **ID_INDICATOR_REC: REC**indicador ording.  
+-   ID_INDICATOR_REC: Indicador de grabación.  
   
  Actualmente no hay ninguna implementación estándar para estos indicadores.  
   

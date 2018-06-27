@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b2c10583a4c3fc2b988e50c15b6c1dcf206af65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e8e6c7d5f8144b2aec6c7783680feeff5f6f8a1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384916"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951629"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Tutorial: Agregar una clase CTaskDialog a una aplicación
 En este tutorial se presenta la [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) y se muestra cómo agregar una a la aplicación.  
@@ -44,7 +44,7 @@ En este tutorial se presenta la [CTaskDialog Class](../mfc/reference/ctaskdialog
   
 #### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Para reemplazar un cuadro de mensaje de Windows con una clase CTaskDialog  
   
-1.  Cree un nuevo proyecto de aplicación MFC con la configuración predeterminada. Asígnele el nombre `MyProject`.  
+1.  Cree un nuevo proyecto de aplicación MFC con la configuración predeterminada. Llámelo *MyProject*.  
   
 2.  Use el **Explorador de soluciones** para abrir el archivo MyProject.cpp.  
   
@@ -74,7 +74,7 @@ En este tutorial se presenta la [CTaskDialog Class](../mfc/reference/ctaskdialog
  }  
  ```  
   
-6.  Inserte el siguiente código entre corchetes después de la instrucción `if` del paso 5. Este código crea la clase `CTaskDialog`.  
+6.  Inserte el siguiente código entre corchetes después la **si** instrucción del paso 5. Este código crea la clase `CTaskDialog`.  
   
  ```  
     CTaskDialog taskDialog(message,
@@ -111,9 +111,9 @@ En este tutorial se presenta la [CTaskDialog Class](../mfc/reference/ctaskdialog
   
 2.  Expanda la **Vista de recursos** hasta que pueda seleccionar la carpeta **Tabla de cadenas** . Expándala y haga doble clic en la entrada **Tabla de cadenas** .  
   
-3.  Desplácese a la parte inferior de la tabla de cadenas y agregue una nueva entrada. Cambie el identificador a `TEMP_LINE1`. Establezca el título en **Línea de comandos 1**.  
+3.  Desplácese a la parte inferior de la tabla de cadenas y agregue una nueva entrada. Cambie el identificador a *TEMP_LINE1*. Establezca el título en *1 de la línea de comandos*.  
   
-4.  Agregue otra entrada nueva. Cambie el identificador a `TEMP_LINE2`. Establezca el título en **Línea de comandos 2**.  
+4.  Agregue otra entrada nueva. Cambie el identificador a *TEMP_LINE2*. Establezca el título en *2 de la línea de comandos*.  
   
 5.  Vuelva a MyProject.cpp.  
   
@@ -192,7 +192,7 @@ En este tutorial se presenta la [CTaskDialog Class](../mfc/reference/ctaskdialog
   
 2.  Vaya al corchete de cierre de la instrucción `if (CTaskDialog::IsSupported())` .  
   
-3.  Inserte el código siguiente inmediatamente antes del corchete de cierre de la instrucción `if` (antes del bloque `else` ):  
+3.  Inserte el siguiente código inmediatamente antes del corchete de cierre de la **si** instrucción (antes de la **else** bloque):  
   
  ```  
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",

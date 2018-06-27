@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b08f8d5ad1fa7c925e3a6dc2243079aba21452b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3959ae03d40bac93ca6453c254e894b8782f5333
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357092"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957203"
 ---
 # <a name="canimationrect-class"></a>Clase CAnimationRect
 Implementa la funcionalidad de un rectángulo cuyos lados se pueden animar.  
@@ -139,16 +139,16 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pLeftTransition`  
+ *pLeftTransition*  
  Especifica la transición del lado izquierdo.  
   
- `pTopTransition`  
+ *pTopTransition*  
  Especifica la transición para el lado superior.  
   
- `pRightTransition`  
+ *pRightTransition*  
  Especifica la transición para el lado derecho.  
   
- `pBottomTransition`  
+ *pBottomTransition*  
  Especifica la transición para el lado inferior.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -187,34 +187,34 @@ CAnimationRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rect`  
+ *Rect*  
  Especifica el rectángulo de manera predeterminada.  
   
- `nGroupID`  
+ *nGroupID*  
  Especifica el identificador de grupo.  
   
- `nObjectID`  
+ *nObjectID*  
  Especifica el identificador de objeto.  
   
- `dwUserData`  
+ *dwUserData*  
  Especifica los datos definidos por el usuario.  
   
- `pt`  
+ *PT*  
  Coordenada de la esquina superior izquierda.  
   
- `sz`  
+ *sz*  
  Tamaño del rectángulo.  
   
- `nLeft`  
+ *nLeft*  
  Especifica la coordenada del límite izquierdo.  
   
- `nTop`  
+ *nTop*  
  Especifica la coordenada del límite superior.  
   
- `nRight`  
+ *nRight*  
  Especifica la coordenada del límite derecho.  
   
- `nBottom`  
+ *nBottom*  
  Especifica la coordenada del límite inferior.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -230,7 +230,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lst`  
+ *lst*  
  Cuando la función devuelve, contiene punteros a cuatro objetos CAnimationVariable que representa las coordenadas del rectángulo.  
   
 ##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
@@ -306,7 +306,7 @@ BOOL GetValue(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rect`  
+ *Rect*  
  Salida. Cuando este método vuelve, contiene el valor actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -381,7 +381,7 @@ void operator=(const RECT& rect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rect`  
+ *Rect*  
  El nuevo valor del rectángulo de animación.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -395,7 +395,7 @@ void SetDefaultValue(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rect`  
+ *Rect*  
  Especifica los nuevos valores predeterminados de la izquierda, superior, derecho e inferior.  
   
 ### <a name="remarks"></a>Comentarios  

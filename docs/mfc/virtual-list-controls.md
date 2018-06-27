@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b580e455aab7ff95beb85c02b8e3ca79dfa8a46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4891a4ccacf57dc43788bfa2a82decbe32961fb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384197"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952832"
 ---
 # <a name="virtual-list-controls"></a>Controles de lista virtual
-Un control de lista virtual es un control de vista de lista que tiene el **LVS_OWNERDATA** estilo. Este estilo permite al control admitir un recuento de elementos de un `DWORD` (el número de elementos de manera predeterminada sólo se extiende a un `int`). Sin embargo, la ventaja principal proporcionada por este estilo es la capacidad para tener sólo un subconjunto de elementos de datos en memoria en cualquier momento. Esto permite que el control de vista de lista virtual conducir por sí mismo para su uso con grandes bases de datos de información, donde los métodos específicos de acceso a los datos ya están en su lugar.  
+Un control de lista virtual es un control de vista de lista que tiene el estilo LVS_OWNERDATA. Este estilo permite al control admitir un recuento de elementos de un **DWORD** (el número de elementos de manera predeterminada sólo se extiende a un **int**). Sin embargo, la ventaja principal proporcionada por este estilo es la capacidad para tener sólo un subconjunto de elementos de datos en memoria en cualquier momento. Esto permite que el control de vista de lista virtual conducir por sí mismo para su uso con grandes bases de datos de información, donde los métodos específicos de acceso a los datos ya están en su lugar.  
   
 > [!NOTE]
 >  Además de proporcionar funcionalidad de lista virtual en `CListCtrl`, MFC también proporciona la misma funcionalidad en el [CListView](../mfc/reference/clistview-class.md) clase.  
@@ -33,17 +33,17 @@ Un control de lista virtual es un control de vista de lista que tiene el **LVS_O
  Hay algunos problemas de compatibilidad que debe tener en cuenta al desarrollar controles de lista virtual. Para obtener más información, vea la sección de problemas de compatibilidad del tema controles de vista de lista en el SDK de Windows.  
   
 ## <a name="handling-the-lvngetdispinfo-notification"></a>Controlar la notificación LVN_GETDISPINFO  
- Controles de lista virtual mantienen muy poca información de elementos. Excepto la selección de elementos e información de foco, el propietario del control administra toda la información de elemento. Se solicita información por el marco de trabajo a través de un **LVN_GETDISPINFO** mensaje de notificación. Para proporcionar la información solicitada, el propietario del control de lista virtual (o el propio control) debe controlar esta notificación. Esto puede realizarse fácilmente mediante la ventana Propiedades (consulte [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)). El código resultante debe ser similar al ejemplo siguiente (donde `CMyDialog` posee el objeto de control de lista virtual y el cuadro de diálogo está controlando la notificación):  
+ Controles de lista virtual mantienen muy poca información de elementos. Excepto la selección de elementos e información de foco, el propietario del control administra toda la información de elemento. El marco de trabajo a través de un mensaje de notificación LVN_GETDISPINFO se solicita información. Para proporcionar la información solicitada, el propietario del control de lista virtual (o el propio control) debe controlar esta notificación. Esto puede realizarse fácilmente mediante la ventana Propiedades (consulte [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)). El código resultante debe ser similar al ejemplo siguiente (donde `CMyDialog` posee el objeto de control de lista virtual y el cuadro de diálogo está controlando la notificación):  
   
  [!code-cpp[NVC_MFCControlLadenDialog#23](../mfc/codesnippet/cpp/virtual-list-controls_1.cpp)]  
   
- En el controlador para el **LVN_GETDISPINFO** mensaje de notificación, debe comprobar para ver qué tipo de información que se solicita. Los valores posibles son:  
+ En el controlador para el mensaje de notificación LVN_GETDISPINFO, también debe comprobar el tipo de información se solicita. Los valores posibles son:  
   
--   `LVIF_TEXT` El `pszText` debe rellenarse miembro.  
+-   `LVIF_TEXT` El *pszText* miembro debe rellenarse.  
   
--   `LVIF_IMAGE` El `iImage` debe rellenarse miembro.  
+-   `LVIF_IMAGE` El *iImage* miembro debe rellenarse.  
   
--   **LVIF_INDENT** el *iIndent* miembro debe rellenarse.  
+-   `LVIF_INDENT` El *iIndent* miembro debe rellenarse.  
   
 -   `LVIF_PARAM` El *lParam* miembro debe rellenarse. (No presente para elementos secundarios).  
   
@@ -56,7 +56,7 @@ Un control de lista virtual es un control de vista de lista que tiene el **LVS_O
  [!code-cpp[NVC_MFCControlLadenDialog#24](../mfc/codesnippet/cpp/virtual-list-controls_2.cpp)]  
   
 ## <a name="caching-and-virtual-list-controls"></a>Controles de lista Virtual y almacenamiento en caché  
- Dado que este tipo de control de lista está pensado para grandes conjuntos de datos, se recomienda que se almacenan en caché los datos de elemento solicitado para mejorar el rendimiento de recuperación. El marco de trabajo proporciona un mecanismo de sugerencia de caché para ayudar a optimizar la memoria caché mediante el envío de un **LVN_ODCACHEHINT** mensaje de notificación.  
+ Dado que este tipo de control de lista está pensado para grandes conjuntos de datos, se recomienda que se almacenan en caché los datos de elemento solicitado para mejorar el rendimiento de recuperación. El marco de trabajo proporciona un mecanismo de sugerencia de caché para ayudar a optimizar la memoria caché mediante el envío de un mensaje de notificación LVN_ODCACHEHINT.  
   
  En el ejemplo siguiente se actualiza la memoria caché con el intervalo que se pasa a la función de controlador.  
   
@@ -65,7 +65,7 @@ Un control de lista virtual es un control de vista de lista que tiene el **LVS_O
  Para obtener más información sobre la preparación y mantener una memoria caché, vea la sección de administración de la caché del tema controles de vista de lista en el SDK de Windows.  
   
 ## <a name="finding-specific-items"></a>Buscar elementos específicos  
- El **LVN_ODFINDITEM** mensaje de notificación se envía el control de lista virtual cuando es necesario encontrar un elemento de control de lista concreta. El mensaje de notificación se envía cuando el control de vista de lista recibe un acceso de clave rápido o cuando recibe un **LVM_FINDITEM** mensaje. Información de búsqueda se envía en forma de un **LVFINDINFO** estructura, que es un miembro de la **NMLVFINDITEM** estructura. Controlar este mensaje reemplazando la `OnChildNotify` función de la lista de objeto de control y dentro del cuerpo del controlador, busque el **LVN_ODFINDITEM** mensaje. Si se encuentra, lleve a cabo la acción apropiada.  
+ El mensaje de notificación LVN_ODFINDITEM se envía el control de lista virtual cuando es necesario encontrar un elemento de control de lista concreta. El mensaje de notificación se envía cuando el control de vista de lista recibe un acceso de clave rápido o cuando recibe un mensaje LVM_FINDITEM. Información de búsqueda se envía en forma de un **LVFINDINFO** estructura, que es un miembro de la **NMLVFINDITEM** estructura. Controlar este mensaje reemplazando la `OnChildNotify` función de la lista de objeto de control y dentro del cuerpo del controlador, busque el mensaje LVN_ODFINDITEM. Si se encuentra, lleve a cabo la acción apropiada.  
   
  Debe estar preparado para buscar un elemento que coincida con la información proporcionada por el control de vista de lista. Debe devolver el índice del elemento si se realiza correctamente, o -1 si no se encuentra ningún elemento coincidente.  
   

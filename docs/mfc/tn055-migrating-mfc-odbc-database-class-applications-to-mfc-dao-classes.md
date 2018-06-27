@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cce09994cf7dabdff1508ae5e12778ce6032624b
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322516"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957395"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrar aplicaciones de clase de base de datos ODBC de MFC a clases DAO de MFC
 
@@ -99,9 +99,9 @@ Los cambios más importantes a la funcionalidad que pueden afectar a la aplicaci
 
    Con las clases ODBC de MFC necesarios para definir estas opciones mediante macros o tipos enumerados.
 
-   Con las clases DAO, DAO proporciona la definición de estas opciones en un archivo de encabezado (DBDAOINT. (H). Por lo tanto el tipo de conjunto de registros es un miembro enumerado de `CRecordset`, pero con DAO es una constante en su lugar. Por ejemplo utilice `snapshot` cuando se especifica el tipo de `CRecordset` en ODBC, pero `DB_OPEN_SNAPSHOT` cuando se especifica el tipo de `CDaoRecordset`.
+   Con las clases DAO, DAO proporciona la definición de estas opciones en un archivo de encabezado (DBDAOINT. (H). Por lo tanto el tipo de conjunto de registros es un miembro enumerado de `CRecordset`, pero con DAO es una constante en su lugar. Por ejemplo utilice **instantánea** cuando se especifica el tipo de `CRecordset` en ODBC, pero **DB_OPEN_SNAPSHOT** cuando se especifica el tipo de `CDaoRecordset`.
 
-- El tipo de conjunto de registros predeterminado de `CRecordset` es `snapshot` mientras el tipo de conjunto de registros predeterminado de `CDaoRecordset` es `dynaset` (vea la nota siguiente para un problema adicional acerca de las instantáneas de clase ODBC).
+- El tipo de conjunto de registros predeterminado de `CRecordset` es **instantánea** mientras el tipo de conjunto de registros predeterminado de `CDaoRecordset` es **dynaset** (vea la nota siguiente para un problema adicional acerca de las instantáneas de clase ODBC).
 
 - ODBC `CRecordset` clase tiene una opción para crear un tipo de conjunto de registros solo hacia delante. En el `CDaoRecordset` (clase), solo avance no es un tipo de conjunto de registros, pero en su lugar una propiedad (u opción) de ciertos tipos de conjuntos de registros.
 
@@ -111,7 +111,7 @@ Los cambios más importantes a la funcionalidad que pueden afectar a la aplicaci
 
 - Ha cambiado la clase de excepción. `CDBExceptions` se producen en las clases ODBC y `CDaoExceptions` en las clases DAO.
 
-- `RFX_Date` usa `CTime` y `TIMESTAMP_STRUCT` objetos mientras `DFX_Date` utiliza `COleDateTime`. El `COleDateTime` es casi idéntica a `CTime`, pero se basa en una OLE de 8 bytes `DATE` en lugar de 4 bytes `time_t` por lo que puede almacenar una gama mucho más grande de datos.
+- `RFX_Date` usa `CTime` y `TIMESTAMP_STRUCT` objetos mientras `DFX_Date` utiliza `COleDateTime`. El `COleDateTime` es casi idéntica a `CTime`, pero se basa en una OLE de 8 bytes **fecha** en lugar de 4 bytes **time_t** por lo que puede almacenar una gama mucho más grande de datos.
 
    > [!NOTE]
    > DAO (`CDaoRecordset`) las instantáneas son de solo lectura mientras ODBC (`CRecordset`) pueden ser instantáneas actualizables según el controlador y el uso de la biblioteca de cursores ODBC. Si usas la biblioteca de cursores, `CRecordset` instantáneas son actualizables. Si usa cualquiera de los controladores de Microsoft de 3.0 de módulo de controlador de escritorio sin la biblioteca de cursores ODBC, el `CRecordset` instantáneas son de solo lectura. Si está utilizando otro controlador, compruebe la documentación del controlador para ver si las instantáneas (`STATIC_CURSORS`) son de solo lectura.

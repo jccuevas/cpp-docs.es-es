@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f94d6fc19879da1dd1dcaa94ab7a177fb86d5186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df79b186aa515bba8d54083ad8a379aad36d2576
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369130"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954538"
 ---
 # <a name="cfileexception-class"></a>Clase CFileException
 Representa una condición de excepción relacionada con archivo.  
@@ -102,20 +102,20 @@ CFileException(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cause`  
+ *Causa*  
  Una variable de tipo enumerado que indica el motivo de la excepción. Vea [CFileException::m_cause](#m_cause) para obtener una lista de los valores posibles.  
   
- `lOsError`  
- Un motivo específicos del sistema operativo de la excepción, si está disponible. El `lOsError` parámetro proporciona más información que `cause` does.  
+ *lOsError*  
+ Un motivo específicos del sistema operativo de la excepción, si está disponible. El *lOsError* parámetro proporciona más información que *provocar* does.  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  Señala a una cadena que contiene el nombre de la `CFile` objeto ocasionando la excepción.  
   
 ### <a name="remarks"></a>Comentarios  
  No utilice este constructor directamente, pero en su lugar llame a la función global [AfxThrowFileException](exception-processing.md#afxthrowfileexception).  
   
 > [!NOTE]
->  La variable `lOsError` solo se aplica a `CFile` y `CStdioFile` objetos. La `CMemFile` clase no controla este código de error.  
+>  La variable *lOsError* solo se aplica a `CFile` y `CStdioFile` objetos. La `CMemFile` clase no controla este código de error.  
   
 ##  <a name="errnotoexception"></a>  CFileException::ErrnoToException  
  Convierte un valor de error de la biblioteca de tiempo de ejecución concreta en un `CFileException` el valor de error enumerado.  
@@ -125,7 +125,7 @@ static int PASCAL ErrnoToException(int nErrno);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nErrno`  
+ *nErrno*  
  Un código de error entero tal como se define en el archivo de inclusión de tiempo de ejecución ERRNO. H.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -148,13 +148,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] `lpszError`  
+ [entrada, salida] *lpszError*  
  Puntero a un búfer que recibe un mensaje de error.  
   
- [in] `nMaxError`  
+ [in] *nMaxError*  
  El número máximo de caracteres que puede contener el búfer especificado. Esto incluye el carácter nulo de terminación.  
   
- [in, out] `pnHelpContext`  
+ [entrada, salida] *pnHelpContext*  
  Puntero a un entero sin signo que recibe el identificador de contexto de ayuda. Si `NULL`, no se devuelve ningún ID.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -176,7 +176,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este miembro de datos es una variable pública de tipo `int`. A continuación se indican los enumeradores y el significado de cada uno de ellos:  
+ Este miembro de datos es una variable pública de tipo **int**. A continuación se indican los enumeradores y el significado de cada uno de ellos:  
   
 - `CFileException::none` 0: se produjo ningún error.  
   
@@ -235,14 +235,14 @@ CString m_strFileName;
 ```  
   
 ##  <a name="oserrortoexception"></a>  CFileException::OsErrorToException  
- Devuelve un enumerador que corresponde a un determinado `lOsError` valor. Si el código de error es desconocido, la función devuelve **CFileException::generic**.  
+ Devuelve un enumerador que corresponde a un determinado *lOsError* valor. Si el código de error es desconocido, la función devuelve **CFileException::generic**.  
   
 ```  
 static int PASCAL OsErrorToException(LONG lOsError);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lOsError`  
+ *lOsError*  
  Código de error específicos del sistema operativo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -252,34 +252,34 @@ static int PASCAL OsErrorToException(LONG lOsError);
  [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
   
 ##  <a name="throwerrno"></a>  CFileException::ThrowErrno  
- Construye un `CFileException` objeto corresponde a un determinado `nErrno` valor, a continuación, inicia la excepción.  
+ Construye un `CFileException` objeto corresponde a un determinado *nErrno* valor, a continuación, inicia la excepción.  
   
 ```  
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nErrno`  
+ *nErrno*  
  Un código de error entero tal como se define en el archivo de inclusión de tiempo de ejecución ERRNO. H.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Un puntero a la cadena que contiene el nombre del archivo que provocó la excepción, si está disponible.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
   
 ##  <a name="throwoserror"></a>  CFileException::ThrowOsError  
- Produce una `CFileException` correspondiente a una determinada `lOsError` valor. Si el código de error es desconocido, la función produce una excepción que se codifica como **CFileException::generic**.  
+ Produce una `CFileException` correspondiente a una determinada *lOsError* valor. Si el código de error es desconocido, la función produce una excepción que se codifica como **CFileException::generic**.  
   
 ```  
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lOsError`  
+ *lOsError*  
  Código de error específicos del sistema operativo.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Un puntero a la cadena que contiene el nombre del archivo que provocó la excepción, si está disponible.  
   
 ### <a name="example"></a>Ejemplo  

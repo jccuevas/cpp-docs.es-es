@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76325d2b078f51860cad7fa3fab61ed7c518a41c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50e7cb936c55ced1f16a325a031dccd1edde7d06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382855"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951912"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Usar listas de imágenes en un control de barra de herramientas
 De forma predeterminada, las imágenes utilizadas por los botones en un control de barra de herramientas se almacenan como un solo mapa de bits. Sin embargo, también puede almacenar imágenes de los botones en un conjunto de listas de imágenes. El objeto de control de barra de herramientas puede utilizar hasta tres listas de imágenes independientes:  
@@ -30,7 +30,7 @@ De forma predeterminada, las imágenes utilizadas por los botones en un control 
   
 -   Deshabilitado contiene imágenes de lista de imágenes para los botones de barra de herramientas que actualmente están deshabilitadas.  
   
--   Resalta contiene imágenes de lista de imágenes para los botones de barra de herramientas que están actualmente resaltados. Esta lista de imágenes sólo se utiliza cuando la barra de herramientas usa la **TBSTYLE_FLAT** estilo.  
+-   Resalta contiene imágenes de lista de imágenes para los botones de barra de herramientas que están actualmente resaltados. Esta lista de imágenes sólo se utiliza cuando la barra de herramientas utiliza el estilo TBSTYLE_FLAT.  
   
  Estas listas de imágenes son utilizadas por el control de barra de herramientas cuando se asocia con la `CToolBarCtrl` objeto. Esta asociación se realiza mediante la realización de llamadas a [CToolBarCtrl:: SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), y [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).  
   

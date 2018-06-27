@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515103fc66ad221a3806fc101dcbc01f507ef535
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a706c927a7aacaf69091d6b448e00bd7938c265f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383193"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950440"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Subprocesamiento de modelo apartamento en los controles ActiveX
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33383193"
  Habilitar el modelo de subprocesamiento controlado es fácil para la mayoría de los controles, especialmente si tienen poca o ninguna datos compartidos.  
   
 ## <a name="protecting-shared-data"></a>Proteger los datos compartidos  
- Si el control usa datos compartidos, como una variable miembro estática, el acceso a que los datos deberían estar protegidos con una sección crítica para evitar que más de un subproceso de modificación de los datos al mismo tiempo. Para configurar una sección crítica para este propósito, declare una variable de miembro estático de la clase `CCriticalSection` en la clase del control. Use la `Lock` y **Unlock** las funciones miembro de esta sección crítica de objeto siempre que el código tiene acceso a los datos compartidos.  
+ Si el control usa datos compartidos, como una variable miembro estática, el acceso a que los datos deberían estar protegidos con una sección crítica para evitar que más de un subproceso de modificación de los datos al mismo tiempo. Para configurar una sección crítica para este propósito, declare una variable de miembro estático de la clase `CCriticalSection` en la clase del control. Use la `Lock` y `Unlock` las funciones miembro de esta sección crítica de objeto siempre que el código tiene acceso a los datos compartidos.  
   
  Considere, por ejemplo, una clase de control que necesita para mantener una cadena que es compartida por todas las instancias. Esta cadena se puede mantener en una variable de miembro estático y protegida por una sección crítica. Declaración de clase del control podría contener lo siguiente:  
   
@@ -81,7 +81,7 @@ if (_strShared.Empty())
 ```  
   
 ## <a name="registering-an-apartment-model-aware-control"></a>Cómo registrar un Control contenedor-compatible con el modelo  
- Controles que admiten el modelo de subprocesamiento controlado deben indicar esta capacidad en el registro agregando el valor con nombre "ThreadingModel" con un valor de "Apartamento" en su entrada de registro de Id. de clase en el *Id. de clase* \\ **InprocServer32** clave. Para hacer que esta clave se registre automáticamente para el control, pase el `afxRegApartmentThreading` marca del sexto parámetro para `AfxOleRegisterControlClass`:  
+ Controles que admiten el modelo de subprocesamiento controlado deben indicar esta capacidad en el registro agregando el valor con nombre "ThreadingModel" con un valor de "Apartamento" en su entrada de registro de Id. de clase en el *Id. de clase* \\ **InprocServer32** clave. Para hacer que esta clave se registre automáticamente para el control, pase el *afxRegApartmentThreading* marca del sexto parámetro para `AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
@@ -108,9 +108,9 @@ BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
   
  Si el proyecto de control se generó utilizando ControlWizard en Visual C++ versión 4.1 o posterior, esta marca ya estará presente en el código. No hay cambios son necesarios para registrar el modelo de subprocesos.  
   
- Si el proyecto se generó utilizando una versión anterior de ControlWizard, el código existente tendrá un valor booleano como el sexto parámetro. Si el parámetro existente es TRUE, cámbiela a `afxRegInsertable | afxRegApartmentThreading`. Si el parámetro existente es FALSE, cámbiela a `afxRegApartmentThreading`.  
+ Si el proyecto se generó utilizando una versión anterior de ControlWizard, el código existente tendrá un valor booleano como el sexto parámetro. Si el parámetro existente es TRUE, cámbiela a *afxRegInsertable | afxRegApartmentThreading*. Si el parámetro existente es FALSE, cámbielo a *afxRegApartmentThreading*.  
   
- Si el control no sigue las reglas para el modelo de subprocesamiento controlado, no debe pasar `afxRegApartmentThreading` en este parámetro.  
+ Si el control no sigue las reglas para el modelo de subprocesamiento controlado, no debe pasar *afxRegApartmentThreading* en este parámetro.  
   
 ## <a name="see-also"></a>Vea también  
  [Notas técnicas por número](../mfc/technical-notes-by-number.md)   

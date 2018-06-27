@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9625b3eafa75bdafff7d17ea63db8904d9b49529
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384587"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956852"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Controles personalizados
 Esta nota describe la compatibilidad de MFC para controles personalizados y dibujo automático. También describe subclases dinámica y describe la relación entre [CWnd](../mfc/reference/cwnd-class.md) objetos y `HWND`s.  
@@ -100,11 +100,11 @@ Esta nota describe la compatibilidad de MFC para controles personalizados y dibu
 ## <a name="using-self-draw-controls-and-menus"></a>Utilizar menús y dibujar los controles  
  Para dibujar los menús, debe invalidar el `OnMeasureItem` y `OnDrawItem` métodos.  
   
- Para cuadros de lista automática dibujar y cuadros combinados, debe invalidar `OnMeasureItem` y `OnDrawItem`. Debe especificar el `LBS_OWNERDRAWVARIABLE` estilos para los cuadros de lista o `CBS_OWNERDRAWVARIABLE` cuadros de estilo para combinado de la plantilla de cuadro de diálogo. El `OWNERDRAWFIXED` estilo no funcionará con los elementos de dibujar automáticamente porque antes de dibujar los controles se adjuntan al cuadro de lista, se determina el alto del elemento fijo. (Puede usar los métodos [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) y [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) para superar esta limitación.)  
+ Para cuadros de lista automática dibujar y cuadros combinados, debe invalidar `OnMeasureItem` y `OnDrawItem`. Debe especificar el estilo LBS_OWNERDRAWVARIABLE para cuadros de lista o el estilo CBS_OWNERDRAWVARIABLE para los cuadros combinados de la plantilla de cuadro de diálogo. El estilo OWNERDRAWFIXED no funcionará con los elementos de dibujar automáticamente porque antes de dibujar los controles se adjuntan al cuadro de lista, se determina el alto del elemento fijo. (Puede usar los métodos [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) y [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) para superar esta limitación.)  
   
- Cambiar a una `OWNERDRAWVARIABLE` estilo, forzará el sistema para aplicar el `NOINTEGRALHEIGHT` estilos al control. Dado que el control no puede calcular el alto de un entero con un tamaño de variable de elementos, el estilo predeterminado de `INTEGRALHEIGHT` se omite y el control es siempre `NOINTEGRALHEIGHT`. Si los elementos son fijos alto, puede impedir que parte de los elementos que se va a dibujar especificando el tamaño del control para que sea un multiplicador de entero del tamaño del elemento.  
+ Cambiar a un estilo OWNERDRAWVARIABLE, se forzará el sistema para aplicar el estilo NOINTEGRALHEIGHT al control. Dado que el control no puede calcular un alto entero con los elementos de tamaño variable, se omite el estilo predeterminado de INTEGRALHEIGHT y el control es siempre NOINTEGRALHEIGHT. Si los elementos son fijos alto, puede impedir que parte de los elementos que se va a dibujar especificando el tamaño del control para que sea un multiplicador de entero del tamaño del elemento.  
   
- Para dibujar los cuadros de lista y cuadros combinados con el `LBS_SORT` o `CBS_SORT` estilo, es necesario reemplazar el `OnCompareItem` método.  
+ Para dibujar los cuadros de lista y cuadros combinados con el estilo LBS_SORT o CBS_SORT, es necesario reemplazar el `OnCompareItem` método.  
   
  Para dibujar los cuadros de lista y cuadros combinados, `OnDeleteItem` no se suele reemplazar. Puede invalidar `OnDeleteItem` si desea realizar cualquier procesamiento especial. Un caso donde esto sería aplicable resulta más memoria u otros recursos se almacenan con cada elemento de cuadro combinado o cuadro de lista.  
   

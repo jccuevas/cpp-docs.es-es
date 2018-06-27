@@ -18,37 +18,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47894c14e3b3d694847f94e7f981c9397383e598
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa2628df5f446105e6b7881709a0c72c19fe230e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382911"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950495"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Usar una barra de cuadro de diálogo con un control Rebar
 Como se mencionó en [controles y bandas Rebar](../mfc/rebar-controls-and-bands.md), cada banda puede contener solo una ventana secundaria (o control). Esto puede ser una limitación si desea tener más de una ventana secundaria por banda. Una solución adecuada consiste en crear un recurso de barra de cuadro de diálogo con varios controles y, a continuación, agregar una banda rebar (que contiene la barra de cuadro de diálogo) al control rebar.  
   
- Normalmente, si desea que la banda de la barra de cuadro de diálogo aparezca transparente, establecería la **WS_EX_TRANSPARENT** estilo para el objeto de barra de cuadro de diálogo extendido. Sin embargo, dado que **WS_EX_TRANSPARENT** tiene algunos problemas con correctamente pintar el fondo de una barra de cuadro de diálogo, debe realizar un pequeño trabajo adicional para lograr el efecto deseado.  
+ Normalmente, si desea que la banda de la barra de cuadro de diálogo aparezca transparente, establecería el estilo extendido WM_EX_TRANSPARENT para el objeto de barra de cuadro de diálogo. Sin embargo, dado que WS_EX_TRANSPARENT tiene algunos problemas con correctamente pintar el fondo de una barra de cuadro de diálogo, debe realizar un pequeño trabajo adicional para lograr el efecto deseado.  
   
- El procedimiento siguiente detallan los pasos necesarios para conseguir la transparencia sin utilizar el **WS_EX_TRANSPARENT** estilo extendido.  
+ El siguiente procedimiento describe los pasos necesarios para conseguir la transparencia sin utilizar el WS_EX_TRANSPARENT estilo extendido.  
   
 ### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Para implementar una barra de cuadro de diálogo transparente en una banda rebar  
   
 1.  Mediante el [cuadro de diálogo Agregar clase](../mfc/reference/adding-an-mfc-class.md), agregue una nueva clase (por ejemplo, `CMyDlgBar`) que implementa el objeto de barra de cuadro de diálogo.  
   
-2.  Agregue un controlador para el `WM_ERASEBKGND` mensaje.  
+2.  Agregue un controlador para el mensaje WM_ERASEBKGND.  
   
 3.  En el nuevo controlador, modifique el código existente para que coincida con el ejemplo siguiente:  
   
      [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]  
   
-4.  Agregue un controlador para el `WM_MOVE` mensaje.  
+4.  Agregue un controlador para el mensaje WM_MOVE.  
   
 5.  En el nuevo controlador, modifique el código existente para que coincida con el ejemplo siguiente:  
   
      [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]  
   
- Los nuevos controladores simulan la transparencia de la barra de cuadro de diálogo mediante el reenvío de la `WM_ERASEBKGND` un mensaje a la ventana primaria y forzando que vuelva a dibujarse cada vez que se mueve el objeto de barra de cuadro de diálogo.  
+ Los nuevos controladores simulan la transparencia de la barra de cuadro de diálogo enviando el mensaje WM_ERASEBKGND a la ventana primaria y forzando a vuelva a dibujarse cada vez que se mueve el objeto de barra de cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CReBarCtrl](../mfc/using-crebarctrl.md)   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368051"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951857"
 ---
 # <a name="cdialogex-class"></a>Clase CDialogEx
 La clase `CDialogEx` especifica el color de fondo y la imagen de fondo de un cuadro de diálogo.  
@@ -90,16 +90,16 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nIDTemplate`  
+ [in] *nIDTemplate*  
  El identificador de recurso de una plantilla de cuadro de diálogo.  
   
- [in] `lpszTemplateName`  
+ [in] *lpszTemplateName*  
  El nombre de recurso de una plantilla de cuadro de diálogo.  
   
- [in] `pParent`  
+ [in] *pParent*  
  Un puntero a la ventana primaria. El valor predeterminado es `NULL`.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Un puntero a la ventana primaria. El valor predeterminado es `NULL`.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -116,10 +116,10 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `color`  
+ [in] *color*  
  Un valor de color RGB.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` Para actualizar inmediatamente la pantalla; en caso contrario, `FALSE`. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -142,19 +142,19 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Identificador de la imagen de fondo.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  El identificador de recurso de la imagen de fondo.  
   
- [in] `location`  
+ [in] *ubicación*  
  Uno de los `CDialogEx::BackgroundLocation` valores que especifican la ubicación de la imagen. Los valores válidos son BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT y BACKGR_BOTTOMRIGHT. El valor predeterminado es BACKGR_TILE.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` para destruir automáticamente la imagen de fondo; en caso contrario, `FALSE`.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` Para volver a dibujar inmediatamente el cuadro de diálogo; en caso contrario, `FALSE`.  
   
 ### <a name="return-value"></a>Valor devuelto  
