@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b61adc98f6b6e84f5e2ef10f88ae41720e2fbf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53ec20a6fb45efc3848381d165256a429b80a386
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372725"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040017"
 ---
 # <a name="cmfcpropertysheet-class"></a>Clase de CMFCPropertySheet
 La clase `CMFCPropertySheet` admite una hoja de propiedades donde cada página de propiedades se indica mediante una pestaña de página, un botón de barra de herramientas, un nodo del control de árbol o un elemento de lista.  
@@ -151,7 +151,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pPage`  
+ [in] *pPage*  
  Puntero a un objeto de página. Este parámetro no puede ser `NULL`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -171,20 +171,20 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pCategory`  
+ [in] *pCategory*  
  Puntero a un nodo de árbol primario, o `NULL` para asociar el nodo de nivel superior en la página especificada. Llame a la [CMFCPropertySheet::AddTreeCategory](#addtreecategory) método para obtener este puntero.  
   
- [in] `pPage`  
+ [in] *pPage*  
  Puntero a un objeto de página de propiedades.  
   
- [in] `nIconNum`  
+ [in] *nIconNum*  
  Índice de base cero de un icono o -1 si no se usa ningún icono. El icono se muestra junto a la página de propiedades del control de árbol cuando la página no está seleccionada. El valor predeterminado es -1.  
   
- [in] `nSelIconNum`  
+ [in] *nSelIconNum*  
  Índice de base cero de un icono o -1 si no se usa ningún icono. Cuando se selecciona la página, se muestra el icono junto a la página de propiedades del control de árbol. El valor predeterminado es -1.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método agrega una página de propiedades como una hoja de un control de árbol. Para agregar una página de propiedades, cree una `CMFCPropertySheet` objeto, llame a la [CMFCPropertySheet:: Setlook](#setlook) método con el `look` parámetro establecido en `CMFCPropertySheet::PropSheetLook_Tree`y, a continuación, use este método para agregar la página de propiedades.  
+ Este método agrega una página de propiedades como una hoja de un control de árbol. Para agregar una página de propiedades, cree una `CMFCPropertySheet` objeto, llame a la [CMFCPropertySheet:: Setlook](#setlook) método con el *buscar* parámetro establecido en `CMFCPropertySheet::PropSheetLook_Tree`y, a continuación, use este método para agregar la página de propiedades .  
   
 ##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
  Agrega un nuevo nodo al control de árbol.  
@@ -198,23 +198,23 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  El nombre del nodo.  
   
- [in] `nIconNum`  
+ [in] *nIconNum*  
  Índice de base cero de un icono o -1 si no se usa ningún icono. El icono se muestra junto a la página de propiedades del control de árbol cuando la página no está seleccionada. El valor predeterminado es -1.  
   
- [in] `nSelectedIconNum`  
+ [in] *nSelectedIconNum*  
  Índice de base cero de un icono o -1 si no se usa ningún icono. Cuando se selecciona la página, se muestra el icono junto a la página de propiedades del control de árbol. El valor predeterminado es -1.  
   
- [in] `pParentCategory`  
+ [in] *pParentCategory*  
  Puntero a un nodo de árbol primario, o `NULL` para asociar el nodo de nivel superior en la página especificada. Establezca este parámetro con el [CMFCPropertySheet::AddTreeCategory](#addtreecategory) método.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al nuevo nodo en el control de árbol.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice este método para agregar un nuevo nodo, que también se conoce como una categoría, para el control de árbol. Para agregar un nodo, cree una `CMFCPropertySheet` objeto, llame a la [CMFCPropertySheet:: Setlook](#setlook) método con el `look` parámetro establecido en `CMFCPropertySheet::PropSheetLook_Tree`y, a continuación, use este método para agregar el nodo.  
+ Utilice este método para agregar un nuevo nodo, que también se conoce como una categoría, para el control de árbol. Para agregar un nodo, cree una `CMFCPropertySheet` objeto, llame a la [CMFCPropertySheet:: Setlook](#setlook) método con el *buscar* parámetro establecido en `CMFCPropertySheet::PropSheetLook_Tree`y, a continuación, use este método para agregar el nodo.  
   
  Usa el valor devuelto de este método en las llamadas subsiguientes a [CMFCPropertySheet::AddPageToTree](#addpagetotree) y [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
   
@@ -234,16 +234,16 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pszCaption`  
+ [in] *pszCaption*  
  Una cadena que contiene el título de la hoja de propiedades. No puede ser `NULL`.  
   
- [in] `nIDCaption`  
+ [in] *nIDCaption*  
  Un identificador de recurso que contiene el título de la hoja de propiedades.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Puntero a la ventana primaria de la hoja de propiedades, o `NULL` si la ventana primaria es la ventana principal de la aplicación. El valor predeterminado es `NULL`.  
   
- [in] `iSelectPage`  
+ [in] *iSelectPage*  
  Índice de base cero de la página de propiedades principales. El valor predeterminado es 0.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -257,11 +257,11 @@ void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nHeaderHeight`  
+ [in] *nHeaderHeight*  
  El alto del encabezado, en píxeles.  
   
 ### <a name="remarks"></a>Comentarios  
- Para usar el valor de la `nHeaderHeight` parámetro para dibujar un encabezado personalizado, invalide el [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) método.  
+ Para usar el valor de la *nHeaderHeight* parámetro para dibujar un encabezado personalizado, invalide el [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) método.  
   
 ##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
  Recupera el alto del encabezado actual.  
@@ -334,7 +334,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pPage`  
+ [in] *pPage*  
  Puntero a un objeto de página de propiedad que representa la página de la propiedad enabled.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -351,13 +351,13 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `nPage`  
+ [in] *nPage*  
  El número de página de la propiedad de base cero.  
   
- [in] `rectHeader`  
+ [in] *rectHeader*  
  Un rectángulo delimitador que especifica dónde debe dibujar el encabezado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -371,7 +371,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pPage`  
+ [in] *pPage*  
  Puntero a un objeto de página de propiedad que representa la página de propiedades para quitar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -385,7 +385,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pCategory`  
+ [in] *pCategory*  
  Puntero a una categoría (nodo) que se va a quitar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -400,14 +400,14 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pPage`  
+ [in] *pPage*  
  Puntero al objeto de la página de propiedad que representa la página de propiedades para quitar. No puede ser `NULL`.  
   
- [in] `nPage`  
+ [in] *nPage*  
  Índice de base cero de la página para quitar.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método quita la página de propiedades especificada y destruye la ventana asociada. La página de propiedades del objeto que la `pPage` parámetro especifica que no se destruye hasta que el [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) ventana está cerrada.  
+ Este método quita la página de propiedades especificada y destruye la ventana asociada. La página de propiedades del objeto que la *pPage* parámetro especifica que no se destruye hasta que el [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) ventana está cerrada.  
   
 ##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
  Especifica la lista de imágenes que se usan en el control de navegación del panel de Outlook.  
@@ -421,16 +421,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiImageListResID`  
+ [in] *uiImageListResID*  
  El identificador de recurso de una lista de imágenes.  
   
- [in] `cx`  
+ [in] *cx*  
  El ancho, en píxeles, de los iconos en la lista de imágenes.  
   
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  El color de imagen transparente. Las partes de la imagen que son de este color será transparentes. El valor predeterminado es el color fucsia, RGB(255,0,255).  
   
- [in] `hIcons`  
+ [in] *hIcons*  
  Identificador de una lista de imágenes existente.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -451,16 +451,16 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `look`  
+ [in] *buscar*  
  Uno de los valores de enumeración que especifica el aspecto de la hoja de propiedades. El estilo predeterminado para una hoja de propiedades es `CMFCPropertySheet::PropSheetLook_Tabs`. Para obtener más información, vea la tabla en la sección Comentarios de este tema.  
   
- [in] `nNavControlWidth`  
+ [in] *nNavControlWidth*  
  El ancho del control de navegación, en píxeles. El valor predeterminado es 100.  
   
 ### <a name="remarks"></a>Comentarios  
  Para mostrar una hoja de propiedades en un estilo distinto del predeterminado, llame a este método antes de crear la ventana de la hoja de propiedades.  
   
- En la tabla siguiente se enumera los valores de enumeración que se pueden especificar en el `look` parámetro.  
+ En la tabla siguiente se enumera los valores de enumeración que se pueden especificar en el *buscar* parámetro.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

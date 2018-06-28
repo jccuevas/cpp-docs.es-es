@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d68cd7c0e4796b3368e1167888d703d37a8cf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375394"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040173"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton (clase)
 Un botón que muestra un menú emergente e informes en las selecciones de menú del usuario.  
@@ -167,7 +167,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pMsg`  
+ [in] *pMsg*  
  Apunta a un [MSG](../../mfc/reference/msg-structure1.md) estructura que contiene el mensaje que se va a procesar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -183,14 +183,14 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  Un parámetro booleano que indica si este método cambia de tamaño el botón.  
   
 ### <a name="return-value"></a>Valor devuelto  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que especifica el nuevo tamaño del botón.  
   
 ### <a name="remarks"></a>Comentarios  
- Si se llama a esta función y `bCalcOnly` es `TRUE`, `SizeToContent` calculará solo el nuevo tamaño del botón.  
+ Si se llama a esta función y *bCalcOnly* es `TRUE`, `SizeToContent` calculará solo el nuevo tamaño del botón.  
   
  Se calcula el nuevo tamaño del botón para ajustar el texto del botón, la imagen y la flecha. El marco de trabajo también se agrega en los márgenes predefinidos de 10 píxeles del borde horizontal y 5 píxeles del borde vertical.  
   

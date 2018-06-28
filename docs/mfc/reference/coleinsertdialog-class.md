@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374886"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042175"
 ---
 # <a name="coleinsertdialog-class"></a>Clase de la clase COleInsertDialog
 Se utiliza para el cuadro de diálogo Insertar objeto OLE.  
@@ -114,7 +114,7 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwFlags`  
+ *dwFlags*  
  Marca de creación que contiene cualquier número de los siguientes valores para que se pueden combinar mediante el operador OR bit a bit:  
   
 - **IOF_SHOWHELP** especifica que el botón de ayuda se mostrará cuando se llama el cuadro de diálogo.  
@@ -131,7 +131,7 @@ COleInsertDialog (
   
 - **IOF_VERIFYSERVERSEXIST** especifica que el cuadro de diálogo debe validar las clases que se agrega al cuadro de lista asegurándose de que los servidores especificados en la base de datos de registro existen antes de que se muestre el cuadro de diálogo. Al establecer este indicador puede afectar significativamente al rendimiento.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Señala al objeto de ventana primaria o propietaria (de tipo `CWnd`) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, la ventana primaria del objeto de cuadro de diálogo se establece en la ventana de la aplicación principal.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -145,7 +145,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pItem`  
+ *pItem*  
  Apunta al elemento que se va a crear.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -167,7 +167,7 @@ INT_PTR
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwFlags`  
+ *dwFlags*  
  Uno de los siguientes valores:  
   
  `COleInsertDialog::DocObjectsOnly` Inserta solo DocObjects.  

@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7a5331a2826df9dd6804e5c6a0f918bfeeb9d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3faa618a2b65abd7c532ecdce0a8ed5e174889f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377776"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042025"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 La `CMFCTabCtrl` clase proporciona la funcionalidad para un control de pestaña. El control de pestaña muestra una ventana acoplable con pestañas planas o tridimensionales en la parte superior o inferior. Las pestañas pueden mostrar texto y una imagen y pueden cambiar de color cuando están activas.  
@@ -265,7 +265,7 @@ void ActivateMDITab(int nTab = -1);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nTab`  
+ [in] *nTab*  
  Índice de base cero de una pestaña para mostrar, o -1 para especificar la pestaña actualmente activa.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
@@ -307,29 +307,29 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `style`  
+ [in] *estilo*  
  El estilo del control de ficha. Para obtener más información, vea la sección Comentarios.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que delimita el control de ficha.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Un puntero a una ventana primaria. No debe ser `NULL`.  
   
- [in] `nID`  
+ [in] *nID*  
  El identificador del control de ficha.  
   
- [in] `location`  
+ [in] *ubicación*  
  La ubicación de las pestañas. El valor predeterminado es `LOCATION_BOTTOM`. Para obtener más información, vea la sección Comentarios.  
   
- [in] `bCloseBtn`  
+ [in] *bCloseBtn*  
  `TRUE` para mostrar un botón de cierre en la ficha; en caso contrario, `FALSE`. El valor predeterminado es `FALSE`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` si es correcto; de lo contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
- En la tabla siguiente se describe los valores que puede especificar para el `style` parámetro.  
+ En la tabla siguiente se describe los valores que puede especificar para la *estilo* parámetro.  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
@@ -341,7 +341,7 @@ BOOL Create(
 |STYLE_3D_ROUNDED|Crea un control de pestaña con pestañas redondeadas en el estilo de Microsoft Visual Studio 2005.|  
 |STYLE_3D_ROUNDED_SCROLL|Crea un control de pestaña con pestañas redondeadas y los botones de desplazamiento en el estilo de Microsoft Visual Studio 2005.|  
   
- En la tabla siguiente se enumera los valores que puede especificar para el `location` parámetro.  
+ En la tabla siguiente se enumera los valores que puede especificar para la *ubicación* parámetro.  
   
 |Ubicación|Descripción|  
 |--------------|-----------------|  
@@ -362,7 +362,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rectEdit`  
+ [in] *rectEdit*  
  Un rectángulo que especifica el área de una pestaña.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -376,7 +376,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  `TRUE` para mostrar el botón de cierre en la pestaña activa; `FALSE` para mostrar el botón Cerrar en la esquina superior derecha del área de ficha. El valor predeterminado es `TRUE`.  
   
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
@@ -387,7 +387,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  `TRUE` Para habilitar las etiquetas de pestaña editable; `FALSE` para deshabilitar las etiquetas de pestaña editable.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -400,7 +400,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  `TRUE` para mostrar un menú emergente de etiquetas de ventana con pestañas; `FALSE` para mostrar botones de desplazamiento hacia delante y hacia atrás. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -414,7 +414,7 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iTab`  
+ [in] *iTab*  
  Índice de base cero de una pestaña.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -431,7 +431,7 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nCmdID`  
+ [in] *nCmdID*  
  El identificador de comando de una pestaña de un menú emergente de ventanas con fichas.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -483,10 +483,10 @@ void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  Cuando este método vuelve, esta referencia contiene un rectángulo que delimita el área de etiqueta de ficha superior. El rectángulo está en coordenadas de cliente. Esta referencia está vacía si no existe ningún área de etiqueta de ficha en la parte superior del control de ficha.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  Cuando este método vuelve, esta referencia contiene un rectángulo que delimita el área de etiqueta de ficha inferior. El rectángulo está en coordenadas de cliente. Esta referencia está vacía si no existe ningún área de etiqueta de ficha en la parte inferior del control de ficha.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -523,8 +523,8 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `rect`  
- Cuando este método finaliza, el `rect` parámetro contiene un rectángulo que delimita el área de pestañas.  
+ [out] *rect*  
+ Cuando este método finaliza, el *rect* parámetro contiene un rectángulo que delimita el área de pestañas.  
   
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
  Recupera los límites del área cliente del control de ficha actual.  
@@ -534,7 +534,7 @@ void GetWndArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] `rect`  
+ [entrada, salida] *rect*  
  Cuando este método finaliza, este parámetro contiene un rectángulo que delimita el control de ficha actual.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -557,7 +557,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bHide`  
+ [in] *bHide*  
  `TRUE` no se muestre una ventana inactiva; `FALSE` para mostrar una ventana inactiva. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -570,7 +570,7 @@ void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bHide`  
+ [in] *bHide*  
  `TRUE` Para habilitar el área de pestañas; de dibujo `FALSE` para deshabilitar el dibujo. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -583,7 +583,7 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bHide`  
+ [in] *bHide*  
  `TRUE` para dibujar no una pestaña de una sola ventana con pestañas; `FALSE` para dibujar una única ficha. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -703,7 +703,7 @@ BOOL IsSharedScroll() const;
  `TRUE` Si el control de ficha tiene una barra de desplazamiento compartido; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método devuelve `TRUE` si la `style` parámetro de la [CMFCTabCtrl::Create](#create) método es STYLE_FLAT_SHARED_HORZ_SCROLL.  
+ Este método devuelve `TRUE` si la *estilo* parámetro de la [CMFCTabCtrl::Create](#create) método es STYLE_FLAT_SHARED_HORZ_SCROLL.  
   
 ##  <a name="istabdocumentsmenu"></a>  CMFCTabCtrl::IsTabDocumentsMenu  
  Indica si el control de pestaña muestra los botones de desplazamiento o un botón que muestra un menú de las ventanas con pestañas.  
@@ -729,7 +729,7 @@ virtual BOOL IsVS2005Style() const;
  `TRUE` Si las pestañas se dibujan usando el estilo de Visual Studio 2005; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
- Use la `style` parámetro de la [CMFCTabCtrl::Create](#create) método para especificar cómo se dibujan las fichas.  
+ Use la *estilo* parámetro de la [CMFCTabCtrl::Create](#create) método para especificar cómo se dibujan las fichas.  
   
 ##  <a name="m_benableactivate"></a>  CMFCTabCtrl::m_bEnableActivate  
  Impide que pierde el foco cuando se inserta una nueva pestaña y se habilita la vista activa.  
@@ -749,14 +749,14 @@ BOOL ModifyTabStyle(Style style);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `style`  
+ [in] *estilo*  
  Uno de los valores de enumeración que especifica la apariencia del control de ficha. Para obtener más información, vea la tabla en la sección Comentarios.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
- El valor de la `style` parámetro puede ser uno de los siguientes `CMFCTabCtrl::Style` enumeraciones.  
+ El valor de la *estilo* parámetro puede ser uno de los siguientes `CMFCTabCtrl::Style` enumeraciones.  
   
 |nombre|Descripción|  
 |----------|-----------------|  
@@ -780,13 +780,13 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDataObject`  
+ [in] *pDataObject*  
  Apunta a un objeto de datos que contiene los datos que el usuario arrastra.  
   
- [in] `dwKeyState`  
+ [in] *dwKeyState*  
  Contiene el estado de las teclas modificadoras. Este parámetro es una combinación bit a bit (OR) de los siguientes valores: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, y `MK_RBUTTON`. Para obtener más información, consulte el **parámetros de mensaje** sección de [acerca de la entrada del Mouse](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
   
- [in] `point`  
+ [in] *punto*  
  Contiene la ubicación actual del cursor en coordenadas de cliente.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -808,13 +808,13 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDataObject`  
+ [in] *pDataObject*  
  Puntero a un [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto que se está arrastrando sobre el destino de colocación.  
   
- [in] `dwKeyState`  
+ [in] *dwKeyState*  
  El estado de las teclas modificadoras, que es una combinación bit a bit (o) de `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, y `MK_RBUTTON`. Para obtener más información, vea "Parámetros de mensajes" en [acerca de la entrada del Mouse](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
   
- [in] `point`  
+ [in] *punto*  
  La posición del mouse actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -831,7 +831,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
+ [in] *punto*  
  Las coordenadas de dónde desea mostrar el menú emergente.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -844,7 +844,7 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bActive`  
+ [in] *bSecuencias de ActiveX*  
  `TRUE` para realizar la ficha actual de la pestaña activa; `FALSE` para desactivar la ficha actual.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -858,11 +858,11 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iTab`  
+ [in] *iTab*  
  Especifica el índice de base cero de la pestaña para activar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la ficha especificada se realizó activa; `FALSE` si especificado `iTab` valor de parámetro no es válido.  
+ `TRUE` Si la ficha especificada se realizó activa; `FALSE` si especificado *iTab* el valor del parámetro no es válido.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método no envía el `AFX_WM_CHANGE_ACTIVE_TAB` notificación a la ventana primaria del control de ficha.  
@@ -877,7 +877,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bIsBold`  
+ [in] *bIsBold*  
  `TRUE` Para usar una fuente en negrita para mostrar la etiqueta de la pestaña activa; `FALSE` usar la fuente estándar para mostrar la etiqueta. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -890,7 +890,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bDraw`  
+ [in] *bDraw*  
  `TRUE` para mostrar un rectángulo de marco alrededor de una barra incrustado. en caso contrario, `FALSE`. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -905,10 +905,10 @@ void SetFlatFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bFlat`  
+ [in] *bFlat*  
  `TRUE` para dibujar un marco plana (2D) alrededor del área de pestaña; `FALSE` para dibujar un marco tridimensional (3D). El valor predeterminado es `TRUE`.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` Para volver a dibujar la ventana Inmediato; en caso contrario, `FALSE`. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -926,20 +926,20 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiID`  
+ [in] *uiID*  
  El identificador de un recurso de mapa de bits que contiene la lista de imágenes.  
   
- [in] `cx`  
+ [in] *cx*  
  El ancho de cada imagen, en píxeles. El valor predeterminado es 15.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  El color de imagen transparente. Las partes de la imagen que son de este color será transparentes. El valor predeterminado es el color fucsia, RGB(255,0,255).  
   
- [in] `hImageList`  
+ [in] *hImageList*  
  Un identificador a una lista de imágenes previamente cargados.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este método se realiza correctamente. `FALSE` Si el control de ficha se crea mediante un estilo plano o si la primera sobrecarga de método no puede cargar el mapa de bits especificado por el `uiID` parámetro.  
+ `TRUE` Si este método se realiza correctamente. `FALSE` Si el control de ficha se crea mediante un estilo plano o si la primera sobrecarga de método no puede cargar el mapa de bits especificado por el *uiID* parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para establecer una lista de imágenes para el control de ficha. Las imágenes de la lista de imágenes se muestran al lado de la etiqueta de ficha. Este método vuelve a calcular el alto de la pestaña para que la ficha tiene un tamaño para que contenga la imagen y el texto.  
@@ -954,11 +954,11 @@ void SetResizeMode(ResizeMode resizeMode);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `resizeMode`  
+ [in] *resizeMode*  
  Uno de los `CMFCTabCtrl::ResizeMode` valores de enumeración que especifica cómo se puede cambiar el tamaño de control de pestaña. Para obtener una lista de valores posibles, vea la tabla en la sección Comentarios.  
   
 ### <a name="remarks"></a>Comentarios  
- El `resizeMode` parámetro puede ser uno de los siguientes `ResizeMode` valores de enumeración.  
+ El *resizeMode* parámetro puede ser uno de los siguientes `ResizeMode` valores de enumeración.  
   
 |nombre|Descripción|  
 |----------|-----------------|  
@@ -974,7 +974,7 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nTabMaxWidth`  
+ [in] *nTabMaxWidth*  
  El ancho de la pestaña máximo, en píxeles.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -988,7 +988,7 @@ void StopResize(BOOL bCancel);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bCancel`  
+ [in] *bCancelar*  
  `TRUE` para abandonar la operación de cambio de tamaño actual; `FALSE` para completar la actual cambiar el tamaño de operación. En cualquier caso, el marco de trabajo detiene dibujar el rectángulo de cambio de tamaño.  
   
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
@@ -999,7 +999,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `pScrollInfo`  
+ [out] *pScrollInfo*  
  Puntero a un [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estructura o `NULL`. Cuando este método devuelve, y si este parámetro no es `NULL`, la estructura contiene todos los parámetros de la barra de desplazamiento. El valor predeterminado es `NULL`.  
   
 ### <a name="return-value"></a>Valor devuelto  

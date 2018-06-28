@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f758a3cc82d4f6cfcc28f89ae206a82b899c0042
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371369"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037620"
 ---
 # <a name="colemessagefilter-class"></a>Clase COleMessageFilter
 Administra la simultaneidad requerida por la interacción de aplicaciones OLE.  
@@ -110,7 +110,7 @@ virtual void BeginBusyState();
   
  El `BeginBusyState` y `EndBusyState` llamadas incremento y decremento, respectivamente, un contador que determina si la aplicación está ocupada. Por ejemplo, dos llamadas a `BeginBusyState` y una llamada a `EndBusyState` resultante en un estado de ocupado. Para cancelar un estado ocupado, es necesario llamar a `EndBusyState` el mismo número de veces que `BeginBusyState` se ha llamado.  
   
- De forma predeterminada, el marco de trabajo entra en el estado ocupado durante el procesamiento en inactividad, que se realiza mediante [CWinApp:: OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Mientras la aplicación lleva a cabo **ON_COMMANDUPDATEUI** notificaciones, las llamadas entrantes se administran más adelante, una vez completado el procesamiento en inactividad.  
+ De forma predeterminada, el marco de trabajo entra en el estado ocupado durante el procesamiento en inactividad, que se realiza mediante [CWinApp:: OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Mientras la aplicación está controlando las notificaciones ON_COMMANDUPDATEUI, las llamadas entrantes se administran más adelante, una vez completado el procesamiento en inactividad.  
   
 ##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  Crea un objeto `COleMessageFilter`.  
@@ -153,7 +153,7 @@ virtual void EndBusyState();
   
  El `BeginBusyState` y `EndBusyState` llamadas incremento y decremento, respectivamente, un contador que determina si la aplicación está ocupada. Por ejemplo, dos llamadas a `BeginBusyState` y una llamada a `EndBusyState` resultante en un estado de ocupado. Para cancelar un estado ocupado, es necesario llamar a `EndBusyState` el mismo número de veces que `BeginBusyState` se ha llamado.  
   
- De forma predeterminada, el marco de trabajo entra en el estado ocupado durante el procesamiento en inactividad, que se realiza mediante [CWinApp:: OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Mientras la aplicación lleva a cabo `ON_UPDATE_COMMAND_UI` notificaciones, las llamadas entrantes se administran una vez completado el procesamiento en inactividad.  
+ De forma predeterminada, el marco de trabajo entra en el estado ocupado durante el procesamiento en inactividad, que se realiza mediante [CWinApp:: OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Mientras la aplicación está controlando las notificaciones de ON_UPDATE_COMMAND_UI, las llamadas entrantes se administran una vez completado el procesamiento en inactividad.  
   
 ##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  Lo llama el marco de trabajo para procesar los mensajes mientras una llamada OLE está en curso.  
@@ -163,14 +163,14 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pMsg`  
+ *pMsg*  
  Puntero al mensaje pendiente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero en caso de éxito; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando una aplicación que realiza la llamada está esperando una llamada se complete, el marco llama a `OnMessagePending` con un puntero al mensaje pendiente. De forma predeterminada, el marco de trabajo envía `WM_PAINT` mensajes, para que puedan realizarse las actualizaciones de la ventana durante una llamada que esté tardando mucho tiempo.  
+ Cuando una aplicación que realiza la llamada está esperando una llamada se complete, el marco llama a `OnMessagePending` con un puntero al mensaje pendiente. De forma predeterminada, el marco de trabajo envía mensajes WM_PAINT, para que puedan realizarse las actualizaciones de la ventana durante una llamada que esté tardando mucho tiempo.  
   
  Debe registrar el filtro de mensajes por medio de una llamada a [registrar](#register) antes de que puede activarse.  
   
@@ -233,7 +233,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nTimeout`  
+ *nTimeout*  
  Número de milisegundos de retraso mensajes pendientes.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -247,7 +247,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nRetryReply`  
+ *nRetryReply*  
  Número de milisegundos entre los reintentos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -255,7 +255,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
  Respuesta del llamador se controla mediante las funciones `SetRetryReply` y [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply` determina cuánto tiempo debe esperar la aplicación que realiza la llamada entre reintentos para una llamada determinada. `SetMessagePendingDelay` determina cuánto tiempo la aplicación que realiza la llamada espera una respuesta del servidor antes de realizar una acción posterior.  
   
- Normalmente, los valores predeterminados son aceptables y no deben cambiarse. El marco de trabajo vuelve a intentar la llamada cada `nRetryReply` milisegundos hasta que la llamada se lleva a cabo o ha expirado el retraso de mensajes pendientes. Un valor de 0 para `nRetryReply` especifica un reintento inmediato y - 1 especifica la cancelación de la llamada.  
+ Normalmente, los valores predeterminados son aceptables y no deben cambiarse. El marco de trabajo vuelve a intentar la llamada cada *nRetryReply* milisegundos hasta que la llamada se lleva a cabo o ha expirado el retraso de mensajes pendientes. Un valor de 0 para *nRetryReply* especifica un reintento inmediato y - 1 especifica la cancelación de la llamada.  
   
  Cuando ha expirado el retraso de mensajes pendientes, el OLE "ocupado"cuadro de diálogo (vea [clase COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) se muestra para que el usuario puede optar por cancelar o vuelva a intentar la llamada. Llame a [EnableBusyDialog](#enablebusydialog) para habilitar o deshabilitar este cuadro de diálogo.  
   

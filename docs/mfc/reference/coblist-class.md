@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d66c26fb94fa0f4e1863a6a6a9663de4239611db
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378423"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039138"
 ---
 # <a name="coblist-class"></a>Clase cObList
 fSupports listas ordenadas de único `CObject` punteros accesibles secuencialmente o por el puntero de valor.  
@@ -117,7 +117,7 @@ class CObList : public CObject
   
  Inserción de elementos es muy rápido en el encabezado de la lista, en la cola y en un conocido **posición**. Una búsqueda secuencial es necesaria buscar un elemento por valor o por índice. Esta búsqueda puede ser lenta si la lista es larga.  
   
- `CObList` incorpora la macro `IMPLEMENT_SERIAL` para admitir la serialización y el volcado de sus elementos. Si es una lista de `CObject` punteros se almacena en un archivo, con un operador de inserción sobrecargado o con el `Serialize` miembro funcione, cada uno de ellos `CObject` elemento se serializa a su vez.  
+ `CObList` incorpora la macro IMPLEMENT_SERIAL para admitir la serialización y el volcado de sus elementos. Si es una lista de `CObject` punteros se almacena en un archivo, con un operador de inserción sobrecargado o con el `Serialize` miembro funcione, cada uno de ellos `CObject` elemento se serializa a su vez.  
   
  Si se necesita un volcado de persona `CObject` elementos en la lista, debe establecer la profundidad del contexto de volcado en 1 o mayor.  
   
@@ -147,11 +147,11 @@ void AddHead(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `newElement`  
+ *"newelement"*  
  El `CObject` puntero va a agregar a esta lista.  
   
- `pNewList`  
- Un puntero a otro `CObList` lista. Los elementos de `pNewList` se agregará a esta lista.  
+ *pNewList*  
+ Un puntero a otro `CObList` lista. Los elementos de *pNewList* se agregará a esta lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la primera versión del **posición** valor del elemento recién insertado.  
@@ -188,11 +188,11 @@ void AddTail(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `newElement`  
+ *"newelement"*  
  El `CObject` puntero va a agregar a esta lista.  
   
- `pNewList`  
- Un puntero a otro `CObList` lista. Los elementos de `pNewList` se agregará a esta lista.  
+ *pNewList*  
+ Un puntero a otro `CObList` lista. Los elementos de *pNewList* se agregará a esta lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la primera versión del **posición** valor del elemento recién insertado.  
@@ -228,11 +228,11 @@ CObList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nBlockSize`  
+ *nBlockSize*  
  La granularidad de asignación de memoria para ampliar la lista.  
   
 ### <a name="remarks"></a>Comentarios  
- A medida que crece la lista, se asigna memoria en unidades de `nBlockSize` entradas. Si se produce un error en una asignación de memoria, un `CMemoryException` se produce.  
+ A medida que crece la lista, se asigna memoria en unidades de *nBlockSize* entradas. Si se produce un error en una asignación de memoria, un `CMemoryException` se produce.  
   
  En la tabla siguiente se muestra otro miembro funciones que son similares a `CObList::CObList`.  
   
@@ -260,10 +260,10 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `searchValue`  
+ *searchValue*  
  El puntero de objeto que se encuentren en esta lista.  
   
- `startAfter`  
+ *startAfter*  
  La posición inicial de la búsqueda.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -285,18 +285,18 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CObList::FindIndex  
- Utiliza el valor de `nIndex` como un índice en la lista.  
+ Utiliza el valor de *nIndex* como un índice en la lista.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Índice de base cero del elemento de lista que se encuentra.  
   
 ### <a name="return-value"></a>Valor devuelto  
- A **posición** valor que se puede usar para la iteración o recuperación de puntero de objeto; **NULL** si `nIndex` es demasiado grande. (El marco de trabajo genera una aserción si `nIndex` es negativo.)  
+ A **posición** valor que se puede usar para la iteración o recuperación de puntero de objeto; **NULL** si *nIndex* es demasiado grande. (El marco de trabajo genera una aserción si *nIndex* es negativo.)  
   
 ### <a name="remarks"></a>Comentarios  
  Iniciar un examen secuencial desde el principio de la lista, detener la *n*elemento th.  
@@ -323,7 +323,7 @@ const CObject*& GetAt(POSITION position) const;
   
 ### <a name="parameters"></a>Parámetros  
  *Posición*  
- A **posición** valor devuelto por un anterior `GetHeadPosition` o **buscar** llamada a función miembro.  
+ A **posición** valor devuelto por un anterior `GetHeadPosition` o `Find` llamada a función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Vea la descripción de valor devuelto de [GetHead](#gethead).  
@@ -418,7 +418,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
 ##  <a name="getnext"></a>  CObList::GetNext  
- Obtiene el elemento de lista identificado por `rPosition`, a continuación, establece `rPosition` a la `POSITION` valor de la entrada siguiente en la lista.  
+ Obtiene el elemento de lista identificado por *rPosition*, a continuación, establece *rPosition* a la `POSITION` valor de la entrada siguiente en la lista.  
   
 ```  
 CObject*& GetNext(POSITION& rPosition);  
@@ -426,7 +426,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rPosition`  
+ *rPosition*  
  Una referencia a un `POSITION` valor devuelto por un anterior `GetNext`, `GetHeadPosition`, u otra llamada de función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -437,7 +437,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  Debe asegurarse de que su `POSITION` valor representa una posición válida en la lista. Si no es válido, se valida la versión de depuración de la biblioteca Microsoft Foundation Class.  
   
- Si el elemento recuperado es el último en la lista, a continuación, el nuevo valor de `rPosition` está establecido en `NULL`.  
+ Si el elemento recuperado es el último en la lista, a continuación, el nuevo valor de *rPosition* está establecido en `NULL`.  
   
  Es posible quitar un elemento durante una iteración. Vea el ejemplo de [RemoveAt](#removeat).  
   
@@ -463,7 +463,7 @@ const CObject* GetNext(POSITION& rPosition) const;
  `a CAge at $46C0 21`  
   
 ##  <a name="getprev"></a>  CObList::GetPrev  
- Obtiene el elemento de lista identificado por `rPosition`, a continuación, establece `rPosition` a la `POSITION` valor de la entrada anterior en la lista.  
+ Obtiene el elemento de lista identificado por *rPosition*, a continuación, establece *rPosition* a la `POSITION` valor de la entrada anterior en la lista.  
   
 ```  
 CObject*& GetPrev(POSITION& rPosition);  
@@ -471,7 +471,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rPosition`  
+ *rPosition*  
  Una referencia a un `POSITION` valor devuelto por un anterior `GetPrev` u otra llamada de función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -589,7 +589,7 @@ POSITION InsertAfter(
   
 ### <a name="parameters"></a>Parámetros  
  *Posición*  
- Un valor **POSITION** devuelto por una llamada de función de miembro `GetNext`, `GetPrev`, o **Find** anterior.  
+ A **posición** valor devuelto por un anterior `GetNext`, `GetPrev`, o `Find` llamada a función miembro.  
   
  `newElement`  
  Puntero de objeto que se va a agregar a esta lista.  
@@ -630,9 +630,9 @@ POSITION InsertBefore(
   
 ### <a name="parameters"></a>Parámetros  
  *Posición*  
- Un valor **POSITION** devuelto por una llamada de función de miembro `GetNext`, `GetPrev`, o **Find** anterior.  
+ A **posición** valor devuelto por un anterior `GetNext`, `GetPrev`, o `Find` llamada a función miembro.  
   
- `newElement`  
+ *"newelement"*  
  Puntero de objeto que se va a agregar a esta lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -802,10 +802,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pos`  
+ *punto de venta*  
  El **posición** del elemento que se va a establecer.  
   
- `newElement`  
+ *"newelement"*  
  El `CObject` puntero se escriban en la lista.  
   
 ### <a name="remarks"></a>Comentarios  

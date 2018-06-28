@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9073c3443b1c74a27c9de9be142c67fab7f40ba8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6862803540a87aed129ace3a05d4e41e9e1ba90
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374968"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040826"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Clase CMFCShellListCtrl
 La `CMFCShellListCtrl` clase proporciona funcionalidad de control de lista de Windows y la expande incluyendo la capacidad para mostrar una lista de elementos de shell.  
@@ -130,10 +130,10 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszPath`  
+ [in] *lpszPath*  
  Una cadena que contiene la ruta de acceso de una carpeta.  
   
- [in] `lpItemInfo`  
+ [in] *lpItemInfo*  
  Un puntero a un `LPAFX_SHELLITEMINFO` estructura que describe una carpeta para mostrar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -157,7 +157,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  Un valor booleano que especifica si el marco de trabajo permite el acceso directo.  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
@@ -168,7 +168,7 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `strPath`  
+ [out] *strPath*  
  Una referencia a un parámetro de cadena que el método escribe la ruta de acceso.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -185,7 +185,7 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `strName`  
+ [out] *strName*  
  Una referencia a un parámetro de cadena que el método escribe el nombre.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -227,17 +227,17 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `strPath`  
+ [out] *strPath*  
  Una referencia a una cadena que recibe la ruta de acceso.  
   
- [in] `iItem`  
+ [in] *iItem*  
  El índice del elemento de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si se realiza correctamente; `FALSE` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- El índice proporcionado por `iItem` se basa en los elementos mostrados actualmente por la [CMFCShellListCtrl clase](../../mfc/reference/cmfcshelllistctrl-class.md) objeto.  
+ El índice proporcionado por *iItem* se basa en los elementos mostrados actualmente por la [CMFCShellListCtrl clase](../../mfc/reference/cmfcshelllistctrl-class.md) objeto.  
   
 ##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes  
  Devuelve el tipo de elementos mostrados por el [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) objeto.  
@@ -273,9 +273,9 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lParam1`  
- [in] `lParam2`  
- [in] `iColumn`  
+ [in] *lParam1*  
+ [in] *lParam2*  
+ [in] *iColumn*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -291,10 +291,10 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `tmFile`  
+ [in] *tmFile*  
  La fecha asociada a un archivo.  
   
- [out] `str`  
+ [out] *str*  
  Una cadena que contiene la fecha con formato de archivo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -310,10 +310,10 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lFileSize`  
+ [in] *lFileSize*  
  El tamaño del archivo que se mostrará el marco de trabajo.  
   
- [out] `str`  
+ [out] *str*  
  Una cadena que contiene el tamaño de archivo con formato.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -329,10 +329,10 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iItem`  
+ [in] *iItem*  
  El índice del elemento.  
   
- [in] `pItem`  
+ [in] *pItem*  
  Un `LPAFX_SHELLITEMINFO` parámetro que describe el elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -341,7 +341,7 @@ virtual int OnGetItemIcon(
 ### <a name="remarks"></a>Comentarios  
  El índice de imagen de icono se basa en la lista de imágenes de sistema.  
   
- De forma predeterminada, este método se basa en el `pItem` parámetro. El valor de `iItem` no se utiliza en la implementación predeterminada. Puede usar `iItem` para implementar un comportamiento personalizado.  
+ De forma predeterminada, este método se basa en el *pItem* parámetro. El valor de *iItem* no se utiliza en la implementación predeterminada. Puede usar *iItem* para implementar un comportamiento personalizado.  
   
 ##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText  
  El marco de trabajo llama a este método cuando debe recuperar el texto de un elemento de shell.  
@@ -354,13 +354,13 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iItem`  
+ [in] *iItem*  
  El índice del elemento.  
   
- [in] `iColumn`  
+ [in] *iColumn*  
  La columna de interés.  
   
- [in] `pItem`  
+ [in] *pItem*  
  Un `LPAFX_SHELLITEMINFO` parámetro que describe el elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -369,7 +369,7 @@ virtual CString OnGetItemText(
 ### <a name="remarks"></a>Comentarios  
  Cada elemento de la `CMFCShellListCtrl` objeto puede tener texto en una o varias columnas. Cuando el marco de trabajo llama a este método, especifica la columna que está interesado. Si se llama a esta función manualmente, también debe especificar la columna que le interesa.  
   
- De forma predeterminada, este método se basa en el `pItem` parámetro para determinar el elemento al proceso. El valor de `iItem` no se utiliza en la implementación predeterminada.  
+ De forma predeterminada, este método se basa en el *pItem* parámetro para determinar el elemento al proceso. El valor de *iItem* no se utiliza en la implementación predeterminada.  
   
 ##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns  
  El marco de trabajo llama a este método cuando establece los nombres de las columnas.  
@@ -402,7 +402,7 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nTypes`  
+ [in] *nTypes*  
  Tipos de una lista de elementos que la `CMFCShellListCtrl` objeto admite.  
   
 ### <a name="remarks"></a>Comentarios  

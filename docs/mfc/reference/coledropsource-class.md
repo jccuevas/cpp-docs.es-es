@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f601c2b15f5f117f77b1f916027107708e8f19
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374902"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038233"
 ---
 # <a name="coledropsource-class"></a>Clase COleDropSource
 Permite que los datos que se arrastrarán a un destino de colocación.  
@@ -90,7 +90,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dropEffect`  
+ *EfectoColocar*  
  El efecto que le gustaría mostrar al usuario, por lo general que indica lo que sucedería si se produjera una colocación en este momento con los datos seleccionados. Normalmente, esto es el valor devuelto por la llamada más reciente a [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) o [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Puede ser una o varias de las siguientes acciones:  
   
 - `DROPEFFECT_NONE` Una caída no estarían permitida.  
@@ -119,7 +119,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pWnd`  
+ *pWnd*  
  Apunta a la ventana que contiene los datos seleccionados.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -141,7 +141,7 @@ virtual SCODE QueryContinueDrag(
  *bEscapePressed*  
  Indica si se ha presionado la tecla ESC desde la última llamada a `COleDropSource::QueryContinueDrag`.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Contiene el estado de las teclas modificadoras del teclado. Se trata de una combinación de varios de los siguientes valores: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, y **MK_RBUTTON**.  
   
 ### <a name="return-value"></a>Valor devuelto  

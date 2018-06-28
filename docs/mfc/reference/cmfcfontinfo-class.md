@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e4c1031ba06eaabe67418a018f95d689f71d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27858b6dad2744965e85bcd8287ba62cbf5b60c0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368298"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038606"
 ---
 # <a name="cmfcfontinfo-class"></a>Clase CMFCFontInfo
 La `CMFCFontInfo` clase describe el nombre y otros atributos de una fuente.  
@@ -94,22 +94,22 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszName`  
+ [in] *lpszName*  
  El nombre de la fuente. Para obtener más información, consulte el `lfFaceName` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura.  
   
- [in] `lpszScript`  
+ [in] *lpszScript*  
  El nombre de la secuencia de comandos (juego de caracteres) de la fuente.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Un valor que especifica el juego de caracteres (script) de la fuente. Para obtener más información, consulte el `lfCharSet` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Un valor que especifica el tono y la familia de la fuente. Para obtener más información, consulte el `lfPitchAndFamily` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura.  
   
- [in] `nType`  
+ [in] *nLas*  
  Un valor que especifica el tipo de fuente. Este parámetro puede ser una combinación bit a bit (OR) de DEVICE_FONTTYPE, RASTER_FONTTYPE y TRUETYPE_FONTTYPE.  
   
- [in] `src`  
+ [in] *src*  
  Existente `CMFCFontInfo` objeto cuyos miembros se utilizan para construir este `CMFCFontInfo` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -138,7 +138,7 @@ const BYTE m_nCharSet;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte el `nCharSet` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
+ Para obtener más información, consulte el *nCharSet* parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
 ##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
  Un valor que especifica el tono (tamaño de punto) y la familia (por ejemplo, serif, sans-serif y monospace) de la fuente.  
@@ -148,7 +148,7 @@ const BYTE m_nPitchAndFamily;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte el `nPitchAndFamily` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
+ Para obtener más información, consulte el *nPitchAndFamily* parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
 ##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  Un valor que especifica el tipo de la fuente.  
@@ -158,7 +158,7 @@ const int m_nType;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte el `nType` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
+ Para obtener más información, consulte el *nLas* parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
 ##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  El nombre de la fuente: por ejemplo, **Arial**.  
@@ -168,7 +168,7 @@ const CString m_strName;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte el `lpszName` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
+ Para obtener más información, consulte el *lpszName* parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
 ##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
  El nombre de un juego de caracteres (script) asociado a la fuente.  
@@ -178,7 +178,7 @@ const CString m_strScript;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte el `lpszScript` parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
+ Para obtener más información, consulte el *lpszScript* parámetro de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

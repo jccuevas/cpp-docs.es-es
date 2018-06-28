@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40d8c55f212949400bc7948be291d037a34281ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62be8c2061dc27b847e2bf0bfe7ca3c4c8195f5f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378497"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039315"
 ---
 # <a name="chtmleditctrlbase-class"></a>Clase CHtmlEditCtrlBase
 Representa un componente de edición HTML.  
@@ -391,7 +391,7 @@ HRESULT AddToGlyphTable(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szTag`  
+ *szTag*  
  El nombre de etiqueta (por ejemplo, "P" o "tabla").  
   
  *szImgUrl*  
@@ -444,7 +444,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador del control de botón.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -461,7 +461,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador del control de casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -530,7 +530,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador del control de selección de lista desplegable.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -571,10 +571,10 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cmdID`  
+ *cmdID*  
  El identificador de comando que ejecutará. Para obtener una lista, vea [identificadores de comandos de MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).  
   
- `cmdExecOpt`  
+ *cmdExecOpt*  
  Valores extraídos de la [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) enumeración, que describen la forma en que el objeto debe ejecutar el comando.  
   
  *pInVar*  
@@ -613,7 +613,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bCurValue`  
+ *bCurValue*  
  True si la propiedad de posición del elemento se establece en "absolute".  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -630,7 +630,7 @@ HRESULT GetBackColor(int& nColor) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nColor`  
+ *nColor*  
  Color de fondo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -698,7 +698,7 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ppDoc`  
+ *ppDoc*  
  El objeto de documento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -712,7 +712,7 @@ HRESULT GetDocumentHTML(CString& szHTML) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szHTML`  
+ *szHTML*  
  El código HTML.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -740,7 +740,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ppEventObj`  
+ *ppEventObj*  
  El objeto de evento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -768,14 +768,14 @@ HRESULT GetFontFace(CString& strFace) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `strFace`  
+ *strFace*  
  El nombre de la fuente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Si la selección actual utiliza más de una fuente, `strFace` será una cadena vacía.  
+ Si la selección actual utiliza más de una fuente, *strFace* será una cadena vacía.  
   
  Este método envía el [identificador de comando IDM_FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) para el control WebBrowser.  
   
@@ -787,7 +787,7 @@ HRESULT GetFontSize(short& nSize) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nSize`  
+ *nSize*  
  El tamaño de fuente.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -804,7 +804,7 @@ HRESULT GetForeColor(int& nColor);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nColor`  
+ *nColor*  
  El color de primer plano.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -848,7 +848,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bCurValue`  
+ *bCurValue*  
  True si se muestra un glifo para todos los elementos que tienen un **styleFloat** propiedad; false si no se muestra ningún glifo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -865,7 +865,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bCurValue`  
+ *bCurValue*  
  True si el control WebBrowser muestra los glifos para mostrar la ubicación de todas las etiquetas en un documento; False si no es así.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -882,7 +882,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bCurValue`  
+ *bCurValue*  
  Es True si el control WebBrowser muestra un glifo para etiquetas de área, false si no es así.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -899,7 +899,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bCurValue`  
+ *bCurValue*  
  Es True si el control WebBrowser muestra un glifo para etiquetas de Brasil, false si no lo hace.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -916,7 +916,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bCurValue`  
+ *bCurValue*  
  Es True si el control WebBrowser muestra un glifo para etiquetas de comentario, false si no lo hace.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -933,7 +933,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bCurValue`  
+ *bCurValue*  
  Es True si el control WebBrowser muestra todas las etiquetas que se muestra en Microsoft Internet Explorer 4.0, false si no es así.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -950,7 +950,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bCurValue`  
+ *bCurValue*  
  Es True si el control WebBrowser muestra un glifo para todas las etiquetas de script, false si no es así.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -967,7 +967,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bCurValue`  
+ *bCurValue*  
  True si el control WebBrowser muestra un glifo para todas las etiquetas de estilo, false si no es así  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -984,7 +984,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bCurValue`  
+ *bCurValue*  
  Es True si el control WebBrowser muestra un glifo para todas las etiquetas desconocidos, false si no es así.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1018,7 +1018,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szUrl`  
+ *szUrl*  
  La dirección URL del hipervínculo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1035,7 +1035,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szData`  
+ *szData*  
  Cadena que se va a pegar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1052,7 +1052,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador del marco flotante.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1069,7 +1069,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szUrl`  
+ *szUrl*  
  La ruta de acceso y el nombre de la imagen que se va a insertar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1099,7 +1099,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador para el cuadro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1116,7 +1116,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador para el control de botón.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1133,7 +1133,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador para el control oculto.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1150,7 +1150,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador para el control de imagen.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1167,7 +1167,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador para el control de contraseña.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1184,7 +1184,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador para el control de restablecimiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1201,7 +1201,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador para el control de envío.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1218,7 +1218,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador para el control de carga de archivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1235,7 +1235,7 @@ HRESULT Is1DElement(bool& bValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bValue`  
+ *bValue*  
  Es True si el elemento está estáticamente posicionadas.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1252,7 +1252,7 @@ HRESULT Is2DElement(bool& bValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bValue`  
+ *bValue*  
  Es True si el elemento es posición absoluta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1321,7 +1321,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador para el control de cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1338,7 +1338,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador de la marquesina.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1365,7 +1365,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador de la lista ordenada.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1395,7 +1395,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador para el párrafo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1427,7 +1427,7 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szPrintTemplate`  
+ *szPrintTemplate*  
  Ruta de acceso a una plantilla de impresión; Si no se especifica ninguno, se usa la plantilla de impresión predeterminada.  
   
  *bShowPrintDialog*  
@@ -1448,7 +1448,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szPrintTemplate`  
+ *szPrintTemplate*  
  Ruta de acceso a una plantilla de impresión.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1465,11 +1465,11 @@ long QueryStatus(long cmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cmdID`  
+ *cmdID*  
  Identificador del comando. Identificadores de comandos se toman de la `CGID_MSHTML` del grupo de comandos. Estos comandos se definen en Mshtmcid.h. También puede encontrar la lista en línea en [identificadores de comandos de MSHTML](http://go.microsoft.com/fwlink/p/?linkid=149220).  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve un [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) que indica el estado de `cmdID`, o 0 en caso de error.  
+ Devuelve un [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) que indica el estado de *cmdID*, o 0 en caso de error.  
   
 ##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
  Sobrescribe un control de radio en la selección actual.  
@@ -1479,7 +1479,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador del botón de radio.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1522,7 +1522,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szPath`  
+ *szPath*  
  La ruta de acceso y el nombre que se va a guardar la página Web.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1552,7 +1552,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, se pueden mover elementos con posición absoluta arrastrando.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1569,7 +1569,7 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, la propiedad de posición del elemento es "absoluta"; Si es false, es "estático".  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1586,7 +1586,7 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, cualquier elemento que tiene un atributo ATOMICSELECTION establecido en TRUE se podrán seleccionar solo como una unidad.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1603,7 +1603,7 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, se habilita la detección automática de dirección URL.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1621,11 +1621,11 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nColor`  
- El color. Vea `pvaIn` en [Id. de comando IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
+ *nColor*  
+ El color. Vea *pvaIn* en [Id. de comando de IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
- `szColor`  
- El color. Vea `pvaIn` en [Id. de comando IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
+ *szColor*  
+ El color. Vea *pvaIn* en [Id. de comando de IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
@@ -1641,7 +1641,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szFormat`  
+ *szFormat*  
  La etiqueta de formato.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1675,7 +1675,7 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nLevel`  
+ *nLevel*  
  El nivel de CSS. Pase 0 si no desea compatibilidad con CSS.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1714,10 +1714,10 @@ HRESULT SetDefaultComposeSettings(
  *bnegrita*  
  Pasar true para texto en negrita.  
   
- `bItalic`  
+ *bItalic*  
  Pasar true para texto en cursiva.  
   
- `bUnderline`  
+ *bUnderline*  
  Pasar true para texto subrayado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1734,7 +1734,7 @@ BOOL SetDesignMode(BOOL bMode) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bMode`  
+ *bMode*  
  Si es true, activa el modo de diseño.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1748,7 +1748,7 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, deshabilita el borde sombreado y controla alrededor de un elemento seleccionable de sitio cuando el elemento tiene "Editar foco" en el modo de diseño; es decir, cuando el texto o el contenido del elemento se puede editar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1765,7 +1765,7 @@ HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szHTML`  
+ *szHTML*  
  El código HTML.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1779,7 +1779,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szFace`  
+ *szFace*  
  El nombre de la fuente.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1796,7 +1796,7 @@ HRESULT SetFontSize(unsigned short size) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `size`  
+ *size*  
  El tamaño de fuente HTML (1-7). Un valor de 0, Establece el tamaño de fuente en 1.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1814,10 +1814,10 @@ HRESULT SetForeColor(int nColor) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szColor`  
+ *szColor*  
  El color.  
   
- `nColor`  
+ *nColor*  
  El color.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1834,7 +1834,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, todas las operaciones de pegar son compatibles con Internet Explorer 5; Si es false, las operaciones de pegar son compatibles con Internet Explorer 5.5.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1851,7 +1851,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, hace que el control WebBrowser actualizar la apariencia de un elemento continuamente durante una operación de cambio de tamaño o mover; Si es false, se actualiza solo al final del desplazamiento o cambio de tamaño.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1868,7 +1868,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, permite la selección de más de un elemento seleccionable de sitio a la vez cuando el usuario mantiene presionado las teclas MAYÚS o CTRL.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1885,7 +1885,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, el control WebBrowser no cambiará el puntero del mouse.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1902,7 +1902,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bMode`  
+ *bMode*  
  Si es true, se sobrescribe el modo de entrada de texto; Si es false, el modo de entrada de texto es insert.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1919,7 +1919,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, los elementos que tengan una visibilidad establecido en "hidden" o la propiedad establecida en "none" para mostrar no se mostrará en modo de diseño y modo de exploración; Si es false, los elementos se mostrarán solo en modo de exploración.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1936,7 +1936,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, muestra un glifo para todos los elementos que tienen un **styleFloat** propiedad.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1953,7 +1953,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, muestra los glifos para mostrar la ubicación de todas las etiquetas en un documento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1970,7 +1970,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, muestra un glifo para todas las etiquetas de área.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1987,7 +1987,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, muestra un glifo para todas las etiquetas de Brasil.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -2004,7 +2004,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, muestra un glifo para todas las etiquetas de comentario.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -2021,7 +2021,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, muestra todas las etiquetas que se muestra en Microsoft Internet Explorer 4.0.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -2038,7 +2038,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, muestra un glifo para todas las etiquetas de script.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -2055,7 +2055,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, muestra un glifo para todas las etiquetas de estilo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -2072,7 +2072,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bNewValue`  
+ *bNewValue*  
  Si es true, muestra un glifo para todas las etiquetas desconocidos.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -2089,7 +2089,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador del control de entrada de texto multilínea.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -2106,7 +2106,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador del control de texto.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -2162,7 +2162,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szId`  
+ *NID*  
  El identificador de la lista sin ordenar.  
   
 ### <a name="return-value"></a>Valor devuelto  

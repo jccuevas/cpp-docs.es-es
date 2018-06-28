@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368974"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042539"
 ---
 # <a name="colelinksdialog-class"></a>Clase COleLinksDialog
 Se utiliza en el cuadro de diálogo Editar vínculos de OLE.  
@@ -117,16 +117,16 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDoc`  
+ *pDoc*  
  Señala al documento OLE que contiene los vínculos que se pueda editar.  
   
- `pView`  
- Apunta a la vista actual en `pDoc`.  
+ *pView*  
+ Apunta a la vista actual en *pDoc*.  
   
- `dwFlags`  
+ *dwFlags*  
  Indicador de creación, que contiene 0 o **ELF_SHOWHELP** para especificar si el botón de ayuda se mostrará cuando se muestra el cuadro de diálogo.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Señala al objeto de ventana primaria o propietaria (de tipo `CWnd`) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, la ventana primaria del cuadro de diálogo se establece en la ventana de la aplicación principal.  
   
 ### <a name="remarks"></a>Comentarios  

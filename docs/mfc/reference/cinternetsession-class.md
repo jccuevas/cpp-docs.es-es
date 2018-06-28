@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa89f17a546c0b1aec6e1ed53a320f57660687
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 648d295af6ca767eb0291f1eb8f0cd172d0717cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322412"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041115"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession (clase)
 
@@ -422,7 +422,7 @@ Un puntero a una cadena que contiene el nombre de usuario.
 Un puntero a una cadena que contiene la contraseña de acceso.
 
 *dwFlags*  
-Cualquier combinación de la `INTERNET_FLAG_*` marcas. Vea la tabla en la **comentarios** sección de [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) para obtener una descripción de `dwFlags` valores.
+Cualquier combinación de la `INTERNET_FLAG_*` marcas. Vea la tabla en la **comentarios** sección de [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) para obtener una descripción de *dwFlags* valores.
 
 ### <a name="return-value"></a>Valor devuelto
 

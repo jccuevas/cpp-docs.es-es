@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371678"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041755"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Clase CMFCRibbonMiniToolBar
 Implementa una barra de herramientas emergente contextual.  
@@ -98,10 +98,10 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  La barra de cinta que busca la minibarra de herramientas para que los botones que deben mostrarse.  
   
- [in] `lstCommands`  
+ [in] *lstCommands*  
  La lista de comandos que se mostrarán en la minibarra de herramientas. Todas las categorías de la cinta de opciones se van a buscar los botones asociados.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -122,10 +122,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `x`  
+ [in] *x*  
  Especifica la posición horizontal de la minibarra de herramientas en coordenadas de pantalla.  
   
- [in] `y`  
+ [in] *y*  
  Especifica la posición vertical de la minibarra de herramientas en coordenadas de pantalla.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -143,16 +143,16 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `x`  
+ [in] *x*  
  Especifica la posición horizontal del menú contextual en coordenadas de pantalla.  
   
- [in] `y`  
+ [in] *y*  
  Especifica la posición vertical del menú contextual en coordenadas de pantalla.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Especifica el identificador de recurso del menú contextual para mostrar.  
   
- [in] `pWndOwner`  
+ [in] *pWndOwner*  
  Identifica la ventana que recibe los mensajes en el menú contextual.  
   
 ### <a name="return-value"></a>Valor devuelto  

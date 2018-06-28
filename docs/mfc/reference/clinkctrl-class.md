@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2312861a1b13ecb432c7893a27d72c61ecd78ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47cd25a92e572d02996008de9fc5265138d4ecb6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371704"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042383"
 ---
 # <a name="clinkctrl-class"></a>Clase CLinkCtrl
 Proporciona la funcionalidad del control SysLink común de Windows.  
@@ -131,19 +131,19 @@ virtual BOOL Create(DWORD dwStyle,
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Puntero a una cadena terminada en cero que contiene los elementos marcados el texto para mostrar. Para obtener más información, vea la sección "Marcado y vínculo de acceso" en el tema [información general de los controles SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica el estilo del control de vínculo. Aplicar cualquier combinación de estilos de control. Vea [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) en la `Windows SDK` para obtener más información.  
   
- `rect`  
+ *Rect*  
  Especifica el tamaño y la posición del control de vínculo. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](../../mfc/reference/rect-structure1.md) estructura.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Especifica la ventana primaria del control de vínculo. No debe ser `NULL`.  
   
- `nID`  
+ *nID*  
  Especifica el identificador. del control de vínculo  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -152,7 +152,7 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="remarks"></a>Comentarios  
  Crear un `CLinkCtrl` objeto en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a `Create`, que crea el control de vínculo y lo adjunta a la `CLinkCtrl` objeto. Si desea utilizar los estilos extendidos de windows con el control, llame a [CLinkCtrl::CreateEx](#createex) en lugar de `Create`.  
   
- La segunda forma de la `Create` método está en desuso. Usar la primera forma que especifica el `lpszLinkMarkup` parámetro.  
+ La segunda forma de la `Create` método está en desuso. Usar la primera forma que especifica el *lpszLinkMarkup* parámetro.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se define dos variables, denominadas `m_Link1` y `m_Link2`, que se usan para tener acceso a dos controles de vínculo.  
@@ -185,22 +185,22 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Puntero a una cadena terminada en cero que contiene los elementos marcados el texto para mostrar. Para obtener más información, vea la sección "Marcado y vínculo de acceso" en el tema [información general de los controles SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwExStyle`  
- Especifica el estilo extendido del control de vínculo. Para obtener una lista de los estilos extendidos de Windows, consulte el `dwExStyle` parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
+ *dwExStyle*  
+ Especifica el estilo extendido del control de vínculo. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica el estilo del control de vínculo. Aplicar cualquier combinación de estilos de control. Para obtener más información, consulte [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) del SDK de Windows.  
   
- `rect`  
+ *Rect*  
  Especifica el tamaño y la posición del control de vínculo. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](../../mfc/reference/rect-structure1.md) estructura.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Especifica la ventana primaria del control de vínculo. No debe ser `NULL`.  
   
- `nID`  
+ *nID*  
  Especifica el identificador. del control de vínculo  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -209,7 +209,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="remarks"></a>Comentarios  
  Use `CreateEx` en lugar de [crear](#create) aplicar las constantes de estilo extendidos de Windows.  
   
- La segunda forma de la `CreateEx` método está en desuso. Usar la primera forma que especifica el `lpszLinkMarkup` parámetro.  
+ La segunda forma de la `CreateEx` método está en desuso. Usar la primera forma que especifica el *lpszLinkMarkup* parámetro.  
   
 ##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
  Recupera el alto ideal de control de vínculo.  
@@ -237,11 +237,11 @@ int GetIdealSize(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `cxMaxWidth`|El ancho máximo del vínculo, en píxeles.|  
-|[out] * `pSize`|Un puntero a una ventana de [tamaño](http://msdn.microsoft.com/library/windows/desktop/dd145106) estructura. Cuando este método finaliza, el `cy` miembro de la `SIZE` estructura contiene el alto del texto de vínculo ideal para el ancho del texto de vínculo especificado por `cxMaxWidth`. El `cx` miembro de la estructura contiene el ancho del texto de vínculo que necesita realmente.|  
+|[in] *cxMaxWidth*|El ancho máximo del vínculo, en píxeles.|  
+|[out] * *pSize*|Un puntero a una ventana de [tamaño](http://msdn.microsoft.com/library/windows/desktop/dd145106) estructura. Cuando este método finaliza, el *cy* miembro de la `SIZE` estructura contiene el alto del texto de vínculo ideal para el ancho del texto de vínculo especificado por *cxMaxWidth*. El *cx* miembro de la estructura contiene el ancho del texto de vínculo que necesita realmente.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- El alto preferido del texto del vínculo, en píxeles. El valor devuelto es el mismo que el valor de la `cy` miembro de la `SIZE` estructura.  
+ El alto preferido del texto del vínculo, en píxeles. El valor devuelto es el mismo que el valor de la *cy* miembro de la `SIZE` estructura.  
   
 ### <a name="remarks"></a>Comentarios  
  Para obtener un ejemplo de la `GetIdealSize` método, vea el ejemplo de [CLinkCtrl::Create](#create).  
@@ -256,7 +256,7 @@ BOOL GetItem(PLITEM pItem) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pItem`  
+ *pItem*  
  Un puntero a un [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) estructura para recibir información del elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -280,7 +280,7 @@ BOOL GetItemID(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `iLink`  
+ *iLink*  
  El índice de un elemento de control de vínculo.  
   
  *strID*  
@@ -312,13 +312,13 @@ BOOL GetItemState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `iLink`  
+ *iLink*  
  El índice de un elemento de control de vínculo.  
   
- `pnState`  
+ *pnState*  
  El valor del elemento de estado especificado.  
   
- `stateMask`  
+ *stateMask*  
  Combinación de marcas que describen qué elemento de estado para obtener. Para obtener una lista de valores, vea la descripción de la **estado** miembro en el [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) estructura. Elementos permitidos son idénticos a aquellos que se permiten en **estado**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -342,13 +342,13 @@ BOOL GetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `iLink`  
+ *iLink*  
  El índice de un elemento de control de vínculo.  
   
- `strUrl`  
+ *strUrl*  
  A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) objeto que contiene la dirección URL representada por el elemento especificado  
   
- `szUrl`  
+ *szUrl*  
  Una cadena terminada en null que contiene la dirección URL representada por el elemento especificado  
   
  *cchUrl*  
@@ -388,7 +388,7 @@ BOOL SetItem(PLITEM pItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pItem`  
+ *pItem*  
  Un puntero a un [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) estructura que contiene la información para establecer.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -407,7 +407,7 @@ BOOL SetItemID(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `iLink`  
+ *iLink*  
  El índice de un elemento de control de vínculo.  
   
  *NID*  
@@ -430,13 +430,13 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `iLink`  
+ *iLink*  
  El índice de un elemento de control de vínculo.  
   
- `pnState`  
+ *pnState*  
  El valor del elemento de estado especificado que se va a establecer.  
   
- `stateMask`  
+ *stateMask*  
  Combinación de marcas que describen el elemento de estado que se va a establecer. Para obtener una lista de valores, vea la descripción de la **estado** miembro en el [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) estructura. Elementos permitidos son idénticos a aquellos que se permiten en **estado**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -455,10 +455,10 @@ BOOL SetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `iLink`  
+ *iLink*  
  El índice de un elemento de control de vínculo.  
   
- `szUrl`  
+ *szUrl*  
  Una cadena terminada en null que contiene la dirección URL representada por el elemento especificado  
   
 ### <a name="return-value"></a>Valor devuelto  

@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e21cecc00c9aab170c79247bced635783541be48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b85c64837f9bc7a0c8c1873f434855d77c01fb1b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376882"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041638"
 ---
 # <a name="colesafearray-class"></a>Clase COleSafeArray
 Una clase para trabajar con matrices de tipo y dimensión arbitrarios.  
@@ -154,7 +154,7 @@ void AccessData(void** ppvData);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ppvData`  
+ *ppvData*  
  Un puntero a un puntero a los datos de matriz.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -181,7 +181,7 @@ void AllocDescriptor(DWORD dwDims);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwDims`  
+ *dwDims*  
  Número de dimensiones de la matriz segura.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -237,23 +237,23 @@ COleSafeArray(const COleVariant& varSrc);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `saSrc`  
+ *saSrc*  
  Existente `COleSafeArray` objeto o **SAFEARRAY** que se copiará en el nuevo `COleSafeArray` objeto.  
   
- `vtSrc`  
+ *vtSrc*  
  El **VARTYPE** del nuevo `COleSafeArray` objeto.  
   
- `psaSrc`  
+ *psaSrc*  
  Un puntero a un **SAFEARRAY** que se copiará en el nuevo `COleSafeArray` objeto.  
   
  *varSrc*  
  Existente **VARIANT** o `COleVariant` objeto que se copiará en el nuevo `COleSafeArray` objeto.  
   
- `pSrc`  
+ *pSrc*  
  Un puntero a un **VARIANT** objeto que se copiará en el nuevo `COleSafeArray` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- Todos estos constructores crear nuevos `COleSafeArray` objetos. Si no hay ningún parámetro, vacío `COleSafeArray` se crea el objeto ( `VT_EMPTY`). Si el `COleSafeArray` se copia de otra matriz cuya [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) se conoce de forma implícita (un `COleSafeArray`, `COleVariant`, o **VARIANT**), el **VARTYPE** de la matriz de origen se conserva y no es necesario especificar. Si el `COleSafeArray` se copia de otra matriz cuya **VARTYPE** no se conoce ( **SAFEARRAY**), el **VARTYPE** debe especificarse en el `vtSrc` parámetro.  
+ Todos estos constructores crear nuevos `COleSafeArray` objetos. Si no hay ningún parámetro, vacío `COleSafeArray` se crea el objeto ( `VT_EMPTY`). Si el `COleSafeArray` se copia de otra matriz cuya [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) se conoce de forma implícita (un `COleSafeArray`, `COleVariant`, o **VARIANT**), el **VARTYPE** de la matriz de origen se conserva y no es necesario especificar. Si el `COleSafeArray` se copia de otra matriz cuya **VARTYPE** no se conoce ( **SAFEARRAY**), el **VARTYPE** debe especificarse en el *vtSrc* parámetro.  
   
  En caso de error, la función produce una [CMemoryException](../../mfc/reference/cmemoryexception-class.md) o [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -288,10 +288,10 @@ void Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `vtSrc`  
- El tipo base de la matriz (es decir, el **VARTYPE** de cada elemento de la matriz). El **VARTYPE** está restringida a un subconjunto de los tipos variantes. Ni el **VT_ARRAY** ni **VT_BYREF** se puede establecer la marca. `VT_EMPTY` y **VT_NULL** no son tipos válidos de base para la matriz. Todos los demás tipos son válidos.  
+ *vtSrc*  
+ El tipo base de la matriz (es decir, el **VARTYPE** de cada elemento de la matriz). El **VARTYPE** está restringida a un subconjunto de los tipos variantes. Ni el **VT_ARRAY** ni **VT_BYREF** se puede establecer la marca. **VT_EMPTY** y **VT_NULL** no son tipos válidos de base para la matriz. Todos los demás tipos son válidos.  
   
- `dwDims`  
+ *dwDims*  
  Número de dimensiones de la matriz. Esto se puede cambiar después de la matriz se crea con [Redim](#redim).  
   
  *rgElements*  
@@ -318,20 +318,20 @@ void CreateOneDim(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `vtSrc`  
+ *vtSrc*  
  El tipo base de la matriz (es decir, el **VARTYPE** de cada elemento de la matriz).  
   
- `dwElements`  
+ *dwElements*  
  Número de elementos de la matriz. Esto se puede cambiar después de la matriz se crea con [ResizeOneDim](#resizeonedim).  
   
- `pvSrcData`  
+ *pvSrcData*  
  Puntero a los datos que se va a copiar en la matriz.  
   
  *nLBound*  
  El límite inferior de la matriz.  
   
 ### <a name="remarks"></a>Comentarios  
- La función asigna e inicializa los datos de la matriz, copiar los datos especificados, si el puntero `pvSrcData` no **NULL**.  
+ La función asigna e inicializa los datos de la matriz, copiar los datos especificados, si el puntero *pvSrcData* no **NULL**.  
   
  En caso de error, la función produce una [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
@@ -394,7 +394,7 @@ void GetByteArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bytes`  
+ *Bytes*  
  Una referencia a un [CByteArray](../../mfc/reference/cbytearray-class.md) objeto.  
   
 ##  <a name="getdim"></a>  COleSafeArray::GetDim  
@@ -420,14 +420,14 @@ void GetElement(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rgIndices`  
+ *rgIndices*  
  Puntero a una matriz de índices para cada dimensión de la matriz.  
   
- `pvData`  
+ *pvData*  
  Puntero a la ubicación para colocar el elemento de la matriz.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función llama automáticamente a las funciones de windows `SafeArrayLock` y `SafeArrayUnlock` antes y después de recuperar el elemento. Si el elemento de datos es una cadena, un objeto o una variante, la función copia el elemento de la forma correcta. El parámetro `pvData` debe apuntar a una gran suficiente búfer para que contenga el elemento.  
+ Esta función llama automáticamente a las funciones de windows `SafeArrayLock` y `SafeArrayUnlock` antes y después de recuperar el elemento. Si el elemento de datos es una cadena, un objeto o una variante, la función copia el elemento de la forma correcta. El parámetro *pvData* debe apuntar a una gran suficiente búfer para que contenga el elemento.  
   
  En caso de error, la función produce una [CMemoryException](../../mfc/reference/cmemoryexception-class.md) o [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -454,7 +454,7 @@ void GetLBound(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwDim`  
+ *dwDim*  
  La dimensión de matriz para el que se va a obtener el límite inferior.  
   
  *pLBound*  
@@ -489,7 +489,7 @@ void GetUBound(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwDim`  
+ *dwDim*  
  La dimensión de matriz para el que se va a obtener el límite superior.  
   
  *pUBound*  
@@ -581,11 +581,11 @@ void PtrOfIndex (larga * rgIndices,
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  An array of index values that identify an element of the array. All indexes for the element must be specified.  
   
- `ppvData`  
- On return, pointer to the element identified by the values in `rgIndices`.  
+ *ppvData*  
+ On return, pointer to the element identified by the values in *rgIndices*.  
   
 ##  <a name="putelement"></a>  COleSafeArray::PutElement  
  Assigns a single element into the array.  
@@ -596,11 +596,11 @@ void PutElement (larga * rgIndices,
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  Pointer to an array of indexes for each dimension of the array.  
   
- `pvData`  
- Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and `VT_BSTR` variant types are pointers and do not require another level of indirection.  
+ *pvData*  
+ Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and **VT_BSTR** variant types are pointers and do not require another level of indirection.  
   
 ### Remarks  
  This function automatically calls the Windows functions [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) and [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) before and after assigning the element. If the data element is a string, object, or variant, the function copies it correctly, and if the existing element is a string, object, or variant, it is cleared correctly.  
@@ -634,7 +634,7 @@ void ResizeOneDim (DWORD dwElements);
 ```  
   
 ### Parameters  
- `dwElements`  
+ *dwElements*  
  Number of elements in the one-dimensional safe array.  
   
 ### Remarks  

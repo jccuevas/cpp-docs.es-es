@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368012"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040680"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Clase CMFCRibbonCustomizePropertyPage
 Implementa una página personalizada para la **personalizar** cuadro de diálogo de las aplicaciones basadas en cinta de opciones.  
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `lpszName`|Especifica el nombre de la categoría personalizada.|  
-|[in] `lstIDS`|Contiene los identificadores de comando de la cinta de opciones que se mostrará en la categoría personalizada.|  
+|[in] *lpszName*|Especifica el nombre de la categoría personalizada.|  
+|[in] *lstIDS*|Contiene los identificadores de comando de la cinta de opciones que se mostrará en la categoría personalizada.|  
   
 ### <a name="remarks"></a>Comentarios  
- Este método agrega una categoría denominada `lpszName` a la **comandos** cuadro combinado. Cuando el usuario selecciona la categoría, los comandos especifican en `lstIDS` aparecen en la lista de comandos.  
+ Este método agrega una categoría denominada *lpszName* a la **comandos** cuadro combinado. Cuando el usuario selecciona la categoría, los comandos especifican en *lstIDS* aparecen en la lista de comandos.  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Construye un objeto `CMFCRibbonCustomizePropertyPage`.  
@@ -112,7 +112,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Un puntero a un control de la cinta de opciones para que las opciones para personalizar.  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  

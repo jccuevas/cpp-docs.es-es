@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d1a139a5bc61d665a28f21ab10979802045b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e27dfd3570226aeab20d10f204d147f9f2b456d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373734"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037488"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>Estructura de CMFCTabToolTipInfo
 Esta estructura proporciona información acerca de la ficha MDI que el usuario sitúa el mouse sobre.  
@@ -43,7 +43,7 @@ struct CMFCTabToolTipInfo
 |[CMFCTabToolTipInfo::m_strText](#m_strtext)|El texto de información sobre herramientas.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un puntero a un `CMFCTabToolTipInfo` estructura se pasa como un parámetro de la `AFX_WM_ON_GET_TAB_TOOLTIP` mensaje. Este mensaje se genera cuando se habilitan las fichas MDI y el usuario mantiene el mouse sobre un control de ficha.  
+ Un puntero a un `CMFCTabToolTipInfo` estructura se pasa como un parámetro del mensaje AFX_WM_ON_GET_TAB_TOOLTIP. Este mensaje se genera cuando se habilitan las fichas MDI y el usuario mantiene el mouse sobre un control de ficha.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo se muestra cómo `CMFCTabToolTipInfo` se utiliza en el [ejemplo de MDITabsDemo: aplicación MDI con fichas de MFC](../../visual-cpp-samples.md).  

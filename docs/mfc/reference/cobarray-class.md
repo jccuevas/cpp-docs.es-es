@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377919"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040212"
 ---
 # <a name="cobarray-class"></a>CObArray (clase)
 Admite matrices de punteros `CObject` .  
@@ -113,7 +113,7 @@ class CObArray : public CObject
   
  Al igual que con una matriz de C, la hora de acceso de un `CObArray` elemento indizado es constante y es independiente del tamaño de matriz.  
   
- `CObArray` incorpora la macro `IMPLEMENT_SERIAL` para admitir la serialización y el volcado de sus elementos. Si una matriz de `CObject` punteros se almacena en un archivo, con el operador de inserción sobrecargado o con el `Serialize` miembro funcione, cada uno de ellos `CObject` a su vez, se, serializa el elemento junto con su índice de matriz.  
+ `CObArray` incorpora la macro IMPLEMENT_SERIAL para admitir la serialización y el volcado de sus elementos. Si una matriz de `CObject` punteros se almacena en un archivo, con el operador de inserción sobrecargado o con el `Serialize` miembro funcione, cada uno de ellos `CObject` a su vez, se, serializa el elemento junto con su índice de matriz.  
   
  Si se necesita un volcado de persona `CObject` elementos de una matriz, se debe establecer la profundidad de la `CDumpContext` objeto a 1 o mayor.  
   
@@ -125,7 +125,7 @@ class CObArray : public CObject
  Derivación de la clase de matriz es similar a la derivación de la lista. Para obtener detalles sobre la derivación de una clase especial list, vea el artículo [colecciones](../../mfc/collections.md).  
   
 > [!NOTE]
->  Debe utilizar el `IMPLEMENT_SERIAL` macro en la implementación de la clase derivada si va a serializar la matriz.  
+>  Debe utilizar la macro IMPLEMENT_SERIAL en la implementación de la clase derivada si va a serializar la matriz.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -143,14 +143,14 @@ INT_PTR Add(CObject* newElement);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `newElement`  
+ *"newelement"*  
  El `CObject` puntero va a agregar a esta matriz.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El índice del elemento agregado.  
   
 ### <a name="remarks"></a>Comentarios  
- Si [SetSize](#setsize) se ha utilizado con un `nGrowBy` puede asignarse valor mayor que 1, memoria adicional. Sin embargo, el límite superior aumentarán en 1 solo.  
+ Si [SetSize](#setsize) se ha utilizado con un *nGrowBy* puede asignarse valor mayor que 1, memoria adicional. Sin embargo, el límite superior aumentarán en 1 solo.  
   
  En la tabla siguiente se muestra otro miembro funciones que son similares a `CObArray::Add`.  
   
@@ -193,7 +193,7 @@ INT_PTR Append(const CObArray& src);
 ### <a name="remarks"></a>Comentarios  
  Las matrices deben ser del mismo tipo.  
   
- Si es necesario, **anexado** puede asignar memoria adicional para dar cabida a los elementos que se anexa a la matriz.  
+ Si es necesario, `Append` puede asignar memoria adicional para dar cabida a los elementos que se anexa a la matriz.  
   
  En la tabla siguiente se muestra otro miembro funciones que son similares a `CObArray::Append`.  
   
@@ -223,7 +223,7 @@ void Copy(const CObArray& src);
  Origen de los elementos que se copian a la matriz.  
   
 ### <a name="remarks"></a>Comentarios  
- **Copia** no libera memoria; sin embargo, si es necesario, **copia** puede asignar memoria adicional para dar cabida a los elementos que se copian en la matriz.  
+ `Copy` no libera memoria; Sin embargo, si es necesario, `Copy` puede asignar memoria adicional para dar cabida a los elementos que se copian en la matriz.  
   
  En la tabla siguiente se muestra otro miembro funciones que son similares a `CObArray::Copy`.  
   
@@ -273,7 +273,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por `GetUpperBound`.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -328,7 +328,7 @@ CObject* GetAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por `GetUpperBound`.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -490,25 +490,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que puede ser mayor que el valor devuelto por `GetUpperBound`.  
   
- `newElement`  
- El `CObject` puntero que se colocarán en esta matriz. A `newElement` del valor **NULL** está permitido.  
+ *"newelement"*  
+ El `CObject` puntero que se colocarán en esta matriz. A *"newelement"* del valor **NULL** está permitido.  
   
- `nCount`  
+ *nCount*  
  El número de veces que este elemento debe estar insertado (el valor predeterminado es 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Un índice de entero que puede ser mayor que el valor devuelto por `GetUpperBound`.  
   
- `pNewArray`  
+ *pNewArray*  
  Otra matriz que contiene elementos que se va a agregar a esta matriz.  
   
 ### <a name="remarks"></a>Comentarios  
  La primera versión de `InsertAt` inserta un elemento (o varias copias de un elemento) en el índice especificado en una matriz. En el proceso, desplaza (al incrementar el índice) el elemento existente en este índice y lo pasa todos los elementos por encima de él.  
   
- La segunda versión inserta todos los elementos de otro `CObArray` colección, comenzando por la `nStartIndex` posición.  
+ La segunda versión inserta todos los elementos de otro `CObArray` colección, comenzando por el *nStartIndex* posición.  
   
  El `SetAt` función, en cambio, reemplaza un elemento de la matriz especificada y desplazar los elementos.  
   
@@ -615,10 +615,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por `GetUpperBound`.  
   
- `nCount`  
+ *nCount*  
  Número de elementos que se va a quitar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -660,10 +660,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por `GetUpperBound`.  
   
- `newElement`  
+ *"newelement"*  
  Puntero de objeto que se van a insertar en esta matriz. A **NULL** se permite el valor.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -705,10 +705,10 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0.  
   
- `newElement`  
+ *"newelement"*  
  Puntero de objeto que se va a agregar a esta matriz. A **NULL** se permite el valor.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -752,16 +752,16 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nNewSize`  
+ *nNewSize*  
  El nuevo tamaño de la matriz (número de elementos). Debe ser mayor o igual que 0.  
   
- `nGrowBy`  
+ *nGrowBy*  
  El número mínimo de ranuras de elemento para asignar si es necesario un aumento de tamaño.  
   
 ### <a name="remarks"></a>Comentarios  
  Si el nuevo tamaño es menor que el tamaño anterior, la matriz se trunca y se libera toda la memoria sin usar. Para mejorar la eficacia, llame a `SetSize` para establecer el tamaño de la matriz antes de usarlo. Esto evita la necesidad de reasignar y copiar cada vez que se agrega un elemento de la matriz.  
   
- El `nGrowBy` parámetro afecta a la asignación de memoria interna mientras está aumentando la matriz. Su uso nunca afecta al tamaño de matriz devuelto por `GetSize` y `GetUpperBound`.  
+ El *nGrowBy* parámetro afecta a la asignación de memoria interna mientras está aumentando la matriz. Su uso nunca afecta al tamaño de matriz devuelto por `GetSize` y `GetUpperBound`.  
   
  Si ha aumentado el tamaño de la matriz, todos los recién asignada **CObject \***  punteros se establecen en NULL.  
   

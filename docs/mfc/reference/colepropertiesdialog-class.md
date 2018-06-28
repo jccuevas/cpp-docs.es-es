@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371691"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040186"
 ---
 # <a name="colepropertiesdialog-class"></a>Clase COlePropertiesDialog
 Encapsula el cuadro de diálogo Propiedades de objeto de OLE común de Windows.  
@@ -112,7 +112,7 @@ COlePropertiesDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pItem`  
+ *pItem*  
  Puntero al elemento de documento cuyas propiedades se tiene acceso.  
   
  *nScaleMin*  
@@ -121,7 +121,7 @@ COlePropertiesDialog(
  *nScaleMax*  
  Ajuste de escala en porcentaje para la imagen de elemento de documento como máximo.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Puntero al elemento primario o el propietario del cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -228,10 +228,10 @@ virtual BOOL OnApplyScale(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pItem`  
+ *pItem*  
  Puntero al elemento de documento cuyas propiedades se tiene acceso.  
   
- `nCurrentScale`  
+ *nCurrentScale*  
  Valor numérico de la escala del cuadro de diálogo.  
   
  *bRelativeToOrig*  
@@ -244,7 +244,7 @@ virtual BOOL OnApplyScale(
  La implementación predeterminada no hace nada. Se debe reemplazar esta función para habilitar los controles de escala.  
   
 > [!NOTE]
->  Antes de mostrar el cuadro de diálogo de propiedades del objeto OLE común, el marco de trabajo llama a esta función con un **NULL** para `pItem` y a - 1 para `nCurrentScale`. Esto se hace para determinar si los controles de escala deben estar habilitados.  
+>  Antes de mostrar el cuadro de diálogo de propiedades del objeto OLE común, el marco de trabajo llama a esta función con un **NULL** para *pItem* y a - 1 para *nCurrentScale*. Esto se hace para determinar si los controles de escala deben estar habilitados.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo MFC CIRC](../../visual-cpp-samples.md)   

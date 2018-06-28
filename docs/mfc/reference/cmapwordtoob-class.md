@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63c123e135458ff627bc6004e3299c667354ed41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d358e256e28ea61c9b9c287429dfdfcb7b1435c6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367148"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041836"
 ---
 # <a name="cmapwordtoob-class"></a>Clase CMapWordToOb
 Admite mapas de punteros `CObject` con clave de palabras de 16 bits.  
@@ -61,7 +61,7 @@ class CMapWordToOb : public CObject
 ```  
   
 ## <a name="members"></a>Miembros  
- Las funciones miembro de `CMapWordToOb` son similares a las funciones miembro de clase [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CMapStringToOb` para obtener información específica de la función miembro. Siempre que vea un `CString` o un **const** puntero a `char` como un parámetro de función o un valor devuelto, sustituya **WORD**.  
+ Las funciones miembro de `CMapWordToOb` son similares a las funciones miembro de clase [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CMapStringToOb` para obtener información específica de la función miembro. Siempre que vea un `CString` o un **const** puntero a **char** como un parámetro de función o un valor devuelto, sustituya **WORD**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

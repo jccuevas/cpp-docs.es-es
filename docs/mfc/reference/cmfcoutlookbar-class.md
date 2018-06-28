@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5640f634276f87d0a41633354a7dde0ed65a2940
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 935728856a00a27afa1f386f493832ddb955538b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372500"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041005"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar (clase)
 Un panel con pestañas con el aspecto visual del **Panel de navegación** en Microsoft Outlook 2000 u Outlook 2003. El `CMFCOutlookBar` objeto contiene un [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md) objeto y una serie de pestañas. Las pestañas pueden ser [CMFCOutlookBarPane clase](../../mfc/reference/cmfcoutlookbarpane-class.md) objetos o `CWnd`-objetos derivados. Para el usuario, la barra de Outlook aparece como una serie de botones y un área de presentación. Cuando el usuario hace clic en un botón, se muestra el panel de control o botón correspondiente .  
@@ -111,7 +111,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     CMFCOutlookBarPane m_wndOutlookPane;  
  ... };  
  ```  
-2.  Cuando se procesa la `WM_CREATE` mensaje en el marco principal, llamada la [CMFCOutlookBar::Create](#create) método para crear el control de pestaña de la barra de Outlook.  
+2.  Al procesar el mensaje WM_CREATE en el marco principal, llame a la [CMFCOutlookBar::Create](#create) método para crear el control de pestaña de la barra de Outlook.  
   
  ```  
     m_wndOutlookBar.Create (_T("Shortcuts"),
@@ -147,7 +147,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     ID_FILE_OPEN);
 
  ```  
-5.  Llame a [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) para agregar cada nueva pestaña. Establecer el `bDetachable` parámetro `FALSE` para hacer que una página no se puede desasociar. O bien, use [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) para agregar capacidad de desasociar páginas.  
+5.  Llame a [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) para agregar cada nueva pestaña. Establecer el *bDetachable* parámetro `FALSE` para hacer que una página no se puede desasociar. O bien, use [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) para agregar capacidad de desasociar páginas.  
   
  ```  
     pOutlookBar->AddTab (&m_wndOutlookPane, "General", (UINT) -1,
@@ -207,7 +207,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero a otro panel que se está acoplada a este panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -216,7 +216,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ### <a name="remarks"></a>Comentarios  
  Si la barra de Outlook está en modo de Outlook 2003, acoplamiento no se admite, por lo que el valor devuelto es `FALSE`.  
   
- Si el `pBar` parámetro es `NULL`, este método devuelve `FALSE`.  
+ Si el *pBar* parámetro es `NULL`, este método devuelve `FALSE`.  
   
  En caso contrario, este método se comporta como el método base [cbasepane:: Canacceptpane](../../mfc/reference/cbasepane-class.md#canacceptpane), excepto que, incluso si no está habilitado el acoplamiento, una barra de Outlook puede habilitar otra barra de Outlook para acoplarse sobre él.  
   
@@ -250,25 +250,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszCaption`  
+ [in] *lpszCaption*  
  Especifica el título de ventana.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Especifica un puntero a una ventana primaria. No debe ser NULL.  
   
- [in] `rect`  
+ [in] *rect*  
  Especifica el tamaño y la posición en píxeles la barra de outlook.  
   
- [in] `nID`  
+ [in] *nID*  
  Especifica el identificador del control. Debe ser distinto de otro identificadores usados en la aplicación de control.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Especifica el estilo de barra de control. Para los valores posibles, vea [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Especifica los estilos definidos por la biblioteca especiales.  
   
- [in] `pContext`  
+ [in] *pContext*  
  Crear el contexto.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -277,7 +277,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Comentarios  
  Crear un `CMFCOutlookBar` objeto en dos pasos. Llame primero al constructor y, a continuación, llame a `Create`, que crea el control de barra de outlook y lo adjunta a la `CMFCOutlookBar` objeto.  
   
- Vea [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) para obtener la lista de los estilos definidos por la biblioteca disponibles que especificarse mediante `dwControlBarStyle`.  
+ Vea [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) para obtener la lista de los estilos definidos por la biblioteca disponibles que especificarse mediante *dwControlBarStyle*.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo utilizar el `Create` método de la `CMFCOutlookBar` clase. Este fragmento de código forma parte de la [ejemplo Outlook varias vistas](../../visual-cpp-samples.md).  
@@ -297,16 +297,16 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszPageName`  
+ [in] *lpszPageName*  
  La etiqueta de página.  
   
- [in] `bActivatePage`  
+ [in] *bActivatePage*  
  Si `TRUE`, la página se convierte en activa tras su creación.  
   
- [in] `dwEnabledDocking`  
+ [in] *dwEnabledDocking*  
  Una combinación de marcas CBRS_ALIGN_ que especifica los lados de acoplamiento habilitados cuando se separa la página.  
   
- [in] `bEnableTextLabels`  
+ [in] *bEnableTextLabels*  
  Si `TRUE`, se habilitan las etiquetas de texto para los botones que se encuentran en la página.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -347,16 +347,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero al panel a float.  
   
- [in] `nTabID`  
+ [in] *nTabID*  
  Índice de base cero de la pestaña para float.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Especifica el método que utilice para hacer flotar el panel.  Para obtener más información, consulte [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
- [in] `bHide`  
+ [in] *bHide*  
  `TRUE` Para ocultar el panel antes flotante; en caso contrario, `FALSE`. A diferencia de la versión de la clase base de este método, este parámetro no tiene un valor predeterminado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -388,10 +388,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  Cuando la función devuelve, contiene el tamaño y la posición (en las coordenadas de cliente) del área de ficha superior.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  Cuando la función devuelve, contiene el tamaño y la posición (en las coordenadas de cliente) del área de pestañas de la parte inferior.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -422,7 +422,7 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nPage`  
+ [in] *nPage*  
  Índice de base cero de la página de ficha que se ha realizado active.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -436,7 +436,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nPage`  
+ [in] *nPage*  
  Índice de base cero de la ficha que se va a establecerse activo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -452,7 +452,7 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bDown`  
+ [in] *bDown*  
  `TRUE` Si la barra de Outlook se desplace hacia abajo, o `FALSE` si se desplaza hacia arriba.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -467,10 +467,10 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiPage`  
+ [in] *uiPage*  
  Índice de base cero de la página en la ventana de Outlook primaria.  
   
- [in] `pTargetWnd`  
+ [in] *pTargetWnd*  
  Pointerto la ventana de Outlook primaria.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -493,10 +493,10 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pFont`  
+ [in] *pFont*  
  Especifica la nueva fuente.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Si `TRUE`, se volverá a dibujar la barra de Outlook.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -510,7 +510,7 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bMode2003`  
+ [in] *bMode2003*  
  Si es TRUE, se habilita el modo de Office 2003.  
   
 ### <a name="remarks"></a>Comentarios  

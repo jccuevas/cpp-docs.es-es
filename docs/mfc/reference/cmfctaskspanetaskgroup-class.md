@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370850"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037501"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Clase CMFCTasksPaneTaskGroup
 El `CMFCTasksPaneTaskGroup` clase es una clase auxiliar utilizada por la [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) control. Los objetos de tipo `CMFCTasksPaneTaskGroup` representan un *grupo de tareas*. El grupo de tareas es una lista de elementos que el marco muestra en un cuadro independiente con un botón de contraer. El cuadro puede tener una leyenda opcional (nombre de grupo). Si un grupo está contraído, la lista de tareas no está visible.  
@@ -116,22 +116,22 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszName`  
+ *lpszName*  
  Especifica el nombre del grupo en el título del grupo.  
   
- `bIsBottom`  
+ *bIsBottom*  
  Especifica si el grupo está alineado en la parte inferior del control del panel de tareas.  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  Especifica si el grupo se designa como *especial* y por lo tanto, si el título del grupo se rellena con un color diferente.  
   
- `bIsCollapsed`  
+ *bIsCollapsed*  
  Especifica si el grupo está contraído.  
   
- `pPage`  
+ *pPage*  
  Especifica la página de propiedades al que pertenece este grupo de tareas.  
   
- `hIcon`  
+ *hIcon*  
  Especifica el icono que se muestra en el título del grupo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -216,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParent`  
+ [in] *pParent*  
  Representa la ventana principal del grupo de tareas actual.  
   
- [out] `data`  
+ [out] *datos*  
  Un objeto del tipo `CAccessibilityData` que se rellena con los datos de accesibilidad del grupo de tareas actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el `data` parámetro se rellena con los datos de accesibilidad del grupo de tareas actual correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si el *datos* parámetro se rellena con los datos de accesibilidad del grupo de tareas actual correctamente; en caso contrario, `FALSE`.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367765"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041278"
 ---
 # <a name="cinterpolatorbase-class"></a>Clase CInterpolatorBase
 Implementa una devolución de llamada, a la que llama la API de animación cuando tiene que calcular un nuevo valor de una variable de animación.  
@@ -104,10 +104,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pInterpolator`  
+ *pInterpolator*  
  Un puntero a interpolador personalizado.  
   
- `ppHandler`  
+ *ppHandler*  
  Salida. Contiene un puntero a la instancia de CInterpolatorBase cuando la función devuelve.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -123,13 +123,13 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Salida. Aspectos del interpolador que dependen del valor inicial que se pasan a SetInitialValueAndVelocity.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  Salida. Aspectos del interpolador que dependen de la velocidad inicial pasan a SetInitialValueAndVelocity.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Salida. Aspectos del interpolador que dependen de la duración se pasan a SetDuration.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -143,7 +143,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `duration`  
+ *Duración*  
  Salida. La duración de la transición, en segundos.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -157,7 +157,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `value`  
+ *valor*  
  Salida. El valor final de una variable al final de la transición.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -173,10 +173,10 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `offset`  
+ *offset*  
  El desplazamiento desde el principio de la transición. El desplazamiento es siempre mayor o igual que cero y menor que la duración de la transición. No se llama a este método si la duración de la transición es cero.  
   
- `value`  
+ *valor*  
  Salida. El valor de interpolación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -192,10 +192,10 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `offset`  
+ *offset*  
  El desplazamiento desde el principio de la transición. El desplazamiento es siempre mayor o igual que cero y menor o igual que la duración de la transición. No se llama a este método si la duración de la transición es cero.  
   
- `velocity`  
+ *progreso*  
  Salida. El progreso de la variable en el desplazamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -209,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pInterpolator`  
+ *pInterpolator*  
  Un puntero a interpolador personalizado.  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -220,7 +220,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `duration`  
+ *Duración*  
  La duración de la transición.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -236,10 +236,10 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `initialValue`  
+ *initialValue*  
  El valor de la variable al principio de la transición.  
   
- `initialVelocity`  
+ *initialVelocity*  
  El progreso de la variable al principio de la transición.  
   
 ### <a name="return-value"></a>Valor devuelto  

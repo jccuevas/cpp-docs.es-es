@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 495f6360601fc41493f68bd4fdd7ac769b9a634c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369328"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037979"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Clase CMFCEditBrowseCtrl
 La `CMFCEditBrowseCtrl` clase es compatible con el control de exploración de edición, que es un cuadro de texto editable que contiene opcionalmente un botón Examinar. Cuando el usuario hace clic en el botón Examinar, el control realiza una acción personalizada o muestra un cuadro de diálogo estándar que contiene un explorador de archivos o un explorador de carpetas.  
@@ -108,7 +108,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
 6.  Para proporcionar una imagen personalizada para el botón Examinar, llame a la [SetBrowseButtonImage](#setbrowsebuttonimage) método o invalidar la [OnDrawBrowseButton](#ondrawbrowsebutton) método.  
   
-7.  Para quitar el botón Examinar desde el control de exploración de edición, llame a la [EnableBrowseButton](#enablebrowsebutton) método con el `bEnable` parámetro establecido en `FALSE`.  
+7.  Para quitar el botón Examinar desde el control de exploración de edición, llame a la [EnableBrowseButton](#enablebrowsebutton) método con el *bHabilitar el* parámetro establecido en `FALSE`.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -140,14 +140,14 @@ void EnableBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bEnable`  
+ *bHabilitar el*  
  `TRUE` para mostrar el botón Examinar; `FALSE` no se muestre el botón Examinar. El valor predeterminado es `TRUE`.  
   
- `szLabel`  
+ *szLabel*  
  La etiqueta que se muestra en el botón Examinar. El valor predeterminado es " **...** ".  
   
 ### <a name="remarks"></a>Comentarios  
- Si el `bEnable` parámetro es `TRUE`, implementar una acción personalizada para realizar cuando se hace clic en el botón Examinar. Para implementar una acción personalizada, derive una clase de la `CMFCEditBrowseCtrl` clase y, a continuación, invalidar su [OnBrowse](#onbrowse) método.  
+ Si el *bHabilitar el* parámetro es `TRUE`, implementar una acción personalizada para realizar cuando se hace clic en el botón Examinar. Para implementar una acción personalizada, derive una clase de la `CMFCEditBrowseCtrl` clase y, a continuación, invalidar su [OnBrowse](#onbrowse) método.  
   
  Si el `bEnable` parámetro es `TRUE`, es el modo de exploración del control `BrowseMode_Default`; en caso contrario, es el modo de exploración `BrowseMode_None`. Para obtener más información acerca de los modos de exploración, vea el [GetMode](#getmode) método.  
   
@@ -162,13 +162,13 @@ void EnableFileBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszDefExt`  
+ *lpszDefExt*  
  Especifica la extensión de nombre de archivo predeterminado que se usa en el cuadro de diálogo de selección de archivos. El valor predeterminado es `NULL`.  
   
- `lpszFilter`  
+ *lpszFilter*  
  Especifica la cadena de filtro predeterminado que se usa en el cuadro de diálogo de selección de archivos. El valor predeterminado es `NULL`.  
   
- `dwFlags`  
+ *dwFlags*  
  Marcas de cuadro de diálogo. El valor predeterminado es una combinación bit a bit (OR) de OFN_HIDEREADONLY y OFN_OVERWRITEPROMPT.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -250,16 +250,16 @@ virtual void OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Puntero a un contexto de dispositivo.  
   
- `Rect`  
+ *Rect*  
  El rectángulo delimitador del botón Examinar.  
   
- `bIsButtonPressed`  
+ *bIsButtonPressed*  
  `TRUE` Si se presiona el botón; en caso contrario, `FALSE`.  
   
- `bIsButtonHot`  
+ *bIsButtonHot*  
  `TRUE` Si el botón está resaltado; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -282,16 +282,16 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hIcon`  
+ *hIcon*  
  El identificador de un icono.  
   
- `hBitmap`  
+ *hBitmap*  
  El identificador de un mapa de bits.  
   
- `uiBmpResId`  
+ *uiBmpResId*  
  El identificador de recurso de un mapa de bits.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  `TRUE` Para eliminar el icono especificado o el mapa de bits cuando este método finaliza; en caso contrario, `FALSE`. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -305,7 +305,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `strFileName`  
+ *strFileName*  
  Especifica el nombre de archivo no válido.  
   
 ### <a name="return-value"></a>Valor devuelto  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66bdd0cdf9e9c13ceac6eb01716ae8c859462524
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54999252af2ec55c67e1afc69c2788f96cfc640e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372381"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037309"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Clase CMFCColorPopupMenu
 Representa un menú emergente que los usuarios usan para seleccionar los colores en un documento o aplicación.  
@@ -133,50 +133,50 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `colors`  
+ [in] *colores*  
  Una matriz de colores que el marco de trabajo se muestra en el menú emergente.  
   
- [in] `color`  
+ [in] *color*  
  El color seleccionado de forma predeterminada.  
   
- [in] `lpszAutoColor`  
+ [in] *lpszAutoColor*  
  La etiqueta de texto de la *automática* botón de color (valor predeterminado), o `NULL`.  
   
  La etiqueta para el botón automático estándar es **automática**.  
   
- [in] `lpszOtherColor`  
+ [in] *lpszOtherColor*  
  La etiqueta de texto de la *otros* botón, que se presenta más opciones de color, o `NULL`.  
   
  La etiqueta estándar para el otro botón es **más colores...** .  
   
- [in] `lpszDocColors`  
+ [in] *lpszDocColors*  
  La etiqueta de texto del botón de colores del documento. La paleta de colores del documento enumera todos los colores que utiliza actualmente el documento.  
   
- [in] `lstDocColors`  
+ [in] *lstDocColors*  
  Una lista de colores que usa actualmente el documento.  
   
- [in] `nColumns`  
+ [in] *nColumns*  
  El número de columnas que tiene la matriz de colores.  
   
- [in] `nHorzDockRows`  
+ [in] *nHorzDockRows*  
  El número de filas que tiene la barra de color cuando está acoplado horizontalmente.  
   
- [in] `nVertDockColumns`  
+ [in] *nVertDockColumns*  
  El número de columnas que tiene la barra de color cuando se acopla verticalmente.  
   
- [in] `colorAutomatic`  
+ [in] *automáticoColor*  
  El color predeterminado que se aplica el marco de trabajo al hacer clic en el botón automático.  
   
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  Identificador de comando de control de barra de colores.  
   
- [in] `bStdColorDlg`  
+ [in] *bStdColorDlg*  
  Un valor booleano que indica si se debe mostrar el cuadro de diálogo de color estándar del sistema o el [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) cuadro de diálogo.  
   
- [in] `pParentBtn`  
+ [in] *pParentBtn*  
  Un puntero a un botón primario.  
   
- [in] `nID`  
+ [in] *nID*  
  Identificador del comando.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `pWndMain`|Puntero a la ventana primaria de la barra desplazable.|  
-|[in] `uiID`|El identificador de comando de la barra desplazable.|  
-|[in] `lpszName`|El texto de la ventana de la barra desplazable.|  
+|[in] *pWndMain*|Puntero a la ventana primaria de la barra desplazable.|  
+|[in] *uiID*|El identificador de comando de la barra desplazable.|  
+|[in] *lpszName*|El texto de la ventana de la barra desplazable.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al nuevo objeto de barra de control desplazable.  
@@ -233,7 +233,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndList`  
+ [in] *pWndList*  
  Puntero a un objeto de control de cuadrícula de propiedad.  
   
 ## <a name="see-also"></a>Vea también  

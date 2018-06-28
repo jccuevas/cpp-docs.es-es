@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371337"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040706"
 ---
 # <a name="cmfctaskspanetask-class"></a>Clase CMFCTasksPaneTask
 El `CMFCTasksPaneTask` clase es una clase auxiliar que representa las tareas para el control de panel de tareas ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). El objeto de tarea representa un elemento en el grupo de tareas ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Cada tarea puede tener un comando que el marco ejecuta cuando un usuario hace clic en la tarea y en un icono que aparece a la izquierda del nombre de tarea.  
@@ -118,28 +118,28 @@ CMFCTasksPaneTask(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pGroup`  
+ *pGroup*  
  Especifica la [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) a la que pertenece la tarea.  
   
- `lpszName`  
+ *lpszName*  
  Especifica el nombre de la tarea.  
   
- `nIcon`  
+ *nIcon*  
  Especifica el índice de imagen de la tarea en la lista de imágenes.  
   
- `uiCommandID`  
+ *uiCommandID*  
  Especifica el identificador de comando del comando que se ejecuta cuando se hace clic en la tarea.  
   
- `dwUserData`  
+ *dwUserData*  
  Datos definidos por el usuario.  
   
- `hwndTask`  
+ *hwndTask*  
  Especifica el identificador de la ventana de tareas.  
   
- `bAutoDestroyWindow`  
+ *bAutoDestroyWindow*  
  Si `TRUE`, se destruirá automáticamente la ventana de tareas.  
   
- `nWindowHeight`  
+ *nWindowHeight*  
  Especifica el alto de la ventana de tareas.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParent`  
+ [in] *pParent*  
  Representa la ventana primaria de la tarea actual.  
   
- [out] `data`  
+ [out] *datos*  
  Un objeto del tipo `CAccessibilityData` que se rellena con los datos de accesibilidad de la tarea actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el `data` parámetro se rellena con los datos de accesibilidad de la tarea actual correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si el *datos* parámetro se rellena con los datos de accesibilidad de la tarea actual correctamente; en caso contrario, `FALSE`.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

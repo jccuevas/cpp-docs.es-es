@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9b1728958d8560362f9b330c3ba570e933d824d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367999"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040813"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty (clase)
 La clase `CMFCPropertyGridColorProperty` admite un elemento de control de la lista de propiedades que abre un cuadro de diálogo de selección de color.  
@@ -103,19 +103,19 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `strName`  
+ [in] *strName*  
  Nombre de la propiedad.  
   
- [in] `color`  
+ [in] *color*  
  El valor de la propiedad de color.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  Puntero a una paleta de colores. El valor predeterminado es `NULL`.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  La descripción de la propiedad. El valor predeterminado es `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Datos específicos de la aplicación, como un entero o un puntero a otros datos que está asociados a la propiedad. El valor predeterminado es 0.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
@@ -129,13 +129,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  El texto de la etiqueta del botón automática.  
   
- [in] `colorAutomatic`  
+ [in] *automáticoColor*  
  El valor de color RGB del color automático (predeterminado).  
   
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  `TRUE` Para habilitar el botón automático; en caso contrario, `FALSE`. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -151,13 +151,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  El texto de la etiqueta del otro botón.  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  `TRUE` para mostrar la `CMFCColorDialog` cuadro de diálogo; `FALSE` para mostrar el cuadro de diálogo de selección de color estándar. El valor predeterminado es `TRUE`.  
   
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  `TRUE` para mostrar el botón de otro; en caso contrario, `FALSE`.  El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -182,7 +182,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `color`  
+ [in] *color*  
  Un valor de color RGB.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -195,7 +195,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nColumnsNumber`  
+ [in] *nColumnsNumber*  
  El número preferido de las columnas en la cuadrícula de propiedades de color.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -209,7 +209,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `varValue`  
+ [in] *varValue*  
  Un valor.  
   
 ### <a name="remarks"></a>Comentarios  

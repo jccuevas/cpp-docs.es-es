@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375621"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040121"
 ---
 # <a name="coleresizebar-class"></a>Clase COleResizeBar
 Un tipo de barra de control que admite el cambio de tamaño de elementos de OLE en contexto.  
@@ -92,13 +92,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentWnd`  
+ *pParentWnd*  
  Puntero a la ventana primaria de la barra de cambio de tamaño.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica la [estilo de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributos.  
   
- `nID`  
+ *nID*  
  Identificador de ventana secundaria de la barra cambio de tamaño.  
   
 ### <a name="return-value"></a>Valor devuelto  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372211"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037862"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (clase)
 Una vista que muestra registros de una base de datos en controles.  
@@ -92,10 +92,10 @@ COleDBRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contiene una cadena terminada en null que es el nombre de un recurso de plantilla de cuadro de diálogo.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contiene el número de identificación de un recurso de plantilla de cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -116,7 +116,7 @@ virtual CRowset<>* OnGetRowset() = 0;
  Un valor `HRESULT` estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- Se debe reemplazar esta función miembro para construir u obtenga un objeto de conjunto de filas y devolver un identificador a él. Si se declara la clase de vista de registros con ClassWizard, el asistente escribe una invalidación de forma predeterminada para usted. Implementación de predeterminada de ClassWizard devuelve el identificador de conjunto de filas almacenado en la vista de registros, si existe uno. Si no es así, construye un objeto de conjunto de filas del tipo especificado con ClassWizard y llama a su **abrir** miembro de función para abrir la tabla o ejecutar la consulta y, a continuación, devuelve un identificador al objeto.  
+ Se debe reemplazar esta función miembro para construir u obtenga un objeto de conjunto de filas y devolver un identificador a él. Si se declara la clase de vista de registros con ClassWizard, el asistente escribe una invalidación de forma predeterminada para usted. Implementación de predeterminada de ClassWizard devuelve el identificador de conjunto de filas almacenado en la vista de registros, si existe uno. Si no es así, construye un objeto de conjunto de filas del tipo especificado con ClassWizard y llama a su `Open` miembro de función para abrir la tabla o ejecutar la consulta y, a continuación, devuelve un identificador al objeto.  
   
 > [!NOTE]
 >  Anterior a la versión MFC 7.0, `OnGetRowset` devuelve un puntero a `CRowset`. Si tiene código que llama a `OnGetRowset`, debe cambiar el tipo de valor devuelto a la clase con plantillas **<> CRowset**.  
@@ -134,7 +134,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  Uno de los siguientes valores de Id. de comando estándar:  
   
 - `ID_RECORD_FIRST` Migre al primer registro del conjunto de registros.  
@@ -149,7 +149,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Es distinto de cero si el movimiento se realizó correctamente; en caso contrario es 0 si se denegó la solicitud de movimiento.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada llama adecuado **mover** función miembro de la `CRowset` objeto asociado a la vista de registros.  
+ La implementación predeterminada llama adecuado `Move` función miembro de la `CRowset` objeto asociado a la vista de registros.  
   
  De forma predeterminada, `OnMove` actualiza el registro actual en el origen de datos si el usuario ha cambiado en la vista de registros.  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367079"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038242"
 ---
 # <a name="class-factories-and-licensing"></a>Generadores de clases y licencias
 Para crear una instancia del control OLE, una aplicación de contenedor llama a una función miembro de fábrica de clase del control. Dado que el control es un objeto OLE real, el generador de clases es responsable de crear instancias del control. Cada clase de control OLE debe tener un generador de clases.  
@@ -140,23 +140,23 @@ BOOL AFXAPI AfxVerifyLicFile(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hInstance`  
+ *hInstance*  
  El identificador de instancia de la DLL asociada con el control con licencia.  
   
- `pszLicFileName`  
+ *pszLicFileName*  
  Apunta a una cadena de caracteres terminada en null que contiene el nombre de archivo de licencia.  
   
- `pszLicFileContents`  
+ *pszLicFileContents*  
  Señala a una secuencia de bytes que debe coincidir con la secuencia que se encuentra al principio del archivo de licencia.  
   
- `cch`  
- Número de caracteres de `pszLicFileContents`.  
+ *cch*  
+ Número de caracteres de *pszLicFileContents*.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el archivo de licencia existe y comienza con la secuencia de caracteres en `pszLicFileContents`; de lo contrario, 0.  
+ Es distinto de cero si el archivo de licencia existe y comienza con la secuencia de caracteres en *pszLicFileContents*; de lo contrario, 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Si `cch` es -1, esta función utiliza:  
+ Si *cch* es -1, esta función utiliza:  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 

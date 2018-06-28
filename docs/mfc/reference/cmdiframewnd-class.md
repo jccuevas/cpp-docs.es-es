@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f3ba2a92ad523994a458abad9d4acee506e8e85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374044"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038895"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd (clase)
 Proporciona la funcionalidad de una ventana de marco de MDI (interfaz de varios documentos) de Windows, junto con miembros para administrar la ventana.  
@@ -91,11 +91,11 @@ class CMDIFrameWnd : public CFrameWnd
   
  Puede crear una ventana de marco MDI mediante una llamada a la [crear](../../mfc/reference/cframewnd-class.md#create) o [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) función miembro de `CFrameWnd`.  
   
- Antes de llamar a **crear** o `LoadFrame`, debe crear el objeto de ventana de marco en el montón mediante C++ **nueva** operador. Antes de llamar a **crear** también se puede registrar una clase de ventana con la [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función global para establecer los estilos de icono y de clase para el marco.  
+ Antes de llamar a `Create` o `LoadFrame`, debe crear el objeto de ventana de marco en el montón mediante C++ **nueva** operador. Antes de llamar a `Create` también se puede registrar una clase de ventana con la [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función global para establecer los estilos de icono y de clase para el marco.  
   
- Use la **crear** función miembro para pasar parámetros de creación del marco inmediatas como argumentos.  
+ Use la `Create` función miembro para pasar parámetros de creación del marco inmediatas como argumentos.  
   
- `LoadFrame` requiere menos argumentos que **crear**y en su lugar recupera la mayoría de sus valores predeterminados de recursos, incluidos el título del marco, icono, tabla de aceleradores y menús. Para tener acceso a `LoadFrame`, todos estos recursos deben tener el mismo identificador de recurso (por ejemplo, **IDR_MAINFRAME**).  
+ `LoadFrame` requiere menos argumentos que `Create`y en su lugar recupera la mayoría de sus valores predeterminados de recursos, incluidos el título del marco, icono, tabla de aceleradores y menús. Para tener acceso a `LoadFrame`, todos estos recursos deben tener el mismo identificador de recurso (por ejemplo, **IDR_MAINFRAME**).  
   
  Aunque **MDIFrameWnd** se deriva de `CFrameWnd`, deriva una clase de ventana de marco `CMDIFrameWnd` no debe declararse con `DECLARE_DYNCREATE`.  
   
@@ -145,7 +145,7 @@ CMDIFrameWnd();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a la **crear** o `LoadFrame` función de miembro para crear la ventana de marco MDI visible.  
+ Llame a la `Create` o `LoadFrame` función de miembro para crear la ventana de marco MDI visible.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
@@ -160,10 +160,10 @@ virtual BOOL CreateClient(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  Un puntero largo a una [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) estructura.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Un puntero al menú ventana emergente.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -187,16 +187,16 @@ CMDIChildWnd* CreateNewChild(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pClass`  
+ *pClass*  
  La clase en tiempo de ejecución de la ventana secundaria que se va a crear.  
   
  *nResource*  
  El identificador de recursos compartidos asociados con la ventana secundaria.  
   
- `hMenu`  
+ *hMenu*  
  Menú de la ventana secundaria.  
   
- `hAccel`  
+ *hAccel*  
  Acelerador de la ventana secundaria.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -260,7 +260,7 @@ void MDICascade(int nType);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nType`  
+ *nLas*  
  Especifica una marca en cascada. Se puede especificar sólo el siguiente indicador: `MDITILE_SKIPDISABLED`, lo que impide que deshabilitado ventanas secundarias MDI que se colocan en cascada.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -307,7 +307,7 @@ void MDIMaximize(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pWnd`  
+ *pWnd*  
  Puntos a maximizar la ventana.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -349,7 +349,7 @@ void MDIRestore(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pWnd`  
+ *pWnd*  
  Apunta a la ventana para restaurar.  
   
 ### <a name="example"></a>Ejemplo  
@@ -368,7 +368,7 @@ CMenu* MDISetMenu(
  *pFrameMenu*  
  Especifica el menú del nuevo menú de ventana de marco. Si **NULL**, no se cambia el menú.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Especifica el menú del menú emergente de ventana nueva. Si **NULL**, no se cambia el menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -397,7 +397,7 @@ void MDITile(int nType);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nType`  
+ *nLas*  
  Especifica una marca de disposición en mosaico. Este parámetro puede ser cualquiera de los siguientes indicadores:  
   
 - `MDITILE_HORIZONTAL` Iconos ventanas MDI secundarias para que una ventana aparece encima de otro.  
@@ -407,7 +407,7 @@ void MDITile(int nType);
 - `MDITILE_VERTICAL` Iconos ventanas MDI secundarias para que una ventana aparece al lado del otro.  
   
 ### <a name="remarks"></a>Comentarios  
- La primera versión de `MDITile`, sin parámetros, iconos de las ventanas verticalmente en las versiones 3.1 y posteriores de Windows. La segunda versión muestra ventanas en mosaico vertical u horizontalmente, dependiendo del valor de la `nType` parámetro.  
+ La primera versión de `MDITile`, sin parámetros, iconos de las ventanas verticalmente en las versiones 3.1 y posteriores de Windows. La segunda versión muestra ventanas en mosaico vertical u horizontalmente, dependiendo del valor de la *nLas* parámetro.  
   
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CMDIFrameWnd::MDICascade](#mdicascade).  

@@ -174,12 +174,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89a277293cd4b192af0a8a069b82b1b1614490a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69836eb254b23c05f2405c8f11b55a6d6293a9cb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378766"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039341"
 ---
 # <a name="coleclientitem-class"></a>Clase de COleClientItem
 Define la interfaz del contenedor a elementos de OLE.  
@@ -323,7 +323,7 @@ void Activate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nVerb`  
+ *nVerb*  
  Especifica el verbo que se ejecute. Puede ser uno de los siguientes:  
   
 |Valor|Significado|Símbolo|  
@@ -336,21 +336,21 @@ void Activate(
   
  El valor-1 normalmente es un alias para otro verbo. Si no se admite la edición abierta, -2 tiene el mismo efecto que -1. Para los valores adicionales, consulte [DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) del SDK de Windows.  
   
- `pView`  
+ *pView*  
  Puntero a la ventana de vista de contenedor que contiene el elemento OLE; se utiliza la aplicación de servidor para la activación en contexto. Este parámetro debe ser **NULL** si el contenedor no admite la activación en contexto.  
   
- `lpMsg`  
+ *lpMsg*  
  Puntero al mensaje que provocó el elemento que se debe activar.  
   
 ### <a name="remarks"></a>Comentarios  
  Si la aplicación de servidor se ha escrito utilizando la biblioteca Microsoft Foundation Class, esta función causa el [OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb) función de miembro de los correspondientes `COleServerItem` objeto va a ejecutar.  
   
- Si el verbo principal es editar y cero se especifica en el `nVerb` parámetro, la aplicación de servidor se inicia para permitir que el elemento OLE que se pueda editar. Si la aplicación contenedora admite la activación en contexto, la edición puede realizarse en su lugar. Si el contenedor no admite la activación en contexto (o si se especifica el verbo Open), el servidor se inicia en una ventana independiente y edición puede realizarse no existe. Normalmente, cuando el usuario de la aplicación contenedora hace doble clic en el elemento OLE, el valor para el verbo principal en el `nVerb` parámetro determina la acción que se puede realizar el usuario. Sin embargo, si el servidor admite solo una acción, toma dicha acción, con independencia de qué valor se especifica en el `nVerb` parámetro.  
+ Si el verbo principal es editar y cero se especifica en el *nVerb* parámetro, la aplicación de servidor se inicia para permitir que el elemento OLE que se pueda editar. Si la aplicación contenedora admite la activación en contexto, la edición puede realizarse en su lugar. Si el contenedor no admite la activación en contexto (o si se especifica el verbo Open), el servidor se inicia en una ventana independiente y edición puede realizarse no existe. Normalmente, cuando el usuario de la aplicación contenedora hace doble clic en el elemento OLE, el valor para el verbo principal en el *nVerb* parámetro determina la acción que se puede realizar el usuario. Sin embargo, si el servidor admite solo una acción, toma dicha acción, con independencia de qué valor se especifica en el *nVerb* parámetro.  
   
  Para obtener más información, consulte [DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) del SDK de Windows.  
   
 ##  <a name="activateas"></a>  COleClientItem::ActivateAs  
- Funciones de conversión de OLE objeto se utiliza para activar el elemento como si fuese un elemento del tipo especificado por `clsidNew`.  
+ Funciones de conversión de OLE objeto se utiliza para activar el elemento como si fuese un elemento del tipo especificado por *clsidNew*.  
   
 ```  
 virtual BOOL ActivateAs(
@@ -366,7 +366,7 @@ virtual BOOL ActivateAs(
  *clsidOld*  
  Identificador de una referencia a la clase del elemento actual. El identificador de clase debe representar el tipo del objeto real, tal como se almacena, a menos que sea un vínculo. En ese caso, debe ser el CLSID del elemento al que hace referencia el vínculo. El [clase COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md) proporciona automáticamente el identificador de clase correcto para el elemento.  
   
- `clsidNew`  
+ *clsidNew*  
  Una referencia al identificador de clase de destino.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -409,7 +409,7 @@ static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataObject`  
+ *pDataObject*  
  Puntero a la [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto desde el que se creará el elemento OLE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -430,7 +430,7 @@ static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataObject`  
+ *pDataObject*  
  Puntero a la [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto desde el que se creará el elemento OLE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -477,7 +477,7 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwCloseOption`  
+ *dwCloseOption*  
  Indicador que especifica en qué circunstancias se guarda el elemento OLE al regresar al estado cargado. Puede tener uno de los valores siguientes:  
   
 - `OLECLOSE_SAVEIFDIRTY` Guarde el elemento OLE.  
@@ -499,7 +499,7 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pContainerDoc`  
+ *pContainerDoc*  
  Puntero al documento contenedor que contendrá este elemento. Esto puede ser cualquiera [COleDocument](../../mfc/reference/coledocument-class.md) derivado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -528,14 +528,14 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
 - [CreateCloneFrom](#createclonefrom)  
   
 ##  <a name="convertto"></a>  COleClientItem::ConvertTo  
- Llame a esta función miembro para convertir el elemento en el tipo especificado por `clsidNew`.  
+ Llame a esta función miembro para convertir el elemento en el tipo especificado por *clsidNew*.  
   
 ```  
 virtual BOOL ConvertTo(REFCLSID clsidNew);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `clsidNew`  
+ *clsidNew*  
  El identificador de clase del tipo de destino.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -552,7 +552,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bIncludeLink`  
+ *bIncludeLink*  
  **TRUE** si la información del vínculo debe copiarse en el Portapapeles, lo que permite un elemento vinculado pegadas; en caso contrario **FALSE**.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -591,11 +591,11 @@ BOOL CreateFromClipboard(
  *Representación*  
  Indicador que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) en el SDK de Windows.  
   
- `cfFormat`  
+ *cfFormat*  
  Especifica el formato de datos del Portapapeles en la memoria caché al crear el elemento OLE.  
   
- `lpFormatEtc`  
- Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -617,17 +617,17 @@ BOOL CreateFromData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataObject`  
+ *pDataObject*  
  Puntero a la [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto desde el que se creará el elemento OLE.  
   
  *Representación*  
  Indicador que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) en el SDK de Windows.  
   
- `cfFormat`  
+ *cfFormat*  
  Especifica el formato de datos del Portapapeles en la memoria caché al crear el elemento OLE.  
   
- `lpFormatEtc`  
- Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -650,20 +650,20 @@ BOOL CreateFromFile(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFileName`  
+ *lpszFileName*  
  Puntero al nombre de archivo desde el que se creará el elemento OLE.  
   
- `clsid`  
+ *CLSID*  
  Reservado para un uso futuro.  
   
  *Representación*  
  Indicador que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) en el SDK de Windows.  
   
- `cfFormat`  
+ *cfFormat*  
  Especifica el formato de datos del Portapapeles en la memoria caché al crear el elemento OLE.  
   
- `lpFormatEtc`  
- Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -687,11 +687,11 @@ BOOL CreateLinkFromClipboard(
  *Representación*  
  Indicador que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) en el SDK de Windows.  
   
- `cfFormat`  
+ *cfFormat*  
  Especifica el formato de datos del Portapapeles en la memoria caché al crear el elemento OLE.  
   
- `lpFormatEtc`  
- Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -713,17 +713,17 @@ BOOL CreateLinkFromData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataObject`  
+ *pDataObject*  
  Puntero a la [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto desde el que se creará el elemento OLE.  
   
  *Representación*  
  Indicador que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) en el SDK de Windows.  
   
- `cfFormat`  
+ *cfFormat*  
  Especifica el formato de datos del Portapapeles en la memoria caché al crear el elemento OLE.  
   
- `lpFormatEtc`  
- Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -745,17 +745,17 @@ BOOL CreateLinkFromFile(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFileName`  
+ *lpszFileName*  
  Puntero al nombre de archivo desde el que se creará el elemento OLE.  
   
  *Representación*  
  Indicador que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) en el SDK de Windows.  
   
- `cfFormat`  
+ *cfFormat*  
  Especifica el formato de datos del Portapapeles en la memoria caché al crear el elemento OLE.  
   
- `lpFormatEtc`  
- Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -777,17 +777,17 @@ BOOL CreateNewItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `clsid`  
+ *CLSID*  
  Identificador que identifica de forma única el tipo de elemento OLE para crear.  
   
  *Representación*  
  Indicador que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) en el SDK de Windows.  
   
- `cfFormat`  
+ *cfFormat*  
  Especifica el formato de datos del Portapapeles en la memoria caché al crear el elemento OLE.  
   
- `lpFormatEtc`  
- Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -811,11 +811,11 @@ BOOL CreateStaticFromClipboard(
  *Representación*  
  Indicador que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) en el SDK de Windows.  
   
- `cfFormat`  
+ *cfFormat*  
  Especifica el formato de datos del Portapapeles en la memoria caché al crear el elemento OLE.  
   
- `lpFormatEtc`  
- Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -837,17 +837,17 @@ BOOL CreateStaticFromData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataObject`  
+ *pDataObject*  
  Puntero a la [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto desde el que se creará el elemento OLE.  
   
  *Representación*  
  Indicador que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) en el SDK de Windows.  
   
- `cfFormat`  
+ *cfFormat*  
  Especifica el formato de datos del Portapapeles en la memoria caché al crear el elemento OLE.  
   
- `lpFormatEtc`  
- Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que se utiliza si *representar* es **OLERENDER_FORMAT** o **OLERENDER_DRAW**. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si se omite este parámetro, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -895,7 +895,7 @@ void Delete(BOOL bAutoDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bAutoDelete`  
+ *bAutoDelete*  
  Especifica si el elemento se quitará del documento.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -914,26 +914,26 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpItemRect`  
+ *lpItemRect*  
  Rectángulo del elemento en la pantalla en coordenadas de cliente (píxeles).  
   
- `ptOffset`  
- El desplazamiento de `lpItemRect` que era la posición del mouse en el momento de la operación de arrastre.  
+ *ptOffset*  
+ El desplazamiento de *lpItemRect* que era la posición del mouse en el momento de la operación de arrastre.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  Establezca esta propiedad en **TRUE** si los datos de vínculo deben copiarse en el Portapapeles. Establézcalo en **FALSE** si la aplicación de servidor no admite vínculos.  
   
- `dwEffects`  
+ *dwEffects*  
  Determina los efectos que permitirá al origen de arrastre en la operación de arrastre.  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  Puntero al rectángulo que define donde realmente comienza la operación de arrastre. Para obtener más información, vea la sección Comentarios que se muestra más adelante.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Valor `DROPEFFECT`. Si es `DROPEFFECT_MOVE`, se deben quitar los datos originales.  
   
 ### <a name="remarks"></a>Comentarios  
- No se inicie inmediatamente la operación de arrastrar y colocar. Espera hasta que el cursor del mouse deja el rectángulo especificado por `lpRectStartDrag` o hasta que un número especificado de milisegundos transcurridos. Si `lpRectStartDrag` es **NULL**, el tamaño del rectángulo es un píxel.  
+ No se inicie inmediatamente la operación de arrastrar y colocar. Espera hasta que el cursor del mouse deja el rectángulo especificado por *lpRectStartDrag* o hasta que un número especificado de milisegundos transcurridos. Si *lpRectStartDrag* es **NULL**, el tamaño del rectángulo es un píxel.  
   
  El tiempo de retraso especificado por un valor de una clave del registro. Puede cambiar el tiempo de retraso mediante una llamada a [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) o [CWinApp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint). Si no especifica el tiempo de retardo, se utiliza un valor predeterminado de 200 milisegundos. Tiempo de retardo de arrastre se almacena como sigue:  
   
@@ -956,7 +956,7 @@ virtual BOOL DoVerb(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nVerb`  
+ *nVerb*  
  Especifica el verbo que se ejecute. Puede incluir uno de los siguientes:  
   
 |Valor|Significado|Símbolo|  
@@ -969,10 +969,10 @@ virtual BOOL DoVerb(
   
  El valor-1 normalmente es un alias para otro verbo. Si no se admite la edición abierta, -2 tiene el mismo efecto que -1. Para los valores adicionales, consulte [DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) del SDK de Windows.  
   
- `pView`  
+ *pView*  
  Puntero a la ventana de vista; se utiliza el servidor de activación en contexto. Este parámetro debe ser **NULL** si la aplicación contenedora no permite la activación en contexto.  
   
- `lpMsg`  
+ *lpMsg*  
  Puntero al mensaje que provocó el elemento que se debe activar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -981,7 +981,7 @@ virtual BOOL DoVerb(
 ### <a name="remarks"></a>Comentarios  
  Esta función llama a la [activar](#activate) función de miembro que se ejecuta el verbo. También detecta las excepciones y muestra un cuadro de mensaje al usuario si se produce uno.  
   
- Si el verbo principal es editar y cero se especifica en el `nVerb` parámetro, la aplicación de servidor se inicia para permitir que el elemento OLE que se pueda editar. Si la aplicación contenedora admite la activación en contexto, la edición puede realizarse en su lugar. Si el contenedor no admite la activación en contexto (o si se especifica el verbo Open), el servidor se inicia en una ventana independiente y edición puede realizarse no existe. Normalmente, cuando el usuario de la aplicación contenedora hace doble clic en el elemento OLE, el valor para el verbo principal en el `nVerb` parámetro determina la acción que se puede realizar el usuario. Sin embargo, si el servidor admite solo una acción, toma dicha acción, con independencia de qué valor se especifica en el `nVerb` parámetro.  
+ Si el verbo principal es editar y cero se especifica en el *nVerb* parámetro, la aplicación de servidor se inicia para permitir que el elemento OLE que se pueda editar. Si la aplicación contenedora admite la activación en contexto, la edición puede realizarse en su lugar. Si el contenedor no admite la activación en contexto (o si se especifica el verbo Open), el servidor se inicia en una ventana independiente y edición puede realizarse no existe. Normalmente, cuando el usuario de la aplicación contenedora hace doble clic en el elemento OLE, el valor para el verbo principal en el *nVerb* parámetro determina la acción que se puede realizar el usuario. Sin embargo, si el servidor admite solo una acción, toma dicha acción, con independencia de qué valor se especifica en el *nVerb* parámetro.  
   
 ##  <a name="draw"></a>  COleClientItem::Draw  
  Llame a esta función para dibujar el elemento OLE en el rectángulo delimitador especificado utilizando el contexto de dispositivo especificado.  
@@ -994,14 +994,14 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Puntero a un [CDC](../../mfc/reference/cdc-class.md) objeto usado para dibujar el elemento OLE.  
   
- `lpBounds`  
+ *lpBounds*  
  Puntero a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o `RECT` estructura que define el rectángulo delimitador en el que se va a dibujar el elemento OLE (en unidades lógicas que determine el contexto de dispositivo).  
   
- `nDrawAspect`  
- Especifica el aspecto de OLE de elementos, es decir, ¿cómo debe mostrarse. Si `nDrawAspect` es -1, el último aspecto establecer mediante [SetDrawAspect](#setdrawaspect) se utiliza. Para obtener más información sobre los valores posibles para esta marca, consulte [SetDrawAspect](#setdrawaspect).  
+ *nDrawAspect*  
+ Especifica el aspecto de OLE de elementos, es decir, ¿cómo debe mostrarse. Si *nDrawAspect* es -1, el último aspecto establecer mediante [SetDrawAspect](#setdrawaspect) se utiliza. Para obtener más información sobre los valores posibles para esta marca, consulte [SetDrawAspect](#setdrawaspect).  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -1009,9 +1009,9 @@ BOOL Draw(
 ### <a name="remarks"></a>Comentarios  
  La función puede usar la representación del metarchivo del elemento OLE creado por el [OnDraw](../../mfc/reference/coleserveritem-class.md#ondraw) función miembro de `COleServerItem`.  
   
- Normalmente se utiliza **dibujar** para presentación en pantalla, pasando el contexto de dispositivo de pantalla como `pDC`. En este caso, debe especificar sólo los dos primeros parámetros.  
+ Normalmente se utiliza **dibujar** para presentación en pantalla, pasando el contexto de dispositivo de pantalla como *pDC*. En este caso, debe especificar sólo los dos primeros parámetros.  
   
- El `lpBounds` parámetro identifica el rectángulo en el contexto de dispositivo de destino (en relación con el modo de asignación actual). Representación puede implicar la escala de una imagen y puede usarse por aplicaciones de contenedor para imponer una vista que escala entre la vista mostrada y la imagen impresa final.  
+ El *lpBounds* parámetro identifica el rectángulo en el contexto de dispositivo de destino (en relación con el modo de asignación actual). Representación puede implicar la escala de una imagen y puede usarse por aplicaciones de contenedor para imponer una vista que escala entre la vista mostrada y la imagen impresa final.  
   
  Para obtener más información, consulte [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) en el SDK de Windows.  
   
@@ -1035,10 +1035,10 @@ BOOL GetCachedExtent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpSize`  
+ *lpSize*  
  Puntero a un **tamaño** estructura o un [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que va a recibir la información de tamaño.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Especifica el aspecto del producto OLE cuyos límites se van a recuperar. Para los valores posibles, vea [SetDrawAspect](#setdrawaspect).  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1052,14 +1052,14 @@ BOOL GetCachedExtent(
  Para obtener más información, consulte [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) en el SDK de Windows.  
   
 ##  <a name="getclassid"></a>  COleClientItem::GetClassID  
- Devuelve el identificador de clase del elemento en la memoria que señala `pClassID`.  
+ Devuelve el identificador de clase del elemento en la memoria que señala *pClassID*.  
   
 ```  
 void GetClassID(CLSID* pClassID) const;  
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pClassID`  
+ *pClassID*  
  Puntero a un identificador de tipo [CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) para recuperar el identificador de clase. Para obtener información sobre **CLSID**, consulte el SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1079,16 +1079,16 @@ void GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataSource`  
+ *Plocation*  
  Puntero a un [COleDataSource](../../mfc/reference/coledatasource-class.md) objeto que recibirá los datos contenidos en el elemento OLE.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  **TRUE** si los datos de vínculo deben estar incluidos; en caso contrario **FALSE**.  
   
- `lpOffset`  
+ *lpOffset*  
  El desplazamiento del cursor del mouse desde el origen del objeto en píxeles.  
   
- `lpSize`  
+ *lpSize*  
  El tamaño del objeto en píxeles.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1130,10 +1130,10 @@ BOOL GetExtent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpSize`  
+ *lpSize*  
  Puntero a un **tamaño** estructura o un `CSize` objeto que va a recibir la información de tamaño.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Especifica el aspecto del producto OLE cuyos límites se van a recuperar. Para los valores posibles, vea [SetDrawAspect](#setdrawaspect).  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1157,7 +1157,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `clsid`  
+ *CLSID*  
  Una referencia al CLSID para el servidor asociado al icono.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1202,7 +1202,7 @@ UINT GetItemState() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- A **COleClientItem:: ItemState** enumerado valor, que puede ser uno de los siguientes: `emptyState`, **loadedState**, `openState`, `activeState`, `activeUIState`. Para obtener información acerca de estos Estados, vea el artículo [contenedores: estados de elementos de cliente](../../mfc/containers-client-item-states.md).  
+ A **COleClientItem:: ItemState** enumerado valor, que puede ser uno de los siguientes: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Para obtener información acerca de estos Estados, vea el artículo [contenedores: estados de elementos de cliente](../../mfc/containers-client-item-states.md).  
   
 ### <a name="remarks"></a>Comentarios  
  Para recibir una notificación cuando cambia el estado del elemento OLE, use la [OnChange](#onchange) función miembro.  
@@ -1280,7 +1280,7 @@ void GetUserType(
   
 - `USERCLASSTYPE_APPNAME` Nombre de la aplicación de la clase de servicio.  
   
- `rString`  
+ *rString*  
  Una referencia a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto al que se devolverá la cadena que describe el tipo de elemento OLE.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1393,7 +1393,7 @@ virtual void OnChange(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nCode`  
+ *nCode*  
  El motivo del servidor ha cambiado este elemento. Puede tener uno de los valores siguientes:  
   
 - `OLE_CHANGED` Ha cambiado la apariencia del elemento OLE.  
@@ -1404,11 +1404,11 @@ virtual void OnChange(
   
 - `OLE_CHANGED_STATE` El elemento OLE ha cambiado de un estado a otro.  
   
- `dwParam`  
- Si `nCode` es `OLE_SAVED` o `OLE_CLOSED`, este parámetro no se utiliza. Si `nCode` es `OLE_CHANGED`, este parámetro especifica el aspecto del elemento OLE que ha cambiado. Para los valores posibles, vea el `dwParam` parámetro de [COleClientItem::Draw](#draw). Si `nCode` es `OLE_CHANGED_STATE`, este parámetro es un **COleClientItem:: ItemState** valor enumerado y se describe el estado que se especifiquen. Puede tener uno de los siguientes valores: `emptyState`, **loadedState**, `openState`, `activeState`, o `activeUIState`.  
+ *dwParam*  
+ Si *nCode* es `OLE_SAVED` o `OLE_CLOSED`, este parámetro no se utiliza. Si *nCode* es `OLE_CHANGED`, este parámetro especifica el aspecto del elemento OLE que ha cambiado. Para los valores posibles, vea el *dwParam* parámetro de [COleClientItem::Draw](#draw). Si *nCode* es `OLE_CHANGED_STATE`, este parámetro es un **COleClientItem:: ItemState** valor enumerado y se describe el estado que se especifiquen. Puede tener uno de los siguientes valores: `emptyState`, `loadedState`, `openState`, `activeState`, o `activeUIState`.  
   
 ### <a name="remarks"></a>Comentarios  
- (Si la aplicación de servidor se escribe utilizando la biblioteca Microsoft Foundation Class, esta función se invoca en respuesta a la `Notify` las funciones miembro de `COleServerDoc` o `COleServerItem`.) La implementación predeterminada marca el documento contenedor como modificado si `nCode` es `OLE_CHANGED` o `OLE_SAVED`.  
+ (Si la aplicación de servidor se escribe utilizando la biblioteca Microsoft Foundation Class, esta función se invoca en respuesta a la `Notify` las funciones miembro de `COleServerDoc` o `COleServerItem`.) La implementación predeterminada marca el documento contenedor como modificado si *nCode* es `OLE_CHANGED` o `OLE_SAVED`.  
   
  Para `OLE_CHANGED_STATE`, el estado actual devuelto desde [GetItemState](#getitemstate) seguirá siendo el estado anterior, lo que significa que el estado actual antes de realizar este cambio de estado.  
   
@@ -1465,13 +1465,13 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bUndoable`  
+ *bUndoable*  
  Especifica si se puede deshacer los cambios de edición.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función restaura a su estado original, ocultar los menús y otros controles que se crearon para la activación en contexto de interfaz de usuario de la aplicación contenedora.  
   
- Si `bUndoable` es **FALSE**, el contenedor debe deshabilitar el comando Deshacer, no es que se pueden deshacer en vigor descartar el estado de deshacer del contenedor, ya que indica que la última operación realizada por el servidor.  
+ Si *bUndoable* es **FALSE**, el contenedor debe deshabilitar el comando Deshacer, descartando en vigor el estado de deshacer del contenedor, ya que indica que la última operación realizada por el servidor no es que se pueden deshacer.  
   
 ##  <a name="ondiscardundostate"></a>  COleClientItem::OnDiscardUndoState  
  Lo llama el marco cuando el usuario realiza una acción que se descarta el estado de deshacer mientras se edita el elemento OLE.  
@@ -1498,13 +1498,13 @@ virtual COleDataSource* OnGetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bIncludeLink`  
+ *bIncludeLink*  
  Establezca esta propiedad en **TRUE** si vincular datos deben copiarse en el Portapapeles. Establezca esta propiedad en **FALSE** si la aplicación de servidor no admite vínculos.  
   
- `lpOffset`  
+ *lpOffset*  
  Puntero al desplazamiento del cursor del mouse desde el origen del objeto en píxeles.  
   
- `lpSize`  
+ *lpSize*  
  Puntero al tamaño del objeto en píxeles.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1537,7 +1537,7 @@ virtual void OnGetItemPosition(CRect& rPosition);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rPosition`  
+ *rPosition*  
  Referencia a la [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que va a contener coordenadas de posición del elemento.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1556,13 +1556,13 @@ virtual BOOL OnGetWindowContext(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ppMainFrame`  
+ *ppMainFrame*  
  Puntero a un puntero a la ventana de marco principal.  
   
- `ppDocFrame`  
+ *ppDocFrame*  
  Puntero a un puntero a la ventana de marco de documento.  
   
- `lpFrameInfo`  
+ *lpFrameInfo*  
  Puntero a un [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) estructura que recibirá la información de la ventana de marco.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1571,7 +1571,7 @@ virtual BOOL OnGetWindowContext(
 ### <a name="remarks"></a>Comentarios  
  Esta función se utiliza para recuperar información acerca de la ventana primaria del elemento OLE.  
   
- Si el contenedor es una aplicación MDI, la implementación predeterminada devuelve un puntero a la [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md) objeto `ppMainFrame` y un puntero a activos [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) objeto en `ppDocFrame`. Si el contenedor es una aplicación SDI, la implementación predeterminada devuelve un puntero a la [CFrameWnd](../../mfc/reference/cframewnd-class.md) objeto `ppMainFrame` y devuelve **NULL** en `ppDocFrame`. La implementación predeterminada también se rellena en los miembros de `lpFrameInfo`.  
+ Si el contenedor es una aplicación MDI, la implementación predeterminada devuelve un puntero a la [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md) objeto *ppMainFrame* y un puntero a activos [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)objeto *ppDocFrame*. Si el contenedor es una aplicación SDI, la implementación predeterminada devuelve un puntero a la [CFrameWnd](../../mfc/reference/cframewnd-class.md) objeto *ppMainFrame* y devuelve **NULL** en  *ppDocFrame*. La implementación predeterminada también se rellena en los miembros de *lpFrameInfo*.  
   
  Reemplace esta función sólo si la implementación predeterminada no se ajusta a la aplicación; Por ejemplo, si la aplicación tiene un paradigma de interfaz de usuario que difiere de SDI o MDI. Avanzada reemplazable.  
   
@@ -1587,16 +1587,16 @@ virtual void OnInsertMenus(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pMenuShared`  
+ *pMenuShared*  
  Apunta a un menú vacío.  
   
- `lpMenuWidths`  
+ *lpMenuWidths*  
  Señala a una matriz de seis **largo** valores que indica cuántos de los menús están en cada uno de los siguientes grupos de menús: archivo, edición, contenedor, objeto, ventana Ayuda. La aplicación contenedora es responsable de los grupos de menú archivo, contenedor y ventana corresponden a elementos de 0, 2 y 4 de esta matriz.  
   
 ### <a name="remarks"></a>Comentarios  
  Este menú, a continuación, se pasa al servidor, que inserta sus propios menús, crear un menú compuesto. Esta función se puede llamar varias veces para crear varios menús compuestos.  
   
- Inserta la implementación predeterminada `pMenuShared` los menús de contenedor en contexto, es decir, los grupos de menú archivo, contenedor y ventana. [CDocTemplate:: SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo) se usa para establecer este recurso de menú. La implementación predeterminada también asigna los valores correspondientes a los elementos 0, 2 y 4 en `lpMenuWidths`, según el recurso de menú. Reemplace esta función si la implementación predeterminada no es adecuada para su aplicación; Por ejemplo, si la aplicación no usa plantillas de documento para asociar recursos a tipos de documentos. Si reemplaza esta función, también debe invalidar [OnSetMenu](#onsetmenu) y [OnRemoveMenus](#onremovemenus). Avanzada reemplazable.  
+ La implementación predeterminada que se inserta en *pMenuShared* los menús de contenedor en contexto, es decir, los grupos de menú archivo, contenedor y ventana. [CDocTemplate:: SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo) se usa para establecer este recurso de menú. La implementación predeterminada también asigna los valores correspondientes a los elementos 0, 2 y 4 en *lpMenuWidths*, según el recurso de menú. Reemplace esta función si la implementación predeterminada no es adecuada para su aplicación; Por ejemplo, si la aplicación no usa plantillas de documento para asociar recursos a tipos de documentos. Si reemplaza esta función, también debe invalidar [OnSetMenu](#onsetmenu) y [OnRemoveMenus](#onremovemenus). Avanzada reemplazable.  
   
  Para obtener más información, consulte [IOleInPlaceFrame::InsertMenus](http://msdn.microsoft.com/library/windows/desktop/ms683987) en el SDK de Windows.  
   
@@ -1608,13 +1608,13 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pMenuShared`  
+ *pMenuShared*  
  Apunta al menú compuesto construido mediante llamadas a la [OnInsertMenus](#oninsertmenus) función miembro.  
   
 ### <a name="remarks"></a>Comentarios  
- Quita de la implementación predeterminada de `pMenuShared` los menús de contenedor en contexto, que es, los grupos de menú archivo, contenedor y ventana. Reemplace esta función si la implementación predeterminada no es adecuada para su aplicación; Por ejemplo, si la aplicación no usa plantillas de documento para asociar recursos a tipos de documentos. Si reemplaza esta función, probablemente se debe invalidar [OnInsertMenus](#oninsertmenus) y [OnSetMenu](#onsetmenu) así. Avanzada reemplazable.  
+ Quita de la implementación predeterminada de *pMenuShared* los menús de contenedor en contexto, que es, los grupos de menú archivo, contenedor y ventana. Reemplace esta función si la implementación predeterminada no es adecuada para su aplicación; Por ejemplo, si la aplicación no usa plantillas de documento para asociar recursos a tipos de documentos. Si reemplaza esta función, probablemente se debe invalidar [OnInsertMenus](#oninsertmenus) y [OnSetMenu](#onsetmenu) así. Avanzada reemplazable.  
   
- Los submenús `pMenuShared` pueden estar compartidos por más de un menú compuesto si el servidor se llama repetidamente `OnInsertMenus`. Por lo tanto, no debe eliminar cualquier submenús en el reemplazo del `OnRemoveMenus`; solo debe separarlas.  
+ Los submenús *pMenuShared* pueden estar compartidos por más de un menú compuesto si el servidor se llama repetidamente `OnInsertMenus`. Por lo tanto, no debe eliminar cualquier submenús en el reemplazo del `OnRemoveMenus`; solo debe separarlas.  
   
  Para obtener más información, consulte [IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685) en el SDK de Windows.  
   
@@ -1638,7 +1638,7 @@ virtual BOOL OnScrollBy(CSize sizeExtent);
  Para obtener más información, consulte [IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291) en el SDK de Windows.  
   
 ##  <a name="onsetmenu"></a>  COleClientItem::OnSetMenu  
- El marco llama a dos veces cuando la activación en contexto comienza y finaliza; la primera vez que instale el menú compuesto y la segunda vez (con `holemenu` igual a **NULL**) para quitar el equipo.  
+ El marco llama a dos veces cuando la activación en contexto comienza y finaliza; la primera vez que instale el menú compuesto y la segunda vez (con *holemenu* igual a **NULL**) para quitar el equipo.  
   
 ```  
 virtual void OnSetMenu(
@@ -1648,10 +1648,10 @@ virtual void OnSetMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pMenuShared`  
+ *pMenuShared*  
  Puntero al menú compuesto construido mediante llamadas a la [OnInsertMenus](#oninsertmenus) función miembro y `InsertMenu` función.  
   
- `holemenu`  
+ *holemenu*  
  Identificador del descriptor de menú devuelto por la **OleCreateMenuDescriptor** función, o **NULL** si el código de distribución es va a quitar.  
   
  *hwndActiveObject*  
@@ -1672,17 +1672,17 @@ virtual BOOL OnShowControlBars(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pFrameWnd`  
+ *pFrameWnd*  
  Puntero a la ventana de marco de la aplicación contenedora. Puede tratarse de una ventana de marco principal o una ventana secundaria MDI.  
   
- `bShow`  
+ *bMostrar*  
  Especifica si las barras de control se pueden mostrar u ocultar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la llamada de función provoca un cambio de estado de las barras de control; 0 si la llamada no produce ningún cambio, o si `pFrameWnd` no apunta a la ventana de marco del contenedor.  
+ Es distinto de cero si la llamada de función provoca un cambio de estado de las barras de control; 0 si la llamada no produce ningún cambio, o si *pFrameWnd* no apunta a la ventana de marco del contenedor.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función devuelve 0 si las barras de control ya están en el estado especificado por *bMostrar.* Esto podría suceder, por ejemplo, si se ocultan las barras de control y `bShow` es **FALSE**.  
+ Esta función devuelve 0 si las barras de control ya están en el estado especificado por *bMostrar.* Esto podría suceder, por ejemplo, si se ocultan las barras de control y *bMostrar* es **FALSE**.  
   
  La implementación predeterminada, quita la barra de herramientas de la ventana de marco de nivel superior.  
   
@@ -1734,11 +1734,11 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwCloseOption`  
+ *dwCloseOption*  
  Indicador que especifica en qué circunstancias se guarda el elemento OLE al regresar al estado cargado. Para obtener una lista de valores posibles, consulte [COleClientItem::Close](#close).  
   
 ### <a name="remarks"></a>Comentarios  
- **Versión** llama a la `COleClientItem` destructor.  
+ `Release` llama a la `COleClientItem` destructor.  
   
  Para obtener más información, consulte [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) del SDK de Windows.  
   
@@ -1763,7 +1763,7 @@ void Run();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a la **ejecutar** función de miembro para iniciar la aplicación de servidor antes de activar el elemento. Esto se hace automáticamente [activar](#activate) y [DoVerb](#doverb), por lo que normalmente no es necesario llamar a esta función. Llame a esta función si es necesario ejecutar el servidor con el fin de establecer un atributo del elemento, como [SetExtent](#setextent), antes de ejecutar [DoVerb](#doverb).  
+ Llame a la `Run` función de miembro para iniciar la aplicación de servidor antes de activar el elemento. Esto se hace automáticamente [activar](#activate) y [DoVerb](#doverb), por lo que normalmente no es necesario llamar a esta función. Llame a esta función si es necesario ejecutar el servidor con el fin de establecer un atributo del elemento, como [SetExtent](#setextent), antes de ejecutar [DoVerb](#doverb).  
   
 ##  <a name="setdrawaspect"></a>  COleClientItem::SetDrawAspect  
  Llame a la `SetDrawAspect` función de miembro para establecer el "aspecto" o la vista del elemento.  
@@ -1773,7 +1773,7 @@ virtual void SetDrawAspect(DVASPECT nDrawAspect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nDrawAspect`  
+ *nDrawAspect*  
  Un valor de la enumeración `DVASPECT`. Este parámetro puede tener uno de los valores siguientes:  
   
 - `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
@@ -1799,10 +1799,10 @@ void SetExtent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `size`  
+ *size*  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que contiene la información de tamaño.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Especifica el aspecto del elemento OLE cuyos límites que se van a establecer. Para los valores posibles, vea [SetDrawAspect](#setdrawaspect).  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1820,10 +1820,10 @@ void SetHostNames(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszHost`  
+ *lpszHost*  
  Puntero al nombre de usuario visible a través de la aplicación contenedora.  
   
- `lpszHostObj`  
+ *lpszHostObj*  
  Puntero a una cadena de identificación del contenedor que contiene el elemento OLE.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1841,7 +1841,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hMetaPict`  
+ *hMetaPict*  
  Un identificador para el metarchivo usado para dibujar el icono del elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1850,7 +1850,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 ### <a name="remarks"></a>Comentarios  
  Use [GetIconicMetafile](#geticonicmetafile) para recuperar el metarchivo.  
   
- El `hMetaPict` parámetro se copia en el elemento; por lo tanto, `hMetaPict` debe ser liberado por el llamador.  
+ El *hMetaPict* parámetro se copia en el elemento; por lo tanto, *hMetaPict* debe ser liberado por el llamador.  
   
 ##  <a name="setitemrects"></a>  COleClientItem::SetItemRects  
  Llame a esta función para establecer el rectángulo delimitador o el rectángulo visible del elemento OLE.  
@@ -1905,10 +1905,10 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ptd`  
+ *ptd*  
  Puntero a un [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) estructuras de datos que contiene información sobre el nuevo dispositivo de destino de impresión. Puede ser **NULL**.  
   
- `ppd`  
+ *PPD*  
  Puntero a un [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646940) estructuras de datos que contiene información sobre el nuevo dispositivo de destino de impresión. Puede ser **NULL**.  
   
 ### <a name="return-value"></a>Valor devuelto  

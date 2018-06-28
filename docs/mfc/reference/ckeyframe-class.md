@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367190"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038463"
 ---
 # <a name="ckeyframe-class"></a>Clase CKeyFrame
 Representa un fotograma clave de la animación.  
@@ -102,10 +102,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pStoryboard`  
+ *pStoryboard*  
  Un puntero a un guión gráfico.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Especifica si se debe agregar fotogramas clave o realizar la transición de forma recursiva.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -124,10 +124,10 @@ BOOL AddToStoryboardAfterTransition(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pStoryboard`  
+ *pStoryboard*  
  Un puntero a un guión gráfico.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Especifica si se debe agregar una transición de manera recursiva.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -146,10 +146,10 @@ virtual BOOL AddToStoryboardAtOffset(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pStoryboard`  
+ *pStoryboard*  
  Un puntero a un guión gráfico.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Especifica si este fotograma clave dependen de forma recursiva para agregar un fotograma clave.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -171,13 +171,13 @@ CKeyFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pTransition`  
+ *pTransition*  
  Un puntero a una transición.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Un puntero al fotograma clave.  
   
- `offset`  
+ *offset*  
  Desplazamiento, en segundos, desde el fotograma clave especificado por pKeyframe.  
   
 ### <a name="remarks"></a>Comentarios  

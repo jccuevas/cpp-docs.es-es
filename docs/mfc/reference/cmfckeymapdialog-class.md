@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369039"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037293"
 ---
 # <a name="cmfckeymapdialog-class"></a>Clase CMFCKeyMapDialog
 La `CMFCKeyMapDialog` clase es compatible con un control que asigna comandos a teclas del teclado.  
@@ -110,10 +110,10 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndParentFrame`  
+ [in] *pWndParentFrame*  
  Un puntero a la ventana primaria de la `CMFCKeyMapDialog` objeto.  
   
- [in] `bEnablePrint`  
+ [in] *bEnablePrint*  
  `TRUE` Si se puede imprimir la lista de teclas de aceleración; en caso contrario, `FALSE`. De manera predeterminada, es `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -144,7 +144,7 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nItem`  
+ [in] *nItem*  
  Índice de base cero de un elemento en la lista interna de asignaciones de clave.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -160,7 +160,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Un identificador de comando.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -178,10 +178,10 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a un botón de barra de herramientas que se utiliza para asignar una combinación de teclas del teclado a un nombre de comando y una descripción. El elemento de mapa de claves se almacena en un control de lista interna.  
   
- [in] `nItem`  
+ [in] *nItem*  
  Índice de base cero que especifica dónde desea insertar el nuevo elemento de mapa de claves en el control de lista interna.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -197,13 +197,13 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `dc`  
+ [in] *dc*  
  El contexto de dispositivo para la impresora.  
   
- [in] `nPage`  
+ [in] *nPage*  
  El número de página para imprimir.  
   
- [in] `cx`  
+ [in] *cx*  
  El desplazamiento horizontal del encabezado, en píxeles.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -225,19 +225,19 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `dc`  
+ [in] *dc*  
  El contexto de dispositivo de la impresora.  
   
- [in] `nItem`  
+ [in] *nItem*  
  Índice de base cero del elemento que se va a imprimir.  
   
- [in] `y`  
+ [in] *y*  
  El desplazamiento vertical entre la parte superior de la página y la posición del elemento.  
   
- [in] `cx`  
+ [in] *cx*  
  El desplazamiento horizontal entre la izquierda de la página y la posición del elemento.  
   
- [in] `bCalcHeight`  
+ [in] *bCalcHeight*  
  `TRUE` para calcular el alto recomendado para el elemento de impresión; `FALSE` para truncar el elemento de impresión para que se ajuste el espacio predeterminado.  
   
 ### <a name="return-value"></a>Valor devuelto  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c284f5d5fdfee09349cc6eb9cbde38da21918d25
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367934"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040966"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Clase CMFCPropertyGridToolTipCtrl
 Implementa una información sobre herramientas que controlan la [CMFCPropertyGridCtrl (clase)](../../mfc/reference/cmfcpropertygridctrl-class.md) usa para mostrar información sobre herramientas.  
@@ -106,7 +106,7 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Un puntero a la ventana primaria.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -130,7 +130,7 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `rect`  
+ [out] *rect*  
  Contiene la última posición del control de información sobre herramientas.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
@@ -148,7 +148,7 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nTextMargin`  
+ [in] *nTextMargin*  
  Especifica el espaciado entre el borde de la ventana de información sobre herramientas y el texto del control de información sobre herramientas. El valor predeterminado es 10 píxeles.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
@@ -161,14 +161,14 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
+ [in] *rect*  
  Especifica la posición y el tamaño del control de información sobre herramientas.  
   
- [in] `strText`  
+ [in] *strText*  
  Especifica el texto que se mostrará en la información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método muestra el control de información sobre herramientas en la posición y el tamaño especificado por `rect`. Si la posición, el tamaño y el texto no han cambiado desde la última vez que se llama a este método, este método no tiene ningún efecto.  
+ Este método muestra el control de información sobre herramientas en la posición y el tamaño especificado por *rect*. Si la posición, el tamaño y el texto no han cambiado desde la última vez que se llama a este método, este método no tiene ningún efecto.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

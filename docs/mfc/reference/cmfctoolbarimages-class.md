@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d837ec17623887eb63b49810066937fcd4bf5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34c364357ad14db2cd0ebc53e2a9cdcd5455f5ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377942"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042136"
 ---
 # <a name="cmfctoolbarimages-class"></a>Clase CMFCToolBarImages
 Las imágenes en una barra de herramientas. La `CMFCToolBarImages` clase administra la carga de recursos de la aplicación o de archivos de imágenes de barra de herramientas.  
@@ -282,8 +282,8 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `clrBase`  
- [in] `clrTone`  
+ [in] *clrBase*  
+ [in] *clrTone*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -297,10 +297,10 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hIcon`  
+ [in] *hIcon*  
  Un identificador para el icono que se va a agregar.  
   
- [in] `bAlphaBlend`  
+ [in] *bAlphaBlend*  
  `TRUE` Si se usa este icono con mezcla alfa; en caso contrario, `FALSE`.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -320,16 +320,16 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hbmp`  
+ [in] *hbmp*  
  El identificador para el mapa de bits para agregar.  
   
- [in] `bSetBitPerPixel`  
+ [in] *bSetBitPerPixel*  
  `TRUE` Si el `CMFCToolBarImages` objeto usa la intensidad de color (bits por píxel) de la nueva imagen; `FALSE` si la `CMFCToolbarImages` objeto mantiene la profundidad de color actual.  
   
- [in] `imageList`  
+ [in] *imageList*  
  Una referencia a un `CMFCToolbarImages` objeto que contiene la imagen que desea agregar.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  El índice en el origen de `CMFCToolbarImages` objeto de la imagen para agregar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -369,7 +369,7 @@ BOOL CopyImageToClipboard(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iImage`  
+ [in] *iImage*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -383,7 +383,7 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `imageList`  
+ [in] *imageList*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -397,7 +397,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `imageList`  
+ [in] *imageList*  
  La lista de imágenes que se usará como origen para imágenes de barra de herramientas.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -416,8 +416,8 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bmp`  
- [in] `clrTransparent`  
+ [in] *bmp*  
+ [in] *clrTransparent*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -431,7 +431,7 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iImage`  
+ [in] *iImage*  
  Especifica el índice de base cero de la imagen que desea eliminar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -455,34 +455,34 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `x`  
+ [in] *x*  
  La coordenada X del lado izquierdo del rectángulo donde es la imagen para dibujar.  
   
- [in] `y`  
+ [in] *y*  
  Coordenada Y de la parte superior del rectángulo donde es la imagen para dibujar.  
   
- [in] `iImageIndex`  
+ [in] *iImageIndex*  
  Índice de base cero de la imagen que se mostrará.  
   
- [in] `bHilite`  
+ [in] *bHilite*  
  `TRUE` Si la imagen es se van a resaltar; en caso contrario, `FALSE`.  
   
- [in] `bDisabled`  
+ [in] *bDeshabilitado*  
  `TRUE` Si la imagen es para dibujar en el estilo deshabilitado; en caso contrario, `FALSE`.  
   
- [in] `bIndeterminate`  
+ [in] *bIndeterminate*  
  `TRUE` Si la imagen es para dibujar en el estilo de estado indeterminado; en caso contrario, `FALSE`.  
   
- [in] `bShadow`  
+ [in] *bShadow*  
  `TRUE` Si la imagen es que se van a dibujar una sombra paralela; en caso contrario, `FALSE`.  
   
- [in] `bInactive`  
+ [in] *bInactive*  
  `TRUE` Si la imagen es para dibujar en el estilo de estado inactivo; en caso contrario, `FALSE`.  
   
- [in] `alphaSrc`  
+ [in] *alphaSrc*  
  El valor de canal alfa (opacidad). Un valor de 255 significa que la imagen es opaco dibujado. Un valor de 0 significa que la imagen se dibuja transparente. Este valor se usa solo para las imágenes de color de 32 bits y para las imágenes que muestra un estilo glass de Windows Vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -506,15 +506,15 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `rect`  
- [in] `iImageIndex`  
- [in] `horzAlign`  
- [in] `vertAlign`  
- [in] `rectSrc`  
- [in] `0`  
- [in] `0)`  
- [in] `alphaSrc`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *iImageIndex*  
+ [in] *horzAlign*  
+ [in] *vertAlign*  
+ [in] *rectSrc*  
+ [in] *0*  
+ [in] *0)*  
+ [in] *alphaSrc*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -528,7 +528,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -540,7 +540,7 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `ds`  
+ [in] *ds*  
  Una referencia a la `CAfxDrawState` objeto que se pasó a la `PrepareDrawImage` método.  
   
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
@@ -551,11 +551,11 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Índice de base cero en la lista de imágenes en el que se encuentra la imagen que deben extraerse como un icono.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un identificador para el icono extraído, o `NULL` si `nIndex` está fuera del intervalo.  
+ Un identificador para el icono extraído, o `NULL` si *nIndex* está fuera del intervalo.  
   
 ##  <a name="fillditheredrect"></a>  CMFCToolBarImages::FillDitheredRect  
  Rellena un rectángulo con los colores de fondo de la barra de herramientas.  
@@ -567,10 +567,10 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Las coordenadas de un rectángulo para rellenar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -629,7 +629,7 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bDest`  
+ [in] *bDest*  
  `TRUE` para recuperar el tamaño de destino; `FALSE` para recuperar el tamaño de la imagen de origen.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -705,7 +705,7 @@ HBITMAP GetMask(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iImage`  
+ [in] *iImage*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -719,7 +719,7 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiResId`  
+ [in] *uiResId*  
  Un identificador de recurso de imagen.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -744,14 +744,14 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nGrayImageLuminancePercentage`  
+ [in] *nGrayImageLuminancePercentage*  
  Porcentaje de luminancia.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si las imágenes de la colección se ha deshabilitado correctamente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método modifica las imágenes de barra de herramientas al calcular el promedio de los componentes rojos, verde y azules de cada píxel y multiplicando el resultado por `nGrayImageLuminancePercentage` dividido por 100. Si `nGrayImageLuminancePercentage` es cero o negativo, el valor predeterminado de 130 se utiliza en su lugar.  
+ Este método modifica las imágenes de barra de herramientas al calcular el promedio de los componentes rojos, verde y azules de cada píxel y multiplicando el resultado por *nGrayImageLuminancePercentage* dividido por 100. Si *nGrayImageLuminancePercentage* es cero o negativo, el valor predeterminado de 130 se utiliza en su lugar.  
   
 > [!NOTE]
 >  Si desea deshacer el cambio, debe volver a cargar las imágenes desde el origen. Puede hacerlo mediante una llamada a [CMFCToolBarImages::Load](#load) o [CMFCToolBarImages::UpdateImage](#updateimage) (sólo para definido por el usuario imágenes), o mediante una llamada a [CMFCToolBarImages::Clear](#clear)y agregar las imágenes de nuevo mediante una llamada a [CMFCToolBarImages::AddIcon](#addicon) o [CMFCToolBarImages::AddImage](#addimage).  
@@ -844,19 +844,19 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiResID`  
+ [in] *uiResID*  
  El identificador de un recurso de mapa de bits.  
   
- [in] `hinstRes`  
+ [in] *hinstRes*  
  Una instancia de la DLL de recursos.  
   
- [in] `bAdd`  
+ [in] *bAgregar*  
  `TRUE` Para agregar el mapa de bits cargada en el mapa de bits existente, o `FALSE` para reemplazar el mapa de bits existente.  
   
- [in] `lpszBmpFileName`  
+ [in] *lpszBmpFileName*  
  Una ruta de acceso a un archivo de disco desde donde cargar el mapa de bits.  
   
- [in] `nMaxFileSize`  
+ [in] *nMaxFileSize*  
  Número máximo de bytes en el archivo de mapa de bits; o 0 para cargar el mapa de bits independientemente del tamaño del archivo. Si el tamaño del archivo supera este tamaño máximo, el método devuelve `FALSE` y no se carga el mapa de bits.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -876,9 +876,9 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszResourceName`  
- [in] `hinstRes`  
- [in] `bAdd`  
+ [in] *lpszResourceName*  
+ [in] *hinstRes*  
+ [in] *bAgregar*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -894,8 +894,8 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `color`  
- [in] `bUseRGBQUAD`  
+ [in] *color*  
+ [in] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -912,9 +912,9 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bUseRGBQUAD`  
- [in] `clrSrc`  
- [in] `clrDest`  
+ [in] *bUseRGBQUAD*  
+ [in] *clrSrc*  
+ [in] *clrDest*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -930,8 +930,8 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `color`  
- [in] `bUseRGBQUAD`  
+ [in] *color*  
+ [in] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -945,7 +945,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `color`  
+ [in] *color*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -974,10 +974,10 @@ static BOOL MirrorBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] `hbmp`  
+ [entrada, salida] *hbmp*  
  Identificador del mapa de bits para reflejar.  
   
- [in] `cxImage`  
+ [in] *cxImage*  
  Ancho de la imagen en píxeles.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -996,8 +996,8 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hbmp`  
- [in] `cyImage`  
+ [in] *hbmp*  
+ [in] *cyImage*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -1035,8 +1035,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hbmp`  
- [in] `bAutoCheckPremlt`  
+ [in] *hbmp*  
+ [in] *bAutoCheckPremlt*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -1066,13 +1066,13 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `ds`  
+ [in] *ds*  
  Una referencia a `CAfxDrawState` estructura que almacena los recursos asignados entre fases de procesamiento de imagen.  
   
- [in] `sizeImageDest`  
+ [in] *sizeImageDest*  
  Especifica el tamaño de una imagen de destino.  
   
- [in] `bFadeInactive`  
+ [in] *bFadeInactive*  
  `TRUE` Si desea inactiva atenuado imágenes para dibujar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1089,14 +1089,14 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszBmpFileName`  
+ *lpszBmpFileName*  
  Una ruta de acceso a un archivo de disco.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si las imágenes de barra de herramientas se guardaron correctamente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para almacenar las imágenes definidas por el usuario en un archivo de disco. Si `lpszBmpFileName` es `NULL`, el método almacena el mapa de bits en el archivo desde el que se cargó el mapa de bits por la [CMFCToolBarImages::Load](#load) método.  
+ Llamar a este método para almacenar las imágenes definidas por el usuario en un archivo de disco. Si *lpszBmpFileName* es `NULL`, el método almacena el mapa de bits en el archivo desde el que se cargó el mapa de bits por la [CMFCToolBarImages::Load](#load) método.  
   
 ##  <a name="setalwayslight"></a>  CMFCToolBarImages::SetAlwaysLight  
 
@@ -1106,7 +1106,7 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bAlwaysLight`  
+ [in] *bAlwaysLight*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1118,7 +1118,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nValue`  
+ [in] *nvalor*  
  El nuevo valor del canal alfa.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1132,7 +1132,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nValue`  
+ [in] *nvalor*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1146,7 +1146,7 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `sizeImage`  
+ [in] *sizeImage*  
  El nuevo tamaño de imágenes de barra de herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1160,7 +1160,7 @@ void SetLightPercentage(int nValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nValue`  
+ [in] *nvalor*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1172,7 +1172,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bMapTo3DColors`  
+ [in] *bMapTo3DColors*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1184,7 +1184,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bAuto`  
+ [in] *bSelección*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1205,14 +1205,14 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  Un valor RGB.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El color transparente anterior.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando usted o el marco de trabajo llama a [CMFCToolBarImages::Draw](#draw), el método no dibuja cualquier píxel que coincida con el color especificado por `clrTransparent`.  
+ Cuando usted o el marco de trabajo llama a [CMFCToolBarImages::Draw](#draw), el método no dibuja cualquier píxel que coincida con el color especificado por *clrTransparent*.  
   
 ##  <a name="updateimage"></a>  CMFCToolBarImages::UpdateImage  
  Actualiza una imagen de la barra de herramientas definidas por el usuario de un mapa de bits.  
@@ -1224,10 +1224,10 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iImage`  
+ [in] *iImage*  
  Índice de base cero de la imagen para la actualización.  
   
- [in] `hbmp`  
+ [in] *hbmp*  
  Un identificador para el mapa de bits desde el que se va a actualizar la imagen.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1241,7 +1241,7 @@ BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `clrTransparent`  
+ *clrTransparent*  
  Especifica el color transparente de mapas de bits subrayado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1290,7 +1290,7 @@ BOOL SmoothResize(double dblImageScale);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dblImageScale`  
+ *dblImageScale*  
  Relación de escala.  
   
 ### <a name="return-value"></a>Valor devuelto  

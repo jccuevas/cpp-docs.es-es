@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f3672a3b78b1bf86c481b6991c003267e6b0bf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368864"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037439"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup (clase)
 La `CMFCRibbonButtonsGroup` clase le permite organizar un conjunto de botones de la cinta de opciones en un grupo. Todos los botones del grupo son directamente adyacentes a otros horizontalmente y se incluyen en un borde.  
@@ -106,7 +106,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a un botón para agregar.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
@@ -118,7 +118,7 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lstButtons`  
+ [in] *lstButtons*  
  Una lista de punteros a los botones que se va a agregar.  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
@@ -130,7 +130,7 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pButton`  
+ [in] *pButton*  
  Especifica un botón para agregar a la recién creado `CMFCRibbonButtonsGroup` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -145,7 +145,7 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `i`  
+ [in] *i*  
  Índice de base cero de un botón para devolver.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -183,7 +183,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero al contexto de dispositivo del grupo de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -214,16 +214,16 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero al contexto de dispositivo de la `CMFCRibbonButtonsGroup` objeto.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  El rectángulo en el que se va a dibujar la imagen.  
   
- [in] `pButton`  
+ [in] *pButton*  
  El botón para que se va a dibujar la imagen.  
   
- [in] `nImageIndex`  
+ [in] *nImageIndex*  
  El índice de la imagen para dibujar en el botón (en una de las matrices de tres imágenes para los botones normales, resaltadas o deshabilitados).  
   
 ### <a name="remarks"></a>Comentarios  
@@ -248,13 +248,13 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pImages`  
+ [in] *pImages*  
  Imágenes normales.  
   
- [in] `pHotImages`  
+ [in] *pHotImages*  
  Imágenes activas.  
   
- [in] `pDisabledImages`  
+ [in] *pDisabledImages*  
  Imágenes deshabilitadas.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -271,7 +271,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pCategory`  
+ [in] *pCategory*  
  Puntero a la categoría primaria para establecer (los grupos con pestañas en los controles de la cinta de opciones se denominan categorías).  
   
 ### <a name="remarks"></a>Comentarios  

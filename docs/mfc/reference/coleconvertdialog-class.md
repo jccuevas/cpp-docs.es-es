@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370294"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042526"
 ---
 # <a name="coleconvertdialog-class"></a>Clase de la clase COleConvertDialog
 Para obtener más información, consulte el [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) estructura en el SDK de Windows.  
@@ -110,10 +110,10 @@ explicit COleConvertDialog (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pItem`  
+ *pItem*  
  Apunta al elemento que desea convertir o activar.  
   
- `dwFlags`  
+ *dwFlags*  
  Indicador de creación, que contiene cualquier número de los valores siguientes combinada con el bit a bit- u operador:  
   
 - **CF_SELECTCONVERTTO** especifica que el botón de radio convertir a se seleccionará inicialmente cuando se llama el cuadro de diálogo. Este es el valor predeterminado.  
@@ -126,10 +126,10 @@ explicit COleConvertDialog (
   
 - **CF_SHOWHELPBUTTON** especifica que el botón de ayuda se mostrará cuando se llama el cuadro de diálogo.  
   
- `pClassID`  
- Señala el CLSID del elemento que se pueden convertir o activar. Si **NULL**, **CLSID** asociada `pItem` se usará.  
+ *pClassID*  
+ Señala el CLSID del elemento que se pueden convertir o activar. Si **NULL**, **CLSID** asociada *pItem* se usará.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Señala al objeto de ventana primaria o propietaria (de tipo `CWnd`) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, la ventana primaria del cuadro de diálogo se establece en la ventana de la aplicación principal.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -145,7 +145,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pItem`  
+ *pItem*  
  Apunta al elemento que desea convertir o activar. No puede ser **NULL**.  
   
 ### <a name="return-value"></a>Valor devuelto  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374375"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040917"
 ---
 # <a name="colebusydialog-class"></a>Clase de la clase COleBusyDialog
 Se utiliza en los cuadros de diálogo que indican que el servidor OLE no responde o el servidor está ocupado.  
@@ -107,7 +107,7 @@ explicit COleBusyDialog(
  *bNotResponding*  
  Si **TRUE**, llamar el cuadro de diálogo no responde en lugar del cuadro de diálogo servidor ocupado. El texto en el cuadro de diálogo no responde es ligeramente diferente que el texto en el cuadro de diálogo servidor ocupado y el botón Cancelar está deshabilitado.  
   
- `dwFlags`  
+ *dwFlags*  
  Indicador de creación. Puede contener cero o más de los siguientes valores que se combina con el operador OR bit a bit:  
   
 - **BZ_DISABLECANCELBUTTON** deshabilitar el botón de cancelación cuando el cuadro de diálogo de llamada.  
@@ -116,7 +116,7 @@ explicit COleBusyDialog(
   
 - **BZ_DISABLERETRYBUTTON** deshabilitar el botón de reintento cuando se llama el cuadro de diálogo.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Señala al objeto de ventana primaria o propietaria (de tipo `CWnd`) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, la ventana primaria del objeto de cuadro de diálogo se establece en la ventana de la aplicación principal.  
   
 ### <a name="remarks"></a>Comentarios  

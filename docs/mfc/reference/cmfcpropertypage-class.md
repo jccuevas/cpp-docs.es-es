@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366647"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042087"
 ---
 # <a name="cmfcpropertypage-class"></a>Clase CMFCPropertyPage
 La `CMFCPropertyPage` clase admite la visualización de los menús emergentes en una página de propiedades.  
@@ -88,13 +88,13 @@ CMFCPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDTemplate`  
+ *nIDTemplate*  
  Id. de recurso de la plantilla para esta página.  
   
- `nIDCaption`  
+ *nIDCaption*  
  Id. de recurso de la etiqueta se incluirán en la ficha para esta página. Si es 0, se obtiene el nombre de la plantilla de cuadro de diálogo para esta página. El valor predeterminado es 0.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Señala al nombre de la plantilla para esta página. No puede ser `NULL`.  
   
 ### <a name="return-value"></a>Valor devuelto  

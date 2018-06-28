@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a636b07b73da6ded6fb1646b7efa30b4685e55ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7df4ea13313758c517188e1c4ce0441618a99b4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377673"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039074"
 ---
 # <a name="coleserverdoc-class"></a>Clase COleServerDoc
 La clase base para los documentos de servidor OLE.  
@@ -237,7 +237,7 @@ virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentWnd`  
+ *pParentWnd*  
  Puntero a la ventana primaria de la aplicación contenedora.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -269,7 +269,7 @@ virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pFrameWnd`  
+ *pFrameWnd*  
  Puntero a la ventana de marco en contexto a ser destruidos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -306,7 +306,7 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDocSite`  
+ *pDocSite*  
  Puntero a la `IOleDocumentSite` interfaz que se conectará este documento en el servidor.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -340,7 +340,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpClipRect`  
+ *lpClipRect*  
  Puntero a un `RECT` estructura o un `CRect` objeto que recibe las coordenadas del rectángulo de recorte del elemento.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -356,7 +356,7 @@ void GetItemPosition(LPRECT lpPosRect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpPosRect`  
+ *lpPosRect*  
  Puntero a un `RECT` estructura o un `CRect` objeto que recibe las coordenadas del elemento.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -381,7 +381,7 @@ BOOL GetZoomFactor(
  *lpSizeDenom*  
  Puntero a un objeto de clase `CSize` que contendrá el denominador del factor de zoom. Puede ser **NULL**.  
   
- `lpPosRect`  
+ *lpPosRect*  
  Puntero a un objeto de clase `CRect` que describe la posición del elemento nuevo. Si este argumento es **NULL**, la función utiliza la posición del elemento actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -456,7 +456,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszNewName`  
+ *lpszNewName*  
  Puntero a una cadena que especifica el nuevo nombre del documento del servidor; por lo general, suele ser una ruta de acceso completa.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -480,7 +480,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwCloseOption`  
+ *dwCloseOption*  
  Un valor de la enumeración `OLECLOSE`. Este parámetro puede tener uno de los valores siguientes:  
   
 - `OLECLOSE_SAVEIFDIRTY` Si se ha modificado, se guarda el archivo.  
@@ -516,13 +516,13 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bUndoable`  
+ *bUndoable*  
  Especifica si se pueden deshacer los cambios de edición.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función restaura a su estado original, ocultar los menús y otros controles que se crearon para la activación en contexto de interfaz de usuario de la aplicación contenedora.  
   
- El marco de trabajo siempre establece `bUndoable` a **FALSE**. Si el servidor permite deshacer y hay una operación que se puede deshacer, llame a la implementación de clase base con `bUndoable` establecido en **TRUE**.  
+ El marco de trabajo siempre establece *bUndoable* a **FALSE**. Si el servidor permite deshacer y hay una operación que se puede deshacer, llame a la implementación de clase base con *bUndoable* establecido en **TRUE**.  
   
 ##  <a name="ondocwindowactivate"></a>  COleServerDoc::OnDocWindowActivate  
  El marco de trabajo llama a esta función para activar o desactivar una ventana de documento para su edición en contexto.  
@@ -532,7 +532,7 @@ virtual void OnDocWindowActivate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bActivate`  
+ *bActivate*  
  Especifica si la ventana de documento está activado o desactivado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -553,11 +553,11 @@ virtual HRESULT OnExecOleCmd(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  Un puntero a un GUID que identifica un conjunto de comandos. Puede ser **NULL** para indicar el grupo de comandos de manera predeterminada.  
   
- `nCmdID`  
- El comando que se va a ejecutar. Debe estar en el grupo identificado por `pguidCmdGroup`.  
+ *nCmdID*  
+ El comando que se va a ejecutar. Debe estar en el grupo identificado por *pguidCmdGroup*.  
   
  *nCmdExecOut*  
  La forma en el objeto debe ejecutar el comando, uno o varios de los siguientes valores de la **OLECMDEXECOPT** enumeración:  
@@ -570,10 +570,10 @@ virtual HRESULT OnExecOleCmd(
   
  **OLECMDEXECOPT_SHOWHELP**  
   
- `pvarargIn`  
+ *pVarArgIn Expresión*  
  Puntero a un **VARIANTARG** que contiene los argumentos de entrada para el comando. Puede ser **NULL**.  
   
- `pvarargOut`  
+ *pvarargOut*  
  Puntero a un **VARIANTARG** para recibir los valores devueltos de la salida del comando. Puede ser **NULL**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -584,10 +584,10 @@ virtual HRESULT OnExecOleCmd(
 |**E_UNEXPECTED**|Se produjo un error inesperado|  
 |**E_FAIL**|Se produjo el error|  
 |**E_NOTIMPL**|Indica MFC propio debería intentar traducir y envía el comando|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` no es **NULL** pero no especifica un grupo de comandos reconocido|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` no se reconoce como un comando válido en el grupo `pguidCmdGroup`|  
-|**OLECMDERR_DISABLED**|El comando identificado por `nCmdID` está deshabilitado y no se puede ejecutar|  
-|**OLECMDERR_NOHELP**|Autor de la llamada más frecuentes para obtener ayuda sobre el comando identificado por `nCmdID` , pero no hay ayuda disponible|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup* no es **NULL** pero no especifica un grupo de comandos reconocido|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID* no se reconoce como un comando válido en el grupo *pguidCmdGroup*|  
+|**OLECMDERR_DISABLED**|El comando identificado por *nCmdID* está deshabilitado y no se puede ejecutar|  
+|**OLECMDERR_NOHELP**|Autor de la llamada más frecuentes para obtener ayuda sobre el comando identificado por *nCmdID* , pero no hay ayuda disponible|  
 |**OLECMDERR_CANCELED**|El usuario canceló la ejecución|  
   
 ### <a name="remarks"></a>Comentarios  
@@ -595,11 +595,11 @@ virtual HRESULT OnExecOleCmd(
   
  El marco de trabajo llama a la función antes de intentar traducir y envía un comando de documentos OLE. No es necesario anular esta función para controlar los comandos de documento estándar de OLE, pero debe proporcionar una invalidación para esta función si desea administrar sus propios comandos personalizados o controlar los comandos que aceptan parámetros o devuelven resultados.  
   
- La mayoría de los comandos no aceptan argumentos o valores devueltos. Para la mayoría de los comandos que el llamador pueda pasar **NULL**para ver si `pvarargIn` y `pvarargOut`. Para los comandos que esperan que los valores de entrada, el llamador puede declarar e inicializar un **VARIANTARG** variable y pasar un puntero a la variable en `pvarargIn`. Para los comandos que requieren un valor único, se puede almacenar directamente en el argumento de la **VARIANTARG** y pasa a la función. Se deben empaquetar varios argumentos dentro de la **VARIANTARG** mediante uno de los tipos admitidos (como `IDispatch` y **SAFEARRAY** ).  
+ La mayoría de los comandos no aceptan argumentos o valores devueltos. Para la mayoría de los comandos que el llamador pueda pasar **NULL**para ver si *pVarArgIn Expresión* y *pvarargOut*. Para los comandos que esperan que los valores de entrada, el llamador puede declarar e inicializar un **VARIANTARG** variable y pasar un puntero a la variable en *pVarArgIn Expresión*. Para los comandos que requieren un valor único, se puede almacenar directamente en el argumento de la **VARIANTARG** y pasa a la función. Se deben empaquetar varios argumentos dentro de la **VARIANTARG** mediante uno de los tipos admitidos (como `IDispatch` y **SAFEARRAY** ).  
   
- De forma similar, si un comando devuelve argumentos el llamador debe declarar un **VARIANTARG**, inicialícela en `VT_EMPTY`y pasa su dirección en `pvarargOut`. Si un comando devuelve un valor único, puede almacenar el valor directamente en el objeto `pvarargOut`. Se deben empaquetar varios valores de salida de alguna manera adecuada para la **VARIANTARG**.  
+ De forma similar, si un comando devuelve argumentos el llamador debe declarar un **VARIANTARG**, inicialícela en `VT_EMPTY`y pasa su dirección en *pvarargOut*. Si un comando devuelve un valor único, puede almacenar el valor directamente en el objeto *pvarargOut*. Se deben empaquetar varios valores de salida de alguna manera adecuada para la **VARIANTARG**.  
   
- La implementación de la clase base de esta función recorrerá la **OLE_COMMAND_MAP** estructuras asociadas con el destino del comando y vuelva a enviar el comando a un controlador adecuado. La implementación de clase base solo funciona con los comandos que no aceptan argumentos o valores devueltos. Si tiene que controlar los comandos que acepte argumentos o valores devueltos, debe anular esta función y trabajar con la `pvarargIn` y `pvarargOut` parámetros usted mismo.  
+ La implementación de la clase base de esta función recorrerá la **OLE_COMMAND_MAP** estructuras asociadas con el destino del comando y vuelva a enviar el comando a un controlador adecuado. La implementación de clase base solo funciona con los comandos que no aceptan argumentos o valores devueltos. Si tiene que controlar los comandos que acepte argumentos o valores devueltos, debe anular esta función y trabajar con la *pVarArgIn Expresión* y *pvarargOut* parámetros usted mismo.  
   
 ##  <a name="onframewindowactivate"></a>  COleServerDoc::OnFrameWindowActivate  
  El marco de trabajo llama a esta función cuando se activa o desactiva la ventana de marco de la aplicación contenedora.  
@@ -609,7 +609,7 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bActivate`  
+ *bActivate*  
  Especifica si la ventana de marco está activado o desactivado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -656,14 +656,14 @@ virtual void OnResizeBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpRectBorder`  
+ *lpRectBorder*  
  Puntero a un `RECT` estructura o un `CRect` objeto que especifica las coordenadas del borde.  
   
- `lpUIWindow`  
+ *lpUIWindow*  
  Puntero a un objeto de clase **IOleInPlaceUIWindow** que posee la sesión de edición en contexto actual.  
   
  *bFrame*  
- **TRUE** si `lpUIWindow` apunta a la ventana de marco de nivel superior de la aplicación contenedora, o **FALSE** si `lpUIWindow` apunta a la ventana de marco de nivel de documento de la aplicación contenedora.  
+ **TRUE** si *lpUIWindow* apunta a la ventana de marco de nivel superior de la aplicación contenedora, o **FALSE** si *lpUIWindow* apunta al contenedor ventana de marco de nivel de documento de la aplicación.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función cambia el tamaño y ajusta las barras de herramientas y otros elementos de interfaz de usuario según el nuevo tamaño de ventana.  
@@ -682,10 +682,10 @@ virtual void OnSetHostNames(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszHost`  
+ *lpszHost*  
  Puntero a una cadena que especifica el nombre de la aplicación contenedora.  
   
- `lpszHostObj`  
+ *lpszHostObj*  
  Puntero a una cadena que especifica el nombre del contenedor para el documento.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -703,10 +703,10 @@ virtual void OnSetItemRects(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpPosRect`  
+ *lpPosRect*  
  Puntero a un `RECT` estructura o un `CRect` objeto que especifica la posición de la ventana de marco en contexto con respecto al área de cliente de la aplicación contenedora.  
   
- `lpClipRect`  
+ *lpClipRect*  
  Puntero a un `RECT` estructura o un `CRect` objeto que especifica el rectángulo de recorte de la ventana de marco en contexto con respecto al área de cliente de la aplicación contenedora.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -715,7 +715,7 @@ virtual void OnSetItemRects(
  Esta función normalmente se llama en respuesta a un `RequestPositionChange` llame, aunque puede llamarse en cualquier momento mediante el contenedor para solicitar un cambio en la posición del elemento en el contexto.  
   
 ##  <a name="onshowcontrolbars"></a>  COleServerDoc::OnShowControlBars  
- El marco de trabajo llama a esta función para mostrar u ocultar las barras de control de la aplicación de servidor asociadas a la ventana de marco identificada por `pFrameWnd`.  
+ El marco de trabajo llama a esta función para mostrar u ocultar las barras de control de la aplicación de servidor asociadas a la ventana de marco identificada por *pFrameWnd*.  
   
 ```  
 virtual void OnShowControlBars(
@@ -724,10 +724,10 @@ virtual void OnShowControlBars(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pFrameWnd`  
+ *pFrameWnd*  
  Puntero a la ventana de marco cuyas barras de control deben estar ocultados o se muestra.  
   
- `bShow`  
+ *bMostrar*  
  Determina si las barras de control se mostrarse u ocultas.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -741,11 +741,11 @@ virtual void OnShowDocument(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bShow`  
+ *bMostrar*  
  Especifica si la interfaz de usuario para el documento se pueden mostrar u ocultar.  
   
 ### <a name="remarks"></a>Comentarios  
- Si `bShow` es **TRUE**, la implementación predeterminada activa la aplicación de servidor, si es necesario y hace que la aplicación de contenedor que se desplaza de su ventana para que el elemento está visible. Si `bShow` es **FALSE**, la implementación predeterminada desactiva el elemento a través de una llamada a `OnDeactivate`, a continuación, destruye u oculta todas las ventanas de marco que se han creado para el documento, excepto la primera de ellas. Si no queda ningún documento visible, la implementación predeterminada oculta la aplicación de servidor.  
+ Si *bMostrar* es **TRUE**, la implementación predeterminada activa la aplicación de servidor, si es necesario y hace que la aplicación de contenedor que se desplaza de su ventana para que el elemento está visible. Si *bMostrar* es **FALSE**, la implementación predeterminada desactiva el elemento a través de una llamada a `OnDeactivate`, a continuación, destruye u oculta todas las ventanas de marco que se han creado para el documento, excepto el primero uno. Si no queda ningún documento visible, la implementación predeterminada oculta la aplicación de servidor.  
   
 ##  <a name="onupdatedocument"></a>  COleServerDoc::OnUpdateDocument  
  Lo llama el marco al guardar un documento que es un elemento incrustado en un documento compuesto.  
@@ -768,7 +768,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpPosRect`  
+ *lpPosRect*  
  Puntero a un `RECT` estructura o un `CRect` objeto que contiene la posición del elemento nuevo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -792,7 +792,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `sizeScroll`  
+ *sizeScroll*  
  Indica la diferencia entre el documento contenedor desplazarse.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -813,16 +813,16 @@ void UpdateAllItems(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pSender`  
+ *pSender*  
  Puntero al elemento que se modificó el documento, o **NULL** si todos los elementos que se van a actualizarse.  
   
- `lHint`  
+ *lHint*  
  Contiene información sobre la modificación.  
   
- `pHint`  
+ *pHint*  
  Puntero a un objeto que almacena información sobre la modificación.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Determina cuál se dibuja el elemento. Se trata de un valor comprendido entre el `DVASPECT` enumeración. Este parámetro puede tener uno de los valores siguientes:  
   
 - `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
@@ -836,7 +836,7 @@ void UpdateAllItems(
 ### <a name="remarks"></a>Comentarios  
  Se suele llamar a esta función cuando el usuario cambie el documento de servidor. Si un elemento OLE está vinculado al documento con un vínculo automático, el elemento se actualiza para reflejar los cambios. En aplicaciones de contenedor escritas con la biblioteca Microsoft Foundation Class, el [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) función miembro de `COleClientItem` se llama.  
   
- Esta función llama a la `OnUpdate` función de miembro para cada uno de los elementos del documento excepto el envío, pasar `pHint`, `lHint`, y `nDrawAspect`. Use estos parámetros para pasar información a los elementos sobre las modificaciones realizadas en el documento. Puede codificar información mediante `lHint` o puede definir un `CObject`-clase derivada para almacenar información sobre las modificaciones y pasar un objeto de esa clase mediante `pHint`. Invalidar el `OnUpdate` función miembro en su `COleServerItem`-clase derivada para optimizar la actualización de cada elemento dependiendo de si ha cambiado su presentación.  
+ Esta función llama a la `OnUpdate` función de miembro para cada uno de los elementos del documento excepto el envío, pasar *pHint*, *lHint*, y *nDrawAspect*. Use estos parámetros para pasar información a los elementos sobre las modificaciones realizadas en el documento. Puede codificar información mediante *lHint* o puede definir un `CObject`-clase derivada para almacenar información sobre las modificaciones y pasar un objeto de esa clase mediante *pHint*. Invalidar el `OnUpdate` función miembro en su `COleServerItem`-clase derivada para optimizar la actualización de cada elemento dependiendo de si ha cambiado su presentación.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo HIERSVR](../../visual-cpp-samples.md)   

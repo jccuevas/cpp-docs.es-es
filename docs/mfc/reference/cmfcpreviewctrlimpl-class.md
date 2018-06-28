@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370417"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040082"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Clase CMFCPreviewCtrlImpl
 Esta clase implementa una ventana que se coloca en una ventana host proporcionada por el Shell de vista previa avanzada.  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hWndParent`  
+ *hWndParent*  
  Un identificador a la ventana host proporcionada por el Shell de vista previa avanzada.  
   
- `prc`  
+ *República Popular China*  
  Especifica el tamaño inicial y la posición de la ventana.  
   
- `pContext`  
+ *pContext*  
  Un puntero a un contexto de creación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Un puntero a un contexto de dispositivo para dibujar.  
 
 
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDocument`  
+ *pDocument*  
  Un puntero a la implementación del documento.  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,7 +261,7 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hWndParent`  
+ *hWndParent*  
  Un identificador a la nueva ventana primaria.  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `clrBack`  
+ *clrBack*  
  Color de fondo de la ventana de vista previa.  
   
- `clrText`  
+ *clrText*  
  Color del texto de la ventana de vista previa.  
   
- `plf`  
+ *PLF*  
  Fuente utilizada para mostrar texto en la ventana de vista previa. 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,10 +300,10 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `prc`  
+ *República Popular China*  
  Especifica el nuevo tamaño y la posición del control de vista previa.  
   
- `bRedraw`  
+ *bRedraw*  
  Especifica si el control debe volver a dibujar.  
   
 ### <a name="remarks"></a>Comentarios  

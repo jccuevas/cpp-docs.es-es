@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f59822504e317ee43ad7fb84345fa616fe72fae
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369195"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038437"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Clase CMFCRibbonStatusBarPane
 La `CMFCRibbonStatusBarPane` clase implementa un elemento de la cinta de opciones que puede agregar a una barra de estado de la cinta de opciones.  
@@ -136,31 +136,31 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nCmdID`  
+ [in] *nCmdID*  
  Especifica el identificador de comando del panel.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Especifica la cadena de texto que se mostrará en el panel.  
   
- [in] `bIsStatic`  
+ [in] *bIsStatic*  
  Si `TRUE`, el panel de estado no puede ser resaltado o seleccionado haciendo clic en él.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Especifica un identificador de un icono que se mostrará en el panel.  
   
- [in] `lpszAlmostLargeText`  
+ [in] *lpszAlmostLargeText*  
  Especifica la cadena de texto más larga que puede mostrarse en el panel.  
   
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  Especifica un identificador de una lista de imágenes que se usa para ver la animación.  
   
- [in] `cxAnimation`  
+ [in] *cxAnimation*  
  Especifica el ancho, en píxeles, del icono en la lista de imágenes que se usa para ver la animación.  
   
- [in] `clrTrnsp`  
+ [in] *clrTrnsp*  
  Especifica el color transparente de las imágenes en la lista de imágenes que se usan para la animación.  
   
- [in] `uiAnimationListResID`  
+ [in] *uiAnimationListResID*  
  Especifica un identificador de recurso de una lista de imágenes que se usa para ver la animación.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
@@ -217,7 +217,7 @@ virtual void OnDrawBorder(CDC*);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `CDC*`  
+ [in] *CDC**  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -229,7 +229,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -253,11 +253,11 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszAlmostLargeText`  
+ [in] *lpszAlmostLargeText*  
  Especifica la cadena más larga que se pueden mostrar en el panel de la barra de estado sin truncamiento.  
   
 ### <a name="remarks"></a>Comentarios  
- La biblioteca calcula el tamaño del texto que `lpszAlmostLargeText` especifica y cambia el tamaño del panel en consecuencia. El texto se truncará si todavía no se ajusta en el panel.  
+ La biblioteca calcula el tamaño del texto que *lpszAlmostLargeText* especifica y cambia el tamaño del panel en consecuencia. El texto se truncará si todavía no se ajusta en el panel.  
   
 ##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  En el panel de la barra de estado se asocia una lista de imágenes que se puede usar para ver la animación.  
@@ -275,16 +275,16 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  Especifica un identificador de una lista de imágenes.  
   
- [in] `cxAnimation`  
+ [in] *cxAnimation*  
  Especifica el ancho, en píxeles, del marco en la lista de imágenes.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  Especifica el color transparente de la lista de imágenes.  
   
- [in] `uiAnimationListResID`  
+ [in] *uiAnimationListResID*  
  Especifica el identificador de recurso de la lista de imágenes.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -298,11 +298,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nAlign`  
+ [in] *nAlign*  
  Especifica la alineación del texto.  
   
 ### <a name="remarks"></a>Comentarios  
- `nAlign` Puede tener uno de los siguientes valores:  
+ *nAlign* puede tener uno de los siguientes valores:  
   
 - `TA_LEFT`: la alineación izquierda  
   
@@ -320,10 +320,10 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nFrameDelay`  
+ [in] *nFrameDelay*  
  Especifica la velocidad de fotogramas de animación, en milisegundos.  
   
- [in] `nDuration`  
+ [in] *nDuration*  
  Especifica cuánto tiempo debe reproducir la animación, en milisegundos. Utilice -1 para un bucle infinito.  
   
 ### <a name="remarks"></a>Comentarios  

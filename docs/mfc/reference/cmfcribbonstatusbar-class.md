@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0257370e69c5304c4d945087f2a8c5694da4aa03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 256dbd6978b2d25cebb8496b6aa71763356f3637
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374670"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038108"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Clase CMFCRibbonStatusBar
 La `CMFCRibbonStatusBar` clase implementa un control de barra de estado que puede mostrar los elementos de la cinta de opciones.  
@@ -149,7 +149,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pElement`  
+ [in] *pElement*  
  Un puntero a un elemento dinámico.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -166,13 +166,13 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pElement`  
+ [in] *pElement*  
  Un puntero al elemento agregado.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Una etiqueta de texto del elemento.  
   
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` Si desea agregar el elemento como visible, `FALSE` si desea agregar el elemento como ocultos.  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
@@ -186,13 +186,13 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pElement`  
+ [in] *pElement*  
  Un puntero al elemento agregado.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  La etiqueta de texto del elemento.  
   
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` Si desea agregar el elemento como visible, `FALSE` si desea agregar el elemento como ocultos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -219,13 +219,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Un puntero a la ventana primaria.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Combinación OR lógica de estilos de control.  
   
- [in] `nID`  
+ [in] *nID*  
  Id. de control de la barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -243,16 +243,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana primaria.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Combinación OR lógica de estilos adicionales para crear el objeto de barra de estado.  
   
- `dwStyle`  
+ *dwStyle*  
  El estilo del control de la barra de estado.  
   
- `nID`  
+ *nID*  
  Id. de control de la barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiCmdID`  
- [in] `BOOL`  
+ [in] *uiCmdID*  
+ [in] *BOOL*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -281,7 +281,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiID`  
+ [in] *uiID*  
  El identificador del elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -305,7 +305,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica un índice de base cero de un elemento que se encuentra en el área principal de control de la barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -331,11 +331,11 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Especifica el índice basado en cero de un elemento ubicado en el área extendida del control de barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Puntero al elemento ubicado en el índice especificado en el área extendida de la barra de estado de la cinta. `NULL` si `nIndex` es negativo o supera el número de elementos del área extendida de la barra de estado de la cinta.  
+ Puntero al elemento ubicado en el índice especificado en el área extendida de la barra de estado de la cinta. `NULL` Si *nIndex* es negativo o supera el número de elementos en el área extendida de la barra de estado de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -347,7 +347,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -383,7 +383,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pElement`  
+ [in] *pElement*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -413,17 +413,17 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `strInfo`  
+ [in] *strInfo*  
  La cadena de información.  
   
- [in] `rectInfo`  
+ [in] *rectInfo*  
  El rectángulo delimitador.  
   
 ### <a name="remarks"></a>Comentarios  
- Invalide este método en una clase derivada si desea personalizar la apariencia de la cadena de información en la barra de estado. Use la [CMFCRibbonStatusBar::SetInformation](#setinformation) método para poner la barra de estado en modo de información. En este modo, la barra de estado oculta todos los paneles y muestra la cadena de la información especificada por `strInfo`.  
+ Invalide este método en una clase derivada si desea personalizar la apariencia de la cadena de información en la barra de estado. Use la [CMFCRibbonStatusBar::SetInformation](#setinformation) método para poner la barra de estado en modo de información. En este modo, la barra de estado oculta todos los paneles y muestra la cadena de la información especificada por *strInfo*.  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -449,11 +449,11 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiID`  
+ [in] *uiID*  
  Identificador del elemento que se va a quitar de la barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si un elemento con los valores especificados `uiID` se quita. En caso contrario, es `FALSE`.  
+ `TRUE` Si un elemento con los valores especificados *uiID* se quita. En caso contrario, es `FALSE`.  
   
 ##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
  Habilita o deshabilita el modo de obtener información de la barra de estado de la cinta de opciones.  
@@ -463,11 +463,11 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszInfo`  
+ [in] *lpszInfo*  
  La cadena de información.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice este método para colocar la barra de estado en el modo de obtener información. En este modo, la barra de estado oculta todos los paneles y muestra la cadena de la información especificada por `lpszInfo`.  
+ Utilice este método para colocar la barra de estado en el modo de obtener información. En este modo, la barra de estado oculta todos los paneles y muestra la cadena de la información especificada por *lpszInfo*.  
   
  Cuando es lpszInfo `NULL`, la barra de estado se vuelve al modo normal.  
   

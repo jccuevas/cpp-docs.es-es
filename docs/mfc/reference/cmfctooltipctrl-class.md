@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09a701498b47957f64558fe42408ff64351c238b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74efac50304554af3224b8b707b29a31248143f6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372961"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042074"
 ---
 # <a name="cmfctooltipctrl-class"></a>Clase CMFCToolTipCtrl
 Implementación extendida de información sobre herramientas basada en [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Una información sobre herramientas basada en la clase `CMFCToolTipCtrl` puede mostrar un icono, una etiqueta y una descripción. Puede personalizar su apariencia visual mediante un relleno de degradado, colores de texto y bordes personalizados, texto en negrita, esquinas redondeadas o un estilo de globo.  
@@ -169,7 +169,7 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParams`  
+ [in] *pParams*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -204,13 +204,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `[in] pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- `[in] rect`  
+ [in] *rect*  
  El rectángulo delimitador de la información sobre herramientas.  
   
- `[in] clrLine`  
+ [in] *clrLine*  
  Color del borde.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -227,9 +227,9 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `rect`  
- [in] `bCalcOnly`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -245,10 +245,10 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Coordenadas del icono.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -268,13 +268,13 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `[in] pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- `[in] rect`  
+ [in] *rect*  
  Rectángulo delimitador del área de etiqueta.  
   
- `[in] bCalcOnly`  
+ [in] *bCalcOnly*  
  Si `TRUE`, no se dibujará la etiqueta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -295,16 +295,16 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `x1`  
+ [in] *x1*  
  Coordenada horizontal del extremo izquierdo del separador.  
   
- [in] `x2`  
+ [in] *x2*  
  Coordenada horizontal del extremo derecho del separador.  
   
- [in] `Y`  
+ [in] *Y*  
  Coordenada vertical del separador.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -324,20 +324,20 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `[in] pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- `[in] rect`  
+ [in] *rect*  
  Especifica el rectángulo delimitador del área que desea rellenar.  
   
- `[in] clrText`  
+ [in] *clrText*  
  Color de primer plano de información sobre herramientas.  
   
- `[in] clrLine`  
+ [in] *clrLine*  
  Color de los bordes y la línea de delimitador entre etiqueta y una descripción.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada rellena el rectángulo especificado por `rect` con el color o el patrón especificado por la llamada más reciente a [CMFCToolTipCtrl::SetParams](#setparams).  
+ La implementación predeterminada rellena el rectángulo especificado por *rect* con el color o el patrón especificado por la llamada más reciente a [CMFCToolTipCtrl::SetParams](#setparams).  
   
  Invalide este método en una clase derivada si desea personalizar la apariencia de la información sobre herramientas.  
   
@@ -349,7 +349,7 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `[in] strDesrciption`  
+ [in] *strDesrciption*  
  Texto de descripción.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nWidthRegular`  
- [in] `nWidthLargeImage`  
+ [in] *nWidthRegular*  
+ [in] *nWidthLargeImage*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -378,7 +378,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pRibbonButton`  
+ [in] *pRibbonButton*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -390,7 +390,7 @@ void SetLocation(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pt`  
+ [in] *pt*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -402,11 +402,11 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `[in] pParams`  
+ [in] *pParams*  
  Puntero a un [CMFCToolTipInfo clase](../../mfc/reference/cmfctooltipinfo-class.md) objeto que contiene los parámetros de visualización.  
   
 ### <a name="remarks"></a>Comentarios  
- Cada vez que se muestra la información sobre herramientas, se dibuja utilizando los colores y estilos visual que `pParams` especifica. El valor de `pParams` se almacena en el miembro protegido `m_Params`, que se puede acceder mediante una clase derivada que invalide [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl::OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), o [CMFCToolTipCtrl::OnFillBackground](#onfillbackground) para mantener la apariencia especificada.  
+ Cada vez que se muestra la información sobre herramientas, se dibuja utilizando los colores y estilos visual que *pParams* especifica. El valor de *pParams* se almacena en el miembro protegido `m_Params`, que se puede acceder mediante una clase derivada que invalide [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), o [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)para mantener el aspecto especificado.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
