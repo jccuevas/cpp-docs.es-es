@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 857eb87caf42e39366e261ac92c3b2f289fb41d9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370512"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039380"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Clase CMFCRibbonFontComboBox
 Implementa un cuadro combinado que contiene una lista de fuentes. El cuadro combinado se coloca en un panel de la cinta.  
@@ -106,13 +106,13 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nFontType`  
+ [in] *nFontType*  
  Especifica el tipo de fuente de las fuentes para agregar.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Especifica el juego de caracteres de las fuentes para agregar.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Especifica el tono y la familia de las fuentes para agregar.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
@@ -128,25 +128,25 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nID`  
+ [in] *nID*  
  El identificador de comando del comando que se ejecuta cuando el usuario selecciona un elemento en el cuadro combinado.  
   
- [in] `nFontType`  
+ [in] *nFontType*  
  Especifica los tipos de fuente para mostrar en el cuadro combinado. Las opciones válidas son **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, y **TRUETYPE_FONTTYPE**, o cualquier combinación bit a bit de los anteriores.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Filtra las fuentes en el cuadro combinado a los que pertenecen al juego de caracteres especificado...  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Especifica el tono y la familia de las fuentes que se muestran en el cuadro combinado.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Especifica el ancho, en píxeles, del cuadro combinado.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información sobre los posibles `nFontType` valores de parámetros, vea [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) en la documentación del SDK de Windows.  
+ Para obtener más información sobre los posibles *nFontType* valores de parámetros, vea [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) en la documentación del SDK de Windows.  
   
- Para obtener más información acerca de los juegos de caracteres válidos que puede asignarse a `nCharSet`y los valores válidos que pueden asignarse a `nPitchAndFamily`, consulte [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) en la documentación del SDK de Windows.  
+ Para obtener más información acerca de los juegos de caracteres válidos que puede asignarse a *nCharSet*y los valores válidos que pueden asignarse a *nPitchAndFamily*, consulte [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) en el Documentación del SDK de Windows.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -156,7 +156,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iIndex`  
+ [in] *iÍndice*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -183,13 +183,13 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszName`  
+ ' lpszName *  
  Especifica el nombre de la fuente que se va a seleccionar.  
   
- `nCharSet`  
+ *nCharSet*  
  Especifica el juego de caracteres para la fuente seleccionada.  
   
- `bExact`  
+ *bExact*  
  `TRUE` para especificar que debe coincidir con el juego de caracteres al seleccionar una fuente; `FALSE` para especificar que se puede omitir el juego de caracteres cuando se selecciona una fuente.  
   
 ### <a name="return-value"></a>Valor devuelto  

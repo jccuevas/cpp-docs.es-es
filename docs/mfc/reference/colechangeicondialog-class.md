@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a67b1e405f1e3be472f9b9b3b5ebe00be3fb8a5d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375104"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041050"
 ---
 # <a name="colechangeicondialog-class"></a>Clase de la clase COleChangeIconDialog
 Se utiliza en el cuadro de diálogo Cambiar icono de OLE.  
@@ -100,10 +100,10 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pItem`  
+ *pItem*  
  Apunta al elemento que se va a convertir.  
   
- `dwFlags`  
+ *dwFlags*  
  Indicador de creación, que contiene cualquier número de los valores siguientes combinada con el bit a bit- u operador:  
   
 - **CIF_SELECTCURRENT** especifica que el botón de opción actual se seleccionará inicialmente cuando se llama el cuadro de diálogo. Este es el valor predeterminado.  
@@ -116,7 +116,7 @@ explicit COleChangeIconDialog(
   
 - **CIF_USEICONEXE** especifica que se debe extraer el icono del ejecutable especificado en el **szIconExe** campo de [m_ci](#m_ci) en lugar de recuperar del tipo. Esto es útil para incrustar o vincular a archivos no son compatibles con OLE.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Señala al objeto de ventana primaria o propietaria (de tipo `CWnd`) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, la ventana primaria del cuadro de diálogo se establecerá en la ventana de la aplicación principal.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -132,7 +132,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pItem`  
+ *pItem*  
  Apunta al elemento cuyo icono está cambiando.  
   
 ### <a name="return-value"></a>Valor devuelto  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371587"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040839"
 ---
 # <a name="cmultidoctemplate-class"></a>Clase CMultiDocTemplate
 Define una plantilla de documento que implementa la interfaz de múltiples documentos (MDI).  
@@ -85,7 +85,7 @@ CMultiDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDResource`  
+ *nIDResource*  
  Especifica el identificador de los recursos utilizados con el tipo de documento. Esto puede incluir menú, icono, tabla de aceleradores y recursos de cadena.  
   
  El recurso de cadena consta de hasta siete subcadenas separados por el carácter '\n' (se necesita el carácter '\n' como marcador de posición si no se incluye una subcadena; sin embargo, no son necesarios los caracteres finales '\n'); Estos subcadenas describen el tipo de documento. Para obtener información sobre las subcadenas, consulte [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Este recurso de cadena se encuentra en el archivo de recursos de la aplicación. Por ejemplo:  
@@ -104,13 +104,13 @@ CMultiDocTemplate(
   
  Para obtener más información acerca de estos tipos de recursos, consulte [editores de recursos](../../windows/resource-editors.md).  
   
- `pDocClass`  
- Apunta a la `CRuntimeClass` objeto de la clase de documento. Esta clase es un **CDocument**-deriva la clase que defina para representar los documentos.  
+ *pDocClass*  
+ Apunta a la `CRuntimeClass` objeto de la clase de documento. Esta clase es un `CDocument`-deriva la clase que defina para representar los documentos.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Apunta a la `CRuntimeClass` objeto de la clase de ventana de marco. Esta clase puede ser un `CMDIChildWnd`-clase derivada, o puede ser `CMDIChildWnd` si desea el comportamiento predeterminado para las ventanas de marco de documento.  
   
- `pViewClass`  
+ *pViewClass*  
  Apunta a la `CRuntimeClass` objeto de la clase de vista. Esta clase es un `CView`-deriva la clase que defina para mostrar los documentos.  
   
 ### <a name="remarks"></a>Comentarios  
