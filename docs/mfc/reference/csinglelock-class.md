@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 1ae72b7c9c2acf4fa8600903061869ba049cd58c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e969607e4017191539a0b0301b0c27ccb9f1ae
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372974"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078989"
 ---
 # <a name="csinglelock-class"></a>CSingleLock (clase)
 Representa el mecanismo de control de acceso utilizado para controlar el acceso a un recurso en un programa de multithreading.  
@@ -57,7 +57,7 @@ class CSingleLock
 ## <a name="remarks"></a>Comentarios  
  `CSingleLock` no tiene una clase base.  
   
- Para poder utilizar las clases de sincronización [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), y [CEvent](../../mfc/reference/cevent-class.md), debe crear un `CSingleLock` o [CMultiLock](../../mfc/reference/cmultilock-class.md) objeto va a esperar y liberar el objeto de sincronización. Utilice `CSingleLock` cuando sólo deba esperar en un objeto a la vez. Usar **CMultiLock** cuando hay varios objetos que puede usar en un momento determinado.  
+ Para poder utilizar las clases de sincronización [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), y [CEvent](../../mfc/reference/cevent-class.md), debe crear un `CSingleLock` o [CMultiLock](../../mfc/reference/cmultilock-class.md) objeto va a esperar y liberar el objeto de sincronización. Utilice `CSingleLock` cuando sólo deba esperar en un objeto a la vez. Usar `CMultiLock` cuando hay varios objetos que puede usar en un momento determinado.  
   
  Para usar un `CSingleLock` de objeto, llamar a su constructor dentro de una función miembro de clase del recurso controlado. A continuación, llame a la [IsLocked](#islocked) función de miembro para determinar si el recurso está disponible. Si es así, continúe con el resto de la función miembro. Si el recurso no está disponible, espere a que una cantidad especificada de tiempo para el recurso se libera o devolver un error. Una vez completado el uso del recurso, llamar a la [Unlock](#unlock) funcionar si el `CSingleLock` objeto consiste en volver a utilizar o permitir la `CSingleLock` destrucción del objeto.  
   
@@ -79,10 +79,10 @@ explicit CSingleLock(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pObject`  
+ *pObject*  
  Señala al objeto de sincronización para tener acceso. No puede ser **NULL**.  
   
- `bInitialLock`  
+ *bInitialLock*  
  Especifica si se inicialmente intenta tener acceso al objeto proporcionado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -137,10 +137,10 @@ BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lCount`  
+ *lCount*  
  Número de accesos a la versión. Debe ser mayor que 0. Si la cantidad especificada provocaría que el recuento del objeto supere el máximo, no se cambia el recuento y la función devuelve **FALSE**.  
   
- `lPrevCount`  
+ *lPrevCount*  
  Señala a una variable para recibir el recuento anterior del objeto de sincronización. Si **NULL**, no se devuelve el recuento anterior.  
   
 ### <a name="return-value"></a>Valor devuelto  

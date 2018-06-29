@@ -105,19 +105,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 99ea41a77a8ed01cb78df3513ccb79b6b2a8b3f1
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 21c2ebc9ba59e6581a9f6d286f136c907b7c73aa
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305896"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079882"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso bidireccional. Utilice el contenedor de `set` para administrar una secuencia de elementos como un árbol equilibrado (casi) ordenada de nodos, cada uno de ellos almacenar un elemento.  
   
  En la descripción siguiente, `GValue` es el mismo que `GKey`, que a su vez es igual a `Key` a menos que el segundo es un tipo de referencia, en cuyo caso es `Key^`.  
   
-### <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Key>  
@@ -133,10 +133,15 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  Key  
  El tipo del componente clave de un elemento de la secuencia controlada.  
   
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/set >  
+  
+ **Namespace:** cliext  
+
 ## <a name="declarations"></a>Declaraciones  
   
 |Definición de tipo|Descripción|  
@@ -202,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|Mantener el grupo de elementos con tipo.|  
 |ITree\<clave, valor >|Mantener contenedor genérico.|  
   
-### <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Comentarios  
  El objeto asigna y libera almacenamiento para la secuencia que controla como nodos individuales. Inserta elementos en un árbol equilibrado (casi) que mantiene ordenada por la modificación de los vínculos entre los nodos, nunca copiando el contenido de un nodo a otro. Esto significa que puede insertar y quitar elementos libremente sin alterar los elementos restantes.  
   
  El objeto ordena la secuencia controla mediante una llamada a un objeto de delegado almacenado de tipo [Set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Puede especificar el objeto de delegado almacenado cuando se construye el conjunto; Si no se especifica ningún objeto de delegado, el valor predeterminado es la comparación `operator<(key_type, key_type)`. Tener acceso a este objeto almacenado llamando a la función miembro [key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`.  
@@ -228,11 +233,6 @@ template<typename Key>
  Un iterador de conjunto almacena un identificador a su nodo de conjunto asociado, que a su vez almacena un identificador a su contenedor asociado. Sólo puede usar iteradores con sus objetos de contenedor asociado. Un iterador de conjunto es válido siempre y cuando su nodo de conjunto asociado está asociado a un conjunto. Además, un iterador válido es dereferencable, se puede utilizar para tener acceso o modificar el valor del elemento designa--siempre y cuando no es igual a `end()`.  
   
  Borrar o quitar un elemento llama al destructor para definir el valor almacenado. Destruir el contenedor, borrará todos los elementos. Por lo tanto, un contenedor cuyo tipo de elemento es una clase ref garantiza que ningún elemento su duración mayor que el contenedor. Sin embargo, tenga en cuenta que un contenedor de identificadores no `not` destruir sus elementos.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<cliext/set >  
-  
- **Namespace:** cliext  
  
 ## <a name="members"></a>Miembros
 

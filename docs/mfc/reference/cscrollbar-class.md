@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f672cbeeee0c297e3d1deb6a6b5e83bffda3e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86827a2f01e387eb6e7c8b2184567cb204f184e6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372774"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079126"
 ---
 # <a name="cscrollbar-class"></a>Clase CScrollBar
 Proporciona la funcionalidad de un control de barra de desplazamiento de Windows.  
@@ -117,23 +117,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica el desplazamiento estilo de barra. Aplicar cualquier combinación de [estilos de barra de desplazamiento](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) a la barra de desplazamiento.  
   
- `rect`  
+ *Rect*  
  Especifica el tamaño de la barra de desplazamiento y la posición. Puede ser un `RECT` estructura o un `CRect` objeto.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Especifica el desplazamiento ventana de primaria de la barra, normalmente un `CDialog` objeto. No debe ser **NULL**.  
   
- `nID`  
+ *nID*  
  Id. de control de la barra de desplazamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Crear un `CScrollBar` objeto en dos pasos. En primer lugar, llame al constructor, que construye la `CScrollBar` objeto; a continuación, llamar a **crear**, que crea y se inicializa la barra de desplazamiento de Windows asociada y se adjunta a la `CScrollBar` objeto.  
+ Crear un `CScrollBar` objeto en dos pasos. En primer lugar, llame al constructor, que construye la `CScrollBar` objeto; a continuación, llamar a `Create`, que crea y se inicializa la barra de desplazamiento de Windows asociada y se adjunta a la `CScrollBar` objeto.  
   
  Aplique el siguiente [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) a una barra de desplazamiento:  
   
@@ -169,7 +169,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nArrowFlags`  
+ *nArrowFlags*  
  Especifica si se habilitan o deshabilitan las flechas de desplazamiento y las flechas están habilitadas o deshabilitadas. Este parámetro puede ser uno de los siguientes valores:  
   
 - **ESB_ENABLE_BOTH** permite que ambas flechas de una barra de desplazamiento.  
@@ -213,10 +213,10 @@ BOOL GetScrollInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpScrollInfo`  
+ *lpScrollInfo*  
  Un puntero a un [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estructura. Consulte el SDK de Windows para obtener más información acerca de esta estructura.  
   
- `nMask`  
+ *nMask*  
  Especifica los parámetros de la barra de desplazamiento para recuperar. Un uso típico, SIF_ALL, especifica una combinación de SIF_PAGE, SIF_POS, SIF_TRACKPOS y SIF_RANGE. Consulte `SCROLLINFO` para obtener más información sobre los valores de nMask.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -262,7 +262,7 @@ int GetScrollPos() const;
   Vea el ejemplo de [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
 ##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
- Copia las posiciones actuales de la barra de desplazamiento mínimo y máximo de la barra de desplazamiento especificada en las ubicaciones especificadas por `lpMinPos` y `lpMaxPos`.  
+ Copia las posiciones actuales de la barra de desplazamiento mínimo y máximo de la barra de desplazamiento especificada en las ubicaciones especificadas por *lpMinPos* y *lpMaxPos*.  
   
 ```  
 void GetScrollRange(
@@ -271,10 +271,10 @@ void GetScrollRange(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpMinPos`  
+ *lpMinPos*  
  Señala a la variable de entero que se va a recibir la posición de mínimo.  
   
- `lpMaxPos`  
+ *lpMaxPos*  
  Señala a la variable de entero que se va a recibir la posición máxima.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -293,11 +293,11 @@ BOOL SetScrollInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpScrollInfo`  
+ *lpScrollInfo*  
  Un puntero a un [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estructura.  
   
- `bRedraw`  
- Especifica si se debe volver a dibujar la barra de desplazamiento para reflejar la nueva información. Si `bRedraw` es **TRUE**, se vuelve a dibujar la barra de desplazamiento. Si es **FALSE**, no se vuelve a dibujar. Se vuelve a dibujar la barra de desplazamiento de forma predeterminada.  
+ *bRedraw*  
+ Especifica si se debe volver a dibujar la barra de desplazamiento para reflejar la nueva información. Si *bRedraw* es **TRUE**, se vuelve a dibujar la barra de desplazamiento. Si es **FALSE**, no se vuelve a dibujar. Se vuelve a dibujar la barra de desplazamiento de forma predeterminada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si tiene éxito, el valor devuelto es **TRUE**. En caso contrario, es **FALSE**.  
@@ -311,7 +311,7 @@ BOOL SetScrollInfo(
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
 ##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
- Establece la posición actual de un cuadro de desplazamiento al especificado por `nPos` y, si se especifica, vuelve a dibujar la barra de desplazamiento para reflejar la nueva posición.  
+ Establece la posición actual de un cuadro de desplazamiento al especificado por *nPos* y, si se especifica, vuelve a dibujar la barra de desplazamiento para reflejar la nueva posición.  
   
 ```  
 int SetScrollPos(
@@ -320,17 +320,17 @@ int SetScrollPos(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nPos`  
+ *nPos*  
  Especifica la nueva posición del cuadro de desplazamiento. Debe estar dentro del intervalo de desplazamiento.  
   
- `bRedraw`  
- Especifica si se debe volver a dibujar la barra de desplazamiento para reflejar la nueva posición. Si `bRedraw` es **TRUE**, se vuelve a dibujar la barra de desplazamiento. Si es **FALSE**, no se vuelve a dibujar. Se vuelve a dibujar la barra de desplazamiento de forma predeterminada.  
+ *bRedraw*  
+ Especifica si se debe volver a dibujar la barra de desplazamiento para reflejar la nueva posición. Si *bRedraw* es **TRUE**, se vuelve a dibujar la barra de desplazamiento. Si es **FALSE**, no se vuelve a dibujar. Se vuelve a dibujar la barra de desplazamiento de forma predeterminada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Especifica la posición anterior del cuadro de desplazamiento si se realiza correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Establecer `bRedraw` a **FALSE** cada vez que una llamada subsiguiente a otra función para evitar la barra de desplazamiento que se vuelve a dibujarse dos veces dentro de un intervalo corto se volverá a dibujar la barra de desplazamiento.  
+ Establecer *bRedraw* a **FALSE** cada vez que una llamada subsiguiente a otra función para evitar la barra de desplazamiento que se vuelve a dibujarse dos veces dentro de un intervalo corto se volverá a dibujar la barra de desplazamiento.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CScrollBar::SetScrollRange](#setscrollrange).  
@@ -346,23 +346,23 @@ void SetScrollRange(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nMinPos`  
+ *nMinPos*  
  Especifica la posición de desplazamiento mínimo.  
   
- `nMaxPos`  
+ *nMaxPos*  
  Especifica el máximo de la posición de desplazamiento.  
   
- `bRedraw`  
- Especifica si se debe volver a dibujar la barra de desplazamiento para reflejar el cambio. Si `bRedraw` es **TRUE**, se vuelve a dibujar la barra de desplazamiento; si **FALSE**, no se vuelve a dibujar. Se vuelve a dibujar de forma predeterminada.  
+ *bRedraw*  
+ Especifica si se debe volver a dibujar la barra de desplazamiento para reflejar el cambio. Si *bRedraw* es **TRUE**, se vuelve a dibujar la barra de desplazamiento; si **FALSE**, no se vuelve a dibujar. Se vuelve a dibujar de forma predeterminada.  
   
 ### <a name="remarks"></a>Comentarios  
- Establecer `nMinPos` y `nMaxPos` en 0 para ocultar las barras de desplazamiento estándar.  
+ Establecer *nMinPos* y *nMaxPos* en 0 para ocultar las barras de desplazamiento estándar.  
   
  No llame a esta función para ocultar una barra de desplazamiento al procesar un mensaje de notificación de la barra de desplazamiento.  
   
- Si una llamada a `SetScrollRange` sigue inmediatamente a una llamada a la `SetScrollPos` función miembro, establezca `bRedraw` en `SetScrollPos` en 0 para evitar que la barra de desplazamiento que se vuelve a dibujarse dos veces.  
+ Si una llamada a `SetScrollRange` sigue inmediatamente a una llamada a la `SetScrollPos` función miembro, establezca *bRedraw* en `SetScrollPos` en 0 para evitar que la barra de desplazamiento que se vuelve a dibujarse dos veces.  
   
- La diferencia entre los valores especificados por `nMinPos` y `nMaxPos` no debe ser superior a 32.767. El intervalo predeterminado para un control de barra de desplazamiento está vacío (ambos `nMinPos` y `nMaxPos` son 0).  
+ La diferencia entre los valores especificados por *nMinPos* y *nMaxPos* no debe ser superior a 32.767. El intervalo predeterminado para un control de barra de desplazamiento está vacío (ambos *nMinPos* y *nMaxPos* son 0).  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
@@ -375,7 +375,7 @@ void ShowScrollBar(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bShow`  
+ *bMostrar*  
  Especifica si se muestra o se oculta la barra de desplazamiento. Si este parámetro es **TRUE**, se muestra la barra de desplazamiento; en caso contrario, está oculta.  
   
 ### <a name="remarks"></a>Comentarios  

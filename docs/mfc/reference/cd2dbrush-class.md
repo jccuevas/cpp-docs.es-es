@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718283893c9e8ec9798dea9a4b9fb307d1099e68
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 95fdd973d94c0d60e5e3177260740c5d62f1ea5b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952062"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078561"
 ---
 # <a name="cd2dbrush-class"></a>Clase CD2DBrush
 Un contenedor para ID2D1Brush.  
@@ -110,7 +110,7 @@ virtual ~CD2DBrush();
 ```  
   
 ##  <a name="attach"></a>  CD2DBrush::Attach  
- Adjunta existente de la interfaz de recurso para el objeto  
+ Adjunta existente de la interfaz de recurso para el objeto.  
   
 ```  
 void Attach(ID2D1Brush* pResource);
@@ -118,7 +118,7 @@ void Attach(ID2D1Brush* pResource);
   
 ### <a name="parameters"></a>Parámetros  
  *pResource*  
- Interfaz de recursos existente. No puede ser NULL  
+ Interfaz de recursos existente. No puede ser nulo.  
   
 ##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
  Construye un objeto CD2DBrush.  
@@ -148,7 +148,7 @@ virtual void Destroy();
 ```  
   
 ##  <a name="detach"></a>  CD2DBrush::Detach  
- Separa la interfaz de recurso del objeto  
+ Separa la interfaz de recurso del objeto.  
   
 ```  
 ID2D1Brush* Detach();
@@ -175,7 +175,7 @@ FLOAT GetOpacity() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor comprendido entre 0 y 1 que indica la opacidad del pincel. Este valor es un constante multiplicador que escala linealmente el valor alfa de todos los píxeles que se rellena con el pincel. Los valores de opacidad se fija en el intervalo de 0 a 1 antes de que se multiplican juntos  
+ Un valor comprendido entre 0 y 1 que indica la opacidad del pincel. Este valor es un constante multiplicador que escala linealmente el valor alfa de todos los píxeles que se rellena con el pincel. Los valores de opacidad se fija en el intervalo de 0 a 1 antes de que se multiplican juntos.  
   
 ##  <a name="gettransform"></a>  CD2DBrush::getTransform  
  Obtiene la transformación actual del destino de representación  
@@ -186,7 +186,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
   
 ### <a name="parameters"></a>Parámetros  
  *transform*  
- Cuando se devuelve, contiene la transformación actual del destino de representación. Este parámetro se pasa sin inicializar  
+ Cuando se devuelve, contiene la transformación actual del destino de representación. Este parámetro se pasa sin inicializar.  
   
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid  
  Comprobaciones de validez de los recursos  
@@ -231,10 +231,10 @@ void SetOpacity(FLOAT opacity);
   
 ### <a name="parameters"></a>Parámetros  
  *opacidad*  
- Un valor comprendido entre 0 y 1 que indica la opacidad del pincel. Este valor es un constante multiplicador que escala linealmente el valor alfa de todos los píxeles que se rellena con el pincel. Los valores de opacidad se fija en el intervalo de 0 a 1 antes de que se multiplican juntos  
+ Un valor comprendido entre 0 y 1 que indica la opacidad del pincel. Este valor es un constante multiplicador que escala linealmente el valor alfa de todos los píxeles que se rellena con el pincel. Los valores de opacidad se fija en el intervalo de 0 a 1 antes de que se multiplican juntos.  
   
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform  
- Aplica la transformación especificada en el destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujo subsiguientes se producen en el espacio transformado  
+ Aplica la transformación especificada en el destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujo subsiguientes se producen en el espacio transformado.  
   
 ```  
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);

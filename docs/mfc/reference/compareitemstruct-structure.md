@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368636"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078263"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT (Estructura)
 El `COMPAREITEMSTRUCT` estructura proporciona los identificadores y los datos proporcionados por la aplicación para los dos elementos en un cuadro de lista dibujado por el propietario y ordenada o cuadro combinado.  
@@ -41,13 +41,13 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `CtlType`  
+ *CtlType*  
  **Odt_combobox** (que especifica un cuadro de lista dibujado por el propietario) o **ODT_COMBOBOX** (que especifica un cuadro combinado dibujado propietario).  
   
- `CtlID`  
+ *CtlID*  
  El identificador del control de cuadro de lista o cuadro combinado.  
   
- `hwndItem`  
+ *hwndItem*  
  El identificador de ventana del control.  
   
  *itemID1*  
@@ -63,7 +63,7 @@ typedef struct tagCOMPAREITEMSTRUCT {
  Datos proporcionados por la aplicación para el segundo elemento que se va a comparar. Este valor se pasa en la llamada que se agregó el elemento en el cuadro combinado o lista.  
   
 ## <a name="remarks"></a>Comentarios  
- Cada vez que una aplicación agrega un nuevo elemento a un cuadro de lista dibujado por el propietario o cuadro combinado se creó con la **CBS_SORT** o **LBS_SORT** estilo, Windows envía el propietario de un `WM_COMPAREITEM` mensaje. El `lParam` parámetro del mensaje contiene un puntero largo a una `COMPAREITEMSTRUCT` estructura. Al recibir el mensaje, el propietario compara los dos elementos y devuelve un valor que indica qué elemento se ordena antes que el otro.  
+ Cada vez que una aplicación agrega un nuevo elemento a un cuadro de lista dibujado por el propietario o cuadro combinado se creó con la **CBS_SORT** o **LBS_SORT** estilo, Windows envía el propietario de un mensaje WM_COMPAREITEM. El *lParam* parámetro del mensaje contiene un puntero largo a una `COMPAREITEMSTRUCT` estructura. Al recibir el mensaje, el propietario compara los dos elementos y devuelve un valor que indica qué elemento se ordena antes que el otro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** winuser.h  

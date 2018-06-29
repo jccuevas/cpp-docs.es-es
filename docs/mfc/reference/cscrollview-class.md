@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b480ee1118551b09c705fb4f79f8a50c0a1f895
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375547"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079572"
 ---
 # <a name="cscrollview-class"></a>CScrollView (clase)
 A [CView](../../mfc/reference/cview-class.md) con capacidades de desplazamiento.  
@@ -100,7 +100,7 @@ class CScrollView : public CView
   
  Antes de la `OnDraw` se llama a la función miembro de la clase de vista derivada, `CScrollView` ajusta automáticamente el origen de la ventanilla para el `CPaintDC` objeto de contexto de dispositivo que se pasa a `OnDraw`.  
   
- Para ajustar el origen de la ventanilla de la ventana desplazable, `CScrollView` invalida [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Este ajuste es automática para el `CPaintDC` contexto de dispositivo que `CScrollView` pasa a `OnDraw`, pero se debe llamar a **CScrollView::OnPrepareDC** usted mismo para otros contextos de dispositivo que use, tales como un `CClientDC`. Puede invalidar **CScrollView::OnPrepareDC** para establecer el lápiz, color de fondo y otros atributos de dibujo, pero llamar a la clase base para realizar el ajuste de escala.  
+ Para ajustar el origen de la ventanilla de la ventana desplazable, `CScrollView` invalida [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Este ajuste es automática para el `CPaintDC` contexto de dispositivo que `CScrollView` pasa a `OnDraw`, pero se debe llamar a `CScrollView::OnPrepareDC` usted mismo para otros contextos de dispositivo utiliza, como un `CClientDC`. Puede invalidar `CScrollView::OnPrepareDC` para establecer el lápiz, color de fondo y otros atributos de dibujo, pero llamar a la clase base para realizar el ajuste de escala.  
   
  Barras de desplazamiento pueden aparecer en tres lugares con respecto a una vista, tal como se muestra en los siguientes casos:  
   
@@ -162,10 +162,10 @@ void FillOutsideRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Contexto de dispositivo en el que el llenado consiste en realizarse.  
   
- `pBrush`  
+ *pBrush*  
  Pincel con la que es el área que se rellenará.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -201,16 +201,16 @@ void GetDeviceScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nMapMode`  
+ *nMapMode*  
  Devuelve el modo de asignación actual para esta vista. Para obtener una lista de valores posibles, consulte `SetScrollSizes`.  
   
- `sizeTotal`  
+ *sizeTotal*  
  Devuelve el tamaño total actual de la vista de desplazamiento de unidades del dispositivo.  
   
- `sizePage`  
+ *sizePage*  
  Devuelve las cantidades horizontales y verticales actuales para desplazarse en cada dirección en respuesta a un mouse (ratón) haga clic en un eje de una barra de desplazamiento. El **cx** miembro contiene la cantidad horizontal. El **cy** miembro contiene la cantidad vertical.  
   
- `sizeLine`  
+ *sizeLine*  
  Devuelve las cantidades horizontales y verticales actuales para desplazarse en cada dirección en respuesta a un mouse (ratón) haga clic en una flecha de desplazamiento. El **cx** miembro contiene la cantidad horizontal. El **cy** miembro contiene la cantidad vertical.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -267,7 +267,7 @@ void ScrollToPosition(POINT pt);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pt`  
+ *PT*  
  El punto de desplazamiento, en unidades lógicas. El **x** miembro debe ser un valor positivo (mayor o igual a 0, hasta el tamaño total de la vista). Lo mismo puede decirse de la **y** miembro cuando el modo de asignación es `MM_TEXT`. El **y** miembro es negativa en la asignación modos distintos de `MM_TEXT`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -281,7 +281,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `sizeTotal`  
+ *sizeTotal*  
  Los tamaños horizontales y verticales para que la vista es escalar. Tamaño de la vista de desplazamiento se mide en unidades lógicas. El tamaño horizontal se encuentra en la **cx** miembro. El tamaño vertical se encuentra en la **cy** miembro. Ambos **cx** y **cy** debe ser mayor o igual que 0.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -307,7 +307,7 @@ void SetScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nMapMode`  
+ *nMapMode*  
  El modo de asignación para establecer para esta vista. Los posibles valores incluyen:  
   
 |Modo de asignación|Unidad lógica|Eje y positivo Extends...|  
@@ -321,13 +321,13 @@ void SetScrollSizes(
   
  Todos estos modos se definen mediante Windows. Dos modos de asignación estándar, `MM_ISOTROPIC` y `MM_ANISOTROPIC`, no se utilizan para `CScrollView`. La biblioteca de clases proporciona la `SetScaleToFitSize` función de miembro para el escalado de la vista al tamaño de ventana. Tres de columna en la tabla anterior describe la orientación de coordenadas.  
   
- `sizeTotal`  
+ *sizeTotal*  
  El tamaño total de la vista de desplazamiento. El **cx** miembro contiene la extensión horizontal. El **cy** miembro contiene la extensión vertical. Tamaños están en unidades lógicas. Ambos **cx** y **cy** debe ser mayor o igual que 0.  
   
- `sizePage`  
+ *sizePage*  
  Haga clic en las cantidades horizontal y verticales para desplazarse en cada dirección en respuesta a un mouse de un eje de una barra de desplazamiento. El **cx** miembro contiene la cantidad horizontal. El **cy** miembro contiene la cantidad vertical.  
   
- `sizeLine`  
+ *sizeLine*  
  Haga clic en las cantidades horizontal y verticales para desplazarse en cada dirección en respuesta a un mouse en una flecha de desplazamiento. El **cx** miembro contiene la cantidad horizontal. El **cy** miembro contiene la cantidad vertical.  
   
 ### <a name="remarks"></a>Comentarios  

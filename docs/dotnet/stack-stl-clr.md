@@ -69,12 +69,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 078fd71dac8144e7aa6fda5772b820b086a78457
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b24bf0eab913285559ec9905762e239841c93a00
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305532"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079738"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tenga acceso a la última en salir. Usar el adaptador de contenedor `stack` para administrar un contenedor subyacente como una pila de inserción.  
@@ -93,11 +93,11 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  Valor  
  Tipo de un elemento de la secuencia controlada.  
   
- contenedor  
+ Contenedor  
  Tipo del contenedor subyacente.  
 
 ## <a name="requirements"></a>Requisitos  

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: beeef0d8ff1a89a003987f9cd79172ad2ff86d75
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376179"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079634"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage (clase)
 Representa páginas individuales de una hoja de propiedades, también conocidas como cuadro de diálogo de pestaña.  
@@ -165,19 +165,19 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDTemplate`  
+ *nIDTemplate*  
  Id. de la plantilla usada para esta página.  
   
- `nIDCaption`  
+ *nIDCaption*  
  Identificador del nombre que se colocarán en la ficha para esta página. Si es 0, se van a realizar el nombre de la plantilla de cuadro de diálogo para esta página.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contiene una cadena terminada en null que es el nombre de un recurso de plantilla.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  Identificador del nombre que se colocarán en la ubicación del título del encabezado de página de propiedades. De manera predeterminada, es 0.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  Identificador del nombre que se colocarán en la ubicación del subtítulo del encabezado de página de propiedades. De manera predeterminada, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -189,9 +189,9 @@ void Construct(
   
 -   El usuario ha seleccionado (con pestañas para) esta página.  
   
- Llame a **construir** si uno de los otros constructores de clase no se ha llamado. El `Construct` función miembro es flexible, ya que puede dejar en blanco la instrucción de parámetro y, a continuación, especificar varios parámetros y construcción en cualquier momento en el código.  
+ Llamar a `Construct` si uno de los otros constructores de clase no se ha llamado. El `Construct` función miembro es flexible, ya que puede dejar en blanco la instrucción de parámetro y, a continuación, especificar varios parámetros y construcción en cualquier momento en el código.  
   
- Debe usar `Construct` cuando se trabaja con matrices, y debe llamar a **construir** por cada miembro de la matriz para que los miembros de datos se asignan los valores adecuados.  
+ Debe usar `Construct` cuando se trabaja con matrices, y debe llamar a `Construct` para cada miembro de la matriz para que los miembros de datos se asignan los valores adecuados.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
@@ -232,20 +232,20 @@ CPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDTemplate`  
+ *nIDTemplate*  
  Id. de la plantilla usada para esta página.  
   
- `nIDCaption`  
+ *nIDCaption*  
  Identificador del nombre que se colocarán en la ficha para esta página. Si es 0, se van a realizar el nombre de la plantilla de cuadro de diálogo para esta página.  
   
- `dwSize`  
- `lpszTemplateName`  
+ *dwSize*  
+ *lpszTemplateName*  
  Apunta a una cadena que contiene el nombre de la plantilla para esta página. No puede ser **NULL**.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  Identificador del nombre que se colocarán en la ubicación del título del encabezado de página de propiedades.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  Identificador del nombre que se colocarán en la ubicación del subtítulo del encabezado de página de propiedades.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -488,10 +488,10 @@ LRESULT QuerySiblings(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `wParam`  
+ *wParam*  
  Especifica información adicional de dependiente de mensaje.  
   
- `lParam`  
+ *lParam*  
  Especifica información adicional de dependiente de mensaje  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -515,7 +515,7 @@ void SetModified(BOOL bChanged = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bChanged`  
+ *bChanged*  
  **TRUE** para indicar que la configuración de la página de propiedades se han modificado desde la última vez que fueron aplicadas; **FALSE** para indicar que la configuración de la página de propiedades se han aplicado o debe omitirse.  
   
 ### <a name="remarks"></a>Comentarios  
