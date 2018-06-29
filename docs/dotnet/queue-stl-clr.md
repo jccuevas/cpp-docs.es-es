@@ -73,12 +73,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4d591d2abd7613777dec6ae668badd84fe31d0c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305558"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079712"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso primero en salir. Usar el adaptador de contenedor `queue` para administrar un contenedor subyacente como una cola.  
@@ -97,11 +97,11 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  Valor  
  Tipo de un elemento de la secuencia controlada.  
   
- contenedor  
+ Contenedor  
  Tipo del contenedor subyacente.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -157,7 +157,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Duplicar un objeto.|  
 |ICola\<valor, contenedor >|Mantener el adaptador de contenedor genérico.|  
   
-### <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Comentarios  
  El objeto asigna y libera almacenamiento para la secuencia que controla a través de un contenedor subyacente, de tipo `Container`, que almacena `Value` elementos y crece a petición. El objeto restringe el acceso a tan solo presionar el primer elemento y retirar el último elemento, implementar un salir primero en la cola (también conocida como una cola FIFO o simplemente una cola).  
   
 ## <a name="members"></a>Miembros

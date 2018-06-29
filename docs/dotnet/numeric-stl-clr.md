@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4313b80a4fa83e5340f678834b64dd5269278a0d
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: f8d470928cb4cbc1625ad439efe75b97f2bb1bd7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305519"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079049"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 Define las funciones de plantilla de contenedor que realizan los algoritmos proporcionados para el procesamiento numérico.  
@@ -57,7 +57,7 @@ Define las funciones de plantilla de contenedor que realizan los algoritmos prop
 |[inner_product (STL/CLR)](#inner_product)|Calcula la suma del producto de elementos de dos intervalos y la agrega a un valor inicial especificado, o calcula el resultado de un procedimiento general donde las operaciones binarias de suma y de producto se reemplazan por otras operaciones binarias especificadas.|  
 |[partial_sum (STL/CLR)](#partial_sum)|Calcula una serie de sumas en un intervalo de entrada desde el primer elemento hasta el `i`elemento th y almacena el resultado de cada de esas sumas en `i`elemento de un intervalo de destino o calcula el resultado de un procedimiento generalizado donde la operación de suma se reemplaza por otra operación binaria especificada.|  
  
-## <a name="functions"></a>Funciones
+## <a name="members"></a>Miembros
 
 ## <a name="accumulate"></a> acumular (STL/CLR)
 Calcula la suma de todos los elementos en un intervalo especificado incluidos algunos valores iniciales mediante el cálculo de sumas parciales sucesivas, o calcula el resultado de los resultados parciales sucesivos obtenidos de manera similar mediante el uso de una operación binaria determinada distinta de la suma.  

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d72b96e0be786aab18903e95f346eccd5364dd4b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377232"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079660"
 ---
 # <a name="cprintdialog-class"></a>Clase CPrintDialog
 Encapsula los servicios proporcionados por el cuadro de diálogo común de Windows para imprimir.  
@@ -159,13 +159,13 @@ CPrintDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bPrintSetupOnly`  
- Especifica si se muestra el cuadro de diálogo de impresión de Windows estándar o el cuadro de diálogo Configuración de impresión. Establezca este parámetro en **TRUE** para mostrar el cuadro de diálogo de instalación de impresión de Windows estándar. Establézcalo en **FALSE** para mostrar el cuadro de diálogo de impresión de Windows. Si `bPrintSetupOnly` es **FALSE**, un botón de opción de instalación de impresión se sigue mostrando en el cuadro de diálogo Imprimir.  
+ *bPrintSetupOnly*  
+ Especifica si se muestra el cuadro de diálogo de impresión de Windows estándar o el cuadro de diálogo Configuración de impresión. Establezca este parámetro en **TRUE** para mostrar el cuadro de diálogo de instalación de impresión de Windows estándar. Establézcalo en **FALSE** para mostrar el cuadro de diálogo de impresión de Windows. Si *bPrintSetupOnly* es **FALSE**, un botón de opción de instalación de impresión se sigue mostrando en el cuadro de diálogo Imprimir.  
   
- `dwFlags`  
+ *dwFlags*  
  Una o varias marcas que puede usar para personalizar la configuración del cuadro de diálogo combinada mediante el operador OR bit a bit. Por ejemplo, el **PD_ALLPAGES** marca establece el intervalo de impresión predeterminado para todas las páginas del documento. Consulte la [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) estructura en el SDK de Windows para obtener más información sobre estas marcas.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana primaria o propietaria del cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
   
  Después de llamar a `DoModal`, se puede llamar a otra funciones miembro para recuperar la configuración o la entrada de información por el usuario en el cuadro de diálogo.  
   
- Tenga en cuenta que, cuando se llama al constructor con `bPrintSetupOnly` establecido en **FALSE**, **PD_RETURNDC** marca se utiliza automáticamente. Después de llamar a `DoModal`, `GetDefaults`, o `GetPrinterDC`, un DC de impresora se devolverán en `m_pd.hDC`. Este controlador de dominio se debe liberar con una llamada a [DeleteObject](http://msdn.microsoft.com/library/windows/desktop/dd183533) por el autor de llamada de `CPrintDialog`.  
+ Tenga en cuenta que, cuando se llama al constructor con *bPrintSetupOnly* establecido en **FALSE**, **PD_RETURNDC** marca se utiliza automáticamente. Después de llamar a `DoModal`, `GetDefaults`, o `GetPrinterDC`, un DC de impresora se devolverán en `m_pd.hDC`. Este controlador de dominio se debe liberar con una llamada a [DeleteObject](http://msdn.microsoft.com/library/windows/desktop/dd183533) por el autor de llamada de `CPrintDialog`.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CPrintDialog::CreatePrinterDC](#createprinterdc).  
@@ -243,7 +243,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>Comentarios  
  Los valores recuperados se colocan en la `m_pd` estructura.  
   
- En algunos casos, una llamada a esta función llama a la [constructor](#cprintdialog) para `CPrintDialog` con `bPrintSetupOnly` establecido en **FALSE**. En estos casos, un DC de impresora y **hDevNames** y **hDevMode** (dos puntos de control se encuentran en la `m_pd` miembro de datos) se asignan automáticamente.  
+ En algunos casos, una llamada a esta función llama a la [constructor](#cprintdialog) para `CPrintDialog` con *bPrintSetupOnly* establecido en **FALSE**. En estos casos, un DC de impresora y **hDevNames** y **hDevMode** (dos puntos de control se encuentran en la `m_pd` miembro de datos) se asignan automáticamente.  
   
  Si el constructor de `CPrintDialog` se llamó con `bPrintSetupOnly` establecido en **FALSE**, esta función no devolverá solo **hDevNames** y **hDevMode** (que se encuentra en **m_pd.hDevNames** y **m_pd.hDevMode**) al llamador, pero también devolverá un DC de impresora en **m_pd.hDC**. Es responsabilidad del autor de la llamada para eliminar la impresora DC y llamar a las ventanas [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) función en los controladores cuando haya terminado con el `CPrintDialog` objeto.  
   
@@ -345,7 +345,7 @@ HDC GetPrinterDC() const;
  Un identificador para el contexto de dispositivo de impresora si es correcto; en caso contrario, **NULL**.  
   
 ### <a name="remarks"></a>Comentarios  
- Si el `bPrintSetupOnly` parámetro de la `CPrintDialog` constructor estaba **FALSE** (lo que indica que se muestra el cuadro de diálogo de impresión), a continuación, `GetPrinterDC` devuelve un identificador para el contexto de dispositivo de impresora. Se deben llamar a las ventanas [DeleteObject](http://msdn.microsoft.com/library/windows/desktop/dd183533) función para eliminar el contexto de dispositivo cuando haya terminado de usarlo.  
+ Si el *bPrintSetupOnly* parámetro de la `CPrintDialog` constructor estaba **FALSE** (lo que indica que se muestra el cuadro de diálogo de impresión), a continuación, `GetPrinterDC` devuelve un identificador para el dispositivo de impresora contexto. Se deben llamar a las ventanas [DeleteObject](http://msdn.microsoft.com/library/windows/desktop/dd183533) función para eliminar el contexto de dispositivo cuando haya terminado de usarlo.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  

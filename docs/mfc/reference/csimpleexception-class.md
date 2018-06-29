@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369930"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078241"
 ---
 # <a name="csimpleexception-class"></a>Clase CSimpleException
 Esta clase es una clase base para excepciones MFC de recursos críticos.  
@@ -84,8 +84,8 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bAutoDelete`  
- Especifique **TRUE** si la memoria para el `CSimpleException` objeto se ha asignado en el montón. Esto hará que la `CSimpleException` objeto que se eliminará cuando el **eliminar** función miembro se llama para eliminar la excepción. Especifique **FALSE** si la `CSimpleException` objeto está en la pila o es un objeto global. En este caso, el `CSimpleException` objeto no se podrá eliminar cuando el **eliminar** se llama la función miembro.  
+ *bAutoDelete*  
+ Especifique **TRUE** si la memoria para el `CSimpleException` objeto se ha asignado en el montón. Esto hará que la `CSimpleException` objeto que se eliminará cuando el `Delete` función miembro se llama para eliminar la excepción. Especifique **FALSE** si la `CSimpleException` objeto está en la pila o es un objeto global. En este caso, el `CSimpleException` objeto no se podrá eliminar cuando el `Delete` se llama la función miembro.  
   
 ### <a name="remarks"></a>Comentarios  
  General, nunca se necesita llamar directamente a este constructor. Una función que produce una excepción debe crearse una instancia de un `CException`-clase derivada y llamar a su constructor, o bien debe usar uno de lo MFC iniciar funciones, como [AfxThrowFileException](exception-processing.md#afxthrowfileexception), se producirá un tipo predefinido.  
@@ -101,13 +101,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszError`  
+ *lpszError*  
  Un puntero a un búfer que recibirá un mensaje de error.  
   
- `nMaxError`  
+ *nMaxError*  
  El número máximo de caracteres que puede contener el búfer, incluido el **NULL** terminador.  
   
- `pnHelpContext`  
+ *pnHelpContext*  
  La dirección de un **UINT** que va a recibir el identificador de contexto de ayuda. Si **NULL**, no se devolverá ningún identificador.  
   
 ### <a name="return-value"></a>Valor devuelto  

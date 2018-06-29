@@ -61,19 +61,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 300cb9e7708c02717aeb8ea8fda59986f3fd9fa7
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306039"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079536"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 La clase de plantilla describe un objeto que controla una longitud variable secuencia de elementos que tiene acceso limitado ordenada. Usar el adaptador de contenedor `priority_queue` para administrar un contenedor subyacente como una cola de prioridad.  
   
  En la descripción siguiente, `GValue` es el mismo que `Value` a menos que el segundo es un tipo de referencia, en cuyo caso es `Value^`. De forma similar, `GContainer` es el mismo que `Container` a menos que el segundo es un tipo de referencia, en cuyo caso es `Container^`.  
   
-### <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Value,  
@@ -84,11 +84,11 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  Valor  
  Tipo de un elemento de la secuencia controlada.  
   
- contenedor  
+ Contenedor  
  Tipo del contenedor subyacente.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -138,7 +138,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Duplicar un objeto.|  
 |IPriorityQueue\<valor, contenedor >|Mantener el adaptador de contenedor genérico.|  
   
-### <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Comentarios  
  El objeto asigna y libera almacenamiento para la secuencia que controla a través de un contenedor subyacente, de tipo `Container`, que almacena `Value` elementos y crece a petición. Mantiene la secuencia ordenada como un montón, con el elemento de prioridad más alta (el elemento superior) fácilmente accesible y extraíble. El objeto restringe el acceso a la inserción de nuevos elementos y retirar solo el elemento de prioridad más alta, la implementación de una cola de prioridad.  
   
  El objeto ordena la secuencia controla mediante una llamada a un objeto de delegado almacenado de tipo [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Puede especificar el objeto de delegado almacenado cuando se construye la priority_queue; Si no se especifica ningún objeto de delegado, el valor predeterminado es la comparación `operator<(value_type, value_type)`. Tener acceso a este objeto almacenado llamando a la función miembro [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  

@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7550e3e3d8bf7e49f9f93ea6e9a931d6567ef0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ab1f4a056e1a65475a71ede0b51db45189d2dd9
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377763"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079765"
 ---
 # <a name="crendertarget-class"></a>Clase CRenderTarget
 Un contenedor para ID2D1RenderTarget.  
@@ -246,7 +246,7 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pRenderTarget`  
+ *pRenderTarget*  
  Interfaz de destino de representación existente. No puede ser NULL  
   
 ##  <a name="begindraw"></a>  CRenderTarget::BeginDraw  
@@ -264,7 +264,7 @@ void Clear(D2D1_COLOR_F color);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `color`  
+ *Color*  
  El color al que se borra el área de dibujo.  
   
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR  
@@ -277,10 +277,10 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `color`  
+ *Color*  
  Valor RGB.  
   
- `nAlpha`  
+ *nAlpha*  
   
 ### <a name="return-value"></a>Valor devuelto  
  Valor de D2D1_COLOR_F.  
@@ -298,19 +298,19 @@ BOOL CreateCompatibleRenderTarget(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bitmapTarget`  
+ *bitmapTarget*  
  Cuando este método vuelve, contiene la dirección de un puntero a un nuevo destino de representación de mapa de bits. Este parámetro se pasa sin inicializar.  
   
- `sizeDesired`  
+ *sizeDesired*  
  El tamaño deseado del destino de representación nueva en los píxeles independientes del dispositivo si debe ser diferente del original de destino de representación, o NULL. Para obtener más información, vea la sección Comentarios.  
   
- `sizePixelDesired`  
+ *sizePixelDesired*  
  El tamaño deseado del destino de representación nueva en píxeles si debe ser diferente del original destino de representación, o NULL. Para obtener más información, vea la sección Comentarios.  
   
- `desiredFormat`  
+ *desiredFormat*  
  El formato de píxeles deseados y el modo alfa del nuevo destino de representación, o NULL. Si el formato de píxeles se establece en DXGI_FORMAT_UNKNOWN o si este parámetro es null, el nuevo destino de representación utiliza el mismo formato de píxel como destino de representación de la versión original. Si el modo alfa es D2D1_ALPHA_MODE_UNKNOWN o este parámetro es NULL, el modo alfa nuevo destino de representación predeterminado D2D1_ALPHA_MODE_PREMULTIPLIED. Para obtener información acerca de los formatos de píxel admitidos, vea formatos de píxel admitidos y modos de alfa.  
   
- `options`  
+ *Opciones*  
  Un valor que especifica si el nuevo destino de representación debe ser compatible con GDI.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -331,7 +331,7 @@ BOOL Destroy(BOOL bDeleteResources = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bDeleteResources`  
+ *bDeleteResources*  
  Si bDeleteResources es TRUE, se destruirán automáticamente todos los recursos ubicados en m_lstResources.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -360,19 +360,19 @@ void DrawBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pBitmap`  
+ *pBitmap*  
  El mapa de bits para representar.  
   
- `rectDest`  
+ *rectDest*  
  El tamaño y la posición, en píxeles independientes del dispositivo en el espacio de coordenadas del destino de representación, del área a la que se dibuja el mapa de bits. Si el rectángulo no está bien ordenado, sin nada dibujado, pero el destino de representación no pase a un estado de error.  
   
- `fOpacity`  
+ *fOpacity*  
  Un valor entre 0,0 f y 1.0f, ambos inclusive, que especifica un valor de opacidad para aplicar al mapa de bits; Este valor se multiplica por los valores alfabéticos de contenido del mapa de bits.  
   
- `interpolationMode`  
+ *interpolationMode*  
  El modo de interpolación para usar si el mapa de bits es escalar o girar la operación de dibujo.  
   
- `pRectSrc`  
+ *pRectSrc*  
  El tamaño y la posición, en píxeles independientes del dispositivo en el espacio de coordenadas del mapa de bits, del área de mapa de bits para dibujar.  
   
 ##  <a name="drawellipse"></a>  CRenderTarget::DrawEllipse  
@@ -387,16 +387,16 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ellipse`  
+ *elipse*  
  La posición y el radio de la elipse para dibujar, en píxeles independientes del dispositivo.  
   
- `pBrush`  
+ *pBrush*  
  Pincel usado para dibujar el contorno de la elipse.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  El grosor del trazo de la elipse. El trazo se centra en el esquema de la elipse.  
   
- `strokeStyle`  
+ *strokeStyle*  
  El estilo de trazo para aplicar al esquema de la elipse, o NULL para pintar un trazo sólido.  
   
 ##  <a name="drawgeometry"></a>  CRenderTarget::DrawGeometry  
@@ -411,16 +411,16 @@ void DrawGeometry(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pGeometry`  
+ *pGeometry*  
  La geometría que se va a dibujar.  
   
- `pBrush`  
+ *pBrush*  
  El pincel que se usa para pintar el trazo de la geometría.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  El grosor del trazo de la geometría. El trazo se centra en el esquema de la geometría.  
   
- `strokeStyle`  
+ *strokeStyle*  
  El estilo de trazo para aplicar al esquema de la geometría, o NULL para pintar un trazo sólido.  
   
 ##  <a name="drawglyphrun"></a>  CRenderTarget::DrawGlyphRun  
@@ -435,16 +435,16 @@ void DrawGlyphRun(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ptBaseLineOrigin`  
+ *ptBaseLineOrigin*  
  El origen, en píxeles independientes del dispositivo, de línea de base de los glifos.  
   
- `glyphRun`  
+ *glyphRun*  
  Los glifos para representar.  
   
- `pForegroundBrush`  
+ *pForegroundBrush*  
  Pincel usado para dibujar los glifos especificados.  
   
- `measuringMode`  
+ *measuringMode*  
  Un valor que indica cómo se usan las métricas de glifo para medir el texto cuando se formatea. El valor predeterminado es DWRITE_MEASURING_MODE_NATURAL.  
   
 ##  <a name="drawline"></a>  CRenderTarget::DrawLine  
@@ -460,19 +460,19 @@ void DrawLine(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ptFrom`  
+ *ptFrom*  
  El punto inicial de la línea, en píxeles independientes del dispositivo.  
   
- `ptTo`  
+ *ptTo*  
  El punto final de la línea, en píxeles independientes del dispositivo.  
   
- `pBrush`  
+ *pBrush*  
  El pincel que se usa para pintar el trazo de la línea.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Un valor mayor o igual que 0,0 f que especifica el ancho del trazo. Si no se especifica este parámetro, el valor predeterminado es 1, 0f. El trazo se centra en la línea.  
   
- `strokeStyle`  
+ *strokeStyle*  
  El estilo del trazo en paint, o NULL para dibujar una línea sólida.  
   
 ##  <a name="drawrectangle"></a>  CRenderTarget::DrawRectangle  
@@ -487,16 +487,16 @@ void DrawRectangle(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rect`  
+ *Rect*  
  Las dimensiones del rectángulo va a dibujar, en píxeles independientes del dispositivo  
   
- `pBrush`  
+ *pBrush*  
  El pincel que se usa para pintar el trazo del rectángulo  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Un valor mayor o igual que 0,0 f que especifica el ancho del trazo del rectángulo. El trazo se centra en el esquema del rectángulo.  
   
- `strokeStyle`  
+ *strokeStyle*  
  El estilo del trazo en paint, o NULL para pintar un trazo sólido.  
   
 ##  <a name="drawroundedrectangle"></a>  CRenderTarget::DrawRoundedRectangle  
@@ -511,16 +511,16 @@ void DrawRoundedRectangle(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rectRounded`  
+ *rectRounded*  
  Las dimensiones del rectángulo redondeado para dibujar, en píxeles independientes del dispositivo.  
   
- `pBrush`  
+ *pBrush*  
  Pincel usado para dibujar el contorno del rectángulo redondeado.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Ancho del trazo del rectángulo redondeado. El trazo se centra en el esquema del rectángulo redondeado. El valor predeterminado es 1, 0f.  
   
- `strokeStyle`  
+ *strokeStyle*  
  El estilo de trazo el rectángulo redondeado, o NULL para pintar un trazo sólido. El valor predeterminado es NULL.  
   
 ##  <a name="drawtext"></a>  CRenderTarget::DrawText  
@@ -537,22 +537,22 @@ void DrawText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `strText`  
+ *strText*  
  Un puntero a una matriz de caracteres Unicode para dibujar.  
   
- `rect`  
+ *Rect*  
  El tamaño y la posición del área en la que se dibuja el texto.  
   
- `pForegroundBrush`  
+ *pForegroundBrush*  
  Pincel usado para dibujar el texto.  
   
- `textFormat`  
+ *textFormat*  
  Un objeto que describe el formato detalles del texto para dibujar, como la fuente, el tamaño de fuente y la dirección del flujo.  
   
- `options`  
+ *Opciones*  
  Un valor que indica si se debe ajustar el texto a los límites de píxeles y si debe recortarse el texto en el rectángulo de diseño. El valor predeterminado es D2D1_DRAW_TEXT_OPTIONS_NONE, que indica que el texto se debe ajustar a los límites de píxeles y no debe recortarse al rectángulo de diseño.  
   
- `measuringMode`  
+ *measuringMode*  
  Un valor que indica cómo se usan las métricas de glifo para medir el texto cuando se formatea. El valor predeterminado es DWRITE_MEASURING_MODE_NATURAL.  
   
 ##  <a name="drawtextlayout"></a>  CRenderTarget::DrawTextLayout  
@@ -567,16 +567,16 @@ void DrawTextLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ptOrigin`  
+ *ptOrigin*  
  El punto, que se describe en píxeles independientes del dispositivo, en el que se dibuja la esquina superior izquierda del texto descrito por textLayout.  
   
- `textLayout`  
+ *textLayout*  
  El texto con formato para dibujar. Se omiten los efectos de dibujo que no heredan de ID2D1Resource. Si hay efectos de dibujo que heredan de ID2D1Resource que no sean pinceles, este método produce un error y el destino de representación se coloca en un estado de error.  
   
- `pBrushForeground`  
+ *pBrushForeground*  
  El pincel utilizado para pintar cualquier texto textLayout que no tiene todavía un pincel asociado a él como un efecto de dibujo (especificado mediante el método IDWriteTextLayout::SetDrawingEffect).  
   
- `options`  
+ *Opciones*  
  Un valor que indica si se debe ajustar el texto a los límites de píxeles y si debe recortarse el texto en el rectángulo de diseño. El valor predeterminado es D2D1_DRAW_TEXT_OPTIONS_NONE, que indica que el texto se debe ajustar a los límites de píxeles y no debe recortarse al rectángulo de diseño.  
   
 ##  <a name="enddraw"></a>  CRenderTarget::EndDraw  
@@ -599,10 +599,10 @@ void FillEllipse(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ellipse`  
+ *elipse*  
  La posición y el radio, en píxeles independientes del dispositivo, de la elipse para pintar.  
   
- `pBrush`  
+ *pBrush*  
  El pincel que se usa para pintar el interior de la elipse.  
   
 ##  <a name="fillgeometry"></a>  CRenderTarget::FillGeometry  
@@ -616,13 +616,13 @@ void FillGeometry(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pGeometry`  
+ *pGeometry*  
  La geometría para pintar.  
   
- `pBrush`  
+ *pBrush*  
  El pincel que se usa para pintar la geometría 's interior.  
   
- `pOpacityBrush`  
+ *pOpacityBrush*  
  La máscara de opacidad para aplicar a la geometría; NULL para ninguna máscara de opacidad. Si se especifica una máscara de opacidad (el parámetro opacityBrush), pincel debe ser un ID2D1BitmapBrush que tiene sus modos de x y y ampliar establecidos en D2D1_EXTEND_MODE_CLAMP. Para obtener más información, vea la sección Comentarios.  
   
 ##  <a name="fillmesh"></a>  CRenderTarget::FillMesh  
@@ -635,10 +635,10 @@ void FillMesh(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pMesh`  
+ *pMesh*  
  La malla para pintar.  
   
- `pBrush`  
+ *pBrush*  
  El pincel utilizado para pintar la malla.  
   
 ##  <a name="fillopacitymask"></a>  CRenderTarget::FillOpacityMask  
@@ -654,19 +654,19 @@ void FillOpacityMask(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pOpacityMask`  
+ *pOpacityMask*  
  La posición y el radio, en píxeles independientes del dispositivo, de la elipse para pintar.  
   
- `pBrush`  
+ *pBrush*  
  El pincel utilizado para pintar la región de destino de representación especificada por destinationRectangle.  
   
- `content`  
+ *contenido*  
  El tipo de contenido que contiene la máscara de opacidad. El valor se utiliza para determinar el espacio de color en el que se mezcla la máscara de opacidad.  
   
- `rectDest`  
+ *rectDest*  
  La región de destino de representación para pintar, en píxeles independientes del dispositivo.  
   
- `rectSrc`  
+ *rectSrc*  
  La región del mapa de bits que se usará como la máscara de opacidad, en píxeles independientes del dispositivo.  
   
 ##  <a name="fillrectangle"></a>  CRenderTarget::FillRectangle  
@@ -679,10 +679,10 @@ void FillRectangle(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rect`  
+ *Rect*  
  La dimensión del rectángulo va a pintar, en píxeles independientes del dispositivo.  
   
- `pBrush`  
+ *pBrush*  
  El pincel utilizado para dibujar el rectángulo de 's interior.  
   
 ##  <a name="fillroundedrectangle"></a>  CRenderTarget::FillRoundedRectangle  
@@ -695,10 +695,10 @@ void FillRoundedRectangle(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rectRounded`  
+ *rectRounded*  
  Las dimensiones del rectángulo redondeado para pintar, en píxeles independientes del dispositivo.  
   
- `pBrush`  
+ *pBrush*  
  El pincel que se usa para pintar el interior del rectángulo redondeado.  
   
 ##  <a name="flush"></a>  CRenderTarget::Flush  
@@ -711,10 +711,10 @@ void Flush(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `tag1`  
+ *tag1*  
  Contiene la etiqueta para las operaciones que ha causado errores o 0 si no hubiera ningún error de dibujo. Este parámetro se pasa sin inicializar.  
   
- `tag2`  
+ *tag2*  
  Contiene la etiqueta para las operaciones que ha causado errores o 0 si no hubiera ningún error de dibujo. Este parámetro se pasa sin inicializar.  
   
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode  
@@ -797,10 +797,10 @@ void GetTags(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `tag1`  
+ *tag1*  
  Contiene la primera etiqueta para operaciones de dibujo subsiguientes. Este parámetro se pasa sin inicializar. Si se especifica NULL, no se recupera ningún valor para este parámetro.  
   
- `tag2`  
+ *tag2*  
  Contiene la segunda etiqueta para operaciones de dibujo subsiguientes. Este parámetro se pasa sin inicializar. Si se especifica NULL, no se recupera ningún valor para este parámetro.  
   
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode  
@@ -821,7 +821,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `textRenderingParams`  
+ *textRenderingParams*  
  Cuando este método vuelve, textRenderingParamscontains la dirección de un puntero para el destino de representación actual de la opciones de representación de texto.  
   
 ##  <a name="gettransform"></a>  CRenderTarget::GetTransform  
@@ -832,7 +832,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `transform`  
+ *transform*  
  Transformación que se aplicará en el destino de representación.  
   
 ##  <a name="issupported"></a>  CRenderTarget::IsSupported  
@@ -843,7 +843,7 @@ BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) co
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `renderTargetProperties`  
+ *renderTargetProperties*  
  Las propiedades de destino de representación para probar  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -914,10 +914,10 @@ void PushAxisAlignedClip(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rectClip`  
+ *rectClip*  
  El tamaño y la posición del área de recorte, en píxeles independientes del dispositivo.  
   
- `mode`  
+ *mode*  
  El modo de suavizado de contorno que se utiliza para dibujar los bordes del clip Rect que tiene límites de subpíxeles y combinar el clip con el contenido de la escena. La combinación se realiza una vez cuando se llama al método PopAxisAlignedClip y no se aplica a cada primitiva dentro de la capa.  
   
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer  
@@ -930,10 +930,10 @@ void PushLayer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `layerParameters`  
+ *layerParameters*  
  Los límites de contenido, máscara geométrica, opacidad, máscara de opacidad y opciones de suavizado de contorno de la capa.  
   
- `layer`  
+ *capa*  
  La capa que recibe las operaciones de dibujo subsiguientes.  
   
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState  
@@ -944,7 +944,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `drawingStateBlock`  
+ *drawingStateBlock*  
  El nuevo estado de dibujo el destino de representación.  
   
 ##  <a name="savedrawingstate"></a>  CRenderTarget::SaveDrawingState  
@@ -955,7 +955,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `drawingStateBlock`  
+ *drawingStateBlock*  
  Cuando este método vuelve, contiene el estado de dibujo actual del destino de representación. Este parámetro debe inicializarse antes de pasarlo al método.  
   
 ##  <a name="setantialiasmode"></a>  CRenderTarget::SetAntialiasMode  
@@ -966,7 +966,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `antialiasMode`  
+ *antialiasMode*  
  El modo de suavizado de contorno para futuras operaciones de dibujo.  
   
 ##  <a name="setdpi"></a>  CRenderTarget::SetDpi  
@@ -977,7 +977,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `sizeDPI`  
+ *sizeDPI*  
  Un valor mayor o igual a cero que especifica el horizontal/verticalDPI del destino de representación.  
   
 ##  <a name="settags"></a>  CRenderTarget::SetTags  
@@ -990,10 +990,10 @@ void SetTags(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `tag1`  
+ *tag1*  
  Una etiqueta para aplicar a las operaciones de dibujo subsiguientes.  
   
- `tag2`  
+ *tag2*  
  Una etiqueta para aplicar a las operaciones de dibujo subsiguientes.  
   
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode  
@@ -1004,7 +1004,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `textAntialiasMode`  
+ *textAntialiasMode*  
  El modo de suavizado de contorno para texto posterior y las operaciones de dibujo del glifo.  
   
 ##  <a name="settextrenderingparams"></a>  CRenderTarget::SetTextRenderingParams  
@@ -1015,7 +1015,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `textRenderingParams`  
+ *textRenderingParams*  
  Las opciones de representación de texto que se aplicará a todo el texto posterior y glifo dibujo operaciones; Es NULL para borrar las opciones de representación de texto actual.  
   
 ##  <a name="settransform"></a>  CRenderTarget::SetTransform  
@@ -1027,7 +1027,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `transform`  
+ *transform*  
  Transformación que se aplicará en el destino de representación.  
   
 ##  <a name="verifyresource"></a>  CRenderTarget::VerifyResource  
@@ -1038,7 +1038,7 @@ BOOL VerifyResource(CD2DResource* pResource);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pResource`  
+ *pResource*  
  Puntero al objeto CD2DResource.  
   
 ### <a name="return-value"></a>Valor devuelto  

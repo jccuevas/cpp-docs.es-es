@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371626"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079070"
 ---
 # <a name="csingledoctemplate-class"></a>Clase CSingleDocTemplate
 Define una plantilla de documento que implementa la interfaz de un único documento (SDI).  
@@ -45,7 +45,7 @@ class CSingleDocTemplate : public CDocTemplate
   
  Una plantilla de documento define la relación entre los tres tipos de clases:  
   
--   Una clase de documento, que derivan de **CDocument**.  
+-   Una clase de documento, que derivan de `CDocument`.  
   
 -   Una clase de vista, que muestra los datos de la clase de documento mencionado anteriormente. Puede derivar de esta clase desde `CView`, `CScrollView`, `CFormView`, o `CEditView`. (También puede usar `CEditView` directamente.)  
   
@@ -81,7 +81,7 @@ CSingleDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDResource`  
+ *nIDResource*  
  Especifica el identificador de los recursos utilizados con el tipo de documento. Esto puede incluir menú, icono, tabla de aceleradores y recursos de cadena.  
   
  El recurso de cadena consta de hasta siete subcadenas separados por el carácter '\n' (se necesita el carácter '\n' como marcador de posición si no se incluye una subcadena; sin embargo, no son necesarios los caracteres finales '\n'); Estos subcadenas describen el tipo de documento. Para obtener información sobre las subcadenas, consulte [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Este recurso de cadena se encuentra en el archivo de recursos de la aplicación. Por ejemplo:  
@@ -100,13 +100,13 @@ CSingleDocTemplate(
   
  Para obtener más información acerca de estos tipos de recursos, consulte el [Editor de cadena](../../windows/string-editor.md).  
   
- `pDocClass`  
- Apunta a la `CRuntimeClass` objeto de la clase de documento. Esta clase es un **CDocument**-deriva la clase que defina para representar los documentos.  
+ *pDocClass*  
+ Apunta a la `CRuntimeClass` objeto de la clase de documento. Esta clase es un `CDocument`-deriva la clase que defina para representar los documentos.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Apunta a la `CRuntimeClass` objeto de la clase de ventana de marco. Esta clase puede ser un `CFrameWnd`-clase derivada, o puede ser `CFrameWnd` si desea el comportamiento predeterminado de la ventana de marco principal.  
   
- `pViewClass`  
+ *pViewClass*  
  Apunta a la `CRuntimeClass` objeto de la clase de vista. Esta clase es un `CView`-deriva la clase que defina para mostrar los documentos.  
   
 ### <a name="remarks"></a>Comentarios  

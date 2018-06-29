@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c5be90e57d558ba2dcceb3965d1cc1474dcaf463
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305883"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079725"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso bidireccional. Utilice el contenedor de `multimap` para administrar una secuencia de elementos como un árbol equilibrado (casi) ordenada de nodos, cada uno de ellos almacenar un elemento. Un elemento consta de una clave, para ordenar la secuencia y un valor asignado, que va a lo largo de la transferencia.  
@@ -127,7 +127,7 @@ La clase de plantilla describe un objeto que controla una secuencia de longitud 
   
  `GMapped` es el mismo que `Mapped` a menos que el segundo es un tipo de referencia, en cuyo caso es `Mapped^`  
   
-### <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Key,  
@@ -144,11 +144,11 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  Key  
  El tipo del componente clave de un elemento de la secuencia controlada.  
   
- asignado  
+ Asignado  
  El tipo del componente adicional de un elemento de la secuencia controlada.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -222,7 +222,7 @@ template<typename Key,
 |<xref:System.Collections.Generic.ICollection%601>|Mantener el grupo de elementos con tipo.|  
 |ITree\<clave, valor >|Mantener contenedor genérico.|  
   
-### <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Comentarios  
  El objeto asigna y libera almacenamiento para la secuencia que controla como nodos individuales. Inserta elementos en un árbol equilibrado (casi) que mantiene ordenada por la modificación de los vínculos entre los nodos, nunca copiando el contenido de un nodo a otro. Esto significa que puede insertar y quitar elementos libremente sin alterar los elementos restantes.  
   
  El objeto ordena la secuencia controla mediante una llamada a un objeto de delegado almacenado de tipo [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Puede especificar el objeto de delegado almacenado cuando se crea la asignación múltiple; Si no se especifica ningún objeto de delegado, el valor predeterminado es la comparación `operator<(key_type, key_type)`. Tener acceso a este objeto almacenado llamando a la función miembro [multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  

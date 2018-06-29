@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b569efb201f95ade8987aaa89bb6cea1bc0c15c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1d61049c4c5af0285d728685776b2f285f69ba4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376774"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079608"
 ---
 # <a name="crgn-class"></a>CRgn (clase)
 Encapsula una región de la Interfaz de dispositivo gráfico (GDI) de Windows.  
@@ -138,20 +138,20 @@ int CombineRgn(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pRgn1`  
+ *pRgn1*  
  Identifica un área existente.  
   
- `pRgn2`  
+ *pRgn2*  
  Identifica un área existente.  
   
- `nCombineMode`  
+ *nCombineMode*  
  Especifica la operación que se realizará cuando la combinación de las regiones de origen de dos. Puede ser cualquiera de los siguientes valores:  
   
 - **RGN_AND** usa las áreas superpuestas de ambas regiones (intersección).  
   
-- **RGN_COPY** crea una copia de la región 1 (identificada por `pRgn1`).  
+- **RGN_COPY** crea una copia de la región 1 (identificada por *pRgn1*).  
   
-- **RGN_DIFF** crea una región que consta de las áreas de región 1 (identificada por `pRgn1`) que no forman parte de la región 2 (identificados por `pRgn2`).  
+- **RGN_DIFF** crea una región que consta de las áreas de región 1 (identificada por *pRgn1*) que no forman parte de la región 2 (identificados por *pRgn2*).  
   
 - **RGN_OR** combina ambas regiones en su totalidad (unión).  
   
@@ -169,7 +169,7 @@ int CombineRgn(
 - **SIMPLEREGION** nueva región no tiene bordes superpuestos.  
   
 ### <a name="remarks"></a>Comentarios  
- Las regiones se combinan según lo especificado por `nCombineMode`.  
+ Las regiones se combinan según lo especificado por *nCombineMode*.  
   
  Los dos especificados se combinan las regiones y el identificador de región resultante se almacena en la `CRgn` objeto. Por lo tanto, cualquier región se almacena en la `CRgn` objeto se reemplaza por la región combinada.  
   
@@ -181,14 +181,14 @@ int CombineRgn(
  [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
 ##  <a name="copyrgn"></a>  CRgn::CopyRgn  
- Copia la región definida por `pRgnSrc` en la `CRgn` objeto.  
+ Copia la región definida por *pRgnSrc* en la `CRgn` objeto.  
   
 ```  
 int CopyRgn(CRgn* pRgnSrc);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pRgnSrc`  
+ *pRgnSrc*  
  Identifica un área existente.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -220,23 +220,23 @@ BOOL CreateEllipticRgn(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `x1`  
+ *X1*  
  Especifica la coordenada x lógica de la esquina superior izquierda del rectángulo delimitador de la elipse.  
   
- `y1`  
+ *y1*  
  Especifica la coordenada y lógica de la esquina superior izquierda del rectángulo delimitador de la elipse.  
   
- `x2`  
+ *X2*  
  Especifica la coordenada x lógica de la esquina inferior derecha del rectángulo delimitador de la elipse.  
   
- `y2`  
+ *y2*  
  Especifica la coordenada y lógica de la esquina inferior derecha del rectángulo delimitador de la elipse.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la operación se realizó correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- La región se define por el rectángulo delimitador especificado por `x1`, `y1`, `x2`, y `y2`. La región se almacena en la `CRgn` objeto.  
+ La región se define por el rectángulo delimitador especificado por *x1*, *y1*, *x2*, y *y2*. La región se almacena en la `CRgn` objeto.  
   
  El tamaño de una región se limita a 64 KB de memoria o las unidades lógicas de 32.767 por 32.767, lo que sea menor.  
   
@@ -253,14 +253,14 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpRect`  
+ *lpRect*  
  Apunta a un `RECT` estructura o un `CRect` objeto que contiene las coordenadas lógicas de las esquinas superior izquierda e inferior derecha del rectángulo delimitador de la elipse.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la operación se realizó correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- La región se define mediante la estructura o el objeto al que señala `lpRect` y se almacena en la `CRgn` objeto.  
+ La región se define mediante la estructura o el objeto al que señala *lpRect* y se almacena en la `CRgn` objeto.  
   
  El tamaño de una región se limita a 64 KB de memoria o las unidades lógicas de 32.767 por 32.767, lo que sea menor.  
   
@@ -283,10 +283,10 @@ BOOL CreateFromData(
  *lpXForm*  
  Apunta a un [XFORM](../../mfc/reference/xform-structure.md) estructura de datos que define la transformación que se realizarán en la región. Si este puntero es **NULL**, se usa la transformación de identidad.  
   
- `nCount`  
- Especifica el número de bytes que señala `pRgnData`.  
+ *nCount*  
+ Especifica el número de bytes que señala *pRgnData*.  
   
- `pRgnData`  
+ *pRgnData*  
  Apunta a un [RGNDATA](../../mfc/reference/rgndata-structure.md) estructura de datos que contiene los datos de la región.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -303,14 +303,14 @@ BOOL CreateFromPath(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Identifica un contexto de dispositivo que contiene una ruta de acceso cerrada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la función se realiza correctamente; de lo contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- El contexto de dispositivo identificado por el `pDC` parámetro debe contener una ruta de acceso cerrada. Después de `CreateFromPath` convierte una ruta de acceso en una región, Windows descarta la ruta cerrada desde el contexto de dispositivo.  
+ El contexto de dispositivo identificado por el *pDC* parámetro debe contener una ruta de acceso cerrada. Después de `CreateFromPath` convierte una ruta de acceso en una región, Windows descarta la ruta cerrada desde el contexto de dispositivo.  
   
 ##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
  Crea una región poligonal.  
@@ -323,7 +323,7 @@ BOOL CreatePolygonRgn(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpPoints`  
+ *lpPoints*  
  Apunta a una matriz de **punto** estructuras o una matriz de `CPoint` objetos. Cada estructura especifica la coordenada x y Coordenada y de un vértice del polígono. El **punto** estructura tiene el formato siguiente:  
   
  `typedef struct tagPOINT {`  
@@ -334,10 +334,10 @@ BOOL CreatePolygonRgn(
   
  `} POINT;`  
   
- `nCount`  
- Especifica el número de **punto** estructuras o `CPoint` objetos de la matriz señalada por `lpPoints`.  
+ *nCount*  
+ Especifica el número de **punto** estructuras o `CPoint` objetos de la matriz señalada por *lpPoints*.  
   
- `nMode`  
+ *nMode*  
  Especifica el modo de relleno para la región. Este parámetro puede ser **alternativo** o **generación**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -369,7 +369,7 @@ BOOL CreatePolyPolygonRgn(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpPoints`  
+ *lpPoints*  
  Apunta a una matriz de **punto** estructuras o una matriz de `CPoint` objetos que define los vértices de los polígonos. Cada polígono se debe cerrar explícitamente porque el sistema no cierre automáticamente. Los polígonos se especifican de forma consecutiva. El **punto** estructura tiene el formato siguiente:  
   
  `typedef struct tagPOINT {`  
@@ -380,13 +380,13 @@ BOOL CreatePolyPolygonRgn(
   
  `} POINT;`  
   
- `lpPolyCounts`  
- Apunta a una matriz de enteros. El primer entero especifica el número de vértices en el primer polígono en el `lpPoints` matriz, el segundo entero especifica el número de vértices en el polígono segundo y así sucesivamente.  
+ *lpPolyCounts*  
+ Apunta a una matriz de enteros. El primer entero especifica el número de vértices en el primer polígono en el *lpPoints* matriz, el segundo entero especifica el número de vértices en el polígono segundo y así sucesivamente.  
   
- `nCount`  
- Especifica el número total de enteros en la `lpPolyCounts` matriz.  
+ *nCount*  
+ Especifica el número total de enteros en la *lpPolyCounts* matriz.  
   
- `nPolyFillMode`  
+ *nPolyFillMode*  
  Especifica el modo de relleno de polígono. Este valor puede ser **alternativo** o **generación**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -417,16 +417,16 @@ BOOL CreateRectRgn(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `x1`  
+ *X1*  
  Especifica la coordenada x lógica de la esquina superior izquierda de la región.  
   
- `y1`  
+ *y1*  
  Especifica la coordenada y lógica de la esquina superior izquierda de la región.  
   
- `x2`  
+ *X2*  
  Especifica la coordenada x lógica de la esquina inferior derecha de la región.  
   
- `y2`  
+ *y2*  
  Especifica la coordenada y lógica de la esquina inferior derecha de la región.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -450,7 +450,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpRect`  
+ *lpRect*  
  Apunta a un `RECT` estructura o `CRect` objeto que contiene las coordenadas lógicas de las esquinas superior izquierda e inferior derecha de la región. El `RECT` estructura tiene el formato siguiente:  
   
  `typedef struct tagRECT {`  
@@ -490,22 +490,22 @@ BOOL CreateRoundRectRgn(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `x1`  
+ *X1*  
  Especifica la coordenada x lógica de la esquina superior izquierda de la región.  
   
- `y1`  
+ *y1*  
  Especifica la coordenada y lógica de la esquina superior izquierda de la región.  
   
- `x2`  
+ *X2*  
  Especifica la coordenada x lógica de la esquina inferior derecha de la región.  
   
- `y2`  
+ *y2*  
  Especifica la coordenada y lógica de la esquina inferior derecha de la región.  
   
  *x3*  
  Especifica el ancho de la elipse que se utiliza para crear las esquinas redondeadas.  
   
- `y3`  
+ *Y3*  
  Especifica el alto de la elipse que se utiliza para crear las esquinas redondeadas.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -540,7 +540,7 @@ BOOL EqualRgn(CRgn* pRgn) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pRgn`  
+ *pRgn*  
  Identifica un área.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -557,7 +557,7 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hRgn`  
+ *hRgn*  
  Especifica un identificador de una región de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -576,14 +576,14 @@ int GetRegionData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpRgnData`  
+ *lpRgnData*  
  Apunta a un [RGNDATA](../../mfc/reference/rgndata-structure.md) estructura de datos que recibe la información. Si este parámetro es **NULL**, el valor devuelto contiene el número de bytes necesarios para los datos de la región.  
   
- `nCount`  
- Especifica el tamaño, en bytes, de la `lpRgnData` búfer.  
+ *nCount*  
+ Especifica el tamaño, en bytes, de la *lpRgnData* búfer.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si la función se realiza correctamente y `nCount` especifica un número suficiente de bytes, el valor devuelto es siempre `nCount`. Si se produce un error en la función, o si `nCount` especifica menor que el número adecuado de bytes, el valor devuelto es 0 (error).  
+ Si la función se realiza correctamente y *nCount* especifica un número suficiente de bytes, el valor devuelto es siempre *nCount*. Si se produce un error en la función, o si *nCount* especifica menor que el número adecuado de bytes, el valor devuelto es 0 (error).  
   
 ### <a name="remarks"></a>Comentarios  
  Estos datos incluyen las dimensiones de los rectángulos que componen la región. Esta función se utiliza junto con el `CRgn::CreateFromData` función.  
@@ -596,7 +596,7 @@ int GetRgnBox(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpRect`  
+ *lpRect*  
  Apunta a un `RECT` estructura o `CRect` objeto que recibe las coordenadas del rectángulo delimitador. El `RECT` estructura tiene el formato siguiente:  
   
  `typedef struct tagRECT {`  
@@ -643,8 +643,8 @@ int OffsetRgn(POINT point);
  *y*  
  Especifica el número de unidades para mover hacia arriba o hacia abajo.  
   
- `point`  
- La coordenada x de `point` especifica el número de unidades para mover a la izquierda o derecha. La coordenada y de `point` especifica el número de unidades que se desplazan hacia arriba o hacia abajo. El `point` parámetro puede ser un **punto** estructura o un `CPoint` objeto.  
+ *Punto*  
+ La coordenada x de *punto* especifica el número de unidades para mover a la izquierda o derecha. La coordenada y de *punto* especifica el número de unidades que se desplazan hacia arriba o hacia abajo. El *punto* parámetro puede ser un **punto** estructura o un `CPoint` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Tipo de la nueva región. Puede ser cualquiera de los siguientes valores:  
@@ -698,21 +698,21 @@ BOOL PtInRegion(POINT point) const;
  *y*  
  Especifica la coordenada y lógica del punto va a comprobar.  
   
- `point`  
- Las coordenadas x e y de `point` especificar las coordenadas x e y del punto para probar el valor de. El `point` parámetro puede ser un **punto** estructura o un `CPoint` objeto.  
+ *Punto*  
+ Las coordenadas x e y de *punto* especificar las coordenadas x e y del punto para probar el valor de. El *punto* parámetro puede ser un **punto** estructura o un `CPoint` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el punto está en la región; en caso contrario es 0.  
   
 ##  <a name="rectinregion"></a>  CRgn::RectInRegion  
- Determina si cualquier parte del rectángulo especificado por `lpRect` está dentro de los límites de la región que se almacenan en la `CRgn` objeto.  
+ Determina si cualquier parte del rectángulo especificado por *lpRect* está dentro de los límites de la región que se almacenan en la `CRgn` objeto.  
   
 ```  
 BOOL RectInRegion(LPCRECT lpRect) const;  
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpRect`  
+ *lpRect*  
  Apunta a un `RECT` estructura o `CRect` objeto. El `RECT` estructura tiene el formato siguiente:  
   
  `typedef struct tagRECT {`  
@@ -744,23 +744,23 @@ void SetRectRgn(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `x1`  
+ *X1*  
  Especifica la coordenada x de la esquina superior izquierda de la región rectangular.  
   
- `y1`  
+ *y1*  
  Especifica la coordenada y de la esquina superior izquierda de la región rectangular.  
   
- `x2`  
+ *X2*  
  Especifica la coordenada x de la esquina inferior derecha de la región rectangular.  
   
- `y2`  
+ *y2*  
  Especifica la coordenada y de la esquina inferior derecha de la región rectangular.  
   
- `lpRect`  
+ *lpRect*  
  Especifica la región rectangular. Puede ser un puntero a un `RECT` estructura o un `CRect` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- A diferencia de [CreateRectRgn](#createrectrgn), sin embargo, no asigna memoria adicional del montón de aplicación de Windows local. En su lugar, usa el espacio asignado a la región que se almacena en la `CRgn` objeto. Esto significa que la `CRgn` objeto ya debe haber se ha inicializado con una región de Windows válida antes de llamar a `SetRectRgn`. Los puntos de proporcionado por `x1`, `y1`, `x2`, y `y2` especificar el tamaño mínimo de espacio asignado.  
+ A diferencia de [CreateRectRgn](#createrectrgn), sin embargo, no asigna memoria adicional del montón de aplicación de Windows local. En su lugar, usa el espacio asignado a la región que se almacena en la `CRgn` objeto. Esto significa que la `CRgn` objeto ya debe haber se ha inicializado con una región de Windows válida antes de llamar a `SetRectRgn`. Los puntos de proporcionado por *x1*, *y1*, *x2*, y *y2* especificar el tamaño mínimo de espacio asignado.  
   
  Use esta función en lugar de la `CreateRectRgn` función de miembro para evitar llamadas al administrador de memoria local.  
   

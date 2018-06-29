@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d8b14a4941a280d34e29de80f343981a0f6d20e5
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: d78b03bea823dfcbb9df61fb40681c4ef66b49e7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305857"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079895"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso bidireccional. Utilice el contenedor de `hash_multimap` para administrar una secuencia de elementos como una tabla hash, cada entrada de la tabla almacenar un bidireccional vinculado lista de nodos y cada nodo de almacenar un elemento. Un elemento consta de una clave, para ordenar la secuencia y un valor asignado, que va a lo largo de la transferencia.  
@@ -145,11 +145,11 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  Key  
  El tipo del componente clave de un elemento de la secuencia controlada.  
   
- asignado  
+ Asignado  
  El tipo del componente adicional de un elemento de la secuencia controlada.  
 
 ## <a name="requirements"></a>Requisitos  

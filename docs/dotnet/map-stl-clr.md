@@ -109,12 +109,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e3691ad17aff90e866a21918c0853d2b1f4ce3a2
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 51570171fbd8de9919bcba5dabb47c26d8e1c748
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305831"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079908"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso bidireccional. Utilice el contenedor de `map` para administrar una secuencia de elementos como un árbol equilibrado (casi) ordenada de nodos, cada uno de ellos almacenar un elemento. Un elemento consta de una clave, para ordenar la secuencia y un valor asignado, que va a lo largo de la transferencia.  
@@ -147,11 +147,11 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  Key  
  El tipo del componente clave de un elemento de la secuencia controlada.  
   
- asignado  
+ Asignado  
  El tipo del componente adicional de un elemento de la secuencia controlada.  
 
 ## <a name="requirements"></a>Requisitos  

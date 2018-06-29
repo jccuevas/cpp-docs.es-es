@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ec92f1fcda75c8d632ea2c5a8f66583d960c744a
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 881db763518f31d9682ba050e460d4a3f7b39317
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305870"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079830"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso aleatorio. Utilice el contenedor de `deque` para administrar una secuencia de elementos que es similar a un bloque contiguo de almacenamiento, pero que puede aumentar o reducir en cualquiera de los extremos sin necesidad de copiar los elementos restantes. Lo que puede implementar eficazmente un `double-ended queue`. (Por lo tanto, el nombre.)  
@@ -148,7 +148,7 @@ template<typename Value>
   
  **Namespace:** cliext  
 
-## <a name="members"></a>Miembros  
+## <a name="declarations"></a>Declaraciones  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
@@ -229,7 +229,7 @@ template<typename Value>
   
  Borrar o quitar un elemento llama al destructor para definir el valor almacenado. Destruir el contenedor, borrará todos los elementos. Por lo tanto, un contenedor cuyo tipo de elemento es una clase ref garantiza que ningún elemento su duración mayor que el contenedor. Sin embargo, tenga en cuenta que un contenedor de identificadores no `not` destruir sus elementos.  
  
-## <a name="member-definitions"></a>Definiciones de miembros
+## <a name="members"></a>Miembros
 
 ## <a name="assign"></a> deque (STL/CLR)
 Reemplaza todos los elementos.  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0208a24b69c1884d72c0ae525ce95b3d3258271
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373056"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079979"
 ---
 # <a name="coleupdatedialog-class"></a>Clase COleUpdateDialog
 Se utiliza para un caso especial del cuadro de diálogo Editar vínculos de OLE, que se debe utilizar cuando se necesita actualizar solo los objetos existentes vinculados o incrustados en un documento.  
@@ -85,7 +85,7 @@ explicit COleUpdateDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDoc`  
+ *pDoc*  
  Señala el documento que contiene los vínculos que necesiten actualizarse.  
   
  *bUpdateLinks*  
@@ -94,7 +94,7 @@ explicit COleUpdateDialog(
  *bUpdateEmbeddings*  
  Marca que determina si los objetos incrustados se actualizará.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Señala al objeto de ventana primaria o propietaria (de tipo `CWnd`) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, la ventana primaria del cuadro de diálogo se establecerá en la ventana de la aplicación principal.  
   
 ### <a name="remarks"></a>Comentarios  

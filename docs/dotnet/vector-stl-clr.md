@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 973957609b56f3bcd697f650c75c59d07cc97173
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305776"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079817"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso aleatorio. Utilice el contenedor de `vector` para administrar una secuencia de elementos como un bloque contiguo de almacenamiento. El bloque se implementa como una matriz que aumenta de tamaño a petición.  
@@ -135,7 +135,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  Valor  
  Tipo de un elemento de la secuencia controlada.  
   
@@ -225,10 +225,7 @@ template<typename Value>
   
  Borrar o quitar un elemento llama al destructor para definir el valor almacenado. Destruir el contenedor, borrará todos los elementos. Por lo tanto, un contenedor cuyo tipo de elemento es una clase ref garantiza que ningún elemento su duración mayor que el contenedor. Sin embargo, tenga en cuenta que un contenedor de identificadores de destruir sus elementos.  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<cliext/vector >  
-  
- **Namespace:** cliext  
+## <a name="members"></a>Miembros
 
 ## <a name="assign"></a> Vector:: assign (STL/CLR)
 Reemplaza todos los elementos.  

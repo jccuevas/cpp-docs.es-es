@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8749e54cc42a6ae98748e8a5906cf5a5009d51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ab3416c0c4e659ce94f7dc4376ea2d7a1fd4c32
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372358"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078031"
 ---
 # <a name="cptrarray-class"></a>Clase CPtrArray
 Admite matrices de punteros void.  
@@ -69,7 +69,7 @@ class CPtrArray : public CObject
 ```  
   
 ## <a name="members"></a>Miembros  
- Las funciones miembro de `CPtrArray` son similares a las funciones miembro de clase [CObArray](../../mfc/reference/cobarray-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CObArray` para obtener información específica de la función miembro. Siempre que vea un puntero `CObject` como un parámetro o un valor devuelto de función, utilice un puntero a `void`.  
+ Las funciones miembro de `CPtrArray` son similares a las funciones miembro de clase [CObArray](../../mfc/reference/cobarray-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CObArray` para obtener información específica de la función miembro. Siempre que vea un `CObject` puntero expresado como un parámetro de función o el valor devuelto, utilice un puntero a **void**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
