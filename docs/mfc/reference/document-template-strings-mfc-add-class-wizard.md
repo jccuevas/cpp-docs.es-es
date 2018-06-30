@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b14e0c397ac9179142627bca04b647c1db96db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79de28847809a9b9d7e0a160f2a4a45375f0e1fe
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371936"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121518"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Cadenas de plantillas de documentos, Asistente para agregar clases MFC
 Esta página del asistente solo está disponible para las clases que cumplen los criterios siguientes:  
@@ -43,7 +43,7 @@ Esta página del asistente solo está disponible para las clases que cumplen los
  Se aplica a las aplicaciones que crean documentos de usuario. Los usuarios pueden abrir y guardar los documentos más fácilmente si el tipo de documento tiene una extensión de archivo y un identificador de tipo de archivo. Estos elementos no están localizados ya que se usan por el sistema en lugar de por el usuario.  
   
  **Extensión de archivo**  
- Establece la extensión de archivo asociada con el tipo de documento para esta aplicación de formularios. La extensión predeterminada se basa en el nombre de clase. Por ejemplo, si la nueva clase MFC se denomina **CWidget**, de forma predeterminada, es la extensión de archivo. wid. La extensión de archivo se utiliza en filtros de archivos y la **abiertos** y **Guardar como** cuadros de diálogo.  
+ Establece la extensión de archivo asociada con el tipo de documento para esta aplicación de formularios. La extensión predeterminada se basa en el nombre de clase. Por ejemplo, si la nueva clase MFC se denomina `CWidget`, de forma predeterminada, es la extensión de archivo. wid. La extensión de archivo se utiliza en filtros de archivos y la **abiertos** y **Guardar como** cuadros de diálogo.  
   
  Si cambia la extensión de archivo, el cambio se reflejará en la **nombre de filtro** cuadro.  
   
@@ -63,15 +63,15 @@ Esta página del asistente solo está disponible para las clases que cumplen los
  Establece el nombre que los usuarios pueden indicar para buscar archivos del tipo de archivo especificado. Esta opción está disponible desde el **archivos de tipo** y **Guardar como tipo** opciones en las ventanas estándares **abiertos** y **Guardar como** cuadros de diálogo. De forma predeterminada, el nombre se basa en el nombre del proyecto más Files, seguido por la extensión indican en **extensión de archivo**. Por ejemplo, si el proyecto se denomina Widget y la extensión de archivo es .wid, el **nombre de filtro** será archivos Widget (*.wid) de forma predeterminada.  
   
  **Nuevo nombre corto del archivo**  
- Establece el nombre que aparece en el estándar de Windows `New` cuadro de diálogo, si el proyecto tiene más de una plantilla de documento. Si la aplicación es un [del servidor de automatización](../../mfc/automation-servers.md), este nombre se utiliza como el nombre corto del objeto de automatización. De forma predeterminada, este nombre se basa en el nombre de clase.  
+ Establece el nombre que aparece en el estándar de Windows **New** cuadro de diálogo, si el proyecto tiene más de una plantilla de documento. Si la aplicación es un [del servidor de automatización](../../mfc/automation-servers.md), este nombre se utiliza como el nombre corto del objeto de automatización. De forma predeterminada, este nombre se basa en el nombre de clase.  
   
  **Nombre largo del tipo de archivo**  
- Establece el nombre de tipo de archivo en el registro del sistema. Si la aplicación es un servidor de automatización, este nombre se usa como el nombre largo de su objeto de automatización. De forma predeterminada, este nombre se basa en el nombre de clase más. Documento. Por ejemplo, si el nombre de clase es **CWidget**, **tipo de archivo, nombre largo** es documento Widget.  
+ Establece el nombre de tipo de archivo en el registro del sistema. Si la aplicación es un servidor de automatización, este nombre se usa como el nombre largo de su objeto de automatización. De forma predeterminada, este nombre se basa en el nombre de clase más. Documento. Por ejemplo, si el nombre de clase es `CWidget`, **tipo de archivo, nombre largo** es documento Widget.  
   
  **Clase de documento**  
  Indica la clase de documento del proyecto. De forma predeterminada, esta clase es una clase de documento de la aplicación principal, como se muestra en el [revisar las clases generadas](../../mfc/reference/generated-classes-mfc-application-wizard.md) página del Asistente para aplicaciones MFC. Puede seleccionar otra clase de documento en la lista, si ha agregado otras clases de documento en el proyecto.  
   
 ## <a name="see-also"></a>Vea también  
  [Agregar Asistente para clases MFC](../../mfc/reference/mfc-add-class-wizard.md)   
- [MFC (clase)](../../mfc/reference/adding-an-mfc-class.md)   
+ [Clase MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Agregar una clase](../../ide/adding-a-class-visual-cpp.md)

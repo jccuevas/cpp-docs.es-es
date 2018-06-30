@@ -1,7 +1,7 @@
 ---
 title: 'IRowsetUpdateImpl:: IsUpdateAllowed | Documentos de Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d39c726e4131b17d1dbdd76418e6da7985e4404
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 363626cedddea3da57e829a43c21c63b5c2b05cd
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105353"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122009"
 ---
 # <a name="irowsetupdateimplisupdateallowed"></a>IRowsetUpdateImpl::IsUpdateAllowed
 Invalide este método para comprobar si la seguridad, la integridad, y así sucesivamente antes de las actualizaciones.  
@@ -32,9 +32,9 @@ Invalide este método para comprobar si la seguridad, la integridad, y así suce
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp
-HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] *//* status */,  
-   HROW /* [in] *//* hRowUpdate */,  
-   DBROWSTATUS* /* [out] *//* pRowStatus */);  
+HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,  
+   HROW /* [in] */ /* hRowUpdate */,  
+   DBROWSTATUS* /* [out] */ /* pRowStatus */);  
 ```  
   
 #### <a name="parameters"></a>Parámetros  

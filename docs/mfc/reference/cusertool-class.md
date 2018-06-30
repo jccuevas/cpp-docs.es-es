@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 925e93afae4682497263eb96832aa466c6034231
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374758"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121321"
 ---
 # <a name="cusertool-class"></a>Clase CUserTool
 Una herramienta de usuario es un elemento de menú que ejecuta una aplicación externa. El **herramientas** pestaña de la **personalizar** cuadro de diálogo ( [CMFCToolBarsCustomizeDialog clase](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permite al usuario agregar herramientas y para especificar el nombre, comando, argumentos, y directorio inicial para cada herramienta de usuario.  
@@ -122,10 +122,10 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Especifica las coordenadas del área para mostrar el icono.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
@@ -169,7 +169,7 @@ virtual HICON LoadDefaultIcon();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un identificador para el icono de carga ( `HICON`), o `NULL` si no se puede cargar el icono predeterminado.  
+ Un identificador al cargar icono (HICON), o NULL si no se puede cargar el icono predeterminado.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a este método cuando no puede cargar un icono de una herramienta definido por el usuario desde el archivo ejecutable de la herramienta.  
@@ -211,7 +211,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -223,7 +223,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszCmd`  
+ [in] *lpszCmd*  
  Especifica la nueva aplicación que se asociará con la herramienta de usuario.  
   
 ### <a name="remarks"></a>Comentarios  

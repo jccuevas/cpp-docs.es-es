@@ -1,7 +1,7 @@
 ---
 title: Uso de C o C++ en bloques __asm | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -24,44 +24,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e9451a0b665e5377c2acaf871154ec78a38c8b5
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 96ed46cdf44ccacee806dd03bf7eacca26eec32d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051458"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120955"
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>Uso de C o C++ en bloques __asm
-## <a name="microsoft-specific"></a>Específicos de Microsoft  
- Puesto que las instrucciones de ensamblado insertado se pueden combinar con instrucciones de C o C++, pueden hacer referencia a variables de C o C++ por nombre y usar muchos otros elementos de esos lenguajes.  
-  
- Un bloque `__asm` puede usar los elementos de lenguaje siguientes:  
-  
--   Símbolos, incluidos etiquetas y nombres de variable y de función  
-  
--   Constantes, incluidas constantes simbólicas y miembros de `enum`  
-  
--   Macros y directivas de preprocesador  
-  
--   Comentarios (tanto **/ \* \* /** y **//** )  
-  
--   Nombres de tipo (dondequiera que un tipo MASM sea legal)  
-  
--   `typedef` nombres, utilizados normalmente con operadores como **PTR** y **tipo** o especificar miembros de estructura o unión  
-  
- Dentro de un bloque `__asm`, puede especificar constantes de tipo entero con notación C o notación de base de ensamblador (0x100 y 100h son equivalentes, por ejemplo). Esto permite definir (mediante `#define`) una constante en C y, a continuación, usarla en C o C++ y en partes de ensamblado del programa. También puede especificar constantes en octal precediéndolas con un 0. Por ejemplo, 0777 especifica una constante octal.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
-  
--   [Uso de operadores en bloques __asm](../../assembler/inline/using-operators-in-asm-blocks.md)  
-  
--   [Uso de C o C++ símbolos bloques __asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)  
-  
--   [Acceso a datos de C o C++ en bloques __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)  
-  
--   [Escribir funciones con ensamblado insertado](../../assembler/inline/writing-functions-with-inline-assembly.md)  
-  
- **FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Ensamblador insertado](../../assembler/inline/inline-assembler.md)
+
+** Específicos de Microsoft **
+
+Puesto que las instrucciones de ensamblado insertado se pueden combinar con instrucciones de C o C++, pueden hacer referencia a variables de C o C++ por nombre y usar muchos otros elementos de esos lenguajes.
+
+Un bloque `__asm` puede usar los elementos de lenguaje siguientes:
+
+- Símbolos, incluidos etiquetas y nombres de variable y de función
+
+- Constantes, incluidas constantes simbólicas y miembros de `enum`
+
+- Macros y directivas de preprocesador
+
+- Comentarios (tanto __/ \* \* /__ y __//__ )
+
+- Nombres de tipo (dondequiera que un tipo MASM sea legal)
+
+- `typedef` nombres, utilizados normalmente con operadores como **PTR** y **tipo** o especificar miembros de estructura o unión
+
+Dentro de un bloque `__asm`, puede especificar constantes de tipo entero con notación C o notación de base de ensamblador (0x100 y 100h son equivalentes, por ejemplo). Esto permite definir (mediante `#define`) una constante en C y, a continuación, usarla en C o C++ y en partes de ensamblado del programa. También puede especificar constantes en octal precediéndolas con un 0. Por ejemplo, 0777 especifica una constante octal.
+
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
+
+- [Uso de operadores en bloques __asm](../../assembler/inline/using-operators-in-asm-blocks.md)
+
+- [Uso de C o C++ símbolos bloques __asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
+
+- [Acceso a datos de C o C++ en bloques __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
+
+- [Escribir funciones con ensamblado insertado](../../assembler/inline/writing-functions-with-inline-assembly.md)
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Ensamblador insertado](../../assembler/inline/inline-assembler.md)

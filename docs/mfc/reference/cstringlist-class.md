@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91a88fc73b27323327bce477fa2cdaca747ed21c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375153"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122720"
 ---
 # <a name="cstringlist-class"></a>Clase de objeto CStringList
 Admite listas de objetos `CString` .  
@@ -128,7 +128,7 @@ class CStringList : public CObject
 ## <a name="remarks"></a>Comentarios  
  Todas las comparaciones se realizan por valor, lo que significa que se comparan los caracteres de la cadena en lugar de las direcciones de las cadenas.  
   
- `CStringList` incorpora la macro `IMPLEMENT_SERIAL` para admitir la serialización y el volcado de sus elementos. Si es una lista de `CString` los objetos se almacenan en un archivo, con un operador de inserción sobrecargado o con el `Serialize` miembro funcione, cada uno de ellos `CString` elemento se serializa a su vez.  
+ `CStringList` incorpora la macro IMPLEMENT_SERIAL para admitir la serialización y el volcado de sus elementos. Si es una lista de `CString` los objetos se almacenan en un archivo, con un operador de inserción sobrecargado o con el `Serialize` miembro funcione, cada uno de ellos `CString` elemento se serializa a su vez.  
   
  Si se necesita un volcado de persona `CString` elementos, debe establecer la profundidad del contexto de volcado en 1 o mayor.  
   

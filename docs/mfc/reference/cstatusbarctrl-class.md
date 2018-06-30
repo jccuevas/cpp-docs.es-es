@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f34711389478997b3e2c43cb2d812b1b961df714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b89f51fbcb3ca46afdb5ad56a6e162e7fe42cf0d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375534"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122900"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl (clase)
 Proporciona la funcionalidad del control de barra de estado común de Windows.  
@@ -132,27 +132,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwStyle`  
- Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de estilos de control que se muestran en la barra de estado [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) del SDK de Windows. Este parámetro debe incluir la **WS_CHILD** estilo. También debe incluir el **WS_VISIBLE** estilo.  
+ *dwStyle*  
+ Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de estilos de control que se muestran en la barra de estado [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) del SDK de Windows. Este parámetro debe incluir el estilo WS_CHILD. También debe incluir el estilo WS_VISIBLE.  
   
- `rect`  
+ *Rect*  
  Especifica el tamaño y la posición del control de barra de estado. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.  
   
- `pParentWnd`  
- Especifica el estado de la barra de la ventana primaria de control, normalmente un `CDialog`. No debe ser **NULL.**  
+ *pParentWnd*  
+ Especifica el estado de la barra de la ventana primaria de control, normalmente un `CDialog`. No debe ser NULL.  
   
- `nID`  
+ *nID*  
  Especifica el identificador. del control de barra de estado  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si es correcto. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Crear un `CStatusBarCtrl` en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a **crear**, que crea el control de barra de estado y lo adjunta a la `CStatusBarCtrl` objeto.  
+ Crear un `CStatusBarCtrl` en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a `Create`, que crea el control de barra de estado y lo adjunta a la `CStatusBarCtrl` objeto.  
   
- Es la posición predeterminada de una ventana de estado a lo largo de la parte inferior de la ventana primaria, pero puede especificar el `CCS_TOP` estilo que se va a hacer que aparezca en la parte superior del área de cliente de la ventana primaria. Puede especificar el **SBARS_SIZEGRIP** estilo que se va a incluir un control de tamaño en el extremo derecho de la ventana de estado. Combinar el `CCS_TOP` y **SBARS_SIZEGRIP** estilos no se recomienda, porque el control de tamaño resultante no es funcional incluso aunque el sistema dibuja en la ventana de estado.  
+ Es la posición predeterminada de una ventana de estado a lo largo de la parte inferior de la ventana primaria, pero puede especificar el estilo CCS_TOP para que aparezca en la parte superior del área de cliente de la ventana primaria. Puede especificar el estilo SBARS_SIZEGRIP para incluir un control de tamaño en el extremo derecho de la ventana de estado. No se recomienda combinar los estilos CCS_TOP y SBARS_SIZEGRIP, porque el control de tamaño resultante no es funcional incluso aunque el sistema dibuja en la ventana de estado.  
   
- Para crear una barra de estado con los estilos de ventana extendidos, llame a [CStatusBarCtrl::CreateEx](#createex) en lugar de **crear**.  
+ Para crear una barra de estado con los estilos de ventana extendidos, llame a [CStatusBarCtrl::CreateEx](#createex) en lugar de `Create`.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]  
@@ -170,19 +170,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwExStyle`  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el `dwExStyle` parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
+ *dwExStyle*  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
   
- `dwStyle`  
- Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de estilos de control que se muestran en la barra de estado [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) del SDK de Windows. Este parámetro debe incluir la **WS_CHILD** estilo. También debe incluir el **WS_VISIBLE** estilo.  
+ *dwStyle*  
+ Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de estilos de control que se muestran en la barra de estado [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) del SDK de Windows. Este parámetro debe incluir el estilo WS_CHILD. También debe incluir el estilo WS_VISIBLE.  
   
- `rect`  
- Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de `pParentWnd`.  
+ *Rect*  
+ Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana que es primario del control.  
   
- `nID`  
+ *nID*  
  Identificador de ventana secundaria. del control  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -206,15 +206,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Un puntero largo a una [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) estructura que contiene información sobre el tipo de dibujo necesaria.  
   
 ### <a name="remarks"></a>Comentarios  
- El **itemAction** miembro de la `DRAWITEMSTRUCT` estructura define la acción de dibujo que va a realizarse.  
+ El `itemAction` miembro de la `DRAWITEMSTRUCT` estructura define la acción de dibujo que va a realizarse.  
   
  De forma predeterminada, esta función miembro no hace nada. Reemplace esta función miembro para implementar el dibujo de un dibujado por el propietario `CStatusBarCtrl` objeto.  
   
- La aplicación debe restaurar todos los objetos de interfaz (GDI) de dispositivo de gráficos seleccionados para proporciona el contexto de presentación en `lpDrawItemStruct` antes de este miembro de la función finaliza.  
+ La aplicación debe restaurar todos los objetos de interfaz (GDI) de dispositivo de gráficos seleccionados para proporciona el contexto de presentación en *lpDrawItemStruct* antes de este miembro de la función finaliza.  
   
 ##  <a name="getborders"></a>  CStatusBarCtrl::GetBorders  
  Recupera el ancho actual del control de barra de estado de los bordes horizontales y verticales y el espacio entre los rectángulos.  
@@ -261,10 +261,10 @@ HICON GetIcon(int iPart) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `iPart`|Índice de base cero del elemento que contiene el icono que se va a recuperar. Si este parámetro es -1, la barra de estado se supone que una barra de estado de modo simple.|  
+|[in] *iPart*|Índice de base cero del elemento que contiene el icono que se va a recuperar. Si este parámetro es -1, la barra de estado se supone que una barra de estado de modo simple.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- El identificador del icono si el método correcto; en caso contrario, `NULL`.  
+ El identificador del icono si el método correcto; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744) mensaje, que se describe en el SDK de Windows.  
@@ -291,11 +291,11 @@ int GetParts(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nParts`  
+ *nParts*  
  Número de elementos para el que se va a recuperar coordenadas. Si este parámetro es mayor que el número de elementos en el control, el mensaje recupera coordenadas para solo los elementos existentes.  
   
  *pParts*  
- Dirección de una matriz de enteros que tiene el mismo número de elementos como el número de elementos especificado por `nParts`. Cada elemento de la matriz recibe las coordenadas de cliente del borde derecho de la parte correspondiente. Si un elemento se establece en - 1, la posición del borde derecho de esa parte extiende hasta el borde derecho de la barra de estado.  
+ Dirección de una matriz de enteros que tiene el mismo número de elementos como el número de elementos especificado por *nParts*. Cada elemento de la matriz recibe las coordenadas de cliente del borde derecho de la parte correspondiente. Si un elemento se establece en - 1, la posición del borde derecho de esa parte extiende hasta el borde derecho de la barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El número de elementos en el control si se realiza correctamente, o cero en caso contrario.  
@@ -316,10 +316,10 @@ BOOL GetRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nPane`  
+ *nPane*  
  Índice de base cero del elemento cuyo rectángulo delimitador es va a recuperar.  
   
- `lpRect`  
+ *lpRect*  
  Dirección de un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe el rectángulo delimitador.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -343,22 +343,22 @@ int GetText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszText`  
+ *lpszText*  
  Dirección del búfer que recibe el texto. Este parámetro es una cadena terminada en null.  
   
- `nPane`  
+ *nPane*  
  Índice de base cero del elemento del que se recuperará el texto.  
   
- `pType`  
+ *PEscriba*  
  Puntero a un entero que recibe la información de tipo. El tipo puede ser uno de estos valores:  
   
 - **0** se dibuja el texto con un borde a parecer inferior del plano de la barra de estado.  
   
-- `SBT_NOBORDERS` El texto se dibuja sin bordes.  
+- SBT_NOBORDERS el texto se dibuja sin bordes.  
   
-- `SBT_POPOUT` El texto se dibuja con un borde que aparezca más arriba que el plano de la barra de estado.  
+- SBT_POPOUT el texto se dibuja con un borde que aparezca más arriba que el plano de la barra de estado.  
   
-- `SBT_OWNERDRAW` Si el texto tiene el `SBT_OWNERDRAW` tipo, de dibujo `pType` recibe este mensaje y devuelve el valor de 32 bits asociado con el texto en lugar del tipo de longitud y la operación.  
+- SBT_OWNERDRAW si el texto tiene el tipo, de dibujo de SBT_OWNERDRAW *PEscriba* recibe este mensaje y devuelve el valor de 32 bits asociado con el texto en lugar del tipo de longitud y la operación.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La longitud, en caracteres, del texto o un [CString](../../atl-mfc-shared/reference/cstringt-class.md) que contiene el texto actual.  
@@ -376,19 +376,19 @@ int GetTextLength(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nPane`  
+ *nPane*  
  Índice de base cero del elemento del que se recuperará el texto.  
   
- `pType`  
+ *PEscriba*  
  Puntero a un entero que recibe la información de tipo. El tipo puede ser uno de estos valores:  
   
 - **0** se dibuja el texto con un borde a parecer inferior del plano de la barra de estado.  
   
-- `SBT_NOBORDERS` El texto se dibuja sin bordes.  
+- SBT_NOBORDERS el texto se dibuja sin bordes.  
   
-- `SBT_OWNERDRAW` El texto se dibuja en la ventana primaria.  
+- SBT_OWNERDRAW se dibuja el texto por la ventana primaria.  
   
-- `SBT_POPOUT` El texto se dibuja con un borde que aparezca más arriba que el plano de la barra de estado.  
+- SBT_POPOUT el texto se dibuja con un borde que aparezca más arriba que el plano de la barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La longitud, en caracteres, del texto.  
@@ -404,7 +404,7 @@ CString GetTipText(int nPane) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nPane`  
+ *nPane*  
  Índice de base cero del panel de barra de estado para recibir el texto de información sobre herramientas.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -437,8 +437,8 @@ COLORREF SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cr`  
- **COLORREF** valor que especifica el nuevo color de fondo. Especifique el `CLR_DEFAULT` valor para hacer que la barra de estado utilizar su color de fondo predeterminado.  
+ *CR*  
+ Valor de tipo COLORREF que especifica el nuevo color de fondo. Especifique el valor CLR_DEFAULT para hacer que la barra de estado utilizar su color de fondo predeterminado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que representa el color de fondo predeterminado anterior.  
@@ -459,11 +459,11 @@ BOOL SetIcon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nPane`  
+ *nPane*  
  Índice de base cero del panel que va a recibir el icono. Si este parámetro es -1, la barra de estado se supone que una barra de estado simple.  
   
- `hIcon`  
- Controlar el icono de establecerse. Si este valor es **NULL**, se quita el icono de la parte.  
+ *hIcon*  
+ Controlar el icono de establecerse. Si este valor es NULL, se quita el icono de la parte.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si es correcto. En caso contrario, es cero.  
@@ -482,11 +482,11 @@ void SetMinHeight(int nMin);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nMin`  
+ *nMin*  
  Alto mínimo, en píxeles, del control.  
   
 ### <a name="remarks"></a>Comentarios  
- El alto mínimo es la suma de `nMin` y dos veces el ancho, en píxeles, del borde vertical del control de barra de estado.  
+ El alto mínimo es la suma de *nMin* y dos veces el ancho, en píxeles, del borde vertical del control de barra de estado.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]  
@@ -501,11 +501,11 @@ BOOL SetParts(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nParts`  
+ *nParts*  
  Número de elementos para establecer. El número de partes no puede ser mayor que 255.  
   
  *pWidths*  
- Dirección de una matriz de enteros que tiene el mismo número de elementos como partes especificadas por `nParts`. Cada elemento de la matriz especifica la posición, en coordenadas de cliente, del borde derecho de la parte correspondiente. Si un elemento es - 1, la posición del borde derecho de esa parte se extiende hasta el borde derecho del control.  
+ Dirección de una matriz de enteros que tiene el mismo número de elementos como partes especificadas por *nParts*. Cada elemento de la matriz especifica la posición, en coordenadas de cliente, del borde derecho de la parte correspondiente. Si un elemento es - 1, la posición del borde derecho de esa parte se extiende hasta el borde derecho del control.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si es correcto. En caso contrario, es cero.  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bSimple`  
- Indicador de tipo de presentación. Si este parámetro es `TRUE`, el control muestra texto simple; si está `FALSE`, muestra varias partes.  
+ [in] *bSimple*  
+ Indicador de tipo de presentación. Si este parámetro es TRUE, el control muestra texto simple; Si es FALSE, muestra varias partes.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre devuelve 0.  
@@ -541,20 +541,20 @@ BOOL SetText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszText`  
- Dirección de una cadena terminada en null que especifica el texto que se debe establecer. Si `nType` es `SBT_OWNERDRAW`, `lpszText` representa 32 bits de datos.  
+ *lpszText*  
+ Dirección de una cadena terminada en null que especifica el texto que se debe establecer. Si *nLas* es SBT_OWNERDRAW, *lpszText* representa 32 bits de datos.  
   
- `nPane`  
+ *nPane*  
  El índice de base cero del elemento que se debe establecer. Si este valor es 255, se asume que el control de barra de estado es un control simple que solo contiene un elemento.  
   
- `nType`  
+ *nLas*  
  Tipo de operación de dibujo. Vea [mensaje SB_SETTEXT](http://msdn.microsoft.com/library/bb760758\(vs.85\).aspx) para obtener una lista de valores posibles.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si es correcto. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- El mensaje invalida la parte del control que ha cambiado y se muestra el texto nuevo cuando el control siguiente recibe el mensaje `WM_PAINT`.  
+ El mensaje invalida la parte del control que ha cambiado, haciendo que se muestre el nuevo texto cuando el control siguiente recibe el mensaje WM_PAINT.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]  
@@ -569,7 +569,7 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nPane`  
+ *nPane*  
  Índice de base cero del panel de barra de estado para recibir el texto de información sobre herramientas.  
   
  *pszTipText*  

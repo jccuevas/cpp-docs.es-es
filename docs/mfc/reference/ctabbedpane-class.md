@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a6c42a4203fb1d0224f5f31e4123dca9a6fad65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373819"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121843"
 ---
 # <a name="ctabbedpane-class"></a>Clase CTabbedPane
 Implementa la funcionalidad de un panel con pestañas separables.  
@@ -88,7 +88,7 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>Comentarios  
  El marco de trabajo crea automáticamente una instancia de esta clase cuando un usuario adjunta un panel a otro apuntando al título del segundo panel. Todos los paneles con pestañas que se crean mediante el marco de trabajo tienen un identificador de -1.  
   
- Para especificar pestañas normales en lugar de pestañas de tipo Outlook, pase el `AFX_CBRS_REGULAR_TABS` estilo a la [CDockablePane:: CreateEx](../../mfc/reference/cdockablepane-class.md#createex) método.  
+ Para especificar pestañas normales en lugar de pestañas de tipo Outlook, pase el estilo de AFX_CBRS_REGULAR_TABS el [CDockablePane:: CreateEx](../../mfc/reference/cdockablepane-class.md#createex) método.  
   
  Si crea un panel con pestañas separables, el marco de trabajo puede destruir automáticamente el panel, por lo que no debe almacenar el puntero. Para obtener un puntero al panel con pestañas, llame al método `CBasePane::GetParentTabbedPane`.  
   
@@ -177,8 +177,8 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -192,8 +192,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
- `TRUE` Para habilitar el coloreado automático de pestañas; en caso contrario, `FALSE`.  
+ [in] *bHabilitar el*  
+ TRUE para habilitar el coloreado automático de pestañas; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método estático para habilitar o deshabilitar el coloreado automático de las fichas en todos los paneles con pestañas de la aplicación. Cuando esta característica está habilitada, cada pestaña se rellena mediante su propio color. Puede encontrar la lista de colores que se usan para las pestañas de color mediante una llamada a la [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) método.  
@@ -214,10 +214,10 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pBar`  
- [in] `nTabID`  
- [in] `dockMethod`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *nTabID*  
+ [in] *dockMethod*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -233,10 +233,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  Contiene el tamaño y posición, en coordenadas de pantalla del área de ficha superior.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  Contiene el tamaño y posición, en coordenadas de pantalla del área de pestañas de la parte inferior.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -274,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el área de pestañas se encuentra en la parte inferior de la ventana con pestañas; en caso contrario, `FALSE`.  
+ TRUE si el área de pestañas se encuentra en la parte inferior de la ventana con pestañas; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -286,11 +286,11 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Establecer este miembro estático `TRUE` para forzar que todas las fichas de la aplicación que se mostrará en la parte superior del panel con pestañas.  
+ Establecer a este miembro estático en True para hacer que todas las fichas de la aplicación que se mostrará en la parte superior del panel con pestañas.  
   
  Debe establecer este valor antes de que se ha creado un panel con fichas.  
   
- El valor predeterminado es `FALSE`.  
+ El valor predeterminado es FALSE.  
   
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
  Información de clase en tiempo de ejecución para un derivado de `CMFCTabCtrl` personalizado.  
@@ -320,7 +320,7 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `arColors`  
+ [in] *arColors*  
  Contiene la matriz de colores para establecer.  
   
 ### <a name="remarks"></a>Comentarios  

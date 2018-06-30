@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13fa7aea135099a8e0903ef0fc5fd20ca0cca5ff
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 77049c53f3e1e536f8d4b036ee15084a8d650a91
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039510"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123193"
 ---
 # <a name="cmfcvisualmanager-class"></a>Clase CMFCVisualManager
 Proporciona compatibilidad para cambiar la apariencia de la aplicación en el nivel global. La clase `CMFCVisualManager` funciona junto con una clase que proporciona instrucciones para dibujar los controles de la GUI de la aplicación utilizando un estilo coherente. Estas otras clases se conocen como administradores visuales y se heredan de `CMFCBaseVisualManager`.  
@@ -564,35 +564,31 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 ## <a name="example"></a>Ejemplo  
  Este ejemplo muestra cómo crear una instancia del estándar y personalizado `CMFCVisualManager` objetos.  
   
-```  
+```cpp
 void CMFCSkinsApp::SetSkin (int iIndex)  
 {   // destroy the current visual manager  
     if (CMFCVisualManager::GetInstance () != NULL)  
- {  
-    delete CMFCVisualManager::GetInstance ();
-
- }  
+    {  
+        delete CMFCVisualManager::GetInstance ();
+    }  
     switch (iIndex)  
- {  
+    {  
     case 0:  
-    CMFCVisualManager::GetInstance ();
-
-// create the standard visual manager  
-    break; 
+        CMFCVisualManager::GetInstance ();
+        // create the standard visual manager  
+        break; 
     case 1:  
-    new CMyVisualManager ();
-
-// create the first custom visual manager  
-    break; 
+        new CMyVisualManager ();
+        // create the first custom visual manager  
+        break; 
     case 2:  
-    new CMacStyle ();
-*// create the second custom visual manager  
-    break; 
- }  
- *// access the manager and set it properly  
+        new CMacStyle ();
+        // create the second custom visual manager  
+        break; 
+    }  
+    // access the manager and set it properly  
     CMFCVisualManager::GetInstance ()->SetLook2000 ();
-CMFCVisualManager::GetInstance ()->RedrawAll ();
-
+    CMFCVisualManager::GetInstance ()->RedrawAll ();
 }  
 ```  
   

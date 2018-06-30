@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78b191766e33d291317ef50a4d5373dc26428577
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01d0cb0774af7c1c900f31b4e83bb03dba8bd255
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372185"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121091"
 ---
 # <a name="ctooltipmanager-class"></a>Clase CTooltipManager
 Mantiene información de tiempo de ejecución sobre información sobre herramientas. La clase `CTooltipManager` se crea una vez por cada aplicación.  
@@ -76,22 +76,22 @@ static BOOL CreateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `pToolTip`  
+ [out] *pToolTip*  
  Una referencia a un puntero de información sobre herramientas. Se establece para que apunte a la información sobre herramientas recién creado cuando la función devuelve.  
   
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Elemento primario de la información sobre herramientas.  
   
- [in] `nType`  
+ [in] *nLas*  
  Tipo de la información sobre herramientas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si se ha creado correctamente una información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
- Debe llamar a [CTooltipManager::DeleteToolTip](#deletetooltip) para eliminar el control de información sobre herramientas que se pasa en `pToolTip`.  
+ Debe llamar a [CTooltipManager::DeleteToolTip](#deletetooltip) para eliminar el control de información sobre herramientas que se pasa en *pToolTip*.  
   
- El [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) establece los parámetros de presentación de cada información sobre herramientas crea basan en la información sobre herramientas de tipo que `nType` especifica. Para cambiar los parámetros de uno o más tipos de información sobre herramientas, llame a [ctooltipmanager:: Settooltipparams](#settooltipparams).  
+ El [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) establece los parámetros de presentación de cada información sobre herramientas crea basan en la información sobre herramientas de tipo que *nLas* especifica. Para cambiar los parámetros de uno o más tipos de información sobre herramientas, llame a [ctooltipmanager:: Settooltipparams](#settooltipparams).  
   
  Los tipos válidos de información sobre herramientas se muestran en la tabla siguiente:  
   
@@ -117,11 +117,11 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] `pToolTip`  
+ [entrada, salida] *pToolTip*  
  Una referencia a un puntero a una información sobre herramientas al ser destruidos.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para cada [CToolTipCtrl (clase)](../../mfc/reference/ctooltipctrl-class.md) creado por [CTooltipManager::CreateToolTip](#createtooltip). El control primario debe llamar a este método desde su `OnDestroy` controlador. Esto es necesario para quitar correctamente la información sobre herramientas en el marco de trabajo. Este método establece `pToolTip` a `NULL` antes de regresar.  
+ Llamar a este método para cada [CToolTipCtrl (clase)](../../mfc/reference/ctooltipctrl-class.md) creado por [CTooltipManager::CreateToolTip](#createtooltip). El control primario debe llamar a este método desde su `OnDestroy` controlador. Esto es necesario para quitar correctamente la información sobre herramientas en el marco de trabajo. Este método establece *pToolTip* en NULL antes de regresar.  
   
 ##  <a name="settooltipparams"></a>  Ctooltipmanager:: Settooltipparams  
  Personaliza la apariencia del control de información sobre herramientas para los tipos de control de Windows especificados.  
@@ -134,21 +134,21 @@ void SetTooltipParams(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nTypes`  
+ [in] *nTypes*  
  Especifica los tipos de control.  
   
- [in] `pRTC`  
+ [in] *pRTC*  
  Clase en tiempo de ejecución de información sobre herramientas personalizada.  
   
- [in] `pParams`  
+ [in] *pParams*  
  Parámetros de información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método establece la clase en tiempo de ejecución y los parámetros iniciales que el [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) usa al crear información sobre herramientas. Cuando un control llama [CTooltipManager::CreateToolTip](#createtooltip) y pasa información sobre herramientas de tipo que es uno de los tipos que se indican por `nTypes`, el Administrador de información sobre herramientas crea un control de información sobre herramientas que es una instancia de la clase en tiempo de ejecución especificada por `pRTC` y pasa los parámetros especificados por `pParams` a la información sobre herramientas nuevo.  
+ Este método establece la clase en tiempo de ejecución y los parámetros iniciales que el [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) usa al crear información sobre herramientas. Cuando un control llama [CTooltipManager::CreateToolTip](#createtooltip) y pasa información sobre herramientas de tipo que es uno de los tipos que se indican por *nTypes*, el Administrador de información sobre herramientas crea un control de información sobre herramientas que es una instancia de la clase en tiempo de ejecución especificada por *pRTC* y pasa los parámetros especificados por *pParams* a la información sobre herramientas nuevo.  
   
  Cuando se llama a este método, todos los propietarios de información sobre herramientas existentes reciban el mensaje AFX_WM_UPDATETOOLTIPS y debe volver a crear su información sobre herramientas mediante el uso de [CTooltipManager::CreateToolTip](#createtooltip).  
   
- `nTypes` puede ser cualquier combinación de la información sobre herramientas válido tipos que [CTooltipManager::CreateToolTip](#createtooltip) utiliza, o puede ser AFX_TOOLTIP_TYPE_ALL. Si se pasa AFX_TOOLTIP_TYPE_ALL, se ven afectados todos los tipos de información sobre herramientas.  
+ *nTypes* puede ser cualquier combinación de la información sobre herramientas válido tipos que [CTooltipManager::CreateToolTip](#createtooltip) utiliza, o puede ser AFX_TOOLTIP_TYPE_ALL. Si se pasa AFX_TOOLTIP_TYPE_ALL, se ven afectados todos los tipos de información sobre herramientas.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo utilizar el `SetTooltipParams` método de la `CTooltipManager` clase. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../visual-cpp-samples.md).  
@@ -168,23 +168,23 @@ static void SetTooltipText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pTI`  
+ [in] *pTI*  
  Un puntero a un objeto TOOLINFO.  
   
- [in, out] `pToolTip`  
+ [entrada, salida] *pToolTip*  
  Un puntero para el control de información sobre herramientas para el que se va a establecer el texto y la descripción.  
   
- [in] `nType`  
+ [in] *nLas*  
  Especifica el tipo de control al que está asociado este información sobre herramientas.  
   
- [in] `strText`  
+ [in] *strText*  
  El texto que se establecerá como el texto de información sobre herramientas.  
   
- [in] `lpszDescr`  
- Un puntero a la descripción de la información sobre herramientas. Puede ser `NULL`.  
+ [in] *lpszDescr*  
+ Un puntero a la descripción de la información sobre herramientas. Puede ser NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- El valor de `nType` debe ser el mismo valor que el `nType` parámetro de [CTooltipManager::CreateToolTip](#createtooltip) cuando creó la información sobre herramientas.  
+ El valor de *nLas* debe ser el mismo valor que el *nLas* parámetro de [CTooltipManager::CreateToolTip](#createtooltip) cuando creó la información sobre herramientas.  
   
 ##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

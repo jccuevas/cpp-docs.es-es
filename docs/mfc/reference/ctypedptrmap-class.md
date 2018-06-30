@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376400"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121869"
 ---
 # <a name="ctypedptrmap-class"></a>Clase CTypedPtrMap
 Proporciona un "contenedor" con seguridad de tipos para objetos de las clases de asignación de puntero `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`y `CMapStringToPtr`.  
@@ -42,13 +42,13 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `BASE_CLASS`  
+ *CLASE_BASE*  
  Clase base de la clase de mapa de puntero con tipo. debe ser una clase de mapa de puntero ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, o `CMapStringToPtr`).  
   
- `KEY`  
+ *KEY*  
  Clase del objeto que se utiliza como clave para la asignación.  
   
- `VALUE`  
+ *VALOR*  
  Clase del objeto almacenado en el mapa.  
   
 ## <a name="members"></a>Miembros  
@@ -94,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rPosition`  
- Especifica una referencia a un **posición** valor devuelto por un anterior `GetNextAssoc` o `BASE_CLASS` **:: GetHeadPosition** llamar.  
+ *rPosition*  
+ Especifica una referencia a un valor de posición devuelto por una anterior `GetNextAssoc` o `BASE_CLASS` **:: GetHeadPosition** llamar.  
   
  *KEY*  
  Parámetro de plantilla que especifica el tipo de las claves del mapa.  
   
- `rKey`  
+ *rKey*  
  Especifica la clave devuelta del elemento recuperado.  
   
  *VALOR*  
  Parámetro de plantilla que especifica el tipo de valores del mapa.  
   
- `rValue`  
+ *rValue*  
  Especifica el valor devuelto del elemento recuperado.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función es muy útil para recorrer en iteración todos los elementos del mapa. Tenga en cuenta que la secuencia de posición no es necesariamente el mismo que la secuencia de valores de clave.  
   
- Si el elemento recuperado es el último en el mapa, a continuación, el nuevo valor de `rNextPosition` está establecido en **NULL**.  
+ Si el elemento recuperado es el último en el mapa, a continuación, el nuevo valor de `rNextPosition` se establece en NULL.  
   
  Esta función insertada se llama `BASE_CLASS` **:: GetNextAssoc**.  
   
@@ -124,16 +124,16 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `BASE_CLASS`  
+ *CLASE_BASE*  
  Parámetro de plantilla que especifica la clase base de la clase de este mapa.  
   
- `key`  
+ *key*  
  La clave del elemento que se va a buscar.  
   
  *VALOR*  
  Especifica el tipo de valores almacenados en este mapa de un parámetro de plantilla.  
   
- `rValue`  
+ *rValue*  
  Especifica el valor devuelto del elemento recuperado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -153,10 +153,10 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *VALOR*  
  Especifica el tipo de valores almacenados en este mapa de un parámetro de plantilla.  
   
- `BASE_CLASS`  
+ *CLASE_BASE*  
  Parámetro de plantilla que especifica la clase base de la clase de este mapa.  
   
- `key`  
+ *key*  
  La clave del elemento que se va a buscar o crear en el mapa.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -173,7 +173,7 @@ BOOL RemoveKey(KEY key);
  *KEY*  
  Parámetro de plantilla que especifica el tipo de las claves del mapa.  
   
- `key`  
+ *key*  
  Clave para el elemento va a quitar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -193,10 +193,10 @@ void SetAt(KEY key, VALUE newValue);
  *KEY*  
  Parámetro de plantilla que especifica el tipo de las claves del mapa.  
   
- `key`  
+ *key*  
  Especifica el valor de clave de la newValue.  
   
- `newValue`  
+ *newValue*  
  Especifica el puntero de objeto que es el valor del nuevo elemento.  
   
 ### <a name="remarks"></a>Comentarios  

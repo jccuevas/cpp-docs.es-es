@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9082e28aad1edc584a1796d5bb5e97b5601753f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375825"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122920"
 ---
 # <a name="ctypedptrarray-class"></a>Clase CTypedPtrArray
 Proporciona un "contenedor" con seguridad de tipos para objetos de clase `CPtrArray` o `CObArray`.  
@@ -50,10 +50,10 @@ class CTypedPtrArray : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `BASE_CLASS`  
+ *CLASE_BASE*  
  Clase base de la clase de matriz de puntero con tipo. debe ser una clase de matriz ( `CObArray` o `CPtrArray`).  
   
- `TYPE`  
+ *TIPO DE*  
  Tipo de los elementos almacenados en la matriz de la clase base.  
   
 ## <a name="members"></a>Miembros  
@@ -105,7 +105,7 @@ INT_PTR Add(TYPE newElement);
  *TIPO DE*  
  Parámetro de plantilla que especifica el tipo de elemento que se va a agregar a la matriz.  
   
- `newElement`  
+ *"newelement"*  
  El elemento que se va a agregar a esta matriz.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -115,14 +115,14 @@ INT_PTR Add(TYPE newElement);
  Para obtener comentarios más detallada, vea [CObArray::Add](../../mfc/reference/cobarray-class.md#add).  
   
 ##  <a name="append"></a>  CTypedPtrArray::Append  
- Llama a esta función miembro `BASE_CLASS` **:: Append**.  
+ Llama a esta función miembro `BASE_CLASS`:: Append **.  
   
 ```  
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `BASE_CLASS`  
+ *CLASE_BASE*  
  Clase base de la clase de matriz de puntero con tipo. debe ser una clase de matriz ( [CObArray](../../mfc/reference/cobarray-class.md) o [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
  *TIPO DE*  
@@ -145,7 +145,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `BASE_CLASS`  
+ *CLASE_BASE*  
  Clase base de la clase de matriz de puntero con tipo. debe ser una clase de matriz ( [CObArray](../../mfc/reference/cobarray-class.md) o [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
  *TIPO DE*  
@@ -168,11 +168,11 @@ TYPE& ElementAt(INT_PTR nIndex);
  *TIPO DE*  
  Parámetro de plantilla que especifica el tipo de elementos almacenados en esta matriz.  
   
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una referencia temporal al elemento en la ubicación especificada por `nIndex`. Este elemento es del tipo especificado por el parámetro de plantilla *tipo*.  
+ Una referencia temporal al elemento en la ubicación especificada por *nIndex*. Este elemento es del tipo especificado por el parámetro de plantilla *tipo*.  
   
 ### <a name="remarks"></a>Comentarios  
  Para obtener comentarios más detallada, vea [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).  
@@ -188,11 +188,11 @@ TYPE GetAt(INT_PTR nIndex) const;
  *TIPO DE*  
  Parámetro de plantilla que especifica el tipo de elementos almacenados en la matriz.  
   
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una copia del elemento en la ubicación especificada por `nIndex`. Este elemento es del tipo especificado por el parámetro de plantilla *tipo*.  
+ Una copia del elemento en la ubicación especificada por *nIndex*. Este elemento es del tipo especificado por el parámetro de plantilla *tipo*.  
   
 ### <a name="remarks"></a>Comentarios  
  Para obtener comentarios más detallada, vea [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
@@ -213,25 +213,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que puede ser mayor que el valor devuelto por [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
  *TIPO DE*  
  Tipo de los elementos almacenados en la matriz de la clase base.  
   
- `newElement`  
- El puntero de objeto que se colocarán en esta matriz. A `newElement` del valor **NULL** está permitido.  
+ *"newelement"*  
+ El puntero de objeto que se colocarán en esta matriz. A *"newelement"* del valor **NULL** está permitido.  
   
- `nCount`  
+ *nCount*  
  El número de veces que este elemento debe estar insertado (el valor predeterminado es 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Un índice de entero que puede ser mayor que el valor devuelto por `CObArray::GetUpperBound`.  
   
- `BASE_CLASS`  
+ *CLASE_BASE*  
  Clase base de la clase de matriz de puntero con tipo. debe ser una clase de matriz ( [CObArray](../../mfc/reference/cobarray-class.md) o [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
- `pNewArray`  
+ *pNewArray*  
  Otra matriz que contiene elementos que se va a agregar a esta matriz.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -249,7 +249,7 @@ TYPE operator[ ](int_ptr nindex) const;
  *TIPO DE*  
  Parámetro de plantilla que especifica el tipo de elementos almacenados en la matriz.  
   
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -267,7 +267,7 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
  *TIPO DE*  
@@ -289,13 +289,13 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0.  
   
  *TIPO DE*  
  Tipo de los elementos almacenados en la matriz de la clase base.  
   
- `newElement`  
+ *"newelement"*  
  Puntero de objeto que se va a agregar a esta matriz. A **NULL** se permite el valor.  
   
 ### <a name="remarks"></a>Comentarios  

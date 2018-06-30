@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb7daba666e8aaf983eadc77417cad46180e7df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff4596a52170d0c6d197a0bda431963b5f0e9344
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378274"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120947"
 ---
 # <a name="drawitemstruct-structure"></a>DRAWITEMSTRUCT (estructura)
 La estructura `DRAWITEMSTRUCT` proporciona información que la ventana propietaria debe tener para determinar cómo se pinta un elemento de menú o control dibujado por el propietario.  
@@ -43,65 +43,65 @@ typedef struct tagDRAWITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `CtlType`  
+ *CtlType*  
  Tipo de control. Los valores de tipos de control son los siguientes:  
   
-- **ODT_BUTTON** Botón dibujado por el propietario  
+- Botón dibujado por el propietario ODT_BUTTON  
   
-- **ODT_COMBOBOX** Cuadro combinado dibujado por el propietario  
+- Cuadro combinado dibujado por el propietario ODT_COMBOBOX  
   
-- **ODT_COMBOBOX** Cuadro de lista dibujado por el propietario  
+- Cuadro de lista dibujado por el propietario de odt_combobox  
   
-- **ODT_MENU** Menú dibujado por el propietario  
+- Menú dibujado por el propietario ODT_MENU  
   
-- **ODT_LISTVIEW** Control de vista de lista  
+- Control de vista de lista ODT_LISTVIEW  
   
-- **ODT_STATIC** Control estático dibujado por el propietario  
+- ODT_STATIC control estático dibujado por el propietario  
   
-- **ODT_TAB** Control de pestaña  
+- Control de pestaña ODT_TAB  
   
- `CtlID`  
+ *CtlID*  
  Identificador del control de un cuadro combinado, un cuadro de lista o un botón. Este miembro no se usa para un menú.  
   
- `itemID`  
- Identificador de elemento de menú de un menú o índice del elemento en un cuadro de lista o cuadro combinado. Para un cuadro de lista o un cuadro combinado vacío, este miembro es un valor negativo, que permite a la aplicación dibujar solo el rectángulo de foco en las coordenadas que especifica el miembro **rcItem** , aunque no exista ningún elemento en el control. Así se puede mostrar al usuario si el cuadro de lista o cuadro combinado tiene el foco de entrada. La configuración de bits del miembro **itemAction** determina si el rectángulo se dibujará como si el cuadro de lista o cuadro combinado tuviese el foco de entrada.  
+ *itemID*  
+ Identificador de elemento de menú de un menú o índice del elemento en un cuadro de lista o cuadro combinado. Para un cuadro de lista vacío o un cuadro combinado, este miembro es un valor negativo, que permite que la aplicación dibujar el rectángulo de foco en las coordenadas especificadas por la `rcItem` miembro, aunque no exista ningún elemento en el control. Así se puede mostrar al usuario si el cuadro de lista o cuadro combinado tiene el foco de entrada. La configuración de los bits de la `itemAction` miembro determina si el rectángulo se dibujará como si el cuadro de lista o cuadro combinado tiene foco de entrada.  
   
- `itemAction`  
+ *ItemAction*  
  Define la acción de dibujo necesaria. Será uno o varios de los bits siguientes:  
   
-- **ODA_DRAWENTIRE** Este bit se establece cuando es necesario dibujar todo el control.  
+- ODA_DRAWENTIRE este bit se establece cuando es necesario dibujar todo el control.  
   
-- **ODA_FOCUS** Este bit se establece cuando el control obtiene o pierde el foco de entrada. El miembro **itemState** debe comprobarse para determinar si el control tiene el foco.  
+- ODA_FOCUS este bit se establece cuando el control obtiene o pierde el foco de entrada. El `itemState` miembro se debe comprobar para determinar si el control tiene el foco.  
   
-- **ODA_SELECT** Este bit se establece cuando solo cambia el estado de la selección. El miembro **itemState** debe comprobarse para determinar el nuevo estado de selección.  
+- ODA_SELECT este bit se establece cuando ha cambiado el estado de la selección. El `itemState` miembro debe comprobarse para determinar el nuevo estado de selección.  
   
  *itemState*  
- Especifica el estado visual del elemento una vez realizada la acción de dibujo actual. Es decir, si un elemento de menú se va a atenuar, se establecerá el indicador de estado **ODS_GRAYED** . Los indicadores de estado son los siguientes:  
+ Especifica el estado visual del elemento una vez realizada la acción de dibujo actual. Es decir, si un elemento de menú que se va a estar atenuados, la marca de estado ODS_GRAYED se establecerá. Los indicadores de estado son los siguientes:  
   
-- **ODS_CHECKED** Este bit se establece si el elemento de menú debe comprobarse. Este bit sólo se usa en un menú.  
+- ODS_CHECKED este bit se establece si el elemento de menú es comprobarse. Este bit sólo se usa en un menú.  
   
-- **ODS_DISABLED** Este bit se establece si el elemento se va a dibujar como deshabilitado.  
+- ODS_DISABLED este bit se establece si el elemento se va a dibujar como deshabilitado.  
   
-- **ODS_FOCUS** Este bit se establece si el elemento tiene el foco de entrada.  
+- ODS_FOCUS este bit se establece si el elemento tiene foco de entrada.  
   
-- **ODS_GRAYED** Este bit se establece si el elemento se va a atenuar. Este bit sólo se usa en un menú.  
+- ODS_GRAYED este bit se establece si el elemento se va a atenuar. Este bit sólo se usa en un menú.  
   
-- **ODS_SELECTED** Este bit se establece si se selecciona el estado del artículo.  
+- ODS_SELECTED este bit se establece si se selecciona el estado del artículo.  
   
-- **ODS_COMBOBOXEDIT** El dibujo tiene lugar en el campo de selección (control de edición) de un cuadro combinado ownerdrawn.  
+- ODS_COMBOBOXEDIT el dibujo tiene lugar en el campo de selección (control de edición) de un cuadro combinado ownerdrawn.  
   
-- **ODS_DEFAULT** El elemento es el predeterminado.  
+- ODS_DEFAULT el elemento es el elemento predeterminado.  
   
- `hwndItem`  
- Especifica el identificador de ventana del control de cuadros combinados, cuadros de lista y botones. Especifica el identificador del menú (`HMENU`) que contiene el elemento de los menús.  
+ *hwndItem*  
+ Especifica el identificador de ventana del control de cuadros combinados, cuadros de lista y botones. Especifica el identificador del menú (HMENU) que contiene el elemento en los menús.  
   
- `hDC`  
+ *hDC*  
  Identifica un contexto de dispositivo. Este contexto de dispositivo debe usarse al realizar operaciones de dibujo en el control.  
   
  *rcItem*  
- Rectángulo en el contexto de dispositivo especificado por el miembro `hDC` que define los límites del control que se va a dibujar. Windows recorta automáticamente todo lo que el propietario dibuja en el contexto de dispositivo de cuadros combinados, cuadros de lista y botones, pero no recorta los elementos de menú. Al dibujar elementos de menú, el propietario no debe dibujar fuera de los límites del rectángulo definido por el miembro **rcItem** .  
+ Un rectángulo en el contexto de dispositivo especificado por el *hDC* miembro que define los límites del control para dibujar. Windows recorta automáticamente todo lo que el propietario dibuja en el contexto de dispositivo de cuadros combinados, cuadros de lista y botones, pero no recorta los elementos de menú. Al dibujar elementos de menú, el propietario no debe dibujar fuera de los límites del rectángulo definido por el `rcItem` miembro.  
   
- `itemData`  
+ *itemData*  
  Para un cuadro combinado o cuadro de lista, este miembro contiene el valor que uno de los siguientes elementos pasó al cuadro de lista:  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
@@ -121,7 +121,7 @@ typedef struct tagDRAWITEMSTRUCT {
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
 ## <a name="remarks"></a>Comentarios  
- La ventana propietaria del elemento de menú o control dibujado por el propietario recibe un puntero a esta estructura como el parámetro `lParam` del mensaje `WM_DRAWITEM` .  
+ La ventana propietaria del elemento de menú o control dibujado por el propietario recibe un puntero a esta estructura como el *lParam* parámetro del mensaje WM_DRAWITEM.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** winuser.h  

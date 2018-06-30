@@ -1,7 +1,7 @@
 ---
 title: Crear una aplicación de MFC estilo explorador Web | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1553f7ccc3b22b4e3d76d8c49d94ba2a61c19e97
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374528"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122558"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Crear una aplicación MFC estilo explorador web
 Una aplicación estilo explorador Web puede tener acceso a información de Internet (por ejemplo, HTML o documentos activos) o una intranet, así como carpetas en el sistema de archivos local y en una red. Al derivar la clase de vista de la aplicación de [CHtmlView](../../mfc/reference/chtmlview-class.md), eficazmente que un explorador Web de la aplicación proporcionando la vista con el control WebBrowser.  
@@ -50,30 +50,30 @@ Una aplicación estilo explorador Web puede tener acceso a información de Inter
   
  `CHtmlView` actúa como un contenedor para el control de explorador Web, que proporciona una vista en un sitio Web o una página HTML de la aplicación. El asistente crea una invalidación para el [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) función en la clase de vista, que proporciona un vínculo de exploración al sitio Web de Microsoft Visual C++:  
   
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
-    NULL,
-    NULL);
+        NULL,
+        NULL);
+}
+```
 
-} 
-```  
+Puede reemplazar este sitio con uno propio, o puede usar el [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) función de miembro para abrir una página HTML que reside en el script de recursos del proyecto como contenido predeterminado de la vista. Por ejemplo:  
   
- Puede reemplazar este sitio con uno propio, o puede usar el [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) función de miembro para abrir una página HTML que reside en el script de recursos del proyecto como contenido predeterminado de la vista. Por ejemplo:  
-  
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     LoadFromResource(IDR_HTML1);
-
-} 
+}
 ```  
   
 ## <a name="see-also"></a>Vea también  

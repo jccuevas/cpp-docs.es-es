@@ -1,7 +1,7 @@
 ---
 title: Asistente para consumidores ATL OLE DB | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364955"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121694"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Asistente para consumidores OLE DB ATL
 Este asistente configura una clase de consumidor OLE DB con los enlaces de datos necesario para tener acceso al origen de datos especificados a través del proveedor OLE DB especificado.  
@@ -52,7 +52,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
   
      Haga clic en **Aceptar** para finalizar. El **seleccionar un objeto de base de datos** aparece el cuadro de diálogo. En este cuadro de diálogo, seleccione la tabla, vista o procedimiento almacenado que se va a usar el consumidor.  
   
- **Proveedor**  
+ **proveedor**  
      Seleccione un proveedor adecuado para administrar la conexión al origen de datos. El tipo de proveedor normalmente se determina por el tipo de base de datos al que se está conectando. Haga clic en el `Next` botón o haga clic en el **conexión** ficha.  
   
  **Conexión**  
@@ -66,7 +66,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
   
     3. **Seleccione la base de datos en el servidor:** haga clic en el menú de lista desplegable para mostrar registrados todas las bases de datos en el servidor de datos y seleccionar uno.  
   
-         -o bien-  
+         O bien  
   
  **Adjuntar un archivo de base de datos como un nombre de base de datos:** especificar un archivo que se usará como la base de datos; escriba la ruta de acceso explícita.  
   
@@ -111,7 +111,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
  `Class`  
  Después de seleccionar un origen de datos, este cuadro se rellena con un nombre de clase predeterminado basado en la tabla o el procedimiento almacenado que seleccionó (vea **seleccionar un origen de datos** a continuación). Puede modificar el nombre de clase.  
   
- **archivo .h**  
+ **Archivo .h**  
  Después de seleccionar un origen de datos, este cuadro se rellena con un nombre de clase de encabezado predeterminada basado en la tabla o procedimiento almacenado que seleccionó (vea **seleccionar un origen de datos** a continuación). Puede editar el nombre del archivo de encabezado o seleccionar un archivo de encabezado existente.  
   
  **El atributo**  
@@ -133,7 +133,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
   
  ``` 
  // Table accessor class  
-    class COrdersAccessor; *// Table class  
+    class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
  ... 
  // Column map  
