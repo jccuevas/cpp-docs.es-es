@@ -1,7 +1,7 @@
 ---
 title: fgets, fgetws | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e92deea033443ec942895d2aef2d1a307ac89f34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c155150a364c2cbbd230c56678e6e7dcb4e4fde
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402025"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027172"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -70,21 +70,21 @@ wchar_t *fgetws(
 *str*<br/>
 Ubicación de almacenamiento de los datos.
 
-*NumChars*<br/>
+*numChars*<br/>
 Número máximo de caracteres que se van a leer.
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve *str*. **NULL** se devuelve para indicar un error o una condición de final de archivo. Use **feof** o **ferror** para determinar si se produjo un error. Si *str* o *flujo* es un puntero nulo, o *numChars* es menor o igual a cero, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**.
+Cada una de estas funciones devuelve *str*. **NULL** se devuelve para indicar un error o una condición de final de archivo. Use **feof** o **ferror** para determinar si se produjo un error. Si *str* o *secuencia* es un puntero nulo, o *numChars* es menor o igual a cero, esta función invoca al controlador de parámetros no válidos, como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **fgets** función lee una cadena de la entrada *flujo* argumento y lo almacena en *str*. **fgets** lee los caracteres de la posición de la secuencia actual a e incluyendo el primer carácter de nueva línea al final de la secuencia, o hasta que el número de caracteres leídos es igual a *numChars* - 1, lo que ocurra primero. El resultado se almacena en *str* se anexa con un carácter nulo. El carácter de nueva línea, cuando se lee, se incluye en la cadena.
+El **fgets** función lee una cadena de la entrada *secuencia* argumento y lo almacena en *str*. **fgets** lee los caracteres de la posición actual del flujo a e incluyendo el primer carácter de nueva línea, al final de la secuencia, o hasta que el número de caracteres leídos es igual a *numChars* - 1, lo que ocurra primero. El resultado se almacena en *str* se anexa con un carácter nulo. El carácter de nueva línea, cuando se lee, se incluye en la cadena.
 
 **fgetws** es una versión con caracteres anchos de **fgets**.
 
@@ -109,9 +109,8 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ```C
 // crt_fgets.c
-// This program uses fgets to display
-// a line from a file on the screen.
-//
+// This program uses fgets to display 
+// the first line from a file.
 
 #include <stdio.h>
 

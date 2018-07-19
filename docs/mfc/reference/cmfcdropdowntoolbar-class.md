@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCDropDownToolBar | Documentos de Microsoft
+title: CMFCDropDownToolBar (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,14 +30,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6e12799f10fe86ef5dd556eac4e344aa972e2503
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042123"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027315"
 ---
-# <a name="cmfcdropdowntoolbar-class"></a>Clase de CMFCDropDownToolBar
+# <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar (clase)
 Una barra de herramientas que aparece cuando el usuario presiona y mantiene presionado un botón de la barra de herramientas de nivel superior.  
   
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -59,31 +59,31 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(Invalida `CMFCToolBar::OnSendCommand`).|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Invalida [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/571a38ab-2a56-4968-9796-273516126f80).)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Invalida [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
   
 ### <a name="remarks"></a>Comentarios  
- Un `CMFCDropDownToolBar` objeto combina el aspecto visual de una barra de herramientas con el comportamiento de un menú emergente. Cuando un usuario presiona y mantiene presionado un botón de barra de herramientas desplegable (vea [CMFCDropDownToolbarButton clase](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), aparece una barra de herramientas de la lista desplegable y el usuario puede seleccionar un botón de la barra de herramientas desplegable desplazándose a él y liberar el mouse botón. Cuando el usuario selecciona un botón en la barra de herramientas de la lista desplegable, ese botón se muestra como el botón actual en la barra de herramientas de nivel superior.  
+ Un `CMFCDropDownToolBar` objeto combina la apariencia visual de una barra de herramientas con el comportamiento de un menú emergente. Cuando un usuario presiona y mantiene un botón de barra de herramientas desplegable (consulte [CMFCDropDownToolbarButton (clase)](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), aparece una barra de herramientas de la lista desplegable y el usuario puede seleccionar un botón de la barra de herramientas desplegable desplazándose hasta él y soltando el mouse botón. Después de que el usuario selecciona un botón en la barra de herramientas de la lista desplegable, ese botón se muestra como botón actual en la barra de herramientas de nivel superior.  
   
- No se puede personalizar o acoplar una barra de herramientas de la lista desplegable, y no tiene un estado desplazable.  
+ No se pueden personalizar ni acoplada una barra de herramientas de la lista desplegable, y no tiene un estado desplazable.  
   
  La siguiente ilustración muestra un `CMFCDropDownToolBar` objeto:  
   
  ![Ejemplo de CMFCDropDownToolbar](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")  
   
- Crear un `CMFCDropDownToolBar` objeto del mismo modo que se crea una barra de herramientas normal (vea [CMFCToolBar clase](../../mfc/reference/cmfctoolbar-class.md)).  
+ Crear un `CMFCDropDownToolBar` objeto del mismo modo, crear una barra de herramientas normal (vea [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md)).  
   
- Para insertar la barra de herramientas de la lista desplegable en una barra de herramientas primario:  
+ Para insertar la barra de herramientas desplegable en una barra de herramientas primario:  
   
  1. Reserve un id. de recurso ficticio para el botón en el recurso primario de la barra de herramientas.  
   
- 2. Crear un `CMFCDropDownToolBarButton` objeto que contiene la barra de herramientas de la lista desplegable (para obtener más información, consulte [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton)).  
+ 2. Crear un `CMFCDropDownToolBarButton` objeto que contiene la barra de herramientas desplegable (para obtener más información, consulte [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton)).  
   
- 3. Reemplazar el botón ficticio con el `CMFCDropDownToolBarButton` objeto mediante el uso de [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. Reemplazar el botón ficticio con la `CMFCDropDownToolBarButton` objeto mediante el uso de [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
  Para obtener más información acerca de los botones de barra de herramientas, consulte [Tutorial: poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obtener un ejemplo de una barra de herramientas de la lista desplegable, vea el proyecto de ejemplo VisualStudioDemo.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el `Create` método en la `CMFCDropDownToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo usar el `Create` método en el `CMFCDropDownToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]  
@@ -143,7 +143,7 @@ virtual BOOL LoadBitmap(
  El identificador de recurso del mapa de bits que hace referencia a las imágenes de menú regular.  
   
  [in] *bloqueado*  
- `TRUE` Para bloquear la barra de herramientas; en caso contrario, `FALSE`.  
+ TRUE para bloquear la barra de herramientas; en caso contrario, FALSE.  
   
  [in] *uiDisabledResID*  
  El identificador de recurso del mapa de bits que hace referencia a las imágenes de barra de herramientas deshabilitada.  
@@ -155,7 +155,7 @@ virtual BOOL LoadBitmap(
  Distinto de cero si el método es correcto; de lo contrario, 0.  
   
 ### <a name="remarks"></a>Comentarios  
- El [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) método llama a este método para cargar las imágenes que están asociadas a la barra de herramientas. Invalide este método para realizar la carga personalizada de recursos de imagen.  
+ El [cmfctoolbar:: Loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) método llama a este método para cargar las imágenes que están asociadas con la barra de herramientas. Invalide este método para realizar la carga personalizada de recursos de imagen.  
   
  Llame al método `LoadBitmapEx` para cargar imágenes adicionales después de crear la barra de herramientas.  
   
@@ -248,10 +248,10 @@ virtual void OnUpdateCmdUI(
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)   
+ [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md)   
  [CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
- [Clase CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)   
+ [CMFCDropDownToolbarButton (clase)](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)   
  [Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 

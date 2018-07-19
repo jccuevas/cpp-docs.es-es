@@ -1,7 +1,7 @@
 ---
-title: Configurar Visual C++ para procesadores ARM | Documentos de Microsoft
+title: Configuración de Visual C++ para procesadores ARM | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -12,14 +12,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b249e2b54085f87c4895ba026d4f34e9ed195a49
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dd54543f4fc35a204aaa349ce2ac8f41f912caf
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366905"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026324"
 ---
-# <a name="configure-visual-c-for-arm-processors"></a>Configurar Visual C++ para procesadores ARM
+# <a name="configure-visual-c-for-arm-processors"></a>Configuración de Visual C++ para procesadores ARM
 
 Esta sección de la documentación contiene información sobre cómo usar las herramientas de compilación de Visual C++ en hardware de ARM.  
   
@@ -28,13 +28,19 @@ Esta sección de la documentación contiene información sobre cómo usar las he
 [Información general sobre las convenciones ABI de ARM](../build/overview-of-arm-abi-conventions.md)  
 Describe la aplicación binaria de aplicaciones que Windows en ARM utiliza para el uso de registros, las convenciones de llamada y el control de excepciones.  
   
+[Información general sobre las convenciones ABI de ARM64](../build/arm64-windows-abi-conventions.md)  
+Describe la interfaz binaria de aplicación usada por Windows en ARM64 para el uso de registros, convenciones de llamada y control de excepciones.  
+  
 [Problemas comunes de migración de ARM en Visual C++](../build/common-visual-cpp-arm-migration-issues.md)  
 Describe elementos de código C++ que normalmente se suponen como portables entre arquitecturas, pero que generan resultados distintos para ARM y para x86 y x64.  
   
 [Control de excepciones de ARM](../build/arm-exception-handling.md)  
 Describe el esquema de codificación para el desenredado de la pila durante el control de excepciones estructurado en Windows en ARM.  
-  
+
+[ARM64 Control de excepciones](../build/arm64-exception-handling.md)  
+Describe el esquema de codificación para el desenredado durante el control de excepciones estructurado en Windows en ARM64 de la pila.  
+
 ## <a name="related-sections"></a>Secciones relacionadas  
   
 [Intrínsecos ARM](../intrinsics/arm-intrinsics.md)  
-Describe las funciones intrínsecas del compilador para procesadores que usan la arquitectura ARM.
+Describe las funciones intrínsecas del compilador para procesadores que usan la arquitectura ARM.  

@@ -1,5 +1,5 @@
 ---
-title: Interfaz IRegistrar | Documentos de Microsoft
+title: IRegistrar (interfaz) | Microsoft Docs
 ms.custom: ''
 ms.date: 2/1/2017
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
+ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363757"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993573"
 ---
-# <a name="iregistrar-interface"></a>Interfaz IRegistrar
-Esta interfaz se define en atliface.h y se usa internamente las funciones de miembro de CAtlModule como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+# <a name="iregistrar-interface"></a>IRegistrar (interfaz)
+Esta interfaz se define en atliface.h y se usa internamente por las funciones de miembro CAtlModule como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Sintaxis  
   

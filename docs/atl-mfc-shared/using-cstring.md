@@ -1,5 +1,5 @@
 ---
-title: Uso de CString | Documentos de Microsoft
+title: Uso de CString | Microsoft Docs
 ms.custom: ''
 ms.date: 06/18/2018
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 92807995183d2e5a34391250b36129e9bea01d66
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238726"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025849"
 ---
 # <a name="using-cstring"></a>Uso de CString
 En los temas de esta sección se describe cómo programar con `CString`. Para obtener documentación de referencia sobre la `CString` de clases, consulte la documentación de [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
   
  Para usar `CString`, incluya el encabezado `atlstr.h`.  
   
- El `CString`, `CStringA`, y `CStringW` clases son especializaciones de una plantilla de clase denominado [CStringT](../atl-mfc-shared/reference/cstringt-class.md) según el tipo de datos de caracteres que admiten.  
+ El `CString`, `CStringA`, y `CStringW` clases son especializaciones de una plantilla de clase llamado [CStringT](../atl-mfc-shared/reference/cstringt-class.md) según el tipo de datos de caracteres que admiten.  
   
- Un objeto `CStringW` contiene el tipo `wchar_t` y admite cadenas Unicode. Un objeto `CStringA` contiene el tipo `char` y admite cadenas de un solo byte o multibyte (MBCS). Un objeto `CString` admite el tipo `char` o el tipo `wchar_t`, dependiendo de si se ha definido el símbolo `MBCS` o el símbolo `UNICODE` en el tiempo de compilación.  
+ Un `CStringW` objeto contiene la **wchar_t** escriba y admite cadenas Unicode. Un `CStringA` objeto contiene la **char** tipo y cadenas de es compatible con un solo byte y multibyte (MBCS). Un `CString` objeto es compatible con la **char** tipo o el `wchar_t` tipo, dependiendo de si se ha definido el símbolo MBCS o el símbolo UNICODE en tiempo de compilación.  
   
- Un objeto `CString` conserva los datos de caracteres en un objeto `CStringData`. `CString` acepta `null`-terminada en cadenas de estilo C. `CString` realiza un seguimiento de la longitud de cadena para un rendimiento más rápido, pero también conserva la `null` caracteres en los datos de caracteres almacenados para admitir la conversión a LPCWSTR. `CString` incluye el terminador nulo cuando exporta una cadena de estilo C. Puede insertar un `null` en otras ubicaciones en un `CString`, pero se podrían producir resultados inesperados.  
+ Un objeto `CString` conserva los datos de caracteres en un objeto `CStringData`. `CString` acepta cadenas de estilo C terminada en NULL. `CString` realiza un seguimiento de la cadena de longitud para un rendimiento más rápido, pero también conserva el carácter nulo en los datos de caracteres almacenados para admitir la conversión a LPCWSTR. `CString` incluye el terminador nulo cuando exporta una cadena de estilo C. Se puede insertar un valor NULL en otras ubicaciones en un `CString`, pero pueden producir resultados inesperados.  
   
- El siguiente conjunto de clases de cadenas puede usarse sin vincular una biblioteca MFC, con o sin compatibilidad con CRT: `CAtlString`, `CAtlStringA`, y `CAtlStringW`.  
+ Se puede usar el siguiente conjunto de clases de cadenas sin vincular una biblioteca MFC, con o sin compatibilidad con CRT: `CAtlString`, `CAtlStringA`, y `CAtlStringW`.  
   
  `CString` se usa en objetos nativos. En los proyectos de código administrado (C++/CLI), use `System::String`.  
   
@@ -65,7 +65,7 @@ int main() {
  Se describe cómo manipular el contenido de un objeto `CString` como una cadena terminada en un valor nulo de estilo C.  
   
  [Asignación y liberación de memoria para un BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
- Se explica el uso de memoria en relación con un `BSTR` y objetos COM.  
+ Describe el uso de memoria para un objeto COM y BSTR.  
   
  [Limpieza de excepciones de CString](../atl-mfc-shared/cstring-exception-cleanup.md)  
  Se explica que la limpieza expresa en MFC 3.0 y en versiones posteriores ya no es necesaria.  
@@ -84,8 +84,8 @@ int main() {
  Contiene información de referencia sobre la clase `CSimpleStringT`.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Cadenas (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+ [Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
  Contiene vínculos a temas en los que se describen las diversas formas de administrar datos de cadena.  
   
- [Cadenas (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+ [Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)
 

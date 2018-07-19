@@ -1,5 +1,5 @@
 ---
-title: Tipos de expresiones | Documentos de Microsoft
+title: Tipos de expresiones | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0904c5e503b60d5d9015e5102b1155016c78a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a053c837b0a2064a93a019d16856712553bd7a44
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422428"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026570"
 ---
 # <a name="types-of-expressions"></a>Tipos de expresiones
 Las expresiones de C++ se dividen en varias categorías:  
@@ -36,7 +36,7 @@ Las expresiones de C++ se dividen en varias categorías:
   
 -   [Expresiones constantes](../cpp/cpp-constant-expressions.md). Las expresiones de constante se forman completamente con datos constantes.  
   
--   [Expresiones con conversiones de tipos explícitas](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae). En las expresiones se pueden usar conversiones de tipos explícitas.  
+-   [Expresiones con conversiones de tipos explícitas](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae). En las expresiones se pueden usar conversiones de tipos explícitas.  
   
 -   [Expresiones con operadores de puntero a miembro](../cpp/pointer-to-member-operators-dot-star-and-star.md).  
   
