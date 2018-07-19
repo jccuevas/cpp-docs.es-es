@@ -1,5 +1,5 @@
 ---
-title: Resumen de reglas de ámbito | Documentos de Microsoft
+title: Resumen de reglas de ámbito | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d901103f36493e74f73b2edb18faa1188e704ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ce7c57688fae22c3bba844cff480ae3aec03785
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423875"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028143"
 ---
 # <a name="summary-of-scope-rules"></a>Resumen de reglas de ámbito
 El uso de un nombre debe ser inequívoco dentro de su ámbito (hasta el punto en que se determina la sobrecarga). Si el nombre indica una función, la función no debe ser ambigua respecto al número y tipo de parámetros. Si el nombre se mantiene no ambiguo, [acceso a miembros](../cpp/member-access-control-cpp.md) se aplican las reglas.  
   
 ## <a name="constructor-initializers"></a>Inicializadores del constructor  
- Inicializadores de constructor (descritos en [inicializar Bases y miembros](http://msdn.microsoft.com/en-us/2f71377e-2b6b-49da-9a26-18e9b40226a1)) se evalúan en el ámbito del bloque más externo del constructor para el que se especifican. Por lo tanto, pueden usar los nombres de parámetro del constructor.  
+ Los inicializadores de constructor (descrito en [inicializar Bases y miembros](http://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) se evalúan en el ámbito de bloque más externo del constructor para el que se especifican. Por lo tanto, pueden usar los nombres de parámetro del constructor.  
   
 ## <a name="global-names"></a>Nombres globales  
  Un nombre de un objeto, una función o un enumerador es global si se presenta fuera de cualquier función o clase o está precedido por el operador unario global de ámbito (`::`) y si no se usa junto con alguno de estos operadores binarios:  
@@ -43,7 +43,7 @@ El uso de un nombre debe ser inequívoco dentro de su ámbito (hasta el punto en
 ## <a name="qualified-names"></a>Nombres completos  
  Los nombres utilizados con el operador binario de resolución de ámbito (`::`) se denominan “nombres completos”. El nombre especificado detrás del operador binario de resolución de ámbito debe ser un miembro de la clase especificada a la izquierda del operador o un miembro de su clase o clases base.  
   
- Nombres especificados detrás del operador de selección de miembro (**.** o **->**) deben ser miembros del tipo de clase del objeto especificado a la izquierda del operador o miembros de su clase o clases base. Nombres especificados a la derecha del operador de selección de miembro (**->**) también pueden ser objetos de otro tipo de clase, siempre que el lado izquierdo de **->** es un objeto de clase y que la clase define un operador de selección de miembro sobrecargado (**->**) que se evalúa como un puntero a algún otro tipo de clase. (Esta especificación se explica con más detalle en [acceso a miembros de clase](../cpp/member-access.md).)  
+ Los nombres especificados detrás del operador de selección de miembro (**.** o **->**) deben ser miembros del tipo de clase del objeto especificado a la izquierda del operador o miembros de su clase o clases base. Los nombres especificados a la derecha del operador de selección de miembro (**->**) también pueden ser objetos de otro tipo de clase, siempre que el lado izquierdo de **->** es un objeto de clase y que la clase define un operador de selección de miembro sobrecargado (**->**) que se evalúa como un puntero a algún otro tipo de clase. (Esta especificación se explica con más detalle en [acceso a miembros de clase](../cpp/member-access.md).)  
   
  El compilador busca los nombres en el orden siguiente y se detiene cuando encuentra el nombre:  
   
@@ -63,9 +63,9 @@ El uso de un nombre debe ser inequívoco dentro de su ámbito (hasta el punto en
   
 1.  Los nombres precedidos por `::` obligan a que la búsqueda se inicie en el ámbito global.  
   
-2.  Nombres precedidos por la **clase**, `struct`, y **union** palabras clave hacen que el compilador para buscar solo **clase**, `struct`, o **union**  nombres.  
+2.  Los nombres precedidos por la **clase**, **struct**, y **unión** palabras clave forzar al compilador que busque sólo **clase**,  **struct**, o **unión** nombres.  
   
-3.  Nombres en el lado izquierdo del operador de resolución de ámbito (`::`) solo puede ser **clase**, `struct`, **espacio de nombres**, o **union** nombres.  
+3.  Los nombres en el lado izquierdo del operador de resolución de ámbito (`::`) solo puede ser **clase**, **struct**, **espacio de nombres**, o **unión**nombres.  
   
  Si el nombre hace referencia a un miembro no estático pero se utiliza en una función miembro estática, se genera un mensaje de error. De forma similar, si el nombre hace referencia a cualquier miembro no estático en una clase contenedora, un mensaje de error se genera porque las clases contenidas no tienen clase contenedora **esto** punteros.  
   

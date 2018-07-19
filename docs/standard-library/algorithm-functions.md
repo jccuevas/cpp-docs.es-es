@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8224ca927829dc9663e36028bc7184372205ee5f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79d9492588688c7dd7e7fa754e4a4f0b0f892d05
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849228"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027945"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funciones &lt;algorithm&gt;
 
@@ -268,15 +268,15 @@ template<class ForwardIterator , class BinaryPredicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe buscar.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a buscar.
 
-`last` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe buscar.
+*último* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a buscar.
 
-`comp` El predicado binario que da la condición que se debe cumplir con los valores de los elementos adyacentes en el intervalo que se va a buscar.
+*comp* el predicado binario que da la condición que debe cumplir los valores de los elementos adyacentes en el intervalo que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador hacia delante hasta el primer elemento del par adyacente en el que las partes son iguales entre sí (en la primera versión) o cumplen la condición dada por el predicado binario (en la segunda versión), si se encuentra algún par de elementos que cumpla una de estas condiciones. Si no, se devuelve un iterador que apunta a `last`.
+Iterador hacia delante hasta el primer elemento del par adyacente en el que las partes son iguales entre sí (en la primera versión) o cumplen la condición dada por el predicado binario (en la segunda versión), si se encuentra algún par de elementos que cumpla una de estas condiciones. En caso contrario, un iterador que apunta a *última* se devuelve.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -348,7 +348,7 @@ There are two adjacent elements where the second is twice the first.
 
 ## <a name="all_of"></a>  all_of
 
-Devuelve `true` cuando una condición está presente en todos los elementos del intervalo especificado.
+Devuelve **true** cuando una condición está presente en cada elemento del intervalo especificado.
 
 ```cpp
 template<class InputIterator, class Predicate>
@@ -360,23 +360,23 @@ template<class InputIterator, class Predicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que indica dónde debe empezar a comprobar una condición. El iterador marca el comienzo de un intervalo de elementos.
+*primera* un iterador de entrada que indica dónde comenzar a comprobar una condición. El iterador marca el comienzo de un intervalo de elementos.
 
-`last` Un iterador de entrada que indica el final del intervalo de elementos que se va a comprobar una condición.
+*último* un iterador de entrada que indica el final del intervalo de elementos que se va a comprobar una condición.
 
-`comp` Una condición que se va a comprobar. Es un objeto de función de predicado definido por el usuario que define la condición que debe cumplir el elemento que se está comprobando. Un predicado toma un único argumento y devuelve `true` o `false`.
+*comp* una condición que se va a comprobar. Es un objeto de función de predicado definido por el usuario que define la condición que debe cumplir el elemento que se está comprobando. Un predicado toma un único argumento y devuelve **rue** o **False**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve `true` si se detecta la condición en cada elemento del intervalo indicado, y `false` si la condición no se detecta al menos una vez.
+Devuelve **true** si se detecta la condición en cada elemento del intervalo indicado, y **false** si la condición no se detecta al menos una vez.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve `true` solo si, para cada `N` del intervalo `[0,Last - first)`, el predicado `comp(*(_First + N))` es `true`.
+Devuelve la función de plantilla **true** solo si, para cada `N` en el intervalo `[0,Last - first)`, el predicado `comp(*(_First + N))` es **true**.
 
 ## <a name="any_of"></a>  any_of
 
-Devuelve `true` cuando una condición está presente al menos una vez en el intervalo especificado de elementos.
+Devuelve **true** cuando una condición está presente al menos una vez en el intervalo de elementos especificado.
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -388,19 +388,19 @@ template<class InputIterator, class UnaryPredicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que indica dónde debe empezar la comprobación de un intervalo de elementos de una condición.
+*primera* un iterador de entrada que indica dónde debe empezar la comprobación de un intervalo de elementos de una condición.
 
-`last` Un iterador de entrada que indica el final del intervalo de elementos que se va a comprobar una condición.
+*último* un iterador de entrada que indica el final del intervalo de elementos que se va a comprobar una condición.
 
-`comp` Una condición que se va a comprobar. La proporciona un objeto de función de predicado definido por el usuario. El predicado define la condición que debe cumplir el elemento que se está probando. Un predicado toma un único argumento y devuelve `true` o `false`.
+*comp* una condición que se va a comprobar. La proporciona un objeto de función de predicado definido por el usuario. El predicado define la condición que debe cumplir el elemento que se está probando. Un predicado toma un único argumento y devuelve **rue** o **False**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve `true` si se detecta la condición al menos una vez en el intervalo indicado, y `false` si la condición no se detecta ninguna vez.
+Devuelve **true** si la condición se detecta al menos una vez en el intervalo indicado, **false** si nunca se detecta la condición.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve `true` solo si, para cada `N` del intervalo
+Devuelve la función de plantilla **true** solo si, para cada `N` en el intervalo
 
 `[0, last - first)`, el predicado `comp(*(first + N))` es true.
 
@@ -426,17 +426,17 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe buscar.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a buscar.
 
-`last` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe buscar.
+*último* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a buscar.
 
-`value` El valor debe ser elegidas por el valor del elemento o la condición que debe cumplir con el valor del elemento especificado por el predicado binario.
+*valor* el valor debe coincidir con el valor del elemento o que debe cumplir la condición con el valor del elemento especificado por el predicado binario.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve `true` si se cumplen y `false` si no.
+*comp* sentido de objeto de función de predicado definido por el usuario que se define en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si se encuentra un elemento en el intervalo que sea igual o equivalente al valor especificado; de lo contrario, `false`.
+**True** si se encuentra un elemento del intervalo que es igual o equivalente al valor especificado; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -448,7 +448,7 @@ El intervalo ordenado debe estar organizado como condición previa a la aplicaci
 
 Los tipos de valor de los iteradores hacia delante tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes.
 
-La complejidad del algoritmo es logarítmica los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcionales al ( `last`  -  `first`).
+La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcionales a (`last` - `first`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -546,23 +546,23 @@ template<class InputIterator, class OutputIterator>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que direcciona la posición del primer elemento del intervalo de origen.
+*primera* un iterador de entrada que direcciona la posición del primer elemento del intervalo de origen.
 
-`last` Un iterador de entrada que direcciona la posición situada una más allá del último elemento del intervalo de origen.
+*último* un iterador de entrada que direcciona la posición situada después del último elemento del intervalo de origen.
 
 *destBeg* un iterador de salida que direcciona la posición del primer elemento del intervalo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un iterador de salida que direcciona la posición que es un elemento más allá del último elemento del intervalo de destino, es decir, el iterador direcciona `result` + ( `last`  -   `first` ).
+Un iterador de salida que direcciona la posición que es un elemento más allá del último elemento del intervalo de destino, es decir, el iterador direcciona `result` + (*última* - *primera*).
 
 ### <a name="remarks"></a>Comentarios
 
 El intervalo de origen debe ser válido y debe haber suficiente espacio en el destino para contener todos los elementos que se van a copiar.
 
-Puesto que el algoritmo copia los elementos de origen por orden a partir del primer elemento, el intervalo de destino puede superponerse al intervalo de origen siempre y cuando la posición `last` del intervalo de origen no esté incluida en el intervalo de destino. Se puede usar**copy** para desplazar elementos hacia la izquierda pero no hacia la derecha, a menos que no haya superposición entre los intervalos de origen y de destino. Para desplazar a la derecha cualquier número de posiciones, use el algoritmo [copy_backward](../standard-library/algorithm-functions.md#copy_backward).
+Dado que el algoritmo copia los elementos de origen en orden a partir del primer elemento, el intervalo de destino puede superponerse al intervalo de origen siempre el *última* posición del intervalo de origen no está contenida en el destino intervalo. `copy` se puede usar para desplazar elementos hacia la izquierda pero no hacia la derecha, a menos que haya ninguna superposición entre los intervalos de origen y destino. Para desplazar a la derecha cualquier número de posiciones, use el algoritmo [copy_backward](../standard-library/algorithm-functions.md#copy_backward).
 
-El algoritmo **copy** solo modifica los valores a los que apuntan los iteradores, asignando nuevos valores a los elementos del intervalo de destino. No se puede utilizar para crear elementos nuevos y no puede insertar elementos en un contenedor vacío directamente.
+El algoritmo `copy` solo modifica los valores a los que apuntan los iteradores, asignando nuevos valores a los elementos del intervalo de destino. No se puede utilizar para crear elementos nuevos y no puede insertar elementos en un contenedor vacío directamente.
 
 ### <a name="example"></a>Ejemplo
 
@@ -636,15 +636,15 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador bidireccional que direcciona la posición del primer elemento del intervalo de origen.
+*primera* un iterador bidireccional que direcciona la posición del primer elemento del intervalo de origen.
 
-`last` Iterador bidireccional que direcciona la posición situada una más allá del último elemento del intervalo de origen.
+*último* un iterador bidireccional que direcciona la posición situada después del último elemento del intervalo de origen.
 
-`destEnd` Iterador bidireccional que direcciona la posición de un elemento más allá del último elemento del intervalo de destino.
+*destEnd* un iterador bidireccional que direcciona la posición de un elemento más allá del último elemento del intervalo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un iterador de salida que direcciona la posición que es un elemento más allá del último elemento del intervalo de destino, es decir, el iterador direcciona `destEnd` -( `last`  -   `first` ).
+Un iterador de salida que direcciona la posición que es un elemento más allá del último elemento del intervalo de destino, es decir, el iterador direcciona *destEnd* -(*última* - *primero*).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -654,7 +654,7 @@ El algoritmo `copy_backward` impone requisitos más rigurosos que los del algori
 
 Los algoritmos `copy_backward` y [move_backward](../standard-library/algorithm-functions.md#move_backward) son los únicos algoritmos de la Biblioteca estándar de C++ que designan el intervalo de salida con un iterador que apunta al final del intervalo de destino.
 
-Puesto que el algoritmo copia los elementos de origen por orden a partir del último elemento, el intervalo de destino puede superponerse al intervalo de origen siempre y cuando la posición `first` del intervalo de origen no esté contenida en el intervalo de destino. Se puede utilizar `copy_backward` para desplazar elementos hacia la derecha pero no hacia la izquierda, a menos que no haya superposición entre los intervalos de origen y de destino. Para desplazar a la izquierda cualquier número de posiciones, use el algoritmo [copy](../standard-library/algorithm-functions.md#copy).
+Dado que el algoritmo copia los elementos de origen en orden a partir del último elemento, el intervalo de destino puede superponerse al intervalo de origen siempre el *primera* posición del intervalo de origen no está contenida en el destino intervalo. Se puede utilizar `copy_backward` para desplazar elementos hacia la derecha pero no hacia la izquierda, a menos que no haya superposición entre los intervalos de origen y de destino. Para desplazar a la izquierda cualquier número de posiciones, use el algoritmo [copy](../standard-library/algorithm-functions.md#copy).
 
 El algoritmo `copy_backward` solo modifica los valores a los que apuntan los iteradores, asignando nuevos valores a los elementos del intervalo de destino. No se puede utilizar para crear elementos nuevos y no puede insertar elementos en un contenedor vacío directamente.
 
@@ -711,7 +711,7 @@ int main() {
 
 ## <a name="copy_if"></a>  copy_if
 
-En un intervalo de elementos, copia aquellos que son `true` para la condición especificada.
+En un intervalo de elementos, copia los elementos que son **true** la condición especificada.
 
 ```cpp
 template<class InputIterator, class OutputIterator, class BinaryPredicate>
@@ -724,17 +724,17 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que indica el inicio de un intervalo para comprobar si la condición.
+*primera* un iterador de entrada que indica el inicio de un intervalo para comprobar la condición.
 
-`last` Un iterador de entrada que indica el final del intervalo.
+*último* un iterador de entrada que indica el final del intervalo.
 
-`dest` El iterador de salida que indica el destino de los elementos copiados.
+*dest* el iterador de salida que indica el destino de los elementos copiados.
 
-`_Pred` La condición en la que se prueba cada elemento del intervalo. La proporciona un objeto de función de predicado definido por el usuario. Un predicado toma un argumento y devuelve `true` o `false`.
+*_Pred* la condición en la que se prueba cada elemento del intervalo. La proporciona un objeto de función de predicado definido por el usuario. Un predicado toma un argumento y devuelve **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador de salida igual a `dest` incrementado una vez para cada elemento que cumple la condición. En otras palabras, el valor devuelto menos `dest` es igual al número de elementos copiados.
+Un iterador de salida es igual a *dest* incrementa una vez para cada elemento que cumple la condición. En otras palabras, el valor devuelto menos *dest* es igual al número de elementos copiados.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -742,7 +742,7 @@ La función de plantilla evalúa
 
 `if (_Pred(*_First + N)) * dest++ = *(_First + N))`
 
-una vez por cada `N` del intervalo `[0, last - first)`, con los valores de `N` incrementados de forma estricta empezando por el valor inferior. Si `dest` y `first` designan regiones de almacenamiento, `dest` no debe estar en el intervalo `[ first, last )`.
+una vez por cada `N` del intervalo `[0, last - first)`, con los valores de `N` incrementados de forma estricta empezando por el valor inferior. Si *dest* y *primera* designan regiones de almacenamiento, *dest* no debe estar en el intervalo `[ first, last )`.
 
 ## <a name="copy_n"></a>  copy_n
 
@@ -758,19 +758,19 @@ template<class InputIterator, class Size, class OutputIterator>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que indica dónde se va a copiar los elementos.
+*primera* un iterador de entrada que indica dónde se va a copiar elementos.
 
-`count` Un tipo de entero con signo o sin signo especifica el número de elementos para copiar.
+*recuento* un con o sin el signo de tipo entero que especifica el número de elementos para copiar.
 
-`dest` Un iterador de salida que indica dónde se va a copiar los elementos.
+*dest* un iterador de salida que indica dónde se copiarán los elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un iterador de salida de la ubicación a la que se copiaron los elementos. Es el mismo que el valor devuelto del tercer parámetro, `dest`.
+Devuelve un iterador de salida de la ubicación a la que se copiaron los elementos. Es el mismo que el valor devuelto del tercer parámetro, *dest*.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla evalúa `*(dest + N) = *(first + N))` una vez por cada `N` en el intervalo `[0, count)`, para aumentar de forma estricta los valores de `N` a partir del valor más bajo. Después, devuelve `dest + N`. Si `dest` y `first` designan regiones de almacenamiento, `dest` no debe estar en el intervalo `[first, last)`.
+La función de plantilla evalúa `*(dest + N) = *(first + N))` una vez por cada `N` en el intervalo `[0, count)`, incrementados de forma estricta los valores de `N` comenzando con el valor más bajo. Después, devuelve `dest + N`. Si *dest* y *primera* designan regiones de almacenamiento, *dest* no debe estar en el intervalo `[first, last)`.
 
 ## <a name="count"></a>  count
 
@@ -786,15 +786,15 @@ template<class InputIterator, class Type>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada direcciona la posición del primer elemento del intervalo para atravesar.
+*primera* un iterador de entrada direcciona la posición del primer elemento del intervalo que se puede atravesar.
 
-`last` Un iterador de entrada direcciona la posición uno después del último elemento del intervalo para atravesar.
+*último* un iterador de entrada direcciona la posición uno después del último elemento del intervalo que se puede atravesar.
 
-`val` El valor de los elementos que van a ser contar.
+*Val* el valor de los elementos que se van a contar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Tipo de diferencia de **InputIterator** que cuenta el número de elementos del intervalo [`first`, `last`) que tienen valor `val`.
+El tipo de diferencia de la `InputIterator` que cuenta el número de elementos del intervalo [ *primera*, *última* ) que tienen valor *val*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -853,11 +853,11 @@ template<class InputIterator, class Predicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada direcciona la posición del primer elemento del intervalo que se debe buscar.
+*primera* un iterador de entrada direcciona la posición del primer elemento del intervalo que se buscará.
 
-`last` Un iterador de entrada direcciona la posición uno después del último elemento del intervalo que se debe buscar.
+*último* un iterador de entrada direcciona la posición uno después del último elemento del intervalo que se buscará.
 
-`_Pred` Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si un elemento es necesario contar. Un predicado toma un único argumento y devuelve **True** o **False**.
+*_Pred* objeto de función de predicado definido por el usuario que define la condición que debe cumplir un elemento es necesario contar. Un predicado toma un único argumento y devuelve **True** o **False**.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -950,15 +950,15 @@ bool equal(
 
 ### <a name="parameters"></a>Parámetros
 
-`First1` Un iterador de entrada direcciona la posición del primer elemento del primer intervalo va a probar.
+*First1* un iterador de entrada direcciona la posición del primer elemento del primer intervalo que va a probarse.
 
-`Last1` Un iterador de entrada direcciona la posición uno pasado el último elemento del primer intervalo va a probar.
+*Last1* un iterador de entrada direcciona la posición uno después del último elemento del primer intervalo que va a probarse.
 
-`First2` Un iterador de entrada direcciona la posición del primer elemento en el segundo intervalo se va a probar.
+*First2* un iterador de entrada direcciona la posición del primer elemento del segundo intervalo que va a probarse.
 
-`First2` Un iterador de entrada direcciona la posición de un elemento más allá del último elemento en el segundo intervalo se va a probar.
+*First2* un iterador de entrada direcciona la posición uno después del último elemento del segundo intervalo que va a probarse.
 
-`Comp` Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se realizará como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*Comp* objeto de función de predicado definido por el usuario que define la condición que debe cumplir si dos elementos son que se debe realizar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -968,7 +968,7 @@ bool equal(
 
 El intervalo en el que se va a buscar debe ser válido: todos los iteradores deben poder desreferenciarse y se debe poder acceder a la última posición desde la primera con incrementos.
 
-Si los dos intervalos tienen la misma duración, la complejidad temporal del algoritmo es lineal en el número de elementos incluidos en el intervalo. De lo contrario, la función devuelve inmediatamente `false`.
+Si los dos intervalos tienen la misma duración, la complejidad temporal del algoritmo es lineal en el número de elementos incluidos en el intervalo. En caso contrario, la función devuelve inmediatamente **false**.
 
 No es necesario que `operator==` o el predicado definido por el usuario impongan una relación de equivalencia que sea simétrica, reflexiva y transitiva entre sus operandos.
 
@@ -1027,19 +1027,19 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe buscar.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a buscar.
 
-`last` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe buscar.
+*último* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a buscar.
 
-`val` El valor que se va a buscar en el intervalo ordenado.
+*Val* el valor que se va a buscar en el intervalo ordenado.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en que un elemento es menor que otro.
+*comp* objeto de función de predicado definido por el usuario que define el sentido en que un elemento es menor que otro.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Par de iteradores hacia delante que especifican un subintervalo incluido dentro del intervalo en el que se busca, en el que todos los elementos son equivalentes a `val` en el sentido definido por el predicado binario usado (ya sea `comp` o el valor predeterminado, menor que).
+Un par de iteradores hacia delante que especifican un subintervalo incluido dentro del intervalo que busca, en el que todos los elementos son equivalentes a *val* en el sentido definido por el predicado binario usado (ya sea *comp* o el valor predeterminado, menor-que).
 
-Si en el intervalo no hay elementos equivalentes a `val`, el par de iteradores hacia delante devueltos son iguales y especifican el punto donde podría insertarse `val` sin alterar el orden del intervalo.
+Si ningún elemento del intervalo es equivalente a *val*, el par de iteradores hacia delante devuelto son igual y especifican el punto donde *val* podría insertarse sin alterar el orden del intervalo.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1047,9 +1047,9 @@ El primer iterador del par devuelto por el algoritmo es [lower_bound](../standar
 
 El intervalo debe estar ordenado según el predicado proporcionado para `equal_range`. Por ejemplo, si va a usar el predicado mayor que, el intervalo debe ordenarse en orden descendente.
 
-Los elementos del subintervalo posiblemente vacío definido por el par de iteradores devueltos por `equal_range` serán equivalentes a `val` en el sentido definido por el predicado empleado.
+Elementos del subintervalo posiblemente vacío definido por el par de iteradores devueltos por `equal_range` será equivalente a *val* en el sentido definido por el predicado que se usa.
 
-La complejidad del algoritmo es logarítmica los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcionales al ( `last`  -  `first`).
+La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcionales a (*última* - *primera*).
 
 ### <a name="example"></a>Ejemplo
 
@@ -1183,11 +1183,11 @@ void fill(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo para atravesar.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se atraviese.
 
-`last` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo para atravesar.
+*último* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se atraviese.
 
-`val` El valor que se asigna a los elementos en el intervalo [ `first`, `last`).
+*Val* el valor que se asignarán a elementos del intervalo [ *primera*, *última*).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1248,15 +1248,15 @@ OutputIterator fill_n(
 
 ### <a name="parameters"></a>Parámetros
 
-`First` Un iterador de salida que direcciona la posición del primer elemento del intervalo que se asignará el valor `Val`.
+*Primera* un iterador de salida que direcciona la posición del primer elemento del intervalo que se asignará el valor *Val*.
 
-`Count` Un tipo de entero con signo o sin signo especifica el número de elementos que se asignará el valor.
+*Recuento* un con o sin el signo de tipo entero que especifica el número de elementos que se asignará el valor.
 
-`Val` El valor que se asigna a los elementos en el intervalo [ `First`, *primero + Count*).
+*Val* el valor que se asignarán a elementos del intervalo [ *primera*, *First + Count*).
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador al elemento que sigue al último elemento relleno si `Count` > cero, en caso contrario, el primer elemento.
+Un iterador al elemento que sigue al último elemento relleno si *recuento* > cero, en caso contrario, el primer elemento.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1325,15 +1325,15 @@ InputIterator find(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada direcciona la posición del primer elemento del intervalo que se va a buscar el valor especificado.
+*primera* un iterador de entrada direcciona la posición del primer elemento del intervalo que se buscará el valor especificado.
 
-`last` Un iterador de entrada direcciona la posición uno después del último elemento del intervalo que se va a buscar el valor especificado.
+*último* un iterador de entrada direcciona la posición uno después del último elemento del intervalo que se buscará el valor especificado.
 
-`val` El valor que se va a buscar.
+*Val* el valor que se va a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador de entrada que direcciona la primera aparición del valor especificado en el intervalo en el que se está buscando. Si no se encuentra ningún elemento con un valor equivalente, devuelve `last`.
+Iterador de entrada que direcciona la primera aparición del valor especificado en el intervalo en el que se está buscando. Si se encuentra ningún elemento con un valor equivalente, devuelve *última*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1364,15 +1364,15 @@ ForwardIterator1 find_end(
 
 ### <a name="parameters"></a>Parámetros
 
-`First1` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe buscar.
+*First1* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a buscar.
 
-`Last1` Un iterador hacia delante que direcciona la posición uno pasado el último elemento del intervalo que se debe buscar.
+*Last1* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a buscar.
 
-`First2` Iterador hacia delante que direcciona la posición del primer elemento del intervalo que se buscará.
+*First2* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se buscará.
 
-`Last2` Un iterador hacia delante que direcciona la posición uno pasado el último elemento del intervalo que se buscará.
+*Last2* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se buscará.
 
-`Comp` Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se realizará como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*Comp* objeto de función de predicado definido por el usuario que define la condición que debe cumplir si dos elementos son que se debe realizar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1503,15 +1503,15 @@ ForwardIterator1 find_first_of(
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe buscar.
+*first1* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a buscar.
 
-`last1` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe buscar.
+*last1* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a buscar.
 
-`first2` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe coincidir.
+*first2* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe coincidir.
 
-`last2` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe coincidir.
+*last2* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe coincidir.
 
-`comp` Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se realizará como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* objeto de función de predicado definido por el usuario que define la condición que debe cumplir si dos elementos son que se debe realizar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1636,15 +1636,15 @@ InputIterator find_if(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada direcciona la posición del primer elemento del intervalo que se debe buscar.
+*primera* un iterador de entrada direcciona la posición del primer elemento del intervalo que se buscará.
 
-`last` Un iterador de entrada direcciona la posición uno después del último elemento del intervalo que se debe buscar.
+*último* un iterador de entrada direcciona la posición uno después del último elemento del intervalo que se buscará.
 
-`pred` Objeto de función de predicado definido por el usuario o [expresión lambda](../cpp/lambda-expressions-in-cpp.md) que define la condición que debe cumplir el elemento que se va a buscar. Un predicado toma un solo argumento y devuelve `true` (se cumple) o `false` (no se cumple). La signatura de `pred` debe ser, en la práctica, `bool pred(const T& arg);`, donde `T` es un tipo al que `InputIterator` se puede convertir implícitamente al desreferenciarse. La palabra clave `const` solo se muestra para ilustrar el hecho de que el objeto de función o la lambda no debería modificar el argumento.
+*pred* objeto de función de predicado definido por el usuario o [expresión lambda](../cpp/lambda-expressions-in-cpp.md) que define la condición que debe cumplir el elemento que se va a buscar. Un predicado toma un argumento único y devuelve **true** (se satisface) o **false** (no se cumple). La firma de *pred* eficazmente debe ser `bool pred(const T& arg);`, donde `T` es un tipo al que `InputIterator` se pueden convertir implícitamente al desreferenciarse. El **const** palabra clave se muestra solo para ilustrar que el objeto de función o expresión lambda no debe modificar el argumento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador de entrada que hace referencia al primer elemento del intervalo que cumple la condición especificada por el predicado (el predicado devuelve `true`). Si no se encuentra ningún elemento que cumpla el predicado, devuelve `last`.
+Un iterador de entrada que hace referencia al primer elemento del intervalo que cumple la condición especificada por el predicado (el predicado devuelve **true**). Si se encuentra ningún elemento que cumpla el predicado, devuelve *última*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1750,15 +1750,15 @@ InputIterator find_if_not(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada direcciona la posición del primer elemento del intervalo que se debe buscar.
+*primera* un iterador de entrada direcciona la posición del primer elemento del intervalo que se buscará.
 
-`last` Un iterador de entrada direcciona la posición uno después del último elemento del intervalo que se debe buscar.
+*último* un iterador de entrada direcciona la posición uno después del último elemento del intervalo que se buscará.
 
-`pred` Objeto de función de predicado definido por el usuario o [expresión lambda](../cpp/lambda-expressions-in-cpp.md) que define la condición que no debe cumplir el elemento que se va a buscar. Un predicado toma un solo argumento y devuelve `true` (se cumple) o `false` (no se cumple). La signatura de `pred` debe ser, en la práctica, `bool pred(const T& arg);`, donde `T` es un tipo al que `InputIterator` se puede convertir implícitamente al desreferenciarse. La palabra clave `const` solo se muestra para ilustrar el hecho de que el objeto de función o la lambda no debería modificar el argumento.
+*pred* objeto de función de predicado definido por el usuario o [expresión lambda](../cpp/lambda-expressions-in-cpp.md) que define la condición que no debe cumplir el elemento que se va a buscar. Un predicado toma un argumento único y devuelve **true** (se satisface) o **false** (no se cumple). La firma de *pred* eficazmente debe ser `bool pred(const T& arg);`, donde `T` es un tipo al que `InputIterator` se pueden convertir implícitamente al desreferenciarse. El **const** palabra clave se muestra solo para ilustrar que el objeto de función o expresión lambda no debe modificar el argumento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador de entrada que hace referencia al primer elemento del intervalo que no cumple la condición especificada por el predicado (el predicado devuelve `false`). Si todos los elementos cumplen el predicado (si el predicado devuelve `true` con todos los elementos), devuelve `last`.
+Un iterador de entrada que hace referencia al primer elemento del intervalo que no satisface la condición especificada por el predicado (el predicado devuelve **false**). Si todos los elementos satisfacen el predicado (el predicado devuelve **true** para todos los elementos), devuelve *última*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1780,11 +1780,11 @@ Function for_each(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que direcciona la posición del primer elemento del intervalo que se va a realizar el cálculo.
+*primera* un iterador de entrada que direcciona la posición del primer elemento del intervalo que se va a operar.
 
-`last` Un iterador de entrada que direcciona la posición uno después del último elemento del intervalo de trabajar.
+*último* opera un iterador de entrada que direcciona la posición uno después del último elemento del intervalo.
 
-`_Func` Objeto de función definida por el usuario que se aplica a cada elemento del intervalo.
+*_Func* objeto de función definido por el usuario que se aplica a cada elemento del intervalo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1796,7 +1796,7 @@ El algoritmo `for_each` es muy flexible, lo que permite la modificación de cada
 
 El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.
 
-La complejidad es lineal con, a lo sumo ( `last`  -   `first`) las comparaciones.
+La complejidad es lineal con, a lo sumo ( *última* -  *primera*) comparaciones.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1925,11 +1925,11 @@ void generate(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador hacia delante que direcciona la posición del primer elemento del intervalo a la que los valores son los que se asignará.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo al que se asignarán valores.
 
-`last` Iterador hacia delante que direcciona la posición uno después del último elemento del intervalo a la que los valores son los que se asignará.
+*último* un iterador hacia delante que direcciona la posición situada una posición más allá del último elemento del intervalo al que se asignarán valores.
 
-`_Gen` Un objeto de función que se llama sin argumentos que se usa para generar los valores que se asignará a cada uno de los elementos del intervalo.
+*_Gen* un objeto de función que se llama sin argumentos que se usa para generar los valores que se asignará a cada uno de los elementos del intervalo.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1996,11 +1996,11 @@ void generate_n(
 
 ### <a name="parameters"></a>Parámetros
 
-`First` Un iterador de salida que direcciona la posición del primer elemento del intervalo a la que los valores son los que se asignará.
+*Primera* un iterador de salida que direcciona la posición del primer elemento del intervalo al que se asignarán valores.
 
-`Count` Un tipo de entero con signo o sin signo especifica el número de elementos que se asignará un valor mediante la función de generador.
+*Recuento* un con o sin el signo de tipo entero que especifica el número de elementos que se asignará un valor por la función de generador.
 
-`Gen` Un objeto de función que se llama sin argumentos que se usa para generar los valores que se asignará a cada uno de los elementos del intervalo.
+*Gen* un objeto de función que se llama sin argumentos que se usa para generar los valores que se asignará a cada uno de los elementos del intervalo.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2077,15 +2077,15 @@ bool includes(
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador de entrada que direcciona la posición del primer elemento del primero de dos intervalos de origen ordenados se va a probar para si todos los elementos del segundo se incluyen en la primera.
+*first1* un iterador de entrada que direcciona la posición del primer elemento en el primero de dos intervalos de origen ordenados que se comprobará para que todos los elementos del segundo estén incluidos en la primera.
 
-`last1` Un iterador de entrada direcciona la posición uno pasado el último elemento en el primero de los dos intervalos de origen ordenados que se va comprobar si todos los elementos del segundo se incluyen en la primera.
+*last1* un iterador de entrada direcciona la posición uno después del último elemento del primero de dos intervalos de origen ordenados que se comprobará para que todos los elementos del segundo estén incluidos en la primera.
 
-`first2` Un iterador de entrada que direcciona la posición del primer elemento del segundo de dos consecutivos intervalos de origen ordenan que se va comprobar si todos los elementos del segundo se incluyen en la primera.
+*first2* un iterador de entrada direcciona la posición del primer elemento del segundo de dos consecutivos ordenado rangos de origen que va a probarse para que todos los elementos del segundo estén incluidos en la primera.
 
-`last2` Un iterador de entrada que direcciona la posición uno pasado el último elemento del segundo de dos intervalos de origen ordenados consecutivos va a probar para si todos los elementos del segundo se incluyen en la primera.
+*last2* un iterador de entrada direcciona la posición uno pasado el último intervalos de origen de elemento del segundo de dos consecutivos ordenado que se comprobará para que todos los elementos del segundo estén incluidos en la primera.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* sentido de objeto de función de predicado definido por el usuario que se define en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2099,11 +2099,11 @@ Los intervalos de origen ordenados a los que se hace referencia deben ser válid
 
 Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo includes según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.
 
-El algoritmo **merge**no modifica los intervalos de origen.
+El algoritmo no modifica los intervalos de origen `merge`.
 
 Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Más concretamente, el algoritmo comprueba si todos los elementos del primer intervalo ordenado de un predicado binario especificado tienen una ordenación equivalente a los del segundo intervalo ordenado.
 
-La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-(* last2 - first2 *)) - 1 comparaciones para intervalos de origen no vacíos.
+La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-(* last2 - first2 *)) – 1 comparaciones para intervalos de origen no vacíos.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2275,13 +2275,13 @@ void inplace_merge(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador bidireccional que direcciona la posición del primer elemento del primero de dos consecutivos ordena los intervalos que se van a combinar y ordenar en un solo intervalo.
+*primera* un iterador bidireccional que direcciona la posición de los intervalos de elemento del primero de dos consecutivos ordenado primeros que se van a combinar y ordenar en un solo intervalo.
 
-`middle` Iterador bidireccional que direcciona la posición del primer elemento en el segundo de dos consecutivos ordena los intervalos que se van a combinar y ordenar en un solo intervalo.
+*intermedio* un iterador bidireccional que direcciona la posición de los intervalos de elemento en el segundo de dos consecutivos ordenado primeros que se van a combinar y ordenar en un solo intervalo.
 
-`last` Iterador bidireccional que direcciona la posición uno después del último elemento en el segundo de dos consecutivos ordena los intervalos que se van a combinar y ordenar en un solo intervalo.
+*último* un iterador bidireccional que direcciona la posición más allá de los intervalos de elemento en el segundo de dos consecutivos ordenado último que se van a combinar y ordenar en un solo intervalo.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
+*comp* objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2289,7 +2289,7 @@ Los intervalos consecutivos ordenados a los que se hace referencia deben ser vá
 
 Los intervalos consecutivos ordenados deben estar organizados como condición previa a la aplicación del algoritmo `inplace_merge` según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados. La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo en el intervalo combinado.
 
-La complejidad depende de la memoria disponible, ya que el algoritmo asigna memoria a un búfer temporal. Si hay suficiente memoria disponible, el mejor de los casos es lineal con (* apellido - nombre *) - 1 comparaciones; si no hay memoria auxiliar está disponible, el peor de los casos es *N* registro *(N)*, donde  *N* = (* apellido - nombre*).
+La complejidad depende de la memoria disponible, ya que el algoritmo asigna memoria a un búfer temporal. Si hay suficiente memoria disponible, el mejor escenario es lineal con (* apellido - nombre *) - 1 comparaciones; si no hay memoria auxiliar está disponible, el peor escenario es *N* registro *(N)*, donde  *N* = (* apellido - nombre*).
 
 ### <a name="example"></a>Ejemplo
 
@@ -2404,7 +2404,7 @@ Merged inplace with binary predicate mod_lesser specified,
 
 ## <a name="is_heap"></a>  is_heap
 
-Devuelve `true` si los elementos del intervalo especificado forman un montón.
+Devuelve **true** si los elementos del intervalo especificado forman un montón.
 
 ```cpp
 template<class RandomAccessIterator>
@@ -2421,15 +2421,15 @@ bool is_heap(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de acceso aleatorio que indica el inicio de un intervalo para comprobar si un montón.
+*primera* un iterador de acceso aleatorio que indica el inicio de un intervalo para comprobar si hay un montón.
 
-`last` Un iterador de acceso aleatorio que indica el final de un intervalo.
+*último* un iterador de acceso aleatorio que indica el final de un intervalo.
 
-`comp` Una condición de prueba a elementos de pedido. Un predicado binario toma un solo argumento y devuelve `true` o `false`.
+*comp* una condición de prueba para ordenar los elementos. Un predicado binario toma un único argumento y devuelve **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve `true` si los elementos del intervalo especificado forman un montón y `false` si no lo hacen.
+Devuelve **true** si los elementos del intervalo especificado forman un montón, **false** si no lo hace.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2441,7 +2441,7 @@ La segunda función de plantilla devuelve
 
 ## <a name="is_heap_until"></a>  is_heap_until
 
-Devuelve un iterador situado en el primer elemento del intervalo [`begin`, `end`) que no satisface la condición de ordenación de montón, o `end` si el intervalo forma un montón.
+Devuelve un iterador situado en el primer elemento del intervalo [ `begin`, `end`) que no satisface la condición de ordenación de montón o *final* si el intervalo forma un montón.
 
 ```cpp
 template<class RandomAccessIterator>
@@ -2458,25 +2458,25 @@ RandomAccessIterator is_heap_until(
 
 ### <a name="parameters"></a>Parámetros
 
-`begin` Un iterador de acceso aleatorio que especifica el primer elemento de un intervalo para comprobar si un montón.
+*empezar a* un iterador de acceso aleatorio que especifica el primer elemento del intervalo para comprobar si hay un montón.
 
-`end` Un iterador de acceso aleatorio que especifica el final del intervalo para comprobar si un montón.
+*end* un iterador de acceso aleatorio que especifica el final del intervalo para comprobar si hay un montón.
 
-`compare` Un predicado binario que especifica la ordenación débil estricta condición que define un montón. El valor predeterminado del predicado cuando no se especifica `compare` es `std::less<>`.
+*comparar* un predicado binario que especifica el condición que define un montón de ordenación débil estricta. El valor predeterminado del predicado cuando *comparar* no se especifica es `std::less<>`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve `end` si el intervalo especificado forma un montón o contiene uno o menos elementos. De lo contrario, devuelve un iterador para el primer elemento encontrado que no satisface la condición de montón.
+Devuelve *final* si el intervalo especificado forma un montón o contiene uno o menos elementos. De lo contrario, devuelve un iterador para el primer elemento encontrado que no satisface la condición de montón.
 
 ### <a name="remarks"></a>Comentarios
 
-La primera función de plantilla devuelve el último iterador `next` en `[ begin , end ]` donde `[ begin , next)` es un montón ordenado por el objeto de función `std::less<>`. Si la distancia `end - begin < 2`, la función devuelve `end`.
+La primera función de plantilla devuelve el último iterador `next` en `[ begin , end ]` donde `[ begin , next)` es un montón ordenado por el objeto de función `std::less<>`. Si la distancia `end - begin < 2`, la función devuelve *final*.
 
 La segunda función de plantilla se comporta igual que la primera, salvo que usa el predicado `compare` en lugar de `std::less<>` como condición de ordenación de montón.
 
 ## <a name="is_partitioned"></a>  is_partitioned
 
-Devuelve `true` si todos los elementos del intervalo especificado que prueban si una condición es `true` aparecen antes que cualquier elemento que prueba si es `false`.
+Devuelve **true** si todos los elementos del intervalo especificado que probar **true** una condición aparecen antes que los elementos que cumplen **false**.
 
 ```cpp
 template<class InputIterator, class BinaryPredicate>
@@ -2488,19 +2488,19 @@ bool is_partitioned(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que indica dónde empieza un intervalo comprobar una condición.
+*primera* un iterador de entrada que indica dónde comienza un intervalo comprobar una condición.
 
-`last` Un iterador de entrada que indica el final de un intervalo.
+*último* un iterador de entrada que indica el final de un intervalo.
 
-`comp` Condición que se va a comprobar. La proporciona un objeto de función de predicado definido por el usuario que define la condición que debe cumplir el elemento que se está buscando. Un predicado toma un único argumento y devuelve `true` o `false`.
+*comp* la condición que se va a comprobar. La proporciona un objeto de función de predicado definido por el usuario que define la condición que debe cumplir el elemento que se está buscando. Un predicado toma un único argumento y devuelve **rue** o **False**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve True si todos los elementos del intervalo especificado que cumplen la condición `true` aparecen antes que los elementos que cumplen `false`; de lo contrario, devuelve `false`.
+Devuelve true si todos los elementos del intervalo especificado que prueban **true** una condición aparecen antes que los elementos que cumplen **false**y en caso contrario, devuelve **false**.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve `true` solo si todos los elementos de `[` `first ,` `last )` han sido divididos en particiones por `comp`; es decir, todos los elementos `X` de `[` `first ,` `last )` para los que `comp (X)` es True se producen antes que todos los elementos `Y` para los que `comp (Y)` es `false`.
+Devuelve la función de plantilla **true** solo si todos los elementos de `[` `first ,` `last )` se particionan por *comp*; es decir, todos los elementos `X` en `[` `first ,` `last )` que `comp (X)` es true, se producen antes de todos los elementos `Y` que `comp (Y)` es **false**.
 
 ## <a name="is_permutation"></a>  is_permutation
 
@@ -2539,25 +2539,25 @@ bool is_permutation(
 
 ### <a name="parameters"></a>Parámetros
 
-`First1` Iterador hacia delante que hace referencia al primer elemento del intervalo.
+*First1* un iterador hacia delante que hace referencia al primer elemento del intervalo.
 
-`Last1` Iterador hacia delante que hace referencia a un elemento más allá del último elemento del intervalo.
+*Last1* un iterador hacia delante que hace referencia a un elemento más allá del último elemento del intervalo.
 
-`First2` Iterador hacia delante que hace referencia al primer elemento de un segundo intervalo, usado para la comparación.
+*First2* un iterador hacia delante que hace referencia al primer elemento de un segundo intervalo, usado para la comparación.
 
-`Last2` Iterador hacia delante que hace referencia a un elemento más allá del último elemento de un segundo intervalo, usado para la comparación.
+*Last2* un iterador hacia delante que hace referencia a uno más allá del último elemento de un segundo intervalo, usado para la comparación.
 
-`Pred` Un predicado que comprueba la equivalencia y devuelve un `bool`.
+*Pred* un predicado que comprueba la equivalencia y devuelve un **bool**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` cuando los intervalos se pueden reorganizar de manera que sean idénticos según el predicado de comparación; en caso contrario, es `false`.
+**True** cuando es posible reorganizar los intervalos de manera que sean idénticos según el predicado de comparación; de lo contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
 En el peor de los casos, `is_permutation` tiene complejidad cuadrática.
 
-La primera función de plantilla asume que hay tantos elementos en el intervalo que empieza en `First2` como en el intervalo designado por [`First1`, `Last1`). Si hay más elementos en el segundo intervalo, se ignoran; si hay menos, se producirá un comportamiento indefinido. La tercera función de plantilla (C++14 y versiones posteriores) no hace esta suposición.  Ambos devuelven `true` únicamente si para cada elemento X del intervalo designado por [`First1`, `Last1`) hay tantos elementos Y en el mismo intervalo para los cuales X == Y como en el intervalo que comienza en `First2` o [`First2, Last2).` Here, `operator==` debe realizar una comparación en pares entre sus operandos.
+La primera función de plantilla asume que hay tantos elementos en el intervalo que empieza en *First2* ya que hay en el intervalo designado por [ `First1`, `Last1`). Si hay más elementos en el segundo intervalo, se ignoran; si hay menos, se producirá un comportamiento indefinido. La tercera función de plantilla (C++14 y versiones posteriores) no hace esta suposición.  Ambos devuelven **true** solo si, para cada elemento X del intervalo designado por [ `First1`, `Last1`) hay tantos elementos Y en el mismo intervalo para los cuales X == Y como existen en el intervalo que empieza en *First2* o [ `First2, Last2).` aquí, `operator==` debe realizar una comparación en pares entre sus operandos.
 
 La segunda y la cuarta funciones de plantilla se comportan de la misma forma, salvo que reemplazan `operator==(X, Y)` con `Pred(X, Y)`. Para que se comporten correctamente, el predicado debe ser simétrico, reflexivo y transitivo.
 
@@ -2620,7 +2620,7 @@ int main()
 
 ## <a name="is_sorted"></a>  is_sorted
 
-Devuelve `true` si los elementos del intervalo especificado están ordenados.
+Devuelve **true** si están ordenados los elementos del intervalo especificado.
 
 ```cpp
 template<class ForwardIterator>
@@ -2637,23 +2637,23 @@ bool is_sorted(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador hacia delante que indica dónde empieza el intervalo que se va a comprobar.
+*primera* un iterador hacia delante que indica dónde empieza el intervalo para comprobar.
 
-`last` Iterador hacia delante que indica el final de un intervalo.
+*último* un iterador hacia delante que indica el final de un intervalo.
 
-`comp` La condición que se va a probar para determinar un orden entre dos elementos. Un predicado toma un único argumento y devuelve `true` o `false`. Realiza la misma tarea que `operator<`.
+*comp* la condición de prueba para determinar un orden entre dos elementos. Un predicado toma un único argumento y devuelve **rue** o **False**. Realiza la misma tarea que `operator<`.
 
 ### <a name="remarks"></a>Comentarios
 
-Devuelve la primera función de plantilla [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`. El `operator<` función realiza la comparación de orden.
+La primera función de plantilla devuelve [is_sorted_until](http://msdn.microsoft.com/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`. El `operator<` función realiza la comparación de orden.
 
-La segunda función de plantilla devuelve `is_sorted_until( first, last , comp ) == last`. La función de predicado `comp` realiza la comparación de orden.
+La segunda función de plantilla devuelve `is_sorted_until( first, last , comp ) == last`. El *comp* función de predicado realiza la comparación de orden.
 
 ## <a name="is_sorted_until"></a>  is_sorted_until
 
 Devuelve un `ForwardIterator` que se establece en el último elemento que está en el criterio de ordenación de un intervalo especificado.
 
-La segunda versión permite proporcionar una función `BinaryPredicate` que devuelve `true` cuando dos elementos determinados están en el criterio de ordenación, y `false` en caso contrario.
+La segunda versión permite proporcionar un `BinaryPredicate` función que devuelve **true** cuando dos elementos determinados están ordenados, y **false** en caso contrario.
 
 ```cpp
 template<class ForwardIterator>
@@ -2671,19 +2671,19 @@ template<class ForwardIterator, class BinaryPredicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador hacia delante que indica dónde empieza el intervalo que se va a comprobar.
+*primera* un iterador hacia delante que indica dónde empieza el intervalo para comprobar.
 
-`last` Iterador hacia delante que indica el final de un intervalo.
+*último* un iterador hacia delante que indica el final de un intervalo.
 
-`comp` La condición que se va a probar para determinar un orden entre dos elementos. Un predicado toma un único argumento y devuelve `true` o `false`.
+*comp* la condición de prueba para determinar un orden entre dos elementos. Un predicado toma un único argumento y devuelve **rue** o **False**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un `ForwardIterator` establecido en el último elemento en el criterio de ordenación. La secuencia ordenada se inicia desde `first`.
+Devuelve un `ForwardIterator` establecido en el último elemento en el criterio de ordenación. La secuencia ordenada se inicia desde *primera*.
 
 ### <a name="remarks"></a>Comentarios
 
-La primera función de plantilla devuelve el último iterador `next` de `[` `first ,` `last ]` de modo que `[` `first , next)` es una secuencia ordenada por `operator<`. Si `distance()` `< 2`, la función devuelve `last`.
+La primera función de plantilla devuelve el último iterador `next` de `[` `first ,` `last ]` de modo que `[` `first , next)` es una secuencia ordenada por `operator<`. Si `distance()` `< 2` la función devuelve *última*.
 
 La segunda función de plantilla se comporta igual, salvo que sustituye `operator<(X, Y)` por `comp (X, Y)`.
 
@@ -2699,9 +2699,9 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Uno de los iteradores hacia delante, cuyo valor es van a intercambiar.
+*izquierdo* uno de los iteradores hacia delante cuyo valor es van a intercambiar.
 
-`right` El segundo de los iteradores hacia delante cuyo valor es van a intercambiar.
+*derecha* el segundo de los iteradores hacia delante cuyo valor es van a intercambiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2866,15 +2866,15 @@ bool lexicographical_compare(
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador de entrada direcciona la posición del primer elemento del primer intervalo que se va a comparar.
+*first1* un iterador de entrada direcciona la posición del primer elemento del primer intervalo que se comparará.
 
-`last1` Un iterador de entrada direcciona la posición uno después del último elemento del primer intervalo que se va a comparar.
+*last1* un iterador de entrada direcciona la posición uno después del último elemento del primer intervalo que se comparará.
 
-`first2` Un iterador de entrada direcciona la posición del primer elemento en el segundo intervalo se va a comparar.
+*first2* un iterador de entrada direcciona la posición del primer elemento del segundo intervalo que se comparará.
 
-`last2` Un iterador de entrada direcciona la posición uno después del último elemento en el segundo intervalo se va a comparar.
+*last2* un iterador de entrada direcciona la posición uno después del último elemento del segundo intervalo que se comparará.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* sentido de objeto de función de predicado definido por el usuario que se define en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3007,13 +3007,13 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe buscar.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a buscar.
 
-`last` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe buscar.
+*último* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a buscar.
 
-`value` El valor cuya posición del primer o posición del primer posibles se va a buscar en el intervalo ordenado.
+*valor* el valor cuya primera posición o posible primera posición se va a buscar en el intervalo ordenado.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* sentido de objeto de función de predicado definido por el usuario que se define en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3029,7 +3029,7 @@ El algoritmo `lower_bound` no modifica el intervalo.
 
 Los tipos de valor de los iteradores hacia delante tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes.
 
-La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcional a (`last - first`).
+La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcionales a (`last - first`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -3142,11 +3142,11 @@ void make_heap(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de acceso aleatorio que direcciona la posición del primer elemento del intervalo que se va a convertir en un montón.
+*primera* un iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo que se va a convertirse en un montón.
 
-`last` Un iterador de acceso aleatorio que direcciona la posición uno después del último elemento del intervalo que se va a convertir en un montón.
+*último* un iterador de acceso aleatorio que direcciona la posición uno después del último elemento del intervalo que se va a convertirse en un montón.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* sentido de objeto de función de predicado definido por el usuario que se define en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3158,7 +3158,7 @@ Los montones tienen dos propiedades:
 
 Los montones son una forma ideal de implementar colas de prioridad y se usan en la implementación del adaptador de contenedor de la biblioteca estándar de C++ [priority_queue (Clase)](../standard-library/priority-queue-class.md).
 
-La complejidad es lineal, que requieren 3 \* (* apellido - nombre *) las comparaciones.
+La complejidad es lineal, lo que requiere 3 \* (* apellido - nombre *) las comparaciones.
 
 ### <a name="example"></a>Ejemplo
 
@@ -3231,13 +3231,13 @@ template<class Type, class Pr>
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos objetos que se va a comparar.
+*izquierdo* el primero de los dos objetos que se va a comparar.
 
-`right` El segundo de los dos objetos que se va a comparar.
+*derecha* el segundo de los dos objetos que se están comparando.
 
-`comp` Un predicado binario utilizado para comparar los dos objetos.
+*comp* un predicado binario que se utiliza para comparar los dos objetos.
 
-`_IList` La lista de inicializadores que contiene los objetos que se va a comparar.
+*_IList* la lista de inicializadores que contiene los objetos que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3430,11 +3430,11 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe buscar el elemento mayor.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a buscar el elemento más grande.
 
-`last` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe buscar el elemento mayor.
+*último* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a buscar el elemento más grande.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
+*comp* objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3444,7 +3444,7 @@ Iterador hacia delante que direcciona la posición de la primera aparición del 
 
 El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de cada secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.
 
-La complejidad es lineal: ( `last`  -   `first`) - 1 comparaciones son necesarias para un intervalo no vacío.
+La complejidad es lineal: (`last` - `first`) - 1 comparaciones son necesarias para un intervalo no vacío.
 
 ### <a name="example"></a>Ejemplo
 
@@ -3572,17 +3572,17 @@ OutputIterator merge(
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador de entrada que direcciona la posición del primer elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo.
+*first1* un iterador de entrada que direcciona la posición del primer elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo.
 
-`last1` Un iterador de entrada que direcciona la posición uno pasado el último elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo.
+*last1* un iterador de entrada que direcciona la posición uno después del último elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo.
 
-`first2` Un iterador de entrada que direcciona la posición del primer elemento del segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo.
+*first2* un iterador de entrada que direcciona la posición del primer elemento del segundo de dos consecutivos ordenado rangos de origen que se van a combinar y ordenar en un solo intervalo.
 
-`last2` Un iterador de entrada que direcciona la posición uno pasado el último elemento del segundo de dos intervalos de origen ordenados consecutivos que se van a combinar y ordenar en un solo intervalo.
+*last2* un iterador de entrada que direcciona la posición situada una posición más allá de los intervalos de origen de último elemento del segundo de dos consecutivos ordenado que se van a combinar y ordenar en un solo intervalo.
 
-`result` Un iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen se van a combinar en un único intervalo ordenado.
+*resultado* un iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen que se van a combinarse en un solo intervalo ordenado.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
+*comp* objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3594,13 +3594,13 @@ Los intervalos de origen ordenados a los que se hace referencia deben ser válid
 
 El intervalo de destino no debe superponerse a ninguno de los intervalos de origen y debe ser lo suficientemente grande como para contener el intervalo de destino.
 
-Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo **merge** según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.
+Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo `merge` según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.
 
-La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo en el intervalo de destino. El algoritmo **merge**no modifica los intervalos de origen.
+La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo en el intervalo de destino. El algoritmo no modifica los intervalos de origen `merge`.
 
 Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino.
 
-La complejidad del algoritmo es lineal con sumo (* last1 - first1 *)-(* last2 - first2*) - 1 comparaciones.
+La complejidad del algoritmo es lineal con, a lo sumo (* last1 - first1 *)-(* last2 - first2*) - 1 comparaciones.
 
 La [clase list ](../standard-library/list-class.md) proporciona una función miembro "merge" para combinar los elementos de dos listas.
 
@@ -3742,13 +3742,13 @@ template<class Type, class Pr>    Type min (
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos objetos que se va a comparar.
+*izquierdo* el primero de los dos objetos que se va a comparar.
 
-`right` El segundo de los dos objetos que se va a comparar.
+*derecha* el segundo de los dos objetos que se están comparando.
 
-`comp` Un predicado binario utilizado para comparar los dos objetos.
+*comp* un predicado binario que se utiliza para comparar los dos objetos.
 
-`_IList` Initializer_list que contiene los miembros que se va a comparar.
+*_IList* initializer_list que contiene los miembros que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3940,11 +3940,11 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a buscar el elemento más pequeño.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a buscar el elemento más pequeño.
 
-`last` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a buscar el elemento más pequeño.
+*último* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a buscar el elemento más pequeño.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
+*comp* objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3954,7 +3954,7 @@ Iterador hacia delante que dirige a la posición de la primera aparición del el
 
 El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de cada secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.
 
-La complejidad es lineal: ( `last`  -  `first`) - 1 comparaciones son necesarias para un intervalo no vacío.
+La complejidad es lineal: (`last` - `first`) - 1 comparaciones son necesarias para un intervalo no vacío.
 
 ### <a name="example"></a>Ejemplo
 
@@ -4088,11 +4088,11 @@ template<class ForwardIterator, class BinaryPredicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador hacia delante que indica el principio de un intervalo.
+*primera* un iterador hacia delante que indica el principio de un intervalo.
 
-`last` Iterador hacia delante que indica el final de un intervalo.
+*último* un iterador hacia delante que indica el final de un intervalo.
 
-`comp` Pruebas opcional que se utiliza para elementos de pedido.
+*comp* prueba opcional usada para ordenar los elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -4112,7 +4112,7 @@ La primera función de plantilla devuelve
 
 La segunda función de plantilla se comporta igual, salvo que sustituye `operator<(X, Y)` por `comp (X, Y)`.
 
-Si la secuencia no está vacía, la función se realiza a lo sumo `3 * (last - first - 1) / 2` comparaciones.
+Si la secuencia no está vacío, la función se realiza a lo sumo `3 * (last - first - 1) / 2` comparaciones.
 
 ## <a name="minmax"></a>  minmax
 
@@ -4145,21 +4145,21 @@ template<class Type, class BinaryPredicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de los dos objetos que se va a comparar.
+*izquierdo* el primero de los dos objetos que se va a comparar.
 
-`right` El segundo de los dos objetos que se va a comparar.
+*derecha* el segundo de los dos objetos que se están comparando.
 
-`comp` Un predicado binario utilizado para comparar los dos objetos.
+*comp* un predicado binario que se utiliza para comparar los dos objetos.
 
-`_IList` Initializer_list que contiene los miembros que se va a comparar.
+*_IList* initializer_list que contiene los miembros que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
 
-Devuelve la primera función de plantilla `pair<const Type&, const Type&>( right , left )` si `right` es menor que `left`. De lo contrario, devuelve `pair<const Type&, const Type&>( left , right )`.
+La primera función de plantilla devuelve `pair<const Type&, const Type&>( right , left )` si *derecho* es menor que *izquierdo*. De lo contrario, devuelve `pair<const Type&, const Type&>( left , right )`.
 
-La segunda función miembro devuelve un par donde el primer elemento es el menor y el segundo es el mayor cuando se comparan mediante el predicado `comp`.
+La segunda función miembro devuelve un par donde el primer elemento es el menor y el segundo es el mayor en comparación con el predicado *comp*.
 
-Las funciones de plantilla restantes se comportan de la misma forma, salvo que reemplazan los parámetros `left` y `right` con `_IList`.
+Las funciones de plantilla restantes comportan igual, salvo que reemplazan el *izquierdo* y *derecho* parámetros con *_IList*.
 
 La función realiza exactamente una comparación.
 
@@ -4204,15 +4204,15 @@ mismatch(
 
 ### <a name="parameters"></a>Parámetros
 
-`First1` Un iterador de entrada direcciona la posición del primer elemento del primer intervalo va a probar.
+*First1* un iterador de entrada direcciona la posición del primer elemento del primer intervalo que va a probarse.
 
-`Last1` Un iterador de entrada direcciona la posición uno pasado el último elemento del primer intervalo va a probar.
+*Last1* un iterador de entrada direcciona la posición uno después del último elemento del primer intervalo que va a probarse.
 
-`First2` Un iterador de entrada direcciona la posición del primer elemento en el segundo intervalo se va a probar.
+*First2* un iterador de entrada direcciona la posición del primer elemento del segundo intervalo que va a probarse.
 
-`Last2` Un iterador de entrada direcciona la posición de un elemento más allá del último elemento en el segundo intervalo se va a probar.
+*Last2* un iterador de entrada direcciona la posición uno después del último elemento del segundo intervalo que va a probarse.
 
-`Comp` Objeto de función de predicado definido por el usuario que compara los elementos actuales en cada intervalo y determina si son equivalentes. Devuelve **True** si se cumple y **False** si no.
+*Comp* objeto de función de predicado definido por el usuario que compara los elementos actuales en cada intervalo y determina si son equivalentes. Devuelve **True** si se cumple y **False** si no.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -4340,15 +4340,15 @@ template<class InputIterator, class OutputIterator>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que indica dónde comienza el intervalo de elementos que se va a mover.
+*primera* un iterador de entrada que indica dónde comienza el intervalo de elementos que se va a mover.
 
-`last` Un iterador de entrada que indica el final de un intervalo de elementos que se va a mover.
+*último* un iterador de entrada que indica el final de un intervalo de elementos que se va a mover.
 
-`dest` El iterador de salida que contendrá los elementos movidos.
+*dest* el iterador de salida que contendrá los elementos movidos.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla evalúa `*(dest + N) = move(*(first + N))` una vez por cada `N` en el intervalo `[0, last - first)`, para aumentar de forma estricta los valores de `N` a partir del valor más bajo. Después, devuelve `dest + N`. Si `dest` y `first` designan regiones de almacenamiento, `dest` no debe estar en el intervalo `[first, last)`.
+La función de plantilla evalúa `*(dest + N) = move(*(first + N))` una vez por cada `N` en el intervalo `[0, last - first)`, incrementados de forma estricta los valores de `N` comenzando con el valor más bajo. Después, devuelve `dest + N`. Si `dest` y *primera* designan regiones de almacenamiento, *dest* no debe estar en el intervalo `[first, last)`.
 
 ## <a name="move_backward"></a>  move_backward
 
@@ -4365,15 +4365,15 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador que indica el inicio de un intervalo a mover elementos.
+*primera* un iterador que indica el inicio de un intervalo a mover elementos.
 
-`last` Un iterador que indica el final de un intervalo a mover elementos. Este elemento no se mueve.
+*último* un iterador que indica el final de un intervalo a mover elementos. Este elemento no se mueve.
 
-`destEnd` Iterador bidireccional que direcciona la posición de un elemento más allá del último elemento del intervalo de destino.
+*destEnd* un iterador bidireccional que direcciona la posición de un elemento más allá del último elemento del intervalo de destino.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla evalúa `*(destEnd - N - 1) = move(*(last - N - 1))` una vez por cada `N` en el intervalo `[0, last - first)`, para aumentar de forma estricta los valores de `N` a partir del valor más bajo. Después, devuelve `destEnd - (last - first)`. Si `destEnd` y `first` designan regiones de almacenamiento, `destEnd` no debe estar en el intervalo `[first, last)`.
+La función de plantilla evalúa `*(destEnd - N - 1) = move(*(last - N - 1))` una vez por cada `N` en el intervalo `[0, last - first)`, incrementados de forma estricta los valores de `N` comenzando con el valor más bajo. Después, devuelve `destEnd - (last - first)`. Si *destEnd* y *primera* designan regiones de almacenamiento, *destEnd* no debe estar en el intervalo `[first, last)`.
 
 `move` y `move_backward` son funcionalmente equivalentes a utilizar `copy` y `copy_backward` con un iterador de movimiento.
 
@@ -4392,11 +4392,11 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador bidireccional que apunta a la posición del primer elemento del intervalo para ser permuta.
+*primera* un iterador bidireccional que apunta a la posición del primer elemento del intervalo que se va a permutar.
 
-`last` Iterador bidireccional que apunta a la posición uno pasado el último elemento del intervalo que se permuta.
+*último* un iterador bidireccional que apunta a la posición situada una posición después del último elemento del intervalo que se va a permutar.
 
-`comp` Objeto de función de predicado definido por el usuario que define el criterio de comparación que se debe cumplir con los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* objeto de función de predicado definido por el usuario que define el criterio de comparación que debe cumplir los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -4408,7 +4408,7 @@ El intervalo al que se hace referencia debe ser válido; todos los punteros se d
 
 El predicado binario predeterminado es menor que y los elementos del intervalo deben ser comparables con menor que para asegurarse de que la permutación siguiente esté bien definida.
 
-La complejidad es lineal con, a lo sumo (* apellido - nombre *) / 2 intercambia.
+La complejidad es lineal con, a lo sumo (* apellido - nombre *) / 2 intercambios.
 
 ### <a name="example"></a>Ejemplo
 
@@ -4564,13 +4564,13 @@ template<class RandomAccessIterator, class BinaryPredicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de acceso aleatorio direcciona la posición del primer elemento del intervalo de crear particiones.
+*primera* un iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo se dividan.
 
-*_Nth* un iterador de acceso aleatorio que direcciona la posición del elemento se ordenen correctamente en el límite de la partición.
+*_Nth* un iterador de acceso aleatorio que direcciona la posición del elemento se ordenen correctamente en los límites de la partición.
 
-`last` Un iterador de acceso aleatorio direcciona la posición uno después del último elemento del intervalo de crear particiones.
+*último* un iterador de acceso aleatorio que direcciona la posición uno después del último elemento del intervalo se dividan.
 
-`comp` Objeto de función de predicado definido por el usuario que define el criterio de comparación que se debe cumplir con los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* objeto de función de predicado definido por el usuario que define el criterio de comparación que debe cumplir los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -4580,7 +4580,7 @@ El algoritmo `nth_element` no garantiza que los elementos de los subintervalos s
 
 Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro.
 
-El promedio de una complejidad de la ordenación es lineal con respecto a * apellido - nombre *.
+El promedio de una complejidad de orden es lineal con respecto a * apellido - nombre *.
 
 ### <a name="example"></a>Ejemplo
 
@@ -4650,7 +4650,7 @@ int main() {
 
 ## <a name="none_of"></a>  none_of
 
-Devuelve `true` cuando una condición nunca está presente entre los elementos del intervalo especificado.
+Devuelve **true** cuando una condición nunca está presente entre los elementos del intervalo especificado.
 
 ```cpp
 template<class InputIterator, class BinaryPredicate>
@@ -4659,19 +4659,19 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que indica dónde debe empezar a comprobar un intervalo de elementos de una condición.
+*primera* un iterador de entrada que indica dónde comenzar a comprobar un intervalo de elementos de una condición.
 
-`last` Un iterador de entrada que indica el final de un intervalo de elementos.
+*último* un iterador de entrada que indica el final de un intervalo de elementos.
 
-`comp` Condición que se va a comprobar. La proporciona y la define un objeto de función de predicado definido por el usuario. Un predicado toma un único argumento y devuelve `true` o `false`.
+*comp* la condición que se va a comprobar. La proporciona y la define un objeto de función de predicado definido por el usuario. Un predicado toma un único argumento y devuelve **rue** o **False**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve `true` si no se detecta la condición al menos una vez en el intervalo indicado, y `false` si la condición sí se detecta.
+Devuelve **true** si la condición no se detecta al menos una vez en el intervalo indicado, y **false** si se detecta la condición.
 
 ### <a name="remarks"></a>Comentarios
 
-Devuelve la función de plantilla `true` únicamente si para algunos `N` en el intervalo `[0, last - first)`, el predicado `comp(*(first + N))` siempre es `false`.
+Devuelve la función de plantilla **true** solo si, para cada `N` en el intervalo `[0, last - first)`, el predicado `comp(*(first + N))` siempre **false**.
 
 ## <a name="partial_sort"></a>  partial_sort
 
@@ -4695,19 +4695,19 @@ template<class RandomAccessIterator, class BinaryPredicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de acceso aleatorio direcciona la posición del primer elemento del intervalo que ordenarse.
+*primera* un iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo esté ordenada.
 
-`sortEnd` Un iterador de acceso aleatorio direcciona la posición uno después del último elemento en el subintervalo se ordenen.
+*sortEnd* un iterador de acceso aleatorio que direcciona la posición uno después del último elemento del subintervalo que ordenarse.
 
-`last` Un iterador de acceso aleatorio direcciona la posición uno después del último elemento del intervalo se ordenen parcialmente.
+*último* un iterador de acceso aleatorio que direcciona la posición uno después del último elemento del intervalo para ordenar de forma parcial.
 
-`comp` Objeto de función de predicado definido por el usuario que define el criterio de comparación que se debe cumplir con los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* objeto de función de predicado definido por el usuario que define el criterio de comparación que debe cumplir los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="remarks"></a>Comentarios
 
 El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.
 
-Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro. El algoritmo **sort** no es estable ni garantiza la conservación de la ordenación relativa de los elementos equivalentes. El algoritmo `stable_sort` conserva esta ordenación original.
+Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro. El `sort` algoritmo no es estable y no garantiza que el orden relativo de los elementos equivalentes se conservarán. El algoritmo `stable_sort` conserva esta ordenación original.
 
 La complejidad de la ordenación parcial promedio es *O*((`last`- `first`) log (`sortEnd`- `first`)).
 
@@ -4807,15 +4807,15 @@ RandomAccessIterator partial_sort_copy(
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador de entrada que direcciona la posición del primer elemento del intervalo de origen.
+*first1* un iterador de entrada que direcciona la posición del primer elemento del intervalo de origen.
 
-`last1` Un iterador de entrada que direcciona la posición uno después del último elemento del intervalo de origen.
+*last1* un iterador de entrada que direcciona la posición uno después del último elemento del intervalo de origen.
 
-`first2` Un iterador de acceso aleatorio que direcciona la posición del primer elemento del intervalo de destino ordenado.
+*first2* un iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo de destino ordenado.
 
-`last2` Un iterador de acceso aleatorio que direcciona la posición uno después del último elemento del intervalo de destino ordenado.
+*last2* un iterador de acceso aleatorio que direcciona la posición uno después del último elemento del intervalo de destino ordenado.
 
-`comp` Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se realizará como equivalentes. Un predicado binario toma dos argumentos y devuelve `true` si se cumplen y `false` si no.
+*comp* objeto de función de predicado definido por el usuario que define la condición que debe cumplir si dos elementos son que se debe realizar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -4918,11 +4918,11 @@ template<class BidirectionalIterator, class Predicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador bidireccional que direcciona la posición del primer elemento del intervalo de crear particiones.
+*primera* un iterador bidireccional que direcciona la posición del primer elemento del intervalo que se puede dividir en particiones.
 
-`last` Iterador bidireccional que direcciona la posición uno después del último elemento del intervalo de crear particiones.
+*último* un iterador bidireccional que direcciona la posición uno después del último elemento del intervalo que se puede dividir en particiones.
 
-`comp` Objeto de función de predicado definido por el usuario que define la condición que debe cumplir si un elemento se clasificarán. Un predicado toma un único argumento y devuelve **rue** o **False**.
+*comp* objeto de función de predicado definido por el usuario que define la condición que debe cumplir un elemento van a clasificar. Un predicado toma un único argumento y devuelve **rue** o **False**.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -4932,9 +4932,9 @@ Iterador bidireccional que dirige a la posición del primer elemento del interva
 
 El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.
 
-Los elementos *a* y *b* son equivalentes, pero no necesariamente iguales, si *Pr* (*a*, *b*) es falso y *Pr* (*b*, *a*) también, donde *Pr* es el predicado especificado por el parámetro. El algoritmo **partition** no es estable ni garantiza la conservación de la ordenación relativa de los elementos equivalentes. El algoritmo **stable_ partition** conserva esta ordenación original.
+Los elementos *a* y *b* son equivalentes, pero no necesariamente iguales, si *Pr* (*a*, *b*) es falso y *Pr* (*b*, *a*) también, donde *Pr* es el predicado especificado por el parámetro. El `partition` algoritmo no es estable y no garantiza que el orden relativo de los elementos equivalentes se conservarán. El algoritmo `stable_ partition` conserva esta ordenación original.
 
-La complejidad es lineal: hay ( `last`  -   `first`) las aplicaciones de `comp` y a lo sumo ( `last`  -   `first`) / 2 intercambia.
+La complejidad es lineal: hay (`last` - `first`) aplicaciones de *comp* y a lo sumo (`last` - `first`) / 2 intercambios.
 
 ### <a name="example"></a>Ejemplo
 
@@ -4977,7 +4977,7 @@ int main( ) {
 
 ## <a name="partition_copy"></a>  partition_copy
 
-Copia a un destino los elementos para los que una condición es `true` y a otro destino diferente los elementos para los que la condición es `false`. Los elementos deben proceder de un intervalo especificado.
+Copia los elementos para que una condición es **true** a un destino, y para que la condición es **false** a otro. Los elementos deben proceder de un intervalo especificado.
 
 ```cpp
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class Predicate>
@@ -4993,15 +4993,15 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que indica el principio de un intervalo para comprobar si una condición.
+*primera* un iterador de entrada que indica el principio de un intervalo para comprobar una condición.
 
-`last` Un iterador de entrada que indica el final de un intervalo.
+*último* un iterador de entrada que indica el final de un intervalo.
 
-`dest1` Un iterador de salida que se usa para copiar los elementos que devuelven true para una condición de prueba mediante el uso de `_Pred`.
+*dest1* un iterador de salida usado para copiar los elementos que devuelven true para una condición probada mediante *_Pred*.
 
-`dest2` Un iterador de salida que se usa para copiar los elementos que se devuelva el valor false para una condición de prueba mediante el uso de `_Pred`.
+*dest2* un iterador de salida usado para copiar los elementos que devuelven false para una condición probada mediante *_Pred*.
 
-`_Pred` Condición que se va a comprobar. La proporciona y la define un objeto de función de predicado definido por el usuario. Un predicado toma un único argumento y devuelve `true` o `false`.
+*_Pred* la condición que se va a comprobar. La proporciona y la define un objeto de función de predicado definido por el usuario. Un predicado toma un único argumento y devuelve **rue** o **False**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -5022,19 +5022,19 @@ template<class ForwardIterator, class Predicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un `ForwardIterator` que indica el inicio de un intervalo para comprobar si una condición.
+*primera* A `ForwardIterator` que indica el inicio de un intervalo para comprobar una condición.
 
-`last` Un `ForwardIterator` que indica el final de un intervalo.
+*último* A `ForwardIterator` que indica el final de un intervalo.
 
-`comp` Condición que se va a comprobar. La proporciona un objeto de función de predicado definido por el usuario que define la condición que debe cumplir el elemento que se está buscando. Un predicado toma un único argumento y devuelve `true` o `false`.
+*comp* la condición que se va a comprobar. La proporciona un objeto de función de predicado definido por el usuario que define la condición que debe cumplir el elemento que se está buscando. Un predicado toma un único argumento y devuelve **rue** o **False**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un `ForwardIterator` que hace referencia al primer elemento que no cumple la condición comprobada por `comp`, o `last` si no encuentra ninguno.
+Devuelve un `ForwardIterator` que hace referencia al primer elemento que no cumple la condición comprobada por *comp*, o devuelve *última* si no se encontró ninguno.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla no encuentra el primer iterador `it` en `[first, last)` que `comp(*it)` es `false`. La secuencia debe ordenarse por `comp`.
+La función de plantilla encuentra el primer iterador `it` en `[first, last)` que `comp(*it)` es **false**. La secuencia debe ordenarse por *comp*.
 
 ## <a name="pop_heap"></a>  pop_heap
 
@@ -5051,11 +5051,11 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de acceso aleatorio que direcciona la posición del primer elemento en el montón.
+*primera* un iterador de acceso aleatorio que dirige a la posición del primer elemento en el montón.
 
-`last` Un iterador de acceso aleatorio que direcciona la posición uno pasado el último elemento en el montón.
+*último* un iterador de acceso aleatorio que direcciona la posición uno después del último elemento en el montón.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* sentido de objeto de función de predicado definido por el usuario que se define en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -5073,7 +5073,7 @@ El intervalo al que se hace referencia debe ser válido; todos los punteros se d
 
 El intervalo que excluye al elemento recién agregado al final debe ser un montón.
 
-La complejidad es logarítmica, a lo sumo necesidad de registro (* apellido - nombre *) las comparaciones.
+La complejidad es logarítmica, y a lo sumo necesita registro (* apellido - nombre *) las comparaciones.
 
 ### <a name="example"></a>Ejemplo
 
@@ -5157,15 +5157,15 @@ template<class BidirectionalIterator, class BinaryPredicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador bidireccional que apunta a la posición del primer elemento del intervalo para ser permuta.
+*primera* un iterador bidireccional que apunta a la posición del primer elemento del intervalo que se va a permutar.
 
-`last` Iterador bidireccional que apunta a la posición uno pasado el último elemento del intervalo que se permuta.
+*último* un iterador bidireccional que apunta a la posición situada una posición después del último elemento del intervalo que se va a permutar.
 
-`comp` Objeto de función de predicado definido por el usuario que define el criterio de comparación que se debe cumplir con los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve `true` si se cumplen y `false` si no.
+*comp* objeto de función de predicado definido por el usuario que define el criterio de comparación que debe cumplir los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si la permutación lexicográficamente anterior existe y ha sustituido a la ordenación original del intervalo; de lo contrario, `false`, en cuyo caso la ordenación se transforma en la permutación lexicográficamente mayor.
+**True** si la permutación lexicográficamente anterior existe y ha sustituido la ordenación original del intervalo; en caso contrario **false**, en cuyo caso la ordenación se transforma en lexicográficamente mayor permutación.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -5173,7 +5173,7 @@ El intervalo al que se hace referencia debe ser válido; todos los punteros se d
 
 El predicado binario predeterminado es menor que y los elementos del intervalo deben ser comparables con menor que para asegurarse de que la permutación anterior esté bien definida.
 
-La complejidad es lineal, como máximo ( `last`  -   `first`) / 2 intercambia.
+La complejidad es lineal con, a lo sumo (`last` -  `first`) / 2 intercambios.
 
 ### <a name="example"></a>Ejemplo
 
@@ -5324,11 +5324,11 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de acceso aleatorio que direcciona la posición del primer elemento en el montón.
+*primera* un iterador de acceso aleatorio que dirige a la posición del primer elemento en el montón.
 
-`last` Un iterador de acceso aleatorio que direcciona la posición uno después del último elemento del intervalo que se va a convertir en un montón.
+*último* un iterador de acceso aleatorio que direcciona la posición uno después del último elemento del intervalo que se va a convertirse en un montón.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* sentido de objeto de función de predicado definido por el usuario que se define en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -5346,7 +5346,7 @@ El intervalo al que se hace referencia debe ser válido; todos los punteros se d
 
 El intervalo que excluye al elemento recién agregado al final debe ser un montón.
 
-La complejidad es logarítmica, que requiere a lo sumo registro ( *apellido - nombre*) las comparaciones.
+La complejidad es logarítmica, y a lo sumo necesita registro ( *last - primero*) comparaciones.
 
 ### <a name="example"></a>Ejemplo
 
@@ -5417,7 +5417,7 @@ int main( ) {
 
 ## <a name="random_shuffle"></a>  random_shuffle
 
-La función std::random_shuffle() está en desuso, reemplazado por [std:: shuffle](../standard-library/algorithm-functions.md#shuffle). Para obtener un ejemplo de código y obtener más información, vea [ \<aleatorio >](../standard-library/random.md) y la entrada de Stackoverflow sobre [¿por qué son los métodos de std:: random_shuffle está en desuso en C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
+La función std::random_shuffle() está en desuso, reemplazado por [std:: shuffle](../standard-library/algorithm-functions.md#shuffle). Para un ejemplo de código y obtener más información, consulte [ \<aleatorio >](../standard-library/random.md) y la entrada de Stackoverflow sobre [¿por qué son los métodos de std:: random_shuffle en desuso en C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a>  remove
 
@@ -5431,11 +5431,11 @@ template<class ForwardIterator, class Type>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador hacia delante que direcciona la posición del primer elemento del intervalo desde el que se quitan los elementos.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo del que se quitan los elementos.
 
-`last` Iterador hacia delante que direcciona la posición uno después del último elemento del intervalo desde el que se quitan los elementos.
+*último* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo del que se quitan los elementos.
 
-`val` El valor que debe quitarse del intervalo.
+*Val* el valor que se va a quitar del intervalo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -5449,9 +5449,9 @@ El orden de los elementos no quitados no se ve afectado.
 
 El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.
 
-La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad.
+La complejidad es lineal; hay (`last` - `first`) comparaciones para igualdad.
 
-La [clase list](../standard-library/list-class.md) tiene una versión de función miembro más eficaz de **remove**, que también vuelve a vincular los punteros.
+El [list (clase)](../standard-library/list-class.md) tiene una versión de función miembro más eficaz de `remove`, que también vuelve a vincular los punteros.
 
 ### <a name="example"></a>Ejemplo
 
@@ -5511,13 +5511,13 @@ template<class InputIterator, class OutputIterator, class Type>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que direcciona la posición del primer elemento del intervalo desde el que se quitan los elementos.
+*primera* un iterador de entrada que direcciona la posición del primer elemento del intervalo del que se quitan los elementos.
 
-`last` Un iterador de entrada que direcciona la posición uno después del último elemento del intervalo desde el que se quitan los elementos.
+*último* un iterador de entrada que direcciona la posición uno después del último elemento del intervalo del que se quitan los elementos.
 
-`result` Un iterador de salida que direcciona la posición del primer elemento del intervalo de destino a la que se quitan los elementos.
+*resultado* un iterador de salida que direcciona la posición del primer elemento del intervalo de destino al que se quitan los elementos.
 
-`val` El valor que debe quitarse del intervalo.
+*Val* el valor que se va a quitar del intervalo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -5533,7 +5533,7 @@ El orden de los elementos no quitados no se ve afectado.
 
 El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.
 
-La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones.
+La complejidad es lineal; hay (`last` - `first`) comparaciones para igualdad y, a lo sumo (`last` - `first`) asignaciones.
 
 ### <a name="example"></a>Ejemplo
 
@@ -5590,13 +5590,13 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que direcciona la posición del primer elemento del intervalo desde el que se quitan los elementos.
+*primera* un iterador de entrada que direcciona la posición del primer elemento del intervalo del que se quitan los elementos.
 
-`last` Un iterador de entrada que direcciona la posición uno después del último elemento del intervalo desde el que se quitan los elementos.
+*último* un iterador de entrada que direcciona la posición uno después del último elemento del intervalo del que se quitan los elementos.
 
-`result` Un iterador de salida que direcciona la posición del primer elemento del intervalo de destino a la que se quitan los elementos.
+*resultado* un iterador de salida que direcciona la posición del primer elemento del intervalo de destino al que se quitan los elementos.
 
-`_Pred` El predicado unario que debe cumplirse es el valor de un elemento que se debe reemplazar.
+*_Pred* predicado unario que debe cumplirse es el valor de un elemento que se debe reemplazar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -5612,7 +5612,7 @@ El orden de los elementos no quitados no se ve afectado.
 
 El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.
 
-La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones.
+La complejidad es lineal: hay (`last` - `first`) comparaciones para igualdad y, a lo sumo (`last` - `first`) asignaciones.
 
 Para más información sobre el comportamiento de estas funciones, vea [Iteradores activados](../standard-library/checked-iterators.md).
 
@@ -5678,11 +5678,11 @@ template<class ForwardIterator, class Predicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que apunta a la posición del primer elemento en el intervalo desde el que se quitan los elementos.
+*primera* un iterador hacia delante que apunta a la posición del primer elemento del intervalo del que se quitan los elementos.
 
-`last` Un iterador hacia delante que apunta a la posición uno después del último elemento del intervalo desde el que se quitan los elementos.
+*último* un iterador hacia delante que apunta a la posición uno después del último elemento del intervalo del que se quitan los elementos.
 
-`_Pred` El predicado unario que debe cumplirse es el valor de un elemento que se debe reemplazar.
+*_Pred* predicado unario que debe cumplirse es el valor de un elemento que se debe reemplazar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -5696,7 +5696,7 @@ El orden de los elementos no quitados no se ve afectado.
 
 El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.
 
-La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad.
+La complejidad es lineal: hay (`last` - `first`) comparaciones para igualdad.
 
 List tiene una versión de función miembro más eficaz de remove, que vuelve a vincular los punteros.
 
@@ -5761,13 +5761,13 @@ void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, c
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que apunta a la posición del primer elemento del intervalo cuyos elementos se reemplazan.
+*primera* un iterador hacia delante que apunta a la posición del primer elemento del intervalo que se van a sustituir elementos.
 
-`last` Un iterador hacia delante que apunta a la posición uno después del último elemento del intervalo cuyos elementos se reemplazan.
+*último* un iterador hacia delante que apunta a la posición uno después del último elemento del intervalo que se van a sustituir elementos.
 
-`_OldVal` El valor antiguo de los elementos que se va a reemplazar.
+*_OldVal* el valor antiguo de los elementos que se va a reemplazar.
 
-`_NewVal` El nuevo valor que se asigna a los elementos con el valor antiguo.
+*_NewVal* el nuevo valor que se va a asignar a los elementos con el valor anterior.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -5777,7 +5777,7 @@ El orden de los elementos no reemplazados no se ve afectado.
 
 El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.
 
-La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.
+La complejidad es lineal; hay (`last` - `first`) comparaciones para igualdad y, a lo sumo (`last` - `first`) asignaciones de nuevos valores.
 
 ### <a name="example"></a>Ejemplo
 
@@ -5833,15 +5833,15 @@ OutputIterator replace_copy(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que apunta a la posición del primer elemento del intervalo cuyos elementos se reemplazan.
+*primera* un iterador de entrada que apunta a la posición del primer elemento del intervalo que se van a sustituir elementos.
 
-`last` Un iterador de entrada que apunta a la posición uno pasado el último elemento del intervalo cuyos elementos se reemplazan.
+*último* un iterador de entrada que apunta a la posición situada una posición después del último elemento del intervalo que se van a sustituir elementos.
 
-`result` Un iterador de salida que apunta al primer elemento del intervalo de destino donde se va a copiar la secuencia de elementos modificada.
+*resultado* un iterador de salida que apunta al primer elemento del intervalo de destino donde se va a copiar la secuencia de elementos modificada.
 
-`_OldVal` El valor antiguo de los elementos que se va a reemplazar.
+*_OldVal* el valor antiguo de los elementos que se va a reemplazar.
 
-`_NewVal` El nuevo valor que se asigna a los elementos con el valor antiguo.
+*_NewVal* el nuevo valor que se va a asignar a los elementos con el valor anterior.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -5855,7 +5855,7 @@ El orden de los elementos no reemplazados no se ve afectado.
 
 El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.
 
-La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.
+La complejidad es lineal: hay (`last` - `first`) comparaciones para igualdad y, a lo sumo (`last` - `first`) asignaciones de nuevos valores.
 
 ### <a name="example"></a>Ejemplo
 
@@ -5931,15 +5931,15 @@ OutputIterator replace_copy_if(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de entrada que apunta a la posición del primer elemento del intervalo cuyos elementos se reemplazan.
+*primera* un iterador de entrada que apunta a la posición del primer elemento del intervalo que se van a sustituir elementos.
 
-`last` Un iterador de entrada que apunta a la posición uno pasado el último elemento del intervalo cuyos elementos se reemplazan.
+*último* un iterador de entrada que apunta a la posición situada una posición después del último elemento del intervalo que se van a sustituir elementos.
 
-`result` Un iterador de salida que apunta a la posición del primer elemento del intervalo de destino a la que se copian los elementos.
+*resultado* un iterador de salida que apunta a la posición del primer elemento del intervalo de destino al que se copian los elementos.
 
-`_Pred` El predicado unario que debe cumplirse es el valor de un elemento que se debe reemplazar.
+*_Pred* predicado unario que debe cumplirse es el valor de un elemento que se debe reemplazar.
 
-`val` El nuevo valor que se asigna a los elementos cuyo valor antiguo cumple el predicado.
+*Val* el nuevo valor que se va a asignar a los elementos cuyo valor antiguo cumple el predicado.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -5953,7 +5953,7 @@ El orden de los elementos no reemplazados no se ve afectado.
 
 El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.
 
-La complejidad es lineal; hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.
+La complejidad es lineal; hay (`last` - `first`) comparaciones para igualdad y, a lo sumo (`last` - `first`) asignaciones de nuevos valores.
 
 ### <a name="example"></a>Ejemplo
 
@@ -6031,13 +6031,13 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que apunta a la posición del primer elemento del intervalo cuyos elementos se reemplazan.
+*primera* un iterador hacia delante que apunta a la posición del primer elemento del intervalo que se van a sustituir elementos.
 
-`last` Iterador que apunta a la posición uno después del último elemento del intervalo cuyos elementos se reemplazan.
+*último* un iterador que apunta a la posición uno después del último elemento del intervalo que se van a sustituir elementos.
 
-`_Pred` El predicado unario que debe cumplirse es el valor de un elemento que se debe reemplazar.
+*_Pred* predicado unario que debe cumplirse es el valor de un elemento que se debe reemplazar.
 
-`val` El nuevo valor que se asigna a los elementos cuyo valor antiguo cumple el predicado.
+*Val* el nuevo valor que se va a asignar a los elementos cuyo valor antiguo cumple el predicado.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -6045,11 +6045,11 @@ El intervalo al que se hace referencia debe ser válido; todos los punteros se d
 
 El orden de los elementos no reemplazados no se ve afectado.
 
-El algoritmo `replace_if` es una generalización del algoritmo **replace**, lo que permite especificar cualquier predicado en lugar de igualdad con un valor constante especificado.
+El algoritmo `replace_if` es una generalización del algoritmo `replace`, lo que permite cualquier predicado especificado, en lugar de igualdad con un valor constante especificado.
 
 El `operator==` utilizado para determinar la igualdad entre elementos debe imponer una relación de equivalencia entre sus operandos.
 
-La complejidad es lineal: hay ( `last`  -   `first`) comparaciones para igualdad y, a lo sumo ( `last`  -   `first`) asignaciones de nuevos valores.
+La complejidad es lineal: hay (`last` - `first`) comparaciones para igualdad y, a lo sumo (`last` - `first`) asignaciones de nuevos valores.
 
 ### <a name="example"></a>Ejemplo
 
@@ -6107,9 +6107,9 @@ template<class BidirectionalIterator>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador bidireccional que apunta a la posición del primer elemento del intervalo en el que se permutan los elementos.
+*primera* un iterador bidireccional que apunta a la posición del primer elemento del intervalo en el que se permutan los elementos.
 
-`last` Un iterador bidireccional que apunta a la posición uno pasado el último elemento del intervalo en el que se permutan los elementos.
+*último* un iterador bidireccional que apunta a la posición situada una posición después del último elemento del intervalo en el que se permutan los elementos.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -6172,11 +6172,11 @@ OutputIterator reverse_copy(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador bidireccional que apunta a la posición del primer elemento del intervalo de origen en el que se permutan los elementos.
+*primera* un iterador bidireccional que apunta a la posición del primer elemento del intervalo de origen en el que se permutan los elementos.
 
-`last` Un iterador bidireccional que apunta a la posición uno pasado el último elemento del intervalo de origen en el que se permutan los elementos.
+*último* un iterador bidireccional que apunta a la posición situada una posición después del último elemento del intervalo de origen en el que se permutan los elementos.
 
-`result` Un iterador de salida que apunta a la posición del primer elemento del intervalo de destino a la que se copian los elementos.
+*resultado* un iterador de salida que apunta a la posición del primer elemento del intervalo de destino al que se copian los elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -6238,17 +6238,17 @@ template<class ForwardIterator>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que direcciona la posición del primer elemento en el intervalo va a rotar.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a rotar.
 
-`middle` Iterador hacia delante que define el límite dentro del intervalo que direcciona la posición del primer elemento en la segunda parte del intervalo cuyos elementos se van a intercambiar con los de la primera parte del intervalo.
+*intermedio* un iterador hacia delante que define el límite dentro del intervalo que direcciona la posición del primer elemento en la segunda parte del intervalo cuyos elementos se van a intercambiar con los de la primera parte del intervalo.
 
-`Last` Un iterador hacia delante que direcciona la posición uno pasado el último elemento en el intervalo va a rotar.
+*Último* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a rotar.
 
 ### <a name="remarks"></a>Comentarios
 
 Los intervalos a los que se hace referencia deben ser válidos; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, la última posición debe ser accesible desde la primera mediante incrementos.
 
-La complejidad es lineal con, a lo sumo ( `last`  -   `first`) intercambia.
+La complejidad es lineal con, a lo sumo (`last` - `first`) intercambia.
 
 ### <a name="example"></a>Ejemplo
 
@@ -6341,13 +6341,13 @@ OutputIterator rotate_copy(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que direcciona la posición del primer elemento en el intervalo va a rotar.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a rotar.
 
-`middle` Iterador hacia delante que define el límite dentro del intervalo que direcciona la posición del primer elemento en la segunda parte del intervalo cuyos elementos se van a intercambiar con los de la primera parte del intervalo.
+*intermedio* un iterador hacia delante que define el límite dentro del intervalo que direcciona la posición del primer elemento en la segunda parte del intervalo cuyos elementos se van a intercambiar con los de la primera parte del intervalo.
 
-_ `Last` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que va a rotar.
+_ *Última* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a rotar.
 
-`result` Un iterador de salida que direcciona la posición del primer elemento del intervalo de destino.
+*resultado* un iterador de salida que direcciona la posición del primer elemento del intervalo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -6357,7 +6357,7 @@ Iterador de salida que direcciona la posición situada una posición después de
 
 Los intervalos a los que se hace referencia deben ser válidos; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, la última posición debe ser accesible desde la primera mediante incrementos.
 
-La complejidad es lineal con, a lo sumo ( `last`  -   `first`) intercambia.
+La complejidad es lineal con, a lo sumo (`last` - `first`) intercambia.
 
 ### <a name="example"></a>Ejemplo
 
@@ -6442,15 +6442,15 @@ template<class ForwardIterator1, class ForwardIterator2, class Predicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe buscar.
+*first1* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a buscar.
 
-`last1` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe buscar.
+*last1* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a buscar.
 
-`first2` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe coincidir.
+*first2* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe coincidir.
 
-`last2` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe coincidir.
+*last2* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe coincidir.
 
-`comp` Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se realizará como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* objeto de función de predicado definido por el usuario que define la condición que debe cumplir si dos elementos son que se debe realizar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -6586,15 +6586,15 @@ template<class ForwardIterator1, class Diff2, class Type, class BinaryPredicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se debe buscar.
+*first1* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se va a buscar.
 
-`last1` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se debe buscar.
+*last1* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se va a buscar.
 
-`count` El tamaño de la subsecuencia que se va a buscar.
+*recuento de* el tamaño de la subsecuencia que se va a buscar.
 
-`val` El valor de los elementos de la secuencia que se va a buscar.
+*Val* el valor de los elementos de la secuencia que se va a buscar.
 
-`comp` Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se realizará como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* objeto de función de predicado definido por el usuario que define la condición que debe cumplir si dos elementos son que se debe realizar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -6716,17 +6716,17 @@ OutputIterator set_difference(
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador de entrada que direcciona la posición del primer elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia de los dos intervalos de origen.
+*first1* un iterador de entrada que direcciona la posición del primer elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia entre los dos intervalos de origen.
 
-`last1` Un entrada iterador que direcciona la posición uno pasado el último elemento en el primero de los dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia de los dos intervalos de origen.
+*last1* un iterador de entrada direcciona la posición uno después del último elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia entre los dos intervalos de origen.
 
-`first2` Un iterador de entrada que direcciona la posición del primer elemento del segundo de dos consecutivos ordena los intervalos de origen que se van a combinar y ordenar en un solo intervalo que representa la diferencia de los dos intervalos de origen.
+*first2* un iterador de entrada dirige los intervalos de origen de la posición del primer elemento del segundo de dos consecutivos ordenado que se van a combinar y ordenar en un solo intervalo que representa la diferencia entre los dos intervalos de origen.
 
-`last2` Un iterador de entrada que direcciona la posición uno pasado el último elemento del segundo de dos consecutivos ordenados intervalos de origen que se van a combinar y ordenar en un solo intervalo que representa la diferencia de los dos intervalos de origen.
+*last2* un iterador de entrada dirige los intervalos de origen de la posición situada una posición después del último elemento del segundo de dos consecutivos ordenado que se van a combinar y ordenar en un solo intervalo que representa la diferencia entre los dos intervalos de origen.
 
-`result` Un iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen se van a combinar en un único intervalo ordenado que representa la diferencia de los dos intervalos de origen.
+*resultado* son un iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen van a combinar en un solo intervalo ordenado que representa la diferencia entre los dos intervalos de origen.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
+*comp* objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -6744,7 +6744,7 @@ La operación es estable, ya que se conserva el orden relativo de los elementos 
 
 Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, de forma que hay más en el primer intervalo de origen que en el segundo, el intervalo de destino contendrá el número por el que las apariciones de esos elementos en el primer intervalo de origen supera a las apariciones de esos elementos en el segundo intervalo de origen.
 
-La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparaciones para intervalos de origen no vacíos.
+La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-( *last2 - first2*)) – 1 comparaciones para intervalos de origen no vacíos.
 
 ### <a name="example"></a>Ejemplo
 
@@ -6890,17 +6890,17 @@ OutputIterator set_intersection(
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador de entrada que direcciona la posición del primer elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.
+*first1* un iterador de entrada que direcciona la posición del primer elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.
 
-`last1` Un entrada iterador que direcciona la posición uno pasado el último elemento en el primero de los dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.
+*last1* un iterador de entrada direcciona la posición uno después del último elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.
 
-`first2` Un iterador de entrada que direcciona la posición del primer elemento del segundo de dos consecutivos ordena los intervalos de origen que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.
+*first2* un iterador de entrada dirige los intervalos de origen de la posición del primer elemento del segundo de dos consecutivos ordenado que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.
 
-`last2` Un iterador de entrada que direcciona la posición uno pasado el último elemento del segundo de dos consecutivos ordenados intervalos de origen que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.
+*last2* un iterador de entrada dirige los intervalos de origen de la posición situada una posición después del último elemento del segundo de dos consecutivos ordenado que se van a combinar y ordenar en un solo intervalo que representa la intersección de los dos intervalos de origen.
 
-**_** *Resultado* un iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen son van a combinar en un único intervalo ordenado que representa la intersección de los dos origen intervalos.
+**_** *Resultado* son un iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen van a combinar en un solo intervalo ordenado que representa la intersección de la fuente de dos intervalos.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
+*comp* objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -6918,7 +6918,7 @@ La operación es estable, ya que se conserva el orden relativo de los elementos 
 
 Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, el intervalo de destino contendrá el número máximo de los elementos que aparecen en ambos intervalos de origen.
 
-La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*) + ( *last2 - first2*)) - 1 comparaciones para intervalos de origen no vacíos.
+La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*) + ( *last2 - first2*)) – 1 comparaciones para intervalos de origen no vacíos.
 
 ### <a name="example"></a>Ejemplo
 
@@ -7059,17 +7059,17 @@ OutputIterator set_symmetric_difference(
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador de entrada que direcciona la posición del primer elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.
+*first1* un iterador de entrada que direcciona la posición del primer elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.
 
-`last1` Un entrada iterador que direcciona la posición uno pasado el último elemento en el primero de los dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.
+*last1* un iterador de entrada direcciona la posición uno después del último elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.
 
-`first2` Un iterador de entrada que direcciona la posición del primer elemento del segundo de dos consecutivos ordena los intervalos de origen que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.
+*first2* un iterador de entrada dirige los intervalos de origen de la posición del primer elemento del segundo de dos consecutivos ordenado que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.
 
-`last2` Un iterador de entrada que direcciona la posición uno pasado el último elemento del segundo de dos consecutivos ordenados intervalos de origen que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.
+*last2* un iterador de entrada dirige los intervalos de origen de la posición situada una posición después del último elemento del segundo de dos consecutivos ordenado que se van a combinar y ordenar en un solo intervalo que representa la diferencia simétrica de los dos intervalos de origen.
 
-**_** *Resultado* un iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen son van a combinar en un único intervalo ordenado que representa la diferencia simétrica de los dos intervalos de origen.
+**_** *Resultado* son un iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen van a combinar en un solo intervalo ordenado que representa la diferencia simétrica de los dos intervalos de origen.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
+*comp* objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -7081,13 +7081,13 @@ Los intervalos de origen ordenados a los que se hace referencia deben ser válid
 
 El intervalo de destino no debe superponerse a ninguno de los intervalos de origen y debe ser lo suficientemente grande como para contener el intervalo de destino.
 
-Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo **merge** según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.
+Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo `merge*` según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.
 
 La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo en el intervalo de destino. El algoritmo merge no modifica los intervalos de origen.
 
 Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, el intervalo de destino contendrá el valor absoluto del número por el que las apariciones de esos elementos en uno de los intervalos de origen supera a las apariciones de esos elementos en el segundo intervalo de origen.
 
-La complejidad del algoritmo es lineal con al menos 2 \* ((*last1 - first1*)-(*last2 - first2*)) - 1 comparaciones para intervalos de origen no vacíos.
+La complejidad del algoritmo es lineal con al menos 2 \* ((*last1 - first1*)-(*last2 - first2*)) – 1 comparaciones para intervalos de origen no vacíos.
 
 ### <a name="example"></a>Ejemplo
 
@@ -7233,17 +7233,17 @@ OutputIterator set_union(
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador de entrada que direcciona la posición del primer elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.
+*first1* un iterador de entrada que direcciona la posición del primer elemento en el primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.
 
-`last1` Un entrada iterador que direcciona la posición uno pasado el último elemento en el primero de los dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.
+*last1* un iterador de entrada direcciona la posición uno después del último elemento del primero de dos intervalos de origen ordenados que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.
 
-`first2` Un iterador de entrada que direcciona la posición del primer elemento del segundo de dos consecutivos ordena los intervalos de origen que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.
+*first2* un iterador de entrada dirige los intervalos de origen de la posición del primer elemento del segundo de dos consecutivos ordenado que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.
 
-`last2` Un iterador de entrada que direcciona la posición uno pasado el último elemento del segundo de dos consecutivos ordenados intervalos de origen que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.
+*last2* un iterador de entrada dirige los intervalos de origen de la posición situada una posición después del último elemento del segundo de dos consecutivos ordenado que se van a combinar y ordenar en un solo intervalo que representa la unión de los dos intervalos de origen.
 
-**_** *Resultado* un iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen son van a combinar en un único intervalo ordenado que representa la unión de los dos intervalos de origen.
+**_** *Resultado* son un iterador de salida que direcciona la posición del primer elemento del intervalo de destino donde los dos intervalos de origen van a combinar en un solo intervalo ordenado que representa la unión de los dos intervalos de origen.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
+*comp* objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es mayor que otro. El predicado binario toma dos argumentos y debe devolver **true** si el primer elemento es menor que el segundo elemento y **false** en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -7255,13 +7255,13 @@ Los intervalos de origen ordenados a los que se hace referencia deben ser válid
 
 El intervalo de destino no debe superponerse a ninguno de los intervalos de origen y debe ser lo suficientemente grande como para contener el intervalo de destino.
 
-Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo **merge** según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.
+Los intervalos de origen ordenados deben estar organizados como condición previa a la aplicación del algoritmo `merge` según el mismo orden que va a usar el algoritmo para ordenar los intervalos combinados.
 
-La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo en el intervalo de destino. El algoritmo **merge**no modifica los intervalos de origen.
+La operación es estable, ya que se conserva el orden relativo de los elementos de cada intervalo en el intervalo de destino. El algoritmo no modifica los intervalos de origen `merge`.
 
 Los tipos de valor de los iteradores de entrada tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro). Esto produce una ordenación entre los elementos no equivalentes. Cuando hay elementos equivalentes en ambos intervalos de origen, los elementos del primer intervalo preceden a los del segundo intervalo de origen en el intervalo de destino. Si los intervalos de origen contienen duplicados de un elemento, el intervalo de destino contendrá el número máximo de los elementos que aparecen en ambos intervalos de origen.
 
-La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparaciones.
+La complejidad del algoritmo es lineal con al menos 2 \* (( *last1 - first1*)-( *last2 - first2*)) – 1 comparaciones.
 
 ### <a name="example"></a>Ejemplo
 
@@ -7395,11 +7395,11 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador al primer elemento del intervalo que debe ordenarse, ambos inclusive. Debe cumplir los requisitos de `RandomAccessIterator` y `ValueSwappable`.
+*primera* un iterador al primer elemento del intervalo que debe ordenarse, ambos inclusive. Debe cumplir los requisitos de `RandomAccessIterator` y `ValueSwappable`.
 
-`last` Un iterador del último elemento del intervalo que debe ordenarse, excluido. Debe cumplir los requisitos de `RandomAccessIterator` y `ValueSwappable`.
+*último* un iterador al último elemento del intervalo que debe ordenarse, excluido. Debe cumplir los requisitos de `RandomAccessIterator` y `ValueSwappable`.
 
-`gen` El generador de números aleatorios que la `shuffle()` función usará para la operación. Debe cumplir los requisitos de un `UniformRandomNumberGenerator`.
+*gen* el generador de números aleatorios que los `shuffle()` función usará para la operación. Debe cumplir los requisitos de un `UniformRandomNumberGenerator`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -7425,11 +7425,11 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de acceso aleatorio direcciona la posición del primer elemento del intervalo que ordenarse.
+*primera* un iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo esté ordenada.
 
-`last` Un iterador de acceso aleatorio direcciona la posición uno después del último elemento del intervalo que ordenarse.
+*último* un iterador de acceso aleatorio que direcciona la posición uno después del último elemento del intervalo esté ordenada.
 
-`comp` Objeto de función de predicado definido por el usuario que define el criterio de comparación que se debe cumplir con los elementos sucesivos en la ordenación. Este predicado binario toma dos argumentos y devuelve `true` si los dos están en orden y `false` en caso contrario. Esta función de comparador debe imponer una ordenación débil estricta en los pares de elementos de la secuencia. Para más información, vea [Algoritmos](../standard-library/algorithms.md).
+*comp* objeto de función de predicado definido por el usuario que define el criterio de comparación que debe cumplir los elementos sucesivos en la ordenación. Este predicado binario toma dos argumentos y devuelve **true** si los dos argumentos están en orden y **false** en caso contrario. Esta función de comparador debe imponer una ordenación débil estricta en los pares de elementos de la secuencia. Para más información, vea [Algoritmos](../standard-library/algorithms.md).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -7437,7 +7437,7 @@ El intervalo al que se hace referencia debe ser válido; todos los punteros se d
 
 Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro. El algoritmo `sort` no es estable ni garantiza la conservación de la ordenación relativa de los elementos equivalentes. El algoritmo `stable_sort` conserva esta ordenación original.
 
-El promedio de una complejidad de la ordenación es *O*( *N* registro *N*), donde *N* =  *apellidos - nombre*.
+El promedio de una complejidad de orden es *O*( *N* registro *N*), donde *N* =  *apellidos - nombre*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -7526,11 +7526,11 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador de acceso aleatorio que direcciona la posición del primer elemento en el montón de destino.
+*primera* un iterador de acceso aleatorio que dirige a la posición del primer elemento del montón de destino.
 
-`last` Un iterador de acceso aleatorio que direcciona la posición uno después del último elemento en el montón de destino.
+*último* un iterador de acceso aleatorio que direcciona la posición uno después del último elemento del montón de destino.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* sentido de objeto de función de predicado definido por el usuario que se define en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -7548,7 +7548,7 @@ Los montones son una forma ideal de implementar colas de prioridad y se usan en 
 
 El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.
 
-La complejidad es a lo sumo *N* registro *N*, donde *N* = ( *apellido - nombre*).
+La complejidad es a lo sumo *N* registro *N*, donde *N* = ( *last - primero*).
 
 ### <a name="example"></a>Ejemplo
 
@@ -7615,11 +7615,11 @@ BidirectionalIterator stable_partition(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador bidireccional que direcciona la posición del primer elemento del intervalo de crear particiones.
+*primera* un iterador bidireccional que direcciona la posición del primer elemento del intervalo que se puede dividir en particiones.
 
-`last` Iterador bidireccional que direcciona la posición uno después del último elemento del intervalo de crear particiones.
+*último* un iterador bidireccional que direcciona la posición uno después del último elemento del intervalo que se puede dividir en particiones.
 
-`_Pred` Objeto de función de predicado definido por el usuario que define la condición que debe cumplir si un elemento se clasificarán. Un predicado toma un único argumento y devuelve **True** o **False**.
+*_Pred* objeto de función de predicado definido por el usuario que define la condición que debe cumplir un elemento van a clasificar. Un predicado toma un único argumento y devuelve **True** o **False**.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -7629,7 +7629,7 @@ Iterador bidireccional que dirige a la posición del primer elemento del interva
 
 El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.
 
-Los elementos *a* y *b* son equivalentes, pero no necesariamente iguales, si *Pr* (*a*, *b*) es falso y *Pr* (*b*, *a*) también, donde *Pr* es el predicado especificado por el parámetro. El algoritmo **stable_ partition** es estable y garantiza la conservación de la ordenación relativa de los elementos equivalentes. El algoritmo **partition** no conserva necesariamente esta ordenación original.
+Los elementos *a* y *b* son equivalentes, pero no necesariamente iguales, si *Pr* (*a*, *b*) es falso y *Pr* (*b*, *a*) también, donde *Pr* es el predicado especificado por el parámetro. El `stable_ partition` algoritmo es estable y garantiza que el orden relativo de los elementos equivalentes se conservarán. El algoritmo `partition` no conserva necesariamente esta ordenación original.
 
 ### <a name="example"></a>Ejemplo
 
@@ -7694,19 +7694,19 @@ void stable_sort(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador bidireccional que direcciona la posición del primer elemento del intervalo que ordenarse.
+*primera* un iterador bidireccional que direcciona la posición del primer elemento del intervalo que se va a ordenar.
 
-`last` Iterador bidireccional que direcciona la posición uno después del último elemento del intervalo que se va a ordenar.
+*último* un iterador bidireccional que direcciona la posición uno después del último elemento del intervalo que se va a ordenar.
 
-`comp` Objeto de función de predicado definido por el usuario que define el criterio de comparación que se debe cumplir con los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* objeto de función de predicado definido por el usuario que define el criterio de comparación que debe cumplir los elementos sucesivos en la ordenación. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="remarks"></a>Comentarios
 
 El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos.
 
-Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro. El algoritmo **sort** es estable y garantiza la conservación de la ordenación relativa de los elementos equivalentes.
+Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro. El `sort` algoritmo es estable y garantiza que el orden relativo de los elementos equivalentes se conservarán.
 
-La complejidad del tiempo de ejecución de `stable_sort` depende de la cantidad de memoria disponible, pero es el mejor de los casos (tiene suficiente memoria) *O*( *N* registro *N*) y el peor de los casos es *O*( *N* (registro *N* ) 2), donde *N* =  *apellido - nombre.* Normalmente, el algoritmo **sort** es considerablemente más rápido que `stable_sort`.
+La complejidad de tiempo de ejecución de `stable_sort` depende de la cantidad de memoria disponible, pero es el mejor caso (asignar suficiente memoria) *O*( *N* registro *N*) y el peor caso es *O*( *N* (registro *N* ) 2), donde *N* =  *last - First.* Normalmente, el `sort` algoritmo es significativamente más rápido que `stable_sort`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -7793,9 +7793,9 @@ template<class Type, size_t N>
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Para la invalidación de la primera, el primer objeto que tiene su contenido intercambiado. En el segundo reemplazo, primera matriz de objetos cuyo contenido se intercambia.
+*izquierdo* el primer reemplazo, el primer objeto cuyo contenido se intercambia. En el segundo reemplazo, primera matriz de objetos cuyo contenido se intercambia.
 
-`right` Para la invalidación de la primera, el segundo objeto que tiene su contenido intercambiado. En el segundo reemplazo, segunda matriz de objetos cuyo contenido se intercambia.
+*derecha* el primer reemplazo, el segundo objeto cuyo contenido se intercambia. En el segundo reemplazo, segunda matriz de objetos cuyo contenido se intercambia.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -7872,11 +7872,11 @@ ForwardIterator2 swap_ranges(
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador hacia delante que apunta a la primera posición del primer intervalo cuyos elementos se van a intercambiar.
+*first1* un iterador hacia delante que apunta a la primera posición del primer intervalo cuyos elementos son van a intercambiar.
 
-`last1` Un iterador hacia delante que apunta a uno más allá de la posición final del primer intervalo cuyos elementos se van a intercambiar.
+*last1* un iterador hacia delante que apunta a uno más allá de la posición final del primer intervalo cuyos elementos son van a intercambiar.
 
-`first2` Un iterador hacia delante que apunta a la primera posición del segundo intervalo cuyos elementos se van a intercambiar.
+*first2* un iterador hacia delante que apunta a la primera posición del segundo intervalo cuyos elementos son van a intercambiar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -7886,7 +7886,7 @@ Iterador hacia delante que apunta a la posición situada una posición después 
 
 Los intervalos a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, se debe poder acceder a la última posición desde la primera mediante incrementos. El segundo intervalo tiene que ser tan grande como el primero.
 
-La complejidad es lineal con `last1`  -   `first1` intercambios realiza. Si se intercambian elementos de contenedores del mismo tipo, se debería usar la función miembro `swap` de ese contenedor, porque esta normalmente tiene complejidad constante.
+La complejidad es lineal con *last1* - *first1* intercambios. Si se intercambian elementos de contenedores del mismo tipo, se debería usar la función miembro `swap` de ese contenedor, porque esta normalmente tiene complejidad constante.
 
 ### <a name="example"></a>Ejemplo
 
@@ -7972,15 +7972,15 @@ OutputIterator transform(
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Un iterador de entrada que direcciona la posición del primer elemento del primer intervalo de origen que se trabajará.
+*first1* un iterador de entrada que direcciona la posición del primer elemento del primer intervalo de origen que se opera.
 
-`last1` Un iterador de entrada que direcciona la posición uno después del último elemento del primer intervalo de origen operar en el mismo.
+*last1* opera un iterador de entrada que direcciona la posición uno después del último elemento del primer intervalo de origen.
 
-`first2` Un iterador de entrada que direcciona la posición del primer elemento del segundo intervalo de origen que se trabajará.
+*first2* un iterador de entrada que direcciona la posición del primer elemento del segundo intervalo de origen que se opera.
 
-`result` Un iterador de salida que direcciona la posición del primer elemento del intervalo de destino.
+*resultado* un iterador de salida que direcciona la posición del primer elemento del intervalo de destino.
 
-`_Func` Unario definido por el usuario funcionar objeto que se usa en la primera versión del algoritmo que se aplica a cada elemento del primer intervalo de origen o un objeto de función binaria (UD) definido por el usuario utiliza en la segunda versión del algoritmo que se aplica en pares, en un orden hacia delante , para los dos intervalos de origen.
+*_Func* objeto de función unario definido por el usuario utilizado en la primera versión del algoritmo que se aplica a cada elemento en el primer intervalo de origen o un objeto de función binaria (UD) definido por el usuario utilizado en la segunda versión del algoritmo que se aplica en pares, en un orden hacia delante, a los dos intervalos de origen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -7990,9 +7990,9 @@ Iterador de salida que dirige a la posición situada una posición después del 
 
 Los intervalos a los que se hace referencia deben ser válidos; todos los punteros deben poder desreferenciarse y, dentro de cada secuencia, se debe poder acceder a la última posición desde la primera mediante incrementos. El intervalo de destino debe ser lo suficientemente grande como para contener el intervalo de origen transformado.
 
-Si `result` está establecida en `first1` en la primera versión del algoritmo, a continuación, los intervalos de origen y de destino será el mismo y la secuencia que se va a modificar en su lugar. Pero la `result` no se puede resolver una posición dentro del intervalo [`first1` + 1, `last1`).
+Si *resultado* está establecida en *first1* en la primera versión del algoritmo, a continuación, los intervalos de origen y destino será el mismo y la secuencia se modificará en su lugar. Pero la *resultado* no pueden abordar una posición dentro del intervalo [`first1` + 1, `last1`).
 
-La complejidad es lineal con, a lo sumo (`last1` -  `first1`) las comparaciones.
+La complejidad es lineal con, a lo sumo (`last1` - `first1`) comparaciones.
 
 ### <a name="example"></a>Ejemplo
 
@@ -8101,11 +8101,11 @@ template<class ForwardIterator, class Predicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador hacia delante que direcciona la posición del primer elemento del intervalo de eliminación de duplicados analizarse.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo que se busquen la eliminación de duplicados.
 
-`last` Iterador hacia delante que direcciona la posición uno después del último elemento del intervalo de eliminación de duplicados analizarse.
+*último* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo que se busquen la eliminación de duplicados.
 
-`comp` Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se realizará como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* objeto de función de predicado definido por el usuario que define la condición que debe cumplir si dos elementos son que se debe realizar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -8117,9 +8117,9 @@ Ambas formas del algoritmo quitan el segundo duplicado de un par consecutivo de 
 
 La operación de algoritmo es estable, de forma que no se altera el orden relativo de los elementos no borrados.
 
-El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos. El algoritmo **unique** no modifica el número de elementos de la secuencia y los elementos más allá del final de la secuencia modificada se pueden desreferenciar pero no especificar.
+El intervalo al que se hace referencia debe ser válido; todos los punteros se deben poder desreferenciar y, dentro de la secuencia, se debe poder llegar a la última posición desde la primera mediante incrementos. número de elementos de la secuencia no se cambia el algoritmo `unique` y los elementos más allá del final de la secuencia modificada se pueden desreferenciar pero no se ha especificado.
 
-La complejidad es lineal, que requieren ( `last`  -   `first`) - 1 comparaciones.
+La complejidad es lineal, lo que requiere (`last` - `first`) - 1 comparaciones.
 
 List proporciona una función miembro "unique" más eficaz que puede funcionar mejor.
 
@@ -8231,13 +8231,13 @@ OutputIterator unique_copy( InputIterator first,
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador hacia delante que direcciona la posición del primer elemento del intervalo de origen que se copiará.
+*primera* un iterador hacia delante que direcciona la posición del primer elemento del intervalo de origen que va a copiar.
 
-`last` Un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo de origen que se copiará.
+*último* un iterador hacia delante que direcciona la posición uno después del último elemento del intervalo de origen que va a copiar.
 
-`result` Quita un iterador de salida que direcciona la posición del primer elemento del intervalo de destino que recibe la copia con duplicados consecutivos.
+*resultado* iterador de salida dirige a la posición del primer elemento del intervalo de destino que recibe la copia con duplicados consecutivos quitados.
 
-`comp` Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se realizará como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* objeto de función de predicado definido por el usuario que define la condición que debe cumplir si dos elementos son que se debe realizar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -8251,7 +8251,7 @@ La operación de algoritmo es estable, de forma que no se altera el orden relati
 
 Los intervalos a los que se hace referencia deben ser válidos: todos los punteros deben poder desreferenciarse y, dentro de una secuencia, se debe poder tener acceso a la última posición desde la primera con incrementos.
 
-La complejidad es lineal, que requieren ( `last`  -   `first`) las comparaciones.
+La complejidad es lineal, lo que requiere (`last` - `first`) comparaciones.
 
 ### <a name="example"></a>Ejemplo
 
@@ -8347,13 +8347,13 @@ template<class ForwardIterator, class Type, class Predicate>
 
 ### <a name="parameters"></a>Parámetros
 
-`first` La posición del primer elemento del intervalo que se va a buscar.
+*primera* la posición del primer elemento del intervalo que se va a buscar.
 
-`last` La posición uno pasado el último elemento del intervalo que se va a buscar.
+*última* la posición situada una posición después del último elemento del intervalo que se va a buscar.
 
-`value` El valor en el intervalo ordenado que es necesario que se supere el valor del elemento direccionado por el iterador devuelto.
+*valor* devuelve el valor en el intervalo ordenado que debe ser superado por el valor del elemento direccionado por el iterador.
 
-`comp` Objeto de función de predicado definido por el usuario que define el sentido en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
+*comp* sentido de objeto de función de predicado definido por el usuario que se define en el que un elemento es menor que otro. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -8369,7 +8369,7 @@ Un intervalo ordenado es una condición previa al uso de `upper_bound`; en él e
 
 Los tipos de valor de los iteradores hacia delante tienen que ser comparables con menor que para poder ordenarse, de modo que, dados dos elementos, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes.
 
-La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcional a (`last - first`).
+La complejidad del algoritmo es logarítmica para los iteradores de acceso aleatorio y lineal en caso contrario, con el número de pasos proporcionales a (`last - first`).
 
 ### <a name="example"></a>Ejemplo
 
