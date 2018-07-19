@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::GetBSTR | Documentos de Microsoft
+title: _bstr_t::GetBSTR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c9903170f62652357264a3ea2de0839496e9e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3041e8a4ece0ddff813b7ef9cd2ccb258e520a82
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409103"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940487"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
 **Específicos de Microsoft**  
@@ -40,10 +40,10 @@ BSTR& GetBSTR( );
  Principio del objeto `BSTR` incluido en `_bstr_t`.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetBSTR` afecta a todos los objetos de `_bstr_t` que comparten `BSTR`. Varios `_bstr_t` pueden compartir `BSTR` mediante el uso del constructor copy y `operator=`.  
+ `GetBSTR` afecta a todos los objetos de `_bstr_t` que comparten `BSTR`. Más de un `_bstr_t` puede compartir un `BSTR` mediante el uso del constructor de copias y y **operador =**.  
   
 ## <a name="example"></a>Ejemplo  
- Vea [_bstr_t:: Assign](../cpp/bstr-t-assign.md) para obtener un ejemplo de uso `GetBSTR`.  
+ Consulte [_bstr_t:: Assign](../cpp/bstr-t-assign.md) para obtener un ejemplo con `GetBSTR`.  
   
  **FIN de Específicos de Microsoft**  
   

@@ -1,5 +1,5 @@
 ---
-title: Funciones con listas de argumentos variables (C++) | Documentos de Microsoft
+title: Funciones con listas de argumentos de Variable (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14bbb56c7ae62bd7ef8c58b45704a4ba809965e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e66ee17f8aa82e46011a78e34baa79b3dea3cdb1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944181"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Listas de funciones con argumentos de Variable (C++)
 Las declaraciones de función en las que el último miembro son los puntos suspensivos (...) pueden tomar un número variable de argumentos. En estos casos, C++ proporciona comprobación de tipos solo para los argumentos declarados explícitamente. Puede utilizar listas de argumentos variables cuando necesite crear una función tan general que incluso el número y los tipos de argumentos puedan variar. La familia de funciones es un ejemplo de las funciones que usan listas de argumentos variables. `printf` *argument-declaration-list*  
   
 ## <a name="functions-with-variable-arguments"></a>Funciones con argumentos variables  
- Para obtener acceso a los argumentos declarados en esas, use las macros incluidas en el archivo de inclusión estándar \<stdarg.h > tal y como se describe a continuación.  
+ Para obtener acceso a los argumentos declarados en esas, use las macros incluidas en el archivo de inclusión estándar \<stdarg.h > como se describe a continuación.  
   
  **Específicos de Microsoft**  
   
@@ -39,13 +40,13 @@ Las declaraciones de función en las que el último miembro son los puntos suspe
   
  La declaración de una función que toma un número variable de argumentos requiere al menos un argumento de marcador de posición, incluso si no se utiliza. Si no se proporciona este argumento de marcador de posición, no existe ninguna forma de obtener acceso a los argumentos restantes.  
   
- Cuando los argumentos de tipo `char` se pasan como argumentos variables, se convierten al tipo `int`. De forma similar, cuando los argumentos de tipo **float** se pasan como argumentos variables, se convierten al tipo **doble**. Los argumentos de otros tipos están sujetos a las promociones habituales de entero y de punto flotante. Vea [conversiones estándar](standard-conversions.md) para obtener más información.  
+ Cuando los argumentos de tipo **char** se pasan como argumentos de variable, se convierten al tipo **int**. De forma similar, cuando los argumentos de tipo **float** se pasan como argumentos de variable, se convierten al tipo **doble**. Los argumentos de otros tipos están sujetos a las promociones habituales de entero y de punto flotante. Consulte [conversiones estándar](standard-conversions.md) para obtener más información.  
   
- Las funciones que requieren listas de variables se declaran con puntos suspensivos (...) en la lista de argumentos. Usar los tipos y macros que se describen en la \<stdarg.h > archivo de inclusión para el acceso a los argumentos que se pasan por una lista de variables. Para obtener más información acerca de estas macros, vea [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). en la documentación de la biblioteca en tiempo de ejecución de C.  
+ Las funciones que requieren listas de variables se declaran con puntos suspensivos (...) en la lista de argumentos. Usar los tipos y macros que se describen en la \<stdarg.h > archivo de inclusión para el acceso a los argumentos que se pasan por una lista de variables. Para obtener más información sobre estas macros, vea [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). en la documentación de la biblioteca en tiempo de ejecución de C.  
   
- En el ejemplo siguiente se muestra cómo funcionan las macros con el tipo (declarado en \<stdarg.h >): 
+ El ejemplo siguiente muestra cómo funcionan las macros junto con el tipo (declarado en \<stdarg.h >): 
   
-```  
+```cpp 
 // variable_argument_lists.cpp  
 #include <stdio.h>  
 #include <stdarg.h>  

@@ -1,5 +1,5 @@
 ---
-title: 'Operadores de adición: + y - | Documentos de Microsoft'
+title: 'Operadores de adición: + y - | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944829"
 ---
 # <a name="additive-operators--and--"></a>Operadores de adición: + y -
 ## <a name="syntax"></a>Sintaxis  
@@ -47,14 +48,14 @@ expression - expression
   
  Los operadores aditivos toman operandos de tipos aritméticos o de puntero. El resultado de la suma (**+**) operador es la suma de los operandos. El resultado de la resta (**-**) operador es la diferencia entre los operandos. Si uno o ambos operandos son punteros, deben ser punteros a objetos, no a funciones. Si ambos operandos son punteros, los resultados no son significativos a menos que ambos sean punteros a objetos de la misma matriz.  
   
- Operadores aditivos toman operandos de *aritméticos*, *integral*, y *escalares* tipos. Se definen en la tabla siguiente.  
+ Operadores aditivos toman operandos de *aritmético*, *integral*, y *escalares* tipos. Se definen en la tabla siguiente.  
   
 ### <a name="types-used-with-additive-operators"></a>Tipos utilizados con operadores de suma  
   
 |Tipo|Significado|  
 |----------|-------------|  
-|*Operaciones aritméticas*|Los tipos enteros y de punto flotante se denominan colectivamente tipos “aritméticos”.|  
-|*entero*|Los tipos char e int de todos los tamaños (long, short) y las enumeraciones son tipos “enteros”.|  
+|*operaciones aritméticas*|Los tipos enteros y de punto flotante se denominan colectivamente tipos “aritméticos”.|  
+|*Entero*|Los tipos char e int de todos los tamaños (long, short) y las enumeraciones son tipos “enteros”.|  
 |*escalar*|Los operandos escalares son operandos de tipo aritmético o puntero.|  
   
  Las combinaciones válidas para estos operadores son:  
@@ -71,11 +72,11 @@ expression - expression
   
  Tenga en cuenta que la suma y resta no son operaciones equivalentes.  
   
- Si ambos operandos son de tipo aritmético, las conversiones descritas en [conversiones estándar](standard-conversions.md) se aplican a los operandos y el resultado es de tipo convertido.  
+ Si ambos operandos son de tipo aritmético, las conversiones descritas en [conversiones estándar](standard-conversions.md) se aplican a los operandos y el resultado es del tipo convertido.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // expre_Additive_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -96,7 +97,7 @@ int main() {
 ## <a name="pointer-addition"></a>Adición de puntero  
  Si uno de los operandos de una operación de suma es un puntero a una matriz de objetos, el otro debe ser de tipo entero. El resultado es un puntero del mismo tipo que el puntero original y que apunta a otro elemento de la matriz. En el siguiente fragmento de código se muestra este concepto:  
   
-```  
+```cpp 
 short IntArray[10]; // Objects of type short occupy 2 bytes  
 short *pIntArray = IntArray;  
   
@@ -114,11 +115,11 @@ for( int i = 0; i < 10; ++i )
 >  El código con la forma `pIntArray = pIntArray + 1` raramente aparece en programas de C++; para realizar un incremento, son preferibles estas formas: `pIntArray++` o `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Resta de puntero  
- Si ambos operandos son punteros, el resultado de la resta es la diferencia (en elementos de matriz) entre los operandos. La expresión de resta produce un resultado entero con signo de tipo ptrdiff_t (definido en el archivo de inclusión estándar \<stddef.h >).  
+ Si ambos operandos son punteros, el resultado de la resta es la diferencia (en elementos de matriz) entre los operandos. La expresión de resta produce un resultado entero con signo de tipo **ptrdiff_t** (definido en el archivo de inclusión estándar \<stddef.h >).  
   
  Uno de los operandos puede ser de tipo entero, siempre y cuando sea el segundo operando. El resultado de la resta es del mismo tipo que el puntero original. El valor de la resta es un puntero a la (*n* - *i*) elemento de la matriz de n, donde *n* es el elemento al que señala el puntero original y *i* es el valor entero del segundo operando.  
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones con operadores binarios](../cpp/expressions-with-binary-operators.md)   
- [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores de adición de C](../c-language/c-additive-operators.md)

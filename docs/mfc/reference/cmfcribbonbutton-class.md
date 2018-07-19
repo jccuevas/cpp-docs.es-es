@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonButton | Documentos de Microsoft
+title: Clase CMFCRibbonButton | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dc6e780ece78bca59a95f8050a36a77656f0ad6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d1da517ef952dd3fcdb0772feedb8e576be9502b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040043"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850025"
 ---
 # <a name="cmfcribbonbutton-class"></a>Clase CMFCRibbonButton
 La clase `CMFCRibbonButton` implementa botones que puede colocar en elementos de barra de cinta como paneles, barras de herramientas de acceso rápido y menús emergentes.  
@@ -262,7 +262,7 @@ void AddSubItem(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pSubItem*  
- Especifica un puntero en el nuevo elemento para agregar.  
+ Especifica un puntero al nuevo elemento para agregar.  
   
  [in] *nIndex*  
  Especifica el índice en el que se va a agregar el elemento a la matriz de elementos de menú del botón; -1 para agregar el elemento al final de la matriz de elementos de menú.  
@@ -331,7 +331,7 @@ CMFCRibbonButton(
  Especifica un índice de base cero de la imagen del botón grande en la lista de imágenes de la categoría primaria.  
   
  [in] *hIcon*  
- Especifica un identificador para el icono de la aplicación que se utiliza como la imagen del botón.  
+ Especifica un identificador para el icono de la aplicación como la imagen del botón.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo construir un `CMFCRibbonButton` objeto.  
@@ -457,10 +457,10 @@ int GetImageIndex(BOOL bLargeImage) const;
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bLargeImage*  
- Si `TRUE`, devuelve el índice de imagen en la lista de imágenes que contiene las imágenes de gran tamaño; en caso contrario, devuelve el índice de imagen en la lista de imágenes que contiene las imágenes pequeñas.  
+ Si es TRUE, devuelve el índice de imagen en la lista de imágenes que contiene las imágenes de gran tamaño. en caso contrario, devuelve el índice de imagen en la lista de imágenes que contiene las imágenes pequeñas.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El índice de la imagen del botón en la lista de imágenes asociada.  
+ El índice de la imagen del botón en la lista de imágenes asociado.  
   
 ##  <a name="getimagesize"></a>  CMFCRibbonButton::GetImageSize  
 
@@ -498,7 +498,7 @@ HMENU GetMenu() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un identificador para un menú de Windows asignado al botón; `NULL` si no hay ningún menú asignado.  
+ Un identificador de un menú de Windows asignado al botón; Es NULL si no hay ningún menú asignado.  
   
 ##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect  
 
@@ -647,14 +647,14 @@ virtual BOOL IsCommandAreaHighlighted() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="isdefaultcommand"></a>  CMFCRibbonButton::IsDefaultCommand  
- Especifica si está habilitado el comando predeterminado de un botón de la cinta de opciones.  
+ Especifica si el comando predeterminado de un botón de la cinta de opciones está habilitado.  
   
 ```  
 BOOL IsDefaultCommand() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si ha habilitado el comando predeterminado de un botón de la cinta de opciones; `FALSE` en caso contrario.  
+ TRUE si ha habilitado el comando predeterminado de un botón de la cinta de opciones; FALSE en caso contrario.  
   
 ##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton  
 
@@ -730,7 +730,7 @@ BOOL IsRightAlignMenu() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el menú está alineado a la derecha; en caso contrario, `FALSE`.  
+ TRUE si el menú está alineado a la derecha; en caso contrario, FALSE.  
   
 ##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText  
 
@@ -823,10 +823,10 @@ BOOL RemoveSubItem(int nIndex);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *nIndex*  
- Especifica el índice de base cero del elemento de menú que se va a quitar.  
+ Especifica el índice de base cero del elemento de menú que desea quitar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el elemento especificado se ha quitado correctamente; en caso contrario, `FALSE` si *nIndex* es negativo o supera el número de elementos de menú en el menú emergente.  
+ TRUE si el elemento especificado se ha quitado correctamente; en caso contrario, FALSE si *nIndex* es negativo o supera el número de elementos de menú en el menú emergente.  
   
 ##  <a name="setaccdata"></a>  Cmfcribbonbutton:: Setaccdata  
  Establece los datos de accesibilidad para el botón de la cinta de opciones.  
@@ -845,7 +845,7 @@ virtual BOOL SetACCData(
  Los datos de accesibilidad para el elemento de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve `TRUE` si es correcto; en caso contrario, FALSE.  
+ Devuelve TRUE si se realiza correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -858,7 +858,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bSet*  
- Si `TRUE`, el botón muestra una imagen grande. En caso contrario, el botón muestra una imagen pequeña.  
+ Si es TRUE, el botón muestra una imagen grande. En caso contrario, el botón muestra una imagen pequeña.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  Habilita el comando predeterminado del botón de la cinta.  
@@ -869,10 +869,10 @@ void SetDefaultCommand(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bSet*  
- Si `TRUE`, el botón puede ejecutar el comando predeterminado. Si `FALSE`, el botón no puede ejecutar el comando predeterminado.  
+ Si es TRUE, el botón puede ejecutar el comando predeterminado. Si es FALSE, el botón no puede ejecutar el comando predeterminado.  
   
 ### <a name="remarks"></a>Comentarios  
- *bSet* es relevante únicamente cuando el botón tiene un menú. Si *bSet* es `TRUE`, el botón puede ejecutar el comando predeterminado y el menú emergente asignado aparece solo cuando un usuario hace clic en la flecha situada en el borde derecho del botón. En caso contrario, el botón no puede ejecutar el comando predeterminado y aparece el menú emergente, independientemente de qué área del botón hace clic el usuario.  
+ *bSet* es relevante únicamente cuando el botón tiene un menú. Si *bSet* es TRUE, el botón puede ejecutar el comando predeterminado y el menú emergente asignado aparece solo cuando un usuario hace clic en la flecha situada en el borde derecho del botón. En caso contrario, el botón no puede ejecutar el comando predeterminado y aparece el menú emergente, independientemente de qué área del botón el usuario hace clic.  
   
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
@@ -900,7 +900,7 @@ void SetImageIndex(
  Especifica el índice de imagen.  
   
  [in] *bLargeImage*  
- Si `TRUE`, el índice especificado hace referencia a la lista de imágenes de gran tamaño. En caso contrario, el índice hace referencia a la lista de las imágenes pequeñas.  
+ Si es TRUE, el índice especificado se refiere a la lista de imágenes de gran tamaño. En caso contrario, el índice hace referencia a la lista de las imágenes más pequeñas.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  Asigna un menú emergente al botón de la cinta.  
@@ -919,19 +919,19 @@ void SetMenu(
   
 ### <a name="parameters"></a>Parámetros  
  *hMenu*  
- Un identificador para un menú de Windows.  
+ Identificador de un menú de Windows.  
   
  *bIsDefaultCommand*  
- Si `TRUE`, el botón puede ejecutar el comando predeterminado; en caso contrario, el botón muestra un menú emergente.  
+ Si es TRUE, el botón puede ejecutar el comando predeterminado; en caso contrario, el botón muestra un menú emergente.  
   
  *bRightAlign*  
- Si `TRUE`, el menú está alineado a la derecha. En caso contrario, el menú está alineado a la izquierda.  
+ Si es TRUE, el menú está alineado a la derecha. En caso contrario, el menú está alineado a la izquierda.  
   
  *uiMenuResID*  
  Un identificador de recurso de menú.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando la aplicación asigna el menú para el botón, el botón muestra una flecha en el lado derecho. Si *bIsDefaultCommand* es `TRUE`, el menú aparece sólo cuando el usuario hace clic en la flecha. Si el usuario hace clic en el botón, se ejecuta el comando predeterminado. Si *bIsDefaultCommand* es `FALSE`, aparece el menú, haga clic en cualquier lugar en el botón.  
+ Cuando la aplicación asigna el menú para el botón, el botón muestra una flecha en su lado derecho. Si *bIsDefaultCommand* es TRUE, el menú aparece solo cuando el usuario hace clic en la flecha. Si el usuario hace clic en el botón, se ejecutará su comando predeterminado. Si *bIsDefaultCommand* es FALSE, el menú que aparece, haga clic en cualquier lugar en el botón.  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
@@ -954,7 +954,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bSet*  
- Si `TRUE`, el menú está alineado a la derecha. En caso contrario, el menú está alineado a la izquierda  
+ Si es TRUE, el menú está alineado a la derecha. En caso contrario, el menú está alineado a la izquierda  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

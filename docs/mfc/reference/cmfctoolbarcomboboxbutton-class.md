@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCToolBarComboBoxButton | Documentos de Microsoft
+title: CMFCToolBarComboBoxButton (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -74,14 +74,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49142f4ad7ea9793bbe533be6430bce929adf9cc
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 24fee4d4a73fb2933b00160879be130f4c33083b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039199"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854062"
 ---
-# <a name="cmfctoolbarcomboboxbutton-class"></a>Clase CMFCToolBarComboBoxButton
+# <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton (clase)
 Un botón de barra de herramientas que contiene un control de cuadro combinado ( [CComboBox (clase)](../../mfc/reference/ccombobox-class.md)).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -103,36 +103,36 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 |Name|Descripción|  
 |----------|-----------------|  
 |[CMFCToolBarComboBoxButton::AddItem](#additem)|Agrega un elemento al final de la lista del cuadro combinado.|  
-|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Agrega un elemento a la lista del cuadro combinado. El orden de los elementos de la lista se especifica por `Compare`.|  
-|[CMFCToolBarComboBoxButton::Compare](#compare)|Compara dos elementos. Llamado ordenar los elementos que `AddSortedItems` agrega a la lista del cuadro combinado.|  
+|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Agrega un elemento a la lista del cuadro combinado. Se especifica el orden de los elementos de la lista por `Compare`.|  
+|[CMFCToolBarComboBoxButton::Compare](#compare)|Compara dos elementos. Llamado para ordenar los elementos que `AddSortedItems` agrega a la lista del cuadro combinado.|  
 |[CMFCToolBarComboBoxButton::CreateEdit](#createedit)|Crea un nuevo control de edición para el botón de cuadro combinado.|  
 |[CMFCToolBarComboBoxButton::DeleteItem](#deleteitem)|Elimina un elemento de la lista del cuadro combinado.|  
 |[CMFCToolBarComboBoxButton::FindItem](#finditem)|Devuelve el índice del elemento que contiene una cadena especificada.|  
 |[CMFCToolBarComboBoxButton::GetByCmd](#getbycmd)|Devuelve un puntero al botón de cuadro combinado con un identificador de comando especificado.|  
-|[CMFCToolBarComboBoxButton::GetComboBox](#getcombobox)|Devuelve un puntero para el control de cuadro combinado que está incrustado en el botón de cuadro combinado.|  
+|[CMFCToolBarComboBoxButton::GetComboBox](#getcombobox)|Devuelve un puntero al control de cuadro combinado que está incrustado en el botón de cuadro combinado.|  
 |[CMFCToolBarComboBoxButton::GetCount](#getcount)|Devuelve al número de elementos en el cuadro combinado de lista del cuadro.|  
 |[CMFCToolBarComboBoxButton::GetCountAll](#getcountall)|Busca al cuadro combinado del botón de cuadro que tiene un identificador de comando especificado. Devuelve al número de elementos en el cuadro combinado de lista del cuadro de ese botón.|  
 |[CMFCToolBarComboBoxButton::GetCurSel](#getcursel)|Devuelve el índice del elemento seleccionado en el cuadro combinado de lista del cuadro.|  
-|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|Busca al cuadro combinado del botón de cuadro que tiene un identificador de comando especificado y devuelve el índice del elemento seleccionado en el cuadro combinado de lista del cuadro de ese botón.|  
-|[CMFCToolBarComboBoxButton::GetEditCtrl](#geteditctrl)|Devuelve un puntero para el control de edición que está incrustado en el botón de cuadro combinado.|  
+|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|Busca al cuadro combinado del botón del cuadro que tiene un identificador de comando especificado y devuelve el índice del elemento seleccionado en el cuadro combinado de lista del cuadro de ese botón.|  
+|[CMFCToolBarComboBoxButton::GetEditCtrl](#geteditctrl)|Devuelve un puntero al control de edición que está incrustado en el botón de cuadro combinado.|  
 |[CMFCToolBarComboBoxButton::GetItem](#getitem)|Devuelve la cadena que está asociada con un índice especificado en el cuadro combinado de lista del cuadro.|  
-|[CMFCToolBarComboBoxButton::GetItemAll](#getitemall)|Busca al cuadro combinado del botón de cuadro que tiene un identificador de comando especificado y devuelve la cadena que está asociada con un índice en la lista del cuadro combinado de ese botón.|  
+|[CMFCToolBarComboBoxButton::GetItemAll](#getitemall)|Busca al cuadro combinado del botón del cuadro que tiene un identificador de comando especificado y devuelve la cadena que está asociada con un índice en la lista del cuadro combinado de ese botón.|  
 |[CMFCToolBarComboBoxButton::GetItemData](#getitemdata)|Devuelve el valor de 32 bits que está asociado con un índice especificado en el cuadro combinado de lista del cuadro.|  
-|[CMFCToolBarComboBoxButton::GetItemDataAll](#getitemdataall)|Busca al cuadro combinado del botón de cuadro que tiene un identificador de comando especificado y devuelve el valor de 32 bits que está asociado con un índice en la lista del cuadro combinado de ese botón.|  
+|[CMFCToolBarComboBoxButton::GetItemDataAll](#getitemdataall)|Busca al cuadro combinado del botón del cuadro que tiene un identificador de comando especificado y devuelve el valor de 32 bits que está asociado con un índice en la lista del cuadro combinado de ese botón.|  
 |[CMFCToolBarComboBoxButton::GetItemDataPtrAll](#getitemdataptrall)|Busca al cuadro combinado del botón de cuadro que tiene un identificador de comando especificado. Recupera el valor de 32 bits que está asociado un índice en la lista del cuadro combinado de ese botón y devuelve un valor de 32 bits como un puntero.|  
-|[CMFCToolBarComboBoxButton::GetText](#gettext)|Devuelve el texto que contiene el control de edición del cuadro combinado.|  
-|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|Busca al cuadro combinado del botón de cuadro que tiene un identificador de comando especificado y devuelve el texto del control de edición de ese botón.|  
-|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|Determina si los botones del cuadro combinado en la aplicación se centrado o alineados con la parte superior de la barra de herramientas.|  
-|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|Determina si los botones del cuadro combinado en la aplicación tienen un aspecto sin relieve.|  
+|[CMFCToolBarComboBoxButton::GetText](#gettext)|Devuelve el texto desde el control de edición del cuadro combinado.|  
+|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|Busca al cuadro combinado del botón del cuadro que tiene un identificador de comando especificado y devuelve el texto del control de edición de ese botón.|  
+|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|Determina si los botones de cuadro combinado de la aplicación se centrado o alineados con la parte superior de la barra de herramientas.|  
+|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|Determina si los botones de cuadro combinado de la aplicación tienen un aspecto sin relieve.|  
 |[CMFCToolBarComboBoxButton::RemoveAllItems](#removeallitems)|Quita todos los elementos de la lista cuadro y control del cuadro combinado de edición.|  
 |[CMFCToolBarComboBoxButton::SelectItem](#selectitem)|Selecciona un elemento en el cuadro combinado según su índice, el valor de 32 bits o la cadena y notifica al control de cuadro combinado acerca de la selección.|  
-|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|Busca al cuadro combinado del botón de cuadro que tiene un identificador de comando especificado. Llamadas `SelectItem` para seleccionar un elemento en el cuadro combinado de ese botón según su cadena, un índice o un valor de 32 bits.|  
-|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|Especifica si los botones del cuadro combinado en la aplicación se debe centrar verticalmente o alineados con la parte superior de la barra de herramientas.|  
+|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|Busca al cuadro combinado del botón de cuadro que tiene un identificador de comando especificado. Las llamadas `SelectItem` para seleccionar un elemento en el cuadro combinado de ese botón según su cadena, el índice o el valor de 32 bits.|  
+|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|Especifica si los botones de cuadro combinado de la aplicación son centrados verticalmente o alineados con la parte superior de la barra de herramientas.|  
 |[CMFCToolBarComboBoxButton::SetDropDownHeight](#setdropdownheight)|Establece el alto del cuadro de lista desplegable.|  
-|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|Especifica si los botones del cuadro combinado en la aplicación tienen un aspecto sin relieve.|  
+|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|Especifica si los botones de cuadro combinado de la aplicación tienen un aspecto sin relieve.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para agregar un botón del cuadro combinado a una barra de herramientas, siga estos pasos:  
+ Para agregar un botón de cuadro combinado a una barra de herramientas, siga estos pasos:  
   
  1. Reserve un id. de recurso ficticio para el botón en el recurso primario de la barra de herramientas.  
   
@@ -140,10 +140,10 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
  3. En el controlador de mensajes que procesa el mensaje AFX_WM_RESETTOOLBAR, reemplazar el botón ficticio con el nuevo botón de cuadro combinado mediante [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
- Para obtener más información, consulte [Tutorial: poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obtener un ejemplo de un botón de barra de herramientas del cuadro combinado, vea el proyecto de ejemplo VisualStudioDemo.  
+ Para obtener más información, consulte [Tutorial: poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obtener un ejemplo de un botón de barra de herramientas del cuadro combinado, consulte el proyecto de ejemplo VisualStudioDemo.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar varios métodos en la `CMFCToolBarComboBoxButton` clase. En el ejemplo se muestra cómo habilitar los cuadros de edición y combinado, establecer la posición vertical combinado de botones del cuadro de la aplicación, establezca la altura del cuadro de lista cuando se coloca, establecer el aspecto de estilo plano de botones del cuadro combinado en la aplicación y establecer el texto en el cuadro de edición del cuadro combinado del botón del cuadro. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCToolBarComboBoxButton` clase. El ejemplo muestra cómo habilitar los cuadros de edición y combinado, establezca la posición vertical combinado de botones del cuadro en la aplicación, establezca la altura del cuadro de lista cuando se coloca, establecer la apariencia de estilo plano de botones del cuadro combinado en la aplicación y establecer el texto en el cuadro de edición de la combinación de botón de cuadro. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]  
@@ -169,21 +169,21 @@ virtual INT_PTR AddItem(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *lpszItem*  
- El texto del elemento que se va a agregar al cuadro de lista.  
+ Texto del elemento que se agrega al cuadro de lista.  
   
  [in] *dwData*  
- Los datos asociados con el elemento que se agrega al cuadro de lista.  
+ Los datos asociados con el elemento que se va a agregar al cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El índice del último elemento en el cuadro de lista.  
+ El índice del último elemento del cuadro de lista.  
   
 ### <a name="remarks"></a>Comentarios  
- No utilice este método cuando el estilo de cuadro de lista está ordenado.  
+ No utilice este método cuando el estilo del cuadro de lista está ordenado.  
   
- Si el texto del elemento ya está en el cuadro de lista, los nuevos datos se almacenan con el elemento de trabajo. La búsqueda del elemento distingue entre mayúsculas y minúsculas.  
+ Si el texto del elemento ya está en el cuadro de lista, los nuevos datos se almacenan con el elemento existente. La búsqueda del elemento distingue mayúsculas de minúsculas.  
   
 ##  <a name="addsorteditem"></a>  CMFCToolBarComboBoxButton::AddSortedItem  
- Agrega un elemento al cuadro de lista en el orden en que se define mediante la [comparar](#compare) método.  
+ Agrega un elemento al cuadro de lista en el orden en que se define mediante el [comparar](#compare) método.  
   
 ```  
 virtual INT_PTR AddSortedItem(
@@ -193,10 +193,10 @@ virtual INT_PTR AddSortedItem(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *lpszItem*  
- El texto del elemento que se va a agregar al cuadro de lista.  
+ Texto del elemento que se agrega al cuadro de lista.  
   
  [in] *dwData*  
- Los datos asociados con el elemento que se agrega al cuadro de lista.  
+ Los datos asociados con el elemento que se va a agregar al cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice del elemento que se ha agregado al cuadro de lista.  
@@ -212,7 +212,7 @@ virtual BOOL CanBeStretched() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve `TRUE`.  
+ Devuelve TRUE.  
   
 ##  <a name="cmfctoolbarcomboboxbutton"></a>  CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
  Construye un [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objeto.  
@@ -227,21 +227,21 @@ CMFCToolBarComboBoxButton(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *uiID*  
- El identificador de comando del botón nuevo.  
+ El identificador de comando del botón nueva.  
   
  [in] *iImage*  
  El índice de imagen de la imagen asociada con el botón nuevo.  
   
  [in] *dwStyle*  
- El estilo del botón nuevo.  
+ El estilo del botón nueva.  
   
  [in] *iWidth*  
- El ancho, en píxeles, del botón nuevo.  
+ El ancho, en píxeles, del botón nueva.  
   
 ### <a name="remarks"></a>Comentarios  
  El ancho predeterminado es 150 píxeles.  
   
- Para obtener una lista de estilos de botón de barra de herramientas Ver [estilos de Control de barra de herramientas](../../mfc/reference/toolbar-control-styles.md)  
+ Para obtener una lista de estilos de botón de barra de herramientas vea [estilos de Control ToolBar](../../mfc/reference/toolbar-control-styles.md)  
   
 ##  <a name="cleardata"></a>  CMFCToolBarComboBoxButton::ClearData  
  Elimina los datos definidos por el usuario.  
@@ -251,7 +251,7 @@ virtual void ClearData();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- De forma predeterminada este método no hace nada. Invalide este método en una clase derivada si desea eliminar los datos definidos por el usuario.  
+ De forma predeterminada, este método no hace nada. Invalide este método en una clase derivada si desea eliminar todos los datos definidos por el usuario.  
   
 ##  <a name="compare"></a>  CMFCToolBarComboBoxButton::Compare  
  Compara dos cadenas.  
@@ -283,7 +283,7 @@ virtual int Compare(
   
  La comparación distingue entre mayúsculas y minúsculas.  
   
- Este método solo se llama desde el [AddSortedItem](#addsorteditem) método.  
+ Este método se llama solo desde el [AddSortedItem](#addsorteditem) método.  
   
 ##  <a name="copyfrom"></a>  CMFCToolBarComboBoxButton::CopyFrom  
  Copia el estado del elemento especificado `CMFCToolBarComboBoxButton` al objeto actual.  
@@ -293,7 +293,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `src`  
+ [in] *src*  
  Objeto `CMFCToolBarComboBoxButton` de origen.  
   
 ##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
@@ -313,7 +313,7 @@ virtual CComboBox* CreateCombo(
  Rectángulo delimitador del cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al cuadro combinado nuevo si el método se realizó correctamente; en caso contrario, `NULL`.  
+ Un puntero al cuadro combinado nuevo si el método se realizó correctamente; en caso contrario, es NULL.  
   
 ##  <a name="createedit"></a>  CMFCToolBarComboBoxButton::CreateEdit  
  Crea un nuevo cuadro de edición para el botón de cuadro combinado.  
@@ -333,13 +333,13 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
  Rectángulo delimitador del nuevo cuadro de edición.  
   
  [in] *dwEditStyle*  
- Estilo del control del cuadro de edición nueva.  
+ Estilo de control del nuevo cuadro de edición.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al nuevo cuadro de edición si el método se realizó correctamente; en caso contrario, `NULL`.  
+ Un puntero para el nuevo cuadro de edición si el método se realizó correctamente; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método cuando crea un nuevo cuadro de edición para un botón del cuadro combinado. Invalide este método para cambiar cómo [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) se crea.  
+ El marco llama a este método cuando crea un nuevo cuadro de edición para un botón de cuadro combinado. Invalide este método para cambiar cómo [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) se crea.  
   
 ##  <a name="deleteitem"></a>  CMFCToolBarComboBoxButton::DeleteItem  
  Elimina un elemento especificado en el cuadro de lista.  
@@ -361,19 +361,19 @@ BOOL DeleteItem(DWORD_PTR dwData);
  El texto del elemento que se va a eliminar. Si hay varios elementos con el mismo texto, se elimina el primer elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el elemento se encuentra y se eliminó correctamente; en caso contrario, `FALSE`.  
+ TRUE si el elemento se encuentra y se eliminó correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="duplicatedata"></a>  CMFCToolBarComboBoxButton::DuplicateData  
- Datos definidos por el usuario de duplicados.  
+ Datos definidos por el usuario de los duplicados.  
   
 ```  
 virtual void DuplicateData();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- De forma predeterminada este método no hace nada. Invalide este método en una clase derivada si van a copiar los datos definidos por el usuario.  
+ De forma predeterminada, este método no hace nada. Invalide este método en una clase derivada si van a copiar los datos definidos por el usuario.  
   
 ##  <a name="enablewindow"></a>  CMFCToolBarComboBoxButton::EnableWindow  
  Habilita o deshabilita los cuadros de edición y combinado.  
@@ -384,13 +384,13 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bHabilitar el*  
- `TRUE` Para habilitar los cuadros de edición y combinados; `FALSE` para deshabilitar los cuadros de edición y combinado.  
+ TRUE para permitir que los cuadros de edición y combinado. FALSE para deshabilitar los cuadros de edición y combinado.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando está deshabilitado, los controles no se activan y no pueden aceptar la entrada del usuario.  
+ Cuando está deshabilitado, los controles no se ha convertido en activos y no pueden aceptar la entrada del usuario.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarComboBoxButton::ExportToMenuButton  
- Identificador de una cadena a partir de la tabla de cadenas de la aplicación en el menú especificado con el comando de botón de cuadro combinado de copias.  
+ Identificador de una cadena a partir de la tabla de cadenas de la aplicación en el menú especificado mediante el comando de botón de cuadro combinado de copias.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
@@ -401,7 +401,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
  Referencia a un botón de menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Siempre es `TRUE`.  
+ Siempre es TRUE.  
   
 ##  <a name="finditem"></a>  CMFCToolBarComboBoxButton::FindItem  
  Devuelve el índice del primer elemento en el cuadro de lista que contiene una cadena especificada.  
@@ -412,10 +412,10 @@ int FindItem(LPCTSTR lpszText) const;
   
 ### <a name="parameters"></a>Parámetros  
  [in] *lpszText*  
- El texto que se busca en el cuadro de lista.  
+ El texto que se va a buscar en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El índice del elemento; o `CB_ERR` si no se encuentra el elemento.  
+ El índice del elemento; o CB_ERR si no se encuentra el elemento.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -430,25 +430,25 @@ static CMFCToolBarComboBoxButton* GetByCmd(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *uiCmd*  
- El identificador de comando de un botón del cuadro combinado.  
+ El identificador de comando de un botón de cuadro combinado.  
   
  [in] *bIsFocus*  
- `TRUE` para buscar sólo centrado botones; `FALSE` para buscar todos los botones.  
+ True para buscar solo centrado botones; FALSE para buscar todos los botones.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a un botón del cuadro combinado; o `NULL` si no se encuentra el botón.  
+ Un puntero a un botón de cuadro combinado; o NULL si no se encuentra el botón.  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="getcombobox"></a>  CMFCToolBarComboBoxButton::GetComboBox  
- Devuelve un puntero al cuadro combinado en el cuadro combinado del botón del cuadro.  
+ Devuelve un puntero al cuadro combinado en el cuadro combinado del botón de cuadro.  
   
 ```  
 CComboBox* GetComboBox() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la [CComboBox (clase)](../../mfc/reference/ccombobox-class.md) objeto si el método es correcto; en caso contrario `NULL`.  
+ Un puntero a la [CComboBox (clase)](../../mfc/reference/ccombobox-class.md) objeto si el método tuvo éxito; de lo contrario, NULL.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -483,10 +483,10 @@ static int GetCountAll(UINT uiCmd);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *uiCmd*  
- El identificador de comando de un botón del cuadro combinado.  
+ El identificador de comando de un botón de cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El número de elementos en el cuadro de lista; en caso contrario, `CB_ERR` si no se encuentra el botón del cuadro combinado.  
+ El número de elementos en el cuadro de lista. en caso contrario, no se encuentra CB_ERR si el cuadro combinado del botón de cuadro.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -498,13 +498,13 @@ int GetCurSel() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El índice del elemento actualmente seleccionado en el cuadro de lista; o `CB_ERR` si se selecciona ningún elemento.  
+ El índice del elemento actualmente seleccionado en el cuadro de lista. o CB_ERR si se selecciona ningún elemento.  
   
 ### <a name="remarks"></a>Comentarios  
  El índice del cuadro de lista está basado en cero.  
   
 ##  <a name="getcurselall"></a>  CMFCToolBarComboBoxButton::GetCurSelAll  
- Devuelve el índice del elemento actualmente seleccionado en el cuadro de lista de un combinado botón del cuadro que tiene un identificador de comando especificado.  
+ Devuelve el índice del elemento actualmente seleccionado en el cuadro de lista de un cuadro combinado de botón del cuadro que tiene un identificador de comando especificado.  
   
 ```  
 static int GetCurSelAll(UINT uiCmd);
@@ -512,35 +512,35 @@ static int GetCurSelAll(UINT uiCmd);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *uiCmd*  
- El identificador de comando de un botón del cuadro combinado.  
+ El identificador de comando de un botón de cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El índice del elemento actualmente seleccionado en el cuadro de lista; en caso contrario, `CB_ERR` si se selecciona ningún elemento o no se encuentra un botón del cuadro combinado.  
+ El índice del elemento actualmente seleccionado en el cuadro de lista. en caso contrario, no se encuentra CB_ERR si se selecciona ningún elemento o un botón de cuadro combinado.  
   
 ### <a name="remarks"></a>Comentarios  
  El índice del cuadro de lista está basado en cero.  
   
 ##  <a name="geteditctrl"></a>  CMFCToolBarComboBoxButton::GetEditCtrl  
- Devuelve un puntero al cuadro de edición en el cuadro combinado del botón del cuadro.  
+ Devuelve un puntero al cuadro de edición en el cuadro combinado del botón de cuadro.  
   
 ```  
 virtual CEdit* GetEditCtrl();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al cuadro de edición si el método se realizó correctamente; en caso contrario, `NULL`.  
+ Un puntero en el cuadro de edición si el método se realizó correctamente; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="gethwnd"></a>  CMFCToolBarComboBoxButton::GetHwnd  
- Devuelve el identificador de ventana para el cuadro combinado.  
+ Devuelve el identificador de ventana del cuadro combinado.  
   
 ```  
 virtual HWND GetHwnd();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El identificador de ventana o `NULL` si el cuadro combinado no está asociado a un objeto de ventana.  
+ El identificador de ventana, o NULL si el cuadro combinado no está asociado con un objeto de ventana.  
   
 ##  <a name="getitem"></a>  CMFCToolBarComboBoxButton::GetItem  
  Devuelve la cadena asociada a un elemento en el índice especificado en el cuadro de lista.  
@@ -554,7 +554,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
  Índice de base cero de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la cadena que está asociado con el elemento; en caso contrario, `NULL` si el parámetro de índice no es válido, o si el parámetro de índice es -1 y no hay ningún elemento seleccionado en el cuadro combinado.  
+ Un puntero a la cadena que está asociado con el elemento; de lo contrario, NULL si el parámetro de índice no es válido, o si el parámetro de índice es -1 y no hay ningún elemento seleccionado en el cuadro combinado.  
   
 ### <a name="remarks"></a>Comentarios  
  Un parámetro de índice de -1 devuelve la cadena del elemento que está seleccionado actualmente.  
@@ -570,19 +570,19 @@ static LPCTSTR GetItemAll(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *uiCmd*  
- El identificador de comando de un botón del cuadro combinado.  
+ El identificador de comando de un botón de cuadro combinado.  
   
  [in] *iÍndice*  
  Índice de base cero de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la cadena del elemento si el método se realizó correctamente; en caso contrario, `NULL` si el índice no es válido, no es un botón del cuadro combinado se encuentra, o si el índice es -1 y no hay ningún elemento seleccionado en el cuadro combinado.  
+ Un puntero a la cadena del elemento si el método se realizó correctamente; de lo contrario, NULL si el índice no es válido, no se encuentra un botón de cuadro combinado, o si el índice es -1 y no hay ningún elemento seleccionado en el cuadro combinado.  
   
 ### <a name="remarks"></a>Comentarios  
  Un valor de índice de -1 devuelve la cadena del elemento que está seleccionado actualmente.  
   
 ##  <a name="getitemdata"></a>  CMFCToolBarComboBoxButton::GetItemData  
- Devuelve los datos asociados a un elemento en un índice específico en el cuadro de lista.  
+ Devuelve los datos asociados con un elemento en un índice específico en el cuadro de lista.  
   
 ```  
 DWORD_PTR GetItemData(int iIndex=-1) const;  
@@ -596,10 +596,10 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
  Los datos asociados con el elemento; o bien 0 si el elemento no existe.  
   
 ### <a name="remarks"></a>Comentarios  
- Un parámetro de índice de -1 devuelve los datos asociados con el elemento actualmente seleccionado.  
+ Un parámetro de índice de -1 devuelve los datos asociados con el elemento seleccionado actualmente.  
   
 ##  <a name="getitemdataall"></a>  CMFCToolBarComboBoxButton::GetItemDataAll  
- Devuelve los datos asociados a un elemento en un índice específico en el cuadro de lista de un botón de cuadro combinado que tiene un identificador de comando concreto.  
+ Devuelve los datos asociados con un elemento en un índice específico en el cuadro de lista de un botón de cuadro combinado que tiene un identificador de comando específico.  
   
 ```  
 static DWORD_PTR GetItemDataAll(
@@ -609,19 +609,19 @@ static DWORD_PTR GetItemDataAll(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *uiCmd*  
- El identificador de comando de un botón del cuadro combinado.  
+ El identificador de comando de un botón de cuadro combinado.  
   
  [in] *iÍndice*  
  Índice de base cero de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Los datos asociados con el elemento si el método se realizó correctamente; en caso contrario, 0 si el índice especificado no es válido o no se encuentra CB_ERR si el cuadro combinado del cuadro de botón.  
+ Los datos asociados con el elemento si el método se realizó correctamente; en caso contrario, 0 si el índice especificado no es válido o no se encuentra CB_ERR si el cuadro combinado del botón de cuadro.  
   
 ### <a name="remarks"></a>Comentarios  
- Un parámetro de índice de -1 devuelve los datos asociados con el elemento actualmente seleccionado.  
+ Un parámetro de índice de -1 devuelve los datos asociados con el elemento seleccionado actualmente.  
   
 ##  <a name="getitemdataptrall"></a>  CMFCToolBarComboBoxButton::GetItemDataPtrAll  
- Devuelve los datos asociados a un elemento en un índice específico en el cuadro de lista de un botón de cuadro combinado que tiene un identificador de comando concreto. Estos datos se devuelven como un puntero.  
+ Devuelve los datos asociados con un elemento en un índice específico en el cuadro de lista de un botón de cuadro combinado que tiene un identificador de comando específico. Estos datos se devuelven como un puntero.  
   
 ```  
 static void* GetItemDataPtrAll(
@@ -637,12 +637,12 @@ static void* GetItemDataPtrAll(
  Índice de base cero de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero asociado con el elemento si el método se realizó correctamente; en caso contrario, -1 si se produce un error, o `NULL` si no se encuentra el botón del cuadro combinado.  
+ Un puntero asociado al elemento si el método se realizó correctamente; en caso contrario,-1 si un error se produce, o NULL si el cuadro combinado del cuadro botón no se encuentra.  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="getprompt"></a>  CMFCToolBarComboBoxButton::GetPrompt  
- Devuelve la cadena de mensaje para el cuadro combinado del botón del cuadro.  
+ Devuelve la cadena del mensaje para el cuadro combinado del botón del cuadro.  
   
 ```  
 virtual CString GetPrompt() const;  
@@ -652,7 +652,7 @@ virtual CString GetPrompt() const;
  La cadena del mensaje.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método no está implementado actualmente.  
+ Este método no está implementada actualmente.  
   
 ##  <a name="gettext"></a>  CMFCToolBarComboBoxButton::GetText  
  Obtiene el texto en el cuadro de edición.  
@@ -678,7 +678,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
  El identificador de comando de un botón de cuadro combinado específico.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El texto en el cuadro de edición si el método se realizó correctamente; en caso contrario, `NULL`.  
+ El texto en el cuadro de edición si el método se realizó correctamente; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -690,38 +690,38 @@ virtual BOOL HasFocus() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el cuadro combinado tiene actualmente el foco; en caso contrario, `FALSE`.  
+ TRUE si el cuadro combinado tiene actualmente el foco; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método también devuelve `TRUE` si cualquier ventana secundaria de un cuadro combinado tiene actualmente el foco.  
+ Este método también devuelve TRUE si cualquier ventana secundaria del cuadro combinado tiene actualmente el foco.  
   
 ##  <a name="iscentervert"></a>  CMFCToolBarComboBoxButton::IsCenterVert  
- Devuelve la posición vertical de botones del cuadro combinado en la aplicación.  
+ Devuelve la posición vertical de los botones del cuadro combinado en la aplicación.  
   
 ```  
 static BOOL IsCenterVert();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si los botones se centran; `FALSE` si se alinean los botones en la parte superior.  
+ TRUE si los botones se centran; FALSE si se alinean los botones en la parte superior.  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="isflatmode"></a>  CMFCToolBarComboBoxButton::IsFlatMode  
- Devuelve la apariencia de estilo plano de botones del cuadro combinado de la aplicación.  
+ Devuelve la apariencia de estilo plano de los botones del cuadro combinado en la aplicación.  
   
 ```  
 static BOOL IsFlatMode();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si los botones tienen un estilo plano; en caso contrario, `FALSE`.  
+ TRUE si los botones tienen un estilo plano; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Es el estilo plano predeterminado de botones del cuadro combinado `FALSE.`  
+ El estilo plano de forma predeterminada para los botones de cuadro combinado es FALSE.  
   
 ##  <a name="isownerof"></a>  CMFCToolBarComboBoxButton::IsOwnerOf  
- Indica si el identificador especificado está asociado con el botón del cuadro combinado, o uno de sus elementos secundarios.  
+ Indica si el identificador especificado está asociado con el botón de cuadro combinado, o uno de sus elementos secundarios.  
   
 ```  
 virtual BOOL IsOwnerOf(HWND hwnd);
@@ -732,23 +732,23 @@ virtual BOOL IsOwnerOf(HWND hwnd);
  Un identificador de ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el identificador está asociado con el botón del cuadro combinado, o uno de sus elementos secundarios; en caso contrario, `FALSE`.  
+ TRUE si el identificador está asociado con el botón de cuadro combinado, o uno de sus elementos secundarios; en caso contrario, FALSE.  
   
 ##  <a name="isribbonbutton"></a>  CMFCToolBarComboBoxButton::IsRibbonButton  
- Indica si el botón de cuadro combinado reside en un panel de cinta de opciones.  
+ Indica si el botón de cuadro combinado se encuentra en un panel de cinta de opciones.  
   
 ```  
 BOOL IsRibbonButton() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Siempre es `FALSE`.  
+ Siempre es FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- De forma predeterminada, este método devuelve siempre `FALSE`, lo que no significa que el cuadro combinado del botón del cuadro nunca se muestra en un panel de cinta de opciones.  
+ De forma predeterminada, este método siempre devuelve FALSE, lo que significa que nunca se muestra el botón de cuadro combinado en un panel de cinta de opciones.  
   
 ##  <a name="iswindowvisible"></a>  CMFCToolBarComboBoxButton::IsWindowVisible  
- Devuelve el estado de visibilidad del cuadro combinado del botón del cuadro.  
+ Devuelve el estado de visibilidad de la combinación de botón de cuadro.  
   
 ```  
 virtual BOOL IsWindowVisible();
@@ -796,7 +796,7 @@ virtual SIZE OnCalculateSize(
  El tamaño predeterminado del botón de cuadro combinado.  
   
  [in] *bHorz*  
- El estado de acoplamiento de la barra de herramientas primario. `TRUE` Cuando la barra de herramientas está acoplado horizontalmente y `FALSE` cuando se acopla la barra de herramientas verticalmente.  
+ El estado de acoplamiento de la barra de herramientas primario. Es TRUE cuando la barra de herramientas está acoplado horizontalmente y FALSE cuando la barra de herramientas está acoplada verticalmente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un `SIZE` estructura que contiene las dimensiones del botón de cuadro combinado, en píxeles.  
@@ -822,17 +822,17 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
- Puntero a la ventana principal del botón de cuadro combinado.  
+ [in] *conquistado*  
+ Puntero a la ventana primaria del botón de cuadro combinado.  
   
  [in] *bDelay*  
  Reservado para uso en una clase derivada.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el método controla el evento; en caso contrario, `FALSE`.  
+ TRUE si el método controla el evento; en caso contrario, FALSE.  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarComboBoxButton::OnCtlColor  
- Lo llama el marco cuando el usuario cambia el color de la barra de herramientas principal para establecer al cuadro combinado del color del botón de cuadro.  
+ Lo llama el marco cuando el usuario cambia el color de la barra de herramientas principal para establecer el color de botón de cuadro combinado.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -854,7 +854,7 @@ virtual HBRUSH OnCtlColor(
  Este método también establece el color de texto del botón de cuadro combinado.  
   
 ##  <a name="ondraw"></a>  CMFCToolBarComboBoxButton::OnDraw  
- Lo llama el marco de trabajo para dibujar el botón de cuadro combinado con los estilos especificados y las opciones.  
+ Lo llama el marco de trabajo para dibujar el botón de cuadro combinado mediante el uso de las opciones y estilos especificados.  
   
 ```  
 virtual void OnDraw(
@@ -879,7 +879,7 @@ virtual void OnDraw(
  La colección de imágenes que está asociada con el botón.  
   
  [in] *bHorz*  
- El estado de acoplamiento de la barra de herramientas primario. `TRUE` Cuando la barra de herramientas está acoplado horizontalmente y `FALSE` cuando se acopla la barra de herramientas verticalmente.  
+ El estado de acoplamiento de la barra de herramientas primario. Es TRUE cuando la barra de herramientas está acoplado horizontalmente y FALSE cuando la barra de herramientas está acoplada verticalmente.  
   
  [in] *bCustomizeMode*  
  Si la aplicación está en modo de personalización.  
@@ -891,10 +891,10 @@ virtual void OnDraw(
  Si se va a dibujar el botón de cuadro combinado con un borde.  
   
  [in] *bGrayDisabledButtons*  
- `TRUE` para dibujar los botones deshabilitados sombreados; `FALSE` usar el deshabilitado imágenes de colección.  
+ True para dibujar el sombreado los botones deshabilitados; FALSE para usar la colección de imágenes deshabilitado.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
- Lo llama el marco para dibujar el botón de cuadro combinado el **comandos** panel de la **personalizar** cuadro de diálogo.  
+ Lo llama el marco de trabajo para dibujar el botón de cuadro combinado el **comandos** panel de la **personalizar** cuadro de diálogo.  
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -911,13 +911,13 @@ virtual int OnDrawOnCustomizeList(
  El rectángulo delimitador del botón de cuadro combinado.  
   
  [in] *bSelected*  
- `TRUE` Si el cuadro combinado del cuadro botón está seleccionado; en caso contrario, `FALSE`.  
+ TRUE si se selecciona el botón de cuadro combinado; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El ancho, en píxeles, del botón de cuadro combinado.  
   
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
- Lo llama el marco para establecer al cuadro combinado de fuente del cuadro de botón cuando cambia la fuente de la aplicación.  
+ Lo llama el marco de trabajo para establecer al cuadro combinado de fuente del cuadro de botón cuando cambia la fuente de la aplicación.  
   
 ```  
 virtual void OnGlobalFontsChanged();
@@ -931,7 +931,7 @@ virtual void OnMove();
 ```  
   
 ##  <a name="onshow"></a>  CMFCToolBarComboBoxButton::OnShow  
- Lo llama el marco de trabajo cuando se oculta o se muestra el botón de cuadro combinado.  
+ Lo llama el marco de trabajo cuando se oculta o muestra el botón de cuadro combinado.  
   
 ```  
 virtual void OnShow(BOOL bShow);
@@ -942,7 +942,7 @@ virtual void OnShow(BOOL bShow);
  Si desea ocultar o mostrar el botón de cuadro combinado.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
- Lo llama el marco para cambiar el tamaño del botón de cuadro combinado cuando la barra de herramientas primario cambia de tamaño.  
+ Lo llama el marco de trabajo para cambiar el tamaño del botón de cuadro combinado cuando cambia el tamaño de la barra de herramientas primario.  
   
 ```  
 virtual void OnSize(int iSize);
@@ -950,7 +950,7 @@ virtual void OnSize(int iSize);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *iSize*  
- El nuevo ancho del botón de cuadro combinado.  
+ Nuevo ancho del botón de cuadro combinado.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
  Lo llama el marco cuando el usuario cambia la información sobre herramientas para el botón de cuadro combinado.  
@@ -971,13 +971,13 @@ virtual BOOL OnUpdateToolTip(
  Id. del botón de cuadro combinado.  
   
  [in] *wndToolTip*  
- La información sobre las herramientas para asociar con el botón de cuadro combinado.  
+ Herramientas para asociar con el botón de cuadro combinado.  
   
  [in] *str*  
- El texto de información sobre herramientas.  
+ El texto de sugerencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el método controla el evento; en caso contrario, `FALSE`.  
+ TRUE si el método controla el evento; en caso contrario, FALSE.  
   
 ##  <a name="removeallitems"></a>  CMFCToolBarComboBoxButton::RemoveAllItems  
  Elimina todos los elementos de los cuadros de lista y edición.  
@@ -1006,7 +1006,7 @@ BOOL SelectItem(LPCTSTR lpszText);
  Índice de base cero de un elemento en el cuadro de lista.  
   
  [in] *bNotify*  
- `TRUE` para notificar el botón del cuadro combinado de la selección; en caso contrario, `FALSE`.  
+ TRUE para notificar el botón de cuadro combinado de la selección; en caso contrario, FALSE.  
   
  [in] *dwData*  
  Los datos asociados a un elemento en el cuadro de lista.  
@@ -1015,7 +1015,7 @@ BOOL SelectItem(LPCTSTR lpszText);
  El texto de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el método se realizó correctamente; en caso contrario, `FALSE`.  
+ TRUE si el método se realizó correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1043,7 +1043,7 @@ static BOOL SelectItemAll(
  El identificador de comando del botón de cuadro combinado que contiene el cuadro de lista.  
   
  [in] *iÍndice*  
- Índice de base cero del elemento en el cuadro de lista. Un valor de -1 quita cualquier selección actual en el cuadro de lista y borra el cuadro de edición.  
+ Índice de base cero del elemento en el cuadro de lista. Un valor de -1, quita cualquier selección actual en el cuadro de lista y borra el cuadro de edición.  
   
  [in] *dwData*  
  Los datos de un elemento en el cuadro de lista.  
@@ -1052,19 +1052,19 @@ static BOOL SelectItemAll(
  El texto de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el método se realizó correctamente; en caso contrario, `FALSE`.  
+ TRUE si el método se realizó correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="serialize"></a>  CMFCToolBarComboBoxButton::Serialize  
- Lee este objeto desde un archivo o lo escribe en un archivo.  
+ Lee este objeto de un archivo o lo escribe en un archivo.  
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [entrada, salida] *ar*  
+ [in, out] *ar*  
  La `CArchive` objeto que se va a serializar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1081,16 +1081,16 @@ virtual BOOL SetACCData(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pParent*  
- La ventana principal del botón de cuadro combinado.  
+ La ventana primaria del botón de cuadro combinado.  
   
  [out] *datos*  
  Un `CAccessibilityData` objeto que recibe los datos de accesibilidad en el botón de cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el método se realizó correctamente; en caso contrario, `FALSE`.  
+ TRUE si el método se realizó correctamente; en caso contrario, FALSE.  
   
 ##  <a name="setcentervert"></a>  CMFCToolBarComboBoxButton::SetCenterVert  
- Establece la posición vertical de botones del cuadro combinado en la aplicación.  
+ Establece la posición vertical de los botones del cuadro combinado en la aplicación.  
   
 ```  
 static void SetCenterVert(BOOL bCenterVert=TRUE);
@@ -1098,13 +1098,13 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bCenterVert*  
- `TRUE` Para centrar el botón del cuadro combinado en la barra de herramientas; `FALSE` para alinear el botón del cuadro combinado a la parte superior de la barra de herramientas.  
+ TRUE para que se centre el botón de cuadro combinado en la barra de herramientas; FALSE para alinear el botón de cuadro combinado a la parte superior de la barra de herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
- De forma predeterminada, los botones del cuadro combinado se alinean a la parte superior.  
+ De forma predeterminada, los botones de cuadro combinado se alinean a la parte superior.  
   
 ##  <a name="setcontextmenuid"></a>  CMFCToolBarComboBoxButton::SetContextMenuID  
- Establece el identificador de recurso de menú contextual para el cuadro combinado del botón del cuadro.  
+ Establece el identificador de recurso de menú contextual para el cuadro combinado del botón de cuadro.  
   
 ```  
 void SetContextMenuID(UINT uiResID);
@@ -1115,7 +1115,7 @@ void SetContextMenuID(UINT uiResID);
  El identificador de recurso de menú contextual.  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
- Establece el alto del cuadro de lista cuando se coloca hacia abajo.  
+ Establece el alto del cuadro de lista cuando se coloca.  
   
 ```  
 void SetDropDownHeight(int nHeight);
@@ -1129,7 +1129,7 @@ void SetDropDownHeight(int nHeight);
  El alto predeterminado es 150 píxeles.  
   
 ##  <a name="setflatmode"></a>  CMFCToolBarComboBoxButton::SetFlatMode  
- Establece la apariencia de estilo plano de botones del cuadro combinado en la aplicación.  
+ Establece la apariencia de estilo plano de los botones del cuadro combinado en la aplicación.  
   
 ```  
 static void SetFlatMode(BOOL bFlat=TRUE);
@@ -1137,13 +1137,13 @@ static void SetFlatMode(BOOL bFlat=TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bFlat*  
- `TRUE` para una apariencia de estilo plano; en caso contrario, `FALSE`.  
+ TRUE para una apariencia de estilo plano; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El estilo plano predeterminado para los botones del cuadro combinado es `FALSE`.  
+ El estilo plano de forma predeterminada para los botones de cuadro combinado es FALSE.  
   
 ##  <a name="setstyle"></a>  CMFCToolBarComboBoxButton::SetStyle  
- Establece el estilo especificado para el cuadro combinado del botón del cuadro y vuelve a dibujarse el control si no se deshabilita.  
+ Establece el estilo especificado para el cuadro combinado del botón del cuadro y vuelve a dibujar el control si no está deshabilitado.  
   
 ```  
 virtual void SetStyle(UINT nStyle);
@@ -1154,10 +1154,10 @@ virtual void SetStyle(UINT nStyle);
  Una combinación bit a bit (OR) de los estilos de barra de herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener una lista de estilos de botón de barra de herramientas Ver [estilos de Control de barra de herramientas](../../mfc/reference/toolbar-control-styles.md)  
+ Para obtener una lista de estilos de botón de barra de herramientas vea [estilos de Control ToolBar](../../mfc/reference/toolbar-control-styles.md)  
   
 ##  <a name="settext"></a>  CMFCToolBarComboBoxButton::SetText  
- Establece el texto en el cuadro de edición del cuadro combinado del botón del cuadro.  
+ Establece el texto en el cuadro de edición de la combinación de botón de cuadro.  
   
 ```  
 void SetText(LPCTSTR lpszText);
@@ -1170,7 +1170,7 @@ void SetText(LPCTSTR lpszText);
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [CMFCToolBarButton (clase)](../../mfc/reference/cmfctoolbarbutton-class.md)   
  [CComboBox (clase)](../../mfc/reference/ccombobox-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
  [Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)

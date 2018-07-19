@@ -1,5 +1,5 @@
 ---
-title: _variant_t (clase) | Documentos de Microsoft
+title: _variant_t (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ebe850e4b0d0d9fd352df0e60c4ea0737b9fd8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a3406d53296c778eba2ce9a6794afac2c846bd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422984"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939811"
 ---
 # <a name="variantt-class"></a>_variant_t (Clase)
 **Específicos de Microsoft**  
   
- Un objeto `_variant_t` encapsula el tipo de datos `VARIANT`. La clase administra la asignación de recursos y desasignación y realiza llamadas de función a **VariantInit** y **VariantClear** según corresponda.  
+ Un objeto `_variant_t` encapsula el tipo de datos `VARIANT`. La clase administra la asignación de recursos y la desasignación y realiza llamadas de función a `VariantInit` y `VariantClear` según corresponda.  
   
 ### <a name="construction"></a>Construcción  
   
@@ -42,11 +42,11 @@ ms.locfileid: "32422984"
   
 |||  
 |-|-|  
-|[Asociar](../cpp/variant-t-attach.md)|Asocia un **VARIANT** objeto en el `_variant_t` objeto.|  
-|[Borrar](../cpp/variant-t-clear.md)|Borra el objeto encapsulado **VARIANT** objeto.|  
-|[ChangeType](../cpp/variant-t-changetype.md)|Cambia el tipo de la `_variant_t` objeto para el functoid **VARTYPE**.|  
-|[Desasociar](../cpp/variant-t-detach.md)|Desasocia el objeto encapsulado **VARIANT** objeto desde este `_variant_t` objeto.|  
-|[setString](../cpp/variant-t-setstring.md)|Asigna una cadena a este objeto `_variant_t`.|  
+|[Asociar](../cpp/variant-t-attach.md)|Asocia un `VARIANT` objeto en el `_variant_t` objeto.|  
+|[Borrar](../cpp/variant-t-clear.md)|Borra el encapsulado `VARIANT` objeto.|  
+|[ChangeType](../cpp/variant-t-changetype.md)|Cambia el tipo de la `_variant_t` objeto del `VARTYPE`.|  
+|[Desasociar](../cpp/variant-t-detach.md)|Desasocia el objeto encapsulado `VARIANT` objeto desde este `_variant_t` objeto.|  
+|[SetString](../cpp/variant-t-setstring.md)|Asigna una cadena a este objeto `_variant_t`.|  
   
 ### <a name="operators"></a>Operadores  
   
@@ -54,7 +54,7 @@ ms.locfileid: "32422984"
 |-|-|  
 |[operador =](../cpp/variant-t-operator-equal.md)|Asigna un nuevo valor a un objeto `_variant_t` existente.|  
 |[operador ==,! =](../cpp/variant-t-relational-operators.md)|Compara dos objetos `_variant_t` para ver si son iguales o no.|  
-|[Extractores de datos](../cpp/variant-t-extractors.md)|Extraer datos de encapsulado **VARIANT** objeto.|  
+|[Extractores de datos](../cpp/variant-t-extractors.md)|Extraer datos de encapsulado `VARIANT` objeto.|  
   
 **FIN de Específicos de Microsoft**  
   

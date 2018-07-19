@@ -1,5 +1,5 @@
 ---
-title: Clase CAtlModuleT | Documentos de Microsoft
+title: CAtlModuleT (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29088c56d7020b38febb96be7512771a258e25fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1dd5bd4c7bc88d0a0acc8abc18b0d7b3462b7f52
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361693"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880851"
 ---
-# <a name="catlmodulet-class"></a>Clase CAtlModuleT
-Esta clase implementa un módulo ATL.  
+# <a name="catlmodulet-class"></a>CAtlModuleT (clase)
+Esta clase implementa un módulo de ATL.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,7 +42,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
+ *T*  
  La clase derivada de `CAtlModuleT`.  
   
 ## <a name="members"></a>Miembros  
@@ -60,9 +60,9 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 |[CAtlModuleT::InitLibId](#initlibid)|Inicializa al miembro de datos que contiene el GUID del módulo actual.|  
 |[CAtlModuleT::RegisterAppId](#registerappid)|Agrega el archivo EXE en el registro.|  
 |[CAtlModuleT::RegisterServer](#registerserver)|Agrega el servicio en el registro.|  
-|[CAtlModuleT::UnregisterAppId](#unregisterappid)|Elimina el archivo EXE del registro.|  
-|[CAtlModuleT::UnregisterServer](#unregisterserver)|Elimina el servicio del registro.|  
-|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|Actualiza la información de archivo EXE en el registro.|  
+|[CAtlModuleT::UnregisterAppId](#unregisterappid)|Quita el archivo EXE del registro.|  
+|[CAtlModuleT::UnregisterServer](#unregisterserver)|Quita el servicio del registro.|  
+|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|Actualiza la información del archivo EXE en el registro.|  
   
 ## <a name="remarks"></a>Comentarios  
  `CAtlModuleT`, derivado de [CAtlModule](../../atl/reference/catlmodule-class.md), implemente un archivo ejecutable (EXE) o un módulo ATL de servicio (EXE). Un módulo ejecutable es un servidor local fuera de proceso, mientras que un módulo de servicio es una aplicación de Windows que se ejecuta en segundo plano cuando se inicia Windows.  
@@ -88,7 +88,7 @@ CAtlModuleT() throw();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Llamadas [CAtlModuleT::InitLibId](#initlibid).  
+ Las llamadas [CAtlModuleT::InitLibId](#initlibid).  
   
 ##  <a name="initlibid"></a>  CAtlModuleT::InitLibId  
  Inicializa al miembro de datos que contiene el GUID del módulo actual.  
@@ -98,7 +98,7 @@ static void InitLibId() throw();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Llamado por el constructor [CAtlModuleT::CAtlModuleT](#catlmodulet).  
+ El constructor llama a [CAtlModuleT::CAtlModuleT](#catlmodulet).  
   
 ##  <a name="registerappid"></a>  CAtlModuleT::RegisterAppId  
  Agrega el archivo EXE en el registro.  
@@ -108,7 +108,7 @@ HRESULT RegisterAppId() throw();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ##  <a name="registerserver"></a>  CAtlModuleT::RegisterServer  
  Agrega el servicio en el registro.  
@@ -120,27 +120,27 @@ HRESULT RegisterServer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bRegTypeLib`  
- TRUE si la biblioteca de tipos se registrará. El valor predeterminado es FALSE.  
+ *bRegTypeLib*  
+ TRUE si la biblioteca de tipos es que se registrarán. El valor predeterminado es FALSE.  
   
- `pCLSID`  
- Señala al CLSID del objeto que se va a registrar. Si se registrará NULL (valor predeterminado), todos los objetos del mapa de objetos.  
+ *pTypeInfo*  
+ Señala el CLSID del objeto que se registrarán. Si es NULL (valor predeterminado), todos los objetos en el mapa de objetos que se registra.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ##  <a name="unregisterappid"></a>  CAtlModuleT::UnregisterAppId  
- Elimina el archivo EXE del registro.  
+ Quita el archivo EXE del registro.  
   
 ```
 HRESULT UnregisterAppId() throw();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ##  <a name="unregisterserver"></a>  CAtlModuleT::UnregisterServer  
- Elimina el servicio del registro.  
+ Quita el servicio del registro.  
   
 ```
 HRESULT UnregisterServer(
@@ -149,30 +149,30 @@ HRESULT UnregisterServer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bUnRegTypeLib`  
- Es TRUE si la biblioteca de tipos es también se va a anular.  
+ *bUnRegTypeLib*  
+ TRUE si la biblioteca de tipos también se va a anular el registro.  
   
- `pCLSID`  
- Señala el CLSID del objeto que se puede anular el registro. Si es NULL (valor predeterminado), todos los objetos del mapa de objetos se cancelará.  
+ *pTypeInfo*  
+ Señala el CLSID del objeto que se va a anular. Si es NULL (valor predeterminado), todos los objetos en el mapa de objetos se anulará.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ##  <a name="updateregistryappid"></a>  CAtlModuleT::UpdateRegistryAppId  
- Actualiza la información de archivo EXE en el registro.  
+ Actualiza la información del archivo EXE en el registro.  
   
 ```
 static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bRegister`  
+ *bInscríbase al*  
  Reservado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ## <a name="see-also"></a>Vea también  
- [Clase de CAtlModule](../../atl/reference/catlmodule-class.md)   
+ [CAtlModule (clase)](../../atl/reference/catlmodule-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)   
  [Clases de módulo](../../atl/atl-module-classes.md)

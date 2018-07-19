@@ -1,5 +1,5 @@
 ---
-title: Reglas generales para la sobrecarga de operadores | Documentos de Microsoft
+title: Reglas generales para la sobrecarga de operadores | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814344"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944259"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Reglas generales para la sobrecarga de operadores
 Las reglas siguientes restringen la forma en que se implementan los operadores sobrecargados. Sin embargo, no se aplican a la [nueva](../cpp/new-operator-cpp.md) y [eliminar](../cpp/delete-operator-cpp.md) operadores, que se tratan por separado.  
   
--   No se puede definir operadores nuevos, como **.**.  
+-   No se puede definir nuevos operadores, tales como **.**.  
   
 -   No se puede volver a definir el significado de los operadores cuando se aplican a los tipos de datos integrados.  
   
@@ -47,15 +47,15 @@ Las reglas siguientes restringen la forma en que se implementan los operadores s
     }  
     ```  
   
-     En el ejemplo de código anterior se declara el operador "menos que" como función miembro; sin embargo, los operadores de suma se declaran como funciones globales con acceso de confianza. Observe que se puede proporcionar más de una implementación para un operador determinado. En el caso del operador de suma anterior, las dos implementaciones se proporcionan para facilitar la propiedad conmutativa. También es probable que puedan implementarse operadores que agregan `Point` a `Point`, `int` a `Point`, etc.  
+     En el ejemplo de código anterior se declara el operador "menos que" como función miembro; sin embargo, los operadores de suma se declaran como funciones globales con acceso de confianza. Observe que se puede proporcionar más de una implementación para un operador determinado. En el caso del operador de suma anterior, las dos implementaciones se proporcionan para facilitar la propiedad conmutativa. Es igual que es probable que esa operadores que agregan un `Point` a un `Point`, **int** a un `Point`, y así sucesivamente, podría implementarse.  
   
--   Los operadores obedecen a la prioridad, la agrupación y el número de operandos dictados por su uso típico con los tipos integrados. Por lo tanto, no hay ninguna manera de expresar el concepto "sumar 2 y 3 para un objeto de tipo `Point`," espera 2 se sume a la *x* coordenadas y 3 para agregarse a la *y* coordinar.  
+-   Los operadores obedecen a la prioridad, la agrupación y el número de operandos dictados por su uso típico con los tipos integrados. Por lo tanto, no hay ninguna manera de expresar el concepto "sumar 2 y 3 para un objeto de tipo `Point`," espera 2 que se agregarán a la *x* coordenadas y 3 para agregarse a la *y* coordinar.  
   
 -   Los operadores unarios declarados como funciones miembro no toman ningún argumento; si se declaran como funciones globales, toman un argumento.  
   
 -   Los operadores binarios declarados como funciones miembro toman un argumento; si se declaran como funciones globales, toman dos argumentos.  
   
--   Si un operador puede usarse como unario o un operador binario (__&__, __*__, __+__, y __-__), puede sobrecargar por separado cada uso.  
+-   Si un operador puede usarse como unario o un operador binario (__&__, __*__, __+__, y __-__), puede sobrecargar cada uso por separado.  
   
 -   Los operadores sobrecargados no pueden tener argumentos predeterminados.  
   
@@ -63,9 +63,9 @@ Las reglas siguientes restringen la forma en que se implementan los operadores s
   
 -   El primer argumento para los operadores sobrecargados de función miembro siempre es del tipo de clase del objeto para el que se invoca el operador (la clase en la que se declara el operador o una clase derivada de ella). No se proporciona ninguna conversión para el primer argumento.  
   
- Observe que el significado de cualquiera de los operadores se puede cambiar por completo. Que incluye el significado de la dirección del (**&**), la asignación (**=**) y los operadores de llamada de función. Además, las identidades en las que se puede confiar para los tipos integrados pueden cambiarse mediante la sobrecarga de operadores. Por ejemplo, las cuatro instrucciones siguientes suelen ser equivalentes cuando se evalúan completamente:  
+ Observe que el significado de cualquiera de los operadores se puede cambiar por completo. Esto incluye el significado de la dirección del (**&**), asignación (**=**) y los operadores de llamada de función. Además, las identidades en las que se puede confiar para los tipos integrados pueden cambiarse mediante la sobrecarga de operadores. Por ejemplo, las cuatro instrucciones siguientes suelen ser equivalentes cuando se evalúan completamente:  
   
-```  
+```cpp 
 var = var + 1;  
 var += 1;  
 var++;  

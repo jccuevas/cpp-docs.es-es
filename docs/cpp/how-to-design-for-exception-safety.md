@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: diseño de seguridad de las excepciones | Documentos de Microsoft'
+title: 'Cómo: diseño de seguridad de las excepciones | Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417973"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940331"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Cómo: Diseñar para la seguridad de las excepciones
 Una de las ventajas del mecanismo de excepciones es que la ejecución, así como los datos sobre la excepción, saltan directamente de la instrucción que produce la excepción a la primera instrucción catch que la controla. El controlador puede ser cualquier número de niveles en la pila de llamadas. Las funciones a las que se llama entre la instrucción try y la instrucción throw no se requieren para saber nada sobre la excepción que se produce.  Sin embargo, tienen que diseñarse de forma que puedan quedar fuera de ámbito “inesperadamente” en cualquier punto donde una excepción pudiera propagarse de arriba a abajo, y lo hagan sin dejar detrás objetos parcialmente creados, memoria perdida o estructuras de datos que están en estado inutilizable.  
@@ -28,7 +28,7 @@ Una de las ventajas del mecanismo de excepciones es que la ejecución, así como
  Independientemente de cómo una función controla una excepción, para ayudar a garantizar que es “segura para excepciones”, debe diseñarse según las reglas básicas siguientes.  
   
 ### <a name="keep-resource-classes-simple"></a>Mantener clases de recursos simples  
- Cuando se encapsula la administración de recursos manual en las clases, use una clase que no haga nada más que administrar cada recurso; de lo contrario, podrían producirse pérdidas. Use [inteligentes punteros](../cpp/smart-pointers-modern-cpp.md) cuando sea posible, tal como se muestra en el ejemplo siguiente. Este ejemplo es deliberadamente artificial y simplista para resaltar las diferencias cuando se utiliza `shared_ptr`.  
+ Cuando se encapsula la administración de recursos manual en las clases, use una clase que no haga nada más que administrar cada recurso; de lo contrario, podrían producirse pérdidas. Use [inteligente punteros](../cpp/smart-pointers-modern-cpp.md) cuando sea posible, como se muestra en el ejemplo siguiente. Este ejemplo es deliberadamente artificial y simplista para resaltar las diferencias cuando se utiliza `shared_ptr`.  
   
 ```cpp  
 // old-style new/delete version  
@@ -90,10 +90,10 @@ public:
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Utilizar la expresión RAII para administrar recursos  
- Para que una función sea segura para excepciones, una función debe garantizar que los objetos que ha asignado mediante `malloc` o `new` se destruyeron y que todos los recursos, por ejemplo, los identificadores de archivos, están cerrados o liberados incluso si se produce una excepción. El *Resource Acquisition Is Initialization* expresión (RAII) enlaza la administración de estos recursos al tiempo de vida de las variables automáticas. Cuando una función sale del ámbito, ya sea porque vuelve normalmente o debido a una excepción, se invocan los destructores para todas las variables automáticas totalmente implementadas. Un objeto contenedor RAII, por ejemplo, un puntero inteligente, llama a la función de eliminación o cierre adecuada en el destructor. En el código seguro para excepciones, pasar la propiedad de cada recurso inmediatamente a algún tipo de objeto RAII tiene una importancia crítica. Tenga en cuenta que la `vector`, `string`, `make_shared`, `fstream`, y las clases similares controlen adquisición del recurso para usted.  Sin embargo, `unique_ptr` y tradicional `shared_ptr` construcciones son especiales porque adquisición de recursos se realiza por el usuario en lugar del objeto; por lo tanto, cuentan como *recursos versión es destrucción* pero son cuestionable como RAII.  
+ Para que sea seguro ante excepciones, una función debe asegurarse de que los objetos que ha asignado mediante `malloc` o **nuevo** se destruyen, y todos los recursos como identificadores de archivo están cerrados o liberados incluso si se produce una excepción. El *Resource Acquisition Is Initialization* expresión (RAII) enlaza la administración de estos recursos para la duración de las variables automáticas. Cuando una función sale del ámbito, ya sea porque vuelve normalmente o debido a una excepción, se invocan los destructores para todas las variables automáticas totalmente implementadas. Un objeto contenedor RAII, por ejemplo, un puntero inteligente, llama a la función de eliminación o cierre adecuada en el destructor. En el código seguro para excepciones, pasar la propiedad de cada recurso inmediatamente a algún tipo de objeto RAII tiene una importancia crítica. Tenga en cuenta que el `vector`, `string`, `make_shared`, `fstream`, y las clases similares controlan la adquisición del recurso para usted.  Sin embargo, `unique_ptr` tradicional y `shared_ptr` construcciones son especiales porque la adquisición de recursos se realiza por el usuario en lugar del objeto; por lo tanto, se consideran *Resource Release Is Destruction* pero son cuestionables como RAII.  
   
 ## <a name="the-three-exception-guarantees"></a>Las tres garantías de excepción  
- Normalmente, se describe la seguridad de las excepciones en cuanto a las garantías de excepción que se puede proporcionar una función: la *no haya error*, *garantía segura*y el *garantía básica* .  
+ Normalmente, se explica la seguridad de las excepciones en cuanto a las tres garantías de excepción que se puede proporcionar una función: la *garantía de ningún error*, *garantía segura*y el *garantía básica* .  
   
 ### <a name="no-fail-guarantee"></a>Garantía de que no haya error  
  La garantía de que no haya error (o “ningún throw”) es la mayor garantía que una función puede proporcionar. Indica que la función no producirá una excepción ni permitirá que se propague. Sin embargo, esta garantía no se puede proporcionar confiablemente a menos que (a) se sepa que todas las funciones a las que llama la función tampoco producen ningún error, (b) se sepa que cualquier excepción que se produzca se detectará antes de que llegue a esta función o (c) se sepa cómo detectar y controlar correctamente todas las excepciones que puedan tener acceso a esta función.  

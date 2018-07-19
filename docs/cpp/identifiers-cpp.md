@@ -1,5 +1,5 @@
 ---
-title: Identificadores (C++) | Documentos de Microsoft
+title: Identificadores (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb25713ad4f4a8ab1821eac4f7bf05d671bb101
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415412"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941777"
 ---
 # <a name="identifiers-c"></a>Identificadores (C++)
 Un identificador es una secuencia de caracteres que se usa para denotar:  
@@ -102,7 +102,7 @@ int main() {
   
  El primer carácter de un identificador debe ser un carácter alfabético, en mayúsculas o minúsculas, o un carácter de subrayado ( **_** ). Debido a que los identificadores de C++ distinguen entre mayúsculas y minúsculas, `fileName` es diferente de `FileName`.  
   
- Los identificadores no pueden escribirse igual ni presentar el mismo uso de mayúsculas y minúsculas que las palabras clave. Los identificadores que contienen palabras clave son válidos. Por ejemplo, `Pint` es un identificador válido aunque contenga `int`, que es una palabra clave.  
+ Los identificadores no pueden escribirse igual ni presentar el mismo uso de mayúsculas y minúsculas que las palabras clave. Los identificadores que contienen palabras clave son válidos. Por ejemplo, `Pint` es un identificador válido, aunque contenga **int**, que es una palabra clave.  
   
  El uso de dos caracteres de subrayado secuenciales ( **__** ) al principio de un identificador o un único carácter de subrayado inicial seguido de una letra mayúscula se reserva para las implementaciones de C++ en todos los ámbitos. Evite el uso de un carácter de subrayado inicial seguido de una letra minúscula en los nombres con ámbito de archivo a fin de evitar posibles conflictos con los identificadores reservados actuales o futuros.  
   

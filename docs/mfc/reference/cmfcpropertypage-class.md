@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCPropertyPage | Documentos de Microsoft
+title: CMFCPropertyPage (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2081053f406d9985d722da7d4cd9f3dad56f061c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042087"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848741"
 ---
-# <a name="cmfcpropertypage-class"></a>Clase CMFCPropertyPage
+# <a name="cmfcpropertypage-class"></a>CMFCPropertyPage (clase)
 La `CMFCPropertyPage` clase admite la visualización de los menús emergentes en una página de propiedades.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -48,12 +48,12 @@ class CMFCPropertyPage : public CPropertyPage
 |Name|Descripción|  
 |----------|-----------------|  
 |`CMFCPropertyPage::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
-|`CMFCPropertyPage::GetThisClass`|Usado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
+|`CMFCPropertyPage::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|  
 |`CMFCPropertyPage::OnSetActive`|Esta función miembro se llama el marco de trabajo cuando la página elegida por el usuario y se convierte en la página activa. (Invalida [notificaciones CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
-|`CMFCPropertyPage::PreTranslateMessage`|Convierte los mensajes de ventana antes de que se envíen a la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. Para obtener más información y la sintaxis de método, consulte [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Invalida `CPropertyPage::PreTranslateMessage`).|  
+|`CMFCPropertyPage::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. Para obtener más información y la sintaxis de método, consulte [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Invalida `CPropertyPage::PreTranslateMessage`).|  
   
 ## <a name="remarks"></a>Comentarios  
- La `CMFCPropertyPage` clase representa páginas individuales de una hoja de propiedades, también conocida como un cuadro de diálogo de pestaña.  
+ La `CMFCPropertyPage` clase representa páginas individuales de una hoja de propiedades, también conocido como un cuadro de diálogo de pestaña.  
   
  Use la `CMFCPropertyPage` clase junto con el [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) clase. Para usar los menús en una página de propiedades, reemplace todas las apariciones de la `CPropertyPage` clase con la `CMFCPropertyPage` clase.  
   
@@ -89,13 +89,13 @@ CMFCPropertyPage(
   
 ### <a name="parameters"></a>Parámetros  
  *nIDTemplate*  
- Id. de recurso de la plantilla para esta página.  
+ Identificador de recurso de la plantilla para esta página.  
   
  *nIDCaption*  
- Id. de recurso de la etiqueta se incluirán en la ficha para esta página. Si es 0, se obtiene el nombre de la plantilla de cuadro de diálogo para esta página. El valor predeterminado es 0.  
+ Identificador de recurso de la etiqueta a colocar en la ficha para esta página. Si es 0, se obtiene el nombre de la plantilla de cuadro de diálogo para esta página. El valor predeterminado es 0.  
   
  *lpszTemplateName*  
- Señala al nombre de la plantilla para esta página. No puede ser `NULL`.  
+ Señala al nombre de la plantilla para esta página. No puede ser nulo.  
   
 ### <a name="return-value"></a>Valor devuelto  
   

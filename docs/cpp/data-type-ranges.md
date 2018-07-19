@@ -1,5 +1,5 @@
 ---
-title: Intervalos de tipos de datos | Documentos de Microsoft
+title: Intervalos de tipos de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c809249bbe7513e5a1e439ebaf5e4e44a2f758
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 93a399f922d79c073cc6471ebe702d8ef7fcd842
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418398"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940646"
 ---
 # <a name="data-type-ranges"></a>Intervalos de tipo de datos
 Los compiladores de 32 bits y 64 bits de Visual C++ reconocen los tipos de la tabla que se incluye más adelante en este artículo.  
@@ -105,9 +105,9 @@ Los compiladores de 32 bits y 64 bits de Visual C++ reconocen los tipos de la ta
   
  Dependiendo de cómo se use, una variable `__wchar_t` designa un tipo de caracteres anchos o multibyte. Utilice el prefijo `L` delante de un carácter o constante de cadena para designar la constante de tipo de carácter ancho.  
   
- `signed` y `unsigned` son modificadores que se puede utilizar con cualquier tipo entero excepto `bool`. Observe que `char`, `signed char`y `unsigned char` son tres tipos distintos para mecanismos como sobrecargas y plantillas.  
+ **firmado** y **sin signo** son modificadores que puede usar con cualquier tipo integral excepto **bool**. Tenga en cuenta que **char**, **firmado char**, y **unsigned char** son tres tipos distintos para mecanismos como sobrecargas y plantillas.  
   
- Los tipos `int` y `unsigned int` tienen un tamaño de cuatro bytes. Sin embargo, el código portable no debe depender del tamaño de `int` , porque el estándar del lenguaje permite que sea específico de la implementación.  
+ El **int** y **int sin signo** tipos tienen un tamaño de cuatro bytes. Sin embargo, código portable no debe depender del tamaño de **int** porque el estándar del lenguaje permite que sea específico de la implementación.  
   
  C/C++ en Visual Studio también admite tipos enteros con tamaño. Para obtener más información, consulte [__int8, \___int16, \___int32, \___int64](../cpp/int8-int16-int32-int64.md) y [Límites de enteros](../cpp/integer-limits.md).  
   

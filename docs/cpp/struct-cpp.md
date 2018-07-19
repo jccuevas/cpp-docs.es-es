@@ -1,5 +1,5 @@
 ---
-title: struct (C++) | Documentos de Microsoft
+title: struct (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a9ea6bea20ad1591db9b07507b4db959d10a318
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f4b343097be6c15b5a273fd4e2a59198858d576
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944210"
 ---
 # <a name="struct-c"></a>struct (C++)
-La palabra clave `struct` define un tipo de estructura o una variable de un tipo de estructura.  
+El **struct** palabra clave define un tipo de estructura o una variable de un tipo de estructura.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,46 +37,46 @@ La palabra clave `struct` define un tipo de estructura o una variable de un tipo
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `template-spec`  
+ *especificación de plantilla*  
  Especificaciones de plantilla opcionales. Para obtener más información, consulte [especificaciones de plantilla](templates-cpp.md).  
   
- `struct`  
- Palabra clave `struct`.  
+ *struct*  
+ El **struct** palabra clave.  
   
- `ms-decl-spec`  
+ *MS-decl-spec*  
  Especificación opcional de clase de almacenamiento. Para obtener más información, consulte el [__declspec](../cpp/declspec.md) palabra clave.  
   
- `tag`  
- Nombre del tipo dado a la estructura. La etiqueta se convierte en una palabra reservada dentro del ámbito de la estructura. La etiqueta es opcional. Si se omite, se define una estructura anónima. Para obtener más información, consulte [tipos de clase anónimos](../cpp/anonymous-class-types.md).  
+ *Etiqueta*  
+ Nombre del tipo dado a la estructura. La etiqueta se convierte en una palabra reservada dentro del ámbito de la estructura. La etiqueta es opcional. Si se omite, se define una estructura anónima. Para obtener más información, consulte [tipos de clase anónima](../cpp/anonymous-class-types.md).  
   
- `base-list`  
- La lista opcional de clases o de estructuras de la que esta estructura derivará sus miembros. Vea [clases Base](../cpp/base-classes.md) para obtener más información. Cada nombre de clase o estructura base puede ir precedido de un especificador de acceso ([público](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) y la [virtuales](../cpp/virtual-cpp.md) palabra clave. Vea la tabla de acceso a miembros de [controlar el acceso a los miembros de clase](member-access-control-cpp.md) para obtener más información.  
+ *base-list*  
+ La lista opcional de clases o de estructuras de la que esta estructura derivará sus miembros. Consulte [clases Base](../cpp/base-classes.md) para obtener más información. Cada nombre de clase o estructura base puede ir precedido por un especificador de acceso ([pública](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) y el [virtual](../cpp/virtual-cpp.md) palabra clave. Vea la tabla de acceso a miembros de [controlar el acceso a los miembros de clase](member-access-control-cpp.md) para obtener más información.  
   
- `member-list`  
- Lista de miembros de la estructura. Hacer referencia a [información general sobre miembros de clase](../cpp/class-member-overview.md) para obtener más información. La única diferencia aquí es que se utiliza `struct` en lugar de `class`.  
+ *lista de miembros*  
+ Lista de miembros de la estructura. Consulte [información general sobre miembros de clase](../cpp/class-member-overview.md) para obtener más información. La única diferencia es que **struct** se utiliza en lugar de **clase**.  
   
- `declarators`  
- Lista de declaradores que especifican los nombres de la clase. Las listas de declaradores declaran una o más instancias del tipo de estructura. Los declaradores pueden incluir listas de inicializadores si todos los miembros de datos de la clase son `public`. Las listas de inicializadores son comunes en estructuras porque los miembros de datos son `public` de forma predeterminada.  Vea [información general de los declaradores](../cpp/overview-of-declarators.md) para obtener más información.  
+ *declaradores*  
+ Lista de declaradores que especifican los nombres de la clase. Las listas de declaradores declaran una o más instancias del tipo de estructura. Los declaradores pueden incluir listas de inicializadores si todos los miembros de datos de la clase son **pública**. Las listas de inicializadores son comunes en estructuras porque son miembros de datos **pública** de forma predeterminada.  Consulte [información general de los declaradores](../cpp/overview-of-declarators.md) para obtener más información.  
   
 ## <a name="remarks"></a>Comentarios  
  Un tipo de estructura es un tipo compuesto definido por el usuario. Se compone de campos o de miembros que pueden tener diferentes tipos.  
   
- En C++, una estructura es igual que una clase salvo que sus miembros son `public` de forma predeterminada.  
+ En C++, una estructura es igual que una clase salvo que sus miembros son **pública** de forma predeterminada.  
   
  Para obtener información sobre las clases administradas y los structs, vea [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
 ## <a name="using-a-structure"></a>Uso de una estructura  
- En C, debe utilizar explícitamente la palabra clave `struct` para declarar una estructura. En C++, no es necesario usar la palabra clave `struct` una vez definido el tipo.  
+ En C, debe utilizar explícitamente la **struct** palabra clave para declarar una estructura. En C++, no es necesario usar el **struct** palabra clave una vez definido el tipo.  
   
  Tiene la opción de declarar variables al definir el tipo de estructura, para lo cual debe insertar uno o más nombres de variable separados por comas entre la llave de cierre y el punto y coma.  
   
  Las variables de estructura se pueden inicializar. La inicialización de cada variable se debe incluir entre llaves.  
   
- Para obtener información relacionada, consulte [clase](../cpp/class-cpp.md), [union](../cpp/unions.md), y [enum](../cpp/enumerations-cpp.md).  
+ Para obtener información relacionada, consulte [clase](../cpp/class-cpp.md), [unión](../cpp/unions.md), y [enum](../cpp/enumerations-cpp.md).  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   

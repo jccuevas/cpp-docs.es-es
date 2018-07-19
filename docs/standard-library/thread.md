@@ -1,5 +1,5 @@
 ---
-title: '&lt;subproceso&gt; | Documentos de Microsoft'
+title: '&lt;subproceso&gt; | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5558f1e7998cca1efd64fbc5ee0ad39cc40ee2a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5470d7c7e83c260f44d723665d5d9c0a5ad061
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858619"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953034"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
-Incluya el encabezado estándar \<subproceso > para definir la clase `thread` y diversas funciones auxiliares.
+Incluya el encabezado estándar \<subproceso > para definir la clase **subproceso** y varias funciones auxiliares.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,7 +34,7 @@ Incluya el encabezado estándar \<subproceso > para definir la clase `thread` y 
 ## <a name="remarks"></a>Comentarios
 
 > [!NOTE]
-> En el código compilado mediante **/CLR**, este encabezado está bloqueado.
+> En el código que se compila con **/CLR**, este encabezado está bloqueado.
 
 El `__STDCPP_THREADS__` macro se define como un valor distinto de cero para indicar que los subprocesos son compatibles con este encabezado.
 
@@ -50,7 +50,7 @@ El `__STDCPP_THREADS__` macro se define como un valor distinto de cero para indi
 
 |nombre|Descripción|
 |----------|-----------------|
-|[hash (Estructura, biblioteca estándar de C++)](../standard-library/hash-structure-stl.md)|Define una función miembro que devuelve un valor que se determina de forma única mediante un `thread::id`. Define la función miembro un [hash](../standard-library/hash-class.md) función que es adecuado para los valores de asignación de tipo `thread::id` a una distribución de valores de índice.|
+|[hash (Estructura, biblioteca estándar de C++)](../standard-library/hash-structure-stl.md)|Define una función miembro que devuelve un valor que se determina de forma exclusiva mediante un `thread::id`. La función miembro define una [hash](../standard-library/hash-class.md) función que es adecuado para asignar valores de tipo `thread::id` a una distribución de valores de índice.|
 
 ### <a name="public-functions"></a>Funciones públicas
 
@@ -59,7 +59,7 @@ El `__STDCPP_THREADS__` macro se define como un valor distinto de cero para indi
 |[get_id](../standard-library/thread-functions.md#get_id)|Identifica de forma única el subproceso de ejecución actual.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Bloquea el subproceso de llamada.|
 |[sleep_until](../standard-library/thread-functions.md#sleep_until)|Bloquea el subproceso de llamada al menos hasta la hora especificada.|
-|[swap](../standard-library/thread-functions.md#swap)|Intercambia los Estados de dos `thread` objetos.|
+|[swap](../standard-library/thread-functions.md#swap)|Intercambia los Estados de dos **subproceso** objetos.|
 |[yield](../standard-library/thread-functions.md#yield)|Indica al sistema operativo que ejecute otros subprocesos, incluso si el subproceso actual seguiría ejecutándose en condiciones normales.|
 
 ### <a name="public-operators"></a>Operadores públicos
@@ -71,8 +71,8 @@ El `__STDCPP_THREADS__` macro se define como un valor distinto de cero para indi
 |[operador < = (operador)](../standard-library/thread-operators.md#op_lt_eq)|Determina si un objeto `thread::id` es menor o igual que otro objeto.|
 |[operador < (operador)](../standard-library/thread-operators.md#op_lt)|Determina si un objeto `thread::id` es menor que otro objeto.|
 |[operador! = (operador)](../standard-library/thread-operators.md#op_neq)|Compara dos objetos `thread::id` para determinar si no son iguales.|
-|[Operator == (operador)](../standard-library/thread-operators.md#op_eq_eq)|Compara dos objetos `thread::id` para determinar si son iguales.|
-|[operador << (operador)](../standard-library/thread-operators.md#op_lt_lt)|Inserta una representación de texto de un objeto `thread::id` en una secuencia.|
+|[operador == (operador)](../standard-library/thread-operators.md#op_eq_eq)|Compara dos objetos `thread::id` para determinar si son iguales.|
+|[operador << operador](../standard-library/thread-operators.md#op_lt_lt)|Inserta una representación de texto de un objeto `thread::id` en una secuencia.|
 
 ## <a name="see-also"></a>Vea también
 

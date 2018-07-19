@@ -1,5 +1,5 @@
 ---
-title: Referencia del lenguaje C++ | Documentos de Microsoft
+title: Referencia del lenguaje C++ | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25315121d3004601914c5b8872b496e57acec99f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417209"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954198"
 ---
 # <a name="c-language-reference"></a>Referencia del lenguaje C++
 Esta referencia explica el lenguaje de programación C++ tal como se implementa en Microsoft Visual C++. La organización se basa en *The Annotated C++ Reference Manual* de Margaret Ellis y Bjarne Stroustrup y en los estándares de internacionales de C++ de ANSI/ISO (ISO/IEC FDIS 14882). Se incluyen las implementaciones específicas de Microsoft de las características del lenguaje C++.  
 
-Para obtener información general de las prácticas de programación de C++ moderno, consulte [aquí está otra vez C++](welcome-back-to-cpp-modern-cpp.md).
+Para obtener información general de las prácticas de programación de C++ moderno, consulte [Bienvenido a C++](welcome-back-to-cpp-modern-cpp.md).
   
  Consulte las tablas siguientes para encontrar rápidamente una palabra clave o un operador:  
   
@@ -46,7 +46,7 @@ Para obtener información general de las prácticas de programación de C++ mode
  [Conversiones estándar](../cpp/standard-conversions.md)  
  Conversiones de tipos entre tipos integrados o “fundamentales". También, conversiones aritméticas y conversiones entre tipos de puntero, referencia y puntero a miembro.  
   
- [Operadores, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+ [Operadores, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
  Operadores de C++.  
   
  [Expresiones](../cpp/expressions-cpp.md)  
@@ -61,26 +61,23 @@ Para obtener información general de las prácticas de programación de C++ mode
  [Declaraciones y definiciones](declarations-and-definitions-cpp.md)  
  Especificadores de clase de almacenamiento, definiciones de función, inicializaciones, enumeraciones, declaraciones de class, struct y union y declaraciones de typedef. También, funciones insertadas, palabra clave const, espacios de nombres.  
   
- [Declaradores](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)  
- La parte de una instrucción de declaración que designa un objeto, un tipo o una función. Declaradores abstractos, nombres de tipo, inicializadores, declaraciones y definiciones de función, matrices, referencias.  
-  
- [Clases, estructuras y uniones](../cpp/classes-and-structs-cpp.md)  
- Introducción a las clases, estructuras y uniones. Además, las funciones miembro, funciones miembro especiales, los miembros de datos, campos de bits, este puntero, clases anidadas.  
+ [Las clases, estructuras y uniones](../cpp/classes-and-structs-cpp.md)  
+ Introducción a las clases, estructuras y uniones. Además, las funciones miembro, funciones miembro especiales, los miembros de datos, los campos de bits, este puntero, clases anidadas.  
   
  [Clases derivadas](../cpp/inheritance-cpp.md)  
- Herencia sencilla y múltiple, funciones virtuales, clases base múltiples, clases abstractas, reglas de ámbito. Además, el __super y \_palabras clave _interface.  
+ Herencia sencilla y múltiple, funciones virtuales, clases base múltiples, clases abstractas, reglas de ámbito. Además, el __super y \_i_nterfaz las palabras clave.  
   
  [Control de acceso a miembros](../cpp/member-access-control-cpp.md)  
  Control del acceso a los miembros de clase: palabras clave públicas, privadas y protegidas. Funciones y clases friend.  
   
- [Sobrecarga](operator-overloading.md)  
+ [La sobrecarga](operator-overloading.md)  
  Operadores sobrecargados, reglas de sobrecarga del operador.  
   
  [Control de excepciones](../cpp/exception-handling-in-visual-cpp.md)  
  Control de excepciones de C++, control estructurado de excepciones (SEH), palabras clave usadas para escribir instrucciones de control de excepciones.  
   
  [Aserción y mensajes proporcionados por el usuario](../cpp/assertion-and-user-supplied-messages-cpp.md)  
- La directiva `#error`, la palabra clave `static_assert`, la macro `assert`.  
+ `#error` Directiva, el **static_assert** palabra clave, el `assert` macro.  
   
  [Templates](../cpp/templates-cpp.md) (Plantillas [C++])  
  Especificaciones de plantilla, plantillas de función, plantillas de clase, palabra clave typename, plantillas y macros, plantillas y punteros inteligentes.  
@@ -89,7 +86,7 @@ Para obtener información general de las prácticas de programación de C++ mode
  Declaración de eventos y controladores de eventos.  
   
  [Modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md)  
- Modificadores específicos de Microsoft C++. La memoria de direccionamiento, convenciones de llamada, funciones naked, atributos extendidos de clase de almacenamiento (__declspec), \__w64.  
+ Modificadores específicos de Microsoft C++. La memoria de direccionamiento, convenciones de llamada, las funciones naked, atributos de clase de almacenamiento (__declspec), extendidos \__w64.  
   
  [Ensamblador insertado](../assembler/inline/inline-assembler.md)  
  Uso del lenguaje de ensamblado y C++ en bloques __asm.  
@@ -103,7 +100,7 @@ Para obtener información general de las prácticas de programación de C++ mode
  [Comportamiento no estándar](../cpp/nonstandard-behavior.md)  
  Información sobre el comportamiento no estándar del compilador de Visual C++.  
 
- [Bienvenido a C++](welcome-back-to-cpp-modern-cpp.md) una visión general de programación de C++ moderno de procedimientos para escribir programas seguros, correcta y eficaces.
+ [Bienvenido a C++](welcome-back-to-cpp-modern-cpp.md) una visión general de programación de C++ moderno procedimientos recomendados para escribir programas seguros, correctos y eficaces.
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)  

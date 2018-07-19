@@ -1,5 +1,5 @@
 ---
-title: Crear un objeto agregado | Documentos de Microsoft
+title: Crear un objeto agregado | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35ddbd6b8db853967a70de0427cc842689d55c82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f6ff5a0fdcff62d62469f17388f633b83739a09
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355025"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850831"
 ---
 # <a name="creating-an-aggregated-object"></a>Crear un objeto agregado
-Los delegados de agregación **IUnknown** llamadas, proporcionando un puntero para el objeto externo **IUnknown** para el objeto interno.  
+Los delegados de agregación `IUnknown` llamadas, que proporciona un puntero para el objeto externo `IUnknown` al objeto interno.  
   
 ### <a name="to-create-an-aggregated-object"></a>Para crear un objeto agregado  
   
-1.  Agregar un **IUnknown** puntero a la clase de objeto e inicialícela en **NULL** en el constructor.  
+1.  Agregar un `IUnknown` puntero a la clase de objeto y se inicializa en NULL en el constructor.  
   
 2.  Invalidar [FinalConstruct](../atl/reference/ccomobjectrootex-class.md#finalconstruct) para crear el agregado.  
   
-3.  Use la **IUnknown** puntero, definido en el paso 1, como el segundo parámetro para el [COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate) macros.  
+3.  Use la `IUnknown` puntero, definido en el paso 1, como el segundo parámetro para el [COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate) macros.  
   
-4.  Invalidar [FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease) para liberar el **IUnknown** puntero.  
+4.  Invalidar [FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease) para liberar el `IUnknown` puntero.  
   
 > [!NOTE]
 >  Si usa y libera una interfaz del objeto agregado durante `FinalConstruct`, debe agregar el [macro DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct) macro a la definición de su objeto de clase.  

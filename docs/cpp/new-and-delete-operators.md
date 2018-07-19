@@ -1,5 +1,5 @@
 ---
-title: nuevos operadores y delete | Documentos de Microsoft
+title: nuevo y eliminar operadores | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,34 +19,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7f411d05491294421202ae6d8a1b7cbbb4e1d47
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb8f04962593dff13559f49f7f7c23014968c266
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423961"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940765"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new y delete
 
-C++ admite la asignación dinámica de asignación y desasignación de objetos mediante el [nueva](../cpp/new-operator-cpp.md) y [eliminar](../cpp/delete-operator-cpp.md) operadores. Estos operadores asignan memoria para los objetos de un conjunto denominado almacén libre. El `new` operador llama a la función especial [new (operador)](../cpp/new-operator-cpp.md)y el `delete` operador llama a la función especial [operador delete](../cpp/delete-operator-cpp.md).  
+C++ admite la asignación dinámica y la desasignación de objetos mediante el [nueva](../cpp/new-operator-cpp.md) y [eliminar](../cpp/delete-operator-cpp.md) operadores. Estos operadores asignan memoria para los objetos de un conjunto denominado almacén libre. El **nueva** operador llama a la función especial [new (operador)](../cpp/new-operator-cpp.md)y el **eliminar** operador llama a la función especial [operador delete](../cpp/delete-operator-cpp.md).  
   
- El `new` función de la biblioteca estándar de C++ admite el comportamiento especificado en el estándar de C++, que consiste en producir una excepción std:: bad_alloc si se produce un error en la asignación de memoria. Si aún desea la versión no producen excepciones de `new`, vincule el programa con nothrownew.obj. Sin embargo, cuando se vincula con nothrownew.obj, el valor predeterminado `operator new` en la biblioteca estándar de C++ deja de funcionar.  
+ El **nuevo** función en la biblioteca estándar de C++ admite el comportamiento especificado en el estándar de C++, que se usa para producir una excepción std:: bad_alloc si se produce un error en la asignación de memoria. Si aún desea la versión no producen excepciones de **nuevo**, vincule el programa con nothrownew.obj. Sin embargo, cuando se vincula con nothrownew.obj, el valor predeterminado **operador new** en la biblioteca estándar de C++ ya no funciona.  
   
  Para obtener una lista de los archivos de biblioteca que componen la biblioteca en tiempo de ejecución de C y la biblioteca estándar de C++, vea [características de la biblioteca CRT](../c-runtime-library/crt-library-features.md).  
   
 ##  <a id="new_operator"> </a> El operador new  
- Cuando una instrucción como la siguiente se encuentra en un programa, se convierte a una llamada a la función `operator new`:  
+ Cuando se encuentra una instrucción como la siguiente en un programa, convierte en una llamada a la función **new (operador)**:  
   
 ```cpp  
 char *pch = new char[BUFFER_SIZE];  
 ```  
   
-Si la solicitud es de cero bytes de almacenamiento, **new (operador)** devuelve un puntero a un objeto (es decir, las llamadas repetidas a **new (operador)** devuelven punteros diferentes). Si no hay memoria suficiente para la solicitud de asignación, **new (operador)** produce una excepción std:: bad_alloc o devuelve **nullptr** si ha vinculado en no producen excepciones `operator new` admite.  
+Si la solicitud es para cero bytes de almacenamiento, **new (operador)** devuelve un puntero a un objeto distinto (es decir, las llamadas repetidas a **operador new** devuelven punteros diferentes). Si no hay memoria suficiente para la solicitud de asignación, **new (operador)** produce una excepción std:: bad_alloc o devuelve **nullptr** si ha vinculado en no producen excepciones **operador new** admite.  
   
-Puede escribir una rutina que intenta liberar memoria y vuelva a intentar la asignación; vea [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) para obtener más información. Para obtener más detalles sobre el esquema de recuperación, vea la sección de memoria insuficiente de control de este tema.  
+Puede escribir una rutina que intente liberar memoria y vuelva a intentar la asignación; consulte [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) para obtener más información. Para obtener más detalles sobre el esquema de recuperación, consulte la sección de memoria insuficiente de control de este tema.  
 
   
-Los dos ámbitos para las funciones `operator new` se describen en la tabla siguiente.  
+Los dos ámbitos para **operador new** funciones se describen en la tabla siguiente.  
   
 ### <a name="scope-for-operator-new-functions"></a>Ámbito de funciones operator new  
   
@@ -55,11 +55,11 @@ Los dos ámbitos para las funciones `operator new` se describen en la tabla sigu
 |**:: new (operador)**|Global|  
 |*nombre de la clase* **:: new (operador)**|Clase|  
   
- El primer argumento **new (operador)** debe ser de tipo **size_t** (un tipo definido en \<stddef.h >), y el tipo de valor devuelto es siempre **void \***  .  
+ El primer argumento **new (operador)** debe ser de tipo `size_t` (un tipo definido en \<stddef.h >), y el tipo de valor devuelto es siempre **void \*** .  
   
- Global **new (operador)** función se llama cuando el **nueva** operador se usa para asignar objetos de los tipos integrados, objetos de tipo de clase que no contienen definidos por el usuario **new (operador)** funciones y matrices de cualquier tipo. Cuando el **nueva** operador se usa para asignar objetos de un tipo de clase donde un **new (operador)** se define, esa clase **new (operador)** se llama.  
+ Global **new (operador)** función se llama cuando el **nueva** operador se usa para asignar objetos de tipos integrados, objetos del tipo de clase que no tienen definido por el usuario **operador new** funciones y las matrices de cualquier tipo. Cuando el **nueva** operador se usa para asignar objetos de un tipo de clase donde un **new (operador)** está definido, esa clase **new (operador)** se llama.  
   
- Un **new (operador)** función definida para una clase es una función miembro estática (que no es posible, por lo tanto, ser virtual) que oculta la información global de **new (operador)** función para los objetos de ese tipo de clase. Considere el caso donde **nueva** se utiliza para asignar y establecer la memoria en un valor determinado:  
+ Un **new (operador)** función definida para una clase es una función miembro estática (que no es posible, por lo tanto, ser virtual) que oculta la información global **operador new** función para los objetos de ese tipo de clase. Considere el caso donde **nuevo** se usa para asignar y establecer la memoria con un valor determinado:  
   
 ```cpp  
 // spec1_the_operator_new_function1.cpp  
@@ -89,13 +89,13 @@ int main()
 }  
 ```  
   
- El argumento proporcionado entre paréntesis a **nueva** se pasa a `Blanks::operator new` como el `chInit` argumento. Sin embargo, la información global de **new (operador)** función está oculta, haciendo que el código como el siguiente para generar un error:  
+ El argumento proporcionado entre paréntesis a **nueva** se pasa a `Blanks::operator new` como el `chInit` argumento. Sin embargo, la información global **operador new** función está oculta, haciendo que el código como el siguiente para generar un error:  
   
 ```cpp  
 Blanks *SomeBlanks = new Blanks;  
 ```  
   
- En tipos de Visual C++ 5.0 y versiones anteriores, no es de clase y todas las matrices (independientemente de si eran de **clase** tipo) asignados mediante el **nueva** operador siempre usa la información global **new (operador)** (función).  
+ En tipos de Visual C++ 5.0 y versiones anteriores, utilizaban y todas las matrices (independientemente de si eran de **clase** tipo) asignados mediante el **nueva** operador siempre utiliza global **operador new** función.  
   
  A partir de Visual C++ 5.0, el compilador admite la matriz de miembros **nueva** y **eliminar** operadores en una declaración de clase. Por ejemplo:  
   
@@ -141,24 +141,24 @@ int main() {
  Hay otras maneras de controlar las solicitudes de asignación de memoria con errores: escribir una rutina de recuperación personalizada para controlar el error, a continuación, registre la función mediante una llamada a la [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) función en tiempo de ejecución.  
   
 ##  <a id="delete_operator"> </a> El operador delete  
- Memoria que se asigna dinámicamente mediante la **nueva** operador se puede liberar con la **eliminar** operador. El operador delete llama el **operador delete** función, lo que libera memoria para el grupo disponible. Mediante el **eliminar** operador también hace que el destructor de clase (si hay alguno) que se llame a.  
+ Memoria que se asigna dinámicamente mediante el **nueva** operador se puede liberar con la **eliminar** operador. El operador delete llama a la **operador delete** función, lo que libera memoria para el grupo disponible. Mediante el **eliminar** operador también hace que el destructor de clase (si hay alguno) que se llame.  
   
- Hay globales y de ámbito de clase **operador delete** funciones. Solo un **operador delete** función se puede definir para una clase dada; si se define, oculta la información global de **operador delete** función. Global **operador delete** siempre se llama la función de las matrices de cualquier tipo.  
+ Hay globales y de ámbito de clase **operador delete** funciones. Solo un **operador delete** función se puede definir para una clase dada; si se define, oculta la información global **operador delete** función. Global **operador delete** siempre se llama a las matrices de cualquier tipo de función.  
   
- Global **operador delete** función. Hay dos formas para global **operador delete** y miembros de clase **operador delete** funciones:  
+ Global **operador delete** función. Hay dos formas para global **operador delete** y miembro de clase **operador delete** funciones:  
   
 ```cpp  
 void operator delete( void * );  
 void operator delete( void *, size_t );  
 ```  
   
- Solo una de las dos formas anteriores puede estar presente para una clase determinada. La primera forma toma un solo argumento de tipo **void \*** , que contiene un puntero al objeto que se va a desasignar. El segundo formulario: desasignación de tamaño: toma dos argumentos, el primero de los cuales es un puntero al bloque de memoria para cancelar la asignación y el segundo de los cuales es el número de bytes que se va a desasignar. Es el tipo de valor devuelto de ambas formas `void` (**operador delete** no puede devolver un valor).  
+ Solo una de las dos formas anteriores puede estar presente para una clase determinada. El primer formulario toma un único argumento de tipo **void \*** , que contiene un puntero para el objeto que se va a desasignar. La segunda forma, desasignación de tamaño: toma dos argumentos, el primero de ellos es un puntero al bloque de memoria para desasignar y el segundo de los cuales es el número de bytes que se desasigne. Es el tipo de valor devuelto de ambas formas **void** (**operador delete** no puede devolver un valor).  
   
- El propósito de la segunda forma es acelerar la búsqueda de la categoría de tamaño correcto del objeto que se puede eliminar, que a menudo no se almacenan unos junto a la asignación de sí mismo y probablemente sin almacenar en caché; la segunda forma es especialmente útil cuando un **operador delete** función de una clase base se utiliza para eliminar un objeto de una clase derivada.  
+ La intención de la segunda forma es aumentar la velocidad de búsqueda de la categoría de tamaño correcto del objeto que se va a eliminar, que a menudo no se almacena junto a la asignación de sí mismo y probablemente no almacenado en caché; la segunda forma es especialmente útil cuando un **operador delete** función de una clase base se usa para eliminar un objeto de una clase derivada.  
   
- El **operador delete** función es estática; por lo tanto, no puede ser virtual. El `operator delete` función obedece el control de acceso, como se describe en [Control de acceso a miembros](../cpp/member-access-control-cpp.md).  
+ El **operador delete** función es estática; por lo tanto, no puede ser virtual. El `operator delete` función obedece el control de acceso, como se describe en [Control de acceso de miembro](../cpp/member-access-control-cpp.md).  
   
- En el ejemplo siguiente se muestra definido por el usuario **new (operador)** y **operador delete** funciones diseñadas para registrar asignaciones y desasignaciones de memoria:  
+ El ejemplo siguiente se muestra definido por el usuario **new (operador)** y **operador delete** funciones diseñadas para registrar asignaciones y desasignaciones de memoria:  
   
 ```cpp  
 // spec1_the_operator_delete_function1.cpp  
@@ -209,7 +209,7 @@ int main( int argc, char *argv[] ) {
 }  
 ```  
   
- El código anterior se puede utilizar para detectar "pérdidas de memoria", es decir, la memoria que se asigna en el almacén libre pero que nunca se libera. Para realizar esta detección, la información global de **nueva** y **eliminar** se volvió a definir operadores para determinar la asignación y desasignación de memoria.  
+ El código anterior se puede utilizar para detectar "pérdidas de memoria", es decir, la memoria que se asigna en el almacén libre pero que nunca se libera. Para realizar esta detección, global **nueva** y **eliminar** se vuelven a definir operadores para la asignación y desasignación de memoria.  
   
  A partir de Visual C++ 5.0, el compilador admite la matriz de miembros **nueva** y **eliminar** operadores en una declaración de clase. Por ejemplo:  
   

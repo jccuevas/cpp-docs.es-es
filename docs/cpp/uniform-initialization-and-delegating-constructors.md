@@ -1,5 +1,5 @@
 ---
-title: Uniforme de inicialización y constructores que delegan | Documentos de Microsoft
+title: Uniforme de inicialización y constructores de delegación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423527"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939837"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inicialización uniforme y constructores de delegación
 En C++ moderno, puede usar *la inicialización de llave* para cualquier tipo, sin el signo igual. Además, se puede utilizar la delegación de constructores para simplificar el código cuando hay varios constructores que realizan un trabajo similar.  
@@ -91,7 +91,7 @@ int main()
 }  
 ```  
   
- Puede utilizar la inicialización de llave en cualquier parte donde realizaría normalmente la inicialización, por ejemplo, como un parámetro de función o un valor devuelto, o con la palabra clave `new`:  
+ Puede usar la inicialización de llave en cualquier parte se suele realizar la inicialización, por ejemplo, como un parámetro de función o un valor devuelto, o con el **nuevo** palabra clave:  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -101,14 +101,14 @@ return { 4.5 };
 ```  
   
 ## <a name="initializerlist-constructors"></a>Constructores initializer_list  
- El [initializer_list (clase)](../standard-library/initializer-list-class.md) representa una lista de objetos de un tipo especificado que puede usarse en un constructor y en otros contextos. Puede construir initializer_list mediante la inicialización de llave:  
+ El [initializer_list (clase)](../standard-library/initializer-list-class.md) representa una lista de objetos de un tipo especificado que se puede usar en un constructor y en otros contextos. Puede construir initializer_list mediante la inicialización de llave:  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
 ```  
   
 > [!IMPORTANT]
->  Para utilizar esta clase, debe incluir el [< initializer_list >](../standard-library/initializer-list.md) encabezado.  
+>  Para usar esta clase, se debe incluir el [< initializer_list >](../standard-library/initializer-list.md) encabezado.  
   
  `initializer_list` puede copiarse. En este caso, los miembros de la nueva lista son referencias a los miembros de la lista original:  
   

@@ -1,5 +1,5 @@
 ---
-title: Clase CSnapInPropertyPageImpl | Documentos de Microsoft
+title: CSnapInPropertyPageImpl (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,18 +35,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13714553bdf926b00bd4dd76e039d89c7f78f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56a57d3fe0eb1a016af9eee8539cd7f57a12ddf5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366148"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880565"
 ---
-# <a name="csnapinpropertypageimpl-class"></a>Clase CSnapInPropertyPageImpl
-Esta clase proporciona métodos para implementar un objeto de página de propiedades del complemento.  
+# <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl (clase)
+Esta clase proporciona métodos para implementar un objeto de la página de propiedades del complemento.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -68,15 +68,15 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 |----------|-----------------|  
 |[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|Cambia el estado de la **Aceptar** y **cancelar** botones.|  
 |[CSnapInPropertyPageImpl::Create](#create)|Inicializa un recién creado `CSnapInPropertyPageImpl` objeto.|  
-|[CSnapInPropertyPageImpl::OnApply](#onapply)|Lo llama el marco cuando el usuario hace clic en el **aplicar ahora** botón durante el uso de una hoja de propiedades de tipo de asistente.|  
-|[CSnapInPropertyPageImpl::OnHelp](#onhelp)|Lo llama el marco cuando el usuario hace clic en el **ayuda** botón durante el uso de una hoja de propiedades de tipo de asistente.|  
-|[CSnapInPropertyPageImpl::OnKillActive](#onkillactive)|Llamado por el marco de trabajo cuando la página actual ya no está activa.|  
-|[CSnapInPropertyPageImpl::OnQueryCancel](#onquerycancel)|Lo llama el marco cuando el usuario hace clic en el **cancelar** botón y antes de que la cancelación ha llevado a cabo.|  
-|[CSnapInPropertyPageImpl::OnReset](#onreset)|Lo llama el marco cuando el usuario hace clic en el **restablecer** botón durante el uso de una hoja de propiedades de tipo de asistente.|  
-|[CSnapInPropertyPageImpl::OnSetActive](#onsetactive)|Lo llama el marco cuando se activa la página actual.|  
-|[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|Lo llama el marco cuando el usuario hace clic en el **volver** botón durante el uso de una hoja de propiedades de tipo de asistente.|  
-|[CSnapInPropertyPageImpl::OnWizardFinish](#onwizardfinish)|Lo llama el marco cuando el usuario hace clic en el **finalizar** botón durante el uso de una hoja de propiedades de tipo de asistente.|  
-|[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|Lo llama el marco cuando el usuario hace clic en el `Next` botón durante el uso de una hoja de propiedades de tipo de asistente.|  
+|[CSnapInPropertyPageImpl::OnApply](#onapply)|Lo llama el marco cuando el usuario hace clic en el **aplicar ahora** botón mientras usa una hoja de propiedades de tipo asistente.|  
+|[CSnapInPropertyPageImpl::OnHelp](#onhelp)|Lo llama el marco cuando el usuario hace clic en el **ayuda** botón mientras usa una hoja de propiedades de tipo asistente.|  
+|[CSnapInPropertyPageImpl::OnKillActive](#onkillactive)|Lo llama el marco de trabajo cuando la página actual ya no está activa.|  
+|[CSnapInPropertyPageImpl::OnQueryCancel](#onquerycancel)|Lo llama el marco cuando el usuario hace clic en el **cancelar** botón y antes de que la cancelación ha tenido lugar.|  
+|[CSnapInPropertyPageImpl::OnReset](#onreset)|Lo llama el marco cuando el usuario hace clic en el **restablecer** botón mientras usa una hoja de propiedades de tipo asistente.|  
+|[CSnapInPropertyPageImpl::OnSetActive](#onsetactive)|Lo llama el marco de trabajo cuando se activa la página actual.|  
+|[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|Lo llama el marco cuando el usuario hace clic en el **volver** botón mientras usa una hoja de propiedades de tipo asistente.|  
+|[CSnapInPropertyPageImpl::OnWizardFinish](#onwizardfinish)|Lo llama el marco cuando el usuario hace clic en el **finalizar** botón mientras usa una hoja de propiedades de tipo asistente.|  
+|[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|Lo llama el marco cuando el usuario hace clic en el **siguiente** botón mientras usa una hoja de propiedades de tipo asistente.|  
 |[CSnapInPropertyPageImpl::QuerySiblings](#querysiblings)|Reenvía el mensaje actual para todas las páginas de la hoja de propiedades.|  
 |[CSnapInPropertyPageImpl::SetModified](#setmodified)|Llamada a activar o desactivar el **aplicar ahora** botón.|  
   
@@ -84,10 +84,10 @@ CSnapInPropertyPageImpl : public CDialogImplBase
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CSnapInPropertyPageImpl::m_psp](#m_psp)|Las ventanas **PROPSHEETPAGE** estructura usada por la `CSnapInPropertyPageImpl` objeto.|  
+|[CSnapInPropertyPageImpl::m_psp](#m_psp)|El Windows `PROPSHEETPAGE` estructura utilizada por el `CSnapInPropertyPageImpl` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CSnapInPropertyPageImpl` Proporciona una implementación básica de un objeto de página de propiedades del complemento. Las características básicas de una página de propiedades del complemento se implementan mediante varias interfaces distintas y asignan los tipos.  
+ `CSnapInPropertyPageImpl` Proporciona una implementación básica de un objeto de la página de propiedades del complemento. Las características básicas de una página de propiedades del complemento se implementan mediante varias interfaces distintas y asignan los tipos.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CDialogImplBase`  
@@ -98,16 +98,16 @@ CSnapInPropertyPageImpl : public CDialogImplBase
  **Encabezado:** atlsnap.h  
   
 ##  <a name="canceltoclose"></a>  CSnapInPropertyPageImpl::CancelToClose  
- Llame a esta función después de que se ha realizado un cambio irrecuperable a los datos en una página de una hoja de propiedades modales.  
+ Llame a esta función después de que se ha realizado un cambio irrecuperable a los datos en una página de una hoja de propiedades modal.  
   
 ```
 void CancelToClose();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función se cambiará la **Aceptar** botón a **cerrar** y deshabilitar la **cancelar** botón. Este cambio no se puede cancelar el usuario que un cambio es permanente y las modificaciones de las alertas.  
+ Esta función se cambiará el **Aceptar** botón a **cerrar** y deshabilitar el **cancelar** botón. Este cambio no se puede cancelar el usuario que un cambio es permanente y las modificaciones de las alertas.  
   
- El `CancelToClose` función miembro no hace nada en una hoja de propiedades no modales, porque no tiene una hoja de propiedades no modal un **cancelar** botón de forma predeterminada.  
+ El `CancelToClose` función miembro no hace nada en una hoja de propiedades no modal, porque no tiene una hoja de propiedades no modal un **cancelar** botón de forma predeterminada.  
   
 ##  <a name="csnapinpropertypageimpl"></a>  CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
  Construye un objeto `CSnapInPropertyPageImpl`.  
@@ -117,7 +117,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszTitle`  
+ *lpszTitle*  
  [in] El título de la página de propiedades.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -131,13 +131,13 @@ HPROPSHEETPAGE Create();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un identificador de un **PROPSHEETPAGE** estructura que contiene los atributos de la hoja de propiedades recién creado.  
+ Un identificador para un `PROPSHEETPAGE` estructura que contiene los atributos de la hoja de propiedades recién creado.  
   
 ### <a name="remarks"></a>Comentarios  
  Primero debe llamar a [CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl) antes de llamar a esta función.  
   
 ##  <a name="m_psp"></a>  CSnapInPropertyPageImpl::m_psp  
- `m_psp` es una estructura cuyos miembros almacenan las características de **PROPSHEETPAGE**.  
+ `m_psp` es una estructura cuyos miembros almacenan las características de `PROPSHEETPAGE`.  
   
 ```
 PROPSHEETPAGE m_psp;
@@ -156,14 +156,14 @@ BOOL OnApply();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se aceptan los cambios; en caso contrario es 0.  
+ Distinto de cero si se aceptan los cambios; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Antes de `OnApply` puede llamarse mediante el marco de trabajo, debe haber llamado `SetModified` y establece su parámetro en **TRUE**. Esto activará la **aplicar ahora** botón tan pronto como el usuario realiza un cambio en la página de propiedades.  
+ Antes de `OnApply` se puede llamar el marco de trabajo, debe haber llamado `SetModified` y establezca su parámetro en TRUE. Esto activará el **aplicar ahora** botón tan pronto como el usuario realiza un cambio en la página de propiedades.  
   
- Reemplace esta función miembro para especificar la acción realizada por el programa cuando el usuario hace clic en el **aplicar ahora** botón. Al reemplazar el método, la función debe devolver **TRUE** para aceptar los cambios y **FALSE** para impedir que los cambios surten efecto.  
+ Reemplace esta función miembro para especificar qué acción realizada por el programa cuando el usuario hace clic en el **aplicar ahora** botón. Cuando se reemplaza, la función debe devolver TRUE para aceptar los cambios y FALSE para impedir que los cambios surtan efecto.  
   
- La implementación predeterminada de `OnApply` devuelve **TRUE**.  
+ La implementación predeterminada de `OnApply` devuelve TRUE.  
   
 ##  <a name="onhelp"></a>  CSnapInPropertyPageImpl::OnHelp  
  Esta función miembro se llama cuando el usuario hace clic en el **ayuda** botón de la página de propiedades.  
@@ -183,25 +183,25 @@ BOOL OnKillActive();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si los datos se actualizan correctamente; en caso contrario es 0.  
+ Distinto de cero si los datos se actualizan correctamente; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función miembro para llevar a cabo las tareas de validación de datos especiales.  
   
 ##  <a name="onquerycancel"></a>  CSnapInPropertyPageImpl::OnQueryCancel  
- Esta función miembro se llama cuando el usuario hace clic en el **cancelar** botón y antes de cancelar la acción ha tenido lugar.  
+ Esta función miembro se llama cuando el usuario hace clic en el **cancelar** botón y antes de la cancelación ha tomado una acción.  
   
 ```
 BOOL OnQueryCancel();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero para permitir que la operación de cancelación; en caso contrario es 0.  
+ Distinto de cero para permitir que la operación de cancelación; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función miembro para especificar una acción realizada por el programa cuando el usuario hace clic en el **cancelar** botón.  
   
- La implementación predeterminada de `OnQueryCancel` devuelve **TRUE**.  
+ La implementación predeterminada de `OnQueryCancel` devuelve TRUE.  
   
 ##  <a name="onreset"></a>  CSnapInPropertyPageImpl::OnReset  
  Esta función miembro se llama cuando el usuario hace clic en el **cancelar** botón.  
@@ -211,24 +211,24 @@ void OnReset();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando se llama a esta función, cambia a todas las páginas de propiedades que se han realizado por el usuario anteriormente al hacer clic en el **aplicar ahora** botón se descartan y la hoja de propiedades conserva el foco.  
+ Cuando se llama a esta función, los cambios en todas las páginas de propiedades que se han realizado por el usuario anteriormente al hacer clic en el **aplicar ahora** botón se descartan y la hoja de propiedades conserva el foco.  
   
- Reemplace esta función miembro para especificar la acción realizada por el programa cuando el usuario hace clic en el **cancelar** botón.  
+ Reemplace esta función miembro para especificar qué acción realizada por el programa cuando el usuario hace clic en el **cancelar** botón.  
   
 ##  <a name="onsetactive"></a>  CSnapInPropertyPageImpl::OnSetActive  
- Esta función miembro se llama cuando la página elegida por el usuario y se convierte en la página activa.  
+ Esta función miembro se llama cuando la página se ha elegido por el usuario y se convierte en la página activa.  
   
 ```
 BOOL OnSetActive();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la página se estableció correctamente active; en caso contrario es 0.  
+ Distinto de cero si la página se estableció correctamente active; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Reemplace esta función miembro para llevar a cabo tareas cuando se activa una página. La invalidación de esta función miembro debe llamar a la versión predeterminada antes de realizar cualquier otro procesamiento.  
+ Reemplace esta función miembro para llevar a cabo las tareas cuando se activa una página. La invalidación de esta función miembro debe llamar a la versión predeterminada antes de realiza cualquier otro procesamiento.  
   
- La implementación predeterminada devuelve **TRUE**.  
+ La implementación predeterminada devuelve TRUE.  
   
 ##  <a name="onwizardback"></a>  CSnapInPropertyPageImpl::OnWizardBack  
  Esta función miembro se llama cuando el usuario hace clic en el **volver** botón en un asistente.  
@@ -239,11 +239,11 @@ BOOL OnWizardBack();
   
 ### <a name="return-value"></a>Valor devuelto  
   
--   0 para adelantar automáticamente a la página anterior.  
+-   0 para pasar automáticamente a la página anterior.  
   
--   -1 para evitar que se cambie la página.  
+-   -1 para impedir que cambien la página.  
   
- Para saltar a una página distinta a la siguiente, devolver el identificador del cuadro de diálogo que se mostrará.  
+ Para saltar a una página distinta de la siguiente, devolver el identificador del cuadro de diálogo que se mostrará.  
   
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función miembro para especificar alguna acción que debe realizar cuando el usuario la **volver** se hace clic en el botón.  
@@ -256,13 +256,13 @@ BOOL OnWizardFinish();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la hoja de propiedades se destruye cuando finalice el Asistente; cero en caso contrario.  
+ Distinto de cero si la hoja de propiedades se destruye cuando finalice el Asistente; en caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función miembro para especificar alguna acción que debe realizar cuando el usuario la **finalizar** se hace clic en el botón.  
   
 ##  <a name="onwizardnext"></a>  CSnapInPropertyPageImpl::OnWizardNext  
- Esta función miembro se llama cuando el usuario hace clic en el `Next` botón en un asistente.  
+ Esta función miembro se llama cuando el usuario hace clic en el **siguiente** botón en un asistente.  
   
 ```
 BOOL OnWizardNext();
@@ -270,14 +270,14 @@ BOOL OnWizardNext();
   
 ### <a name="return-value"></a>Valor devuelto  
   
--   0 para adelantar automáticamente a la página siguiente.  
+-   0 para pasar automáticamente a la página siguiente.  
   
--   -1 para evitar que se cambie la página.  
+-   -1 para impedir que cambien la página.  
   
- Para saltar a una página distinta a la siguiente, devolver el identificador del cuadro de diálogo que se mostrará.  
+ Para saltar a una página distinta de la siguiente, devolver el identificador del cuadro de diálogo que se mostrará.  
   
 ### <a name="remarks"></a>Comentarios  
- Reemplace esta función miembro para especificar alguna acción que debe realizar cuando el usuario la `Next` se hace clic en el botón.  
+ Reemplace esta función miembro para especificar alguna acción que debe realizar cuando el usuario la **siguiente** se hace clic en el botón.  
   
 ##  <a name="querysiblings"></a>  CSnapInPropertyPageImpl::QuerySiblings  
  Llame a esta función miembro para reenviar un mensaje a cada página en la hoja de propiedades.  
@@ -287,31 +287,31 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `wParam`  
- [in] Especifica información adicional de dependiente de mensaje.  
+ *wParam*  
+ [in] Especifica información adicional de dependiente del mensaje.  
   
- `lParam`  
- [in] Especifica información adicional de dependiente de mensaje.  
+ *lParam*  
+ [in] Especifica información adicional de dependiente del mensaje.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si no se debería reenviar el mensaje a la siguiente página de propiedades; cero en caso contrario.  
+ Distinto de cero si no se debe reenviar el mensaje a la siguiente página de propiedades; en caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Si una página devuelve un valor distinto de cero, la hoja de propiedades no envía el mensaje a las páginas siguientes.  
+ Si una página, devuelve un valor distinto de cero, la hoja de propiedades no envía el mensaje a las páginas siguientes.  
   
 ##  <a name="setmodified"></a>  CSnapInPropertyPageImpl::SetModified  
- Llame a esta función miembro para habilitar o deshabilitar la **aplicar ahora** botón, en función de si se debe aplicar la configuración en la página de propiedades para el objeto externo adecuado.  
+ Llame a esta función miembro para habilitar o deshabilitar la **aplicar ahora** botón, en función de si se debe aplicar la configuración en la página de propiedades en el objeto externo adecuado.  
   
 ```
 void SetModified(BOOL bChanged = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bChanged`  
- [in] **TRUE** para indicar que la configuración de la página de propiedades se han modificado desde la última vez que fueron aplicadas; **FALSE** para indicar que la configuración de la página de propiedades se han aplicado o debe omitirse.  
+ *bChanged*  
+ [in] TRUE para indicar que la configuración de la página de propiedades se han modificado desde la última vez que se aplicaron; FALSE para indicar que la configuración de la página de propiedades se han aplicado o que debe omitirse.  
   
 ### <a name="remarks"></a>Comentarios  
- La hoja de propiedades mantiene el seguimiento de los cuales páginas son "modificadas", es decir, páginas de propiedades para el que se llamó a **SetModified (TRUE)**. El **aplicar ahora** botón siempre estará habilitado si se llama a **SetModified (TRUE)** para una de las páginas. El **aplicar ahora** botón se deshabilitará cuando se llama a **SetModified (FALSE)** para una de las páginas, pero solo si ninguna de las otras páginas es "sucias".  
+ La hoja de propiedades realiza el seguimiento de las páginas son "sucios", es decir, páginas de propiedades para el que ha llamado `SetModified( TRUE )`. El **aplicar ahora** botón siempre estará habilitado si se llama a `SetModified( TRUE )` para una de las páginas. El **aplicar ahora** botón se deshabilitará cuando se llama a `SetModified( FALSE )` para una de las páginas, pero sólo si ninguna de las otras páginas está "sucio".  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)

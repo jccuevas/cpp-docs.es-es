@@ -1,5 +1,5 @@
 ---
-title: Instrucciones de iteración (C++) | Documentos de Microsoft
+title: Instrucciones de iteración (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1973223d6aab44d4c5d8652111d3e6b8251676fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8f2853189d6b31b2f3b4e371f3583d3abb6f165
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418918"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939434"
 ---
 # <a name="iteration-statements-c"></a>Instrucciones de iteración (C++)
-Las instrucciones de iteración producen instrucciones (o instrucciones compuestas) que se ejecutarán cero o más veces, según determinados criterios de la finalización de bucle. Cuando estas instrucciones son instrucciones compuestas, se ejecutan en orden, excepto cuando ya sea el [salto](../cpp/break-statement-cpp.md) instrucción o [continuar](../cpp/continue-statement-cpp.md) se encuentra la instrucción.  
+Las instrucciones de iteración producen instrucciones (o instrucciones compuestas) que se ejecutarán cero o más veces, según determinados criterios de la finalización de bucle. Cuando estas instrucciones son instrucciones compuestas, se ejecutan en orden, excepto cuando ya sea el [salto](../cpp/break-statement-cpp.md) instrucción o el [continuar](../cpp/continue-statement-cpp.md) se encuentra la instrucción.  
   
- C++ proporciona cuatro instrucciones de iteración: [mientras](../cpp/while-statement-cpp.md), [hacer](../cpp/do-while-statement-cpp.md), [para](../cpp/for-statement-cpp.md), y [basado en intervalo para](../cpp/range-based-for-statement-cpp.md). Cada una de ellas se repite hasta que la expresión de finalización se evalúa como cero (false), o hasta que se fuerza la finalización de bucle con un **salto** instrucción. En la tabla siguiente se resumen estas instrucciones y sus acciones; cada una se explica detalladamente en las secciones siguientes.  
+ C++ proporciona cuatro instrucciones de iteración: [mientras](../cpp/while-statement-cpp.md), [hacer](../cpp/do-while-statement-cpp.md), [para](../cpp/for-statement-cpp.md), y [basada en intervalo para](../cpp/range-based-for-statement-cpp.md). Cada uno de estos se repite hasta que la expresión de finalización se evalúa como cero (false), o hasta que se fuerza la finalización de bucle con un **salto** instrucción. En la tabla siguiente se resumen estas instrucciones y sus acciones; cada una se explica detalladamente en las secciones siguientes.  
   
 ### <a name="iteration-statements"></a>Instrucciones de iteración  
   
 |Instrucción|Se evalúa en|Inicialización|Incremento|  
 |---------------|------------------|--------------------|---------------|  
-|`while`|Principio del bucle|No|No|  
+|**while**|Principio del bucle|No|No|  
 |**do**|Final del bucle|No|No|  
 |**for**|Principio del bucle|Sí|Sí|  
-|**basado en intervalo para**|Principio del bucle|Sí|Sí|  
+|**en función de rangos para**|Principio del bucle|Sí|Sí|  
   
  La parte de instrucción de una instrucción de iteración no puede ser una declaración. Sin embargo, puede ser una instrucción compuesta que contenga una declaración.  
   

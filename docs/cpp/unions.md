@@ -1,5 +1,5 @@
 ---
-title: Uniones | Documentos de Microsoft
+title: Uniones | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066f7c50940e6c68bb0fca554bb3bc56fc20b93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425704"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939214"
 ---
 # <a name="unions"></a>Uniones
-`union` es un tipo definido por el usuario en el que todos los miembros comparten la misma ubicación de memoria. Esto significa que, en un momento dado, una unión no puede contener más de un objeto de su lista de miembros. También significa que, independientemente de cuántos miembros tiene una unión, en todo momento usa únicamente la memoria suficiente para almacenar al miembro más grande.  
+Un **unión** es un tipo definido por el usuario en el que todos los miembros comparten la misma ubicación de memoria. Esto significa que, en un momento dado, una unión no puede contener más de un objeto de su lista de miembros. También significa que, independientemente de cuántos miembros tiene una unión, en todo momento usa únicamente la memoria suficiente para almacenar al miembro más grande.  
   
  Las uniones pueden ser útiles para conservar memoria cuando se tienen muchos objetos y/o memoria limitada. Sin embargo, debe extremar las precauciones para usarlas correctamente, ya que es el responsable de garantizar que accede siempre al último miembro que se escribió. Si los tipos de miembro tienen un constructor no trivial, debe escribir código adicional para construir y destruir ese miembro explícitamente. Antes de usar una unión, considere si el problema que intenta resolver se puede expresar mejor usando una clase base y clases derivadas.  
   
@@ -36,16 +36,16 @@ union [name]  { member-list };
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `name`  
+ *name*  
  Nombre del tipo dado a la unión.  
   
- `member-list`  
+ *lista de miembros*  
  Miembros que puede contener la unión. Vea la sección Comentarios.  
   
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="declaring-a-union"></a>Declarar una unión  
- Comience la declaración de una unión con la palabra clave `union` y agregue la lista de miembros entre llaves:  
+ Comience la declaración de una unión con la **unión** palabra clave y agregue la lista de miembros entre llaves:  
   
 ```cpp  
 // declaring_a_union.cpp  
@@ -67,7 +67,7 @@ int main()
 ```  
   
 ## <a name="using-unions"></a>Usar uniones  
- En el ejemplo anterior, el código que acceda a la unión debe saber qué miembro mantiene los datos. La solución más común a este problema es incluir la unión en una estructura junto con un miembro de enumeración adicional que indica el tipo de datos almacenados actualmente en la unión. Esto se denomina una *unión discriminada* y en el ejemplo siguiente se muestra el patrón básico.  
+ En el ejemplo anterior, el código que acceda a la unión debe saber qué miembro mantiene los datos. La solución más común a este problema es incluir la unión en una estructura junto con un miembro de enumeración adicional que indica el tipo de datos almacenados actualmente en la unión. Esto se denomina un *unión discriminada* y en el ejemplo siguiente se muestra el patrón básico.  
   
 ```cpp  
 #include "stdafx.h"  
@@ -642,7 +642,7 @@ int main()
 Almacenamiento de datos en unión de tipo numérico  
   
 ## <a name="anonymous_unions"></a> Uniones anónimas  
- Uniones anónimas son uniones declaradas sin un *nombre de la clase* o *lista de declaradores*.  
+ Las uniones anónimas son uniones declaradas sin un *nombre de la clase* o *declarator-list*.  
   
 ```cpp  
 union  {  member-list  }    
@@ -652,7 +652,7 @@ Los nombres declarados en una unión anónima se utilizan directamente, como las
   
 Además de las restricciones de uniones con nombre, las uniones anónimas están sujetas a estas restricciones adicionales:  
   
--   También se deben declarar como **estático** si se declaran en el ámbito de archivo o espacio de nombres.  
+-   También se debe declarar como **estático** si se declaran en el ámbito de archivo o espacio de nombres.  
   
 -   Solo pueden tener miembros públicos; los miembros privados y protegidos de uniones anónimas generan errores.  
   

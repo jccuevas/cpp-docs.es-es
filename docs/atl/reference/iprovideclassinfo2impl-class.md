@@ -1,5 +1,5 @@
 ---
-title: Clase IProvideClassInfo2Impl | Documentos de Microsoft
+title: Clase IProvideClassInfo2Impl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a970b0258c8d353dabad96d712598416caf2acb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7e0bd440e2e4bd8d32525fe4be6aaad2c401f6a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361350"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880627"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Clase IProvideClassInfo2Impl
 Esta clase proporciona una implementación predeterminada de la [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) y [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) métodos.  
@@ -49,19 +49,19 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
  Un puntero al identificador de la coclase.  
   
  *psrcid*  
- Un puntero al identificador del valor predeterminado de la coclase dispinterface de salida.  
+ Un puntero al identificador de la predeterminada de la coclase dispinterface de salida.  
   
- `plibid`  
+ *plibid*  
  Un puntero a LIBID de la biblioteca de tipos que contiene información acerca de la interfaz. De forma predeterminada, se pasa la biblioteca de tipos de nivel de servidor.  
   
- `wMajor`  
+ *wMajor*  
  La versión principal de la biblioteca de tipos. El valor predeterminado es 1.  
   
- `wMinor`  
+ *wMinor*  
  La versión secundaria de la biblioteca de tipos. El valor predeterminado es 0.  
   
- `tihclass`  
- La clase utilizada para administrar la información de tipo de la coclase. El valor predeterminado es `CComTypeInfoHolder`.  
+ *tihclass*  
+ La clase usada para administrar la información de tipo de la coclase. El valor predeterminado es `CComTypeInfoHolder`.  
   
 ## <a name="members"></a>Miembros  
   
@@ -75,8 +75,8 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Recupera un **ITypeInfo** puntero a la información de tipo de la coclase.|  
-|[IProvideClassInfo2Impl::GetGUID](#getguid)|Recupera el GUID de dispinterface saliente del objeto.|  
+|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Recupera un `ITypeInfo` puntero a la información de tipo de la coclase.|  
+|[IProvideClassInfo2Impl::GetGUID](#getguid)|Recupera el GUID para la dispinterface saliente del objeto.|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 |[IProvideClassInfo2Impl::_tih](#_tih)|Administra la información de tipo de la coclase.|  
   
 ## <a name="remarks"></a>Comentarios  
- El [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) interfaz extiende [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) agregando el `GetGUID` método. Este método permite que un cliente recupere la interfaz de salida de un objeto IID para su conjunto de eventos de forma predeterminada. Clase `IProvideClassInfo2Impl` proporciona una implementación predeterminada de la **IProvideClassInfo** y `IProvideClassInfo2` métodos.  
+ El [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) interfaz extiende [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) agregando el `GetGUID` método. Este método permite que un cliente recuperar la interfaz de salida de un objeto IID para su conjunto de eventos de forma predeterminada. Clase `IProvideClassInfo2Impl` proporciona una implementación predeterminada de la `IProvideClassInfo` y `IProvideClassInfo2` métodos.  
   
  `IProvideClassInfo2Impl` contiene un miembro estático del tipo `CComTypeInfoHolder` que administra la información de tipo de la coclase.  
   
@@ -105,10 +105,10 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) en el SDK de Windows.  
+ Consulte [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) en el SDK de Windows.  
   
 ##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
- Recupera el GUID de dispinterface saliente del objeto.  
+ Recupera el GUID para la dispinterface saliente del objeto.  
   
 ```
 STDMETHOD(GetGUID)(
@@ -117,7 +117,7 @@ STDMETHOD(GetGUID)(
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) en el SDK de Windows.  
+ Consulte [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) en el SDK de Windows.  
   
 ##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  El constructor.  
@@ -127,10 +127,10 @@ IProvideClassInfo2Impl();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Llamadas `AddRef` en el [_tih](#_tih) miembro. El destructor llama **versión**.  
+ Las llamadas `AddRef` en el [_tih](#_tih) miembro. El destructor llama a `Release`.  
   
 ##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih  
- Este miembro de datos estático es una instancia del parámetro de plantilla de clase, `tihclass`, cuyo valor predeterminado es `CComTypeInfoHolder`.  
+ Este miembro de datos estático es una instancia del parámetro de plantilla de clase, *tihclass*, cuyo valor predeterminado es `CComTypeInfoHolder`.  
   
 ```
 static  tihclass
@@ -138,7 +138,7 @@ static  tihclass
 ```     
   
 ### <a name="remarks"></a>Comentarios  
- `_tih` Administra la información de tipo de la coclase.  
+ `_tih` administra la información de tipo de la coclase.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)

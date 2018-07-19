@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d027f2c1e9d8f5d4172fd3deff179d9ec8336baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 18332f0c5d452c04079ff68bebbbdae19c4ed0d5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853406"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953884"
 ---
 # <a name="removeallextents-class"></a>remove_all_extents (Clase)
 
@@ -40,11 +40,11 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` Tipo que se va a modificar.
+*T* el tipo de modificación.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia de `remove_all_extents<T>` contiene un tipo modificado que es el tipo de elemento del tipo de matriz `T` al que se han quitado todas las dimensiones de matriz, o `T` si `T` no es un tipo de matriz.
+Una instancia de `remove_all_extents<T>` contiene un tipo modificado que es el tipo de elemento del tipo de matriz *T* con todas las dimensiones de matriz quitadas, o *T* si *T* no es un tipo de matriz.
 
 ## <a name="example"></a>Ejemplo
 

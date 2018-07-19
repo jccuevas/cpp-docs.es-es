@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t (clase) | Documentos de Microsoft
+title: _com_ptr_t (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ec54735fce39cc54bdb5e396da7c637b889b92c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944222"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t (Clase)
 **Específicos de Microsoft**  
   
- Un objeto `_com_ptr_t` encapsula un puntero de interfaz COM y se denomina puntero “inteligente”. Esta clase de plantilla administra la asignación de recursos y la desasignación con llamadas de función a la **IUnknown** funciones miembro: `QueryInterface`, `AddRef`, y **versión**.  
+ Un objeto `_com_ptr_t` encapsula un puntero de interfaz COM y se denomina puntero “inteligente”. Esta clase de plantilla administra la asignación de recursos y la desasignación con llamadas de función para la `IUnknown` funciones miembro: `QueryInterface`, `AddRef`, y `Release`.  
   
- Normalmente se hace referencia a un puntero inteligente por la definición typedef proporcionada por el **_COM_SMARTPTR_TYPEDEF** macro. Esta macro toma un nombre de interfaz y el IID, y declara una especialización de `_com_ptr_t` con el nombre de la interfaz más un sufijo de `Ptr`. Por ejemplo:  
+ Normalmente, la definición typedef proporcionada por la macro _COM_SMARTPTR_TYPEDEF hace referencia a un puntero inteligente. Esta macro toma un nombre de interfaz y el IID, y declara una especialización de `_com_ptr_t` con el nombre de la interfaz más un sufijo de `Ptr`. Por ejemplo:  
   
-```  
+```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- declara el `_com_ptr_t` especialización **IMyInterfacePtr**.  
+ declara el `_com_ptr_t` especialización `IMyInterfacePtr`.  
   
  Un conjunto de [plantillas de función](../cpp/relational-function-templates.md), no los miembros de esta plantilla de clase, admite las comparaciones con un puntero inteligente en el lado derecho del operador de comparación.  
   
@@ -47,21 +48,21 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[AddRef](../cpp/com-ptr-t-addref.md)|Llamadas a la `AddRef` función miembro de **IUnknown** en el puntero de interfaz encapsulado.|  
+|[AddRef](../cpp/com-ptr-t-addref.md)|Las llamadas del `AddRef` función miembro de `IUnknown` en el puntero de interfaz encapsulado.|  
 |[Asociar](../cpp/com-ptr-t-attach.md)|Encapsula un puntero de interfaz sin formato del tipo de este puntero inteligente.|  
-|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Crea una nueva instancia de un objeto, dado un **CLSID** o **ProgID**.|  
+|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Crea una nueva instancia de un objeto, dado un `CLSID` o `ProgID`.|  
 |[Desasociar](../cpp/com-ptr-t-detach.md)|Extrae y devuelve el puntero de interfaz encapsulado.|  
-|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|Se asocia a una instancia existente de un objeto, dado un **CLSID** o **ProgID**.|  
+|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|Se asocia a una instancia existente de un objeto dada una `CLSID` o `ProgID`.|  
 |[GetInterfacePtr](../cpp/com-ptr-t-getinterfaceptr.md)|Devuelve el puntero de interfaz encapsulado.|  
-|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Llamadas a la `QueryInterface` función miembro de **IUnknown** en el puntero de interfaz encapsulado.|  
-|[Release](../cpp/com-ptr-t-release.md)|Llamadas a la **versión** función miembro de **IUnknown** en el puntero de interfaz encapsulado.|  
+|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Las llamadas del `QueryInterface` función miembro de `IUnknown` en el puntero de interfaz encapsulado.|  
+|[Release](../cpp/com-ptr-t-release.md)|Las llamadas del `Release` función miembro de `IUnknown` en el puntero de interfaz encapsulado.|  
   
 ### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
 |[operador =](../cpp/com-ptr-t-operator-equal.md)|Asigna un nuevo valor a un objeto `_com_ptr_t` existente.|  
-|[los operadores ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Compara el objeto de puntero inteligente con otro puntero inteligente, puntero de interfaz sin formato, o **NULL**.|  
+|[los operadores ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Comparar el objeto de puntero inteligente a otro puntero inteligente, puntero de interfaz sin formato, o NULL.|  
 |[Extractores de datos](../cpp/com-ptr-t-extractors.md)|Extrae el puntero de interfaz COM encapsulado.|  
   
 **FIN de Específicos de Microsoft**  

@@ -1,5 +1,5 @@
 ---
-title: _com_error::Description | Documentos de Microsoft
+title: _com_error::Description | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df1fb3a8ca600b888e5d6f2c51fc44fda17dd27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4be038bff05ce7a37b09ec3b3c61572635747864
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414264"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939902"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
 **Específicos de Microsoft**  
   
- Llamadas **IErrorInfo:: GetDescription** función.  
+ Llama a la función `IErrorInfo::GetDescription`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,10 +37,10 @@ _bstr_t Description( ) const;
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve el resultado de **IErrorInfo:: GetDescription** para el **IErrorInfo** objeto registrado dentro del `_com_error` objeto. El `BSTR` resultante se encapsula en un objeto `_bstr_t`. Si no hay ningún **IErrorInfo** está registrado, devuelve una instancia vacía `_bstr_t`.  
+ Devuelve el resultado de `IErrorInfo::GetDescription` para el `IErrorInfo` objeto grabado dentro del `_com_error` objeto. El `BSTR` resultante se encapsula en un objeto `_bstr_t`. Si no hay ningún `IErrorInfo` está registrado, devuelve un valor vacío `_bstr_t`.  
   
 ## <a name="remarks"></a>Comentarios  
- Llamadas el **IErrorInfo:: GetDescription** función y recupera **IErrorInfo** registrado dentro del `_com_error` objeto. Cualquier error al llamar a la **IErrorInfo:: GetDescription** método se pasa por alto.  
+ Llama a la `IErrorInfo::GetDescription` función y recupera `IErrorInfo` grabado dentro del `_com_error` objeto. Cualquier error durante la llamada a la `IErrorInfo::GetDescription` se omite el método.  
   
  **FIN de Específicos de Microsoft**  
   

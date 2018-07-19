@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonStatusBar | Documentos de Microsoft
+title: CMFCRibbonStatusBar (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -60,15 +60,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 256dbd6978b2d25cebb8496b6aa71763356f3637
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e82f22861016f5046cde1fa3a37889c994f111c8
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038108"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852466"
 ---
-# <a name="cmfcribbonstatusbar-class"></a>Clase CMFCRibbonStatusBar
-La `CMFCRibbonStatusBar` clase implementa un control de barra de estado que puede mostrar los elementos de la cinta de opciones.  
+# <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar (clase)
+La `CMFCRibbonStatusBar` clase implementa un control de barra de estado que se puede mostrar los elementos de la cinta de opciones.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -84,41 +84,41 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 |----------|-----------------|  
 |[CMFCRibbonStatusBar::AddDynamicElement](#adddynamicelement)|Agrega un elemento dinámico a la barra de estado de la cinta de opciones.|  
 |[CMFCRibbonStatusBar::AddElement](#addelement)|Agrega un nuevo elemento de la cinta de opciones en la barra de estado de la cinta de opciones.|  
-|[CMFCRibbonStatusBar::AddExtendedElement](#addextendedelement)|Agrega un elemento de la cinta de opciones en el área extendida de la barra de estado de la cinta de opciones.|  
+|[CMFCRibbonStatusBar::AddExtendedElement](#addextendedelement)|Agrega un elemento de la cinta de opciones para el área extendida de la barra de estado de la cinta de opciones.|  
 |[CMFCRibbonStatusBar::AddSeparator](#addseparator)|Agrega un separador en la barra de estado de la cinta de opciones.|  
 |[CMFCRibbonStatusBar::Create](#create)|Crea una barra de estado de la cinta de opciones.|  
 |[CMFCRibbonStatusBar::CreateEx](#createex)|Crea una barra de estado de la cinta de opciones con un estilo extendido.|  
 |[CMFCRibbonStatusBar::FindByID](#findbyid)||  
 |[CMFCRibbonStatusBar::FindElement](#findelement)|Devuelve un puntero al elemento que tiene el identificador de comando especificado.|  
 |[CMFCRibbonStatusBar::GetCount](#getcount)|Devuelve el número de elementos que se encuentran en el área principal de la barra de estado de la cinta de opciones.|  
-|[CMFCRibbonStatusBar::GetElement](#getelement)|Devuelve un puntero al elemento que se encuentra en un índice especificado.|  
+|[CMFCRibbonStatusBar::GetElement](#getelement)|Devuelve un puntero al elemento que se encuentra en el índice especificado.|  
 |[CMFCRibbonStatusBar::GetExCount](#getexcount)|Devuelve el número de elementos que se encuentran en el área extendida de la barra de estado de la cinta de opciones.|  
 |[CMFCRibbonStatusBar::GetExElement](#getexelement)|Devuelve un puntero al elemento ubicado en el índice especificado en el área extendida de la barra de estado de la cinta.|  
 |[CMFCRibbonStatusBar::GetExtendedArea](#getextendedarea)||  
 |[CMFCRibbonStatusBar::GetSpace](#getspace)||  
 |[CMFCRibbonStatusBar::IsBottomFrame](#isbottomframe)||  
 |[CMFCRibbonStatusBar::IsExtendedElement](#isextendedelement)||  
-|[CMFCRibbonStatusBar::IsInformationMode](#isinformationmode)|Determina si se habilita el modo de obtener información de la barra de estado de la cinta de opciones.|  
+|[CMFCRibbonStatusBar::IsInformationMode](#isinformationmode)|Determina si está habilitado el modo de información para la barra de estado de la cinta de opciones.|  
 |[CMFCRibbonStatusBar::RecalcLayout](#recalclayout)|(Invalida [CMFCRibbonBar::RecalcLayout](../../mfc/reference/cmfcribbonbar-class.md#recalclayout).)|  
 |[CMFCRibbonStatusBar::RemoveAll](#removeall)|Quita todos los elementos de la barra de estado de la cinta de opciones.|  
-|[CMFCRibbonStatusBar::RemoveElement](#removeelement)|Quita el elemento que tiene un identificador de comando especificado de la barra de estado de la cinta de opciones.|  
-|[CMFCRibbonStatusBar::SetInformation](#setinformation)|Habilita o deshabilita el modo de obtener información de la barra de estado de la cinta de opciones.|  
+|[CMFCRibbonStatusBar::RemoveElement](#removeelement)|Quita el elemento que tiene un identificador de comando especificado en la barra de estado de la cinta de opciones.|  
+|[CMFCRibbonStatusBar::SetInformation](#setinformation)|Habilita o deshabilita el modo de información de la barra de estado de la cinta de opciones.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|Muestra la cadena de información que aparece en la barra cuando está habilitado el modo de obtener información de estado de la cinta de opciones.|  
+|[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|Muestra la cadena de información que aparece en la barra cuando está habilitado el modo de información de estado de cinta de opciones.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los usuarios pueden cambiar la visibilidad de los elementos de la cinta de opciones en una barra de estado de la cinta de opciones mediante el menú contextual integrado para la barra de estado de la cinta de opciones. Puede agregar o quitar elementos de forma dinámica.  
+ Los usuarios pueden cambiar la visibilidad de los elementos de la cinta de opciones en una barra de estado de la cinta de opciones mediante el menú de contexto integradas para la barra de estado de la cinta de opciones. Puede agregar o quitar elementos de forma dinámica.  
   
- Una barra de estado de la cinta de opciones tiene dos áreas: un área principal y un área extendida. El área extendida se muestra en el lado derecho de la barra de estado de la cinta de opciones y aparece en un color diferente de hacerse en el área principal.  
+ Una barra de estado de la cinta de opciones tiene dos áreas: un área principal y un área extendida. El área extendida se muestra en el lado derecho de la barra de estado de la cinta de opciones y aparece en un color diferente que el área principal no.  
   
  Normalmente, el área principal de la barra de estado muestra las notificaciones de estado y el área extendida muestra los controles de vista. El área extendida permanece visible mientras sea posible cuando el usuario cambia el tamaño de la barra de estado de la cinta de opciones.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar varios métodos en la `CMFCRibbonStatusBar` clase. En el ejemplo se muestra cómo agregar un nuevo elemento de la cinta de opciones a la barra de estado de la cinta de opciones, agregue un elemento de la cinta de opciones en el área extendida de la barra de estado de la cinta de opciones, agregue un separador y habilitar el modo normal de la barra de estado de la cinta de opciones.  
+ En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCRibbonStatusBar` clase. El ejemplo muestra cómo agregar un nuevo elemento de la cinta de opciones a la barra de estado de la cinta de opciones, agregue un elemento de la cinta de opciones para el área extendida de la barra de estado de la cinta de opciones, agregue un separador y habilitar el modo normal de la barra de estado de la cinta de opciones.  
   
  [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]  
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]  
@@ -153,7 +153,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
  Un puntero a un elemento dinámico.  
   
 ### <a name="remarks"></a>Comentarios  
- A diferencia de los elementos normales, elementos dinámicos no son personalizables y el menú de personalizar la barra de estado no las muestra.  
+ A diferencia de los elementos regulares, elementos dinámicos no son personalizables y el menú de personalizar la barra de estado no los muestra.  
   
 ##  <a name="addelement"></a>  CMFCRibbonStatusBar::AddElement  
  Agrega un nuevo elemento de la cinta de opciones en la barra de estado de la cinta de opciones.  
@@ -167,16 +167,16 @@ void AddElement(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pElement*  
- Un puntero al elemento agregado.  
+ Un puntero para el elemento agregado.  
   
  [in] *lpszLabel*  
  Una etiqueta de texto del elemento.  
   
  [in] *bIsVisible*  
- `TRUE` Si desea agregar el elemento como visible, `FALSE` si desea agregar el elemento como ocultos.  
+ TRUE si desea agregar el elemento como visible, FALSE si desea agregar el elemento como oculto.  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
- Agrega un elemento de la cinta de opciones en el área extendida de la barra de estado de la cinta de opciones.  
+ Agrega un elemento de la cinta de opciones para el área extendida de la barra de estado de la cinta de opciones.  
   
 ```  
 void AddExtendedElement(
@@ -187,13 +187,13 @@ void AddExtendedElement(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pElement*  
- Un puntero al elemento agregado.  
+ Un puntero para el elemento agregado.  
   
  [in] *lpszLabel*  
  La etiqueta de texto del elemento.  
   
  [in] *bIsVisible*  
- `TRUE` Si desea agregar el elemento como visible, `FALSE` si desea agregar el elemento como ocultos.  
+ TRUE si desea agregar el elemento como visible, FALSE si desea agregar el elemento como oculto.  
   
 ### <a name="remarks"></a>Comentarios  
  El área extendida está a la derecha del control de barra de estado.  
@@ -206,7 +206,7 @@ void AddSeparator();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo agrega un separador después del método [CMFCRibbonStatusBar::AddElement](#addelement). Inserta el último elemento.  
+ El marco de trabajo, agrega un separador después del método [CMFCRibbonStatusBar::AddElement](#addelement). Inserta el último elemento.  
   
 ##  <a name="create"></a>  CMFCRibbonStatusBar::Create  
  Crea una barra de estado de la cinta de opciones.  
@@ -223,13 +223,13 @@ BOOL Create(
  Un puntero a la ventana primaria.  
   
  [in] *dwStyle*  
- Combinación OR lógica de estilos de control.  
+ Una combinación de OR lógica de los estilos de control.  
   
  [in] *nID*  
- Id. de control de la barra de estado.  
+ El identificador de control de la barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la barra de estado se ha creado correctamente, `FALSE` en caso contrario.  
+ TRUE si la barra de estado se ha creado correctamente, FALSE en caso contrario.  
   
 ##  <a name="createex"></a>  CMFCRibbonStatusBar::CreateEx  
  Crea una barra de estado de la cinta de opciones que tiene un estilo extendido.  
@@ -247,16 +247,16 @@ BOOL CreateEx(
  Un puntero a la ventana primaria.  
   
  *dwCtrlStyle*  
- Combinación OR lógica de estilos adicionales para crear el objeto de barra de estado.  
+ Una combinación de OR lógica de estilos adicionales para crear el objeto de barra de estado.  
   
  *dwStyle*  
- El estilo del control de la barra de estado.  
+ El estilo de control de la barra de estado.  
   
  *nID*  
- Id. de control de la barra de estado.  
+ El identificador de control de la barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la barra de estado se ha creado correctamente, `FALSE` en caso contrario.  
+ TRUE si la barra de estado se ha creado correctamente, FALSE en caso contrario.  
   
 ##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -285,7 +285,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
  El identificador del elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al elemento que tiene el identificador de comando especificado. `NULL` Si no hay ningún elemento.  
+ Un puntero al elemento que tiene el identificador de comando especificado. Es NULL si no hay ningún elemento.  
   
 ##  <a name="getcount"></a>  CMFCRibbonStatusBar::GetCount  
  Devuelve el número de elementos que se encuentran en el área principal de la barra de estado de la cinta de opciones.  
@@ -298,7 +298,7 @@ int GetCount() const;
  El número de elementos que se encuentran en el área principal de la barra de estado de la cinta de opciones.  
   
 ##  <a name="getelement"></a>  CMFCRibbonStatusBar::GetElement  
- Devuelve un puntero al elemento que se encuentra en un índice especificado.  
+ Devuelve un puntero al elemento que se encuentra en el índice especificado.  
   
 ```  
 CMFCRibbonBaseElement* GetElement(int nIndex);
@@ -306,10 +306,10 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *nIndex*  
- Especifica un índice de base cero de un elemento que se encuentra en el área principal de control de la barra de estado.  
+ Especifica un índice de base cero de un elemento que se encuentra en el área principal del control de barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al elemento que se encuentra en el índice especificado. `NULL` Si el índice es negativo o mayor que el número de elementos en la barra de estado.  
+ Un puntero al elemento que se encuentra en el índice especificado. Es NULL si el índice es negativo o supera el número de elementos en la barra de estado.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -335,7 +335,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
  Especifica el índice basado en cero de un elemento ubicado en el área extendida del control de barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Puntero al elemento ubicado en el índice especificado en el área extendida de la barra de estado de la cinta. `NULL` Si *nIndex* es negativo o supera el número de elementos en el área extendida de la barra de estado de la cinta de opciones.  
+ Puntero al elemento ubicado en el índice especificado en el área extendida de la barra de estado de la cinta. NULL si *nIndex* es negativo o supera el número de elementos en el área extendida de la barra de estado de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -390,20 +390,20 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="isinformationmode"></a>  CMFCRibbonStatusBar::IsInformationMode  
- Determina si se habilita el modo de obtener información de la barra de estado de la cinta de opciones.  
+ Determina si está habilitado el modo de información para la barra de estado de la cinta de opciones.  
   
 ```  
 BOOL IsInformationMode() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la barra de estado puede trabajar en modo de información; en caso contrario, `FALSE`.  
+ TRUE si la barra de estado, puede trabajar en modo de información; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- En el modo de información, la barra de estado oculta todos los paneles normales y muestra una cadena de mensaje.  
+ En el modo de información, la barra de estado oculta todos los paneles regulares y muestra una cadena de mensaje.  
   
 ##  <a name="ondrawinformation"></a>  CMFCRibbonStatusBar::OnDrawInformation  
- Muestra la cadena que aparece en la barra cuando está habilitado el modo de obtener información de estado de la cinta de opciones.  
+ Muestra la cadena que aparece en la barra cuando está habilitado el modo de información de estado de cinta de opciones.  
   
 ```  
 virtual void OnDrawInformation(
@@ -423,7 +423,7 @@ virtual void OnDrawInformation(
  El rectángulo delimitador.  
   
 ### <a name="remarks"></a>Comentarios  
- Invalide este método en una clase derivada si desea personalizar la apariencia de la cadena de información en la barra de estado. Use la [CMFCRibbonStatusBar::SetInformation](#setinformation) método para poner la barra de estado en modo de información. En este modo, la barra de estado oculta todos los paneles y muestra la cadena de la información especificada por *strInfo*.  
+ Invalide este método en una clase derivada si desea personalizar la apariencia de la cadena de información en la barra de estado. Use la [CMFCRibbonStatusBar::SetInformation](#setinformation) método para poner la barra de estado en modo de información. En este modo, la barra de estado oculta todos los paneles y muestra la cadena de información especificada por *strInfo*.  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -442,7 +442,7 @@ void RemoveAll();
 ```  
   
 ##  <a name="removeelement"></a>  CMFCRibbonStatusBar::RemoveElement  
- Quita el elemento que tiene un identificador de comando especificado de la barra de estado de la cinta de opciones.  
+ Quita el elemento que tiene un identificador de comando especificado en la barra de estado de la cinta de opciones.  
   
 ```  
 BOOL RemoveElement(UINT uiID);
@@ -450,13 +450,13 @@ BOOL RemoveElement(UINT uiID);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *uiID*  
- Identificador del elemento que se va a quitar de la barra de estado.  
+ El identificador del elemento para quitar de la barra de estado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si un elemento con los valores especificados *uiID* se quita. En caso contrario, es `FALSE`.  
+ TRUE si un elemento con los valores especificados *uiID* se quita. FALSE en caso contrario.  
   
 ##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
- Habilita o deshabilita el modo de obtener información de la barra de estado de la cinta de opciones.  
+ Habilita o deshabilita el modo de información de la barra de estado de la cinta de opciones.  
   
 ```  
 void SetInformation(LPCTSTR lpszInfo);
@@ -467,13 +467,13 @@ void SetInformation(LPCTSTR lpszInfo);
  La cadena de información.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice este método para colocar la barra de estado en el modo de obtener información. En este modo, la barra de estado oculta todos los paneles y muestra la cadena de la información especificada por *lpszInfo*.  
+ Utilice este método para colocar la barra de estado en el modo de información. En este modo, la barra de estado oculta todos los paneles y muestra la cadena de información especificada por *lpszInfo*.  
   
- Cuando es lpszInfo `NULL`, la barra de estado se vuelve al modo normal.  
+ Cuando lpszInfo es NULL, la barra de estado se vuelve al modo normal.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md)   
- [Clase CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)   
+ [CMFCRibbonBaseElement (clase)](../../mfc/reference/cmfcribbonbaseelement-class.md)   
  [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md)

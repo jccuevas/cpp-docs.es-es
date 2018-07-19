@@ -1,5 +1,5 @@
 ---
-title: Inicializadores | Documentos de Microsoft
+title: Inicializadores | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424311"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939873"
 ---
 # <a name="initializers"></a>Inicializadores
 Un inicializador especifica el valor inicial de una variable. Se pueden inicializar variables en estos contextos:  
@@ -91,11 +91,11 @@ Un inicializador especifica el valor inicial de una variable. Se pueden iniciali
   
 -   Las variables numéricas se inicializan en 0 (o 0,0, 0,0000000000, etc.).  
   
--   Variables de tipo char se inicializan en `'\0'`.  
+-   Las variables char se inicializan en `'\0'`.  
   
 -   Los punteros se inicializan en `nullptr`.  
   
--   Matrices, [POD](../standard-library/is-pod-class.md) clases, estructuras y uniones tienen los miembros que se inicializa en un valor de cero.  
+-   Las matrices, [POD](../standard-library/is-pod-class.md) clases, structs y uniones tienen sus miembros se inicializan en un valor cero.  
   
  La inicialización cero se realiza en distintos momentos:  
   
@@ -125,7 +125,7 @@ int main() {
 ```  
   
 ### <a name="default_initialization"></a> Inicialización predeterminada  
- La inicialización predeterminada de clases, structs y uniones es la inicialización con un constructor predeterminado. Se puede llamar al constructor predeterminado sin una expresión de inicialización o con la palabra clave `new`:  
+ La inicialización predeterminada de clases, structs y uniones es la inicialización con un constructor predeterminado. El constructor predeterminado puede llamarse sin expresión de inicialización o con el **nuevo** palabra clave:  
   
 ```cpp  
 MyClass mc1;  
@@ -189,7 +189,7 @@ int main() {
   
 -   un objeto temporal anónimo se inicializa con paréntesis o llaves vacíos  
   
--   un objeto se inicializa con la palabra clave `new` y paréntesis o llaves vacíos  
+-   un objeto se inicializa con el **nuevo** palabra clave y paréntesis o llaves vacíos  
   
  La inicialización de un valor hace lo siguiente:  
   
@@ -230,7 +230,7 @@ int main() {
   
 -   se inicializa un miembro de datos no estático con un signo igual  
   
--   se inicializan los miembros class, struct y union con la inicialización de copia durante la inicialización de agregado Vea [inicialización de agregado](#agginit) para obtener ejemplos.  
+-   se inicializan los miembros class, struct y union con la inicialización de copia durante la inicialización de agregado Consulte [inicialización de agregado](#agginit) para obtener ejemplos.  
   
  En el código siguiente se muestran varios ejemplos de inicialización de copia:  
   
@@ -279,9 +279,9 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
   
 -   una variable se inicializa con llaves o paréntesis no vacíos  
   
--   una variable se inicializa con la palabra clave `new` y llaves o paréntesis no vacíos  
+-   una variable se inicializa con el **nuevo** palabra clave y no vacía llaves o paréntesis  
   
--   una variable se inicializa con `static_cast`  
+-   una variable se inicializa con **static_cast**  
   
 -   en un constructor, las clases base y los miembros no estáticos se inicializan con una lista de inicializadores  
   
@@ -321,7 +321,7 @@ int main(){
   
 -   se inicializa una variable  
   
--   se inicializa una clase con la palabra clave `new`  
+-   una clase se inicializa con el **nuevo** palabra clave  
   
 -   se devuelve un objeto de una función  
   
@@ -378,7 +378,7 @@ int main() {
 -   ninguna función miembro virtual  
   
 > [!NOTE]
->  <!--conformance note-->In Visual Studio 2015 and earlier, an aggregate is not allowed to have  brace-or-equal initializers for non-static members. This restriction was removed in the C++14 standard and implemented in Visual Studio 2017. 
+>  <!--conformance note-->En Visual Studio 2015 y versiones anteriores, un agregado no se permite que los inicializadores de inicializador de llave o igualdad para los miembros no estáticos. Esta restricción se quitó en el estándar C ++ 14 y se implementa en Visual Studio 2017. 
   
  Los inicializadores de agregado constan de una lista de inicialización entre llaves, con o sin un signo de igualdad, como en el ejemplo siguiente:  
   
@@ -425,7 +425,7 @@ myArr3: 8 9 10 0 0
 ```  
   
 > [!IMPORTANT]
->  Miembros de la matriz que se han declarado pero no se inicializaron explícitamente durante la inicialización de agregado son inicializa a cero, como en `myArr3` anteriormente.  
+>  Miembros de la matriz que se declaran, pero no se inicializaron explícitamente durante la inicialización de agregado son inicializan en cero, como en `myArr3` anteriormente.  
   
 #### <a name="initializing-unions-and-structs"></a>Inicializar uniones y structs  
  Si una unión no tiene un constructor, puede inicializarla con un valor único (o con otra instancia de una unión). El valor se utiliza para inicializar el primer campo no estático. Esto es diferente de la inicialización de struct, donde el primer valor del inicializador se utiliza para inicializar el primer campo, el segundo valor para inicializar el segundo campo, y así sucesivamente. Compare la inicialización de uniones y structs en el ejemplo siguiente:  
@@ -516,7 +516,7 @@ int main()
     class c {public:   int& i;};  
     ```  
   
--   Declaración de una variable especificada explícitamente como `extern`. Por ejemplo:  
+-   Declaración de una variable especificada explícitamente como **extern**. Por ejemplo:  
   
     ```  
     extern int& iVal;  
@@ -527,10 +527,10 @@ int main()
  ![Gráfico de decisión de inicialización de tipos de referencia](../cpp/media/vc38s71.gif "vc38S71")  
 Gráfico de decisión de inicialización de tipos de referencia  
   
- Las referencias a `volatile` tipos (declarados como `volatile` *typename *** &** *identificador*) se pueden inicializar con `volatile` objetos del mismo tipo o con objetos que no se ha declarado como `volatile`. No pueden, sin embargo, inicializarse con **const** objetos de ese tipo. De forma similar, las referencias a **const** tipos (declarados como **const** *typename *** &** *identificador*) puede ser inicializado con **const** objetos del mismo tipo (o cualquier elemento que tenga una conversión a ese tipo o con objetos que no se ha declarado como **const**). No pueden, sin embargo, inicializarse con objetos `volatile` de ese tipo.  
+ Las referencias a **volátil** tipos (declarados como **volátil** *typename *** &** *identificador*) se pueden inicializar con **volátil** objetos del mismo tipo o con objetos que no se ha declarado como **volátil**. No pueden, sin embargo, inicializarse con **const** objetos de ese tipo. De forma similar, las referencias a **const** tipos (declarados como **const** *typename *** &** *identificador*) puede ser inicializado con **const** objetos del mismo tipo (o cualquier elemento que tenga una conversión a ese tipo o con objetos que no se ha declarado como **const**). No pueden, sin embargo, inicializarse con **volátil** objetos de ese tipo.  
   
- Las referencias que no se califican con la **const** o `volatile` palabra clave se puede inicializar con objetos declarados como **const** ni `volatile`.  
+ Las referencias que no se califican con el **const** o **volátil** palabra clave se puede inicializar sólo con los objetos declarados como **const** ni  **volatile**.  
   
 ### <a name="initialization-of-external-variables"></a>Inicialización de variables externas  
- Las declaraciones de variables automáticas, estáticas y externas pueden contener a inicializadores. Sin embargo, las declaraciones de variables externas solo pueden contener inicializadores si las variables no se declaran como `extern`.
+ Las declaraciones de variables automáticas, estáticas y externas pueden contener a inicializadores. Sin embargo, las declaraciones de variables externas pueden contener inicializadores solo si no se declaran las variables como **extern**.
   

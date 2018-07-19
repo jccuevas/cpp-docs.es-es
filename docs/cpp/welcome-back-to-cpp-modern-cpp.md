@@ -1,5 +1,5 @@
 ---
-title: Bienvenido a C++ (C++ moderno) | Documentos de Microsoft
+title: Bienvenido a C++ (C++ moderno) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424872"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939382"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Aquí está otra vez C++ (C++ moderno)
 C++ es uno de los lenguajes de programación más utilizados en el mundo. Los programas bien escritos de C++ son rápidos y eficaces. El lenguaje es más flexible que otros lenguajes, ya que se puede utilizar para crear una amplia gama de aplicaciones, desde divertidos y emocionantes juegos, para software científico de alto rendimiento, hasta controladores de dispositivos, programas incrustados y aplicaciones cliente de Windows. Durante más de 20 años, C++ se ha utilizado para resolver problemas como estos y muchos otros. Lo que es posible que no sepa es que un creciente número de programadores de C++ han doblado la programación estilo C poco elegante de ayer y han puesto C++ moderno en su lugar.  
@@ -32,19 +32,19 @@ C++ es uno de los lenguajes de programación más utilizados en el mundo. Los pr
   
 -   Punteros inteligentes en lugar de punteros sin formato.  
   
--   `std::string` y `std::wstring` tipos (vea [ \<cadena >](../standard-library/string.md)) en lugar de sin formato `char[]` matrices.  
+-   `std::string` y `std::wstring` tipos (vea [ \<cadena >](../standard-library/string.md)) en lugar de raw `char[]` matrices.  
   
--   [Biblioteca estándar de C++](../standard-library/cpp-standard-library-header-files.md) como contenedores `vector`, `list`, y `map` en lugar de matrices sin formato o contenedores personalizados. Vea [ \<vector >](../standard-library/vector.md), [ \<lista >](../standard-library/list.md), y [ \<mapa >](../standard-library/map.md).  
+-   [Biblioteca estándar de C++](../standard-library/cpp-standard-library-header-files.md) como contenedores `vector`, `list`, y `map` en lugar de matrices sin formato o contenedores personalizados. Consulte [ \<vector >](../standard-library/vector.md), [ \<lista >](../standard-library/list.md), y [ \<map >](../standard-library/map.md).  
   
 -   Biblioteca estándar de C++ [algoritmos](../standard-library/algorithm.md) en lugar de forma manual los codificados.  
   
 -   Excepciones, para notificar y controlar errores.  
   
--   Sin bloqueo mediante la biblioteca estándar de C++ la comunicación entre subprocesos `std::atomic<>` (consulte [ \<atómica >](../standard-library/atomic.md)) en lugar de otros mecanismos de comunicación entre subprocesos.  
+-   La comunicación entre subprocesos mediante la biblioteca estándar de C++ bloqueos `std::atomic<>` (consulte [ \<atomic >](../standard-library/atomic.md)) en lugar de otros mecanismos de comunicación entre subprocesos.  
   
--   En línea [funciones lambda](../cpp/lambda-expressions-in-cpp.md) en lugar de pequeñas funciones implementadas por separado.  
+-   Inline [funciones lambda](../cpp/lambda-expressions-in-cpp.md) en lugar de pequeñas funciones implementadas por separado.  
   
--   Basado en intervalo for (bucles) escribir bucles más sólidos que funcionan con matrices, los contenedores de la biblioteca estándar de C++ y en tiempo de ejecución de Windows colecciones en el formulario `for ( for-range-declaration : expression )`. Esto forma parte del lenguaje principal. Para obtener más información, consulte [basados en intervalos de instrucción (C++)](../cpp/range-based-for-statement-cpp.md).  
+-   En función de rangos para que bucles para escribir bucles más eficaces que funcionan con matrices, contenedores de la biblioteca estándar de C++ y Windows Runtime colecciones en el formulario `for ( for-range-declaration : expression )`. Esto forma parte del lenguaje principal. Para obtener más información, consulte [basada en intervalo para la instrucción (C++)](../cpp/range-based-for-statement-cpp.md).  
   
  El propio lenguaje C++ también ha evolucionado. Compare los fragmentos de código siguientes. Este muestra cómo eran las cosas en C++:  
   
@@ -102,9 +102,9 @@ void f()
 
 ```
 
- En C++ moderno, no tiene que utilizar control de excepciones nuevo/eliminar o explícito porque puede utilizar los punteros inteligentes en su lugar. Cuando se usa el `auto` deducción de tipos y [función lambda](../cpp/lambda-expressions-in-cpp.md), puede escribir código más rápido, endurecer y entender mejor. Y basada en intervalo `for` bucle es más limpio, fáciles de usar y menos propenso a errores imprevistos que un estilo de C `for` bucle. Puede utilizar código reutilizable con las mínimas líneas de código para escribir la aplicación. También puede hacer que ese código sea seguro para excepciones y seguro para memoria, y que no tenga ninguna asignación/desasignación ni códigos de error que tratar.  
+ En C++ moderno, no tiene que utilizar control de excepciones nuevo/eliminar o explícito porque puede utilizar los punteros inteligentes en su lugar. Cuando se usa el **automática** deducción de tipo y [función lambda](../cpp/lambda-expressions-in-cpp.md), puede escribir código más rápido, endurecer y entender mejor. Y basado en rango **para** bucle es más limpio, más fácil de usar y menos propenso a errores imprevistos que un estilo de C **para** bucle. Puede utilizar código reutilizable con las mínimas líneas de código para escribir la aplicación. También puede hacer que ese código sea seguro para excepciones y seguro para memoria, y que no tenga ninguna asignación/desasignación ni códigos de error que tratar.  
   
- C++ moderno incorpora dos clases de polimorfismo: tiempo de compilación, con plantillas y tiempo de ejecución, con herencia y virtualización. Puede mezclar las dos clases de polimorfismo para aumentar el efecto. La plantilla de la biblioteca estándar de C++ `shared_ptr` utiliza métodos virtuales internos para lograr su borrado de tipos aparentemente sin esfuerzo. No obstante, no utilice demasiado la virtualización para el polimorfismo cuando una plantilla sea la mejor opción. Las plantillas pueden ser muy eficaces.  
+ C++ moderno incorpora dos clases de polimorfismo: tiempo de compilación, con plantillas y tiempo de ejecución, con herencia y virtualización. Puede mezclar las dos clases de polimorfismo para aumentar el efecto. La plantilla de biblioteca estándar de C++ `shared_ptr` usa métodos virtuales internos para lograr su borrado de tipos aparentemente sin esfuerzo. No obstante, no utilice demasiado la virtualización para el polimorfismo cuando una plantilla sea la mejor opción. Las plantillas pueden ser muy eficaces.  
   
  Si viene a C++ desde otro lenguaje, especialmente desde un lenguaje administrado en el que la mayoría de los tipos sean tipos de referencia y muy pocos sean tipos de valor, debe saber que las clases de C++ son tipos de valor de forma predeterminada. No obstante, puede especificarlos como tipos de referencia para habilitar comportamiento polimórfico que admita la programación orientada a objetos. Una perspectiva útil: los tipos de valor son más de memoria y control de diseño; los tipos de referencia son más de clases base y funciones virtuales para admitir polimorfismo. De forma predeterminada, los tipos de valor se pueden copiar; cada uno tiene un constructor de copias y un operador de asignación de copia. Cuando se especifica un tipo de referencia, se crea la clase que no se puede copiar (se deshabilita el constructor de copias y el operador de asignación) y se utiliza un destructor virtual, que admite el polimorfismo. Los tipos de valor están también relacionados con el contenido que, cuando se copia, proporciona dos valores independientes que se pueden modificar por separado. No obstante, los tipos de referencia están relacionados con la identidad (el tipo de objeto de que se trata) y, por esta razón, a veces se conocen como tipos polimórficos.  
   
@@ -130,7 +130,7 @@ void f()
   
 -   [Algoritmos](../cpp/algorithms-modern-cpp.md)  
   
--   [Cadena y E/S formato (C++ moderno)](../cpp/string-and-i-o-formatting-modern-cpp.md)  
+-   [Cadena y E/S de formato (C++ moderno)](../cpp/string-and-i-o-formatting-modern-cpp.md)  
   
 -   [Controlar errores y excepciones](../cpp/errors-and-exception-handling-modern-cpp.md)  
   

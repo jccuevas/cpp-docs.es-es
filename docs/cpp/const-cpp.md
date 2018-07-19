@@ -1,5 +1,5 @@
 ---
-title: Const (C++) | Documentos de Microsoft
+title: Const (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882181bd3ac69257b69a79f42e12c2573f2f1da4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b6fea501724b24c07ab8b2199410a369d62dc9d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944594"
 ---
 # <a name="const-c"></a>const (C++)
-Cuando se modifica una declaración de datos, el **const** palabra clave especifica que el objeto o la variable no es modificable.  
+Al modificar una declaración de datos, el **const** palabra clave especifica que el objeto o variable no es modificable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      const declaration ;  
+const declaration ;  
 member-function const ;  
 ```  
   
 ## <a name="const-values"></a>valores const  
  El **const** palabra clave especifica que el valor de una variable es constante e indica al compilador que evite que el programador lo modifique.  
   
-```  
+```cpp 
 // constant_values1.cpp  
 int main() {  
    const int i = 5;  
@@ -45,9 +46,9 @@ int main() {
 }  
 ```  
   
- En C++, puede utilizar el **const** palabra clave en lugar de la [#define](../preprocessor/hash-define-directive-c-cpp.md) directiva de preprocesador para definir valores constantes. Los valores definidos con **const** están sujetos a la comprobación de tipos y puede usarse en lugar de expresiones constantes. En C++, puede especificar el tamaño de una matriz con un **const** variable como se indica a continuación:  
+ En C++, puede usar el **const** palabra clave en lugar de la [#define](../preprocessor/hash-define-directive-c-cpp.md) directiva de preprocesador para definir valores constantes. Los valores definidos con **const** están sujetos a la comprobación de tipo y puede usarse en lugar de expresiones constantes. En C++, puede especificar el tamaño de una matriz con un **const** variable como sigue:  
   
-```  
+```cpp 
 // constant_values2.cpp  
 // compile with: /c  
 const int maxarray = 255;  
@@ -58,7 +59,7 @@ char store_char[maxarray];  // allowed in C++; not allowed in C
   
  El **const** palabra clave puede utilizarse en declaraciones de puntero.  
   
-```  
+```cpp 
 // constant_values3.cpp  
 int main() {  
    char *mybuf = 0, *yourbuf;  
@@ -68,9 +69,9 @@ int main() {
 }  
 ```  
   
- Un puntero a una variable declarada como **const** puede asignarse únicamente a un puntero que también se declara como **const**.  
+ Un puntero a una variable declarada como **const** pueden asignarse solo a un puntero que también se declara como **const**.  
   
-```  
+```cpp 
 // constant_values4.cpp  
 #include <stdio.h>  
 int main() {  
@@ -89,19 +90,19 @@ int main() {
   
  Para los objetos que se declaran como **const**, miembro de constante solo se puede invocar funciones. Esto garantiza que el objeto constante nunca se modifique.  
   
-```  
+```cpp 
 birthday.getMonth();    // Okay  
 birthday.setMonth( 4 ); // Error  
 ```  
   
- Se puede llamar a funciones miembro de constante o que no son de constante para un objeto que no es constante. También puede sobrecargar una función miembro mediante la **const** palabra clave; Esto permite que una versión diferente de la función que se llamará para objetos constantes y.  
+ Se puede llamar a funciones miembro de constante o que no son de constante para un objeto que no es constante. También puede sobrecargar una función miembro mediante el **const** palabra clave; Esto permite que una versión diferente de la función que se llamará para constantes y los objetos.  
   
  No se puede declarar constructores o destructores con el **const** palabra clave.  
   
 ## <a name="const-member-functions"></a>funciones miembro const  
- Declarar una función miembro con el **const** palabra clave especifica que la función es una función de "solo lectura" que no modifica el objeto para el que se llama. Una función miembro constante no se puede modificar a los miembros de datos no estáticos ni llamar a funciones que no son constantes cualquier miembro. Para declarar una función miembro constante, coloque el **const** palabra clave después del paréntesis de cierre de la lista de argumentos. El **const** palabra clave es necesaria en la declaración y la definición.  
+ Declarar una función miembro con el **const** palabra clave especifica que la función es una función de "solo lectura" que no modifica el objeto para el que se llama. Una función miembro constante no puede modificar a los miembros de datos no estáticos ni llamar a cualquier miembro de las funciones que no sean constantes. Para declarar una función miembro constante, coloque el **const** palabra clave después del paréntesis de cierre de la lista de argumentos. El **const** palabra clave es necesaria en la declaración y la definición.  
   
-```  
+```cpp 
 // constant_member_function.cpp  
 class Date  
 {  
@@ -134,25 +135,25 @@ int main()
 ## <a name="c-and-c-const-differences"></a>Diferencias de const en C y C++  
  Cuando se declara una variable como **const** en un archivo de código fuente de C, lo hace como:  
   
-```  
+```cpp 
 const int i = 2;  
 ```  
   
  A continuación, esta variable se puede utilizar en otro módulo como sigue:  
   
-```  
+```cpp 
 extern const int i;  
 ```  
   
- Pero si desea para obtener el mismo comportamiento en C++, debe declarar la **const** variable como:  
+ Pero para obtener el mismo comportamiento en C++, no se debe declarar la **const** variable como:  
   
-```  
+```cpp 
 extern const int i = 2;  
 ```  
   
- Si desea declarar una variable `extern` en un archivo de código fuente de C++ para el uso en un archivo de código fuente de C, utilice:  
+ Si desea declarar una **extern** variable en un archivo de código fuente de C++ para su uso en un archivo de código fuente de C, use:  
   
-```  
+```cpp 
 extern "C" const int x=10;  
 ```  
   

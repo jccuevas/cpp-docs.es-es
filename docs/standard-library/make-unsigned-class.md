@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37f121912a13d6e4dac1692d2dab1b5ffd34bd6d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f379500f9455ed9ad9a581966e0f8ed7bfed13f7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855567"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953919"
 ---
 # <a name="makeunsigned-class"></a>make_unsigned (Clase)
 
@@ -42,11 +42,11 @@ using make_unsigned_t = typename make_unsigned<T>::type;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`T`|Tipo que se va a modificar.|
+|*T*|Tipo que se va a modificar.|
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del modificador de tipo contiene un tipo modificado que es `T` si `is_unsigned<T>` es true. En caso contrario, es el tipo con signo menor `ST` para el que `sizeof (T) <= sizeof (ST)`.
+Una instancia del modificador de tipo contiene un tipo modificado que es *T* si `is_unsigned<T>` es verdadero. En caso contrario, es el tipo con signo menor `ST` para el que `sizeof (T) <= sizeof (ST)`.
 
 ## <a name="requirements"></a>Requisitos
 

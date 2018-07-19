@@ -1,5 +1,5 @@
 ---
-title: __raise | Documentos de Microsoft
+title: __raise | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bd00c89df69d655f42c06509ef0360eff0c092
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944228"
 ---
 # <a name="raise"></a>__raise
 Resalta el sitio de llamada de un evento.  
@@ -30,23 +31,21 @@ Resalta el sitio de llamada de un evento.
   
 ```  
   
-__raise   
-method-declarator  
-;  
+__raise method-declarator;  
   
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- En código administrado, un evento solo se puede generar desde dentro de la clase donde se define. Vea [evento](../windows/event-cpp-component-extensions.md) para obtener más información.  
+ En código administrado, un evento solo se puede generar desde dentro de la clase donde se define. Consulte [evento](../windows/event-cpp-component-extensions.md) para obtener más información.  
   
- La palabra clave `__raise` hace que se produzca un error si se llama a algún elemento que no es un evento.  
+ La palabra clave **__raise** genera un error que se genera si se llama a un no evento.  
   
 > [!NOTE]
 >  Una clase o struct basada en plantilla no puede contener eventos.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // EventHandlingRef_raise.cpp  
 struct E {  
    __event void func1();  

@@ -1,5 +1,5 @@
 ---
-title: Sobrecargar operadores unarios | Documentos de Microsoft
+title: Sobrecargar operadores unarios | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,21 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f242fac0d81c6d46c2d810bf07459fde2fb2ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f20268e9d67ed59e52f3716e9203dadd2a2715d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421065"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941696"
 ---
 # <a name="overloading-unary-operators"></a>Sobrecargar operadores unarios
 Los operadores unarios que se pueden sobrecargar son los siguientes:  
   
 1.  `!` ([NOT lógico](../cpp/logical-negation-operator-exclpt.md))  
   
-2.  `&` ([dirección de](../cpp/address-of-operator-amp.md))  
+2.  `&` ([de dirección](../cpp/address-of-operator-amp.md))  
   
-3.  `~` ([complemento a uno](../cpp/one-s-complement-operator-tilde.md))  
+3.  `~` ([complementario](../cpp/one-s-complement-operator-tilde.md))  
   
 4.  `*` ([desreferencia de puntero](../cpp/indirection-operator-star.md))  
   
@@ -49,9 +49,9 @@ Los operadores unarios que se pueden sobrecargar son los siguientes:
   
 9. operadores de conversión  
   
- El incremento de postfijo y operadores de decremento (`++` y **--**) se tratan por separado en [incremento y decremento](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
+ El incremento de postfijo y operadores de decremento (`++` y `--`) se tratan por separado en [incremento y decremento](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
- También se explican los operadores de conversión en otro tema; vea [conversiones de tipos definidos por el usuario](../cpp/user-defined-type-conversions-cpp.md).  
+ También se describen los operadores de conversión en un tema independiente; consulte [conversiones de tipos definidos por el usuario](../cpp/user-defined-type-conversions-cpp.md).  
   
  Las reglas siguientes son ciertas para todos los demás operadores unarios. Para declarar una función de operador unario como miembro no estático, debe declararla de la forma siguiente:  
   

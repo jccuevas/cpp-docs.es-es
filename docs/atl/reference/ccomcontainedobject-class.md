@@ -1,5 +1,5 @@
 ---
-title: Clase CComContainedObject | Documentos de Microsoft
+title: CComContainedObject (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d4b0a6491aaeb27e4a1d986db01c03d1c5314d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360180"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881063"
 ---
-# <a name="ccomcontainedobject-class"></a>Clase CComContainedObject
-Esta clase implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) mediante la delegación para el objeto propietario **IUnknown**.  
+# <a name="ccomcontainedobject-class"></a>CComContainedObject (clase)
+Esta clase implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) mediante la delegación para el objeto propietario `IUnknown`.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,7 +45,7 @@ class CComContainedObject : public Base
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `Base`  
+ *base*  
  La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).  
   
 ## <a name="members"></a>Miembros  
@@ -67,7 +67,7 @@ class CComContainedObject : public Base
 |[CComContainedObject::Release](#release)|Disminuye el recuento de referencias en el objeto propietario.|  
   
 ## <a name="remarks"></a>Comentarios  
- ATL usa `CComContainedObject` en clases [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), y [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) mediante la delegación para el objeto propietario **IUnknown**. (El propietario es el objeto externo de una agregación o el objeto para el que se está creando una interfaz desplazable). `CComContainedObject` llamadas `CComObjectRootEx`del `OuterQueryInterface`, `OuterAddRef`, y `OuterRelease`, todas las heredadas a través de `Base`.  
+ ATL utiliza `CComContainedObject` en clases [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), y [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) mediante la delegación para el objeto propietario `IUnknown`. (El propietario es el objeto externo de una agregación o el objeto para el que se está creando una interfaz desplazable). `CComContainedObject` llamadas `CComObjectRootEx`del `OuterQueryInterface`, `OuterAddRef`, y `OuterRelease`, todo heredado a través de `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `Base`  
@@ -85,7 +85,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor que puede ser útil para el diagnóstico o pruebas.  
+ Un valor que puede ser útil para el diagnóstico o de pruebas.  
   
 ##  <a name="ccomcontainedobject"></a>  CComContainedObject::CComContainedObject  
  El constructor.  
@@ -95,11 +95,11 @@ CComContainedObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pv`  
- [in] El objeto propietario **IUnknown**.  
+ *PV*  
+ [in] El objeto propietario `IUnknown`.  
   
 ### <a name="remarks"></a>Comentarios  
- Conjuntos de la `m_pOuterUnknown` puntero de miembro (heredan a través de la `Base` clase) a `pv`.  
+ Conjuntos de la `m_pOuterUnknown` puntero miembro (hereda a través de la `Base` clase) a *pv*.  
   
 ##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject  
  Destructor.  
@@ -112,17 +112,17 @@ CComContainedObject(void* pv);
  Libera todos los recursos asignados.  
   
 ##  <a name="getcontrollingunknown"></a>  CComContainedObject::GetControllingUnknown  
- Devuelve el `m_pOuterUnknown` puntero de miembro (heredan a través de la *Base* clase) que contiene el objeto propietario **IUnknown**.  
+ Devuelve el `m_pOuterUnknown` puntero miembro (hereda a través de la *Base* clase) que contiene el objeto propietario `IUnknown`.  
   
 ```
 IUnknown* GetControllingUnknown();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El objeto propietario **IUnknown**.  
+ El objeto propietario `IUnknown`.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método puede ser virtual si `Base` ha sido declarado por el [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) macro.  
+ Este método puede ser virtual si `Base` ha declarado el [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) macro.  
   
 ##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface  
  Recupera un puntero a la interfaz solicitada en el objeto propietario.  
@@ -134,17 +134,17 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `iid`  
+ *IID*  
  [in] El identificador de la interfaz que se solicita.  
   
- `ppvObject`  
- [out] Un puntero al puntero de interfaz identificado por `iid`. Si el objeto no admite esta interfaz, `ppvObject` está establecido en **NULL**.  
+ *ppvObject*  
+ [out] Un puntero al puntero de interfaz identificado por *iid*. Si el objeto no admite esta interfaz, *ppvObject* se establece en NULL.  
   
- `pp`  
- [out] Un puntero al puntero de interfaz identificado por tipo `Q`. Si el objeto no admite esta interfaz, `pp` está establecido en **NULL**.  
+ *perfil de puerto*  
+ [out] Un puntero al puntero de interfaz identificado por tipo `Q`. Si el objeto no admite esta interfaz, *pp* se establece en NULL.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor `HRESULT` estándar.  
+ Un valor HRESULT estándar.  
   
 ##  <a name="release"></a>  CComContainedObject::Release  
  Disminuye el recuento de referencias en el objeto propietario.  
@@ -154,7 +154,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- En las compilaciones de depuración, **versión** devuelve un valor que puede ser útil para el diagnóstico o pruebas. En las compilaciones de depuración no, **versión** siempre devuelve 0.  
+ En las compilaciones de depuración, `Release` devuelve un valor que puede ser útil para el diagnóstico o de pruebas. En versiones no depuradas, `Release` siempre devuelve 0.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)

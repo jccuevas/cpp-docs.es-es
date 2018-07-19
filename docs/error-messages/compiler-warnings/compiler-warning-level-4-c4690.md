@@ -1,7 +1,7 @@
 ---
-title: Compilador advertencia (nivel 4) C4690 | Documentos de Microsoft
+title: Del compilador (nivel 4) de la advertencia C4690 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/03/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,24 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c8285fd3763b93c8a320a6cb984168b88d2e9ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04fb68bdab762f0f541849fad1568caff836b623
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293626"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853327"
 ---
 # <a name="compiler-warning-level-4-c4690"></a>Advertencia del compilador (nivel 4) C4690
-[ emitidl( pop ) ] : hay más elementos pop que push  
-  
- El atributo [emitidl](../../windows/emitidl.md) se extrajo una vez más de las que se ha insertado.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente genera la advertencia C4690:  
-  
-```  
-// C4690.cpp  
-// compile with: /c /W4  
-[emitidl(pop)];   // C4690  
-class x {};  
+
+> \[ emitidl (pop)]: más elementos POP que Push
+
+## <a name="remarks"></a>Comentarios
+
+El atributo [emitidl](../../windows/emitidl.md) se extrajo una vez más de las que se ha insertado.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera la advertencia C4690: Para corregir este problema, asegúrese de que se extrae el atributo exactamente igual que muchas veces a medida que se inserta.
+
+```cpp
+// C4690.cpp
+// compile with: /c /W4
+[emitidl(pop)];   // C4690
+class x {};
 ```

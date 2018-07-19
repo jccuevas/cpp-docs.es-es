@@ -1,5 +1,5 @@
 ---
-title: Información de tipo de tiempo de ejecución | Documentos de Microsoft
+title: Información de tipo de tiempo de ejecución | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23188b3dd49afb619576fa9cdcece69feca94f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14eafc1ebb50faaffb4c0a95e0cc929c89fb7c0b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419997"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938920"
 ---
 # <a name="run-time-type-information"></a>Información de tipos en tiempo de ejecución
 La información de tipo en tiempo de ejecución (RTTI) es un mecanismo que permite determinar el tipo de un objeto durante la ejecución del programa. RTTI se agregó al lenguaje C++ porque muchos proveedores de bibliotecas de clases implementaban esta funcionalidad por sí mismos. Esto produjo incompatibilidades entre las bibliotecas. Por tanto, se hizo obvio que se necesitaba compatibilidad para información de tipo en tiempo de ejecución en el nivel de lenguaje.  
@@ -42,7 +42,7 @@ La información de tipo en tiempo de ejecución (RTTI) es un mecanismo que permi
   
 -   El [type_info](../cpp/type-info-class.md) clase.  
   
-     Se usa para contener la información de tipo devuelta por el operador `typeid`.  
+     Utilizado para almacenar la información de tipo devuelta por la **typeid** operador.  
   
 ## <a name="see-also"></a>Vea también  
  [Conversión](../cpp/casting.md)

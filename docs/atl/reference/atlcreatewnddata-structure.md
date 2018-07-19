@@ -1,5 +1,5 @@
 ---
-title: Estructura de _AtlCreateWndData | Documentos de Microsoft
+title: _AtlCreateWndData (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66388c12def72a9da5b5aeb7e4713ca61c23a6e0
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: cf51197750e9595570a7b011c179c2ed4c7902c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255800"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880013"
 ---
-# <a name="atlcreatewnddata-structure"></a>Estructura de _AtlCreateWndData
+# <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData (estructura)
 Esta estructura contiene datos de la instancia de clase en código basado en ventanas en ATL.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,13 +40,13 @@ Esta estructura contiene datos de la instancia de clase en código basado en ven
 ```  
   
 ## <a name="members"></a>Miembros  
- **m_pThis**  
+ `m_pThis`  
  El **esto** puntero usado para obtener acceso a la instancia de clase en los procedimientos de ventana.  
   
  `m_dwThreadID`  
- El identificador del subproceso de la instancia de clase actual.  
+ El identificador de subproceso de la instancia actual de la clase.  
   
- **m_pNext**  
+ `m_pNext`  
  Puntero a la siguiente `_AtlCreateWndData` objeto.  
   
 ## <a name="requirements"></a>Requisitos  

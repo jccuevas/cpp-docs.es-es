@@ -1,5 +1,5 @@
 ---
-title: Operadores relacionales _bstr_t | Documentos de Microsoft
+title: Operadores relacionales _bstr_t | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -39,11 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 556a56de97c6e1b547b9a67387acfcdd3205913c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40834c7c41bc19b395958b4a173a68bd014b2e70
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944595"
 ---
 # <a name="bstrt-relational-operators"></a>_bstr_t (Operadores relacionales)
 **Específicos de Microsoft**  
@@ -54,29 +55,17 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      bool operator!( ) const throw( );   
-bool operator==(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator!=(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator<(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator>(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator<=(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator>=(  
-   const _bstr_t& str   
-) const throw( );  
+bool operator!( ) const throw( );   
+bool operator==(const _bstr_t& str) const throw( );  
+bool operator!=(const _bstr_t& str) const throw( );  
+bool operator<(const _bstr_t& str) const throw( );  
+bool operator>(const _bstr_t& str) const throw( );  
+bool operator<=(const _bstr_t& str) const throw( );  
+bool operator>=(const _bstr_t& str) const throw( );  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Estos operadores comparan dos objetos `_bstr_t` lexicográficamente. Los operadores devuelven **true** si las comparaciones se sostienen; en caso contrario, devuelve **false**.  
+ Estos operadores comparan dos objetos `_bstr_t` lexicográficamente. Los operadores devuelven TRUE si las comparaciones se sostienen en caso contrario, devuelve FALSE.  
   
  **FIN de Específicos de Microsoft**  
   

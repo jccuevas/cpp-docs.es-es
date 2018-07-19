@@ -1,5 +1,5 @@
 ---
-title: Expresiones (C++) | Documentos de Microsoft
+title: Expresiones (C++) | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ada34aae858d8e29b119fa08d363a0c26013567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51da4a44f99c83ba34ec035e77173946d2327fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414599"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953368"
 ---
 # <a name="expressions-c"></a>Expresiones (C++)
 En esta sección se describen las expresiones de C++. Las expresiones son secuencias de operadores y operandos que se utilizan para uno o más de estos propósitos:  
@@ -45,8 +45,6 @@ En esta sección se describen las expresiones de C++. Las expresiones son secuen
 -   [Operador condicional](../cpp/conditional-operator-q.md)  
   
 -   [Expresiones constantes](../cpp/cpp-constant-expressions.md)  
-  
--   [Expresiones con conversiones de tipos explícitas](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
   
 -   [Operadores de conversión](../cpp/casting-operators.md)  
   

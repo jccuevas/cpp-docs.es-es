@@ -1,5 +1,5 @@
 ---
-title: En función de punteros (C++) | Documentos de Microsoft
+title: En función de punteros (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cc2e45574d30ae1a544da78a4f7a75321a1156
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f24c2ad56f91be3ed413f6967e6e40749693fe1b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944264"
 ---
 # <a name="based-pointers-c"></a>Punteros con base (C++)
 **Específicos de Microsoft**  
   
- La palabra clave `__based` permite declarar punteros basados en punteros (punteros que son desplazamientos de punteros existentes).  
+ El **__based** palabra clave permite declarar punteros basados en punteros (punteros que son desplazamientos de punteros existentes).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,11 +39,11 @@ type __based( base ) declarator
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Los punteros basados en direcciones de puntero son la única forma de la palabra clave `__based` válida en compilaciones de 32 y 64 bits. Para el compilador de 32 bits de Microsoft C/C++, un puntero basado es un desplazamiento de 32 bits desde una base de puntero de 32 bits. Se aplica una restricción similar a los entornos de 64 bits, donde un puntero basado es un desplazamiento de 64 bits de la base de 64 bits.  
+ Los punteros basados en direcciones de puntero son la única forma de la **__based** palabra clave válida en compilaciones de 32 bits o 64 bits. Para el compilador de 32 bits de Microsoft C/C++, un puntero basado es un desplazamiento de 32 bits desde una base de puntero de 32 bits. Se aplica una restricción similar a los entornos de 64 bits, donde un puntero basado es un desplazamiento de 64 bits de la base de 64 bits.  
   
  Uno de los usos de los punteros basados en punteros son los identificadores persistentes que contienen punteros. Una lista vinculada formada por punteros basados en un puntero se puede guardar en el disco y recargar en otro lugar de la memoria; los punteros seguirán siendo válidos. Por ejemplo:  
   
-```  
+```cpp 
 // based_pointers1.cpp  
 // compile with: /c  
 void *vpBuffer;  
@@ -55,16 +56,16 @@ struct llist_t {
  Al puntero `vpBuffer` se le asigna la dirección de memoria asignada posteriormente en el programa. La lista vinculada se reubica en relación con el valor de `vpBuffer`.  
   
 > [!NOTE]
->  Persistencia de los identificadores que contienen punteros también se puede lograr utilizando [archivos asignados a memoria](http://msdn.microsoft.com/library/windows/desktop/aa366556).  
+>  También pueden realizarse mediante el uso de los identificadores persistentes que contienen punteros [archivos asignados a memoria](http://msdn.microsoft.com/library/windows/desktop/aa366556).  
   
  Cuando se desreferencia un puntero basado, la base se debe especificar explícitamente o se debe conocer implícitamente con la declaración.  
   
- Por compatibilidad con versiones anteriores, **_based** es un sinónimo de `__based`.  
+ Para ofrecer compatibilidad con versiones anteriores, **_basado** es un sinónimo de **__based**.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente muestra cómo se cambia un puntero basado mediante el cambio de su base.  
   
-```  
+```cpp 
 // based_pointers2.cpp  
 // compile with: /EHsc  
 #include <iostream>  

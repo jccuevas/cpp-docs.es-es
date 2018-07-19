@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonLinkCtrl | Documentos de Microsoft
+title: CMFCRibbonLinkCtrl (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,14 +42,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039016"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851501"
 ---
-# <a name="cmfcribbonlinkctrl-class"></a>Clase CMFCRibbonLinkCtrl
+# <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl (clase)
 Implementa un hipervínculo que se coloca en una cinta. El hipervínculo abre una página web cuando se hace clic en él.  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -96,7 +96,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
  **Encabezado:** afxRibbonLinkCtrl.h  
   
 ##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl  
- Construye e inicializa un [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) objeto.  
+ Crea e inicializa un [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) objeto.  
   
 ```  
 CMFCRibbonLinkCtrl(
@@ -113,10 +113,10 @@ CMFCRibbonLinkCtrl(
  Especifica la etiqueta que se muestra en el control de vínculo.  
   
  [in] *lpszLink*  
- Especifica el hipervínculo asociado con el control de vínculo.  
+ Especifica el hipervínculo asociado al control de vínculo.  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el constructor de la `CMFCRibbonLinkCtrl` clase. Este fragmento de código forma parte de la [ejemplo de Gadgets de cinta de opciones](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo usar el constructor de la `CMFCRibbonLinkCtrl` clase. Este fragmento de código forma parte de la [ejemplo Gadgets de la cinta de opciones](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -250,10 +250,10 @@ BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la página Web asociada se abrió correctamente; en caso contrario, `FALSE`.  
+ TRUE si la página Web asociada se abrió correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Se abre una página web con el hipervínculo asociado con el `CMFCRibbonLinkCtrl` objeto.  
+ Se abre una página Web con el hipervínculo asociado con el `CMFCRibbonLinkCtrl` objeto.  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  Establece el valor del hipervínculo.  

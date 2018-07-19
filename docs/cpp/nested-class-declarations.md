@@ -1,5 +1,5 @@
 ---
-title: Declaraciones de clase anidada | Documentos de Microsoft
+title: Declaraciones de clase anidada | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944288"
 ---
 # <a name="nested-class-declarations"></a>Declaraciones de clase anidadas
 Una clase puede declararse dentro del ámbito de otra clase. Esta clase se denomina una “clase anidada”. Las clases anidadas se consideran dentro del ámbito de la clase envolvente y están disponibles para su uso dentro de ese ámbito. Para hacer referencia a una clase anidada de un ámbito distinto al ámbito de inclusión inmediato, debe utilizar un nombre completo.  
   
  En el siguiente ejemplo se muestra cómo declarar clases anidadas:  
   
-```  
+```cpp 
 // nested_class_declarations.cpp  
 class BufferedIO  
 {  
@@ -73,7 +74,7 @@ int main()
   
  Una excepción a la visibilidad del ámbito de una declaración de clase es cuando se declara un nombre de tipo junto con una declaración adelantada.  En este caso, el nombre de clase declarado por la declaración adelantada está visible fuera de la clase envolvente, con el ámbito definido de modo que sea el menor envolvente no de clase.  Por ejemplo:  
   
-```  
+```cpp 
 // nested_class_declarations_2.cpp  
 class C  
 {  
@@ -104,7 +105,7 @@ int main()
 ## <a name="member-functions-in-nested-classes"></a>Funciones miembro en clases anidadas  
  Las funciones miembro declaradas en clases anidadas se pueden definir en el ámbito del archivo. El ejemplo anterior se podría haber escrito:  
   
-```  
+```cpp 
 // member_functions_in_nested_classes.cpp  
 class BufferedIO  
 {  
@@ -142,24 +143,24 @@ int main()
   
  En el ejemplo anterior, el *qualified-type-name* sintaxis se utiliza para declarar el nombre de función. La declaración:  
   
-```  
+```cpp 
 BufferedIO::BufferedInput::read()  
 ```  
   
- significa “la función `read` que es miembro de la clase `BufferedInput` que está en el ámbito de la clase `BufferedIO`.” Dado que esta declaración usa la *qualified-type-name* construcciones de la forma siguiente de sintaxis, son posibles:  
+ significa “la función `read` que es miembro de la clase `BufferedInput` que está en el ámbito de la clase `BufferedIO`.” Dado que esta declaración usa la *qualified-type-name* sintaxis, construcciones de la forma siguiente son posibles:  
   
-```  
+```cpp 
 typedef BufferedIO::BufferedInput BIO_INPUT;  
   
 int BIO_INPUT::read()  
 ```  
   
- La declaración anterior es equivalente a la previa, pero usa un nombre de `typedef` en lugar de los nombres de clase.  
+ La declaración anterior es equivalente al anterior, pero usa un **typedef** nombre en lugar de los nombres de clase.  
   
 ## <a name="friend-functions-in-nested-classes"></a>Funciones friend en clases anidadas  
  Las funciones friend declaradas en una clase anidada se considera que están en el ámbito de la clase anidada, no la clase envolvente. Por lo tanto, las funciones friend no obtienen privilegios de acceso especiales a miembros o funciones miembro de la clase envolvente. Si desea utilizar un nombre declarado en una clase anidada en una función friend y la función friend está definida en el ámbito del archivo, debe usar nombres de tipo representativo del modo siguiente:  
   
-```  
+```cpp 
 // friend_functions_and_nested_classes.cpp  
   
 #include <string.h>  
@@ -205,7 +206,7 @@ int main()
   
  El código siguiente muestra la función `GetExtendedErrorStatus` declarada como una función friend. En la función, que se define en el ámbito de archivo, se copia un mensaje de una matriz estática en un miembro de clase. Observe que una mejor implementación de `GetExtendedErrorStatus` consiste en declararlo como:  
   
-```  
+```cpp 
 int GetExtendedErrorStatus( char *message )  
 ```  
   

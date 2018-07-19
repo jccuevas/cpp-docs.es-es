@@ -1,5 +1,5 @@
 ---
-title: Restricciones de la función principal | Documentos de Microsoft
+title: Restricciones de la función Main | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5be2df6e152b26bcade1970b35ad33655e8e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3114f1ef379495f36f4231dbad6fd41ac145bcfe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419690"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941751"
 ---
 # <a name="main-function-restrictions"></a>Restricciones de la función main
-Varias restricciones se aplican a la **principal** función que no se aplican a otras funciones de C++. El **principal** función:  
+Varias restricciones se aplican a la `main` función que no se aplican a otras funciones de C++. El `main` función:  
   
 -   No se pueden sobrecargar (vea [sobrecarga de funciones](function-overloading.md)).  
   
--   No se pueden declarar como **en línea**.  
+-   No se puede declarar como **inline**.  
   
--   No se pueden declarar como **estático**.  
+-   No se puede declarar como **estático**.  
   
 -   No se puede tomar su dirección.  
   

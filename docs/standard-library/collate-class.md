@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2b6c5e4847737ce0208b35a2db9fac783c225f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848081"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966464"
 ---
 # <a name="collate-class"></a>collate (Clase)
 
@@ -52,11 +52,11 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-`CharType` El tipo usado dentro de un programa para codificar caracteres.
+*CharType* tipo usado dentro de un programa para codificar los caracteres.
 
 ## <a name="remarks"></a>Comentarios
 
-Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en **id.** En algunos lenguajes, los caracteres se agrupan y se tratan como un carácter individual y, en otros, los caracteres individuales se tratan como si fueran dos caracteres. Los servicios de intercalación que proporciona la clase collate ofrecen una manera de ordenar estos casos.
+Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en `id`. En algunos lenguajes, los caracteres se agrupan y se tratan como un carácter individual y, en otros, los caracteres individuales se tratan como si fueran dos caracteres. Los servicios de intercalación que proporciona la clase collate ofrecen una manera de ordenar estos casos.
 
 ### <a name="constructors"></a>Constructores
 
@@ -90,7 +90,7 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ## <a name="char_type"></a>  collate::char_type
 
-Un tipo que describe un carácter de tipo **CharType**.
+Un tipo que describe un carácter de tipo `CharType`.
 
 ```cpp
 typedef CharType char_type;
@@ -98,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **CharType**.
+El tipo es un sinónimo del parámetro de plantilla `CharType`.
 
 ## <a name="collate"></a>  collate::collate
 
@@ -117,13 +117,13 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-`_Refs` Valor de entero utilizado para especificar el tipo de administración de memoria para el objeto.
+*_Refs* valor entero utilizado para especificar el tipo de administración de memoria para el objeto.
 
-`_Locname` El nombre de la configuración regional.
+*_Locname* el nombre de la configuración regional.
 
 ### <a name="remarks"></a>Comentarios
 
-Los valores posibles del parámetro `_Refs` y su importancia son:
+Los valores posibles de la *_Refs* parámetro y su importancia son:
 
 - 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
@@ -146,13 +146,13 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Puntero al primer elemento en la primera secuencia que se va a comparar.
+*first1* puntero al primer elemento en la primera secuencia que se va a comparar.
 
-`last1` Puntero al último elemento en la primera secuencia que se va a comparar.
+*last1* puntero al último elemento en la primera secuencia que se va a comparar.
 
-`first2` Puntero al primer elemento en la segunda secuencia que se va a comparar.
+*first2* puntero al primer elemento en la segunda secuencia que se va a comparar.
 
-`last2` Puntero al último elemento en la segunda secuencia que se va a comparar.
+*last2* puntero al último elemento en la segunda secuencia que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -208,13 +208,13 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parámetros
 
-`first1` Puntero al primer elemento en la primera secuencia que se va a comparar.
+*first1* puntero al primer elemento en la primera secuencia que se va a comparar.
 
-`last1` Puntero al último elemento en la primera secuencia que se va a comparar.
+*last1* puntero al último elemento en la primera secuencia que se va a comparar.
 
-`first2` Puntero al primer elemento en la segunda secuencia que se va a comparar.
+*first2* puntero al primer elemento en la segunda secuencia que se va a comparar.
 
-`last2` Puntero al último elemento en la segunda secuencia que se va a comparar.
+*last2* puntero al último elemento en la segunda secuencia que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -228,7 +228,7 @@ La función miembro devuelve:
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida compara la secuencia en [* first1, Last1) * con la secuencia en *[first2, last2*). Compara valores al aplicar **operator<** entre pares de elementos correspondientes de tipo **CharType**. La primera secuencia compara menos si tiene el menor elemento del par desigual más antiguo en las secuencias o, si no existe ningún par desigual, pero la primera secuencia es más corta.
+La función miembro virtual protegida compara la secuencia en [* first1, Last1) * con la secuencia en *[first2, last2*). Compara valores aplicando `operator<` entre los pares de elementos correspondientes de tipo `CharType`. La primera secuencia compara menos si tiene el menor elemento del par desigual más antiguo en las secuencias o, si no existe ningún par desigual, pero la primera secuencia es más corta.
 
 ### <a name="example"></a>Ejemplo
 
@@ -244,9 +244,9 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Es un puntero al primer carácter de la secuencia cuyo con valor va a determinar.
+*primera* es un puntero al primer carácter en la secuencia cuyo valor hash tiene que determinarse.
 
-`last` Un puntero para el último carácter de la secuencia de ha cuyo valor es determinarse.
+*último* es un puntero al último carácter en la secuencia cuyo valor hash tiene que determinarse.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -270,9 +270,9 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un puntero al primer carácter de la secuencia que se va a convertir.
+*primera* un puntero al primer carácter de la secuencia que se va a convertir.
 
-`last` Un puntero para el último carácter de la secuencia que se va a convertir.
+*último* un puntero al último carácter en la secuencia que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -296,9 +296,9 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Es un puntero al primer carácter de la secuencia cuyo con valor va a determinar.
+*primera* es un puntero al primer carácter en la secuencia cuyo valor hash tiene que determinarse.
 
-`last` Un puntero para el último carácter de la secuencia de ha cuyo valor es determinarse.
+*último* es un puntero al último carácter en la secuencia cuyo valor hash tiene que determinarse.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -340,7 +340,7 @@ int main( )
 
 ## <a name="string_type"></a>  collate::string_type
 
-Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres de tipo **CharType**.
+Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres de tipo `CharType`.
 
 ```cpp
 typedef basic_string<CharType> string_type;
@@ -364,9 +364,9 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un puntero al primer carácter de la secuencia que se va a convertir.
+*primera* un puntero al primer carácter de la secuencia que se va a convertir.
 
-`last` Un puntero para el último carácter de la secuencia que se va a convertir.
+*último* un puntero al último carácter en la secuencia que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -374,7 +374,7 @@ Una cadena que contiene la secuencia de caracteres transformada.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve [do_transform](#do_transform)( `first`, `last`).
+La función miembro devuelve [do_transform](#do_transform)(`first`, `last`).
 
 ### <a name="example"></a>Ejemplo
 

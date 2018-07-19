@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff9718a98244379fccde78b18fa70ef46c7e7a76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff44a91b4916092e319c7acc0520c49aeb9a5fa4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845650"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953080"
 ---
 # <a name="gslicearray-class"></a>gslice_array (Clase)
 
@@ -76,15 +76,15 @@ public:
 
 ## <a name="remarks"></a>Comentarios
 
-La clase describe un objeto que almacena una referencia a un objeto **va** de la clase [valarray](../standard-library/valarray-class.md)**\<Type>**, junto con un objeto **gs** de la clase [gslice](../standard-library/gslice-class.md), que describe la secuencia de los elementos que se pueden seleccionar desde el objeto **valarray\<Type>**.
+La clase describe un objeto que almacena una referencia a un objeto `va` de clase [valarray](../standard-library/valarray-class.md)**\<tipo >**, junto con un objeto `gs` de clase [ gslice](../standard-library/gslice-class.md) que describe la secuencia de elementos para seleccionar desde el `valarray<Type>` objeto.
 
-Para construir un objeto **gslice_array\<Type>**, se escribe solo una expresión de formato [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Las funciones miembro de la clase gslice_array se comportarán como las signaturas de función correspondientes definidas para **valarray\<Type>**, excepto en que solo la secuencia de elementos seleccionados se ve afectada.
+Construir un `gslice_array<Type>` objeto escribiendo una expresión de formato [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Las funciones miembro de la clase gslice_array se comportarán como las firmas de función correspondientes definidas para `valarray<Type>`, excepto que solo la secuencia de elementos seleccionados se ve afectada.
 
 La clase de plantilla se crea indirectamente por determinadas operaciones valarray y no se puede usar directamente en el programa. En su lugar, el operador de subíndice de segmento usa una clase de plantilla auxiliar interna:
 
 `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**).
 
-Para construir un objeto **gslice_array\<Type>**, se escribe solo una expresión de formato **va[gsl]**, para un segmento **gsl** de valarray **va**. Las funciones miembro de la clase gslice_array se comportarán como las signaturas de función correspondientes definidas para **valarray\<Type>**, excepto en que solo la secuencia de elementos seleccionados se ve afectada. La secuencia controlada por gslice_array se define mediante los tres parámetros del constructor de segmento, el índice del primer elemento en el primer segmento, el número de elementos en cada segmento y la distancia entre los elementos de cada segmento.
+Construir un `gslice_array<Type>` objeto escribiendo una expresión de formato `va[gsl]`, para un segmento `gsl` de valarray `va`. Las funciones miembro de la clase gslice_array se comportarán como las firmas de función correspondientes definidas para `valarray<Type>`, excepto que solo la secuencia de elementos seleccionados se ve afectada. La secuencia controlada por gslice_array se define mediante los tres parámetros del constructor de segmento, el índice del primer elemento en el primer segmento, el número de elementos en cada segmento y la distancia entre los elementos de cada segmento.
 
 En el ejemplo siguiente:
 

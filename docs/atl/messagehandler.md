@@ -1,5 +1,5 @@
 ---
-title: MessageHandler | Documentos de Microsoft
+title: MessageHandler | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec0fd88def88f7d31fce078fec0c860f4f21f51c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dcd02396fa76e9e68fce628783fb17bc6adab36e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356372"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848407"
 ---
 # <a name="messagehandler"></a>MessageHandler
-**MessageHandler** es el nombre de la función identificada por el segundo parámetro de la `MESSAGE_HANDLER` macro en el mapa de mensajes.  
+`MessageHandler` es el nombre de la función identificada por el segundo parámetro de la macro MESSAGE_HANDLER en el mapa de mensajes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,17 +40,17 @@ ms.locfileid: "32356372"
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `uMsg`  
+ *uMsg*  
  Especifica el mensaje.  
   
- `wParam`  
- Obtener información adicional específica de los mensajes.  
+ *wParam*  
+ Información adicional específica del mensaje.  
   
- `lParam`  
- Obtener información adicional específica de los mensajes.  
+ *lParam*  
+ Información adicional específica del mensaje.  
   
- `bHandled`  
- Los conjuntos de mapa de mensajes `bHandled` a **TRUE** antes de `MessageHandler` se llama. Si `MessageHandler` no controla totalmente el mensaje, se debe establecer `bHandled` a **FALSE** para indicar que el mensaje requiere un procesamiento posterior.  
+ *bHandled*  
+ Los conjuntos de mapa de mensajes *bHandled* en TRUE antes de `MessageHandler` se llama. Si `MessageHandler` no controla totalmente el mensaje, se debe establecer *bHandled* en FALSE para indicar que el mensaje requiere un procesamiento posterior.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El resultado del procesamiento de mensajes. 0 si es correcto.  

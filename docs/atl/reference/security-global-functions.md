@@ -1,5 +1,5 @@
 ---
-title: Funciones globales de seguridad | Documentos de Microsoft
+title: Funciones globales de seguridad | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad9ad170706b72c9d236e095db0e2b6df00031ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e6dcaeed793a81580b9ca5ed93ad7e267b534fe
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365059"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881180"
 ---
 # <a name="security-global-functions"></a>Funciones globales de seguridad
 Estas funciones proporcionan compatibilidad para modificar objetos de SID y ACL.  
   
 > [!IMPORTANT]
->  Las funciones se enumeran en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Las funciones enumeradas en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 |||  
 |-|-|  
@@ -68,20 +68,20 @@ inline bool AtlGetDacl(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hObject`  
- Identificador de objeto para el que se va a recuperar la información de seguridad.  
+ *hObject*  
+ Identificador del objeto que se va a recuperar la información de seguridad.  
   
- `ObjectType`  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo de objeto identificado por la `hObject` parámetro.  
+ *ObjectType*  
+ Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
- `pDacl`  
- Puntero a un objeto DACL que contendrá la información de seguridad recuperados.  
+ *pDacl*  
+ Puntero a un objeto de la DACL que contendrá la información de seguridad recuperado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
   
 ### <a name="remarks"></a>Comentarios  
- En las compilaciones de depuración, se producirá un error de aserción si `hObject` o `pDacl` no es válido.  
+ En las compilaciones de depuración, se producirá un error de aserción si *hObject* o *pDacl* no es válido.  
   
 ##  <a name="atlsetdacl"></a>  AtlSetDacl  
  Llame a esta función para definir la información de la lista de control de acceso discrecional (DACL) de un objeto especificado.  
@@ -98,23 +98,23 @@ inline bool AtlSetDacl(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hObject`  
- Identificador de objeto para el que se va a establecer información de seguridad.  
+ *hObject*  
+ Identificador del objeto que se va a establecer información de seguridad.  
   
- `ObjectType`  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo de objeto identificado por la `hObject` parámetro.  
+ *ObjectType*  
+ Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
- `rDacl`  
- La DACL que contiene la nueva información de seguridad.  
+ *rDacl*  
+ La DACL que contiene la información de seguridad nuevo.  
   
- `dwInheritanceFlowControl`  
+ *dwInheritanceFlowControl*  
  El control de flujo de herencia. Este valor puede ser 0 (valor predeterminado), PROTECTED_DACL_SECURITY_INFORMATION o UNPROTECTED_DACL_SECURITY_INFORMATION.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
   
 ### <a name="remarks"></a>Comentarios  
- En las compilaciones de depuración, se producirá un error de aserción si `hObject` no es válida, o si `dwInheritanceFlowControl` no es uno de los tres valores permitidos.  
+ En las compilaciones de depuración, se producirá un error de aserción si *hObject* no es válido, o si *dwInheritanceFlowControl* no es uno de los tres valores permitidos.  
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsecurity.h 
 
@@ -132,14 +132,14 @@ inline bool AtlGetGroupSid(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hObject`  
- Identificador de objeto del que se va a recuperar la información de seguridad.  
+ *hObject*  
+ Identificador del objeto desde el que se va a recuperar la información de seguridad.  
   
- `ObjectType`  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo de objeto identificado por la `hObject` parámetro.  
+ *ObjectType*  
+ Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
- `pSid`  
- Puntero a un `CSid` objeto que va a contener la nueva información de seguridad.  
+ *pSid*  
+ Puntero a un `CSid` objetos que contendrán la nueva información de seguridad.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
@@ -161,13 +161,13 @@ inline bool AtlSetGroupSid(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hObject`  
- Identificador de objeto para el que se va a establecer información de seguridad.  
+ *hObject*  
+ Identificador del objeto que se va a establecer información de seguridad.  
   
- `ObjectType`  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo de objeto identificado por la `hObject` parámetro.  
+ *ObjectType*  
+ Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
- `rSid`  
+ *rSid*  
  La `CSid` objeto que contiene la nueva información de seguridad.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -190,14 +190,14 @@ inline bool AtlGetOwnerSid(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hObject`  
- Identificador de objeto del que se va a recuperar la información de seguridad.  
+ *hObject*  
+ Identificador del objeto desde el que se va a recuperar la información de seguridad.  
   
- `ObjectType`  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo de objeto identificado por la `hObject` parámetro.  
+ *ObjectType*  
+ Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
- `pSid`  
- Puntero a un `CSid` objeto que va a contener la nueva información de seguridad.  
+ *pSid*  
+ Puntero a un `CSid` objetos que contendrán la nueva información de seguridad.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
@@ -219,13 +219,13 @@ inline bool AtlSetOwnerSid(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hObject`  
- Identificador de objeto para el que se va a establecer información de seguridad.  
+ *hObject*  
+ Identificador del objeto que se va a establecer información de seguridad.  
   
- `ObjectType`  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo de objeto identificado por la `hObject` parámetro.  
+ *ObjectType*  
+ Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
- `rSid`  
+ *rSid*  
  La `CSid` objeto que contiene la nueva información de seguridad.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -249,23 +249,23 @@ inline bool AtlGetSacl(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hObject`  
- Identificador de objeto del que se va a recuperar la información de seguridad.  
+ *hObject*  
+ Identificador del objeto desde el que se va a recuperar la información de seguridad.  
   
- `ObjectType`  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo de objeto identificado por la `hObject` parámetro.  
+ *ObjectType*  
+ Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
- `pSacl`  
- Puntero a un objeto SACL que contendrá la información de seguridad recuperados.  
+ *pSacl*  
+ Puntero a un objeto de la SACL que contendrá la información de seguridad recuperado.  
   
- `bRequestNeededPrivileges`  
- Si es true, la función intentará habilitar el privilegio SE_SECURITY_NAME y restaurarla en la realización.  
+ *bRequestNeededPrivileges*  
+ Si es true, la función intentará habilitar el privilegio SE_SECURITY_NAME y restaurarla en la finalización.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
   
 ### <a name="remarks"></a>Comentarios  
- Si `AtlGetSacl` va a ser llamado muchas veces muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con `bRequestNeededPrivileges` establecido en false.  
+ Si `AtlGetSacl` va a llamar varias veces en muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con *bRequestNeededPrivileges* establecida en false.  
 
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsecurity.h 
@@ -286,28 +286,28 @@ inline bool AtlSetSacl(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hObject`  
- Identificador de objeto para el que se va a establecer información de seguridad.  
+ *hObject*  
+ Identificador del objeto que se va a establecer información de seguridad.  
   
- `ObjectType`  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo de objeto identificado por la `hObject` parámetro.  
+ *ObjectType*  
+ Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
  *rSacl*  
- La SACL que contiene la nueva información de seguridad.  
+ La SACL que contiene la información de seguridad nuevo.  
   
- `dwInheritanceFlowControl`  
+ *dwInheritanceFlowControl*  
  El control de flujo de herencia. Este valor puede ser 0 (valor predeterminado), PROTECTED_SACL_SECURITY_INFORMATION o UNPROTECTED_SACL_SECURITY_INFORMATION.  
   
- `bRequestNeededPrivileges`  
- Si es true, la función intentará habilitar el privilegio SE_SECURITY_NAME y restaurarla en la realización.  
+ *bRequestNeededPrivileges*  
+ Si es true, la función intentará habilitar el privilegio SE_SECURITY_NAME y restaurarla en la finalización.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
   
 ### <a name="remarks"></a>Comentarios  
- En las compilaciones de depuración, se producirá un error de aserción si `hObject` no es válida, o si `dwInheritanceFlowControl` no es uno de los tres valores permitidos.  
+ En las compilaciones de depuración, se producirá un error de aserción si *hObject* no es válido, o si *dwInheritanceFlowControl* no es uno de los tres valores permitidos.  
   
- Si `AtlSetSacl` va a ser llamado muchas veces muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con `bRequestNeededPrivileges` establecido en false.  
+ Si `AtlSetSacl` va a llamar varias veces en muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con *bRequestNeededPrivileges* establecida en false.  
 
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsecurity.h 
@@ -333,23 +333,23 @@ inline bool AtlGetSecurityDescriptor(
  *pszObjectName*  
  Puntero a una cadena terminada en null que especifica el nombre del objeto que se va a recuperar la información de seguridad.  
   
- `ObjectType`  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo de objeto identificado por la *pszObjectName* parámetro.  
+ *ObjectType*  
+ Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *pszObjectName* parámetro.  
   
  *pSecurityDescriptor*  
  El objeto que recibe el descriptor de seguridad solicitado.  
   
  *requestedInfo*  
- Un conjunto de [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) marcas que indican el tipo de información de seguridad para recuperar de bits. Este parámetro puede ser una combinación de los valores siguientes.  
+ Un conjunto de [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) bit de marcas que indican el tipo de información de seguridad para recuperar. Este parámetro puede ser una combinación de los siguientes valores.  
   
- `bRequestNeededPrivileges`  
- Si es true, la función intentará habilitar el privilegio SE_SECURITY_NAME y restaurarla en la realización.  
+ *bRequestNeededPrivileges*  
+ Si es true, la función intentará habilitar el privilegio SE_SECURITY_NAME y restaurarla en la finalización.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
   
 ### <a name="remarks"></a>Comentarios  
- Si `AtlGetSecurityDescriptor` va a ser llamado muchas veces muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con `bRequestNeededPrivileges` establecido en false.  
+ Si `AtlGetSecurityDescriptor` va a llamar varias veces en muchos objetos diferentes, resultará más eficiente para habilitar el privilegio SE_SECURITY_NAME una vez antes de llamar a la función, con *bRequestNeededPrivileges* establecida en false.  
 
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsecurity.h 

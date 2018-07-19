@@ -1,5 +1,5 @@
 ---
-title: 'Categorías de valor: Lvalues y Rvalues (Visual C++) | Documentos de Microsoft'
+title: 'Categorías de valor: Lvalues y Rvalues (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -15,34 +15,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bbe048ee6667aaf71b2a3cf52e82993f90ab1c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed6f9a11b6cf2a0045729acbc79d8e45103064ea
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419146"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940191"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues y Rvalues (Visual C++)
 
-Cada expresión de C++ tiene un tipo y pertenece a un *categoría valor*. Las categorías de valor son la base para las reglas que los compiladores deben seguir al crear, copiar y mover los objetos temporales durante la evaluación de expresión.
+Cada expresión de C++ tiene un tipo y pertenece a un *categoría valor*. Las categorías de valor son la base para las reglas que los compiladores deben seguir al crear, copiar y mover objetos temporales durante la evaluación de expresión.
 
- El estándar C ++ 17 define las categorías de valor de expresión como se indica a continuación:
+ El estándar C ++ 17 define las categorías de valor de expresión como sigue:
 
-- A *glvalue* es una expresión cuya evaluación determina la identidad de un objeto, un campo de bits o una función.
-- A *prvalue* es una expresión cuya evaluación Inicializa un objeto o un campo de bits, o calcula el valor del operando de un operador, tal y como especifica el contexto de donde aparece.
-- Un *xvalue* es un glvalue que denota un objeto o un campo de bits cuyos recursos se pueden reutilizar (normalmente porque está cerca del final de su duración). [Ejemplo: determinados tipos de expresiones que incluyen referencias a valor r (8.3.2) producen xvalues, por ejemplo, una llamada a una función cuyo tipo de valor devuelto es una referencia rvalue o una conversión a un tipo de referencia rvalue. ]
-- Un *valor l* es un glvalue que no sea un xvalue.
+- Un *glvalue* es una expresión cuya evaluación determina la identidad de un objeto, el campo de bits o la función.
+- Un *prvalue* es una expresión cuya evaluación Inicializa un objeto o un campo de bits, o calcula el valor del operando de un operador, como especificado por el contexto donde aparece.
+- Un *xvalue* es un glvalue que denota un objeto o un campo de bits cuyos recursos se pueden reutilizar (normalmente porque es casi al final de su ciclo de vida). [Ejemplo: determinados tipos de expresiones que implican las referencias rvalue (8.3.2) producen xvalues, por ejemplo, una llamada a una función cuyo tipo de valor devuelto es una referencia rvalue o una conversión a un tipo de referencia rvalue. ]
+- Un *lvalue* es un glvalue que no sea un xvalue.
 - Un *rvalue* es un prvalue o un xvalue.
 
 El siguiente diagrama muestra las relaciones entre las categorías:
 
  ![Categorías de valor de expresión de C++](media/value_categories.png "categorías de valor de expresión de C++")
 
- Un valor l tiene una dirección que puede tener acceso su programa. Nombres de variable, incluidos algunos ejemplos de expresiones de valor l `const` variables, elementos de matriz, función llamadas que devuelven una referencia lvalue, campos de bits, uniones y los miembros de clase.
+ Un valor l tiene una dirección que puede tener acceso su programa. Los nombres de variable, incluidos algunos ejemplos de expresiones de valor l **const** llamadas que devuelven una referencia lvalue, campos de bits, uniones y los miembros de clase de función de las variables, los elementos de matriz.
 
- Una expresión de prvalue no tiene ninguna dirección que sea accesible para el programa. Ejemplos de expresiones de prvalue incluyen literales, llamadas a funciones que devuelven un tipo sin referencia y los objetos temporales que se crean durante la evaluación de expresión pero accesible únicamente por el compilador.
+ Una expresión de prvalue no tiene ninguna dirección que sea accesible para el programa. Ejemplos de expresiones prvalue incluyen literales, llamadas a funciones que devuelven un tipo sin referencia y los objetos temporales que se crean durante la evaluación de expresión, pero accesible únicamente por el compilador.
 
- Una expresión de xvalue tiene una dirección que ya no es accesible para el programa, pero puede usarse para inicializar una referencia rvalue, que proporciona acceso a la expresión. Algunos ejemplos son llamadas a funciones que devuelven una referencia rvalue y el subíndice de matriz, miembro y puntero a expresiones de miembro en la matriz o el objeto es una referencia rvalue.
+ Una expresión xvalue tiene una dirección que ya no es accesible por el programa, pero se puede usar para inicializar una referencia rvalue, que proporciona acceso a la expresión. Algunos ejemplos son llamadas a funciones que devuelven una referencia rvalue y el subíndice de matriz, miembro y puntero a expresiones de miembro donde la matriz u objeto es una referencia rvalue.
 
 ## <a name="example"></a>Ejemplo
 
@@ -76,7 +76,7 @@ int main()
 > [!NOTE]
 > En los ejemplos de este tema se muestra el uso correcto e incorrecto cuando los operadores no están sobrecargados. Si sobrecarga operadores, puede convertir una expresión tal como `j * 4` en un valor L.
 
-Los términos *valor l* y *rvalue* a menudo se usan cuando se hace referencia a las referencias de objeto. Para obtener más información acerca de las referencias, vea [declarador de referencia de valor l: &](../cpp/lvalue-reference-declarator-amp.md) y [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Los términos *lvalue* y *rvalue* a menudo se usan cuando se hace referencia a las referencias de objeto. Para obtener más información acerca de las referencias, vea [declarador de referencia Lvalue: &](../cpp/lvalue-reference-declarator-amp.md) y [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Vea también
 

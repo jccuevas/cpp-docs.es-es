@@ -1,5 +1,5 @@
 ---
-title: _com_error::error | Documentos de Microsoft
+title: _com_error::error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02afac78de5eb5908d477f8503ceeebffe46f672
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21f2da8c10b9b796740144f81d0390f1af124cab
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412587"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942060"
 ---
 # <a name="comerrorerror"></a>_com_error::Error
 **Específicos de Microsoft**  
   
- Recupera el `HRESULT` pasado al constructor.  
+ Recupera el valor HRESULT pasado al constructor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,10 +38,10 @@ HRESULT Error( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Elemento `HRESULT` sin formato pasado en el constructor.  
+ Elemento HRESULT sin formato pasado al constructor.  
   
 ## <a name="remarks"></a>Comentarios  
- Recupera el elemento `HRESULT` encapsulado de un objeto `_com_error`.  
+ Recupera el elemento HRESULT encapsulado en un `_com_error` objeto.  
   
  **FIN de Específicos de Microsoft**  
   

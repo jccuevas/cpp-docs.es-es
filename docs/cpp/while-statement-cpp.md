@@ -1,5 +1,5 @@
 ---
-title: while (instrucción) (C++) | Documentos de Microsoft
+title: while (instrucción) (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944246"
 ---
 # <a name="while-statement-c"></a>while (Instrucción) (C++)
 Ejecuta *instrucción* repetidamente hasta que *expresión* se evalúa como cero.  
@@ -30,18 +31,18 @@ Ejecuta *instrucción* repetidamente hasta que *expresión* se evalúa como cero
   
 ```  
   
-      while ( expression )  
+while ( expression )  
    statement  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- La prueba de *expresión* tiene lugar antes de cada ejecución del bucle; por lo tanto, un `while` el bucle ejecuta cero o más veces. *expresión* debe ser de un tipo entero, un tipo de puntero, o un tipo de clase con una conversión no ambigua a un entero o un tipo de puntero.  
+ La prueba de *expresión* tiene lugar antes de cada ejecución del bucle; por lo tanto, un **mientras** bucle ejecuta cero o más veces. *expresión* debe ser de un tipo entero, un tipo de puntero, o un tipo de clase con una conversión no ambigua a un entero o un tipo de puntero.  
   
- A `while` bucle también puede finalizar cuando un [salto](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), o [devolver](../cpp/return-statement-cpp.md) dentro de la instrucción se ejecuta el cuerpo. Use [continuar](../cpp/continue-statement-cpp.md) para finalizar la iteración actual sin salir del `while` bucle. **continuar** pasa el control a la siguiente iteración de la `while` bucle.  
+ Un **mientras** bucle también puede finalizar cuando un [salto](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), o [devolver](../cpp/return-statement-cpp.md) dentro de la instrucción se ejecuta el cuerpo. Use [continuar](../cpp/continue-statement-cpp.md) para finalizar la iteración actual sin salir del **mientras** bucle. **continuar** pasa el control a la siguiente iteración de la **mientras** bucle.  
   
- En el código siguiente se utiliza un bucle `while` para recortar los caracteres de subrayado finales de una cadena:  
+ El siguiente código utiliza un **mientras** caracteres de subrayado de bucle para recortar los finales de una cadena:  
   
-```  
+```cpp 
 // while_statement.cpp  
   
 #include <string.h>  

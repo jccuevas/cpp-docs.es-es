@@ -1,5 +1,5 @@
 ---
-title: Declaraciones y definiciones (C++) | Documentos de Microsoft
+title: Declaraciones y definiciones (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8a0922d66a9421bcc7c6c07b9396b277499d0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e66371ead4c2070769b45bf5b181677431936c84
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944540"
 ---
 # <a name="declarations-and-definitions-c"></a>Declaraciones y definiciones (C++)
-Las declaraciones introducen nombres en un programa, por ejemplo, los nombres de variables, espacios de nombres, funciones y clases. Las declaraciones también especifican información de tipos y otras características del objeto que se declara. Antes de poder usar un nombre, hay que declararlo; en C++, el punto en el que se declara un nombre determina si es visible para el compilador. Imposible hacer referencia a una función o clase que se declara en algún punto posterior de la unidad de compilación; Puede usar *reenviar declaraciones* para evitar esta limitación.  
+Las declaraciones introducen nombres en un programa, por ejemplo, los nombres de variables, espacios de nombres, funciones y clases. Las declaraciones también especifican información de tipos y otras características del objeto que se declara. Antes de poder usar un nombre, hay que declararlo; en C++, el punto en el que se declara un nombre determina si es visible para el compilador. Se no se puede hacer referencia a una función o clase que se declara en algún momento posterior en la unidad de compilación; Puede usar *reenviar declaraciones* para superar esta limitación.  
   
  Las definiciones de especifican qué código o datos describe el nombre. El compilador necesita la definición a fin de asignar espacio de almacenamiento para el elemento que se declara.  
   
@@ -28,19 +29,19 @@ Las declaraciones introducen nombres en un programa, por ejemplo, los nombres de
   
 1.  Es un prototipo de función (una declaración de función sin cuerpo de función).  
   
-2.  Contiene el especificador `extern` pero ningún inicializador (objetos y variables) o cuerpo de función (funciones). Esto significa que la definición no está necesariamente en la unidad de traducción actual y proporciona al nombre vinculación externa.  
+2.  Contiene el **extern** especificador pero ningún inicializador (objetos y variables) o el cuerpo de la función (funciones). Esto significa que la definición no está necesariamente en la unidad de traducción actual y proporciona al nombre vinculación externa.  
   
 3.  Es de un miembro de datos estático en una declaración de clase.  
   
-     Como los miembros de datos estáticos de clase son variables discretas compartidas por todos los objetos de la clase, se deben definir e inicializar fuera de la declaración de clase. (Para obtener más información acerca de las clases y miembros de clase, consulte [clases](../cpp/classes-and-structs-cpp.md).)  
+     Como los miembros de datos estáticos de clase son variables discretas compartidas por todos los objetos de la clase, se deben definir e inicializar fuera de la declaración de clase. (Para obtener más información sobre las clases y miembros de clase, vea [clases](../cpp/classes-and-structs-cpp.md).)  
   
 4.  Es una declaración de nombre de clase sin la siguiente definición, como `class T;`.  
   
-5.  Es una instrucción `typedef`.  
+5.  Es un **typedef** instrucción.  
   
  Estos son algunos ejemplos de declaraciones que también son definiciones:  
   
-```  
+```cpp 
 // Declare and define int variables i and j.  
 int i;  
 int j = 10;  
@@ -59,7 +60,7 @@ public:
   
  Algunas declaraciones que no son definiciones son:  
   
-```  
+```cpp 
   
 extern int i;  
 char *strchr( const char *Str, const char Target );  
@@ -67,9 +68,9 @@ char *strchr( const char *Str, const char Target );
   
  Se considera que un nombre se declara inmediatamente después de su declarador pero antes de su inicializador (opcional). Para obtener más información, consulte [punto de declaración](../cpp/point-of-declaration-in-cpp.md).  
   
- Las declaraciones tienen lugar en un *ámbito*. El ámbito controla la visibilidad del nombre declarado y la duración del objeto definido, si existe. Para obtener más información acerca de cómo interactúan las reglas de ámbito con declaraciones, vea [ámbito](../cpp/scope-visual-cpp.md).  
+ Las declaraciones se producen en un *ámbito*. El ámbito controla la visibilidad del nombre declarado y la duración del objeto definido, si existe. Para obtener más información acerca de cómo interactúan las reglas de ámbito con declaraciones, vea [ámbito](../cpp/scope-visual-cpp.md).  
   
- Una declaración de objeto es también una definición a menos que contenga el `extern` especificador de clase de almacenamiento se describe en [clases de almacenamiento](storage-classes-cpp.md). Una declaración de función es también una definición a menos que sea un prototipo. Un prototipo es un encabezado de función sin un cuerpo de definición de la función. La definición de un objeto provoca la asignación del almacenamiento y las inicializaciones adecuadas para ese objeto.  
+ Una declaración de objeto es también una definición a menos que contenga el **extern** especificador de clase de almacenamiento que se describe en [clases de almacenamiento](storage-classes-cpp.md). Una declaración de función es también una definición a menos que sea un prototipo. Un prototipo es un encabezado de función sin un cuerpo de definición de la función. La definición de un objeto provoca la asignación del almacenamiento y las inicializaciones adecuadas para ese objeto.  
   
 ## <a name="definitions"></a>Definiciones  
  Una definición es una especificación única de un objeto o una variable, función, clase o enumerador. Como las definiciones deben ser únicas, un programa solo puede contener una definición para un determinado elemento de programa. Puede haber una correspondencia varios a uno entre las declaraciones y definiciones. Hay dos casos en los que un elemento de programa puede estar declarado y no definido:  
@@ -78,7 +79,7 @@ char *strchr( const char *Str, const char Target );
   
 2.  Una clase solo se utiliza de forma que no sea necesario conocer su definición. Sin embargo, la clase debe declararse. En el código siguiente se muestra este caso:  
   
-    ```  
+    ```cpp 
     // definitions.cpp  
     class WindowCounter;   // Forward declaration; no definition  
   

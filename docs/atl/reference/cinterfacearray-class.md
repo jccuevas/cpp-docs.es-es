@@ -1,5 +1,5 @@
 ---
-title: Clase CInterfaceArray | Documentos de Microsoft
+title: CInterfaceArray (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a24eadea87d0d34adf0f577b321fa16a7cfc86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359467"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882728"
 ---
-# <a name="cinterfacearray-class"></a>Clase CInterfaceArray
-Esta clase proporciona métodos útiles para construir una matriz de punteros de interfaz COM.  
+# <a name="cinterfacearray-class"></a>CInterfaceArray (clase)
+Esta clase proporciona métodos útiles al construir una matriz de punteros de interfaz COM.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,11 +38,11 @@ class CInterfaceArray :
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `I`  
- Una interfaz COM que especifican el tipo de puntero que se almacenará.  
+ *I*  
+ Una interfaz COM que especifica el tipo de puntero que se almacenará.  
   
- `piid`  
- Un puntero a lo IID de `I`.  
+ *piid*  
+ Un puntero para el IID de *me*.  
   
 ## <a name="members"></a>Miembros  
   
@@ -50,10 +50,10 @@ class CInterfaceArray :
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|El constructor para la matriz de interfaz.|  
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|El constructor de la matriz de interfaz.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase proporciona un constructor y los métodos derivados para la creación de una matriz de punteros de interfaz COM. Use [CInterfaceList](../../atl/reference/cinterfacelist-class.md) cuando se requiere una lista.  
+ Esta clase proporciona un constructor y los métodos derivados para crear una matriz de punteros de interfaz COM. Use [CInterfaceList](../../atl/reference/cinterfacelist-class.md) cuando se necesita una lista.  
   
  Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
@@ -76,7 +76,7 @@ CInterfaceArray() throw();
  Inicializa la matriz de puntero inteligente.  
   
 ## <a name="see-also"></a>Vea también  
- [Clase CAtlArray](../../atl/reference/catlarray-class.md)   
- [Clase CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
- [Clase CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
+ [CAtlArray (clase)](../../atl/reference/catlarray-class.md)   
+ [CComQIPtr (clase)](../../atl/reference/ccomqiptr-class.md)   
+ [CComQIPtrElementTraits (clase)](../../atl/reference/ccomqiptrelementtraits-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)

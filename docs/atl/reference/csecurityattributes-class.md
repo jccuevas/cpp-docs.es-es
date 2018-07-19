@@ -1,5 +1,5 @@
 ---
-title: Clase CSecurityAttributes | Documentos de Microsoft
+title: CSecurityAttributes (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357511"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879352"
 ---
-# <a name="csecurityattributes-class"></a>Clase de CSecurityAttributes
-Esta clase es un contenedor fino para la estructura de atributos de seguridad.  
+# <a name="csecurityattributes-class"></a>CSecurityAttributes (clase)
+Esta clase es un contenedor fino para la estructura de los atributos de seguridad.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,12 +50,12 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CSecurityAttributes:: Set](#set)|Llamar a este método para establecer los atributos de la `CSecurityAttributes` objeto.|  
+|[CSecurityAttributes:: Set](#set)|Llame a este método para establecer los atributos de la `CSecurityAttributes` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- El **SECURITY_ATTRIBUTES** estructura contiene una [descriptor de seguridad](http://msdn.microsoft.com/library/windows/desktop/aa379561) utilizado para la creación de un objeto y especifica si el identificador que se recuperan mediante la especificación de esta estructura es heredable.  
+ El `SECURITY_ATTRIBUTES` estructura contiene un [descriptor de seguridad](http://msdn.microsoft.com/library/windows/desktop/aa379561) utilizado para la creación de un objeto y especifica si el identificador recuperado especificando esta estructura es heredable.  
   
- Para obtener una introducción al modelo de control de acceso en Windows, consulte [el Control de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374860) en el SDK de Windows.  
+ Para obtener una introducción al modelo de control de acceso en Windows, consulte [Control de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374860) en el SDK de Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `SECURITY_ATTRIBUTES`  
@@ -74,28 +74,28 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Referencia a un descriptor de seguridad.  
   
- `bInheritsHandle`  
+ *bInheritsHandle*  
  Especifica si se hereda el identificador devuelto cuando se crea un nuevo proceso. Si este miembro es true, el nuevo proceso hereda el identificador.  
   
 ##  <a name="set"></a>  CSecurityAttributes:: Set  
- Llamar a este método para establecer los atributos de la `CSecurityAttributes` objeto.  
+ Llame a este método para establecer los atributos de la `CSecurityAttributes` objeto.  
   
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Referencia a un descriptor de seguridad.  
   
- `bInheritHandle`  
+ *bInheritHandle*  
  Especifica si se hereda el identificador devuelto cuando se crea un nuevo proceso. Si este miembro es true, el nuevo proceso hereda el identificador.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método se utiliza el constructor para inicializar el `CSecurityAttributes` objeto.  
+ Este método se usa el constructor para inicializar el `CSecurityAttributes` objeto.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de seguridad](../../visual-cpp-samples.md)   

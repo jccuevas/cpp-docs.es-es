@@ -1,5 +1,5 @@
 ---
-title: Range-based for (instrucción) (C++) | Documentos de Microsoft
+title: Range-based for (instrucción) (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc60c1efc307f30c06accdd7404cb35c135dae5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1284e4f6e096ab8021c597b841a8e983673561bd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944558"
 ---
 # <a name="range-based-for-statement-c"></a>Instrucción for basada en intervalo (C++)
 Ejecuta `statement` de forma repetida y secuencial para cada elemento de `expression`.  
@@ -25,16 +26,16 @@ Ejecuta `statement` de forma repetida y secuencial para cada elemento de `expres
   
 ```  
   
-      for ( for-range-declaration : expression )  
+for ( for-range-declaration : expression )  
    statement   
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Usar basado en el intervalo `for` instrucción para construir los bucles que se deben ejecutar a través de un "intervalo", que se define como cualquier elemento que puede recorrer en iteración, por ejemplo, `std::vector`, o cualquier otra secuencia de la biblioteca estándar de C++ cuyo intervalo esté definido por un `begin()` y `end()`. El nombre que se declara en la parte `for-range-declaration` es local de la instrucción `for` y no se puede volver a declarar en `expression` o `statement`. Tenga en cuenta que la [automática](../cpp/auto-cpp.md) se prefiere la palabra clave en el `for-range-declaration` parte de la instrucción. 
+ Usar basado en intervalos **para** instrucción para construir bucles que deben ejecutarse a través de un "intervalo", que se define como cualquier cosa que puede iterar a través de, por ejemplo, `std::vector`, o cualquier otra biblioteca estándar de C++ cuyo intervalo de secuencia se define mediante un `begin()` y `end()`. El nombre que se declara en el `for-range-declaration` parte es local para el **para** instrucción y no se puede volver a declarar en `expression` o `statement`. Tenga en cuenta que el [automática](../cpp/auto-cpp.md) se prefiere la palabra clave en el `for-range-declaration` parte de la instrucción. 
 
- **Novedades en Visual Studio de 2017:** basada en intervalo para bucles ya no necesitan que las funciones begin() y end() devuelven objetos del mismo tipo. Esto permite que end() devuelva un objeto centinela como el usado por los intervalos tal como se define en la propuesta de intervalos V3. Para más información, vea [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (Generalización del bucle for basado en intervalos) y [range-v3 library](https://github.com/ericniebler/range-v3) (Biblioteca range-v3) en GitHub.
+ **Novedades de Visual Studio 2017:** en función de rangos para bucles ya no necesitan que begin() y end() devuelvan objetos del mismo tipo. Esto permite que end() devuelva un objeto centinela como el usado por los intervalos tal como se define en la propuesta de intervalos V3. Para más información, vea [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (Generalización del bucle for basado en intervalos) y [range-v3 library](https://github.com/ericniebler/range-v3) (Biblioteca range-v3) en GitHub.
   
- Este código muestra cómo utilizar basada en intervalo `for` bucles y recorrer en iteración una matriz y un vector:  
+ Este código muestra cómo usar basado en rango **para** bucles para recorrer en iteración una matriz y un vector:  
   
 ```cpp  
 // range-based-for.cpp  
@@ -93,24 +94,26 @@ int main()
 ```  
   
  Este es el resultado:  
+
+```Output
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
-  
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
  `end of integer array test`  
   
  `0.14159 1.14159 2.14159 3.14159 4.14159 5.14159 6.14159 7.14159 8.14159 9.14159`  
   
  `end of vector test`  
+```
+
+ Basado en rango **para** bucle finaliza cuando uno de estos en `statement` se ejecuta: un [salto](../cpp/break-statement-cpp.md), [devolver](../cpp/return-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md) a un etiquetado instrucción fuera basado en intervalos **para** bucle. Un [continuar](../cpp/continue-statement-cpp.md) instrucción basado en rango **para** bucle finaliza solo la iteración actual.  
   
- Basado en un intervalo `for` bucle finaliza cuando uno de ellos en `statement` se ejecuta: una [salto](../cpp/break-statement-cpp.md), [devolver](../cpp/return-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md) a una instrucción con etiqueta fuera de la basado en intervalo **para** bucle. A [continuar](../cpp/continue-statement-cpp.md) instrucción está basado en un intervalo en `for` bucle finaliza solo la iteración actual.  
-  
- Tenga en cuenta lo siguiente sobre la instrucción `for` basada en intervalo:  
+ Tenga en cuenta estos hechos a sobre basado en rango **para**:  
   
 -   Reconoce automáticamente las matrices.  
   

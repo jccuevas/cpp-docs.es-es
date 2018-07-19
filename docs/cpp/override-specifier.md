@@ -1,5 +1,5 @@
 ---
-title: override (especificador) | Documentos de Microsoft
+title: Especificador de invalidación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d43620ceeb0404c3ad8b10cee3d0a00e7b2f467
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420186"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940659"
 ---
 # <a name="override-specifier"></a>override (especificador)
-Puede usar la palabra clave `override` para indicar las funciones miembro que invalidan una función virtual en una clase base.  
+Puede usar el **invalidar** palabra clave para designar funciones que invalidan una función virtual en una clase base de miembro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,10 +32,10 @@ function-declaration override;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- `override` es contextual y tiene un significado especial solo cuando se utiliza después de una declaración de función miembro; de lo contrario, no es una palabra clave reservada.  
+ **invalidar** es contextual y tiene especiales, lo que significa que solo cuando se utiliza después de una declaración de función miembro; de lo contrario, no es una palabra clave reservada.  
   
 ## <a name="example"></a>Ejemplo  
- Utilice `override` para evitar el comportamiento inadvertido de herencia en el código. En el ejemplo siguiente se muestra dónde puede no haberse previsto el comportamiento de la función miembro de clase derivada, sin utilizar `override`. El compilador no genera ningún error para este código.  
+ Use **invalidar** para ayudar a evitar el comportamiento inadvertido de herencia en el código. El ejemplo siguiente muestra dónde, sin usar **invalidar**, el comportamiento de la función miembro de la clase derivada puede no haberse previsto. El compilador no genera ningún error para este código.  
   
 ```cpp  
 class BaseClass  
@@ -61,7 +61,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Al usar `override`, el compilador genera errores en lugar de crear silenciosamente nuevas funciones miembro.  
+ Cuando usas **invalidar**, el compilador genera errores en lugar de en modo silencioso crear nuevo miembro de las funciones.  
   
 ```cpp  
 class BaseClass  
@@ -89,7 +89,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Para especificar que no se puede invalidar las funciones y que no se puede heredar clases, use la [final](../cpp/final-specifier.md) palabra clave.  
+ Para especificar que no se puede invalidar las funciones y clases que no se puede heredar, use el [final](../cpp/final-specifier.md) palabra clave.  
   
 ## <a name="see-also"></a>Vea también  
  [final (especificador)](../cpp/final-specifier.md)   

@@ -1,5 +1,5 @@
 ---
-title: '_com_error:: wcode | Documentos de Microsoft'
+title: '_com_error:: wcode | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1354d490446795e55b41fa0c548e8dd8aa38c71b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 810a5c16df1027aba976bea3c165b19f765d15a6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411541"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941845"
 ---
 # <a name="comerrorwcode"></a>_com_error::WCode
 **Específicos de Microsoft**  
   
- Recupera el código de error de 16 bits asignado en el `HRESULT`encapsulado.  
+ Recupera el código de error de 16 bits asignado en el valor de HRESULT encapsulado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,10 +37,10 @@ WORD WCode ( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si el `HRESULT` está dentro del intervalo 0 x 80040200 a 0x8004FFFF, el **WCode** método devuelve el `HRESULT` menos 0 x 80040200; de lo contrario, devuelve cero.  
+ Si el valor HRESULT está dentro del intervalo 0 x 80040200 a 0x8004FFFF, el `WCode` método devuelve el valor HRESULT menos 0 x 80040200; de lo contrario, devuelve cero.  
   
 ## <a name="remarks"></a>Comentarios  
- El **WCode** método se usa para deshacer una asignación que tiene lugar en el código de compatibilidad con COM. El contenedor de un **dispinterface** propiedad o un método llama a una rutina de soporte que empaqueta los argumentos y llama **IDispatch:: Invoke**. Al volver, si un error `HRESULT` de `DISP_E_EXCEPTION` se devuelve, se recupera la información de error de la **EXCEPINFO** estructura pasada a **IDispatch:: Invoke**. El código de error puede ser un valor de 16 bits almacenado en el `wCode` miembro de la **EXCEPINFO** estructura o un valor de 32 bits en el **scode** miembro de la **EXCEPINFO**estructura. Si se devuelve un `wCode` de 16 bits, primero debe asignarse a un error `HRESULT` de 32 bits.  
+ El `WCode` método se usa para deshacer una asignación que ocurre en el código de soporte COM. El contenedor para un `dispinterface` propiedad o método llama a una rutina de soporte que empaqueta los argumentos y las llamadas `IDispatch::Invoke`. Cuando se devuelve, si un error HRESULT de DISP_E_EXCEPTION se devuelve, se recupera la información de error de la `EXCEPINFO` estructura pasada a `IDispatch::Invoke`. El código de error puede ser un valor de 16 bits almacenado en el `wCode` miembro de la `EXCEPINFO` estructura o un valor de 32 bits en el `scode` miembro de la `EXCEPINFO` estructura. Si los 16 bits `wCode` se devuelve, en primer lugar debe asignarse a un valor HRESULT de error de 32 bits.  
   
  **FIN de Específicos de Microsoft**  
   

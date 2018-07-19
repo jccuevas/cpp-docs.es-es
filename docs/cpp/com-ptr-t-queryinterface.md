@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::QueryInterface | Documentos de Microsoft
+title: _com_ptr_t::QueryInterface | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c046f1b1d14b7e7dbd44ca9f5f012e632efef6e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c455ce81a869d64b3a9019088028e384c6a06217
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944166"
 ---
 # <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
 **Específicos de Microsoft**  
   
- Llamadas a la `QueryInterface` función miembro de **IUnknown** en el puntero de interfaz encapsulado.  
+ Las llamadas del `QueryInterface` función miembro de `IUnknown` en el puntero de interfaz encapsulado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      template<typename _InterfaceType> HRESULT QueryInterface (  
+template<typename _InterfaceType> HRESULT QueryInterface (  
    const IID& iid,  
    _InterfaceType*& p   
 ) throw ( );  
@@ -43,14 +44,14 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `iid`  
- **IID** de un puntero de interfaz.  
+ *IID*  
+ `IID` de un puntero de interfaz.  
   
- `p`  
+ *p*  
  Puntero de interfaz sin formato.  
   
 ## <a name="remarks"></a>Comentarios  
- Llamadas **IUnknown:: QueryInterface** en el puntero de interfaz encapsulado con los valores especificados **IID** y devuelve el puntero de interfaz sin formato resultante en `p`. Esta rutina devuelve `HRESULT` para indicar si la operación se ha realizado de forma correcta o no.  
+ Las llamadas `IUnknown::QueryInterface` en el puntero de interfaz encapsulado con los valores especificados `IID` y devuelve el puntero de interfaz sin formato resultante en *p*. Esta rutina devuelve el valor HRESULT para indicar éxito o error.  
   
  **FIN de Específicos de Microsoft**  
   

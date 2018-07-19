@@ -1,5 +1,5 @@
 ---
-title: Espacios de nombres (C++) | Documentos de Microsoft
+title: Espacios de nombres (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/30/2017
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aac72a23e50ca3bc6d5b737d533bd11a40ed9da3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 223bf6996d5142cbe8d3521c65596beb40312f2c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423681"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941191"
 ---
 # <a name="namespaces-c"></a>Espacios de nombres (C++)
-Un espacio de nombres es una región declarativa que proporciona un ámbito a los identificadores (nombres de tipos, funciones, variables, etc.) de su interior. Los espacios de nombres se utilizan para organizar el código en grupos lógicos y para evitar conflictos de nombres que pueden producirse, especialmente cuando la base de código incluye varias bibliotecas. Todos los identificadores del ámbito del espacio de nombres son visibles entre sí sin calificación. Identificadores fuera del espacio de nombres pueden tener acceso a los miembros con el nombre completo para cada identificador, por ejemplo `std::vector<std::string> vec;`, o bien mediante un [mediante declaración](../cpp/using-declaration.md) para un identificador único (`using std::string`), o un [using (directiva)](../cpp/namespaces-cpp.md#using_directives) para todos los identificadores del espacio de nombres (`using namespace std;`). El código de los archivos de encabezado debe utilizar siempre el nombre completo del espacio de nombres.  
+Un espacio de nombres es una región declarativa que proporciona un ámbito a los identificadores (nombres de tipos, funciones, variables, etc.) de su interior. Los espacios de nombres se utilizan para organizar el código en grupos lógicos y para evitar conflictos de nombres que pueden producirse, especialmente cuando la base de código incluye varias bibliotecas. Todos los identificadores del ámbito del espacio de nombres son visibles entre sí sin calificación. Identificadores fuera del espacio de nombres pueden tener acceso a los miembros con el nombre completo para cada identificador, por ejemplo `std::vector<std::string> vec;`, o bien mediante un [mediante declaración](../cpp/using-declaration.md) para un identificador único (`using std::string`), o un [#using](../cpp/namespaces-cpp.md#using_directives) para todos los identificadores del espacio de nombres (`using namespace std;`). El código de los archivos de encabezado debe utilizar siempre el nombre completo del espacio de nombres.  
   
  En el ejemplo siguiente se muestra una declaración de espacio de nombres y tres formas de que el código que está fuera del espacio de nombres obtenga acceso a sus miembros.  
   
@@ -73,8 +73,8 @@ Func(mgr);
   
 ```  
   
-## <a id="using_directives"></a> las directivas using  
- El `using` directiva permite que todos los nombres en un **espacio de nombres** sin usar la *espacio de nombres* como calificador explícito. Usando una directiva en un archivo de implementación (es decir, (*.cpp) si está utilizando varios identificadores diferentes en un espacio de nombres; Si simplemente está utilizando uno o dos identificadores, a continuación, considere el uso de una declaración para poner solo esos identificadores en el ámbito y no todos los identificadores del espacio de nombres. Si una variable local tiene el mismo nombre que una variable de espacio de nombres, se oculta la variable de espacio de nombres. Es un error tener una variable de espacio de nombres con el mismo nombre que una variable global.  
+## <a id="using_directives"></a> directivas using  
+ El **mediante** directiva permite que todos los nombres de un **espacio de nombres** utilizar sin el *espacio de nombres* como calificador explícito. Utilizar una directiva en un archivo de implementación (es decir, *.cpp) si está utilizando varios identificadores diferentes en un espacio de nombres; Si simplemente usa uno o dos identificadores, a continuación, considere el uso de una declaración para poner solo esos identificadores en el ámbito y no todos los identificadores del espacio de nombres. Si una variable local tiene el mismo nombre que una variable de espacio de nombres, se oculta la variable de espacio de nombres. Es un error tener una variable de espacio de nombres con el mismo nombre que una variable global.  
   
 > [!NOTE]
 >  Una directiva using puede colocarse en la parte superior del archivo .cpp (en el ámbito del archivo), o dentro de una definición de clase o función.  
@@ -133,10 +133,10 @@ namespace V {
  Este error puede producirse cuando los miembros del espacio de nombres se declaran en varios archivos de encabezado y estos encabezados no se han incluido en el orden correcto.  
   
 ## <a name="the-global-namespace"></a>El espacio de nombres global  
- Si un identificador no se declara en un espacio de nombres explícito, forma parte del espacio de nombres global implícito. En general, intente evitar las declaraciones en el ámbito global siempre que sea posible, excepto para el punto de entrada [main (función)](../c-language/main-function-and-program-execution.md), que debe estar en el espacio de nombres global. Para calificar explícitamente un identificador global, utilice el operador de resolución de ámbito sin nombre, como en `::SomeFunction(x);`. Así, el identificador se diferenciará de cualquier elemento que tenga el mismo nombre en otro espacio de nombres, y también facilitará que otras personas entiendan el código.  
+ Si un identificador no se declara en un espacio de nombres explícito, forma parte del espacio de nombres global implícito. En general, intente evitar las declaraciones en el ámbito global cuando sea posible, excepto para el punto de entrada [función main](../c-language/main-function-and-program-execution.md), que es necesario para estar en el espacio de nombres global. Para calificar explícitamente un identificador global, utilice el operador de resolución de ámbito sin nombre, como en `::SomeFunction(x);`. Así, el identificador se diferenciará de cualquier elemento que tenga el mismo nombre en otro espacio de nombres, y también facilitará que otras personas entiendan el código.  
   
 ## <a name="the-std-namespace"></a>El espacio de nombres std  
- Todas las funciones y tipos de la biblioteca estándar de C++ se declaran en el `std` espacio de nombres o espacios de nombres anidados dentro de `std`.  
+ Todos los tipos de la biblioteca estándar de C++ y las funciones se declaran en el `std` espacio de nombres o espacios de nombres anidado dentro de `std`.  
   
 ## <a name="nested-namespaces"></a>Espacios de nombres anidados  
  Los espacios de nombres pueden estar anidados. Un espacio de nombres anidado normal tiene acceso incompleto a los miembros de su elemento primario, pero los miembros primarios no tienen acceso incompleto al espacio de nombres anidado (a menos que se declare como alineado), como se muestra en el ejemplo siguiente:  
@@ -255,7 +255,7 @@ namespace Contoso
   
 ```  
   
-## <a id="namespace_aliases"></a> Alias de Namespace  
+## <a id="namespace_aliases"></a> Alias Namespace  
  Los nombres de los espacios de nombres deben ser únicos, lo que significa que a menudo no pueden ser demasiado cortos. Si la longitud de un nombre hace que el código sea difícil de leer, o resulta tedioso escribirlo en un archivo de encabezado donde no se pueden utilizar directivas using, puede hacer un alias del espacio de nombres que actúe como una abreviatura del nombre real. Por ejemplo:  
   
 ```cpp  
@@ -275,7 +275,7 @@ namespace
 }  
 ```  
   
- Esto se denomina un espacio de nombres sin nombre o anónimo y es útil cuando desea que las declaraciones de variable visibles para el código de otros archivos (es decir, darles vinculación interna) sin tener que crear un espacio de nombres. Todo el código del mismo archivo puede ver los identificadores en un espacio de nombres sin nombre, pero los identificadores, junto con el espacio de nombres, no son visibles fuera de ese archivo, o más concretamente fuera de la unidad de traducción.  
+ Esto se conoce como un espacio de nombres sin nombre o anónimo y resulta útil cuando desea que las declaraciones de variable invisibles para el código en otros archivos (es decir, darles vinculación interna) sin tener que crear un espacio de nombres. Todo el código del mismo archivo puede ver los identificadores en un espacio de nombres sin nombre, pero los identificadores, junto con el espacio de nombres, no son visibles fuera de ese archivo, o más concretamente fuera de la unidad de traducción.  
   
 ## <a name="see-also"></a>Vea también  
  [Declaraciones y definiciones](declarations-and-definitions-cpp.md)

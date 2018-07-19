@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 531ee45aed64daa19f818bc5c8480a9c1b032d30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f3245e430ba1c74ea88f6262f14a4d38c1ca2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844138"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954036"
 ---
 # <a name="isintegral-class"></a>is_integral (Clase)
 
@@ -37,13 +37,13 @@ struct is_integral;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `Ty` es uno de los tipos enteros o un formulario `cv-qualified` de uno de ellos; en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es uno de los tipos enteros, o un `cv-qualified` formulario de uno de los tipos enteros, en caso contrario, es false.
 
-Un tipo entero es uno de `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` y `unsigned long`. Además, con los compiladores que los proporcionan, un tipo entero puede ser uno de `long long`, `unsigned long long`, `__int64` y `unsigned __int64`.
+Un tipo entero es uno de **bool**, **char**, **unsigned char**, **firmado char**, **wchar_t**, **corto**, **entero corto sin signo**, **int**, **int sin signo**, **largo**y **unsigned long**. Además, los compiladores que proporcionarlas, un tipo entero puede ser uno de **long long**, **long long sin signo**, **__int64**, y **__int64 sin signo**.
 
 ## <a name="example"></a>Ejemplo
 

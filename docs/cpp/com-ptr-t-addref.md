@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::AddRef | Documentos de Microsoft
+title: _com_ptr_t::AddRef | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a1b629f254bae2b72790546bcbb00185f2c44c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40ed48b54a3862f7ac5804e7652d98b661bb071d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409779"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940997"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
 **Específicos de Microsoft**  
   
- Llamadas a la `AddRef` función miembro de **IUnknown** en el puntero de interfaz encapsulado.  
+ Las llamadas del `AddRef` función miembro de `IUnknown` en el puntero de interfaz encapsulado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,7 +37,7 @@ void AddRef( );
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Llamadas `IUnknown::AddRef` en el puntero de interfaz encapsulado, cuando se genera un `E_POINTER` error si el puntero es **NULL**.  
+ Las llamadas `IUnknown::AddRef` en el puntero de interfaz encapsulado y genera un error E_POINTER si el puntero es NULL.  
   
  **FIN de Específicos de Microsoft**  
   

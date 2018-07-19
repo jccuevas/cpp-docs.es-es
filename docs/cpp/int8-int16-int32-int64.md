@@ -1,5 +1,5 @@
 ---
-title: __int8, __int16, __int32, __int64 | Documentos de Microsoft
+title: __int8, __int16, __int32, __int64 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8083d37d2526820ccd75104f9ee8a748eb5d33bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 409197ec99a8df9ad1999b20edd1537f10ced085
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944253"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  
@@ -36,19 +37,19 @@ ms.lasthandoff: 05/03/2018
   
  En el ejemplo siguiente se declara una variable para cada uno de estos tipos de enteros con tamaño:  
   
-```  
+```cpp 
 __int8 nSmall;      // Declares 8-bit integer  
 __int16 nMedium;    // Declares 16-bit integer  
 __int32 nLarge;     // Declares 32-bit integer  
 __int64 nHuge;      // Declares 64-bit integer  
 ```  
   
- Los tipos `__int8`, `__int16` e `__int32` son sinónimos de los tipos ANSI que tienen el mismo tamaño, y son útiles para escribir código portable que se comporta de forma idéntica en varias plataformas. El `__int8` tipo de datos es sinónimo del tipo `char`, `__int16` es sinónimo del tipo **corto**, y `__int32` es sinónimo del tipo `int`. El `__int64` tipo es sinónimo del tipo `long long`.  
+ Los tipos de **__int8**, **__int16**, y **__int32** son sinónimos de los tipos ANSI que tienen el mismo tamaño y son útiles para escribir código portable que se comporta igual en varias plataformas. El **__int8** tipo de datos es sinónimo del tipo **char**, **__int16** es sinónimo del tipo **corto**, y **__int32**  es sinónimo del tipo **int**. El **__int64** tipo es sinónimo del tipo **long long**.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra que un __int*xx* parámetro se promoverá a `int`:  
+ El ejemplo siguiente muestra que un __int*xx* parámetro se promoverá a **int**:  
   
-```  
+```cpp 
 // sized_int_types.cpp  
   
 #include <stdio.h>  

@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd9c9f643b6766dfca4f008f14c9d470a5bcc34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30523a7db07dba1359af59c9fcc988feb0e4ec18
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853328"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953831"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Otros manipuladores de flujos de salida con un argumento
 
-El siguiente ejemplo usa una clase `money`, que es un tipo `long`. El manipulador `setpic` adjunta una cadena formato de "imagen" a la clase que puede usarse mediante el operador de inserción de secuencia sobrecargado de la clase `money`. La cadena de imagen se almacena como una variable estática en la clase `money` en lugar de como un miembro de datos de una clase de secuencia, por lo que no tiene que derivar una nueva clase de flujo de salida.
+En el ejemplo siguiente se usa una clase `money`, que es un **largo** tipo. El manipulador `setpic` adjunta una cadena formato de "imagen" a la clase que puede usarse mediante el operador de inserción de secuencia sobrecargado de la clase `money`. La cadena de imagen se almacena como una variable estática en la clase `money` en lugar de como un miembro de datos de una clase de secuencia, por lo que no tiene que derivar una nueva clase de flujo de salida.
 
 ## <a name="example"></a>Ejemplo
 

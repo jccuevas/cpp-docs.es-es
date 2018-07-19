@@ -1,5 +1,5 @@
 ---
-title: Interfaz de la interfaz IThreadPoolConfig | Documentos de Microsoft
+title: IThreadPoolConfig (interfaz) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237671ce971d54209f3889fd93396fb4e0a42fee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 935175f522dd0b41851763f7b76781228c1881c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363734"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880159"
 ---
-# <a name="ithreadpoolconfig-interface"></a>Interfaz IThreadPoolConfig (interfaz)
+# <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig (interfaz)
 Esta interfaz proporciona métodos para configurar un grupo de subprocesos.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,10 +47,10 @@ __interface
   
 |||  
 |-|-|  
-|[GetSize](#getsize)|Llamar a este método para obtener el número de subprocesos en el grupo.|  
-|[GetTimeout](#gettimeout)|Llamar a este método para obtener el tiempo máximo en milisegundos que esperará el grupo de subprocesos para que un subproceso a apagar.|  
+|[GetSize](#getsize)|Llame a este método para obtener el número de subprocesos del grupo.|  
+|[GetTimeout](#gettimeout)|Llame a este método para obtener el tiempo máximo en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.|  
 |[SetSize](#setsize)|Llame a este método para establecer el número de subprocesos en el grupo.|  
-|[SetTimeout](#settimeout)|Llame a este método para establecer el tiempo máximo en milisegundos que esperará el grupo de subprocesos para que un subproceso a apagar.|  
+|[SetTimeout](#settimeout)|Llame a este método para establecer el tiempo máximo en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta interfaz se implementa mediante [CThreadPool](../../atl/reference/cthreadpool-class.md).  
@@ -59,38 +59,38 @@ __interface
  **Encabezado:** atlutil.h  
   
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
- Llamar a este método para obtener el número de subprocesos en el grupo.  
+ Llame a este método para obtener el número de subprocesos del grupo.  
   
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pnNumThreads`  
- [out] Dirección de la variable que se ejecuta correctamente, recibe el número de subprocesos en el grupo.  
+ *pnNumThreads*  
+ [out] Dirección de la variable que, si se ejecuta correctamente, recibe el número de subprocesos en el grupo.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
 ##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
- Llamar a este método para obtener el tiempo máximo en milisegundos que esperará el grupo de subprocesos para que un subproceso a apagar.  
+ Llame a este método para obtener el tiempo máximo en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.  
   
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pdwMaxWait`  
- [out] Dirección de la variable que se ejecuta correctamente, recibe el tiempo máximo en milisegundos que esperará el grupo de subprocesos para que un subproceso a apagar.  
+ *pdwMaxWait*  
+ [out] Dirección de la variable que, si se ejecuta correctamente, recibe el tiempo máximo en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ### <a name="example"></a>Ejemplo  
- Vea [IThreadPoolConfig::GetSize](#getsize).  
+ Consulte [IThreadPoolConfig::GetSize](#getsize).  
   
 ##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
  Llame a este método para establecer el número de subprocesos en el grupo.  
@@ -100,35 +100,35 @@ STDMETHOD(SetSize)int nNumThreads);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nNumThreads`  
+ *nNumThreads*  
  El número solicitado de subprocesos en el grupo.  
   
- Si `nNumThreads` es negativo, su valor absoluto se multiplicará por el número de procesadores en el equipo para obtener el número total de subprocesos.  
+ Si *nNumThreads* es negativo, su valor absoluto se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.  
   
- Si `nNumThreads` es cero, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) se multiplicará por el número de procesadores en el equipo para obtener el número total de subprocesos.  
+ Si *nNumThreads* es cero, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ### <a name="example"></a>Ejemplo  
- Vea [IThreadPoolConfig::GetSize](#getsize).  
+ Consulte [IThreadPoolConfig::GetSize](#getsize).  
   
 ##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
- Llame a este método para establecer el tiempo máximo en milisegundos que esperará el grupo de subprocesos para que un subproceso a apagar.  
+ Llame a este método para establecer el tiempo máximo en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.  
   
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwMaxWait`  
- El tiempo máximo solicitado en milisegundos que esperará el grupo de subprocesos para que un subproceso a apagar.  
+ *dwMaxWait*  
+ El tiempo máximo solicitado en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ### <a name="example"></a>Ejemplo  
- Vea [IThreadPoolConfig::GetSize](#getsize).  
+ Consulte [IThreadPoolConfig::GetSize](#getsize).  
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../atl/reference/atl-classes.md)   

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fbcf91b2b863312374fad96239a9585bb3b38c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846914"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966490"
 ---
 # <a name="enableif-class"></a>enable_if (Clase)
 
-Realiza una instancia de manera condicional de un tipo para la resolución de sobrecarga SFINAE. La definición de tipo anidada `enable_if<Condition,Type>::type` existe y es sinónimo de `Type`, solo si `Condition` es `true`.
+Realiza una instancia de manera condicional de un tipo para la resolución de sobrecarga SFINAE. El objeto typedef anidado `enable_if<Condition,Type>::type` existe, y es un sinónimo de `Type`, si y solo si `Condition` es **true**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,15 +37,15 @@ struct enable_if;
 
 ### <a name="parameters"></a>Parámetros
 
-`B` El valor que determina la existencia del tipo resultante.
+*B* el valor que determina la existencia del tipo resultante.
 
-`T` El tipo de una instancia si `B` es true.
+*T* para crear una instancia si el tipo de *B* es true.
 
 ## <a name="remarks"></a>Comentarios
 
-Si `B` es true, `enable_if<B, T>` tiene una definición de tipo anidada llamada "tipo" que es sinónimo de `T`.
+Si *B* es true, `enable_if<B, T>` tiene una definición de tipo anidada llamada "tipo" que es un sinónimo de *T*.
 
-Si `B` es false, `enable_if<B, T>` no tiene una definición de tipo anidada llamada "tipo".
+Si *B* es false, `enable_if<B, T>` no tiene una definición de tipo anidada llamada "tipo".
 
 Se proporciona esta plantilla de alias:
 
@@ -100,7 +100,7 @@ s) {// ...
 
 El escenario 1 no funciona con constructores y operadores de conversión porque no tienen tipos de retorno.
 
-El escenario 2 deja el parámetro sin nombre. Podría decir `::type Dummy = BAR`, pero el nombre `Dummy` es irrelevante y si se le da un nombre es probable que desencadene una advertencia "parámetro sin referencia". Debe elegir un tipo de parámetro de función `FOO` y un argumento predeterminado `BAR`.  Podría decir `int` y `0`, pero entonces los usuarios de su código podrían pasar por error un entero adicional a la función, que se ignoraría. En lugar de eso, recomendamos que utilice `void **` y `0` o `nullptr`, porque casi nada se puede convertir a `void **`:
+El escenario 2 deja el parámetro sin nombre. Podría decir `::type Dummy = BAR`, pero el nombre `Dummy` es irrelevante y si se le da un nombre es probable que desencadene una advertencia "parámetro sin referencia". Debe elegir un tipo de parámetro de función `FOO` y un argumento predeterminado `BAR`.  Podría decir **int** y `0`, pero, a continuación, los usuarios de su código podrían pasar por error a la función entero adicional que se ignorarán. En su lugar, se recomienda que use `void **` y `0` o **nullptr** porque casi nada se puede convertir a `void **`:
 
 ```cpp
 template <your_stuff>
@@ -135,7 +135,7 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-En este ejemplo, `make_pair("foo", "bar")` devuelve `pair<const char *, const char *>`. La resolución de sobrecarga debe determinar qué `func()` quiere. `pair<A, B>` tiene un constructor que convierte implícitamente de `pair<X, Y>`.  Esto no es nuevo, ya sucedía en C++98. No obstante, en C++98/03, la firma del constructor que convierte implícitamente existe siempre, incluso si es `pair<int, int>(const pair<const char *, const char *>&)`.  A la resolución de sobrecarga no le importa que un intento de crear una instancia de este constructor explote horriblemente, porque `const char *` no es implícitamente convertible a `int`, solo examina firmas antes de que se creen instancias de las definiciones de la función.  Por lo tanto, el código de ejemplo es ambiguo, porque las firmas existen para convertir `pair<const char *, const char *>` tanto a `pair<int, int>` y a `pair<string, string>`.
+En este ejemplo, `make_pair("foo", "bar")` devuelve `pair<const char *, const char *>`. La resolución de sobrecarga debe determinar qué `func()` quiere. `pair<A, B>` tiene un constructor que convierte implícitamente de `pair<X, Y>`.  Esto no es nuevo, ya sucedía en C++98. No obstante, en C++98/03, la firma del constructor que convierte implícitamente existe siempre, incluso si es `pair<int, int>(const pair<const char *, const char *>&)`.  La resolución de sobrecarga no le importa que un intento de crear una instancia de ese constructor explote horriblemente, porque `const char *` no es implícitamente convertible a **int**; solo se examina firmas, antes de la función son definiciones crea una instancia.  Por lo tanto, el código de ejemplo es ambiguo, porque las firmas existen para convertir `pair<const char *, const char *>` tanto a `pair<int, int>` y a `pair<string, string>`.
 
 C++11 ha solucionado esta ambigüedad usando `enable_if` para asegurarse de que `pair<A, B>(const pair<X, Y>&)` existiera **solo** cuando `const X&` pueda convertirse implícitamente en `A` y `const Y&` pueda convertirse implícitamente en `B`.  Esto permite que la resolución de sobrecarga determine que `pair<const char *, const char *>` no se puede convertir en `pair<int, int>` y que la sobrecarga que toma `pair<string, string>` es viable.
 

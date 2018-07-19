@@ -1,5 +1,5 @@
 ---
-title: CComObject (clase) | Documentos de Microsoft
+title: CComObject (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af84d64d326ed7746b76db39ef26181ab96ca88d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 89a909b715633488cff37fa87ea5950681e208cd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361491"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881846"
 ---
 # <a name="ccomobject-class"></a>CComObject (clase)
-Esta clase implementa **IUnknown** para un objeto no agregado.  
+Esta clase implementa `IUnknown` para un objeto no agregado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,8 +40,8 @@ class CComObject : public Base
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `Base`  
- La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como también a partir de otras interfaces que desea admitir en el objeto.  
+ *base*  
+ La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como también a partir del resto de interfaces que desea admitir en el objeto.  
   
 ## <a name="members"></a>Miembros  
   
@@ -62,9 +62,9 @@ class CComObject : public Base
 |[CComObject::Release](#release)|Disminuye el recuento de referencias en el objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para un objeto no agregado. Sin embargo, las llamadas a `QueryInterface`, `AddRef`, y **versión** se delegan a `CComObjectRootEx`.  
+ `CComObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para un objeto no agregado. Sin embargo, las llamadas a `QueryInterface`, `AddRef`, y `Release` se delegan a `CComObjectRootEx`.  
   
- Para obtener más información sobre el uso de `CComObject`, vea el artículo [aspectos básicos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md).  
+ Para obtener más información sobre el uso de `CComObject`, consulte el artículo [aspectos básicos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `Base`  
@@ -82,7 +82,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Esta función devuelve el recuento de referencias incrementado nuevo en el objeto. Este valor puede ser útil para diagnósticos o pruebas.  
+ Esta función devuelve el nuevo recuento de referencias incrementado en el objeto. Este valor puede ser útil para diagnósticos o pruebas.  
   
 ##  <a name="ccomobject"></a>  CComObject::CComObject  
  El constructor incrementa el recuento de bloqueos del módulo.  
@@ -93,12 +93,12 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>Parámetros  
  **void\***  
- [in] No se utiliza este parámetro sin nombre. Existe por simetría con otros **CCom *** XXX*`Object`*XXX* constructores.  
+ [in] No se utiliza este parámetro sin nombre. Existe para lograr una simetría Sí **CCom *** XXX*`Object`*XXX* constructores.  
   
 ### <a name="remarks"></a>Comentarios  
- El disminuye destructor se.  
+ El destructor disminuye lo.  
   
- Si un `CComObject`-objeto derivado correctamente se construye utilizando el **nueva** (operador), el recuento de referencias inicial es 0. Para establecer el recuento de referencias en el valor apropiado (1), realice una llamada a la [AddRef](#addref) función.  
+ Si un `CComObject`-objeto derivado correctamente se construye utilizando el **nuevo** operador, el recuento de referencias inicial es 0. Para establecer el recuento de referencias en el valor apropiado (1), realice una llamada a la [AddRef](#addref) función.  
   
 ##  <a name="dtor"></a>  CComObject:: ~ CComObject  
  Destructor.  
@@ -119,16 +119,16 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pp`  
- [out] Un puntero a un **CComObject <** `Base` **>** puntero. Si `CreateInstance` es incorrecta, `pp` está establecido en **NULL**.  
+ *perfil de puerto*  
+ [out] Un puntero a un **CComObject <** `Base` **>** puntero. Si `CreateInstance` es incorrecta, *pp* se establece en NULL.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor `HRESULT` estándar.  
+ Un valor HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- El objeto devuelto tiene un recuento de referencias de cero, por lo que se llame a `AddRef` inmediatamente, a continuación, utilice **versión** para liberar la referencia en el puntero de objeto cuando haya terminado.  
+ El objeto devuelto tiene un recuento de referencias de cero, puede llamarlo `AddRef` inmediatamente, use `Release` para liberar la referencia en el puntero de objeto cuando haya terminado.  
   
- Si no necesita acceso directo a los objetos, pero todavía desea crear un nuevo objeto sin la sobrecarga de `CoCreateInstance`, use [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) en su lugar.  
+ Si no necesita acceso directo a los objetos, pero todavía desea crear un nuevo objeto sin la sobrecarga de `CoCreateInstance`, utilice [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) en su lugar.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_COM#38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
@@ -145,17 +145,17 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `iid`  
+ *IID*  
  [in] El identificador de la interfaz que se solicita.  
   
- `ppvObject`  
- [out] Un puntero al puntero de interfaz identificado por `iid`. Si el objeto no admite esta interfaz, `ppvObject` está establecido en **NULL**.  
+ *ppvObject*  
+ [out] Un puntero al puntero de interfaz identificado por *iid*. Si el objeto no admite esta interfaz, *ppvObject* se establece en NULL.  
   
- `pp`  
- [out] Un puntero al puntero de interfaz identificado por tipo `Q`. Si el objeto no admite esta interfaz, `pp` está establecido en **NULL**.  
+ *perfil de puerto*  
+ [out] Un puntero al puntero de interfaz identificado por tipo `Q`. Si el objeto no admite esta interfaz, *pp* se establece en NULL.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor `HRESULT` estándar.  
+ Un valor HRESULT estándar.  
   
 ##  <a name="release"></a>  CComObject::Release  
  Disminuye el recuento de referencias en el objeto.  
@@ -165,11 +165,11 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Esta función devuelve el nuevo recuento de referencias disminuye en el objeto. En compilaciones de depuración, el valor devuelto puede ser útil para el diagnóstico o pruebas. En las compilaciones de depuración no, **versión** siempre devuelve 0.  
+ Esta función devuelve el nuevo recuento de referencias disminuye en el objeto. En las compilaciones de depuración, el valor devuelto puede ser útil para el diagnóstico o pruebas. En versiones no depuradas, `Release` siempre devuelve 0.  
   
 ## <a name="see-also"></a>Vea también  
  [CComAggObject (clase)](../../atl/reference/ccomaggobject-class.md)   
- [Clase CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
+ [CComPolyObject (clase)](../../atl/reference/ccompolyobject-class.md)   
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [Información general de clases](../../atl/atl-class-overview.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83180020c20f78c16af0b1b33bada91936b6af9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f065f7c00d3853d00c1063cd5b2838ec6d1d27b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844411"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953002"
 ---
 # <a name="identity-structure"></a>identity (Estructura)
 
@@ -40,13 +40,13 @@ struct identity {
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`left`|Valor que se va a identificar.|
+|*left*|Valor que se va a identificar.|
 
 ## <a name="remarks"></a>Comentarios
 
 La clase contiene la definición de tipo público `type`, que es igual que el tipo de parámetro de plantilla. Se usa junto con la función de plantilla [forward](../standard-library/utility-functions.md#forward) para asegurarse de que un parámetro de función tiene el tipo deseado.
 
-Para garantizar la compatibilidad con código antiguo, la clase también define la función identity `operator()` que devuelve su argumento `left`.
+Para la compatibilidad con el código anterior, la clase también define la función identity `operator()` que devuelve su argumento *izquierdo*.
 
 ## <a name="requirements"></a>Requisitos
 

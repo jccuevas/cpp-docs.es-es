@@ -1,5 +1,5 @@
 ---
-title: Las definiciones y declaraciones (C++) | Documentos de Microsoft
+title: Definiciones y declaraciones (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742270c77d47c178d0254ca9b9882f73fe3b8293
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f4b8635f082f706ef07697653d56155414c5199d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411772"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940916"
 ---
 # <a name="definitions-and-declarations-c"></a>Definiciones y declaraciones (C++)
 ## <a name="microsoft-specific"></a>Específicos de Microsoft
- La interfaz DLL hace referencia a todos los elementos (funciones y datos) que se sabe que puede exportar mediante algún programa en el sistema; es decir, todos los elementos que se declaran como `dllimport` o `dllexport`. Todas las declaraciones incluidas en la interfaz DLL deben especificar el `dllimport` o `dllexport` atributo. Sin embargo, la definición debe especificar el atributo `dllexport`. Por ejemplo, la definición de función siguiente genera un error del compilador:
+ La interfaz DLL hace referencia a todos los elementos (funciones y datos) que se sabe que se puede exportar mediante algún programa en el sistema; es decir, todos los elementos que se declaran como **dllimport** o **dllexport**. Todas las declaraciones incluidas en la interfaz DLL deben especificar el **dllimport** o **dllexport** atributo. Sin embargo, la definición debe especificar solo el **dllexport** atributo. Por ejemplo, la definición de función siguiente genera un error del compilador:
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -42,7 +42,7 @@ __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- El uso de `dllexport` implica una definición, mientras `dllimport` implica una declaración. Debe utilizar la palabra clave `extern` con `dllexport` para forzar una declaración; en caso contrario, se asume una definición. Por tanto, los siguientes ejemplos son correctos:
+ El uso de **dllexport** implica una definición, mientras que **dllimport** implica una declaración. Debe usar el **extern** palabra clave with **dllexport** para forzar una declaración; en caso contrario, se asume una definición. Por tanto, los siguientes ejemplos son correctos:
 
 ```
 #define DllImport   __declspec( dllimport )

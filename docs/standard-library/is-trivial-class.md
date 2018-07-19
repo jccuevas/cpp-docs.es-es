@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b30b634a84dc47d839e1288bc34437b440e914c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4eef350723dd8658bfc349495e905466e8179db1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864127"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965924"
 ---
 # <a name="istrivial-class"></a>Clase is_trivial
 
@@ -37,11 +37,11 @@ struct is_trivial;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` El tipo de consulta.
+*T* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `T` es un tipo trivial; en caso contrario, es false. Los tipos triviales son tipos escalares, tipos de clase que se pueden copiar de forma trivial, matrices de estos tipos y versiones de tipo cv-qualified (const, volatile, const volatile) de estos tipos.
+Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo trivial; en caso contrario, es false. Los tipos triviales son tipos escalares, tipos de clase que se pueden copiar de forma trivial, matrices de estos tipos y versiones de tipo cv-qualified (const, volatile, const volatile) de estos tipos.
 
 ## <a name="requirements"></a>Requisitos
 

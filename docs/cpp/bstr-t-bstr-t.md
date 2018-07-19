@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::_bstr_t | Documentos de Microsoft
+title: _bstr_t::_bstr_t | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824108b78ede3999a83b1c7c1ac75cc847f182f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb2e870c7418c0d0a6cf3cd82bc0a8acb45466a0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413289"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941270"
 ---
 # <a name="bstrtbstrt"></a>_bstr_t::_bstr_t
 **Específicos de Microsoft**  
@@ -53,23 +53,23 @@ _bstr_t(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `s1`  
+ *s1*  
  Objeto `_bstr_t` que se va a copiar.  
   
- `s2`  
+ *s2*  
  Cadena multibyte.  
   
- `s3`  
+ *S3*  
  Cadena Unicode.  
   
- `var`  
- A [_variant_t](../cpp/variant-t-class.md) objeto.  
+ *var*  
+ Un [_variant_t](../cpp/variant-t-class.md) objeto.  
   
- `bstr`  
+ *BSTR*  
  Objeto `BSTR` existente.  
   
- `fCopy`  
- Si es `false`, el argumento `bstr` se adjunta al nuevo objeto sin crear una copia mediante una llamada a `SysAllocString`.  
+ *fCopy*  
+ Si es FALSE, el *bstr* argumento se adjunta al nuevo objeto sin crear una copia mediante una llamada a `SysAllocString`.  
   
 ## <a name="remarks"></a>Comentarios  
  En la siguiente tabla se describen los constructores `_bstr_t`.  

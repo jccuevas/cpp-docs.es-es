@@ -1,5 +1,5 @@
 ---
-title: break (instrucción (C++) | Documentos de Microsoft
+title: break (instrucción (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3679ad27683e5f7ff9a13f5b5021710f7894c04
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944498"
 ---
 # <a name="break-statement-c"></a>break (Instrucción) (C++)
-La instrucción `break` finaliza la ejecución del bucle o la instrucción condicional envolvente más próximo en el que aparece. El control pasa a la instrucción que hay a continuación del final de la instrucción, si hay alguna.  
+El **salto** instrucción finaliza la ejecución de la envolvente más próximo bucle o instrucción condicional en la que aparece. El control pasa a la instrucción que hay a continuación del final de la instrucción, si hay alguna.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,16 +33,16 @@ break;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El `break` instrucción se utiliza con el atributo conditional [cambiar](../cpp/switch-statement-cpp.md) instrucción y con el [hacer](../cpp/do-while-statement-cpp.md), [para](../cpp/for-statement-cpp.md), y [mientras](../cpp/while-statement-cpp.md) bucles instrucciones.  
+ El **salto** instrucción se utiliza con el atributo conditional [cambiar](../cpp/switch-statement-cpp.md) instrucción y con el [hacer](../cpp/do-while-statement-cpp.md), [para](../cpp/for-statement-cpp.md), y [al](../cpp/while-statement-cpp.md) las instrucciones de bucle.  
   
- En una instrucción `switch`, la instrucción `break` hace que el programa ejecute la siguiente instrucción que hay fuera de la instrucción `switch`. Sin una instrucción `break`, se ejecutan todas las instrucciones que hay desde la etiqueta `case` coincidente hasta el final de la instrucción `switch`, incluida la cláusula `default`.  
+ En un **cambiar** instrucción, el **salto** instrucción hace que el programa ejecute la siguiente instrucción fuera el **cambiar** instrucción. Sin un **salto** instrucción, todas las instrucciones de la coincidente **caso** etiqueta al final de la **cambiar** instrucción, incluida la **predeterminada**cláusula, se ejecuta.  
   
- En los bucles, la instrucción `break` finaliza la ejecución de la instrucción envolvente `do`, `for` o `while` más próxima. El control pasa a la instrucción que hay a continuación de la instrucción finalizada, si hay alguna.  
+ En los bucles, el **salto** instrucción finaliza la ejecución de envolvente **hacer**, **para**, o **mientras** instrucción. El control pasa a la instrucción que hay a continuación de la instrucción finalizada, si hay alguna.  
   
- Dentro de instrucciones anidadas, la instrucción `break` finaliza solo la instrucción `do`, `for`, `switch` o `while` que la envuelve inmediatamente. Puede utilizar una instrucción `return` o `goto` para transferir el control desde estructuras más anidadas.  
+ Dentro de instrucciones anidadas, la **salto** instrucción finaliza solo la **hacer**, **para**, **cambiar**, o **mientras**instrucción que incluye de forma inmediata. Puede usar un **devolver** o **goto** instrucción para transferir el control desde el más profundamente anidada estructuras.  
   
 ## <a name="example"></a>Ejemplo  
- En el código siguiente se muestra cómo usar la instrucción `break` en un bucle `for`.  
+ El código siguiente muestra cómo usar el **salto** instrucción en un **para** bucle.  
   
 ```cpp  
 #include <iostream>  
@@ -52,9 +53,10 @@ int main()
     // An example of a standard for loop  
     for (int i = 1; i < 10; i++)  
     {  
-        cout << i << '\n';  
-        if (i == 4)  
+        if (i == 4) {  
             break;  
+        }  
+        cout << i << '\n';  
     }  
   
     // An example of a range-based for loop  
@@ -76,7 +78,7 @@ In each case:
 3  
 ```  
   
- En el código siguiente se muestra cómo usar `break` en un bucle `while` y un bucle `do`.  
+ El código siguiente muestra cómo usar **salto** en un **mientras** bucle y un **hacer** bucle.  
   
 ```cpp  
 #include <iostream>  
@@ -109,7 +111,7 @@ In each case:
 0123  
 ```  
   
- En el código siguiente se muestra cómo usar `break` en una instrucción switch. Debe usar `break` en todos los casos si desea tratar cada caso por separado; si no emplea `break`, la ejecución de código pasa al caso siguiente.  
+ El código siguiente muestra cómo usar **salto** en una instrucción switch. Debe usar **salto** en todos los casos si desea tratar cada caso por separado; si no usas **salto**, la ejecución de código pasa a la siguiente expresión case.  
   
 ```cpp  
 #include <iostream>  

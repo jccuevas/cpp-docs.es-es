@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5fe5c06dd3017e867e73cf1107e619ec2c1edaf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 059ad07e50fb6325850d1095940ce084893bf70b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843800"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966517"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t (Clase)
 
@@ -41,11 +41,11 @@ class const_mem_fun1_t
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pm` Un puntero a la función miembro de clase **tipo** se convierta en un objeto de función.
+*_Pm* un puntero a la función miembro de clase `Type` va a convertir en un objeto de función.
 
-`_Pleft` El **const** objeto que la `_Pm` función miembro se llama en.
+*_Pleft* el **const** objeto al que el *_Pm* función miembro se llama en.
 
-`right` El argumento proporcionado para `_Pm`.
+*derecha* el argumento que se entrega a *_Pm*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -53,7 +53,7 @@ Una función binaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de `_Pm`, que debe ser un puntero a una función miembro de clase **Type**, en un objeto miembro privado. Define la función miembro `operator()` devuelvan ( **_Pleft**->\* *Pm)(***derecha**) **const**.
+La clase de plantilla almacena una copia de *_Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define la función miembro `operator()` devuelvan ( **_Pleft**->\* *Pm)(***derecha**) **const**.
 
 ## <a name="example"></a>Ejemplo
 

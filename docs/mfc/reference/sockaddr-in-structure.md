@@ -1,5 +1,5 @@
 ---
-title: SOCKADDR_IN (estructura) | Documentos de Microsoft
+title: SOCKADDR_IN (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb9e61f94ddd5f41ff3de26728c1fbe155f809d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373643"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885743"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN (Estructura)
-En la familia de direcciones de Internet, el `SOCKADDR_IN` estructura se usa Windows Sockets para especificar una dirección de extremo local o remoto que se va a conectar un socket.  
+En la familia de direcciones de Internet, el `SOCKADDR_IN` estructura está usando Windows Sockets para especificar una dirección de punto de conexión local o remoto que se va a conectar un socket.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,21 +39,21 @@ struct in_addr sin_addr;
   
 #### <a name="parameters"></a>Parámetros  
  *sin_family*  
- Familia de direcciones (debe ser **AF_INET**).  
+ Familia de direcciones (debe ser AF_INET).  
   
  *sin_port*  
- Puerto de IP.  
+ Puerto IP.  
   
  *sin_addr*  
  Dirección IP.  
   
  *Sin_Zero*  
- Relleno para igualar el tamaño como de la estructura `SOCKADDR`.  
+ Relleno para crear la estructura del mismo tamaño que `SOCKADDR`.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta es la forma de la `SOCKADDR` estructura específicas de la familia de direcciones de Internet y se puede convertir en `SOCKADDR`.  
+ Este es el formulario de la `SOCKADDR` estructura concreta para la familia de direcciones de Internet y se puede convertir en `SOCKADDR`.  
   
- El componente de dirección IP de esta estructura es de tipo **dir_in**. El **dir_in** estructura se define en el archivo de encabezado de Windows Sockets WINSOCK. H como sigue:  
+ El componente de la dirección IP de esta estructura es de tipo `IN_ADDR`. El `IN_ADDR` estructura se define en el archivo de encabezado de Windows Sockets WINSOCK. H como sigue:  
   
 ```  
 struct in_addr {

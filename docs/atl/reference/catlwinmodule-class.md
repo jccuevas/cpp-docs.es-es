@@ -1,5 +1,5 @@
 ---
-title: Clase CAtlWinModule | Documentos de Microsoft
+title: CAtlWinModule (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b918747d9b7bee1b661eebd61fbb35325861e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cbbee8a404b679c8411470215821b8cdcccc695e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358057"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885226"
 ---
-# <a name="catlwinmodule-class"></a>Clase CAtlWinModule
-Esta clase proporciona compatibilidad para los componentes de la ventana ATL.  
+# <a name="catlwinmodule-class"></a>CAtlWinModule (clase)
+Esta clase proporciona compatibilidad para los componentes de ventana ATL.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -74,14 +74,14 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pData`  
- Puntero a la `_AtlCreateWndData` estructura que se inicializará y agregará al módulo actual.  
+ *pData*  
+ Puntero a la `_AtlCreateWndData` estructura se inicialicen y agregado al módulo actual.  
   
- `pObject`  
+ *pObject*  
  Puntero a un objeto **esto** puntero.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método llama a [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) que inicializa un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) estructura. Esta estructura se almacenará la **esto** puntero, que se usa para obtener la instancia de clase en los procedimientos de ventana.  
+ Este método llama a [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) que inicializa un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) estructura. Esta estructura se almacenará el **esto** puntero, utilizado para obtener la instancia de clase en los procedimientos de ventana.  
   
 ##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule  
  El constructor.  
@@ -91,7 +91,7 @@ CAtlWinModule();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Si se produce un error en la inicialización, un **EXCEPTION_NONCONTINUABLE** se produce la excepción.  
+ Si se produce un error de inicialización, una **EXCEPTION_NONCONTINUABLE** se produce la excepción.  
   
 ##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule  
  Destructor.  

@@ -1,5 +1,5 @@
 ---
-title: Clase de CMessageMap | Documentos de Microsoft
+title: CMessageMap (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187d9964da0929516207a67b0e3a769649fc375b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 663ee462bf03e76ab15cbac05790c89dcaf07dca
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359024"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884859"
 ---
-# <a name="cmessagemap-class"></a>Clase de CMessageMap
-Esta clase permite a que los mapas de mensajes de un objeto para tener acceso a otro objeto.  
+# <a name="cmessagemap-class"></a>CMessageMap (clase)
+Esta clase permite que los mapas de mensajes de un objeto que se acceda por otro objeto.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,21 +48,21 @@ class ATL_NO_VTABLE CMessageMap
 |[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Tiene acceso a un mapa de mensajes en el `CMessageMap`-clase derivada.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CMessageMap` es una clase base abstracta que permite a los mensajes de un objeto que se asigna para tener acceso a otro objeto. En el orden de un objeto exponer sus mapas de mensajes, su clase debe derivarse de `CMessageMap`.  
+ `CMessageMap` es una clase base abstracta que permite a los mensajes de un objeto que se asigna para tener acceso a otro objeto. En el orden de un objeto exponer sus mapas de mensajes, debe derivar su clase de `CMessageMap`.  
   
- ATL usa `CMessageMap` para windows de soporte técnico de contenidos y encadenamiento de mapa de mensajes dinámicos. Por ejemplo, cualquier clase que contiene un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objeto debe derivarse de `CMessageMap`. El código siguiente se toma la [SUBEDIT](../../visual-cpp-samples.md) ejemplo. A través de [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` clase se deriva automáticamente `CMessageMap`.  
+ ATL utiliza `CMessageMap` contenido de soporte técnico de windows y el encadenamiento de asignación de mensaje dinámicos. Por ejemplo, cualquier clase que contiene un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objeto debe derivarse de `CMessageMap`. El código siguiente se toma de la [SUBEDIT](../../visual-cpp-samples.md) ejemplo. A través de [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` clase se deriva automáticamente `CMessageMap`.  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   
- Dado que la ventana contenida, `m_EditCtrl`, usará un mapa de mensajes en la clase contenedora, `CAtlEdit` deriva de `CMessageMap`.  
+ Dado que la ventana contenida, `m_EditCtrl`, usará un mapa de mensajes en la clase contenedora, `CAtlEdit` deriva `CMessageMap`.  
   
- Para obtener más información acerca de los mapas de mensajes, vea [mapas de mensajes](../../atl/message-maps-atl.md) en el artículo "Clases de ventana ATL".  
+ Para obtener más información acerca de mapas de mensajes, vea [mapas de mensajes](../../atl/message-maps-atl.md) en el artículo "Clases de ventana ATL".  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
   
 ##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  
- Tiene acceso a la asignación de mensaje identificada por `dwMsgMapID` en un `CMessageMap`-clase derivada.  
+ Tiene acceso a la asignación de mensaje identificada por *dwMsgMapID* en un `CMessageMap`-clase derivada.  
   
 ```
 virtual BOOL ProcessWindowMessage(  
@@ -75,32 +75,32 @@ virtual BOOL ProcessWindowMessage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hWnd`  
- [in] El identificador de la ventana recibe el mensaje.  
+ *hWnd*  
+ [in] El identificador de la ventana que recibe el mensaje.  
   
- `uMsg`  
+ *uMsg*  
  [in] El mensaje enviado a la ventana.  
   
- `wParam`  
- [in] Obtener información adicional específica de los mensajes.  
+ *wParam*  
+ [in] Información adicional específica del mensaje.  
   
- `lParam`  
- [in] Obtener información adicional específica de los mensajes.  
+ *lParam*  
+ [in] Información adicional específica del mensaje.  
   
- `lResult`  
+ *lResult*  
  [out] El resultado del procesamiento del mensaje.  
   
- `dwMsgMapID`  
+ *dwMsgMapID*  
  [in] El identificador del mapa de mensajes que procesará el mensaje. El mapa de mensajes de forma predeterminada, se declara con [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), identificado por 0. Un mapa de mensajes alternativo, declarado con [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), se identifica mediante `msgMapID`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- **TRUE** si el mensaje es totalmente administrado; en caso contrario, **FALSE**.  
+ TRUE si el mensaje lo controla totalmente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamado por el procedimiento de ventana de un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) de un objeto o de un objeto que está encadenando dinámicamente al mapa de mensajes.  
+ Lo llama el procedimiento de ventana de un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) de objeto o de un objeto que está encadenando dinámicamente al mapa de mensajes.  
   
 ## <a name="see-also"></a>Vea también  
- [Clase CDynamicChain](../../atl/reference/cdynamicchain-class.md)   
+ [CDynamicChain (clase)](../../atl/reference/cdynamicchain-class.md)   
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [Información general de clases](../../atl/atl-class-overview.md)

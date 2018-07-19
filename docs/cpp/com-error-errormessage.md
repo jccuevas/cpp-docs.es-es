@@ -1,5 +1,5 @@
 ---
-title: _com_error::ErrorMessage | Documentos de Microsoft
+title: _com_error::ErrorMessage | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c16b8bb6859cd65b534d804764257b901050995b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2bff5e8f84b316f028daf503c3013667c82aaa4e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411242"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940571"
 ---
 # <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
 **Específicos de Microsoft**  
   
- Recupera el mensaje de cadena para `HRESULT` almacenado en el objeto `_com_error`.  
+ Recupera el mensaje de cadena para HRESULT almacenado en el objeto `_com_error`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,10 +37,10 @@ const TCHAR * ErrorMessage( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve el mensaje de cadena para `HRESULT` grabado dentro del objeto `_com_error`. Si el `HRESULT` es un 16 bits asignado [wCode](../cpp/com-error-wcode.md), a continuación, un mensaje genérico "`IDispatch error #<wCode>`" se devuelve. Si no se encuentra ningún mensaje, se devuelve un mensaje genérico “`Unknown error #<hresult>`”. La cadena devuelta es Unicode o cadena multibyte, dependiendo del estado de la **_UNICODE** macro.  
+ Devuelve el mensaje de cadena para HRESULT grabado dentro del `_com_error` objeto. Si el valor de HRESULT es un 16 bits asignado [wCode](../cpp/com-error-wcode.md), a continuación, un mensaje genérico "`IDispatch error #<wCode>`" se devuelve. Si no se encuentra ningún mensaje, se devuelve un mensaje genérico “`Unknown error #<hresult>`”. La cadena devuelta es Unicode o cadena multibyte, dependiendo del estado de la macro _UNICODE.  
   
 ## <a name="remarks"></a>Comentarios  
- Recupera el texto del mensaje del sistema adecuado para el `HRESULT` grabado dentro del objeto `_com_error`. El texto del mensaje del sistema se obtiene mediante una llamada a Win32 [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) función. La API `FormatMessage` asigna la cadena devuelta, que se libera cuando se destruye el objeto `_com_error`.  
+ Recupera el texto del mensaje del sistema adecuado para HRESULT grabado dentro del `_com_error` objeto. El texto del mensaje del sistema se obtiene mediante una llamada a Win32 [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) función. La API `FormatMessage` asigna la cadena devuelta, que se libera cuando se destruye el objeto `_com_error`.  
   
  **FIN de Específicos de Microsoft**  
   

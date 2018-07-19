@@ -1,5 +1,5 @@
 ---
-title: Clase Win32ThreadTraits | Documentos de Microsoft
+title: Clase Win32ThreadTraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b863808a2367cae8878728403dbf11265b9e819
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362021"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883679"
 ---
 # <a name="win32threadtraits-class"></a>Clase Win32ThreadTraits
-Esta clase proporciona la función de creación de un subproceso de Windows. Utilice esta clase si el subproceso no utiliza funciones de CRT.  
+Esta clase proporciona la función de creación de un subproceso de Windows. Utilice esta clase si el subproceso no va a usar las funciones de CRT.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,12 +45,12 @@ class Win32ThreadTraits
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Win32ThreadTraits::CreateThread](#createthread)|(Estático) Llame a esta función para crear un subproceso que no se debe utilizar funciones de CRT.|  
+|[Win32ThreadTraits::CreateThread](#createthread)|(Estático) Llame a esta función para crear un subproceso que no se debe usar funciones de CRT.|  
   
 ## <a name="remarks"></a>Comentarios  
- Rasgos de subprocesos son clases que proporcionan una función de creación para un tipo determinado de subproceso. La función de creación tiene la misma firma y la semántica que las ventanas [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) función.  
+ Rasgos de subproceso son clases que proporcionan una función de creación de un tipo determinado de subproceso. La función de creación tiene la misma firma y la misma semántica que el Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) función.  
   
- Rasgos de subprocesos son utilizadas por las clases siguientes:  
+ Rasgos del subproceso se utilizan las clases siguientes:  
   
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)  
   
@@ -62,7 +62,7 @@ class Win32ThreadTraits
  **Encabezado:** atlbase.h  
   
 ##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread  
- Llame a esta función para crear un subproceso que no se debe utilizar funciones de CRT.  
+ Llame a esta función para crear un subproceso que no se debe usar funciones de CRT.  
   
 ```
 static HANDLE CreateThread(
@@ -75,29 +75,29 @@ static HANDLE CreateThread(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpsa`  
+ *LPSA*  
  Los atributos de seguridad para el nuevo subproceso.  
   
- `dwStackSize`  
+ *dwStackSize*  
  El tamaño de pila para el nuevo subproceso.  
   
- `pfnThreadProc`  
- El procedimiento de subproceso del nuevo subproceso.  
+ *pfnThreadProc*  
+ El procedimiento de subproceso del subproceso nuevo.  
   
- `pvParam`  
+ *pvParam*  
  El parámetro que se pasa al procedimiento de subproceso.  
   
- `dwCreationFlags`  
- La creación de marcas (0 o CREATE_SUSPENDED).  
+ *dwCreationFlags*  
+ La creación de indicadores (0 o CREATE_SUSPENDED).  
   
- `pdwThreadId`  
- [out] Dirección de la variable DWORD que, si se ejecuta correctamente, recibe el identificador del subproceso del subproceso recién creado.  
+ *pdwThreadId*  
+ [out] Dirección de la variable DWORD que, si se ejecuta correctamente, recibe el identificador de subproceso del subproceso recién creado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el identificador para el subproceso recién creado o NULL en caso de error. Llame a [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para obtener información de error extendida.  
+ Devuelve el identificador al subproceso recién creado o NULL en caso de error. Llame a [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para obtener más información.  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) para obtener más información sobre los parámetros para esta función.  
+ Consulte [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) para obtener más información sobre los parámetros para esta función.  
   
  Esta función llama a `CreateThread` para crear el subproceso.  
   

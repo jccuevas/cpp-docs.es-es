@@ -1,5 +1,5 @@
 ---
-title: Cálculo de referencias de funciones globales | Documentos de Microsoft
+title: Funciones globales de serialización | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d93839002ce5136d735e4740388109e855561fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44c5205416ff19eeb849b0532d015275e4eb166e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362832"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879344"
 ---
-# <a name="marshaling-global-functions"></a>Cálculo de referencias de funciones globales
-Estas funciones proporcionan compatibilidad para el cálculo de referencias y serialización de datos se convierte en punteros de interfaz.  
+# <a name="marshaling-global-functions"></a>Funciones globales de serialización
+Estas funciones proporcionan compatibilidad para el cálculo de referencias y conversión de datos de cálculo de referencias a punteros de interfaz.  
   
 > [!IMPORTANT]
->  Las funciones se enumeran en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Las funciones enumeradas en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 |||  
 |-|-|  
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Libera los datos de serialización y el `IStream` puntero.|  
-|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crea un nuevo objeto de flujo y calcula las referencias del puntero de interfaz especificado.|  
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Convierte datos de serialización del flujo en un puntero de interfaz.|  
+|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crea un nuevo objeto de secuencia y calcula las referencias el puntero de interfaz especificado.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Serialización de datos de la secuencia se convierte en un puntero de interfaz.|  
 
 ## <a name="requirements"></a>Requisitos:
 **Encabezado:** atlbase.h
@@ -46,8 +46,8 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pStream`  
- [in] Un puntero a la `IStream` interfaz en la secuencia que se usa para el cálculo de referencias.  
+ *pStream*  
+ [in] Un puntero a la `IStream` interfaz en la secuencia utilizada para calcular las referencias.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [AtlMarshalPtrInProc](#atlmarshalptrinproc).  
@@ -66,19 +66,19 @@ HRESULT AtlMarshalPtrInProc(
  *pUnk*  
  [in] Un puntero a la interfaz que se van a calcular.  
   
- `iid`  
+ *IID*  
  [in] El GUID de la interfaz que se va a serializar.  
   
- `ppStream`  
- [out] Un puntero a la `IStream` interfaz en el nuevo objeto de secuencia que se usan para serializar.  
+ *ppStream*  
+ [out] Un puntero a la `IStream` interfaz en el nuevo objeto de secuencia utilizado para calcular las referencias.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- El **MSHLFLAGS_TABLESTRONG** marca se establece de modo que el puntero se puede serializar a varias secuencias. El puntero también se pueden deserializar varias veces.  
+ Se establece la marca MSHLFLAGS_TABLESTRONG por lo que el puntero se puede serializar en varias secuencias. El puntero también se puede deserializar varias veces.  
   
- Si se produce un error de la serialización, se libera el puntero del flujo.  
+ Si se produce un error de cálculo de referencias, se libera el puntero del flujo.  
   
  `AtlMarshalPtrInProc` solo puede usarse en un puntero a un objeto en proceso.  
   
@@ -96,14 +96,14 @@ HRESULT AtlUnmarshalPtr(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pStream`  
+ *pStream*  
  [in] Un puntero a la secuencia que se resuelven referencias.  
   
- `iid`  
+ *IID*  
  [in] El GUID de la interfaz que se resuelven referencias.  
   
- `ppUnk`  
- [out] Un puntero a la interfaz deserializar.  
+ *ppUnk*  
+ [out] Un puntero a la interfaz sin cálculo de referencias.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor HRESULT estándar.  

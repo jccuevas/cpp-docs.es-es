@@ -1,5 +1,5 @@
 ---
-title: Información general sobre los declaradores | Documentos de Microsoft
+title: Información general sobre los declaradores | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ba4ff8e50d646a6a3918c2104756c4378a1aea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe5866c3e945d55722a4cf8530c543b0e8ca5163
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944235"
 ---
 # <a name="overview-of-declarators"></a>Información general sobre los declaradores
-Los declaradores son los componentes de una declaración que especifican nombres de objetos o funciones. Los declaradores también especifican si el objeto con nombre es o no un objeto, puntero, referencia o matriz.  Aunque los declaradores no especifican el tipo base, modifican la información de tipo del tipo básico para especificar tipos derivados, como punteros, referencias y matrices.  Cuando se aplica a las funciones, el declarador funciona con el especificador de tipo para especificar completamente que el tipo de valor devuelto de una función es un objeto, puntero o referencia. (Especificadores, que se describen en [declaraciones y definiciones](declarations-and-definitions-cpp.md), transmiten propiedades tales como la clase de tipo y el almacenamiento. Modificadores, se describen en esta sección y en [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md), modifican los declaradores.) En la ilustración siguiente se muestra una declaración completa de `MyFunction` y se llama a los componentes de la declaración.  
+Los declaradores son los componentes de una declaración que especifican nombres de objetos o funciones. Los declaradores también especifican si el objeto con nombre es o no un objeto, puntero, referencia o matriz.  Aunque los declaradores no especifican el tipo base, modifican la información de tipo del tipo básico para especificar tipos derivados, como punteros, referencias y matrices.  Cuando se aplica a las funciones, el declarador funciona con el especificador de tipo para especificar completamente que el tipo de valor devuelto de una función es un objeto, puntero o referencia. (Los especificadores, se describe en [declaraciones y definiciones](declarations-and-definitions-cpp.md), transmiten propiedades tales como la clase de tipo y el almacenamiento. Modificadores, que se describe en esta sección y en [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md), modifican los declaradores.) En la ilustración siguiente se muestra una declaración completa de `MyFunction` y se llama a los componentes de la declaración.  
   
  ![Modificadores, especificadores y declaradores](../cpp/media/vc38qy1.gif "vc38QY1")  
 Especificadores, modificadores y declaradores  
@@ -36,11 +37,11 @@ Especificadores, modificadores y declaradores
   
  En la declaración de ejemplo siguiente se muestra cómo se combinan especificadores y declaradores para formar una declaración completa:  
   
-```  
+```cpp 
 const char *pch, ch;  
 ```  
   
- En la declaración anterior, las palabras clave **const** y `char` forman parte de la lista de especificadores. Se muestran dos declaradores: `*pch` y `ch`.  Una declaración que declara varias entidades está formada por un especificador de tipo seguido de una lista separada por comas de declaradores, finalizada con un punto y coma.  
+ En la declaración anterior, las palabras clave **const** y **char** forman la lista de especificadores. Se muestran dos declaradores: `*pch` y `ch`.  Una declaración que declara varias entidades está formada por un especificador de tipo seguido de una lista separada por comas de declaradores, finalizada con un punto y coma.  
   
  **Declaradores de objetos simples**  
   
@@ -52,17 +53,17 @@ const char *pch, ch;
   
  **Declaradores de punteros, referencias y matrices**  
   
- Los operadores de puntero que se insertan delante del nombre hacen que el objeto sea un puntero o referencia.  El **\*** operador declara el nombre como puntero; el **&** operador declara como referencia.  
+ Los operadores de puntero que se insertan delante del nombre hacen que el objeto sea un puntero o referencia.  El **\*** operador declara el nombre como puntero; el **&** operador lo declara como referencia.  
   
-```  
+```cpp 
 int *i; // declarator is *i  
 int **i; // declarator is **i;  
 int &i = x; // declaratory is &i  
 ```  
   
- Al anexar `const` o `volatile`, se proporcionan al puntero estas propiedades especiales.  El uso de estos especificadores en un declarador (frente al especificador de tipo) modifica las propiedades del puntero, no el objeto al que se señala:  
+ Anexar **const** o **volátil** proporcionan al puntero estas propiedades especiales.  El uso de estos especificadores en un declarador (frente al especificador de tipo) modifica las propiedades del puntero, no el objeto al que se señala:  
   
-```  
+```cpp 
 char *const cpc; // const pointer to char   
 const char *pcc; // pointer to const char   
 const char *const cpcc; // const pointer to const char  
@@ -72,7 +73,7 @@ const char *const cpcc; // const pointer to const char
   
  Un puntero a un miembro de una clase o struct se declara con el especificador de nombre anidado adecuado:  
   
-```  
+```cpp 
 int X::* pIntMember;   
 int ::X::* pIntMember; // the initial :: specifies X is in global scope  
 char Outer::Inner::* pIntMember; // pointer to char in a nested class  
@@ -80,7 +81,7 @@ char Outer::Inner::* pIntMember; // pointer to char in a nested class
   
  Los corchetes que rodean una expresión constante opcional después del nombre hacen que el objeto sea una matriz.  Los corchetes posteriores declaran dimensiones adicionales de la matriz.  
   
-```  
+```cpp 
 int i[5]; // array with five elements of type int numbered from 0 to 4  
 int i[]; // array of unknown size  
 char *s[4]; // array of pointers to char  
@@ -89,15 +90,15 @@ int i[2][2]; // two dimensional array
   
  **Declaradores de funciones**  
   
- Se usan paréntesis alrededor de la lista de argumentos, detrás del nombre, para declarar una función.  A continuación, se declara una función del tipo de valor devuelto `int` y tres argumentos de tipo `int`.  
+ Se usan paréntesis alrededor de la lista de argumentos, detrás del nombre, para declarar una función.  El ejemplo siguiente declara una función del tipo de valor devuelto **int** y tres argumentos de tipo **int**.  
   
-```  
+```cpp 
 int f(int a, int b, int c);  
 ```  
   
  Los punteros y referencias a funciones se declaran mediante la anteposición del puntero u operador de referencia al nombre de función, como se muestra a continuación.  Se requieren paréntesis, normalmente opcionales, para distinguir un puntero a una función de una función que devuelve un puntero:  
   
-```  
+```cpp 
 int (*pf)(int); // pointer to function returning int  
 int *f(int i); // function returning pointer to int  
 int (&pf)(int); // reference to function   
@@ -105,7 +106,7 @@ int (&pf)(int); // reference to function
   
  Los punteros a funciones miembro se distinguen por los especificadores de nombre anidados:  
   
-```  
+```cpp 
 int (X::* pmf)(); // pointer to member function of X returning int  
 int* (X::* pmf)(); // pointer to member function returning pointer to int  
 ```  
@@ -116,23 +117,23 @@ int* (X::* pmf)(); // pointer to member function returning pointer to int
   
  Las funciones y objetos se pueden declarar en la misma declaración, como se indica a continuación:  
   
-```  
+```cpp 
 int i, *j, f(int k);  // int, pointer to int, function returning int  
 ```  
   
  La sintaxis puede ser confusa en algunas circunstancias.  La siguiente declaración  
   
-```  
+```cpp 
 int* i, f(int k);  // pointer to int, function returning int (not int*)  
 ```  
   
- puede parecer la declaración de un puntero `int` y una función que devuelve `int*`, pero no lo es.  Esto se debe a que * es parte del declarador de `i`, no parte del declarador de `f`.  
+ puede ser similar a la declaración de un **int** puntero y una función que devuelve `int*`, pero no lo es.  Esto se debe a que * es parte del declarador de `i`, no parte del declarador de `f`.  
   
- **Simplificación de la sintaxis de declarador con typedef**  
+ **Lo que simplifica la sintaxis de declarador con typedef**  
   
- Sin embargo, existe una técnica mejor, que consiste en utilizar `typedef` o una combinación de paréntesis y la palabra clave `typedef`. Considere, por ejemplo, una matriz de punteros a funciones:  
+ Sin embargo, es una técnica mejor, con un **typedef** o una combinación de paréntesis y **typedef** palabra clave. Considere, por ejemplo, una matriz de punteros a funciones:  
   
-```  
+```cpp 
 //  Function returning type int that takes one   
 //   argument of type char *.  
 typedef int (*PIFN)( char * );  
@@ -142,9 +143,9 @@ typedef int (*PIFN)( char * );
 PIFN pifnDispatchArray[7];  
 ```  
   
- La declaración equivalente se puede escribir sin la declaración de `typedef`, pero es tan complicado que las posibilidades de error superan cualquier ventaja:  
+ La declaración equivalente se puede escribir sin la **typedef** declaración, pero es tan complicado que las posibilidades de error superan cualquier ventaja:  
   
-```  
+```cpp 
 int ( *pifnDispatchArray[7] )( char * );  
 ```  
   
@@ -152,38 +153,33 @@ int ( *pifnDispatchArray[7] )( char * );
   
  Los punteros, referencias y matrices de un solo tipo base se pueden combinar en una sola declaración (separados por comas), como  
   
-```  
+```cpp 
 int a, *b, c[5], **d, &e=a;  
 ```  
   
  **Sintaxis de declarador más compleja**  
   
--   Los declaradores de punteros, referencias, matrices y funciones se pueden combinar para especificar objetos tales como matrices de punteros a funciones, punteros a matrices, etc.  
+- Los declaradores de punteros, referencias, matrices y funciones se pueden combinar para especificar objetos tales como matrices de punteros a funciones, punteros a matrices, etc.  
   
--   La gramática recursiva siguiente describe la sintaxis completa de un declarador de puntero.  
+- La gramática recursiva siguiente describe la sintaxis completa de un declarador de puntero.  
   
--   `declarator` se define como:  
+- `declarator` se define como:  
+
+  - identifier   
+  - nombre completo   
+  - declarador (lista de argumentos) [cv-qualfiers] [especificación de excepción]  
+  - declarador de [[-expresión-constante]]
+  - declarador de puntero-(operador)   
+  - (declarador)  
+
   
-```  
-1. identifier   
-2. qualified-name   
-3. declarator ( argument-list ) [cv-qualfiers] [exception-spec]  
-4. declarator [ [ constant-expression ] ]   
+- y *puntero operador* es uno de:  
   
-5. pointer-operatordeclarator   
-6. ( declarator )  
-```  
+  - * [calificador CV]  
+  - & [calificador CV]:: especificador de nombre anidado * [calificador CV]  
+
   
--   y *operador de puntero* es uno de:  
-  
-```  
-  
-      * [cv-qualifiers]  
-& [cv-qualifiers]  
-::nested-name-specifier * [cv-qualfiers]  
-```  
-  
- Dado que un declarador puede contener declaradores, es posible construir los tipos derivados más complejos, como matrices de punteros, funciones que devuelven matrices de punteros a función, mediante las reglas anteriores.  Para formar cada paso de la construcción, comience con el identificador que representa el tipo de datos base y aplique la regla de sintaxis anterior con la expresión anterior como `declarator`.  El orden de aplicación de las reglas de sintaxis debe ser el inverso de como se indica la expresión en inglés.  Si se aplica el *operador de puntero* regla de sintaxis en una expresión de matriz o función, utilice paréntesis si desea un puntero a la matriz o función, como se muestra en la última fila en la tabla siguiente.  
+ Dado que un declarador puede contener declaradores, es posible construir los tipos derivados más complejos, como matrices de punteros, funciones que devuelven matrices de punteros a función, mediante las reglas anteriores.  Para formar cada paso de la construcción, comience con el identificador que representa el tipo de datos base y aplique la regla de sintaxis anterior con la expresión anterior como `declarator`.  El orden de aplicación de las reglas de sintaxis debe ser el inverso de como se indica la expresión en inglés.  Si aplica el *puntero operador* regla de sintaxis en una expresión de matriz o función, utilice paréntesis si desea que un puntero a la matriz o función, como se muestra en la última fila de la tabla siguiente.  
   
  En el ejemplo siguiente, se muestra la construcción de “puntero a matriz de 10 punteros a int”.  
   
@@ -194,4 +190,4 @@ int a, *b, c[5], **d, &e=a;
 |matriz de 10|`(*i)[10]`|4|  
 |puntero a|`*((*i)[10])`|6 y después 5|  
   
- Cuando se utilizan varios modificadores de puntero, referencia, matriz o función, los declaradores pueden resultar bastante complicados.  El tema [interpretar declaradores más complejos](../c-language/interpreting-more-complex-declarators.md) describe cómo leer la sintaxis de declarador más compleja.  El tema es aplicable a C y C++, aunque en C++, en cualquier lugar del * se usa para indicar un puntero, un nombre calificado tal como MyClass::\* puede utilizarse para especificar un puntero a un miembro de una clase.
+ Cuando se utilizan varios modificadores de puntero, referencia, matriz o función, los declaradores pueden resultar bastante complicados.  El tema [interpretar declaradores más complejos](../c-language/interpreting-more-complex-declarators.md) describe cómo leer la sintaxis de declarador más compleja.  El tema es aplicable a C y C++, aunque en C++, en cualquier lugar del * se usa para indicar un puntero, un nombre completo tal como MyClass::\* puede utilizarse para especificar un puntero a un miembro de una clase.

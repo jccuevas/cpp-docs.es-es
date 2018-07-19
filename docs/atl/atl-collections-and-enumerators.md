@@ -1,5 +1,5 @@
 ---
-title: Colecciones y enumeradores ATL | Documentos de Microsoft
+title: Colecciones y enumeradores ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 537d7e8b7264beddc68805ab8b8dec2ce7883859
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9837b42148062bdd2c44855c129f085ca47cdec0
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356783"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848799"
 ---
 # <a name="atl-collections-and-enumerators"></a>Colecciones y enumeradores de ATL
-A `collection` es un objeto COM que proporciona una interfaz que permite el acceso a un grupo de elementos de datos (datos sin formato u otros objetos). Una interfaz que sigue las normas para proporcionar acceso a un grupo de objetos se conoce como un *interfaz de colección*.  
+Un `collection` es un objeto COM que proporciona una interfaz que permite el acceso a un grupo de elementos de datos (datos sin formato u otros objetos). Una interfaz que sigue los estándares para proporcionar acceso a un grupo de objetos se conoce como un *interfaz de colección*.  
   
- Como mínimo, deben proporcionar interfaces de colección una **recuento** propiedad que devuelve el número de elementos de la colección, una **elemento** propiedad que devuelve un elemento de la colección basándose en un índice y un `_NewEnum` propiedad que devuelve un enumerador para la colección. Si lo desea, pueden proporcionar las interfaces de colección **agregar** y **quitar** métodos para permitir que los elementos se inserta o se elimina de la colección y un **desactive** método para quitar todos los elementos.  
+ Como mínimo, deben proporcionar interfaces de colección un `Count` propiedad que devuelve el número de elementos de la colección, un `Item` propiedad que devuelve un elemento de la colección basándose en un índice, y un `_NewEnum` propiedad que devuelve un enumerador para la colección. Si lo desea, pueden proporcionar interfaces de colección `Add` y `Remove` métodos para permitir que los elementos se insertan o eliminan de la colección y un `Clear` método para quitar todos los elementos.  
   
- Un `enumerator` es un objeto COM que proporciona una interfaz para recorrer en iteración los elementos de una colección. Interfaces de enumerador proporcionan acceso de serie a los elementos de una colección a través de cuatro métodos requeridos: `Next`, **omitir**, **restablecer**, y `Clone`.  
+ Un `enumerator` es un objeto COM que proporciona una interfaz para recorrer en iteración los elementos de una colección. Interfaces de enumerador proporcionan acceso de serie a los elementos de una colección a través de cuatro métodos requeridos: `Next`, `Skip`, `Reset`, y `Clone`.  
   
- Se puede obtener más información sobre las interfaces de enumerador leyendo sobre arquetípico (pero completamente imaginaria) [interfaz IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) interfaz.  
+ Puede aprender más sobre las interfaces de enumerador lea el arquetípico (pero completamente imaginaria) [interfaz IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) interfaz.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Recopilación de ATL y clases de enumerador](../atl/atl-collection-and-enumerator-classes.md)  
@@ -41,7 +41,7 @@ A `collection` es un objeto COM que proporciona una interfaz que permite el acce
  Describe los principios de diseño diferentes detrás de cada tipo de interfaz.  
   
  [Implementar una recopilación basada en la biblioteca estándar de C++](../atl/implementing-an-stl-based-collection.md)  
- Un ejemplo extendido que le guía a través de la implementación de una colección basada en la biblioteca estándar de C++.  
+ Un ejemplo completo que le guiará a través de la implementación de una colección basada en la biblioteca estándar de C++.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [ATL](../atl/active-template-library-atl-concepts.md)  

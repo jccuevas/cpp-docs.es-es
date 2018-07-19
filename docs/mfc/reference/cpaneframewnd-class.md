@@ -1,5 +1,5 @@
 ---
-title: Clase CPaneFrameWnd | Documentos de Microsoft
+title: CPaneFrameWnd (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -142,14 +142,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c17c81fb39d4397c58b4baba7124de2bda646db7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 3e25fda2f6d30ea13882ae3b40875fb3d4ec61c7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079699"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854127"
 ---
-# <a name="cpaneframewnd-class"></a>Clase CPaneFrameWnd
+# <a name="cpaneframewnd-class"></a>CPaneFrameWnd (clase)
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
  Implementa una ventana de marco reducido que contiene un panel. El panel rellena el área cliente de la ventana.  
@@ -240,14 +240,14 @@ class CPaneFrameWnd : public CWnd
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Especifica si se debe registrar la clase de ventana con el estilo de clase `CS_SAVEBITS`.|  
+|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Especifica si se debe registrar la clase de ventana con el estilo de clase CS_SAVEBITS.|  
   
 ## <a name="remarks"></a>Comentarios  
  El marco crea automáticamente un objeto `CPaneFrameWnd` cuando se cambia un panel de un estado acoplado a un estado flotante.  
   
  Se puede arrastrar una ventana de marco reducido con su contenido visible (acoplamiento inmediato) o mediante un rectángulo de arrastre (acoplamiento estándar). El modo de acoplamiento del panel contenedor del marco reducido determina el comportamiento del marco reducido al arrastrarlo. Para obtener más información, consulte [cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode).  
   
- Una ventana de marco reducido muestra botones en el título de acuerdo con el estilo del panel contenido. Si se puede cerrar el panel ( [cbasepane:: Canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed)), muestra un botón de cierre. Si el panel tiene el estilo `AFX_CBRS_AUTO_ROLLUP`, muestra una chincheta.  
+ Una ventana de marco reducido muestra botones en el título de acuerdo con el estilo del panel contenido. Si se puede cerrar el panel ( [cbasepane:: Canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed)), muestra un botón Cerrar. Si el panel tiene el estilo AFX_CBRS_AUTO_ROLLUP, muestra un pin.  
   
  Si se deriva una clase de `CPaneFrameWnd`, se debe indicar al marco cómo crearla. Cree la clase invalidando [Createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe), o establecer el `CPane::m_pMiniFrameRTC` miembro de modo que apunte a la información de clase en tiempo de ejecución para la clase.  
   
@@ -271,7 +271,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
  El panel para agregar.  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
@@ -284,14 +284,14 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
  El panel para agregar o quitar.  
   
  [in] *bAgregar*  
  Si es distinto de cero, agregar el panel. Si es 0, quite el panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el método se realizó correctamente; en caso contrario es 0.  
+ Distinto de cero si el método se realizó correctamente; en caso contrario, es 0.  
   
 ##  <a name="adjustlayout"></a>  CPaneFrameWnd::AdjustLayout  
  Ajusta el diseño de la ventana de marco reducido.  
@@ -321,7 +321,7 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
  Contiene el tamaño, en píxeles, del borde de la ventana de marco reducido.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método es invocado por el marco de trabajo para calcular el tamaño del borde de una ventana de marco reducido. El tamaño devuelto depende de si una ventana de marco reducido contiene una barra de herramientas o una [CDockablePane](../../mfc/reference/cdockablepane-class.md).  
+ Este método se llama el marco de trabajo para calcular el tamaño del borde de una ventana de marco reducido. El tamaño devuelto depende de si una ventana de marco reducido contiene una barra de herramientas o una [CDockablePane](../../mfc/reference/cdockablepane-class.md).  
   
 ##  <a name="calcexpecteddockedrect"></a>  CPaneFrameWnd::CalcExpectedDockedRect  
  Calcula el rectángulo esperado de una ventana acoplada.  
@@ -337,22 +337,22 @@ virtual void CalcExpectedDockedRect(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pWndToDock*  
- Un puntero a la ventana se acoplará.  
+ Un puntero a la ventana de acoplamiento.  
   
  [in] *ptMouse*  
  La ubicación del mouse.  
   
  [out] *rectResult*  
- El rectángulo calculado.  
+ Rectángulo calculado.  
   
  [out] *bDrawTab*  
- Si `TRUE`, dibuje una pestaña. Si `FALSE`, no se dibuja una pestaña.  
+ Si es TRUE, dibuje una pestaña. Si es FALSE, no se dibujan una pestaña.  
   
  [out] *ppTargetBar*  
  Un puntero al panel de destino.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método calcula el rectángulo que podría ocupar una ventana si un usuario arrastra la ventana para el punto especificado por *ptMouse* y se acoplan de no existe.  
+ Este método calcula el rectángulo que ocuparía una ventana si un usuario arrastra la ventana para el punto especificado por *ptMouse* y ancló no existe.  
   
 ##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  Determina si se puede acoplar el panel actual a otro panel o ventana de marco.  
@@ -362,7 +362,7 @@ virtual BOOL CanBeAttached() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si se puede acoplar el panel a otro panel o ventana de marco; en caso contrario, `FALSE`.  
+ TRUE si se puede acoplar el panel a otro panel o ventana de marco; en caso contrario, FALSE.  
   
 ##  <a name="canbedockedtopane"></a>  CPaneFrameWnd::CanBeDockedToPane  
  Determina si se puede acoplar la ventana de marco reducido a un panel.  
@@ -376,7 +376,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
  Un panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se puede acoplar el marco reducido a *pDockingBar*; de lo contrario, 0.  
+ Distinto de cero si se puede acoplar el marco reducido a *pDockingBar*; de lo contrario, 0.  
   
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
@@ -417,16 +417,16 @@ virtual BOOL Create(
  Especifica el tamaño inicial y la posición de la ventana de marco reducido.  
   
  [in] [out] *pParentWnd*  
- Especifica el marco primario de la ventana de marco reducido. Este valor no debe ser `NULL`.  
+ Especifica el marco principal de la ventana de marco reducido. Este valor no debe ser NULL.  
   
  [in] [out] *pContext*  
  Especifica el contexto definido por el usuario.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la ventana se creó correctamente; en caso contrario, `FALSE`.  
+ TRUE si la ventana se creó correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Se crea una ventana de marco reducido en dos pasos. En primer lugar, el marco de trabajo crea un `CPaneFrameWnd` objeto. En segundo lugar, llama a `Create` para crear la ventana de marco reducido de Windows y adjuntarlo a la `CPaneFrameWnd` objeto.  
+ Se crea una ventana de marco reducido en dos pasos. En primer lugar, el marco crea un `CPaneFrameWnd` objeto. En segundo lugar, llama a `Create` para crear la ventana de marco reducido de Windows y adjuntarlo a la `CPaneFrameWnd` objeto.  
   
 ##  <a name="createex"></a>  CPaneFrameWnd::CreateEx  
  Crea una ventana de marco reducido y lo adjunta a la [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) objeto.  
@@ -443,7 +443,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *dwStyleEx*  
- Especifica el estilo de ventana extendidos. Para obtener más información, vea [estilos de ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
+ Especifica el estilo extendido de ventana. Para obtener más información, consulte [estilos de ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
  [in] *lpszWindowName*  
  Especifica el texto que se muestra en la ventana de marco reducido.  
@@ -455,16 +455,16 @@ virtual BOOL CreateEx(
  Especifica el tamaño inicial y la posición de la ventana de marco reducido.  
   
  [in] [out] *pParentWnd*  
- Especifica el marco primario de la ventana de marco reducido. Este valor no debe ser `NULL`.  
+ Especifica el marco principal de la ventana de marco reducido. Este valor no debe ser NULL.  
   
  [in] [out] *pContext*  
  Especifica el contexto definido por el usuario.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la ventana se creó correctamente; en caso contrario, `FALSE`.  
+ TRUE si la ventana se creó correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Se crea una ventana de marco reducido en dos pasos. En primer lugar, el marco de trabajo crea un `CPaneFrameWnd` objeto. En segundo lugar, llama a `Create` para crear la ventana de marco reducido de Windows y adjuntarlo a la `CPaneFrameWnd` objeto.  
+ Se crea una ventana de marco reducido en dos pasos. En primer lugar, el marco crea un `CPaneFrameWnd` objeto. En segundo lugar, llama a `Create` para crear la ventana de marco reducido de Windows y adjuntarlo a la `CPaneFrameWnd` objeto.  
   
 ##  <a name="dockpane"></a>  CPaneFrameWnd::DockPane  
  Acopla el panel.  
@@ -475,10 +475,10 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
   
 ### <a name="parameters"></a>Parámetros  
  [out] *bWasDocked*  
- `TRUE` Si ya se acopla el panel; en caso contrario, `FALSE`.  
+ TRUE si el panel ya se ha acoplado; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si la operación fue correcta, el `CDockablePane` que el panel se acopla a; en caso contrario `NULL`.  
+ Si la operación fue correcta, el `CDockablePane` que el panel se ha acoplado a; de lo contrario, NULL.  
   
 ##  <a name="findfloatingpanebyid"></a>  CPaneFrameWnd::FindFloatingPaneByID  
  Busca un panel con el identificador del control especificado en la lista global de paneles flotantes.  
@@ -489,10 +489,10 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *nID*  
- Representa el identificador del control del panel para buscar.  
+ Representa el identificador de control del panel para buscar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El panel con el identificador del control especificado; en caso contrario, `NULL`, si ningún panel tiene el identificador del control especificado.  
+ El panel con el identificador del control especificado; en caso contrario, NULL, si ningún panel tiene el identificador de control especificado.  
   
 ##  <a name="framefrompoint"></a>  CPaneFrameWnd::FrameFromPoint  
  Busca la ventana de marco reducido que contiene el punto especificado.  
@@ -507,19 +507,19 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pt*  
- El punto, en coordenadas de pantalla.  
+ El punto en coordenadas de pantalla.  
   
  [in] *nSensitivity*  
  Aumentar el área de búsqueda de la ventana de marco reducido por este tamaño. Una ventana de marco reducido satisface los criterios de búsqueda si el punto especificado se encuentra en el área de mayor.  
   
  [in] *pFrameToExclude*  
- Especifica una ventana de marco reducido que se excluirán de la búsqueda.  
+ Especifica una ventana de marco reducido para excluir de la búsqueda.  
   
  [in] *bFloatMultiOnly*  
- Si `TRUE`, sólo buscará en las ventanas de marco reducido que tienen la `CBRS_FLOAT_MULTI` estilo. Si `FALSE`, buscar todas las ventanas de marco reducido.  
+ Si es TRUE, solo buscará en las ventanas de marco reducido que tienen el estilo CBRS_FLOAT_MULTI. Si es FALSE, buscar todas las ventanas de marco reducido.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la ventana de marco reducido que contiene *pt*; en caso contrario `NULL`.  
+ Un puntero a la ventana de marco reducido que contiene *pt*; de lo contrario, NULL.  
   
 ##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  Devuelve el alto del título de la ventana de marco reducido.  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  El alto, en píxeles, de la ventana de marco reducido.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para determinar el alto de una ventana de marco reducido. De forma predeterminada, el alto se establece en `SM_CYSMCAPTION`. Para obtener más información, consulte [función GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Llame a este método para determinar el alto de una ventana de marco reducido. De forma predeterminada, se establece el alto en SM_CYSMCAPTION. Para obtener más información, consulte [función GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Calcula el rectángulo delimitador del título de una ventana de marco reducido.  
@@ -543,10 +543,10 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
   
 ### <a name="parameters"></a>Parámetros  
  [out] *rectCaption*  
- Contiene el tamaño y la posición del título de ventana de marco reducido, en coordenadas de pantalla.  
+ Contiene el tamaño y posición del título de ventana de marco reducido, en coordenadas de pantalla.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método es invocado por el marco de trabajo para calcular el rectángulo delimitador de un título de ventana de marco reducido.  
+ Este método se llama el marco de trabajo para calcular el rectángulo delimitador de un título de ventana de marco reducido.  
   
 ##  <a name="getcaptiontext"></a>  CPaneFrameWnd::GetCaptionText  
  Devuelve el texto del título.  
@@ -559,7 +559,7 @@ virtual CString GetCaptionText();
  El texto del título de la ventana de marco reducido.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método cuando se muestre el texto del título.  
+ Este método se llama el marco de trabajo cuando se muestre el texto del título.  
   
 ##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager  
 
@@ -582,11 +582,11 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 ### <a name="return-value"></a>Valor devuelto  
  El modo de acoplamiento. Uno de los siguientes valores:  
   
-- `DT_STANDARD`  
+- DT_STANDARD  
   
-- `DT_IMMEDIATE`  
+- DT_IMMEDIATE  
   
-- `DT_SMART`  
+- DT_SMART  
   
 ##  <a name="getfirstvisiblepane"></a>  CPaneFrameWnd::GetFirstVisiblePane  
  Devuelve el primer panel visible que se encuentra en una ventana de marco reducido.  
@@ -596,7 +596,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El primer panel en la ventana de marco reducido, o `NULL` si la ventana de marco reducido no contiene ningún paneles.  
+ El primer panel en la ventana de marco reducido, o NULL si la ventana de marco reducido no contiene ningún paneles.  
   
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint  
 
@@ -617,7 +617,7 @@ virtual CWnd* GetPane() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El panel que se encuentra en el marco reducido, o `NULL` si la ventana de marco reducido no contiene ningún paneles.  
+ El panel que se encuentra en el marco reducido, o NULL si la ventana de marco reducido no contiene ningún paneles.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -692,24 +692,24 @@ virtual LRESULT HitTest(
  El punto de prueba.  
   
  [in] *bDetectCaption*  
- Si `TRUE`, compruebe el punto en el título. Si `FALSE`, pasar por alto el título.  
+ Si es TRUE, compruebe el punto en el título. Si es FALSE, omita el título.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Uno de los siguientes valores:  
   
 |Valor|Significado|  
 |-----------|-------------|  
-|`HTNOWHERE`|El punto está fuera de la ventana de marco reducido.|  
-|`HTCLIENT`|El punto está en el área de cliente.|  
-|`HTCAPTION`|El punto está en el título.|  
-|`HTTOP`|El punto está en la parte superior.|  
-|`HTTOPLEFT`|El punto está en la esquina superior izquierda.|  
-|`HTTOPRIGHT`|El punto está en la esquina superior derecha.|  
-|`HTLEFT`|El punto está a la izquierda.|  
-|`HTRIGHT`|El punto está a la derecha.|  
-|`HTBOTTOM`|El punto está en la parte inferior.|  
-|`HTBOTTOMLEFT`|El punto está en la parte inferior izquierda.|  
-|`HTBOTTOMRIGHT`|El punto está en la parte inferior derecha.|  
+|HTNOWHERE|El punto está fuera de la ventana de marco reducido.|  
+|HTCLIENT|El punto está en el área de cliente.|  
+|HTCAPTION|El punto está en la leyenda.|  
+|HTTOP|El punto está en la parte superior.|  
+|HTTOPLEFT|El punto está en la esquina superior izquierda.|  
+|HTTOPRIGHT|El punto está en la esquina superior derecha.|  
+|HTLEFT|El punto está en la izquierda.|  
+|HTRIGHT|El punto está en la derecha.|  
+|HTBOTTOM|El punto está en la parte inferior.|  
+|HTBOTTOMLEFT|El punto está en la parte inferior izquierda.|  
+|HTBOTTOMRIGHT|El punto está en la esquina inferior derecha.|  
   
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured  
 
@@ -741,10 +741,10 @@ virtual BOOL IsRollDown() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la ventana de marco reducido debe sustituirse hacia abajo; en caso contrario, `FALSE`.  
+ TRUE si debe aplicarse en la ventana de marco reducido; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método es invocado por el marco de trabajo para determinar si se debe retraer una ventana de marco reducido. La característica de acumulación/propagación está habilitada para una ventana de marco reducido si contiene al menos un panel que tenga el `AFX_CBRS_AUTO_ROLLUP` marca. Esta marca se establece cuando se crea un panel. Para obtener más información, consulte [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
+ Este método se llama el marco de trabajo para determinar si se debe retraer una ventana de marco reducido. La característica de acumulación/propagación está habilitada para una ventana de marco reducido si contiene al menos un panel que tiene la marca AFX_CBRS_AUTO_ROLLUP. Esta marca se establece cuando se crea un panel. Para obtener más información, consulte [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
  De forma predeterminada, el marco de trabajo comprueba si el puntero del mouse está dentro del rectángulo delimitador de ventana de marco reducido para determinar si la ventana tiene que se propagará. Puede invalidar este comportamiento en una clase derivada.  
   
@@ -756,12 +756,12 @@ virtual BOOL IsRollUp() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la ventana de marco reducido debe sustituirse en caso contrario, `FALSE`.  
+ TRUE si la ventana de marco reducido debe estar resumida; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método es invocado por el marco de trabajo para determinar si se debe desplegar una ventana de marco reducido. La característica de acumulación/propagación está habilitada para una ventana de marco reducido si contiene al menos un panel que tenga el `AFX_CBRS_AUTO_ROLLUP` marca. Esta marca se establece cuando se crea un panel. Para obtener más información, consulte [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
+ Este método se llama el marco de trabajo para determinar si se debe desplegar una ventana de marco reducido. La característica de acumulación/propagación está habilitada para una ventana de marco reducido si contiene al menos un panel que tiene la marca AFX_CBRS_AUTO_ROLLUP. Esta marca se establece cuando se crea un panel. Para obtener más información, consulte [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
- De forma predeterminada, el marco de trabajo comprueba si el puntero del mouse está dentro del rectángulo delimitador de ventana de marco reducido para determinar si la ventana se agrupan. Puede invalidar este comportamiento en una clase derivada.  
+ De forma predeterminada, el marco de trabajo comprueba si el puntero del mouse está dentro el rectángulo delimitador de ventana de marco reducido para determinar si la ventana tiene acumularse. Puede invalidar este comportamiento en una clase derivada.  
   
 ##  <a name="killdockingtimer"></a>  CPaneFrameWnd::KillDockingTimer  
  Detiene el temporizador de acoplamiento.  
@@ -787,17 +787,17 @@ virtual BOOL LoadState(
  El identificador del panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el estado del panel se cargó correctamente; en caso contrario, `FALSE`.  
+ TRUE si el estado del panel se ha cargado correctamente; en caso contrario, FALSE.  
   
 ##  <a name="m_busesavebits"></a>  CPaneFrameWnd::m_bUseSaveBits  
- Especifica si se debe registrar la clase de ventana que tiene el `CS_SAVEBITS` estilo de clase.  
+ Especifica si se debe registrar la clase de ventana que tiene el estilo de clase CS_SAVEBITS.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bUseSaveBits;  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Establecer este miembro estático `TRUE` para registrar la clase de ventana de marco reducido que tiene el `CS_SAVEBITS` estilo. Esto puede ayudar a reducir el parpadeo cuando un usuario arrastra la ventana de marco reducido.  
+ Establecer a este miembro estático en True si desea registrar la clase de ventana de marco reducido que tiene el estilo CS_SAVEBITS. Esto puede ayudar a reducir el parpadeo cuando un usuario arrastra la ventana de marco reducido.  
   
 ##  <a name="onbeforedock"></a>  CPaneFrameWnd::OnBeforeDock  
  Determina si es posible el acoplamiento.  
@@ -807,7 +807,7 @@ virtual BOOL OnBeforeDock();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si es posible; el acoplamiento en caso contrario, `FALSE`.  
+ TRUE si el acoplamiento es posible; en caso contrario, FALSE.  
   
 ##  <a name="oncheckrollstate"></a>  CPaneFrameWnd::OnCheckRollState  
  Determina si se debe desplegar o retraer una ventana de marco reducido.  
@@ -817,7 +817,7 @@ virtual void OnCheckRollState();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este método es invocado por el marco de trabajo para determinar si se debe desplegar una ventana de marco reducido hacia arriba o hacia abajo.  
+ Este método se llama el marco de trabajo para determinar si se debe retraer una ventana de marco reducido arriba o hacia abajo.  
   
  De forma predeterminada, el marco llama a [CPaneFrameWnd::IsRollUp](#isrollup) y [CPaneFrameWnd::IsRollDown](#isrolldown) y se expande o se restaura la ventana de marco reducido. Puede invalidar este método en una clase derivada para utilizar un efecto visual diferente.  
   
@@ -837,10 +837,10 @@ virtual void OnDrawBorder(CDC* pDC);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pDC*  
- El contexto de dispositivo utilizado para dibujar el borde.  
+ El contexto de dispositivo que se usa para dibujar el borde.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método es invocado por el marco de trabajo para dibujar los bordes de la ventana de marco reducido.  
+ Este método se llama el marco de trabajo para dibujar los bordes de la ventana de marco reducido.  
   
 ##  <a name="onkillrolluptimer"></a>  CPaneFrameWnd::OnKillRollUpTimer  
  Detiene el temporizador de despliegue.  
@@ -860,10 +860,10 @@ virtual void OnMovePane(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pBar*  
- Un puntero a un panel (pasa por alto).  
+ Un puntero a un panel (se omite).  
   
  [in] *ptOffset*  
- El desplazamiento por la que se va a mover el panel.  
+ El desplazamiento por el que se va a mover el panel.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
  Ajusta el diseño de un panel dentro de una ventana de marco reducido.  
@@ -873,9 +873,9 @@ virtual void OnPaneRecalcLayout();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método cuando debe ajustar el diseño de un panel dentro de la ventana de marco reducido.  
+ El marco llama a este método cuando debe ajustar el diseño de un panel dentro de la ventana de marco reducido.  
   
- De forma predeterminada, se coloca el panel para cubrir el área de cliente completa de la ventana de marco reducido.  
+ De forma predeterminada, se sitúa el panel para cubrir el área de cliente completa de la ventana de marco reducido.  
   
 ##  <a name="onsetrolluptimer"></a>  CPaneFrameWnd::OnSetRollUpTimer  
  Establece el temporizador de despliegue.  
@@ -898,10 +898,10 @@ virtual void OnShowPane(
  El panel que se va a mostrar u ocultar.  
   
  [in] *bMostrar*  
- `TRUE` Si se está mostrando el panel; `FALSE` si se va a ocultar el panel.  
+ TRUE si se muestra el panel; FALSE si se va a ocultar el panel.  
   
 ### <a name="remarks"></a>Comentarios  
- Lo llama el marco de trabajo cuando se mostrar u ocultar un panel en la ventana de marco reducido. La implementación predeterminada no hace nada.  
+ Lo llama el marco de trabajo cuando es mostrar u ocultar un panel en la ventana de marco reducido. La implementación predeterminada no hace nada.  
   
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin  
 
@@ -933,13 +933,13 @@ virtual CBasePane* PaneFromPoint(
  Este parámetro no se utiliza.  
   
  [in] *bCheckVisibility*  
- `TRUE` para especificar que se deben devolver sólo los paneles visibles; en caso contrario, `FALSE`.  
+ TRUE para especificar que se deben devolver solo los paneles visibles; en caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El panel que ha hecho clic el usuario, o `NULL` si no existe ningún panel en esa ubicación.  
+ El panel que el usuario hizo clic, o NULL si no existe ningún panel en esa ubicación.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para obtener un panel que contiene el punto especificado.  
+ Llame a este método para obtener un panel que contiene el punto especificado.  
   
 ##  <a name="redrawall"></a>  CPaneFrameWnd::RedrawAll  
  Vuelve a dibujar todas las ventanas de marco reducido.  
@@ -969,17 +969,17 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
  Un puntero al panel para quitar.  
   
  [in] *bDestroy*  
- Especifica lo que ocurre en la ventana de marco reducido. Si *bDestroy* es `TRUE`, este método destruye la ventana de marco reducido inmediatamente. Si es `FALSE`, este método destruye la ventana de marco reducido después de un retardo específico.  
+ Especifica lo que ocurre en la ventana de marco reducido. Si *bDestroy* es TRUE, este método destruye la ventana de marco reducido inmediatamente. Si es FALSE, este método destruye la ventana de marco reducido después de un retraso determinado.  
   
  [in] *bNoDelayedDestroy*  
- Si `TRUE`, diferida destrucción está deshabilitada. Si `FALSE`, diferida destrucción está habilitada.  
+ Si es TRUE, la destrucción diferida está deshabilitada. Si es FALSE, la destrucción diferida está habilitada.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo puede destruir ventanas de marco reducido inmediatamente o tras un retardo específico. Si desea retrasar la destrucción de ventanas de marco reducido, pase `FALSE` en el *bNoDelayedDestroy* parámetro. Destrucción diferida se produce cuando el marco de trabajo procesa los `AFX_WM_CHECKEMPTYMINIFRAME` mensaje.  
+ El marco de trabajo puede destruir ventanas de marco reducido inmediatamente o tras un retraso determinado. Si desea retrasar la destrucción de ventanas de marco reducido, pasar el valor FALSE en el *bNoDelayedDestroy* parámetro. Destrucción diferida se produce cuando el marco de trabajo procesa el mensaje AFX_WM_CHECKEMPTYMINIFRAME.  
   
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  Reemplaza un panel con otro.  
@@ -992,7 +992,7 @@ virtual void ReplacePane(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pBarOrg*  
- Un puntero al panel original.  
+ Un puntero en el panel original.  
   
  [in] *pBarReplaceWith*  
  Un puntero al panel que reemplaza el panel original.  
@@ -1014,7 +1014,7 @@ virtual BOOL SaveState(
  El identificador del panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el estado del panel se guardó correctamente; en caso contrario, `FALSE`.  
+ TRUE si el estado del panel se ha guardado correctamente; en caso contrario, FALSE.  
   
 ##  <a name="setcaptionbuttons"></a>  CPaneFrameWnd::SetCaptionButtons  
  Establece botones del título.  
@@ -1027,13 +1027,13 @@ virtual void SetCaptionButtons(DWORD dwButtons);
  [in] *dwButtons*  
  Combinación OR bit a bit de los valores siguientes:  
   
-- `AFX_CAPTION_BTN_CLOSE`  
+- AFX_CAPTION_BTN_CLOSE  
   
-- `AFX_CAPTION_BTN_PIN`  
+- AFX_CAPTION_BTN_PIN  
   
-- `AFX_CAPTION_BTN_MENU`  
+- AFX_CAPTION_BTN_MENU  
   
-- `AFX_CAPTION_BTN_CUSTOMIZE`  
+- AFX_CAPTION_BTN_CUSTOMIZE  
   
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow  
 
@@ -1107,11 +1107,11 @@ virtual BOOL SetPreDockState(
  [in] *preDockState*  
  Valores posibles:  
   
-- `PDS_NOTHING`,  
+- PDS_NOTHING,  
   
-- `PDS_DOCK_REGULAR`,  
+- PDS_DOCK_REGULAR,  
   
-- `PDS_DOCK_TO_TAB`  
+- PDS_DOCK_TO_TAB  
   
  [in] *pBarToDock*  
  Un puntero al panel para acoplar.  
@@ -1120,7 +1120,7 @@ virtual BOOL SetPreDockState(
  El método de acoplamiento. (Este parámetro se omite).  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la ventana de marco reducido está desacoplada; `FALSE` si está acoplado.  
+ TRUE si la ventana de marco reducido está desacoplada; FALSE si está acoplada.  
   
 ##  <a name="sizetocontent"></a>  CPaneFrameWnd::SizeToContent  
  Ajusta el tamaño de una ventana de marco reducido para que sea equivalente a un panel de contenido.  
@@ -1130,7 +1130,7 @@ virtual void SizeToContent();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para ajustar el tamaño de una ventana de marco reducido para el tamaño de un panel de contenido.  
+ Llame a este método para ajustar el tamaño de una ventana de marco reducido el tamaño de un panel de contenido.  
   
 ##  <a name="starttearoff"></a>  CPaneFrameWnd::StartTearOff  
  Desgaja un menú.  
@@ -1144,7 +1144,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
  Un puntero a un menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es `TRUE` si el método es correcto; en caso contrario, es `FALSE`.  
+ TRUE si el método se realizó correctamente; en caso contrario, FALSE.  
   
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo  
 
