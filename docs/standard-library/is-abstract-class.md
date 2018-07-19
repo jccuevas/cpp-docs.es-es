@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65939df15feeb7654f48246d75d128237c393b10
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f58436bb281af2746197e5d979e1b038a6a5ce1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844333"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961700"
 ---
 # <a name="isabstract-class"></a>is_abstract (Clase)
 
@@ -37,11 +37,11 @@ struct is_abstract;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` es una clase que tiene, como mínimo, una función virtual pura; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene al menos una función virtual pura, en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

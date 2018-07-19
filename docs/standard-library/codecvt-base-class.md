@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe2a27a79705e9850df2c9fb54037278abd8cd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a471cdd63ed46e15c9ec41968ed341eefaf36963
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843267"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965397"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base (Clase)
 
-Una clase base de la clase codecvt que se usa para definir un tipo de enumeración al que se hace referencia como **result**, que se usa como el tipo de valor devuelto para las funciones miembro de la faceta para indicar el resultado de una conversión.
+Una clase base para la clase codecvt que se utiliza para definir un tipo de enumeración denomina `result`, que se usa como el tipo de valor devuelto para las funciones miembro de faceta para indicar el resultado de una conversión.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -50,13 +50,13 @@ protected:
 
 La clase describe una enumeración común a todas las especializaciones de la clase de plantilla [codecvt](../standard-library/codecvt-class.md). El resultado de la enumeración describe los posibles valores devueltos de [do_in](../standard-library/codecvt-class.md#do_in) o [do_out](../standard-library/codecvt-class.md#do_out):
 
-- **ok** si la conversión entre las codificaciones de caracteres internas y externas se realiza correctamente.
+- `ok` Si se realiza correctamente la conversión entre las codificaciones de caracteres internas y externas.
 
-- **partial** si el origen no es suficiente o si el destino no es lo suficientemente grande como para que la conversión se realice correctamente.
+- `partial` Si el destino no es lo suficientemente grande como para la conversión se realice correctamente.
 
-- **error** si la secuencia de origen tiene un formato incorrecto.
+- `error` Si la secuencia de origen está enferma formada.
 
-- **noconv** si la función no realiza ninguna conversión.
+- `noconv` si la función no realiza ninguna conversión.
 
 ## <a name="requirements"></a>Requisitos
 

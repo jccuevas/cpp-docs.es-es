@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3b8fc232c6d692dd6e4f80018ab571e4e0cb34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847720"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962456"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits (clase)
 
@@ -103,7 +103,7 @@ Los siguientes métodos estáticos llaman al método correspondiente en un pará
 
 **Espacio de nombres:** std
 
-## <a name="allocate"></a>  allocator_traits:: Allocate
+## <a name="allocate"></a>  allocator_traits::Allocate
 
 Método estático que asigna memoria mediante el parámetro de asignador determinado.
 
@@ -116,11 +116,11 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Parámetros
 
-`al` Un objeto de asignador.
+*al* un objeto de asignador.
 
-`count` El número de elementos que se va a asignar.
+*recuento de* el número de elementos que se va a asignar.
 
-`hint` Un `const_pointer` que podría ayudarle al objeto de asignador que satisface la solicitud para el almacenamiento, localizando la dirección de un objeto asignado antes de la solicitud. Un puntero nulo se trata como si no hubiera sugerencia.
+*Sugerencia* A `const_pointer` que puede ayudar el objeto de asignador a satisfacer la solicitud de almacenamiento al buscar la dirección de un objeto asignado antes de la solicitud. Un puntero nulo se trata como si no hubiera sugerencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -130,7 +130,7 @@ El primer método estático devuelve `al.allocate(count)`.
 
 Si la expresión tiene el formato correcto, el segundo método devuelve `al.allocate(count, hint)`; de lo contrario, devuelve `al.allocate(count)`.
 
-## <a name="construct"></a>  allocator_traits:: Construct
+## <a name="construct"></a>  allocator_traits::Construct
 
 Método estático que usa un asignador especificado para crear un objeto.
 
@@ -141,17 +141,17 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Parámetros
 
-`al` Un objeto de asignador.
+*al* un objeto de asignador.
 
-`ptr` Un puntero a la ubicación donde el objeto se va a construir.
+*PTR* un puntero a la ubicación donde el objeto se va a construir.
 
-`args` Una lista de argumentos que se pasa al constructor de objetos.
+*args* una lista de argumentos que se pasa al constructor de objetos.
 
 ### <a name="remarks"></a>Comentarios
 
 Si la expresión tiene el formato correcto, la función miembro estática llama a `al.construct(ptr, args...)`; de lo contrario, se evalúa como `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
 
-## <a name="deallocate"></a>  allocator_traits:: DEALLOCATE
+## <a name="deallocate"></a>  allocator_traits::DEALLOCATE
 
 Método estático que usa un asignador especificado para desasignar un número determinado de objetos.
 
@@ -163,11 +163,11 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Parámetros
 
-`al` Un objeto de asignador.
+*al* un objeto de asignador.
 
-`ptr` Un puntero a la ubicación inicial de los objetos que se va a cancelar la asignación.
+*PTR* un puntero a la ubicación inicial de los objetos que se va a cancelar la asignación.
 
-`count` El número de objetos que se va a desasignar.
+*recuento de* el número de objetos que se va a desasignar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -175,7 +175,7 @@ Este método llama a `al.deallocate(ptr, count)`.
 
 Este método no produce nada.
 
-## <a name="destroy"></a>  allocator_traits:: Destroy
+## <a name="destroy"></a>  allocator_traits::Destroy
 
 Método estático que usa un asignador especificado para llamar al destructor de un objeto sin desasignar su memoria.
 
@@ -186,15 +186,15 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Parámetros
 
-`al` Un objeto de asignador.
+*al* un objeto de asignador.
 
-`ptr` Un puntero a la ubicación del objeto.
+*PTR* un puntero a la ubicación del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
 Si esa expresión tiene el formato correcto, este método llama a `al.destroy(ptr)`; de lo contrario, se evalúa como `ptr->~Uty()`.
 
-## <a name="max_size"></a>  allocator_traits:: max_size
+## <a name="max_size"></a>  allocator_traits::max_size
 
 Método estático que usa un asignador especificado para determinar el número máximo de objetos que se pueden asignar.
 
@@ -204,13 +204,13 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Parámetros
 
-`al` Un objeto de asignador.
+*al* un objeto de asignador.
 
 ### <a name="remarks"></a>Comentarios
 
 Si esa expresión tiene el formato correcto, este método devuelve `al.max_size()`; de lo contrario, devuelve `numeric_limits<size_type>::max()`.
 
-## <a name="select_on_container_copy_construction"></a>  allocator_traits:: select_on_container_copy_construction
+## <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
 
 Método estático que se llama a `select_on_container_copy_construction` en el asignador especificado.
 
@@ -220,11 +220,11 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Parámetros
 
-`al` Un objeto de asignador.
+*al* un objeto de asignador.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si ese tipo tiene el formato correcto, este método devuelve `al.select_on_container_copy_construction()`; de lo contrario, devuelve `al`.
+Este método devuelve `al.select_on_container_copy_construction()`si tipo tiene el formato correcto; en caso contrario, devuelve *al*.
 
 ### <a name="remarks"></a>Comentarios
 

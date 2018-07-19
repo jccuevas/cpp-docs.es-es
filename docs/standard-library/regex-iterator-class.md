@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fffa778854519bff6f947aec779e36b77fd4e202
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861303"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962561"
 ---
 # <a name="regexiterator-class"></a>regex_iterator (Clase)
 
@@ -75,11 +75,11 @@ private:
 
 ### <a name="parameters"></a>Parámetros
 
-`BidIt` El tipo de iterador para subcoincidencias.
+*BidIt* el tipo de iterador para subcoincidencias.
 
-`Elem` El tipo de elementos que debe coincidir.
+*Elem* el tipo de los elementos que coinciden.
 
-`RXtraits` Clase traits para los elementos.
+*RXtraits* clase de rasgos para los elementos.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -223,7 +223,7 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Iterador que se compara.
+*derecha* el iterador que se compara con.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -395,11 +395,11 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Iterador que se compara.
+*derecha* el iterador que se compara con.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve true si `*this` y `right` son los iteradores de final de secuencia o si ninguno es un iterador de final de secuencia y `begin == right.begin`, `end == right.end`, `pregex == right.pregex`y `flags == right.flags`. De lo contrario, devuelve false.
+La función miembro devuelve true si `*this` y *derecho* son iteradores de final de secuencia o si ninguno es un iterador de final de secuencia y `begin == right.begin`, `end == right.end`, `pregex == right.pregex`, y `flags == right.flags`. De lo contrario, devuelve false.
 
 ### <a name="example"></a>Ejemplo
 
@@ -625,17 +625,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Principio de la secuencia que debe coincidir.
+*primera* a partir de la secuencia que debe coincidir.
 
-`last` Final de la secuencia que debe coincidir.
+*último* final de secuencia para hacer coincidir.
 
-`re` Expresión regular para buscar coincidencias.
+*Re* expresión Regular para coincidencias.
 
-`f` Marcadores para coincidencias.
+*f* marcadores para coincidencias.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor crea un iterador de final de secuencia. El segundo constructor inicializa el valor almacenado `begin` con `first`, el valor almacenado `end` con `last`, el valor almacenado `pregex` con `&re`y el valor almacenado `flags` con `f`. A continuación, llama a `regex_search(begin, end, match, *pregex, flags)`. Si se produce un error en la búsqueda, el constructor establece el objeto en un iterador de final de secuencia.
+El primer constructor crea un iterador de final de secuencia. El segundo constructor inicializa el valor almacenado `begin` con *primera*, el valor almacenado `end` con *última*, el valor almacenado `pregex` con `&re`y el valor almacenado `flags` con *f*. A continuación, llama a `regex_search(begin, end, match, *pregex, flags)`. Si se produce un error en la búsqueda, el constructor establece el objeto en un iterador de final de secuencia.
 
 ### <a name="example"></a>Ejemplo
 

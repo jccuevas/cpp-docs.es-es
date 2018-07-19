@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89e6e0fc83a83ece82793050441fec9a1e7978b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f802dc91c3429ba718778d122d1a787aad0dec87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844502"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964228"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine (Clase)
 
@@ -36,11 +36,11 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-`Engine` El tipo de motor de base.
+*Motor* el tipo de motor de base.
 
-`W` **Tamaño de palabra**. Tamaño, en bits, de cada número generado. **Condición previa:** `0 < W ≤ numeric_limits<UIntType>::digits`
+*W* **tamaño de palabra**. Tamaño, en bits, de cada número generado. **Condición previa:** `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`UIntType` El tipo de resultado entero sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*UIntType* el tipo de resultado entero sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="members"></a>Miembros
 
@@ -53,7 +53,7 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase de plantilla describe un *adaptador de motor* que produce valores volviendo a empaquetar bits de los valores devueltos por su motor base, lo que resulta en valores de `W` bits.
+Esta clase de plantilla describe un *adaptador de motor* que produce valores volviendo a empaquetar bits de los valores devueltos por su motor base, lo que resulta en *W*-valores de bit.
 
 ## <a name="requirements"></a>Requisitos
 

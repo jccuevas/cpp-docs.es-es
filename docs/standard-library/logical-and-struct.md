@@ -17,14 +17,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f0abc8da68d16ea88b08ff7b9d54e06655e44c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1df2f932290caac5253da3cc859abda9a05f8a41
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859493"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964865"
 ---
-# <a name="logicaland-struct"></a>logical_and (Struct)
+# <a name="logicaland-struct"></a>logical_and (struct)
 
 Objeto de función predefinido que realiza la operación de conjunción lógica (`operator&&`) sobre sus argumentos.
 
@@ -49,11 +49,11 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Cualquier tipo que admita un `operator&&` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* cualquier tipo que admita un `operator&&` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación de conjunción lógica. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda* el operando izquierdo de la operación de conjunción lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación de conjunción lógica. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha* el operando derecho de la operación de conjunción lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 

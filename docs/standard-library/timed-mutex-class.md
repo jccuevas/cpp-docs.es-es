@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4dc22ed8676c720dd8bde5c8f424915dfa8fe40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7181b4c5c1c74d5726fd37e98366225aecf7f63a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863263"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962665"
 ---
 # <a name="timedmutex-class"></a>timed_mutex (Clase)
 
@@ -70,7 +70,7 @@ class timed_mutex;
 
 **Espacio de nombres:** std
 
-## <a name="lock"></a>  timed_mutex:: lock
+## <a name="lock"></a>  timed_mutex::lock
 
 Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.
 
@@ -102,7 +102,7 @@ Libera todos los recursos usados por el objeto `mutex`.
 
 Si el objeto está bloqueado cuando se ejecuta el destructor, el comportamiento es indefinido.
 
-## <a name="try_lock"></a>  timed_mutex:: try_lock
+## <a name="try_lock"></a>  timed_mutex::try_lock
 
 Intenta obtener la propiedad de `mutex` sin bloquearlo.
 
@@ -112,13 +112,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` si el método obtiene correctamente la propiedad de `mutex`; de lo contrario, es `false`.
+**True** si el método obtiene correctamente la propiedad de la `mutex`; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
 Si el subproceso que realiza la llamada ya posee `mutex`, el comportamiento es indefinido.
 
-## <a name="try_lock_for"></a>  timed_mutex:: try_lock_for
+## <a name="try_lock_for"></a>  timed_mutex::try_lock_for
 
 Intenta obtener la propiedad de `mutex` sin bloquearlo.
 
@@ -129,17 +129,18 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parámetros
 
-`Rel_time` A [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica la cantidad máxima de tiempo que el método intenta obtener la propiedad de la `mutex`.
+*Rel_time*  
+ Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica el tiempo máximo que el método intenta obtener la propiedad de `mutex`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` si el método obtiene correctamente la propiedad de `mutex`; de lo contrario, es `false`.
+**True** si el método obtiene correctamente la propiedad de la `mutex`; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
 Si el subproceso que realiza la llamada ya posee `mutex`, el comportamiento es indefinido.
 
-## <a name="try_lock_until"></a>  timed_mutex:: try_lock_until
+## <a name="try_lock_until"></a>  timed_mutex::try_lock_until
 
 Intenta obtener la propiedad de `mutex` sin bloquearlo.
 
@@ -152,17 +153,18 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parámetros
 
-`Abs_time` Un punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de la `mutex`.
+*Abs_time*  
+ Punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de `mutex`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` si el método obtiene correctamente la propiedad de `mutex`; de lo contrario, es `false`.
+**True** si el método obtiene correctamente la propiedad de la `mutex`; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
 Si el subproceso que realiza la llamada ya posee `mutex`, el comportamiento es indefinido.
 
-## <a name="unlock"></a>  timed_mutex:: Unlock
+## <a name="unlock"></a>  timed_mutex::Unlock
 
 Libera la propiedad de `mutex`.
 

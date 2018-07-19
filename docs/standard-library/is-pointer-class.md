@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9f05b77adc7d989d37afcbce040405ccbfdf03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30234c932aad28d16830b80fd19e4ad334ba407c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852115"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962821"
 ---
 # <a name="ispointer-class"></a>is_pointer (Clase)
 
@@ -37,11 +37,11 @@ struct is_pointer;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` es un puntero a `void`, un puntero a un objeto o un puntero a una función, o bien un formulario `cv-qualified` de uno de ellos; en caso contrario, contiene false. Tenga en cuenta que `is_pointer` es false si `Ty` es un puntero a un miembro o a una función miembro.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un puntero a **void**, un puntero a un objeto, o un puntero a una función o una `cv-qualified` formulario de uno de ellos; en caso contrario, contiene false. Tenga en cuenta que `is_pointer` es false si *Ty* es un puntero a miembro o un puntero a función miembro.
 
 ## <a name="example"></a>Ejemplo
 

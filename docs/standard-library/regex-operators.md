@@ -14,12 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 73469182938a51d89a9ca9777f5481824e54dbeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccabc523ed502a3841cb9299ea2ccd2115115743
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862619"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961547"
 ---
 # <a name="ltregexgt-operators"></a>Operadores de &lt;regex&gt;
 
@@ -70,15 +70,15 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-`BidIt` El tipo de iterador.
+*BidIt* el tipo de iterador.
 
-`IOtraits` La clase de rasgos de cadena.
+*IOtraits* la clase de rasgos de cadena.
 
-`Alloc` La clase de asignador.
+*Alloc* la clase de asignador.
 
-`left` Objeto izquierdo que se comparará.
+*izquierdo* el objeto izquierdo que se comparará.
 
-`right` Objeto derecho que se comparará.
+*derecha* objeto derecho que se comparará.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -181,19 +181,19 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-`BidIt` El tipo de iterador.
+*BidIt* el tipo de iterador.
 
-`IOtraits` La clase de rasgos de cadena.
+*IOtraits* la clase de rasgos de cadena.
 
-`Alloc` La clase de asignador.
+*Alloc* la clase de asignador.
 
-`left` Objeto izquierdo que se comparará.
+*izquierdo* el objeto izquierdo que se comparará.
 
-`right` Objeto derecho que se comparará.
+*derecha* objeto derecho que se comparará.
 
 ### <a name="remarks"></a>Comentarios
 
-Cada operador de plantilla convierte sus argumentos a un tipo de cadena y devuelve true solo si el valor convertido de `left` se compara menos que el valor convertido de `right`.
+Cada operador de plantilla convierte sus argumentos a un tipo de cadena y devuelve true solo si el valor convertido de *izquierdo* compara menos que el valor convertido de *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -262,17 +262,17 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parámetros
 
-`Elem` El tipo de elemento.
+*Elem* el tipo de elemento.
 
-`IOtraits` La clase de rasgos de cadena.
+*IOtraits* la clase de rasgos de cadena.
 
-`Alloc` La clase de asignador.
+*Alloc* la clase de asignador.
 
-`BidIt` El tipo de iterador.
+*BidIt* el tipo de iterador.
 
-`os` El flujo de salida.
+*sistema operativo* el flujo de salida.
 
-`right` Objeto que se va a insertar.
+*derecha* el objeto que se va a insertar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -342,15 +342,15 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-`BidIt` El tipo de iterador.
+*BidIt* el tipo de iterador.
 
-`IOtraits` La clase de rasgos de cadena.
+*IOtraits* la clase de rasgos de cadena.
 
-`Alloc` La clase de asignador.
+*Alloc* la clase de asignador.
 
-`left` Objeto izquierdo que se comparará.
+*izquierdo* el objeto izquierdo que se comparará.
 
-`right` Objeto derecho que se comparará.
+*derecha* objeto derecho que se comparará.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -452,15 +452,15 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-`BidIt` El tipo de iterador.
+*BidIt* el tipo de iterador.
 
-`IOtraits` La clase de rasgos de cadena.
+*IOtraits* la clase de rasgos de cadena.
 
-`Alloc` La clase de asignador.
+*Alloc* la clase de asignador.
 
-`left` Objeto izquierdo que se comparará.
+*izquierdo* el objeto izquierdo que se comparará.
 
-`right` Objeto derecho que se comparará.
+*derecha* objeto derecho que se comparará.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -571,15 +571,15 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-`BidIt` El tipo de iterador.
+*BidIt* el tipo de iterador.
 
-`IOtraits` La clase de rasgos de cadena.
+*IOtraits* la clase de rasgos de cadena.
 
-`Alloc` La clase de asignador.
+*Alloc* la clase de asignador.
 
-`left` Objeto izquierdo que se comparará.
+*izquierdo* el objeto izquierdo que se comparará.
 
-`right` Objeto derecho que se comparará.
+*derecha* objeto derecho que se comparará.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -677,15 +677,15 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-`BidIt` El tipo de iterador.
+*BidIt* el tipo de iterador.
 
-`IOtraits` La clase de rasgos de cadena.
+*IOtraits* la clase de rasgos de cadena.
 
-`Alloc` La clase de asignador.
+*Alloc* la clase de asignador.
 
-`left` Objeto izquierdo que se comparará.
+*izquierdo* el objeto izquierdo que se comparará.
 
-`right` Objeto derecho que se comparará.
+*derecha* objeto derecho que se comparará.
 
 ### <a name="remarks"></a>Comentarios
 

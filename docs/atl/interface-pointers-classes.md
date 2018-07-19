@@ -1,5 +1,5 @@
 ---
-title: La interfaz de clases de punteros (ATL) | Documentos de Microsoft
+title: Clases de punteros (ATL) de interfaz | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa649b6d290244a62cf94dcd68617a2926ad3e44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c9176d6ac22b4b9f802efabbb53d64fee3e3fef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355540"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961803"
 ---
 # <a name="interface-pointers-classes"></a>Clases de punteros de interfaz
-Las siguientes clases de administran un puntero de interfaz determinada:  
+Las siguientes clases de administración de un puntero de interfaz determinado:  
   
 -   [CComPtr](../atl/reference/ccomptr-class.md) realiza el recuento de referencias automático.  
   
 -   [CComQIPtr](../atl/reference/ccomqiptr-class.md) Similar a `CComPtr`, pero además lleva a cabo consultas automática de interfaces.  
   
--   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) proporciona métodos útiles al construir una matriz de COM punteros de interfaz.  
+-   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) proporciona métodos útiles al construir una matriz de COM de punteros de interfaz.  
   
--   [CInterfaceList](../atl/reference/cinterfacelist-class.md) proporciona métodos útiles al construir una lista de COM punteros de interfaz.  
+-   [CInterfaceList](../atl/reference/cinterfacelist-class.md) proporciona métodos útiles al construir una lista de COM de punteros de interfaz.  
   
 -   [CComGITPtr](../atl/reference/ccomgitptr-class.md) proporciona métodos para trabajar con punteros de interfaz y la tabla de interfaz global (GIT).  
   

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267f0d83ee8f92eb73bddfbcd383f59db83c8a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23a361362d574910d21b0031d5687331f8c11dda
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850351"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964260"
 ---
 # <a name="isdefaultconstructible-class"></a>Clase is_default_constructible
 
@@ -36,11 +36,11 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` El tipo de consulta.
+*T* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `T` es una clase que tiene un constructor predeterminado; en caso contrario, es false. Es equivalente al elemento `is_constructible<T>`del predicado. El tipo `T` debe ser un tipo completo, `void`, o una matriz de límite desconocido.
+Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo de clase que tiene un constructor predeterminado, en caso contrario, es false. Es equivalente al elemento `is_constructible<T>`del predicado. Tipo *T* debe ser un tipo completo, **void**, o una matriz de límite desconocido.
 
 ## <a name="example"></a>Ejemplo
 

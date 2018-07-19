@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de37ee92805d35b25e73e0682ce8abe79822a8b5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841185"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962729"
 ---
 # <a name="binder2nd-class"></a>binder2nd (Clase)
 
@@ -53,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-`Func` El objeto de función binaria se convierta en un objeto de función unaria.
+*Func* el objeto de función binaria a convertirse en un objeto de función unaria.
 
-`right` El valor al que se enlazarán el segundo argumento de objeto de función binaria.
+*derecha* el valor al que se enlaza el segundo argumento del objeto de función binaria.
 
-`left` El valor del argumento que el objeto binario adaptado se compara con el valor fijo del segundo argumento.
+*izquierdo* el valor del argumento que el objeto binario adaptado compara con el valor fijo del segundo argumento.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El objeto de función unaria resultante de enlazar el segundo argumento del objeto de función binaria con el valor `right.`
+El objeto de función unaria resultante de enlazar el segundo argumento del objeto de función binaria con el valor *derecho*.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de un objeto de función binaria _ *Func* en **op** y una copia de `right` en **value**. Define su función miembro `operator()` para que devuelva **op**( `left`, **value**).
+La clase de plantilla almacena una copia de un objeto de función binaria _ *Func* en `op`y una copia de *derecho* en `value`. Define su función miembro `operator()` para que devuelva **op**( `left`, **value**).
 
-Si `Func` es un objeto de tipo **Operation** y c es una constante, [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) es equivalente al constructor de clase `binder2nd` `binder2nd`\< **Operation**> ( `Func`, `c` ) y más conveniente.
+Si `Func` es un objeto de tipo `Operation` y c es una constante, a continuación, [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) es equivalente a la `binder2nd` constructor de clase `binder2nd` \<  **Operación**> ( `Func`, `c` ) y más conveniente.
 
 ## <a name="example"></a>Ejemplo
 

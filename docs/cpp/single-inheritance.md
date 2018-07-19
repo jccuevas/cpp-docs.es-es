@@ -1,5 +1,5 @@
 ---
-title: Único herencia | Documentos de Microsoft
+title: Herencia única | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cab540d36f322bbe571a04046ff876d5425a317
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028625"
 ---
 # <a name="single-inheritance"></a>Herencia única
 En la "herencia única", una forma de herencia común, las clases solo tienen una clase base. Considere la relación que se muestra en la siguiente ilustración.  
   
- ![Solo básica&#45;gráfico de herencia](../cpp/media/vc38xj1.gif "vc38XJ1")  
+ ![Básico solo&#45;gráfico de herencia](../cpp/media/vc38xj1.gif "vc38XJ1")  
 Gráfico sencillo de herencia única  
   
  Observe la progresión de general a específico en la ilustración. Otro atributo común que se encuentra en el diseño de la mayoría de jerarquías de clases es que la clase derivada tiene una "especie" de relación con la clase base. En la ilustración, `Book` es una clase de `PrintedDocument` y `PaperbackBook` es una clase de `book`.  
   
  Otro elemento de interés en la ilustración: `Book` es una clase derivada (de `PrintedDocument`) y una clase base (`PaperbackBook` se deriva de `Book`). En el ejemplo siguiente se muestra una declaración estructural de esta jerarquía de clases:  
   
-```  
+```cpp 
 // deriv_SingleInheritance.cpp  
 // compile with: /LD  
 class PrintedDocument {};  
@@ -52,7 +53,7 @@ class PaperbackBook : public Book {};
   
  La clase base de la que se deriva cada clase se declara antes de la declaración de la clase derivada. No es suficiente proporcionar una declaración de referencia adelantada para una clase base; debe ser una declaración completa.  
   
- En el ejemplo anterior, el especificador de acceso **público** se utiliza. El significado de herencia pública, protegida y privada se describe en [Control de acceso a miembros.](../cpp/member-access-control-cpp.md)  
+ En el ejemplo anterior, el especificador de acceso **pública** se utiliza. Se describe el significado de herencia pública, protegida y privada en [Control de acceso de miembro.](../cpp/member-access-control-cpp.md)  
   
  Una clase puede actuar como clase base para muchas clases específicas, como se muestra en la ilustración siguiente.  
   
@@ -62,11 +63,11 @@ Ejemplo de gráfico acíclico dirigido
  En el diagrama anterior, denominado "gráfico acíclico dirigido" (o DAG), algunas de las clases son clases base para más de una clase derivada. Sin embargo, no sucede lo mismo al contrario: solo hay una clase base directa para una clase derivada dada. El gráfico de la ilustración muestra una estructura de "herencia única".  
   
 > [!NOTE]
->  Los gráficos acíclicos dirigidos no son exclusivos de la herencia única. También se usan para ilustrar gráficos de herencia múltiple. En este tema se trata en [herencia múltiple](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Los gráficos acíclicos dirigidos no son exclusivos de la herencia única. También se usan para ilustrar gráficos de herencia múltiple. En este tema se trata en [herencia múltiple](http://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
   
  En la herencia, la clase derivada contiene los miembros de la clase base más cualquier miembro nuevo que se agregue. Como resultado, una clase derivada puede hacer referencia a miembros de la clase base (a menos que esos miembros se redefinan en la clase derivada). Se puede usar el operador de resolución de ámbito (`::`) para hacer referencia a los miembros de clases base directas o indirectas cuando esos miembros se han vuelto a definir en la clase derivada. Considere este ejemplo:  
   
-```  
+```cpp 
 // deriv_SingleInheritance2.cpp  
 // compile with: /EHsc /c  
 #include <iostream>  
@@ -99,7 +100,7 @@ Book::Book( char *name, long pagecount ) {
   
  Observe que el constructor para `Book`, (`Book::Book`), tiene acceso al miembro de datos, `Name`. En un programa, se puede crear un objeto de tipo `Book`, que se usará del siguiente modo:  
   
-```  
+```cpp 
 //  Create a new object of type Book. This invokes the  
 //   constructor Book::Book.  
 Book LibraryBook( "Programming Windows, 2nd Ed", 944 );  
@@ -112,7 +113,7 @@ LibraryBook.PrintNameOf();
   
  Como demuestra el ejemplo anterior, los datos y funciones heredados y miembros de clase se usan de forma idéntica. Si la implementación de la clase `Book` solicita la reimplementation de la función `PrintNameOf`, la función que pertenece a la clase `Document` solo se puede llamar mediante el operador de resolución de ámbito (`::`):  
   
-```  
+```cpp 
 // deriv_SingleInheritance3.cpp  
 // compile with: /EHsc /LD  
 #include <iostream>  
@@ -138,7 +139,7 @@ void Book::PrintNameOf() {
   
  Los punteros y las referencias a clases derivadas se pueden convertir implícitamente a punteros y referencias a sus clases base si hay una clase base accesible e inequívoca. En el código siguiente se muestra este concepto mediante el uso de punteros (el mismo principio se aplica a las referencias):  
   
-```  
+```cpp 
 // deriv_SingleInheritance4.cpp  
 // compile with: /W3  
 struct Document {  
@@ -162,5 +163,5 @@ int main() {
  Dado que la clase `Document` tiene una función `PrintNameOf`, puede imprimir el nombre de cada libro de la biblioteca, aunque puede omitir algo de información específica del tipo de documento (recuento de páginas de `Book`, número de bytes para `HelpFile`, etc.).  
   
 > [!NOTE]
->  Forzar la clase base para implementar una función como `PrintNameOf` no suele ser el mejor diseño. [Funciones virtuales](../cpp/virtual-functions.md) proporciona otras alternativas de diseño.  
+>  Forzar la clase base para implementar una función como `PrintNameOf` no suele ser el mejor diseño. [Funciones virtuales](../cpp/virtual-functions.md) ofrece otras alternativas de diseño.  
   

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109d7ee960b6788468c473e88321a00a38fb4379
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ff0fffeffd10f382f4d0d4fe6361c2eddac55e3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862395"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963136"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -39,7 +39,7 @@ Para crear un objeto de expresión regular, use la clase de plantilla [basic_reg
 
 Para buscar texto que coincida con un objeto de expresión regular, utilice las funciones de plantilla [regex_match](../standard-library/regex-functions.md#regex_match) y [regex_search](../standard-library/regex-functions.md#regex_search), junto con las marcas de coincidencia de tipo [regex_constants::match_ flag_type](../standard-library/regex-constants-class.md#match_flag_type). Estas funciones devuelven resultados mediante el uso de la clase de plantilla [match_results (Clase)](../standard-library/match-results-class.md) y sus especializaciones, [cmatch](../standard-library/regex-typedefs.md#cmatch), [wcmatch](../standard-library/regex-typedefs.md#wcmatch), [smatch](../standard-library/regex-typedefs.md#smatch) y [wsmatch](../standard-library/regex-typedefs.md#wsmatch), junto con la clase de plantilla [sub_match (Clase)](../standard-library/sub-match-class.md) y sus especializaciones, [csub_match](../standard-library/regex-typedefs.md#csub_match), [wcsub_match](../standard-library/regex-typedefs.md#wcsub_match), [ssub_match](../standard-library/regex-typedefs.md#ssub_match) y [wssub_match](../standard-library/regex-typedefs.md#wssub_match).
 
-Para reemplazar el texto que coincide con un objeto de expresión regular, use la función de plantilla [regex_replace](../standard-library/regex-functions.md#regex_replace), junto con las marcas de coincidencia de tipo [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
+Para reemplazar el texto que coincide con un objeto de expresión regular, use la función de plantilla [regex_replace](../standard-library/regex-functions.md#regex_replace), junto con las marcas de coincidencia de tipo [regex_constants:: match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
 
 Para procesar una iteración en varias coincidencias de un objeto de expresión regular, use las clases de plantilla [regex_iterator (Clase)](../standard-library/regex-iterator-class.md) y [regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md) o una de sus especializaciones, [cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator), [sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator), [wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator), [wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator), [cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator), [sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator), [wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator) o [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator), junto con las marcas de coincidencia de tipo [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
 
@@ -55,8 +55,8 @@ Para modificar los detalles de la gramática de expresiones regulares, escriba u
 |[regex_error](../standard-library/regex-error-class.md)|Notifica la existencia de una expresión regular no válida.|
 |[regex_iterator](../standard-library/regex-iterator-class.md)|Procesa una iteración por los resultados de la coincidencia.|
 |[regex_traits](../standard-library/regex-traits-class.md)|Describe las características de los elementos para buscar coincidencias.|
-|[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|Describe las características de `char` para buscar coincidencias.|
-|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|Describe las características de `wchar_t` para buscar coincidencias.|
+|[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|Describe las características de **char** para la coincidencia.|
+|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|Describe las características de **wchar_t** para la coincidencia.|
 |[regex_token_iterator](../standard-library/regex-token-iterator-class.md)|Procesa una iteración en las subcoincidencias.|
 |[sub_match](../standard-library/sub-match-class.md)|Describe a una subcoincidencia.|
 
@@ -64,20 +64,20 @@ Para modificar los detalles de la gramática de expresiones regulares, escriba u
 
 |||
 |-|-|
-|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Definición de tipo de `char` `match_results`.|
-|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Definición de tipo de `char` `regex_iterator`.|
-|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Definición de tipo de `char` `regex_token_iterator`.|
-|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Definición de tipo de `char` `sub_match`.|
-|[regex](../standard-library/regex-typedefs.md#regex)|Definición de tipo de `char` `basic_regex`.|
+|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Definición de tipo para **char** `match_results`.|
+|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Definición de tipo para **char** `regex_iterator`.|
+|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Definición de tipo para **char** `regex_token_iterator`.|
+|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Definición de tipo para **char** `sub_match`.|
+|[regex](../standard-library/regex-typedefs.md#regex)|Definición de tipo para **char** `basic_regex`.|
 |[smatch](../standard-library/regex-typedefs.md#smatch)|Definición de tipo de `string` `match_results`.|
 |[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator)|Definición de tipo de `string` `regex_iterator`.|
 |[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator)|Definición de tipo de `string` `regex_token_iterator`.|
 |[ssub_match](../standard-library/regex-typedefs.md#ssub_match)|Definición de tipo de `string` `sub_match`.|
-|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|Definición de tipo de `wchar_t` `match_results`.|
-|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|Definición de tipo de `wchar_t` `regex_iterator`.|
-|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|Definición de tipo de `wchar_t` `regex_token_iterator`.|
-|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|Definición de tipo de `wchar_t` `sub_match`.|
-|[wregex](../standard-library/regex-typedefs.md#wregex)|Definición de tipo de `wchar_t` `basic_regex`.|
+|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|Definición de tipo para **wchar_t** `match_results`.|
+|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|Definición de tipo para **wchar_t** `regex_iterator`.|
+|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|Definición de tipo para **wchar_t** `regex_token_iterator`.|
+|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|Definición de tipo para **wchar_t** `sub_match`.|
+|[wregex](../standard-library/regex-typedefs.md#wregex)|Definición de tipo para **wchar_t** `basic_regex`.|
 |[wsmatch](../standard-library/regex-typedefs.md#wsmatch)|Definición de tipo de `wstring` `match_results`.|
 |[wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator)|Definición de tipo de `wstring` `regex_iterator`.|
 |[wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator)|Definición de tipo de `wstring` `regex_token_iterator`.|

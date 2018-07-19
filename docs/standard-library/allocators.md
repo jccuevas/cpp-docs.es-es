@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d7ae039fefc0137d317a15a803a0bf5d8205c31
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc84748e35807ef0f270fe8fbbd7560a9a18e3b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850019"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963500"
 ---
 # <a name="allocators"></a>Asignadores
 
@@ -38,7 +38,7 @@ La biblioteca estándar de C++ proporciona una implementación predeterminada pa
 
 ## <a name="writing-your-own-allocator-c11"></a>Escribir su propio asignador (C++11)
 
-El asignador predeterminado usa `new` y `delete` para asignar y desasignar memoria. Si quiere emplear otro método de asignación de memoria, como el uso de memoria compartida, debe crear su propio asignador. Si quiere usar C++11 y tiene que escribir un asignador personalizado nuevo, haga que sea un asignador mínimo si es posible. Si ya ha implementado un asignador de estilo antiguo, considere la posibilidad de modificarlo para que sea un *asignador mínimo* y aprovechar la mayor eficacia del método `construct()` que se proporcionará automáticamente.
+El asignador predeterminado usa **nueva** y **eliminar** para asignar y desasignar memoria. Si quiere emplear otro método de asignación de memoria, como el uso de memoria compartida, debe crear su propio asignador. Si quiere usar C++11 y tiene que escribir un asignador personalizado nuevo, haga que sea un asignador mínimo si es posible. Si ya ha implementado un asignador de estilo antiguo, considere la posibilidad de modificarlo para que sea un *asignador mínimo* y aprovechar la mayor eficacia del método `construct()` que se proporcionará automáticamente.
 
 Un asignador mínimo requiere mucha menos repetición y le permite centrarse en las funciones miembro `allocate` y `deallocate`, que hacen todo el trabajo. Al crear un asignador mínimo, implemente solo los miembros que se muestran en el ejemplo siguiente:
 

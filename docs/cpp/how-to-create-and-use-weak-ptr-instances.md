@@ -1,7 +1,7 @@
 ---
-title: 'Cómo: crear y utilizar instancias de weak_ptr | Documentos de Microsoft'
+title: 'Cómo: crear y usar instancias de weak_ptr | Microsoft Docs'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 07/12/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,28 +12,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8fbbf9d3b427c2451fafe0fae93a531dfd45ad8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73b70a68226be14b7e99afe125b3dcd8b6784601
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415150"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034821"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Cómo: Crear y usar instancias de weak_ptr
-A veces, un objeto debe almacenar una manera de tener acceso al objeto subyacente de un `shared_ptr` sin causar que el recuento de referencias va a incrementar. Normalmente, esta situación se produce cuando tienen referencias cíclicas entre `shared_ptr` instancias.  
-  
- Es el mejor diseño evitar la propiedad compartida de punteros siempre que pueda. Sin embargo, si se debe compartir la propiedad de `shared_ptr` instancias, evite las referencias cíclicas entre ellos. Una vez referencias cíclicas inevitable o incluso preferible por algún motivo, usar `weak_ptr` para conceder a uno o varios de los propietarios de una referencia débil a otro `shared_ptr`. Mediante el uso de un `weak_ptr`, puede crear un `shared_ptr` que se une a un conjunto existente de instancias relacionadas, pero solo si el recurso de memoria subyacente sigue siendo válido. Un `weak_ptr` propio no participar en el recuento de referencias y, por lo tanto, no puede impedir que el recuento de referencias va a cero. Sin embargo, puede usar un `weak_ptr` para intentar obtener una nueva copia de la `shared_ptr` con que se inicializó. Si ya se ha eliminado la memoria, un **bad_weak_ptr** se produce la excepción. Si la memoria todavía es válida, el nuevo puntero compartido incrementa el recuento de referencias y garantiza que la memoria sea válida tanto en cuanto la `shared_ptr` variable permanece en el ámbito.  
-  
+A veces, un objeto debe almacenar una manera de obtener acceso al objeto subyacente de un `shared_ptr` sin provocar el recuento de referencias se incremente. Normalmente, esta situación se produce cuando hay referencias cíclicas entre `shared_ptr` instancias.  
+
+ Es el mejor diseño evitar la propiedad compartida de punteros siempre que pueda. Sin embargo, si debe haber compartido la propiedad de `shared_ptr` instancias, evite las referencias cíclicas entre ellas. Cuando las referencias cíclicas son inevitables, o incluso preferibles por alguna razón, utilice `weak_ptr` para dar a uno o varios de los propietarios una referencia débil a otro `shared_ptr`. Mediante el uso de un `weak_ptr`, puede crear un `shared_ptr` que une a un conjunto existente de instancias relacionadas, pero solo si el recurso de memoria subyacente sigue siendo válido. Un `weak_ptr` no participar en el recuento de referencias y, por lo tanto, que no impide que el recuento de referencias vaya hacia cero. Sin embargo, puede usar un `weak_ptr` para intentar obtener una copia nueva de la `shared_ptr` con que se ha inicializado. Si ya se ha eliminado la memoria, un `bad_weak_ptr` es una excepción. Si la memoria es aún válida, el nuevo puntero compartido incrementa el recuento de referencias y garantiza que la memoria será válida siempre y cuando el `shared_ptr` variable permanezca dentro del ámbito.  
+
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se muestra un caso donde `weak_ptr` se utiliza para garantizar la correcta eliminación de objetos que tienen dependencias circulares. Examinar el ejemplo, suponga que se ha creado solo después de que se tuvieron en cuenta soluciones alternativas. El `Controller` objetos representan algunos aspectos de un proceso de máquina y funcionan de forma independiente. Cada controlador debe ser capaz de consultar el estado de los demás controladores en cualquier momento, y cada uno de ellos contiene una privada `vector<weak_ptr<Controller>>` para este propósito. Cada vector contiene una referencia circular y por lo tanto, `weak_ptr` las instancias se utilizan en lugar de `shared_ptr`.  
-  
+ El ejemplo de código siguiente muestra un caso donde `weak_ptr` sirve para garantizar la eliminación correcta de los objetos que tienen dependencias circulares. Al examinar el ejemplo, suponga que se creó después de considerar las soluciones alternativas. El `Controller` objetos representan algún aspecto de un proceso de máquina y funcionan independientemente. Cada controlador debe ser capaz de consultar el estado de los demás controladores en cualquier momento, y cada uno de ellos contiene una privada `vector<weak_ptr<Controller>>` para este propósito. Cada vector contiene una referencia circular y por lo tanto, `weak_ptr` las instancias se utilizan en lugar de `shared_ptr`.  
+
  [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]  
-  
+
 ```Output  
-Creating Controller0Creating Controller1Creating Controller2Creating Controller3Creating Controller4push_back to v[0]: 1push_back to v[0]: 2push_back to v[0]: 3push_back to v[0]: 4push_back to v[1]: 0push_back to v[1]: 2push_back to v[1]: 3push_back to v[1]: 4push_back to v[2]: 0push_back to v[2]: 1push_back to v[2]: 3push_back to v[2]: 4push_back to v[3]: 0push_back to v[3]: 1push_back to v[3]: 2push_back to v[3]: 4push_back to v[4]: 0push_back to v[4]: 1push_back to v[4]: 2push_back to v[4]: 3use_count = 1Status of 1 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 3 = OnDestroying Controller0Destroying Controller1Destroying Controller2Destroying Controller3Destroying Controller4Press any key  
+Creating Controller0  
+Creating Controller1  
+Creating Controller2  
+Creating Controller3  
+Creating Controller4  
+push_back to v[0]: 1  
+push_back to v[0]: 2  
+push_back to v[0]: 3  
+push_back to v[0]: 4  
+push_back to v[1]: 0  
+push_back to v[1]: 2  
+push_back to v[1]: 3  
+push_back to v[1]: 4  
+push_back to v[2]: 0  
+push_back to v[2]: 1  
+push_back to v[2]: 3  
+push_back to v[2]: 4  
+push_back to v[3]: 0  
+push_back to v[3]: 1  
+push_back to v[3]: 2  
+push_back to v[3]: 4  
+push_back to v[4]: 0  
+push_back to v[4]: 1  
+push_back to v[4]: 2  
+push_back to v[4]: 3
+use_count = 1  
+Status of 1 = On  
+Status of 2 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 2 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 1 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = O  
+nStatus of 1 = On  
+Status of 2 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 1 = On  
+Status of 2 = On  
+Status of 3 = On  
+Destroying Controller0  
+Destroying Controller1  
+Destroying Controller2  
+Destroying Controller3  
+Destroying Controller4  
+Press any key  
 ```  
-  
- Como experimento, modifique el vector `others` sea un `vector<shared_ptr<Controller>>`y, a continuación, en la salida, tenga en cuenta que ninguna destructores se invocan cuando `TestRun` devuelve.  
-  
+
+ Como experimento, modifique el vector `others` sea un `vector<shared_ptr<Controller>>`y, a continuación, en la salida, observe que no se invoca ningún destructor cuando `TestRun` devuelve.  
+
 ## <a name="see-also"></a>Vea también  
  [Punteros inteligentes](../cpp/smart-pointers-modern-cpp.md)

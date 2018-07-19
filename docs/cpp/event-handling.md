@@ -1,5 +1,5 @@
 ---
-title: Control de eventos | Documentos de Microsoft
+title: Control de eventos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09029f3afef0a9a28fdc572b9b7d8685cf76e811
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d27ff977bf3e4132f7782c0ffcb85bebefd42d68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414625"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961446"
 ---
 # <a name="event-handling"></a>Control de eventos
-Control de eventos se admite principalmente para las clases COM (clases de C++ que implementan objetos COM, normalmente mediante clases ATL o el [coclase](../windows/coclass.md) atributo).  Para obtener más información, consulte [control de eventos en COM](../cpp/event-handling-in-com.md).  
+Control de eventos es compatible principalmente para las clases COM (las clases de C++ que implementan objetos COM, normalmente mediante clases ATL o [coclase](../windows/coclass.md) atributo).  Para obtener más información, consulte [control de eventos en COM](../cpp/event-handling-in-com.md).  
   
  El control de eventos también se admite para las clases de C++ nativo (clases de C++ que no implementan objetos COM); sin embargo, esa compatibilidad está en desuso y se quitará en futuras versiones.  Para obtener más información, consulte [control de eventos en C++ nativo](../cpp/event-handling-in-native-cpp.md).  
   
@@ -44,4 +44,3 @@ Control de eventos se admite principalmente para las clases COM (clases de C++ q
 ## <a name="see-also"></a>Vea también  
  [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)   
  [Palabras clave](../cpp/keywords-cpp.md)   
- [Ejemplos de control de eventos](http://msdn.microsoft.com/en-us/cc0287d4-f92b-4da5-85fc-a0f186e16424)

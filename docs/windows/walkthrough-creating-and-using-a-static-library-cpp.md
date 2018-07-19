@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: Crear y utilizar una biblioteca estática (C++) | Documentos de Microsoft'
+title: 'Tutorial: Crear y utilizar una biblioteca estática (C++) | Microsoft Docs'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 07/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,52 +16,50 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d136dae553f623cbd607a69ab710fa9c6fe6c91b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bcbf5747b667615c96ced3488e16f2a8fc0ef2d
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891586"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034808"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Tutorial: Crear y utilizar una biblioteca estática (C++)
 En este tutorial paso a paso se muestra cómo crear una biblioteca estática (archivo .lib) para su uso con aplicaciones de C++. Utilizar una biblioteca estática es una excelente manera de reutilizar el código. En lugar de volver a implementar las mismas rutinas en todos las aplicaciones que requieran la funcionalidad, escríbalas una vez en una biblioteca estática y, a continuación, haga referencia a ellas desde las aplicaciones. El código vinculado desde una biblioteca estática pasa a formar parte de la aplicación (no es necesario instalar otro archivo para utilizar el código).  
   
  En este tutorial se tratan las siguientes tareas:  
   
--   [Crear un proyecto de biblioteca estática](#BKMK_CreateLibProject)  
+-   [Creación de un proyecto de biblioteca estática](#CreateLibProject)  
   
--   [Agregar una clase a la biblioteca estática](#BKMK_AddClassToLib)  
+-   [Agregar una clase a la biblioteca estática](#AddClassToLib)  
   
--   [Crear una aplicación de consola que haga referencia a la biblioteca estática](#BKMK_CreateAppToRefTheLib)  
+-   [Crear una aplicación de consola haga referencia a la biblioteca estática](#CreateAppToRefTheLib)  
   
--   [Usar la funcionalidad de la biblioteca estática en la aplicación](#BKMK_UseLibInApp)  
+-   [Usar la funcionalidad de la biblioteca estática en la aplicación](#UseLibInApp)  
   
--   [Ejecutar la aplicación](#BKMK_RunApp)  
+-   [Ejecución de la aplicación](#RunApp)  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Descripción de los fundamentos del lenguaje C++.  
   
-##  <a name="BKMK_CreateLibProject"></a> Crear un proyecto de biblioteca estática  
+##  <a name="CreateLibProject"></a> Creación de un proyecto de biblioteca estática  
   
 #### <a name="to-create-a-static-library-project"></a>Para crear un proyecto de biblioteca estática  
   
 1.  En la barra de menús, elija **Archivo**, **Nuevo**, **Proyecto**.  
   
-2.  En el panel de la izquierda del cuadro de diálogo **Nuevo proyecto** , expanda **Instalado**, **Plantillas**, **Visual C++** y, a continuación, seleccione **Win32**.  
+2. En el panel izquierdo de la **nuevo proyecto** cuadro de diálogo, expanda **instalado, Visual C++** y, a continuación, seleccione **Windows Desktop**.
   
-3.  En el panel central, seleccione **Aplicación de consola Win32**.  
+3. En el panel central, seleccione **Asistente de escritorio de Windows**.  
   
 4.  Especifique un nombre para el proyecto; por ejemplo, **MathFuncsLib**, en el cuadro **Nombre** . Especifique un nombre para la solución, por ejemplo, **StaticLibrary**, en el cuadro **Nombre de la solución** . Elija el botón **Aceptar** .  
   
-5.  En la página **Información general** del cuadro de diálogo **Asistente para aplicaciones Win32** , elija el botón **Siguiente** .  
+5. En **tipo de aplicación**, seleccione la biblioteca estática (.lib).  
   
-6.  En la página **Configuración de la aplicación** , en **Tipo de aplicación**, seleccione **Biblioteca estática**.  
+6. En **opciones adicionales**, desactive la **encabezado precompilado** casilla de verificación.
   
-7.  En la página **Configuración de la aplicación** , en **Opciones adicionales**, desactive la casilla **Encabezado precompilado** .  
-  
-8.  Elija el botón **Finalizar** para crear el proyecto.  
-  
-##  <a name="BKMK_AddClassToLib"></a> Agregar una clase a la biblioteca estática  
+7. Elija **Aceptar** para crear el proyecto.  
+ 
+##  <a name="AddClassToLib"></a> Agregar una clase a la biblioteca estática  
   
 #### <a name="to-add-a-class-to-the-static-library"></a>Para agregar una clase a la biblioteca estática  
   
@@ -82,33 +80,30 @@ En este tutorial paso a paso se muestra cómo crear una biblioteca estática (ar
     > [!NOTE]
     >  Cuando compile desde la línea de comandos de Visual Studio, debe compilar el programa en dos pasos. Primero, ejecute **cl /c /EHsc MathFuncsLib.cpp** para compilar el código y crear un archivo de objeto denominado **MathFuncsLib.obj**. (El **cl** comando invoca el compilador, Cl.exe y la **/c** opción especifica compilar sin vinculación. Para obtener más información, consulte [/c (compilar sin vincular)](../build/reference/c-compile-without-linking.md).) En segundo lugar, ejecute **lib MathFuncsLib.obj** para enlazar el código y crear la biblioteca estática **MathFuncsLib.lib**. (El comando **lib** invoca el Administrador de bibliotecas, Lib.exe. Para obtener más información, vea [LIB Reference](../build/reference/lib-reference.md)).  
   
-##  <a name="BKMK_CreateAppToRefTheLib"></a> Crear una aplicación de consola que haga referencia a la biblioteca estática  
+##  <a name="CreateAppToRefTheLib"></a> Crear una aplicación de consola haga referencia a la biblioteca estática  
   
 #### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>Para crear una aplicación de consola C++ que haga referencia a la biblioteca estática  
   
 1.  En la barra de menús, elija **Archivo**, **Nuevo**, **Proyecto**.  
   
-2.  En el panel izquierdo, debajo de **Visual C++**, seleccione **Win32**.  
-  
-3.  En el panel central, seleccione **Aplicación de consola Win32**.  
+2. En el panel izquierdo de la **nuevo proyecto** cuadro de diálogo, expanda **instalado, Visual C++** y, a continuación, seleccione **Windows Desktop**.  
+
+3. En el panel central, seleccione **Asistente de escritorio de Windows**.  
   
 4.  Especifique un nombre para el proyecto; por ejemplo, **MyExecRefsLib**, en el cuadro **Nombre** . En la lista desplegable junto a **Solución**, seleccione **Agregar a solución**. Esto agrega el nuevo proyecto a la solución que contiene la biblioteca estática. Elija el botón **Aceptar** .  
+5. En **tipo de aplicación**, seleccione **aplicación de consola (.exe)**.
+
+6. En **obtener opciones**, desactive la **encabezado precompilado** casilla de verificación.
+
+7. Elija **Aceptar** para crear el proyecto.  
   
-5.  En la página **Información general** del cuadro de diálogo **Asistente para aplicaciones Win32** , elija el botón **Siguiente** .  
-  
-6.  En la página **Configuración de la aplicación** , en **Tipo de aplicación**, seleccione **Aplicación de consola**.  
-  
-7.  En la página **Configuración de la aplicación** , en **Opciones adicionales**, desactive la casilla **Encabezado precompilado** .  
-  
-8.  Elija el botón **Finalizar** para crear el proyecto.  
-  
-##  <a name="BKMK_UseLibInApp"></a> Usar la funcionalidad de la biblioteca estática en la aplicación  
+##  <a name="UseLibInApp"></a> Usar la funcionalidad de la biblioteca estática en la aplicación  
   
 #### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Para utilizar la funcionalidad de la biblioteca estática en la aplicación  
   
 1.  Después de crear una aplicación de consola, se crea un programa vacío. El nombre del archivo de código fuente será el mismo que el elegido anteriormente. En este ejemplo, se llama **MyExecRefsLib.cpp**.  
   
-2.  Para poder usar las rutinas de coincidencia de la biblioteca estática, debe hacer referencia a ella. Para ello, abra el menú contextual del proyecto **MyExecRefsLib** en el **Explorador de soluciones**y luego elija **Referencias**. En el **MyExecRefsLibProperty páginas** cuadro de diálogo, expanda el **propiedades comunes** nodo, seleccione **Framework y referencias**y, a continuación, elija la **agregar Nueva referencia** botón. Para obtener más información sobre la **referencias** cuadro de diálogo, vea [agregar referencias](../ide/adding-references-in-visual-cpp-projects.md).  
+2.  Para poder usar las rutinas de coincidencia de la biblioteca estática, debe hacer referencia a ella. Para ello, abra el menú contextual del proyecto MyExecRefsLib en **el Explorador de soluciones**y, a continuación, elija **agregar, referencia**.  
   
 3.  El cuadro de diálogo **Agregar referencia** muestra las bibliotecas a las que puede hacer referencia. La pestaña **Proyectos** enumera los proyectos de la solución actual y las bibliotecas que contienen. En la pestaña **Proyectos** , active la casilla situada junto a **MathFuncsLib** y después elija el botón **Aceptar** .  
   
@@ -122,7 +117,7 @@ En este tutorial paso a paso se muestra cómo crear una biblioteca estática (ar
   
 6.  Compile el archivo ejecutable; para ello, elija **Compilación**, **Compilar solución** en la barra de menús.  
   
-##  <a name="BKMK_RunApp"></a> Ejecutar la aplicación  
+##  <a name="RunApp"></a> Ejecución de la aplicación  
   
 #### <a name="to-run-the-app"></a>Para ejecutar la aplicación  
   

@@ -18,22 +18,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec02ce5aab3d8a7f95ec9020fe3e2a00c1f5bef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b24012825b883550de6f58e6ce2d53b826f746ca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854358"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965505"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
-Llamar a cualquiera de los métodos potencialmente inseguros en la biblioteca estándar de C++ da como resultado [C4996 de advertencia del compilador (nivel 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Para deshabilitar esta advertencia, defina la macro **_SCL_SECURE_NO_WARNINGS** en el código:
+Llamar a cualquiera de los métodos potencialmente inseguros detallados en la biblioteca estándar de C++ da como resultado [advertencia del compilador (nivel 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Para deshabilitar esta advertencia, defina la macro _SCL_SECURE_NO_WARNINGS en el código:
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
 ```
 
-Si se utilizan encabezados precompilados, coloque esta directiva en el archivo de encabezado precompilado antes de incluir cualquier biblioteca de tiempo de ejecución de C o encabezados de la biblioteca estándar. Si se coloca en un archivo de código fuente individual antes de incluir el archivo de encabezado precompilado, el compilador lo omite.
+Si usa encabezados precompilados, coloque esta directiva en el archivo de encabezado precompilado antes de incluir cualquier biblioteca de tiempo de ejecución de C o encabezados de la biblioteca estándar. Si lo coloca en un archivo de código fuente individual antes de incluir el archivo de encabezado precompilado, el compilador lo omite.
 
 ## <a name="remarks"></a>Comentarios
 

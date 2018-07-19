@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7066ffe50dc76c26528e7bfcd3dc9e9778e1473a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c640f1b338fa4b0aa6dbcc408e0729fbf8ff90a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842877"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963555"
 ---
 # <a name="constructing-input-stream-objects"></a>Construir objetos de flujo de entrada
 
@@ -33,7 +33,7 @@ Si solo usa el objeto `cin`, no es necesario que cree un flujo de entrada. Debe 
 
 Hay dos formas de crear un flujo de archivo de entrada:
 
-- Use el constructor de argumento `void` y después llame a la función miembro `open`:
+- Use la **void** constructor de argumento, a continuación, llame a la `open` función miembro:
 
    ```cpp
    ifstream myFile; // On the stack

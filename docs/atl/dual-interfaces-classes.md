@@ -1,5 +1,5 @@
 ---
-title: Interfaces duales clases (ATL) | Documentos de Microsoft
+title: Clases (ATL) de Interfaces duales | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2acbad92f3da16342de41bb422a75d0304a59f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 07bc54ebecf0b8d1267ac510c7792c38088280d1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354327"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961615"
 ---
 # <a name="dual-interfaces-classes"></a>Clases de Interfaces duales
 La clase siguiente proporciona compatibilidad para interfaces duales:  
   
--   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) implementa la `IDispatch` parte de una interfaz dual. Para obtener más información, consulta [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+-   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) implementa el `IDispatch` parte de una interfaz dual. Para obtener más información, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../atl/atl-class-overview.md)

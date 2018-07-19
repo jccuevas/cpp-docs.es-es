@@ -38,32 +38,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7b0c0499b9dfbaf3cb1f19eba16fc684a229839
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965531"
 ---
 # <a name="valarray-class"></a>valarray (Clase)
 
-La clase de plantilla describe un objeto que controla una secuencia de elementos de tipo **Type** que se almacenan como una matriz, que se diseñan para realizar operaciones matemáticas de alta velocidad y que se optimizan para ofrecer un alto rendimiento a la hora de realizar cálculos.
+La clase de plantilla describe un objeto que controla una secuencia de elementos de tipo `Type` que se almacenan como una matriz, diseñado para realizar operaciones matemáticas de alta velocidad y optimizado para ofrecer un alto rendimiento.
 
 ## <a name="remarks"></a>Comentarios
 
 La clase es una representación del concepto matemático de un conjunto ordenado de valores y los elementos se numeran secuencialmente a partir de cero. La clase se describe como un pseudocontenedor porque es compatible con algunas de las funciones que admiten los contenedores de secuencias de primera clase, como [vector](../standard-library/vector-class.md), pero no con todas ellas. Difiere del vector de clase de plantilla en dos aspectos importantes:
 
-- Define muchas operaciones aritméticas entre los elementos correspondientes de objetos **valarray\<Type>** del mismo tipo y longitud, como *xarr* = cos( *yarr*) + sin( *zarr*).
+- Define muchas operaciones aritméticas entre los elementos correspondientes de `valarray<Type>` objetos del mismo tipo y longitud, como *xarr* = cos ( *yarr*) + sin ( *zarr*).
 
-- Define varias formas interesantes de crear un subscript de un objeto **valarray\<Type>** sobrecargando [operator&#91;&#93;](#op_at).
+- Define una variedad de formas interesantes de subíndice un `valarray<Type>` objeto mediante la sobrecarga de [operador&#91;&#93;](#op_at).
 
-Un objeto de la clase **Type**:
+Un objeto de clase `Type`:
 
 - Tiene un constructor público predeterminado, un destructor, un constructor de copias y un operador de asignación, con un comportamiento convencional.
 
 - Define, en la medida que sean necesarios, los operadores aritméticos y las funciones matemáticas que se definen para los tipos de punto flotante con un comportamiento convencional.
 
-En concreto, no pueden existir diferencias sutiles entre la construcción de la copia y la construcción predeterminada seguida por una asignación. Ninguna de las operaciones en objetos de la clase **Type** puede iniciar excepciones.
+En concreto, no pueden existir diferencias sutiles entre la construcción de la copia y la construcción predeterminada seguida por una asignación. Ninguna de las operaciones en objetos de clase `Type` pueden producir excepciones.
 
 ### <a name="constructors"></a>Constructores
 
@@ -202,17 +202,18 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`count` El número de posiciones de que los elementos son se desplace hacia adelante.
+*count*  
+ El número de posiciones que se van a desplazar hacia adelante los elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una nueva valarray en la que todos los elementos se han movido cíclicamente `count` posiciones hacia la parte delantera de la valarray, a la izquierda con respecto a sus posiciones en la valarray de operando.
+Una nueva valarray en la que todos los elementos se han movido *recuento* posiciones cíclicamente hacia la parte delantera de la valarray, a la izquierda con respecto a sus posiciones en la valarray de operando.
 
 ### <a name="remarks"></a>Comentarios
 
-Un valor positivo de `count` desplaza los elementos cíclicamente a la izquierda `count` posiciones.
+Un valor positivo de *recuento* desplaza los elementos cíclicamente a la izquierda *recuento* coloca.
 
-Un valor negativo de `count` desplaza los elementos cíclicamente a la derecha `count` posiciones.
+Un valor negativo de *recuento* desplaza los elementos cíclicamente a la derecha *recuento* coloca.
 
 ### <a name="example"></a>Ejemplo
 
@@ -301,7 +302,7 @@ El valor máximo de los elementos de la valarray de operando.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro compara valores aplicando **operator\<** u **operador>** entre los pares de elementos de la clase **Type** para lo se deben proporcionar operadores para el elemento **Type**.
+La función miembro compara valores aplicando **operador\<**  o **operador >** entre pares de elementos de la clase `Type`, para qué operadores se deben proporcionar para el elemento `Type`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -353,7 +354,7 @@ El valor mínimo de los elementos de la valarray de operando.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro compara valores aplicando **operator\<** u **operador>** entre los pares de elementos de la clase **Type** para lo se deben proporcionar operadores para el elemento **Type**.
+La función miembro compara valores aplicando **operador\<**  o **operador >** entre pares de elementos de la clase `Type`, para qué operadores se deben proporcionar para el elemento `Type`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -407,7 +408,7 @@ La valarray de valores booleanos que son la negación de los valores de elemento
 
 La operación lógica **NOT** niega los elementos dado que convierte todos los ceros en unos, considera todos los valores distintos de cero como unos y los convierte en ceros. La valarray devuelta de valores booleanos es del mismo tamaño que la valarray de operando.
 
-También hay un [valarray::operator~](#op_dtor)**NOT** bit a bit que niega en el nivel de bits individuales dentro de la representación binaria de los elementos `char` y `int` de una valarray.
+También hay un bit a bit **no**[valarray:: operator ~](#op_dtor) que niega en el nivel de bits individuales dentro de la representación binaria de **char** y **int**  elementos de una valarray.
 
 ### <a name="example"></a>Ejemplo
 
@@ -460,11 +461,12 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` La valarray o el valor de un tipo de elemento idéntico de la valarray de operando que consiste en dividir, uno a uno, la valarray de operando.
+*right*  
+ La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que consiste en dividir, por elemento, la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son el resto de la división por elemento de la valarray de operando por `right`.
+Una valarray cuyos elementos son el resto de la división por elemento de la valarray de operando por *derecha*
 
 ### <a name="example"></a>Ejemplo
 
@@ -524,17 +526,18 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El valor de un tipo de elemento idéntico de la valarray de operando que se pueden combinar, uno a uno, por la operación lógica o valarray **AND** con la valarray de operando.
+*right*  
+ La valarray o el valor de un tipo de elemento idéntico de la valarray de operando que se va a combinar, por elemento, mediante la operación lógica `AND` con la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son el **AND** lógico por elemento de la valarray de operando por `right`.
+Una valarray cuyos elementos son los elementos lógicos `AND` de la valarray de operando por *derecha*
 
 ### <a name="remarks"></a>Comentarios
 
-Una operación bit a bit solo puede usarse para manipular los bits de los tipos de datos `char` y `int`, y sus variantes, y no en **float**, **double**, **longdouble**, `void`, `bool` u otros tipos de datos más complejos.
+Una operación bit a bit solo puede usarse para manipular los bits de **char** y **int** variantes y tipos de datos y no en **float**, **doble**, **longdouble**, **void**, **bool**, u otros tipos de datos más complejos.
 
-La operación AND bit a bit tiene la misma tabla de verdad que el **AND** lógico pero se aplica al tipo de datos en el nivel de los bits individuales. Dados los bits *b*1 y *b*2, *b*1 **AND** *b*2 es **true** si los dos bits son true, **false** si al menos uno es false.
+La operación AND bit a bit tiene la misma tabla de verdad que la operación lógica `AND` pero se aplica al tipo de datos en el nivel de los bits individuales. Dados los bits *b*1 y *b*2, *b*1 `AND` *b*2 es **true** si ambos bits son true; **false** si al menos uno es false.
 
 ### <a name="example"></a>Ejemplo
 
@@ -594,11 +597,12 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El valor que indica la cantidad de desplazamiento a la derecha o valarray cuyos elementos indican la cantidad de elementos de desplazamiento a la derecha.
+*right*  
+ El valor que indica la cantidad de desplazamiento a la derecha o la valarray cuyos elementos indican la cantidad de desplazamiento a la derecha por elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos se han desplazado a la derecha la cantidad especificada en `right`.
+Una valarray cuyos elementos se han desplazado a la derecha la cantidad especificada en *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -662,11 +666,12 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El valor que indica la cantidad de desplazamiento a la izquierda o valarray cuyos elementos indican la cantidad de elementos de desplazamiento a la izquierda.
+*right*  
+ El valor que indica la cantidad de desplazamiento a la izquierda o la valarray cuyos elementos indican la cantidad de desplazamiento a la izquierda por elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos se han desplazado a la izquierda la cantidad especificada en `right`.
+Una valarray cuyos elementos se ha desplazado izquierda la cantidad especificada en *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -731,11 +736,12 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` La valarray o el valor de un tipo de elemento idéntico de la valarray de operando que consiste en multiplicar, uno a uno, la valarray de operando.
+*right*  
+ La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que va a multiplicar, por elemento, la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son el producto de elementos de la valarray de operando y `right`.
+Una valarray cuyos elementos son el producto por elemento de la valarray de operando y *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -846,11 +852,12 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` La valarray o el valor de un tipo de elemento idéntico de la valarray de operando que va a agregarse, uno a uno, a la valarray de operando.
+*right*  
+ La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a sumar, por elemento, a la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son la suma de elementos de la valarray de operando y `right`.
+Una valarray cuyos elementos son la suma por elemento de la valarray de operando y *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -961,11 +968,12 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` La valarray o el valor de un tipo de elemento idéntico de la valarray de operando que se va a restar, uno a uno, de la valarray de operando.
+*right*  
+ La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a restar, por elemento, de la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son la diferencia de elementos de la valarray de operando y `right`.
+Una valarray cuyos elementos son la diferencia por elemento de la valarray de operando y *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1025,11 +1033,12 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` La valarray o el valor de un tipo de elemento idéntico de la valarray de operando que va a dividirse, uno a uno, en la valarray de operando.
+*right*  
+ La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a dividir, por elemento, en la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son el cociente de elementos de la valarray de operando dividido por `right`.
+Una valarray cuyos elementos son el cociente por elemento de la valarray de operando dividida por *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1099,25 +1108,31 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` La valarray que se copiará en la valarray de operando.
+*right*  
+ La valarray que se va a copiar en la valarray de operando.
 
-`val` El valor que se asignará a los elementos de la valarray de operando.
+*Val*  
+ El valor que se va a asignar a los elementos de la valarray de operando.
 
-`_Slicearray` Slice_array que se copiará en la valarray de operando.
+*_Slicearray*  
+ La slice_array que se va a copiar en la valarray de operando.
 
-`_Gslicearray` Gslice_array que se copiará en la valarray de operando.
+*_Gslicearray*  
+ La gslice_array que se va a copiar en la valarray de operando.
 
-`_Maskarray` Mask_array se copiará en la valarray de operando.
+*_Maskarray*  
+ La mask_array que se va a copiar en la valarray de operando.
 
-`_Indarray` Indirect_array que se copiará en la valarray de operando.
+*_Indarray*  
+ La indirect_array que se va a copiar en la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El primer operador miembro reemplaza la secuencia controlada por una copia de la secuencia controlada mediante `right`.
+El primer operador miembro reemplaza la secuencia controlada por una copia de la secuencia controlada por *derecho*.
 
 El segundo operador miembro es igual que el primero, pero con un [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-El tercer operador miembro reemplaza cada elemento de la secuencia controlada por una copia de `val`.
+El tercer operador miembro reemplaza cada elemento de la secuencia controlada por una copia de *val*.
 
 Los operadores miembro restantes reemplazan los elementos de la secuencia controlada seleccionados por sus argumentos, que se generan únicamente por el [operator&#91;&#93;](#op_at).
 
@@ -1211,15 +1226,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`_Off` El índice del elemento que se asignará un valor.
+*_Off*  
+ El índice del elemento al que se va a asignar un valor.
 
-`_Slicearray` Slice_array de una valarray que especifica un subconjunto para ser seleccionada o se devuelva a una nueva valarray.
+*_Slicearray*  
+ Una slice_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
 
-`_Gslicearray` Gslice_array de una valarray que especifica un subconjunto para ser seleccionada o se devuelva a una nueva valarray.
+*_Gslicearray*  
+ Una gslice_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
 
-*_Boolarray* un bool_array de una valarray que especifica un subconjunto para ser seleccionada o se devuelva a una nueva valarray.
+*_Boolarray*  
+ Una bool_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
 
-`_Indarray` Un indirect_array de una valarray que especifica un subconjunto para ser seleccionada o se devuelva a una nueva valarray.
+*_Indarray*  
+ Una indirect_array de una valarray que especifica un subconjunto que se va a seleccionar o devolver a una nueva valarray.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1247,11 +1267,12 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El valor de un tipo de elemento idéntico de la valarray de operando que se pueden combinar, uno a uno, por la lógica exclusiva o valarray **XOR** con la valarray de operando.
+*right*  
+ La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a combinar, por elemento, mediante el **XOR** lógico exclusivo con la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son el, exclusivo lógico **XOR** de la valarray de operando y `right`.
+Una valarray cuyos elementos son el lógico exclusivo por elemento, **XOR** de la valarray de operando y *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1319,15 +1340,16 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El valor de un tipo de elemento idéntico de la valarray de operando que se pueden combinar, uno a uno, por bit a bit o valarray `OR` con la valarray de operando.
+*right*  
+ La valarray o el valor de un tipo de elemento idéntico al de la valarray de operando que se va a combinar, por elemento, mediante el `OR` bit a bit con la valarray de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una valarray cuyos elementos son los elementos bit a bit `OR` de la valarray de operando por `right`.
+Una valarray cuyos elementos son los elementos de bit a bit `OR` de la valarray de operando por *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
-Una operación bit a bit solo puede usarse para manipular los bits de los tipos de datos `char` y `int`, y sus variantes, y no en **float**, **double**, **longdouble**, `void`, `bool` u otros tipos de datos más complejos.
+Una operación bit a bit solo puede usarse para manipular los bits de **char** y **int** variantes y tipos de datos y no en **float**, **doble**, **longdouble**, **void**, **bool**, u otros tipos de datos más complejos.
 
 El `OR` bit a bit tiene la misma tabla de verdad que el `OR` lógico pero se aplica al tipo de datos en el nivel de los bits individuales. Dados los bits *b*1 y *b*2, *b*1 `OR` *b*2 es **true** si al menos uno de los bits es true o **false** si los dos bits son false.
 
@@ -1386,7 +1408,7 @@ The element-by-element result of the logical OR
 
 ## <a name="op_dtor"></a>  valarray::operator~
 
-Un operador unario que obtiene los valores **NOT** bit a bit de cada elemento de una valarray.
+Un operador unario que obtiene el bit a bit `NOT` valores de cada elemento de una valarray.
 
 ```cpp
 valarray<Type> operator~() const;
@@ -1394,13 +1416,13 @@ valarray<Type> operator~() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La valarray de valores booleanos que son el **NOT** bit a bit de los valores de elemento de la valarray de operando.
+La valarray de valores booleanos que son el bit a bit `NOT` de los valores de elemento de la valarray de operando.
 
 ### <a name="remarks"></a>Comentarios
 
-Una operación bit a bit solo puede usarse para manipular los bits de los tipos de datos `char` y `int`, y sus variantes, y no en **float**, **double**, **longdouble**, `void`, `bool` u otros tipos de datos más complejos.
+Una operación bit a bit solo puede usarse para manipular los bits de **char** y **int** variantes y tipos de datos y no en **float**, **doble**, **longdouble**, **void**, **bool** u otros tipos de datos más complejos.
 
-El **NOT** bit a bit tiene la misma tabla de verdad que el **NOT** lógico pero se aplica al tipo de datos en el nivel de los bits individuales. Dado el bit *b*, ~ *b* es true si *b* es false y es false si *b* es true. El [operador!](#op_not)**NOT** lógico se aplica en el nivel de elemento, contando todos los valores distintos de cero como **true**, y el resultado es una valarray de valores booleanos. El **operador~ NOT** bit a bit, por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.
+El `NOT` bit a bit tiene la misma tabla de verdad que el `NOT` lógico pero se aplica al tipo de datos en el nivel de los bits individuales. Dado el bit *b*, ~ *b* es true si *b* es false y es false si *b* es true. El [operador!](#op_not)**NOT** lógico se aplica en el nivel de elemento, contando todos los valores distintos de cero como **true**, y el resultado es una valarray de valores booleanos. Bit a bit `NOToperator~`, por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1493,9 +1515,11 @@ void resize(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Newsize` El número de elementos de la valarray cuyo tamaño ha cambiado.
+*_Newsize*  
+ Número de elementos de la valarray cuyo tamaño se cambió.
 
-`val` El valor que se asignará a los elementos de la valarray cuyo tamaño ha cambiado.
+*Val*  
+ Valor que se asignará a los elementos de la valarray cuyo tamaño se cambió.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1562,17 +1586,18 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`count` El número de posiciones de que los elementos son se desplace hacia adelante.
+*count*  
+ El número de posiciones que se van a desplazar hacia adelante los elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una nueva valarray en la que todos los elementos se han movido `count` posiciones hacia la parte delantera de la valarray, a la izquierda con respecto a sus posiciones en la valarray de operando.
+Una nueva valarray en la que todos los elementos se han movido *recuento* posiciones hacia la parte delantera de la valarray, a la izquierda con respecto a sus posiciones en la valarray de operando.
 
 ### <a name="remarks"></a>Comentarios
 
-Un valor positivo de `count` desplaza los elementos a la izquierda `count` posiciones, con relleno cero.
+Un valor positivo de *recuento* desplaza los elementos a la izquierda *recuento* posiciones, con relleno cero.
 
-Un valor positivo de `count` desplaza los elementos a la derecha `count` posiciones, con relleno cero.
+Un valor negativo de *recuento* desplaza los elementos a la derecha *recuento* posiciones, con relleno cero.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1716,7 +1741,7 @@ La suma de los elementos de la valarray de operando.
 
 ### <a name="remarks"></a>Comentarios
 
-Si la longitud es mayor que uno, la función miembro agrega valores a la suma aplicando `operator+=` entre los pares de elementos de la clase **Type**, cuyo operador, por tanto, debe proporcionarse para elementos de tipo **Type**.
+Si la longitud es mayor que uno, la función miembro agrega valores a la suma aplicando `operator+=` entre pares de elementos de la clase `Type`, cuyo operador, por lo tanto, debe proporcionarse para elementos de tipo `Type`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1763,11 +1788,11 @@ void swap(valarray& right);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`right`|`valarray` que proporciona los elementos que se van a intercambiar.|
+|*right*|`valarray` que proporciona los elementos que se van a intercambiar.|
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro intercambia las secuencias controladas entre `*this` y `right`. Lo hace en tiempo constante, no inicia ninguna excepción y no invalida ninguna referencia, puntero o iterador que designen elementos en las dos secuencias controladas.
+La función miembro intercambia las secuencias controladas entre `*this` y *derecho*. Lo hace en tiempo constante, no inicia ninguna excepción y no invalida ninguna referencia, puntero o iterador que designen elementos en las dos secuencias controladas.
 
 ## <a name="valarray"></a>  valarray::valarray
 
@@ -1811,31 +1836,40 @@ valarray(
 
 ### <a name="parameters"></a>Parámetros
 
-`Count` El número de elementos que se va a estar en la valarray.
+*Recuento*  
+ Número de elementos que va a haber en la valarray.
 
-`Val` El valor que se utiliza para inicializar los elementos de la valarray.
+*Val*  
+ Valor que se utilizará al inicializar los elementos de la valarray.
 
-`Ptr` Puntero a los valores que se usarán para inicializar los elementos de la valarray.
+*PTR*  
+ Puntero a los valores que se usarán para inicializar los elementos de la valarray.
 
-`Right` Valarray existente para inicializar la nueva valarray.
+*Derecha*  
+ Valarray existente para inicializar la nueva valarray.
 
-`SliceArray` Slice_array cuyos valores de elemento que se van a utilizar al inicializar los elementos de la valarray que se está construyendo.
+*SliceArray*  
+ slice_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
 
-`GsliceArray` Gslice_array cuyos valores de elemento que se van a utilizar al inicializar los elementos de la valarray que se está construyendo.
+*GsliceArray*  
+ gslice_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
 
-`MaskArray` Mask_array cuyos valores de elemento que se van a utilizar al inicializar los elementos de la valarray que se está construyendo.
+*MaskArray*  
+ mask_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
 
-`IndArray` Indirect_array cuyos valores de elemento que se van a utilizar al inicializar los elementos de la valarray que se está construyendo.
+*IndArray*  
+ indirect_array cuyos valores de elemento se van a utilizar al inicializar los elementos de la valarray que se va a construir.
 
-`IList` Initializer_list que contiene los elementos que se va a copiar.
+*IList*  
+ initializer_list que contiene los elementos que se van a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor (predeterminado) inicializa el objeto en una matriz vacía. Cada uno de los tres constructores siguientes inicializan el objeto en una matriz de elementos `Count` de la manera siguiente:
+El primer constructor (predeterminado) inicializa el objeto en una matriz vacía. Los siguientes tres constructores inicializan el objeto en una matriz de *recuento* elementos como sigue:
 
 - En el caso de `valarray(size_t Count)` explícito, cada elemento se inicializa con el constructor predeterminado.
 
-- En `valarray(const Type& Val, Count)`, cada elemento se inicializa con `Val`.
+- Para `valarray(const Type& Val, Count)`, cada elemento se inicializa con *Val*.
 
 - En `valarray(const Type* Ptr, Count)`, el elemento situado en la posición `I` se inicializa con `Ptr`[ `I`].
 
@@ -1903,7 +1937,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **Type**.
+El tipo es un sinónimo del parámetro de plantilla `Type`.
 
 ### <a name="example"></a>Ejemplo
 

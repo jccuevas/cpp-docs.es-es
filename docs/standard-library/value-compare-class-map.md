@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: effa754f50f8c092cef727969a0f4036e765f888
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46f8d00877aa4147e4b3e4ec2a6a23b70d8154c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856051"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965853"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare (Clase) (&lt;asignación&gt;)
 
@@ -45,7 +45,7 @@ protected:
 
 ## <a name="remarks"></a>Comentarios
 
-El criterio de comparación proporcionado por `value_compare` entre **value_types** de elementos enteros incluidos en una asignación se induce de una comparación entre las claves de los respectivos elementos mediante la construcción de la clase auxiliar. El operador de la función miembro usa el objeto **comp** de tipo `key_compare` almacenado en el objeto de función proporcionado por `value_compare` para comparar los componentes de clave de ordenación de dos elementos.
+El criterio de comparación proporcionado por `value_compare` entre `value_types` de elementos enteros incluidos en una asignación se induce de una comparación entre las claves de los respectivos elementos mediante la construcción de la clase auxiliar. El operador de la función miembro usa el objeto `comp` typu `key_compare` almacenados en el objeto de función proporcionado por `value_compare` para comparar los componentes clave de ordenación de dos elementos.
 
 Para conjuntos y conjuntos múltiples, que son simples contenedores donde los valores de clave son idénticos a los valores de elemento, `value_compare` es equivalente a `key_compare`. No lo es para asignaciones y asignaciones múltiples, dado que el valor de los elementos de tipo `pair` no es idéntico al valor de clave del elemento.
 

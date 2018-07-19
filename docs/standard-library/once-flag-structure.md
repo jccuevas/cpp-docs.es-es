@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a8d28f19e32988bfa179642a87e880413bb0ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4275b99ada0dbfe1c974446d21862f7fa73aab38
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852343"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964501"
 ---
 # <a name="onceflag-structure"></a>once_flag (Estructura)
 
-Representa un `struct` que se usa con la función de plantilla [call_once](../standard-library/mutex-functions.md#call_once) para asegurarse de que solo se llame una vez al código de inicialización, incluso ante la presencia de varios subprocesos de ejecución.
+Representa un **struct** que se utiliza con la función de plantilla [call_once](../standard-library/mutex-functions.md#call_once) para asegurarse de que la inicialización se llama al código una sola vez, incluso en presencia de varios subprocesos de ejecución.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,7 +31,7 @@ struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); 
 
 ## <a name="remarks"></a>Comentarios
 
-El `once_flag` `struct` tiene solo un constructor predeterminado.
+El `once_flag` **struct** solo tiene un constructor predeterminado.
 
 Los objetos de tipo `once_flag` pueden crearse, pero no pueden copiarse.
 

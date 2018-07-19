@@ -1,5 +1,5 @@
 ---
-title: Crear un proyecto ATL | Documentos de Microsoft
+title: Crear un proyecto ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37badfba693357cb14b34e0f26f717b2ebe8f024
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61302df754c0657fb201d555c6e7491ba1414f7f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359008"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962948"
 ---
 # <a name="creating-an-atl-project"></a>Crear un proyecto ATL
-La manera más fácil de crear un proyecto ATL es utilizar el Asistente para proyectos ATL, que se encuentra en la carpeta de proyectos de Win32 de la **cuadro de diálogo nuevo proyecto**.  
+La manera más fácil de crear un proyecto ATL es usar el Asistente para proyectos ATL, ubicado en la carpeta de proyectos de Win32 de la **cuadro de diálogo nuevo proyecto**.  
   
 ### <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>Para crear un proyecto ATL mediante el Asistente para proyectos ATL  
   
-1.  Siga las instrucciones que aparecen en el tema [crear un proyecto con un Asistente para aplicaciones de Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Siga las instrucciones del tema [crear un proyecto con un Asistente para aplicaciones de Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
 2.  Seleccione el **proyecto ATL** icono en el panel Plantillas para abrir el Asistente para proyectos ATL.  
   
@@ -42,10 +42,9 @@ La manera más fácil de crear un proyecto ATL es utilizar el Asistente para pro
   
 4.  Haga clic en **finalizar** para cerrar el asistente y abrir el proyecto nuevo en el entorno de desarrollo.  
   
- Una vez creado el proyecto, puede ver los archivos creados en **el Explorador de soluciones**. Para obtener más información sobre los archivos que crea el asistente para el proyecto, vea el archivo Readme.txt generado por el proyecto. Para obtener más información acerca de los tipos de archivo, consulte [tipos de archivo creados para proyectos de Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md). Para obtener más información sobre las configuraciones para el nuevo proyecto ATL y cómo cambiarlas, consulte [configuraciones del proyecto ATL predeterminado](../../atl/reference/default-atl-project-configurations.md).  
+ Una vez creado el proyecto, puede ver los archivos creados en **el Explorador de soluciones**. Para obtener más información sobre los archivos que crea el asistente para el proyecto, vea el archivo Readme.txt generado por el proyecto. Para obtener más información acerca de los tipos de archivo, consulte [tipos de archivo creados para proyectos de Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md). Para obtener más información sobre las configuraciones para el nuevo proyecto ATL y cómo cambiarlos, consulte [configuraciones de proyecto ATL predeterminadas](../../atl/reference/default-atl-project-configurations.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Agregar funcionalidad con los asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Páginas de propiedades](../../ide/property-pages-visual-cpp.md)   
- [Implementación de aplicaciones](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

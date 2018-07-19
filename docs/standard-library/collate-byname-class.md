@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f619554db0a85ee8aafbdb8792d8fe233cc392a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843020"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964917"
 ---
 # <a name="collatebyname-class"></a>collate_byname (Clase)
 
@@ -49,13 +49,13 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-`_Locname` Una configuración regional con nombre.
+*_Locname* una configuración regional con nombre.
 
-`_Refs` Un recuento de referencia inicial.
+*_Refs* un recuento de referencias inicial.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un objeto que puede actuar como una [faceta de configuración regional](../standard-library/locale-class.md#facet_class) de tipo [collate](../standard-library/collate-class.md#collate)\<CharType>. Su comportamiento viene determinado por la configuración regional [con nombre](../standard-library/locale-class.md#name) `_Locname`. Cada constructor inicializa su objeto base con [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
+La clase de plantilla describe un objeto que puede actuar como una [faceta de configuración regional](../standard-library/locale-class.md#facet_class) de tipo [collate](../standard-library/collate-class.md#collate)\<CharType>. Su comportamiento viene determinado por la [denominado](../standard-library/locale-class.md#name) configuración regional *_Locname*. Cada constructor inicializa su objeto base con [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Requisitos
 

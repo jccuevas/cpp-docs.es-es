@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e366f9b0cf92aed9c61609642f48f0e5cc9530d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 956a18a477ca5a713f951da31ca276bc4e379727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858775"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964137"
 ---
 # <a name="syncperthread-class"></a>sync_per_thread (Clase)
 
@@ -44,7 +44,7 @@ class sync_per_thread
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Cache`|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Caché*|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`count`|El número de elementos de la matriz que se van a asignar.|
+|*count*|El número de elementos de la matriz que se van a asignar.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -94,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`ptr`|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
-|`count`|El número de objetos que se van a desasignar del almacenamiento.|
+|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -113,12 +113,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Cache`|El objeto de caché del filtro de sincronización.|
-|`Other`|El objeto de caché para comparar la igualdad.|
+|*Caché*|El objeto de caché del filtro de sincronización.|
+|*Otros problemas*|El objeto de caché para comparar la igualdad.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-`false` si no se asignó ningún objeto de caché para este objeto o para `Other` en el subproceso actual. De lo contrario, devuelve el resultado de aplicar `operator==` a los dos objetos de caché.
+**false** si no se ha asignado ningún objeto de caché para este objeto o *otros* en el subproceso actual. De lo contrario, devuelve el resultado de aplicar `operator==` a los dos objetos de caché.
 
 ### <a name="remarks"></a>Comentarios
 

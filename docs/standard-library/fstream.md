@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2fa3ef6113add6bcf72f85f74b8722033cb8d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6b716248c6fe9d0734cd580800c9254cf01f2a17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846615"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962879"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
@@ -38,23 +38,23 @@ Define varias clases que admiten operaciones de iostreams en secuencias almacena
 
 |Nombre de tipo|Descripción|
 |-|-|
-|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|Un tipo `basic_filebuf` especializado en parámetros de plantilla `char`.|
-|[fstream](../standard-library/fstream-typedefs.md#fstream)|Un tipo `basic_fstream` especializado en parámetros de plantilla `char`.|
-|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|Un tipo `basic_ifstream` especializado en parámetros de plantilla `char`.|
-|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|Un tipo `basic_ofstream` especializado en parámetros de plantilla `char`.|
-|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|Un tipo `basic_fstream` especializado en parámetros de plantilla `wchar_t`.|
-|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|Un tipo `basic_ifstream` especializado en parámetros de plantilla `wchar_t`.|
-|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|Un tipo `basic_ofstream` especializado en parámetros de plantilla `wchar_t`.|
-|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|Un tipo `basic_filebuf` especializado en parámetros de plantilla `wchar_t`.|
+|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|Un tipo `basic_filebuf` especializado en **char** parámetros de plantilla.|
+|[fstream](../standard-library/fstream-typedefs.md#fstream)|Un tipo `basic_fstream` especializado en **char** parámetros de plantilla.|
+|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|Un tipo `basic_ifstream` especializado en **char** parámetros de plantilla.|
+|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|Un tipo `basic_ofstream` especializado en **char** parámetros de plantilla.|
+|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|Un tipo `basic_fstream` especializado en **wchar_t** parámetros de plantilla.|
+|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|Un tipo `basic_ifstream` especializado en **wchar_t** parámetros de plantilla.|
+|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|Un tipo `basic_ofstream` especializado en **wchar_t** parámetros de plantilla.|
+|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|Un tipo `basic_filebuf` especializado en **wchar_t** parámetros de plantilla.|
 
 ### <a name="classes"></a>Clases
 
 |Clase|Descripción|
 |-|-|
-|[basic_filebuf](../standard-library/basic-filebuf-class.md)|La clase de plantilla describe un búfer de flujo que controla la transmisión de elementos de tipo **Elem**, cuyos rasgos de caracteres están determinados por la clase **Tr**, a y desde una secuencia de elementos almacenados en un archivo externo.|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|La clase de plantilla describe un objeto que controla la inserción y la extracción de elementos y objetos codificados de un búfer de flujo de la clase [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, con elementos de tipo **Elem**, cuyos rasgos de caracteres están determinados por la clase **Tr**.|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|La clase de plantilla describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de flujo de la clase [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, con elementos de tipo **Elem**, cuyos rasgos de caracteres están determinados por la clase **Tr**.|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|La clase de plantilla describe un objeto que controla la inserción de elementos y objetos codificados en un búfer de flujo de la clase [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, con elementos de tipo **Elem**, cuyos rasgos de caracteres están determinados por la clase **Tr**.|
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|La clase de plantilla describe un búfer de secuencia que controla la transmisión de elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`, a y desde una secuencia de elementos almacenados en un archivo externo.|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|La clase de plantilla describe un objeto que controla la inserción y extracción de elementos y objetos codificados usando un búfer de secuencia de clase [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**,  **TR**>, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`.|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|La clase de plantilla describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de secuencia de clase [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`.|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|La clase de plantilla describe un objeto que controla la inserción de elementos y objetos codificados en un búfer de secuencia de clase [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`.|
 
 ## <a name="see-also"></a>Vea también
 
