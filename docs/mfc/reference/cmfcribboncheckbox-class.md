@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonCheckBox | Documentos de Microsoft
+title: CMFCRibbonCheckBox (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,14 +34,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042061"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027185"
 ---
-# <a name="cmfcribboncheckbox-class"></a>Clase CMFCRibbonCheckBox
+# <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox (clase)
 La clase `CMFCRibbonCheckBox` implementa una casilla que se puede agregar a un menú emergente, a la barra de herramientas de acceso rápido o al panel de cinta de opciones.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -77,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-donde *nID* es el identificador de comando de casilla de verificación y *lpszText* es la etiqueta de texto de la casilla de verificación.  
+donde *nID* es el identificador de comando de la casilla de verificación y *lpszText* es la etiqueta de texto de la casilla de verificación.  
   
  Puede agregar una casilla a un panel de cinta de opciones mediante [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
@@ -104,7 +104,7 @@ CMFCRibbonCheckBox(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *nID*  
- Especifica el identificador del comando.  
+ Especifica el identificador de comando.  
   
  [in] *lpszText*  
  Especifica la etiqueta de texto.  
@@ -126,7 +126,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pDC*  
- Puntero a la `CDC` asociado con la casilla de verificación.  
+ Puntero al objeto CDC asociado con la casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un `CSize` objeto que contiene el tamaño compacto de la casilla de verificación.  
@@ -143,7 +143,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pDC*  
- Puntero a la `CDC` asociados con esta casilla de verificación.  
+ Puntero a CDC asociado con esta casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un `CSize` objeto que contiene el tamaño de la casilla de verificación intermedio.  
@@ -152,7 +152,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
  Si no se reemplaza, calcula el tamaño intermedio como el tamaño de la casilla de verificación predeterminado ( `AFX_CHECK_BOX_DEFAULT_SIZE`) más el tamaño del texto, además de los márgenes.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize  
- Obtiene el tamaño normal de la casilla de verificación.  
+ Obtiene el tamaño de la casilla de verificación normal.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -160,28 +160,28 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pDC*  
- Puntero a la `CDC` objeto asociado con esta casilla de verificación.  
+ Puntero al objeto CDC asociado con esta casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve un `CSize` objeto que contiene el tamaño normal de la casilla de verificación.  
+ Devuelve un `CSize` objeto que contiene el tamaño de la casilla de verificación normal.  
   
 ### <a name="remarks"></a>Comentarios  
  Si no se reemplaza, devuelve el tamaño de la casilla de verificación intermedio.  
   
 ##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage  
- Indica si hay una imagen de información sobre herramientas asociada a la casilla de verificación.  
+ Indica si hay una imagen de información sobre herramientas asociada con la casilla de verificación.  
   
 ```  
 virtual BOOL IsDrawTooltipImage() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve `TRUE` si hay una imagen de información sobre herramientas asociada a la casilla de verificación, o `FALSE` si no es así.  
+ Devuelve TRUE si hay una imagen de información sobre herramientas asociada con la casilla de verificación, o FALSE si no lo es.  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw  
- Lo llama el marco de trabajo para dibujar la casilla de verificación Usar un contexto de dispositivo especificado.  
+ Lo llama el marco de trabajo para dibujar la casilla de verificación mediante un contexto de dispositivo especificado.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -189,12 +189,12 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pDC*  
- Puntero a la `CDC` en el que se va a dibujar la casilla de verificación.  
+ Puntero al objeto CDC en la que se va a dibujar la casilla de verificación.  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
- Lo llama el marco de trabajo para dibujar una imagen del menú de la casilla.  
+ Lo llama el marco de trabajo para dibujar una imagen del menú de la casilla de verificación.  
   
 ```  
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -202,16 +202,16 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *CDC**  
- Puntero a la `CDC` asociado con la casilla de verificación.  
+ Puntero al objeto CDC asociado con la casilla de verificación.  
   
  [in] *CRect*  
  Un `CRect` objeto que especifica el rectángulo en el que se va a dibujar la imagen del menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve `TRUE` si se dibuja la imagen, o `FALSE` si no es así.  
+ Devuelve TRUE si se dibuja la imagen, o FALSE en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- Si no se reemplaza, devuelve `FALSE`.  
+ Si no se reemplaza, devuelve FALSE.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
  Lo llama el marco de trabajo para dibujar la casilla de verificación en un cuadro de lista de comandos.  
@@ -234,21 +234,21 @@ virtual void OnDrawOnList(
  El texto para mostrar.  
   
  [in] *nTextOffset*  
- La distancia, en píxeles, del lado izquierdo del cuadro de lista para el texto de presentación.  
+ La distancia, en píxeles, del lado izquierdo del cuadro de lista para mostrar el texto.  
   
  [in] *rect*  
- El rectángulo de presentación de la casilla.  
+ El rectángulo de presentación de la casilla de verificación.  
   
  [in] *bIsSelected*  
- `TRUE` Si se selecciona la casilla de verificación, o `FALSE` si no es así.  
+ TRUE si la casilla de verificación está seleccionada, o FALSE si no.  
   
  [in] *bHighlighted*  
- `TRUE` Si la casilla de verificación está resaltado, o `FALSE` si no es así.  
+ TRUE si la casilla de verificación está resaltado o FALSE si no.  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonCheckBox::SetACCData  
- Establece los datos de accesibilidad de la casilla.  
+ Establece los datos de accesibilidad para la casilla de verificación.  
   
 ```  
 virtual BOOL SetACCData(
@@ -261,13 +261,13 @@ virtual BOOL SetACCData(
  La ventana primaria de la casilla de verificación.  
   
  *data*  
- Los datos de accesibilidad de la casilla.  
+ Los datos de accesibilidad para la casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Siempre devuelve `TRUE`.  
+ Siempre devuelve TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
- De forma predeterminada este método establece los datos de accesibilidad para la casilla de verificación y siempre devuelve `TRUE`. Invalide este método para establecer los datos de accesibilidad y devolver un valor que indique éxito o error.  
+ De forma predeterminada, este método establece los datos de accesibilidad para la casilla de verificación y siempre devuelve TRUE. Invalide este método para establecer los datos de accesibilidad y devolver un valor que indique éxito o error.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

@@ -1,5 +1,5 @@
 ---
-title: Expresiones constantes de C++ | Documentos de Microsoft
+title: Expresiones constantes de C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d71427c7176d8448d861c6dd7602b6bc91941737
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fef56154f34f645b279ffccd99915d366388cb06
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026707"
 ---
 # <a name="c-constant-expressions"></a>Expresiones constantes de C++
-A *constante* valor es uno que no cambia. C++ proporciona dos palabras clave para que pueda expresar la intención de que un objeto no está pensado para ser modificado y aplicar dicha intención.  
+Un *constante* valor es uno que no cambia. C++ proporciona dos palabras clave para que pueda expresar la intención de que un objeto no está pensado para ser modificado y aplicar dicha intención.  
   
- C++ requiere expresiones constantes —expresiones que se evalúan como una constante— para las declaraciones de:  
+C++ requiere expresiones constantes —expresiones que se evalúan como una constante— para las declaraciones de:  
   
--   Límites de matrices  
+ -   Límites de matrices  
+      
+ -   Selectores en instrucciones case  
+      
+ -   Especificación de longitud de campo de bits  
+      
+ -   Inicializadores de enumeración  
   
--   Selectores en instrucciones case  
+Los únicos operandos que son válidos en expresiones constantes son:  
   
--   Especificación de longitud de campo de bits  
+ -   Literales  
+      
+ -   Constantes de enumeración  
+      
+ -   Valores declarados como const que se inicializan con expresiones constantes  
+      
+ -   **sizeof** expresiones  
   
--   Inicializadores de enumeración  
+Las constantes no íntegras deben convertirse (explícita o implícitamente) en tipos enteros para ser válidos en una expresión constante. Por consiguiente, el código siguiente es legal.  
   
- Los únicos operandos que son válidos en expresiones constantes son:  
-  
--   Literales  
-  
--   Constantes de enumeración  
-  
--   Valores declarados como const que se inicializan con expresiones constantes  
-  
--   Expresiones `sizeof`  
-  
- Las constantes no íntegras deben convertirse (explícita o implícitamente) en tipos enteros para ser válidos en una expresión constante. Por consiguiente, el código siguiente es legal.  
-  
-```  
+```cpp 
 const double Size = 11.0;  
 char chArray[(int)Size];  
 ```  
   
- Las conversiones explícitas a tipos enteros son legales en expresiones constantes; el resto de tipos y los tipos derivados no son válidos excepto cuando se utilizan como operandos para el operador `sizeof`.  
+Las conversiones explícitas a tipos enteros son legales en expresiones constantes; el resto de tipos y los tipos derivados no son válidos excepto cuando se utilizan como operandos para el operador `sizeof`.  
   
- El operador de coma y los operadores de asignación no se pueden utilizar en expresiones constantes.  
+El operador de coma y los operadores de asignación no se pueden utilizar en expresiones constantes.  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de expresiones](../cpp/types-of-expressions.md)
