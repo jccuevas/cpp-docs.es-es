@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8478490914a6f9049cd54ec78c8de8a1e519f36f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845679"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960422"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist (Clase)
 
@@ -42,14 +42,14 @@ class cache_freelist
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Sz`|El número de elementos de la matriz que se van a asignar.|
-|`Max`|La clase máxima que representa el tamaño máximo de la lista libre. Esta puede ser [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*sz*|El número de elementos de la matriz que se van a asignar.|
+|*Max*|La clase máxima que representa el tamaño máximo de la lista libre. Esta puede ser [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla cache_freelist mantiene una lista libre de bloques de memoria de tamaño `Sz`. Cuando la lista libre está llena, usa `operator delete` para desasignar bloques de memoria. Cuando la lista libre está vacía, usa `operator new` para asignar nuevos bloques de memoria. El tamaño máximo de la lista libre viene determinado por la clase máxima que se ha pasado en el parámetro `Max`.
+La clase de plantilla cache_freelist mantiene una lista libre de bloques de memoria de tamaño *Sz*. Cuando la lista libre está llena utiliza **operador delete** desasignar memoria bloquea. Cuando la lista libre está vacía, usa **operador new** para asignar nuevos bloques de memoria. El tamaño máximo de la lista libre viene determinada por la clase clase máxima pasada en el *Max* parámetro.
 
-Cada bloque de memoria contiene `Sz` bytes de memoria utilizable y los datos que `operator new` y `operator delete` requieren.
+Cada bloque de memoria contiene *Sz* bytes de memoria utilizable y los datos que **new (operador)** y **operador delete** requieren.
 
 ### <a name="constructors"></a>Constructores
 
@@ -82,7 +82,7 @@ void *allocate(std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`count`|El número de elementos de la matriz que se van a asignar.|
+|*count*|El número de elementos de la matriz que se van a asignar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -112,8 +112,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`ptr`|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
-|`count`|El número de objetos que se van a desasignar del almacenamiento.|
+|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
 ### <a name="remarks"></a>Comentarios
 

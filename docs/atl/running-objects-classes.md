@@ -1,5 +1,5 @@
 ---
-title: Ejecutar objetos de clases (ATL) | Documentos de Microsoft
+title: Las clases (ATL) de objetos de ejecución | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8541d0732813ebd2b86e9a1941dc262b0ba1c20e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fcbc0820f98052ee29c489ca9cb556e1c913d07c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358943"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958577"
 ---
 # <a name="running-objects-classes"></a>Ejecución de las clases de objetos
-La clase siguiente proporciona compatibilidad para ejecutar objetos:  
+La clase siguiente proporciona compatibilidad para la ejecución de objetos:  
   
--   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) determina si un objeto se está ejecutando, obliga a que se ejecute, o se bloquea en el estado de ejecución.  
+-   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) determina si un objeto se está ejecutando, obliga a que se ejecute, o lo bloquea al estado en ejecución.  
   
 ## <a name="related-articles"></a>Artículos relacionados  
- [Tutorial ATL](../atl/active-template-library-atl-tutorial.md)  
+ [Tutorial de ATL](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../atl/atl-class-overview.md)

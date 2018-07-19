@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26164c391689c8fb7f24f49464e141f74a3058ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847847"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959941"
 ---
 # <a name="function-class"></a>function (Clase)
 
@@ -89,9 +89,9 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-`Fty` El tipo de función que va a contener.
+*Fty* para ajustar el tipo de función.
 
-`Ax` La función de asignador.
+*AX* la función de asignador.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -164,15 +164,15 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parámetros
 
-`_Func` Un objeto que se puede llamar.
+*_Func* un objeto que se puede llamar.
 
-`_Fnref` Un contenedor de referencia que contiene un objeto que se puede llamar.
+*_Fnref* un contenedor de referencia que contiene un objeto que se puede llamar.
 
-`Ax` Un objeto de asignador.
+*AX* un objeto de asignador.
 
 ### <a name="remarks"></a>Comentarios
 
-Las funciones miembro reemplazan al `callable object` mantenido por `*this` por el objeto al que se puede llamar pasado como el `operand`. Ambas asignan almacenamiento con el objeto de asignador `Ax`.
+Las funciones miembro reemplazan al `callable object` mantenido por `*this` por el objeto al que se puede llamar pasado como el `operand`. Ambas asignan almacenamiento con el objeto de asignador *Ax*.
 
 ## <a name="function"></a>  function::function
 
@@ -199,17 +199,17 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Objeto de función que se va a copiar.
+*derecha* para copiar el objeto de función.
 
-`Fx` El tipo del objeto que se puede llamar.
+*FX* el tipo del objeto que se puede llamar.
 
-`_Func` El objeto que se puede llamar a ajustar.
+*_Func* el objeto que se puede llamar a encapsular.
 
-`Alloc` El tipo de asignador.
+*Alloc* el tipo de asignador.
 
-`Ax` El asignador.
+*AX* el asignador.
 
-`_Fnref` La referencia de objeto que se puede llamar a ajustar.
+*_Fnref* la referencia de objeto que se puede llamar a encapsular.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -295,7 +295,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>Comentarios
 
-El operador devuelve un valor que se puede convertir a `bool` con un valor true solo si el objeto no está vacío. Úselo para comprobar si el objeto está vacío.
+El operador devuelve un valor que se pueda convertir a **bool** con un valor true solo si el objeto no está vacío. Úselo para comprobar si el objeto está vacío.
 
 ### <a name="example"></a>Ejemplo
 
@@ -340,9 +340,9 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parámetros
 
-`TN` El tipo del enésimo llame al argumento.
+*TN* el tipo del enésimo argumento de llamada.
 
-`tN` El argumento n-ésima de llamada.
+*tN* el enésimo argumento de llamada.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -391,13 +391,13 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parámetros
 
-`npc` Una constante de puntero nulo.
+*NPC* una constante de puntero nulo.
 
-`right` Objeto de función que se va a copiar.
+*derecha* para copiar el objeto de función.
 
-`fn` El objeto que se puede llamar a ajustar.
+*fn* el objeto que se puede llamar a encapsular.
 
-`fnref` La referencia de objeto que se puede llamar a ajustar.
+*fnref* la referencia de objeto que se puede llamar a encapsular.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -506,11 +506,11 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Objeto de función que se va a intercambiar con.
+*derecha* intercambiar con el objeto de función.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro intercambia los objetos de destino entre `*this` y `right`. Lo hace en tiempo constante y no inicia ninguna excepción.
+La función miembro intercambia los objetos de destino entre `*this` y *derecho*. Lo hace en tiempo constante y no inicia ninguna excepción.
 
 ### <a name="example"></a>Ejemplo
 
@@ -567,13 +567,13 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parámetros
 
-`Fty2` El tipo de objeto que se puede llamar de destino para probar.
+*Fty2* el tipo de objeto que se puede llamar de destino para probar.
 
 ### <a name="remarks"></a>Comentarios
 
-Los tipos de argumento `T1, T2, ..., TN` y el tipo de valor devuelto `Ret` deben poder llamar al tipo `Fty2`. Si `target_type() == typeid(Fty2)`, la función de plantilla miembro devuelve la dirección del objeto de destino; de lo contrario, devuelve 0.
+El tipo *Fty2* debe ser invocable para los tipos de argumento `T1, T2, ..., TN` y el tipo de valor devuelto `Ret`. Si `target_type() == typeid(Fty2)`, la función de plantilla miembro devuelve la dirección del objeto de destino; de lo contrario, devuelve 0.
 
-Los tipos de argumento `T1, T2, ..., TN` y el tipo de valor devuelto `Ret` pueden llamar a un tipo `Fty2` si, para los valores L `fn, t1, t2, ..., tN` de los tipos `Fty2, T1, T2, ..., TN`, respectivamente, `INVOKE(fn, t1, t2, ..., tN)` tiene el formato correcto y, si `Ret` no es `void`, se puede convertir en `Ret`.
+Un tipo *Fty2* sea accesible para los tipos de argumento `T1, T2, ..., TN` y el tipo de valor devuelto `Ret` if, para los valores l `fn, t1, t2, ..., tN` de tipos `Fty2, T1, T2, ..., TN`, respectivamente, `INVOKE(fn, t1, t2, ..., tN)` tiene el formato correcto y, si `Ret`no **void**, se puede convertir a `Ret`.
 
 ### <a name="example"></a>Ejemplo
 

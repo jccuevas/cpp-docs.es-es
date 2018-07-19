@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03cd10d3efac16521cf826f3d9081ec533b9abec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861784"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954869"
 ---
 # <a name="weakptr-class"></a>weak_ptr (Clase)
 
@@ -77,7 +77,8 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` Tipo controlado por el puntero débil.
+*Ty*  
+ Tipo controlado por el puntero débil.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -104,7 +105,7 @@ Un ciclo se produce cuando dos o más recursos controlados por objetos `shared_p
 |[element_type](#element_type)|Tipo del elemento.|
 |[expired](#expired)|Comprueba si la propiedad ha caducado.|
 |[lock](#lock)|Obtiene la propiedad exclusiva de un recurso.|
-|[owner_before](#owner_before)|Devuelve `true` si este `weak_ptr` está ordenado antes (o es menor que) que el puntero proporcionado.|
+|[owner_before](#owner_before)|Devuelve **true** si este `weak_ptr` está ordenado antes (o menor que) el puntero proporcionado.|
 |[reset](#reset)|Libera el recurso poseído.|
 |[swap](#swap)|Intercambia dos objetos `weak_ptr`.|
 |[use_count](#use_count)|Cuenta el número de objetos `shared_ptr` designados.|
@@ -168,7 +169,7 @@ bool expired() const;
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve `true` si `*this` expiró, de lo contrario, `false`.
+La función miembro devuelve **true** si `*this` ha expirado, de lo contrario **false**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -289,11 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parámetros
 
-`Other` Tipo controlado por el puntero compartido/débil de argumento.
+*Otros problemas*  
+ El tipo controlado por el puntero compartido o débil de argumento.
 
-`wp` El puntero débil para copiar.
+*wp*  
+ El puntero débil que se va a copiar.
 
-`sp` El puntero compartido para copiar.
+*SP*  
+ El puntero compartido que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -333,7 +337,7 @@ int main()
 
 ## <a name="owner_before"></a>  owner_before
 
-Devuelve `true` si este `weak_ptr` está ordenado antes (o es menor que) que el puntero proporcionado.
+Devuelve **true** si este `weak_ptr` está ordenado antes (o menor que) el puntero proporcionado.
 
 ```cpp
 template <class Other>
@@ -345,11 +349,12 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parámetros
 
-`ptr` Un `lvalue` referencia como un `shared_ptr` o `weak_ptr`.
+*ptr*  
+ Una referencia `lvalue` a un `shared_ptr` o un `weak_ptr`.
 
 ### <a name="remarks"></a>Comentarios
 
-Devuelve la función de miembro de plantilla `true` si `*this` es `ordered before` `ptr`.
+La función miembro de plantilla devuelve **true** si `*this` es `ordered before` `ptr`.
 
 ## <a name="reset"></a>  reset
 
@@ -404,11 +409,12 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Parámetros
 
-`wp` El puntero débil intercambiar con.
+*wp*  
+ El puntero débil que se va a intercambiar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro deja el recurso al que apuntaba originalmente `*this` para que ahora sea señalado por `wp`, y el recurso al que originalmente apuntaba `wp` para que ahora sea señalado por `*this`. La función no modifica los recuentos de referencia para los dos recursos y no inicia ninguna excepción.
+La función miembro deja el recurso al que apuntaba originalmente `*this` posteriormente apunta *wp*y el recurso al que apuntaba originalmente *wp* posteriormente apunta `*this`. La función no modifica los recuentos de referencia para los dos recursos y no inicia ninguna excepción.
 
 ### <a name="example"></a>Ejemplo
 
@@ -523,11 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parámetros
 
-`Other` Tipo controlado por el puntero compartido/débil de argumento.
+*Otros problemas*  
+ El tipo controlado por el puntero compartido o débil de argumento.
 
-`wp` El puntero débil para copiar.
+*wp*  
+ El puntero débil que se va a copiar.
 
-`sp` El puntero compartido para copiar.
+*SP*  
+ El puntero compartido que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 

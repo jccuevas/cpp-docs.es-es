@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: e0ab9f6cf54393b5c1d58cb00ec9238015b5c5d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848143"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957703"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; (Operadores)
 
@@ -58,9 +58,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un número complejo o un objeto de su tipo de parámetro va a probar para desigualdad.
+*izquierdo* un número complejo o un objeto de su tipo de parámetro que va a probar para desigualdad.
 
-`right` Un número complejo o un objeto de su tipo de parámetro va a probar para desigualdad.
+*derecha* un número complejo o un objeto de su tipo de parámetro que va a probar para desigualdad.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar por el * operación.
+*izquierdo* el primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar mediante la * operación.
 
-`right` El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar por el * operación.
+*derecha* el segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar mediante la * operación.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -295,9 +295,9 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que va a agregar la operación +.
+*izquierdo* el primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a agregar mediante la operación +.
 
-`right` El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que va a agregar la operación +.
+*derecha* el segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a agregar mediante la operación +.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -305,7 +305,7 @@ El número complejo que es el resultado de la adición de los dos números cuyo 
 
 ### <a name="remarks"></a>Comentarios
 
-La operación se sobrecarga para poder ejecutar operaciones aritméticas simples sin necesidad de conversión de datos a un formato determinado. Devuelve el operador unario `left`.
+La operación se sobrecarga para poder ejecutar operaciones aritméticas simples sin necesidad de conversión de datos a un formato determinado. El operador unario devuelve *izquierdo*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -433,13 +433,13 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parámetros
 
-`left` El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar-operación.
+*izquierdo* el primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar mediante la operación -.
 
-`right` El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar-operación.
+*derecha* el segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar mediante la operación -.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número complejo que es el resultado de la resta de `right` desde `left`, los dos números cuyos valores los especifican las entradas de parámetro.
+El número complejo que es el resultado de la resta de *derecho* desde *izquierdo*, los dos números cuyos valores se especifican las entradas de parámetro.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -570,9 +570,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un número complejo o un número que es del tipo de parámetro para un número complejo que es el numerador se divida por el denominador con el / operación.
+*izquierdo* un número complejo o un número que es del tipo de parámetro para un número complejo que es el numerador que se divide por el denominador con la / operación.
 
-`right` Un número complejo o un número que es del tipo de parámetro para un número complejo que es el denominador que se utilizará para dividir el numerador con el / operación.
+*derecha* un número complejo o un número que es del tipo de parámetro para un número complejo que es el denominador que se utilizará para dividir el numerador con la / operación.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -678,13 +678,13 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-`Ostr` El flujo de salida en la que se está entrando número complejo.
+*Ostr* el flujo de salida en la que se está entrando en el número complejo.
 
-`right` El número complejo que se va a escribirse en el flujo de salida
+*derecha* el número complejo que deben especificarse en el flujo de salida
 
 ### <a name="return-value"></a>Valor devuelto
 
-Escribe el valor del número complejo especificado para `Ostr` en formato cartesiano: ( *parte real, parte imaginaria* ).
+Escribe el valor del número complejo especificado para el *Ostr* en formato cartesiano: ( *parte real, parte imaginaria* ).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -749,9 +749,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un número complejo o un objeto de su tipo de parámetro va a probar para desigualdad.
+*izquierdo* un número complejo o un objeto de su tipo de parámetro que va a probar para desigualdad.
 
-`right` Un número complejo o un objeto de su tipo de parámetro va a probar para desigualdad.
+*derecha* un número complejo o un objeto de su tipo de parámetro que va a probar para desigualdad.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -877,13 +877,13 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parámetros
 
-`Istr` El flujo de entrada desde el que se extrae el número complejo.
+*ISTR* el flujo de entrada desde el que se extrae el número complejo.
 
-`right` Número complejo que se extraen del flujo de entrada.
+*derecha* el número complejo que se extrae del flujo de entrada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Lee el valor del número complejo especificado de `Istr` y lo devuelve en `right`.
+Lee el valor del número complejo especificado desde *Istr* y lo devuelve a *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 

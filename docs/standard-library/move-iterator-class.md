@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e72f9c584f818de69b0c341ff8dba66892816d8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4dfbd3bc6a020dba4b6e5eb868e21ec37fcc1ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861999"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955252"
 ---
 # <a name="moveiterator-class"></a>move_iterator (Clase)
 
@@ -64,9 +64,9 @@ Un `move_iterator` puede llevar a cabo operaciones no definidas por el iterador 
 |Nombre de tipo|Descripción|
 |-|-|
 |[iterator_type](#iterator_type)|Sinónimo del parámetro de plantilla `RandomIterator`.|
-|[iterator_category](#iterator_category)|Un sinónimo de una expresión más larga de `typename` del mismo nombre, `iterator_category` identifica las capacidades generales del iterador.|
-|[value_type](#value_type)|Un sinónimo de una expresión más larga de `typename` del mismo nombre, `value_type` describe de qué tipo son los elementos del iterador.|
-|[difference_type](#difference_type)|Un sinónimo de una expresión más larga de `typename` del mismo nombre, `difference_type` describe el tipo entero necesario para expresar valores diferentes entre elementos.|
+|[iterator_category](#iterator_category)|Un sinónimo para una mayor **typename** expresión del mismo nombre, `iterator_category` identifica las capacidades generales del iterador.|
+|[value_type](#value_type)|Un sinónimo para una mayor **typename** expresión del mismo nombre, `value_type` describe de qué tipo de iterador son elementos.|
+|[difference_type](#difference_type)|Un sinónimo para una mayor **typename** expresión del mismo nombre, `difference_type` describe el tipo entero necesario para expresar valores diferentes entre los elementos.|
 |[pointer](#pointer)|Sinónimo del parámetro de plantilla `RandomIterator`.|
 |[reference](#reference)|Sinónimo de la referencia `rvalue` `value_type&&`.|
 
@@ -157,7 +157,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El iterador que se usará como el iterador almacenado.
+*derecha* el iterador que se usará como el iterador almacenado.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -173,7 +173,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Off` Un desplazamiento para agregar a la posición actual para determinar la nueva posición actual.
+*_Off* un desplazamiento para agregar a la posición actual para determinar la nueva posición actual.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -181,7 +181,7 @@ Devuelve el nuevo elemento actual.
 
 ### <a name="remarks"></a>Comentarios
 
-El operador agrega `_Off` al iterador almacenado. Después devuelve `*this`.
+El operador de suma *_Off* al iterador almacenado. Después devuelve `*this`.
 
 ## <a name="move_iterator__operator-_eq"></a> move_iterator::operator-=
 
@@ -299,7 +299,7 @@ El operador devuelve `&**this`.
 
 ## <a name="pointer"></a> move_iterator::pointer
 
-El tipo `pointer` es un `typedef` que se basa en el iterador aleatorio `RandomIterator` para `move_iterator`, y se puede usar indistintamente.
+El tipo `pointer` es un **typedef** basándose en el iterador aleatorio `RandomIterator` para `move_iterator`y se pueden usar indistintamente.
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -311,7 +311,7 @@ El tipo es un sinónimo de `RandomIterator`.
 
 ## <a name="reference"></a> move_iterator::reference
 
-El tipo `reference` es un `typedef` que se basa en `value_type&&` para `move_iterator`, y se pueden usar indistintamente con `value_type&&`.
+El tipo `reference` es un **typedef** según `value_type&&` para `move_iterator`y se pueden utilizar indistintamente con `value_type&&`.
 
 ```cpp
 typedef value_type&& reference;

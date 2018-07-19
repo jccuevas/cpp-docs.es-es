@@ -1,5 +1,5 @@
 ---
-title: Asignación | Documentos de Microsoft
+title: Asignación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd08215c3849bf487578b28b1824afbec14c52
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27e78f7429c4d2a0f83ff7184460eb2ae69df129
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960991"
 ---
 # <a name="assignment"></a>Asignación
-El operador de asignación (**=**), en sentido estricto, es un operador binario. La declaración es idéntica a cualquier otro operador binario, con las excepciones siguientes:  
+El operador de asignación (**=**), en realidad, es un operador binario. La declaración es idéntica a cualquier otro operador binario, con las excepciones siguientes:  
   
--   Debe ser una función miembro no estática. Ningún `operator=` se puede declarar como función no miembro.  
+-   Debe ser una función miembro no estática. No **operador =** se pueden declarar como una función no miembro.  
   
 -   Las clases derivadas no lo heredan.  
   
--   El compilador puede generar una función `operator=` predeterminada para los tipos de clase si no existe ninguna. (Para obtener más información sobre predeterminado `operator=` funciones, vea [miembro a miembro asignación e inicialización](http://msdn.microsoft.com/en-us/94048213-8b49-4416-8069-b1b7a6f271f9).)  
+-   Valor predeterminado es **operador =** función puede generarse por el compilador para los tipos de clase si no existe ninguno.  
   
  El ejemplo siguiente muestra cómo declarar un operador de asignación:  
   
-```  
+```cpp 
 // assignment.cpp  
 class Point  
 {  
@@ -57,7 +58,7 @@ int main()
   
  Observe que el argumento proporcionado es el lado derecho de la expresión. El operador devuelve el objeto para preservar el comportamiento del operador de asignación, que devuelve el valor del lado izquierdo después de que se complete la asignación. Esto permite escribir instrucciones tales como:  
   
-```  
+```cpp 
 pt1 = pt2 = pt3;  
 ```  
   

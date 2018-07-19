@@ -1,5 +1,5 @@
 ---
-title: Varias clases Base | Documentos de Microsoft
+title: Varias clases Base | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955470"
 ---
 # <a name="multiple-base-classes"></a>Varias clases base
-Como se describe en [herencia múltiple](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), una clase puede derivarse de más de una clase base. En un modelo de herencia múltiple (donde las clases derivadas de más de una clase base), las clases base se especifican utilizando el *base-list* elemento de gramática. Por ejemplo, se puede especificar la declaración de clase para `CollectionOfBook`, derivada de `Collection` y `Book`:  
+Una clase puede derivarse de más de una clase base. En un modelo de herencia múltiple (donde las clases se derivan de más de una clase base), las clases base se especifican utilizando el *base-list* elemento de gramática. Por ejemplo, se puede especificar la declaración de clase para `CollectionOfBook`, derivada de `Collection` y `Book`:  
   
-```  
+```cpp 
 // deriv_MultipleBaseClasses.cpp  
 // compile with: /LD  
 class Collection {  
@@ -39,9 +40,9 @@ class CollectionOfBook : public Book, public Collection {
   
  El orden en que se especifican las clases base no es significativo salvo en algunos casos en que se invocan constructores y destructores. En estos casos, el orden en que se especifican las clases base afecta a lo siguiente:  
   
--   El orden en que tiene lugar la inicialización mediante constructor. Si el código se basa en la parte `Book` de `CollectionOfBook` que se va inicializar antes que la parte `Collection`, el orden de especificación es significativo. Inicialización tiene lugar en el orden de las clases se especifican en el *base-list*.  
+-   El orden en que tiene lugar la inicialización mediante constructor. Si el código se basa en la parte `Book` de `CollectionOfBook` que se va inicializar antes que la parte `Collection`, el orden de especificación es significativo. Tiene lugar en el orden de las clases se especifican en la inicialización del *base-list*.  
   
--   El orden en que los destructores se invocan para la limpieza. De nuevo, si una "parte concreta" de la clase debe estar presente cuando se está destruyendo la otra parte, el orden es significativo. Los destructores se llaman en el orden inverso de las clases especificadas en el *base-list*.  
+-   El orden en que los destructores se invocan para la limpieza. De nuevo, si una "parte concreta" de la clase debe estar presente cuando se está destruyendo la otra parte, el orden es significativo. Los destructores se llaman en orden inverso de las clases especificadas en el *base-list*.  
   
     > [!NOTE]
     >  El orden de especificación de clases base puede afectar al diseño de memoria de la clase. No se deben tomar decisiones de programación basadas en el orden de los miembros base en la memoria.  
@@ -55,7 +56,7 @@ class CollectionOfBook : public Book, public Collection {
   
  Cuando una clase base se especifica como base virtual, puede actuar como base indirecta más de una vez sin la duplicación de sus miembros de datos. Todas las clases base que utilizan una clase base como base virtual comparten una única copia de sus miembros de datos.  
   
- Cuando se declara una clase base virtual, el **virtuales** palabra clave aparece en las listas de base de las clases derivadas.  
+ Cuando se declara una clase base virtual, el **virtual** palabra clave aparece en las listas de bases de las clases derivadas.  
   
  Considere la jerarquía de clases de la ilustración siguiente, que muestra un gráfico Lunch-Line simulado.  
   
@@ -64,12 +65,12 @@ Gráfico de línea de comida simulada
   
  En la ilustración, `Queue` es la clase base de `CashierQueue` y `LunchQueue`. Sin embargo, cuando ambas clases se combinan para formar `LunchCashierQueue`, surge el siguiente problema: la nueva clase contiene dos subobjetos de tipo `Queue`, uno de `CashierQueue` y otro de `LunchQueue`. La ilustración siguiente muestra el diseño de memoria conceptual (el diseño de memoria real se podría optimizar).  
   
- ![Simular comida&#45;objeto line](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![Simulated almuerzo&#45;objeto line](../cpp/media/vc38xp2.gif "vc38XP2")  
 Objeto de línea de comida simulada  
   
  Observe que hay dos subobjetos `Queue` en el objeto `LunchCashierQueue`. El código siguiente declara `Queue` como clase base virtual:  
   
-```  
+```cpp 
 // deriv_VirtualBaseClasses.cpp  
 // compile with: /LD  
 class Queue {};  
@@ -78,19 +79,19 @@ class LunchQueue : virtual public Queue {};
 class LunchCashierQueue : public LunchQueue, public CashierQueue {};  
 ```  
   
- La palabra clave `virtual` garantiza que solo se incluye una copia del subobjeto `Queue` (consulte la ilustración siguiente).  
+ El **virtual** palabra clave garantiza que solo una copia del subobjeto `Queue` se incluye (consulte la figura siguiente).  
   
- ![Simular comida&#45;line (objeto), clases base virtuales](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![Simulated almuerzo&#45;línea (objeto), clases base virtuales](../cpp/media/vc38xp3.gif "vc38XP3")  
 Objeto de línea de comida simulada con clases base virtuales  
   
  Una clase puede tener un componente virtual y un componente no virtual de un tipo determinado. Esto sucede en las condiciones que se muestran en la siguiente ilustración.  
   
- ![Componentes virtuales y no virtuales de una clase](../cpp/media/vc38xp4.gif "vc38XP4")  
+ ![Componentes virtuales y de una clase](../cpp/media/vc38xp4.gif "vc38XP4")  
 Componente virtuales y no virtuales de la misma clase  
   
  En la ilustración, `CashierQueue` y `LunchQueue` usan `Queue` como clase base virtual. Sin embargo, `TakeoutQueue` especifica `Queue` como clase base, no como una clase base virtual. Por consiguiente, `LunchTakeoutCashierQueue` tiene dos subobjetos de tipo `Queue`: uno en la ruta de herencia que incluye `LunchCashierQueue` y otro en la ruta que incluye `TakeoutQueue`. Esto se muestra en la ilustración siguiente.  
   
- ![Herencia virtual y en disposición de los objetos](../cpp/media/vc38xp5.gif "vc38XP5")  
+ ![Herencia virtual y no virtual en la disposición de los objetos](../cpp/media/vc38xp5.gif "vc38XP5")  
 Diseño de objeto con herencia virtual y no virtual  
   
 > [!NOTE]
@@ -98,12 +99,12 @@ Diseño de objeto con herencia virtual y no virtual
   
  Si una clase derivada reemplaza una función virtual que hereda de una clase base virtual y si un constructor o destructor para la clase derivada llama a esa función con un puntero a la clase base virtual, el compilador puede incluir campos "vtordisp" ocultos adicionales en clases con bases virtuales. La opción del compilador /vd0 suprime la adición del miembro oculto de desplazamiento del constructor/destructor de vtordisp. La opción del compilador /vd1, la predeterminada, los habilita cuando es necesario. Desactive los vtordisp solo si está seguro de que todos los constructores y destructores de clase llaman a funciones virtuales virtualmente.  
   
- La opción del compilador /vd afecta a un módulo de compilación completo. Use la **vtordisp** pragma para suprimir y, a continuación, volver a habilitar campos vtordisp clase por clase:  
+ La opción del compilador /vd afecta a un módulo de compilación completo. Use la **vtordisp** pragma para suprimir y, a continuación, volver a habilitar los campos de vtordisp clase por clase:  
   
-```  
+```cpp 
 #pragma vtordisp( off )  
 class GetReal : virtual public { ... };  
-#pragma vtordisp( on )  
+\#pragma vtordisp( on )  
 ```  
   
 ## <a name="name-ambiguities"></a>Ambigüedades en nombres  
@@ -111,7 +112,7 @@ class GetReal : virtual public { ... };
   
  Cualquier expresión que haga referencia a un miembro de clase debe producir una referencia ambigua. En el ejemplo siguiente se muestra cómo se desarrollan las ambigüedades:  
   
-```  
+```cpp 
 // deriv_NameAmbiguities.cpp  
 // compile with: /LD  
 // Declare two base classes, A and B.  
@@ -134,7 +135,7 @@ class C : public A, public B {};
   
  Dadas las declaraciones de clase anteriores, un código como el siguiente es ambiguo porque no está claro si `b` hace referencia a `b` en `A` o en `B`:  
   
-```  
+```cpp 
 C *pc = new C;  
   
 pc->b();  
@@ -152,7 +153,7 @@ pc->b();
   
  Cuando una expresión produce una ambigüedad en la herencia, la puede resolver manualmente calificando el nombre en cuestión con su nombre de clase. Para que la compilación del ejemplo anterior se realice correctamente sin ambigüedades, utilice código como el siguiente:  
   
-```  
+```cpp 
 C *pc = new C;  
   
 pc->B::a();  
@@ -166,7 +167,7 @@ pc->B::a();
   
  Un nombre domina a otro nombre si está definido en ambas clases y una clase se deriva de la otra. El nombre dominante es el nombre de la clase derivada; este nombre se utiliza cuando podría producirse una ambigüedad, como se muestra en el ejemplo siguiente:  
   
-```  
+```cpp 
 // deriv_Dominance.cpp  
 // compile with: /LD  
 class A {  
@@ -201,7 +202,7 @@ Conversión ambigua de punteros a clases base
   
  La conversión al tipo `A*` (puntero a `A`) es ambigua porque no hay ninguna manera de discernir qué objeto secundario de tipo `A` es el correcto. Observe que puede evitar la ambigüedad si especifica explícitamente el objeto secundario que quiere utilizar, como sigue:  
   
-```  
+```cpp 
 (A *)(B *)&d       // Use B subobject.  
 (A *)(C *)&d       // Use C subobject.  
 ```  

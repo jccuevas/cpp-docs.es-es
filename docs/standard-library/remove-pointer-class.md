@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 745711e1dd5abde022d0a21d5cb1ea6c013931a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d9c8ddf5941394a8979832a753ed73cfda5f0876
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853172"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959129"
 ---
 # <a name="removepointer-class"></a>remove_pointer (Clase)
 
@@ -40,11 +40,11 @@ using remove_pointer_t = typename remove_pointer<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` Tipo que se va a modificar.
+*T* el tipo de modificación.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia de `remove_pointer<T>` contiene un tipo modificado que es `T1` cuando `T` tiene el formato `T1*`, `T1* const`, `T1* volatile` o `T1* const volatile`; de lo contrario, es `T`.
+Una instancia de `remove_pointer<T>` contiene un tipo modificado que es `T1` cuando *T* tiene el formato `T1*`, `T1* const`, `T1* volatile`, o `T1* const volatile`en caso contrario, *T*.
 
 ## <a name="example"></a>Ejemplo
 

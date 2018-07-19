@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d68723573d3a11565ae32f07bf8899661097c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8468cb290b6845050943159aaa69b9cd000d2bc7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960299"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution (Clase)
 
@@ -76,7 +76,7 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*IntType* el tipo de resultado entero, valor predeterminado es `int`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*IntType* el tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 *URNG* El motor de generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
@@ -230,7 +230,7 @@ explicit geometric_distribution(const param_type& parm);
 
 *p* el `p` parámetro de distribución.
 
-*parm* la estructura de parámetros utilizada para construir la distribución.
+*parm* la estructura de parámetros que se usa para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -259,7 +259,7 @@ struct param_type {
 
 *p* el `p` parámetro de distribución.
 
-*derecho* el `param_type` instancia para esta opción para comparar.
+*derecha* el `param_type` comparar con esta instancia.
 
 ### <a name="remarks"></a>Comentarios
 

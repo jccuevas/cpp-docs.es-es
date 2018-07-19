@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: aa5c2a662fb5e827978a7c00aa3035dcc6cc97f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 135922bb88b02c00849a577fb8d8457b6fb21989
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847304"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958242"
 ---
 # <a name="lthashmapgt-operators"></a>Operadores de &lt;hash_map&gt;
 
@@ -36,9 +36,9 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `hash_map`.
+*izquierdo* un objeto de tipo `hash_map`.
 
-`right` Un objeto de tipo `hash_map`.
+*derecha* un objeto de tipo `hash_map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -48,7 +48,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 La comparación entre los objetos hash_map se basa en una comparación en pares de sus elementos. Dos objetos hash_map son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
-Los miembros de la [< hash_map >](hash-map.md) y [< hash_set >](hash-set.md) archivos de encabezado en la [ stdext Namespace](stdext-namespace.md).
+Los miembros de la [< hash_map >](hash-map.md) y [< hash_set >](hash-set.md) archivos de encabezado en el [ stdext Namespace](stdext-namespace.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -103,9 +103,9 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `hash_map`.
+*izquierdo* un objeto de tipo `hash_map`.
 
-`right` Un objeto de tipo `hash_map`.
+*derecha* un objeto de tipo `hash_map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -168,9 +168,9 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `hash_multimap`.
+*izquierdo* un objeto de tipo `hash_multimap`.
 
-`right` Un objeto de tipo `hash_multimap`.
+*derecha* un objeto de tipo `hash_multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -233,9 +233,9 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parámetros
 
-`left` Un objeto de tipo `hash_multimap`.
+*izquierdo* un objeto de tipo `hash_multimap`.
 
-`right` Un objeto de tipo `hash_multimap`.
+*derecha* un objeto de tipo `hash_multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d442e6b62a7e18a3b6025633ae5f12dde7915f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72f7b6e352240498f921c9aa5c3d1a990da34813
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844730"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955434"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
@@ -46,11 +46,11 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-`RealVal` El valor de tipo **doble** de la parte real del número complejo que se está construyendo.
+*RealVal* el valor de tipo **doble** de la parte real del número complejo que se está construyendo.
 
-`ImagVal` El valor de tipo **doble** de la parte imaginaria del número complejo que se está construyendo.
+*ImagVal* el valor de tipo **doble** de la parte imaginaria del número complejo que se está construyendo.
 
-`complexNum` Número complejo de tipo **float** o de tipo `long double` cuyas partes reales e imaginarias se utilizan para inicializar un número complejo de tipo **doble** que se está construyendo.
+*complexNum* número complejo de tipo **float** o de tipo **long double** cuyas partes reales e imaginarias se usan para inicializar un número complejo de tipo **doble**que se está construyendo.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -58,7 +58,7 @@ Número complejo de tipo **double**.
 
 ## <a name="remarks"></a>Comentarios
 
-La especialización explícita de la clase de plantilla compleja en una clase compleja de tipo **double** solo se distingue de la clase de plantilla en los constructores que define. Se permite que la conversión de **float** a **double** sea implícita, pero la conversión de `long double` a **double** debe ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
+La especialización explícita de la clase de plantilla compleja en una clase compleja de tipo **double** solo se distingue de la clase de plantilla en los constructores que define. La conversión de **float** a **doble** puede ser implícita, pero la conversión de **long double** a **doble** debe ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
 
 Para obtener más información sobre la clase de plantilla `complex`, vea [complex (Clase)](../standard-library/complex-class.md). Para obtener una lista de los miembros de la clase de plantilla `complex`, vea .
 

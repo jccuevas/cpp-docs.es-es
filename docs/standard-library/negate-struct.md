@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1151464d4f2d863f8cdc30191199c0606d58b8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852395"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956939"
 ---
 # <a name="negate-struct"></a>negate (Struct)
 
@@ -49,9 +49,9 @@ struct negate<void>
 
 ### <a name="parameters"></a>Parámetros
 
-`Type` Cualquier tipo que admita un `operator-` que toma un operando del tipo especificado o deducido.
+*Tipo* cualquier tipo que admita un `operator-` que toma un operando del tipo especificado o deducido.
 
-`Left` El operando que se va a negar. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `Type`.
+*Izquierda* el operando que se va a negar. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *tipo*.
 
 ## <a name="return-value"></a>Valor devuelto
 

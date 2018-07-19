@@ -1,5 +1,5 @@
 ---
-title: Las clases (ATL) de agrupación de subprocesos | Documentos de Microsoft
+title: Las clases (ATL) de agrupación de subprocesos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb5a43ef9b35d47749ba2c62fa785dc3d910bcd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70254f05dc871a8073d82f1870b30f178e0f7276
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361559"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959009"
 ---
-# <a name="thread-pooling-classes"></a>Clases de agrupación de subprocesos
+# <a name="thread-pooling-classes"></a>Las clases de agrupación de subprocesos
 Las clases siguientes admiten la agrupación de subprocesos:  
   
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) implementa un módulo EXE, con compatibilidad para varios apartamentos de subproceso agrupadas.  
+-   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) implementa un módulo de EXE, con compatibilidad para varios apartamentos de subproceso agrupada.  
   
--   [CComApartment](../atl/reference/ccomapartment-class.md) administra un contenedor en un módulo de archivo EXE agrupadas por subproceso.  
+-   [CComApartment](../atl/reference/ccomapartment-class.md) administra un apartamento de un módulo EXE agrupados por subproceso.  
   
--   [CComSimpleThreadAllocator](../atl/reference/ccomsimplethreadallocator-class.md) administra la selección de subproceso de un módulo ejecutable.  
+-   [CComSimpleThreadAllocator](../atl/reference/ccomsimplethreadallocator-class.md) administra la selección de subprocesos de un módulo ejecutable.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../atl/atl-class-overview.md)

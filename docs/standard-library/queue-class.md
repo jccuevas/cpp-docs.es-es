@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5442888e8e370892add687c21132e397ae683ac8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861508"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954921"
 ---
 # <a name="queue-class"></a>queue (Clase)
 
@@ -52,17 +52,17 @@ class queue
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo* tipo de los datos del elemento que se almacenará en la cola
+*Tipo* el elemento tipo de datos que se almacenará en la cola
 
-`Container` El tipo de contenedor subyacente usado para implementar la cola.
+*Contenedor* el tipo del contenedor subyacente que se usa para implementar la cola.
 
 ## <a name="remarks"></a>Comentarios
 
-Los elementos de la clase **Type** estipulada en el primer parámetro de plantilla de un objeto de cola son sinónimos de [value_type](#value_type) y deben coincidir con el tipo de elemento de la clase de contenedor subyacente **Container** estipulada por el segundo parámetro de plantilla. El **tipo** debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.
+Los elementos de la clase `Type` estipulada en la primera plantilla de parámetro de un objeto de cola son sinónimos de [value_type](#value_type) y debe coincidir con el tipo de elemento de la clase de contenedor subyacente `Container` estipulado por la segundo parámetro de plantilla. El `Type` debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.
 
-Entre las clases de contenedor subyacente adecuadas para la cola se incluyen [deque](../standard-library/deque-class.md) y [list](../standard-library/list-class.md), o cualquier otro contenedor de secuencias que admita las operaciones de `front`, **back**, `push_back` y `pop_front`. La clase de contenedor subyacente se encapsula dentro del adaptador de contenedor, que solo expone el conjunto limitado de las funciones miembro de contenedor de secuencias como una interfaz pública.
+Clases de contenedor subyacente adecuadas para cola incluyen [deque](../standard-library/deque-class.md) y [lista](../standard-library/list-class.md), o cualquier otro contenedor de secuencias que admita las operaciones de `front`, `back`, `push_back`, y `pop_front`. La clase de contenedor subyacente se encapsula dentro del adaptador de contenedor, que solo expone el conjunto limitado de las funciones miembro de contenedor de secuencias como una interfaz pública.
 
-Los objetos de la cola solo se pueden someter a una comparación de igualdad si los elementos de la clase **Type** se pueden someter a una comparación de igualdad. Además, solo se pueden someter a una comparación de tipo menor-que si los elementos de la clase **Type** se pueden someter a una comparación de tipo menor-que.
+Objetos de la cola son comparables de igualdad si y solo si los elementos de la clase `Type` son comparables igualdad y son menores-que comparable si y solo si los elementos de la clase `Type` son menores-que comparable.
 
 Existen tres tipos de adaptadores de contenedor que se definen mediante la biblioteca estándar de C++: stack, queue y priority_queue. Cada uno restringe la función de alguna clase de contenedor subyacente para proporcionar una interfaz controlada de manera precisa para una estructura de datos estándar.
 
@@ -119,7 +119,7 @@ El último elemento de la cola. Si la cola está vacía, el valor devuelto es in
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de **back** se asigna a `const_reference`, el objeto queue no se puede modificar. Si el valor devuelto de **back** se asigna a una **referencia**, el objeto queue se puede modificar.
+Si el valor devuelto de `back` se asigna a `const_reference`, el objeto queue no puede modificarse. Si el valor devuelto de `back` se asigna a un `reference`, se puede modificar el objeto de cola.
 
 Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se producirá un error en tiempo de ejecución si intenta acceder a un elemento en una cola vacía.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
 
@@ -229,9 +229,9 @@ El primer elemento de la cola. Si la cola está vacía, el valor devuelto es ind
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de `front` se asigna a `const_reference`, el objeto queue no puede modificarse. Si el valor devuelto de `front` se asigna a una **referencia**, el objeto queue puede modificarse.
+Si el valor devuelto de `front` se asigna a `const_reference`, el objeto queue no puede modificarse. Si el valor devuelto de `front` se asigna a un `reference`, se puede modificar el objeto de cola.
 
-La función miembro devuelve una **referencia** al primer elemento de la secuencia controlada, que no debe estar vacío.
+La función miembro devuelve un `reference` al primer elemento de la secuencia controlada, que debe estar vacía.
 
 Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se producirá un error en tiempo de ejecución si intenta acceder a un elemento en una cola vacía.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
 
@@ -331,7 +331,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-`val` El elemento agregado a la parte posterior de la cola.
+*Val* el elemento agregado a la parte trasera de la cola.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -381,7 +381,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El **const** contenedor de los cuales es la cola construida va a ser una copia.
+*derecha* el **const** contenedor del que la cola construida va a ser una copia.
 
 ### <a name="remarks"></a>Comentarios
 

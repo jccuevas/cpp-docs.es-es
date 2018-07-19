@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504d561dd0d7fbc640c898aa8aa70a70337accb8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860650"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959276"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine (Clase)
 
@@ -39,23 +39,23 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-`UIntType` El tipo de resultado entero sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*UIntType* el tipo de resultado entero sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-`W` **Tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `2u < W ≤ numeric_limits<UIntType>::digits`
+*W* **tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `2u < W ≤ numeric_limits<UIntType>::digits`
 
-`N` **Tamaño de estado**. El número de elementos (valores) en la secuencia de estado.
+*N* **tamaño de estado**. El número de elementos (valores) en la secuencia de estado.
 
-`M` **Cambiar el tamaño**. El número de elementos que omitir durante cada vuelta. **Condición previa:** `0 < M ≤ N`
+*M* **tamaño de cambio**. El número de elementos que omitir durante cada vuelta. **Condición previa:** `0 < M ≤ N`
 
-`R` **Máscara de bits**. **Condición previa:** `R ≤ W`
+*R* **bits de máscara**. **Condición previa:** `R ≤ W`
 
-`A` **Máscara XOR**. **Condición previa:** `A ≤ (1u<<W) - 1u`
+*Un* **máscara XOR**. **Condición previa:** `A ≤ (1u<<W) - 1u`
 
-`U`, `S`, `T`, `L` **Parámetros de cambio de Tempering**. Utilizados como valores de cambio durante la codificación (atenuación). Condición previa: `U,S,T,L ≤ W`
+*U*, *S*, *T*, *L* **parámetros de cambio de Tempering**. Utilizados como valores de cambio durante la codificación (atenuación). Condición previa: `U,S,T,L ≤ W`
 
-`D`, `B`, `C` **Tempering parámetros de máscara de bits**. Utilizados como valores de máscara de bit durante la codificación (atenuación). Condición previa: `D,B,C ≤ (1u<<W) - 1u`
+*D.*, *B*, *C* **Tempering parámetros de máscara de bits**. Utilizados como valores de máscara de bit durante la codificación (atenuación). Condición previa: `D,B,C ≤ (1u<<W) - 1u`
 
-`F` **Multiplicador de inicialización**. Utilizado para ayudar a la inicialización de la secuencia. Condición previa: `F ≤ (1u<<W) - 1u`
+*F* **multiplicador de inicialización**. Utilizado para ayudar a la inicialización de la secuencia. Condición previa: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Miembros
 
@@ -70,9 +70,9 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase de plantilla describe un motor de número aleatorio que devuelve valores en el intervalo cerrado [ `0`, `2`<sup>W</sup> - `1`]. Contiene un valor integral grande con `W * (N - 1) + R` bits. Extrae `W` bits cada vez de este valor grande y, cuando ha utilizado todos los bits, modifica el valor grande cambiando y mezclando los bits para tener un conjunto de bits nuevo del que extraer. El estado del motor son los últimos valores de bit `N` `W` utilizados si `operator()` se ha llamado al menos `N` veces, si no, los valores de bit `M` `W` que se han utilizado y los últimos `N - M` valores de la inicialización.
+Esta clase de plantilla describe un motor de número aleatorio que devuelve valores en el intervalo cerrado [ `0`, `2`<sup>W</sup> - `1`]. Contiene un valor integral grande con `W * (N - 1) + R` bits. Extrae *W* bits a la vez desde este valor grande, y cuando ha utilizado todos los bits distorsiona el valor grande cambiando y mezclando los bits para que tenga un nuevo conjunto de bits para extraer. El estado del motor es el último `N` `W`-bit de valores que se usan si `operator()` se ha llamado al menos *N* agota el tiempo, en caso contrario, el `M` `W`-bit de valores que se han usado y el último `N - M` valores de la inicialización.
 
-El generador modifica el valor grande que contiene utilizando un registro de cambio de informe generalizado modificado, definido por valores de cambio `N` y `M`, un valor de cambio `R` y una máscara XOR condicional `A`. Además, los bits del registro de cambio sin procesar se codifican (atenúan) según una matriz de codificación de bits definida por valores `U`, `D`, `S`, `B`, `T`, `C` y `L`.
+El generador distorsiona el valor grande que contiene mediante el uso de un registro de desplazamiento de informe generalizado modificado definido por los valores de cambio *N* y *M*, un valor de cambio *R*y un máscara XOR condicional *A*. Además, los bits del registro de cambio sin procesar se codifican (atenúan) según una matriz de codificación de bits definida por los valores *U*, *d.*, *S*, *B* , *T*, *C*, y *L*.
 
 El argumento de la plantilla `UIntType` debe ser lo suficientemente grande para contener valores de hasta `2`<sup>W</sup> - `1`. Los valores del resto de los argumentos de la plantilla deben cumplir los requisitos siguientes: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 

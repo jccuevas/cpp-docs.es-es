@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1e42bf61c1fa70ee74063cd6857d842ee87de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92dce97754eccc8cd4f618db3ac3e23574fb54ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846498"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956587"
 ---
 # <a name="hashcompare-class"></a>hash_compare (Clase)
 
@@ -33,15 +33,15 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>Comentarios
 
-Cada contenedor asociativo de hash almacena un objeto traits hash de tipo **Traits** (un parámetro de plantilla). Puede derivar una clase de una especialización de hash_compare para reemplazar de forma selectiva ciertas funciones y objetos o puede proporcionar su propia versión de esta clase si cumple ciertos requisitos mínimos. En concreto, para un objeto hash_comp de tipo **hash_compare\<Key, Traits>**, los contenedores anteriores requieren el siguiente comportamiento:
+Cada contenedor asociativo de hash almacena un objeto de rasgos de hash de tipo `Traits` (un parámetro de plantilla). Puede derivar una clase de una especialización de hash_compare para reemplazar de forma selectiva ciertas funciones y objetos o puede proporcionar su propia versión de esta clase si cumple ciertos requisitos mínimos. En concreto, para un objeto hash_comp de tipo `hash_compare<Key, Traits>`, los contenedores anteriores requieren el siguiente comportamiento:
 
-- Para todos los valores `key` de tipo **Key**, la llamada **hash_comp**( `key`) actúa como una función hash, que produce una distribución de valores de tipo **size_t**. La función suministrada por hash_compare devuelve `key`.
+- Para todos los valores `key` typu `Key`, la llamada **hash_comp**(`key`) sirve como función hash, que produce una distribución de valores de tipo `size_t`. La función suministrada por hash_compare devuelve `key`.
 
-- Para cualquier valor `key1` de tipo **Key** que preceda a `key2` en la secuencia y que tenga el mismo valor hash (valor devuelto por la función hash), **hash_comp**( `key2`, `key1`) es False. La función debe imponer una ordenación total en los valores de tipo **Key**. La función proporcionada por hash_compare devuelve *comp*( `key2`, `key1`) `,` donde *comp* es un objeto almacenado de tipo **Traits** que puede especificar al construir el objeto hash_comp. Para el tipo de parámetro **Traits** predeterminado **less\<Key>**, los criterios de ordenación nunca disminuyen en valor.
+- Para cualquier valor `key1` typu `Key` que precede a `key2` en la secuencia y tiene el mismo valor hash (valor devuelto por la función hash), **hash_comp**(`key2`, `key1`) es false. La función debe imponer una ordenación total en los valores de tipo `Key`. La función proporcionada por hash_compare devuelve *comp*(`key2`, `key1`) `,` donde *comp* es un objeto almacenado de tipo `Traits` que puede especificar cuándo se construir el objeto hash_comp. Para el valor predeterminado `Traits` tipo de parámetro `less<Key>`, claves de ordenación nunca disminuyen en valor.
 
-- La constante entera **bucket_size** especifica el número medio de elementos por "depósito" (entrada de tabla hash) que el contenedor debe intentar no superar. Debe ser mayor que cero. El valor proporcionado por hash_compare es 4.
+- La constante entera `bucket_size` especifica el número medio de elementos por "depósito" (entrada de tabla hash) que el contenedor debe intentar no superar. Debe ser mayor que cero. El valor proporcionado por hash_compare es 4.
 
-- La constante entera **min_buckets** especifica el número mínimo de depósitos que se deben mantener en la tabla hash. Debe ser una potencia de dos y mayor que cero. El valor proporcionado por hash_compare es 8.
+- La constante entera `min_buckets` especifica el número mínimo de depósitos que se deben mantener en la tabla hash. Debe ser una potencia de dos y mayor que cero. El valor proporcionado por hash_compare es 8.
 
 ## <a name="example"></a>Ejemplo
 

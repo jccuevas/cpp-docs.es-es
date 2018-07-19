@@ -56,16 +56,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28acc1eb2f2ed265d20507d2b47efa657c2d1bb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862512"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957514"
 ---
 # <a name="moneypunct-class"></a>moneypunct (Clase)
 
-La clase de plantilla describe un objeto que puede actuar como una faceta de configuración regional para describir las secuencias de tipo `CharType` usadas para representar un campo monetario de entrada o un campo monetario de salida. Si el parámetro de plantilla `Intl` es `true`, se respetan las convenciones internacionales.
+La clase de plantilla describe un objeto que puede actuar como una faceta de configuración regional para describir las secuencias de tipo *CharType* utilizado para representar un campo de entrada monetario o un campo de salida monetario. Si el parámetro de plantilla *Intl* es *true*, se respetan las convenciones internacionales.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -76,15 +76,15 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parámetros
 
-`CharType` El tipo usado dentro de un programa para codificar caracteres.
+*CharType* tipo usado dentro de un programa para codificar los caracteres.
 
-`Intl` Una marca que especifica si las convenciones internacionales deben tenerse en cuenta.
+*Intl* una marca que especifica si las convenciones internacionales deben respetarse.
 
 ## <a name="remarks"></a>Comentarios
 
 Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en **id.**
 
-El objeto estático constante intl almacena el valor del parámetro de plantilla **Intl**.
+El objeto estático constante intl almacena el valor del parámetro de plantilla *Intl*.
 
 ### <a name="constructors"></a>Constructores
 
@@ -285,7 +285,7 @@ Una regla específica de la configuración regional para determinar cómo se agr
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [grouping](#grouping), donde **grouping** llama a la función miembro virtual.
+Vea el ejemplo de [agrupación](#grouping), donde se llamó la función miembro virtual `grouping`.
 
 ## <a name="do_neg_format"></a> moneypunct::do_neg_format
 
@@ -297,19 +297,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo generar un campo de salida monetario para una cantidad negativa. Cada uno de los cuatro elementos de **pattern::field** puede tener los valores:
+La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo generar un campo de salida monetario para una cantidad negativa. Cada uno de los cuatro elementos de `pattern::field` puede tener los valores:
 
-- **none** para buscar cero o más espacios o no generar nada.
+- `none` Para hacer coincidir cero o más espacios o generar nada.
 
-- **sign** para buscar o generar un signo positivo o negativo.
+- `sign` para buscar o generar un signo positivo o negativo.
 
-- **space** para buscar cero o más espacios o generar un espacio.
+- `space` Para hacer coincidir cero o más espacios o generar un espacio.
 
-- **symbol** para buscar o generar un símbolo de moneda.
+- `symbol` para buscar o generar un símbolo de moneda.
 
-- **value** para buscar o generar un valor monetario.
+- `value` para buscar o generar un valor monetario.
 
-Se generan los componentes de un campo de salida monetario y los componentes de un campo de entrada monetario se hacen coincidir en el orden en el que estos elementos aparecen en **pattern::field**. Cada uno de los valores **sign**, **symbol**, **value**, y **none** o **space** deben aparecer exactamente una vez. El valor **none** no debe aparecer en primer lugar. El espacio de valor **must** no debe aparecer en primer ni en último lugar. Si **Intl** es True, el orden es **symbol**, **sign**, **none** y, después, **value**.
+Se generan los componentes de un campo de salida monetario y los componentes de un campo de entrada monetario se hacen coincidir en el orden en que estos elementos aparecen en `pattern::field`. Cada uno de los valores `sign`, `symbol`, `value`y `none` o `space` deben aparecer exactamente una vez. El valor `none` no debe aparecer en primer lugar. El espacio de valor **must** no debe aparecer en primer ni en último lugar. Si `Intl` es true, el orden es `symbol`, `sign`, `none`, a continuación, `value`.
 
 La versión de plantilla de `moneypunct`\< **CharType**, **Intl**> devuelve `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -531,11 +531,11 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Refs` Valor de entero utilizado para especificar el tipo de administración de memoria para el objeto.
+*_Refs* valor entero utilizado para especificar el tipo de administración de memoria para el objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Los valores posibles del parámetro `_Refs` y su importancia son:
+Los valores posibles de la *_Refs* parámetro y su importancia son:
 
 - 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 

@@ -30,16 +30,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0512e2794e5ac493a997b5d4d885931d9a9fc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862343"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960559"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf (Clase)
 
-Describe un búfer de secuencia que controla la transmisión de elementos hacia y desde una secuencia de elementos almacenados en un objeto de matriz `char`.
+Describe un búfer de secuencia que controla la transmisión de elementos a y desde una secuencia de elementos almacenados en un **char** objeto array.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -103,11 +103,12 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Freezeit` Un `bool` que indica si desea que la secuencia que se pueden inmovilizar.
+*_Freezeit*  
+ Un **bool** que indica si desea que la secuencia se detenga.
 
 ### <a name="remarks"></a>Comentarios
 
-Si `_Freezeit` es true, la función modifica el modo de `strstreambuf` almacenado para inmovilizar la secuencia controlada. De lo contrario, hace que la secuencia controlada no esté inmovilizada.
+Si *_Freezeit* es true, la función modifica almacenado `strstreambuf` modo para que la secuencia controlada inmovilizada. De lo contrario, hace que la secuencia controlada no esté inmovilizada.
 
 [str](#str) implica `freeze`.
 
@@ -190,7 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Meta` El carácter que se va a insertar en el búfer, o `EOF`.
+*_Meta*  
+ El carácter que se va a insertar en el búfer o `EOF`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -214,7 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Meta` El carácter que se va a insertar en el búfer, o `EOF`.
+*_Meta*  
+ El carácter que se va a insertar en el búfer o `EOF`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -226,9 +229,9 @@ La función miembro virtual protegida intenta devolver un elemento al búfer de 
 
 Si _ *Meta* == `EOF`, el elemento que se va a devolver es realmente el que ya está en el flujo por delante del elemento actual. De lo contrario, dicho elemento se sustituye por **ch** = ( `char`)\_ *Meta*. La función puede devolver un elemento de distintas maneras:
 
-- Si está disponible una posición de devolución y el elemento almacenado es igual a **ch**, puede disminuir el puntero siguiente para el búfer de entrada.
+- Si está disponible una posición de devolución y el elemento almacenado es igual a `ch`, puede disminuir el puntero siguiente del búfer de entrada.
 
-- Si está disponible una posición de devolución y si el modo de strstreambuf indica que la secuencia controlada es modificable, la función puede almacenar **ch** en la posición de devolución y disminuir el puntero siguiente para el búfer de entrada.
+- Si está disponible una posición de devolución y si el modo de strstreambuf indica que la secuencia controlada es modificable, la función puede almacenar `ch` en la posición de devolución y disminuir el puntero siguiente del búfer de entrada.
 
 ## <a name="pcount"></a>  strstreambuf::pcount
 
@@ -277,11 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Parámetros
 
-`_Off` La posición que realice una búsqueda para relativo a `_Way`.
+*_Off*  
+ La posición para buscar relativa a *_Way*.
 
-`_Way` El punto de partida para desplazar las operaciones. Vea los valores posibles en [seekdir](../standard-library/ios-base-class.md#seekdir).
+*_Way*  
+ El punto de partida de las operaciones de desplazamiento. Vea los valores posibles en [seekdir](../standard-library/ios-base-class.md#seekdir).
 
-`_Which` Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
+*_Which*  
+ Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -313,9 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Parámetros
 
-`_Sp` La posición que realice una búsqueda para.
+*_Sp*  
+ La posición que se va a buscar.
 
-`_Which` Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
+*_Which*  
+ Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -381,19 +389,24 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Parámetros
 
-*_Allocfunc* la función usada para asignar memoria de búfer.
+*_Allocfunc*  
+ La función que se usa para asignar memoria de búfer.
 
-`count` Determina la longitud del búfer señalado por `_Getptr`. Si `_Getptr` no es un argumento (primer formulario constructor), el tamaño de una asignación sugerida para los búferes.
+*count*  
+ Determina la longitud del búfer señalado por *_Getptr*. Si *_Getptr* no es un argumento (primer formulario constructor), el tamaño de una asignación sugerida para los búferes.
 
-*_Freefunc* la función usada para liberar memoria de búfer.
+*_Freefunc*  
+ La función que se usa para liberar memoria de búfer.
 
-`_Getptr` Un búfer que se usa para la entrada.
+*_Getptr*  
+ Un búfer que se usa para la entrada.
 
-`_Putptr` Un búfer que se usa para la salida.
+*_Putptr*  
+ Un búfer que se usa para la salida.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor almacena un puntero nulo en todos los punteros que controlan el búfer de entrada, el búfer de salida y la asignación de strstreambuf. Establece el modo de strstreambuf almacenado para que la secuencia controlada se pueda modificar y ampliar. También acepta `count` como el tamaño de asignación inicial sugerido.
+El primer constructor almacena un puntero nulo en todos los punteros que controlan el búfer de entrada, el búfer de salida y la asignación de strstreambuf. Establece el modo de strstreambuf almacenado para que la secuencia controlada se pueda modificar y ampliar. También acepta *recuento* como un tamaño de asignación inicial sugerido.
 
 El segundo constructor se comporta como el primero, salvo que almacena _ *Allocfunc* como puntero a la función que se llama para asignar el almacenamiento y \_ *Freefunc* como puntero a la función que se llama para liberar el almacenamiento.
 
@@ -477,7 +490,7 @@ Si la función no se ejecuta correctamente, devuelve `EOF`. De lo contrario, dev
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida intenta extraer el elemento actual **ch** desde el búfer de entrada, a continuación, avanzar la posición de la secuencia actual y devuelve el elemento como (`int`) (`unsigned char`) **ch** . Solo puede hacerlo de una manera: si una posición de lectura está disponible, toma **ch** como el elemento almacenado en la posición de lectura y avanza el puntero siguiente para el búfer de entrada.
+La función miembro virtual protegida intenta extraer el elemento actual `ch` del búfer de entrada y, a continuación, avanzar la posición actual del flujo y devolver el elemento como (`int`) (`unsigned char`) **ch**. Puede hacerlo en solo una manera: si una posición de lectura está disponible, toma `ch` como el elemento almacenado en la posición de lectura y avanza el puntero siguiente del búfer de entrada.
 
 ## <a name="see-also"></a>Vea también
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8bd1ec1436b960a0637a79cb04982a953636a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4bff519ea12646e94e92cde219fa38e4009a767
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856305"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956463"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc (Clase)
 
@@ -44,7 +44,7 @@ class rts_alloc
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Cache`|El tipo de instancias de caché contenido en la matriz. Puede ser [cache_chunklist (Clase)](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md)|
+|*Caché*|El tipo de instancias de caché contenido en la matriz. Puede ser [cache_chunklist (Clase)](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md)|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`count`|El número de elementos de la matriz que se van a asignar.|
+|*count*|El número de elementos de la matriz que se van a asignar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -84,7 +84,7 @@ Un puntero al objeto asignado.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve `caches[_IDX].allocate(count)`, donde el índice `_IDX` viene determinado por el tamaño de bloque solicitado `count`, o bien, si `count` es demasiado grande, devuelve `operator new(count)`. `cache`, que representa el objeto de caché.
+La función miembro devuelve `caches[_IDX].allocate(count)`, donde el índice `_IDX` viene determinada por el tamaño de bloque solicitado *recuento*, o bien, si *recuento* es demasiado grande, devuelve `operator new(count)`. `cache`, que representa el objeto de caché.
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -98,12 +98,12 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`ptr`|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
-|`count`|El número de objetos que se van a desasignar del almacenamiento.|
+|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro llama a `caches[_IDX].deallocate(ptr, count)`, donde el índice `_IDX` viene determinado por el tamaño de bloque solicitado `count`, o bien, si `count` es demasiado grande, devuelve `operator delete(ptr)`.
+La función miembro llama a `caches[_IDX].deallocate(ptr, count)`, donde el índice `_IDX` viene determinada por el tamaño de bloque solicitado *recuento*, o bien, si *recuento* es demasiado grande, devuelve `operator delete(ptr)`.
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -117,12 +117,12 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`_Cache`|El objeto de caché asociado con el filtro.|
-|`_Other`|El objeto de caché para comparar la igualdad.|
+|*_Cache*|El objeto de caché asociado con el filtro.|
+|*_Otro*|El objeto de caché para comparar la igualdad.|
 
 ### <a name="remarks"></a>Comentarios
 
-`true` si el resultado de `caches[0].equals(other.caches[0])`; en caso contrario, `false`. `caches` representa la matriz de objetos de caché.
+**True** si el resultado de `caches[0].equals(other.caches[0])`; en caso contrario, **false**. `caches` representa la matriz de objetos de caché.
 
 ## <a name="see-also"></a>Vea también
 
