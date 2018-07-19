@@ -1,5 +1,5 @@
 ---
-title: Clase CBasePane | Documentos de Microsoft
+title: CBasePane (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -176,15 +176,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74e8909a86a9382121dc2dc3375d12ed828c8c88
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 759ffd42b7de4d7f1922a95876a05ce4d3002dab
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337543"
 ---
-# <a name="cbasepane-class"></a>Clase CBasePane
-Clase base para todos los paneles de MFC.  
+# <a name="cbasepane-class"></a>CBasePane (clase)
+Clase base para todos los paneles en MFC.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -206,11 +206,11 @@ class CBasePane : public CWnd
 |Name|Descripción|  
 |----------|-----------------|  
 |`CBasePane::accHitTest`|El marco llama a este método para recuperar el elemento u objeto secundario situado en un punto dado de la pantalla. (Invalida [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|  
-|`CBasePane::accLocation`|Lo llama el marco de trabajo para recuperar la ubicación de pantalla actual para el objeto especificado. (Invalida [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
+|`CBasePane::accLocation`|Lo llama el marco de trabajo para recuperar la ubicación actual de la pantalla para el objeto especificado. (Invalida [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
 |[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` no se utiliza este método.|  
 |`CBasePane::accSelect`|El marco llama a este método para modificar la selección o desplazar el foco de teclado del objeto especificado. (Invalida [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|  
 |[CBasePane::AddPane](#addpane)|Agrega un panel para el Administrador de acoplamiento.|  
-|[Cbasepane:: Adjustdockinglayout](#adjustdockinglayout)|Redirige una llamada al administrador de acoplamiento para ajustar el diseño de acoplamiento.|  
+|[Cbasepane:: Adjustdockinglayout](#adjustdockinglayout)|Redirige una llamada para el Administrador de acoplamiento para ajustar el diseño de acoplamiento.|  
 |[Cbasepane:: Adjustlayout](#adjustlayout)|Lo llama el marco cuando el panel debe ajustar su diseño interno.|  
 |[Cbasepane:: Calcfixedlayout](#calcfixedlayout)|Calcula el tamaño horizontal de una barra de controles.|  
 |[Cbasepane:: Canacceptpane](#canacceptpane)|Determina si se puede acoplar a otro panel al panel.|  
@@ -218,28 +218,28 @@ class CBasePane : public CWnd
 |[CBasePane::CanBeAttached](#canbeattached)|Determina si se puede acoplar el panel a otro panel.|  
 |[Cbasepane:: Canbeclosed](#canbeclosed)|Determina si se puede cerrar el panel.|  
 |[CBasePane::CanBeDocked](#canbedocked)|Determina si se puede acoplar el panel a otro panel.|  
-|[CBasePane::CanBeResized](#canberesized)|Determina si el panel puede cambiarse.|  
-|[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|Especifica si el panel se puede convertir en un documento con pestañas MDI.|  
+|[CBasePane::CanBeResized](#canberesized)|Determina si se puede cambiar el tamaño del panel.|  
+|[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|Especifica si el panel puede convertirse en un documento con fichas MDI.|  
 |[CBasePane::CanFloat](#canfloat)|Determina si el panel puede flotar.|  
 |[CBasePane::CanFocus](#canfocus)|Especifica si el panel puede recibir el foco.|  
-|[CBasePane::CopyState](#copystate)|Copia el estado de un determinado panel.|  
+|[CBasePane::CopyState](#copystate)|Copia el estado de un panel determinado.|  
 |[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|Si el panel puede flotar, crea una ventana de marco reducido.|  
-|[Cbasepane:: CreateEx](#createex)|Crea el control de panel.|  
-|[Cbasepane:: Dockpane](#dockpane)|Acopla un panel a otro panel o una ventana de marco.|  
+|[Cbasepane:: CreateEx](#createex)|Crea el control del panel.|  
+|[Cbasepane:: Dockpane](#dockpane)|Acopla un panel a otro panel o a una ventana de marco.|  
 |[CBasePane::DockPaneUsingRTTI](#dockpaneusingrtti)|Acopla el panel con información de tipo en tiempo de ejecución.|  
 |[CBasePane::DockToFrameWindow](#docktoframewindow)|Acopla un panel acoplable a un marco.|  
 |[Cbasepane:: Doesallowdyninsertbefore](#doesallowdyninsertbefore)|Determina si se puede insertar otro panel dinámicamente entre este panel y el marco primario.|  
-|[CBasePane::EnableDocking](#enabledocking)|Habilita el acoplamiento del panel en el marco principal.|  
-|[CBasePane::EnableGripper](#enablegripper)|Habilita o deshabilita el punto de sujeción. Si la barra de redimensionamiento está habilitado, el usuario puede arrastrar para cambiar la posición del panel.|  
-|`CBasePane::FillWindowRect`|Se utiliza internamente.|  
+|[CBasePane::EnableDocking](#enabledocking)|Habilita el acoplamiento del panel para el marco principal.|  
+|[CBasePane::EnableGripper](#enablegripper)|Habilita o deshabilita la barra de redimensionamiento. Si la barra de redimensionamiento está habilitada, el usuario puede arrastrar para cambiar la posición del panel.|  
+|`CBasePane::FillWindowRect`|Lo utiliza internamente.|  
 |[CBasePane::FloatPane](#floatpane)|Desplaza el panel.|  
 |`CBasePane::get_accChild`|El marco llama a este método para recuperar la dirección de una interfaz `IDispatch` del elemento secundario especificado. (Invalida [CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|  
 |`CBasePane::get_accChildCount`|Lo llama el marco de trabajo para recuperar el número de elementos secundarios que pertenecen a este objeto. (Invalida [CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|  
 |`CBasePane::get_accDefaultAction`|Lo llama el marco de trabajo para recuperar una cadena que describe la acción predeterminada para el objeto. (Invalida [CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|  
 |`CBasePane::get_accDescription`|El marco llama a este método para recuperar una cadena que describe la apariencia visual del objeto especificado. (Invalida [CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|  
 |`CBasePane::get_accFocus`|El marco llama a este método para recuperar el objeto que tiene el foco de teclado. (Invalida [CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|  
-|`CBasePane::get_accHelp`|Lo llama el marco de trabajo para recuperar una cadena de propiedad de ayuda para el objeto. (Invalida [CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|  
-|[CBasePane::get_accHelpTopic](#get_acchelptopic)|Lo llama el marco de trabajo para recuperar la ruta de acceso completa del archivo WinHelp que está asociado con el objeto especificado y el identificador del tema correspondiente en ese archivo. (Invalida [CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|  
+|`CBasePane::get_accHelp`|Lo llama el marco de trabajo para recuperar una cadena de propiedad de la ayuda para el objeto. (Invalida [CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|  
+|[CBasePane::get_accHelpTopic](#get_acchelptopic)|Lo llama el marco de trabajo para recuperar la ruta de acceso completa del archivo WinHelp asociado con el objeto especificado y el identificador del tema correspondiente en ese archivo. (Invalida [CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|  
 |`CBasePane::get_accKeyboardShortcut`|Lo llama el marco de trabajo para recuperar la clave de acceso de directo especificado para el objeto. (Invalida [CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|  
 |`CBasePane::get_accName`|El marco llama a este método para recuperar el nombre del objeto especificado. (Invalida [CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|  
 |`CBasePane::get_accParent`|Lo llama el marco para recuperar el `IDispatch` interfaz para el elemento primario del objeto. (Invalida [CWnd::get_accParent](../../mfc/reference/cwnd-class.md#get_accparent).)|  
@@ -253,18 +253,18 @@ class CBasePane : public CWnd
 |[Cbasepane:: Getdockingmode](#getdockingmode)|Devuelve el modo de acoplamiento actual para el panel.|  
 |[CBasePane::GetDockSiteFrameWnd](#getdocksiteframewnd)|Devuelve un puntero a la ventana que es el sitio de vinculación para el panel.|  
 |[CBasePane::GetEnabledAlignment](#getenabledalignment)|Devuelve los estilos CBRS_ALIGN_ que se aplican al panel.|  
-|[CBasePane::GetMFCStyle](#getmfcstyle)|Devuelve los estilos de panel específico a MFC.|  
-|[CBasePane::GetPaneIcon](#getpaneicon)|Devuelve un identificador para el icono del panel.|  
-|`CBasePane::GetPaneRect`|Se utiliza internamente.|  
-|[CBasePane::GetPaneRow](#getpanerow)|Devuelve un puntero a la [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)objeto en el panel está acoplado.|  
+|[CBasePane::GetMFCStyle](#getmfcstyle)|Devuelve los estilos de panel específico para MFC.|  
+|[CBasePane::GetPaneIcon](#getpaneicon)|Devuelve un identificador para el icono de panel.|  
+|`CBasePane::GetPaneRect`|Lo utiliza internamente.|  
+|[CBasePane::GetPaneRow](#getpanerow)|Devuelve un puntero a la [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)objeto dónde se acopla el panel.|  
 |[CBasePane::GetPaneStyle](#getpanestyle)|Devuelve el estilo del panel.|  
 |[CBasePane::GetParentDockSite](#getparentdocksite)|Devuelve un puntero para el sitio de vinculación de elemento primario.|  
 |[CBasePane::GetParentMiniFrame](#getparentminiframe)|Devuelve un puntero a la ventana de marco reducido primaria.|  
-|[CBasePane::GetParentTabbedPane](#getparenttabbedpane)|Devuelve un puntero al panel con fichas primario.|  
+|[CBasePane::GetParentTabbedPane](#getparenttabbedpane)|Devuelve un puntero al panel principal con pestañas.|  
 |[CBasePane::GetParentTabWnd](#getparenttabwnd)|Devuelve un puntero a la ventana primaria que está dentro de una pestaña.|  
-|[CBasePane::GetRecentVisibleState](#getrecentvisiblestate)|El marco de trabajo llama a este método cuando se restaura un panel desde un archivo.|  
-|[CBasePane::HideInPrintPreviewMode](#hideinprintpreviewmode)|Especifica si está oculta el panel de vista previa de impresión.|  
-|[CBasePane::InsertPane](#insertpane)|Registra el panel especificado con el Administrador de acoplamiento.|  
+|[CBasePane::GetRecentVisibleState](#getrecentvisiblestate)|El marco llama a este método cuando se restaura un panel desde un archivo.|  
+|[CBasePane::HideInPrintPreviewMode](#hideinprintpreviewmode)|Especifica si el panel está oculto en la vista previa de impresión.|  
+|[CBasePane::InsertPane](#insertpane)|El panel especificado se registra con el Administrador de acoplamiento.|  
 |[CBasePane::IsAccessibilityCompatible](#isaccessibilitycompatible)|Especifica si el panel admite Active Accessibility.|  
 |[CBasePane::IsAutoHideMode](#isautohidemode)|Determina si un panel está en modo de ocultación automática.|  
 |[CBasePane::IsDialogControl](#isdialogcontrol)|Especifica si el panel es un control de cuadro de diálogo.|  
@@ -273,41 +273,41 @@ class CBasePane : public CWnd
 |[CBasePane::IsHorizontal](#ishorizontal)|Determina si el panel está acoplado horizontalmente.|  
 |[CBasePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Especifica si el panel está en una ventana de marco de varios paneles.|  
 |[CBasePane::IsMDITabbed](#ismditabbed)|Determina si el panel se ha agregado a una ventana secundaria MDI como un documento con pestañas.|  
-|[CBasePane::IsPaneVisible](#ispanevisible)|Especifica si el `WS_VISIBLE` marcador está establecido para el panel.|  
+|[CBasePane::IsPaneVisible](#ispanevisible)|Especifica si se establece la marca WS_VISIBLE para el panel.|  
 |[CBasePane::IsPointNearDockSite](#ispointneardocksite)|Determina si un punto especificado se encuentra cerca del sitio de vinculación.|  
-|[Cbasepane:: isResizable](#isresizable)|Determina si el panel puede cambiarse.|  
+|[Cbasepane:: isResizable](#isresizable)|Determina si se puede cambiar el tamaño del panel.|  
 |[CBasePane::IsRestoredFromRegistry](#isrestoredfromregistry)|Determina si el panel se restaura desde el registro.|  
-|[CBasePane::IsTabbed](#istabbed)|Determina si el panel se ha insertado en el control de pestaña de una ventana con pestañas.|  
-|`CBasePane::IsTooltipTopmost`|Se utiliza internamente.|  
-|[CBasePane::IsVisible](#isvisible)|Determina si el panel está visible.|  
+|[CBasePane::IsTabbed](#istabbed)|Determina si el panel se ha insertado en el control de ficha de una ventana con pestañas.|  
+|`CBasePane::IsTooltipTopmost`|Lo utiliza internamente.|  
+|[CBasePane::IsVisible](#isvisible)|Determina si está visible el panel.|  
 |[CBasePane::LoadState](#loadstate)|Carga el estado del panel desde el registro.|  
-|[CBasePane::MoveWindow](#movewindow)|Mueve el panel.|  
-|[CBasePane::OnAfterChangeParent](#onafterchangeparent)|Lo llama el marco cuando ha cambiado el elemento primario del panel.|  
-|[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|Lo llama el marco justo antes de que el panel cambia su ventana primaria.|  
-|[CBasePane::OnDrawCaption](#ondrawcaption)|El marco de trabajo llama a este método cuando se dibuja el título.|  
+|[Cbasepane:: MoveWindow](#movewindow)|Mueve el panel.|  
+|[CBasePane::OnAfterChangeParent](#onafterchangeparent)|Lo llama el marco de trabajo cuando se ha cambiado el elemento primario del panel.|  
+|[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|Lo llama el marco de trabajo justo antes de que el panel cambia su ventana primaria.|  
+|[CBasePane::OnDrawCaption](#ondrawcaption)|El marco llama a este método cuando se dibuje la leyenda.|  
 |[CBasePane::OnMovePaneDivider](#onmovepanedivider)|Este método no se utiliza actualmente.|  
-|[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|Lo llama el marco cuando compila un menú con una lista de paneles.|  
-|[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|Lo llama el marco cuando se quita un panel de su ventana de marco mini primaria.|  
+|[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|Lo llama el marco cuando compila un menú que tiene una lista de paneles.|  
+|[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|Lo llama el marco de trabajo cuando se quita un panel de su ventana de marco mini primaria.|  
 |[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` no se utiliza este método.|  
-|`CBasePane::OnUpdateCmdUI`|Se utiliza internamente.|  
+|`CBasePane::OnUpdateCmdUI`|Lo utiliza internamente.|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|Devuelve el panel que contiene el punto especificado.|  
 |`CBasePane::PreTranslateMessage`|La clase [CWinApp](../../mfc/reference/cwinapp-class.md) lo usa para traducir los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` no se utiliza este método.|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Anula el registro de un panel y lo quita de la lista en el Administrador de acoplamiento.|  
 |[CBasePane::SaveState](#savestate)|Guarda el estado del panel en el registro.|  
-|[CBasePane::SelectDefaultFont](#selectdefaultfont)|Selecciona la fuente predeterminada para un contexto de dispositivo especificado.|  
+|[CBasePane::SelectDefaultFont](#selectdefaultfont)|Selecciona la fuente predeterminada para un contexto de dispositivo determinado.|  
 |`CBasePane::Serialize`|Lee o escribe este objeto de o en un archivo. (Invalida [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)).|  
 |[CBasePane::SetControlBarStyle](#setcontrolbarstyle)|Establece el estilo de barra de control.|  
-|[CBasePane::SetDockingMode](#setdockingmode)|Establece el modo de acoplamiento para el panel.|  
-|`CBasePane::SetMDITabbed`|Se utiliza internamente.|  
-|[CBasePane::SetPaneAlignment](#setpanealignment)|Establece la alineación del panel.|  
-|`CBasePane::SetPaneRect`|Se utiliza internamente.|  
+|[CBasePane::SetDockingMode](#setdockingmode)|Establece el modo de acoplamiento del panel.|  
+|`CBasePane::SetMDITabbed`|Lo utiliza internamente.|  
+|[CBasePane::SetPaneAlignment](#setpanealignment)|Establece la alineación para el panel.|  
+|`CBasePane::SetPaneRect`|Lo utiliza internamente.|  
 |[CBasePane::SetPaneStyle](#setpanestyle)|Establece el estilo del panel.|  
-|`CBasePane::SetRestoredFromRegistry`|Se utiliza internamente.|  
-|[CBasePane::SetWindowPos](#setwindowpos)|Cambia el tamaño, la posición y el orden Z de un panel.|  
+|`CBasePane::SetRestoredFromRegistry`|Lo utiliza internamente.|  
+|[CBasePane::SetWindowPos](#setwindowpos)|Cambia el tamaño, posición y el orden Z de un panel.|  
 |[CBasePane::ShowPane](#showpane)|Muestra u oculta el panel.|  
 |[Cbasepane:: Dockpane](#stretchpane)|Expande un panel vertical u horizontalmente.|  
-|[CBasePane::UndockPane](#undockpane)|Quita el panel desde el sitio de vinculación, control deslizante de manera predeterminada o ventana de marco reducido que actualmente está acoplada.|  
+|[CBasePane::UndockPane](#undockpane)|Quita el panel de la ventana de marco reducido donde actualmente está acoplada, control deslizante de forma predeterminada o el sitio de vinculación.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
@@ -316,39 +316,39 @@ class CBasePane : public CWnd
 |[CBasePane::DoPaint](#dopaint)|Rellena el fondo del panel.|  
   
 ## <a name="remarks"></a>Comentarios  
- Si desea crear una clase de panel que admite las características de acoplamiento extendidas disponibles en MFC, debe derivar de `CBasePane` o de [clase CPane](../../mfc/reference/cpane-class.md).  
+ Si desea crear una clase de panel que admite las características de acoplamiento extendidas disponibles en MFC, debe derivar de `CBasePane` o desde [clase CPane](../../mfc/reference/cpane-class.md).  
   
 ## <a name="customization-tips"></a>Sugerencias de personalización  
- Las siguientes sugerencias de personalización se refieren a la `CBasePane Class` y todas las clases que heredan de él:  
+ Las siguientes sugerencias de personalización que pertenecen a la `CBasePane Class` y todas las clases que heredan de él:  
   
 -   Cuando se crea un panel, puede aplicar varios estilos de nuevo:  
   
-    - `AFX_CBRS_FLOAT` hace que el tipo float de panel.  
+    - AFX_CBRS_FLOAT hace que el valor float de panel.  
   
-    - `AFX_CBRS_AUTOHIDE` habilita el modo de ocultación automática.  
+    - AFX_CBRS_AUTOHIDE habilita el modo de ocultación automática.  
   
-    - `AFX_CBRS_CLOSE` permite que el panel cerrarse (oculto).  
+    - AFX_CBRS_CLOSE permite que el panel que se cerrará (oculto).  
   
-     Se trata de marcas que se pueden combinar con una operación OR bit a bit.  
+     Estos son marcas que se pueden combinar con una operación OR bit a bit.  
   
- `CBasePane` implementa los siguientes métodos de booleanos virtuales para reflejar estas marcas: [cbasepane:: Canbeclosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Se puede reemplazar en clases derivadas para personalizar su comportamiento.  
+ `CBasePane` implementa los siguientes métodos de tipo Boolean virtuales para reflejar estas marcas: [cbasepane:: Canbeclosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Se puede reemplazar en clases derivadas para personalizar su comportamiento.  
   
--   Puede personalizar el comportamiento de acoplamiento invalidando [cbasepane:: Canacceptpane](#canacceptpane). Especifica que el panel de valor devuelto `FALSE` desde este método para evitar que otro panel de acoplamiento a él.  
+-   Puede personalizar el comportamiento de acoplamiento invalidando [cbasepane:: Canacceptpane](#canacceptpane). Tiene su panel devolver FALSE desde este método para evitar que otro panel de acoplamiento a él.  
   
--   Si desea crear un panel estático que no se puede desplazar y que impide que cualquier otro panel de acoplamiento antes de que (similar a la barra de Outlook en el ejemplo de OutlookDemo), créela como no flotante y reemplazar [cbasepane:: Doesallowdyninsertbefore](#doesallowdyninsertbefore) para devolver `FALSE`. La implementación predeterminada devuelve `FALSE` si se crea el panel sin el `AFX_CBRS_FLOAT` estilo.  
+-   Si desea crear un panel estático que no se puede flotar y que impide que cualquier otro panel de acoplamiento antes de que (similar a la barra de Outlook en el ejemplo OutlookDemo), créela como no flotante e invalide [cbasepane:: Doesallowdyninsertbefore](#doesallowdyninsertbefore) devuelva FALSE. La implementación predeterminada devuelve FALSE si se crea el panel sin el estilo AFX_CBRS_FLOAT.  
   
 -   Crear todos los paneles con identificadores distinto de -1.  
   
--   Para determinar la visibilidad del panel, utilice [CBasePane::IsVisible](#isvisible). Administra correctamente el estado de visibilidad en fichas y modos de ocultación automática.  
+-   Para determinar la visibilidad del panel, utilice [CBasePane::IsVisible](#isvisible). Administra correctamente el estado de visibilidad en pestañas y modos de ocultar automáticamente.  
   
--   Si desea crear un panel de tamaño variable no flotante, sin crear el `AFX_CBRS_FLOAT` estilo y llame al método [CFrameWnd:: DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).  
+-   Si desea crear un panel de tamaño ajustable no flotante, crear sin el estilo AFX_CBRS_FLOAT y llamar a [CFrameWnd:: DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).  
   
--   Para excluir un panel de diseño de acoplamiento o para quitar una barra de herramientas de la barra de acoplamiento, llame a [CBasePane::UndockPane](#undockpane). No llame a este método para los paneles en modo de ocultación automática o de los paneles que residen en las pestañas de las ventanas con pestañas.  
+-   Para excluir un panel de diseño de acoplamiento o para quitar una barra de herramientas de la barra de acoplamiento, llame a [CBasePane::UndockPane](#undockpane). No llame a este método para los paneles en modo de ocultación automática o de los paneles que residen en las pestañas de ventanas con pestañas.  
   
--   Si desea float o desacoplar un panel que se encuentra en modo de ocultación automática, debe llamar a [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode) con `FALSE` como el primer argumento antes de llamar a [CBasePane::FloatPane](#floatpane) o [ CBasePane::UndockPane](#undockpane).  
+-   Si desea float o desacoplar un panel que está en modo de ocultación automática, se debe llamar a [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode) con FALSE como primer argumento antes de llamar a [CBasePane::FloatPane](#floatpane) o [ CBasePane::UndockPane](#undockpane).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar varios métodos en la `CBasePane` clase. En el ejemplo se muestra cómo recuperar un panel desde el `CFrameWndEx` clase y cómo establecer el modo de acoplamiento, la alineación del panel y el estilo del panel. El código está tomado la [ejemplo de WordPad](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CBasePane` clase. En el ejemplo se muestra cómo recuperar un panel desde el `CFrameWndEx` clase y cómo establecer el modo de acoplamiento, la alineación del panel y el estilo del panel. El código está tomado del [ejemplo de WordPad](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]  
   
@@ -387,12 +387,12 @@ void AddPane(CBasePane* pBar);
  Un puntero a un panel para agregar.  
   
 ### <a name="remarks"></a>Comentarios  
- Se trata de un método cómodo que agrega un panel a un administrador de acoplamiento. Con este método, no es necesario escribir código que analiza el tipo de un marco primario.  
+ Se trata de un método de conveniencia que agrega un panel a un administrador de acoplamiento. Con este método, no es necesario escribir código que analiza el tipo del marco primario.  
   
- Para obtener más información, consulte [CDockingManager clase](../../mfc/reference/cdockingmanager-class.md) y [CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane).  
+ Para obtener más información, consulte [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) y [CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane).  
   
 ##  <a name="adjustdockinglayout"></a>  Cbasepane:: Adjustdockinglayout  
- Redirige una llamada al administrador de acoplamiento para ajustar el diseño de acoplamiento.  
+ Redirige una llamada para el Administrador de acoplamiento para ajustar el diseño de acoplamiento.  
   
 ```  
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
@@ -400,10 +400,10 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
   
 ### <a name="parameters"></a>Parámetros  
  [out] *hdwp*  
- Un identificador a una estructura que contiene varias posiciones de la ventana.  
+ Identificador de una estructura que contiene varias posiciones de ventana.  
   
 ### <a name="remarks"></a>Comentarios  
- Se trata de un método cómodo que ajusta el diseño de acoplamiento. Con este método, no es necesario escribir código que analiza el tipo de un marco primario.  
+ Se trata de un método de conveniencia que ajusta el diseño de acoplamiento. Con este método, no es necesario escribir código que analiza el tipo del marco primario.  
   
  Para obtener más información, consulte [CDockingManager::AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)  
   
@@ -415,7 +415,7 @@ virtual void AdjustLayout();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método cuando tiene un panel ajustar su diseño interno. La implementación base no hace nada.  
+ El marco llama a este método cuando tiene un panel ajustar su diseño interno. La implementación base no hace nada.  
   
 ##  <a name="calcfixedlayout"></a>  Cbasepane:: Calcfixedlayout  
  Calcula el tamaño horizontal de una barra de controles.  
@@ -428,16 +428,16 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bStretch*  
- Indica si la barra debe ajustarse al tamaño del marco. El *bStretch* parámetro es distinto de cero si la barra no es una barra de acoplamiento (no disponible para acoplar) y es 0 cuando está acoplado o flotante (disponible para acoplar).  
+ Indica si la barra se debe ajustar el tamaño del marco. El *bStretch* parámetro es distinto de cero cuando la barra no es una barra de acoplamiento (no disponible para acoplar) y es 0 si es acoplada o flotante (disponible para acoplar).  
   
  [in] *bHorz*  
- Indica que la barra está orientada horizontal o verticalmente. El *bHorz* parámetro es distinto de cero si la barra es una orientación horizontal y es 0 si es una orientación vertical.  
+ Indica que la barra está orientada horizontal o verticalmente. El *bHorz* parámetro es distinto de cero si la barra es horizontal y es 0 si es una orientación vertical.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La barra de control de tamaño, en píxeles, de un `CSize` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte la sección de la sección comentarios en [CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)  
+ Consulte la sección de la sección de comentarios en [CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)  
   
 ##  <a name="canacceptpane"></a>  Cbasepane:: Canacceptpane  
  Determina si se puede acoplar a otro panel al panel.  
@@ -451,14 +451,14 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
  Un puntero al panel para acoplar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si se puede aceptar otro panel; en caso contrario, `FALSE`.  
+ TRUE si se puede aceptar otro panel; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método antes de que acopla el panel especificado por *pBar* al panel actual.  
+ El marco llama a este método antes de que acopla el panel especificado por *pBar* al panel actual.  
   
- Utilice este método y el [CBasePane::CanBeDocked](#canbedocked) método para controlar cómo acoplar paneles en otros paneles de la aplicación.  
+ Use este método y el [CBasePane::CanBeDocked](#canbedocked) método para controlar cómo acoplar paneles a otros paneles en la aplicación.  
   
- La implementación predeterminada devuelve `FALSE`.  
+ La implementación predeterminada devuelve FALSE.  
   
 ##  <a name="canautohide"></a>  CBasePane::CanAutoHide  
  Determina si el panel admite el modo de ocultación automática.  
@@ -468,14 +468,14 @@ virtual BOOL CanAutoHide() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este panel admite el modo de ocultación automática; en caso contrario, `FALSE`.  
+ TRUE si este panel admite el modo de ocultación automática; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a esta función para determinar si el panel admite el modo de ocultación automática.  
   
- Durante la construcción, puede establecer esta capacidad pasando el `AFX_CBRS_AUTOHIDE` indicador en [cbasepane:: CreateEx](#createex).  
+ Durante la construcción, puede establecer esta capacidad al pasar la marca de AFX_CBRS_AUTOHIDE [cbasepane:: CreateEx](#createex).  
   
- La implementación predeterminada busca la `AFX_CBRS_AUTOHIDE` marca. Invalide este método en una clase derivada para personalizar este comportamiento.  
+ La implementación predeterminada busca la marca AFX_CBRS_AUTOHIDE. Invalide este método en una clase derivada para personalizar este comportamiento.  
   
 ##  <a name="canbeattached"></a>  CBasePane::CanBeAttached  
  Determina si se puede acoplar el panel a otra panel o ventana de marco.  
@@ -485,10 +485,10 @@ virtual BOOL CanBeAttached() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si se puede acoplar el panel a otro panel o ventana de marco; en caso contrario, `FALSE`.  
+ TRUE si se puede acoplar el panel a otro panel o ventana de marco; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada devuelve `FALSE`. Invalide este método en una clase derivada para habilitar o deshabilitar la capacidad para acoplar sin llamar a [CBasePane::EnableDocking](#enabledocking).  
+ La implementación predeterminada devuelve FALSE. Invalide este método en una clase derivada para habilitar o deshabilitar la capacidad para acoplar sin llamar a [CBasePane::EnableDocking](#enabledocking).  
   
 ##  <a name="canbeclosed"></a>  Cbasepane:: Canbeclosed  
  Determina si se puede cerrar el panel.  
@@ -498,14 +498,14 @@ virtual BOOL CanBeClosed() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si se puede cerrar el panel; en caso contrario, `FALSE`.  
+ TRUE si se puede cerrar el panel; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método para determinar si se puede cerrar el panel. Si el método devuelve `TRUE`, **cerrar** botón se agrega a la barra de título del panel o, si el panel está flotando, en la barra de título de ventana de marco reducido del panel.  
+ El marco llama a este método para determinar si se puede cerrar el panel. Si el método devuelve TRUE, un **cerrar** botón se agrega a la barra de título del panel o, si el panel en flotante, en la barra de título de ventana de marco reducido del panel.  
   
- Durante la construcción, puede establecer esta capacidad pasando el `AFX_CBRS_CLOSE` indicador en [cbasepane:: CreateEx](#createex).  
+ Durante la construcción, puede establecer esta capacidad al pasar la marca de AFX_CBRS_CLOSE [cbasepane:: CreateEx](#createex).  
   
- La implementación predeterminada busca la `AFX_CBRS_CLOSE` marca.  
+ La implementación predeterminada busca la marca AFX_CBRS_CLOSE.  
   
 ##  <a name="canbedocked"></a>  CBasePane::CanBeDocked  
  Determina si se puede acoplar el panel a otro panel.  
@@ -519,40 +519,40 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
  Un puntero a otro panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este panel se puede acoplar a otro panel; en caso contrario, `FALSE`.  
+ TRUE si este panel se puede acoplar a otro panel; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método antes de que acopla el panel especificado por *pDockBar* al panel actual.  
+ El marco llama a este método antes de que acopla el panel especificado por *pDockBar* al panel actual.  
   
- Utilice este método y el [cbasepane:: Canacceptpane](#canacceptpane) método para controlar cómo acoplar paneles en otros paneles de la aplicación.  
+ Use este método y el [cbasepane:: Canacceptpane](#canacceptpane) método para controlar cómo acoplar paneles a otros paneles en la aplicación.  
   
- La implementación predeterminada devuelve `FALSE`.  
+ La implementación predeterminada devuelve FALSE.  
   
 ##  <a name="canberesized"></a>  CBasePane::CanBeResized  
- Determina si el panel puede cambiarse.  
+ Determina si se puede cambiar el tamaño del panel.  
   
 ```  
 virtual BOOL CanBeResized() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel puede cambiarse de tamaño; en caso contrario, `FALSE`.  
+ TRUE si el panel puede cambiarse de tamaño; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método busca el `AFX_CBRS_RESIZE` marca, que se especifica de forma predeterminada en `CBasePane::OnCreate`. Si no se especifica este marcador, el Administrador de acoplamiento marca el panel internamente como inamovible en lugar de acoplarla.  
+ Este método comprueba si la marca AFX_CBRS_RESIZE, que se especifica de forma predeterminada en `CBasePane::OnCreate`. Si no se especifica esta marca, el Administrador de acoplamiento indicadores del panel internamente como inamovible en lugar de acoplarla.  
   
 ##  <a name="canbetabbeddocument"></a>  CBasePane::CanBeTabbedDocument  
- Especifica si el panel se puede convertir en un documento con pestañas MDI.  
+ Especifica si el panel puede convertirse en un documento con fichas MDI.  
   
 ```  
 virtual BOOL CanBeTabbedDocument() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel se puede convertir en un documento con pestañas; en caso contrario, `FALSE`. `CBasePane::CanBeTabbedDocument` siempre devuelve `FALSE`.  
+ TRUE si el panel se puede convertir en un documento con pestañas. en caso contrario, FALSE. `CBasePane::CanBeTabbedDocument` Siempre devuelve FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Solo los objetos de ciertos `CBasePane`-tipos derivados, como el [clase CDockablePane](../../mfc/reference/cdockablepane-class.md), se puede convertir en documentos con fichas.  
+ Solo los objetos de determinados `CBasePane`-tipos derivados, como el [CDockablePane Class](../../mfc/reference/cdockablepane-class.md), se puede convertir en documentos con fichas.  
   
 ##  <a name="canfloat"></a>  CBasePane::CanFloat  
  Determina si el panel puede flotar.  
@@ -562,17 +562,17 @@ virtual BOOL CanFloat() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel puede flotar; en caso contrario, `FALSE`.  
+ TRUE si el panel puede flotar; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método para determinar si el panel puede flotar.  
+ El marco llama a este método para determinar si puede flotar el panel.  
   
- Durante la construcción, puede establecer esta capacidad pasando el `AFX_CBRS_FLOAT` indicador en [cbasepane:: CreateEx](#createex).  
+ Durante la construcción, puede establecer esta capacidad al pasar la marca de AFX_CBRS_FLOAT [cbasepane:: CreateEx](#createex).  
   
 > [!NOTE]
->  El marco de trabajo se da por supuesto que los paneles no flotante son estáticos y que no se puede cambiar su estado de acoplamiento. Por lo tanto, el marco de trabajo no guarda el estado de acoplamiento de paneles no flotante.  
+>  El marco de trabajo se da por supuesto que los paneles no flotante son estáticas y que no se puede cambiar su estado de acoplamiento. Por lo tanto, el marco de trabajo no guarda el estado de acoplamiento de los paneles no flotante.  
   
- La implementación predeterminada busca la `AFX_CBRS_FLOAT` estilo.  
+ La implementación predeterminada comprueba si el estilo AFX_CBRS_FLOAT.  
   
 ##  <a name="canfocus"></a>  CBasePane::CanFocus  
  Especifica si el panel puede recibir el foco.  
@@ -582,15 +582,15 @@ virtual BOOL CanFocus() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel puede recibir el foco; en caso contrario, `FALSE`.  
+ TRUE si el panel puede recibir el foco; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Invalide este método en una clase derivada para controlar el foco. Por ejemplo, dado que las barras de herramientas no pueden recibir el foco, este método devuelve `FALSE` cuando se llama en los objetos de la barra de herramientas.  
+ Invalide este método en una clase derivada para controlar el foco. Por ejemplo, dado que las barras de herramientas no pueden recibir el foco, este método devuelve FALSE cuando se llama en objetos de la barra de herramientas.  
   
- El marco de trabajo intenta establecer el foco de entrada cuando un panel está acoplado o flota.  
+ El marco de trabajo intenta establecer el foco de entrada cuando un panel está acoplado o flotante.  
   
 ##  <a name="copystate"></a>  CBasePane::CopyState  
- Copia el estado de un determinado panel.  
+ Copia el estado de un panel determinado.  
   
 ```  
 virtual void CopyState(CBasePane* pOrgBar);
@@ -615,15 +615,15 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
  Especifica las coordenadas iniciales de la ventana de marco reducido.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la nueva ventana de marco reducido o `NULL` si falló la creación.  
+ Un puntero a la nueva ventana de marco reducido o NULL si no se pudo crear.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método cuando un panel cambia a un estado flotante. El método crea una ventana de marco reducido y asocia el panel a esta ventana.  
+ El marco llama a este método cuando cambia un panel a un estado flotante. El método crea una ventana de marco reducido y el panel asocia a esta ventana.  
   
- La implementación predeterminada devuelve `NULL`.  
+ La implementación predeterminada devuelve NULL.  
   
 ##  <a name="createex"></a>  Cbasepane:: CreateEx  
- Crea el control de panel.  
+ Crea el control del panel.  
   
 ```  
 virtual BOOL CreateEx(
@@ -640,16 +640,16 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *dwStyleEx*  
- Los estilos extendidos (vea [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) para obtener más información).  
+ Los estilos extendidos (consulte [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) para obtener más información).  
   
  [in] *lpszClassName*  
- El nombre de la clase de ventana.  
+ El nombre de clase de ventana.  
   
  [in] *lpszWindowName*  
  Nombre de la ventana.  
   
  [in] *dwStyle*  
- El estilo de ventana (vea [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
+ El estilo de ventana (consulte [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
   
  [in] *rect*  
  El rectángulo inicial.  
@@ -667,29 +667,29 @@ virtual BOOL CreateEx(
  Un puntero a `CcreateContext`  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel se ha creado correctamente; en caso contrario, `FALSE`.  
+ TRUE si el panel se ha creado correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Crea una ventana de la clase `lpszClassName`. Si especifica `WS_CAPTION`, este método borra la `WS_CAPTION` bit de estilo y los conjuntos de `CBasePane::m_bHasCaption` a `TRUE`, ya que la biblioteca no admite paneles con subtítulos.  
+ Crea una ventana de la clase `lpszClassName`. Si especifica WS_CAPTION, este método borra el bit de estilo WS_CAPTION y establece `CBasePane::m_bHasCaption` en TRUE, porque la biblioteca no es compatible con los paneles con subtítulos.  
   
  Puede usar cualquier combinación de los estilos de ventana secundaria y control MFC barra estilos (CBRS_).  
   
- La biblioteca agrega varios nuevos estilos para los paneles. En la tabla siguiente se describe los nuevos estilos:  
+ La biblioteca agrega varios nuevos estilos de los paneles. En la tabla siguiente se describe los nuevos estilos:  
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
-|`AFX_CBRS_FLOAT`|El panel puede flotar.|  
-|`AFX_CBRS_AUTOHIDE`|El panel admite el modo de ocultación automática|  
-|`AFX_CBRS_RESIZE`|El panel puede cambiarse. **Importante:** este estilo no está implementada.|  
-|`AFX_CBRS_CLOSE`|Se puede cerrar el panel.|  
-|`AFX_CBRS_AUTO_ROLLUP`|El panel se puede acumular cuando desplaza.|  
-|`AFX_CBRS_REGULAR_TABS`|Cuando se acopla un panel a otro panel que tenga este estilo, se crea una ventana con pestañas normal. (Para obtener más información, consulte [CTabbedPane clase](../../mfc/reference/ctabbedpane-class.md).)|  
-|`AFX_CBRS_OUTLOOK_TABS`|Cuando se acopla un panel a otro panel que tenga este estilo, se crea una ventana con pestañas de estilo de Outlook. (Para obtener más información, consulte [CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md).)|  
+|AFX_CBRS_FLOAT|El panel puede flotar.|  
+|AFX_CBRS_AUTOHIDE|El panel admite el modo de ocultación automática|  
+|AFX_CBRS_RESIZE|El panel puede cambiarse. **Importante:** este estilo no está implementada.|  
+|AFX_CBRS_CLOSE|Se puede cerrar el panel.|  
+|AFX_CBRS_AUTO_ROLLUP|El panel se puede acumular cuando flota.|  
+|AFX_CBRS_REGULAR_TABS|Cuando se acopla un panel a otro panel que tenga este estilo, se crea una ventana con pestañas normal. (Para obtener más información, consulte [CTabbedPane (clase)](../../mfc/reference/ctabbedpane-class.md).)|  
+|AFX_CBRS_OUTLOOK_TABS|Cuando se acopla un panel a otro panel que tenga este estilo, se crea una ventana con pestañas de estilo de Outlook. (Para obtener más información, consulte [CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md).)|  
   
- Para usar los nuevos estilos, especifíquelos en *dwControlBarStyle*.  
+ Para usar los nuevos estilos, puede especificarlas en *dwControlBarStyle*.  
   
 ##  <a name="dockpane"></a>  Cbasepane:: Dockpane  
- Acopla un panel a otro panel o una ventana de marco.  
+ Acopla un panel a otro panel o a una ventana de marco.  
   
 ```  
 virtual BOOL DockPane(
@@ -709,12 +709,12 @@ virtual BOOL DockPane(
  Especifica el método de acoplamiento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la barra de control se acoplarán correctamente; en caso contrario, `FALSE`.  
+ TRUE si la barra de control se acopla correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a esta función para acoplar un panel a otro panel o una barra de acoplamiento ( [clase CDockSite](../../mfc/reference/cdocksite-class.md)) que se especifica por *pDockBar*, o a un marco principal si *pDockBar* es `NULL`.  
+ Llame a esta función para acoplar un panel a otro panel o una barra de acoplamiento ( [clase CDockSite](../../mfc/reference/cdocksite-class.md)) que se especifica mediante *pDockBar*, o a un marco principal si *pDockBar* es NULL.  
   
- *dockMethod* especifica cómo se acopla el panel. Vea [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) para obtener una lista de valores posibles.  
+ *dockMethod* especifica cómo se acopla el panel. Consulte [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) para obtener una lista de valores posibles.  
   
 ##  <a name="dockpaneusingrtti"></a>  CBasePane::DockPaneUsingRTTI  
  Acopla el panel con información de tipo en tiempo de ejecución.  
@@ -725,7 +725,7 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bUseDockSite*  
- Si `TRUE`, acoplar en el sitio de acoplamiento. Si `FALSE`, acoplar en el marco primario.  
+ Si es TRUE, se acopla al sitio de acoplamiento. Si es FALSE, se acopla al marco primario.  
   
 ##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
  Acopla un panel acoplable a un marco.  
@@ -742,7 +742,7 @@ virtual BOOL DockToFrameWindow(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *dwAlignment*  
- El lado del marco principal que desea acoplar el panel a.  
+ El lado del marco primario que se desea acoplar el panel a.  
   
  [in] *lpRect*  
  El tamaño deseado.  
@@ -757,13 +757,13 @@ virtual BOOL DockToFrameWindow(
  ignorado.  
   
  [in] *bOuterEdge*  
- Si `TRUE` y hay otros paneles acoplables en el lado especificado por *dwAlignment*, el panel está acoplado fuera de los otros paneles, cuanto más se acerque al borde del marco primario. Si `FALSE`, el panel está acoplado cuando se acerque al centro del área de cliente.  
+ Si es TRUE y son otros paneles acoplables en el lado especificado por *dwAlignment*, el panel se acopla fuera de los otros paneles, más cerca del borde del marco primario. Si es FALSE, el panel está acoplado más cercanos al centro del área de cliente.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el método se realizó correctamente; en caso contrario, `FALSE`.  
+ TRUE si el método se realizó correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método produce un error si un panel divisor ( [CPaneDivider clase](../../mfc/reference/cpanedivider-class.md)) no se puede crear. En caso contrario, siempre devuelve `TRUE`.  
+ Este método produce un error si un panel divisor ( [CPaneDivider (clase)](../../mfc/reference/cpanedivider-class.md)) no se puede crear. En caso contrario, devuelve siempre TRUE.  
   
 ##  <a name="doesallowdyninsertbefore"></a>  Cbasepane:: Doesallowdyninsertbefore  
  Determina si se puede insertar otro panel dinámicamente entre este panel y el marco primario.  
@@ -773,16 +773,16 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si un usuario puede insertar otro panel; en caso contrario, `FALSE`.  
+ TRUE si un usuario puede insertar otro panel; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método para determinar si un usuario puede insertar dinámicamente un panel antes de este panel.  
+ El marco llama a este método para determinar si un usuario puede insertar dinámicamente un panel antes de este panel.  
   
- Por ejemplo, suponga que la aplicación crea un panel acoplado en el lado izquierdo del marco (por ejemplo, la barra de Outlook). Para evitar que el usuario acoplar otro panel a la izquierda de la primera sección, invalide este método y devolver `FALSE`.  
+ Por ejemplo, suponga que la aplicación crea un panel acoplado en el lado izquierdo del marco (por ejemplo, la barra de Outlook). Para evitar que el usuario desde otro panel de acoplamiento a la izquierda del primer panel, invalide este método y devuelve FALSE.  
   
- Se recomienda que invalide este método y devolver `FALSE` para los paneles no flotante derivan [clase CDockablePane](../../mfc/reference/cdockablepane-class.md).  
+ Se recomienda que reemplace este método y devolver FALSE para no flotante paneles derivan [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
- La implementación predeterminada devuelve `TRUE`.  
+ La implementación predeterminada devuelve TRUE.  
   
 ##  <a name="dopaint"></a>  CBasePane::DoPaint  
  Rellena el fondo del panel.  
@@ -799,7 +799,7 @@ virtual void DoPaint(CDC* pDC);
  La implementación predeterminada llama al administrador visual actual para rellenar el fondo ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).  
   
 ##  <a name="enabledocking"></a>  CBasePane::EnableDocking  
- Habilita el acoplamiento del panel en el marco principal.  
+ Habilita el acoplamiento del panel para el marco principal.  
   
 ```  
 virtual void EnableDocking(DWORD dwAlignment);
@@ -810,14 +810,14 @@ virtual void EnableDocking(DWORD dwAlignment);
  Especifica la alineación de acoplamiento para habilitar.  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a este método para activar la alineación de acoplamiento para el marco principal. Puede pasar una combinación de `CBRS_ALIGN_` marcas (para obtener más información, consulte [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
+ Llame a este método para habilitar la alineación de acoplamiento para el marco principal. Puede pasar una combinación de marcas CBRS_ALIGN_ (para obtener más información, consulte [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
  `EnableDocking` establece el marcador interno `CBasePane::m_dwEnabledAlignment` y el marco de trabajo comprueba esta marca cuando se acopla un panel.  
   
  Llame a [CBasePane::GetEnabledAlignment](#getenabledalignment) para determinar la alineación de un panel de acoplamiento.  
   
 ##  <a name="enablegripper"></a>  CBasePane::EnableGripper  
- Habilita o deshabilita el punto de sujeción. Si la barra de redimensionamiento está habilitado, el usuario puede arrastrar para cambiar la posición del panel.  
+ Habilita o deshabilita la barra de redimensionamiento. Si la barra de redimensionamiento está habilitada, el usuario puede arrastrar para cambiar la posición del panel.  
   
 ```  
 virtual void EnableGripper(BOOL bEnable);
@@ -825,10 +825,10 @@ virtual void EnableGripper(BOOL bEnable);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bHabilitar el*  
- `TRUE` Para habilitar la barra de redimensionamiento; `FALSE` para deshabilitarlo.  
+ TRUE para habilitar la barra de redimensionamiento; FALSE para deshabilitarla.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo utiliza este método para habilitar una barra de redimensionamiento en lugar de utilizar el `WS_CAPTION` estilo.  
+ El marco de trabajo usa este método para habilitar a un agarrador en lugar de usar el estilo WS_CAPTION.  
   
 ##  <a name="floatpane"></a>  CBasePane::FloatPane  
  Desplaza el panel.  
@@ -842,22 +842,22 @@ virtual BOOL FloatPane(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *rectFloat*  
- Especifica las coordenadas de pantalla que aparece el panel flotante.  
+ Especifica las coordenadas de pantalla donde aparece el panel flotante.  
   
  [in] *dockMethod*  
- Especifica el método de vinculación se utiliza para el panel flotante.  
+ Especifica el método de acoplamiento a usar para el panel flotante.  
   
  [in] *bMostrar*  
- Especifica si está visible el panel flotante ( `TRUE`) u oculto ( `FALSE`).  
+ Especifica si el panel flotante es visible (TRUE) o se oculta (FALSE).  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel se flota correctamente; en caso contrario, `FALSE`.  
+ TRUE si el panel se flotando correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para convertir en flotante un panel en la posición de pantalla especificada por *rectFloat*.  
+ Llame a este método para un panel en la posición de pantalla especificada por flotante *rectFloat*.  
   
 ##  <a name="get_acchelptopic"></a>  CBasePane::get_accHelpTopic  
- El marco de trabajo llama a este método para recuperar la ruta de acceso completa de la `WinHelp` archivo que está asociado con el objeto especificado y el identificador del tema correspondiente en ese archivo.  
+ El marco llama a este método para recuperar la ruta de acceso completa de la **WinHelp** archivo que está asociado con el objeto especificado y el identificador del tema correspondiente en ese archivo.  
   
 ```  
 virtual HRESULT get_accHelpTopic(
@@ -868,22 +868,22 @@ virtual HRESULT get_accHelpTopic(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pszHelpFile*  
- Dirección de un `BSTR` que recibe la ruta de acceso completa de la `WinHelp` archivo que está asociado con el objeto especificado, si existe.  
+ Dirección del BSTR que recibe la ruta de acceso completa de la **WinHelp** archivo que está asociado con el objeto especificado, si existe.  
   
  [in] *varChild*  
- Especifica si va a recuperar el tema de ayuda es del objeto o uno de los elementos secundarios del objeto. Este parámetro puede ser `CHILDID_SELF` (para obtener un tema de ayuda para el objeto) o un identificador secundario (para obtener un tema de ayuda para uno de los secundarios de elementos del objeto).  
+ Especifica si va a recuperar el tema de ayuda es que el objeto o uno de los elementos secundarios del objeto. Este parámetro puede ser CHILDID_SELF (para obtener un tema de ayuda para el objeto) o un identificador secundario (para obtener un tema de ayuda para uno de los secundarios de elementos del objeto).  
   
  [in] *pidTopic*  
- Identifica el `Help` tema en el archivo que está asociado con el objeto especificado.  
+ Identifica el **ayuda** tema del archivo que está asociado con el objeto especificado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `CBasePane` Implemente este método. Por lo tanto, `CBasePane::get_accHelpTopic` siempre devuelve `S_FALSE`.  
+ `CBasePane` no implementa este método. Por lo tanto, `CBasePane::get_accHelpTopic` siempre devuelve S_FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función es parte de la compatibilidad de Active Accessibility en MFC. Reemplace esta función en una clase derivada para proporcionar información de ayuda sobre el objeto.  
+ Esta función forma parte de la compatibilidad con Active Accessibility en MFC. Reemplace esta función en una clase derivada para proporcionar información de ayuda sobre el objeto.  
   
 ##  <a name="get_accselection"></a>  CBasePane::get_accSelection  
- El marco de trabajo llama a este método para recuperar al elemento secundario seleccionado de este objeto.  
+ El marco llama a este método para recuperar al elemento secundario seleccionado de este objeto.  
   
 ```  
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
@@ -894,10 +894,10 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
  Recibe la información que identifica al elemento secundario seleccionado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `CBasePane` Implemente este método. Si *pvarChildren* es `NULL`, este método devuelve `E_INVALIDARG`. En caso contrario, este método devuelve `DISP_E_MEMBERNOTFOUND`.  
+ `CBasePane` no implementa este método. Si *pvarChildren* es NULL, este método devuelve E_INVALIDARG. En caso contrario, este método devuelve DISP_E_MEMBERNOTFOUND.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función es parte de la compatibilidad de Active Accessibility en MFC. Reemplace esta función en una clase derivada si tiene elementos de interfaz de usuario no son ventanas que no sea de controles ActiveX sin ventana.  
+ Esta función forma parte de la compatibilidad con Active Accessibility en MFC. Reemplace esta función en una clase derivada si tiene elementos de interfaz de usuario de que no son ventanas que no sean de controles ActiveX sin ventanas.  
   
 ##  <a name="getcaptionheight"></a>  Cbasepane:: Getcaptionheight  
  Devuelve la altura del título.  
@@ -924,10 +924,10 @@ virtual DWORD GetControlBarStyle() const
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
-|`AFX_CBRS_FLOAT`|Hace que el tipo float de barra de control.|  
-|`AFX_CBRS_AUTOHIDE`|habilita el modo de ocultación automática.|  
-|`AFX_CBRS_RESIZE`|Permite cambiar el tamaño de la barra de control. Cuando se establece esta marca, la barra de control puede colocarse en un panel acoplable.|  
-|`AFX_CBRS_CLOSE`|Permite ocultar la barra de control.|  
+|AFX_CBRS_FLOAT|Hace que los flotantes de la barra de control.|  
+|AFX_CBRS_AUTOHIDE|Permite oculta automáticamente el modo.|  
+|AFX_CBRS_RESIZE|Permite cambiar el tamaño de la barra de control. Cuando se establece esta marca, la barra de control puede colocarse en un panel acoplable.|  
+|AFX_CBRS_CLOSE|Permite ocultar la barra de control.|  
   
 ##  <a name="getcurrentalignment"></a>  CBasePane::GetCurrentAlignment  
  Devuelve la alineación del panel actual.  
@@ -941,10 +941,10 @@ virtual DWORD GetCurrentAlignment() const;
   
 |Valor|Alineación|  
 |-----------|---------------|  
-|`CBRS_ALIGN_LEFT`|Alineación a la izquierda.|  
-|`CBRS_ALIGN_RIGHT`|Alineación a la derecha.|  
-|`CBRS_ALIGN_TOP`|Alineación superior.|  
-|`CBRS_ALIGN_BOTTOM`|Alineación de la parte inferior.|  
+|CBRS_ALIGN_LEFT|Alineación a la izquierda.|  
+|CBRS_ALIGN_RIGHT|Alineación a la derecha.|  
+|CBRS_ALIGN_TOP|Alineación superior.|  
+|CBRS_ALIGN_BOTTOM|Alineación de la parte inferior.|  
   
 ##  <a name="getdockingmode"></a>  Cbasepane:: Getdockingmode  
  Devuelve el modo de acoplamiento actual para el panel.  
@@ -957,24 +957,24 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
  DT_STANDARD si arrastra el panel se indica en la pantalla mediante un rectángulo de arrastre. DT_IMMEDIATE si se arrastra el contenido del panel.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método para determinar el modo de acoplamiento actual del panel.  
+ El marco llama a este método para determinar el modo actual de acoplamiento del panel.  
   
- Si `CBasePane::m_dockMode` está sin definir (DT_UNDEFINED), el modo de acoplamiento se obtendrá el modo de acoplamiento global ( `AFX_GLOBAL_DATA::m_dockModeGlobal`).  
+ Si `CBasePane::m_dockMode` es undefined (DT_UNDEFINED), se obtendrá el modo de acoplamiento desde el modo de acoplamiento global (`AFX_GLOBAL_DATA::m_dockModeGlobal`).  
   
- Estableciendo *m_dockMode* o reemplazar `GetDockingMode` puede controlar el modo de acoplamiento para cada panel.  
+ Estableciendo *m_dockMode* o invalidar `GetDockingMode` puede controlar el modo de acoplamiento para cada panel.  
   
 ##  <a name="getdocksiteframewnd"></a>  CBasePane::GetDockSiteFrameWnd  
- Devuelve un puntero a la [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)objeto en el panel está acoplado.  
+ Devuelve un puntero a la [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)objeto dónde se acopla el panel.  
   
 ```  
 virtual CWnd* GetDockSiteFrameWnd() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero para el sitio de vinculación del panel.  
+ Un puntero al sitio del panel de acoplamiento.  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a este método para recuperar un puntero para el sitio de vinculación del panel. El sitio de vinculación puede ser una ventana de marco principal si el panel está acoplado al marco principal o una ventana de marco reducido si el panel está flotando.  
+ Llame a este método para recuperar un puntero al sitio del panel de acoplamiento. Si el panel está flotando, el sitio de vinculación puede ser una ventana de marco principal si el panel se acopla al marco principal o una ventana de marco reducido.  
   
 ##  <a name="getenabledalignment"></a>  CBasePane::GetEnabledAlignment  
  Devuelve los estilos CBRS_ALIGN_ que se aplican al panel.  
@@ -984,20 +984,20 @@ virtual DWORD GetEnabledAlignment() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una combinación de estilos CBRS_ALIGN_. La siguiente tabla muestra los estilos posibles:  
+ Una combinación de estilos CBRS_ALIGN_. La siguiente tabla muestra los posibles estilos:  
   
-|Marcar|Alineación habilitado|  
+|Marcar|Alineación habilitada|  
 |----------|-----------------------|  
-|`CBRS_ALIGN_LEFT`|A la izquierda.|  
-|`CBRS_ALIGN_RIGHT`|Correcto.|  
-|`CBRS_ALIGN_TOP`|Arriba.|  
-|`CBRS_ALIGN_BOTTOM`|Parte inferior.|  
-|`CBRS_ALIGN_ANY`|Combinación de todas las marcas.|  
+|CBRS_ALIGN_LEFT|A la izquierda.|  
+|CBRS_ALIGN_RIGHT|Correcto.|  
+|CBRS_ALIGN_TOP|Arriba.|  
+|CBRS_ALIGN_BOTTOM|Parte inferior.|  
+|CBRS_ALIGN_ANY|Combinación de todas las marcas.|  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para determinar la alineación habilitada para el panel. Alineación habilitado significa que los lados de la ventana de marco principal que se puede acoplar un panel a.  
+ Llame a este método para determinar la alineación habilitada para el panel. Alineación habilitada, significa que los lados de la ventana de marco principal que se puede acoplar un panel a.  
   
- Habilitar el acoplamiento alineación mediante [CBasePane::EnableDocking](#enabledocking).  
+ Habilitar la alineación de acoplamiento con [CBasePane::EnableDocking](#enabledocking).  
   
 ##  <a name="getmfcstyle"></a>  CBasePane::GetMFCStyle  
  Devuelve los estilos de panel que son específicos de MFC.  
@@ -1010,7 +1010,7 @@ virtual DWORD GetMFCStyle() const;
  Una combinación de estilos de panel (AFX_CBRS_) específicas de la biblioteca.  
   
 ##  <a name="getpaneicon"></a>  CBasePane::GetPaneIcon  
- Devuelve un identificador para el icono del panel.  
+ Devuelve un identificador para el icono de panel.  
   
 ```  
 virtual HICON GetPaneIcon(BOOL bBigIcon);
@@ -1018,26 +1018,26 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bBigIcon*  
- Especifica que un píxel 32 por icono 32 píxeles si `TRUE`; especifica que un píxel de 16 por icono 16 píxeles si `FALSE`.  
+ Especifica que un píxel 32 mediante el icono de 32 píxeles si es TRUE; Especifica que un píxel de 16 por 16 icono de píxel si es FALSE.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un identificador para el icono del panel. Si se realiza correctamente, devuelve `NULL`.  
+ Un identificador del icono de panel. Si no lo consigue, devuelve NULL.  
   
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada llama [CWnd::GetIcon](../../mfc/reference/cwnd-class.md#geticon).  
   
 ##  <a name="getpanerow"></a>  CBasePane::GetPaneRow  
- Devuelve un puntero a la [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)objeto en el panel está acoplado.  
+ Devuelve un puntero a la [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)objeto dónde se acopla el panel.  
   
 ```  
 CDockingPanesRow* GetPaneRow();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a `CDockingPanesRow` si el panel está acoplado, o `NULL` si está flotando.  
+ Un puntero a `CDockingPanesRow` si el panel está acoplado, o NULL si no está flotando.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para tener acceso a la fila donde se acopla un panel. Por ejemplo, para organizar los paneles en una fila determinada, llame a `GetPaneRow` y, a continuación, llame a [CDockingPanesRow::ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).  
+ Llame a este método para tener acceso a la fila donde se acopla un panel. Por ejemplo, para organizar los paneles en una fila determinada, llame a `GetPaneRow` y, a continuación, llame a [CDockingPanesRow::ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).  
   
 ##  <a name="getpanestyle"></a>  CBasePane::GetPaneStyle  
  Devuelve el estilo del panel.  
@@ -1047,7 +1047,7 @@ virtual DWORD GetPaneStyle() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una combinación de estilos de barra de control (incluidos estilos CBRS_) que estableció el [CBasePane::SetPaneStyle](#setpanestyle) método en tiempo de creación.  
+ Una combinación de estilos de barra de control (incluidos los estilos CBRS_) que se ha establecido mediante la [CBasePane::SetPaneStyle](#setpanestyle) método en tiempo de creación.  
   
 ##  <a name="getparentdocksite"></a>  CBasePane::GetParentDockSite  
  Devuelve un puntero para el sitio de vinculación de elemento primario.  
@@ -1057,7 +1057,7 @@ virtual CDockSite* GetParentDockSite() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El sitio de vinculación primario.  
+ El sitio de vinculación de elemento primario.  
   
 ##  <a name="getparentminiframe"></a>  CBasePane::GetParentMiniFrame  
  Devuelve un puntero a la ventana de marco reducido primaria.  
@@ -1068,25 +1068,25 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bNoAssert*  
- Si `TRUE`, este método no se busca punteros no válidos. Si se llama a este método cuando se cierre la aplicación, establezca este parámetro en `TRUE`.  
+ Si es TRUE, este método no comprueba para punteros no válidos. Si llama a este método cuando se cierra la aplicación, establezca este parámetro en TRUE.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero válido a la ventana de marco reducido primaria si el panel está flotando; en caso contrario, `NULL`.  
+ Un puntero válido a la ventana de marco reducido primario si el panel es flotante; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a esta función para recuperar un puntero a la ventana de marco reducido primaria. Este método recorre en iteración todos los elementos primarios y comprueba si un objeto derivado de [CPaneFrameWnd clase](../../mfc/reference/cpaneframewnd-class.md).  
+ Llame a esta función para recuperar un puntero a la ventana de marco reducido primaria. Este método recorre en iteración todos los elementos primarios y busca un objeto derivado de [CPaneFrameWnd (clase)](../../mfc/reference/cpaneframewnd-class.md).  
   
- Utilice `GetParentMiniFrame` para determinar si el panel está flotando.  
+ Use `GetParentMiniFrame` para determinar si el panel está flotando.  
   
 ##  <a name="getparenttabbedpane"></a>  CBasePane::GetParentTabbedPane  
- Devuelve un puntero al panel con fichas primario.  
+ Devuelve un puntero al panel principal con pestañas.  
   
 ```  
 CBaseTabbedPane* GetParentTabbedPane() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al panel con fichas primario si existe; en caso contrario, `NULL`.  
+ Un puntero al panel con pestañas primario si existe; en caso contrario, es NULL.  
   
 ##  <a name="getparenttabwnd"></a>  CBasePane::GetParentTabWnd  
  Devuelve un puntero a la ventana primaria que está dentro de una pestaña.  
@@ -1097,39 +1097,39 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
   
 ### <a name="parameters"></a>Parámetros  
  [out] *hWndTab*  
- Si el valor devuelto no es `NULL`, este parámetro contiene el identificador de la ventana principal con pestañas.  
+ Si el valor devuelto no es NULL, este parámetro contiene el identificador de la ventana con pestañas primaria.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Ventana de fichas de un puntero válido para el elemento primario o `NULL`.  
+ Un puntero válido a la ventana con pestañas de primaria o NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice esta función para recuperar un puntero a la ventana con pestañas primaria. A veces no es suficiente llamar a `GetParent`, porque un panel puede estar dentro de un contenedor de acoplamiento ( [clase CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)) o dentro de un adaptador de panel ( [clase CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)). Mediante el uso de `GetParentTabWnd` podrá recuperar un puntero válido en esos casos (suponiendo que el elemento primario es una ventana con pestañas).  
+ Utilice esta función para recuperar un puntero a la ventana con pestañas primaria. A veces no es suficiente llamar a `GetParent`, ya que puede ser un panel dentro de un contenedor de acoplamiento ( [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)) o dentro de un adaptador de panel ( [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)). Mediante el uso de `GetParentTabWnd` podrá recuperar un puntero válido en esos casos (suponiendo que el elemento primario es una ventana con pestañas).  
   
 ##  <a name="getrecentvisiblestate"></a>  CBasePane::GetRecentVisibleState  
- El marco de trabajo llama a este método cuando se restaura un panel desde un archivo.  
+ El marco llama a este método cuando se restaura un panel desde un archivo.  
   
 ```  
 virtual BOOL GetRecentVisibleState() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un `BOOL` que especifica el estado de visibilidad recientes. Si `TRUE`, el panel estaba visible cuando se serializa y debería estar visible cuando restaure. Si `FALSE`, se oculta el panel cuando se serializa y debe estar oculto cuando restaure.  
+ Un valor booleano que especifica el estado de visibilidad recientes. Si es TRUE, el panel que estaba visible cuando se serializa y debe estar visible cuando se restaura. Si es FALSE, se oculta el panel cuando se serializa y debe estar oculto cuando restaura.  
   
 ##  <a name="hideinprintpreviewmode"></a>  CBasePane::HideInPrintPreviewMode  
- Especifica si está oculta el panel de vista previa de impresión.  
+ Especifica si el panel está oculto en la vista previa de impresión.  
   
 ```  
 virtual BOOL HideInPrintPreviewMode() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si no se muestra el panel de vista previa de impresión; en caso contrario, `FALSE`.  
+ TRUE si el panel no se muestra en vista previa de impresión; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Paneles de base no se muestran en la vista previa de impresión. Por lo tanto, este método devuelve siempre `TRUE`.  
+ Paneles de base no se muestran en la vista previa de impresión. Por lo tanto, este método siempre devuelve TRUE.  
   
 ##  <a name="insertpane"></a>  CBasePane::InsertPane  
- Registra el panel especificado con el Administrador de acoplamiento.  
+ El panel especificado se registra con el Administrador de acoplamiento.  
   
 ```  
 BOOL InsertPane(
@@ -1140,16 +1140,16 @@ BOOL InsertPane(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pControlBar*  
- Un puntero al panel para insertar.  
+ Un puntero al panel se va a insertar.  
   
  [in] *pTarget*  
  Un puntero en el panel adyacente.  
   
  [in] *después*  
- Si `TRUE`, *pControlBar* se insertan una vez *pTarget*. Si `FALSE`, *pControlBar* se inserta delante *pTarget*.  
+ Si es TRUE, *pControlBar* se inserta después *pTarget*. Si es FALSE, *pControlBar* se inserta delante *pTarget*.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el método tiene éxito, `FALSE` en caso contrario.  
+ TRUE si el método tiene éxito, FALSE en caso contrario.  
   
 ##  <a name="isaccessibilitycompatible"></a>  CBasePane::IsAccessibilityCompatible  
  Especifica si el panel admite Active Accessibility.  
@@ -1159,7 +1159,7 @@ virtual BOOL IsAccessibilityCompatible();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel admite Active Accessibility; en caso contrario, `FALSE`.  
+ TRUE si el panel admite Active Accessibility; en caso contrario, FALSE.  
   
 ##  <a name="isautohidemode"></a>  CBasePane::IsAutoHideMode  
  Determina si un panel está en modo de ocultación automática.  
@@ -1169,10 +1169,10 @@ virtual BOOL IsAutoHideMode() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel está en modo de ocultación automática; en caso contrario, `FALSE`.  
+ TRUE si el panel está en modo de ocultación automática; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Paneles de base no se pueden ocultar automáticamente. Este método devuelve siempre `FALSE`.  
+ Paneles de base no se pueden ocultar automáticamente. Este método siempre devuelve FALSE.  
   
 ##  <a name="isdialogcontrol"></a>  CBasePane::IsDialogControl  
  Especifica si el panel es un control de cuadro de diálogo.  
@@ -1182,10 +1182,10 @@ BOOL IsDialogControl() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel es un control de cuadro de diálogo; en caso contrario, `FALSE`.  
+ Es TRUE si el panel es un control de cuadro de diálogo; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo utiliza este método para garantizar la coherencia para todos los paneles de diseño.  
+ El marco de trabajo usa este método para garantizar la coherencia para todos los paneles de diseño.  
   
 ##  <a name="isdocked"></a>  CBasePane::IsDocked  
  Determina si el panel está acoplado.  
@@ -1195,7 +1195,7 @@ virtual BOOL IsDocked() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el elemento primario del panel no es un marco reducido o si el panel está flotando en un marco reducido con otro panel; en caso contrario, `FALSE`.  
+ TRUE si el elemento primario del panel no es un marco reducido o si el panel está flotando en un marco reducido con otro panel; en caso contrario, FALSE.  
   
 ##  <a name="isfloating"></a>  CBasePane::IsFloating  
  Determina si el panel está flotando.  
@@ -1205,7 +1205,7 @@ virtual BOOL IsFloating() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel está flotando; en caso contrario, `FALSE`.  
+ TRUE si el panel es flotante; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método devuelve el valor contrario de [CBasePane::IsDocked](#isdocked).  
@@ -1218,23 +1218,23 @@ virtual BOOL IsHorizontal() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel está acoplado horizontalmente; en caso contrario, `FALSE`.  
+ TRUE si el panel está acoplado horizontalmente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada comprueba la alineación de acoplamiento actual para `CBRS_ORIENT_HORZ`.  
+ La implementación predeterminada comprueba la alineación de acoplamiento actual para CBRS_ORIENT_HORZ.  
   
 ##  <a name="isinfloatingmultipaneframewnd"></a>  CBasePane::IsInFloatingMultiPaneFrameWnd  
- Especifica si el panel está en una ventana de marco de varios paneles ( [CMultiPaneFrameWnd clase](../../mfc/reference/cmultipaneframewnd-class.md)).  
+ Especifica si el panel está en una ventana de marco de varios paneles ( [CMultiPaneFrameWnd (clase)](../../mfc/reference/cmultipaneframewnd-class.md)).  
   
 ```  
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel está en una ventana de marco de varios paneles; en caso contrario, `FALSE`.  
+ TRUE si el panel está en una ventana de marco de varios paneles; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Solo los paneles acoplables pueden flotar en una ventana de marco de varios paneles. Por lo tanto, `CBasePane::IsInFloatingMultiPaneFrameWnd` siempre devuelve `FALSE`.  
+ Solo los paneles acoplables pueden flotar en una ventana de marco de varios paneles. Por lo tanto, `CBasePane::IsInFloatingMultiPaneFrameWnd` siempre devuelve FALSE.  
   
 ##  <a name="ismditabbed"></a>  CBasePane::IsMDITabbed  
  Determina si el panel se ha agregado a una ventana secundaria MDI como un documento con pestañas.  
@@ -1244,17 +1244,17 @@ virtual BOOL IsMDITabbed() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel se ha agregado a una ventana secundaria MDI como un documento con pestañas; en caso contrario, `FALSE`.  
+ TRUE si el panel se agregó a una ventana secundaria MDI como un documento con pestañas. en caso contrario, FALSE.  
   
 ##  <a name="ispanevisible"></a>  CBasePane::IsPaneVisible  
- Especifica si el `WS_VISIBLE` marcador está establecido para el panel.  
+ Especifica si se establece la marca WS_VISIBLE para el panel.  
   
 ```  
 BOOL IsPaneVisible() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si `WS_VISIBLE` se ha establecido; en caso contrario, `FALSE`.  
+ TRUE si se establece WS_VISIBLE; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Use [CBasePane::IsVisible](#isvisible) para determinar la visibilidad del panel.  
@@ -1274,31 +1274,31 @@ BOOL IsPointNearDockSite(
  El punto especificado.  
   
  [out] *dwBarAlignment*  
- Especifica cuál es el punto de cerca de los bordes. Los valores posibles son `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, y `CBRS_ALIGN_BOTTOM`  
+ Especifica qué borde es el punto de cerca. Los valores posibles son CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP y CBRS_ALIGN_BOTTOM  
   
  [out] *bOuterEdge*  
- `TRUE` Si el punto está cerca del borde exterior del sitio de vinculación; `FALSE` en caso contrario.  
+ TRUE si el punto está cerca del borde exterior del sitio de vinculación; FALSE en caso contrario.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el punto está cerca del sitio de vinculación; en caso contrario, `FALSE`.  
+ TRUE si el punto está cerca del sitio de vinculación; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El punto está cerca del sitio de vinculación cuando está dentro de la sensibilidad establecida en el Administrador de acoplamiento. La confidencialidad del valor predeterminado es 15 píxeles.  
+ El punto es casi el sitio de vinculación cuando está dentro de la sensibilidad establecida en el Administrador de acoplamiento. La confidencialidad del valor predeterminado es 15 píxeles.  
   
 ##  <a name="isresizable"></a>  Cbasepane:: isResizable  
- Determina si el panel puede cambiarse.  
+ Determina si se puede cambiar el tamaño del panel.  
   
 ```  
 virtual BOOL IsResizable() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel puede cambiarse por el usuario; en caso contrario, `FALSE`.  
+ TRUE si el panel puede cambiarse por el usuario; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Paneles de [clase CDockablePane](../../mfc/reference/cdockablepane-class.md) puede cambiarse.  
+ Paneles de [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) puede cambiarse.  
   
- La barra de estado ( [CMFCStatusBar clase](../../mfc/reference/cmfcstatusbar-class.md)) y la barra de acoplamiento ( [clase CDockSite](../../mfc/reference/cdocksite-class.md)) no puede cambiarse.  
+ La barra de estado ( [CMFCStatusBar (clase)](../../mfc/reference/cmfcstatusbar-class.md)) y la barra de acoplamiento ( [clase CDockSite](../../mfc/reference/cdocksite-class.md)) no puede cambiarse.  
   
 ##  <a name="isrestoredfromregistry"></a>  CBasePane::IsRestoredFromRegistry  
  Determina si el panel se restaura desde el registro.  
@@ -1308,35 +1308,35 @@ virtual BOOL IsRestoredFromRegistry() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel se restaura desde el registro; en caso contrario, `FALSE`.  
+ TRUE si el panel se restaura desde el registro; en caso contrario, FALSE.  
   
 ##  <a name="istabbed"></a>  CBasePane::IsTabbed  
- Determina si el panel se ha insertado en el control de pestaña de una ventana con pestañas.  
+ Determina si el panel se ha insertado en el control de ficha de una ventana con pestañas.  
   
 ```  
 virtual BOOL IsTabbed() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la barra de control se inserta en una pestaña de una ventana con pestañas; en caso contrario, `FALSE`.  
+ TRUE si la barra de control se inserta en una pestaña de una ventana con pestañas; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método recupera un puntero para el elemento primario inmediato y determina si la clase de tiempo de ejecución del elemento primario es [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).  
+ Este método recupera un puntero para el objeto primario inmediato y determina si la clase de tiempo de ejecución del elemento primario es [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
 ##  <a name="isvisible"></a>  CBasePane::IsVisible  
- Determina si el panel está visible.  
+ Determina si está visible el panel.  
   
 ```  
 virtual BOOL IsVisible() const;  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel está visible; en caso contrario, `FALSE`.  
+ TRUE si el panel está visible; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice este método para determinar la visibilidad de un panel. No utilice `::IsWindowVisible`.  
+ Utilice este método para determinar la visibilidad de un panel. No use `::IsWindowVisible`.  
   
- Si el panel no es por pestañas (vea [CBasePane::IsTabbed](#istabbed)), este método busca el `WS_VISIBLE` estilo. Si el panel se por pestañas, este método comprueba la visibilidad de la ventana con pestañas primaria. Si está visible la ventana primaria, la función comprueba la visibilidad de la pestaña de panel utilizando [CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).  
+ Si el panel no tiene pestañas (vea [CBasePane::IsTabbed](#istabbed)), este método comprueba si el estilo WS_VISIBLE. Si el panel tiene pestañas, este método comprueba la visibilidad de la ventana con pestañas primaria. Si está visible la ventana primaria, la función comprueba la visibilidad de la ficha de panel utilizando [CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).  
   
 ##  <a name="loadstate"></a>  CBasePane::LoadState  
  Carga el estado del panel desde el registro.  
@@ -1359,12 +1359,12 @@ virtual BOOL LoadState(
  Id. de panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el estado del panel se cargó correctamente; en caso contrario, `FALSE`.  
+ TRUE si el estado del panel se ha cargado correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método para cargar el estado del panel desde el registro. Invalidar en una clase derivada para cargar información adicional que se guardan de forma [CBasePane::SaveState](#savestate).  
+ El marco llama a este método para cargar el estado del panel desde el registro. Invalidarlo en una clase derivada para cargar información adicional que se guardan de forma [CBasePane::SaveState](#savestate).  
   
-##  <a name="movewindow"></a>  CBasePane::MoveWindow  
+##  <a name="movewindow"></a>  Cbasepane:: MoveWindow  
  Mueve el panel.  
   
 ```  
@@ -1376,19 +1376,19 @@ virtual HDWP MoveWindow(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *rect*  
- Un rectángulo especificando la nueva ubicación y el tamaño del panel.  
+ Un rectángulo especificando la nueva ubicación y tamaño del panel.  
   
  [in] *bRepaint*  
- Si `TRUE`, se vuelve a dibujar el panel. Si `FALSE`, no se vuelve a dibujar el panel.  
+ Si es TRUE, el panel se vuelve a dibujar. Si es FALSE, no se vuelve a dibujar el panel.  
   
  [in] *hdwp*  
- Identificador de una estructura de posición de la ventana diferida.  
+ Identificador de una estructura de posición de ventana aplazada.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un identificador a una estructura de posición de ventana diferida o `NULL`.  
+ Identificador de una estructura de posición de ventana aplazada, o NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- Si se pasa `NULL` como el *hdwp* parámetro, este método mueve la ventana normalmente. Si se pasa un identificador, este método realiza un movimiento de ventana diferida. Puede obtener un identificador llamando [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) o almacenando el valor devuelto de una llamada anterior a este método.  
+ Si se pasa NULL como el *hdwp* parámetro, este método mueve la ventana con normalidad. Si pasa un identificador, este método realiza un movimiento de ventana aplazada. Puede obtener un identificador llamando [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) o almacenando el valor devuelto de una llamada anterior a este método.  
   
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
  Lo llama el marco de trabajo después de realizar cambios de elemento primario del panel.  
@@ -1402,12 +1402,12 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
  Un puntero al elemento primario anterior.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método una vez que cambie primaria del panel, normalmente debido a una operación de acoplamiento o de punto flotante.  
+ El marco llama a este método después de que cambia el elemento primario del panel, normalmente debido a una operación de acoplamiento o flotante.  
   
  La implementación predeterminada no hace nada.  
   
 ##  <a name="onbeforechangeparent"></a>  CBasePane::OnBeforeChangeParent  
- Lo llama el marco justo antes de que el panel cambia su ventana primaria.  
+ Lo llama el marco de trabajo justo antes de que el panel cambia su ventana primaria.  
   
 ```  
 virtual void OnBeforeChangeParent(
@@ -1420,22 +1420,22 @@ virtual void OnBeforeChangeParent(
  Un puntero a una nueva ventana del elemento primario.  
   
  [in] *bDelay*  
- Especifica si se deben demorar ajustes de diseño.  
+ Especifica si se deben retrasar los ajustes de diseño.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método justo antes que los cambios de elemento primario del panel, normalmente debido a un acoplamiento, flotante o de operación de ocultación automática.  
+ El marco de trabajo llama a este método justo antes de los cambios de elemento primario del panel, normalmente debido a un acoplamiento, flotante o de operación de ocultar automáticamente.  
   
  La implementación predeterminada no hace nada.  
   
 ##  <a name="ondrawcaption"></a>  CBasePane::OnDrawCaption  
- El marco de trabajo llama a este método cuando se dibuja el título.  
+ El marco llama a este método cuando se dibuje la leyenda.  
   
 ```  
 virtual void OnDrawCaption();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este método no tiene ninguna funcionalidad para la `CBasePane` clase.  
+ Este método no tiene ninguna funcionalidad para el `CBasePane` clase.  
   
 ##  <a name="onmovepanedivider"></a>  CBasePane::OnMovePaneDivider  
  Este método no se utiliza actualmente.  
@@ -1449,7 +1449,7 @@ virtual void OnMovePaneDivider(CPaneDivider*);
  No usado.  
   
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu  
- Lo llama el marco cuando compila un menú con una lista de paneles.  
+ Lo llama el marco cuando compila un menú que tiene una lista de paneles.  
   
 ```  
 virtual void OnPaneContextMenu(
@@ -1465,12 +1465,12 @@ virtual void OnPaneContextMenu(
  Especifica la ubicación del menú contextual.  
   
 ### <a name="remarks"></a>Comentarios  
- `OnPaneContextMenu` llama al administrador de acoplamiento, que mantiene la lista de paneles que pertenecen a la ventana de marco actual. Este método agrega los nombres de los paneles a un menú contextual y lo muestra. Los comandos del menú Mostrar u oculten los paneles individuales.  
+ `OnPaneContextMenu` llama al administrador de acoplamiento, que mantiene la lista de paneles que pertenecen a la ventana de marco actual. Este método agrega los nombres de los paneles a un menú contextual y lo muestra. Los comandos en el menú de mostrar u ocultar paneles individuales.  
   
  Invalide este método para personalizar este comportamiento.  
   
 ##  <a name="onremovefromminiframe"></a>  CBasePane::OnRemoveFromMiniFrame  
- Lo llama el marco cuando se quita un panel de su ventana de marco mini primaria.  
+ Lo llama el marco de trabajo cuando se quita un panel de su ventana de marco mini primaria.  
   
 ```  
 virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
@@ -1481,7 +1481,7 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
  Un puntero a una ventana de marco reducido desde el que se quita el panel.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método cuando se quita un panel de su ventana de marco reducido primaria (como resultado de acoplamiento, por ejemplo).  
+ El marco llama a este método cuando se quita un panel de su ventana de marco reducido primaria (como resultado de acoplamiento, por ejemplo).  
   
  La implementación predeterminada no hace nada.  
   
@@ -1497,7 +1497,7 @@ virtual BOOL OnSetAccData(long lVal);
  No usado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Este método devuelve siempre `TRUE`.  
+ Este método siempre devuelve TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1520,13 +1520,13 @@ CBasePane* PaneFromPoint(
  Aumentar el área de búsqueda en esta cantidad. Un panel cumple los criterios de búsqueda si el punto especificado se encuentra en el área de mayor.  
   
  [in] *bExactBar*  
- `TRUE` para pasar por alto la *nSensitivity* parámetro; en caso contrario, `FALSE`.  
+ TRUE para omitir el *nSensitivity* parámetro; en caso contrario, FALSE.  
   
  [in] *pRTCBarType*  
- Si no `NULL`, el método busca únicamente los paneles del tipo especificado.  
+ Si no es NULL, el método busca solo los paneles del tipo especificado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El `CBasePane`-objeto derivado que contiene el punto especificado, o `NULL` si no se encontró ningún panel.  
+ El `CBasePane`-objeto derivado que contiene el punto especificado o NULL si no se ha encontrado ningún panel.  
   
 ##  <a name="recalclayout"></a>  CBasePane::RecalcLayout  
  `CBasePane` no se utiliza este método.  
@@ -1552,13 +1552,13 @@ void RemovePaneFromDockManager(
  Un puntero a un panel que se va a quitar.  
   
  [in] *bDestroy*  
- Si `TRUE`, se destruye el panel quitado.  
+ Si es TRUE, se destruye el panel quitado.  
   
  [in] *bAdjustLayout*  
- Si `TRUE`, ajustar el diseño de acoplamiento inmediatamente.  
+ Si es TRUE, ajustar el diseño de acoplamiento inmediatamente.  
   
  [in] *bAutoHide*  
- Si `TRUE`, está relacionado con el diseño de acoplamiento a la lista de barras de ocultación automática. Si `FALSE`, está relacionado con el diseño de acoplamiento a la lista de paneles regulares.  
+ Si es TRUE, el diseño de acoplamiento está relacionado con la lista de barras de ocultación automática. Si es FALSE, el diseño de acoplamiento está relacionado con la lista de paneles regulares.  
   
  [in] *pBarReplacement*  
  Un puntero a un panel que reemplaza el panel quitado.  
@@ -1584,13 +1584,13 @@ virtual BOOL SaveState(
  Id. de panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el estado se guardó correctamente; en caso contrario, `FALSE`.  
+ TRUE si el estado se guardó correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método cuando guarda el estado del panel en el registro. Invalidar `SaveState` en una clase derivada para almacenar información adicional.  
+ El marco llama a este método cuando guarda el estado del panel en el registro. Invalidar `SaveState` en una clase derivada para almacenar información adicional.  
   
 ##  <a name="selectdefaultfont"></a>  CBasePane::SelectDefaultFont  
- Selecciona la fuente predeterminada para un contexto de dispositivo especificado.  
+ Selecciona la fuente predeterminada para un contexto de dispositivo determinado.  
   
 ```  
 CFont* SelectDefaultFont(CDC* pDC);
@@ -1601,7 +1601,7 @@ CFont* SelectDefaultFont(CDC* pDC);
  Un contexto de dispositivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero con el valor predeterminado [CFont (clase)](../../mfc/reference/cfont-class.md) objeto.  
+ Un puntero al valor predeterminado [CFont (clase)](../../mfc/reference/cfont-class.md) objeto.  
   
 ##  <a name="setcontrolbarstyle"></a>  CBasePane::SetControlBarStyle  
  Establece el estilo de barra de control.  
@@ -1616,13 +1616,13 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
   
 |Estilo|Descripción|  
 |-----------|-----------------|  
-|`AFX_CBRS_FLOAT`|Hace que el tipo float de barra de control.|  
-|`AFX_CBRS_AUTOHIDE`|habilita el modo de ocultación automática.|  
-|`AFX_CBRS_RESIZE`|Permite cambiar el tamaño de la barra de control. Cuando se establece esta marca, la barra de control puede colocarse en un panel acoplable.|  
-|`AFX_CBRS_CLOSE`|Permite ocultar la barra de control.|  
+|AFX_CBRS_FLOAT|Hace que los flotantes de la barra de control.|  
+|AFX_CBRS_AUTOHIDE|Permite oculta automáticamente el modo.|  
+|AFX_CBRS_RESIZE|Permite cambiar el tamaño de la barra de control. Cuando se establece esta marca, la barra de control puede colocarse en un panel acoplable.|  
+|AFX_CBRS_CLOSE|Permite ocultar la barra de control.|  
   
 ##  <a name="setdockingmode"></a>  CBasePane::SetDockingMode  
- Establece el modo de acoplamiento para el panel.  
+ Establece el modo de acoplamiento del panel.  
   
 ```  
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
@@ -1630,17 +1630,17 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *dockModeNew*  
- Especifica el nuevo modo de acoplamiento para el panel.  
+ Especifica el nuevo modo de acoplamiento del panel.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo admite dos modos de acoplamiento: estándar y de forma inmediata.  
   
- En el modo de acoplamiento estándar, ventanas de marco reducido y paneles se mueven para emplear un rectángulo de arrastre. En el modo de acoplamiento inmediato, barras de controles y ventanas de marco reducido se mueven inmediatamente con su contexto.  
+ En el modo de acoplamiento estándar, ventanas de marco reducido y paneles se mueven con un rectángulo de arrastre. En el modo de acoplamiento inmediato, barras de controles y ventanas de marco reducido se mueven inmediatamente con su contexto.  
   
- Inicialmente, se define el modo de acoplamiento globalmente por [CDockingManager::m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). Puede establecer el modo de acoplamiento para cada panel individualmente mediante el `SetDockingMode` método.  
+ Inicialmente, el modo de acoplamiento se define globalmente mediante [CDockingManager::m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). Puede establecer el modo de acoplamiento para cada panel individualmente mediante el `SetDockingMode` método.  
   
 ##  <a name="setpanealignment"></a>  CBasePane::SetPaneAlignment  
- Establece la alineación del panel.  
+ Establece la alineación para el panel.  
   
 ```  
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -1651,16 +1651,16 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
  Especifica la alineación nuevo.  
   
 ### <a name="remarks"></a>Comentarios  
- Por lo general, el marco de trabajo llama a este método cuando se acopla un panel de un lado del marco principal a otro.  
+ Normalmente, el marco llama a este método cuando se acopla un panel de un lado del marco principal a otro.  
   
- En la tabla siguiente se muestra los valores posibles para *dwAlignment*:  
+ La siguiente tabla muestra los valores posibles para *dwAlignment*:  
   
 |Valor|Alineación|  
 |-----------|---------------|  
-|`CBRS_ALIGN_LEFT`|Alineación a la izquierda.|  
-|`CBRS_ALIGN_RIGHT`|Alineación a la derecha.|  
-|`CBRS_ALIGN_TOP`|Alineación superior.|  
-|`CBRS_ALIGN_BOTTOM`|Alineación de la parte inferior.|  
+|CBRS_ALIGN_LEFT|Alineación a la izquierda.|  
+|CBRS_ALIGN_RIGHT|Alineación a la derecha.|  
+|CBRS_ALIGN_TOP|Alineación superior.|  
+|CBRS_ALIGN_BOTTOM|Alineación de la parte inferior.|  
   
 ##  <a name="setpanestyle"></a>  CBasePane::SetPaneStyle  
  Establece el estilo del panel.  
@@ -1674,12 +1674,12 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
  Especifica el nuevo estilo a establecer.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método puede utilizarse para establecer cualquiera de los estilos CBRS_ que están definidos en afxres.h. Porque el estilo del panel y la alineación de panel se almacenan juntos, establezca el nuevo estilo al combinarla con la alineación actual.  
+ Este método puede utilizarse para establecer cualquiera de los estilos CBRS_ definidos en afxres.h. Porque el estilo del panel y la alineación de panel se almacenan juntos, establezca el nuevo estilo al combinarla con la alineación actual.  
   
  `pPane->SetPaneStyle (pPane->GetCurrentAlignment() | CBRS_TOOLTIPS);`  
   
 ##  <a name="setwindowpos"></a>  CBasePane::SetWindowPos  
- Cambia el tamaño, la posición y el orden Z de un panel.  
+ Cambia el tamaño, posición y el orden Z de un panel.  
   
 ```  
 virtual HDWP SetWindowPos(
@@ -1694,7 +1694,7 @@ virtual HDWP SetWindowPos(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pWndInsertAfter*  
- Identifica la `CWnd` objeto que proceda anteriores a éste `CWnd` objeto en el orden Z. Para obtener más información, consulte [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
+ Identifica el `CWnd` que viene antes de que este objeto de `CWnd` objeto en el orden Z. Para obtener más información, consulte [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
  [in] *x*  
  Especifica la posición del lado izquierdo de la ventana.  
@@ -1712,13 +1712,13 @@ virtual HDWP SetWindowPos(
  Especifica las opciones de tamaño y posición. Para obtener más información, consulte [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
  [in] *hdwp*  
- Identificador de una estructura que contiene información de tamaño y la posición de una o varias ventanas.  
+ Identificador de una estructura que contiene información de tamaño y posición de una o varias ventanas.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un identificador a una estructura de posición de ventana aplazada actualizada, o `NULL`.  
+ Identificador de una estructura de posición de ventana aplazada actualizada, o NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- Si *pWndInsertAfter* es `NULL`, llama a este método [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Si *pWndInsertAfter* no es `NULL`, este método llama a `DeferWindowPos`.  
+ Si *pWndInsertAfter* es NULL, este método llama a [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Si *pWndInsertAfter* es distinto de NULL, este método llama a `DeferWindowPos`.  
   
 ##  <a name="showpane"></a>  CBasePane::ShowPane  
  Muestra u oculta el panel.  
@@ -1732,16 +1732,16 @@ virtual void ShowPane(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bMostrar*  
- Especifica si se debe mostrar ( `TRUE`) u ocultar ( `FALSE`) un panel.  
+ Especifica si se debe mostrar (TRUE) u ocultar (FALSE) un panel.  
   
  [in] *bDelay*  
- Si `TRUE`, volver a calcular el diseño de acoplamiento se retrasa.  
+ Si es TRUE, se retrasa el volver a calcular el diseño de acoplamiento.  
   
  [in] *bActivate*  
- Si `TRUE`, está activo cuando se muestra el panel.  
+ Si es TRUE, el panel está activo cuando se muestra.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método muestra u oculta un panel. Utilice este método en lugar de `ShowWindow` porque este método notifica a los administradores de acoplamiento relevantes acerca de los cambios en la visibilidad del panel.  
+ Este método muestra u oculta un panel. Use este método en lugar de `ShowWindow` porque este método notifica a los administradores de acoplamiento relevantes acerca de los cambios en la visibilidad del panel.  
   
  Use [CBasePane::IsVisible](#isvisible) para determinar la visibilidad actual de un panel.  
   
@@ -1759,13 +1759,13 @@ virtual CSize StretchPane(
  La longitud por el que se va a expandir el panel.  
   
  [in] *bVert*  
- Si `TRUE`, ajustar el panel verticalmente. Si `FALSE`, expandir el panel horizontalmente.  
+ Si es TRUE, ajustar el panel verticalmente. Si es FALSE, expandir el panel horizontalmente.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El tamaño del panel con Stretch.  
+ El tamaño del panel ajustado.  
   
 ##  <a name="undockpane"></a>  CBasePane::UndockPane  
- Quita el panel desde el sitio de vinculación, control deslizante de manera predeterminada o ventana de marco reducido que actualmente está acoplada.  
+ Quita el panel de la ventana de marco reducido donde actualmente está acoplada, control deslizante de forma predeterminada o el sitio de vinculación.  
   
 ```  
 virtual void UndockPane(BOOL bDelay=FALSE);
@@ -1776,7 +1776,7 @@ virtual void UndockPane(BOOL bDelay=FALSE);
  Si es TRUE, el diseño de acoplamiento no se actualiza inmediatamente.  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a este método para manipular el estado del panel o excluir el panel de diseño de acoplamiento.  
+ Llame a este método para manipular el estado del panel o excluir el panel desde el diseño de acoplamiento.  
   
  Si desea seguir usando este panel, llamar a [cbasepane:: Dockpane](#dockpane) o [CBasePane::FloatPane](#floatpane) antes de llamar a este método.  
   

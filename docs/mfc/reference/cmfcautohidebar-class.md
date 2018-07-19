@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCAutoHideBar | Documentos de Microsoft
+title: CMFCAutoHideBar (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,14 +48,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337028"
 ---
-# <a name="cmfcautohidebar-class"></a>Clase CMFCAutoHideBar
+# <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar (clase)
 La clase `CMFCAutoHideBar` es una clase especial de la barra de herramientas que implementa la característica Ocultar automáticamente.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
@@ -145,15 +145,15 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ### <a name="return-value"></a>Valor devuelto  
   
 ### <a name="remarks"></a>Comentarios  
- El *dwAlignment* parámetro indica que el botón de ocultación automática reside en la aplicación. El parámetro puede establecerse en uno de los valores siguientes:  
+ El *dwAlignment* parámetro indica dónde reside el botón de ocultación automática en la aplicación. El parámetro puede establecerse en uno de los valores siguientes:  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
@@ -251,7 +251,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando el usuario coloca el cursor del mouse sobre un `CMFCAutoHideButton`, hay un breve lapso de tiempo antes de que el marco de trabajo muestra la ventana asociada. Este parámetro determina la longitud de dicho retraso en milisegundos.  
+ Cuando el usuario coloca el cursor del mouse sobre un `CMFCAutoHideButton`, hay un ligero retraso antes de que el marco de trabajo muestra la ventana asociada. Este parámetro determina la longitud de dicho retraso en milisegundos.  
   
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
@@ -295,7 +295,7 @@ virtual void SetActiveInGroup(BOOL bActive);
  TRUE para establecerlo como activo; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [CPANE:: Setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
+ Consulte [CPANE:: Setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
   
 ##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
 
@@ -346,7 +346,7 @@ virtual CSize StretchPane(
  En la implementación base, no se usa este valor. En las implementaciones derivadas, use este valor para indicar la longitud del panel cuyo tamaño ha cambiado.  
   
  [in] *bVert*  
- En la implementación base, no se usa este valor. En las implementaciones derivadas, use `TRUE` para controlar el caso donde la barra de ocultación automática está contraída verticalmente y `FALSE` para el caso donde la barra de ocultación automática está contraída horizontalmente.  
+ En la implementación base, no se usa este valor. En las implementaciones derivadas, use True para el identificador del caso donde la barra de ocultación automática está contraída verticalmente y FALSE para el caso donde la barra de ocultación automática está contraída horizontalmente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño resultante del panel cuyo tamaño ha cambiado.  

@@ -1,5 +1,5 @@
 ---
-title: Clase CMapWordToPtr | Documentos de Microsoft
+title: CMapWordToPtr (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,14 +44,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 510f0416686c981682236f6d6c05ae761fe8230d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 08ea48b13b92959652f67c39c05a6ced30e77b2c
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337998"
 ---
-# <a name="cmapwordtoptr-class"></a>Clase CMapWordToPtr
+# <a name="cmapwordtoptr-class"></a>CMapWordToPtr (clase)
 Admite mapas de punteros void con clave de palabras de 16 bits.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -61,7 +61,7 @@ class CMapWordToPtr : public CObject
 ```  
   
 ## <a name="members"></a>Miembros  
- Las funciones miembro de `CMapWordToPtr` son similares a las funciones miembro de clase [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CMapStringToOb` para obtener información específica de la función miembro. Siempre que vea un `CObject` puntero expresado como un parámetro de función o el valor devuelto, utilice un puntero a **void**. Siempre que vea un `CString` o un **const** puntero a **char** como un parámetro de función o un valor devuelto, sustituya **WORD**.  
+ Las funciones miembro de `CMapWordToPtr` son similares a las funciones miembro de clase [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CMapStringToOb` para obtener información específica de la función miembro. Siempre que vea un `CObject` puntero como un parámetro de función o el valor devuelto, utilice un puntero a **void**. Siempre que vea un `CString` o un **const** puntero a **char** como un parámetro de función o valor devuelto, use WORD.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
@@ -89,11 +89,11 @@ class CMapWordToPtr : public CObject
 |[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcula el valor hash de una clave especificada.|  
 |[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inicializa la tabla hash.|  
 |[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Comprueba si la condición de mapa está vacío (no hay elementos).|  
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Busca un puntero void en función de la clave de puntero void. El valor del puntero, no la entidad que señala, se utiliza para la comparación de claves.|  
+|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Busca un puntero void en función de la clave de un puntero void. El valor de puntero, no la entidad que señala, se usa para la comparación de la clave.|  
 |[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Devuelve una referencia a la clave asociada con el valor de clave especificado.|  
 |[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Quita todos los elementos de esta asignación.|  
 |[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Quita un elemento especificado por una clave.|  
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserta un elemento en la asignación; reemplaza un elemento existente si se encuentra una clave coincidente.|  
+|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserta un elemento en el mapa; reemplaza un elemento existente si se encuentra una clave coincidente.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -102,13 +102,13 @@ class CMapWordToPtr : public CObject
 |[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CMapWordToPtr` incorpora la macro `IMPLEMENT_DYNAMIC` para admitir el acceso a tipos en tiempo de ejecución y el volcado en un objeto `CDumpContext`. Si se necesita un volcado de elementos de mapa individuales, debe establecer la profundidad del contexto de volcado en 1 o mayor.  
+ `CMapWordToPtr` incorpora la macro IMPLEMENT_DYNAMIC para admitir el acceso a los tipos de tiempo de ejecución y el volcado en un `CDumpContext` objeto. Si necesita un volcado de elementos de mapa individual, debe establecer la profundidad del contexto de volcado en 1 o mayor.  
   
- Mapas de palabras de puntero no se pueden serializar.  
+ No se pueden serializar los mapas de puntero de Word.  
   
  Cuando un `CMapWordToPtr` se elimina el objeto, o cuando se quitan sus elementos, se quitan las palabras y los punteros. No se quitan las entidades que se hace referencia a los punteros.  
   
- Para obtener más información sobre `CMapWordToPtr`, vea el artículo [colecciones](../../mfc/collections.md).  
+ Para obtener más información sobre `CMapWordToPtr`, consulte el artículo [colecciones](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  

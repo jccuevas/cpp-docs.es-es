@@ -1,5 +1,5 @@
 ---
-title: CClientDC (clase) | Documentos de Microsoft
+title: CClientDC (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338586"
 ---
 # <a name="cclientdc-class"></a>CClientDC (clase)
 Se encarga de llamar a las funciones de Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) en tiempo de construcción y [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) en tiempo de destrucción.  
@@ -48,7 +48,7 @@ class CClientDC : public CDC
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|El `HWND` de la ventana para el que este `CClientDC` es válida.|  
+|[CClientDC::m_hWnd](#m_hwnd)|El HWND de la ventana para el que este `CClientDC` es válido.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esto significa que el contexto de dispositivo asociado a un `CClientDC` objeto es el área de cliente de una ventana.  
@@ -66,26 +66,26 @@ class CClientDC : public CDC
  **Encabezado:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- Construye un `CClientDC` objeto que tiene acceso el área cliente de la [CWnd](../../mfc/reference/cwnd-class.md) que señala *pWnd*.  
+ Construye un `CClientDC` objeto que tiene acceso al área de cliente de la [CWnd](../../mfc/reference/cwnd-class.md) apunta *conquistado*.  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *pWnd*  
- La ventana cuyo área de cliente accederá el objeto de contexto de dispositivo.  
+ *conquistado*  
+ La ventana cuyo área de cliente que tendrá acceso el objeto de contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentarios  
- El constructor llama a la función de Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+ El constructor llama a la función Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
   
- Una excepción (de tipo `CResourceException`) se produce si las ventanas `GetDC` llamadas se produce un error. Un contexto de dispositivo no estén disponible si Windows ya ha asignado todos sus contextos de dispositivo disponible. La aplicación compite por los cinco comunes contextos de presentación disponibles en un momento dado en Windows.  
+ Una excepción (de tipo `CResourceException`) se produce si el Windows `GetDC` llamar se produce un error. Un contexto de dispositivo no puede estar disponible si Windows ya asignado todos sus contextos de dispositivo disponible. La aplicación compite por los cinco contextos mostrar comunes disponibles en un momento dado en Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
- El `HWND` de la `CWnd` puntero utilizado para construir el `CClientDC` objeto.  
+ El `HWND` de la `CWnd` puntero usado para construir el `CClientDC` objeto.  
   
 ```  
 HWND m_hWnd;  
