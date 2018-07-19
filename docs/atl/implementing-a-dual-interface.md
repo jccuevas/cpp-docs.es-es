@@ -1,5 +1,5 @@
 ---
-title: Implementar una interfaz Dual (ATL) | Documentos de Microsoft
+title: Implementar una interfaz Dual (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34cc55e4466dba094bf70e734340b40237207f3c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb28b1ce6d98ffd030bbeeca746847b57ed59bc9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356737"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957602"
 ---
 # <a name="implementing-a-dual-interface"></a>Implementar una interfaz Dual
-Puede implementar una interfaz dual utilizando la [IDispatchImpl](../atl/reference/idispatchimpl-class.md) (clase), que proporciona una implementación predeterminada de la `IDispatch` métodos en una interfaz dual. Para obtener más información, consulta [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+Puede implementar una interfaz dual con la [IDispatchImpl](../atl/reference/idispatchimpl-class.md) (clase), que proporciona una implementación predeterminada de la `IDispatch` métodos en una interfaz dual. Para obtener más información, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
- Para utilizar esta clase:  
+ Para usar esta clase:  
   
--   Defina su interfaz dual en una biblioteca de tipos.  
+-   Definir la interfaz dual en una biblioteca de tipos.  
   
--   Derive la clase de una especialización de `IDispatchImpl` (pasar información acerca de la biblioteca de interfaz y el tipo como los argumentos de plantilla).  
+-   Derive la clase de una especialización de `IDispatchImpl` (pasar información sobre la biblioteca de interfaz y el tipo como los argumentos de plantilla).  
   
--   Agregar una entrada (o entradas) a la asignación de COM para exponer la interfaz dual mediante `QueryInterface`.  
+-   Agregar una entrada (o entradas) al mapa COM para exponer la interfaz dual a través de `QueryInterface`.  
   
 -   Implemente la parte vtable de la interfaz en su clase.  
   
@@ -44,13 +44,13 @@ Puede implementar una interfaz dual utilizando la [IDispatchImpl](../atl/referen
  Si tiene una interfaz existente, puede usar el [Asistente para implementar interfaces](../atl/reference/adding-a-new-interface-in-an-atl-project.md) para agregar la clase base necesaria, entradas de mapa COM y las implementaciones de método de esqueleto a una clase existente.  
   
 > [!NOTE]
->  Puede que necesite ajustar la clase base generada de forma que los números de versión principal y secundaria de la biblioteca de tipos se pasan como argumentos de plantilla para su `IDispatchImpl` clase base. El Asistente para implementar interfaces no comprueba el número de versión de la biblioteca de tipos.  
+>  Es posible que deba ajustar la clase base generada de forma que los números de versión principal y secundaria de la biblioteca de tipos se pasan como argumentos de plantilla para su `IDispatchImpl` clase base. El Asistente para implementar interfaces no comprueba el número de versión de la biblioteca de tipos.  
   
-## <a name="implementing-idispatch"></a>Implementar IDispatch  
- Puede usar un `IDispatchImpl` clase para proporcionar una implementación de una interfaz dispinterface simplemente especificando la entrada adecuada en el mapa COM base (mediante el [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) o [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) macro) siempre y cuando tenga una biblioteca de tipos que describe una interfaz dual correspondiente. Es bastante habitual para implementar el `IDispatch` la interfaz de esta manera, por ejemplo. El Asistente para objetos simples de ATL y el Asistente para implementar interfaces ambos se supone que va a implementar `IDispatch` de esta manera, por lo que agregará la entrada correspondiente a la asignación.  
+## <a name="implementing-idispatch"></a>Implementación de IDispatch  
+ Puede usar un `IDispatchImpl` basar la clase para proporcionar una implementación de una interfaz dispinterface simplemente especificando la entrada apropiada en el mapa COM (mediante el [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) o [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) macro) siempre que tenga una biblioteca de tipos que describe una interfaz dual correspondiente. Es bastante habitual para implementar el `IDispatch` de la interfaz de este modo, por ejemplo. El Asistente para objetos simples de ATL y el Asistente para implementar interfaces ambos suponen que pretenden implementar `IDispatch` de esta manera, por lo que agregará la entrada correspondiente a la asignación.  
   
 > [!NOTE]
->  ATL ofrece la [IDispEventImpl](../atl/reference/idispeventimpl-class.md) y [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) clases que le ayudarán a implementar interfaces dispinterface sin necesidad de una biblioteca de tipos que contiene la definición de una interfaz dual compatible.  
+>  ATL ofrece el [IDispEventImpl](../atl/reference/idispeventimpl-class.md) y [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) clases que le ayudarán a implementar interfaces dispinterface sin necesidad de una biblioteca de tipos que contiene la definición de una interfaz dual compatible.  
   
 ## <a name="see-also"></a>Vea también  
  [Interfaces duales y ATL](../atl/dual-interfaces-and-atl.md)

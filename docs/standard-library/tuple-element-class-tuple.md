@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71cdbfad883d1d9560ee88fde0338958240bd19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855830"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959074"
 ---
 # <a name="tupleelement-class"></a>tuple_element (Clase)
 
@@ -66,29 +66,35 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parámetros
 
-*Índice* el índice del elemento designado.
+*Index*  
+Índice del elemento designado.
 
-*Tupla* el tipo de la tupla.
+*Tuple*  
+El tipo de tupla.
 
-*Elem* el tipo de un elemento de matriz.
+*Elem*  
+El tipo de un elemento de matriz.
 
-*Tamaño* el tamaño de la matriz.
+*Size*  
+Se refiere al tamaño de la matriz.
 
-*T1* El tipo del primer elemento de un par.
+*T1*  
+El tipo del primer elemento en un par.
 
-*T2* el tipo del segundo elemento de un par.
+*T2*  
+El tipo del segundo elemento de un par.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla `tuple_element` tiene una definición de tipo anidada `type` que es un sinónimo del tipo en el índice `Index` del tipo de tupla `Tuple`.
+La clase de plantilla `tuple_element` tiene una definición de tipo anidado `type` que es un sinónimo para el tipo de índice *índice* del tipo de tupla *tupla*.
 
 La definición de tipo `tuple_element_t` es un alias adecuado para `tuple_element<Index, Tuple>::type`.
 
-La especialización de la clase de plantilla para matrices proporciona una interfaz a un `array` como una tupla de elementos `Size`, cada uno con el mismo tipo. Cada especialización tiene una definición de tipo anidada `type` que es un sinónimo del tipo de elemento `Index` de la `array`, con las calificaciones const o volatile conservadas.
+La especialización de la clase de plantilla para matrices proporciona una interfaz a un `array` como una tupla de elementos `Size`, cada uno con el mismo tipo. Cada especialización tiene una definición de tipo anidada `type` que es un sinónimo del tipo de la *índice* elemento de la `array`, con cualquier calificador const y volatile conservado.
 
 Las especializaciones de plantilla para tipos `pair` tienen una definición de tipo de miembro único, `type`, que es un sinónimo del tipo del elemento en la posición especificada en el par, con cualquier calificador const o volatile conservado. La definición de tipo `tuple_element_t` es un alias adecuado para `tuple_element<N, pair<T1, T2>>::type`.
 
-Use la [get (función) &lt;utilidad&gt; ](../standard-library/utility-functions.md#get) para devolver el elemento en una posición especificada o de un tipo especificado.
+Use la [get (función) &lt;utilidad&gt; ](../standard-library/utility-functions.md#get) para devolver el elemento en una posición especificada, o de un tipo especificado.
 
 ## <a name="example"></a>Ejemplo
 
@@ -178,7 +184,7 @@ int main() {
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<tupla > **encabezado:** \<matriz > (para la especialización de matriz) **encabezado:** \<utilidad > (para especializaciones de par)  **Namespace:** std
+**Encabezado:** \<tupla > **encabezado:** \<array > (para la especialización de matrices) **encabezado:** \<utilidad > (para especializaciones de pares)  **Namespace:** std
 
 ## <a name="see-also"></a>Vea también
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902e7a1a3ae4bcb35a4822228425747476d5bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864078"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958284"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine (Clase)
 
@@ -55,13 +55,13 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Parámetros
 
-`UIntType` El tipo de resultado entero sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*UIntType* el tipo de resultado entero sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-`A` **Multiplicador**. **Condición previa**: vea la sección Comentarios.
+*Un* **multiplicador**. **Condición previa**: vea la sección Comentarios.
 
-`C` **Incremento**. **Condición previa**: vea la sección Comentarios.
+*C* **incremento**. **Condición previa**: vea la sección Comentarios.
 
-`M` **Módulo**. **Condición previa**: vea los comentarios.
+*M* **Modulus**. **Condición previa**: vea los comentarios.
 
 ## <a name="members"></a>Miembros
 
@@ -80,9 +80,9 @@ La clase de plantilla `linear_congruential_engine` es el motor de generador más
 
 Este motor genera valores de un tipo integral sin signo especificado por el usuario mediante la relación de repetición (*período*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Si `M` es cero, el valor usado en esta operación de módulo es `numeric_limits<result_type>::max() + 1`. El estado del motor es el último valor devuelto, o bien el valor de inicialización si no se ha llamado a `operator()`.
+Si *M* es cero, el valor utilizado para esta operación de módulo es `numeric_limits<result_type>::max() + 1`. El estado del motor es el último valor devuelto, o bien el valor de inicialización si no se ha llamado a `operator()`.
 
-Si `M` no es cero, los valores de los argumentos de plantilla `A` y `C` deben ser inferiores a `M`.
+Si *M* no es cero, los valores de los argumentos de plantilla *A* y *C* debe ser menor que *M*.
 
 Aunque puede construir un generador directamente a partir de este motor, también puede usar una de estas definiciones de tipo predefinidas.
 

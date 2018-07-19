@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9153d5e85540c50e11e096c33c474f1344d3ad2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846212"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959597"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -155,7 +155,7 @@ Tenga en cuenta que este ejemplo usa la expresión lambda `[] (int& elem) { elem
 
 ## <a name="example"></a>Ejemplo
 
-Las comprobaciones de iteradores de depuración también provocan que una variable de iterador que se declara en un bucle `for` esté fuera de ámbito cuando el ámbito de bucle `for` finaliza.
+Comprobaciones de iteradores de depuración también provocar una variable de iterador que se declara en un **para** bucle esté fuera de ámbito cuando el **para** finaliza el ámbito de bucle.
 
 ```cpp
 // iterator_debugging_4.cpp

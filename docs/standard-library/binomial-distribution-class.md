@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46e2d7f6fd7337965d0b5dcf5b5cfe8d7a53688
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846316"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957690"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution (Clase)
 
@@ -81,20 +81,20 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*IntType* el tipo de resultado entero, valor predeterminado es `int`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*IntType* el tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 *URNG* El motor de generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que produce valores de un tipo de entero especificado por el usuario o de tipo `int` si no se proporciona ninguno, distribuido según la distribución binomial. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que produce valores de un entero especificado por el usuario tipo o tipo **int** si se proporciona ninguno, distribuido según la función de probabilidad discreta de distribución Binomial. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-Los miembros de propiedad `t()` y `p()` devuelven los valores para los parámetros de distribución almacenados actualmente `t` y `p`, respectivamente.
+Los miembros de la propiedad `t()` y `p()` devolver valores de parámetro de la distribución almacenada actualmente *t* y *p* respectivamente.
 
 El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.
 
@@ -254,13 +254,13 @@ explicit binomial_distribution(const param_type& parm);
 
 *p* el `p` parámetro de distribución.
 
-*parm* el `param_type` estructura utilizada para construir la distribución.
+*parm* el `param_type` estructura usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
 **Condición previa:** `0 ≤ t` y `0.0 ≤ p ≤ 1.0`
 
-El primer constructor crea un objeto cuyo valor `p` almacenado contiene el valor *p* y cuyo valor `t` almacenado contiene el valor *t*.
+El primer constructor crea un objeto cuyo almacenado *p* valor contiene el valor *p* y cuyo almacenado *t* valor contiene el valor *t*.
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
@@ -286,7 +286,7 @@ struct param_type {
 
 *p* el `p` parámetro de distribución.
 
-*derecho* la `param_type` objeto que se va a comparar con esta.
+*derecha* el `param_type` objeto que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
 

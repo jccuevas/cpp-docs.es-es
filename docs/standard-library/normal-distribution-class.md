@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9c6e71b0872b19ea063d9cc0ff2615ef4362ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855765"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959866"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution (Clase)
 
@@ -81,18 +81,18 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType* predeterminado es el tipo de resultado de punto flotante, `double`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType* el tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que produce valores de un tipo de entero especificado por el usuario o de tipo `double` si no se proporciona ninguno, distribuido según la distribución normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que produce valores de un entero especificado por el usuario tipo o tipo **doble** si se proporciona ninguno, distribuido según la distribución Normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-Las funciones de propiedad `mean()` y `stddev()` devuelven los valores para los parámetros de distribución almacenados `mean` y `stddev`, respectivamente.
+Las funciones de propiedad `mean()` y `stddev()` devolver los valores de los parámetros de distribución almacenado *significa* y *stddev* respectivamente.
 
 El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.
 
@@ -212,7 +212,7 @@ explicit normal_distribution(const param_type& parm);
 
 *StdDev* el `stddev` parámetro de distribución.
 
-*parm* la estructura de parámetros utilizada para construir la distribución.
+*parm* la estructura de parámetros que se usa para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -243,7 +243,7 @@ struct param_type {
 
 *StdDev* el `stddev` parámetro de distribución.
 
-*derecho* el `param_type` estructura que se utiliza para comparar.
+*derecha* el `param_type` estructura usada para comparar.
 
 ### <a name="remarks"></a>Comentarios
 

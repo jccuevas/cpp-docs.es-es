@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 53f4deb0bfe9439011f75cd22d0d52b74dae9c1f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569903"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959730"
 ---
 # <a name="steadyclock-struct"></a>Struct steady_clock
 
@@ -43,9 +43,9 @@ Un reloj es *monotónico* si el valor devuelto por la primera llamada a `now` si
 
 |nombre|Descripción|
 |----------|-----------------|
-|`steady_clock::duration`|Un sinónimo de `nanoseconds`, definida en \<chrono >.|
-|`steady_clock::period`|Un sinónimo de `nano`, definida en \<relación >.|
-|`steady_clock::rep`|Un sinónimo de **largo** **largo**, el tipo que se utiliza para representar el número de ciclos de reloj en la creación de instancias independiente de `duration`.|
+|`steady_clock::duration`|Un sinónimo de `nanoseconds`, definido en \<chrono >.|
+|`steady_clock::period`|Un sinónimo de `nano`, definido en \<proporción >.|
+|`steady_clock::rep`|Un sinónimo de **largo** **largo**, el tipo que se usa para representar el número de ciclos de reloj en la creación de instancias contenida de `duration`.|
 |`steady_clock::time_point`|Sinónimo de `chrono::time_point<steady_clock>`.|
 
 ## <a name="public-functions"></a>Funciones públicas
@@ -58,7 +58,7 @@ Un reloj es *monotónico* si el valor devuelto por la primera llamada a `now` si
 
 |nombre|Descripción|
 |----------|-----------------|
-|`steady_clock::is_steady`|Contiene `true`. `steady_clock` es *constante*.|
+|`steady_clock::is_steady`|Contiene **true**. `steady_clock` es *constante*.|
 
 ## <a name="requirements"></a>Requisitos
 

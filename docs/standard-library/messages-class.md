@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ffc59d3425f403fb1dca43f70876cfbfb5d3dd9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861966"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954895"
 ---
 # <a name="messages-class"></a>messages (Clase)
 
@@ -54,7 +54,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parámetros
 
-`CharType` El tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
+*CharType* tipo usado dentro de un programa para codificar los caracteres en una configuración regional.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -114,7 +114,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`_Catval` El catálogo que se cerrará.
+*_Catval* el catálogo que se cerrará.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -130,11 +130,11 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`_Catval` El catálogo que se cerrará.
+*_Catval* el catálogo que se cerrará.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro protegida cierra el catálogo de mensajes `_Catval`, que debe haberse abierto mediante una llamada anterior a [do_open](#do_open).
+La función miembro protegida cierra el catálogo de mensajes *_Catval*, que debe haberse abierto mediante una llamada anterior a [do_open](#do_open).
 
 *_Catval* debe obtenerse de un catálogo abierto anteriormente que no esté cerrado.
 
@@ -156,21 +156,21 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Catval` El valor de identificación que se especifica el catálogo de mensajes que se buscará.
+*_Catval* el valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-`_Set` Identifica la primera utilizado para buscar un mensaje en un catálogo de mensajes.
+*_Establecer* el primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-`_Message` El segundo identificado utilizado para buscar un mensaje en un catálogo de mensajes.
+*_Cuerpo* el segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
-`_Dfault` Cadena que se devolverán en caso de error.
+*_Dfault* la cadena que se va a devolver en caso de error.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve una copia de `_Dfault` en caso de error. De otro modo, devuelve una copia de la secuencia de mensajes especificada.
+Devuelve una copia de *_Dfault* en caso de error. De otro modo, devuelve una copia de la secuencia de mensajes especificada.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro protegida intenta obtener una secuencia de mensajes del catálogo de mensajes `_Catval`. Hace uso de `_Set`, `_Message` y `_Dfault` al hacerlo.
+La función miembro protegida intenta obtener una secuencia de mensajes desde el catálogo de mensajes *_Catval*. Es posible que el uso de *_Establecer*, *_cuerpo*, y *_Dfault* de esta manera.
 
 ### <a name="example"></a>Ejemplo
 
@@ -188,9 +188,9 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Catname` El nombre del catálogo que se buscará.
+*_Catname* el nombre del catálogo que se buscará.
 
-`_Loc` La configuración regional que se va a buscar en el catálogo.
+*_Loc* la configuración regional que se va a buscar en el catálogo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -198,7 +198,7 @@ Devuelve un valor que se compara con menos de cero en caso de error. De otro mod
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro protegida intenta abrir un catálogo de mensajes cuyo nombre es `_Catname`. Hace uso de la configuración regional `_Loc` al hacerlo
+La función miembro protegida intenta abrir un catálogo de mensajes cuyo nombre es *_Catname*. Es posible que el uso de la configuración regional *_Loc* hacerlo
 
 El valor devuelto debe usarse como el argumento en una llamada posterior a [close](#close).
 
@@ -220,17 +220,17 @@ string_type get(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Catval` El valor de identificación que se especifica el catálogo de mensajes que se buscará.
+*_Catval* el valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-`_Set` Identifica la primera utilizado para buscar un mensaje en un catálogo de mensajes.
+*_Establecer* el primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-`_Message` El segundo identificado utilizado para buscar un mensaje en un catálogo de mensajes.
+*_Cuerpo* el segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
-`_Dfault` Cadena que se devolverán en caso de error.
+*_Dfault* la cadena que se va a devolver en caso de error.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve una copia de `_Dfault` en caso de error. De otro modo, devuelve una copia de la secuencia de mensajes especificada.
+Devuelve una copia de *_Dfault* en caso de error. De otro modo, devuelve una copia de la secuencia de mensajes especificada.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -251,13 +251,13 @@ protected: messages(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Refs` Valor de entero utilizado para especificar el tipo de administración de memoria para el objeto.
+*_Refs* valor entero utilizado para especificar el tipo de administración de memoria para el objeto.
 
-`_Locname` El nombre de la configuración regional.
+*_Locname* el nombre de la configuración regional.
 
 ### <a name="remarks"></a>Comentarios
 
-Los valores posibles del parámetro `_Refs` y su importancia son:
+Los valores posibles de la *_Refs* parámetro y su importancia son:
 
 - 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
@@ -281,9 +281,9 @@ catalog open(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Catname` El nombre del catálogo que se buscará.
+*_Catname* el nombre del catálogo que se buscará.
 
-`_Loc` La configuración regional que se va a buscar en el catálogo.
+*_Loc* la configuración regional que se va a buscar en el catálogo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -295,7 +295,7 @@ La función miembro devuelve [do_open](#do_open)( `_Catname`, `_Loc`).
 
 ## <a name="string_type"></a> messages::string_type
 
-Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres de tipo **CharType**.
+Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres de tipo `CharType`.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

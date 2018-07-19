@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b814f64f340577508add6bf3c0f85ffac0786db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b65cfbe156ba462af9e87abf82d63023cfdc44b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843475"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957443"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine (Clase)
 
@@ -36,11 +36,11 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-`Engine` El tipo de motor de base.
+*Motor* el tipo de motor de base.
 
-`P` **Tamaño de bloque**. El número de valores de cada bloque.
+*P* **tamaño de bloque**. El número de valores de cada bloque.
 
-`R` **Bloque utilizado**. El número de valores de cada bloque que se utilizan. El resto se descartan (`P` - `R`). **Condición previa:** `0 < R ≤ P`
+*R* **bloque usado**. El número de valores de cada bloque que se utilizan. El resto se descartan (`P` - `R`). **Condición previa:** `0 < R ≤ P`
 
 ## <a name="members"></a>Miembros
 

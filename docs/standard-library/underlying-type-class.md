@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f45af807b37294b87920b6fabac18647f170025
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b3f796d5039900b591c219c840d1aef94d23e8f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853227"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957586"
 ---
 # <a name="underlyingtype-class"></a>underlying_type (Clase)
 
@@ -37,11 +37,12 @@ struct underlying_type;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` Tipo que se va a modificar.
+*T*  
+ Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 
-La definición de tipo miembro `type` de la clase de plantilla nombra el tipo entero subyacente de `T`, cuando `T` es un tipo de enumeración, de lo contrario, no hay ninguna definición de tipo miembro `type`.
+El `type` typedef de miembro de la clase de plantilla nombra el tipo entero subyacente de *T*, cuando *T* es un tipo de enumeración, en caso contrario, no hay ninguna definición de tipo de miembro `type`.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,5 +1,5 @@
 ---
-title: Referencias (C++) | Documentos de Microsoft
+title: Referencias (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe60a849cb1b14420ab83af77362ddda433884a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956598"
 ---
 # <a name="references-c"></a>Referencias (C++)
-Una referencia (por ejemplo, un puntero) almacena la dirección de un objeto que se encuentra en otra parte de la memoria. A diferencia de un puntero, una referencia inicializada no puede hacer referencia a otro objeto ni establecerse en null. Hay dos tipos de referencias: referencias lvalue, que hacen referencia a una con nombre variable y referencias rvalue, que hacen referencia a un [objeto temporal](../cpp/temporary-objects.md). El operador & significa una referencia lvalue, mientras que el operador && significa una referencia rvalue o una referencia universal (lvalue o rvalue) según el contexto.  
+Una referencia (por ejemplo, un puntero) almacena la dirección de un objeto que se encuentra en otra parte de la memoria. A diferencia de un puntero, una referencia inicializada no puede hacer referencia a otro objeto ni establecerse en null. Hay dos tipos de referencias: referencias lvalue, que hacen referencia a un nombre variable y referencias rvalue, que hacen referencia a un [objeto temporal](../cpp/temporary-objects.md). El operador & significa una referencia lvalue, mientras que el operador && significa una referencia rvalue o una referencia universal (lvalue o rvalue) según el contexto.  
   
  Las referencias se pueden declarar con la sintaxis siguiente:  
   
@@ -48,7 +49,7 @@ Una referencia (por ejemplo, un puntero) almacena la dirección de un objeto que
   
 -   Un especificador de clase de almacenamiento opcional.  
   
--   Opcional **const** o `volatile` calificadores.  
+-   Opcional **const** o **volátil** calificadores.  
   
 -   El especificador de tipo: el nombre de un tipo.  
   
@@ -58,24 +59,24 @@ Una referencia (por ejemplo, un puntero) almacena la dirección de un objeto que
   
 -   El operador & o el operador &&.  
   
--   Opcional **const** o `volatile` opcionales.  
+-   Opcional **const** o **volátil** opcionales.  
   
 -   El identificador.  
   
  3. Un inicializador opcional.  
   
- Las formas de declarador más complejas para punteros a matrices y funciones también se aplican a referencias a matrices y funciones, vea [punteros](../cpp/pointers-cpp.md) y [declaradores](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
+ Las formas de declarador más compleja de punteros a matrices y funciones también se aplican a las referencias a las matrices y funciones, vea [punteros](../cpp/pointers-cpp.md).  
   
  Varios declaradores e inicializadores pueden aparecer en una lista separada por comas detrás de un único especificador de declaración. Por ejemplo:  
   
-```  
+```cpp 
 int &i;   
 int &i, &j;   
 ```  
   
  Las referencias, punteros y objetos se pueden declarar juntos:  
   
-```  
+```cpp 
 int &ref, *ptr, k;   
 ```  
   
@@ -85,7 +86,7 @@ int &ref, *ptr, k;
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // references.cpp  
 #include <stdio.h>  
 struct S {  

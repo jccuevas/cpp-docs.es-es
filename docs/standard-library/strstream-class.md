@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245391a0625d94fee0a4457f87e7b633ba3d03ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ba0d46f567232c36eb3dcd7845792bdbe8b6eac
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859831"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955740"
 ---
 # <a name="strstream-class"></a>strstream (Clase)
 
@@ -77,7 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Freezeit` Un `bool` que indica si desea que la secuencia que se pueden inmovilizar.
+*_Freezeit*  
+ Un **bool** que indica si desea que la secuencia se detenga.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -85,7 +86,7 @@ La función miembro llama a [rdbuf](#rdbuf) -> [freeze](../standard-library/strs
 
 ### <a name="example"></a>Ejemplo
 
-Vea [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze) para obtener un ejemplo que usa **freeze**.
+Consulte [strstreambuf:: Freeze](../standard-library/strstreambuf-class.md#freeze) para obtener un ejemplo que usa `freeze`.
 
 ## <a name="pcount"></a>  strstream::pcount
 
@@ -121,7 +122,7 @@ Un puntero al objeto strstreambuf asociado del flujo.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve la dirección del búfer de secuencia almacenado de tipo **pointer** a [strstreambuf](../standard-library/strstreambuf-class.md).
+La función miembro devuelve la dirección del búfer de flujo almacenado de tipo `pointer` a [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -145,7 +146,7 @@ La función miembro devuelve [rdbuf](#rdbuf) -> [str](../standard-library/strstr
 
 ### <a name="example"></a>Ejemplo
 
-Vea [strstreambuf::str](../standard-library/strstreambuf-class.md#str) para obtener un ejemplo que usa **str**.
+Consulte [strstreambuf:: str](../standard-library/strstreambuf-class.md#str) para obtener un ejemplo que usa `str`.
 
 ## <a name="strstream"></a>  strstream::strstream
 
@@ -161,19 +162,22 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>Parámetros
 
-`count` El tamaño del búfer.
+*count*  
+ Tamaño del búfer.
 
-`_Mode` El modo de entrada y salido del búfer. Vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obtener más información.
+*_Modo de*  
+ El modo de entrada y salida del búfer. Vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obtener más información.
 
-`ptr` El búfer.
+*ptr*  
+ El búfer.
 
 ### <a name="remarks"></a>Comentarios
 
-Los dos constructores inicializan la clase base mediante una llamada a [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**), donde **sb** es el objeto almacenado de la clase [strstreambuf](../standard-library/strstreambuf-class.md). El primer constructor inicializa también **sb** mediante una llamada a [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). El segundo constructor inicializa la clase base de una de estas formas:
+Los dos constructores inicializan la clase base mediante una llamada a [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**), donde `sb` es el objeto almacenado de clase [strstreambuf](../standard-library/strstreambuf-class.md). El primer constructor inicializa también `sb` mediante una llamada a [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). El segundo constructor inicializa la clase base de una de estas dos maneras:
 
-- Si `_Mode` & **ios_base::app**== 0, entonces `ptr` debe designar el primer elemento de una matriz de elementos `count` y el constructor llama a `strstreambuf`( `ptr`, `count`, `ptr`).
+- Si `_Mode`  &  **ios_base:: App**== 0, a continuación, *ptr* debe designar el primer elemento de una matriz de `count` elementos y el constructor llama a `strstreambuf`( `ptr`, `count`, `ptr`).
 
-- De lo contrario, `ptr` debe designar el primer elemento de una matriz de elementos count que contiene una cadena de C cuyo primer elemento está designado por `ptr`, y el constructor llama a `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- En caso contrario, *ptr* debe designar el primer elemento de una matriz de elementos count que contiene una cadena de C cuyo primer elemento designado por *ptr*y el constructor llama a `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="see-also"></a>Vea también
 

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf17eb39d71d444db9154fb06991be42c34a70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857381"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955311"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine (Clase)
 
@@ -46,13 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-`UIntType` El tipo de resultado entero sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*UIntType*  
+ El tipo de resultado integral sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-`W` **Tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*  
+ **Tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`S` **Intervalo corto**. Número de valores íntegros. **Condición previa:** `0 < S < R`
+*S*  
+ **Intervalo corto**. Número de valores íntegros. **Condición previa:** `0 < S < R`
 
-`R` **Intervalo largo**. Determina la recurrencia en la serie generada.
+*R*  
+ **Intervalo largo**. Determina la recurrencia en la serie generada.
 
 ## <a name="members"></a>Miembros
 
@@ -68,7 +72,7 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 La clase de plantilla `substract_with_carry_engine` es una mejora respecto al [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ninguno de estos motores es tan rápido o tiene unos resultados de mayor calidad que el [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Este motor produce valores de un tipo entero sin signo especificado por el usuario que usa la relación de periodicidad ( *periodo*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, en la que `cy(i)` tiene el valor `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`. De lo contrario `0`, y `M` tiene el valor `2`<sup>W</sup>. El estado del motor es un indicador portador de más valores `R`. Estos valores consisten en los últimos valores `R` devueltos si `operator()` se ha llamado al menos `R` veces, de lo contrario, en los valores `N` que se han devuelto y los últimos valores `R - N`de la inicialización.
+Este motor produce valores de un tipo entero sin signo especificado por el usuario que usa la relación de periodicidad ( *periodo*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, en la que `cy(i)` tiene el valor `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`. De lo contrario `0`, y `M` tiene el valor `2`<sup>W</sup>. El estado del motor es un carry de indicador de signo más *R* valores. Estos valores consisten en los últimos *R* valores que se devuelve si `operator()` se ha llamado al menos *R* agota el tiempo, en caso contrario, el `N` valores que se han devuelto y los últimos `R - N` valores de la inicialización.
 
 El argumento de la plantilla `UIntType` debe ser lo suficientemente grande para contener valores de hasta `M - 1`.
 

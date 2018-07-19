@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52b5d47908fd2889452a6c517b510930cbe2a10
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f5e02f1cfd7b35244c347ef0f07542e61938d7b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862149"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960972"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator (Clase)
 
@@ -87,11 +87,11 @@ private:
 
 ### <a name="parameters"></a>Parámetros
 
-`BidIt` El tipo de iterador para subcoincidencias.
+*BidIt* el tipo de iterador para subcoincidencias.
 
-`Elem` El tipo de elementos que debe coincidir.
+*Elem* el tipo de los elementos que coinciden.
 
-`RXtraits` Clase traits para los elementos.
+*RXtraits* clase de rasgos para los elementos.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -335,7 +335,7 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Iterador que se compara.
+*derecha* el iterador que se compara con.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -679,7 +679,7 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parámetros
 
-El iterador que se va a comparar con la derecha.
+*derecha* el iterador que se compara con.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1144,13 +1144,13 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Principio de la secuencia que debe coincidir.
+*primera* a partir de la secuencia que debe coincidir.
 
-`last` Final de la secuencia que debe coincidir.
+*último* final de secuencia para hacer coincidir.
 
-`re` Expresión regular para buscar coincidencias.
+*Re* expresión Regular para coincidencias.
 
-`f` Marcadores para coincidencias.
+*f* marcadores para coincidencias.
 
 ### <a name="remarks"></a>Comentarios
 

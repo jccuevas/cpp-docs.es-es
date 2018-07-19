@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9888b847c3e52cd8b6a034e95e35ca73933acd3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2b7cd9a949fef63e742d75bc01b199871d4950cc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861836"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956481"
 ---
 # <a name="uniquelock-class"></a>unique_lock (Clase)
 
@@ -36,7 +36,7 @@ class unique_lock;
 
 El argumento de plantilla `Mutex` debe nombrar un *tipo de exclusión mutua*.
 
-Internamente, un `unique_lock` almacena un puntero a un objeto `mutex` asociado y un `bool` que indica si el subproceso actual posee el `mutex`.
+Internamente, un `unique_lock` almacena un puntero a un asociado `mutex` objeto y un **bool** que indica si el subproceso actual posee el `mutex`.
 
 ## <a name="members"></a>Miembros
 
@@ -94,11 +94,11 @@ void lock();
 
 ### <a name="remarks"></a>Comentarios
 
-Si el puntero `mutex` almacenado es `null`, este método produce un [system_error](../standard-library/system-error-class.md) que tiene un código de error de `operation_not_permitted`.
+Si el almacenado `mutex` puntero es NULL, este método produce una [system_error](../standard-library/system-error-class.md) que tiene un código de error de `operation_not_permitted`.
 
 Si el subproceso de llamada ya posee el objeto `mutex` asociado, este método produce un `system_error` que tiene un código de error de `resource_deadlock_would_occur`.
 
-De lo contrario, este método llama a `lock` en el objeto `mutex` asociado y establece la marca de propiedad interna del subproceso en `true`.
+De lo contrario, llama este método `lock` en asociado `mutex` y establece la marca de la propiedad interna del subproceso en **true**.
 
 ## <a name="mutex"></a>  mutex
 
@@ -118,7 +118,7 @@ explicit operator bool() noexcept
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si el subproceso posee la exclusión mutua, de lo contrario, `false`.
+**True** si el subproceso posee la exclusión mutua; en caso contrario **false**.
 
 ## <a name="op_eq"></a>  operator=
 
@@ -130,7 +130,8 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-`Other` Un `unique_lock` objeto.
+*Otros problemas*  
+ Un objeto `unique_lock`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -140,7 +141,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 Si el subproceso de llamada posee el objeto `mutex` asociado anteriormente, antes de que este método llame a `unlock` en el objeto `mutex`, asigna los nuevos valores.
 
-Después de la copia, este método establece `Other` en un estado construido de forma predeterminada.
+Después de la copia, este método establece *otros* a un estado construido de forma predeterminada.
 
 ## <a name="owns_lock"></a>  owns_lock
 
@@ -152,7 +153,7 @@ bool owns_lock() const noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si el subproceso posee el objeto `mutex`, de lo contrario, `false`.
+**True** si el subproceso posee el `mutex`; en caso contrario, **false**.
 
 ## <a name="release"></a>  release
 
@@ -168,7 +169,7 @@ El valor anterior del puntero `mutex` almacenado.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método establece el valor del puntero `mutex` almacenado en 0 y establece la marca la propiedad `mutex` interna en `false`.
+Este método establece el valor de almacenado `mutex` puntero en 0 y establece el texto interno `mutex` marca la propiedad a **false**.
 
 ## <a name="swap"></a>  swap
 
@@ -180,9 +181,10 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-`Other` Un `unique_lock` objeto.
+*Otros problemas*  
+ Un objeto `unique_lock`.
 
-## <a name="try_lock"></a> try_lock
+## <a name="try_lock"></a>  try_lock
 
 Intenta obtener la propiedad del `mutex` asociado sin bloquearlo.
 
@@ -192,11 +194,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` si el método obtiene correctamente la propiedad de `mutex`; de lo contrario, es `false`.
+**True** si el método obtiene correctamente la propiedad de la `mutex`; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el puntero `mutex` almacenado es `null`, el método produce un [system_error](../standard-library/system-error-class.md) que tiene un código de error de `operation_not_permitted`.
+Si el almacenado `mutex` puntero es NULL, el método produce una [system_error](../standard-library/system-error-class.md) que tiene un código de error de `operation_not_permitted`.
 
 Si el subproceso de llamada ya posee el objeto `mutex`, el método produce un `system_error` que tiene un código de error de `resource_deadlock_would_occur`.
 
@@ -212,15 +214,16 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>Parámetros
 
-`Rel_time` A [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica la cantidad máxima de tiempo que el método intenta obtener la propiedad de la `mutex`.
+*Rel_time*  
+ Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica el tiempo máximo que el método intenta obtener la propiedad de `mutex`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` si el método obtiene correctamente la propiedad de `mutex`; de lo contrario, es `false`.
+**True** si el método obtiene correctamente la propiedad de la `mutex`; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el puntero `mutex` almacenado es `null`, el método produce un [system_error](../standard-library/system-error-class.md) que tiene un código de error de `operation_not_permitted`.
+Si el almacenado `mutex` puntero es NULL, el método produce una [system_error](../standard-library/system-error-class.md) que tiene un código de error de `operation_not_permitted`.
 
 Si el subproceso de llamada ya posee el objeto `mutex`, el método produce un `system_error` que tiene un código de error de `resource_deadlock_would_occur`.
 
@@ -237,15 +240,16 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parámetros
 
-`Abs_time` Un punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de la `mutex`.
+*Abs_time*  
+ Punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de `mutex`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` si el método obtiene correctamente la propiedad de `mutex`; de lo contrario, es `false`.
+**True** si el método obtiene correctamente la propiedad de la `mutex`; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el puntero `mutex` almacenado es `null`, el método produce un [system_error](../standard-library/system-error-class.md) que tiene un código de error de `operation_not_permitted`.
+Si el almacenado `mutex` puntero es NULL, el método produce una [system_error](../standard-library/system-error-class.md) que tiene un código de error de `operation_not_permitted`.
 
 Si el subproceso de llamada ya posee el objeto `mutex`, el método produce un `system_error` que tiene un código de error de `resource_deadlock_would_occur`.
 
@@ -279,21 +283,25 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>Parámetros
 
-`Mtx` Un objeto de tipo de exclusión mutua.
+*Mtx*  
+ Un objeto de tipo de exclusión mutua.
 
-`Rel_time` A [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica la cantidad máxima de tiempo que el método intenta obtener la propiedad de la `mutex`.
+*Rel_time*  
+ Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica el tiempo máximo que el método intenta obtener la propiedad de `mutex`.
 
-`Abs_time` Un punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de la `mutex`.
+*Abs_time*  
+ Punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de `mutex`.
 
-`Other` Un `unique_lock` objeto.
+*Otros problemas*  
+ Un objeto `unique_lock`.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor crea un objeto que tiene un valor de puntero de exclusión mutua asociado de 0.
 
-El segundo constructor mueve el estado de la exclusión mutua asociado desde `Other`. Tras el movimiento, `Other` ya no está asociado a una exclusión mutua.
+El segundo constructor mueve el estado de la exclusión mutua asociado desde *otros*. Tras el movimiento, *otros* ya no está asociado a una exclusión mutua.
 
-Los constructores restantes almacenan & `Mtx` como puntero `mutex` almacenado. La propiedad del objeto `mutex` está determinada por el segundo argumento, si existe.
+Los constructores restantes almacenan & *Mtx* como almacenado `mutex` puntero. La propiedad del objeto `mutex` está determinada por el segundo argumento, si existe.
 
 |||
 |-|-|
@@ -328,7 +336,7 @@ void unlock();
 
 Si el subproceso de llamada no posee el objeto `mutex` asociado, este método produce un [system_error](../standard-library/system-error-class.md) que tiene un código de error de `operation_not_permitted`.
 
-De lo contrario, este método llama a `unlock` en el objeto `mutex` asociado y establece la marca de propiedad interna del subproceso en `false`.
+De lo contrario, llama este método `unlock` en asociado `mutex` y establece la marca de la propiedad interna del subproceso en **false**.
 
 ## <a name="see-also"></a>Vea también
 

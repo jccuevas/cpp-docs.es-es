@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff0c41993a450e74b468b747776368bae6ad848
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862879"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957527"
 ---
 # <a name="sharedptr-class"></a>shared_ptr (Clase)
 
@@ -261,7 +261,7 @@ explicit operator bool() const noexcept;
 
 ### <a name="remarks"></a>Comentarios
 
-El operador devuelve un valor de `true` cuando `get() != nullptr`, en caso contrario, `false`.
+El operador devuelve un valor de **true** cuando `get() != nullptr`en caso contrario, **false**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -351,9 +351,9 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parámetros
 
-`sp` El puntero compartido para copiar.
+*SP* el puntero compartido para copiar.
 
-`ap` Puntero automático para copiar.
+*Asia Pacífico* el puntero automático para copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -441,11 +441,11 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parámetros
 
-`ptr` Un `lvalue` referencia como un `shared_ptr` o `weak_ptr`.
+*PTR* una `lvalue` referencia como un `shared_ptr` o `weak_ptr`.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de miembro de plantilla devuelve true si `*this` es `ordered before` `ptr`.
+La función miembro de plantilla devuelve true si `*this` es `ordered before` `ptr`.
 
 ## <a name="reset"></a>  shared_ptr::reset
 
@@ -466,17 +466,17 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Parámetros
 
-`Other` Tipo controlado por el puntero de argumento.
+*Otros* tipo controlado por el puntero de argumento.
 
-`D` El tipo del eliminador.
+*D.* el tipo del eliminador.
 
-`ptr` Puntero que se va a copiar.
+*PTR* el puntero para copiar.
 
-`dtor` El eliminador para copiar.
+*Dtor* eliminador para copiar.
 
-`A` El tipo de asignador.
+*Un* el tipo del asignador.
 
-`alloc` El asignador de copiar.
+*Alloc* el asignador para copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -581,23 +581,23 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Parámetros
 
-`Other` Tipo controlado por el puntero de argumento.
+*Otros* tipo controlado por el puntero de argumento.
 
-`ptr` Puntero que se va a copiar.
+*PTR* el puntero para copiar.
 
-`D` El tipo del eliminador.
+*D.* el tipo del eliminador.
 
-`A` El tipo de asignador.
+*Un* el tipo del asignador.
 
-`dtor` El eliminador.
+*Dtor* eliminador.
 
-`ator` El asignador.
+*ador* el asignador.
 
-`sp` El puntero inteligente para copiar.
+*SP* el puntero inteligente para copiar.
 
-`wp` El puntero débil.
+*wp* el puntero débil.
 
-`ap` Puntero automático para copiar.
+*Asia Pacífico* el puntero automático para copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -722,11 +722,11 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parámetros
 
-`sp` El puntero compartido que se intercambia con.
+*SP* el puntero compartido a intercambiar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro deja el recurso originalmente propiedad de `*this` para que ahora sea propiedad de `sp` y el recurso originalmente propiedad de `sp` para que ahora sea propiedad de `*this`. La función no modifica los recuentos de referencia para los dos recursos y no inicia ninguna excepción.
+La función miembro deja el recurso originalmente propiedad `*this` ahora sea propiedad *sp*y el recurso originalmente propiedad *sp* ahora sea propiedad `*this`. La función no modifica los recuentos de referencia para los dos recursos y no inicia ninguna excepción.
 
 ### <a name="example"></a>Ejemplo
 
@@ -792,7 +792,7 @@ bool unique() const;
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve `true` si ningún otro objeto `shared_ptr` posee el recurso que es propiedad de `*this`, de lo contrario, `false`.
+La función miembro devuelve **true** si ninguna otra `shared_ptr` objeto posee el recurso al que pertenece a `*this`en caso contrario, **false**.
 
 ### <a name="example"></a>Ejemplo
 

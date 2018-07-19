@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a7a9aff4f77444bbec46a9739fae91cac3c104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcb17eeaf09cec63392cb842f790504b28038487
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845936"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955727"
 ---
 # <a name="inputoutput-streams"></a>Flujos de entrada/salida
 
@@ -32,7 +32,7 @@ Para obtener más información, vea [Clase basic_iostream](../standard-library/b
 
 De `basic_iostream` deriva la plantilla de clase `basic_fstream`, que se usa para transmitir datos de caracteres a y desde archivos.
 
-También hay definiciones de tipos que proporcionan especializaciones específicas de caracteres de `basic_fstream`. Se trata de `fstream`, que es un flujo de E/S de archivos basado en `char`, y `wfstream`, que es un flujo de E/S de archivos que se basa en `wchar_t`. Para obtener más información, vea [Clase basic_fstream](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) y [wfstream](../standard-library/basic-fstream-class.md). El uso de estas definiciones de tipos requiere la inclusión del archivo de encabezado \<fstream>.
+También hay definiciones de tipos que proporcionan especializaciones específicas de caracteres de `basic_fstream`. Son `fstream`, que es una secuencia de E/S de archivo que se basa en **char**, y `wfstream`, que es una secuencia de E/S de archivo que se basa en **wchar_t**. Para obtener más información, vea [Clase basic_fstream](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) y [wfstream](../standard-library/basic-fstream-class.md). El uso de estas definiciones de tipos requiere la inclusión del archivo de encabezado \<fstream>.
 
 > [!NOTE]
 > Cuando se usa un objeto `basic_fstream` para realizar operaciones de E/S de archivos, aunque el búfer subyacente contenga posiciones designadas de forma independiente para la lectura y la escritura, las posiciones de la entrada actual y de la salida actual están vinculadas y, por lo tanto, la lectura de algunos datos mueve la posición de salida.

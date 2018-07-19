@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ea63fbb0fa11f470061ea5ee141d0c3b2bfb3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861219"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958258"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator
 
@@ -45,9 +45,9 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Parámetros
 
-`CharType` El tipo que representa el tipo de caracteres para ostreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char`.
+*CharType* el tipo que representa el tipo de caracteres para ostreambuf_iterator. Este argumento es opcional y el valor predeterminado es **char**.
 
-`Traits` El tipo que representa el tipo de caracteres para ostreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
+*Rasgos* el tipo que representa el tipo de caracteres para ostreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Comentarios
 
@@ -98,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **CharType**.
+El tipo es un sinónimo del parámetro de plantilla `CharType`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -294,7 +294,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Char` Carácter que se va a insertar en el búfer de secuencia.
+*_Char* el carácter que se va a insertar en el búfer de secuencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -346,13 +346,13 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-`strbuf` El objeto de streambuf de salida que se usa para inicializar el puntero de búfer de la secuencia de salida.
+*strbuf* el objeto streambuf de salida utilizado para inicializar el puntero de búfer de flujo de salida.
 
-`Ostr` El objeto de flujo de salida que se usa para inicializar el puntero de búfer de la secuencia de salida.
+*Ostr* el objeto de flujo de salida utilizado para inicializar el puntero de búfer de flujo de salida.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa el puntero de búfer de flujo de salida con `strbuf`.
+El primer constructor inicializa el puntero de búfer de flujo de salida con *strbuf*.
 
 El segundo constructor inicializa el puntero de búfer de flujo de salida con `Ostr`. `rdbuf`. El puntero almacenado no debe ser un puntero nulo.
 
@@ -415,7 +415,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de `basic_streambuf`\< **CharType**, **Traits**>, una clase de secuencia para búferes de E/S que se convierte en `streambuf` cuando se especializa en el tipo de carácter `char`.
+El tipo es un sinónimo de `basic_streambuf` \< **CharType**, **rasgos**>, una clase de secuencia para búferes de E/S que se convierte en `streambuf` si está especializada en el tipo de carácter **char**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -431,7 +431,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **Traits**.
+El tipo es un sinónimo del parámetro de plantilla `Traits`.
 
 ### <a name="example"></a>Ejemplo
 

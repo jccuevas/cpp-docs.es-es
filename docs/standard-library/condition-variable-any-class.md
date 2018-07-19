@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0fe38031dc215f537d82fe6e06f68acf6db8e0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847135"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959237"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any (Clase)
 
@@ -51,7 +51,7 @@ class condition_variable_any;
 
 |Name|Descripción|
 |----------|-----------------|
-|[condition_variable_any](#condition_variable_any)|Construye un objeto `condition_variable_any`.|
+|[condition_variable_any)](#condition_variable_any)|Construye un objeto `condition_variable_any`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -59,7 +59,7 @@ class condition_variable_any;
 |----------|-----------------|
 |[notify_all](#notify_all)|Desbloquea todos los subprocesos que están esperando el objeto `condition_variable_any`.|
 |[notify_one](#notify_one)|Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable_any`.|
-|[espera](#wait)|Bloquea un subproceso.|
+|[Espere](#wait)|Bloquea un subproceso.|
 |[wait_for](#wait_for)|Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.|
 |[wait_until](#wait_until)|Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.|
 
@@ -111,9 +111,9 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parámetros
 
-`Lck` Un `mutex` objeto de cualquier tipo.
+*Lck* A `mutex` objeto de cualquier tipo.
 
-`Pred` Cualquier expresión que devuelva `true` o `false`.
+*Pred* cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -140,21 +140,21 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Parámetros
 
-`Lck` Un `mutex` objeto de cualquier tipo.
+*Lck* A `mutex` objeto de cualquier tipo.
 
-`Rel_time` Un `chrono::duration` objeto que especifica la cantidad de tiempo antes de que el subproceso se reactivará.
+*Rel_time* A `chrono::duration` reactiva el objeto que especifica la cantidad de tiempo antes de que el subproceso.
 
-`Pred` Cualquier expresión que devuelva `true` o `false`.
+*Pred* cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El primer método devuelve `cv_status::timeout` si la espera termina cuando ha transcurrido `Rel_time`. De lo contrario, el método devuelve `cv_status::no_timeout`.
+Devuelve el primer método `cv_status::timeout` si la espera termina cuando *Rel_time* ha transcurrido. De lo contrario, el método devuelve `cv_status::no_timeout`.
 
-El segundo método devuelve el valor de `Pred`.
+El segundo método devuelve el valor de *Pred*.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer método se bloquea hasta que se señaliza el objeto `condition_variable_any` mediante una llamada a [notify_one](../standard-library/condition-variable-class.md#notify_one) o [notify_all](../standard-library/condition-variable-class.md#notify_all), o hasta que ha transcurrido el intervalo de tiempo `Rel_time`. También se puede reactivar en falso.
+El primer método se bloquea hasta que el `condition_variable_any` objeto se señaliza mediante una llamada a [notify_one](../standard-library/condition-variable-class.md#notify_one) o [notify_all](../standard-library/condition-variable-class.md#notify_all), o hasta que el intervalo de tiempo *Rel_time* ha transcurrido. También se puede reactivar en falso.
 
 El segundo método en efecto ejecuta el código siguiente.
 
@@ -192,21 +192,21 @@ void wait_until(
 
 ### <a name="parameters"></a>Parámetros
 
-`Lck` Un objeto de exclusión mutua.
+*Lck* un objeto de exclusión mutua.
 
-`Abs_time` A [chrono:: time_point](../standard-library/time-point-class.md) objeto.
+*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md) objeto.
 
-`Pred` Cualquier expresión que devuelva `true` o `false`.
+*Pred* cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Los métodos que devuelven un tipo `cv_status` devuelven `cv_status::timeout` si la espera termina cuando transcurre `Abs_time`. De lo contrario, los métodos devuelven `cv_status::no_timeout`.
+Los métodos que devuelven un `cv_status` escriba volver `cv_status::timeout` si la espera termina cuando *Abs_time* transcurre. De lo contrario, los métodos devuelven `cv_status::no_timeout`.
 
-Los métodos que devuelven un tipo `bool` devuelven el valor de `Pred`.
+Los métodos que devuelven un `bool` devolver el valor de *Pred*.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer método se bloquea hasta que el objeto `condition_variable` se señaliza mediante una llamada a [notify_one](../standard-library/condition-variable-class.md#notify_one) o a [notify_all](../standard-library/condition-variable-class.md#notify_all), o hasta que transcurre `Abs_time`. También se puede reactivar en falso.
+El primer método se bloquea hasta que el `condition_variable` objeto se señaliza mediante una llamada a [notify_one](../standard-library/condition-variable-class.md#notify_one) o [notify_all](../standard-library/condition-variable-class.md#notify_all), o hasta que *Abs_time*. También se puede reactivar en falso.
 
 El segundo método en efecto ejecuta el código siguiente.
 

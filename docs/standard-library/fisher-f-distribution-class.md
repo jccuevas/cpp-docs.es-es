@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ddd6ad1d27f1479bb653373517f7d8c1f1d3bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ab5c5c790813f57da483878cb6a86fcf2ab0f04
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847356"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959656"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution (Clase)
 
@@ -79,13 +79,13 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType* predeterminado es el tipo de resultado de punto flotante, `double`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType* el tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 *URNG* El motor de generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario (o de tipo `double` si no se especifica ninguno) distribuidos según la distribución F de Fisher. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que produce valores de la especificada por el usuario de punto flotante tipo o tipo **doble** si se proporciona ninguno, distribuido según la distribución F de Fisher. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -261,7 +261,7 @@ explicit fisher_f_distribution(const param_type& parm);
 
 *n* el `n` parámetro de distribución.
 
-*parm* el `param_type` estructura utilizada para construir la distribución.
+*parm* el `param_type` estructura usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -293,7 +293,7 @@ struct param_type {
 
 *n* el `n` parámetro de distribución.
 
-*derecho* la `param_type` objeto que se va a comparar con esta.
+*derecha* el `param_type` objeto que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
 

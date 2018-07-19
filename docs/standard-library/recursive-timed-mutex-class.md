@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b4a87cadedb11368d7803231b96d0f7a5acfb99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfabbd938f2258f7e1a75fd77eaac7b2cd23b2b8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863717"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957628"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex (Clase)
 
@@ -112,11 +112,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si el método ha obtenido correctamente la propiedad de `mutex` o si el subproceso que realiza la llamada ya posee `mutex`; de otro modo, `false`.
+**True** si el método ha obtenido correctamente la propiedad de la `mutex` o si el subproceso que realiza la llamada ya posee el `mutex`; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el subproceso que realiza la llamada ya posee `mutex`, la función devuelve `true` inmediatamente, y el bloqueo anterior permanece vigente.
+Si el subproceso que realiza la llamada ya posee el `mutex`, la función devuelve inmediatamente **true**, y el bloqueo anterior permanece vigente.
 
 ## <a name="try_lock_for"></a> try_lock_for
 
@@ -129,15 +129,15 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parámetros
 
-`Rel_time` A [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica la cantidad máxima de tiempo que el método intenta obtener la propiedad de la `mutex`.
+*Rel_time* A [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica la cantidad máxima de tiempo que el método intenta obtener la propiedad de la `mutex`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si el método obtiene correctamente la propiedad de `mutex` o si el subproceso que realiza la llamada ya posee `mutex`; de otro modo, `false`.
+**True** si el método obtiene correctamente la propiedad de la `mutex` o si el subproceso que realiza la llamada ya posee el `mutex`; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el subproceso que realiza la llamada ya posee `mutex`, el método devuelve `true` inmediatamente, y el bloqueo anterior permanece vigente.
+Si el subproceso que realiza la llamada ya posee el `mutex`, se devuelve inmediatamente el método **true**, y el bloqueo anterior permanece vigente.
 
 ## <a name="try_lock_until"></a> try_lock_until
 
@@ -152,15 +152,15 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parámetros
 
-`Abs_time` Un punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de la `mutex`.
+*Abs_time* un punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de la `mutex`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si el método obtiene correctamente la propiedad de `mutex` o si el subproceso que realiza la llamada ya posee `mutex`; de otro modo, `false`.
+**True** si el método obtiene correctamente la propiedad de la `mutex` o si el subproceso que realiza la llamada ya posee el `mutex`; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el subproceso que realiza la llamada ya posee `mutex`, el método devuelve `true` inmediatamente, y el bloqueo anterior permanece vigente.
+Si el subproceso que realiza la llamada ya posee el `mutex`, se devuelve inmediatamente el método **true**, y el bloqueo anterior permanece vigente.
 
 ## <a name="unlock"></a> unlock
 

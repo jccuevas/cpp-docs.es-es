@@ -1,5 +1,5 @@
 ---
-title: Clases (C++) abstractas | Documentos de Microsoft
+title: Abstractas de clases (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35ea26bc5dda6c0dce27217cc75784034a77554
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705366"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957953"
 ---
 # <a name="abstract-classes-c"></a>Clases abstractas (C++)
 
@@ -30,7 +30,7 @@ Las clases abstractas actúan como expresiones de conceptos generales de los que
 
 Una clase que contiene al menos una función pura virtual se considera una clase abstracta. Las clases derivadas de la clase abstracta deben implementar la función virtual pura o deben ser también clases abstractas.
 
-Una función virtual se declara como "pura" mediante la *especificador puro* sintaxis (se describe en [implementación de protocolo de la clase](http://msdn.microsoft.com/en-us/a319f1b3-05e8-400e-950a-1ca6eb105ab5)). Tenga en cuenta el ejemplo presentado en [funciones virtuales](../cpp/virtual-functions.md). El propósito de la clase `Account` es proporcionar funcionalidad general, pero los objetos de tipo `Account` son demasiado generales para resultar útiles. Por consiguiente, `Account` es un buen candidato para una clase abstracta:
+Considere el ejemplo presentado en [funciones virtuales](../cpp/virtual-functions.md). El propósito de la clase `Account` es proporcionar funcionalidad general, pero los objetos de tipo `Account` son demasiado generales para resultar útiles. Por consiguiente, `Account` es un buen candidato para una clase abstracta:
 
 ```cpp
 // deriv_AbstractClasses.cpp

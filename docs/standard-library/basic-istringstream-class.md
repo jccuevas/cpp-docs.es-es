@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0754ba9dc63f77793ced17e7950c7fc3ea3290d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53760cd2d69067fd93a76a35b0ba29fcc82a4664
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847447"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960074"
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream (Clase)
 
@@ -44,15 +44,15 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Parámetros
 
-`Alloc` La clase de asignador.
+*Alloc* la clase de asignador.
 
-`Elem` El tipo de elemento básico de la cadena.
+*Elem* el tipo del elemento básico de la cadena.
 
 *TR* rasgos de caracteres especializados en el elemento básico de la cadena.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un objeto que controla la extracción de elementos y objetos codificados desde un búfer de flujo de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>, con elementos de tipo **Elem**, cuyos rasgos de caracteres están determinados por la clase **Tr** y cuyos elementos se asignan mediante un asignador de clase `Alloc`. El objeto almacena un objeto de clase basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+La clase de plantilla describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de secuencia de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>, con elementos de tipo *Elem*, cuyos rasgos de caracteres están determinados por la clase *Tr*, y cuyos elementos están asignados mediante un asignador de clase  *Alloc*. El objeto almacena un objeto de clase basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Constructores
 
@@ -112,19 +112,19 @@ basic_istringstream(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Mode` Una de las enumeraciones en [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*_Modo de* una de las enumeraciones en [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
 
-`str` Un objeto de tipo `basic_string`.
+*Str* un objeto de tipo `basic_string`.
 
-`right` Una referencia a valor r de un `basic_istringstream` objeto.
+*derecha* una referencia rvalue de un `basic_istringstream` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa la clase base al llamar a [basic_istream](../standard-library/basic-istream-class.md)(`sb`), donde `sb` es el objeto almacenado de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>. También inicializa `sb` al llamar a `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>(`_Mode` &#124; `ios_base::in`).
+El primer constructor inicializa la clase base mediante una llamada a [basic_istream](../standard-library/basic-istream-class.md)(`sb`), donde `sb` es el objeto almacenado de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem`, `Tr`, `Alloc`>. También inicializa `sb` al llamar a `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>(`_Mode` &#124; `ios_base::in`).
 
 El segundo constructor inicializa la clase base al llamar a `basic_istream(sb)`. También inicializa `sb` al llamar a `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>(`str`, `_Mode` &#124; `ios_base::in`).
 
-El tercer constructor inicializa el objeto con el contenido de `right`, tratado como una referencia a un valor R.
+El tercer constructor inicializa el objeto con el contenido de *derecho*, tratado como una referencia rvalue.
 
 ## <a name="op_eq"></a>  basic_istringstream::operator=
 
@@ -136,15 +136,15 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Una referencia a valor r a un `basic_istringstream` objeto.
+*derecha* una referencia rvalue para un `basic_istringstream` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Operador de miembro que reemplaza el contenido del objeto por el contenido de `right`, que se trata como asignación de movimiento de la referencia a un valor R.
+El operador miembro reemplaza el contenido del objeto con el contenido de *derecho*, que se trata como asignación de movimiento de una referencia rvalue.
 
 ## <a name="rdbuf"></a>  basic_istringstream::rdbuf
 
-Devuelve la dirección del búfer de flujo almacenado de tipo **pointer** a [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
+Devuelve la dirección del búfer de flujo almacenado de tipo `pointer` a [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -152,7 +152,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La dirección del búfer de flujo almacenado de tipo **pointer** a basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+La dirección del búfer de flujo almacenado de tipo `pointer` a basic_stringbuf < **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="example"></a>Ejemplo
 
@@ -172,7 +172,7 @@ void str(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Newstr` La nueva cadena.
+*_Newstr* la nueva cadena.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -184,7 +184,7 @@ La primera función miembro devuelve [rdbuf](#rdbuf) -> [str](../standard-librar
 
 ### <a name="example"></a>Ejemplo
 
-Vea [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) para obtener un ejemplo que usa **str**.
+Consulte [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) para obtener un ejemplo que usa `str`.
 
 ## <a name="swap"></a>  basic_istringstream::swap
 
@@ -198,11 +198,11 @@ void swap(basic_istringstream& right);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`right`|Referencia `lvalue` a un objeto `basic_istringstream`.|
+|*right*|Referencia `lvalue` a un objeto `basic_istringstream`.|
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro intercambia los valores de este objeto y los valores de `right`.
+La función miembro intercambia los valores de este objeto y los valores de *derecho*.
 
 ## <a name="see-also"></a>Vea también
 

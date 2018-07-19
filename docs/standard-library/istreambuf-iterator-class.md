@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 810f565d85a923379a25f49c6fe1c7d7cc4efbc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859285"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960596"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator (Clase)
 
@@ -49,15 +49,15 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-`CharType` El tipo que representa el tipo de caracteres para istreambuf_iterator.
+*CharType* el tipo que representa el tipo de caracteres para istreambuf_iterator.
 
-`Traits` El tipo que representa el tipo de caracteres para istreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
+*Rasgos* el tipo que representa el tipo de caracteres para istreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Comentarios
 
 La clase istreambuf_iterator debe satisfacer los requisitos de un iterador de entrada.
 
-Después de crear o de incrementar un objeto de clase istreambuf_iterator con un puntero almacenado no null, el objeto intenta extraer y almacenar un objeto de tipo **CharType** del flujo de entrada asociado. Sin embargo, la extracción se puede retrasar hasta que el objeto se desreferencia o se copia realmente. Si se produce un error en la extracción, el objeto reemplaza el puntero almacenado con un puntero NULL, creando de esta forma un indicador de fin de secuencia.
+Después de crear o de incrementar un objeto de clase istreambuf_iterator con un puntero almacenado no null, el objeto intenta extraer y almacenar un objeto de tipo *CharType* del flujo de entrada asociado. Sin embargo, la extracción se puede retrasar hasta que el objeto se desreferencia o se copia realmente. Si se produce un error en la extracción, el objeto reemplaza el puntero almacenado con un puntero NULL, creando de esta forma un indicador de fin de secuencia.
 
 ### <a name="constructors"></a>Constructores
 
@@ -105,7 +105,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **CharType**.
+El tipo es un sinónimo del parámetro de plantilla *CharType*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -150,7 +150,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El iterador para que se va a comprobar la igualdad.
+*derecha* el iterador para que se va a comprobar la igualdad.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -158,7 +158,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="remarks"></a>Comentarios
 
-Un intervalo se define mediante el `istreambuf_iterator` en la posición actual y el iterador de fin de flujo, pero dado que todos los iteradores que no son de fin de flujo son equivalentes en la función miembro **equal**, no es posible definir ningún subintervalo mediante `istreambuf_iterator`. Los operadores `==` y `!=` tienen la misma semántica.
+Un intervalo se define mediante el `istreambuf_iterator` a la posición actual y el iterador de final de secuencia, pero desde la secuencia de todos los que no son de fin de los iteradores son equivalentes en el `equal` función miembro, no es posible definir ningún subintervalo mediante `istreambuf_iterator`s. Los operadores `==` y `!=` tienen la misma semántica.
 
 ### <a name="example"></a>Ejemplo
 
@@ -198,7 +198,7 @@ typedef typename traits_type::int_type int_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es sinónimo de **Traits::int_type**.
+El tipo es un sinónimo de `Traits::int_type`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -246,13 +246,13 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-`strbuf` El búfer de flujo de entrada en el que el `istreambuf_iterator` se va a adjuntar.
+*strbuf* el búfer de flujo de entrada a la que el `istreambuf_iterator` se va a adjuntar.
 
-`_Istr` El flujo de entrada que el `istreambuf_iterator` se va a adjuntar.
+*_Istr* el flujo de entrada a la que el `istreambuf_iterator` se va a adjuntar.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa el puntero de búfer de flujo de entrada con `strbuf`. El segundo constructor inicializa el puntero de búfer de flujo de entrada con `_Istr`. `rdbuf` y, después, intenta extraer y almacenar un objeto de tipo **CharType**.
+El primer constructor inicializa el puntero de búfer de secuencia de entrada con *strbuf*. El segundo constructor inicializa el puntero de búfer de secuencia de entrada con *_Istr*. `rdbuf`y después, intenta extraer y almacenar un objeto de tipo `CharType`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -341,7 +341,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>Comentarios
 
-El primer operador intenta extraer y almacenar finalmente un objeto de tipo **CharType** del flujo de entrada asociado. El segundo operador realiza una copia del objeto, lo incrementa y, después, devuelve la copia.
+El primer operador, intenta extraer y almacenar un objeto de tipo `CharType` del flujo de entrada asociado. El segundo operador realiza una copia del objeto, lo incrementa y, después, devuelve la copia.
 
 ### <a name="example"></a>Ejemplo
 
@@ -397,7 +397,7 @@ El tipo es sinónimo de `basic_streambuf`\< **CharType**, **Traits**>.
 
 ### <a name="example"></a>Ejemplo
 
-Vea [istreambuf_iterator](#istreambuf_iterator) para obtener un ejemplo de cómo declarar y usar **istreambuf_type**.
+Vea [istreambuf_iterator](#istreambuf_iterator) para obtener un ejemplo de cómo declarar y usar `istreambuf_type`.
 
 ## <a name="traits_type"></a>  istreambuf_iterator::traits_type
 
@@ -409,7 +409,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **Traits**.
+El tipo es un sinónimo del parámetro de plantilla *Traits*.
 
 ### <a name="example"></a>Ejemplo
 

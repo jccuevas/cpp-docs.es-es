@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0be002676860acb4f55d989416114ec23ce809
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854436"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955337"
 ---
 # <a name="pair-structure"></a>pair Structure
 
@@ -54,25 +54,25 @@ struct pair
 
 ### <a name="parameters"></a>Parámetros
 
-`Val1` Valor que inicializa el primer elemento de `pair`.
+*Val1* valor que inicializa el primer elemento de `pair`.
 
-`Val2` Valor que inicializa el segundo elemento de `pair`.
+*Val2* valor que inicializa el segundo elemento de `pair`.
 
-`Right` Un par cuyos valores se van a usarse para inicializar los elementos de otro par.
+*Derecha* un par cuyos valores son que se usará para inicializar los elementos de otro par.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El primer constructor (predeterminado) inicializa el primer elemento del par en el valor predeterminado del tipo **T1** y el segundo elemento en el valor predeterminado del tipo **T2**.
+El primer constructor (predeterminado) inicializa el primer elemento del par en el valor predeterminado del tipo `T1` y el segundo elemento predeterminado del tipo `T2`.
 
-El segundo constructor inicializa el primer elemento del par en `Val1` y el segundo en *Val2.*
+El segundo constructor inicializa el primer elemento del par en *Val1* y el segundo en *Val2.*
 
 El tercer constructor (plantilla) inicializa el primer elemento del par en `Right`. **first** y el segundo en `Right`. **second**.
 
-El cuarto constructor inicializa el primer elemento del par en `Val1` y el segundo en *Val2* mediante [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+El cuarto constructor inicializa el primer elemento del par en *Val1* y el segundo en *Val2* mediante [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La estructura de plantilla almacena un par de objetos de tipo **T1** y **T2** respectivamente. El tipo **first_type** es igual que el parámetro de plantilla **T1** y el tipo **second_type** es igual que el parámetro de plantilla **T2**. Tanto **T1** como **T2** deben proporcionar únicamente un constructor predeterminado, un constructor de argumento único y un destructor. Todos los miembros del tipo `pair` son públicos, porque el tipo se declara como un `struct` en lugar de como una **clase**. Los dos usos más comunes para un par son como tipos devueltos para funciones que devuelven dos valores y como elementos para las clases de contenedor asociativo [map (Clase)](../standard-library/map-class.md) y [multimap (Clase)](../standard-library/multimap-class.md) que tienen una clave y un tipo de valor asociado a cada elemento. Este último cumple los requisitos de un contenedor asociativo de pares y tiene un tipo de valor de la forma `pair`< **const**`key_type`, `mapped_type`>.
+La estructura de plantilla almacena un par de objetos de tipo `T1` y `T2`, respectivamente. El tipo `first_type` es el mismo que el parámetro de plantilla `T1` y el tipo `second_type` es el mismo que el parámetro de plantilla `T2`. `T1` y `T2` deben proporcionar únicamente un constructor predeterminado, un constructor de argumento único y un destructor. Todos los miembros del tipo `pair` son públicos, porque el tipo se declara como un `struct` en lugar de como una **clase**. Los dos usos más comunes para un par son como tipos devueltos para funciones que devuelven dos valores y como elementos para las clases de contenedor asociativo [map (Clase)](../standard-library/map-class.md) y [multimap (Clase)](../standard-library/multimap-class.md) que tienen una clave y un tipo de valor asociado a cada elemento. Este último cumple los requisitos de un contenedor asociativo de pares y tiene un tipo de valor de la forma `pair`< **const**`key_type`, `mapped_type`>.
 
 ## <a name="example"></a>Ejemplo
 

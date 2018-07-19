@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32cd9dc76954b7b4dc5d38081ed39bc42511ab0e
-ms.sourcegitcommit: 2998488d63f2dd9cbfa1f5cb9a403883b2246949
+ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34047571"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957979"
 ---
 # <a name="basicstring-class"></a>basic_string (Clase)
 
@@ -146,11 +146,11 @@ class basic_string;
 
 ### <a name="parameters"></a>Parámetros
 
-`CharType` El tipo de datos de un solo carácter que se almacenará en la cadena. La biblioteca estándar de C++ proporciona especializaciones de esta clase de plantilla, con las definiciones de tipo [string](../standard-library/string-typedefs.md#string) para elementos de tipo `char`, [wstring](../standard-library/string-typedefs.md#wstring) para `wchar_t`, [u16string](../standard-library/string-typedefs.md#u16string) para `char16_t` y [u32string](../standard-library/string-typedefs.md#u32string) para `char32_t`.
+*CharType* el tipo de datos de un solo carácter que se almacenará en la cadena. La biblioteca estándar de C++ proporciona especializaciones de esta clase de plantilla, con las definiciones de tipo [cadena](../standard-library/string-typedefs.md#string) elementos del tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), para **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) para `char16_t`, y [u32string](../standard-library/string-typedefs.md#u32string) para `char32_t`.
 
-`Traits` Distintas propiedades importantes de la **CharType** se describen los elementos de una especialización de basic_string por la clase **rasgos**. El valor predeterminado es `char_traits`< `CharType`>.
+*Rasgos* diversas propiedades importantes de la `CharType` se describen los elementos de una especialización basic_string por la clase `Traits`. El valor predeterminado es `char_traits`< `CharType`>.
 
-`Allocator` El tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la cadena de la asignación y desasignación de memoria. El valor predeterminado es **allocator**< `CharType`>.
+*Asignador* el tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la cadena. El valor predeterminado es **allocator**< `CharType`>.
 
 ### <a name="constructors"></a>Constructores
 
@@ -163,13 +163,13 @@ class basic_string;
 |Nombre de tipo|Descripción|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo que representa la clase `allocator` para un objeto de cadena.|
-|[const_iterator](#const_iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede acceder a un elemento `const` de la cadena y leerlo.|
-|[const_pointer](#const_pointer)|Tipo que proporciona un puntero a un elemento `const` de una cadena.|
-|[const_reference](#const_reference)|Tipo que proporciona una referencia a un elemento `const` almacenado en una cadena para leer y realizar operaciones de `const`.|
-|[const_reverse_iterator](#const_reverse_iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede leer cualquier elemento `const` de la cadena.|
+|[const_iterator](#const_iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede acceder a un elemento **const** de la cadena y leerlo.|
+|[const_pointer](#const_pointer)|Tipo que proporciona un puntero a un elemento **const** en una cadena.|
+|[const_reference](#const_reference)|Tipo que proporciona una referencia a un elemento **const** almacenado en una cadena para leer operaciones **const** y ejecutarlas.|
+|[const_reverse_iterator](#const_reverse_iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede leer cualquier elemento **const** en la cadena.|
 |[difference_type](#difference_type)|Tipo que proporciona la diferencia entre dos iteradores que hacen referencia a elementos de la misma cadena.|
 |[iterator](#iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede leer o modificar cualquier elemento de una cadena.|
-|[npos](#npos)|Un valor entero sin signo que se inicializa en -1 indica "no se encontró" o "todos los caracteres restantes" cuando se produce un error en una función de búsqueda.|
+|[npos](#npos)|Un valor entero sin signo que se inicializa en -1 que indica "no encontrado" o "todos los caracteres restantes" cuando se produce un error en una función de búsqueda.|
 |[pointer](#pointer)|Tipo que proporciona un puntero a un elemento de carácter de una cadena o una matriz de caracteres.|
 |[reference](#reference)|Tipo que proporciona una referencia a un elemento almacenado en una cadena.|
 |[reverse_iterator](#reverse_iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede leer o modificar un elemento de una cadena invertida.|
@@ -253,7 +253,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **Allocator**.
+El tipo es un sinónimo del parámetro de plantilla `Allocator`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -314,19 +314,19 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>Parámetros
 
-`ptr` La cadena de C se va a anexar.
+*PTR* la cadena de C se va a anexar.
 
-`str` La cadena cuyos caracteres se adjuntará.
+*Str* la cadena cuyos caracteres son se va a anexar.
 
-`_Off` El índice de la parte de la cadena de origen que proporciona los caracteres que se van a anexar.
+*_Off* el índice de la parte de la cadena de origen que proporciona los caracteres que se va a anexar.
 
-`count` El número de caracteres que se debe anexar, como máximo, de la cadena de origen.
+*recuento de* el número de caracteres que se debe anexar, como máximo, de la cadena de origen.
 
-`_Ch` El valor de carácter se va a anexar.
+*_Ch* el valor de carácter que se va a anexar.
 
-`first` Un iterador de entrada dirigido al primer elemento del intervalo que se van a anexar.
+*primera* un iterador de entrada dirige al primer elemento del intervalo que se va a anexar.
 
-`last` Un iterador de entrada, const_pointer o const_iterator, que dirige la posición más allá del último elemento del intervalo que se van a anexar.
+*último* un iterador de entrada, const_pointer o const_iterator que dirige a la posición de está más allá del último elemento del intervalo que se va a anexar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -334,7 +334,7 @@ Referencia al objeto de cadena que se está anexando con los caracteres pasados 
 
 ### <a name="remarks"></a>Comentarios
 
-Se pueden anexar caracteres a una cadena mediante [operator+=](#op_add_eq) o las funciones miembro **append** o [push_back](#push_back). `operator+=` agrega valores de un solo argumento, mientras que la función miembro de varios argumentos **append** permite especificar una parte concreta de una cadena para agregar.
+Se pueden anexar caracteres en una cadena mediante la [operador +=](#op_add_eq) o las funciones miembro `append` o [push_back](#push_back). `operator+=` anexa valores de argumento único mientras varios argumentos `append` permite que una parte específica de una cadena que se especifique para agregar función miembro.
 
 ### <a name="example"></a>Ejemplo
 
@@ -468,19 +468,19 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>Parámetros
 
-`ptr` Un puntero a los caracteres de la cadena de C que se asignará a la cadena de destino.
+*PTR* un puntero a los caracteres de la cadena de C que se asignará a la cadena de destino.
 
-`count` El número de caracteres que se va a asignar, de la cadena de origen.
+*recuento de* el número de caracteres que se va a asignarse, desde la cadena de origen.
 
-`str` La cadena de origen cuyos caracteres se asignará a la cadena de destino.
+*Str* la cadena de origen cuyos caracteres se asignará a la cadena de destino.
 
-`_Ch` El valor de carácter que se asignará.
+*_Ch* el valor de carácter que se asignará.
 
-`first` Un iterador de entrada, const_pointer o const_iterator, que dirige el primer carácter en el intervalo de la cadena de origen que se asignará al intervalo de destino.
+*primera* un iterador de entrada, const_pointer o const_iterator que dirige al primer carácter del intervalo de la cadena de origen que se asignará al intervalo de destino.
 
-`last` Un iterador de entrada, const_pointer o const_iterator, que dirige uno después del último carácter en el intervalo de la cadena de origen que se asignará al intervalo de destino.
+*último* un iterador de entrada, const_pointer o const_iterator que dirige a uno más allá del último carácter del intervalo de la cadena de origen que se asignará al intervalo de destino.
 
-`off` La posición en la que se iniciarán nuevos caracteres que se asignará.
+*desactivar* la posición en la que se iniciarán nuevos caracteres que se asignará.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -488,7 +488,7 @@ Referencia al objeto de cadena al que la función miembro está asignando nuevos
 
 ### <a name="remarks"></a>Comentarios
 
-Es posible asignar nuevos valores de caracteres a las cadenas. El nuevo valor puede ser una cadena y una cadena de C o un solo carácter. Se puede usar [operator=](#op_eq) si el nuevo valor puede ser descrito mediante un solo parámetro; en caso contrario, se puede usar la función miembro **assign**, que tiene varios parámetros, para especificar qué parte de la cadena se va a asignar a una cadena de destino.
+Es posible asignar nuevos valores de caracteres a las cadenas. El nuevo valor puede ser una cadena y una cadena de C o un solo carácter. El [operador =](#op_eq) puede utilizarse si el nuevo valor puede ser descrito mediante un solo parámetro; de lo contrario la función miembro `assign`, que tiene varios parámetros, puede usarse para especificar qué parte de la cadena se asignará a un destino cadena.
 
 ### <a name="example"></a>Ejemplo
 
@@ -595,7 +595,7 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Off` El índice de la posición del elemento que hace referencia.
+*_Off* el índice de la posición del elemento que se hace referencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -603,11 +603,11 @@ Referencia al carácter de la cadena en la posición especificada por el índice
 
 ### <a name="remarks"></a>Comentarios
 
-El primer elemento de la cadena tiene un índice de cero y los siguientes elementos se indizan de forma consecutiva por los enteros positivos, para que una cadena de longitud *n* tiene un *n*elemento indizado por el número *n -* 1.
+El primer elemento de la cadena tiene un índice de cero y los siguientes elementos se indizan de forma consecutiva enteros positivos, por lo que una cadena de longitud *n* tiene un *n*elemento indizado por el número *n -* 1.
 
-El miembro [operator&#91;&#93;](#op_at) es más rápido que la función miembro **at** a la hora de proporcionar acceso de lectura y escritura a los elementos de una cadena.
+El miembro [operador&#91; &#93; ](#op_at) es más rápido que la función miembro `at` para proporcionar acceso de lectura y escritura a los elementos de una cadena.
 
-El miembro `operator[]` no comprueba si el índice pasado como parámetro es válido, pero la función miembro **at** sí lo hace, por lo que debería usarse si la validez no es segura. Un índice no válido, que es un índice menor que cero o mayor o igual que el tamaño de la cadena, pasado a la función miembro **at** inicia una excepción [out_of_range (Clase)](../standard-library/out-of-range-class.md). Un índice no válido pasado a `operator[]` tiene como resultado un comportamiento indefinido, pero el índice igual a la longitud de la cadena es un índice válido para cadenas const y el operador devuelve el carácter nulo cuando se ha pasado este índice.
+El miembro `operator[]` no comprueba si el índice pasado como parámetro es válido, pero la función miembro `at` hace de modo que deben usarse si la validez no es segura. Un índice no válido, que es un índice menor que cero o mayor o igual que el tamaño de la cadena, pasado a la función miembro `at` produce una [out_of_range (clase)](../standard-library/out-of-range-class.md) excepción. Un índice no válido pasado a `operator[]` tiene como resultado un comportamiento indefinido, pero el índice igual a la longitud de la cadena es un índice válido para cadenas const y el operador devuelve el carácter nulo cuando se ha pasado este índice.
 
 La referencia devuelta puede ser anulada por las reasignaciones de cadena o las modificaciones de las cadenas no **const**.
 
@@ -741,21 +741,21 @@ basic_string(
 
 ### <a name="parameters"></a>Parámetros
 
-`ptr` La cadena de C cuyos caracteres se usa para inicializar el `string` que se está construyendo. Este valor no puede ser un puntero nulo.
+*PTR* la cadena de C cuyos caracteres son que se usará para inicializar el `string` que se está construyendo. Este valor no puede ser un puntero nulo.
 
-`_Al` La clase de asignador de almacenamiento para el objeto de cadena que se está construyendo.
+*_Al* la clase de asignador de almacenamiento para el objeto de cadena que se está construyendo.
 
-`count` El número de caracteres que se va a inicializar.
+*recuento de* el número de caracteres que se va a inicializarse.
 
-`right` La cadena que inicializa la cadena que se está construyendo.
+*derecha* la cadena para inicializar la cadena que se está construyendo.
 
-`_Roff` El índice de un carácter en una cadena que es el primero que se utilizará para inicializar los valores de caracteres para la cadena que se está construyendo.
+*_Roff* el índice de un carácter en una cadena que es el primero que se usará para inicializar los valores de carácter para la cadena que se está construyendo.
 
-`_Ch` El valor de carácter que se copiará en la cadena que se está construyendo.
+*_Ch* el valor de carácter que se copiará en la cadena que se está construyendo.
 
-`first` Un iterador de entrada, const_pointer o const_iterator, que dirige el primer elemento del intervalo de origen que se va a insertar.
+*primera* un iterador de entrada, const_pointer o const_iterator que dirige al primer elemento del intervalo de origen que va a insertar.
 
-`last` Un iterador de entrada, const_pointer o const_iterator, que dirige la posición más allá del último elemento del intervalo de origen que se va a insertar.
+*último* un iterador de entrada, const_pointer o const_iterator que dirige a la posición de la siguiente al último elemento del intervalo de origen que va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1003,7 +1003,7 @@ int main( )
 
 ## <a name="cbegin"></a>  basic_string::cbegin
 
-Devuelve un iterador `const` que direcciona el primer elemento del intervalo.
+Devuelve un **const** iterador que direcciona el primer elemento del intervalo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -1011,13 +1011,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador `const` de acceso aleatorio que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
+Un **const** iterador de acceso aleatorio que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Comentarios
 
 Con el valor devuelto de `cbegin`, los elementos del intervalo no se pueden modificar.
 
-Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `begin()` y `cbegin()`.
+Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `begin()` y `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -1029,7 +1029,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  basic_string::cend
 
-Devuelve un iterador `const` que direcciona la ubicación situada más allá del último elemento de un intervalo.
+Devuelve un **const** iterador que direcciona la ubicación situada más allá del último elemento de un intervalo.
 
 ```cpp
 const_iterator cend() const;
@@ -1037,13 +1037,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador `const` de acceso aleatorio que apunta justo después del final del intervalo.
+Un **const** iterador de acceso aleatorio que apunta justo después del final del intervalo.
 
 ### <a name="remarks"></a>Comentarios
 
 `cend` se usa para probar si un iterador ha sobrepasado el final de su intervalo.
 
-Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `end()` y `cend()`.
+Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `end()` y `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -1148,19 +1148,19 @@ int compare(
 
 ### <a name="parameters"></a>Parámetros
 
-`str` La cadena que se va a comparar con la cadena de operando.
+*Str* la cadena que se va a comparar con la cadena de operando.
 
-`_Pos1` El índice de la cadena de operando en el que comienza la comparación.
+*_Pos1* el índice de la cadena de operando en la que comienza la comparación.
 
-`_Num1` El número máximo de caracteres de la cadena de operando se va a comparar.
+*_Num1* el número máximo de caracteres de la cadena de operando que se comparará.
 
-`_Num2` El número máximo de caracteres de la cadena de parámetro que se va a comparar.
+*_Num2* el número máximo de caracteres de la cadena de parámetro que se comparará.
 
-`_Off` El índice de la cadena de parámetro en el que comienza la comparación.
+*_Off* el índice de la cadena de parámetro en el que comienza la comparación.
 
-`count` El número máximo de caracteres de la cadena de parámetro que se va a comparar.
+*recuento de* el número máximo de caracteres de la cadena de parámetro que se comparará.
 
-`ptr` La cadena de C que se compara con la cadena de operando.
+*PTR* la cadena de C que se comparará con la cadena de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1168,7 +1168,7 @@ Valor negativo si la cadena de operando es menor que la cadena de parámetro; ce
 
 ### <a name="remarks"></a>Comentarios
 
-Las funciones miembro **compare** comparan la totalidad o parte de las cadenas de parámetro y operando según su uso.
+El `compare` funciones miembro comparan la totalidad o parte de las cadenas de parámetro y operando dependiendo de qué uso.
 
 La comparación realizada distingue entre mayúsculas y minúsculas.
 
@@ -1391,9 +1391,9 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es sinónimo de **allocator_type::const_pointer**.
+El tipo es un sinónimo de `allocator_type::const_pointer`.
 
-En el caso del tipo **string**, es equivalente a `char`*.
+Para el tipo `string`, equivale a `char*`.
 
 Los punteros declarados const se deben inicializar al declararse. Los punteros const siempre apuntan a la misma ubicación de memoria y pueden apuntar a datos const o no const.
 
@@ -1433,7 +1433,7 @@ typedef typename allocator_type::const_reference const_reference;
 
 Un tipo `const_reference` no se puede utilizar para modificar el valor de un elemento.
 
-El tipo es sinónimo de **allocator_type::const_reference**. En el caso de la cadena **type**, es equivalente a const **char&**.
+El tipo es un sinónimo de `allocator_type::const_reference`. Cadena `type`, es equivalente a const `char&`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1470,11 +1470,11 @@ size_type copy(
 
 ### <a name="parameters"></a>Parámetros
 
-`ptr` Matriz de caracteres de destino a la que los elementos se van a copiarse.
+*PTR* la matriz de caracteres de destino a la que los elementos se van a copiarse.
 
-_ `Count` El número de caracteres que se copian, como máximo, de la cadena de origen.
+_ *Recuento* el número de caracteres que se copian, como máximo, de la cadena de origen.
 
-`_Off` La posición inicial en la cadena de origen desde el que se realizarán copias.
+*_Off* la posición inicial en la cadena de origen desde el que se realizará copias.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1573,13 +1573,13 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>Parámetros
 
-`dest` Matriz de caracteres de destino a la que los elementos se van a copiarse.
+*dest* la matriz de caracteres de destino a la que los elementos se van a copiarse.
 
-`dest_size` El tamaño de `dest`.
+*dest_size* el tamaño de *dest*.
 
-_ `Count` El número de caracteres que se copian, como máximo, de la cadena de origen.
+_ *Recuento* el número de caracteres que se copian, como máximo, de la cadena de origen.
 
-`_Off` La posición inicial en la cadena de origen desde el que se realizarán copias.
+*_Off* la posición inicial en la cadena de origen desde el que se realizará copias.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1650,7 +1650,7 @@ Puntero al primer elemento de la matriz que contiene el contenido de la cadena, 
 
 ### <a name="remarks"></a>Comentarios
 
-Los objetos de cadena de tipo que pertenecen a la clase de plantilla de C++ basic_string \<char> no son necesariamente terminados en null. El tipo devuelto para **data** no es una cadena de C válida, porque no se anexa ningún carácter nulo. El carácter nulo '\0' se usa como un carácter especial en una cadena de C para marcar el final de la cadena, pero no tiene ningún significado especial en un objeto de cadena de tipo y puede ser una parte del objeto de cadena igual que cualquier otro carácter.
+Los objetos de cadena de tipo que pertenecen a la clase de plantilla de C++ basic_string \<char> no son necesariamente terminados en null. El tipo de valor devuelto para `data` no es una cadena de C válida, porque no se anexa ningún carácter nulo. El carácter nulo '\0' se usa como un carácter especial en una cadena de C para marcar el final de la cadena, pero no tiene ningún significado especial en un objeto de cadena de tipo y puede ser una parte del objeto de cadena igual que cualquier otro carácter.
 
 Hay una conversión automática de const **char\*** en cadenas, pero la clase string no proporciona conversiones automáticas de cadenas de estilo C en objetos de tipo **basic_string \<char>**.
 
@@ -1714,7 +1714,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 El tipo de entero con signo describe un objeto que puede representar la diferencia entre las direcciones de dos elementos cualesquiera de la secuencia controlada.
 
-En el caso del tipo **string**, es equivalente a **ptrdiff_t**.
+Para el tipo `string`, equivale a `ptrdiff_t`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1815,9 +1815,9 @@ Devuelve un iterador de acceso aleatorio que dirige a la ubicación que sigue al
 
 ### <a name="remarks"></a>Comentarios
 
-**end** se suele usar para comprobar si un iterador ha llegado al final de su cadena. El valor devuelto por **end** no se debe desreferenciar.
+`end` a menudo se usa para comprobar si un iterador ha llegado al final de su cadena. El valor devuelto por `end` no se debe desreferenciar.
 
-Si el valor devuelto de **end** se asigna a `const_iterator`, el objeto de cadena no se puede modificar. Si el valor devuelto de **end** se asigna a un **iterador**, el objeto de cadena se puede modificar.
+Si el valor devuelto de `end` se asigna a `const_iterator`, el objeto de cadena no se puede modificar. Si el valor devuelto de `end` se asigna a un `iterator`, se puede modificar el objeto de cadena.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1891,15 +1891,15 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Un iterador que direcciona la posición del primer elemento del intervalo se borrarán.
+*primera* un iterador que direcciona la posición del primer elemento del intervalo que se va a borrar.
 
-`last` Un iterador que direcciona la posición uno pasado el último elemento del intervalo se borrarán.
+*último* un iterador que direcciona la posición uno pasado el último elemento del intervalo que se va a borrar.
 
-`_It` Un iterador que direcciona la posición del elemento de la cadena se borrarán.
+*_It* un iterador que direcciona la posición del elemento en la cadena que se va a borrar.
 
-`_Pos` El índice del primer carácter en la cadena que se va a quitar.
+*_Pos* el índice del primer carácter en la cadena que se va a quitar.
 
-`count` El número de elementos que se va a quitar si no hay tantas en el intervalo de la cadena que empieza con *_Pos*.
+*recuento de* el número de elementos que se quitarán si hay tantos en el intervalo de la cadena que empieza con *_Pos*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1998,15 +1998,15 @@ size_type find(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Ch` El valor de carácter para el que la función miembro consiste en Buscar.
+*_Ch* el valor de carácter para el que la función miembro consiste en Buscar.
 
-`_Off` Índice de la posición en la que es comenzar la búsqueda.
+*_Off* índice de la posición en la que se inicia la búsqueda.
 
-`ptr` La cadena de C para el que la función miembro consiste en Buscar.
+*PTR* la cadena de C para el que la función miembro consiste en Buscar.
 
-`count` El número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
+*recuento de* el número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
 
-`str` Cadena para el que va a buscar la función miembro.
+*Str* la cadena para el que la función miembro a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2171,15 +2171,15 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Ch` El valor de carácter para el que la función miembro consiste en Buscar.
+*_Ch* el valor de carácter para el que la función miembro consiste en Buscar.
 
-`_Off` Índice de la posición en la que es comenzar la búsqueda.
+*_Off* índice de la posición en la que se inicia la búsqueda.
 
-`ptr` La cadena de C para el que la función miembro consiste en Buscar.
+*PTR* la cadena de C para el que la función miembro consiste en Buscar.
 
-`count` El número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
+*recuento de* el número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
 
-`str` Cadena para el que va a buscar la función miembro.
+*Str* la cadena para el que la función miembro a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2357,15 +2357,15 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Ch` El valor de carácter para el que la función miembro consiste en Buscar.
+*_Ch* el valor de carácter para el que la función miembro consiste en Buscar.
 
-`_Off` Índice de la posición en la que es comenzar la búsqueda.
+*_Off* índice de la posición en la que se inicia la búsqueda.
 
-`ptr` La cadena de C para el que la función miembro consiste en Buscar.
+*PTR* la cadena de C para el que la función miembro consiste en Buscar.
 
-`count` El número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
+*recuento de* el número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
 
-`str` Cadena para el que va a buscar la función miembro.
+*Str* la cadena para el que la función miembro a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2542,15 +2542,15 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Ch` El valor de carácter para el que la función miembro consiste en Buscar.
+*_Ch* el valor de carácter para el que la función miembro consiste en Buscar.
 
-`_Off` Índice de la posición en la que es finalizar la búsqueda.
+*_Off* índice de la posición en el que se termine la búsqueda.
 
-`ptr` La cadena de C para el que la función miembro consiste en Buscar.
+*PTR* la cadena de C para el que la función miembro consiste en Buscar.
 
-`count` El número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
+*recuento de* el número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
 
-`str` Cadena para el que va a buscar la función miembro.
+*Str* la cadena para el que la función miembro a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2729,15 +2729,15 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Ch` El valor de carácter para el que la función miembro consiste en Buscar.
+*_Ch* el valor de carácter para el que la función miembro consiste en Buscar.
 
-`_Off` Índice de la posición en la que es finalizar la búsqueda.
+*_Off* índice de la posición en el que se termine la búsqueda.
 
-`ptr` La cadena de C para el que la función miembro consiste en Buscar.
+*PTR* la cadena de C para el que la función miembro consiste en Buscar.
 
-`count` El número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
+*recuento de* el número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
 
-`str` Cadena para el que va a buscar la función miembro.
+*Str* la cadena para el que la función miembro a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2994,21 +2994,21 @@ void insert(
 
 *_P0* el índice de la posición detrás del punto de inserción de los nuevos caracteres.
 
-`ptr` La cadena de C a insertar total o parcialmente en la cadena.
+*PTR* la cadena de C va a insertar total o parcialmente en la cadena.
 
-`count` El número de caracteres que se va a insertar.
+*recuento de* el número de caracteres que se va a insertar.
 
-`str` Cadena que se va a insertar total o parcialmente en la cadena de destino.
+*Str* la cadena que se va a insertar total o parcialmente en la cadena de destino.
 
-`_Off` El índice de la parte de la cadena de origen que proporciona los caracteres que se van a anexar.
+*_Off* el índice de la parte de la cadena de origen que proporciona los caracteres que se va a anexar.
 
-`_Ch` El valor de carácter de los elementos que se va a insertar.
+*_Ch* el valor de carácter de los elementos que se va a insertar.
 
-`_It` Un iterador que direcciona la posición detrás de la cual es un carácter que se va a insertar.
+*_It* un iterador que direcciona la posición detrás de la cual se insertará un carácter.
 
-`first` Un iterador de entrada, const_pointer o const_iterator, que dirige el primer elemento del intervalo de origen que se va a insertar.
+*primera* un iterador de entrada, const_pointer o const_iterator que dirige al primer elemento del intervalo de origen que va a insertar.
 
-`last` Un iterador de entrada, const_pointer o const_iterator, que dirige la posición más allá del último elemento del intervalo de origen que se va a insertar.
+*último* un iterador de entrada, const_pointer o const_iterator que dirige a la posición de la siguiente al último elemento del intervalo de origen que va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3113,11 +3113,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Comentarios
 
-Un tipo **iterator** se puede usar para modificar el valor de un carácter y se emplea para iterar una cadena hacia delante.
+Un tipo `iterator` puede usarse para modificar el valor de un carácter y se usa para iterar una cadena hacia delante.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [begin](#begin) para obtener un ejemplo de cómo declarar y usar **iterator**.
+Vea el ejemplo de [begin](#begin) para obtener un ejemplo de cómo declarar y usar `iterator`.
 
 ## <a name="length"></a>  basic_string::length
 
@@ -3257,7 +3257,7 @@ int main( )
 
 ## <a name="npos"></a>  basic_string::npos
 
-Un valor entero sin signo que se inicializa en -1 indica "no se encontró" o "todos los caracteres restantes" cuando se produce un error en una función de búsqueda.
+Un valor entero sin signo que se inicializa en -1 que indica "no encontrado" o "todos los caracteres restantes" cuando se produce un error en una función de búsqueda.
 
 ```cpp
 static const size_type npos = -1;
@@ -3265,7 +3265,7 @@ static const size_type npos = -1;
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando se va a buscar el valor `npos` en el valor devuelto, es posible que no funcione a menos que el valor devuelto sea de tipo [size_type](#size_type) y no `int` ni `unsigned`.
+Cuando el valor devuelto es se va a comprobar la `npos` valor, es posible que no funcione a menos que el valor devuelto es de tipo [size_type](#size_type) y no **int** o **sin signo**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -3288,11 +3288,11 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Ch` El carácter se va a anexar.
+*_Ch* el carácter que se va a anexar.
 
-`ptr` Los caracteres de la cadena de C se va a anexar.
+*PTR* los caracteres de la cadena de C se va a anexar.
 
-`right` Los caracteres de la cadena se va a anexar.
+*derecha* los caracteres de la cadena se va a anexar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3377,11 +3377,11 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Ch` El valor de carácter que se asignará.
+*_Ch* el valor de carácter que se asignará.
 
-`ptr` Un puntero a los caracteres de la cadena de C que se asignará a la cadena de destino.
+*PTR* un puntero a los caracteres de la cadena de C que se asignará a la cadena de destino.
 
-`right` La cadena de origen cuyos caracteres se asignará a la cadena de destino.
+*derecha* la cadena de origen cuyos caracteres se asignará a la cadena de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3459,7 +3459,7 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Off` El índice de la posición del elemento que hace referencia.
+*_Off* el índice de la posición del elemento que se hace referencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3471,7 +3471,7 @@ El primer elemento de la cadena tiene un índice de cero y los enteros positivos
 
 `operator[]` es más rápido que la función miembro [at](#at) a la hora de proporcionar acceso de lectura y escritura a los elementos de una cadena.
 
-`operator[]` no comprueba si el índice pasado como parámetro es válido, pero la función miembro **at** sí lo hace, por lo que debería usarse si la validez no es segura. Un índice no válido (un índice menor que cero o mayor o igual que el tamaño de la cadena) pasado a la función miembro **at** inicia una excepción [out_of_range (Clase)](../standard-library/out-of-range-class.md). Un índice no válido pasado a `operator[]` tiene como resultado un comportamiento indefinido, pero el índice igual a la longitud de la cadena es un índice válido para cadenas const y el operador devuelve el carácter nulo cuando se ha pasado este índice.
+`operator[]` no comprueba si el índice pasado como parámetro es válido, pero la función miembro `at` y por lo que debe usarse en la validez no es segura. Un índice no válido (un índice menor que cero o mayor o igual que el tamaño de la cadena) pasado a la función miembro `at` produce una [out_of_range (clase)](../standard-library/out-of-range-class.md) excepción. Un índice no válido pasado a `operator[]` tiene como resultado un comportamiento indefinido, pero el índice igual a la longitud de la cadena es un índice válido para cadenas const y el operador devuelve el carácter nulo cuando se ha pasado este índice.
 
 La referencia devuelta puede ser anulada por las reasignaciones de cadena o las modificaciones de las cadenas no **const**.
 
@@ -3526,9 +3526,9 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es sinónimo de **allocator_type::pointer**.
+El tipo es un sinónimo de `allocator_type::pointer`.
 
-En el caso del tipo **string**, es equivalente a **char\****.
+Para el tipo `string`, equivale a **char\***.
 
 ### <a name="example"></a>Ejemplo
 
@@ -3575,7 +3575,7 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Ch` Carácter que se va a agregar al final de la cadena.
+*_Ch* el carácter que se va a agregarse al final de la cadena.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3706,15 +3706,15 @@ typedef typename allocator_type::reference reference;
 
 ### <a name="remarks"></a>Comentarios
 
-Se puede usar un tipo **reference** para modificar el valor de un elemento.
+Un tipo `reference` puede usarse para modificar el valor de un elemento.
 
-El tipo es sinónimo de **allocator_type::reference**.
+El tipo es un sinónimo de `allocator_type::reference`.
 
-En el caso del tipo **string**, es equivalente a **chr&**.
+Para el tipo `string`, equivale a `chr&`.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [at](#at) para obtener un ejemplo de cómo declarar y usar **reference**.
+Vea el ejemplo de [at](#at) para obtener un ejemplo de cómo declarar y usar `reference`.
 
 ## <a name="rend"></a>  basic_string::rend
 
@@ -3873,29 +3873,29 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>Parámetros
 
-`str` La cadena que va a ser un origen de caracteres de la cadena de operando.
+*Str* la cadena que se va a un origen de caracteres de la cadena de operando.
 
-`_Pos1` El índice de la cadena de operando en el que comienza la sustitución.
+*_Pos1* el índice de la cadena de operando en la que comienza la sustitución.
 
-`_Num1` El número máximo de caracteres que se pueden sustituir en la cadena de operando.
+*_Num1* el número máximo de caracteres que se va a reemplazarse en la cadena de operando.
 
-*_Pos2* el índice de la cadena de parámetro en el que comienza la copia.
+*_Pos2* el índice de la cadena de parámetro donde comienza la copia.
 
-`_Num2` El número máximo de caracteres que se va a usarse desde el parámetro de cadena de C.
+*_Num2* el número máximo de caracteres que se va a usarse desde el parámetro de cadena de C.
 
-`ptr` Cadena de C que va a ser un origen de caracteres de la cadena de operando.
+*PTR* la cadena de C que se va a un origen de caracteres de la cadena de operando.
 
-`_Ch` El carácter que se copiará en la cadena de operando.
+*_Ch* el carácter que se copiará en la cadena de operando.
 
-* first0 * un iterador que direcciona el primer carácter que desee quitar en la cadena de operando.
+* first0 * un iterador que direcciona el primer carácter que se puede quitar de la cadena de operando.
 
-* last0 * un iterador que direcciona el último carácter que desee quitar en la cadena de operando.
+* last0 * un iterador que direcciona el último carácter que se puede quitar de la cadena de operando.
 
-`first` Un iterador, const_pointer o const_iterator, que dirige el primer carácter va a copiar en la cadena de parámetro.
+*primera* un iterador, const_pointer o const_iterator que dirige al primer carácter que va a copiar en la cadena de parámetro.
 
-`last` Un iterador, const_pointer o const_iterator, que dirige el último carácter va a copiar en la cadena de parámetro.
+*último* un iterador, const_pointer o const_iterator que dirige al último carácter va a copiar en la cadena de parámetro.
 
-`count` El número de veces que `_Ch` se copia en la cadena de operando.
+*recuento de* el número de veces *_Ch* se copia en la cadena de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -4090,13 +4090,13 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-`count` El número de caracteres para el que se va a reservar memoria.
+*recuento de* el número de caracteres para el que se va a reservar memoria.
 
 ### <a name="remarks"></a>Comentarios
 
 Es importante tener suficiente capacidad porque las reasignaciones son procesos lentos que anulan todas las referencias, los punteros y los iteradores que hacen referencia a caracteres de una cadena.
 
-El concepto de capacidad para los objetos de cadenas de tipo es igual que para los objetos de vector de tipo. A diferencia del vector, se puede llamar a la función miembro **reserve** para reducir la capacidad de un objeto. La solicitud no es vinculante y puede producirse o no. Puesto que el valor predeterminado del parámetro es cero, una llamada de **reserve** es una solicitud no vinculante para reducir la capacidad de la cadena a fin de acomodar el número de caracteres actualmente en ella. La capacidad nunca se reduce por debajo del número actual de caracteres.
+El concepto de capacidad para los objetos de cadenas de tipo es igual que para los objetos de vector de tipo. A diferencia del vector, la función miembro `reserve` puede llamarse para reducir la capacidad de un objeto. La solicitud no es vinculante y puede producirse o no. Como valor predeterminado el valor del parámetro es cero, una llamada de `reserve` es una solicitud no vinculante para reducir la capacidad de la cadena para ajustar el número de caracteres actualmente en la cadena. La capacidad nunca se reduce por debajo del número actual de caracteres.
 
 Una llamada a `reserve` es la única forma posible de reducir la capacidad de una cadena. Pero como se ha indicado arriba, esta solicitud no es vinculante y podría no producirse.
 
@@ -4184,9 +4184,9 @@ void resize(
 
 ### <a name="parameters"></a>Parámetros
 
-`count` El nuevo tamaño de la cadena.
+*recuento* el nuevo tamaño de la cadena.
 
-`_Ch` El valor que se agregan caracteres se inicializan con si se requieren elementos adicionales.
+*_Ch* el valor que anexa los caracteres se inicializan con si se necesitan elementos adicionales.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -4321,15 +4321,15 @@ size_type rfind(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Ch` El valor de carácter para el que la función miembro consiste en Buscar.
+*_Ch* el valor de carácter para el que la función miembro consiste en Buscar.
 
-`_Off` Índice de la posición en la que es comenzar la búsqueda.
+*_Off* índice de la posición en la que se inicia la búsqueda.
 
-`ptr` La cadena de C para el que la función miembro consiste en Buscar.
+*PTR* la cadena de C para el que la función miembro consiste en Buscar.
 
-`count` El número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
+*recuento de* el número de caracteres, contando hacia delante desde el primer carácter en la cadena de C para el que la función miembro consiste en Buscar.
 
-`str` Cadena para el que va a buscar la función miembro.
+*Str* la cadena para el que la función miembro a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -4554,9 +4554,9 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="remarks"></a>Comentarios
 
-Es equivalente a **allocator_type::size_type**.
+Equivale a `allocator_type::size_type`.
 
-En el caso del tipo **string**, es equivalente a **size_t**.
+Para el tipo `string`, equivale a `size_t`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -4599,9 +4599,9 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Off` Un índice de localizar el elemento en la posición desde la que se realiza la copia de la cadena, con un valor predeterminado de 0.
+*_Off* índice que localiza el elemento en la posición desde la que se realiza la copia de la cadena, con un valor predeterminado de 0.
 
-`count` El número de caracteres que se van a copiarse si están presentes.
+*recuento de* el número de caracteres que se va a copiar si están presentes.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -4655,7 +4655,7 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-`str` La cadena de origen cuyos elementos se van a intercambiar con los de la cadena de destino.
+*Str* la cadena de origen cuyos elementos se van a intercambiar con los de la cadena de destino.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -4714,9 +4714,9 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del segundo parámetro de plantilla **Traits**.
+El tipo es un sinónimo para el segundo parámetro de plantilla `Traits`.
 
-En el caso del tipo **string**, es equivalente a **char_traits\<char>**.
+Para el tipo `string`, equivale a **char_traits\<char >**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -4732,7 +4732,7 @@ typedef typename allocator_type::value_type value_type;
 
 ### <a name="remarks"></a>Comentarios
 
-Es equivalente a **traits_type::char_type** y a `char` para objetos de tipo **string**.
+Equivale a `traits_type::char_type` y es equivalente a **char** para objetos de tipo `string`.
 
 ### <a name="example"></a>Ejemplo
 

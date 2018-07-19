@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31490578b1f1d9b6028b3fa2cdcc5769d3a53935
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847564"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956643"
 ---
 # <a name="future-class"></a>future (Clase)
 
@@ -67,7 +67,7 @@ Cada *proveedor asincrónico* estándar devuelve un objeto cuyo tipo es una crea
 |[get](#get)|Recupera el resultado almacenado en el estado asincrónico asociado.|
 |[Compartir](#share)|Convierte el objeto en un `shared_future`.|
 |[valid](#valid)|Especifica si el objeto no está vacío.|
-|[espera](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|
+|[Espere](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|
 |[wait_for](#wait_for)|Se bloquea hasta que el estado asincrónico asociado está listo, o bien hasta que el tiempo especificado haya transcurrido.|
 |[wait_until](#wait_until)|Se bloquea hasta que el estado asincrónico asociado está listo o hasta un punto determinado en el tiempo.|
 
@@ -94,13 +94,13 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-`Other` Un `future` objeto.
+*Otros* A `future` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor crea un objeto `future` que no tiene ningún estado asincrónico asociado.
 
-El segundo constructor crea un objeto `future` y transfiere el estado asincrónico asociado de `Other`. `Other` ya no tiene un estado asincrónico asociado.
+El segundo constructor crea un `future` objeto y transfiere el estado asincrónico asociado de *otros*. *Otros* ya no tiene un estado asincrónico asociado.
 
 ## <a name="get"></a>  future::get
 
@@ -120,7 +120,7 @@ Antes de recuperar el resultado, este método bloquea el subproceso actual hasta
 
 Para la especialización parcial `future<Ty&>`, el valor almacenado es realmente una referencia al objeto que se ha pasado al proveedor asincrónico como el valor devuelto.
 
-Dado que no existe ningún valor almacenado para la especialización `future<void>`, el método devuelve `void`.
+Dado que no existe ningún valor almacenado para la especialización `future<void>`, el método devuelve **void**.
 
 En otras especializaciones, el método mueve su valor devuelto del valor almacenado. Por tanto, llame a este método solo una vez.
 
@@ -134,7 +134,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-`Right` Un `future` objeto.
+*Derecha* A `future` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -142,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="remarks"></a>Comentarios
 
-Después de la transferencia, `Right` ya no tiene un estado asincrónico asociado.
+Después de la transferencia, *derecha* ya no tiene un estado asincrónico asociado.
 
 ## <a name="share"></a>  future::share
 
@@ -166,7 +166,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` si el objeto tiene un estado asincrónico asociado; de lo contrario, es `false`.
+**True** si el objeto tiene un estado asincrónico asociado; en caso contrario, **false**.
 
 ## <a name="wait"></a>  future::wait
 
@@ -191,7 +191,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`Rel_time` A [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica un intervalo de tiempo máximo que el subproceso se bloquea.
+*Rel_time* A [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica un intervalo de tiempo máximo que el subproceso se bloquea.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -212,7 +212,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>Parámetros
 
-`Abs_time` A [chrono:: time_point](../standard-library/time-point-class.md) objeto que especifica un tiempo después del cual se puede desbloquear el subproceso.
+*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md) objeto que especifica un tiempo después del cual se puede desbloquear el subproceso.
 
 ### <a name="return-value"></a>Valor devuelto
 

@@ -9,12 +9,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 2d3f63ab29049e5f5a928186ba033bfe041bcfc1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5747d511777ae6f1f32d8e93bb6ee90bd0193bf9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860624"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959984"
 ---
 # <a name="ltstringgt-typedefs"></a>Definiciones de tipo de &lt;string&gt;
 
@@ -25,7 +25,7 @@ ms.locfileid: "33860624"
 
 ## <a name="string"></a>  string
 
-Un tipo que describe una especialización de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) con elementos del tipo `char`.
+Un tipo que describe una especialización de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) con elementos de tipo **char**.
 
 Otras definiciones de tipo que especializan `basic_string` incluyen [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string) y [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -75,7 +75,7 @@ Para obtener una lista de los constructores de cadena, vea [basic_string::basic_
 
 ## <a name="wstring"></a>  wstring
 
-Un tipo que describe una especialización de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) con elementos del tipo `wchar_t`.
+Un tipo que describe una especialización de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) con elementos de tipo **wchar_t**.
 
 Hay otras definiciones de tipo que especializan `basic_string`, entre las que se incluyen [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) y [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -96,7 +96,7 @@ basic_string<wchar_t> wstr(L"");
 Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> El tamaño de `wchar_t` está definido por la implementación. Si el tamaño del código depende de `wchar_t`, compruebe la implementación de la plataforma (por ejemplo, con `sizeof(wchar_t)`). Si necesita un tipo de carácter de cadena con una anchura garantizada de modo que se mantenga igual en todas las plataformas, use [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) o [u32string](../standard-library/string-typedefs.md#u32string).
+> El tamaño de **wchar_t** define la implementación. Si el código depende **wchar_t** para que sea un determinado tamaño, compruebe la implementación de la plataforma (por ejemplo, con `sizeof(wchar_t)`). Si necesita un tipo de carácter de cadena con una anchura garantizada de modo que se mantenga igual en todas las plataformas, use [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) o [u32string](../standard-library/string-typedefs.md#u32string).
 
 ## <a name="see-also"></a>Vea también
 

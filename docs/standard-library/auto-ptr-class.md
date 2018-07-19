@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83c211617752a9c9701f513373d8fe796a26a1c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850722"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958008"
 ---
 # <a name="autoptr-class"></a>auto_ptr (Clase)
 
@@ -65,13 +65,13 @@ public:
 ```
 ### <a name="parameters"></a>Parámetros
 
-`right` La `auto_ptr` desde la que se va a obtener un recurso existente.
+*derecha* el `auto_ptr` desde que se va a obtener un recurso existente.
 
-`ptr` El puntero especificado para reemplazar el puntero almacenado.
+*PTR* el puntero especificado para reemplazar el puntero almacenado.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un puntero inteligente, llama a un `auto_ptr`, en un objeto asignado. El puntero debe ser nulo o designar un objeto asignado por `new`. `auto_ptr` transfiere la propiedad si su valor almacenado se asigna a otro objeto. (Reemplaza el valor almacenado después de una transferencia con un puntero nulo). El destructor de `auto_ptr<Type>` elimina el objeto asignado. `auto_ptr<Type>` garantiza que un objeto asignado se elimina automáticamente cuando el control abandona un bloque, incluso a través de una excepción producida. No debe construir dos objetos `auto_ptr<Type>` que posean el mismo objeto.
+La clase de plantilla describe un puntero inteligente, llama a un `auto_ptr`, en un objeto asignado. El puntero debe ser nulo o designar un objeto asignado por **nuevo**. `auto_ptr` transfiere la propiedad si su valor almacenado se asigna a otro objeto. (Reemplaza el valor almacenado después de una transferencia con un puntero nulo). El destructor de `auto_ptr<Type>` elimina el objeto asignado. `auto_ptr<Type>` garantiza que un objeto asignado se elimina automáticamente cuando el control abandona un bloque, incluso a través de una excepción producida. No debe construir dos objetos `auto_ptr<Type>` que posean el mismo objeto.
 
 Puede pasar un objeto `auto_ptr<Type>` por valor como argumento a una llamada de función. `auto_ptr` no puede ser un elemento de ningún contenedor de la biblioteca estándar. No puede administrar de manera fiable una secuencia de objetos `auto_ptr<Type>` con un contenedor de la biblioteca estándar de C++.
 
@@ -95,7 +95,7 @@ Puede pasar un objeto `auto_ptr<Type>` por valor como argumento a una llamada de
 |-|-|
 |[get](#get)|La función miembro devuelve el puntero `myptr` almacenado.|
 |[release](#release)|El miembro reemplaza el puntero `myptr` almacenado con un puntero nulo y devuelve el puntero almacenado previamente.|
-|[reset](#reset)|La función miembro evalúa la expresión `delete myptr`, pero solo si el valor de puntero `myptr` almacenado cambia como consecuencia de la llamada de función. A continuación, reemplaza el puntero almacenado con `ptr`.|
+|[reset](#reset)|La función miembro evalúa la expresión `delete myptr`, pero solo si el valor de puntero `myptr` almacenado cambia como consecuencia de la llamada de función. Luego sustituye el puntero almacenado por *ptr*.|
 
 ### <a name="operators"></a>Operadores
 
@@ -130,17 +130,17 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-`ptr` El puntero al objeto que `auto_ptr` encapsula.
+*PTR* el puntero al objeto que `auto_ptr` encapsula.
 
-`right` La `auto_ptr` objeto que se copiará el constructor.
+*derecha* el `auto_ptr` objeto va a copiar el constructor.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor almacena `ptr` en **myptr**, el puntero almacenado al objeto asignado. El segundo constructor transfiere la propiedad del puntero almacenado en `right` al almacenar `right`. [release](#release) en **myptr**.
+El primer constructor almacena *ptr* en `myptr`, el puntero almacenado en el objeto asignado. El segundo constructor transfiere la propiedad del puntero almacenado en *derecho*, almacenando *derecho*. [versión](#release) en `myptr`.
 
-El tercer constructor se comporta igual que el segundo, salvo que almacena **right**. `ref`. **release** en **myptr**, donde `ref` es la referencia almacenada en `right`.
+El tercer constructor comporta igual que el segundo, salvo que almacena `right`. `ref`. `release` en `myptr`, donde `ref` es la referencia almacenada en `right`.
 
-El constructor de plantilla se comporta igual que el segundo constructor, siempre que haya un puntero a **Other** que pueda convertirse implícitamente en un puntero a **Type**.
+Constructor de la plantilla comporta igual que el segundo constructor, siempre que un puntero a `Other` puede convertirse implícitamente a un puntero a `Type`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -203,7 +203,7 @@ Destructing 00311AF8
 
 ## <a name="element_type"></a>  auto_ptr::element_type
 
-El tipo es un sinónimo del parámetro de plantilla **Type**.
+El tipo es un sinónimo del parámetro de plantilla `Type`.
 
 ```cpp
 
@@ -212,7 +212,7 @@ typedef Type element  _type;
 
 ## <a name="get"></a>  auto_ptr::get
 
-La función miembro devuelve el puntero almacenado **myptr**.
+La función miembro devuelve el puntero `myptr` almacenado.
 
 ```cpp
 Type *get() const throw();
@@ -220,7 +220,7 @@ Type *get() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero almacenado **myptr**.
+El puntero almacenado `myptr`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -282,7 +282,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Un objeto de tipo `auto_ptr`.
+*derecha* un objeto de tipo `auto_ptr`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -290,7 +290,7 @@ Referencia a un objeto de tipo `auto_ptr`\< **Type**>.
 
 ### <a name="remarks"></a>Comentarios
 
-La asignación evalúa la expresión **delete myptr**, pero solo si el puntero almacenado **myptr** cambia como resultado de la asignación. Luego transfiere la propiedad del puntero almacenado en _ *Right* al almacenar \_ *Right*. [release](#release) en **myptr**. La función devuelve **\*this**.
+La asignación evalúa la expresión `delete myptr`, pero solo si el puntero almacenado `myptr` cambios como resultado de la asignación. Luego transfiere la propiedad del puntero almacenado en _ *Right* al almacenar \_ *Right*. [versión](#release) en `myptr`. La función devuelve **\*this**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -306,7 +306,7 @@ Type& operator*() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Referencia a un objeto de tipo **Type** propiedad del puntero.
+Una referencia a un objeto de tipo `Type` que posee el puntero.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -326,11 +326,11 @@ Type * operator->() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Miembro del objeto propiedad de **auto_ptr**.
+Un miembro del objeto que `auto_ptr` posee.
 
 ### <a name="remarks"></a>Comentarios
 
-El operador de selección devuelve [get](#get)`( )`, de modo que la expresión *ap*-> **member** se comporta igual que (*ap*. **get**( ) )-> **member**, donde *ap* es un objeto de clase `auto_ptr`\< **Type**>. Por tanto, el puntero almacenado no debe ser nulo y **Type** debe ser una clase, un struct o un tipo de unión con un miembro **member**.
+El operador de selección devuelve [get](#get)`( )`, de modo que la expresión *ap*-> **member** se comporta igual que (*ap*. **get**( ) )-> **member**, donde *ap* es un objeto de clase `auto_ptr`\< **Type**>. Por lo tanto, el puntero almacenado no debe ser null, y `Type` debe ser una clase, estructura o tipo de unión con un `member` miembro.
 
 ### <a name="example"></a>Ejemplo
 
@@ -368,7 +368,7 @@ int main()
 
 ## <a name="op_auto_ptr_ref_lt_other_gt"></a>  auto_ptr::operator auto_ptr_ref&lt;Other&gt;
 
-Convierte de `auto_ptr` a **auto_ptr_ref**.
+Convierte de `auto_ptr` a `auto_ptr_ref`.
 
 ```cpp
 template <class Other>
@@ -429,7 +429,7 @@ main exiting
 
 ## <a name="release"></a>  auto_ptr::release
 
-El miembro sustituye el puntero almacenado **myptr** por un puntero nulo y devuelve el puntero almacenado previamente.
+El miembro reemplaza el puntero `myptr` almacenado con un puntero nulo y devuelve el puntero almacenado previamente.
 
 ```cpp
 Type *release() throw();
@@ -441,7 +441,7 @@ Puntero almacenado previamente.
 
 ### <a name="remarks"></a>Comentarios
 
-El miembro sustituye el puntero almacenado **myptr** por un puntero nulo y devuelve el puntero almacenado previamente.
+El miembro reemplaza el puntero `myptr` almacenado con un puntero nulo y devuelve el puntero almacenado previamente.
 
 ### <a name="example"></a>Ejemplo
 
@@ -491,7 +491,7 @@ Destructing 00311B88 Value: 6
 
 ## <a name="reset"></a>  auto_ptr::reset
 
-La función miembro evalúa la expresión **eliminar** **myptr**, pero solo si el valor del puntero almacenado **myptr** cambió a consecuencia de una llamada de función. Luego sustituye el puntero almacenado por **ptr**.
+La función miembro evalúa la expresión `delete myptr`, pero solo si el valor del puntero almacenado `myptr` cambios como resultado de una llamada de función. A continuación, reemplaza el puntero almacenado con `ptr`.
 
 ```cpp
 void reset(Type* ptr = 0);
@@ -499,7 +499,7 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-`ptr` El puntero especificado para reemplazar el puntero almacenado **myptr**.
+*PTR* el puntero especificado para reemplazar el puntero almacenado `myptr`.
 
 ### <a name="example"></a>Ejemplo
 

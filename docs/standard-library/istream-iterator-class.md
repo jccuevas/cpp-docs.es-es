@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74c62c1d6d80f21054f03f78e0151c2cddf00e2c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859230"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959873"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator (Clase)
 
@@ -46,13 +46,13 @@ class istream_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-`Type` El tipo de objeto que se va a extraer de la secuencia de entrada.
+*Tipo* el tipo de objeto que se va a extraer del flujo de entrada.
 
-`CharType` El tipo que representa el tipo de carácter para el `istream_iterator`. Este argumento es opcional y el valor predeterminado es `char`.
+*CharType* el tipo que representa el tipo de carácter para el `istream_iterator`. Este argumento es opcional y el valor predeterminado es **char**.
 
-`Traits` El tipo que representa el tipo de carácter para el `istream_iterator`. Este argumento es opcional y el valor predeterminado es `char_traits`< `CharType`>.
+*Rasgos* el tipo que representa el tipo de carácter para el `istream_iterator`. Este argumento es opcional y el valor predeterminado es `char_traits`< `CharType`>.
 
-`Distance` Tipo entero con signo que representa el tipo de diferencia para el `istream_iterator`. Este argumento es opcional y el valor predeterminado es `ptrdiff_t`.
+*Distancia* firmados de un tipo entero que representa el tipo de diferencia para el `istream_iterator`. Este argumento es opcional y el valor predeterminado es `ptrdiff_t`.
 
 Después de crear o incrementar un objeto de clase istream_iterator con un puntero almacenado no null, el objeto intenta extraer y almacenar un objeto de tipo `Type` del flujo de entrada asociado. Si se produce un error en la extracción, el objeto reemplaza el puntero almacenado con un puntero NULL, creando de esta forma un indicador de fin de secuencia.
 
@@ -94,7 +94,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **Chartype**.
+El tipo es un sinónimo del parámetro de plantilla `Chartype`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -144,11 +144,11 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Istr` El flujo de entrada que debe leerse uso para inicializar el `istream_iterator`.
+*_Istr* leer uso el flujo de entrada para inicializar el `istream_iterator`.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa el puntero del flujo de entrada con un puntero null y crea un iterador de fin de flujo. El segundo constructor inicializa el puntero del flujo de entrada con *&_Istr* y, después, intenta extraer y almacenar un objeto de tipo **Type**.
+El primer constructor inicializa el puntero del flujo de entrada con un puntero null y crea un iterador de fin de flujo. El segundo constructor inicializa el puntero del flujo de entrada con *& _Istr*, a continuación, intenta extraer y almacenar un objeto de tipo `Type`.
 
 El iterador de fin de flujo se puede usar para probar si `istream_iterator` ha llegado al final de un flujo.
 
@@ -204,7 +204,7 @@ Vea [istream_iterator](#istream_iterator) para obtener un ejemplo de cómo decla
 
 ## <a name="op_star"></a>  istream_iterator::operator*
 
-El operador de desreferencia devuelve el objeto almacenado de tipo **Type** al que direcciona `istream_iterator`.
+El operador de desreferencia devuelve el objeto almacenado de tipo `Type` señalado por `istream_iterator`.
 
 ```cpp
 const Type& operator*() const;
@@ -212,7 +212,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Objeto almacenado de tipo **Type**.
+El objeto almacenado de tipo `Type`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -308,7 +308,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Valor devuelto
 
-El primer operador miembro devuelve una referencia al objeto incrementado de tipo **Type** extraído del flujo de entrada y la segunda función miembro devuelve una copia del objeto.
+El primer operador miembro devuelve una referencia al objeto incrementado de tipo `Type` extraído de la secuencia de entrada y la segunda función de miembro devuelve una copia del objeto.
 
 ### <a name="example"></a>Ejemplo
 
@@ -352,7 +352,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **Traits**.
+El tipo es un sinónimo del parámetro de plantilla *Traits*.
 
 ### <a name="example"></a>Ejemplo
 

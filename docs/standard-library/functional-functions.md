@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14e656d77247984ba3306d6efff78e6cca713cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9033ba128714edde2593a09fbfb46f9f65d195ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848380"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957456"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; (Funciones)
 
@@ -70,19 +70,19 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 
 ### <a name="parameters"></a>Parámetros
 
-`Fty` El tipo de objeto que se va a llamar.
+*Fty* el tipo de objeto que se va a llamar.
 
-`TN` El tipo del enésimo llame al argumento.
+*TN* el tipo del enésimo argumento de llamada.
 
-`fn` Objeto que se va a llamar.
+*fn* el objeto que se va a llamar.
 
-`tN` El argumento n-ésima de llamada.
+*tN* el enésimo argumento de llamada.
 
 ### <a name="remarks"></a>Comentarios
 
 Los tipos `Fty, T1, T2, ..., TN` tienen que poder construirse mediante copia y `INVOKE(fn, t1, ..., tN)` debe ser una expresión válida para algunos valores `w1, w2, ..., wN`.
 
-La primera función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo de resultado débil. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN, ` [result_of ()](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, donde `cv` es los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` se determina como Especifica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada.
+La primera función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo de resultado débil. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, donde `cv` son los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` se determinan como Especifica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada.
 
 La segunda función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo anidado `result_type` que es un sinónimo de `Ret`. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN, Ret)`, donde `cv` son los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` están determinados como se indica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada y con un tipo de valor devuelto especificado.
 
@@ -90,7 +90,7 @@ Los valores de los argumentos enlazados `v1, v2, ..., vN` y sus tipos correspond
 
 si `ti` es de tipo `reference_wrapper<T>`, el argumento `vi` es `ti.get()` y su tipo `Vi` es `T&`;
 
-si el valor de `std::is_bind_expression<Ti>::value` es `true`, el argumento `vi` es `ti(u1, u2, ..., uM)` y su tipo `Vi` es `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
+Si el valor de `std::is_bind_expression<Ti>::value` es **true** el argumento `vi` es `ti(u1, u2, ..., uM)` y su tipo `Vi` es `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
 
 si el valor `j` de `std::is_placeholder<Ti>::value` no es cero, el argumento `vi` es `uj` y su tipo `Vi` es `Uj&`;
 
@@ -165,19 +165,19 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>Parámetros
 
-`func` El objeto de función binaria se convierta en un objeto de función unaria.
+*Func* el objeto de función binaria a convertirse en un objeto de función unaria.
 
-`left` El valor al que el primer argumento del objeto de función binaria es enlazar.
+*izquierdo* el valor al que se enlaza el primer argumento del objeto de función binaria.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El objeto de función unaria que es el resultado de enlazar el primer argumento de objeto de función binaria en el valor `left`.
+El objeto de función unaria resultante de enlazar el primer argumento del objeto de función binaria con el valor *izquierdo*.
 
 ### <a name="remarks"></a>Comentarios
 
 Los enlazadores de función son un tipo de adaptador de función y, ya que devuelven objetos de función, se pueden usar en determinados tipos de composición de funciones para crear expresiones más complicadas y eficaces.
 
-Si `func` es un objeto de tipo `Operation` y `c` es una constante, `bind1st` ( `func`, `c`) es equivalente al constructor de clase [binder1st](../standard-library/binder1st-class.md) `binder1st`< `Operation`> ( `func`, `c`) y es más conveniente.
+Si *func* es un objeto de tipo `Operation` y `c` es una constante, a continuación, `bind1st` ( `func`, `c`) es equivalente a la [binder1st](../standard-library/binder1st-class.md) constructor de clase `binder1st` <  `Operation`> ( `func`, `c`) y es más conveniente.
 
 ### <a name="example"></a>Ejemplo
 
@@ -257,19 +257,19 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`func` El objeto de función binaria se convierta en un objeto de función unaria.
+*Func* el objeto de función binaria a convertirse en un objeto de función unaria.
 
-`right` El valor al que se enlazarán el segundo argumento de objeto de función binaria.
+*derecha* el valor al que se enlaza el segundo argumento del objeto de función binaria.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El objeto de función unaria que es el resultado de enlazar el segundo argumento de objeto de función binaria en el valor `right`.
+El objeto de función unaria resultante de enlazar el segundo argumento del objeto de función binaria con el valor *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
 Los enlazadores de función son un tipo de adaptador de función y, ya que devuelven objetos de función, se pueden usar en determinados tipos de composición de funciones para crear expresiones más complicadas y eficaces.
 
-Si `func` es un objeto de tipo **Operation** y `c` es una constante, `bind2nd` ( `func`, `c` ) es equivalente al constructor de clase [binder2nd](../standard-library/binder2nd-class.md) **binder2nd\<Operation>** ( `func`, `c` ) y más conveniente.
+Si *func* es un objeto de tipo `Operation` y `c` es una constante, a continuación, `bind2nd` ( `func`, `c` ) es equivalente a la [binder2nd](../standard-library/binder2nd-class.md) constructor de clase **binder2nd\<operación >** ( `func`, `c` ) y más conveniente.
 
 ### <a name="example"></a>Ejemplo
 
@@ -362,11 +362,11 @@ struct bit_and<void>
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Cualquier tipo que admita un `operator&` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* cualquier tipo que admita un `operator&` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación AND bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda* el operando izquierdo de la operación AND bit a bit. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación AND bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha* el operando derecho de la operación AND bit a bit. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -398,9 +398,9 @@ struct bit_not<void>
 
 ### <a name="parameters"></a>Parámetros
 
-`Type` Un tipo que admita un unario `operator~`.
+*Tipo* un tipo que admita unario `operator~`.
 
-`Right` El operando de la operación de complemento bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de un argumento de referencia de valor L o valor R del tipo deducido `Type`.
+*Derecha* el operando de la operación de complemento bit a bit. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de un argumento de referencia lvalue o rvalue de tipo inferido directo *tipo*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -434,11 +434,11 @@ struct bit_or<void>
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Cualquier tipo que admita un `operator|` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* cualquier tipo que admita un `operator|` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación OR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda* el operando izquierdo de la operación OR bit a bit. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación OR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha* el operando derecho de la operación OR bit a bit. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -472,11 +472,11 @@ struct bit_xor<void>
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Cualquier tipo que admita un `operator^` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* cualquier tipo que admita un `operator^` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación XOR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda* el operando izquierdo de la operación XOR bit a bit. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación XOR bit a bit. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha* el operando derecho de la operación XOR bit a bit. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -500,9 +500,9 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo del argumento que va a contener.
+*Ty* el tipo de argumento que se encapsulará.
 
-`arg` El argumento que va a contener.
+*arg* el argumento que se encapsulará.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -552,17 +552,17 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="parameters"></a>Parámetros
 
-`Ret` El tipo de valor devuelto de la función encapsulada.
+*RET* el tipo de valor devuelto de la función encapsulada.
 
-`Ty` El tipo del puntero de función miembro.
+*Ty* el tipo del puntero de función miembro.
 
 ### <a name="remarks"></a>Comentarios
 
 La función de plantilla devuelve un contenedor simple de llamadas `cw`, con un tipo de resultado débil, de modo que la expresión `cw(t, a2, ..., aN)` es equivalente a `INVOKE(pm, t, a2, ..., aN)`. No produce ninguna excepción.
 
-El contenedor de llamadas devuelto procede de `std::unary_function<cv Ty*, Ret>` (por tanto, se define el tipo anidado `result_type` como sinónimo de `Ret` y el tipo anidado `argument_type` como sinónimo de `cv Ty*`) solo si el tipo `Ty` es un puntero a una función miembro con el calificador cv `cv` que no toma ningún argumento.
+El contenedor de llamadas devuelto procede de `std::unary_function<cv Ty*, Ret>` (por lo tanto, define el tipo anidado `result_type` como sinónimo de *Ret* y el tipo anidado `argument_type` como sinónimo de `cv Ty*`) solo si el tipo  *Ty* es un puntero a función miembro con el calificador cv `cv` que no toma ningún argumento.
 
-El contenedor de llamadas devuelto procede de `std::binary_function<cv Ty*, T2, Ret>` (por tanto, se define el tipo anidado `result_type` como sinónimo de `Ret`, el tipo anidado `first argument_type` como sinónimo de `cv Ty*` y el tipo anidado `second argument_type` como sinónimo de `T2`) solo si el tipo `Ty` es un puntero a una función miembro con el calificador cv `cv` que no toma ningún argumento, de tipo `T2`.
+El contenedor de llamadas devuelto procede de `std::binary_function<cv Ty*, T2, Ret>` (por lo tanto, define el tipo anidado `result_type` como sinónimo de *Ret*, el tipo anidado `first argument_type` como sinónimo de `cv Ty*`y el tipo anidado `second argument_type`como sinónimo de `T2`) solo si el tipo *Ty* es un puntero a función miembro con el calificador cv `cv` que toma un argumento, de tipo `T2`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -623,7 +623,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 
 ### <a name="parameters"></a>Parámetros
 
-`pmem` Un puntero a la función miembro de clase **tipo** se convierta en un objeto de función.
+*pMem* un puntero a la función miembro de clase `Type` va a convertir en un objeto de función.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -709,11 +709,11 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) cons
 
 ### <a name="parameters"></a>Parámetros
 
-`pmem` Un puntero a la función miembro de clase `Type` se convierta en un objeto de función.
+*pMem* un puntero a la función miembro de clase `Type` va a convertir en un objeto de función.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un objeto de función `const` o `non_const` de tipo `mem_fun_ref_t` o `mem_fun1_ref_t`.
+Un **const** o `non_const` objeto de función de tipo `mem_fun_ref_t` o `mem_fun1_ref_t`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -804,7 +804,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>Parámetros
 
-`pred` El predicado unario que se va a negar.
+*pred* predicado unario que se va a negar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -875,7 +875,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Parámetros
 
-`func` El predicado binario que se va a negar.
+*Func* el predicado binario que se va a negar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -953,7 +953,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="parameters"></a>Parámetros
 
-`pfunc` El puntero de función unaria o binaria se convierta en una función adaptable.
+*pfunc* el puntero de función unaria o binaria se convierta en una función adaptable.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1072,11 +1072,11 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 
 ### <a name="parameters"></a>Parámetros
 
-`Fty` Tipo controlado por los objetos de función.
+*Fty* tipo controlado por los objetos de función.
 
-`f1` El primer objeto de función.
+*F1* el primer objeto de función.
 
-`f2` El segundo objeto de función.
+*F2* el segundo objeto de función.
 
 ### <a name="remarks"></a>Comentarios
 

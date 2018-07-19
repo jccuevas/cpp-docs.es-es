@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc71c01d7527655771e3529311dc32fb4edbc525
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec80db9282bc51106c6beedd42dd05a1ba636c74
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846836"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958024"
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution (Clase)
 
@@ -81,13 +81,13 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType* predeterminado es el tipo de resultado de punto flotante, `double`. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType* el tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 *URNG* El motor de generador de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que produce valores de un tipo de punto flotante especificado por el usuario o de tipo `double` si no se proporciona ninguno, distribuido según la distribución de valor extremo. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que produce valores de la especificada por el usuario de punto flotante tipo o tipo **doble** si se proporciona ninguno, distribuido según la distribución de valor extremo. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -204,7 +204,7 @@ explicit extreme_value_distribution(const param_type& parm);
 
 *b_value* el `b` parámetro de distribución.
 
-*parm* el `param_type` estructura utilizada para construir la distribución.
+*parm* el `param_type` estructura usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -236,7 +236,7 @@ struct param_type {
 
 *b_value* el `b` parámetro de distribución.
 
-*derecho* la `param_type` objeto que se va a comparar con esta.
+*derecha* el `param_type` objeto que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
 

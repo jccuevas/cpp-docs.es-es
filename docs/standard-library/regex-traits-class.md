@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d6eb69787d20343e8ed289311dba02a55e85592
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451568"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960936"
 ---
 # <a name="regextraits-class"></a>regex_traits (Clase)
 
@@ -92,11 +92,11 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-`Elem` El tipo de elemento de carácter para describir.
+*Elem* el tipo de elemento de carácter para describir.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe varios rasgos de expresión regular de tipo `Elem`. La clase de plantilla [basic_regex Class](../standard-library/basic-regex-class.md) usa esta información para manipular los elementos de tipo `Elem`.
+La clase de plantilla describe varios rasgos de expresión regular de tipo *Elem*. La clase de plantilla [basic_regex (clase)](../standard-library/basic-regex-class.md) usa esta información para manipular los elementos de tipo *Elem*.
 
 Cada objeto `regex_traits` contiene un objeto de tipo `regex_traits::locale` que usan algunas de sus funciones miembro. La configuración regional predeterminada es una copia de `regex_traits::locale()`. La función miembro `imbue` reemplaza el objeto de configuración regional, y la función miembro `getloc` devuelve una copia del objeto de configuración regional.
 
@@ -365,11 +365,11 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parámetros
 
-`loc` Objeto de configuración regional que se va a almacenar.
+*loc* para almacenar el objeto de configuración regional.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro copia `loc` al objeto `locale` almacenado y devuelve una copia del valor anterior del objeto `locale` almacenado.
+La función miembro copia *loc* a almacenado `locale` objeto y devuelve una copia del valor anterior de almacenado `locale` objeto.
 
 ### <a name="example"></a>Ejemplo
 
@@ -452,13 +452,13 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`ch` El elemento que se va a probar.
+*CH* el elemento que se va a probar.
 
-`cls` Las clases que va a comprobar.
+*CLS* las clases que se va a comprobar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve true solo si el carácter `ch` está en la clase de caracteres designada por `cls`.
+La función miembro devuelve true solo si el carácter *ch* está en la clase de caracteres designada por *cls*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -541,7 +541,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parámetros
 
-`str`
+*str*
 
 La secuencia terminada en null.
 
@@ -714,9 +714,9 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Principio de la secuencia que se buscará.
+*primera* a partir de secuencia que se va a buscar.
 
-`last` Final de la secuencia que se buscará.
+*último* final de secuencia para buscar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -808,9 +808,9 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Principio de la secuencia que se buscará.
+*primera* a partir de secuencia que se va a buscar.
 
-`last` Final de la secuencia que se buscará.
+*último* final de secuencia para buscar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1149,9 +1149,9 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Principio de la secuencia para transformar.
+*primera* a partir de secuencia que se va a transformar.
 
-`last` Final de secuencia para transformar.
+*último* final de secuencia para transformar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1239,9 +1239,9 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Principio de la secuencia para transformar.
+*primera* a partir de secuencia que se va a transformar.
 
-`last` Final de secuencia para transformar.
+*último* final de secuencia para transformar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1328,7 +1328,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`ch` El elemento que se va a convertir.
+*CH* el elemento que se va a convertir.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1415,7 +1415,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`ch` El elemento que se va a convertir.
+*CH* el elemento que se va a convertir.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1502,13 +1502,13 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`ch` El elemento que se va a convertir.
+*CH* el elemento que se va a convertir.
 
-`radix` Las operaciones aritméticas base a utilizar.
+*radix* las operaciones aritméticas base a utilizar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve el valor representado por el carácter `ch` de `radix`base o -1 si `ch` no es un dígito válido en `radix`base. La función solo se llamará con un argumento `radix` de 8, 10 o 16.
+La función miembro devuelve el valor representado por el carácter *ch* en la base de *base*, o -1 si *ch* no es un dígito válido en la base de *base*. La función solo se llamará con un *base* argumento de 8, 10 o 16.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1591,5 +1591,5 @@ hex C == 12
 [Operadores de \<regex>](../standard-library/regex-operators.md)<br/>
 [regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md)<br/>
 [Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)<br/>
-[regex_traits\<char > (clase)](../standard-library/regex-traits-char-class.md)<br/>
+[regex_traits\<char > clase](../standard-library/regex-traits-char-class.md)<br/>
 [regex_traits\<wchar_t> (Clase)](../standard-library/regex-traits-wchar-t-class.md)<br/>

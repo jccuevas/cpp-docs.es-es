@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7249aad5e130e805aae73bdbfba7f9c4f78ad4fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853988"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958271"
 ---
 # <a name="tuplesize-class"></a>tuple_size (Clase);
 
@@ -66,23 +66,29 @@ template <class Tuple>
 
 ### <a name="parameters"></a>Parámetros
 
-*Tupla* el tipo de la tupla.
+*Tuple*  
+El tipo de tupla.
 
-*Elem* el tipo de los elementos de matriz.
+*Elem*  
+El tipo de los elementos de la matriz.
 
-*Tamaño* el tamaño de la matriz.
+*Size*  
+Se refiere al tamaño de la matriz.
 
-*T1* el tipo del primer miembro del par.
+*T1*  
+El tipo del primer miembro del par.
 
-*T2* el tipo del segundo miembro del par.
+*T2*  
+El tipo del segundo miembro del par.
 
-*Tipos de* los tipos de los elementos de tupla.
+*Tipos*  
+Los tipos de los elementos de tupla.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla tiene un miembro `value` que es una expresión constante entera cuyo valor es la extensión del tipo de tupla `Tuple`.
+La clase de plantilla tiene un miembro `value` que es una expresión constante entera cuyo valor es la extensión del tipo de tupla *tupla*.
 
-La especialización de plantilla para matrices tiene un miembro `value` que es una expresión constante entera cuyo valor es `Size`, que es el tamaño de la matriz.
+La especialización de plantilla para matrices tiene un miembro `value` que es una expresión constante entera cuyo valor es *tamaño*, que es el tamaño de la matriz.
 
 La especialización de plantilla para pares tiene un miembro `value` que es una expresión constante entera cuyo valor es 2.
 
@@ -116,7 +122,7 @@ int main()
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<tupla > **encabezado:** \<matriz > (para la especialización de matriz) **encabezado:** \<utilidad > (para la especialización de par)
+**Encabezado:** \<tupla > **encabezado:** \<array > (para la especialización de matrices) **encabezado:** \<utilidad > (para la especialización de pares)
 
 **Espacio de nombres:** std
 
