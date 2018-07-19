@@ -1,5 +1,5 @@
 ---
-title: Funciones de mapa de bits grises o interpoladas | Documentos de Microsoft
+title: Funciones de mapa de bits grises o interpoladas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de887cdbe80642925bc935eb48726a59850f6f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46a1607b0d69be21e38cace117ec2c0e248827be
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339402"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>funciones de mapa de bits grises o interpoladas
 **Funciones de mapa de bits grises**  
@@ -62,7 +62,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Apunta al controlador de dominio de destino.  
   
  *x*  
@@ -71,10 +71,10 @@ void AFXAPI AfxDrawGrayBitmap(
  *y*  
  Coordenada Y de destino.  
   
- `rSrc`  
+ *rSrc*  
  Mapa de bits de origen.  
   
- `crBackground`  
+ *crBackground*  
  Nuevo color de fondo (normalmente gris, como COLOR_MENU).  
   
 ### <a name="remarks"></a>Comentarios  
@@ -99,13 +99,13 @@ void AFXAPI AfxGetGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rSrc`  
+ *rSrc*  
  Mapa de bits de origen.  
   
- `pDest`  
+ *pDest*  
  Mapa de bits de destino.  
   
- `crBackground`  
+ *crBackground*  
  Nuevo color de fondo (normalmente gris, como COLOR_MENU).  
   
 ### <a name="remarks"></a>Comentarios  
@@ -133,7 +133,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Apunta al controlador de dominio de destino.  
   
  *x*  
@@ -142,17 +142,17 @@ void AFXAPI AfxDrawDitheredBitmap(
  *y*  
  Coordenada Y de destino.  
   
- `rSrc`  
+ *rSrc*  
  Mapa de bits de origen.  
   
- `cr1`  
+ *cr1*  
  Uno de los colores de interpolación de dos, por lo general en blanco.  
   
- `cr2`  
- Lo otro interpolación color gris claro normalmente (COLOR_MENU).  
+ *cr2*  
+ El otro interpolación color, color gris claro normalmente (COLOR_MENU).  
   
 ### <a name="remarks"></a>Comentarios  
- El mapa de bits de origen se dibuja en el controlador de dominio de destino con dos colores ( `cr1` y `cr2`) trama a cuadros Reemplazar el fondo del mapa de bits. El fondo del mapa de bits de origen se define como sus píxeles blancos y todos los píxeles que coinciden con el color del píxel de la esquina superior izquierda del mapa de bits.  
+ El mapa de bits de origen se dibuja en el controlador de dominio de destino con dos colores (*cr1* y *cr2*) reemplazando el fondo del mapa de bits de trama a cuadros. El fondo del mapa de bits de origen se define como todos los píxeles que coinciden con el color del píxel en la esquina superior izquierda del mapa de bits y de sus píxeles en blanco.  
   
  ![Comparación de versiones de icono interpoladas y originales](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
@@ -175,20 +175,20 @@ void AFXAPI AfxGetDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rSrc`  
+ *rSrc*  
  Mapa de bits de origen.  
   
- `pDest`  
+ *pDest*  
  Mapa de bits de destino.  
   
- `cr1`  
+ *cr1*  
  Uno de los colores de interpolación de dos, por lo general en blanco.  
   
- `cr2`  
- Lo otro interpolación color gris claro normalmente (COLOR_MENU).  
+ *cr2*  
+ El otro interpolación color, color gris claro normalmente (COLOR_MENU).  
   
 ### <a name="remarks"></a>Comentarios  
- El mapa de bits de origen se copia en el mapa de bits de destino con dos colores ( `cr1` y `cr2`) trama a cuadros Reemplazar el fondo de la fuente de mapa de bits. El fondo del mapa de bits de origen se define como sus píxeles blancos y todos los píxeles que coinciden con el color del píxel de la esquina superior izquierda del mapa de bits.  
+ El mapa de bits de origen se copia en el mapa de bits de destino con dos colores (*cr1* y *cr2*) a cuadros patrón de reemplazo de fondo del mapa de bits del origen. El fondo del mapa de bits de origen se define como todos los píxeles que coinciden con el color del píxel en la esquina superior izquierda del mapa de bits y de sus píxeles en blanco.  
   
  ![Comparación de versiones de icono interpoladas y originales](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   

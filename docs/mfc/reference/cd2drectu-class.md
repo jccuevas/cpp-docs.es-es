@@ -1,5 +1,5 @@
 ---
-title: Clase CD2DRectU | Documentos de Microsoft
+title: Clase CD2DRectU | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5faf4bb8f2ff416d90311d678543c48d212acdd
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6e054c23d2137f5802c17731fac86dd64080389e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336479"
 ---
 # <a name="cd2drectu-class"></a>Clase CD2DRectU
 Contenedor para `D2D1_RECT_U`.  
@@ -48,7 +48,7 @@ class CD2DRectU : public D2D1_RECT_U;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|Devuelve un **booleano** valor que indica si una expresión no contiene datos válidos ( **null**).|  
+|[CD2DRectU::IsNull](#isnull)|Devuelve un **booleano** valor que indica si una expresión no contiene datos válidos (NULL).|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -104,10 +104,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- TRUE si la parte superior del rectángulo, izquierda, inferior y derecho valores son iguales a 0; en caso contrario, FALSE.  
+ TRUE si son iguales a 0; superior, izquierdo, inferior y valores correctos del rectángulo en caso contrario, FALSE.  
   
 ##  <a name="operator_crect"></a>  CRect CD2DRectU::operator  
- Convierte CD2DRectU al objeto CRect.  
+ Convierte CD2DRectU objeto CRect.  
   
 ```  
 operator CRect();

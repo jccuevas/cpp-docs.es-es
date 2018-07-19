@@ -1,5 +1,5 @@
 ---
-title: ABC (estructura) | Documentos de Microsoft
+title: ABC (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b5f67247b556b37cdf934f94c30947675533e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c9aac181edb12df8904a2bc6d891d59c0067ecc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339324"
 ---
 # <a name="abc-structure"></a>ABC (Estructura)
-El **ABC** estructura contiene el ancho de un carácter en una fuente TrueType.  
+El `ABC` estructura contiene el ancho de un carácter en una fuente TrueType.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,16 +38,16 @@ typedef struct _ABC { /* abc */
   
 #### <a name="parameters"></a>Parámetros  
  *abcA*  
- Especifica el espaciado A del carácter. El espaciado A es la distancia a agregar a la posición actual antes de dibujar el glifo de caracteres.  
+ Especifica el espaciado entre un carácter. El espaciado A es la distancia a agregar a la posición actual antes de dibujar el glifo de caracteres.  
   
  *abcB*  
- Especifica el espaciado B del carácter. El espaciado de B es el ancho de la parte del glifo carácter dibujado.  
+ Especifica el espaciado de B del carácter. El espaciado de B es el ancho de la parte dibujar del glifo de caracteres.  
   
  *abcC*  
- Especifica el espaciado de C del carácter. El espaciado de C es la distancia a agregar a la posición actual para proporcionar el espacio en blanco a la derecha del glifo caracteres.  
+ Especifica el espaciado de C del carácter. El espaciado de C es la distancia a agregar a la posición actual para proporcionar a la derecha del glifo de caracteres de espacio en blanco.  
   
 ## <a name="remarks"></a>Comentarios  
- El ancho total de un carácter es la suma de los espacios de A, B y C. El A o el espacio de C puede ser negativo para indicar underhangs o partes sobresalientes.  
+ El ancho total de un carácter es la suma de los espacios A, B y C. La A o el espacio de C puede ser negativo para indicar underhangs o partes sobresalientes.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** wingdi.h  

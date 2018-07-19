@@ -1,5 +1,5 @@
 ---
-title: Clase CDockSite | Documentos de Microsoft
+title: Clase CDockSite | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4a47efc1018f42cbd9f421f1d53566aa134addd6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336844"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -164,7 +164,7 @@ class CDockSite: public CBasePane
 ## <a name="remarks"></a>Comentarios  
  El marco de trabajo crea `CDockSite` objetos automáticamente cuando se llama a [cframewndex:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Las ventanas del sitio de vinculación están colocadas en el borde del área de cliente de la ventana de marco principal.  
   
- Normalmente no es necesario llamar a los servicios proporcionados por el sitio de vinculación porque [CFrameWndEx clase](../../mfc/reference/cframewndex-class.md) controla estos servicios.  
+ Normalmente no es necesario llamar a los servicios proporcionados por el sitio de vinculación porque [CFrameWndEx (clase)](../../mfc/reference/cframewndex-class.md) controla estos servicios.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo crear un objeto de la clase `CDockSite`.  
@@ -317,7 +317,7 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
  [in] *dockMethod*  
  [in] *lpRect*  
   
@@ -334,13 +334,13 @@ virtual BOOL DockPaneLeftOf(
   
 ### <a name="parameters"></a>Parámetros  
  [in] [out] *pBarToDock*  
- Un puntero al panel quede acoplado a la izquierda del *pTargetBar*.  
+ Un puntero al panel para acoplar a la izquierda del *pTargetBar*.  
   
  [in] [out] *pTargetBar*  
  Un puntero al panel de destino.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel está acoplado correctamente; en caso contrario, `FALSE`.  
+ TRUE si el panel está acoplado correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -364,10 +364,10 @@ CPane* FindPaneByID(UINT nID);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *nID*  
- El identificador de comando del panel se encuentre.  
+ El identificador de comando del panel que se encuentra.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al panel con el identificador de comando especificado, o `NULL` si no se encuentra el panel.  
+ Un puntero en el panel con el identificador de comando especificado, o NULL si no se encuentra el panel.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -424,7 +424,7 @@ const CObList& GetPaneList() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una referencia de sólo lectura a la lista de paneles acoplados actualmente en la barra de acoplamiento.  
+ Una referencia de solo lectura a la lista de paneles actualmente está acoplada en la barra de acoplamiento.  
   
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
@@ -501,7 +501,7 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
  [in] *nFlags*  
  [in] *ptOffset*  
   
@@ -566,7 +566,7 @@ virtual void OnSizeParent(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *rectAvailable*  
- [in] *nSide*  
+ [in] *entro*  
  [in] *bExpand*  
  [in] *nOffset*  
   
@@ -615,10 +615,10 @@ virtual CPane* PaneFromPoint(CPoint pt);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pt*  
- Un punto, en coordenadas de pantalla para el panel recuperar.  
+ Un punto en coordenadas de pantalla del panel recuperar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al panel situado en el punto especificado o `NULL` si ningún panel estaba presente en el punto especificado.  
+ Un puntero al panel ubicado en el punto especificado o NULL si ningún panel estaba presente en el punto especificado.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -649,7 +649,7 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
  [in] *dockMethod*  
   
 ### <a name="remarks"></a>Comentarios  
@@ -745,19 +745,19 @@ virtual BOOL ShowPane(
  Un puntero al panel para mostrar u ocultar.  
   
  [in] *bMostrar*  
- `TRUE` para especificar que el panel se mostrará; `FALSE` para especificar que se oculta el panel.  
+ TRUE para especificar que es el panel que se mostrarán; FALSE para especificar que el panel está a punto de ocultarse.  
   
  [in] *bDelay*  
- `TRUE` para especificar que el diseño del panel debe retrasarse hasta después de que se muestra el panel; en caso contrario, `FALSE`.  
+ TRUE para especificar que el diseño del panel debe retrasarse hasta después de que se muestre el panel; en caso contrario, FALSE.  
   
  [in] *bActivate*  
  Este parámetro no se utiliza.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el panel se mostrarse u ocultarse correctamente. `FALSE` Si el panel especificado no pertenece a este sitio de vinculación.  
+ TRUE si el panel se mostrarse u ocultarse correctamente. FALSE si el panel especificado no pertenece a este sitio de vinculación.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para mostrar u ocultar paneles acoplados. Normalmente, no es necesario llamar a `CDockSite::ShowPane` directamente, porque se llama por la ventana de marco primaria o el panel de base.  
+ Llame a este método para mostrar u ocultar paneles acoplados. Normalmente, no es necesario llamar a `CDockSite::ShowPane` directamente, porque se llama mediante la ventana de marco principal o el panel de base.  
   
 ##  <a name="showrow"></a>  CDockSite::ShowRow  
 

@@ -1,5 +1,5 @@
 ---
-title: Estructura de mapa de bits | Documentos de Microsoft
+title: Estructura de mapa de bits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339352"
 ---
 # <a name="bitmap-structure"></a>BITMAP (Estructura)
-El **mapa de bits** estructura define el alto, ancho, formato de color y valores de bit de un mapa de bits lógico **.**  
+El **mapa de bits** estructura define el alto, ancho, formato de color y los valores de bit de un mapa de bits lógico **.**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Especifica el alto del mapa de bits en líneas de trama. El alto debe ser mayor que 0.  
   
  *bmWidthBytes*  
- Especifica el número de bytes de cada línea de la trama. Este valor debe ser un número par, ya que la Interfaz de dispositivo gráfico (GDI) supone que los valores de bit de un formulario de mapa de bits componen una matriz de valores enteros (2 bytes). En otras palabras, *bmWidthBytes* \* 8 debe ser el múltiplo siguiente de 16 mayor o igual que el valor obtenido cuando el *Bmbitspixel* miembro se multiplica por el *Bmwidth*  miembro.  
+ Especifica el número de bytes de cada línea de la trama. Este valor debe ser un número par, ya que la Interfaz de dispositivo gráfico (GDI) supone que los valores de bit de un formulario de mapa de bits componen una matriz de valores enteros (2 bytes). En otras palabras, *bmWidthBytes* \* 8 debe ser el siguiente múltiplo de 16 mayor o igual que el valor obtenido cuando el *Bmbitspixel* miembro se multiplica por el *Bmwidth*  miembro.  
   
  *bmPlanes*  
  Especifica el número de planos de color del mapa de bits.  
@@ -65,7 +65,7 @@ typedef struct tagBITMAP {  /* bm */
 ## <a name="remarks"></a>Comentarios  
  Los formatos de mapa de bits actualmente utilizados son monocromáticos y en color. El mapa de bits monocromático utiliza el formato de un 1 bit y 1 plano. Cada barrido es un múltiplo de 16 bits.  
   
- Exámenes se organizan del siguiente modo para un mapa de bits monocromático de alto *n*:  
+ Exámenes se organizan como se indica a continuación para un mapa de bits monocromático de alto *n*:  
   
  `Scan 0`  
   
@@ -83,9 +83,9 @@ typedef struct tagBITMAP {  /* bm */
   
  Los píxeles de un dispositivo monocromático son blanco o negro. Si el bit correspondiente en el mapa de bits es 1, se activa el píxel (blanco). Si el bit correspondiente en el mapa de bits es 0, se desactiva el píxel (negro).  
   
- Todos los dispositivos admiten los mapas de bits que tienen la **RC_BITBLT** bit establecido en el **RASTERCAPS** índice de la [CDC:: GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) función miembro.  
+ Todos los dispositivos admiten los mapas de bits que se ha establecido RC_BITBLT bit del índice RASTERCAPS de la [CDC:: GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) función miembro.  
   
- Cada dispositivo tiene su propio formato de color único. Para transferir un mapa de bits de un dispositivo a otro, utilice el [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) y [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funciones de Windows.  
+ Cada dispositivo tiene su propio formato de color único. Con el fin de transferir un mapa de bits de un dispositivo a otro, utilice el [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) y [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funciones de Windows.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** wingdi.h  
