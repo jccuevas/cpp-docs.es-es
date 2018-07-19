@@ -1,7 +1,7 @@
 ---
-title: Error del compilador C3646 | Documentos de Microsoft
+title: Error del compilador C3646 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/14/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,27 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ad0a7f16b54d2a06586bdb4c26c87dbcf9ae7b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c038520c1a35fa5264e1e98b074687efb336d028
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "35658616"
 ---
 # <a name="compiler-error-c3646"></a>Error del compilador C3646
-'especificador': especificador de reemplazo desconocido  
-  
- El compilador encontró un token en la posición donde esperaba encontrar un especificador de reemplazo, pero no se reconoció el token por el compilador.  
-  
- Para obtener más información, consulte [especificadores de reemplazo](../../windows/override-specifiers-cpp-component-extensions.md).  
-  
- El ejemplo siguiente genera C3646:  
-  
-```  
-// C3646.cpp  
-// compile with: /clr /c  
-ref class C {  
-   void f() unknown;   // C3646  
-   // try the following line instead  
-   // virtual void f() abstract;  
-};  
+
+> 'especificador': especificador de invalidación desconocido
+
+## <a name="remarks"></a>Comentarios
+
+El compilador encontró un token en la posición donde esperaba encontrar un especificador de invalidación, pero el compilador no reconoció el token.
+
+Por ejemplo, si la no reconocido *especificador* es **_NOEXCEPT**, reemplácelo por la palabra clave **noexcept**.
+
+Para obtener más información, consulte [especificadores de invalidación](../../windows/override-specifiers-cpp-component-extensions.md).
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente genera C3646 y muestra cómo corregirlo:
+
+```cpp
+// C3646.cpp
+// compile with: /clr /c
+ref class C {
+   void f() unknown;   // C3646
+   // try the following line instead
+   // virtual void f() abstract;
+};
 ```
