@@ -1,7 +1,7 @@
 ---
 title: Comentarios en C | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a6c2d32596aa8205d02ee5cddb28b5ba3c8166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c2eccff8ab582270f766fdbcb448fdb91145e348
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384351"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121749"
 ---
 # <a name="c-comments"></a>Comentarios en C
 Un “comentario” es una secuencia de caracteres que comienza con una combinación de barra diagonal/asterisco (<b>/\*</b>) que el compilador trata como un único carácter de espacio en blanco y se pasa por alto de cualquier otra manera. Un comentario puede incluir cualquier combinación de caracteres del juego de caracteres representable, incluidos los caracteres de nueva línea, salvo el delimitador de "final de comentario" (<b>\*/</b>). Los comentarios pueden ocupar más de una línea, pero no se pueden anidar.  
@@ -70,13 +70,13 @@ printf( "Hello\n" );  /* Comments can go here */
   
  **Específicos de Microsoft**  
   
- El compilador de Microsoft también admite los comentarios de una línea precedidos por dos barras diagonales (**//**). Si compila con /Za (estándar ANSI), estos comentarios generan errores. Estos comentarios no pueden extenderse a una segunda línea.  
+ El compilador de Microsoft también admite los comentarios de una línea precedidos por dos barras diagonales (__//__). Si compila con /Za (estándar ANSI), estos comentarios generan errores. Estos comentarios no pueden extenderse a una segunda línea.  
   
 ```  
 // This is a valid comment  
 ```  
   
- Los comentarios que comienzan con dos barras diagonales (**//**) se finalizan con el siguiente carácter de nueva línea que no vaya precedido por un carácter de escape. En el ejemplo siguiente, el carácter de nueva línea va precedido de una barra diagonal inversa (**\\**), por lo que crea una "secuencia de escape". Esta secuencia de escape hace que el compilador trate la línea siguiente como parte de la línea anterior. (Para obtener más información, vea [Secuencias de escape](../c-language/escape-sequences.md)).  
+ Los comentarios que comienzan con dos barras diagonales (__//__) se finalizan con el siguiente carácter de nueva línea que no vaya precedido por un carácter de escape. En el ejemplo siguiente, el carácter de nueva línea va precedido de una barra diagonal inversa (**\\**), por lo que crea una "secuencia de escape". Esta secuencia de escape hace que el compilador trate la línea siguiente como parte de la línea anterior. (Para obtener más información, vea [Secuencias de escape](../c-language/escape-sequences.md)).  
   
 ```  
 // my comment \  
