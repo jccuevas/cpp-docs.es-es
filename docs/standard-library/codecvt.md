@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d4e07c4869bd345e77f0af4f30f694773aed114
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 973f183980e89ac0be268e5cbbec42de83a378f4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845146"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965820"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-Define varias clases de plantilla que describen objetos en función de la clase de plantilla [codecvt](../standard-library/codecvt-class.md). Los objetos pueden actuar como [facetas de configuración regional](../standard-library/locale-class.md#facet_class) que controlan las conversiones entre una secuencia de valores de tipo `Elem` y una secuencia de valores de tipo `char`.
+Define varias clases de plantilla que describen objetos en función de la clase de plantilla [codecvt](../standard-library/codecvt-class.md). Estos objetos pueden actuar como [facetas de configuración regional](../standard-library/locale-class.md#facet_class) que controlan las conversiones entre una secuencia de valores de tipo `Elem` y una secuencia de valores de tipo **char**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,7 +45,7 @@ Las facetas de configuración regional declaradas en este encabezado convierten 
 
 - UCS-16 es la codificación Unicode dentro del programa como uno o dos enteros de 16 bits. (Tenga en cuenta que esto no cumple todos los requisitos de una codificación de caracteres anchos válida para el estándar de C o C++; no obstante, se usa ampliamente como tal).
 
-Para los flujos de bytes (almacenados en un archivo, transmitidos como una secuencia de bytes o almacenados en el programa en una matriz de `char`):
+Para las secuencias de bytes (almacenados en un archivo, transmitidos como una secuencia de bytes o almacenados en el programa en una matriz de **char**):
 
 - UTF-8 es la codificación Unicode en un flujo de bytes como uno o varios bytes de ocho bits con un orden de bytes deterministas.
 

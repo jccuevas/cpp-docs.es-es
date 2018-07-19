@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740ebe26dd36dd89786806c3960e6184b117daeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860260"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964787"
 ---
 # <a name="submatch-class"></a>sub_match (Clase)
 
@@ -65,7 +65,8 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-`BidIt` El tipo de iterador para subcoincidencias.
+*BidIt*  
+ El tipo de iterador para subcoincidencias.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -97,11 +98,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Subcoincidencia con el que comparar.
+*right*  
+ Subcoincidencia con la que se va comparar.
 
-`str` La cadena que se compara.
+*str*  
+ Cadena con la que se va a comparar.
 
-`ptr` La secuencia terminada en null que se compara.
+*ptr*  
+ La secuencia terminada en un valor nulo con la que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -373,7 +377,7 @@ bool matched;
 
 ### <a name="remarks"></a>Comentarios
 
-El miembro contiene `true` solo si el grupo de capturas asociado a `*this` formaba parte de la coincidencia de expresión regular.
+El miembro contiene **true** sólo si el grupo de capturas asociado `*this` formaba parte de la coincidencia de expresión regular.
 
 ### <a name="example"></a>Ejemplo
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eaae998f1ca975e8eb4d102c8f7793ac8ab3b34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413223636efb735303ec600b09803472370ff306
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965596"
 ---
 # <a name="isobject-class"></a>is_object (Clase)
 
@@ -37,11 +37,11 @@ struct is_object;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es false si el tipo `Ty` es un tipo de referencia, un tipo de función o un elemento nulo, o bien un formulario `cv-qualified` de uno de ellos. En caso contrario, es true.
+Una instancia del predicado de tipo contiene false si el tipo *Ty* es un tipo de referencia, un tipo de función o void, o un `cv-qualified` formada por uno de ellos; en caso contrario se cumple.
 
 ## <a name="example"></a>Ejemplo
 

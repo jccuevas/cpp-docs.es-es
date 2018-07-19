@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea70adff4f162c432fea96c25e37ecca917d96d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba8ef2a2044c55da258c4dbcde6690112d52f1a9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862947"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963607"
 ---
 # <a name="vector-class"></a>vector (Clase)
 
@@ -116,9 +116,11 @@ class vector
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo* tipo de los datos del elemento que se almacenará en el vector
+*Type*  
+ Tipo de datos de elementos que se almacenará en el vector.
 
-`Allocator` El tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre el vector de la asignación y desasignación de memoria. Este argumento es opcional y el valor predeterminado es **asignador***\<tipo>.*
+*Asignador*  
+ Tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria del vector. Este argumento es opcional y el valor predeterminado es **asignador***\<tipo>.*
 
 ## <a name="remarks"></a>Comentarios
 
@@ -143,10 +145,10 @@ La [clase de referencia vector\<bool>](../standard-library/vector-bool-class.md#
 |Nombre de tipo|Descripción|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo que representa la clase `allocator` para el objeto vector.|
-|[const_iterator](#const_iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede leer un elemento `const` en un vector.|
-|[const_pointer](#const_pointer)|Tipo que proporciona un puntero a un elemento `const` en un vector.|
-|[const_reference](#const_reference)|Tipo que proporciona una referencia a un elemento `const` almacenado en un vector para leer y realizar operaciones `const`.|
-|[const_reverse_iterator](#const_reverse_iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede leer cualquier elemento `const` en el vector.|
+|[const_iterator](#const_iterator)|Un tipo que proporciona un iterador de acceso aleatorio que puede leer un elemento **const** en un vector.|
+|[const_pointer](#const_pointer)|Un tipo que proporciona un puntero a un elemento **const** en un vector.|
+|[const_reference](#const_reference)|Un tipo que proporciona una referencia a un elemento **const** almacenado en un vector para leer operaciones **const** y realizarlas.|
+|[const_reverse_iterator](#const_reverse_iterator)|Un tipo que proporciona un iterador de acceso aleatorio que puede leer cualquier elemento **const** en el vector.|
 |[difference_type](#difference_type)|Tipo que proporciona la diferencia entre las direcciones de dos elementos en un vector.|
 |[iterator](#iterator)|Tipo que proporciona un iterador de acceso aleatorio que puede leer o modificar cualquier elemento de un vector.|
 |[pointer](#pointer)|Tipo que proporciona un puntero a un elemento en un vector.|
@@ -212,7 +214,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Comentarios
 
-`allocator_type` es un sinónimo del parámetro de plantilla **Allocator**.
+`allocator_type` es un sinónimo del parámetro de plantilla `Allocator`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -232,15 +234,20 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parámetros
 
-`First` Posición del primer elemento del intervalo de elementos que se copian.
+*Primero*  
+ Posición del primer elemento en el intervalo de elementos que se va a copiar.
 
-`Last` Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
+*Último*  
+ Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
 
-`Count` El número de copias de un elemento que se va a insertar en el vector.
+*Recuento*  
+ Número de copias de un elemento que se va a insertar en el vector.
 
-`Val` El valor del elemento que se va a insertar en el vector.
+*Val*  
+ Valor del elemento que se va a insertar en el vector.
 
-`IList` Initializer_list que contiene los elementos que se va a insertar.
+*IList*  
+ initializer_list que contiene los elementos que se van a insertar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -306,15 +313,16 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pos` El número de subíndice o la posición del elemento que se va a hacer referencia en el vector.
+*_Pos*  
+ Subíndice o número de posición del elemento al que se va a hacer referencia en el vector.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Referencia al elemento indicado en el argumento. Si `_Off` es mayor que el tamaño del vector, **at** inicia una excepción.
+Referencia al elemento indicado en el argumento. Si `_Off` es mayor que el tamaño del vector, `at` produce una excepción.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de **at** se asigna a una `const_reference`, el objeto de vector no se puede modificar. Si el valor devuelto de **at** se asigna a una **referencia**, el objeto de vector puede modificarse.
+Si el valor devuelto de `at` se asigna a `const_reference`, el objeto vector no se puede modificar. Si el valor devuelto de `at` se asigna a `reference`, el objeto de vector se puede modificar.
 
 ### <a name="example"></a>Ejemplo
 
@@ -360,7 +368,7 @@ const_reference back() const;
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de **back** se asigna a una `const_reference`, el objeto de vector no se puede modificar. Si el valor devuelto de **back** se asigna a una **referencia**, el objeto de vector puede modificarse.
+Si el valor devuelto de `back` se asigna a `const_reference`, el objeto vector no se puede modificar. Si el valor devuelto de `back` se asigna a `reference`, el objeto de vector se puede modificar.
 
 Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
 
@@ -498,7 +506,7 @@ The length of storage allocated is now 2.
 
 ## <a name="cbegin"></a>  vector::cbegin
 
-Devuelve un iterador `const` que direcciona el primer elemento del intervalo.
+Devuelve un **const** iterador que direcciona el primer elemento del intervalo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -506,13 +514,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador `const` de acceso aleatorio que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
+Un **const** iterador de acceso aleatorio que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Comentarios
 
 Con el valor devuelto de `cbegin`, los elementos del intervalo no se pueden modificar.
 
-Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `begin()` y `cbegin()`.
+Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `begin()` y `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -524,7 +532,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  vector::cend
 
-Devuelve un iterador `const` que direcciona la ubicación situada más allá del último elemento de un intervalo.
+Devuelve un **const** iterador que direcciona la ubicación situada más allá del último elemento de un intervalo.
 
 ```cpp
 const_iterator cend() const;
@@ -532,13 +540,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador `const` de acceso aleatorio que apunta justo después del final del intervalo.
+Un **const** iterador de acceso aleatorio que apunta justo después del final del intervalo.
 
 ### <a name="remarks"></a>Comentarios
 
 `cend` se usa para probar si un iterador ha sobrepasado el final de su intervalo.
 
-Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `end()` y `cend()`.
+Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `end()` y `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -902,8 +910,8 @@ iterator emplace(
 
 |Parámetro|Descripción|
 |-|-|
-|`_Where`|La posición del [vector](../standard-library/vector-class.md) donde se inserta el primer elemento.|
-|`val`|Valor del elemento insertado en el `vector`.|
+|*_WHERE*|La posición del [vector](../standard-library/vector-class.md) donde se inserta el primer elemento.|
+|*Val*|Valor del elemento insertado en el `vector`.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -968,7 +976,7 @@ void emplace_back(Types&&... _Args);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`_Args`|Argumentos del constructor. La función deduce qué sobrecarga de constructor invocar según los argumentos que se proporcionan.|
+|*_Args*|Argumentos del constructor. La función deduce qué sobrecarga de constructor invocar según los argumentos que se proporcionan.|
 
 ### <a name="example"></a>Ejemplo
 
@@ -1041,7 +1049,7 @@ Iterador más allá del final del vector. Si el vector está vacío, `vector::en
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de **end** se asigna a una variable de tipo `const_iterator`, el objeto de vector no se puede modificar. Si el valor devuelto de **end** se asigna a una variable de tipo **iterator**, el objeto de vector se puede modificar.
+Si el valor devuelto de `end` se asigna a una variable de tipo `const_iterator`, no se puede modificar el objeto de vector. Si el valor devuelto de `end` se asigna a una variable de tipo `iterator`, el objeto de vector puede modificarse.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1086,9 +1094,9 @@ iterator erase(
 
 |Parámetro|Descripción|
 |-|-|
-|`_Where`|Posición del elemento que se quita del vector.|
-|`first`|Posición del primer elemento que se quita del vector.|
-|`last`|Posición inmediatamente siguiente al último elemento que se quita del vector.|
+|*_WHERE*|Posición del elemento que se quita del vector.|
+|*first*|Posición del primer elemento que se quita del vector.|
+|*Último*|Posición inmediatamente siguiente al último elemento que se quita del vector.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1253,11 +1261,11 @@ void insert(
 
 |Parámetro|Descripción|
 |-|-|
-|`_Where`|Posición del vector donde se inserta el primer elemento.|
-|`val`|Valor del elemento que se va a insertar en el vector.|
-|`count`|Número de elementos que se van a insertar en el vector.|
-|`first`|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
-|`last`|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
+|*_WHERE*|Posición del vector donde se inserta el primer elemento.|
+|*Val*|Valor del elemento que se va a insertar en el vector.|
+|*count*|Número de elementos que se van a insertar en el vector.|
+|*first*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1265,7 +1273,7 @@ Las dos primeras funciones `insert` devuelven un iterador que apunta a la posici
 
 ### <a name="remarks"></a>Comentarios
 
-Como condición previa, `first` y `last` no deben ser iteradores en el vector o el comportamiento es indefinido. Las operaciones de inserción pueden ser costosas, vea [vector (Clase)](../standard-library/vector-class.md) para obtener una explicación del rendimiento de `vector`.
+Como condición previa, *primera* y *última* no deben ser iteradores en el vector o el comportamiento es indefinido. Las operaciones de inserción pueden ser costosas, vea [vector (Clase)](../standard-library/vector-class.md) para obtener una explicación del rendimiento de `vector`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1392,7 +1400,7 @@ const_reference operator[](size_type Pos) const;
 
 |Parámetro|Descripción|
 |-|-|
-|`Pos`|Posición del elemento vector.|
+|*punto de venta*|Posición del elemento vector.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1439,11 +1447,11 @@ vector& operator=(vector&& right);
 
 |Parámetro|Descripción|
 |-|-|
-|`right`|El [vector](../standard-library/vector-class.md) que se copia en el `vector`.|
+|*right*|El [vector](../standard-library/vector-class.md) que se copia en el `vector`.|
 
 ### <a name="remarks"></a>Comentarios
 
-Después de borrar todos los elementos existentes en un `vector`, `operator=` copia o mueve el contenido de `right` al `vector`.
+Después de borrar todos los elementos existentes en un `vector`, `operator=` copia o mueve el contenido de *derecho* en el `vector`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1553,7 +1561,7 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>Parámetros
 
-`Val` El valor que se asigna al elemento agregado al final del vector.
+*Val* el valor que se asigna al elemento que se agrega al final del vector.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1717,7 +1725,8 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>Parámetros
 
-`count` La longitud mínima de almacenamiento que se va a asignar para el vector.
+*count*  
+ Longitud mínima de almacenamiento a asignar para el vector.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1758,13 +1767,15 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>Parámetros
 
-`Newsize` El nuevo tamaño del vector.
+*NewSize*  
+ Nuevo tamaño del vector.
 
-`Val` El valor de inicialización de nuevos elementos que se agregan al vector si el nuevo tamaño es mayor que el tamaño original. Si el valor se omite, los nuevos objetos utilizan su constructor predeterminado.
+*Val*  
+ El valor de inicialización de elementos nuevos añadido al vector si el nuevo tamaño es mayor que el tamaño original. Si el valor se omite, los nuevos objetos utilizan su constructor predeterminado.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el tamaño del contenedor es menor que el tamaño solicitado, `Newsize`, se agregan elementos al vector hasta que esta alcanza el tamaño solicitado. Si el tamaño del contenedor es mayor que el tamaño solicitado, se eliminan los elementos más cercanos al final del contenedor hasta que este alcanza el tamaño `Newsize`. Si el tamaño actual del contenedor es igual que el tamaño solicitado, no se lleva a cabo ninguna acción.
+Si el tamaño del contenedor es menor que el tamaño solicitado, *Newsize*, se agregan elementos al vector hasta que alcance el tamaño solicitado. Si el tamaño del contenedor es mayor que el tamaño solicitado, se eliminan los elementos más cercanos al final del contenedor hasta que el contenedor alcanza el tamaño *Newsize*. Si el tamaño actual del contenedor es igual que el tamaño solicitado, no se lleva a cabo ninguna acción.
 
 [size](#size) refleja el tamaño actual del vector.
 
@@ -1998,9 +2009,11 @@ friend void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Vector que proporciona los elementos deben intercambiar o un vector cuyos elementos se van a intercambiar con los del vector `left`.
+*right*  
+ Vector que proporciona los elementos que se van a intercambiar o vector cuyos elementos se van a intercambiar con los del vector *izquierdo*.
 
-`left` Un vector cuyos elementos se van a intercambiar con los del vector `right`.
+*left*  
+ Un vector cuyos elementos se van a intercambiar con los del vector *derecho*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2051,7 +2064,7 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Comentarios
 
-`value_type` es un sinónimo del parámetro de plantilla **Type**.
+`value_type` es un sinónimo del parámetro de plantilla `Type`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2099,27 +2112,27 @@ vector(InputIterator First, InputIterator Last, const Allocator& Al);
 
 |Parámetro|Descripción|
 |-|-|
-|`Al`|La clase de asignador que se usa con este objeto. [get_allocator](#get_allocator) devuelve la clase de asignador del objeto.|
-|`Count`|Número de elementos del vector construido.|
-|`Val`|Valor de los elementos del vector construido.|
-|`Right`|Vector del que el vector construido va a ser una copia.|
-|`First`|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
-|`Last`|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
-|`IList`|initializer_list que contiene los elementos que se van a copiar.|
+|*Al*|La clase de asignador que se usa con este objeto. [get_allocator](#get_allocator) devuelve la clase de asignador del objeto.|
+|*Recuento*|Número de elementos del vector construido.|
+|*Val*|Valor de los elementos del vector construido.|
+|*Derecha*|Vector del que el vector construido va a ser una copia.|
+|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
+|*IList*|initializer_list que contiene los elementos que se van a copiar.|
 
 ### <a name="remarks"></a>Comentarios
 
-Todos los constructores almacenan un objeto de asignador ( `Al`) e inicializan el vector.
+Todos los constructores almacenan un objeto de asignador (*Al*) e inicializan el vector.
 
-Los dos primeros constructores especifican un vector inicial vacío. El segundo especifica explícitamente el tipo de asignador ( `Al`) que se va a usar.
+Los dos primeros constructores especifican un vector inicial vacío. El segundo especifica explícitamente el tipo de asignador (*Al*) que se usará.
 
-El tercer constructor especifica una repetición de un número especificado ( `Count`) de elementos del valor predeterminado para la clase `Type`.
+El tercer constructor especifica una repetición de un número especificado (*recuento*) de elementos del valor predeterminado para la clase `Type`.
 
-Los constructores cuarto y quinto especifican una repetición de elementos ( `Count`) de valor `Val`.
+Los constructores cuarto y quinto especifican una repetición de (*recuento*) elementos del valor *Val*.
 
-El sexto constructor especifica una copia del vector `Right`.
+El sexto constructor especifica una copia del vector *derecha*.
 
-El séptimo constructor mueve el vector `Right`.
+El séptimo constructor mueve el vector *derecha*.
 
 El octavo constructor utiliza una initializer_list para especificar los elementos.
 

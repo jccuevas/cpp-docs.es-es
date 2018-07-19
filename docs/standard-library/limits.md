@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3250d9a090dcbd5eaa9a3cc0d51df84600ed3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66f9401bed0a6c9d0b1ffa09a10f98afa258069d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912880"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964761"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -37,7 +37,7 @@ Define la clase de plantilla `numeric_limits` y dos enumeraciones relativas a la
 
 ## <a name="remarks"></a>Comentarios
 
-Las especializaciones explícitas de la clase `numeric_limits` describen muchas propiedades de los tipos fundamentales, incluidos los tipos de carácter, entero y punto flotante y los `bool` que están definidos por la implementación en lugar de estar fijados por las reglas del lenguaje C++. Las propiedades que se describen en \<limits> incluyen precisión, representaciones de tamaño mínimo y máximo, redondeo y errores de tipo de señalización.
+Las especializaciones explícitas de la `numeric_limits` clase describen muchas de las propiedades de los tipos fundamentales, incluido el carácter, entero y tipos de punto flotante y **bool** que son la implementación definida en lugar de corregir las reglas del lenguaje C++. Las propiedades que se describen en \<limits> incluyen precisión, representaciones de tamaño mínimo y máximo, redondeo y errores de tipo de señalización.
 
 ### <a name="enumerations"></a>Enumeraciones
 

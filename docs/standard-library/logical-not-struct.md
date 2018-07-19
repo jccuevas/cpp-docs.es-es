@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860023"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961644"
 ---
-# <a name="logicalnot-struct"></a>logical_not (Struct)
+# <a name="logicalnot-struct"></a>logical_not (struct)
 
-Objeto de función predefinido que realiza la operación NOT lógica (`operator!`) sobre su argumento.
+Objeto de función predefinido que realiza la operación not lógica (`operator!`) sobre su argumento.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,9 +49,9 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Parámetros
 
-`Type` Cualquier tipo que admita un `operator!` que toma un operando del tipo especificado o deducido.
+*Tipo* cualquier tipo que admita un `operator!` que toma un operando del tipo especificado o deducido.
 
-`Left` El operando de la operación lógica no operación. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `Type`.
+*Izquierda* el operando del operador lógico no operación. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *tipo*.
 
 ## <a name="return-value"></a>Valor devuelto
 

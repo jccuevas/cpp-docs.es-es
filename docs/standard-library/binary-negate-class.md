@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3db081a3baa3b8e5d974080275fc75b372009b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f54f036c6e647c3f04bb202b68109e227061bf7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850136"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961927"
 ---
 # <a name="binarynegate-class"></a>binary_negate (Clase)
 
@@ -44,11 +44,11 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-`Func` La función binaria que se va a negar.
+*Func* la función binaria que se va a negar.
 
-`left` El operando izquierdo de la función binaria que se va a negar.
+*izquierdo* el operando izquierdo de la función binaria que se va a negar.
 
-`right` El operando derecho de la función binaria que se va a negar.
+*derecha* el operando derecho de la función binaria que se va a negar.
 
 ## <a name="return-value"></a>Valor devuelto
 

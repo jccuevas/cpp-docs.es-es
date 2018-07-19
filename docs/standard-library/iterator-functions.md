@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 965ff7aadb4add306061599bbe55466bbfb87f94
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 995aa846af4642070150f2dd41d4bf6463f46ee8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861823"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964469"
 ---
 # <a name="ltiteratorgt-functions"></a>Funciones de &lt;iterator&gt;
 
@@ -64,17 +64,17 @@ void advance(
 
 ### <a name="parameters"></a>Parámetros
 
-`InIt` Iterador que se va a incrementar y que debe satisfacer los requisitos de un iterador de entrada.
+*InIt* el iterador que se va a incrementar y que debe satisfacer los requisitos para un iterador de entrada.
 
-`Off` Un tipo entero convertible al tipo de diferencia del iterador y que especifica el número de incrementos que es la posición del iterador debe avanzar.
+*Desactivar* un tipo entero que es convertible al tipo de diferencia del iterador y que especifica el número de incrementos es la posición del iterador debe avanzar.
 
 ### <a name="remarks"></a>Comentarios
 
 El intervalo que se avanza debe ser no singular, donde los iteradores deben ser desreferenciables o pasar al final.
 
-Si **InputIterator** cumple los requisitos de un tipo de iterador bidireccional, `Off` puede ser negativo. Si **InputIterator** es un tipo de iterador de entrada o hacia delante, `Off` no debe ser negativo.
+Si el `InputIterator` cumple los requisitos de un tipo de iterador bidireccional, a continuación, *desactivar* puede ser negativo. Si `InputIterator` es un tipo de iterador de entrada o hacia delante, *desactivar* no debe ser negativo.
 
-La función advance tiene complejidad constante cuando **InputIterator** cumple los requisitos de un iterador de acceso aleatorio. En caso contrario, tiene complejidad lineal y, por tanto, es potencialmente costosa.
+La función advance tiene complejidad constante cuando `InputIterator` cumple los requisitos de un iterador de acceso aleatorio; en caso contrario, tiene complejidad lineal y por lo que es potencialmente costosa.
 
 ### <a name="example"></a>Ejemplo
 
@@ -134,11 +134,11 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Cont` El contenedor en el que la inserción es que se ejecute.
+*_Cont* el contenedor en el que la inserción al final se ejecutará.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`back_insert_iterator` asociado con el objeto contenedor `_Cont`.
+Un `back_insert_iterator` asociado con el objeto contenedor *_Cont*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -212,15 +212,15 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parámetros
 
-`cont` Un contenedor.
+*cont* un contenedor.
 
-`array` Una matriz de objetos de tipo `Ty`.
+*matriz* una matriz de objetos de tipo `Ty`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Las dos primeras funciones de plantilla devuelven `cont.begin()`. La primera función no es constante; la segunda es constante.
 
-La tercera función de plantilla devuelve `array`.
+La tercera función de plantilla devuelve *matriz*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -305,7 +305,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Parámetros
 
-`cont` Un contenedor o initializer_list.
+*cont* un contenedor o initializer_list.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -315,7 +315,7 @@ Un objeto `cont.begin()` constante.
 
 Esta función funciona con todos los contenedores de la biblioteca estándar de C++ y con [initializer_list](../standard-library/initializer-list-class.md).
 
-Puede utilizar esta función miembro en lugar de la función de plantilla `begin()` para garantizar que el valor devuelto sea `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (no `const`) o `initializer_list` de cualquier naturaleza que admite `begin()` y `cbegin()`.
+Puede utilizar esta función miembro en lugar de la función de plantilla `begin()` para garantizar que el valor devuelto sea `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor o `initializer_list` de cualquier naturaleza que admite `begin()` y `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -337,7 +337,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Parámetros
 
-`cont` Un contenedor o initializer_list.
+*cont* un contenedor o initializer_list.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -347,7 +347,7 @@ Un objeto `cont.end()` constante.
 
 Esta función funciona con todos los contenedores de la biblioteca estándar de C++ y con [initializer_list](../standard-library/initializer-list-class.md).
 
-Puede usar esta función miembro en lugar de la función de plantilla [end()](../standard-library/iterator-functions.md#end) para garantizar que el valor devuelto sea `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (no `const`) o `initializer_list` de cualquier naturaleza que admite `end()` y `cend()`.
+Puede usar esta función miembro en lugar de la función de plantilla [end()](../standard-library/iterator-functions.md#end) para garantizar que el valor devuelto sea `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor o `initializer_list` de cualquier naturaleza que admite `end()` y `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -368,17 +368,17 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>Parámetros
 
-`first` El primer iterador cuya distancia desde el segundo consiste en determinar.
+*primera* el primer iterador cuya distancia desde la segunda consiste en determinar.
 
-`last` El segundo iterador cuya distancia desde la primera consiste en determinar.
+*último* el segundo iterador cuya distancia desde la primera consiste en determinar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Número de veces que se debe incrementar `first` hasta que sea igual que `last`.
+El número de veces que *primera* debe aumentarse hasta que sea igual *última*.
 
 ### <a name="remarks"></a>Comentarios
 
-La función distance tiene complejidad constante cuando **InputIterator** cumple los requisitos de un iterador de acceso aleatorio. En caso contrario, tiene complejidad lineal y, por tanto, es potencialmente costosa.
+La función distance tiene complejidad constante cuando `InputIterator` cumple los requisitos de un iterador de acceso aleatorio; en caso contrario, tiene complejidad lineal y por lo que es potencialmente costosa.
 
 ### <a name="example"></a>Ejemplo
 
@@ -447,9 +447,9 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parámetros
 
-`cont` Un contenedor.
+*cont* un contenedor.
 
-`array` Una matriz de objetos de tipo `Ty`.
+*matriz* una matriz de objetos de tipo `Ty`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -472,11 +472,11 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Cont` El objeto de contenedor cuya parte delantera tiene un elemento insertado.
+*_Cont* el objeto contenedor cuya parte frontal tiene un elemento insertado.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`front_insert_iterator` asociado con el objeto contenedor `_Cont`.
+Un `front_insert_iterator` asociado con el objeto contenedor *_Cont*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -545,9 +545,9 @@ inserter(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Cont` El contenedor a la que los nuevos elementos se van a ser agregados.
+*_Cont* el contenedor a la que los nuevos elementos se va a agregar.
 
-`_Where` Un iterador de localizar el punto de inserción.
+*_WHERE* un iterador que localiza el punto de inserción.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -618,11 +618,11 @@ checked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parámetros
 
-`Ptr` Un puntero a la matriz de destino.
+*PTR* un puntero a la matriz de destino.
 
-`Size` El tamaño de la matriz de destino.
+*Tamaño* el tamaño de la matriz de destino.
 
-`Index` Índice opcional en la matriz.
+*Índice* índice opcional en la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -704,7 +704,7 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>Parámetros
 
-`_It` El iterador almacenado en el iterador de movimiento de nuevo.
+*_It* el iterador almacenado en el nuevo retroceda el iterador.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -725,7 +725,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parámetros
 
-`Ptr` Un puntero a la matriz de destino.
+*PTR* un puntero a la matriz de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -802,17 +802,17 @@ InputIterator next(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` La posición actual.
+*primera* la posición actual.
 
-`_Off` El número de veces para recorrer en iteración.
+*_Off* el número de veces para recorrer en iteración.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve la posición del nuevo iterador después de iterar `_Off` veces.
+Devuelve la nueva posición del iterador después de recorrer en iteración *_Off* veces.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve `next` incrementado `_Off` veces
+Devuelve la función de plantilla `next` incrementado *_Off* veces
 
 ## <a name="prev"></a>  prev
 
@@ -827,9 +827,9 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>Parámetros
 
-`first` La posición actual.
+*primera* la posición actual.
 
-`_Off` El número de veces para recorrer en iteración.
+*_Off* el número de veces para recorrer en iteración.
 
 ### <a name="remarks"></a>Comentarios
 

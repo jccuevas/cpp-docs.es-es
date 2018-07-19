@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d31f30971184356374b3991fedda474ca27465
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2283e74c00867e373d2ba117fd5dfbf70f137c75
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857303"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966017"
 ---
 # <a name="using-c-library-headers"></a>Usar encabezados de la biblioteca de C++
 
@@ -41,11 +41,11 @@ Un encabezado de la biblioteca de C++ incluye cualquier otro encabezado de la bi
 
 Cada función de la biblioteca se declara en un encabezado estándar. A diferencia de C estándar, el encabezado estándar nunca proporciona una macro de enmascaramiento con el mismo nombre que la función que enmascara la declaración de la función y consigue el mismo efecto. Para más información sobre macros de enmascaramiento, vea [Convenciones de la biblioteca de C++](../standard-library/cpp-library-conventions.md).
 
-Todos los nombres distintos de `operator delete` y `operator new` en los encabezados de la biblioteca de C++ se definen en el espacio de nombres `std` o en un espacio de nombres anidado dentro del espacio de nombres `std`. Se hace referencia al nombre `cin`, por ejemplo, como `std::cin`. Pero tenga en cuenta que los nombres de macro no están sujetos a la calificación de espacio de nombres, por lo siempre se escribe `__STD_COMPLEX` sin un calificador de espacio de nombres.
+Todos los nombres distintos de **operador delete** y **new (operador)** en la biblioteca de C++ se definen los encabezados en el `std` espacio de nombres, o en un espacio de nombres anidado dentro de la `std` espacio de nombres. Se hace referencia al nombre `cin`, por ejemplo, como `std::cin`. Pero tenga en cuenta que los nombres de macro no están sujetos a la calificación de espacio de nombres, por lo siempre se escribe `__STD_COMPLEX` sin un calificador de espacio de nombres.
 
-En algunos entornos de traducción, incluir un encabezado de la biblioteca de C++ también puede elevar nombres externos declarados en el espacio de nombres `std` al espacio de nombres global, con declaraciones `using` individuales para cada uno de los nombres. De lo contrario, el encabezado *no* añade ningún nombre de biblioteca al espacio de nombres actual.
+En algunos entornos de traducción, incluyendo un encabezado de la biblioteca de C++ puede elevar nombres externos declarados en el `std` espacio de nombres en el espacio de nombres global, con la persona **mediante** declaraciones para cada uno de los nombres. De lo contrario, el encabezado *no* añade ningún nombre de biblioteca al espacio de nombres actual.
 
-El estándar de C++ requiere que los encabezados del estándar de C declaren todos los nombres externos en el espacio de nombres `std`, y después los eleven al espacio de nombres global con declaraciones `using` individuales para cada uno de los nombres. Pero en algunos entornos de traducción los encabezados del estándar de C no incluyen ninguna declaración de espacio de nombres y declaran todos los nombres directamente en el espacio de nombres global. Por tanto, la manera más portátil de tratar con los espacios de nombres es seguir dos reglas:
+El estándar de C++ requiere que los encabezados estándar de C declaren todos los nombres externos en el espacio de nombres `std`, y después los Eleven al espacio de nombres global con la persona **mediante** declaraciones para cada uno de los nombres. Pero en algunos entornos de traducción los encabezados del estándar de C no incluyen ninguna declaración de espacio de nombres y declaran todos los nombres directamente en el espacio de nombres global. Por tanto, la manera más portátil de tratar con los espacios de nombres es seguir dos reglas:
 
 - Para declarar sin dudas en el espacio de nombres `std` un nombre externo que tradicionalmente se declara en \<stdlib.h>, por ejemplo, incluya el encabezado \<cstdlib>. Tenga en cuenta que es posible que el nombre también se declare en el espacio de nombres global.
 

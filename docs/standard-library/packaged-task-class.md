@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37d6fc7b01c179f017e04f8064a789b8f4ad2b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860910"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964800"
 ---
 # <a name="packagedtask-class"></a>packaged_task (Clase)
 
@@ -123,7 +123,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Parámetros
 
-`Right` Un `packaged_task` objeto.
+*Derecha* A `packaged_task` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -131,7 +131,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>Comentarios
 
-Después de la operación, `Right` ya no tiene un estado asincrónico asociado.
+Después de la operación, *derecha* ya no tiene un estado asincrónico asociado.
 
 ## <a name="op_call"></a> packaged_task::operator()
 
@@ -159,7 +159,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` si el objeto tiene un estado asincrónico asociado; de lo contrario, es `false`.
+**True** si el objeto tiene un estado asincrónico asociado; en caso contrario, **false**.
 
 ## <a name="packaged_task"></a> packaged_task::packaged_task (Constructor)
 
@@ -178,21 +178,21 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Parámetros
 
-`Right` Un `packaged_task` objeto.
+*Derecha* A `packaged_task` objeto.
 
-`alloc` Asignador de memoria. Para obtener más información, vea [\<allocators>](../standard-library/allocators-header.md).
+*Alloc* un asignador de memoria. Para obtener más información, vea [\<allocators>](../standard-library/allocators-header.md).
 
-`fn` Un objeto de función.
+*fn* un objeto de función.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor crea un objeto `packaged_task` que no tiene ningún *estado asincrónico asociado*.
 
-El segundo constructor crea un objeto `packaged_task` y transfiere el estado asincrónico asociado de `Right`. Después de la operación, `Right` ya no tiene un estado asincrónico asociado.
+El segundo constructor crea un `packaged_task` objeto y transfiere el estado asincrónico asociado de *derecha*. Después de la operación, *derecha* ya no tiene un estado asincrónico asociado.
 
-El tercer constructor crea un objeto `packaged_task` que tiene una copia de `fn` almacenada en su estado asincrónico asociado.
+El tercer constructor crea un `packaged_task` objeto que tiene una copia de *fn* almacenados en su estado asincrónico asociado.
 
-El cuarto constructor crea un objeto `packaged_task` que tiene una copia de `fn` almacenada en su estado asincrónico asociado y utiliza `alloc` para la asignación de memoria.
+El cuarto constructor crea un `packaged_task` objeto que tiene una copia de *fn* almacenados en su estado asincrónico asociado y usa `alloc` para asignación de memoria.
 
 ## <a name="dtorpackaged_task_destructor"></a> packaged_task::~packaged_task (Destructor)
 
@@ -228,7 +228,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-`Right` Un `packaged_task` objeto.
+*Derecha* A `packaged_task` objeto.
 
 ## <a name="valid"></a> packaged_task::valid
 
@@ -240,7 +240,7 @@ bool valid() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` si el objeto tiene un estado asincrónico asociado; de lo contrario, es `false`.
+**True** si el objeto tiene un estado asincrónico asociado; en caso contrario, **false**.
 
 ## <a name="see-also"></a>Vea también
 

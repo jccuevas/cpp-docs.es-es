@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacb6fda870f698bef23184912fc3becfd6c7e2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847162"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964390"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator (Clase)
 
@@ -40,7 +40,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Parámetros
 
-`Container` El tipo de contenedor en la parte frontal de los cuales son elementos va a insertar un `front_insert_iterator`.
+*Contenedor* el tipo de contenedor en la parte delantera de los elementos son va a insertar un `front_insert_iterator`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -83,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **Container**.
+El tipo es un sinónimo del parámetro de plantilla *Container*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -125,7 +125,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Cont` El objeto de contenedor en el que el `front_insert_iterator` consiste en Insertar elementos.
+*_Cont* el objeto de contenedor en el que el `front_insert_iterator` va a insertar elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -191,7 +191,7 @@ La función miembro devuelve el valor del elemento al que se dirige.
 
 ### <a name="remarks"></a>Comentarios
 
-Se usa para implementar la expresión de iterador de salida **\*Iter** = **value**. Si **Iter** es un iterador que dirige un elemento de una secuencia, **\*Iter** = **value** sustituye ese elemento por el valor y no cambia el número total de elementos de la secuencia.
+Se usa para implementar la expresión de iterador de salida **\*Iter** = **value**. Si `Iter` es un iterador que direcciona un elemento en una secuencia, a continuación,  **\*Iter** = **valor** sustituye ese elemento con el valor y no cambia el número total de elementos de la secuencia.
 
 ### <a name="example"></a>Ejemplo
 
@@ -301,7 +301,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Parámetros
 
-`val` El valor que se asignará al contenedor.
+*Val* el valor que se asignará al contenedor.
 
 ### <a name="return-value"></a>Valor devuelto
 

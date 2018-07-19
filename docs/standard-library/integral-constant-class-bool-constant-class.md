@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d59c994cba47cf609c13a1d35fbc7fed60fc531f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bff57549307eeaa9245c0bb4083b206471fe726
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844541"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962538"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>Clase integral_constant, clase bool_constant
 
@@ -54,7 +54,7 @@ struct integral_constant {
 
 La clase de plantilla `integral_constant`, si está especializada con un tipo entero *T* y un valor *v* de ese tipo, representa un objeto que contiene una constante de ese tipo entero con el valor especificado. El miembro denominado `type` es un alias para el tipo de especialización de la plantilla generada y el miembro `value` contiene el valor *v* usado para crear la especialización.
 
-La clase de plantilla `bool_constant` es una especialización parcial explícita de `integral_constant` que usa `bool` como argumento *T*.
+El `bool_constant` clase de plantilla es una especialización parcial explícita de `integral_constant` que usa **bool** como el *T* argumento.
 
 ## <a name="example"></a>Ejemplo
 

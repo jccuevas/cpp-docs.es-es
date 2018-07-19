@@ -1,5 +1,5 @@
 ---
-title: Clases de soporte de interfaz de usuario (ATL) | Documentos de Microsoft
+title: Clases de compatibilidad de interfaz de usuario (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 044fecc07d0d6ee252a966e0395f30415c7527bd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd98d71fe52f9ecfb1410593506ab6487540d4e5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360291"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961960"
 ---
-# <a name="ui-support-classes"></a>Clases de soporte técnico de la interfaz de usuario
-Las clases siguientes proporcionan compatibilidad de interfaz de usuario general:  
+# <a name="ui-support-classes"></a>Clases de compatibilidad de interfaz de usuario
+Las clases siguientes proporcionan compatibilidad general de la interfaz de usuario:  
   
 -   [IDocHostUIHandlerDispatch](../atl/reference/idochostuihandlerdispatch-interface.md) una interfaz para el análisis de HTML de Microsoft y el motor de representación.  
   
 -   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) proporciona los métodos de entidad de seguridad a través del cual se comunica un contenedor con un control. Administra la activación y desactivación de los controles en contexto.  
   
--   [IOleInPlaceObjectWindowlessImpl](../atl/reference/ioleinplaceobjectwindowlessimpl-class.md) administra la reactivación de controles in situ. Permite que un control sin ventana para recibir mensajes, así como participar en operaciones de arrastrar y colocar.  
+-   [IOleInPlaceObjectWindowlessImpl](../atl/reference/ioleinplaceobjectwindowlessimpl-class.md) administra la reactivación de controles en contexto. Habilita un control sin ventana para recibir mensajes, así como para participar en operaciones de arrastrar y colocar.  
   
 -   [IOleInPlaceActiveObjectImpl](../atl/reference/ioleinplaceactiveobjectimpl-class.md) ayuda a la comunicación entre un control in situ y su contenedor.  
   
--   [IViewObjectExImpl](../atl/reference/iviewobjecteximpl-class.md) permite que un control para mostrar sí directamente y para notificar al contenedor de los cambios en su presentación. Proporciona compatibilidad para dibujar parpadeo, controles transparentes y no rectangulares y la prueba de posicionamiento.  
+-   [IViewObjectExImpl](../atl/reference/iviewobjecteximpl-class.md) permite a un control para que se muestre directamente y para notificar al contenedor de los cambios en su presentación. Proporciona compatibilidad para el dibujo de parpadeo, controles transparentes y no rectangulares y la prueba de posicionamiento.  
   
 ## <a name="related-articles"></a>Artículos relacionados  
- [Tutorial ATL](../atl/active-template-library-atl-tutorial.md)  
+ [Tutorial de ATL](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../atl/atl-class-overview.md)

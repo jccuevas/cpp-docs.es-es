@@ -1,5 +1,5 @@
 ---
-title: Funciones de la ruta de acceso de ATL | Documentos de Microsoft
+title: Funciones de ruta de acceso ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -47,16 +47,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38286d169591dd55f7a2618332b6f5d5c9c86719
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ad0db4641731f4c92550fad075b759957383c52a
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366541"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027582"
 ---
-# <a name="atl-path-functions"></a>Funciones de la ruta de acceso de ATL
+# <a name="atl-path-functions"></a>Funciones de ruta de acceso de ATL
 
-ATL proporciona la clase ATLPath para manipular las rutas de acceso en forma de [CPathT](cpatht-class.md). Este código se puede encontrar en atlpath.h.  
+ATL proporciona la clase ATLPath para manipular las rutas de acceso en forma de [CPathT](cpatht-class.md). Este código puede encontrarse en atlpath.h.  
   
 ### <a name="related-classes"></a>Clases relacionadas  
   
@@ -68,9 +68,9 @@ ATL proporciona la clase ATLPath para manipular las rutas de acceso en forma de 
   
 |||  
 |-|-|  
-|`CPath`|Una especialización de [CPathT](cpatht-class.md) con `CString`.|  
-|`CPathA`|Una especialización de [CPathT](cpatht-class.md) con `CStringA`.|  
-|`CPathW`|Una especialización de [CPathT](cpatht-class.md) con `CStringW`.|  
+|`CPath`|Una especialización de [CPathT](cpatht-class.md) mediante `CString`.|  
+|`CPathA`|Una especialización de [CPathT](cpatht-class.md) mediante `CStringA`.|  
+|`CPathW`|Una especialización de [CPathT](cpatht-class.md) mediante `CStringW`.|  
   
 ### <a name="functions"></a>Funciones  
   
@@ -128,7 +128,7 @@ inline wchar_t* AddBackslash(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561) para obtener más información.  
+ Consulte [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561) para obtener más información.  
   
  
   
@@ -144,7 +144,7 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) para obtener más información. 
+ Consulte [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) para obtener más información. 
   
 ## <a name="append"></a> ATLPath::Append
  Esta función es un contenedor sobrecargado de [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
@@ -157,7 +157,7 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565) para obtener más información.  
+ Consulte [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565) para obtener más información.  
   
  
   
@@ -173,7 +173,7 @@ inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567) para obtener más información.  
+ Consulte [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567) para obtener más información.  
   
  
   
@@ -189,13 +189,13 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569) para obtener más información.  
+ Consulte [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569) para obtener más información.  
   
  
   
 
 ## <a name="combine"></a> ATLPath::Combine 
-Esta función es un contenedor sobrecargado de [PathCombine](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773571).  
+Esta función es un contenedor sobrecargado de [PathCombine](https://msdn.microsoft.com/library/windows/desktop/bb773571).  
 
 ### <a name="syntax"></a>Sintaxis  
 ```
@@ -232,7 +232,7 @@ inline int CommonPrefix(
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574) para obtener más información.  
+ Consulte [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574) para obtener más información.  
   
  
   
@@ -255,7 +255,7 @@ inline BOOL CompactPath(
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575) para obtener más información.  
+ Consulte [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575) para obtener más información.  
   
  
   
@@ -280,7 +280,7 @@ inline BOOL CompactPathEx(
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578) para obtener más información.  
+ Consulte [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578) para obtener más información.  
   
  
   
@@ -296,7 +296,7 @@ inline BOOL FileExists(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584) para obtener más información.  
+ Consulte [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584) para obtener más información.  
   
  
   
@@ -312,7 +312,7 @@ inline wchar_t* FindExtension(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587) para obtener más información.  
+ Consulte [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587) para obtener más información.  
   
  
   
@@ -328,7 +328,7 @@ inline wchar_t* FindFileName(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) para obtener más información.  
+ Consulte [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) para obtener más información.  
   
  
   
@@ -344,13 +344,13 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612) para obtener más información.  
+ Consulte [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612) para obtener más información.  
   
  
 
 
 ## <a name="isdirectory"></a>  ATLPath::IsDirectory 
-Esta función es un contenedor sobrecargado de [PathIsDirectory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773621).
+Esta función es un contenedor sobrecargado de [PathIsDirectory](https://msdn.microsoft.com/library/windows/desktop/bb773621).
 
 ```  
 inline BOOL IsDirectory(const char* pszPath);
@@ -370,7 +370,7 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627) para obtener más información.  
+ Consulte [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627) para obtener más información.  
   
  
   
@@ -386,7 +386,7 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650) para obtener más información.  
+ Consulte [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650) para obtener más información.  
   
  
   
@@ -402,7 +402,7 @@ inline BOOL IsRelative(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660) para obtener más información.  
+ Consulte [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660) para obtener más información.  
   
  
   
@@ -418,7 +418,7 @@ inline BOOL IsRoot(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674) para obtener más información.  
+ Consulte [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674) para obtener más información.  
   
  
   
@@ -434,7 +434,7 @@ inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687) para obtener más información.  
+ Consulte [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687) para obtener más información.  
   
  
   
@@ -450,7 +450,7 @@ inline BOOL IsUNC(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712) para obtener más información.  
+ Consulte [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712) para obtener más información.  
   
  
   
@@ -466,7 +466,7 @@ inline BOOL IsUNCServer(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722) para obtener más información.  
+ Consulte [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722) para obtener más información.  
   
  
   
@@ -482,7 +482,7 @@ inline BOOL IsUNCServerShare(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723) para obtener más información.  
+ Consulte [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723) para obtener más información.  
   
  
   
@@ -498,7 +498,7 @@ inline BOOL MakePretty(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725) para obtener más información.  
+ Consulte [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725) para obtener más información.  
   
  
   
@@ -514,7 +514,7 @@ inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727) para obtener más información.  
+ Consulte [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727) para obtener más información.  
   
  
   
@@ -530,7 +530,7 @@ inline void QuoteSpaces(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739) para obtener más información.  
+ Consulte [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739) para obtener más información.  
   
  
   
@@ -557,7 +557,7 @@ inline BOOL RelativePathTo(
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740) para obtener más información.  
+ Consulte [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740) para obtener más información.  
   
  
   
@@ -573,7 +573,7 @@ inline void RemoveArgs(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742) para obtener más información.  
+ Consulte [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742) para obtener más información.  
   
  
   
@@ -589,7 +589,7 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743) para obtener más información.  
+ Consulte [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743) para obtener más información.  
   
  
   
@@ -605,7 +605,7 @@ inline void RemoveBlanks(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745) para obtener más información.  
+ Consulte [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745) para obtener más información.  
   
  
   
@@ -621,7 +621,7 @@ inline void RemoveExtension(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746) para obtener más información.  
+ Consulte [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746) para obtener más información.  
   
  
   
@@ -637,7 +637,7 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748) para obtener más información.  
+ Consulte [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748) para obtener más información.  
   
  
   
@@ -653,7 +653,7 @@ inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749) para obtener más información.  
+ Consulte [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749) para obtener más información.  
   
  
   
@@ -669,7 +669,7 @@ inline wchar_t* SkipRoot(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754) para obtener más información.  
+ Consulte [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754) para obtener más información.  
   
  
   
@@ -685,7 +685,7 @@ inline void StripPath(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756) para obtener más información.  
+ Consulte [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756) para obtener más información.  
   
  
   
@@ -702,7 +702,7 @@ inline BOOL StripToRoot(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757) para obtener más información.  
+ Consulte [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757) para obtener más información.  
   
  
   
@@ -718,7 +718,7 @@ inline void UnquoteSpaces(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763) para obtener más información.  
+ Consulte [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763) para obtener más información.  
   
  
   

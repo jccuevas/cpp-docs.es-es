@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e601afeb05e0347dba8bf792611f20068c69b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e93cbd4298a0f2094c2c5950220610a17642512
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845380"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965583"
 ---
 # <a name="ltfilesystemgt-operators"></a>&lt;filesystem&gt; (Operadores)
 
-Los operadores realizan una comparación léxica de dos rutas de acceso como cadenas. Use la función **equivalent** para determinar si dos rutas de acceso (por ejemplo, una relativa y una absoluta) hacen referencia al mismo archivo o directorio del disco.
+Los operadores realizan una comparación léxica de dos rutas de acceso como cadenas. Use el `equivalent` función para determinar si dos rutas de acceso (por ejemplo, una ruta de acceso relativa y una ruta de acceso absoluta) hacen referencia al mismo archivo o directorio en el disco.
 
 Para obtener más información, vea [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md).
 
@@ -124,6 +124,6 @@ return (is);
 
 ## <a name="see-also"></a>Vea también
 
-[Clase Path (biblioteca estándar de C++)](../standard-library/path-class.md)<br/>
+[Path (clase) (biblioteca estándar de C++)](../standard-library/path-class.md)<br/>
 [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md)<br/>
 [\<filesystem>](../standard-library/filesystem.md)<br/>

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89215ac3d7b1035ef4326d73b21d540aada5fba6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0e2fb16ad96ba102295981b9f9d56fda810ddff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857820"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961063"
 ---
 # <a name="istriviallydestructible-class"></a>Clase is_trivially_destructible
 
@@ -37,11 +37,11 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` El tipo de consulta.
+*T* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `T` se puede destruir y el compilador sabe que el destructor no usa operaciones no triviales. En caso contrario, es False.
+Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo puede destruir y el compilador sabe que el destructor no se usa ninguna operación no trivial. En caso contrario, es False.
 
 ## <a name="requirements"></a>Requisitos
 

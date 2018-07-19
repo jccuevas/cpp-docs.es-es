@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c95007f1db1bcaf549398fa8865a9e51fe23d1
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 410566c623595cc941ab6e6ad21dd95bd70fe516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954107"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963672"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible (Clase)
 
@@ -36,13 +36,13 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` El tipo de consulta.
+*T* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `T` es una clase que tiene un constructor de copias trivial; en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *T* es una clase que tiene un constructor de copias triviales, en caso contrario, es false.
 
-Un constructor de copia para una clase `T` es trivial si se declara implícitamente, la clase `T` no tiene funciones virtuales o bases virtuales, todas las bases directas de la clase `T` tienen constructores de copia triviales, las clases de todos los miembros de datos no estáticos de tipo de clase tienen constructores de copia triviales y las clases de todos los miembros de datos no estáticos de la matriz de tipo de clase tienen constructores de copia triviales.
+Un constructor de copias para una clase *T* es trivial si se está declarado implícitamente, la clase *T* no tiene funciones virtuales o bases virtuales, todas las bases directas de la clase *T* tiene constructores de copias triviales, las clases de todos los miembros de datos no estáticos del tipo de clase tienen constructores de copias triviales y las clases de todos los miembros de datos no estáticos de la matriz de tipo de clase tienen constructores de copias triviales.
 
 ## <a name="requirements"></a>Requisitos
 

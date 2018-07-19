@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49626cbb33ed1220ad82cbec10ad675769b054d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863613"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963529"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator (Clase)
 
-La clase de plantilla ostream_iterator describe un objeto iterador de salida que escribe elementos sucesivos en el flujo de salida con la extracción **operator <<**.
+La clase de plantilla ostream_iterator describe un objeto de iterador de salida que escribe elementos sucesivos en el flujo de salida con la extracción `operator <<`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,11 +42,11 @@ class ostream_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo de* el tipo de objeto que se va a insertar en el flujo de salida.
+*Tipo* el tipo de objeto que va a insertar en el flujo de salida.
 
-`CharType` El tipo que representa el tipo de carácter para el `ostream_iterator`. Este argumento es opcional y el valor predeterminado es `char`.
+*CharType* el tipo que representa el tipo de carácter para el `ostream_iterator`. Este argumento es opcional y el valor predeterminado es **char**.
 
-`Traits` El tipo que representa el tipo de carácter para el `ostream_iterator`. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
+*Rasgos* el tipo que representa el tipo de carácter para el `ostream_iterator`. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
 
 La clase ostream_iterator debe satisfacer los requisitos de un iterador de salida. Los algoritmos se pueden escribir directamente en el flujo de salida mediante `ostream_iterator`.
 
@@ -88,7 +88,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **CharType**.
+El tipo es un sinónimo del parámetro de plantilla `CharType`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -236,11 +236,11 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-`val` El valor del objeto del tipo `Type` va a insertar en el flujo de salida.
+*Val* el valor del objeto del tipo `Type` va a insertar en el flujo de salida.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El operador inserta `val` en el flujo de salida asociado al objeto, seguido del delimitador especificado en [ostream_iterator constructor](#ostream_iterator) (si existe) y, después, devuelve una referencia a `ostream_iterator`.
+El operador inserta *val* en la secuencia de salida asociada al objeto, seguido del delimitador especificado en el [ostream_iterator constructor](#ostream_iterator) (si existe) y, a continuación, devuelve una referencia a la `ostream_iterator`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -294,15 +294,15 @@ ostream_iterator(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Ostr` El flujo de salida de tipo [ostream_iterator:: ostream_type](#ostream_type) a se recorre en iteración.
+*_Ostr* el flujo de salida de tipo [ostream_type](#ostream_type) que se iterará.
 
-`_Delimiter` El delimitador que se inserta en el flujo de salida entre los valores.
+*_Delimiter* el delimitador que se inserta en el flujo de salida entre valores.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor inicializa el puntero del flujo de salida con `&_Ostr`. El puntero de la cadena de delimitador designa una cadena vacía.
 
-El segundo constructor inicializa el puntero del flujo de salida con `&_Ostr` y el puntero de la cadena de delimitador con `_Delimiter`.
+El segundo constructor inicializa el puntero del flujo de salida con `&_Ostr` y el puntero de cadena de delimitador con *_Delimiter*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -377,7 +377,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **Traits**.
+El tipo es un sinónimo del parámetro de plantilla `Traits`.
 
 ### <a name="example"></a>Ejemplo
 

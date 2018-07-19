@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a80ffbfbcfb8c350eecc54e87c4cadaaab0295
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 85efc646daf6ddb55f37c1f46157671eda2f13a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841423"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963581"
 ---
 # <a name="addpointer-class"></a>add_pointer (Clase)
 
@@ -40,11 +40,11 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-*T* el tipo para modificar.
+*T* el tipo de modificación.
 
 ## <a name="remarks"></a>Comentarios
 
-El typedef de miembro `type` denomina al mismo tipo como `remove_reference<T>::type*`. El alias `add_pointer_t` es un acceso directo para acceder al typedef de miembro `type`.
+El miembro **typedef** `type` nombres del mismo tipo que `remove_reference<T>::type*`. El alias `add_pointer_t` es un acceso directo para tener acceso al miembro **typedef** `type`.
 
 Como no es válido crear punteros a partir de referencias, `add_pointer` quita la referencia, si existe, del tipo especificado antes de crear un puntero-a-tipo. Por consiguiente, se puede usar un tipo con `add_pointer` sin que preocupe el hecho de si el tipo es una referencia.
 

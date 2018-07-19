@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 355b9945e8783879c9d35aab9893dffa32596d00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840780"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961076"
 ---
 # <a name="ltarraygt-functions"></a>Funciones &lt;array&gt;
 
-El encabezado \<array> incluye dos funciones no miembro, `get` y `swap`, que operan en objetos `array`.
+El \<matriz > encabezado incluye dos funciones no miembro, `get` y `swap`, que operan en **matriz** objetos.
 
 |||
 |-|-|
@@ -50,13 +50,13 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-`Index` El desplazamiento del elemento.
+*Índice* el desplazamiento del elemento.
 
-`T` El tipo de un elemento.
+*T* el tipo de un elemento.
 
-`N` El número de elementos de la matriz.
+*N* el número de elementos de la matriz.
 
-`arr` Seleccione en la matriz.
+*arr* seleccione de la matriz.
 
 ### <a name="example"></a>Ejemplo
 
@@ -92,7 +92,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-Especialización de plantilla no miembro de `std::swap` que intercambia dos objetos `array`.
+Una especialización de plantilla que no es miembro de `std::swap` que intercambia dos **matriz** objetos.
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -101,13 +101,13 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de un elemento.
+*Ty* el tipo de un elemento.
 
-`N` El tamaño de la matriz.
+*N* el tamaño de la matriz.
 
-`left` Primera matriz que se va a intercambiar.
+*izquierdo* la primera matriz intercambiar.
 
-`right` Segunda matriz que se va a intercambiar.
+*derecha* la segunda matriz intercambiar.
 
 ### <a name="remarks"></a>Comentarios
 

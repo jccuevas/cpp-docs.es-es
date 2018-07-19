@@ -17,14 +17,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1ef431fdba40ef9e8fd46b8c0e5d9cf7b32eda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68ca39b459b0d0e60305105986d3e76aa86a5bed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844008"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961657"
 ---
-# <a name="equalto-struct"></a>equal_to (Struct)
+# <a name="equalto-struct"></a>equal_to (struct)
 
 Predicado binario que realiza la operación de igualdad (`operator==`) sobre sus argumentos.
 
@@ -49,11 +49,11 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Cualquier tipo que admita un `operator==` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* cualquier tipo que admita un `operator==` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda* el operando izquierdo de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha* el operando derecho de la operación de igualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -61,7 +61,7 @@ Resultado de `Left == Right`. La plantilla especializada realiza el reenvío dir
 
 ## <a name="remarks"></a>Comentarios
 
-Los objetos de tipo `Type` deben ser comparables en igualdad. Esto requiere que el `operator==` definido en el conjunto de objetos satisfaga las propiedades matemáticas de una relación de equivalencia. Todos los tipos numéricos y de puntero integrados cumplen este requisito.
+Los objetos de tipo *tipo* debe ser comparable en igualdad. Esto requiere que el `operator==` definido en el conjunto de objetos satisfaga las propiedades matemáticas de una relación de equivalencia. Todos los tipos numéricos y de puntero integrados cumplen este requisito.
 
 ## <a name="example"></a>Ejemplo
 

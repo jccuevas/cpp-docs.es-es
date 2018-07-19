@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226e9895d7ddc199e2f15c3721228f59c0e5a0ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5b9ae4ae3b7d741624d220ba00006d51a61fd20
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853562"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962167"
 ---
-# <a name="modulus-struct"></a>modulus (Struct)
+# <a name="modulus-struct"></a>modulus (struct)
 
-Un objeto de función predefinido que realiza la operación de división del módulo (`operator%`) sobre sus argumentos.
+Objeto de función predefinido que realiza la operación de división del módulo (`operator%`) sobre sus argumentos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,11 +49,11 @@ struct modulus<void>
 
 ### <a name="parameters"></a>Parámetros
 
-`Type`, `T`, `U` Cualquier tipo que admita un `operator%` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U* cualquier tipo que admita un `operator%` que toma operandos de los tipos especificados o deducidos.
 
-`Left` El operando izquierdo de la operación de módulo. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `T`.
+*Izquierda* el operando izquierdo de la operación de módulo. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-`Right` El operando derecho de la operación de módulo. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.
+*Derecha* el operando derecho de la operación de módulo. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
 

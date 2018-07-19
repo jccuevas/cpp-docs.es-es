@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4adbf2c0b6f3ce6d1bababf0a69bb6720ef6be77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13b46bcd29624d696ae22494c394fa028d58fa8a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859022"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961979"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine (Clase)
 
@@ -45,9 +45,9 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-`Engine` El tipo de motor de base.
+*Motor* el tipo de motor de base.
 
-`K` **Tamaño de la tabla**. Número de elementos en el búfer (tabla). **Condición previa:** `0 < K`
+*K* **tamaño de la tabla**. Número de elementos en el búfer (tabla). **Condición previa:** `0 < K`
 
 ## <a name="members"></a>Miembros
 
@@ -60,7 +60,7 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase de plantilla describe un *adaptador de motor* que genera valores reordenando los valores que su motor base devuelve. Cada constructor rellena la tabla interna con los valores `K` que el motor base ha devuelto y, cuando se solicita un valor, se selecciona un elemento aleatorio de la tabla.
+Esta clase de plantilla describe un *adaptador de motor* que genera valores reordenando los valores que su motor base devuelve. Cada constructor rellena la tabla interna con *K* valores devueltos por el motor de base y se selecciona un elemento aleatorio de la tabla cuando se solicita un valor.
 
 ## <a name="requirements"></a>Requisitos
 

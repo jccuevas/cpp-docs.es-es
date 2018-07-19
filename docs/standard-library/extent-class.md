@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb721b23f473c59051e72edc969e5de38f1c984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6df4526eea3b0b8b4e91fa4f3e6a89cdd8adb7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843254"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964315"
 ---
 # <a name="extent-class"></a>extent (Clase)
 
@@ -37,13 +37,13 @@ struct extent;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty* el tipo de consulta.
 
-`I` La matriz se enlaza a la consulta.
+*Puedo* la matriz se enlaza a la consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Si `Ty` es un tipo de matriz con `I` dimensiones como mínimo, la consulta de tipo contiene el número de elementos de la dimensión que especifica `I`. Si `Ty` no es un tipo de matriz o el rango es menor que `I`, o si `I` es cero y `Ty` es de tipo "matriz de límite desconocido de `U`", la consulta de tipo contiene el valor 0.
+Si *Ty* es un tipo de matriz que tiene al menos *me* dimensiones, la consulta de tipo contiene el número de elementos de la dimensión especificada por *me*. Si *Ty* no es un tipo de matriz o el rango es menor que *me*, o si *me* es cero y *Ty* es de tipo "matriz de límite desconocido de `U` ", la consulta de tipo contiene el valor 0.
 
 ## <a name="example"></a>Ejemplo
 

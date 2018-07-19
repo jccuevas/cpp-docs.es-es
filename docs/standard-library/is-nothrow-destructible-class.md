@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8980119a3414159018102b8a0d1ad7fb0e8fe76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee35bd9fd138dce5e9163fe1712083f5671caaa1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850527"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964328"
 ---
 # <a name="isnothrowdestructible-class"></a>Clase is_nothrow_destructible
 
@@ -37,11 +37,11 @@ struct is_nothrow_destructible;
 
 ### <a name="parameters"></a>Parámetros
 
-`T` El tipo de consulta.
+*T* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo es true si el tipo `T` se puede destruir y el compilador sabe que el destructor no se inicia. En caso contrario, es False.
+Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo puede destruir y el destructor se sabe que el compilador no se inicia. En caso contrario, es False.
 
 ## <a name="requirements"></a>Requisitos
 

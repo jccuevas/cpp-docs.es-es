@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17dc3e53504add2507617c95439fa7d32565a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d0f45f1b8eac09ae28f8a289a59d8a16a709295
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858518"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965882"
 ---
 # <a name="slice-class"></a>slice (Clase)
 
@@ -146,15 +146,15 @@ slice(
 
 ### <a name="parameters"></a>Parámetros
 
-`_StartIndex` El índice de la valarray del primer elemento en el subconjunto.
+*_StartIndex* el índice de valarray del primer elemento del subconjunto.
 
-`_Len` El número de elementos en el subconjunto.
+*_Len* el número de elementos del subconjunto.
 
-`stride` La distancia entre los elementos en el subconjunto.
+*STRIDE* la distancia entre los elementos del subconjunto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El constructor predeterminado almacena ceros para el índice de inicio, la longitud total y el intervalo. El segundo constructor almacena `_StartIndex` para el índice de inicio, `_Len` para la longitud total y `stride` para el intervalo.
+El constructor predeterminado almacena ceros para el índice de inicio, la longitud total y el intervalo. El segundo constructor almacena *_StartIndex* para el índice de inicio, *_Len* para la longitud total, y *stride* para el intervalo.
 
 ### <a name="remarks"></a>Comentarios
 

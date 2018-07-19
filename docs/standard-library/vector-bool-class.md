@@ -25,16 +25,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7f4e185f19b07ddcec47b8f167e7040a5bef28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863418"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962785"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; (Clase)
 
-La clase `vector<bool>` es una especialización parcial de [vector](../standard-library/vector-class.md) para los elementos de tipo `bool`. Tiene un asignador para el tipo subyacente que utiliza la especialización, que proporciona optimización de espacio porque almacena un valor `bool` por bit.
+El `vector<bool>` clase es una especialización parcial de [vector](../standard-library/vector-class.md) elementos del tipo **bool**. Tiene un asignador para el tipo subyacente que se usa la especialización, que proporciona una optimización espacio porque almacena un **bool** valor por bit.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -47,14 +47,14 @@ class vector<bool, Allocator>
 
 Esta especialización de la plantilla de clase se comporta como vector, salvo por las diferencias que se explican en este artículo.
 
-Las operaciones que se ocupan del tipo `bool` corresponden a los valores del almacén del contenedor. `allocator_traits::construct` no se utiliza para construir estos valores.
+Las operaciones que tratan con el **bool** tipo corresponden a los valores del almacén del contenedor. `allocator_traits::construct` no se utiliza para construir estos valores.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nombre de tipo|Descripción|
 |-|-|
 |[const_pointer](#const_pointer)|Una definición de tipo a un `const_iterator` que puede servir como puntero constante para un elemento booleano de `vector<bool>`.|
-|[const_reference](#const_reference)|Una definición de tipo para `bool`. Después de la inicialización, no respeta actualizaciones al valor original.|
+|[const_reference](#const_reference)|Definición de tipos para **bool**. Después de la inicialización, no respeta actualizaciones al valor original.|
 |[pointer](#pointer)|Una definición de tipo para `iterator` que puede servir como puntero a un elemento booleano de `vector<bool>`.|
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -153,7 +153,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |Parámetro|Descripción|
 |-|-|
-|`Pos`|Posición del elemento `vector<bool>`.|
+|*punto de venta*|Posición del elemento `vector<bool>`.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -163,7 +163,7 @@ Si la posición especificada es mayor o igual que el tamaño del contenedor, el 
 
 ### <a name="remarks"></a>Comentarios
 
-Si compila con `_ITERATOR_DEBUG_LEVEL`, se genera un error en tiempo de ejecución si intenta tener acceso a un elemento fuera de los límites del vector.  Para más información, vea [Iteradores activados](../standard-library/checked-iterators.md).
+Si se compila con el conjunto _ITERATOR_DEBUG_LEVEL, se produce un error de tiempo de ejecución si intenta acceder a un elemento fuera de los límites del vector.  Para obtener más información, vea [Iteradores comprobados](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -268,7 +268,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-Proporciona una conversión implícita de `vector<bool>::reference` en `bool`.
+Proporciona una conversión implícita de `vector<bool>::reference` a **bool**.
 
 ```cpp
 operator bool() const;
@@ -293,9 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parámetros
 
-`Right` La referencia del elemento cuyo valor es que se asigna al bit.
+*Derecha*  
+ Referencia del elemento cuyo valor se asigna al bit.
 
-`Val` Valor booleano que se asigna al bit.
+*Val*  
+ Valor booleano que se asigna al bit.
 
 #### <a name="example"></a>Ejemplo
 
@@ -380,9 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-`Left` El elemento que se van a intercambiar con el `Right` elemento.
+*Izquierda*  
+ El elemento que se van a intercambiar con los *derecha* elemento.
 
-`Right` El elemento que se van a intercambiar con el `Left` elemento.
+*Derecha*  
+ El elemento que se van a intercambiar con los *izquierda* elemento.
 
 ### <a name="remarks"></a>Comentarios
 
