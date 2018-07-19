@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347112"
 ---
 # <a name="mfc-activex-controls-properties"></a>Controles ActiveX MFC: Propiedades
 Un control ActiveX activa eventos para comunicarse con su contenedor de control. El contenedor, en respuesta, utiliza métodos y propiedades para comunicarse con el control. Métodos y propiedades son similares en uso y propósito, respectivamente, para las funciones miembro y variables de miembro de una clase de C++. Propiedades son miembros de datos del control ActiveX que están expuestos a cualquier contenedor. Propiedades proporcionan una interfaz para aplicaciones que contienen controles ActiveX, como los clientes de automatización y contenedores de controles ActiveX.  

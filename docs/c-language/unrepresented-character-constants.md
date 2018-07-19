@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385717"
 ---
 # <a name="unrepresented-character-constants"></a>Constantes de caracteres no representadas
 **ANSI 3.1.3.4** El valor de una constante de carácter entera que contiene un carácter o una secuencia de escape no representados en el juego de caracteres de ejecución básico o en el juego de caracteres extendido para una constante de carácter ancho  

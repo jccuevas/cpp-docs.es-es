@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b71d61175e5446ac33dd0ff6a011d06f601b5a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928732"
 ---
 # <a name="-overridables-comment"></a>// Overridables (Comentario)
 La `// Overridables` sección de una declaración de clase MFC contiene funciones virtuales que se pueden reemplazar en una clase derivada cuando necesite modificar el comportamiento de la clase base. Suelen denominarse comenzando con "On", aunque no es estrictamente necesaria. Funciones aquí están diseñadas para reemplazarse y a menudo implementan o proporcionan a algún tipo de "devolución de llamada" o "enlazar". Normalmente, estos miembros están protegidos.  
@@ -30,7 +31,7 @@ La `// Overridables` sección de una declaración de clase MFC contiene funcione
   
  `virtual void OnDraw( ) = 0;`  
   
- En el ejemplo de lista de clase `CStdioFile`, en [un ejemplo de los comentarios](../mfc/an-example-of-the-comments.md), la lista no incluye ninguna sección se pueden sobrecargar. Clase **CDocument**, por otro lado, enumera aproximadamente 10 funciones miembro reemplazables.  
+ En el ejemplo de lista de clase `CStdioFile`, en [un ejemplo de los comentarios](../mfc/an-example-of-the-comments.md), la lista no incluye ninguna sección se pueden sobrecargar. Clase `CDocument`, por otro lado, enumera aproximadamente 10 funciones miembro reemplazables.  
   
  En algunas clases, también puede ver el comentario `// Advanced Overridables`. Estas son funciones superiores a solo los programadores deben intentar reemplazar. Probablemente nunca necesitará invalidarlas.  
   

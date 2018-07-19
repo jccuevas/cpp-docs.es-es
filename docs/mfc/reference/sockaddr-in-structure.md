@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373643"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN (Estructura)
 En la familia de direcciones de Internet, el `SOCKADDR_IN` estructura se usa Windows Sockets para especificar una dirección de extremo local o remoto que se va a conectar un socket.  

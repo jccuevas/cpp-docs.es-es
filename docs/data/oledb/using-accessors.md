@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105002"
 ---
 # <a name="using-accessors"></a>Utilizar descriptores de acceso
 Los temas siguientes explican cómo determinar qué tipo de descriptor de acceso es más adecuado para los datos de aplicación y, a continuación, cómo utilizar los distintos tipos de descriptores de acceso disponibles:  

@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be5cdc05ab387000828ce6424aed1fcc253d6c2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039172"
 ---
 # <a name="colepastespecialdialog-class"></a>Clase de la clase COlePasteSpecialDialog
 Se utiliza en el cuadro de diálogo Pegado especial de OLE.  
@@ -67,7 +68,7 @@ class COlePasteSpecialDialog : public COleDialog
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Formatos personalizados se agrega a la lista de formatos que puede pegar la aplicación.|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Agrega una nueva entrada a la lista de los formatos de Portapapeles admitidos.|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Agrega **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`y, opcionalmente, `CF_LINKSOURCE` a la lista de formatos puede pegar la aplicación.|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Agrega **CF_BITMAP**, **CF_DIB**, **CF_METAFILEPICT**y, opcionalmente, **CF_LINKSOURCE** a la lista de formatos puede pegar la aplicación .|  
 |[COlePasteSpecialDialog::CreateItem](#createitem)|Crea el elemento en el documento contenedor usando el formato especificado.|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|Muestra el cuadro de diálogo OLE Pegado especial.|  
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Indica si se debe dibujar elementos como un icono o no.|  
@@ -129,22 +130,22 @@ void AddFormat(
  *FMT*  
  Referencia al tipo de datos para agregar.  
   
- `lpszFormat`  
+ *lpszFormat*  
  Cadena que describe el formato para el usuario.  
   
  *lpszResult*  
  Cadena que describe el resultado si se elige este formato en el cuadro de diálogo.  
   
- `flags`  
+ *flags*  
  Los diferentes vincular e incrustar opciones disponibles para este formato. Esta marca es una combinación bit a bit de uno o varios de los diferentes valores en el **OLEUIPASTEFLAG** tipo enumerado.  
   
- `cf`  
+ *CF*  
  El formato de Portapapeles para agregar.  
   
  *TYMED*  
  Los tipos de medios disponibles en este formato. Ésta es una combinación bit a bit de uno o varios de los valores de la **TYMED** tipo enumerado.  
   
- `nFormatID`  
+ *nFormatID*  
  El identificador de la cadena que identifica este formato. El formato de esta cadena es dos cadenas independientes separadas por un carácter '\n'. La primera cadena es el mismo que se pasará en el *lpstrFormat* parámetro y el segundo es el mismo que el *lpstrResult* parámetro.  
   
  *bEnableIcon*  
@@ -168,7 +169,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cf`  
+ *CF*  
  El formato de Portapapeles para agregar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -191,7 +192,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 - **CF_DIB**  
   
-- `CF_METAFILEPICT`  
+- **CF_METAFILEPICT**  
   
 - **"Objeto incrustado"**  
   
@@ -210,7 +211,7 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwFlags`  
+ *dwFlags*  
  Indicador de creación, contiene cualquier número de los siguientes indicadores combinados mediante el operador OR bit a bit:  
   
 - `PSF_SELECTPASTE` Especifica que el botón de opción de pegar se comprobará inicialmente cuando se llama el cuadro de diálogo. No se puede usar en combinación con `PSF_SELECTPASTELINK`. Este es el valor predeterminado.  
@@ -221,10 +222,10 @@ COlePasteSpecialDialog(
   
 - `PSF_SHOWHELP` Especifica que el botón de ayuda se mostrará cuando se llama el cuadro de diálogo.  
   
- `pDataObject`  
+ *pDataObject*  
  Apunta a la [COleDataObject](../../mfc/reference/coledataobject-class.md) para pegarlo. Si este valor es **NULL**, obtiene la `COleDataObject` desde el Portapapeles.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Señala al objeto de ventana primaria o propietaria (de tipo `CWnd`) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, la ventana primaria del cuadro de diálogo se establece en la ventana de la aplicación principal.  
   
 ### <a name="remarks"></a>Comentarios  

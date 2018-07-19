@@ -42,11 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 635019011b655f338e499724c788bc433df5d571
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957083"
 ---
 # <a name="cfindreplacedialog-class"></a>Clase CFindReplaceDialog
 Le permite implementar los cuadros de diálogo Buscar/Reemplazar de cadena estándar en la aplicación.  
@@ -94,7 +95,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  Una vez un `CFindReplaceDialog` se ha construido el objeto, debe llamar a la [crear](#create) función de miembro para crear y mostrar el cuadro de diálogo.  
   
- Use la [m_fr](#m_fr) estructura para inicializar el cuadro de diálogo antes de llamar a **crear**. El `m_fr` estructura es de tipo [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Para obtener más información sobre esta estructura, vea el SDK de Windows.  
+ Use la [m_fr](#m_fr) estructura para inicializar el cuadro de diálogo antes de llamar a `Create`. El `m_fr` estructura es de tipo [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Para obtener más información sobre esta estructura, vea el SDK de Windows.  
   
  En el orden de la ventana primaria para recibir una notificación de las solicitudes de buscar y reemplazar, debe utilizar las ventanas [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) funcionar y utilizar el [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macros de mapa de mensajes en el marco ventana que controla este mensaje registrado.  
   
@@ -132,9 +133,9 @@ CFindReplaceDialog();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Dado que la `CFindReplaceDialog` objeto es un cuadro de diálogo no modal, debe crearlo en el montón mediante el uso de la `new` operador.  
+ Dado que la `CFindReplaceDialog` objeto es un cuadro de diálogo no modal, debe crearlo en el montón mediante el uso de la **nueva** operador.  
   
- Durante la destrucción, el marco de trabajo intenta realizar una `delete this` en el puntero en el cuadro de diálogo. Si ha creado el cuadro de diálogo en la pila, el `this` puntero no existe y puede provocar un comportamiento indefinido.  
+ Durante la destrucción, el marco de trabajo intenta realizar una **eliminar este** en el puntero en el cuadro de diálogo. Si ha creado el cuadro de diálogo en la pila, el **esto** puntero no existe y puede provocar un comportamiento indefinido.  
   
  Para obtener más información sobre la construcción de `CFindReplaceDialog` los objetos, vea la [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) información general. Use la [CFindReplaceDialog::Create](#create) función de miembro para mostrar el cuadro de diálogo.  
   
@@ -154,19 +155,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bFindDialogOnly`  
+ *bFindDialogOnly*  
  Establezca este parámetro en `TRUE` para mostrar una **buscar** cuadro de diálogo. Establézcalo en `FALSE` para mostrar una **Buscar/reemplazar** cuadro de diálogo.  
   
- `lpszFindWhat`  
+ *lpszFindWhat*  
  Puntero a la cadena de búsqueda de forma predeterminada, cuando aparezca el cuadro de diálogo. Si `NULL`, el cuadro de diálogo no contiene una cadena de búsqueda de forma predeterminada.  
   
- `lpszReplaceWith`  
+ *lpszReplaceWith*  
  Puntero a la cadena de reemplazo de manera predeterminada, cuando aparezca el cuadro de diálogo. Si `NULL`, el cuadro de diálogo no contiene una cadena de reemplazo de forma predeterminada.  
   
- `dwFlags`  
+ *dwFlags*  
  Una o varias marcas que puede usar para personalizar la configuración del cuadro de diálogo combinada mediante el operador OR bit a bit. El valor predeterminado es `FR_DOWN`, que especifica que la búsqueda se continuar en dirección descendente. Consulte la [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) estructura en el SDK de Windows para obtener más información sobre estas marcas.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana primaria o propietaria del cuadro de diálogo. Esta es la ventana que va a recibir el mensaje especial que indica que se solicita una acción de buscar y reemplazar. Si `NULL`, se utiliza la ventana principal de la aplicación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -217,7 +218,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lParam`  
+ *lParam*  
  El **lparam** valor pasado a la ventana de marco **OnFindReplace** función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  

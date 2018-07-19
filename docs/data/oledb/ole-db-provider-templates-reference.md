@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112425"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referencia de plantillas de proveedores OLE DB
 Las clases e interfaces para las plantillas de proveedor OLE DB pueden agruparse en las siguientes categorías. El material de referencia también incluye información sobre la [macros para plantillas de proveedores OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  

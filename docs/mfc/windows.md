@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97d8f7a0107f3f6d7aa9e5baa1454142e1426d9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950479"
 ---
 # <a name="windows"></a>Windows
 Esta familia de artículos describe window (objetos) en el marco de trabajo MFC. Todas las ventanas MFC se derivan de la clase [CWnd](../mfc/reference/cwnd-class.md), como ventanas de marco, vistas, cuadros de diálogo y controles.  
   
- El primer grupo de artículos describe [window (objetos)](../mfc/window-objects.md) en general. Hacer referencia a este grupo para obtener información general acerca de los objetos de ventana de C++, el cómo encapsulan un HWND y cómo usarlos al crear sus propias ventanas, como ventanas secundarias.  
+ El primer grupo de artículos describe [window (objetos)](../mfc/window-objects.md) en general. Haga referencia a este grupo para obtener información general sobre los objetos de ventana de C++, cómo encapsulan un `HWND`, y cómo usarlos al crear sus propias ventanas, como ventanas secundarias.  
   
  El segundo grupo de artículos describe [ventanas de marco](../mfc/frame-windows.md): windows que coloca un marco alrededor de contenido, en particular. Hacer referencia a este grupo para obtener información acerca de cómo el marco de trabajo MFC administra ventanas de marco y el contenido que enmarcan, incluidas las barras de control y vistas.  
   

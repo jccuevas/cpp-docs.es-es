@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c1ba2bb78260ade8dc95685789ec6af7e0ff58a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038918"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Clase de CMFCPropertyGridFileProperty
 La `CMFCPropertyGridFileProperty` clase es compatible con un elemento de control de lista de propiedades que se abre un cuadro de diálogo de selección de archivos.  
@@ -77,28 +78,28 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `strName`  
+ [in] *strName*  
  Nombre de la propiedad.  
   
- [in] `bOpenFileDialog`  
+ [in] *bOpenFileDialog*  
  `TRUE` Para abrir un **abrir archivo** cuadro de diálogo; `FALSE` para abrir un **Guardar archivo** cuadro de diálogo.  
   
- [in] `strFileName`  
+ [in] *strFileName*  
  El nombre de archivo inicial.  
   
- [in] `lpszDefExt`  
+ [in] *lpszDefExt*  
  Una cadena con una o más extensiones de nombre de archivo. El valor predeterminado es `NULL`.  
   
- [in] `dwFlags`  
- Marcas de cuadro de diálogo El valor predeterminado es una combinación bit a bit (OR) de `OFN_HIDEREADONLY` y `OFN_OVERWRITEPROMPT`.  
+ [in] *dwFlags*  
+ Marcas de cuadro de diálogo. El valor predeterminado es una combinación bit a bit (OR) de `OFN_HIDEREADONLY` y `OFN_OVERWRITEPROMPT`.  
   
- [in] `lpszFilter`  
+ [in] *lpszFilter*  
  Una cadena de uno o más filtros de archivo. El valor predeterminado es `NULL`.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  Una descripción del elemento de propiedad. El valor predeterminado es `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Datos específicos de la aplicación que están asociados al elemento de propiedad. Por ejemplo, un entero de 32 bits o un puntero a otros datos. El valor predeterminado es 0.  
   
 ### <a name="return-value"></a>Valor devuelto  

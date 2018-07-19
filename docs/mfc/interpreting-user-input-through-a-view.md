@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e3ade658046ad789a92bce044d12e5a6e76f7ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f62d64ed9479f1d1003536f8c4944b53d04d696f
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931995"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretar la entrada del usuario a través de una vista
 Otras funciones miembro de la vista de manipular e interpretan todos los datos de usuario de entrada. Normalmente se definirán las funciones miembro de controlador de mensajes en la clase de vista para procesar:  
@@ -43,7 +44,7 @@ Otras funciones miembro de la vista de manipular e interpretan todos los datos d
   
  [Temas de control y asignación de mensajes](../mfc/message-handling-and-mapping.md) explica cómo asignar elementos de menú y otros objetos de interfaz de usuario a los comandos y cómo enlazar los comandos a funciones del controlador. [Temas de control y asignación de mensajes](../mfc/message-handling-and-mapping.md) también explica cómo MFC enruta comandos y envía mensajes estándar de Windows a los objetos que contienen controladores para ellos.  
   
- Por ejemplo, la aplicación deba implementar directa mouse en la vista de dibujo. El ejemplo Scribble muestra cómo controlar la `WM_LBUTTONDOWN`, `WM_MOUSEMOVE`, y `WM_LBUTTONUP` mensajes respectivamente para comenzar, continuar y terminar el dibujo de un segmento de línea. Por otro lado, puede a veces es necesario interpretar un clic del mouse en la vista como una selección. La vista `OnLButtonDown` función de controlador debería determinar si el usuario se dibujando o seleccionar. Si seleccionar, el controlador debería determinar si el clic estaba dentro de los límites de un objeto en la vista y, si es así, modifique la presentación para mostrar el objeto como seleccionado.  
+ Por ejemplo, la aplicación deba implementar directa mouse en la vista de dibujo. El ejemplo Scribble muestra cómo controlar los mensajes WM_LBUTTONDOWN, WM_MOUSEMOVE y WM_LBUTTONUP respectivamente para comenzar, continuar y finalizar el dibujo de un segmento de línea. Por otro lado, puede a veces es necesario interpretar un clic del mouse en la vista como una selección. La vista `OnLButtonDown` función de controlador debería determinar si el usuario se dibujando o seleccionar. Si seleccionar, el controlador debería determinar si el clic estaba dentro de los límites de un objeto en la vista y, si es así, modifique la presentación para mostrar el objeto como seleccionado.  
   
  La vista también podría controlar ciertos comandos de menú, tales como en el menú Edición para cortar, copiar, pegar o eliminar los datos seleccionados mediante el Portapapeles. Este tipo de controlador llamaría a algunos de los miembros relacionados con el Portapapeles las funciones de clase `CWnd` para transferir un elemento de datos seleccionado a o desde el Portapapeles.  
   

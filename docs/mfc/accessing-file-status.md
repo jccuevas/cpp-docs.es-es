@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334300"
 ---
 # <a name="accessing-file-status"></a>Acceso al estado del archivo
 `CFile` También permite obtener estado de archivo, incluso si el archivo existe, las fechas de creación y modificación y veces, el tamaño lógico y ruta de acceso.  

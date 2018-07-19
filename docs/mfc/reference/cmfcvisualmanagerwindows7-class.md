@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4bcc39645c079ef9a0b61a4e12782223dd19a92
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042227"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Clase CMFCVisualManagerWindows7
 El `CMFCVisualManagerWindows7` proporciona a una aplicación la apariencia de un [!INCLUDE[win7](../../build/includes/win7_md.md)] aplicación.  
@@ -148,20 +149,20 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pEdit`  
+ [in] *pEdit*  
  Un puntero para el control de edición. Este valor no puede ser `NULL`.  
   
- [out] `bIsHighlighted`  
+ [out] *bIsHighlighted*  
  Devuelve si se resalta el cuadro de la cinta de opciones.  
   
- [out] `bIsPaneHighlighted`  
- Devuelve `TRUE` si la cinta de opciones del panel que contiene `pEdit` se resalta.  
+ [out] *bIsPaneHighlighted*  
+ Devuelve `TRUE` si la cinta de opciones del panel que contiene *pEdit* se resalta.  
   
- [out] `bIsDisabled`  
- Devuelve si `pEdit` está deshabilitado.  
+ [out] *bIsDisabled*  
+ Devuelve si *pEdit* está deshabilitado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El color de fondo del cuadro de edición `pEdit`.  
+ El color de fondo del cuadro de edición *pEdit*.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -177,16 +178,16 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo de un botón de menú.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a un `CMFCToolBarButton`. El marco de trabajo rellena el fondo para este botón.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del área de imagen del botón de menú.  
   
- [in] `state`  
+ [in] *estado*  
  El estado del botón.  
   
 ### <a name="remarks"></a>Comentarios  

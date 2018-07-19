@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e5beccea254db8c7db6b6f52fee6c5d3021da71
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038341"
 ---
 # <a name="coledataobject-class"></a>Clase COleDataObject
 Se utiliza en las transferencias de datos para recuperar datos en diferentes formatos del Portapapeles, mediante arrastrar y colocar o a partir de un elemento OLE incrustado.  
@@ -106,7 +107,7 @@ void Attach(
  *lpDataObject*  
  Apunta a un objeto de datos OLE.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  **TRUE** si el objeto de datos OLE debe ser liberarla a la `COleDataObject` objetos se destruyen; en caso contrario **FALSE**.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -177,14 +178,14 @@ BOOL GetData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cfFormat`  
+ *cfFormat*  
  El formato en el que se devolverán datos. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por las ventanas nativas [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) función.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Apunta a un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estructura que va a recibir datos.  
   
- `lpFormatEtc`  
- Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se devolverán datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si es **NULL**, se usan los valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se devolverán datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si es **NULL**, se usan los valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -204,11 +205,11 @@ CFile* GetFileData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cfFormat`  
+ *cfFormat*  
  El formato en el que se devolverán datos. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por las ventanas nativas [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) función.  
   
- `lpFormatEtc`  
- Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se devolverán datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si es **NULL**, se usan los valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se devolverán datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si es **NULL**, se usan los valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a la nueva `CFile` o `CFile`-objeto derivado que contiene los datos si es correcto; en caso contrario **NULL**.  
@@ -233,11 +234,11 @@ HGLOBAL GetGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cfFormat`  
+ *cfFormat*  
  El formato en el que se devolverán datos. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por las ventanas nativas [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) función.  
   
- `lpFormatEtc`  
- Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se devolverán datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si es **NULL**, se usan los valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se devolverán datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si es **NULL**, se usan los valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El identificador del bloque de memoria global que contiene los datos si se realiza correctamente; en caso contrario, **NULL**.  
@@ -255,7 +256,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Apunta a la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que recibe la información de formato cuando finaliza la llamada de función.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -278,11 +279,11 @@ BOOL IsDataAvailable(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cfFormat`  
- El formato de datos del Portapapeles que se usará en la estructura que señala `lpFormatEtc`. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por las ventanas nativas [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) función.  
+ *cfFormat*  
+ El formato de datos del Portapapeles que se usará en la estructura que señala *lpFormatEtc*. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por las ventanas nativas [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) función.  
   
- `lpFormatEtc`  
- Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato deseado. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si es **NULL**, se usan los valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato deseado. Especifique un valor para este parámetro solo si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si es **NULL**, se usan los valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si los datos están disponibles en el formato especificado; en caso contrario es 0.  
@@ -305,7 +306,7 @@ void Release();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El `IDataObject` se asoció el `COleDataObject` mediante una llamada a **adjuntar** o `AttachClipboard` o explícitamente por el marco de trabajo. Si el `bAutoRelease` parámetro de **adjuntar** es **FALSE**, la `IDataObject` objeto no se publicará. En este caso, el llamador es responsable de liberar la `IDataObject` mediante una llamada a [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
+ El `IDataObject` se asoció el `COleDataObject` mediante una llamada a `Attach` o `AttachClipboard` o explícitamente por el marco de trabajo. Si el `bAutoRelease` parámetro de `Attach` es **FALSE**, la `IDataObject` objeto no se publicará. En este caso, el llamador es responsable de liberar la `IDataObject` mediante una llamada a [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo HIERSVR](../../visual-cpp-samples.md)   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381243"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Usar una plantilla de cuadro de diálogo en memoria
 En lugar de utilizar los métodos descritos en la [tabla del cuadro de diálogo creación](../mfc/creating-a-dialog-class-with-code-wizards.md), puede crear cualquier tipo de cuadro de diálogo indirectamente de una plantilla de cuadro de diálogo en memoria. Para obtener más información, vea la clase [CDialog](../mfc/reference/cdialog-class.md) en el *referencia de MFC*.  

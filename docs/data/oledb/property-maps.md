@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103221"
 ---
 # <a name="property-maps"></a>Mapas de propiedades
 Además de la sesión, el conjunto de filas y el objeto de comando opcional, cada proveedor admite una o varias propiedades. Estas propiedades se definen en asignaciones de propiedad que contiene los archivos de encabezado creados por el Asistente para proveedores OLE DB. Cada archivo de encabezado contiene un mapa para las propiedades en el grupo de propiedades de OLE DB definido para el objeto u objetos definidos en ese archivo. El archivo de encabezado que contiene el objeto de origen de datos también contiene la asignación de propiedad para el [propiedades de origen de datos](https://msdn.microsoft.com/en-us/library/ms724188\(v=vs.140\).aspx). Session.h contiene la asignación de propiedad para el [propiedades de la sesión](https://msdn.microsoft.com/en-us/library/ms714221.aspx). Los objetos rowset y command residen en un archivo de encabezado único, denominado *projectname*RS.h. Estas propiedades son miembros de la [propiedades de conjunto de filas](https://msdn.microsoft.com/en-us/library/ms711252.aspx) grupo.  

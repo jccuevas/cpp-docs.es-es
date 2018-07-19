@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371613"
 ---
 # <a name="sockaddr-structure"></a>SOCKADDR (Estructura)
 La estructura `SOCKADDR` se utiliza para almacenar una dirección de protocolo de Internet (IP) para un equipo que participa en una comunicación de Windows Sockets.  

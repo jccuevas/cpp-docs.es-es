@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244243"
 ---
 # <a name="compiler-error-c2920"></a>Error del compilador C2920
 nueva definición: 'class': ya se ha declarado una clase de plantilla o genérica como 'type'  

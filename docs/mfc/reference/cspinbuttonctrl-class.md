@@ -42,11 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf8e6530530552a4ef7b811698c816352f7719c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122972"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (clase)
 Proporciona la funcionalidad del control de botón de número común de Windows.  
@@ -119,25 +120,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica el estilo del control de botón de número. Aplicar cualquier combinación de estilos de control de botón de número para el control. Estos estilos se describen en [estilos de Control de flechas](http://msdn.microsoft.com/library/windows/desktop/bb759885) del SDK de Windows.  
   
- `rect`  
+ *Rect*  
  Especifica el tamaño y la posición del control de botón de número. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura  
   
- `pParentWnd`  
- Un puntero a la ventana del elemento primario del control de botón de número, normalmente un `CDialog`. No debe ser **NULL.**  
+ *pParentWnd*  
+ Un puntero a la ventana del elemento primario del control de botón de número, normalmente un `CDialog`. No debe ser NULL.  
   
- `nID`  
+ *nID*  
  Especifica el identificador. del control de botón de número  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la inicialización se realizó correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Crear un `CSpinButtonCtrl` de dos pasos en primer lugar, llame al constructor y, a continuación, llame a **crear**, que crea el control de botón de número y lo adjunta a la `CSpinButtonCtrl` objeto.  
+ Crear un `CSpinButtonCtrl` de dos pasos en primer lugar, llame al constructor y, a continuación, llame a `Create`, que crea el control de botón de número y lo adjunta a la `CSpinButtonCtrl` objeto.  
   
- Para crear un control de botón de número con estilos de ventana extendidos, llame a [CSpinButtonCtrl::CreateEx](#createex) en lugar de **crear**.  
+ Para crear un control de botón de número con estilos de ventana extendidos, llame a [CSpinButtonCtrl::CreateEx](#createex) en lugar de `Create`.  
   
 ##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Crea un control (una ventana secundaria) y lo asocia a la `CSpinButtonCtrl` objeto.  
@@ -152,26 +153,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwExStyle`  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de estilos extendidos de windows, consulte el `dwExStyle` parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
+ *dwExStyle*  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de estilos extendidos de windows, consulte el *dwExStyle* parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica el estilo del control de botón de número. Aplicar cualquier combinación de estilos de control de botón de número para el control. Estos estilos se describen en [estilos de Control de flechas](http://msdn.microsoft.com/library/windows/desktop/bb759885) del SDK de Windows.  
   
- `rect`  
- Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de `pParentWnd`.  
+ *Rect*  
+ Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana que es primario del control.  
   
- `nID`  
+ *nID*  
  Identificador de ventana secundaria. del control  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Use `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
+ Use `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows WS_EX_.  
   
 ##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Construye un objeto `CSpinButtonCtrl`.  
@@ -190,10 +191,10 @@ UINT GetAccel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nAccel`  
- Número de elementos de la matriz especificada por `pAccel`.  
+ *nAccel*  
+ Número de elementos de la matriz especificada por *pAccel*.  
   
- `pAccel`  
+ *pAccel*  
  Puntero a una matriz de [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) estructuras que recibe información de aceleración.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -228,7 +229,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
 ### <a name="parameters"></a>Parámetros  
  *lpbError*  
- Un puntero a un valor booleano que se establece en cero si el valor se recuperó correctamente o que se distinto de cero si se produce un error. Si este parámetro se establece en **NULL**, no se notifican los errores.  
+ Un puntero a un valor booleano que se establece en cero si el valor se recuperó correctamente o que se distinto de cero si se produce un error. Si este parámetro se establece en NULL, no se informa de errores.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La primera versión devuelve la posición actual de 16 bits en la palabra de orden inferior. La palabra de orden superior es distinto de cero si se produjo un error.  
@@ -254,7 +255,7 @@ void GetRange32(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *Inferior*  
+ *inferior*  
  Referencia a un entero que recibe el límite inferior para el control.  
   
  *superior*  
@@ -276,11 +277,11 @@ BOOL SetAccel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nAccel`  
- Número de [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) estructuras especificadas por `pAccel`.  
+ *nAccel*  
+ Número de [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) estructuras especificadas por *pAccel*.  
   
- `pAccel`  
- Puntero a una matriz de `UDACCEL` las estructuras, que contienen información de aceleración. Los elementos se deben ordenar en orden ascendente según la **nSec** miembro.  
+ *pAccel*  
+ Puntero a una matriz de estructuras UDACCEL, que contienen información de aceleración. Los elementos se deben ordenar en orden ascendente según la `nSec` miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -293,7 +294,7 @@ int SetBase(int nBase);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nBase`  
+ *nBase*  
  Nuevo valor de base para el control. Puede ser 10 para decimales o 16 en formato hexadecimal.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -310,7 +311,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pWndBuddy`  
+ *pWndBuddy*  
  Puntero a la nueva ventana relacionada.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -328,7 +329,7 @@ int SetPos32(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nPos`  
+ *nPos*  
  Nueva posición del control. Este valor debe ser en el intervalo especificado por los límites superiores e inferiores del control.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -352,8 +353,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nLower` y `nUpper`  
- Límites superior e inferior del control. Para `SetRange`, ningún límite puede ser mayor que **UD_MAXVAL** o menor que **UD_MINVAL**; Además, no puede superar la diferencia entre los dos límites **UD_MAXVAL**. `SetRange32` impone ninguna restricción sobre los límites; utilizar los enteros.  
+ *nLower* y *nUpper*  
+ Límites superior e inferior del control. Para `SetRange`, ni límite puede ser mayor que UD_MAXVAL o inferior UD_MINVAL; Además, la diferencia entre los dos límites no puede superar los UD_MAXVAL. `SetRange32` impone ninguna restricción sobre los límites; utilizar los enteros.  
   
 ### <a name="remarks"></a>Comentarios  
  La función miembro `SetRange32` establece el intervalo de 32 bits para el control de botón de número.  

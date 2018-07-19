@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090730"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset (Clase)
 Recupera y manipula filas para trabajar con datos de forma masiva mediante la recuperación de varios identificadores de fila con una sola llamada.  

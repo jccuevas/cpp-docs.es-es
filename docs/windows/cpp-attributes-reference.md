@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870850"
 ---
 # <a name="c-attributes-reference"></a>Referencia de atributos de C++
 Microsoft define un conjunto de atributos que simplifican la programación COM y el desarrollo de .NET Framework common language runtime. Al incluir atributos en los archivos de origen, el compilador funciona con archivos DLL para insertar código o modificar el código en los archivos objeto generados del proveedor.  

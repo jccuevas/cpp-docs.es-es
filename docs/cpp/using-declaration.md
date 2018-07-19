@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424475"
 ---
 # <a name="using-declaration"></a>using (declaración)
 La declaración using introduce un nombre en la región declarativa en el que la declaración using aparece.  

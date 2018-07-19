@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32058011"
 ---
 # <a name="page"></a>PAGE
 La primera Directiva establece línea *longitud* y carácter *ancho* de la lista de programa. Si no se proporcionan argumentos, genera un salto de página. La segunda directiva incrementa el número de sección y restablece el número de página en 1.  

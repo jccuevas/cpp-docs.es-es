@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892803"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>Establecer el ancho de una barra de desplazamiento horizontal
 Cuando se agrega un cuadro de lista con una barra de desplazamiento horizontal a un cuadro de diálogo utilizando las clases MFC, la barra de desplazamiento no aparecerá automáticamente en la aplicación.  

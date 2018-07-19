@@ -46,11 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd68493c9be5eb0bff63504cf49b38b9a2f216d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 706cc03e3f0a074e68d0e92acdce5a747552819b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038214"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory (clase)
 Implementa el generador de clases OLE, que crea objetos OLE tales como servidores, objetos de automatización y documentos.  
@@ -136,29 +137,29 @@ COleObjectFactory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `clsid`  
+ *CLSID*  
  Referencia al identificador de clase OLE representa este generador de objetos.  
   
- `pRuntimeClass`  
+ *pRuntimeClass*  
  Puntero a la clase en tiempo de ejecución de los objetos de C++ que se puede crear este generador.  
   
- `bMultiInstance`  
+ *bMultiInstance al*  
  Indica si una sola instancia de la aplicación puede admitir varias creaciones de instancias. Si **TRUE**, varias instancias de la aplicación se inicien para que cada solicitud crear un objeto.  
   
- `nFlags`  
+ *nFlags*  
  Contiene uno o varios de los siguientes indicadores:  
   
 - **afxRegDefault** establece el modelo de subprocesos en ThreadingModel = apartamento.  
   
 - **afxRegInsertable** permite que el control aparezca en el **Insertar objeto** cuadro de diálogo de objetos OLE.  
   
-- `afxRegApartmentThreading` Establece el modelo de subprocesos en el registro para ThreadingModel = apartamento.  
+- **afxRegApartmentThreading** establece el modelo de subprocesos en el registro para ThreadingModel = apartamento.  
   
 - **afxRegFreeThreading** establece el modelo de subprocesos en el registro para ThreadingModel = libre.  
   
      Puede combinar los dos indicadores `afxRegApartmentThreading` y `afxRegFreeThreading` para establecer ThreadingModel = Both. Vea [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) en el SDK de Windows para obtener más información sobre el registro del modelo de subprocesos.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Puntero a una cadena que contiene un identificador de programa verbales, como "Microsoft Excel".  
   
 ### <a name="remarks"></a>Comentarios  
@@ -180,7 +181,7 @@ REFCLSID GetClassID() const;
  Para obtener más información, consulte [clave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) del SDK de Windows.  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
- Solicita una clave de licencia única del archivo DLL del control y lo almacena en la `BSTR` señalada por `pbstrKey`.  
+ Solicita una clave de licencia única del archivo DLL del control y lo almacena en la `BSTR` que señala *pbstrKey*.  
   
 ```  
 virtual BOOL GetLicenseKey(
@@ -189,10 +190,10 @@ virtual BOOL GetLicenseKey(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwReserved`  
+ *dwReservado*  
  Reservado para un uso futuro.  
   
- `pbstrKey`  
+ *pbstrKey*  
  Puntero a un `BSTR` que almacenará la clave de licencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -299,10 +300,10 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszProgID`  
+ *lpszProgID*  
  Puntero a una cadena que contiene el identificador de programa legible para el usuario, por ejemplo, "Excel.Document.5".  
   
- `bRegister`  
+ *bInscríbase al*  
  Determina si el generador de objetos de la clase de control es que se registrará.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -310,7 +311,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
 - **UpdateRegistry (** `lpszProgID` **)** registra este generador de objetos con el registro del sistema OLE. Esta función se suele llamar [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) cuando se inicia la aplicación.  
   
-- **UpdateRegistry (** `bRegister` **)** esta forma de la función es reemplazable. Si `bRegister` es **TRUE**, esta función registra la clase de control con el registro del sistema. En caso contrario, anula el registro de la clase.  
+- **UpdateRegistry (** `bRegister` **)** esta forma de la función es reemplazable. Si *bInscríbase al* es **TRUE**, esta función registra la clase de control con el registro del sistema. En caso contrario, anula el registro de la clase.  
   
      Si usas ActiveX ControlWizard de MFC para crear el proyecto, ControlWizard proporciona una invalidación para esta función virtual pura.  
   
@@ -322,7 +323,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bRegister`  
+ *bInscríbase al*  
  Determina si el generador de objetos de la clase de control es que se registrará.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -339,14 +340,14 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bstrKey`  
+ *bstrKey*  
  Un `BSTR` almacenar la versión del contenedor de la cadena de licencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la licencia de tiempo de ejecución es válida; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- La versión predeterminada llama [GetLicenseKey](#getlicensekey) para obtener una copia del control de la cadena de licencia y lo compara con la cadena de `bstrKey`. Si las dos cadenas coinciden, la función devuelve un valor distinto de cero; en caso contrario, devuelve 0.  
+ La versión predeterminada llama [GetLicenseKey](#getlicensekey) para obtener una copia del control de la cadena de licencia y lo compara con la cadena de *bstrKey*. Si las dos cadenas coinciden, la función devuelve un valor distinto de cero; en caso contrario, devuelve 0.  
   
  Puede invalidar esta función para proporcionar una verificación personalizada de la licencia.  
   

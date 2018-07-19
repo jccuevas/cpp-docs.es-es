@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420097"
 ---
 # <a name="punctuators-c"></a>Signos de puntuación (C++)
 Los signos de puntuación en C++ tienen un significado sintáctico y semántico para el compilador, pero, por sí mismos, no especifican una operación que produzca un valor. Algunos signos de puntuación, solos o combinados, también pueden ser operadores de C++ o ser significativos para el preprocesador.  

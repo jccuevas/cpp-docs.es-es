@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254381"
 ---
 # <a name="compiler-error-c3172"></a>Error de C3172 de Error de compilador
 'nombre_de_módulo': no se puede especificar distintos atributos idl_module en un proyecto  

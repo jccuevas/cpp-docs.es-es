@@ -16,6 +16,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088383"
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference (Clase)
 Representa una referencia débil a una instancia de una clase ref.  

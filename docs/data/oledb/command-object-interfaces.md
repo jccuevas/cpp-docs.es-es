@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096124"
 ---
 # <a name="command-object-interfaces"></a>Interfaces del objeto de comando
 El objeto de comando utiliza el `IAccessor` interfaz para especificar enlaces de parámetros. El consumidor llama `IAccessor::CreateAccessor`, pasando una matriz de `DBBINDING` estructuras. `DBBINDING` contiene información acerca de los enlaces de columna (por ejemplo, tipo y longitud). El proveedor recibe las estructuras y determina cómo se deben transferir los datos y si las conversiones son necesarias.  

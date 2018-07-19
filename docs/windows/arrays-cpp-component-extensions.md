@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862727"
 ---
 # <a name="arrays-c-component-extensions"></a>Matrices (Extensiones de componentes de C++)
 El `Platform::Array<T>` tipo en C++ / CX, o `array` palabra clave en C++ / CLI, declara una matriz de un tipo especificado y el valor inicial.  

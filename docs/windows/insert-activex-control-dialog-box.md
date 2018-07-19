@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877156"
 ---
 # <a name="insert-activex-control-dialog-box"></a>Insertar control ActiveX (cuadro de diálogo)
 Este cuadro de diálogo permite [insertar controles ActiveX en el cuadro de diálogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md) durante el uso de la [editor de cuadro de diálogo](../windows/dialog-editor.md).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686619"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Evitar áreas de riesgo en programas multiproceso
 Hay varios problemas que pueden surgir al crear, vincular o ejecutar un programa multiproceso en C. Algunos de los problemas más comunes que se describen en la tabla siguiente. (Para obtener una discusión similar desde el punto de vista MFC, vea [subprocesamiento múltiple: sugerencias de programación](../parallel/multithreading-programming-tips.md).)  

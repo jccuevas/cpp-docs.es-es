@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347047"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Clases de arrastrar y colocar y de transferencia de datos OLE
 Estas clases se utilizan en las transferencias de datos OLE. Permite que los datos se transfieren entre las aplicaciones mediante el Portapapeles o mediante arrastrar y colocar.  

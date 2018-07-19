@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090108"
 ---
 # <a name="static-libraries-ccx"></a>Bibliotecas estáticas (C++/CX)
 Una biblioteca estática que se utiliza en una aplicación de la plataforma Universal de Windows (UWP) puede contener código de C++ conforme a normas ISO, incluyendo tipos STL y también llama a las API de Win32 no excluidas de la plataforma de aplicación de Windows en tiempo de ejecución. Una biblioteca estática utiliza componentes de Windows en tiempo de ejecución y puede crear componentes de Windows Runtime con ciertas restricciones.  

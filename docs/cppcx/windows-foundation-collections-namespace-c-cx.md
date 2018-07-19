@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090827"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections (Espacio de nombres) (C++/CX)
 C++ / CX complementa el espacio de nombres Collections con funciones que simplifican el uso de las clases de colección de Vector, VectorView, Map y MapView.  

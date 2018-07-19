@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902cb24d5cd8525a99f58fc5feeac416138148
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950711"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Usar una lista de imágenes con un control Rebar
 Cada banda rebar puede contener, entre otras cosas, una imagen de una lista de imágenes asociada. El procedimiento siguiente detallan los pasos necesarios para mostrar una imagen en una banda rebar.  
@@ -30,9 +31,9 @@ Cada banda rebar puede contener, entre otras cosas, una imagen de una lista de i
   
 2.  Modificar el **REBARBANDINFO** estructura para asignar una imagen a una banda rebar:  
   
-    -   Establecer el **fMask** miembro **RBBIM_IMAGE**, mediante el operador OR bit a bit para incluir indicadores adicionales según sea necesario.  
+    -   Establecer el *fMask* miembro `RBBIM_IMAGE`, mediante el operador OR bit a bit para incluir indicadores adicionales según sea necesario.  
   
-    -   Establecer el `iImage` miembro para el índice de la lista de imágenes de la imagen que se mostrará.  
+    -   Establecer el *iImage* miembro para el índice de la lista de imágenes de la imagen que se mostrará.  
   
 3.  Inicializar a los miembros de datos restantes, como el tamaño, el texto y el identificador de la ventana secundaria contenida, con la información necesaria.  
   

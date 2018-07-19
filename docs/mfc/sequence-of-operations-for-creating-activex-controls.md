@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380375"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Secuencia de operaciones para crear controles ActiveX
 En la tabla siguiente se muestra su rol y trabajo del marco de en la creación de controles ActiveX (anteriormente conocidos como controles OLE).  

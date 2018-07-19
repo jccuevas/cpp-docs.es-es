@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3793ca47aa0537d5ca8d6858c165fc2c5ac64943
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14e6df9a5d4dc6631b6891f90b55b63b73989b30
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953963"
 ---
 # <a name="slider-control-member-functions"></a>Funciones miembro de control deslizante
 Una aplicación puede llamar el control deslizante de funciones de miembro del control para recuperar información sobre el control deslizante ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) y cambiar sus características.  
@@ -28,7 +29,7 @@ Una aplicación puede llamar el control deslizante de funciones de miembro del c
   
  El intervalo de un control deslizante es el conjunto de valores no contiguos que puede representar el control deslizante. Mayoría de aplicaciones utilizan la [SetRange](../mfc/reference/csliderctrl-class.md#setrange) función de miembro para establecer el intervalo de un control deslizante cuando se crea por primera vez. Las aplicaciones pueden modificar dinámicamente el intervalo de una vez creado el control deslizante mediante el uso de la [funciones miembro SetRangeMax](../mfc/reference/csliderctrl-class.md#setrangemax) y [SetRangeMin](../mfc/reference/csliderctrl-class.md#setrangemin) funciones miembro. Una aplicación que permita el intervalo que se va a cambiarse dinámicamente normalmente recupera los valores del intervalo final cuando el usuario termina de trabajar con el control deslizante. Para recuperar estos valores, utilice la [GetRange](../mfc/reference/csliderctrl-class.md#getrange), [GetRangeMax](../mfc/reference/csliderctrl-class.md#getrangemax), y [GetRangeMin](../mfc/reference/csliderctrl-class.md#getrangemin) funciones miembro.  
   
- Una aplicación puede utilizar el `TBS_AUTOTICKS` estilo que se va a tener marcas de graduación de un control deslizante muestra automáticamente. Si una aplicación necesita controlar la posición o la frecuencia de las marcas de graduación, sin embargo, se puede utilizar una serie de funciones de miembro.  
+ Una aplicación puede utilizar el estilo TBS_AUTOTICKS para que las marcas de graduación de un control deslizante muestra automáticamente. Si una aplicación necesita controlar la posición o la frecuencia de las marcas de graduación, sin embargo, se puede utilizar una serie de funciones de miembro.  
   
  Para establecer la posición de una marca de graduación, una aplicación puede utilizar el [SetTic](../mfc/reference/csliderctrl-class.md#settic) función miembro. El [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq) función miembro permite a una aplicación establecer las marcas que aparecen a intervalos regulares en el intervalo del control deslizante de graduación. Por ejemplo, la aplicación puede utilizar esta función miembro para mostrar sólo 10 marcas de graduación de un intervalo de 1 a 100.  
   
@@ -36,11 +37,11 @@ Una aplicación puede llamar el control deslizante de funciones de miembro del c
   
  El [función miembro ClearTics](../mfc/reference/csliderctrl-class.md#cleartics) función miembro quita todas las marcas de graduación de un control deslizante.  
   
- Tamaño de la línea del control deslizante determina hasta qué punto se desplaza el control deslizante cuando una aplicación recibe un **TB_LINEDOWN** o **TB_LINEUP** mensaje de notificación. De igual forma, el tamaño de página determina la respuesta a la **TB_PAGEDOWN** y **TB_PAGEUP** mensajes de notificación. Las aplicaciones puedan recuperar y establecer los valores de tamaño de página y de línea mediante la [funciones miembro GetLineSize](../mfc/reference/csliderctrl-class.md#getlinesize), [SetLineSize](../mfc/reference/csliderctrl-class.md#setlinesize), [GetPageSize](../mfc/reference/csliderctrl-class.md#getpagesize), y [SetPageSize](../mfc/reference/csliderctrl-class.md#setpagesize) funciones miembro.  
+ Tamaño de la línea del control deslizante determina hasta qué punto se desplaza el control deslizante cuando una aplicación recibe un mensaje de notificación TB_LINEDOWN o TB_LINEUP. De igual forma, el tamaño de página determina la respuesta a los mensajes de notificación TB_PAGEDOWN y TB_PAGEUP. Las aplicaciones puedan recuperar y establecer los valores de tamaño de página y de línea mediante la [funciones miembro GetLineSize](../mfc/reference/csliderctrl-class.md#getlinesize), [SetLineSize](../mfc/reference/csliderctrl-class.md#setlinesize), [GetPageSize](../mfc/reference/csliderctrl-class.md#getpagesize), y [SetPageSize](../mfc/reference/csliderctrl-class.md#setpagesize) funciones miembro.  
   
  Una aplicación puede utilizar las funciones miembro para recuperar las dimensiones de un control deslizante. El [función miembro GetThumbRect](../mfc/reference/csliderctrl-class.md#getthumbrect) función miembro recupera el rectángulo delimitador para el control deslizante. El [función miembro GetChannelRect](../mfc/reference/csliderctrl-class.md#getchannelrect) función miembro recupera el rectángulo delimitador para el canal del control deslizante. (El canal es el área que se mueve el control deslizante y que contiene el elemento resaltado cuando se selecciona un intervalo).  
   
- Si un control deslizante tiene el `TBS_ENABLESELRANGE` estilo, el usuario puede seleccionar un intervalo de valores no contiguos en él. Un número de funciones miembro permite que se ajuste dinámicamente el intervalo de selección. El [SetSelection](../mfc/reference/csliderctrl-class.md#setselection) función miembro establece iniciales y finales de posiciones de una selección. Cuando el usuario termina de establecer un intervalo de selección, una aplicación puede recuperar la configuración mediante el [función miembro GetSelection](../mfc/reference/csliderctrl-class.md#getselection) función miembro. Para borrar la selección de un usuario, use la [función miembro ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) función miembro.  
+ Si un control deslizante tiene el estilo TBS_ENABLESELRANGE, el usuario puede seleccionar un intervalo de valores no contiguos del mismo. Un número de funciones miembro permite que se ajuste dinámicamente el intervalo de selección. El [SetSelection](../mfc/reference/csliderctrl-class.md#setselection) función miembro establece iniciales y finales de posiciones de una selección. Cuando el usuario termina de establecer un intervalo de selección, una aplicación puede recuperar la configuración mediante el [función miembro GetSelection](../mfc/reference/csliderctrl-class.md#getselection) función miembro. Para borrar la selección de un usuario, use la [función miembro ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) función miembro.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CSliderCtrl](../mfc/using-csliderctrl.md)   

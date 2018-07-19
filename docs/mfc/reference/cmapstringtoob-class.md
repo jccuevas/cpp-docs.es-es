@@ -44,11 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042253"
 ---
 # <a name="cmapstringtoob-class"></a>Clase CMapStringToOb
 Una clase de colección de diccionarios que asigna objetos `CString` únicos a punteros `CObject` .  
@@ -120,11 +121,11 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nBlockSize`  
+ *nBlockSize*  
  Especifica la granularidad de asignación de memoria para extender la asignación.  
   
 ### <a name="remarks"></a>Comentarios  
- A medida que aumenta la asignación, se asigna memoria en unidades de `nBlockSize` entradas.  
+ A medida que aumenta la asignación, se asigna memoria en unidades de *nBlockSize* entradas.  
   
  En la tabla siguiente se muestra otro miembro funciones que son similares a **CMapStringToOb:: CMapStringToOb**.  
   
@@ -310,7 +311,7 @@ UINT HashKey(LPCTSTR key) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `key`  
+ *key*  
  La clave cuyo valor de hash se va a calcular.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -338,10 +339,10 @@ void InitHashTable(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hashSize`  
+ *hashSize*  
  Número de entradas en la tabla hash.  
   
- `bAllocNow`  
+ *bAllocNow*  
  Si **TRUE**, asigna la tabla hash en la inicialización; en caso contrario, se asigna a la tabla cuando sea necesario.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -393,10 +394,10 @@ BOOL Lookup(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `key`  
+ *key*  
  Especifica la clave de cadena que identifica el elemento que se va a buscar.  
   
- `rValue`  
+ *rValue*  
  Especifica el valor devuelto desde el elemento buscado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -431,10 +432,10 @@ BOOL LookupKey(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `key`  
+ *key*  
  Especifica la clave de cadena que identifica el elemento que se va a buscar.  
   
- `rKey`  
+ *rKey*  
  La referencia a la clave asociada.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -458,7 +459,7 @@ CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una referencia a un puntero a un `CObject` objeto; o **NULL** si el mapa está vacío o `key` está fuera del intervalo.  
+ Una referencia a un puntero a un `CObject` objeto; o **NULL** si el mapa está vacío o *clave* está fuera del intervalo.  
   
 ### <a name="remarks"></a>Comentarios  
  Lo que se puede utilizar sólo en el lado izquierdo de una instrucción de asignación (un valor l). Si no hay ningún elemento de mapa con la clave especificada, se crea un nuevo elemento.  
@@ -525,7 +526,7 @@ BOOL RemoveKey(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `key`  
+ *key*  
  Especifica la cadena que se usan para la búsqueda de mapa.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -570,10 +571,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `key`  
+ *key*  
  Especifica la cadena que es la clave del nuevo elemento.  
   
- `newValue`  
+ *newValue*  
  Especifica el `CObject` puntero que es el valor del nuevo elemento.  
   
 ### <a name="remarks"></a>Comentarios  

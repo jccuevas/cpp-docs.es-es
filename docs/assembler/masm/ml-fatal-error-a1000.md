@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054808"
 ---
 # <a name="ml-fatal-error-a1000"></a>Error irrecuperable A1000 de ML
 **no se puede abrir el archivo: nombre de archivo**  

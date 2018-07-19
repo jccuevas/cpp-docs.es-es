@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d274cbafbd50df2f577b484e433c964f1dec096
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1f2fcdedb6b01025b06e4384ec2c32e95d08b6e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040134"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Clase CMFCFilterChunkValueImpl
 Se trata de una clase que simplifica la lógica de par de valor de fragmento y propiedad.  
@@ -165,7 +166,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pStatChunk`  
+ *pStatChunk*  
  Un puntero al valor de destino donde se describen las características del fragmento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -181,7 +182,7 @@ void CopyFrom (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pValue`  
+ *pValue*  
  Especifica el valor de origen que lo copien.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -242,11 +243,11 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ppPropVariant`  
+ *ppPropVariant*  
  Cuando la función devuelve, este parámetro contiene el valor de fragmento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- S_OK si PROPVARIANT se asignó correctamente y el valor de fragmento se copió correctamente en `ppPropVariant`; en caso contrario, un código de error.  
+ S_OK si PROPVARIANT se asignó correctamente y el valor de fragmento se copió correctamente en *ppPropVariant*; en caso contrario, un código de error.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -299,25 +300,25 @@ HRESULT SetBoolValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pkey`  
+ *pkey*  
  Especifica una clave de la propiedad.  
   
- `bVal`  
+ *bVal*  
  Especifica el valor de fragmento para establecer.  
   
- `chunkType`  
+ *chunkType*  
  Marcas indican si este fragmento contiene un tipo de texto o una propiedad de tipo de valor. Valores de marca que se toman de la enumeración CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  El idioma y subidioma asociado a un fragmento de texto. Configuración regional de fragmento se usa por los indizadores de documento para realizar la separación del texto de palabras adecuadas. Si el fragmento no es de tipo texto ni un tipo de valor con tipo de datos VT_LPWSTR, VT_LPSTR o VT_BSTR, se omite este campo.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  La longitud en caracteres del texto de origen desde el que se obtuvo el segmento actual. Un valor de cero significa correspondencia de carácter a carácter entre el texto de origen y el texto derivado. Un valor distinto de cero significa que no exista ninguna correspondencia de directa.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  El desplazamiento desde el que comienza el texto de origen para un fragmento derivado en el fragmento de código fuente.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  El tipo de salto que separa el fragmento anterior el segmento actual. Los valores son de la enumeración CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -339,22 +340,22 @@ HRESULT SetChunk(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pkey`  
+ *pkey*  
  Especifica una clave de la propiedad.  
   
- `chunkType`  
+ *chunkType*  
  Marcas indican si este fragmento contiene un tipo de texto o una propiedad de tipo de valor. Valores de marca que se toman de la enumeración CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  El idioma y subidioma asociado a un fragmento de texto. Configuración regional de fragmento se usa por los indizadores de documento para realizar la separación del texto de palabras adecuadas. Si el fragmento no es de tipo texto ni un tipo de valor con tipo de datos VT_LPWSTR, VT_LPSTR o VT_BSTR, se omite este campo.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  La longitud en caracteres del texto de origen desde el que se obtuvo el segmento actual. Un valor de cero significa correspondencia de carácter a carácter entre el texto de origen y el texto derivado. Un valor distinto de cero significa que no exista ninguna correspondencia de directa.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  El desplazamiento desde el que comienza el texto de origen para un fragmento derivado en el fragmento de código fuente.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  El tipo de salto que separa el fragmento anterior el segmento actual. Los valores son de la enumeración CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -377,25 +378,25 @@ HRESULT SetDwordValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pkey`  
+ *pkey*  
  Especifica una clave de la propiedad.  
   
- `dwVal`  
+ *dwVal*  
  Especifica el valor de fragmento para establecer.  
   
- `chunkType`  
+ *chunkType*  
  Marcas indican si este fragmento contiene un tipo de texto o una propiedad de tipo de valor. Valores de marca que se toman de la enumeración CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  El idioma y subidioma asociado a un fragmento de texto. Configuración regional de fragmento se usa por los indizadores de documento para realizar la separación del texto de palabras adecuadas. Si el fragmento no es de tipo texto ni un tipo de valor con tipo de datos VT_LPWSTR, VT_LPSTR o VT_BSTR, se omite este campo.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  La longitud en caracteres del texto de origen desde el que se obtuvo el segmento actual. Un valor de cero significa correspondencia de carácter a carácter entre el texto de origen y el texto derivado. Un valor distinto de cero significa que no exista ninguna correspondencia de directa.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  El desplazamiento desde el que comienza el texto de origen para un fragmento derivado en el fragmento de código fuente.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  El tipo de salto que separa el fragmento anterior el segmento actual. Los valores son de la enumeración CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -418,25 +419,25 @@ HRESULT SetFileTimeValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pkey`  
+ *pkey*  
  Especifica una clave de la propiedad.  
   
- `dtVal`  
+ *dtVal*  
  Especifica el valor de fragmento para establecer.  
   
- `chunkType`  
+ *chunkType*  
  Marcas indican si este fragmento contiene un tipo de texto o una propiedad de tipo de valor. Valores de marca que se toman de la enumeración CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  El idioma y subidioma asociado a un fragmento de texto. Configuración regional de fragmento se usa por los indizadores de documento para realizar la separación del texto de palabras adecuadas. Si el fragmento no es de tipo texto ni un tipo de valor con tipo de datos VT_LPWSTR, VT_LPSTR o VT_BSTR, se omite este campo.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  La longitud en caracteres del texto de origen desde el que se obtuvo el segmento actual. Un valor de cero significa correspondencia de carácter a carácter entre el texto de origen y el texto derivado. Un valor distinto de cero significa que no exista ninguna correspondencia de directa.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  El desplazamiento desde el que comienza el texto de origen para un fragmento derivado en el fragmento de código fuente.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  El tipo de salto que separa el fragmento anterior el segmento actual. Los valores son de la enumeración CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -459,25 +460,25 @@ HRESULT SetInt64Value(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pkey`  
+ *pkey*  
  Especifica una clave de la propiedad.  
   
- `nVal`  
+ *nVal*  
  Especifica el valor de fragmento para establecer.  
   
- `chunkType`  
+ *chunkType*  
  Marcas indican si este fragmento contiene un tipo de texto o una propiedad de tipo de valor. Valores de marca que se toman de la enumeración CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  El idioma y subidioma asociado a un fragmento de texto. Configuración regional de fragmento se usa por los indizadores de documento para realizar la separación del texto de palabras adecuadas. Si el fragmento no es de tipo texto ni un tipo de valor con tipo de datos VT_LPWSTR, VT_LPSTR o VT_BSTR, se omite este campo.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  La longitud en caracteres del texto de origen desde el que se obtuvo el segmento actual. Un valor de cero significa correspondencia de carácter a carácter entre el texto de origen y el texto derivado. Un valor distinto de cero significa que no exista ninguna correspondencia de directa.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  El desplazamiento desde el que comienza el texto de origen para un fragmento derivado en el fragmento de código fuente.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  El tipo de salto que separa el fragmento anterior el segmento actual. Los valores son de la enumeración CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -500,25 +501,25 @@ HRESULT SetIntValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pkey`  
+ *pkey*  
  Especifica una clave de la propiedad.  
   
- `nVal`  
+ *nVal*  
  Especifica el valor de fragmento para establecer.  
   
- `chunkType`  
+ *chunkType*  
  Marcas indican si este fragmento contiene un tipo de texto o una propiedad de tipo de valor. Valores de marca que se toman de la enumeración CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  El idioma y subidioma asociado a un fragmento de texto. Configuración regional de fragmento se usa por los indizadores de documento para realizar la separación del texto de palabras adecuadas. Si el fragmento no es de tipo texto ni un tipo de valor con tipo de datos VT_LPWSTR, VT_LPSTR o VT_BSTR, se omite este campo.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  La longitud en caracteres del texto de origen desde el que se obtuvo el segmento actual. Un valor de cero significa correspondencia de carácter a carácter entre el texto de origen y el texto derivado. Un valor distinto de cero significa que no exista ninguna correspondencia de directa.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  El desplazamiento desde el que comienza el texto de origen para un fragmento derivado en el fragmento de código fuente.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  El tipo de salto que separa el fragmento anterior el segmento actual. Los valores son de la enumeración CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -541,25 +542,25 @@ HRESULT SetLongValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pkey`  
+ *pkey*  
  Especifica una clave de la propiedad.  
   
- `lVal`  
+ *lVal*  
  Especifica el valor de fragmento para establecer.  
   
- `chunkType`  
+ *chunkType*  
  Marcas indican si este fragmento contiene un tipo de texto o una propiedad de tipo de valor. Valores de marca que se toman de la enumeración CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  El idioma y subidioma asociado a un fragmento de texto. Configuración regional de fragmento se usa por los indizadores de documento para realizar la separación del texto de palabras adecuadas. Si el fragmento no es de tipo texto ni un tipo de valor con tipo de datos VT_LPWSTR, VT_LPSTR o VT_BSTR, se omite este campo.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  La longitud en caracteres del texto de origen desde el que se obtuvo el segmento actual. Un valor de cero significa correspondencia de carácter a carácter entre el texto de origen y el texto derivado. Un valor distinto de cero significa que no exista ninguna correspondencia de directa.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  El desplazamiento desde el que comienza el texto de origen para un fragmento derivado en el fragmento de código fuente.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  El tipo de salto que separa el fragmento anterior el segmento actual. Los valores son de la enumeración CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -582,25 +583,25 @@ HRESULT SetSystemTimeValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pkey`  
+ *pkey*  
  Especifica una clave de la propiedad.  
   
- `systemTime`  
+ *systemTime*  
  Especifica el valor de fragmento para establecer.  
   
- `chunkType`  
+ *chunkType*  
  Marcas indican si este fragmento contiene un tipo de texto o una propiedad de tipo de valor. Valores de marca que se toman de la enumeración CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  El idioma y subidioma asociado a un fragmento de texto. Configuración regional de fragmento se usa por los indizadores de documento para realizar la separación del texto de palabras adecuadas. Si el fragmento no es de tipo texto ni un tipo de valor con tipo de datos VT_LPWSTR, VT_LPSTR o VT_BSTR, se omite este campo.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  La longitud en caracteres del texto de origen desde el que se obtuvo el segmento actual. Un valor de cero significa correspondencia de carácter a carácter entre el texto de origen y el texto derivado. Un valor distinto de cero significa que no exista ninguna correspondencia de directa.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  El desplazamiento desde el que comienza el texto de origen para un fragmento derivado en el fragmento de código fuente.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  El tipo de salto que separa el fragmento anterior el segmento actual. Los valores son de la enumeración CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -623,25 +624,25 @@ HRESULT SetTextValue(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pkey`  
+ *pkey*  
  Especifica una clave de la propiedad.  
   
- `pszValue`  
+ *pszValue*  
  Especifica el valor de fragmento para establecer.  
   
- `chunkType`  
+ *chunkType*  
  Marcas indican si este fragmento contiene un tipo de texto o una propiedad de tipo de valor. Valores de marca que se toman de la enumeración CHUNKSTATE.  
   
- `locale`  
+ *locale*  
  El idioma y subidioma asociado a un fragmento de texto. Configuración regional de fragmento se usa por los indizadores de documento para realizar la separación del texto de palabras adecuadas. Si el fragmento no es de tipo texto ni un tipo de valor con tipo de datos VT_LPWSTR, VT_LPSTR o VT_BSTR, se omite este campo.  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  La longitud en caracteres del texto de origen desde el que se obtuvo el segmento actual. Un valor de cero significa correspondencia de carácter a carácter entre el texto de origen y el texto derivado. Un valor distinto de cero significa que no exista ninguna correspondencia de directa.  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  El desplazamiento desde el que comienza el texto de origen para un fragmento derivado en el fragmento de código fuente.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  El tipo de salto que separa el fragmento anterior el segmento actual. Los valores son de la enumeración CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valor devuelto  

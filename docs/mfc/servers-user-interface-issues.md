@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379676"
 ---
 # <a name="servers-user-interface-issues"></a>Servidores: Problemas de la interfaz de usuario
 Una aplicación de servidor tiene una serie de características que se debe agregar a la interfaz de usuario para proporcionar elementos OLE a aplicaciones de contenedor. Para obtener más información sobre los menús y recursos adicionales que deben agregarse a una aplicación de servidor, consulte [menús y recursos: adiciones de servidor](../mfc/menus-and-resources-server-additions.md).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877545"
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>Nuevo recurso de la barra de herramientas (cuadro de diálogo)
 El cuadro de diálogo nuevo recurso de barra de herramientas permite especificar el ancho y alto de los botones que se va a agregar a un recurso de barra de herramientas. El valor predeterminado es 16 x 15 píxeles.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422181"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Intervalos de control de excepciones: resumen
 Los controladores de terminación se ejecutan independientemente de cómo finalice el bloque de instrucciones `__try`. La terminación se puede producir cuando se sale del bloque `__try`, cuando una instrucción `longjmp` transfiere el control fuera del bloque y cuando se desenreda la pila debido al control de excepciones.  

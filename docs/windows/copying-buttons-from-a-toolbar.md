@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880236"
 ---
 # <a name="copying-buttons-from-a-toolbar"></a>Copiar botones de una barra de herramientas
 ### <a name="to-copy-buttons-from-a-toolbar"></a>Copiar botones de una barra de herramientas  

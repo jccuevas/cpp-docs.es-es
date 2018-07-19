@@ -76,11 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40f4d836d662bde1f49b9a0639b771d10db667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f655d8bd6fbfd19182bbaeed21eaa95739ff33d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038977"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar (clase)
 Un `CMFCCaptionBar` objeto es una barra de controles que se puede mostrar tres elementos: un botón, una etiqueta de texto y un mapa de bits. Puede mostrar un solo elemento de cada tipo al mismo tiempo. Puede alinear cada elemento al borde izquierdo o derecho del control o al centro. También puede aplicar un estilo plano o 3D a los bordes superior e inferior de la barra de título.  
@@ -188,19 +189,19 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwStyle`  
+ *dwStyle*  
  La combinación de OR lógica de los estilos de barra de título.  
   
- `pParentWnd`  
+ *pParentWnd*  
  La ventana primaria del control de barra de título.  
   
- `uID`  
+ *UID*  
  El identificador del control de barra de título.  
   
- `nHeight`  
+ *nHeight*  
  El alto, en píxeles, del control de barra de título. Si es -1, el alto se calcula según el alto del icono, el texto y el botón que muestra el control de barra de título.  
   
- `bIsMessageBarMode`  
+ *bIsMessageBarMode*  
  `TRUE` Si la barra de título está en el modo de barra de mensajes; `FALSE` en caso contrario.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -229,7 +230,7 @@ void EnableButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  `TRUE` Para habilitar el botón `FALSE` para deshabilitar el botón.  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
@@ -240,7 +241,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `elem`  
+ [in] *elem*  
  Un elemento de la barra de título para el que se va a recuperar la alineación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -331,10 +332,10 @@ virtual void OnDrawBackground(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo de la barra de título.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador para rellenar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -352,10 +353,10 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un contexto de dispositivo que se usa para mostrar los bordes.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -375,16 +376,16 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero a un contexto de dispositivo que se usa para mostrar el botón.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del botón.  
   
- [in] `strButton`  
+ [in] *strButton*  
  Etiqueta de texto del botón.  
   
- [in] `bEnabled`  
+ [in] *bHabilitado*  
  `TRUE` Si el botón está habilitado; `FALSE` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -400,10 +401,10 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero a un contexto de dispositivo que se usa para mostrar la imagen.  
   
- [in] `rect`  
+ [in] *rect*  
  Especifica el rectángulo delimitador de la imagen.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -420,13 +421,13 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero a un contexto de dispositivo que se usa para mostrar el botón.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del texto.  
   
- [in] `strText`  
+ [in] *strText*  
  La cadena de texto para mostrar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -484,16 +485,16 @@ void SetBitmap(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hBitmap`  
+ [in] *hBitmap*  
  El identificador para el mapa de bits para establecer.  
   
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  Un valor RGB que especifica el color transparente del mapa de bits.  
   
- [in] `bStretch`  
+ [in] *bStretch*  
  Si `TRUE`, se expande el mapa de bits si no se ajusta a la imagen del rectángulo delimitador. En caso contrario, no se expande el mapa de bits.  
   
- [in] `bmpAlignment`  
+ [in] *bmpAlignment*  
  La alineación del mapa de bits.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -501,7 +502,7 @@ void SetBitmap(
   
  El mapa de bits anterior, se destruye automáticamente. Si la barra de título muestra un icono porque se llamó a la [CMFCCaptionBar::SetIcon](#seticon) método, no se mostrará el mapa de bits a menos que quite el icono mediante una llamada a [CMFCCaptionBar::RemoveIcon](#removeicon).  
   
- El mapa de bits se alinea según lo especificado por el `bmpAlignment` parámetro.  Este parámetro puede ser uno de los siguientes valores `BarElementAlignment`:  
+ El mapa de bits se alinea según lo especificado por el *bmpAlignment* parámetro.  Este parámetro puede ser uno de los siguientes valores `BarElementAlignment`:  
   
 -   ALIGN_INVALID  
   
@@ -519,7 +520,7 @@ void SetBorderSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nSize`  
+ [in] *nSize*  
  El nuevo tamaño, en píxeles, del borde de la barra de título.  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
@@ -534,16 +535,16 @@ void SetButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszLabel`  
+ *lpszLabel*  
  Etiqueta de comando del botón.  
   
- `uiCmdUI`  
+ *uiCmdUI*  
  Identificador del comando. del botón  
   
- `btnAlignmnet`  
+ *btnAlignmnet*  
  Alineación del botón.  
   
- `bHasDropDownArrow`  
+ *bHasDropDownArrow*  
  `TRUE` Si el botón muestra una flecha desplegable `FALSE` en caso contrario.  
   
 ##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed  
@@ -554,7 +555,7 @@ void SetButtonPressed(BOOL bPresed=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bPresed`  
+ *bPresed*  
  `TRUE` Si el botón mantiene su estado presionado, `FALSE` en caso contrario.  
   
 ##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip  
@@ -567,10 +568,10 @@ void SetButtonToolTip(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  El título de la información sobre herramientas.  
   
- [in] `lpszDescription`  
+ [in] *lpszDescripción*  
  La descripción de la información sobre herramientas.  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
@@ -581,7 +582,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bFlat`  
+ [in] *bFlat*  
  `TRUE` Si el borde de una barra de título es plana. `FALSE` Si el borde es 3D.  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
@@ -594,16 +595,16 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hIcon`  
+ [in] *hIcon*  
  El identificador para el icono para establecer.  
   
- [in] `iconAlignment`  
+ [in] *iconAlignment*  
  La alineación del icono.  
   
 ### <a name="remarks"></a>Comentarios  
  Barras de título pueden mostrar iconos o mapas de bits. Vea [CMFCCaptionBar::SetBitmap](#setbitmap) para averiguar cómo mostrar un mapa de bits. Si establece un icono y un mapa de bits, siempre se muestra el icono. Llame a [CMFCCaptionBar::RemoveIcon](#removeicon) para quitar un icono de la barra de título.  
   
- El icono se alinea según el `iconAlignment` parámetro. Puede ser uno de los siguientes `BarElementAlignment` valores:  
+ El icono se alinea según el *iconAlignment* parámetro. Puede ser uno de los siguientes `BarElementAlignment` valores:  
   
 -   ALIGN_INVALID  
   
@@ -623,10 +624,10 @@ void SetImageToolTip(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  El texto de la información sobre herramientas.  
   
- [in] `lpszDescription`  
+ [in] *lpszDescripción*  
  La descripción de la información sobre herramientas.  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
@@ -637,7 +638,7 @@ void SetMargin(int nMargin);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nMargin`  
+ [in] *nMargin*  
  La distancia, en píxeles, entre el borde de los elementos de la barra de título y el borde del control de barra de título.  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
@@ -650,14 +651,14 @@ void SetText(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `strText`  
+ [in] *strText*  
  Para establecer la cadena de texto.  
   
- [in] `textAlignment`  
+ [in] *textAlignment*  
  La alineación del texto.  
   
 ### <a name="remarks"></a>Comentarios  
- La etiqueta de texto se alinea según lo especificado por el `textAlignment` parámetro. Puede ser uno de los siguientes `BarElementAlignment` valores:  
+ La etiqueta de texto se alinea según lo especificado por el *textAlignment* parámetro. Puede ser uno de los siguientes `BarElementAlignment` valores:  
   
 -   ALIGN_INVALID  
   

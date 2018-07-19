@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362809"
 ---
 # <a name="iquickactivateimpl-class"></a>Clase IQuickActivateImpl
 Esta clase combina la inicialización del control de contenedores en una única llamada.  

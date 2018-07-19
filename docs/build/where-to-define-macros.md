@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380919"
 ---
 # <a name="where-to-define-macros"></a>Dónde definir macros
 Definir macros en una línea de comandos, archivo de comandos, archivos MAKE o el archivo Tools.ini.  

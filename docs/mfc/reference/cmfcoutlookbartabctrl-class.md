@@ -54,11 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30ad25a21bf380dd7687ccd0da0fb261aeeb023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042318"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Un control de pestaña que tiene el aspecto visual del **Panel de navegación** de Microsoft Outlook.  
@@ -147,19 +148,19 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndCtrl`  
+ [in] *pWndCtrl*  
  Un puntero a un control para agregar.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Especifica el nombre de la pestaña.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Si `TRUE`, la página se creará como desmontable.  
   
- [in] `nImageID`  
+ [in] *nImageID*  
  Índice de imagen en la lista de imágenes interna para la imagen que se mostrará en la nueva pestaña.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Especifica el AFX va `CBRS_`* estilo para los paneles de acoplamiento ajustados.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -167,7 +168,7 @@ void AddControl(
   
  Esta función se llama internamente en [cmfcbasetabctrl:: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab).  
   
- Si establece `bDetachable` a `TRUE`, `AddControl` crea internamente un `CDockablePaneAdapter` de objetos y ajusta el control agregado. Establece automáticamente la clase en tiempo de ejecución de la ventana con fichas a la clase en tiempo de ejecución de `CMFCOutlookBar` y la clase en tiempo de ejecución del marco flotante para `CMultiPaneFrameWnd`.  
+ Si establece *bDetachable* a `TRUE`, `AddControl` crea internamente un `CDockablePaneAdapter` de objetos y ajusta el control agregado. Establece automáticamente la clase en tiempo de ejecución de la ventana con fichas a la clase en tiempo de ejecución de `CMFCOutlookBar` y la clase en tiempo de ejecución del marco flotante para `CMultiPaneFrameWnd`.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo utilizar el `AddControl` método en la `CMFCOutlookBarTabCtrl` clase. Este fragmento de código forma parte de la [ejemplo de demostración de Outlook](../../visual-cpp-samples.md).  
@@ -211,20 +212,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `rect`  
+ [in] *rect*  
  Especifica el tamaño inicial y la posición, en píxeles.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Apunta a la ventana primaria. No debe ser `NULL`.  
   
- [in] `nID`  
+ [in] *nID*  
  El identificador del control.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el control se ha creado correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Normalmente, se crean los controles de fichas de barra de outlook cuando [CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md) controles el `WM_CREATE` mensaje del proceso.  
+ Normalmente, se crean los controles de fichas de barra de outlook cuando [CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md) controla el mensaje WM_CREATE del proceso.  
   
 ##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  Especifica si está habilitada la animación que tiene lugar durante la conmutación entre las pestañas activas.  
@@ -234,7 +235,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  Especifica si la animación debe habilitarse o deshabilitarse.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -250,7 +251,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bEnable`  
+ *bHabilitar el*  
  Si `TRUE`, habilitar la edición en contexto de la etiqueta de texto. Si `FALSE`, deshabilitar la edición en contexto.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -267,13 +268,13 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  Determina si se muestran los botones de desplazamiento.  
   
- [in] `bIsUp`  
+ [in] *bIsUp*  
  Determina si se muestra la barra de desplazamiento superior.  
   
- [in] `bIsDown`  
+ [in] *bIsDown*  
  Determina si se muestra la barra de desplazamiento de la parte inferior.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -366,7 +367,7 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iTab`  
+ [in] *iTab*  
  Índice de base cero de una pestaña que se abran.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -383,7 +384,7 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nBorderSize`  
+ [in] *nBorderSize*  
  Especifica el nuevo tamaño del borde en píxeles.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -399,16 +400,16 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiAlign`  
+ [in] *uiAlign*  
  Especifica la alineación del texto.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Si `TRUE`, se volverá a dibujar la ventana de outlook.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para cambiar la alineación del texto de los botones de página.  
   
- `uiAlign` Puede ser uno de los siguientes valores:  
+ *uiAlign* puede ser uno de los siguientes valores:  
   
 |Constante|Significado|  
 |--------------|-------------|  
@@ -429,13 +430,13 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiID`  
+ [in] *uiID*  
  Especifica el identificador de recurso de la imagen para cargar.  
   
- [in] `cx`  
+ [in] *cx*  
  Especifica el ancho de una imagen en la lista de imágenes, en píxeles.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  Un valor RGB que especifica el color transparente.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -454,7 +455,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nVisiblePageButtons`  
+ [in] *nVisiblePageButtons*  
   
 ### <a name="remarks"></a>Comentarios  
   

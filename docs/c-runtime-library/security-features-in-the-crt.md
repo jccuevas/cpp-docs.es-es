@@ -39,6 +39,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451815"
 ---
 # <a name="security-features-in-the-crt"></a>Características de seguridad de CRT
 Muchas funciones anteriores de CRT tienen versiones nuevas y más seguras. Si existe una función segura, la versión anterior y menos segura está marcada como desusada y la nueva versión presenta el sufijo `_s` ("segura").  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379930"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Operaciones de secuencia en los controles Rich Edit
 Puede utilizar secuencias para transferir datos entre o salga de un control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Un flujo se define mediante una [estructura EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) estructura, que especifica un búfer y una función de devolución de llamada definida por la aplicación.  

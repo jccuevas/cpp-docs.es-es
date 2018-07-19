@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198383"
 ---
 # <a name="compiler-error-c2494"></a>Error del compilador C2494
 'palabra clave' no se puede llamar desde dentro de una expresión de filtro o bloque __finally/finally  

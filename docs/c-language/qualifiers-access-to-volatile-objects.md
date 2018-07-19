@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384690"
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>Calificadores: Acceso a objetos volátiles
 **ANSI 3.5.5.3** Lo que constituye un acceso a un objeto de tipo calificado como volátil  

@@ -1,5 +1,5 @@
 ---
-title: Especificar configuración de proyecto, crear nuevo proyecto de Asistente para archivos de código existentes | Documentos de Microsoft
+title: Especificar configuración de proyecto, Asistente para crear nuevo proyecto de archivos de código fuente existentes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,61 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f0f59b802b5a24c1b449f78cccee4744538a5a0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33338951"
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Especificar configuración de proyecto, Asistente para crear nuevo proyecto de archivos de código fuente existentes
-Utilice esta página del Asistente para crear nuevo proyecto de archivos de código existentes para especificar:  
+Use esta página del Asistente para crear nuevo proyecto de archivos de código fuente existentes para especificar:  
   
--   El entorno de compilación para el nuevo proyecto  
+-   El entorno de compilación para el proyecto.  
   
--   La configuración para que coincida con un tipo específico de proyecto que se va a generar de compilación  
+-   La configuración de compilación para que coincida con un tipo específico de proyecto nuevo que se va a generar.  
   
 ## <a name="task-list"></a>Lista de tareas  
  [Cómo: Crear un proyecto de C++ a partir del código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Utilice Visual Studio**  
- Especifica que se use herramientas de compilación que se incluyen en Visual Studio para generar el nuevo proyecto. Esta opción está seleccionada de forma predeterminada.  
+ **Usar Visual Studio**  
+ Especifica que se usen las herramientas de compilación que se incluyen en Visual Studio para generar el proyecto nuevo. Esta opción está seleccionada de forma predeterminada.  
   
  **Tipo de proyecto**  
- Especifica el tipo de proyecto que generará el asistente.  
+ Especifica el tipo de proyecto que va a generar el asistente.  
   
- **Proyecto de aplicación de Windows**  
- Indica que el asistente generará un proyecto para una aplicación ejecutable de Windows. Esta opción está disponible desde el **tipo de proyecto** cuadro de lista desplegable.  
+ **Proyecto de aplicación Windows**  
+ Indica que el asistente va a generar un proyecto para una aplicación Windows ejecutable. Esta opción está disponible desde el cuadro de lista desplegable **Tipo de proyecto**.  
   
  **Proyecto de aplicación de consola**  
- Indica que el asistente generará un proyecto para una aplicación de consola. Esta opción está disponible desde el **tipo de proyecto** cuadro de lista desplegable.  
+ Indica que el asistente va a generar un proyecto para una aplicación de consola. Esta opción está disponible desde el cuadro de lista desplegable **Tipo de proyecto**.  
   
  **Proyecto de biblioteca de vínculos dinámicos (DLL)**  
- Indica que el asistente generará un proyecto para una aplicación de biblioteca de vínculos dinámicos vacía. Esta opción está disponible desde el **tipo de proyecto** cuadro de lista desplegable.  
+ Indica que el asistente va a generar un proyecto para una aplicación de biblioteca de vínculos dinámicos vacía. Esta opción está disponible desde el cuadro de lista desplegable **Tipo de proyecto**.  
   
  **Proyecto de biblioteca estática (LIB)**  
- Indica que el asistente generará un proyecto para una aplicación de biblioteca estática. Esta opción está disponible desde el **tipo de proyecto** cuadro de lista desplegable.  
+ Indica que el asistente va a generar un proyecto para una aplicación de biblioteca estática. Esta opción está disponible desde el cuadro de lista desplegable **Tipo de proyecto**.  
   
  **Agregar compatibilidad con ATL**  
- Agrega compatibilidad con ATL al nuevo proyecto.  
+ Agrega compatibilidad con ATL al proyecto nuevo.  
   
  **Agregar compatibilidad con MFC**  
- Agrega compatibilidad con MFC al nuevo proyecto.  
+ Agrega compatibilidad con MFC al proyecto nuevo.  
   
- **Agregar compatibilidad para Common Language Runtime**  
- Agrega compatibilidad para el nuevo proyecto de programación con CLR.  
+ **Agregar compatibilidad con Common Language Runtime**  
+ Agrega compatibilidad con la programación de CLR al proyecto nuevo.  
   
  **Common Language Runtime**  
- Especifica el nuevo proyecto para que sea compatible con las características CLR.  
+ Especifica el proyecto nuevo para que sea compatible con las características de CLR.  
   
- **Common Language Runtime (antigua sintaxis)**  
- Especifica el nuevo proyecto para que sea compatible con las extensiones administradas para la sintaxis de C++, que son la sintaxis de programación de CLR antes de Visual C++ 2005.  
+ **Common Language Runtime (sintaxis anterior)**  
+ Especifica el proyecto nuevo para que sea compatible con la sintaxis de Extensiones administradas para C++, que es la sintaxis de programación de CLR anterior a Visual C++ 2005.  
   
  **Usar el sistema de compilación externo**  
- Especifica que se use herramientas de compilación que no se incluyen en Visual Studio para generar el nuevo proyecto. Cuando se selecciona esta opción, puede especificar líneas de comandos de compilación en el **especifique los valores de configuración de Debug** y **especificar valores de configuración de Release** páginas.  
+ Especifica que se usen las herramientas de compilación que no se incluyen en Visual Studio para generar el proyecto nuevo. Cuando esta opción está seleccionada, puede especificar líneas de comandos de compilación en las páginas **Especificar valores de configuración Debug** y **Especificar valores de configuración Release**.  
   
 > [!NOTE]
->  Cuando el **sistema de compilación de uso externo** opción está activada, el IDE no genera el nuevo proyecto, por lo que el/d, / I, / Fi, /AI o /FU opciones no son necesarios para la compilación. Sin embargo, estas opciones se deben establecer correctamente en orden para que IntelliSense funcione correctamente.  
+>  Cuando se activa la opción **Usar el sistema de compilación externo**, el IDE no genera el proyecto nuevo, por lo que no se necesitan las opciones /D, /I, /FI, /AI o /FU para la compilación. Pero estas opciones se deben establecer de manera correcta para que IntelliSense funcione correctamente.  
   
 ## <a name="see-also"></a>Vea también  
- [Especifique los valores de configuración de Debug, crear nuevo proyecto de Asistente para archivos de código existentes](../ide/specify-debug-configuration-settings.md)   
+ [Especificar los valores de configuración de Debug, Asistente para crear nuevo proyecto de archivos de código fuente existentes](../ide/specify-debug-configuration-settings.md)   
  [Especificar los valores de configuración de Release, Asistente para crear nuevo proyecto de archivos de código fuente existentes](../ide/specify-release-configuration.md)

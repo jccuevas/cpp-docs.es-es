@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874738"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Crear un icono u otra imagen (Editor de imágenes para iconos)
 Puede crear una nueva imagen (mapa de bits, icono, cursor o barra de herramientas), a continuación, utilice el editor de imágenes para personalizar su apariencia. También puede crear un nuevo mapa de bits que se modelan después de un [plantilla](../windows/how-to-use-resource-templates.md).  

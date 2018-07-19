@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354072"
 ---
 # <a name="dual-interfaces-and-events"></a>Eventos e Interfaces duales
 Aunque es posible diseñar una interfaz de evento como dual, hay una serie de motivos de diseño para no hacerlo. La razón fundamental es que el origen del evento sólo desencadenará el evento a través de la vtable o `Invoke`, no ambos. Si el origen del evento desencadena el evento como una llamada de método vtable directa, la `IDispatch` métodos nunca se usará y está claro que la interfaz debería haber sido una interfaz vtable pura. Si el origen del evento desencadena el evento como una llamada a `Invoke`, nunca se usarán los métodos vtable y es que la interfaz debería haber sido una dispinterface. Si define las interfaces de eventos como duales, se necesitarán clientes para implementar parte de una interfaz que nunca se usará.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420946"
 ---
 # <a name="scope-resolution-operator-"></a>Operador de resolución de ámbito: ::
 El operador de resolución de ámbito `::` se usa para identificar los identificadores usados en distintos ámbitos y eliminar la ambigüedad entre ellos. Para obtener más información acerca del ámbito, consulte [ámbito](../cpp/scope-visual-cpp.md).  

@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96ccdd4ce5c49f18c12aa85060954fc97a3408b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc461a0a2325f768711f6d7529949ee24a1b4a25
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954889"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: Usar la clase CAsyncSocket
 Este artículo explica cómo utilizar la clase [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Tenga en cuenta que esta clase encapsula la API de Windows Sockets en un nivel muy bajo. `CAsyncSocket` está destinado a los programadores que conocer en detalle las comunicaciones de red, pero desean la comodidad de devoluciones de llamada para recibir notificaciones de eventos de la red. Según esta suposición, este artículo proporciona sólo la instrucción básica. Probablemente le convendrá usar `CAsyncSocket` si desea accesibilidad ofrece Windows Sockets de trabajar con varios protocolos de red en una aplicación MFC, pero no desea sacrificar la flexibilidad. También podría notar que puede obtener una mayor eficacia al programar las comunicaciones más directamente por sí mismo de las que podría utilizando el modelo alternativo más general de clase `CSocket`.  
@@ -52,13 +53,13 @@ Este artículo explica cómo utilizar la clase [CAsyncSocket](../mfc/reference/c
   
      [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]  
   
-     -o bien-  
+     O bien  
   
      [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]  
   
-     El primer constructor anterior crea un `CAsyncSocket` objeto en la pila. El segundo constructor crea un `CAsyncSocket` en el montón. La primera [crear](../mfc/reference/casyncsocket-class.md#create) llamada anterior utiliza los parámetros predeterminados para crear un socket de secuencia. El segundo **crear** llamada crea un socket de datagrama con una dirección y el puerto especificado. (Puede usar **crear** versión con cualquier método de construcción.)  
+     El primer constructor anterior crea un `CAsyncSocket` objeto en la pila. El segundo constructor crea un `CAsyncSocket` en el montón. La primera [crear](../mfc/reference/casyncsocket-class.md#create) llamada anterior utiliza los parámetros predeterminados para crear un socket de secuencia. El segundo `Create` llamada crea un socket de datagrama con una dirección y el puerto especificado. (Puede usar `Create` versión con cualquier método de construcción.)  
   
-     Los parámetros de **crear** son:  
+     Los parámetros de `Create` son:  
   
     -   Un "puerto": un entero corto.  
   
@@ -74,14 +75,14 @@ Este artículo explica cómo utilizar la clase [CAsyncSocket](../mfc/reference/c
   
 2.  Si el socket es un cliente, conecte el objeto socket a un servidor de socket, con [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect).  
   
-     -o bien-  
+     O bien  
   
      Si el socket es un servidor, configure el socket para empezar a escuchar (con [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen)) para los intentos de conexión desde un cliente. Al recibir una solicitud de conexión, acepte con [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).  
   
      Después de aceptar una conexión, puede realizar tareas como la validación de contraseñas.  
   
     > [!NOTE]
-    >  El **Accept** función miembro toma una referencia a una nueva y vacía `CSocket` objeto como su parámetro. Se debe crear este objeto antes de llamar a **Accept**. Si este objeto socket se sale del ámbito, se cierra la conexión. No llame a **crear** para este nuevo objeto de socket. Para obtener un ejemplo, vea el artículo [Windows Sockets: secuencia de operaciones](../mfc/windows-sockets-sequence-of-operations.md).  
+    >  El `Accept` función miembro toma una referencia a una nueva y vacía `CSocket` objeto como su parámetro. Se debe crear este objeto antes de llamar a `Accept`. Si este objeto socket se sale del ámbito, se cierra la conexión. No llame a `Create` para este nuevo objeto de socket. Para obtener un ejemplo, vea el artículo [Windows Sockets: secuencia de operaciones](../mfc/windows-sockets-sequence-of-operations.md).  
   
 3.  Para realizar comunicaciones con otros sockets mediante una llamada a la `CAsyncSocket` funciones de miembro del objeto que encapsulan las funciones de API de Windows Sockets.  
   
@@ -106,7 +107,7 @@ Este artículo explica cómo utilizar la clase [CAsyncSocket](../mfc/reference/c
   
  Para obtener definiciones de estos términos e información adicional, consulte [Windows Sockets: bloqueo](../mfc/windows-sockets-blocking.md), [Windows Sockets: orden de bytes](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: convertir cadenas](../mfc/windows-sockets-converting-strings.md) .  
   
- A pesar de estos problemas, clase **CAsycnSocket** puede ser la opción más adecuada para usted si la aplicación requiere toda la flexibilidad y control puede obtener. Si no es así, debe considerar el uso de la clase `CSocket` en su lugar. `CSocket` oculta una gran cantidad de detalle del usuario: TI surtidores de mensajes durante llamadas de bloqueo de Windows y proporciona acceso a `CArchive`, que administra las diferencias de orden de bytes y la conversión de cadenas.  
+ A pesar de estos problemas, clase `CAsycnSocket` puede ser la opción más adecuada para usted si la aplicación requiere toda la flexibilidad y control puede obtener. Si no es así, debe considerar el uso de la clase `CSocket` en su lugar. `CSocket` oculta una gran cantidad de detalle del usuario: TI surtidores de mensajes durante llamadas de bloqueo de Windows y proporciona acceso a `CArchive`, que administra las diferencias de orden de bytes y la conversión de cadenas.  
   
  Para obtener más información, consulte:  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243975"
 ---
 # <a name="compiler-error-c2850"></a>Error del compilador C2850
 'construcción': solamente se permite en el ámbito de archivo; no puede estar en una construcción anidada  

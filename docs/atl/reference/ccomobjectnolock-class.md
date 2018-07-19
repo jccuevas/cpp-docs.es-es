@@ -23,9 +23,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: cd7f9fa0ac67592c5fca805eaa4bb4ec4b0ca153
 ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361484"
 ---
 # <a name="ccomobjectnolock-class"></a>Clase CComObjectNoLock
 Esta clase implementa **IUnknown** para un objeto no agregado, pero no no incremento el módulo recuento de bloqueos en el constructor.  

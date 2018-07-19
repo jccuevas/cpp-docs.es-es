@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318066"
 ---
 # <a name="project-build-warning-prj0041"></a>Advertencia PRJ0041 al compilar el proyecto
 No se puede encontrar que falta la dependencia 'dependencia' archivo 'archivo'. El proyecto aún puede generarse, pero puede seguir apareciendo obsoletos hasta que se encuentra este archivo.  

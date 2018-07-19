@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891037"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Ver un menú como menú emergente
 Normalmente, cuando se trabaja en el editor de menús, se muestra un recurso de menú como barra de menús. Sin embargo, es posible que algunos recursos de menú se agreguen a la barra de menús de la aplicación mientras se ejecuta el programa.  

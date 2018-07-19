@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391683"
 ---
 # <a name="initializing-aggregate-types"></a>Inicializar tipos de agregado
 Un tipo “agregado” es una estructura, una unión o un tipo de matriz. Si un tipo agregado contiene miembros de tipos agregados, las reglas de inicialización se aplican de forma recursiva.  

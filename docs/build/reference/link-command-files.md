@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375290"
 ---
 # <a name="link-command-files"></a>Archivos de comandos de LINK
 Puede pasar argumentos de línea de comandos al vínculo de la forma de un archivo de comandos. Para especificar un archivo de comandos al vinculador, use la sintaxis siguiente:  

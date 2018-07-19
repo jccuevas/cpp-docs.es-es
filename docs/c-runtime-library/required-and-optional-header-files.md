@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410520"
 ---
 # <a name="required-and-optional-header-files"></a>Archivos de encabezado requeridos y opcionales
 La descripción de cada rutina de tiempo de ejecución incluye una lista de archivos de encabezado (.H) requeridos y opcionales para dicha rutina. Los archivos de encabezado requeridos deben incluirse para obtener la declaración de función de la rutina o una definición utilizada por otra rutina a la que se llama internamente. Los archivos de encabezado opcionales se suelen incluir para aprovechar las ventajas de las contantes, las definiciones de tipo o las macros alineadas predefinidas. En la tabla siguiente se indican algunos ejemplos de contenido de los archivos de encabezado opcionales:  

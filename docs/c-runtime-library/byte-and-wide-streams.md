@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389889"
 ---
 # <a name="byte-and-wide-streams"></a>Secuencias anchas y de bytes
 Una secuencia de bytes trata un archivo como una secuencia de bytes. Dentro del programa, la secuencia es la secuencia de bytes idéntica.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273045"
 ---
 # <a name="compiler-error-c3809"></a>Error del compilador C3809
 'class': un tipo administrado o WinRT no puede tener ninguna función, clase o interfaz friend  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376698"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Utilizar la versión de depuración para comprobar si se ha sobrescrito la memoria
 Para usar la versión de depuración para comprobar si se ha sobrescrito de memoria, se debe recompilar el proyecto para la depuración. A continuación, ir al principio de la aplicación `InitInstance` funcione y agregue la siguiente línea:  

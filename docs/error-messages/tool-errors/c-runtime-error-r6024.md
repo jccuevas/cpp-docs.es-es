@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302716"
 ---
 # <a name="c-runtime-error-r6024"></a>R6024 de Error de tiempo de ejecución de C
 No hay suficiente espacio para la tabla _onexit/atexit  

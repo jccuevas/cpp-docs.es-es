@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355130"
 ---
 # <a name="catlservicemoduletrun-function"></a>Función CAtlServiceModuleT:: Run
 **Ejecutar** contiene las llamadas a `PreMessageLoop`, `RunMessageLoop`, y `PostMessageLoop`. Después de que se llama, `PreMessageLoop` almacena primero el identificador de subproceso. del servicio El servicio utilizará este identificador para cerrarse a sí mismo mediante el envío de un **WM_QUIT** mensaje cuando se utiliza la función API de Win32, [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  

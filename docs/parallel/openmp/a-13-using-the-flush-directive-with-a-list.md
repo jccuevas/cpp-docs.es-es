@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690135"
 ---
 # <a name="a13---using-the-flush-directive-with-a-list"></a>A.13 Usar la directiva flush con una lista
 En el ejemplo siguiente se usa el `flush` la directiva para la sincronización de punto a punto de determinados objetos entre los pares de subprocesos:  

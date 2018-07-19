@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66171c5df636597a2ff6be0438b558dc418b72af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906d84d70b3bf2ae2a9da14ce9e5b06ed92d3730
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931039"
 ---
 # <a name="message-handling-and-mapping"></a>Controlar y asignar mensajes
 Esta serie de artículos describe cómo se procesan los mensajes y comandos mediante el marco de trabajo MFC y cómo se conecta a sus funciones de controlador.  
   
  En los programas tradicionales de Windows, los mensajes de Windows se controlan en una instrucción switch de gran tamaño en un procedimiento de ventana. En su lugar utiliza MFC [mapas de mensajes](../mfc/message-categories.md) para asignar mensajes a funciones miembro de clase distintos. Mapas de mensajes son más eficaces que las funciones virtuales para este propósito, y permiten mensajes ser controladas por el objeto de C++ más adecuado: aplicación, documento, vista y así sucesivamente. Solo se puede asignar un único mensaje o un intervalo de mensajes, identificadores de comando, o identificadores de controles.  
   
- **WM_COMMAND** mensajes, normalmente generados por los menús, botones de barra de herramientas o aceleradores, usar el mecanismo de mapa de mensajes. MFC define un estándar [enrutamiento](../mfc/command-routing.md) de mensajes de comando entre la aplicación, marco de ventana, vista y documentos activos en el programa. Puede invalidar esta ruta si es necesitan.  
+ WM_COMMAND (mensajes), se genera normalmente por los menús, botones de barra de herramientas o aceleradores: usar el mecanismo de mapa de mensajes. MFC define un estándar [enrutamiento](../mfc/command-routing.md) de mensajes de comando entre la aplicación, marco de ventana, vista y documentos activos en el programa. Puede invalidar esta ruta si es necesitan.  
   
  Mapas de mensajes también proporcionan una manera para actualizar los objetos de interfaz de usuario (por ejemplo, los menús y botones de barra de herramientas), habilitar o deshabilitar para satisfacer el contexto actual.  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418821"
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists (Instrucción)
 La instrucción `__if_not_exists` prueba si existe el identificador especificado. Si el identificador no existe, se ejecuta el bloque de instrucción especificado.  

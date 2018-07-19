@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380438"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Datos de desenredo para la compatibilidad con el control de excepciones y el depurador
 Esta sección describen las estructuras de datos necesarias para el control de excepciones y compatibilidad con la depuración.  

@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b2b2e8adccd77862b445d7e91df0b808967a31d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c105938fbca6abf98f46ff5c62c27bfa2b83a38e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037426"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Clase CMFCRibbonApplicationButton
 Implementa un botón especial situado en la esquina superior izquierda de la ventana de la aplicación. Cuando se hace clic, el botón abre un menú que contiene normalmente los comandos comunes del menú **Archivo** , tales como **Abrir**, **Guardar**y **Salir**.  
@@ -97,10 +98,10 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiBmpResID`  
+ [in] *uiBmpResID*  
  El identificador de recurso de la imagen para mostrar en el botón de la aplicación.  
   
- [in] `hBmp`  
+ [in] *hBmp*  
  Un identificador a un mapa de bits que se muestra en el botón de la aplicación.  
   
 ### <a name="remarks"></a>Comentarios  

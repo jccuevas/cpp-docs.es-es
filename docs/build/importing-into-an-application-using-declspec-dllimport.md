@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368840"
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>Importar a una aplicación mediante __declspec(dllimport)
 Se dice que un programa que utiliza símbolos públicos definidos por un archivo DLL importa dichos símbolos. Al crear archivos de encabezado para las aplicaciones que usan los archivos DLL para generar, utilice **__declspec (dllimport)** en las declaraciones de los símbolos públicos. La palabra clave **__declspec (dllimport)** funciona tanto si exporta con archivos .def o con la **__declspec (dllexport)** (palabra clave).  

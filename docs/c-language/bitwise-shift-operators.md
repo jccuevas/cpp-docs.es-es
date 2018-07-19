@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383259"
 ---
 # <a name="bitwise-shift-operators"></a>Operadores de desplazamiento bit a bit
 Los operadores de desplazamiento desplazan el primer operando a la izquierda (`<<`) o a la derecha (`>>`) el número de posiciones que especifica el segundo operando.  

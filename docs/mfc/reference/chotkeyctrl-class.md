@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 365f984385eab870d46b0772719346fa5d1ae383
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040160"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (clase)
 Proporciona la funcionalidad del control común de tecla de acceso rápido de Windows.  
@@ -72,7 +73,7 @@ class CHotKeyCtrl : public CWnd
   
  Este control (y, por tanto, la `CHotKeyCtrl` clase) está disponible solo para programas que se ejecutan en Windows 95 ó 98 y Windows NT versión 3.51 y posteriores.  
   
- Cuando el usuario ha elegido una combinación de teclas, la aplicación puede recuperar la combinación de teclas especificada desde el control y utilizar el **mensaje WM_SETHOTKEY** mensaje para establecer la tecla de acceso rápido en el sistema. Cada vez que el usuario presiona la tecla de acceso rápido a partir de ahí, desde cualquier parte del sistema, la ventana especificada en el **mensaje WM_SETHOTKEY** mensaje recibe un `WM_SYSCOMMAND` mensaje especificando **SC_HOTKEY**. Este mensaje activa la ventana que lo recibe. La tecla de acceso rápido sigue siendo válida hasta que la aplicación que llama **mensaje WM_SETHOTKEY** se cierra.  
+ Cuando el usuario ha elegido una combinación de teclas, la aplicación puede recuperar la combinación de teclas especificada desde el control y utilizar el **mensaje WM_SETHOTKEY** mensaje para establecer la tecla de acceso rápido en el sistema. Cada vez que el usuario presiona la tecla de acceso rápido a partir de ahí, desde cualquier parte del sistema, la ventana especificada en el **mensaje WM_SETHOTKEY** mensaje recibe un **WM_SYSCOMMAND** mensaje especificando **SC_HOTKEY** . Este mensaje activa la ventana que lo recibe. La tecla de acceso rápido sigue siendo válida hasta que la aplicación que llama **mensaje WM_SETHOTKEY** se cierra.  
   
  Este mecanismo es diferente de la compatibilidad de clave activa que depende la **WM_HOTKEY** mensaje y las ventanas [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) y [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) funciones.  
   
@@ -109,25 +110,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica el estilo del control clave activa. Aplicar cualquier combinación de estilos de control. Vea [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) en el SDK de Windows para obtener más información.  
   
- `rect`  
+ *Rect*  
  Especifica el tamaño y la posición del control clave activo. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [estructura RECT](../../mfc/reference/rect-structure1.md).  
   
- `pParentWnd`  
+ *pParentWnd*  
  Especifica la activa clave ventana del control primario, normalmente un [CDialog](../../mfc/reference/cdialog-class.md). No debe ser **NULL**.  
   
- `nID`  
+ *nID*  
  Especifica el identificador. del control clave activa  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero, si la inicialización se realizó correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Crear un `CHotKeyCtrl` objeto en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a **crear**, que crea el control de tecla de acceso rápido y lo adjunta a la `CHotKeyCtrl` objeto.  
+ Crear un `CHotKeyCtrl` objeto en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a `Create`, que crea el control de tecla de acceso rápido y lo adjunta a la `CHotKeyCtrl` objeto.  
   
- Si desea utilizar los estilos extendidos de windows con el control, llame a [CreateEx](#createex) en lugar de **crear**.  
+ Si desea utilizar los estilos extendidos de windows con el control, llame a [CreateEx](#createex) en lugar de `Create`.  
   
 ##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  Llame a esta función para crear un control (una ventana secundaria) y asociarlo con el `CHotKeyCtrl` objeto.  
@@ -142,19 +143,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwExStyle`  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el `dwExStyle` parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
+ *dwExStyle*  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica el estilo del control clave activa. Aplicar cualquier combinación de estilos de control. Para obtener más información, consulte [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) del SDK de Windows.  
   
- `rect`  
- Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de `pParentWnd`.  
+ *Rect*  
+ Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana que es primario del control.  
   
- `nID`  
+ *nID*  
  Identificador de ventana secundaria. del control  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -175,10 +176,10 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `wVirtualKeyCode`  
+ [out] *wVirtualKeyCode*  
  Código de tecla virtual de método abreviado de teclado. Para obtener una lista de códigos de tecla virtuales estándares, vea Winuser.h.  
   
- [out] `wModifiers`  
+ [out] *wModifiers*  
  Una combinación bit a bit (OR) de marcas que indican las teclas modificadoras en el método abreviado de teclado.  
   
  Los indicadores modificadores son los siguientes:  
@@ -219,14 +220,14 @@ static CString GetKeyName(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `vk`  
+ *VK*  
  El código de tecla virtual.  
   
  *fExtended*  
  Si el código de tecla virtual es una clave extendida, **TRUE**; en caso contrario **FALSE**.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El nombre localizado de la clave especificada por el `vk` parámetro. Si la clave no tiene ningún nombre asignado, `GetKeyName` devuelve una cadena vacía.  
+ El nombre localizado de la clave especificada por el *vk* parámetro. Si la clave no tiene ningún nombre asignado, `GetKeyName` devuelve una cadena vacía.  
   
 ### <a name="remarks"></a>Comentarios  
  Incluye el nombre de clave que devuelve esta función desde el controlador de teclado, por lo que puede instalar un controlador de teclado no localizada en una versión localizada de Windows y viceversa.  
@@ -244,10 +245,10 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `wVirtualKeyCode`  
+ [in] *wVirtualKeyCode*  
  Código de tecla virtual de método abreviado de teclado. Para obtener una lista de códigos de tecla virtuales estándares, vea Winuser.h.  
   
- [in] `wModifiers`  
+ [in] *wModifiers*  
  Una combinación bit a bit (OR) de marcas que indican las teclas modificadoras en el método abreviado de teclado.  
   
  Los indicadores modificadores son los siguientes:  
@@ -272,7 +273,7 @@ void SetRules(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `wInvalidComb`  
+ *wInvalidComb*  
  Matriz de marcas que especifica las combinaciones de teclas no válidas. Puede ser una combinación de los siguientes valores:  
   
 - `HKCOMB_A` ALT  
@@ -291,11 +292,11 @@ void SetRules(
   
 - `HKCOMB_SCA` MAYÚS + CTRL + ALT  
   
- `wModifiers`  
+ *wModifiers*  
  Matriz de marcas que especifica la combinación de teclas que se usará cuando el usuario especifica una combinación no válida. Para obtener más información sobre las marcas de modificador, consulte [GetHotKey](#gethotkey).  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando un usuario especifica una combinación de teclas no válida, tal como se define por marcas especificadas en `wInvalidComb`, el sistema usa el operador OR para combinar las claves especificadas por el usuario con las marcas especificadas en `wModifiers`. La combinación de teclas resultante se convierte en una cadena y, a continuación, se muestra en el control de tecla de acceso rápido.  
+ Cuando un usuario especifica una combinación de teclas no válida, tal como se define por marcas especificadas en *wInvalidComb*, el sistema usa el operador OR para combinar las claves especificadas por el usuario con las marcas especificadas en *wModifiers*. La combinación de teclas resultante se convierte en una cadena y, a continuación, se muestra en el control de tecla de acceso rápido.  
   
 ## <a name="see-also"></a>Vea también  
  [CWnd (clase)](../../mfc/reference/cwnd-class.md)   

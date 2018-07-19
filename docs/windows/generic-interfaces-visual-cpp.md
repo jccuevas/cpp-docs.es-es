@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878702"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfaces genéricas (Visual C++)
 Las restricciones que se aplican a parámetros de tipo en las clases son los mismos que los que se aplican a parámetros de tipo en interfaces (vea [clases genéricas (C++ / CLI)](../windows/generic-classes-cpp-cli.md)).  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857904"
 ---
 # <a name="assigning-access-keys-to-menu-commands"></a>Asignar teclas de acceso a comandos de menú
 Puede asignar una tecla de acceso, que permite al usuario seleccionar el menú con el teclado, para los menús y comandos de menú.  

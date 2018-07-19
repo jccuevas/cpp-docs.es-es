@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374429"
 ---
 # <a name="range"></a>/RANGE
 Modifica el resultado de dumpbin cuando se utiliza con otras opciones de dumpbin, como /RAWDATA o/DISASM.  

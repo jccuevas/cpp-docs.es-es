@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367438"
 ---
 # <a name="environment-variable-macros"></a>Macros de variables de entorno
 NMAKE hereda definiciones de macro para variables de entorno que existían antes del inicio de la sesión. Si se establece una variable en el entorno de sistema operativo, está disponible como una macro NMAKE. Los nombres heredados se convierten a mayúsculas. Herencia tiene lugar antes del preprocesamiento. Utilice la opción /E para hacer que las macros heredadas de variables de entorno reemplacen las macros con el mismo nombre en el archivo MAKE.  

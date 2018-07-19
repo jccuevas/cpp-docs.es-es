@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106402"
 ---
 # <a name="debugging-your-provider"></a>Depurar un proveedor
 Hay dos maneras de depurar el proveedor:  

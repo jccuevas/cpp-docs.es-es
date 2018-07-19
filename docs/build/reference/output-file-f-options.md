@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373028"
 ---
 # <a name="output-file-f-options"></a>/F (Opciones del archivo de resultados)
 Las opciones de archivo de salida crean o cambiar el nombre de los archivos de salida. Afectan a todos los archivos de origen de C o C++ especificados en la variable de entorno de CL, en la línea de comandos o en cualquier archivo de comandos.  

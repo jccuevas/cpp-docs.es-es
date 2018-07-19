@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871385"
 ---
 # <a name="deleting-menus-and-menu-commands"></a>Eliminar menús y comandos de menú
 ### <a name="to-delete-a-menu-or-menu-command"></a>Para eliminar un menú o un comando de menú  

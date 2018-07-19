@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3bde85e64fe8593ec2637e767e8c3c70d3b8200
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038082"
 ---
 # <a name="cmutex-class"></a>Clase CMutex
 Representa una "exclusión mutua", un objeto de sincronización que permite que un subproceso tenga acceso mutuamente exclusivo a un recurso.  
@@ -73,13 +74,13 @@ CMutex(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bInitiallyOwn`  
+ *bInitiallyOwn*  
  Especifica si el subproceso que crea el `CMutex` objeto inicialmente tiene acceso al recurso que se controla mediante la exclusión mutua.  
   
- `lpszName`  
- Nombre del objeto `CMutex`. Si existe otro exclusión mutua con el mismo nombre, `lpszName` debe especificarse si el objeto se utilizará en los límites del proceso. Si **NULL**, la exclusión mutua estará sin nombre. Si el nombre coincide con una exclusión mutua existente, el constructor crea un nuevo `CMutex` objeto que hace referencia a la exclusión mutua de ese nombre. Si el nombre coincide con un objeto de sincronización existente que no es una exclusión mutua, se producirá un error en la construcción.  
+ *lpszName*  
+ Nombre del objeto `CMutex`. Si existe otro exclusión mutua con el mismo nombre, *lpszName* debe especificarse si el objeto se utilizará en los límites del proceso. Si **NULL**, la exclusión mutua estará sin nombre. Si el nombre coincide con una exclusión mutua existente, el constructor crea un nuevo `CMutex` objeto que hace referencia a la exclusión mutua de ese nombre. Si el nombre coincide con un objeto de sincronización existente que no es una exclusión mutua, se producirá un error en la construcción.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Atributos de seguridad para el objeto de exclusión mutua. Para obtener una descripción completa de esta estructura, vea [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) del SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  

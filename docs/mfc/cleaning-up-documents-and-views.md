@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341331"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Limpiar documentos y vistas
 Cuando se cierra un documento, el marco de trabajo llama primero su [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) función miembro. Si ha asignado memoria en el montón en el transcurso de la operación del documento, `DeleteContents` es el mejor lugar para desasignarla.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367165"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Compatibilidad del código antiguo con puntos flotantes (Visual C++)
 Los registros MMX y pila de punto flotante (MM0-MM7/ST0-ST7) se conservan en cambios de contexto.  No hay ninguna convención de llamada explícita para estos registros.  El uso de estos registros está estrictamente prohibido en código en modo kernel.  

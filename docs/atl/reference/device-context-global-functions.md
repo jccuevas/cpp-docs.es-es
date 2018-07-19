@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358594"
 ---
 # <a name="device-context-global-functions"></a>Funciones globales de contexto de dispositivo
 Esta función crea un contexto de dispositivo para un dispositivo determinado.  

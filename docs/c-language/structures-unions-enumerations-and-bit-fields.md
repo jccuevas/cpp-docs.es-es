@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384723"
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>Estructuras, uniones, enumeraciones y campos de bits
 -   [Acceso incorrecto a una unión](../c-language/improper-access-to-a-union.md)  

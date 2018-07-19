@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318992"
 ---
 # <a name="project-build-error-prj0027"></a>Error PRJ0027 al compilar el proyecto
 Mensaje de registro de Unicode 'contents' incluye contenido que no se puede traducir a la página de códigos ANSI del usuario.  

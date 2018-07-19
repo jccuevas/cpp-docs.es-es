@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379637"
 ---
 # <a name="status-bars"></a>Barras de estado
 Barras de estado ofrecen a la aplicación un lugar donde se muestran mensajes e información útil al usuario sin interrumpir el trabajo del usuario. Normalmente se muestra en la parte inferior de una ventana, barras de estado y tienen "paneles", que incluyen "indicadores" y "línea de mensaje". Los indicadores ofrecen el estado de aspectos tales como BLOQ DESPL, si está activada la grabación de macros, y así sucesivamente. La línea del mensaje en la barra de estado puede mostrar información sobre el estado del programa o un elemento de menú o botón de barra de herramientas hacia el usuario con el mouse.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34246238"
 ---
 # <a name="visual-c-language-conformance"></a>Conformidad del lenguaje Visual C++
 

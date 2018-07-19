@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089917"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Diseñar y crear una vista de registros (acceso a datos MFC)
 Puede crear la clase de vista de registros con el [Asistente para aplicaciones MFC](../mfc/reference/database-support-mfc-application-wizard.md). Si utiliza un asistente para aplicaciones, este crea la clase de vista de registros y un recurso de plantilla de cuadro de diálogo (sin controles). Debe utilizar el editor de cuadros de diálogo de Visual C++ para agregar controles al recurso de plantilla de cuadro de diálogo. Por otro lado, si utiliza **Agregar clase**, debe crear primero el recurso de plantilla de cuadro de diálogo en el cuadro de diálogo editor y, a continuación, crear la clase de vista de registros.  

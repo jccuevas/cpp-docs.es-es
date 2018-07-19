@@ -1,7 +1,7 @@
 ---
 title: Agregar un Control (ATL Tutorial, parte 2) | Documentos de Microsoft
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238713"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Agregar un control (Tutorial de ATL, Parte 2)
 En este paso, agregará un control al proyecto, lo compilará y lo probará en una página web.  
@@ -25,7 +26,7 @@ En este paso, agregará un control al proyecto, lo compilará y lo probará en u
   
 #### <a name="to-add-an-object-to-an-atl-project"></a>Para agregar un objeto a un proyecto ATL  
   
-1.  En la Vista de clases, haga clic con el botón secundario en el proyecto Polygon.  
+1.  En **el Explorador de soluciones**, haga clic en el proyecto Polygon.  
   
 2.  Seleccione **agregar** en el menú contextual y haga clic en **nuevo elemento** en el submenú.  
   
@@ -43,8 +44,8 @@ En este paso, agregará un control al proyecto, lo compilará y lo probará en u
 |-----------|--------------|  
 |**Nombre corto**|El nombre que especificó para el control.|  
 |**Clase**|El nombre de la clase de C++ creada para implementar el control.|  
-|**archivo .h**|El archivo creado para contener la definición de la clase de C++.|  
-|**archivo .cpp**|El archivo creado para contener la implementación de la clase de C++.|  
+|**Archivo .h**|El archivo creado para contener la definición de la clase de C++.|  
+|**Archivo .cpp**|El archivo creado para contener la implementación de la clase de C++.|  
 |**(Coclase)**|Nombre de la clase de componente para este control.|  
 |**Interface**|El nombre de la interfaz donde el control implementará sus métodos y propiedades personalizados.|  
 |**Type**|Una descripción del control.|  

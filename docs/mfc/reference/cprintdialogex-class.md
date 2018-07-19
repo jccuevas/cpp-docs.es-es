@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e005d18b57a4ada2c1a3aad605b7724f17a62347
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079103"
 ---
 # <a name="cprintdialogex-class"></a>Clase CPrintDialogEx
 Encapsula los servicios proporcionados por la hoja de propiedades de impresión de Windows.  
@@ -145,10 +146,10 @@ CPrintDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwFlags`  
+ *dwFlags*  
  Una o varias marcas que puede usar para personalizar la configuración del cuadro de diálogo combinada mediante el operador OR bit a bit. Por ejemplo, el **PD_ALLPAGES** marca establece el intervalo de impresión predeterminado para todas las páginas del documento. Consulte la [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) estructura en el SDK de Windows para obtener más información sobre estas marcas.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana primaria o propietaria del cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -247,7 +248,7 @@ CString GetDriverName() const;
  A `CString` especifica el nombre del controlador definido por el sistema.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice un puntero a la `CString` objeto devuelto por `GetDriverName` como el valor de `lpszDriverName` en una llamada a [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
+ Utilice un puntero a la `CString` objeto devuelto por `GetDriverName` como el valor de *lpszDriverName* en una llamada a [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
  Llame a esta función después de llamar a [DoModal](#domodal) o [GetDefaults](#getdefaults) para recuperar el nombre del puerto de impresora actualmente seleccionada.  

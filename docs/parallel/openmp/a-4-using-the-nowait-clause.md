@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689810"
 ---
 # <a name="a4---using-the-nowait-clause"></a>A.4 Usar la cláusula nowait
 Si hay varios bucles independientes dentro de una región paralela, puede usar el `nowait` cláusula ([sección 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) en página 11) para evitar la barrera implícita al final de la `for` directiva, como se indica a continuación:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354600"
 ---
 # <a name="current-time-general-purpose-classes"></a>Hora actual: Clases de propósito General
 El siguiente procedimiento muestra cómo crear un `CTime` objeto e inicializarlo con la hora actual.  

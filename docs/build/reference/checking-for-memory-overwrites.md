@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369856"
 ---
 # <a name="checking-for-memory-overwrites"></a>Comprobar si se ha sobrescrito la memoria
 Si se produce una infracción de acceso en una llamada a una función de manipulación de montón, es posible que el programa haya dañado el montón. Un síntoma común de esta situación sería:  

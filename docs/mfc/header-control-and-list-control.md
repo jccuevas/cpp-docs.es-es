@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a84386781bf28edb9223f608fa7a64040eb68379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: acee0508243f468f41c645a0cde825ca7c828657
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931599"
 ---
 # <a name="header-control-and-list-control"></a>Control de encabezado y control de lista
 En la mayoría de los casos, usará el control de encabezado que está incrustado en un [CListCtrl](../mfc/reference/clistctrl-class.md) o [CListView](../mfc/reference/clistview-class.md) objeto. Sin embargo, hay casos donde un objeto de control de encabezado independiente es deseable, como la manipulación de datos, organizados en filas o columnas, con un [CView](../mfc/reference/cview-class.md)-objeto derivado. En estos casos, necesita mayor control sobre la apariencia y el comportamiento predeterminado de un control de encabezado incrustado.  
@@ -31,11 +32,11 @@ En la mayoría de los casos, usará el control de encabezado que está incrustad
  En el caso común que desea que un control de encabezado para proporcionar estándar, comportamiento predeterminado, puede querer usar [CListCtrl](../mfc/reference/clistctrl-class.md) o [CListView](../mfc/reference/clistview-class.md) en su lugar. Utilice `CListCtrl` cuando desee que la funcionalidad de un control de encabezado predeterminado, incrustado en un control común de vista de lista. Use [CListView](../mfc/reference/clistview-class.md) cuando desee que la funcionalidad de un control de encabezado predeterminado, incrustado en un objeto de vista.  
   
 > [!NOTE]
->  Estos controles sólo incluyen un control de encabezado integrado si el control de vista de lista se crea utilizando el `LVS_REPORT` estilo.  
+>  Estos controles sólo incluyen un control de encabezado integrado si el control de vista de lista se crea utilizando el **LVS_REPORT** estilo.  
   
  En la mayoría de los casos, la apariencia del control de encabezado incrustado se puede modificar cambiando los estilos del control de vista de lista que lo contiene. Además, puede obtenerse información sobre el control de encabezado a través de funciones miembro del control de vista de lista primario. Sin embargo, para un control total y acceso a los atributos y estilos del control de encabezado incrustado, se recomienda obtener un puntero al objeto de control de encabezado.  
   
- El objeto de control de encabezado incrustado son accesibles desde **CListCtrl** o `CListView` con una llamada a las respectivas clases `GetHeaderCtrl` función miembro. El código siguiente se muestra cómo hacerlo:  
+ El objeto de control de encabezado incrustado son accesibles desde `CListCtrl` o `CListView` con una llamada a las respectivas clases `GetHeaderCtrl` función miembro. El código siguiente se muestra cómo hacerlo:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]  
   

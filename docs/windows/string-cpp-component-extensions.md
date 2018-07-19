@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889253"
 ---
 # <a name="string--c-component-extensions"></a>Cadena (Extensiones de componentes de C++)
 El compilador de Visual C++ admite *cadenas*, que son objetos que representan texto como una secuencia de caracteres. Visual C++ admite variables de cadena, cuyo valor es implícito, y literales, cuyo valor es una cadena entre comillas explícita.  

@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f8aaf1e485d7ba38a561639f81b36d494a98f2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930438"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Controles ActiveX MFC: Páginas de propiedades
 Páginas de propiedades permiten que un usuario del control ActiveX ver y cambiar las propiedades del control ActiveX. Estas propiedades son accesibles mediante la invocación de un cuadro de diálogo de propiedades de control, que contiene uno o más páginas de propiedades que proporcionan una interfaz gráfica personalizada para ver y editar las propiedades del control.  
@@ -79,13 +80,13 @@ Cuadro de diálogo de propiedades
   
 2.  Haga doble clic en el **diálogo** icono de directorio.  
   
-3.  Abra la **IDD_PROPPAGE_SAMPLE** cuadro de diálogo.  
+3.  Abra el cuadro de diálogo IDD_PROPPAGE_SAMPLE.  
   
      El Asistente para controles ActiveX se anexa el nombre del proyecto al final del identificador de cuadro de diálogo, en este caso, ejemplo.  
   
 4.  Arrastre y coloque el control seleccionado en el cuadro de herramientas en el área del cuadro de diálogo.  
   
-5.  En este ejemplo, un texto con control de la etiqueta "Caption:" y un control de cuadro de edición con un **IDC_CAPTION** identificador son suficientes.  
+5.  En este ejemplo, un texto con control de la etiqueta "Caption:" y un control de cuadro de edición con un identificador IDC_CAPTION son suficientes.  
   
 6.  Haga clic en **guardar** en la barra de herramientas para guardar los cambios.  
   
@@ -98,9 +99,9 @@ Cuadro de diálogo de propiedades
   
  [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]  
   
- Esta función asocia la página de propiedades `m_caption` variable de miembro con el título con el `DDP_TEXT` función.  
+ Esta función asocia la página de propiedades *m_caption* variable de miembro con el título con el `DDP_TEXT` función.  
   
- Una vez que el control de la página de propiedades insertado, es necesario establecer un vínculo entre el control de la página de propiedades, `IDC_CAPTION`, y el uso de la propiedad del control real, título, el **DDP_Text** funcione como se describió anteriormente.  
+ Una vez que el control de la página de propiedades insertado, es necesario establecer un vínculo entre el control de la página de propiedades, IDC_CAPTION y la propiedad del control real, el título, usando la `DDP_Text` funcione como se describió anteriormente.  
   
  [Páginas de propiedades](../mfc/reference/property-pages-mfc.md) están disponibles para otros tipos de control de cuadro de diálogo, por ejemplo, casillas, botones de radio y cuadros de lista. La tabla siguiente muestra el conjunto completo de la página de propiedades **DDP_** funciones y sus fines:  
   
@@ -116,7 +117,7 @@ Cuadro de diálogo de propiedades
 |`DDP_LBString`|La cadena seleccionada en un cuadro de lista con una propiedad de control. La cadena seleccionada puede comenzar con las mismas letras como valor de la propiedad, pero no necesita coincidir totalmente.|  
 |`DDP_LBStringExact`|La cadena seleccionada en un cuadro de lista con una propiedad de control. La cadena seleccionada y el valor de cadena de la propiedad deben coincidir exactamente.|  
 |`DDP_Radio`|Un botón de opción con una propiedad de control.|  
-|**DDP_TEXT**|Texto con una propiedad de control.|  
+|`DDP_Text`|Texto con una propiedad de control.|  
   
 ## <a name="see-also"></a>Vea también  
  [Controles ActiveX de MFC](../mfc/mfc-activex-controls.md)   

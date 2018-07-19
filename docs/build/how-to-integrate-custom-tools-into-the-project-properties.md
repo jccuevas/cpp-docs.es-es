@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368907"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Cómo: Integrar herramientas personalizadas en las propiedades del proyecto
 Puede agregar opciones de la herramienta personalizada a Visual Studio **páginas de propiedades** ventana mediante la creación de un archivo de esquema XML subyacente.  

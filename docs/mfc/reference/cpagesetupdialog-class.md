@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd96f0240f8dd97fdda54fd2d00231db14ae3d47
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079188"
 ---
 # <a name="cpagesetupdialog-class"></a>Clase CPageSetupDialog
 Encapsula los servicios proporcionados por el cuadro de diálogo Configurar página OLE común de Windows con compatibilidad adicional para configurar y modificar márgenes de impresión.  
@@ -122,7 +123,7 @@ CPageSetupDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwFlags`  
+ *dwFlags*  
  Una o varias marcas que puede usar para personalizar la configuración del cuadro de diálogo. Los valores se pueden combinar mediante el operador OR bit a bit. Estos valores tienen los significados siguientes:  
   
 - **PSD_DEFAULTMINMARGINS** establece el ancho mínimo permitido para los márgenes de página coincidir con los mínimos de la impresora. Esta marca se pasa por alto si el **PSD_MARGINS** y **PSD_MINMARGINS** marcas también se especifican.  
@@ -161,7 +162,7 @@ CPageSetupDialog(
   
 - **PSD_DISABLEPAGEPAINTING** deshabilita el área de dibujo del cuadro de diálogo.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Puntero al elemento primario o el propietario del cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -212,7 +213,7 @@ CString GetDeviceName() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El nombre de dispositivo usado por la **CPageSetupDialog** objeto.  
+ El nombre de dispositivo usado por la `CPageSetupDialog` objeto.  
   
 ##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  Llame a esta función después de llamar a `DoModal` para recuperar información sobre el contexto de dispositivo de impresora de la `CPageSetupDialog` objeto.  
@@ -300,10 +301,10 @@ virtual UINT OnDrawPage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Puntero al contexto de dispositivo de impresora.  
   
- `nMessage`  
+ *nha*  
  Especifica un mensaje que indica el área de la página que se está dibujando actualmente. Puede ser uno de los siguientes:  
   
 - **WM_PSD_FULLPAGERECT** el área de página completa.  
@@ -318,7 +319,7 @@ virtual UINT OnDrawPage(
   
 - **WM_PSD_YAFULLPAGERECT** área para obtener una representación de la dirección de devolución. Esta área se extiende hasta los bordes del área de página de ejemplo.  
   
- `lpRect`  
+ *lpRect*  
  Puntero a un [CRect](../../atl-mfc-shared/reference/crect-class.md) o [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) objeto que contiene las coordenadas del área de dibujo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -327,11 +328,11 @@ virtual UINT OnDrawPage(
 ### <a name="remarks"></a>Comentarios  
  Esta imagen, a continuación, se muestra como parte del cuadro de diálogo Configurar página OLE común. La implementación predeterminada dibuja una imagen de una página de texto.  
   
- Reemplace esta función para personalizar el dibujo de un área específica de la imagen o toda la imagen. Puede hacerlo mediante el uso de un `switch` instrucción con **caso** instrucciones comprobando el valor de `nMessage`. Por ejemplo, para personalizar la representación del contenido de la imagen de página, podría utilizar el código de ejemplo siguiente:  
+ Reemplace esta función para personalizar el dibujo de un área específica de la imagen o toda la imagen. Puede hacerlo mediante el uso de un **cambiar** instrucción con **caso** instrucciones comprobando el valor de *nmensaje*. Por ejemplo, para personalizar la representación del contenido de la imagen de página, podría utilizar el código de ejemplo siguiente:  
   
  [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- Tenga en cuenta que no es necesario controlar todos los casos de `nMessage`. Puede controlar un componente de la imagen, varios componentes de la imagen o el área completa.  
+ Tenga en cuenta que no es necesario controlar todos los casos de *nmensaje*. Puede controlar un componente de la imagen, varios componentes de la imagen o el área completa.  
   
 ##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  Llamado por el marco de trabajo antes de dibujar la imagen en pantalla de una página impresa.  
@@ -347,7 +348,7 @@ virtual UINT PreDrawPage(
  *wPaper*  
  Especifica un valor que indica el tamaño del papel. Este valor puede ser uno de los **DMPAPER_** valores aparecen en la descripción de la [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) estructura.  
   
- `wFlags`  
+ *wFlags*  
  Indica la orientación del papel o sobre, y si la impresora es una matriz de puntos o el dispositivo HPPCL (lenguaje de Control de impresora de Hewlett Packard). Este parámetro puede tener uno de los valores siguientes:  
   
 -   0 x 001 de papel en modo horizontal (matriz de puntos)  
@@ -366,7 +367,7 @@ virtual UINT PreDrawPage(
   
 -   0x01f sobre en modo vertical (matriz de puntos)  
   
- `pPSD`  
+ *PSD*  
  Puntero a un **PAGESETUPDLG** estructura. Para obtener más información sobre [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), consulte el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  

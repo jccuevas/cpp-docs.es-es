@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385158"
 ---
 # <a name="translation-diagnostics"></a>Traducción: Diagnóstico
 **ANSI 2.1.1.3** Cómo se identifica un diagnóstico  

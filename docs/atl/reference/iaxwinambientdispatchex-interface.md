@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358145"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>Interfaz IAxWinAmbientDispatchEx
 Esta interfaz implementa las propiedades de ambiente complementarios para un control hospedado.  

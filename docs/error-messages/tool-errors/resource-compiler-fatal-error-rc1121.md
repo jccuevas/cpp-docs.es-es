@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317562"
 ---
 # <a name="resource-compiler-fatal-error-rc1121"></a>Error irrecuperable del compilador de recursos RC1121
 Error de E/S al leer el archivo  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364322"
 ---
 # <a name="caxwindow-class"></a>Clase CAxWindow
 Esta clase proporciona métodos para manipular una ventana de alojar un control ActiveX.  

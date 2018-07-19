@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345002"
 ---
 # <a name="hierarchy-chart-categories"></a>Categorías de gráfico de jerarquías
 ![Categorías de gráfico de jerarquías de MFC](../mfc/media/vc369r1.png "vc369r1")  

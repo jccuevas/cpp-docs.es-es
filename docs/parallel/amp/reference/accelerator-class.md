@@ -55,6 +55,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694763"
 ---
 # <a name="accelerator-class"></a>accelerator (Clase)
 Un acelerador es una capacidad de hardware que está optimizada para el cálculo de datos en paralelo. Una tecla de aceleración puede ser un dispositivo conectado a un bus PCIe (por ejemplo, una GPU) o puede ser una instrucción extendida establecer en la CPU principal.  

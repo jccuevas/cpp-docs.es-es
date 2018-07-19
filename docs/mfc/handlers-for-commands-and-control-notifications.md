@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6492c6ecc4c21c5c978ad031fed7182f2acee4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60c66beb3c0c8874bd3d678bfc4331dc766c443a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929136"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Controladores de comandos y notificaciones de control
 No hay ningún controlador predeterminado para comandos o mensajes de notificación de control. Por lo tanto, se enlazan solo por la convención de nomenclatura de los controladores para estas categorías de mensajes. Al asignar la notificación de comando o un control a un controlador, la ventana Propiedades propone un nombre basado en el código de Id. o notificación de control de comandos. Puede aceptar el nombre propuesto, cambiarlo o reemplazarlo.  
@@ -39,7 +40,7 @@ No hay ningún controlador predeterminado para comandos o mensajes de notificaci
   
  [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
   
- Puede asignar un Id. de este comando `IDC_MY_BUTTON` porque es equivalente a un objeto de interfaz de usuario específica de la aplicación.  
+ Puede asignar un Id. de este comando **IDC_MY_BUTTON** porque es equivalente a un objeto de interfaz de usuario específica de la aplicación.  
   
  Las dos categorías de mensajes no toman ningún argumento y no devuelven ningún valor.  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360167"
 ---
 # <a name="when-do-i-need-to-call-atlaxwinterm"></a>¿Cuándo es necesario llamar a AtlAxWinTerm?
 [AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm) anula el registro de la **"AtlAxWin80"** clase de ventana. Debería llamar a esta función (si ya no tiene que crear ventanas host) después de que se hayan destruido todas las ventanas de host existente. Si no llama a esta función, la clase de ventana será anular el registro automáticamente cuando finaliza el proceso.  

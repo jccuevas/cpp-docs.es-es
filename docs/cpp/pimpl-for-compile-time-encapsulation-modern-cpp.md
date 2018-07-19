@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420160"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl para encapsulación en tiempo de compilación (C++ moderno)
 El *pimpl locución* es una técnica de C++ moderna para ocultar la implementación, para minimizar el acoplamiento and para separar interfaces. Pimpl es la abreviatura de "puntero a la implementación". Ya puede estar familiarizado con el concepto, pero saber por otros nombres como expresión sonrisa Cat o Firewall de compilador.  

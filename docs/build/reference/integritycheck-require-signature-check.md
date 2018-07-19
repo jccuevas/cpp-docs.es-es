@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374250"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (Requerir control de signatura)
 Especifica que la firma digital de la imagen binaria debe estar activada en tiempo de carga.  

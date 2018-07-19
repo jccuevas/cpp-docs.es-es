@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baeb204234a6df50be062c5944e9b257cb2d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041810"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>Clase CMFCRibbonQuickAccessToolBarDefaultState
 Una clase auxiliar que administra el estado predeterminado para la barra de herramientas de acceso rápido que se coloca en la barra de cinta ( [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md)).  
@@ -79,10 +80,10 @@ void AddCommand(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `[in] uiCmd`  
+ *[in] uiCmd*  
  Especifica el identificador del comando.  
   
- `[in] bIsVisible`  
+ *[in] bIsVisible*  
  Establece la visibilidad del comando cuando la barra de herramientas de acceso rápido se encuentra en el estado predeterminado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -96,7 +97,7 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `src`  
+ [in] *src*  
  Una referencia al origen de `CMFCRibbonQuickAccessToolBarDefaultState` objeto que lo copien.  
   
 ### <a name="remarks"></a>Comentarios  

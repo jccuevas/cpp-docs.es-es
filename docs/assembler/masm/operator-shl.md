@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055936"
 ---
 # <a name="operator-shl"></a>Operador SHL
 Devuelve el resultado de desplazar los bits de *expresión* izquierdo *recuento* número de bits.  

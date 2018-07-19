@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422389"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formato de cadena y de E/S (C++ moderno)
 C++ [iostreams](../standard-library/iostream.md) tienen la capacidad de E/S de cadena con formato. Por ejemplo, el código siguiente muestra cómo establecer cout para dar formato a un número entero y de salida en formato hexadecimal, en primer lugar guardar desactivar el estado actual y volver a configurar posteriormente, porque una vez que el formato de estado pasa a cout, permanece de este modo hasta que se modifiquen, no solo para una línea de código.  

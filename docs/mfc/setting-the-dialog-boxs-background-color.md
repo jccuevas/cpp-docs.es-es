@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114a1b53e55d6e341c09d2437caa8d26b9c1b0fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29870af50c549f432e87b6cc39be50d41fa40240
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951222"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Configurar el color de fondo de un cuadro de diálogo
-Puede establecer el color de fondo de los cuadros de diálogo controlando `WM_CTLCOLOR` mensajes de la ventana de cuadro de diálogo. El color establecido se utiliza para el cuadro de diálogo especificado.  
+Puede establecer el color de fondo de los cuadros de diálogo controlando los mensajes WM_CTLCOLOR de la ventana del cuadro de diálogo. El color establecido se utiliza para el cuadro de diálogo especificado.  
   
 ## <a name="see-also"></a>Vea también  
  [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)   

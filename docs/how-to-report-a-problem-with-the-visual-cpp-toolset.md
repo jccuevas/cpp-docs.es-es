@@ -1,6 +1,6 @@
 ---
 title: Cómo notificar un problema con el conjunto de herramientas de Visual C++ | Microsoft Docs
-ms.date: 5/11/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0044a0da7b1ac4ad052eb120ccfb1f7425d2c0e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34336321"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322373"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Cómo notificar un problema con la documentación o el conjunto de herramientas de Visual C++
 
@@ -358,7 +358,7 @@ Cree la reproducción como un proyecto IDE mínimo, comprima toda la estructura 
 Puede enviarnos el informe de dos maneras. Puede usar la [herramienta integrada Notificar un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) de Visual Studio o las páginas de la [comunidad de desarrolladores de Visual Studio](https://developercommunity.visualstudio.com/). También puede ir directamente a las páginas de nuestra comunidad de desarrolladores; para ello, seleccione el botón **Product feedback** (Comentario sobre el producto) situado en la parte inferior de esta página. La elección depende de si quiere utilizar las herramientas integradas en el IDE para realizar capturas de pantalla y organizar el informe para su publicación en las páginas de la comunidad de desarrolladores o si prefiere usar el sitio web directamente.
 
 > [!NOTE]
-> Independientemente de cómo envíe el informe, Microsoft respeta su privacidad. Microsoft se compromete a cumplir todas las leyes y los reglamentos sobre privacidad de datos. Para obtener información sobre cómo tratamos los datos que nos envía, vea la [Declaración de privacidad de la familia de productos de Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
+> Independientemente de cómo envíe el informe, Microsoft respeta su privacidad. Microsoft se compromete a cumplir todas las leyes y los reglamentos sobre privacidad de datos. Para obtener información sobre cómo tratamos los datos que nos envía, vea la [Declaración de privacidad de Microsoft](https://privacy.microsoft.com/privacystatement).
 
 ### <a name="use-the-report-a-problem-tool"></a>Usar la herramienta Notificar un problema
 

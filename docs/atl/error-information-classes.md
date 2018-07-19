@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354222"
 ---
 # <a name="error-information-classes"></a>Clases de información de error
 La clase siguiente indica cómo se controla la información de error:  

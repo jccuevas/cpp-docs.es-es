@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367698"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Exportar funciones desde un archivo DLL por ordinal en lugar de por nombre
 La manera más sencilla de exportar funciones desde el archivo DLL es exportarlas por nombre. Esto es lo que ocurre cuando se usa **__declspec (dllexport)**, por ejemplo. Pero en su lugar, puede exportar funciones por ordinal. Con esta técnica, debe utilizar un archivo .def en lugar de **__declspec (dllexport)**. Para especificar el valor ordinal de la función, anexe su ordinal al nombre de función en el archivo .def. Para obtener información acerca de cómo especificar ordinales, vea [exportar desde un archivo DLL mediante archivos .def](../build/exporting-from-a-dll-using-def-files.md).  

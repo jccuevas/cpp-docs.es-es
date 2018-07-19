@@ -15,6 +15,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376874"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE (incluir todos los archivos de objeto de biblioteca)
 Fuerza al vinculador que incluya todos los archivos de objeto en la biblioteca estática en el archivo ejecutable vinculado.  

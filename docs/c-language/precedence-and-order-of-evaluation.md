@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392190"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Precedencia y orden de evaluación
 La prioridad y asociatividad de los operadores de C afectan a la agrupación y evaluación de los operandos en las expresiones. La prioridad de un operador solo es significativa si otros operadores con una prioridad mayor o menor están presentes. Las expresiones con operadores de mayor prioridad se evalúan primero. La prioridad también se puede describir con la palabra “enlace”. Se dice que los operadores con mayor prioridad tienen un enlace más estricto.  

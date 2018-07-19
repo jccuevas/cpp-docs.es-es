@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691357"
 ---
 # <a name="a29---use-of-work-sharing-constructs-inside-a-critical-construct"></a>A.29 Uso de construcciones de uso compartido en una construcción critical
 En el ejemplo siguiente se muestra cómo utilizar una construcción de uso compartido dentro de un `critical` construir. En este ejemplo es compatible porque el uso compartido de construir y `critical` construcción no se enlaza a la misma región paralela.  

@@ -68,11 +68,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b5ae20f06cee55a13327d5bbe7ad058047b53c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30e6ac1f1ed780415e7f0a10d82175c2b287fb29
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953901"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase (clase)
 Representa una conexión a una base de datos, a través de la que puede trabajar con los datos.  
@@ -89,7 +90,7 @@ class CDaoDatabase : public CObject
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CDaoDatabase::CDaoDatabase](#cdaodatabase)|Construye un objeto `CDaoDatabase`. Llame a **abiertos** para conectar el objeto a una base de datos.|  
+|[CDaoDatabase::CDaoDatabase](#cdaodatabase)|Construye un objeto `CDaoDatabase`. Llame a `Open` para conectar el objeto a una base de datos.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -103,13 +104,13 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::DeleteQueryDef](#deletequerydef)|Elimina un objeto de definición de consulta guardado en QueryDefs (colección) de la base de datos.|  
 |[CDaoDatabase::DeleteRelation](#deleterelation)|Elimina a una relación existente entre las tablas de la base de datos.|  
 |[CDaoDatabase::DeleteTableDef](#deletetabledef)|Elimina la definición de una tabla en la base de datos. Esto elimina la tabla real y todos sus datos.|  
-|[CDaoDatabase::Execute](#execute)|Ejecuta una consulta de acción. Al llamar a **Execute** para una consulta que devuelve resultados produce una excepción.|  
+|[CDaoDatabase::Execute](#execute)|Ejecuta una consulta de acción. Al llamar a `Execute` para una consulta que devuelve resultados produce una excepción.|  
 |[CDaoDatabase::GetConnect](#getconnect)|Devuelve la cadena de conexión utilizada para conectar el `CDaoDatabase` objeto a una base de datos. Se utiliza para ODBC.|  
 |[CDaoDatabase::GetName](#getname)|Devuelve el nombre de la base de datos actualmente en uso.|  
 |[CDaoDatabase::GetQueryDefCount](#getquerydefcount)|Devuelve el número de las consultas definidas para la base de datos.|  
 |[CDaoDatabase::GetQueryDefInfo](#getquerydefinfo)|Devuelve información sobre una consulta específica definida en la base de datos.|  
-|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|Devuelve el número de segundos después de la base de datos de operaciones de consulta agotará el tiempo. Afecta a todas las posterior abrir, agregar nuevas, actualizar y editar las operaciones y realizar otras operaciones en orígenes de datos ODBC (sólo) como **Execute** llamadas.|  
-|[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|Devuelve el número de registros afectado por la actualización más reciente, editar o agregar la operación o mediante una llamada a **Execute**.|  
+|[CDaoDatabase::GetQueryTimeout](#getquerytimeout)|Devuelve el número de segundos después de la base de datos de operaciones de consulta agotará el tiempo. Afecta a todas las posterior abrir, agregar nuevas, actualizar y editar las operaciones y realizar otras operaciones en orígenes de datos ODBC (sólo) como `Execute` llamadas.|  
+|[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|Devuelve el número de registros afectado por la actualización más reciente, editar o agregar la operación o mediante una llamada a `Execute`.|  
 |[CDaoDatabase::GetRelationCount](#getrelationcount)|Devuelve el número de relaciones definidas entre las tablas de la base de datos.|  
 |[CDaoDatabase::GetRelationInfo](#getrelationinfo)|Devuelve información acerca de una relación especificada definida entre las tablas de la base de datos.|  
 |[CDaoDatabase:: GetTableDefCount](#gettabledefcount)|Devuelve el número de tablas definidas en la base de datos.|  
@@ -139,11 +140,11 @@ class CDaoDatabase : public CObject
   
 -   O construir una `CDaoDatabase` objeto sin especificar el área de trabajo (MFC crea un objeto de área de trabajo temporal).  
   
- Para crear una nueva Microsoft Jet (. Base de datos de Microsoft Access), construir un `CDaoDatabase` objeto y llame a su [crear](#create) función miembro. Hacer *no* llamar a **abiertos** después **crear**.  
+ Para crear una nueva Microsoft Jet (. Base de datos de Microsoft Access), construir un `CDaoDatabase` objeto y llame a su [crear](#create) función miembro. Hacer *no* llamar a `Open` después `Create`.  
   
  Para abrir una base de datos, construir un `CDaoDatabase` objeto y llame a su [abrir](#open) función miembro.  
   
- Cualquiera de estas técnicas se anexa el objeto de base de datos DAO a la colección de bases de datos del área de trabajo y se abre una conexión a los datos. Cuando se construyen a continuación, [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), o [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) objetos para el funcionamiento de la base de datos conectado, pasar los constructores para estos objetos un puntero a la `CDaoDatabase` objeto. Cuando haya terminado de utilizar la conexión, llame a la [cerrar](#close) miembro funcione y destruir el `CDaoDatabase` objeto. **Cerrar** cierra los conjuntos de registros no ha cerrado previamente.  
+ Cualquiera de estas técnicas se anexa el objeto de base de datos DAO a la colección de bases de datos del área de trabajo y se abre una conexión a los datos. Cuando se construyen a continuación, [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md), o [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) objetos para el funcionamiento de la base de datos conectado, pasar los constructores para estos objetos un puntero a la `CDaoDatabase` objeto. Cuando haya terminado de utilizar la conexión, llame a la [cerrar](#close) miembro funcione y destruir el `CDaoDatabase` objeto. `Close` cierra los conjuntos de registros que no ha cerrado previamente.  
   
 ## <a name="transactions"></a>Transacciones  
  Procesamiento de transacciones de base de datos se proporciona en el nivel de área de trabajo, consulte la [BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans), [CommitTrans](../../mfc/reference/cdaoworkspace-class.md#committrans), y [reversión](../../mfc/reference/cdaoworkspace-class.md#rollback) funciones miembro de clase `CDaoWorkspace` .  
@@ -186,7 +187,7 @@ BOOL CanUpdate();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si la `CDaoDatabase` objeto permite realizar actualizaciones; de lo contrario, 0, que indica cualquier que se pasa **TRUE** en `bReadOnly` cuando abrió el `CDaoDatabase` objeto o que la base de datos es de solo lectura. Consulte la [abiertos](#open) función miembro.  
+ Distinto de cero si la `CDaoDatabase` objeto permite realizar actualizaciones; de lo contrario, 0, que indica cualquier que se pasa **TRUE** en *bReadOnly* cuando abrió el `CDaoDatabase` objeto o que es la base de datos sólo lectura. Consulte la [abiertos](#open) función miembro.  
   
 ### <a name="remarks"></a>Comentarios  
  Para obtener información acerca de la actualización de la base de datos, vea el tema "Propiedad actualizable" en la Ayuda de DAO.  
@@ -220,10 +221,10 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Es recomendable cerrar estos objetos antes de llamar a esta función miembro. Cerrar un `CDaoDatabase` objeto quita de la colección de bases de datos en el asociado [área de trabajo](../../mfc/reference/cdaoworkspace-class.md). Porque **cerrar** no destruirá los `CDaoDatabase` de objeto, puede volver a usar el objeto abriendo la misma base de datos o una base de datos diferente.  
+ Es recomendable cerrar estos objetos antes de llamar a esta función miembro. Cerrar un `CDaoDatabase` objeto quita de la colección de bases de datos en el asociado [área de trabajo](../../mfc/reference/cdaoworkspace-class.md). Dado que `Close` no destruye el `CDaoDatabase` de objeto, puede volver a usar el objeto abriendo la misma base de datos o en otra base de datos.  
   
 > [!CAUTION]
->  Llame a la [actualización](../../mfc/reference/cdaorecordset-class.md#update) función de miembro (si hay ediciones pendientes) y la **cerrar** función de miembro en todos los objetos de conjunto de registros abierto antes de cerrar una base de datos. Si sale de una función que declara [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) o `CDaoDatabase` objetos en la pila, se cierra la base de datos, se perderán los cambios no guardados, todas las transacciones pendientes se revierten y todas las ediciones pendientes a los datos se pierden.  
+>  Llame a la [actualización](../../mfc/reference/cdaorecordset-class.md#update) función de miembro (si hay ediciones pendientes) y la `Close` función de miembro en todos los objetos de conjunto de registros abierto antes de cerrar una base de datos. Si sale de una función que declara [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) o `CDaoDatabase` objetos en la pila, se cierra la base de datos, se perderán los cambios no guardados, todas las transacciones pendientes se revierten y todas las ediciones pendientes a los datos se pierden.  
   
 > [!CAUTION]
 >  Si intenta cerrar un objeto de base de datos mientras está abierto algún objeto de conjunto de registros, o si se intenta cerrar un objeto de área de trabajo mientras está abierto algún objeto de base de datos que pertenecen a esa área de trabajo concreto, los objetos de conjunto de registros se cerrarán y cualquier actualización o modificación pendiente será revierte. Si intenta cerrar un objeto de área de trabajo mientras está abierto algún objeto de base de datos que pertenecen a ella, la operación cierra todos los objetos de base de datos que pertenecen a ese objeto de área de trabajo específicos, lo que podría producir en objetos de conjunto de registros sin cerrar se cierra. Si no cierra el objeto de base de datos, MFC notifica un error de aserción en compilaciones de depuración.  
@@ -241,10 +242,10 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszName`  
+ *lpszName*  
  Una expresión de cadena que es el nombre del archivo de base de datos que va a crear. Puede ser la ruta de acceso completa y nombre de archivo, como "C:\\\MYDB. MDB". Debe proporcionar un nombre. Si no proporciona una extensión de nombre de archivo. Se anexa el archivo MDB. Si la red es compatible con la convención de nomenclatura uniforme (UNC), también puede especificar una ruta de acceso de red, como "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB". Sólo Microsoft Jet (. Archivos de base de datos de Microsoft Access) pueden crearse con esta función miembro. (Barras diagonales inversas dobles son necesarias en literales de cadena como "\\" es el carácter de escape de C++.)  
   
- `lpszLocale`  
+ *lpszLocale*  
  Una expresión de cadena que se utiliza para especificar el criterio de ordenación para la creación de la base de datos. El valor predeterminado es **dbLangGeneral**. Los valores posibles son:  
   
 - **dbLangGeneral** inglés, alemán, francés, portugués, italiano y español moderno  
@@ -277,7 +278,7 @@ virtual void Create(
   
 - **dbLangTurkish** turco  
   
- `dwOptions`  
+ *dwOptions*  
  Un entero que indica una o varias opciones. Los valores posibles son:  
   
 - **dbEncrypt** crear una base de datos.  
@@ -296,10 +297,10 @@ virtual void Create(
 >  Si no se cifra una base de datos, es posible, incluso si implementar la seguridad de usuario/contraseña, para leer directamente el archivo de disco binario que constituye la base de datos.  
   
 ### <a name="remarks"></a>Comentarios  
- **Crear** crea el archivo de base de datos y el objeto de base de datos DAO subyacente e inicializa el objeto de C++. El objeto se anexa a la colección de bases de datos del área de trabajo asociada. El objeto de base de datos está en un estado abierto; No llame a **abiertos** después **crear**.  
+ `Create` crea el archivo de base de datos y el objeto de base de datos DAO subyacente e inicializa el objeto de C++. El objeto se anexa a la colección de bases de datos del área de trabajo asociada. El objeto de base de datos está en un estado abierto; No llame a `Open*` después `Create`.  
   
 > [!NOTE]
->  Con **crear**, puede crear solo Microsoft Jet (. En el caso de las bases de datos de Microsoft Access). No se puede crear bases de datos ISAM o bases de datos ODBC.  
+>  Con `Create`, puede crear solo Microsoft Jet (. En el caso de las bases de datos de Microsoft Access). No se puede crear bases de datos ISAM o bases de datos ODBC.  
   
 ##  <a name="createrelation"></a>  CDaoDatabase::CreateRelation  
  Llame a esta función miembro para establecer a una relación entre uno o más campos de una tabla en la base de datos principal y uno o más campos de una tabla externa (otra tabla en la base de datos).  
@@ -317,16 +318,16 @@ void CreateRelation(CDaoRelationInfo& relinfo);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszName`  
+ *lpszName*  
  El nombre único del objeto relation. El nombre debe empezar por una letra y puede contener un máximo de 40 caracteres. Puede incluir números y caracteres de subrayado pero no puede incluir espacios o signos de puntuación.  
   
- `lpszTable`  
+ *lpszTable*  
  El nombre de la tabla principal de la relación. Si la tabla no existe, MFC inicia una excepción de tipo [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
- `lpszForeignTable`  
+ *lpszForeignTable*  
  El nombre de la tabla externa en la relación. Si la tabla no existe, MFC inicia una excepción de tipo `CDaoException`.  
   
- `lAttributes`  
+ *lAttributes*  
  Un valor long que contiene información sobre el tipo de relación. Puede usar este valor para exigir la integridad referencial, entre otras cosas. Puede utilizar el operador OR bit a bit ( **&#124;**) para combinar cualquiera de los siguientes valores (siempre que la combinación tiene sentido):  
   
 - **dbRelationUnique** relación es de uno a uno.  
@@ -340,10 +341,10 @@ void CreateRelation(CDaoRelationInfo& relinfo);
 - **dbRelationDeleteCascade** eliminaciones se producirán en cascada.  
   
  *lpszField*  
- Un puntero a una cadena terminada en null que contiene el nombre de un campo de la tabla principal (con el nombre por `lpszTable`).  
+ Un puntero a una cadena terminada en null que contiene el nombre de un campo de la tabla principal (con el nombre por *lpszTable*).  
   
  *lpszForeignField*  
- Un puntero a una cadena terminada en null que contiene el nombre de un campo en la tabla externa (denominado por `lpszForeignTable`).  
+ Un puntero a una cadena terminada en null que contiene el nombre de un campo en la tabla externa (denominado por *lpszForeignTable*).  
   
  *relinfo*  
  Una referencia a un [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) objeto que contiene información acerca de la relación que desea crear.  
@@ -369,7 +370,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszName`  
+ *lpszName*  
  El nombre de la consulta guardada para eliminar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -385,7 +386,7 @@ void DeleteRelation(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszName`  
+ *lpszName*  
  El nombre de la relación para eliminar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -401,7 +402,7 @@ void DeleteTableDef(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszName`  
+ *lpszName*  
  El nombre de la definición de tabla para eliminar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -424,10 +425,10 @@ void Execute(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszSQL`  
+ *lpszSQL*  
  Puntero a una cadena terminada en null que contiene un comando SQL válido para ejecutar.  
   
- `nOptions`  
+ *nOptions*  
  Un entero que especifica las opciones relativas a la integridad de la consulta. Puede utilizar el operador OR bit a bit ( **&#124;**) para combinar cualquiera de las siguientes constantes (proporcionado por la combinación tiene sentido, por ejemplo, podría combinar no **dbInconsistent** con **dbConsistent**):  
   
 - **dbDenyWrite** denegar el permiso de escritura a otros usuarios.  
@@ -446,16 +447,16 @@ void Execute(
 >  Si ambos **dbInconsistent** y **dbConsistent** se incluyen o si ninguna de ellas se incluye, el resultado es el valor predeterminado. Para obtener una explicación de estas constantes, vea el tema "Execute Method" en la Ayuda de DAO.  
   
 ### <a name="remarks"></a>Comentarios  
- **Ejecutar** solo funciona para las consultas de acción o las consultas de paso a través de SQL que no devuelvan resultados. No funciona para las consultas select que devuelven registros.  
+ `Execute` funciona únicamente para las consultas de acción o las consultas de paso a través de SQL que no devuelvan resultados. No funciona para las consultas select que devuelven registros.  
   
  Para una definición e información acerca de las consultas de acción, vea los temas "Consulta de acción" y "Execute Method" en la Ayuda de DAO.  
   
 > [!TIP]
->  Dada una instrucción SQL sintácticamente correcta y los permisos adecuados, el **Execute** función miembro no se producirá un error incluso si no se puede modificar o eliminar una sola fila. Por tanto, use siempre la **dbFailOnError** opción cuando se usa el **Execute** función de miembro para ejecutar una actualización o consulta de eliminación. Esta opción hace MFC producir una excepción de tipo [CDaoException](../../mfc/reference/cdaoexception-class.md) y revierte todos los cambios correctos si cualquiera de los registros afectados se bloquean y no se actualiza o elimina. Tenga en cuenta que siempre se puede llamar a `GetRecordsAffected` para ver el número de registros se vieron afectado.  
+>  Dada una instrucción SQL sintácticamente correcta y los permisos adecuados, el `Execute` función miembro no se producirá un error incluso si no se puede modificar o eliminar una sola fila. Por tanto, use siempre la **dbFailOnError** opción cuando se usa el `Execute` función de miembro para ejecutar una actualización o consulta de eliminación. Esta opción hace MFC producir una excepción de tipo [CDaoException](../../mfc/reference/cdaoexception-class.md) y revierte todos los cambios correctos si cualquiera de los registros afectados se bloquean y no se actualiza o elimina. Tenga en cuenta que siempre se puede llamar a `GetRecordsAffected` para ver el número de registros se vieron afectado.  
   
- Llame a la [GetRecordsAffected](#getrecordsaffected) función de miembro del objeto de base de datos para determinar el número de registros afectados por la última **Execute** llamar. Por ejemplo, `GetRecordsAffected` devuelve información sobre el número de registros eliminados, actualizados o insertados cuando se ejecuta una consulta de acción. El recuento devuelto no reflejará los cambios en las tablas relacionadas cuando cascade actualiza o elimina entran en vigor.  
+ Llame a la [GetRecordsAffected](#getrecordsaffected) función de miembro del objeto de base de datos para determinar el número de registros afectados por la última `Execute` llamar. Por ejemplo, `GetRecordsAffected` devuelve información sobre el número de registros eliminados, actualizados o insertados cuando se ejecuta una consulta de acción. El recuento devuelto no reflejará los cambios en las tablas relacionadas cuando cascade actualiza o elimina entran en vigor.  
   
- **Ejecutar** no devuelve un conjunto de registros. Usar **Execute** en una consulta que selecciona los registros hace MFC producir una excepción de tipo `CDaoException`. (No hay ningún `ExecuteSQL` análogo en función de miembro `CDatabase::ExecuteSQL`.)  
+ `Execute` no devuelve un conjunto de registros. Usar `Execute` en una consulta que selecciona los registros hace MFC producir una excepción de tipo `CDaoException`. (No hay ningún `ExecuteSQL` análogo en función de miembro `CDatabase::ExecuteSQL`.)  
   
 ##  <a name="getconnect"></a>  CDaoDatabase::GetConnect  
  Llame a esta función miembro para recuperar la cadena de conexión utilizada para conectar el `CDaoDatabase` objeto a una base de datos ODBC o ISAM.  
@@ -476,7 +477,7 @@ CString GetConnect();
 > [!NOTE]
 >  La cadena de conexión se utiliza para pasar información adicional a controladores ODBC y algunos controladores ISAM, según sea necesario. No se utiliza para. En el caso de las bases de datos de Microsoft Access. Para las tablas de base de base de datos de Microsoft Jet, la cadena de conexión es una cadena vacía ("") excepto cuando se utiliza para una consulta de paso a través de SQL como se describe en Return Value.  
   
- Consulte la [abiertos](#open) función de miembro para obtener una descripción de cómo se crea la cadena de conexión. Una vez que se ha establecido la cadena de conexión en el **abiertos** llamada, más adelante utilizarla para comprobar la configuración para determinar el tipo, la ruta de acceso, el origen de los datos ODBC, la contraseña o el Id. de usuario de la base de datos.  
+ Consulte la [abiertos](#open) función de miembro para obtener una descripción de cómo se crea la cadena de conexión. Una vez que se ha establecido la cadena de conexión en el `Open` llamada, más adelante utilizarla para comprobar la configuración para determinar el tipo, la ruta de acceso, el origen de los datos ODBC, la contraseña o el Id. de usuario de la base de datos.  
   
 ##  <a name="getname"></a>  CDaoDatabase::GetName  
  Llame a esta función miembro para recuperar el nombre de la base de datos abierto actualmente, que es el nombre de un archivo de base de datos existente o el nombre de un origen de datos ODBC registrado.  
@@ -538,13 +539,13 @@ void GetQueryDefInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  El índice de la consulta predefinida en QueryDefs (colección) de la base de datos, para la búsqueda por su índice.  
   
  *querydefinfo*  
  Una referencia a un [CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md) objeto que devuelve la información solicitada.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Opciones que especifican qué información acerca de los registros que se va a recuperar. Las opciones disponibles son las siguientes junto con lo que hacen que la función devuelva sobre el conjunto de registros:  
   
 - `AFX_DAO_PRIMARY_INFO` (Valor predeterminado) Nombre de tipo  
@@ -553,13 +554,13 @@ void GetQueryDefInfo(
   
 - `AFX_DAO_ALL_INFO` Más información primaria y secundaria: SQL, conectar, ODBCTimeout  
   
- `lpszName`  
+ *lpszName*  
  Una cadena que contiene el nombre de una consulta definida en la base de datos para la búsqueda por nombre.  
   
 ### <a name="remarks"></a>Comentarios  
  Dos versiones de la función se proporcionan para que pueda seleccionar una consulta por su índice en la colección de definiciones de consulta de la base de datos o por el nombre de la consulta.  
   
- Para obtener una descripción de la información devuelta en *querydefinfo*, consulte el [CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md) estructura. Esta estructura no tiene miembros que se corresponden con los elementos de información enumerados anteriormente en la descripción de `dwInfoOptions`. Si se solicita un nivel de información, obtendrá los niveles anteriores de información también.  
+ Para obtener una descripción de la información devuelta en *querydefinfo*, consulte el [CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md) estructura. Esta estructura no tiene miembros que se corresponden con los elementos de información enumerados anteriormente en la descripción de *dwInfoOptions*. Si se solicita un nivel de información, obtendrá los niveles anteriores de información también.  
   
 ##  <a name="getquerytimeout"></a>  CDaoDatabase::GetQueryTimeout  
  Llame a esta función miembro para recuperar el número de segundos que se permiten antes de que se agotó el tiempo las operaciones subsiguientes en la base de datos conectada actual.  
@@ -589,7 +590,7 @@ long GetRecordsAffected();
  Un entero largo que contiene el número de registros afectados.  
   
 ### <a name="remarks"></a>Comentarios  
- El valor devuelto incluye el número de registros eliminados, actualizados o insertados por una consulta de acción que se ejecuta con **Execute**. El recuento devuelto no reflejará los cambios en las tablas relacionadas cuando cascade actualiza o elimina entran en vigor.  
+ El valor devuelto incluye el número de registros eliminados, actualizados o insertados por una consulta de acción que se ejecuta con `Execute`. El recuento devuelto no reflejará los cambios en las tablas relacionadas cuando cascade actualiza o elimina entran en vigor.  
   
  Para obtener información relacionada, vea el tema "Propiedad RecordsAffected" en la Ayuda de DAO.  
   
@@ -625,13 +626,13 @@ void GetRelationInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  El índice del objeto de relación en la colección de relaciones de la base de datos, para la búsqueda por su índice.  
   
  *relinfo*  
  Una referencia a un [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) objeto que devuelve la información solicitada.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Opciones que especifican qué información acerca de la relación para recuperar. Las opciones disponibles son las siguientes junto con lo que hacen que la función devuelva acerca de la relación:  
   
 - `AFX_DAO_PRIMARY_INFO` (Valor predeterminado) Tabla externa de nombre, tabla,  
@@ -640,11 +641,11 @@ void GetRelationInfo(
   
  La información de campo es un [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) objeto que contiene los campos de la tabla principal implicada en la relación.  
   
- `lpszName`  
+ *lpszName*  
  Una cadena que contiene el nombre del objeto de relación para la búsqueda por nombre.  
   
 ### <a name="remarks"></a>Comentarios  
- Dos versiones de esta función proporcionan acceso por índice o por nombre. Para obtener una descripción de la información devuelta en *relinfo*, consulte el [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) estructura. Esta estructura no tiene miembros que se corresponden con los elementos de información enumerados anteriormente en la descripción de `dwInfoOptions`. Si se solicita información en un nivel, también obtendrá información en todos los niveles anteriores.  
+ Dos versiones de esta función proporcionan acceso por índice o por nombre. Para obtener una descripción de la información devuelta en *relinfo*, consulte el [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) estructura. Esta estructura no tiene miembros que se corresponden con los elementos de información enumerados anteriormente en la descripción de *dwInfoOptions*. Si se solicita información en un nivel, también obtendrá información en todos los niveles anteriores.  
   
 > [!NOTE]
 >  Si establece la relación de atributos del objeto para activar operaciones en cascada ( **dbRelationUpdateCascades** o **dbRelationDeleteCascades**), el motor de base de datos de Microsoft Jet se actualiza automáticamente o Elimina los registros de una o varias tablas cuando se realizan cambios en tablas relacionadas de clave principales. Por ejemplo, supongamos que establece una relación de eliminación en cascada entre una tabla Customers y una tabla Orders. Al eliminar registros de la tabla Customers, también se eliminan registros de la tabla de pedidos relacionados con ese cliente. Además, si establece cascade delete relaciones entre la tabla Orders y otras tablas, registros de esas tablas se eliminan automáticamente cuando se eliminan registros de la tabla Customers.  
@@ -679,13 +680,13 @@ void GetTableDefInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  El índice del objeto tabledef en TableDefs (colección) de la base de datos, para la búsqueda por su índice.  
   
- `tabledefinfo`  
+ *tabledefinfo*  
  Una referencia a un [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) objeto que devuelve la información solicitada.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Opciones que especifican qué información acerca de la tabla para recuperar. Las opciones disponibles son las siguientes junto con lo que hacen que la función devuelva acerca de la relación:  
   
 - `AFX_DAO_PRIMARY_INFO` (Valor predeterminado) Nombre actualizable, atributos  
@@ -694,13 +695,13 @@ void GetTableDefInfo(
   
 - `AFX_DAO_ALL_INFO` Más información primaria y secundaria: número de registros de la regla de validación, texto de validación  
   
- `lpszName`  
+ *lpszName*  
  El nombre del objeto de definición de tabla para la búsqueda por nombre.  
   
 ### <a name="remarks"></a>Comentarios  
  Por lo que puede seleccionar una tabla de índice en la colección de definiciones de tabla de la base de datos o el nombre de la tabla, se proporcionan dos versiones de la función.  
   
- Para obtener una descripción de la información devuelta en `tabledefinfo`, consulte el [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) estructura. Esta estructura no tiene miembros que se corresponden con los elementos de información enumerados anteriormente en la descripción de `dwInfoOptions`. Si se solicita información en un nivel, obtendrá información para todos los niveles anteriores.  
+ Para obtener una descripción de la información devuelta en *tabledefinfo*, consulte el [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) estructura. Esta estructura no tiene miembros que se corresponden con los elementos de información enumerados anteriormente en la descripción de *dwInfoOptions*. Si se solicita información en un nivel, obtendrá información para todos los niveles anteriores.  
   
 > [!NOTE]
 >  El `AFX_DAO_ALL_INFO` opción proporciona información que puede resultar lenta a obtener. En este caso, el recuento de los registros en la tabla podría ser muy lento si hay muchos registros.  
@@ -758,10 +759,10 @@ virtual void Open(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszName`  
+ *lpszName*  
  Una expresión de cadena que es el nombre de una existente de Microsoft Jet (. Archivo de base de datos de Microsoft Access). Si el nombre de archivo tiene una extensión, se requiere. Si la red es compatible con la convención de nomenclatura uniforme (UNC), también puede especificar una ruta de acceso de red, como "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB. MDB". (Barras diagonales inversas dobles son necesarias en literales de cadena como "\\" es el carácter de escape de C++.)  
   
- Algunas consideraciones que se aplican al usar `lpszName`. Si lo:  
+ Algunas consideraciones que se aplican al usar *lpszName*. Si lo:  
   
 -   Hace referencia a una base de datos que ya está abierto para acceso exclusivo por otro usuario, MFC inicia una excepción de tipo [CDaoException](../../mfc/reference/cdaoexception-class.md). Captura de esa excepción para que el usuario sepa que la base de datos no está disponible.  
   
@@ -772,13 +773,13 @@ virtual void Open(
 > [!NOTE]
 >  Para obtener más información acerca de los códigos de error DAO, vea el DAOERR. H del proyecto. Para obtener información relacionada, vea el tema "Errores interceptables de acceso de datos" en la Ayuda de DAO.  
   
- `bExclusive`  
+ *bExclusive*  
  Un valor booleano que es **TRUE** si la base de datos es abrir obtener un acceso exclusivo (no compartido) y **FALSE** si la base de datos se pueden abrir para el acceso compartido. Si se omite este argumento, se abre la base de datos para el acceso compartido.  
   
- `bReadOnly`  
+ *bReadOnly*  
  Un valor booleano que es **TRUE** si la base de datos consiste en Abrir para acceso de solo lectura y **FALSE** si la base de datos que se va a estar abierto para acceso de lectura/escritura. Si se omite este argumento, la base de datos se abre para acceso de lectura/escritura. Todos los conjuntos de registros dependientes heredan este atributo.  
   
- `lpszConnect`  
+ *lpszConnect*  
  Una expresión de cadena utilizada para abrir la base de datos. Esta cadena constituye ODBC conectarse argumentos. Debe proporcionar los argumentos mutuamente y de solo lectura para proporcionar una cadena de origen. Si la base de datos es una base de datos de Microsoft Jet (. MDB), esta cadena está vacía (""). La sintaxis para el valor predeterminado: **_T**(""), proporciona portabilidad para Unicode como ANSI para la compilación de la aplicación.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -786,22 +787,22 @@ virtual void Open(
   
  Use los parámetros de la siguiente manera:  
   
--   Si se está abriendo un Microsoft Jet (. Base de datos de Microsoft Access), utilice la `lpszName` parámetro y pase una cadena vacía para el `lpszConnect` parámetro o pase una cadena de contraseña de la forma "; PWD = contraseña "si la base de datos está protegido por contraseña (. MDB sólo bases de datos).  
+-   Si se está abriendo un Microsoft Jet (. Base de datos de Microsoft Access), utilice la *lpszName* parámetro y pase una cadena vacía para el *lpszConnect* parámetro o pase una cadena de contraseña de la forma "; PWD = contraseña "si la base de datos está protegido por contraseña (. MDB sólo bases de datos).  
   
--   Si se está abriendo un origen de datos ODBC, pase una cadena de conexión ODBC válida en `lpszConnect` y una cadena vacía en `lpszName`.  
+-   Si se está abriendo un origen de datos ODBC, pase una cadena de conexión ODBC válida en *lpszConnect* y una cadena vacía en *lpszName*.  
   
  Para obtener información relacionada, vea el tema "Método OpenDatabase" en la Ayuda de DAO.  
   
 > [!NOTE]
 >  Para mejorar el rendimiento al obtener acceso a bases de datos externas, incluidas las bases de datos ISAM y orígenes de datos ODBC, se recomienda que vincule tablas de base de datos externa a una base de datos de motor de Microsoft Jet (. MDB) en lugar de conectarse directamente al origen de datos.  
   
- Es posible que un intento de conexión en tiempo de espera si, por ejemplo, el host DBMS no está disponible. Si se produce un error en el intento de conexión, **abiertos** produce una excepción de tipo [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+ Es posible que un intento de conexión en tiempo de espera si, por ejemplo, el host DBMS no está disponible. Si se produce un error en el intento de conexión, `Open` produce una excepción de tipo [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
  Las observaciones restantes se aplican únicamente a las bases de datos ODBC:  
   
- Si la base de datos es una base de datos ODBC y los parámetros en su **abiertos** llamada no contienen información suficiente para realizar la conexión, el controlador ODBC abre un cuadro de diálogo para obtener la información necesaria del usuario. Cuando se llama a **abiertos**, la cadena de conexión, `lpszConnect`, se almacena de forma privada y está disponible mediante una llamada a la [GetConnect](#getconnect) función miembro.  
+ Si la base de datos es una base de datos ODBC y los parámetros en su `Open` llamada no contienen información suficiente para realizar la conexión, el controlador ODBC abre un cuadro de diálogo para obtener la información necesaria del usuario. Cuando se llama a `Open`, la cadena de conexión, *lpszConnect*, se almacena de forma privada y está disponible mediante una llamada a la [GetConnect](#getconnect) función miembro.  
   
- Si lo desea, puede abrir su propio cuadro de diálogo antes de llamar a **abrir** para obtener información del usuario, como una contraseña, a continuación, agregue dicha información a la cadena de conexión se pasa a **abrir**. Es posible que quiera guardar la cadena de conexión se pasa (por ejemplo, en el registro de Windows), por lo que puede volver a usarla la próxima vez su aplicación llama **abiertos** en un `CDaoDatabase` objeto.  
+ Si lo desea, puede abrir su propio cuadro de diálogo antes de llamar a `Open` para obtener información del usuario, como una contraseña, a continuación, agregue dicha información a la cadena de conexión se pasa a `Open`. Es posible que quiera guardar la cadena de conexión se pasa (por ejemplo, en el registro de Windows), por lo que puede volver a usarla la próxima vez su aplicación llama `Open` en un `CDaoDatabase` objeto.  
   
  También puede utilizar la cadena de conexión para varios niveles de autorización de inicio de sesión (cada uno de ellos para otro `CDaoDatabase` objeto) o para transmitir otra información específica de la base de datos.  
   
@@ -813,11 +814,11 @@ void SetQueryTimeout(short nSeconds);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nSeconds`  
+ *númeroSegundos*  
  El número de segundos que se permiten antes de un intento de consulta agote el tiempo de espera.  
   
 ### <a name="remarks"></a>Comentarios  
- Una operación podría tiempo de espera debido a problemas de acceso de red, el tiempo de procesamiento de consulta excesivo y así sucesivamente. Llame a `SetQueryTimeout` antes de abrir el conjunto de registros o antes de llamar a la función miembro [AddNew](../../mfc/reference/cdaorecordset-class.md#addnew), [actualización](../../mfc/reference/cdaorecordset-class.md#update), o [eliminar](../../mfc/reference/cdaorecordset-class.md#delete) funciones miembro si desea cambiar la consulta valor de tiempo de espera. El valor afecta a todas las posteriores [abiertos](../../mfc/reference/cdaorecordset-class.md#open), `AddNew`, **actualización**, y **eliminar** llamadas a los conjuntos de registros asociados con este `CDaoDatabase` objeto. Cambiar el valor de tiempo de espera de consulta para un conjunto de registros después de la apertura, no cambie el valor para el conjunto de registros. Por ejemplo, posterior [mover](../../mfc/reference/cdaorecordset-class.md#move) operaciones no utilizarán el nuevo valor.  
+ Una operación podría tiempo de espera debido a problemas de acceso de red, el tiempo de procesamiento de consulta excesivo y así sucesivamente. Llame a `SetQueryTimeout` antes de abrir el conjunto de registros o antes de llamar a la función miembro [AddNew](../../mfc/reference/cdaorecordset-class.md#addnew), [actualización](../../mfc/reference/cdaorecordset-class.md#update), o [eliminar](../../mfc/reference/cdaorecordset-class.md#delete) funciones miembro si desea cambiar la consulta valor de tiempo de espera. El valor afecta a todas las posteriores [abiertos](../../mfc/reference/cdaorecordset-class.md#open), `AddNew`, `Update`, y `Delete` llamadas a los conjuntos de registros asociados con este `CDaoDatabase` objeto. Cambiar el valor de tiempo de espera de consulta para un conjunto de registros después de la apertura, no cambie el valor para el conjunto de registros. Por ejemplo, posterior [mover](../../mfc/reference/cdaorecordset-class.md#move) operaciones no utilizarán el nuevo valor.  
   
  El valor predeterminado para los tiempos de espera de consulta es 60 segundos. No todas las bases de datos admiten la capacidad para establecer un valor de tiempo de espera de consulta. Si establece un valor de tiempo de espera de consulta de 0, se produce sin tiempo de espera; la comunicación con la base de datos podría dejar de responder. Este comportamiento puede ser útil durante el desarrollo.  
   

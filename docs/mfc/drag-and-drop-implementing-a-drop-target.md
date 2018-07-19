@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33088477c579cbdfe48140b806c6376b520e470c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928923"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Arrastrar y colocar: Implementar un destino de colocación
 En este artículo se describe cómo hacer que su aplicación un destino de colocación. Implementar un destino de colocación tarda un poco más compleja que la implementación de un origen de colocación, pero sigue siendo relativamente sencilla. Estas técnicas también se aplican a aplicaciones no compatibles con OLE.  
@@ -29,11 +30,11 @@ En este artículo se describe cómo hacer que su aplicación un destino de coloc
   
 1.  Agregue una variable miembro a cada vista en la aplicación que se va a ser un destino de colocación. Esta variable miembro debe ser de tipo `COleDropTarget` o una clase derivada de ella.  
   
-2.  En función de la clase de vista que controla el `WM_CREATE` mensaje (normalmente `OnCreate`), llame a la nueva variable miembro `Register` función miembro. `Revoke` se llamará automáticamente para usted cuando se destruye la vista.  
+2.  En función de la clase de vista que controla el **WM_CREATE** mensaje (normalmente `OnCreate`), llame a la nueva variable miembro `Register` función miembro. `Revoke` se llamará automáticamente para usted cuando se destruye la vista.  
   
 3.  Invalidar las siguientes funciones. Si desea que el mismo comportamiento en toda la aplicación, reemplace estas funciones en la clase de vista. Si desea modificar el comportamiento en casos aislados o desea habilitar la eliminación en no es`CView` windows, reemplace estas funciones en su `COleDropTarget`-clase derivada.  
   
-    |invalidación|Para permitir|  
+    |Invalidación|Para permitir|  
     |--------------|--------------|  
     |`OnDragEnter`|Quitar las operaciones que se produzca en la ventana. Se llama cuando el cursor entra por primera vez la ventana.|  
     |`OnDragLeave`|Comportamiento especial cuando la operación de arrastre sale de la ventana especificada.|  

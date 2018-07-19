@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348611"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>Hojas de propiedades y páginas de propiedades en MFC
 Una hoja de propiedades, también conocido como un cuadro de diálogo de fichas, es un cuadro de diálogo que contiene páginas de propiedades. Cada página de propiedades se basa en un recurso de plantilla de cuadro de diálogo y contiene controles. Se incluyen en una página con una ficha en la parte superior. La ficha nombres de la página e indica su propósito. Los usuarios, haga clic en una pestaña en la hoja de propiedades para seleccionar un conjunto de controles.  

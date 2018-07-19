@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367490"
 ---
 # <a name="filename-parts-syntax"></a>Sintaxis de las partes de un nombre de archivo
 Sintaxis de partes del nombre de archivo en los comandos representa componentes del primer nombre de archivo dependiente (que puede ser un dependiente implícito). Componentes de nombre de archivo son unidad, ruta de acceso, nombre base y extensión tal como se especifica, el archivo no tal como existe en el disco. Use **%s** para representar el nombre de archivo completo. Use **%&#124;**[*elementos*]**F** (una barra vertical el signo de porcentaje) para representar las partes del nombre de archivo, donde *elementos*puede ser cero o más de las siguientes letras, en cualquier orden.  

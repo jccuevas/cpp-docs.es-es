@@ -1,5 +1,5 @@
 ---
-title: '&lt;para&gt; (Visual C++) | Documentos de Microsoft'
+title: '&lt;para&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33325122"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 La etiqueta \<para> se usa dentro de otra etiqueta, como [\<summary>](../ide/summary-visual-cpp.md), [\<remarks>](../ide/remarks-visual-cpp.md) o [\<returns>](../ide/returns-visual-cpp.md), y permite dar una estructura al texto.  

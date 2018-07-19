@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387588"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operadores relacionales y de igualdad de C
 Los operadores relacionales y de igualdad binarios comparan el primer operando con el segundo para probar la validez de la relación especificada. El resultado de una expresión relacional es 1 si la relación probada es true y 0 si es false. El tipo del resultado es `int`.  

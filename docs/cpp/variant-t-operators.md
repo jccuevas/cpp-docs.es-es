@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421320"
 ---
 # <a name="variantt-operators"></a>_variant_t (Operadores)
 Para obtener información sobre la **_variant_t** operadores, vea [clase _variant_t](../cpp/variant-t-class.md).  

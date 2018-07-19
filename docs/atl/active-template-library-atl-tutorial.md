@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354873"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Tutorial de Active Template Library (ATL)
 ATL está diseñado para simplificar el proceso de creación de controles eficaz, flexibles y ligeros. Este tutorial le guía a través de la creación de un control ActiveX, que muestra muchos de los fundamentos de ATL y COM.  

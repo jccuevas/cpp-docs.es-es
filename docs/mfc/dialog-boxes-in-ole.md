@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe7f9b4b97fd17e73c3dd9f113a87d8f087b93c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929668"
 ---
 # <a name="dialog-boxes-in-ole"></a>Cuadros de diálogo en OLE
 Mientras un usuario ejecuta una aplicación habilitada para OLE, hay ocasiones cuando la aplicación necesita información del usuario con el fin de realizar la operación. Las clases OLE de MFC proporcionan una serie de cuadros de diálogo para recopilar la información necesaria. Este tema enumeran las tareas que se controlan mediante los cuadros de diálogo OLE y las clases necesarias para mostrar los cuadros de diálogo. Para obtener más información sobre los cuadros de diálogo OLE y las estructuras que se usa para personalizar su comportamiento, vea [referencia de MFC](../mfc/mfc-desktop-applications.md).  
@@ -45,7 +46,7 @@ Mientras un usuario ejecuta una aplicación habilitada para OLE, hay ocasiones c
  El cuadro de diálogo Editar vínculos permite al usuario cambiar la información sobre el origen de un objeto vinculado. El cuadro de diálogo Actualizar vínculos verifica los orígenes de todos los elementos vinculados en el cuadro de diálogo actual y muestra el cuadro de diálogo Editar vínculos si es necesario. Mostrar el cuadro de diálogo Editar vínculos cuando el usuario elige vínculos en el menú Edición. El cuadro de diálogo vínculos de actualización se muestra normalmente cuando se abre un documento compuesto por primera vez. Utilice la [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) o [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) de clases, dependiendo de qué cuadro de diálogo que desea mostrar.  
   
  *Servidor ocupado o no responde*  
- Cuando el usuario intenta activar un elemento y el servidor está actualmente no se puede atender la solicitud, normalmente porque el servidor está en uso por otro usuario o tarea, se muestra el cuadro de diálogo servidor ocupado. Si el servidor no responde en absoluto a la solicitud de activación, se muestra el cuadro de diálogo servidor no responde. Estos cuadros de diálogo se muestran a través de `COleMessageFilter`, en función de una implementación de la interfaz OLE **IMessageFilter**, y el usuario puede decidir si desea que se vuelva a intentar la solicitud de activación. Use la [clase COleBusyDialog](../mfc/reference/colebusydialog-class.md) clase para mostrar este cuadro de diálogo.  
+ Cuando el usuario intenta activar un elemento y el servidor está actualmente no se puede atender la solicitud, normalmente porque el servidor está en uso por otro usuario o tarea, se muestra el cuadro de diálogo servidor ocupado. Si el servidor no responde en absoluto a la solicitud de activación, se muestra el cuadro de diálogo servidor no responde. Estos cuadros de diálogo se muestran a través de `COleMessageFilter`, en función de una implementación de la interfaz OLE `IMessageFilter`, y el usuario puede decidir si desea que se vuelva a intentar la solicitud de activación. Use la [clase COleBusyDialog](../mfc/reference/colebusydialog-class.md) clase para mostrar este cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también  
  [Cuadros de diálogo](../mfc/dialog-boxes.md)   

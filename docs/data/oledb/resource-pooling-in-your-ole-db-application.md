@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107492"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>Agrupación de recursos en una aplicación OLE DB
 Para aprovechar la agrupación en la aplicación, debe asegurarse de que se invocan los servicios OLE DB obteniendo el origen de datos a través de **IDataInitialize** o **IDBPromptInitialize**. Si utiliza directamente `CoCreateInstance` para invocar el proveedor basándose en el CLSID del proveedor, se invocan los servicios OLE DB.  

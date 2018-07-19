@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392502"
 ---
 # <a name="ismbb-routines"></a>_ismbb (Rutinas)
 Prueba si el valor entero `c` dado cumple una determinada condición, utilizando la configuración regional actual o una categoría de estado de conversión LC_CTYPE especificada.  

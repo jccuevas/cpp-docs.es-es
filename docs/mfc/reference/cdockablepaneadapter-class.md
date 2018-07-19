@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951038"
 ---
 # <a name="cdockablepaneadapter-class"></a>Clase CDockablePaneAdapter
 Proporciona compatibilidad para paneles derivados de `CWnd`.  
@@ -89,13 +90,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  El nombre del perfil.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  El índice de perfil.  
   
- [in] `uiID`  
+ [in] *uiID*  
  El identificador del panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -113,13 +114,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  El nombre del perfil.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  El índice de perfil (el valor predeterminado es el identificador del control de la ventana).  
   
- [in] `uiID`  
+ [in] *uiID*  
  El identificador del panel.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -134,7 +135,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  Un puntero a la ventana para el adaptador de panel que va a contener.  
   
 ### <a name="return-value"></a>Valor devuelto  

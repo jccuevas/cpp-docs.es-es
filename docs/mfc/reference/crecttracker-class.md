@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff57e1fde0af6e794c2c47db7d1e31daf545715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4ce3c4dbfbf49791673392a1e1234728a680611
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079673"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (clase)
 Permite que un elemento para mostrar, mover y cambiar el tamaño de distintas maneras.  
@@ -123,16 +124,16 @@ virtual void AdjustRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nHandle`  
+ *nHandle*  
  Índice del controlador que se utiliza.  
   
- `lpRect`  
+ *lpRect*  
  Puntero al tamaño actual del rectángulo. (El tamaño de un rectángulo viene dado por su alto y ancho).  
   
 ### <a name="remarks"></a>Comentarios  
  El comportamiento predeterminado de esta función permite la orientación del rectángulo cambiar solamente cuando `Track` y `TrackRubberBand` se llama con invertir permitido.  
   
- Reemplace esta función para controlar el ajuste del rectángulo de seguimiento durante una operación de arrastre. Un método consiste en ajustar las coordenadas especificadas por `lpRect` antes de devolver.  
+ Reemplace esta función para controlar el ajuste del rectángulo de seguimiento durante una operación de arrastre. Un método consiste en ajustar las coordenadas especificadas por *lpRect* antes de devolver.  
   
  Características especiales que no son directamente compatibles con `CRectTracker`, como complemento a la cuadrícula o keep--relación de aspecto, puede implementarse mediante el reemplazo de esta función.  
   
@@ -149,10 +150,10 @@ CRectTracker(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpSrcRect`  
+ *lpSrcRect*  
  Las coordenadas del objeto de rectángulo.  
   
- `nStyle`  
+ *nStyle*  
  Especifica el estilo de la `CRectTracker` objeto. Se admiten los estilos siguientes:  
   
 - **CRectTracker::solidLine** Use una línea sólida para el borde del rectángulo.  
@@ -168,7 +169,7 @@ CRectTracker(
 - **CRectTracker::hatchInside** Hatched patrón cubre todo el rectángulo.  
   
 ### <a name="remarks"></a>Comentarios  
- El constructor predeterminado inicializa los `CRectTracker` objeto con los valores de `lpSrcRect` e inicializa otros tamaños a valores predeterminados del sistema. Si el objeto se crea sin parámetros, el `m_rect` y `m_nStyle` miembros de datos están sin inicializados.  
+ El constructor predeterminado inicializa los `CRectTracker` objeto con los valores de *lpSrcRect* e inicializa otros tamaños a valores predeterminados del sistema. Si el objeto se crea sin parámetros, el `m_rect` y `m_nStyle` miembros de datos están sin inicializados.  
   
 ##  <a name="draw"></a>  CRectTracker::Draw  
  Llame a esta función para dibujar el rectángulo exterior líneas y región interna.  
@@ -178,7 +179,7 @@ void Draw(CDC* pDC) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Puntero al contexto de dispositivo en el que se va a dibujar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -196,16 +197,16 @@ virtual void DrawTrackerRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpRect`  
+ *lpRect*  
  Puntero a la `RECT` que contiene el rectángulo para dibujar.  
   
- `pWndClipTo`  
+ *pWndClipTo*  
  Puntero a la ventana que usará en el rectángulo de recorte.  
   
- `pDC`  
+ *pDC*  
  Puntero al contexto de dispositivo en el que se va a dibujar.  
   
- `pWnd`  
+ *pWnd*  
  Puntero a la ventana en la que se producirá el dibujo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -242,11 +243,11 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpTrueRect`  
+ *lpTrueRect*  
  Puntero a la `RECT` coordina la estructura que contiene el dispositivo de la `CRectTracker` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- Las dimensiones del rectángulo incluyen el alto y ancho de los controladores de tamaño situado en el borde exterior. Al volver, `lpTrueRect` siempre es un rectángulo normalizado en coordenadas de dispositivo.  
+ Las dimensiones del rectángulo incluyen el alto y ancho de los controladores de tamaño situado en el borde exterior. Al volver, *lpTrueRect* siempre es un rectángulo normalizado en coordenadas de dispositivo.  
   
 ##  <a name="hittest"></a>  CRectTracker:: HitTest  
  Llame a esta función para averiguar si el usuario tomó un controlador de tamaño.  
@@ -256,7 +257,7 @@ int HitTest(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `point`  
+ *Punto*  
  El punto, en coordenadas de dispositivo, para probar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -327,7 +328,7 @@ int NormalizeHit(int nHandle) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nHandle`  
+ *nHandle*  
  Identificador seleccionado por el usuario.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -362,17 +363,17 @@ BOOL SetCursor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pWnd`  
+ *pWnd*  
  Apunta a la ventana que contiene actualmente el cursor.  
   
- `nHitTest`  
- Resultados de la prueba de posicionamiento anterior, desde la `WM_SETCURSOR` mensaje.  
+ *nHitTest*  
+ Resultados de la prueba de posicionamiento anterior, del mensaje WM_SETCURSOR.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el posicionamiento anterior era el rectángulo Rastreador; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a esta función desde dentro de la función de la ventana que controla la `WM_SETCURSOR` mensaje (normalmente `OnSetCursor`).  
+ Llame a esta función desde dentro de la función de la ventana que controla el mensaje WM_SETCURSOR (normalmente `OnSetCursor`).  
   
 ##  <a name="track"></a>  CRectTracker::Track  
  Llame a esta función para mostrar la interfaz de usuario para cambiar el tamaño del rectángulo.  
@@ -386,17 +387,17 @@ BOOL Track(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pWnd`  
+ *pWnd*  
  El objeto de ventana que contiene el rectángulo.  
   
- `point`  
+ *Punto*  
  Coordenadas de dispositivo de la actual posición del mouse respecto al área de cliente.  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  Si **TRUE**, el rectángulo puede ser invertido a lo largo del eje x o eje y; en caso contrario **FALSE**.  
   
- `pWndClipTo`  
- La ventana que las operaciones de dibujo se ajustarán a. Si **NULL**, `pWnd` se utiliza como el rectángulo de recorte.  
+ *pWndClipTo*  
+ La ventana que las operaciones de dibujo se ajustarán a. Si **NULL**, *pWnd* se utiliza como el rectángulo de recorte.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si se presiona la tecla ESC, se detiene el proceso de seguimiento, el rectángulo que se almacenan en la herramienta de seguimiento no se modifica y se devuelve 0. Si se confirma el cambio, si mueve el mouse y soltar el botón primario del mouse, la nueva posición o el tamaño se registra en el rectángulo de la herramienta de seguimiento y se devuelve es distinto de cero.  
@@ -406,7 +407,7 @@ BOOL Track(
   
  Esta función capturará el mouse hasta que el usuario suelta el botón primario del mouse, presione la tecla ESC o presiona el botón secundario del mouse. Cuando el usuario mueve el cursor del mouse, los comentarios se actualizan mediante una llamada a `DrawTrackerRect` y `OnChangedRect`.  
   
- Si `bAllowInvert` es **TRUE**, se puede invertir el rectángulo de seguimiento en el eje x o el eje y.  
+ Si *bAllowInvert* es **TRUE**, se puede invertir el rectángulo de seguimiento en el eje x o el eje y.  
   
 ##  <a name="trackrubberband"></a>  CRectTracker:: TrackRubberBand  
  Llame a esta función para realizar la selección de la banda de goma.  
@@ -419,20 +420,20 @@ BOOL TrackRubberBand(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pWnd`  
+ *pWnd*  
  El objeto de ventana que contiene el rectángulo.  
   
- `point`  
+ *Punto*  
  Coordenadas de dispositivo de la actual posición del mouse respecto al área de cliente.  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  Si **es TRUE,** el rectángulo puede ser invertido a lo largo del eje x o eje y; en caso contrario **FALSE**.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si se ha movido el mouse y el rectángulo no está vacío; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Normalmente se llama desde dentro de la función de la aplicación que controla el `WM_LBUTTONDOWN` mensaje (normalmente `OnLButtonDown`).  
+ Normalmente se llama desde dentro de la función de la aplicación que controla el mensaje WM_LBUTTONDOWN (normalmente `OnLButtonDown`).  
   
  Esta función capturará el mouse hasta que el usuario suelta el botón primario del mouse, presione la tecla ESC o presiona el botón secundario del mouse. Cuando el usuario mueve el cursor del mouse, los comentarios se actualizan mediante una llamada a `DrawTrackerRect` y `OnChangedRect`.  
   

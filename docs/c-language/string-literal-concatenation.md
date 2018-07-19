@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388791"
 ---
 # <a name="string-literal-concatenation"></a>Concatenación de literales de cadena
 Para formar literales de cadena que ocupen más de una línea, puede concatenar las dos cadenas. Para ello, inserte una barra diagonal inversa y presione la tecla ENTRAR. La barra diagonal inversa hace que el compilador omita el siguiente carácter de nueva línea. Por ejemplo, el literal de cadena  

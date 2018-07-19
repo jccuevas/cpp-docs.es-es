@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3da7c168cc547ea32f57a145347d8ab2479482a6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954681"
 ---
 # <a name="canimationsize-class"></a>Clase CAnimationSize
 Implementa la funcionalidad de un objeto cuyas dimensiones se pueden animar.  
@@ -113,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pCXTransition`  
+ *pCXTransition*  
  Puntero a la transición para el ancho.  
   
- `pCYTransition`  
+ *pCYTransition*  
  Puntero a la transición para el alto.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -137,16 +138,16 @@ CAnimationSize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szDefault`  
+ *szDefault*  
  Especifica el tamaño predeterminado.  
   
- `nGroupID`  
+ *nGroupID*  
  Especifica el identificador de grupo.  
   
- `nObjectID`  
+ *nObjectID*  
  Especifica el identificador de objeto.  
   
- `dwUserData`  
+ *dwUserData*  
  Especifica los datos definidos por el usuario.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -162,7 +163,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lst`  
+ *lst*  
  Cuando la función devuelve, contiene punteros a dos objetos CAnimationVariable que representa el ancho y alto.  
   
 ##  <a name="getcx"></a>  CAnimationSize::GetCX  
@@ -212,7 +213,7 @@ BOOL GetValue(CSize& szValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szValue`  
+ *szValue*  
  Salida. Cuando este método vuelve, contiene el valor actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -256,7 +257,7 @@ void operator=(const CSize& szSrc);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szSrc`  
+ *szSrc*  
  Hace referencia a CSize o tamaño.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -270,7 +271,7 @@ void SetDefaultValue(const CSize& szDefault);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `szDefault`  
+ *szDefault*  
  Especifica el nuevo tamaño de forma predeterminada.  
   
 ### <a name="remarks"></a>Comentarios  

@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71871eae42fc720481852be1e60c934f941858c6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078161"
 ---
 # <a name="collection-class-helpers"></a>Aplicaciones auxiliares de clase de colección
-Las clases de colección `CMap`, `CList`, y `CArray` usar funciones de aplicación auxiliar con plantilla global para estos fines como comparar, copiar y seleccionar elementos. Como parte de la implementación de clases basadas en `CMap`, `CList`, y `CArray`, debe invalidar estas funciones según sea necesario con las versiones que se adaptan al tipo de datos almacenados en el mapa, lista o matriz. Para obtener información sobre cómo reemplazar las funciones auxiliares como `SerializeElements`, vea el artículo [colecciones: cómo crear una colección con seguridad de tipos](../../mfc/how-to-make-a-type-safe-collection.md). Tenga en cuenta que **ConstructElements** y **DestructElements** han quedado en desuso.  
+Las clases de colección `CMap`, `CList`, y `CArray` usar funciones de aplicación auxiliar con plantilla global para estos fines como comparar, copiar y seleccionar elementos. Como parte de la implementación de clases basadas en `CMap`, `CList`, y `CArray`, debe invalidar estas funciones según sea necesario con las versiones que se adaptan al tipo de datos almacenados en el mapa, lista o matriz. Para obtener información sobre cómo reemplazar las funciones auxiliares como `SerializeElements`, vea el artículo [colecciones: cómo crear una colección con seguridad de tipos](../../mfc/how-to-make-a-type-safe-collection.md). Tenga en cuenta que `ConstructElements` y `DestructElements` han quedado en desuso.  
   
  La biblioteca Microsoft Foundation Class proporciona las siguientes funciones globales en afxtempl.h que le ayudarán a personalizar las clases de colección:  
   
@@ -56,24 +57,24 @@ CompareElements(
  *TIPO DE*  
  El tipo del primer elemento que se va a comparar.  
   
- `pElement1`  
+ *pElement1*  
  Puntero al primer elemento que se va a comparar.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  El tipo del segundo elemento se va a comparar.  
   
- `pElement2`  
+ *pElement2*  
  Puntero al segundo elemento se va a comparar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el objeto señalado por `pElement1` es igual que el objeto al que señala `pElement2`; de lo contrario, 0.  
+ Es distinto de cero si el objeto señalado por *pElement1* es igual que el objeto al que señala *pElement2*; de lo contrario, 0.  
   
 ### <a name="remarks"></a>Comentarios  
  El `CMap` llama uso el `CMap` parámetros de plantilla *clave* y `ARG_KEY`.  
   
  La implementación predeterminada devuelve el resultado de la comparación de  *\*pElement1* y  *\*pElement2*. Reemplace esta función para que compara los elementos de una manera que sea adecuada para su aplicación.  
   
- El lenguaje C++ define el operador de comparación ( `==`) para los tipos simples ( `char`, `int`, **float**, etc.), pero no define un operador de comparación para las clases y estructuras. Si desea usar `CompareElements` o para crear una instancia de una de las clases de colección que lo utilice, debe definir el operador de comparación o sobrecarga `CompareElements` con una versión que devuelve los valores adecuados.  
+ El lenguaje C++ define el operador de comparación ( `==`) para los tipos simples ( **char**, **int**, **float**, etc.), pero no define un operador de comparación para las clases y estructuras. Si desea usar `CompareElements` o para crear una instancia de una de las clases de colección que lo utilice, debe definir el operador de comparación o sobrecarga `CompareElements` con una versión que devuelve los valores adecuados.  
   
 ### <a name="requirements"></a>Requisitos  
    **Encabezado:** afxtempl.h   
@@ -93,13 +94,13 @@ void AFXAPI CopyElements(
  *TIPO DE*  
  Parámetro de plantilla que especifica el tipo de elementos que se copian.  
   
- `pDest`  
+ *pDest*  
  Puntero para el destino donde se copiarán los elementos.  
   
- `pSrc`  
+ *pSrc*  
  Puntero al origen de los elementos que se va a copiar.  
   
- `nCount`  
+ *nCount*  
  Número de elementos que se copian.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -122,20 +123,20 @@ void  AFXAPI DumpElements(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dc`  
+ *dc*  
  Volcar contexto para realizar un volcado de elementos.  
   
  *TIPO DE*  
  Especifica el tipo de los elementos de un parámetro de plantilla.  
   
- `pElements`  
+ *pElements*  
  Puntero a los elementos que se va a realizar el volcado.  
   
- `nCount`  
+ *nCount*  
  Número de elementos que se va a realizar el volcado.  
   
 ### <a name="remarks"></a>Comentarios  
- El **CArray::Dump**, **CList::Dump**, y **CMap::Dump** funciones llamadas esto si la profundidad del volcado de memoria es mayor que 0.  
+ El `CArray::Dump`, `CList::Dump`, y `CMap::Dump` funciones llamadas esto si la profundidad del volcado de memoria es mayor que 0.  
   
  La implementación predeterminada no hace nada. Si se derivan de los elementos de la colección de `CObject`, la invalidación normalmente establece una iteración a través de los elementos de la colección, una llamada a `Dump` para cada elemento a su vez.  
   
@@ -152,10 +153,10 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ARG_KEY`  
+ *ARG_KEY*  
  Parámetro de plantilla que especifica el tipo de datos utilizado para tener acceso a claves de asignación.  
   
- `key`  
+ *key*  
  La clave cuyo valor de hash se va a calcular.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -164,7 +165,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="remarks"></a>Comentarios  
  Esta función se invoca directamente a través [CMap::RemoveKey](cmap-class.md#removekey) e indirectamente por [CMap::Lookup](cmap-class.md#lookup) y [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
   
- La implementación predeterminada crea un valor hash trasladando `key` derecha por cuatro posiciones. Reemplace esta función para que devuelva valores hash adecuada para su aplicación.  
+ La implementación predeterminada crea un valor hash trasladando *clave* derecha por cuatro posiciones. Reemplace esta función para que devuelva valores hash adecuada para su aplicación.  
   
 ### <a name="example"></a>Ejemplo
  ```cpp  
@@ -191,13 +192,13 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  *TIPO DE*  
  Especifica el tipo de los elementos de un parámetro de plantilla.  
   
- `ar`  
+ *ar*  
  Para archivar a o desde un objeto de almacenamiento.  
   
- `pElements`  
+ *pElements*  
  Puntero a los elementos que se va a archivar.  
   
- `nCount`  
+ *nCount*  
  Número de elementos que se archivan  
   
 ### <a name="remarks"></a>Comentarios  

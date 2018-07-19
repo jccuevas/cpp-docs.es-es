@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246022"
 ---
 # <a name="compiler-error-c3234"></a>Error del compilador C3234
 una clase genérica no puede derivar de un parámetro de tipo genérico  

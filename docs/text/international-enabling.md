@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858707"
 ---
 # <a name="international-enabling"></a>Internacionalización
 Código de C y C++ más tradicional hace suposiciones sobre la manipulación de cadenas y caracteres que no funcionan bien en aplicaciones internacionales. Aunque MFC y la biblioteca en tiempo de ejecución admiten Unicode o MBCS, todavía queda trabajo para el programador. Para guiarle, en esta sección se explica el significado de "internacionalización" en Visual C++:  

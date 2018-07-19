@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374289"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Asignar nombre al archivo de asignaciones)
 Indica al vinculador que genere un archivo de asignaciones que contiene una lista de segmentos en el orden en que aparecen en el archivo .exe correspondiente o DLL.  

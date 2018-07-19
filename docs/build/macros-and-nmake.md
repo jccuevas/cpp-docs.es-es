@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368010"
 ---
 # <a name="macros-and-nmake"></a>Las macros y NMAKE
 Las macros reemplazan una cadena concreta en el archivo MAKE por otra cadena. Uso de macros, puede:  

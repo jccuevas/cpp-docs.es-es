@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292352"
 ---
 # <a name="compiler-warning-level-4-c4211"></a>Advertencia del compilador (nivel 4) C4211
 ha utilizado una extensión no estándar: extern como estática se volvió a definir  

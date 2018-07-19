@@ -1,5 +1,5 @@
 ---
-title: Página de propiedades de la herramienta Generador de datos XML | Documentos de Microsoft
+title: Página de propiedades de la herramienta Generador de datos XML | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e13d56891c5df2c17234a434da9890842bfc54ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33329948"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>Herramienta generadora de datos XML (página de propiedades)
-El **herramienta generadora de datos XML** página de propiedades está disponible al agregar un conjunto de datos a un proyecto.  
+La página de propiedades **Herramienta Generador de datos XML** está disponible al agregar un conjunto de datos a un proyecto.  
   
- El **herramienta generadora de datos XML** página de propiedades contiene las siguientes propiedades:  
+ La página de propiedades **Herramienta Generador de datos XML** contiene las propiedades siguientes:  
   
  **Archivo de salida**  
- Especifica el nombre de archivo de salida para usar.  
+ Especifica el nombre del archivo de salida que se va a usar.  
   
- **Suprimir el titular de inicio**  
- Suprime la presentación de los mensajes de pancarta y la información de inicio.  
+ **Suprimir la pancarta de inicio**  
+ Suprime la presentación de la pancarta de inicio y los mensajes de información.  
   
- **Lenguaje del Proxy generado**  
- Determina si se debe o no emitir código administrado.  
+ **Lenguaje de proxy generado**  
+ Determina si se emite o no código administrado.  
   
- Para obtener información sobre cómo obtener acceso a la **herramienta generadora de datos XML** página de propiedades, vea [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).  
+ Para obtener información sobre cómo acceder a la página de propiedades **Herramienta Generador de datos XML**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
   
- Para obtener información sobre cómo obtener acceso mediante programación a los miembros de este objeto, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
+ Para obtener información sobre cómo acceder mediante programación a los miembros de este objeto, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>.  
   
 ## <a name="see-also"></a>Vea también  
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)

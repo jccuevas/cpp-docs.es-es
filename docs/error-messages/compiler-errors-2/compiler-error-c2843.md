@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247546"
 ---
 # <a name="compiler-error-c2843"></a>Error del compilador C2843
 'member' : no se puede adquirir la dirección de un miembro de datos o de un método no estáticos de un tipo administrado o WinRT  

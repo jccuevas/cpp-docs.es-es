@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354451"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>Colección de ATL y las clases de enumerador
 ATL proporciona las siguientes clases para ayudar a implementar colecciones y enumeradores.  

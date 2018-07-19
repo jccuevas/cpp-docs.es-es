@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247786"
 ---
 # <a name="compiler-error-c3270"></a>Error del compilador C3270
 'field': el atributo FieldOffset solo se puede utilizar en el contexto de StructLayout(LayoutKind::Explicit), en cuyo caso es necesario  

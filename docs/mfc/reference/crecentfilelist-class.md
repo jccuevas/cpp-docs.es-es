@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d1dc8b636d0c97bc220f9c7f0f1e1cd165369e0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079021"
 ---
 # <a name="crecentfilelist-class"></a>Clase CRecentFileList
 Admite el control de lista de los archivos utilizados más recientemente (MRU).  
@@ -114,19 +115,19 @@ void Add(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszPathName`  
+ *lpszPathName*  
  Especifica la ruta de acceso para agregarse a la lista.  
   
- `lpszAppID`  
+ *lpszAppID*  
  Especifica el identificador del modelo de aplicación de usuario para la aplicación.  
   
- `pItem`  
+ *pItem*  
  Especifica un puntero al elemento de Shell para agregarse a la lista.  
   
- `pLink`  
+ *pLink*  
  Especifica un puntero al vínculo de Shell para agregarse a la lista.  
   
- `pidl`  
+ *PIDL*  
  Especifica al LISTA_ID para el elemento de shell que debe agregarse a la carpeta de documentos recientes.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -145,23 +146,23 @@ CRecentFileList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nStart`  
+ *nStart*  
  Desplazamiento de la numeración en la pantalla de menú de la lista de archivos utilizados más Recientemente (usado más recientemente).  
   
- `lpszSection`  
+ *lpszSection*  
  Señala al nombre de la sección del registro o la aplicación. Archivo .ini donde la lista de archivos utilizados más Recientemente es leída y/o escrita.  
   
- `lpszEntryFormat`  
+ *lpszEntryFormat*  
  Apunta a una cadena de formato que se utilizará para los nombres de las entradas almacenadas en el registro o la aplicación. Archivo INI.  
   
- `nSize`  
+ *nSize*  
  Número máximo de archivos en la lista de archivos utilizados más Recientemente.  
   
- `nMaxDispLen`  
+ *nMaxDispLen*  
  Longitud máxima, en caracteres, disponibles para la presentación de menú de un nombre de archivo en la lista de archivos utilizados más Recientemente.  
   
 ### <a name="remarks"></a>Comentarios  
- La cadena de formato que señala `lpszEntryFormat` debe contener "%d", que se usará para sustituir el índice de cada elemento de elementos utilizados Recientemente. Por ejemplo, si la cadena de formato es `"file%d"` , a continuación, las entradas se denominará `file0`, `file1`, y así sucesivamente.  
+ La cadena de formato que señala *lpszEntryFormat* debe contener "%d", que se usará para sustituir el índice de cada elemento de elementos utilizados Recientemente. Por ejemplo, si la cadena de formato es `"file%d"` , a continuación, las entradas se denominará `file0`, `file1`, y así sucesivamente.  
   
 ##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  Obtiene un nombre para mostrar de un archivo en la lista de archivos utilizados más Recientemente, para su uso en la pantalla de menú de la lista de elementos utilizados Recientemente.  
@@ -176,10 +177,10 @@ virtual BOOL GetDisplayName(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `strName`  
+ *strName*  
  Ruta de acceso completa del archivo cuyo nombre se mostrará en la lista del menú de archivos utilizados más Recientemente.  
   
- `nIndex`  
+ *nIndex*  
  Índice de base cero del archivo en la lista de archivos utilizados más Recientemente.  
   
  *lpszCurDir*  
@@ -188,14 +189,14 @@ virtual BOOL GetDisplayName(
  *nCurDir*  
  Longitud de la cadena del directorio actual.  
   
- `bAtLeastName`  
- Si es distinto de cero, indica que se debe devolver el nombre base del archivo, incluso si supera la longitud máxima de visualización (pasado como el `nMaxDispLen` parámetro para el `CRecentFileList` constructor).  
+ *bAtLeastName*  
+ Si es distinto de cero, indica que se debe devolver el nombre base del archivo, incluso si supera la longitud máxima de visualización (pasado como el *nMaxDispLen* parámetro para el `CRecentFileList` constructor).  
   
 ### <a name="return-value"></a>Valor devuelto  
  **FALSE** si no hay ningún nombre de archivo en el índice especificado en la lista de archivos usa más recientemente (MRU).  
   
 ### <a name="remarks"></a>Comentarios  
- Si el archivo está en el directorio actual, la función deja el directorio de la pantalla. Si el nombre de archivo es demasiado largo, se eliminan el directorio y la extensión. Si el nombre de archivo sigue siendo demasiado largo, el nombre para mostrar se establece en una cadena vacía a menos que `bAtLeastName` es distinto de cero.  
+ Si el archivo está en el directorio actual, la función deja el directorio de la pantalla. Si el nombre de archivo es demasiado largo, se eliminan el directorio y la extensión. Si el nombre de archivo sigue siendo demasiado largo, el nombre para mostrar se establece en una cadena vacía a menos que *bAtLeastName* es distinto de cero.  
   
 ##  <a name="getsize"></a>  CRecentFileList::GetSize  
  Recupera el número de archivos en la lista de archivos utilizados más Recientemente.  
@@ -208,14 +209,14 @@ int GetSize() const;
  El número de archivos actual más archivos usados recientemente (MRU).  
   
 ##  <a name="operator_at"></a>  [] CRecentFileList::operator  
- El subíndice sobrecargado ( `[]`) operador devuelve un valor single `CString` especificado por el índice de base cero en `nIndex`.  
+ El subíndice sobrecargado ( `[]`) operador devuelve un valor single `CString` especificado por el índice de base cero en *nIndex*.  
   
 ```  
 CString& operator[ ](int nindex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Índice de base cero de un `CString` en un conjunto de `CString`s.  
   
 ##  <a name="readlist"></a>  CRecentFileList::ReadList  
@@ -233,7 +234,7 @@ virtual void Remove(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Índice de base cero del archivo que se va a quitar de la lista de archivos usa más recientemente (MRU).  
   
 ##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
@@ -244,7 +245,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pCmdUI`  
+ *pCmdUI*  
  Un puntero a la [CCmdUI](../../mfc/reference/ccmdui-class.md) objeto para el menú de lista de usados recientemente (MRU) archivo.  
   
 ##  <a name="writelist"></a>  CRecentFileList::WriteList  

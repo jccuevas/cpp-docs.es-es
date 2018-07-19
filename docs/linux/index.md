@@ -3,13 +3,14 @@ layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
 ms.topic: landing-page
-title: "Documentación de desarrollo de Linux con C++"
+title: Documentación de desarrollo de Linux con C++
 description: Cree y depure aplicaciones que se ejecutan en Linux.
 ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
 ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29794185"
 ---
 # <a name="linux-development-with-c-documentation"></a>Documentación de desarrollo de Linux con C++
 

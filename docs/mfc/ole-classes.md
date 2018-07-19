@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343519"
 ---
 # <a name="ole-classes"></a>Clases de OLE
 Las clases OLE funcionan con las otras clases de framework de aplicación para facilitar el acceso a la API de ActiveX, lo que proporciona los programas de una manera fácil de proporcionar la potencia de ActiveX a los usuarios. Con ActiveX, puede:  

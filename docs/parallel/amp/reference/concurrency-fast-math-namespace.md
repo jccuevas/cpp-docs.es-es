@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692163"
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math (Espacio de nombres)
 Las funciones en el `fast_math` espacio de nombres tienen menor precisión, admite solo precisión sencilla (`float`) y llamar a las funciones intrínsecas de DirectX. Existen dos versiones de cada función, por ejemplo `cos` y `cosf`. Ambas versiones toman y devuelven un `float`, pero cada uno de ellos llama a la misma DirectX intrínseco.  

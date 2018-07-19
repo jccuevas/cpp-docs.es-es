@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346118"
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>Cómo simplifica MFC la creación de aplicaciones cliente de Internet
 Microsoft Foundation Classes encapsular las funciones de extensión de Internet Win32 (WinInet) de forma que proporciona un contexto familiar para los programadores MFC. MFC proporciona tres clases de archivos de Internet ([CInternetFile](../mfc/reference/cinternetfile-class.md), [CHttpFile](../mfc/reference/chttpfile-class.md), y [CGopherFile](../mfc/reference/cgopherfile-class.md)) derivado de la [CStdioFile](../mfc/reference/cstdiofile-class.md) (clase) . No solo estas clases se realizan recuperar y manipular datos de Internet resultará familiar a los programadores que han usado `CStdioFile` para archivos locales, pero con estas clases pueden controlar archivos locales y los archivos de Internet de forma transparente.  

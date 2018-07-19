@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090720"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Value (Clases y structs) (C++/CX)
 A *struct de valor* o *clase de valor* es una ventana de tiempo de ejecución compatible ("estructura POD plain old datos"). Tiene un tamaño fijo y solo se compone de campos; a diferencia de una clase ref, no tiene propiedades.  

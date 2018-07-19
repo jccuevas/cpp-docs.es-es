@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088159"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr (Clase de valor)
 Representa un puntero o un identificador con signo cuyo tamaño es específico de la plataforma (32 bits o 64 bits).  

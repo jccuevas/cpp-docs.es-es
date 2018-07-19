@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354284"
 ---
 # <a name="displaying-assertions"></a>Mostrar aserciones
 Si el cliente conectado a su servicio parece dejar de responder, el servicio puede se imponen y muestra un cuadro de mensaje que no pueda ver. Puede confirmarlo utilizando el depurador de Visual C++ para depurar el código (vea [utilizando el Administrador de tareas](../atl/using-task-manager.md) anteriormente en esta sección).  

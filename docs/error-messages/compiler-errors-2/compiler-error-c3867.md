@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270982"
 ---
 # <a name="compiler-error-c3867"></a>Error del compilador C3867
 'func': falta la lista de argumentos de la llamada a la función; utilice '&func' para crear un puntero al miembro  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247020"
 ---
 # <a name="compiler-error-c3034"></a>Error del compilador C3034
 La directiva 'directive1' de OpenMP no se puede anidarse directamente dentro de la directiva 'directive2'  

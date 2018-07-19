@@ -46,11 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b5060c850a1fcdba089b732d019f958f2e7410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038560"
 ---
 # <a name="coledatasource-class"></a>COleDataSource (clase)
 Actúa como una memoria caché donde una aplicación coloca los datos que proporcionará durante las operaciones de transferencia de datos, tales como las operaciones del Portapapeles y de arrastrar y colocar.  
@@ -116,14 +117,14 @@ void CacheData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cfFormat`  
+ *cfFormat*  
  El formato de Portapapeles en el que se pueden ofrecer los datos. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por las ventanas nativas [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) función.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Apunta a un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estructura que contiene los datos en el formato especificado.  
   
- `lpFormatEtc`  
- Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se pueden ofrecer los datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si es **NULL**, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se pueden ofrecer los datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si es **NULL**, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="remarks"></a>Comentarios  
  Debe proporcionar los datos, ya que esta función proporciona mediante el uso de la representación inmediata. Los datos se almacena en caché hasta que sea necesario.  
@@ -149,14 +150,14 @@ void CacheGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cfFormat`  
+ *cfFormat*  
  El formato de Portapapeles en el que se pueden ofrecer los datos. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por las ventanas nativas [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) función.  
   
  *hGlobal*  
  Identificador de bloque de memoria global que contiene los datos en el formato especificado.  
   
- `lpFormatEtc`  
- Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se pueden ofrecer los datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si es **NULL**, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se pueden ofrecer los datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si es **NULL**, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función proporciona los datos mediante la representación de inmediato, por lo que debe suministrar los datos cuando se llama a la función; los datos se almacena en caché hasta que sea necesario. Use la `CacheData` función de miembro si se proporciona una gran cantidad de datos o si necesita un medio de almacenamiento estructurado.  
@@ -184,11 +185,11 @@ void DelayRenderData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cfFormat`  
+ *cfFormat*  
  El formato de Portapapeles en el que se pueden ofrecer los datos. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por las ventanas nativas [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) función.  
   
- `lpFormatEtc`  
- Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se pueden ofrecer los datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si es **NULL**, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se pueden ofrecer los datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si es **NULL**, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función proporciona los datos mediante la representación diferida, por lo que los datos no se suministran inmediatamente. El [OnRenderData](#onrenderdata) o [OnRenderGlobalData](#onrenderglobaldata) función miembro se llama para solicitar los datos.  
@@ -211,11 +212,11 @@ void DelayRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cfFormat`  
+ *cfFormat*  
  El formato de Portapapeles en el que se pueden ofrecer los datos. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por las ventanas nativas [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) función.  
   
- `lpFormatEtc`  
- Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se pueden ofrecer los datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si es **NULL**, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se pueden ofrecer los datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si es **NULL**, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función proporciona los datos mediante la representación diferida, por lo que los datos no se suministran inmediatamente. El [OnRenderFileData](#onrenderfiledata) función miembro se llama para solicitar los datos.  
@@ -238,11 +239,11 @@ void DelaySetData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cfFormat`  
+ *cfFormat*  
  El formato de Portapapeles en el que se colocarán los datos. Este parámetro puede ser uno de los formatos de Portapapeles predefinidos o el valor devuelto por las ventanas nativas [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) función.  
   
- `lpFormatEtc`  
- Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se reemplazarán los datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por `cfFormat`. Si es **NULL**, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
+ *lpFormatEtc*  
+ Apunta a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que describe el formato en el que se reemplazarán los datos. Especifique un valor para este parámetro si desea especificar información de formato adicionales más allá del formato de Portapapeles especificado por *cfFormat*. Si es **NULL**, se usan valores predeterminados para el resto de los campos de la **FORMATETC** estructura.  
   
 ### <a name="remarks"></a>Comentarios  
  [OnSetData](#onsetdata) llamará el marco de trabajo cuando esto ocurre. Solo se utiliza cuando el marco de trabajo devuelve el origen de datos de [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Si `DelaySetData` no se llama a su `OnSetData` función nunca se llamará. `DelaySetData` se debe llamar para cada Portapapeles o **FORMATETC** compatibilidad con el formato.  
@@ -262,7 +263,7 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwEffects`  
+ *dwEffects*  
  Operaciones de arrastrar y colocar permitidas en este origen de datos. Puede tener uno o varios de los siguientes:  
   
 - `DROPEFFECT_COPY` Se pudo realizar una operación de copia.  
@@ -273,7 +274,7 @@ DROPEFFECT DoDragDrop(
   
 - `DROPEFFECT_SCROLL` Indica que podría producirse una operación de desplazamiento de arrastre.  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  Puntero al rectángulo que define donde realmente comienza la operación de arrastre. Para obtener más información, vea la sección Comentarios que se muestra más adelante.  
   
  *pDropSource*  
@@ -283,7 +284,7 @@ DROPEFFECT DoDragDrop(
  Quitar efecto generado por la operación de arrastrar y colocar; en caso contrario `DROPEFFECT_NONE` si nunca se comienza la operación porque el usuario suelta el botón del mouse antes de abandonar el rectángulo proporcionado.  
   
 ### <a name="remarks"></a>Comentarios  
- No se inicie inmediatamente la operación de arrastrar y colocar. Espera hasta que el cursor del mouse deja el rectángulo especificado por `lpRectStartDrag` o hasta que un número especificado de milisegundos transcurridos. Si `lpRectStartDrag` es **NULL**, el tamaño del rectángulo es un píxel.  
+ No se inicie inmediatamente la operación de arrastrar y colocar. Espera hasta que el cursor del mouse deja el rectángulo especificado por *lpRectStartDrag* o hasta que un número especificado de milisegundos transcurridos. Si *lpRectStartDrag* es **NULL**, el tamaño del rectángulo es un píxel.  
   
  El tiempo de retraso especificado por un valor de una clave del registro. Puede cambiar el tiempo de retraso mediante una llamada a [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) o [CWinApp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint). Si no especifica el tiempo de retardo, se utiliza un valor predeterminado de 200 milisegundos. Tiempo de retardo de arrastre se almacena como sigue:  
   
@@ -339,10 +340,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Apunta a la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que especifica el formato en el que se solicita información.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Apunta a un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estructura en la que los datos se va a devolver.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -351,7 +352,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>Comentarios  
  El formato especificado es una establecidas anteriormente en el `COleDataSource` objeto mediante la [DelayRenderData](#delayrenderdata) o [DelayRenderFileData](#delayrenderfiledata) función de miembro para la representación aplazada. La implementación predeterminada de esta función llamará [OnRenderFileData](#onrenderfiledata) o [OnRenderGlobalData](#onrenderglobaldata) si el medio de almacenamiento proporcionado es un archivo o la memoria, respectivamente. Si no se proporciona ninguno de estos formatos, la implementación predeterminada se devuelven 0 y no hacen nada. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Si `lpStgMedium` ->  *tymed* es **TYMED_NULL**, **STGMEDIUM** debe ser asignado y rellenado según lo especificado por *lpFormatEtc -> TYMED*. Si no lo es **TYMED_NULL**, **STGMEDIUM** debe rellenarse en lugar de con los datos.  
+ Si *lpStgMedium*-> *tymed* es **TYMED_NULL**, **STGMEDIUM** debe ser asignado y rellenado según lo especificado por *lpFormatEtc -> tymed*. Si no lo es **TYMED_NULL**, **STGMEDIUM** debe rellenarse en lugar de con los datos.  
   
  Avanzada reemplazable. Reemplace esta función para proporcionar los datos en el formato solicitado y medio. Dependiendo de los datos, puede que desee invalidar una de las otras versiones de esta función en su lugar. Si los datos son pequeños y un tamaño fijo, invalidar `OnRenderGlobalData`. Si los datos en un archivo, o es de tamaño variable, invalidar `OnRenderFileData`.  
   
@@ -367,10 +368,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Apunta a la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que especifica el formato en el que se solicita información.  
   
- `pFile`  
+ *pFile*  
  Apunta a un [CFile](../../mfc/reference/cfile-class.md) objeto en el que se va a representar los datos.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -393,10 +394,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Apunta a la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que especifica el formato en el que se solicita información.  
   
- `phGlobal`  
+ *phGlobal*  
  Apunta a un identificador de memoria global en el que los datos son va a devolver. Si uno todavía no se ha asignado, este parámetro puede ser **NULL**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -405,7 +406,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>Comentarios  
  El formato especificado es una establecidas anteriormente en el `COleDataSource` objeto mediante la [DelayRenderData](#delayrenderdata) función de miembro para la representación aplazada. La implementación predeterminada de esta función devuelve simplemente **FALSE**.  
   
- Si `phGlobal` es **NULL**, a continuación, un nuevo `HGLOBAL` debe asignar y se devuelve en `phGlobal`. En caso contrario, el `HGLOBAL` especificado por `phGlobal` debe rellenarse con los datos. La cantidad de datos se coloca en el `HGLOBAL` no debe superar el tamaño actual del bloque de memoria. Además, el bloque no se pueden reasignar a un tamaño mayor.  
+ Si *phGlobal* es **NULL**, a continuación, un nuevo `HGLOBAL` debe asignar y se devuelven en *phGlobal*. En caso contrario, el `HGLOBAL` especificado por *phGlobal* debe rellenarse con los datos. La cantidad de datos se coloca en el `HGLOBAL` no debe superar el tamaño actual del bloque de memoria. Además, el bloque no se pueden reasignar a un tamaño mayor.  
   
  Avanzada reemplazable. Reemplace esta función para proporcionar los datos en el formato solicitado y medio. Dependiendo de los datos, puede que desee invalidar una de las otras versiones de esta función en su lugar. Si desea controlar varios medios de almacenamiento, reemplace [OnRenderData](#onrenderdata). Si los datos en un archivo, o es de tamaño variable, invalidar [OnRenderFileData](#onrenderfiledata). Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
@@ -422,14 +423,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Apunta a la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que especifica el formato en el que se va a reemplazar datos.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Apunta a la [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estructura que contiene los datos que va a reemplazar el contenido actual de la `COleDataSource` objeto.  
   
- `bRelease`  
- Indica que tiene una propiedad del medio de almacenamiento después de completar la llamada de función. El llamador decide quién es responsable de liberar los recursos asignados en nombre del medio de almacenamiento. El llamador para ello, establezca `bRelease`. Si `bRelease` es distinto de cero, el origen de datos toma la propiedad, el medio que libera cuando termina de usarla. Cuando `bRelease` es 0, el llamador conserva la propiedad y el origen de datos puede utilizar el medio de almacenamiento durante la llamada.  
+ *bRelease*  
+ Indica que tiene una propiedad del medio de almacenamiento después de completar la llamada de función. El llamador decide quién es responsable de liberar los recursos asignados en nombre del medio de almacenamiento. El llamador para ello, establezca *bRelease*. Si *bRelease* es distinto de cero, el origen de datos toma la propiedad, el medio que libera cuando termina de usarla. Cuando *bRelease* es 0, el llamador conserva la propiedad y el origen de datos puede utilizar el medio de almacenamiento durante la llamada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  

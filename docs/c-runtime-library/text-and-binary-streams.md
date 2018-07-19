@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410936"
 ---
 # <a name="text-and-binary-streams"></a>Secuencias binarias y de texto
 Una secuencia de texto está formada por una o varias líneas de texto que se pueden escribir en una presentación de texto para que pueda leerlas. Al leer de una secuencia de texto, el programa lee un valor `NL` (nueva línea) al final de cada línea. Al escribir en una secuencia de texto, el programa escribe un valor `NL` para señalar el final de una línea. Para hacer coincidir las distintas convenciones entre entornos de destino para representar texto en archivos, las funciones de biblioteca pueden modificar el número y la representación de caracteres que se transmiten entre el programa y una secuencia de texto.  

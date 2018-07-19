@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369310"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 Puede usar el **MSBuild** herramienta para crear una aplicación de Visual C++ desde la línea de comandos. El proceso de compilación se controla mediante la información de un archivo de proyecto (.vcxproj) que puede crear y editar. El archivo de proyecto especifica opciones de compilación en función de la compilación fases, condiciones y eventos.  

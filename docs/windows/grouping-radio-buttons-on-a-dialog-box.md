@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879333"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Agrupar botones de opción en un cuadro de diálogo
 Al agregar botones de radio a un cuadro de diálogo, trátelos como grupo, estableciendo una propiedad Grupo en la ventana Propiedades para el primer botón del grupo. Después, aparecerá un id. de control para ese botón de opción en el [Asistente para agregar variables miembro](../ide/add-member-variable-wizard.md), lo que le permite agregar una variable miembro para el grupo de botones de radio.  

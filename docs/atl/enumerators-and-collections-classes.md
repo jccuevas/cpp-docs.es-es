@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355651"
 ---
 # <a name="enumerators-and-collections-classes"></a>Clases de colecciones y enumeradores
 Las clases siguientes proporcionan compatibilidad para las enumeraciones y las colecciones de COM:  

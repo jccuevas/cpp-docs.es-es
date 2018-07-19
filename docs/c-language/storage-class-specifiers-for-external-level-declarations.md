@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392122"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Especificadores de clase de almacenamiento para las declaraciones de nivel externo
 Las variables externas son variables en el ámbito de archivo. Se definen fuera de cualquier función y pueden estar disponibles para muchas funciones. Las funciones solo se pueden definir en el nivel externo y, por consiguiente, no pueden anidarse. De forma predeterminada, todas las referencias a variables y funciones externas del mismo nombre son referencias al mismo objeto, lo que significa que tienen “vinculación externa”. (Puede utilizar la palabra clave **static** para invalidar esto. Vea la información que aparece más adelante en esta sección para conocer más detalles sobre **static**).  

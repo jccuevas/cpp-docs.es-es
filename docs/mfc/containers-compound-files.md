@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8983fd8cb51a9f305ef4b0fad4d546fc8091f5a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930230"
 ---
 # <a name="containers-compound-files"></a>Contenedores: Archivos compuestos
 En este artículo se explica los componentes y la implementación de archivos compuestos así como las ventajas y desventajas del uso de archivos compuestos en las aplicaciones OLE.  
@@ -45,7 +46,7 @@ En este artículo se explica los componentes y la implementación de archivos co
   
 -   Objetos de almacenamiento, como los directorios, pueden contener otros objetos de almacenamiento y el flujo.  
   
--   **LockBytes** objetos representan la interfaz entre los objetos de almacenamiento y el hardware físico. Determinan cómo se escriben los bytes reales para cualquier dispositivo de almacenamiento del **LockBytes** obtiene acceso objetos, como una unidad de disco duro o un área de la memoria global. Para obtener más información acerca de **LockBytes** objetos y `ILockBytes` de la interfaz, vea la *referencia del programador de OLE*.  
+-   `LockBytes` objetos representan la interfaz entre los objetos de almacenamiento y el hardware físico. Determinan cómo se escriben los bytes reales para cualquier dispositivo de almacenamiento la `LockBytes` obtiene acceso objetos, como una unidad de disco duro o un área de la memoria global. Para obtener más información acerca de `LockBytes` objetos y `ILockBytes` de la interfaz, vea la *referencia del programador de OLE*.  
   
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Ventajas y desventajas de los archivos compuestos  
  Archivos compuestos proporcionan ventajas no está disponible en los métodos anteriores de almacenamiento de archivos. Son los siguientes:  

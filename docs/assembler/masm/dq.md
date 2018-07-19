@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051148"
 ---
 # <a name="dq"></a>DQ
 Asigna y, opcionalmente, inicializa 8 bytes de almacenamiento para cada `initializer`. También puede usarse como un especificador de tipo en cualquier lugar un tipo es legal. `DQ` es un sinónimo de [QWORD](../../assembler/masm/qword.md).  

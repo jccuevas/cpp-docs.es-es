@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089251"
 ---
 # <a name="caccessorrowsetfreerecordmemory"></a>CAccessorRowset::FreeRecordMemory
 Libera las columnas en el registro actual que deben ser liberados.  

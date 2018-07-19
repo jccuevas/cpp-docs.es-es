@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3888f054baab61bb7422403b0766d7f757914d1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef863a0eb8cec66e7f640a734088a98b1e8d7b83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952117"
 ---
 # <a name="ccolordialog-class"></a>Clase CColorDialog
 Le permite especificar un cuadro de diálogo de selección de color en la aplicación.  
@@ -79,7 +80,7 @@ class CColorDialog : public CCommonDialog
   
  Para construir un `CColorDialog` de objeto, utilice el constructor proporcionado o derivar una clase nueva y usar su propio constructor personalizado.  
   
- Una vez que se ha construido el cuadro de diálogo, puede establecer o modificar los valores de la [m_cc](#m_cc) estructura para inicializar los valores de los controles del cuadro de diálogo. El `m_cc` estructura es de tipo [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
+ Una vez que se ha construido el cuadro de diálogo, puede establecer o modificar los valores de la [m_cc](#m_cc) estructura para inicializar los valores de los controles del cuadro de diálogo. El *m_cc* estructura es de tipo [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
   
  Después de inicializar los controles del cuadro de diálogo, llame a la `DoModal` función de miembro para mostrar el cuadro de diálogo y permitir al usuario seleccionar un color. `DoModal` Devuelve la selección del usuario de uno de ellos Aceptar del cuadro de diálogo ( **IDOK**) o Cancelar ( **IDCANCEL**) botón.  
   
@@ -128,10 +129,10 @@ CColorDialog(
  *clrInit*  
  La selección de color predeterminado. Si no se especifica ningún valor, el valor predeterminado es RGB(0,0,0) (negro).  
   
- `dwFlags`  
+ *dwFlags*  
  Un conjunto de marcas que personalizan la función y la apariencia del cuadro de diálogo. Para obtener más información, consulte el [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) estructura en el SDK de Windows.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana primaria o propietaria del cuadro de diálogo.  
   
 ### <a name="example"></a>Ejemplo  
@@ -196,7 +197,7 @@ CHOOSECOLOR m_cc;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Después de crear un `CColorDialog` objeto, puede usar `m_cc` para establecer varios aspectos del cuadro de diálogo antes de llamar a la [DoModal](#domodal) función miembro.  
+ Después de crear un `CColorDialog` objeto, puede usar *m_cc* para establecer varios aspectos del cuadro de diálogo antes de llamar a la [DoModal](#domodal) función miembro.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
@@ -230,18 +231,18 @@ virtual BOOL OnColorOK();
  [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
 ##  <a name="setcurrentcolor"></a>  CColorDialog::SetCurrentColor  
- Llame a esta función después de llamar a `DoModal` para forzar la selección de color actual en el valor de color especificado en `clr`.  
+ Llame a esta función después de llamar a `DoModal` para forzar la selección de color actual en el valor de color especificado en *clr*.  
   
 ```  
 void SetCurrentColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `clr`  
+ *CLR*  
  Un valor de color RGB.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función se llama desde dentro de un controlador de mensajes o `OnColorOK`. El cuadro de diálogo actualizará automáticamente la selección del usuario en función del valor de la `clr` parámetro.  
+ Esta función se llama desde dentro de un controlador de mensajes o `OnColorOK`. El cuadro de diálogo actualizará automáticamente la selección del usuario en función del valor de la *clr* parámetro.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CColorDialog::OnColorOK](#oncolorok).  

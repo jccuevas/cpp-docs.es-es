@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875024"
 ---
 # <a name="moduleobjectcount-data-member"></a>Module::objectCount_ (Miembro de datos)
 Realiza un seguimiento de cuántas clases se hayan creado con la [realizar](../windows/make-function.md) función.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695371"
 ---
 # <a name="graphics-c-amp"></a>Gráficos (C++ AMP)
 C++ AMP contiene varias API en el [Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) espacio de nombres que puede utilizar para tener acceso a la compatibilidad de textura de GPU. Algunos escenarios comunes son los siguientes:  

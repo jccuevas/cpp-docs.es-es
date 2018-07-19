@@ -60,11 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9f7a66b60d70231628ded5dc096bad702bf088
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 135bb279daf4c000c025ac6f8fa51a6b023e2d1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952549"
 ---
 # <a name="canimationbaseobject-class"></a>Clase CAnimationBaseObject
 La clase base para todos los objetos de animación.  
@@ -148,10 +149,10 @@ virtual BOOL ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pStoryboard`  
+ *pStoryboard*  
  Un puntero a un guión gráfico.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  Con FALSE este método agrega solo las transiciones que no dependen de los fotogramas clave.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -174,13 +175,13 @@ CAnimationBaseObject(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nGroupID`  
+ *nGroupID*  
  Especifica el identificador de grupo.  
   
- `nObjectID`  
+ *nObjectID*  
  Especifica el identificador de objeto.  
   
- `dwUserData`  
+ *dwUserData*  
  Datos definidos por el usuario, que se pueden asociados con el objeto de animación y recuperarse más adelante en tiempo de ejecución.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -194,7 +195,7 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bAutodestroy`  
+ *bAutodestroy*  
  Especifica si se debe destruir objetos de transición automáticamente, o solo los quita de la lista relacionada.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -208,7 +209,7 @@ virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pVariable`  
+ *pVariable*  
  Un puntero a la variable de animación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -250,10 +251,10 @@ virtual void EnableIntegerValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pController`  
+ *pController*  
  Un puntero a un controlador principal.  
   
- `bEnable`  
+ *bHabilitar el*  
  Especifica si se debe habilitar o deshabilitar eventos de cambio de valor de entero.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -269,10 +270,10 @@ virtual void EnableValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pController`  
+ *pController*  
  Un puntero a un controlador principal.  
   
- `bEnable`  
+ *bHabilitar el*  
  Especifica si se debe habilitar o deshabilitar eventos de cambio de valor.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -288,7 +289,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lst`  
+ *lst*  
  Una lista que se debe rellenar con variables de animación contenidas en un objeto de animación.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -389,7 +390,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bValue`  
+ *bValue*  
  Especifica el auto destruir marca.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -405,10 +406,10 @@ void SetID(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nObjectID`  
+ *nObjectID*  
  Especifica el identificador de objeto nuevo.  
   
- `nGroupID`  
+ *nGroupID*  
  Especifica el nuevo identificador de grupo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -432,7 +433,7 @@ void SetUserData (DWORD dwUserData);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwUserData`  
+ *dwUserData*  
  Especifica los datos personalizados.  
   
 ### <a name="remarks"></a>Comentarios  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863411"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Teclas de aceleración del Editor de cuadros de diálogo
 A continuación se muestran el valor predeterminado teclas de aceleración para comandos del editor de cuadro de diálogo. Para cambiar las teclas de método abreviado, haga clic en **opciones** en el **herramientas** menú, a continuación, elija **teclado** en el **entorno** carpeta. Para obtener más información, vea [Identificar y personalizar métodos abreviados de teclado](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

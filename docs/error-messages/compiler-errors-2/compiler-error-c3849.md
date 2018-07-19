@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270969"
 ---
 # <a name="compiler-error-c3849"></a>Error del compilador C3849
 llamada de estilo de función en una expresión de tipo 'tipo' perdería los calificadores const y volatile para el número de todas las sobrecargas de operador disponibles  

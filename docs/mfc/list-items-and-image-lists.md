@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6bd7a97330a8a646a880bf229562dbec9a70181
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e12c212939a708a4411a28bff0ebe5026a21b1e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932135"
 ---
 # <a name="list-items-and-image-lists"></a>Elementos de lista y listas de imágenes
 Un "elemento" en un control de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) consta de un icono, una etiqueta y, posiblemente, otra información (en "subelementos").  
@@ -29,11 +30,11 @@ Un "elemento" en un control de lista ([CListCtrl](../mfc/reference/clistctrl-cla
  Los iconos de elementos de control de lista se encuentran en listas de imágenes. Una lista de imágenes contiene iconos de tamaño completo que se usan en la vista de iconos. Una lista de imágenes en segundo lugar, opcional, contiene versiones reducidas de los mismos iconos para su uso en otras vistas del control. Una tercera lista opcional contiene imágenes de "estado", por ejemplo, casillas, para mostrar delante de los iconos pequeños en determinadas vistas. Una cuarta lista opcional contiene imágenes que se muestran en elementos de encabezado individuales del control de lista.  
   
 > [!NOTE]
->  Si se crea un control de vista de lista con el `LVS_SHAREIMAGELISTS` estilo, tú eres responsable de destruir las listas de imágenes cuando ya no están en uso. Especifique este estilo si asigna la misma imagen listas a varios controles de vista de lista; en caso contrario, más de un control podría intentar destruir la misma lista de imágenes.  
+>  Si se crea un control de vista de lista con el estilo LVS_SHAREIMAGELISTS, es responsable de destruirlo las listas de imágenes cuando ya no están en uso. Especifique este estilo si asigna la misma imagen listas a varios controles de vista de lista; en caso contrario, más de un control podría intentar destruir la misma lista de imágenes.  
   
  Para obtener más información acerca de los elementos de lista, vea [listas de imágenes de vista de lista](http://msdn.microsoft.com/library/windows/desktop/bb774736) y [elementos y subelementos](http://msdn.microsoft.com/library/windows/desktop/bb774736) del SDK de Windows. Vea también la clase [CImageList](../mfc/reference/cimagelist-class.md) en el *referencia de MFC* y [utilizar CImageList](../mfc/using-cimagelist.md) de esta familia de artículos.  
   
- Para crear un control de lista, debe proporcionar listas de imágenes que se usarán al insertar nuevos elementos en la lista. En el ejemplo siguiente se muestra este procedimiento, donde `m_pImagelist` es un puntero de tipo `CImageList` y `m_listctrl` es un `CListCtrl` miembro de datos.  
+ Para crear un control de lista, debe proporcionar listas de imágenes que se usarán al insertar nuevos elementos en la lista. En el ejemplo siguiente se muestra este procedimiento, donde *m_pImagelist* es un puntero de tipo `CImageList` y *m_listctrl* es un `CListCtrl` miembro de datos.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]  
   

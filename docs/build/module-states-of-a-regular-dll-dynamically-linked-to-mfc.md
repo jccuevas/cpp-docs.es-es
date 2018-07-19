@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369375"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Estados de módulos de un archivo DLL de MFC estándar vinculado dinámicamente a MFC
 La capacidad de vincular dinámicamente normal DLL de MFC con la DLL de MFC permite realizar algunas configuraciones que están muy complicadas. Por ejemplo, una DLL de MFC normal y el archivo ejecutable que lo usa pueden ambos vincular dinámicamente con la DLL de MFC y los archivos DLL de extensión MFC.  

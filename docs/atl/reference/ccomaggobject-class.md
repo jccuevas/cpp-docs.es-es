@@ -29,9 +29,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 426a01c1957b276174b8b36884605b69dd501de8
 ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364224"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject (clase)
 Esta clase implementa la [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfaz para un objeto agregado. Por definición, un objeto agregado está dentro de un objeto externo. El `CComAggObject` clase es similar a la [CComObject (clase)](../../atl/reference/ccomobject-class.md), excepto en que expone una interfaz que son directamente accesible para los clientes externos.  

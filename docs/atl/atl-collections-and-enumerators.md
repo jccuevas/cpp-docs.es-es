@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356783"
 ---
 # <a name="atl-collections-and-enumerators"></a>Colecciones y enumeradores de ATL
 A `collection` es un objeto COM que proporciona una interfaz que permite el acceso a un grupo de elementos de datos (datos sin formato u otros objetos). Una interfaz que sigue las normas para proporcionar acceso a un grupo de objetos se conoce como un *interfaz de colección*.  

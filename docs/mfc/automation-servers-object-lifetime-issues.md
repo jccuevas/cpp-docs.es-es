@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341805"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Servidores de Automation: Problemas de duración de objetos
 Cuando un cliente de automatización crea o activa un elemento OLE, el servidor transfiere al cliente un puntero a ese objeto. El cliente establece una referencia al objeto mediante una llamada a la función OLE [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). Esta referencia no está en vigor hasta que el cliente llama [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Las aplicaciones cliente escritas con clases de la biblioteca Microsoft Foundation Class OLE no necesitan realizar estas llamadas; lo hace el marco de trabajo). El sistema OLE y el propio servidor pueden establecer referencias al objeto. Un servidor no debe destruir un objeto mientras las referencias externas al objeto siguen en vigor.  

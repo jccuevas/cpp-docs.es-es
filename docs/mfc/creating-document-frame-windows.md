@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342948"
 ---
 # <a name="creating-document-frame-windows"></a>Crear ventanas de marco de documento
 [Creación de documento/vista](../mfc/document-view-creation.md) muestra cómo el [CDocTemplate](../mfc/reference/cdoctemplate-class.md) objeto organiza la creación de la ventana de marco, el documento y la vista y conectándolos combina todas estas características. Tres [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argumentos para el `CDocTemplate` constructor especifica las clases de vista que la plantilla de documento crea dinámicamente en respuesta a los comandos de usuario, como el comando nuevo en el archivo, documento y ventana de marco menú o el comando nueva ventana en un menú de ventana MDI. La plantilla de documento almacena esta información para su uso posterior cuando crea una ventana de marco para una vista y un documento.  

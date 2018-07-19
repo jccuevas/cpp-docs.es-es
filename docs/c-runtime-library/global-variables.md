@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392044"
 ---
 # <a name="global-variables"></a>Variables globales
 La biblioteca en tiempo de ejecución de C de Microsoft proporciona las siguientes macros o variables globales. Algunas de estas macros o variables globales están desusadas y, en su lugar, se usan versiones funcionales más seguras que le recomendamos que use en lugar de las variables globales.  

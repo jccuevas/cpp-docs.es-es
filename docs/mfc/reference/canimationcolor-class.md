@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462882957999d607809e80908ae4a25c628f18d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951748"
 ---
 # <a name="canimationcolor-class"></a>Clase CAnimationColor
 Implementa la funcionalidad de un color cuyos componentes rojo, verde y azul se pueden animar.  
@@ -120,13 +121,13 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pRTransition`  
+ *pRTransition*  
  Transición del componente rojo.  
   
- `pGTransition`  
+ *pGTransition*  
  Transición del componente verde.  
   
- `pBTransition`  
+ *pBTransition*  
  Transición del componente azul.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -146,16 +147,16 @@ CAnimationColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `color`  
+ *Color*  
  Especifica el color predeterminado.  
   
- `nGroupID`  
+ *nGroupID*  
  Especifica el identificador de grupo.  
   
- `nObjectID`  
+ *nObjectID*  
  Especifica el identificador de objeto.  
   
- `dwUserData`  
+ *dwUserData*  
  Especifica los datos definidos por el usuario.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -169,7 +170,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lst`  
+ *lst*  
  Cuando la función devuelve, contiene punteros a tres objetos CAnimationVariable que representan los componentes rojos, verde y azules.  
   
 ##  <a name="getb"></a>  CAnimationColor::GetB  
@@ -232,7 +233,7 @@ BOOL GetValue(COLORREF& color);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `color`  
+ *Color*  
  Salida. Cuando este método vuelve, contiene el valor actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -278,7 +279,7 @@ void operator=(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `color`  
+ *Color*  
  Especifica el nuevo valor de Color de la animación.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -292,7 +293,7 @@ void SetDefaultValue(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `color`  
+ *Color*  
  Especifica los nuevos valores predeterminados para los componentes rojos, verde y azules.  
   
 ### <a name="remarks"></a>Comentarios  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369362"
 ---
 # <a name="parameter-passing"></a>Paso de parámetros
 Los primeros cuatro argumentos de entero se pasan en registros. Valores enteros se pasan (en orden de izquierda a derecha) en RCX, RDX, R8 y R9. Argumentos de cinco y superior se pasan en la pila. Todos los argumentos son justificado a la derecha en los registros. Esto se hace por lo que el destinatario puede omitir los bits superiores del registro si tienen que ser y puede tener acceso a solo la parte del registro que necesita.  

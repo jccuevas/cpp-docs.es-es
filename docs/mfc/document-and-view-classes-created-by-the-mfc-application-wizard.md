@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349927"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Clases de documentos y de vistas creadas por el Asistente para aplicaciones MFC
 El Asistente para aplicaciones MFC le ofrece una ventaja a la hora en el desarrollo del programa mediante la creación de esqueleto documento y las clases de vistas para usted. A continuación, puede [asignar comandos y mensajes a estas clases](../mfc/reference/mapping-messages-to-functions.md) y utilizar el editor de código fuente de Visual C++ para escribir sus funciones miembro.  

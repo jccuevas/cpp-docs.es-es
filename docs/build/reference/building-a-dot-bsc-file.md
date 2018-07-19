@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369011"
 ---
 # <a name="building-a-bsc-file"></a>Crear un archivo .Bsc
 BSCMAKE puede generar un nuevo archivo de información de examen de los archivos .sbr recién creado. También puede mantener un archivo .bsc existente usando archivos .sbr para archivos objeto que han cambiado desde la última compilación.  

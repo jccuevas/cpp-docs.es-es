@@ -1,5 +1,5 @@
 ---
-title: Archivos de proyecto | Documentos de Microsoft
+title: Archivos de proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327234"
 ---
 # <a name="project-files"></a>Archivos de proyecto
-Un archivo de proyecto de Visual C++ es un archivo basado en XML que tiene la extensión de nombre de archivo .vcxproj y contiene información necesaria para compilar un proyecto de Visual C++.  
+Un archivo de proyecto de Visual C++ es un archivo basado en XML que tiene la extensión de nombre de archivo .vcxproj y que contiene la información necesaria para compilar un proyecto de Visual C++.  
   
 ## <a name="example"></a>Ejemplo  
- Se produjo el siguiente archivo .vcxproj de ejemplo mediante la especificación de un **aplicación de consola Win32** en el **nuevo proyecto** cuadro de diálogo. Para procesar un proyecto de archivo de usar la herramienta msbuild.exe en la línea de comandos o la **generar** comando en el [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Este ejemplo no se puede procesar porque no se proporcionan el origen necesarios y los archivos de encabezado.) Para obtener más información acerca de los elementos XML en un archivo de proyecto, vea [referencia de esquema de archivo de proyecto](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ El siguiente archivo .vcxproj de ejemplo se creó mediante la especificación de una **Aplicación de consola Win32** en el cuadro de diálogo **Nuevo proyecto**. Para procesar un proyecto de archivo, use la herramienta msbuild.exe en la línea de comandos, o bien el comando **Compilar** en el [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Este ejemplo no se puede procesar porque no se proporcionan los archivos de código y de encabezado necesarios). Para obtener más información sobre los elementos XML en un archivo de proyecto, vea [Referencia de esquemas de archivo del proyecto](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

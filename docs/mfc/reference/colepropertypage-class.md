@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042552"
 ---
 # <a name="colepropertypage-class"></a>Clase de COlePropertyPage
 Se utiliza para mostrar las propiedades de un control personalizado en una interfaz gráfica, similar a un cuadro de diálogo.  
@@ -139,7 +140,7 @@ BOOL GetControlStatus(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nID`  
+ *nID*  
  Id. de recurso de un control de la página de propiedades.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -153,14 +154,14 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pnObjects`  
+ *pnObjects*  
  Puntero a un entero largo sin signo que se va a recibir el número de objetos que se está editando la página.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a una matriz de `IDispatch` punteros, que se usan para tener acceso a las propiedades de cada control en la página de propiedades. El llamador no debe liberar estos punteros de interfaz.  
   
 ### <a name="remarks"></a>Comentarios  
- Cada objeto de la página de propiedad mantiene una matriz de punteros a la `IDispatch` interfaces de los objetos que se está editando la página. Esta función establece su `pnObjects` argumento según el número de elementos de la matriz y devuelve un puntero al primer elemento de la matriz.  
+ Cada objeto de la página de propiedad mantiene una matriz de punteros a la `IDispatch` interfaces de los objetos que se está editando la página. Esta función establece su *pnObjects* argumento según el número de elementos de la matriz y devuelve un puntero al primer elemento de la matriz.  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  Obtiene un puntero a la página de propiedades `IPropertyPageSite` interfaz.  
@@ -183,7 +184,7 @@ void IgnoreApply(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nID`  
+ *nID*  
  Identificador del control que se pasen por alto.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -207,7 +208,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dispid`  
+ *DISPID*  
  Identificador de envío de la propiedad que se está edita.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -278,10 +279,10 @@ BOOL SetControlStatus(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nID`  
+ *nID*  
  Contiene el identificador de un control de la página de propiedades.  
   
- `bDirty`  
+ *bDirty*  
  Especifica si se ha modificado un campo de la página de propiedades. Establecido en **TRUE** si se ha modificado el campo, **FALSE** si no se ha modificado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -315,7 +316,7 @@ void SetHelpInfo(
  *lpszDocString*  
  Una cadena que contiene información de ayuda breves para su presentación en una barra de estado o en otra ubicación.  
   
- `lpszHelpFile`  
+ *lpszHelpFile*  
  Nombre del archivo de Ayuda de la página de propiedades.  
   
  *dwHelpContext*  
@@ -329,7 +330,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bModified`  
+ *bModified*  
  Especifica el nuevo valor de marca de modificación de la página de propiedades.  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  

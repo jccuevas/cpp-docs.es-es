@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950309"
 ---
 # <a name="bitmap-structure"></a>BITMAP (Estructura)
 El **mapa de bits** estructura define el alto, ancho, formato de color y valores de bit de un mapa de bits lógico **.**  
@@ -50,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Especifica el alto del mapa de bits en líneas de trama. El alto debe ser mayor que 0.  
   
  *bmWidthBytes*  
- Especifica el número de bytes de cada línea de la trama. Este valor debe ser un número par, ya que la Interfaz de dispositivo gráfico (GDI) supone que los valores de bit de un formulario de mapa de bits componen una matriz de valores enteros (2 bytes). En otras palabras, **bmWidthBytes** \* 8 debe ser el múltiplo siguiente de 16 mayor o igual que el valor obtenido cuando el **Bmbitspixel** miembro se multiplica por el **Bmwidth**  miembro.  
+ Especifica el número de bytes de cada línea de la trama. Este valor debe ser un número par, ya que la Interfaz de dispositivo gráfico (GDI) supone que los valores de bit de un formulario de mapa de bits componen una matriz de valores enteros (2 bytes). En otras palabras, *bmWidthBytes* \* 8 debe ser el múltiplo siguiente de 16 mayor o igual que el valor obtenido cuando el *Bmbitspixel* miembro se multiplica por el *Bmwidth*  miembro.  
   
  *bmPlanes*  
  Especifica el número de planos de color del mapa de bits.  
@@ -59,7 +60,7 @@ typedef struct tagBITMAP {  /* bm */
  Especifica el número de bits de color adyacentes en cada plano necesario para definir un píxel.  
   
  *bmBits*  
- Señala a la ubicación de los valores de bits para el mapa de bits. El **bmBits** miembro debe ser un puntero largo a una matriz de valores de 1 byte.  
+ Señala a la ubicación de los valores de bits para el mapa de bits. El *bmBits* miembro debe ser un puntero largo a una matriz de valores de 1 byte.  
   
 ## <a name="remarks"></a>Comentarios  
  Los formatos de mapa de bits actualmente utilizados son monocromáticos y en color. El mapa de bits monocromático utiliza el formato de un 1 bit y 1 plano. Cada barrido es un múltiplo de 16 bits.  

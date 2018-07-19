@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857524"
 ---
 # <a name="add-resource-dialog-box"></a>Agregar recurso (cuadro de diálogo)
 Use este cuadro de diálogo para agregar recursos a un proyecto de aplicación de escritorio de Windows de C++.  

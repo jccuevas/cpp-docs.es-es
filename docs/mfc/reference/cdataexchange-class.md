@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d68359d075efd72a1bf1907daa71e74110fa28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ed2f918a51c1dca1aa7e1713ac919102a599e38
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953352"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange (clase)
 Admite rutinas de intercambio de datos de cuadros de diálogo (DDX) y de validación de datos de cuadros de diálogo (DDV) utilizadas por las clases de Microsoft Foundation.  
@@ -74,7 +75,7 @@ class CDataExchange
   
  Utilice esta clase si está escribiendo rutinas de intercambio de datos para tipos de datos personalizados o controles, o si va a escribir sus propias rutinas de validación de datos. Para obtener más información sobre cómo escribir sus propias rutinas DDX y DDV, vea [Nota técnica 26](../../mfc/tn026-ddx-and-ddv-routines.md). Para obtener información general de DDX y DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md) y [cuadros de diálogo](../../mfc/dialog-boxes.md).  
   
- Un `CDataExchange` objeto proporciona la información de contexto necesaria para colocan DDX y DDV tomar. La marca `m_bSaveAndValidate` es **FALSE** cuando DDX se usa para rellenar los valores iniciales de los controles de cuadro de diálogo de miembros de datos. La marca `m_bSaveAndValidate` es **TRUE** cuando DDX se usa para establecer los valores actuales de los controles de cuadro de diálogo en miembros de datos y el momento en que DDV se utiliza para validar los valores de datos. Si se produce un error en la validación de DDV, el procedimiento DDV mostrará un cuadro de mensaje que explica el error en la entrada. A continuación, se llamará al procedimiento DDV **producirá un error en** para restablecer el foco al control de proceso causante del error e inicia una excepción para detener el proceso de validación.  
+ Un `CDataExchange` objeto proporciona la información de contexto necesaria para colocan DDX y DDV tomar. La marca *m_bSaveAndValidate* es **FALSE** cuando DDX se usa para rellenar los valores iniciales de los controles de cuadro de diálogo de miembros de datos. La marca *m_bSaveAndValidate* es **TRUE** cuando DDX se usa para establecer los valores actuales de los controles de cuadro de diálogo en miembros de datos y el momento en que DDV se utiliza para validar los valores de datos. Si se produce un error en la validación de DDV, el procedimiento DDV mostrará un cuadro de mensaje que explica el error en la entrada. A continuación, se llamará al procedimiento DDV `Fail` para restablecer el foco al control de proceso causante del error e inicia una excepción para detener el proceso de validación.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CDataExchange`  
@@ -95,7 +96,7 @@ CDataExchange(
  *pDlgWnd*  
  Un puntero a la ventana primaria que contiene el control. Normalmente esto es un [CDialog](../../mfc/reference/cdialog-class.md)-objeto derivado.  
   
- `bSaveAndValidate`  
+ *bSaveAndValidate*  
  Si **TRUE**, este objeto se valida los datos, a continuación, escribe los datos de los controles a los miembros. Si **FALSE**, moverá este objeto datos de los miembros a los controles.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -112,9 +113,9 @@ void Fail();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- **Un error** restaura el foco y la selección en el control cuya validación con errores (si hay un control para restaurar). **Un error** , a continuación, inicia una excepción de tipo [CUserException](../../mfc/reference/cuserexception-class.md) para detener el proceso de validación. La excepción hace que un cuadro de mensaje que explica que se muestre el error. Después de que se produce un error en la validación de DDV, el usuario puede volver a escribir datos en el control de proceso causante del error.  
+ `Fail` restaura el foco y la selección en el control cuya validación con errores (si hay un control para restaurar). `Fail` a continuación, inicia una excepción de tipo [CUserException](../../mfc/reference/cuserexception-class.md) para detener el proceso de validación. La excepción hace que un cuadro de mensaje que explica que se muestre el error. Después de que se produce un error en la validación de DDV, el usuario puede volver a escribir datos en el control de proceso causante del error.  
   
- Pueden llamar los implementadores de rutinas DDV personalizadas **producirá un error en** de sus rutinas cuando se produce un error en la validación.  
+ Pueden llamar los implementadores de rutinas DDV personalizadas `Fail` de sus rutinas cuando se produce un error en la validación.  
   
  Para obtener más información sobre cómo escribir sus propias rutinas DDX y DDV, vea [Nota técnica 26](../../mfc/tn026-ddx-and-ddv-routines.md). Para obtener información general de DDX y DDV, vea [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md) y [temas del cuadro de diálogo](../../mfc/dialog-boxes.md).  
   
@@ -152,7 +153,7 @@ HWND PrepareCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDC`  
+ *nIDC*  
  El identificador del control para estar preparado para DDX o DDV.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -175,7 +176,7 @@ HWND PrepareEditCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDC`  
+ *nIDC*  
  El identificador del control de edición para estar preparado para DDX o DDV.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -198,7 +199,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIDC`  
+ *nIDC*  
  El identificador del control OLE para estar preparado para DDX o DDV.  
   
 ### <a name="return-value"></a>Valor devuelto  

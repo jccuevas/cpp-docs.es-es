@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952185"
 ---
 # <a name="cbitmapbutton-class"></a>Clase CBitmapButton
 Crea controles de botón de comando etiquetados con imágenes de mapa de bits en lugar de texto.  
@@ -97,7 +98,7 @@ class CBitmapButton : public CButton
   
 6.  En el `CDialog` del objeto [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) rutinaria, llamada la `CBitmapButton` del objeto [cargar automáticamente](#autoload) funcione, utilizando como parámetros el identificador del control del botón y el `CDialog` objeto **esto** puntero.  
   
- Si desea controlar mensajes de notificación de Windows, como **BN_CLICKED**, enviada por un control de botón de mapa de bits a su elemento primario (normalmente una clase derivada de **CDialog)**, agregar a la `CDialog`-derivados objeto de una función de miembro de entrada y el controlador de mensajes de mapa de mensajes para cada mensaje. Las notificaciones enviadas por un `CBitmapButton` objeto son los mismos que los enviados por un [CButton](../../mfc/reference/cbutton-class.md) objeto.  
+ Si desea controlar los mensajes de notificación de Windows, como BN_CLICKED, enviado por un control de botón de mapa de bits a su elemento primario (normalmente una clase derivada de `CDialog`), agregar a la `CDialog`-objeto derivado de un miembro de mapa de mensajes de entrada y el controlador de mensajes función para cada mensaje. Las notificaciones enviadas por un `CBitmapButton` objeto son los mismos que los enviados por un [CButton](../../mfc/reference/cbutton-class.md) objeto.  
   
  La clase [CToolBar](../../mfc/reference/ctoolbar-class.md) adopta un enfoque diferente para los botones de mapa de bits.  
   
@@ -127,10 +128,10 @@ BOOL AutoLoad(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nID`  
+ *nID*  
  Identificador del control. del botón  
   
- `pParent`  
+ *pParent*  
  Puntero al objeto al que pertenece el botón.  
   
 ### <a name="return-value"></a>Valor devuelto  

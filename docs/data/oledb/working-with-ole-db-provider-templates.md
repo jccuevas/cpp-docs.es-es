@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112074"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Trabajar con plantillas de proveedores OLE DB
 Para obtener información sobre cómo trabajar con las plantillas de proveedor OLE DB, vea los temas siguientes:  

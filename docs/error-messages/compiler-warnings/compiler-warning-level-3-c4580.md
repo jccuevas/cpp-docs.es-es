@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290987"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>Advertencia del compilador (nivel 3) C4580
 [attribute] está en desuso; especifique en su lugar System::Attribute o Platform::Metadata como clase base  

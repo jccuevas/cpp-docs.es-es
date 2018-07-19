@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881008"
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Información general sobre genéricos en Visual C++
 Los genéricos son tipos parametrizados compatibles con common language runtime. Un tipo con parámetros es un tipo que se define con un parámetro de tipo desconocido que se especifica cuando se utiliza la clase genérica.  

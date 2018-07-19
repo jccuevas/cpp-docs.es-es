@@ -84,11 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3165a11aace54ce2062a6321acc7f911fbdc39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a05553843c4478109c0fe63dd79f08b2116f58c7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039250"
 ---
 # <a name="coleserveritem-class"></a>Clase COleServerItem
 Proporciona la interfaz del servidor a elementos OLE.  
@@ -118,7 +119,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::GetDocument](#getdocument)|Devuelve el documento de servidor que contiene el elemento.|  
 |[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|Obtiene el **CF_EMBEDSOURCE** datos de un elemento OLE.|  
 |[COleServerItem::GetItemName](#getitemname)|Devuelve el nombre del elemento. Usar solo los elementos vinculados.|  
-|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|Obtiene el `CF_LINKSOURCE` datos de un elemento OLE.|  
+|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|Obtiene el **CF_LINKSOURCE** datos de un elemento OLE.|  
 |[COleServerItem::GetObjectDescriptorData](#getobjectdescriptordata)|Obtiene el **CF_OBJECTDESCRIPTOR** datos de un elemento OLE.|  
 |[COleServerItem::IsConnected](#isconnected)|Indica si el elemento está actualmente conectado a un contenedor activo.|  
 |[COleServerItem::IsLinkedItem](#islinkeditem)|Indica si el elemento representa un elemento vinculado de OLE.|  
@@ -184,7 +185,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataSource`  
+ *Plocation*  
  Puntero a la `COleDataSource` objeto en que se deben colocar los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -200,10 +201,10 @@ COleServerItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pServerDoc`  
+ *pServerDoc*  
  Puntero al documento que contendrá el nuevo elemento.  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  Marca que indica si se puede eliminar el objeto cuando se suelta un vínculo a él. Establezca esta propiedad en **FALSE** si la `COleServerItem` objeto es una parte integral de los datos del documento que deben eliminar. Establezca esta propiedad en **TRUE** si el objeto es una estructura secundaria que se usa para identificar un intervalo en los datos del documento que se pueden eliminar mediante el marco de trabajo.  
   
 ##  <a name="copytoclipboard"></a>  COleServerItem::CopyToClipboard  
@@ -214,7 +215,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bIncludeLink`  
+ *bIncludeLink*  
  Establezca esta propiedad en **TRUE** si vincular datos deben copiarse en el Portapapeles. Establezca esta propiedad en **FALSE** si la aplicación de servidor no admite vínculos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -236,23 +237,23 @@ DROPEFFECT DoDragDrop(
  *lpRectItem*  
  Rectángulo del elemento en la pantalla, en píxeles, respecto al área de cliente.  
   
- `ptOffset`  
- El desplazamiento de `lpItemRect` que era la posición del mouse en el momento de la operación de arrastre.  
+ *ptOffset*  
+ El desplazamiento de *lpItemRect* que era la posición del mouse en el momento de la operación de arrastre.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  Establezca esta propiedad en **TRUE** si vincular datos deben copiarse en el Portapapeles. Establézcalo en **FALSE** si la aplicación no admite vínculos.  
   
- `dwEffects`  
+ *dwEffects*  
  Determina los efectos que permitirá al origen de arrastre en la operación de arrastre (una combinación de copiar, mover y vínculo).  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  Puntero al rectángulo que define donde realmente comienza la operación de arrastre. Para obtener más información, vea la sección Comentarios que se muestra más adelante.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor de la enumeración `DROPEFFECT`. Si es `DROPEFFECT_MOVE`, se deben quitar los datos originales.  
   
 ### <a name="remarks"></a>Comentarios  
- No se inicie inmediatamente la operación de arrastrar y colocar. Espera hasta que el cursor del mouse deja el rectángulo especificado por `lpRectStartDrag` o hasta que un número especificado de milisegundos transcurridos. Si `lpRectStartDrag` es **NULL**, un rectángulo predeterminado se utiliza para que la operación de arrastrar se inicia cuando el cursor del mouse mueve un píxel.  
+ No se inicie inmediatamente la operación de arrastrar y colocar. Espera hasta que el cursor del mouse deja el rectángulo especificado por *lpRectStartDrag* o hasta que un número especificado de milisegundos transcurridos. Si *lpRectStartDrag* es **NULL**, un rectángulo predeterminado se utiliza para que la operación de arrastrar se inicia cuando el cursor del mouse mueve un píxel.  
   
  El tiempo de retraso especificado por un valor de una clave del registro. Puede cambiar el tiempo de retraso mediante una llamada a [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) o [CWinApp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint). Si no especifica el tiempo de retardo, se utiliza un valor predeterminado de 200 milisegundos. Tiempo de retardo de arrastre se almacena como sigue:  
   
@@ -276,20 +277,20 @@ void GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataSource`  
+ *Plocation*  
  Puntero a la `COleDataSource` objeto que recibirá los datos del elemento OLE en todos los formatos admitidos.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  **TRUE** si vincular datos deben copiarse en el Portapapeles. **FALSE** si la aplicación de servidor no admite vínculos.  
   
- `lpOffset`  
+ *lpOffset*  
  El desplazamiento, en píxeles, del cursor del mouse desde el origen del objeto.  
   
- `lpSize`  
+ *lpSize*  
  El tamaño del objeto en píxeles.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función llama a la [GetEmbedSourceData](#getembedsourcedata) función de miembro para obtener los datos nativos para el elemento OLE y llama el [AddOtherClipboardData](#addotherclipboarddata) para obtener el formato de presentación y cualquier función miembro admite los formatos de conversión. Si `bIncludeLink` es **TRUE**, también llama a la función [GetLinkSourceData](#getlinksourcedata) para obtener los datos de enlace para el elemento.  
+ Esta función llama a la [GetEmbedSourceData](#getembedsourcedata) función de miembro para obtener los datos nativos para el elemento OLE y llama el [AddOtherClipboardData](#addotherclipboarddata) para obtener el formato de presentación y cualquier función miembro admite los formatos de conversión. Si *bIncludeLink* es **TRUE**, también llama a la función [GetLinkSourceData](#getlinksourcedata) para obtener los datos de enlace para el elemento.  
   
  Reemplace esta función si desea colocar formatos un `COleDataSource` objeto antes o después de los formatos proporcionados por `CopyToClipboard`.  
   
@@ -327,7 +328,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpStgMedium`  
+ *lpStgMedium*  
  Puntero a la [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estructura que va a recibir el **CF_EMBEDSOURCE** datos para el elemento OLE.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -358,7 +359,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpStgMedium`  
+ *lpStgMedium*  
  Puntero a la [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estructura que va a recibir el `CF_LINKSOURCE` datos para el elemento OLE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -382,17 +383,17 @@ void GetObjectDescriptorData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpOffset`  
+ *lpOffset*  
  Haga clic en un desplazamiento del mouse en la esquina superior izquierda del elemento OLE. Puede ser **NULL**.  
   
- `lpSize`  
+ *lpSize*  
  Tamaño del elemento OLE. Puede ser **NULL**.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Puntero a la [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estructura que va a recibir el **CF_OBJECTDESCRIPTOR** datos para el elemento OLE.  
   
 ### <a name="remarks"></a>Comentarios  
- La información se copia en el **STGMEDIUM** estructura que señala `lpStgMedium`. Este formato incluye la información necesaria para el cuadro de diálogo Pegado especial.  
+ La información se copia en el **STGMEDIUM** estructura que señala *lpStgMedium*. Este formato incluye la información necesaria para el cuadro de diálogo Pegado especial.  
   
  Para obtener más información, consulte [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) del SDK de Windows.  
   
@@ -442,7 +443,7 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nDrawAspect`  
+ *nDrawAspect*  
  Un valor comprendido entre el `DVASPECT` enumeración que indica qué aspecto del elemento OLE ha cambiado. Este parámetro puede tener cualquiera de los siguientes valores:  
   
 - `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
@@ -464,7 +465,7 @@ virtual void OnDoVerb(LONG iVerb);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `iVerb`  
+ *iVerb*  
  Especifica el verbo que se ejecute. Puede ser cualquiera de las siguientes acciones:  
   
 |Valor|Significado|Símbolo|  
@@ -494,10 +495,10 @@ virtual BOOL OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Un puntero a la [CDC](../../mfc/reference/cdc-class.md) objeto en el que se va a dibujar el elemento. El contexto de presentación se conecta automáticamente al contexto de presentación del atributo es posible llamar a funciones de atributo, aunque al hacerlo por lo que haría que el metarchivo específico del dispositivo.  
   
- `rSize`  
+ *rSize*  
  Cambiar el tamaño, en **HIMETRIC** unidades, en el que se va a dibujar el metarchivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -517,10 +518,10 @@ virtual BOOL OnDrawEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Un puntero a la [CDC](../../mfc/reference/cdc-class.md) objeto en el que se va a dibujar el elemento. El controlador de dominio se conecta automáticamente el atributo de controlador de dominio es posible llamar a funciones de atributo, aunque al hacerlo por lo que haría que el metarchivo específico del dispositivo.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Un valor de la enumeración `DVASPECT`. Este parámetro puede tener cualquiera de los siguientes valores:  
   
 - `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
@@ -553,13 +554,13 @@ virtual COleDataSource* OnGetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bIncludeLink`  
+ *bIncludeLink*  
  Establezca esta propiedad en **TRUE** si vincular datos deben copiarse en el Portapapeles. Establezca esta propiedad en **FALSE** si la aplicación de servidor no admite vínculos.  
   
- `lpOffset`  
+ *lpOffset*  
  El desplazamiento del cursor del mouse desde el origen del objeto en píxeles.  
   
- `lpSize`  
+ *lpSize*  
  El tamaño del objeto en píxeles.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -578,7 +579,7 @@ virtual BOOL OnGetExtent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nDrawAspect`  
+ *nDrawAspect*  
  Especifica el aspecto del producto OLE cuyos límites se van a recuperar. Este parámetro puede tener cualquiera de los siguientes valores:  
   
 - `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
@@ -589,7 +590,7 @@ virtual BOOL OnGetExtent(
   
 - `DVASPECT_DOCPRINT` Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
   
- `rSize`  
+ *rSize*  
  Referencia a un `CSize` objeto que va a recibir el tamaño del elemento OLE.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -609,7 +610,7 @@ virtual void OnHide();
  Las llamadas de forma predeterminada **COleServerDoc::OnShowDocument (FALSE)**. La función también notifica al contenedor que se ha ocultado el elemento OLE. Reemplace esta función si desea realizar un procesamiento especial cuando cuando se oculta un elemento OLE.  
   
 ##  <a name="oninitfromdata"></a>  COleServerItem::OnInitFromData  
- Lo llama el marco para inicializar un elemento OLE mediante el contenido de `pDataObject`.  
+ Lo llama el marco para inicializar un elemento OLE mediante el contenido de *pDataObject*.  
   
 ```  
 virtual BOOL OnInitFromData(
@@ -618,17 +619,17 @@ virtual BOOL OnInitFromData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataObject`  
+ *pDataObject*  
  Puntero a un objeto de datos OLE que contiene los datos en diferentes formatos para inicializar el elemento OLE.  
   
- `bCreation`  
+ *bCreation*  
  **TRUE** si la función se llama para inicializar un elemento OLE recién creando una aplicación de contenedor. **FALSE** si se llama a la función para reemplazar el contenido de un elemento OLE ya existente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Si `bCreation` es **TRUE**, esta función se invoca si un contenedor implementa Insertar nuevo objeto basándose en la selección actual. Los datos seleccionados se utilizan al crear el nuevo elemento OLE. Por ejemplo, al seleccionar un rango de celdas en un programa de hoja de cálculo y, a continuación, usa Insertar nuevo objeto para crear un gráfico según los valores en el intervalo seleccionado. La implementación predeterminada no hace nada. Reemplace esta función para elegir un formato aceptable de las proporcionadas por `pDataObject` e inicializar el elemento OLE basándose en los datos proporcionados. Avanzada reemplazable.  
+ Si *bCreation* es **TRUE**, esta función se invoca si un contenedor implementa Insertar nuevo objeto basándose en la selección actual. Los datos seleccionados se utilizan al crear el nuevo elemento OLE. Por ejemplo, al seleccionar un rango de celdas en un programa de hoja de cálculo y, a continuación, usa Insertar nuevo objeto para crear un gráfico según los valores en el intervalo seleccionado. La implementación predeterminada no hace nada. Reemplace esta función para elegir un formato aceptable de las proporcionadas por *pDataObject* e inicializar el elemento OLE basándose en los datos proporcionados. Avanzada reemplazable.  
   
  Para obtener más información, consulte [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) en el SDK de Windows.  
   
@@ -669,10 +670,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Apunta a la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que especifica el formato en el que se solicita información.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Apunta a un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estructura en la que los datos se va a devolver.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -681,7 +682,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>Comentarios  
  El formato especificado es una establecidas anteriormente en el `COleDataSource` objeto mediante la [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) o [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) función de miembro para la representación aplazada. La implementación predeterminada de esta función llama [OnRenderFileData](#onrenderfiledata) o [OnRenderGlobalData](#onrenderglobaldata), respectivamente, si el medio de almacenamiento proporcionado es un archivo o la memoria. Si no se proporciona ninguno de estos formatos, la implementación predeterminada devuelve 0 y no hace nada.  
   
- Si `lpStgMedium` ->  *tymed* es **TYMED_NULL**, **STGMEDIUM** debe asignar y se rellena según lo especificado por *lpFormatEtc -> TYMED*. Si no **TYMED_NULL**, **STGMEDIUM** debe rellenarse en lugar de con los datos.  
+ Si *lpStgMedium*-> *tymed* es **TYMED_NULL**, **STGMEDIUM** debe asignar y se rellena según lo especificado por *lpFormatEtc -> tymed*. Si no **TYMED_NULL**, **STGMEDIUM** debe rellenarse en lugar de con los datos.  
   
  Avanzada reemplazable. Reemplace esta función para proporcionar los datos en el formato solicitado y medio. Dependiendo de los datos, puede que desee invalidar una de las otras versiones de esta función en su lugar. Si los datos son pequeños y un tamaño fijo, invalidar `OnRenderGlobalData`. Si los datos en un archivo, o es de tamaño variable, invalidar `OnRenderFileData`.  
   
@@ -697,10 +698,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Apunta a la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que especifica el formato en el que se solicita información.  
   
- `pFile`  
+ *pFile*  
  Apunta a un `CFile` objeto en el que se va a representar los datos.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -723,10 +724,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Apunta a la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que especifica el formato en el que se solicita información.  
   
- `phGlobal`  
+ *phGlobal*  
  Apunta a un identificador de memoria global en el que los datos son va a devolver. Si no se ha asignado ninguna memoria, este parámetro puede ser **NULL**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -735,7 +736,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>Comentarios  
  El formato especificado es una establecidas anteriormente en el `COleDataSource` objeto mediante la [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) función de miembro para la representación aplazada. La implementación predeterminada de esta función devuelve simplemente **FALSE**.  
   
- Si `phGlobal` es **NULL**, a continuación, un nuevo `HGLOBAL` debe asignar y se devuelve en `phGlobal`. En caso contrario, el `HGLOBAL` especificado por `phGlobal` debe rellenarse con los datos. La cantidad de datos se coloca en el `HGLOBAL` no debe superar el tamaño actual del bloque de memoria. Además, el bloque no se pueden reasignar a un tamaño mayor.  
+ Si *phGlobal* es **NULL**, a continuación, un nuevo `HGLOBAL` debe asignar y se devuelven en *phGlobal*. En caso contrario, el `HGLOBAL` especificado por *phGlobal* debe rellenarse con los datos. La cantidad de datos se coloca en el `HGLOBAL` no debe superar el tamaño actual del bloque de memoria. Además, el bloque no se pueden reasignar a un tamaño mayor.  
   
  Avanzada reemplazable. Reemplace esta función para proporcionar los datos en el formato solicitado y medio. Dependiendo de los datos, puede que desee invalidar una de las otras versiones de esta función en su lugar. Si desea controlar varios medios de almacenamiento, reemplace [OnRenderData](#onrenderdata). Si los datos en un archivo, o es de tamaño variable, invalidar [OnRenderFileData](#onrenderfiledata).  
   
@@ -749,7 +750,7 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpLogPalette`  
+ *lpLogPalette*  
  Puntero a una ventana de [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -771,14 +772,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Puntero a un [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estructura que especifica el formato de los datos.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Puntero a un [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) estructura en la que residen los datos.  
   
- `bRelease`  
- Indica que tiene una propiedad del medio de almacenamiento después de completar la llamada de función. El llamador decide quién es responsable de liberar los recursos asignados en nombre del medio de almacenamiento. El llamador para ello, establezca `bRelease`. Si `bRelease` es distinto de cero, el elemento del servidor toma la propiedad, el medio que libera cuando termina de usarla. Cuando `bRelease` es 0, el llamador conserva la propiedad y el elemento del servidor sólo puede utilizar el medio de almacenamiento para la duración de la llamada.  
+ *bRelease*  
+ Indica que tiene una propiedad del medio de almacenamiento después de completar la llamada de función. El llamador decide quién es responsable de liberar los recursos asignados en nombre del medio de almacenamiento. El llamador para ello, establezca *bRelease*. Si *bRelease* es distinto de cero, el elemento del servidor toma la propiedad, el medio que libera cuando termina de usarla. Cuando *bRelease* es 0, el llamador conserva la propiedad y el elemento del servidor sólo puede utilizar el medio de almacenamiento para la duración de la llamada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -800,7 +801,7 @@ virtual BOOL OnSetExtent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nDrawAspect`  
+ *nDrawAspect*  
  Especifica el aspecto del elemento OLE cuyos límites se especifican. Este parámetro puede tener cualquiera de los siguientes valores:  
   
 - `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
@@ -811,14 +812,14 @@ virtual BOOL OnSetExtent(
   
 - `DVASPECT_DOCPRINT` Elemento se representa como si se imprimiera utilizando el comando Imprimir en el menú archivo.  
   
- `size`  
+ *size*  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) estructura que especifica el nuevo tamaño del elemento OLE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Si la aplicación contenedora se escribió con la biblioteca Microsoft Foundation Class, esta función se invoca cuando el [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) función de miembro de los correspondientes `COleClientItem` se denomina objeto. La implementación predeterminada configura el [m_sizeExtent](#m_sizeextent) miembro al tamaño especificado si `nDrawAspect` es `DVASPECT_CONTENT`; en caso contrario, devuelve 0. Reemplace esta función para realizar un procesamiento especial cuando se cambia el tamaño del elemento.  
+ Si la aplicación contenedora se escribió con la biblioteca Microsoft Foundation Class, esta función se invoca cuando el [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) función de miembro de los correspondientes `COleClientItem` se denomina objeto. La implementación predeterminada configura el [m_sizeExtent](#m_sizeextent) miembro al tamaño especificado si *nDrawAspect* es `DVASPECT_CONTENT`; en caso contrario, devuelve 0. Reemplace esta función para realizar un procesamiento especial cuando se cambia el tamaño del elemento.  
   
 ##  <a name="onshow"></a>  COleServerItem::OnShow  
  Lo llama el marco para indicar a la aplicación de servidor para mostrar el elemento OLE en contexto.  
@@ -844,16 +845,16 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pSender`  
+ *pSender*  
  Puntero al elemento que se modificó el documento. Puede ser **NULL**.  
   
- `lHint`  
+ *lHint*  
  Contiene información sobre la modificación.  
   
- `pHint`  
+ *pHint*  
  Puntero a un objeto que almacena información sobre la modificación.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Un valor de la enumeración `DVASPECT`. Este parámetro puede tener uno de los siguientes valores:  
   
 - `DVASPECT_CONTENT` Elemento se representa de manera que puede mostrarse como un objeto incrustado dentro de su contenedor.  
@@ -885,7 +886,7 @@ void SetItemName(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszItemName`  
+ *lpszItemName*  
  Puntero para el nuevo nombre del elemento.  
   
 ### <a name="remarks"></a>Comentarios  

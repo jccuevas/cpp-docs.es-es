@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373174"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definir un controlador de mensajes para un mensaje reflejado
 Una vez haya creado una nueva clase de control MFC, puede definir controladores de mensajes para él. Controladores de mensajes reflejados permiten la clase del control controlar sus propios mensajes antes de que el mensaje se recibe por el elemento primario. Puede usar la MFC [CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) función para enviar mensajes desde el control a una ventana primaria.  

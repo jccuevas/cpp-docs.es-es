@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422168"
 ---
 # <a name="tilestatic-keyword"></a>tile_static (Palabra clave)
 La palabra clave `tile_static` se utiliza para declarar una variable a la que pueden tener acceso todos los subprocesos de un mosaico de subprocesos. La duración de la variable comienza cuando la ejecución llega al punto de declaración y termina cuando vuelve la función del kernel. Para obtener más información sobre el uso de iconos, consulte [usando iconos](../parallel/amp/using-tiles.md).  

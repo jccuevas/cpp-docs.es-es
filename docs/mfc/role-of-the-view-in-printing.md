@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379260"
 ---
 # <a name="role-of-the-view-in-printing"></a>Rol de la vista en la impresión
 La vista desempeña también dos funciones importantes al imprimir el documento asociado.  

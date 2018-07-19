@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230894"
 ---
 # <a name="compiler-error-c2648"></a>C2648 de Error del compilador
 'identificador': uso de miembro como parámetro predeterminado requiere un miembro static  

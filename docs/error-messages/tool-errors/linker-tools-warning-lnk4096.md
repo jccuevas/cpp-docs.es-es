@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300610"
 ---
 # <a name="linker-tools-warning-lnk4096"></a>Advertencia de las herramientas del vinculador LNK4096
 El valor /base "número" no es válido para Windows 95 y Windows 98; no puede ejecutar la imagen  

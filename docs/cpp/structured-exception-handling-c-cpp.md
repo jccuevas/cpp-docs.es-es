@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424275"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Aunque Windows y Visual C++ admiten el control de excepciones estructurado (SEH), se recomienda utilizar el control de excepciones de C++ estándar de ISO porque hace que el código sea más portátil y flexible. Sin embargo, en el código existente o en determinadas clases de programas, quizás tenga que seguir utilizando SEH.  

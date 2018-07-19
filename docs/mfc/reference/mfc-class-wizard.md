@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370147"
 ---
 # <a name="mfc-class-wizard"></a>Asistente para clases MFC
 Le permite agregar mensajes y controladores de mensajes a las clases del proyecto. Puede iniciar también otros asistentes o agregar una clase al proyecto.  

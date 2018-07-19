@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381922"
 ---
 # <a name="using-frame-windows"></a>Usar ventanas de marco
 El marco de trabajo MFC crea documento ventanas de marco y sus documentos y vistas, como parte de su implementación de los comandos nuevo y abrir en el menú archivo. Dado que el marco de trabajo realiza la mayor parte del trabajo de ventana de marco para usted, reproducir solo una pequeña función en crear, usar y destrucción de estas ventanas. Puede, sin embargo, crear explícitamente sus propias ventanas de marco y ventanas secundarias para fines especiales.  

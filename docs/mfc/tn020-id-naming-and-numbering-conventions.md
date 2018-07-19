@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b27b4cfc1b624c9c12138154a660951a0f2a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca1e78ab4b94d9055b8f0c7cc14bde12506695b8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951372"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: Convenciones de nomenclatura y numeración de identificadores
 En esta nota se describen las convenciones de nomenclatura y numeración de identificadores que MFC 2.0 utiliza para los recursos, los comandos, las cadenas, los controles y las ventanas secundarias.  
@@ -67,7 +68,7 @@ En esta nota se describen las convenciones de nomenclatura y numeración de iden
 |IDM_|Para los elementos de menú que no utilizan la arquitectura de comandos de MFC.|  
 |ID_|Para los comandos de menú que utilizan la arquitectura de comandos de MFC.|  
   
- Los comandos que siguen la arquitectura de comandos de MFC deben tener un controlador de comandos `ON_COMMAND` y pueden tener un controlador `ON_UPDATE_COMMAND_UI`. Si estos controladores de comandos siguen la arquitectura de comandos de MFC, funcionarán correctamente si se enlazan a un comando de menú, un botón de la barra de herramientas o un botón de la barra de cuadro de diálogo. El mismo prefijo "ID_" se utiliza también para una cadena de mensaje de menú que se muestra en la barra de mensajes del programa. La mayoría de los elementos de menú de la aplicación deben seguir las convenciones de comandos de MFC. Todos los identificadores de comando estándar (por ejemplo, `ID_FILE_NEW`) siguen esta convención.  
+ Comandos que siguen la arquitectura de comandos MFC deben tener un controlador de comandos ON_COMMAND y pueden tener un controlador ON_UPDATE_COMMAND_UI. Si estos controladores de comandos siguen la arquitectura de comandos de MFC, funcionarán correctamente si se enlazan a un comando de menú, un botón de la barra de herramientas o un botón de la barra de cuadro de diálogo. El mismo prefijo "ID_" se utiliza también para una cadena de mensaje de menú que se muestra en la barra de mensajes del programa. La mayoría de los elementos de menú de la aplicación deben seguir las convenciones de comandos de MFC. Todos los identificadores de comando estándar (por ejemplo, ID_FILE_NEW) siguen esta convención.  
   
  MFC también utiliza "IDP_" como formato de cadenas especializado (en lugar de "IDS_"). Las cadenas con el prefijo "IDP_" son mensajes, es decir, cadenas utilizadas en cuadros de mensaje. Las cadenas "IDP_" pueden contener "%1" y "%2"como marcadores de posición de cadenas determinadas por el programa. Además suelen tener temas de Ayuda asociados, mientras que las cadenas "IDS_" no los tienen. Las cadenas "IDP_" siempre se traducen y las cadenas "IDS_" pueden no estar traducidas.  
   

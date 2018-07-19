@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355857"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementar un cuadro de diálogo
 Hay dos maneras de agregar un cuadro de diálogo al proyecto ATL: utilizar el Asistente de cuadro de diálogo ATL o agregarlo manualmente.  

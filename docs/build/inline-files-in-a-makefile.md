@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368127"
 ---
 # <a name="inline-files-in-a-makefile"></a>Archivos insertados en un archivo MAKE
 Un archivo en línea contiene texto que se especifique en el archivo MAKE. Su nombre se puede usar en comandos como entrada (por ejemplo, un archivo de comandos de vínculo), o puede pasar comandos al sistema operativo. El archivo se crea en el disco cuando se ejecuta un comando que crea el archivo.  

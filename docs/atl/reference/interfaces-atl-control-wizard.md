@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362357"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Interfaces, Asistente para controles ATL
 Esta página del asistente identifica las interfaces que admite el control. De forma predeterminada, las interfaces compatibles son las que se usan normalmente por la mayoría de los contenedores.  

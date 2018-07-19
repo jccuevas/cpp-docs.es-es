@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246544"
 ---
 # <a name="compiler-error-c2970"></a>Error del compilador C2970
 'clase': parámetro de plantilla 'param': 'arg': no se puede usar una expresión que contenga objetos con vinculación interna como un argumento sin tipo  

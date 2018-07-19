@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687997"
 ---
 # <a name="sample-multithread-c-program"></a>Ejemplo de programa multiproceso en C
 Bounce.c es un ejemplo de programa multiproceso que crea un nuevo subproceso cada vez que la letra **una** o **A** se escribe. Cada subproceso produce una cara sonriente de distinto color alrededor de la pantalla. Pueden crearse hasta 32 subprocesos. Terminación normal del programa se produce cuando `q` o **preguntas** se escribe. Para obtener información sobre la compilación y vinculación de Bounce.c, vea [compilar y vincular programas multiproceso](../parallel/compiling-and-linking-multithread-programs.md).  

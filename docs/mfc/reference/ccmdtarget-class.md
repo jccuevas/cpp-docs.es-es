@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dfc1c4d5cf753ae102d7656e94d63923004d2cc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955666"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget (clase)
 La clase base para la arquitectura de mapa de mensajes de la biblioteca Microsoft Foundation Class.  
@@ -130,7 +131,7 @@ void BeginWaitCursor();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a esta función para mostrar al usuario que está ocupado, por ejemplo, cuando un **CDocument** objeto carga ni guarda propia en un archivo.  
+ El marco de trabajo llama a esta función para mostrar al usuario que está ocupado, por ejemplo, cuando un `CDocument` objeto carga ni guarda propia en un archivo.  
   
  Las acciones de `BeginWaitCursor` no siempre son efectivos fuera de un controlador de mensaje único como otras acciones, como `OnSetCursor` de control, puede cambiar el cursor.  
   
@@ -158,16 +159,16 @@ BOOL DoOleVerb(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `iVerb`  
+ *iVerb*  
  Identificador numérico del verbo.  
   
- `lpMsg`  
+ *lpMsg*  
  Puntero a la [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) estructura que describe el evento (por ejemplo, un doble clic) que invocó el verbo.  
   
- `hWndParent`  
+ *hWndParent*  
  Identificador de la ventana de documento que contiene el objeto.  
   
- `lpRect`  
+ *lpRect*  
  Puntero a la [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene las coordenadas, en píxeles, que definen un objeto de rectángulo en delimitador *hwndParent*.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -227,11 +228,11 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ppenumOleVerb`  
+ *ppenumOleVerb*  
  Un puntero a un puntero a un [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) interfaz.  
   
 ### <a name="return-value"></a>Valor devuelto  
- TRUE si el objeto es compatible con al menos un verbo OLE (en cuyo caso \* `ppenumOleVerb` apunta a un **IEnumOLEVERB** interfaz de enumerador), en caso contrario, FALSE.  
+ TRUE si el objeto es compatible con al menos un verbo OLE (en cuyo caso \* *ppenumOleVerb* apunta a un `IEnumOLEVERB` interfaz de enumerador), en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro básicamente es una implementación de [IOleObject:: EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
@@ -244,11 +245,11 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpDispatch`  
+ *lpDispatch*  
  Puntero a un objeto `IDispatch`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la `CCmdTarget` objeto asociado a `lpDispatch`. Esta función devuelve **NULL** si la `IDispatch` objeto no se reconoce como un Microsoft Foundation Class `IDispatch` objeto.  
+ Un puntero a la `CCmdTarget` objeto asociado a *lpDispatch*. Esta función devuelve **NULL** si la `IDispatch` objeto no se reconoce como un Microsoft Foundation Class `IDispatch` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
  El resultado de esta función es el inverso de una llamada a la función miembro `GetIDispatch`.  
@@ -302,7 +303,7 @@ virtual UINT GetTypeInfoCount();
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro básicamente implementa [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12).  
   
- Las clases derivadas deben invalidar esta función para devolver el número de interfaces de información de tipo proporcionado (0 ó 1). Si no se reemplaza, **GetTypeInfoCount** devuelve 0. Para invalidar, use la [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, que también implementa `GetTypeLib` y `GetTypeLibCache`.  
+ Las clases derivadas deben invalidar esta función para devolver el número de interfaces de información de tipo proporcionado (0 ó 1). Si no se reemplaza, `GetTypeInfoCount` devuelve 0. Para invalidar, use la [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, que también implementa `GetTypeLib` y `GetTypeLibCache`.  
   
 ##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  Recupera la descripción del tipo que se corresponde con el GUID especificado.  
@@ -315,17 +316,17 @@ HRESULT GetTypeInfoOfGuid(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lcid`  
+ *lcid*  
  Un identificador de configuración regional ( `LCID`).  
   
- `guid`  
+ *GUID*  
  El [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) de la descripción del tipo.  
   
- `ppTypeInfo`  
+ *ppTypeInfo*  
  Puntero a un puntero a la `ITypeInfo` interfaz.  
   
 ### <a name="return-value"></a>Valor devuelto  
- HRESULT que indica el éxito o fracaso de la llamada. Si es correcto, * `ppTypeInfo` señala a la interfaz de información de tipo.  
+ HRESULT que indica el éxito o fracaso de la llamada. Si es correcto, * *ppTypeInfo* señala a la interfaz de información de tipo.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  Obtiene un puntero a una biblioteca de tipos.  
@@ -337,14 +338,14 @@ virtual HRESULT GetTypeLib(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lcid`  
+ *lcid*  
  Un identificador de configuración regional ( `LCID`).  
   
- `ppTypeLib`  
+ *ppTypeLib*  
  Un puntero a un puntero a la `ITypeLib` interfaz.  
   
 ### <a name="return-value"></a>Valor devuelto  
- HRESULT que indica el éxito o fracaso de la llamada. Si es correcto, * `ppTypeLib` señala a la interfaz de la biblioteca de tipos.  
+ HRESULT que indica el éxito o fracaso de la llamada. Si es correcto, * *ppTypeLib* señala a la interfaz de la biblioteca de tipos.  
   
 ### <a name="remarks"></a>Comentarios  
  Las clases derivadas deben invalidar esta función miembro (si no se reemplaza, `GetTypeLib` devuelve TYPE_E_CANTLOADLIBRARY). Use la [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, que también implementa `GetTypeInfoCount` y `GetTypeLibCache`.  
@@ -357,27 +358,27 @@ virtual CTypeLibCache* GetTypeLibCache();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a un **CTypeLibCache** objeto.  
+ Un puntero a un `CTypeLibCache` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- Las clases derivadas deben invalidar esta función miembro (si no se reemplaza, **GetTypeLibCache** devuelve NULL). Use la [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, que también implementa `GetTypeInfoCount` y `GetTypeLib`.  
+ Las clases derivadas deben invalidar esta función miembro (si no se reemplaza, `GetTypeLibCache` devuelve NULL). Use la [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) macro, que también implementa `GetTypeInfoCount` y `GetTypeLib`.  
   
 ##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
- Esta función se invoca mediante la implementación de MFC de **IDispatch:: Invoke** para determinar si un método de automatización determinado (identificada por `dispid`) se puede invocar.  
+ Esta función se invoca mediante la implementación de MFC de `IDispatch::Invoke` para determinar si un método de automatización determinado (identificada por *dispid*) se puede invocar.  
   
 ```  
 virtual BOOL IsInvokeAllowed(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dispid`  
+ *DISPID*  
  Un identificador de envío.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es TRUE si el método puede ser invocado, de lo contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Si `IsInvokeAllowed` devuelve TRUE, **Invoke** continúa para llamar al método; en caso contrario, `Invoke` producirá y devolverá E_UNEXPECTED.  
+ Si `IsInvokeAllowed` devuelve TRUE, `Invoke` continúa para llamar al método; en caso contrario, `Invoke` producirá y devolverá E_UNEXPECTED.  
   
  Las clases derivadas pueden invalidar esta función para devolver los valores adecuados (si no se reemplaza, `IsInvokeAllowed` devuelve TRUE). Vea en particular [COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).  
   
@@ -410,17 +411,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nID`  
+ *nID*  
  Contiene el identificador del comando.  
   
- `nCode`  
- Identifica el código de notificación de comando. Vea **comentarios** para obtener más información acerca de los valores para `nCode`.  
+ *nCode*  
+ Identifica el código de notificación de comando. Vea **comentarios** para obtener más información acerca de los valores para *nCode*.  
   
- `pExtra`  
- Usar según el valor de `nCode`. Vea **comentarios** para obtener más información acerca de `pExtra`.  
+ *pExtra*  
+ Usar según el valor de *nCode*. Vea **comentarios** para obtener más información acerca de *pExtra*.  
   
- `pHandlerInfo`  
- Si no **NULL**, `OnCmdMsg` rellena la **pTarget** y **pmf** los miembros de la `pHandlerInfo` estructura en lugar de enviar el comando. Normalmente, este parámetro debe ser **NULL**.  
+ *pHandlerInfo*  
+ Si no **NULL**, `OnCmdMsg` rellena la *pTarget* y *pmf* los miembros de la *pHandlerInfo* estructura en lugar de enviar el comando. Normalmente, este parámetro debe ser **NULL**.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si se controla el mensaje; en caso contrario es 0.  
@@ -432,9 +433,9 @@ virtual BOOL OnCmdMsg(
   
  En raras ocasiones, puede que desee anular esta función miembro para extender el marco enrutamiento de comandos estándar. Hacer referencia a [21 de nota técnica](../../mfc/tn021-command-and-message-routing.md) para obtener detalles avanzados sobre la arquitectura de enrutamiento de comandos.  
   
- Si invalida `OnCmdMsg`, debe proporcionar el valor adecuado para `nCode`, el código de notificación de comandos, y `pExtra`, que depende del valor de `nCode`. En la tabla siguiente se enumera sus valores correspondientes:  
+ Si invalida `OnCmdMsg`, debe proporcionar el valor adecuado para *nCode*, el código de notificación de comandos, y *pExtra*, que depende del valor de *nCode* . En la tabla siguiente se enumera sus valores correspondientes:  
   
-|Valor de `nCode`|Valor de `pExtra`|  
+|*nCode* valor|*pExtra* valor|  
 |-------------------|--------------------|  
 |PARÁMETRO CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
 |CN_EVENT|AFX_EVENT *|  

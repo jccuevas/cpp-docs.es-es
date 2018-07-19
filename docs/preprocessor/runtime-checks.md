@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33840669"
 ---
 # <a name="runtimechecks"></a>runtime_checks
 Deshabilita o restaura la configuración de [/RTC](../build/reference/rtc-run-time-error-checks.md) .  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256501"
 ---
 # <a name="compiler-error-c3456"></a>Error del compilador C3456
 no se permite [source_annotation_attribute] en la declaración de clase administrada o WinRT  

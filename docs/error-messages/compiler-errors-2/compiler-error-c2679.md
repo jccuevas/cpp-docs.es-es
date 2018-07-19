@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231818"
 ---
 # <a name="compiler-error-c2679"></a>C2679 de Error del compilador
 'operador' binario: no encontró ningún operador que adopte un operando derecho del tipo 'type' (o no hay ninguna conversión aceptable)  

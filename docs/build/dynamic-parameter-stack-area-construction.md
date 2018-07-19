@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367477"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Construcción del área de pila para el parámetro dinámico
 Si se usa un puntero de marco, existe la opción para crear dinámicamente el área de la pila de parámetro. Esto no se hace actualmente en el [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] compilador.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374729"
 ---
 # <a name="ole-initialization"></a>Inicialización de OLE
 Antes de que una aplicación puede utilizar los servicios del sistema OLE, debe inicializar la archivos DLL del sistema OLE y compruebe que los archivos DLL son la versión correcta. El **AfxOleInit** función inicializa la DLL del sistema OLE.  

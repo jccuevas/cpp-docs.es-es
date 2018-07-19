@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367113"
 ---
 # <a name="description-blocks"></a>Bloques de descripción
 Un bloque de descripción es una línea de dependencia que opcionalmente puede ir seguida de un bloque de comandos:  

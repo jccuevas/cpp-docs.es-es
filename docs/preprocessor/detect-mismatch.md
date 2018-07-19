@@ -23,6 +23,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33953964"
 ---
 # <a name="detectmismatch"></a>detect_mismatch
 Inserta un registro en un objeto. El vinculador comprueba estos registros para detectar potenciales discordancias.  

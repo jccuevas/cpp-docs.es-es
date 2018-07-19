@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883347"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Restricciones de parámetros de tipo genérico (C++/CLI)
 En las declaraciones de método o tipo genérico, puede calificar un parámetro de tipo con restricciones. Una restricción es un requisito que deben satisfacer los tipos utilizados como argumentos de tipo. Por ejemplo, una restricción puede ser que el argumento de tipo debe implementar una determinada interfaz o heredar de una clase específica.  

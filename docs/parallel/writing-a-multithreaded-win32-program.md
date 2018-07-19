@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689979"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Crear un programa Win32 multiproceso
 Cuando se escribe un programa con varios subprocesos, es preciso coordinar su comportamiento y [el uso de los recursos del programa](#_core_sharing_common_resources_between_threads). También debe asegurarse de que cada subproceso dispone [su propia pila](#_core_thread_stacks).  

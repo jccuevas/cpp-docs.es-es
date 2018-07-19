@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48c431ecbcc415776ff9accfb68004c7c8e46d34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952331"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl (clase)
 Proporciona la funcionalidad del control común de animación de Windows.  
@@ -145,23 +146,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica el estilo del control de animación. Aplicar cualquier combinación de las ventanas de estilos que se describe en la siguiente sección de comentarios y los estilos de control de animación que se describen en [estilos de Control de animación](http://msdn.microsoft.com/library/windows/desktop/bb761886) del SDK de Windows.  
   
- `rect`  
+ *Rect*  
  Especifica la posición y el tamaño del control de animación. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](../../mfc/reference/rect-structure1.md) estructura.  
   
- `pParentWnd`  
- Especifica la animación ventana del control primario, normalmente un `CDialog`. No debe ser **NULL.**  
+ *pParentWnd*  
+ Especifica la animación ventana del control primario, normalmente un `CDialog`. No debe ser **NULL**.  
   
- `nID`  
+ *nID*  
  Especifica el identificador. del control de animación  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si es correcto. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Crear un `CAnimateCtrl` en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a **crear**, que crea el control de animación y lo adjunta a la `CAnimateCtrl` objeto.  
+ Crear un `CAnimateCtrl` en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a `Create`, que crea el control de animación y lo adjunta a la `CAnimateCtrl` objeto.  
   
  Aplique el siguiente [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) a un control de animación.  
   
@@ -171,7 +172,7 @@ virtual BOOL Create(
   
 - **WS_DISABLED** rara vez  
   
- Si desea utilizar los estilos extendidos de windows con el control de animación, llame a [CreateEx](#createex) en lugar de **crear**.  
+ Si desea utilizar los estilos extendidos de windows con el control de animación, llame a [CreateEx](#createex) en lugar de `Create`.  
   
  Además de los estilos de ventana mencionados anteriormente, puede que desee aplicar uno o varios de los estilos de control de animación a un control de animación. Consulte el SDK de Windows para obtener más información en [estilos de control de animación](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
   
@@ -191,19 +192,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwExStyle`  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el `dwExStyle` parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
+ *dwExStyle*  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica el estilo del control de animación. Aplicar cualquier combinación de la ventana y estilos de control de animación que se describen en [estilos de Control de animación](http://msdn.microsoft.com/library/windows/desktop/bb761886) del SDK de Windows.  
   
- `rect`  
- Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de `pParentWnd`.  
+ *Rect*  
+ Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana que es primario del control.  
   
- `nID`  
+ *nID*  
  Identificador de ventana secundaria. del control  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -234,10 +235,10 @@ BOOL Open(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFileName`  
+ *lpszFileName*  
  Un `CString` objeto o un puntero a una cadena terminada en null que contiene el nombre del archivo AVI o el nombre de un recurso AVI. Si este parámetro es **NULL**, el sistema cierra el clip AVI que se ha abierto previamente para el control de animación, si lo hay.  
   
- `nID`  
+ *nID*  
  El identificador de recursos AVI. Si este parámetro es **NULL**, el sistema cierra el clip AVI que se ha abierto previamente para el control de animación, si lo hay.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -268,10 +269,10 @@ BOOL Play(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nFrom`  
+ *nFrom*  
  Índice de base cero del marco de la que comienza la reproducción en curso. Valor debe ser inferior a 65.536. Un valor de 0 significa que comienzan por el primer fotograma en el clip AVI.  
   
- `nTo`  
+ *n. para*  
  Índice de base cero del marco de reproducción donde finaliza. Valor debe ser inferior a 65.536. Un valor de - 1 significa terminar con el último fotograma en el clip AVI.  
   
  *nRep*  
@@ -294,7 +295,7 @@ BOOL Seek(UINT nTo);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nTo`  
+ *n. para*  
  Índice de base cero del marco para mostrar. Valor debe ser inferior a 65.536. Un valor de 0 significa que muestre el primer fotograma en el clip AVI. Un valor de -1 significa mostrando el último fotograma en el clip AVI.  
   
 ### <a name="return-value"></a>Valor devuelto  

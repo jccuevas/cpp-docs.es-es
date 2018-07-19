@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705372"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 C++ AMP (C++ Accelerated Massive Parallelism) acelera la ejecución del código C++ aprovechando las ventajas del hardware de datos en paralelo que se encuentra habitualmente como una unidad de procesamiento de gráficos (GPU) en una tarjeta gráfica discreta. El modelo de programación de C++ AMP incluye compatibilidad con matrices multidimensionales, indización, transferencia de memoria y disponer en mosaico. También incluye una biblioteca de funciones matemáticas. Puede usar las extensiones del lenguaje C++ AMP para controlar cómo se mueven los datos de la CPU a la GPU y en espera.  

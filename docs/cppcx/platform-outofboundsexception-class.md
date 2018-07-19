@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088308"
 ---
 # <a name="platformoutofboundsexception-class"></a>Platform::OutOfBoundsException (Clase)
 Se produce cuando una operación intenta tener acceso a datos que están fuera del intervalo válido.  

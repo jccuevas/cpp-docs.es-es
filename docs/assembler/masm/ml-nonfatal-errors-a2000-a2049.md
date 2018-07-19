@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049943"
 ---
 # <a name="ml-nonfatal-errors-a2000-a2049"></a>Errores recuperables A2000-A2049 de ML
 Para obtener más información acerca de errores recuperables de ML, consulte [mensajes de Error de ML](../../assembler/masm/ml-error-messages.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131665"
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Cómo: Enlazar datos DDX/DDV con formularios Windows Forms
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) llamadas [CWinFormsControl:: CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) para crear un control que coincida con el identificador de control de recurso. Si usa `DDX_ManagedControl` para un `CWinFormsControl` control (en el código generado asistente), no debe llamar `CreateManagedControl` explícitamente para el mismo control.  

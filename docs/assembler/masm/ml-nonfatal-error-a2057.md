@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054515"
 ---
 # <a name="ml-nonfatal-error-a2057"></a>Error recuperable A2057 de ML
 **fuerza el error: cadena en blanco**  

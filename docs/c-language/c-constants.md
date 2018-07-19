@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381660"
 ---
 # <a name="c-constants"></a>Constantes de C
 Una "constante" es un número, un carácter o una cadena de caracteres que se puede utilizar como valor en un programa. Utilice las constantes para representar valores flotantes, enteros, de enumeración o de caracteres que no pueden modificarse.  

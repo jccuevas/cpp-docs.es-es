@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369765"
 ---
 # <a name="predefined-rules"></a>Reglas predefinidas
 Las reglas de inferencia predefinidas utilizan macros de comando y de opciones proporcionadas por NMAKE.  

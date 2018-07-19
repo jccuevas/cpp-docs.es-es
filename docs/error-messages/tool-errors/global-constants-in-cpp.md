@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297341"
 ---
 # <a name="global-constants-in-c"></a>Constantes globales en C++
 Constantes globales de C++ tienen vinculación estática. Esto es diferente de C. Si intenta utilizar un global constante en C++ en varios archivos obtendrá un error externo sin resolver. El compilador optimiza las constantes globales, sin dejar espacio reservado para la variable.  

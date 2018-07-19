@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378339"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistencia de los controles OLE
 Capacidad de uno de los controles OLE es persistencia de propiedad (o serialización), que permite que el control OLE leer o escribir valores de propiedad a y desde un archivo o secuencia. Una aplicación de contenedor puede utilizar la serialización para almacenar valores de propiedad de un control incluso después de que la aplicación ha destruido el control. Los valores de propiedad del control OLE, a continuación, se pueden leer desde el archivo o secuencia cuando una nueva instancia del control se crea en un momento posterior.  

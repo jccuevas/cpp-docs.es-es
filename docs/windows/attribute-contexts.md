@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860338"
 ---
 # <a name="attribute-contexts"></a>Atributos de contexto
 Atributos de C++ se pueden describir con cuatro campos básicos: el destino que se pueden aplicar a (**se aplica a**), si son repetibles o no (**repetible**), el requiere la presencia de otros atributos ( **Atributos requeridos por la**) y las incompatibilidades con otros atributos (**atributos no válidos**). Estos campos se muestran en una tabla que lo acompañan en el tema de referencia de cada atributo. Cada uno de estos campos se describe a continuación.  

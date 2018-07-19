@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383765"
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows Sockets: Convertir cadenas
 En este artículo y dos artículos complementarios explican varios aspectos de la programación de Windows Sockets. Este artículo explica la conversión de cadenas. Los otros temas se tratan en [Windows Sockets: bloqueo](../mfc/windows-sockets-blocking.md) y [Windows Sockets: orden de bytes](../mfc/windows-sockets-byte-ordering.md).  

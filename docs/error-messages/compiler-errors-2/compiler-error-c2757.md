@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233861"
 ---
 # <a name="compiler-error-c2757"></a>C2757 de Error del compilador
 'símbolo': ya existe un símbolo con este nombre y, por tanto, no se puede usar este nombre como un nombre de espacio de nombres  

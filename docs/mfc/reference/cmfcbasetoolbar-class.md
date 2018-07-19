@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc35091fef87c007fad73be45297536a170ca19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037849"
 ---
 # <a name="cmfcbasetoolbar-class"></a>Clase CMFCBaseToolBar
 Clase base para las barras de herramientas.  
@@ -89,7 +90,7 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `size`  
+ [out] *tamaño*  
  El tamaño mínimo de una barra de herramientas.  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
@@ -100,7 +101,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndOldParent`  
+ [in] *pWndOldParent*  
  Un puntero a la ventana primaria anterior.  
   
 ## <a name="see-also"></a>Vea también  

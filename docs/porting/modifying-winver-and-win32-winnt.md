@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912646"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>Modificar WINVER y _WIN32_WINNT
 

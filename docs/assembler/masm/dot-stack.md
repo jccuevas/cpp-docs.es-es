@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052305"
 ---
 # <a name="stack"></a>.STACK
 Cuando se utiliza con [. MODELO](../../assembler/masm/dot-model.md), define un segmento de pila (con el nombre del segmento de pila). Opcional `size` especifica el número de bytes de la pila (el valor predeterminado es 1.024). El `.STACK` directiva cierra automáticamente la instrucción de la pila.  

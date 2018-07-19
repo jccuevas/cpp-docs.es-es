@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247422"
 ---
 # <a name="compiler-error-c3206"></a>Error del compilador C3206
 'function': argumento de tipo no válido para 'param', falta la lista de argumentos de tipo en el tipo de clase 'typename'  

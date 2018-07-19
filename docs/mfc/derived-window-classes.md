@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351500"
 ---
 # <a name="derived-window-classes"></a>Clases de ventana derivadas
 Puede crear ventanas directamente desde [CWnd](../mfc/reference/cwnd-class.md), o derivar nuevas clases de ventana de `CWnd`. De esta forma crearía normalmente sus propias ventanas personalizadas. Sin embargo, para crear la mayoría de las ventanas de un programa marco se utilizan en su lugar las clases de ventana marco derivadas de `CWnd`, proporcionadas por MFC.  

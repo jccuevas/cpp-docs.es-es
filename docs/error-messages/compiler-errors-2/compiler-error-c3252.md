@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256537"
 ---
 # <a name="compiler-error-c3252"></a>Error del compilador C3252
 'método': no se puede reducir la accesibilidad de un método virtual en un tipo administrado o WinRT  

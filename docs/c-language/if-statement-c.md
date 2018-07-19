@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387055"
 ---
 # <a name="if-statement-c"></a>if (Instrucción) (C)
 La instrucción **if** controla la bifurcación condicional. El cuerpo de una instrucción **if** se ejecuta si el valor de la expresión es distinto de cero. La sintaxis de la instrucción **if** tiene dos formas.  

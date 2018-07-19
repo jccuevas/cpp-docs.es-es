@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eaec2b7951b0655a8a47106374c7527dad27bd20
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039542"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC (clase)
 Implementa un metarchivo de Windows, que contiene una secuencia de comandos de la interfaz de dispositivo gráfico (GDI) que puede volver a consultar para crear la imagen o el texto que desee.  
@@ -63,7 +64,7 @@ class CMetaFileDC : public CDC
   
  Después de enviar el `CMetaFileDC` objeto de la secuencia de `CDC` comandos GDI que se va a reproducir que. Solo los comandos GDI que crean como resultado, `MoveTo` y `LineTo`, se puede utilizar.  
   
- Después de enviar los comandos que desee en el metarchivo, llame a la **cerrar** función de miembro, que cierra los contextos de dispositivo de metarchivo y devuelve un identificador de metarchivo. A continuación, eliminar el `CMetaFileDC` objeto.  
+ Después de enviar los comandos que desee en el metarchivo, llame a la `Close` función de miembro, que cierra los contextos de dispositivo de metarchivo y devuelve un identificador de metarchivo. A continuación, eliminar el `CMetaFileDC` objeto.  
   
  [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) , a continuación, se puede usar el identificador del metarchivo para reproducir el metarchivo varias veces. Metarchivo también se puede manipular con funciones de Windows como [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), que copia un metarchivo en el disco.  
   
@@ -170,16 +171,16 @@ BOOL CreateEnhanced(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDCRef`  
+ *pDCRef*  
  Identifica un dispositivo de referencia para el metarchivo mejorado.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Apunta a una cadena de caracteres terminadas en null. Especifica el nombre de archivo para el metarchivo mejorado al crearse. Si este parámetro es **NULL**, metarchivo mejorado está basada en memoria y su contenido que se pierde cuando se destruye el objeto o cuando el Win32 **DeleteEnhMetaFile** función se invoca.  
   
- `lpBounds`  
+ *lpBounds*  
  Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura de datos o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las dimensiones de **HIMETRIC** unidades (en incrementos de milímetro.01) de la imagen que se almacenará en el Metarchivo mejorado.  
   
- `lpszDescription`  
+ *lpszDescripción*  
  Apunta a una cadena terminada en cero que especifica el nombre de la aplicación que creó la imagen, así como el título de la imagen.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -188,15 +189,15 @@ BOOL CreateEnhanced(
 ### <a name="remarks"></a>Comentarios  
  Este controlador de dominio puede utilizarse para almacenar una imagen independiente del dispositivo.  
   
- Windows usa el dispositivo de referencia identificado por el `pDCRef` parámetro para registrar la resolución y las unidades del dispositivo en el que aparecieron una imagen. Si el `pDCRef` parámetro es **NULL**, que utiliza el dispositivo de presentación actual como referencia.  
+ Windows usa el dispositivo de referencia identificado por el *pDCRef* parámetro para registrar la resolución y las unidades del dispositivo en el que aparecieron una imagen. Si el *pDCRef* parámetro es **NULL**, que utiliza el dispositivo de presentación actual como referencia.  
   
- Los miembros de la izquierda y superiores de la `RECT` estructura de datos que señala el `lpBounds` parámetro debe ser menor que los miembros derecho e inferior, respectivamente. Puntos a lo largo de los bordes del rectángulo se incluyen en la imagen. Si `lpBounds` es **NULL**, la interfaz de dispositivo gráfico (GDI) calcula las dimensiones del rectángulo más pequeño que puede incluir la imagen dibujada por la aplicación. El `lpBounds` parámetro debe especificarse siempre que sea posible.  
+ Los miembros de la izquierda y superiores de la `RECT` estructura de datos que señala el *lpBounds* parámetro debe ser menor que los miembros derecho e inferior, respectivamente. Puntos a lo largo de los bordes del rectángulo se incluyen en la imagen. Si *lpBounds* es **NULL**, la interfaz de dispositivo gráfico (GDI) calcula las dimensiones del rectángulo más pequeño que puede incluir la imagen dibujada por la aplicación. El *lpBounds* parámetro debe especificarse siempre que sea posible.  
   
- La cadena que señala el `lpszDescription` parámetro debe contener un carácter null entre el nombre de la aplicación y el nombre de imagen y debe terminar con dos caracteres null, por ejemplo, "XYZ gráficos Editor\0Bald Eagle\0\0," donde \0 representa el valor null carácter. Si `lpszDescription` es **NULL**, no hay ninguna entrada correspondiente en el encabezado de metarchivo mejorado.  
+ La cadena que señala el *lpszDescripción* parámetro debe contener un carácter null entre el nombre de la aplicación y el nombre de imagen y debe terminar con dos caracteres null, por ejemplo, "XYZ gráficos Editor\0Bald Eagle\0\0, "donde \0 representa el carácter nulo. Si *lpszDescripción* es **NULL**, no hay ninguna entrada correspondiente en el encabezado de metarchivo mejorado.  
   
  Aplicaciones utilizan el controlador de dominio creado por esta función para almacenar una imagen de gráficos en un metarchivo mejorado. El identificador identifica este controlador de dominio se puede pasar a cualquier función GDI.  
   
- Después de que una aplicación almacena una imagen en un metarchivo mejorado, puede mostrar la imagen en cualquier dispositivo de salida mediante una llamada a la `CDC::PlayMetaFile` (función). Cuando se muestra la imagen, Windows utiliza el rectángulo que señala el `lpBounds` parámetro y los datos de la resolución del dispositivo de referencia para colocar y escalar la imagen. El contexto de dispositivo devuelto por esta función contiene los mismos atributos predeterminados asociados a cualquier controlador de dominio nuevo.  
+ Después de que una aplicación almacena una imagen en un metarchivo mejorado, puede mostrar la imagen en cualquier dispositivo de salida mediante una llamada a la `CDC::PlayMetaFile` (función). Cuando se muestra la imagen, Windows utiliza el rectángulo que señala el *lpBounds* parámetro y los datos de la resolución del dispositivo de referencia para colocar y escalar la imagen. El contexto de dispositivo devuelto por esta función contiene los mismos atributos predeterminados asociados a cualquier controlador de dominio nuevo.  
   
  Las aplicaciones deben utilizar Win32 **GetWinMetaFileBits** función para convertir un metarchivo mejorado en el formato de metarchivo de Windows anterior.  
   

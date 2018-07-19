@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283766"
 ---
 # <a name="compiler-warning-level-1-c4364"></a>Advertencia del compilador (nivel 1) C4364
 \#para el ensamblado 'archivo' ya aparecía previamente en ubicación (número_de_línea) sin el atributo as_friend; as_friend que no se aplica  

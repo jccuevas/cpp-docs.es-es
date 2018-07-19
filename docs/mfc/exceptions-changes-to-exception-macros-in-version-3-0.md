@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c4e6c7744c3d5328985eee24e67ee1eb359fb3c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931023"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Excepciones: Cambios en las macros de excepción en la versión 3.0
 Se trata de un tema avanzado.  
@@ -45,13 +46,13 @@ Se trata de un tema avanzado.
   
  [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- se produce como un **CException\***, incluso si se crea como un **CCustomException**. El **CATCH** macro en MFC versiones 2.5 y anterior utiliza `CObject::IsKindOf` para probar el tipo en tiempo de ejecución. Dado que la expresión  
+ se produce como un `CException*`, incluso si se crea como un `CCustomException`. El **CATCH** macro en MFC versiones 2.5 y anterior utiliza `CObject::IsKindOf` para probar el tipo en tiempo de ejecución. Dado que la expresión  
   
  [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
  es true, el primer bloque catch detecta la excepción. En la versión 3.0, que usa las excepciones de C++ para implementar muchas de las macros de control de excepciones, el segundo bloque catch coincide con la produce `CException`.  
   
- Código parecido a esto es poco habitual. Normalmente aparece cuando se pasa un objeto de excepción a otra función que acepta un tipo genérico **CException\*** realiza el procesamiento de "previo a throw" y, por último, se produce la excepción.  
+ Código parecido a esto es poco habitual. Normalmente aparece cuando se pasa un objeto de excepción a otra función que acepta un tipo genérico `CException*`realiza el procesamiento de "previo a throw" y, por último, se produce la excepción.  
   
  Para solucionar este problema, mueva la expresión throw desde la función al código de llamada y producirá una excepción del tipo real conocida por el compilador en el momento en que se generó la excepción.  
   
@@ -62,7 +63,7 @@ Se trata de un tema avanzado.
   
  [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- Usar **THROW** en la instrucción catch bloque hace que el puntero `e` va a eliminar, por lo que el sitio de la instrucción catch externa recibirá un puntero no válido. Use `THROW_LAST` para volver a producir `e`.  
+ Usar **THROW** en la instrucción catch bloque hace que el puntero `e` va a eliminar, por lo que el sitio de la instrucción catch externa recibirá un puntero no válido. Use **THROW_LAST** para volver a producir `e`.  
   
  Para obtener más información, consulte [excepciones: detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   

@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422402"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operadores de desplazamiento de desplazamiento a la izquierda y derecha (&gt; &gt; y &lt; &lt;)
 Los operadores de desplazamiento bit a bit son el operador de desplazamiento a la derecha (>>), que mueve los bits de *MAYÚS-expression* hacia la derecha y el operador de desplazamiento a la izquierda (<<), que mueve los bits de *MAYÚS-expression* a la izquierda. <sup>1</sup>  

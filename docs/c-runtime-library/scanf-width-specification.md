@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418203"
 ---
 # <a name="scanf-width-specification"></a>scanf (Especificación de ancho)
 Esta información se aplica a la interpretación de cadenas de formato en la familia de funciones `scanf`, incluidas las versiones seguras, como `scanf_s`. Por lo general, estas funciones asumen que la secuencia de entrada se divide en una secuencia de tokens. Los tokens está separados por espacios en blanco (espacio, tabulación o nueva línea), o en el caso de los tipos numéricos, mediante el final natural de un tipo de datos numéricos, tal como se indica mediante el primer carácter que no se puede convertir en texto numérico. Sin embargo, la especificación de ancho puede utilizarse para hacer que se detenga el análisis de la entrada antes del fin natural de un token.  

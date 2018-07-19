@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360193"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>Cómo configurar un vínculo estático al código del registrador (sólo en C++)
 Los clientes C++ pueden crear un vínculo estático al código del registrador. La vinculación estática de analizador del registrador agrega aproximadamente 5 KB a una versión de lanzamiento.  

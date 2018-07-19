@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892844"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Paneles de la ventana (Editor de imágenes para iconos)
 Normalmente, la ventana del Editor de imágenes muestra una imagen en dos paneles separados por una barra divisora. Una vista es el tamaño real y la otra está ampliada (el factor de ampliación predeterminado es 6). Las vistas de estos dos paneles se actualizan automáticamente: los cambios que realice en un panel se muestran inmediatamente en la otra. Los dos paneles facilitan el trabajo en una vista ampliada de la imagen, en el que pueda distinguir píxeles individuales y, al mismo tiempo, observar el efecto del trabajo en la vista de tamaño real de la imagen.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341031"
 ---
 # <a name="closing-files"></a>Cerrar archivos
 Como es habitual en las operaciones de E/S, una vez que termine con un archivo, se debe cerrar.  

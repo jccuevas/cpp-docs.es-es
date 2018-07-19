@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382224"
 ---
 # <a name="using-ctreectrl"></a>Usar CTreeCtrl
 Un control de árbol, representado por la clase [CTreeCtrl](../mfc/reference/ctreectrl-class.md), es una ventana que muestra una lista jerárquica de elementos, como los encabezados en un documento, las entradas de un índice, o los archivos y directorios en un disco. Cada elemento se compone de una etiqueta y una imagen de mapa de bits opcional, y cada elemento puede tener una lista de subelementos asociados a él. Si hace clic en un elemento, el usuario puede expandir y contraer la lista asociada de subelementos. El árbol de directorios en el panel izquierdo del explorador de archivos es un ejemplo de un control de árbol.  

@@ -62,11 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6317d7c14f76355df908c9809df633533df3fb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f492e7fc3e29c74caba7303179b72c5dacad72e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040693"
 ---
 # <a name="coledocument-class"></a>COleDocument (clase)
 La clase base para los documentos de OLE que admiten la edición visual.  
@@ -118,15 +119,15 @@ class COleDocument : public CDocument
 |[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|Lo llama el marco de trabajo para actualizar el comando de la interfaz de usuario para la opción de menú de pegar.|  
   
 ## <a name="remarks"></a>Comentarios  
- `COleDocument` se deriva de **CDocument**, que permite que las aplicaciones OLE se utiliza la arquitectura documento/vista proporcionada por la biblioteca Microsoft Foundation Class.  
+ `COleDocument` se deriva de `CDocument`, que permite que las aplicaciones OLE se utiliza la arquitectura documento/vista proporcionada por la biblioteca Microsoft Foundation Class.  
   
  `COleDocument` trata de un documento como una colección de [CDocItem](../../mfc/reference/cdocitem-class.md) objetos para procesar elementos OLE. El contenedor y servidor de aplicaciones requieren una arquitectura tan porque sus documentos deben ser capaz de contener elementos OLE. El [COleServerItem](../../mfc/reference/coleserveritem-class.md) y [COleClientItem](../../mfc/reference/coleclientitem-class.md) clases, ambas derivadas de `CDocItem`, administrar las interacciones entre las aplicaciones y elementos OLE.  
   
- Si está escribiendo una aplicación de contenedor simple, derive su clase de documento de `COleDocument`. Si está escribiendo una aplicación de contenedor que admite la vinculación a los elementos incrustados contenidos en sus documentos, derive su clase de documento de [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Si está escribiendo un servidor de aplicación o combinación contenedor/servidor, derive su clase de documento de [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` y `COleServerDoc` derivadas de `COleDocument`, por lo que estas clases heredan todos los servicios disponibles en `COleDocument` y **CDocument**.  
+ Si está escribiendo una aplicación de contenedor simple, derive su clase de documento de `COleDocument`. Si está escribiendo una aplicación de contenedor que admite la vinculación a los elementos incrustados contenidos en sus documentos, derive su clase de documento de [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Si está escribiendo un servidor de aplicación o combinación contenedor/servidor, derive su clase de documento de [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` y `COleServerDoc` derivadas de `COleDocument`, por lo que estas clases heredan todos los servicios disponibles en `COleDocument` y `CDocument`.  
   
  Para usar `COleDocument`, derive una clase de ella y agregar la funcionalidad para administrar la aplicación los datos no son compatibles con OLE, así como elementos incrustados o vinculados. Si define `CDocItem`-sus clases derivadas para almacenar datos nativos de la aplicación, puede usar la implementación predeterminada definida por `COleDocument` para almacenar los datos no son compatibles con OLE y OLE. También puede diseñar sus propias estructuras de datos para almacenar los datos no son compatibles con OLE por separado de los elementos OLE. Para obtener más información, vea el artículo [contenedores: archivos compuestos](../../mfc/containers-compound-files.md)...  
   
- **CDocument** admite el envío de documentos a través de correo electrónico si hay compatibilidad de correo (MAPI). `COleDocument` actualizó [OnFileSendMail](#onfilesendmail) para administrar documentos compuestos correctamente. Para obtener más información, vea los artículos [MAPI](../../mfc/mapi.md) y [compatibilidad MAPI en MFC](../../mfc/mapi-support-in-mfc.md)...  
+ `CDocument` admite el envío de documentos a través de correo electrónico si hay compatibilidad de correo (MAPI). `COleDocument` actualizó [OnFileSendMail](#onfilesendmail) para administrar documentos compuestos correctamente. Para obtener más información, vea los artículos [MAPI](../../mfc/mapi.md) y [compatibilidad MAPI en MFC](../../mfc/mapi-support-in-mfc.md)...  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -148,7 +149,7 @@ virtual void AddItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pItem`  
+ *pItem*  
  Puntero para el elemento de documento que se va a agregar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -163,10 +164,10 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ptd`  
+ *ptd*  
  Puntero a un **DVTARGETDEVICE** estructuras de datos que contiene información sobre el nuevo dispositivo de destino de impresión. Puede ser **NULL**.  
   
- `ppd`  
+ *PPD*  
  Puntero a un **PRINTDLG** estructuras de datos que contiene información sobre el nuevo dispositivo de destino de impresión. Puede ser **NULL**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -196,7 +197,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bEnable`  
+ *bHabilitar el*  
  Especifica si la compatibilidad con archivos compuestos está habilitada o deshabilitada.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -207,14 +208,14 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
  Después de soporte técnico de archivo compuesto está habilitada o deshabilitada para un documento, el valor no debe cambiarse durante la duración del documento.  
   
 ##  <a name="getinplaceactiveitem"></a>  COleDocument::GetInPlaceActiveItem  
- Llamada a esta función para obtener el OLE de elemento que está activada actualmente en su lugar en la ventana de marco que contiene la vista identificada por `pWnd`.  
+ Llamada a esta función para obtener el OLE de elemento que está activada actualmente en su lugar en la ventana de marco que contiene la vista identificada por *pWnd*.  
   
 ```  
 virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pWnd`  
+ *pWnd*  
  Puntero a la ventana que muestra el documento contenedor.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -228,14 +229,14 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pos`  
+ *punto de venta*  
  Una referencia a un **posición** valor establecido por una llamada anterior a `GetNextClientItem`; el valor inicial es devuelto por la `GetStartPosition` función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al siguiente elemento de cliente en el documento, o **NULL** si no hay más elementos de cliente.  
   
 ### <a name="remarks"></a>Comentarios  
- Después de cada llamada, el valor de `pos` se establece para el elemento siguiente en el documento, que puede ser o no un elemento de cliente.  
+ Después de cada llamada, el valor de *pos* está establecido para el elemento siguiente en el documento, que puede ser o no un elemento de cliente.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCOleContainer#1](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]  
@@ -248,14 +249,14 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pos`  
+ *punto de venta*  
  Una referencia a un **posición** valor establecido por una llamada anterior a `GetNextItem`; el valor inicial es devuelto por la `GetStartPosition` función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al elemento de documento en la posición especificada.  
   
 ### <a name="remarks"></a>Comentarios  
- Después de cada llamada, el valor de `pos` está establecido en el **posición** valor del elemento siguiente en el documento. Si el elemento recuperado es el último elemento en el documento, el nuevo valor de `pos` es **NULL**.  
+ Después de cada llamada, el valor de *pos* está establecido en el **posición** valor del elemento siguiente en el documento. Si el elemento recuperado es el último elemento en el documento, el nuevo valor de *pos* es **NULL**.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCOleContainer#2](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]  
@@ -268,14 +269,14 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pos`  
+ *punto de venta*  
  Una referencia a un **posición** valor establecido por una llamada anterior a `GetNextServerItem`; el valor inicial es devuelto por la `GetStartPosition` función miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al siguiente elemento de servidor en el documento, o **NULL** si no hay más elementos de servidor.  
   
 ### <a name="remarks"></a>Comentarios  
- Después de cada llamada, el valor de `pos` se establece para el elemento siguiente en el documento, que puede ser o no un elemento del servidor.  
+ Después de cada llamada, el valor de *pos* está establecido para el elemento siguiente en el documento, que puede ser o no un elemento del servidor.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCOleServer#2](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]  
@@ -288,7 +289,7 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pView`  
+ *pView*  
  Puntero al objeto de vista activa muestra el documento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -365,7 +366,7 @@ afx_msg void OnFileSendMail();
 ### <a name="remarks"></a>Comentarios  
  `OnFileSendMail` llamadas `OnSaveDocument` para serializar (documentos sin título y modificados en un archivo temporal, que se envía a través de correo electrónico Guardar). Si el documento no se ha modificado, no se necesita un archivo temporal; se envía el original. `OnFileSendMail` carga MAPI32. Archivo DLL si aún no se haya cargado.  
   
- A diferencia de la implementación de `OnFileSendMail` para **CDocument**, esta función controla archivos compuestos correctamente.  
+ A diferencia de la implementación de `OnFileSendMail` para `CDocument`, esta función controla archivos compuestos correctamente.  
   
  Para obtener más información, consulte el [temas de MAPI](../../mfc/mapi.md) y [compatibilidad MAPI en MFC](../../mfc/mapi-support-in-mfc.md) artículos...  
   
@@ -377,7 +378,7 @@ virtual void OnShowViews(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bVisible`  
+ *bVisible*  
  Indica si el documento se ha convertido en visible o invisible.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -391,8 +392,8 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pCmdUI`  
- Un puntero a un `CCmdUI` estructura que representa el menú que generó el comando de actualización. Las llamadas del controlador de actualización de la **habilitar** función miembro de la `CCmdUI` a través de la estructura `pCmdUI` para actualizar la interfaz de usuario.  
+ *pCmdUI*  
+ Un puntero a un `CCmdUI` estructura que representa el menú que generó el comando de actualización. Las llamadas del controlador de actualización de la `Enable` función miembro de la `CCmdUI` a través de la estructura *pCmdUI* para actualizar la interfaz de usuario.  
   
 ### <a name="remarks"></a>Comentarios  
  `OnUpdateEditChangeIcon` actualiza la interfaz de usuario del comando dependiendo de si existe o no un icono válido en el documento. Reemplace esta función para cambiar el comportamiento.  
@@ -405,8 +406,8 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pCmdUI`  
- Un puntero a un `CCmdUI` estructura que representa el menú que generó el comando de actualización. Las llamadas del controlador de actualización de la **habilitar** función miembro de la `CCmdUI` a través de la estructura `pCmdUI` para actualizar la interfaz de usuario.  
+ *pCmdUI*  
+ Un puntero a un `CCmdUI` estructura que representa el menú que generó el comando de actualización. Las llamadas del controlador de actualización de la `Enable` función miembro de la `CCmdUI` a través de la estructura *pCmdUI* para actualizar la interfaz de usuario.  
   
 ### <a name="remarks"></a>Comentarios  
  A partir del primer elemento OLE en el documento, `OnUpdateEditLinksMenu` tiene acceso a cada elemento, comprueba si el elemento es un vínculo y, si se trata de un vínculo, habilita el comando de vínculos. Reemplace esta función para cambiar el comportamiento.  
@@ -419,8 +420,8 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pCmdUI`  
- Un puntero a un `CCmdUI` estructura que representa el menú que generó el comando de actualización. Las llamadas del controlador de actualización de la **habilitar** función miembro de la `CCmdUI` a través de la estructura `pCmdUI` para actualizar la interfaz de usuario.  
+ *pCmdUI*  
+ Un puntero a un `CCmdUI` estructura que representa el menú que generó el comando de actualización. Las llamadas del controlador de actualización de la `Enable` función miembro de la `CCmdUI` a través de la estructura *pCmdUI* para actualizar la interfaz de usuario.  
   
 ### <a name="remarks"></a>Comentarios  
  `OnUpdateObjectVerbMenu` las actualizaciones de la *ObjectName* interfaz de usuario del comando dependiendo de si existe o no un objeto válido en el documento. Si existe un objeto, el *ObjectName* está habilitado el comando en el menú Edición. Cuando se selecciona este comando de menú, se muestra el submenú de verbo. El submenú de verbo contiene todos los comandos de verbo disponibles para el objeto, por ejemplo, editar, propiedades y así sucesivamente. Reemplace esta función para cambiar el comportamiento.  
@@ -433,8 +434,8 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pCmdUI`  
- Un puntero a un `CCmdUI` estructura que representa el menú que generó el comando de actualización. Las llamadas del controlador de actualización de la **habilitar** función miembro de la `CCmdUI` a través de la estructura `pCmdUI` para actualizar la interfaz de usuario.  
+ *pCmdUI*  
+ Un puntero a un `CCmdUI` estructura que representa el menú que generó el comando de actualización. Las llamadas del controlador de actualización de la `Enable` función miembro de la `CCmdUI` a través de la estructura *pCmdUI* para actualizar la interfaz de usuario.  
   
 ### <a name="remarks"></a>Comentarios  
  El comando de menú Pegado especial se habilita o deshabilita dependiendo de si se puede pegar el elemento en el documento o no.  
@@ -447,8 +448,8 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pCmdUI`  
- Un puntero a un `CCmdUI` estructura que representa el menú que generó el comando de actualización. Las llamadas del controlador de actualización de la **habilitar** función miembro de la `CCmdUI` a través de la estructura `pCmdUI` para actualizar la interfaz de usuario.  
+ *pCmdUI*  
+ Un puntero a un `CCmdUI` estructura que representa el menú que generó el comando de actualización. Las llamadas del controlador de actualización de la `Enable` función miembro de la `CCmdUI` a través de la estructura *pCmdUI* para actualizar la interfaz de usuario.  
   
 ### <a name="remarks"></a>Comentarios  
  El comando de menú de pegar y el botón se habilita o deshabilita dependiendo de si se puede pegar el elemento en el documento o no.  
@@ -461,7 +462,7 @@ virtual void RemoveItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pItem`  
+ *pItem*  
  Puntero a los elementos de documento que va a quitar.  
   
 ### <a name="remarks"></a>Comentarios  

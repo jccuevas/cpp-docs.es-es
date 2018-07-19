@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041450"
 ---
 # <a name="colestreamfile-class"></a>Clase COleStreamFile
 Representa un flujo de datos ( `IStream`) en un archivo compuesto como parte de almacenamiento estructurado OLE.  
@@ -91,7 +92,7 @@ void Attach(LPSTREAM lpStream);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpStream`  
+ *lpStream*  
  Apunta a la secuencia OLE ( `IStream`) que se asociará con el objeto. No puede ser **NULL**.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -107,11 +108,11 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpStream`  
+ *lpStream*  
  Puntero a la secuencia OLE que se asociará con el objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- Si `lpStream` es **NULL**, el objeto no está asociado a un flujo OLE, de lo contrario, el objeto está asociado a la secuencia proporcionada de OLE.  
+ Si *lpStream* es **NULL**, el objeto no está asociado a un flujo OLE, de lo contrario, el objeto está asociado a la secuencia proporcionada de OLE.  
   
  Para obtener más información, consulte [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) del SDK de Windows.  
   
@@ -123,7 +124,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pError`  
+ *pError*  
  Apunta a un [CFileException](../../mfc/reference/cfileexception-class.md) objeto o **NULL** que indica el estado de finalización de la operación de creación. Proporcione este parámetro si desea supervisar las posibles excepciones que se genera al intentar crear la secuencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -146,23 +147,23 @@ BOOL CreateStream(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpStorage`  
+ *lpStorage*  
  Señala al objeto de almacenamiento OLE que contiene la secuencia que se va a crear. No puede ser **NULL**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Nombre de la secuencia que se va a crear. No puede ser **NULL**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Modo de acceso que se utilizará al abrir la secuencia. Exclusivo, lectura y escritura y crear modos se usan de forma predeterminada. Para obtener una lista completa de los modos disponibles, vea [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Apunta a un [CFileException](../../mfc/reference/cfileexception-class.md) objeto o **NULL**. Proporcione este parámetro si desea supervisar las posibles excepciones que se genera al intentar crear la secuencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la secuencia se crea correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Si se produce un error en la apertura, se producirá una excepción de archivo y `pError` no **NULL**.  
+ Si se produce un error en la apertura, se producirá una excepción de archivo y *pError* no **NULL**.  
   
  Para obtener más información, consulte [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) en el SDK de Windows.  
   
@@ -203,23 +204,23 @@ BOOL OpenStream(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpStorage`  
+ *lpStorage*  
  Señala al objeto de almacenamiento OLE que contiene la secuencia que se va a abrir. No puede ser **NULL**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Nombre de la secuencia que se puede abrir. No puede ser **NULL**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Modo de acceso que se utilizará al abrir la secuencia. Exclusivo y lectura/escritura se usan los modos de forma predeterminada. Para obtener la lista completa de los modos disponibles, consulte [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Apunta a un [CFileException](../../mfc/reference/cfileexception-class.md) objeto o **NULL**. Proporcione este parámetro si desea supervisar las posibles excepciones que se genera al intentar abrir la secuencia.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el flujo se abre correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Si se produce un error en la apertura, se producirá una excepción de archivo y `pError` no **NULL**.  
+ Si se produce un error en la apertura, se producirá una excepción de archivo y *pError* no **NULL**.  
   
  Para obtener más información, consulte [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) en el SDK de Windows.  
   

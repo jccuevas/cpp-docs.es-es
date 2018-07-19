@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367503"
 ---
 # <a name="creating-inline-file-text"></a>Crear el texto de un archivo en línea
 Archivos en línea son temporales o permanentes.  

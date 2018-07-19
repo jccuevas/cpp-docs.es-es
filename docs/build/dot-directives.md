@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367669"
 ---
 # <a name="dot-directives"></a>Directivas dot
 Especificar directivas dot fuera de un bloque de descripción, al principio de una línea. Directivas dot comienzan con un punto (. ) y van seguidas por dos puntos (:). Se permiten espacios y tabulaciones. Punto directivas nombres distinguen mayúsculas de minúsculas y mayúsculas.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264147"
 ---
 # <a name="compiler-error-c3704"></a>Error del compilador C3704
 'función': un método vararg no puede desencadenar eventos  

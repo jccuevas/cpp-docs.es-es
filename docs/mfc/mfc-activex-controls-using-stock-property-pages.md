@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e8d54f87e4e018a004bbab503664fa1788f36c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5eb8dc1bbdc496072df829531b0f10aaaca069a8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932200"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>Controles ActiveX MFC: Usar páginas de propiedades estándar
 En este artículo se describe las páginas de propiedades estándar disponibles para controles ActiveX y cómo utilizarlas.  
@@ -40,13 +41,13 @@ En este artículo se describe las páginas de propiedades estándar disponibles 
   
 -   [Controles ActiveX MFC: Agregar otra página de propiedades personalizadas](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
- MFC proporciona tres páginas de propiedades estándar para su uso con controles ActiveX: **CLSID_CColorPropPage**, **CLSID_CFontPropPage**, y **CLSID_CPicturePropPage**. Estas páginas muestran una interfaz de usuario estándar de color, fuente y las propiedades de imagen, respectivamente.  
+ MFC proporciona tres páginas de propiedades estándar para su uso con controles ActiveX: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, y `CLSID_CPicturePropPage`. Estas páginas muestran una interfaz de usuario estándar de color, fuente y las propiedades de imagen, respectivamente.  
   
  Para incorporar estas páginas de propiedades en un control, agregue sus identificadores al código que inicialice la matriz del control de Id. de página de propiedades. En el ejemplo siguiente, este código, se encuentran en el archivo de implementación (. (CPP), inicializa la matriz para que contenga las tres páginas de propiedades estándar y la página de propiedades predeterminada (denominada `CMyPropPage` en este ejemplo):  
   
  [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
   
- Tenga en cuenta que el recuento de propiedad páginas, en el `BEGIN_PROPPAGEIDS` macro, es 4. Esto representa el número de páginas de propiedades admitidas por el control ActiveX.  
+ Tenga en cuenta que el recuento de páginas de propiedades, en la macro BEGIN_PROPPAGEIDS, es 4. Esto representa el número de páginas de propiedades admitidas por el control ActiveX.  
   
  Después de realizar estas modificaciones, vuelva a generar el proyecto. Ahora, el control tiene páginas de propiedades de la fuente, imagen y propiedades de color.  
   

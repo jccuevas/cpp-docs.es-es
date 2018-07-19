@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111395"
 ---
 # <a name="ole-db-consumers-and-providers"></a>Consumidores y proveedores OLE DB
 La arquitectura OLE DB usa el modelo de consumidores y proveedores. Un consumidor realiza las solicitudes de datos. Un proveedor responde a estas solicitudes al colocar los datos en formato tabular y devolverlo al consumidor. Cualquier llamada que puede hacer que el consumidor debe implementarse en el proveedor.  

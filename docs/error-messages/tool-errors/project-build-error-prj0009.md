@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318459"
 ---
 # <a name="project-build-error-prj0009"></a>Error PRJ0009 al compilar el proyecto
 Crear registro no se pudo abrir para escritura.  

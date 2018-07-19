@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365986"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx (clase)
 Esta clase proporciona métodos para controlar la administración de recuento de referencia de objeto para los objetos y agregados.  

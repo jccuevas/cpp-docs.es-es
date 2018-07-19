@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358930"
 ---
 # <a name="specifying-property-pages"></a>Especificar páginas de propiedades
 Cuando se crea un control ActiveX, a menudo deseará asociarlo a páginas de propiedades que pueden usarse para establecer las propiedades del control. Controla el uso de contenedores el **ISpecifyPropertyPages** interfaz para averiguar qué páginas de propiedades pueden usarse para establecer las propiedades del control. Debe implementar esta interfaz en el control.  

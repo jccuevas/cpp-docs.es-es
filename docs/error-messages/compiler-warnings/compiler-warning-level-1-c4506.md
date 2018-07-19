@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278703"
 ---
 # <a name="compiler-warning-level-1-c4506"></a>Advertencia del compilador (nivel 1) C4506
 ninguna definición para la función inline 'function'  

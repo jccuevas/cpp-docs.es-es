@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248093"
 ---
 # <a name="compiler-error-c3121"></a>Error del compilador C3121
 no se puede cambiar el GUID para la clase 'nombre_de_clase'  

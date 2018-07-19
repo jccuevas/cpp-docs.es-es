@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245053"
 ---
 # <a name="compiler-error-c2942"></a>Error del compilador C2942
 'class': el identificador de clase de tipo se volvió a definir como argumento formal de una función.  

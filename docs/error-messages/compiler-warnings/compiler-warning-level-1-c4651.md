@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283372"
 ---
 # <a name="compiler-warning-level-1-c4651"></a>Advertencia del compilador (nivel 1) C4651
 'definición de especificado para el encabezado precompilado pero no para la compilación actual  

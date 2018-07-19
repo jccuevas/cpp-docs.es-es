@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232674"
 ---
 # <a name="compiler-error-c2735"></a>C2735 de Error del compilador
 ' palabra clave ' no está permitida en el especificador de tipo de parámetros formales  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348884"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Mensajes y comandos en el marco
 Las aplicaciones escritas para Microsoft Windows son "controladas por mensajes". En respuesta a eventos como clics del mouse, pulsaciones de teclas, movimientos de ventanas etc., Windows envía mensajes a la ventana apropiada. Las aplicaciones de Framework procesan mensajes de Windows como cualquier otra aplicación para Windows. No obstante, el marco de trabajo también proporciona algunas mejoras que facilitan los mensajes de procesamiento más sencillo, más fácil de mantener y mejor encapsulado.  

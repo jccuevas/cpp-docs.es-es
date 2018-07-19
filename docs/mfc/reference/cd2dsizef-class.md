@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0093c92604013e4c1aef4046f244d7bcd3f71958
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e939d189d991ef234e940b272291c2da6c931684
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954483"
 ---
 # <a name="cd2dsizef-class"></a>Clase CD2DSizeF
 Un contenedor para D2D1_SIZE_F.  
@@ -47,7 +48,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|Devuelve un `boolean` valor que indica si una expresión no contiene datos válidos ( `null`).|  
+|[CD2DSizeF::IsNull](#isnull)|Devuelve un **booleano** valor que indica si una expresión no contiene datos válidos ( **null**).|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -78,13 +79,13 @@ CD2DSizeF(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `size`  
+ *size*  
  tamaño de fuente  
   
- `cx`  
+ *CX*  
  ancho de origen  
   
- `cy`  
+ *CY*  
  alto de origen  
   
 ##  <a name="isnull"></a>  CD2DSizeF::IsNull  

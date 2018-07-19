@@ -54,11 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039993"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 La `CMFCDesktopAlertWnd` clase implementa la funcionalidad de un cuadro de diálogo no modal que aparece en la pantalla para informar al usuario acerca de un evento.  
@@ -162,22 +163,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] [out] `pWndOwner`  
+ [in] [out] *pWndOwner*  
  Especifica el propietario de la ventana de alerta. Propietario recibirá entonces todas las notificaciones de la ventana de alerta de escritorio. Este valor no puede ser `NULL`.  
   
- [in] `uiDlgResID`  
+ [in] *uiDlgResID*  
  Especifica el identificador de recurso de la ventana de alerta.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  Especifica el menú que aparece cuando el usuario hace clic en el botón de menú. Si `NULL`, no se muestra el botón de menú.  
   
- [in] `ptPos`  
+ [in] *ptPos*  
  Especifica la posición inicial donde se muestra la ventana de alerta, mediante las coordenadas de pantalla. Si este parámetro es (-1, -1), la ventana de alerta se muestra en la esquina inferior derecha de la pantalla.  
   
- [in] `pRTIDlgBar`  
+ [in] *pRTIDlgBar*  
  Información de clase en tiempo de ejecución para una clase de cuadro de diálogo personalizado que abarca el área de cliente de la ventana de alerta.  
   
- [in] `params`  
+ [in] *params*  
  Especifica los parámetros que se utilizan para crear una ventana de alerta.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -296,7 +297,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `CPoint&`  
+ [in] *CPoint &*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -310,7 +311,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Este parámetro no se utiliza.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -329,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `wParam`  
- [in] `lParam`  
+ [in] *wParam*  
+ [in] *lParam*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -344,7 +345,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -356,7 +357,7 @@ BOOL ProcessCommand(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hwnd`  
+ [in] *hwnd*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -370,7 +371,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nSpeed`  
+ [in] *nSpeed*  
  Especifica la velocidad de animación nuevo, en milisegundos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -384,7 +385,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `type`  
+ [in] *tipo*  
  Especifica el tipo de animación.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -408,7 +409,7 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nTime`  
+ [in] *nTime*  
  El tiempo, en milisegundos, que transcurre antes de que la ventana de alerta se cierra automáticamente.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -422,7 +423,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bSmallCaption`  
+ [in] *bSmallCaption*  
  `TRUE` para especificar que la ventana de alerta muestra un título pequeño; en caso contrario, `FALSE` para especificar que la ventana de alerta muestra un título de tamaño normal.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -436,7 +437,7 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nTransparency`  
+ [in] *nTransparency*  
  Especifica el nivel de transparencia. Este valor debe ser entre 0 y 255, ambos inclusive. Cuanto mayor sea el valor, cuanto más opaco es la ventana.  
   
 ### <a name="remarks"></a>Comentarios  

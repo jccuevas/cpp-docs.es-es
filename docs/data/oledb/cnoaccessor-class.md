@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097359"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor (Clase)
 Puede usarse como un argumento de plantilla (`TAccessor`) para las clases de plantilla como `CCommand` y `CTable`, que requieren un argumento de la clase de descriptor de acceso.  

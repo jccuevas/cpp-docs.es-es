@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041253"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Clase CMFCRibbonUndoButton
 La `CMFCRibbonUndoButton` clase implementa un botón de lista desplegable que contiene los comandos de usuario más reciente. Los usuarios pueden seleccionar uno o varios de los comandos más recientes de la lista desplegable para rehacer o deshacer.  
@@ -88,7 +89,7 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  La etiqueta de acción que se mostrará en la lista desplegable.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
@@ -116,19 +117,19 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nID`  
+ [in] *nID*  
  Especifica el identificador de comando.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Especifica la etiqueta de texto del botón.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  Índice de base cero en la lista de imágenes del objeto primario para la imagen del botón pequeño.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  Índice de base cero en la lista de imágenes del objeto primario para el de imagen grande del botón.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Un identificador a un icono que puede usar como imagen del botón.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  

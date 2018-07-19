@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686820"
 ---
 # <a name="c1-notation"></a>C.1 Notación
 Las reglas de gramática consisten en el nombre de un no terminal, seguido por un signo de dos puntos seguido de alternativas de reemplazo en líneas independientes.  

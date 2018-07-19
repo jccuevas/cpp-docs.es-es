@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880706"
 ---
 # <a name="editing-managed-resource-files"></a>Editar archivos de recursos administrados
 Archivos de recursos administrados (.resx) son archivos XML. Cuando agrega un archivo de recursos administrado al proyecto desde el **Agregar nuevo elemento** cuadro de diálogo, el **Editor de recursos administrados** abre de forma predeterminada.  

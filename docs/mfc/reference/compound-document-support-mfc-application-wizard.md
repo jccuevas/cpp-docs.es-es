@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368314"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Compatibilidad con documentos compuestos, Asistente para aplicaciones MFC
 En esta página del Asistente para aplicaciones MFC, indicar a qué nivel de la aplicación proporciona compatibilidad con documentos compuestos y activa. La aplicación debe admitir la arquitectura documento/vista para admitir los documentos compuestos y plantillas de documento.  

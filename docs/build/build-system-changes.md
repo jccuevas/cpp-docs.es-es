@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363326"
 ---
 # <a name="build-system-changes"></a>Cambios del sistema de compilación
 Se utiliza el sistema de MSBuild para compilar proyectos de Visual C++. Sin embargo, en Visual Studio 2008 y versiones anteriores, se utiliza el sistema de VCBuild. Ciertos tipos de archivo y conceptos que dependían de VCBuild no existe o se representan de forma diferente en el sistema actual. Este documento describen las diferencias en el sistema de compilación actual.  

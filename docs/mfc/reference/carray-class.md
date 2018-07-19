@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f946a7af93a8cbf7a285f0c01ebd0512231f7b3f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953393"
 ---
 # <a name="carray-class"></a>CArray (clase)
 Admite matrices que son como las matrices de C, pero pueden reducir y crecer según sea necesario dinámicamente.  
@@ -69,11 +70,11 @@ class CArray : public CObject
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `TYPE`  
- Parámetro de plantilla que especifica el tipo de los objetos almacenados en la matriz. `TYPE` es un parámetro que es devuelto por `CArray`.  
+ *TIPO DE*  
+ Parámetro de plantilla que especifica el tipo de los objetos almacenados en la matriz. *TIPO de* es un parámetro que es devuelto por `CArray`.  
   
- `ARG` *_* `TYPE`  
- Parámetro de plantilla que especifica el tipo de argumento que se usa para tener acceso a objetos almacenados en la matriz. A menudo una referencia a `TYPE`. `ARG_TYPE` es un parámetro que se pasa a `CArray`.  
+ *ARG* *_* *TIPO*  
+ Parámetro de plantilla que especifica el tipo de argumento que se usa para tener acceso a objetos almacenados en la matriz. A menudo una referencia a *tipo*. *ARG_TYPE* es un parámetro que se pasa a `CArray`.  
   
 ## <a name="members"></a>Miembros  
   
@@ -146,17 +147,17 @@ INT_PTR Add(ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parámetro de plantilla que especifica el tipo de argumentos que hacen referencia a elementos de esta matriz.  
   
- `newElement`  
+ *"newelement"*  
  El elemento que se va a agregar a esta matriz.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El índice del elemento agregado.  
   
 ### <a name="remarks"></a>Comentarios  
- Si [SetSize](#setsize) se ha utilizado con un `nGrowBy` puede asignarse valor mayor que 1, memoria adicional. Sin embargo, el límite superior aumentarán en 1 solo.  
+ Si [SetSize](#setsize) se ha utilizado con un *nGrowBy* puede asignarse valor mayor que 1, memoria adicional. Sin embargo, el límite superior aumentarán en 1 solo.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
@@ -178,7 +179,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="remarks"></a>Comentarios  
  Las matrices deben ser del mismo tipo.  
   
- Si es necesario, **anexado** puede asignar memoria adicional para dar cabida a los elementos que se anexa a la matriz.  
+ Si es necesario, `Append` puede asignar memoria adicional para dar cabida a los elementos que se anexa a la matriz.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
@@ -210,7 +211,7 @@ void Copy(const CArray& src);
 ### <a name="remarks"></a>Comentarios  
  Llame a esta función miembro para sobrescribir los elementos de una matriz con los elementos de otra matriz.  
   
- **Copia** no libera memoria; sin embargo, si es necesario, **copia** puede asignar memoria adicional para dar cabida a los elementos que se copian en la matriz.  
+ **Copia** no libera memoria; sin embargo, si es necesario, `Copy` puede asignar memoria adicional para dar cabida a los elementos que se copian en la matriz.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
@@ -224,7 +225,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -261,7 +262,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
  *TIPO DE*  
  Parámetro de plantilla que especifica el tipo de los elementos de matriz.  
   
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -335,7 +336,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="remarks"></a>Comentarios  
  Dado que los índices de matriz son de base cero, esta función devuelve un valor de 1 menor que `GetSize`.  
   
- La condición **() GetUpperBound** = -1 indica que la matriz no contiene elementos.  
+ La condición `GetUpperBound( )` = -1 indica que la matriz no contiene elementos.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CArray::GetAt](#getat).  
@@ -355,28 +356,28 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que puede ser mayor que el valor devuelto por `GetUpperBound`.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parámetro de plantilla que especifica el tipo de elementos de esta matriz.  
   
- `newElement`  
+ *"newelement"*  
  El elemento que se colocarán en esta matriz.  
   
- `nCount`  
+ *nCount*  
  El número de veces que este elemento debe estar insertado (el valor predeterminado es 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Un índice de entero que puede ser mayor que el valor devuelto por [GetUpperBound](#getupperbound).  
   
- `pNewArray`  
+ *pNewArray*  
  Otra matriz que contiene elementos que se va a agregar a esta matriz.  
   
 ### <a name="remarks"></a>Comentarios  
  En el proceso, desplaza (al incrementar el índice) el elemento existente en este índice y lo pasa todos los elementos por encima de él.  
   
- La segunda versión inserta todos los elementos de otro `CArray` colección, comenzando por la `nStartIndex` posición.  
+ La segunda versión inserta todos los elementos de otro `CArray` colección, comenzando por el *nStartIndex* posición.  
   
  El `SetAt` función, en cambio, reemplaza un elemento de la matriz especificada y desplazar los elementos.  
   
@@ -405,7 +406,7 @@ const TYPE& operator[](int_ptr nindex) const;
  *TIPO DE*  
  Parámetro de plantilla que especifica el tipo de elementos de esta matriz.  
   
- `nIndex`  
+ *nIndex*  
  Índice del elemento para tener acceso.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -428,17 +429,17 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pNewData`  
+ *pNewData*  
  Un nuevo búfer de la matriz de elementos.  
   
- `pData`  
+ *pData*  
  La antigua matriz de elementos.  
   
- `nCount`  
+ *nCount*  
  Número de elementos de la matriz anterior.  
   
 ### <a name="remarks"></a>Comentarios  
- `pNewData` siempre es lo suficientemente grande como para contener todos los `pData` elementos.  
+ *pNewData* siempre es lo suficientemente grande como para contener todos los *pData* elementos.  
   
  El [CArray](../../mfc/reference/carray-class.md) implementación utiliza este método para copiar los datos antiguos a un nuevo búfer cuando la matriz debe aumentar o reducir (cuando [SetSize](#setsize) o [FreeExtra](#freeextra) se denominan). La implementación predeterminada sólo copia los datos.  
   
@@ -467,10 +468,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por [GetUpperBound](#getupperbound).  
   
- `nCount`  
+ *nCount*  
  Número de elementos que se va a quitar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -489,13 +490,13 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0 y menor o igual que el valor devuelto por [GetUpperBound](#getupperbound).  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parámetro de plantilla que especifica el tipo de argumentos que se usan para hacer referencia a elementos de la matriz.  
   
- `newElement`  
+ *"newelement"*  
  El nuevo valor del elemento que se almacenará en la posición especificada.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -514,13 +515,13 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nIndex`  
+ *nIndex*  
  Un índice de entero que es mayor o igual que 0.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parámetro de plantilla que especifica el tipo de elementos de la matriz.  
   
- `newElement`  
+ *"newelement"*  
  El elemento que se va a agregar a esta matriz. A **NULL** se permite el valor.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -539,10 +540,10 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nNewSize`  
+ *nNewSize*  
  El nuevo tamaño de la matriz (número de elementos). Debe ser mayor o igual que 0.  
   
- `nGrowBy`  
+ *nGrowBy*  
  El número mínimo de ranuras de elemento para asignar si es necesario un aumento de tamaño.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -550,7 +551,7 @@ void SetSize(
   
  Utilice esta función para establecer el tamaño de la matriz antes de empezar a usar la matriz. Si no usa `SetSize`, al agregar elementos a la matriz, esta se reasigna y se copia con frecuencia. La reasignación y copia frecuentes son ineficaces y pueden fragmentar la memoria.  
   
- El `nGrowBy` parámetro afecta a la asignación de memoria interna mientras está aumentando la matriz. Su uso nunca afecta al tamaño de matriz devuelto por [GetSize](#getsize) y [GetUpperBound](#getupperbound). Si se utiliza el valor predeterminado, MFC asigna memoria de forma que se calcula para evitar la fragmentación de memoria y optimizar la eficacia de la mayoría de los casos.  
+ El *nGrowBy* parámetro afecta a la asignación de memoria interna mientras está aumentando la matriz. Su uso nunca afecta al tamaño de matriz devuelto por [GetSize](#getsize) y [GetUpperBound](#getupperbound). Si se utiliza el valor predeterminado, MFC asigna memoria de forma que se calcula para evitar la fragmentación de memoria y optimizar la eficacia de la mayoría de los casos.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [GetData](#getdata).  

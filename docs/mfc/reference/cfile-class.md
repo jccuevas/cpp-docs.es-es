@@ -1,7 +1,7 @@
 ---
 title: CFile (clase) | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -70,11 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4086b25fe675aaab1b484f21ec7e22e5603781
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0b1effa59dcbada04d6cb363345a69025fcfdbb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957506"
 ---
 # <a name="cfile-class"></a>CFile (clase)
 La clase base para las clases de archivo de MFC (Microsoft Foundation Classes).  
@@ -169,9 +170,9 @@ virtual void Abort();
 ### <a name="remarks"></a>Comentarios  
  Si no ha cerrado el archivo antes de destruir el objeto, el destructor cierra automáticamente.  
   
- Cuando el control de excepciones, `CFile::Abort` difiere de `CFile::Close` en dos aspectos importantes. En primer lugar, el **anular** función no iniciará una excepción cuando se produzcan errores porque se omiten los errores por **anular**. Segundo, **anular** no **ASSERT** si el archivo no se abrió o se ha cerrado previamente.  
+ Cuando el control de excepciones, `CFile::Abort` difiere de `CFile::Close` en dos aspectos importantes. En primer lugar, el `Abort` función no iniciará una excepción cuando se produzcan errores porque se omiten los errores por `Abort`. Segundo, `Abort` no **ASSERT** si el archivo no se abrió o se ha cerrado previamente.  
   
- Si ha usado **nueva** para asignar la `CFile` objeto en el montón, debe eliminarlo después de cerrar el archivo. **Anular** establece `m_hFile` a `CFile::hFileNull`.  
+ Si ha usado **nueva** para asignar la `CFile` objeto en el montón, debe eliminarlo después de cerrar el archivo. `Abort` establece `m_hFile` a `CFile::hFileNull`.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
@@ -197,20 +198,20 @@ CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hFile`  
+ *hFile*  
  Identificador de un archivo que se va a adjuntar al objeto `CFile`.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Ruta completa o relativa de un archivo que se va a adjuntar al objeto `CFile`.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Combinación bit a bit (OR) de las opciones de acceso de archivo relativas al archivo especificado. Consulte la sección Comentarios para ver las opciones posibles.  
   
- `pTM`  
+ *pTM*  
  Puntero al objeto CAtlTransactionManager  
   
 ### <a name="remarks"></a>Comentarios  
- En las cinco tablas siguientes se enumeran las opciones posibles relativas al parámetro `nOpenFlags`.  
+ Las cinco tablas siguientes enumeran las opciones posibles para la *nOpenFlags* parámetro.  
   
  Elija solo una de las siguientes opciones de modo de acceso de archivo. El modo de acceso de archivo predeterminado es `CFile::modeRead`, que es de solo lectura.  
   
@@ -241,7 +242,7 @@ CAtlTransactionManager* pTM);
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|`CFile::modeCreate`|Crea un nuevo archivo si no existe ningún archivo.; Si el archivo ya existe, [CFileException](../../mfc/reference/cfileexception-class.md) se genera.|  
+|`CFile::modeCreate`|Crea un nuevo archivo si no existe ningún archivo. Si el archivo ya existe, se sobrescribe y se establecen inicialmente a longitud cero.|  
 |`CFile::modeNoTruncate`|Crea un archivo si no existe uno; si, por el contrario, hay un archivo, se adjunta al objeto `CFile`.|  
   
  Elija de entre las siguientes opciones de almacenamiento en caché según la descripción. El sistema usa de forma predeterminada un esquema de almacenamiento en caché de propósito general que no está disponible como opción.  
@@ -282,7 +283,7 @@ virtual void Close();
 ### <a name="remarks"></a>Comentarios  
  Si no ha cerrado el archivo antes de destruir el objeto, el destructor cierra automáticamente.  
   
- Si ha usado **nueva** para asignar la `CFile` objeto en el montón, debe eliminarlo después de cerrar el archivo. **Cerrar** establece `m_hFile` a `CFile::hFileNull`.  
+ Si ha usado **nueva** para asignar la `CFile` objeto en el montón, debe eliminarlo después de cerrar el archivo. `Close` establece `m_hFile` a `CFile::hFileNull`.  
   
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CFile::CFile](#cfile).  
@@ -408,7 +409,7 @@ static BOOL PASCAL GetStatus(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rStatus`  
+ *rStatus*  
  Una referencia a un proporcionados por el usuario **CFileStatus** estructura que va a recibir la información de estado. El **CFileStatus** estructura tiene los siguientes campos:  
   
 - **CTime m_ctime** la fecha y hora en que se creó el archivo.  
@@ -423,10 +424,10 @@ static BOOL PASCAL GetStatus(
   
 - **Char m_szFullName [_MAX_PATH]** el nombre de archivo absoluta en el juego de caracteres de Windows.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Es decir, una cadena en el carácter de Windows establece la ruta de acceso para el archivo que desee. La ruta de acceso puede ser absoluta o relativa, o puede contener un nombre de ruta de acceso de red.  
   
- `pTM`  
+ *pTM*  
  Puntero al objeto CAtlTransactionManager  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -476,10 +477,10 @@ virtual void LockRange(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwPos`  
+ *dwPos*  
  Desplazamiento de bytes del inicio del intervalo de bytes a bloquear.  
   
- `dwCount`  
+ *dwCount*  
  El número de bytes en el intervalo que se va a bloquear.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -515,7 +516,7 @@ CAtlTransactionManager* m_pTM;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="open"></a>  CFile::Open  
- Sobrecargado. **Abra** está diseñado para su uso con el valor predeterminado `CFile` constructor.  
+ Sobrecargado. `Open` está diseñado para su uso con el valor predeterminado `CFile` constructor.  
   
 ```  
 virtual BOOL Open(
@@ -532,27 +533,27 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFileName`  
+ *lpszFileName*  
  Una cadena que es la ruta de acceso al archivo deseado. La ruta de acceso puede ser relativa, absoluto o un nombre de red (UNC).  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  A **UINT** que define el modo de acceso y uso compartido del archivo. Especifica la acción que se realizará al abrir el archivo. Puede combinar opciones mediante el uso de la operación bit a bit OR ( **&#124;** ) operador. Permiso de acceso uno a y opción de un recurso compartido son necesarios; el **modeCreate** y **modeNoInherit** modos son opcionales. Consulte la [CFile](#cfile) constructor para obtener una lista de opciones de modo.  
   
- `pError`  
+ *pError*  
  Un puntero a un objeto de excepción de archivo existente que va a recibir el estado de una operación con errores.  
   
- `pTM`  
+ *pTM*  
  Puntero al objeto CAtlTransactionManager  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la apertura se realizó correctamente; en caso contrario es 0. El `pError` parámetro solo es significativo si se devuelve 0.  
+ Es distinto de cero si la apertura se realizó correctamente; en caso contrario es 0. El *pError* parámetro solo es significativo si se devuelve 0.  
   
 ### <a name="remarks"></a>Comentarios  
  Las dos funciones forman un método "seguro" para abrir un archivo donde un error es una condición normal, se esperaba.  
   
- Mientras el `CFile` constructor iniciará una excepción en una condición de error, **abiertos** devolverá **FALSE** para condiciones de error. **Abra** aún puede inicializar un [CFileException](../../mfc/reference/cfileexception-class.md) objeto para describir el error, sin embargo. Si no proporciona el `pError` parámetro, o si se pasa **NULL** para `pError`, **abiertos** devolverá **FALSE** y no producen un `CFileException`. Si se pasa un puntero a un archivo `CFileException`, y **abiertos** encuentra un error, la función rellena con información que describe dicho error. Sesión ni mayúsculas **abiertos** producirá una excepción.  
+ Mientras el `CFile` constructor iniciará una excepción en una condición de error, `Open` devolverá **FALSE** para condiciones de error. `Open` aún puede inicializar un [CFileException](../../mfc/reference/cfileexception-class.md) objeto para describir el error, sin embargo. Si no proporciona el *pError* parámetro, o si se pasa **NULL** para *pError*, `Open` devolverá **FALSE** y no producen un `CFileException`. Si se pasa un puntero a un archivo `CFileException`, y `Open` encuentra un error, la función rellena con información que describe dicho error. Sesión ni mayúsculas `Open` producirá una excepción.  
   
- En la tabla siguiente se describe los posibles resultados de **abiertos**.  
+ En la tabla siguiente se describe los posibles resultados de `Open`.  
   
 |`pError`|Se encontró un error|Valor devuelto|CFileException contenido|  
 |--------------|------------------------|------------------|----------------------------|  
@@ -583,14 +584,14 @@ virtual UINT Read(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpBuf`  
+ *lpBuf*  
  Puntero al búfer proporcionado por el usuario que va a recibir los datos leídos desde el archivo.  
   
- `nCount`  
+ *nCount*  
  El número máximo de bytes que se leen desde el archivo. Para los archivos de modo de texto, los pares de avance de línea de retorno de carro se cuentan como caracteres individuales.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Número de bytes que se transfieren al búfer. Tenga en cuenta que para todos los `CFile` clases, el valor devuelto puede ser menor que `nCount` si se alcanzó el final del archivo.  
+ Número de bytes que se transfieren al búfer. Tenga en cuenta que para todos los `CFile` clases, el valor devuelto puede ser menor que *nCount* si se alcanzó el final del archivo.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]  
@@ -607,10 +608,10 @@ static void PASCAL Remove(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFileName`  
+ *lpszFileName*  
  Una cadena que es la ruta de acceso al archivo deseado. La ruta de acceso puede ser absoluta o relativa y puede contener un nombre de red.  
   
- `pTM`  
+ *pTM*  
  Puntero al objeto CAtlTransactionManager  
   
 ### <a name="remarks"></a>Comentarios  
@@ -632,13 +633,13 @@ static void PASCAL Rename(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszOldName`  
+ *lpszOldName*  
  La ruta de acceso anterior.  
   
- `lpszNewName`  
+ *lpszNewName*  
  La nueva ruta de acceso.  
   
- `pTM`  
+ *pTM*  
  Puntero al objeto CAtlTransactionManager  
   
 ### <a name="remarks"></a>Comentarios  
@@ -657,17 +658,17 @@ UINT nFrom);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lOff`  
+ *lOff*  
  Número de bytes que se va a mover el puntero de archivo. Los valores positivos mueven el puntero del archivo hacia el final del archivo; los valores negativos mueven el puntero de archivo hacia el principio del archivo.  
   
- `nFrom`  
+ *nFrom*  
  Posición para buscar desde. Vea la sección Comentarios para los valores posibles.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La posición del puntero del archivo si el método se realizó correctamente; en caso contrario, el valor devuelto es indefinido y un puntero a un `CFileException` se produce la excepción.  
   
 ### <a name="remarks"></a>Comentarios  
- En la tabla siguiente se enumera los valores posibles para el `nFrom` parámetro.  
+ En la tabla siguiente se enumera los valores posibles para la *nFrom* parámetro.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -721,7 +722,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszNewName`  
+ *lpszNewName*  
  Puntero a una cadena que especifica la ruta de acceso nuevo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -740,7 +741,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwNewLen`  
+ *dwNewLen*  
  Longitud deseada del archivo en bytes. Este valor puede ser mayor o menor que la longitud actual del archivo. El archivo se ampliada o se trunca según corresponda.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -762,13 +763,13 @@ static void PASCAL SetStatus(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszFileName`  
+ *lpszFileName*  
  Una cadena que es la ruta de acceso al archivo deseado. La ruta de acceso puede ser absoluta o relativa y puede contener un nombre de red.  
   
  *status*  
  El búfer que contiene la nueva información de estado. Llame a la **GetStatus** función de miembro para rellenar previamente la **CFileStatus** con los valores actuales de la estructura, a continuación, realizar cambios según sea necesario. Si un valor es 0, no se actualiza el elemento de estado correspondiente. Consulte la [GetStatus](#getstatus) función de miembro para obtener una descripción de la **CFileStatus** estructura.  
   
- `pTM`  
+ *pTM*  
  Puntero al objeto CAtlTransactionManager  
   
 ### <a name="remarks"></a>Comentarios  
@@ -789,10 +790,10 @@ virtual void UnlockRange(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwPos`  
+ *dwPos*  
  Desplazamiento de bytes del inicio del intervalo de bytes a desbloquear.  
   
- `dwCount`  
+ *dwCount*  
  El número de bytes en el intervalo que se va a desbloquear.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -814,10 +815,10 @@ virtual void Write(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpBuf`  
+ *lpBuf*  
  Un puntero al búfer proporcionado por el usuario que contiene los datos se escriban en el archivo.  
   
- `nCount`  
+ *nCount*  
  El número de bytes que se transfieren desde el búfer. Para los archivos de modo de texto, los pares de avance de línea de retorno de carro se cuentan como caracteres individuales.  
   
 ### <a name="remarks"></a>Comentarios  

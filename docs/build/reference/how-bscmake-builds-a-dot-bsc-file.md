@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373493"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Cómo compila BSCMAKE un archivo .Bsc
 BSCMAKE genera o vuelve a generar un archivo .bsc de la manera más eficaz que puede. Para evitar posibles problemas, es importante comprender el proceso de compilación.  

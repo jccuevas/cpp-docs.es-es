@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862645"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Extensiones de componentes para plataformas de tiempo de ejecución
 Visual C++ proporciona extensiones de lenguaje para ayudarle a programar en plataformas del runtime. Mediante el uso de C++ / CX, puede programar aplicaciones de plataforma Universal de Windows y componentes que se compilan en código nativo. Aunque puede crear aplicaciones de la plataforma Universal de Windows programando directamente en las interfaces COM de Windows en tiempo de ejecución, mediante el uso de C++ / CX, puede trabajar con constructores, excepciones y otras expresiones de programación moderna de C++. Para habilitar la programación de C++ en un entorno de ejecución administrado en la plataforma. NET, puede utilizar C++ / CLI.  

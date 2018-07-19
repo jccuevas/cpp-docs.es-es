@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873152"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Crear un pincel personalizado (Editor de imágenes para iconos)
 Un pincel personalizado es una parte rectangular de una imagen que recoja y usar como uno de los pinceles listos para usar el editor de imágenes. Todas las operaciones que puede realizar en una selección, puede realizar en un pincel personalizado también.  

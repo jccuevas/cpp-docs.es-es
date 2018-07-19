@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367984"
 ---
 # <a name="intrinsics-and-inline-assembly"></a>Ensamblado intrínseco y en línea
 Una de las restricciones para la [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] compilador es que no se admite la ensamblador en línea. Esto significa que las funciones que no se puede escribir en C o C++ tendrán que escribirse como subrutinas o como funciones intrínsecas compatibles con el compilador. Algunas funciones les afecta el rendimiento mientras que otros no lo están. Funciones sensibles al rendimiento deben implementarse como funciones intrínsecas.  

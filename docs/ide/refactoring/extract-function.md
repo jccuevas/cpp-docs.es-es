@@ -1,5 +1,5 @@
 ---
-title: Función extraer | Documentos de Microsoft
+title: Extraer función | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -11,17 +11,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7fc4d48c972bca9352f326085574e4cf4df83aea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33333162"
 ---
-# <a name="extract-function"></a>Función extraer
-**¿Qué:** le permite convertir un fragmento de código en su propia función.
+# <a name="extract-function"></a>Extraer función
+**Qué:** permite convertir un fragmento de código en su propia función.
 
-**Cuándo:** tiene un fragmento de código existente en alguna función que debe llamarse desde otra función.  
+**Cuándo:** tiene un fragmento de código existente en alguna función que se debe llamar desde otra.  
 
-**Por qué:** Podría copiar y pegar ese código, pero esto provocaría una duplicación.  Una solución mejor es refactorizar ese fragmento a su propia función que se puede llamar libremente por cualquier otra función.
+**Por qué:** Podría copiar y pegar ese código, pero esto provocaría una duplicación.  Una mejor solución consiste en refactorizar ese fragmento en su propia función a la que cualquier otra puede llamar libremente.
 
 **Cómo**:
 
@@ -32,16 +33,16 @@ ms.lasthandoff: 05/04/2018
 1. A continuación, realice alguno de los siguientes procedimientos:
    * **Teclado**
      * Presione **CTRL+R** y, a continuación, **CTRL+M**.  (Tenga en cuenta que su método abreviado de teclado puede ser diferente en función del perfil que haya seleccionado).
-     * Presione **Ctrl +.** Para activar el **acciones rápidas y refactorizaciones** menú y seleccione **función extraer (Experimental)** en el menú contextual.
+     * Presione **Ctrl +.** para activar el menú **Acciones rápidas y refactorizaciones** y seleccione **Extraer función (experimental)** en el menú contextual.
    * **Mouse**
-     * Seleccione **Editar > refactorizar > Extraer función (Experimental)**.
-     * Haga clic en el código, seleccione la **acciones rápidas y refactorizaciones** menú y seleccione **función extraer (Experimental)** en el menú contextual.
-     * Haga clic en el ![bombilla](images/bulb.png) icono que aparece en el margen izquierdo y seleccione **función extraer (Experimental)** en el menú contextual.
+     * Seleccione **Editar > Refactorizar > Extraer función (Experimental)**.
+     * Haga clic con el botón derecho en el código, seleccione el menú **Acciones rápidas y refactorizaciones** y seleccione **Extraer función (experimental)** en el menú contextual.
+     * Haga clic en el icono ![Bombilla](images/bulb.png) que aparece en el margen izquierdo y seleccione **Extraer función (experimental)** en el menú contextual.
 
-1. En el **extraer función o un método (Experimental)** ventana, escriba el nuevo nombre de función, seleccione dónde desea que el código va a colocar y haga clic en el **Aceptar** botón.  
+1. En la ventana **Extraer función/método (experimental)**, escriba el nombre de función nuevo, seleccione dónde quiere colocar el código y haga clic en el botón **Aceptar**.  
 
-   ![Extraer (función)](images/extractfunction_dialog.png)
+   ![Función Extraer función](images/extractfunction_dialog.png)
 
-1. Se creará la nueva función que ha especificado, un prototipo de función en el archivo de encabezado correspondiente, y el código original se cambiarán para llamar a esa función.
+1. La función nueva se creará donde haya especificado, un prototipo de función en el archivo de encabezado correspondiente, y el código original se cambiará para llamar a esa función.
 
    ![Extraer el resultado de la función](images/extractfunction_result.png)

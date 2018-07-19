@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f3c5f7cb354bb4889c528fc55459eabcb032709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b00e7e1bc42317b4028264a49006b40de4fbb507
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078887"
 ---
 # <a name="csemaphore-class"></a>CSemaphore (clase)
 Un objeto de clase `CSemaphore` representa un "semáforo", un objeto de sincronización que permite un número limitado de subprocesos de uno o varios procesos tengan acceso a mantener un recuento del número de subprocesos que acceden actualmente a un recurso especificado.  
@@ -42,17 +43,17 @@ class CSemaphore : public CSyncObject
 |[CSemaphore::CSemaphore](#csemaphore)|Construye un objeto `CSemaphore`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Semáforos son útiles para controlar el acceso a un recurso compartido al que sólo puede admitir un número limitado de usuarios. El recuento actual de la `CSemaphore` objeto es el número de usuarios adicionales permitidos. Cuando el recuento llega a cero, todos los intentos de utilizar el recurso controlado por la **CSemaphore** objeto se insertará en una cola del sistema y espere hasta que finalice cualquier tiempo de espera o el número está por encima de 0. El número máximo de usuarios que pueden tener acceso al recurso controlado al mismo tiempo que se especifica durante la construcción de la `CSemaphore` objeto.  
+ Semáforos son útiles para controlar el acceso a un recurso compartido al que sólo puede admitir un número limitado de usuarios. El recuento actual de la `CSemaphore` objeto es el número de usuarios adicionales permitidos. Cuando el recuento llega a cero, todos los intentos de utilizar el recurso controlado por la `CSemaphore` objeto se insertará en una cola del sistema y espere hasta que finalice cualquier tiempo de espera o el número está por encima de 0. El número máximo de usuarios que pueden tener acceso al recurso controlado al mismo tiempo que se especifica durante la construcción de la `CSemaphore` objeto.  
   
- Para usar un **CSemaphore** objeto, construya el `CSemaphore` objeto cuando sea necesario. Especifique el nombre del semáforo que se va a esperar y que la aplicación inicialmente debe poseer. A continuación, puede tener acceso el semáforo cuando se devuelve el constructor. Llame a [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) cuando haya terminado obtener acceso al recurso controlado.  
+ Para usar un `CSemaphore` objeto, construya el `CSemaphore` objeto cuando sea necesario. Especifique el nombre del semáforo que se va a esperar y que la aplicación inicialmente debe poseer. A continuación, puede tener acceso el semáforo cuando se devuelve el constructor. Llame a [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) cuando haya terminado obtener acceso al recurso controlado.  
   
  Un método alternativo para el uso de `CSemaphore` objetos consiste en Agregar una variable de tipo `CSemaphore` como un miembro de datos a la clase que desee controlar. Durante la construcción del objeto controlada, llame al constructor de la `CSemaphore` miembro de datos especifica la inicial de acceso recuento, recuento máximo de acceso y nombre del semáforo (si se va a utilizar en los límites del proceso) y desea atributos de seguridad.  
   
  Para obtener acceso a recursos controlados por `CSemaphore` objetos de esta manera, primero cree una variable de cualquier tipo de [CSingleLock](../../mfc/reference/csinglelock-class.md) o tipo [CMultiLock](../../mfc/reference/cmultilock-class.md) en función de miembro de acceso de los recursos. A continuación, llamar al objeto de bloqueo `Lock` función miembro (por ejemplo, [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). En este momento, el subproceso se obtienen acceso al recurso, espere a que el recurso se libera y obtener acceso o esperar a que el recurso se libera y el tiempo de espera, no puede obtener acceso al recurso. En cualquier caso, el recurso se accedió de una manera segura para subprocesos. Para liberar los recursos, utilice el objeto de bloqueo `Unlock` función miembro (por ejemplo, [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), o permitir que el objeto de bloqueo quede fuera del ámbito.  
   
- Como alternativa, puede crear un **CSemaphore** objeto independiente y acceso a él explícitamente antes de intentar tener acceso al recurso controlado. Este método, al mejor a alguien leer el código fuente, es más propenso a errores.  
+ Como alternativa, puede crear un `CSemaphore` objeto independiente y acceso a él explícitamente antes de intentar tener acceso al recurso controlado. Este método, al mejor a alguien leer el código fuente, es más propenso a errores.  
   
- Para obtener más información sobre cómo usar **CSemaphore** objetos, vea el artículo [subprocesamiento múltiple: cómo usar las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Para obtener más información sobre cómo usar `CSemaphore` objetos, vea el artículo [subprocesamiento múltiple: cómo usar las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -77,12 +78,12 @@ CSemaphore(
   
 ### <a name="parameters"></a>Parámetros  
  *lInitialCount*  
- El contador de uso inicial para el semáforo. Debe ser mayor o igual a 0 y menor o igual que `lMaxCount`.  
+ El contador de uso inicial para el semáforo. Debe ser mayor o igual a 0 y menor o igual que *lMaxCount*.  
   
- `lMaxCount`  
+ *lMaxCount*  
  El contador de uso máximo para el semáforo. Debe ser mayor que 0.  
   
- `pstrName`  
+ *pstrName*  
  El nombre del semáforo. Debe especificarse si el semáforo se accederá a través de límites de proceso. Si `NULL`, el objeto será sin nombre. Si el nombre coincide con un semáforo existente, el constructor crea un nuevo `CSemaphore` objeto que hace referencia el semáforo de ese nombre. Si el nombre coincide con un objeto de sincronización existente que no es un semáforo, se producirá un error en la construcción.  
   
  *lpsaAttributes*  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366788"
 ---
 # <a name="comments-in-a-makefile"></a>Comentarios en un archivo MAKE
 Preceden a un comentario con un signo de número (#). NMAKE omite el texto desde el signo de número hasta el siguiente carácter de nueva línea. Ejemplos:  

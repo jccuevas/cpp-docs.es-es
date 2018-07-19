@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094769"
 ---
 # <a name="snapshot"></a>Depurador de
 Una instantánea es un conjunto de registros que refleja una vista estática de los datos tal como se encontraban en el momento en que se creó la instantánea. Al abrir la instantánea y mover a todos los registros, el conjunto de registros que contiene y sus valores no cambian hasta que se vuelve a generar la instantánea mediante una llamada a **Requery**.  

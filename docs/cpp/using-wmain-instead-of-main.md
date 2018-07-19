@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422208"
 ---
 # <a name="using-wmain-instead-of-main"></a>Usar wmain en vez de main
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  

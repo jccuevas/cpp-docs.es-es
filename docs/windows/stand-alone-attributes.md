@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890441"
 ---
 # <a name="stand-alone-attributes"></a>Atributos independientes
 Un atributo independiente no funciona en una palabra clave de C++, pero es más parecido a una línea de código. Las instrucciones de atributo independiente requieren un punto y coma al final de la línea.  

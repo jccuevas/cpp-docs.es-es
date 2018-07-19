@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860312"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>Tipos de parámetros de atributo (Extensiones de componentes de C++)
 El compilador deben conocer valores que se pasan a los atributos en tiempo de compilación.  Parámetros de atributo pueden ser de los siguientes tipos:  

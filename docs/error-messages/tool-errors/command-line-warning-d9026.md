@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299843"
 ---
 # <a name="command-line-warning-d9026"></a>Advertencia de la línea de comandos D9026
 opciones se aplican a toda la línea de comandos  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423527"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inicialización uniforme y constructores de delegación
 En C++ moderno, puede usar *la inicialización de llave* para cualquier tipo, sin el signo igual. Además, se puede utilizar la delegación de constructores para simplificar el código cuando hay varios constructores que realizan un trabajo similar.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365046"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de informes de errores y depuración
 Estas macros proporcionan funciones de seguimiento y depuración útiles.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355257"
 ---
 # <a name="debugging-and-exceptions-classes"></a>Clases de excepciones y depuración
 Estas clases proporcionan compatibilidad para control de excepciones y depuración.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383875"
 ---
 # <a name="technical-notes-by-category"></a>Notas técnicas por categoría
 Notas técnicas se dividen en las siguientes categorías. Para obtener una lista numérica de las notas técnicas, consulte [notas técnicas por número](../mfc/technical-notes-by-number.md).  

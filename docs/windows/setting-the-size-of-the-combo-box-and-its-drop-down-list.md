@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889350"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Establecer el tamaño de un cuadro combinado y de su lista desplegable
 Puede cambiar el tamaño de un cuadro combinado cuando se agrega al cuadro de diálogo. También puede especificar el tamaño del cuadro de lista desplegable.  

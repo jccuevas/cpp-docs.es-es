@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690031"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry (Clase)
 El objeto `single_link_registry` es un `network_link_registry` que administra un solo bloque de origen o bloque de destino.  

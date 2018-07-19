@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344518"
 ---
 # <a name="creating-the-header-control"></a>Crear el control de encabezado
 El control de encabezado no está disponible directamente en el editor de cuadro de diálogo (aunque es posible agregar un control de lista, que incluye un control de encabezado).  

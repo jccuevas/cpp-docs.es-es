@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe943bcc0a1e1a027e432911bd2ad722fc7c7c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
+ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070082"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -71,7 +72,7 @@ El **feclearexcept** función intenta borrar flotante punto marcas de estado de 
 |FE_INVALID|Se ha producido un error de dominio en una operación de punto flotante anterior.|
 |FE_OVERFLOW|Se ha producido un error de intervalo; el resultado de una operación de punto flotante anterior era demasiado grande para representarse.|
 |FE_UNDERFLOW|El resultado de una operación de punto flotante anterior era demasiado pequeño para representarlo con completa precisión; se ha creado un valor no normalizado.|
-|FE_ALLEXCEPT|Operación OR bit a bit de todas las excepciones de punto flotante admitidas.|
+|FE_ALL_EXCEPT|Operación OR bit a bit de todas las excepciones de punto flotante admitidas.|
 
 El *excepts* argumento puede ser cero o la operación OR bit a bit de uno o más de las macros de excepción admitidos. El resultado de cualquier otro valor de argumento es indefinido.
 

@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042061"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Clase CMFCRibbonCheckBox
 La clase `CMFCRibbonCheckBox` implementa una casilla que se puede agregar a un menú emergente, a la barra de herramientas de acceso rápido o al panel de cinta de opciones.  
@@ -76,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-`nID` es el identificador de comando de la casilla y `lpszText` la etiqueta de texto de la casilla.  
+donde *nID* es el identificador de comando de casilla de verificación y *lpszText* es la etiqueta de texto de la casilla de verificación.  
   
  Puede agregar una casilla a un panel de cinta de opciones mediante [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
@@ -102,10 +103,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nID`  
+ [in] *nID*  
  Especifica el identificador del comando.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Especifica la etiqueta de texto.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -124,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a la `CDC` asociado con la casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -141,7 +142,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a la `CDC` asociados con esta casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -158,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a la `CDC` objeto asociado con esta casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -187,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a la `CDC` en el que se va a dibujar la casilla de verificación.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -200,10 +201,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `CDC*`  
+ [in] *CDC**  
  Puntero a la `CDC` asociado con la casilla de verificación.  
   
- [in] `CRect`  
+ [in] *CRect*  
  Un `CRect` objeto que especifica el rectángulo en el que se va a dibujar la imagen del menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -226,22 +227,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero al contexto de dispositivo en el que se va a dibujar la casilla de verificación.  
   
- [in] `strText`  
+ [in] *strText*  
  El texto para mostrar.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  La distancia, en píxeles, del lado izquierdo del cuadro de lista para el texto de presentación.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo de presentación de la casilla.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  `TRUE` Si se selecciona la casilla de verificación, o `FALSE` si no es así.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  `TRUE` Si la casilla de verificación está resaltado, o `FALSE` si no es así.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -256,10 +257,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParent`  
+ *pParent*  
  La ventana primaria de la casilla de verificación.  
   
- `data`  
+ *data*  
  Los datos de accesibilidad de la casilla.  
   
 ### <a name="return-value"></a>Valor devuelto  

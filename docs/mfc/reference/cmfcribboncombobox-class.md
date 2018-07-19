@@ -50,11 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040759"
 ---
 # <a name="cmfcribboncombobox-class"></a>Clase CMFCRibbonComboBox
 La `CMFCRibbonComboBox` clase implementa un control de cuadro combinado que se puede agregar a una barra de cinta de opciones, un panel de cinta o un menú emergente de la cinta de opciones.  
@@ -126,10 +127,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  La cadena del elemento que se va a agregar.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Los datos asociados con el elemento que se va a agregar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -152,19 +153,19 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nID`  
+ [in] *nID*  
  El identificador del cuadro combinado.  
   
- [in] `bHasEditBox`  
+ [in] *bHasEditBox*  
  `TRUE` Si desea que un cuadro de edición dentro del control. `FALSE` en caso contrario.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Ancho del cuadro combinado en píxeles; o -1 para el ancho predeterminado.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  La etiqueta de pantalla del cuadro combinado.  
   
- [in] `nImage`  
+ [in] *nImage*  
  El índice de imagen pequeña del cuadro combinado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -181,13 +182,13 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iIndex`  
+ [in] *iÍndice*  
  Índice de base cero del elemento que se va a eliminar.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Los datos asociados con el elemento que se va a eliminar.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  La cadena del elemento que se va a eliminar. Si hay varios elementos con la misma cadena, se elimina el primer elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -203,7 +204,7 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  `TRUE` Para habilitar el cambio de tamaño; `FALSE` para deshabilitar el cambio de tamaño.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -217,7 +218,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszText`  
+ [in] *lpszText*  
  La cadena de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -267,7 +268,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo del cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -284,7 +285,7 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iIndex`  
+ [in] *iÍndice*  
  Índice de base cero de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -300,7 +301,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iIndex`  
+ [in] *iÍndice*  
  Índice de base cero de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -339,7 +340,7 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nItem`  
+ [in] *nItem*  
  El índice del elemento seleccionado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -365,13 +366,13 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iIndex`  
+ [in] *iÍndice*  
  Índice de base cero de un elemento en el cuadro de lista.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Los datos asociados a un elemento en el cuadro de lista.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  La cadena de un elemento en el cuadro de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -387,7 +388,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nHeight`  
+ [in] *nHeight*  
  El alto, en píxeles, del cuadro de lista.  
   
 ### <a name="remarks"></a>Comentarios  

@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8658868c36008c5ed6b9db9747eb63ae37e4d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951513"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Asignar identificadores de Windows a objetos
 Esta nota describe la MFC rutinas que admiten la asignación de Windows objeto identificadores de objetos de C++.  
@@ -55,15 +56,15 @@ Esta nota describe la MFC rutinas que admiten la asignación de Windows objeto i
   
 -   SOCKET ([CSocket](../mfc/reference/csocket-class.md))  
   
- Especifica un identificador a cualquiera de estos objetos, puede encontrar el objeto MFC que encapsula el identificador llamando al método estático `FromHandle`. Por ejemplo, dado un HWND llama `hWnd`, la línea siguiente devolverá un puntero a la `CWnd` que encapsula el `hWnd`:  
+ Especifica un identificador a cualquiera de estos objetos, puede encontrar el objeto MFC que encapsula el identificador llamando al método estático `FromHandle`. Por ejemplo, dado un HWND llama *hWnd*, la línea siguiente devolverá un puntero a la `CWnd` que encapsula el *hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- Si `hWnd` no tiene un objeto de contenedor específico, un archivo temporal `CWnd` se crea para ajustar `hWnd`. Esto permite obtener un objeto de C++ válido de cualquiera de ellos.  
+ Si *hWnd* no tiene un objeto de contenedor específico, un archivo temporal `CWnd` se crea para ajustar *hWnd*. Esto permite obtener un objeto de C++ válido de cualquiera de ellos.  
   
- Una vez que un objeto de contenedor, puede recuperar su identificador de una variable de miembro público de la clase contenedora. En el caso de un `CWnd`, `m_hWnd` contiene el HWND para ese objeto.  
+ Una vez que un objeto de contenedor, puede recuperar su identificador de una variable de miembro público de la clase contenedora. En el caso de un `CWnd`, *m_hWnd* contiene el HWND para ese objeto.  
   
 ## <a name="attaching-handles-to-mfc-objects"></a>Asociar identificadores a objetos MFC  
  Proporciona un objeto de contenedor de identificador recién creado y un identificador a un objeto de Windows, puede asociar las dos mediante una llamada a la `Attach` funcionando como en este ejemplo:  
@@ -73,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Esto crea una entrada en la asociación de asignación permanente `myWnd` y `hWnd`. Al llamar a `CWnd::FromHandle(hWnd)` devolverá ahora de un puntero a `myWnd`. Cuando `myWnd` es eliminado, el destructor se destruirá automáticamente `hWnd` mediante una llamada a las ventanas [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) (función). Si no se desea esto, `hWnd` se debe desasociar de `myWnd` antes de `myWnd` se destruye (normalmente al salir del ámbito en el que `myWnd` se ha definido). El `Detach` método hace esto.  
+ Esto crea una entrada en la asociación de asignación permanente *myWnd* y *hWnd*. Al llamar a `CWnd::FromHandle(hWnd)` devolverá ahora de un puntero a *myWnd*. Cuando *myWnd* es eliminado, el destructor se destruirá automáticamente *hWnd* mediante una llamada a las ventanas [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) (función). Si no se desea esto, *hWnd* se debe desasociar de *myWnd* antes de *myWnd* se destruye (normalmente al salir del ámbito en el que *myWnd*se ha definido). El `Detach` método hace esto.  
   
 ```  
 myWnd.Detach();

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368049"
 ---
 # <a name="inferred-dependents-and-rules"></a>Dependientes inferidos y reglas
 NMAKE supone un dependiente inferido para un destino si existe una regla de inferencia aplicable. Una regla se aplica si:  

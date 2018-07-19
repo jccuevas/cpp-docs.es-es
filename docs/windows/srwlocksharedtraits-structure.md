@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889651"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits (estructura)
 Describe las características comunes de la clase SRWLock en modo de bloqueo compartido.  

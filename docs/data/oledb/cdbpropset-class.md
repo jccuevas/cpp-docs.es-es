@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096332"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet (Clase)
 Hereda de la **DBPROPSET** estructurar y agrega un constructor que inicializa los campos clave, así como la `AddProperty` acceder a método.  

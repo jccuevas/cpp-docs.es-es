@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366034"
 ---
 # <a name="catlservicemodulet-class"></a>Clase de CAtlServiceModuleT
 Esta clase implementa un servicio.  

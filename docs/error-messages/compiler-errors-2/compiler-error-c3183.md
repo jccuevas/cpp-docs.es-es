@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252476"
 ---
 # <a name="compiler-error-c3183"></a>Error C3183 de Error de compilador
 no se puede definir class, struct o union sin nombre dentro del tipo administrado o WinRT 'type'  

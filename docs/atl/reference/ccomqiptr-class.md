@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359184"
 ---
 # <a name="ccomqiptr-class"></a>Clase CComQIPtr
 Una clase de puntero inteligente para administrar los punteros de interfaz COM.  

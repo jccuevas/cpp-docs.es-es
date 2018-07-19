@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859844"
 ---
 # <a name="asyncbaseputid-method"></a>AsyncBase::put_Id (Método)
 Establece el identificador de la operación asincrónica.  

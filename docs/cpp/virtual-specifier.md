@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421265"
 ---
 # <a name="virtual-specifier"></a>virtual (Especificador)
 El [virtuales](../cpp/virtual-cpp.md) palabra clave puede aplicarse solo a funciones miembro de clase no estática. Eso significa que el enlace de las llamadas a la función se aplazará hasta el momento de la ejecución. Para obtener más información, consulte [funciones virtuales](../cpp/virtual-functions.md).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858999"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Al agregar controles a un cuadro de diálogo, éste deja de funcionar
 Después de agregar un control común o un control rich edit a un cuadro de diálogo, no aparecerá cuando se prueba el cuadro de diálogo o el cuadro de diálogo no aparecerá.  

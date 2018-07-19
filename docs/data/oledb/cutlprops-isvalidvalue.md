@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101970"
 ---
 # <a name="cutlpropsisvalidvalue"></a>CUtlProps::IsValidValue
 Se utiliza para validar un valor antes de establecer una propiedad.  

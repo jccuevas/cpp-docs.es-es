@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363666"
 ---
 # <a name="composite-control-macros"></a>Macros de controles compuestos
 Estas macros definen mapas de receptor de eventos y entradas.  

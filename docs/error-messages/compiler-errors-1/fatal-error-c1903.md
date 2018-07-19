@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226152"
 ---
 # <a name="fatal-error-c1903"></a>Error irrecuperable C1903
 no se puede recuperar de errores anteriores; se detiene la compilación  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129104"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>Interoperabilidad con otros lenguajes de .NET (C++/CLI)
 Los temas de esta sección muestran cómo crear ensamblados en Visual C++ que utilicen o proporcionen funcionalidad a ensamblados escritos en C# o Visual Basic.  

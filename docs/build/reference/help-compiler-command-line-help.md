@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371390"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (Ayuda de la línea de comandos del compilador)
 Muestra una lista de opciones del compilador en la salida estándar.  

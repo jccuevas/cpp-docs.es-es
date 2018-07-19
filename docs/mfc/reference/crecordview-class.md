@@ -27,11 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3d040f2da622cbfd6d1577729861917a5a03270
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079152"
 ---
 # <a name="crecordview-class"></a>CRecordView (clase)
 Una vista que muestra registros de una base de datos en controles.  
@@ -108,10 +109,10 @@ explicit CRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contiene una cadena terminada en null que es el nombre de un recurso de plantilla de cuadro de diálogo.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contiene el número de identificación de un recurso de plantilla de cuadro de diálogo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -123,7 +124,7 @@ explicit CRecordView(UINT nIDTemplate);
  **CRecordView::OnInitialUpdate** llamadas `UpdateData`, que llama `DoDataExchange`. Esta llamada inicial a `DoDataExchange` conecta `CRecordView` controla (indirectamente) con `CRecordset` campo los miembros de datos creados por ClassWizard. No se puede usar estos miembros de datos hasta después de llamar a la clase base **CFormView::OnInitialUpdate** función miembro.  
   
 > [!NOTE]
->  Si usas ClassWizard, el asistente define un `enum` valor `CRecordView::IDD`, especifica en la declaración de clase y lo utiliza en la lista de inicialización de miembros para el constructor.  
+>  Si usas ClassWizard, el asistente define un **enum** valor `CRecordView::IDD`, especifica en la declaración de clase y lo utiliza en la lista de inicialización de miembros para el constructor.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
@@ -157,7 +158,7 @@ BOOL IsOnLastRecord();
  Esta función es útil para escribir sus propias implementaciones de manera predeterminada en los controladores de actualización de comandos que escribe ClassWizard para admitir una interfaz de usuario para moverse entre los registros.  
   
 > [!CAUTION]
->  El resultado de esta función es confiable, salvo que la vista no puede detectar el final del conjunto de registros hasta que el usuario se desplazó más allá de él. El usuario debe mover más allá del último registro antes de la vista de registros puede indicar que deben deshabilitar los objetos de interfaz de usuario para moverse a la siguiente o el último registro. Si el usuario mueve más allá del último registro y, a continuación, desplaza hasta el último registro (o antes de él), la vista de registros puede realizar un seguimiento de la posición del usuario en el conjunto de registros y deshabilitar correctamente los objetos de la interfaz de usuario. `IsOnLastRecord` También es confiable después de llamar a la función de la implementación **OnRecordLast**, que controla el `ID_RECORD_LAST` comando, o `CRecordset::MoveLast`.  
+>  El resultado de esta función es confiable, salvo que la vista no puede detectar el final del conjunto de registros hasta que el usuario se desplazó más allá de él. El usuario debe mover más allá del último registro antes de la vista de registros puede indicar que deben deshabilitar los objetos de interfaz de usuario para moverse a la siguiente o el último registro. Si el usuario mueve más allá del último registro y, a continuación, desplaza hasta el último registro (o antes de él), la vista de registros puede realizar un seguimiento de la posición del usuario en el conjunto de registros y deshabilitar correctamente los objetos de la interfaz de usuario. `IsOnLastRecord` También es confiable después de llamar a la función de la implementación `OnRecordLast`, que controla el `ID_RECORD_LAST` comando, o `CRecordset::MoveLast`.  
   
 ##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  Devuelve un puntero a la `CRecordset`-derivadas objeto asociado a la vista de registros.  
@@ -170,7 +171,7 @@ virtual CRecordset* OnGetRecordset() = 0;
  Un puntero a un `CRecordset`-objeto derivado si el objeto se creó correctamente; en caso contrario un **NULL** puntero.  
   
 ### <a name="remarks"></a>Comentarios  
- Se debe reemplazar esta función miembro para construir u obtenga un objeto de conjunto de registros y devolver un puntero a ella. Si se declara la clase de vista de registros con ClassWizard, el asistente escribe una invalidación de forma predeterminada para usted. Implementación de predeterminada de ClassWizard devuelve el puntero de conjunto de registros almacenado en la vista de registros, si existe uno. Si no es así, construye un objeto de conjunto de registros del tipo especificado con ClassWizard y llama a su **abrir** miembro de función para abrir la tabla o ejecutar la consulta y, a continuación, devuelve un puntero al objeto.  
+ Se debe reemplazar esta función miembro para construir u obtenga un objeto de conjunto de registros y devolver un puntero a ella. Si se declara la clase de vista de registros con ClassWizard, el asistente escribe una invalidación de forma predeterminada para usted. Implementación de predeterminada de ClassWizard devuelve el puntero de conjunto de registros almacenado en la vista de registros, si existe uno. Si no es así, construye un objeto de conjunto de registros del tipo especificado con ClassWizard y llama a su `Open` miembro de función para abrir la tabla o ejecutar la consulta y, a continuación, devuelve un puntero al objeto.  
   
  Para obtener más información y ejemplos, vea el artículo [vistas de registros: utilizar una vista de registros](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -197,7 +198,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Es distinto de cero si el movimiento se realizó correctamente; en caso contrario es 0 si se denegó la solicitud de movimiento.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada llama adecuado **mover** función miembro de la `CRecordset` objeto asociado a la vista de registros.  
+ La implementación predeterminada llama adecuado `Move` función miembro de la `CRecordset` objeto asociado a la vista de registros.  
   
  De forma predeterminada, `OnMove` actualiza el registro actual en el origen de datos si el usuario ha cambiado en la vista de registros.  
   
@@ -206,7 +207,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Si mueve más allá del último registro en el conjunto de registros, la vista de registros continúa mostrando el último registro. Si se mueve hacia atrás más allá del primer registro, la vista de registros continúa mostrando el primer registro.  
   
 > [!CAUTION]
->  Al llamar a `OnMove` produce una excepción si el conjunto de registros no tiene registros. Llame a la función de controlador de actualización de interfaz de usuario correspondiente: **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, o  **OnUpdateRecordPrev** : antes de la correspondiente operación de movimiento para determinar si el conjunto de registros tiene los registros.  
+>  Al llamar a `OnMove` produce una excepción si el conjunto de registros no tiene registros. Llame a la función de controlador de actualización de interfaz de usuario correspondiente: `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, o `OnUpdateRecordPrev` : antes de la correspondiente operación de movimiento para determinar si el conjunto de registros tiene los registros.  
   
 ## <a name="see-also"></a>Vea también  
  [Clase CFormView](../../mfc/reference/cformview-class.md)   

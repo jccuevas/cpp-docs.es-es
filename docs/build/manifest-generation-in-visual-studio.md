@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370454"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generación de manifiestos en Visual Studio
 Generación de un archivo de manifiesto para un proyecto concreto puede controlarse en el proyecto **páginas de propiedades** cuadro de diálogo. En el **propiedades de configuración** , haga clic en **vinculador**, a continuación, **archivo de manifiesto**, a continuación, **Generar manifiesto**. De forma predeterminada, las propiedades del proyecto de los nuevos proyectos se establecen para generar un archivo de manifiesto. Sin embargo es posible deshabilitar la generación del manifiesto para un proyecto mediante el **Generar manifiesto** propiedad del proyecto. Cuando esta propiedad se establece en **Sí**, se genera el manifiesto para este proyecto. En caso contrario, el vinculador omite la información de ensamblado al resolver dependencias del código de aplicación y no genera el manifiesto.  

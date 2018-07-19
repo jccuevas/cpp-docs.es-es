@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377237"
 ---
 # <a name="v-version-number"></a>/V (Número de versión)
 Desusado. Inserta una cadena de texto en el archivo .obj.  

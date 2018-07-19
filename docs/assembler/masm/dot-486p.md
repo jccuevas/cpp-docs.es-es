@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049062"
 ---
 # <a name="486p"></a>.486P
 Habilita el ensamblado de todas las instrucciones (incluido con privilegios) para el procesador 80486.  

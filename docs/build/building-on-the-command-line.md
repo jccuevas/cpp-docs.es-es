@@ -1,7 +1,7 @@
 ---
 title: Compilar el código de C o C++ en la línea de comandos | Documentos de Microsoft
 ms.custom: conceptual
-ms.date: 03/29/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322321"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Compilar el código de C o C++ en la línea de comandos
 
@@ -50,7 +51,7 @@ Los métodos abreviados de línea de comandos se instalan en una carpeta de Visu
 
 Los reales nombres de carpeta y el acceso directo de la menú inicio varían según la versión de Visual Studio que tenga instalada y el alias de la instalación si establece uno. Por ejemplo, si tiene Visual Studio de 2017 instalado y se ha especificado una instalación de sobrenombres de *vista previa*, el acceso directo del símbolo para desarrolladores se denomina **símbolo del sistema para desarrolladores de VS 2017 (versión preliminar)**, en una carpeta denominada **2017 de Visual Studio**.
 
-Si ha instalado el [Build Tools para Visual Studio de 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) (que también incluye el conjunto de herramientas del compilador de Visual Studio 2015 Update 3), solo el nativo específicas de la arquitectura o entre herramientas se instalan las opciones de símbolo para desarrolladores y no en la ficha general **símbolo** acceso directo.
+Si ha instalado el [Build Tools para Visual Studio de 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (que también incluye el conjunto de herramientas del compilador de Visual Studio 2015 Update 3), solo el nativo específicas de la arquitectura o entre herramientas se instalan las opciones de símbolo para desarrolladores y no en la ficha general **símbolo** acceso directo.
 
 <a name="developer_command_prompt"></a>
 ### <a name="to-open-a-developer-command-prompt-window"></a>Para abrir una ventana de símbolo del sistema para desarrolladores
@@ -92,10 +93,10 @@ Es la manera más sencilla para especificar una arquitectura de compilación det
 
 > **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver=**_vcversion_]
 
-*Arquitectura*<br/>
+*arquitectura*<br/>
 Este argumento opcional especifica la arquitectura de host y de destino para usar. Si *arquitectura* no se especifica, se utiliza el entorno de compilación de forma predeterminada. Se admiten los siguientes argumentos:
 
-|*Arquitectura*|Compilador|Arquitectura del equipo host|Crear la arquitectura de salida (destino)|
+|*arquitectura*|Compilador|Arquitectura del equipo host|Crear la arquitectura de salida (destino)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 nativo de 32 bits|x86, x64|x86|
 |**x86\_amd64** o **x86\_x64**|cross x64 en x86|x86, x64|x64|

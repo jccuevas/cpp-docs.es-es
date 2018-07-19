@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350240"
 ---
 # <a name="mfc-desktop-applications"></a>Aplicaciones de escritorio de MFC
 La biblioteca de Microsoft Foundation Class (MFC) proporciona un contenedor orientado a objetos en gran parte de las API de Win32 y de COM. Aunque se puede usar para crear aplicaciones de escritorio muy simples, es muy útil cuando se necesita desarrollar interfaces de usuario más complejas con varios controles. Puede usar MFC para crear aplicaciones con interfaces de usuario de estilo Office.  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386396"
 ---
 # <a name="cilog10"></a>_CIlog10
 Realiza una operación `log10` en el valor superior de la pila.  

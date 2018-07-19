@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038011"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Clase CMultiPageDHtmlDialog
 Un cuadro de diálogo de varias páginas muestra varias páginas HTML secuencialmente y administra los eventos de cada página.  
@@ -99,19 +100,19 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  La cadena terminada en null que es el nombre de un recurso de plantilla de cuadro de diálogo.  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  La cadena terminada en null que es el nombre de un recurso HTML.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero al objeto de ventana primaria o propietaria (de tipo [CWnd](../../mfc/reference/cwnd-class.md)) a la que pertenece el objeto de cuadro de diálogo. Si es **NULL**, ventana primaria del objeto de cuadro de diálogo se establece en la ventana de la aplicación principal.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contiene el número de identificación de un recurso de plantilla de cuadro de diálogo.  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  Contiene el número de identificación de un recurso HTML.  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  

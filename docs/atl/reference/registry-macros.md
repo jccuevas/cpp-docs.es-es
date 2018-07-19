@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365222"
 ---
 # <a name="registry-macros"></a>Macros de registro
 Estas macros definen las instalaciones de biblioteca y el registro de un tipo útil.  

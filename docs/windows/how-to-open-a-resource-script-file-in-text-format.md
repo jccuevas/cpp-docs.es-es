@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880055"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Cómo: Abrir un archivo de script de recursos en formato de texto
 Puede haber ocasiones en que desee ver el contenido del archivo de script de recursos (.rc) del proyecto sin abrir un recurso, como un cuadro de diálogo, en su editor de recursos específico. Por ejemplo, es posible que desee buscar una cadena en todos los cuadros de diálogo del archivo de recursos sin tener que abrir cada uno de ellos independientemente.  

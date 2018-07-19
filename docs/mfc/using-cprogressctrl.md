@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a9f89648a8dd31cfae9d644afec040b14c98691
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a3d222ed4f3de143182cf0a413e4160b68356cc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951158"
 ---
 # <a name="using-cprogressctrl"></a>Usar CProgressCtrl
 Puede utilizar el control de progreso para indicar el progreso de una operación larga. Es un rectángulo que se rellena gradualmente con el color de resaltado del sistema como la operación progresa.  
   
  El control de progreso se representa en MFC mediante la clase [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).  
   
- Cuando se crea inicialmente el control de progreso, especifica su tamaño y posición de la ventana primaria (normalmente un cuadro de diálogo) e identificador. Mediante el uso de la `dwStyle` parámetro, también puede especificar varios estilos de ventana para el control y los estilos para cómo se llena.  
+ Cuando se crea inicialmente el control de progreso, especifica su tamaño y posición de la ventana primaria (normalmente un cuadro de diálogo) e identificador. Mediante el uso de la *dwStyle* parámetro, también puede especificar varios estilos de ventana para el control y los estilos para cómo se llena.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
   

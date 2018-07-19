@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aede6e3224149bd237ca2bb830370718105e1f83
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037765"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar (clase)
 Una barra de menús incrustada en un menú emergente.  
@@ -139,7 +140,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` Para volver a calcular automáticamente el diseño del panel de barra de menú emergente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -152,7 +153,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Especifica el identificador de menú del recurso de menú que se va a cargar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -189,7 +190,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
+ [in] *punto*  
  Un punto en la pantalla.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -256,10 +257,10 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hMenu`  
+ [in] *hMenu*  
  El menú, en el que se va a importar los botones del menú emergente.  
   
- [in] `bShowAllCommands`  
+ [in] *bShowAllCommands*  
  `TRUE` Si todos los comandos del menú que se van a importar, o `FALSE` si se utilizan con poca frecuencia puede estar oculto.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -324,7 +325,7 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hMenu`  
+ [in] *hMenu*  
  Un identificador para el menú archivado para cargar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -363,10 +364,10 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Índice de base cero del botón de barra de herramientas cuyo estilo que se va a establecer.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  El estilo del botón. Vea [estilos de Control de barra de herramientas](../../mfc/reference/toolbar-control-styles.md) para obtener la lista de estilos de botón de barra de herramientas disponibles.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -379,7 +380,7 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iOffset`  
+ [in] *iOffset*  
  El número de filas que se debe desplazar la barra de menús de la ventana emergente.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -394,10 +395,10 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  Puntero al botón de menú para el que se va a establecer el temporizador de retraso.  
   
- [in] `nDelayFactor`  
+ [in] *nDelayFactor*  
  Un factor retraso, igual que al menos uno, al multiplicarlo por el tiempo de retardo de menú estándar (normalmente entre un medio segundo y cinco segundos).  
   
 ### <a name="remarks"></a>Comentarios  

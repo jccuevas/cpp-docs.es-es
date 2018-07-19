@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388820"
 ---
 # <a name="controlling-streams"></a>Controlar secuencias
 [fopen](../c-runtime-library/reference/fopen-wfopen.md) devuelve la dirección de un objeto de tipo `FILE`. Use esta dirección como el argumento `stream` de varias funciones de la biblioteca para realizar distintas operaciones en un archivo abierto. Para una secuencia de bytes, todas las entradas se realizan como si cada carácter se leyera mediante una llamada a [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md), y todas las salidas se obtienen como si cada carácter se escribiera mediante una llamada a [fputc](../c-runtime-library/reference/fputc-fputwc.md). Para una secuencia ancha, todas las entradas se realizan como si cada carácter se leyera mediante una llamada a [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md), y todas las salidas se obtienen como si cada carácter se escribiera mediante una llamada a [fputwc](../c-runtime-library/reference/fputc-fputwc.md).  

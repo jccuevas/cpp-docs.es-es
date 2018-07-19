@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374549"
 ---
 # <a name="lib-files-as-linker-input"></a>archivos .Lib como entrada del vinculador
 LINK acepta bibliotecas estándar y COFF bibliotecas de importación, que normalmente tienen la extensión. lib. Bibliotecas estándar contienen objetos y se crean mediante la herramienta LIB. Bibliotecas de importación contienen información acerca de las exportaciones en otros programas y se crean por el vínculo cuando compila un programa que contiene exportaciones o la herramienta LIB. Para obtener información sobre cómo utilizar LIB para crear estándar o bibliotecas de importación, consulte [referencia de LIB](../../build/reference/lib-reference.md). Para obtener más información sobre el uso de vínculo para crear una biblioteca de importación, vea la [/DLL](../../build/reference/dll-build-a-dll.md) opción.  

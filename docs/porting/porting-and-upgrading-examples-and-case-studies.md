@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850149"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Migración y actualización: ejemplos y casos prácticos
 Puede hacerse una idea de los tipos de problemas con los que se puede encontrar durante una migración de una versión anterior de Visual C++ a la versión actual leyendo los casos de migraciones correctas.  

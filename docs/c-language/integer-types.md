@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386808"
 ---
 # <a name="integer-types"></a>Tipos enteros
 A cada constante entera se le asigna un tipo basado en su valor y en la manera en que se expresa. Puede forzar cualquier constante entera al tipo **long** anexando la letra **l** o **L** al final de la constante; puede forzarla para que sea del tipo `unsigned` anexando **u** o **U** al valor. La letra **l** minúscula se puede confundir con el dígito 1 y debe evitarse. Algunas formas de constantes enteras **long** son las siguientes:  

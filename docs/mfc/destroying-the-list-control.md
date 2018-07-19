@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343287"
 ---
 # <a name="destroying-the-list-control"></a>Destruir el control de lista
 Si incrusta el [CListCtrl](../mfc/reference/clistctrl-class.md) objeto como un miembro de datos de una clase de vista o cuadro de diálogo, se destruye cuando se destruye su propietario. Si utiliza un [CListView](../mfc/reference/clistview-class.md), el marco de trabajo destruye el control cuando destruye la vista.  

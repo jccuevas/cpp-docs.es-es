@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232119"
 ---
 # <a name="compiler-error-c2751"></a>Error de C2751 de Error de compilador
 'parámetro': no se puede calificar el nombre de un parámetro de función  

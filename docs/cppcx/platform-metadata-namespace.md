@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088029"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata (Espacio de nombres)
 Este espacio de nombres contiene atributos que modifican las declaraciones de tipos.  

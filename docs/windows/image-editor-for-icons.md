@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879287"
 ---
 # <a name="image-editor-for-icons"></a>Editor de imágenes para iconos
 El Editor de imágenes dispone de un completo conjunto de herramientas para crear y editar imágenes, así como características que facilitan la creación de mapas de bits de barras de herramientas. Además de mapas de bits, iconos y cursores, pueden editarse imágenes en formato GIF o JPEG mediante los comandos del menú **Imagen** y las herramientas de la barra de herramientas del **Editor de imágenes** .  

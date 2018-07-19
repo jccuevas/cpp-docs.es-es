@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390940"
 ---
 # <a name="type-float"></a>Tipo float
 Los números de punto flotante utilizan el formato IEEE (Institute of Electrical and Electronics Engineers). Los valores de precisión sencilla con el tipo float tienen 4 bytes, formados por un bit de signo, un exponente binario de 8 bits con exceso 127 y una mantisa de 23 bits. La mantisa representa un número entre 1,0 y 2,0. Puesto que el bit de alto nivel de la mantisa siempre es 1, no se almacena en el número. En esta representación se proporciona un intervalo de aproximadamente 3,4E-38 a 3,4E+38 para el tipo float.  

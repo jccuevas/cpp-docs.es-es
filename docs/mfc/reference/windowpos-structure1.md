@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379299"
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS estructura-1
 El `WINDOWPOS` estructura contiene información sobre el tamaño y la posición de una ventana.  

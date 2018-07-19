@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1bd8a99faa4cf0444782f402e69da761a8c25e2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929960"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Contenedores de controles ActiveX: Programar controles ActiveX en un contenedor de controles ActiveX
 En este artículo se describe el proceso para tener acceso a la expuesta [métodos](../mfc/mfc-activex-controls-methods.md) y [propiedades](../mfc/mfc-activex-controls-properties.md) de controles ActiveX incrustados. Básicamente, seguirá estos pasos:  
@@ -75,7 +76,7 @@ En este artículo se describe el proceso para tener acceso a la expuesta [métod
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> Modificaciones de variables de miembro para el proyecto  
  Una vez que el control ActiveX se ha agregado al proyecto e incrustado en un contenedor de cuadro de diálogo, puede tener acceso por otras partes del proyecto. Es la manera más fácil de obtener acceso al control [crear una variable de miembro](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) de la clase de cuadro de diálogo, `CContainerDlg` (paso 2), que es el mismo tipo que la clase contenedora que se agrega al proyecto por Visual C++. A continuación, puede utilizar la variable miembro para tener acceso al control incrustado en cualquier momento.  
   
- Cuando el **agregar variables miembro** cuadro de diálogo agrega el `m_circctl` miembro variable al proyecto, también agrega las siguientes líneas al archivo de encabezado (. (H) de la `CContainerDlg` clase:  
+ Cuando el **agregar variables miembro** cuadro de diálogo agrega el *m_circctl* miembro variable al proyecto, también agrega las siguientes líneas al archivo de encabezado (. (H) de la `CContainerDlg` clase:  
   
  [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
@@ -91,7 +92,7 @@ En este artículo se describe el proceso para tener acceso a la expuesta [métod
   
  Es un lugar común para modificar las propiedades del control en el `OnInitDialog` función miembro de la clase de cuadro de diálogo principal. Esta función se invoca justo antes de que el cuadro de diálogo aparece y se utiliza para inicializar su contenido, incluido cualquiera de sus controles.  
   
- El siguiente ejemplo de código utiliza el `m_circctl` variable miembro para modificar las propiedades Caption y CircleShape del control Circ incrustado:  
+ El siguiente ejemplo de código utiliza el *m_circctl* variable miembro para modificar las propiedades Caption y CircleShape del control Circ incrustado:  
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   

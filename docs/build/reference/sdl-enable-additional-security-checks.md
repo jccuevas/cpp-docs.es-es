@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379541"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (habilitar comprobaciones adicionales de seguridad)
 Agrega las comprobaciones recomendadas del ciclo de vida de desarrollo de seguridad (SDL). Estas comprobaciones incluyen advertencias adicionales relativas a la seguridad como errores y características seguras adicionales de generación de código.  

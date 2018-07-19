@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419690"
 ---
 # <a name="main-function-restrictions"></a>Restricciones de la función main
 Varias restricciones se aplican a la **principal** función que no se aplican a otras funciones de C++. El **principal** función:  

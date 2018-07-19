@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860286"
 ---
 # <a name="changing-the-caption-property-of-multiple-strings"></a>Cambiar la propiedad Caption de varias cadenas
 El procedimiento siguiente muestra cómo cambiar la propiedad caption de varias cadenas.  

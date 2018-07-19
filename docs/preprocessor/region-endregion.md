@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839452"
 ---
 # <a name="region-endregion"></a>region, endregion
 **#pragma region** permite especificar un bloque de código que se puede expandir o contraer cuando se utiliza el [característica de esquematización](/visualstudio/ide/outlining) del Editor de código de Visual Studio.  

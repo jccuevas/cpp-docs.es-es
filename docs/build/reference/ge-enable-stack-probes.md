@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375303"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Habilitar comprobaciones de la pila)
 Activa las comprobaciones de pila para cada llamada de función que requiere almacenamiento para las variables locales.  

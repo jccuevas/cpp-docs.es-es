@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888651"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Seleccionar el color de primer plano y el color de fondo (Editor de imágenes para iconos)
 Excepto para la **borrador**, las herramientas de la **Editor de imágenes** draw de la barra de herramientas con el color actual de primer plano o en segundo plano cuando se presiona el botón izquierdo o derecho del mouse, respectivamente.  

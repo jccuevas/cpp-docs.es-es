@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243279"
 ---
 # <a name="compiler-error-c3002"></a>Error del compilador C3002
 'nombre1 nombre2': nombres de directiva de OpenMP múltiples  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357410"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Configuración de la aplicación, Asistente para proyectos ATL
 Use la **configuración de la aplicación** página del Asistente para proyectos ATL para diseñar y agregar características básicas a un nuevo proyecto ATL.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387637"
 ---
 # <a name="example-program"></a>Programa de ejemplo
 El siguiente programa de origen de C se compone de dos archivos de código fuente. Proporciona información general sobre las distintas declaraciones y definiciones posibles en un programa de C. En las secciones posteriores de este libro se describe cómo escribir estas declaraciones, definiciones e inicializaciones, y cómo utilizar las palabras clave de C **static** y `extern`. La función `printf` se declara en el archivo de encabezado de C STDIO.H.  

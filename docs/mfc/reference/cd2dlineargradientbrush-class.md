@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94609d9ee589d42c440324cb8782c35720b23214
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61dc2134a2da6570c748cebbfc770b213863de04
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957252"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>Clase CD2DLinearGradientBrush
 Un contenedor para ID2D1LinearGradientBrush.  
@@ -120,7 +121,7 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pResource`  
+ *pResource*  
  Interfaz de recursos existente. No puede ser NULL  
   
 ##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush  
@@ -139,28 +140,28 @@ CD2DLinearGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentTarget`  
+ *pParentTarget*  
  Un puntero para el destino de representación.  
   
- `gradientStops`  
+ *gradientStops*  
  Un puntero a una matriz de estructuras D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Un valor mayor o igual a 1 que especifica el número de puntos de degradado de la matriz gradientStops.  
   
- `LinearGradientBrushProperties`  
+ *LinearGradientBrushProperties*  
  Los puntos inicial y final del degradado.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  El espacio en el color que se realiza una interpolación entre los delimitadores de degradado.  
   
- `extendMode`  
+ *extendMode*  
  El comportamiento del degradado que se encuentra fuera del intervalo [0,1] normalizado.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Un puntero a la opacidad y la transformación de un pincel.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indica que se destruirá el objeto propietario (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DLinearGradientBrush::Create  
@@ -171,7 +172,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pRenderTarget`  
+ *pRenderTarget*  
  Un puntero para el destino de representación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -256,7 +257,7 @@ void SetEndPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `point`  
+ *Punto*  
  Las coordenadas bidimensionales finales del degradado lineal, en el espacio de coordenadas del pincel  
   
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint  
@@ -267,7 +268,7 @@ void SetStartPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `point`  
+ *Punto*  
  Las coordenadas bidimensionales iniciales del degradado lineal, en el espacio de coordenadas del pincel  
   
 ## <a name="see-also"></a>Vea también  

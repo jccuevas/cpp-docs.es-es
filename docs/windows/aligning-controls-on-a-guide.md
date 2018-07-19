@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857843"
 ---
 # <a name="aligning-controls-on-a-guide"></a>Alinear controles en una guía
 Los controladores de tamaño de los controles de ajustarán a las guías cuando se mueven los controles y las guías se ajustan a los controles (si no hay ningún control ajustado previamente a la guía). Cuando se mueve una guía, se mueven también los controles que se ajustan a él. Controles ajustados a más de una guía cambian de tamaño cuando se mueve una de las guías.  

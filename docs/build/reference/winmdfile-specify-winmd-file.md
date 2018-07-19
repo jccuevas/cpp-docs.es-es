@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375602"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (especificar archivo winmd)
 Especifica el nombre de archivo para el archivo de salida de metadatos en tiempo de ejecución de Windows (.winmd) generadas por el [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) opción del vinculador.  

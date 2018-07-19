@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381527"
 ---
 # <a name="c-postfix-increment-and-decrement-operators"></a>Operadores de incremento y decremento postfijos de C
 Los operandos de los operadores de incremento y decremento de postfijo son tipos escalares que son valores L modificables.  

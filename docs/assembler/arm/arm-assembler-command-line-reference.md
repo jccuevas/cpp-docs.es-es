@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054616"
 ---
 # <a name="arm-assembler-command-line-reference"></a>Referencia de la línea de comandos de ensamblador de ARM
 Este artículo proporciona información de línea de comandos sobre el ensamblador de ARM de Microsoft, *armasm*, que compila el lenguaje ensamblador ARMv7 Thumb en la implementación de Microsoft de formato de archivo de objeto común (COFF). El vinculador puede vincular código COFF con el código objeto generado por el ensamblador ARM o por el compilador de C, junto con bibliotecas de objetos que se crean mediante el bibliotecario.  

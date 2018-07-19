@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246352"
 ---
 # <a name="compiler-error-c2857"></a>Error del compilador C2857
 ' #include ' no se encontró la instrucción especificada con la opción de línea de comandos /Ycfilename en el archivo de origen  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358253"
 ---
 # <a name="reference-counting"></a>Recuento de referencias
 COM en sí mismo no automáticamente intenta quitar un objeto de la memoria cuando piensa que el objeto ya no está usándola. En su lugar, el programador de objetos debe quitar el objeto no utilizado. El programador determina si un objeto se puede quitar en función de un recuento de referencias.  

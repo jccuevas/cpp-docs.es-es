@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106013"
 ---
 # <a name="provider-wizard-generated-files"></a>Archivos generados por el Asistente para proveedores
 El Asistente para proveedores OLE DB ATL genera los siguientes archivos. Los temas siguientes utiliza el nombre corto "MyProvider", pero los nombres de archivo exacto dependen de la elección realizada al crear el proveedor.  

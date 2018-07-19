@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369333"
 ---
 # <a name="calculating-necessary-values"></a>Calcular valores necesarios
 Dos partes esenciales de información deben calcularse por la rutina de la aplicación auxiliar de retraso. Para ello, hay dos funciones inline en delayhlp.cpp para calcular esta información.  

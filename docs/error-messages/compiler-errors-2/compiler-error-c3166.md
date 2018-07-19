@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247711"
 ---
 # <a name="compiler-error-c3166"></a>C3166 de Error del compilador
 'puntero': no se puede declarar un puntero a un puntero __gc interior como miembro de 'tipo'  

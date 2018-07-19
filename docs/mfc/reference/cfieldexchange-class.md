@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96c70bc7c6c506d033b39ca55ba2b1a090767b5d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951692"
 ---
 # <a name="cfieldexchange-class"></a>Clase CFieldExchange
 Admite las rutinas de intercambio de campos de registro (RFX) y de intercambio masivo de campos de registro (RFX Masivo) utilizadas por las clases de base de datos.  
@@ -52,7 +53,7 @@ class CFieldExchange
 > [!NOTE]
 >  Si está trabajando con las clases de Data Access Objects (DAO) en lugar de las clases de Open Database Connectivity (ODBC), utilice la clase [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) en su lugar. Para obtener más información, vea el artículo [: base de datos de información general de programación](../../data/data-access-programming-mfc-atl.md).  
   
- Un `CFieldExchange` objeto proporciona la información de contexto necesaria para que el intercambio de campos de registros o intercambio masivo de campos de registros pueda colocar. `CFieldExchange` los objetos admiten una serie de operaciones, incluidos los parámetros de enlace y los miembros de datos de campo y el establecimiento de varias marcas en los campos del registro actual. Se realizan operaciones RFX y RFX masivo en miembros de datos de la clase de conjunto de registros de tipos definidos por el `enum` **FieldType** en `CFieldExchange`. Posibles **FieldType** valores son:  
+ Un `CFieldExchange` objeto proporciona la información de contexto necesaria para que el intercambio de campos de registros o intercambio masivo de campos de registros pueda colocar. `CFieldExchange` los objetos admiten una serie de operaciones, incluidos los parámetros de enlace y los miembros de datos de campo y el establecimiento de varias marcas en los campos del registro actual. Se realizan operaciones RFX y RFX masivo en miembros de datos de la clase de conjunto de registros de tipos definidos por el **enum** **FieldType** en `CFieldExchange`. Posibles **FieldType** valores son:  
   
 - **CFieldExchange::outputColumn** para los miembros de datos de campo.  
   
@@ -95,7 +96,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nFieldType`  
+ *nFieldType*  
  Un valor de la **enum FieldType**, declarados en `CFieldExchange`, que puede ser uno de los siguientes:  
   
 - **CFieldExchange::outputColumn**  
@@ -120,7 +121,7 @@ void SetFieldType(UINT nFieldType);
 |**CFieldExchange::outputParam**|Parámetro de salida. Un valor devuelto del procedimiento almacenado del conjunto de registros.|  
 |**CFieldExchange::inoutParam**|Parámetro de entrada/salida. Procedimiento almacenado de un valor que se pasó y se devuelve desde el conjunto de registros.|  
   
- En general, cada grupo de llamadas de función RFX asociadas a los miembros de datos de campo o miembros de datos de parámetro debe ir precedida de una llamada a `SetFieldType`. El `nFieldType` parámetro de cada `SetFieldType` llamada identifica el tipo de los miembros de datos representados por las llamadas de función RFX que sigan la `SetFieldType` llamar.  
+ En general, cada grupo de llamadas de función RFX asociadas a los miembros de datos de campo o miembros de datos de parámetro debe ir precedida de una llamada a `SetFieldType`. El *nFieldType* parámetro de cada `SetFieldType` llamada identifica el tipo de los miembros de datos representados por las llamadas de función RFX que sigan la `SetFieldType` llamar.  
   
  Para obtener más información sobre el control de parámetros de salida y entrada/salida, consulte el `CRecordset` función miembro [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Para obtener más información acerca de las funciones RFX y RFX masivo, vea el tema [funciones de intercambio de campos de registros](../../mfc/reference/record-field-exchange-functions.md). Para obtener información relacionada sobre la obtención masiva de filas, vea el artículo [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   

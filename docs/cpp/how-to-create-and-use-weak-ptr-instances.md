@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415150"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Cómo: Crear y usar instancias de weak_ptr
 A veces, un objeto debe almacenar una manera de tener acceso al objeto subyacente de un `shared_ptr` sin causar que el recuento de referencias va a incrementar. Normalmente, esta situación se produce cuando tienen referencias cíclicas entre `shared_ptr` instancias.  

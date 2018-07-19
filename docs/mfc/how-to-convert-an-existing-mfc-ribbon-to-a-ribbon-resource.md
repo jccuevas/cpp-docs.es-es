@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8024acc4abbb02b14ed968df83779d34bd4a7271
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2551709652df0e0c65b1b0b6b5085550044e9966
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929002"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Cómo: Convertir una cinta de MFC existente en un recurso de cinta
 Recursos de la cinta de opciones son más fáciles de visualizar, modificar y mantener que las cintas de opciones codificada de forma manual. En este tema se describe cómo convertir una cinta de opciones codificada de forma manual en un proyecto MFC en un recurso de cinta de opciones.  
@@ -28,7 +29,7 @@ Recursos de la cinta de opciones son más fáciles de visualizar, modificar y ma
   
 ### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>Para convertir una cinta de MFC en un recurso de cinta  
   
-1.  En Visual Studio, en un proyecto MFC existente, abra el archivo de origen donde se inicializa el objeto CMFCRibbonBar. Normalmente, el archivo es mainfrm.cpp. Agregue el código siguiente después del código de inicialización de la cinta de opciones.  
+1.  En Visual Studio, en un proyecto MFC existente, abra el archivo de origen donde el `CMFCRibbonBar` se inicializa el objeto. Normalmente, el archivo es mainfrm.cpp. Agregue el código siguiente después del código de inicialización de la cinta de opciones.  
   
  ```  
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");

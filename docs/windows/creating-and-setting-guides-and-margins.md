@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873516"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Crear y establecer las guías y los márgenes
 Si va a mover controles, agregar controles o reorganizar un diseño actual, guías pueden ayudar a alinear los controles con precisión dentro de un cuadro de diálogo. Las guías aparecen como líneas de puntos azul en el cuadro de diálogo que se muestra en el editor y sus flechas correspondientes en las reglas (en la parte superior y en el lado izquierdo del editor de cuadro de diálogo).  

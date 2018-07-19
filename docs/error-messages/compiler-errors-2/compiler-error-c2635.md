@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233995"
 ---
 # <a name="compiler-error-c2635"></a>Error de C2635 de Error de compilador
 no se puede convertir un 'identificador1 *' a un ' identificador2\*'; se presupone la conversión de una clase base virtual  

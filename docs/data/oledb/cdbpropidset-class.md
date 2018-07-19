@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096956"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet (Clase)
 Hereda de la **DBPROPIDSET** estructurar y agrega un constructor que inicializa los campos clave, así como la [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) acceder a método.  

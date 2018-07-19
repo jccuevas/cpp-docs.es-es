@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236136"
 ---
 # <a name="compiler-error-c2748"></a>Error C2748 de Error del compilador
 la creación de matrices administradas o WinRT debe disponer de un tamaño de matriz o un inicializador de matriz  

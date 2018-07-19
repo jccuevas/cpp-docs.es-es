@@ -102,11 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55f0c28a5698dfd1d974a48f891615d8c7e77cf2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb3757aaced6fd9fe27c91da8f4382a133801fb2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039367"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Clase CMFCVisualManagerOffice2003
 `CMFCVisualManagerOffice2003` Proporciona una aplicación un aspecto de Microsoft Office 2003.  
@@ -244,19 +245,19 @@ virtual BOOL DrawComboBorderWinXP(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Rectángulo delimitador del borde de cuadro combinado.  
   
- [in] `bDisabled`  
+ [in] *bDeshabilitado*  
  Especifica si está deshabilitado el borde del cuadro combinado.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Especifica si el borde del cuadro combinado está desplegado.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Especifica si se resalta el borde del cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -277,19 +278,19 @@ virtual BOOL DrawComboDropButtonWinXP(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del botón de lista desplegable del cuadro combinado.  
   
- [in] `bDisabled`  
+ [in] *bDeshabilitado*  
  Especifica si el botón de lista desplegable del cuadro combinado está deshabilitado.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Especifica si el botón de lista desplegable del cuadro combinado está desplegado.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Especifica si se resalta el botón de lista desplegable del cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -311,22 +312,22 @@ virtual void DrawCustomizeButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de presentación.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del botón  
   
- [in] `bIsHorz`  
+ [in] *bIsHorz*  
  `TRUE` Si el botón es horizontal, o `FALSE` si es vertical.  
   
- [in] `state`  
+ [in] *estado*  
  El estado del botón tal y como está para dibujar (normal, presionado o resaltado).  
   
- [in] `bIsCustomize`  
+ [in] *bIsCustomize*  
  `TRUE` Si se debe dibujar la imagen de flecha abajo o flecha izquierda personalizar en el rectángulo de botón, o `FALSE` si no es así.  
   
- [in] `bIsMoreButtons`  
+ [in] *bIsMoreButtons*  
  `TRUE` Si el eje horizontal o vertical personalizar más botones imagen se debe dibujar en el rectángulo de botón, o `FALSE` si no es así.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -343,17 +344,17 @@ virtual BOOL DrawPushButtonWinXP(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del botón de inserción.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a la [CMFCButton clase](../../mfc/reference/cmfcbutton-class.md) objeto que se va a dibujar.  
   
- [in] `uiState`  
- ignorado. El estado se toma del `pButton`.  
+ [in] *uiState*  
+ ignorado. El estado se toma del *pButton*.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si la API de tema está habilitada; en caso contrario, `FALSE`.  
@@ -392,11 +393,11 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pPropList`  
+ [in] *pPropList*  
  Un puntero a la lista de propiedades que se dibuja el marco de trabajo.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el color de fondo `pPropList`.  
+ Devuelve el color de fondo *pPropList*.  
   
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función para personalizar el color de fondo de una lista de propiedades de la aplicación.  
@@ -409,7 +410,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pPropList`  
+ [in] *pPropList*  
  Un puntero a la lista de propiedades.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -428,10 +429,10 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo.  
   
- [in] `sizeDefault`  
+ [in] *sizeDefault*  
  Tamaño de menú predeterminado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -449,10 +450,10 @@ virtual void GetSmartDockingBaseGuideColors(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `clrBaseGroupBackground`  
+ [in] *clrBaseGroupBackground*  
  Referencia a un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) para establecer el color de fondo.  
   
- [in] `clrBaseGroupBorder`  
+ [in] *clrBaseGroupBorder*  
  Referencia a un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) para establecer el color de borde.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -486,31 +487,31 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Un puntero a la ventana con pestañas en el marco dibuja una pestaña.  
   
- [out] `clrDark`  
+ [out] *clrDark*  
  Una referencia a un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parámetro donde este método almacena el color del borde de una pestaña oscuro.  
   
- [out] `clrBlack`  
+ [out] *clrBlack*  
  Una referencia a un `COLORREF` parámetro donde este método almacena el color del borde de la ventana de la ficha. El color predeterminado para el borde es negro.  
   
- [out] `clrHighlight`  
+ [out] *clrHighlight*  
  Una referencia a un `COLORREF` parámetro donde este método almacena el color para el estado de resaltado de la ventana de pestaña.  
   
- [out] `clrFace`  
+ [out] *clrFace*  
  Una referencia a un `COLORREF` parámetro donde este método almacena el color de la cara de la ventana de la ficha.  
   
- [out] `clrDarkShadow`  
+ [out] *clrDarkShadow*  
  Una referencia a un `COLORREF` parámetro donde este método almacena el color de la sombra de la ventana de la ficha.  
   
- [out] `clrLight`  
+ [out] *clrLight*  
  Una referencia a un `COLORREF` parámetro donde este método almacena el color del borde de la ventana de la ficha claro.  
   
- [out] `pbrFace`  
+ [out] *pbrFace*  
  Un puntero a una referencia de un pincel. Este método almacena el pincel que usa para rellenar la cara de la ventana de la ficha de este parámetro.  
   
- [out] `pbrBlack`  
+ [out] *pbrBlack*  
  Un puntero a una referencia de un pincel. Este método almacena el pincel que se usa para rellenar el borde negro de la ventana de la ficha de este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -549,10 +550,10 @@ virtual BOOL GetToolTipInfo(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `params`  
+ [out] *params*  
  Una referencia a un [CMFCToolTipInfo clase](../../mfc/reference/cmfctooltipinfo-class.md) objeto donde este método devuelve información sobre herramientas.  
   
- [in] `nType`  
+ [in] *nLas*  
  Escriba la información de la información sobre herramientas que se devuelvan.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -629,7 +630,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar* pToolBar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pToolBar`  
+ [in] *pToolBar*  
  Puntero a la barra de herramientas en cuestión.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -674,22 +675,22 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectBounds`  
+ [in] *rectBounds*  
  El tamaño y la ubicación del botón de ocultación automática.  
   
- [in] `rectBorderSize`  
+ [in] *rectBorderSize*  
  Los tamaños de los bordes.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero al botón de ocultación automática. El marco de trabajo dibuja el borde para que este botón.  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada si desea personalizar la apariencia del borde de un botón de ocultación automática. De forma predeterminada, este método rellena un borde sin formato con el color de sombra de forma predeterminada para la aplicación.  
   
- El `rectBorderSize` parámetro no contiene las coordenadas del borde. Contiene el tamaño del borde en el `top`, `bottom`, `left`, y `right` miembros de datos. Un valor menor o igual a 0 no indica borde de ese lado del botón de ocultación automática.  
+ El *rectBorderSize* parámetro no contiene las coordenadas del borde. Contiene el tamaño del borde en el `top`, `bottom`, `left`, y `right` miembros de datos. Un valor menor o igual a 0 no indica borde de ese lado del botón de ocultación automática.  
   
 ##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2003::OnDrawBarGripper  
  Llamado por el marco de trabajo cuando dibuja el punto de sujeción de una barra de control.  
@@ -703,16 +704,16 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo para una barra de controles.  
   
- [in] `rectGripper`  
+ [in] *rectGripper*  
  El rectángulo delimitador de la barra de control.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Un parámetro booleano que especifica si la barra de control está acoplada horizontalmente o verticalmente.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero a una barra de controles. El administrador visual dibuja la barra de redimensionamiento de esta barra de control.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -731,11 +732,11 @@ virtual BOOL OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
- [in] `rect`  
- [in] `pEdit`  
- [in] `state`  
- [in] `clrText`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *pEdit*  
+ [in] *estado*  
+ [in] *clrText*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -753,16 +754,16 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo de un botón de barra de herramientas.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a un botón de barra de herramientas. El marco de trabajo dibuja el borde de este botón.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del botón de barra de herramientas.  
   
- [in] `state`  
+ [in] *estado*  
  Un tipo de datos enumerado que especifica el estado actual del botón de barra de herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -783,19 +784,19 @@ virtual void OnDrawCaptionBarBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero a un [CMFCCaptionBar (clase)](../../mfc/reference/cmfccaptionbar-class.md) objeto. El marco de trabajo dibuja esta barra de título.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites de la barra de título.  
   
- [in] `clrBarBorder`  
+ [in] *clrBarBorder*  
  El color del borde.  
   
- [in] `bFlatBorder`  
+ [in] *bFlatBorder*  
  `TRUE` Si el borde debe tener una apariencia plana y 2D, o `FALSE` si no es así.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -815,22 +816,22 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador de la casilla de verificación.  
   
- [in] `nState`  
+ [in] *nState*  
  El estado de la casilla de verificación: 0 si se desactiva, 1 si se activa, 2 si se activa mixto.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  `TRUE` Si la casilla de verificación está resaltado, o `FALSE` si no es así.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  `TRUE` Si se presiona la casilla de verificación, o `FALSE` si no es así.  
   
- [in] `bEnabled`  
+ [in] *bHabilitado*  
  `TRUE` Si está activada la casilla de verificación, o `FALSE` si no es así.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -849,22 +850,22 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo de un botón del cuadro combinado.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del botón de cuadro combinado.  
   
- [in] `bDisabled`  
+ [in] *bDeshabilitado*  
  Un parámetro booleano que indica si el botón de cuadro combinado no está disponible.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Un parámetro booleano que indica si el cuadro combinado está desplegado.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Un parámetro booleano que indica si se resalta el botón del cuadro combinado.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a un `CMFCToolBarComboBoxButton` objeto. El marco de trabajo dibuja este botón de cuadro combinado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -884,22 +885,22 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del botón desplegable.  
   
- [in] `bDisabled`  
+ [in] *bDeshabilitado*  
  Un parámetro booleano que indica si el botón de lista desplegable no está disponible.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Un parámetro booleano que indica si el cuadro combinado está desplegado.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Un parámetro booleano que indica si se resalta el botón de lista desplegable.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a un `CMFCToolBarComboBoxButton` objeto. El marco de trabajo dibuja el botón desplegable para que este botón de cuadro combinado  
   
 ### <a name="remarks"></a>Comentarios  
@@ -913,7 +914,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndCtrl`  
+ [in] *pWndCtrl*  
  Puntero a un [CWnd (clase)](../../mfc/reference/cwnd-class.md) objeto que representa el control para el que se dibuja el borde.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -930,16 +931,16 @@ virtual void OnDrawExpandingBox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero al contexto de presentación en la que el cuadro de expansión está para dibujar.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del cuadro de expansión para dibujar.  
   
- [in] `bIsOpened`  
+ [in] *bIsOpened*  
  `TRUE` Si se abre el cuadro para dibujar, o `FALSE` si no es así.  
   
- [in] `colorBox`  
+ [in] *colorBox*  
  El color del borde exterior del cuadro para dibujar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -957,17 +958,17 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pCtrl`  
+ [in] *pCtrl*  
  Un puntero a un [clase CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) objeto. El marco de trabajo dibuja el borde de este control de encabezado.  
   
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del control de encabezado.  
   
- [in] `bIsPressed`  
- [in] `bIsHighlighted`  
+ [in] *bIsPressed*  
+ [in] *bIsHighlighted*  
  Un parámetro booleano que indica si se presiona el control de encabezado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -984,13 +985,13 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo para un [CMFCPopupMenu clase](../../mfc/reference/cmfcpopupmenu-class.md) objeto.  
   
- [in] `pMenu`  
+ [in] *pMenu*  
  Un puntero a un [CMFCPopupMenu clase](../../mfc/reference/cmfcpopupmenu-class.md) objeto. El marco de trabajo dibuja un borde alrededor de este menú emergente.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del menú emergente.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1006,10 +1007,10 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectSplitter`  
+ [in] *rectSplitter*  
  Un rectángulo que especifica los límites del divisor.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1027,16 +1028,16 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectBtn`  
+ [in] *rectBtn*  
  Un rectángulo que especifica los límites del botón de página de Outlook.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Un valor booleano que especifica si se resalta el botón.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Un valor booleano que especifica si se presiona el botón.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1053,13 +1054,13 @@ virtual void OnDrawPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo de una barra de controles.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero a un panel. El administrador visual dibuja el borde de este panel.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que indica los límites del panel.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1078,19 +1079,19 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero a un [clase CDockablePane](../../mfc/reference/cdockablepane-class.md) objeto. El marco de trabajo dibuja el título de este panel.  
   
- [in] `bActive`  
+ [in] *bSecuencias de ActiveX*  
  Un parámetro booleano que indica si la barra de control está activa.  
   
- [in] `rectCaption`  
+ [in] *rectCaption*  
  Un rectángulo que especifica los límites del título.  
   
- [in] `rectButtons`  
+ [in] *rectButtons*  
  Un rectángulo que especifica los límites de los botones de título.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1108,10 +1109,10 @@ virtual void OnDrawPopupWindowBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero al contexto de dispositivo de la ventana emergente.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador de la ventana emergente.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1127,13 +1128,13 @@ virtual void OnDrawPopupWindowButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero al contexto de dispositivo del botón.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Rectángulo delimitador del botón.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Puntero al botón (un [CMFCDesktopAlertWndButton clase](../../mfc/reference/cmfcdesktopalertwndbutton-class.md) objeto).  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1149,13 +1150,13 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero al contexto de dispositivo del título.  
   
- [in] `rectCaption`  
+ [in] *rectCaption*  
  Rectángulo delimitador del título.  
   
- [in] `pPopupWnd`  
+ [in] *pPopupWnd*  
  Puntero a la ventana emergente para que el título es para dibujar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1175,13 +1176,13 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pGroup`  
+ [in] *pGroup*  
  Un puntero a un grupo de botones en la cinta de opciones. El marco de trabajo dibuja este grupo de botones.  
   
- [in] `rectGroup`  
+ [in] *rectGroup*  
  Un rectángulo que especifica los límites del grupo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1200,10 +1201,10 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo de la categoría de cinta de opciones.  
   
- [in] `pContextCaption`  
+ [in] *pContextCaption*  
  Un puntero a una barra de título. El administrador visual dibuja esto [CMFCRibbonContextCaption clase](../../mfc/reference/cmfcribboncontextcaption-class.md).  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1223,13 +1224,13 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pTab`  
+ [in] *pTab*  
  Un puntero a un objeto de la ficha de cinta de opciones. El marco de trabajo dibuja esta pestaña.  
   
- [in] `bIsActive`  
+ [in] *bIsActive*  
  `TRUE` Si la ficha está activa, o `FALSE` si no es así.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1251,19 +1252,19 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pProgress`  
+ [in] *pProgress*  
  Un puntero a un [CMFCRibbonProgressBar clase](../../mfc/reference/cmfcribbonprogressbar-class.md) objeto. El marco de trabajo dibuja esta barra de progreso.  
   
- [in] `rectProgress`  
+ [in] *rectProgress*  
  Un rectángulo que especifica los límites de la barra de progreso.  
   
- [in] `rectChunk`  
+ [in] *rectChunk*  
  Un rectángulo que especifica los límites del área que rodea a la barra de progreso.  
   
- [in] `bInfiniteMode`  
+ [in] *bInfiniteMode*  
  `TRUE` Si la barra está en modo de infinito o `FALSE` si no es así. La implementación predeterminada no utiliza este parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1280,13 +1281,13 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pSeparator`  
+ [in] *pSeparator*  
  Un puntero a un [CMFCRibbonSeparator clase](../../mfc/reference/cmfcribbonseparator-class.md) objeto. El marco de trabajo dibuja este separador de la cinta de opciones.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del separador.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1303,13 +1304,13 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pSlider`  
+ [in] *pSlider*  
  Un puntero a un [CMFCRibbonSlider clase](../../mfc/reference/cmfcribbonslider-class.md) objeto. El marco de trabajo dibuja el canal para este control deslizante de la cinta de opciones.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites para el canal del control deslizante de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1329,22 +1330,22 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pSlider`  
+ [in] *pSlider*  
  Un puntero a un [CMFCRibbonSlider clase](../../mfc/reference/cmfcribbonslider-class.md). El marco de trabajo dibuja las básicas para este control deslizante de la cinta de opciones.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del control de posición para el control deslizante de la cinta de opciones.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Un parámetro booleano que indica si el control se resalta.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Un parámetro booleano que indica si el control está presionado.  
   
- [in] `bIsDisabled`  
+ [in] *bIsDisabled*  
  Un parámetro booleano que indica si el control no está disponible.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1365,25 +1366,25 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pSlider`  
+ [in] *pSlider*  
  Un puntero a un [CMFCRibbonSlider clase](../../mfc/reference/cmfcribbonslider-class.md) objeto. El marco de trabajo dibuja este control deslizante de la cinta de opciones.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites de los botones de zoom en el control deslizante de la cinta de opciones.  
   
- [in] `bIsZoomOut`  
+ [in] *bIsZoomOut*  
  `TRUE` Si el marco de trabajo debe dibujar el botón primario con un " **-**" para alejar, o `FALSE` si el marco de trabajo debe dibujar el botón derecho con una " **+**" para acercar.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Un parámetro booleano que indica si se resalta el botón.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Un parámetro booleano que indica si se presiona el botón.  
   
- [in] `bIsDisabled`  
+ [in] *bIsDisabled*  
  Un parámetro booleano que indica si el botón no está disponible.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1400,13 +1401,13 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero a la barra de estado que contiene el panel.  
   
- [in] `pPane`  
+ [in] *pPane*  
  Un puntero a un panel de barra de estado. El marco de trabajo dibuja esto [CMFCRibbonStatusBarPane clase](../../mfc/reference/cmfcribbonstatusbarpane-class.md) objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1428,19 +1429,19 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador de los botones de desplazamiento.  
   
- [in] `nBorderSize`  
+ [in] *nBorderSize*  
  El tamaño del borde que se va a dibujar en torno a los botones de desplazamiento.  
   
- [in] `iImage`  
+ [in] *iImage*  
  Identificador de la imagen para dibujar en los botones de desplazamiento.  
   
- [in] `bHilited`  
+ [in] *bHilited*  
  `TRUE` Si se resaltan los botones de desplazamiento, o `FALSE` si no es así.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1457,16 +1458,16 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo para una barra de controles.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero a un panel que contiene el separador.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del separador.  
   
- [in] `bIsHoriz`  
+ [in] *bIsHoriz*  
  `TRUE` Si el panel está acoplado horizontalmente, o `FALSE` si el panel está acoplado verticalmente.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1483,13 +1484,13 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del menú que se va a dibujar.  
   
- [in] `state`  
+ [in] *estado*  
  El estado del botón.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1507,19 +1508,19 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero a un [CMFCStatusBar clase](../../mfc/reference/cmfcstatusbar-class.md) objeto. El marco de trabajo dibuja este objeto de barra de estado.  
   
- [in] `rectPane`  
+ [in] *rectPane*  
  Un rectángulo que especifica los límites de la barra de estado.  
   
- [in] `uiID`  
+ [in] *uiID*  
  El identificador de la barra de estado.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  El estilo de la barra de estado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1542,27 +1543,27 @@ virtual void OnDrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo para la barra de estado  
   
- [in] `pStatusBar`  
+ [in] *pStatusBar*  
  El [CMFCStatusBar clase](../../mfc/reference/cmfcstatusbar-class.md) objeto que contiene la barra de progreso.  
   
- [in] `rectProgress`  
+ [in] *rectProgress*  
  Un rectángulo que especifica los límites de la barra de progreso.  
   
- [in] `nProgressTotal`  
+ [in] *nProgressTotal*  
  El número total de la barra de progreso.  
   
- [in] `nProgressCurr`  
+ [in] *nProgressCurr*  
  El progreso actual de la barra de progreso.  
   
- [in] `clrBar`  
+ [in] *clrBar*  
  El color inicial de la barra de progreso. El valor es el inicio de un degradado de color o el color completando de la barra de progreso.  
   
- [in] `clrProgressBarDest`  
- [in] `clrProgressText`  
- [in] `bProgressText`  
+ [in] *clrProgressBarDest*  
+ [in] *clrProgressText*  
+ [in] *bProgressText*  
   
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en un administrador visual derivado para personalizar la apariencia de la barra de progreso en una barra de estado.  
@@ -1578,13 +1579,13 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pStatBar`  
+ [in] *pStatBar*  
  Un puntero a una barra de estado. El marco de trabajo dibuja el cuadro de tamaño de esta barra de estado.  
   
- [in] `rectSizeBox`  
+ [in] *rectSizeBox*  
  Un rectángulo que especifica los límites del cuadro de tamaño.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1603,23 +1604,23 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectTab`  
+ [in] *rectTab*  
  Un rectángulo que especifica los límites del control de ficha.  
   
- [in] `iTab`  
+ [in] *iTab*  
  El índice de la pestaña que dibuja el marco de trabajo.  
   
- [in] `bIsActive`  
+ [in] *bIsActive*  
  Un parámetro booleano que especifica si la ficha está activa.  
   
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Un puntero a un [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto. El marco de trabajo dibuja este control de pestaña.  
   
 ### <a name="remarks"></a>Comentarios  
- A `CMFCBaseTabCtrl` objeto llama a este método cuando procesa el `WM_PAINT` mensaje. Invalide este método en una clase derivada para personalizar la apariencia de fichas.  
+ Un `CMFCBaseTabCtrl` objeto llama a este método cuando procesa el mensaje WM_PAINT. Invalide este método en una clase derivada para personalizar la apariencia de fichas.  
   
 ##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder  
  El marco de trabajo llama a este método cuando dibuja el borde de un botón de la pestaña.  
@@ -1634,19 +1635,19 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del botón ficha.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a la [CMFCButton clase](../../mfc/reference/cmfcbutton-class.md) para que el marco de trabajo dibuja el borde.  
   
- [in] `uiState`  
+ [in] *uiState*  
  El estado del botón (vea [CButton::GetState](../../mfc/reference/cbutton-class.md#getstate)).  
   
- [in] `pWndTab`  
+ [in] *pWndTab*  
  Un puntero a la ventana de la ficha principal.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1665,19 +1666,19 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pTask`  
+ [in] *pTask*  
  Un puntero a un [clase CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) objeto. El marco de trabajo dibuja esta tarea.  
   
- [in] `pIcons`  
+ [in] *pIcons*  
  Un puntero a la lista de imágenes asociadas con el panel de tareas. Cada tarea contiene un índice para una imagen en esta lista.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Un parámetro booleano que especifica si la tarea mostrada se resalta.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Un parámetro booleano que especifica si se selecciona la tarea mostrada.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1695,16 +1696,16 @@ virtual void OnDrawTasksGroupAreaBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del área del grupo en el panel de tareas.  
   
- [in] `bSpecial`  
+ [in] *bOpciones especiales*  
  Un parámetro booleano que especifica si se resalta el borde. Un valor de `TRUE` indica que el borde se resalta.  
   
- [in] `bNoTitle`  
+ [in] *bNoTitle*  
  Un parámetro booleano que especifica si el área de grupo tiene un título. Un valor de `TRUE` indica que el área de grupo no tiene un título.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1723,19 +1724,19 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pGroup`  
+ [in] *pGroup*  
  Un puntero a un [clase CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) objeto. El marco de trabajo dibuja el título para este grupo.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Un parámetro booleano que indica si se resalta el grupo.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Un parámetro booleano que indica si el grupo está seleccionado actualmente.  
   
- [in] `bCanCollapse`  
+ [in] *bCanCollapse*  
  Un parámetro booleano que indica si se puede contraer el grupo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1752,17 +1753,17 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del título.  
   
- [in] `bIsActive`  
+ [in] *bIsActive*  
  `TRUE` Si el título está activo; `FALSE` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a esta función cuando un [CMFCPopupMenu clase](../../mfc/reference/cmfcpopupmenu-class.md) objeto procesos un `WM_PAINT` el mensaje y debe dibujar un título desplazable.  
+ El marco de trabajo llama a esta función cuando un [CMFCPopupMenu clase](../../mfc/reference/cmfcpopupmenu-class.md) objeto procesa un mensaje WM_PAINT y debe dibujar un título desplazable.  
   
  Invalide este método en una clase derivada para personalizar la apariencia de los títulos de barras desplazable.  
   
@@ -1777,13 +1778,13 @@ virtual void OnErasePopupWindowButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  El rectángulo que especifica el área de cliente de la ventana emergente.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Puntero al botón se borrarán.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1799,17 +1800,17 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del área de ficha.  
   
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Un puntero a una ventana de la ficha. El marco de trabajo, borra el área de pestañas de la ventana de la pestaña especificada.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a esta función cuando un [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto procesos un `WM_PAINT` el mensaje y borra el área de pestañas.  
+ El marco de trabajo llama a esta función cuando un [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto procesa un mensaje WM_PAINT y borra el área de pestañas.  
   
  Invalide este método en un administrador visual derivado para personalizar la apariencia de fichas.  
   
@@ -1825,20 +1826,20 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del botón ficha.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a un botón de la pestaña. El marco de trabajo, borra el texto y el icono para este botón.  
   
- [in] `pWndTab`  
+ [in] *pWndTab*  
  Un puntero para el control de pestaña que contiene el botón de tabulación.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo borra el texto y el icono para un botón cuando un [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto procesos el `WM_ERASEBKGND` mensaje  
+ El marco de trabajo borra el texto y el icono para un botón cuando un [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto procesa el mensaje WM_ERASEBKGND  
   
  Invalide este método en un administrador visual derivado para personalizar la apariencia de los botones de ficha.  
   
@@ -1853,20 +1854,20 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites de la ventana de la ficha.  
   
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Un puntero a una ventana de la ficha. El marco de trabajo borra un marco para este [clase CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si el método es correcto o `FALSE` si no es así.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método rellena el área indicado por `rect` con el color de fondo de la pestaña activa. Se llama cuando un `CMFCBaseTabCtrl` objeto procesos un `WM_PAINT` el mensaje y un marco de etiquetas se borra.  
+ Este método rellena el área indicado por *rect* con el color de fondo de la pestaña activa. Se llama cuando un `CMFCBaseTabCtrl` objeto procesa un mensaje WM_PAINT y borra un marco de etiquetas.  
   
 ##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground  
  El marco de trabajo llama a este método cuando rellena el fondo de un botón de ocultación automática.  
@@ -1879,13 +1880,13 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del botón de ocultación automática.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a un [clase CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) objeto. El marco de trabajo rellena el fondo para que este botón de ocultación automática.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1904,19 +1905,19 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo para una barra de controles.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero a un [CBasePane clase](../../mfc/reference/cbasepane-class.md) objeto. El marco de trabajo rellena el fondo de este panel.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Un rectángulo que especifica los límites del panel.  
   
- [in] `rectClip`  
+ [in] *rectClip*  
  Un rectángulo que especifica el área de recorte del panel.  
   
- [in] `bNCArea`  
+ [in] *bNCArea*  
  Un valor reservado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1936,16 +1937,16 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo de un botón de barra de herramientas.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero al botón para que el marco de trabajo está llenando el fondo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del botón de barra de herramientas.  
   
- [in] `state`  
+ [in] *estado*  
  El estado del botón de barra de herramientas (los posibles estados de un botón de barra de herramientas son `ButtonsIsRegular`, `ButtonsIsPressed`, o `ButtonsIsHighlighted`).  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1962,13 +1963,13 @@ virtual COLORREF OnFillCommandsListBackground(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del botón.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Un parámetro booleano que indica si el botón está seleccionado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1988,13 +1989,13 @@ virtual void OnFillHeaderCtrlBackground(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pCtrl`  
+ [in] *pCtrl*  
  Un puntero a un [clase CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) objeto. El marco de trabajo rellena el fondo para este control de encabezado.  
   
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del control de encabezado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2012,16 +2013,16 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del área resaltada para rellenar.  
   
- [in] `pBrush`  
+ [in] *pBrush*  
  El pincel que se utiliza en rellena el área resaltado.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Puntero a la [CMFCToolBarButton clase](../../mfc/reference/cmfctoolbarbutton-class.md) objeto para el que se va a rellenar el área resaltada.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2037,13 +2038,13 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectCaption`  
+ [in] *rectCaption*  
  Un rectángulo que especifica los límites de la barra de título.  
   
- [out] `clrText`  
+ [out] *clrText*  
  Una referencia a un `COLORREF` objeto en el que este método escribe el color del texto en la barra de título.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2064,19 +2065,19 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del botón de página de Outlook.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Un parámetro booleano que especifica si se resalta el botón.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Un parámetro booleano que especifica si se presiona el botón.  
   
- [out] `clrText`  
+ [out] *clrText*  
  Una referencia a un `COLORREF` objeto donde este método almacena el color del texto del botón de página de outlook.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2092,10 +2093,10 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites de la ventana emergente.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2115,22 +2116,22 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectFill`  
+ [in] *rectFill*  
  Un rectángulo que especifica los límites de la ventana de la ficha.  
   
- [in] `pbrFill`  
+ [in] *pbrFill*  
  Un puntero al pincel el marco de trabajo se usa para rellenar la ventana de la ficha.  
   
- [in] `iTab`  
+ [in] *iTab*  
  El índice de tabulación de base cero de una pestaña para que el marco de trabajo rellena el fondo.  
   
- [in] `bIsActive`  
+ [in] *bIsActive*  
  `TRUE` Si la ficha está activa o `FALSE` si no es así.  
   
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Un puntero al control de ficha principal.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2147,13 +2148,13 @@ virtual void OnFillTasksGroupInterior(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que especifica los límites del grupo de tareas.  
   
- [in] `bSpecial`  
+ [in] *bOpciones especiales*  
  Un valor booleano que indica si el interior se rellena con un color especial.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2169,10 +2170,10 @@ virtual void OnFillTasksPaneBackground(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectWorkArea`  
+ [in] *rectWorkArea*  
  Un rectángulo que especifica los límites del panel de tareas.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2189,13 +2190,13 @@ virtual void OnHighlightQuickCustomizeMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero al contexto de dispositivo para el botón.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero al botón.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del botón.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2210,10 +2211,10 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectRarelyUsed`  
+ [in] *rectRarelyUsed*  
  Un rectángulo que especifica los límites del comando resaltado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2227,7 +2228,7 @@ virtual void OnUpdateSystemColors();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método como parte del procesamiento de la `WM_SYSCOLORCHANGE` mensaje. Invalide este método en un administrador visual derivado si desea ejecutar código personalizado cuando se modifican los colores de la aplicación.  
+ El marco de trabajo llama a este método como parte del procesamiento del mensaje WM_SYSCOLORCHANGE. Invalide este método en un administrador visual derivado si desea ejecutar código personalizado cuando se modifican los colores de la aplicación.  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
  Especifica si el administrador visual debe usar colores de tema de Windows XP nativo o colores que se obtienen del [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).  
@@ -2237,11 +2238,11 @@ static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bDefaultWinXPColors`  
+ [in] *bDefaultWinXPColors*  
  Especifica si el administrador visual utilizará nativo colores de Windows XP.  
   
 ### <a name="remarks"></a>Comentarios  
- Si `bDefaultWinXPColors` es `TRUE`, el administrador visual utilizará los colores de Windows XP nativo como azul, oliva o plata. En caso contrario, el administrador visual utilizará los colores que se obtienen de `GetSysColor`. El administrador visual usa elementos visuales como `COLOR_3DFACE`, `COLOR_3DSHADOW`, `COLOR_3DHIGHLIGHT`, `COLOR_3DDKSHADOW`, y `COLOR_3DLIGHT`.  
+ Si *bDefaultWinXPColors* es `TRUE`, el administrador visual utilizará los colores de Windows XP nativo como azul, oliva o plata. En caso contrario, el administrador visual utilizará los colores que se obtienen de `GetSysColor`. El administrador visual usa elementos visuales como `COLOR_3DFACE`, `COLOR_3DSHADOW`, `COLOR_3DHIGHLIGHT`, `COLOR_3DDKSHADOW`, y `COLOR_3DLIGHT`.  
   
  De forma predeterminada, un `CMFCVisualManagerOffice2003` objeto utiliza nativo colores de tema de Windows XP.  
   
@@ -2253,7 +2254,7 @@ static void __stdcall SetStatusBarOfficeXPLook(BOOL bStatusBarOfficeXPLook = TRU
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bStatusBarOfficeXPLook`  
+ [in] *bStatusBarOfficeXPLook*  
  `TRUE` Si el tema global de Windows XP se debe usar (valor predeterminado), o `FALSE` si no.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2266,7 +2267,7 @@ static void SetUseGlobalTheme(BOOL bUseGlobalTheme = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bUseGlobalTheme`  
+ [in] *bUseGlobalTheme*  
  `TRUE` Si desea que el administrador visual para utilizar un tema global; `FALSE` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  

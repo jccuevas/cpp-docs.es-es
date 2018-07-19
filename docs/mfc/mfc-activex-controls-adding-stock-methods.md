@@ -16,21 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f02712f3df56bf2fc04fba736f28931250f7bcb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2005391c6d91ee09703194eb8b8062ecfe08ba77
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929804"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Controles ActiveX MFC: Agregar métodos estándar
-Un método estándar difiere de un método personalizado en que ya está implementado por la clase [COleControl](../mfc/reference/colecontrol-class.md). Por ejemplo, `COleControl` contiene una función miembro predefinida que admite el método de actualización para el control. La entrada de asignación de envío para este método estándar es **DISP_STOCKFUNC_REFRESH**.  
+Un método estándar difiere de un método personalizado en que ya está implementado por la clase [COleControl](../mfc/reference/colecontrol-class.md). Por ejemplo, `COleControl` contiene una función miembro predefinida que admite el método de actualización para el control. La entrada de asignación de envío para este método estándar es DISP_STOCKFUNC_REFRESH.  
   
  `COleControl` admite dos métodos estándar: DoClick y Refresh. La actualización es invocada por el usuario del control para actualizar inmediatamente la apariencia del control; DoClick se invoca para que se activen haga clic en del control eventos.  
   
 |Método|Entrada del mapa de envíos|Comentario|  
 |------------|------------------------|-------------|  
 |`DoClick`|**(DE DISP_STOCKPROP_DOCLICK)**|Se desencadena un evento Click.|  
-|**Actualizar**|**(DE DISP_STOCKPROP_REFRESH)**|La apariencia del control se actualiza inmediatamente.|  
+|`Refresh`|**(DE DISP_STOCKPROP_REFRESH)**|La apariencia del control se actualiza inmediatamente.|  
   
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Agregar un método estándar mediante el Asistente para agregar métodos  
  Agregar un método estándar es sencillo con el [Asistente para agregar métodos](../ide/add-method-wizard.md). El siguiente procedimiento muestra cómo agregar el método de actualización para un control creado mediante el Asistente para controles de ActiveX de MFC.  

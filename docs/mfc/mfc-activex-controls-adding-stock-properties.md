@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 791694bfa1bcd7472be4691d9aef133b80ccace4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930135"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Controles ActiveX MFC: Agregar propiedades estándar
-Propiedades estándar se diferencian de las propiedades personalizadas en que ya se implementan mediante la clase `COleControl`. `COleControl` contiene funciones miembro predefinidas que admiten propiedades comunes para el control. Algunas propiedades comunes incluyen el título del control y los colores de primer plano y fondo. Para obtener información sobre otras propiedades estándar, vea [propiedades estándar admitidas por el Asistente para agregar propiedades](#_core_stock_properties_supported_by_classwizard) más adelante en este artículo. Las entradas del mapa de envíos para propiedades estándar siempre van precedidas por **DISP_STOCKPROP**.  
+Propiedades estándar se diferencian de las propiedades personalizadas en que ya se implementan mediante la clase `COleControl`. `COleControl` contiene funciones miembro predefinidas que admiten propiedades comunes para el control. Algunas propiedades comunes incluyen el título del control y los colores de primer plano y fondo. Para obtener información sobre otras propiedades estándar, vea [propiedades estándar admitidas por el Asistente para agregar propiedades](#_core_stock_properties_supported_by_classwizard) más adelante en este artículo. Las entradas del mapa de envíos para acciones propiedades siempre tienen el prefijo DISP_STOCKPROP.  
   
  En este artículo se describe cómo agregar una propiedad estándar (en este caso, Caption) a un control ActiveX mediante el Asistente para agregar propiedades y explica las modificaciones de código resultante. Entre los temas se incluyen los siguientes:  
   
@@ -80,16 +81,16 @@ Propiedades estándar se diferencian de las propiedades personalizadas en que ya
   
 |Property|Entrada del mapa de envíos|Cómo obtener acceso a valor|  
 |--------------|------------------------|-------------------------|  
-|**Apariencia**|**(DE DISP_STOCKPROP_APPEARANCE)**|Valor accesible como **m_sAppearance**.|  
-|`BackColor`|**(DE DISP_STOCKPROP_BACKCOLOR)**|Valor accesible mediante una llamada a `GetBackColor`.|  
-|`BorderStyle`|**(DE DISP_STOCKPROP_BORDERSTYLE)**|Valor accesible como **m_sBorderStyle**.|  
-|**Título**|**(DE DISP_STOCKPROP_CAPTION)**|Valor accesible mediante una llamada a `InternalGetText`.|  
-|**Habilitado**|**(DE DISP_STOCKPROP_ENABLED)**|Valor accesible como **m_bEnabled**.|  
-|**Fuente**|**(DE DISP_STOCKPROP_FONT)**|Vea el artículo [controles ActiveX MFC: utilizar fuentes](../mfc/mfc-activex-controls-using-fonts.md) para su uso.|  
-|`ForeColor`|**(DE DISP_STOCKPROP_FORECOLOR)**|Valor accesible mediante una llamada a `GetForeColor`.|  
-|**hWnd**|**(DE DISP_STOCKPROP_HWND)**|Valor accesible como `m_hWnd`.|  
-|**Texto**|**(DE DISP_STOCKPROP_TEXT)**|Valor accesible mediante una llamada a `InternalGetText`. Esta propiedad es igual a **título**, excepto el nombre de propiedad.|  
-|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|Valor accesible como m_lReadyState o `GetReadyState`|  
+|`Appearance`|(DE DISP_STOCKPROP_APPEARANCE)|Valor accesible como `m_sAppearance`.|  
+|`BackColor`|(DE DISP_STOCKPROP_BACKCOLOR)|Valor accesible mediante una llamada a `GetBackColor`.|  
+|`BorderStyle`|(DE DISP_STOCKPROP_BORDERSTYLE)|Valor accesible como `m_sBorderStyle`.|  
+|`Caption`|(DE DISP_STOCKPROP_CAPTION)|Valor accesible mediante una llamada a `InternalGetText`.|  
+|`Enabled`|(DE DISP_STOCKPROP_ENABLED)|Valor accesible como `m_bEnabled`.|  
+|`Font`|(DE DISP_STOCKPROP_FONT)|Vea el artículo [controles ActiveX MFC: utilizar fuentes](../mfc/mfc-activex-controls-using-fonts.md) para su uso.|  
+|`ForeColor`|(DE DISP_STOCKPROP_FORECOLOR)|Valor accesible mediante una llamada a `GetForeColor`.|  
+|`hWnd`|(DE DISP_STOCKPROP_HWND)|Valor accesible como `m_hWnd`.|  
+|`Text`|(DE DISP_STOCKPROP_TEXT)|Valor accesible mediante una llamada a `InternalGetText`. Esta propiedad es igual a `Caption`, excepto el nombre de propiedad.|  
+|`ReadyState`|DISP_STOCKPROP_READYSTATE()|Valor accesible como `m_lReadyState` o `GetReadyState`|  
   
 ##  <a name="_core_stock_properties_and_notification"></a> Propiedades estándar y notificación  
  La mayoría de propiedades estándar tienen funciones de notificación que se pueden invalidar. Por ejemplo, siempre que el `BackColor` se cambia la propiedad, el `OnBackColorChanged` se llama a la función (una función miembro de la clase de control). La implementación predeterminada (en `COleControl`) llamadas `InvalidateControl`. Si desea realizar acciones adicionales en respuesta a esta situación, reemplace esta función.  

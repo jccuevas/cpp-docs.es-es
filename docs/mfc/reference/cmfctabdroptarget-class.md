@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040992"
 ---
 # <a name="cmfctabdroptarget-class"></a>Clase CMFCTabDropTarget
 Proporciona el mecanismo de comunicación entre un control de pestaña y las bibliotecas OLE.  
@@ -99,13 +100,13 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `pWnd`|Sin usar.|  
-|[in] `pDataObject`|Un puntero al objeto al que el usuario arrastra.|  
-|[in] `dwKeyState`|Contiene el estado de las teclas modificadoras. Se trata de una combinación de varios de los siguientes valores: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, y `MK_RBUTTON`.|  
-|[in] `point`|La ubicación del cursor en coordenadas de cliente.|  
+|[in] *pWnd*|Sin usar.|  
+|[in] *pDataObject*|Un puntero al objeto al que el usuario arrastra.|  
+|[in] *dwKeyState*|Contiene el estado de las teclas modificadoras. Se trata de una combinación de varios de los siguientes valores: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, y `MK_RBUTTON`.|  
+|[in] *punto*|La ubicación del cursor en coordenadas de cliente.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- El efecto que se produce si se produce la colocación en la ubicación especificada por `point`. Puede ser una o varias de las siguientes acciones:  
+ El efecto que se produce si se produce la colocación en la ubicación especificada por *punto*. Puede ser una o varias de las siguientes acciones:  
   
 - `DROPEFFECT_NONE`  
   
@@ -134,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `pWnd`|Sin usar.|  
+|[in] *pWnd*|Sin usar.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método llama a la `CMFCBaseTabCtrl::OnDragLeave` método para realizar la operación de arrastre.  
@@ -155,13 +156,13 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `pWnd`|Sin usar.|  
-|[in] `pDataObject`|Un puntero al objeto al que el usuario arrastra.|  
-|[in] `dwKeyState`|Contiene el estado de las teclas modificadoras. Se trata de una combinación de varios de los siguientes valores: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, y `MK_RBUTTON`.|  
-|[in] `point`|La ubicación del puntero del mouse en coordenadas de cliente.|  
+|[in] *pWnd*|Sin usar.|  
+|[in] *pDataObject*|Un puntero al objeto al que el usuario arrastra.|  
+|[in] *dwKeyState*|Contiene el estado de las teclas modificadoras. Se trata de una combinación de varios de los siguientes valores: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, y `MK_RBUTTON`.|  
+|[in] *punto*|La ubicación del puntero del mouse en coordenadas de cliente.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- El efecto que se produce si se produce la colocación en la ubicación especificada por `point`. Puede ser una o varias de las siguientes acciones:  
+ El efecto que se produce si se produce la colocación en la ubicación especificada por *punto*. Puede ser una o varias de las siguientes acciones:  
   
 - `DROPEFFECT_NONE`  
   
@@ -195,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `pWnd`|Sin usar.|  
-|[in] `pDataObject`|Un puntero al objeto al que el usuario arrastra.|  
-|[in] `dropEffect`|La operación de colocar de forma predeterminada.|  
-|[in] `dropList`|Sin usar.|  
-|[in] `point`|La ubicación del puntero del mouse en coordenadas de cliente.|  
+|[in] *pWnd*|Sin usar.|  
+|[in] *pDataObject*|Un puntero al objeto al que el usuario arrastra.|  
+|[in] *EfectoColocar*|La operación de colocar de forma predeterminada.|  
+|[in] *lista desplegable*|Sin usar.|  
+|[in] *punto*|La ubicación del puntero del mouse en coordenadas de cliente.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  El efecto de colocación resultante. Puede ser una o varias de las siguientes acciones:  
@@ -215,7 +216,7 @@ virtual DROPEFFECT OnDropEx(
 - `DROPEFFECT_SCROLL`  
   
 ### <a name="remarks"></a>Comentarios  
- Este método llama a `CMFCBaseTabCtrl::OnDrop` si el marco de trabajo de la barra de herramientas está en modo de personalización y el formato de datos de Portapapeles está disponible. Si la llamada a `CMFCBaseTabCtrl::OnDrop` devuelve un valor distinto de cero, este método devuelve el efecto de colocar predeterminado especificado por `dropEffect`. En caso contrario, este método devuelve `DROPEFFECT_NONE`. Para obtener más información acerca de los efectos de colocar, vea [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
+ Este método llama a `CMFCBaseTabCtrl::OnDrop` si el marco de trabajo de la barra de herramientas está en modo de personalización y el formato de datos de Portapapeles está disponible. Si la llamada a `CMFCBaseTabCtrl::OnDrop` devuelve un valor distinto de cero, este método devuelve el efecto de colocar predeterminado especificado por *EfectoColocar*. En caso contrario, este método devuelve `DROPEFFECT_NONE`. Para obtener más información acerca de los efectos de colocar, vea [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
   
  Para obtener más información acerca del modo de personalización, consulte [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obtener más información acerca de los formatos de datos del Portapapeles, vea [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
@@ -231,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `pOwner`|El control de ficha para registrar como un destino de colocación.|  
+|[in] *pOwner*|El control de ficha para registrar como un destino de colocación.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el registro se realizó correctamente; en caso contrario es 0.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375582"
 ---
 # <a name="icommandtarget-interface"></a>Interfaz ICommandTarget
 Proporciona un control de usuario con una interfaz para recibir comandos de un objeto de origen de comando.  

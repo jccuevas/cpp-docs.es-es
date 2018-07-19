@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418229"
 ---
 # <a name="auto-c"></a>Auto (C++)
 Deduce el tipo de una variable declarada a partir de su expresión de inicialización.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378602"
 ---
 # <a name="using-an-import-library-and-export-file"></a>Utilizar bibliotecas de importación y archivos de exportación
 Cuando un programa (un archivo ejecutable o un archivo DLL) exporta a otro programa que también se importa de o, si más de dos programas tanto exportación a e importan entre sí, los comandos para vincular estos programas deberán permitir exportaciones circulares.  

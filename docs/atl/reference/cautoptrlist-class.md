@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357550"
 ---
 # <a name="cautoptrlist-class"></a>Clase CAutoPtrList
 Esta clase proporciona métodos útiles al construir una lista de punteros inteligentes.  

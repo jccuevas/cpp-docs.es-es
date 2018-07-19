@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095120"
 ---
 # <a name="work-with-odbc-and-drivers"></a>Trabajar con ODBC y controladores
 ODBC permite escribir aplicaciones que no son dependientes de un solo sistema de administración de bases de datos (DBMS). Puede escribir una aplicación que pueda funcionar en varios DBMS para el que los usuarios tienen el controlador ODBC específicos del DBMS correcto.  

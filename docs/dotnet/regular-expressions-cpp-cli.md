@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162881"
 ---
 # <a name="regular-expressions-ccli"></a>Eexpresiones regulares (C++/CLI)
 Muestra varias operaciones de cadena mediante las clases de expresiones regulares de .NET Framework.  

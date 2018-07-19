@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162441"
 ---
 # <a name="requirements-for-stlclr-container-elements"></a>Requisitos de los elementos contenedores de STL/CLR
 Todos los tipos de referencia que se insertan en contenedores STL/CLR deben tener, como mínimo, los elementos siguientes:  

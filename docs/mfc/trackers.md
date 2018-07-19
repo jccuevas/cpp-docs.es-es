@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381542"
 ---
 # <a name="trackers"></a>Seguimiento
 El [CRectTracker](../mfc/reference/crecttracker-class.md) clase proporciona una interfaz de usuario entre los elementos rectangulares en la aplicación y el usuario mediante una variedad de estilos de presentación. Estos estilos incluyen bordes sólidos, sombreados o guiones; un patrón sombreado que abarca el elemento; y controladores que pueden encontrarse fuera o dentro de un borde de tamaño. Los objetos de seguimiento se utilizan a menudo junto con elementos OLE, es decir, los objetos derivados de `COleClientItem`. Los rectángulos de seguimiento proporcionan indicaciones visuales sobre el estado actual del elemento.  

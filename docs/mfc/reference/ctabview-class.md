@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121762"
 ---
 # <a name="ctabview-class"></a>Clase CTabView
 El `CTabView` clase simplifica el uso de la clase de control de pestaña ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) en las aplicaciones que utilizan la arquitectura documento/vista de MFC.  
@@ -94,16 +95,16 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pViewClass`  
+ [in] *pViewClass*  
  Un puntero a una clase en tiempo de ejecución de la vista insertada.  
   
- [in] `strViewLabel`  
+ [in] *strViewLabel*  
  Especifica el texto de la ficha.  
   
- [in] `iIndex`  
+ [in] *iÍndice*  
  Especifica la posición de base cero donde se inserta la vista. Si la posición es -1 se inserta la nueva pestaña al final.  
   
- [in] `pContext`  
+ [in] *pContext*  
  Un puntero a la `CCreateContext` de la vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -120,7 +121,7 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hWndView`  
+ [in] *hWndView*  
  El identificador de la vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -137,7 +138,7 @@ CView* GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero válido a la vista activa, o `NULL` si no hay ninguna vista activa.  
+ Un puntero válido a la vista activa, o NULL si no hay ninguna vista activa.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -159,12 +160,12 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la vista de ficha debe crearse junto con una barra de desplazamiento compartido. En caso contrario, es `FALSE`.  
+ Es TRUE si la vista de ficha debe crearse junto con una barra de desplazamiento compartido. En caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método cuando un `CTabView` se crea el objeto.  
+ El marco de trabajo llama a este método cuando un *CTabView* se crea el objeto.  
   
- Invalidar el `IsScrollBar` método en un `CTabView`-derivados de clase y devolver `TRUE` si desea crear una vista que tiene una barra de desplazamiento horizontal compartida.  
+ Invalidar el *IsScrollBar* método en un *CTabView*-clase derivada y devuelve TRUE si desea crear una vista que tiene una barra de desplazamiento horizontal compartida.  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  Lo llama el marco cuando se realiza la vista de la pestaña activa o inactiva.  
@@ -174,7 +175,7 @@ virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `view`  
+ [in] *vista*  
  Un puntero a la vista.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -188,7 +189,7 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  El índice de la vista para quitar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -204,11 +205,11 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  Índice de base cero de la vista de ficha.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la vista especificada se realizó activa, `FALSE` si el índice de la vista no es válido.  
+ TRUE si la vista especificada se realizó activa, FALSE si el índice de la vista no es válido.  
   
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  

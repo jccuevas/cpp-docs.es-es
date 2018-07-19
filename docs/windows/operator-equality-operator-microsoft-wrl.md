@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882594"
 ---
 # <a name="operator-operator-microsoftwrl"></a>Operador operator== (Microsoft::WRL)
 Operador de igualdad para [ComPtr](../windows/comptr-class.md) y [ComPtrRef](../windows/comptrref-class.md) objetos.  

@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037377"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Clase CMFCRibbonMainPanel
 Implementa un panel de cinta de opciones que se muestra al hacer clic en el [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
@@ -89,7 +90,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Un puntero al elemento de la cinta de opciones para agregar al panel principal.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -105,10 +106,10 @@ void AddRecentFilesList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszLabel`  
+ *lpszLabel*  
  Especifica la cadena que se agregará a la lista de archivos recientes.  
   
- `nWidth`  
+ *nWidth*  
  Especifica el ancho, en píxeles, del panel de lista de archivos recientes.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -121,7 +122,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Un puntero al elemento de la cinta de opciones para agregar a la parte inferior del panel principal.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -136,10 +137,10 @@ void AddToRight(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pElem`  
+ *pElem*  
  Un puntero a un elemento de la cinta de opciones para agregarse a la derecha del panel principal.  
   
- `nWidth`  
+ *nWidth*  
  Especifica el ancho, en píxeles, del panel derecho.  
   
 ### <a name="remarks"></a>Comentarios  

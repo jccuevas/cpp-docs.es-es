@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356992"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT (clase)
 Esta clase representa un objeto de cadena con un búfer de caracteres fijas.  

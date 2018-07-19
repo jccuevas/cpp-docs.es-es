@@ -28,6 +28,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451404"
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 La variable `_environ` es un puntero a una matriz de punteros a las cadenas de caracteres multibyte que constituyen el entorno de proceso. Esta variable global ha quedado en desuso en las versiones funcionales más seguras [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) y [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), que deben utilizarse en lugar de la variable global. `_environ` está declarado en Stdlib.h.  

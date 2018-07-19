@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880249"
 ---
 # <a name="custom-controls-in-the-dialog-editor"></a>Controles personalizados en el Editor de cuadros de diálogo
 El editor de cuadro de diálogo permite usar existente "custom" o controles de "usuario" en una plantilla de cuadro de diálogo.  

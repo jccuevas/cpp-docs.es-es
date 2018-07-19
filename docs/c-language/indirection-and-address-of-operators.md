@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389425"
 ---
 # <a name="indirection-and-address-of-operators"></a>Operadores de direccionamiento indirecto y address-of
 

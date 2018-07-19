@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690600"
 ---
 # <a name="a2---specifying-conditional-compilation"></a>A.2 Especificar una compilación condicional
 Los siguientes ejemplos ilustran el uso de la compilación condicional mediante la macro de OpenMP `_OPENMP` ([sección 2.2](../../parallel/openmp/2-2-conditional-compilation.md) en página 8). Con la compilación de OpenMP, el `_OPENMP` macro queda definida.  

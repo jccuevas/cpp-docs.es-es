@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342090"
 ---
 # <a name="creating-the-dialog-resource"></a>Crear el recurso de cuadro de diálogo
 Diseño de la [cuadro de diálogo](../mfc/dialog-boxes.md) y crear el recurso de cuadro de diálogo, utilizar el [editor de cuadro de diálogo](../windows/dialog-editor.md). En el editor de cuadro de diálogo, hacer lo siguiente:  

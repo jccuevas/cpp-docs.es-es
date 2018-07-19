@@ -36,6 +36,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846654"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else, and #endif (Directivas) (C/C++)
 La directiva `#if`, con las directivas `#elif`, `#else` y `#endif`, controla la compilación de partes de un archivo de código fuente. Si la expresión que se escribe (después de `#if`) tiene un valor distinto de cero, el grupo de líneas inmediatamente después de la directiva `#if` se conserva en la unidad de traducción.  

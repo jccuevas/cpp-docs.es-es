@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424768"
 ---
 # <a name="keywords-c"></a>Palabras clave (C++)
 Las palabras clave son identificadores reservados predefinidos que tienen un significado especial para el compilador. No se pueden usar como identificadores en el programa. Las palabras clave siguientes están reservadas para Microsoft C++. Los nombres con caracteres de subrayado iniciales son extensiones de Microsoft.  

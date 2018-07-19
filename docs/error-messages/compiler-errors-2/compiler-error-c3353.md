@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253910"
 ---
 # <a name="compiler-error-c3353"></a>Error del compilador C3353
 'delegado': un delegado solo se puede crear desde una función global o una función miembro de un tipo WinRT o administrado  

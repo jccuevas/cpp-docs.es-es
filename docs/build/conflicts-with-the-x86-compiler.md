@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366918"
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>Conflictos con el compilador de x86
 Tipos de datos que son mayores de 4 bytes no se alinean automáticamente en la pila cuando se usa el x86 compilador para compilar una aplicación. Dado que la arquitectura de la x86 compilador es una pila alineada de 4 bytes, cualquier valor mayor de 4 bytes, por ejemplo, un entero de 64 bits, no se alineará automáticamente con una dirección de 8 bytes.  

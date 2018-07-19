@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197460"
 ---
 # <a name="compiler-error-c2396"></a>Error del compilador C2396
 ' your_type '': CLR o WinRT functionnot de conversión definida por el usuario válida. Debe convertir de o a: 'T^', 'T^%', 'T^&', donde T = 'your_type'  

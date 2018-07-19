@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110346"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Admitir transacciones en OLE DB
 A [transacciones](../../data/transactions-mfc-data-access.md) es una forma Agrupar, o por lotes, una serie de actualizaciones a un origen de datos para que todas correctamente y se confirman al mismo tiempo o (si alguna de ellos se produce un error) no se confirmará ninguno y se revierte la transacción entera. Este proceso garantiza la integridad del resultado en el origen de datos.  

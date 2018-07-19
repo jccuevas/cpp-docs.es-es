@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380254"
 ---
 # <a name="unwind-helpers-for-masm"></a>Aplicaciones auxiliares de desenredo para MASM
 Para poder escribir rutinas de ensamblado adecuado, hay un conjunto de pseudoperaciones que puede usarse para crear .pdata y .xdata en paralelo con las instrucciones de ensamblado real. Hay también un conjunto de macros que proporcionan un uso simplificado de las pseudoperaciones para sus usos más comunes.  

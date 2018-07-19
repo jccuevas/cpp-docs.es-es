@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385545"
 ---
 # <a name="time-zone"></a>Time Zone
 **ANSI 4.12.1** Zona horaria local y horario de verano  

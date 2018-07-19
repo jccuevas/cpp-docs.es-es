@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362832"
 ---
 # <a name="marshaling-global-functions"></a>Cálculo de referencias de funciones globales
 Estas funciones proporcionan compatibilidad para el cálculo de referencias y serialización de datos se convierte en punteros de interfaz.  

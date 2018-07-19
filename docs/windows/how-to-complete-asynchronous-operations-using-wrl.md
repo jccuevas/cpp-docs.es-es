@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881530"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Cómo: Completar operaciones asincrónicas mediante WRL
 Este documento muestra cómo usar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) para iniciar operaciones asincrónicas y realizar el trabajo cuando las operaciones se completan.  

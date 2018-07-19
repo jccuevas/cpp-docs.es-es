@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874124"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects (Método)
 Anula el registro de los objetos en el módulo especificado para que otras aplicaciones no se pueden conectar a ellos.  

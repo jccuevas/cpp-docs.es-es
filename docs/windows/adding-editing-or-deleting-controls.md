@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856718"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Agregar, editar o eliminar controles
 Con el editor de cuadro de diálogo, puede agregar, cambiar el tamaño, editar y eliminar controles de cuadros de diálogo. También puede editar las propiedades de un control, como su identificador, o si está visible inicialmente en tiempo de ejecución.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275309"
 ---
 # <a name="compiler-error-c3731"></a>Error del compilador C3731
 evento incompatible 'función1' y el controlador 'función2'; origen del evento y el controlador de eventos deben ser del mismo tipo  

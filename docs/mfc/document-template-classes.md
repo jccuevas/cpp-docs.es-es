@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343548"
 ---
 # <a name="document-template-classes"></a>Clases de plantillas de documentos
 Objetos de plantilla de documento coordinan la creación de documento, vista y objetos de ventana de marco cuando un documento nuevo o se crea la vista.  

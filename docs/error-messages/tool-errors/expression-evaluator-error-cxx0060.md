@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296632"
 ---
 # <a name="expression-evaluator-error-cxx0060"></a>Error del evaluador de expresiones CXX0060
 registro no está disponible  

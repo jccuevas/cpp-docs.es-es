@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891927"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>Cambiar de los controles de un cuadro de diálogo al código
 En las aplicaciones MFC, puede hacer doble clic en los controles de cuadro de diálogo para saltar a su código de controlador o para crear rápidamente código auxiliar funciones del controlador.  

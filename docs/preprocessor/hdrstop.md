@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847031"
 ---
 # <a name="hdrstop"></a>hdrstop
 Proporciona control adicional sobre los nombres de archivo de la precompilación y sobre la ubicación en la que se guarda el estado de la compilación.  

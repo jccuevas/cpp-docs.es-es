@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375811"
 ---
 # <a name="setting-compiler-options"></a>Establecer las opciones del compilador
 Las opciones del compilador de C y C++ pueden definirse en el entorno de desarrollo o en la línea de comandos.  

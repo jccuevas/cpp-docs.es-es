@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372408"
 ---
 # <a name="exe-files-as-linker-input"></a>Archivos .Exe como entrada del vinculador
 El [nombre de archivo de código auxiliar de MS-DOS](../../build/reference/stub-ms-dos-stub-file-name.md) (/ STUB) opción especifica el nombre de un archivo .exe que se ejecuta con MS-DOS. VÍNCULO examina el archivo especificado para asegurarse de que es un programa válido de MS-DOS.  

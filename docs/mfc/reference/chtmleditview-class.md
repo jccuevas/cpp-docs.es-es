@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040618"
 ---
 # <a name="chtmleditview-class"></a>Clase CHtmlEditView
 Proporciona la funcionalidad de la plataforma de edición WebBrowser en el contexto de la arquitectura de vista/documento de MFC.  
@@ -99,25 +100,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszClassName`  
+ *lpszClassName*  
  Apunta a una cadena de caracteres terminada en null que designa la clase de Windows. El nombre de clase puede ser cualquier nombre registrado con el [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) una función global o **RegisterClass** la función de Windows. Si **NULL**, usa el valor predeterminado predefinido [CFrameWnd](../../mfc/reference/cframewnd-class.md) atributos.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Apunta a una cadena de caracteres terminada en null que representa el nombre de la ventana.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica los atributos de estilo de ventana. De forma predeterminada, el **WS_VISIBLE** y **WS_CHILD** se establecen los estilos de Windows.  
   
- `rect`  
- Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica el tamaño y la posición de la ventana. El `rectDefault` valor permite a Windows especificar el tamaño y la posición de la nueva ventana.  
+ *Rect*  
+ Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica el tamaño y la posición de la ventana. El *rectDefault* valor permite a Windows especificar el tamaño y la posición de la nueva ventana.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana primaria del control.  
   
- `nID`  
+ *nID*  
  El número de Id. de la vista. De forma predeterminada, **AFX_IDW_PANE_FIRST**.  
   
- `pContext`  
+ *pContext*  
  Un puntero a un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **NULL** de forma predeterminada.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -131,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ppDocument`  
+ *ppDocument*  
  El [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaz.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  

@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928027"
 ---
 # <a name="document-template-creation"></a>Clear plantillas de documentos
-Al crear un nuevo documento en respuesta a un `New` o **abiertos** línea de comandos desde el **archivo** menú, la plantilla de documento también crea una nueva ventana de marco a través de la que se va a ver el documento.  
+Al crear un nuevo documento en respuesta a un **New** o **abiertos** línea de comandos desde el **archivo** menú, la plantilla de documento también crea una nueva ventana de marco a través de la que desea ver el documento.  
   
  El constructor de la plantilla de documento especifica qué tipos de documentos, ventanas y vistas que podrá crear la plantilla. Esto viene determinado por los argumentos que se pasan al constructor de la plantilla de documento. El código siguiente muestra la creación de un [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) para una aplicación de ejemplo:  
   

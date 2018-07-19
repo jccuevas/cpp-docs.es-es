@@ -1,5 +1,5 @@
 ---
-title: Configuración de la aplicación, Asistente para proyectos de archivo MAKE | Documentos de Microsoft
+title: Configuración de la aplicación, Asistente para proyectos de archivos Make | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 07459cd4971ea6aec95b632e5c03618248cca401
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33330744"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Configuración de la aplicación, Asistente para proyectos de archivo MAKE
-Proporcione la información para el proyecto. Las opciones que especifique se reflejan en el proyecto [página de propiedades](../ide/working-with-project-properties.md). Una vez creado el proyecto, también puede ver y modificar cada una de las siguientes opciones en el **Nmake** página de la página de propiedades del proyecto.  
+Proporcione la información para el proyecto. Las opciones que se especifiquen se reflejan en la [página de propiedades](../ide/working-with-project-properties.md) del proyecto. Una vez creado el proyecto, puede ver y modificar cada una de las opciones siguientes en la página **Nmake** de la página de propiedades del proyecto.  
   
- **Compilar la línea de comandos**  
- Especifica la línea de comandos que se ejecuta cuando el usuario selecciona **generar** desde el **generar** menú. Muestra en el **línea de comandos de compilación** campo el **Nmake** página de la página de propiedades del proyecto.  
+ **Línea de comandos de Compilar**  
+ Especifica la línea de comandos que se va a ejecutar cuando el usuario seleccione **Compilar** desde el menú **Compilar**. Se muestra en el campo **Línea de comandos de Compilar** de la página **Nmake** de la página de propiedades del proyecto.  
   
  **Salida**  
- Especifica el nombre del archivo que contendrá la salida de la línea de comandos. De forma predeterminada, esta opción se basa en el nombre del proyecto. Muestra en el **salida** campo el **Nmake** página de la página de propiedades del proyecto.  
+ Especifica el nombre del archivo que contendrá la salida para la línea de comandos. De forma predeterminada, esta opción se basa en el nombre del proyecto. Se muestra en el campo **Salida** de la página **Nmake** de la página de propiedades del proyecto.  
   
- **Comandos para limpiar**  
- Especifica la línea de comandos que se ejecuta cuando el usuario selecciona **limpiar** desde el **generar** menú. Muestra en el **limpia línea de comandos** campo el **Nmake** página de la página de propiedades del proyecto.  
+ **Comandos de Limpiar**  
+ Especifica la línea de comandos que se va a ejecutar cuando el usuario seleccione **Limpiar** desde el menú **Compilar**. Se muestra en el campo **Línea de comandos de Limpiar** de la página **Nmake** de la página de propiedades del proyecto.  
   
- **Volver a generar la línea de comandos**  
- Especifica la línea de comandos que se ejecuta cuando el usuario selecciona **volver a generar** desde el **generar** menú. Muestra en el **volver a generar todos los de línea de comandos** campo el **Nmake** página de la página de propiedades del proyecto.  
+ **Línea de comandos de recompilación**  
+ Especifica la línea de comandos que se va a ejecutar cuando el usuario seleccione **Recompilar** desde el menú **Compilar**. Se muestra en el campo **Línea de comandos de recompilación** de la página **Nmake** de la página de propiedades del proyecto.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente para proyecto de archivos MAKE](../ide/makefile-project-wizard.md)   
- [Crear un proyecto de archivos MAKE](../ide/creating-a-makefile-project.md)   
+ [Asistente para proyectos de archivos Make](../ide/makefile-project-wizard.md)   
+ [Crear un proyecto de archivos Make](../ide/creating-a-makefile-project.md)   
  [Tipos de proyecto de Visual C++](../ide/visual-cpp-project-types.md)   
  [Crear proyectos de escritorio con asistentes para aplicaciones](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)   

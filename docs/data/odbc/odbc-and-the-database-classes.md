@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088472"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC y las clases de base de datos
 Las clases de base de datos ODBC de MFC encapsulan las llamadas a funciones API de ODBC que normalmente haría usted mismo en el miembro de las funciones de la [CDatabase](../../mfc/reference/cdatabase-class.md) y [CRecordset](../../mfc/reference/crecordset-class.md) clases. Por ejemplo, las secuencias de llamadas ODBC complejas, el enlace de registros devueltos a ubicaciones de almacenamiento, control de las condiciones de error y otras operaciones se administran automáticamente por las clases de base de datos. Como resultado, utilice una interfaz de clase bastante más sencilla para manipular registros mediante un objeto de conjunto de registros.  

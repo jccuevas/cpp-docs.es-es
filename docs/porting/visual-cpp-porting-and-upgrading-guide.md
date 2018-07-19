@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846602"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guía de migración y actualización de Visual C++
 Este tema proporciona a una guía para actualizar código de Visual C++. Esto incluye lograr que el código se compile y ejecute correctamente en una versión más reciente de las herramientas, así como sacar partido de las nuevas funciones de Visual Studio y del lenguaje. En este tema también se incluye información acerca de la migración de aplicaciones heredadas a plataformas más modernas.  

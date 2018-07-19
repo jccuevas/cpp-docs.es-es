@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882422"
 ---
 # <a name="hstringset-method"></a>HString::Set (Método)
 Establece el valor del objeto HString actual en la cadena de caracteres anchos especificada o el parámetro de HString.  

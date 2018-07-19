@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104492"
 ---
 # <a name="using-bookmarks"></a>Utilizar marcadores
 Antes de abrir el conjunto de filas, se debe indicar al proveedor que desea usar marcadores. Para ello, establezca la **DBPROP_BOOKMARKS** propiedad **true** en conjunto de sus propiedades. El proveedor recupera los marcadores como columna cero, por lo que debe usar la macro especial `BOOKMARK_ENTRY` y `CBookmark` clase si está utilizando un descriptor de acceso estático. `CBookmark` es una clase de plantilla donde el argumento es la longitud en bytes del búfer del marcador. La longitud del búfer necesario para un marcador depende del proveedor. Si está utilizando el proveedor OLE DB de ODBC, como se muestra en el ejemplo siguiente, el búfer debe ser de 4 bytes.  

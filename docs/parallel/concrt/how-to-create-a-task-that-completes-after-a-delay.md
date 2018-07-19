@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688416"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Cómo: Crear una tarea que se complete después de un retardo
 Este ejemplo muestra cómo utilizar el [Concurrency:: Task](../../parallel/concrt/reference/task-class.md), [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [Concurrency:: Timer](../../parallel/concrt/reference/timer-class.md), y [Concurrency:: call](../../parallel/concrt/reference/call-class.md) clases para crear una tarea que finaliza después de un retraso. Puede usar este método para crear bucles que ocasionalmente sondean en busca de datos, introducen los tiempos de espera, retrasar el control de entrada de usuario durante un tiempo predeterminado y así sucesivamente.  

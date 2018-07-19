@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057944"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 Genera cualquiera una `UWOP_SAVE_XMM128` o un `UWOP_SAVE_XMM128_FAR` desenredado entrada de código para el registro de registros de XMM especificado y utilizando el desplazamiento actual del prólogo de desplazamiento. MASM elegirá la codificación más eficaz.  

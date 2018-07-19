@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379931"
 ---
 # <a name="struct-runtimefunction"></a>RUNTIME_FUNCTION (Estructura)
 Control de excepciones basado en tabla requiere una entrada de la tabla para todas las funciones que asignan espacio de pila o llamar a otra función (por ejemplo, funciones de hoja). Entradas de la tabla de función tienen el formato:  

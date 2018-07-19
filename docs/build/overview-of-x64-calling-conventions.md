@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374913"
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Información general sobre las convenciones de llamada x64
 Dos diferencias importantes entre x86 y [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] son la capacidad de direccionamiento de 64 bits y un conjunto simple de 64 bits de 16 registros de uso general. Dado el registros ampliado conjunto, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] utiliza la [__fastcall](../cpp/fastcall.md) convención de llamada y un modelo de control de excepciones basado en RISC. El `__fastcall` convención usa registros para los cuatro primeros argumentos y el marco de pila para pasar argumentos adicionales.  

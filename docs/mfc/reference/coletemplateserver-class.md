@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ade76568f261c0e0320002d1a53ef1858c9509
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077983"
 ---
 # <a name="coletemplateserver-class"></a>Clase COleTemplateServer
 Se utiliza para servidores de edición visual OLE, servidores de automatización y contenedores de vínculos (aplicaciones que admiten vínculos con incrustaciones).  
@@ -95,13 +96,13 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `clsid`  
+ *CLSID*  
  Referencia al identificador de clase OLE que solicita la plantilla.  
   
- `pDocTemplate`  
+ *pDocTemplate*  
  Puntero a la plantilla de documento.  
   
- `bMultiInstance`  
+ *bMultiInstance al*  
  Indica si una sola instancia de la aplicación puede admitir varias creaciones de instancias. Si **TRUE**, varias instancias de la aplicación se inicien para que cada solicitud crear un objeto.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -132,7 +133,7 @@ void UpdateRegistry(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nAppType`  
+ *nAppType*  
  Un valor de la **OLE_APPTYPE** enumeración, que se define en AFXDISP. H. Puede tener uno de los siguientes valores:  
   
 - `OAT_INPLACE_SERVER` Servidor tiene interfaz de usuario completa del servidor.  
@@ -143,25 +144,25 @@ void UpdateRegistry(
   
 - `OAT_DISPATCH_OBJECT` Objeto es `IDispatch`-compatibles con.  
   
-- **OAT_DOC_OBJECT_SERVER** Server admite tanto incrustación y el modelo de componente de objetos de documento.  
+- `OAT_DOC_OBJECT_SERVER` Servidor admite tanto incrustación y el modelo de componente de objetos de documento.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  Una lista de entradas que se escribe en el registro sólo si no hay entradas.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  Una lista de entradas que se escribe en el registro independientemente de que existan las entradas anteriores.  
   
- `bRegister`  
- Determina si la clase se va a registrar. Si `bRegister` es **TRUE**, la clase se registra con el registro del sistema. En caso contrario, anula el registro de la clase.  
+ *bInscríbase al*  
+ Determina si la clase se va a registrar. Si *bInscríbase al* es **TRUE**, la clase se registra con el registro del sistema. En caso contrario, anula el registro de la clase.  
   
 ### <a name="remarks"></a>Comentarios  
  Se carga la información de registro mediante una llamada a [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Las subcadenas que se recuperan los identificados por los índices son **regFileTypeId**, **regFileTypeName**, y **fileNewName**, tal y como se describe en el `GetDocString` páginas de referencia.  
   
  Si el **regFileTypeId** subcadena está vacía o si la llamada a `GetDocString` se produce un error por cualquier otro motivo, esta función produce un error y no se especifica la información de archivo en el registro.  
   
- La información de los argumentos `rglpszRegister` y `rglpszOverwrite` se escribe en el registro mediante una llamada a [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). La información de forma predeterminada, que se registra cuando los dos argumentos son **NULL**, es adecuado para la mayoría de las aplicaciones. Para obtener información sobre la estructura de la información de estos argumentos, vea `AfxOleRegisterServerClass`.  
+ La información de los argumentos *rglpszRegister* y *rglpszOverwrite* se escribe en el registro mediante una llamada a [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). La información de forma predeterminada, que se registra cuando los dos argumentos son **NULL**, es adecuado para la mayoría de las aplicaciones. Para obtener información sobre la estructura de la información de estos argumentos, vea `AfxOleRegisterServerClass`.  
   
- Para obtener más información, consulta [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Para obtener más información, consulte [implementa la interfaz IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo HIERSVR](../../visual-cpp-samples.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: definir constructores de movimiento y operadores de asignación de movimiento (C++) | Documentos de Microsoft'
+title: 'Cómo: definir constructores de movimiento y operadores de asignación de movimiento (C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad5f54bc0366b0da9286631294a10f4904b7cb30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028156"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructores de movimiento y operadores de asignación de movimiento (C++)
-Este tema describe cómo escribir un *constructor de movimiento* y un operador de asignación de movimiento para una clase de C++. Un constructor de movimiento permite a los recursos que pertenecen a un objeto de valor r para pasarlos a un valor l sin necesidad de copiar. Para obtener más información acerca de la semántica de movimiento, consulte [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+Este tema describe cómo escribir un *constructor de movimiento* y un operador de asignación de movimiento para una clase de C++. Un constructor de movimiento permite a los recursos que pertenecen a un objeto de valor r para pasarlos a un valor l sin copiar. Para obtener más información acerca de la semántica de movimiento, consulte [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
  Este tema se basa en la siguiente clase de C++, `MemoryBlock`, que administra un búfer de memoria.  
   
@@ -225,7 +226,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo la semántica de transferencia de recursos puede mejorar el rendimiento de las aplicaciones. El ejemplo agrega dos elementos a un objeto vectorial y después inserta un nuevo elemento entre los dos existentes. La `vector` clase usa semántica para realizar la operación de inserción eficazmente moviendo los elementos del vector en lugar de copiarlos de movimiento.  
+ El ejemplo siguiente muestra cómo la semántica de transferencia de recursos puede mejorar el rendimiento de las aplicaciones. El ejemplo agrega dos elementos a un objeto vectorial y después inserta un nuevo elemento entre los dos existentes. La `vector` clase usa la semántica para realizar la operación de inserción eficazmente moviendo los elementos del vector en lugar de copiarlos de transferencia.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -270,7 +271,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Antes de Visual Studio 2010, este ejemplo produce el siguiente resultado:  
+ Antes de Visual Studio 2010, este ejemplo genera el siguiente resultado:  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -302,7 +303,8 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Si proporciona tanto un constructor de movimiento como un operador de asignación de movimiento para la clase, puede eliminar código redundante escribiendo el constructor de movimiento para llamar al operador de asignación de movimiento. En el ejemplo siguiente se muestra una versión revisada del constructor de movimiento que llama al operador de asignación de movimiento:  
   
-```  
+```cpp
+  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  
@@ -312,8 +314,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- El [std:: Move](../standard-library/utility-functions.md#move) función conserva la propiedad de valor r de la `other` parámetro.  
+ El [std:: Move](../standard-library/utility-functions.md#move) función conserva la propiedad rvalue del *otros* parámetro.  
   
 ## <a name="see-also"></a>Vea también  
  [Declarador de referencia rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<utilidad > mover](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [\<utilidad > mover](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

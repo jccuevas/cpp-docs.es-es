@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842236"
 ---
 # <a name="token-pasting-operator-"></a>Operador de pegado de token (##)
 El operador de signo de número doble o "pegado de token" (**##**), que a veces se denomina el operador "combinación", se utiliza en macros estilo funciones y de tipo de objeto. Permite que se unan tokens distintos en un solo token y, por tanto, no puede ser el primero ni el último token en la definición de macro.  

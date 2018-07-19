@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690412"
 ---
 # <a name="scheduler-policies"></a>Directivas de Scheduler
 Este documento describe el rol de las directivas del programador en el Runtime de simultaneidad. A *directiva de programador* controla la estrategia que el programador utiliza cuando administra tareas. Por ejemplo, considere una aplicación que requiere algunas tareas que se ejecutan en `THREAD_PRIORITY_NORMAL` y otras tareas que se ejecutan en `THREAD_PRIORITY_HIGHEST`.  Puede crear dos instancias del programador: uno que especifica la `ContextPriority` directiva sea `THREAD_PRIORITY_NORMAL` y otro que especifica la misma directiva para que sea `THREAD_PRIORITY_HIGHEST`.  

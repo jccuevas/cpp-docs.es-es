@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347833"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Excepciones: Liberar objetos en las excepciones
 Este artículo explica la necesidad y el método de liberar objetos cuando se produce una excepción. Entre los temas se incluyen los siguientes:  

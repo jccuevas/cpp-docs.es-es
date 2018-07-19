@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dd417872ab4009a9e0f6c06fc0958f5780de477
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954157"
 ---
 # <a name="ccmdui-class"></a>CCmdUI (clase)
 Solo se utiliza dentro un `ON_UPDATE_COMMAND_UI` controlador en un `CCmdTarget`-clase derivada.  
@@ -78,7 +79,7 @@ class CCmdUI
   
  Cuando un usuario de la aplicación extrae hacia abajo de un menú, cada necesidades de elemento de menú para saber si debe mostrarse como habilitado o deshabilitado. El destino de un comando de menú proporciona esta información mediante la implementación de un `ON_UPDATE_COMMAND_UI` controlador. Para cada uno de los objetos de interfaz de usuario de comandos de la aplicación, utilice la ventana Propiedades para crear un prototipo de entrada y la función de asignación de mensajes para cada controlador.  
   
- Cuando se extrae el menú, el marco de trabajo busca y llama a cada uno `ON_UPDATE_COMMAND_UI` controlador, llama a cada controlador `CCmdUI` funciones miembro como **habilitar** y **comprobar**y, a continuación, el marco de trabajo adecuadamente muestra cada elemento de menú.  
+ Cuando se extrae el menú, el marco de trabajo busca y llama a cada uno `ON_UPDATE_COMMAND_UI` controlador, llama a cada controlador `CCmdUI` funciones miembro como `Enable` y `Check`, y el marco de trabajo, a continuación, muestra correctamente cada elemento de menú.  
   
  Un elemento de menú puede reemplazarse con un botón de barra de control u otro objeto de interfaz de usuario de comando sin cambiar el código dentro de la `ON_UPDATE_COMMAND_UI` controlador.  
   
@@ -118,7 +119,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bOn`  
+ *Ben*  
  **TRUE** para habilitar el elemento **FALSE** para deshabilitarlo.  
   
 ### <a name="example"></a>Ejemplo  
@@ -158,7 +159,7 @@ CMenu* m_pSubMenu;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- **NULL** si el elemento no es un menú. Si el submenú es una ventana emergente, `m_nID` contiene el identificador del primer elemento del menú emergente. Para obtener más información, consulte [21 de nota técnica](../../mfc/tn021-command-and-message-routing.md).  
+ **NULL** si el elemento no es un menú. Si el submenú es una ventana emergente, *m_nID* contiene el identificador del primer elemento del menú emergente. Para obtener más información, consulte [21 de nota técnica](../../mfc/tn021-command-and-message-routing.md).  
   
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  Puntero (de tipo `CWnd`) para el objeto de ventana, como una barra de estado o la herramienta, que envía la notificación.  
@@ -178,7 +179,7 @@ virtual void SetCheck(int nCheck = 1);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nCheck`  
+ *nCompruebe*  
  Especifica el estado de verificación para establecer. Si se desactiva el 0, Si las comprobaciones de 1, y si es 2, Establece indeterminado.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -206,7 +207,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszText`  
+ *lpszText*  
  Un puntero a una cadena de texto.  
   
 ### <a name="example"></a>Ejemplo  

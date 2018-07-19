@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389876"
 ---
 # <a name="operator-newcrt"></a>operador new(CRT)
 A partir de Visual Studio 2013, el entorno de tiempo de ejecución de C de Windows Universal ya no admite las funciones operator new y operator delete de C++. Ahora forman parte de la biblioteca estándar de C++. Para obtener más información, vea [Operadores new y delete](../cpp/new-and-delete-operators.md) y [new operator](../cpp/new-operator-cpp.md) en la referencia del lenguaje C++. 

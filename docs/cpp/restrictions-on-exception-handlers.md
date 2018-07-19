@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420209"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Restricciones de los controladores de excepciones
 La limitación principal de usar los controladores de excepciones en el código es que no se puede utilizar una instrucción `goto` para saltar a un bloque de instrucciones `__try`. En su lugar, se debe especificar el bloque de instrucciones a través del flujo de control normal. Puede saltar fuera de un bloque de instrucciones `__try` y anidar los controladores de excepciones a su elección.  

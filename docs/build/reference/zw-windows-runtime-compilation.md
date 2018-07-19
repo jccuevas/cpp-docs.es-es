@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380071"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Compilación de Windows Runtime)
 Compila el código fuente para admitir [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) para la creación de aplicaciones de la plataforma Universal de Windows (UWP).  

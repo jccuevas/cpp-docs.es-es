@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106237"
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Modificar la herencia de RMyProviderRowset
 Para agregar el `IRowsetLocate` de la interfaz para el ejemplo de proveedor sencillo de sólo lectura, modifique la herencia de **RMyProviderRowset**. Inicialmente, **RMyProviderRowset** hereda de `CRowsetImpl`. Debe modificar que herede de **CRowsetBaseImpl**.  

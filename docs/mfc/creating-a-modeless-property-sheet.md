@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342727"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>Crear una hoja de propiedades no modal
 Normalmente, las hojas de propiedades que cree será modales. Cuando se utiliza una hoja de propiedades modal, el usuario debe cerrar la hoja de propiedades antes de usar cualquier otra parte de la aplicación. Este artículo describe métodos que puede usar para crear una hoja de propiedades no modal que permite al usuario mantener la hoja de propiedades abiertas durante el uso de otras partes de la aplicación.  

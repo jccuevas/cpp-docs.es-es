@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 037a6091f11ad12a8f4e46ccb837c48f1f9a685b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040852"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd (clase)
 Proporciona la funcionalidad de una ventana secundaria de la interfaz de múltiples documentos (MDI) de Windows, junto con los miembros para administrar la ventana.  
@@ -74,17 +75,17 @@ class CMDIChildWnd : public CFrameWnd
   
  Hay tres formas de crear una ventana secundaria MDI:  
   
--   Crear directamente mediante **crear**.  
+-   Crear directamente mediante `Create`.  
   
 -   Crear directamente mediante `LoadFrame`.  
   
 -   Crearlo indirectamente a través de una plantilla de documento.  
   
- Antes de llamar a **crear** o `LoadFrame`, debe crear el objeto de ventana de marco en el montón mediante C++ **nueva** operador. Antes de llamar a **crear** también se puede registrar una clase de ventana con la [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función global para establecer los estilos de icono y de clase para el marco.  
+ Antes de llamar a `Create` o `LoadFrame`, debe crear el objeto de ventana de marco en el montón mediante C++ **nueva** operador. Antes de llamar a `Create` también se puede registrar una clase de ventana con la [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función global para establecer los estilos de icono y de clase para el marco.  
   
- Use la **crear** función miembro para pasar parámetros de creación del marco inmediatas como argumentos.  
+ Use la `Create` función miembro para pasar parámetros de creación del marco inmediatas como argumentos.  
   
- `LoadFrame` requiere menos argumentos que **crear**y en su lugar recupera la mayoría de sus valores predeterminados de recursos, incluidos el título del marco, icono, tabla de aceleradores y menús. Para ser accesibles para `LoadFrame`, todos estos recursos deben tener el mismo identificador de recurso (por ejemplo, **IDR_MAINFRAME**).  
+ `LoadFrame` requiere menos argumentos que `Create`y en su lugar recupera la mayoría de sus valores predeterminados de recursos, incluidos el título del marco, icono, tabla de aceleradores y menús. Para ser accesibles para `LoadFrame`, todos estos recursos deben tener el mismo identificador de recurso (por ejemplo, **IDR_MAINFRAME**).  
   
  Cuando un `CMDIChildWnd` objeto contiene documentos y vistas, se crean indirectamente mediante el marco de trabajo en lugar de directamente por el programador. La `CDocTemplate` objeto Orquesta la creación del marco, la creación de las vistas que lo contiene y la conexión de las vistas al documento adecuado. Los parámetros de la `CDocTemplate` constructor especifica la `CRuntimeClass` de estas tres clases implicadas (documento, marco y ver). Un `CRuntimeClass` objeto se usa el marco de trabajo para crear de forma dinámica nuevos marcos al especificado por el usuario (por ejemplo, mediante el comando archivo nuevo o el comando MDI ventana nueva).  
   
@@ -141,22 +142,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszClassName`  
+ *lpszClassName*  
  Apunta a una cadena de caracteres terminada en null que designa la clase de Windows (un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estructura). El nombre de clase puede ser cualquier nombre registrado con el [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función global. Debe ser **NULL** para un estándar `CMDIChildWnd`.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Apunta a una cadena de caracteres terminada en null que representa el nombre de la ventana. Se utiliza como texto de la barra de título.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica la ventana [estilo](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributos. El **WS_CHILD** estilo es necesario.  
   
- `rect`  
+ *Rect*  
  Contiene el tamaño y la posición de la ventana. El `rectDefault` valor permite a Windows especificar el tamaño y la posición del nuevo `CMDIChildWnd`.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Especifica el elemento primario de la ventana. Si **NULL**, se utiliza la ventana de la aplicación principal.  
   
- `pContext`  
+ *pContext*  
  Especifica un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) estructura. Este parámetro puede ser **NULL**.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -165,7 +166,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Comentarios  
  La ventana de marco de secundario MDI activa actualmente puede determinar el título de la ventana de marco principal. Esta característica está deshabilitada si se desactiva la **FWS_ADDTOTITLE** bit de estilo de la ventana de marco secundarias.  
   
- El marco de trabajo llama a esta función miembro en respuesta a un comando de usuario para crear una ventana secundaria, y el marco de trabajo usa el `pContext` parámetro para conectarse correctamente la ventana secundaria a la aplicación. Cuando se llama a **crear**, `pContext` puede ser **NULL**.  
+ El marco de trabajo llama a esta función miembro en respuesta a un comando de usuario para crear una ventana secundaria, y el marco de trabajo usa el *pContext* parámetro para conectarse correctamente la ventana secundaria a la aplicación. Cuando se llama a `Create`, *pContext* puede ser **NULL**.  
   
 ### <a name="example"></a>Ejemplo  
  Ejemplo 1:  
@@ -254,10 +255,10 @@ void SetHandles(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hMenu`  
+ *hMenu*  
  El identificador de un recurso de menú.  
   
- `hAccel`  
+ *hAccel*  
  El identificador de un recurso de aceleradores.  
   
 ### <a name="remarks"></a>Comentarios  

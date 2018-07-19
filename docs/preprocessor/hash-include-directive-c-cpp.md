@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843553"
 ---
 # <a name="include-directive-cc"></a>#include (Directiva) (C/C++)
 Indica al preprocesador que trate el contenido de un archivo especificado como si apareciera en el programa de origen en el punto donde aparece la directiva.  

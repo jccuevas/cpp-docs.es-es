@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250679"
 ---
 # <a name="compiler-error-c2871"></a>Error del compilador C2871
 'name': no existe un espacio de nombres con este nombre  

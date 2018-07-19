@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235864"
 ---
 # <a name="compiler-error-c2663"></a>C2663 de Error del compilador
 'función': número sobrecargas no tienen conversiones válidas para el puntero 'this'  

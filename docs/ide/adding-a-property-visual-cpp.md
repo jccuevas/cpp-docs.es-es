@@ -1,5 +1,5 @@
 ---
-title: Agregar una propiedad (Visual C++) | Documentos de Microsoft
+title: Agregar una propiedad (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327585"
 ---
 # <a name="adding-a-property-visual-c"></a>Agregar una propiedad (Visual C++)
-Puede usar el [Asistente para agregar propiedades](../ide/names-add-property-wizard.md) para agregar un método a una interfaz en el proyecto.  
+Se puede usar el [Asistente para agregar propiedades](../ide/names-add-property-wizard.md) para agregar un método a una interfaz en el proyecto.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Para agregar una propiedad al objeto  
   
-1.  En [vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic en el nombre de la interfaz a la que desea agregar la propiedad.  
+1.  En la [Vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic con el botón derecho en la interfaz a la que quiera agregar la propiedad.  
   
     > [!NOTE]
-    >  También puede agregar propiedades a interfaces dispinterface, que, a menos que el proyecto tenga atributos, está anidado dentro del nodo de biblioteca.  
+    >  También puede agregar propiedades a interfaces dispinterface que, a menos que el proyecto tenga atributos, se anidan bajo el nodo de biblioteca.  
   
-2.  En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **Agregar propiedad**.  
+2.  En el menú contextual, haga clic en **Agregar** y después en **Agregar propiedad**.  
   
 3.  En el [Asistente para agregar propiedades](../ide/names-add-property-wizard.md), proporcione la información para crear la propiedad.  
   
-4.  Especifique cualquier configuración de idioma (IDL) de la definición de interfaz para la propiedad en el [atributos IDL](../ide/idl-attributes-add-property-wizard.md) página del asistente.  
+4.  Especifique cualquier configuración de lenguaje de definición de interfaz (IDL) para la propiedad en la página [Atributos IDL](../ide/idl-attributes-add-property-wizard.md) del asistente.  
   
-5.  Haga clic en **finalizar** para agregar la propiedad.  
+5.  Haga clic en **Finalizar** para agregar la propiedad.  
   
- El **obtener** y `Put` se muestran los métodos de la propiedad como dos iconos en vista de clases, bajo la interfaz donde se haya definido. Hacer doble clic en cualquiera de los iconos para ver la declaración de propiedad en el archivo IDL.  
+ Los métodos **Get** y `Put` de la propiedad se muestran como dos iconos en la Vista de clases, bajo la interfaz donde se haya definido. Puede hacer doble clic en cualquiera de los iconos para ver la declaración de propiedad en el archivo .idl.  
   
--   Para las interfaces ATL, la **obtener** y **colocar** funciones se agregan al archivo .cpp y archivo .h se agregan referencias a estas funciones.  
+-   Para las interfaces ATL, las funciones **Get** y **Put** se agregan al archivo .cpp, y las referencias a estas funciones se agregan al archivo .h.  
   
--   Para interfaces dispinterface MFC, si selecciona **variable miembro** como el tipo de implementación, un método y una variable se agregan a la clase que lo implementa. Si selecciona **métodos Get/Set** como el tipo de implementación, se agregan dos métodos a la clase que lo implementa.  
+-   Para las interfaces dispinterface de MFC, si selecciona **Variable miembro** como el tipo de implementación, se agregan un método y una variable a la clase que lo implementa. Si selecciona **Métodos Get/Set** como el tipo de implementación, se agregan dos métodos a la clase que lo implementa.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una interfaz COM](../ide/creating-a-com-interface-visual-cpp.md)   
  [Editar una interfaz COM](../ide/editing-a-com-interface.md)   
- [El modelo de objetos componentes](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [Punteros de interfaz e Interfaces](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [The Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)  (Modelo de objetos componentes (COM))  
+ [Interface Pointers and Interfaces](http://msdn.microsoft.com/library/windows/desktop/ms688484) (Punteros de interfaz e interfaces)

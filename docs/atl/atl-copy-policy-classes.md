@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358532"
 ---
 # <a name="atl-copy-policy-classes"></a>Clases de directiva de copia de ATL
 Las clases de directiva de copia son [las clases de utilidad](../atl/utility-classes.md) utilizado para inicializar, copiar y eliminar datos. Clases de directivas de copia permiten definir semánticas de copia para cualquier tipo de datos, así como definir conversiones entre tipos de datos diferentes.  

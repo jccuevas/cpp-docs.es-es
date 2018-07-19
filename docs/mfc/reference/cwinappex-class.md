@@ -128,11 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63882cd6ae167e78bc5e3cf509650ae3d84fd0ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdf57093ff1feeccc0f805bee197959dd4fb453b
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123076"
 ---
 # <a name="cwinappex-class"></a>Clase CWinAppEx
 `CWinAppEx` Controla el estado de la aplicación, guarda el estado en el registro, carga el estado del registro, inicializa los administradores de la aplicación y proporciona vínculos a esos mismos administradores de la aplicación.  
@@ -209,7 +210,7 @@ class CWinAppEx : public CWinApp
 |----------|-----------------|  
 |[CWinAppEx::LoadCustomState](#loadcustomstate)|Lo llama el marco cuando el estado de la aplicación se ha cargado.|  
 |[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|Llamado por el marco de trabajo cuando cargan el tamaño y la ubicación de la aplicación desde el registro. Los datos cargados incluyen el tamaño y la ubicación del marco principal en el momento de la aplicación se cerró por última vez.|  
-|[CWinAppEx::OnClosingMainFrame](#onclosingmainframe)|Lo llama el marco de trabajo cuando está procesando una ventana de marco principal `WM_CLOSE`.|  
+|[CWinAppEx::OnClosingMainFrame](#onclosingmainframe)|Llamado por el marco de trabajo cuando una ventana de marco principal está procesando WM_CLOSE.|  
 |[CWinAppEx::PreLoadState](#preloadstate)|Lo llama el marco inmediatamente antes de que se carga el estado de la aplicación.|  
 |[CWinAppEx::PreSaveState](#presavestate)|Lo llama el marco inmediatamente antes de que se guarda el estado de aplicación.|  
 |[CWinAppEx::ReloadWindowPlacement](#reloadwindowplacement)|Vuelve a cargar el tamaño y la ubicación de la ventana suministrada desde el registro|  
@@ -253,14 +254,14 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSectionName`  
+ [in] *lpszSectionName*  
  Una cadena que contiene una ruta de acceso de una clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el método se realizó correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método borra los datos de aplicación de una sección concreta del registro. Puede especificar la sección para borrar mediante el parámetro `lpszSectionName`. Si `lpszSectionName` es `NULL`, este método utilizará la ruta de acceso predeterminada del registro almacenado en la `CWinAppEx` objeto. Para obtener la ruta de acceso del registro, use [CWinAppEx::GetRegistryBase](#getregistrybase).  
+ Este método borra los datos de aplicación de una sección concreta del registro. Puede especificar la sección para borrar mediante el parámetro *lpszSectionName*. Si *lpszSectionName* es NULL, este método utilizará la ruta de acceso predeterminada del registro almacenado en la `CWinAppEx` objeto. Para obtener la ruta de acceso del registro, use [CWinAppEx::GetRegistryBase](#getregistrybase).  
   
 ##  <a name="cwinappex"></a>  CWinAppEx::CWinAppEx  
  Construye un objeto `CWinAppEx`.  
@@ -270,7 +271,7 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bResourceSmartUpdate`  
+ [in] *bResourceSmartUpdate*  
  Un parámetro booleano que especifica si el objeto de área de trabajo debe detectar y controlar las actualizaciones de recursos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -284,11 +285,11 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  Especifica si la aplicación carga el tamaño inicial y la ubicación de la ventana de marco principal desde el registro.  
   
 ### <a name="remarks"></a>Comentarios  
- De forma predeterminada, el tamaño y la ubicación del marco principal se cargan desde el registro junto con otras configuraciones de aplicaciones. Esto se produce durante la [CWinAppEx::LoadState](#loadstate). Si no desea cargar la selección de ubicación de la ventana inicial del registro, llame a este método con `bEnable` establecido en `false`.  
+ De forma predeterminada, el tamaño y la ubicación del marco principal se cargan desde el registro junto con otras configuraciones de aplicaciones. Esto se produce durante la [CWinAppEx::LoadState](#loadstate). Si no desea cargar la selección de ubicación de la ventana inicial del registro, llame a este método con *bHabilitar el* establecida en FALSE.  
   
 ##  <a name="enabletearoffmenus"></a>  CWinAppEx::EnableTearOffMenus  
  Crea e inicializa un [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) objeto.  
@@ -301,17 +302,17 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszRegEntry`  
+ [in] *lpszRegEntry*  
  Una cadena que contiene la ruta de acceso de una clave del registro. La aplicación utiliza esta clave del registro para almacenar información para los menús desplazable.  
   
- [in] `uiCmdFirst`  
+ [in] *uiCmdFirst*  
  Identificador de la primera desactivación fuera menú.  
   
- [in] `uiCmdLast`  
+ [in] *uiCmdLast*  
  Identificador de la última arrancar de menú.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `True` Si el `CMenuTearOffManager` se crea e inicializa correctamente; `false` si se produce un error o si el `CMenuTearOffManager` ya existe.  
+ TRUE si el `CMenuTearOffManager` se crea e inicializa correctamente; FALSE si se produce un error o si el `CMenuTearOffManager` ya existe.  
   
 ### <a name="remarks"></a>Comentarios  
  Use esta función para habilitar menús desplazable de la aplicación. Debería llamar a esta función desde `InitInstance`.  
@@ -330,31 +331,31 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiCmdToolsDummy`  
+ [in] *uiCmdToolsDummy*  
  Un entero sin signo que el marco de trabajo se utiliza como un marcador de posición para el identificador de comando del menú de herramientas de usuario.  
   
- [in] `uiCmdFirst`  
+ [in] *uiCmdFirst*  
  El identificador de comando para el primer comando de la herramienta de usuario.  
   
- [in] `uiCmdLast`  
+ [in] *uiCmdLast*  
  El identificador de comando en el último comando de la herramienta de usuario.  
   
- [in] `pToolRTC`  
+ [in] *pToolRTC*  
  Una clase que la `CUserToolsManager` objeto se usa para crear nuevas herramientas de usuario.  
   
- [in] `uArgMenuID`  
+ [in] *uArgMenuID*  
  El identificador del menú de argumento.  
   
- [in] `uInitDirMenuID`  
+ [in] *uInitDirMenuID*  
  El identificador del menú para el directorio inicial de herramienta.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el método crea e inicializa un `CUserToolsManager` objeto; `FALSE` si se produce un error en el método o si un `CUserToolsManager` objeto ya existe.  
+ TRUE si el método crea e inicializa un `CUserToolsManager` objeto; FALSE si se produce un error en el método o si un `CUserToolsManager` objeto ya existe.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando se habilita herramientas definidas por el usuario, el marco de trabajo admite automáticamente un menú dinámico que se pueden extender durante la personalización. El marco de trabajo asocia cada nuevo elemento a un comando externo. El marco de trabajo, estos comandos invoca cuando el usuario selecciona el elemento apropiado de la **herramientas** menú.  
   
- Cada vez que el usuario agrega un nuevo elemento, el marco de trabajo crea un nuevo objeto. El tipo de clase para el nuevo objeto se define mediante `pToolRTC`. El `pToolRTC` tipo de clase debe derivarse de la [CUserTool clase](../../mfc/reference/cusertool-class.md).  
+ Cada vez que el usuario agrega un nuevo elemento, el marco de trabajo crea un nuevo objeto. El tipo de clase para el nuevo objeto se define mediante *pToolRTC*. El *pToolRTC* tipo de clase debe derivarse de la [CUserTool clase](../../mfc/reference/cusertool-class.md).  
   
  Para obtener más información sobre las herramientas de usuario y cómo incorporarlos a su aplicación, consulte [herramientas definidas por el usuario](../../mfc/user-defined-tools.md).  
   
@@ -380,22 +381,22 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el nombre de una clave del registro.  
   
- [out] `ppData`  
+ [out] *ppData*  
  Un puntero al búfer que el método rellena con los datos binarios.  
   
- [out] `pBytes`  
+ [out] *pBytes*  
  Un puntero a un entero sin signo que el método se utiliza para escribir el número de bytes leídos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `True` Si se realiza correctamente; `false` en caso contrario.  
+ TRUE si se realiza correctamente; FALSE en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método lee datos binarios que se escribe en el registro. Para escribir datos en el registro, utilice los métodos [CWinAppEx::WriteBinary](#writebinary) y [CWinAppEx::WriteSectionBinary](#writesectionbinary).  
   
- El `lpszEntry` parámetro es el nombre de una entrada del registro que se encuentran en la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszEntry* parámetro es el nombre de una entrada del registro que se encuentran en la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
 ##  <a name="getcontextmenumanager"></a>  CWinAppEx::GetContextMenuManager  
  Devuelve un puntero a la plantilla global [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) objeto.  
@@ -451,19 +452,19 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el nombre de una entrada del registro.  
   
- [in] `nDefault`  
+ [in] *nDefault*  
  El valor predeterminado que el método devuelve si la entrada del registro especificada no existe.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Los datos del registro si el método se realizó correctamente; en caso contrario, `nDefault`.  
+ Los datos del registro si el método se realizó correctamente; en caso contrario, *nDefault*.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método lee datos enteros desde el registro. Si no hay ningún dato de entero asociado a la clave del Registro indicada por `lpszEntry`, este método devuelve `nDefault`. Para escribir datos en el registro, utilice los métodos [CWinAppEx::WriteSectionInt](#writesectionint) y [CWinAppEx::WriteInt](#writeint).  
+ Este método lee datos enteros desde el registro. Si no hay ningún dato de entero asociado a la clave del Registro indicada por *lpszEntry*, este método devuelve *nDefault*. Para escribir datos en el registro, utilice los métodos [CWinAppEx::WriteSectionInt](#writesectionint) y [CWinAppEx::WriteInt](#writeint).  
   
- El `lpszEntry` parámetro es el nombre de una entrada del registro que se encuentran en la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszEntry* parámetro es el nombre de una entrada del registro que se encuentran en la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
 ##  <a name="getkeyboardmanager"></a>  CWinAppEx::GetKeyboardManager  
  Devuelve un puntero a la plantilla global [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) objeto.  
@@ -501,10 +502,10 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene la ruta de acceso relativa de una entrada del registro.  
   
- [out] `obj`  
+ [out] *obj*  
  Una referencia a un `CObject`. El método usa esta referencia para almacenar los datos del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -513,7 +514,7 @@ BOOL GetObject(
 ### <a name="remarks"></a>Comentarios  
  Este método lee los datos del registro que se deriva de `CObject`. Para escribir `CObject` datos en el registro, use [CWinAppEx::WriteObject](#writeobject) o [CWinAppEx::WriteSectionObject](#writesectionobject).  
   
- El `lpszEntry` parámetro es el nombre de una entrada del registro que se encuentra en la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszEntry* parámetro es el nombre de una entrada del registro que se encuentra en la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
 ##  <a name="getregistrybase"></a>  CWinAppEx::GetRegistryBase  
  Recupera la ruta de acceso predeterminada del registro de la aplicación.  
@@ -536,14 +537,14 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `szSectionAdd`  
+ [in] *szSectionAdd*  
  Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un `CString` que contiene la ruta de acceso absoluta de una clave del registro.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método define la ruta de acceso absoluta de la clave del registro mediante la anexión de la ruta de acceso relativa en `szSectionAdd` a la ubicación del registro de forma predeterminada para la aplicación. Para obtener la clave del registro de forma predeterminada, use el método [CWinAppEx::GetRegistryBase](#getregistrybase).  
+ Este método define la ruta de acceso absoluta de la clave del registro mediante la anexión de la ruta de acceso relativa en *szSectionAdd* a la ubicación del registro de forma predeterminada para la aplicación. Para obtener la clave del registro de forma predeterminada, use el método [CWinAppEx::GetRegistryBase](#getregistrybase).  
   
 ##  <a name="getsectionbinary"></a>  CWinAppEx::GetSectionBinary  
  Lee datos binarios desde el registro.  
@@ -557,25 +558,25 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el valor para leer.  
   
- [out] `ppData`  
+ [out] *ppData*  
  Un puntero al búfer donde el método almacena los datos.  
   
- [out] `pBytes`  
- Un puntero a un entero sin signo. El método escribe el tamaño de `ppData` para este parámetro.  
+ [out] *pBytes*  
+ Un puntero a un entero sin signo. El método escribe el tamaño de *ppData* para este parámetro.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `True` si es correcto; en caso contrario, `false`.  
+ TRUE si es correcto; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método lee los datos binarios que se escriben en el registro mediante los métodos [CWinAppEx::WriteBinary](#writebinary) y [CWinAppEx::WriteSectionBinary](#writesectionbinary).  
   
- El `lpszSubSection` parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszSubSection* parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
 ##  <a name="getsectionint"></a>  CWinAppEx::GetSectionInt  
  Lee datos enteros desde el registro.  
@@ -588,22 +589,22 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el valor para leer.  
   
- [in] `nDefault`  
+ [in] *nDefault*  
  El valor predeterminado para devolver si el valor especificado no existe.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Los datos de enteros que se almacenan en el valor del registro especificada; `nDefault` si los datos no existen.  
+ Los datos de enteros que se almacenan en el valor del registro especificada; *nDefault* si los datos no existen.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice los métodos [CWinAppEx::WriteInt](#writeint) y [CWinAppEx::WriteSectionInt](#writesectionint) para escribir datos enteros en el registro.  
   
- El `lpszSubSection` parámetro no es una ruta de acceso absoluta de una entrada del registro. Es una ruta de acceso relativa a la que se agrega al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszSubSection* parámetro no es una ruta de acceso absoluta de una entrada del registro. Es una ruta de acceso relativa a la que se agrega al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
 ##  <a name="getsectionobject"></a>  CWinAppEx::GetSectionObject  
  Lee [CObject](../../mfc/reference/cobject-class.md) datos del registro desde el registro.  
@@ -616,13 +617,13 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el valor para leer.  
   
- [out] `obj`  
+ [out] *obj*  
  Una referencia a un `CObject`. Use el método `CObject` para almacenar los datos del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -631,7 +632,7 @@ BOOL GetSectionObject(
 ### <a name="remarks"></a>Comentarios  
  Este método lee los datos del registro. Los datos de lectura es `CObject` datos o datos para una clase derivada de `CObject`. Para escribir `CObject` datos en el registro, use [CWinAppEx::WriteObject](#writeobject) o [CWinAppEx::WriteSectionObject](#writesectionobject).  
   
- El `lpszSubSection` parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszSubSection* parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
 ##  <a name="getsectionstring"></a>  CWinAppEx::GetSectionString  
  Lee datos desde el registro de cadena.  
@@ -644,22 +645,22 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el valor para leer.  
   
- [in] `lpszDefault`  
+ [in] *lpszDefault*  
  El valor predeterminado para devolver si el valor especificado no existe.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Los datos de cadena almacenados en el valor del registro especificada, si los datos no existen; en caso contrario, `lpszDefault`.  
+ Los datos de cadena almacenados en el valor del registro especificada, si los datos no existen; en caso contrario, *lpszDefault*.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método lee los datos de cadena que se escribe en el registro. Use [CWinAppEx::WriteString](#writestring) y [CWinAppEx::WriteSectionString](#writesectionstring) para escribir datos de cadena en el registro.  
   
- El `lpszSubSection` parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszSubSection* parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
 ##  <a name="getshellmanager"></a>  CWinAppEx::GetShellManager  
  Devuelve un puntero a la plantilla global [CShellManager](../../mfc/reference/cshellmanager-class.md) objeto.  
@@ -684,19 +685,19 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el nombre de una clave del registro  
   
- [in] `lpzDefault`  
+ [in] *lpzDefault*  
  El valor predeterminado que el método devuelve si la entrada del registro especificada no existe.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Los datos de la cadena almacenados en el registro si se realiza correctamente; `lpszDefault` en caso contrario.  
+ Los datos de la cadena almacenados en el registro si se realiza correctamente; *lpszDefault* en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método lee los datos de cadena que se escribe en el registro. Para escribir datos en el registro, utilice los métodos [CWinAppEx::WriteString](#writestring) o [CWinAppEx::WriteSectionString](#writesectionstring).  
   
- El `lpszEntry` parámetro es el nombre de una entrada del registro que se encuentran en la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszEntry* parámetro es el nombre de una entrada del registro que se encuentran en la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
 ##  <a name="gettooltipmanager"></a>  CWinAppEx::GetTooltipManager  
  Devuelve un puntero a la plantilla global [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) objeto.  
@@ -719,7 +720,7 @@ CUserToolsManager* GetUserToolsManager();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la plantilla global `CUserToolsManager` objeto; `NULL` si las herramientas de administración de usuario no está habilitada para la aplicación.  
+ Un puntero a la plantilla global `CUserToolsManager` objeto; NULL si el usuario herramientas de administración no está habilitada para la aplicación.  
   
 ### <a name="remarks"></a>Comentarios  
  Antes de recuperar un puntero a la `CUserToolsManager` objeto, debe inicializar el administrador mediante una llamada a [CWinAppEx::EnableUserTools](#enableusertools).  
@@ -818,7 +819,7 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSectionName`  
+ [in] *lpszSectionName*  
  Una cadena que contiene una ruta de acceso de una clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -861,13 +862,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pFrame`  
+ [in] *pFrame*  
  Un puntero a un objeto de ventana de marco. El método aplica a la información de estado en el registro a esta ventana de marco.  
   
- [in] `lpszSectionName`  
+ [in] *lpszSectionName*  
  Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
- [in] `pFrameImpl`  
+ [in] *pFrameImpl*  
  Un puntero a un `CFrameImpl` objeto. El método aplica a la información de estado en el registro a esta ventana de marco.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -878,7 +879,7 @@ virtual BOOL LoadState(
   
  La implementación predeterminada de `CFrameImpl::OnLoadFrame` llamadas `LoadState`.  
   
- El `lpszSectionName` parámetro no es la ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se agrega al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszSectionName* parámetro no es la ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se agrega al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
 ##  <a name="loadwindowplacement"></a>  CWinAppEx::LoadWindowPlacement  
  Llamado por el marco de trabajo cuando cargan el tamaño y la ubicación de la ventana de marco principal desde el registro.  
@@ -891,13 +892,13 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `rectNormalPosition`  
+ [out] *rectNormalPosition*  
  Un rectángulo que contiene las coordenadas de la ventana de marco principal cuando se encuentra en la posición restaurada.  
   
- [out] `nFlags`  
+ [out] *nFlags*  
  Marcas que controlan la posición de la ventana minimizada y cómo el sistema operativo cambia entre una ventana minimizada y una ventana restaurada.  
   
- [out] `nShowCmd`  
+ [out] *nShowCmd*  
  Un entero que especifica el estado de visualización de la ventana. Para obtener más información sobre los valores posibles, vea [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -928,28 +929,28 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndControl`  
+ [in] *pWndControl*  
  Un puntero a un objeto de ventana para el que el usuario invoca la Ayuda contextual.  
   
- [in] `dwHelpIDArray[]`  
+ [in] *dwHelpIDArray]*  
  Un valor reservado.  
   
 ### <a name="remarks"></a>Comentarios  
  Actualmente, este método está reservado para un uso futuro. La implementación predeterminada no hace nada y actualmente no se llama el marco de trabajo.  
   
 ##  <a name="onclosingmainframe"></a>  CWinAppEx::OnClosingMainFrame  
- El marco de trabajo llama a este método cuando se está procesando una ventana de marco `WM_CLOSE`.  
+ El marco de trabajo llama a este método cuando una ventana de marco está procesando WM_CLOSE.  
   
 ```  
 virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pFrameImpl`  
+ [in] *pFrameImpl*  
  Un puntero a un `CFrameImpl` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de este método guarda el estado de `pFrameImpl`.  
+ La implementación predeterminada de este método guarda el estado de *pFrameImpl*.  
   
 ##  <a name="onviewdoubleclick"></a>  CWinAppEx::OnViewDoubleClick  
  Llame al comando definido por el usuario que está asociado a una vista cuando el usuario hace doble clic en cualquier lugar dentro de esa vista.  
@@ -961,17 +962,17 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWnd`  
+ [in] *pWnd*  
  Un puntero a un objeto derivado de la [CView (clase)](../../mfc/reference/cview-class.md).  
   
- [in] `iViewId`  
+ [in] *iViewId*  
  El identificador de la vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `True` Si el marco de trabajo busca un comando; lo contrario, false.  
+ TRUE si el marco de trabajo busca un comando; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Para admitir el comportamiento personalizado del mouse, debe llamar a esta función cuando se procesa el `WM_LBUTTONDBLCLK` mensaje. Este método ejecutará el comando asociado con el Id. de vista proporcionado por `iViewId`. Para obtener más información acerca del comportamiento del mouse personalizados, consulte [personalización del teclado y mouse (ratón)](../../mfc/keyboard-and-mouse-customization.md).  
+ Para admitir el comportamiento de mouse personalizado, debe llamar a esta función cuando se procesa el mensaje WM_LBUTTONDBLCLK. Este método ejecutará el comando asociado con el Id. de vista proporcionado por *iViewId*. Para obtener más información acerca del comportamiento del mouse personalizados, consulte [personalización del teclado y mouse (ratón)](../../mfc/keyboard-and-mouse-customization.md).  
   
 ##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle  
 
@@ -981,7 +982,7 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `CWnd*`  
+ [in] *CWnd&#38;*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -1015,7 +1016,7 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pFrame`  
+ [in] *pFrame*  
  Un puntero a una ventana de marco.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1059,22 +1060,22 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSectionName`  
+ [in] *lpszSectionName*  
  Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
- [in] `pFrameImpl`  
+ [in] *pFrameImpl*  
  Un puntero a un `CFrameImpl` objeto. Este marco se guarda en el registro de Windows.  
   
- [in] `pFrame`  
+ [in] *pFrame*  
  Un puntero a un objeto de ventana de marco. Este marco se guarda en el registro de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `True` Si se realiza correctamente; `false` en caso contrario.  
+ TRUE si se realiza correctamente; FALSE en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método guarda el estado de la aplicación y cualquier información de estado de la ventana de marco proporcionado. Si no proporciona una ventana de marco, el método solo guarda el estado de la aplicación. La información de la aplicación incluye el estado de la [CMouseManager clase](../../mfc/reference/cmousemanager-class.md), [CContextMenuManager clase](../../mfc/reference/ccontextmenumanager-class.md), [CKeyboardManager clase](../../mfc/reference/ckeyboardmanager-class.md)y el [ Clase CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md).  
   
- El `lpszSectionName` parámetro no es la ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszSectionName* parámetro no es la ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
 ##  <a name="setregistrybase"></a>  CWinAppEx::SetRegistryBase  
  Establece la ruta de acceso predeterminada del registro de la aplicación.  
@@ -1084,7 +1085,7 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSectionName`  
+ [in] *lpszSectionName*  
  Una cadena que contiene la ruta de acceso de una clave del registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1104,20 +1105,20 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiMenuResId`  
+ [in] *uiMenuResId*  
  Un identificador de recurso de menú.  
   
- [in] `point`  
+ [in] *punto*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica la posición del menú en coordenadas de pantalla.  
   
- [in] `pWnd`  
+ [in] *pWnd*  
  Un puntero a la ventana que posee el menú emergente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el menú emergente se muestra correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método muestra el menú asociado `uiMenuResId`.  
+ Este método muestra el menú asociado *uiMenuResId*.  
   
  Para admitir los menús emergentes, debe tener un [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) objeto. Si no ha inicializado la `CContextMenuManager` objeto, `ShowPopupMenu` se producirá un error.  
   
@@ -1132,13 +1133,13 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nFlags`  
+ [in] *nFlags*  
  Marcas que controlan la posición de la ventana minimizada y cómo el sistema operativo cambia entre una ventana minimizada y una ventana restaurada.  
   
- [in] `nShowCmd`  
+ [in] *nShowCmd*  
  Un entero que especifica el estado de visualización de la ventana. Para obtener más información sobre los valores posibles, vea [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
- [in] `rectNormalPosition`  
+ [in] *rectNormalPosition*  
  Un rectángulo que contiene las coordenadas de la ventana de marco principal cuando se encuentra en el estado restaurado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1160,22 +1161,22 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el nombre de una clave del registro.  
   
- [in] `pData`  
+ [in] *pData*  
  Los datos para almacenar.  
   
- [in] `nBytes`  
- El tamaño de `pData` en bytes.  
+ [in] *nBytes*  
+ El tamaño de *pData* en bytes.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este método se realiza correctamente; en caso contrario, `FALSE`.  
+ TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El `lpszEntry` parámetro es el nombre de una entrada del registro que se encuentra en la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszEntry* parámetro es el nombre de una entrada del registro que se encuentra en la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
- Si la clave especificada por `lpszEntry` no existe, este método lo creará.  
+ Si la clave especificada por *lpszEntry* no existe, este método lo creará.  
   
 ##  <a name="writeint"></a>  CWinAppEx::WriteInt  
  Escribe datos numéricos en el registro.  
@@ -1187,19 +1188,19 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el nombre de una clave del registro.  
   
- [in] `nValue`  
+ [in] *nvalor*  
  Los datos para almacenar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este método se realiza correctamente; en caso contrario, `FALSE`.  
+ TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El `lpszEntry` parámetro es el nombre de una entrada del registro que se encuentran en la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszEntry* parámetro es el nombre de una entrada del registro que se encuentran en la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
- Si la clave especificada por `lpszEntry` no existe, este método lo creará.  
+ Si la clave especificada por *lpszEntry* no existe, este método lo creará.  
   
 ##  <a name="writeobject"></a>  CWinAppEx::WriteObject  
  Escribe datos derivados de la [CObject (clase)](../../mfc/reference/cobject-class.md) en el registro.  
@@ -1211,17 +1212,17 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el valor que se va a establecer.  
   
- [in] `obj`  
+ [in] *obj*  
  Una referencia a `CObject` datos que almacenará el método.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este método se realiza correctamente; en caso contrario, `FALSE`.  
+ TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método escribe el `obj` datos en el valor especificado en la clave del registro de forma predeterminada. Use [CWinAppEx::GetRegistryBase](#getregistrybase) para determinar la clave del registro actual.  
+ Este método escribe el *obj* datos en el valor especificado en la clave del registro de forma predeterminada. Use [CWinAppEx::GetRegistryBase](#getregistrybase) para determinar la clave del registro actual.  
   
 ##  <a name="writesectionbinary"></a>  CWinAppEx::WriteSectionBinary  
  Escribe datos binarios en un valor en el registro.  
@@ -1235,25 +1236,25 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Una cadena que contiene el nombre de una clave del registro  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el valor que se va a establecer.  
   
- [in] `pData`  
+ [in] *pData*  
  Los datos para escribir en el registro.  
   
- [in] `nBytes`  
- El tamaño de `pData` en bytes.  
+ [in] *nBytes*  
+ El tamaño de *pData* en bytes.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este método se realiza correctamente; en caso contrario, `FALSE`.  
+ TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El `lpszSubSection` parámetro no es la ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszSubSection* parámetro no es la ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
- Si la clave especificada por `lpszEntry` no existe, este método lo creará.  
+ Si la clave especificada por *lpszEntry* no existe, este método lo creará.  
   
 ##  <a name="writesectionint"></a>  CWinAppEx::WriteSectionInt  
  Escribe datos numéricos en el registro.  
@@ -1266,22 +1267,22 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Una cadena que contiene la ruta de acceso relativa de una clave del registro.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el valor que se va a establecer.  
   
- [in] `nValue`  
+ [in] *nvalor*  
  Los datos para escribir en el registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este método se realiza correctamente; en caso contrario, `FALSE`.  
+ TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El `lpszSubSection` parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa a la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszSubSection* parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa a la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
- Si la clave especificada por `lpszEntry` no existe, este método lo creará.  
+ Si la clave especificada por *lpszEntry* no existe, este método lo creará.  
   
 ##  <a name="writesectionobject"></a>  CWinAppEx::WriteSectionObject  
  Escribe datos derivados de la [CObject (clase)](../../mfc/reference/cobject-class.md) a un valor del Registro específica.  
@@ -1294,22 +1295,22 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Una cadena que contiene el nombre de una clave del registro.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el nombre del valor que se va a establecer.  
   
- [in] `obj`  
+ [in] *obj*  
  Los datos para almacenar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este método se realiza correctamente; en caso contrario, `FALSE`.  
+ TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El `lpszSubSection` parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase), respectivamente.  
+ El *lpszSubSection* parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase), respectivamente.  
   
- Si el valor especificado por `lpszEntry` no existe en la clave del registro especificada por `lpszSubSection`, este método creará ese valor.  
+ Si el valor especificado por *lpszEntry* no existe en la clave del registro especificada por *lpszSubSection*, este método creará ese valor.  
   
 ##  <a name="writesectionstring"></a>  CWinAppEx::WriteSectionString  
  Escribe los datos de cadena en un valor en el registro.  
@@ -1322,22 +1323,22 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Una cadena que contiene el nombre de una clave del registro.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el valor que se va a establecer.  
   
- [in] `lpszValue`  
+ [in] *lpszValue*  
  Los datos de cadena para escribir en el registro.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este método se realiza correctamente; en caso contrario, `FALSE`.  
+ TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El `lpszSubSection` parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase), respectivamente.  
+ El *lpszSubSection* parámetro no es una ruta de acceso absoluta para una entrada del registro. Es una ruta de acceso relativa a la que se anexa al final de la clave del registro de forma predeterminada para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase), respectivamente.  
   
- Si el valor especificado por `lpszEntry` no existe en `lpszSubSection`, este método lo creará.  
+ Si el valor especificado por *lpszEntry* no existe en *lpszSubSection*, este método lo creará.  
   
 ##  <a name="writestring"></a>  CWinAppEx::WriteString  
  Escribe los datos de cadena en el registro.  
@@ -1349,19 +1350,19 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Una cadena que contiene el nombre de una clave del registro.  
   
- [in] `lpszValue`  
+ [in] *lpszValue*  
  Los datos para almacenar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este método se realiza correctamente; en caso contrario, `FALSE`.  
+ TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- El `lpszEntry` parámetro es el nombre de una entrada del registro que se encuentran en la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
+ El *lpszEntry* parámetro es el nombre de una entrada del registro que se encuentran en la clave de registro predeterminado para la aplicación. Para obtener o establecer la clave del registro de forma predeterminada, use los métodos [CWinAppEx::GetRegistryBase](#getregistrybase) y [CWinAppEx::SetRegistryBase](#setregistrybase) respectivamente.  
   
- Si la clave especificada por `lspzEntry` no existe, este método lo creará.  
+ Si la clave especificada por *lspzEntry* no existe, este método lo creará.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

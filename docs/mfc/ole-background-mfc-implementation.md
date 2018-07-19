@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 124bec9bfdbdc4e39bab71a80f77d7a06d8444a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d77d603c198adad2ca2c827c355ff8f6808bff66
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930331"
 ---
 # <a name="ole-background-mfc-implementation"></a>Nociones de OLE: Implementación de MFC
 Debido al tamaño y complejidad de la API básica de OLE, llamarla directamente para programar aplicaciones OLE puede ser muy lento. El objetivo de la implementación de la biblioteca Microsoft Foundation Class de OLE es reducir la cantidad de trabajo que tiene que hacer para escribir aplicaciones compatibles con OLE, completa.  
@@ -42,10 +43,10 @@ Debido al tamaño y complejidad de la API básica de OLE, llamarla directamente 
  El `IMoniker` interfaz está implementada por la biblioteca de clases (por ejemplo, el `COleServerItem` clase), pero no se ha expuesto previamente al programador. Para obtener más información acerca de esta interfaz, vea OLE Moniker implementaciones en la sección OLE del SDK de Windows. Sin embargo, también vea clase [CMonikerFile](../mfc/reference/cmonikerfile-class.md) y [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
   
  Interfaces IUnknown e IMarshal  
- El **IUnknown** interfaz está implementada por la biblioteca de clases, pero no se expone al programador. El **IMarshal** interfaz no está implementada por la biblioteca de clases, pero se usa internamente. Servidores de automatización creados con la biblioteca de clases ya tienen funciones integradas el cálculo de referencias.  
+ El `IUnknown` interfaz está implementada por la biblioteca de clases, pero no se expone al programador. El `IMarshal` interfaz no está implementada por la biblioteca de clases, pero se usa internamente. Servidores de automatización creados con la biblioteca de clases ya tienen funciones integradas el cálculo de referencias.  
   
  Docfiles (archivos compuestos)  
- Archivos compuestos parcialmente son compatibles con la biblioteca de clases. Ninguna de las funciones que manipulan directamente archivos compuestos más allá de creación se admiten. MFC utiliza la clase **COleFileStream** para admitir la manipulación de secuencias con funciones estándar de archivo. Para obtener más información, vea el artículo [contenedores: archivos compuestos](../mfc/containers-compound-files.md).  
+ Archivos compuestos parcialmente son compatibles con la biblioteca de clases. Ninguna de las funciones que manipulan directamente archivos compuestos más allá de creación se admiten. MFC utiliza la clase `COleFileStream` para admitir la manipulación de secuencias con funciones estándar de archivo. Para obtener más información, vea el artículo [contenedores: archivos compuestos](../mfc/containers-compound-files.md).  
   
  Servidores en proceso y controladores de objeto  
  Servidores en proceso y controladores de objeto permiten la implementación de edición visual de datos u objetos de modelo de objetos componentes (COM) completo en una biblioteca de vínculos dinámicos (DLL). Para ello, puede implementar el archivo DLL mediante una llamada a la API de OLE directamente. Sin embargo, si está escribiendo un servidor de automatización y el servidor no tiene ninguna interfaz de usuario, puede usar el Asistente para aplicaciones para convertir al servidor en un servidor en proceso y colocarlo en un archivo DLL. Para obtener más información acerca de estos temas, consulte [servidores de automatización](../mfc/automation-servers.md).  

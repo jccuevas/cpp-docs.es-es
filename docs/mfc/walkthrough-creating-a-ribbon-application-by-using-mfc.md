@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f715830c110f03811202d2e98dc097bfe712208
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b1dada4601b7e20dd4e05af861d48099ce2391c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950985"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Tutorial: Crear una aplicación de cinta usando MFC
 Este tutorial muestra cómo utilizar el **Asistente para aplicaciones MFC** para crear una aplicación que tiene una cinta de opciones de forma predeterminada. A continuación, puede expandir la cinta de opciones mediante la adición de un **personalizado** categoría de cinta de opciones que tiene un **favoritos** el panel y, a continuación, agregar algunos comandos en el panel de uso frecuente de la cinta de opciones.  
@@ -31,7 +32,7 @@ Este tutorial muestra cómo utilizar el **Asistente para aplicaciones MFC** para
   
 1.  Use la **Asistente para aplicaciones MFC** para crear una aplicación MFC que tiene una cinta de opciones. Para ejecutar el asistente, en la **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto**.  
   
-2.  En el **nuevo proyecto** cuadro de diálogo, expanda el **Visual C++** nodo bajo **plantillas instaladas**, seleccione **MFC**y, a continuación, seleccione  **Aplicación MFC**. Escriba un nombre para el proyecto, por ejemplo, `MFCRibbonApp`y, a continuación, haga clic en **Aceptar**.  
+2.  En el **nuevo proyecto** cuadro de diálogo, expanda el **Visual C++** nodo bajo **plantillas instaladas**, seleccione **MFC**y, a continuación, seleccione  **Aplicación MFC**. Escriba un nombre para el proyecto, por ejemplo, *MFCRibbonApp*y, a continuación, haga clic en **Aceptar**.  
   
 3.  En la primera página de la **Asistente para aplicaciones MFC**, haga clic en **siguiente**.  
   
@@ -39,7 +40,7 @@ Este tutorial muestra cómo utilizar el **Asistente para aplicaciones MFC** para
   
 5.  En el **compatibilidad con documentos compuestos** página, asegúrese de que **ninguno** está seleccionada y, a continuación, haga clic en **siguiente**.  
   
-6.  En el **propiedades de la plantilla de documento** página, en la **la extensión de archivo** , escriba una extensión de nombre de archivo para los documentos que crea esta aplicación, por ejemplo, `mfcrbnapp`. Haga clic en **Siguiente**.  
+6.  En el **propiedades de la plantilla de documento** página, en la **la extensión de archivo** , escriba una extensión de nombre de archivo para los documentos que crea esta aplicación, por ejemplo, *mfcrbnapp*. Haga clic en **Siguiente**.  
   
 7.  En el **compatibilidad de base de datos** página, asegúrese de que **ninguno** está seleccionada y, a continuación, haga clic en **siguiente**.  
   
@@ -61,14 +62,14 @@ Este tutorial muestra cómo utilizar el **Asistente para aplicaciones MFC** para
   
      Una categoría que tiene el título **Category1** se crea. De forma predeterminada, la categoría contiene un panel.  
   
-     Haga clic en **Category1** y, a continuación, haga clic en **propiedades**. En el **propiedades** ventana, cambio **título** a `Custom`.  
+     Haga clic en **Category1** y, a continuación, haga clic en **propiedades**. En el **propiedades** ventana, cambio **título** a *personalizado*.  
   
      El **Large Images** y **imágenes pequeñas** propiedades especifican los mapas de bits que se utilizan como iconos para los elementos de la cinta de opciones en esta categoría. Dado que la creación de mapas de bits personalizados está fuera del ámbito de este tutorial, simplemente reutilice los mapas de bits creados por el asistente. Los mapas de bits pequeños son de 16 por 16 píxeles. Para las imágenes pequeñas, utilice los mapas de bits a los que se tiene acceso mediante el identificador de recursos IDB_FILESMALL. Los mapas de bits grandes son de 32 por 32 píxeles. Para las imágenes grandes, utilice los mapas de bits a los que se tiene acceso mediante el identificador de recursos IDB_FILELARGE.  
   
     > [!NOTE]
     >  En las pantallas HDPI (Gran número de puntos por pulgada), se usan automáticamente las versiones HDPI de las imágenes.  
   
-3.  A continuación, personalice el panel. Los paneles se usan para agrupar los elementos que se relacionan lógicamente entre sí. Por ejemplo, en la **inicio** ficha de esta aplicación, el **cortar**, **copia**, y **pegar** comandos se encuentran en el  **Portapapeles** panel. Para personalizar el panel, haga clic en **Panel1** y, a continuación, haga clic en **propiedades**. En el **propiedades** ventana, cambio **título** a `Favorites`.  
+3.  A continuación, personalice el panel. Los paneles se usan para agrupar los elementos que se relacionan lógicamente entre sí. Por ejemplo, en la **inicio** ficha de esta aplicación, el **cortar**, **copia**, y **pegar** comandos se encuentran en el  **Portapapeles** panel. Para personalizar el panel, haga clic en **Panel1** y, a continuación, haga clic en **propiedades**. En el **propiedades** ventana, cambio **título** a *favoritos*.  
   
      Puede especificar el **índice de imagen** para el panel. Este número especifica el icono que se muestra si el panel de la cinta se agrega a la **la barra de herramientas de acceso rápido**. El icono no aparece en el propio panel de la cinta.  
   
@@ -82,9 +83,9 @@ Este tutorial muestra cómo utilizar el **Asistente para aplicaciones MFC** para
   
      Para crear el **impresión** botón, arrastre una herramienta de botón al panel.  
   
-     En el **propiedades** ventana, cambiar la **Id. de** propiedad **ID_FILE_PRINT**, que ya debe estar definida. Cambio **título** a `Print`. Cambio **imagen índice** a `4`.  
+     En el **propiedades** ventana, cambiar la **Id. de** propiedad **ID_FILE_PRINT**, que ya debe estar definida. Cambio **título** a *impresión*. Cambio **imagen índice** a *4*.  
   
-     Para crear el **impresión rápida** botón, haga clic en la columna de valor de propiedad junto a **elementos de menú**y, a continuación, haga clic en el botón de puntos suspensivos (**...** ). En el **Editor de elementos**, haga clic en el sin etiqueta **agregar** botón para crear un elemento de menú. En el **propiedades** ventana, cambio **título** a `Quick Print`, **Id. de** a `ID_FILE_PRINT_DIRECT`, y **imagen** a `5` . La propiedad Image especifica el icono de impresión rápida en el recurso de mapa de bits IDB_FILESMALL.  
+     Para crear el **impresión rápida** botón, haga clic en la columna de valor de propiedad junto a **elementos de menú**y, a continuación, haga clic en el botón de puntos suspensivos (**...** ). En el **Editor de elementos**, haga clic en el sin etiqueta **agregar** botón para crear un elemento de menú. En el **propiedades** ventana, cambio **título** a *impresión rápida*, **identificador** a *ID_FILE_PRINT_DIRECT*, y **imagen** a *5*. La propiedad Image especifica el icono de impresión rápida en el recurso de mapa de bits IDB_FILESMALL.  
   
 3.  Para comprobar que los botones se agregaron al panel de la cinta, compile la aplicación y ejecútela. Para compilar la aplicación, en la **generar** menú, haga clic en **generar solución**. Si la aplicación se compila correctamente, ejecute la aplicación haciendo clic en **Iniciar depuración** en el **depurar** menú. El **impresión** botón y el cuadro combinado en el **favoritos** panel en el **personalizado** se debe mostrar la ficha en la cinta de opciones.  
   

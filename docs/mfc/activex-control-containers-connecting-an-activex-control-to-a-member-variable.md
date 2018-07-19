@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a2b6a5ab17db7b512f1f44d2eda68169d71645
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3aa243ab8c0fb49e20e5b7485acdcd8bb808831
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930473"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Contenedores de controles ActiveX: Conectar un control ActiveX a una variable de miembro
 La manera más fácil de obtener acceso a un control ActiveX desde dentro de su aplicación de contenedor de control es asociar el control ActiveX a una variable de miembro de la clase de cuadro de diálogo que contiene el control.  
@@ -43,7 +44,7 @@ La manera más fácil de obtener acceso a un control ActiveX desde dentro de su 
   
 5.  En el **nombre de Variable** cuadro, escriba un nombre.  
   
-     Por ejemplo: `m_circctl`.  
+     Por ejemplo, *m_circctl*.  
   
 6.  Haga clic en **finalizar** para aceptar las opciones y salir del Asistente para agregar variables miembro.  
   

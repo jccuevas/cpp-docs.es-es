@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353710"
 ---
 # <a name="can-i-reuse-a-host-window"></a>¿Puedo volver a usar una ventana Host?
 No se recomienda que vuelva a utilizar windows de host. Para garantizar la solidez del código, se debe asociar la duración de la ventana del host a la duración de un control único.  

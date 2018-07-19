@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345083"
 ---
 # <a name="memory-management"></a>Administración de memoria
 Este grupo de artículos describe cómo aprovechar las ventajas de los servicios de uso generales de la biblioteca de clase de Foundation de Microsoft (MFC) relacionados con la administración de memoria. Asignación de memoria puede dividirse en dos categorías principales: las asignaciones y las asignaciones de montones de marco.  

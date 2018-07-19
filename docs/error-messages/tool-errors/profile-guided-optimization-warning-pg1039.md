@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316535"
 ---
 # <a name="profile-guided-optimization-warning-pg1039"></a>Advertencia de la optimización guiada por perfiles PG1039
 No se pudo esperar el tiempo de inactividad debe realizar el barrido.  

@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb40b356b5601e19c33083c7b731a1dc411de3c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c48f4525c01149840ca74eee249263eac27c24cf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928707"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Agregar varias vistas a un solo documento
 En una aplicación de interfaz de único documento (SDI) creada con la biblioteca (Microsoft Foundation Classes), cada tipo de documento está asociado con un tipo de vista única. En algunos casos, es conveniente tener la posibilidad de cambiar la vista actual de un documento con una nueva vista.  
@@ -45,14 +46,14 @@ En una aplicación de interfaz de único documento (SDI) creada con la bibliotec
   
  El resto de este tema supone lo siguiente:  
   
--   El nombre de la `CWinApp`-objeto derivada es `CMyWinApp`, y `CMyWinApp` se declara y define en MYWINAPP. H y MYWINAPP. CPP.  
+-   El nombre de la `CWinApp`-objeto derivada es `CMyWinApp`, y `CMyWinApp` se declaran y se definen en *MYWINAPP. H* y *MYWINAPP. CPP*.  
   
--   `CNewView` es el nombre del nuevo `CView`-objeto, derivado y `CNewView` se declara y define en NEWVIEW. H y NEWVIEW. CPP.  
+-   `CNewView` es el nombre del nuevo `CView`-objeto, derivado y `CNewView` se declaran y se definen en *NEWVIEW. H* y *NEWVIEW. CPP*.  
   
 ##  <a name="vcconmodifyexistingapplicationa1"></a> Modifique la clase de aplicación existente  
  Para que cambiar entre las vistas de la aplicación, debe modificar la clase de aplicación agregando variables miembro para almacenar las vistas y un método para cambiarlas.  
   
- Agregue el código siguiente a la declaración de `CMyWinApp` en MYWINAPP. H:  
+ Agregue el código siguiente a la declaración de `CMyWinApp` en *MYWINAPP. H*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]  
   
@@ -60,7 +61,7 @@ En una aplicación de interfaz de único documento (SDI) creada con la bibliotec
   
  La última modificación a la clase de aplicación requiere incluido un nuevo archivo de encabezado que define un mensaje de Windows (**WM_INITIALUPDATE**) que se utiliza en la función Switch.  
   
- Inserte la siguiente línea en la sección de inclusión de MYWINAPP. CPP:  
+ Inserte la siguiente línea en la sección de inclusión de *MYWINAPP. CPP*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]  
   
@@ -71,7 +72,7 @@ En una aplicación de interfaz de único documento (SDI) creada con la bibliotec
   
  Cuando haya agregado la clase al proyecto, debe cambiar la accesibilidad de algunos miembros de clase de vista.  
   
- Modifique NEWVIEW. H cambiando el especificador de acceso de `protected` a **público** para el constructor y el destructor. Esto permite a la clase para crear y destruir de forma dinámica y modificar la apariencia de las vistas antes de que sea visible.  
+ Modificar *NEWVIEW. H* cambiando el especificador de acceso de **protegido** a **público** para el constructor y el destructor. Esto permite a la clase para crear y destruir de forma dinámica y modificar la apariencia de las vistas antes de que sea visible.  
   
  Guarde los cambios y continúe con el paso siguiente.  
   
@@ -89,7 +90,7 @@ En una aplicación de interfaz de único documento (SDI) creada con la bibliotec
 ##  <a name="vcconswitchingfunctiona4"></a> Implementar la función Switch  
  En el paso anterior, agregó código que crea e inicializa un nuevo objeto de vista. La última parte importante consiste en implementar el método switch, `SwitchView`.  
   
- Al final del archivo de implementación para la clase de aplicación (MYWINAPP. (CPP), agregue la siguiente definición de método:  
+ Al final del archivo de implementación para la clase de aplicación (*MYWINAPP. CPP*), agregue la siguiente definición de método:  
   
  [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]  
   

@@ -50,11 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe72b43d8930e77bea274e20e5f150cc93617c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd073dc7876a755a8dc309efc7e11fb63521ab5a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037907"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Clase CMFCOutlookBarPane
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -183,31 +184,31 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiImage`  
+ [in] *uiImage*  
  Especifica el identificador de recursos de un mapa de bits.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Especifica el texto del botón.  
   
- [in] `iIdCommand`  
+ [in] *iIdCommand*  
  Especifica el identificador. del control de botón  
   
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Especifica el índice de base cero en la página de la barra de outlook en el que se va a insertar el botón.  
   
- [in] `uiLabel`  
+ [in] *uiLabel*  
  Un identificador de recurso de cadena.  
   
- [in] `szBmpFileName`  
+ [in] *szBmpFileName*  
  Especifica el nombre del archivo de imagen de disco para cargar.  
   
- [in] `szLabel`  
+ [in] *szLabel*  
  Especifica el texto del botón.  
   
- [in] `hBmp`  
+ [in] *hBmp*  
  Identificador del mapa de bits del botón.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Identificador de un icono de un botones.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -216,9 +217,9 @@ BOOL AddButton(
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para insertar un nuevo botón en la página de la barra de Outlook. La imagen del botón se puede cargar desde los recursos de aplicación o desde un archivo de disco.  
   
- Si el identificador de página especificado por `uiPageID` es -1, el botón se inserta en la primera página.  
+ Si el identificador de página especificado por *uiPageID* es -1, el botón se inserta en la primera página.  
   
- Si el índice especificado por `iInsertAt` es -1, el botón se agrega al final de la página.  
+ Si el índice especificado por *iInsertAt* es -1, el botón se agrega al final de la página.  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -253,16 +254,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Especifica la ventana primaria del control del panel de barra de Outlook. No debe ser `NULL`.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Nombre del estilo de la ventana.  Para obtener una lista de estilos de ventana, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `uiID`  
+ [in] *uiID*  
  El identificador del control. Debe ser único para permitir guardar el estado del control.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Especifica los estilos especiales que definen el comportamiento del control del panel de barra de Outlook cuando ésta se separa de la barra de Outlook.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -283,10 +284,10 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a un botón de barra de herramientas que un usuario ha seleccionado.  
   
- [in] `pPopup`  
+ [in] *pPopup*  
  Un puntero al menú contextual.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -308,7 +309,7 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bPageScroll`  
+ [in] *bPageScroll*  
  Si `TRUE`, habilitar el modo de desplazamiento de página. Si `FALSE`, deshabilitar el modo de desplazamiento de página.  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
@@ -364,7 +365,7 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iIdCommand`  
+ [in] *iIdCommand*  
  Especifica el identificador de comando de un botón para quitar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -378,7 +379,7 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `color`  
+ [in] *color*  
  Especifica el nuevo color de fondo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -392,7 +393,7 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiImageID`  
+ [in] *uiImageID*  
  Especifica el identificador de recurso de imagen.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -425,10 +426,10 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `clrRegText`  
+ [in] *clrRegText*  
  Especifica el nuevo color de texto no se han seleccionado.  
   
- [in] `clrSelText`  
+ [in] *clrSelText*  
  Especifica el nuevo color para el texto seleccionado.  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
@@ -439,7 +440,7 @@ void SetTransparentColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `color`  
+ *Color*  
  Especifica el nuevo color transparente.  
   
 ### <a name="remarks"></a>Comentarios  

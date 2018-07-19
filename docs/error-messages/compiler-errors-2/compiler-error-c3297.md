@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249371"
 ---
 # <a name="compiler-error-c3297"></a>Error del compilador C3297
 'restricción_2': no se puede usar 'restricción_1' como restricción porque 'restricción_1' tiene la restricción de valor  

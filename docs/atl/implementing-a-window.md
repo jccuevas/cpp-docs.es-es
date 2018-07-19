@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357018"
 ---
 # <a name="implementing-a-window"></a>Implementar una ventana
 Clase [CWindowImpl](../atl/reference/cwindowimpl-class.md) le permite implementar una ventana y controlar sus mensajes. Mensaje detenida en ATL se basa en un mapa de mensajes. Esta sección se explica:  

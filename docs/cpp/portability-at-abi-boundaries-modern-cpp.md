@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419671"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Portabilidad en los límites de ABI (C++ moderno)
 Usan convenciones y tipos lo suficientemente portables en los límites de la interfaz binaria. Un "tipo portátil" es un tipo integrado de C o un struct que contiene solo tipos integrados de C. Tipos de clase solo pueden usarse al llamador y destinatario equipos acuerdan el diseño, etcetera, de convención de llamada. Esto solo es posible si ambos se compilan con el mismo compilador y la configuración del compilador.  

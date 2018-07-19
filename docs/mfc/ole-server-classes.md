@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc737a3d11307dff917132bfd113896b4ad801f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9d0c75325c62a92f65c56f2c76350bf752228fd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932226"
 ---
 # <a name="ole-server-classes"></a>Clases de servidor OLE
-Estas clases se utilizan en aplicaciones de servidor. Documentos de servidor se derivan `COleServerDoc` en lugar de en **CDocument**. Tenga en cuenta que, dado que `COleServerDoc` se deriva de `COleLinkingDoc`, documentos de servidor también pueden ser contenedores que admiten la vinculación.  
+Estas clases se utilizan en aplicaciones de servidor. Documentos de servidor se derivan `COleServerDoc` en lugar de en `CDocument`. Tenga en cuenta que, dado que `COleServerDoc` se deriva de `COleLinkingDoc`, documentos de servidor también pueden ser contenedores que admiten la vinculación.  
   
  La `COleServerItem` clase representa un documento o una parte de un documento que se pueden incrustar en otro documento o vinculado.  
   

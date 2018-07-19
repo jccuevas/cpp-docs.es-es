@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368475"
 ---
 # <a name="null-and-undefined-macros"></a>Macros Null y no definidas
 Macros nulos y no definidas se amplían a cadenas nulas, pero una macro definida como una cadena nula se considera definida en expresiones de preprocesamiento. Para definir una macro como una cadena nula, especificar ningún carácter excepto espacios o tabulaciones después del signo igual (=) en una línea de comandos o el archivo de comandos y encierre la cadena null o definición de comillas dobles (""). Para definir una macro, utilice **! UNDEF.** Para obtener más información, consulte [directivas de preprocesamiento de archivos MAKE](../build/makefile-preprocessing-directives.md).  

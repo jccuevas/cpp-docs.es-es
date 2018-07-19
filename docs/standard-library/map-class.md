@@ -98,11 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff022d6bf28904328ace7cab543fe72b60236b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027750"
 ---
 # <a name="map-class"></a>map (Clase)
 
@@ -122,15 +123,15 @@ class map;
 
 ### <a name="parameters"></a>Parámetros
 
-`Key` El tipo de datos de la clave que se almacenará en el mapa.
+*Clave* escriba los datos de clave que se almacenará en el mapa.
 
-`Type` El tipo de datos de elemento que se almacenará en el mapa.
+*Tipo* el elemento tipo de datos que se almacenará en el mapa.
 
-`Traits` El tipo que proporciona un objeto de función que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo en el mapa. Este argumento es opcional y el predicado binario `less<Key>` es el valor predeterminado.
+*Rasgos* el tipo que proporciona un objeto de función que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo en el mapa. Este argumento es opcional y el predicado binario `less<Key>` es el valor predeterminado.
 
 En C++14 puede habilitar la búsqueda heterogénea especificando el predicado std::less<> que no tiene ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
 
-`Allocator` El tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la asignación. Este argumento es opcional y el valor predeterminado es `allocator<pair<const Key, Type> >`.
+*Asignador* el tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la asignación. Este argumento es opcional y el valor predeterminado es `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -157,7 +158,7 @@ Se recomienda que el mapa sea el contenedor asociativo preferido si la aplicaci�
 La asignación ordena los elementos que controla mediante una llamada a un objeto de función almacenado de tipo [key_compare](#key_compare). Este objeto almacenado es una función de comparación a la que se tiene acceso mediante una llamada al método [key_comp](#key_comp). En general, se comparan dos elementos especificados para determinar si uno es menor que otro o si son equivalentes. Cuando se comparan todos los elementos, se crea una secuencia ordenada de elementos no equivalentes.
 
 > [!NOTE]
-> La función de comparación es un predicado binario que induce una ordenación parcial estricta en el sentido matemático estándar. Un predicado binario f(x,y) es un objeto de función que tiene dos objetos de argumento x e y, y un valor devuelto de `true` o `false`. Una ordenación impuesta en un conjunto es una ordenación débil estricta si el predicado binario es irreflexivo, antisimétrico y transitivo, y si la equivalencia es transitiva, donde dos objetos x e y se definen como equivalentes cuando tanto f(x,y) como f(y,x) son `false`. Si la condición más fuerte de igualdad entre las claves reemplaza la de equivalencia, la ordenación se convierte en total (en el sentido de que todos los elementos se ordenan entre sí) y las claves coincidentes serán indiscernibles unas de otras.
+> La función de comparación es un predicado binario que induce una ordenación parcial estricta en el sentido matemático estándar. Un f predicado binario es un objeto de función que tiene dos objetos de argumento x y y y un valor devuelto de **true** o **false**. Una ordenación impuesta en un conjunto es una ordenación si el predicado binario es Irreflexivo, antisimétrico y transitivo, y si la equivalencia es transitiva, donde dos objetos débil estricta x e y se definen para ser equivalentes cuando tanto f y f(y,x) son **false** . Si la condición más fuerte de igualdad entre las claves reemplaza la de equivalencia, la ordenación se convierte en total (en el sentido de que todos los elementos se ordenan entre sí) y las claves coincidentes serán indiscernibles unas de otras.
 >
 > En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
 
@@ -174,16 +175,16 @@ La asignación ordena los elementos que controla mediante una llamada a un objet
 |Nombre de tipo|Descripción|
 |-|-|
 |[allocator_type](#allocator_type)|Definición de tipos para la clase `allocator` del objeto map.|
-|[const_iterator](#const_iterator)|Definición de tipos para un iterador bidireccional que puede leer un elemento `const` del mapa.|
-|[const_pointer](#const_pointer)|Definición de tipos para un puntero a un elemento `const` de un mapa.|
-|[const_reference](#const_reference)|Definición de tipos para una referencia a un elemento `const` almacenado en un mapa para leer y realizar operaciones `const`.|
-|[const_reverse_iterator](#const_reverse_iterator)|Tipo que proporciona un iterador bidireccional que puede leer cualquier elemento `const` del mapa.|
+|[const_iterator](#const_iterator)|Definición de tipos para un iterador bidireccional que puede leer un **const** elemento del mapa.|
+|[const_pointer](#const_pointer)|Una definición de tipo para un puntero a un **const** elemento de un mapa.|
+|[const_reference](#const_reference)|Una definición de tipo para una referencia a un **const** elemento almacenado en un mapa para leer y realizar **const** operaciones.|
+|[const_reverse_iterator](#const_reverse_iterator)|Tipo que proporciona un iterador bidireccional que puede leer cualquier elemento **const** de la asignación.|
 |[difference_type](#difference_type)|Definición de tipos enteros con signo para el número de elementos de un mapa en un intervalo entre los elementos a los que apuntan los iteradores.|
 |[iterator](#iterator)|Definición de tipos para un iterador bidireccional que puede leer o modificar cualquier elemento de un mapa.|
 |[key_compare](#key_compare)|Definición de tipos para un objeto de función que puede comparar dos claves de ordenación para determinar el orden relativo de dos elementos del mapa.|
 |[key_type](#key_type)|Definición de tipos para la clave de ordenación almacenada en cada elemento del mapa.|
 |[mapped_type](#mapped_type)|Definición de tipos para los datos almacenados en cada elemento de un mapa.|
-|[pointer](#pointer)|Definición de tipos para un puntero a un elemento `const` de un mapa.|
+|[pointer](#pointer)|Una definición de tipo para un puntero a un **const** elemento de un mapa.|
 |[reference](#reference)|Definición de tipos para una referencia a un elemento almacenado en un mapa.|
 |[reverse_iterator](#reverse_iterator)|Definición de tipos para un iterador bidireccional que puede leer o modificar un elemento de un mapa invertido.|
 |[size_type](#size_type)|Definición de tipos enteros sin signo para el número de elementos de un mapa|
@@ -203,7 +204,7 @@ La asignación ordena los elementos que controla mediante una llamada a un objet
 |[crend](#crend)|Devuelve un iterador constante que apunta a la ubicación posterior al último elemento de un mapa invertido.|
 |[emplace](#emplace)|Inserta en el mapa un elemento construido en contexto.|
 |[emplace_hint](#emplace_hint)|Inserta en el mapa un elemento construido en contexto, con una sugerencia de colocación.|
-|[empty](#empty)|Devuelve `true` si un mapa está vacío.|
+|[empty](#empty)|Devuelve **true** si un mapa está vacío.|
 |[end](#end)|Devuelve el iterador más allá del final.|
 |[equal_range](#equal_range)|Devuelve un par de iteradores. El primer iterador del par apunta al primer elemento de un `map` cuya clave es mayor que una clave especificada. El segundo iterador del par apunta al primer elemento del `map` cuya clave es igual o mayor que la clave especificada.|
 |[erase](#erase)|Quita un elemento o un intervalo de elementos de un mapa de las posiciones especificadas.|
@@ -260,7 +261,7 @@ const Type& at(const Key& key) const;
 |Parámetro|Descripción|
 |-|-|
 |Parámetro|Descripción|
-|`key`|Valor de clave que se va a buscar.|
+|*key*|Valor de clave que se va a buscar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -353,7 +354,7 @@ The first element of m1 is now 1
 
 ## <a name="cbegin"></a>  map::cbegin
 
-Devuelve un iterador `const` que direcciona la ubicación situada más allá del último elemento de un intervalo.
+Devuelve un **const** iterador que direcciona la ubicación situada más allá del último elemento de un intervalo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -361,13 +362,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un iterador bidireccional `const` que señala el primer elemento del intervalo o la ubicación que justo sobrepasa el final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
+Un **const** iterador bidireccional que direcciona el primer elemento del intervalo, o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Comentarios
 
 Con el valor devuelto de `cbegin`, los elementos del intervalo no se pueden modificar.
 
-Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `begin()` y `cbegin()`.
+Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `begin()` y `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -379,7 +380,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  map::cend
 
-Devuelve un iterador `const` que direcciona la ubicación situada más allá del último elemento de un intervalo.
+Devuelve un **const** iterador que direcciona la ubicación situada más allá del último elemento de un intervalo.
 
 ```cpp
 const_iterator cend() const;
@@ -387,13 +388,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador `const` de acceso bidireccional que apunta justo después del final del intervalo.
+Un **const** iterador de acceso bidireccional que apunta justo después del final del intervalo.
 
 ### <a name="remarks"></a>Comentarios
 
 `cend` se usa para probar si un iterador ha sobrepasado el final de su intervalo.
 
-Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `end()` y `cend()`.
+Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `end()` y `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -463,7 +464,7 @@ Un tipo `const_iterator` no se puede utilizar para modificar el valor de un elem
 
 El `const_iterator` definido mediante la asignación apunta a elementos que son objetos de [value_type](#value_type), que son de tipo `pair`\< **constKey**, **Type**>, cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es la referencia asignada que el elemento conserva.
 
-A fin de desreferenciar una `const_iterator` `cIter` apunta a un elemento en un mapa, utilice la **->** operador.
+Para desreferenciar un `const_iterator` `cIter` que apunta a un elemento en un mapa, use el `->` operador.
 
 Para tener acceso al valor de clave del elemento, use `cIter` -> **first**, que es equivalente a (\* `cIter`). **first**.
 
@@ -549,13 +550,13 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 Un tipo `const_reverse_iterator` no puede modificar el valor de un elemento. Se usa para iterar en la asignación en orden inverso.
 
-El `const_reverse_iterator` definido por los puntos de mapa a los elementos que son objetos de [value_type](#value_type), que es de tipo `pair<const Key, Type>`, cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es el dato de referencia asignada mantenido por el elemento.
+El `const_reverse_iterator` definido por el mapa apunta a elementos que son objetos de [value_type](#value_type), que es de tipo `pair<const Key, Type>`, cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es la referencia asignada que el elemento.
 
-Para desreferenciar un `const_reverse_iterator crIter` que apunta a un elemento de una asignación, use el operador **->**.
+Para desreferenciar un `const_reverse_iterator crIter` que apunta a un elemento en un mapa, use el `->` operador.
 
-Para obtener acceso al valor de la clave para el elemento, utilice `crIter`  ->  **primer**, que es equivalente a (\* `crIter`). **primera**.
+Para obtener acceso al valor de la clave para el elemento, utilice `crIter`  ->  **primera**, que es equivalente a (\* `crIter`). **primera**.
 
-Para obtener acceso al valor de los datos de referencia asignados para el elemento, utilice `crIter`  ->  **segundo**, que es equivalente a (\* `crIter`). **primera**.
+Para obtener acceso al valor de la referencia asignada del elemento, utilice `crIter`  ->  **segundo**, que es equivalente a (\* `crIter`). **primera**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -571,7 +572,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`key` El valor de clave de los elementos que deben coincidir el mapa.
+*clave* el valor de clave de los elementos que deben coincidir el mapa.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -803,13 +804,13 @@ emplace(
 |Parámetro|Descripción|
 |-|-|
 |Parámetro|Descripción|
-|`args`|Argumentos reenviados para construir un elemento que se va a insertar en el mapa, a menos que ya contenga un elemento cuyo valor esté ordenado de forma equivalente.|
+|*args*|Argumentos reenviados para construir un elemento que se va a insertar en el mapa, a menos que ya contenga un elemento cuyo valor esté ordenado de forma equivalente.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-[pair](../standard-library/pair-structure.md) cuyo componente `bool` es true si se realizó una inserción y false si el mapa ya contenía un elemento de valor equivalente en la ordenación. El componente de iterador del par de valor devuelto apunta al elemento recién insertado si el componente `bool` es true, o al elemento existente si el componente `bool` es false.
+Un [par](../standard-library/pair-structure.md) cuyo **bool** componente es true si se realizó una inserción y false si el mapa ya contenía un elemento de valor equivalente en la ordenación. El componente de iterador del par de valor devuelto apunta al elemento recién insertado si el **bool** componente es true, o al elemento existente si la **bool** componente es false.
 
-Para tener acceso al componente de iterador de `pair` `pr`, utilice `pr.first`; para desreferenciarlo, utilice `*pr.first`. Para tener acceso al componente `bool`, utilice `pr.second`. Para obtener un ejemplo, vea el código de ejemplo que se muestra más adelante en este artículo.
+Para tener acceso al componente de iterador de `pair` `pr`, utilice `pr.first`; para desreferenciarlo, utilice `*pr.first`. Para tener acceso a la **bool** componente, use `pr.second`. Para obtener un ejemplo, vea el código de ejemplo que se muestra más adelante en este artículo.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -892,8 +893,8 @@ iterator emplace_hint(
 |Parámetro|Descripción|
 |-|-|
 |Parámetro|Descripción|
-|`args`|Argumentos reenviados para construir un elemento que se va a insertar en el mapa a menos que el mapa ya contenga ese elemento o, más en general, a menos que ya contenga un elemento cuya clave esté ordenada de manera equivalente.|
-|`where`|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente a `where`, la inserción se puede realizar en tiempo constante amortizado en lugar de en tiempo logarítmico).|
+|*args*|Argumentos reenviados para construir un elemento que se va a insertar en el mapa a menos que el mapa ya contenga ese elemento o, más en general, a menos que ya contenga un elemento cuya clave esté ordenada de manera equivalente.|
+|*where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente a *donde*, inserción se puede realizar en tiempo constante amortizado en lugar de tiempo logarítmico.)|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1016,9 +1017,9 @@ El iterador siguiente al final. Si el mapa está vacío, `map::end() == map::beg
 
 ### <a name="remarks"></a>Comentarios
 
-**end** se usa para comprobar si un iterador ha sobrepasado el final de su mapa.
+`end` se usa para comprobar si un iterador ha sobrepasado el final de su mapa.
 
-El valor devuelto por **end** no se debe desreferenciar.
+El valor devuelto por `end` no se debe desreferenciar.
 
 Para obtener un ejemplo de código, vea [map::find](#find).
 
@@ -1034,7 +1035,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parámetros
 
-`key` El valor de clave de argumento que se comparará con el criterio de ordenación de un elemento del mapa que se va a buscar.
+*clave* el valor de clave de argumento que se comparará con la clave de ordenación de un elemento del mapa que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1120,13 +1121,13 @@ size_type erase(
 
 ### <a name="parameters"></a>Parámetros
 
-`Where` Posición del elemento que se va a quitar.
+*Donde* posición del elemento que se va a quitar.
 
-`First` Posición del primer elemento va a quitar.
+*Primera* posición del primer elemento que se va a quitar.
 
-`Last` Posición situada más allá del último elemento que se va a quitar.
+*Último* posición inmediatamente siguiente al último elemento que se va a quitar.
 
-`Key` El valor de clave de los elementos que se va a quitar.
+*Clave* el valor de clave de los elementos que se va a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1228,7 +1229,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`key` El valor de clave que debe coincidir el criterio de ordenación de un elemento del mapa que se va a buscar.
+*clave* el valor de clave que debe coincidir con el criterio de ordenación de un elemento del mapa que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1238,7 +1239,7 @@ Iterador que hace referencia a la ubicación de un elemento con una clave especi
 
 La función miembro devuelve un iterador que hace referencia a un elemento del mapa cuyo criterio de ordenación es equivalente a la clave de argumento de un predicado binario que induce a una ordenación basada en una relación de comparabilidad de menor que.
 
-Si el valor devuelto de **find** se asigna a un **const_iterator**, el objeto de mapa no se puede modificar. Si el valor devuelto de **find** se asigna a **iterator**, el objeto de mapa se puede modificar.
+Si el valor devuelto de `find` se asigna a `const_iterator`, el objeto de mapa no puede modificarse. Si el valor devuelto de `find` se asigna a un `iterator`, se puede modificar el objeto de mapa
 
 ### <a name="example"></a>Ejemplo
 
@@ -1421,17 +1422,17 @@ IList);
 |Parámetro|Descripción|
 |-|-|
 |Parámetro|Descripción|
-|`Val`|Valor de un elemento que se va a insertar en la asignación a menos que ya contenga un elemento cuya clave se ordena de forma equivalente.|
-|`Where`|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente a `Where`, la inserción se puede realizar en tiempo constante amortizado en lugar de en tiempo logarítmico).|
-|`ValTy`|Parámetro de plantilla que especifica el tipo de argumento que el mapa puede usar para crear un elemento de [value_type](#value_type), y realiza un reenvío directo de `Val` como argumento.|
-|`First`|Posición del primer elemento que se va a copiar.|
-|`Last`|Posición situada más allá del último elemento que se va a copiar.|
-|`InputIterator`|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](#value_type).|
-|`IList`|El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.|
+|*Val*|Valor de un elemento que se va a insertar en la asignación a menos que ya contenga un elemento cuya clave se ordena de forma equivalente.|
+|*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente a *donde*, inserción se puede realizar en tiempo constante amortizado en lugar de tiempo logarítmico.)|
+|*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que se puede usar la asignación para construir un elemento de [value_type](#value_type)y realiza *Val* como argumento.|
+|*Primero*|Posición del primer elemento que se va a copiar.|
+|*Último*|Posición situada más allá del último elemento que se va a copiar.|
+|*InputIterator*|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](#value_type).|
+|*IList*|El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-Las funciones miembro de un solo elemento, (1) y (2), devuelven un [pair](../standard-library/pair-structure.md) cuyo componente `bool` es True si se ha realizado una inserción, y False si el mapa ya contenía un elemento cuya clave tenía un valor equivalente en la ordenación. El componente de iterador del par de valor devuelto apunta al elemento recién insertado si el componente `bool` es true, o al elemento existente si el componente `bool` es false.
+Las funciones miembro de un único elemento, (1) y (2), devuelven un [par](../standard-library/pair-structure.md) cuyo **bool** componente es true si se realizó una inserción y false si el mapa ya contenía un elemento cuya clave tenía un valor equivalente en la ordenación. El componente de iterador del par de valor devuelto apunta al elemento recién insertado si el **bool** componente es true, o al elemento existente si la **bool** componente es false.
 
 Las funciones miembro de un solo elemento con sugerencia, (3) y (4), devuelven un iterador que apunta a la posición donde se insertó el nuevo elemento en la asignación o, si ya existe un elemento con una clave equivalente, al elemento existente.
 
@@ -1441,7 +1442,7 @@ Esta función no invalida ningún iterador, puntero o referencia.
 
 Durante la inserción de un solo elemento, si se produce una excepción, no se modifica el estado del contenedor. Durante la inserción de varios elementos, si se produce una excepción, el contenedor se deja en un estado sin especificar pero válido.
 
-Para tener acceso al componente de iterador de un `pair` `pr` devuelto por la función miembro de un único elemento, utilice `pr.first`; para desreferenciar el iterador dentro del par devuelto, utilice `*pr.first`, especificando un elemento. Para tener acceso al componente `bool`, utilice `pr.second`. Para obtener un ejemplo, vea el código de ejemplo que se muestra más adelante en este artículo.
+Para tener acceso al componente de iterador de un `pair` `pr` devuelto por la función miembro de un único elemento, utilice `pr.first`; para desreferenciar el iterador dentro del par devuelto, utilice `*pr.first`, especificando un elemento. Para tener acceso a la **bool** componente, use `pr.second`. Para obtener un ejemplo, vea el código de ejemplo que se muestra más adelante en este artículo.
 
 El objeto [value_type](#value_type) de un contenedor es un typedef que pertenece al contenedor y, para map, `map<K, V>::value_type` es `pair<const K, V>`. El valor de un elemento es un par ordenado en el que el primer componente es igual al valor de clave y el segundo componente es igual al valor de datos del elemento.
 
@@ -1560,15 +1561,15 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Comentarios
 
-El **iterador** definido por los puntos de mapa a los elementos que son objetos de [value_type](#value_type), que es de tipo `pair`*\<***constKey**, **Tipo***>*, cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es el dato de referencia asignada mantenido por el elemento.
+El `iterator` definido por los puntos de mapa a los elementos que son objetos de [value_type](#value_type), que es de tipo `pair`*\<***constKey**, **Tipo***>*, cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es el dato de referencia asignada mantenido por el elemento.
 
-Para desreferenciar un elemento **iterator**`Iter` que apunta a un elemento de un mapa, use el operador **->**.
+Para desreferenciar un **iterador** `Iter` que apunta a un elemento en un mapa, use el `->` operador.
 
 Para tener acceso al valor de clave del elemento, use `Iter` -> **first**, que es equivalente a (\* `Iter`). **first**. Para tener acceso al valor de la referencia asignada del elemento, use `Iter` -> **second**, que es equivalente a (\* `Iter`). **second**.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [begin](#begin) para obtener un ejemplo de cómo declarar y usar **iterator**.
+Vea el ejemplo de [comenzar](#begin) para obtener un ejemplo de cómo declarar y usar `iterator`.
 
 ## <a name="key_comp"></a>  map::key_comp
 
@@ -1651,9 +1652,9 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Comentarios
 
-`key_compare` es un sinónimo del parámetro de plantilla `Traits`.
+`key_compare` es un sinónimo del parámetro de plantilla *rasgos*.
 
-Para obtener más información sobre `Traits`, vea el tema [Clase map](../standard-library/map-class.md).
+Para obtener más información sobre *rasgos* vea el [map (clase)](../standard-library/map-class.md) tema.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1669,9 +1670,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Comentarios
 
-`key_type` es un sinónimo del parámetro de plantilla `Key`.
+`key_type` es un sinónimo del parámetro de plantilla *clave*.
 
-Para obtener más información sobre `Key`, vea la sección Comentarios del tema [Clase map](../standard-library/map-class.md).
+Para obtener más información sobre *clave*, vea la sección Comentarios de la [map (clase)](../standard-library/map-class.md) tema.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1689,13 +1690,13 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`key` El valor de clave de argumento que se comparará con el criterio de ordenación de un elemento del mapa que se va a buscar.
+*clave* el valor de clave de argumento que se comparará con la clave de ordenación de un elemento del mapa que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**iterator** o `const_iterator` que direcciona la ubicación de un elemento de un mapa que tiene una clave igual o mayor que la clave de argumento o que direcciona la ubicación siguiente al último elemento del mapa si no se encuentra ninguna coincidencia con la clave.
+Un `iterator` o `const_iterator` que se dirige la ubicación de un elemento en un mapa que tiene una clave que es igual o mayor que la clave de argumento o que direcciona la ubicación siguiente al último elemento del mapa si no coinciden con se encuentra para la clave.
 
-Si el valor devuelto de `lower_bound` se asigna a `const_iterator`, el objeto de mapa no puede modificarse. Si el valor devuelto de `lower_bound` se asigna a **iterator**, el objeto de mapa se puede modificar.
+Si el valor devuelto de `lower_bound` se asigna a `const_iterator`, el objeto de mapa no puede modificarse. Si el valor devuelto de `lower_bound` se asigna a un `iterator`, se puede modificar el objeto de mapa.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1803,12 +1804,12 @@ map(
 |Parámetro|Descripción|
 |-|-|
 |Parámetro|Descripción|
-|`Al`|Clase de asignador de almacenamiento que se va a utilizar para este mapa, que toma `Allocator` como valor predeterminado.|
-|`Comp`|Función de comparación de tipo `const Traits` que se utiliza para ordenar los elementos del mapa, que de forma predeterminada es `hash_compare`.|
-|`Right`|Asignación de la que el conjunto construido va a ser una copia.|
-|`First`|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
-|`Last`|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
-|`IList`|initializer_list de la que se van a copiar los elementos.|
+|*Al*|Clase de asignador de almacenamiento que se va a utilizar para este mapa, que toma `Allocator` como valor predeterminado.|
+|*Comp.*|Función de comparación de tipo `const Traits` que se utiliza para ordenar los elementos del mapa, que de forma predeterminada es `hash_compare`.|
+|*Derecha*|Asignación de la que el conjunto construido va a ser una copia.|
+|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
+|*IList*|initializer_list de la que se van a copiar los elementos.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1818,11 +1819,11 @@ Todos los constructores inicializan sus mapas.
 
 Todos los constructores almacenan un objeto de función de tipo Traits que se usa para establecer un orden entre las claves del mapa y que se puede devolver más adelante mediante una llamada a [key_comp](#key_comp).
 
-Los tres primeros constructores especifican un mapa inicial vacío, el segundo especifica el tipo de función de comparación (`Comp`) que se usará para establecer el orden de los elementos y el tercero especifica explícitamente el tipo de asignador (`Al`) que se va a usar. La palabra clave `explicit` suprime ciertas clases de conversión automática de tipos.
+Los tres primeros constructores especifican un mapa inicial vacío, el segundo especifica el tipo de función de comparación (*Comp*) que se usará para establecer explícitamente el orden de los elementos y el tercero especifica el tipo de asignador ( *Al*) que se usará. La palabra clave **explícita** suprime ciertas clases de conversión automática de tipos.
 
-El cuarto constructor especifica una copia del mapa `Right`.
+El cuarto constructor especifica una copia del mapa *derecha*.
 
-El quinto constructor especifica una copia del mapa moviendo `Right`.
+El quinto constructor especifica una copia del mapa moviendo *derecha*.
 
 Los constructores sexto, séptimo y octavos utilizan una initializer_list de la que se van a copiar los miembros.
 
@@ -1955,9 +1956,9 @@ typedef Type mapped_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo `mapped_type` es sinónimo del parámetro de plantilla `Type` de la clase.
+El tipo `mapped_type` es un sinónimo de la clase *tipo* parámetro de plantilla.
 
-Para obtener más información sobre `Type`, vea el tema [Clase map](../standard-library/map-class.md).
+Para obtener más información sobre *tipo* vea el [map (clase)](../standard-library/map-class.md) tema.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2011,7 +2012,7 @@ Type& operator[](Key&& key);
 |Parámetro|Descripción|
 |-|-|
 |Parámetro|Descripción|
-|`key`|El valor de clave del elemento que se tiene que insertar.|
+|*key*|El valor de clave del elemento que se tiene que insertar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2021,7 +2022,7 @@ Referencia al valor de datos del elemento insertado.
 
 Si el valor de clave de argumento no se encuentra, se inserta junto con el valor predeterminado del tipo de datos.
 
-Se puede usar `operator[]` para insertar elementos en un mapa `m` mediante `m[ key] = DataValue;`, donde `DataValue` es el valor de `mapped_type` del elemento con un valor de clave de `key`.
+`operator[]` puede utilizarse para insertar elementos en un mapa `m` mediante `m[ key] = DataValue;` donde `DataValue` es el valor de la `mapped_type` del elemento con un valor de clave de *clave*.
 
 Cuando se emplea `operator[]` para insertar elementos, la referencia devuelta no indica si una inserción cambia un elemento ya existente o crea uno nuevo. Se pueden usar las funciones miembro [find](#find) e [insert](#insert) para determinar si ya existe un elemento con una clave especificada antes de una inserción.
 
@@ -2111,11 +2112,11 @@ map& operator=(map&& right);
 |Parámetro|Descripción|
 |-|-|
 |Parámetro|Descripción|
-|`right`|Objeto [map](../standard-library/map-class.md) que se copia a `map`.|
+|*right*|Objeto [map](../standard-library/map-class.md) que se copia a `map`.|
 
 ### <a name="remarks"></a>Comentarios
 
-Después de borrar todos los elementos existentes en `map`, `operator=` copia o mueve el contenido de `right` al mapa.
+Después de borrar todos los elementos existentes en un `map`, `operator=` copia o mueve el contenido de *derecho* en el mapa.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2164,7 +2165,7 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>Comentarios
 
-Se puede usar un tipo **pointer** para modificar el valor de un elemento.
+Un tipo `pointer` puede usarse para modificar el valor de un elemento.
 
 En la mayoría de los casos, se debe usar [iterator](#iterator) para obtener acceso a los elementos de un objeto de asignación.
 
@@ -2403,7 +2404,7 @@ Un tipo `reverse_iterator` no puede modificar el valor de un elemento. Se usa pa
 
 El `reverse_iterator` definido por los puntos de mapa a los elementos que son objetos de [value_type](#value_type), que es de tipo `pair`*\<***constKey**, **Tipo***>*, cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es el dato de referencia asignada mantenido por el elemento.
 
-A fin de desreferenciar una `reverse_iterator` `rIter` apunta a un elemento en un mapa, utilice la **->** operador.
+Para desreferenciar un `reverse_iterator` `rIter` que apunta a un elemento en un mapa, use el `->` operador.
 
 Para tener acceso al valor de clave del elemento, use `rIter` -> **first**, que es equivalente a (\* `rIter`). **first**. Para tener acceso al valor de la referencia asignada del elemento, use `rIter` -> **second**, que es equivalente a (\* `rIter`). **first**.
 
@@ -2478,7 +2479,7 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-`right` La asignación de argumento que proporciona los elementos deben intercambiar con la asignación de destino.
+*derecha* mapa de argumentos que proporciona los elementos que se intercambie con el mapa de destino.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2548,13 +2549,13 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`key` El valor de clave de argumento que se comparará con el valor de clave de ordenación de un elemento del mapa que se va a buscar.
+*clave* el valor de clave de argumento que se comparará con el valor de clave de ordenación de un elemento del mapa que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**iterator** o `const_iterator` que direcciona la ubicación de un elemento de un mapa que tiene una clave mayor que la clave de argumento o que direcciona la ubicación siguiente al último elemento del mapa si no se encuentra ninguna coincidencia con la clave.
+Un `iterator` o `const_iterator` que se dirige la ubicación de un elemento en un mapa que tiene una clave que es mayor que la clave de argumento o que direcciona la ubicación siguiente al último elemento del mapa si no coinciden con se encuentra para la clave.
 
-Si el valor devuelto se asigna a `const_iterator`, el objeto de mapa no puede modificarse. Si el valor devuelto se asigna a **iterator**, el objeto de mapa no se puede modificar.
+Si el valor devuelto se asigna a `const_iterator`, el objeto de mapa no puede modificarse. Si el valor devuelto se asigna a un `iterator`, se puede modificar el objeto de mapa.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2737,7 +2738,7 @@ int main( )
 
 ## <a name="see-also"></a>Vea también
 
-[\<mapa > miembros](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<Map > miembros](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [Contenedores](../cpp/containers-modern-cpp.md)<br/>
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

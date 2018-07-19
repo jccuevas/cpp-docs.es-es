@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378641"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Conservar el último código de error para las llamadas a PInvoke)
 **/CLRSUPPORTLASTERROR**, que está activado de forma predeterminada, conserva el último código de error de funciones que se llama mediante el mecanismo P/Invoke, que le permite llamar a funciones nativas en archivos DLL, desde el código compilado con **/CLR**.  

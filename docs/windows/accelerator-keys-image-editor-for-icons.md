@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861537"
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>Teclas de aceleración (Editor de imágenes para iconos)
 A continuación se muestran las teclas de aceleración de los comandos del editor de imágenes que están enlazados a las claves de forma predeterminada. Para cambiar las teclas de aceleración, haga clic en **opciones** en el **herramientas** menú y, a continuación, elija **teclado** en el **entorno** carpeta. Para obtener más información, vea [Identificar y personalizar métodos abreviados de teclado](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

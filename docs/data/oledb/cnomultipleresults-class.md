@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096836"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults (Clase)
 Usar como un argumento de plantilla (*TMultiple*) a [CCommand](../../data/oledb/ccommand-class.md) para crear un comando optimizado que controla un único resultado conjunto.  

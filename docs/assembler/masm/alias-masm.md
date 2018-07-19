@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049172"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 El **ALIAS** directiva crea un nombre alternativo para una función.  Esto permite crear varios nombres para una función, o bibliotecas que permiten al vinculador (LINK.exe) para asignar una función antigua a una nueva función.  

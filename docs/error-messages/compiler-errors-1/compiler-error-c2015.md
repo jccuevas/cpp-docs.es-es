@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33165628"
 ---
 # <a name="compiler-error-c2015"></a>C2015 de Error del compilador
 Hay demasiados caracteres en la constante  

@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a31928bc98b8b2fd403f1db40c040357c388b104
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952292"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo (Estructura)
 El `CDaoQueryDefInfo` estructura contiene información sobre un objeto de definición de consulta definido para objetos de acceso a datos (DAO).  
@@ -44,10 +45,10 @@ struct CDaoQueryDefInfo
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `m_strName`  
+ *m_strName*  
  Identifica inequívocamente el objeto de definición de consulta. Para obtener más información, vea el tema "Nombre de propiedad" en la Ayuda de DAO. Llame a [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) para recuperar esta propiedad directamente.  
   
- `m_nType`  
+ *m_nType*  
  Un valor que indica el tipo de un objeto querydef operativo. El valor puede ser uno de los siguientes:  
   
 - **dbQSelect** seleccione, la consulta selecciona los registros.  
@@ -77,13 +78,13 @@ struct CDaoQueryDefInfo
   
  Para obtener más información, vea el tema "Tipo de propiedad" en la Ayuda de DAO.  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  La fecha y hora en que se creó la definición de consulta. Para recuperar directamente la fecha de creación de la definición de consulta, llame a la [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) función miembro de la `CDaoTableDef` objeto asociado a la tabla. Para obtener más información, vea comentarios a continuación. Consulte también el tema "DateCreated y LastUpdated propiedades" en la Ayuda de DAO.  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  La fecha y hora del cambio más reciente realizado en la definición de consulta. Para recuperar directamente la fecha en que se actualizó por última vez la tabla, llame a la [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) función miembro de la definición de consulta. Para obtener más información, vea comentarios a continuación. Y vea el tema "DateCreated y LastUpdated propiedades" en la Ayuda de DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Indica si se pueden realizar cambios a un objeto de definición de consulta. Si esta propiedad es **TRUE**, la definición de consulta es actualizable; de lo contrario, no lo es. Actualizable significa que se puede cambiar la definición de la consulta del objeto de definición de consulta. Se establece la propiedad de un objeto querydef actualizable en **TRUE** si puede actualizarse la definición de consulta, incluso si el conjunto de registros resultante no es actualizable. Para recuperar esta propiedad directamente, llame a la definición de consulta [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) función miembro. Para obtener más información, vea el tema "Propiedad actualizable" en la Ayuda de DAO.  
   
  *m_bReturnsRecords*  
@@ -92,7 +93,7 @@ struct CDaoQueryDefInfo
  *m_strSQL*  
  La instrucción SQL que define la consulta ejecutada por un objeto de definición de consulta. La propiedad SQL contiene la instrucción SQL que determina cómo se seleccionan, agrupan y ordenan los registros cuando se ejecuta la consulta. Puede usar la consulta para seleccionar los registros que se incluirán en un objeto de conjunto de registros de tipo dynaset o snapshot. También puede definir consultas de forma masiva para modificar datos sin devolver los registros. Puede recuperar el valor de esta propiedad directamente mediante una llamada a la definición de consulta [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) función miembro.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Proporciona información sobre el origen de una base de datos utilizada en una consulta de paso. Esta información toma la forma de una cadena de conexión. Para obtener más información acerca las cadenas de conexión y para obtener información acerca de cómo recuperar el valor de esta propiedad directamente, vea la [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) función miembro.  
   
  *m_nODBCTimeout*  

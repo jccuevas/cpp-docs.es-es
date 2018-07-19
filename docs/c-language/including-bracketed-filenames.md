@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383831"
 ---
 # <a name="including-bracketed-filenames"></a>Inclusión de nombres de archivo entre corchetes
 **ANSI 3.8.2** El método para buscar archivos de código fuente que se pueden incluir  

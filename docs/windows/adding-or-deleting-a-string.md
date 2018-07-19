@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858762"
 ---
 # <a name="adding-or-deleting-a-string"></a>Agregar o eliminar una cadena
 Puede insertar rápidamente las nuevas entradas en la tabla de cadenas con el editor de cadenas. Nuevas cadenas se colocan al final de la tabla y tienen el siguiente identificador disponible. A continuación, puede editar las propiedades ID, Value o Caption en la [ventana propiedades](/visualstudio/ide/reference/properties-window) según sea necesario.  

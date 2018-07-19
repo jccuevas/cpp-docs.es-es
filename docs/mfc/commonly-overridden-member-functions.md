@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345841"
 ---
 # <a name="commonly-overridden-member-functions"></a>Funciones miembro que se reemplazan con frecuencia
 La tabla siguiente enumera el más probable es que las funciones miembro para invalidar en su `CDialog`-clase derivada.  

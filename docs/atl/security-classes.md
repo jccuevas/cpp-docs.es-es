@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362344"
 ---
 # <a name="security-classes"></a>Clases de seguridad
 Estas clases son contenedores de objetos y clases comunes de seguridad de Win32.  

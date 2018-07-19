@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344424"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Cómo: Agregar controles de cinta y controladores de eventos
 Los controles de cinta de opciones son elementos, como botones y cuadros combinados, que agregan a los paneles. Los paneles son las áreas de la barra de cinta que mostrarán un grupo de controles relacionados.  

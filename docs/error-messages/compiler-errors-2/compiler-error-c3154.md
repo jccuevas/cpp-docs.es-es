@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251116"
 ---
 # <a name="compiler-error-c3154"></a>C3154 de Error del compilador
 Se esperaba ',' antes de puntos suspensivos. No coma separada puntos suspensivos que no se admiten en las funciones de matriz de parámetros.  

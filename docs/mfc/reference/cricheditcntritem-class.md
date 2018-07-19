@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a64950bcb0cc931b4528276e85f5d60e3b5cb08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b4c038389810fcc6a847cdbf7837568b3007b6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078613"
 ---
 # <a name="cricheditcntritem-class"></a>Clase CRichEditCntrItem
 Con [CRichEditView](../../mfc/reference/cricheditview-class.md) y [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), proporciona la funcionalidad del control rich edit en el contexto de la arquitectura de vista de documento de MFC.  
@@ -85,8 +86,8 @@ CRichEditCntrItem(
  *preo*  
  Puntero a un [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) estructura que describe un elemento OLE. El nuevo `CRichEditCntrItem` objeto se crea en torno a este elemento OLE. Si *preo* es **NULL**, el elemento de cliente está vacío.  
   
- `pContainer`  
- Puntero al documento contenedor que contendrá este elemento. Si `pContainer` es **NULL**, debe llamar explícitamente a [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) para agregar este elemento de cliente a un documento.  
+ *que pContainer*  
+ Puntero al documento contenedor que contendrá este elemento. Si *que pContainer* es **NULL**, debe llamar explícitamente a [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) para agregar este elemento de cliente a un documento.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función no realiza ninguna inicialización de OLE.  
@@ -94,7 +95,7 @@ CRichEditCntrItem(
  Para obtener más información, consulte el [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) estructura en el SDK de Windows.  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- Llame a esta función para sincronizar el aspecto del dispositivo, [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), de este **CRichEditCntrltem** al especificado por *reo*.  
+ Llame a esta función para sincronizar el aspecto del dispositivo, [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), de este `CRichEditCntrltem` al especificado por *reo*.  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);

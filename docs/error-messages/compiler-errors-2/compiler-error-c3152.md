@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249416"
 ---
 # <a name="compiler-error-c3152"></a>Error C3152 de Error del compilador
 'construct': 'keyword' solo se puede aplicar a una función de clase, struct o miembro virtual  

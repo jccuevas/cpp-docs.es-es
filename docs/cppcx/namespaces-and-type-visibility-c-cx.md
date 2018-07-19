@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089837"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Visibilidad de espacios de nombres y tipos (C++/CX)
 Un espacio de nombres es una construcción de C++ estándar para agrupar tipos que tienen funcionalidad relacionada y para evitar conflictos de nombre en bibliotecas. El sistema de tipos en tiempo de ejecución de Windows requiere que todos los tipos públicos de tiempo de ejecución de Windows, las de su propio código, incluidas se deben declarar en un espacio de nombres en el ámbito de espacio de nombres. Los tipos públicos que se declaran en el ámbito global o que se anidan dentro de otra clase producen un error en tiempo de compilación.  

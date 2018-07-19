@@ -1,5 +1,5 @@
 ---
-title: Agregar referencias en proyectos de Visual C++ | Documentos de Microsoft
+title: Agregar referencias en proyectos de Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33336113"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Agregar referencias en proyectos de Visual C++
 Es muy común que los programas llamen a las API de otros archivos binarios como, por ejemplo, los archivos DLL, los componentes en tiempo de ejecución de Windows, los SDK de extensiones, los componentes COM y los ensamblados .NET. La forma en que el programa busca esos otros archivos binarios depende tanto del tipo de proyecto como del tipo de binario.  
   
  En un proyecto de C++ nativo, si consume un componente DLL o COM nativo que no se está generando en otro proyecto de la solución, usa LoadLibrary o CoCreateInstance para especificar la ruta de acceso del archivo binario, o bien permite que el sistema la busque mediante una búsqueda en determinadas ubicaciones bien definidas.  
   
- En otros tipos de proyecto, como los de UWP o C++/CLI, o cuando el binario se genera en otro proyecto en la solución, agrega una *referencia* al ensamblado, el componente o el proyecto.   Básicamente, una referencia es un conjunto de datos que permite que el programa busque y se comunique con el binario.       Cuando se agrega una referencia, Visual Studio controla los detalles de nivel bajo. Para establecer referencias desde un proyecto de C++ para .NET Frameworkassemblies (C++ / CLI solamente), los componentes COM, otros proyectos en la solución que incluya proyectos comparten o servicios conectados, haga doble clic en el **referencias** nodo **El Explorador de soluciones** para que aparezca el **Administrador de referencias**. Lo que se muestra en el Administrador de referencias varía en función del tipo de proyecto.  
+ En otros tipos de proyecto, como los de UWP o C++/CLI, o cuando el binario se genera en otro proyecto en la solución, agrega una *referencia* al ensamblado, el componente o el proyecto.   Básicamente, una referencia es un conjunto de datos que permite que el programa busque y se comunique con el binario.       Cuando se agrega una referencia, Visual Studio controla los detalles de nivel bajo. Para establecer referencias desde un proyecto de C++ a ensamblados de .NET Framework (solo en C++/CLI), componentes COM, otros proyectos de la solución (incluidos los proyectos compartidos) o servicios conectados, haga clic con el botón derecho en el nodo **Referencias** en el **Explorador de soluciones** para que se muestre el **Administrador de referencias**. Lo que se muestra en el Administrador de referencias varía en función del tipo de proyecto.  
   
  En un proyecto de C++ nativo (ATL) el concepto de *referencias* solo se aplica a otros proyectos de la solución, incluidos los proyectos compartidos, de modo que eso es todo lo que muestra en **Administrador de referencias**:  
   
- ![Visual C&#43; &#43; Administrador de referencias &#40;ATL (proyectos)&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Administrador de referencias de Visual C++ (proyectos ATL)")  
+ ![Administrador de referencias de Visual C++ (proyectos ATL)](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual C++ Reference Manager (ATL Projects)")  
   
  En un proyecto de C++/CLI o de Plataforma universal de Windows, el concepto de referencias se aplica a más tipos de binarios además de a otros proyectos de la solución.  Todos ellos se exponen en **Administrador de referencias**.
   
@@ -58,7 +59,7 @@ Es muy común que los programas llamen a las API de otros archivos binarios como
  Muestra la herramienta que se utiliza para compilar el ensamblado de interoperabilidad desde el control ActiveX o la biblioteca COM a los que se hace referencia.  
   
 ### <a name="assembly-reference-properties"></a>Propiedades de la referencia de ensamblado  
- Propiedades de la referencia de ensamblado sólo están disponibles para las referencias a Frameworkassemblies de .NET en C++ / proyectos CLI. Estas propiedades se muestran únicamente cuando se selecciona un Frameworkassembly .NET en el **referencias** panel. No se pueden modificar las propiedades.  
+ Las propiedades de referencias de ensamblados solo están disponibles para referencias a ensamblados de .NET Framework en proyectos de C++/CLI. Estas propiedades solo se muestran cuando se selecciona un ensamblado de .NET Framework en el panel **Referencias**. No se pueden modificar las propiedades.  
   
  **Ruta relativa**  
  Muestra la ruta de acceso relativa desde el directorio del proyecto hasta el ensamblado al que se hace referencia.  
@@ -103,7 +104,7 @@ Es muy común que los programas llamen a las API de otros archivos binarios como
  Muestra la ruta de acceso del directorio del ensamblado al que se hace referencia.  
   
  **Identity**  
- Para el Frameworkassemblies. NET, muestra la ruta de acceso completa. Para los componentes COM, muestra el GUID.  
+ Para los ensamblados de .NET Framework, muestra la ruta de acceso completa. Para los componentes COM, muestra el GUID.  
   
  **Label**  
  Muestra la etiqueta de la referencia.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877415"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Seleccionar un color de una imagen para utilizarlo en otro sitio (Editor de imágenes para iconos)
 El **seleccionar Color**, o recogida de color, herramienta hace que cualquier color en la imagen el color de primer plano actual o el color de fondo, dependiendo de si presiona el botón secundario del mouse o la izquierda. Para cancelar la **seleccionar Color** de herramientas, elija otra herramienta.  

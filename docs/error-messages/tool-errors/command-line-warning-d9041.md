@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298644"
 ---
 # <a name="command-line-warning-d9041"></a>Advertencia de la línea de comandos D9041
 valor no válido 'value' para '/ option'; se supone 'valor'; Agregue ' / analyze' a las opciones de línea de comandos cuando se especifica esta advertencia  

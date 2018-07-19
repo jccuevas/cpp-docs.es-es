@@ -1,5 +1,5 @@
 ---
-title: Propiedades estándar | Documentos de Microsoft
+title: Propiedades estándar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33335448"
 ---
 # <a name="stock-properties"></a>Propiedades estándar
-Si va a agregar una propiedad en una interfaz dispinterface MFC mediante el [Asistente para agregar propiedades](../ide/idl-attributes-add-property-wizard.md), puede elegir una propiedad estándar de la **nombre de la propiedad** lista en la [nombres](../ide/names-add-property-wizard.md) página de la Asistente. Estas propiedades son las siguientes:  
+Si se va a agregar una propiedad a una interfaz dispinterface de MFC mediante el [Asistente para agregar propiedades](../ide/idl-attributes-add-property-wizard.md), se puede elegir una propiedad estándar de la lista **Nombre de la propiedad** en la página [Nombres](../ide/names-add-property-wizard.md) del asistente. Estas propiedades son las siguientes:  
   
-|Nombre de la propiedad|Descripción|  
+|Nombre de la propiedad|Description|  
 |-------------------|-----------------|  
-|**Apariencia**|Devuelve o establece un valor que determina la apariencia del control. El control **apariencia** propiedad puede incluir u omitir efectos tridimensionales. Se trata de una propiedad de ambiente de lectura/escritura.|  
-|`BackColor`|Devuelve o establece el control ambiente `BackColor` propiedad a un color de paleta (RGB) o un color de sistema predefinidos. De forma predeterminada, su valor corresponde al color de primer plano del contenedor del control. Se trata de una propiedad de ambiente de lectura/escritura.|  
-|`BorderStyle`|Devuelve o establece el estilo de borde para un control. Se trata de una propiedad de lectura/escritura.|  
-|**Título**|Devuelve o establece el control **título** propiedad. El título es el título de la ventana. **Título** no tiene ningún **variable miembro** tipo de implementación.|  
-|**Habilitado**|Devuelve o establece el control **habilitado** propiedad. Un control habilitado puede responder a eventos generados por el usuario.|  
-|**Fuente**|Devuelve o establece la fuente del control ambiente. Es null si el control no tiene ninguna fuente.|  
-|`ForeColor`|Devuelve o establece el control ambiente `ForeColor` propiedad.|  
-|**hWnd**|Devuelve o establece el control **hWnd** propiedad. **hWnd** no tiene ningún **variable miembro** tipo de implementación.|  
-|**ReadyState**|Devuelve o establece el control **ReadyState** propiedad. Puede ser un control no inicializado, inicializado, cargar, interactivo o completa. Vea [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) en el *Internet SDK* para obtener más información.|  
-|**Texto**|Devuelve o establece el texto contenido en un control. **Texto** no tiene ningún **variable miembro** tipo de implementación.|  
+|**Apariencia**|Devuelve o establece un valor que determina la apariencia del control. La propiedad **Apariencia** del control puede incluir u omitir efectos de presentación tridimensionales. Se trata de una propiedad de ambiente de lectura y escritura.|  
+|`BackColor`|Devuelve o establece la propiedad `BackColor` de ambiente del control en un color de paleta (RGB) o un color del sistema predefinido. De forma predeterminada, su valor se corresponde al color de primer plano del contenedor del control. Se trata de una propiedad de ambiente de lectura y escritura.|  
+|`BorderStyle`|Devuelve o establece el estilo de borde para un control. Es una propiedad de lectura y escritura.|  
+|**Título**|Devuelve o establece la propiedad **Título** del control. El título es el título de la ventana. **Título** no tiene ningún tipo de implementación **Variable miembro**.|  
+|**Habilitado**|Devuelve o establece la propiedad **Habilitado** del control. Un control habilitado puede responder a eventos generados por el usuario.|  
+|**Fuente**|Devuelve o establece la fuente de ambiente del control. Es NULL si el control no tiene ninguna fuente.|  
+|`ForeColor`|Devuelve o establece la propiedad `ForeColor` de ambiente del control.|  
+|**hWnd**|Devuelve o establece la propiedad **hWnd** de ambiente del control. **hWnd** no tiene ningún tipo de implementación **Variable miembro**.|  
+|**ReadyState**|Devuelve o establece la propiedad **ReadyState** del control. Un control puede estar no inicializado, inicializado, cargando, interactivo o completo. Vea [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) en el *SDK de Internet* para obtener más información.|  
+|**Texto**|Devuelve o establece el texto contenido en un control. **Texto** no tiene ningún tipo de implementación **Variable miembro**.|  
   
 ## <a name="see-also"></a>Vea también  
  [Agregar una propiedad](../ide/adding-a-property-visual-cpp.md)   

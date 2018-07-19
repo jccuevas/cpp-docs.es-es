@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357599"
 ---
 # <a name="date-and-time-automation-support"></a>Fecha y hora: compatibilidad con automatización
 En este artículo se describe cómo aprovechar las ventajas de los servicios de biblioteca de clase relacionados con la administración de fecha y hora. Los procedimientos descritos incluyen:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355540"
 ---
 # <a name="interface-pointers-classes"></a>Clases de punteros de interfaz
 Las siguientes clases de administran un puntero de interfaz determinada:  

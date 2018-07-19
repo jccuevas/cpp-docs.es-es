@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049286"
 ---
 # <a name="instr"></a>@InStr
 Función de macro que busca la primera aparición de *string2* en *string1*, empezando en *posición* en *string1*. Si *posición* no aparece, la búsqueda comienza en el inicio de *string1*. Devuelve un entero de posición o 0 si *string2* no se encuentra.  

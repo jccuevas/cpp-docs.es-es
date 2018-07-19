@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890949"
 ---
 # <a name="wrl-reference"></a>Referencia de WRL
 Esta sección contiene información de referencia para la biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución.  

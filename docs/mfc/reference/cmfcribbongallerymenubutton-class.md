@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041265"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Clase CMFCRibbonGalleryMenuButton
 Implementa un botón de menú de la cinta que contiene galerías de la cinta.  
@@ -107,7 +108,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -131,22 +132,22 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `uiID`  
- El identificador de comando del botón. Este es el valor enviado la **WM_COMMAND** mensaje cuando el usuario hace clic en este botón.  
+ *uiID*  
+ El identificador de comando del botón. Este es el valor que se envía en el mensaje WM_COMMAND cuando el usuario hace clic en este botón.  
   
- `iImage`  
- El índice de la imagen para mostrar con el botón de menú de la galería. Las imágenes se almacenan en la `imagesPalette` parámetro.  
+ *iImage*  
+ El índice de la imagen para mostrar con el botón de menú de la galería. Las imágenes se almacenan en la *imagesPalette* parámetro.  
   
- `lpszText`  
+ *lpszText*  
  El texto para mostrar en el botón de menú.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Contiene la lista de imágenes que se muestran en la galería.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  El identificador de recurso de la lista de imágenes para las imágenes para mostrar en la galería.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Especifica el ancho en píxeles de la imagen que se muestra en la galería.  
   
 ### <a name="remarks"></a>Comentarios  

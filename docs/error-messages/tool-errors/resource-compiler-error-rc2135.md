@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318030"
 ---
 # <a name="resource-compiler-error-rc2135"></a>Error del compilador de recursos RC2135
 archivo no encontrado: nombre de archivo  

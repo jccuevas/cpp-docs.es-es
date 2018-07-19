@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382198"
 ---
 # <a name="tree-control-image-lists"></a>Listas de imágenes del control de árbol
 Cada elemento de un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) puede tener un par de imágenes de mapa de bits asociado con él. Las imágenes aparecerán en el lado izquierdo de la etiqueta de un elemento. Una imagen se muestra cuando se selecciona el elemento y la otra se muestra cuando el elemento no está seleccionado. Por ejemplo, un elemento puede mostrar una carpeta abierta cuando se selecciona y una carpeta cerrada cuando no está seleccionada.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091977"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Origen de datos: Configurar un origen de datos ODBC mediante programación
 Este tema explica cómo configurar nombres de origen de datos Open Database Connectivity (ODBC) mediante programación. Esto le da flexibilidad para acceder a los datos sin obligar al usuario a utilizar explícitamente el Administrador de ODBC u otros programas para especificar los nombres de orígenes de datos.  

@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a620c2481b29b80f6d30dd6457716a652f51fd85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73aa47a2d888c88dd58d114dd4f5ca9a3f086cd3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956257"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operaciones de arrastrar y colocar del control de árbol
-Un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envía una notificación cuando el usuario empieza a arrastrar un elemento. El control envía un [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) recibe un mensaje de notificación cuando el usuario comienza a arrastrar un elemento con el botón primario del mouse y un [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) recibe un mensaje de notificación cuando el usuario comienza a arrastrar con el botón derecho. Puede impedir que un control de árbol enviar estas notificaciones proporcionando el control de árbol el **TVS_DISABLEDRAGDROP** estilo.  
+Un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envía una notificación cuando el usuario empieza a arrastrar un elemento. El control envía un [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) recibe un mensaje de notificación cuando el usuario comienza a arrastrar un elemento con el botón primario del mouse y un [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) recibe un mensaje de notificación cuando el usuario comienza a arrastrar con el botón derecho. Puede impedir que un control de árbol enviar estas notificaciones proporcionando el control de árbol el estilo TVS_DISABLEDRAGDROP.  
   
  Obtener una imagen que se mostrará durante una operación de arrastre mediante una llamada a la [función miembro CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) función miembro. El control de árbol crea un mapa de bits de arrastre basado en la etiqueta del elemento que se están arrastrando. A continuación, el control de árbol crea una lista de imágenes, agrega el mapa de bits y devuelve un puntero a la [CImageList](../mfc/reference/cimagelist-class.md) objeto.  
   

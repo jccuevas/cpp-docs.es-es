@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890559"
 ---
 # <a name="toolbar-image-editor-for-icons"></a>Barra de herramientas (Editor de imágenes para iconos)
 El **Editor de imágenes** barra de herramientas contiene herramientas de dibujo, pintura, escritura de texto, borrar y manipulación de vistas. También contiene un selector de opciones, con el que puede seleccionar opciones para usar cada herramienta. Por ejemplo, puede elegir de diversos anchos de pincel, factores de ampliación y estilos de línea.  

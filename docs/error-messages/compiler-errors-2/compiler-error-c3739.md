@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264743"
 ---
 # <a name="compiler-error-c3739"></a>Error del compilador C3739
 'class': sintaxis solo se admite cuando el parámetro 'layout_dependent' de event_receiver es true  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363589"
 ---
 # <a name="csacl-class"></a>Clase CSacl
 Esta clase es un contenedor para una estructura SACL (lista de control de acceso del sistema).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354638"
 ---
 # <a name="class-information-classes"></a>Clases de información de clase
 La siguiente clase proporciona compatibilidad para recuperar información de la clase:  

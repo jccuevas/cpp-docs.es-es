@@ -1,5 +1,5 @@
 ---
-title: '&lt;seealso&gt; (Visual C++) | Documentos de Microsoft'
+title: '&lt;seealso&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6a726a2fa1694fd346a6632fdc5e40bd53547fc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33334313"
 ---
 # <a name="ltseealsogt-visual-c"></a>&lt;seealso&gt; (Visual C++)
 La etiqueta \<seealso> le permite especificar el texto que quiere que aparezca en una sección Vea también. Use [\<see>](../ide/see-visual-cpp.md) para especificar un vínculo desde dentro del texto.  
@@ -37,7 +38,7 @@ La etiqueta \<seealso> le permite especificar el texto que quiere que aparezca e
  `member`  
  Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual.  Ponga el nombre entre comillas simples o dobles.  
   
- El compilador comprueba si el elemento de código dado existe y resuelve `member` al nombre de elemento en el resultado XML.  El compilador emite una advertencia si no encuentra `member`.  
+ El compilador comprueba si el elemento de código dado existe y resuelve `member` en el nombre de elemento en el resultado XML.  El compilador emite una advertencia si no encuentra `member`.  
   
  Para obtener información sobre cómo crear una referencia cref a un tipo genérico, vea [\<see>](../ide/see-visual-cpp.md).  
   
@@ -49,7 +50,7 @@ La etiqueta \<seealso> le permite especificar el texto que quiere que aparezca e
  El compilador de Visual C++ intentará resolver referencias cref en un paso por los comentarios de documentación.  Por tanto, si usa las reglas de búsqueda de C++, un símbolo que no encuentra el compilador se marcará como no resuelto.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se hace referencia a un símbolo sin resolver en cref. El comentario XML para el cref a B::Test será `<seealso cref="!:B::Test" />`, mientras que la referencia a A::Test está bien formada `<seealso cref="M:A.Test" />`.  
+ En el ejemplo siguiente, se hace referencia a un símbolo sin resolver en cref. El comentario XML para el cref de B::Test será `<seealso cref="!:B::Test" />`, mientras que la referencia a A::Test es `<seealso cref="M:A.Test" />` bien formada.  
   
 ```  
 // xml_seealso_tag.cpp  

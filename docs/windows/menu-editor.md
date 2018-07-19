@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879443"
 ---
 # <a name="menu-editor"></a>Editor de menús
 Los menús le permiten organizar comandos de una forma lógica y sencilla de encontrar. Con el editor de menús, puede crear y editar menús trabajando directamente con una barra de menús que se parezca a la usada en su aplicación finalizada.  

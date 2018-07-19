@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096719"
 ---
 # <a name="cmanualaccessorcreateaccessor"></a>CManualAccessor::CreateAccessor
 Asigna memoria a estructuras de enlace de la columna e inicializa a los miembros de datos de columna.  

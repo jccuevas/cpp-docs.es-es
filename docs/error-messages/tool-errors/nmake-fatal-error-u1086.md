@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317208"
 ---
 # <a name="nmake-fatal-error-u1086"></a>Error grave de NMAKE U1086
 **regla de inferencia no puede tener elementos dependientes**  

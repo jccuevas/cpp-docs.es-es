@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d195b2888c47a318369df13c371f85b21cc7bf84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e693a0e6a2353693f676ed0d63d7087d3e57455
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040904"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>Clase CMFCRibbonCustomizeDialog
 Muestra la cinta de opciones **personalizar** página.  
@@ -81,10 +82,10 @@ CMFCRibbonCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Un puntero a la ventana primaria (normalmente, el marco principal).  
   
- [in] `pRibbon`  
+ [in] *pRibbon*  
  Un puntero a la `CMFCRibbonBar` que va a personalizar.  
   
 ### <a name="example"></a>Ejemplo  

@@ -1,5 +1,5 @@
 ---
-title: Asistente para implementar interfaces | Documentos de Microsoft
+title: Asistente para implementar interfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,49 +17,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33340546"
 ---
 # <a name="implement-interface-wizard"></a>Asistente para implementar interfaces
-Este asistente implementa una interfaz para un objeto COM. Las implementaciones de las interfaces se incluyen en las bibliotecas COM disponibles con Visual Studio y Windows. Una implementación de interfaz está asociada a un objeto cuando se crea una instancia de ese objeto, así como los servicios que ofrece el objeto.  
+Este asistente implementa una interfaz para un objeto COM. Las implementaciones de muchas interfaces se incluyen en las bibliotecas COM disponibles con Visual Studio y Windows. Una implementación de interfaz está asociada a un objeto cuando se crea una instancia de ese objeto, y proporciona los servicios que ofrece el objeto.  
   
- Para obtener una explicación de las interfaces y las implementaciones, vea [Interfaces y las implementaciones de interfaz](http://msdn.microsoft.com/library/windows/desktop/ms694356) del SDK de Windows.  
+ Para obtener una explicación de las interfaces y las implementaciones, vea [Interfaces and Interface Implementations](http://msdn.microsoft.com/library/windows/desktop/ms694356) (Interfaces e implementaciones de interfaz) de Windows SDK.  
   
  **Implementar interfaz desde**  
- Especifica la ubicación de la biblioteca de tipos, desde el que se crea la interfaz.  
+ Especifica la ubicación de la biblioteca de tipos, desde la que se crea la interfaz.  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
-|**Proyecto**|La biblioteca de tipos es parte del proyecto.|  
-|**Registry**|La biblioteca de tipos está registrada en el sistema. Bibliotecas de tipos registradas aparecen en **bibliotecas de tipos disponibles**.|  
-|**Archivo**|La biblioteca de tipos no está necesariamente registrada en el sistema pero está contenida en un archivo. Debe proporcionar la ubicación del archivo en **ubicación**.|  
+|**Proyecto**|La biblioteca de tipos forma parte del proyecto.|  
+|**Registry**|La biblioteca de tipos se registra en el sistema. Las bibliotecas de tipos registradas se enumeran en **Bibliotecas de tipos disponibles**.|  
+|**Archivo**|La biblioteca de tipos no está necesariamente registrada en el sistema pero se incluye en un archivo. Debe proporcionar la ubicación del archivo en **Ubicación**.|  
   
  **Bibliotecas de tipos disponibles**  
- Muestra las bibliotecas de tipos disponibles que contienen las definiciones de interfaz que puede implementar. Si hace clic en **archivo** en **Implementar interfaz desde**, este cuadro no está disponible para el cambio.  
+ Muestra las bibliotecas de tipos disponibles que contienen las definiciones de interfaz que se pueden implementar. Si hace clic en **Archivo** en **Implementar interfaz desde**, este cuadro no está disponible para el cambio.  
   
  **Ubicación**  
- Muestra la ubicación de la biblioteca de tipos está seleccionada en el **bibliotecas de tipos disponibles** lista. Si seleccionó **archivo** en **Implementar interfaz desde**, haga clic en el botón de puntos suspensivos para buscar un archivo que contiene la biblioteca de tipos para usar.  
+ Muestra la ubicación de la biblioteca de tipos seleccionada actualmente en la lista **Bibliotecas de tipos disponibles**. Si seleccionó **Archivo** en **Implementar interfaz desde**, haga clic en el botón de puntos suspensivos para buscar un archivo que contenga la biblioteca de tipos que se va a usar.  
   
  **Interfaces**  
- Muestra las interfaces cuyas definiciones se encuentran en la biblioteca de tipos está seleccionada en el **bibliotecas de tipos disponibles** cuadro.  
+ Muestra las interfaces cuyas definiciones se encuentran en la biblioteca de tipos seleccionada actualmente en el cuadro **Bibliotecas de tipos disponibles**.  
   
 > [!NOTE]
->  Interfaces que tienen el mismo nombre que las ya implementadas por el objeto seleccionado no se muestran en la **Interfaces** cuadro.  
+>  Las interfaces que tienen el mismo nombre que las ya implementadas por el objeto seleccionado no se muestran en el cuadro **Interfaces**.  
   
-|Botón de transferencia|Descripción|  
+|Botón de transferencia|Description|  
 |---------------------|-----------------|  
-|**>**|Agrega a la **implementar interfaces** lista el nombre de interfaz seleccionado actualmente en el **Interfaces** lista.|  
-|**>>**|Agrega a la **implementar interfaces** lista todos los nombres de interfaz disponibles en la **Interfaces** lista.|  
-|**<**|Quita el nombre de interfaz seleccionado actualmente en el **implementar interfaces** lista.|  
-|**<\<**|Quita todos los nombres que actualmente aparecen en la interfaz del **implementar interfaces** lista.|  
+|**>**|Agrega el nombre de interfaz seleccionado actualmente en la lista **Interfaces** a la lista **Implementar interfaces**.|  
+|**>>**|Agrega todos los nombre de interfaz disponibles en la lista **Interfaces** a la lista **Implementar interfaces**.|  
+|**<**|Quita el nombre de interfaz seleccionado actualmente en la lista **Implementar interfaces**.|  
+|**<\<**|Quita todos los nombres de interfaz que se muestran actualmente en la lista **Implementar interfaces**.|  
   
  **Implementar Interfaces**  
  Muestra los nombres de las interfaces que ha seleccionado para implementar en el objeto.  
   
 > [!NOTE]
->  Si incluye más de una interfaz que se deriva de `IDispatch`, o si se intenta implementar una interfaz que se deriva de otra interfaz ya presente en su clase, debe eliminar la ambigüedad de las entradas COM_MAP. Vea [COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2) para obtener más información.  
+>  Si incluye más de una interfaz que se deriva de `IDispatch`, o bien si se intenta implementar una interfaz que se deriva de otra ya presente en la clase, tendrá que eliminar la ambigüedad de las entradas COM_MAP. Vea [COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2) para obtener más información.  
   
 ## <a name="see-also"></a>Vea también  
  [Implementar una interfaz](../ide/implementing-an-interface-visual-cpp.md)

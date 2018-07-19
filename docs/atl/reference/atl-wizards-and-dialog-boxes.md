@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356678"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>Cuadros de diálogo y asistentes ATL
 Los asistentes de Active Template Library (ATL) generan código reutilizable para diversos tipos de objetos COM. Puede ejecutar los asistentes, abra el menú contextual para un proyecto en **el Explorador de soluciones** y elegir **agregar**, **clase**.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357537"
 ---
 # <a name="atl-com-property-pages"></a>Páginas de propiedades COM de ATL
 Páginas de propiedades COM proporcionan una interfaz de usuario para establecer las propiedades (o llamar a los métodos) de uno o más objetos COM. Páginas de propiedades se utilizan ampliamente por los controles de ActiveX para proporcionar interfaces de usuario enriquecida que permite que las propiedades de control que se establecerá en tiempo de diseño.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351607"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Configuración de la aplicación, Asistente para controles ActiveX MFC
 Use esta página del Asistente para controles ActiveX MFC para diseñar y agregar características básicas a un nuevo proyecto de control ActiveX MFC. Esta configuración se aplica a la aplicación en sí, pero no a las características o los elementos específicos del control.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129494"
 ---
 # <a name="how-to-convert-char--string-to-systembyte-array"></a>Cómo: Convertir char * String en una matriz System::Byte
 La manera más eficaz de convertir una cadena `char *` en una matriz <xref:System.Byte> es utilizando la clase <xref:System.Runtime.InteropServices.Marshal>.  

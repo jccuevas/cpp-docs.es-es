@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880757"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Espacios de nombres de plataforma, predeterminado y CLI (Extensiones de componentes de C++)
 Un espacio de nombres califica los nombres de los elementos de lenguaje de modo que no entren en conflicto con nombres que por lo demás son idénticos en otra parte del código fuente. Por ejemplo, un conflicto de nombres puede evitar que el compilador reconozca [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md). El compilador utiliza los espacios de nombres, pero no se conservan en el ensamblado compilado.  

@@ -1,5 +1,5 @@
 ---
-title: Editar una interfaz COM | Documentos de Microsoft
+title: Editar una interfaz COM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: dd7a61593a1024c00c0fd0de6bd62ff3ee9323b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33338687"
 ---
 # <a name="editing-a-com-interface"></a>Editar una interfaz COM
-Mediante el uso de comandos en el menú contextual de vista de clases, puede definir nuevos métodos y propiedades para las interfaces COM en los proyectos de Visual C++. Además, en el cuadro de herramientas, puede definir eventos para controles ActiveX.  
+Mediante los comandos del menú contextual Vista de clases, se pueden definir métodos y propiedades nuevos para las interfaces COM en los proyectos de Visual C++. Además, desde el cuadro de herramientas, se pueden definir eventos para los controles ActiveX.  
   
- Para las clases de objeto de ATL y MFC basada en COM, puede editar la implementación de la clase al mismo tiempo que se edita la interfaz.  
+ Para las clases de objeto COM basadas en ATL y MFC, se puede editar la implementación de la clase al mismo tiempo que se edita la interfaz.  
   
 > [!NOTE]
->  Para las interfaces que han definido fuera de la **Agregar clase** cuadro de diálogo, Visual C++ agrega los métodos o propiedades al archivo .idl y que agrega el código auxiliar para las clases que implementan métodos, incluso cuando las interfaces se agregan manualmente.  
+>  Para las interfaces que se han definido fuera del cuadro de diálogo **Agregar clase**, Visual C++ agrega los métodos o propiedades al archivo .idl, y agrega códigos auxiliares a las clases que implementan los métodos, incluso cuando las interfaces se agregan de forma manual.  
   
- Los siguientes tres asistentes ayudarle a personalizar las interfaces existentes. Están disponibles desde la vista de clases:  
+ Los tres asistentes siguientes ayudan a personalizar las interfaces existentes. Están disponibles desde la Vista de clases:  
   
 |Asistente|Tipo de proyecto|  
 |------------|------------------|  
-|[Asistente para agregar propiedades](../ide/names-add-property-wizard.md)|Proyectos ATL o MFC compatibles con ATL. Haga clic en la interfaz a la que desea agregar la propiedad.<br /><br /> Visual C++ detecta el tipo de proyecto y modifica las opciones en el Asistente para agregar propiedades según corresponda:<br /><br /> -Para interfaces dispinterface en proyectos creados mediante el [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md), invocar el Asistente para agregar propiedades facilita opciones específicas de MFC.<br />-Para interfaces de controles ActiveX en MFC, el Asistente para agregar propiedades proporciona una lista de métodos y propiedades que puede usar tal como vienen o personalizarse para mayor control estándar.<br />-Para todas las demás interfaces, los asistentes para agregar propiedades proporcionan opciones de utilidad en la mayoría de los casos.|  
-|[Asistente para agregar métodos](../ide/add-method-wizard.md)|Proyectos ATL o MFC compatibles con ATL. Haga clic en la interfaz a la que desea agregar el método.<br /><br /> Visual C++ detecta el tipo de proyecto y modifica las opciones en el Asistente para agregar métodos según corresponda:<br /><br /> -Para interfaces dispinterface en proyectos creados mediante el [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md), invocar el Asistente para agregar métodos facilita opciones específicas de MFC.<br />-Para interfaces de controles ActiveX en MFC, el Asistente para agregar métodos proporciona una lista de métodos y propiedades que puede usar tal como vienen o personalizarse para mayor control estándar.<br />-Para todas las demás interfaces del **Agregar método** asistentes proporcionan opciones de utilidad en la mayoría de los casos.|  
+|[Asistente para agregar propiedades](../ide/names-add-property-wizard.md)|Proyectos de ATL o MFC compatibles con ATL. Haga clic con el botón derecho en la interfaz a la que quiera agregar la propiedad.<br /><br /> Visual C++ detecta el tipo de proyecto y modifica las opciones en el Asistente para agregar propiedades según corresponda:<br /><br /> -   Para las interfaces dispinterface de proyectos creados mediante el [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md), la invocación del Asistente para agregar propiedades proporciona opciones específicas para MFC.<br />-   Para las interfaces de controles ActiveX MFC, el Asistente para agregar propiedades proporciona una lista de métodos y propiedades estándar que se pueden usar tal cual o personalizar para controlarlos.<br />-   Para todas las demás interfaces, los asistentes para agregar propiedades proporcionan opciones de utilidad en la mayoría de los casos.|  
+|[Asistente para agregar métodos](../ide/add-method-wizard.md)|Proyectos de ATL o MFC compatibles con ATL. Haga clic con el botón derecho en la interfaz a la que quiera agregar el método.<br /><br /> Visual C++ detecta el tipo de proyecto y modifica las opciones en el Asistente para agregar métodos según corresponda:<br /><br /> -   Para las interfaces dispinterface de proyectos creados mediante el [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md), la invocación del Asistente para agregar métodos proporciona opciones específicas para MFC.<br />-   Para las interfaces de controles ActiveX MFC, el Asistente para agregar métodos proporciona una lista de métodos y propiedades estándar que se pueden usar tal cual o personalizar para controlarlos.<br />-   Para todas las demás interfaces, los asistentes para **agregar métodos** proporcionan opciones de utilidad en la mayoría de los casos.|  
   
- Además, se pueden implementar nuevas interfaces en un control COM haciendo clic en la clase del objeto control en la vista de clases y haga clic en [Implementar interfaz](../ide/implement-interface-wizard.md).  
+ Además, se pueden implementar interfaces nuevas en el control COM haciendo clic con el botón derecho en la clase de control del objeto en la Vista de clases y haciendo clic en [Implementar interfaz](../ide/implement-interface-wizard.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con archivos de recursos](../windows/working-with-resource-files.md)   

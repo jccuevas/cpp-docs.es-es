@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037966"
 ---
 # <a name="cmfcrebar-class"></a>Clase CMFCReBar
 Un `CMFCReBar` objeto es una barra de controles que proporciona información de diseño, persistencia y estado para controles rebar.  
@@ -109,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Un puntero a la ventana secundaria que se va a insertar en el control rebar. El objeto que se hace referencia debe tener la **WS_CHILD** estilo de ventana.  
   
- [in] `pszText`  
+ [in] *pszText*  
  Especifica el texto que aparece en el control rebar. El texto no forma parte de la ventana secundaria. En su lugar, se muestra en el control rebar propio.  
   
- [in] [out] `pbmp`  
+ [in] [out] *pbmp*  
  Especifica el mapa de bits que se mostrará en el fondo del control rebar.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Contiene el estilo que se va a aplicar a la banda. Para obtener una lista completa de los estilos de banda, vea la descripción de `fStyle` en el [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) estructura en la documentación del SDK de Windows.  
   
- [in] `clrFore`  
+ [in] *clrFore*  
  Representa el color de primer plano del rebar.  
   
- [in] `clrBack`  
+ [in] *clrBack*  
  Representa el color de fondo del rebar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -142,16 +143,16 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Un puntero a la ventana primaria de este control rebar.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Especifica el estilo del control rebar. El valor de estilo predeterminado es **RBS_BANDBORDERS**, que muestra restringir líneas para separar las bandas adyacentes en el control rebar. Para obtener una lista de estilos válidos, consulte [estilos de Control Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) en la documentación del SDK de Windows.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  El estilo de ventana del control rebar. Para obtener una lista de estilos válidos, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `nID`  
+ [in] *nID*  
  Identificador de ventana secundaria. del rebar  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -182,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -208,7 +209,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -231,7 +232,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -247,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
- [in] `pTI`  
+ [in] *punto*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -264,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -277,7 +278,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
   
 ### <a name="remarks"></a>Comentarios  
   

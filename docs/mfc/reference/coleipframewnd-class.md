@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040030"
 ---
 # <a name="coleipframewnd-class"></a>Clase de COleIPFrameWnd
 Base para la ventana de la edición en contexto de la aplicación.  
@@ -118,10 +119,10 @@ virtual void RepositionFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpPosRect`  
+ *lpPosRect*  
  Puntero a un `RECT` estructura o un `CRect` coordenadas de posición actual de la ventana, en píxeles, respecto al área de cliente de marco de objeto que contiene el contexto.  
   
- `lpClipRect`  
+ *lpClipRect*  
  Puntero a un `RECT` estructura o un `CRect` coordenadas del rectángulo de recorte actual de la ventana, en píxeles, respecto al área de cliente de marco de objeto que contiene el contexto.  
   
 ### <a name="remarks"></a>Comentarios  

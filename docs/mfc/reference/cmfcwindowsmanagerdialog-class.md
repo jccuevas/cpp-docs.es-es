@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6900164b3ce89031d0db7630c026a302616511c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b5ae46280a537577ae3e3ab0fbdf73f2e449e58
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042106"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>Clase CMFCWindowsManagerDialog
 La `CMFCWindowsManagerDialog` objeto permite al usuario administrar ventanas secundarias MDI en una aplicación MDI.  
@@ -75,10 +76,10 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pMDIFrame`  
+ [in] *pMDIFrame*  
  Un puntero a la ventana primaria o propietaria.  
   
- [in] `bHelpButton`  
+ [in] *bHelpButton*  
  Un parámetro booleano que especifica si el marco de trabajo muestra un **ayuda** botón.  
   
 ### <a name="remarks"></a>Comentarios  

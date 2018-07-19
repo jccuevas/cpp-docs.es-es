@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296216"
 ---
 # <a name="compiler-warning-level-2-c4948"></a>Advertencia del compilador (nivel 2) C4948
 tipo de valor devuelto de 'accessor' no coincide con el tipo último parámetro del método establecedor correspondiente  

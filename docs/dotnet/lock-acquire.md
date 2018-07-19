@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138974"
 ---
 # <a name="lockacquire"></a>lock::acquire
 Adquiere un bloqueo en un objeto, opcionalmente esperando a adquirir el bloqueo indefinidamente, durante un período determinado de tiempo, o no en absoluto.  

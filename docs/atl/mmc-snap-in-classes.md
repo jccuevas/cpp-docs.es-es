@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355498"
 ---
 # <a name="mmc-snap-in-classes"></a>Clases de complemento de MMC
 Las clases siguientes proporcionan compatibilidad para desarrollar componentes de complemento de Microsoft Management Console (MMC):  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226348"
 ---
 # <a name="fatal-error-c1191"></a>Error irrecuperable C1191
 'dll' sólo puede importarse en el ámbito global  

@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040719"
 ---
 # <a name="colecmdui-class"></a>Clase COleCmdUI
 Implementa un método para que MFC actualice el estado de los objetos relacionados con características de la aplicación orientadas a `IOleCommandTarget`.  
@@ -81,13 +82,13 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rgCmds`  
+ *rgCmds*  
  Una lista de los comandos admitidos asociados con el GUID especificado. El **OLECMD** estructura asocia comandos con marcadores de comando.  
   
  *cCmds*  
- El número de comandos de `rgCmds`.  
+ El número de comandos de *rgCmds*.  
   
- `pGroup`  
+ *pGroup*  
  Un puntero a un GUID que identifica un conjunto de comandos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -101,7 +102,7 @@ virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bOn`  
+ *Ben*  
  Indica si el comando asociado a la `COleCmdUI` objeto debe habilitarse o deshabilitarse. NonZero habilita el comando; 0 deshabilita el comando.  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
@@ -112,7 +113,7 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nCheck`  
+ *nCompruebe*  
  Un valor que determina el estado para establecer una alternancia activado/desactivado comando. Los valores son:  
   
 |Valor|Descripción|  
@@ -129,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszText`  
+ *lpszText*  
  Un puntero al texto que se utilizará con el comando.  
   
 ## <a name="see-also"></a>Vea también  

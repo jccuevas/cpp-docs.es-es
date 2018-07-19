@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76d8ec079a7c3534211118e60c1d9d95a3a8510a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa364ef0a817d46decef79b93e08bd5a359389d1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954045"
 ---
 # <a name="application-control"></a>Control de la aplicación
 OLE requiere un control considerable sobre las aplicaciones y sus objetos. La DLL del sistema OLE deben ser capaz de iniciar automáticamente la versión de las aplicaciones, coordinar su producción y la modificación de objetos y así sucesivamente. Las funciones en este tema cumplen dichos requisitos. Además de llamarse por la DLL del sistema OLE, estas funciones se deben llamar a veces también las aplicaciones. 
@@ -52,7 +53,7 @@ BOOL AFXAPI AfxOleCanExitApp();
  Es distinto de cero si la aplicación puede cerrarse; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Una aplicación no debe finalizar si hay referencias pendientes a sus objetos. Las funciones globales `AfxOleLockApp` y `AfxOleUnlockApp` incremento y decremento, respectivamente, un contador de referencias a objetos de la aplicación. La aplicación no debería finalizar cuando este contador es distinto de cero. Si el contador es distinto de cero, la ventana principal de la aplicación está oculto (no destruido) cuando el usuario elige cerrar en el menú de sistema o la salida en el menú archivo. El marco de trabajo llama a esta función **CFrameWnd::OnClose**.  
+ Una aplicación no debe finalizar si hay referencias pendientes a sus objetos. Las funciones globales `AfxOleLockApp` y `AfxOleUnlockApp` incremento y decremento, respectivamente, un contador de referencias a objetos de la aplicación. La aplicación no debería finalizar cuando este contador es distinto de cero. Si el contador es distinto de cero, la ventana principal de la aplicación está oculto (no destruido) cuando el usuario elige cerrar en el menú de sistema o la salida en el menú archivo. El marco de trabajo llama a esta función `CFrameWnd::OnClose`.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
@@ -146,7 +147,7 @@ void AFXAPI AfxOleUnlockApp();
 ### <a name="remarks"></a>Comentarios  
  Consulte `AfxOleLockApp` para obtener más información.  
   
- Cuando el número de objetos activos llega a cero, **AfxOleOnReleaseAllObjects** se llama.  
+ Cuando el número de objetos activos llega a cero, `AfxOleOnReleaseAllObjects` se llama.  
   
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [AfxOleLockApp](#afxolelockapp).  
@@ -163,10 +164,10 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parámetros  
- `clsid`  
+ *CLSID*  
  El identificador de clase único del control.  
   
- `lpszProgID`  
+ *lpszProgID*  
  El identificador de programa único del control.  
    
 ### <a name="return-value"></a>Valor devuelto  
@@ -206,10 +207,10 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `clsid`  
+ *CLSID*  
  Referencia al Id. del servidor OLE  
   
- `lpszClassName`  
+ *lpszClassName*  
  Puntero a una cadena que contiene el nombre de clase de objetos del servidor.  
   
  *lpszShortTypeName*  
@@ -218,7 +219,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
  *lpszLongTypeName*  
  Puntero a una cadena que contiene el nombre largo del tipo de objeto del servidor, como "Gráfico de Microsoft Excel 5.0."  
   
- `nAppType`  
+ *nAppType*  
  Un valor, tomado de la **OLE_APPTYPE** enumeración, que especifica el tipo de aplicación OLE. Los valores posibles son los siguientes:  
   
 - `OAT_INPLACE_SERVER` Servidor tiene interfaz de usuario completa del servidor.  
@@ -229,19 +230,19 @@ BOOL AFXAPI AfxOleRegisterServerClass(
   
 - `OAT_DISPATCH_OBJECT` `IDispatch`-objeto compatibles con.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  Matriz de punteros a cadenas que representan las claves y los valores que se agregarán al registro del sistema OLE si no se encuentra ningún valor existente para las claves.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  Matriz de punteros a cadenas que representan las claves y valores que se agregará al registro del sistema OLE si el registro contiene los valores existentes de las claves especificadas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la clase de servidor se ha registrado correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Puede usar la mayoría de las aplicaciones **COleTemplateServer::Register** para registrar tipos de documento de la aplicación. Si el formato de registro del sistema de la aplicación no ajusta el patrón típico, puede usar `AfxOleRegisterServerClass` para tener más control.  
+ Puede usar la mayoría de las aplicaciones `COleTemplateServer::Register` para registrar tipos de documento de la aplicación. Si el formato de registro del sistema de la aplicación no ajusta el patrón típico, puede usar `AfxOleRegisterServerClass` para tener más control.  
   
- El registro se compone de un conjunto de claves y valores. El `rglpszRegister` y `rglpszOverwrite` argumentos son matrices de punteros a cadenas, que consta de una clave y valor separan por un **NULL** caracteres ( `'\0'`). Cada una de estas cadenas puede tener parámetros reemplazables cuyos lugares están marcados por las secuencias de caracteres `%1` a través de `%5`.  
+ El registro se compone de un conjunto de claves y valores. El *rglpszRegister* y *rglpszOverwrite* argumentos son matrices de punteros a cadenas, que consta de una clave y valor separan por un **NULL** caracteres ( `'\0'`). Cada una de estas cadenas puede tener parámetros reemplazables cuyos lugares están marcados por las secuencias de caracteres *%1* a través de *%5*.  
   
  Los símbolos se rellenan como sigue:  
   
@@ -270,16 +271,16 @@ void AFXAPI AfxOleSetEditMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pClient`  
+ *pClient*  
  Un puntero al elemento de cliente OLE.  
   
- `pMenu`  
+ *pMenu*  
  Un puntero al objeto de menú para actualizarse.  
   
  *iMenuItem*  
  El índice del elemento de menú para actualizarse.  
   
- `nIDVerbMin`  
+ *nIDVerbMin*  
  El identificador de comando que se corresponde con el verbo principal.  
   
  *nIDVerbMax*  
@@ -289,7 +290,7 @@ void AFXAPI AfxOleSetEditMenu(
  Identificador para el elemento de menú de Convert.  
   
 ### <a name="remarks"></a>Comentarios  
- Si el servidor reconoce solo un verbo principal, se convierte en el elemento de menú "verbo *typename* objeto" y el `nIDVerbMin` comando se envía cuando el usuario elige el comando. Si el servidor reconoce varios verbos, a continuación, se convierte en el elemento de menú " *typename* objeto" y un submenú que enumera todos los verbos aparece cuando el usuario elige el comando. Cuando el usuario elige un verbo en el submenú, `nIDVerbMin` se envía si se elige el primer verbo, `nIDVerbMin` + 1 se envía si el segundo verbo es elegido y así sucesivamente. El valor predeterminado `COleDocument` implementación controla automáticamente esta característica.  
+ Si el servidor reconoce solo un verbo principal, se convierte en el elemento de menú "verbo *typename* objeto" y el *nIDVerbMin* comando se envía cuando el usuario elige el comando. Si el servidor reconoce varios verbos, a continuación, se convierte en el elemento de menú " *typename* objeto" y un submenú que enumera todos los verbos aparece cuando el usuario elige el comando. Cuando el usuario elige un verbo en el submenú, *nIDVerbMin* se envía si se elige el primer verbo, *nIDVerbMin* + 1 se envía si el segundo verbo es elegido y así sucesivamente. El valor predeterminado `COleDocument` implementación controla automáticamente esta característica.  
   
  Debe tener la siguiente instrucción de script de recursos de aplicación de su cliente (. Archivo RC):  
   
@@ -310,10 +311,10 @@ BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parámetros  
- `clsid`  
+ *CLSID*  
  El identificador de clase único del control.  
   
- `lpszProgID`  
+ *lpszProgID*  
  El identificador de programa único del control.  
    
 ### <a name="return-value"></a>Valor devuelto  

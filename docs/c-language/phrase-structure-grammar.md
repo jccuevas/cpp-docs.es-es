@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383711"
 ---
 # <a name="phrase-structure-grammar"></a>Gramática de la estructura de la frase
 -   [Expresiones](../c-language/summary-of-expressions.md)  

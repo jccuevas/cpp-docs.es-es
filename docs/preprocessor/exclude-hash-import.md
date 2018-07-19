@@ -21,6 +21,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33954133"
 ---
 # <a name="exclude-import"></a>exclude (#import)
 **Específicos de C++**  

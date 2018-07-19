@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890293"
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>Herramienta de texto (Cuadro de diálogo) (Editor de imágenes para iconos)
 Use la **herramienta texto** cuadro de diálogo para agregar texto a un recurso de cursor, mapa de bits o icono.  

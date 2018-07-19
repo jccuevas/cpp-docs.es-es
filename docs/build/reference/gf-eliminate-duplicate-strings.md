@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375898"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Eliminar cadenas duplicadas)
 Permite al compilador que cree una copia única de cadenas idénticas en la imagen del programa y en la memoria durante la ejecución. Se trata de una optimización denominada *la agrupación de cadenas* que pueden crear programas más pequeños.  

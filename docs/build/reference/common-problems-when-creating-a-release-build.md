@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373171"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Problemas comunes al crear versiones de lanzamiento
 Durante el desarrollo, normalmente se genere y pruebe con una versión de depuración del proyecto. Si, a continuación, compilar la aplicación para una versión de lanzamiento, puede obtener una infracción de acceso.  

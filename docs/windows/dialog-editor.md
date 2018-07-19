@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875863"
 ---
 # <a name="dialog-editor"></a>Editor de cuadros de diálogo
 El Editor de cuadros de diálogo permite crear o editar recursos de cuadro de diálogo. Para abrir el editor de cuadro de diálogo haciendo doble clic en el archivo .rc de un cuadro de diálogo en la ventana Vista de recursos (**vista &#124; vista de recursos**). Tenga en cuenta que la Vista de recursos no está disponible en las ediciones Express.  

@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fb9a3ff1c27aade9f74a8ed95a8016829874ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76ccb2ec126ae57e39b1a4fab3a0bff82a353d71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953767"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: Derivar de las clases de socket
 Este artículo describen algunas de las funciones que se obtiene al derivar su propia clase de una de las clases de socket.  
@@ -29,7 +30,7 @@ Este artículo describen algunas de las funciones que se obtiene al derivar su p
   
  Además, la clase `CSocket` proporciona el [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) función miembro (avanzada reemplazable). MFC llama a esta función mientras el socket suministra mensajes basados en Windows. Puede invalidar `OnMessagePending` para buscar mensajes concretos de Windows y responder a ellos.  
   
- La versión predeterminada de `OnMessagePending` incluida en la clase `CSocket` examina la cola de mensajes para `WM_PAINT` mensajes mientras se espera a que se complete una llamada de bloqueo. Envía los mensajes de paint para mejorar la calidad de la pantalla. Además de hacer algo útil, ilustra una forma podrían invalidar la función usted mismo. Como otro ejemplo, considere el uso de `OnMessagePending` para la tarea siguiente. Supongamos que muestra un cuadro de diálogo no modal mientras se espera que se complete una transacción de red. El cuadro de diálogo contiene un botón de cancelación que el usuario puede utilizar para cancelar las transacciones de bloqueo que tardan demasiado tiempo. Su `OnMessagePending` invalidación podría suministrar mensajes relacionados con este cuadro de diálogo no modal.  
+ La versión predeterminada de `OnMessagePending` incluida en la clase `CSocket` examina la cola de mensajes para buscar mensajes WM_PAINT mientras se espera a que se complete una llamada de bloqueo. Envía los mensajes de paint para mejorar la calidad de la pantalla. Además de hacer algo útil, ilustra una forma podrían invalidar la función usted mismo. Como otro ejemplo, considere el uso de `OnMessagePending` para la tarea siguiente. Supongamos que muestra un cuadro de diálogo no modal mientras se espera que se complete una transacción de red. El cuadro de diálogo contiene un botón de cancelación que el usuario puede utilizar para cancelar las transacciones de bloqueo que tardan demasiado tiempo. Su `OnMessagePending` invalidación podría suministrar mensajes relacionados con este cuadro de diálogo no modal.  
   
  En su `OnMessagePending` invalidar, devolver **TRUE** o el valor devuelto de una llamada a la versión de la clase base de `OnMessagePending`. Llamar a la versión de la clase base si realiza el trabajo que desea realizada.  
   

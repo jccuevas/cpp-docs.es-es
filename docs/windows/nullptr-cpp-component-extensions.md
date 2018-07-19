@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880720"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (Extensiones de componentes de C++)
 El `nullptr` palabra clave representa un *un valor de puntero nulo*. Use un valor de puntero nulo para indicar que un identificador de objeto, un puntero interior o un tipo de puntero nativo no señala a un objeto.  

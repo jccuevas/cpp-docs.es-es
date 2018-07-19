@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231001"
 ---
 # <a name="compiler-error-c2692"></a>C2692 de Error del compilador
 'nombre_de_función': las funciones prototipos totalmente necesarias en el compilador de C con el ' / clr' opción  

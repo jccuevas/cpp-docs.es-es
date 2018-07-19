@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295800"
 ---
 # <a name="compiler-warning-level-4-c4339"></a>Advertencia del compilador (nivel 4) C4339
 'type': se detectó el uso de un tipo no definido en los metadatos de WinRT o CLR; el uso de este tipo puede provocar una excepción en tiempo de ejecución  

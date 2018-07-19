@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375628"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (Nombre del archivo de base de datos del programa)
 Especifica un nombre de archivo para el archivo de base de datos (PDB) programa creado por [/Z7, / Zi, /ZI (formato de información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md).  

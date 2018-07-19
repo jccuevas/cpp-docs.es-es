@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858359"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Utilizar tipos de datos de TCHAR.H con código _MBCS
 Cuando la constante de manifiesto **_MBCS** está definido, se asigna una rutina de texto genérico determinada a uno de los siguientes tipos de rutinas:  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103823"
 ---
 # <a name="autogcrootoperator-autogcroot"></a>auto_gcroot::operator auto_gcroot
 Operador de conversión de tipos entre `auto_gcroot` y tipos compatibles.  

@@ -116,11 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02637017ccd589e093caf29cbfe0c345dfa80316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63e7fd651cf8a5524f3dc6c521de742ced7741ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039276"
 ---
 # <a name="cmfcmenubar-class"></a>Clase CMFCMenuBar
 Una barra de menús que implementa el acoplamiento.  
@@ -264,8 +265,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -281,8 +282,8 @@ virtual CSize CalcLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `dwMode`  
- [in] `nLength`  
+ [in] *dwMode*  
+ [in] *nLength*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -332,13 +333,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Puntero a la ventana primaria para el nuevo `CMFCMenuBar` objeto.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  El estilo de la barra de menús de nuevo.  
   
- [in] `nID`  
+ [in] *nID*  
  El identificador de la ventana secundaria de la barra de menús.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -365,19 +366,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Puntero a la ventana primaria de la nueva `CMFCMenuBar` objeto.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Estilos adicionales para la nueva barra de menús.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  El estilo principal de la nueva barra de menús.  
   
- [in] `rcBorders`  
+ [in] *rcBorders*  
  A `CRect` parámetro que especifica los tamaños de los bordes de la `CMFCMenuBar` objeto.  
   
- [in] `nID`  
+ [in] *nID*  
  El identificador de la ventana secundaria de la barra de menús.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -405,13 +406,13 @@ virtual void CreateFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hMenu`  
+ [in] *hMenu*  
  Un identificador a un recurso de menú. `CreateFromMenu` Use este recurso como una plantilla para el `CMFCMenuBar`.  
   
- [in] `bDefaultMenu`  
+ [in] *bDefaultMenu*  
  Un valor booleano que indica si el nuevo menú es el predeterminado.  
   
- [in] `bForceUpdate`  
+ [in] *bForceUpdate*  
  Un valor booleano que indica si este método obliga a una actualización de menú.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -428,19 +429,19 @@ void EnableHelpCombobox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiID`  
+ [in] *uiID*  
  El identificador de comando para el botón de la **ayuda** cuadro combinado.  
   
- [in] `lpszPrompt`  
+ [in] *lpszPrompt*  
  Una cadena que contiene el texto que muestra el marco de trabajo en el cuadro combinado si está vacío y no está activo. Por ejemplo, "Escriba aquí el texto".  
   
- [in] `nComboBoxWidth`  
+ [in] *nComboBoxWidth*  
  El ancho del botón del cuadro combinado en píxeles.  
   
 ### <a name="remarks"></a>Comentarios  
  El **ayuda** cuadro combinado es similar a la **ayuda** cuadro combinado en la barra de menús de [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
   
- Cuando se llama a este método con `uiID` establecido en 0, este método oculta el cuadro combinado. En caso contrario, este método muestra automáticamente el cuadro combinado en el lado derecho de la barra de menús. Después de llamar a este método, llame a [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) para obtener un puntero a las filas insertadas [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objeto.  
+ Cuando se llama a este método con *uiID* establece en 0, este método oculta el cuadro combinado. En caso contrario, este método muestra automáticamente el cuadro combinado en el lado derecho de la barra de menús. Después de llamar a este método, llame a [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) para obtener un puntero a las filas insertadas [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objeto.  
   
 ##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows  
  Habilita las sombras en los menús emergentes.  
@@ -450,7 +451,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  Un parámetro booleano que indica si se deben habilitar las sombras en los menús emergentes.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -512,7 +513,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -557,7 +558,7 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bHorz`  
+ [in] *bHorz*  
  Un parámetro booleano que especifica si se devuelve la fuente horizontal o vertical. `TRUE` indica la fuente horizontal.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -574,11 +575,11 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iItem`  
+ [in] *iItem*  
  El índice del elemento de menú para devolver.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la `CMFCToolBarButton` objeto que coincide con el índice especificado por `iItem`. `NULL` Si el índice no es válido.  
+ Un puntero a la `CMFCToolBarButton` objeto que coincide con el índice especificado por *iItem*. `NULL` Si el índice no es válido.  
   
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight  
 
@@ -601,8 +602,8 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiBtn`  
- [in] `bByCommand`  
+ [in] *uiBtn*  
+ [in] *bByCommand*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -638,7 +639,7 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bHighlight`  
+ [in] *bHighlight*  
  Un parámetro booleano que indica si el marco de trabajo resalta los elementos de menú no está disponible.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -739,13 +740,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Una cadena que contiene la ruta de acceso de una clave del registro de Windows.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  El identificador del control de la barra de menús.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Un valor reservado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -764,7 +765,7 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iHot`  
+ [in] *iHot*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -776,7 +777,7 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `hMenu`  
+ [in] *hMenu*  
  El identificador del menú asociado a la `CMFCMenuBar` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -790,7 +791,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -804,7 +805,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a la [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) objeto que el usuario desea personalizar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -823,8 +824,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
- [in] `pTI`  
+ [in] *punto*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -838,7 +839,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -870,13 +871,13 @@ virtual BOOL SaveState (
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Una cadena que contiene la ruta de acceso de una clave del registro de Windows.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  El identificador del control de la barra de menús.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Un valor reservado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -895,7 +896,7 @@ void SetDefaultMenuResId(UINT uiResId);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiResId`  
+ [in] *uiResId*  
  El identificador de recurso para el nuevo menú de forma predeterminada.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -911,7 +912,7 @@ void SetForceDownArrows(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bValue`  
+ [in] *bValue*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -926,17 +927,17 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bMax`  
+ [in] *bmáx*  
  Un valor booleano que especifica el modo. Vea la sección Comentarios para obtener más información.  
   
- [in] `pWnd`  
+ [in] *pWnd*  
  Un puntero a la ventana secundaria MDI que está cambiando.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  Un valor booleano que especifica si el diseño de la barra de menús debe volver a calcular inmediatamente.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando se maximiza una ventana secundaria MDI, una barra de menús que se adjunta a la ventana de marco principal MDI muestra el menú del sistema y la **minimizar**, **maximizar** y **cerrar** botones. Si `bMax` es `TRUE` y `pWnd` no es `NULL`, se maximiza la ventana secundaria MDI y la barra de menús debe incorporar los controles adicionales. En caso contrario, la barra de menús se devuelve a su estado normal.  
+ Cuando se maximiza una ventana secundaria MDI, una barra de menús que se adjunta a la ventana de marco principal MDI muestra el menú del sistema y la **minimizar**, **maximizar** y **cerrar** botones. Si *bmáx* es `TRUE` y *pWnd* no es `NULL`, se maximiza la ventana secundaria MDI y la barra de menús debe incorporar los controles adicionales. En caso contrario, la barra de menús se devuelve a su estado normal.  
   
 ##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC  
  Establece la información de clase en tiempo de ejecución que el marco de trabajo que se usa cuando el usuario crea botones de menú.  
@@ -946,7 +947,7 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pMenuButtonRTC`  
+ [in] *pMenuButtonRTC*  
  El [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) información para una clase derivada de la [CMFCMenuButton (clase)](../../mfc/reference/cmfcmenubutton-class.md).  
   
 ### <a name="remarks"></a>Comentarios  
@@ -962,11 +963,11 @@ static BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpLogFont`  
+ [in] *lpLogFont*  
  Un puntero a un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) estructura que define la fuente que se va a establecer.  
   
- [in] `bHorz`  
- TRUE si desea que el `lpLogFont` parámetro que se usará para la fuente vertical, FALSE si desea que se usará para fuentes horizontales.  
+ [in] *bHorz*  
+ TRUE si desea que la *lpLogFont* parámetro que se usará para la fuente vertical, FALSE si desea que se usará para fuentes horizontales.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si el método se realizó correctamente; en caso contrario, `FALSE`.  
@@ -984,7 +985,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bOn`  
+ [in] *Ben*  
  Un valor booleano que controla si se muestran los comandos de menú utilizados recientemente.  
   
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
@@ -995,7 +996,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bShowAllCommands`  
+ [in] *bShowAllCommands*  
  Un parámetro booleano que especifica si el menú emergente muestra todos los comandos de menú.  
   
 ### <a name="remarks"></a>Comentarios  

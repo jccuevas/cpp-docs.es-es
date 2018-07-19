@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c423f1423c874dbf110cfd6951b3510fe0506af
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121882"
 ---
 # <a name="csocket-class"></a>CSocket (clase)
 Se deriva de `CAsyncSocket`, hereda su encapsulación de la API de Windows Sockets y representa un mayor nivel de abstracción que el de un `CAsyncSocket` objeto.  
@@ -57,10 +58,10 @@ class CSocket : public CAsyncSocket
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CSocket::Attach](#attach)|Asocia un **SOCKET** identificador de un `CSocket` objeto.|  
+|[CSocket::Attach](#attach)|Asocia un identificador de SOCKET a un `CSocket` objeto.|  
 |[CSocket::CancelBlockingCall](#cancelblockingcall)|Cancela una llamada de bloqueo que está actualmente en curso.|  
 |[CSocket::Create](#create)|Crea un socket.|  
-|[CSocket::FromHandle](#fromhandle)|Devuelve un puntero a un `CSocket` objeto, dado un **SOCKET** controlar.|  
+|[CSocket::FromHandle](#fromhandle)|Devuelve un puntero a un `CSocket` objeto, dado un identificador de SOCKET.|  
 |[CSocket::IsBlocking](#isblocking)|Determina si una llamada de bloqueo está en curso.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
@@ -72,9 +73,9 @@ class CSocket : public CAsyncSocket
 ## <a name="remarks"></a>Comentarios  
  `CSocket` funciona con las clases `CSocketFile` y `CArchive` para administrar el envío y recepción de datos.  
   
- A `CSocket` objeto también proporciona bloqueo, que es esencial para el funcionamiento sincrónico de `CArchive`. Bloqueo de las funciones, como `Receive`, `Send`, `ReceiveFrom`, `SendTo`, y `Accept` (todos los heredados de `CAsyncSocket`), no devuelven un `WSAEWOULDBLOCK` error en `CSocket`. En su lugar, estas funciones esperan hasta que se complete la operación. Además, la llamada original se cerrará con el error `WSAEINTR` si `CancelBlockingCall` se llama mientras está bloqueando la una de estas funciones.  
+ A `CSocket` objeto también proporciona bloqueo, que es esencial para el funcionamiento sincrónico de `CArchive`. Bloqueo de las funciones, como `Receive`, `Send`, `ReceiveFrom`, `SendTo`, y `Accept` (todos los heredados de `CAsyncSocket`), no devuelven un `WSAEWOULDBLOCK` error en `CSocket`. En su lugar, estas funciones esperan hasta que se complete la operación. Además, se terminará la llamada original con el error WSAEINTR si `CancelBlockingCall` se llama mientras está bloqueando la una de estas funciones.  
   
- Para usar un `CSocket` de objeto, llame al constructor, a continuación, llame a `Create` crear subyacente `SOCKET` controlar (tipo `SOCKET`). Los parámetros predeterminados de `Create` crear un socket de secuencia, sin embargo, si no está utilizando el socket con un `CArchive` objeto, puede especificar un parámetro para crear un socket de datagrama en su lugar, ni enlazarse a un puerto específico para crear un socket de servidor. Conectarse a un socket de cliente mediante `Connect` en el lado del cliente y `Accept` en el servidor. A continuación, cree un `CSocketFile` objeto y asociarlo a la `CSocket` objeto en el `CSocketFile` constructor. A continuación, cree un `CArchive` objeto para el envío y otro para recibir datos (según sea necesario), a continuación, asociar con la `CSocketFile` objeto en el `CArchive` constructor. Cuando finalizan las comunicaciones, destruir la `CArchive`, `CSocketFile`, y `CSocket` objetos. El `SOCKET` tipo de datos se describe en el artículo [Windows Sockets: fondo](../../mfc/windows-sockets-background.md).  
+ Para usar un `CSocket` de objeto, llame al constructor, a continuación, llame a `Create` para crear el identificador SOCKET subyacente (tipo de SOCKET). Los parámetros predeterminados de `Create` crear un socket de secuencia, sin embargo, si no está utilizando el socket con un `CArchive` objeto, puede especificar un parámetro para crear un socket de datagrama en su lugar, ni enlazarse a un puerto específico para crear un socket de servidor. Conectarse a un socket de cliente mediante `Connect` en el lado del cliente y `Accept` en el servidor. A continuación, cree un `CSocketFile` objeto y asociarlo a la `CSocket` objeto en el `CSocketFile` constructor. A continuación, cree un `CArchive` objeto para el envío y otro para recibir datos (según sea necesario), a continuación, asociar con la `CSocketFile` objeto en el `CArchive` constructor. Cuando finalizan las comunicaciones, destruir la `CArchive`, `CSocketFile`, y `CSocket` objetos. El tipo de datos SOCKET se describe en el artículo [Windows Sockets: fondo](../../mfc/windows-sockets-background.md).  
   
  Cuando usas `CArchive` con `CSocketFile` y `CSocket`, puede darse el caso donde `CSocket::Receive` entra en un bucle (por `PumpMessages(FD_READ)`) esperando la cantidad de bytes solicitada. Esto es porque Windows sockets permite sólo una llamada de recepción por la notificación de FD_READ, pero `CSocketFile` y `CSocket` permitir varias llamadas de recepción por FD_READ. Si recibe un FD_READ cuando no hay datos para leer, la aplicación se bloquea. Si nunca se produce otro FD_READ, la aplicación deja de comunicarse a través del socket.  
   
@@ -107,14 +108,14 @@ BOOL Attach(SOCKET hSocket);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hSocket`  
+ *hSocket*  
  Contiene un identificador de un socket.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la función se realiza correctamente.  
   
 ### <a name="remarks"></a>Comentarios  
- El **SOCKET** identificador se almacena en el objeto [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) miembro de datos.  
+ El identificador SOCKET se almacena en el objeto [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) miembro de datos.  
   
  Para obtener más información, consulte [Windows Sockets: usar Sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -133,11 +134,11 @@ void CancelBlockingCall();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función cancela cualquier operación de bloqueo pendiente para este socket. La llamada bloqueo original se terminará tan pronto como sea posible con el error **WSAEINTR**.  
+ Esta función cancela cualquier operación de bloqueo pendiente para este socket. La llamada bloqueo original se terminará tan pronto como sea posible con el error WSAEINTR.  
   
- En el caso de un bloqueo **conectar** , la implementación de Windows Sockets finalizará la operación la llamada de bloqueo tan pronto como sea posible, pero puede no ser posible para los recursos de socket que se libere hasta que haya finalizado la conexión (y, a continuación, se ha restablecido) o tiempo de espera. Esto es probable que sea importante solo si la aplicación intenta inmediatamente para abrir un nuevo socket (si no hay sockets disponibles), o para conectar con el mismo nodo.  
+ En el caso de un bloqueo `Connect` , la implementación de Windows Sockets finalizará la operación la llamada de bloqueo tan pronto como sea posible, pero puede no ser posible para los recursos de socket que se libera hasta que la conexión ha completado (y, a continuación, se ha restablecido) o se agotó. Esto es probable que sea importante solo si la aplicación intenta inmediatamente para abrir un nuevo socket (si no hay sockets disponibles), o para conectar con el mismo nodo.  
   
- Cancelar cualquier operación distinta de **Accept** puede dejar el socket en un estado indeterminado. Si una aplicación cancela una operación de bloqueo en un socket, la única operación que puede depender de la aplicación que se va a llevar a cabo en el socket es una llamada a **cerrar**, aunque otras operaciones pueden funcionar en algunos Windows Sockets implementaciones. Si desea la máxima portabilidad de la aplicación, debe ser cuidado de no dependen de realizar operaciones después de una cancelación.  
+ Cancelar cualquier operación distinta de `Accept` puede dejar el socket en un estado indeterminado. Si una aplicación cancela una operación de bloqueo en un socket, la única operación que puede depender de la aplicación que se va a llevar a cabo en el socket es una llamada a `Close`, aunque otras operaciones pueden funcionar en algunas implementaciones de Windows Sockets. Si desea la máxima portabilidad de la aplicación, debe ser cuidado de no dependen de realizar operaciones después de una cancelación.  
   
  Para obtener más información, consulte [Windows Sockets: usar Sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -152,27 +153,27 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nSocketPort`  
+ *nSocketPort*  
  Un puerto determinado para su uso con el socket, o 0 si desea que MFC para seleccionar un puerto.  
   
- `nSocketType`  
- **SOCK_STREAM** o **SOCK_DGRAM**.  
+ *nSocketType*  
+ SOCK_STREAM o SOCK_DGRAM.  
   
- `lpszSocketAddress`  
- Un puntero a una cadena que contiene la dirección de red del socket conectado, un número separado por puntos, como "128.56.22.8". Pasar el **NULL** de cadena para este parámetro indica la **CSocket** instancia debe escuchar la actividad del cliente en todas las interfaces de red.  
+ *lpszSocketAddress*  
+ Un puntero a una cadena que contiene la dirección de red del socket conectado, un número separado por puntos, como "128.56.22.8". Pasar el valor NULL de cadenas para este parámetro indica la `CSocket` instancia debe escuchar la actividad del cliente en todas las interfaces de red.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la función se realiza correctamente; en caso contrario, 0 y un código de error específico se pueden recuperar mediante una llamada a `GetLastError`.  
   
 ### <a name="remarks"></a>Comentarios  
- **Crear** , a continuación, se llama **enlazar** para enlazar el socket a la dirección especificada. Se admiten los siguientes tipos de socket:  
+ `Create` a continuación, llama `Bind` para enlazar el socket a la dirección especificada. Se admiten los siguientes tipos de socket:  
   
-- **SOCK_STREAM** proporciona secuenciado, secuencias de bytes bidireccional, confiable y basada en la conexión. Usa el protocolo de Control de transmisión (TCP) para la familia de direcciones de Internet.  
+- SOCK_STREAM proporciona secuenciado, secuencias de bytes bidireccional, confiable y basada en la conexión. Usa el protocolo de Control de transmisión (TCP) para la familia de direcciones de Internet.  
   
-- **SOCK_DGRAM** admite datagramas, que son búferes sin conexión y no confiables de longitud máxima fija (normalmente corta). Usa el protocolo de datagramas de usuario (UDP) para la familia de direcciones de Internet. Para usar esta opción, no debe utilizar el socket con un `CArchive` objeto.  
+- SOCK_DGRAM admite datagramas, que son búferes sin conexión y no confiables de longitud máxima fija (normalmente corta). Usa el protocolo de datagramas de usuario (UDP) para la familia de direcciones de Internet. Para usar esta opción, no debe utilizar el socket con un `CArchive` objeto.  
   
     > [!NOTE]
-    >  El **Accept** función miembro toma una referencia a una nueva y vacía `CSocket` objeto como su parámetro. Se debe crear este objeto antes de llamar a **Accept**. Tenga en cuenta que si este objeto socket se sale del ámbito, se cerrará la conexión. No llame a **crear** para este nuevo objeto de socket.  
+    >  El `Accept` función miembro toma una referencia a una nueva y vacía `CSocket` objeto como su parámetro. Se debe crear este objeto antes de llamar a `Accept`. Tenga en cuenta que si este objeto socket se sale del ámbito, se cerrará la conexión. No llame a `Create` para este nuevo objeto de socket.  
   
  Para obtener más información acerca de los sockets de secuencia y datagrama, vea los artículos [Windows Sockets: fondo](../../mfc/windows-sockets-background.md), [Windows Sockets: puertos y direcciones de Socket](../../mfc/windows-sockets-ports-and-socket-addresses.md), y [Windows Sockets: usar Los sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -184,7 +185,7 @@ CSocket();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Después de la construcción, se debe llamar a la **crear** función miembro.  
+ Después de la construcción, se debe llamar a la `Create` función miembro.  
   
  Para obtener más información, consulte [Windows Sockets: usar Sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -196,14 +197,14 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hSocket`  
+ *hSocket*  
  Contiene un identificador de un socket.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a un `CSocket` objeto, o **NULL** si no hay ningún `CSocket` objeto asociado al `hSocket`.  
+ Un puntero a un `CSocket` objeto, o NULL si no hay ningún `CSocket` objeto asociado al *hSocket*.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando se especifica un **SOCKET** controlar si una `CSocket` objeto no está asociado al identificador, la función miembro devuelve **NULL** y no crea un objeto temporal.  
+ Cuando se especifica un identificador SOCKET, si un `CSocket` objeto no está asociado al identificador, la función miembro devuelve NULL y no crea un objeto temporal.  
   
  Para obtener más información, consulte [Windows Sockets: usar Sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   

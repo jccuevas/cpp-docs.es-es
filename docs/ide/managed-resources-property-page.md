@@ -1,5 +1,5 @@
 ---
-title: Administrar la página de propiedades recursos | Documentos de Microsoft
+title: Página de propiedades Recursos administrados | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33340364"
 ---
 # <a name="managed-resources-property-page"></a>página de propiedades Recursos administrados
-Habilita la configuración para el compilador de recursos.  
+Habilita opciones para el compilador de recursos.  
   
- El **recursos administrados** página de propiedades contiene las siguientes propiedades:  
+ La página de propiedades **Recursos administrados** contiene las propiedades siguientes:  
   
  **Nombre lógico del recurso**  
- Especifica la *nombre lógico* del archivo .resources intermedio generado. El nombre lógico es el nombre usado para cargar el recurso. Si no se especifica ningún nombre lógico, el nombre de archivo de recursos (.resx) se utiliza como el nombre lógico.  
+ Especifica el *nombre lógico* del archivo .resources intermedio que se genera. El nombre lógico es el que se usa para cargar el recurso. Si no se especifica ningún nombre lógico, se usa el nombre de archivo de recursos (.resx) como el nombre lógico.  
   
  **Nombre del archivo de salida**  
- Especifica el nombre del archivo de salida final que contribuye a crear el archivo de recursos (.resx).  
+ Especifica el nombre del archivo de salida final al que contribuye este archivo de recursos (.resx).  
   
- **Recursos localizados predeterminados**  
- Especifica si el archivo .resx determinado contribuye a los recursos predeterminados o a un archivo .dll satélite.  
+ **Recursos adaptados predeterminados**  
+ Especifica si el archivo .resx indicado contribuye a los recursos predeterminados o a un archivo .dll satélite.  
   
- Para obtener información sobre cómo obtener acceso a la **recursos administrados** página de propiedades, vea [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).  
+ Para obtener información sobre cómo acceder a las páginas de propiedades **Recursos administrados**, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Utilizar RC (la línea de comandos RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [Using RC (The RC Command Line)](http://msdn.microsoft.com/library/windows/desktop/aa381055)  (Uso de RC (la línea de comandos de RC))  
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (Insertar un recurso administrado)](../build/reference/assemblyresource-embed-a-managed-resource.md)

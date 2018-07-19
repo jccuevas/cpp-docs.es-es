@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294754"
 ---
 # <a name="command-line-warning-d9043"></a>Advertencia de la línea de comandos D9043
 valor no válido 'nivel_advertencia' para 'compiler_option'; se supone '4999'; Advertencias de análisis de código no están asociadas con niveles de advertencia  

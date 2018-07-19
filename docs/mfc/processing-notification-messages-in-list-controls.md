@@ -15,16 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af648a0bf4ae78c5c5e8bcceeac12c5dbc87307a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5412bbf1fcb7e139394b9563965244080e5c179
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932086"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>Procesar mensajes de notificación en los controles de lista
 Como los usuarios haga clic en los encabezados de columna, arrastre los iconos, edite las etiquetas y así sucesivamente, el control de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) envía mensajes de notificación a su ventana primaria. Controle estos mensajes si desea hacer algo en respuesta. Por ejemplo, cuando el usuario hace clic en un encabezado de columna, puede ordenar los elementos basados en el contenido de la columna seleccionada, como en Microsoft Outlook.  
   
- Proceso **WM_NOTIFY** mensajes desde el control de lista en la clase de vista o cuadro de diálogo. Utilice la ventana Propiedades para crear un [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) función de controlador con una instrucción switch en función de qué mensaje de notificación se está controlando.  
+ Procese los mensajes WM_NOTIFY desde el control de lista en la clase de vista o cuadro de diálogo. Utilice la ventana Propiedades para crear un [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) función de controlador con una instrucción switch en función de qué mensaje de notificación se está controlando.  
   
  Para obtener una lista de las notificaciones que puede enviar un control de lista a su ventana primaria, vea [referencia de Control de vista de lista](http://msdn.microsoft.com/library/windows/desktop/bb774737) del SDK de Windows.  
   

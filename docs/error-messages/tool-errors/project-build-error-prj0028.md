@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317731"
 ---
 # <a name="project-build-error-prj0028"></a>Error PRJ0028 al compilar el proyecto
 Archivo temporal 'nombre_archivo' incluye contenido Unicode que no se puede traducir a la página de códigos ANSI del usuario.  

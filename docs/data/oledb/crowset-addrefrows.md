@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096657"
 ---
 # <a name="crowsetaddrefrows"></a>CRowset::AddRefRows
 Llamadas [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) incremento (uno) el recuento de referencias asociadas con el identificador de fila actual.  

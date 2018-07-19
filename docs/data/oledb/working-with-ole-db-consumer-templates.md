@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108283"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Trabajar con plantillas de consumidor OLE DB
 Los temas siguientes proporcionan algunos ejemplos de cómo usar las plantillas de consumidor OLE DB en escenarios comunes:  

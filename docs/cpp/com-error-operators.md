@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410358"
 ---
 # <a name="comerror-operators"></a>_com_error (Operadores)
 Para obtener información sobre la `_com_error` operadores, vea [clase _com_error](../cpp/com-error-class.md).  

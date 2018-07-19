@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057128"
 ---
 # <a name="operator-this"></a>Operador THIS
 Devuelve un operando de especificado `type` cuyos valores de desplazamiento y segmento son iguales que el valor de contador de ubicación actual.  

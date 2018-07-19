@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892662"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive (Método)
 Intenta adquirir un objeto SRWLock en modo exclusivo para el objeto de SRWLock actual o especificado. Si la llamada se realiza correctamente, el subproceso de llamada toma posesión del bloqueo.  

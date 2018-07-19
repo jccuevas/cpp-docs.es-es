@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07131c64097457bd6a8035b5fe100ba376d49fbd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931162"
 ---
 # <a name="ribbon-designer-mfc"></a>Diseñador de la cinta de opciones (MFC)
 El diseñador de la cinta de opciones permite crear y personalizar las cintas de opciones de las aplicaciones MFC. Una cinta de opciones es un elemento de la interfaz de usuario (IU) que organiza los comandos en grupos lógicos. Estos grupos aparecen en pestañas independientes en una banda a lo largo de la parte superior de la ventana. La cinta de opciones reemplaza a la barra de menús y a las barras de herramientas. Una cinta de opciones puede mejorar considerablemente la facilidad de uso de la aplicación. Para obtener más información, consulte [las cintas de opciones](http://go.microsoft.com/fwlink/p/?linkid=129233). En la siguiente ilustración se muestra una cinta de opciones.  
@@ -33,7 +34,7 @@ El diseñador de la cinta de opciones permite crear y personalizar las cintas de
 ## <a name="understanding-the-ribbon-designer"></a>Descripción del diseñador de la cinta de opciones  
  El diseñador de la cinta de opciones crea y almacena la cinta de opciones como un recurso. Cuando se crea un recurso de cinta de opciones, el diseñador de la cinta de opciones hace estas tres cosas:  
   
--   Agrega una entrada en el script de definición de recursos de proyecto (*.rc). En el ejemplo siguiente, `IDR_RIBBON` es el nombre único que identifica el recurso de cinta de opciones, `RT_RIBBON_XML` es el tipo de recurso y `ribbon.mfcribbon-ms` es el nombre del archivo de recursos.  
+-   Agrega una entrada en el script de definición de recursos de proyecto (*.rc). En el ejemplo siguiente, IDR_RIBBON es el nombre único que identifica el recurso de cinta de opciones, RT_RIBBON_XML es el tipo de recurso y ms ribbon.mfcribbon es el nombre del archivo de recursos.  
   
  ```  
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  

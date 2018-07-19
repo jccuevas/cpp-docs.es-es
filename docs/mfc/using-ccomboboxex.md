@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381766"
 ---
 # <a name="using-ccomboboxex"></a>Usar CComboBoxEx
 El control de cuadro combinado extendido es una extensión del control de cuadro combinado estándar que proporciona compatibilidad nativa con imágenes de elementos. Estas imágenes se pueden utilizar para indicar el estado de los elementos individuales en el cuadro combinado, por ejemplo, los elementos seleccionados y no seleccionados actualmente. Para facilitar el acceso a imágenes de elemento, el control proporciona compatibilidad con listas de imágenes.  

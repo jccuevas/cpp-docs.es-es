@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341915"
 ---
 # <a name="creating-your-dialog-class"></a>Creating Your Dialog (Clase)
 Para cada cuadro de diálogo en el programa, cree una nueva clase de cuadro de diálogo para que funcione con el recurso de cuadro de diálogo.  

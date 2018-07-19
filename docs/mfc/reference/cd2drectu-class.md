@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d960cfc0ce3d9d5632edd3a1b42903f3cdd0f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5faf4bb8f2ff416d90311d678543c48d212acdd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953888"
 ---
 # <a name="cd2drectu-class"></a>Clase CD2DRectU
 Contenedor para `D2D1_RECT_U`.  
@@ -47,7 +48,7 @@ class CD2DRectU : public D2D1_RECT_U;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|Devuelve un `boolean` valor que indica si una expresión no contiene datos válidos ( `null`).|  
+|[CD2DRectU::IsNull](#isnull)|Devuelve un **booleano** valor que indica si una expresión no contiene datos válidos ( **null**).|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -80,19 +81,19 @@ CD2DRectU(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rect`  
+ *Rect*  
  rectángulo de origen  
   
- `uLeft`  
+ *uLeft*  
  Coordenada izquierda de origen  
   
- `uTop`  
+ *uTop*  
  Coordenada superior de origen  
   
- `uRight`  
+ *uRight*  
  Coordenada derecha de origen  
   
- `uBottom`  
+ *uBottom*  
  Coordenada inferior de origen  
   
 ##  <a name="isnull"></a>  CD2DRectU::IsNull  

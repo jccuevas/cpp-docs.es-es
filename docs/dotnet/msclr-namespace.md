@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132913"
 ---
 # <a name="msclr-namespace"></a>msclr (Espacio de nombres)
 El `msclr` espacio de nombres contiene todas las clases de la biblioteca de compatibilidad de C++. Para obtener más información sobre esas clases, vea [biblioteca de compatibilidad de C++](../dotnet/cpp-support-library.md).  

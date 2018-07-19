@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382598"
 ---
 # <a name="walkthroughs-mfc"></a>Tutoriales (MFC)
 Esta sección contiene artículos que le guiarán por diversas tareas asociadas a las nuevas características de la biblioteca MFC.  

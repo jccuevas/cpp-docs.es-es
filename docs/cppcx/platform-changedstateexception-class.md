@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087954"
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException (Clase)
 Se produce cuando el estado interno de un objeto ha cambiado, invalidando de este modo los resultados del método.  

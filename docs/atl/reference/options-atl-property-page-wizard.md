@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358774"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opciones, Asistente para páginas de propiedades ATL
 Utilice esta página del Asistente para definir el nivel de agregación y de modelo de subprocesamiento de página de propiedades que se va a crear.  

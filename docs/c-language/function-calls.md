@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387868"
 ---
 # <a name="function-calls"></a>Llamadas de función
 Una *llamada a función* es una expresión que pasa el control y los argumentos (si existen) a una función, y tiene el formato:  

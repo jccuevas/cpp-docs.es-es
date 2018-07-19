@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882581"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Editor de cuadros de diálogo (Ficha, Cuadro de herramientas)
 La pestaña del Editor de cuadro de diálogo aparece en la [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox) cuando esté trabajando en el editor de cuadro de diálogo. Para agregar controles a un cuadro de diálogo nuevo, arrastre controles desde el cuadro de herramientas al cuadro de diálogo que está creando (para obtener más información, consulte [agregar un Control a un cuadro de diálogo](adding-a-control-to-a-dialog-box.md)). Después, puede mover los controles o cambiar su tamaño y su forma.  

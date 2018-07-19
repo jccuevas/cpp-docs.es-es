@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373821"
 ---
 # <a name="value-edit-control"></a>valor (control de edición)
 Para utilizar el control, escriba un valor, péguelo desde el Portapapeles o arrástrelo y colóquelo desde el depurador hasta el control de edición. Escriba el valor en formato decimal o hexadecimal y, a continuación, haga clic en **buscar**. Los valores hexadecimales deben ir precedidos de 0x; los caracteres válidos son 0-9, A-F y a-f. Los valores decimales pueden ir precedidos del signo menos (-) y utilizar los caracteres 0-9.  

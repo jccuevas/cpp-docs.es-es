@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365105"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>Clase CComSingleThreadModel
 Esta clase proporciona métodos para aumentar y disminuir el valor de una variable.  

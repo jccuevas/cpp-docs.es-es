@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881606"
 ---
 # <a name="nonextensible"></a>nonextensible
 Especifica que el `IDispatch` implementación incluye solo las propiedades y métodos aparecen en la descripción de interfaz y no se puede ampliar con miembros adicionales en tiempo de ejecución.  

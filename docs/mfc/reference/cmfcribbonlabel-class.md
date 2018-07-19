@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042500"
 ---
 # <a name="cmfcribbonlabel-class"></a>Clase CMFCRibbonLabel
 Implementa una etiqueta de texto no seleccionable en una cinta.  
@@ -79,10 +80,10 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszText`  
+ [in] *lpszText*  
  El texto que aparecerá en la etiqueta.  
   
- [in] `bIsMultiLine`  
+ [in] *bIsMultiLine*  
  `TRUE` para especificar que la etiqueta es una etiqueta de varias líneas; en caso contrario, `FALSE`.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
@@ -95,14 +96,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParent`  
+ [in] *pParent*  
  Representa la ventana primaria de la etiqueta de cinta actual.  
   
- [out] `data`  
+ [out] *datos*  
  Un objeto del tipo `CAccessibilityData` que se rellena con los datos de accesibilidad de la etiqueta de cinta actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el `data` parámetro se rellena con los datos de accesibilidad de la etiqueta de cinta actual correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si el *datos* parámetro se rellena con los datos de accesibilidad de la etiqueta de cinta actual correctamente; en caso contrario, `FALSE`.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

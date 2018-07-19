@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b18eef5b828577f6d77846a5e9e231dcf828332
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040732"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Clase CMFCBaseVisualManager
 Una capa entre derivados administradores visuales y la API de tema de Windows.  
@@ -135,31 +136,31 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Un puntero a un contexto de dispositivo  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador de la casilla de verificación.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Especifica si la casilla de verificación está resaltada.  
   
- [in] `nState`  
+ [in] *nState*  
  0 para no está activada, 1 para activado normal,  
   
  2 para mixto normal.  
   
- [in] `bEnabled`  
+ [in] *bHabilitado*  
  Especifica si la casilla de verificación está habilitada.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Especifica si se presionó la casilla de verificación.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si está habilitado el tema API; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
- Los valores de `nState` se corresponden con los siguientes estilos de casilla de verificación.  
+ Los valores de *nState* corresponden a los siguientes estilos de casilla de verificación.  
   
 |nState|Estilo de la casilla de verificación|  
 |------------|---------------------|  
@@ -180,19 +181,19 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Rectángulo delimitador del borde de cuadro combinado.  
   
- [in] `bDisabled`  
+ [in] *bDeshabilitado*  
  Especifica si está deshabilitado el borde del cuadro combinado.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Especifica si el borde del cuadro combinado está desplegado.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Especifica si se resalta el borde del cuadro combinado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -214,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `pDC`|Puntero a un contexto de dispositivo.|  
-|[in] `rect`|El rectángulo delimitador del botón de lista desplegable del cuadro combinado.|  
-|[in] `bDisabled`|Especifica si el botón de lista desplegable del cuadro combinado está deshabilitado.|  
-|[in] `bIsDropped`|Especifica si el botón de lista desplegable del cuadro combinado está desplegado.|  
-|[in] `bIsHighlighted`|Especifica si se resalta el botón de lista desplegable del cuadro combinado.|  
+|[in] *pDC*|Puntero a un contexto de dispositivo.|  
+|[in] *rect*|El rectángulo delimitador del botón de lista desplegable del cuadro combinado.|  
+|[in] *bDeshabilitado*|Especifica si el botón de lista desplegable del cuadro combinado está deshabilitado.|  
+|[in] *bIsDropped*|Especifica si el botón de lista desplegable del cuadro combinado está desplegado.|  
+|[in] *bIsHighlighted*|Especifica si se resalta el botón de lista desplegable del cuadro combinado.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si está habilitado el tema API; en caso contrario, `FALSE`.  
@@ -235,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del botón de inserción.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Un puntero a la [CMFCButton clase](../../mfc/reference/cmfcbutton-class.md) objeto que se va a dibujar.  
   
- [in] `uiState`  
- ignorado. El estado se toma del `pButton`.  
+ [in] *uiState*  
+ ignorado. El estado se toma del *pButton*.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `TRUE` Si está habilitado el tema API; en caso contrario, `FALSE`.  
@@ -264,22 +265,22 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del botón de radio.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Especifica si se resalta el botón de radio.  
   
- [in] `bChecked`  
+ [in] *bChecked*  
  Especifica si el botón de radio está activado.  
   
- [in] `bEnabled`  
+ [in] *bHabilitado*  
  Especifica si está habilitado el botón de radio.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Especifica si se presiona el botón de radio.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -302,31 +303,31 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pStatusBar`  
+ [in] *pStatusBar*  
  Un puntero a la barra de estado. Este valor se omite.  
   
- [in] `rectProgress`  
- El rectángulo delimitador de la barra de progreso en `pDC` coordenadas.  
+ [in] *rectProgress*  
+ El rectángulo delimitador de la barra de progreso en *pDC* coordenadas.  
   
- [in] `nProgressTotal`  
+ [in] *nProgressTotal*  
  El valor de progreso total.  
   
- [in] `nProgressCurr`  
+ [in] *nProgressCurr*  
  El valor de progreso actual.  
   
- [in] `clrBar`  
+ [in] *clrBar*  
  El color inicial. `CMFCBaseVisualManager` pasa por alto este. Las clases derivadas pueden utilizarlo para degradados de color.  
   
- [in] `clrProgressBarDest`  
+ [in] *clrProgressBarDest*  
  El color final. `CMFCBaseVisualManager` pasa por alto este. Las clases derivadas pueden utilizarlo para degradados de color.  
   
- [in] `clrProgressText`  
+ [in] *clrProgressText*  
  Color del texto de progreso. `CMFCBaseVisualManager` pasa por alto este. El color del texto se define mediante `afxGlobalData.clrBtnText`.  
   
- [in] `bProgressText`  
+ [in] *bProgressText*  
  Especifica si se muestra el texto de progreso.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -343,13 +344,13 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Un puntero a un panel se debe dibujar cuyo fondo.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  El rectángulo delimitador del área que se rellenará.  
   
 ### <a name="return-value"></a>Valor devuelto  

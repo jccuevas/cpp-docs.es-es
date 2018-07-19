@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385604"
 ---
 # <a name="user-interface-objects-and-command-ids"></a>Objetos de interfaz de usuario e identificadores de comando
 Elementos de menú, botones de barra de herramientas y teclas de aceleración son "objetos de interfaz de usuario" capaces de generar comandos. Cada objeto de interfaz de usuario de este tipo tiene un identificador. Asociar un objeto de interfaz de usuario con un comando asignando el mismo identificador al objeto y el comando. Como se explica en [mensajes](../mfc/messages.md), se implementan como mensajes especiales. La ilustración "Comandos en el marco de trabajo" a continuación muestra cómo el marco de trabajo administra los comandos. Cuando un objeto de interfaz de usuario genera un comando, como `ID_EDIT_CLEAR_ALL`, uno de los objetos de la aplicación controla el comando, en la ilustración siguiente, el objeto de documento `OnEditClearAll` función se llama a través del mapa de mensajes del documento.  

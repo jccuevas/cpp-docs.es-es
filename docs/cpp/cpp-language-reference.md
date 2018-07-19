@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417209"
 ---
 # <a name="c-language-reference"></a>Referencia del lenguaje C++
 Esta referencia explica el lenguaje de programación C++ tal como se implementa en Microsoft Visual C++. La organización se basa en *The Annotated C++ Reference Manual* de Margaret Ellis y Bjarne Stroustrup y en los estándares de internacionales de C++ de ANSI/ISO (ISO/IEC FDIS 14882). Se incluyen las implementaciones específicas de Microsoft de las características del lenguaje C++.  

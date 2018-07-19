@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33306941"
 ---
 # <a name="c-runtime-error-r6016"></a>R6016 de Error de tiempo de ejecución de C
 espacio insuficiente para datos de subproceso  

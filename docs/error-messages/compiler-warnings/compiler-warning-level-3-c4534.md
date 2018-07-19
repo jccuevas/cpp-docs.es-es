@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293038"
 ---
 # <a name="compiler-warning-level-3-c4534"></a>Advertencia del compilador (nivel 3) C4534
 'constructor' no será un constructor predeterminado para la clase 'class' debido al argumento predeterminado  

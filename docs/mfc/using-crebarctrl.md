@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383314"
 ---
 # <a name="using-crebarctrl"></a>Usar CReBarCtrl
 Un control rebar actúa como un contenedor para ventanas secundarias. Estas ventanas secundarias, a menudo otros controles, se asignan a una banda de control rebar. Un control rebar puede contener una o más bandas, con cada banda puede tener cualquier combinación de una barra de controles, un mapa de bits, una etiqueta de texto y una ventana secundaria. Sin embargo, las bandas no pueden contener más de una ventana secundaria.  

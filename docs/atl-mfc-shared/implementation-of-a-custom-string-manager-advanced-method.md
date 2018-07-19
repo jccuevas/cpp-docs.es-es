@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357820"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementación de un administrador de cadenas personalizado (método avanzado)
 En situaciones especializadas, puede implementar un administrador de la cadena personalizada que cambiar algo más que el montón se utiliza para asignar memoria. En esta situación, debe implementar manualmente el [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfaz como su administrador de cadenas personalizado.  

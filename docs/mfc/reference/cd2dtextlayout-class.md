@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343d56ebf3f92dadeb286ae2fa44b6e735498215
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: facfa4d9f98100666f267920cbd18c24ae516e72
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951616"
 ---
 # <a name="cd2dtextlayout-class"></a>Clase CD2DTextLayout
 Un contenedor para IDWriteTextLayout.  
@@ -118,19 +119,19 @@ CD2DTextLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentTarget`  
+ *pParentTarget*  
  Un puntero para el destino de representación.  
   
- `strText`  
+ *strText*  
  Un objeto CString que contiene la cadena para crear un nuevo objeto CD2DTextLayout desde.  
   
- `textFormat`  
+ *textFormat*  
  Un objeto CString que contiene el formato que se aplica a la cadena.  
   
- `sizeMax`  
+ *sizeMax*  
  El tamaño del cuadro de diseño.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Indica que se destruirá el objeto propietario (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DTextLayout::Create  
@@ -170,10 +171,10 @@ CString GetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `currentPosition`  
+ *currentPosition*  
  La posición del texto para examinar.  
   
- `textRange`  
+ *textRange*  
  El intervalo de texto que tiene el mismo formato que el texto en la posición especificada por currentPosition. Esto significa que la ejecución tiene el formato exacto como la posición especificada, incluyendo pero sin limitarse a, el nombre de familia de fuentes.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -189,10 +190,10 @@ CString GetLocaleName(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `currentPosition`  
+ *currentPosition*  
  La posición del texto que se va a inspeccionar.  
   
- `textRange`  
+ *textRange*  
  El intervalo de texto que tiene el mismo formato que el texto en la posición especificada por currentPosition. Esto significa que la ejecución tiene el formato exacto como la posición especificada, incluyendo pero sin limitarse a, el nombre de la configuración regional.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -245,10 +246,10 @@ BOOL SetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pwzFontFamilyName`  
+ *pwzFontFamilyName*  
  El nombre de familia de fuentes que se aplica a la cadena de texto completo dentro del intervalo especificado por textRange  
   
- `textRange`  
+ *textRange*  
  Intervalo de texto al que se aplica este cambio  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -264,10 +265,10 @@ BOOL SetLocaleName(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pwzLocaleName`  
+ *pwzLocaleName*  
  Una cadena de nombre de configuración regional terminada en null  
   
- `textRange`  
+ *textRange*  
  Intervalo de texto al que se aplica este cambio  
   
 ### <a name="return-value"></a>Valor devuelto  

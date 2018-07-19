@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383909"
 ---
 # <a name="punctuation-and-special-characters"></a>Caracteres especiales y de puntuación
 Los caracteres de puntuación y especiales del juego de caracteres de C tienen varias finalidades, desde organizar el texto del programa hasta definir las tareas que realiza el compilador o el programa compilado. No especifican que se deba realizar una operación. Algunos símbolos de puntuación también son operadores (vea [Operadores](../c-language/c-operators.md)). El compilador determina su uso a partir del contexto.  

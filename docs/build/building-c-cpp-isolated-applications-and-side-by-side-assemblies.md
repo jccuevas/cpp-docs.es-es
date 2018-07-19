@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361289"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Compilar aplicaciones aisladas y ensamblados simultáneos de C/C++
 Visual C++ admite un modelo de implementación para aplicaciones cliente de Windows que se basa en la idea de las [aplicaciones aisladas](http://msdn.microsoft.com/library/aa375190) y los [ensamblados en paralelo](http://msdn.microsoft.com/library/ff951640). De forma predeterminada, Visual C++ compila todas las aplicaciones nativas de C/C++ como aplicaciones aisladas que usan [manifiestos](http://msdn.microsoft.com/library/aa375365) para describir sus dependencias en las bibliotecas de Visual C++.  

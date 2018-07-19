@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355831"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL y el contador de referencias de subprocesamiento libre
 Página de atributos ATL Simple objeto del asistente incluye una opción que permite a la clase agregar el contador de referencias de subprocesamiento libre (FTM).  

@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2763335a9165c1667160864a40200dcfd44b7f34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953105"
 ---
 # <a name="carchiveexception-class"></a>Clase CArchiveException
 Representa una condición de excepción de serialización  
@@ -68,7 +69,7 @@ class CArchiveException : public CException
  **Encabezado:** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- Construye un `CArchiveException` objeto, que almacena el valor de `cause` en el objeto.  
+ Construye un `CArchiveException` objeto, que almacena el valor de *provocar* en el objeto.  
   
 ```  
 CArchiveException(
@@ -77,10 +78,10 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cause`  
+ *Causa*  
  Una variable de tipo enumerado que indica el motivo de la excepción. Para obtener una lista de los enumeradores, consulte la [m_cause](#m_cause) miembro de datos.  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  Señala a una cadena que contiene el nombre de la `CArchive` objeto ocasionando la excepción.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -96,7 +97,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este miembro de datos es una variable pública de tipo `int`. Sus valores se definen mediante un `CArchiveException` tipo enumerado. A continuación se indican los enumeradores y el significado de cada uno de ellos:  
+ Este miembro de datos es una variable pública de tipo **int**. Sus valores se definen mediante un `CArchiveException` tipo enumerado. A continuación se indican los enumeradores y el significado de cada uno de ellos:  
   
 - **CArchiveException::none** se produjo ningún error.  
   

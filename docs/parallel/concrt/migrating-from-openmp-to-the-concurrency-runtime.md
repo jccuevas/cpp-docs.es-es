@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690493"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrar de OpenMP al Runtime de simultaneidad
 El Runtime de simultaneidad ofrece una variedad de modelos de programación. Estos modelos pueden superponerse o complementar los modelos de otras bibliotecas. Los documentos en esta sección compare [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) al Runtime de simultaneidad y se proporcionan ejemplos sobre cómo migrar código existente de OpenMP para usar el Runtime de simultaneidad.  

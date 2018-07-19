@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236823"
 ---
 # <a name="compiler-error-c2725"></a>Error C2725 de Error del compilador
 'exception': no se puede producir o detectar un objeto administrado o WinRT por valor o referencia  

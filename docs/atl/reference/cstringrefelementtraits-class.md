@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360692"
 ---
 # <a name="cstringrefelementtraits-class"></a>Clase CStringRefElementTraits
 Esta clase proporciona funciones estáticas relacionadas con las cadenas almacenadas en objetos de clase de colección. Los objetos de cadena se tratan como referencias.  

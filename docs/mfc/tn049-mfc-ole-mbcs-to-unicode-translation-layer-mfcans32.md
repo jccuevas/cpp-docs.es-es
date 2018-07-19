@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380746"
 ---
 # <a name="tn049-mfcole-mbcs-to-unicode-translation-layer-mfcans32"></a>TN049: MBCS de MFC/OLE para la capa de traducción de Unicode (MFCANS32)
 Esta nota originalmente se describe cómo MFCANS32. DLL proporciona interfaces de ANSI en el principalmente Unicode world de OLE de 32 bits. Este archivo DLL ya no se utiliza por MFC.  

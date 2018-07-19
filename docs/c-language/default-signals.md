@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382895"
 ---
 # <a name="default-signals"></a>Señales predeterminadas
 **ANSI 4.7.1.1** Si el equivalente de **signal (***sig***, SIG_DFL)** no se ejecuta antes de la llamada de un controlador de señal, el bloqueo de la señal que se realiza  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691608"
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 El **copyprivate** cláusula proporciona un mecanismo para utilizar una variable privada para difundir un valor de un miembro de un equipo a los demás miembros. Es una alternativa al uso de una variable compartida para el valor al proporcionar esa variable compartida sería difícil (por ejemplo, en una necesidad de una variable distinta en cada nivel de recursividad). El **copyprivate** cláusula solamente puede aparecer en el **único** directiva.  

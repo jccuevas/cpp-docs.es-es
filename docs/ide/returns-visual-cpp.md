@@ -1,5 +1,5 @@
 ---
-title: '&lt;Devuelve&gt; (Visual C++) | Documentos de Microsoft'
+title: '&lt;returns&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7b9956299370b4a41ce725cf903ff2aefe55bf53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33336741"
 ---
-# <a name="ltreturnsgt-visual-c"></a>&lt;Devuelve&gt; (Visual C++)
+# <a name="ltreturnsgt-visual-c"></a>&lt;returns&gt; (Visual C++)
 La etiqueta \<returns> debe usarse en el comentario de una declaración de método para describir el valor devuelto.  
   
 ## <a name="syntax"></a>Sintaxis  

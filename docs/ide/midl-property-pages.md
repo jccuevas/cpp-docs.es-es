@@ -1,5 +1,5 @@
 ---
-title: Páginas de propiedades MIDL | Documentos de Microsoft
+title: Páginas de propiedades MIDL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,13 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f4b32aaa7626bcb5cfabc59e0d3b9554d73379e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33328079"
 ---
 # <a name="midl-property-pages"></a>Páginas de propiedades MIDL
-El **MIDL** nodo contiene varias páginas de propiedades. Para acceder, Haga doble clic en el archivo .idl en **el Explorador de soluciones**.  
+El nodo **MIDL** contiene varias páginas de propiedades. Para acceder, haga clic con el botón derecho en el archivo .idl en el **Explorador de soluciones**.  
   
 -   [Páginas de propiedades MIDL: General](../ide/midl-property-pages-general.md)  
   

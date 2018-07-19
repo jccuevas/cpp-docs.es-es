@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379515"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Sugerencias para mejorar código en el que la velocidad de ejecución es importante
 Para escribir código rápidamente, es necesario comprender todos los aspectos de la aplicación y cómo interactúa con el sistema. En este tema, se sugieren alternativas a algunas de las técnicas de codificación más obvias para que le resulte más fácil asegurarse de que las partes del código críticas en el tiempo se ejecutan correctamente.  

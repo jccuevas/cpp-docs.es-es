@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367152"
 ---
 # <a name="function-pointers"></a>Punteros a funciones
 Punteros de función son simplemente punteros a la etiqueta de la función respectiva. No hay ninguna tabla de requisitos de contenido (TOC) para los punteros de función.  

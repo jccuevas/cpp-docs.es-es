@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268067"
 ---
 # <a name="compiler-error-c3831"></a>Error del compilador C3831
 'member': 'clase' no puede tener un miembro de datos anclado o una función miembro devuelve un puntero anclado  

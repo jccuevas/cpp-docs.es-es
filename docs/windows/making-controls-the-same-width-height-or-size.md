@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874803"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Hacer que los controles tengan el mismo ancho, el mismo alto o el mismo tamaño
 Puede cambiar el tamaño de un grupo de controles en función del tamaño del control dominante. También puede [cambiar el tamaño de un control según las dimensiones de su texto de título](../windows/sizing-individual-controls.md).  

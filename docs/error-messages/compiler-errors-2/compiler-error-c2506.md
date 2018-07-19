@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228523"
 ---
 # <a name="compiler-error-c2506"></a>Error del compilador C2506
 'member': '__declspec (modificador)' no se puede aplicar a este símbolo  

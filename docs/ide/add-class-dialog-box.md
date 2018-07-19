@@ -1,5 +1,5 @@
 ---
-title: Agregar cuadro de diálogo de clase | Documentos de Microsoft
+title: Agregar clase (cuadro de diálogo) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33339779"
 ---
 # <a name="add-class-dialog-box"></a>Agregar clase (cuadro de diálogo)
 El cuadro de diálogo **Agregar clase** contiene plantillas que permiten:  
   
--   Abrir a un asistente para código correspondiente, si está disponible. Para obtener más información, consulte [agregar funcionalidad con los asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md).  
+-   Abrir a un asistente para código correspondiente, si está disponible. Para obtener más información, vea [Agregar funcionalidad con los asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md).  
   
  \- o -  
   
 -   Crear automáticamente una nueva clase propia agregando el código fuente y los archivos adecuados al proyecto.  
   
- Puede tener acceso a la **Agregar clase** cuadro de diálogo desde el **proyecto** menú, **el Explorador de soluciones**, o [vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ Puede acceder al cuadro de diálogo **Agregar clase** desde el menú **Proyecto**, el **Explorador de soluciones** o la [Vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
 > [!NOTE]
 >  Cuando intente agregar una clase que no es adecuada para el proyecto actual, recibirá un mensaje de error. Haga clic en **Aceptar** para volver al cuadro de diálogo **Agregar clase** .  
@@ -71,7 +72,7 @@ El cuadro de diálogo **Agregar clase** contiene plantillas que permiten:
 |--------------|------------|  
 |MFC (clase)|[Asistente para agregar clases MFC](../mfc/reference/mfc-add-class-wizard.md)|  
 |Clase MFC de un control ActiveX|[Asistente para agregar clases a partir de un control ActiveX](../ide/add-class-from-activex-control-wizard.md)|  
-|Clase MFC de TypeLib|[Agregar clase de Asistente para la biblioteca de tipos](../mfc/reference/add-class-from-typelib-wizard.md)|  
+|Clase MFC de TypeLib|[Asistente para agregar clases de la biblioteca de tipos](../mfc/reference/add-class-from-typelib-wizard.md)|  
 |Consumidor ODBC MFC|[Asistente para consumidores ODBC MFC](../mfc/reference/mfc-odbc-consumer-wizard.md)|  
   
 ### <a name="generic-classes"></a>Clases genéricas  
@@ -82,7 +83,7 @@ El cuadro de diálogo **Agregar clase** contiene plantillas que permiten:
   
 ## <a name="see-also"></a>Vea también  
  [Agregar una función miembro](../ide/adding-a-member-function-visual-cpp.md)   
- [Agregar una Variable miembro](../ide/adding-a-member-variable-visual-cpp.md)   
- [Reemplazar una función Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Controlador de mensajes MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Agregar una variable miembro](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Reemplazar una función virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Adición de un controlador de mensajes MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
  [Navegar por la estructura de clases](../ide/navigating-the-class-structure-visual-cpp.md)

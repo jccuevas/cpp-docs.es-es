@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424054"
 ---
 # <a name="lambda-expressions-in-c"></a>Expresiones lambda en C++
 En C ++ 11 y versiones posteriores, una expresión lambda, a menudo denominado un *lambda*: es una forma cómoda de definir un objeto de función anónima (un *cierre*) en la ubicación donde se invoca o se pasa como un argumento para una función. Normalmente, las lambdas se usan para encapsular unas líneas de código que se pasan a algoritmos o métodos asincrónicos. En este artículo se define qué son las expresiones lambda, se comparan con otras técnicas de programación, se describen sus ventajas y se proporciona un ejemplo básico.  

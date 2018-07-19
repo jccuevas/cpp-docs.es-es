@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33139000"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Cómo: Definir y utilizar clases y structs (C++/CLI)
 Este artículo muestra cómo definir y utilizar tipos de referencia definidos por el usuario y tipos de valor en C++ / CLI.  

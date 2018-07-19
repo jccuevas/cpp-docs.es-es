@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691913"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Cláusulas de atributos de uso compartido de datos
 Varias directivas aceptan las cláusulas que permiten a un usuario controlar los atributos de uso compartido de variables para la duración de la región. Cláusulas de atributos de uso compartido sólo se aplican a las variables de la extensión de la directiva en el que aparece la cláusula léxica. Todas las cláusulas siguientes no se permiten en todas las directivas. La lista de cláusulas que son válidos en una directiva determinada se describen con la directiva.  

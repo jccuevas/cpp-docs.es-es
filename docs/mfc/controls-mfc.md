@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353689"
 ---
 # <a name="controls-mfc"></a>Controles (MFC)
 Los controles de formularios son objetos con los que pueden interactuar los usuarios para escribir o manipular datos. Aparecen normalmente en los cuadros de diálogo o en las barras de herramientas. En esta familia de temas se abordan tres clases principales de controles:  

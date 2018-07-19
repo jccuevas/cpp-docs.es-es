@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342766"
 ---
 # <a name="header-control-examples"></a>Ejemplos de control de encabezado
 Para obtener ejemplos de controles de encabezado, vea el [controles de encabezado](http://msdn.microsoft.com/library/windows/desktop/bb775238) del SDK de Windows.  

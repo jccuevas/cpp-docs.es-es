@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056053"
 ---
 # <a name="run-time-operators"></a>Operadores en tiempo de ejecución
 Para obtener más información acerca de los operadores de tiempo de ejecución en el lenguaje de Microsoft Macro Assembler, consulte [referencia de operadores](../../assembler/masm/operators-reference.md).  

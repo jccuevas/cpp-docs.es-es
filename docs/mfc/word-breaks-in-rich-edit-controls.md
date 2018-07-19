@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382965"
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>Separaciones de palabras en los controles Rich Edit
 Un control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) llama a una función denominada "procedimiento de salto de palabra" para buscar saltos entre palabras y para determinar dónde se pueden romper líneas. El control utiliza esta información cuando se realizan operaciones de ajuste de palabras y al procesar las combinaciones de teclas CTRL+FLECHA izquierda y CTRL+FLECHA derecha. Una aplicación puede enviar mensajes a un control rich edit para reemplazar el procedimiento de separadores de palabras de forma predeterminada, para recuperar información de separadores de palabras y para determinar en qué línea de un carácter dado se encuentra.  

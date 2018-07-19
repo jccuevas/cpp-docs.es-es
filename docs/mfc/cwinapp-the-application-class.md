@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343010"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp: The Application (Clase)
 La clase principal de aplicación en MFC encapsula la inicialización, ejecución y terminación de una aplicación para el sistema operativo Windows. Una aplicación compilada en el marco de trabajo debe tener uno y solo un objeto de una clase derivada de [CWinApp](../mfc/reference/cwinapp-class.md). Este objeto se construye antes de crear ventanas.  

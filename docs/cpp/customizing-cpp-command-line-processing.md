@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411116"
 ---
 # <a name="customizing-c-command-line-processing"></a>Personalizar el procesamiento de línea de comandos de C++
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  

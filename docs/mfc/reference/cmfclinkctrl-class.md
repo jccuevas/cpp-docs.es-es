@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038359"
 ---
 # <a name="cmfclinkctrl-class"></a>Clase CMFCLinkCtrl
 La `CMFCLinkCtrl` clase muestra un botón como un hipervínculo e invoca el destino del vínculo cuando se hace clic en el botón.  
@@ -90,10 +91,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Un rectángulo que delimita el control de vínculo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -107,7 +108,7 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszURL`  
+ [in] *lpszURL*  
  El texto del botón para mostrar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -120,7 +121,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszPrefix`  
+ [in] *lpszPrefix*  
  El prefijo del protocolo de dirección URL.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -136,10 +137,10 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bVCenter`  
+ [in] *bVCenter*  
  `TRUE` Para centrar el texto del botón y mapa de bits de forma vertical entre la parte superior e inferior del control de vínculo; en caso contrario, `FALSE`. El valor predeterminado es `FALSE`.  
   
- [in] `bHCenter`  
+ [in] *bHCenter*  
  `TRUE` Para centrar el texto del botón y mapa de bits horizontal entre los lados izquierdo y derecho del control link; en caso contrario, `FALSE`. El valor predeterminado es `FALSE`.  
   
 ### <a name="return-value"></a>Valor devuelto  

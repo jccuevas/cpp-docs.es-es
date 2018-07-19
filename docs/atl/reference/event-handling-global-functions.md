@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358343"
 ---
 # <a name="event-handling-global-functions"></a>Funciones globales de control de eventos
 Esta función proporciona un controlador de eventos.  

@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4abdb76523f0b7b1ab87beb6daaf723c4dff5cc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0792601ae773cf9abc8bb44218eb7395ff68da77
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952789"
 ---
 # <a name="cautohidedocksite-class"></a>Clase CAutoHideDockSite
 El `CAutoHideDockSite` amplía la [clase CDockSite](../../mfc/reference/cdocksite-class.md) para implementar paneles de acoplamiento de ocultación automática.  
@@ -114,10 +115,10 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `pBar`|El panel de base que el marco de pruebas.|  
+|[in] *pBar*|El panel de base que el marco de pruebas.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si `pBar` se deriva de `CMFCAutoHideBar`; `FALSE` en caso contrario.  
+ `TRUE` Si *pBar* se deriva de `CMFCAutoHideBar`; `FALSE` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Si se deriva un objeto de panel base `CMFCAutoHideBar`, puede contener una `CAutoHideDockSite`.  
@@ -137,14 +138,14 @@ virtual void DockPane(
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `pWnd`|El panel que se acopla el marco de trabajo.|  
-|[in] `dockMethod`|Opciones para el panel de acoplamiento.|  
-|[in] `lpRect`|Un rectángulo que especifica los límites para el panel acoplado.|  
+|[in] *pWnd*|El panel que se acopla el marco de trabajo.|  
+|[in] *dockMethod*|Opciones para el panel de acoplamiento.|  
+|[in] *lpRect*|Un rectángulo que especifica los límites para el panel acoplado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada no usa el parámetro `dockMethod`, que se proporciona para su uso futuro.  
+ La implementación predeterminada no usa el parámetro *dockMethod*, que se proporciona para su uso futuro.  
   
- Si `lpRect` es `NULL`, el marco de trabajo coloca el panel en la ubicación predeterminada en el sitio de vinculación. Si el sitio de vinculación es horizontal, la ubicación predeterminada es en el extremo izquierdo del sitio de vinculación. En caso contrario, la ubicación predeterminada es la parte superior del sitio de vinculación.  
+ Si *lpRect* es `NULL`, el marco de trabajo coloca el panel en la ubicación predeterminada en el sitio de vinculación. Si el sitio de vinculación es horizontal, la ubicación predeterminada es en el extremo izquierdo del sitio de vinculación. En caso contrario, la ubicación predeterminada es la parte superior del sitio de vinculación.  
   
 ##  <a name="getalignrect"></a>  CAutoHideDockSite::GetAlignRect  
  Recupera el tamaño del sitio acoplar en coordenadas de pantalla.  
@@ -158,7 +159,7 @@ void GetAlignRect(CRect& rect) const;
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `rect`|Una referencia a un rectángulo. El método almacena el tamaño del sitio de vinculación de este rectángulo.|  
+|[in] *rect*|Una referencia a un rectángulo. El método almacena el tamaño del sitio de vinculación de este rectángulo.|  
   
 ### <a name="remarks"></a>Comentarios  
  El rectángulo se ajusta para los márgenes de desplazamiento para que no se incluyen.  
@@ -181,7 +182,7 @@ void SetOffsetLeft(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nOffset`  
+ [in] *nOffset*  
  El desplazamiento nuevo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -195,7 +196,7 @@ void SetOffsetRight(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nOffset`  
+ [in] *nOffset*  
  El desplazamiento nuevo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -213,10 +214,10 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `rectNewClientArea`|Un valor reservado.|  
+|[in] *rectNewClientArea*|Un valor reservado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada no utiliza `rectNewClientArea`. Vuelve a dibujar los paneles con los márgenes de la barra de herramientas global y el espaciado de botón.  
+ La implementación predeterminada no utiliza *rectNewClientArea*. Vuelve a dibujar los paneles con los márgenes de la barra de herramientas global y el espaciado de botón.  
   
 ##  <a name="unsetautohidemode"></a>  CAutoHideDockSite::UnSetAutoHideMode  
  Llamadas [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) para los objetos en el sitio de vinculación.  
@@ -230,10 +231,10 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] `pAutoHideToolbar`|Un puntero a un [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) panel de objetos que se encuentra en la `CAutoHideDockSite`.|  
+|[in] *pAutoHideToolbar*|Un puntero a un [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) panel de objetos que se encuentra en la `CAutoHideDockSite`.|  
   
 ### <a name="remarks"></a>Comentarios  
- Este método busca en la fila que contiene `pAutoHideToolbar`. Llama `CMFCAutoHideBar.UnSetAutoHideMode` para todos los `CMFCAutoHideBar` objetos en esa fila. Si `pAutoHideToolbar` no se encuentra o es `NULL`, llama a este método `CMFCAutoHideBar.UnSetAutoHideMode` para todos los `CMFCAutoHideBar` objetos en el `CAutoHideDockSite`.  
+ Este método busca en la fila que contiene *pAutoHideToolbar*. Llama `CMFCAutoHideBar.UnSetAutoHideMode` para todos los `CMFCAutoHideBar` objetos en esa fila. Si *pAutoHideToolbar* no se encuentra o es `NULL`, llama a este método `CMFCAutoHideBar.UnSetAutoHideMode` para todos los `CMFCAutoHideBar` objetos en el `CAutoHideDockSite`.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

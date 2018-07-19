@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257420"
 ---
 # <a name="compiler-error-c3509"></a>Error del compilador C3509
 'type': tipo de valor devuelto de automatización no válido; Si un parámetro es marcada 'retval', el tipo de valor devuelto deben ser 'void', 'HRESULT' o 'SCODE'  

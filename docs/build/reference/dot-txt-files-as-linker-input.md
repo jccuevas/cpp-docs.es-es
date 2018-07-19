@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369908"
 ---
 # <a name="txt-files-as-linker-input"></a>Archivos .txt como entrada del vinculador
 LINK espera diversos archivos de texto como una entrada adicional. El [archivo de comandos](../../build/reference/link-command-files.md) especificador (@) y la [dirección Base](../../build/reference/base-base-address.md) (/ BASE), [/def](../../build/reference/def-specify-module-definition-file.md), y [/orden](../../build/reference/order-put-functions-in-order.md) todas las opciones especifican archivos de texto. Estos archivos pueden tener cualquier extensión, no solo .txt.  

@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6af2ab524711c591772c28ed47742e6aa406ad
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955877"
 ---
 # <a name="special-cwinapp-services"></a>Servicios especiales de CWinApp
 Además de ejecutar el bucle de mensajes y darle la oportunidad de inicializar la aplicación y realizar una limpieza después de él, [CWinApp](../mfc/reference/cwinapp-class.md) proporciona otros servicios.  
@@ -60,7 +61,7 @@ Además de ejecutar el bucle de mensajes y darle la oportunidad de inicializar l
   
  Si desea inicializar GDI + para la aplicación (mediante una llamada a [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) en su [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) función), tendrá que suprimir el subproceso en segundo plano GDI +.  
   
- Puede hacerlo estableciendo la **SuppressBackgroundThread** miembro de la [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) estructura a **TRUE**. Al suprimir el GDI + en segundo plano subproceso, el **NotificationHook** y **NotificationUnhook** llamadas deben realizarse inmediatamente anteriores a la entrada y salida del bucle de mensajes de la aplicación. Para obtener más información sobre estas llamadas, vea [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Por lo tanto, un buen lugar para llamar a **GdiplusStartup** y las funciones de enlace de notificación sería reemplazar la función virtual [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), tal y como se muestra a continuación:  
+ Puede hacerlo estableciendo la `SuppressBackgroundThread` miembro de la [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) estructura a **TRUE**. Al suprimir el GDI + en segundo plano subproceso, el `NotificationHook` y `NotificationUnhook` llamadas deben realizarse inmediatamente anteriores a la entrada y salida del bucle de mensajes de la aplicación. Para obtener más información sobre estas llamadas, vea [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Por lo tanto, un buen lugar para llamar a `GdiplusStartup` y las funciones de enlace de notificación sería reemplazar la función virtual [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), tal y como se muestra a continuación:  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

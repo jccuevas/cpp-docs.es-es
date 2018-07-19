@@ -1,5 +1,5 @@
 ---
-title: Aplicar formato a los resultados de un paso de compilación personalizada o un evento de compilación | Documentos de Microsoft
+title: Dar formato a la presentación de un paso de compilación personalizada o un evento de compilación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,42 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7da71e6391d2d3223b47ba528686d2fec003ab3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33321355"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Dar formato a la presentación de un paso de compilación personalizada o un evento de compilación
-Si el resultado de un paso de compilación personalizada o un evento de compilación tiene el formato correcto, los usuarios obtendrán las siguientes ventajas:  
+Si el resultado de un paso de compilación personalizada o un evento de compilación tiene el formato correcto, los usuarios obtendrán las ventajas siguientes:  
   
--   Errores y advertencias se enumeran en la **salida** ventana.  
+-   Los errores y las advertencias se enumeran en la ventana **Salida**.  
   
--   Los resultados aparecen en la **lista de tareas** ventana.  
+-   La salida aparece en la ventana **Lista de tareas**.  
   
--   Al hacer clic en la salida en el **salida** ventana muestra el tema correspondiente.  
+-   Al hacer clic en la salida en la ventana **Salida** se muestra el tema correspondiente.  
   
--   Las operaciones con F1 están habilitadas en el **lista de tareas** ventana o **salida** ventana.  
+-   Las operaciones con F1 están habilitadas en las ventanas **Lista de tareas** o **Salida**.  
   
- El formato de la salida debe ser:  
+ El formato de la salida debe ser el siguiente:  
   
- {*filename* (*línea #* [, *column #*]) &#124; *toolname*} **:**  
+ {*nombreDeArchivo* (*nº_línea* [, *nº_columna*]) &#124; *nombreDeHerramienta*} **:**  
   
- [*cualquier texto*] {**error** &#124; **advertencia**} *código ###***:*** cadenas localizables*  
+ [*cualquier texto*] {**error** &#124; **advertencia**} *código####***:*** cadena localizable*  
   
  [ *cualquier texto* ]  
   
  Dónde:  
   
--   {*una* &#124; *b*} es una opción de uno de ellos *una* o *b*.  
+-   {*a* &#124; *b*} es la elección de *a* o *b*.  
   
 -   [`ccc`] es un parámetro o una cadena opcional.  
   
  Por ejemplo:  
   
- C:\\*sourcefile.cpp*(134): error C2143: error de sintaxis: falta ';' antes de '}'  
+ C:\\*archivo_de_origen.cpp*(134) : error C2143: error de sintaxis : falta ";" delante de "}"  
   
- LINK: error irrecuperable LNK1104: no se puede abrir el archivo '*somelib.lib*'  
+ LINK: error irrecuperable LNK1104: no se puede abrir el archivo "*una_biblioteca.lib*"  
   
 ## <a name="see-also"></a>Vea también  
  [Descripción de los pasos de compilación personalizada y los eventos de compilación](../ide/understanding-custom-build-steps-and-build-events.md)

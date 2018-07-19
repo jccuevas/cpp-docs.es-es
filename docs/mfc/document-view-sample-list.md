@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343023"
 ---
 # <a name="documentview-sample-list"></a>Lista de ejemplos de documentos y vistas
 Vea los siguientes programas de ejemplo que ilustran el uso de arquitectura documento/vista de MFC de formas interesantes:  

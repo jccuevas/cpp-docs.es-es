@@ -58,11 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad0d928f7190d3908c41560c7fb106e3024ebc6e
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079653"
 ---
 # <a name="cpagerctrl-class"></a>Clase CPagerCtrl
 La clase `CPagerCtrl` ajusta el control de paginación de Windows, que puede desplazar en la vista una ventana contenida que no cabe en la ventana contenedora.  
@@ -150,10 +151,10 @@ virtual BOOL Create(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `dwStyle`|Una combinación bit a bit (OR) de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) y [estilos de control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859) para aplicarse al control.|  
-|[in] `rect`|Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control en coordenadas de cliente.|  
-|[in] `pParentWnd`|Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control. Este parámetro no puede ser `NULL`.|  
-|[in] `nID`|El identificador del control.|  
+|[in] *dwStyle*|Una combinación bit a bit (OR) de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) y [estilos de control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859) para aplicarse al control.|  
+|[in] *rect*|Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control en coordenadas de cliente.|  
+|[in] *pParentWnd*|Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control. Este parámetro no puede ser `NULL`.|  
+|[in] *nID*|El identificador del control.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si este método se realiza correctamente; en caso contrario, `false`.  
@@ -182,11 +183,11 @@ virtual BOOL CreateEx(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|Una combinación bit a bit de los estilos extendidos para aplicarse al control. Para obtener más información, consulte el `dwExStyle` parámetro de la [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) función.|  
-|[in] `dwStyle`|Una combinación bit a bit (OR) de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) y [estilos de control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859) para aplicarse al control.|  
-|[in] `rect`|Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control en coordenadas de cliente.|  
-|[in] `pParentWnd`|Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control. Este parámetro no puede ser `NULL`.|  
-|[in] `nID`|El identificador del control.|  
+|[in] *dwExStyle*|Una combinación bit a bit de los estilos extendidos para aplicarse al control. Para obtener más información, consulte el *dwExStyle* parámetro de la [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) función.|  
+|[in] *dwStyle*|Una combinación bit a bit (OR) de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) y [estilos de control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859) para aplicarse al control.|  
+|[in] *rect*|Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control en coordenadas de cliente.|  
+|[in] *pParentWnd*|Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control. Este parámetro no puede ser `NULL`.|  
+|[in] *nID*|El identificador del control.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si este método se realiza correctamente; en caso contrario, `false`.  
@@ -205,7 +206,7 @@ void ForwardMouse(BOOL bForward);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `bForward`|`true` para reenviar mensajes de mouse, o `false` no reenviar los mensajes de mouse (ratón).|  
+|[in] *bForward*|`true` para reenviar mensajes de mouse, o `false` no reenviar los mensajes de mouse (ratón).|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) mensaje, que se describe en el SDK de Windows.  
@@ -272,10 +273,10 @@ DWORD GetButtonState(int iButton) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor devuelto  
- El estado del botón especificado por el `iButton` parámetro. El estado es `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, o `PGF_HOT`. Para obtener más información, vea la sección de valor devuelto de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje.  
+ El estado del botón especificado por el *iButton* parámetro. El estado es `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, o `PGF_HOT`. Para obtener más información, vea la sección de valor devuelto de la [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) mensaje, que se describe en el SDK de Windows.  
@@ -324,7 +325,7 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si el botón especificado está en estado presionado; en caso contrario, `false`.  
@@ -343,7 +344,7 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si el botón especificado está en estado atenuado; en caso contrario, `false`.  
@@ -362,7 +363,7 @@ BOOL IsButtonHot(int iButton) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si el botón especificado está en estado activo; en caso contrario, `false`.  
@@ -381,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si el botón especificado está en estado invisible; en caso contrario, `false`.  
@@ -407,7 +408,7 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `iButton`|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica el botón para el que se recupera el estado. Si el estilo del control de elemento de paginación es `PGS_HORZ`, especifique `PGB_TOPORLEFT` para el botón primario y `PGB_BOTTOMORRIGHT` para el botón derecho. Si el estilo del control de elemento de paginación es `PGS_VERT`, especifique `PGB_TOPORLEFT` para el botón superior y `PGB_BOTTOMORRIGHT` para el botón de la parte inferior. Para obtener más información, consulte [estilos de Control de buscapersonas](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true` Si el botón especificado está en estado normal; en caso contrario, `false`.  
@@ -446,7 +447,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que contiene el nuevo color de fondo del control de buscapersonas.|  
+|[in] *clrBk*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que contiene el nuevo color de fondo del control de buscapersonas.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que contiene el color de fondo anterior del control de buscapersonas.  
@@ -470,7 +471,7 @@ int SetBorder(int iBorder);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `iBorder`|El nuevo tamaño de borde, expresado en píxeles. Si el `iBorder` parámetro es negativo, el tamaño del borde se establece en cero.|  
+|[in] *iBorder*|El nuevo tamaño de borde, expresado en píxeles. Si el *iBorder* parámetro es negativo, el tamaño del borde se establece en cero.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño del borde anterior, expresado en píxeles.  
@@ -494,7 +495,7 @@ int SetButtonSize(int iButtonSize);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `iButtonSize`|El nuevo tamaño de botón, expresado en píxeles.|  
+|[in] *iButtonSize*|El nuevo tamaño de botón, expresado en píxeles.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  El tamaño del botón anterior, expresado en píxeles.  
@@ -520,7 +521,7 @@ void SetChild(HWND hwndChild);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `hwndChild`|Identificador de la ventana que se debe incluir.|  
+|[in] *hwndChild*|Identificador de la ventana que se debe incluir.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) mensaje, que se describe en el SDK de Windows.  
@@ -543,7 +544,7 @@ void SetScrollPos(int iPos);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `iPos`|La nueva posición de desplazamiento, medido en píxeles.|  
+|[in] *iPos*|La nueva posición de desplazamiento, medido en píxeles.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método envía el [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) mensaje, que se describe en el SDK de Windows.  

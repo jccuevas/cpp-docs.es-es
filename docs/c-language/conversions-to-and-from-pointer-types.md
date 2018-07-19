@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384301"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversiones entre tipos de puntero
 Un puntero a un tipo de valor se puede convertir en un puntero a un tipo diferente. Sin embargo, el resultado puede ser indefinido debido a los requisitos de alineación y a los tamaños de los tipos diferentes en el almacenamiento. Un puntero a un objeto se puede convertir en un puntero a un objeto cuyo tipo requiere una alineación de almacenamiento igual o menos estricta, y viceversa, sin necesidad de hacer cambios.  

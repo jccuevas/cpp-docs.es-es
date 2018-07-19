@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340998"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Crear cuadros de diálogo no modales
 Para un cuadro de diálogo no modal, debe proporcionar su propio constructor público en la clase de cuadro de diálogo. Para crear un cuadro de diálogo no modal, llame a su constructor público y, a continuación, llamar al objeto de cuadro de diálogo [crear](../mfc/reference/cdialog-class.md#create) función de miembro para cargar el recurso de cuadro de diálogo. Puede llamar a **crear** durante o después de la llamada al constructor. Si el recurso de cuadro de diálogo tiene la propiedad **WS_VISIBLE**, el cuadro de diálogo aparece inmediatamente. Si no es así, debe llamar a su [ShowWindow](../mfc/reference/cwnd-class.md#showwindow) función miembro.  

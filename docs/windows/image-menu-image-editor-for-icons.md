@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880535"
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Imagen (Menú) (Editor de imágenes para iconos)
 El menú imagen, que aparece únicamente cuando el editor de imágenes está activo, contiene comandos de edición de imágenes, administración de paletas de colores y establecer opciones de la ventana de Editor de imágenes. Además, los comandos para el uso de imágenes de dispositivos están disponibles cuando se trabaja con iconos y cursores.  

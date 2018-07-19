@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858492"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Distribución de los controles en los cuadros de diálogo
 El editor de cuadro de diálogo proporciona herramientas de diseño que alinearán y ajustar automáticamente el tamaño de controles. Para la mayoría de las tareas, puede usar el [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Todos los comandos de barra de herramientas del Editor de cuadro de diálogo también están disponibles en el menú Formato, y la mayoría tienen [teclas de método abreviado](../windows/accelerator-keys-for-the-dialog-editor.md).  

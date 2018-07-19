@@ -54,11 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c19386aeac0d85565ae7834a881d710d9226ef9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9fddef1b032d1e17ea46229a992c23ca960822
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039029"
 ---
 # <a name="cmfccolormenubutton-class"></a>Clase CMFCColorMenuButton
 La `CMFCColorMenuButton` clase es compatible con un comando de menú o un botón de barra de herramientas que se inicia un cuadro de diálogo de selector de color.  
@@ -142,13 +143,13 @@ CMFCColorMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Un identificador de comando de botón.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  El texto del botón.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  Un puntero a la paleta de colores del botón.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -166,7 +167,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `src`  
+ [in] *src*  
  Botón de origen para copiar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -196,13 +197,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Especifica el texto del botón que se muestra cuando el botón se convierte en automático.  
   
- [in] `colorAutomatic`  
+ [in] *automáticoColor*  
  Especifica un nuevo color automático.  
   
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  Especifica si el botón es automático o no.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -218,10 +219,10 @@ void EnableDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Especifica el texto del botón.  
   
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  `TRUE` para mostrar colores específicos del documento o `FALSE` para mostrar colores del sistema.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -238,13 +239,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Especifica el texto del botón.  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  Especifique `TRUE` para mostrar la `CMFCColorDialog` cuadro de diálogo, o `FALSE` para mostrar el cuadro de diálogo de color de sistema estándar.  
   
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  Especifique `TRUE` para mostrar el botón "otro"; en caso contrario, `FALSE`. De manera predeterminada, es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -260,13 +261,13 @@ void EnableTearOff(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiID`  
+ [in] *uiID*  
  Especifica el identificador para el panel desplazable.  
   
- [in] `nVertDockColumns`  
+ [in] *nVertDockColumns*  
  Especifica el número de columnas en el panel acoplado verticalmente color mientras está en estado desplazable.  
   
- [in] `nHorzDockRows`  
+ [in] *nHorzDockRows*  
  Especifica el número de filas para el panel acoplado horizontalmente color mientras está en estado desplazable.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -305,14 +306,14 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Un identificador de comando.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El color que se corresponde con el identificador del comando especificado.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice este método cuando tiene varios botones de color en una aplicación. Cuando el usuario hace clic en un botón de color, el botón envía su identificador de comando en un `WM_COMMAND` mensaje a su elemento primario. El `GetColorByCmdID` método utiliza el identificador de comando para recuperar el color correspondiente.  
+ Utilice este método cuando tiene varios botones de color en una aplicación. Cuando el usuario hace clic en un botón de color, el botón envía su identificador de comando en un mensaje WM_COMMAND a su elemento primario. El `GetColorByCmdID` método utiliza el identificador de comando para recuperar el color correspondiente.  
   
 ##  <a name="isemptymenuallowed"></a>  CMFCColorMenuButton::IsEmptyMenuAllowed  
  Indica si se admiten los menús vacíos.  
@@ -335,7 +336,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Un puntero a la nueva ventana primaria.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -356,28 +357,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que delimita el área que se vuelva a dibujar.  
   
- [in] `pImages`  
+ [in] *pImages*  
  Apunta a una lista de imágenes de barra de herramientas.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` para especificar que la barra de herramientas está en un estado acoplado horizontal; en caso contrario, `FALSE`. De manera predeterminada, es `TRUE`.  
   
- [in] `bCustomizeMode`  
+ [in] *bCustomizeMode*  
  `TRUE` para especificar que la aplicación está en modo de personalización; en caso contrario, `FALSE`. De manera predeterminada, es `FALSE`.  
   
- [in] `bHighlight`  
+ [in] *bHighlight*  
  `TRUE` para especificar que se resalta el botón; en caso contrario, `FALSE`. De manera predeterminada, es `FALSE`.  
   
- [in] `bDrawBorder`  
+ [in] *bDrawBorder*  
  `TRUE` para especificar que se muestra el borde del botón; en caso contrario, `FALSE`. De manera predeterminada, es `TRUE`.  
   
- [in] `bGrayDisabledButtons`  
+ [in] *bGrayDisabledButtons*  
  `TRUE` para especificar que deshabilitar botones están deshabilitados (atenuados); en caso contrario, `FALSE`. De manera predeterminada, es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -393,13 +394,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rect`  
+ [in] *rect*  
  Un rectángulo que delimita el botón para dibujar.  
   
- [in] `bSelected`  
+ [in] *bSelected*  
  `TRUE` Especifica que el botón está en estado seleccionado; en caso contrario, `FALSE`.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -418,17 +419,17 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `colorDefault`  
+ [in] *colorDefault*  
  El color predeterminado que está seleccionado en el cuadro de diálogo color.  
   
- [out] `colorRes`  
+ [out] *colorRes*  
  Devuelve el color que el usuario selecciona en el cuadro de diálogo color.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el usuario selecciona un color nuevo; en caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando se hace clic en el botón de menú, llame a este método para abrir un cuadro de diálogo color. Si el valor devuelto es distinto de cero, el color que el usuario selecciona se almacena en la `colorRes` parámetro. Use la [CMFCColorMenuButton::EnableOtherButton](#enableotherbutton) método para cambiar entre el cuadro de diálogo de colores estándar y la [CMFCColorDialog clase](../../mfc/reference/cmfccolordialog-class.md) cuadro de diálogo.  
+ Cuando se hace clic en el botón de menú, llame a este método para abrir un cuadro de diálogo color. Si el valor devuelto es distinto de cero, el color que el usuario selecciona se almacena en la *colorRes* parámetro. Use la [CMFCColorMenuButton::EnableOtherButton](#enableotherbutton) método para cambiar entre el cuadro de diálogo de colores estándar y la [CMFCColorDialog clase](../../mfc/reference/cmfccolordialog-class.md) cuadro de diálogo.  
   
 ##  <a name="setcolor"></a>  CMFCColorMenuButton::SetColor  
  Establece el color del botón de color actual.  
@@ -440,14 +441,14 @@ virtual void SetColor(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `clr`  
+ [in] *clr*  
  Un valor de color RGB.  
   
- [in] `bNotify`  
- `TRUE` Para aplicar el `clr` color de parámetro a cualquier botón de menú asociado o un botón de barra de herramientas; en caso contrario, `FALSE`.  
+ [in] *bNotify*  
+ `TRUE` Para aplicar el *clr* color de parámetro a cualquier botón de menú asociado o un botón de barra de herramientas; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para cambiar el color del botón de color actual. Si el `bNotify` parámetro es distinto de cero, se cambia el color del botón correspondiente en la barra de herramientas ni menú emergente asociado al color especificado por el `clr` parámetro.  
+ Llamar a este método para cambiar el color del botón de color actual. Si el *bNotify* parámetro es distinto de cero, se cambia el color del botón correspondiente en la barra de herramientas ni menú emergente asociado al color especificado por el *clr* parámetro.  
   
 ##  <a name="setcolorbycmdid"></a>  CMFCColorMenuButton::SetColorByCmdID  
  Establece el color del botón de menú de color especificado.  
@@ -459,10 +460,10 @@ static void SetColorByCmdID(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  El identificador de recurso de un botón de menú de color.  
   
- [in] `color`  
+ [in] *color*  
  Un valor de color RGB.  
   
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName  
@@ -475,10 +476,10 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `color`  
+ [in] *color*  
  El valor RGB del color cuyo nombre cambia.  
   
- [in] `strName`  
+ [in] *strName*  
  El nuevo nombre del color.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -491,7 +492,7 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nColumns`  
+ [in] *nColumns*  
  El número de columnas que desea mostrar.  
   
 ### <a name="remarks"></a>Comentarios  

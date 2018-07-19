@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367516"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary y AfxFreeLibrary
 Procesos que se vinculan explícitamente a una llamada DLL el [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) funcionar cuando el módulo del archivo DLL ya no es necesario. Esta función disminuye recuento de referencias del módulo y, si el recuento de referencias es cero, elimina la asignación del espacio de direcciones del proceso.  

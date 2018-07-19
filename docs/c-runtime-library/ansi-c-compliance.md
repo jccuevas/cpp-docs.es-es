@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387904"
 ---
 # <a name="ansi-c-compliance"></a>Conformidad con ANSI C
 La convención de nomenclatura de todos los identificadores específicos de Microsoft en el sistema en tiempo de ejecución (por ejemplo, funciones, macros, constantes, variables y definiciones de tipo) cumple la norma ANSI. En esta documentación, cualquier función de tiempo de ejecución que sigue las normas ANSI/ISO C se indica como conforme con ANSI. Las aplicaciones conformes con ANSI solo deben usar estas funciones compatible con ANSI.  

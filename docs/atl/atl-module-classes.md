@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356610"
 ---
 # <a name="atl-module-classes"></a>Clases de módulo de ATL
 Este tema describen las clases de módulo que se introdujeron en ATL 7.0.  

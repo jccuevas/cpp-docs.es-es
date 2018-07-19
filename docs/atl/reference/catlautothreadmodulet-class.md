@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361423"
 ---
 # <a name="catlautothreadmodulet-class"></a>Clase CAtlAutoThreadModuleT
 Esta clase proporciona métodos para implementar un servidor COM agrupadas por subproceso, el modelo de apartamento.  

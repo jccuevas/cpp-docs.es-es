@@ -82,11 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e46a7d5720be765f2523ebde5d40655fb47b057
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 561f407fc651c08d46fe97486e2f9201cfe17333
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123180"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl (clase)
 Proporciona la funcionalidad del control de pestaña común de Windows.  
@@ -169,10 +170,10 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bLarger`  
- Indica qué operación debe realizar. Si este parámetro es **TRUE**, `lpRect` especifica un rectángulo de presentación y recibe el rectángulo de la ventana correspondiente. Si este parámetro es **FALSE**, `lpRect` especifica un rectángulo de la ventana y recibe el rectángulo de presentación correspondiente.  
+ *bLarger*  
+ Indica qué operación debe realizar. Si este parámetro es TRUE, *lpRect* especifica un rectángulo de presentación y recibe el rectángulo de la ventana correspondiente. Si este parámetro es FALSE, *lpRect* especifica un rectángulo de la ventana y recibe el rectángulo de presentación correspondiente.  
   
- `lpRect`  
+ *lpRect*  
  Puntero a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica el rectángulo especificado y recibe el rectángulo calculado.  
   
 ### <a name="example"></a>Ejemplo  
@@ -190,37 +191,37 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwStyle`  
+ *dwStyle*  
  Especifica el estilo del control de pestaña. Aplicar cualquier combinación de [pestaña estilos de control](http://msdn.microsoft.com/library/windows/desktop/bb760549), que se describen en el SDK de Windows. Vea **comentarios** para obtener una lista de estilos de ventana que pueden aplicar al control.  
   
- `rect`  
+ *Rect*  
  Especifica el tamaño y la posición del control de pestaña. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.  
   
- `pParentWnd`  
- Especifica la ventana primaria del control de ficha, normalmente un `CDialog`. No debe ser **NULL**.  
+ *pParentWnd*  
+ Especifica la ventana primaria del control de ficha, normalmente un `CDialog`. No debe ser NULL.  
   
- `nID`  
+ *nID*  
  Especifica el identificador. del control de pestaña  
   
 ### <a name="return-value"></a>Valor devuelto  
- **TRUE** si la inicialización del objeto es correcto; en caso contrario **FALSE**.  
+ TRUE si la inicialización del objeto fue correcta; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Crear un `CTabCtrl` objeto en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a **crear**, que crea el control de ficha y se adjunta a la `CTabCtrl` objeto.  
+ Crear un `CTabCtrl` objeto en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a `Create`, que crea el control de ficha y se adjunta a la `CTabCtrl` objeto.  
   
  Además de los estilos de control de ficha, puede aplicar los estilos de ventana siguiente a un control de ficha:  
   
-- **WS_CHILD** crea una ventana secundaria que representa el control de ficha. No se puede usar con el `WS_POPUP` estilo.  
+- WS_CHILD crea una ventana secundaria que representa el control de ficha. No se puede usar con el estilo WS_POPUP.  
   
-- **WS_VISIBLE** crea un control de ficha que esté visible inicialmente.  
+- WS_VISIBLE crea un control de ficha que esté visible inicialmente.  
   
-- **WS_DISABLED** crea una ventana que está inicialmente deshabilitada.  
+- WS_DISABLED crea una ventana que está inicialmente deshabilitada.  
   
-- **WS_GROUP** especifica el primer control de un grupo de controles en el que el usuario puede pasar de un control a la siguiente con las teclas de dirección. Todos los controles definidos con el **WS_GROUP** después de que el primer control pertenecen al mismo grupo de estilo. El siguiente control con el **WS_GROUP** estilo finaliza el grupo de estilo e inicia el grupo siguiente (es decir, termina un grupo donde comienza la siguiente).  
+- WS_GROUP especifica el primer control de un grupo de controles en el que el usuario puede pasar de un control a la siguiente con las teclas de dirección. Todos los controles definidos con el estilo WS_GROUP después de que el primer control pertenecen al mismo grupo. El siguiente control con el estilo WS_GROUP finaliza el grupo de estilo e inicia el grupo siguiente (es decir, termina un grupo donde comienza la siguiente).  
   
-- **WS_TABSTOP** especifica uno de cualquier número de controles a través del cual el usuario puede mover mediante la tecla TAB. La tecla TAB mueve el usuario al siguiente control especificado por la **WS_TABSTOP** estilo.  
+- Especifica WS_TABSTOP uno de cualquier número de controles a través del cual el usuario puede mover mediante la tecla TAB. La tecla TAB mueve el usuario al siguiente control especificado por el estilo WS_TABSTOP.  
   
- Para crear un control de ficha con estilos de ventana extendidos, llame a [CTabCtrl::CreateEx](#createex) en lugar de **crear**.  
+ Para crear un control de ficha con estilos de ventana extendidos, llame a [CTabCtrl::CreateEx](#createex) en lugar de `Create`.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
@@ -238,19 +239,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwExStyle`  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el `dwExStyle` parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
+ *dwExStyle*  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
   
- `dwStyle`  
+ *dwStyle*  
  Especifica el estilo del control de pestaña. Aplicar cualquier combinación de [pestaña estilos de control](http://msdn.microsoft.com/library/windows/desktop/bb760549), que se describen en el SDK de Windows. Vea **comentarios** en [crear](#create) para obtener una lista de estilos de ventana que pueden aplicar al control.  
   
- `rect`  
- Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de `pParentWnd`.  
+ *Rect*  
+ Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y la posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Un puntero a la ventana que es primario del control.  
   
- `nID`  
+ *nID*  
  Identificador de ventana secundaria. del control  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -259,7 +260,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentarios  
  Use `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
   
- `CreateEx` crea el control con los estilos extendidos de Windows especificados por `dwExStyle`. Conjunto específico de un control mediante estilos extendidos [SetExtendedStyle](#setextendedstyle). Por ejemplo, utilice `CreateEx` para establecer estos estilos como **WS_EX_CONTEXTHELP**, pero usar `SetExtendedStyle` para establecer estos estilos como **TCS_EX_FLATSEPARATORS**. Para obtener más información, vea los estilos que se describe en [estilos extendidos de Control de pestaña](http://msdn.microsoft.com/library/windows/desktop/bb760546) del SDK de Windows.  
+ `CreateEx` crea el control con los estilos extendidos de Windows especificados por *dwExStyle*. Conjunto específico de un control mediante estilos extendidos [SetExtendedStyle](#setextendedstyle). Por ejemplo, utilice `CreateEx` para establecer estos estilos como WS_EX_CONTEXTHELP, pero usa `SetExtendedStyle` para establecer estos estilos como TCS_EX_FLATSEPARATORS. Para obtener más información, vea los estilos que se describe en [estilos extendidos de Control de pestaña](http://msdn.microsoft.com/library/windows/desktop/bb760546) del SDK de Windows.  
   
 ##  <a name="ctabctrl"></a>  CTabCtrl::CTabCtrl  
  Construye un objeto `CTabCtrl`.  
@@ -286,7 +287,7 @@ BOOL DeleteItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nItem`  
+ *nItem*  
  Valor basado en cero del elemento que se va a eliminar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -304,7 +305,7 @@ void DeselectAll(BOOL fExcludeFocus);
   
 ### <a name="parameters"></a>Parámetros  
  *fExcludeFocus*  
- Marca que especifica el ámbito de la desactivación de elemento. Si este parámetro se establece en **FALSE**, se restablecerán todos los botones de ficha. Si se establece en **TRUE**, a continuación, se restablecerán todos los elementos de ficha excepto actualmente seleccionado.  
+ Marca que especifica el ámbito de la desactivación de elemento. Si este parámetro se establece en FALSE, se restablecerán todos los botones de ficha. Si se establece en TRUE, a continuación, todos los elementos excepto la seleccionada actualmente de pestaña se restablecerá.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro implementa el comportamiento del mensaje de Win32, [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), tal y como se describe en el SDK de Windows.  
@@ -317,15 +318,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Un puntero a un [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) estructura que describe el elemento que se va a pintar.  
   
 ### <a name="remarks"></a>Comentarios  
- El **itemAction** miembro de la `DRAWITEMSTRUCT` estructura define la acción de dibujo que va a realizarse.  
+ El `itemAction` miembro de la `DRAWITEMSTRUCT` estructura define la acción de dibujo que va a realizarse.  
   
  De forma predeterminada, esta función miembro no hace nada. Reemplace esta función miembro para implementar el dibujo de un dibujado por el propietario `CTabCtrl` objeto.  
   
- La aplicación debe restaurar todos los objetos de interfaz (GDI) de dispositivo de gráficos seleccionados para proporciona el contexto de presentación en `lpDrawItemStruct` antes de este miembro de la función finaliza.  
+ La aplicación debe restaurar todos los objetos de interfaz (GDI) de dispositivo de gráficos seleccionados para proporciona el contexto de presentación en *lpDrawItemStruct* antes de este miembro de la función finaliza.  
   
 ##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus  
  Recupera el índice de la pestaña con el foco actual.  
@@ -368,7 +369,7 @@ CImageList* GetImageList() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si se realiza correctamente, un puntero a la lista de imágenes de la pestaña de control; en caso contrario, **NULL**.  
+ Si se realiza correctamente, un puntero a la lista de imágenes de la pestaña de control; en caso contrario, es NULL.  
   
 ##  <a name="getitem"></a>  CTabCtrl::GetItem  
  Recupera información sobre una pestaña en un control de pestaña.  
@@ -378,42 +379,42 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nItem`  
+ *nItem*  
  Índice de base cero de la pestaña.  
   
- `pTabCtrlItem`  
+ *pTabCtrlItem*  
  Puntero a un [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estructura que se utiliza para especificar la información para recuperar. También se usa para recibir información acerca de la pestaña. Esta estructura se usa con la `InsertItem`, `GetItem`, y `SetItem` funciones miembro.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve **TRUE** si se realiza correctamente; **FALSE** en caso contrario.  
+ Devuelve TRUE si se realiza correctamente; FALSE en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando se envía el mensaje, el **máscara** miembro especifica qué atributos se devolverán. Si el **máscara** miembro especifica la `TCIF_TEXT` valor, el **pszText** miembro debe contener la dirección del búfer que recibe el texto del elemento y el **cchTextMax** miembro debe especificar el tamaño del búfer.  
+ Cuando se envía el mensaje, el `mask` miembro especifica qué atributos se devolverán. Si el `mask` miembro especifica el valor TCIF_TEXT, el `pszText` miembro debe contener la dirección del búfer que recibe el texto del elemento y el `cchTextMax` miembro debe especificar el tamaño del búfer.  
   
- **máscara**  
+ `mask`  
  Valor que especifica que `TCITEM` la estructura de los miembros para recuperar o establecer. Este miembro puede ser cero o una combinación de los siguientes valores:  
   
-- `TCIF_TEXT` El **pszText** miembro es válido.  
+- TCIF_TEXT la `pszText` miembro es válido.  
   
-- `TCIF_IMAGE` El `iImage` miembro es válido.  
+- TCIF_IMAGE la `iImage` miembro es válido.  
   
-- `TCIF_PARAM` El **lParam** miembro es válido.  
+- TCIF_PARAM la `lParam` miembro es válido.  
   
-- `TCIF_RTLREADING` El texto de **pszText** se muestra con orden de lectura de derecha a izquierda en los sistemas hebreo o árabe.  
+- TCIF_RTLREADING el texto de `pszText` se muestra con orden de lectura de derecha a izquierda en los sistemas hebreo o árabe.  
   
-- `TCIF_STATE` El **"_mfc_CTabCtrl.3a3a.GetItem"** miembro es válido.  
+- TCIF_STATE la `dwState` miembro es válido.  
   
- **pszText**  
+ `pszText`  
  Puntero a una cadena terminada en null que contiene el texto de la ficha si la estructura contiene información acerca de una pestaña. Si la estructura está recibiendo información, este miembro especifica la dirección del búfer que recibe el texto de la pestaña.  
   
- **cchTextMax**  
- Tamaño del búfer que señala **pszText**. Este miembro se omite si la estructura no está recibiendo información.  
+ `cchTextMax`  
+ Tamaño del búfer que señala `pszText`. Este miembro se omite si la estructura no está recibiendo información.  
   
  `iImage`  
  Índice en el control de pestaña lista de imágenes, o - 1 si no hay ninguna imagen de la pestaña.  
   
- **lParam**  
- Datos definidos por la aplicación asociadas a la pestaña. Si hay más de cuatro bytes de datos definido por la aplicación por ficha, una aplicación debe definir una estructura y usarla en lugar de la `TCITEM` estructura. El primer miembro de la estructura definida por la aplicación debe ser un [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)estructura. El **TCITEMHEADER** estructura es idéntica a la `TCITEM` estructura, pero sin la **lParam** miembro. La diferencia entre el tamaño de la estructura y el tamaño de la **TCITEMHEADER** estructura es igual al número de bytes adicionales por pestaña.  
+ lParam  
+ Datos definidos por la aplicación asociadas a la pestaña. Si hay más de cuatro bytes de datos definido por la aplicación por ficha, una aplicación debe definir una estructura y usarla en lugar de la `TCITEM` estructura. El primer miembro de la estructura definida por la aplicación debe ser un [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)estructura. El `TCITEMHEADER` estructura es idéntica a la `TCITEM` estructura, pero sin la `lParam` miembro. La diferencia entre el tamaño de la estructura y el tamaño de la `TCITEMHEADER` estructura es igual al número de bytes adicionales por pestaña.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
@@ -439,10 +440,10 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nItem`  
+ *nItem*  
  Índice de base cero del elemento de ficha.  
   
- `lpRect`  
+ *lpRect*  
  Puntero a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe el rectángulo delimitador de la pestaña. Estas coordenadas Usar modo de asignación de la ventanilla actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -452,7 +453,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
   Vea el ejemplo de [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
 ##  <a name="getitemstate"></a>  CTabCtrl::GetItemState  
- Recupera el estado del elemento de control de pestaña identificado por `nItem`.  
+ Recupera el estado del elemento de control de pestaña identificado por *nItem*.  
   
 ```  
 DWORD GetItemState(
@@ -461,22 +462,22 @@ DWORD GetItemState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nItem`  
+ *nItem*  
  El número de índice de base cero del elemento para el que se va a recuperar la información de estado.  
   
- `dwMask`  
+ *dwMask*  
  Máscara que especifica que el estado del elemento marca para devolver. Para obtener una lista de valores, vea el miembro de la máscara de la [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estructura, como se describe en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una referencia a un `DWORD` valor recibir la información de estado. Puede presentar uno de los siguientes valores:  
+ Una referencia a un valor DWORD que recibe la información de estado. Puede presentar uno de los siguientes valores:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|Se selecciona el elemento de control de pestaña.|  
-|**TCIS_HIGHLIGHTED**|Se resalta el elemento de control de pestaña y la pestaña y el texto se dibujan utilizando el color de resaltado actual. Cuando se utiliza el color de resaltado, se trata de una interpolación es true, no un color interpolado.|  
+|TCIS_BUTTONPRESSED|Se selecciona el elemento de control de pestaña.|  
+|TCIS_HIGHLIGHTED|Se resalta el elemento de control de pestaña y la pestaña y el texto se dibujan utilizando el color de resaltado actual. Cuando se utiliza el color de resaltado, se trata de una interpolación es true, no un color interpolado.|  
   
 ### <a name="remarks"></a>Comentarios  
- Estado de un elemento especificado por la **"_mfc_CTabCtrl.3a3a.GetItem"** miembro de la `TCITEM` estructura.  
+ Estado de un elemento especificado por la `dwState` miembro de la `TCITEM` estructura.  
   
 ##  <a name="getrowcount"></a>  CTabCtrl::GetRowCount  
  Recupera el número actual de filas de un control de pestaña.  
@@ -489,7 +490,7 @@ int GetRowCount() const;
  El número de filas de las fichas en el control de ficha.  
   
 ### <a name="remarks"></a>Comentarios  
- Pestaña solo los controles que tienen la **TCS_MULTILINE** estilo puede tener varias filas de fichas.  
+ Solo los controles de ficha que tienen el estilo TCS_MULTILINE pueden tener varias filas de fichas.  
   
 ##  <a name="gettooltips"></a>  CTabCtrl::GetToolTips  
  Recupera el identificador del control de información sobre herramienta asociado a un control de pestaña.  
@@ -499,10 +500,10 @@ CToolTipCtrl* GetToolTips() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Identificador del control de información sobre herramientas si se realiza correctamente; en caso contrario, **NULL**.  
+ Identificador del control de información sobre herramientas si se realiza correctamente; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- Un control de pestaña crea un control de información sobre herramientas si tiene la **TCS_TOOLTIPS** estilo. También puede asignar un control de información sobre herramientas para un control de ficha mediante el `SetToolTips` función miembro.  
+ Un control de pestaña crea un control de información sobre herramientas si tiene el estilo TCS_TOOLTIPS. También puede asignar un control de información sobre herramientas para un control de ficha mediante el `SetToolTips` función miembro.  
   
 ##  <a name="highlightitem"></a>  CTabCtrl::HighlightItem  
  Establece el estado de resaltado de un elemento de ficha.  
@@ -512,11 +513,11 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `idItem`  
+ *idItem*  
  Índice de base cero de un elemento de control de pestaña.  
   
- `fHighlight`  
- Valor que especifica el estado de resaltado a establecerse. Si este valor es **TRUE**, se resalta la pestaña; si **FALSE**, la pestaña está establecida en su estado predeterminado.  
+ *fHighlight*  
+ Valor que especifica el estado de resaltado a establecerse. Si este valor es TRUE, se resalta la pestaña; Si es FALSE, la ficha se establece en su estado predeterminado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si es correcto. En caso contrario, es cero.  
@@ -532,7 +533,7 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pHitTestInfo`  
+ *pHitTestInfo*  
  Puntero a un [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553) estructura, como se describe en el SDK de Windows, que especifica la posición de la pantalla para probar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -577,35 +578,35 @@ LONG InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nItem`  
+ *nItem*  
  Índice de base cero de la nueva pestaña.  
   
- `pTabCtrlItem`  
+ *pTabCtrlItem*  
  Puntero a un [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estructura que especifica los atributos de la pestaña.  
   
- `lpszItem`  
+ *lpszItem*  
  Dirección de una cadena terminada en null que contiene el texto de la pestaña.  
   
- `nImage`  
+ *nImage*  
  Índice de base cero de una imagen para insertar una lista de imágenes.  
   
- `nMask`  
+ *nMask*  
  Especifica qué `TCITEM` atributos para establecer la estructura. Puede ser cero o una combinación de los siguientes valores:  
   
-- `TCIF_TEXT` El **pszText** miembro es válido.  
+- TCIF_TEXT la `pszText` miembro es válido.  
   
-- `TCIF_IMAGE` El `iImage` miembro es válido.  
+- TCIF_IMAGE la `iImage` miembro es válido.  
   
-- `TCIF_PARAM` El **lParam** miembro es válido.  
+- TCIF_PARAM la *lParam* miembro es válido.  
   
-- `TCIF_RTLREADING` El texto de **pszText** se muestra con orden de lectura de derecha a izquierda en los sistemas hebreo o árabe.  
+- TCIF_RTLREADING el texto de `pszText` se muestra con orden de lectura de derecha a izquierda en los sistemas hebreo o árabe.  
   
-- `TCIF_STATE` El **"_mfc_CTabCtrl.3a3a.GetItem"** miembro es válido.  
+- TCIF_STATE la *"_mfc_CTabCtrl.3a3a.GetItem"* miembro es válido.  
   
- `lParam`  
+ *lParam*  
  Datos definidos por la aplicación asociadas a la pestaña.  
   
- `dwState`  
+ *"_mfc_CTabCtrl.3a3a.GetItem"*  
  Especifica los valores de los Estados del elemento. Para obtener más información, consulte [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) del SDK de Windows.  
   
  *dwStateMask*  
@@ -625,7 +626,7 @@ void RemoveImage(int nImage);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nImage`  
+ *nImage*  
  Índice de base cero de la imagen para quitar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -639,7 +640,7 @@ void SetCurFocus(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nItem`  
+ *nItem*  
  Especifica el índice de la pestaña que recibe el foco.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -653,14 +654,14 @@ int SetCurSel(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nItem`  
+ *nItem*  
  Índice de base cero del elemento que se seleccione.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero de la pestaña seleccionada previamente si se realiza correctamente, en caso contrario, - 1.  
   
 ### <a name="remarks"></a>Comentarios  
- Un control de ficha no envía una **TCN_SELCHANGING** o **TCN_SELCHANGE** recibe un mensaje de notificación cuando se selecciona una ficha mediante esta función. Estas notificaciones se envían mediante **WM_NOTIFY**, cuando el usuario hace clic en o usa el teclado para cambiar las pestañas.  
+ Un control de ficha no envía un mensaje de notificación TCN_SELCHANGING o TCN_SELCHANGE cuando se selecciona una ficha mediante esta función. Estas notificaciones se envían mediante WM_NOTIFY, cuando el usuario hace clic en o usa el teclado para cambiar las pestañas.  
   
 ##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle  
  Establece los estilos extendidos para un control de pestaña.  
@@ -670,14 +671,14 @@ DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwNewStyle`  
+ *dwNewStyle*  
  Valor que especifica una combinación de la pestaña de control estilos extendidos.  
   
- `dwExMask`  
- A `DWORD` valor que indica qué estilos en `dwNewStyle` van a verse afectado. Solo los estilos extendidos en `dwExMask` se cambiarán. Todos los demás estilos se mantendrá tal cual. Si este parámetro es cero, entonces todos los estilos en `dwNewStyle` se verán afectadas.  
+ *dwExMask*  
+ Un valor DWORD que indica qué estilos en *dwNewStyle* van a verse afectado. Solo los estilos extendidos en *dwExMask* se cambiarán. Todos los demás estilos se mantendrá tal cual. Si este parámetro es cero, entonces todos los estilos de *dwNewStyle* se verán afectadas.  
   
 ### <a name="return-value"></a>Valor devuelto  
- A `DWORD` valor que contiene el anterior [estilos extendidos de control de pestaña](http://msdn.microsoft.com/library/windows/desktop/bb760546), tal y como se describe en el SDK de Windows.  
+ Un valor DWORD que contiene el anterior [estilos extendidos de control de pestaña](http://msdn.microsoft.com/library/windows/desktop/bb760546), tal y como se describe en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Esta función miembro implementa el comportamiento del mensaje de Win32 [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), tal y como se describe en el SDK de Windows.  
@@ -690,11 +691,11 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pImageList`  
+ *pImageList*  
  Puntero a la lista de imágenes que se asignará al control de ficha.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve un puntero a la lista de la imagen anterior o **NULL** si no hay ninguna lista de imágenes anteriores.  
+ Devuelve un puntero a la lista de imagen anterior o NULL si no hay ninguna lista de imágenes anteriores.  
   
 ##  <a name="setitem"></a>  CTabCtrl::SetItem  
  Establece algunos o todos los atributos de una ficha.  
@@ -704,11 +705,11 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nItem`  
+ *nItem*  
  Índice de base cero del elemento.  
   
- `pTabCtrlItem`  
- Puntero a un [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estructura que contiene los nuevos atributos de elemento. El **máscara** miembro especifica qué atributos que se van a establecer. Si el **máscara** miembro especifica la `TCIF_TEXT` valor, el **pszText** miembro es la dirección de una cadena terminada en null y el **cchTextMax** miembro se omite.  
+ *pTabCtrlItem*  
+ Puntero a un [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estructura que contiene los nuevos atributos de elemento. El `mask` miembro especifica qué atributos que se van a establecer. Si el `mask` miembro especifica el valor TCIF_TEXT, el `pszText` miembro es la dirección de una cadena terminada en null y el `cchTextMax` miembro se omite.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -724,7 +725,7 @@ BOOL SetItemExtra(int nBytes);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nBytes`  
+ *nBytes*  
  El número de bytes adicionales que se va a establecer.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -741,14 +742,14 @@ CSize SetItemSize(CSize size);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `size`  
+ *size*  
  El nuevo ancho y alto, en píxeles, de los elementos de control de pestaña.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el ancho y el alto antiguos de los elementos de control de pestaña.  
   
 ##  <a name="setitemstate"></a>  CTabCtrl::SetItemState  
- Establece el estado del elemento de control de pestaña identificado por `nItem`.  
+ Establece el estado del elemento de control de pestaña identificado por *nItem*.  
   
 ```  
 BOOL SetItemState(
@@ -758,19 +759,19 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nItem`  
+ *nItem*  
  El número de índice de base cero del elemento para el que se va a establecer información de estado.  
   
- `dwMask`  
+ *dwMask*  
  Especifica que el estado del elemento marcas para establecer la máscara. Para obtener una lista de valores, vea el miembro de la máscara de la [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estructura, como se describe en el SDK de Windows.  
   
- `dwState`  
- Una referencia a un `DWORD` valor que contiene la información de estado. Puede presentar uno de los siguientes valores:  
+ *"_mfc_CTabCtrl.3a3a.GetItem"*  
+ Una referencia a un valor DWORD que contiene la información de estado. Puede presentar uno de los siguientes valores:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|Se selecciona el elemento de control de pestaña.|  
-|**TCIS_HIGHLIGHTED**|Se resalta el elemento de control de pestaña y la pestaña y el texto se dibujan utilizando el color de resaltado actual. Cuando se utiliza el color de resaltado, se trata de una interpolación es true, no un color interpolado.|  
+|TCIS_BUTTONPRESSED|Se selecciona el elemento de control de pestaña.|  
+|TCIS_HIGHLIGHTED|Se resalta el elemento de control de pestaña y la pestaña y el texto se dibujan utilizando el color de resaltado actual. Cuando se utiliza el color de resaltado, se trata de una interpolación es true, no un color interpolado.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -783,7 +784,7 @@ int SetMinTabWidth(int cx);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `cx`  
+ *CX*  
  Ancho mínimo que se establecerá para un elemento de control de pestaña. Si este parámetro se establece en -1, el control usará el ancho de la ficha predeterminada.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -800,7 +801,7 @@ void SetPadding(CSize size);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `size`  
+ *size*  
  Establece la cantidad de espacio (relleno) alrededor de cada pestaña icono y una etiqueta en un control de pestaña.  
   
 ##  <a name="settooltips"></a>  CTabCtrl::SetToolTips  
@@ -811,7 +812,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pWndTip`  
+ *pWndTip*  
  Identificador del control de información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  

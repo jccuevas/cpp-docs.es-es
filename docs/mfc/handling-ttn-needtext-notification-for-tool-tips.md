@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7a4d6dc6edf122b5d9b5301768dea8389e771e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5879082ddc23630e5ee497d8abf6b65873a2b6d4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931969"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Controlar la notificación TTN_NEEDTEXT para la información sobre herramientas
 Como parte de [habilitar información sobre herramientas](../mfc/enabling-tool-tips.md), controlar el **TTN_NEEDTEXT** mensaje agregando la siguiente entrada al mapa de mensajes de la ventana propietaria:  
@@ -47,7 +48,7 @@ Como parte de [habilitar información sobre herramientas](../mfc/enabling-tool-t
  Un puntero a la [estructura NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) estructura. Esta estructura también se explica más adelante en [TOOLTIPTEXT (estructura)](../mfc/tooltiptext-structure.md).  
   
  `pResult`  
- Un puntero al código resultante puede establecer antes de volver. **TTN_NEEDTEXT** controladores pueden pasar por alto el `pResult` parámetro.  
+ Un puntero al código resultante puede establecer antes de volver. **TTN_NEEDTEXT** controladores pueden pasar por alto la *pResult* parámetro.  
   
  Como ejemplo de un controlador de notificación de la vista de formulario:  
   

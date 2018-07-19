@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690386"
 ---
 # <a name="a9---using-single-directives"></a>A.9 Usar directivas single
 En el ejemplo siguiente se muestra la `single` directiva ([sección 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) en la página 15). En el ejemplo, un solo subproceso (normalmente el primer subproceso que se encuentra el `single` directiva) imprime el mensaje de progreso. El usuario no debe hacer ninguna suposición como a qué subproceso se ejecutará la `single` sección. Todos los demás subprocesos se omitirán el `single` sección y se detendrá en la barrera al final de la `single` construir. Si otros subprocesos pueden continuar sin tener que esperar el subproceso que ejecuta el `single` sección, un `nowait` cláusula puede especificarse en el `single` directiva.  

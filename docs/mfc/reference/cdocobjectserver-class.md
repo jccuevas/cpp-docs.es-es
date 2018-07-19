@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f89812fbc0e1b6a3df80cd7c99879d8d630179de
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956468"
 ---
 # <a name="cdocobjectserver-class"></a>Clase CDocObjectServer
 Implementa las interfaces OLE adicionales necesarias para crear un servidor normal de `COleDocument` en un servidor completo de DocObject: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`y `IPrint`.  
@@ -94,7 +95,7 @@ void ActivateDocObject();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `ActivateDocObject` llamadas `IOleDocumentSite`del **ActivateMe** método, pero no se muestra la vista porque se espera para obtener instrucciones específicas sobre cómo configurar y mostrar la vista, se proporcionan en la llamada a [CDocObjectServer::OnActivateView](#onactivateview).  
+ `ActivateDocObject` llamadas `IOleDocumentSite`del `ActivateMe` método, pero no se muestra la vista porque se espera para obtener instrucciones específicas sobre cómo configurar y mostrar la vista, se proporcionan en la llamada a [CDocObjectServer::OnActivateView](#onactivateview).  
   
  Juntos, `ActivateDocObject` y `OnActivateView` activar y mostrar la vista de DocObject. Activación de DocObject difiere de otros tipos de activación en contexto OLE. Activación de DocObject omite la presentación de los bordes de trama en contexto y opciones gráficas del objeto (por ejemplo, controladores de tamaño), pasa por alto las funciones de extensión de objeto y dibuja las barras de desplazamiento dentro del rectángulo de la vista en lugar de dibujar a ellos fuera de dicho rectángulo (como en normal activación en contexto).  
   
@@ -111,7 +112,7 @@ explicit CDocObjectServer(
  *pOwner*  
  Un puntero al documento de sitio de cliente es el cliente para el servidor de DocObject.  
   
- `pDocSite`  
+ *pDocSite*  
  Un puntero a la `IOleDocumentSite` interfaz implementada por el contenedor.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -138,7 +139,7 @@ virtual void OnApplyViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ar`  
+ *ar*  
  Un `CArchive` objeto desde el que se va a serializar el estado de vista.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -154,7 +155,7 @@ virtual void OnSaveViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ar`  
+ *ar*  
  Un `CArchive` de objeto para el que se serializa el estado de vista.  
   
 ### <a name="remarks"></a>Comentarios  

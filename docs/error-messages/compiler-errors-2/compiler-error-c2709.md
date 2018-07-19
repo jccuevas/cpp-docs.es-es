@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230142"
 ---
 # <a name="compiler-error-c2709"></a>Error del compilador C2709
 'identificador': la longitud del parámetro formal en bytes es distinta respecto a la declaración anterior.  

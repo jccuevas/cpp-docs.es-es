@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80795131915da89928afc883fec0985087c4f38f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955448"
 ---
 # <a name="cdumpcontext-class"></a>Clase CDumpContext
 Admite resultados de diagnóstico orientados a secuencia en forma de texto legible.  
@@ -78,7 +79,7 @@ class CDumpContext
   
  El `CDumpContext` clase tiene una inserción sobrecargada ( **<<**) operador para `CObject` punteros que los datos del objeto de volcados de memoria. Si necesita un formato de volcado de memoria personalizado para un objeto derivado, invalide [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Implementa un invalidado la mayoría de las clases de Microsoft Foundation `Dump` función miembro.  
   
- Las clases que no se derivan de `CObject`, como `CString`, `CTime`, y `CTimeSpan`, tienen sus propios sobrecargado `CDumpContext` operadores de inserción, como estructuras utilizadas a menudo como **CFileStatus**, `CPoint`, y `CRect`.  
+ Las clases que no se derivan de `CObject`, como `CString`, `CTime`, y `CTimeSpan`, tienen sus propios sobrecargado `CDumpContext` operadores de inserción, como estructuras utilizadas a menudo como `CFileStatus`, `CPoint`, y `CRect`.  
   
  Si usas el [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) o [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) macro en la implementación de la clase, a continuación, `CObject::Dump` imprimirá el nombre de su `CObject`-clase derivada. En caso contrario, se imprimirá `CObject`.  
   
@@ -104,7 +105,7 @@ CDumpContext(CFile* pFile = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pFile`  
+ *pFile*  
  Un puntero a la `CFile` objeto que constituye el destino de volcado de memoria.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -179,10 +180,10 @@ void HexDump(
  *pby*  
  Un puntero a un búfer que contiene los bytes que se va a volcar.  
   
- `nBytes`  
+ *nBytes*  
  El número de bytes que se va a volcar.  
   
- `nWidth`  
+ *nWidth*  
  Número máximo de bytes vuelca por línea (no el ancho de la línea de salida).  
   
 ### <a name="remarks"></a>Comentarios  
@@ -222,7 +223,7 @@ CDumpContext& operator<<(HFONT h);
  Un `CDumpContext` referencia. Con el valor devuelto, puede escribir varias inserciones en una sola línea de código fuente.  
   
 ### <a name="remarks"></a>Comentarios  
- Se sobrecarga el operador de inserción para `CObject` punteros, así como para los tipos más primitivos. Un puntero al carácter da como resultado un volcado del contenido de cadena; un puntero a `void` da como resultado un volcado hexadecimal de la dirección solo. A **LONGLONG** da como resultado un volcado del entero de 64 bits con signo; A **ULONGLONG** da como resultado un volcado de memoria de un entero de 64 bits sin signo.  
+ Se sobrecarga el operador de inserción para `CObject` punteros, así como para los tipos más primitivos. Un puntero al carácter da como resultado un volcado del contenido de cadena; un puntero a **void** da como resultado un volcado hexadecimal de la dirección solo. A **LONGLONG** da como resultado un volcado del entero de 64 bits con signo; A **ULONGLONG** da como resultado un volcado de memoria de un entero de 64 bits sin signo.  
   
  Si usas el `IMPLEMENT_DYNAMIC` o `IMPLEMENT_SERIAL` macro en la implementación de la clase y, a continuación, el operador de inserción a través de `CObject::Dump`, se imprime el nombre de su `CObject`-clase derivada. En caso contrario, se imprimirá `CObject`. Si invalida el `Dump` función de la clase, a continuación, puede proporcionar una salida más significativa de contenido del objeto en lugar de un volcado hexadecimal.  
   

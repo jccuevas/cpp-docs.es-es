@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110877"
 ---
 # <a name="changes-to-conversion-operators"></a>Cambios en los operadores de conversión
 La sintaxis de los operadores de conversión ha cambiado de extensiones administradas para C++ a Visual C++.  

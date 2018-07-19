@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410845"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Aplicaciones de la Plataforma universal de Windows, Windows Runtime y tiempo de ejecución de C
 

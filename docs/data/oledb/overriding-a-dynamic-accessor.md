@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107862"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Invalidar un descriptor de acceso dinámico
 Cuando se usa un descriptor de acceso dinámico como `CDynamicAccessor`, el comando **abiertos** método crea un descriptor de acceso de forma automática, en función de la información de columna del conjunto de filas abierto. Puede reemplazar el descriptor de acceso dinámico para controlar exactamente cómo se enlazan las columnas.  

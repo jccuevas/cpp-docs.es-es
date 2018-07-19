@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890123"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Seleccionar un área de una imagen (Editor de imágenes para iconos)
 Puede usar herramientas de selección para definir un área de una imagen que desee cortar, copiar, borrar, cambiar el tamaño, invertir o mover. Con el **selección del rectángulo** herramienta puede definir y seleccionar una región rectangular de la imagen. Con el **selección Irregular** herramienta puede dibujar un mano alzada el contorno del área que desea seleccionar para el cortar, copiar u otra operación.  

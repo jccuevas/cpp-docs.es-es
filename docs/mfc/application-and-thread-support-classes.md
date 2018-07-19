@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341315"
 ---
 # <a name="application-and-thread-support-classes"></a>Clases de aplicación y de compatibilidad con subprocesos
 Cada aplicación tiene uno y solo un objeto de aplicación; Este objeto coordina otros objetos en el programa en ejecución y se deriva de `CWinApp`.  

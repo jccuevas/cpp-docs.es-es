@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361771"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Cadenas, Asistente para páginas de propiedades ATL
 Proporciona el texto asociado a la página de propiedades.  

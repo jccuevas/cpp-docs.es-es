@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694997"
 ---
 # <a name="c2-rules"></a>C.2 Reglas
 La notación se describe en la sección 6.1 del estándar C. Este apéndice gramática muestra las extensiones de la gramática del lenguaje de base para las directivas de OpenMP C y C++.  

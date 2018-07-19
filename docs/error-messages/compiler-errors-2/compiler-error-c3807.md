@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272323"
 ---
 # <a name="compiler-error-c3807"></a>Error del compilador C3807
 'type': una clase con el atributo ComImport no puede derivar de 'tipo2', se permite solo la implementación de interfaz  

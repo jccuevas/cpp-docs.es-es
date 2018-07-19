@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344349"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Inicializar los elementos de un objeto CStatusBarCtrl
 De forma predeterminada, una barra de estado muestra información de estado utilizando paneles distintos. Estos paneles (también denominados partes) pueden contener una cadena de texto, un icono o ambos.  

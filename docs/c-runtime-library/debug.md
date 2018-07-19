@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387549"
 ---
 # <a name="debug"></a>_DEBUG
 El compilador define `_DEBUG` cuando se especifica la opción /MTd o /MDd. Estas opciones especifican las versiones de depuración de la biblioteca en tiempo de ejecución de C.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354937"
 ---
 # <a name="event-handling-and-atl"></a>Control de eventos en ATL
 Esta sección muestra cómo recibir eventos a través de ATL. Abarca los principios de control de eventos COM y los detalles de la recepción de eventos mediante la compatibilidad proporcionada por ATL.  

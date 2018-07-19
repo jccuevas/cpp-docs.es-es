@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108300"
 ---
 # <a name="comptr-class"></a>com::ptr (Clase)
 Un contenedor para un objeto COM que puede usarse como un miembro de una clase CLR.  El contenedor también automatiza la administración de la duración del objeto COM, liberando propiedad todas las referencias en el objeto cuando se llama a su destructor. Análoga a [clase CComPtr](../atl/reference/ccomptr-class.md).  

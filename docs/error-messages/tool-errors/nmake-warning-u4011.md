@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320800"
 ---
 # <a name="nmake-warning-u4011"></a>Advertencia de NMAKE U4011
 'target': no todos los dependientes disponibles; no se ha creado el destino  

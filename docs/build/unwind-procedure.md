@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382028"
 ---
 # <a name="unwind-procedure"></a>Procedimiento para desenredar
 La matriz de códigos de desenredado se ordena en orden descendente. Cuando se produce una excepción, se almacena el contexto completo por el sistema operativo en un registro de contexto. A continuación, se invoca la lógica de envío de excepción, que ejecuta varias veces los pasos siguientes para encontrar un controlador de excepciones.  

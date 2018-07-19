@@ -74,11 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76396a402f348181fbcd65a2ccb962207216abda
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954665"
 ---
 # <a name="afx-messages"></a>mensajes AFX
 Estos mensajes se utilizan en MFC.  
@@ -88,7 +89,7 @@ Estos mensajes se utilizan en MFC.
   
 ||||||  
 |-|-|-|-|-|  
-|Mensaje|Descripción|[in] `wParam`|`lParam` (Todos los parámetros son [in], a menos que se indique lo contrario).|Valor devuelto|  
+|Mensaje|Descripción|[in] *wParam*|*lParam* (todos los parámetros son [in], a menos que se indique lo contrario).|Valor devuelto|  
 |AFX_WM_ACCGETOBJECT|No usado.|No usado.|No es aplicable.|No es aplicable.|  
 |AFX_WM_ACCGETSTATE|Se usa para admitir la accesibilidad. Enviar este mensaje a `CMFCPopupMenu` o `CMFCRibbonPanelMenu` para recuperar el estado del elemento actual.|Índice del elemento, que puede ser un botón de menú o un separador.|No usado.|El estado del elemento. Es -1 si el índice no es válido, 0 si el botón de menú no tiene ningún atributo especial. En caso contrario, es una combinación de los siguientes indicadores:<br /><br /> TBBS_DISABLED: el elemento está deshabilitado<br /><br /> TBBS_CHECKED: el elemento está activado<br /><br /> TBBS_BUTTON: el elemento es un pulsador estándar<br /><br /> TBBS_PRESSED: se presiona el botón<br /><br /> TBBS_INDETERMINATE: estado indefinido<br /><br /> TBBS_SEPARATOR - en lugar de un botón de menú, este formularios de elemento de una separación entre otros elementos de menú|  
 |AFX_WM_CHANGE_ACTIVE_TAB|El marco de trabajo envía este mensaje para el control de barra de control de tamaño ajustable. Procesar este mensaje para recibir notificaciones de `CMFCTabCtrl` objetos cuando un usuario cambia una pestaña activa.|El índice de una pestaña.|No usado.|Es distinto de cero.|  
@@ -102,9 +103,9 @@ Estos mensajes se utilizan en MFC.
 |AFX_WM_DELETETOOLBAR|Se envían a la ventana de marco principal cuando el usuario está a punto de eliminar una barra de herramientas en el modo de personalización.<br /><br /> Procesar este mensaje para realizar acciones adicionales cuando un usuario elimina una barra de herramientas en el modo de personalización. También debe llamar el controlador predeterminado (`OnToolbarDelete`), lo que elimina la barra de herramientas. El controlador predeterminado devuelve un valor que indica si es posible eliminar de la barra de herramientas.|No usado.|Puntero a un `CMFCToolBar` objeto va a eliminar.|Es distinto de cero si no se puede eliminar una barra de herramientas; en caso contrario es 0.|  
 |AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` Este mensaje se envía a la ventana de marco principal para recuperar los colores del documento.|No usado.|[entrada, salida] Puntero a un `CList<COLORREF, COLORREF>` objeto.|Es cero.|  
 |AFX_WM_GETDRAGBOUNDS|Sólo para uso interno.|No es aplicable.|No es aplicable.|No es aplicable.|  
-|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|Se envían a la ventana de marco principal cuando un usuario resalta un elemento de lista de la cinta de opciones.|Índice del elemento resaltado|un puntero a `CMFCBaseRibbonElement`|No usado.|  
+|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|Se envían a la ventana de marco principal cuando un usuario resalta un elemento de lista de la cinta de opciones.|Índice del elemento resaltado|Un puntero a `CMFCBaseRibbonElement`|No usado.|  
 |AFX_WM_ON_AFTER_SHELL_COMMAND|Envía a un elemento primario de `CMFCShellListCtrl` o `CMFCShellTreeCtrl` controla cuando un usuario termina de ejecutar un comando de shell.|El identificador del comando que ejecuta el usuario|No usado.|Si la aplicación procesa este mensaje, debe devolver cero.|  
-|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|El marco de trabajo envía este mensaje al elemento primario de la cinta de opciones antes de que muestre el menú emergente. Puede procesar este mensaje y modificar los menús emergentes en cualquier momento.|No usado.|un puntero a `CMFCBaseRibbonElement`|No usado.|  
+|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|El marco de trabajo envía este mensaje al elemento primario de la cinta de opciones antes de que muestre el menú emergente. Puede procesar este mensaje y modificar los menús emergentes en cualquier momento.|No usado.|Un puntero a `CMFCBaseRibbonElement`|No usado.|  
 |AFX_WM_ON_CANCELTABMOVE|Sólo para uso interno.|No es aplicable.|No es aplicable.||  
 |AFX_WM_ON_CHANGE_RIBBON_CATEGORY|El marco de trabajo envía este mensaje para el marco principal cuando el usuario cambia la categoría de Control de la cinta activa.|No usado.|Un puntero a la `CMFCRibbonBar` cuya categoría ha cambiado.|No usado.|  
 |AFX_WM_ON_CLOSEPOPUPWINDOW|El marco de trabajo envía este mensaje para notificar el propietario de `CMFCDesktopAlertWnd` que la ventana está a punto de cerrarse.|No usado.|Un puntero a `CMFCDesktopAlertWnd` objeto.|No usado.|  
@@ -130,7 +131,7 @@ Estos mensajes se utilizan en MFC.
 |AFX_WM_UPDATETOOLTIPS|Se envía a todos los propietarios de información sobre herramientas para indicar que se deben volver a crear los controles de información sobre herramientas.|El tipo de control que se va a procesar este mensaje. Vea la tabla más adelante en este tema para obtener una lista de valores posibles.|No usado.|No usado.|  
 |AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` envía este mensaje para el marco primario cuando el usuario hace clic en el **ayuda** botón o entra en el modo de Ayuda haciendo clic en el **ayuda** botón de título o la tecla F1.|No usado.|Un puntero a la instancia de `CMFCWindowsManagerDialog`.|No usado.|  
   
- En la tabla siguiente se muestra los valores de los bytes menos significativos de la `lParam` parámetro del método AFX_WM_HSCROLL:  
+ En la tabla siguiente se muestra los valores de los bytes menos significativos de la *lParam* parámetro del método AFX_WM_HSCROLL:  
   
 |||  
 |-|-|  
@@ -146,9 +147,9 @@ Estos mensajes se utilizan en MFC.
 |SB_THUMBTRACK|El usuario está arrastrando el cuadro de desplazamiento. El mensaje AFX_WM_ON_HSCROLL se envía repetidamente con este valor hasta que el usuario suelta el botón del mouse. La palabra de orden superior indica la posición a la que se ha arrastrado el cuadro de desplazamiento.|  
   
 > [!NOTE]
->  La palabra de orden superior de la `lParam` parámetro especifica la posición actual del cuadro de desplazamiento, si la palabra de orden inferior es SB_THUMBPOSITION o SB_THUMBTRACK; en caso contrario, no se utiliza esta palabra.  
+>  La palabra de orden superior de la *lParam* parámetro especifica la posición actual del cuadro de desplazamiento, si la palabra de orden inferior es SB_THUMBPOSITION o SB_THUMBTRACK; en caso contrario, no se utiliza esta palabra.  
   
- En la tabla siguiente se enumera los valores de marca para la `lParam` parámetro del mensaje AFX_WM_UPDATETOOLTIPS:  
+ En la tabla siguiente se enumera los valores de marca para la *lParam* parámetro del mensaje AFX_WM_UPDATETOOLTIPS:  
   
 |||  
 |-|-|  

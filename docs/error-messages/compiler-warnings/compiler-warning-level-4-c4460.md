@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293759"
 ---
 # <a name="compiler-warning-level-4-c4460"></a>Advertencia del compilador (nivel 4) C4460
 El operador 'operator' de WinRT o CLR tiene el parámetro pasado por referencia. El operador 'operator' de WinRT o CLR tiene una semántica diferente del operador de C++ 'operator', ¿deseaba pasar por valor?  

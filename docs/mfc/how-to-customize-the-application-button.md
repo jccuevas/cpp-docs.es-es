@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351369"
 ---
 # <a name="how-to-customize-the-application-button"></a>Cómo: Personalizar el botón Aplicación
 Al hacer clic en el botón de la aplicación, se muestra un menú de comandos. Normalmente, el menú contiene comandos relacionados con el archivo como **abiertos**, **guardar**, **impresión**, y **Exit**.  

@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896977da8ca57cc17a9fa3b7864e1744ee07f35d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930828"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Controladores para intervalos de mapa de mensajes
 En este artículo se explica cómo asignar un intervalo de mensajes a una función de controlador único mensaje (en lugar de asignar un mensaje a solo una función).  
@@ -95,7 +96,7 @@ En este artículo se explica cómo asignar un intervalo de mensajes a una funci�
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- Funciones del controlador de comandos individuales no reciben parámetros normalmente. Con la excepción de las funciones de controlador de actualización, las funciones de controlador de intervalos de mapa de mensajes requieren un parámetro adicional, `nID`, del tipo **UINT**. Este parámetro es el primer parámetro. El parámetro adicional adapta el identificador de comando adicional necesario para especificar qué comando seleccionó realmente el usuario.  
+ Funciones del controlador de comandos individuales no reciben parámetros normalmente. Con la excepción de las funciones de controlador de actualización, las funciones de controlador de intervalos de mapa de mensajes requieren un parámetro adicional, *nID*, del tipo **UINT**. Este parámetro es el primer parámetro. El parámetro adicional adapta el identificador de comando adicional necesario para especificar qué comando seleccionó realmente el usuario.  
   
  Para obtener más información acerca de los requisitos de parámetro para la actualización de las funciones de controlador, consulte [ejemplo para un intervalo de identificadores de comando](#_core_example_for_a_range_of_command_ids).  
   
@@ -108,7 +109,7 @@ En este artículo se explica cómo asignar un intervalo de mensajes a una funci�
   
 -   Dos identificadores de comando, apertura y cierre de un intervalo contiguo.  
   
-     Aquí están `ID_VIEW_ZOOM25` y `ID_VIEW_ZOOM300`.  
+     Aquí están **ID_VIEW_ZOOM25** y **ID_VIEW_ZOOM300**.  
   
 -   El nombre de la función de controlador para los comandos.  
   
@@ -118,9 +119,9 @@ En este artículo se explica cómo asignar un intervalo de mensajes a una funci�
   
  [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- El caso de funciones del controlador de actualización es similar y es probable que sean más útiles. Es bastante habitual al escribir `ON_UPDATE_COMMAND_UI` controladores para una serie de comandos y descubre que tiene que escribir o copiar, el mismo código una y otra vez. La solución consiste en asignar un intervalo de comando actualizarán de identificadores a una función de controlador mediante la `ON_UPDATE_COMMAND_UI_RANGE` macro. Los identificadores de comando deben formar un intervalo contiguo. Para obtener un ejemplo, vea el **OnUpdateZoom** controlador y sus `ON_UPDATE_COMMAND_UI_RANGE` entrada de mapa de mensajes en la clase de vista del ejemplo HIERSVR.  
+ El caso de funciones del controlador de actualización es similar y es probable que sean más útiles. Es bastante habitual al escribir `ON_UPDATE_COMMAND_UI` controladores para una serie de comandos y descubre que tiene que escribir o copiar, el mismo código una y otra vez. La solución consiste en asignar un intervalo de comando actualizarán de identificadores a una función de controlador mediante la `ON_UPDATE_COMMAND_UI_RANGE` macro. Los identificadores de comando deben formar un intervalo contiguo. Para obtener un ejemplo, vea el `OnUpdateZoom` controlador y sus `ON_UPDATE_COMMAND_UI_RANGE` entrada de mapa de mensajes en la clase de vista del ejemplo HIERSVR.  
   
- Actualizar funciones del controlador de comandos únicas normalmente toman un único parámetro, `pCmdUI`, del tipo **CCmdUI\***. A diferencia de las funciones de controlador, las funciones del controlador de actualización para intervalos de mapa de mensajes no requieren un parámetro adicional, `nID`, del tipo **UINT**. El identificador de comando, que es necesario para especificar qué comando seleccionó realmente el usuario, se encuentra en la `CCmdUI` objeto.  
+ Actualizar funciones del controlador de comandos únicas normalmente toman un único parámetro, *pCmdUI*, del tipo `CCmdUI*`. A diferencia de las funciones de controlador, las funciones del controlador de actualización para intervalos de mapa de mensajes no requieren un parámetro adicional, *nID*, del tipo **UINT**. El identificador de comando, que es necesario para especificar qué comando seleccionó realmente el usuario, se encuentra en la `CCmdUI` objeto.  
   
 ##  <a name="_core_example_for_a_range_of_control_ids"></a> Ejemplo de un intervalo de identificadores de controles  
  Otro caso interesante consiste en asignar mensajes de notificación de controles para un intervalo de identificadores de control a un único controlador. Suponga que el usuario puede hacer clic en cualquiera de los botones de 10. Para asignar los 10 botones a un controlador, la entrada de mapa de mensajes sería similar al siguiente:  
@@ -135,7 +136,7 @@ En este artículo se explica cómo asignar un intervalo de mensajes a una funci�
   
 -   Los valores de Id. del control asociados al intervalo contiguo de controles.  
   
-     Aquí se trata de `IDC_BUTTON1` y `IDC_BUTTON10`.  
+     Aquí se trata de **IDC_BUTTON1** y **IDC_BUTTON10**.  
   
 -   El nombre de la función de controlador de mensaje.  
   

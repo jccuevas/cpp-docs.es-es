@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301800"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>Error del evaluador de expresiones CXX0051
 más de un símbolo sobrecargado especificado en el punto de interrupción  

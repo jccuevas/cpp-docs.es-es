@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687470"
 ---
 # <a name="2721-private"></a>2.7.2.1 private
 El `private` cláusula declara las variables de la lista de variables a ser privada para cada subproceso de un equipo. La sintaxis de la `private` cláusula es como sigue:  

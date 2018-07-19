@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89f82f03a4c6a9faf2ddf3e8c3f2a0b7b3fd1d2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042370"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Clase CMFCDynamicLayout
 Especifica cómo se mueven y cambian de tamaño los controles de una ventana cuando el usuario cambia el tamaño de la ventana.  
@@ -104,16 +105,16 @@ BOOL AddItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hwnd`  
+ *HWND*  
  Controlador de la ventana que se va a agregar.  
   
- `nID`  
+ *nID*  
  Identificador del control secundario que se va a agregar.  
   
- `moveSettings`  
+ *moveSettings*  
  Estructura que describe cómo se debe mover el control a medida que cambia el tamaño de la ventana.  
   
- `sizeSettings`  
+ *sizeSettings*  
  Estructura que describe cómo debe cambiar el tamaño del control a medida que cambia el tamaño de la ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -140,7 +141,7 @@ BOOL Create(CWnd* pHostWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- pHostWnd  
+ *pHostWnd*  
  Un puntero a la ventana del host.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -182,7 +183,7 @@ void GetHostWndRect(CRect& rect,);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `rect`  
+ *Rect*  
  Después de la devolución de la función, este parámetro contiene el rectángulo delimitador del área de presentación. Se trata de un parámetro de salida; el valor de entrada se sobrescribe.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -195,7 +196,7 @@ BOOL HasItem(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hwnd`  
+ *HWND*  
  El identificador de ventana para el control.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -225,13 +226,13 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pHostWnd`  
+ *pHostWnd*  
  Un puntero a la ventana del host.  
   
- `lpResource`  
+ *lpResource*  
  Un puntero al búfer que contiene el recurso AFX_DIALOG_LAYOUT.  
   
- `dwSize`  
+ *dwSize*  
  El tamaño del búfer en bytes.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -247,7 +248,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nRatio`  
+ *nRatio*  
  Define como un porcentaje hasta qué punto se desplaza horizontalmente un control secundario cuando el usuario cambia el tamaño de la ventana de host.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -263,10 +264,10 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nXRatio`  
+ *nXRatio*  
  Define como un porcentaje hasta qué punto se desplaza horizontalmente un control secundario cuando el usuario cambia el tamaño de la ventana de host.  
   
- `nYRatio`  
+ *nYRatio*  
  Define, como un porcentaje, hasta qué punto se desplaza verticalmente un control secundario cuando el usuario cambia el tamaño de la ventana de host.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -335,7 +336,7 @@ static MoveSettings MoveVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nRatio`  
+ *nRatio*  
  Define, como un porcentaje, hasta qué punto se desplaza verticalmente un control secundario cuando el usuario cambia el tamaño de la ventana de host.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -351,7 +352,7 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `size`  
+ *size*  
  El tamaño deseado por debajo del cual no se ajusta el diseño.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -365,7 +366,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nRatio`  
+ *nRatio*  
  Define como un porcentaje hasta qué punto se cambia el tamaño horizontal de un control secundario cuando el usuario cambia el tamaño de la ventana de host.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -381,10 +382,10 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nXRatio`  
+ *nXRatio*  
  Define como un porcentaje hasta qué punto se cambia el tamaño horizontal de un control secundario cuando el usuario cambia el tamaño de la ventana de host.  
   
- `nYRatio`  
+ *nYRatio*  
  Define como un porcentaje hasta qué punto se cambia el tamaño vertical de un control secundario cuando el usuario cambia el tamaño de la ventana de host.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -452,7 +453,7 @@ static SizeSettings SizeVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nRatio`  
+ *nRatio*  
  Define como un porcentaje hasta qué punto se cambia el tamaño vertical de un control secundario cuando el usuario cambia el tamaño de la ventana de host.  
   
 ### <a name="return-value"></a>Valor devuelto  

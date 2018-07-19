@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880184"
 ---
 # <a name="partial--c-component-extensions"></a>partial (Extensiones de componentes de C++)
 El `partial` palabra clave permite que distintas partes de la misma clase ref a crearse independientemente y en archivos diferentes.  

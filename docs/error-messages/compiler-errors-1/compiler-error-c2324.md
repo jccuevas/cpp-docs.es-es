@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222259"
 ---
 # <a name="compiler-error-c2324"></a>Error del compilador C2324
 'identificador': no se esperaba a la derecha de 'nombre'  

@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 584644963a647c5b458407b2d777f91014b40fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eae84c647f068e49136968e60bfd8bd51a528112
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038534"
 ---
 # <a name="cgopherfilefind-class"></a>Clase CGopherFileFind
 Ayuda en las búsquedas de archivos de Internet de servidores gopher.  
@@ -118,14 +119,14 @@ explicit CGopherFileFind(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pConnection`  
+ *pConnection*  
  Un puntero a un [objeto CGopherConnection](../../mfc/reference/cgopherconnection-class.md) objeto.  
   
- `dwContext`  
- El identificador de contexto para la operación. Vea **comentarios** para obtener más información acerca de `dwContext`.  
+ *dwContext*  
+ El identificador de contexto para la operación. Vea **comentarios** para obtener más información acerca de *dwContext*.  
   
 ### <a name="remarks"></a>Comentarios  
- El valor predeterminado de `dwContext` se envía por MFC para la `CGopherFileFind` objeto desde el [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto que creó el `CGopherFileFind` objeto. Al construir un `CGopherFileFind` de objeto, puede invalidar el valor predeterminado para establecer el identificador de contexto en un valor de su elección. El identificador de contexto se devuelve al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para proporcionar el estado en el objeto con el que se identifica. Vea el artículo [primeros pasos de Internet: WinInet](../../mfc/wininet-basics.md) para obtener más información sobre el identificador de contexto.  
+ El valor predeterminado de *dwContext* se envía por MFC para la `CGopherFileFind` objeto desde el [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto que creó el `CGopherFileFind` objeto. Al construir un `CGopherFileFind` de objeto, puede invalidar el valor predeterminado para establecer el identificador de contexto en un valor de su elección. El identificador de contexto se devuelve al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para proporcionar el estado en el objeto con el que se identifica. Vea el artículo [primeros pasos de Internet: WinInet](../../mfc/wininet-basics.md) para obtener más información sobre el identificador de contexto.  
   
 ##  <a name="findfile"></a>  CGopherFileFind:: FindFile  
  Llame a esta función miembro para buscar un archivo gopher.  
@@ -143,13 +144,13 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `refLocator`  
+ *refLocator*  
  Una referencia a un [objeto CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objeto.  
   
  *pstrString*  
  Un puntero a una cadena que contiene el nombre de archivo.  
   
- `dwFlags`  
+ *dwFlags*  
  Las marcas que describen cómo controlar esta sesión. Las marcas válidas son:  
   
 -   INTERNET_FLAG_RELOAD obtener los datos del servidor remoto, incluso si localmente se almacena en caché.  
@@ -185,10 +186,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pTimeStamp`  
+ *pTimeStamp*  
  Un puntero a un [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) estructura que contiene la hora en que se creó el archivo.  
   
- `refTime`  
+ *refTime*  
  Una referencia a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -209,10 +210,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `refTime`  
+ *refTime*  
  Una referencia a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  Un puntero a un [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) estructura que contiene la hora de último acceso al archivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -233,10 +234,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pTimeStamp`  
+ *pTimeStamp*  
  Un puntero a un [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) estructura que contiene la hora en que se escribió el archivo por última.  
   
- `refTime`  
+ *refTime*  
  Una referencia a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  

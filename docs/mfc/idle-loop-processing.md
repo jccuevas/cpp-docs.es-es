@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d66983eb915c856ecf52e225b71151359a499b4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20be85f7089f2a53b067d7287780159de51a8c86
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929561"
 ---
 # <a name="idle-loop-processing"></a>Procesamiento de bucles inactivos
 Muchas aplicaciones realizan un procesamiento largo "en"segundo plano. A veces, las consideraciones de rendimiento dictan el uso del subprocesamiento múltiple para dicho trabajo. Subprocesos implican la labor de programación adicional, por lo que no se recomiendan para tareas sencillas, como el trabajo de tiempo de inactividad que realiza MFC en la [OnIdle](../mfc/reference/cwinthread-class.md#onidle) función. En este artículo se centra en el procesamiento en inactividad. Para obtener más información sobre el subprocesamiento múltiple, vea [temas de Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
@@ -47,7 +48,7 @@ Muchas aplicaciones realizan un procesamiento largo "en"segundo plano. A veces, 
  En una aplicación desarrollada con MFC, el mensaje principal un bucle en el `CWinThread` clase contiene un bucle de mensajes que llama el [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) API de Win32. Esto también bucle llama el `OnIdle` función miembro de `CWinThread` entre los mensajes. Una aplicación puede procesar mensajes en este tiempo de inactividad reemplazando la `OnIdle` función.  
   
 > [!NOTE]
->  **Ejecutar**, `OnIdle`, y algunas otras funciones miembro son ahora miembros de clase `CWinThread` en lugar de la clase `CWinApp`. La clase `CWinApp` se deriva de la clase `CWinThread`.  
+>  `Run`, `OnIdle`, y algunas otras funciones miembro son ahora miembros de clase `CWinThread` en lugar de la clase `CWinApp`. La clase `CWinApp` se deriva de la clase `CWinThread`.  
   
  Para obtener más información acerca de cómo realizar el procesamiento en inactividad, vea [OnIdle](../mfc/reference/cwinthread-class.md#onidle) en el *referencia de MFC*.  
   
@@ -56,7 +57,7 @@ Muchas aplicaciones realizan un procesamiento largo "en"segundo plano. A veces, 
   
  [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  
   
- Este código, incrustado en una función, crea un bucle mientras hay procesamiento en inactividad. Dentro de ese bucle, un bucle anidado llama repetidamente **PeekMessage**. Siempre que esa llamada devuelve un valor distinto de cero, el bucle llama a `CWinThread::PumpMessage` para realizar la traducción de mensaje normal y distribución. Aunque `PumpMessage` está documentado, puede examinar su código fuente en el archivo ThrdCore.Cpp en el directorio \atlmfc\src\mfc de la instalación de Visual C++.  
+ Este código, incrustado en una función, crea un bucle mientras hay procesamiento en inactividad. Dentro de ese bucle, un bucle anidado llama repetidamente `PeekMessage`. Siempre que esa llamada devuelve un valor distinto de cero, el bucle llama a `CWinThread::PumpMessage` para realizar la traducción de mensaje normal y distribución. Aunque `PumpMessage` está documentado, puede examinar su código fuente en el archivo ThrdCore.Cpp en el directorio \atlmfc\src\mfc de la instalación de Visual C++.  
   
  Una vez finaliza el bucle interno, el bucle externo realiza el procesamiento en inactividad con una o más llamadas a `OnIdle`. La primera llamada es para fines de MFC. Puede realizar llamadas adicionales `OnIdle` para realizar su propio trabajo en segundo plano.  
   

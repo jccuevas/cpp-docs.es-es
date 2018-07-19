@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042188"
 ---
 # <a name="cmfcautohidebar-class"></a>Clase CMFCAutoHideBar
 La clase `CMFCAutoHideBar` es una clase especial de la barra de herramientas que implementa la característica Ocultar automáticamente.  
@@ -135,16 +136,16 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  La ventana que se quiere ocultar.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Un valor que especifica la alineación del botón de ocultación automática con la ventana de la aplicación.  
   
 ### <a name="return-value"></a>Valor devuelto  
   
 ### <a name="remarks"></a>Comentarios  
- El parámetro `dwAlignment` indica dónde reside el botón de ocultación automática en la aplicación. El parámetro puede establecerse en uno de los valores siguientes:  
+ El *dwAlignment* parámetro indica que el botón de ocultación automática reside en la aplicación. El parámetro puede establecerse en uno de los valores siguientes:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -175,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -206,13 +207,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszClassName`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+ [in] *lpszClassName*  
+ [in] *dwStyle*  
+ [in] *rect*  
+ [in] *pParentWnd*  
+ [in] *nID*  
+ [in] *dwControlBarStyle*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -260,7 +261,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -274,7 +275,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  La ventana de ocultación automática que se va a quitar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -290,7 +291,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] BOOL `bActive`  
+ [in] BOOL *bSecuencias de ActiveX*  
  TRUE para establecerlo como activo; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -304,7 +305,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bState`  
+ [in] *bState*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -319,11 +320,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] CDockablePane * `pAutoHideWnd`  
- [in] BOOL `bShow`  
+ [in] CDockablePane * *pAutoHideWnd*  
+ [in] BOOL *bMostrar*  
  TRUE para mostrar la ventana.  
   
- [in] BOOL `bDelay`  
+ [in] BOOL *bDelay*  
  Este parámetro se ignora.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -341,10 +342,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nLength`  
+ [in] *nLength*  
  En la implementación base, no se usa este valor. En las implementaciones derivadas, use este valor para indicar la longitud del panel cuyo tamaño ha cambiado.  
   
- [in] `bVert`  
+ [in] *bVert*  
  En la implementación base, no se usa este valor. En las implementaciones derivadas, use `TRUE` para controlar el caso donde la barra de ocultación automática está contraída verticalmente y `FALSE` para el caso donde la barra de ocultación automática está contraída horizontalmente.  
   
 ### <a name="return-value"></a>Valor devuelto  

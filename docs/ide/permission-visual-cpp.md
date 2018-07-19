@@ -1,5 +1,5 @@
 ---
-title: '&lt;permiso&gt; (Visual C++) | Documentos de Microsoft'
+title: '&lt;permission&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e13824780a5c73d4423bd544a97108b45d1b770a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33324088"
 ---
-# <a name="ltpermissiongt-visual-c"></a>&lt;permiso&gt; (Visual C++)
-La etiqueta \<permission> le permite documentar el acceso de un miembro. <xref:System.Security.PermissionSet> le permite especificar el acceso a un miembro.  
+# <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt; (Visual C++)
+La etiqueta \<permission> le permite documentar el acceso de un miembro. <xref:System.Security.PermissionSet> permite especificar el acceso a un miembro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +48,7 @@ La etiqueta \<permission> le permite documentar el acceso de un miembro. <xref:S
 ## <a name="remarks"></a>Comentarios  
  Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  
   
- El compilador de Visual C++ intentará resolver referencias cref en un paso por los comentarios de documentación.  Por tanto, si usa las reglas de búsqueda de C++, un símbolo que no encuentra el compilador se marcará como no resuelto. Vea [ \<seealso >](../ide/seealso-visual-cpp.md) para obtener más información.  
+ El compilador de Visual C++ intentará resolver referencias cref en un paso por los comentarios de documentación.  Por tanto, si usa las reglas de búsqueda de C++, un símbolo que no encuentra el compilador se marcará como no resuelto. Vea [\<seealso>](../ide/seealso-visual-cpp.md) para obtener más información.  
   
 ## <a name="example"></a>Ejemplo  
   

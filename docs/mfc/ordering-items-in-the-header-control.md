@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfa84326286b03f3ed0154138ed7f847440df284
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aac3c9ba284abc634af2fbeb25633b812e07f926
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928575"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Ordenar elementos en el control de encabezado
 Una vez que se haya [agrega elementos a un control de encabezado](../mfc/adding-items-to-the-header-control.md), puede manipular u obtener información sobre su orden con las siguientes funciones:  
@@ -39,7 +40,7 @@ Una vez que se haya [agrega elementos a un control de encabezado](../mfc/adding-
   
      Recupera el valor de índice de un elemento de encabezado específico.  
   
- Además de las funciones de miembro anterior, el `HDS_DRAGDROP` estilo permite al usuario arrastrar y colocar elementos de encabezado dentro del control de encabezado. Para obtener más información, consulte [proporciona compatibilidad con arrastrar y colocar elementos de encabezado](../mfc/providing-drag-and-drop-support-for-header-items.md).  
+ Además de las funciones de miembro anterior, el estilo HDS_DRAGDROP permite al usuario arrastrar y colocar elementos de encabezado dentro del control de encabezado. Para obtener más información, consulte [proporciona compatibilidad con arrastrar y colocar elementos de encabezado](../mfc/providing-drag-and-drop-support-for-header-items.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Uso de CHeaderCtrl](../mfc/using-cheaderctrl.md)

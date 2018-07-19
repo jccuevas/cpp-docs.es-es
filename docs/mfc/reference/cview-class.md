@@ -62,11 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ca94e9d1f870fe028faec413a79f13d8a3b8eaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7ff4e48bd7006c3706909d1791b82aa8cda2658
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123128"
 ---
 # <a name="cview-class"></a>CView (clase)
 Proporciona la funcionalidad básica para las clases de vista definidas por el usuario.  
@@ -154,7 +155,7 @@ class AFX_NOVTABLE CView : public CWnd
   
 - [CTreeView](../../mfc/reference/ctreeview-class.md), una vista que permite el uso del documento - arquitectura de vista con los controles de árbol.  
   
- El `CView` clase también tiene una clase de implementación derivada denominada **CPreviewView**, que se utiliza el marco de trabajo para realizar una vista previa de impresión. Esta clase proporciona compatibilidad para las características únicas de la ventana de vista previa de impresión, como una barra de herramientas, vista previa de página única o doble, y hacer zoom, es, si se amplía la imagen de vista previa. No es necesario llamar o reemplazar cualquiera de **CPreviewView**de funciones miembro a menos que desee implementar su propia interfaz de vista previa de impresión (por ejemplo, si desea admitir la edición en modo de vista previa de impresión). Para obtener más información sobre el uso de `CView`, consulte [arquitectura documento/vista](../../mfc/document-view-architecture.md) y [imprimir](../../mfc/printing.md). Además, consulte [30 de nota técnica](../../mfc/tn030-customizing-printing-and-print-preview.md) para obtener más información acerca de cómo personalizar la vista previa de impresión.  
+ El `CView` clase también tiene una clase de implementación derivada denominada `CPreviewView`, que se utiliza el marco de trabajo para realizar una vista previa de impresión. Esta clase proporciona compatibilidad para las características únicas de la ventana de vista previa de impresión, como una barra de herramientas, vista previa de página única o doble, y hacer zoom, es, si se amplía la imagen de vista previa. No es necesario llamar o reemplazar cualquiera de `CPreviewView`de funciones miembro a menos que desee implementar su propia interfaz de vista previa de impresión (por ejemplo, si desea admitir la edición en modo de vista previa de impresión). Para obtener más información sobre el uso de `CView`, consulte [arquitectura documento/vista](../../mfc/document-view-architecture.md) y [imprimir](../../mfc/printing.md). Además, consulte [30 de nota técnica](../../mfc/tn030-customizing-printing-and-print-preview.md) para obtener más información acerca de cómo personalizar la vista previa de impresión.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -186,14 +187,14 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pInfo`  
+ *pInfo*  
  Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la vista previa de impresión o puede comenzar; 0 si se ha cancelado la operación.  
   
 ### <a name="remarks"></a>Comentarios  
- Comportamiento de esta función depende de si se le llama para la vista previa de impresión o (especificado por el **m_bPreview** miembro de la `pInfo` parámetro). Si se va a imprimir un archivo, esta función invoca el cuadro de diálogo Imprimir, mediante los valores de la [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura `pInfo` apunta a; después de que el usuario ha cerrado el cuadro de diálogo, la función crea un contexto de dispositivo de impresora en función de configuración del usuario especificado en el cuadro de diálogo y devuelve el contexto del dispositivo a través de la `pInfo` parámetro. Este contexto de dispositivo se usa para imprimir el documento.  
+ Comportamiento de esta función depende de si se le llama para la vista previa de impresión o (especificado por el `m_bPreview` miembro de la *pInfo* parámetro). Si se va a imprimir un archivo, esta función invoca el cuadro de diálogo Imprimir, mediante los valores de la [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura *pInfo* apunta a; después de que el usuario ha cerrado el cuadro de diálogo, la función crea un contexto de dispositivo de impresora en función de configuración del usuario especificado en el cuadro de diálogo y devuelve el contexto del dispositivo a través de la *pInfo* parámetro. Este contexto de dispositivo se usa para imprimir el documento.  
   
  Si un archivo está abierto en vista previa, esta función crea un contexto de dispositivo de impresora mediante la configuración actual de la impresora; este contexto de dispositivo se utiliza para simular la impresora durante la vista previa.  
   
@@ -205,7 +206,7 @@ CDocument* GetDocument() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la [CDocument](../../mfc/reference/cdocument-class.md) objeto asociado a la vista. **NULL** si la vista no está conectada a un documento.  
+ Un puntero a la [CDocument](../../mfc/reference/cdocument-class.md) objeto asociado a la vista. Es NULL si la vista no está conectada a un documento.  
   
 ### <a name="remarks"></a>Comentarios  
  Esto le permite llamar a funciones de miembro del documento.  
@@ -218,14 +219,14 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDocItem`  
+ *pDocItem*  
  Apunta a los elementos de documento que se está probando.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si se selecciona el elemento de documento especificado; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de esta función devuelve **FALSE**. Reemplace esta función si está implementando selección usando [CDocItem](../../mfc/reference/cdocitem-class.md) objetos. Se debe reemplazar esta función si la vista contiene elementos OLE.  
+ La implementación predeterminada de esta función devuelve FALSE. Reemplace esta función si está implementando selección usando [CDocItem](../../mfc/reference/cdocitem-class.md) objetos. Se debe reemplazar esta función si la vista contiene elementos OLE.  
   
 ##  <a name="onactivateframe"></a>  CView::OnActivateFrame  
  Lo llama el marco de trabajo cuando se activa o desactiva la ventana de marco que contiene la vista.  
@@ -237,16 +238,16 @@ virtual void OnActivateFrame(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nState`  
+ *nState*  
  Especifica si la ventana de marco se está activado o desactivado. Puede ser uno de los siguientes valores:  
   
-- **WA_INACTIVE** se va a desactivar la ventana de marco.  
+- Se está desactivando la WA_INACTIVE la ventana de marco.  
   
-- **WA_ACTIVE** se activa la ventana de marco mediante algún método aparte de un clic del mouse (por ejemplo, mediante el uso de la interfaz de teclado para seleccionar la ventana).  
+- Haga clic en WA_ACTIVE se activa la ventana de marco a través de algún otro método distinto de un mouse (por ejemplo, mediante el uso de la interfaz de teclado para seleccionar la ventana).  
   
-- **WA_CLICKACTIVE** la ventana de marco está activando un clic del mouse  
+- WA_CLICKACTIVE la ventana de marco está activando un clic del mouse  
   
- `pFrameWnd`  
+ *pFrameWnd*  
  Puntero a la ventana de marco que va a activar.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -263,19 +264,19 @@ virtual void OnActivateView(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `bActivate`  
+ *bActivate*  
  Indica si la vista se está activando o desactivando.  
   
- `pActivateView`  
+ *pActivateView*  
  Señala al objeto de vista que se va a activar.  
   
- `pDeactiveView`  
+ *pDeactiveView*  
  Señala al objeto de vista que se va a desactivar.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de esta función establece el foco en la vista que se va a activar. Reemplace esta función si desea realizar un procesamiento especial cuando se activa o desactiva una vista. Por ejemplo, si desea proporcionar indicaciones visuales especiales que distinguen la vista activa de las vistas inactivas, examinaría el `bActivate` parámetro y actualice la apariencia de la vista en consecuencia.  
+ La implementación predeterminada de esta función establece el foco en la vista que se va a activar. Reemplace esta función si desea realizar un procesamiento especial cuando se activa o desactiva una vista. Por ejemplo, si desea proporcionar indicaciones visuales especiales que distinguen la vista activa de las vistas inactivas, examinaría la *bActivate* parámetro y actualice la apariencia de la vista en consecuencia.  
   
- El `pActivateView` y `pDeactiveView` parámetros apuntan a la misma vista si se activa la ventana de marco principal de la aplicación sin cambios en la vista activa, por ejemplo, si se transfiere el foco de otra aplicación a éste, en lugar de uno ver a otro dentro de la aplicación o cuando se cambia entre ventanas secundarias MDI. Esto permite una vista para volver a realizar su paleta, si es necesario.  
+ El *pActivateView* y *pDeactiveView* parámetros apuntan a la misma vista si se activa la ventana de marco principal de la aplicación sin cambios en la vista activa, por ejemplo, si se está configurando el foco transferir desde otra aplicación a éste, en lugar de una vista a otra dentro de la aplicación o cuando se cambia entre ventanas secundarias MDI. Esto permite una vista para volver a realizar su paleta, si es necesario.  
   
  Estos parámetros se diferencian cuando [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) se llama con una vista que es diferente de lo que [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) devolvería. Esto suele ocurrir con las ventanas divisoras.  
   
@@ -289,10 +290,10 @@ virtual void OnBeginPrinting(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Apunta al contexto del dispositivo de impresora.  
   
- `pInfo`  
+ *pInfo*  
  Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -311,30 +312,30 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataObject`  
+ *pDataObject*  
  Apunta a la [COleDataObject](../../mfc/reference/coledataobject-class.md) que se está arrastrando en el área de colocación de la vista.  
   
- `dwKeyState`  
- Contiene el estado de las teclas modificadoras. Se trata de una combinación de varios de los siguientes valores: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, y **MK_RBUTTON**.  
+ *dwKeyState*  
+ Contiene el estado de las teclas modificadoras. Se trata de una combinación de varios de los siguientes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.  
   
- `point`  
+ *Punto*  
  La posición actual de mouse (ratón) en relación con el área de cliente de la vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor comprendido entre el `DROPEFFECT` tipo enumerado, lo que indica el tipo de colocación que se producirían si el usuario quita el objeto en esta posición. El tipo de colocación suele depende del estado de la clave actual indicado por `dwKeyState`. Una asignación estándar de Estados para `DROPEFFECT` valores son:  
+ Un valor comprendido entre el EFECTOCOLOCAR tipo enumerado, lo que indica el tipo de colocación que se producirían si el usuario quita el objeto en esta posición. El tipo de colocación suele depende del estado de la clave actual indicado por *dwKeyState*. Una asignación estándar de Estados para los valores de EFECTOCOLOCAR es:  
   
-- `DROPEFFECT_NONE` No se puede quitar el objeto de datos en esta ventana.  
+- DROPEFFECT_NONE no se puede quitar el objeto de datos en esta ventana.  
   
-- `DROPEFFECT_LINK` para **MK_CONTROL &#124; MK_SHIFT** crea un vínculo entre el objeto y su servidor.  
+- DROPEFFECT_LINK para MK_CONTROL &#124; MK_SHIFT crea un vínculo entre el objeto y su servidor.  
   
-- `DROPEFFECT_COPY` para **MK_CONTROL** crea una copia del objeto eliminado.  
+- DROPEFFECT_COPY para MK_CONTROL crea una copia del objeto eliminado.  
   
-- `DROPEFFECT_MOVE` para **MK_ALT** crea una copia del objeto quitado y eliminar el objeto original. Esto suele ser el efecto de colocar de forma predeterminada, cuando la vista puede aceptar este objeto de datos.  
+- DROPEFFECT_MOVE para MK_ALT crea una copia del objeto eliminado y eliminar el objeto original. Esto suele ser el efecto de colocar de forma predeterminada, cuando la vista puede aceptar este objeto de datos.  
   
  Para obtener más información, vea el ejemplo de conceptos avanzados de MFC [OCLIENT](../../visual-cpp-samples.md).  
   
 ### <a name="remarks"></a>Comentarios  
- Implementación predeterminada consiste en no hacer nada y devolver `DROPEFFECT_NONE`.  
+ Implementación predeterminada consiste en no hacer nada y devolver DROPEFFECT_NONE.  
   
  Anular esta función para prepararse para las futuras llamadas a la [OnDragOver](#ondragover) función miembro. Se deben recuperar los datos necesarios del objeto de datos en este momento para su uso posterior en el `OnDragOver` función miembro. La vista también debe actualizarse en este momento para proporcionar información visual al usuario. Para obtener más información, vea el artículo [arrastrar y colocar: implementar un destino de Drop](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
@@ -359,30 +360,30 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataObject`  
+ *pDataObject*  
  Apunta a la [COleDataObject](../../mfc/reference/coledataobject-class.md) que se está arrastrando sobre el destino de colocación.  
   
- `dwKeyState`  
- Contiene el estado de las teclas modificadoras. Se trata de una combinación de varios de los siguientes valores: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, y **MK_RBUTTON**.  
+ *dwKeyState*  
+ Contiene el estado de las teclas modificadoras. Se trata de una combinación de varios de los siguientes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.  
   
- `point`  
+ *Punto*  
  La posición del mouse actual en relación con el área de cliente de vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor comprendido entre el `DROPEFFECT` tipo enumerado, lo que indica el tipo de colocación que se producirían si el usuario quita el objeto en esta posición. El tipo de colocación depende a menudo en el estado actual de la clave como se indica por `dwKeyState`. Una asignación estándar de Estados para `DROPEFFECT` valores son:  
+ Un valor comprendido entre el EFECTOCOLOCAR tipo enumerado, lo que indica el tipo de colocación que se producirían si el usuario quita el objeto en esta posición. El tipo de colocación depende a menudo en el estado actual de la clave como se indica por *dwKeyState*. Una asignación estándar de Estados para los valores de EFECTOCOLOCAR es:  
   
-- `DROPEFFECT_NONE` No se puede quitar el objeto de datos en esta ventana.  
+- DROPEFFECT_NONE no se puede quitar el objeto de datos en esta ventana.  
   
-- `DROPEFFECT_LINK` para **MK_CONTROL &#124; MK_SHIFT** crea un vínculo entre el objeto y su servidor.  
+- DROPEFFECT_LINK para MK_CONTROL &#124; MK_SHIFT crea un vínculo entre el objeto y su servidor.  
   
-- `DROPEFFECT_COPY` para **MK_CONTROL** crea una copia del objeto eliminado.  
+- DROPEFFECT_COPY para MK_CONTROL crea una copia del objeto eliminado.  
   
-- `DROPEFFECT_MOVE` para **MK_ALT** crea una copia del objeto quitado y eliminar el objeto original. Esto suele ser el efecto de colocar de forma predeterminada, cuando la vista puede aceptar el objeto de datos.  
+- DROPEFFECT_MOVE para MK_ALT crea una copia del objeto eliminado y eliminar el objeto original. Esto suele ser el efecto de colocar de forma predeterminada, cuando la vista puede aceptar el objeto de datos.  
   
  Para obtener más información, vea el ejemplo de conceptos avanzados de MFC [OCLIENT](../../visual-cpp-samples.md).  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada consiste en no hacer nada y devolver `DROPEFFECT_NONE`.  
+ La implementación predeterminada es no hacer nada y devolver DROPEFFECT_NONE.  
   
  Reemplace esta función para proporcionar al usuario información visual durante la operación de arrastre. Puesto que esta función se invoca de forma continua, cualquier código incluido dentro de él se debería optimizar tanto como sea posible. Para obtener más información, vea el artículo [arrastrar y colocar: implementar un destino de Drop](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
@@ -396,24 +397,24 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwKeyState`  
- Contiene el estado de las teclas modificadoras. Se trata de una combinación de varios de los siguientes valores: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, y **MK_RBUTTON**.  
+ *dwKeyState*  
+ Contiene el estado de las teclas modificadoras. Se trata de una combinación de varios de los siguientes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.  
   
- `point`  
+ *Punto*  
  Contiene la ubicación del cursor, en píxeles, relativo a la pantalla.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor comprendido entre el `DROPEFFECT` tipo enumerado, lo que indica el tipo de colocación que se producirían si el usuario quita el objeto en esta posición. El tipo de colocación suele depende del estado de la clave actual indicado por `dwKeyState`. Una asignación estándar de Estados para `DROPEFFECT` valores son:  
+ Un valor comprendido entre el EFECTOCOLOCAR tipo enumerado, lo que indica el tipo de colocación que se producirían si el usuario quita el objeto en esta posición. El tipo de colocación suele depende del estado de la clave actual indicado por *dwKeyState*. Una asignación estándar de Estados para los valores de EFECTOCOLOCAR es:  
   
-- `DROPEFFECT_NONE` No se puede quitar el objeto de datos en esta ventana.  
+- DROPEFFECT_NONE no se puede quitar el objeto de datos en esta ventana.  
   
-- `DROPEFFECT_LINK` para **MK_CONTROL &#124; MK_SHIFT** crea un vínculo entre el objeto y su servidor.  
+- DROPEFFECT_LINK para MK_CONTROL &#124; MK_SHIFT crea un vínculo entre el objeto y su servidor.  
   
-- `DROPEFFECT_COPY` para **MK_CONTROL** crea una copia del objeto eliminado.  
+- DROPEFFECT_COPY para MK_CONTROL crea una copia del objeto eliminado.  
   
-- `DROPEFFECT_MOVE` para **MK_ALT** crea una copia del objeto quitado y eliminar el objeto original.  
+- DROPEFFECT_MOVE para MK_ALT crea una copia del objeto eliminado y eliminar el objeto original.  
   
-- `DROPEFFECT_SCROLL` Indica que una operación de arrastre del desplazamiento está a punto de producirse o se está produciendo en la vista de destino.  
+- DROPEFFECT_SCROLL indica que una operación de arrastre del desplazamiento está a punto de producirse o se está produciendo en la vista de destino.  
   
  Para obtener más información, vea el ejemplo de conceptos avanzados de MFC [OCLIENT](../../visual-cpp-samples.md).  
   
@@ -428,13 +429,13 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Apunta al contexto de dispositivo que se usará para representar una imagen del documento.  
   
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a esta función para realizar la presentación en pantalla, impresión y vista previa de impresión, y pasa un contexto de dispositivo diferentes en cada caso. No hay ninguna implementación predeterminada.  
   
- Se debe reemplazar esta función para mostrar la vista del documento. Puede realizar llamadas de dispositivo gráfico (GDI) de la interfaz con el [CDC](../../mfc/reference/cdc-class.md) objeto señalado por el `pDC` parámetro. Puede seleccionar los recursos GDI, como lápices o fuentes, en el contexto de dispositivo antes de dibujar y, a continuación, anule la selección de ellas posteriormente. A menudo, el código de dibujo puede ser independiente del dispositivo; es decir, que no requiere información sobre qué tipo de dispositivo está mostrando la imagen.  
+ Se debe reemplazar esta función para mostrar la vista del documento. Puede realizar llamadas de dispositivo gráfico (GDI) de la interfaz con el [CDC](../../mfc/reference/cdc-class.md) objeto señalado por el *pDC* parámetro. Puede seleccionar los recursos GDI, como lápices o fuentes, en el contexto de dispositivo antes de dibujar y, a continuación, anule la selección de ellas posteriormente. A menudo, el código de dibujo puede ser independiente del dispositivo; es decir, que no requiere información sobre qué tipo de dispositivo está mostrando la imagen.  
   
  Para optimizar el dibujo, llame a la [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) función de miembro del contexto de dispositivo para averiguar si se dibujará un rectángulo especificado. Si necesita distinguir entre la presentación en pantalla normal e impresión, llame a la [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) función de miembro del contexto del dispositivo.  
   
@@ -449,28 +450,28 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataObject`  
+ ' pDataObject *  
  Apunta a la [COleDataObject](../../mfc/reference/coledataobject-class.md) que se coloca en el destino de colocación.  
   
- `dropEffect`  
+ *EfectoColocar*  
  El efecto de colocar el usuario ha solicitado.  
   
-- `DROPEFFECT_COPY` Crea una copia del objeto de datos que se va a quitar.  
+- DROPEFFECT_COPY crea una copia del objeto de datos que se va a quitar.  
   
-- `DROPEFFECT_MOVE` Mueve el objeto de datos a la ubicación del mouse actual.  
+- DROPEFFECT_MOVE mueve el objeto de datos a la ubicación del mouse actual.  
   
-- `DROPEFFECT_LINK` Crea un vínculo entre un objeto de datos y su servidor.  
+- DROPEFFECT_LINK crea un vínculo entre un objeto de datos y su servidor.  
   
- `point`  
+ *Punto*  
  La posición del mouse actual en relación con el área de cliente de vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la operación de colocar se realizó correctamente; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada no hace nada y devuelve **FALSE**.  
+ La implementación predeterminada no hace nada y devuelve FALSE.  
   
- Reemplace esta función para implementar el efecto de colocar de OLE en el área de cliente de la vista. El objeto de datos se puede examinar mediante `pDataObject` para datos del Portapapeles formatos y los datos se coloca en el punto especificado.  
+ Reemplace esta función para implementar el efecto de colocar de OLE en el área de cliente de la vista. El objeto de datos se puede examinar mediante *pDataObject* para datos del Portapapeles formatos y los datos se coloca en el punto especificado.  
   
 > [!NOTE]
 >  El marco de trabajo no llame a esta función si no hay una invalidación para [OnDropEx](#ondropex) en esta clase de vista.  
@@ -487,20 +488,20 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDataObject`  
+ *pDataObject*  
  Apunta a la [COleDataObject](../../mfc/reference/coledataobject-class.md) que se coloca en el destino de colocación.  
   
- `dropDefault`  
- El efecto que el usuario ha elegido para la operación de colocar de forma predeterminada en función del estado de la clave actual. Puede ser `DROPEFFECT_NONE`. Efectos de colocar se describen en la sección Comentarios.  
+ *dropDefault*  
+ El efecto que el usuario ha elegido para la operación de colocar de forma predeterminada en función del estado de la clave actual. Puede ser DROPEFFECT_NONE. Efectos de colocar se describen en la sección Comentarios.  
   
- `dropList`  
+ *lista desplegable*  
  Una lista de los efectos de colocación que admite el origen de colocación. Valores de efecto de colocar se pueden combinar mediante una operación OR bit a bit ( **&#124;**) operación. Efectos de colocar se describen en la sección Comentarios.  
   
- `point`  
+ *Punto*  
  La posición del mouse actual en relación con el área de cliente de vista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El efecto de colocación que dan como resultado del intento de colocar en la ubicación especificada por `point`. Debe ser uno de los valores indicados por *dropEffectList*. Efectos de colocar se describen en la sección Comentarios.  
+ El efecto de colocación que dan como resultado del intento de colocar en la ubicación especificada por *punto*. Debe ser uno de los valores indicados por *dropEffectList*. Efectos de colocar se describen en la sección Comentarios.  
   
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada consiste en no hacer nada y devolver un valor ficticio (-1) para indicar que el marco de trabajo debe llamar a la [OnDrop](#ondrop) controlador.  
@@ -511,27 +512,27 @@ virtual DROPEFFECT OnDropEx(
   
 -   Si el derecho del botón del mouse está inactivo, el reemplazo debe mostrar un menú emergente que ofrece a que los efectos de colocación admiten el origen de colocación.  
   
-    -   Examinar `dropList` para determinar los efectos de colocación admitidos por el origen de colocación. Habilitar sólo estas acciones en el menú emergente.  
+    -   Examinar *lista desplegable* para determinar los efectos de colocación admitidos por el origen de colocación. Habilitar sólo estas acciones en el menú emergente.  
   
-    -   Use [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) para establecer la acción predeterminada en función de `dropDefault`.  
+    -   Use [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) para establecer la acción predeterminada en función de *dropDefault*.  
   
     -   Por último, realice la acción indicada por la selección del usuario en el menú emergente.  
   
--   Si el botón derecho del mouse no está inactivo, el reemplazo debe procesar como una solicitud de eliminación estándar. Utilice el efecto de colocación especificado en `dropDefault`. Como alternativa, la invalidación puede devolver el valor ficticio (-1) para indicar que `OnDrop` controlará esta operación de eliminación.  
+-   Si el botón derecho del mouse no está inactivo, el reemplazo debe procesar como una solicitud de eliminación estándar. Utilice el efecto de colocación especificado en *dropDefault*. Como alternativa, la invalidación puede devolver el valor ficticio (-1) para indicar que `OnDrop` controlará esta operación de eliminación.  
   
- Use `pDataObject` para examinar el `COleDataObject` para datos del Portapapeles formato y los datos se coloca en el punto especificado.  
+ Use *pDataObject* para examinar el `COleDataObject` para datos del Portapapeles formato y los datos se coloca en el punto especificado.  
   
  La acción asociada con una operación de colocar describen los efectos de colocación. Vea la siguiente lista de efectos de colocar:  
   
-- `DROPEFFECT_NONE` Una caída no estarían permitida.  
+- DROPEFFECT_NONE una caída no estarían permitida.  
   
-- `DROPEFFECT_COPY` Se realizará una operación de copia.  
+- DROPEFFECT_COPY se realizará una operación de copia.  
   
-- `DROPEFFECT_MOVE` Se realizará una operación de movimiento.  
+- Valor DROPEFFECT_MOVE y se realizará una operación de movimiento.  
   
-- `DROPEFFECT_LINK` Se puede establecer un vínculo de los datos perdidos a los datos originales.  
+- ¿Se establece el enlace de un DROPEFFECT_LINK de los datos perdidos a los datos originales.  
   
-- `DROPEFFECT_SCROLL` Indica que una operación de arrastre del desplazamiento está a punto de producirse o se está produciendo en el destino.  
+- DROPEFFECT_SCROLL indica que una operación de arrastre del desplazamiento está a punto de producirse o se está produciendo en el destino.  
   
  Para obtener más información acerca de cómo configurar el comando de menú predeterminado, consulte [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) en el SDK de Windows y [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) en este volumen.  
   
@@ -545,10 +546,10 @@ virtual void OnEndPrinting(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Apunta al contexto del dispositivo de impresora.  
   
- `pInfo`  
+ *pInfo*  
  Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -566,20 +567,20 @@ virtual void OnEndPrintPreview(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Apunta al contexto del dispositivo de impresora.  
   
- `pInfo`  
+ *pInfo*  
  Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual.  
   
- `point`  
+ *Punto*  
  Especifica el punto en la página que se mostró por última vez en modo de vista previa.  
   
- `pView`  
+ *pView*  
  Señala el objeto de vista que se utiliza para obtener una vista previa.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de esta función llama el [OnEndPrinting](#onendprinting) función miembro y restauraciones empezó a la ventana de marco principal para el estado que tenía antes de la vista previa de impresión. Reemplace esta función para realizar un procesamiento especial cuando se termina el modo de vista previa. Por ejemplo, si desea mantener la posición del usuario en el documento al cambiar de modo de vista previa al modo de presentación normal, puede desplazarse a la posición descrita por el `point` parámetro y el `m_nCurPage` miembro de la `CPrintInfo` estructura que el `pInfo` parámetro señala.  
+ La implementación predeterminada de esta función llama el [OnEndPrinting](#onendprinting) función miembro y restauraciones empezó a la ventana de marco principal para el estado que tenía antes de la vista previa de impresión. Reemplace esta función para realizar un procesamiento especial cuando se termina el modo de vista previa. Por ejemplo, si desea mantener la posición del usuario en el documento al cambiar de modo de vista previa al modo de presentación normal, puede desplazarse a la posición descrita por el *punto* parámetro y el `m_nCurPage` miembro de la `CPrintInfo` estructura que la *pInfo* parámetro señala.  
   
  Llame siempre a la versión de la clase base de `OnEndPrintPreview` desde el reemplazo, normalmente al final de la función.  
   
@@ -591,7 +592,7 @@ virtual void OnInitialUpdate();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de esta función llama el [OnUpdate](#onupdate) función miembro sin información de sugerencia (es decir, usando los valores predeterminados de 0 para el `lHint` parámetro y **NULL** para el `pHint` parámetro). Reemplace esta función para realizar cualquier inicialización de un solo uso que requiere información sobre el documento. Por ejemplo, si la aplicación tiene documentos de tamaño fijo, puede usar esta función para inicializar los límites de desplazamiento de la vista según el tamaño del documento. Si la aplicación admite documentos de tamaño variable, use [OnUpdate](#onupdate) actualizar el desplazamiento limita cada vez que los cambios en el documento.  
+ La implementación predeterminada de esta función llama el [OnUpdate](#onupdate) función miembro sin información de sugerencia (es decir, usando los valores predeterminados de 0 para el *lHint* parámetro y los valores NULL para la  *pHint* parámetro). Reemplace esta función para realizar cualquier inicialización de un solo uso que requiere información sobre el documento. Por ejemplo, si la aplicación tiene documentos de tamaño fijo, puede usar esta función para inicializar los límites de desplazamiento de la vista según el tamaño del documento. Si la aplicación admite documentos de tamaño variable, use [OnUpdate](#onupdate) actualizar el desplazamiento limita cada vez que los cambios en el documento.  
   
 ##  <a name="onpreparedc"></a>  CView::OnPrepareDC  
  Lo llama el marco antes de la [OnDraw](#ondraw) se llama la función miembro para la presentación de pantalla y antes de la [OnPrint](#onprint) durante la vista previa de impresión o función miembro se llama para cada página.  
@@ -603,24 +604,24 @@ virtual void OnPrepareDC(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Apunta al contexto de dispositivo que se usará para representar una imagen del documento.  
   
- `pInfo`  
- Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual si `OnPrepareDC` se llama para la vista previa de impresión o; el `m_nCurPage` miembro especifica la página que se va a imprimir. Este parámetro es **NULL** si `OnPrepareDC` se llama para presentación en pantalla.  
+ *pInfo*  
+ Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual si `OnPrepareDC` se llama para la vista previa de impresión o; el `m_nCurPage` miembro especifica la página que se va a imprimir. Este parámetro es NULL si `OnPrepareDC` se llama para presentación en pantalla.  
   
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de esta función no hace nada si se llama a la función de presentación en pantalla. Sin embargo, esta función se reemplaza en las clases derivadas, como [CScrollView](../../mfc/reference/cscrollview-class.md), para ajustar los atributos del contexto de dispositivo; por lo tanto, siempre se debe llamar la implementación de la clase base al principio de la invalidación.  
   
- Si se llama a la función para la impresión, la implementación predeterminada examina la información de página almacenada en la `pInfo` parámetro. Si no se ha especificado la longitud del documento, `OnPrepareDC` supone que el documento que se va a ser una página y se detiene el bucle de impresión después de que se ha imprimido una página. La función detiene el bucle de impresión estableciendo la `m_bContinuePrinting` miembro de la estructura a **FALSE**.  
+ Si se llama a la función para la impresión, la implementación predeterminada examina la información de página almacenada en la *pInfo* parámetro. Si no se ha especificado la longitud del documento, `OnPrepareDC` supone que el documento que se va a ser una página y se detiene el bucle de impresión después de que se ha imprimido una página. La función detiene el bucle de impresión estableciendo la `m_bContinuePrinting` miembro de la estructura en FALSE.  
   
  Invalidar `OnPrepareDC` para cualquiera de los siguientes motivos:  
   
 -   Para ajustar los atributos del contexto del dispositivo según sea necesario para la página especificada. Por ejemplo, si tiene que establecer el modo de asignación u otras características del contexto de dispositivo, hacerlo en esta función.  
   
--   Para realizar la paginación en tiempo de impresión. Normalmente especifica la longitud del documento cuando comienza la impresión, usando la [OnPreparePrinting](#onprepareprinting) función miembro. Sin embargo, si no conoce de antemano cuánto tiempo el documento es (por ejemplo, al imprimir un número indeterminado de registros desde una base de datos), invalide `OnPrepareDC` para comprobar el final del documento mientras se está imprimiendo. Cuando no hay ninguna otra parte de que se imprima el documento, establezca el `m_bContinuePrinting` miembro de la `CPrintInfo` estructura a **FALSE**.  
+-   Para realizar la paginación en tiempo de impresión. Normalmente especifica la longitud del documento cuando comienza la impresión, usando la [OnPreparePrinting](#onprepareprinting) función miembro. Sin embargo, si no conoce de antemano cuánto tiempo el documento es (por ejemplo, al imprimir un número indeterminado de registros desde una base de datos), invalide `OnPrepareDC` para comprobar el final del documento mientras se está imprimiendo. Cuando no hay ninguna otra parte de que se imprima el documento, establezca el `m_bContinuePrinting` miembro de la `CPrintInfo` estructura en FALSE.  
   
--   Para enviar los códigos de escape a la impresora según una página a página. Para enviar los códigos de escape de `OnPrepareDC`, llame a la **Escape** función miembro de la `pDC` parámetro.  
+-   Para enviar los códigos de escape a la impresora según una página a página. Para enviar los códigos de escape de `OnPrepareDC`, llame a la `Escape` función miembro de la *pDC* parámetro.  
   
  Llame a la versión de la clase base de `OnPrepareDC` al principio de la invalidación.  
   
@@ -635,7 +636,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pInfo`  
+ *pInfo*  
  Apunta a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que describe el trabajo de impresión actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -644,13 +645,13 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada no hace nada.  
   
- Se debe reemplazar esta función para habilitar la impresión y vista previa. Llame a la [DoPreparePrinting](#doprepareprinting) función miembro, pasándole el `pInfo` parámetro y, a continuación, devolver su valor devuelto; `DoPreparePrinting` muestra el cuadro de diálogo Imprimir y crea un contexto de dispositivo de impresora. Si desea inicializar el cuadro de diálogo Imprimir con valores distintos de los predeterminados, asigne valores a los miembros de `pInfo`. Por ejemplo, si conoce la longitud del documento, pasar el valor a la [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) función miembro de `pInfo` antes de llamar a `DoPreparePrinting`. Este valor se muestra en el campo para: cuadro en la parte del intervalo del cuadro de diálogo Imprimir.  
+ Se debe reemplazar esta función para habilitar la impresión y vista previa. Llame a la [DoPreparePrinting](#doprepareprinting) función miembro, pasándole el *pInfo* parámetro y, a continuación, devolver su valor devuelto; `DoPreparePrinting` muestra el cuadro de diálogo Imprimir y crea un contexto de dispositivo de impresora. Si desea inicializar el cuadro de diálogo Imprimir con valores distintos de los predeterminados, asigne valores a los miembros de *pInfo*. Por ejemplo, si conoce la longitud del documento, pasar el valor a la [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) función miembro de *pInfo* antes de llamar a `DoPreparePrinting`. Este valor se muestra en el campo para: cuadro en la parte del intervalo del cuadro de diálogo Imprimir.  
   
- `DoPreparePrinting` no muestra el cuadro de diálogo de impresión de un trabajo de vista previa. Si desea omitir el cuadro de diálogo de impresión de un trabajo de impresión, compruebe que la **m_bPreview** miembro de `pInfo` es **FALSE** y, a continuación, establézcalo en **TRUE** antes de pasarlo a `DoPreparePrinting`; restablecerlo a **FALSE** posteriormente.  
+ `DoPreparePrinting` no muestra el cuadro de diálogo de impresión de un trabajo de vista previa. Si desea omitir el cuadro de diálogo de impresión de un trabajo de impresión, compruebe que la `m_bPreview` miembro de *pInfo* es FALSE y, a continuación, se establece en TRUE antes de pasarlo a `DoPreparePrinting`; restablecer posteriormente a FALSE.  
   
  Si necesita realizar inicializaciones que requieren acceso a la `CDC` reemplazar el objeto que representa el contexto de dispositivo de impresora (por ejemplo, si tiene que conocer el tamaño de página antes de especificar la longitud del documento), el `OnBeginPrinting` miembro función.  
   
- Si desea establecer el valor de la **m_nNumPreviewPages** o **m_strPageDesc** los miembros de la `pInfo` parámetro, hacerlo después de llamar a `DoPreparePrinting`. El `DoPreparePrinting` conjuntos de la función miembro **m_nNumPreviewPages** para el valor situado en la aplicación. El archivo INI y establece **m_strPageDesc** en su valor predeterminado.  
+ Si desea establecer el valor de la `m_nNumPreviewPages` o `m_strPageDesc` los miembros de la *pInfo* parámetro, hacerlo después de llamar a `DoPreparePrinting`. El `DoPreparePrinting` conjuntos de la función miembro `m_nNumPreviewPages` para el valor situado en la aplicación. El archivo INI y establece `m_strPageDesc` a su valor predeterminado.  
   
 ### <a name="example"></a>Ejemplo  
   Invalidar `OnPreparePrinting` y llamar a `DoPreparePrinting` desde la invalidación de forma que se muestre un cuadro de diálogo Imprimir y crear una controlador de dominio de la impresora para el marco de trabajo.  
@@ -671,14 +672,14 @@ virtual void OnPrint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDC`  
+ *pDC*  
  Apunta al contexto del dispositivo de impresora.  
   
- `pInfo`  
+ *pInfo*  
  Apunta a un `CPrintInfo` estructura que describe el trabajo de impresión actual.  
   
 ### <a name="remarks"></a>Comentarios  
- Para cada página que se pueda imprimir, el marco de trabajo llama a esta función inmediatamente después de llamar a la [OnPrepareDC](#onpreparedc) función miembro. La página que se pueda imprimir especificada por el `m_nCurPage` miembro de la [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que `pInfo` apunta a. La implementación predeterminada llama el [OnDraw](#ondraw) función miembro y pasa el contexto de dispositivo de impresora.  
+ Para cada página que se pueda imprimir, el marco de trabajo llama a esta función inmediatamente después de llamar a la [OnPrepareDC](#onpreparedc) función miembro. La página que se pueda imprimir especificada por el `m_nCurPage` miembro de la [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) estructura que *pInfo* apunta a. La implementación predeterminada llama el [OnDraw](#ondraw) función miembro y pasa el contexto de dispositivo de impresora.  
   
  Anular esta función para cualquiera de los siguientes motivos:  
   
@@ -690,7 +691,7 @@ virtual void OnPrint(
   
 -   Para implementar los encabezados o pies de página. Todavía puede usar `OnDraw` para realizar la representación restringiendo el área que puede imprimir en.  
   
- Tenga en cuenta que la **m_rectDraw** miembro de la `pInfo` parámetro describe el área imprimible de la página en unidades lógicas.  
+ Tenga en cuenta que la `m_rectDraw` miembro de la *pInfo* parámetro describe el área imprimible de la página en unidades lógicas.  
   
  No llame a `OnPrepareDC` en el reemplazo de `OnPrint`; el marco de trabajo llama `OnPrepareDC` automáticamente antes de llamar a `OnPrint`.  
   
@@ -712,34 +713,34 @@ virtual BOOL OnScroll(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nScrollCode`  
+ *nScrollCode*  
  Se desplaza en un código de barras de desplazamiento que indica al usuario la solicitud. Este parámetro se compone de dos partes: un byte de orden inferior, que determina el tipo de desplazamiento que se produzca horizontalmente, y un byte de orden superior, que determina el tipo de desplazamiento que se produzca verticalmente:  
   
-- **SB_BOTTOM** se desplaza hacia abajo.  
+- SB_BOTTOM se desplaza hacia abajo.  
   
-- **SB_LINEDOWN** se desplaza una línea hacia abajo.  
+- Una línea de SB_LINEDOWN se desplaza hacia abajo.  
   
-- **SB_LINEUP** desplaza una línea hacia arriba.  
+- Una línea de SB_LINEUP desplaza hacia arriba.  
   
-- **SB_PAGEDOWN** se desplaza una página hacia abajo.  
+- Una página de SB_PAGEDOWN se desplaza hacia abajo.  
   
-- **SB_PAGEUP** desplaza una página hacia arriba.  
+- Una página de SB_PAGEUP se desplaza hacia arriba.  
   
-- **SB_THUMBTRACK** arrastrar el cuadro de desplazamiento a la posición especificada. Se especifica la posición actual en `nPos`.  
+- Arrastrar SB_THUMBTRACK desplácese cuadro a la posición especificada. Se especifica la posición actual en *nPos*.  
   
-- **SB_TOP** se desplaza hasta la parte superior.  
+- Se desplaza hacia la SB_TOP al principio.  
   
- `nPos`  
- Contiene la posición actual del cuadro de desplazamiento si el código de la barra de desplazamiento es **SB_THUMBTRACK**; en caso contrario, no se utiliza. Según el intervalo de desplazamiento inicial, `nPos` puede ser negativo y debe convertirse a un `int` si es necesario.  
+ *nPos*  
+ Contiene la posición actual del cuadro de desplazamiento si el código de barras de desplazamiento se SB_THUMBTRACK; en caso contrario, no se utiliza. Según el intervalo de desplazamiento inicial, *nPos* puede ser negativo y debe convertirse a un **int** si es necesario.  
   
- `bDoScroll`  
- Determina si debe hacer realidad la acción de desplazamiento especificada. Si **es TRUE,** , a continuación, el desplazamiento debe llevar a cabo; si **FALSE**, a continuación, el desplazamiento no se debe realizar.  
+ *bDoScroll*  
+ Determina si debe hacer realidad la acción de desplazamiento especificada. Si es TRUE, el desplazamiento, a continuación, debe tener lugar; Si es FALSE, no debería ocurrir después se desplaza.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si `bDoScroll` es **TRUE** y realmente se ha desplazado la vista, a continuación, devolver es distinto de cero; en caso contrario 0. Si `bDoScroll` es **FALSE**, a continuación, devolver el valor que habría devuelto si `bDoScroll` estaban **TRUE**, aunque en realidad no hace el desplazamiento.  
+ Si *bDoScroll* es TRUE y realmente se ha desplazado la vista, a continuación, devolver es distinto de cero; en caso contrario 0. Si *bDoScroll* es FALSE, a continuación devuelve el valor que habría devuelto si *bDoScroll* estaban TRUE, aunque en realidad no hace el desplazamiento.  
   
 ### <a name="remarks"></a>Comentarios  
- En un caso con el marco de trabajo llama a esta función `bDoScroll` establecido en **TRUE** cuando la vista recibe un mensaje de la barra de desplazamiento. En este caso, debe desplazar realmente la vista. En el caso anterior, esta función se invoca con `bDoScroll` establecido en **FALSE** cuando un elemento OLE inicialmente se arrastra dentro de la región de desplazamiento automático de un destino de colocación antes de desplazamiento realiza realmente. En este caso, se debe realmente se desplaza la vista.  
+ En un caso con el marco de trabajo llama a esta función *bDoScroll* establecida en TRUE cuando la vista recibe un mensaje de la barra de desplazamiento. En este caso, debe desplazar realmente la vista. En el caso anterior, esta función se invoca con *bDoScroll* establecida en FALSE cuando inicialmente se arrastra un elemento OLE en la región de desplazamiento automático de un destino de colocación antes de desplazamiento realiza realmente. En este caso, se debe realmente se desplaza la vista.  
   
 ##  <a name="onscrollby"></a>  CView::OnScrollBy  
  Lo llama el marco cuando el usuario ve un área más allá de la vista actual del documento, arrastrando un elemento OLE en los bordes de la vista actual o mediante la manipulación de las barras de desplazamiento vertical u horizontal.  
@@ -751,11 +752,11 @@ virtual BOOL OnScrollBy(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `sizeScroll`  
+ *sizeScroll*  
  Número de píxeles de desplazamiento horizontal y verticalmente.  
   
- `bDoScroll`  
- Determina si desplazamiento de la vista. Si **es TRUE,** , a continuación, el desplazamiento se lleva a cabo; si **FALSE**, a continuación, el desplazamiento no se produce.  
+ *bDoScroll*  
+ Determina si desplazamiento de la vista. Si es TRUE, a continuación, desplazamiento tiene lugar; Si es FALSE, no tiene lugar después se desplaza.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la vista ha podido puede desplazar; en caso contrario es 0.  
@@ -765,7 +766,7 @@ virtual BOOL OnScrollBy(
   
  La implementación predeterminada de este método no cambia la vista, pero si no se llama, la vista no se desplaza en un `CScrollView`-clase derivada.  
   
- Si el documento ancho o alto supera 32767 píxeles, desplazarse más allá de 32767 se producirá un error porque `OnScrollBy` se llama con un válido `sizeScroll` argumento.  
+ Si el documento ancho o alto supera 32767 píxeles, desplazarse más allá de 32767 se producirá un error porque `OnScrollBy` se llama con un válido *sizeScroll* argumento.  
   
 ##  <a name="onupdate"></a>  CView::OnUpdate  
  Es llamado por el marco de trabajo cuando se ha modificado el documento de la vista; Esta función se invoca [UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) y permite que la vista actualice su presentación para reflejar las modificaciones.  
@@ -778,23 +779,23 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pSender`  
- Apunta a la vista que se modificó el documento, o **NULL** si todas las vistas que se van a actualizarse.  
+ *pSender*  
+ Apunta a la vista que se modificó el documento, o NULL si todas las vistas que se van a actualizarse.  
   
- `lHint`  
+ *lHint*  
  Contiene información acerca de las modificaciones.  
   
- `pHint`  
+ *pHint*  
  Apunta a un objeto que almacena información sobre las modificaciones.  
   
 ### <a name="remarks"></a>Comentarios  
- También se denomina la implementación predeterminada de [OnInitialUpdate](#oninitialupdate). La implementación predeterminada no invalida toda el área cliente, lo marca para pintar cuando la próxima `WM_PAINT` recibirlo. Reemplace esta función si desea actualizar sólo aquellas regiones que se asignan a las partes modificadas del documento. Para ello debe pasar información acerca de las modificaciones con los parámetros de la sugerencia.  
+ También se denomina la implementación predeterminada de [OnInitialUpdate](#oninitialupdate). La implementación predeterminada no invalida toda el área cliente, lo marca para dibujar cuando se recibe el siguiente mensaje WM_PAINT. Reemplace esta función si desea actualizar sólo aquellas regiones que se asignan a las partes modificadas del documento. Para ello debe pasar información acerca de las modificaciones con los parámetros de la sugerencia.  
   
- Para usar `lHint`, definir valores de sugerencia especial, normalmente una máscara de bits o un tipo enumerado y tener el documento pase uno de estos valores. Usar `pHint`, derive una clase de sugerencia de [CObject](../../mfc/reference/cobject-class.md) y tener el documento pasar un puntero a un objeto de sugerencia; al reemplazar `OnUpdate`, usar el [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof) función miembro determinar el tipo de tiempo de ejecución del objeto de sugerencia.  
+ Usar *lHint*, definir valores de sugerencia especial, normalmente una máscara de bits o un tipo enumerado y tener el documento pase uno de estos valores. Usar *pHint*, derive una clase de sugerencia de [CObject](../../mfc/reference/cobject-class.md) y tener el documento pasar un puntero a un objeto de sugerencia; al reemplazar `OnUpdate`, use la [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof) función de miembro para determinar el tipo de tiempo de ejecución del objeto de sugerencia.  
   
  Normalmente no debería realizar cualquier dibujo directamente desde `OnUpdate`. En su lugar, determinar el rectángulo que describe, en coordenadas de dispositivo, el área que requiere la actualización; pasar este rectángulo a [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect). Esto hace que el dibujo para que tenga lugar la próxima vez que un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) recibirlo.  
   
- Si `lHint` es 0 y `pHint` es **NULL**, el documento ha enviado una notificación de actualización genérico. Si recibe una notificación de actualización genérico a una vista, o si no puede descodificar las sugerencias, debe invalidar su área de clientes en su totalidad.  
+ Si *lHint* es 0 y *pHint* es NULL, el documento ha enviado una notificación de actualización genérico. Si recibe una notificación de actualización genérico a una vista, o si no puede descodificar las sugerencias, debe invalidar su área de clientes en su totalidad.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo MFC MDIDOCVW](../../visual-cpp-samples.md)   

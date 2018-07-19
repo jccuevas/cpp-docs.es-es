@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360118"
 ---
 # <a name="active-technology-and-dlls"></a>Tecnología activa y archivos DLL
 Tecnología activa permite a los servidores de objetos implementarse completamente dentro de un archivo DLL. Este tipo de servidor se llama a un servidor en proceso. MFC no compatibilidad total con servidores en proceso para todas las características de edición visual, principalmente porque la tecnología activa no proporciona una forma de un servidor para enlazar al bucle de mensajes principal del contenedor. MFC requiere acceso al bucle de mensajes de la aplicación contenedora para controlar el procesamiento de tiempo de inactividad y teclas de aceleración.  

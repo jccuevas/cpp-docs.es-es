@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376473"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Omitir rutas de acceso de inclusión estándar)
 Impide que el compilador busca los archivos de inclusión en los directorios especificados en las variables de entorno PATH e INCLUDE.  

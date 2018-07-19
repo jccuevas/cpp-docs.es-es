@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94fc1e0ccad8980e0ed5a1cc0f8c0262502e1398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ea2a1047864c19be3f5bbd6c303b4b00fb132dc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078774"
 ---
 # <a name="crebar-class"></a>CReBar (clase)
 Barra de control que proporciona información de diseño, persistencia y estado para controles rebar.  
@@ -55,10 +56,10 @@ class CReBar : public CControlBar
 ## <a name="rebar-control"></a>Control rebar  
  Un objeto rebar se comporta de forma similar a un objeto de barra de herramientas. Un rebar utiliza el mecanismo de clic y arrastrar para cambiar el tamaño de sus bandas. Un control rebar puede contener una o más bandas, con cada banda puede tener cualquier combinación de una barra de controles, un mapa de bits, una etiqueta de texto y una ventana secundaria. Sin embargo, las bandas no pueden contener más de una ventana secundaria.  
   
- **CReBar** utiliza la [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) clase para proporcionar su implementación. Se puede obtener acceso al control rebar a través de [GetReBarCtrl](#getrebarctrl) para aprovechar las opciones de personalización del control. Para obtener más información acerca de los controles rebar, consulte `CReBarCtrl`. Para obtener más información sobre el uso de controles rebar, consulte [usar CReBarCtrl](../../mfc/using-crebarctrl.md).  
+ `CReBar` usa el [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) clase para proporcionar su implementación. Se puede obtener acceso al control rebar a través de [GetReBarCtrl](#getrebarctrl) para aprovechar las opciones de personalización del control. Para obtener más información acerca de los controles rebar, consulte `CReBarCtrl`. Para obtener más información sobre el uso de controles rebar, consulte [usar CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
 > [!CAUTION]
->  Rebar y objetos de control rebar no admiten el control MFC de la barra de acoplamiento. Si **CRebar::EnableDocking** se llama, la aplicación producirá una aserción.  
+>  Rebar y objetos de control rebar no admiten el control MFC de la barra de acoplamiento. Si `CRebar::EnableDocking` se llama, la aplicación producirá una aserción.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -94,16 +95,16 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pBar`  
+ *pBar*  
  Un puntero a un `CWnd` objeto que es la ventana secundaria que va a insertar en el control rebar. El objeto que se hace referencia debe tener un **WS_CHILD**.  
   
- `lpszText`  
- Un puntero a una cadena que contiene el texto que aparece en el control rebar. **NULL** de forma predeterminada. El texto incluido en `lpszText` no forma parte de la ventana secundaria; está en el control rebar propio.  
+ *lpszText*  
+ Un puntero a una cadena que contiene el texto que aparece en el control rebar. **NULL** de forma predeterminada. El texto contenido en *lpszText* no forma parte de la ventana secundaria; está en el control rebar propio.  
   
- `pbmp`  
+ *pbmp*  
  Un puntero a un `CBitmap` objeto se muestre en el fondo del control rebar. **NULL** de forma predeterminada.  
   
- `dwStyle`  
+ *dwStyle*  
  Un `DWORD` que contiene el estilo que se va a aplicar al control rebar. Consulte la **fStyle** descripción de la estructura de Win32 de la función [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) para obtener una lista completa de los estilos de banda.  
   
  *clrFore*  
@@ -130,16 +131,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pParentWnd`  
+ *pParentWnd*  
  Puntero a la `CWnd` objeto cuya ventana de Windows es el elemento primario de la barra de estado. Normalmente, la ventana de marco.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  El estilo del control rebar. De forma predeterminada, **RBS_BANDBORDERS**, que muestra restringir líneas para separar las bandas adyacentes dentro del control rebar. Vea [estilos de Control Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) en el SDK de Windows para obtener una lista de estilos.  
   
- `dwStyle`  
+ *dwStyle*  
  Los estilos de ventana rebar.  
   
- `nID`  
+ *nID*  
  Identificador de ventana secundaria. del rebar  
   
 ### <a name="return-value"></a>Valor devuelto  

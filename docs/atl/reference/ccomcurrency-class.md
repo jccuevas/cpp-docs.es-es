@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366252"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency (clase)
 `CComCurrency` tiene métodos y operadores para crear y administrar un objeto CURRENCY.  

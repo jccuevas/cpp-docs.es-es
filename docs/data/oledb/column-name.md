@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097528"
 ---
 # <a name="columnname"></a>COLUMN_NAME
 Representa un enlace en el conjunto de filas a la columna específica en el conjunto de filas. Similar a [COLUMN_ENTRY](../../data/oledb/column-entry.md), salvo que esta macro toma el nombre de columna en lugar del número de columna.  

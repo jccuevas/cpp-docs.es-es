@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389639"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Recomendaciones para elegir entre funciones y macros
 La mayoría de las rutinas de la biblioteca en tiempo de ejecución de Microsoft son funciones compiladas o ensambladas, aunque algunas rutinas se implementan como macros. Cuando un archivo de encabezado declara una función y una versión de macro de una rutina, la definición de macro tiene prioridad, porque siempre aparece después de la declaración de función. Cuando se invoca una rutina que se implementa como una función y como una macro, puede forzar al compilador a que utilice la versión de función de dos maneras:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390696"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Solucionar problemas de aplicaciones aisladas y ensamblados simultáneos de C/C++
 La acción de cargar una aplicación de C/C++ puede sufrir un error si no se pueden encontrar las bibliotecas dependientes. En este artículo se describen algunas de las razones comunes por las que una aplicación de C/C++ no se carga y se sugieren pasos para resolver los problemas.  

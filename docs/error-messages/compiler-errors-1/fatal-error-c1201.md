@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199293"
 ---
 # <a name="fatal-error-c1201"></a>Error irrecuperable C1201
 no se puede continuar después del error de sintaxis en la definición de plantilla de clase  

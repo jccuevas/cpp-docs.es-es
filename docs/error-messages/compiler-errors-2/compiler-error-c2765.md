@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234589"
 ---
 # <a name="compiler-error-c2765"></a>C2765 de Error del compilador
 'función': una especialización explícita de una plantilla de función no puede tener ningún argumento predeterminado  

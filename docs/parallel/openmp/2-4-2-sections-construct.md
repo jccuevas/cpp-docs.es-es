@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688289"
 ---
 # <a name="242-sections-construct"></a>2.4.2 sections (Construcción)
 El **secciones** directiva identifica una construcción noniterative de uso compartido que especifica un conjunto de construcciones que se va a dividir entre los subprocesos en un equipo. Cada sección se ejecuta una vez con un subproceso en el equipo. La sintaxis de la **secciones** directiva es como sigue:  

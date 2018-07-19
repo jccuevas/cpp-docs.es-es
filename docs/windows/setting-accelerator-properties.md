@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888851"
 ---
 # <a name="setting-accelerator-properties"></a>Establecer las propiedades de los aceleradores
 Puede establecer propiedades de acelerador el [ventana propiedades](/visualstudio/ide/reference/properties-window) en cualquier momento. También puede utilizar el Editor de aceleradores para modificar las propiedades de acelerador de la tabla de aceleradores. Los cambios realizados mediante la ventana Propiedades o el Editor de aceleradores tienen el mismo resultado: las modificaciones se reflejan inmediatamente en la tabla de aceleradores.  

@@ -140,11 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91dbbe3b3207eba50fd9206719de2fd4afd5cc5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44caf81fd73567e9c206bdfe62869f5fc145fd33
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039113"
 ---
 # <a name="cmfcribboncategory-class"></a>Clase de CMFCRibbonCategory
 El `CMFCRibbonCategory` clase implementa una pestaña de cinta que contiene un grupo de [paneles de la cinta de opciones](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -274,7 +275,7 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pElem`  
+ [in] *pElem*  
  Puntero a un elemento de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -291,20 +292,20 @@ CMFCRibbonPanel* AddPanel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszPanelName`  
+ [in] *lpszPanelName*  
  Puntero al nombre del nuevo panel de cinta de opciones.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Indique el icono predeterminado para el nuevo panel de cinta de opciones.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  Puntero a la información de clase en tiempo de ejecución para un panel de cinta de opciones personalizada.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero al nuevo panel de la cinta si el método se realizó correctamente; en caso contrario `NULL` si no se creó el panel.  
   
 ### <a name="remarks"></a>Comentarios  
- Si desea crear un panel de cinta de opciones personalizada, debe especificar su información de clase en tiempo de ejecución en `pRTI`. La clase de panel de cinta de opciones personalizada debe derivarse de la `CMFCRibbonPanel` clase.  
+ Si desea crear un panel de cinta de opciones personalizada, debe especificar su información de clase en tiempo de ejecución en *pRTI*. La clase de panel de cinta de opciones personalizada debe derivarse de la `CMFCRibbonPanel` clase.  
   
  El icono predeterminado para el panel de la cinta se muestra cuando no hay espacio suficiente para mostrar los elementos de la cinta de opciones.  
   
@@ -329,22 +330,22 @@ CMFCRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pParenrRibbonBar`  
+ [in] *pParenrRibbonBar*  
  Puntero a la barra de cinta de opciones del elemento primario de la categoría de cinta de opciones.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Nombre de la categoría de cinta de opciones.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  Id. de recurso de la lista de imágenes para las imágenes pequeñas que se usan los elementos de la cinta de opciones de la categoría de cinta de opciones.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  Id. de recurso de la lista de imágenes para las imágenes grandes que se usan los elementos de la cinta de opciones de la categoría de cinta de opciones.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Tamaño de imágenes pequeñas para los elementos de la cinta de opciones en la categoría de cinta predeterminado.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  Tamaño de imágenes de gran tamaño para los elementos de la cinta de opciones en la categoría de cinta predeterminado.  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
@@ -355,7 +356,7 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `src`  
+ [in] *src*  
  Objeto `CMFCRibbonCategory` de origen.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -370,10 +371,10 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `dwData`  
+ [in] *dwData*  
  Los datos asociados con un elemento de la cinta de opciones.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` para incluir los elementos de la cinta de opciones de acceso rápido en la búsqueda; `FALSE` para excluir elementos de la cinta de opciones de acceso rápido en la búsqueda.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -391,10 +392,10 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Identificador de comando asociado a un elemento de la cinta de opciones.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` para incluir los elementos de la cinta de opciones de acceso rápido en la búsqueda; `FALSE` para excluir elementos de la cinta de opciones de acceso rápido en la búsqueda.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -410,7 +411,7 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pElement`  
+ [in] *pElement*  
  Puntero a un elemento de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -462,7 +463,7 @@ void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in, out] `arElements`  
+ [entrada, salida] *arElements*  
  Referencia a un [CArray](../../mfc/reference/carray-class.md) de elementos de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -478,10 +479,10 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Identificador de comando asociado a un elemento de la cinta de opciones.  
   
- [in, out] `arElements`  
+ [entrada, salida] *arElements*  
  Referencia a un [CArray](../../mfc/reference/carray-class.md) de elementos de la cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -531,7 +532,7 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bIsLargeImage`  
+ [in] *bIsLargeImage*  
  `TRUE` el número de imágenes en la lista de imágenes de gran tamaño; `FALSE` para el número de imágenes en la lista de imágenes pequeñas.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -547,7 +548,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bIsLargeImage`  
+ [in] *bIsLargeImage*  
  `TRUE` el tamaño de imágenes de gran tamaño; `FALSE` para el tamaño de imágenes pequeñas.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -566,10 +567,10 @@ void GetItemIDsList(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [out] `lstItems`  
+ [out] *lstItems*  
  La lista de identificadores de comando para los elementos de la cinta de opciones en la categoría de cinta de opciones.  
   
- [in] `bHiddenOnly`  
+ [in] *bHiddenOnly*  
  `TRUE` Para excluir elementos de cinta de opciones que se muestran en los paneles de cinta de opciones en la categoría de cinta de opciones; `FALSE` para incluir todos los elementos de la cinta de opciones en la categoría de cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -604,7 +605,7 @@ int GetMaxHeight(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo para los paneles de cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -633,14 +634,14 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  Índice de base cero de un panel de cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero al panel de cinta de opciones que se encuentra en el índice especificado.  
   
 ### <a name="remarks"></a>Comentarios  
- Se produce una excepción si `nIndex` está fuera del intervalo.  
+ Se produce una excepción si *nIndex* está fuera del intervalo.  
   
 ##  <a name="getpanelcount"></a>  CMFCRibbonCategory::GetPanelCount  
  Devuelve el número de paneles de cinta en la categoría de cinta de opciones.  
@@ -660,7 +661,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
+ [in] *punto*  
  Las coordenadas x e y del puntero, con respecto a la esquina superior izquierda de la ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -677,7 +678,7 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pPanel`  
+ [in] *pPanel*  
  Puntero a un panel de cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -806,7 +807,7 @@ void GetVisibleElements(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `arElements`  
+ *arElements*  
  Matriz de todos los elementos visibles.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -821,10 +822,10 @@ CMFCRibbonPanel* HighlightPanel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pHLPanel`  
+ [in] *pHLPanel*  
  Puntero al panel de cinta de opciones para resaltar.  
   
- [in] `point`  
+ [in] *punto*  
  Las coordenadas x e y del puntero, con respecto a la esquina superior izquierda de la ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -843,10 +844,10 @@ CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
+ [in] *punto*  
  Las coordenadas x e y del puntero del mouse, en relación con la esquina superior izquierda de la ventana.  
   
- [in] `bCheckPanelCaption`  
+ [in] *bCheckPanelCaption*  
  `TRUE` Para probar el título del panel de cinta de opciones; `FALSE` para excluir el título del panel de cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -863,7 +864,7 @@ int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
+ [in] *punto*  
  Las coordenadas x e y del puntero del mouse, en relación con la esquina superior izquierda de la ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -880,11 +881,11 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
+ [in] *punto*  
  El punto de prueba.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Si `point` está dentro del rectángulo delimitador del ya sea de la izquierda o el botón de desplazamiento a la derecha de la categoría de cinta de opciones, devuelve un puntero a ese botón o en caso contrario, devuelve `NULL`.  
+ Si *punto* está dentro del rectángulo delimitador del ya sea de la izquierda o el botón de desplazamiento a la derecha de la categoría de cinta de opciones, devuelve un puntero a ese botón o en caso contrario, devuelve `NULL`.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -938,16 +939,16 @@ virtual BOOL NotifyControlCommand(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bAccelerator`  
+ [in] *bAccelerator*  
  `TRUE` Si este comando se originó en un acelerador o `FALSE` en caso contrario.  
   
- [in] `nNotifyCode`  
+ [in] *nNotifyCode*  
  El código de notificación.  
   
- [in] `wParam`  
+ [in] *wParam*  
  El campo WPARAM del mensaje.  
   
- [in] `lParam`  
+ [in] *lParam*  
  El campo LPARAM del mensaje.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -972,7 +973,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo para la categoría de cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -991,22 +992,22 @@ virtual BOOL OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo para la imagen.  
   
- [in] `rect`  
+ [in] *rect*  
  Rectángulo de presentación de la imagen.  
   
- [in] `pElement`  
+ [in] *pElement*  
  Puntero al elemento de la cinta de opciones que contiene la imagen.  
   
- [in] `bIsLargeImage`  
+ [in] *bIsLargeImage*  
  `TRUE` Si la imagen es el gran tamaño; `FALSE` si la imagen es el tamaño pequeño.  
   
- [in] `nImageIndex`  
+ [in] *nImageIndex*  
  Índice de base cero de la imagen en la matriz de imagen que se encuentra en la categoría de cinta de opciones.  
   
- [in] `bCenter`  
+ [in] *bCenter*  
  `TRUE` Para centrar la imagen en el rectángulo de presentación; `FALSE` para dibujar la imagen en la esquina superior izquierda del rectángulo de presentación.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1024,10 +1025,10 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Este parámetro no se utiliza.  
   
- [in] `pMenuBar`  
+ [in] *pMenuBar*  
  Este parámetro no se utiliza.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1041,7 +1042,7 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nChar`  
+ *nChar*  
  El código de tecla virtual para la clave que un usuario presiona.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1054,7 +1055,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
+ [in] *punto*  
  Las coordenadas x e y del puntero del mouse, en relación con la esquina superior izquierda de la ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1070,7 +1071,7 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
+ [in] *punto*  
  Las coordenadas x e y del puntero, con respecto a la esquina superior izquierda de la ventana.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1083,7 +1084,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `point`  
+ [in] *punto*  
  Las coordenadas x e y del puntero, con respecto a la esquina superior izquierda de la ventana.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1096,7 +1097,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` Si el diseño es de derecha a izquierda; `FALSE` si el diseño es de izquierda a derecha.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1112,10 +1113,10 @@ virtual BOOL OnScrollHorz(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bScrollLeft`  
+ [in] *bScrollLeft*  
  `TRUE` para desplazarse a la izquierda; `FALSE` para desplazarse a la derecha.  
   
- [in] `nScrollOffset`  
+ [in] *nScrollOffset*  
  La distancia de desplazamiento, en píxeles.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1134,13 +1135,13 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pCmdUI`  
+ [in] *pCmdUI*  
  Puntero a la `CMFCRibbonCmdUI` objeto que especifica que son elementos de la interfaz de usuario esté habilitado y que se va a deshabilitar.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Puntero a la ventana que controla la habilitación o deshabilitación de los elementos de interfaz de usuario.  
   
- [in] `bDisableIfNoHndler`  
+ [in] *bDisableIfNoHndler*  
  `TRUE` Para deshabilitar el elemento de interfaz de usuario si no hay ningún controlador se define en un mapa de mensajes; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1153,7 +1154,7 @@ virtual void RecalcLayout(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo para la categoría de cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1168,10 +1169,10 @@ BOOL RemovePanel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nIndex`  
+ [in] *nIndex*  
  El número de índice del panel que se va a quitar. Obtenido mediante una llamada a la [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) método.  
   
- [in] `bDelete`  
+ [in] *bDelete*  
  `TRUE` Para eliminar el objeto de panel de la memoria; `FALSE` para eliminar el objeto de panel sin eliminarla.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -1185,7 +1186,7 @@ virtual void ReposPanels(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo para los paneles de cinta de opciones que se encuentran en la categoría de cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1198,7 +1199,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `arCollapseOrder`  
+ [in] *arCollapseOrder*  
  Especifica el orden de contraer. La matriz contiene los índices de base cero de paneles de cinta.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1221,7 +1222,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `dwData`  
+ [in] *dwData*  
  Los datos definidos por el usuario.  
   
 ##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
@@ -1232,7 +1233,7 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  El texto keytip.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -1246,11 +1247,11 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `lpszName`  
+ [in] *lpszName*  
  El nombre y la keytip de la categoría de cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  
- Para establecer la keytip para la categoría de cinta de opciones, anexar una secuencia de escape de nueva línea seguida por los caracteres de keytip a `lpszName`.  
+ Para establecer la keytip para la categoría de cinta de opciones, anexar una secuencia de escape de nueva línea seguida por los caracteres de keytip a *lpszName*.  
   
 ##  <a name="settabcolor"></a>  CMFCRibbonCategory:: Settabcolor  
  Establece el color de la categoría de cinta de opciones.  
@@ -1260,7 +1261,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `color`  
+ [in] *color*  
  Especifica el nuevo color de la categoría de cinta de opciones.  
   
 ### <a name="remarks"></a>Comentarios  

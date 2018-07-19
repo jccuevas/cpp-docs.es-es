@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109578"
 ---
 # <a name="ole-db-templates"></a>plantillas OLE DB
 Las plantillas OLE DB facilitan el acceso a datos de OLE DB. Visual C++ proporciona clases de plantilla que implementan muchas de las interfaces OLE DB más utilizadas. Puede usar las plantillas de consumidor de Visual C++ para escribir una aplicación de cliente (consumidor) OLE DB y las plantillas de proveedor para escribir una aplicación de servidor (proveedor).  

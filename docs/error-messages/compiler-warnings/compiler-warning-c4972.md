@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270956"
 ---
 # <a name="compiler-warning-c4972"></a>Advertencia del compilador C4972
 No se puede comprobar la modificación o el tratamiento directo del resultado de una operación de conversión unbox como valor L  

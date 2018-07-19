@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326051"
 ---
 # <a name="project-build-error-prj0047"></a>Error PRJ0047 al compilar el proyecto
 No se pudo reanudar el proceso de suspensión.  Error en la compilación.  

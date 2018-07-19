@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 431e743396cfc22d49c13a2a9e2f50c88c5ee036
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd166cac7d6d2cddbc12b3cbaa14b28d00c1357
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037274"
 ---
 # <a name="cmonikerfile-class"></a>Clase de CMonikerFile
 Representa un flujo de datos ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) con el nombre por un [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
@@ -112,7 +113,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pError`  
+ *pError*  
  Un puntero a una excepción de archivo. Si se produce un error, se establecerá la causa.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -129,7 +130,7 @@ BOOL Detach(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pError`  
+ *pError*  
  Un puntero a una excepción de archivo. Si se produce un error, se establecerá la causa.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -163,22 +164,22 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpszURL`  
+ *lpszURL*  
  Una dirección URL o el nombre de archivo del archivo que se puede abrir.  
   
- `pError`  
+ *pError*  
  Un puntero a una excepción de archivo. Si se produce un error, se establecerá la causa.  
   
- `pMoniker`  
+ *pMoniker*  
  Un puntero a la interfaz de moniker `IMoniker` que se usará para obtener un flujo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- El `lpszURL` parámetro no se puede usar en un equipo Macintosh. Solo el `pMoniker` forma de **abiertos** se puede usar en un equipo Macintosh.  
+ El *lpszURL* parámetro no se puede usar en un equipo Macintosh. Solo el *pMoniker* forma de **abiertos** se puede usar en un equipo Macintosh.  
   
- Puede usar una dirección URL o un nombre de archivo para el `lpszURL` parámetro. Por ejemplo:  
+ Puede usar una dirección URL o un nombre de archivo para el *lpszURL* parámetro. Por ejemplo:  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879508"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Invalidaciones explícitas (extensiones componentes de C++)
 Este tema describe cómo reemplazar explícitamente un miembro de una clase base o interfaz. Un reemplazo (explícito) con nombre solo debe usarse para reemplazar un método con un método derivado tiene un nombre distinto.  

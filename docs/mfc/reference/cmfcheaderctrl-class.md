@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a1c10cd6242f2845d64965d914093455da21c8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6af0859811ad4064c12f6e4ef8d470437fe3ded9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037666"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 La `CMFCHeaderCtrl` clase admite la ordenación de varias columnas en un control de encabezado.  
@@ -136,7 +137,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `bEnable`  
+ [in] *bHabilitar el*  
  `TRUE` Para habilitar el modo de ordenación de varias columnas; `FALSE` para deshabilitar el modo de ordenación de varias columnas y quite todas las columnas de la lista de columnas ordenadas. El valor predeterminado es `TRUE`.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -150,7 +151,7 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iColumn`  
+ [in] *iColumn*  
  Índice de base cero de una columna.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -226,19 +227,19 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `iItem`  
+ [in] *iItem*  
  Índice de base cero del elemento que se va a dibujar.  
   
- [in] `rect`  
+ [in] *rect*  
  El rectángulo delimitador del elemento que se va a dibujar.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  `TRUE` para dibujar el elemento en estado presionado; en caso contrario, `FALSE`.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  `TRUE` para dibujar el elemento de estado de resaltado; en caso contrario, `FALSE`.  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
@@ -251,10 +252,10 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
- [in] `rectArrow`  
+ [in] *rectArrow*  
  El rectángulo delimitador de la flecha de ordenación.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
@@ -265,7 +266,7 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDC`  
+ [in] *pDC*  
  Puntero a un contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -278,7 +279,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iColumn`  
+ [in] *iColumn*  
  Índice de base cero de la columna que se va a quitar.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
@@ -292,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iColumn`  
+ [in] *iColumn*  
  Índice de base cero de una columna de control de encabezado. Si este parámetro es menor que cero, este método quita todas las columnas de la lista de columnas de ordenación.  
   
- [in] `bAscending`  
- Especifica el criterio de ordenación de la columna que el `iColumn` especifica el parámetro. `TRUE` Para establecer el orden ascendente; `FALSE` para establecer el orden descendente. El valor predeterminado es `TRUE`.  
+ [in] *bAscending*  
+ Especifica el criterio de ordenación de la columna que el *iColumn* parámetro especifica. `TRUE` Para establecer el orden ascendente; `FALSE` para establecer el orden descendente. El valor predeterminado es `TRUE`.  
   
- [in] `bAdd`  
- `TRUE` Para establecer el criterio de ordenación de la columna que el `iColumn` especifica el parámetro.  
+ [in] *bAgregar*  
+ `TRUE` Para establecer el criterio de ordenación de la columna que el *iColumn* parámetro especifica.  
   
  Si el control de encabezado actual está en *ordenación de varias columnas* modo, este método agrega la columna especificada a la lista de columnas de orden. Use [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) para establecer el modo de ordenación de varias columnas.  
   

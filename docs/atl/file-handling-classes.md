@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353955"
 ---
 # <a name="file-handling-classes"></a>Archivo de control de clases
 Estas clases proporcionan métodos para procesar archivos, los archivos temporales y los archivos asignados a memoria.  

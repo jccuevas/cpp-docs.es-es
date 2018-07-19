@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097005"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Crear un consumidor OLE DB mediante un asistente
 Este procedimiento muestra cómo puede usar el Asistente para proyectos ATL y el Asistente para consumidores OLE DB ATL para generar un consumidor de plantillas OLE DB y, a continuación, modifique el código principal de la aplicación de consola para recuperar y mostrar los datos de una tabla de base de datos.  

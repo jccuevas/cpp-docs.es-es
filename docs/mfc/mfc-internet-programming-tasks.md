@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347251"
 ---
 # <a name="mfc-internet-programming-tasks"></a>Tareas de programación para Internet de MFC
 Esta sección contiene instrucciones detalladas para agregar compatibilidad con Internet a las aplicaciones. Temas incluyen cómo utilizar las clases MFC para habilitar Internet para las aplicaciones existentes y cómo agregar compatibilidad con documentos activos a un componente COM existente. ¿Desea crear un documento con cotizaciones actualizados al minuto, puntuaciones de fútbol de Pittsburgh, y la temperatura más reciente de Microsoft Antártida proporciona una serie de tecnologías que le permitirán hacerlo a través de Internet.  

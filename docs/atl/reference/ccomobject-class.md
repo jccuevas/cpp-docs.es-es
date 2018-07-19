@@ -24,9 +24,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: af84d64d326ed7746b76db39ef26181ab96ca88d
 ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361491"
 ---
 # <a name="ccomobject-class"></a>CComObject (clase)
 Esta clase implementa **IUnknown** para un objeto no agregado.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169626"
 ---
 # <a name="compiler-error-c2092"></a>Error de C2092 de Error de compilador
 tipo de elemento de matriz 'nombre de la matriz' no puede ser una función  

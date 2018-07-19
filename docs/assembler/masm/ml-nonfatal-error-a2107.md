@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053966"
 ---
 # <a name="ml-nonfatal-error-a2107"></a>Error recuperable A2107 de ML
 **no puede tener salto lejano implícita o llamada a un nivel próximo etiqueta**  

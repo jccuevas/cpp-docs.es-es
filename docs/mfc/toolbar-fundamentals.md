@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5240cf50b35b2e1a300071ccb6cc15a065ac364e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951642"
 ---
 # <a name="toolbar-fundamentals"></a>Fundamentos de las barras de herramientas
 En este artículo se describe la implementación de MFC fundamental que le permite agregar una barra de herramientas de forma predeterminada a la aplicación seleccionando una opción en el Asistente para aplicaciones. Los temas tratados son:  
@@ -55,11 +56,11 @@ En este artículo se describe la implementación de MFC fundamental que le permi
 -   Administra la barra de herramientas, incluida su capacidad para acoplar o flotante.  
   
 ##  <a name="_core_the_toolbar_in_code"></a> La barra de herramientas en el código  
- La barra de herramientas es un [CToolBar](../mfc/reference/ctoolbar-class.md) objeto declarado como un miembro de datos de la aplicación **CMainFrame** clase. En otras palabras, el objeto de barra de herramientas está incrustado en el objeto de ventana de marco principal. Esto significa que MFC crea la barra de herramientas cuando se crea la ventana de marco y se destruye la barra de herramientas cuando destruye la ventana de marco. La siguiente declaración de clase parcial, para una aplicación de múltiples documentos (MDI) de la interfaz, muestra a los miembros de datos de una barra de herramientas incrustada y una barra de estado incrustada. También muestra la invalidación de la `OnCreate` función miembro.  
+ La barra de herramientas es un [CToolBar](../mfc/reference/ctoolbar-class.md) objeto declarado como un miembro de datos de la aplicación `CMainFrame` clase. En otras palabras, el objeto de barra de herramientas está incrustado en el objeto de ventana de marco principal. Esto significa que MFC crea la barra de herramientas cuando se crea la ventana de marco y se destruye la barra de herramientas cuando destruye la ventana de marco. La siguiente declaración de clase parcial, para una aplicación de múltiples documentos (MDI) de la interfaz, muestra a los miembros de datos de una barra de herramientas incrustada y una barra de estado incrustada. También muestra la invalidación de la `OnCreate` función miembro.  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- Creación de la barra de herramientas se produce en **CMainFrame:: OnCreate**. Llamadas MFC [OnCreate](../mfc/reference/cwnd-class.md#oncreate) después de crear la ventana para el marco, pero antes de que sea visible. El valor predeterminado `OnCreate` que genera el Asistente para aplicaciones realiza las siguientes tareas de la barra de herramientas:  
+ Creación de la barra de herramientas se produce en `CMainFrame::OnCreate`. Llamadas MFC [OnCreate](../mfc/reference/cwnd-class.md#oncreate) después de crear la ventana para el marco, pero antes de que sea visible. El valor predeterminado `OnCreate` que genera el Asistente para aplicaciones realiza las siguientes tareas de la barra de herramientas:  
   
 1.  Llamadas a la `CToolBar` del objeto [crear](../mfc/reference/ctoolbar-class.md#create) función de miembro para crear subyacente [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objeto.  
   
@@ -68,7 +69,7 @@ En este artículo se describe la implementación de MFC fundamental que le permi
 3.  Llama a las funciones para habilitar el acoplamiento, flotante e información sobre herramientas. Para obtener más información acerca de estas llamadas, vea el artículo [acoplar y desacoplar barras de herramientas](../mfc/docking-and-floating-toolbars.md).  
   
 > [!NOTE]
->  El ejemplo General de MFC [DOCKTOOL](../visual-cpp-samples.md) incluye ilustraciones de barras de herramientas MFC antiguos y nuevos. Las barras de herramientas que usan **COldToolbar** , necesitan llamadas en el paso 2 para `LoadBitmap` (en lugar de `LoadToolBar`) y a `SetButtons`. Las barras de herramientas nuevas, necesitan llamadas a `LoadToolBar`.  
+>  El ejemplo General de MFC [DOCKTOOL](../visual-cpp-samples.md) incluye ilustraciones de barras de herramientas MFC antiguos y nuevos. Las barras de herramientas que usan `COldToolbar` , necesitan llamadas en el paso 2 para `LoadBitmap` (en lugar de `LoadToolBar`) y a `SetButtons`. Las barras de herramientas nuevas, necesitan llamadas a `LoadToolBar`.  
   
  El acoplamiento, flotante y llamadas de sugerencias de herramienta son opcionales. Puede quitar esas líneas de `OnCreate` si lo prefiere. El resultado es una barra de herramientas que permanece fijo, no se ha podido float o volver a acoplarse y no se puede mostrar información sobre herramientas.  
   

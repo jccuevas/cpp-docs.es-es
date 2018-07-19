@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1d156d9453cd6a74a3543295d9d90d761e77f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040752"
 ---
 # <a name="cmemorystate-structure"></a>Estructura de CMemoryState
 Proporciona una manera cómoda para detectar pérdidas de memoria en el programa.  
@@ -65,7 +66,7 @@ struct CMemoryState
   
  Al igual que con otros diagnósticos, el `CMemoryState` diagnósticos solo están disponibles en versiones de depuración del programa. Debe tener una versión de depuración del **_DEBUG** constante definida.  
   
- Si sospecha que el programa tiene una fuga de memoria, puede usar el `Checkpoint`, **diferencia**, y `DumpStatistics` funciones para detectar la diferencia entre el estado de memoria (objetos asignados) en dos puntos distintos del programa ejecución. Esta información puede ser útil para determinar si una función es limpiar todos los objetos que asigna.  
+ Si sospecha que el programa tiene una fuga de memoria, puede usar el `Checkpoint`, `Difference`, y `DumpStatistics` funciones para detectar la diferencia entre el estado de memoria (objetos asignados) en dos distintos puntos de ejecución del programa. Esta información puede ser útil para determinar si una función es limpiar todos los objetos que asigna.  
   
  Si simplemente saber dónde se produce el desequilibrio en la asignación y desasignación no proporciona suficiente información, puede usar el `DumpAllObjectsSince` función para volcar todos los objetos asignados desde la llamada anterior a `Checkpoint`. Este volcado muestra el orden de asignación, el archivo de código fuente y la línea donde se ha asignado el objeto (si está utilizando `DEBUG_NEW` para la asignación) y la derivación del objeto, su dirección y su tamaño. `DumpAllObjectsSince` También llama a cada objeto `Dump` función para proporcionar información sobre su estado actual.  
   

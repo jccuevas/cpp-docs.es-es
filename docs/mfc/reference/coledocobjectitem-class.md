@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0842904ddb6e534cabc9fff8b5d2b2b4855f410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042214"
 ---
 # <a name="coledocobjectitem-class"></a>Clase COleDocObjectItem
 Implementa la contención del documento activo.  
@@ -107,7 +108,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pContainerDoc`  
+ *pContainerDoc*  
  Un puntero a la `COleDocument` objeto actúa como el contenedor de documento activo. Este parámetro debe ser **NULL** para habilitar **IMPLEMENT_SERIALIZE**. Normalmente se construyen elementos OLE con un no **NULL** puntero al documento.  
   
 ##  <a name="dodefaultprinting"></a>  COleDocObjectItem:: DoDefaultPrinting  
@@ -120,10 +121,10 @@ static HRESULT DoDefaultPrinting(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pCaller`  
+ *pCaller*  
  Un puntero a un [CView](../../mfc/reference/cview-class.md) objeto que envía el comando de impresión.  
   
- `pInfo`  
+ *pInfo*  
  Un puntero a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) objeto que describe el trabajo para su impresión.  
   
 ##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
@@ -137,14 +138,14 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nCmdID`  
- El identificador de comando para ejecutar. Debe estar en el grupo identificado por `pguidCmdGroup`.  
+ *nCmdID*  
+ El identificador de comando para ejecutar. Debe estar en el grupo identificado por *pguidCmdGroup*.  
   
- `nCmdExecOpt`  
+ *nCmdExecOpt*  
  Especifica las opciones de ejecución del comando. De forma predeterminada, establecido para ejecutar el comando sin preguntar al usuario. Vea [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) para obtener una lista de valores.  
   
- `pguidCmdGroup`  
- Identificador único del grupo de comandos. De forma predeterminada, **NULL**, que especifica el grupo estándar. El comando se pasa en `nCmdID` debe pertenecer al grupo.  
+ *pguidCmdGroup*  
+ Identificador único del grupo de comandos. De forma predeterminada, **NULL**, que especifica el grupo estándar. El comando se pasa en *nCmdID* debe pertenecer al grupo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve `S_OK` si se realiza correctamente; en caso contrario, devuelve uno de los siguientes códigos de error.  
@@ -154,14 +155,14 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|Se produjo un error inesperado.|  
 |**E_FAIL**|Se produjo un error.|  
 |**E_NOTIMPL**|Indica MFC propio debería intentar traducir y envía el comando.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` no es **NULL** pero no especifica un grupo de comandos reconocido.|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` no se reconoce como un comando válido en el pGroup de grupo.|  
-|**OLECMDERR_DISABLED**|El comando identificado por `nCmdID` está deshabilitado y no se puede ejecutar.|  
-|**OLECMDERR_NOHELP**|Autor de la llamada más frecuentes para obtener ayuda sobre el comando identificado por `nCmdID` , pero no hay ayuda disponible.|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup* no es **NULL** pero no especifica un grupo de comandos reconocido.|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID* no se reconoce como un comando válido en el pGroup de grupo.|  
+|**OLECMDERR_DISABLED**|El comando identificado por *nCmdID* está deshabilitado y no se puede ejecutar.|  
+|**OLECMDERR_NOHELP**|Autor de la llamada más frecuentes para obtener ayuda sobre el comando identificado por *nCmdID* , pero no hay ayuda disponible.|  
 |**OLECMDERR_CANCELLED**|El usuario canceló la ejecución.|  
   
 ### <a name="remarks"></a>Comentarios  
- El `pguidCmdGroup` y `nCmdID` parámetros juntos identificar de forma exclusiva el comando que se invoca. El `nCmdExecOpt` parámetro especifica la acción exacta que se va a realizar.  
+ El *pguidCmdGroup* y *nCmdID* parámetros juntos identificar de forma exclusiva el comando que se invoca. El *nCmdExecOpt* parámetro especifica la acción exacta que se va a realizar.  
   
 ##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  Llame a esta función miembro para obtener un puntero a la `IOleDocumentView` interfaz de la vista activa.  
@@ -206,13 +207,13 @@ static BOOL OnPreparePrinting(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pCaller`  
+ *pCaller*  
  Un puntero a un [CView](../../mfc/reference/cview-class.md) objeto que envía el comando de impresión.  
   
- `pInfo`  
+ *pInfo*  
  Un puntero a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) objeto que describe el trabajo para su impresión.  
   
- `bPrintAll`  
+ *bPrintAll*  
  Especifica si se imprime todo el documento.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -229,13 +230,13 @@ static void OnPrint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pCaller`  
+ *pCaller*  
  Un puntero a un objeto de CView que está enviando el comando de impresión.  
   
- `pInfo`  
+ *pInfo*  
  Un puntero a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) objeto que describe el trabajo para su impresión.  
   
- `bPrintAll`  
+ *bPrintAll*  
  Especifica si se imprime todo el documento.  
   
 ##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
@@ -250,16 +251,16 @@ HRESULT QueryCommand(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nCmdID`  
+ *nCmdID*  
  identificador del comando que se está consultando para.  
   
- `pdwStatus`  
+ *pdwStatus*  
  Un puntero a los indicadores devueltos como resultado de la consulta. Para obtener una lista de valores posibles, consulte [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237).  
   
- `pCmdText`  
+ *pCmdText*  
  Puntero a un [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) estructura en la que se va a devolver información de nombre y el estado de un solo comando. Puede ser **NULL** para indicar que el llamador no necesita esta información.  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  Identificador único del grupo de comandos; puede ser **NULL** para especificar el grupo estándar.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -276,7 +277,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwCloseOption`  
+ *dwCloseOption*  
  Indicador que especifica en qué circunstancias se guarda el elemento OLE al regresar al estado cargado. Para obtener una lista de valores posibles, consulte [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close).  
   
 ### <a name="remarks"></a>Comentarios  

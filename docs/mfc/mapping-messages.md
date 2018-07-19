@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345991"
 ---
 # <a name="mapping-messages"></a>Asignar mensajes
 Cada clase de marco de trabajo que puede recibir mensajes o comandos tiene su propio "mapa de mensajes". El marco de trabajo usa mapas de mensajes para conectar los mensajes y comandos a sus funciones de controlador. Cualquier clase derivada de la clase `CCmdTarget` puede tener un mapa de mensajes. Otros artículos explican los mapas de mensajes en detalle y describen cómo utilizarlos.  

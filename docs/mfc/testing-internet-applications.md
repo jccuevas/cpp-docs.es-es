@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380076"
 ---
 # <a name="testing-internet-applications"></a>Probar aplicaciones para Internet
 Hay algunos desafíos únicos de pruebas en Internet, especialmente para las aplicaciones que se ejecutan en un servidor Web. Las pruebas iniciales suelen llevarse a cabo mediante un cliente de usuario único que se conecta a un servidor de prueba. Esto será útil para depurar el código.  

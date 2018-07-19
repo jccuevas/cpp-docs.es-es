@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378667"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Crear archivo de encabezado precompilado)
 Indica al compilador que cree un archivo de encabezado precompilado (.pch) que representa el estado de compilación en un momento determinado.  

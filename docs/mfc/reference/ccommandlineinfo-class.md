@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d292c3f48f0a375fbd914cf287f1e8d2cef5c6c3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952390"
 ---
 # <a name="ccommandlineinfo-class"></a>Clase CCommandLineInfo
 Ayuda a analizar la línea de comandos al iniciar la aplicación.  
@@ -92,11 +93,11 @@ class CCommandLineInfo : public CObject
 |*aplicación* nombre de archivo|Archivos abiertos.|  
 |*aplicación* `/p` nombre de archivo|Archivo de impresión a la impresora predeterminada.|  
 |*aplicación* `/pt` puerto de controlador de impresora de nombre de archivo|Archivo de impresión a la impresora especificada.|  
-|*Aplicación* `/dde`|Se inician y await comando DDE.|  
-|*Aplicación* `/Automation`|Se inician como un servidor de automatización OLE.|  
-|*Aplicación* `/Embedding`|Se inician editar un elemento OLE incrustado.|  
-|*Aplicación* `/Register`<br /><br /> *Aplicación* `/Regserver`|Informa a la aplicación para realizar las tareas de registro.|  
-|*Aplicación* `/Unregister`<br /><br /> *Aplicación* `/Unregserver`|Informa a la aplicación para realizar cualquier tarea de eliminación de registro.|  
+|*aplicación* `/dde`|Se inician y await comando DDE.|  
+|*aplicación* `/Automation`|Se inician como un servidor de automatización OLE.|  
+|*aplicación* `/Embedding`|Se inician editar un elemento OLE incrustado.|  
+|*aplicación* `/Register`<br /><br /> *aplicación* `/Regserver`|Informa a la aplicación para realizar las tareas de registro.|  
+|*aplicación* `/Unregister`<br /><br /> *aplicación* `/Unregserver`|Informa a la aplicación para realizar cualquier tarea de eliminación de registro.|  
   
  Derive una nueva clase de `CCommandLineInfo` para controlar otras marcas y los valores de parámetro. Invalidar [ParseParam](#parseparam) para controlar las marcas de nuevo.  
   
@@ -269,17 +270,17 @@ virtual void ParseParam(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pszParam`  
+ *pszParam*  
  El parámetro o el indicador.  
   
  *bFlag*  
- Indica si `pszParam` es un parámetro o una marca.  
+ Indica si *pszParam* es un parámetro o una marca.  
   
- `bLast`  
+ *Sacudida*  
  Indica si se trata del último parámetro o marca en la línea de comandos.  
   
 ### <a name="remarks"></a>Comentarios  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) llamadas `ParseParam` una vez para cada parámetro o una marca en la línea de comandos, pase el argumento para `pszParam`. Si el primer carácter del parámetro es un ' **-**'o' **/**', a continuación, se quita y *bFlag* está establecido en `TRUE`. Al analizar el parámetro final, `bLast` está establecido en `TRUE`.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) llamadas `ParseParam` una vez para cada parámetro o una marca en la línea de comandos, pase el argumento para *pszParam*. Si el primer carácter del parámetro es un ' **-**'o' **/**', a continuación, se quita y *bFlag* está establecido en `TRUE`. Al analizar el parámetro final, *sacudida* está establecido en `TRUE`.  
   
  La implementación predeterminada de esta función reconoce los siguientes indicadores: `/p`, `/pt`, `/dde`, `/Automation`, y `/Embedding`, tal y como se muestra en la tabla siguiente:  
   
@@ -289,11 +290,11 @@ virtual void ParseParam(
 |*aplicación* nombre de archivo|Archivos abiertos.|  
 |*aplicación* `/p` nombre de archivo|Archivo de impresión a la impresora predeterminada.|  
 |*aplicación* `/pt` puerto de controlador de impresora de nombre de archivo|Archivo de impresión a la impresora especificada.|  
-|*Aplicación* `/dde`|Se inician y await comando DDE.|  
-|*Aplicación* `/Automation`|Se inician como un servidor de automatización OLE.|  
-|*Aplicación* `/Embedding`|Se inician editar un elemento OLE incrustado.|  
-|*Aplicación* `/Register`<br /><br /> *Aplicación* `/Regserver`|Informa a la aplicación para realizar las tareas de registro.|  
-|*Aplicación* `/Unregister`<br /><br /> *Aplicación* `/Unregserver`|Informa a la aplicación para realizar cualquier tarea de eliminación de registro.|  
+|*aplicación* `/dde`|Se inician y await comando DDE.|  
+|*aplicación* `/Automation`|Se inician como un servidor de automatización OLE.|  
+|*aplicación* `/Embedding`|Se inician editar un elemento OLE incrustado.|  
+|*aplicación* `/Register`<br /><br /> *aplicación* `/Regserver`|Informa a la aplicación para realizar las tareas de registro.|  
+|*aplicación* `/Unregister`<br /><br /> *aplicación* `/Unregserver`|Informa a la aplicación para realizar cualquier tarea de eliminación de registro.|  
   
  Esta información se almacena en [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), y [m_nShellCommand](#m_nshellcommand). Marcas se marcan, ya sea por una barra diagonal ' **/**'o guión' **-**'.  
   

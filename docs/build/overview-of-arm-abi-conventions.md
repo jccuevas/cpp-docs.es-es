@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379099"
 ---
 # <a name="overview-of-arm-abi-conventions"></a>Información general de las convenciones ABI de ARM
 La interfaz binaria de aplicaciones (ABI) para código compilado para Windows en procesadores de ARM se basa en la norma EABI de ARM. En este artículo se desgranan las principales diferencias entre Windows en ARM y la norma. Para obtener más información acerca de la norma EABI de ARM, vea [interfaz binaria de aplicaciones (ABI) de la arquitectura ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html).  

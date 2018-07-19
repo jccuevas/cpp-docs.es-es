@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371972"
 ---
 # <a name="lib-input-files"></a>Archivos de entrada de LIB
 Los archivos de entrada que espera LIB dependen del modo en que se esté utilizando, como se muestra en la tabla siguiente.  

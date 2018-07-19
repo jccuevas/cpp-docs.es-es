@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230591"
 ---
 # <a name="compiler-error-c2555"></a>Error del compilador C2555
 'clase1:: función1': función virtual de reemplazo tipo devuelto es diferente y no es covariante de 'clase2:: función2'  

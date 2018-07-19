@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381231"
 ---
 # <a name="atexit-function-c"></a>atexit (Función) (C)
 **ANSI 4.10.4.3** El estado devuelto por la función `atexit` si el valor del argumento es distinto de cero, EXIT_SUCCESS o EXIT_FAILURE  

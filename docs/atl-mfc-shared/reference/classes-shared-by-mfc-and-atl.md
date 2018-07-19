@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356979"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Clases compartidas por MFC y ATL
 En la tabla siguiente se enumera las clases que se comparten entre MFC y ATL.  

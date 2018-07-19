@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955994"
 ---
 # <a name="cdraglistbox-class"></a>Clase CDragListBox
 Además de proporcionar la funcionalidad de un cuadro de lista de Windows, la `CDragListBox` clase permite al usuario mover elementos de cuadro de lista, como los nombres de archivo, en el cuadro de lista.  
@@ -95,7 +96,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del elemento que se están arrastrando.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -112,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del elemento que se están arrastrando.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -133,7 +134,7 @@ virtual UINT Dragging(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene x e y coordenadas del cursor de la pantalla.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -156,7 +157,7 @@ virtual void DrawInsert(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nItem`  
+ *nItem*  
  Índice de base cero del punto de inserción.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -175,14 +176,14 @@ virtual void Dropped(
  *nSrcIndex*  
  Especifica el índice de base cero de la cadena colocarlo.  
   
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del sitio de destino.  
   
 ### <a name="remarks"></a>Comentarios  
  El comportamiento predeterminado copia el elemento de cuadro de lista y sus datos a la nueva ubicación y, a continuación, elimina el elemento original. Reemplace esta función para personalizar el comportamiento predeterminado, como la habilitación de copias de los elementos de cuadro de lista que se arrastrarán a otras ubicaciones dentro de la lista.  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
- Llamada a esta función para recuperar el índice de base cero del elemento de cuadro de lista que se encuentra en `pt`.  
+ Llamada a esta función para recuperar el índice de base cero del elemento de cuadro de lista que se encuentra en *pt*.  
   
 ```  
 int ItemFromPt(
@@ -191,7 +192,7 @@ int ItemFromPt(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas de un punto en el cuadro de lista.  
   
  *bAutoScroll*  

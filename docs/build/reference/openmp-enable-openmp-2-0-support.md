@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378735"
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (Habilitar la compatibilidad con OpenMP 2.0)
 Hace que el compilador pueda procesarlo `#pragma` [omp](../../preprocessor/omp.md).  

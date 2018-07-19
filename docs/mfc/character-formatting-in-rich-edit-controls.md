@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349485"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Formato de los caracteres en los controles Rich Edit
 Puede utilizar las funciones miembro de control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) para dar formato de caracteres y recuperar información de formato. Para los caracteres, puede especificar el tipo de letra, tamaño, color y efectos como negrita, cursiva y protegido.  

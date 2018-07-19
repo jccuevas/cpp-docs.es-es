@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341559"
 ---
 # <a name="building-on-the-framework"></a>Compilar en el marco
 Su rol en la configuración de una aplicación con el marco de trabajo MFC es proporcionar el código de origen específica de la aplicación y para conectar los componentes definiendo qué mensajes y comandos a los que responden. Usar el lenguaje C++ y las técnicas estándar de C++ para derivar sus propias clases específicas de la aplicación de los proporcionados por la biblioteca de clases y para reemplazar y extender el comportamiento de la clase base.  

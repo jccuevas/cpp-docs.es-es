@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360448"
 ---
 # <a name="running-the-program-as-a-local-server"></a>Ejecutar el programa como un servidor Local
 Si ejecuta el programa como un servicio es un problema, puede cambiar temporalmente el registro para que el programa se ejecuta como un servidor local normal. Basta con cambiar el nombre de la `LocalService` valor bajo el AppID a `_LocalService` y asegúrese del `LocalServer32` clave bajo el CLSID está establecida correctamente. (Tenga en cuenta que mediante DCOMCNFG para especificar que la aplicación debe ejecutarse en un equipo diferente cambia el nombre la `LocalServer32` clave a `_LocalServer32`.) Al ejecutar el programa como un servidor local tarda unos segundos más en el inicio porque la llamada a **StartServiceCtrlDispatcher** en `CAtlServiceModuleT::Start` tarda unos segundos antes de que se produce un error.  

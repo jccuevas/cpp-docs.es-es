@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341141"
 ---
 # <a name="command-routing-illustration"></a>Ilustración de enrutamiento de comandos
 Como ejemplo, considere un mensaje de comando de un elemento de menú Borrar todo en el menú de edición de una aplicación MDI. Suponga que la función de controlador para este comando resulta ser una función miembro de clase de documento de la aplicación. Le mostramos cómo ese comando llega a su controlador después de que el usuario elija el elemento de menú:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373933"
 ---
 # <a name="event-sink-maps"></a>Mapas de receptor de eventos
 Cuando un control OLE incrustado desencadena un evento, el contenedor del control recibe el evento mediante un mecanismo, denominado un "evento mapa de receptores," proporcionado por MFC. Este mapa de receptores de eventos designa las funciones de controlador para cada evento específico, así como los parámetros de los eventos. Para obtener más información sobre los mapas de receptor de eventos, vea el artículo [contenedores de controles ActiveX](../../mfc/activex-control-containers.md).  

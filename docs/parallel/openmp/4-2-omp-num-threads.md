@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687652"
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 El **OMP_NUM_THREADS** variable de entorno establece el número predeterminado de subprocesos que se utilizarán durante la ejecución, a menos que dicho número se cambia explícitamente mediante una llamada a la **omp_set_num_threads ()** rutina de biblioteca o por explícito **num_threads** cláusula en una **paralelo** directiva.  

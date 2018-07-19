@@ -21,14 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfdff6023beeedfa14d37e5b404fa3c223691b85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f8214b2f40926cc4ab1471dce99ce5215362011
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930495"
 ---
 # <a name="ole-container-classes"></a>Clases de contenedor OLE
-Estas clases se utilizan las aplicaciones de contenedor. Ambos `COleLinkingDoc` y `COleDocument` administrar colecciones de `COleClientItem` objetos. En lugar de derivar la clase de documento de **CDocument**, podrá derivar desde `COleLinkingDoc` o `COleDocument`, dependiendo de si desea soporte técnico para obtener vínculos a objetos incrustados en el documento.  
+Estas clases se utilizan las aplicaciones de contenedor. Ambos `COleLinkingDoc` y `COleDocument` administrar colecciones de `COleClientItem` objetos. En lugar de derivar la clase de documento de `CDocument`, podrá derivar desde `COleLinkingDoc` o `COleDocument`, dependiendo de si desea soporte técnico para obtener vínculos a objetos incrustados en el documento.  
   
  Use un `COleClientItem` objeto para representar cada elemento OLE en el documento que está incrustado en otro documento o un vínculo a otro documento.  
   

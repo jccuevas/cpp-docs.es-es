@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354860"
 ---
 # <a name="controls-general-support-classes"></a>Controles: Clases de soporte General
 Las clases siguientes proporcionan compatibilidad general para los controles ATL:  

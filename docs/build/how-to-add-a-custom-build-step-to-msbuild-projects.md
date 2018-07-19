@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367997"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Cómo: Agregar un paso de compilación personalizado a proyectos de MSBuild
 Un paso de compilación personalizado es un paso definido por el usuario en una compilación. Un paso de compilación personalizada se comporta como cualquier otro *herramienta de comando* paso, por ejemplo, el paso de herramienta de compilación o vinculación estándar.  

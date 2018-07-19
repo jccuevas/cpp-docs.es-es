@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856978"
 ---
 # <a name="appobject"></a>appobject
 Identifica la coclase como un objeto de aplicación, que está asociado a una aplicación .exe completa y se indican que las funciones y propiedades de la coclase que están disponibles globalmente en este [biblioteca de tipos](../mfc/automation-clients-using-type-libraries.md).  

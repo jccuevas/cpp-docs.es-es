@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369947"
 ---
 # <a name="kinds-of-dlls"></a>Tipos de archivos DLL
 Este tema proporciona información para ayudarle a determinar el tipo de archivo DLL para compilar.  

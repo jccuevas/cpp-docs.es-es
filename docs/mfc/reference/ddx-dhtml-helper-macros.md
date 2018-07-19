@@ -27,11 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6de53324eac663df7c12ee0cb2c0f4f02558157d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121707"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Macros de la aplicación auxiliar de DDX_DHtml
 Las macros de la aplicación auxiliar de DDX_DHtml permiten un acceso sencillo a las propiedades utilizadas de controles en una página HTML.  
@@ -65,13 +66,13 @@ DDX_DHtml_Anchor_Href(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `dx`  
+ *DX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.  
   
- `name`  
+ *name*  
  El valor especificado para el parámetro Id. del control HTML.  
   
- `var`  
+ *var*  
  El valor que se va a intercambiar.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -88,13 +89,13 @@ DDX_DHtml_Anchor_Target(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `dx`  
+ *DX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.  
   
- `name`  
+ *name*  
  El valor especificado para el parámetro Id. del control HTML.  
   
- `var`  
+ *var*  
  El valor que se va a intercambiar.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -113,13 +114,13 @@ DDX_DHtml_ElementInnerHtml(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `dx`  
+ *DX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.  
   
- `name`  
+ *name*  
  El valor especificado para el parámetro Id. del control HTML.  
   
- `var`  
+ *var*  
  El valor que se va a intercambiar.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -139,13 +140,13 @@ DDX_DHtml_ElementInnerText(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `dx`  
+ *DX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.  
   
- `name`  
+ *name*  
  El valor especificado para el parámetro Id. del control HTML.  
   
- `var`  
+ *var*  
  El valor que se va a intercambiar.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -162,13 +163,13 @@ DDX_DHtml_ElementValue(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `dx`  
+ *DX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.  
   
- `name`  
+ *name*  
  El valor especificado para el parámetro Id. del control HTML.  
   
- `var`  
+ *var*  
  El valor que se va a intercambiar. Vea *valor* en [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).  
   
 ## <a name="remarks"></a>Comentarios  
@@ -187,13 +188,13 @@ DDX_DHtml_Frame_Src(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `dx`  
+ *DX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.  
   
- `name`  
+ *name*  
  El valor especificado para el parámetro Id. del control HTML.  
   
- `var`  
+ *var*  
  El valor que se va a intercambiar.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -212,13 +213,13 @@ DDX_DHtml_IFrame_Src(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `dx`  
+ *DX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.  
   
- `name`  
+ *name*  
  El valor especificado para el parámetro Id. del control HTML.  
   
- `var`  
+ *var*  
  El valor que se va a intercambiar.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -235,17 +236,17 @@ DDX_DHtml_Img_Src(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `dx`  
+ *DX*  
  Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.  
   
- `name`  
+ *name*  
  El valor especificado para el parámetro Id. del control HTML.  
   
- `var`  
+ *var*  
  El valor que se va a intercambiar.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se usa el `DDX_DHtml_Img_Src` macro para recuperar la propiedad src de un elemento de imagen, el objeto de imagen de Internet Explorer devolverá la dirección URL completa de escape para el origen de la imagen. Por ejemplo, si usa el `DDX_DHtml_Img_Src` macro para establecer la propiedad src de un elemento de imagen a la cadena "algunos imagen interesante", cuando se recupera esa propiedad, Internet Explorer devolverá la cadena "res://d:\myapplication\myapp.exe/some% 20interesting % 20picture."  
+ Al utilizar la macro DDX_DHtml_Img_Src para recuperar la propiedad src de un elemento de imagen, el objeto de imagen de Internet Explorer devolverá la dirección URL completa de escape para el origen de la imagen. Por ejemplo, si usa la macro DDX_DHtml_Img_Src para establecer la propiedad src de un elemento de imagen a la cadena "algunos imagen interesante", cuando se recupera esa propiedad, Internet Explorer devolverá la cadena "res://d:\myapplication\myapp.exe/some% 20interesting % 20picture."  
   
  Esta macro llama a la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) función mediante el DISPID_IHTMLIMGELEMENT_SRC enviar Id.  
 

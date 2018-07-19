@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409708"
 ---
 # <a name="sharing-constants"></a>Constantes de uso compartido
 Constantes para modos de uso compartido de archivos.  

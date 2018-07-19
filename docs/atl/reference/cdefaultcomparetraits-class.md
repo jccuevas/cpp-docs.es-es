@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361644"
 ---
 # <a name="cdefaultcomparetraits-class"></a>Clase CDefaultCompareTraits
 Esta clase proporciona las funciones de comparación de elementos de predeterminado.  

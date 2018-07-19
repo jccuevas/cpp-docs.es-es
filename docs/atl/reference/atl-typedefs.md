@@ -38,6 +38,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34283332"
 ---
 # <a name="atl-typedefs"></a>Definiciones de tipo ATL
 Active Template Library incluye las siguientes definiciones de tipo.  

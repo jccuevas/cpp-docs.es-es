@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9141dec6fdcb966dcdb664bb8dc090b50a10a614
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040004"
 ---
 # <a name="cmfcfontcombobox-class"></a>Clase CMFCFontComboBox
 La `CMFCFontComboBox` clase crea un control de cuadro combinado que contiene una lista de fuentes.  
@@ -131,13 +132,13 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `pDesc`  
+ [in] *pDesc*  
  Apunta a un objeto de descripción de la fuente.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Especifica un nombre de fuente.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Especifica un juego de caracteres. El valor predeterminado es DEFAULT_CHARSET. Para obtener más información, consulte el `lfCharSet` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -163,13 +164,13 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `nFontType`  
+ [in] *nFontType*  
  Especifica el tipo de fuente. El valor predeterminado es la combinación bit a bit (OR) de DEVICE_FONTTYPE, RASTER_FONTTYPE y TRUETYPE_FONTTYPE.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Especifica el juego de caracteres de la fuente. El valor predeterminado es DEFAULT_CHARSET.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Especifica el tono de fuente y la familia. El valor predeterminado es DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Valor devuelto  

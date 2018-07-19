@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343949"
 ---
 # <a name="automation-servers"></a>Servidores de automatización
 Automatización permite a la aplicación para manipular objetos implementados en otra aplicación o exponga objetos para que se puedan manipular. Un servidor de automatización es una aplicación que expone objetos programables (llamados objetos de automatización) a otras aplicaciones (denominado [los clientes de automatización](../mfc/automation-clients.md)). Servidores de automatización se denominan componentes de automatización.  

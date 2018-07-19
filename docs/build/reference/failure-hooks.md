@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371790"
 ---
 # <a name="failure-hooks"></a>Enlaces de error
 El enlace de error está habilitado en la misma manera que el [enlace de notificación](../../build/reference/notification-hooks.md). La rutina del enlace tiene que devolver un valor apropiado de modo que el proceso puede continuar (HINSTANCE o FARPROC) o 0 para indicar que se debe producir una excepción.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298894"
 ---
 # <a name="linker-tools-error-lnk1218"></a>Error de las herramientas del vinculador LNK1218
 Advertencia tratada como error; no se generó ningún archivo de salida  

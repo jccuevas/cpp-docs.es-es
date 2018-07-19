@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111060"
 ---
 # <a name="user-record"></a>Registro de usuario
 El registro de usuario proporciona la estructura de código y los datos que representa los datos de columna para un conjunto de filas. Puede crearse un registro de usuario en tiempo de compilación o en tiempo de ejecución. Cuando se crea un proveedor mediante el Asistente para proveedores OLE DB ATL, el asistente crea un registro de usuario de forma predeterminada este aspecto (suponiendo que ha especificado un nombre de proveedor [nombre corto] "MyProvider"):  

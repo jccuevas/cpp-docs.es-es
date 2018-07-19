@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 582ddd1340dd94f367d5401d517e9335d370b634
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122642"
 ---
 # <a name="cvslistbox-class"></a>Clase CVSListBox
 La `CVSListBox` clase es compatible con un control de lista modificable.  
@@ -123,20 +124,20 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `strIext`  
+ [in] *strIext*  
  Una referencia a una cadena.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Un valor de 32 bits específica de la aplicación que está asociado a la cadena. El valor predeterminado es 0.  
   
- [in] `iIndex`  
- Índice de base cero de la posición que contendrá la cadena. Si el `iIndex` parámetro es -1, la cadena se agrega al final de la lista. El valor predeterminado es -1.  
+ [in] *iÍndice*  
+ Índice de base cero de la posición que contendrá la cadena. Si el *iÍndice* parámetro es -1, la cadena se agrega al final de la lista. El valor predeterminado es -1.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Índice de base cero de la posición de la cadena en el control de lista.  
   
 ### <a name="remarks"></a>Comentarios  
- Use la [CVSListBox::GetItemData](#getitemdata) método para recuperar el valor especificado por el `dwData` parámetro. Este valor puede ser un entero específico de la aplicación o un puntero a otros datos.  
+ Use la [CVSListBox::GetItemData](#getitemdata) método para recuperar el valor especificado por el *dwData* parámetro. Este valor puede ser un entero específico de la aplicación o un puntero a otros datos.  
   
 ##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  Construye un objeto `CVSListBox`.  
@@ -157,11 +158,11 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iIndex`  
+ [in] *iÍndice*  
  Índice de base cero de un elemento de control de lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la operación de edición se inicia correctamente; en caso contrario, `FALSE`.  
+ TRUE si la operación de edición se inicia correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  El usuario inicia una operación de edición haciendo doble clic en la etiqueta de un elemento, o bien presionando el **F2** o **barra espaciadora** clave cuando un elemento tiene el foco.  
@@ -187,7 +188,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iIndex`  
+ [in] *iÍndice*  
  Índice de base cero de un elemento de control de lista modificable.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -245,11 +246,11 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iIndex`  
+ [in] *iÍndice*  
  Índice de base cero de un elemento de control de lista modificable.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si se quita el elemento especificado; en caso contrario, `FALSE`.  
+ TRUE si se quita el elemento especificado; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -261,11 +262,11 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iItem`  
+ [in] *iItem*  
  Índice de base cero de un elemento de control de lista modificable.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si este método se realiza correctamente; en caso contrario, `FALSE`.  
+ TRUE si este método se realiza correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método selecciona el elemento especificado y, si es necesario, desplaza el elemento en la vista.  
@@ -280,10 +281,10 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] `iIndex`  
+ [in] *iÍndice*  
  Índice de base cero de un elemento de control de lista modificable.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Un valor de 32 bits. Este valor puede ser un entero específico de la aplicación o un puntero a otros datos.  
   
 ### <a name="remarks"></a>Comentarios  
