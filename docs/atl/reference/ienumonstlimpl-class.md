@@ -1,5 +1,5 @@
 ---
-title: Clase IEnumOnSTLImpl | Documentos de Microsoft
+title: IEnumOnSTLImpl (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,14 +25,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1de4bdd0d07e694303f850d6298d77afe3322214
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b70e8012d6126b39129cff6fc86366f72459dc02
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365261"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883013"
 ---
-# <a name="ienumonstlimpl-class"></a>Clase IEnumOnSTLImpl
+# <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl (clase)
 Esta clase define una interfaz de enumerador basándose en una colección de la biblioteca estándar de C++.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,19 +44,19 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `Base`  
+ *base*  
  Un enumerador COM ( [interfaz IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interfaz.  
   
- `piid`  
+ *piid*  
  Un puntero al identificador de interfaz de la interfaz de enumerador.  
   
- `T`  
- El tipo de elemento expuesto por la interfaz de enumerador.  
+ *T*  
+ El tipo de elemento que expone la interfaz de enumerador.  
   
- `Copy`  
- A [copiar clase directiva](../../atl/atl-copy-policy-classes.md).  
+ *Copiar*  
+ Un [Copiar directiva clase](../../atl/atl-copy-policy-classes.md).  
   
- `CollType`  
+ *CollType*  
  Una clase de contenedor de la biblioteca estándar de C++.  
   
 ## <a name="members"></a>Miembros  
@@ -75,17 +75,17 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[IEnumOnSTLImpl::m_iter](#m_iter)|El iterador que representa la posición del enumerador actual dentro de la colección.|  
-|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Un puntero para el contenedor de la biblioteca estándar de C++ que contiene los elementos que se van a enumerar.|  
-|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|El **IUnknown** puntero del objeto que proporciona la colección.|  
+|[IEnumOnSTLImpl::m_iter](#m_iter)|Iterador que representa la posición del enumerador actual dentro de la colección.|  
+|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Un puntero para el contenedor de la biblioteca estándar de C++ que contiene los elementos que hay que enumerar.|  
+|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|El `IUnknown` puntero del objeto que proporciona la colección.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IEnumOnSTLImpl` proporciona la implementación de una interfaz de enumerador COM donde se almacenan los elementos que se enumeran en un contenedor compatible de biblioteca estándar de C++. Esta clase es análoga a la [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) (clase), que proporciona una implementación de una interfaz de enumerador basado en una matriz.  
+ `IEnumOnSTLImpl` proporciona la implementación de una interfaz de enumerador COM donde se almacenan los elementos que se va a enumerar en un contenedor de la biblioteca estándar de C++ compatible. Esta clase es análoga a la [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) (clase), que proporciona una implementación de una interfaz de enumerador se basa en una matriz.  
   
 > [!NOTE]
->  Vea [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init) para obtener más información sobre aún más las diferencias entre `CComEnumImpl` y `IEnumOnSTLImpl`.  
+>  Consulte [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init) para obtener más información sobre aún más diferencias entre `CComEnumImpl` y `IEnumOnSTLImpl`.  
   
- Normalmente, tendrá que *no* que necesite crear su propia clase de enumerador derivando de esta implementación de interfaz. Si desea utilizar un enumerador ATL proporcionada en función de un contenedor de la biblioteca estándar de C++, es más habitual para crear una instancia de [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md), o para crear una clase de colección que devuelve un enumerador derivando de [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md).  
+ Por lo general, usted podrá *no* debe crear su propia clase de enumerador derivando de esta implementación de la interfaz. Si desea usar un enumerador proporcionada por ATL basándose en un contenedor de la biblioteca estándar de C++, es más habitual para crear una instancia de [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md), o para crear una clase de colección que devuelve un enumerador mediante la derivación de [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md).  
   
  Sin embargo, si tiene que proporcionar un enumerador personalizado (por ejemplo, uno que expone interfaces además de la interfaz de enumerador), puede derivar de esta clase. En esta situación es probable que deba reemplazar el [clon](#clone) método para proporcionar su propia implementación.  
   
@@ -107,46 +107,46 @@ HRESULT Init(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pUnkForRelease`  
- [in] El **IUnknown** puntero de un objeto que debe mantenerse activo durante la vigencia del enumerador. Pasar **NULL** si no existe el objeto no existe.  
+ *pUnkForRelease*  
+ [in] El `IUnknown` puntero de un objeto que se debe mantener activo durante la vigencia del enumerador. Pasar valor NULL si no existe el objeto existe.  
   
- `collection`  
+ *collection*  
  Una referencia al contenedor de biblioteca estándar de C++ que contiene los elementos que hay que enumerar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor `HRESULT` estándar.  
+ Un valor HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- Si se pasa `Init` mantiene una referencia a una colección en otro objeto, puede usar el `pUnkForRelease` parámetro para asegurarse de que está disponible para el objeto y la colección contiene, siempre y cuando lo necesite el enumerador.  
+ Si se pasa `Init` mantiene una referencia a una colección en otro objeto, puede usar el *pUnkForRelease* parámetro para asegurarse de que está disponible para el objeto y la colección contiene, siempre y cuando lo necesite el enumerador.  
   
- Debe llamar a este método antes de pasar un puntero a la interfaz de enumerador a cualquiera de los clientes.  
+ Debe llamar a este método antes de pasar un puntero a la interfaz del enumerador a los clientes.  
   
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
- Este método proporciona la implementación de la [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) método mediante la creación de un objeto de tipo `CComEnumOnSTL`, inicializándola con la misma colección e iterador utilizado por el objeto actual y devuelve la interfaz en el objeto recién creado.  
+ Este método proporciona la implementación de la [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) método mediante la creación de un objeto de tipo `CComEnumOnSTL`, inicializándola con la misma colección e iterador utilizados por el objeto actual y devuelve la interfaz en el objeto recién creado.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `ppEnum`  
- [out] La interfaz de enumerador en un objeto recién creado clonados a partir del enumerador actual.  
+ *ppEnum*  
+ [out] La interfaz de enumerador en un objeto recién creado clona el enumerador actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor `HRESULT` estándar.  
+ Un valor HRESULT estándar.  
   
 ##  <a name="m_spunk"></a>  IEnumOnSTLImpl::m_spUnk  
- El **IUnknown** puntero del objeto que proporciona la colección.  
+ El `IUnknown` puntero del objeto que proporciona la colección.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este puntero inteligente mantiene una referencia en el objeto pasado a [IEnumOnSTLImpl::Init](#init), asegurándose de que permanece activo durante la vigencia del enumerador.  
+ Este puntero inteligente mantiene una referencia en el objeto pasado a [IEnumOnSTLImpl::Init](#init), lo que garantiza que permanece activo durante la vigencia del enumerador.  
   
 ##  <a name="m_pcollection"></a>  IEnumOnSTLImpl::m_pcollection  
- Este miembro apunta a la colección que proporciona los datos que se imponen la implementación de la interfaz de enumerador.  
+ Este miembro apunta a la colección que proporciona los datos que dirigen la implementación de la interfaz de enumerador.  
   
 ```
 CollType* m_pcollection;
@@ -156,7 +156,7 @@ CollType* m_pcollection;
  Este miembro se inicializa mediante una llamada a [IEnumOnSTLImpl::Init](#init).  
   
 ##  <a name="m_iter"></a>  IEnumOnSTLImpl::m_iter  
- Este miembro contiene el iterador que se usan para marcar la posición actual dentro de la colección y navegar a los elementos siguientes.  
+ Este miembro contiene el iterador que se usan para marcar la posición actual dentro de la colección y navegar por los elementos subsiguientes.  
   
 ```
 CollType::iterator m_iter;
@@ -173,17 +173,17 @@ STDMETHOD(Next)(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `celt`  
+ *celt*  
  [in] El número de elementos solicitados.  
   
- `rgelt`  
+ *rgelt*  
  [out] La matriz que se rellena con los elementos.  
   
- `pceltFetched`  
- [out] El número de elementos realmente devueltos en `rgelt`. Esto puede ser menor que `celt` si hay menos de `celt` elementos permanecen en la lista.  
+ *pceltFetched*  
+ [out] El número de elementos realmente devueltos en *rgelt*. Esto puede ser menor que *celt* si hay menos de *celt* elementos permanecen en la lista.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor `HRESULT` estándar.  
+ Un valor HRESULT estándar.  
   
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
  Este método proporciona la implementación de la [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) método.  
@@ -193,7 +193,7 @@ STDMETHOD(Reset)(void);
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor `HRESULT` estándar.  
+ Un valor HRESULT estándar.  
   
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
  Este método proporciona la implementación de la [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) método.  
@@ -203,11 +203,11 @@ STDMETHOD(Skip)(ULONG celt);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `celt`  
+ *celt*  
  [in] El número de elementos que se van a omitir.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor `HRESULT` estándar.  
+ Un valor HRESULT estándar.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)

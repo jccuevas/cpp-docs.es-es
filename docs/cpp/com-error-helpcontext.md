@@ -1,5 +1,5 @@
 ---
-title: _com_error::HelpContext | Documentos de Microsoft
+title: _com_error::HelpContext | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7123fcf5859ce3fc373b29b4cb3e7b32109b464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e800bd3100fa0199534f3e9bdf6646aa0ffc6860
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410829"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940903"
 ---
 # <a name="comerrorhelpcontext"></a>_com_error::HelpContext
 **Específicos de Microsoft**  
   
- Llamadas **IErrorInfo:: GetHelpContext** función.  
+ Llama a la función `IErrorInfo::GetHelpContext`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,10 +37,10 @@ DWORD HelpContext( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve el resultado de **IErrorInfo:: GetHelpContext** para el **IErrorInfo** objeto registrado dentro del `_com_error` objeto. Si no hay ningún **IErrorInfo** se registra el objeto, devuelve cero.  
+ Devuelve el resultado de `IErrorInfo::GetHelpContext` para el `IErrorInfo` objeto grabado dentro del `_com_error` objeto. Si no hay ningún `IErrorInfo` se registra el objeto, éste devuelve un cero.  
   
 ## <a name="remarks"></a>Comentarios  
- Cualquier error al llamar a la **IErrorInfo:: GetHelpContext** método se pasa por alto.  
+ Cualquier error durante la llamada a la `IErrorInfo::GetHelpContext` se omite el método.  
   
  **FIN de Específicos de Microsoft**  
   

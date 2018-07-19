@@ -1,5 +1,5 @@
 ---
-title: Definiciones de tipo ATL | Documentos de Microsoft
+title: Typedefs ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,37 +33,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 811dbda4360bcb3a618a4ceaa5228e57dab312ae
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 453b47ef62abfd181d28d6fcc325adb25598be82
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34283332"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880721"
 ---
-# <a name="atl-typedefs"></a>Definiciones de tipo ATL
+# <a name="atl-typedefs"></a>Typedefs ATL
 Active Template Library incluye las siguientes definiciones de tipo.  
   
 |||  
 |-|-|  
-|[_ATL_BASE_MODULE](#_atl_base_module)|Define como una definición de tipo basado en [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md).|  
-|[_ATL_COM_MODULE](#_atl_com_module)|Define como una definición de tipo basado en [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).|  
-|[_ATL_MODULE](#_atl_module)|Define como una definición de tipo basado en [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).|  
-|[_ATL_WIN_MODULE](#_atl_win_module)|Define como una definición de tipo basado en [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|  
+|[_ATL_BASE_MODULE](#_atl_base_module)|Definido como una definición de tipo según [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md).|  
+|[_ATL_COM_MODULE](#_atl_com_module)|Definido como una definición de tipo según [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).|  
+|[_ATL_MODULE](#_atl_module)|Definido como una definición de tipo según [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).|  
+|[_ATL_WIN_MODULE](#_atl_win_module)|Definido como una definición de tipo según [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|  
 |[ATL_URL_PORT](#atl_url_port)|El tipo utilizado por [CUrl](../../atl/reference/curl-class.md) para especificar un número de puerto.|  
 |[CComDispatchDriver](#ccomdispatchdriver)|Esta clase administra los punteros de interfaz COM.|  
-|[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|Llama a métodos del modelo, independientemente del modelo de subproceso que se va a usar el subproceso apropiado.|  
-|[CComObjectThreadModel](#ccomobjectthreadmodel)|Llama a métodos del modelo, independientemente del modelo de subproceso que se va a usar el subproceso apropiado.|  
-|[CContainedWindow](#ccontainedwindow)|Esta clase es una especialización de **CContainedWindowT.**|  
-|[CPath](#cpath)|Una especialización de [CPathT](../../atl/reference/cpatht-class.md) con `CString`.|  
-|[CPathA](#cpatha)|Una especialización de [CPathT](../../atl/reference/cpatht-class.md) con `CStringA`.|  
-|[CPathW](#cpathw)|Una especialización de [CPathT](../../atl/reference/cpatht-class.md) con `CStringW`.|  
+|[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|Llama a métodos del modelo, independientemente del modelo de subprocesamiento que se va a usar el subproceso adecuado.|  
+|[CComObjectThreadModel](#ccomobjectthreadmodel)|Llama a métodos del modelo, independientemente del modelo de subprocesamiento que se va a usar el subproceso adecuado.|  
+|[CContainedWindow](#ccontainedwindow)|Esta clase es una especialización de `CContainedWindowT`.|  
+|[CPath](#cpath)|Una especialización de [CPathT](../../atl/reference/cpatht-class.md) mediante `CString`.|  
+|[CPathA](#cpatha)|Una especialización de [CPathT](../../atl/reference/cpatht-class.md) mediante `CStringA`.|  
+|[CPathW](#cpathw)|Una especialización de [CPathT](../../atl/reference/cpatht-class.md) mediante `CStringW`.|  
 |[CSimpleValArray](#csimplevalarray)|Representa una matriz para almacenar tipos simples.|  
 |[DefaultThreadTraits](#defaultthreadtraits)|La clase de rasgos de subproceso de forma predeterminada.|  
 |[LPCURL](#lpcurl)|Un puntero a una constante [CUrl](../../atl/reference/curl-class.md) objeto.|  
 |[LPURL](#lpurl)|Un puntero a un [CUrl](../../atl/reference/curl-class.md) objeto.|  
   
 ##  <a name="_atl_base_module"></a>  _ATL_BASE_MODULE  
- Se define como una definición de tipo basado en _ATL_BASE_MODULE70.  
+ Se define como una definición de tipo según _ATL_BASE_MODULE70.  
   
 ```   
 typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;   
@@ -72,26 +72,26 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 ### <a name="remarks"></a>Comentarios  
  Se utiliza en todos los proyectos ATL. En función de [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md).  
   
- La estructura _ATL_BASE_MODULE se derivan de las clases que forman parte de las clases de módulo de ATL 7.0.  Para obtener más información sobre las clases de módulo de ATL, consulte [COM módulos clases](../../atl/com-modules-classes.md).  
+ La estructura _ATL_BASE_MODULE se derivan de las clases que forman parte de las clases de módulo ATL 7.0.  Para obtener más información sobre las clases de módulo de ATL, consulte [clases de módulos de COM](../../atl/com-modules-classes.md).  
 
 ## <a name="requirements"></a>Requisitos
 **Encabezado:** atlcore.h
 
 ##  <a name="_atl_com_module"></a>  _ATL_COM_MODULE  
- Se define como una definición de tipo basado en _ATL_COM_MODULE70.  
+ Se define como una definición de tipo según _ATL_COM_MODULE70.  
   
 ```   
 typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;   
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Usa ATL (proyectos) que usan características de COM. En función de [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).  
+ Usar los proyectos ATL que usan características COM. En función de [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).  
 
 ## <a name="requirements"></a>Requisitos
 **Encabezado:** atlbase.h
   
 ##  <a name="_atl_module"></a>  _ATL_MODULE  
- Se define como una definición de tipo basado en _ATL_MODULE70.  
+ Se define como una definición de tipo según _ATL_MODULE70.  
   
 ```   
 typedef ATL::_ATL_MODULE70 _ATL_MODULE;   
@@ -103,7 +103,7 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
  En función de [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).  
   
 ##  <a name="_atl_win_module"></a>  _ATL_WIN_MODULE  
- Se define como una definición de tipo basado en _ATL_WIN_MODULE70.  
+ Se define como una definición de tipo según _ATL_WIN_MODULE70.  
   
 ```   
 typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE; 
@@ -111,7 +111,7 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Utilizando cualquier ATL (proyectos) que usan características de la ventana. En función de [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md).  
+ Usa los proyectos ATL que usan características de la ventana. En función de [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md).  
 
 ## <a name="requirements"></a>Requisitos
 **Encabezado:** atlbase.h 
@@ -135,7 +135,7 @@ typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 **Encabezado:** atlbase.h
   
 ##  <a name="ccomglobalsthreadmodel"></a>  CComGlobalsThreadModel  
- Llama a métodos del modelo, independientemente del modelo de subproceso que se va a usar el subproceso apropiado.  
+ Llama a métodos del modelo, independientemente del modelo de subprocesamiento que se va a usar el subproceso adecuado.  
   
 ```   
 #if defined(_ATL_SINGLE_THREADED)  
@@ -150,14 +150,14 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Según el modelo de subprocesos utilizado por la aplicación, el `typedef` nombre `CComGlobalsThreadModel` hace referencia a cualquiera [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Estas clases proporcionan adicionales `typedef` nombres para hacer referencia a una clase de sección crítica.  
+ Según el modelo de subprocesos utilizado por la aplicación, el **typedef** nombre `CComGlobalsThreadModel` hace referencia a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Estas clases proporcionan adicionales `typedef` nombres hacer referencia a una clase de sección crítica.  
   
 > [!NOTE]
 > `CComGlobalsThreadModel` no hace referencia a clase [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).  
   
- Usar `CComGlobalsThreadModel` evita que especifica una clase de modelo de subprocesos determinado. Independientemente del modelo de subproceso que se va a usar, se llamará a los métodos adecuados.  
+ Uso de `CComGlobalsThreadModel` evita que se especifica una clase de modelo de subprocesos determinado. Independientemente del modelo de subprocesamiento que se va a usar, se llamará a los métodos adecuados.  
   
- Además `CComGlobalsThreadModel`, ATL proporciona el `typedef` nombre [CComObjectThreadModel](#ccomobjectthreadmodel). La clase que se hace referencia a cada uno de ellos `typedef` depende del modelo de subprocesos utilizado, tal y como se muestra en la tabla siguiente:  
+ Además `CComGlobalsThreadModel`, ATL proporciona el **typedef** nombre [CComObjectThreadModel](#ccomobjectthreadmodel). La clase que se hace referencia a cada uno de ellos `typedef` depende del modelo de subprocesos utilizado, tal como se muestra en la tabla siguiente:  
   
 |typedef|Subprocesamiento único|Apartamento de subproceso|Subprocesamiento libre|  
 |-------------|----------------------|-------------------------|--------------------|  
@@ -166,13 +166,13 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
   
  S = `CComSingleThreadModel`; M = `CComMultiThreadModel`  
   
- Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGlobalsThreadModel` en un objeto que están disponible globalmente para el programa, o cuando desee proteger los recursos del módulo a través de varios subprocesos.  
+ Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGlobalsThreadModel` en un objeto que está disponible globalmente para el programa, o si desea proteger los recursos de módulo en varios subprocesos.  
 
 ## <a name="requirements"></a>Requisitos
 **Encabezado:** atlbase.h
   
 ##  <a name="ccomobjectthreadmodel"></a>  CComObjectThreadModel  
- Llama a métodos del modelo, independientemente del modelo de subproceso que se va a usar el subproceso apropiado.  
+ Llama a métodos del modelo, independientemente del modelo de subprocesamiento que se va a usar el subproceso adecuado.  
   
 ```   
 #if defined(_ATL_SINGLE_THREADED)  
@@ -187,14 +187,14 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Según el modelo de subprocesos utilizado por la aplicación, el `typedef` nombre `CComObjectThreadModel` hace referencia a cualquiera [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Estas clases proporcionan adicionales `typedef` nombres para hacer referencia a una clase de sección crítica.  
+ Según el modelo de subprocesos utilizado por la aplicación, el `typedef` nombre `CComObjectThreadModel` hace referencia a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Estas clases proporcionan adicionales `typedef` nombres hacer referencia a una clase de sección crítica.  
   
 > [!NOTE]
 > `CComObjectThreadModel` no hace referencia a clase [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).  
   
- Usar `CComObjectThreadModel` evita que especifica una clase de modelo de subprocesos determinado. Independientemente del modelo de subproceso que se va a usar, se llamará a los métodos adecuados.  
+ Uso de `CComObjectThreadModel` evita que se especifica una clase de modelo de subprocesos determinado. Independientemente del modelo de subprocesamiento que se va a usar, se llamará a los métodos adecuados.  
   
- Además `CComObjectThreadModel`, ATL proporciona el `typedef` nombre [CComGlobalsThreadModel](#ccomglobalsthreadmodel). La clase que se hace referencia a cada uno de ellos `typedef` depende del modelo de subprocesos utilizado, tal y como se muestra en la tabla siguiente:  
+ Además `CComObjectThreadModel`, ATL proporciona el **typedef** nombre [CComGlobalsThreadModel](#ccomglobalsthreadmodel). La clase que se hace referencia a cada uno de ellos **typedef** depende del modelo de subprocesos utilizado, tal como se muestra en la tabla siguiente:  
   
 |typedef|Subprocesamiento único|Apartamento de subproceso|Subprocesamiento libre|  
 |-------------|----------------------|-------------------------|--------------------|  
@@ -203,13 +203,13 @@ typedef CComMultiThreadModel CComObjectThreadModel;
   
  S = `CComSingleThreadModel`; M = `CComMultiThreadModel`  
   
- Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGlobalsThreadModel` en un objeto que sea global disponible para el programa, o cuando desea proteger los recursos del módulo a través de varios subprocesos.  
+ Use `CComObjectThreadModel` dentro de una clase de objeto único. Use `CComGlobalsThreadModel` en un objeto que sea globalmente disponible para el programa, o cuando desea proteger los recursos de módulo en varios subprocesos.  
 
 ## <a name="requirements"></a>Requisitos
 **Encabezado:** atlbase.h
   
 ##  <a name="ccontainedwindow"></a>  CContainedWindow  
- Esta clase es una especialización de **CContainedWindowT.**  
+ Esta clase es una especialización de `CContainedWindowT`.  
   
 ```   
 typedef CContainedWindowT<CWindow> CContainedWindow;   
@@ -219,10 +219,10 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 **Encabezado:** atlwin.h
   
 ### <a name="remarks"></a>Comentarios  
- `CContainedWindow` es una especialización de [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Si desea cambiar la clase base o rasgos, use `CContainedWindowT` directamente.  
+ `CContainedWindow` es una especialización de [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Si desea cambiar la clase base o rasgos, utilice `CContainedWindowT` directamente.  
   
 ##  <a name="cpath"></a>  CPath  
- Una especialización de [CPathT](../../atl/reference/cpatht-class.md) con `CString`.  
+ Una especialización de [CPathT](../../atl/reference/cpatht-class.md) mediante `CString`.  
   
 ```   
 typedef CPathT<CString> CPath;   
@@ -232,7 +232,7 @@ typedef CPathT<CString> CPath;
 **Encabezado:** atlpath.h
   
 ##  <a name="cpatha"></a>  CPathA  
- Una especialización de [CPathT](../../atl/reference/cpatht-class.md) con `CStringA`.  
+ Una especialización de [CPathT](../../atl/reference/cpatht-class.md) mediante `CStringA`.  
   
 ```   
 typedef CPathT<CStringA> CPathA;   
@@ -242,7 +242,7 @@ typedef CPathT<CStringA> CPathA;
 **Encabezado:** atlpath.h  
   
 ##  <a name="cpathw"></a>  CPathW  
- Una especialización de [CPathT](../../atl/reference/cpatht-class.md) con `CStringW`.  
+ Una especialización de [CPathT](../../atl/reference/cpatht-class.md) mediante `CStringW`.  
   
 ```   
 typedef ATL::CPathT<CStringW> CPathW;   
@@ -288,7 +288,7 @@ La clase de rasgos de subproceso de forma predeterminada.
 ```
 
 ## <a name="remarks"></a>Comentarios
-Si el proyecto actual utiliza CRT multiproceso, DefaultThreadTraits se define como CRTThreadTraits. En caso contrario, se utiliza Win32ThreadTraits.
+Si el proyecto actual usa CRT multiproceso, DefaultThreadTraits se define como CRTThreadTraits. En caso contrario, se usa Win32ThreadTraits.
 
 
 ## <a name="requirements"></a>Requisitos

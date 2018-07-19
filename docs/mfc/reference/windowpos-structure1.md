@@ -1,5 +1,5 @@
 ---
-title: WINDOWPOS estructura-1 | Documentos de Microsoft
+title: WINDOWPOS (Structure1) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db51e8f9924d69406989b3a9ac12b45f0e55e870
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379299"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885967"
 ---
-# <a name="windowpos-structure1"></a>WINDOWPOS estructura-1
-El `WINDOWPOS` estructura contiene información sobre el tamaño y la posición de una ventana.  
+# <a name="windowpos-structure1"></a>WINDOWPOS (Structure1)
+El `WINDOWPOS` estructura contiene información sobre el tamaño y posición de una ventana.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,40 +53,40 @@ typedef struct tagWINDOWPOS { /* wp */
  *y*  
  Especifica la posición del borde derecho de la ventana.  
   
- `cx`  
+ *CX*  
  Especifica el ancho de la ventana, en píxeles.  
   
- `cy`  
+ *CY*  
  Especifica el alto de la ventana, en píxeles.  
   
- `flags`  
- Especifica las opciones de posición de ventana. Este miembro puede ser uno de los siguientes valores:  
+ *flags*  
+ Especifica las opciones de ubicación de ventana. Este miembro puede ser uno de los siguientes valores:  
   
-- **SWP_DRAWFRAME** dibuja un marco (definido en la descripción de la clase de la ventana) alrededor de la ventana. La ventana recibe un `WM_NCCALCSIZE` mensaje.  
+- SWP_DRAWFRAME dibuja un marco (definido en la descripción de la clase de la ventana) alrededor de la ventana. La ventana recibe un mensaje WM_NCCALCSIZE.  
   
-- **SWP_FRAMECHANGED** envía una `WM_NCCALCSIZE` de mensajes a la ventana, incluso si no se está cambiando el tamaño de la ventana. Si no se especifica este marcador, `WM_NCCALCSIZE` sólo se envía cuando se cambia el tamaño de la ventana.  
+- SWP_FRAMECHANGED envía un WM_NCCALCSIZE mensajes a la ventana, incluso si no se está cambiando el tamaño de la ventana. Si no se especifica este marcador, se envía WM_NCCALCSIZE solo cuando se cambia el tamaño de la ventana.  
   
-- **SWP_HIDEWINDOW** oculta la ventana.  
+- SWP_HIDEWINDOW oculta la ventana.  
   
-- `SWP_NOACTIVATE` No se activa la ventana.  
+- SWP_NOACTIVATE no se activa la ventana.  
   
-- **SWP_NOCOPYBITS** descarta todo el contenido del área de cliente. Si no se especifica este marcador, el contenido del área de cliente válido se guarda y se copian en el área de cliente después de la ventana es de tamaño o mover.  
+- SWP_NOCOPYBITS descarta todo el contenido del área de cliente. Si no se especifica esta marca, el contenido del área de cliente válido se guarda y se vuelven a copiar en el área de cliente después de la ventana es de tamaño o cambiar de posición.  
   
-- `SWP_NOMOVE` Conserva la posición actual (pasa por alto el **x** y **y** miembros).  
+- SWP_NOMOVE conserva la posición actual (omite la `x` y `y` miembros).  
   
-- **SWP_NOOWNERZORDER** no cambia la posición de la ventana propietaria del orden Z.  
+- SWP_NOOWNERZORDER no cambia la posición de la ventana propietaria del orden Z.  
   
-- `SWP_NOSIZE` Conserva el tamaño actual (pasa por alto el **cx** y **cy** miembros).  
+- Tamaño actual conserva SWP_NOSIZE (omite la `cx` y `cy` miembros).  
   
-- **SWP_NOREDRAW** no volver a dibujarse cambios.  
+- No SWP_NOREDRAW redibuja cambios.  
   
-- **SWP_NOREPOSITION** igual que **SWP_NOOWNERZORDER**.  
+- SWP_NOREPOSITION igual que SWP_NOOWNERZORDER.  
   
-- **SWP_NOSENDCHANGING** impide que la ventana de recepción el `WM_WINDOWPOSCHANGING` mensaje.  
+- SWP_NOSENDCHANGING evita que la ventana recibe el mensaje WM_WINDOWPOSCHANGING.  
   
-- `SWP_NOZORDER` Conserva la ordenación actual (pasa por alto el **hwndInsertAfter** miembro).  
+- SWP_NOZORDER conserva la ordenación actual (omite la `hwndInsertAfter` miembro).  
   
-- **SWP_SHOWWINDOW** muestra la ventana.  
+- SWP_SHOWWINDOW muestra la ventana.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** winuser.h  

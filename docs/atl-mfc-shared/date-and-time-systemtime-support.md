@@ -1,5 +1,5 @@
 ---
-title: 'Fecha y hora: compatibilidad con SYSTEMTIME | Documentos de Microsoft'
+title: 'Fecha y hora: compatibilidad con SYSTEMTIME | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecbfd517a0fd535a23920ae21d03f1756babc113
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cf48881b3baeb7dc5ab48483ae9b075a9c048a38
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355405"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883572"
 ---
 # <a name="date-and-time-systemtime-support"></a>Fecha y hora: compatibilidad con SYSTEMTIME
-El [CTime](../atl-mfc-shared/reference/ctime-class.md) clase tiene constructores que aceptan horas de archivo y de sistema de Win32. Si usa objetos `CTime` con estos propósitos, deberá modificar sus correspondientes inicializaciones en consecuencia, tal y como se describe en este artículo.  
+El [CTime](../atl-mfc-shared/reference/ctime-class.md) clase tiene constructores que aceptan horas de archivo y sistema de Win32. Si usa objetos `CTime` con estos propósitos, deberá modificar sus correspondientes inicializaciones en consecuencia, tal y como se describe en este artículo.  
   
  Para obtener información acerca de la estructura SYSTEMTIME, vea [SYSTEMTIME](../mfc/reference/systemtime-structure1.md). Para obtener información acerca de la estructura FILETIME, vea [FILETIME](../mfc/reference/filetime-structure.md).  
   
@@ -41,19 +41,19 @@ El [CTime](../atl-mfc-shared/reference/ctime-class.md) clase tiene constructores
   
 -   CTime (FILETIME const & `fileTime`);  
   
- El parámetro `fileTime` es una referencia a la estructura `FILETIME` de Win32, que representa la hora como un valor de 64 bits, lo cual constituye un formato más cómodo para almacenarlo internamente que una estructura `SYSTEMTIME` y el formato que Win32 usa para representar la hora de creación de un archivo.  
+ El *fileTime* parámetro es una referencia a un Win32 `FILETIME` estructura, que representa la hora como un valor de 64 bits, un formato más cómodo para almacenarlo internamente que una `SYSTEMTIME` estructura y el formato utilizado por Win32 para representan la hora de creación del archivo.  
   
  Si su código contiene un objeto `CTime` inicializado con la hora del sistema, le conviene usar el constructor `SYSTEMTIME` en Win32.  
   
- Lo más probable es que no utilizará `CTime` `FILETIME` inicialización directamente. Si utiliza un `CFile` objeto para manipular un archivo, [CFile:: GetStatus](../mfc/reference/cfile-class.md#getstatus) recupera la marca de tiempo del archivo por medio una `CTime` objeto inicializado con un `FILETIME` estructura.  
+ Lo más probable es que no usará `CTime` `FILETIME` inicialización directamente. Si usa un `CFile` objeto para manipular un archivo, [CFile:: GetStatus](../mfc/reference/cfile-class.md#getstatus) recupera la marca de tiempo del archivo por usted a través de un `CTime` objeto inicializado con un `FILETIME` estructura.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre  
   
 -   [Fecha general y la programación de tiempo en MFC](../atl-mfc-shared/date-and-time.md)  
   
 -   [Compatibilidad de automatización de la fecha y la programación de tiempo](../atl-mfc-shared/date-and-time-automation-support.md)  
   
--   [Clases de propósito general para la fecha y la programación de tiempo](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
+-   [Clases de propósito general para la programación de hora y fecha](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Fecha y hora](../atl-mfc-shared/date-and-time.md)

@@ -1,5 +1,5 @@
 ---
-title: Consideraciones para escribir código de prólogo y epílogo | Documentos de Microsoft
+title: Consideraciones para escribir código de prólogo y epílogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd87d4af4c797d324e6f882cc5c2e139a784543
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b7f4e2c25d7ead3399020221c1e0e9633557d24
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414775"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942112"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Consideraciones para escribir código de prólogo/epílogo
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  
- Antes de escribir sus propias secuencias de código de prólogo y epílogo, es importante que comprenda cómo se diseña el marco de pila. También es útil saber cómo usar el **__LOCAL_SIZE** símbolos.  
+ Antes de escribir sus propias secuencias de código de prólogo y epílogo, es importante que comprenda cómo se diseña el marco de pila. También es útil saber cómo utilizar el símbolo __LOCAL_SIZE.  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Diseño del marco de pila  
  En este ejemplo se muestra el código de prólogo estándar que puede aparecer en una función de 32 bits:  
@@ -51,16 +51,16 @@ ret                       ; Return from function
  La pila siempre va de mayor a menor (de las direcciones de memoria superiores a las inferiores). El puntero base (`ebp`) señala al valor insertado de `ebp`. El área de valores locales comienza en `ebp-4`. Para tener acceso a las variables locales, calcule un desplazamiento de `ebp` restando el valor apropiado a `ebp`.  
   
 ##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE  
- El compilador proporciona un símbolo, **__LOCAL_SIZE**, para su uso en el bloque de ensamblador alineado del código de prólogo de función. Este símbolo se utiliza para asignar espacio para variables locales del marco de pila en código de prólogo personalizado.  
+ El compilador proporciona un símbolo, __LOCAL_SIZE para su uso en el bloque de ensamblador alineado del código de prólogo de función. Este símbolo se utiliza para asignar espacio para variables locales del marco de pila en código de prólogo personalizado.  
   
- El compilador determina el valor de **__LOCAL_SIZE**. Su valor es el número total de bytes de todas las variables locales definidas por el usuario y las variables temporales generadas por el compilador. **__LOCAL_SIZE** se puede utilizar como operando inmediato; no se puede utilizar en una expresión. No debe cambiar o volver a definir el valor de este símbolo. Por ejemplo:  
+ El compilador determina el valor de __LOCAL_SIZE. Su valor es el número total de bytes de todas las variables locales definidas por el usuario y las variables temporales generadas por el compilador. __LOCAL_SIZE puede utilizarse como operando inmediato; no se puede usar en una expresión. No debe cambiar o volver a definir el valor de este símbolo. Por ejemplo:  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- El siguiente ejemplo de una función naked que contiene personalizadas de prólogo y epílogo secuencias utiliza el **__LOCAL_SIZE** símbolos en la secuencia de prólogo:  
+ El siguiente ejemplo de una función naked que contiene secuencias de epílogo y prólogo personalizado utiliza el símbolo __LOCAL_SIZE en la secuencia de prólogo:  
   
 ```  
 // the__local_size_symbol.cpp  

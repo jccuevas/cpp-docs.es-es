@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t (extractores) | Documentos de Microsoft
+title: _com_ptr_t (extractores) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1343d7dd5f6a35bb222b731294ec897116b9e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0bfe0cdb5ea9dd524f2e81fcb2719bf40001758
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944601"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t (Extractores)
 **Específicos de Microsoft**  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      operator Interface*( ) const throw( );   
+operator Interface*( ) const throw( );   
 operator Interface&( ) const;   
 Interface& operator*( ) const;   
 Interface* operator->( ) const;   
@@ -55,17 +56,17 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>Comentarios  
   
--   **operador Interface\***  devuelve el puntero de interfaz encapsulado, que puede ser **NULL**.  
+-   **operador Interface\***  devuelve el puntero de interfaz encapsulado, que puede ser NULL.  
   
--   **operador Interface &** devuelve una referencia al puntero de interfaz encapsulado y emite un error si el puntero es **NULL**.  
+-   **operador Interface &** devuelve una referencia al puntero de interfaz encapsulado y emite un error si el puntero es NULL.  
   
--   **operador\***  permite que un objeto de puntero inteligente actúe como si fuera la interfaz encapsulada real cuando se desreferencia.  
+-   **operador\***  permite a un objeto de puntero inteligente para que actúe como si fuese la interfaz encapsulada real cuando se desreferencia.  
   
--   **operador ->** permite que un objeto de puntero inteligente actúe como si fuera la interfaz encapsulada real cuando se desreferencia.  
+-   **operador ->** permite a un objeto de puntero inteligente para que actúe como si fuese la interfaz encapsulada real cuando se desreferencia.  
   
--   **operador &** libera cualquier puntero de interfaz encapsulado, lo reemplaza con **NULL**y devuelve la dirección del puntero encapsulado. Esto permite que el puntero inteligente que se pasan por dirección a una función que tiene un **out** parámetro a través del cual devuelve un puntero de interfaz.  
+-   **operador &** libera cualquier puntero de interfaz encapsulado, lo reemplaza con el valor NULL y devuelve la dirección del puntero encapsulado. Esto permite que el puntero inteligente que se pasará por dirección a una función que tiene un *out* parámetro a través del cual devuelve un puntero de interfaz.  
   
--   **operador bool** permite que un objeto de puntero inteligente para su uso en una expresión condicional. Este operador devuelve **true** si el puntero no es **NULL**.  
+-   **operador booleano** permite a un objeto de puntero inteligente que se usará en una expresión condicional. Este operador devuelve TRUE si el puntero no es NULL.  
   
  **FIN de Específicos de Microsoft**  
   

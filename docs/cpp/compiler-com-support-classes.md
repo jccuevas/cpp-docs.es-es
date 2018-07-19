@@ -1,5 +1,5 @@
 ---
-title: Clases de compatibilidad con COM del compilador | Documentos de Microsoft
+title: Las clases de compatibilidad con COM del compilador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4fe4e7c26d1b32f16d524407279e5e71534d00c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411249"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939824"
 ---
 # <a name="compiler-com-support-classes"></a>Clases de compatibilidad con COM del compilador
 **Específicos de Microsoft**  
@@ -33,8 +33,8 @@ ms.locfileid: "32411249"
 |-----------|-------------|  
 |[_bstr_t](../cpp/bstr-t-class.md)|Encapsula el tipo `BSTR` para proporcionar operadores y métodos útiles.|  
 |[_com_error](../cpp/com-error-class.md)|Define el objeto de error iniciado por [_com_raise_error](../cpp/com-raise-error.md) en la mayoría de los errores.|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Encapsula punteros de interfaz COM y automatiza las llamadas necesarias a `AddRef`, **versión**, y `QueryInterface`.|  
-|[_variant_t](../cpp/variant-t-class.md)|Ajusta la **VARIANT** tipo para proporcionar operadores y métodos útiles.|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Encapsula punteros de interfaz COM y automatiza las llamadas necesarias a `AddRef`, `Release`, y `QueryInterface`.|  
+|[_variant_t](../cpp/variant-t-class.md)|Encapsula el tipo `VARIANT` para proporcionar operadores y métodos útiles.|  
   
 **FIN de Específicos de Microsoft**  
   

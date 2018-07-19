@@ -1,5 +1,5 @@
 ---
-title: _com_error::_com_error | Documentos de Microsoft
+title: _com_error::_com_error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d26239f6edf98e90f9d4d773d654025da410a97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec16faa9881fc1c69dca5f8f39b8797cf0fcff0d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944474"
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
 **Específicos de Microsoft**  
@@ -31,41 +32,39 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _com_error(  
+_com_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = NULL,  
-   bool fAddRef=false  
-) throw( );  
-_com_error(  
-   const _com_error& that   
-) throw( );  
+   bool fAddRef=false) throw( );  
+
+_com_error( const _com_error& that ) throw( );  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `hr`  
- Información de `HRESULT`.  
+ *recursos humanos*  
+ Información de HRESULT.  
   
- `perrinfo`  
- **IErrorInfo** objeto.  
+ *perrinfo*  
+ Objeto `IErrorInfo`.  
   
- **BOOL fAddRef = false**  
- Hace que el constructor llame a AddRef en un valor no nulo **IErrorInfo** interfaz. Esto proporciona un recuento de referencias correcto en el caso habitual de que la propiedad de la interfaz se pase al objeto `_com_error`, por ejemplo:  
+ `bool fAddRef=false`  
+ Hace que el constructor llame a AddRef en un valor no null `IErrorInfo` interfaz. Esto proporciona un recuento de referencias correcto en el caso habitual de que la propiedad de la interfaz se pase al objeto `_com_error`, por ejemplo:  
   
-```  
+```cpp 
 throw _com_error(hr, perrinfo);  
 ```  
   
- Si no desea que su código para transferir la propiedad a la `_com_error` objeto y el `AddRef` es necesario para compensar la **versión** en el `_com_error` destructor, construya el objeto como sigue:  
+ Si no desea que su código para transferir la propiedad a la `_com_error` objeto y el `AddRef` es necesario para desplazar el `Release` en el `_com_error` destructor, construya el objeto como sigue:  
   
-```  
+```cpp 
 _com_error err(hr, perrinfo, true);  
 ```  
   
- `that`  
+ *que*  
  Objeto `_com_error` existente.  
   
 ## <a name="remarks"></a>Comentarios  
- El primer constructor crea un nuevo objeto, dados un `HRESULT` y opcionales **IErrorInfo** objeto. El segundo crea una copia de un objeto `_com_error` existente.  
+ El primer constructor crea un nuevo objeto, dados un HRESULT y opcional `IErrorInfo` objeto. El segundo crea una copia de un objeto `_com_error` existente.  
   
  **FIN de Específicos de Microsoft**  
   

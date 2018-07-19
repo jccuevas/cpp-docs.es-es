@@ -1,5 +1,5 @@
 ---
-title: Palabras clave de herencia | Documentos de Microsoft
+title: Palabras clave de herencia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44cdb2b8149d2e8faf09ed715f96bc069620076b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944450"
 ---
 # <a name="inheritance-keywords"></a>Palabras clave de herencia
 **Específicos de Microsoft**  
@@ -50,12 +51,12 @@ class [__virtual_inheritance] class-name;
   
  C++ permite declarar un puntero a un miembro de clase antes de la definición de clase. Por ejemplo:  
   
-```  
+```cpp 
 class S;  
 int S::*p;  
 ```  
   
- En el código anterior, `p` se declara como un puntero a miembro entero de clase S. Sin embargo, `class S` tiene no se ha definido en este código; solo se ha declarado. Cuando el compilador encuentra un puntero así, debe crear una representación generalizada del puntero. El tamaño de la representación depende del modelo de herencia especificado. Hay cuatro maneras de especificar un modelo de herencia al compilador:  
+ En el código anterior, `p` se declara como un puntero a miembro entero de clase S. Sin embargo, `class S` tiene aún no se ha definido en este código; solo se ha declarado. Cuando el compilador encuentra un puntero así, debe crear una representación generalizada del puntero. El tamaño de la representación depende del modelo de herencia especificado. Hay cuatro maneras de especificar un modelo de herencia al compilador:  
   
 -   En el IDE bajo **representación de puntero a miembro**  
   
@@ -63,7 +64,7 @@ int S::*p;
   
 -   Mediante el [pointers_to_members](../preprocessor/pointers-to-members.md) pragma  
   
--   Mediante las palabras clave de herencia `__single_inheritance`, `__multiple_inheritance` y `__virtual_inheritance`. Esta técnica controla el modelo de herencia clase por clase.  
+-   Las palabras clave de herencia **__single_inheritance**, **__multiple_inheritance**, y **__virtual_inheritance**. Esta técnica controla el modelo de herencia clase por clase.  
   
     > [!NOTE]
     >  Si siempre se declara un puntero a un miembro de una clase después de definir la clase, no se necesita usar ninguna de estas opciones.  
@@ -72,7 +73,7 @@ int S::*p;
   
  Si se cambia el ejemplo anterior a:  
   
-```  
+```cpp 
 class __single_inheritance S;  
 int S::*p;  
 ```  

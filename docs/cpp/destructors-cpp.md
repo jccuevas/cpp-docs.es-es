@@ -1,5 +1,5 @@
 ---
-title: Destructores (C++) | Documentos de Microsoft
+title: Destructores (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64d75946d3ae9c1de1d59d74100de68a3b27dcc8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2bbe849f8ec9d47c73b7d909734df600957f3afd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704807"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941790"
 ---
 # <a name="destructors-c"></a>Destructores (C++)
 
-Un destructor es una función miembro que se invoca automáticamente cuando el objeto queda fuera del ámbito o se destruyeron de forma explícita mediante una llamada a `delete`. Un destructor tiene el mismo nombre que la clase, precedido por una tilde (`~`). Por ejemplo, el destructor de la clase `String` se declara como: `~String()`.
+Un destructor es una función miembro que se invoca automáticamente cuando el objeto se sale del ámbito o se destruyeron de forma explícita mediante una llamada a **eliminar**. Un destructor tiene el mismo nombre que la clase, precedido por una tilde (`~`). Por ejemplo, el destructor de la clase `String` se declara como: `~String()`.
 
-Si no se define un destructor, el compilador proporcionará un valor predeterminado; para muchas clases de esto es suficiente. Solo necesita definir un destructor personalizado cuando la clase almacena los identificadores de recursos de sistema que necesitan que se liberen o punteros que poseen la memoria que señalan a.
+Si no se define un destructor, el compilador proporcionará uno predeterminado; para muchas clases de esto es suficiente. Solo tiene que definir un destructor personalizado cuando la clase almacena los identificadores de recursos del sistema que se deben liberar o punteros que poseen la memoria que señalan a.
 
 Considere la siguiente declaración de una clase `String`:
 
@@ -72,7 +72,7 @@ int main() {
 }
 ```
 
-En el ejemplo anterior, el destructor `String::~String` utiliza el operador `delete` para desasignar el espacio asignado dinámicamente para el almacenamiento de texto.
+En el ejemplo anterior, el destructor `String::~String` usa el **eliminar** operador desasignar el espacio asignado dinámicamente para el almacenamiento de texto.
 
 ## <a name="declaring-destructors"></a>Declarar destructores
 
@@ -82,11 +82,11 @@ Varias reglas rigen la declaración de destructores. Destructores:
 
 - No aceptan argumentos.
 
-- No devuelven un valor (o `void`).
+- No se devuelve un valor (o **void**).
 
-- No se pueden declarar como **const**, **volátiles**, o **estático**. Sin embargo, se puede invocar para la destrucción de objetos declarados como **const**, **volátiles**, o **estático**.
+- No se puede declarar como **const**, **volátil**, o **estático**. Sin embargo, se puede invocar para la destrucción de objetos declarados como **const**, **volátil**, o **estático**.
 
-- Se pueden declarar como **virtuales**. Mediante los destructores virtuales, puede destruir objetos sin conocer su tipo; se invoca el destructor correcto para el objeto mediante el mecanismo de función virtual. Observe que los destructores también se pueden declarar como funciones virtuales puras para las clases abstractas.
+- Se pueden declarar como **virtual**. Mediante los destructores virtuales, puede destruir objetos sin conocer su tipo; se invoca el destructor correcto para el objeto mediante el mecanismo de función virtual. Observe que los destructores también se pueden declarar como funciones virtuales puras para las clases abstractas.
 
 ## <a name="using-destructors"></a>Usar destructores
 
@@ -94,7 +94,7 @@ Se llama a los destructores cuando se produce alguno de los eventos siguientes:
 
 - Un objeto local (automático) con ámbito de bloque sale de ámbito.
 
-- Un objeto asignado con el **nueva** operador se desasigna explícitamente con **eliminar**.
+- Un objeto asignado mediante el **nueva** operador se desasigna explícitamente con **eliminar**.
 
 - La duración de un objeto temporal termina.
 
@@ -104,11 +104,11 @@ Se llama a los destructores cuando se produce alguno de los eventos siguientes:
 
 Los destructores pueden llamar libremente a funciones miembro de clase y acceder a datos de miembros de clase.
 
-Hay dos restricciones en el uso de destructores:
+Hay dos restricciones sobre el uso de los destructores:
 
 - No se puede tomar su dirección.
 
-- las clases derivadas no heredan el destructor de su clase base.
+- Las clases derivadas no heredan el destructor de su clase base.
 
 ## <a name="order-of-destruction"></a>Orden de destrucción
 
@@ -118,7 +118,7 @@ Cuando un objeto sale del ámbito o se elimina, la secuencia de eventos para su 
 
 1. Los destructores de los objetos miembro no estáticos se llaman en el orden inverso al que aparecen en la declaración de clase. La lista de inicialización miembro opcional utilizada en la construcción de estos miembros no afecta al orden de construcción o destrucción.
 
-1. Destructores de clases base no virtuales se llaman en el orden inverso de la declaración.
+1. Destructores de clases base no virtuales se llaman en orden inverso de la declaración.
 
 1. Los destructores para las clases base virtuales se llaman en el orden inverso al de la declaración.
 
@@ -201,11 +201,11 @@ Para determinar el orden de destrucción de las clases base virtuales de un obje
 
 Por consiguiente, para la clase `E`, el orden de destrucción es:
 
-1. La clase base no virtual `E`.
+1. La clase base no virtuales `E`.
 
-1. La clase base no virtual `D`.
+1. La clase base no virtuales `D`.
 
-1. La clase base no virtual `C`.
+1. La clase base no virtuales `C`.
 
 1. La clase base virtual `B`.
 
@@ -219,7 +219,7 @@ Tales interdependencias entre clases en un gráfico de herencia son inherentemen
 
 ### <a name="non-virtual-base-classes"></a>Clases base no virtuales
 
-Se llaman a los destructores de clases base no virtuales en el orden inverso en el que se declaran los nombres de clase base. Considere la siguiente declaración de clase:
+Se llama a los destructores de clases base no virtuales en el orden inverso en el que se declaran los nombres de clase base. Considere la siguiente declaración de clase:
 
 ```cpp
 class MultInherit : public Base1, public Base2
@@ -230,7 +230,7 @@ En el ejemplo anterior, el destructor para `Base2` se invoca antes que el destru
 
 ## <a name="explicit-destructor-calls"></a>Llamadas de destructor explícitas
 
-Raras veces se necesita llamar explícitamente al destructor. Sin embargo, puede ser útil realizar la limpieza de los objetos colocados en direcciones absolutas. Estos objetos se asignan normalmente utilizando definido por el usuario **nueva** operador que toma un argumento de ubicación. El **eliminar** operador no puede desasignar esta memoria porque no está asignada desde el almacén gratuito (para obtener más información, consulte [el nuevo y eliminar operadores](../cpp/new-and-delete-operators.md)). Sin embargo, una llamada al destructor puede realizar la limpieza adecuada. Para llamar explícitamente al destructor para un objeto, `s`, de clase `String`, utilice una de las instrucciones siguientes:
+Raras veces se necesita llamar explícitamente al destructor. Sin embargo, puede ser útil realizar la limpieza de los objetos colocados en direcciones absolutas. Estos objetos se asignan normalmente utilizando definido por el usuario **nuevo** operador que toma un argumento de ubicación. El **eliminar** operador no puede desasignar esta memoria porque no se asigna desde el almacén gratuito (para obtener más información, consulte [el nuevo y eliminar operadores](../cpp/new-and-delete-operators.md)). Sin embargo, una llamada al destructor puede realizar la limpieza adecuada. Para llamar explícitamente al destructor para un objeto, `s`, de clase `String`, utilice una de las instrucciones siguientes:
 
 ```cpp
 s.String::~String();     // non-virtual call

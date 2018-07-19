@@ -1,5 +1,5 @@
 ---
-title: novtable | Documentos de Microsoft
+title: novtable | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 283ff09c320b67686e353f0497c665828cd8b5d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944576"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  
- Este es un atributo extendido `__declspec`.  
+ Se trata de un **__declspec** atributo extendido.  
   
- Esta forma de `__declspec` se puede aplicar a cualquier declaración de clase, pero solo se debe aplicar a clases de interfaz puras, es decir, clases que nunca crearán instancias por sí solas. `__declspec` impide que el compilador genere código para inicializar vfptr en los constructores y el destructor de la clase. En muchos casos, esto quita las únicas referencias a la vtable asociadas a la clase y, en consecuencia, el vinculador la quita. El uso de esta forma de `__declspec` puede producir una reducción significativa del tamaño del código.  
+ Esta forma de **__declspec** se pueden aplicar a cualquier declaración de clase, pero solo se debe aplicar a clases de interfaz puras, es decir, las clases que nunca se crearán instancias por sí solos. El **__declspec** evita que el compilador genere código para inicializar vfptr en los constructores y el destructor de la clase. En muchos casos, esto quita las únicas referencias a la vtable asociadas a la clase y, en consecuencia, el vinculador la quita. Uso de esta forma de **__declspec** puede dar lugar a una reducción significativa del tamaño del código.  
   
  Si intenta crear una instancia de una clase marcada con `novtable` y, a continuación, tener acceso a un miembro de clase, recibirá una infracción de acceso (AV).  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // novtable.cpp  
 #include <stdio.h>  
   

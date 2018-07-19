@@ -1,5 +1,5 @@
 ---
-title: Macros de mensajes de Windows | Documentos de Microsoft
+title: Macros de mensajes de Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21bb273b94f871e253ab927238c96256f46e2b3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3063dd1bb5bbd9c0eb957b9727027b2d01edfd7d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360222"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886211"
 ---
 # <a name="windows-messages-macros"></a>Macros de mensajes de Windows
-Esta macro reenvía mensajes de ventana.  
+Esta macro reenvía los mensajes de ventana.  
   
 |||  
 |-|-|  
@@ -39,10 +39,10 @@ WM_FORWARDMSG
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se ha procesado el mensaje, cero si no es así.  
+ Distinto de cero si se ha procesado el mensaje, cero si no.  
   
 ### <a name="remarks"></a>Comentarios  
- Use `WM_FORWARDMSG` para reenviar un mensaje recibido en una ventana a otra ventana para su procesamiento. Los parámetros de LPARAM y WPARAM se utilizan como sigue:  
+ Usar WM_FORWARDMSG para reenviar un mensaje recibido en una ventana a otra ventana para su procesamiento. Los parámetros LPARAM y WPARAM se usan como sigue:  
   
 |Parámetro|Uso|  
 |---------------|-----------|  

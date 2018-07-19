@@ -1,5 +1,5 @@
 ---
-title: Macros de estado de objeto | Documentos de Microsoft
+title: Macros de estado de objeto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddfc28c659d0c1eb54794d8fc76a9f3a4f9e73b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e3657e7076bf67a5a3870d7d127cc150f976ecde
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360879"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883663"
 ---
 # <a name="object-status-macros"></a>Macros de estado de objeto
-Esta macro establece marcas que pertenecen a controles ActiveX.  
+Esta macro establece marcas que pertenecen a los controles ActiveX.  
   
 |||  
 |-|-|  
-|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Usar en controles ActiveX de ATL para establecer el **OLEMISC** marcas.|  
+|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Se usa en los controles ActiveX de ATL para establecer las marcas OLEMISC.|  
 
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
@@ -40,10 +40,10 @@ DECLARE_OLEMISC_STATUS( miscstatus )
   
 ### <a name="parameters"></a>Parámetros  
  *MiscStatus*  
- Marcas OLEMISC todas aplicables.  
+ Todos los indicadores OLEMISC.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta macro se usa para establecer las marcas OLEMISC para un control ActiveX. Hacer referencia a [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) para obtener más detalles.  
+ Esta macro se usa para establecer las marcas OLEMISC para un control ActiveX. Consulte [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) para obtener más detalles.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  

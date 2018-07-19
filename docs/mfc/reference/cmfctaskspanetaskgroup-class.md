@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCTasksPaneTaskGroup | Documentos de Microsoft
+title: CMFCTasksPaneTaskGroup (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037501"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849170"
 ---
-# <a name="cmfctaskspanetaskgroup-class"></a>Clase CMFCTasksPaneTaskGroup
-El `CMFCTasksPaneTaskGroup` clase es una clase auxiliar utilizada por la [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) control. Los objetos de tipo `CMFCTasksPaneTaskGroup` representan un *grupo de tareas*. El grupo de tareas es una lista de elementos que el marco muestra en un cuadro independiente con un botón de contraer. El cuadro puede tener una leyenda opcional (nombre de grupo). Si un grupo está contraído, la lista de tareas no está visible.  
+# <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup (clase)
+El `CMFCTasksPaneTaskGroup` clase es una clase auxiliar usada por el [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) control. Los objetos de tipo `CMFCTasksPaneTaskGroup` representan un *grupo de tareas*. El grupo de tareas es una lista de elementos que el marco muestra en un cuadro independiente con un botón de contraer. El cuadro puede tener una leyenda opcional (nombre de grupo). Si un grupo está contraído, la lista de tareas no está visible.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -69,30 +69,30 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Determina si el grupo de tareas está alineado en la parte inferior del control del panel de tareas.|  
-|[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Determina si el grupo de tareas está contraído.|  
-|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Determina si el grupo de tareas es *especial.* El marco de trabajo muestra títulos especial en un color diferente.|  
+|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Determina si el grupo de tareas se alinea a la parte inferior del control del panel de tareas.|  
+|[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Determina si se contrae el grupo de tareas.|  
+|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Determina si el grupo de tareas es *especial.* El marco de trabajo muestra los subtítulos especiales en un color diferente.|  
 |[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Contiene la lista interna de tareas.|  
 |[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Especifica el rectángulo delimitador del título de grupo.|  
 |[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Especifica el rectángulo delimitador del grupo.|  
 |[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|Especifica el nombre del grupo.|  
   
 ## <a name="remarks"></a>Comentarios  
- La ilustración siguiente muestra un grupo de tareas expandido:  
+ La siguiente ilustración muestra un grupo de tareas expandido:  
   
  ![Grupo de tareas, expandido](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
- La ilustración siguiente muestra un grupo de tareas contraído:  
+ La siguiente ilustración muestra un grupo de tareas contraído:  
   
  ![Grupo de tareas contraído](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")  
   
- La ilustración siguiente muestra un grupo de tareas sin título:  
+ La siguiente ilustración muestra un grupo de tareas sin título:  
   
  ![Grupo de tareas sin título](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
   
- En la siguiente ilustración muestra dos grupos de tareas. El primer grupo de tareas está marcado como especial estableciendo la `m_bIsSpecial` indicador en `TRUE`, mientras que el segundo grupo de tareas no es especial. Tenga en cuenta cómo el título para el primer grupo de tareas es más oscuro que el segundo grupo de tareas:  
+ La siguiente ilustración muestra dos grupos de tareas. El primer grupo de tareas está marcado como especial estableciendo el `m_bIsSpecial` marca en TRUE, mientras que el segundo grupo de tareas no es especial. Tenga en cuenta cómo el título para el primer grupo de tareas es más oscuro que el segundo grupo de tareas:  
   
- ![Grupo de tareas especial](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
+ ![Grupo de tareas especiales](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -120,7 +120,7 @@ CMFCTasksPaneTaskGroup(
  Especifica el nombre del grupo en el título del grupo.  
   
  *bIsBottom*  
- Especifica si el grupo está alineado en la parte inferior del control del panel de tareas.  
+ Especifica si el grupo está alineado a la parte inferior del control del panel de tareas.  
   
  *bIsSpecial*  
  Especifica si el grupo se designa como *especial* y por lo tanto, si el título del grupo se rellena con un color diferente.  
@@ -137,34 +137,34 @@ CMFCTasksPaneTaskGroup(
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom  
- Determina si el grupo de tareas está alineado en la parte inferior del control del panel de tareas.  
+ Determina si el grupo de tareas se alinea a la parte inferior del control del panel de tareas.  
   
 ```  
 BOOL m_bIsBottom;  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Solo un grupo se puede alinear a la parte inferior del control del panel de tareas. Este grupo de tareas debe agregarse en último lugar. Para obtener más información, consulte [cmfctaskspane:: addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
+ Solo un grupo se puede alinear a la parte inferior del control del panel de tareas. Este grupo de tareas debe agregarse por última vez. Para obtener más información, consulte [cmfctaskspane:: addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
 ##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
- Determina si el grupo de tareas está contraído.  
+ Determina si se contrae el grupo de tareas.  
   
 ```  
 BOOL m_bIsCollapsed;  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Puede habilitar o deshabilitar la capacidad para contraer los grupos en el panel de tareas mediante una llamada a [cmfctaskspane:: Enablegroupcollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
+ Puede habilitar o deshabilitar la capacidad de contraer grupos en el panel de tareas mediante una llamada a [cmfctaskspane:: Enablegroupcollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
   
 ##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial  
- Determina si el grupo de tareas es *especial* y si el título de un grupo de tareas especial debe identificarse mediante un color diferente.  
+ Determina si el grupo de tareas es *especial* y si el título de un grupo de tareas especiales debe identificarse mediante un color diferente.  
   
 ```  
 BOOL m_bIsSpecial;  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Si la aplicación está utilizando el tema visual de Windows XP y `m_bIsSpecial` es `FALSE`, las llamadas de framework `DrawThemeBackground` con el `EBP_NORMALGROUPBACKGROUND` marca. Si `m_bIsSpecial` es `TRUE`, las llamadas de framework `DrawThemeBackground` con el `EBP_SPECIALGROUPBACKGROUND` marca.  
+ Si la aplicación utiliza el tema visual de Windows XP y `m_bIsSpecial` es FALSE, las llamadas de framework `DrawThemeBackground` con la marca EBP_NORMALGROUPBACKGROUND. Si `m_bIsSpecial` es TRUE, las llamadas de framework `DrawThemeBackground` con la marca EBP_SPECIALGROUPBACKGROUND.  
   
 ##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
  Contiene la lista interna de tareas.  
@@ -184,7 +184,7 @@ CRect m_rect;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este valor se calcula automáticamente por el marco de trabajo.  
+ Este valor se calcula automáticamente el marco de trabajo.  
   
 ##  <a name="m_rectgroup"></a>  CMFCTasksPaneTaskGroup::m_rectGroup  
  Especifica el rectángulo delimitador del grupo.  
@@ -220,15 +220,15 @@ virtual BOOL SetACCData(
  Representa la ventana principal del grupo de tareas actual.  
   
  [out] *datos*  
- Un objeto del tipo `CAccessibilityData` que se rellena con los datos de accesibilidad del grupo de tareas actual.  
+ Un objeto de tipo `CAccessibilityData` que se rellena con los datos de accesibilidad del grupo de tareas actual.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el *datos* parámetro se rellena con los datos de accesibilidad del grupo de tareas actual correctamente; en caso contrario, `FALSE`.  
+ TRUE si el *datos* parámetro se rellena con los datos de accesibilidad del grupo de tareas actual correctamente; de lo contrario, FALSE.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)   
- [Clase CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)   
+ [CMFCTasksPane (clase)](../../mfc/reference/cmfctaskspane-class.md)   
+ [CMFCTasksPaneTask (clase)](../../mfc/reference/cmfctaskspanetask-class.md)   
  [CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md)   
  [CObject (clase)](../../mfc/reference/cobject-class.md)

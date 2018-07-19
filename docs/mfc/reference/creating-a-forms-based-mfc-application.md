@@ -1,5 +1,5 @@
 ---
-title: Crear una aplicación MFC basada en formularios | Documentos de Microsoft
+title: Crear una aplicación MFC basada en formularios | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5ee588d7fe90e5bfc39aa8e4ab7a7499b62ad98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 292e3d5b0fdc7e42bd44e6993535cd176e877ca5
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372452"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851644"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Crear una aplicación MFC basada en formularios
-Un formulario es un cuadro de diálogo con controles que permiten a un usuario tener acceso a datos y, posiblemente, modificarlos. Es posible que quiera desarrollar una aplicación en la que el usuario elija entre un conjunto de formularios. Normalmente, una aplicación basada en formularios permite a los formularios de acceso de usuario haciendo clic en **New** desde el **archivo** menú. Una aplicación basada en cuadros de diálogo, que no ofrece a los usuarios acceso a una **New** opción en el **archivo** menú, también se considera una aplicación basada en formularios.  
+Un formulario es un cuadro de diálogo con controles que permiten a un usuario tener acceso a datos y, posiblemente, modificarlos. Es posible que quiera desarrollar una aplicación en la que el usuario elija entre un conjunto de formularios. Normalmente, una aplicación basada en formularios permite al usuario de formularios de acceso haciendo clic con el **New** desde el **archivo** menú. Una aplicación basada en el cuadro de diálogo, que ofrece a los usuarios acceso a un **New** opción el **archivo** menú, también se considera una aplicación basada en formularios.  
   
- Una aplicación basada en formularios de interfaz de un único documento (SDI) sólo permite que se ejecute una instancia de un formulario concreto cada vez. Es posible ejecutar formularios distintos al mismo tiempo desde una aplicación de basada en formularios SDI si selecciona un formulario nuevo de la **New** opción en el **archivo** menú.  
+ Una aplicación basada en formularios de interfaz de un único documento (SDI) sólo permite que se ejecute una instancia de un formulario concreto cada vez. Es posible ejecutar formularios distintos al mismo tiempo desde una aplicación basada en formularios de SDI seleccionando un nuevo formulario desde el **New** opción el **archivo** menú.  
   
  Si crea una aplicación basada en formularios de interfaz de múltiples documentos (MDI), la aplicación permitirá el uso de varias instancias del mismo formulario.  
   
- Si crea una aplicación que admita varios documentos de nivel superior, el escritorio será la ventana primaria implícita del documento y el marco del documento no se restringirá al área de cliente de la aplicación. Puede abrir varias instancias del documento, cada una con su marco, su menú y su icono de la barra de tareas. Puede cerrar las instancias siguientes de los documentos de forma individual, pero si selecciona el `Exit` opción desde el **archivo** menú de la instancia inicial, la aplicación cierra todas las instancias.  
+ Si crea una aplicación que admita varios documentos de nivel superior, el escritorio será la ventana primaria implícita del documento y el marco del documento no se restringirá al área de cliente de la aplicación. Puede abrir varias instancias del documento, cada una con su marco, su menú y su icono de la barra de tareas. Puede cerrar las instancias siguientes de los documentos de forma individual, pero si selecciona el **Exit** opción desde el **archivo** menú de la instancia inicial, la aplicación cierra todas las instancias.  
   
  Las aplicaciones SDI, MDI y de múltiples documentos de nivel superior son todas aplicaciones basadas en formularios y utilizan la arquitectura documento/vista.  
   
@@ -39,7 +39,7 @@ Un formulario es un cuadro de diálogo con controles que permiten a un usuario t
   
  La clase base para las aplicaciones basadas en formularios es [CFormView](../../mfc/reference/cformview-class.md). Si la aplicación ofrece compatibilidad con bases de datos, también puede seleccionar cualquier clase que se derive de `CFormView`. Un formulario es cualquier ventana derivada de `CFormView` o de cualquier clase que herede de `CFormView`.  
   
- Incluso si utiliza una clase base como [CView](../../mfc/reference/cview-class.md), podrá convertir posteriormente sus aplicaciones basadas en formularios [agregando una clase MFC](../../mfc/reference/adding-an-mfc-class.md) derivado de `CFormView` y comprobando la **generar DocTemplate recursos** casilla de verificación en la [Asistente para clases MFC](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
+ Incluso si usa una clase base como [CView](../../mfc/reference/cview-class.md), podrá convertir posteriormente sus aplicaciones basadas en formularios [agregando una clase MFC](../../mfc/reference/adding-an-mfc-class.md) deriva `CFormView` y comprobando el **DocTemplate generar recursos** casilla de verificación en la [Asistente para clases MFC](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
   
  Cuando finalice el asistente, se abrirá el proyecto y, si seleccionó `CFormView` (o una clase que herede de `CFormView`) como clase base o creó una aplicación basada en un cuadro de diálogo, Visual C++ abrirá el editor de cuadros de diálogo. En este momento ya está preparado para diseñar su primer formulario.  
   
@@ -47,12 +47,12 @@ Un formulario es un cuadro de diálogo con controles que permiten a un usuario t
   
 1.  Siga las instrucciones de [crear una aplicación MFC](../../mfc/reference/creating-an-mfc-application.md).  
   
-2.  En el Asistente para aplicaciones MFC [tipo de aplicación](../../mfc/reference/application-type-mfc-application-wizard.md) página, seleccione la **compatibilidad con la arquitectura documento/vista** casilla de verificación.  
+2.  En el Asistente para aplicaciones MFC [tipo de aplicación](../../mfc/reference/application-type-mfc-application-wizard.md) página, seleccione el **compatibilidad con la arquitectura documento/vista** casilla de verificación.  
   
 3.  Seleccione **único documento**, **varios documentos**, o **varios documentos de nivel superior**.  
   
     > [!NOTE]
-    >  Si elige una SDI, MDI o aplicación de interfaz de múltiples documentos de nivel superior, de forma predeterminada, `CView` se establece como la clase base para la vista de la aplicación en el [clases generadas](../../mfc/reference/generated-classes-mfc-application-wizard.md) página del asistente. Para crear una aplicación basada en formularios, debe seleccionar `CFormView` como clase base de la vista de la aplicación. Tenga en cuenta que el asistente no proporciona compatibilidad con la impresión para una aplicación basada en formularios.  
+    >  Si eligió una SDI, MDI o aplicación de interfaz de múltiples documentos de nivel superior, de forma predeterminada, `CView` se establece como la clase base para la vista de la aplicación en el [clases generadas](../../mfc/reference/generated-classes-mfc-application-wizard.md) página del asistente. Para crear una aplicación basada en formularios, debe seleccionar `CFormView` como clase base de la vista de la aplicación. Tenga en cuenta que el asistente no proporciona compatibilidad con la impresión para una aplicación basada en formularios.  
   
 4.  Establezca las demás opciones de proyecto que desee en las otras páginas del asistente.  
   
@@ -69,6 +69,6 @@ Un formulario es un cuadro de diálogo con controles que permiten a un usuario t
 ## <a name="see-also"></a>Vea también  
  [Asistente para aplicaciones MFC](../../mfc/reference/mfc-application-wizard.md)   
  [Vistas de formulario](../../mfc/form-views-mfc.md)   
- [Crear una aplicación de MFC estilo Explorador de archivos](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
+ [Creación de una aplicación de MFC estilo Explorador de archivos](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
  [Creación de una aplicación MFC estilo explorador web](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
 

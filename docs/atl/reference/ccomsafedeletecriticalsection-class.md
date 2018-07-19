@@ -1,5 +1,5 @@
 ---
-title: Clase CComSafeDeleteCriticalSection | Documentos de Microsoft
+title: CComSafeDeleteCriticalSection (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff637f9e307f2714cd351f3c6bcaf1e4b78342e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b822a76cf98acb38cd5b785a868b989a96b96a12
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363864"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879444"
 ---
-# <a name="ccomsafedeletecriticalsection-class"></a>Clase CComSafeDeleteCriticalSection
-Esta clase proporciona métodos para la obtención y liberación de propiedad de un objeto de sección crítica.  
+# <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection (clase)
+Esta clase proporciona métodos para obtener y liberar la propiedad de un objeto de sección crítica.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -59,14 +59,14 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
   
 |||  
 |-|-|  
-|[m_bInitialized](#m_binitialized)|Marcas si interno **CRITICAL_SECTION** se ha inicializado el objeto.|  
+|[m_bInitialized](#m_binitialized)|Marcas si interno `CRITICAL_SECTION` objeto se ha inicializado.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComSafeDeleteCriticalSection` deriva de la clase [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Sin embargo, `CComSafeDeleteCriticalSection` proporciona mecanismos de seguridad adicionales con respecto a [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).  
+ `CComSafeDeleteCriticalSection` se deriva de la clase [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Sin embargo, `CComSafeDeleteCriticalSection` proporciona mecanismos de seguridad adicionales a través de [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).  
   
- Cuando una instancia de `CComSafeDeleteCriticalSection` sale del ámbito o explícitamente se elimina de la memoria, el objeto de sección crítica subyacente automáticamente se limpiará si sigue siendo válido. Además, el [CComSafeDeleteCriticalSection::Term](#term) método finalizará correctamente si el objeto de sección crítica subyacente todavía no se ha asignado o ya se ha liberado de la memoria.  
+ Cuando una instancia de `CComSafeDeleteCriticalSection` sale del ámbito o no está explícitamente se elimina de la memoria, el objeto de sección crítica subyacente automáticamente se limpiará si aún es válido. Además, el [CComSafeDeleteCriticalSection::Term](#term) método se cerrará correctamente si el objeto de sección crítica subyacente no se ha asignado o ya se ha liberado de memoria.  
   
- Vea [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) para obtener más información sobre las clases de aplicación auxiliar de sección crítica.  
+ Consulte [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) para obtener más información sobre las clases auxiliares de sección crítica.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
@@ -84,7 +84,7 @@ CComSafeDeleteCriticalSection();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Establece el [m_bInitialized](#m_binitialized) miembro de datos **false**.  
+ Establece el [m_bInitialized](#m_binitialized) miembro de datos en FALSE.  
   
 ##  <a name="dtor"></a>  CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
  Destructor.  
@@ -94,10 +94,10 @@ CComSafeDeleteCriticalSection();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Libera interno **CRITICAL_SECTION** objeto de la memoria si el [m_bInitialized](#m_binitialized) miembro de datos está establecido en **true**.  
+ Libera interno `CRITICAL_SECTION` objeto de la memoria si el [m_bInitialized](#m_binitialized) miembro de datos está establecido en TRUE.  
   
 ##  <a name="init"></a>  CComSafeDeleteCriticalSection::Init  
- Llama a la implementación de la clase base de [Init](/visualstudio/debugger/init) y establece [m_bInitialized](#m_binitialized) a **true** si se realiza correctamente.  
+ Llama a la implementación de clase base [Init](/visualstudio/debugger/init) y establece [m_bInitialized](#m_binitialized) en TRUE si se realiza correctamente.  
   
 ```
 HRESULT Init() throw();
@@ -107,7 +107,7 @@ HRESULT Init() throw();
  Devuelve el resultado de [CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init).  
   
 ##  <a name="lock"></a>  CComSafeDeleteCriticalSection::Lock  
-Llama a la implementación de la clase base de [bloqueo](ccomcriticalsection-class.md#lock).  
+Llama a la implementación de clase base [bloqueo](ccomcriticalsection-class.md#lock).  
 
   
 ```
@@ -118,33 +118,33 @@ HRESULT Lock();
  Devuelve el resultado de [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock).  
   
 ### <a name="remarks"></a>Comentarios  
- Este método supone que la [m_bInitialized](#m_binitialized) miembro de datos está establecido en **true** después de la entrada. Si no se cumple esta condición, se genera una aserción en compilaciones de depuración.  
+ Este método supone que la [m_bInitialized](#m_binitialized) miembro de datos está establecido en TRUE en la entrada. Si no se cumple esta condición, se genera una aserción en las compilaciones de depuración.  
   
  Para obtener más información sobre el comportamiento de la función, consulte [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock).  
   
 ##  <a name="m_binitialized"></a>  CComSafeDeleteCriticalSection::m_bInitialized  
- Marcas si interno **CRITICAL_SECTION** se ha inicializado el objeto.  
+ Marcas si interno `CRITICAL_SECTION` objeto se ha inicializado.  
   
 ```
 bool m_bInitialized;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El **m_bInitialized** miembro de datos se utiliza para realizar un seguimiento de la validez de subyacente **CRITICAL_SECTION** objeto asociado a la [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) clase. Subyacente **CRITICAL_SECTION** objeto no se intentará se libera de la memoria si esta marca no está establecida en **true**.  
+ El `m_bInitialized` miembro de datos se usa para realizar un seguimiento de la validez de subyacente `CRITICAL_SECTION` objeto asociado con el [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) clase. Subyacente `CRITICAL_SECTION` objeto no se volverá a intentar para liberarse de la memoria si esta marca no se establece en TRUE.  
   
 ##  <a name="term"></a>  CComSafeDeleteCriticalSection::Term  
- Llama a la implementación de la clase base de [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term) si interno **CRITICAL_SECTION** objeto es válido.  
+ Llama a la implementación de clase base [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term) si interno `CRITICAL_SECTION` objeto es válido.  
   
 ```
 HRESULT Term() throw();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el resultado de [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term), o **S_OK** si [m_bInitialized](#m_binitialized) se estableció en **false** después de la entrada.  
+ Devuelve el resultado de [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term), o S_OK si [m_bInitialized](#m_binitialized) se estableció en FALSE después de la entrada.  
   
 ### <a name="remarks"></a>Comentarios  
- Es seguro llamar a este aunque método interno **CRITICAL_SECTION** objeto no es válido. El destructor de esta clase llama a este método si el [m_bInitialized](#m_binitialized) miembro de datos está establecido en **true**.  
+ Es seguro llamar a este aunque método interno `CRITICAL_SECTION` objeto no es válido. El destructor de esta clase llama a este método si el [m_bInitialized](#m_binitialized) miembro de datos está establecido en TRUE.  
   
 ## <a name="see-also"></a>Vea también  
- [Clase CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
+ [CComCriticalSection (clase)](../../atl/reference/ccomcriticalsection-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: _variant_t (extractores) | Documentos de Microsoft
+title: _variant_t (extractores) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,17 +58,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a8480a645728808ef4eae7a42c5080313d9fc6f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423323"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940350"
 ---
 # <a name="variantt-extractors"></a>_variant_t (Extractores)
 **Específicos de Microsoft**  
   
- Extraer datos de encapsulado **VARIANT** objeto.  
+ Extraer datos de encapsulado `VARIANT` objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -95,7 +95,7 @@ operator unsigned __int64() const;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Extrae datos sin procesar de encapsulado **VARIANT**. Si el **VARIANT** ya no es del tipo adecuado, **VariantChangeType** se usa para intentar la conversión, y se genera un error en caso de error:  
+ Extrae datos sin procesar encapsulado `VARIANT`. Si el `VARIANT` ya no es del tipo adecuado, `VariantChangeType` sirve para intentar la conversión, y se genera un error en caso de error:  
   
 -   **operator short ()** extrae un **corto** valor entero.  
   
@@ -105,19 +105,19 @@ operator unsigned __int64() const;
   
 -   **operator double ()** extrae un **doble** valor entero.  
   
--   **operator CY ()** extrae un **CY** objeto.  
+-   **operator CY ()** extrae un `CY` objeto.  
   
--   **bool (operador)** extrae un `bool` valor.  
+-   **bool (operador)** extrae un **bool** valor.  
   
--   **operator DECIMAL ()** extrae un **DECIMAL** valor.  
+-   **operator DECIMAL ()** extrae un `DECIMAL` valor.  
   
--   **operator BYTE ()** extrae un **bytes** valor.  
+-   **operator BYTE ()** extrae un `BYTE` valor.  
   
--   **_bstr_t (operador)** extrae una cadena, que se encapsula en un `_bstr_t` objeto.  
+-   **operator _bstr_t ()** extrae una cadena, que se encapsula en un `_bstr_t` objeto.  
   
--   **operador IDispatch\*()** extrae un puntero dispinterface de encapsulado **VARIANT**. `AddRef` se llama en el puntero resultante, por lo que es decisión suya llamar a **versión** para liberarlo.  
+-   **operador IDispatch\*()** extrae un puntero dispinterface de encapsulado `VARIANT`. `AddRef` se llama en el puntero resultante, por lo que es decisión suya llamar a `Release` lo libere.  
   
--   **operador IUnknown\*()** extrae un puntero a interfaz COM encapsulado **VARIANT**. `AddRef` se llama en el puntero resultante, por lo que es decisión suya llamar a **versión** para liberarlo.  
+-   **operador IUnknown\*()** extrae un puntero de interfaz COM encapsulado `VARIANT`. `AddRef` se llama en el puntero resultante, por lo que es decisión suya llamar a `Release` lo libere.  
   
  **FIN de Específicos de Microsoft**  
   

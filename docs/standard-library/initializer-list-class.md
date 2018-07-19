@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::initializer_list::size
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3941464c80d254b6675e1982dac952c3f29a0f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11014748dcbfa105d111e9e2a8d83fc57d0cb405
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847044"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954059"
 ---
 # <a name="initializerlist-class"></a>initializer_list (Clase)
 
@@ -44,7 +44,7 @@ class initializer_list
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Type`|Tipo de datos de elementos que se va a almacenar en la `initializer_list`.|
+|*Type*|Tipo de datos de elementos que se va a almacenar en la `initializer_list`.|
 
 
 ## <a name="remarks"></a>Comentarios
@@ -127,8 +127,8 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`First`|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
-|`Last`|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
+|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 
 ### <a name="remarks"></a>Comentarios
 

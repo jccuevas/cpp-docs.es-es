@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f5085d1f2ab3b641e023654d05f1e9e66bae2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fe7672a925105bff3b63032a709353388143c0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857342"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953015"
 ---
 # <a name="syncnone-class"></a>sync_none (Clase)
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`count`|El número de elementos de la matriz que se van a asignar.|
+|*count*|El número de elementos de la matriz que se van a asignar.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -90,8 +90,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`ptr`|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
-|`count`|El número de objetos que se van a desasignar del almacenamiento.|
+|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -109,12 +109,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Cache`|El objeto de caché del filtro de sincronización.|
-|`Other`|El objeto de caché para comparar la igualdad.|
+|*Caché*|El objeto de caché del filtro de sincronización.|
+|*Otros problemas*|El objeto de caché para comparar la igualdad.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-La función miembro siempre devuelve `true`.
+La función miembro siempre devuelve **true**.
 
 ### <a name="remarks"></a>Comentarios
 

@@ -1,5 +1,5 @@
 ---
-title: Objetos temporales | Documentos de Microsoft
+title: Objetos temporales | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5523abd0142b8b6dc3a25beb8ca8d113cf5463bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944197"
 ---
 # <a name="temporary-objects"></a>Objetos temporales
 En algunos casos, es necesario que el compilador cree objetos temporales. Estos objetos temporales se pueden crear por las razones siguientes:  
   
--   Para inicializar una referencia de `const` con un inicializador de un tipo diferente del tipo subyacente de la referencia que se va a inicializar.  
+-   Para inicializar un **const** referencia con un inicializador de un tipo diferente del tipo subyacente de la referencia que se va a inicializar.  
   
 -   Para almacenar el valor devuelto de una función que devuelve un tipo definido por el usuario. Estos objetos temporales solo se crean si el programa no copia el valor devuelto en un objeto. Por ejemplo:  
   
-    ```  
+    ```cpp 
     UDT Func1();    //  Declare a function that returns a user-defined  
                     //   type.  
   
@@ -41,7 +42,7 @@ En algunos casos, es necesario que el compilador cree objetos temporales. Estos 
   
      Como el valor devuelto no se copia en otro objeto, se crea un objeto temporal. Un caso más común de creación de objetos temporales es durante la evaluación de una expresión en la que deben llamarse a funciones de operador sobrecargadas. Estas funciones de operador sobrecargadas devuelven un tipo definido por el usuario que normalmente no se copia a otro objeto.  
   
-     Considere la expresión `ComplexResult = Complex1 + Complex2 + Complex3`. La expresión `Complex1 + Complex2` se evalúa y el resultado se almacena en un objeto temporal. Siguiente, la expresión *temporal* `+ Complex3` se evalúa, y se copia el resultado en `ComplexResult` (no está sobrecargado la suponiendo que el operador de asignación).  
+     Considere la expresión `ComplexResult = Complex1 + Complex2 + Complex3`. La expresión `Complex1 + Complex2` se evalúa y el resultado se almacena en un objeto temporal. A continuación, la expresión *temporal* `+ Complex3` se evalúa, y el resultado se copia en `ComplexResult` (no se sobrecarga la suponiendo que el operador de asignación).  
   
 -   Para almacenar el resultado de una conversión en un tipo definido por el usuario. Cuando un objeto de un tipo determinado se convierte explícitamente en un tipo definido por el usuario, este nuevo objeto se crea como un objeto temporal.  
   
@@ -51,6 +52,6 @@ En algunos casos, es necesario que el compilador cree objetos temporales. Estos 
   
 |Motivo por el que se creó el objeto temporal|Punto de destrucción|  
 |------------------------------|-----------------------|  
-|Resultado de evaluación de la expresión|Todos los objetos temporales creados como resultado de la evaluación de la expresión se destruyen al final de la instrucción de expresión (es decir, en el punto y coma) o al final de las expresiones de control en el caso de las instrucciones `for`, `if`, `while`, `do` y `switch`.|  
-|Inicialización de referencias `const`|Si un inicializador no es un valor L del mismo tipo que la referencia que se va a inicializar, se crea un objeto temporal del tipo de objeto subyacente y se inicializa con la expresión de inicialización. Este objeto temporal se destruye inmediatamente después de que se destruya el objeto de referencia al que está enlazado.|  
+|Resultado de evaluación de la expresión|Todos los objetos temporales creados como resultado de evaluación de la expresión se destruyen al final de la instrucción de expresión (es decir, en el punto y coma), o al final de las expresiones de control **para**, **si**, **mientras**, **hacer**, y **cambiar** instrucciones.|  
+|Inicializando **const** referencias|Si un inicializador no es un valor L del mismo tipo que la referencia que se va a inicializar, se crea un objeto temporal del tipo de objeto subyacente y se inicializa con la expresión de inicialización. Este objeto temporal se destruye inmediatamente después de que se destruya el objeto de referencia al que está enlazado.|  
   

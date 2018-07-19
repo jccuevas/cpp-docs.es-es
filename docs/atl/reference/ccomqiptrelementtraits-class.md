@@ -1,5 +1,5 @@
 ---
-title: Clase CComQIPtrElementTraits | Documentos de Microsoft
+title: CComQIPtrElementTraits (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9122431d0d71d33406250a624048dbede46fd387
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e99299d1232fda75d6b0552b5236a060903a08e5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361940"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879657"
 ---
-# <a name="ccomqiptrelementtraits-class"></a>Clase CComQIPtrElementTraits
-Esta clase proporciona métodos, las funciones estáticas y definiciones de tipos útiles al crear colecciones de punteros de interfaz COM.  
+# <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits (clase)
+Esta clase proporciona métodos, funciones estáticas y definiciones de tipos útiles al crear colecciones de punteros de interfaz COM.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,11 +37,11 @@ class CComQIPtrElementTraits :
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `I`  
- Una interfaz COM que especifican el tipo de puntero que se almacenará.  
+ *I*  
+ Una interfaz COM que especifica el tipo de puntero que se almacenará.  
   
- `piid`  
- Un puntero a lo IID de `I`.  
+ *piid*  
+ Un puntero para el IID de *me*.  
   
 ## <a name="members"></a>Miembros  
   
@@ -52,7 +52,7 @@ class CComQIPtrElementTraits :
 |[CComQIPtrElementTraits::INARGTYPE](#inargtype)|El tipo de datos que se usará para agregar elementos al objeto de clase de colección.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase se deriva de métodos y proporciona una definición de tipo útil al crear una clase de colección de [CComQIPtr](../../atl/reference/ccomqiptr-class.md) objetos de puntero de interfaz COM. Esta clase se utiliza tanto el [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) y [CInterfaceList](../../atl/reference/cinterfacelist-class.md) clases.  
+ Esta clase se deriva de los métodos y proporciona una definición de tipo útil al crear una clase de colección de [CComQIPtr](../../atl/reference/ccomqiptr-class.md) objetos de puntero de interfaz COM. Esta clase se utiliza tanto el [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) y [CInterfaceList](../../atl/reference/cinterfacelist-class.md) clases.  
   
  Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
@@ -78,5 +78,5 @@ typedef I* INARGTYPE;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Clase CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+ [CDefaultElementTraits (clase)](../../atl/reference/cdefaultelementtraits-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)

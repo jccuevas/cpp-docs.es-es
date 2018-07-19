@@ -1,5 +1,5 @@
 ---
-title: Devueltos de función de tipo de referencia | Documentos de Microsoft
+title: Tipo de referencia de función devuelve | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944201"
 ---
 # <a name="reference-type-function-returns"></a>Valores devueltos de función de tipo de referencia
 Las funciones se pueden declarar para que devuelvan un tipo de referencia. Hay dos motivos para realizar este tipo de declaración:  
@@ -31,14 +32,14 @@ Las funciones se pueden declarar para que devuelvan un tipo de referencia. Hay d
   
 -   El objeto al que se hace referencia no saldrá del ámbito cuando la función devuelva un valor.  
   
- Al igual que puede ser más eficaz pasar objetos grandes *a* funciones por referencia, también puede ser más eficaz para devolver objetos grandes *de* funciones por referencia. El protocolo de devolución de referencias elimina la necesidad de copiar el objeto en una ubicación temporal antes de que se devuelva.  
+ Al igual que puede ser más eficaz pasar objetos grandes *a* funciones por referencia, también puede ser más eficaz devolver objetos grandes *desde* funciones por referencia. El protocolo de devolución de referencias elimina la necesidad de copiar el objeto en una ubicación temporal antes de que se devuelva.  
   
  Los tipos de valor devuelto de las referencias también pueden ser útiles cuando la función se debe evaluar como un valor L. La mayoría de los operadores sobrecargados pertenecen a esta categoría, especialmente el operador de asignación. Operadores sobrecargados se explican en [operadores sobrecargados](../cpp/operator-overloading.md).  
   
 ## <a name="example"></a>Ejemplo  
  Considere el ejemplo `Point`:  
   
-```  
+```cpp 
 // refType_function_returns.cpp  
 // compile with: /EHsc  
   
@@ -82,7 +83,7 @@ cout << "x = " << ThePoint.x() << "\n"
   
 ## <a name="output"></a>Salida  
   
-```  
+```Output  
 x = 7  
 y = 9  
 ```  
@@ -93,7 +94,7 @@ y = 9
   
  Las declaraciones de tipos de referencia deben contener inicializadores excepto en los casos siguientes:  
   
--   Declaración `extern` explícita  
+-   Explícita **extern** declaración  
   
 -   Declaración de un miembro de clase  
   
@@ -104,7 +105,7 @@ y = 9
 ## <a name="caution-returning-address-of-local"></a>Precaución sobre devolución de dirección  
  Si se declara un objeto en el ámbito local, ese objeto se destruirá cuando la función devuelva un valor. Si la función devuelve una referencia a ese objeto, esa referencia probablemente provocará una infracción de acceso en tiempo de ejecución si el llamador intenta usar la referencia nula.  
   
-```  
+```cpp 
 // C4172 means Don’t do this!!!  
 Foo& GetFoo()  
 {  

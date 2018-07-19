@@ -1,5 +1,5 @@
 ---
-title: Especialización de plantilla (C++) | Documentos de Microsoft
+title: Especialización de plantilla (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cc25bab72532e1bfb425646d76b69aaf07f5d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edef104cafc4b56b5f785537db1c836da4e427dc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422714"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941176"
 ---
 # <a name="template-specialization-c"></a>Especialización de plantilla (C++)
 
@@ -80,7 +80,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Ejemplo
 
- Si tiene una clase de colección de plantilla que toma cualquier tipo **T**, puede crear una especialización parcial que toma cualquier tipo de puntero ** T ***. En el código siguiente se muestra una plantilla de clase de colección `Bag` y una especialización parcial para los tipos de puntero en los que la colección desreferencia los tipos de puntero antes de copiarlos en la matriz. A continuación, la colección almacena los valores a los que se señala. Con la plantilla original, solo los propios punteros se hubieran almacenado en la colección y los datos serían vulnerables a la eliminación o la modificación. En esta versión de puntero especial de la colección, se agrega código para comprobar si hay un puntero NULL en el método `add`.  
+ Si tiene una clase de colección de plantilla que toma cualquier tipo `T`, puede crear una especialización parcial que toma cualquier tipo de puntero `T*`. En el código siguiente se muestra una plantilla de clase de colección `Bag` y una especialización parcial para los tipos de puntero en los que la colección desreferencia los tipos de puntero antes de copiarlos en la matriz. A continuación, la colección almacena los valores a los que se señala. Con la plantilla original, solo los propios punteros se hubieran almacenado en la colección y los datos serían vulnerables a la eliminación o la modificación. En esta versión de puntero especial de la colección, se agrega código para comprobar si hay un puntero NULL en el método `add`.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  
@@ -192,7 +192,7 @@ Null pointer!
   
 ## <a name="example"></a>Ejemplo
 
- En el ejemplo siguiente se define una clase de plantilla que toma pares de dos tipos cualquiera y después define una especialización parcial de esa clase de plantilla especializada de modo que uno de los tipos sea `int`. La especialización define un método de ordenación adicional que implementa una ordenación de burbuja simple basada en el entero.  
+ En el ejemplo siguiente se define una plantilla de clase que toma pares de dos tipos cualquiera y, a continuación, define una especialización parcial de esa clase de plantilla especializadas para que uno de los tipos es **int**. La especialización define un método de ordenación adicional que implementa una ordenación de burbuja simple basada en el entero.  
   
 ```cpp
 // partial_specialization_of_class_templates3.cpp  

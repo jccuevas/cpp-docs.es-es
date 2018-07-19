@@ -1,5 +1,5 @@
 ---
-title: CREATESTRUCT (estructura) | Documentos de Microsoft
+title: CREATESTRUCT (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 6036490b21ccbd86dfed56ea90226cbb2db8d596
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078472"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848475"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT (Estructura)
 El `CREATESTRUCT` estructura define los parámetros de inicialización pasados al procedimiento de ventana de una aplicación.  
@@ -47,16 +47,16 @@ typedef struct tagCREATESTRUCT {
   
 #### <a name="parameters"></a>Parámetros  
  *lpCreateParams*  
- Puntos de datos que se utilizarán para crear la ventana.  
+ Puntos de datos que se usará para crear la ventana.  
   
  *hInstance*  
- Identifica el identificador de instancia del módulo del módulo al que pertenece la nueva ventana.  
+ Identifica el identificador de instancia de módulo del módulo que posee la ventana nueva.  
   
  *hMenu*  
  Identifica el menú que va a usar la nueva ventana. Si una ventana secundaria, contiene el identificador entero.  
   
  *hwndParent*  
- Identifica la ventana que posee la nueva ventana. Este miembro es **NULL** si la nueva ventana es una ventana de nivel superior.  
+ Identifica la ventana que posee la ventana nueva. Este miembro es NULL si la nueva ventana es una ventana de nivel superior.  
   
  *CY*  
  Especifica el alto de la nueva ventana.  
@@ -65,10 +65,10 @@ typedef struct tagCREATESTRUCT {
  Especifica el ancho de la nueva ventana.  
   
  *y*  
- Especifica la coordenada y de la esquina superior izquierda de la nueva ventana. Coordenadas son relativas a la ventana primaria si la nueva ventana es una ventana secundaria; en caso contrario, las coordenadas son con respecto al origen de la pantalla.  
+ Especifica la coordenada y de la esquina superior izquierda de la nueva ventana. Las coordenadas son relativas a la ventana principal si la nueva ventana es una ventana secundaria; en caso contrario, las coordenadas son en relación con el origen de la pantalla.  
   
  *x*  
- Especifica la coordenada x de la esquina superior izquierda de la nueva ventana. Coordenadas son relativas a la ventana primaria si la nueva ventana es una ventana secundaria; en caso contrario, las coordenadas son con respecto al origen de la pantalla.  
+ Especifica la coordenada x de la esquina superior izquierda de la nueva ventana. Las coordenadas son relativas a la ventana principal si la nueva ventana es una ventana secundaria; en caso contrario, las coordenadas son en relación con el origen de la pantalla.  
   
  *Estilo*  
  Especifica la nueva ventana [estilo](../../mfc/reference/styles-used-by-mfc.md).  
@@ -77,10 +77,10 @@ typedef struct tagCREATESTRUCT {
  Apunta a una cadena terminada en null que especifica el nombre de la ventana nueva.  
   
  *lpszClass*  
- Señala a una cadena terminada en null que especifica el nombre de clase de Windows de la nueva ventana (una [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estructura; para obtener más información, consulte el SDK de Windows).  
+ Señala a una cadena terminada en null que especifica el nombre de la ventana nueva de la clase de Windows (un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estructura; para obtener más información, consulte el SDK de Windows).  
   
  *dwExStyle*  
- Especifica la [estilo extendido](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) de la nueva ventana.  
+ Especifica el [estilo extendido](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) para la nueva ventana.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** winuser.h  

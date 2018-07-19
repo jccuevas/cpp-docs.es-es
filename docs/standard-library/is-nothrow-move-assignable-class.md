@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 311f4f26b1f63c089c1771e36ac70060fab6b894
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d841428be45ae47eee94bec8c2f40d42e65e29a7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852128"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953252"
 ---
 # <a name="isnothrowmoveassignable-class"></a>Clase is_nothrow_move_assignable
 
@@ -36,11 +36,11 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` tiene un operador de asignación de movimiento nothrow; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un nothrow mover operador de asignación, en caso contrario, es false.
 
 ## <a name="requirements"></a>Requisitos
 

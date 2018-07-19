@@ -1,5 +1,5 @@
 ---
-title: Expresiones con operadores unarios | Documentos de Microsoft
+title: Expresiones con operadores unarios | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9301d4fdb09c63b7dc8e875e2b03a4990acec054
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416176"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941163"
 ---
 # <a name="expressions-with-unary-operators"></a>Expresiones con operadores unarios
 Los operadores unarios actúan solo sobre un operando en una expresión. Los operadores unarios son los siguientes:  
@@ -60,13 +60,13 @@ Los operadores unarios actúan solo sobre un operando en una expresión. Los ope
   
 -   *postfix-expression*  
   
--   `++` *expresión unaria*  
+-   `++` *unary-expression*  
   
--   `--` *expresión unaria*  
+-   `--` *unary-expression*  
   
--   *operador unario* *cast-expression*  
+-   *operador unario* *unary-expression*  
   
--   `sizeof` *expresión unaria*  
+-   **sizeof** *unary-expression*  
   
 -   `sizeof(` *nombre de tipo* `)`  
   
@@ -76,15 +76,15 @@ Los operadores unarios actúan solo sobre un operando en una expresión. Los ope
   
 -   *expresión de desasignación*  
   
- Cualquier *postfix-expression* se considera un *expresión unaria*, y porque cualquier expresión principal se considera un *postfix-expression*, es cualquier expresiones primarias considera un *expresión unaria* también. Para obtener más información, consulte [expresiones de postfijo](../cpp/postfix-expressions.md) y [expresiones primarias](../cpp/primary-expressions.md).  
+ Cualquier *postfix-expression* se considera un *unary-expression*, y dado que cualquier expresión primaria se considera un *postfix-expression*, es cualquier expresión primaria considera un *unary-expression* también. Para obtener más información, consulte [expresiones de postfijo](../cpp/postfix-expressions.md) y [expresiones primarias](../cpp/primary-expressions.md).  
   
- A *operador unario* consta de uno o varios de los símbolos siguientes: `* & + - ! ~`  
+ Un *unary-operator* consta de uno o varios de los siguientes símbolos: `* & + - ! ~`  
   
- El *cast-expression* es una expresión unaria con una conversión opcional para cambiar el tipo. Para obtener más información, consulte [operador de conversión: ()](../cpp/cast-operator-parens.md).  
+ El *unary-expression* es una expresión unaria con una conversión opcional para cambiar el tipo. Para obtener más información, consulte [operador de conversión: ()](../cpp/cast-operator-parens.md).  
   
  Un *expresión* puede ser cualquier expresión. Para obtener más información, consulte [expresiones](../cpp/expressions-cpp.md).  
   
- El *expresión de asignación* hace referencia a la `new` operador. El *desasignación-expression* hace referencia a la `delete` operador. Para obtener más información, vea los vínculos anteriores en este tema.  
+ El *expresión de asignación* hace referencia a la **nuevo** operador. El *desasignación expresión* hace referencia a la **eliminar** operador. Para obtener más información, vea los vínculos anteriores en este tema.  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de expresiones](../cpp/types-of-expressions.md)

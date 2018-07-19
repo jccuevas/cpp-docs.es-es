@@ -1,7 +1,7 @@
 ---
-title: Friend (C++) | Documentos de Microsoft
+title: Friend (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/02/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1538ad67ce1b742c55dc413d78e40e8dcc9884df
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418268"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942086"
 ---
 # <a name="friend-c"></a>friend (C++)
-En algunas circunstancias, es más cómodo conceder acceso de nivel de miembro a funciones que no son miembros de una clase o a todos los miembros de una clase independiente. Solo el implementador de la clase puede declarar cuáles son sus funciones o clases friend. Las funciones o clases no pueden hacerlo por sí mismas. En una definición de clase, use la `friend` palabra clave y el nombre de una función no miembro u otra clase para conceder acceso a los miembros privados y protegidos de la clase.         En una definición de plantilla, un parámetro de tipo se puede declarar como friend.  
+En algunas circunstancias, es más cómodo conceder acceso de nivel de miembro a funciones que no son miembros de una clase o a todos los miembros de una clase independiente. Solo el implementador de la clase puede declarar cuáles son sus funciones o clases friend. Las funciones o clases no pueden hacerlo por sí mismas. En una definición de clase, use la **friend** palabra clave y el nombre de una función no miembro u otra clase para conceder acceso a los miembros privados y protegidos de su clase. En una definición de plantilla, se puede declarar un parámetro de tipo como un amigo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +38,7 @@ friend F;
 ## <a name="friend-declarations"></a>Declaraciones friend  
  Si declara una función friend que no se declaró previamente, esa función se exporta al ámbito de inclusión que no es de clase.  
   
- Las funciones declaradas en una declaración friend se tratan como si se hubieran declarado mediante la palabra clave `extern`. (Para obtener más información acerca de `extern`, consulte [especificadores de clase de almacenamiento estática](http://msdn.microsoft.com/en-us/3ba9289a-a412-4a17-b319-ceb2c087df48).)  
+ Las funciones declaradas en una declaración friend se tratan como si se hubieran declarado mediante la **extern** palabra clave. Para obtener más información, consulte [extern](extern-cpp.md).  
   
  Aunque las funciones con ámbito global se pueden declarar como friend antes que los prototipos, las funciones miembro no se pueden declarar como friend antes de que aparezca la declaración de clase completa. En el siguiente ejemplo de código se muestra por qué esto produce un error:  
   
@@ -50,7 +50,7 @@ class HasFriends
 };  
 ```  
   
- El ejemplo anterior introduce el nombre de clase `ForwardDeclared` en el ámbito, pero la declaración completa (específicamente, la parte que declara la función `IsAFriend`) no se conoce. Por consiguiente, la declaración de `friend` en la clase `HasFriends` genera un error.  
+ El ejemplo anterior introduce el nombre de clase `ForwardDeclared` en el ámbito, pero la declaración completa (específicamente, la parte que declara la función `IsAFriend`) no se conoce. Por lo tanto, el **friend** declaración de clase `HasFriends` genera un error.  
   
  A partir de C ++ 11, hay dos formas de declaraciones de confianza para una clase:  
   
@@ -59,9 +59,9 @@ friend class F;
 friend F;  
 ```  
   
- El primer formulario presenta una nueva clase F si no se encontró ninguna clase existente con ese nombre en el espacio de nombres más interno.  **C ++ 11**: el segundo formulario no presenta una nueva clase; se puede utilizar cuando la clase ya se ha declarado y se debe usar cuando se declara un parámetro de tipo de plantilla o una definición de tipo como un amigo.  
+ El primer formulario presenta una nueva clase F si no se encontró ninguna clase existente con ese nombre en el espacio de nombres más interno.  **C ++ 11**: el segundo formulario no presenta una nueva clase; se puede usar cuando la clase ya se ha declarado y se debe usar cuando se declara un parámetro de tipo de plantilla o una definición de tipo como un amigo.  
   
- Utilice `class friend F` cuando el tipo de referencia no se ha declarado:  
+ Use `class friend F` cuando el tipo que se hace referencia no ha declarado:  
   
 ```cpp  
 namespace NS  
@@ -126,9 +126,9 @@ class G
 >  Aunque la segunda clase completa debe ser definirse como friend en la primera clase, puede seleccionar las funciones de la primera clase que se definen como friend para la segunda clase.  
   
 ## <a name="friend-functions"></a>funciones de confianza  
- Una función `friend` es una función que no es miembro de una clase pero tiene acceso a los miembros privados y protegidos de la clase. Las funciones friend no se consideran miembros de clase; son funciones externas normales que tienen privilegios de acceso especiales. No están en el ámbito de la clase, y no se les llama usando los operadores de selección de miembro (**.** y -**>**) a menos que sean miembros de otra clase. Una función `friend` la declara la clase que concede el acceso. La declaración `friend` se puede colocar en cualquier lugar de la declaración de clase. No se ve afectada por las palabras clave de control de acceso.  
+ Un **friend** es una función que no es un miembro de una clase pero tiene acceso a miembros privados y protegidos de la clase. Las funciones friend no se consideran miembros de clase; son funciones externas normales que tienen privilegios de acceso especiales. No están en el ámbito de la clase, y no se las llama usando los operadores de selección de miembro (**.** y -**>**) a menos que sean miembros de otra clase. Un **friend** función se declara la clase que concede el acceso. El **friend** declaración puede colocarse en cualquier lugar en la declaración de clase. No se ve afectada por las palabras clave de control de acceso.  
   
- En el ejemplo siguiente se muestra una clase `Point` y una función friend, `ChangePrivate`. La función `friend` tiene acceso al miembro de datos privado del objeto `Point` que recibe como parámetro.  
+ En el ejemplo siguiente se muestra una clase `Point` y una función friend, `ChangePrivate`. El **friend** función tiene acceso al miembro de datos privados de la `Point` recibe como un parámetro de objeto.  
   
 ```cpp  
 // friend_functions.cpp  

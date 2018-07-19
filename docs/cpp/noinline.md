@@ -1,5 +1,5 @@
 ---
-title: noinline | Documentos de Microsoft
+title: noinline | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f81ab892fd7f406292925f424bebc7514fd7ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37098e904402a42f6ff28e594db265fc07b4d458
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944553"
 ---
 # <a name="noinline"></a>noinline
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  
- **__declspec (noinline)** indica al compilador que nunca alinee una función miembro determinada (función de una clase).  
+ **__declspec (noinline)** indica al compilador nunca inserte una función miembro determinada (función de una clase).  
   
  Puede merecer la pena no alinear una función si es pequeña y no es crítica para el rendimiento del código. Es decir, si la función es pequeña y no se la llamará a menudo, por ejemplo, una función que controla una condición de error.  
   
- Tenga en cuenta que si una función se marca como `noinline`, la función de llamada será más pequeña y, por tanto, será por sí misma un candidato para la alineación del compilador.  
+ Tenga en cuenta que si una función está marcada como **noinline**, la función de llamada será más pequeña y por lo tanto, sí misma un candidato para la alineación del compilador.  
   
-```  
+```cpp 
 class X {  
    __declspec(noinline) int mbrfunc() {  
       return 0;   

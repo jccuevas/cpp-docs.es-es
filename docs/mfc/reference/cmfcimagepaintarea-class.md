@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCImagePaintArea | Documentos de Microsoft
+title: CMFCImagePaintArea (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea815ef86b16ad472303fd53da5c51e333b13a3
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 449d79119b15e814485f3b7e0c3eb7472d314d19
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037387"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852489"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea (clase)
 Proporciona el área de imagen que se utiliza para modificar una imagen en un cuadro de diálogo del editor de imágenes.  
@@ -63,12 +63,12 @@ class CMFCImagePaintArea : public CButton
 |[CMFCImagePaintArea::SetMode](#setmode)|Establece el modo de dibujo actual.|  
   
 ### <a name="remarks"></a>Comentarios  
- Esta clase no está diseñada para utilizarse directamente desde el código.  
+ Esta clase no está pensada para utilizarse directamente desde el código.  
   
- El marco de trabajo utiliza esta clase para mostrar el área de imagen en un cuadro de diálogo del editor de imágenes. Para obtener más información sobre el cuadro de diálogo del editor de imágenes, vea [CMFCImageEditorDialog clase](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ El marco de trabajo utiliza esta clase para mostrar el área de imagen en un cuadro de diálogo del editor de imágenes. Para obtener más información sobre el cuadro de diálogo del editor de imágenes, consulte [CMFCImageEditorDialog (clase)](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCImagePaintArea` de clases, establecer el actual dibujando color, establecer el modo de dibujo actual y establecer la imagen de mapa de bits para el área de imagen.  
+ En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCImagePaintArea` clase, establezca el color de dibujo, establecer el modo de dibujo actual y establecer la imagen de mapa de bits para el área de imagen actual.  
   
  [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]  
   
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *pParentDlg*|Un puntero al cuadro de diálogo que es el elemento primario del editor de imágenes.|  
+|[in] *pParentDlg*|Un puntero en el cuadro de diálogo que es primario del editor de imágenes.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Recupera el modo de dibujo actual.  
@@ -122,10 +122,10 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *pBitmap*|La nueva imagen de mapa de bits para mostrar.|  
+|[in] *pBitmap*|Para mostrar la nueva imagen de mapa de bits.|  
   
 ### <a name="remarks"></a>Comentarios  
- Si *pBitmap* es `NULL`, este método establece el tamaño del área de pintura modificable en cero. En caso contrario, Establece el tamaño del área de pintura modificable en el tamaño de la imagen de mapa de bits proporcionado.  
+ Si *pBitmap* es NULL, este método establece el tamaño del área modificable de paint en cero. En caso contrario, Establece el tamaño del área modificable de paint en el tamaño de la imagen de mapa de bits proporcionado.  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  Establece el color de dibujo actual.  
@@ -139,12 +139,12 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parámetro|Descripción|  
-|[in] *color*|El nuevo color de dibujo.|  
+|[in] *color*|El color de dibujo nuevo.|  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando seleccione un color en la barra de paleta del editor de imágenes o selector de color, el marco de trabajo llama a este método para actualizar el color de dibujo actual. El color de dibujo inicial es negro (un `COLORREF` el valor 0).  
+ Cuando seleccione un color en la barra de paleta del editor de imágenes o selector de color, el marco llama a este método para actualizar el color de dibujo actual. El color inicial del dibujo es negro (un valor COLORREF de 0).  
   
- Se utiliza el color de dibujo mediante el cuadro de diálogo del editor de imágenes para todos los modos de dibujo excepto `IMAGE_EDIT_MODE_COLOR`. Para obtener más información acerca de los modos de dibujo, consulte [Cmfcimagepaintarea enumeración](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
+ El color de dibujo está usando el cuadro de diálogo del editor de imágenes para todos los modos de dibujos excepto IMAGE_EDIT_MODE_COLOR. Para obtener más información sobre los modos de dibujo, consulte [Cmfcimagepaintarea enumeración](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
   
 ##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode  
  Establece el modo de dibujo actual.  

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd2bfdfc2a55dc1723fb72ab8de64a46c3c612f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846082"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953239"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution (Clase)
 
@@ -80,7 +80,7 @@ public:
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase describe una distribución que genera valores de tipo `bool`, distribuidos según la función de probabilidad discreta de distribución de Bernoulli. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase describe una distribución que produce valores de tipo **bool**, distribuidos según la función de probabilidad discreta de distribución de Bernoulli. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -180,7 +180,7 @@ explicit bernoulli_distribution(const param_type& parm);
 
 *p* almacenado `p` parámetro de distribución.
 
-*parm* el `param_type` estructura utilizada para construir la distribución.
+*parm* el `param_type` estructura usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 

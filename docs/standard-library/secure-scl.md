@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e7153fa77c7a0aa213bfb01587f2ea080c6ddd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6a9fa05a4cb8c421a511a30fd62310d69003fde
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854095"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966438"
 ---
 # <a name="securescl"></a>_SECURE_SCL
 
 Reemplazada por [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), esta macro define los [iteradores activados](../standard-library/checked-iterators.md) están habilitados. De forma predeterminada, los iteradores activados están habilitados en las compilaciones de depuración y deshabilitados en las compilaciones comerciales.
 
 > [!IMPORTANT]
-> El uso directo de la macro `_SECURE_SCL` está en desuso. En su lugar, use `_ITERATOR_DEBUG_LEVEL` para controlar la configuración de iteradores activados. Para más información, vea [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> Uso directo de la macro _SECURE_SCL está en desuso. En su lugar, use _ITERATOR_DEBUG_LEVEL al control comprueba la configuración de iteradores. Para obtener más información, vea [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Cuando los iteradores activados están habilitados, el uso de iteradores no seguros produce un error en tiempo de ejecución y finaliza el programa. Para habilitar los iteradores activados, establezca `_ITERATOR_DEBUG_LEVEL` en 1 o 2. Esto es equivalente a una configuración de `_SECURE_SCL` de 1 o habilitado:
+Cuando los iteradores activados están habilitados, el uso de iteradores no seguros produce un error en tiempo de ejecución y finaliza el programa. Para habilitar los iteradores activados, establezca _ITERATOR_DEBUG_LEVEL en 1 o 2. Esto es equivalente al valor _SECURE_SCL 1 o habilitado:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 1
 ```
 
-Para deshabilitar los iteradores activados, establezca `_ITERATOR_DEBUG_LEVEL` en 0. Esto es equivalente a una configuración de `_SECURE_SCL` de 0 o deshabilitado:
+Para deshabilitar los iteradores activados, establezca _ITERATOR_DEBUG_LEVEL en 0. Esto es equivalente a una configuración _SECURE_SCL 0 o deshabilitado:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 0

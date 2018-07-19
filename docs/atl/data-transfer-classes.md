@@ -1,5 +1,5 @@
 ---
-title: Transferencia de datos de las clases (ATL) | Documentos de Microsoft
+title: Transferencia de datos de las clases (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83c28c2e04bb3d4084a3dfdeebee9c4c6d6d5fbe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b953b7e7a2f67aa3b17d5bb5fd020706d4c98e3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354105"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953387"
 ---
 # <a name="data-transfer-classes"></a>Clases de transferencia de datos
-Las clases siguientes admiten varios tipos de transferencia de datos:  
+Las clases siguientes admiten distintos tipos de transferencia de datos:  
   
--   [IDataObjectImpl](../atl/reference/idataobjectimpl-class.md) admite la transferencia de datos uniforme con los formatos estándares para recuperar y establecer los datos. Trata los datos que las notificaciones de cambios mediante la administración de conexiones para informar a los receptores.  
+-   [IDataObjectImpl](../atl/reference/idataobjectimpl-class.md) admite la transferencia de datos uniforme mediante el uso de los formatos estándar para recuperar y establecer los datos. Trata los datos que las notificaciones de cambios mediante la administración de conexiones para receptores de notificaciones.  
   
--   [CBindStatusCallback](../atl/reference/cbindstatuscallback-class.md) permite un moniker asincrónico enviar y recibir información sobre la transferencia de datos asincrónico a y desde el objeto.  
+-   [CBindStatusCallback](../atl/reference/cbindstatuscallback-class.md) permite un moniker asincrónico enviar y recibir información acerca de la transferencia asincrónica de datos hacia y desde el objeto.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../atl/atl-class-overview.md)

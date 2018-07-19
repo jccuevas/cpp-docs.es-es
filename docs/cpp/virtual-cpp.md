@@ -1,5 +1,5 @@
 ---
-title: virtual (C++) | Documentos de Microsoft
+title: virtual (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 909fd3fde92479b2e5407608026cb01ec17fced2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9eba5462caf739d78236e10df018fc07421ea876
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421801"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939125"
 ---
 # <a name="virtual-c"></a>virtual (C++)
-La palabra clave `virtual` declara una función virtual o una clase base virtual.  
+El **virtual** palabra clave declara una función virtual o una clase base virtual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,22 +38,22 @@ virtual [access-specifier] base-class-name
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `type-specifiers`  
+ *especificadores de tipo*  
  Especifica el tipo de valor devuelto de la función miembro virtual.  
   
- `member-function-declarator`  
+ *declarador de función miembro*  
  Declara una función miembro.  
   
- `access-specifier`  
- Define el nivel de acceso a la clase base: `public`, `protected` o `private`. Puede aparecer antes o después de la palabra clave `virtual`.  
+ *especificador de acceso*  
+ Define el nivel de acceso a la clase base, **pública**, **protegido** o **privada**. Puede aparecer antes o después de la **virtual** palabra clave.  
   
- `base-class-name`  
+ *nombre de clase base*  
  Identifica un tipo de clase declarado previamente.  
   
 ## <a name="remarks"></a>Comentarios  
- Vea [funciones virtuales](../cpp/virtual-functions.md) para obtener más información.  
+ Consulte [funciones virtuales](../cpp/virtual-functions.md) para obtener más información.  
   
- Consulte también las siguientes palabras clave: [clase](../cpp/class-cpp.md), [privada](../cpp/private-cpp.md), [público](../cpp/public-cpp.md), y [protegido](../cpp/protected-cpp.md).  
+ Consulte también las siguientes palabras clave: [clase](../cpp/class-cpp.md), [privada](../cpp/private-cpp.md), [pública](../cpp/public-cpp.md), y [protegido](../cpp/protected-cpp.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Palabras clave](../cpp/keywords-cpp.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205b05b4832098bca1d97bd949137d7271f111d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ea1f79d9f57c34bf6deed94f04354b87759d794
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855694"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966594"
 ---
 # <a name="isunion-class"></a>is_union (Clase)
 
@@ -37,11 +37,11 @@ struct is_union;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` es un tipo de unión o un formulario `cv-qualified` de tipo de unión; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo de unión o un `cv-qualified` forma de un tipo de unión, en caso contrario, es false.
 
 ## <a name="example"></a>Ejemplo
 

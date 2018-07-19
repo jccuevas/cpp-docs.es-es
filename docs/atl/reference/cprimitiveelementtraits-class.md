@@ -1,5 +1,5 @@
 ---
-title: Clase CPrimitiveElementTraits | Documentos de Microsoft
+title: CPrimitiveElementTraits (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bec944c4b9a505cc817dbe7aa3ce09a317954f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2219be699e879afb6ec19ad84acc50f18d93a9a9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359148"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885814"
 ---
-# <a name="cprimitiveelementtraits-class"></a>Clase CPrimitiveElementTraits
-Esta clase proporciona métodos predeterminados y las funciones de una clase de colección se componen de tipos de datos primitivos.  
+# <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits (clase)
+Esta clase proporciona métodos de forma predeterminada y las funciones de una clase de colección formado por tipos de datos primitivos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,8 +37,8 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo de datos que se almacena en el objeto de clase de colección.  
+ *T*  
+ El tipo de datos que se almacenará en el objeto de clase de colección.  
   
 ## <a name="members"></a>Miembros  
   
@@ -50,7 +50,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 |[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase proporciona métodos para mover, copiar, comparar y hash almacenados en un objeto de clase de colección de elementos de tipo de datos primitivo y funciones estáticas de forma predeterminada.  
+ Esta clase proporciona métodos para mover, copiar, comparar y hash almacenados en un objeto de clase de colección de elementos de tipo de datos primitivos y funciones estáticas de forma predeterminada.  
   
  Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
@@ -83,5 +83,5 @@ typedef T& OUTARGTYPE;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Clase CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+ [CDefaultElementTraits (clase)](../../atl/reference/cdefaultelementtraits-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)

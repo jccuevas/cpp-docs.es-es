@@ -1,5 +1,5 @@
 ---
-title: Explícitamente como valores predeterminados y las funciones eliminadas | Documentos de Microsoft
+title: Explícitamente como valores predeterminados y las funciones eliminadas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8558a2fac4995d89d0745917e6e1be5ad99d56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be96658d5e2920f480747e484f60bed5c16f09c1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944510"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funciones establecidas como valor predeterminado y eliminadas explícitamente
 En C++11, las funciones establecidas como valor predeterminado y eliminadas proporcionan un control explícito sobre si las funciones miembro especiales se generan automáticamente. Las funciones eliminadas también proporcionan un lenguaje simple para impedir que se realicen promociones de tipo problemáticas en argumentos de funciones de todos los tipos (funciones miembro especiales, así como funciones miembro normales y funciones no miembro) que podrían provocar una llamada a función no deseada.  
   
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Ventajas de las funciones establecidas como valor predeterminado o eliminadas explícitamente  
- En C++, el compilador genera automáticamente el constructor predeterminado, el constructor de copias, el operador de asignación de copia y el destructor de un tipo si este no declara los suyos propios. Estas funciones se conocen como el *funciones miembro especiales*, y son lo que permite tipos simples definidos por el usuario en C++ se comportan como las estructuras en C. Es decir, puede crear, copiar y destruir sin ningún esfuerzo de codificación adicional. C++11 aporta semántica de movimiento al lenguaje y agrega el constructor de movimiento y el operador de asignación de movimiento a la lista de funciones miembro especiales que el compilador puede generar automáticamente.  
+ En C++, el compilador genera automáticamente el constructor predeterminado, el constructor de copias, el operador de asignación de copia y el destructor de un tipo si este no declara los suyos propios. Estas funciones se conocen como el *funciones miembro especiales*, y son lo que permite que tipos simples definidos por el usuario en C++ se comportan como las estructuras en C. Es decir, puede crear, copiar y destruir sin ningún esfuerzo de codificación adicional. C++11 aporta semántica de movimiento al lenguaje y agrega el constructor de movimiento y el operador de asignación de movimiento a la lista de funciones miembro especiales que el compilador puede generar automáticamente.  
   
  Esto es útil en el caso de tipos simples, pero los tipos complejos suelen definir una o varias funciones miembro especiales por sí mismos, lo que puede impedir la generación automática de otras funciones miembro especiales. En la práctica:  
   
@@ -50,11 +51,11 @@ En C++11, las funciones establecidas como valor predeterminado y eliminadas prop
 >   
 >  En ambos casos, Visual Studio sigue generando automáticamente las funciones necesarias de forma implícita y no emite ninguna advertencia.  
   
- Las consecuencias de estas reglas también pueden propagarse a las jerarquías de objetos. Por ejemplo, si por cualquier motivo una clase base no puede tener un constructor predeterminado al que se pueda llamar desde una clase derivada (es decir, un constructor `public` o `protected` que no toma ningún parámetro), una clase derivada de ella no puede generar automáticamente su propio constructor predeterminado.  
+ Las consecuencias de estas reglas también pueden propagarse a las jerarquías de objetos. Por ejemplo, si por cualquier motivo una clase base no puede tener un constructor predeterminado que se pueda llamar desde una clase derivada, es decir, un **pública** o **protegido** constructor que no toma ningún parámetro, a continuación, en una clase que se deriva de no puede generar automáticamente su propio constructor predeterminado.  
   
  Estas reglas pueden complicar la implementación de lo que deberían ser tipos sencillos definidos por el usuario y expresiones comunes de C++, como la creación de un tipo definido por el usuario que no se puede copiar declarando de forma privada el constructor de copia y el operador de asignación de copia y no definiéndolos.  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() {};  
@@ -77,7 +78,7 @@ private:
   
  En C++11, la expresión que no se puede copiar se puede implementar de manera más sencilla.  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() =default;  
@@ -103,7 +104,7 @@ struct noncopyable
   
  Una función miembro especial se establece como predeterminada declarándola como en este ejemplo:  
   
-```  
+```cpp 
 struct widget  
 {  
   widget()=default;  
@@ -121,7 +122,7 @@ inline widget& widget::operator=(const widget&) =default;
 ## <a name="deleted-functions"></a>Funciones eliminadas  
  Es posible eliminar funciones miembro especiales, así como funciones miembro normales y funciones no miembro, para evitar que se definan o se llamen. La eliminación de funciones miembro especiales proporciona una forma más limpia de impedir que el compilador genere funciones miembro especiales que no se desean. La función se debe eliminar en cuanto se declara; no se puede eliminar después de la manera en que se puede declarar una función y establecerla como valor predeterminado más adelante.  
   
-```  
+```cpp 
 struct widget  
 {  
   // deleted operator new prevents widget from being dynamically allocated.  
@@ -131,15 +132,15 @@ struct widget
   
  La eliminación de funciones miembro normales o funciones no miembro impide que las promociones de tipo problemáticas llamen a una función no deseada. Esto funciona porque las funciones eliminadas siguen participando en la resolución de sobrecargas y proporcionan una mejor coincidencia que la función a la que se puede llamar después de que se promuevan los tipos. La llamada a función se resuelve en la función más específica, pero eliminada, y produce un error del compilador.  
   
-```  
+```cpp 
 // deleted overload prevents call through type promotion of float to double from succeeding.  
 void call_with_true_double_only(float) =delete;  
 void call_with_true_double_only(double param) { return; }  
 ```  
   
- En el ejemplo anterior, observe que la llamada a `call_with_true_double_only` utilizando un argumento `float` produciría un error del compilador, pero la llamada a `call_with_true_double_only` con un argumento `int` no; en el caso de `int`, el argumento se promoverá de `int` a `double` y llamará correctamente a la versión e `double` de la función, aunque esto no sea lo que se esperaba. Para asegurarse de que cualquier llamada a esta función mediante un argumento que no sea double produce un error del compilador, se puede declarar una versión de plantilla de la función que se elimina.  
+ Tenga en cuenta en el ejemplo anterior que la llamada a `call_with_true_double_only` mediante el uso de un **float** argumento provocaría un error del compilador, pero la llamada a `call_with_true_double_only` mediante el uso de un **int** no lo haría el argumento; en el **int** caso, el argumento se promoverá de **int** a **doble** y llamar correctamente a la **doble** versión de la función, Aunque podría no ser lo que se pretende. Para asegurarse de que cualquier llamada a esta función mediante un argumento que no sea double produce un error del compilador, se puede declarar una versión de plantilla de la función que se elimina.  
   
-```  
+```cpp 
 template < typename T >  
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   

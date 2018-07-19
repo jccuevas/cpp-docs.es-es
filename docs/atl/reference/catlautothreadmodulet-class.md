@@ -1,5 +1,5 @@
 ---
-title: Clase CAtlAutoThreadModuleT | Documentos de Microsoft
+title: CAtlAutoThreadModuleT (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a012494365745d40d98c0f65ee9eff6b5e9502da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a54818b839f13ad9114274248cfdbfc74efa033a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361423"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883078"
 ---
-# <a name="catlautothreadmodulet-class"></a>Clase CAtlAutoThreadModuleT
-Esta clase proporciona métodos para implementar un servidor COM agrupadas por subproceso, el modelo de apartamento.  
+# <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT (clase)
+Esta clase proporciona métodos para implementar un servidor COM de subprocesamiento de modelo, agrupadas por subproceso.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,14 +41,14 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
- La clase que va a implementar el servidor COM.  
+ *T*  
+ La clase que implementará el servidor COM.  
   
- `ThreadAllocator`  
- La clase de administrar la selección de subproceso. El valor predeterminado es [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
+ *ThreadAllocator*  
+ La clase de administración de selección de subprocesos. El valor predeterminado es [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
- `dwWait`  
- Especifica el intervalo de tiempo de espera, en milisegundos. El valor predeterminado es INFINITE, lo que significa intervalo de tiempo de espera del método nunca transcurre.  
+ *dwWait*  
+ Especifica el intervalo de tiempo de espera, en milisegundos. El valor predeterminado es infinito, lo que significa que intervalo de tiempo de espera del método nunca transcurre.  
   
 ## <a name="members"></a>Miembros  
   
@@ -59,10 +59,10 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 |[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Esta función estática dinámicamente calcula y devuelve el número máximo de subprocesos para el módulo ejecutable, en función del número de procesadores.|  
   
 ## <a name="remarks"></a>Comentarios  
- La clase [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) deriva `CAtlAutoThreadModuleT` a fin de implementar un servidor COM agrupadas por subproceso, el modelo de apartamento. Reemplaza la clase obsoleta [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ La clase [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) deriva `CAtlAutoThreadModuleT` con el fin de implementar un servidor COM de subprocesamiento de modelo, agrupadas por subproceso. Reemplaza a la clase obsoleta [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
 > [!NOTE]
->  Esta clase no debe usarse en un archivo DLL, como el valor predeterminado `dwWait` valor de infinito producirá un interbloqueo cuando se descarga el archivo DLL.  
+>  Esta clase no debe usarse en un archivo DLL, como el valor predeterminado *dwWait* valor de infinito producirá un interbloqueo cuando se descarga el archivo DLL.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `IAtlAutoThreadModule`  
@@ -80,13 +80,13 @@ static int GetDefaultThreads();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El número de subprocesos que se creen en el módulo del archivo EXE.  
+ El número de subprocesos que se creará en el módulo del archivo EXE.  
   
 ### <a name="remarks"></a>Comentarios  
- Invalide este método si desea usar un método diferente para calcular el número de subprocesos. De forma predeterminada, el número de subprocesos se basa en el número de procesadores.  
+ Invalide este método si desea usar otro método para calcular el número de subprocesos. De forma predeterminada, el número de subprocesos se basa en el número de procesadores.  
   
 ## <a name="see-also"></a>Vea también  
- [Clase IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
+ [IAtlAutoThreadModule (clase)](../../atl/reference/iatlautothreadmodule-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)   
- [Clase IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
+ [IAtlAutoThreadModule (clase)](../../atl/reference/iatlautothreadmodule-class.md)   
  [Clases de módulo](../../atl/atl-module-classes.md)

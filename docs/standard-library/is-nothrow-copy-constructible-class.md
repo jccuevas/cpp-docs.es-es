@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd3a9818b6334ddd2d2769fc79c55fc8fd72e6dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc4f839ed955048b96f6327c63cd2cc82fef8aca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842565"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953778"
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible (clase)
 
@@ -36,11 +36,11 @@ struct is_nothrow_copy_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-`Ty` El tipo de consulta.
+*Ty* el tipo de consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo `Ty` tiene un constructor de copias nothrow; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un nothrow constructor de copias, en caso contrario, es false.
 
 ## <a name="requirements"></a>Requisitos
 

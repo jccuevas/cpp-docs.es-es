@@ -1,5 +1,5 @@
 ---
-title: Clase CAtlPreviewCtrlImpl | Documentos de Microsoft
+title: CAtlPreviewCtrlImpl (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,18 +30,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 926076115a19b8c9669ec03958d841f08417e89c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d0d1e35e3c2a7d9467024afdf3d415478cd7de1
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362192"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884982"
 ---
-# <a name="catlpreviewctrlimpl-class"></a>Clase CAtlPreviewCtrlImpl
+# <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl (clase)
 Esta clase es una implementación de ATL de una ventana que se coloca en una ventana host proporcionada por el Shell de vista previa avanzada.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -63,12 +63,12 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 |Name|Descripción|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::Create](#create)|Llama a un controlador de vista previa avanzada para crear la ventana de Windows.|  
-|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Llama a un controlador de vista previa avanzada cuando es necesario destruir este control.|  
+|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Se llama mediante un controlador de vista previa avanzada cuando es necesario destruir este control.|  
 |[CAtlPreviewCtrlImpl::Focus](#focus)|Establece el foco a este control de entrada.|  
 |[CAtlPreviewCtrlImpl::OnPaint](#onpaint)|Controla el mensaje WM_PAINT.|  
-|[CAtlPreviewCtrlImpl::Redraw](#redraw)|Indica a este control para volver a dibujar.|  
-|[CAtlPreviewCtrlImpl::SetHost](#sethost)|Establece a un nuevo elemento primario para este control.|  
-|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Llama a un controlador de vista previa avanzada cuando sea necesario establecer los objetos visuales de vista previa enriquecida contenido.|  
+|[CAtlPreviewCtrlImpl::Redraw](#redraw)|Indica que este control para volver a dibujar.|  
+|[CAtlPreviewCtrlImpl::SetHost](#sethost)|Establece a un nuevo elemento primario de este control.|  
+|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Lo llama un controlador de vista previa avanzada cuando es necesario establecer los objetos visuales de vista previa enriquecida contenido.|  
 |[CAtlPreviewCtrlImpl::SetRect](#setrect)|Establece un nuevo rectángulo delimitador para este control.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
@@ -77,17 +77,17 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|Lo llama el marco de trabajo para representar la vista previa.|  
   
-### <a name="protected-constants"></a>Constantes protegidos  
+### <a name="protected-constants"></a>Constantes protegidas  
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Fuente utilizada para mostrar texto en la ventana de vista previa.|  
+|[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Fuente utilizada para mostrar texto en la ventana Vista previa.|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|Color de fondo de la ventana de vista previa.|  
+|[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|Color de fondo de la ventana Vista previa.|  
 |[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Color del texto de la ventana de vista previa.|  
 
   
@@ -138,19 +138,19 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hWndParent`  
- Un identificador a la ventana host proporcionada por el Shell de vista previa avanzada.  
+ *hWndParent*  
+ Identificador de la ventana host proporcionada por el Shell de vista previa avanzada.  
   
- `prc`  
+ *República Popular China*  
  Especifica el tamaño inicial y la posición de la ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` si es correcto; en caso contrario, `FALSE`.  
+ TRUE si es correcto; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy  
- Llama a un controlador de vista previa avanzada cuando es necesario destruir este control.  
+ Se llama mediante un controlador de vista previa avanzada cuando es necesario destruir este control.  
   
 ```
 virtual void Destroy();
@@ -166,8 +166,8 @@ virtual void DoPaint(HDC hdc);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hdc`  
- Un identificador para un contexto de dispositivo para dibujar.  
+ *HDC*  
+ Identificador de un contexto de dispositivo para dibujar.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -181,7 +181,7 @@ virtual void Focus();
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="m_clrback"></a>  CAtlPreviewCtrlImpl::m_clrBack  
- Color de fondo de la ventana de vista previa.  
+ Color de fondo de la ventana Vista previa.  
   
 ```
 COLORREF m_clrBack;
@@ -190,7 +190,7 @@ COLORREF m_clrBack;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="m_clrtext"></a>  CAtlPreviewCtrlImpl::m_clrText  
- Color del texto de la ventana de vista previa.  
+ Color del texto de la ventana Vista previa.  
   
 ```
 COLORREF m_clrText;
@@ -199,7 +199,7 @@ COLORREF m_clrText;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf  
- Fuente utilizada para mostrar texto en la ventana de vista previa.  
+ Fuente utilizada para mostrar texto en la ventana Vista previa.  
   
 ```
 const LOGFONTW* m_plf;
@@ -219,17 +219,17 @@ LRESULT OnPaint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nMsg`  
- Establezca en WM_PAINT.  
+ *nMsg*  
+ Se establece en WM_PAINT.  
   
- `wParam`  
+ *wParam*  
  Este parámetro no se utiliza.  
   
- `lParam`  
+ *lParam*  
  Este parámetro no se utiliza.  
   
- `bHandled`  
- Cuando esta función devuelve, contiene `TRUE`.  
+ *bHandled*  
+ Cuando esta función devuelve, contiene TRUE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Siempre devuelve 0.  
@@ -237,7 +237,7 @@ LRESULT OnPaint(
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="redraw"></a>  CAtlPreviewCtrlImpl::Redraw  
- Indica a este control para volver a dibujar.  
+ Indica que este control para volver a dibujar.  
   
 ```
 virtual void Redraw();
@@ -246,20 +246,20 @@ virtual void Redraw();
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost  
- Establece a un nuevo elemento primario para este control.  
+ Establece a un nuevo elemento primario de este control.  
   
 ```
 virtual void SetHost(HWND hWndParent);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `hWndParent`  
- Un identificador a la nueva ventana primaria.  
+ *hWndParent*  
+ Identificador de la nueva ventana primaria.  
   
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals  
- Llama a un controlador de vista previa avanzada cuando sea necesario establecer los objetos visuales de vista previa enriquecida contenido.  
+ Lo llama un controlador de vista previa avanzada cuando es necesario establecer los objetos visuales de vista previa enriquecida contenido.  
   
 ```
 virtual void SetPreviewVisuals(
@@ -269,14 +269,14 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `clrBack`  
- Color de fondo de la ventana de vista previa.  
+ *clrBack*  
+ Color de fondo de la ventana Vista previa.  
   
- `clrText`  
- Color del texto de la ventana de vista previa.  
+ *clrText*  
+ Color del texto de la ventana Vista previa.  
   
- `plf`  
- Fuente utilizada para mostrar texto en la ventana de vista previa.  
+ *PLF*  
+ Fuente utilizada para mostrar texto en la ventana Vista previa.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -288,11 +288,11 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `prc`  
- Especifica el nuevo tamaño y la posición del control de vista previa.  
+ *República Popular China*  
+ Especifica el nuevo tamaño y posición del control de vista previa.  
   
- `bRedraw`  
- Especifica si el control debe volver a dibujar.  
+ *bRedraw*  
+ Especifica si se debe dibujar el control.  
   
 ### <a name="remarks"></a>Comentarios  
   

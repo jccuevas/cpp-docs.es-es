@@ -1,5 +1,5 @@
 ---
-title: Generar excepciones de Software | Documentos de Microsoft
+title: Generar excepciones de Software | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa925a01633d72f43b165b87c27e5203a143d1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944703"
 ---
 # <a name="raising-software-exceptions"></a>Generar excepciones de software
 El sistema no marca como excepciones algunos de los orígenes de errores de programa más comunes. Por ejemplo, si intenta asignar un bloque de memoria pero no hay memoria insuficiente, el tiempo de ejecución o la función de API no provoca una excepción, sino que devuelve un código de error.  
@@ -38,11 +39,11 @@ El sistema no marca como excepciones algunos de los orígenes de errores de prog
   
 -   Defina su propio código de excepción para el evento.  
   
--   Llame a **RaiseException** cuando detecte un problema.  
+-   Llamar a `RaiseException` cuando se detecte un problema.  
   
 -   Use filtros de control de excepciones para probar el código de excepción definido.  
   
- El \<winerror.h > archivo muestra el formato de códigos de excepción. Para asegurarse de que no define un código en conflicto con un código de excepción existente, establezca el tercer bit más significativo en 1. Los cuatro bits más significativos se deben establecer como se muestra en la tabla siguiente.  
+ El \<winerror.h > archivo muestra el formato de los códigos de excepción. Para asegurarse de que no define un código en conflicto con un código de excepción existente, establezca el tercer bit más significativo en 1. Los cuatro bits más significativos se deben establecer como se muestra en la tabla siguiente.  
   
 |Bits|Valor binario recomendado|Descripción|  
 |----------|--------------------------------|-----------------|  
@@ -52,16 +53,16 @@ El sistema no marca como excepciones algunos de los orígenes de errores de prog
   
  Puede establecer los dos primeros bits en un valor distinto del binario 11 si lo desea, aunque el valor de “error” es adecuado para la mayoría de las excepciones. Lo importante es recordar establecer los bits 29 y 28 como se muestra en la tabla anterior.  
   
- El código de error resultante debe tener por lo tanto, los cuatro bits superiores establecidos en e hexadecimal. Por ejemplo, las definiciones siguientes definen códigos de excepción que no entren en conflicto con ningún código de excepción de Windows. (Es posible, no obstante, que deba comprobar qué códigos usan los archivos DLL de terceros).  
+ El código de error resultante, por tanto, debe tener los cuatro bits superiores establecido en e hexadecimal. Por ejemplo, las definiciones siguientes definen códigos de excepción que no entren en conflicto con los códigos de excepción de Windows. (Es posible, no obstante, que deba comprobar qué códigos usan los archivos DLL de terceros).  
   
-```  
+```cpp 
 #define STATUS_INSUFFICIENT_MEM       0xE0000001  
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
  Después de definir un código de excepción, puede usarlo para provocar una excepción. Por ejemplo, el código siguiente provoca la excepción de STATUS_INSUFFICIENT_MEM en respuesta a un problema de asignación de memoria:  
   
-```  
+```cpp 
 lpstr = _malloc( nBufferSize );  
 if (lpstr == NULL)  
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
@@ -71,7 +72,7 @@ if (lpstr == NULL)
   
  En los filtros de control de excepciones, puede probar los códigos que haya definido. Por ejemplo:  
   
-```  
+```cpp 
 __try {  
     ...  
 }  

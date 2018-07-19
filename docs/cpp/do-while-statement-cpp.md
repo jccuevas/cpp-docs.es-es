@@ -1,5 +1,5 @@
 ---
-title: hacer-while (instrucción (C++) | Documentos de Microsoft
+title: hacer-while (instrucción (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ed3628b75b98bdf7883de275ccd8f74a066abd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2de180d58c31f4bd6c8b15eb69076b99f8b57b0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944613"
 ---
 # <a name="do-while-statement-c"></a>do-while (instrucción de C++)
 Ejecuta un *instrucción* repetidamente hasta que la condición de finalización (el *expresión*) se evalúa como cero.  
@@ -37,18 +38,18 @@ while ( expression ) ;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- La prueba de la condición de finalización se realiza después de cada ejecución del bucle; por consiguiente, un bucle `do-while` se ejecuta una o más veces, dependiendo del valor de la expresión de finalización. El `do-while` instrucción también puede finalizar cuando un [salto](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), o [devolver](../cpp/return-statement-cpp.md) instrucción se ejecuta dentro del cuerpo de instrucción.  
+ La prueba de la condición de finalización se realiza después de cada ejecución del bucle; por lo tanto, un **hacer-mientras** bucle ejecuta una o varias veces, dependiendo del valor de la expresión de finalización. El **hacer-mientras** instrucción también puede finalizar cuando un [salto](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), o [devolver](../cpp/return-statement-cpp.md) instrucción se ejecuta dentro del cuerpo de instrucción.  
   
  *expression* debe tener un tipo aritmético o de puntero. La ejecución continúa de la siguiente manera:  
   
 1.  Se ejecuta el cuerpo de instrucción.  
   
-2.  A continuación, se evalúa *expression*. Si *expression* es false, la instrucción `do-while` finaliza y el control pasa a la siguiente instrucción del programa. Si *expression* es true (distinta de cero), el proceso se repite a partir del paso 1.  
+2.  A continuación, se evalúa *expression*. Si *expresión* es false, el **hacer-mientras** instrucción termina y el control pasa a la siguiente instrucción en el programa. Si *expression* es true (distinta de cero), el proceso se repite a partir del paso 1.  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se muestra la instrucción `do-while`:  
+ El ejemplo siguiente se muestra el **hacer-mientras** instrucción:  
   
-```  
+```cpp 
 // do_while_statement.cpp  
 #include <stdio.h>  
 int main()  

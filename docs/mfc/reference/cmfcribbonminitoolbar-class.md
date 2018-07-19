@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonMiniToolBar | Documentos de Microsoft
+title: CMFCRibbonMiniToolBar (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,14 +26,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041755"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852892"
 ---
-# <a name="cmfcribbonminitoolbar-class"></a>Clase CMFCRibbonMiniToolBar
+# <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar (clase)
 Implementa una barra de herramientas emergente contextual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -56,7 +56,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |Name|Descripción|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|Usado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Invalida `CMFCPopupMenu::IsRibbonMiniToolBar`).|  
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Establece la lista de comandos que se mostrarán en la barra de herramientas.|  
@@ -99,16 +99,16 @@ void SetCommands(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pRibbonBar*  
- La barra de cinta que busca la minibarra de herramientas para que los botones que deben mostrarse.  
+ La barra de cinta que se busca en los botones Mostrar la minibarra de herramientas.  
   
  [in] *lstCommands*  
- La lista de comandos que se mostrarán en la minibarra de herramientas. Todas las categorías de la cinta de opciones se van a buscar los botones asociados.  
+ La lista de comandos que se mostrará en la minibarra de herramientas. Todas las categorías de la cinta de opciones se van a buscar los botones asociados.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para establecer la lista de comandos que se mostrará en la minibarra de herramientas.  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el `SetCommands` método de la `CMFCRibbonMiniToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de MS Office 2007](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo usar el `SetCommands` método de la `CMFCRibbonMiniToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de MS Office 2007](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
@@ -129,7 +129,7 @@ BOOL Show(
  Especifica la posición vertical de la minibarra de herramientas en coordenadas de pantalla.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si la minibarra de herramientas se mostró correctamente; en caso contrario, `FALSE`.  
+ TRUE si la minibarra de herramientas se mostró correctamente; en caso contrario, FALSE.  
   
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  Muestra la minibarra de herramientas junto con un menú contextual.  
@@ -156,10 +156,10 @@ BOOL ShowWithContextMenu(
  Identifica la ventana que recibe los mensajes en el menú contextual.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el menú contextual se mostró correctamente; en caso contrario, `FALSE`.  
+ TRUE si el menú contextual se mostró correctamente; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Use esta función para mostrar una minibarra de herramientas que tiene un menú contextual. El menú contextual esté situado a 15 píxeles por debajo de la minibarra de herramientas.  
+ Use esta función para mostrar una minibarra de herramientas que tiene un menú contextual. El menú contextual está posicionados 15 píxeles por debajo de la minibarra de herramientas.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

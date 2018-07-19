@@ -1,5 +1,5 @@
 ---
-title: ¿Cómo los bloques Catch evalúa (C++) | Documentos de Microsoft
+title: ¿Cómo los bloques Catch (C++) evalúa | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6343abec7e80bcbc47595856e6fd71a3e204ed54
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0190b62491dbb9d15ee4f01a1cbc4c2741f74dbe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944763"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Cómo se evalúan los bloques catch (C++)
-C++ permite iniciar excepciones de cualquier tipo, aunque en general se recomienda iniciar tipos derivados de std::exception. Puede detectar una excepción de C++ mediante un **catch** controlador que especifica el mismo tipo que la excepción, o mediante un controlador que puede detectar cualquier tipo de excepción.  
+C++ permite iniciar excepciones de cualquier tipo, aunque en general se recomienda iniciar tipos derivados de std::exception. Se puede detectar una excepción de C++ mediante un **catch** controlador que especifica el mismo tipo que la excepción, o mediante un controlador que puede detectar cualquier tipo de excepción.  
   
  Si el tipo de excepción que se inicia es una clase, que también tiene una o varias clases base, se puede detectar mediante los controladores que aceptan las clases base del tipo de la excepción, así como referencias a las bases del tipo de la excepción. Observe que, cuando una referencia detecta una excepción, está enlazada al objeto de excepción real que se ha iniciado; si no, es una copia (igual que un argumento de una función).  
   
@@ -33,23 +34,23 @@ C++ permite iniciar excepciones de cualquier tipo, aunque en general se recomien
   
 -   Un controlador que pueda aceptar cualquier tipo (mediante la sintaxis de puntos suspensivos).  
   
--   Un controlador que acepte el mismo tipo que el objeto de excepción; Dado que es una copia, **const** y `volatile` se omiten los modificadores.  
+-   Un controlador que acepte el mismo tipo que el objeto de excepción; Dado que es una copia, **const** y **volátil** se omiten los modificadores.  
   
 -   Un controlador que acepte una referencia al mismo tipo que el objeto de excepción.  
   
--   Un controlador que acepte una referencia a un **const** o `volatile` formada por el mismo tipo que el objeto de excepción.  
+-   Un controlador que acepte una referencia a un **const** o **volátil** formulario del mismo tipo que el objeto de excepción.  
   
--   Un controlador que acepte una clase base del mismo tipo que el objeto de excepción; Puesto que es una copia, **const** y `volatile` se omiten los modificadores. El **catch** controlador para una clase base no debe preceder a la **catch** controlador para la clase derivada.  
+-   Un controlador que acepte una clase base del mismo tipo que el objeto de excepción; Puesto que es una copia, **const** y **volátil** se omiten los modificadores. El **catch** controlador para una clase base no debe preceder el **catch** controlador para la clase derivada.  
   
 -   Un controlador que acepte una referencia a una clase base del mismo tipo que el objeto de excepción.  
   
--   Un controlador que acepte una referencia a un **const** o `volatile` forma de una clase base del mismo tipo que el objeto de excepción.  
+-   Un controlador que acepte una referencia a un **const** o **volátil** forma de una clase base del mismo tipo que el objeto de excepción.  
   
 -   Un controlador que acepte un puntero al que pueda convertirse un objeto de puntero iniciado mediante las reglas de conversión de puntero estándar.  
   
- El orden en que **detectar** controladores aparecen es importante, porque los controladores para un determinado **intente** bloque se examinan por orden de aparición. Por ejemplo, es un error colocar el controlador para una clase base antes del controlador para una clase derivada. Después de una búsqueda de coincidencias **catch** se encuentra el controlador, no se examinan los controladores subsiguientes. Como resultado, un botón de puntos suspensivos **catch** controlador debe ser el último controlador para su **intente** bloque. Por ejemplo:  
+ El orden en que **catch** controladores aparecen es importante, porque los controladores para una determinada **intente** bloque se examinan por orden de aparición. Por ejemplo, es un error colocar el controlador para una clase base antes del controlador para una clase derivada. Después de una coincidencia **catch** se encuentra el controlador, no se examinan los controladores subsiguientes. Como resultado, los puntos suspensivos **catch** controlador debe ser el último controlador su **intente** bloque. Por ejemplo:  
   
-```  
+```cpp 
 // ...  
 try  
 {  

@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::_com_ptr_t | Documentos de Microsoft
+title: _com_ptr_t::_com_ptr_t | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47cfc48a7d73ca1159c4a1862281c01c16cc11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413939"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939076"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Específicos de Microsoft**  
@@ -143,32 +143,32 @@ explicit _com_ptr_t(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `pInterface`  
+ *pInterface*  
  Puntero a interfaz sin formato.  
   
- `fAddRef`  
- Si **true**, `AddRef` se llama para incrementar el recuento de referencias del puntero de interfaz encapsulado.  
+ *fAddRef*  
+ Si es TRUE, `AddRef` se llama para incrementar el recuento de referencias del puntero de interfaz encapsulado.  
   
  *CP*  
  Un objeto `_com_ptr_t`.  
   
- `p`  
+ *p*  
  Puntero a interfaz sin formato cuyo tipo es diferente del tipo de puntero inteligente de este objeto `_com_ptr_t`.  
   
  *varSrc*  
  Un objeto `_variant_t`.  
   
- `clsid`  
- El **CLSID** de una coclase.  
+ *CLSID*  
+ El `CLSID` de una coclase.  
   
- `dwClsContext`  
+ *dwClsContext*  
  Contexto para el código ejecutable.  
   
  *lpcStr*  
- Cadena multibyte que contiene un **CLSID** (a partir de "**{**") o un **ProgID**.  
+ Una cadena multibyte que contiene un `CLSID` (empezando por "**{**") o un `ProgID`.  
   
- `pOuter`  
- El desconocido externo para [agregaciones](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
+ *pOuter*  
+ El desconocido externo para [agregación](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
   
 ## <a name="see-also"></a>Vea también  
  [_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)

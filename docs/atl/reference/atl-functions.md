@@ -1,5 +1,5 @@
 ---
-title: Funciones ATL | Documentos de Microsoft
+title: Funciones ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c5e63e884a44b310330c05fc4a77e3e7f37bec5
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: bbd6e799998abcac650ee32dd86739c157f1035d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34257105"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879477"
 ---
 # <a name="atl-functions"></a>Funciones ATL
 
@@ -31,16 +31,16 @@ Para buscar una función ATL por categoría, vea los temas siguientes.
  Proporciona compatibilidad para manipular las rutas de acceso de archivo.
  
  [Funciones globales de mapa COM](../../atl/reference/com-map-global-functions.md)  
- Proporcionan compatibilidad para la asignación COM **IUnknown** implementaciones.  
+ Proporcionar soporte técnico para mapa COM `IUnknown` implementaciones.  
   
  [Funciones globales de control compuesto](../../atl/reference/composite-control-global-functions.md)  
- Proporcionan compatibilidad para crear cuadros de diálogo y para crear, hospedar y otorgar licencias a controles ActiveX.  
+ Proporcionar soporte técnico para la creación de cuadros de diálogo y para crear, hospedar y controles ActiveX con licencia.  
   
  [Funciones globales de punto de conexión](../../atl/reference/connection-point-global-functions.md)  
  Proporcionan compatibilidad para puntos de conexión y mapas de receptor.  
   
  [Funciones globales de depuración e informe de errores](../../atl/reference/debugging-and-error-reporting-global-functions.md)  
- Proporcionar funciones de seguimiento y depuración útiles.  
+ Proporciona instalaciones de seguimiento y depuración útiles.  
   
  [Funciones globales de contexto de dispositivo](../../atl/reference/device-context-global-functions.md)  
  Crea un contexto de dispositivo para un dispositivo determinado.  
@@ -49,25 +49,25 @@ Para buscar una función ATL por categoría, vea los temas siguientes.
  Proporciona un controlador de eventos.  
   
  [Funciones globales de serialización](../../atl/reference/marshaling-global-functions.md)  
- Proporcionan compatibilidad para el cálculo de referencias y convertir la serialización de datos en punteros de interfaz.  
+ Proporcionar soporte técnico para el cálculo de referencias y convertir la serialización de datos en punteros de interfaz.  
   
  [Funciones globales de conversión de píxel/HIMETRIC](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
- Proporcionan compatibilidad para la conversión entre píxeles y unidades HIMETRIC.  
+ Proporcionar soporte técnico para la conversión entre píxeles y unidades HIMETRIC.  
   
  [Funciones globales de Registro y biblioteca de tipos](../../atl/reference/registry-and-typelib-global-functions.md)  
  Proporcionan compatibilidad para cargar y registrar una biblioteca de tipos.  
   
  [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)  
- Proporciona compatibilidad para modificar objetos de SID y ACL.  
+ Proporciona compatibilidad para modificar objetos SID y ACL.  
   
  [Funciones globales de identificador de seguridad](../../atl/reference/security-identifier-global-functions.md)  
- Devuelve a SID conocido comunes de objetos.  
+ Devuelve el SID conocido comunes objetos.  
   
  [Funciones globales de registro de servidor](../../atl/reference/server-registration-global-functions.md)  
- Proporcionan compatibilidad para registrar y anular el registro de los objetos de servidor en el mapa de objetos.  
+ Proporcionar soporte técnico para registrar y anular el registro de objetos de servidor en el mapa de objetos.  
   
  [Funciones globales de WinModule](../../atl/reference/winmodule-global-functions.md)  
- Proporcionar compatibilidad con `_AtlCreateWndData` las operaciones de la estructura.  
+ Proporcionar compatibilidad con `_AtlCreateWndData` estructurar las operaciones.  
   
 ## <a name="see-also"></a>Vea también  
     

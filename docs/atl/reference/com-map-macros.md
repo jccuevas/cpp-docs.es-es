@@ -1,5 +1,5 @@
 ---
-title: Macros de mapa COM | Documentos de Microsoft
+title: Macros de mapa COM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f8903d81a126a6647bc43018f8422296ddf970
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00c15bf8567456254c8a338ed395a726fcbe8c9b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358428"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879314"
 ---
 # <a name="com-map-macros"></a>Macros de mapa COM
 Estas macros definen los mapas de interfaz COM.  
@@ -30,13 +30,13 @@ Estas macros definen los mapas de interfaz COM.
 |||  
 |-|-|  
 |[BEGIN_COM_MAP](#begin_com_map)|Marca el principio de las entradas del mapa de interfaz COM.|  
-|[END_COM_MAP](#end_com_map)|Marca el final de las entradas del mapa de interfaz COM.|  
+|[END_COM_MAP](#end_com_map)|Marca el final de las entradas de mapa de interfaz COM.|  
 
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
    
 ##  <a name="begin_com_map"></a>  BEGIN_COM_MAP  
- La asignación COM no es el mecanismo que expone interfaces en un objeto a un cliente a través de `QueryInterface`.  
+ El mapa COM es el mecanismo que expone las interfaces en un objeto a un cliente a través de `QueryInterface`.  
   
 ```
 BEGIN_COM_MAP(x)
@@ -44,10 +44,10 @@ BEGIN_COM_MAP(x)
   
 ### <a name="parameters"></a>Parámetros  
  *x*  
- [in] El nombre del objeto de clase en que expone interfaces.  
+ [in] El nombre del objeto de clase que se exponen en las interfaces.  
   
 ### <a name="remarks"></a>Comentarios  
- [CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) sólo devuelve los punteros de interfaces en el mapa COM. Iniciar la asignación de interfaz con el `BEGIN_COM_MAP` macro, agregue entradas para cada una de las interfaces con la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro o una de sus variantes y complete el mapa con la [END_COM_MAP](#end_com_map) macro.  
+ [CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) solo devuelve punteros para las interfaces en el mapa COM. Iniciar el mapa de interfaz con la macro BEGIN_COM_MAP, agregar entradas para cada una de las interfaces con la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro o uno de sus variantes y complete el mapa con el [END_COM_MAP](#end_com_map) macro.  
 
   
 ### <a name="example"></a>Ejemplo  

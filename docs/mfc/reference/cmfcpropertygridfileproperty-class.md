@@ -1,5 +1,5 @@
 ---
-title: Clase de CMFCPropertyGridFileProperty | Documentos de Microsoft
+title: CMFCPropertyGridFileProperty (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c1ba2bb78260ade8dc95685789ec6af7e0ff58a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0dd70e67769d35bf50e52b7be4b2c8848c089cb0
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038918"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851607"
 ---
-# <a name="cmfcpropertygridfileproperty-class"></a>Clase de CMFCPropertyGridFileProperty
+# <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty (clase)
 La `CMFCPropertyGridFileProperty` clase es compatible con un elemento de control de lista de propiedades que se abre un cuadro de diálogo de selección de archivos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -47,7 +47,7 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
   
 |Name|Descripción|  
 |----------|-----------------|  
-|`CMFCPropertyGridFileProperty::GetThisClass`|Usado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
+|`CMFCPropertyGridFileProperty::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|  
 |`CMFCPropertyGridFileProperty::OnClickButton`|(Invalida [cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
   
 ### <a name="remarks"></a>Comentarios  
@@ -82,22 +82,22 @@ CMFCPropertyGridFileProperty(
  Nombre de la propiedad.  
   
  [in] *bOpenFileDialog*  
- `TRUE` Para abrir un **abrir archivo** cuadro de diálogo; `FALSE` para abrir un **Guardar archivo** cuadro de diálogo.  
+ True para abrir un **abrir archivo** cuadro de diálogo; FALSE para abrir un **Guardar archivo** cuadro de diálogo.  
   
  [in] *strFileName*  
  El nombre de archivo inicial.  
   
  [in] *lpszDefExt*  
- Una cadena con una o más extensiones de nombre de archivo. El valor predeterminado es `NULL`.  
+ Una cadena con una o más extensiones de nombre de archivo. El valor predeterminado es NULL.  
   
  [in] *dwFlags*  
- Marcas de cuadro de diálogo. El valor predeterminado es una combinación bit a bit (OR) de `OFN_HIDEREADONLY` y `OFN_OVERWRITEPROMPT`.  
+ Marcas de cuadro de diálogo. El valor predeterminado es una combinación bit a bit (OR) de OFN_HIDEREADONLY y OFN_OVERWRITEPROMPT.  
   
  [in] *lpszFilter*  
- Una cadena de uno o más filtros de archivo. El valor predeterminado es `NULL`.  
+ Una cadena de uno o más filtros de archivo. El valor predeterminado es NULL.  
   
  [in] *lpszDescr*  
- Una descripción del elemento de propiedad. El valor predeterminado es `NULL`.  
+ Una descripción del elemento de propiedad. El valor predeterminado es NULL.  
   
  [in] *dwData*  
  Datos específicos de la aplicación que están asociados al elemento de propiedad. Por ejemplo, un entero de 32 bits o un puntero a otros datos. El valor predeterminado es 0.  
@@ -105,7 +105,7 @@ CMFCPropertyGridFileProperty(
 ### <a name="return-value"></a>Valor devuelto  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener una lista completa de las marcas disponibles, consulte [estructura OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
+ Para obtener una lista completa de los indicadores disponibles, vea [estructura OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo crear un objeto mediante el constructor de la clase `CMFCPropertyGridFileProperty`. Este ejemplo forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).  

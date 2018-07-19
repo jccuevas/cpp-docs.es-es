@@ -1,5 +1,5 @@
 ---
-title: Interfaz IWorkerThreadClient | Documentos de Microsoft
+title: IWorkerThreadClient (interfaz) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8336edb07d02bbbcd5775eaf3ef8fe0f735d3adb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86e35910469128ecaf38751d6db73094adf3422e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359822"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884731"
 ---
-# <a name="iworkerthreadclient-interface"></a>Interfaz IWorkerThreadClient
+# <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient (interfaz)
 `IWorkerThreadClient` es la interfaz implementada por los clientes de la [CWorkerThread](../../atl/reference/cworkerthread-class.md) clase.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,7 +48,7 @@ __interface IWorkerThreadClient
 |[Ejecutar](#execute)|Implemente este método para ejecutar código cuando se señaliza el identificador asociado a este objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- Implemente esta interfaz cuando haya código que debe ejecutarse en un subproceso de trabajo en respuesta a un identificador de haber señalado.  
+ Implemente esta interfaz si tiene código que necesita para ejecutarse en un subproceso de trabajo en respuesta a un identificador que se ha señalado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlutil.h  
@@ -62,13 +62,13 @@ HRESULT CloseHandle(HANDLE  hHandle);
   
 ### <a name="parameters"></a>Parámetros  
  *hHandle*  
- El identificador que se cerrará.  
+ El identificador al cerrarse.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Resultado correcto o un error HRESULT en caso contrario, devuelve S_OK.  
+ Devuelva S_OK si funciona correctamente, o un error HRESULT en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- El identificador pasado a este método estaba asociado previamente a este objeto mediante una llamada a [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ El identificador pasado a este método se asoció anteriormente con este objeto mediante una llamada a [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ### <a name="example"></a>Ejemplo  
  El código siguiente muestra una implementación simple de `IWorkerThreadClient::CloseHandle`.  
@@ -83,17 +83,17 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `dwParam`  
+ *dwParam*  
  El parámetro de usuario.  
   
- `hObject`  
- El identificador que se haya convertido en señalado.  
+ *hObject*  
+ El identificador que se convertirá en señalado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Resultado correcto o un error HRESULT en caso contrario, devuelve S_OK.  
+ Devuelva S_OK si funciona correctamente, o un error HRESULT en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- El identificador y se pasa a este método DWORD/puntero estaban asociados anteriormente con este objeto mediante una llamada a [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ El identificador y el DWORD/puntero pasado a este método estaban asociados anteriormente con este objeto mediante una llamada a [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ### <a name="example"></a>Ejemplo  
  El código siguiente muestra una implementación simple de `IWorkerThreadClient::Execute`.  

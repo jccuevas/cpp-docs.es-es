@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonLabel | Documentos de Microsoft
+title: CMFCRibbonLabel (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042500"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848588"
 ---
-# <a name="cmfcribbonlabel-class"></a>Clase CMFCRibbonLabel
+# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel (clase)
 Implementa una etiqueta de texto no seleccionable en una cinta.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,7 +42,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Construye e inicializa un `CMFCRibbonLabel` objeto con la cadena de texto especificada.|  
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Crea e inicializa un `CMFCRibbonLabel` objeto con la cadena de texto especificado.|  
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -50,8 +50,8 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 |Name|Descripción|  
 |----------|-----------------|  
 |`CMFCRibbonLabel::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
-|`CMFCRibbonLabel::GetThisClass`|Usado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determina los datos de accesibilidad para el elemento de etiqueta de cinta actual. (Invalida [cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
+|`CMFCRibbonLabel::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|  
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Determina los datos de accesibilidad para el elemento actual de etiqueta de cinta de opciones. (Invalida [cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
   
 ### <a name="remarks"></a>Comentarios  
  Después de crear una etiqueta de cinta de opciones, agréguelo a un panel mediante una llamada a [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
@@ -71,7 +71,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
  **Encabezado:** afxRibbonLabel.h  
   
 ##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
- Construye e inicializa un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objeto que muestra la cadena de texto especificado.  
+ Crea e inicializa un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objeto que muestra la cadena de texto especificado.  
   
 ```  
 CMFCRibbonLabel(
@@ -81,13 +81,13 @@ CMFCRibbonLabel(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *lpszText*  
- El texto que aparecerá en la etiqueta.  
+ Texto que aparecerá en la etiqueta.  
   
  [in] *bIsMultiLine*  
- `TRUE` para especificar que la etiqueta es una etiqueta de varias líneas; en caso contrario, `FALSE`.  
+ TRUE para especificar que la etiqueta es una etiqueta de varias líneas; en caso contrario, FALSE.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
- Determina los datos de accesibilidad para el elemento de etiqueta de cinta actual.  
+ Determina los datos de accesibilidad para el elemento actual de etiqueta de cinta de opciones.  
   
 ```  
 virtual BOOL SetACCData(
@@ -97,13 +97,13 @@ virtual BOOL SetACCData(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *pParent*  
- Representa la ventana primaria de la etiqueta de cinta actual.  
+ Representa la ventana primaria de la etiqueta actual de la cinta de opciones.  
   
  [out] *datos*  
- Un objeto del tipo `CAccessibilityData` que se rellena con los datos de accesibilidad de la etiqueta de cinta actual.  
+ Un objeto de tipo `CAccessibilityData` que se rellena con los datos de accesibilidad de la etiqueta actual de la cinta de opciones.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE` Si el *datos* parámetro se rellena con los datos de accesibilidad de la etiqueta de cinta actual correctamente; en caso contrario, `FALSE`.  
+ TRUE si el *datos* parámetro era correctamente rellenada con los datos de accesibilidad de la etiqueta de cinta actual; en caso contrario, FALSE.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   

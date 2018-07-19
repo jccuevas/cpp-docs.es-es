@@ -1,5 +1,5 @@
 ---
-title: Clase CA2CAEX | Documentos de Microsoft
+title: Clase CA2CAEX | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa16122a1cb3a5f8378397363a45cd28ddaef6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3603f93c5b6430cd5aa11e4f43c99f75a838497
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357807"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879249"
 ---
 # <a name="ca2caex-class"></a>Clase CA2CAEX
-Esta clase se utiliza con macros de conversión de cadena `CA2CTEX` y `CT2CAEX`y la definición de tipo **CA2CA**.  
+Esta clase se usa macros de conversión de cadena CA2CTEX y CT2CAEX y la definición de tipo CA2CA.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ class CA2CAEX
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `t_nBufferLength`  
+ *t_nBufferLength*  
  El tamaño del búfer usado en el proceso de traducción. La longitud predeterminada es de 128 bytes.  
   
 ## <a name="members"></a>Miembros  
@@ -65,24 +65,24 @@ class CA2CAEX
 |[CA2CAEX::m_psz](#m_psz)|El miembro de datos que almacena la cadena de origen.|  
   
 ## <a name="remarks"></a>Comentarios  
- A menos que sea necesaria una funcionalidad adicional, utilice `CA2CTEX`, `CT2CAEX`, o **CA2CA** en su propio código.  
+ A menos que se requiere una funcionalidad adicional, use CA2CTEX, CT2CAEX o CA2CA en su propio código.  
   
  Esta clase es segura utilizar en bucles y no desbordarán la pila. Las macros y clases de conversión de ATL utilizarán de forma predeterminada la página de código ANSI del subproceso actual para la conversión.  
   
  Las macros siguientes se basan en esta clase:  
   
-- `CA2CTEX`  
+- CA2CTEX  
   
-- `CT2CAEX`  
+- CT2CAEX  
   
  La siguiente definición de tipo se basa en esta clase:  
   
-- **CA2CA**  
+- CA2CA  
   
- Para obtener una descripción de estas macros de conversión de texto, consulte [Macros de conversión de cadena de MFC y ATL](string-conversion-macros.md).  
+ Para obtener una explicación de estas macros de conversión de texto, consulte [Macros de conversión de cadena de MFC y ATL](string-conversion-macros.md).  
   
 ## <a name="example"></a>Ejemplo  
- Vea [Macros de conversión de cadena de MFC y ATL](string-conversion-macros.md) para obtener un ejemplo del uso de estas macros de conversión de cadena.  
+ Consulte [Macros de conversión de cadena de MFC y ATL](string-conversion-macros.md) para obtener un ejemplo del uso de estas macros de conversión de cadena.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlconv.h  
@@ -96,11 +96,11 @@ CA2CAEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `psz`  
+ *psz*  
  La cadena de texto que se va a convertir.  
   
- `nCodePage`  
- No se utiliza en esta clase.  
+ *nCodePage*  
+ No se usan en esta clase.  
   
 ### <a name="remarks"></a>Comentarios  
  Crea el búfer necesario para la traducción.  
@@ -130,7 +130,7 @@ operator LPCSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve la cadena de texto como tipo `LPCSTR`.  
+ Devuelve la cadena de texto como un tipo LPCSTR.  
   
 ## <a name="see-also"></a>Vea también  
  [Clase CA2AEX](../../atl/reference/ca2aex-class.md)   

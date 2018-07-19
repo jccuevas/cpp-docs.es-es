@@ -1,5 +1,5 @@
 ---
-title: Especificar páginas de propiedades (ATL) | Documentos de Microsoft
+title: Especificar páginas de propiedades (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d4cbeaa8ea9a57f9287f2d2fe78c61884ba4a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7119dca24a6b6ec5b66e52d7e2c01cd66985e764
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358930"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848381"
 ---
 # <a name="specifying-property-pages"></a>Especificar páginas de propiedades
-Cuando se crea un control ActiveX, a menudo deseará asociarlo a páginas de propiedades que pueden usarse para establecer las propiedades del control. Controla el uso de contenedores el **ISpecifyPropertyPages** interfaz para averiguar qué páginas de propiedades pueden usarse para establecer las propiedades del control. Debe implementar esta interfaz en el control.  
+Cuando se crea un control ActiveX, que a menudo desea asociarla a páginas de propiedades que pueden usarse para establecer las propiedades del control. Controlar el uso de contenedores el `ISpecifyPropertyPages` interfaz para averiguar qué páginas de propiedades pueden usarse para establecer las propiedades del control. Deberá implementar esta interfaz en un control.  
   
- Para implementar **ISpecifyPropertyPages** con ATL, siga estos pasos:  
+ Para implementar `ISpecifyPropertyPages` mediante ATL, realice los pasos siguientes:  
   
 1.  Derive la clase de [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).  
   
-2.  Agregue una entrada para **ISpecifyPropertyPages** al mapa de COM de la clase.  
+2.  Agregue una entrada para `ISpecifyPropertyPages` al mapa COM de la clase.  
   
-3.  Agregar un [PROP_PAGE](reference/property-map-macros.md#prop_page) entrada para la asignación de propiedad para cada página asociada con el control.  
+3.  Agregar un [PROP_PAGE](reference/property-map-macros.md#prop_page) entrada al mapa de propiedades para cada página asociada al control.  
   
 > [!NOTE]
->  Al generar un control estándar mediante el [Asistente para controles ATL](../atl/reference/atl-control-wizard.md), solo tendrá que agregar el `PROP_PAGE` entradas para la asignación de propiedad. El asistente genera el código necesario para el resto de pasos.  
+>  Al generar un control estándar mediante el [Asistente para controles ATL](../atl/reference/atl-control-wizard.md), sólo tendrá que agregar las entradas PROP_PAGE al mapa de propiedades. El asistente genera el código necesario para los demás pasos.  
   
- Los contenedores mostrará las páginas de propiedades especificado en el mismo orden que el `PROP_PAGE` entradas en la asignación de propiedad. Por lo general, debe colocar las entradas de página de propiedades estándar después de las entradas de las páginas personalizadas en la asignación de propiedad, por lo que los usuarios vean las páginas específicas de su control en primer lugar.  
+ Los contenedores mostrarán las páginas de propiedades especificada en el mismo orden que las entradas PROP_PAGE en la asignación de propiedad. Por lo general, debería colocar entradas de la página de propiedades estándar después de las entradas para las páginas personalizadas en el mapa de propiedades, para que los usuarios ven las páginas específicas de su control primero.  
   
 ## <a name="example"></a>Ejemplo  
- La clase siguiente para un calendario de control utiliza la **ISpecifyPropertyPages** interfaz para indicar a los contenedores que se pueden establecer sus propiedades mediante una página de fechas personalizado y la página de color estándar.  
+ La siguiente clase de un calendario de control usa el `ISpecifyPropertyPages` interfaz para indicar a los contenedores que se pueden establecer sus propiedades mediante una página personalizada de fecha y la página de cotizaciones de color.  
   
  [!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/cpp/specifying-property-pages_1.h)]  
   

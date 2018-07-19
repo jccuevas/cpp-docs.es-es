@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c13dcadc87c23e288c7f8c8a7f5bc9752aae5db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b385d822c2f58d26938b3300207a790dc1193060
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853656"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953054"
 ---
 # <a name="resultof-class"></a>result_of (Clase)
 
@@ -48,13 +48,13 @@ template<class T>
 
 ### <a name="parameters"></a>Parámetros
 
-`Fn` El tipo que se puede llamar a la consulta.
+*Fn* el tipo que se puede llamar a la consulta.
 
-`ArgTypes` Los tipos de la lista de argumentos para el tipo que se puede llamar a la consulta.
+*ArgTypes* los tipos de la lista de argumentos para el tipo que se puede llamar a la consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Use esta plantilla para determinar en tiempo de compilación el tipo de resultado de `Fn`(`ArgTypes`), donde `Fn` es un tipo que se puede llamar, la referencia a la función o la referencia al tipo que se puede llamar, invocado mediante una lista de argumentos de los tipos de `ArgTypes`. El miembro `type` de la clase de plantilla menciona el tipo de resultado de `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` si la expresión no evaluada `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` tiene el formato correcto. De lo contrario, la clase de plantilla no tiene ningún miembro `type`. El tipo `Fn` y todos los tipos en el paquete de parámetros `ArgTypes` deben ser tipos completos, `void` o matrices de límite desconocido.
+Use esta plantilla para determinar en tiempo de compilación, el tipo de resultado de `Fn`(`ArgTypes`), donde *Fn* es un tipo que se puede llamar, una referencia a función o una referencia al tipo que se puede llamar, invocado mediante una lista de argumentos de los tipos en  *ArgTypes*. El miembro `type` de la clase de plantilla menciona el tipo de resultado de `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` si la expresión no evaluada `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` tiene el formato correcto. De lo contrario, la clase de plantilla no tiene ningún miembro `type`. El tipo *Fn* y todos los tipos en el paquete de parámetros *ArgTypes* deben ser tipos completos, **void**, o matrices de límite desconocido.
 
 ## <a name="requirements"></a>Requisitos
 

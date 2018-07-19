@@ -1,5 +1,5 @@
 ---
-title: Clase CElementTraitsBase | Documentos de Microsoft
+title: CElementTraitsBase (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a0b9f3945d9bcfa0c77855c94ec7247cb9804cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b70ae03c15fcdee4510e25815e516c3e17eb1a2a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359599"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879427"
 ---
-# <a name="celementtraitsbase-class"></a>Clase CElementTraitsBase
-Esta clase proporciona copia de forma predeterminada y move los métodos de una clase de colección.  
+# <a name="celementtraitsbase-class"></a>CElementTraitsBase (clase)
+Esta clase proporciona copia de forma predeterminada y move los métodos para una clase de colección.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ class CElementTraitsBase
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
+ *T*  
  El tipo de datos que se almacenará en la colección.  
   
 ## <a name="members"></a>Miembros  
@@ -55,11 +55,11 @@ class CElementTraitsBase
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CElementTraitsBase::CopyElements](#copyelements)|Llamar a este método para copiar los elementos almacenados en un objeto de clase de colección.|  
+|[CElementTraitsBase::CopyElements](#copyelements)|Llame a este método para copiar los elementos almacenados en un objeto de clase de colección.|  
 |[CElementTraitsBase::RelocateElements](#relocateelements)|Llame a este método para cambiar la posición de elementos almacenados en un objeto de clase de colección.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase base define métodos para copiar y cambiar la ubicación de elementos en una clase de colección. Se utiliza por las clases de [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), y [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Esta clase base define métodos para copiar y cambiar la ubicación de los elementos en una clase de colección. Lo utilizan las clases [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), y [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
  Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
@@ -67,7 +67,7 @@ class CElementTraitsBase
  **Encabezado:** atlcoll.h  
   
 ##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements  
- Llamar a este método para copiar los elementos almacenados en un objeto de clase de colección.  
+ Llame a este método para copiar los elementos almacenados en un objeto de clase de colección.  
   
 ```
 static void CopyElements(
@@ -77,17 +77,17 @@ static void CopyElements(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDest`  
+ *pDest*  
  Puntero al primer elemento que va a recibir los datos copiados.  
   
- `pSrc`  
- Puntero para el primer elemento que se va a copiar.  
+ *pSrc*  
+ Puntero en el primer elemento que se va a copiar.  
   
- `nElements`  
+ *nElements*  
  Número de elementos que se van a copiar.  
   
 ### <a name="remarks"></a>Comentarios  
- No deben superponerse a los elementos de origen y de destino.  
+ No deben superponerse a los elementos de origen y destino.  
   
 ##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE  
  El tipo de datos que se usará para agregar elementos a la colección.  
@@ -114,17 +114,17 @@ static void RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDest`  
- Puntero al primer elemento que va a recibir los datos reubicados.  
+ *pDest*  
+ Puntero al primer elemento que va a recibir los datos trasladados.  
   
- `pSrc`  
+ *pSrc*  
  Puntero al primer elemento para cambiar la posición.  
   
- `nElements`  
+ *nElements*  
  El número de elementos que se va a cambiar la ubicación.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método llama a [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), lo que es suficiente para la mayoría de los tipos de datos. Si los objetos que se mueven contienen punteros a sus propios miembros, este método deberá reemplazarse.  
+ Este método llama a [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), que es suficiente para la mayoría de los tipos de datos. Si los objetos que se está moviendo contienen punteros a sus propios miembros, este método debe invalidarse.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)

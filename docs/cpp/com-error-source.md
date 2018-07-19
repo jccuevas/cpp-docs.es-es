@@ -1,5 +1,5 @@
 ---
-title: _com_error::Source | Documentos de Microsoft
+title: _com_error::Source | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33834df20606e8380e6a328a41435522185ac70
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f904fa11195c27f8e08856ef391d0ba8adbedece
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412350"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939682"
 ---
 # <a name="comerrorsource"></a>_com_error::Source
 **Específicos de Microsoft**  
   
- Llamadas **IErrorInfo:: getSource** función.  
+ Llama a la función `IErrorInfo::GetSource`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,10 +37,10 @@ _bstr_t Source() const;
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve el resultado de **IErrorInfo:: getSource** para el **IErrorInfo** objeto registrado dentro del `_com_error` objeto. El BSTR resultante se encapsula en un objeto `_bstr_t`. Si no hay ningún **IErrorInfo** está registrado, devuelve una instancia vacía `_bstr_t`.  
+ Devuelve el resultado de `IErrorInfo::GetSource` para el `IErrorInfo` objeto grabado dentro del `_com_error` objeto. El BSTR resultante se encapsula en un objeto `_bstr_t`. Si no hay ningún `IErrorInfo` está registrado, devuelve un valor vacío `_bstr_t`.  
   
 ## <a name="remarks"></a>Comentarios  
- Cualquier error al llamar a la **IErrorInfo:: getSource** método se pasa por alto.  
+ Cualquier error durante la llamada a la `IErrorInfo::GetSource` se omite el método.  
   
  **FIN de Específicos de Microsoft**  
   

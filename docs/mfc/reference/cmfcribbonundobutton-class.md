@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCRibbonUndoButton | Documentos de Microsoft
+title: CMFCRibbonUndoButton (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041253"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848773"
 ---
-# <a name="cmfcribbonundobutton-class"></a>Clase CMFCRibbonUndoButton
-La `CMFCRibbonUndoButton` clase implementa un botón de lista desplegable que contiene los comandos de usuario más reciente. Los usuarios pueden seleccionar uno o varios de los comandos más recientes de la lista desplegable para rehacer o deshacer.  
+# <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton (clase)
+La `CMFCRibbonUndoButton` clase implementa un botón de lista desplegable que contiene los comandos más recientes del usuario. Los usuarios pueden seleccionar uno o varios de los comandos más recientes en la lista desplegable para rehacer o deshacer.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,7 +48,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Construye un nuevo `CMFCRibbonUndoButton` objeto utilizando el identificador de comando que especifique, etiqueta de texto e imágenes de la lista de imágenes del objeto primario.|  
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Construye un nuevo `CMFCRibbonUndoButton` objeto con el identificador de comando que especifique, etiqueta de texto y las imágenes de la lista de imágenes del objeto primario.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -63,7 +63,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
  La `CMFCRibbonUndoButton` clase utiliza una pila para representar la lista desplegable.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCRibbonUndoButton` clase y agregue una nueva acción a la lista de acciones. Este fragmento de código forma parte de la [ejemplo de Gadgets de cinta de opciones](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCRibbonUndoButton` de clases y agregue una nueva acción a la lista de acciones. Este fragmento de código forma parte de la [ejemplo Gadgets de la cinta de opciones](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
   
@@ -100,7 +100,7 @@ void CleanUpUndoList();
 ```  
   
 ##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton  
- Construye un nuevo `CMFCRibbonUndoButton` objeto utilizando el identificador de comando que especifique, etiqueta de texto e imágenes de la lista de imágenes del objeto primario.  
+ Construye un nuevo `CMFCRibbonUndoButton` objeto con el identificador de comando que especifique, etiqueta de texto y las imágenes de la lista de imágenes del objeto primario.  
   
 ```  
 CMFCRibbonUndoButton(
@@ -127,10 +127,10 @@ CMFCRibbonUndoButton(
  Índice de base cero en la lista de imágenes del objeto primario para la imagen del botón pequeño.  
   
  [in] *nLargeImageIndex*  
- Índice de base cero en la lista de imágenes del objeto primario para el de imagen grande del botón.  
+ Índice de base cero en la lista de imágenes del objeto primario para el de la imagen grande del botón.  
   
  [in] *hIcon*  
- Un identificador a un icono que puede usar como imagen del botón.  
+ Identificador de un icono que se puede usar como imagen de un botón.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  Determina el número de elementos que el usuario seleccionado en la lista desplegable.  
@@ -150,7 +150,7 @@ virtual BOOL HasMenu() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Siempre devuelve `TRUE`.  
+ Siempre devuelve TRUE.  
   
 ### <a name="remarks"></a>Comentarios  
   

@@ -1,5 +1,5 @@
 ---
-title: Punteros (C++) | Documentos de Microsoft
+title: Punteros (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d794041df385a9e18a8a4b25460d961a340cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944487"
 ---
 # <a name="pointers-c"></a>Punteros (C++)
 Los punteros se declaran mediante la siguiente secuencia.  
@@ -39,25 +40,25 @@ Los punteros se declaran mediante la siguiente secuencia.
   
  1. Los especificadores de la declaración:  
   
--   Un especificador de clase de almacenamiento opcional. Para obtener más información, consulte [especificadores](../cpp/specifiers.md).  
+    - Un especificador de clase de almacenamiento opcional. Para obtener más información, consulte [especificadores](../cpp/specifiers.md).  
   
--   Una palabra clave `const` o `volatile` opcional que se aplica al tipo de objeto al que se apunta.  
+    - Opcional **const** o **volátil** palabra clave se aplica al tipo del objeto al que se apunta.  
   
--   El especificador de tipo: el nombre de un tipo que representa el tipo del objeto al que se apunta.  
+    - El especificador de tipo: el nombre de un tipo que representa el tipo del objeto al que se apunta.  
   
  2. El declarador:  
   
--   Un modificador opcional específico de Microsoft. Para obtener más información, consulte [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).  
+    - Un modificador opcional específico de Microsoft. Para obtener más información, consulte [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
--   El operador `*`.  
+    - El operador `*`.  
   
--   Una palabra clave `const` o `volatile` opcional que se aplica al propio puntero.  
+    - Opcional **const** o **volátil** palabra clave que se aplica al propio puntero.  
   
--   El identificador.  
+    - El identificador.  
   
--   Un inicializador opcional.  
+    - Un inicializador opcional.  
   
- El declarador de un puntero a función tiene el siguiente aspecto:  
+     El declarador de un puntero a función tiene el siguiente aspecto:  
   
 ```  
 (* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]  
@@ -74,31 +75,31 @@ Los punteros se declaran mediante la siguiente secuencia.
   
  Un ejemplo simple de una declaración de puntero es:  
   
-```  
+```cpp 
 char *pch;  
 ```  
   
- La declaración anterior especifica que `pch` apunta un objeto de tipo `char`.  
+ La declaración anterior especifica que `pch` apunta a un objeto de tipo **char**.  
   
  Un ejemplo más complejo es  
   
-```  
+```cpp 
 static unsigned int * const ptr;  
 ```  
   
- La declaración anterior especifica que `ptr` es un puntero constante a un objeto de tipo `unsigned` `int` con una duración de almacenamiento estática.  
+ La declaración anterior especifica que `ptr` es un puntero constante a un objeto de tipo **sin signo** **int** con duración de almacenamiento estática.  
   
  En el ejemplo siguiente se muestra cómo se declaran e inicializan varios punteros:  
   
-```  
+```cpp 
 static int *p = &i, *q = &j;  
 ```  
   
- En el ejemplo anterior, los punteros p y q apuntan a objetos de tipo `int` y se inicializan en las direcciones de i y j, respectivamente.  El especificador de clase de almacenamiento `static` se aplica a ambos punteros.  
+ En el ejemplo anterior, los punteros p y q apuntan a objetos de tipo **int** y se inicializan en las direcciones de i y j, respectivamente.  El especificador de clase de almacenamiento **estático** se aplica a ambos punteros.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // pointer.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -189,7 +190,7 @@ dog dog
 ## <a name="example"></a>Ejemplo  
  Otro ejemplo muestra el uso de punteros en estructuras de datos; en este caso, una lista vinculada.  
   
-```  
+```cpp 
 // pointer_linkedlist.cpp  
 // compile with: /EHsc  
 #include <iostream>  

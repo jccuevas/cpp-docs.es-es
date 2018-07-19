@@ -1,5 +1,5 @@
 ---
-title: Operadores de multiplicación y el operador de módulo | Documentos de Microsoft
+title: Operadores de multiplicación y el operador de módulo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129dce32dfe0ba50a07b71d2fcfaf72bdade090e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de826b1ac86656b9225560bfd9003ce0b03c1111
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944769"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operadores de multiplicación y el operador de módulo
 ## <a name="syntax"></a>Sintaxis  
@@ -51,7 +52,7 @@ expression % expression
   
  Estos operadores binarios tienen asociatividad de izquierda a derecha.  
   
- Los operadores multiplicativos toman operandos de tipos aritméticos. El operador de módulo (`%`) tiene un requisito más estricto en tanto que sus operandos deben ser de tipo entero. (Para obtener el resto de una división de coma flotante, utilice la función de tiempo de ejecución, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Las conversiones descritas en [conversiones estándar](standard-conversions.md) se aplican a los operandos y el resultado es de tipo convertido.  
+ Los operadores multiplicativos toman operandos de tipos aritméticos. El operador de módulo (`%`) tiene un requisito más estricto en tanto que sus operandos deben ser de tipo entero. (Para obtener el resto de una división de punto flotante, use la función de tiempo de ejecución, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Las conversiones descritas en [conversiones estándar](standard-conversions.md) se aplican a los operandos y el resultado es del tipo convertido.  
   
  El operador de multiplicación produce el resultado de multiplicar el primer operando por el segundo.  
   
@@ -61,7 +62,7 @@ expression % expression
   
  La división por 0 en una expresión de división o de módulo es indefinida y provoca un error en tiempo de ejecución. Por consiguiente, las expresiones siguientes generan resultados erróneos, indefinidos:  
   
-```  
+```cpp 
 i % 0  
 f / 0.0  
 ```  
@@ -75,14 +76,14 @@ f / 0.0
  En Microsoft C++, el resultado de una expresión de módulo tiene siempre el mismo signo que el primer operando.  
   
 **FIN de Específicos de Microsoft**  
- Si la división calculada de dos enteros es inexacta y solo un operando es negativo, el resultado es el entero mayor (en magnitud, independientemente del signo) que es menor que el valor exacto que produciría la operación de división. Por ejemplo, el valor calculado de -11 / 3 es-3.666666666. El resultado de esa división entera es -3.  
+ Si la división calculada de dos enteros es inexacta y solo un operando es negativo, el resultado es el entero mayor (en magnitud, independientemente del signo) que es menor que el valor exacto que produciría la operación de división. Por ejemplo, el valor calculado de -11 / 3 es-3.666666666. El resultado de esa división entero es -3.  
   
  La relación entre los operadores multiplicativos está determinada por la identidad (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente programa muestra los operadores multiplicativos. Tenga en cuenta que ambos operandos de `10 / 3` debe convertirse explícitamente al tipo `float` para evitar el truncamiento para que ambos operandos son de tipo `float` antes de la división.  
+ El siguiente programa muestra los operadores multiplicativos. Tenga en cuenta que ambos operandos de `10 / 3` debe convertirse explícitamente al tipo **float** para evitar el truncamiento para que ambos operandos son del tipo **float** antes de la división.  
   
-```  
+```cpp 
 // expre_Multiplicative_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -98,5 +99,5 @@ int main() {
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones con operadores binarios](../cpp/expressions-with-binary-operators.md)   
- [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores de multiplicación de C](../c-language/c-multiplicative-operators.md)

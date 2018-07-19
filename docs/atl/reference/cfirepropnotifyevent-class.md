@@ -1,5 +1,5 @@
 ---
-title: Clase CFirePropNotifyEvent | Documentos de Microsoft
+title: CFirePropNotifyEvent (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728f4e973a7ef74dcdbb44150375df235e0d990e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20fd9c660f036c04ea2ca7d06d04315391504e3e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360993"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881534"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent (clase)
-Esta clase proporciona métodos para notificar a los receptores del contenedor con respecto a los cambios de propiedad de control.  
+Esta clase proporciona métodos para notificar el receptor del contenedor con respecto a los cambios de propiedad de control.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,11 +50,11 @@ class CFirePropNotifyEvent
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Estático) Notifica a los receptores del contenedor que una propiedad de control que se va a cambiar.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CFirePropNotifyEvent` tiene dos métodos que notifiquen a los receptores del contenedor que una propiedad de control ha cambiado o va a cambiar.  
+ `CFirePropNotifyEvent` tiene dos métodos que notifiquen a los receptores del contenedor que ha cambiado una propiedad de control o que va a cambiar.  
   
- Si se deriva la clase que implementa el control `IPropertyNotifySink`, `CFirePropNotifyEvent` métodos se invocan cuando se llama a `FireOnRequestEdit` o `FireOnChanged`. Si la clase del control no se deriva de `IPropertyNotifySink`, las llamadas a estas funciones devuelven `S_OK`.  
+ Si se deriva la clase que implementa el control `IPropertyNotifySink`, `CFirePropNotifyEvent` métodos se invocan cuando se llama a `FireOnRequestEdit` o `FireOnChanged`. Si no se deriva de la clase del control `IPropertyNotifySink`, las llamadas a estas funciones devuelven S_OK.  
   
- Para obtener más información sobre la creación de controles, consulte el [Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md).  
+ Para obtener más información sobre la creación de controles, vea el [Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlctl.h  
@@ -68,13 +68,13 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>Parámetros  
  *pUnk*  
- [in] Puntero a la **IUnknown** del objeto que envía la notificación.  
+ [in] Puntero a la `IUnknown` del objeto que envía la notificación.  
   
  *dispID*  
  [in] Identificador de la propiedad que ha cambiado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Uno de los estándar `HRESULT` valores.  
+ Uno de los valores HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función es segura llamar a incluso si el control no admite puntos de conexión.  
@@ -88,13 +88,13 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>Parámetros  
  *pUnk*  
- [in] Puntero a la **IUnknown** del objeto que envía la notificación.  
+ [in] Puntero a la `IUnknown` del objeto que envía la notificación.  
   
  *dispID*  
  [in] Identificador de la propiedad que se va a cambiar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Uno de los estándar `HRESULT` valores.  
+ Uno de los valores HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función es segura llamar a incluso si el control no admite puntos de conexión.  

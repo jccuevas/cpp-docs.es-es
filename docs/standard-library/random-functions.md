@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: c8ee20759e66c7beb295de96b8311df46555ac6b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b0cd634dad099669d803d4a2717fc9198151781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852821"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954163"
 ---
 # <a name="ltrandomgt-functions"></a>Funciones &lt;random&gt;
 
@@ -31,15 +31,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Parámetros
 
-`RealType` Tipo integral de punto flotante. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType* tipo integral de punto flotante. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-`Bits` El generador de números aleatorios.
+*Bits* el generador de números aleatorios.
 
-`Gen` El generador de números aleatorios.
+*Gen* el generador de números aleatorios.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla llama a `operator()` de `Gen` repetidas veces y empaqueta los valores devueltos en un valor de punto flotante `x` de tipo `RealType` hasta reunir el número especificado de bits de mantisa en `x`. El número especificado es el más pequeño de `Bits` (que no debe ser cero) y el número completo de bits de mantisa en `RealType`. La primera llamada proporciona los bits de orden más bajo. La función devuelve `x`.
+Las llamadas de función de plantilla `operator()` de *Gen* varias veces y empaqueta los valores devueltos en un valor de punto flotante `x` typu *RealType* hasta reunir el número especificado bits de mantisa en `x`. El número especificado es menor de *Bits* (que debe ser distinto de cero) y el número total de bits de mantisa en *RealType*. La primera llamada proporciona los bits de orden más bajo. La función devuelve `x`.
 
 ## <a name="see-also"></a>Vea también
 

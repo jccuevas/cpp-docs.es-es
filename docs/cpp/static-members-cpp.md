@@ -1,5 +1,5 @@
 ---
-title: Miembros estáticos (C++) | Documentos de Microsoft
+title: Los miembros estáticos (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca75d2e54c951e20de842b984f8619dc6639dc00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421076"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941985"
 ---
 # <a name="static-members-c"></a>Miembros estáticos (C++)
 Las clases pueden contener datos de miembro y funciones miembro estáticos. Cuando se declara un miembro de datos como **estático**, solo una copia de los datos se mantiene para todos los objetos de la clase.
@@ -72,7 +72,7 @@ int main()
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- Para que el miembro estático exista, no es necesario que exista ningún objeto del tipo de clase. También pueden tener acceso los miembros estáticos mediante la selección de miembro (**.** y **->**) operadores. Por ejemplo:  
+ Para que el miembro estático exista, no es necesario que exista ningún objeto del tipo de clase. Los miembros estáticos también se pueden acceder mediante la selección de miembro (**.** y **->**) operadores. Por ejemplo:  
   
 ```cpp  
 BufferedOutput Console;  
@@ -82,9 +82,9 @@ long nBytes = Console.bytecount;
   
  En el caso anterior, la referencia al objeto (`Console`) no se evalúa; el valor devuelto es el del objeto estático `bytecount`.  
   
- Los miembros de datos estáticos están sujetos a las reglas de acceso a miembros de clase, por lo que el acceso privado a miembros de datos estáticos solo se permite para las funciones miembro de clase y los elementos friend. Estas reglas se describen en [Control de acceso a miembros](../cpp/member-access-control-cpp.md). La excepción es que los miembros de datos estáticos se deben definir en el ámbito de archivo, independientemente de sus restricciones de acceso. Si el miembro de datos se va a inicializar explícitamente, se debe proporcionar un inicializador con la definición.  
+ Los miembros de datos estáticos están sujetos a las reglas de acceso a miembros de clase, por lo que el acceso privado a miembros de datos estáticos solo se permite para las funciones miembro de clase y los elementos friend. Estas reglas se describen en [Control de acceso de miembro](../cpp/member-access-control-cpp.md). La excepción es que los miembros de datos estáticos se deben definir en el ámbito de archivo, independientemente de sus restricciones de acceso. Si el miembro de datos se va a inicializar explícitamente, se debe proporcionar un inicializador con la definición.  
   
- El nombre de clase no califica el tipo de un miembro estático. Por tanto, el tipo de `BufferedOutput::bytecount` es `long`.  
+ El nombre de clase no califica el tipo de un miembro estático. Por lo tanto, el tipo de `BufferedOutput::bytecount` es **largo**.  
   
 ## <a name="see-also"></a>Vea también  
  [Clases y structs](../cpp/classes-and-structs-cpp.md)

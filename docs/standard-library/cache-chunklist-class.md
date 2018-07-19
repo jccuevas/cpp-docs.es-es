@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71b6a45dbdb882cc666c72296938f970bba52ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844951"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953265"
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist (Clase)
 
@@ -42,13 +42,13 @@ class cache_chunklist
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`Sz`|El número de elementos de la matriz que se van a asignar.|
+|*sz*|El número de elementos de la matriz que se van a asignar.|
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase de plantilla usa `operator new` para asignar fragmentos de memoria binaria, subasignando bloques para asignar almacenamiento para un bloque de memoria cuando sea necesario; almacena bloques de memoria desasignados en una lista libre independiente para cada fragmento y usa `operator delete` para desasignar un fragmento cuando ninguno de los bloques de memoria está en uso.
+Esta clase de plantilla usa **operador new** para asignar fragmentos de memoria binaria, subasignando bloques para asignar el almacenamiento para un bloque de memoria cuando sea necesario; almacena bloques de memoria desasignados en una lista libre independiente para cada fragmento y usa **operador delete** para desasignar un fragmento cuando ninguno de los bloques de memoria está en uso.
 
-Cada bloque de memoria contiene `Sz` bytes de memoria utilizable y un puntero al fragmento al que pertenece. Cada fragmento contiene `Nelts` bloques de memoria, tres punteros, un int y los datos que requieren `operator new` y `operator delete`.
+Cada bloque de memoria contiene *Sz* bytes de memoria utilizable y un puntero al fragmento al que pertenece. Cada fragmento contiene `Nelts` bloques de memoria, tres punteros, un valor int y los datos que **new (operador)** y **operador delete** requieren.
 
 ### <a name="constructors"></a>Constructores
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`count`|El número de elementos de la matriz que se van a asignar.|
+|*count*|El número de elementos de la matriz que se van a asignar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|`ptr`|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
-|`count`|El número de objetos que se van a desasignar del almacenamiento.|
+|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
 ### <a name="remarks"></a>Comentarios
 

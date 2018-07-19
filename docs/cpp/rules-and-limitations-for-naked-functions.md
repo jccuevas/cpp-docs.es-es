@@ -1,5 +1,5 @@
 ---
-title: Reglas y limitaciones de las funciones Naked | Documentos de Microsoft
+title: Reglas y limitaciones de las funciones Naked | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb18f3e75bb7d912cbafbde01893d6283a4c61f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1a6f88717b8fb371c343d17a9b38608876cd900
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944270"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Reglas y limitaciones de las funciones naked
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  
  Las reglas y las limitaciones siguientes se aplican a las funciones naked:  
   
--   La instrucción `return` no está permitida.  
+-   El **devolver** no permite la instrucción.  
   
 -   Las construcciones de control estructurado de excepciones y control de excepciones de C++ no se permiten porque deben desenredarse a través del marco de la pila.  
   
@@ -38,11 +39,11 @@ ms.lasthandoff: 05/03/2018
   
 -   No se pueden declarar objetos de clase de C++ en el ámbito léxico de la función. Sin embargo, se pueden declarar objetos en un bloque anidado.  
   
--   El `naked` se omite la palabra clave cuando se compila con [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
+-   El **naked** se omite la palabra clave cuando se compila con [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
   
 -   Para [__fastcall](../cpp/fastcall.md) funciones naked, siempre que haya una referencia en el código de C o C++ en uno de los argumentos del registro, el código de prólogo debe almacenar los valores de ese registro en la ubicación de la pila para esa variable. Por ejemplo:  
   
-```  
+```cpp 
 // nkdfastcl.cpp  
 // compile with: /c  
 // processor: x86  

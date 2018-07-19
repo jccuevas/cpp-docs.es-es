@@ -1,5 +1,5 @@
 ---
-title: '#Using (directiva) (C++ / CLR) | Documentos de Microsoft'
+title: '#Using (directiva) (C++ / c++ / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 053c425a6bb8dcab0dc5cb94db1537f0fff3d9f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2255f5de9cc26505bb07110da6368a039009c6c
+ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840741"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093038"
 ---
-# <a name="using-directive-cclr"></a>#using (directiva) (C++ / CLR)
+# <a name="using-directive-ccli"></a>#using (directiva) (C++ / c++ / CLI)
 Importa metadatos en un programa compilado con [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -48,20 +48,20 @@ Importa metadatos en un programa compilado con [/CLR](../build/reference/clr-com
  Especifica que todos los tipos de `file` son accesibles.  Para obtener más información, consulte [ensamblados Friend (C++)](../dotnet/friend-assemblies-cpp.md).  
   
 ## <a name="remarks"></a>Comentarios  
- `file` puede ser un archivo del Lenguaje intermedio de Microsoft (MSIL) que importa para sus datos administrados y construcciones administradas. Si un archivo .dll contiene un manifiesto del ensamblado, a continuación, se importan todos los archivos .dll al que hace referencia en el manifiesto y mostrará el ensamblado que se va a compilar *archivo* en los metadatos como una referencia de ensamblado.  
+ `file` puede ser un archivo del Lenguaje intermedio de Microsoft (MSIL) que importa para sus datos administrados y construcciones administradas. Si un archivo .dll contiene un manifiesto del ensamblado, a continuación, se importan todos los archivos .dll que se hace referencia en el manifiesto y mostrará una lista el ensamblado que está compilando *archivo* en los metadatos como una referencia de ensamblado.  
   
- Si `file` no contiene un ensamblado (si `file` es un módulo) y si no piensa usar la información de tipo del módulo en la aplicación (ensamblado) actual, tiene la posibilidad de indicar que el módulo forma parte del ensamblado; utilice [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Los tipos del módulo estarán disponibles entonces para cualquier aplicación que hiciera referencia al ensamblado.  
+ Si `file` no contiene un ensamblado (si `file` es un módulo) y si no piensa usar la información de tipo del módulo en la aplicación (ensamblado) actual, tiene la posibilidad de indicar únicamente que el módulo forma parte el ensamblado; utilice [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Los tipos del módulo estarán disponibles entonces para cualquier aplicación que hiciera referencia al ensamblado.  
   
  Una alternativa al uso `#using` es el [/FU](../build/reference/fu-name-forced-hash-using-file.md) opción del compilador.  
   
- ensamblados .exe pasados a `#using` deben compilarse mediante uno de los compiladores de .NET de Visual Studio (Visual Basic o Visual C#, por ejemplo).  Intentar importar metadatos de un ensamblado .exe compilado con **/CLR** producirá una excepción de carga de archivos.  
+ los ensamblados .exe pasados a `#using` deben compilarse mediante uno de los compiladores .NET de Visual Studio (Visual Basic o Visual C#, por ejemplo).  Al intentar importar metadatos de un ensamblado .exe compilado con **/CLR** dará como resultado una excepción de carga de archivos.  
   
 > [!NOTE]
 >  Un componente al que se hace referencia con `#using` puede ejecutarse con una versión diferente del archivo importado en tiempo de compilación, lo que hace que una aplicación cliente proporcione resultados inesperados.  
   
  Para que el compilador reconozca un tipo de un ensamblado (no de un módulo), debe obligársele a que resuelva el tipo, lo que se puede conseguir por ejemplo si se define una instancia del tipo. Existen otras formas de que el compilador resuelva nombres de tipos en un ensamblado; por ejemplo, si se hereda de un tipo de un ensamblado, el compilador reconocerá el nombre del tipo.  
   
- Cuando se importan metadatos compilados a partir de código fuente que utilizó [__declspec (Thread)](../cpp/thread.md), la semántica de subproceso no se conserva en los metadatos. Por ejemplo, una variable declarada con **__declspec (Thread)**, compilado en un programa compilado para .NET Framework common language runtime y, a continuación, se importa a través de `#using`, dejará de tener **__declspec ( subproceso)** semántica en la variable.  
+ Cuando se importan metadatos compilados a partir de código fuente que utilizó [__declspec (Thread)](../cpp/thread.md), la semántica de subproceso no se conserva en los metadatos. Por ejemplo, una variable declarada con **__declspec (Thread)**, compilado en un programa compilado para .NET Framework common language runtime e importada después mediante `#using`, dejará de tener **__declspec () subproceso)** semántica en la variable.  
   
  Todos los tipos importados (tanto administrados como nativos) en un archivo al que hace referencia `#using` están disponibles, pero el compilador trata los tipos nativos como declaraciones, no como definiciones.  
   

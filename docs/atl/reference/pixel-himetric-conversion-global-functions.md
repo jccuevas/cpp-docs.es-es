@@ -1,5 +1,5 @@
 ---
-title: Funciones globales de conversión de píxel HIMETRIC | Documentos de Microsoft
+title: Funciones globales de conversión de píxel e HIMETRIC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d84204bdf02e75f1baf64bd52d96eab0b3d271
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14b28ec031cf4570ec98e9ab2cebfa3954a88754
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359431"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881167"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Funciones globales de conversión de píxel/HIMETRIC
 Estas funciones proporcionan compatibilidad para la conversión entre píxeles y unidades HIMETRIC.  
   
 > [!IMPORTANT]
->  Las funciones se enumeran en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Las funciones enumeradas en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 |||  
 |-|-|  
@@ -44,11 +44,11 @@ extern void AtlHiMetricToPixel(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpSizeInHiMetric`  
+ *lpSizeInHiMetric*  
  [in] Puntero al tamaño del objeto en unidades HIMETRIC.  
   
- `lpSizeInPix`  
- [out] Puntero a donde se devolverá el tamaño del objeto en píxeles.  
+ *lpSizeInPix*  
+ [out] Puntero a donde el tamaño del objeto en píxeles se va a devolver.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
@@ -66,11 +66,11 @@ extern void AtlPixelToHiMetric(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `lpSizeInPix`  
+ *lpSizeInPix*  
  [in] Puntero al tamaño del objeto en píxeles.  
   
- `lpSizeInHiMetric`  
- [out] Puntero a la ubicación el tamaño del objeto en unidades HIMETRIC va a devolver.  
+ *lpSizeInHiMetric*  
+ [out] Puntero a donde el tamaño del objeto en unidades HIMETRIC se va a devolver.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  

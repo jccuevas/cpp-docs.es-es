@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e3059a4291d21e11304fdf571d2e12828df26fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861706"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966555"
 ---
 # <a name="moneyget-class"></a>money_get (Clase)
 
@@ -46,9 +46,9 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-`CharType` El tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
+*CharType* tipo usado dentro de un programa para codificar los caracteres en una configuración regional.
 
-`InputIterator` El tipo de iterador del que las funciones get leen su entrada.
+*InputIterator* el tipo de iterador desde el que las funciones get leen su entrada.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -91,7 +91,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla **CharType**.
+El tipo es un sinónimo del parámetro de plantilla *CharType*.
 
 ## <a name="do_get"></a> money_get::do_get
 
@@ -113,17 +113,17 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador de entrada que direcciona el principio de la secuencia que se va a convertir.
+*primera* iterador de entrada que dirige al principio de la secuencia que se va a convertir.
 
-`last` Iterador de entrada que direcciona al final de la secuencia que se va a convertir.
+*último* iterador de entrada que direcciona al final de la secuencia que se va a convertir.
 
-`Intl` Un valor booleano que indica el tipo de símbolo de divisa esperado en la secuencia: **true** si internacionales, **false** si nacionales.
+*Intl* un valor booleano que indica el tipo de símbolo de moneda esperado en la secuencia: **true** si es internacional, **false** si es nacional.
 
-`Iosbase` Un formato de marca que al conjunto indica que el símbolo de moneda es opcional; en caso contrario, es necesario.
+*Iosbase* un formato de marca que cuando establecido indica que el símbolo de moneda es opcional; en caso contrario, es necesario.
 
-`State` Establece los elementos de máscara de bits apropiados para el estado de la secuencia según si las operaciones se realizó correctamente o no.
+*Estado* establece los elementos de máscara de bits apropiados para el estado de la secuencia según si las operaciones se realizaron correctamente o no.
 
-`val` Una cadena que se almacena la secuencia convertida.
+*Val* una cadena que almacena la secuencia convertida.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -131,9 +131,9 @@ Un iterador de entrada que se dirige al primer elemento más allá del campo de 
 
 ### <a name="remarks"></a>Comentarios
 
-La primera función miembro virtual protegida intenta hacer coincidir los elementos secuenciales, empezando al principio de la secuencia [ `first`, `last`) hasta que reconoce un campo de entrada monetario completo y que no esté vacío. Si se realiza correctamente, convierte este campo en una secuencia de uno o más dígitos decimales, opcionalmente precedido por un signo menos (`-`), para representar la cantidad y almacena el resultado en el objeto [string_type](#string_type) `val`. Devuelve un iterador que designa el primer elemento más allá del campo de entrada monetario. De otro modo, la función almacena una secuencia vacía en `val` y establece `ios_base::failbit` en `State`. Devuelve un iterador que designa el primer elemento más allá de cualquier prefijo de campo de entrada monetario válido. En cualquier caso, si el valor devuelto es igual a `last`, la función establece `ios_base::eofbit` en `State`.
+La primera función miembro virtual protegida intenta hacer coincidir los elementos secuenciales, empezando al principio de la secuencia [ `first`, `last`) hasta que reconoce un campo de entrada monetario completo y que no esté vacío. Si es correcta, convierte este campo en una secuencia de uno o más dígitos decimales, opcionalmente precedido por un signo menos ( `-`), para representar la cantidad y almacena el resultado en el [string_type](#string_type) objeto *val*. Devuelve un iterador que designa el primer elemento más allá del campo de entrada monetario. En caso contrario, la función almacena una secuencia vacía en *val* y establece `ios_base::failbit` en *estado*. Devuelve un iterador que designa el primer elemento más allá de cualquier prefijo de campo de entrada monetario válido. En cualquier caso, si el valor devuelto es igual a `last`, la función establece `ios_base::eofbit` en `State`.
 
-La segunda función miembro virtual protegida se comporta de la misma manera que la primera, a excepción de que, si se realiza correctamente, convierte la secuencia de dígitos con signo opcional en un valor de tipo `long double` y almacena ese valor en `val`.
+La segunda función miembro virtual protegida comporta igual que la primera, excepto que si se realiza correctamente convierte la secuencia de dígitos con signo opcional en un valor de tipo **long double** y almacena ese valor en *val*.
 
 El formato de un campo de entrada monetario se determina por la [faceta de configuración regional](../standard-library/locale-class.md#facet_class)**fac** devuelta mediante la llamada eficaz a [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -189,17 +189,17 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-`first` Iterador de entrada que direcciona el principio de la secuencia que se va a convertir.
+*primera* iterador de entrada que dirige al principio de la secuencia que se va a convertir.
 
-`last` Iterador de entrada que direcciona al final de la secuencia que se va a convertir.
+*último* iterador de entrada que direcciona al final de la secuencia que se va a convertir.
 
-`Intl` Un valor booleano que indica el tipo de símbolo de divisa esperado en la secuencia: **true** si internacionales, **false** si nacionales.
+*Intl* un valor booleano que indica el tipo de símbolo de moneda esperado en la secuencia: **true** si es internacional, **false** si es nacional.
 
-`Iosbase` Un formato de marca que al conjunto indica que el símbolo de moneda es opcional; en caso contrario, es necesario
+*Iosbase* un formato de marca que cuando establecido indica que el símbolo de moneda es opcional; en caso contrario, es necesario
 
-`State` Establece los elementos de máscara de bits apropiados para el estado de la secuencia según si se realizó correctamente las operaciones.
+*Estado* establece los elementos de máscara de bits apropiados para el estado de la secuencia según si las operaciones se realizaron correctamente.
 
-`val` Una cadena que se almacena la secuencia convertida.
+*Val* una cadena que almacena la secuencia convertida.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -280,11 +280,11 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Refs` Valor de entero utilizado para especificar el tipo de administración de memoria para el objeto.
+*_Refs* valor entero utilizado para especificar el tipo de administración de memoria para el objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Los valores posibles del parámetro `_Refs` y su importancia son:
+Los valores posibles de la *_Refs* parámetro y su importancia son:
 
 - 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 

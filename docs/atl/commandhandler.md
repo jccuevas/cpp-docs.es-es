@@ -1,5 +1,5 @@
 ---
-title: CommandHandler | Documentos de Microsoft
+title: CommandHandler | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27f5585ec334a4179b76579c5216c8c30013ca97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 784551b090f7c0c73b96b846fcc8d74017cc1e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355143"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850646"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` es la función identificada por el tercer parámetro de la `COMMAND_HANDLER` macro en el mapa de mensajes.  
+`CommandHandler` es la función identificada por el tercer parámetro de la macro COMMAND_HANDLER en el mapa de mensajes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,17 +40,17 @@ ms.locfileid: "32355143"
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `wNotifyCode`  
+ *wNotifyCode*  
  El código de notificación.  
   
  *wID*  
  El identificador del elemento de menú, control o acelerador.  
   
  *hWndCtl*  
- Un identificador para un control de ventana.  
+ Identificador de un control de ventana.  
   
- `bHandled`  
- Los conjuntos de mapa de mensajes `bHandled` a **TRUE** antes de `CommandHandler` se llama. Si `CommandHandler` no controla totalmente el mensaje, se debe establecer `bHandled` a **FALSE** para indicar que el mensaje requiere un procesamiento posterior.  
+ *bHandled*  
+ Los conjuntos de mapa de mensajes *bHandled* en TRUE antes de `CommandHandler` se llama. Si `CommandHandler` no controla totalmente el mensaje, se debe establecer *bHandled* en FALSE para indicar que el mensaje requiere un procesamiento posterior.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El resultado del procesamiento de mensajes. 0 si es correcto.  

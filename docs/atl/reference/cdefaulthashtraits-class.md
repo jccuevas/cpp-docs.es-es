@@ -1,5 +1,5 @@
 ---
-title: Clase CDefaultHashTraits | Documentos de Microsoft
+title: CDefaultHashTraits (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85cf9e27211763559617715a6c025055b25379fa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a87ecddfff7cb3096ae30d9da5d9e5b6913adcbd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361517"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886250"
 ---
-# <a name="cdefaulthashtraits-class"></a>Clase CDefaultHashTraits
-Esta clase proporciona una función estática para calcular los valores de hash.  
+# <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits (clase)
+Esta clase proporciona una función estática para calcular los valores hash.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ class CDefaultHashTraits
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
+ *T*  
  El tipo de datos que se almacenará en la colección.  
   
 ## <a name="members"></a>Miembros  
@@ -48,7 +48,7 @@ class CDefaultHashTraits
 |[CDefaultHashTraits::Hash](#hash)|(Estático) Llame a esta función para calcular un valor hash para un elemento determinado.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase contiene una sola función estática que devuelve un valor hash para un elemento determinado. Esta clase se utiliza por la [CDefaultElementTraits clase](../../atl/reference/cdefaultelementtraits-class.md).  
+ Esta clase contiene una sola función estática que devuelve un valor hash para un elemento determinado. Esta clase se utiliza por la [CDefaultElementTraits (clase)](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
@@ -63,14 +63,14 @@ static ULONG Hash(const T& element) throw();
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `element`  
+ *elemento*  
  El elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el valor de hash.  
+ Devuelve el valor hash.  
   
 ### <a name="remarks"></a>Comentarios  
- El algoritmo hash predeterminado es muy simple: el valor devuelto es el número de elemento. Reemplace esta función si es necesario un algoritmo más complicado.  
+ El algoritmo hash predeterminado es muy sencillo: el valor devuelto es el número de elemento. Reemplace esta función si es necesario un algoritmo más complicado.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)

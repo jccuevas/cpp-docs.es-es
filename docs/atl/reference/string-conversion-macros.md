@@ -1,5 +1,5 @@
 ---
-title: Macros de conversión de cadena | Documentos de Microsoft
+title: Macros de conversión de cadena | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 917afc7dae7a0ed96d5d5cc476b4f8394abe8913
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee63cf7f5ec2bd0d6ed76bf891ed82492c76560d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362980"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885160"
 ---
-# <a name="string-conversion-macros"></a>Macros de conversión de cadenas
+# <a name="string-conversion-macros"></a>Macros de conversión de cadena
 
 Estas macros proporcionan funciones de conversión de cadena.  
  
@@ -38,7 +38,7 @@ Las macros de conversión de cadena en las que se centra este tema son válidas 
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  Macros de conversión de cadenas TEXTMETRIC y DEVMODE
 
-Estas macros crean una copia de un [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) o [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) permite organizar y convertir las cadenas dentro de la nueva estructura a un nuevo tipo de cadena. Las macros de asignación memoria en la pila para la nueva estructura y devuelven un puntero a la nueva estructura.  
+Estas macros crean una copia de un [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) o [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) estructurar y convertir las cadenas dentro de la nueva estructura a un nuevo tipo de cadena. Las macros de asignación memoria en la pila para la nueva estructura y devuelven un puntero a la nueva estructura.  
   
 ```cpp
 MACRONAME( address_of_structure )
@@ -54,15 +54,15 @@ y:
   
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]  
   
-Los nombres de macro, el tipo de cadena en la estructura de origen está a la izquierda (por ejemplo, **A**) y el tipo de cadena en la estructura de destino está a la derecha (por ejemplo, **W**). **A** es el acrónimo `LPSTR`, **OLE** es el acrónimo `LPOLESTR`, **T** es el acrónimo `LPTSTR`, y **W** representa `LPWSTR`.  
+Los nombres de macro, el tipo de cadena en la estructura de origen está a la izquierda (por ejemplo, **A**) y el tipo de cadena en la estructura de destino está a la derecha (por ejemplo, **W**). **Un** LPSTR, es el acrónimo **OLE** LPOLESTR, es el acrónimo **T** LPTSTR, es el acrónimo y **W** significa LPWSTR.  
   
-Por lo tanto, **DEVMODEA2W** copias un `DEVMODE` estructura con `LPSTR` cadenas en una `DEVMODE` estructura con `LPWSTR` cadenas, **TEXTMETRICOLE2T** copia una `TEXTMETRIC`estructura con `LPOLESTR` cadenas en una `TEXTMETRIC` estructura con `LPTSTR` cadenas y así sucesivamente.  
+Por lo tanto, se copia DEVMODEA2W un `DEVMODE` estructura con LPSTR cadenas en un `DEVMODE` estructura con cadenas LPWSTR, TEXTMETRICOLE2T copias un `TEXTMETRIC` estructura con LPOLESTR cadenas en un `TEXTMETRIC` estructura con cadenas LPTSTR y así sucesivamente.  
   
-Las dos cadenas que se convierte en el `DEVMODE` estructura son el nombre de dispositivo (`dmDeviceName`) y el nombre del formulario (`dmFormName`). El `DEVMODE` macros de conversión de cadena actualización también el tamaño de la estructura (`dmSize`).  
+Las dos cadenas se convierten en el `DEVMODE` estructura son el nombre del dispositivo (`dmDeviceName`) y el nombre del formulario (`dmFormName`). El `DEVMODE` macros de conversión de cadena también actualización el tamaño de la estructura (`dmSize`).  
   
 Las cuatro cadenas convertidas en el `TEXTMETRIC` estructura son el primer carácter (`tmFirstChar`), el último carácter (`tmLastChar`), el carácter predeterminado (`tmDefaultChar`) y el carácter de salto (`tmBreakChar`).
   
-El comportamiento de la `DEVMODE` y `TEXTMETRIC` macros de conversión de cadenas depende de la directiva de compilador vigente, si existe. Si los tipos de origen y de destino son el mismo, no tiene lugar ninguna conversión. Cambian las directivas de compilador **T** y **OLE** como se indica a continuación:  
+El comportamiento de la `DEVMODE` y `TEXTMETRIC` macros de conversión de cadenas depende de la directiva de compilador en efecto, si existe. Si los tipos de origen y de destino son el mismo, no tiene lugar ninguna conversión. Cambiar las directivas de compilador **T** y **OLE** como sigue:  
   
 |Directiva de compilador vigente|T pasa a|OLE pasa a|  
 |----------------------------------|---------------|-----------------|  
@@ -71,14 +71,14 @@ El comportamiento de la `DEVMODE` y `TEXTMETRIC` macros de conversión de cadena
 |**OLE2ANSI**|**A**|**A**|  
 |**\_UNICODE** y **OLE2ANSI**|**W**|**A**|  
   
- La siguiente tabla se recogen los `DEVMODE` y `TEXTMETRIC` macros de conversión de cadena.  
+ La siguiente tabla se enumeran los `DEVMODE` y `TEXTMETRIC` macros de conversión de cadena.  
   
 |||  
 |-|-|  
-|`DEVMODEA2W`|`TEXTMETRICA2W`|  
-|`DEVMODEOLE2T`|`TEXTMETRICOLE2T`|  
-|`DEVMODET2OLE`|`TEXTMETRICT2OLE`|  
-|`DEVMODEW2A`|`TEXTMETRICW2A`|  
+|DEVMODEA2W|TEXTMETRICA2W|  
+|DEVMODEOLE2T|TEXTMETRICOLE2T|  
+|DEVMODET2OLE|TEXTMETRICT2OLE|  
+|DEVMODEW2A|TEXTMETRICW2A|  
 
 ## <a name="see-also"></a>Vea también
 

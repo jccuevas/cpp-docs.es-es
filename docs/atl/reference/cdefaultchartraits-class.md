@@ -1,5 +1,5 @@
 ---
-title: Clase CDefaultCharTraits | Documentos de Microsoft
+title: CDefaultCharTraits (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24aa01ec29f063c1fa65ebe24c707deb1ea58556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e591bc8c77e2130548e65c6197f9e550efc480fb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361732"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881859"
 ---
-# <a name="cdefaultchartraits-class"></a>Clase CDefaultCharTraits
-Esta clase proporciona dos funciones estáticas para convertir los caracteres entre mayúsculas y minúsculas.  
+# <a name="cdefaultchartraits-class"></a>CDefaultCharTraits (clase)
+Esta clase proporciona dos funciones estáticas para la conversión de caracteres entre mayúsculas y minúsculas.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,7 +37,7 @@ class CDefaultCharTraits
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
+ *T*  
  El tipo de datos que se almacenará en la colección.  
   
 ## <a name="members"></a>Miembros  
@@ -50,7 +50,7 @@ class CDefaultCharTraits
 |[CDefaultCharTraits::CharToUpper](#chartoupper)|(Estático) Llame a esta función para convertir un carácter a minúsculas.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase proporciona funciones que se utilizan por la clase [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Esta clase proporciona funciones que se utilizan en la clase [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcoll.h  

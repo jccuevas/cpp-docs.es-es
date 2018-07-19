@@ -1,5 +1,5 @@
 ---
-title: Interfaz de IView | Documentos de Microsoft
+title: Interfaz IView | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a06243af3de7a2f4b32aa9a9ae492dfe3b2d3b64
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: acf1ba02e9bbf6afd14e41be7dda406d257cb681
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339766"
 ---
-# <a name="iview-interface"></a>Interfaz de IView
-Implementa varios métodos que [CWinFormsView](../../mfc/reference/cwinformsview-class.md) utiliza para enviar notificaciones de vista para un control administrado.  
+# <a name="iview-interface"></a>Interfaz IView
+Implementa varios métodos que [CWinFormsView](../../mfc/reference/cwinformsview-class.md) usa para enviar notificaciones de la vista a un control administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,28 +44,28 @@ interface class IView
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[IView::OnActivateView](#onactivateview)|Llamado por MFC cuando se activa o desactiva una vista.|  
+|[IView::OnActivateView](#onactivateview)|Se llama por MFC cuando se activa o desactiva una vista.|  
 |[IView:: OnInitialUpdate](#oninitialupdate)|Lo llama el marco de trabajo después de la vista se adjunta al documento en primer lugar, pero antes de la vista se muestra inicialmente.|  
-|[IView::OnUpdate](#onupdate)|Es llamado por MFC cuando se ha modificado el documento de la vista; Esta función permite que la vista actualice su presentación para reflejar las modificaciones.|  
+|[IView::OnUpdate](#onupdate)|Se llama por MFC después de que se ha modificado el documento de la vista; Esta función permite que la vista que actualice su presentación para reflejar las modificaciones.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IView` implementa varios métodos que `CWinFormsView` usa para enviar notificaciones de vista comunes para un control hospedado administrado. Se trata de [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) y [OnActivateView](#onactivateview).  
+ `IView` implementa varios métodos que `CWinFormsView` usa para enviar notificaciones de vista comunes para un control administrado hospedado. Estos son [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) y [OnActivateView](#onactivateview).  
   
- `IView` es similar a [CView](../../mfc/reference/cview-class.md), pero solo se usa con vistas administradas y controles.  
+ `IView` es similar a [CView](../../mfc/reference/cview-class.md), pero solo se usa con las vistas administradas y los controles.  
   
- Para obtener más información sobre el uso de formularios Windows Forms, vea [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Para obtener más información sobre el uso de Windows Forms, consulte [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 
 ## <a name="requirements"></a>Requisitos  
- Encabezado: afxwinforms.h (definido en atlmfc\lib\mfcmifc80.dll ensamblado)  
+ Encabezado: afxwinforms.h (definido en el ensamblado atlmfc\lib\mfcmifc80.dll)  
 
 ## <a name="onactivateview"></a> IView::OnActivateView  
-Llamado por MFC cuando se activa o desactiva una vista.
+Se llama por MFC cuando se activa o desactiva una vista.
 ```
 void OnActivateView(bool activate);
 ```
 ## <a name="parameters"></a>Parámetros
-`activate`  
+*Activar*  
 Indica si la vista se está activando o desactivando.  
 
 ## <a name="oninitialupdate"></a> IView:: OnInitialUpdate
@@ -80,8 +80,8 @@ Llamado por MFC cuando se ha modificado el documento de la vista.
 void OnUpdate();
 ```
 ## <a name="remarks"></a>Comentarios  
-Esta función permite que la vista actualice su presentación para reflejar las modificaciones.
+Esta función permite que la vista que actualice su presentación para reflejar las modificaciones.
 
 ## <a name="see-also"></a>Vea también  
- [Clase CWinFormsView](../../mfc/reference/cwinformsview-class.md)   
+ [CWinFormsView (clase)](../../mfc/reference/cwinformsview-class.md)   
  [CView (clase)](../../mfc/reference/cview-class.md)

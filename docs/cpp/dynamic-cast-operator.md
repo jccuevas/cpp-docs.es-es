@@ -1,5 +1,5 @@
 ---
-title: dynamic_cast (operador) | Documentos de Microsoft
+title: dynamic_cast (operador) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87105ad2d52ebbb7749deafadedcd510314038f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 697f4a83cb0b5f9aabb7ce477c4664cb39fb7f97
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944871"
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast (Operador)
 Convierte el operando `expression` en un objeto del tipo `type-id`.  
@@ -35,17 +36,17 @@ dynamic_cast < type-id > ( expression )
 ## <a name="remarks"></a>Comentarios  
  `type-id` debe ser un puntero o una referencia a un tipo de clase definido previamente o un "puntero a void". El tipo de `expression` debe ser un puntero si `type-id` es un puntero, o un valor L si `type-id` es una referencia.  
   
- Vea [static_cast](../cpp/static-cast-operator.md) para obtener una explicación de la diferencia entre las conversiones estáticas y dinámicas, y cuándo es adecuado utilizar cada uno.  
+ Consulte [static_cast](../cpp/static-cast-operator.md) para obtener una explicación de la diferencia entre las conversiones estáticas y dinámicas, y cuándo es adecuado utilizar cada una.  
   
- Hay dos cambios importantes en el comportamiento de `dynamic_cast` en código administrado:  
+ Hay dos cambios importantes en el comportamiento de **dynamic_cast** en código administrado:  
   
--   `dynamic_cast` a un puntero al tipo subyacente de una enumeración conversión boxing producirá un error en tiempo de ejecución, devolviendo 0 en lugar del puntero convertido.  
+-   **dynamic_cast** a un puntero al tipo subyacente de una enumeración conversión boxing producirá un error en tiempo de ejecución, devolviendo 0 en lugar del puntero convertido.  
   
--   `dynamic_cast` ya no produce una excepción cuando `type-id` es un puntero interior a un tipo de valor, y se produce un error en la conversión en tiempo de ejecución.  La conversión devolverá ahora el valor de puntero 0 en lugar de producirse una excepción.  
+-   **dynamic_cast** ya no se iniciará una excepción cuando `type-id` es un puntero interior a un tipo de valor con error en tiempo de ejecución en la conversión.  La conversión devolverá ahora el valor de puntero 0 en lugar de producirse una excepción.  
   
  Si `type-id` es un puntero a una clase base directa o indirecta accesible de forma no ambigua desde `expression`, el resultado es un puntero al subobjeto único de tipo `type-id`. Por ejemplo:  
   
-```  
+```cpp 
 // dynamic_cast_1.cpp  
 // compile with: /c  
 class B { };  
@@ -64,7 +65,7 @@ void f(D* pd) {
   
  Si `type-id` es void*, se realiza una comprobación en tiempo de ejecución para determinar el tipo real de `expression`. El resultado es un puntero al objeto completo al que apunta `expression`. Por ejemplo:  
   
-```  
+```cpp 
 // dynamic_cast_2.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -85,7 +86,7 @@ void f() {
   
  Si el tipo de `expression` es una clase base del tipo de `type-id`, se realiza una comprobación en tiempo de ejecución para ver si `expression` apunta realmente a un objeto completo del tipo de `type-id`. Si es cierto, el resultado es un puntero a un objeto completo del tipo de `type-id`. Por ejemplo:  
   
-```  
+```cpp 
 // dynamic_cast_3.cpp  
 // compile with: /c /GR  
 class B {virtual void f();};  
@@ -104,11 +105,11 @@ void f() {
   
  En los casos de herencia múltiple, se introducen posibilidades de ambigüedad. Considere la jerarquía de clases que se muestra en la ilustración siguiente.  
   
- Para los tipos CLR, `dynamic_cast` produce una ausencia de operación si la conversión se puede realizar de forma implícita, o una instrucción `isinst` de MSIL, que realiza una comprobación dinámica y devuelve `nullptr` si se produce un error en la conversión.  
+ Para los tipos CLR, **dynamic_cast** da como resultado una operación sin efecto si se puede realizar la conversión implícita, o bien un MSIL `isinst` instrucción, que realiza una comprobación dinámica y devuelve **nullptr** si el se produce un error de conversión.  
   
- En el ejemplo siguiente se utiliza `dynamic_cast` para determinar si una clase es una instancia de un tipo determinado:  
+ El ejemplo siguiente usa **dynamic_cast** para determinar si una clase es una instancia del tipo determinado:  
   
-```  
+```cpp 
 // dynamic_cast_clr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -134,7 +135,7 @@ Jerarquía de clases que muestra herencia múltiple
   
  Un puntero a un objeto de tipo `D` se puede convertir de manera segura a `B` o a `C`. Sin embargo, si `D` se convierte para que apunte a un objeto `A`, ¿qué instancia de `A` resultaría? Esto produciría un error de conversión ambigua. Para eludir este problema, puede realizar dos conversiones no ambiguas. Por ejemplo:  
   
-```  
+```cpp 
 // dynamic_cast_4.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -150,19 +151,19 @@ void f() {
   
  Se pueden introducir más ambigüedades cuando se utilizan clases base virtuales. Considere la jerarquía de clases que se muestra en la ilustración siguiente.  
   
- ![Clase de jerarquía que muestra clases base virtuales](../cpp/media/vc39012.gif "vc39012")  
+ ![Clase de la jerarquía que muestra clases base virtuales](../cpp/media/vc39012.gif "vc39012")  
 Jerarquía de clases que muestra clases base virtuales  
   
- En esta jerarquía, `A` es una clase base virtual. Dada una instancia de la clase `E` y un puntero al subobjeto `A`, `dynamic_cast` a un puntero a `B` producirá un error debido a la ambigüedad. Primero debe convertir de nuevo al objeto `E` completo y después volver a subir por la jerarquía, de forma no ambigua, hasta llegar al objeto `B` correcto.  
+ En esta jerarquía, `A` es una clase base virtual. Dada una instancia de clase `E` y un puntero a la `A` subobjeto, un **dynamic_cast** a un puntero a `B` se producirá un error debido a la ambigüedad. Primero debe convertir de nuevo al objeto `E` completo y después volver a subir por la jerarquía, de forma no ambigua, hasta llegar al objeto `B` correcto.  
   
  Considere la jerarquía de clases que se muestra en la ilustración siguiente.  
   
- ![Clase de jerarquía que muestra clases base duplicadas](../cpp/media/vc39013.gif "vc39013")  
+ ![Clase de la jerarquía que muestra clases base duplicadas](../cpp/media/vc39013.gif "vc39013")  
 Jerarquía de clases que muestra clases base duplicadas  
   
- Dado un objeto de tipo `E` y un puntero al subobjeto `D`, para navegar desde el subobjeto `D` hasta el subobjeto `A` situado más a la izquierda, se pueden realizar tres conversiones. Puede realizar una conversión `dynamic_cast` del puntero `D` a un puntero `E`, después una conversión (`dynamic_cast` o una conversión implícita) de `E` a `B` y, por último, una conversión implícita de `B` a `A`. Por ejemplo:  
+ Dado un objeto de tipo `E` y un puntero al subobjeto `D`, para navegar desde el subobjeto `D` hasta el subobjeto `A` situado más a la izquierda, se pueden realizar tres conversiones. Puede realizar un **dynamic_cast** la conversión de la `D` puntero a un `E` puntero y, a continuación, una conversión (ya sea **dynamic_cast** o una conversión implícita) desde `E`a `B`y, por último, una conversión implícita de `B` a `A`. Por ejemplo:  
   
-```  
+```cpp 
 // dynamic_cast_5.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -178,11 +179,11 @@ void f(D* pd) {
 }  
 ```  
   
- El operador `dynamic_cast` también se puede utilizar para realizar una "conversión cruzada". Utilizando la misma jerarquía de clases, es posible convertir un puntero (por ejemplo, del subobjeto `B` al subobjeto `D`) siempre y cuando el objeto completo sea de tipo `E`.  
+ El **dynamic_cast** operador también puede utilizarse para realizar una "conversión cruzada". Utilizando la misma jerarquía de clases, es posible convertir un puntero (por ejemplo, del subobjeto `B` al subobjeto `D`) siempre y cuando el objeto completo sea de tipo `E`.  
   
  Teniendo en cuenta las conversiones cruzadas, en realidad es posible efectuar la conversión de un puntero a `D` a un puntero al subobjeto `A` situado más a la izquierda en solo dos pasos. Puede realizar una conversión cruzada de `D` a `B` y después una conversión implícita de `B` a `A`. Por ejemplo:  
   
-```  
+```cpp 
 // dynamic_cast_6.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -197,11 +198,11 @@ void f(D* pd) {
 }  
 ```  
   
- `dynamic_cast` convierte un valor de puntero NULL en el valor del puntero NULL del tipo de destino.  
+ Un valor de puntero null se convierte en el valor de puntero null del tipo de destino mediante **dynamic_cast**.  
   
  Cuando se utiliza `dynamic_cast < type-id > ( expression )`, si `expression` no se puede convertir de forma segura al tipo `type-id`, la comprobación en tiempo de ejecución hace que se produzca un error en la conversión. Por ejemplo:  
   
-```  
+```cpp 
 // dynamic_cast_7.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -214,16 +215,16 @@ void f() {
 }  
 ```  
   
- El valor de una conversión con errores al tipo de puntero es el puntero NULL. Una conversión incorrecta a hacer referencia a tipo produce una [bad_cast (excepción)](../cpp/bad-cast-exception.md).   Si `expression` no seleccione ni hacer referencia a un objeto válido, un `__non_rtti_object` se produce la excepción.  
+ El valor de una conversión con errores al tipo de puntero es el puntero NULL. Una conversión con errores al tipo de referencia produce una [bad_cast (excepción)](../cpp/bad-cast-exception.md).   Si `expression` apuntan o hacen referencia a un objeto válido, no un `__non_rtti_object` es una excepción.  
   
- Vea [typeid](../cpp/typeid-operator.md) para obtener una explicación de la `__non_rtti_object` excepción.  
+ Consulte [typeid](../cpp/typeid-operator.md) para obtener una explicación de la `__non_rtti_object` excepción.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea el puntero de la clase base (struct A) a un objeto (struct C).  Esto, además del hecho de que hay funciones virtuales, hace posible el polimorfismo en tiempo de ejecución.  
   
  En el ejemplo también se llama a una función no virtual de la jerarquía.  
   
-```  
+```cpp 
 // dynamic_cast_8.cpp  
 // compile with: /GR /EHsc  
 #include <stdio.h>  

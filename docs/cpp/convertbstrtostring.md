@@ -1,5 +1,5 @@
 ---
-title: ConvertBSTRToString | Documentos de Microsoft
+title: ConvertBSTRToString | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 986fc35d1a84737b441d7259bba78459a42404e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1278ab84ea8888b34290c9738e0eb88a4485e99c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944451"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Específicos de Microsoft**  
@@ -31,13 +32,11 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      char* __stdcall ConvertBSTRToString(  
-   BSTR pSrc  
-);  
+char* __stdcall ConvertBSTRToString(BSTR pSrc);  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `pSrc`  
+ *pSrc*  
  Una variable BSTR.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // ConvertBSTRToString.cpp  
 #include <comutil.h>  
 #include <stdio.h>  

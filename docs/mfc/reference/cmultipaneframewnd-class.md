@@ -1,5 +1,5 @@
 ---
-title: Clase CMultiPaneFrameWnd | Documentos de Microsoft
+title: CMultiPaneFrameWnd (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -90,15 +90,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039211"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852353"
 ---
-# <a name="cmultipaneframewnd-class"></a>Clase CMultiPaneFrameWnd
-El `CMultiPaneFrameWnd` clase extiende [CPaneFrameWnd clase](../../mfc/reference/cpaneframewnd-class.md). Puede admitir varios paneles. En lugar de un único identificador incrustado para una barra de controles, `CMultiPaneFrameWnd` contiene un [CPaneContainerManager clase](../../mfc/reference/cpanecontainermanager-class.md) objeto que permite al usuario acoplar un `CMultiPaneFrameWnd` a otro y dinámicamente crear varios flotante, con fichas en Windows.  
+# <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd (clase)
+El `CMultiPaneFrameWnd` extiende la clase [CPaneFrameWnd (clase)](../../mfc/reference/cpaneframewnd-class.md). Puede admitir varios paneles. En lugar de un único identificador incrustado para una barra de control, `CMultiPaneFrameWnd` contiene un [CPaneContainerManager (clase)](../../mfc/reference/cpanecontainermanager-class.md) objeto que permite al usuario acoplar un `CMultiPaneFrameWnd` a otro y dinámicamente crear varios flotante, con pestañas en Windows.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -128,7 +128,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::DockPane](#dockpane)|Acopla el panel. (Invalida [CPaneFrameWnd::DockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane).)|  
 |[CMultiPaneFrameWnd::DockRecentPaneToMainFrame](#dockrecentpanetomainframe)||  
 |[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|Devuelve el texto del título. (Invalida [CPaneFrameWnd::GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext).)|  
-|[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|Devuelve una referencia al objeto de administrador interna del contenedor.|  
+|[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|Devuelve una referencia al objeto de administrador de contenedor interno.|  
 |[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Devuelve el primer panel visible que se encuentra en una ventana de marco reducido. (Invalida [CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane).)|  
 |[CMultiPaneFrameWnd::GetPane](#getpane)|Devuelve un panel que se encuentra en la ventana de marco reducido. (Invalida [CPaneFrameWnd::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane).)|  
 |[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|Devuelve el número de paneles que se encuentran en una ventana de marco reducido. (Invalida [CPaneFrameWnd::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount).)|  
@@ -153,13 +153,13 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(Invalida [CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|  
   
 ## <a name="remarks"></a>Comentarios  
- La mayoría de los métodos de esta clase invalidar los métodos en el [CPaneFrameWnd clase](../../mfc/reference/cpaneframewnd-class.md) clase.  
+ La mayoría de los métodos de esta clase invalidan los métodos en el [CPaneFrameWnd (clase)](../../mfc/reference/cpaneframewnd-class.md) clase.  
   
- Si usa un panel de la `AFX_CBRS_AUTO_ROLLUP` estilo y el usuario acopla ese panel a una ventana de marco de varios paneles, el usuario puede resumir de la ventana, independientemente de la configuración de estilo de los otros paneles acoplados.  
+ Si un panel usa el estilo AFX_CBRS_AUTO_ROLLUP y el usuario acopla ese panel en una ventana de marco de varios paneles, el usuario puede resumir de la ventana, independientemente de la configuración de estilo de los otros paneles acoplados.  
   
- El marco de trabajo crea automáticamente un `CMultiPaneFrameWnd` objeto cuando el usuario desplaza un panel que usa el `CBRS_FLOAT_MULTI` estilo.  
+ El marco crea automáticamente un `CMultiPaneFrameWnd` objeto cuando el usuario desplaza un panel que usa el estilo CBRS_FLOAT_MULTI.  
   
- Para obtener información acerca de cómo derivar una clase a partir de la `CPaneFrameWnd` clase y crear dinámicamente, vea [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
+ Para obtener información acerca de cómo derivar una clase desde el `CPaneFrameWnd` clase y crear dinámicamente, consulte [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo recuperar un puntero a un `CMultiPaneFrameWnd` objeto. Este fragmento de código forma parte de la [ejemplo establece el tamaño del panel](../../visual-cpp-samples.md).  
@@ -188,7 +188,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -374,17 +374,17 @@ virtual CWnd* GetPane() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="getpanecontainermanager"></a>  CMultiPaneFrameWnd::GetPaneContainerManager  
- Devuelve una referencia al objeto de administrador interna del contenedor.  
+ Devuelve una referencia al objeto de administrador de contenedor interno.  
   
 ```  
 CPaneContainerManager& GetPaneContainerManager();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una referencia al objeto de administrador interna del contenedor.  
+ Una referencia al objeto de administrador de contenedor interno.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método puede utilizarse para tener acceso interno [CPaneContainerManager clase](../../mfc/reference/cpanecontainermanager-class.md) objeto.  
+ Este método puede utilizarse para tener acceso interno [CPaneContainerManager (clase)](../../mfc/reference/cpanecontainermanager-class.md) objeto.  
   
 ##  <a name="getpanecount"></a>  CMultiPaneFrameWnd::GetPaneCount  
 

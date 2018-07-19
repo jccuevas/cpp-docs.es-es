@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: interfaz entre código excepcional y no excepcional | Documentos de Microsoft'
+title: 'Cómo: interfaz entre código excepcional y no excepcional | Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cf2216ba75912520f744f0f0331a50520aa895
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417280"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940123"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Cómo: Interfaz entre código excepcional y no excepcional
 En este artículo se describe cómo implementar el control de excepciones coherente en un módulo de C++ y cómo traducir esas excepciones a códigos de error, y vicecersa, en los límites de la excepción.  
   
- A veces, un módulo de C++ tiene que servir de interfaz con código que no usa las excepciones (código sin excepciones). Dicha interfaz se conoce como un *límite de la excepción*. Por ejemplo, quizás desee llamar a la función `CreateFile` de Win32 en el programa de C++. `CreateFile` no produce excepciones; en su lugar establece los códigos de error que pueden recuperarse mediante la función `GetLastError`. Si el programa de C++ no es trivial, probablemente sea preferible tener una directiva coherente de control de errores basada en excepciones. Y probablemente no es conveniente abandonar las excepciones solo porque se interactúa con código sin excepciones; tampoco es conveniente mezclar directivas de error basadas en excepciones y no basadas en excepciones en el módulo de C++.  
+ A veces, un módulo de C++ tiene que servir de interfaz con código que no usa las excepciones (código sin excepciones). Esta interfaz se conoce como un *límite de la excepción*. Por ejemplo, quizás desee llamar a la función `CreateFile` de Win32 en el programa de C++. `CreateFile` no produce excepciones; en su lugar establece los códigos de error que pueden recuperarse mediante la función `GetLastError`. Si el programa de C++ no es trivial, probablemente sea preferible tener una directiva coherente de control de errores basada en excepciones. Y probablemente no es conveniente abandonar las excepciones solo porque se interactúa con código sin excepciones; tampoco es conveniente mezclar directivas de error basadas en excepciones y no basadas en excepciones en el módulo de C++.  
   
 ## <a name="calling-non-exceptional-functions-from-c"></a>Llamar a funciones sin excepciones desde C++  
  Cuando se llama a una función sin excepciones desde C++, la idea es ajustar esa función en una función de C++ que detecte cualquier error y posiblemente inicie una excepción. Cuando diseñe una función contenedora, decida primero qué tipo de garantías de excepción va a proporcionar: ningún throw, segura o básica. En segundo lugar, diseñe la función para liberar correctamente todos los recursos, por ejemplo, los identificadores de archivo, si se produce una excepción. Normalmente, esto significa que utiliza punteros inteligentes o administradores de recursos similares para poseer los recursos. Para obtener más información acerca de las consideraciones de diseño, vea [Cómo: diseño de seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md).  
@@ -197,7 +197,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
   
 ```  
   
- Cuando se convierte de excepciones a códigos de error, un problema potencial se debe a que los códigos de error no contienen a menudo la riqueza de información que una excepción puede almacenar. Para resolver esto, puede proporcionar un bloque `catch` para cada tipo de excepción concreto que pueda producirse. Además, realice un registro para grabar los detalles de la excepción antes de que se convierta en un código de error. Este enfoque puede crear muchas repeticiones en el código si varias funciones usan el mismo conjunto de bloques `catch`. Una manera eficaz de evitar la repetición del código es la refactorización de los bloques en una función de utilidad privada que implemente los bloques `try` y `catch`, y que acepte un objeto de función que se invoca en el bloque `try`. En cada función pública, pase el código a la función de utilidad como una expresión lambda.  
+ Cuando se convierte de excepciones a códigos de error, un problema potencial se debe a que los códigos de error no contienen a menudo la riqueza de información que una excepción puede almacenar. Para solucionar este problema, puede proporcionar un **catch** bloque para cada tipo de excepción específico que se podría producir y realiza el registro para registrar los detalles de la excepción antes de que se convierte en un código de error. Este enfoque puede crear una gran cantidad de repetición del código si varias funciones usan el mismo conjunto de **catch** bloques. Es una buena forma de evitar la repetición del código mediante la refactorización de esos bloques en una función de utilidad privada que implementa el **intente** y **catch** bloquea y acepta un objeto de función que se invoca en el **intente** bloque. En cada función pública, pase el código a la función de utilidad como una expresión lambda.  
   
 ```cpp  
 template<typename Func>   

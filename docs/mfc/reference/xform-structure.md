@@ -1,5 +1,5 @@
 ---
-title: XFORM (estructura) | Documentos de Microsoft
+title: XFORM (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1c3a8abd39f7f190f36a18e7691475d951cab8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6084882bed6690269fbb926f394159491d22978a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379491"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885889"
 ---
 # <a name="xform-structure"></a>XFORM (Estructura)
 El `XFORM` estructura tiene el formato siguiente:  
@@ -40,14 +40,14 @@ typedef struct  tagXFORM {  /* xfrm */
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El `XFORM` estructura especifica un espacio universal para la transformación de espacio en la página. El **eDx** y **eDy** miembros especifican los componentes de traducción horizontal y vertical, respectivamente. En la tabla siguiente se muestra cómo se utilizan los demás miembros, dependiendo de la operación:  
+ El `XFORM` estructura especifica un espacio global para la transformación de espacio en la página. El `eDx` y `eDy` los miembros especifican los componentes de la traslación horizontal y vertical, respectivamente. En la tabla siguiente se muestra cómo se utilizan los demás miembros, dependiendo de la operación:  
   
 |Operación|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
 |`Rotation`|Coseno del ángulo de giro|Seno del ángulo de giro|Negativo seno del ángulo de giro|Coseno del ángulo de giro|  
-|**ajuste de escala**|Componente de escala horizontal|Nothing|Nothing|Componente de escala vertical|  
-|**Recorte**|Nothing|Constante de proporcionalidad horizontal|Constante de proporcionalidad vertical|Nothing|  
-|**Reflexión**|Componente de reflexión horizontal|Nothing|Nothing|Componente de reflexión vertical|  
+|`Scaling`|Componente de escalado horizontal|Nothing|Nothing|Componente de escala vertical|  
+|`Shear`|Nothing|Constante proporcionalidad horizontal|Constante proporcionalidad vertical|Nothing|  
+|`Reflection`|Componente horizontal de reflexión|Nothing|Nothing|Componente vertical de reflexión|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** wingdi.h  

@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Clear | Documentos de Microsoft
+title: _variant_t::Clear | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce2a8f423c7c1ff4ce975e13b216442825c6d65c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f3249408a63b873e4eea9d6b1ec741fc1471ac9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420985"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939408"
 ---
 # <a name="varianttclear"></a>_variant_t::Clear
 **Específicos de Microsoft**  
   
- Borra el objeto encapsulado **VARIANT** objeto.  
+ Borra el encapsulado `VARIANT` objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ void Clear( );
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Llamadas **VariantClear** en el objeto encapsulado **VARIANT** objeto.  
+ Las llamadas `VariantClear` en encapsulado `VARIANT` objeto.  
   
  **FIN de Específicos de Microsoft**  
   

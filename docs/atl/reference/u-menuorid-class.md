@@ -1,5 +1,5 @@
 ---
-title: Clase _U_MENUorID | Documentos de Microsoft
+title: _U_MENUorID (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 847a735cdba6b9ff4173e23acf78ea7dc4d3034c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f945766283fa6e58b1eb3430cc780b1ae136e9f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363465"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884742"
 ---
-# <a name="umenuorid-class"></a>Clase _U_MENUorID
-Esta clase proporciona contenedores para **CreateWindow** y **CreateWindowEx**.  
+# <a name="umenuorid-class"></a>_U_MENUorID (clase)
+Esta clase proporciona contenedores para `CreateWindow` y `CreateWindowEx`.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,28 +50,28 @@ class _U_MENUorID
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Un identificador para un menú.|  
+|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Identificador de un menú.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase de argumento de adaptador permite que cualquier IDs ( **UINT**s) o identificadores de menú ( `HMENU`s) que se pasan a una función sin necesidad de realizar una conversión explícita en la parte del llamador.  
+ Esta clase de adaptador de argumento permite identificadores (unidades) o identificadores de menú (HMENUs) que se pasará a una función sin necesidad de realizar una conversión explícita por parte del autor de la llamada.  
   
- Esta clase está diseñada para implementar contenedores de la API de Windows, especialmente el [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) y [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funciones, ambos de los cuales aceptan un `HMENU` argumento que puede ser un elemento secundario identificador de ventana ( **UINT**) en lugar de un identificador de menú. Por ejemplo, puede ver esta clase en uso como un parámetro a [CWindowImpl:: Create](cwindowimpl-class.md#create).  
+ Esta clase está diseñada para la implementación de contenedores a la API de Windows, especialmente la [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) y [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funciones, que aceptan un argumento HMENU que puede ser una ventana secundaria identificador (UINT) en lugar de un identificador de menú. Por ejemplo, puede ver esta clase en uso como un parámetro a [CWindowImpl:: Create](cwindowimpl-class.md#create).  
 
   
- La clase define dos sobrecargas del constructor: uno acepta un **UINT** acepta argumentos y el otro un `HMENU` argumento. El **UINT** argumento solo se convierte en una `HMENU` en el constructor y el resultado almacenado en el miembro de datos único de la clase, [m_hMenu](#_u_menuorid__m_hmenu). El argumento para el `HMENU` constructor se almacena directamente sin realizar ninguna conversión.  
+ La clase define dos sobrecargas del constructor: uno acepta un argumento UINT y otra que acepta un argumento HMENU. HMENU del constructor y el resultado almacenado en el miembro de datos única de la clase, simplemente se convierte el argumento UINT [m_hMenu](#_u_menuorid__m_hmenu). El argumento del constructor HMENU se almacena directamente sin conversión.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
   
 ##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu  
- La clase contiene el valor pasado a cualquiera de sus constructores como un complemento público `HMENU` miembro de datos.  
+ La clase contiene el valor pasado a cualquiera de sus constructores como un miembro de datos público HMENU.  
   
 ```
 HMENU m_hMenu;
 ```  
   
 ##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID  
- El **UINT** argumento solo se convierte en una `HMENU` en el constructor y el resultado almacenado en el miembro de datos único de la clase, [m_hMenu](#_u_menuorid__m_hmenu).  
+ HMENU del constructor y el resultado almacenado en el miembro de datos única de la clase, simplemente se convierte el argumento UINT [m_hMenu](#_u_menuorid__m_hmenu).  
   
 ```
 _U_MENUorID(UINT nID);  
@@ -79,14 +79,14 @@ _U_MENUorID(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `nID`  
+ *nID*  
  Un identificador de ventana secundaria.  
   
- `hMenu`  
- Un identificador de menú.  
+ *hMenu*  
+ Identificador de menú.  
   
 ### <a name="remarks"></a>Comentarios  
- El argumento para el `HMENU` constructor se almacena directamente sin realizar ninguna conversión.  
+ El argumento del constructor HMENU se almacena directamente sin conversión.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)

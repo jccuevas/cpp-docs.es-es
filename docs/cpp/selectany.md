@@ -1,5 +1,5 @@
 ---
-title: selectany | Documentos de Microsoft
+title: selectany | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a6543188525bea9a04c82bf5202160b42bcb6b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb4f4ccd3cbfb5bb26e9f58a862eaa87dba3c538
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944589"
 ---
 # <a name="selectany"></a>selectany
 **Específicos de Microsoft**  
@@ -35,21 +36,21 @@ __declspec( selectany ) declarator
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- En tiempo de vinculación, si se ven varias definiciones de un COMDAT, el vinculador selecciona una y descarta el resto. Si la opción del vinculador [/OPT: ref](../build/reference/opt-optimizations.md) (optimizaciones) está seleccionado, a continuación, se producirá la eliminación de COMDAT quitar todos los elementos de los datos en la salida del vinculador.  
+ En tiempo de vinculación, si se ven varias definiciones de un COMDAT, el vinculador selecciona una y descarta el resto. Si la opción del vinculador [/OPT: ref](../build/reference/opt-optimizations.md) (optimizaciones) está seleccionada, se producirá la eliminación de COMDAT quitar todos los elementos de datos sin referencia en la salida del vinculador.  
   
  Los constructores y la asignación mediante una función global o métodos estáticos en la declaración no crean una referencia y no impedirán la eliminación de /OPT:REF. No se debe depender de los efectos secundarios de ese código si no existen otras referencias a los datos.  
   
- Para los objetos globales inicializados dinámicamente, `selectany` también descartará un código de inicialización de objeto no referenciado.  
+ De forma dinámica los objetos globales inicializados, **selectany** código de inicialización de un objeto sin referencia, así, se descartarán.  
   
- Un elemento de datos globales se puede inicializar normalmente solo una vez en un proyecto EXE o DLL. `selectany` se puede utilizar en la inicialización de datos globales definidos por los encabezados cuando el mismo encabezado aparece en más de un archivo de código fuente. `selectany` está disponible en los compiladores de C y C++.  
+ Un elemento de datos globales se puede inicializar normalmente solo una vez en un proyecto EXE o DLL. **selectany** puede usarse en la inicialización de datos globales definidos por los encabezados cuando el mismo encabezado aparece en más de un archivo de código fuente. **selectany** está disponible en los compiladores de C y C++.  
   
 > [!NOTE]
->  `selectany` solo se puede aplicar a la inicialización real de elementos de datos globales externamente visibles.  
+>  **selectany** sólo puede aplicarse a la inicialización real de elementos de datos globales externamente visibles.  
   
 ## <a name="example"></a>Ejemplo  
- En este código se muestra cómo usar el atributo `selectany`.  
+ Este código muestra cómo usar el **selectany** atributo:  
   
-```  
+```cpp 
 //Correct - x1 is initialized and externally visible   
 __declspec(selectany) int x1=1;  
   
@@ -80,9 +81,9 @@ __declspec(selectany) X x(1);
 ```  
   
 ## <a name="example"></a>Ejemplo  
- Este código muestra cómo utilizar el `selectany` atributo para garantizar el plegamiento de COMDAT de datos cuando también se utiliza la [/OPT: ICF](../build/reference/opt-optimizations.md) opción del vinculador. Tenga en cuenta que los datos se deben marcar con `selectany` y se coloca en un **const** sección (solo lectura). Debe especificar explícitamente la sección de solo lectura.  
+ Este código muestra cómo usar el **selectany** atributo para garantizar el plegamiento de COMDAT de datos cuando también se utiliza el [/OPT: ICF](../build/reference/opt-optimizations.md) opción del vinculador. Tenga en cuenta que los datos deben estar marcados con **selectany** y se coloca en un **const** sección (solo lectura). Debe especificar explícitamente la sección de solo lectura.  
   
-```  
+```cpp 
 // selectany2.cpp  
 // in the following lines, const marks the variables as read only  
 __declspec(selectany) extern const int ix = 5;  

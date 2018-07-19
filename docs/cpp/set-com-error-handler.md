@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d341a2d7ee9f6220922dbdde95e19020fe085892
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f516114dbaa9e507491cf669c3371b6b8fbaf11
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944546"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Específicos de Microsoft**  
@@ -37,13 +38,13 @@ void __stdcall _set_com_error_handler(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `pHandler`  
+ *pHandler*  
  Puntero a la función de reemplazo.  
   
- `hr`  
- Información de `HRESULT`.  
+ *recursos humanos*  
+ Información de HRESULT.  
   
- `perrinfo`  
+ *perrinfo*  
  Objeto `IErrorInfo`.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -53,7 +54,7 @@ void __stdcall _set_com_error_handler(
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // _set_com_error_handler.cpp  
 // compile with /EHsc  
 #include <stdio.h>  
@@ -95,7 +96,7 @@ Exception raised: Unable to establish the connection!
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** \<comdef.h >  
   
- **Lib:** si la **wchar_t es tipo nativo** opción del compilador está activada, use omsuppw.lib o comsuppwd.lib. Si **wchar_t es tipo nativo** está desactivada, use comsupp.lib. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ **Lib:** si el **wchar_t es tipo nativo** opción del compilador está activada, use omsuppw.lib o comsuppwd.lib. Si **wchar_t es tipo nativo** está desactivada, use comsupp.lib. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones globales COM del compilador](../cpp/compiler-com-global-functions.md)

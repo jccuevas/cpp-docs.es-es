@@ -1,5 +1,5 @@
 ---
-title: Clase CStringElementTraits | Documentos de Microsoft
+title: CStringElementTraits (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddce07ed7f79c167d4cf819b85de1484346bba93
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f0c6ed9fb68e685a7b8a59b049277e61f41fd2ce
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363990"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885730"
 ---
-# <a name="cstringelementtraits-class"></a>Clase CStringElementTraits
-Esta clase proporciona funciones estáticas utilizadas por las clases de colección para almacenar `CString` objetos.  
+# <a name="cstringelementtraits-class"></a>CStringElementTraits (clase)
+Esta clase proporciona funciones estáticas usadas por las clases de colección para almacenar `CString` objetos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,7 +42,7 @@ class CStringElementTraits
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
+ *T*  
  El tipo de datos que se almacenará en la colección.  
   
 ## <a name="members"></a>Miembros  
@@ -65,7 +65,7 @@ class CStringElementTraits
 |[CStringElementTraits::RelocateElements](#relocateelements)|(Estático) Llame a esta función para reubicar `CString` elementos almacenados en un objeto de clase de colección.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase proporciona funciones estáticas para copiar, mover y comparar cadenas y para crear un valor hash. Estas funciones son útiles cuando se usa una clase de colección para almacenar los datos de cadena. Use [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) cuando se requieren las comparaciones entre mayúsculas y minúsculas. Use [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) cuando los objetos de cadena deben tratarse como referencias.  
+ Esta clase proporciona funciones estáticas para copiar, mover y comparar cadenas y para crear un valor hash. Estas funciones son útiles cuando se usa una clase de colección para almacenar los datos basados en cadena. Use [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) cuando sean necesarias comparaciones entre mayúsculas y minúsculas. Use [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) cuando los objetos de cadena deben tratarse como referencias.  
   
  Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
@@ -80,14 +80,14 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `str1`  
+ *str1*  
  El primer elemento de cadena.  
   
- `str2`  
- El segundo elemento de cadena.  
+ *str2*  
+ La segunda cadena de elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve true si los elementos en caso contrario, son iguales, false.  
+ Devuelve true si los elementos si no son iguales, es false.  
   
 ##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered  
  Llame a esta función estática para comparar dos elementos de cadena.  
@@ -97,14 +97,14 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `str1`  
+ *str1*  
  El primer elemento de cadena.  
   
- `str2`  
- El segundo elemento de cadena.  
+ *str2*  
+ La segunda cadena de elemento.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Cero si las cadenas son idénticas, < 0 si `str1` es menor que `str2`, o 0 > Si `str1` es mayor que `str2`. El [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método se usa para realizar las comparaciones.  
+ Cero si las cadenas son idénticas, < 0 si *str1* es menor que *str2*, o 0 > Si *str1* es mayor que *str2*. El [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método se usa para realizar las comparaciones.  
 
   
 ##  <a name="copyelements"></a>  CStringElementTraits::CopyElements  
@@ -118,17 +118,17 @@ static void CopyElements(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDest`  
+ *pDest*  
  Puntero al primer elemento que va a recibir los datos copiados.  
   
- `pSrc`  
- Puntero para el primer elemento que se va a copiar.  
+ *pSrc*  
+ Puntero en el primer elemento que se va a copiar.  
   
- `nElements`  
+ *nElements*  
  Número de elementos que se van a copiar.  
   
 ### <a name="remarks"></a>Comentarios  
- No deben superponerse a los elementos de origen y de destino.  
+ No deben superponerse a los elementos de origen y destino.  
   
 ##  <a name="hash"></a>  CStringElementTraits::Hash  
  Llame a esta función estática para calcular un valor hash para el elemento de la cadena especificada.  
@@ -138,11 +138,11 @@ static ULONG Hash(INARGTYPE str);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `str`  
- El elemento de la cadena.  
+ *str*  
+ El elemento de cadena.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve un valor de hash, que se calcula con el contenido de la cadena.  
+ Devuelve un valor de hash, calculado con contenido de la cadena.  
   
 ##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE  
  El tipo de datos que se usará para agregar elementos al objeto de clase de colección.  
@@ -169,19 +169,19 @@ static void RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- `pDest`  
- Puntero al primer elemento que va a recibir los datos reubicados.  
+ *pDest*  
+ Puntero al primer elemento que va a recibir los datos trasladados.  
   
- `pSrc`  
+ *pSrc*  
  Puntero al primer elemento para cambiar la posición.  
   
- `nElements`  
+ *nElements*  
  El número de elementos que se va a cambiar la ubicación.  
   
 ### <a name="remarks"></a>Comentarios  
- Llama a esta función estática [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), lo que es suficiente para la mayoría de los tipos de datos. Si los objetos que se mueven contienen punteros a sus propios miembros, esta función estática deberá reemplazarse.  
+ Llama esta función estática [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), que es suficiente para la mayoría de los tipos de datos. Si los objetos que se está moviendo contienen punteros a sus propios miembros, esta función estática debe reemplazarse.  
   
 ## <a name="see-also"></a>Vea también  
- [Clase CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
- [Clase CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)   
+ [CElementTraitsBase (clase)](../../atl/reference/celementtraitsbase-class.md)   
+ [CStringElementTraitsI (clase)](../../atl/reference/cstringelementtraitsi-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)

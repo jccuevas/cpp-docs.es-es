@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cceec4e7d954e07e1d776042f311dfa1a386300
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba90002bc16dee6def7f8de69314668204ff5466
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850761"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966627"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference (clase)
 
@@ -39,11 +39,11 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-Para modificar el tipo de T.
+*T* el tipo de modificación.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase `add_rvalue_reference` tiene un miembro denominado `type` que es un alias del tipo de una referencia a un valor R al parámetro de plantilla `T`. La semántica de contracción de referencias implica que, en los tipos `T` que no son de objeto ni de función, `T&&` sea `T`. Por ejemplo, cuando `T` es un tipo de referencia de valor l, `add_rvalue_reference<T>::type` es el tipo de referencia de valor l, no una referencia rvalue.
+El `add_rvalue_reference` clase tiene un miembro denominado `type`, que es un alias para el tipo de referencia rvalue para el parámetro de plantilla *T*. La semántica de contracción de referencias implica que, para los tipos que no sean de objeto y que no son de función *T*, `T&&` es un *T*. Por ejemplo, cuando *T* es un tipo de referencia lvalue, `add_rvalue_reference<T>::type` es el tipo de referencia de valor l, no una referencia rvalue.
 
 Para mayor comodidad, \<type_traits > define una plantilla de aplicación auxiliar, `add_rvalue_reference_t`, ese alias el `type` miembro de `add_rvalue_reference`.
 

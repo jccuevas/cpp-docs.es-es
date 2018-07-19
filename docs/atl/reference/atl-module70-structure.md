@@ -1,5 +1,5 @@
 ---
-title: Estructura de _ATL_MODULE70 | Documentos de Microsoft
+title: _ATL_MODULE70 (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a374ee01387c576a5d1a727857badc7ef7139ad
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9666d73eec770ff8231e5730e01520b0bee68012
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255471"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886224"
 ---
-# <a name="atlmodule70-structure"></a>Estructura de _ATL_MODULE70
+# <a name="atlmodule70-structure"></a>_ATL_MODULE70 (estructura)
 Contiene los datos utilizados por cada módulo ATL.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,19 +42,19 @@ struct _ATL_MODULE70 {
   
 ## <a name="members"></a>Miembros  
  `cbSize`  
- El tamaño de la estructura que se utiliza para controlar las versiones.  
+ El tamaño de la estructura que se utiliza para el control de versiones.  
   
  `m_nLockCnt`  
- Recuento de referencias para determinar cuánto tiempo permanecerá activo el módulo.  
+ Recuento de referencias para determinar cuánto tiempo el módulo debe permanecer activo.  
   
- **m_pTermFuncs**  
- Funciones de las pistas que se han registrado para llamar cuando se cierra ATL.  
+ `m_pTermFuncs`  
+ Funciones de pistas que se han registrado se debe llamar cuando se cierra ATL.  
   
- **m_csStaticDataInitAndTypeInfo**  
+ `m_csStaticDataInitAndTypeInfo`  
  Se usa para coordinar el acceso a datos internos en situaciones de multiproceso.  
   
 ## <a name="remarks"></a>Comentarios  
- [_ATL_MODULE](atl-typedefs.md#_atl_module) se define como una definición de tipo de `_ATL_MODULE70`.  
+ [_ATL_MODULE](atl-typedefs.md#_atl_module) se define como un typedef de `_ATL_MODULE70`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  

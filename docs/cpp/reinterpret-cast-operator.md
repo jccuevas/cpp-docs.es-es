@@ -1,5 +1,5 @@
 ---
-title: reinterpret_cast (operador) | Documentos de Microsoft
+title: reinterpret_cast (operador) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd64960469c9c4ca069611f6ebeefeaac8b29ba0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18a7cdd80c1d7b6b17a988d8f3581c7757f69823
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944492"
 ---
 # <a name="reinterpretcast-operator"></a>reinterpret_cast (Operador)
 Permite que cualquier puntero se convierta en cualquier otro tipo de puntero. También permite convertir cualquier tipo entero en cualquier tipo de puntero y viceversa.  
@@ -32,19 +33,19 @@ reinterpret_cast < type-id > ( expression )
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El uso incorrecto del operador `reinterpret_cast` puede ser no seguro. A menos que la conversión deseada sea inherentemente de bajo nivel, se debe utilizar uno de los otros operadores de conversión.  
+ Uso incorrecto de la **reinterpret_cast** operador puede ser no seguro. A menos que la conversión deseada sea inherentemente de bajo nivel, se debe utilizar uno de los otros operadores de conversión.  
   
- El operador `reinterpret_cast` se puede utilizar para las conversiones como `char*` a `int*` o `One_class*` a `Unrelated_class*`, que son intrínsecamente no seguras.  
+ El **reinterpret_cast** operador puede usarse para las conversiones como `char*` a `int*`, o `One_class*` a `Unrelated_class*`, que son intrínsecamente no seguras.  
   
- El resultado de `reinterpret_cast` no se puede utilizar con seguridad para algo distinto que convertirlo otra vez a su tipo original. Otros usos son, en el mejor de los casos, no portables.  
+ El resultado de una **reinterpret_cast** con seguridad no se puede usar para algo distinto que convertirlo a su tipo original. Otros usos son, en el mejor de los casos, no portables.  
   
- El `reinterpret_cast` operador no puede desechar la **const**, `volatile`, o **__unaligned** atributos. Vea [const_cast (operador)](../cpp/const-cast-operator.md) para obtener información acerca de cómo quitar estos atributos.  
+ El **reinterpret_cast** operador no se puede desechar el **const**, **volátil**, o **__unaligned** atributos. Consulte [const_cast (operador)](../cpp/const-cast-operator.md) para obtener información acerca de cómo quitar estos atributos.  
   
- El operador `reinterpret_cast` convierte un valor de puntero NULL al valor de puntero NULL del tipo de destino.  
+ El **reinterpret_cast** operador convierte un valor de puntero nulo en el valor de puntero null del tipo de destino.  
   
- Un uso práctico de `reinterpret_cast` es el que se hace en una función hash, que asigna un valor a un índice de tal forma que dos valores distintos raramente acaben teniendo el mismo índice.  
+ Un uso práctico de **reinterpret_cast** está en una función hash, que se asigna un valor a un índice de tal manera que dos distintos valores rara vez final copia con el mismo índice.  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -84,7 +85,7 @@ Output:
 64829  
 ```  
   
- `reinterpret_cast` permite que el puntero se tratará como tipo entero. El resultado se cambia a bits y se compara mediante XOR consigo mismo para producir un índice único (con un alto grado de probabilidad). El índice se trunca mediante una conversión de estilo de C al tipo de valor devuelto de la función.  
+ El **reinterpret_cast** permite que el puntero se trate como un tipo entero. El resultado se cambia a bits y se compara mediante XOR consigo mismo para producir un índice único (con un alto grado de probabilidad). El índice se trunca mediante una conversión de estilo de C al tipo de valor devuelto de la función.  
   
 ## <a name="see-also"></a>Vea también  
  [Operadores de conversión](../cpp/casting-operators.md)   

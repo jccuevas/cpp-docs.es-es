@@ -1,5 +1,5 @@
 ---
-title: '¿Operador condicional:? : | Documentos de Microsoft'
+title: '¿Operador condicional:? : | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 807754bb13f8302fe9583b6f4a8219e3aea81086
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 273572fd6ad79ba45ae2aabbf91296afd6e8308e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944493"
 ---
 # <a name="conditional-operator--"></a>¿Operador condicional:? :
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+``` 
   
 expression ? expression : expression  
-```  
+``` 
   
 ## <a name="remarks"></a>Comentarios  
  El operador condicional (**?:**) es un operador ternario (toma tres operandos). El operador condicional funciona del modo siguiente:  
   
--   El primer operando se convierte implícitamente a `bool`. Se evalúa y todos los efectos secundarios se completan antes de continuar.  
+-   El primer operando se convierte implícitamente en **bool**. Se evalúa y todos los efectos secundarios se completan antes de continuar.  
   
 -   Si el primer operando se evalúa como **true** (1), que se evalúa el segundo operando.  
   
@@ -47,7 +48,7 @@ expression ? expression : expression
   
 -   Si ambos operandos son del mismo tipo, el resultado es de ese tipo.  
   
--   Si ambos operandos son de tipos de aritmética o de enumeración, las conversiones aritméticas habituales (se trata en [conversiones estándar](standard-conversions.md)) se realizan para convertirlos a un tipo común.  
+-   Si ambos operandos son de tipos de aritmética o de enumeración, las conversiones aritméticas habituales (cubiertos en [conversiones estándar](standard-conversions.md)) se realizan para convertirlos a un tipo común.  
   
 -   Si ambos operandos son de tipos de puntero o si uno es de un tipo de puntero y el otro es una expresión de constante que se evalúa como 0, las conversiones de puntero se realizan para convertirlos a un tipo común.  
   
@@ -66,7 +67,7 @@ expression ? expression : expression
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // expre_Expressions_with_the_Conditional_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate conditional operator  
@@ -79,5 +80,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operador de expresión condicional](../c-language/conditional-expression-operator.md)

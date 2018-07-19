@@ -1,5 +1,5 @@
 ---
-title: 'Operador AND bit a bit: &amp; | Documentos de Microsoft'
+title: 'Operador AND bit a bit: &amp; | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeacac8afb7a8195642ebbfb6aac7c697544cd16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 428e3634898f50e7737c5fc5dae2ce7d0445572e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944182"
 ---
 # <a name="bitwise-and-operator-amp"></a>Operador AND bit a bit: &amp;
+
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
-expression   
-&  
- expression  
-  
-```  
+```
+
+expression & expression  
+
+```
   
 ## <a name="remarks"></a>Comentarios  
  Las expresiones pueden ser otras expresiones de tipo and, o (en función de las restricciones de tipo que se mencionan más abajo), expresiones de igualdad, expresiones relacionales, expresiones aditivas, expresiones multiplicativas, expresiones de puntero a miembro, expresiones de conversión, expresiones unarias, expresiones de postfijo o expresiones primarias.  
   
  El operador AND bit a bit (**&**) compara cada bit del primer operando con el bit correspondiente del segundo operando. Si ambos bits son 1, el bit del resultado correspondiente se establece en 1. De lo contrario, el bit del resultado correspondiente se establece en 0.  
   
- Ambos operandos para el operador AND bit a bit deben ser de tipos enteros. Las conversiones aritméticas habituales descritas en [conversiones estándar](standard-conversions.md), se aplican a los operandos.  
+ Ambos operandos para el operador AND bit a bit deben ser de tipos enteros. Tratan las conversiones aritméticas habituales en [conversiones estándar](standard-conversions.md), se aplican a los operandos.  
   
 ## <a name="operator-keyword-for-"></a>Palabra clave del operador para &  
- El `bitand` operador es el equivalente de texto de **&**. Hay dos maneras de obtener acceso a la `bitand` operador en los programas: incluir el archivo de encabezado `iso646.h`, o compilar con la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador (deshabilitar extensiones de lenguaje).  
+ El **bitand** operador es el equivalente textual de **&**. Hay dos maneras de acceder a la **bitand** operador en los programas: incluir el archivo de encabezado `iso646.h`, o compilar con la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador (deshabilitar extensiones de lenguaje).  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // expre_Bitwise_AND_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate bitwise AND  
@@ -63,5 +63,5 @@ int main() {
   
 ## <a name="see-also"></a>Vea también  
  [Operadores integrados de C++, precedencia y asociatividad](cpp-built-in-operators-precedence-and-associativity.md)  
- [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operadores bit a bit de C](../c-language/c-bitwise-operators.md)
