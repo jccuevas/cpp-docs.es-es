@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30151d18126d86256c189355c19f61a694bb3267
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1610013027305d75a9520c8882b1900fe18c016c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863548"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955376"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator (Clase)
 
@@ -48,15 +48,15 @@ class reverse_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-RandomIterator el tipo que representa el iterador que se adaptará para trabajar en orden inverso.
+RandomIterator el tipo que representa el iterador para que se adaptará para trabajar en orden inverso.
 
 ## <a name="remarks"></a>Comentarios
 
-Los contenedores existentes en la Biblioteca estándar de C++ también definen los tipos `reverse_iterator` y `const_reverse_iterator`, y tienen las funciones miembro `rbegin` y `rend` que devuelven iteradores inversos. Estos iteradores tienen semántica de sobrescritura. El `reverse_iterator` adaptador complementa esta funcionalidad, ya que ofrecen una semántica de inserción y también puede usarse con secuencias.
+Los contenedores existentes en la Biblioteca estándar de C++ también definen los tipos `reverse_iterator` y `const_reverse_iterator`, y tienen las funciones miembro `rbegin` y `rend` que devuelven iteradores inversos. Estos iteradores tienen semántica de sobrescritura. El `reverse_iterator` adaptador complementa esta funcionalidad, ya que ofrece la semántica de inserción y también se puede usar con secuencias.
 
 El `reverse_iterator` que requiere un iterador bidireccional no debe llamar a cualquiera de los miembros funciones `operator+=`, `operator+`, `operator-=`, `operator-`, o `operator[]`, que solo se puede usar con los iteradores de acceso aleatorio.
 
-El intervalo de iterador es [*primer*, *última*), donde el corchete de la izquierda indica la inclusión de *primera* y los paréntesis de la derecha indica el inclusión de elementos hasta sin incluirla *última* propio. Se incluyen los mismos elementos en la secuencia inversa [ **rev** - *primer*, **rev** - *última*) para ese if *última* es el elemento de uno más allá-el final de una secuencia, a continuación, el primer elemento **rev** - *primer* en los puntos de secuencia inversa para \*(*última* - 1). La identidad que relaciona todos los iteradores inversos con sus iteradores subyacentes es:
+El intervalo de iterador es [*primera*, *última*), donde el corchete en el lado izquierdo indica la inclusión de *primera* y el paréntesis derecho indica la inclusión de elementos hasta pero excluyendo *última* propio. Se incluyen los mismos elementos en la secuencia inversa [ **rev** - *primera*, **rev** - *última*) para ese if *última* es el elemento uno más allá y el final de una secuencia, a continuación, el primer elemento **rev** - *primera* en los puntos de secuencia inversa para \*(*última* - 1). La identidad que relaciona todos los iteradores inversos con sus iteradores subyacentes es:
 
 &\*( **reverse_iterator** ( *i* )) == &\*( *i* - 1).
 
@@ -275,7 +275,7 @@ reverse_iterator<RandomIterator> operator+(difference_type Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`Off` El desplazamiento a agregarse para el iterador inverso.
+*Desactivar* el desplazamiento que se agregará al iterador inverso.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -423,7 +423,7 @@ reverse_iterator<RandomIterator>& operator+=(difference_type Off);
 
 ### <a name="parameters"></a>Parámetros
 
-`Off` El desplazamiento que se incrementa el iterador.
+*Desactivar* el desplazamiento que se incrementa el iterador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -495,7 +495,7 @@ reverse_iterator<RandomIterator> operator-(difference_type Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`Off` El desplazamiento que se va a restar reverse_iterator.
+*Desactivar* el desplazamiento que se restará del reverse_iterator.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -644,7 +644,7 @@ reverse_iterator<RandomIterator>& operator-=(difference_type Off);
 
 ### <a name="parameters"></a>Parámetros
 
-`Off` El desplazamiento que se va a restar el `reverse_iterator`.
+*Desactivar* el desplazamiento que se restará el `reverse_iterator`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -797,7 +797,7 @@ reference operator[](difference_type Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`Off` El desplazamiento desde el `reverse_iterator` dirección.
+*Desactivar* el desplazamiento desde el `reverse_iterator` dirección.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -950,7 +950,7 @@ El tipo es un sinónimo del nombre de tipo de rasgo del iterador `iterator_trait
 
 ### <a name="example"></a>Ejemplo
 
-Vea [reverse_iterator::operator&#91;&#93;](#op_at) o [reverse_iterator::operator*](#op_star) para obtener ejemplos de cómo declarar y usar **reference**.
+Consulte [reverse_iterator:: operator&#91; &#93; ](#op_at) o [reverse_iterator:: operator *](#op_star) para obtener ejemplos de cómo declarar y usar `reference`.
 
 ## <a name="reverse_iterator"></a>  reverse_iterator::reverse_iterator
 
@@ -966,7 +966,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` El iterador que se puede adaptar a un `reverse_iterator`.
+*derecha* el iterador que se va a adaptar a un `reverse_iterator`.
 
 ### <a name="return-value"></a>Valor devuelto
 
