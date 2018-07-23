@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0515bc45f0791960b3eb62ada243f792ba48922d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01a3d5aa898dccd680ea575a5753bc5cc3b8abf9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848718"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962834"
 ---
 # <a name="bitset-class"></a>bitset (Clase)
 
@@ -64,13 +64,13 @@ class bitset
 
 ### <a name="parameters"></a>Parámetros
 
-*N* especifica el número de bits del objeto bitset con un entero distinto de cero de tipo **size_t** que deben conocerse en tiempo de compilación.
+*N* especifica el número de bits del objeto bitset con un entero distinto de cero de tipo `size_t` que deben conocerse en tiempo de compilación.
 
 ## <a name="remarks"></a>Comentarios
 
-A diferencia de la clase similar [vector\<bool>](../standard-library/vector-bool-class.md), la clase bitset no tiene iteradores y no es un contenedor de la biblioteca estándar de C++. También se distingue de vector\<bool> en que es de un determinado tamaño específico que se fija en tiempo de compilación de acuerdo con el tamaño especificado por el parámetro de plantilla **N** cuando se declara **bitset\<N\>**.
+A diferencia de la clase similar [vector\<bool>](../standard-library/vector-bool-class.md), la clase bitset no tiene iteradores y no es un contenedor de la biblioteca estándar de C++. También se distingue de vector\<bool> en que es de un determinado tamaño específico que se fija en tiempo de compilación de acuerdo con el tamaño especificado por el parámetro de plantilla *N* cuando se declara **bitset\<N\>**.
 
-Un bit se establece si su valor es 1 y se restablece si su valor es 0. Voltear o invertir un bit es cambiar su valor de 1 a 0 o de 0 a 1. Los bits **N** de un conjunto de bits están indexados por valores enteros de 0 a **N** -1, donde 0 indexa la posición del primer bit y, **N** -1, la posición del último bit.
+Un bit se establece si su valor es 1 y se restablece si su valor es 0. Voltear o invertir un bit es cambiar su valor de 1 a 0 o de 0 a 1. Los bits *N* de un conjunto de bits están indexados por valores enteros de 0 a *N* -1, donde 0 indexa la posición del primer bit y, *N* -1, la posición del último bit.
 
 ### <a name="constructors"></a>Constructores
 
@@ -82,13 +82,13 @@ Un bit se establece si su valor es 1 y se restablece si su valor es 0. Voltear o
 
 |Nombre de tipo|Descripción|
 |-|-|
-|[element_type](#element_type)|Tipo sinónimo del tipo de datos `bool` y que se puede usar para hacer referencia a los bits de elemento en un `bitset`.|
+|[element_type](#element_type)|Un tipo que es un sinónimo del tipo de datos **bool** y puede usarse para hacer referencia a los bits de elemento en un `bitset`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
 |Función miembro|Descripción|
 |-|-|
-|[all](#all)|Comprueba todos los bits de este `bitset` para determinar si están establecidos en `true`.|
+|[all](#all)|Comprueba todos los bits de esto `bitset` para determinar si están establecidos en **true**.|
 |[any](#any)|Función miembro que comprueba si cualquiera de los bits de la secuencia está establecido en 1.|
 |[count](#count)|Función miembro que devuelve el número de bits establecidos en la secuencia de bits.|
 |[flip](#flip)|Invierte el valor de todos los bits de un `bitset` o de un solo bit en una posición especificada.|
@@ -98,8 +98,8 @@ Un bit se establece si su valor es 1 y se restablece si su valor es 0. Voltear o
 |[size](#size)|Devuelve el número de bits de un objeto `bitset`.|
 |[test](#test)|Comprueba si el bit de una posición especificada en un `bitset` está establecido en 1.|
 |[to_string](#to_string)|Convierte un objeto `bitset` en una representación de cadena.|
-|[to_ullong](#to_ullong)|Devuelve la suma de los valores de bits en el `bitset` como un `unsigned long long`.|
-|[to_ulong](#to_ulong)|Convierte un objeto `bitset` en el `unsigned long` que generaría la secuencia de bits contenida si se usase para inicializar el `bitset`.|
+|[to_ullong](#to_ullong)|Devuelve la suma de los valores de bits en el `bitset` como un **long long sin signo**.|
+|[to_ulong](#to_ulong)|Convierte un `bitset` de objeto para el **unsigned long** que generaría la secuencia de bits contenida si se usa para inicializar el `bitset`.|
 
 ### <a name="member-classes"></a>Clases de miembro
 
@@ -237,19 +237,19 @@ explicit bitset(
 
 ### <a name="parameters"></a>Parámetros
 
-`val` El entero sin signo cuya representación de base de dos se utiliza para inicializar los bits del BitSet que se está construyendo.
+*Val* el entero sin signo cuya representación base dos se usa para inicializar los bits en el conjunto de bits que se está construyendo.
 
-`str` La cadena de ceros y aquellas que se usan para inicializar los valores de bits del bitset.
+*Str* la cadena de ceros y unos que se usa para inicializar los valores de bits del bitset.
 
-`_CStr` Una cadena de estilo C de ceros y aquellas que se usan para inicializar los valores de bits del bitset.
+*_CStr* una cadena de estilo C de ceros y unos que se usa para inicializar los valores de bits del bitset.
 
-`_Pos` La posición del carácter en la cadena, contando de izquierda a derecha y a partir de cero, que se utiliza para inicializar el primer bit del BitSet.
+*_Pos* la posición del carácter en la cadena, contando de izquierda a derecha y a partir de cero, se usa para inicializar el primer bit del conjunto de bits.
 
-`count` El número de caracteres de la cadena que se usa para proporcionar los valores iniciales de los bits del BitSet.
+*recuento de* el número de caracteres de la cadena que se usa para proporcionar los valores iniciales de los bits del BitSet.
 
-`_Zero` El carácter que se utiliza para representar un cero. El valor predeterminado es "0".
+*_Zero* el carácter que se utiliza para representar un cero. El valor predeterminado es "0".
 
-`_One` El carácter que se utiliza para representar una. El valor predeterminado es "1".
+*_Una* el carácter que se usa para representar un uno. El valor predeterminado es "1".
 
 ### <a name="remarks"></a>Comentarios
 
@@ -257,15 +257,15 @@ Se pueden usar tres constructores para crear objetos de clase `bitset\<N>`:
 
 - El primer constructor no acepta parámetros, crea un objeto de clase `bitset\<N>` e inicializa todos los bits N en un valor predeterminado de cero.
 
-- El segundo constructor crea un objeto de clase `bitset\<N>` e inicializa los bits con el parámetro único `unsigned long long`.
+- El segundo constructor crea un objeto de clase `bitset\<N>` e inicializa los bits mediante el uso de la única **long long sin signo** parámetro.
 
 - El tercer constructor crea un objeto de clase `bitset\<N>`, inicializando los bits N en valores que corresponden a los caracteres proporcionados en una cadena de caracteres de estilo c de ceros y unos. Llame al constructor sin convertir la cadena a un tipo de cadena: `bitset<5> b5("01011");`
 
 También se proporcionan dos plantillas de constructor:
 
-- La primera plantilla de constructor crea un objeto de clase `bitset\<N>` e inicializa bits de los caracteres proporcionados en una cadena de ceros y unos. Si algún carácter de la cadena es distinto de 0 o 1, el constructor produce un objeto de clase [argumento no válido](../standard-library/invalid-argument-class.md). Si la posición especificada ( `_Pos`) está más allá de la longitud de la cadena, el constructor produce un objeto de clase [out_of_range](../standard-library/out-of-range-class.md). El constructor establece solo esos bits en la posición *j* en el conjunto de bits que tiene 1 como carácter de la cadena en la posición `_Pos + j`. De manera predeterminada, `_Pos` es 0.
+- La primera plantilla de constructor crea un objeto de clase `bitset\<N>` e inicializa bits de los caracteres proporcionados en una cadena de ceros y unos. Si algún carácter de la cadena es distinto de 0 o 1, el constructor produce un objeto de clase [argumento no válido](../standard-library/invalid-argument-class.md). Si la posición especificada (*_Pos*) está más allá de la longitud de la cadena, el constructor produce un objeto de clase [out_of_range](../standard-library/out-of-range-class.md). El constructor establece solo esos bits en la posición *j* en el conjunto de bits que tiene 1 como carácter de la cadena en la posición `_Pos + j`. De forma predeterminada, *_Pos* es 0.
 
-- La segunda plantilla de constructor es similar a la primera, pero incluye un parámetro adicional ( `count`) que se usa para especificar el número de bits que se inicializarán. También tiene dos parámetros opcionales, `_Zero` y `_One`, que indican qué carácter de `str` se tiene que interpretar para indicar un bit 0 y un bit 1, respectivamente.
+- La segunda plantilla de constructor es similar a la primera, pero incluye un parámetro adicional (*recuento*) que se utiliza para especificar el número de bits que se inicializarán. También tiene dos parámetros opcionales, *_Zero* y *_Una*, que indican qué carácter en *str* consiste en interpretar para indicar un bit 0 y 1 bit, respectivamente.
 
 ### <a name="example"></a>Ejemplo
 
@@ -400,7 +400,7 @@ The number of bits in the bitset set to 1 is: 4.
 
 ## <a name="element_type"></a>  bitset::element_type
 
-Tipo sinónimo del tipo de datos `bool` y que se puede usar para hacer referencia a los bits de elemento en un conjunto de bits.
+Un tipo que es un sinónimo del tipo de datos **bool** y puede usarse para hacer referencia a los bits de elemento en un conjunto de bits.
 
 ```cpp
 typedef bool element_type;
@@ -465,7 +465,7 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pos` La posición del bit cuyo valor es que se invierte.
+*_Pos* la posición del bit cuyo valor es va a invertir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -473,7 +473,7 @@ Una copia del conjunto de bits modificado para el que se ha invocado la función
 
 ### <a name="remarks"></a>Comentarios
 
-La segunda función miembro produce un [out_of_range](../standard-library/out-of-range-class.md) excepción si la posición especificada como un parámetro es mayor que el tamaño *N* de la **bitset\<***N***  >**  cuyos bits se ha invertido.
+La segunda función miembro produce una [out_of_range](../standard-library/out-of-range-class.md) excepción si la posición especificada como un parámetro es mayor que el tamaño *N* de la **bitset\<***N***  >**  cuyos bits se ha invertido.
 
 ### <a name="example"></a>Ejemplo
 
@@ -593,7 +593,7 @@ bool operator!=(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Bitset que se comparará con el del bitset de destino no son iguales.
+*derecha* el conjunto de bits que se va a compararse con el conjunto de bits de destino no son iguales.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -646,7 +646,7 @@ Bitset b1 is different from bitset b3.
 
 ## <a name="op_and_eq"></a>  bitset::operator&amp;=
 
-Realiza una combinación bit a bit de los conjuntos de bits con la operación **AND** lógica.
+Realiza una combinación bit a bit de los conjuntos de bits con la operación `AND` lógica.
 
 ```cpp
 bitset\<N>& operator&=(const bitset\<N>& right);
@@ -654,17 +654,17 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Bitset que va a combinarse bit a bit con del bitset de destino.
+*derecha* el conjunto de bits que va a combinarse bit a bit con el conjunto de bits de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Conjunto de bits de destino modificado resultante de la operación bit a bit **AND** con el conjunto de bits especificado como parámetro.
+El conjunto de bits de destino modificado resultante de bit a bit `AND` operación con el conjunto de bits especificado como un parámetro.
 
 ### <a name="remarks"></a>Comentarios
 
-Dos bits combinados mediante el operador **AND** devuelven **True** si cada bit es True; en caso contrario, su combinación devuelve **False**.
+Dos bits combinados mediante el `AND` devuelto del operador **true** si cada bit es true; en caso contrario, su combinación devuelve **false**.
 
-Los conjuntos de bits deben ser del mismo tamaño para que la función de operador miembro los combine bit a bit con el operador **AND**.
+Los conjuntos de bits deben ser del mismo tamaño que va a combinarse bit a bit con el `AND` operador por la función de operador de miembro.
 
 ### <a name="example"></a>Ejemplo
 
@@ -720,7 +720,7 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pos` El número de posiciones a la izquierda que se va a desplazar los bits del BitSet.
+*_Pos* el número de posiciones a la izquierda que se desplazarán los bits del BitSet.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -771,7 +771,7 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pos` El número de posiciones a la izquierda los bits del BitSet son van a desplazar.
+*_Pos* el número de posiciones a la izquierda los bits del conjunto de bits que se va a desplazar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -817,7 +817,7 @@ bool operator==(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Bitset que se comparará con el del bitset de destino para la igualdad.
+*derecha* el conjunto de bits que se va a compararse con el conjunto de bits de destino para la igualdad.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -877,7 +877,7 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pos` El número de posiciones a la derecha los bits del BitSet son van a desplazar.
+*_Pos* el número de posiciones a la derecha los bits del conjunto de bits que se va a desplazar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -929,7 +929,7 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pos` El número de posiciones a la derecha los bits del BitSet son van a desplazar.
+*_Pos* el número de posiciones a la derecha los bits del conjunto de bits que se va a desplazar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -977,7 +977,7 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pos` La posición de localizar el bit dentro del bitset.
+*_Pos* la posición que localiza el bit en el conjunto de bits.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1019,7 +1019,7 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Bitset que va a combinarse bit a bit con del bitset de destino.
+*derecha* el conjunto de bits que va a combinarse bit a bit con el conjunto de bits de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1084,7 +1084,7 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-`right` Bitset que va a combinarse bit a bit con del bitset de destino.
+*derecha* el conjunto de bits que va a combinarse bit a bit con el conjunto de bits de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1203,9 +1203,9 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-`val` El valor del objeto del tipo `bool` que se asignará a un poco de un bitset.
+*Val* el valor del objeto del tipo **bool** que se asignará a un poco en un conjunto de bits.
 
-`_Bitref` Una referencia del formulario *x [i]* con el bit en la posición *i* BitSet *x*.
+*_Bitref* una referencia del formulario *x [i]* al bit en la posición *i* BitSet *x*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1213,14 +1213,14 @@ Una referencia al bit en el conjunto de bits especificado por la posición del a
 
 ### <a name="remarks"></a>Comentarios
 
-La clase `reference` solo existe como una clase auxiliar para el conjunto de bits `operator[]`. La clase de miembro describe un objeto que puede tener acceso a un bit individual dentro de un conjunto de bits. Permiten *b* ser un objeto de tipo `bool`, *x* y *y* objetos de tipo **bitset\<***N*** >** , y *i* y *j* posiciones válidas dentro de dicho objeto. La notación *x [i]* hace referencia al bit en la posición *i* en el conjunto de bits *x*. Las funciones miembro de clase `reference` proporcionan, en orden, las siguientes operaciones:
+La clase `reference` solo existe como una clase auxiliar para el conjunto de bits `operator[]`. La clase de miembro describe un objeto que puede tener acceso a un bit individual dentro de un conjunto de bits. Permiten *b* ser un objeto de tipo **bool**, *x* y *y* los objetos de tipo **bitset\<***N***>**, y *i* y *j* posiciones válidas dentro de este tipo de objeto. La notación *x [i]* hace referencia al bit en la posición *i* en el conjunto de bits *x*. Las funciones miembro de clase `reference` proporcionan, en orden, las siguientes operaciones:
 
 |Operación|de esquema JSON|
 |---------------|----------------|
-|*x*[*i*] = *b*|Almacena el valor `bool` *b* en la posición de bit *i* en el conjunto de bits *x*.|
+|*x*[*i*] = *b*|Almacenes **bool** valor *b* en la posición de bit *i* BitSet *x*.|
 |*x*[*i*] = *y*[*j*]|Almacena el valor del bit *y*[ *j*] en la posición de bit *i* en el conjunto de bits *x*.|
-|*b* = ~ *x*[*i*]|Almacena el valor volteado del bit *x*[ *i*] en `bool` *b*.|
-|*b* = *x*[*i*]|Almacena el valor del bit *x*[ *i*] en `bool` *b*.|
+|*b* = ~ *x*[*i*]|Almacena el valor volteado del bit *x*[ *i*] en **bool** *b*.|
+|*b* = *x*[*i*]|Almacena el valor del bit *x*[ *i*] en **bool** *b*.|
 |*x*[*i*]. `flip`( )|Vuelve a almacenar el valor volteado del bit *x*[ *i*] en la posición del bit *i* en *x*.|
 
 ### <a name="example"></a>Ejemplo
@@ -1316,7 +1316,7 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pos` La posición de los bits del BitSet se restablezca en 0.
+*_Pos* la posición del bit en el conjunto de bits que se restablece a 0.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1378,9 +1378,9 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pos` La posición de los bits del BitSet se establezca en un valor asignado.
+*_Pos* la posición del bit en el conjunto de bits debe establecerse asigna un valor.
 
-`val` El valor que se asigna al bit en la posición especificada.
+*Val* el valor que se asigna al bit en la posición especificada.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1482,7 +1482,7 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-`_Pos` La posición de los bits del BitSet va a probar para su valor.
+*_Pos* la posición del bit en el conjunto de bits que se comprobará si su valor.
 
 ### <a name="return-value"></a>Valor devuelto
 
