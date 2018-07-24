@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c984b2ef59e022a355d7c24915b5edbcf7f7e74d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880952"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208668"
 ---
 # <a name="cfiletime-class"></a>CFileTime (clase)
 Esta clase proporciona métodos para administrar los valores de fecha y hora asociados a un archivo.  
@@ -101,11 +101,11 @@ class CFileTime :  public FILETIME
 |Variable de miembro|Número de intervalos de 100 nanosegundos|  
 |---------------------|-----------------------------------------|  
 |Millisecond|10,000|  
-|Second|Milisegundo * 1000|  
-|Minute|Segundo * 60|  
-|Hour|Minutos * 60|  
-|Day|Hora * 24|  
-|Semana|Día * 7|  
+|Second|Milisegundo \* 1.000|  
+|Minute|Segundo \* 60|  
+|Hour|Minuto \* 60|  
+|Day|Hora \* 24|  
+|Semana|Día \* 7|  
   
  **Tenga en cuenta** no todos los sistemas de archivos pueden registrar la creación y la hora del último acceso y no todos los sistemas de archivos grabarlos en la misma manera. Por ejemplo, en el sistema de archivos FAT de Windows NT, cree tiempo tiene una resolución de 10 milisegundos, tiempo de escritura tiene una resolución de 2 segundos y tiempo de acceso tiene una resolución de 1 día (la fecha de acceso). En NTFS, la hora de acceso tiene una resolución de 1 hora. Además, FAT registra veces en el disco en la hora local, pero NTFS registros veces en el disco en formato UTC. Para obtener más información, consulte [tiempos archivos](http://msdn.microsoft.com/library/windows/desktop/ms724290).  
   

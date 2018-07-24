@@ -1,5 +1,5 @@
 ---
-title: Información general de la serialización en C++ | Documentos de Microsoft
+title: Información general de la serialización en C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -20,40 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 76f6721ce4561e9c2b4323fef9c2eed3231f73cb
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 747d9a67f7796b5a62115acf55343370aea77bdf
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079165"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207870"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Información general de la serialización en C++
-En modo mixto, deben serializar los datos entre los tipos nativos y los administrados. Visual Studio 2008 introdujo la *biblioteca de serialización* para ayudar a serializar y convertir los datos de una manera sencilla.  La biblioteca de serialización se compone de un conjunto de funciones y un `marshal_context` clase que realizan el cálculo de referencias de tipos comunes. La biblioteca se define en estos encabezados en el **incluyen/msclr** directorio para su edición de Visual Studio:
+En modo mixto, deben serializar los datos entre los tipos nativos y los administrados. Visual Studio 2008 introdujo la *biblioteca de serialización* para ayudar a calcular y convertir los datos de una manera sencilla.  La biblioteca de serialización consta de un conjunto de funciones y una `marshal_context` clases que realizan el cálculo de referencias para los tipos comunes. La biblioteca está definida en estos encabezados en el **incluyen/msclr** directorio para su edición de Visual Studio:
 
 |Header|Descripción|  
 |---------------|-----------------|
-|serializar.h|`marshal_context` clase y libre de contexto de serialización funciones|
+|serializar.h|`marshal_context` clase y las funciones de cálculo de referencias sin contexto|
 |serializar_atl.h| Funciones de serialización de tipos ATL|
-|serializar_cppstd.h|Funciones de cálculo de referencias de tipos de C++ estándar|
+|serializar_cppstd.h|Funciones de serialización de tipos estándares de C++|
 |serializar_windows.h|Funciones de serialización de tipos de Windows|
 
 
-La ruta predeterminada para **msclr** carpeta es algo parecido a esto según la edición tiene y el número de compilación:
+La ruta de acceso predeterminada para **msclr** carpeta es algo parecido a esto dependiendo de qué edición tiene y el número de compilación:
 
 ```cmd
 C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
 ```
 
- También puede usar la biblioteca de serialización con o sin un [marshal_context (clase)](../dotnet/marshal-context-class.md). Algunas conversiones requieren un contexto. Otras conversiones pueden implementarse utilizando la [marshal_as](../dotnet/marshal-as.md) función. En la tabla siguiente se enumeran las conversiones actuales compatibles y se indica si requieren un contexto y el archivo de serializar que se debe incluir:  
+ Puede usar la biblioteca de serialización con o sin un [marshal_context Class](../dotnet/marshal-context-class.md). Algunas conversiones requieren un contexto. Otras conversiones se pueden implementar mediante el [marshal_as](../dotnet/marshal-as.md) función. En la tabla siguiente se enumeran las conversiones actuales compatibles y se indica si requieren un contexto y el archivo de serializar que se debe incluir:  
   
 |De tipo|A tipo|Método serializar|Incluir archivo|  
 |---------------|-------------|--------------------|------------------|  
-|System::String^|const char *|marshal_context|serializar.h|  
-|const char *|System::String^|serializar_as|serializar.h|  
-|char*|System::String^|serializar_as|serializar.h|  
-|System::String^|const wchar_t*|serializar_context|marshal.h|  
-|const wchar_t *|System::String^|serializar_as|serializar.h|  
-|wchar_t*|System::String^|serializar_as|serializar.h|  
+|System::String^|const char \*|serializar_context|serializar.h|  
+|const char \*|System::String^|serializar_as|serializar.h|  
+|Char \*|System::String^|serializar_as|serializar.h|  
+|System::String^|const wchar_t\*|serializar_context|serializar.h|  
+|const wchar_t \*|System::String^|serializar_as|serializar.h|  
+|wchar_t \*|System::String^|serializar_as|serializar.h|  
 |System::IntPtr|HANDLE|serializar_as|serializar_windows.h|  
 |HANDLE|System::IntPtr|serializar_as|serializar_windows.h|  
 |System::String^|BSTR|serializar_context|serializar_windows.h|  

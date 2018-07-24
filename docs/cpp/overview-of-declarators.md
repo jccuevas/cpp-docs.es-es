@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5866c3e945d55722a4cf8530c543b0e8ca5163
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944235"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208567"
 ---
 # <a name="overview-of-declarators"></a>Información general sobre los declaradores
 Los declaradores son los componentes de una declaración que especifican nombres de objetos o funciones. Los declaradores también especifican si el objeto con nombre es o no un objeto, puntero, referencia o matriz.  Aunque los declaradores no especifican el tipo base, modifican la información de tipo del tipo básico para especificar tipos derivados, como punteros, referencias y matrices.  Cuando se aplica a las funciones, el declarador funciona con el especificador de tipo para especificar completamente que el tipo de valor devuelto de una función es un objeto, puntero o referencia. (Los especificadores, se describe en [declaraciones y definiciones](declarations-and-definitions-cpp.md), transmiten propiedades tales como la clase de tipo y el almacenamiento. Modificadores, que se describe en esta sección y en [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md), modifican los declaradores.) En la ilustración siguiente se muestra una declaración completa de `MyFunction` y se llama a los componentes de la declaración.  
@@ -127,7 +127,7 @@ int i, *j, f(int k);  // int, pointer to int, function returning int
 int* i, f(int k);  // pointer to int, function returning int (not int*)  
 ```  
   
- puede ser similar a la declaración de un **int** puntero y una función que devuelve `int*`, pero no lo es.  Esto se debe a que * es parte del declarador de `i`, no parte del declarador de `f`.  
+ puede ser similar a la declaración de un **int** puntero y una función que devuelve `int*`, pero no lo es.  Eso es porque la \* forma parte del declarador de `i`, que no forma parte del declarador de `f`.  
   
  **Lo que simplifica la sintaxis de declarador con typedef**  
   
@@ -175,8 +175,8 @@ int a, *b, c[5], **d, &e=a;
   
 - y *puntero operador* es uno de:  
   
-  - * [calificador CV]  
-  - & [calificador CV]:: especificador de nombre anidado * [calificador CV]  
+  - \* [calificador CV]  
+  - & [calificador CV]:: especificador de nombre anidado \* [calificador CV]  
 
   
  Dado que un declarador puede contener declaradores, es posible construir los tipos derivados más complejos, como matrices de punteros, funciones que devuelven matrices de punteros a función, mediante las reglas anteriores.  Para formar cada paso de la construcción, comience con el identificador que representa el tipo de datos base y aplique la regla de sintaxis anterior con la expresión anterior como `declarator`.  El orden de aplicación de las reglas de sintaxis debe ser el inverso de como se indica la expresión en inglés.  Si aplica el *puntero operador* regla de sintaxis en una expresión de matriz o función, utilice paréntesis si desea que un puntero a la matriz o función, como se muestra en la última fila de la tabla siguiente.  
@@ -190,4 +190,4 @@ int a, *b, c[5], **d, &e=a;
 |matriz de 10|`(*i)[10]`|4|  
 |puntero a|`*((*i)[10])`|6 y después 5|  
   
- Cuando se utilizan varios modificadores de puntero, referencia, matriz o función, los declaradores pueden resultar bastante complicados.  El tema [interpretar declaradores más complejos](../c-language/interpreting-more-complex-declarators.md) describe cómo leer la sintaxis de declarador más compleja.  El tema es aplicable a C y C++, aunque en C++, en cualquier lugar del * se usa para indicar un puntero, un nombre completo tal como MyClass::\* puede utilizarse para especificar un puntero a un miembro de una clase.
+ Cuando se utilizan varios modificadores de puntero, referencia, matriz o función, los declaradores pueden resultar bastante complicados.  El tema [interpretar declaradores más complejos](../c-language/interpreting-more-complex-declarators.md) describe cómo leer la sintaxis de declarador más compleja.  El tema es aplicable a C y C++, aunque en C++, en cualquier lugar del \* se utiliza para indicar un puntero, un nombre completo tal como MyClass::\* puede utilizarse para especificar un puntero a un miembro de una clase.

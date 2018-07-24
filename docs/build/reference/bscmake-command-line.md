@@ -1,5 +1,5 @@
 ---
-title: Línea de comandos BSCMAKE | Documentos de Microsoft
+title: Línea de comandos BSCMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,29 +14,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7866d2960acdd89c3015470ef3971307ba162cd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b79f7e7c181112877c795f3601e8211e70403563
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369502"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207752"
 ---
 # <a name="bscmake-command-line"></a>Línea de comandos de BSCMAKE
-Para ejecutar BSCMAKE, use la siguiente sintaxis de línea de comandos:  
+Para ejecutar BSCMAKE, use la sintaxis de línea de comandos siguiente:  
   
 ```  
 BSCMAKE [options] sbrfiles  
 ```  
   
- Opciones solo pueden aparecer en el `options` campo en la línea de comandos.  
+ Las opciones solo pueden aparecer en el `options` campo en la línea de comandos.  
   
- El *sbrfiles* campo especifica uno o más archivos .sbr creados mediante un compilador o ensamblador. Separe los nombres de los archivos .sbr con espacios o tabulaciones. Debe especificar la extensión; No hay ningún valor predeterminado. Puede especificar una ruta de acceso con el nombre de archivo y se pueden utilizar comodines de sistema operativo (* y?).  
+ El *sbrfiles* campo especifica uno o más archivos .sbr creados mediante un compilador o ensamblador. Separe los nombres de los archivos .sbr con espacios o tabulaciones. Debe especificar la extensión; No hay ningún valor predeterminado. Puede especificar una ruta de acceso con el nombre de archivo, y puede usar caracteres comodín del sistema operativo (\* y?).  
   
- Durante una generación incremental, puede especificar nuevos archivos .sbr que no formaban parte de la generación original. Si desea que todas las contribuciones que se mantiene en el archivo de información de examen, debe especificar todos los archivos .sbr (incluidos los archivos truncados) que se usaron originalmente para crear el archivo .bsc. Si se omite un archivo .sbr, se quita la contribución de ese archivo para el archivo de información de examen.  
+ Durante una compilación incremental, puede especificar nuevos archivos .sbr que no formaban parte de la compilación original. Si desea que todas las contribuciones a permanecer en el archivo de información de examen, debe especificar todos los archivos .sbr (incluidos los archivos truncados) que se usaron originalmente para crear el archivo .bsc. Si se omite un archivo .sbr, se quita la contribución de dicho archivo para el archivo de información de examen.  
   
- No especifique un archivo .sbr truncado para una compilación completa. Una compilación completa requiere las contribuciones de todos los archivos .sbr especificados. Antes de realizar una compilación completa, vuelva a compilar el proyecto y crear un nuevo archivo .sbr para cada archivo vacío.  
+ No especifique un archivo .sbr truncado para una compilación completa. Una compilación completa requiere que las contribuciones de todos los archivos .sbr especificado. Antes de realizar una compilación completa, vuelva a compilar el proyecto y cree un nuevo archivo .sbr para cada archivo vacío.  
   
- El comando siguiente ejecuta BSCMAKE para generar un archivo denominado Main.bsc a partir de tres archivos. sbr:  
+ El comando siguiente ejecuta BSCMAKE para generar un archivo denominado Main.bsc a partir de tres archivos .sbr:  
   
 ```  
 BSCMAKE main.sbr file1.sbr file2.sbr  

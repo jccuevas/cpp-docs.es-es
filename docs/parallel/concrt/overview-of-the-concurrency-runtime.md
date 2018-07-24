@@ -1,7 +1,7 @@
 ---
-title: Información general sobre el Runtime de simultaneidad | Documentos de Microsoft
+title: Información general sobre el Runtime de simultaneidad | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-concrt
 ms.topic: conceptual
@@ -17,32 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67f0497f600cf5d528b2c41601b7a02c08771861
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ab1ab8c36f10e492aec45b41d5da4692bf2979a1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692436"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207883"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Información general sobre el runtime de simultaneidad
 En este documento se proporciona información general sobre el Runtime de simultaneidad. Se describen las ventajas del Runtime de simultaneidad, cuándo usarlo, y cómo interactúan sus componentes entre sí y con el sistema operativo y las aplicaciones.  
   
-> [!IMPORTANT]
->  En Visual Studio de 2015 y versiones posteriores, el programador de tareas del Runtime de simultaneidad ya no es el programador de la clase de tarea y los tipos relacionados en ppltasks.h. Esos tipos usan ahora el grupo de subprocesos de Windows para lograr un mejor rendimiento e interoperabilidad con las primitivas de sincronización de Windows. Los algoritmos paralelos, como parallel_for, siguen usando el programador de tareas de Runtime de simultaneidad  
-  
 ##  <a name="top"></a> Secciones  
  Este documento contiene las siguientes secciones:  
   
--   [¿Por qué un Runtime de simultaneidad es importante](#runtime)  
+- [Historial de implementación del Runtime de simultaneidad](#dlls)
+
+- [¿Por qué un Runtime de simultaneidad es importante](#runtime)  
   
--   [Arquitectura](#architecture)  
+- [Arquitectura](#architecture)  
   
--   [Expresiones Lambda de C++](#lambda)  
+- [Expresiones Lambda de C++](#lambda)  
   
--   [Requisitos](#requirements)  
+- [Requisitos](#requirements)  
+
+## <a name="dlls"></a> Historial de implementación del Runtime de simultaneidad
+
+En Visual Studio 2010 a través de 2013, el Runtime de simultaneidad se incorporó dentro de msvcr100.dll mediante msvcr120.dll.  Cuando se ha producido la refactorización de UCRT en Visual Studio 2015, ese archivo DLL se ha refactorizado en tres partes:
+
+- ucrtbase.dll: API de C, se incluye en Windows 10 y con el servicio de nivel inferior a través de Windows Update: 
+
+- vcruntime140.dll: el compilador admite las funciones y en tiempo de ejecución EH, enviados a través de Visual Studio
+
+- concrt140.dll: Runtime de simultaneidad, se envían a través de Visual Studio. Necesarios para algoritmos y contenedores paralelos como `concurrency::parallel_for`. Además, STL requiere este archivo DLL en Windows XP para tipos primitivos de sincronización de energía, porque Windows XP no tiene variables de condición. 
+
+En Visual Studio de 2015 y versiones posteriores, el programador de tareas del Runtime de simultaneidad ya no es el programador de la clase de tarea y los tipos relacionados en ppltasks.h. Esos tipos usan ahora el grupo de subprocesos de Windows para lograr un mejor rendimiento e interoperabilidad con las primitivas de sincronización de Windows.  
   
 ##  <a name="runtime"></a> ¿Por qué un Runtime de simultaneidad es importante  
- Un Runtime de simultaneidad proporciona uniformidad y previsibilidad a las aplicaciones y a los componentes de aplicación que se ejecutan simultáneamente. Dos ejemplos de las ventajas del Runtime de simultaneidad son *programación de tareas cooperativa* y *bloqueo cooperativo*.  
+ Un Runtime de simultaneidad proporciona uniformidad y previsibilidad a las aplicaciones y a los componentes de aplicación que se ejecutan simultáneamente. Dos ejemplos de las ventajas del Runtime de simultaneidad son *programación de tareas cooperativo* y *bloqueo cooperativo*.  
   
  El Runtime de simultaneidad usa un programador de tareas cooperativo que implementa un algoritmo de robo de trabajo para distribuir el trabajo de forma eficaz entre los recursos informáticos. Pensemos, por ejemplo, en una aplicación que tenga dos subprocesos, ambos administrados por el mismo runtime. Si un subproceso finaliza su tarea programada, puede descargar de trabajo al otro subproceso. Este mecanismo equilibra la carga de trabajo total de la aplicación.  
   
@@ -58,23 +69,23 @@ En este documento se proporciona información general sobre el Runtime de simult
  ![La arquitectura del Runtime de simultaneidad](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")  
   
 > [!IMPORTANT]
->  Los componentes de programador de tareas y Administrador de recursos no están disponibles desde una aplicación de plataforma Universal de Windows (UWP) o cuando se usa la clase de tarea u otros tipos de ppltasks.h.  
+>  Los componentes de programador de tareas y el Administrador de recursos no están disponibles desde una aplicación de plataforma Universal de Windows (UWP) o cuando se usa la clase de tarea u otros tipos de ppltasks.h.  
   
- El Runtime de simultaneidad es alta *admite composición*, es decir, puede combinar la funcionalidad existente para llevar a cabo más. El Runtime de simultaneidad compone muchas características —por ejemplo, algoritmos paralelos— a partir de componentes de nivel inferior.  
+ El Runtime de simultaneidad es alta *que admite composición*, es decir, puede combinar la funcionalidad existente para hacer más cosas. El Runtime de simultaneidad compone muchas características —por ejemplo, algoritmos paralelos— a partir de componentes de nivel inferior.  
   
- El Runtime de simultaneidad también proporciona primitivas de sincronización que usan el bloqueo cooperativo para sincronizar el acceso a los recursos. Para obtener más información sobre estas primitivas de sincronización, consulte [estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md).  
+ El Runtime de simultaneidad también proporciona primitivas de sincronización que usan el bloqueo cooperativo para sincronizar el acceso a los recursos. Para obtener más información acerca de estas primitivas de sincronización, consulte [estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md).  
   
  En las secciones siguientes se proporciona una breve descripción general de lo que cada componente proporciona y cuándo usarlo.  
   
 ### <a name="parallel-patterns-library"></a>Biblioteca de modelos de procesamiento paralelo (PPL)  
- La Biblioteca de modelos de procesamiento paralelo (PPL) proporciona algoritmos y contenedores de propósito general para realizar paralelismos específicos. Esta biblioteca habilita *paralelismo de datos imperativo* proporcionando algoritmos paralelos que distribuyen los cálculos en colecciones o en conjuntos de datos entre los recursos informáticos. También permite *paralelismo de tareas* al proporcionar objetos de tarea que distribuyen varias operaciones independientes entre los recursos informáticos.  
+ La Biblioteca de modelos de procesamiento paralelo (PPL) proporciona algoritmos y contenedores de propósito general para realizar paralelismos específicos. Habilita la biblioteca PPL *paralelismo de datos imperativo* proporcionando algoritmos paralelos que distribuyen los cálculos en colecciones o en conjuntos de datos entre los recursos informáticos. También permite *paralelismo de tareas* proporcionando objetos de tarea que distribuyen varias operaciones independientes entre los recursos informáticos.  
   
  Use la Biblioteca de modelos de procesamiento paralelo si cuenta con un cálculo local que se puede beneficiar de la ejecución paralela. Por ejemplo, puede usar el [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo para transformar una existente `for` bucle para que actúe en paralelo.  
   
- Para obtener más información acerca de la biblioteca de modelos paralelos, vea [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).  
+ Para obtener más información acerca de la biblioteca de patrones de procesamiento paralelo, vea [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).  
   
 ### <a name="asynchronous-agents-library"></a>biblioteca de agentes asincrónicos  
- La biblioteca de agentes asincrónicos (o simplemente *biblioteca de agentes*) proporciona un modelo de programación basado en actores e interfaces para el flujo de datos de paso y las tareas de canalización de mensajes. Los agentes asincrónicos permiten realizar un uso productivo de la latencia ya que realizan el trabajo mientras otros componentes esperan datos.  
+ La biblioteca de agentes asincrónicos (o simplemente *biblioteca de agentes*) proporciona un modelo de programación basado en actores y el mensaje, pasando las interfaces para el flujo de datos y las tareas de canalización. Los agentes asincrónicos permiten realizar un uso productivo de la latencia ya que realizan el trabajo mientras otros componentes esperan datos.  
   
  Use la Biblioteca de agentes si dispone de varias entidades que se comunican entre sí de forma asincrónica. Por ejemplo, puede crear un agente que lea datos de un archivo o de una conexión de red y que, a continuación, use las interfaces de paso de mensajes para enviar esos datos a otro agente.  
   
@@ -99,7 +110,7 @@ En este documento se proporciona información general sobre el Runtime de simult
   
  Las expresiones lambda son una característica nueva e importante del lenguaje Visual C++ porque proporcionan una manera concisa de definir funciones de trabajo para el procesamiento paralelo. Los objetos de función y los punteros a función permiten usar el Runtime de simultaneidad con el código existente. Sin embargo, se recomienda usar expresiones lambda al escribir código nuevo debido a las ventajas de seguridad y productividad que proporcionan.  
   
- En el ejemplo siguiente se compara la sintaxis de las funciones lambda, objetos de función y punteros a función en varias llamadas a la [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo. Cada llamada a `parallel_for_each` usa una técnica diferente para calcular el cuadrado de cada elemento de un [std:: Array](../../standard-library/array-class-stl.md) objeto.  
+ El ejemplo siguiente compara la sintaxis de las funciones lambda, objetos de función y punteros de función en varias llamadas a la [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo. Cada llamada a `parallel_for_each` usa una técnica diferente para calcular el cuadrado de cada elemento de un [std:: Array](../../standard-library/array-class-stl.md) objeto.  
   
  [!code-cpp[concrt-comparing-work-functions#1](../../parallel/concrt/codesnippet/cpp/overview-of-the-concurrency-runtime_1.cpp)]  
   
@@ -113,7 +124,7 @@ En este documento se proporciona información general sobre el Runtime de simult
 390625  
 ```  
   
- Para obtener más información sobre las funciones lambda en C++, vea [expresiones Lambda](../../cpp/lambda-expressions-in-cpp.md).  
+ Para obtener más información acerca de las funciones lambda en C++, vea [expresiones Lambda](../../cpp/lambda-expressions-in-cpp.md).  
   
  [[Arriba](#top)]  
   
@@ -129,7 +140,7 @@ En este documento se proporciona información general sobre el Runtime de simult
   
  El Runtime de simultaneidad se declara en el [simultaneidad](../../parallel/concrt/reference/concurrency-namespace.md) espacio de nombres. (También puede usar [simultaneidad](../../parallel/concrt/reference/concurrency-namespace.md), que es un alias para este espacio de nombres.) El espacio de nombres `concurrency::details` es compatible con el marco de Runtime de simultaneidad y no está diseñado para usarse directamente en el código.  
   
- El Runtime de simultaneidad se proporciona como parte de la Biblioteca en tiempo de ejecución de C (CRT). Para obtener más información acerca de cómo crear una aplicación que utiliza CRT, vea [características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
+ El Runtime de simultaneidad se proporciona como parte de la Biblioteca en tiempo de ejecución de C (CRT). Para obtener más información sobre cómo compilar una aplicación que utiliza CRT, vea [características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
   
  [[Arriba](#top)]
 

@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0067e3054972ccc60253bb7205dc7a4f1fe4bd
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7e6210f8c1b1fd1bd19efb74ca68c7a1bed3f7f1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337452"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209136"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace (clase)
 Administra una sesión de base de datos con nombre, protegida mediante contraseña de inicio de sesión a cierre de sesión, por un único usuario.  
@@ -745,7 +745,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>Parámetros  
  *lpszDefaultUser*  
- El nombre de usuario predeterminado. Un nombre de usuario puede tener una longitud de 1 a 20 caracteres e incluir caracteres alfabéticos, caracteres acentuados, números, espacios y los símbolos, excepto para: "(comillas), / (barra diagonal), \ (barra diagonal inversa), \[ \] (corchetes),: (dos puntos), &#124; () barra vertical), \< (menor-que el inicio de sesión), > (mayor-que el inicio de sesión), + (signo más), = (signo igual), (punto y coma), (coma), (signo de interrogación), * (asterisco), espacios y caracteres de control (ASCII 00 y 31 ASCII) líderes. Para obtener información relacionada, vea el tema "Propiedad de nombre de usuario" en la Ayuda de DAO.  
+ El nombre de usuario predeterminado. Un nombre de usuario puede tener una longitud de 1 a 20 caracteres e incluir caracteres alfabéticos, caracteres acentuados, números, espacios y los símbolos, excepto para: "(comillas), / (barra diagonal), \ (barra diagonal inversa), \[ \] (corchetes),: (dos puntos), &#124; () barra vertical), \< (menor-que el inicio de sesión), > (mayor-que el inicio de sesión), + (signo más), = (signo igual), (punto y coma), (coma), (signo de interrogación), \* (asterisco), espacios y caracteres de control (ASCII 00 y 31 ASCII) líderes. Para obtener información relacionada, vea el tema "Propiedad de nombre de usuario" en la Ayuda de DAO.  
   
 ### <a name="remarks"></a>Comentarios  
  El nombre de usuario predeterminado que establece se aplica a nuevas áreas de trabajo que se creen después de la llamada. Al crear áreas de trabajo subsiguientes, no es necesario especificar un nombre de usuario en el [crear](#create) llamar.  

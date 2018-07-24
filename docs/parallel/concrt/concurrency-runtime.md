@@ -1,7 +1,7 @@
 ---
-title: Runtime de simultaneidad | Documentos de Microsoft
+title: Runtime de simultaneidad | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-concrt
 ms.topic: conceptual
@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc147a2cd0c75bb57f12be4dd5e90e63ab4ec0d2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693528"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208394"
 ---
 # <a name="concurrency-runtime"></a>Runtime de simultaneidad
 El runtime de simultaneidad de C++ ayuda a escribir aplicaciones paralelas sólidas, escalables y receptivas. Eleva el nivel de abstracción para que, de esta forma, no sea necesario administrar los detalles de infraestructura relacionados con la simultaneidad. También se puede usar para especificar directivas de programación que cumplan las demandas de calidad de servicio de las aplicaciones. Use estos recursos como ayuda para empezar a trabajar con el runtime de simultaneidad.  
   
- Para obtener documentación de referencia, vea [referencia](../../parallel/concrt/reference/reference-concurrency-runtime.md).  
+ Para obtener documentación de referencia, consulte [referencia](../../parallel/concrt/reference/reference-concurrency-runtime.md).  
   
 > [!TIP]
->  El runtime de simultaneidad se basa principalmente en las características C++11 y adopta el estilo más moderno de C++. Para obtener más información, lea [aquí está otra vez C++](../../cpp/welcome-back-to-cpp-modern-cpp.md).  
+>  El runtime de simultaneidad se basa principalmente en las características C++11 y adopta el estilo más moderno de C++. Para obtener más información, lea [Bienvenido a C++](../../cpp/welcome-back-to-cpp-modern-cpp.md).  
   
 ## <a name="choosing-concurrency-runtime-features"></a>Elegir características del runtime de simultaneidad  
   
 |||  
 |-|-|  
 |[Información general](../../parallel/concrt/overview-of-the-concurrency-runtime.md)|Le enseña por qué el runtime de simultaneidad es importante y describe sus características clave.|  
-|[Comparar con otros modelos de simultaneidad](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Compara el runtime de simultaneidad con otros modelos de simultaneidad, como el grupo de subprocesos de Windows y OpenMP, para que pueda usar el modelo de simultaneidad que mejor se ajuste a los requisitos de la aplicación.|  
+|[En comparación con otros modelos de simultaneidad](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Compara el runtime de simultaneidad con otros modelos de simultaneidad, como el grupo de subprocesos de Windows y OpenMP, para que pueda usar el modelo de simultaneidad que mejor se ajuste a los requisitos de la aplicación.|  
 |[Migración de OpenMP al Runtime de simultaneidad](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)|Compara OpenMP con el runtime de simultaneidad y proporciona ejemplos sobre cómo migrar el código existente de OpenMP para usar el runtime de simultaneidad.|  
 |[Biblioteca de patrones de procesamiento paralelo (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Presenta el PPL, que proporciona bucles, tareas y contenedores paralelos.|  
 |[Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)|Le explica cómo usar los agentes asincrónicos y el paso de mensajes para incorporar fácilmente las tareas de flujo de datos y canalización a las aplicaciones.|  
@@ -70,9 +70,9 @@ El runtime de simultaneidad de C++ ayuda a escribir aplicaciones paralelas sóli
   
 |||  
 |-|-|  
-|[Creación de operaciones asincrónicas en C++ para aplicaciones UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Describe algunos de los puntos clave a tener en cuenta al usar el Runtime de simultaneidad para generar operaciones asincrónicas en una aplicación de UWP.|  
-|[Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Muestra cómo combinar tareas PPL con el `IXMLHTTPRequest2` y `IXMLHTTPRequest2Callback` interfaces para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación de UWP.|  
-|[Ejemplos de aplicaciones de Windows en tiempo de ejecución](http://code.msdn.microsoft.com/windowsapps)|Contiene ejemplos de código descargables y demostración de aplicaciones de Windows 8.x. Los ejemplos de C++ usan características del runtime de simultaneidad, como tareas PPL, para procesar datos en segundo plano con objeto de que la UX siga respondiendo.|  
+|[Creación de operaciones asincrónicas en C++ para aplicaciones UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Se describen algunos de los puntos clave a tener en cuenta al usar el Runtime de simultaneidad para generar operaciones asincrónicas en una aplicación para UWP.|  
+|[Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Se muestra cómo combinar tareas PPL con el `IXMLHTTPRequest2` y `IXMLHTTPRequest2Callback` interfaces para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación para UWP.|  
+|[Ejemplos de aplicaciones de Windows en tiempo de ejecución](http://code.msdn.microsoft.com/windowsapps)|Contiene ejemplos de código descargables y demostración de las aplicaciones para Windows 8.x. Los ejemplos de C++ usan características del runtime de simultaneidad, como tareas PPL, para procesar datos en segundo plano con objeto de que la UX siga respondiendo.|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programación del flujo de datos en la Biblioteca de agentes asincrónicos  
   
@@ -107,10 +107,10 @@ El runtime de simultaneidad de C++ ayuda a escribir aplicaciones paralelas sóli
   
 |||  
 |-|-|  
-|[Patrones y sugerencias de programación Async en Hilo (aplicaciones de la Tienda Windows que usan C++ y XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Obtenga información acerca de cómo se usa el Runtime de simultaneidad para implementar operaciones asincrónicas en Hilo, una aplicación en tiempo de ejecución de Windows con C++ y XAML.|  
+|[Patrones y sugerencias de programación Async en Hilo (aplicaciones de la Tienda Windows que usan C++ y XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Obtenga información sobre cómo se usa el Runtime de simultaneidad para implementar operaciones asincrónicas en Hilo, una aplicación en tiempo de ejecución de Windows con C++ y XAML.|  
 |[Ejemplos de código para el Runtime de simultaneidad y la biblioteca de patrones paralelos en Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Proporciona aplicaciones de ejemplo y utilidades que muestran el uso del runtime de simultaneidad.|  
 |[Programación paralela en código nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Proporciona artículos de blog detallados adicionales sobre la programación paralela en el runtime de simultaneidad.|  
-|[Computación paralela en el foro de C++ y código nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Le permite participar en los debates de la comunidad sobre el runtime de simultaneidad.|  
+|[Informática en paralelo en el foro de C++ y código nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Le permite participar en los debates de la comunidad sobre el runtime de simultaneidad.|  
 |[Programación en paralelo](/dotnet/standard/parallel-programming/index)|Le enseña el modelo de programación paralelo que está disponible en [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)].|  
   
 ## <a name="see-also"></a>Vea también  

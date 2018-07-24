@@ -1,5 +1,5 @@
 ---
-title: Vectoriterator (clase) | Documentos de Microsoft
+title: Vectoriterator (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deaab183a092a073c6681004654312485959e924
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68198edb54c79d0872b3181d4ffe36df21a8cf02
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092537"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208476"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator (Clase)
-Proporciona un iterador de la biblioteca de plantillas estándar para los objetos que se deriva de la interfaz IVector de Windows en tiempo de ejecución.  
+Proporciona un iterador de la biblioteca de plantillas estándar para los objetos derivados de la interfaz de IVector de Windows en tiempo de ejecución.  
   
  VectorIterator es un iterador de proxy que almacena elementos de tipo VectorProxy\<T >. Sin embargo, el objeto proxy casi nunca está visible en el código del usuario. Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).  
   
@@ -46,7 +46,7 @@ class VectorIterator;
 |----------|-----------------|  
 |`difference_type`|Una diferencia de puntero (ptrdiff_t).|  
 |`iterator_category`|La categoría de un iterador de acceso aleatorio (::std::random_access_iterator_tag).|  
-|`pointer`|Un puntero a un tipo interno, Platform::Collections::Details::VectorProxy\<T >, que es necesario para la implementación de VectorIterator.|  
+|`pointer`|Un puntero a un tipo interno, Platform::Collections::Details::VectorProxy\<T >, que son necesarios para la implementación de VectorIterator.|  
 |`reference`|Una referencia a un tipo interno, Platform::Collections::Details::VectorProxy\<T >, que es necesario para la implementación de VectorIterator.|  
 |`value_type`|El typename `T` .|  
   
@@ -84,7 +84,7 @@ class VectorIterator;
   
  **Espacio de nombres:** Platform::Collections  
 
-## <a name="operator-arrow"></a>  Vectoriterator:: operator -&gt; (operador)
+## <a name="operator-arrow"></a>  Vectoriterator:: operator -&gt; operador
 Recupera la dirección del elemento al que hace referencia el objeto VectorIterator actual.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -121,7 +121,7 @@ VectorIterator operator--(int);
   
 
 
-## <a name="operator-dereference"></a>  Operador de vectoriterator:: operator
+## <a name="operator-dereference"></a>  Vectoriterator:: operator\* operador
 Recupera la dirección del elemento especificado por el objeto VectorIterator actual.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -153,7 +153,7 @@ bool operator==(const VectorIterator& other) const;
   
 
 
-## <a name="operator-greater-than"></a>  Vectoriterator:: operator&gt; (operador)
+## <a name="operator-greater-than"></a>  Vectoriterator:: operator&gt; operador
 Indica si el objeto VectorIterator actual es mayor que un objeto VectorIterator especificado.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -228,7 +228,7 @@ bool operator!=(const VectorIterator& other) const;
   
 
 
-## <a name="operator-less-than"></a>  Vectoriterator:: operator&lt; (operador)
+## <a name="operator-less-than"></a>  Vectoriterator:: operator&lt; operador
 Indica si el objeto VectorIterator actual es menor que un objeto VectorIterator especificado.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -286,7 +286,7 @@ difference_type operator-(const VectorIterator& other) const;
  Otro objeto VectorIterator.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La sintaxis del primer operador devuelve un objeto VectorIterator que tiene `n` elementos menos que el objeto VectorIterator actual. La segunda sintaxis del operador devuelve el número de elementos entre el actual y la `other` VectorIterator.  
+ La sintaxis del primer operador devuelve un objeto VectorIterator que tiene `n` elementos menos que el objeto VectorIterator actual. La segunda sintaxis del operador devuelve el número de elementos entre actual y el `other` VectorIterator.  
   
 
 
@@ -344,7 +344,7 @@ inline VectorIterator<T> operator+(
   
 
 
-## <a name="operator-minus-equals"></a>  Vectoriterator:: operator-= (operador)
+## <a name="operator-minus-equals"></a>  Vectoriterator:: operator-= operador
 Disminuye el VectorIterator actual según el desplazamiento especificado.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -397,10 +397,10 @@ explicit VectorIterator(
  Un IVector\<T > objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- El primer ejemplo de sintaxis es el constructor predeterminado. El segundo ejemplo de sintaxis es un constructor explícito que se usa para construir un VectorIterator desde un IVector\<T > objeto.  
+ El primer ejemplo de sintaxis es el constructor predeterminado. El segundo ejemplo de sintaxis es un constructor explícito que se usa para construir un VectorIterator a partir de un IVector\<T > objeto.  
   
 
 
   
 ## <a name="see-also"></a>Vea también  
- [Namespace de plataforma](platform-namespace-c-cx.md)
+ [Plataforma Namespace](platform-namespace-c-cx.md)

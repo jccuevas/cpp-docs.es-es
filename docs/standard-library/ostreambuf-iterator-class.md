@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6693fe0c4e34ce4749feef05bf0a1fe0213ac866
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958258"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207726"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator
 
@@ -78,7 +78,7 @@ La clase ostreambuf_iterator debe satisfacer los requisitos de un iterador de sa
 
 |Operador|Descripción|
 |-|-|
-|[operator*](#op_star)|Desreferencia el operador usado para implementar la expresión de iterador de salida * `i` = `x`.|
+|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión de iterador de salida \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Operador de incremento no funcional que devuelve un objeto `ostreambuf_iterator` al mismo objeto que señalaba antes de que se llamara a la operación.|
 |[operator=](#op_eq)|El operador inserta un carácter en el búfer del flujo asociado.|
 
@@ -189,7 +189,7 @@ No insertions failed.
 *\
 ```
 
-## <a name="op_star"></a> ostreambuf_iterator::operator*
+## <a name="op_star"></a>  ostreambuf_iterator:: operator\*
 
 Un operador de desreferencia no funcional usado para implementar la expresión de iterador de salida \* *i* = *x*.
 

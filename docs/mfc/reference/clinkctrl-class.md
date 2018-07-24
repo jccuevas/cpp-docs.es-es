@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf1c64aa2139764bcb26782c344a90379bafda23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336779"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208015"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl (clase)
 Proporciona la funcionalidad del control SysLink común de Windows.  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |Parámetro|Descripción|  
 |---------------|-----------------|  
 |[in] *cxMaxWidth*|El ancho máximo del vínculo, en píxeles.|  
-|[out] * *pSize*|Un puntero a un Windows [tamaño](http://msdn.microsoft.com/library/windows/desktop/dd145106) estructura. Cuando este método finaliza, el *cy* miembro de la `SIZE` estructura contiene el alto del texto de vínculo ideal para el ancho del texto de vínculo especificado por *cxMaxWidth*. El *cx* miembro de la estructura contiene el ancho del texto de vínculo que realmente se necesita.|  
+|[out] \* *pSize*|Un puntero a un Windows [tamaño](http://msdn.microsoft.com/library/windows/desktop/dd145106) estructura. Cuando este método finaliza, el *cy* miembro de la `SIZE` estructura contiene el alto del texto de vínculo ideal para el ancho del texto de vínculo especificado por *cxMaxWidth*. El *cx* miembro de la estructura contiene el ancho del texto de vínculo que realmente se necesita.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  El alto preferido del texto del vínculo, en píxeles. El valor devuelto es el mismo que el valor de la *cy* miembro de la `SIZE` estructura.  
