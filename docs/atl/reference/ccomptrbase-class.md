@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885456"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209227"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase (clase)
 Esta clase proporciona una base para las clases de puntero inteligente que usa las rutinas de memoria basado en COM.  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|El operador de conversión.|  
 |[¡CComPtrBase::operator!](#operator_not)|El operador NOT.|  
 |[CComPtrBase::operator &](#operator_amp)|El & operador.|  
-|[CComPtrBase::operator *](#operator_star)|El * operador.|  
+|[CComPtrBase::operator *](#operator_star)|El operador \*.|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|El menor-que el operador.|  
 |[CComPtrBase::operator ==](#operator_eq_eq)|El operador de igualdad.|  
 |[CComPtrBase::operator ->](#operator_ptr)|El operador de miembros de puntero.|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la dirección del objeto que apunta el `CComPtrBase` objeto.  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- El * operador.  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ El operador \*.  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si el puntero administrado por el objeto actual es menor que el puntero a la que se está comparando.  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  El operador de conversión.  
   
 ```  

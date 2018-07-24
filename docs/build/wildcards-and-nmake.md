@@ -1,5 +1,5 @@
 ---
-title: Caracteres comodín y NMAKE | Documentos de Microsoft
+title: Caracteres comodín y NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfe11313a456437fca2dd03aa8367c5f380e689
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6834e37c9f6624e231861fa28063cdbc7bec8508
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380458"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208629"
 ---
 # <a name="wildcards-and-nmake"></a>Caracteres comodín y NMAKE
-NMAKE amplía los caracteres comodín de nombre de archivo (* y?) en las líneas de dependencia. Un carácter comodín especificado en el comando se pasa al comando; NMAKE no lo expande.  
+NMAKE amplía los caracteres comodín de nombre de archivo (\* y?) en las líneas de dependencia. Un carácter comodín especificado en un comando se pasa al comando; NMAKE no expandirlo.  
   
 ## <a name="see-also"></a>Vea también  
  [Contenido de un archivo MAKE](../build/contents-of-a-makefile.md)

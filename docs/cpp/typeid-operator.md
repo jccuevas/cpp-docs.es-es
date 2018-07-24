@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9646678398ff1e18d0acf45c45bc931ce37cd54a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b51d2a3861cb26073063058aa4124244d94df40b
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944876"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207457"
 ---
 # <a name="typeid-operator"></a>typeid (Operador)
 ## <a name="syntax"></a>Sintaxis  
@@ -41,7 +41,7 @@ typeid(expression)
   
 -   Una referencia a una clase  
   
--   Un puntero, desreferenciado con *  
+-   Un puntero, desreferenciado con \*  
   
 -   Un puntero con subíndice (es decir, [ ]). (Observe que, normalmente, no es seguro utilizar un subíndice con un puntero a un tipo polimórfico).  
   

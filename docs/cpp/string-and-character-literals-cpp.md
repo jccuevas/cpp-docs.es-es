@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942099"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208554"
 ---
 # <a name="string-and-character-literals--c"></a>Literales de cadena y carácter (C++)
 C++ admite varios tipos de cadenas y caracteres, y proporciona maneras de expresar valores literales de cada uno de esos tipos. En el código fuente, el contenido de los literales de carácter y cadena se expresa mediante un juego de caracteres. Los nombres de carácter universal y los caracteres de escape permiten expresar cualquier cadena con tan solo el juego básico de caracteres de código fuente. Un literal de cadena sin formato permite evitar la utilización de caracteres de escape y puede usarse para expresar todos los tipos de literales de cadena. También se pueden crear literales std::string sin necesidad de seguir pasos adicionales de construcción o conversión.  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Tenga en cuenta que `strlen()` y `wcslen()` no incluyen el tamaño del carácter nulo, cuyo tamaño es igual que el tamaño del elemento de tipo string: un byte en una cadena de char *, dos bytes en wchar_t\* o char16_t\* cadenas, y cuatro bytes en char32_t\* cadenas.  
+ Tenga en cuenta que `strlen()` y `wcslen()` no incluyen el tamaño del carácter nulo, cuyo tamaño es igual que el tamaño del elemento de tipo string: un byte en un valor char\* de cadena, dos bytes en wchar_t\* o char16_t\*cadenas y cuatro bytes en char32_t\* cadenas.  
   
  La longitud máxima de un literal de cadena es de 65535 bytes. Este límite se aplica a los literales de cadena estrechos y anchos.  
   
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>Literales de cadena con nombres de caracteres universales  
- Los literales de cadena nativos (con formato) pueden usar nombres de carácter universal para representar cualquier carácter, siempre que el nombre de carácter universal pueda codificarse como uno o varios caracteres en el tipo de cadena.  Por ejemplo, no se puede codificar un nombre de carácter universal que representa un carácter extendido en una cadena de caracteres estrechos mediante la página de códigos ANSI, pero puede codificarse en cadenas de caracteres estrechos de algunas páginas de códigos multibyte, así como en cadenas UTF-8 o en una cadena de caracteres anchos. En C ++ 11, compatibilidad con Unicode se extiende por char16_t * y char32_t\* tipos de cadena:  
+ Los literales de cadena nativos (con formato) pueden usar nombres de carácter universal para representar cualquier carácter, siempre que el nombre de carácter universal pueda codificarse como uno o varios caracteres en el tipo de cadena.  Por ejemplo, no se puede codificar un nombre de carácter universal que representa un carácter extendido en una cadena de caracteres estrechos mediante la página de códigos ANSI, pero puede codificarse en cadenas de caracteres estrechos de algunas páginas de códigos multibyte, así como en cadenas UTF-8 o en una cadena de caracteres anchos. En C ++ 11, compatibilidad con Unicode se extiende por la char16_t\* y char32_t\* tipos de cadena:  
   
 ```cpp  
 // ASCII smiling face  
