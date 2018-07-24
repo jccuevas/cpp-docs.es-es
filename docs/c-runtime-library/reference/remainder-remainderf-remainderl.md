@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f277292f413e09b9c41a87cd82e438e0e1e883a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96d87a213029ab33e4d3c0269c4e7ba41e1aed43
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406672"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209422"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -71,13 +71,13 @@ Denominador.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El resto de punto flotante de *x* / *y*. Si el valor de *y* es 0,0, **resto** devuelve un valor NaN reservado. Para obtener información acerca de la representación de un valor NaN reservado por la **printf** familia, vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+El resto de punto flotante *x* / *y*. Si el valor de *y* es 0,0, **resto** devuelve un valor NaN. Para obtener información sobre la representación de un NaN reservado por la **printf** familia, vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **resto** funciones calculan el resto de punto flotante *r* de *x* / *y* que *x*   =  *n* * *y* + *r*, donde *n*es el entero más cercano con un valor *x* / *y* y *n*par cada vez que &#124; *n*  -  *x* / *y* &#124; = 1/2. Cuando *r* = 0, *r* tiene el mismo signo que *x*.
+El **resto** funciones calculan el resto de punto flotante *r* de *x* / *y* que *x*   =  *n* \* *y* + *r*, donde *n*es el entero más cercano en valor a *x* / *y* y *n*incluso cada vez que &#124; *n*  -  *x* / *y* &#124; = 1/2. Cuando *r* = 0, *r* tiene el mismo signo que *x*.
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **resto** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **resto** siempre toma dos **doble** argumentos y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **resto** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **resto** siempre toma dos **doble** argumentos y devuelve un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 
