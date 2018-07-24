@@ -1,5 +1,5 @@
 ---
-title: fmod, fmodf, fmodl | Documentos de Microsoft
+title: fmod, fmodf, fmodl | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6cc8cc10c026c5ecd621657c556da883c187f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c473b5cb6822df07f4972ff2c964c828b14b5966
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399041"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207538"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -82,11 +82,11 @@ Valores de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fmod** devuelve el resto de punto flotante de *x* / *y*. Si el valor de *y* es 0,0, **fmod** devuelve un valor NaN reservado. Para obtener información acerca de la representación en forma de un valor NaN reservado por la **printf** familia, vea [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod** devuelve el resto de punto flotante *x* / *y*. Si el valor de *y* es 0,0, **fmod** devuelve un valor NaN. Para obtener información acerca de la representación de un NaN reservado por la **printf** familia, vea [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **fmod** función calcula el resto de punto flotante *f* de *x* / *y* que *x*  =  *i* * *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
+El **fmod** función calcula el resto de punto flotante *f* de *x* / *y* que *x*  =  *i* \* *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
 
 C++ permite las sobrecargas, es posible llamar a las sobrecargas de **fmod** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **fmod** siempre toma dos **doble** argumentos y devuelve un **doble**.
 

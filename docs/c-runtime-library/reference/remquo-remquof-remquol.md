@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2bcb774d7ebe7e71c3877af326177bbf8d7160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 480bf65d61581866fe447c9563a267d08d17c838
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407007"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207658"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -69,16 +69,16 @@ Numerador.
 *denom*<br/>
 Denominador.
 
-*/quo*<br/>
+*quo*<br/>
 Puntero a un entero para almacenar un valor que tiene el signo y la magnitud aproximada del cociente.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**remquo** devuelve el resto de punto flotante de *x* / *y*. Si el valor de *y* es 0,0, **remquo** devuelve un valor NaN reservado. Para obtener información acerca de la representación de un valor NaN reservado por la **printf** familia, vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** devuelve el resto de punto flotante *x* / *y*. Si el valor de *y* es 0,0, **remquo** devuelve un valor NaN. Para obtener información sobre la representación de un NaN reservado por la **printf** familia, vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **remquo** función calcula el resto de punto flotante *f* de *x* / *y* que *x*   =  *i* * *y* + *f*, donde *i* es un entero , *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
+El **remquo** función calcula el resto de punto flotante *f* de *x* / *y* que *x*   =  *i* \* *y* + *f*, donde *i* es un entero , *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
 
 C++ permite las sobrecargas, es posible llamar a las sobrecargas de **remquo** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **remquo** siempre toma dos **doble** argumentos y devuelve un **doble**.
 
