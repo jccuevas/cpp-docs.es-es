@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330809"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207765"
 ---
 # <a name="midl-property-pages-advanced"></a>Páginas de propiedades MIDL: Avanzadas
 En la página de propiedades **Avanzadas** de la carpeta **MIDL** se especifican las opciones del compilador MIDL siguientes:  
@@ -48,7 +48,7 @@ En la página de propiedades **Avanzadas** de la carpeta **MIDL** se especifican
   
 -   Comprobar código auxiliar de los datos ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Validar parámetros ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   Validar parámetros ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
 -   Alineación de miembros de struct ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
