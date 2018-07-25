@@ -14,15 +14,15 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: b4e5bad5b0688a2f0deeb237335c26419e2d9cbe
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34422685"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207907"
 ---
 # <a name="configure-a-linux-project"></a>Configurar un proyecto de Linux
-En este tema se describe cómo configurar un proyecto de Linux en Visual Studio. Para obtener información sobre los proyectos de Linux de CMake, consulte [Configure a Linux CMake Project](cmake-linux-project.md) (Configuración de un proyecto de CMake de Linux).
+En este tema se describe cómo configurar un proyecto C++ de Linux en Visual Studio. Para obtener información sobre los proyectos de Linux de CMake en Visual Studio, consulte [Configuración de un proyecto de CMake de Linux](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Configuración general
 Con Visual Studio se pueden configurar una serie de opciones para un proyecto de Linux.  Para ver estas opciones, seleccione el menú **Proyecto > Propiedades** o haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Propiedades** en el menú contextual. Aparecerá la configuración **General**.

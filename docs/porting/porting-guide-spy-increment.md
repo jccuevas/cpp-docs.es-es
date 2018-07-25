@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28c99f5f45aba2c77b84dce63ea200fb33b76f84
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848783"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208814"
 ---
 # <a name="porting-guide-spy"></a>Guía de migración: Spy++
 Este caso práctico de migración está diseñado para que se haga una idea de cómo es un proyecto de migración típico, los tipos de problemas con que puede encontrarse y algunas sugerencias y trucos generales para resolver problemas de migración. No pretende ser una guía definitiva de migración, ya que la experiencia de migración de un proyecto depende en gran medida de los detalles del código.  
@@ -195,7 +195,7 @@ MOUT << _T(" chUser:'") << chUser
   
 ```  
   
- La macro `MOUT` se resuelve como *g_pmout, que es un objeto del tipo `mstream`. La clase mstream se deriva de la clase de cadena de salida estándar, `std::basic_ostream<TCHAR>.`. Sin embargo con _T alrededor de la literal de cadena, que colocamos cuando nos preparábamos para realizar la conversión a Unicode, no pudo realizar la resolución de sobrecarga del operador << y se generó el siguiente mensaje de error:  
+ La macro `MOUT` se resuelve como \*g_pmout, que es un objeto del tipo `mstream`. La clase mstream se deriva de la clase de cadena de salida estándar, `std::basic_ostream<TCHAR>.`. Sin embargo con _T alrededor de la literal de cadena, que colocamos cuando nos preparábamos para realizar la conversión a Unicode, no pudo realizar la resolución de sobrecarga del operador << y se generó el siguiente mensaje de error:  
   
 ```Output  
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions

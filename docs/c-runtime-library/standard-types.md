@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418528"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208785"
 ---
 # <a name="standard-types"></a>Tipos estándar
 La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y definiciones de tipo estándar.  
@@ -198,7 +198,7 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |int_fast64_t, uint_fast64_t|long long, unsigned long long|  
 |intmax_t, uintmax_t|long long, unsigned long long|  
   
-|Tipo|Description|Declarado en|  
+|Tipo|Descripción|Declarado en|  
 |----------|-----------------|-----------------|  
 |`clock_t` (long)|Almacena valores de hora. Usado por [clock](../c-runtime-library/reference/clock.md).|TIME.H|  
 |`_complex` (estructura)|Almacena partes reales e imaginarias de números complejos. Usado por [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|  
@@ -218,7 +218,7 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |`fpos_t` (entero largo, `__int64` o estructura, según la plataforma de destino)|Usado por [fgetpos](../c-runtime-library/reference/fgetpos.md) y [fsetpos](../c-runtime-library/reference/fsetpos.md) para registrar información que identifica de forma única cada posición dentro de un archivo.|STDIO.H|  
 |`_fsize_t` (entero largo sin signo)|Se usa para representar el tamaño de un archivo.|IO.H,<br /><br /> WCHAR.H|  
 |`_HEAPINFO` (estructura)|Contiene información sobre la siguiente entrada de montón para [_heapwalk](../c-runtime-library/reference/heapwalk.md).|MALLOC.H|  
-|`_HFILE` (void*)|Identificador de archivo del sistema operativo.|CRTDBG.H|  
+|`_HFILE` (void \*)|Identificador de archivo del sistema operativo.|CRTDBG.H|  
 |`imaxdiv_t`|Tipo de valor devuelto por la función [imaxdiv](../c-runtime-library/reference/imaxdiv.md), que contiene el cociente y el resto.|inttypes.h|  
 |`ino_t`, `_ino_t` (entero corto sin signo)|Se usa para devolver información de estado.|WCHAR.H|  
 |`intmax_t`|Tipo entero con signo que puede representar cualquier valor de cualquier tipo de entero con signo.|stdint.h|  

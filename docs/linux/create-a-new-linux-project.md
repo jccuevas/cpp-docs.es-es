@@ -1,7 +1,7 @@
 ---
 title: Crear un nuevo proyecto de C++ para Linux en Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,15 +12,15 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 4d4d11ec459215d81996d1daea420513c21b10b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f64f8eaf09e92df3dd776180db5904af039d6ad7
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339234"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207975"
 ---
 # <a name="create-a-new-linux-project"></a>Crear un nuevo proyecto de Linux
-Al codificar para Linux, tiene la opción de crear un proyecto de Visual Studio o un proyecto de CMake. En este tema se describe cómo crear un proyecto de Visual Studio. Para obtener información acerca de los proyectos de CMake, consulte [Configurar un proyecto de CMake de Linux](cmake-linux-project.md).
+Al programar C++ en Visual Studio para Linux, tiene la opción de crear un proyecto de Visual Studio o un proyecto de CMake. En este tema se describe cómo crear un proyecto de Visual Studio. Para obtener información acerca de los proyectos de CMake, consulte [Configurar un proyecto de CMake de Linux](cmake-linux-project.md).
 
 Para crear un nuevo proyecto de Linux en Visual Studio, haga lo siguiente:
 
@@ -29,7 +29,7 @@ Para crear un nuevo proyecto de Linux en Visual Studio, haga lo siguiente:
 
    ![Nuevo proyecto de Linux](media/newproject.png)
 
-   | Tipo de proyecto | Description
+   | Tipo de proyecto | Descripción
    | ------------ | ---
    | **Blink (Raspberry)**           | Proyecto destinado a un dispositivo Raspberry Pi con código de ejemplo escrito para hacer parpadear un LED
    | **Aplicación de consola (Linux)** | Proyecto destinado a cualquier equipo Linux con código de ejemplo escrito para mostrar texto en la consola

@@ -1,7 +1,8 @@
 ---
-title: Conectarse al equipo Linux remoto | Microsoft Docs
+title: Conexión a un equipo remoto Linux en Visual Studio | Microsoft Docs
+description: En este artículo se describe cómo conectarse a una máquina remota Linux desde un proyecto de Visual Studio C++.
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: dd7f73a01b3b0941144ff59a683a9e42467f5a18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329327"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207671"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Conectarse al equipo Linux remoto
 
-Al compilar, el código de Linux se copia en el equipo remoto Linux y, luego, se compila en ese sistema según la configuración elegida en Visual Studio.  Para configurar esta conexión remota:
+Al crear un proyecto de Linux C++ en Visual Studio, el código se copia al equipo Linux remoto y, después, se compila según la configuración de Visual Studio. Para configurar esta conexión remota:
 
 1. Compile el proyecto por primera vez o cree manualmente una nueva entrada al seleccionar **Herramientas > Opciones** y, luego, abrir el nodo **Multiplataforma > Administrador de conexiones** y hacer clic en el botón **Agregar**.
 
@@ -33,7 +34,7 @@ Al compilar, el código de Linux se copia en el equipo remoto Linux y, luego, se
 
 1. Especifique la siguiente información:
 
-   | Entrada | Description
+   | Entrada | Descripción
    | ----- | ---
    | **Nombre de host**           | Nombre o dirección IP del dispositivo de destino
    | **Puerto**                | Puerto en el que se ejecuta el servicio SSH, normalmente 22
