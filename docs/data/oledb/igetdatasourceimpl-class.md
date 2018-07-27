@@ -1,5 +1,5 @@
 ---
-title: IGetDataSourceImpl (clase) | Documentos de Microsoft
+title: IGetDataSourceImpl (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,29 @@ f1_keywords:
 - ATL.IGetDataSourceImpl
 - ATL::IGetDataSourceImpl
 - ATL::IGetDataSourceImpl<T>
+- GetDataSource
+- IGetDataSourceImpl.GetDataSource
+- IGetDataSourceImpl::GetDataSource
 dev_langs:
 - C++
 helpviewer_keywords:
 - IGetDataSourceImpl class
+- GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 50ffa3f176bbd5691a3ea0bc4e23aa8245712e17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 558578a82f1906d7481abebc5e1f1719b1983724
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101115"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269942"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl (Clase)
-Proporciona una implementación de la [IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx) objeto.  
+Proporciona una implementación de la [IGetDataSource](https://msdn.microsoft.com/library/ms709721.aspx) objeto.  
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,9 +42,12 @@ template <class T>
 class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `T`  
+### <a name="parameters"></a>Parámetros  
+ *T*  
  La clase derivada de `IGetDataSourceImpl`.  
+
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
 ## <a name="members"></a>Miembros  
   
@@ -48,14 +55,27 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
   
 |||  
 |-|-|  
-|[GetDataSource](../../data/oledb/igetdatasourceimpl-getdatasource.md)|Devuelve un puntero de interfaz en el objeto de origen de datos que creó la sesión.|  
+|[GetDataSource](#getdatasource)|Devuelve un puntero de interfaz en el objeto de origen de datos que creó la sesión.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esto es una interfaz obligatoria en la sesión para obtener un puntero de interfaz al objeto de origen de datos.  
+
+## <a name="getdatasource"></a> Igetdatasourceimpl:: GetDatasource
+Devuelve un puntero de interfaz en el objeto de origen de datos que creó la sesión.  
   
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** atldb.h  
+### <a name="syntax"></a>Sintaxis  
+  
+```cpp
+      STDMETHOD(GetDataSource)(REFIID riid,   
+   IUnknown ** ppDataSource);  
+```  
+  
+#### <a name="parameters"></a>Parámetros  
+ Consulte [IGetDataSource::GetDataSource](https://msdn.microsoft.com/library/ms725443.aspx) en el *referencia del programador OLE DB*.  
+  
+### <a name="remarks"></a>Comentarios  
+ Resulta útil si necesita tener acceso a propiedades en el objeto de origen de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
