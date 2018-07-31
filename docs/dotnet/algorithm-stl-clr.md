@@ -1,5 +1,5 @@
 ---
-title: algoritmo (STL/CLR) | Documentos de Microsoft
+title: el algoritmo (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -151,24 +151,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a494993eea8a82307243ee1a05b92212dd4cb216
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 353044389b6be308eca2fae65f21eeae4e78532a
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079843"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376155"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 Define las funciones de plantilla de contenedor STL/CLR que realizan algoritmos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 #include <cliext/algorithm>  
 ```  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<cliext/algoritmo >  
+ **Encabezado:** \<cliext/algorithm >  
   
  **Namespace:** cliext  
     
@@ -177,8 +177,8 @@ Define las funciones de plantilla de contenedor STL/CLR que realizan algoritmos.
 |Función|Descripción|  
 |--------------|-----------------|  
 |[adjacent_find (STL/CLR)](#adjacent_find)|Busca dos elementos adyacentes que son iguales.|  
-|[binary_search (STL/CLR)](#binary_search)|Prueba si una secuencia ordenada contiene un valor determinado.|  
-|[copy (STL/CLR)](#copy)|Copia los valores de un intervalo de origen a un intervalo de destino, efectuar una iteración en la dirección hacia delante.|  
+|[binary_search (STL/CLR)](#binary_search)|Comprueba si una secuencia ordenada contiene un valor determinado.|  
+|[copy (STL/CLR)](#copy)|Copia los valores de un intervalo de origen a un intervalo de destino, efectuar una iteración en la dirección de avance.|  
 |[copy_backward (STL/CLR)](#copy_backward)|Copia los valores de un intervalo de origen a un intervalo de destino, efectuar una iteración en la dirección hacia atrás.|  
 |[count (STL/CLR)](#count)|Devuelve el número de elementos de un intervalo cuyos valores coinciden con un valor especificado.|  
 |[count_if (STL/CLR)](#count_if)|Devuelve el número de elementos de un intervalo cuyos valores coinciden con una condición especificada.|  
@@ -188,36 +188,36 @@ Define las funciones de plantilla de contenedor STL/CLR que realizan algoritmos.
 |[fill_n (STL/CLR)](#fill_n)|Asigna un nuevo valor a un número especificado de elementos de un intervalo a partir de un elemento determinado.|  
 |[find (STL/CLR)](#find)|Devuelve la posición de la primera aparición de un valor especificado.|  
 |[find_end (STL/CLR)](#find_end)|Devuelve la última subsecuencia de un intervalo que es idéntico a una secuencia especificada.|  
-|[find_first_of (STL/CLR)](#find_first_of)|Busca un intervalo para la primera aparición de cualquiera de un intervalo determinado de elementos.|  
-|[find_if (STL/CLR)](#find_if)|Devuelve la posición del primer elemento de una secuencia de valores donde el elemento satisface una condición especificada.|  
-|[for_each (STL/CLR)](#for_each)|Aplica un objeto de función especificada a cada elemento de una secuencia de valores y devuelve el objeto de función.|  
+|[find_first_of (STL/CLR)](#find_first_of)|Busca un intervalo para la primera aparición de cualquiera de un determinado intervalo de elementos.|  
+|[find_if (STL/CLR)](#find_if)|Devuelve la posición del primer elemento en una secuencia de valores donde el elemento satisface una condición especificada.|  
+|[for_each (STL/CLR)](#for_each)|Se aplica un objeto de función especificada a cada elemento de una secuencia de valores y devuelve el objeto de función.|  
 |[generate (STL/CLR)](#generate)|Asigna los valores generados por un objeto de función a cada elemento de una secuencia de valores.|  
 |[generate_n (STL/CLR)](#generate_n)|Asigna los valores generados por un objeto de función a un número especificado de elementos.|  
 |[includes (STL/CLR)](#includes)|Comprueba si un intervalo ordenado contiene todos los elementos de un segundo intervalo ordenado.|  
-|[inplace_merge (STL/CLR)](#inplace_merge)|Combina los elementos de dos intervalos ordenados consecutivos en un único intervalo ordenado.|  
+|[inplace_merge (STL/CLR)](#inplace_merge)|Combina los elementos de dos intervalos ordenados consecutivos en un solo intervalo ordenado.|  
 |[iter_swap (STL/CLR)](#iter_swap)|Intercambia dos valores a los que se hace referencia mediante un par de iteradores especificados.|  
-|[lexicographical_compare (STL/CLR)](#lexicographical_compare)|Compara dos secuencias, elemento por elemento, identificar qué secuencia es el menor de los dos.|  
-|[lower_bound (STL/CLR)](#lower_bound)|Busca la posición del primer elemento de una secuencia ordenada de valores que tiene un valor mayor o igual a un valor especificado.|  
-|[make_heap (STL/CLR)](#make_heap)|Convierte los elementos de un intervalo especificado en un montón donde el primer elemento en el montón es el más grande.|  
+|[lexicographical_compare (STL/CLR)](#lexicographical_compare)|Compara dos secuencias, elemento por elemento, que identifica qué secuencia es el menor de los dos.|  
+|[lower_bound (STL/CLR)](#lower_bound)|Busca la posición del primer elemento en una secuencia ordenada de valores que tiene un valor mayor o igual que un valor especificado.|  
+|[make_heap (STL/CLR)](#make_heap)|Convierte los elementos de un intervalo especificado en un montón donde el primer elemento en el montón es la más grande.|  
 |[Max (STL/CLR)](#max))|Compara dos objetos y devuelve el mayor de los dos.|  
-|[max_element (STL/CLR)](#max_element)|Busca el elemento más grande de una secuencia de valores especificada.|  
+|[max_element (STL/CLR)](#max_element)|Busca el elemento más grande en una secuencia de valores especificada.|  
 |[Merge (STL/CLR)](#merge))|Combina todos los elementos de dos intervalos de origen ordenados en un intervalo de destino único, ordenado.|  
 |[min (STL/CLR)](#min)|Compara dos objetos y devuelve el menor de los dos.|  
-|[min_element (STL/CLR)](#min_element)|Busca el elemento más pequeño de una secuencia de valores especificada.|  
+|[min_element (STL/CLR)](#min_element)|Busca el elemento más pequeño en una secuencia de valores especificada.|  
 |[mismatch (STL/CLR)](#mismatch)|Compara dos intervalos elemento a elemento y devuelve la primera posición donde se produce una diferencia.|  
-|[next_permutation (STL/CLR)](#next_permutation)|Reorganiza los elementos de un intervalo de modo que la ordenación original se reemplaza con la mayor permutación lexicográficamente siguiente si existe.|  
-|[nth_element (STL/CLR)](#nth_element)|Particiones de una secuencia de elementos correctamente situando el `n`elemento de la secuencia para que todos los elementos frente a él se menor o igual a él y todos los elementos siguientes son mayores o iguales que él.|  
-|[partial_sort (STL/CLR)](#partial_sort)|Organiza un número especificado de los elementos menores de un intervalo en orden no descendente.|  
-|[partial_sort_copy (STL/CLR)](#partial_sort_copy)|Copia los elementos de un intervalo de origen a un intervalo de destino, que se ordenan los elementos desde el intervalo de origen.|  
+|[next_permutation (STL/CLR)](#next_permutation)|Reorganiza los elementos de un intervalo de modo que la ordenación original se reemplaza por la mayor permutación lexicográficamente siguiente si existe.|  
+|[nth_element (STL/CLR)](#nth_element)|Las particiones de una secuencia de elementos, situando correctamente el `n`elemento de la secuencia para que todos los elementos que hay delante sean menor o igual a él y todos los elementos siguientes son mayores o iguales que él.|  
+|[partial_sort (STL/CLR)](#partial_sort)|Organiza un número especificado de los elementos más pequeños en un intervalo en orden no descendente.|  
+|[partial_sort_copy (STL/CLR)](#partial_sort_copy)|Copia elementos de un intervalo de origen en un intervalo de destino que se ordenan los elementos del intervalo de origen.|  
 |[partition (STL/CLR)](#partition)|Organiza los elementos en un intervalo de modo que los elementos que cumplen un predicado unario preceden a los que no lo satisfacen.|  
-|[pop_heap (STL/CLR)](#pop_heap)|Mover el elemento más grande de la parte delantera de un montón al final y, a continuación, se forma un nuevo montón con los elementos restantes.|  
-|[prev_permutation (STL/CLR)](#prev_permutation)|Reorganiza una secuencia de elementos de modo que la ordenación original se reemplaza con la mayor permutación lexicográficamente anterior, si existe.|  
+|[pop_heap (STL/CLR)](#pop_heap)|Mueve el elemento más grande de la parte delantera de un montón al final y, a continuación, se forma un montón nuevo con los elementos restantes.|  
+|[prev_permutation (STL/CLR)](#prev_permutation)|Reorganiza una secuencia de elementos de modo que la ordenación original se reemplaza por la mayor permutación lexicográficamente anterior, si existe.|  
 |[push_heap (STL/CLR)](#push_heap)|Agrega un elemento que está al final de un intervalo a un montón existente que se compone de los elementos anteriores del intervalo.|  
-|[random_shuffle (STL/CLR)](#random_shuffle)|¡Reorganiza una secuencia de `N` elementos de un intervalo en una de `N`! organizaciones posibles seleccionadas aleatoriamente.|  
+|[random_shuffle (STL/CLR)](#random_shuffle)|¡Reorganiza una secuencia de `N` elementos de un intervalo en uno de `N`! organizaciones posibles seleccionadas aleatoriamente.|  
 |[remove (STL/CLR)](#remove)|Elimina un valor especificado de un intervalo determinado sin alterar el orden de los elementos restantes y devuelve el final de un nuevo intervalo libre del valor especificado.|  
 |[remove_copy (STL/CLR)](#remove_copy)|Copia elementos de un intervalo de origen en un intervalo de destino, excepto que no se copian los elementos de un valor especificado, sin alterar el orden de los elementos restantes.|  
-|[remove_copy_if (STL/CLR)](#remove_copy_if)|Copia los elementos de un intervalo de origen a un intervalo de destino, excepto aquellos que cumplen un predicado, sin alterar el orden de los elementos restantes.|  
-|[remove_if (STL/CLR)](#remove_if)|Elimina los elementos que cumplen un predicado de un intervalo determinado sin alterar el orden de los elementos restantes. .|  
+|[remove_copy_if (STL/CLR)](#remove_copy_if)|Copia los elementos de un intervalo de origen a un intervalo de destino, excepto aquellos que satisfacen un predicado, sin alterar el orden de los elementos restantes.|  
+|[remove_if (STL/CLR)](#remove_if)|Elimina los elementos que satisfacen un predicado de un intervalo determinado sin alterar el orden de los elementos restantes. .|  
 |[replace (STL/CLR)](#replace)|Reemplaza los elementos de un intervalo que coincide con un valor especificado con un nuevo valor.|  
 |[replace_copy (STL/CLR)](#replace_copy)|Copia los elementos de un intervalo de origen a un intervalo de destino, reemplazando los elementos que coinciden con un valor especificado con un nuevo valor.|  
 |[replace_copy_if (STL/CLR)](#replace_copy_if)|Examina cada elemento de un intervalo de origen y lo reemplaza si satisface un predicado especificado y copia el resultado a un nuevo intervalo de destino.|  
@@ -250,7 +250,7 @@ Busca dos elementos adyacentes que son iguales o cumplen una condición especifi
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt> inline  
     _FwdIt adjacent_find(_FwdIt _First, _FwdIt _Last);  
 template<class _FwdIt, class _Pr> inline  
@@ -265,7 +265,7 @@ Comprueba si hay un elemento en un intervalo ordenado que sea igual a un valor e
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt, class _Ty> inline  
     bool binary_search(_FwdIt _First, _FwdIt _Last, const _Ty% _Val);  
 template<class _FwdIt, class _Ty, class _Pr> inline  
@@ -281,7 +281,7 @@ Asigna los valores de elementos de un intervalo de origen a un intervalo de dest
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _OutIt> inline  
     _OutIt copy(_InIt _First, _InIt _Last, _OutIt _Dest);  
 ```  
@@ -294,7 +294,7 @@ Asigna los valores de elementos de un intervalo de origen a un intervalo de dest
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _BidIt1, class _BidIt2> inline  
     _BidIt2 copy_backward(_BidIt1 _First, _BidIt1 _Last,  
         _BidIt2 _Dest);  
@@ -308,7 +308,7 @@ Devuelve el número de elementos de un intervalo cuyos valores coinciden con un 
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _Ty> inline  
     typename iterator_traits<_InIt>::difference_type  
         count(_InIt _First, _InIt _Last, const _Ty% _Val);  
@@ -322,7 +322,7 @@ Devuelve el número de elementos de un intervalo cuyos valores coinciden con una
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _Pr> inline  
     typename iterator_traits<_InIt>::difference_type  
         count_if(_InIt _First, _InIt _Last, _Pr _Pred);  
@@ -336,7 +336,7 @@ Compara dos intervalos elemento a elemento para ver si son iguales o equivalente
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt1, class _InIt2> inline  
     bool equal(_InIt1 _First1, _InIt1 _Last1, _InIt2 _First2);  
 template<class _InIt1, class _InIt2, class _Pr> inline  
@@ -352,7 +352,7 @@ Busca un par de posiciones en un intervalo ordenado; la primera es menor o equiv
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt, class _Ty> inline  
     _PAIR_TYPE(_FwdIt) equal_range(_FwdIt _First, _FwdIt _Last,  
         const _Ty% _Val);  
@@ -369,7 +369,7 @@ Asigna el mismo valor nuevo a cada elemento de un intervalo especificado.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt, class _Ty> inline  
     void fill(_FwdIt _First, _FwdIt _Last, const _Ty% _Val);  
 ```  
@@ -382,7 +382,7 @@ Asigna un nuevo valor a un número especificado de elementos de un intervalo a p
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _OutIt, class _Diff, class _Ty> inline  
     void fill_n(_OutIt _First, _Diff _Count, const _Ty% _Val);  
 ```  
@@ -395,20 +395,20 @@ Busca la posición de la primera aparición de un elemento en un intervalo que t
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _Ty> inline  
     _InIt find(_InIt _First, _InIt _Last, const _Ty% _Val);  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función comporta igual que la función de la biblioteca estándar de C++ `find`. Para obtener más información, consulte [buscar](../standard-library/algorithm-functions.md#find). 
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `find`. Para obtener más información, consulte [encontrar](../standard-library/algorithm-functions.md#find). 
 
 ## <a name="find_end"></a> find_end (STL/CLR)
 Busca en un intervalo la última subsecuencia que es idéntica a una secuencia especificada o que es equivalente según lo especificado por un predicado binario.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt1, class _FwdIt2> inline  
     _FwdIt1 find_end(_FwdIt1 _First1, _FwdIt1 _Last1,  
         _FwdIt2 _First2, _FwdIt2 _Last2);  
@@ -425,7 +425,7 @@ Busca la primera aparición de cualquiera de varios valores dentro de un interva
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt1, class _FwdIt2> inline  
     _FwdIt1 find_first_of(_FwdIt1 _First1, _FwdIt1 _Last1,  
         _FwdIt2 _First2, _FwdIt2 _Last2);  
@@ -442,7 +442,7 @@ Busca la posición de la primera aparición de un elemento en un intervalo que c
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _Pr> inline  
     _InIt find_if(_InIt _First, _InIt _Last, _Pr _Pred);  
 ```  
@@ -455,7 +455,7 @@ Aplica un objeto de función especificado a cada elemento en un orden hacia dela
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _Fn1> inline  
     _Fn1 for_each(_InIt _First, _InIt _Last, _Fn1 _Func);  
 ```  
@@ -468,7 +468,7 @@ Asigna los valores generados por un objeto de función a cada elemento de un int
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt, class _Fn0> inline  
     void generate(_FwdIt _First, _FwdIt _Last, _Fn0 _Func);  
 ```  
@@ -481,7 +481,7 @@ Asigna los valores generados por un objeto de función a un número especificado
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _OutIt, class _Diff, class _Fn0> inline  
     void generate_n(_OutIt _Dest, _Diff _Count, _Fn0 _Func);  
 ```  
@@ -494,7 +494,7 @@ Prueba si un intervalo ordenado contiene todos los elementos incluidos en un seg
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt1, class _InIt2> inline  
     bool includes(_InIt1 _First1, _InIt1 _Last1,  
         _InIt2 _First2, _InIt2 _Last2);  
@@ -511,7 +511,7 @@ Combina los elementos de dos intervalos ordenados consecutivos en un único inte
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _BidIt> inline  
     void inplace_merge(_BidIt _First, _BidIt _Mid, _BidIt _Last);  
 template<class _BidIt, class _Pr> inline  
@@ -527,7 +527,7 @@ Intercambia dos valores a los que se hace referencia mediante un par de iterador
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt1, class _FwdIt2> inline  
     void iter_swap(_FwdIt1 _Left, _FwdIt2 _Right);  
 ```  
@@ -540,7 +540,7 @@ Compara dos secuencias elemento a elemento para determinar cuál es menor de los
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt1, class _InIt2> inline  
     bool lexicographical_compare(_InIt1 _First1, _InIt1 _Last1,  
         _InIt2 _First2, _InIt2 _Last2);  
@@ -557,7 +557,7 @@ Busca la posición del primer elemento en un intervalo ordenado que tiene un val
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt, class _Ty> inline  
     _FwdIt lower_bound(_FwdIt _First, _FwdIt _Last, const _Ty% _Val);  
 template<class _FwdIt, class _Ty, class _Pr> inline  
@@ -573,7 +573,7 @@ Convierte elementos de un intervalo especificado en un montón en el que el prim
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _RanIt> inline  
     void make_heap(_RanIt _First, _RanIt _Last);  
 template<class _RanIt, class _Pr> inline  
@@ -588,7 +588,7 @@ Compara dos objetos y devuelve el mayor de los dos, donde el criterio de ordenac
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _Ty> inline  
     const _Ty max(const _Ty% _Left, const _Ty% _Right);  
 template<class _Ty, class _Pr> inline  
@@ -603,7 +603,7 @@ Busca la primera aparición del elemento mayor en un intervalo especificado dond
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt> inline  
     _FwdIt max_element(_FwdIt _First, _FwdIt _Last);  
 template<class _FwdIt, class _Pr> inline  
@@ -618,7 +618,7 @@ Combina todos los elementos de dos intervalos de origen ordenados en un único i
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt1, class _InIt2, class _OutIt> inline  
     _OutIt merge(_InIt1 _First1, _InIt1 _Last1,  
         _InIt2 _First2, _InIt2 _Last2, _OutIt _Dest);  
@@ -635,7 +635,7 @@ Compara dos objetos y devuelve el menor de los dos, donde el criterio de ordenac
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _Ty> inline  
     const _Ty min(const _Ty% _Left, const _Ty% _Right);  
 template<class _Ty, class _Pr> inline  
@@ -650,7 +650,7 @@ Busca la primera aparición del menor elemento en un intervalo especificado dond
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt> inline  
     _FwdIt min_element(_FwdIt _First, _FwdIt _Last);  
 template<class _FwdIt, class _Pr> inline  
@@ -665,7 +665,7 @@ Compara dos intervalos elemento a elemento para ver si son iguales o equivalente
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt1, class _InIt2> inline  
     _PAIR_TYPE(_InIt1)  
         mismatch(_InIt1 _First1, _InIt1 _Last1, _InIt2 _First2);  
@@ -676,14 +676,14 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función comporta igual que la función de la biblioteca estándar de C++ `mismatch`. Para obtener más información, consulte [error de coincidencia de](../standard-library/algorithm-functions.md#mismatch).  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `mismatch`. Para obtener más información, consulte [discrepancia](../standard-library/algorithm-functions.md#mismatch).  
 
 ## <a name="next_permutation"></a> next_permutation (STL/CLR)
 Reorganiza los elementos de un intervalo de modo que la ordenación original se reemplaza con la mayor permutación lexicográficamente siguiente si existe, donde el sentido de siguiente se puede especificar con un predicado binario.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp 
 template<class _BidIt> inline  
     bool next_permutation(_BidIt _First, _BidIt _Last);  
 template<class _BidIt, class _Pr> inline  
@@ -694,11 +694,11 @@ template<class _BidIt, class _Pr> inline
  Esta función comporta igual que la función de la biblioteca estándar de C++ `next_permutation`. Para obtener más información, consulte [next_permutation](../standard-library/algorithm-functions.md#next_permutation).  
   
 ## <a name="nth_element"></a> nth_element (STL/CLR)
-Divide un intervalo de elementos correctamente situando el `n`elemento de la secuencia en el intervalo para que todos los elementos que hay delante sean menores o iguales que él y todos los elementos que siguen en la secuencia son mayores o iguales que él.  
+Divide un intervalo de elementos, situando correctamente el `n`elemento de la secuencia en el intervalo para que todos los elementos que hay delante sean menor o igual a él y todos los elementos que lo siguen en la secuencia sean mayores o iguales que él.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _RanIt> inline  
     void nth_element(_RanIt _First, _RanIt _Nth, _RanIt _Last);  
 template<class _RanIt, class _Pr> inline  
@@ -714,7 +714,7 @@ Organiza un número especificado de los elementos menores de un intervalo en un 
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _RanIt> inline  
     void partial_sort(_RanIt _First, _RanIt _Mid, _RanIt _Last);  
 template<class _RanIt, class _Pr> inline  
@@ -730,7 +730,7 @@ Copia los elementos de un intervalo de origen a un intervalo de destino donde lo
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _RanIt> inline  
     _RanIt partial_sort_copy(_InIt _First1, _InIt _Last1,  
         _RanIt _First2, _RanIt _Last2);  
@@ -747,7 +747,7 @@ Clasifica los elementos de un intervalo en dos conjuntos disjuntos, donde los el
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _BidIt, class _Pr> inline  
     _BidIt partition(_BidIt _First, _BidIt _Last, _Pr _Pred);  
 ```  
@@ -760,7 +760,7 @@ Quita el elemento mayor del principio de un montón hasta la penúltima posició
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _RanIt> inline  
     void pop_heap(_RanIt _First, _RanIt _Last);  
 template<class _RanIt, class _Pr> inline  
@@ -775,7 +775,7 @@ Reorganiza los elementos de un intervalo de modo que la ordenación original se 
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _BidIt> inline  
     bool prev_permutation(_BidIt _First, _BidIt _Last);  
 template<class _BidIt, class _Pr> inline  
@@ -790,7 +790,7 @@ Agrega un elemento que está al final de un intervalo a un montón existente que
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _RanIt> inline  
     void push_heap(_RanIt _First, _RanIt _Last);  
 template<class _RanIt, class _Pr> inline  
@@ -801,11 +801,11 @@ template<class _RanIt, class _Pr> inline
  Esta función comporta igual que la función de la biblioteca estándar de C++ `push_heap`. Para obtener más información, consulte [push_heap](../standard-library/algorithm-functions.md#push_heap).  
 
 ## <a name="random_shuffle"></a> random_shuffle (STL/CLR)
-¡Reorganiza una secuencia de `N` elementos de un intervalo en una de `N`! organizaciones posibles seleccionadas aleatoriamente.  
+¡Reorganiza una secuencia de `N` elementos de un intervalo en uno de `N`! organizaciones posibles seleccionadas aleatoriamente.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _RanIt> inline  
     void random_shuffle(_RanIt _First, _RanIt _Last);  
 template<class _RanIt, class _Fn1> inline  
@@ -820,7 +820,7 @@ Elimina un valor especificado de un intervalo determinado sin alterar el orden d
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt, class _Ty> inline  
     _FwdIt remove(_FwdIt _First, _FwdIt _Last, const _Ty% _Val);  
 ```  
@@ -833,7 +833,7 @@ Copia elementos de un intervalo de origen a un intervalo de destino, excepto que
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _OutIt, class _Ty> inline  
     _OutIt remove_copy(_InIt _First, _InIt _Last,  
         _OutIt _Dest, const _Ty% _Val);  
@@ -847,7 +847,7 @@ Copia elementos de un intervalo de origen a un intervalo de destino, excepto que
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _OutIt, class _Pr> inline  
     _OutIt remove_copy_if(_InIt _First, _InIt _Last, _OutIt _Dest,  
         _Pr _Pred);  
@@ -861,7 +861,7 @@ Elimina los elementos que cumplen un predicado de un intervalo determinado sin a
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt, class _Pr> inline  
     _FwdIt remove_if(_FwdIt _First, _FwdIt _Last, _Pr _Pred);  
 ```  
@@ -874,7 +874,7 @@ Examina cada elemento de un intervalo y lo reemplaza si coincide con un valor es
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt, class _Ty> inline  
     void replace(_FwdIt _First, _FwdIt _Last,  
         const _Ty% _Oldval, const _Ty% _Newval);  
@@ -888,7 +888,7 @@ Examina cada elemento de un intervalo de origen y lo reemplaza si coincide con u
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _OutIt, class _Ty> inline  
     _OutIt replace_copy(_InIt _First, _InIt _Last, _OutIt _Dest,  
         const _Ty% _Oldval, const _Ty% _Newval);  
@@ -902,7 +902,7 @@ Examina cada elemento de un intervalo de origen y lo reemplaza si satisface un p
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _OutIt, class _Pr, class _Ty> inline  
     _OutIt replace_copy_if(_InIt _First, _InIt _Last, _OutIt _Dest,  
         _Pr _Pred, const _Ty% _Val);  
@@ -916,7 +916,7 @@ Examina cada elemento de un intervalo y lo reemplaza si satisface un predicado e
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt, class _Pr, class _Ty> inline  
     void replace_if(_FwdIt _First, _FwdIt _Last, _Pr _Pred,  
         const _Ty% _Val);  
@@ -925,25 +925,25 @@ template<class _FwdIt, class _Pr, class _Ty> inline
 ### <a name="remarks"></a>Comentarios  
  Esta función comporta igual que la función de la biblioteca estándar de C++ `replace_if`. Para obtener más información, consulte [replace_if](../standard-library/algorithm-functions.md#replace_if).  
 
-## <a name="reverse"></a> Invertir (STL/CLR)
+## <a name="reverse"></a> Reverse (STL/CLR)
 Invierte el orden de los elementos dentro de un intervalo.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _BidIt> inline  
     void reverse(_BidIt _First, _BidIt _Last);  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función comporta igual que la función de la biblioteca estándar de C++ `reverse`. Para obtener más información, consulte [inversa](../standard-library/algorithm-functions.md#reverse).  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `reverse`. Para obtener más información, consulte [inverso](../standard-library/algorithm-functions.md#reverse).  
 
 ## <a name="reverse_copy"></a> reverse_copy (STL/CLR)
 Invierte el orden de los elementos dentro de un intervalo de origen mientras los copia a un intervalo de destino.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _BidIt, class _OutIt> inline  
     _OutIt reverse_copy(_BidIt _First, _BidIt _Last, _OutIt _Dest);  
 ```  
@@ -956,7 +956,7 @@ Intercambia los elementos de dos intervalos adyacentes.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt> inline  
     void rotate(_FwdIt _First, _FwdIt _Mid, _FwdIt _Last);  
 ```  
@@ -969,7 +969,7 @@ Intercambia los elementos de dos intervalos adyacentes dentro de un intervalo de
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt, class _OutIt> inline  
     _OutIt rotate_copy(_FwdIt _First, _FwdIt _Mid, _FwdIt _Last,  
         _OutIt _Dest);  
@@ -983,7 +983,7 @@ Busca la primera aparición de una secuencia dentro de un intervalo de destino c
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt1, class _FwdIt2> inline  
     _FwdIt1 search(_FwdIt1 _First1, _FwdIt1 _Last1,  
         _FwdIt2 _First2, _FwdIt2 _Last2);  
@@ -1000,7 +1000,7 @@ Busca la primera subsecuencia de un intervalo en la que un número especificado 
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt1, class _Diff2, class _Ty> inline  
     _FwdIt1 search_n(_FwdIt1 _First1, _FwdIt1 _Last1,  
         _Diff2 _Count, const _Ty& _Val);  
@@ -1017,7 +1017,7 @@ Agrupa todos los elementos que pertenecen a un intervalo de origen ordenado, per
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt1, class _InIt2, class _OutIt> inline  
     _OutIt set_difference(_InIt1 _First1, _InIt1 _Last1,  
         _InIt2 _First2, _InIt2 _Last2,_OutIt _Dest);  
@@ -1034,7 +1034,7 @@ Agrupa todos los elementos que pertenecen a ambos intervalos de origen ordenados
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt1, class _InIt2, class _OutIt> inline  
     _OutIt set_intersection(_InIt1 _First1, _InIt1 _Last1,  
         _InIt2 _First2, _InIt2 _Last2, _OutIt _Dest);  
@@ -1051,7 +1051,7 @@ Agrupa todos los elementos que pertenecen a uno, pero no a ambos, de los interva
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt1, class _InIt2, class _OutIt> inline  
     _OutIt set_symmetric_difference(_InIt1 _First1, _InIt1 _Last1,  
         _InIt2 _First2, _InIt2 _Last2, _OutIt _Dest);  
@@ -1068,7 +1068,7 @@ Agrupa todos los elementos que pertenecen al menos a uno de los dos intervalos d
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt1, class _InIt2, class _OutIt> inline  
     _OutIt set_union(_InIt1 _First1, _InIt1 _Last1,  
         _InIt2 _First2, _InIt2 _Last2, _OutIt _Dest);  
@@ -1085,7 +1085,7 @@ Organiza los elementos de un intervalo especificado en un orden no descendente o
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _RanIt> inline  
     void sort(_RanIt _First, _RanIt _Last);  
 template<class _RanIt, class _Pr> inline  
@@ -1100,7 +1100,7 @@ Convierte un montón en un intervalo ordenado.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _RanIt> inline  
     void sort_heap(_RanIt _First, _RanIt _Last);  
 template<class _RanIt, class _Pr> inline  
@@ -1115,7 +1115,7 @@ Clasifica los elementos de un intervalo en dos conjuntos disjuntos, donde los el
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _BidIt, class _Pr> inline  
     _BidIt stable_partition(_BidIt _First, _BidIt _Last, _Pr _Pred);  
 ```  
@@ -1128,7 +1128,7 @@ Organiza los elementos de un intervalo especificado en un orden no descendente o
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _BidIt> inline  
     void stable_sort(_BidIt _First, _BidIt _Last);  
 template<class _BidIt, class _Pr> inline  
@@ -1143,7 +1143,7 @@ Intercambia los valores de los elementos entre dos tipos de objetos, asignando e
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 <class _Ty> inline  
     void swap(_Ty% _Left, _Ty% _Right);  
 ```  
@@ -1156,7 +1156,7 @@ Intercambia los elementos de un intervalo con los elementos de otro intervalo de
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt1, class _FwdIt2> inline  
     _FwdIt2 swap_ranges(_FwdIt1 _First1, _FwdIt1 _Last1,  
         _FwdIt2 _First2);  
@@ -1170,7 +1170,7 @@ Aplica un objeto de función especificado a cada elemento de un intervalo de ori
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _OutIt, class _Fn1> inline  
     _OutIt transform(_InIt _First, _InIt _Last, _OutIt _Dest,  
         _Fn1 _Func);  
@@ -1182,12 +1182,12 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Fn2> inline
 ### <a name="remarks"></a>Comentarios  
  Esta función comporta igual que la función de la biblioteca estándar de C++ `transform`. Para obtener más información, consulte [transformar](../standard-library/algorithm-functions.md#transform).  
 
-## <a name="unique"></a> único (STL/CLR)
+## <a name="unique"></a> exclusivo (STL/CLR)
 Quita los elementos duplicados adyacentes entre sí en un intervalo especificado.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt> inline  
     _FwdIt unique(_FwdIt _First, _FwdIt _Last);  
 template<class _FwdIt, class _Pr> inline  
@@ -1202,7 +1202,7 @@ Copia los elementos de un intervalo de origen a un intervalo de destino salvo lo
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _InIt, class _OutIt> inline  
     _OutIt unique_copy(_InIt _First, _InIt _Last, _OutIt _Dest);  
 template<class _InIt, class _OutIt, class _Pr> inline  
@@ -1218,7 +1218,7 @@ Busca la posición del primer elemento de un intervalo ordenado que tiene un val
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<class _FwdIt, class _Ty> inline  
     _FwdIt upper_bound(_FwdIt _First, _FwdIt _Last, const _Ty% _Val);  
 template<class _FwdIt, class _Ty, class _Pr> inline  

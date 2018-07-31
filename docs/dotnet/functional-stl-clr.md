@@ -1,5 +1,5 @@
 ---
-title: funcional (STL/CLR) | Documentos de Microsoft
+title: funcional (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -73,15 +73,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 04596cd043b90d8016cd0f9b1ebfe05a9bf82f72
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 98640997536bc48330beeda793a6067e3da97b5f
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305909"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376370"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
-Incluya el encabezado STL/CLR `<cliext/functional>` para definir el un número de funciones y los delegados de plantilla relacionadas y clases de plantilla.  
+Incluya el encabezado STL/CLR `<cliext/functional>` para definir el un número de clases de plantilla y funciones y los delegados de plantilla relacionadas.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -90,7 +90,7 @@ Incluya el encabezado STL/CLR `<cliext/functional>` para definir el un número d
 ```  
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<cliext/funcional >  
+ **Encabezado:** \<cliext/functional >  
   
  **Namespace:** cliext 
 
@@ -99,9 +99,9 @@ Incluya el encabezado STL/CLR `<cliext/functional>` para definir el un número d
 |delegado|Descripción|  
 |--------------|-----------------|  
 |[binary_delegate (STL/CLR)](#binary_delegate)|Delegado de dos argumentos.|  
-|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegado de dos argumentos devuelve `void`.|  
-|[unary_delegate (STL/CLR)](#unary_delegate)|Delegado de un argumento.|  
-|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Delegado de un argumento devuelve `void`.|  
+|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegado de dos argumentos devuelve **void**.|  
+|[unary_delegate (STL/CLR)](#unary_delegate)|Un argumento de delegado.|  
+|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Delegado de un argumento devuelve **void**.|  
   
 |Clase|Descripción|  
 |-----------|-----------------|  
@@ -109,11 +109,11 @@ Incluya el encabezado STL/CLR `<cliext/functional>` para definir el un número d
 |[binder1st (STL/CLR)](#binder1st)|Functor para enlazar el primer argumento a un functor de dos argumentos.|  
 |[binder2nd (STL/CLR)](#binder2nd)|Functor para enlazar el segundo argumento a un functor de dos argumentos.|  
 |[divides (STL/CLR)](#divides)|Dividir functor.|  
-|[equal_to (STL/CLR)](#equal_to)|Functor de comparación igual.|  
+|[equal_to (STL/CLR)](#equal_to)|Functor de comparación de igualdad.|  
 |[greater (STL/CLR)](#greater)|Functor de comparación mayor.|  
-|[greater_equal (STL/CLR)](#greater_equal)|Functor de comparación mayor o igual que.|  
+|[greater_equal (STL/CLR)](#greater_equal)|Functor de comparación mayor o igual.|  
 |[less (STL/CLR)](#less)|Menos functor de comparación.|  
-|[less_equal (STL/CLR)](#less_equal)|Functor de comparación menor o igual que.|  
+|[less_equal (STL/CLR)](#less_equal)|Functor de comparación menor o igual.|  
 |[logical_and (STL/CLR)](#logical_and)|Functor AND lógico.|  
 |[logical_not (STL/CLR)](#logical_not)|Lógico no functor.|  
 |[logical_or (STL/CLR)](#logical_or)|Functor de OR lógico.|  
@@ -127,19 +127,19 @@ Incluya el encabezado STL/CLR `<cliext/functional>` para definir el un número d
   
 |Función|Descripción|  
 |--------------|-----------------|  
-|[bind1st (STL/CLR)](#bind1st)|Genera un binder1st por un functor y un argumento.|  
-|[bind2nd (STL/CLR)](#bind2nd)|Genera un binder2nd por un functor y un argumento.|  
+|[bind1st (STL/CLR)](#bind1st)|Genera un binder1st para un argumento y functor.|  
+|[bind2nd (STL/CLR)](#bind2nd)|Genera un binder2nd para un argumento y functor.|  
 |[not1 (STL/CLR)](#not1)|Genera un unary_negate para un functor.|  
 |[not2 (STL/CLR)](#not2)|Genera un binary_negate para un functor.|  
    
 ## <a name="members"></a>Miembros
 
 ## <a name="binary_delegate"></a> binary_delegate (STL/CLR)
-La clase genereic describe un delegado de dos argumentos. Se usa especificar un delegado en cuanto a sus tipos de argumentos y valores devueltos.  
+La clase genereic describe un delegado de dos argumentos. Usarlo especificar un delegado en cuanto a sus tipos de argumentos y valores devueltos.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2,  
     typename Result>  
@@ -147,13 +147,13 @@ generic<typename Arg1,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg1  
+ *Arg1*  
  El tipo del primer argumento.  
   
- Arg2  
+ *Arg2*  
  El tipo del segundo argumento.  
   
- Resultado  
+ *Resultado*  
  Tipo de valor devuelto.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -199,7 +199,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -209,25 +208,25 @@ compare(L'b', L'a') = False
 ```  
 
 ## <a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
-La clase genereic describe un delegado de dos argumentos que devuelve `void`. Se usa especificar un delegado en cuanto a su argumento.  
+La clase genereic describe un delegado de dos argumentos que se devuelve **void**. Usarlo especificar un delegado en términos de su argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2>  
     delegate void binary_delegate(Arg1, Arg2);  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg1  
+ *Arg1*  
  El tipo del primer argumento.  
   
- Arg2  
+ *Arg2*  
  El tipo del segundo argumento.  
   
 ### <a name="remarks"></a>Comentarios  
- El delegado genereic describe una función de dos argumentos que devuelve `void`.  
+ El delegado genereic describe una función de dos argumentos que devuelve **void**.  
   
  Tenga en cuenta que para:  
   
@@ -267,7 +266,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -277,11 +275,11 @@ compare(b, a) = False
 ```  
 
 ## <a name="binary_negate"></a> binary_negate (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve la operación lógica no de su almacenado functor de dos argumentos. Se usa especificar un objeto de función en cuanto a su functor almacenado.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve el lógicos no de su almacenado functor de dos argumentos. Usarlo especificar un objeto de función en términos de su functor almacenado.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binary_negate  
     { // wrap operator()  
@@ -304,14 +302,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Fun  
+ *Diversión*  
  El tipo del functor almacenado.  
   
 ## <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -327,7 +325,7 @@ public:
 |operador delegate_type^()|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos que almacena otro functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve la operación lógica no del functor almacenado llama con los dos argumentos.  
+ La clase de plantilla describe un functor de dos argumentos que se almacena en otro functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve la operación lógica no de la functor almacenado se llama con los dos argumentos.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -378,7 +376,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -389,11 +386,11 @@ int main()
 ```  
 
 ## <a name="bind1st"></a> bind1st (STL/CLR)
-Genera un `binder1st` por un functor y un argumento.  
+Genera un `binder1st` para un argumento y functor.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder1st<Fun> bind1st(Fun% functor,  
@@ -401,21 +398,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>Parámetros de plantilla  
- Arg  
+ *arg*  
  Tipo del argumento.  
   
- Fun  
+ *Diversión*  
  El tipo del functor.  
   
 #### <a name="function-parameters"></a>Parámetros de función  
- functor  
- El functor que va a contener.  
+ *functor*  
+ Para ajustar el functor.  
   
- izquierda  
- El primer argumento que va a contener.  
+ *left*  
+ El primer argumento para ajustar.  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve la función de plantilla [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Utiliza como una manera cómoda de encapsular un functor de dos argumentos y su primer argumento en un functor de un argumento que se llama con un segundo argumento.  
+ Devuelve la función de plantilla [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Úselo como una manera cómoda de encapsular un functor de dos argumentos y su primer argumento en un functor de un argumento que lo llame con un segundo argumento.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -457,7 +454,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -467,11 +463,11 @@ int main()
 ```  
 
 ## <a name="bind2nd"></a> bind2nd (STL/CLR)
-Genera un `binder2nd` por un functor y un argumento.  
+Genera un `binder2nd` para un argumento y functor.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder2nd<Fun> bind2nd(Fun% functor,  
@@ -479,21 +475,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>Parámetros de plantilla  
- Arg  
+ *arg*  
  Tipo del argumento.  
   
- Fun  
+ *Diversión*  
  El tipo del functor.  
   
 #### <a name="function-parameters"></a>Parámetros de función  
- functor  
- El functor que va a contener.  
+ *functor*  
+ Para ajustar el functor.  
   
- right  
- El segundo argumento que va a contener.  
+ *right*  
+ El segundo argumento para ajustar.  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve la función de plantilla [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Utiliza como una manera cómoda de encapsular un functor de dos argumentos y el segundo argumento en un functor de un argumento que se llama con un primer argumento.  
+ Devuelve la función de plantilla [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Úselo como una manera cómoda de encapsular un functor de dos argumentos y el segundo argumento en un functor de un argumento que lo llame con un primer argumento.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -535,7 +531,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -545,11 +540,11 @@ int main()
 ```  
 
 ## <a name="binder1st"></a> binder1st (STL/CLR)
-La clase de plantilla describe un functor de un argumento que, cuando se llama, devuelve su almacenado functor de dos argumentos llamada con su primer argumento almacenado y el segundo argumento proporcionado. Se usa especificar un objeto de función en cuanto a su functor almacenado.  
+La clase de plantilla describe un functor de un argumento que, cuando se llama, devuelve su almacenado functor de dos argumentos se denomina con su primer argumento almacenado y el segundo argumento proporcionado. Usarlo especificar un objeto de función en términos de su functor almacenado.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder1st  
     { // wrap operator()  
@@ -571,14 +566,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Fun  
+ *Diversión*  
  El tipo del functor almacenado.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -594,7 +589,7 @@ public:
 |operador delegate_type^()|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de un argumento que almacena un functor de dos argumentos y un primer argumento. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve el resultado de llamar el functor almacenado con el primer argumento almacenado y el segundo argumento proporcionado.  
+ La clase de plantilla describe un functor de un argumento que almacena un functor de dos argumentos y un primer argumento. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve el resultado de llamar el functor almacenado con el primer argumento almacenado y el segundo argumento proporcionado.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -638,7 +633,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -648,11 +642,11 @@ int main()
 ```  
 
 ## <a name="binder2nd"></a> binder2nd (STL/CLR)
-La clase de plantilla describe un functor de un argumento que, cuando se llama, devuelve su almacenado functor de dos argumentos llamada con el primer argumento proporcionado y el segundo argumento almacenado. Se usa especificar un objeto de función en cuanto a su functor almacenado.  
+La clase de plantilla describe un functor de un argumento que, cuando se llama, devuelve su almacenado functor de dos argumentos que se denomina con el primer argumento proporcionado y el segundo argumento almacenado. Usarlo especificar un objeto de función en términos de su functor almacenado.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder2nd  
     { // wrap operator()  
@@ -674,14 +668,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Fun  
+ *Diversión*  
  El tipo del functor almacenado.  
   
 ## <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -697,7 +691,7 @@ public:
 |operador delegate_type^()|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de un argumento que almacena un functor de dos argumentos y un segundo argumento. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve el resultado de llamar el functor almacenado con el primer argumento proporcionado y el segundo argumento almacenado.  
+ La clase de plantilla describe un functor de un argumento que almacena un functor de dos argumentos y un segundo argumento. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve el resultado de llamar el functor almacenado con el primer argumento proporcionado y el segundo argumento almacenado.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -741,7 +735,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -751,11 +744,11 @@ int main()
 ```  
   
 ## <a name="divides"></a> divide (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento que se divide por el segundo. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento dividido por el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class divides  
     { // wrap operator()  
@@ -777,14 +770,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos y el valor devuelto.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -799,7 +792,7 @@ public:
 |operador delegate_type^()|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve el primer argumento que se divide por el segundo.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve el primer argumento dividido por el segundo.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -840,7 +833,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -850,11 +842,11 @@ int main()
 ```  
 
 ## <a name="equal_to"></a> equal_to (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es igual que la segunda. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es igual que el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class equal_to  
     { // wrap operator()  
@@ -876,14 +868,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -898,7 +890,7 @@ public:
 |operador delegate_type^()|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, que devuelve true solo si el primer argumento es igual que la segunda.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve true solo si el primer argumento es igual que el segundo.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -939,7 +931,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -949,11 +940,11 @@ int main()
 ```  
 
 ## <a name="greater"></a> mayor (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es mayor que el segundo. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es mayor que el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater  
     { // wrap operator()  
@@ -975,14 +966,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -997,7 +988,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, que devuelve true solo si el primer argumento es mayor que el segundo.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve true solo si el primer argumento es mayor que el segundo.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -1038,7 +1029,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1048,11 +1038,11 @@ int main()
 ```  
 
 ## <a name="greater_equal"></a> greater_equal (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es mayor o igual que la segunda. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es mayor o igual que el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater_equal  
     { // wrap operator()  
@@ -1074,14 +1064,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -1096,7 +1086,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve true solo si el primer argumento es mayor o igual que la segunda.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve true solo si el primer argumento es mayor o igual que el segundo.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -1137,7 +1127,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1147,11 +1136,11 @@ int main()
 ```  
 
 ## <a name="less"></a> menor (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es menor que el segundo. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es menor que el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less  
     { // wrap operator()  
@@ -1173,14 +1162,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -1195,7 +1184,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, que devuelve true solo si el primer argumento es menor que el segundo.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve true solo si el primer argumento es menor que el segundo.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -1236,7 +1225,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1246,11 +1234,11 @@ int main()
 ``` 
 
 ## <a name="less_equal"></a> less_equal (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es menor o igual que el segundo. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es menor o igual que el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less_equal  
     { // wrap operator()  
@@ -1272,14 +1260,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -1294,7 +1282,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, que devuelve true solo si el primer argumento es menor o igual que el segundo.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve true solo si el primer argumento es menor o igual que el segundo.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -1335,7 +1323,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1345,11 +1332,11 @@ int main()
 ``` 
 
 ## <a name="logical_and"></a> logical_and (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento y la segunda prueba como true. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento y la segunda prueba como true. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_and  
     { // wrap operator()  
@@ -1371,14 +1358,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -1393,7 +1380,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, que devuelve true solo si el primer argumento y la segunda prueba como true.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve true solo si el primer argumento y la segunda prueba como true.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -1434,7 +1421,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1444,11 +1430,11 @@ int main()
 ``` 
 
 ## <a name="logical_not"></a> logical_not (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si su argumento prueba como false. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si su argumento de prueba como false. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_not  
     { // wrap operator()  
@@ -1468,7 +1454,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos.  
   
 ### <a name="member-functions"></a>Funciones miembro  
@@ -1476,7 +1462,7 @@ public:
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
 |argument_type|El tipo del argumento functor.|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |result_type|El tipo del resultado functor.|  
   
 |Miembro|Descripción|  
@@ -1489,7 +1475,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de un argumento. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, que devuelve true solo si su argumento pruebas como false.  
+ La clase de plantilla describe un functor de un argumento. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve true solo si su argumento pruebas como false.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -1523,7 +1509,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1532,11 +1517,11 @@ int main()
 ``` 
 
 ## <a name="logical_or"></a> logical_or (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento o las pruebas de segundo como true. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento o las pruebas de segundo como true. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_or  
     { // wrap operator()  
@@ -1558,14 +1543,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -1580,7 +1565,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, que devuelve true solo si el primer argumento o las pruebas de segundo como true.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve true solo si el primer argumento o las pruebas de segundo como true.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -1621,7 +1606,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1631,11 +1615,11 @@ int main()
 ```      
 
 ## <a name="minus"></a> menos (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento menos la segunda. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento menos la segunda. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class minus  
     { // wrap operator()  
@@ -1657,14 +1641,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos y el valor devuelto.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -1679,7 +1663,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve el primer argumento menos la segunda.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve el primer argumento menos la segunda.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -1720,7 +1704,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1730,11 +1713,11 @@ int main()
 ``` 
 
 ## <a name="modulus"></a> MODULUS (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento de módulo el segundo. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento de módulo el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class modulus  
     { // wrap operator()  
@@ -1756,14 +1739,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos y el valor devuelto.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -1778,7 +1761,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve el primer argumento de módulo el segundo.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve el primer argumento de módulo el segundo.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -1819,7 +1802,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1829,11 +1811,11 @@ int main()
 ```   
 
 ## <a name="multiplies"></a> Multiplica (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento veces el segundo. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento veces el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class multiplies  
     { // wrap operator()  
@@ -1855,14 +1837,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos y el valor devuelto.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -1877,7 +1859,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve el primer argumento veces el segundo.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve el primer argumento veces el segundo.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -1918,7 +1900,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1928,11 +1909,11 @@ int main()
 ```  
 
 ## <a name="negate"></a> Negate (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve su argumento negada. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve su argumento negada. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class negate  
     { // wrap operator()  
@@ -1952,7 +1933,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos.  
   
 ### <a name="member-functions"></a>Funciones miembro  
@@ -1960,7 +1941,7 @@ public:
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
 |argument_type|El tipo del argumento functor.|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |result_type|El tipo del resultado functor.|  
   
 |Miembro|Descripción|  
@@ -1973,7 +1954,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de un argumento. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve su argumento negada.  
+ La clase de plantilla describe un functor de un argumento. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve su argumento negada.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -2007,7 +1988,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2016,11 +1996,11 @@ int main()
 ``` 
 
 ## <a name="not_equal_to"></a> Not_Equal_To (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento no es igual que la segunda. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento no es igual que el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class not_equal_to  
     { // wrap operator()  
@@ -2042,14 +2022,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -2064,7 +2044,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve true solo si el primer argumento no es igual que la segunda.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve true solo si el primer argumento no es igual que el segundo.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -2105,7 +2085,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2119,21 +2098,21 @@ Genera un `unary_negate` para un functor.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>Parámetros de plantilla  
- Fun  
+ *Diversión*  
  El tipo del functor.  
   
 #### <a name="function-parameters"></a>Parámetros de función  
- functor  
- El functor que va a contener.  
+ *functor*  
+ Para ajustar el functor.  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve la función de plantilla [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Utiliza como una manera cómoda de encapsular un functor de un argumento en un functor que ofrece el operador lógico NOT.  
+ Devuelve la función de plantilla [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Úselo como una manera cómoda de encapsular un functor de un argumento en un functor que proporciona su operador lógico NOT.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -2174,7 +2153,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2188,21 +2166,21 @@ Genera un `binary_negate` para un functor.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Fun>  
     binary_negate<Fun> not2(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>Parámetros de plantilla  
- Fun  
+ *Diversión*  
  El tipo del functor.  
   
 #### <a name="function-parameters"></a>Parámetros de función  
- functor  
- El functor que va a contener.  
+ *functor*  
+ Para ajustar el functor.  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve la función de plantilla [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Utiliza como una manera cómoda de encapsular un functor de dos argumentos en un functor que ofrece el operador lógico NOT.  
+ Devuelve la función de plantilla [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Úselo como una manera cómoda de encapsular un functor de dos argumentos en un functor que proporciona su operador lógico NOT.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -2251,7 +2229,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2262,11 +2239,11 @@ int main()
 ```  
 
 ## <a name="plus"></a> Plus (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento y el segundo. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento y el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class plus  
     { // wrap operator()  
@@ -2288,14 +2265,14 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  El tipo de los argumentos y el valor devuelto.  
   
 ### <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |first_argument_type|El tipo del primer argumento functor.|  
 |result_type|El tipo del resultado functor.|  
 |second_argument_type|El tipo del segundo argumento functor.|  
@@ -2310,7 +2287,7 @@ public:
 |operador delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve el primer argumento y el segundo.  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelven el primer argumento y el segundo.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -2351,7 +2328,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2361,21 +2337,21 @@ int main()
 ```  
 
 ## <a name="unary_delegate"></a> unary_delegate (STL/CLR)
-La clase genereic describe un delegado de un argumento. Se usa especificar un delegado en cuanto a sus tipos de argumentos y valores devueltos.  
+La clase genereic describe un delegado de un argumento. Usarlo especificar un delegado en cuanto a sus tipos de argumentos y valores devueltos.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 generic<typename Arg,  
     typename Result>  
     delegate Result unary_delegate(Arg);  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  Tipo del argumento.  
   
- Resultado  
+ *Resultado*  
  Tipo de valor devuelto.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -2416,7 +2392,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2425,21 +2400,21 @@ hash(L'b') = 22
 ```  
 
 ## <a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
-La clase genereic describe un delegado de un argumento devuelve `void`. Se usa especificar un delegado en cuanto a su tipo de argumento.  
+La clase genereic describe un delegado de un argumento que devuelva **void**. Usarlo especificar un delegado en cuanto a su tipo de argumento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 generic<typename Arg>  
     delegate void unary_delegate_noreturn(Arg);  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Arg  
+ *arg*  
  Tipo del argumento.  
   
 ### <a name="remarks"></a>Comentarios  
- El delegado genereic describe una función de un argumento devuelve `void`.  
+ El delegado genereic describe una función de un argumento que devuelva **void**.  
   
  Tenga en cuenta que para:  
   
@@ -2477,7 +2452,6 @@ int main()
     myhash(L'b');   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2486,11 +2460,11 @@ hash(b) = 22
 ```  
 
 ## <a name="unary_negate"></a> unary_negate (STL/CLR)
-La clase de plantilla describe un functor que, cuando se llama, devuelve la operación lógica no de su almacenado functor de un argumento. Se usa especificar un objeto de función en cuanto a su functor almacenado.  
+La clase de plantilla describe un functor que, cuando se llama, devuelve el lógicos no de su almacenado functor de un argumento. Usarlo especificar un objeto de función en términos de su functor almacenado.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class unary_negate  
     { // wrap operator()  
@@ -2511,7 +2485,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Fun  
+ *Diversión*  
  El tipo del functor almacenado.  
   
 ### <a name="member-functions"></a>Funciones miembro  
@@ -2519,7 +2493,7 @@ public:
 |Definición de tipo|Descripción|  
 |---------------------|-----------------|  
 |argument_type|El tipo del argumento functor.|  
-|delegate_type|El tipo de delegado genérico.|  
+|delegate_type|El tipo del delegado genérico.|  
 |result_type|El tipo del resultado functor.|  
   
 |Miembro|Descripción|  
@@ -2532,7 +2506,7 @@ public:
 |delegate_type ^|Convierte el functor a un delegado.|  
   
 ### <a name="remarks"></a>Comentarios  
- La clase de plantilla describe un functor de un argumento que almacena otro functor de un argumento. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve la operación lógica no del functor almacenado llamado con el argumento.  
+ La clase de plantilla describe un functor de un argumento que almacena el functor de un argumento de otra. Define el operador miembro `operator()` que, cuando se llama al objeto como una función, devuelve la operación lógica no de la functor almacenado llamado con el argumento.  
   
  También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
@@ -2575,7 +2549,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
