@@ -1,5 +1,5 @@
 ---
-title: Recorrer un conjunto de filas Simple | Documentos de Microsoft
+title: Recorrer un conjunto de filas Simple | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102956"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336659"
 ---
 # <a name="traversing-a-simple-rowset"></a>Recorrer un conjunto de filas simple
-En el ejemplo siguiente se muestra un acceso rápido y sencillo de base de datos que implican comandos. El siguiente código de consumidor, en un proyecto ATL, recupera los registros de una tabla denominada *intérpretes* un Microsoft Access la base de datos mediante el proveedor Microsoft OLE DB para ODBC. El código crea un [CTable](../../data/oledb/ctable-class.md) objeto de tabla con un descriptor de acceso basado en la clase de registro de usuario `CArtists`. Abre una conexión, se abre una sesión en la conexión y abre la tabla en la sesión.  
+El ejemplo siguiente muestra un acceso rápido y sencillo de base de datos que implican los comandos. El siguiente código de consumidor, en un proyecto ATL, recupera los registros de una tabla denominada *artistas* en una Microsoft Access de base de datos mediante el proveedor Microsoft OLE DB para ODBC. El código crea un [CTable](../../data/oledb/ctable-class.md) objeto de tabla con un descriptor de acceso basado en la clase de registro de usuario `CArtists`. Abre una conexión, se abre una sesión en la conexión y abre la tabla en la sesión.  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -55,7 +55,7 @@ while (artists.MoveNext() == S_OK)
   
  El registro de usuario, `CArtists`, tiene este aspecto:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

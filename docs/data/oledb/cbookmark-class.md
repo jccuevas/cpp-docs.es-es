@@ -78,12 +78,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7545a9a31ff9bd7426002ef97176c59dd308dd49
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 9bd662c827650112d0e9bcf1d59086f4205aea58
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209149"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337623"
 ---
 # <a name="cbookmark-class"></a>CBookmark (Clase)
 Contiene un valor de marcador en su búfer.  
@@ -131,8 +131,8 @@ El constructor.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      CBookmark();   
-
+CBookmark();
+   
 CBookmark(DBLENGTH nSize);  
 ```  
   
@@ -153,7 +153,6 @@ Recupera el puntero al búfer del marcador.
   
 ```cpp
 virtual BYTE* GetBuffer() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -166,7 +165,6 @@ Recupera el tamaño del búfer del marcador.
   
 ```cpp
 virtual DBLENGTH GetSize() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -177,9 +175,8 @@ Copia el valor de marcador al que hace referencia *pBuffer* a la `CBookmark` bú
   
 ### <a name="syntax"></a>Sintaxis  
   
-```
-HRESULT SetBookmark(DBLENGTH nSize,  
-  BYTE* pBuffer) throw();  
+```cpp
+HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -201,7 +198,7 @@ Asigna un `CBookmark` objeto a otro.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      CBookmark& operator =(const CBookmark& bookmark) throw();  
+CBookmark& operator =(const CBookmark& bookmark) throw();  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
