@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 457091d5dc0a76ce0cd495679d7c5f978e483574
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207632"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337727"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset (Clase)
 Recupera y manipula filas que se va a trabajar con datos de forma masiva mediante la recuperación de varios identificadores de fila con una sola llamada.  
@@ -166,7 +166,6 @@ Las llamadas [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.a
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -179,7 +178,6 @@ Crea un nuevo `CBulkRowset` de objetos y el recuento de filas de forma predeterm
   
 ```cpp
 CBulkRowset();  
-  
 ```  
 
 ## <a name="movefirst"></a> CBulkRowset:: MoveFirst
@@ -189,7 +187,6 @@ Recupera la primera fila de datos.
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -202,7 +199,6 @@ Se mueve a la última fila.
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -215,7 +211,6 @@ Recupera la siguiente fila de datos.
   
 ```cpp
 HRESULT MoveNext() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -228,7 +223,6 @@ Se desplaza a la fila anterior.
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -240,7 +234,7 @@ Recopila la fila marcada por fila en un desplazamiento especificado o un marcado
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark,  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
    DBCOUNTITEM lSkip = 0) throw();  
 ```  
   
@@ -259,8 +253,8 @@ Captura las filas a partir de una posición en el conjunto de filas fraccionaria
   
 ### <a name="syntax"></a>Sintaxis  
   
-```
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator,  
+```cpp
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
    DBCOUNTITEM nDenominator)throw();  
 ```  
   
@@ -287,8 +281,7 @@ Las llamadas [IRowset:: ReleaseRows](https://msdn.microsoft.com/library/ms719771
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-HRESULT ReleaseRows() throw();  
-  
+HRESULT ReleaseRows() throw();   
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -300,7 +293,7 @@ Establece el número de identificadores de fila recuperados por cada llamada.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      void SetRows(DBROWCOUNT nRows) throw();  
+void SetRows(DBROWCOUNT nRows) throw();  
 ```  
   
 #### <a name="parameters"></a>Parámetros  

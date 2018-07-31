@@ -1,5 +1,5 @@
 ---
-title: Implementar un consumidor sencillo | Documentos de Microsoft
+title: Implementar un consumidor sencillo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 841d982090503a1e72b1d6798a5f0eecdb543fe2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7be7709baadff35c10cec861b4a0bca94c8cbe5f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112568"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337175"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementar un consumidor sencillo
-Los temas siguientes muestran cómo editar los archivos creados por el Asistente para aplicaciones MFC y el Asistente para consumidores OLE DB ATL para crear un consumidor sencillo. Este ejemplo tiene los siguientes componentes:  
+Los temas siguientes muestran cómo editar los archivos creados por el Asistente para aplicaciones MFC y el Asistente para consumidores OLE DB ATL para crear un consumidor sencillo. En este ejemplo tiene las siguientes partes:  
   
--   "Recuperar datos con el consumidor" muestra cómo implementar el código en el consumidor que lee todos los datos, fila por fila, de una tabla de base de datos.  
+-   "Recuperación de datos con el consumidor", muestra cómo implementar el código en el consumidor que lee todos los datos, fila por fila de una tabla de base de datos.  
   
 -   "Agregar compatibilidad con marcadores al consumidor", muestra cómo agregar compatibilidad con marcadores al consumidor.  
   
--   "Agregar compatibilidad con XML al consumidor", muestra cómo modificar el código de consumidor para generar los datos del conjunto de filas obtenido como datos XML.  
+-   "Agregar compatibilidad con XML para el consumidor", muestra cómo modificar el código de consumidor para generar los datos del conjunto de filas obtenido como datos XML.  
   
 > [!NOTE]
->  Puede usar la aplicación de consumidor que se describe en esta sección para probar los proveedores de ejemplo MyProv y Provider.  
+>  Puede usar la aplicación de consumidor que se describe en esta sección para probar los proveedores de ejemplo MyProv y proveedor.  
   
 > [!NOTE]
 >  Para crear una aplicación de consumidor para probar MyProv (el mismo proveedor que se describe en [mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)), debe incluir compatibilidad con marcadores como se describe en "Agregar compatibilidad con marcadores al consumidor".  
   
 > [!NOTE]
->  Para compilar una aplicación de consumidor para probar el proveedor, deje la compatibilidad con marcadores que se describe en "Agregar marcador admite al consumidor" y vaya a "Agregar compatibilidad con XML al consumidor".  
+>  Para crear una aplicación de consumidor para probar el proveedor, deje la compatibilidad con marcadores que se describe en "Agregar marcador admiten al consumidor" y vaya a "Agregar compatibilidad con XML para el consumidor".  
   
-## <a name="retrieving-data-with-the-consumer"></a>Recuperar datos con el consumidor  
+## <a name="retrieving-data-with-the-consumer"></a>Recuperación de datos con el consumidor  
   
-#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Para modificar la aplicación de consola para utilizar el consumidor de OLE DB  
+#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Para modificar la aplicación de consola para usar el consumidor de OLE DB  
   
-1.  En MyCons.cpp, cambie el código principal insertando el texto en negrita, como se indica a continuación:  
+1.  En MyCons.cpp, cambie el código principal mediante la inserción del texto en negrita como sigue:  
   
-    ```  
+    ```cpp  
     // MyCons.cpp : Defines the entry point for the console application.  
     //  
     #include "stdafx.h"  
@@ -55,39 +55,50 @@ Los temas siguientes muestran cómo editar los archivos creados por el Asistente
     ...  
     int main(int argc, char* argv[])  
     {  
- HRESULT hr = CoInitialize(NULL);   // Instantiate rowset   CProducts rs;   hr = rs.OpenAll();   ATLASSERT(SUCCEEDED(hr ) );   hr = rs.MoveFirst();   // Iterate through the rowset   while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )   {      // Print out the column information for each row      printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",             rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );      hr = rs.MoveNext();   }   rs.Close();   rs.ReleaseCommand();   CoUninitialize();  
+       HRESULT hr = CoInitialize(NULL);   // Instantiate rowset   
+       CProducts rs;   
+       hr = rs.OpenAll();   
+       ATLASSERT(SUCCEEDED(hr ) );   
+       hr = rs.MoveFirst();   // Iterate through the rowset   
+       while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )   {      // Print out the column information for each row      
+         printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",             
+           rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );      
+         hr = rs.MoveNext();   }   
+       rs.Close();   
+       rs.ReleaseCommand();   
+       CoUninitialize();  
   
        return 0;  
     }  
     ```  
   
 ## <a name="adding-bookmark-support-to-the-consumer"></a>Agregar compatibilidad con marcadores al consumidor  
- Un marcador es una columna que identifica de forma única las filas de la tabla. Normalmente es la columna de clave, pero no siempre; es específica del proveedor. En esta sección se muestra cómo agregar compatibilidad con marcadores. Para ello, debe hacer lo siguiente en la clase de registro de usuario:  
+ Un marcador es una columna que identifica de forma única las filas de la tabla. Normalmente es la columna de clave, pero no siempre; es específico del proveedor. En esta sección se muestra cómo agregar compatibilidad con marcadores. Para ello, deberá hacer lo siguiente en la clase de registro de usuario:  
   
--   Crear instancias de los marcadores. Se trata de objetos de tipo [CBookmark](../../data/oledb/cbookmark-class.md).  
+-   Crear instancias de los marcadores. Estos son los objetos de tipo [CBookmark](../../data/oledb/cbookmark-class.md).  
   
--   Solicitar una columna de marcador del proveedor estableciendo la **DBPROP_IRowsetLocate** propiedad.  
+-   Solicitar una columna de marcador del proveedor estableciendo el `DBPROP_IRowsetLocate` propiedad.  
   
--   Agregar una entrada de marcador al mapa de columnas mediante la [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) macro.  
+-   Agregar una entrada de marcador al mapa de columnas mediante el [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) macro.  
   
- Los pasos anteriores le ofrecen compatibilidad con marcadores y un objeto de marcador con el que se va a trabajar. Este ejemplo de código muestra un marcador como sigue:  
+ Los pasos anteriores proporcionan compatibilidad con marcadores y un objeto de marcador con el que se va a trabajar. Este ejemplo de código muestra un marcador como sigue:  
   
 -   Abra un archivo para escribir en él.  
   
--   Datos del conjunto de filas de salida en el archivo fila por fila.  
+-   Conjunto de filas datos en el archivo de salida fila por fila.  
   
 -   Mover el cursor de conjunto de filas al marcador mediante una llamada a [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).  
   
 -   La fila marcada, ésta se agrega al final del archivo de salida.  
   
 > [!NOTE]
->  Si utiliza esta aplicación de consumidor para probar la aplicación de proveedor de ejemplo de proveedor, deje la compatibilidad con marcadores que se describe en esta sección.  
+>  Si usa esta aplicación de consumidor para probar la aplicación de proveedor de ejemplo de proveedor, deje la compatibilidad con marcadores que se describe en esta sección.  
   
 #### <a name="to-instantiate-the-bookmark"></a>Para crear una instancia del marcador  
   
-1.  El descriptor de acceso debe contener un objeto de tipo [CBookmark](../../data/oledb/cbookmark-class.md). El `nSize` parámetro especifica el tamaño del búfer del marcador en bytes (normalmente 4 para plataformas de 32 bits y 8) para plataformas de 64 bits. Agregue la siguiente declaración a los miembros de datos de columna en la clase de registro de usuario:  
+1.  El descriptor de acceso debe contener un objeto de tipo [CBookmark](../../data/oledb/cbookmark-class.md). El *nSize* parámetro especifica el tamaño del búfer del marcador en bytes (normalmente 4 para las plataformas de 32 bits y 8) para plataformas de 64 bits. Agregue la declaración siguiente a los miembros de datos de columna en la clase de registro de usuario:  
   
-    ```  
+    ```cpp  
     //////////////////////////////////////////////////////////////////////  
     // Products.h  
     class CProductsAccessor  
@@ -102,7 +113,7 @@ Los temas siguientes muestran cómo editar los archivos creados por el Asistente
   
 1.  Agregue el código siguiente en el `GetRowsetProperties` método en la clase de registro de usuario:  
   
-    ```  
+    ```cpp  
     // Set the DBPROP_IRowsetLocate property.  
     void GetRowsetProperties(CDBPropSet* pPropSet)  
     {  
@@ -116,7 +127,7 @@ Los temas siguientes muestran cómo editar los archivos creados por el Asistente
   
 1.  Agregue la siguiente entrada al mapa de columnas en la clase de registro de usuario:  
   
-    ```  
+    ```cpp  
     // Set a bookmark entry in the column map.  
     BEGIN_COLUMN_MAP(CProductsAccessor)  
        BOOKMARK_ENTRY(m_bookmark)   // Add bookmark entry  
@@ -128,9 +139,9 @@ Los temas siguientes muestran cómo editar los archivos creados por el Asistente
   
 #### <a name="to-use-a-bookmark-in-your-main-code"></a>Para utilizar un marcador en el código principal  
   
-1.  En el archivo MyCons.cpp de la aplicación de consola que creó anteriormente, cambie el código principal para que quede como sigue. Para utilizar marcadores, el código principal necesita crear instancias de su propio objeto de marcador (`myBookmark`); se trata de un marcador diferente de la especificada en el descriptor de acceso (`m_bookmark`).  
+1.  En el archivo MyCons.cpp desde la aplicación de consola que creó anteriormente, cambie el código principal para que quede como sigue. Para utilizar marcadores, el código principal debe crear una instancia de su propio objeto de marcador (`myBookmark`); se trata de un marcador diferente de la especificada en el descriptor de acceso (`m_bookmark`).  
   
-    ```  
+    ```cpp  
     ///////////////////////////////////////////////////////////////////////  
     // MyCons.cpp : Defines the entry point for the console application.  
     //  
@@ -143,7 +154,7 @@ Los temas siguientes muestran cómo editar los archivos creados por el Asistente
   
     int _tmain(int argc, _TCHAR* argv[])  
     {  
- HRESULT hr = CoInitialize(NULL);  
+       HRESULT hr = CoInitialize(NULL);  
   
        // Instantiate rowset  
        CProducts rs;  
@@ -197,24 +208,24 @@ Los temas siguientes muestran cómo editar los archivos creados por el Asistente
     }  
     ```  
   
- Para obtener más información acerca de los marcadores, vea [Using Bookmarks](../../data/oledb/using-bookmarks.md). También se muestran varios ejemplos de marcadores en [actualizar conjuntos de filas](../../data/oledb/updating-rowsets.md).  
+ Para obtener más información acerca de los marcadores, vea [utilizar marcadores](../../data/oledb/using-bookmarks.md). También se muestran ejemplos de marcadores en [actualizar conjuntos de filas](../../data/oledb/updating-rowsets.md).  
   
 ## <a name="adding-xml-support-to-the-consumer"></a>Agregar compatibilidad con XML al consumidor  
- Como se describe en [obtiene acceso a datos XML](../../data/oledb/accessing-xml-data.md), hay dos maneras de recuperar datos XML desde un origen de datos: mediante [CStreamRowset](../../data/oledb/cstreamrowset-class.md) o con [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Este ejemplo se utiliza `CStreamRowset`, que es más eficaz, pero requiere tener SQL Server 2000 en ejecución en el equipo en el que se ejecuta esta aplicación de ejemplo.  
+ Como se describe en [acceso a los datos XML](../../data/oledb/accessing-xml-data.md), hay dos maneras de recuperar datos XML desde un origen de datos: usar [CStreamRowset](../../data/oledb/cstreamrowset-class.md) o mediante [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Este ejemplo se utiliza `CStreamRowset`, que es más eficaz, pero requiere que tenga que se ejecutan en el equipo donde se ejecute esta aplicación de ejemplo de SQL Server 2000.  
   
 #### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Para modificar la clase de comando que herede de CStreamRowset  
   
-1.  En la aplicación de consumidor que creó anteriormente, cambie la `CCommand` declaración para especificar `CStreamRowset` como el conjunto de filas de la clase como sigue:  
+1.  En la aplicación de consumidor que creó anteriormente, cambie su `CCommand` declaración para especificar `CStreamRowset` como el conjunto de filas de la clase como sigue:  
   
-    ```  
+    ```cpp  
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Para modificar el código para recuperar y los datos XML de salida principal  
+#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Para modificar el código principal para recuperar y consultar los datos XML  
   
-1.  En el archivo MyCons.cpp de la aplicación de consola que creó anteriormente, cambie el código principal para que quede como sigue:  
+1.  En el archivo MyCons.cpp desde la aplicación de consola que creó anteriormente, cambie el código principal para que quede como sigue:  
   
-    ```  
+    ```cpp  
     ///////////////////////////////////////////////////////////////////////  
     // MyCons.cpp : Defines the entry point for the console application.  
     //  
@@ -227,7 +238,7 @@ Los temas siguientes muestran cómo editar los archivos creados por el Asistente
   
     int _tmain(int argc, _TCHAR* argv[])  
     {  
- HRESULT hr = CoInitialize(NULL);  
+       HRESULT hr = CoInitialize(NULL);  
   
        // Instantiate rowset  
        CProducts rs;  
@@ -249,7 +260,7 @@ Los temas siguientes muestran cómo editar los archivos creados por el Asistente
        for (;;)  
        {  
           // Read sequential stream data into buffer  
-    HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
+          HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
           if (FAILED (hr))  
              break;  
           // Output buffer to file  

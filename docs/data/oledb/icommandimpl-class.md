@@ -63,12 +63,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18174281baf76b383b56b10e86e2659279037b6c
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269604"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337799"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl (Clase)
 Proporciona la implementación de la [ICommand](https://msdn.microsoft.com/library/ms709737.aspx) interfaz.  
@@ -121,7 +121,6 @@ Cancela la ejecución del comando actual.
   
 ```cpp
 STDMETHOD(Cancel)();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -134,7 +133,6 @@ Cancela la ejecución del comando actual.
   
 ```cpp
 HRESULT CancelExecution();  
-  
 ```  
 
 ## <a name="createrowset"></a> ICommandImpl:: CreateRowset
@@ -143,8 +141,7 @@ Lo llama [Execute](../../data/oledb/icommandimpl-execute.md) para crear un conju
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      template template <class RowsetClass  
-      >  
+template template <class RowsetClass>  
 HRESULT CreateRowset(IUnknown* pUnkOuter,  
    REFIID riid,  
    DBPARAMS* pParams,  
@@ -210,7 +207,7 @@ Devuelve un puntero de interfaz a la sesión que creó el comando.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD (GetDBSession) (REFIID riid,  
+STDMETHOD (GetDBSession) (REFIID riid,  
    IUnknown** ppSession);  
 ```  
   
@@ -227,7 +224,6 @@ El constructor.
   
 ```cpp
 ICommandImpl();  
-  
 ```  
 
 ## <a name="bcancel"></a> ICommandImpl:: M_bcancel
@@ -237,7 +233,6 @@ Indica si se ha cancelado el comando.
   
 ```cpp
 unsigned m_bCancel:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -250,7 +245,6 @@ Indica si se puede cancelar el comando cuando se ejecuta.
   
 ```cpp
 unsigned m_bCancelWhenExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -263,7 +257,6 @@ Indica si el comando se está ejecutando actualmente.
   
 ```cpp
 unsigned m_bIsExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  

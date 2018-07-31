@@ -1,5 +1,5 @@
 ---
-title: Miembros de datos de estado en los descriptores de acceso generados por el Asistente de campo | Documentos de Microsoft
+title: Campo de estado de los miembros de datos en los descriptores de acceso generados por el Asistente | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3f1017c3decacfee223f0e0f89267b192208fe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 829dbcc78e7d415de1745a8bd0cceb1f8c475ce0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104404"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336445"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Miembros de datos sobre el estado de un campo en los descriptores de acceso generados por el asistente
-Cuando usa el Asistente para consumidores OLE DB ATL para crear un consumidor, el asistente genera a un miembro de datos en la clase de registro de usuario para cada campo que especifique en el mapa de columnas. Cada miembro de datos es de tipo `DWORD` y contiene un valor de estado correspondiente a su campo respectivo.  
+Cuando usa el Asistente para consumidores OLE DB ATL para crear un consumidor, el asistente genera a un miembro de datos en la clase de registro de usuario para cada campo que especifique en el mapa de columnas. Cada miembro de datos es de tipo `DWORD` y contiene un valor de estado correspondiente a su campo correspondiente.  
   
- Por ejemplo, para un miembro de datos *m_OwnerID*, el asistente genera un miembro de datos adicionales para el estado de campo (*dwOwnerIDStatus*) y otra para la longitud de campo (*dwOwnerIDLength*). También genera un mapa de columnas con `COLUMN_ENTRY_LENGTH_STATUS` entradas.  
+ Por ejemplo, para un miembro de datos *m_OwnerID*, el asistente genera un miembro de datos adicionales para el estado de campo (*dwOwnerIDStatus*) y otro para la longitud de campo (*dwOwnerIDLength*). También genera un mapa de columnas con entradas COLUMN_ENTRY_LENGTH_STATUS.  
   
  Esto se muestra en el código siguiente:  
   
-```  
+```cpp  
 [db_source("insert connection string")]  
 [db_command(" \  
    SELECT \  
@@ -81,22 +81,22 @@ END_COLUMN_MAP()
 > [!NOTE]
 >  Si modifica la clase de registro de usuario o escribe su propio consumidor, las variables de datos deben preceder a las variables de estado y longitud.  
   
- Puede usar los valores de estado para fines de depuración. Si el código generado por el Asistente para consumidores OLE DB ATL genera errores de compilación como **DB_S_ERRORSOCCURRED** o **DB_E_ERRORSOCCURRED**, primero debe mirar los valores actuales del estado de campo miembros de datos. Las que tienen valores distintos de cero corresponden a las columnas incorrecta.  
+ Puede usar los valores de estado con fines de depuración. Si el código generado por el Asistente para consumidores OLE DB ATL genera errores de compilación como DB_S_ERRORSOCCURRED o DB_E_ERRORSOCCURRED, debe mirar los valores actuales de los miembros de datos de estado de campo. Aquellos usuarios que tienen valores distintos de cero corresponden a las columnas incorrectos.  
   
- También puede utilizar los valores de estado para establecer un valor NULL para un campo determinado. Esto ayudará en los casos en los que desee distinguir un valor de campo como NULL en lugar de cero. Depende de usted para decidir si NULL es un valor válido o un valor especial y decidir cómo debe controlar la aplicación. OLE DB define **DBSTATUS_S_ISNULL** como la forma correcta de especificar un valor NULL genérico. Si el consumidor lee datos y el valor es null, el campo de estado se establece en **DBSTATUS_S_ISNULL**. Si el consumidor desea establecer un valor NULL, el consumidor establece el valor de estado en **DBSTATUS_S_ISNULL** antes de llamar al proveedor.  
+ También puede usar los valores de estado para establecer un valor NULL para un campo determinado. Esto ayuda a en los casos en los que desee distinguir un valor de campo como NULL en lugar de cero. Depende de usted decidir si NULL es un valor válido o un valor especial y decidir cómo debe controlar su aplicación. OLE DB define DBSTATUS_S_ISNULL como la forma correcta de especificar un valor NULL genérico. Si el consumidor lee los datos y el valor es null, el campo de estado se establece en DBSTATUS_S_ISNULL. Si el consumidor desea establecer un valor NULL, el consumidor establece el valor de estado en DBSTATUS_S_ISNULL antes de llamar al proveedor.  
   
- A continuación, abra Oledb.h y busque **DBSTATUSENUM**. A continuación, puede hacer coincidir el valor numérico del estado distinto de cero con el **DBSTATUSENUM** valores de enumeración. Si el nombre de la enumeración no es suficiente para saber cuál es el problema, vea el tema "Status" en la sección "Enlace de los valores de datos" de la [Guía del programador de OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548). Este tema contiene las tablas de valores de estado utilizados al obtener o establecer los datos. Para obtener información acerca de los valores de longitud, vea el tema "Longitud" en la misma sección.  
+ A continuación, abra Oledb.h y busque `DBSTATUSENUM`. A continuación, puede hacer coincidir el valor numérico del estado distinto de cero con el `DBSTATUSENUM` valores de enumeración. Si el nombre de la enumeración no es suficiente para saber cuál es el problema, consulte el tema "Status" en la sección "Valores de datos de enlace" de la [Guía del programador de OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548). Este tema contiene las tablas de valores de estado que se utiliza al obtener o establecer los datos. Para obtener información acerca de los valores de longitud, vea el tema "Length" en la misma sección.  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Recuperar la longitud o el estado de una columna  
- Se puede recuperar la longitud de una columna de longitud variable o el estado de una columna (para comprobar si **DBSTATUS_S_ISNULL**, por ejemplo):  
+ Puede recuperar la longitud de una columna de longitud variable o el estado de una columna (para buscar DBSTATUS_S_ISNULL, por ejemplo):  
   
--   Para obtener la longitud, use la `COLUMN_ENTRY_LENGTH` macro.  
+-   Para obtener la longitud, use la macro COLUMN_ENTRY_LENGTH.  
   
--   Para obtener el estado, use la `COLUMN_ENTRY_STATUS` macro.  
+-   Para obtener el estado, use la macro COLUMN_ENTRY_STATUS.  
   
--   Para obtener ambos, use `COLUMN_ENTRY_LENGTH_STATUS`, tal y como se muestra a continuación.  
+-   Para obtener ambos, use COLUMN_ENTRY_LENGTH_STATUS, como se muestra a continuación.  
   
-```  
+```cpp  
 class CProducts  
 {  
 public:  
@@ -123,7 +123,7 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
- Cuando usas `CDynamicAccessor`, la longitud y el estado se enlazan automáticamente. Para recuperar los valores de longitud y el estado, use la `GetLength` y **GetStatus** funciones miembro.  
+ Cuando usas `CDynamicAccessor`, la longitud y el estado se enlazan automáticamente. Para recuperar los valores de longitud y el estado, use la `GetLength` y `GetStatus` funciones miembro.  
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
