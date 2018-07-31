@@ -1,5 +1,5 @@
 ---
-title: utilidad (STL/CLR) | Documentos de Microsoft
+title: la utilidad (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -49,19 +49,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fcc97e5037898b3a9c39a6c72ed21b2c19a4c777
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: e1150fb6d3df325fd9d5d9b4180318fa029102c3
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306026"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375921"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 Incluya el encabezado STL/CLR `<cliext/utility>` para definir la clase de plantilla `pair` y varias funciones auxiliares de plantilla.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 #include <utility>  
 ```
 
@@ -74,15 +74,15 @@ Incluya el encabezado STL/CLR `<cliext/utility>` para definir la clase de planti
   
 |Clase|Descripción|  
 |-----------|-----------------|  
-|[pair (STL/CLR)](#pair)|Ajustar un par de elementos.|  
+|[pair (STL/CLR)](#pair)|Encapsular un par de elementos.|  
   
 |Operador|Descripción|  
 |--------------|-----------------|  
-|[operator== (pair) (STL/CLR)](#op_eq)|Comparación igual de par.|  
-|[operator!= (pair) (STL/CLR)](#op_neq)|Pares de comparación no es igual.|  
+|[operator== (pair) (STL/CLR)](#op_eq)|Comparación de igualdad del par.|  
+|[operator!= (pair) (STL/CLR)](#op_neq)|Par de comparación de desigualdad.|  
 |[operator< (pair) (STL/CLR)](#op_lt)|Par de comparación menor.|  
-|[operador\<= (par) (STL/CLR)](#op_lteq)|Empareje menor o igual comparación.|  
-|[operator> (pair) (STL/CLR)](#op_gt)|Par mayor que la comparación.|  
+|[operador\<= (par) (STL/CLR)](#op_lteq)|Menor o igual emparejar comparación.|  
+|[operator> (pair) (STL/CLR)](#op_gt)|Comparación mayor que el par.|  
 |[operator>= (pair) (STL/CLR)](#op_gteq)|Comparación igual o mayor del par.|  
   
 |Función|Descripción|  
@@ -92,22 +92,22 @@ Incluya el encabezado STL/CLR `<cliext/utility>` para definir la clase de planti
 ## <a name="members"></a>Miembros
 
 ##<a name="pair"></a> par (STL/CLR)
-La clase de plantilla describe un objeto que contiene un par de valores.  
+La clase de plantilla describe un objeto que encapsula un par de valores.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     ref class pair;  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Valor1  
+ *Valor1*  
  El tipo de valor incluido en primer lugar.  
   
- Value2  
- El tipo del segundo valor ajustada.  
+ *Value2*  
+ El tipo del segundo valor ajustado.  
   
 ## <a name="members"></a>Miembros  
   
@@ -116,7 +116,7 @@ template<typename Value1,
 |[pair::first_type (STL/CLR)](#first_type)|El tipo del primer valor ajustado.|  
 |[pair::second_type (STL/CLR)](#second_type)|El tipo del segundo valor ajustado.|  
   
-|Objeto de miembro|Descripción|  
+|Objeto miembro|Descripción|  
 |-------------------|-----------------|  
 |[pair::first (STL/CLR)](#first)|El primer valor almacenado.|  
 |[pair::second (STL/CLR)](#second)|El segundo valor almacenado.|  
@@ -131,7 +131,7 @@ template<typename Value1,
 |[pair::operator= (STL/CLR)](#op_as)|Reemplaza el par de valores almacenado.|  
   
 ## <a name="remarks"></a>Comentarios  
- El objeto almacena un par de valores. Utilice esta clase de plantilla para combinar los dos valores en un único objeto. Además, el objeto `cliext::pair` (que se describe aquí) almacena solo los tipos administrados; para almacenar un par de no administrado que utilice tipos `std::pair`, declarado en `<utility>`.  
+ El objeto almacena un par de valores. Utilice esta clase de plantilla para combinar dos valores en un único objeto. Además, el objeto `cliext::pair` (descritas aquí) almacena solo los tipos administrados; para almacenar un par de no administrado usan tipos `std::pair`, declarado en `<utility>`.  
 
 
 ## <a name="first"></a> Pair::First (STL/CLR)
@@ -139,7 +139,7 @@ El primer valor ajustado.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 Value1 first;  
 ```  
   
@@ -163,7 +163,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -175,12 +174,12 @@ El tipo del primer valor ajustado.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef Value1 first_type;  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo del parámetro de plantilla `Value1`.  
+ El tipo es un sinónimo del parámetro de plantilla *Value1*.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -198,8 +197,7 @@ int main()
     cliext::pair<wchar_t, int>::second_type second_val = c1.second;   
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -211,16 +209,16 @@ Reemplaza el par de valores almacenado.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- right  
- Par va a copiar.  
+ *right*  
+ Par para copiar.  
   
 ### <a name="remarks"></a>Comentarios  
- Las copias de operador de miembro `right` en el objeto, a continuación, devuelve `*this`. Úselo para reemplazar el par de valores almacenado por una copia del par de valores almacenado `right`.  
+ Las copias de operador miembro *derecho* al objeto, a continuación, devuelve `*this`. Se usa para reemplazar el par de valores almacenado por una copia del par de valores almacenado *derecho*.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -239,8 +237,7 @@ int main()
     c2 = c1;   
     System::Console::WriteLine("[{0}, {1}]", c2.first, c2.second);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -253,7 +250,7 @@ Construye un objeto de par.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 pair();  
 pair(pair<Coll>% right);  
 pair(pair<Coll>^ right);  
@@ -261,21 +258,21 @@ pair(Value1 val1, Value2 val2);
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- right  
+ *right*  
  Par para almacenar.  
   
- val1  
- Primer valor que se va a almacenar.  
+ *val1*  
+ Primer valor que se almacenará.  
   
- val2  
- Segundo valor que se va a almacenar.  
+ *Val2*  
+ Segundo valor que se almacenará.  
   
 ### <a name="remarks"></a>Comentarios  
  El constructor:  
   
  `pair();`  
   
- Inicializa el par almacenado con los valores de construido de forma predeterminada.  
+ Inicializa el par almacenado con valores construido de forma predeterminada.  
   
  El constructor:  
   
@@ -291,7 +288,7 @@ pair(Value1 val1, Value2 val2);
   
  `pair(Value1 val1, Value2 val2);`  
   
- Inicializa el par almacenado con `val1` y `val2`.  
+ Inicializa el par almacenado con *val1* y *val2*.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -320,8 +317,7 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", c4.first, c4.second);   
   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -336,12 +332,12 @@ El segundo valor incluido.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 Value2 second;  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El objeto almacena el segundo valor encapsulado.  
+ El objeto almacena el segundo valor ajustado.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -360,7 +356,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -372,12 +367,12 @@ El tipo del segundo valor ajustado.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef Value2 second_type;  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El tipo es un sinónimo del parámetro de plantilla `Value2`.  
+ El tipo es un sinónimo del parámetro de plantilla *Value2*.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -395,8 +390,7 @@ int main()
     cliext::pair<wchar_t, int>::second_type second_val = c1.second;   
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -408,16 +402,16 @@ Intercambia el contenido de dos pares.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 void swap(pair<Value1, Value2>% right);  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- right  
+ *right*  
  Par para intercambiar el contenido.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro intercambia el par de valores entre almacenado `*this` y `right`.  
+ La función miembro intercambia el par de valores entre almacenado `*this` y *derecho*.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -459,8 +453,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -471,28 +464,28 @@ a b c
 ```  
 
 ## <a name="make_pair"></a> make_pair (STL/CLR)
-Realizar una `pair` en un par de valores.  
+Realizar un `pair` en un par de valores.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     pair<Value1, Value2> make_pair(Value1 first, Value2 second);  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `Value1`  
+ *Valor1*  
  El tipo del primer valor ajustado.  
   
- `Value2`  
+ *Value2*  
  El tipo del segundo valor ajustado.  
   
- `first`  
- Primer valor que se va a ajustar.  
+ *first*  
+ Primer valor de ajuste de línea.  
   
- `second`  
- Segundo valor que va a contener.  
+ *segundo*  
+ Segundo valor para ajustar.  
   
 ### <a name="remarks"></a>Comentarios  
  La función de plantilla devuelve `pair<Value1, Value2>(first, second)`. Utilícelo para construir un `pair<Value1, Value2>` objeto a partir de un par de valores.  
@@ -513,7 +506,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", c1.first, c1.second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -522,11 +514,11 @@ int main()
 ```  
 
 ## <a name="op_neq"></a> operador! = (par) (STL/CLR)
-Pares de comparación no es igual.  
+Par de comparación de desigualdad.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator!=(pair<Value1, Value2>% left,  
@@ -534,14 +526,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- izquierda  
+ *left*  
  Par izquierdo para comparar.  
   
- right  
- Par derecho a comparar.  
+ *right*  
+ Par derecho para comparar.  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve la función de operador `!(left == right)`. Se usa para comprobar si `left` no está ordenado el mismo que `right` cuando los dos pares no son comparado elemento por elemento.  
+ Devuelve la función de operador `!(left == right)`. Usa para probar si *izquierdo* no está ordenado el mismo que *derecho* cuando los dos pares no son comparado elemento por elemento.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -562,8 +554,7 @@ int main()
     System::Console::WriteLine("[x 3] != [x 4] is {0}",   
         c1 != c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -578,7 +569,7 @@ Par de comparación menor.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator<(pair<Value1, Value2>% left,  
@@ -586,14 +577,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- izquierda  
+ *left*  
  Par izquierdo para comparar.  
   
- right  
- Par derecho a comparar.  
+ *right*  
+ Par derecho para comparar.  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve la función de operador `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`. Se usa para comprobar si `left` se ordena la antes `right` cuando los dos pares no son comparado elemento por elemento.  
+ Devuelve la función de operador `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`. Usarlo para probar si *izquierdo* se ordena la antes *derecho* cuando los dos pares no son comparado elemento por elemento.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -614,8 +605,7 @@ int main()
     System::Console::WriteLine("[x 3] < [x 4] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -626,11 +616,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> operador&lt;= (par) (STL/CLR)
-Empareje menor o igual comparación.  
+Menor o igual emparejar comparación.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator<=(pair<Value1, Value2>% left,  
@@ -638,14 +628,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- izquierda  
+ *left*  
  Par izquierdo para comparar.  
   
- right  
- Par derecho a comparar.  
+ *right*  
+ Par derecho para comparar.  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve la función de operador `!(right < left)`. Se usa para comprobar si `left` no está ordenado después `right` cuando los dos pares no son comparado elemento por elemento.  
+ Devuelve la función de operador `!(right < left)`. Se usa para probar si *izquierdo* no está ordenado después *derecho* cuando los dos pares no son comparado elemento por elemento.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -666,8 +656,7 @@ int main()
     System::Console::WriteLine("[x 4] <= [x 3] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -678,11 +667,11 @@ int main()
 ```  
   
 ## <a name="op_eq"></a> operador == (par) (STL/CLR)
-Comparación igual de par.  
+Comparación de igualdad del par.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator==(pair<Value1, Value2>% left,  
@@ -690,14 +679,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- izquierda  
+ *left*  
  Par izquierdo para comparar.  
   
- right  
- Par derecho a comparar.  
+ *right*  
+ Par derecho para comparar.  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve la función de operador `left.first ==` `right.first &&` `left.second ==` `right.second`. Se usa para comprobar si `left` se ordenan igual `right` cuando los dos pares no son comparado elemento por elemento.  
+ Devuelve la función de operador `left.first ==` `right.first &&` `left.second ==` `right.second`. Se usa para probar si *izquierdo* se ordenan igual *derecho* cuando los dos pares no son comparado elemento por elemento.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -718,8 +707,7 @@ int main()
     System::Console::WriteLine("[x 3] == [x 4] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -730,11 +718,11 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> operador&gt; (par) (STL/CLR)
-Par mayor que la comparación.  
+Comparación mayor que el par.  
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator>(pair<Value1, Value2>% left,  
@@ -742,14 +730,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- izquierda  
+ *left*  
  Par izquierdo para comparar.  
   
- right  
- Par derecho a comparar.  
+ *right*  
+ Par derecho para comparar.  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve la función de operador `right` `<` `left`. Se usa para comprobar si `left` se ordena después `right` cuando los dos pares no son comparado elemento por elemento.  
+ Devuelve la función de operador `right` `<` `left`. Se usa para probar si *izquierdo* se ordena después *derecho* cuando los dos pares no son comparado elemento por elemento.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -770,8 +758,7 @@ int main()
     System::Console::WriteLine("[x 4] > [x 3] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -786,7 +773,7 @@ Comparación igual o mayor del par.
   
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator>=(pair<Value1, Value2>% left,  
@@ -794,14 +781,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- izquierda  
+ *left*  
  Par izquierdo para comparar.  
   
- right  
- Par derecho a comparar.  
+ *right*  
+ Par derecho para comparar.  
   
 ### <a name="remarks"></a>Comentarios  
- Devuelve la función de operador `!(left < right)`. Se usa para comprobar si `left` no está ordenado antes `right` cuando los dos pares no son comparado elemento por elemento.  
+ Devuelve la función de operador `!(left < right)`. Usa para probar si *izquierdo* no está ordenado antes *derecho* cuando los dos pares no son comparado elemento por elemento.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -822,8 +809,7 @@ int main()
     System::Console::WriteLine("[x 3] >= [x 4] is {0}",   
         c1 >= c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -831,4 +817,4 @@ int main()
 [x, 4]  
 [x 3] >= [x 3] is True  
 [x 3] >= [x 4] is False  
-```  
+``` 
