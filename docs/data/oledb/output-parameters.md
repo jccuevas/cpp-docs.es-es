@@ -1,5 +1,5 @@
 ---
-title: Parámetros de salida | Documentos de Microsoft
+title: Parámetros de salida | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8733b967ddab7e6f68fcbee1c80e78500a679f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae742f27f7e2fd13de9acfc3c814b36c85e9e106
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104391"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339031"
 ---
 # <a name="output-parameters"></a>Parámetros de salida
-Llamar a un procedimiento almacenado es similar a invocar un comando SQL. La principal diferencia es que los procedimientos almacenados usan parámetros de salida (o "parámetros de salida") y valores devuelven.  
+Llamar a un procedimiento almacenado es similar a invocar un comando SQL. La principal diferencia es que los procedimientos almacenados, utilizan parámetros de salida (o "parámetros de salida") y valores devuelven.  
   
- En el siguiente procedimiento almacenado, la primera '? 'es el valor devuelto (phone) y la segunda'?' es el parámetro de entrada (name):  
+ En el siguiente procedimiento almacenado, la primera '? 'es el valor devuelto (phone) y el segundo'?' es el parámetro de entrada (nombre):  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
   
- Especifique los parámetros in y out en la asignación de parámetros:  
+ Especifique los parámetros dentro y fuera de la asignación de parámetros:  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -46,14 +46,14 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- La aplicación debe administrar los resultados devueltos por procedimientos almacenados. Diferentes proveedores OLE DB devuelven parámetros de salida y valores devuelven en diferentes momentos durante el procesamiento de los resultados. Por ejemplo, el proveedor Microsoft OLE DB para SQL Server (SQLOLEDB) no proporciona parámetros de salida y códigos devueltos hasta que el consumidor haya recuperado o cancelado los conjuntos de resultados devueltos por el procedimiento almacenado. El resultado se devuelve en el último paquete TDS del servidor.  
+ La aplicación debe controlar la salida devuelta desde procedimientos almacenados. Diferentes proveedores OLE DB devuelven parámetros de salida y valores devuelven en distintos momentos durante el procesamiento del resultado. Por ejemplo, el proveedor Microsoft OLE DB para SQL Server (SQLOLEDB) no proporciona parámetros de salida y códigos devueltos hasta que el consumidor haya recuperado o cancelado los conjuntos de resultados devueltos por el procedimiento almacenado. El resultado se devuelve en el último paquete TDS del servidor.  
   
 ## <a name="row-count"></a>Recuento de filas  
  Si usa las plantillas de consumidor OLE DB para ejecutar un procedimiento almacenado con parámetros de salida, el recuento de filas no se establece hasta que se cierra el conjunto de filas.  
   
  Por ejemplo, considere la posibilidad de un procedimiento almacenado con un conjunto de filas y un parámetro de salida:  
   
-```  
+```sql  
 create procedure sp_test  
    @_rowcount integer output  
 as  
@@ -62,7 +62,7 @@ as
 return 0  
 ```  
   
- El @_rowcount parámetro de salida informa de cuántas filas se han devuelto realmente de la tabla de prueba. Sin embargo, este procedimiento almacenado limita el número de filas a un máximo de 50. Por ejemplo, si hay 100 filas en la prueba, el recuento de filas sería 50 (porque este código recupera solo las 50 primeras filas). Si sólo hay 30 filas en la tabla, el recuento de filas sería 30. Debe llamar a **cerrar** o **CloseAll** para rellenar el parámetro de salida antes de recuperar su valor.  
+ El @_rowcount parámetro de salida informa de cuántas filas se han devuelto realmente desde la tabla de prueba. Sin embargo, este procedimiento almacenado limita el número de filas a un máximo de 50. Por ejemplo, si hay 100 filas en la prueba, el recuento de filas sería 50 (porque este código recupera solo las primeras 50 filas). Si sólo hay 30 filas en la tabla, el recuento de filas sería 30. Debe llamar a `Close` o `CloseAll` para rellenar el parámetro de salida antes de recuperar su valor.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar procedimientos almacenados](../../data/oledb/using-stored-procedures.md)

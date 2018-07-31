@@ -36,12 +36,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181203"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340669"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase (Clase)
 Todos los descriptores de acceso de las plantillas OLE DB que se derivan de esta clase. `CAccessorBase` permite que un conjunto de filas administrar varios descriptores de acceso. También proporciona enlaces para los parámetros y columnas de salida.  
@@ -74,7 +74,6 @@ Cierra los descriptores de acceso.
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -86,7 +85,7 @@ Recupera el identificador de descriptor de acceso de un descriptor de acceso esp
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -103,7 +102,6 @@ Recupera el número de descriptores de acceso creado por la clase.
   
 ```cpp
 ULONG GetNumAccessors() const;  
-  
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -115,7 +113,7 @@ Devuelve true si se recuperan automáticamente los datos para el descriptor de a
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      bool IsAutoAccessor(ULONG nAccessor) const;  
+bool IsAutoAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Parámetros  

@@ -1,5 +1,5 @@
 ---
-title: Utilizar descriptores de acceso manuales | Documentos de Microsoft
+title: Utilizar descriptores de acceso manuales | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ee82a780690c6d5eba7b30debdc592a26ef2cbcc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 236fd1809fa012262f3a98f0f1856f3bbff6b454
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105909"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340869"
 ---
 # <a name="using-manual-accessors"></a>Utilizar descriptores de acceso manuales
-Hay cuatro tareas a realizar al controlar un comando desconocido:  
+Hay cuatro aspectos que debe hacer cuando se controla un comando desconocido:  
   
 -   Determinar los parámetros  
   
@@ -39,11 +39,11 @@ Hay cuatro tareas a realizar al controlar un comando desconocido:
   
 1.  Abra un `CCommand` objeto con `CManualAccessor` como un parámetro de plantilla.  
   
-    ```  
+    ```cpp  
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-2.  Consultar la sesión para la **IDBSchemaRowset** interfaz y el conjunto de filas de parámetros de procedimiento. Si el **IDBSchemaRowset** interfaz no está disponible, consultar la `ICommandWithParameters` interfaz. Llame a `GetParameterInfo` para obtener información. Si ninguna de estas interfaces está disponible, puede asumir que hay ningún parámetro.  
+2.  Consultar la sesión para el `IDBSchemaRowset` interfaz y utilizar el conjunto de filas de parámetros de procedimiento. Si el `IDBSchemaRowset` interfaz no está disponible, consultar el `ICommandWithParameters` interfaz. Llame a `GetParameterInfo` para obtener información. Si ninguna de estas interfaces está disponible, puede asumir que no hay ningún parámetro.  
   
 3.  Para cada parámetro, llame a `AddParameterEntry` para agregar los parámetros y establecerlos.  
   
@@ -51,9 +51,9 @@ Hay cuatro tareas a realizar al controlar un comando desconocido:
   
 5.  Llame a `GetColumnInfo` para recuperar las columnas de salida. Use `AddBindEntry` para agregar la columna de salida para el enlace.  
   
-6.  Llame a `GetNextResult` para determinar si hay más conjuntos de filas. Repita los pasos del 2 al 5.  
+6.  Llame a `GetNextResult` para determinar si están disponibles más conjuntos de filas. Repita los pasos 2 a 5.  
   
- Para obtener un ejemplo de un descriptor de acceso manual, vea **CDBListView:: CallProcedure** en el [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) ejemplo.  
+ Para obtener un ejemplo de un descriptor de acceso manual, consulte `CDBListView::CallProcedure` en el [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) ejemplo.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar descriptores de acceso](../../data/oledb/using-accessors.md)

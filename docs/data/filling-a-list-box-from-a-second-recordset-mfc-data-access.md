@@ -1,5 +1,5 @@
 ---
-title: Llenar un cuadro de lista de otro conjunto de registros (acceso a datos MFC) | Documentos de Microsoft
+title: Rellenar un cuadro de lista de otro conjunto de registros (acceso a datos MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e980f42384052e0ab4fbd0f98889509c41accf0b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090669"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339775"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Llenar un cuadro de lista con datos de otro conjunto de registros (acceso a datos MFC)
 De manera predeterminada, una vista de registros está asociada con un único objeto de conjunto de registros, cuyos campos se asignan a los controles de la vista de registros. En ocasiones, podría interesarle colocar un cuadro de lista o un control de cuadro combinado en la vista de registros y rellenarlo con valores de otro objeto de conjunto de registros. El usuario puede utilizar el cuadro de lista para seleccionar una nueva categoría de información para que se muestre en la vista de registros. Este tema explica cómo y cuándo hacerlo.  
@@ -44,11 +44,11 @@ De manera predeterminada, una vista de registros está asociada con un único ob
   
 3.  Vacíe el cuadro combinado de cualquier contenido anterior.  
   
-4.  Desplazarse por todos los registros del conjunto de registros, llamando a [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) para cada cadena del registro actual que se va a agregar al cuadro combinado.  
+4.  Desplazarse por todos los registros del conjunto de registros, una llamada a [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) para cada cadena del registro actual que desea agregar al cuadro combinado.  
   
 5.  Inicialice la selección en el cuadro combinado.  
   
-```  
+```cpp  
 void CSectionForm::OnInitialUpdate()  
 {  
     // ...  

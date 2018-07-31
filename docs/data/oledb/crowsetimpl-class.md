@@ -45,12 +45,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cdd76941a2e91edf598bc5bd354369c849b2dd35
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 1583a5cb6ff67943bde8af530593dff94986d551
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269708"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340480"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl (Clase)
 Proporciona una implementación de conjunto de filas de OLE DB estándar sin necesidad de herencia múltiple de cuántas interfaces de implementación.  
@@ -182,7 +182,7 @@ Recupera información de columna para una solicitud de cliente en particular.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,  
+static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,  
    ULONG* pcCols);  
 ```  
   
@@ -258,7 +258,6 @@ De forma predeterminada, un `CAtlArray` que templatizes en el argumento de plant
   
 ```cpp
 ArrayType CRowsetBaseImpl::m_rgRowData;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -271,7 +270,6 @@ Contiene comandos inicial del conjunto de filas.
   
 ```cpp
 CComBSTR CRowsetBaseImpl::m_strCommandText;  
-  
 ```  
 
 ## <a name="strindextext"></a> CRowsetImpl:: M_strindextext
@@ -281,5 +279,4 @@ Contiene el índice inicial del conjunto de filas.
   
 ```cpp
 CComBSTR CRowsetBaseImpl::m_strIndexText;  
-  
-```  
+``` 

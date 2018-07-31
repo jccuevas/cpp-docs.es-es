@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 59793d206f8b53d57347070cbfccd6d98ff2c005
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 6cd6ec4bcee26c1e2fb558670c69d0130808c933
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321960"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338345"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl (Clase)
 Proporciona una implementación de la `IRowset` interfaz.  
@@ -177,7 +177,7 @@ Agrega un contador de referencia a un identificador de fila existente.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
+STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBREFCOUNT rgRefCounts[],  
    DBROWSTATUS rgRowStatus[]);  
@@ -193,7 +193,7 @@ Un método auxiliar llamado por [GetNextRows](../../data/oledb/irowsetimpl-getne
   
 ```cpp
 HRESULT CreateRow(DBROWOFFSET lRowsOffset,  
-  DBCOUNTITEM& cRowsObtained,  
+   DBCOUNTITEM& cRowsObtained,  
    HROW* rgRows);  
 ```  
   
@@ -216,7 +216,7 @@ Recupera datos de copia del conjunto de filas de la fila.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD(GetData )(HROW hRow,  
+STDMETHOD(GetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pDstData);  
 ```  
@@ -239,7 +239,7 @@ Devuelve las marcas de estado DBSTATUS para el campo especificado.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
+virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
    ATLCOLUMNINFO* columnNames);  
 ```  
   
@@ -259,7 +259,7 @@ Recupera filas de forma secuencial, recordando la posición anterior.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
+STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
    DBROWOFFSET lRowsOffset,  
    DBROWCOUNT cRows,  
    DBCOUNTITEM* pcRowsObtained,  
@@ -276,7 +276,6 @@ El constructor.
   
 ```cpp
 IRowsetImpl();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -307,7 +306,7 @@ Libera filas.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
+STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBROWOPTIONS rgRowOptions[],  
    DBREFCOUNT rgRefCounts[],  
@@ -323,7 +322,7 @@ Se sitúa la siguiente posición de captura su posición inicial; es decir, su p
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
+STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -338,7 +337,7 @@ Establece las marcas de estado DBSTATUS para el campo especificado.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
+virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
    RowClass* currentRow,  
    ATLCOLUMNINFO* columnInfo);  
 ```  
@@ -366,7 +365,6 @@ Indica si un proveedor admite la captura con versiones anteriores.
   
 ```cpp
 unsigned m_bCanFetchBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -379,7 +377,6 @@ Indica si un proveedor puede tener su desplazamiento de cursor hacia atrás.
   
 ```cpp
 unsigned  m_bCanScrollBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -392,7 +389,6 @@ Un indicador de bits que se usa para determinar si se define la posición del cu
   
 ```cpp
 unsigned m_bReset:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -405,7 +401,6 @@ Un índice al conjunto de filas, que representa el cursor.
   
 ```cpp
 DBROWOFFSET m_iRowset;  
-  
 ```  
 
 ## <a name="rgrowhandles"></a> IRowsetImpl:: M_rgrowhandles
@@ -414,9 +409,7 @@ Una asignación de identificadores de fila que contiene actualmente el proveedor
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-MapClass  
- m_rgRowHandles;  
-  
+MapClass m_rgRowHandles;  
 ```  
   
 ### <a name="remarks"></a>Comentarios  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbcd69168b70e8d85bf2b90c3f456f79cd1c228c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e9ee36d2300ed1e86c1f867012ed54c85692f5bd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954589"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340643"
 ---
 # <a name="creating-an-updatable-provider"></a>Crear un proveedor actualizable
 
@@ -30,7 +30,7 @@ Visual C++ admite proveedores actualizables o que se puede actualizar (escribir 
   
  En este tema se da por supuesto que empieza con un proveedor viable. Hay dos pasos para crear un proveedor actualizable. Primero debe decidir cómo el proveedor realizará cambios en el almacén de datos; en concreto, si los cambios deben realizarse inmediatamente o aplaza hasta que se emite un comando de actualización. La sección "[convertir proveedores actualizables](#vchowmakingprovidersupdatable)" se describen los cambios y configuración que necesita hacer en el código del proveedor.  
   
- A continuación, debe asegurarse de que su proveedor contiene toda la funcionalidad para admitir cualquier cosa que el consumidor puede solicitar del mismo. Si el consumidor desea actualizar el almacén de datos, el proveedor debe contener código que conserva los datos en el almacén de datos. Por ejemplo, podría usar la biblioteca de tiempo de ejecución de C o MFC para realizar esas operaciones en el origen de datos. La sección "[escribir en el origen de datos](#vchowwritingtothedatasource)" se describe cómo escribir en el origen de datos, tratar con `NULL` y los valores predeterminados y establecer marcadores de columna.  
+ A continuación, debe asegurarse de que su proveedor contiene toda la funcionalidad para admitir cualquier cosa que el consumidor puede solicitar del mismo. Si el consumidor desea actualizar el almacén de datos, el proveedor debe contener código que conserva los datos en el almacén de datos. Por ejemplo, podría usar la biblioteca de tiempo de ejecución de C o MFC para realizar esas operaciones en el origen de datos. La sección "[escribir en el origen de datos](#vchowwritingtothedatasource)" se describe cómo escribir en el origen de datos, tratar los valores NULL y el valor predeterminado y establecer marcadores de columna.  
   
 > [!NOTE]
 >  UpdatePV es un ejemplo de un proveedor actualizable. UpdatePV es el mismo como MyProv pero compatibilidad con la actualización.  
@@ -55,7 +55,7 @@ Visual C++ admite proveedores actualizables o que se puede actualizar (escribir 
   
      Agregar `IRowsetChangeImpl` a la cadena de herencia de esta forma:  
   
-    ```  
+    ```cpp  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
@@ -65,7 +65,7 @@ Visual C++ admite proveedores actualizables o que se puede actualizar (escribir 
   
      Agregar `IRowsetUpdate` a la cadena de herencia de esta forma:  
   
-    ```  
+    ```cpp  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
@@ -88,7 +88,7 @@ Visual C++ admite proveedores actualizables o que se puede actualizar (escribir 
   
 4.  En la asignación de conjunto de propiedades, también debe incluir todos los valores siguientes que aparecen a continuación:  
   
-    ```  
+    ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
       DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
     PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)  

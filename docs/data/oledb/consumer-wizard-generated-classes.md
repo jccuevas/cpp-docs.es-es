@@ -1,5 +1,5 @@
 ---
-title: Clases generadas por el Asistente para consumidores | Documentos de Microsoft
+title: Clases generadas por el Asistente para consumidores | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 030445a8e6b46afb9f893e21bceb221f7f9e89a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63713dd57695a54a58ce3d57b295cd57cdf393d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091990"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338750"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Clases generadas por el Asistente para consumidores
 Cuando utiliza el Asistente para consumidores OLE DB ATL para generar un consumidor, tiene la opción de utilizar plantillas OLE DB o atributos OLE DB. En ambos casos, el asistente genera una clase de comando y una clase de registro de usuario. La clase de comando contiene código para abrir el origen de datos y el conjunto de filas especificado en el asistente. La clase de registro de usuario contiene un mapa de columnas para la tabla de base de datos seleccionada. Sin embargo, el código generado es distinto en cada caso:  
@@ -47,9 +47,9 @@ Cuando utiliza el Asistente para consumidores OLE DB ATL para generar un consumi
 >  Si modifica la clase de registro de usuario o escribe su propio consumidor, las variables de datos deben preceder a las variables de estado y longitud.  
   
 > [!NOTE]
->  El Asistente para consumidores OLE DB ATL usa el tipo **DB_NUMERIC** para enlazar tipos de datos numéricos. Anteriormente, usaba **DBTYPE_VARNUMERIC** (cuyo formato se describe en el tipo **DB_VARNUMERIC** ; vea Oledb.h). Si no usa el asistente para crear consumidores, se recomienda que use **DB_NUMERIC**.  
+>  El Asistente para consumidores OLE DB ATL usa el `DB_NUMERIC` tipo para enlazar tipos de datos numéricos. Anteriormente, usaba `DBTYPE_VARNUMERIC` (cuyo formato se describe mediante el `DB_VARNUMERIC` escriba; vea Oledb.h). Si no utiliza el Asistente para crear consumidores, se recomienda que utilice `DB_NUMERIC`.  
   
-```  
+```cpp  
 // Products.H : Declaration of the CProducts class  
   
 class CProductsAccessor  
@@ -95,7 +95,7 @@ public:
 ### <a name="rowset-properties"></a>Propiedades del conjunto de filas  
  A continuación, el asistente establece las propiedades del conjunto de filas. Si seleccionó **Cambiar**, **Insertar**o **Eliminar** en el Asistente para consumidores OLE DB ATL, las propiedades adecuadas se establecen aquí (siempre se establece DBPROP_IRowsetChange y, después, una o varias de las propiedades DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT y DBPROPVAL_UP_DELETE, respectivamente).  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -108,7 +108,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ### <a name="command-or-table-class"></a>Clase de comando o de tabla  
  Si se especifica una clase de comando, el asistente declara la clase de comando; para código con plantilla, el comando tiene el siguiente aspecto:  
   
-```  
+```cpp  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
 SELECT \  
    ProductID, \  
@@ -146,7 +146,7 @@ SELECT \
 ### <a name="class-declaration"></a>Declaración de clase  
  Por último, el asistente genera una declaración de clase de comando como la siguiente:  
   
-```  
+```cpp  
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
@@ -157,7 +157,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
  En el ejemplo siguiente, el asistente genera una declaración para la clase `COrders`, pero la clase de registro de usuario `COrdersAccessor` no aparece porque los atributos la insertan.  
   
-```  
+```cpp  
 #define _ATL_ATTRIBUTES  
 #include <atlbase.h>  
 #include <atldbcli.h>  

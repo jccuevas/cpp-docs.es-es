@@ -63,12 +63,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d58709e9a2b5bd86102e8323456c6bf9ca72fa1
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: afbf8b42b4d518412c1004d78c5c718e54078c1c
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322142"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340786"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl (Clase)
 La implementación de plantillas OLE DB de la [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx) interfaz.  
@@ -161,7 +161,7 @@ Establece los valores de datos en una o varias columnas.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD (SetData )(HROW hRow,  
+STDMETHOD (SetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pSrcData);  
 ```  
@@ -178,7 +178,7 @@ Obtiene los datos transmitidos a más recientemente u obtenido del origen de dat
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD (GetOriginalData )(HROW hRow,  
+STDMETHOD (GetOriginalData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pData);  
 ```  
@@ -192,7 +192,7 @@ Devuelve una lista de filas con cambios pendientes.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,  
+STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,  
    DBPENDINGSTATUS dwRowStatus,  
    DBCOUNTITEM* pcPendingRows,  
    HROW** prgPendingRows,  
@@ -214,7 +214,7 @@ Devuelve el estado de las filas especificadas.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,  
+STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBPENDINGSTATUS rgPendingStatus[]);  
@@ -232,7 +232,7 @@ Deshace los cambios en la fila desde la última captura o actualización.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD (Undo )(HCHAPTER /* hReserved */,  
+STDMETHOD (Undo )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[ ],  
    DBCOUNTITEM* pcRowsUndone,  
@@ -258,7 +258,7 @@ Transmite los cambios realizados en la fila desde la última captura o actualiza
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      STDMETHOD (Update )(HCHAPTER /* hReserved */,  
+STDMETHOD (Update )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBCOUNTITEM* pcRows,  
@@ -305,7 +305,7 @@ Un mapa que contiene los datos originales para la operación aplazada.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      CAtlMap<   
+CAtlMap<   
    HROW hRow,    
    Storage* pData   
 >   

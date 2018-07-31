@@ -1,5 +1,5 @@
 ---
-title: CDynamicStringAccessorA (clase) | Documentos de Microsoft
+title: CDynamicStringAccessorA (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6d05ac97846f55cf65d4010179b28d2b543ef66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e56f71a427fda2444992cc0ed2c3b6166993af1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096488"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341028"
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA (Clase)
-Permite obtener acceso a un origen de datos cuando no tiene ningún conocimiento del esquema de base de datos (estructura subyacente).  
+Permite obtener acceso a un origen de datos cuando no tiene conocimiento del esquema de base de datos (estructura subyacente).  
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,9 +34,9 @@ typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Solicitan que el proveedor recupere todos los datos que se tiene acceso desde el almacén de datos como datos de cadena, pero `CDynamicStringAccessor` datos de cadena de las solicitudes de ANSI.  
+ Solicitan que el proveedor recupere todos los datos que se obtiene acceso desde el almacén de datos como datos de cadena, pero `CDynamicStringAccessor` los datos de cadena ANSI de solicitudes.  
   
- `CDynamicStringAccessorA` hereda **GetString** y `SetString` de `CDynamicStringAccessor`. Cuando se usan estos métodos en un `CDynamicStringAccessorA` objeto, ***BaseType*** es **CHAR**.  
+ `CDynamicStringAccessorA` hereda `GetString` y `SetString` desde `CDynamicStringAccessor`. Cuando se usan estos métodos en un `CDynamicStringAccessorA` objeto, ***BaseType*** es **CHAR**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado**: atldbcli.h  

@@ -1,5 +1,5 @@
 ---
-title: Interfaces del objeto de transacción | Documentos de Microsoft
+title: Interfaces del objeto de transacción | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 415fdec8397b72bf8f391865fb5af418f95fdf03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba98cfa4a88b695995902bdaca5e4ae3f33e5198
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104557"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339759"
 ---
 # <a name="transaction-object-interfaces"></a>Interfaces del objeto de transacción
 El objeto de transacción define una unidad atómica de trabajo en un origen de datos y determina cómo se relacionan entre sí las unidades de trabajo. Este objeto no es compatible directamente con las plantillas de proveedor OLE DB (es decir, debe crear su propio objeto).  
   
  En la tabla siguiente se muestra las interfaces obligatorias y opcionales definidas por OLE DB para un objeto de transacción.  
   
-|Interfaz|¿Obligatorio?|¿Se implementan mediante plantillas OLE DB?|  
+|Interfaz|¿Obligatorio?|¿Implementado por plantillas OLE DB?|  
 |---------------|---------------|--------------------------------------|  
 |[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Obligatorio|No|  
-|[ITransaction](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|Obligatorio|No|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|No|  
+|[ITransaction](https://msdn.microsoft.com/library/ms723053.aspx)|Obligatorio|No|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Optional|No|  
   
 ## <a name="see-also"></a>Vea también  
  [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
