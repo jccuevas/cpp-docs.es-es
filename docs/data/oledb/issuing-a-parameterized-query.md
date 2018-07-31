@@ -1,5 +1,5 @@
 ---
-title: Realizar consultas parametrizadas | Documentos de Microsoft
+title: Realizar consultas parametrizadas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104580"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339541"
 ---
 # <a name="issuing-a-parameterized-query"></a>Realizar consultas parametrizadas
-En el ejemplo siguiente, se emite una consulta simple parametrizada que recupera registros con un campo de edad (es decir, mayor que 30) de una tabla en una base de datos de Microsoft Access. Para admitir el parámetro, el registro de usuario debe tener un mapa adicional. El código siguiente, en un proyecto ATL, usa el `CCommand` clase en lugar de la `CTable` clase usada en el ejemplo anterior, [recorrer un conjunto de filas Simple](../../data/oledb/traversing-a-simple-rowset.md).  
+En el ejemplo siguiente, se emite una consulta parametrizada simple que recupera los registros con un campo de edad (que es mayor que 30) de una tabla en una base de datos de Microsoft Access. Para admitir el parámetro, el registro de usuario debe tener una asignación adicional. El código siguiente, en un proyecto ATL, usa el `CCommand` clase en lugar de la `CTable` clase usada en el ejemplo anterior, [recorrer un conjunto de filas Simple](../../data/oledb/traversing-a-simple-rowset.md).  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -53,7 +53,7 @@ while (artists.MoveNext() == S_OK)
   
  El registro de usuario, `CArtists`, tiene este aspecto:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

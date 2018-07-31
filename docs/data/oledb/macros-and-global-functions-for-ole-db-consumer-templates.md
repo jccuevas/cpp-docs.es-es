@@ -111,12 +111,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e5d9105492af55547794023c3574fb626d470828
-ms.sourcegitcommit: 0bf5f6634d66ed92fffb32291ad9f854d9895b17
+ms.openlocfilehash: a915a581a574193918f86f80083d3202c9949674
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250672"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338153"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Macros y funciones globales para las plantillas de consumidor OLE DB
 Las plantillas de consumidor OLE DB se incluyen las siguientes macros y funciones globales:  
@@ -197,7 +197,7 @@ Vuelca la información de registro de Error de OLE DB para el dispositivo de vol
 #### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);  
+inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -305,7 +305,6 @@ Marca el final de una entrada de descriptor de acceso.
   
 ```cpp
 END_ACCESSOR()  
-  
 ```  
   
 #### <a name="remarks"></a>Comentarios  
@@ -321,7 +320,6 @@ Marca el final de las entradas de asignación de descriptor de acceso.
   
 ```cpp
 END_ACCESSOR_MAP()  
-  
 ```  
   
 #### <a name="remarks"></a>Comentarios  
@@ -335,7 +333,7 @@ Marca el inicio de una entrada de mapa de columnas.
   
 #### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 BEGIN_COLUMN_MAP(x)  
 ```  
   
@@ -362,7 +360,6 @@ Se utiliza con BEGIN_COLUMN_MAP y END_COLUMN_MAP para enlazar un objeto binario 
   
 ```cpp
 BLOB_ENTRY(nOrdinal, IID, flags, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -388,7 +385,6 @@ Se utiliza con BEGIN_COLUMN_MAP y END_COLUMN_MAP para enlazar un objeto binario 
   
 ```cpp
 BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -453,8 +449,7 @@ Se utiliza con BEGIN_COLUMN_MAP o BEGIN_ACCESSOR_MAP para enlazar un objeto bina
 #### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)  
-  
+BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)   
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -586,7 +581,6 @@ Enlaza la columna de marcador.
   
 ```cpp
 BOOKMARK_ENTRY(variable)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -652,7 +646,6 @@ Representa un enlace en el conjunto de filas a la columna del conjunto de filas.
   
 ```cpp
 COLUMN_ENTRY(nOrdinal, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -683,7 +676,6 @@ Representa un enlace en el conjunto de filas a la columna concreta de la base de
   
 ```cpp
 COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -732,7 +724,6 @@ Representa un enlace en el conjunto de filas a la columna concreta de la base de
   
 ```cpp
 COLUMN_ENTRY_LENGTH(nOrdinal, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -763,7 +754,6 @@ Representa un enlace en el conjunto de filas a la columna concreta de la base de
   
 ```cpp
 COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -797,7 +787,6 @@ Representa un enlace en el conjunto de filas a la columna del conjunto de filas.
   
 ```cpp
 COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -831,7 +820,6 @@ Representa un enlace en el conjunto de filas a la columna concreta de la base de
   
 ```cpp
 COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -868,7 +856,6 @@ Representa un enlace en el conjunto de filas a la columna concreta de la base de
   
 ```cpp
 COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -908,7 +895,6 @@ Representa un enlace en el conjunto de filas a la columna concreta de la base de
   
 ```cpp
 COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -945,7 +931,6 @@ Representa un enlace en el conjunto de filas a la columna concreta de la base de
   
 ```cpp
 COLUMN_ENTRY_STATUS(nOrdinal, data, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -976,7 +961,6 @@ Representa un enlace a la columna concreta de la base de datos. Admite *tipo* pa
   
 ```cpp
 COLUMN_ENTRY_TYPE (nOrdinal, wType, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -999,7 +983,6 @@ Representa un enlace a la columna concreta de la base de datos. Admite *tipo* y 
   
 ```cpp
 COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -1025,7 +1008,6 @@ Representa un enlace en el conjunto de filas a la columna del conjunto de filas.
   
 ```cpp
 COLUMN_NAME(pszName, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -1088,7 +1070,6 @@ Representa un enlace en el conjunto de filas a la columna del conjunto de filas.
   
 ```cpp
 COLUMN_NAME_LENGTH(pszName, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -1270,7 +1251,6 @@ Representa un enlace en el conjunto de filas a la columna del conjunto de filas.
   
 ```cpp
 COLUMN_NAME_TYPE(pszName, wType, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -1293,7 +1273,6 @@ Representa un enlace en el conjunto de filas a la columna del conjunto de filas.
   
 ```cpp
 COLUMN_NAME_TYPE_PS(pszName, wType, nPrecision, nScale, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -1322,7 +1301,6 @@ Representa un enlace en el conjunto de filas a la columna del conjunto de filas.
   
 ```cpp
 COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -1348,7 +1326,6 @@ Representa un enlace en el conjunto de filas a la columna del conjunto de filas.
   
 ```cpp
 COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -1374,7 +1351,6 @@ Marca el final de las entradas de asignación de columna.
   
 ```cpp
 END_COLUMN_MAP()  
-  
 ```  
   
 #### <a name="remarks"></a>Comentarios  
@@ -1393,7 +1369,6 @@ Especifica el comando que se usará para crear el conjunto de filas cuando se us
   
 ```cpp
 DEFINE_COMMAND(x, szCommand)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -1418,7 +1393,6 @@ Especifica el comando que se usará para crear el conjunto de filas cuando se us
   
 ```cpp
 DEFINE_COMMAND_EX(x, wszCommand)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -1443,7 +1417,6 @@ Marca el principio de las entradas de asignación de parámetro.
   
 ```cpp
 BEGIN_PARAM_MAP(x)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -1463,7 +1436,6 @@ Marca el final de las entradas de asignación de parámetro.
   
 ```cpp
 END_PARAM_MAP()  
-  
 ```  
   
 #### <a name="example"></a>Ejemplo  
@@ -1476,7 +1448,6 @@ Especifica las macros COLUMN_ENTRY que siguen a la entrada de la macro SET_PARAM
   
 ```cpp
 SET_PARAM_TYPE(type)  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  

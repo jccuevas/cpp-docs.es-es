@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eafb9c3eb9c8d76ee0c714b6b7c7c2f4e9e7eef1
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 64e7973c1a818b51173fd4f44458266c10053710
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207807"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338264"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection (Clase)
 Administra la conexión con el origen de datos.  
@@ -133,8 +133,7 @@ Crea una instancia e inicializa un `CDataConnection` objeto.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      CDataConnection();   
-
+CDataConnection();   
 CDataConnection(const CDataConnection &ds);  
 ```  
   
@@ -153,7 +152,7 @@ Crea una copia de una conexión de datos existente.
 ### <a name="syntax"></a>Sintaxis  
   
 ```cpp
-      CDataConnection& Copy(const CDataConnection & ds) throw();  
+CDataConnection& Copy(const CDataConnection & ds) throw();  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -202,7 +201,6 @@ Determina si la sesión actual está abierta o no.
   
 ```cpp
 operator BOOL() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -215,7 +213,6 @@ Determina si la sesión actual está abierta o no.
   
 ```cpp
 operator bool() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -228,7 +225,6 @@ Devuelve una referencia a la `CDataSource` objeto.
   
 ```cpp
 operator const CDataSource&() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -248,7 +244,6 @@ Devuelve un puntero para el objeto contenido `CDataSource` objeto.
   
 ```cpp
 operator const CDataSource*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -263,7 +258,6 @@ Devuelve una referencia a la `CSession` objeto.
   
 ```cpp
 operator const CSession&();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -283,7 +277,6 @@ Devuelve un puntero para el objeto contenido `CSession` objeto.
   
 ```cpp
 operator const CSession*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  

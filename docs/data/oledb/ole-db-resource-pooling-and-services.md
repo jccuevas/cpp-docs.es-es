@@ -1,5 +1,5 @@
 ---
-title: OLE DB agrupación de recursos y servicios | Documentos de Microsoft
+title: OLE DB Resource Pooling y servicios | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ab8c5e5a3e219da7204ef1a1b4942dc70b2f2ad2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c2a04d0b990906f9f124edc9dbda71d65127e4ed
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111190"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338566"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Servicios y agrupación de recursos OLE DB
-Para trabajar correctamente con la agrupación de OLE DB, o con cualquier servicio de OLE DB, el proveedor debe admitir la agregación de todos los objetos. Se trata de un requisito de OLE DB 1.5 o posterior proveedor. Es fundamental para aprovechar los servicios. No se puede agrupar los proveedores que no admiten la agregación y no hay servicios adicionales se proporcionan.  
+Para que funcione bien con la agrupación de OLE DB, o con cualquier servicio de OLE DB, el proveedor debe admitir la agregación de todos los objetos. Se trata de un requisito de cualquier 1.5 de OLE DB o el proveedor de una versión posterior. Es fundamental para aprovechar los servicios. No se puede agrupar los proveedores que no admiten la agregación y no se proporciona sin ningún servicio.  
   
- Para poder agruparlos, los proveedores deben admitir el modelo de subprocesamiento libre. El grupo de recursos determina el modelo del proveedor subproceso según la **DBPROP_THREADMODEL** propiedad.  
+ Agrupar, los proveedores deben admitir el modelo de subprocesamiento libre. El grupo de recursos determina el modelo de subprocesos del proveedor según la `DBPROP_THREADMODEL` propiedad.  
   
- Si el proveedor tiene un estado de conexión global que puede cambiar mientras el origen de datos está en un estado inicializado, debe admitir los nuevos **DBPROP_RESETDATASOURCE** propiedad. Esta propiedad se llama antes de que una conexión se reutiliza y proporciona al proveedor de la oportunidad de limpiar el estado antes de su uso siguiente. Si el proveedor no puede limpiar algún estado asociado a la conexión, puede devolver **DBPROPSTATUS_NOTSETTABLE** para la propiedad y la conexión no se reutilizará.  
+ Si el proveedor tiene un estado de conexión global que puede cambiar mientras el origen de datos está en un estado inicializado, debe admitir los nuevos `DBPROP_RESETDATASOURCE` propiedad. Esta propiedad se llama antes de una conexión se vuelve a usar y ofrece al proveedor de la oportunidad de limpiar el estado antes de su uso siguiente. Si el proveedor no puede limpiar algún estado asociado a la conexión, puede devolver `DBPROPSTATUS_NOTSETTABLE` para la propiedad y la conexión no se reutilizará.  
   
- Los proveedores que se conectan a una base de datos remota y pueden detectar si la opción que podría perderse conexión debe admitir la **DBPROP_CONNECTIONSTATUS** propiedad. Esta propiedad proporciona a los servicios de OLE DB la capacidad de detectar conexiones inactivas y asegúrese de que no se devuelven al grupo.  
+ Los proveedores que se conectan a una base de datos remota y pueden detectar si la opción que se puede perder conexión debe admitir la `DBPROP_CONNECTIONSTATUS` propiedad. Esta propiedad proporciona la capacidad de detectar conexiones inactivas y asegúrese de que no se devuelven al grupo de los servicios de OLE DB.  
   
- Por último, la inscripción automática en transacciones no suele funciona a menos que se implementa en el mismo nivel que se produce la agrupación. Los proveedores que admiten la inscripción automática en transacciones deben admitir su deshabilitación mediante la exposición de la **DBPROP_INIT_OLEDBSERVICES** propiedad y deshabilitar la inscripción si la **DBPROPVAL_OS_ TXNENLISTMENT** se anule la selección.  
+ Por último, la inscripción automática en transacciones no suele funciona a menos que se implementa en el mismo nivel que se produce la agrupación. Los proveedores que admiten la inscripción automática en transacciones deben admitir la deshabilitación mediante la exposición de la `DBPROP_INIT_OLEDBSERVICES` propiedad y deshabilitar la inscripción si el `DBPROPVAL_OS_TXNENLISTMENT` se anula la selección.  
   
 ## <a name="see-also"></a>Vea también  
  [Técnicas avanzadas para proveedores](../../data/oledb/advanced-provider-techniques.md)

@@ -1,5 +1,5 @@
 ---
-title: Trabajar con plantillas de consumidor OLE DB | Documentos de Microsoft
+title: Trabajar con plantillas de consumidor OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9118732b1c52934b0d914340e592dfa0eac5da18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d172d3b390c2c4ebedaf5ad934a95fc25e206c7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108283"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340061"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Trabajar con plantillas de consumidor OLE DB
 Los temas siguientes proporcionan algunos ejemplos de cómo usar las plantillas de consumidor OLE DB en escenarios comunes:  
@@ -58,15 +58,15 @@ Los temas siguientes proporcionan algunos ejemplos de cómo usar las plantillas 
   
 -   [Recibir notificaciones](../../data/oledb/receiving-notifications.md)  
   
- Para obtener un ejemplo de creación e implementación de un consumidor OLE DB, vea [crear un consumidor sencillo](../../data/oledb/creating-an-ole-db-consumer.md).  
+ Para obtener un ejemplo de creación e implementación de un consumidor OLE DB, consulte [crear un consumidor sencillo](../../data/oledb/creating-an-ole-db-consumer.md).  
   
  También puede encontrar ejemplos de cómo usar las plantillas de consumidor OLE DB en los ejemplos siguientes:  
   
--   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](http://msdn.microsoft.com/21459014-4409-413c-b826-a41f0413be61)  
   
 ## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

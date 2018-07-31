@@ -1083,12 +1083,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6c7b2cd83c9c0ce5dcaa32f04257bbbbe9618ca6
-ms.sourcegitcommit: 0bf5f6634d66ed92fffb32291ad9f854d9895b17
+ms.openlocfilehash: 02d0787ebb40379ac438880ab7a23aa36a0b0f56
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250659"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338303"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Clases de conjunto de filas de esquema y clases typedef
 Un esquema es una colección de objetos de base de datos que se han creado por un usuario determinado o le pertenecen. Un catálogo puede contener uno o varios esquemas, pero siempre debe contener un esquema llamado INFORMATION_SCHEMA, que contiene las vistas y los dominios del esquema de información. Información de esquema de OLE DB se recupera mediante conjuntos de filas de esquema predefinido e incluye tipos, tablas, columnas, índices, vistas, las aserciones y restricciones, las estadísticas, juegos de caracteres, intercalaciones y dominios.  
