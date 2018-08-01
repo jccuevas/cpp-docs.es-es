@@ -1,5 +1,5 @@
 ---
-title: Expresiones con operadores binarios | Documentos de Microsoft
+title: Expresiones con operadores binarios | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84738fa2c99e658d4e05dc45a9f942218964eb68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7e7b426d3bc4f0913422f508279db9727f6e1f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414681"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406824"
 ---
 # <a name="expressions-with-binary-operators"></a>Expresiones con operadores binarios
 Los operadores binarios actúan sobre dos operandos de una expresión. Los operadores binarios son:  
@@ -52,7 +52,7 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
   
     -   Mayor que (>)  
   
-    -   Menor o igual que (\<=)  
+    -   Menor o igual a (\<=)  
   
     -   Mayor o igual que (>=)  
   
@@ -72,7 +72,7 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
   
     -   [Operador lógico AND (& &)](../cpp/logical-and-operator-amp-amp.md)  
   
-    -   [Operador lógico OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
+    -   [OR lógico (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
   
 -   [Operadores de asignación](../cpp/assignment-operators.md)  
   
@@ -80,7 +80,7 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
   
     -   Asignación y suma (+=)  
   
-    -   Asignación y resta (-)  
+    -   Asignación de resta (-)  
   
     -   Asignación y multiplicación (*=)  
   
@@ -88,7 +88,7 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
   
     -   Asignación y módulo (%=)  
   
-    -   Deja la asignación de desplazamiento (<\<=)  
+    -   Asignación de desplazamiento a la izquierda (<\<=)  
   
     -   Asignación y desplazamiento a la derecha (>>=)  
   
@@ -96,7 +96,7 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
   
     -   Asignación y OR exclusivo bit a bit (^=)  
   
-    -   Bit a bit asignación y OR inclusiva (&#124;=)  
+    -   Bit a bit asignación OR inclusivo (&#124;=)  
   
 -   [Operador de coma](../cpp/comma-operator.md) (,)  
   

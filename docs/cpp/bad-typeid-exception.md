@@ -1,5 +1,5 @@
 ---
-title: bad_typeid (excepción) | Documentos de Microsoft
+title: bad_typeid (excepción) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0771f5e93ba473c9ae1101996e8276bec4cd432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55718522bdbf618fb656eedc5c6afd59bfcaca08
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409010"
 ---
 # <a name="badtypeid-exception"></a>bad_typeid (Excepción)
-El `bad_typeid` excepción la producen el [typeid (operador)](../cpp/typeid-operator.md) cuando el operando de `typeid` es un puntero NULL.  
+El **bad_typeid** excepción la [operador typeid](../cpp/typeid-operator.md) cuando el operando para **typeid** es un puntero NULL.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      catch (bad_typeid)  
+catch (bad_typeid)  
    statement  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- La interfaz de `bad_typeid` es:  
+ La interfaz para **bad_typeid** es:  
   
-```  
+```cpp 
 class bad_typeid : public exception  
 {  
 public:  
@@ -48,9 +48,9 @@ public:
 };  
 ```  
   
- En el ejemplo siguiente se muestra el operador `typeid` que produce una excepción `bad_typeid`.  
+ El ejemplo siguiente se muestra el **typeid** operador producir una **bad_typeid** excepción.  
   
-```  
+```cpp 
 // expre_bad_typeid.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -78,7 +78,7 @@ catch (bad_typeid){
   
 ## <a name="output"></a>Salida  
   
-```  
+```Output 
 Object is NULL  
 ```  
   

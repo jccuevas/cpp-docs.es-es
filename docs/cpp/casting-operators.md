@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d64a25475ad7ac40f63d29798768f8f57866b3c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b2aa683f539e643127f8f71ff536d4c2ca2c9c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941630"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407531"
 ---
 # <a name="casting-operators"></a>Operadores de conversión
 Hay varios operadores de conversión específicos del lenguaje C++. Estos operadores están diseñados para quitar una parte de la ambigüedad y riesgo inherentes a las conversiones antiguas del lenguaje C. Estos operadores son:  
@@ -35,7 +35,7 @@ Hay varios operadores de conversión específicos del lenguaje C++. Estos operad
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md) usa genera MSIL comprobable.  
   
- Use `const_cast` y `reinterpret_cast` como último recurso, ya que estos operadores plantean los mismos peligros que las conversiones antiguas. Sin embargo, siguen siendo necesarios para reemplazar completamente las conversiones antiguas.  
+ Use **const_cast** y **reinterpret_cast** como último recurso, ya que estos operadores plantean los mismos peligros que las conversiones antiguas. Sin embargo, siguen siendo necesarios para reemplazar completamente las conversiones antiguas.  
   
 ## <a name="see-also"></a>Vea también  
  [Conversión](../cpp/casting.md)

@@ -1,5 +1,5 @@
 ---
-title: asignar | Documentos de Microsoft
+title: asignar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a253d1b539d1f3d2648cba5fa41b6d1cfbc955
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82ce0af801b77a9566bd6395a9f03b05f41676d7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408770"
 ---
 # <a name="allocate"></a>allocate
 **Específicos de Microsoft**  
   
- El **asignar** especificador de declaración asigna nombre a un segmento de datos en el que se va a asignar el elemento de datos.  
+ El **asignar** especificador de declaración nombra un segmento de datos en el que se va a asignar el elemento de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-
    __declspec(allocate("segname")) declarator  
-
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El nombre *segname* deben declararse mediante una de las siguientes directivas pragma:  
+ El nombre *segname* deben declararse mediante una de las instrucciones pragma siguientes:  
   
 -   [code_seg](../preprocessor/code-seg.md)  
   
@@ -51,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // allocate.cpp  
 #pragma section("mycode", read)  
 __declspec(allocate("mycode"))  int i = 0;  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a46e7d314281bd19773a5c86e70a63f3c93e14
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 25172bc44c21fcb11ec3f7c77224d3214e21c5f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940334"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404615"
 ---
 # <a name="functions-c"></a>Funciones (C++)
 
@@ -82,7 +82,7 @@ Los elementos necesarios de una declaración de función son los siguientes:
 
 Los elementos opcionales de una declaración de función son los siguientes:
 
-1. **constexpr**, lo que indica que el valor devuelto de la función es un valor constante se puede calcular en tiempo de compilación.
+1. `constexpr`, que indica que el valor devuelto de la función es un valor constante que se puede calcular en tiempo de compilación.
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -114,7 +114,7 @@ Los elementos opcionales de una declaración de función son los siguientes:
 
      Para obtener más información, consulte [funciones Inline](../cpp/inline-functions-cpp.md).
 
-1. Un **noexcept** expresión, que especifica si la función puede producir una excepción. En el ejemplo siguiente, la función no produce una excepción si el `is_pod` expresión se evalúa como **true**.
+1. Un `noexcept` expresión, que especifica si la función puede producir una excepción. En el ejemplo siguiente, la función no produce una excepción si el `is_pod` expresión se evalúa como **true**.
 
     ```cpp
     #include <type_traits>
@@ -127,7 +127,7 @@ Los elementos opcionales de una declaración de función son los siguientes:
 
 1. (Solo funciones miembro) Los calificadores cv, que especifica si la función es **const** o **volátil**.
 
-1. (Solo funciones miembro) **virtual**, **invalidar**, o **final**. **virtual** especifica que una función puede reemplazarse en una clase derivada. **invalidar** significa que una función en una clase derivada reemplaza una función virtual. **final** significa que una función no se puede reemplazar en ninguna otra clase derivada. Para obtener más información, consulte [funciones virtuales](../cpp/virtual-functions.md).
+1. (Solo funciones miembro) **virtual**, `override`, o `final`. **virtual** especifica que una función puede reemplazarse en una clase derivada. `override` significa que una función de una clase derivada reemplaza una función virtual. `final` significa que una función no se puede reemplazar en ninguna otra clase derivada. Para obtener más información, consulte [funciones virtuales](../cpp/virtual-functions.md).
 
 1. (solo funciones miembro) **estático** aplicado a un miembro de función significa que la función no está asociada con instancias de objeto de la clase.
 
@@ -170,7 +170,7 @@ Las variables declaradas dentro del cuerpo se denominan variables locales. Se sa
 
 Puede declarar una función miembro como **const** para especificar que la función no se permite cambiar los valores de los miembros de datos en la clase. Al declarar una función miembro como **const**, ayudará a que el compilador aplique *exactitud de const*. Si por error un usuario intenta modificar el objeto mediante el uso de una función declarada como **const**, se produce un error del compilador. Para obtener más información, consulte [const](const-cpp.md).
 
-Declarar una función como **constexpr** cuando el valor genera puede posiblemente determinarse en tiempo de compilación. Por lo general, una función constexpr ejecuta más rápido que una función normal. Para obtener más información, consulte [constexpr](constexpr-cpp.md).
+Declarar una función como `constexpr` cuando el valor genera puede posiblemente determinarse en tiempo de compilación. Por lo general, una función constexpr ejecuta más rápido que una función normal. Para obtener más información, consulte [constexpr](constexpr-cpp.md).
 
 ## <a name="function-templates"></a>Plantillas de función
 
@@ -269,11 +269,11 @@ Cuando **automática** se usa junto con un tipo de valor devuelto final, simplem
 
 Una variable que se declara dentro de un cuerpo de función se denomina un *variable local* o simplemente un *local*. Las variables locales no estáticas solo son visibles dentro del cuerpo de función y, si se declaran en la pila, se salen del ámbito cuando finaliza la función. Cuando se crea una variable local y se devuelve por valor, generalmente el compilador puede llevar a cabo la optimización del valor devuelto para evitar las operaciones de copia innecesarias. Si una variable local se devuelve por referencia, el compilador emitirá una advertencia, ya que cualquier intento por parte del llamador de usar esa referencia se producirá después de la destrucción de la variable local.
 
-En C++, una variable local se puede declarar como estática. La variable solo es visible dentro del cuerpo de la función, pero existe una copia única de la variable para todas las instancias de la función. Objetos estáticos locales se destruyen durante la finalización especificada por **atexit**. Si no se crea un objeto estático porque el flujo de control de programa omitió su declaración, no se realiza ningún intento de destruir ese objeto.
+En C++, una variable local se puede declarar como estática. La variable solo es visible dentro del cuerpo de la función, pero existe una copia única de la variable para todas las instancias de la función. Los objetos estáticos locales se destruyen durante la finalización especificada por `atexit`. Si no se crea un objeto estático porque el flujo de control de programa omitió su declaración, no se realiza ningún intento de destruir ese objeto.
 
 ##  <a name="type_deduction"></a> Deducción de tipos de valor devuelto (C ++ 14)
 
-En C ++ 14, puede usar **automática** para indicar al compilador que infiera el tipo de valor devuelto desde el cuerpo de la función sin tener que proporcionar un tipo de valor devuelto final. Tenga en cuenta que **automática** siempre se deduce como un devolución por valor. Use **auto & &** para indicar al compilador que deduzca una referencia.
+En C ++ 14, puede usar **automática** para indicar al compilador que infiera el tipo de valor devuelto desde el cuerpo de la función sin tener que proporcionar un tipo de valor devuelto final. Tenga en cuenta que **automática** siempre se deduce como un devolución por valor. Use `auto&&` para indicar al compilador que deduzca una referencia.
 
 En este ejemplo, **automática** se deduce como una copia del valor no constante de la suma de lhs y rhs.
 
@@ -435,10 +435,9 @@ int (*myFunction(char* s))(int);
 La declaración anterior es equivalente a la otra declaración con typedef.
 
 ## <a name="see-also"></a>Vea también
-
-- [Sobrecarga de funciones](../cpp/function-overloading.md)
-- [Funciones con listas de argumentos de variable](../cpp/functions-with-variable-argument-lists-cpp.md)
-- [Funciones establecidas como valor predeterminado y eliminadas explícitamente](../cpp/explicitly-defaulted-and-deleted-functions.md)
-- [Búsqueda de nombres dependientes de argumentos (Koenig) en las funciones](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
-- [Argumentos predeterminados](../cpp/default-arguments.md)
-- [Funciones insertadas](../cpp/inline-functions-cpp.md)
+ [Sobrecarga de funciones](../cpp/function-overloading.md)  
+ [Funciones con listas de argumentos de variable](../cpp/functions-with-variable-argument-lists-cpp.md)  
+ [Funciones establecidas como valor predeterminado y eliminadas explícitamente](../cpp/explicitly-defaulted-and-deleted-functions.md)  
+ [Búsqueda de nombres dependientes de argumentos (Koenig) en las funciones](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
+ [Argumentos predeterminados](../cpp/default-arguments.md)  
+ [Funciones insertadas](../cpp/inline-functions-cpp.md)

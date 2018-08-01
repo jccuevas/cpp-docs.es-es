@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6e632faddb3b4f59733710a915ed121a12f4e0c6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942047"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404868"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Mezclar excepciones de C (estructuradas) y de C++
 Si desea escribir código más portable, no se recomienda utilizar el control de excepciones estructuradas en un programa de C++. Sin embargo, que es posible que a veces desee compilar con **/EHa** y mezclar excepciones estructuradas y código fuente de C++ y necesitará alguna capacidad para controlar ambos tipos de excepciones. Dado que un controlador de excepciones estructurado no tiene ningún concepto de objetos de excepciones con tipo, que no puede controlar las excepciones producidas por código de C++; Sin embargo, C++ **catch** controladores pueden controlar excepciones estructuradas. Como tales, sintaxis de control de excepciones de C++ (**intente**, **throw**, **catch**) no está aceptados por el compilador de C, pero la sintaxis de control de excepciones estructurado (**__try** , **__except**, **__finally**) es compatible con el compilador de C++.  

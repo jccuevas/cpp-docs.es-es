@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944756"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407785"
 ---
 # <a name="pointers-to-members"></a>Punteros a miembros
 Las declaraciones de punteros a miembros son casos especiales de declaraciones de puntero.  Se declaran mediante la siguiente secuencia:  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- En el ejemplo anterior, `pwCaption` es un puntero a cualquier miembro de clase `Window` que tiene tipo **char\***. El tipo de `pwCaption` es `char * Window::* `. El siguiente fragmento de código declara punteros a las funciones miembro `SetCaption` y `GetCaption`.  
+ En el ejemplo anterior, `pwCaption` es un puntero a cualquier miembro de clase `Window` que tiene tipo `char*`. El tipo de `pwCaption` es `char * Window::* `. El siguiente fragmento de código declara punteros a las funciones miembro `SetCaption` y `GetCaption`.  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  La diferencia entre el **.\***  y **-> \*** operadores (los operadores de puntero a miembro) es que el **.\***  operador selecciona miembros dado un objeto o una referencia de objeto, mientras que el **-> \*** operador selecciona los miembros a través de un puntero. (Para obtener más información acerca de estos operadores, vea [expresiones con operadores de puntero a miembro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- El resultado de los operadores de puntero a miembro es el tipo del miembro, en este caso, **char \*** .  
+ El resultado de los operadores de puntero a miembro es el tipo del miembro, en este caso, `char *`.  
   
  El fragmento de código siguiente invoca las funciones miembro `GetCaption` y `SetCaption` mediante punteros a miembros:  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>Vea también  
- 

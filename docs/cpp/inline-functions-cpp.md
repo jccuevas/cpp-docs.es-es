@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c2fc99d4349a158bc4ce944be96e9c6141700cf
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944265"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403672"
 ---
 # <a name="inline-functions-c"></a>Funciones insertadas (C++)
 Una función definida en el cuerpo de una declaración de clase es una función insertada.  
@@ -235,7 +235,6 @@ int main() {
 }  
 //  Sample Input:  xyz  
 // Sample Output:  Z  
-  
 ```  
   
  La intención de la expresión `toupper(getc(stdin))` es que un carácter se debe leer desde el dispositivo de consola (`stdin`) y, si es necesario, puede convertir a mayúsculas.  

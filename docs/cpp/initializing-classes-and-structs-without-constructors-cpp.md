@@ -1,5 +1,5 @@
 ---
-title: Inicialización de clases y structs sin constructores (C++) | Documentos de Microsoft
+title: Inicialización de clases y structs sin constructores (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a547dbe4d5668439ea3002249568962a50a0036
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bca7ef417a633f186f2b7ca6f7d92af37e780420
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409340"
 ---
 # <a name="initializing-classes-and-structs-without-constructors-c"></a>Inicialización de clases y structs sin constructores (C++)
 No siempre es necesario definir un constructor para una clase, especialmente si son relativamente sencillas. Los usuarios pueden inicializar objetos de una clase o struct usando la inicialización uniforme, tal y como se muestra en el siguiente ejemplo:  
   
-```  
+```cpp 
 #include "stdafx.h"  
 #include <Windows.h>  
   
@@ -63,10 +64,9 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
- Tenga en cuenta que, cuando una clase o estructura no tiene ningún constructor, se proporcionan los elementos de lista en el orden en que los miembros se declaran en la clase. Si la clase tiene un constructor, proporcione los elementos en el orden de los parámetros.  
+ Tenga en cuenta que cuando una clase o estructura no tiene ningún constructor, proporciona los elementos de lista en el orden en que los miembros se declaran en la clase. Si la clase tiene un constructor, que proporcionan los elementos en el orden de los parámetros.  
   
 ## <a name="see-also"></a>Vea también  
  [Clases y estructuras](../cpp/classes-and-structs-cpp.md)   

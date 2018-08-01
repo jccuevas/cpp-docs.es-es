@@ -1,5 +1,5 @@
 ---
-title: Operadores de puntero a miembro:. * y -&gt;* | Documentos de Microsoft
+title: Operadores de puntero a miembro:. * y -&gt;* | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdece555ea58f0a1321258405fa76ba02cf12efa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b266d167b34c1c773d79ea92813a310eb18441
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408970"
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>Operadores de puntero a miembro:. * y -&gt;*
 ## <a name="syntax"></a>Sintaxis  
@@ -38,7 +39,7 @@ expression ->* expression
 ## <a name="remarks"></a>Comentarios  
  Los operadores de puntero a miembro. * y ->\*, devolver el valor de un miembro de clase específica para el objeto especificado en el lado izquierdo de la expresión.  El lado derecho debe especificar un miembro de la clase.  En el siguiente ejemplo se muestra cómo usar estos operadores.  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -78,7 +79,7 @@ int main() {
   
 ## <a name="output"></a>Salida  
   
-```  
+```Output  
 m_func1  
 m_func1  
 1  
@@ -93,12 +94,12 @@ m_func1
   
  En una expresión que contenga el operador .*, el primer operando debe ser del tipo de clase de, y ser accesible para, el puntero a miembro especificado en el segundo operando, o bien de un tipo accesible derivado inequívocamente de y accesible para esa clase.  
   
- En una expresión que contiene el-> * (operador), el primer operando debe ser del tipo "puntero al tipo de clase" del tipo especificado en el segundo operando, o bien debe ser de un tipo derivado inequívocamente de esa clase.  
+ En una expresión que contiene el-> * (operador), el primer operando debe ser del tipo "puntero al tipo de clase" del tipo especificado en el segundo operando, o debe ser de un tipo derivado inequívocamente de esa clase.  
   
 ## <a name="example"></a>Ejemplo  
  Considere las clases y el fragmento de programa siguientes:  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators2.cpp  
 // C2440 expected  
 class BaseClass {  
@@ -141,4 +142,3 @@ int main() {
   
 ## <a name="see-also"></a>Vea también  
  [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-

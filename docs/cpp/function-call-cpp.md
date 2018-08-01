@@ -1,5 +1,5 @@
 ---
-title: Función de llamada (C++) | Documentos de Microsoft
+title: Función llamada (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e7a752630b391d09140fa7552a452b3d2b751a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a2c3e28d4d69265c86e3c88d07de460558b3f71b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409360"
 ---
 # <a name="function-call-c"></a>Llamada de función (C++)
 El operador de llamada a función, invocado mediante paréntesis, es un operador binario.  
@@ -33,7 +34,6 @@ El operador de llamada a función, invocado mediante paréntesis, es un operador
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 primary-expression ( expression-list )  
 ```  
   
@@ -42,14 +42,14 @@ primary-expression ( expression-list )
   
  El operador de llamada a función, cuando está sobrecargado, no modifica la forma de llamar a las funciones; en su lugar, modifica cómo debe interpretarse el operador cuando se aplica a objetos de un tipo de clase especificado. Por ejemplo, el código siguiente normalmente no tendría sentido:  
   
-```  
+```cpp 
 Point pt;  
 pt( 3, 2 );  
 ```  
   
  Pero, con un operador sobrecargado de llamada a función adecuado, esta sintaxis se puede usar para desplazar 3 unidades la coordenada `x` y 2 unidades la coordenada `y`. En el código siguiente se muestra esa definición:  
   
-```  
+```cpp 
 // function_call.cpp  
 class Point  
 {  

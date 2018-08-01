@@ -1,5 +1,5 @@
 ---
-title: Analizar los argumentos de línea de comandos de C++ | Documentos de Microsoft
+title: Analizar los argumentos de línea de comandos de C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147461584f1a978be55502d783bc527b5632d20f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eca85baea71052525d70c90ac521ef5fa95a5118
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409210"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analizar los argumentos de la línea de comandos de C++
 **Específicos de Microsoft**  
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   El carácter de intercalación (^) no se reconoce como carácter de escape ni como delimitador. El analizador de la línea de comandos del sistema operativo procesa completamente este carácter antes de pasarlo a la matriz `argv` del programa.  
   
--   Una cadena entrecomillada comillas dobles ("*cadena*") se interpreta como un solo argumento, sin tener en cuenta el espacio blanco que contenga. Se puede incrustar una cadena entre comillas dentro de un argumento.  
+-   Una cadena entrecomillada comillas dobles ("*cadena*") se interpreta como un solo argumento, sin importar el espacio en blanco dentro de. Se puede incrustar una cadena entre comillas dentro de un argumento.  
   
 -   Unas comillas precedidas por una barra diagonal inversa (\\") se interpretan como un literal de cadena de comillas (").  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="example"></a>Ejemplo  
  En el programa siguiente se muestra cómo se pasan los argumentos de la línea de comandos:  
   
-```  
+```cpp 
 // command_line_arguments.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -80,4 +81,5 @@ int main( int argc,      // Number of strings in array argv
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [main: Inicio de programa](../cpp/main-program-startup.md)
+ 
+  [main: Inicio de programa](../cpp/main-program-startup.md)

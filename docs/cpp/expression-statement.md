@@ -1,5 +1,5 @@
 ---
-title: Instrucción de expresión | Documentos de Microsoft
+title: Instrucción de expresión | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60879ca8792e3259a69b7a9a3de6cd83dce0d6d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d94acdfff2fdea2cc35d0856940270ba82e131af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411593"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405261"
 ---
 # <a name="expression-statement"></a>Expression (Instrucción)
 Las instrucciones de expresión hacen que se evalúen las expresiones. No se realiza ninguna transferencia de control o iteración como resultado de una instrucción de expresión.  

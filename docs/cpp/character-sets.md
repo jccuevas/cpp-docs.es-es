@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0627eaa2606d13ced457ae336bd2a0fb4dc83801
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 25370d7b7e5ddf460ace1ce349c9fc501feb2343
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414788"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407080"
 ---
 # <a name="character-sets"></a>Juegos de caracteres
 El texto de un programa de C++ se almacena en archivos de código fuente que usan una codificación de caracteres determinada. El estándar de C++ especifica un juego básico de caracteres de código fuente para los archivos de código fuente y un juego básico de caracteres de ejecución para los archivos compilados. Visual C++ permite usar un juego adicional de caracteres específicos de la configuración regional en los archivos de código fuente y los archivos compilados.  
@@ -57,7 +57,6 @@ El texto de un programa de C++ se almacena en archivos de código fuente que usa
 ```cpp  
 auto \u30AD = 42; // \u30AD is 'キ'  
 if (キ == 42) return true; // \u30AD and キ are the same to the compiler  
-  
 ```  
   
  El formato de caracteres extendidos en el Portapapeles de Windows es específico de la configuración regional de la aplicación. Cortar y pegar estos caracteres en el código desde otra aplicación podría introducir codificaciones de caracteres inesperadas. Esto puede provocar errores de análisis sin causa visible en el código. Se recomienda establecer la codificación del archivo de código fuente en una página de códigos Unicode antes de pegar los caracteres extendidos. También se recomienda usar un IME o la aplicación Mapa de caracteres para generar caracteres extendidos.  
@@ -65,4 +64,4 @@ if (キ == 42) return true; // \u30AD and キ are the same to the compiler
  **FIN de Específicos de Microsoft**  
   
 ### <a name="basic-execution-character-set"></a>juego básico de caracteres de ejecución  
- El *juego básico de caracteres de ejecución* y el *juego básico de caracteres anchos de ejecución* constan de todos los caracteres del juego básico de caracteres de código fuente y los caracteres de control que representan los caracteres de alerta, retroceso, retorno de carro y nulo.   El *juego de caracteres de ejecución* y el *juego de caracteres anchos de ejecución* son supraconjuntos de los conjuntos básicos. Incluyen los caracteres de código fuente definidos por implementación ajenos al conjunto básico de caracteres de código fuente. El juego de caracteres de ejecución tiene una representación específica de la configuración regional.
+ El *juego básico de caracteres de ejecución* y el *juego básico de caracteres anchos de ejecución* constan de todos los caracteres del juego básico de caracteres de código fuente y los caracteres de control que representan los caracteres de alerta, retroceso, retorno de carro y nulo. El *juego de caracteres de ejecución* y el *juego de caracteres anchos de ejecución* son supraconjuntos de los conjuntos básicos. Incluyen los caracteres de código fuente definidos por implementación ajenos al conjunto básico de caracteres de código fuente. El juego de caracteres de ejecución tiene una representación específica de la configuración regional.

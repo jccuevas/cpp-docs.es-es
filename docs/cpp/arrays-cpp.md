@@ -16,18 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce914f47f62a742b24830d848fd9d82b91796f31
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944511"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408058"
 ---
 # <a name="arrays-c"></a>Matrices (C++)
 Una matriz es una colección de objetos similares. El caso más simple de una matriz es un vector, que se puede declarar mediante la secuencia siguiente:  
   
 ```  
-  
 decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
@@ -174,7 +173,4 @@ The minimum cost to Market 3 is: 17.29
 ```  
   
 ## <a name="comments"></a>Comentarios  
- La función `FindMinToMkt` se escribe de forma que para agregar nuevas fábricas no sea necesario modificar el código, solo volver a compilarlo.  
-  
-## <a name="see-also"></a>Vea también  
- 
+ La función `FindMinToMkt` se escribe de forma que para agregar nuevas fábricas no sea necesario modificar el código, solo volver a compilarlo. 

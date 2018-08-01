@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939076"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403831"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Específicos de Microsoft**  
   
- Construye un objeto `_com_ptr_t`.  
+ Construye un **_com_ptr_t** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  Si es TRUE, `AddRef` se llama para incrementar el recuento de referencias del puntero de interfaz encapsulado.  
   
  *CP*  
- Un objeto `_com_ptr_t`.  
+ Un **_com_ptr_t** objeto.  
   
  *p*  
- Puntero a interfaz sin formato cuyo tipo es diferente del tipo de puntero inteligente de este objeto `_com_ptr_t`.  
+ Un puntero de interfaz sin formato, cuyo tipo es diferente del tipo de puntero inteligente de este **_com_ptr_t** objeto.  
   
  *varSrc*  
  Un objeto `_variant_t`.  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1369614cfd20d39fee3f2c2dd1ca7436ae742d2b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941803"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405384"
 ---
 # <a name="nonstandard-behavior"></a>Comportamiento no estándar
 En las próximas secciones se muestran algunos de los lugares en los que la implementación de Visual C++ de C++ no cumple con el estándar de C++. Los números de sección que se indican a continuación se refieren a los números de sección del estándar de C++ 11 (ISO/IEC 14882:2011(E)).  
@@ -67,7 +67,6 @@ int main() {
     g('c');  
 }  
 // Output: f(char)  
-  
 ```  
   
 ## <a name="function-exception-specifiers"></a>Especificadores de excepciones de funciones  
@@ -81,7 +80,7 @@ void g() throw();    // parsed and used
  Para obtener más información sobre las especificaciones de excepciones, vea [las especificaciones de excepción](../cpp/exception-specifications-throw-cpp.md).  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- El estándar de C++ indica que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) no debe corresponder a una `char_type` valor. El compilador de Visual C++ exige esta restricción de tipo **char**, pero no para el tipo `wchar_t`. Esto no cumple con el requisito indicado en la tabla 62 de la sección 12.1.1 de la especificación ISO de C++. En el ejemplo siguiente se muestra esto.  
+ El estándar de C++ indica que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) no debe corresponder a una `char_type` valor. El compilador de Visual C++ exige esta restricción de tipo **char**, pero no para el tipo **wchar_t**. Esto no cumple con el requisito indicado en la tabla 62 de la sección 12.1.1 de la especificación ISO de C++. En el ejemplo siguiente se muestra esto.  
   
 ```cpp  
 #include <iostream>  

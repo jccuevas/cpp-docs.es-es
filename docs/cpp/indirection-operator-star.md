@@ -1,5 +1,5 @@
 ---
-title: 'Operador de direccionamiento indirecto: * | Documentos de Microsoft'
+title: 'Operador de direccionamiento indirecto: * | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409130"
 ---
 # <a name="indirection-operator-"></a>Operador de direccionamiento indirecto: *
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 * cast-expression  
 ```  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  El operador de direccionamiento indirecto se puede utilizar de manera acumulativa para desreferenciar punteros a punteros. Por ejemplo:  
   
-```  
+```cpp 
 // expre_Indirection_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate indirection operator  
@@ -70,6 +70,6 @@ int main() {
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)   
- [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operador Address-of: &](../cpp/address-of-operator-amp.md)   
  [Operadores de direccionamiento indirecto y address-of](../c-language/indirection-and-address-of-operators.md)

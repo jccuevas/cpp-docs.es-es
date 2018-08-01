@@ -1,5 +1,5 @@
 ---
-title: Portabilidad en los límites de ABI (C++ moderno) | Documentos de Microsoft
+title: Portabilidad en los límites de ABI (C++ moderno) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c214ed18e5afec51f52514abdd73e0e5b658635a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb9ce8012db8617afc7af3183bd7439ddeb8fab7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419671"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402356"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Portabilidad en los límites de ABI (C++ moderno)
-Usan convenciones y tipos lo suficientemente portables en los límites de la interfaz binaria. Un "tipo portátil" es un tipo integrado de C o un struct que contiene solo tipos integrados de C. Tipos de clase solo pueden usarse al llamador y destinatario equipos acuerdan el diseño, etcetera, de convención de llamada. Esto solo es posible si ambos se compilan con el mismo compilador y la configuración del compilador.  
+Usar tipos lo suficientemente portátiles y convenciones en los límites de la interfaz binaria. Un "tipo portátil" es un tipo integrado de C o un struct que contiene solo tipos integrados de C. Tipos de clase solo pueden utilizarse al llamador y destinatario de acuerdo en el diseño, una llamada a la convención, etcetera. Esto solo es posible cuando se compilan con el mismo compilador y la configuración del compilador.  
   
-## <a name="how-to-flatten-a-class-for-c-portability"></a>Cómo eliminar la estructura de una clase para la portabilidad de C  
- Cuando los autores de llamadas puede compilarse con otro compilador/idioma, a continuación, "acoplar" a un **extern "C"** API con una convención de llamada específica:  
+## <a name="how-to-flatten-a-class-for-c-portability"></a>Cómo eliminar el formato de una clase para la portabilidad de C  
+ Cuando los autores de llamadas puede compilarse con otro compilador/lenguaje, "aplanar" a un **extern "C"** API con una convención de llamada específica:  
   
 ```cpp  
 // class widget {  
@@ -40,6 +40,6 @@ extern "C" {        // functions using explicit "this"
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Aquí está otra vez C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [Bienvenido nuevamente a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)   
  [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 058979420e5bb1426879522e70ec8b1ac768d9cc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939317"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407408"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -61,6 +61,5 @@ El prefijo o postfijo **--** operador no se puede aplicar a una variable de este
  El **bool** tipo participa en promociones de enteros. Un valor r del tipo **bool** puede convertirse en un valor r del tipo **int**, con cada vez FALSE cero y TRUE como uno. Como un tipo distinto, **bool** participa en la resolución de sobrecarga.  
   
 ## <a name="see-also"></a>Vea también
-
-[Palabras clave](../cpp/keywords-cpp.md)<br/>
-[Tipos fundamentales](../cpp/fundamental-types-cpp.md)<br/>
+[Palabras clave](../cpp/keywords-cpp.md)  
+[Tipos fundamentales](../cpp/fundamental-types-cpp.md)  

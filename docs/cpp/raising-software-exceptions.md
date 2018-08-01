@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944703"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405193"
 ---
 # <a name="raising-software-exceptions"></a>Generar excepciones de software
 El sistema no marca como excepciones algunos de los orígenes de errores de programa más comunes. Por ejemplo, si intenta asignar un bloque de memoria pero no hay memoria insuficiente, el tiempo de ejecución o la función de API no provoca una excepción, sino que devuelve un código de error.  
@@ -60,7 +60,7 @@ El sistema no marca como excepciones algunos de los orígenes de errores de prog
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
- Después de definir un código de excepción, puede usarlo para provocar una excepción. Por ejemplo, el código siguiente provoca la excepción de STATUS_INSUFFICIENT_MEM en respuesta a un problema de asignación de memoria:  
+ Después de definir un código de excepción, puede usarlo para provocar una excepción. Por ejemplo, el código siguiente genera la `STATUS_INSUFFICIENT_MEM` excepción en respuesta a un problema de asignación de memoria:  
   
 ```cpp 
 lpstr = _malloc( nBufferSize );  

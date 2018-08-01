@@ -1,5 +1,5 @@
 ---
-title: Conceptos básicos (C++) | Documentos de Microsoft
+title: Conceptos básicos (C++) | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17eb18438f4b39c7f07d144dad2c16db2f49553b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52e1dcd3ab6697a2d4643389d1a70cda86b04f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409581"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403581"
 ---
 # <a name="basic-concepts--c"></a>Conceptos básicos (C++)
 En esta sección se explican conceptos necesarios para entender C++. Los programadores de C estarán familiarizados con muchos de estos conceptos, pero hay algunas diferencias sutiles que pueden producir resultados inesperados del programa. Se incluyen los temas siguientes:  
   
 -   [Declaraciones y definiciones](../cpp/declarations-and-definitions-cpp.md)  
   
--   [Ámbito de una función o un objeto de C++](../cpp/scope-visual-cpp.md)  
+-   [Ámbito de un objeto de C++ o la función](../cpp/scope-visual-cpp.md)  
   
 -   [Reglas de definición y vinculación de programa](../cpp/program-and-linkage-cpp.md)  
   
@@ -40,7 +40,7 @@ En esta sección se explican conceptos necesarios para entender C++. Los program
   
 -   [alignof y alignas](../cpp/alignof-and-alignas-cpp.md)  
   
--   [Trivial, diseño estándar y los tipos POD](../cpp/trivial-standard-layout-and-pod-types.md)  
+-   [Trivial, diseño estándar y tipos POD](../cpp/trivial-standard-layout-and-pod-types.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)

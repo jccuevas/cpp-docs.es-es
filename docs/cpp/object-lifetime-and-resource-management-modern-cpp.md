@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941556"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406047"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Duración de objetos y administración de recursos (C++ moderno)
 A diferencia de los lenguajes administrados, C++ no tiene la colección de elementos no utilizados (GC), lo que automáticamente libera los recursos de memoria no más-usados mientras se ejecuta un programa. En C++, administración de recursos está directamente relacionado con duración de objetos. Este documento describe los factores que afectan a la duración del objeto en C++ y cómo administrarlos.  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  Use `unique_ptr` para una propiedad única, por ejemplo, en el *pimpl* modismo. (Consulte [Pimpl para encapsulación en tiempo de compilación](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Realizar una `unique_ptr` el objetivo principal de todos explícitos **nuevo** expresiones.  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  Cuando se requiere la optimización del rendimiento, es posible que deba usar *bien encapsulado* propietario punteros y las llamadas explícitas a eliminar. Un ejemplo es cuando implementa su propia estructura de datos de bajo nivel.  

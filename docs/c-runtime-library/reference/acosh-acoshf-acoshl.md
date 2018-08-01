@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 546006fcf1c559317b4afff424976db8109442e7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392788"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404757"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -66,14 +66,14 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*x*  
 Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **acosh** funciones devuelven el coseno hiperbólico inverso (arco coseno hiperbólico) de *x*. Estas funciones son válidas en el dominio *x* ≥ 1. Si *x* es menor que 1, **errno** está establecido en **EDOM** y el resultado es un valor NaN reservado. Si *x* es un NaN reservado, indefinido o infinito, se devuelve el mismo valor.
+El **acosh** funciones devuelven el coseno hiperbólico inverso (arco coseno hiperbólico) de *x*. Estas funciones son válidas en el dominio *x* ≥ 1. Si *x* es menor que 1, `errno` está establecido en `EDOM` y el resultado es un valor NaN. Si *x* es un NaN reservado, indefinido o infinito, se devuelve el mismo valor.
 
-|Entrada|Excepción SEH|**_matherr** (excepción)|
+|Entrada|Excepción SEH|Excepción de`_matherr` |
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|ninguna|ninguna|
 |*x* < 1|ninguna|ninguna|
@@ -120,9 +120,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>Vea también
 
-[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
-[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>
+[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)  
+[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)  
+[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)  
+[cosh, coshf, coshl](cosh-coshf-coshl.md)  
+[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)  
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)  

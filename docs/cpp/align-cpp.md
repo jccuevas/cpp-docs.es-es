@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940733"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405875"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -50,7 +50,7 @@ El compilador no garantiza ni intenta se conserve el atributo de alineación de 
 
 No puede especificar la alineación de los parámetros de funciones. Cuando los datos que tiene un atributo de alineación se pasan como un valor en la pila, la alineación se controla mediante la convención de llamada. Si la alineación de los datos es importante en la función llamada, copie el parámetro en la memoria alineada correctamente antes de su uso.
 
-Sin `__declspec(align(#))`, el compilador suele alinea los datos en los límites naturales basándose en el procesador de destino y el tamaño de los datos, hasta los límites de 4 bytes en procesadores de 32 bits y los límites de 8 bytes en procesadores de 64 bits. Los datos en clases o estructuras se alinean en la clase o estructura en el nivel mínimo de su alineación natural y el valor actual de empaquetado (desde #pragma **pack** o **/Zp** opción del compilador).
+Sin `__declspec(align(#))`, el compilador suele alinea los datos en los límites naturales basándose en el procesador de destino y el tamaño de los datos, hasta los límites de 4 bytes en procesadores de 32 bits y los límites de 8 bytes en procesadores de 64 bits. Los datos en clases o estructuras se alinean dentro de la clase o la estructura en el nivel mínimo de su alineación natural y el valor actual de empaquetado (desde #pragma `pack` o la opción `/Zp` del compilador).
 
 Este ejemplo muestra el uso de `__declspec(align(#))`:
 
@@ -179,7 +179,7 @@ void fn() {
 }
 ```
 
-La alineación cuando la memoria se asignó en el montón depende de qué función de asignación se invoque.  Por ejemplo, si usa **malloc**, el resultado depende del tamaño de operando. Si *arg* > = 8, la memoria devuelta es la alineación de 8 bytes. Si *arg* < 8, la alineación de la memoria devuelta es la primera potencia de 2 inferior a *arg*. Por ejemplo, si utiliza malloc(7), la alineación es de 4 bytes.
+La alineación cuando la memoria se asignó en el montón depende de qué función de asignación se invoque.  Por ejemplo, si utiliza `malloc`, el resultado depende del tamaño de operando. Si *arg* > = 8, la memoria devuelta es la alineación de 8 bytes. Si *arg* < 8, la alineación de la memoria devuelta es la primera potencia de 2 inferior a *arg*. Por ejemplo, si utiliza malloc(7), la alineación es de 4 bytes.
 
 ##  <a name="vclrf_declspecaligntypedef"></a> Definir tipos nuevos con __declspec(align(#))
 
@@ -219,9 +219,9 @@ __declspec(thread) struct S9 a;
 
 ##  <a name="vclrfhowalignworkswithdatapacking"></a> Cómo alinear trabajos con empaquetado de datos
 
-El **/Zp** opción del compilador y el **pack** pragma tienen el efecto de empaquetar los datos para los miembros de estructura y unión. Este ejemplo se muestra cómo **/Zp** y `__declspec(align(#))` funcionan conjuntamente:
+El `/Zp` opción del compilador y el `pack` pragma tienen el efecto de empaquetar los datos para los miembros de estructura y unión. Este ejemplo se muestra cómo `/Zp` y `__declspec(align(#))` funcionan conjuntamente:
 
-```c[[]]
+```cpp
 struct S {
    char a;
    short b;
@@ -232,7 +232,7 @@ struct S {
 };
 ```
 
-En la tabla siguiente se muestra el desplazamiento de cada miembro en una variedad de **/Zp** (o #pragma **pack**) valores, mostrando cómo interactúan las dos.
+En la tabla siguiente se muestra el desplazamiento de cada miembro bajo diversos valores de `/Zp` (o #pragma `pack`), mostrando cómo interactúan ambos.
 
 |Variable|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -251,7 +251,6 @@ El desplazamiento de un objeto se basa en el desplazamiento del objeto anterior 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
-
 [__declspec](../cpp/declspec.md)  
 [Información general sobre las convenciones ABI de ARM](../build/overview-of-arm-abi-conventions.md)  
 [Información general sobre las convenciones de llamada x64](../build/overview-of-x64-calling-conventions.md)  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6021de0e012797b811fa032547f2b95142176cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1a878fe1c18889c1abfef995786ffcc9a267981
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944516"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404059"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operadores de incremento y decremento postfijos: ++ y --
 ## <a name="syntax"></a>Sintaxis  
@@ -46,7 +46,7 @@ postfix-expression --
 i++;  
 ```  
   
- La aplicación del operador de incremento de postfijo (`++`) tiene como efecto que el valor del operando se incrementa en una unidad del tipo adecuado. De forma similar, el efecto de aplicar el operador de decremento de postfijo (**--**) es que el valor del operando se reduce en una unidad del tipo adecuado.  
+ El efecto de aplicar el operador de incremento de postfijo (**++**) es que el valor del operando se incrementa en una unidad del tipo adecuado. De forma similar, el efecto de aplicar el operador de decremento de postfijo (**--**) es que el valor del operando se reduce en una unidad del tipo adecuado.  
   
  Es importante tener en cuenta que se incremente un sufijo o decremento expresión se evalúa como el valor de la expresión *anteriores a* de aplicar el operador correspondiente. Se produce la operación de incremento o decremento *después* el operando se evalúa. El problema surge solo cuando la operación de incremento o decremento de postfijo se da en el contexto de una expresión mayor.  
   

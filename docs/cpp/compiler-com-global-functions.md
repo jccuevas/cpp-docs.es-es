@@ -1,5 +1,5 @@
 ---
-title: Funciones globales COM del compilador | Documentos de Microsoft
+title: Funciones globales COM del compilador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4116d82ef38d7aaab29fe682e0881ac2e2ff5903
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa138b045fcb5851a65b68d898b99a8cab269f6e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412194"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402538"
 ---
 # <a name="compiler-com-global-functions"></a>Funciones globales COM de compilador
 **Específicos de Microsoft**  
@@ -29,10 +29,10 @@ ms.locfileid: "32412194"
   
 |Función|Descripción|  
 |--------------|-----------------|  
-|[_com_raise_error](../cpp/com-raise-error.md)|Produce una [_com_error](../cpp/com-error-class.md) en respuesta a un error.|  
+|[_com_raise_error](../cpp/com-raise-error.md)|Se produce un [_com_error](../cpp/com-error-class.md) en respuesta a un error.|  
 |[_set_com_error_handler](../cpp/set-com-error-handler.md)|Reemplaza la función predeterminada que se utiliza para el control de errores de COM.|  
-|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|Convierte un `BSTR` valor a un **char \*** .|  
-|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|Convierte un **char \***  valor a un `BSTR`.|  
+|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|Convierte un `BSTR` valor a un `char *`.|  
+|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|Convierte un `char *` valor a un `BSTR`.|  
   
 **FIN de Específicos de Microsoft**  
   

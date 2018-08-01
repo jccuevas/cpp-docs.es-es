@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 50a177468795ae0e288910fa51192d9cc9a24502
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939735"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403159"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operadores de desplazamiento a izquierda y derecha (&gt; &gt; y &lt; &lt;)
 Los operadores de desplazamiento bit a bit son el operador de desplazamiento a la derecha (>>), que mueve los bits de *shift-expression* hacia la derecha y el operador de desplazamiento a la izquierda (<<), que mueve los bits de *deexpresióndedesplazamiento* a la izquierda. <sup>1</sup>  
@@ -66,7 +66,6 @@ int main() {
     bitset<16> bitset3{short3};  
     cout << bitset3 << endl;  // 0000000000010000  
 }  
-  
 ```  
   
  Si desplaza a la izquierda un número con signo de modo que el bit de signo se vea afectado, el resultado es indefinido. En el ejemplo siguiente se muestra lo que ocurre en Visual C++ cuando un 1 bit se desplaza a la izquierda hasta la posición del bit de signo.  

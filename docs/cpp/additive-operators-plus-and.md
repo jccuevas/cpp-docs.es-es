@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944829"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402755"
 ---
 # <a name="additive-operators--and--"></a>Operadores de adición: + y -
 ## <a name="syntax"></a>Sintaxis  
@@ -115,7 +115,7 @@ for( int i = 0; i < 10; ++i )
 >  El código con la forma `pIntArray = pIntArray + 1` raramente aparece en programas de C++; para realizar un incremento, son preferibles estas formas: `pIntArray++` o `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Resta de puntero  
- Si ambos operandos son punteros, el resultado de la resta es la diferencia (en elementos de matriz) entre los operandos. La expresión de resta produce un resultado entero con signo de tipo **ptrdiff_t** (definido en el archivo de inclusión estándar \<stddef.h >).  
+ Si ambos operandos son punteros, el resultado de la resta es la diferencia (en elementos de matriz) entre los operandos. La expresión de resta produce un resultado entero con signo de tipo `ptrdiff_t` (definido en el archivo de inclusión estándar \<stddef.h >).  
   
  Uno de los operandos puede ser de tipo entero, siempre y cuando sea el segundo operando. El resultado de la resta es del mismo tipo que el puntero original. El valor de la resta es un puntero a la (*n* - *i*) elemento de la matriz de n, donde *n* es el elemento al que señala el puntero original y *i* es el valor entero del segundo operando.  
   

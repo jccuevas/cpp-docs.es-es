@@ -1,5 +1,5 @@
 ---
-title: Operadores de acceso a miembro:. y -&gt; | Documentos de Microsoft
+title: Operadores de acceso a miembro:. y -&gt; | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2958291551d081b4284c6683d62f6dd5de06f70d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408790"
 ---
 # <a name="member-access-operators--and--gt"></a>Operadores de acceso a miembro:. y -&gt;
 ## <a name="syntax"></a>Sintaxis  
@@ -43,14 +44,14 @@ postfix-expression -> name
   
  Hay dos formas de expresiones de acceso de miembro:  
   
-1.  En la primera forma, *postfix-expression* representa un valor de la estructura, clase o tipo de unión, y *nombre* nombra un miembro de la estructura especificada, unión o clase. El valor de la operación es de *nombre* y es un valor l si *postfix-expression* es un valor l.  
+1.  En la primera forma, *postfix-expression* representa un valor de tipo de unión, clase o struct y *nombre* nombra un miembro de la estructura especificada, unión o clase. El valor de la operación es de *nombre* y es un valor l si *postfix-expression* es un valor l.  
   
 2.  En la segunda forma, *postfix-expression* representa un puntero a una estructura, unión o clase, y *nombre* nombra un miembro de la estructura especificada, unión o clase. El valor es el de *nombre* y es un valor l. El **->** operador de desreferencia el puntero. Por lo tanto, las expresiones * e ***->** `member` y **(\****e***)**.`member` (donde *e* representa un puntero) producen resultados idénticos (excepto cuando los operadores **->** o **\*** están sobrecargados).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestran dos formas del operador de acceso a miembros.  
   
-```  
+```cpp 
 // expre_Selection_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -84,6 +85,6 @@ int main() {
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones de postfijo](../cpp/postfix-expressions.md)   
- [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Clases y estructuras](../cpp/classes-and-structs-cpp.md)   
  [Miembros de estructura y de unión](../c-language/structure-and-union-members.md)

@@ -1,5 +1,5 @@
 ---
-title: Acceso a miembros | Documentos de Microsoft
+title: Acceso a miembros | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8896e473f1a419f24636d7c503924b51426be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99f65d2b03f54eb16db56bf81948aadfb184cfa1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420096"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402372"
 ---
 # <a name="member-access"></a>Acceso a miembros
-Acceso a miembros de clase puede controlarse mediante la sobrecarga el operador de acceso de miembro (**->**). Este operador se considera un operador unario en este uso, y la función de operador sobrecargado debe ser una función miembro de clase. Por lo tanto, la declaración de una función de ese tipo es:  
+Acceso a miembros de clase puede controlarse mediante la sobrecarga del operador de acceso de miembro (**->**). Este operador se considera un operador unario en este uso, y la función de operador sobrecargado debe ser una función miembro de clase. Por lo tanto, la declaración de una función de ese tipo es:  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 class-type *operator->()  
 ```  
   

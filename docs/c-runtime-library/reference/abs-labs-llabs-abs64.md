@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc426bbbc28e6eb3b7e6e4a0fa9fab7e74f62093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391758"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408133"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 
@@ -76,24 +76,24 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*n*<br/>
+*n*  
 Valor numérico.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **abs**, **laboratorios**, **llabs** y **_abs64** funciones devuelven el valor absoluto del parámetro *n*. No se devuelve ningún error.
+El **abs**, **labs**, **llabs** y **_abs64** funciones devuelven el valor absoluto del parámetro *n*. No se devuelve ningún error.
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **abs** que toman y devuelven **largo**, **largo** **largo**,  **float**, **doble**, y **largo** **doble** valores. Estas sobrecargas se definen en el encabezado \<cmath>. En un programa C, **abs** siempre toma y devuelve un valor int.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **abs** que toman y devuelven **largo**, **largo** **largo**,  **float**, **doble**, y **largo** **doble** valores. Estas sobrecargas se definen en el encabezado \<cmath>. En un programa C, **abs** siempre toma y devuelve un **int**.
 
-**Microsoft Specific**: dado que el intervalo de enteros negativos que se puede representar mediante el uso de cualquier tipo entero es mayor que el intervalo de números enteros positivos que puede representarse mediante el uso de ese tipo, es posible proporcionar un argumento a estas funciones que no se puede convertir. Si el valor absoluto del argumento no puede estar representado por el tipo de valor devuelto, el **abs** funciones devuelven el valor del argumento sin cambios. En concreto, `abs(INT_MIN)` devuelve **INT_MIN**, `labs(LONG_MIN)` devuelve **LONG_MIN**, `llabs(LLONG_MIN)` devuelve **LLONG_MIN**, y `_abs64(_I64_MIN)` Devuelve **_I64_MIN**. Esto significa que la **abs** funciones no se puede usar para garantizar que un valor positivo.
+**Microsoft Specific**: dado que el intervalo de enteros negativos que puede representarse mediante cualquier tipo entero es mayor que el intervalo de enteros positivos que se pueden representar usando ese tipo, es posible proporcionar un argumento a estas funciones que no se puede convertir. Si el valor absoluto del argumento no puede representarse mediante el tipo de valor devuelto, el **abs** funciones devuelven el valor del argumento sin modificar. En concreto, `abs(INT_MIN)` devuelve `INT_MIN`, `labs(LONG_MIN)` devuelve `LONG_MIN`, `llabs(LLONG_MIN)` devuelve `LLONG_MIN` y `_abs64(_I64_MIN)` devuelve `_I64_MIN`. Esto significa que el **abs** funciones no se puede usar para garantizar un valor positivo.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C necesario|Encabezado C++ necesario|
 |-------------|-----------------------|---------------------------|
-|**ABS**, **laboratorios**, **llabs**|\<math.h> o \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> o \<math.h>|
+|**ABS**, **labs**, **llabs**|\<math.h> o \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> o \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> o \<stdlib.h>|
 
 Para usar las versiones sobrecargadas de **abs** en C++, debe incluir el \<cmath > encabezado.
@@ -157,8 +157,8 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 
 ## <a name="see-also"></a>Vea también
 
-[Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[_cabs](cabs.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
-[imaxabs](imaxabs.md)<br/>
+[Conversión de datos](../../c-runtime-library/data-conversion.md)  
+[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)  
+[_cabs](cabs.md)  
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)  
+[imaxabs](imaxabs.md)  

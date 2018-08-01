@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 74b79edb24396896a6c8a50965081e9466720ca4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944517"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407830"
 ---
 # <a name="event"></a>__event
 Declara un evento.  
@@ -31,7 +31,6 @@ Declara un evento.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 __event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
@@ -67,7 +66,7 @@ __event HRESULT OnClick(int* b, char* s);
  Consulte [control de eventos en C++ nativo](../cpp/event-handling-in-native-cpp.md) para código de ejemplo.  
   
 ## <a name="com-events"></a>Eventos COM  
- Los eventos COM son interfaces. Los parámetros de un método en una interfaz de origen de eventos deben ser `in` parámetros (pero esto no se aplica rigurosamente), porque un `out` parámetro no es útil cuando se realiza multidifusión. Se emitirá una advertencia de nivel 1 si usas un `out` parámetro.  
+ Los eventos COM son interfaces. Los parámetros de un método en una interfaz de origen de eventos deben ser *en* parámetros (pero esto no se aplica rigurosamente), porque un *out* parámetro no es útil cuando se realiza multidifusión. Se emitirá una advertencia de nivel 1 si usas un *out* parámetro.  
   
  El tipo de valor devuelto es normalmente HRESULT o **void**, pero puede ser cualquier tipo entero, incluidos **enum**. Cuando un evento usa un tipo de valor devuelto entero y un controlador de eventos devuelve un valor distinto de cero se produce un estado de error, en cuyo caso el evento que se provoca anula las llamadas a los otros delegados. Tenga en cuenta que el compilador marcará automáticamente una interfaz de origen del evento como un [origen](../windows/source-cpp.md) en el archivo IDL generado.  
   

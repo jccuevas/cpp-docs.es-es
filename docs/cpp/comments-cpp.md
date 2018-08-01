@@ -1,5 +1,5 @@
 ---
-title: Comentarios (C++) | Documentos de Microsoft
+title: Comentarios (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919c40dce53dd5d1c8847287099c61c3e1b229cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a412c2b4dd87bc3e8e3e1b77a524d2a5925aaf60
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411759"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405063"
 ---
 # <a name="comments-c"></a>Comentarios (C++)
-Un comentario es texto que el compilador omite pero que es útil para los programadores. Los comentarios se usan normalmente para anotar código para su referencia futura. El compilador los trata como si fueran espacios en blanco. Puede utilizar comentarios en las pruebas para desactivar algunas líneas de código; Sin embargo, `#if` / `#endif` directivas de preprocesador funcionan mejor para esto porque se puede encerrar el código que contiene comentarios, pero no se pueden anidar comentarios.  
+Un comentario es texto que el compilador omite pero que es útil para los programadores. Los comentarios se usan normalmente para anotar código para su referencia futura. El compilador los trata como si fueran espacios en blanco. Puede utilizar comentarios en las pruebas para desactivar algunas líneas de código inactivos; Sin embargo, `#if` / `#endif` las directivas de preprocesador funcionan mejor para esto porque se puede encerrar el código que contiene los comentarios, pero no se pueden anidar comentarios.  
   
  Los comentarios de C++ se escriben de una de las maneras siguientes:  
   

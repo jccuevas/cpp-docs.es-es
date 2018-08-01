@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0e9e3d7f16e40d41774dd1def89ef9bdd0ba1c82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944222"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404602"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t (Clase)
 **Específicos de Microsoft**  
   
- Un objeto `_com_ptr_t` encapsula un puntero de interfaz COM y se denomina puntero “inteligente”. Esta clase de plantilla administra la asignación de recursos y la desasignación con llamadas de función para la `IUnknown` funciones miembro: `QueryInterface`, `AddRef`, y `Release`.  
+ Un **_com_ptr_t** objeto encapsula un puntero de interfaz COM y se llama a un puntero "inteligente". Esta clase de plantilla administra la asignación de recursos y la desasignación con llamadas de función para la `IUnknown` funciones miembro: `QueryInterface`, `AddRef`, y `Release`.  
   
- Normalmente, la definición typedef proporcionada por la macro _COM_SMARTPTR_TYPEDEF hace referencia a un puntero inteligente. Esta macro toma un nombre de interfaz y el IID, y declara una especialización de `_com_ptr_t` con el nombre de la interfaz más un sufijo de `Ptr`. Por ejemplo:  
+ Normalmente, la definición typedef proporcionada por la macro _COM_SMARTPTR_TYPEDEF hace referencia a un puntero inteligente. Esta macro toma un nombre de interfaz y el IID y declara una especialización de **_com_ptr_t** con el nombre de la interfaz más un sufijo de `Ptr`. Por ejemplo:  
   
 ```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- declara el `_com_ptr_t` especialización `IMyInterfacePtr`.  
+ declara el **_com_ptr_t** especialización `IMyInterfacePtr`.  
   
  Un conjunto de [plantillas de función](../cpp/relational-function-templates.md), no los miembros de esta plantilla de clase, admite las comparaciones con un puntero inteligente en el lado derecho del operador de comparación.  
   
@@ -42,7 +42,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Construye un objeto `_com_ptr_t`.|  
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Construye un **_com_ptr_t** objeto.|  
   
 ### <a name="low-level-operations"></a>Operaciones de bajo nivel  
   
@@ -61,7 +61,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[operador =](../cpp/com-ptr-t-operator-equal.md)|Asigna un nuevo valor a un objeto `_com_ptr_t` existente.|  
+|[operador =](../cpp/com-ptr-t-operator-equal.md)|Asigna un nuevo valor a una existente **_com_ptr_t** objeto.|  
 |[los operadores ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Comparar el objeto de puntero inteligente a otro puntero inteligente, puntero de interfaz sin formato, o NULL.|  
 |[Extractores de datos](../cpp/com-ptr-t-extractors.md)|Extrae el puntero de interfaz COM encapsulado.|  
   

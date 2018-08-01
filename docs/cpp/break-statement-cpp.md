@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 30910f6850fc3728ee101ab0662638fdebcd3775
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944498"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405449"
 ---
 # <a name="break-statement-c"></a>break (Instrucción) (C++)
 El **salto** instrucción finaliza la ejecución de la envolvente más próximo bucle o instrucción condicional en la que aparece. El control pasa a la instrucción que hay a continuación del final de la instrucción, si hay alguna.  

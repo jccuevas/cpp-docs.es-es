@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944247"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406872"
 ---
 # <a name="event-handling-in-com"></a>Control de eventos en COM
 En el control de eventos COM, configurar un receptor de origen y de eventos de eventos mediante el [event_source](../windows/event-source.md) y [event_receiver](../windows/event-receiver.md) atributos, respectivamente, especificando `type` = `com`. Estos atributos insertan el código adecuado para las interfaces personalizadas, de envío y duales para permitir que las clases a las que se aplican desencadenen eventos y los controlen a través de puntos de conexión de COM.  
   
 ## <a name="declaring-events"></a>Declarar eventos  
- En una clase de origen de eventos, use el [__event](../cpp/event.md) palabra clave en una declaración de interfaz para declarar los métodos de esa interfaz como eventos. Los eventos de esa interfaz se desencadenan cuando se llaman como métodos de interfaz. Métodos de las interfaces de eventos pueden tener cero o más parámetros (que deben ser todos `in` parámetros). El tipo de valor devuelto puede ser void o cualquier tipo entero.  
+ En una clase de origen de eventos, use el [__event](../cpp/event.md) palabra clave en una declaración de interfaz para declarar los métodos de esa interfaz como eventos. Los eventos de esa interfaz se desencadenan cuando se llaman como métodos de interfaz. Métodos de las interfaces de eventos pueden tener cero o más parámetros (que deben ser todos *en* parámetros). El tipo de valor devuelto puede ser void o cualquier tipo entero.  
   
 ## <a name="defining-event-handlers"></a>Definir controladores de eventos  
  En una clase de receptor de eventos, se definen los controladores de eventos, que son métodos con firmas (tipos de valor devuelto, convenciones de llamada y argumentos) que coinciden con el evento que van a controlar. Para los eventos COM, las convenciones de llamada no tiene que coincidir; consulte [eventos COM dependientes del diseño](#vcconeventhandlingincomanchorlayoutdependentcomevents) a continuación para obtener más información.  

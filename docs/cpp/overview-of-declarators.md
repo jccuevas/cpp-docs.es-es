@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208567"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404943"
 ---
 # <a name="overview-of-declarators"></a>Información general sobre los declaradores
 Los declaradores son los componentes de una declaración que especifican nombres de objetos o funciones. Los declaradores también especifican si el objeto con nombre es o no un objeto, puntero, referencia o matriz.  Aunque los declaradores no especifican el tipo base, modifican la información de tipo del tipo básico para especificar tipos derivados, como punteros, referencias y matrices.  Cuando se aplica a las funciones, el declarador funciona con el especificador de tipo para especificar completamente que el tipo de valor devuelto de una función es un objeto, puntero o referencia. (Los especificadores, se describe en [declaraciones y definiciones](declarations-and-definitions-cpp.md), transmiten propiedades tales como la clase de tipo y el almacenamiento. Modificadores, que se describe en esta sección y en [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md), modifican los declaradores.) En la ilustración siguiente se muestra una declaración completa de `MyFunction` y se llama a los componentes de la declaración.  
@@ -172,13 +172,11 @@ int a, *b, c[5], **d, &e=a;
   - declarador de puntero-(operador)   
   - (declarador)  
 
-  
 - y *puntero operador* es uno de:  
   
   - \* [calificador CV]  
   - & [calificador CV]:: especificador de nombre anidado \* [calificador CV]  
 
-  
  Dado que un declarador puede contener declaradores, es posible construir los tipos derivados más complejos, como matrices de punteros, funciones que devuelven matrices de punteros a función, mediante las reglas anteriores.  Para formar cada paso de la construcción, comience con el identificador que representa el tipo de datos base y aplique la regla de sintaxis anterior con la expresión anterior como `declarator`.  El orden de aplicación de las reglas de sintaxis debe ser el inverso de como se indica la expresión en inglés.  Si aplica el *puntero operador* regla de sintaxis en una expresión de matriz o función, utilice paréntesis si desea que un puntero a la matriz o función, como se muestra en la última fila de la tabla siguiente.  
   
  En el ejemplo siguiente, se muestra la construcción de “puntero a matriz de 10 punteros a int”.  

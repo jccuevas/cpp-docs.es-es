@@ -1,5 +1,5 @@
 ---
-title: Paso de argumentos y convenciones de nomenclatura | Documentos de Microsoft
+title: Paso de argumentos y convenciones de nomenclatura | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43aa3430b641f6333c6c35d618f9e9de123b7390
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e1a6a8e837a44a966f262f581db04f1589233c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413491"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404046"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Paso de argumentos y convenciones de nomenclatura
 **Específicos de Microsoft**  
@@ -42,9 +42,9 @@ ms.locfileid: "32413491"
 > [!NOTE]
 >  Cuando se devuelve un struct, una unión o una clase desde una función por valor, todas las definiciones del tipo deben ser iguales; de lo contrario, se puede producir un error en el programa en tiempo de ejecución.  
   
- Para obtener información sobre cómo definir su propio código de prólogo y epílogo de la función, vea [llamadas a funciones Naked](../cpp/naked-function-calls.md).  
+ Para obtener información sobre cómo definir su propio código de prólogo y epílogo de función, vea [llamadas a funciones Naked](../cpp/naked-function-calls.md).  
   
- Para obtener información sobre el valor predeterminado convenciones de llamada en el código que vea plataformas de destinos x64, [información general sobre x64 convenciones de llamada](../build/overview-of-x64-calling-conventions.md). Para obtener información acerca de problemas de la convención de llamada en el código que tiene como destino plataformas ARM, vea [problemas comunes de migración de ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md).  
+ Para obtener información sobre el valor predeterminado las convenciones de llamada en el código que x64 destinos, consulte [general de x64 convenciones de llamada](../build/overview-of-x64-calling-conventions.md). Para obtener información sobre cómo llamar a problemas de convención en el código que tiene como destino plataformas ARM, vea [problemas comunes de migración de ARM Visual C++](../build/common-visual-cpp-arm-migration-issues.md).  
   
  El compilador de Visual C/C++ admite las siguientes convenciones de llamada.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "32413491"
 |[__clrcall](../cpp/clrcall.md)|N/D|Carga parámetros en la pila de expresiones CLR en orden (de izquierda a derecha).|  
 |[__stdcall](../cpp/stdcall.md)|Destinatario|Inserta parámetros en la pila, en orden inverso (de derecha a izquierda)|  
 |[__fastcall](../cpp/fastcall.md)|Destinatario|Almacenado en los registros y luego insertado en la pila|  
-|[__thiscall](../cpp/thiscall.md)|Destinatario|Inserta en la pila; **esto** puntero almacenado en ECX|  
+|[__thiscall](../cpp/thiscall.md)|Destinatario|Insertado en la pila; **esto** puntero almacenado en ECX|  
 |[__vectorcall](../cpp/vectorcall.md)|Destinatario|Almacenado en registros y luego insertado en la pila en orden inverso (de derecha a izquierda)|  
   
  Para obtener información relacionada, consulte [convenciones de llamada obsoletas](../cpp/obsolete-calling-conventions.md).  

@@ -1,5 +1,5 @@
 ---
-title: __alignof (operador) | Documentos de Microsoft
+title: __alignof (operador) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,22 +22,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061557b4d017254584e8ddc3da0127f02d352720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6a7ab2eb5f33db2a62e745756971ee29f84c25c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408830"
 ---
 # <a name="alignof-operator"></a>__alignof (Operador)
-C++11 incluye por primera vez el operador `alignof`, que devuelve la alineación del tipo especificado en bytes. Para la máxima portabilidad, use el operador alignof en lugar del operador __alignof específico de Microsoft.  
+C ++ 11 incluye el **alignof** operador que devuelve la alineación, en bytes, del tipo especificado. Para la máxima portabilidad, use el operador alignof en lugar del operador __alignof específico de Microsoft.  
   
  **Específicos de Microsoft**  
   
- Devuelve un valor de tipo **size_t** que es el requisito de alineación del tipo.  
+ Devuelve un valor de tipo `size_t` que es el requisito de alineación del tipo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   __alignof( type )
 ```  
   
@@ -49,31 +50,31 @@ C++11 incluye por primera vez el operador `alignof`, que devuelve la alineación
 |**__alignof (char)**|1|  
 |**__alignof (corto)**|2|  
 |**__alignof (int)**|4|  
-|**__alignof ( \__int64)**|8|  
+|**__alignof ( \___int64)**|8|  
 |**__alignof (float)**|4|  
 |**__alignof (double)**|8|  
 |**__alignof (char\* )**|4|  
   
- El valor de `__alignof` es igual que el valor de `sizeof` para los tipos básicos. Considere, no obstante, este ejemplo:  
+ El **__alignof** valor es igual que el valor de `sizeof` para los tipos básicos. Considere, no obstante, este ejemplo:  
   
-```  
+```cpp 
 typedef struct { int a; double b; } S;  
 // __alignof(S) == 8  
 ```  
   
- En este caso, el valor de `__alignof` es el requisito de alineación del elemento más grande de la estructura.  
+ En este caso, el **__alignof** valor es el requisito de alineación del elemento más grande en la estructura.  
   
  De igual forma, para  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; } S;  
 ```  
   
  `__alignof(S)` es igual a `32`.  
   
- Un uso para `__alignof` sería como parámetro para una de sus propias rutinas de asignación de memoria. Por ejemplo, dada la siguiente estructura definida `S`, podría llamar a una rutina de asignación de memoria denominada `aligned_malloc` para asignar memoria en un límite de alineación determinado.  
+ Uno de los usos de **__alignof** sería como parámetro a uno de sus propias rutinas de asignación de memoria. Por ejemplo, dada la siguiente estructura definida `S`, podría llamar a una rutina de asignación de memoria denominada `aligned_malloc` para asignar memoria en un límite de alineación determinado.  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; double b; } S;  
 int n = 50; // array size  
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));  

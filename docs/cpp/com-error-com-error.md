@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec16faa9881fc1c69dca5f8f39b8797cf0fcff0d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c1389635c3ef026e8b3a7dfe13976cca58a15a82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944474"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406723"
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
 **Específicos de Microsoft**  
   
- Construye un objeto `_com_error`.  
+ Construye un **_com_error** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 _com_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = NULL,  
@@ -48,23 +47,23 @@ _com_error( const _com_error& that ) throw( );
  Objeto `IErrorInfo`.  
   
  `bool fAddRef=false`  
- Hace que el constructor llame a AddRef en un valor no null `IErrorInfo` interfaz. Esto proporciona un recuento de referencias correcto en el caso habitual de que la propiedad de la interfaz se pase al objeto `_com_error`, por ejemplo:  
+ Hace que el constructor llame a AddRef en un valor no null `IErrorInfo` interfaz. Esto proporciona para referencia correcta de recuento en el caso habitual donde la propiedad de la interfaz se pasa a la **_com_error** objetos, como:  
   
 ```cpp 
 throw _com_error(hr, perrinfo);  
 ```  
   
- Si no desea que su código para transferir la propiedad a la `_com_error` objeto y el `AddRef` es necesario para desplazar el `Release` en el `_com_error` destructor, construya el objeto como sigue:  
+ Si no desea que su código para transferir la propiedad a la **_com_error** objeto y el `AddRef` es necesario para desplazar el `Release` en el **_com_error** destructor, construya el objeto como se indica a continuación:  
   
 ```cpp 
 _com_error err(hr, perrinfo, true);  
 ```  
   
  *que*  
- Objeto `_com_error` existente.  
+ Existente **_com_error** objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- El primer constructor crea un nuevo objeto, dados un HRESULT y opcional `IErrorInfo` objeto. El segundo crea una copia de un objeto `_com_error` existente.  
+ El primer constructor crea un nuevo objeto, dados un HRESULT y opcional `IErrorInfo` objeto. El segundo crea una copia de una existente **_com_error** objeto.  
   
  **FIN de Específicos de Microsoft**  
   

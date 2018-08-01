@@ -1,5 +1,5 @@
 ---
-title: noalias | Documentos de Microsoft
+title: noalias | Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cbb5c1b4162f3326aade092c7e20ca42a825d13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56ee12f65ff9efe9f3b048d061b80aef691eb0f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420124"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404400"
 ---
 # <a name="noalias"></a>noalias
 
 **Específicos de Microsoft**
 
-`noalias` significa que una llamada de función no modifica ni hacer referencia a estado global visible y solo modifica la memoria que señala *directamente* en los parámetros de puntero (direccionamientos indirectos de primer nivel).
+**noalias** significa que una llamada de función no modifica ni hacer referencia a estado global visible y solo modifica la memoria designada *directamente* por los parámetros de puntero (direccionamientos indirectos de primer nivel).
 
-Si una función está marcada como `noalias`, el optimizador puede suponer que, además de los parámetros en sí mismos, dentro de la función solo se modifican los direccionamientos indirectos de primer nivel de los parámetros del puntero o se hace referencia a ellos. El estado global visible es el conjunto de todos los datos que no están definidos o a los que no se hace referencia fuera del ámbito de la compilación, y su dirección no se toma. El ámbito de la compilación es todos los archivos de origen ([/LTCG (generación de código de tiempo de vínculo)](../build/reference/ltcg-link-time-code-generation.md) compilaciones) o un archivo de origen único (no -**/LTCG** compilar).
+Si una función está anotada como **noalias**, el optimizador puede suponer que, además de los parámetros, direccionamientos indirectos de primer nivel solo de los parámetros de puntero se hace referencia o modifican dentro de la función. El estado global visible es el conjunto de todos los datos que no están definidos o a los que no se hace referencia fuera del ámbito de la compilación, y su dirección no se toma. El ámbito de la compilación es todos los archivos de origen ([/LTCG (generación de código de tiempo de vínculo)](../build/reference/ltcg-link-time-code-generation.md) compilaciones) o un archivo de origen único (que no sean de **/LTCG** compilar).
 
-El `noalias` anotación solo se aplica en el cuerpo de la función anotada. Al marcar una función como `__declspec(noalias)` no afecta a los alias de punteros devuelto por la función.
+El **noalias** anotación solo se aplica en el cuerpo de la función anotada. Al marcar una función como **__declspec (noalias)** no afecta a los alias de los punteros devueltos por la función.
 
 Para la anotación de otro que puede afectar al uso de alias, vea [__declspec (Restrict)](../cpp/restrict.md).
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente ejemplo muestra el uso de `__declspec(noalias)`.
+El ejemplo siguiente muestra el uso de **__declspec (noalias)**.
 
-Cuando la función `multiply` que se agreguen los accesos a memoria `__declspec(noalias)`, indica al compilador que esta función no modifica el estado global, excepto a través de los punteros en su lista de parámetros.
+Cuando la función `multiply` que se anota los accesos a memoria **__declspec (noalias)**, indica al compilador que esta función no modifica el estado global, excepto a través de los punteros en su lista de parámetros.
 
 ```C
 // declspec_noalias.c
@@ -109,7 +109,6 @@ int main()
 ```
 
 ## <a name="see-also"></a>Vea también
-
-[__declspec](../cpp/declspec.md)  
-[Palabras clave](../cpp/keywords-cpp.md)  
-[__declspec(restrict)](../cpp/restrict.md)  
+ [__declspec](../cpp/declspec.md)  
+ [Palabras clave](../cpp/keywords-cpp.md)  
+ [__declspec(restrict)](../cpp/restrict.md)  
