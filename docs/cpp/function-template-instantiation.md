@@ -1,5 +1,5 @@
 ---
-title: Crear instancias de plantillas de función | Documentos de Microsoft
+title: Crear instancias de plantillas de función | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6374dcd9dad263afd0961be91971d3283ba863ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e773fd8e2c38311a1c36aff4c97199cbebb503e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412129"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406486"
 ---
 # <a name="function-template-instantiation"></a>Crear instancias de plantillas de función
 Cuando se llama por primera vez a una plantilla de función para cada tipo, el compilador genera una creación de instancias. Cada creación de instancias es una versión de la función con plantilla especializada para el tipo concreto. Se llamará a esta creación de instancias cada vez que se use la función para el tipo. Si tiene varias creaciones de instancias idénticas, incluso en módulos diferentes, solo una copia de la creación de instancias terminará agregándose al archivo ejecutable.  

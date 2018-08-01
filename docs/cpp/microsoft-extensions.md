@@ -1,5 +1,5 @@
 ---
-title: Las extensiones de Microsoft | Documentos de Microsoft
+title: Las extensiones de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beac75a8a27fc4638b541228330e83e7b665fbcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419828"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408380"
 ---
 # <a name="microsoft-extensions"></a>Extensiones de Microsoft
 *instrucción de ASM*:  
- **__asm***instrucción de ensamblado* **;** participación    
+ **__asm***instrucción de ensamblado* **;** participar    
   
- **__asm {***lista de instrucciones de ensamblado***};** participación      
+ **__asm {***lista de instrucciones de ensamblado***};** participar      
   
  *lista de instrucciones de ensamblado*:  
- *instrucción de ensamblado* **;** participación  
+ *instrucción de ensamblado* **;** participar  
   
- *instrucción de ensamblado* **;** *lista de instrucciones de ensamblado* **;** participación  
+ *instrucción de ensamblado* **;** *lista de instrucciones de ensamblado* **;** participar  
   
- *MS-modificador-list*:  
- *MS-modificador ms-modificador-list*participar  
+ *modificador-MS-list*:  
+ *modificador de MS-ms-modificador-list*participar  
   
- *modificador de MS*:  
+ *MS-modifier*:  
  **__cdecl**  
   
  **__fastcall**  
@@ -50,7 +50,7 @@ ms.locfileid: "32419828"
   
  *en función de modificador*  
   
- *modificador según*:  
+ *en función de modificador*:  
  **__based (** *en función de tipo* **)**  
   
  *en función de tipo*:  

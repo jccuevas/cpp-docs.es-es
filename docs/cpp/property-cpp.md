@@ -1,5 +1,5 @@
 ---
-title: propiedad (C++) | Documentos de Microsoft
+title: propiedad (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4673101d41b896ed3fc19aa1998aa9329064b41
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409070"
 ---
 # <a name="property-c"></a>propiedad (C++)
 **Específicos de Microsoft**  
@@ -31,18 +32,17 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
    __declspec( property( get=get_func_name ) ) declarator  
    __declspec( property( put=put_func_name ) ) declarator  
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando el compilador ve un miembro de datos declarado con este atributo a la derecha de un operador de selección de miembro ("**.**"o"**->**"), convierte la operación a un **obtener** o **colocar** función, dependiendo de si una expresión es un valor l o un valor r. En contextos más complicados, como "`+=`", se realiza una reescritura usan ambos **obtener** y **colocar**.  
+ Cuando el compilador ve un miembro de datos declarado con este atributo a la derecha de un operador de selección de miembro ("**.**"o"**->**"), lo convierte a la operación un `get` o `put` función, dependiendo de si una expresión es un valor l o un valor r. En contextos más complicados, como "`+=`", se realiza una reescritura usan ambos `get` y `put`.  
   
  Este atributo se puede utilizar también en la declaración de una matriz vacía en una definición de clase o estructura. Por ejemplo:  
   
-```  
+```cpp 
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
@@ -52,7 +52,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // declspec_property.cpp  
 struct S {  
    int i;  

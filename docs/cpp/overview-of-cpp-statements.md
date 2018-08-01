@@ -1,5 +1,5 @@
 ---
-title: Información general sobre instrucciones de C++ | Documentos de Microsoft
+title: Información general sobre instrucciones de C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2858807816178115dd34c05d6c88c3dd6fecdee3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 426709857447d972365aa034059bcd34305d6d40
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421752"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402515"
 ---
 # <a name="overview-of-c-statements"></a>Información general sobre las instrucciones de C++
 Las instrucciones de C++ se ejecutan secuencialmente, excepto cuando una instrucción de expresión, una instrucción de selección, una instrucción de iteración o una instrucción de salto modifica específicamente esa secuencia.  
@@ -27,7 +27,6 @@ Las instrucciones de C++ se ejecutan secuencialmente, excepto cuando una instruc
  Las instrucciones pueden ser de los tipos siguientes:  
   
 ```  
-  
 labeled-statement  
 expression-statement  
 compound-statement  
@@ -36,10 +35,9 @@ iteration-statement
 jump-statement  
 declaration-statement  
 try-throw-catch  
-  
 ```  
   
- En la mayoría de los casos, la sintaxis de la instrucción de C++ es idéntica a la de ANSI C. La diferencia principal entre los dos es que en C, se permiten declaraciones solo al principio de un bloque; C++ agrega el *instrucción de declaración*, lo que elimina eficazmente esta restricción. Esto permite introducir variables en un punto del programa donde se puede calcular un valor de inicialización precalculado.  
+ En la mayoría de los casos, la sintaxis de instrucción de C++ es idéntica de ANSI C. La diferencia principal entre los dos es que en C, se permiten declaraciones solo al principio de un bloque; C++ agrega el *instrucción de declaración*, que elimina eficazmente esta restricción. Esto permite introducir variables en un punto del programa donde se puede calcular un valor de inicialización precalculado.  
   
  Declarar variables dentro de bloques también permite controlar con precisión el ámbito y la duración de esas variables.  
   

@@ -1,5 +1,5 @@
 ---
-title: NULL instrucción | Documentos de Microsoft
+title: NULL instrucción | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 624ff1051977804e6cefd97a813dce36cacdc3e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab391bb75dd6e7a2ef1ccf0951fa93770e6cd316
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408780"
 ---
 # <a name="null-statement"></a>NULL (Instrucción)
-La "instrucción null" es una instrucción de expresión con el *expresión* falta. Es útil cuando la sintaxis del lenguaje llama a una instrucción pero no a una evaluación de la expresión. Consta de un punto y coma.  
+La "instrucción null" es una instrucción de expresión con el *expresión* que faltan. Es útil cuando la sintaxis del lenguaje llama a una instrucción pero no a una evaluación de la expresión. Consta de un punto y coma.  
   
  Las instrucciones null se utilizan normalmente como marcadores de posición en instrucciones de iteración o como instrucciones en las que se colocan etiquetas al final de las instrucciones compuestas o funciones.  
   
  El siguiente fragmento de código muestra cómo copiar una cadena a otra e incorpora la instrucción null:  
   
-```  
+```cpp 
 // null_statement.cpp  
 char *myStrCpy( char *Dest, const char *Source )  
 {  

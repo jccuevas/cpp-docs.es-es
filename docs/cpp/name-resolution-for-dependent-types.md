@@ -1,5 +1,5 @@
 ---
-title: La resolución de nombres para los tipos dependientes | Documentos de Microsoft
+title: La resolución de nombres para los tipos dependientes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419916"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402691"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Resolución de nombres para los tipos dependientes
 Use **typename** para los nombres completos en definiciones de plantilla para indicar al compilador que el nombre completo dado identifica un tipo. Para obtener más información, consulte [typename](../cpp/typename.md).  
@@ -49,7 +49,7 @@ int main()
 Name resolved by using typename keyword.  
 ```  
   
- Búsqueda de nombres para los nombres dependientes examina los nombres en el contexto de la definición de plantilla, en el ejemplo siguiente, este contexto encontraría `myFunction(char)`y el contexto de la creación de instancias de plantilla. En el ejemplo siguiente, se crea una instancia de la plantilla en main; por lo tanto, la `MyNamespace::myFunction` visible desde el punto de creación de instancias y se ha seleccionado como la mejor coincidencia. Si `MyNamespace::myFunction` cambiase de nombre, se llamaría a `myFunction(char)` en su lugar.  
+ Búsqueda de nombres para los nombres dependientes examina los nombres en el contexto de la definición de plantilla, en el ejemplo siguiente, este contexto encontraría `myFunction(char)`y el contexto de la creación de instancias de plantilla. En el ejemplo siguiente, se crea una instancia de la plantilla en main; por lo tanto, el `MyNamespace::myFunction` es visible desde el punto de creación de instancias y se elige como la mejor coincidencia. Si `MyNamespace::myFunction` cambiase de nombre, se llamaría a `myFunction(char)` en su lugar.  
   
  Todos los nombres se resuelven como si fueran nombres dependientes. Sin embargo, recomendamos utilizar nombres completos si hay alguna posibilidad de conflicto.  
   
@@ -93,12 +93,12 @@ int main()
   
 ### <a name="output"></a>Salida  
   
-```  
+```Output  
 Int MyNamespace::myFunction  
 ```  
   
 ### <a name="template-disambiguation"></a>Desambiguación de plantilla  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] aplica las reglas del estándar C++98/03/11 para la desambiguación de la palabra clave “template”. En el ejemplo siguiente, Visual C++ 2010 aceptaría las líneas no conformes y las líneas que cumplen.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] acepta sólo las líneas que cumplen.  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] aplica las reglas del estándar C++98/03/11 para la desambiguación de la palabra clave “template”. En el ejemplo siguiente, Visual C++ 2010 aceptaría las líneas no conformes y las líneas que cumplen.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] acepta solo las líneas que cumplen.  
   
 ```cpp  
 #include <iostream>  

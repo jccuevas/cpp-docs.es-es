@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e6c3217360f504d2433551d6ad624a378f4403af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940123"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407977"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Cómo: Interfaz entre código excepcional y no excepcional
 En este artículo se describe cómo implementar el control de excepciones coherente en un módulo de C++ y cómo traducir esas excepciones a códigos de error, y vicecersa, en los límites de la excepción.  
@@ -161,7 +161,6 @@ int main ( int argc, char* argv[] )
         cout.copyfmt(state); // restore previous formatting  
     }  
 }  
-  
 ```  
   
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Llamar a código con excepciones desde código sin excepciones  
@@ -194,7 +193,6 @@ BOOL DiffFiles2(const string& file1, const string& file2)
     }   
     return FALSE;   
 }  
-  
 ```  
   
  Cuando se convierte de excepciones a códigos de error, un problema potencial se debe a que los códigos de error no contienen a menudo la riqueza de información que una excepción puede almacenar. Para solucionar este problema, puede proporcionar un **catch** bloque para cada tipo de excepción específico que se podría producir y realiza el registro para registrar los detalles de la excepción antes de que se convierte en un código de error. Este enfoque puede crear una gran cantidad de repetición del código si varias funciones usan el mismo conjunto de **catch** bloques. Es una buena forma de evitar la repetición del código mediante la refactorización de esos bloques en una función de utilidad privada que implementa el **intente** y **catch** bloquea y acepta un objeto de función que se invoca en el **intente** bloque. En cada función pública, pase el código a la función de utilidad como una expresión lambda.  
@@ -217,7 +215,6 @@ bool Win32ExceptionBoundary(Func&& f)
     }   
     return false;   
 }  
-  
 ```  
   
  En el ejemplo siguiente se muestra cómo escribir la expresión lambda que define el objeto de función (functor). Cuando usa una expresión lambda para definir un functor "alineado", este suele ser más fácil de leer de lo que sería si se escribe como un objeto de función con nombre.  
@@ -237,7 +234,6 @@ bool DiffFiles3(const string& file1, const string& file2)
         return true;   
     });   
 }  
-  
 ```  
   
  Para obtener más información sobre las expresiones lambda, vea [Expresiones lambda](../cpp/lambda-expressions-in-cpp.md).  

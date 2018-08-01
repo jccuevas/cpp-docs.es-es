@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aa741a794d0e6735ae2cecea07a87481abc18cec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944487"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404114"
 ---
 # <a name="pointers-c"></a>Punteros (C++)
 Los punteros se declaran mediante la siguiente secuencia.  
@@ -32,7 +32,7 @@ Los punteros se declaran mediante la siguiente secuencia.
 [ms-modifier] declarator ;  
 ```  
   
- donde se puede usar cualquier declarador de puntero válido para `declarator`.  La sintaxis de un declarador de puntero simple es la siguiente:  
+ donde se puede usar cualquier declarador de puntero válido para `declarator`. La sintaxis de un declarador de puntero simple es la siguiente:  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
@@ -249,8 +249,7 @@ int main() {
 ```  
   
 ```Output  
-  
-      a  
+a  
 45  
 d  
 a  

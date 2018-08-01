@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944823"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403146"
 ---
 # <a name="postfix-expressions"></a>Expresiones postfijas
 Las expresiones de postfijo constan de expresiones primarias o expresiones en las que los operadores de postfijo siguen una expresión primaria. Los operadores de postfijo se enumeran en la tabla siguiente.  
@@ -34,13 +34,12 @@ Las expresiones de postfijo constan de expresiones primarias o expresiones en la
 |[Operador de llamada de función](../cpp/function-call-operator-parens.md)|**( )**|  
 |[Operador de conversión explícita de tipos](../cpp/explicit-type-conversion-operator-parens.md)|*nombre de tipo* **)**|  
 |[Operador de acceso a miembros](../cpp/member-access-operators-dot-and.md)|**.** O **->**|  
-|[Operador de incremento de postfijo](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[Operador de incremento de postfijo](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|  
 |[Operador de decremento de postfijo](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  La sintaxis siguiente describe expresiones de postfijo posibles:  
   
 ```  
-  
 primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
@@ -51,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- En la expresión anterior, func es una expresión primaria, func(1) es una expresión de postfijo de función, func(1)->GetData es una expresión de postfijo que especifica un miembro de la clase, func (1)->GetData() es otra expresión de postfijo de función y la expresión completa es una expresión de postfijo que incrementa el valor devuelto de GetData.  El significado de la expresión completa es que la función que llama pasa 1 como argumento y obtiene un puntero a una clase como valor devuelto.  La llamada a GetValue() en esa clase incrementa después el valor devuelto.  
+ En la expresión anterior, `func` es una expresión primaria, `func(1)` es una expresión de postfijo de función, `func(1)->GetData` es una expresión de postfijo que especifica un miembro de la clase, `func(1)->GetData()` es otra expresión de postfijo de función y todo el contenido expresión es una expresión de postfijo que incrementa el valor devuelto de GetData.  El significado de la expresión completa es que la función que llama pasa 1 como argumento y obtiene un puntero a una clase como valor devuelto.  A continuación, llamar a `GetValue()` en esa clase, a continuación, incremente el valor devuelto.  
   
  Las expresiones enumeradas anteriormente son expresiones de asignación, lo que significa que el resultado de estas expresiones debe ser un valor R.  
   
@@ -191,7 +190,7 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- El programa anterior declara una función, `print`, que toma dos argumentos. Pero el segundo argumento, `terminator`, tiene un valor predeterminado, `"\n"`. En `main`, las dos primeras llamadas a `print` permitir que el segundo argumento predeterminado proporcione una nueva línea para finalizar la cadena impresa. La tercera llamada especifica un valor explícito para el segundo argumento. El resultado del programa es  
+ El programa anterior declara una función, `print`, que toma dos argumentos. Sin embargo, el segundo argumento, *terminador*, tiene un valor predeterminado, `"\n"`. En `main`, las dos primeras llamadas a `print` permitir que el segundo argumento predeterminado proporcione una nueva línea para finalizar la cadena impresa. La tercera llamada especifica un valor explícito para el segundo argumento. El resultado del programa es  
   
 ```Output 
 hello,  

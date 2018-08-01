@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a445e9c435f9e077899a2a473dc5862f98a36bf4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944547"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405524"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Literales numéricos, booleanos y puntero (C++)
 Un literal es un elemento de programa que representa directamente un valor. En este artículo se tratan los literales de tipo entero, de punto flotante, booleanos y de puntero. Para obtener información sobre los literales de cadena y carácter, vea [cadenas y literales de carácter (C++)](../cpp/string-and-character-literals-cpp.md). También puede definir sus propios literales basándose en cualquiera de estas categorías; Para obtener más información, consulte [literales definidos por el usuario (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -33,7 +33,6 @@ const int answer = 42; // integer literal
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
 MyClass* mc = nullptr;      // pointer literal  
-  
 ```  
   
  A veces es importante indicar al compilador cómo interpretar un literal o qué tipo específico debe darle. Esto se logra anexando prefijos o sufijos al literal. Por ejemplo, el prefijo 0x indica al compilador que interprete el número que sigue como un valor hexadecimal, por ejemplo 0x35. El sufijo ULL indica al compilador que trate el valor un **long long sin signo** tipo, como en 5894345ULL. Consulte las siguientes secciones para obtener una lista completa de los prefijos y sufijos para cada tipo de literal.  
@@ -129,7 +128,6 @@ void func( long double );
  Un literal binario puede especificarse mediante el uso del prefijo `0B` o `0b` seguido por una secuencia de unos y ceros:  
   
 ```cpp 
-  
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
 ```  
@@ -140,7 +138,6 @@ auto y = 0b000001 ; // int
 ```cpp 
 if (num < 100)  
     return "Success";  
-  
 ```  
   
  En el ejemplo anterior podría ser mejor usar una constante con nombre que tenga un significado claro, como, por ejemplo, “MAXIMUM_ERROR_THRESHOLD”. Y si los usuarios finales ven el valor devuelto “Correcto”, sería mejor usar una constante de cadena con nombre que se pueda almacenar en una sola ubicación en un archivo desde el que se pueda localizar a otros idiomas. Además, usar constantes con nombre ayuda a comprender el objetivo del código a otras personas y a usted mismo.  

@@ -1,5 +1,5 @@
 ---
-title: Inicializar matrices | Documentos de Microsoft
+title: Inicializar matrices | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacd447d27f3dd8bd2d2d88e6d975cdb29a82026
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1ecb15cfc34ec518f46474497a3577a51b00c4e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408960"
 ---
 # <a name="initializing-arrays"></a>Inicializar matrices
 Si una clase tiene un constructor, las matrices de esa clase las inicializa un constructor. Si hay menos elementos en la lista de inicializadores que en la matriz, se usa el constructor predeterminado para los elementos restantes. Si no se define ningún constructor predeterminado para la clase, la lista de inicializadores debe estar completa (es decir, debe haber un inicializador para cada elemento de la matriz).  
   
  Considere la clase `Point`, que define dos constructores:  
   
-```  
+```cpp 
 // initializing_arrays1.cpp  
 class Point  
 {  
@@ -53,7 +54,7 @@ int main()
   
  Matrices miembro estático (si **const** o no) se pueden inicializar en sus definiciones (fuera de la declaración de clase). Por ejemplo:  
   
-```  
+```cpp 
 // initializing_arrays2.cpp  
 class WindowColors  
 {  
@@ -68,4 +69,3 @@ int main()
 {  
 }  
 ```  
-  

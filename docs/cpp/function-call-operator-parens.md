@@ -1,5 +1,5 @@
 ---
-title: 'Operador de llamada de función: () | Documentos de Microsoft'
+title: 'Operador de llamada de función: () | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1cdd4ec5dc556f0427914ca8ec746ad3ad2ccc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b0c4cde0c50064c5a88469e8f9061a0321902e4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409000"
 ---
 # <a name="function-call-operator-"></a>Operador de llamada de función: ()
 Una expresión de postfijo seguida del operador de llamada de función, **()**, especifica una llamada de función.  
@@ -39,31 +40,31 @@ postfix-expression
 ## <a name="remarks"></a>Comentarios  
  Los argumentos del operador de llamada de función son cero o más expresiones separadas por comas (los argumentos reales de la función).  
   
- El *postfix-expression* se debe evaluar como una dirección de función (por ejemplo, un identificador de función o el valor de un puntero a función), y *argument-expression-list* es una lista de expresiones (separadas por comas) cuyos valores (los argumentos) se pasan a la función. El elemento *argument-expression-list* puede estar vacío.  
+ El *postfix-expression* debe evaluarse como una dirección de función (por ejemplo, un identificador de función o el valor de un puntero a función) y *argument-expression-list* es una lista de expresiones (separadas por comas) cuyos valores (los argumentos) se pasan a la función. El elemento *argument-expression-list* puede estar vacío.  
   
  El *postfix-expression* debe ser de uno de estos tipos:  
   
 -   Una función que devuelve el tipo `T`. Una declaración de ejemplo es  
   
-    ```  
+    ```cpp 
     T func( int i )  
     ```  
   
 -   Un puntero a una función que devuelve el tipo `T`. Una declaración de ejemplo es  
   
-    ```  
+    ```cpp 
     T (*func)( int i )  
     ```  
   
 -   Una referencia a una función que devuelve el tipo `T`. Una declaración de ejemplo es  
   
-    ```  
+    ```cpp 
     T (&func)(int i)  
     ```  
   
 -   Una desreferencia de función de puntero a miembro que devuelve el tipo `T`. Estos son algunos ejemplos de llamadas de función:  
   
-    ```  
+    ```cpp 
     (pObject->*pmf)();  
     (Object.*pmf)();  
     ```  
@@ -71,7 +72,7 @@ postfix-expression
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se llama a la función de biblioteca estándar `strcat_s` con tres argumentos:  
   
-```  
+```cpp 
 // expre_Function_Call_Operator.cpp  
 // compile with: /EHsc  
   
@@ -104,7 +105,7 @@ Welcome to C++
 ## <a name="function-call-results"></a>Resultados de la llamada de función  
  Una llamada de función se evalúa como un valor R a menos que la función se declare como un tipo de referencia. Las funciones con tipo de valor devuelto de referencia se evalúan como valores L y se pueden utilizar en el lado izquierdo de una instrucción de asignación, de la manera siguiente:  
   
-```  
+```cpp 
 // expre_Function_Call_Results.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -134,11 +135,11 @@ int main()
 }  
 ```  
   
- El código anterior define una clase denominada `Point`, que contiene los datos privados que representan objetos *x* y *y* coordenadas. Estos objetos de datos se deben modificar y sus valores se deben recuperar. Este programa es solo uno de varios diseños para esa clase; el uso de las funciones `GetX` y `SetX` o `GetY` y `SetY` es otro diseño posible.  
+ El código anterior define una clase denominada `Point`, que contiene los datos privados a objetos que representan *x* y *y* coordenadas. Estos objetos de datos se deben modificar y sus valores se deben recuperar. Este programa es solo uno de varios diseños para esa clase; el uso de las funciones `GetX` y `SetX` o `GetY` y `SetY` es otro diseño posible.  
   
  Las funciones que devuelven tipos de clase, punteros a tipos de clase o referencias a tipos de clase se pueden utilizar como operando izquierdo para operadores de selección de miembros. Por consiguiente, el código siguiente es legal.  
   
-```  
+```cpp 
 // expre_Function_Results2.cpp  
 class A {  
 public:  
@@ -183,5 +184,5 @@ int main() {
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones de postfijo](../cpp/postfix-expressions.md)   
- [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Llamada a función](../c-language/function-call-c.md)   

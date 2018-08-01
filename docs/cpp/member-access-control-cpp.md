@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116baca2303807748a4d282acda81233ed32957
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28f0cedbe20ebea21b3b10e5016605c1bce51383
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957392"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407392"
 ---
 # <a name="member-access-control-c"></a>Control de acceso a miembros (C++)
 Controles de acceso le permiten separar el [pública](../cpp/public-cpp.md) interfaz de una clase desde el [privada](../cpp/private-cpp.md) los detalles de implementación y la [protegido](../cpp/protected-cpp.md) usando los miembros que son únicamente para clases derivadas. El especificador de acceso se aplica a todos los miembros declarados después de él hasta que se encuentra el especificador de acceso siguiente.  
@@ -42,7 +42,6 @@ private:                 // Declare private state variables.
 protected:      // Declare protected function for derived classes only.  
     Point ToWindowCoords();  
 };  
-  
 ``` 
   
  El acceso predeterminado es **privada** en una clase, y **pública** en una estructura o unión. Los especificadores de acceso de una clase se pueden usar cualquier número de veces en cualquier orden. La asignación de almacenamiento para objetos de tipos de clase depende de la implementación, pero se garantiza que a los miembros se les asignen direcciones de memoria sucesivamente superiores entre los especificadores de acceso.  

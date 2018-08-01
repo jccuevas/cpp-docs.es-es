@@ -1,5 +1,5 @@
 ---
-title: Abort (función) | Documentos de Microsoft
+title: Abort (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
 ms.technology:
@@ -14,17 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acfbb5a0790dec6f7b5770832cc6b09f69a28d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e5679ce718c564ee40fb07b676756ef79344a99
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408037"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403627"
 ---
 # <a name="abort-function"></a>abort (Función)
 
-El **anular** función, también se declaran en el archivo de inclusión estándar \<stdlib.h >, finaliza un programa de C++. La diferencia entre **salir** y **anular** es que **salir** permite el procesamiento de finalización de tiempo de ejecución de C++ que se realicen (objetos globales se llamará a los destructores), mientras que **anular** finaliza el programa inmediatamente. Para obtener más información, consulte [anular](../c-runtime-library/reference/abort.md) en el *referencia de la biblioteca de tiempo de ejecución*.
+El **anular** función, también se declaran en el archivo de inclusión estándar \<stdlib.h >, finaliza un programa de C++. La diferencia entre `exit` y **anular** es que `exit` permite el procesamiento de terminación de tiempo de ejecución de C++ que tenga lugar (objeto global se llamará a los destructores), mientras que **anular** finaliza el programa inmediatamente. Para obtener más información, consulte [anular](../c-runtime-library/reference/abort.md) en el *referencia de la biblioteca de tiempo de ejecución*.
 
 ## <a name="see-also"></a>Vea también
-
 [Finalización del programa](../cpp/program-termination.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 73c15cfb08bab96acf85bc517165926faced86ad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955470"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406196"
 ---
 # <a name="multiple-base-classes"></a>Varias clases base
 Una clase puede derivarse de más de una clase base. En un modelo de herencia múltiple (donde las clases se derivan de más de una clase base), las clases base se especifican utilizando el *base-list* elemento de gramática. Por ejemplo, se puede especificar la declaración de clase para `CollectionOfBook`, derivada de `Collection` y `Book`:  
@@ -97,9 +97,9 @@ Diseño de objeto con herencia virtual y no virtual
 > [!NOTE]
 >  La herencia virtual supone una importante ventaja con respecto al tamaño si se compara con la herencia no virtual. Sin embargo, puede agregar una sobrecarga de procesamiento.  
   
- Si una clase derivada reemplaza una función virtual que hereda de una clase base virtual y si un constructor o destructor para la clase derivada llama a esa función con un puntero a la clase base virtual, el compilador puede incluir campos "vtordisp" ocultos adicionales en clases con bases virtuales. La opción del compilador /vd0 suprime la adición del miembro oculto de desplazamiento del constructor/destructor de vtordisp. La opción del compilador /vd1, la predeterminada, los habilita cuando es necesario. Desactive los vtordisp solo si está seguro de que todos los constructores y destructores de clase llaman a funciones virtuales virtualmente.  
+ Si una clase derivada reemplaza una función virtual que hereda de una clase base virtual y si un constructor o destructor para la clase derivada llama a esa función con un puntero a la clase base virtual, el compilador puede incluir campos "vtordisp" ocultos adicionales en clases con bases virtuales. El `/vd0` opción del compilador suprime la adición del miembro de desplazamiento del constructor o destructor de vtordisp ocultos. El `/vd1` opción del compilador, el valor predeterminado, les permite donde son necesarios. Desactive los vtordisp solo si está seguro de que todos los constructores y destructores de clase llaman a funciones virtuales virtualmente.  
   
- La opción del compilador /vd afecta a un módulo de compilación completo. Use la **vtordisp** pragma para suprimir y, a continuación, volver a habilitar los campos de vtordisp clase por clase:  
+ El `/vd` opción del compilador afecta a un módulo de compilación completo. Use la `vtordisp` pragma suprimir y, a continuación, volver a `vtordisp` campos de cada clase por clase:  
   
 ```cpp 
 #pragma vtordisp( off )  

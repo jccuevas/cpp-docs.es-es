@@ -1,5 +1,5 @@
 ---
-title: Convenciones de llamada | Documentos de Microsoft
+title: Convenciones de llamada | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9e65dfd7f7cff25debd8eb0d00a7e3bb0397692
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4a8b77985a06a3898c525500b8a23eab9b54f87
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410897"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407350"
 ---
 # <a name="calling-conventions"></a>Convenciones de llamada
 El compilador de Visual C/C++ proporciona varias convenciones para llamar a funciones internas y externas. Conocer estos distintos enfoques puede ayudarle a depurar el programa y enlazar el código con rutinas de lenguaje de ensamblado.  
   
  Los temas sobre este asunto explican las diferencias entre las convenciones de llamada, cómo se pasan los argumentos y cómo las funciones devuelven valores. También explican las llamadas a función naked, una característica avanzada que permite escribir código de prólogo y epílogo propio.  
   
- Para obtener información sobre convenciones de llamada de x64 procesadores, consulte [la convención de llamada](../build/calling-convention.md).  
+ Para obtener información sobre las convenciones de llamada para x64 procesadores, consulte [la convención de llamada](../build/calling-convention.md).  
   
 ## <a name="topics-in-this-section"></a>Temas de esta sección  
   

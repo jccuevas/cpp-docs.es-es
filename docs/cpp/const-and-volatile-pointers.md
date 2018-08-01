@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63e2da6286e6a8e10ecf29a37ec9d74e9f1dfc0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944205"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408195"
 ---
 # <a name="const-and-volatile-pointers"></a>Punteros const y volatile
 El [const](../cpp/const-cpp.md) y [volátil](../cpp/volatile-cpp.md) palabras clave cambiar cómo se tratan los punteros. El **const** palabra clave especifica que el puntero no se puede modificar después de la inicialización; el puntero está protegido contra modificaciones a partir de entonces.  
@@ -70,7 +70,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error  
 ```  
   
- La declaración de `pch2` declara un puntero a través del cual podría modificarse un objeto constante y, por consiguiente, no se permite. La declaración de `pch3` especifica que el **puntero** es constante, no el objeto; la declaración no está permitida por la misma razón el `pch2` no se permite la declaración.  
+ La declaración de `pch2` declara un puntero a través del cual podría modificarse un objeto constante y, por consiguiente, no se permite. La declaración de `pch3` especifica que el puntero es constante, no el objeto; la declaración no está permitida por la misma razón el `pch2` no se permite la declaración.  
   
  Las ocho asignaciones siguientes muestran la asignación a través de un puntero y cómo se cambia el valor del puntero para las declaraciones anteriores; por ahora, supongamos que la inicialización era correcta para las declaraciones de `pch1` a `pch8`.  
   
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  La instrucción anterior declara una función, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), donde dos de los tres argumentos son de tipo puntero a **char**. Dado que los argumentos se pasan por referencia y no por valor, la función sería modificar libremente `strDestination` y `strSource` si `strSource` no se declaró como **const**. La declaración de `strSource` como **const** garantiza al llamador que `strSource` no se puede cambiar la función llamada.  
   
 > [!NOTE]
->  Dado que hay una conversión estándar de *typename* **\*** a **const** *typename* **\***, es legal para pasar un argumento de tipo **char \***  a [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Sin embargo, no es true; de lo contrario no existe ninguna conversión implícita para quitar el **const** atributo de un objeto o puntero.  
+>  Dado que hay una conversión estándar de *typename* **\*** a **const** *typename* **\***, es legal para pasar un argumento de tipo `char *` a [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Sin embargo, no es true; de lo contrario no existe ninguna conversión implícita para quitar el **const** atributo de un objeto o puntero.  
   
  Un **const** puntero de un tipo determinado se puede asignar a un puntero del mismo tipo. Sin embargo, un puntero que no es **const** no se puede asignar un **const** puntero. El código siguiente muestra las asignaciones correctas e incorrectas:  
   

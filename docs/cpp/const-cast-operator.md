@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ed2b161c5b8f73d68fb22eb29eb00e057d7029
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5ba0312b255b2957c815bb5f26c97a668d4f7b6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944559"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403029"
 ---
 # <a name="constcast-operator"></a>const_cast (Operador)
 Quita el **const**, **volátil**, y **__unaligned** atributos de una clase.  
@@ -29,17 +29,15 @@ Quita el **const**, **volátil**, y **__unaligned** atributos de una clase.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 const_cast <type-id> (expression)  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
  Un puntero a cualquier tipo de objeto o un puntero a un miembro de datos se puede convertir explícitamente a un tipo que es idéntico, salvo para la **const**, **volátil**, y **__unaligned** calificadores. Para los punteros y las referencias, el resultado hará referencia al objeto original. Para los punteros a miembros de datos, el resultado hará referencia al mismo miembro que el puntero original (sin convertir) al miembro de datos. Según el tipo del objeto al que se hace referencia, una operación de escritura a través del puntero, referencia o puntero a miembro de datos resultante podría generar un comportamiento indefinido.  
   
- No puede utilizar el operador `const_cast` para invalidar directamente el estado constante de una variable constante.  
+ No puede usar el **const_cast** operador para invalidar directamente el estado constante de una variable constante.  
   
- El operador `const_cast` convierte un valor de puntero NULL al valor de puntero NULL del tipo de destino.  
+ El **const_cast** operador convierte un valor de puntero nulo en el valor de puntero null del tipo de destino.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -72,7 +70,7 @@ int main() {
 }  
 ```  
   
- En la línea que contiene el `const_cast`, tipo de datos de la **esto** puntero es `const CCTest *`. El `const_cast` operador cambia el tipo de datos de la **esto** puntero a `CCTest *`, lo que permite el miembro `number` va a modificar. La conversión se produce únicamente para el resto de la instrucción en la que aparece.  
+ En la línea que contiene el **const_cast**, tipo de datos de la **esto** puntero es `const CCTest *`. El **const_cast** operador cambia el tipo de datos de la **esto** puntero a `CCTest *`, lo que permite el miembro `number` va a modificar. La conversión se produce únicamente para el resto de la instrucción en la que aparece.  
   
 ## <a name="see-also"></a>Vea también  
  [Operadores de conversión](../cpp/casting-operators.md)   

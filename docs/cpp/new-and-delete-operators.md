@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8f04962593dff13559f49f7f7c23014968c266
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940765"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406668"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new y delete
 
@@ -152,11 +152,11 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- Solo una de las dos formas anteriores puede estar presente para una clase determinada. El primer formulario toma un único argumento de tipo **void \*** , que contiene un puntero para el objeto que se va a desasignar. La segunda forma, desasignación de tamaño: toma dos argumentos, el primero de ellos es un puntero al bloque de memoria para desasignar y el segundo de los cuales es el número de bytes que se desasigne. Es el tipo de valor devuelto de ambas formas **void** (**operador delete** no puede devolver un valor).  
+ Solo una de las dos formas anteriores puede estar presente para una clase determinada. El primer formulario toma un único argumento de tipo `void *`, que contiene un puntero para el objeto que se va a desasignar. La segunda forma, desasignación de tamaño: toma dos argumentos, el primero de ellos es un puntero al bloque de memoria para desasignar y el segundo de los cuales es el número de bytes que se desasigne. Es el tipo de valor devuelto de ambas formas **void** (**operador delete** no puede devolver un valor).  
   
  La intención de la segunda forma es aumentar la velocidad de búsqueda de la categoría de tamaño correcto del objeto que se va a eliminar, que a menudo no se almacena junto a la asignación de sí mismo y probablemente no almacenado en caché; la segunda forma es especialmente útil cuando un **operador delete** función de una clase base se usa para eliminar un objeto de una clase derivada.  
   
- El **operador delete** función es estática; por lo tanto, no puede ser virtual. El `operator delete` función obedece el control de acceso, como se describe en [Control de acceso de miembro](../cpp/member-access-control-cpp.md).  
+ El **operador delete** función es estática; por lo tanto, no puede ser virtual. El **operador delete** función obedece el control de acceso, como se describe en [Control de acceso de miembro](../cpp/member-access-control-cpp.md).  
   
  El ejemplo siguiente se muestra definido por el usuario **new (operador)** y **operador delete** funciones diseñadas para registrar asignaciones y desasignaciones de memoria:  
   
@@ -229,4 +229,3 @@ void f() {
    delete [] pX;  
 }  
 ```  
-

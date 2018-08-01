@@ -1,5 +1,5 @@
 ---
-title: Punto de declaración en C++ | Documentos de Microsoft
+title: Punto de declaración en C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e42f43e6187e19df6e9c1111c0e92aa4b9929199
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89f94cdee6be18436b3f39f840fb7880e5860adb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409380"
 ---
 # <a name="point-of-declaration-in-c"></a>Punto de declaración en C++
 Se considera que un nombre se declara inmediatamente después de su declarador pero antes de su inicializador (opcional). (Para obtener más información sobre los declaradores, vea [declaraciones y definiciones](declarations-and-definitions-cpp.md).)  
   
  Considere este ejemplo:  
   
-```  
+```cpp 
 // point_of_declaration1.cpp  
 // compile with: /W1   
 double dVar = 7.0;  

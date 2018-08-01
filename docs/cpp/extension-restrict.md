@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e402fc9a32b92960f251796365199a608d6d1137
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1ed49662b28f2ac84fc8c53f677b2deada974d3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944858"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403510"
 ---
 # <a name="restrict"></a>__restrict
 Al igual que el **__declspec ( [restringir](../cpp/restrict.md) )** modificador, el **__restrict** palabra clave indica que un símbolo no tiene un alias en el ámbito actual. El **__restrict** palabra clave difiere el `__declspec ( restrict )` modificador de las maneras siguientes:  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32558413dd0dc6f7288493067d7373a14e520e29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1cefb6ba2fe076714b420024ec09464fd928b63d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944762"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406391"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Excepciones y desenredo de pila en C++
 En el mecanismo de excepciones de C++, el control se mueve desde la instrucción throw hasta la primera instrucción catch que puede controlar el tipo producido. Cuando se alcanza la instrucción catch, todas las variables automáticas que están en ámbito entre el inicio y la instrucción catch se destruyen en un proceso que se conoce como *desenredo de pila*. En el desenredo de la pila, la ejecución se desarrolla del modo siguiente:  
@@ -114,5 +114,4 @@ int main()
     Exiting main.  
   
 */  
-  
 ```  

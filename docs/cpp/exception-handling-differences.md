@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9c17c0abbd8286d05423ac52abc2e2109253f6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944522"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404628"
 ---
 # <a name="exception-handling-differences"></a>Diferencias en el control de excepciones
 La principal diferencia entre el control estructurado de excepciones y control de excepciones de C++ es que el modelo trata los tipos de control de excepciones de C++, mientras el C modelo de control de excepciones estructurado trata las excepciones de un tipo, en concreto,  **int sin signo**. Es decir, las excepciones de C se identifican mediante un valor entero sin signo, mientras que las excepciones de C++ se identifican mediante el tipo de datos. Cuando se produce una excepción en C, cada controlador posible ejecuta un filtro que examina el contexto de excepción de C y determina si debe aceptar la excepción, pasarla a otro controlador u omitirla. Cuando se produce una excepción en C++, puede ser de cualquier tipo.  
@@ -87,7 +87,6 @@ public:
       return nSE;  
    }  
 };  
-  
 ```  
   
  Para utilizar esta clase, se debe instalar una función personalizada de traducción de excepciones de C a la que llama el mecanismo de control de excepciones internas cada vez que se produce una excepción de C. Dentro de la función de traducción, se puede producir cualquier excepción con tipo (quizás un `SE_Exception` tipo o un tipo de clase derivada de `SE_Exception`) que se puede detectar mediante un C++ coincidente adecuado **catch** controlador. La función de traducción simplemente puede volver, lo que indica que no controló la excepción. Si la propia función de traducción provoca una excepción de C, [finalizar](../c-runtime-library/reference/terminate-crt.md) se llama.  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef56154f34f645b279ffccd99915d366388cb06
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 06a07c9d37994b4214da9b2eb53d02104525d7c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026707"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408117"
 ---
 # <a name="c-constant-expressions"></a>Expresiones constantes de C++
 Un *constante* valor es uno que no cambia. C++ proporciona dos palabras clave para que pueda expresar la intención de que un objeto no está pensado para ser modificado y aplicar dicha intención.  
@@ -53,7 +53,7 @@ const double Size = 11.0;
 char chArray[(int)Size];  
 ```  
   
-Las conversiones explícitas a tipos enteros son legales en expresiones constantes; el resto de tipos y los tipos derivados no son válidos excepto cuando se utilizan como operandos para el operador `sizeof`.  
+Las conversiones explícitas a tipos enteros son legales en expresiones constantes; todos los otros tipos y tipos derivados no son válidos excepto cuando se utilizan como operandos para el **sizeof** operador.  
   
 El operador de coma y los operadores de asignación no se pueden utilizar en expresiones constantes.  
   

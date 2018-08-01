@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73b70a68226be14b7e99afe125b3dcd8b6784601
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 673bceb5042a91361ece00360c4d9c5b140e4d00
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034821"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402704"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Cómo: Crear y usar instancias de weak_ptr
 A veces, un objeto debe almacenar una manera de obtener acceso al objeto subyacente de un `shared_ptr` sin provocar el recuento de referencias se incremente. Normalmente, esta situación se produce cuando hay referencias cíclicas entre `shared_ptr` instancias.  

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff66cb2efd1f095fee18e6db428b9f29c9f7812
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: cae12ecefebe81bf73ffdbc32c0ce253e726dda2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938946"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405047"
 ---
 # <a name="lambda-expression-syntax"></a>Sintaxis de la expresión lambda
 En este artículo se demuestra la sintaxis y los elementos estructurales de las expresiones lambda. Para obtener una descripción de las expresiones lambda, vea [expresiones Lambda](../cpp/lambda-expressions-in-cpp.md).  
@@ -84,16 +84,15 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ### <a name="comments"></a>Comentarios  
  En el ejemplo, el tercer argumento para el **for_each** función es una expresión lambda. La parte `[&evenCount]` especifica la cláusula capture de la expresión, `(int n)` especifica la lista de parámetros y la parte restante especifica el cuerpo de la expresión.  
   
 ## <a name="example-2-using-a-function-object"></a>Ejemplo 2: utilizar un objeto de función  
- En ocasiones, una expresión lambda sería demasiado difícil de extender mucho más allá del ejemplo anterior. En el ejemplo siguiente se usa un objeto de función en lugar de una expresión lambda, junto con el **for_each** función, para producir los mismos resultados que el ejemplo 1. Ambos ejemplos almacenan el recuento de números pares en un objeto `vector`. Para mantener el estado de la operación, la clase `FunctorClass` almacena la variable `m_evenCount` por referencia como una variable miembro. Para realizar la operación, `FunctorClass` implementa el operador de llamada a función, `operator()`. El compilador de Visual C++ genera código que es comparable en cuanto a tamaño y rendimiento al código con una expresión lambda del ejemplo 1. Si se trata de un problema básico como el de este artículo, probablemente el diseño lambda más simple sea mejor que el diseño de objeto de función. Sin embargo, si cree que la funcionalidad puede requerir una extensión importante en el futuro, utilice el diseño de objeto de función para que el mantenimiento del código sea más sencillo.  
+ En ocasiones, una expresión lambda sería demasiado difícil de extender mucho más allá del ejemplo anterior. En el ejemplo siguiente se usa un objeto de función en lugar de una expresión lambda, junto con el **for_each** función, para producir los mismos resultados que el ejemplo 1. Ambos ejemplos almacenan el recuento de números pares en un objeto `vector`. Para mantener el estado de la operación, la clase `FunctorClass` almacena la variable `m_evenCount` por referencia como una variable miembro. Para realizar la operación, `FunctorClass` implementa el operador de llamada de función, **operator()**. El compilador de Visual C++ genera código que es comparable en cuanto a tamaño y rendimiento al código con una expresión lambda del ejemplo 1. Si se trata de un problema básico como el de este artículo, probablemente el diseño lambda más simple sea mejor que el diseño de objeto de función. Sin embargo, si cree que la funcionalidad puede requerir una extensión importante en el futuro, utilice el diseño de objeto de función para que el mantenimiento del código sea más sencillo.  
   
- Para obtener más información sobre la `operator()`, consulte [llamadas a función](../cpp/function-call-cpp.md). Para obtener más información sobre la **for_each** de función, vea [for_each](../standard-library/algorithm-functions.md#for_each).  
+ Para obtener más información sobre la **operator()**, consulte [llamadas a función](../cpp/function-call-cpp.md). Para obtener más información sobre la **for_each** de función, vea [for_each](../standard-library/algorithm-functions.md#for_each).  
   
 ### <a name="code"></a>Código  
   
@@ -150,7 +149,6 @@ int main()
     cout << "There are " << evenCount  
         << " even numbers in the vector." << endl;  
 }  
-  
 ```  
   
 ## <a name="output"></a>Salida  
@@ -166,7 +164,6 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ## <a name="see-also"></a>Vea también  

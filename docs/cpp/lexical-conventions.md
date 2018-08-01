@@ -1,5 +1,5 @@
 ---
-title: Convenciones léxicas | Documentos de Microsoft
+title: Convenciones léxicas | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79588c700201a8b59053af3e0007216bfc8f4aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419134"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405914"
 ---
 # <a name="lexical-conventions"></a>Convenciones léxicas
 En esta sección se presentan los elementos fundamentales de un programa de C++. Estos elementos, denominados "elementos léxicos" o "tokens", se usan para construir instrucciones, definiciones, declaraciones, etc., que, a su vez, se usan para construir programas completos. Los elementos léxicos siguientes se tratan en esta sección:
@@ -45,5 +45,5 @@ En esta sección se presentan los elementos fundamentales de un programa de C++.
 - [Literales definidos por el usuario](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>Vea también
-- [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)
-- [Programa y vinculación](program-and-linkage-cpp.md)
+ [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)  
+ [Programa y vinculación](program-and-linkage-cpp.md)

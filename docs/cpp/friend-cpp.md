@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 931f9d7cc17afe974837c8a622b82c124ef6be57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942086"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407022"
 ---
 # <a name="friend-c"></a>friend (C++)
 En algunas circunstancias, es más cómodo conceder acceso de nivel de miembro a funciones que no son miembros de una clase o a todos los miembros de una clase independiente. Solo el implementador de la clase puede declarar cuáles son sus funciones o clases friend. Las funciones o clases no pueden hacerlo por sí mismas. En una definición de clase, use la **friend** palabra clave y el nombre de una función no miembro u otra clase para conceder acceso a los miembros privados y protegidos de su clase. En una definición de plantilla, se puede declarar un parámetro de tipo como un amigo.  
@@ -59,7 +59,7 @@ friend class F;
 friend F;  
 ```  
   
- El primer formulario presenta una nueva clase F si no se encontró ninguna clase existente con ese nombre en el espacio de nombres más interno.  **C ++ 11**: el segundo formulario no presenta una nueva clase; se puede usar cuando la clase ya se ha declarado y se debe usar cuando se declara un parámetro de tipo de plantilla o una definición de tipo como un amigo.  
+ El primer formulario presenta una nueva clase F si no se encontró ninguna clase existente con ese nombre en el espacio de nombres más interno. **C ++ 11**: el segundo formulario no presenta una nueva clase; se puede usar cuando la clase ya se ha declarado y se debe usar cuando se declara un parámetro de tipo de plantilla o una definición de tipo como un amigo.  
   
  Use `class friend F` cuando el tipo que se hace referencia no ha declarado:  
   

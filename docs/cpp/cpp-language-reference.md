@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: df532fca3c1ecbb19126a8692377517d240bd2f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954198"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408221"
 ---
 # <a name="c-language-reference"></a>Referencia del lenguaje C++
 Esta referencia explica el lenguaje de programación C++ tal como se implementa en Microsoft Visual C++. La organización se basa en *The Annotated C++ Reference Manual* de Margaret Ellis y Bjarne Stroustrup y en los estándares de internacionales de C++ de ANSI/ISO (ISO/IEC FDIS 14882). Se incluyen las implementaciones específicas de Microsoft de las características del lenguaje C++.  
@@ -59,16 +59,16 @@ Para obtener información general de las prácticas de programación de C++ mode
  Instrucciones de expresión, null, compuestas, de selección, de iteración, de salto y de declaración.  
   
  [Declaraciones y definiciones](declarations-and-definitions-cpp.md)  
- Especificadores de clase de almacenamiento, definiciones de función, inicializaciones, enumeraciones, declaraciones de class, struct y union y declaraciones de typedef. También, funciones insertadas, palabra clave const, espacios de nombres.  
+ Especificadores de clase de almacenamiento, las definiciones de función, inicializaciones, enumeraciones, **clase**, **struct**, y **unión** declaraciones, y **(typedef)**  declaraciones. Además, **inline** funciones, **const** palabra clave, los espacios de nombres.  
   
  [Las clases, estructuras y uniones](../cpp/classes-and-structs-cpp.md)  
- Introducción a las clases, estructuras y uniones. Además, las funciones miembro, funciones miembro especiales, los miembros de datos, los campos de bits, este puntero, clases anidadas.  
+ Introducción a las clases, estructuras y uniones. Además, las funciones de miembro, las funciones miembro especiales, los miembros de datos, campos de bits, **esto** puntero, clases anidadas.  
   
  [Clases derivadas](../cpp/inheritance-cpp.md)  
- Herencia sencilla y múltiple, funciones virtuales, clases base múltiples, clases abstractas, reglas de ámbito. Además, el __super y \_i_nterfaz las palabras clave.  
+ Herencia sencilla y múltiple, **virtual** funciones, clases base múltiples, **abstracta** clases, las reglas de ámbito. Además, el **__super** y **__interface** palabras clave.  
   
  [Control de acceso a miembros](../cpp/member-access-control-cpp.md)  
- Control del acceso a los miembros de clase: palabras clave públicas, privadas y protegidas. Funciones y clases friend.  
+ Controlar el acceso a los miembros de clase: **pública**, **privada**, y **protegido** palabras clave. Funciones y clases friend.  
   
  [La sobrecarga](operator-overloading.md)  
  Operadores sobrecargados, reglas de sobrecarga del operador.  
@@ -80,16 +80,16 @@ Para obtener información general de las prácticas de programación de C++ mode
  `#error` Directiva, el **static_assert** palabra clave, el `assert` macro.  
   
  [Templates](../cpp/templates-cpp.md) (Plantillas [C++])  
- Especificaciones de plantilla, plantillas de función, plantillas de clase, palabra clave typename, plantillas y macros, plantillas y punteros inteligentes.  
+ Especificaciones de plantilla, plantillas de función, plantillas de clase, **typename** palabra clave, plantillas y macros, plantillas y punteros inteligentes.  
   
  [Control de eventos](../cpp/event-handling.md)  
  Declaración de eventos y controladores de eventos.  
   
  [Modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md)  
- Modificadores específicos de Microsoft C++. La memoria de direccionamiento, convenciones de llamada, las funciones naked, atributos de clase de almacenamiento (__declspec), extendidos \__w64.  
+ Modificadores específicos de Microsoft C++. La memoria de direccionamiento, convenciones de llamada, **naked** funciones, atributos extendidos de clase de almacenamiento (**__declspec**), **__w64**.  
   
  [Ensamblador insertado](../assembler/inline/inline-assembler.md)  
- Uso del lenguaje de ensamblado y C++ en bloques __asm.  
+ Usando el lenguaje de ensamblado y C++ en **__asm** bloques.  
   
  [Compatibilidad con COM del compilador](../cpp/compiler-com-support.md)  
  Una referencia a las clases específicas de Microsoft y funciones globales utilizadas para admitir tipos COM.  

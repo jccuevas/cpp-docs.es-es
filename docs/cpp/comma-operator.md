@@ -1,5 +1,5 @@
 ---
-title: Operador coma:, | Documentos de Microsoft
+title: Operador coma:, | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8533012a921cbfb2861bcc7e1c5f2a6de81aadd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409190"
 ---
 # <a name="comma-operator-"></a>Operador coma: ,
 Permite agrupar dos instrucciones donde se espera una.  
@@ -28,7 +29,6 @@ Permite agrupar dos instrucciones donde se espera una.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 expression , expression  
 ```  
   
@@ -45,7 +45,7 @@ expression , expression
   
  En los contextos en los que normalmente se utiliza la coma como separador (por ejemplo, en argumentos reales para funciones o inicializadores de agregado), el operador de la coma y sus operandos deben incluirse entre paréntesis. Por ejemplo:  
   
-```  
+```cpp 
 func_one( x, y + 2, z );  
 func_two( (x--, y + 2), z );  
 ```  
@@ -54,7 +54,7 @@ func_two( (x--, y + 2), z );
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp 
 // cpp_comma_operator.cpp  
 #include <stdio.h>  
 int main () {  
@@ -74,5 +74,5 @@ int main () {
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones con operadores binarios](../cpp/expressions-with-binary-operators.md)   
- [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operador de evaluación secuencial](../c-language/sequential-evaluation-operator.md)

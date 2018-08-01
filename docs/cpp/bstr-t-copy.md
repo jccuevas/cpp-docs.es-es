@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23f204e7e8a545fbee7ab516495ed711d7984a9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b7032d9344ec9375059d5584d080854ffe5c775
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944637"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405345"
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
 **Específicos de Microsoft**  
@@ -32,13 +32,12 @@ ms.locfileid: "37944637"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 BSTR copy( bool fCopy = true ) const;  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
  *fCopy*  
- Si es TRUE, `copy` devuelve una copia de los contenidos `BSTR`en caso contrario, `copy` devuelve el objeto BSTR real.  
+ Si es TRUE, **copia** devuelve una copia de los contenidos `BSTR`en caso contrario, **copia** devuelve el objeto BSTR real.  
   
 ## <a name="remarks"></a>Comentarios  
  Devuelve una copia recién asignada del objeto `BSTR` encapsulado.  

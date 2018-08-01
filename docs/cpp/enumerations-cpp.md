@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944817"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406258"
 ---
 # <a name="enumerations-c"></a>Enumeraciones [C++]
 Una enumeración es un tipo definido por el usuario que consta de un conjunto de constantes enteras con nombre conocidas como enumeradores.  
@@ -98,12 +98,11 @@ namespace CardGame_NonScoped
   
 ```cpp  
 enum Suit { Diamonds = 1, Hearts, Clubs, Spades };  
-  
 ```  
   
  El enumerador `Diamonds` tiene asignado el valor `1`. Los enumeradores subsiguientes, si no se les asigna un valor explícito, reciben el valor del enumerador anterior más uno. En el ejemplo anterior, `Hearts` tendría el valor 2, `Clubs` tendría 3, etc.  
   
- Cada enumerador se trata como una constante y debe tener un nombre único dentro del ámbito, donde `enum` está definido (para las enumeraciones sin ámbito) o en la enumeración propia (para las enumeraciones de ámbito). Los valores especificados en los nombres no tienen que ser únicos. Por ejemplo, si la declaración de una enumeración sin ámbito `Suit` es esta:  
+ Cada enumerador se trata como una constante y debe tener un nombre único dentro del ámbito donde la **enum** está definido (para las enumeraciones sin ámbito) o dentro del **enum** Sí (para las enumeraciones de ámbito). Los valores especificados en los nombres no tienen que ser únicos. Por ejemplo, si la declaración de una enumeración sin ámbito `Suit` es esta:  
   
 ```cpp  
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };  
@@ -119,7 +118,6 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
 int account_num = 135692;  
 Suit hand;  
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'  
-  
 ```  
   
  Se requiere una conversión para convertir un **int** a un enumerador sin ámbito o con ámbito. Sin embargo, puede promover un enumerador sin ámbito a un valor entero sin una conversión.  
@@ -147,7 +145,6 @@ namespace ScopedEnumConversions
         account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'  
         account_num = static_cast<int>(Suit::Hearts); // OK  
 }  
-  
 ```  
   
  Observe que la línea `hand = account_num;` aún produce el error que se produce con enumeraciones sin ámbito, como se muestra anteriormente. Esto se permite con una conversión explícita. Sin embargo, con las enumeraciones con ámbito, la conversión que se ha intentado en la siguiente instrucción, `account_num = Suit::Hearts;`, ya no se permite sin una conversión explícita. 

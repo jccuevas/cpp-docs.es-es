@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 80058aa22de10088c3901d0c129635288bf880b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944259"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403461"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Reglas generales para la sobrecarga de operadores
 Las reglas siguientes restringen la forma en que se implementan los operadores sobrecargados. Sin embargo, no se aplican a la [nueva](../cpp/new-operator-cpp.md) y [eliminar](../cpp/delete-operator-cpp.md) operadores, que se tratan por separado.  
@@ -59,7 +59,7 @@ Las reglas siguientes restringen la forma en que se implementan los operadores s
   
 -   Los operadores sobrecargados no pueden tener argumentos predeterminados.  
   
--   Las clases derivadas heredan todos los operadores sobrecargados, excepto el de asignación (`operator=`).  
+-   Todos los operadores sobrecargados, excepto asignación (**operador =**) heredan las clases derivadas.  
   
 -   El primer argumento para los operadores sobrecargados de función miembro siempre es del tipo de clase del objeto para el que se invoca el operador (la clase en la que se declara el operador o una clase derivada de ella). No se proporciona ninguna conversión para el primer argumento.  
   
@@ -72,7 +72,7 @@ var++;
 ++var;  
 ```  
   
- No se puede confiar en esta identidad para los tipos de clase que sobrecargan operadores. Además, algunos requisitos implícitos en el uso de estos operadores para los tipos básicos se relajan para los operadores sobrecargados. Por ejemplo, el operador de suma o asignación, `+=`, requiere que el operando izquierdo sea un valor L cuando se aplica a los tipos básicos; este requisito no existe cuando se sobrecarga el operador.  
+ No se puede confiar en esta identidad para los tipos de clase que sobrecargan operadores. Además, algunos requisitos implícitos en el uso de estos operadores para los tipos básicos se relajan para los operadores sobrecargados. Por ejemplo, el operador de suma y asignación, **+=**, requiere que el operando izquierdo sea un valor l cuando se aplica a los tipos básicos; no hay ningún requisito de este tipo cuando se sobrecarga el operador.  
   
 > [!NOTE]
 > Por coherencia, a menudo es mejor seguir el modelo de los tipos integrados al definir operadores sobrecargados. Si la semántica de un operador sobrecargado difiere mucho de su significado en otros contextos, puede ser más confusa que útil.  

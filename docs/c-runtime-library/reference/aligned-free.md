@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd89d0c8657df4bec2da5bf021c8964ad418cd9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51220aaf47056f63d37471c61857f8a128a67179
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393373"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402453"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
@@ -54,13 +54,13 @@ void _aligned_free (
 
 ### <a name="parameters"></a>Parámetros
 
-*memblock* un puntero al bloque de memoria que se devolvió a la **_aligned_malloc** o **_aligned_offset_malloc** (función).
+*memblock* un puntero al bloque de memoria que se devuelve a la `_aligned_malloc` o `_aligned_offset_malloc` función.
 
 ## <a name="remarks"></a>Comentarios
 
-**_aligned_free** está marcada como `__declspec(noalias)`, lo que significa que se garantiza que la función no se puede modificar las variables globales. Para obtener más información, consulte [noalias](../../cpp/noalias.md).
+**_aligned_free** está marcado como `__declspec(noalias)`, lo que significa que se garantiza que la función no se puede modificar las variables globales. Para obtener más información, consulte [noalias](../../cpp/noalias.md).
 
-Esta función no valida su parámetro, a diferencia de las demás funciones _aligned de CRT. Si *memblock* es un **NULL** puntero, esta función simplemente lleva a cabo ninguna acción. No cambiar **errno** y no invoca el controlador de parámetros no válidos. Si se produce un error en la función debido a que no usa funciones _aligned previamente para asignar el bloque de memoria o se produce un error de alineación de memoria debido a algún desastre imprevisto, la función genera un informe de depuración de [_RPT, _RPTF, _RPTW, _RPTFW (Macros)](rpt-rptf-rptw-rptfw-macros.md).
+Esta función no valida su parámetro, a diferencia de las demás funciones _aligned de CRT. Si *memblock* es un puntero nulo, esta función simplemente realiza ninguna acción. No modifica `errno` ni invoca al controlador de parámetros no válidos. Si se produce un error en la función debido a que no usa funciones _aligned previamente para asignar el bloque de memoria o se produce un error de alineación de memoria debido a algún desastre imprevisto, la función genera un informe de depuración de [_RPT, _RPTF, _RPTW, _RPTFW (Macros)](rpt-rptf-rptw-rptfw-macros.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -74,4 +74,4 @@ Para obtener más información, consulte [_aligned_malloc](aligned-malloc.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Alineación de datos](../../c-runtime-library/data-alignment.md)<br/>
+[Alineación de datos](../../c-runtime-library/data-alignment.md)  

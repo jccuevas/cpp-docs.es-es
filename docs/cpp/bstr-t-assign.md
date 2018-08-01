@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a80c918036887e9c3e573294d3859a9b60e71e7f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a415f695f512a9d6263025fc6e45d5f9df754f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944186"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403912"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Específicos de Microsoft**  
@@ -41,7 +41,7 @@ void Assign(
  `BSTR` que se copia en el objeto `BSTR` contenido en `_bstr_t`.  
   
 ## <a name="remarks"></a>Comentarios  
- `Assign` hace una copia binaria, lo que significa que se copia toda la longitud de `BSTR`, sin importar su contenido.  
+ **Asignar** hace una copia binaria, lo que significa que toda la longitud de la `BSTR` se copia, independientemente del contenido.  
   
 ## <a name="example"></a>Ejemplo  
   

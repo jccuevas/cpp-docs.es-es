@@ -1,5 +1,5 @@
 ---
-title: Argumentos de función de tipo de referencia | Documentos de Microsoft
+title: Argumentos de función del tipo de referencia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83d78aad4285ad711581dbed1c88ef6b9a8a9b24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad8fc85a37aec80d09ed6df9280a78de0540f01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409060"
 ---
 # <a name="reference-type-function-arguments"></a>Argumentos de función de tipo de referencia
 Suele ser más eficaz pasar referencias, en lugar de objetos grandes, a las funciones. De este modo, el compilador puede pasar la dirección del objeto mientras mantiene la sintaxis que se habría utilizado para tener acceso al objeto. Considere el ejemplo siguiente, en el que se usa la estructura `Date`:  
   
-```  
+```cpp 
 // reference_type_function_arguments.cpp  
 struct Date  
 {  
@@ -68,9 +69,9 @@ int main()
   
  El código anterior muestra que se accede a los miembros de una estructura pasada por referencia mediante el operador de selección de miembro (**.**) en lugar del operador de selección de miembro de puntero (**->**).  
   
- Aunque los argumentos pasados como tipos de referencia rigen por la sintaxis de los tipos de no son de puntero, mantienen una característica importante de los tipos de puntero: son modificables a menos que se declara como **const**. Dado que el código anterior no tenía como intención modificar el objeto `GDate`, un prototipo de función más adecuado sería:  
+ Aunque los argumentos pasados como tipos de referencia, observe la sintaxis de los tipos que no son de puntero, mantienen una característica importante de los tipos de puntero: son modificables a menos que se declara como **const**. Dado que el código anterior no tenía como intención modificar el objeto `GDate`, un prototipo de función más adecuado sería:  
   
-```  
+```cpp 
 long JulianFromGregorian( const Date& GDate );  
 ```  
   

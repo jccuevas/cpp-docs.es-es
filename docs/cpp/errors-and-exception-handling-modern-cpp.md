@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee05e7008795056ee197ce45f68084e6c633f23c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f9d9d21514b0ea90021c9b0543cd742ed6a6206f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939746"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407239"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Controlar errores y excepciones (C++ moderno)
 En C++ moderno, en la mayoría de los escenarios, la mejor manera de comunicar y controlar errores lógicos y errores en tiempo de ejecución es utilizar excepciones. Esto es especialmente cierto cuando la pila puede contener varias llamadas de función entre la función que detecta el error y la función que tiene el contexto para saber cómo controlarla. Las excepciones proporcionan una manera formal y bien definida para el código que detecta errores para pasar la información de la pila de llamadas.  
@@ -68,7 +68,6 @@ int main()
    //...  
    return 0;  
 }  
-  
 ```  
   
  Las excepciones de C++ son similares a las de lenguajes como C# y Java. En el **intente** bloquear, si es una excepción *produce* será *detectada* por los primeros asociados **catch** bloque cuyo tipo coincide con el de la excepción. En otras palabras, la ejecución salta de la **throw** instrucción a la **catch** instrucción. Si no se encuentra ningún bloque catch utilizable, `std::terminate` se invoca y se cierra el programa. En C++, se puede producir cualquier tipo; Sin embargo, recomendamos que lance un tipo que deriva directa o indirectamente de `std::exception`. En el ejemplo anterior, el tipo de excepción, [invalid_argument](../standard-library/invalid-argument-class.md), se define en la biblioteca estándar en el [ \<stdexcept >](../standard-library/stdexcept.md) archivo de encabezado. C++ no proporciona y no requiere un **finalmente** bloque para asegurarse de que todos los recursos se liberan si se produce una excepción. La adquisición de recursos es la expresión de inicialización (RAII), que utiliza punteros inteligentes, proporciona la funcionalidad necesaria para la limpieza de recursos. Para obtener más información, consulte [Cómo: diseño de seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md). Para obtener información sobre el mecanismo de desenredo de pila en C++, vea [excepciones y desenredo de pila](../cpp/exceptions-and-stack-unwinding-in-cpp.md).  
@@ -97,7 +96,7 @@ int main()
  Excepciones y aserciones son dos mecanismos diferentes para detectar errores en tiempo de ejecución en un programa. Utilice aserciones para probar condiciones durante el desarrollo que nunca debe ser true si todo el código es correcto. No hay ningún punto de administrar este tipo de error con una excepción porque el error indica que algo en el código no se ha solucionado y no representa una condición de que el programa tiene que recuperarse en tiempo de ejecución. Una aserción detiene la ejecución en la instrucción para que puede inspeccionar el estado del programa en el depurador; una excepción continúa la ejecución desde el primer controlador catch adecuado. Utilice excepciones para comprobar las condiciones de error que pueden producirse en tiempo de ejecución, incluso si el código es correcto, por ejemplo, "archivo no encontrado" o "memoria insuficiente". Es posible que desea recuperar de estas condiciones, incluso si la recuperación solo genera un mensaje en un registro y cierra el programa. Compruebe siempre los argumentos para funciones públicas mediante el uso de excepciones. Incluso si la función está libre de errores, podría no tener control total sobre los argumentos que un usuario puede pasarle.  
   
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Excepciones de C++ frente a excepciones SEH de Windows  
- Programas de C y C++ pueden utilizar el mecanismo de (SEH) en el sistema operativo Windows de control de excepciones estructurado. Los conceptos en SEH se parecen a las excepciones de C++, salvo que SEH utiliza el `__try`, `__except`, y `__finally` construye en lugar de **intente** y **catch**. En Visual C++, las excepciones de C++ se implementan para SEH. Sin embargo, al escribir código de C++, use la sintaxis de la excepción de C++.  
+ Programas de C y C++ pueden utilizar el mecanismo de (SEH) en el sistema operativo Windows de control de excepciones estructurado. Los conceptos en SEH se parecen a las excepciones de C++, salvo que SEH utiliza el **__try**, **__except**, y **__finally** construye en lugar de **intente** y **catch**. En Visual C++, las excepciones de C++ se implementan para SEH. Sin embargo, al escribir código de C++, use la sintaxis de la excepción de C++.  
   
  Para obtener más información sobre SEH, vea [control de excepciones estructurado (C/C ++)](../cpp/structured-exception-handling-c-cpp.md).  
   

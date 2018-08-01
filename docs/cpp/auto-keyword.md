@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9b4b9e2526d621e9e9fee1d1f8c05c5a05d3312
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a02ed2a19f44f19396038f8e41cb1c7f5a069407
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941683"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405891"
 ---
 # <a name="auto-keyword"></a>auto (Palabra clave)
 El **automática** palabra clave es un especificador de declaración. Sin embargo, C++ estándar define un significado original y otro revisado para esta palabra clave. Antes de Visual C++ 2010, la **automática** palabra clave declara una variable en el *automática* clase de almacenamiento; es decir, una variable que tiene una duración local. A partir de Visual C++ 2010, la **automática** palabra clave declara una variable cuyo tipo se deduce de la expresión de inicialización en su declaración. El [/Zc: Auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) controla el significado de la opción del compilador la **automática** palabra clave.  
@@ -35,7 +35,6 @@ auto declarator initializer;
  Los temas siguientes describen el **automática** palabra clave y la opción del compilador correspondiente:  
   
 -   [Auto](../cpp/auto-cpp.md) describe la nueva definición de la **automática** palabra clave.  
-  
   
 -   [/ Zc: Auto (deducir tipo de Variable)](../build/reference/zc-auto-deduce-variable-type.md) describe la opción del compilador que indica al compilador qué definición de la **automática** palabra clave para usar.  
   

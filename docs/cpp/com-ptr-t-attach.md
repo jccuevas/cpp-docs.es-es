@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e982ebd9a09d4dfcb5e4b5e150b42a1e8d5c75
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c48da9a0ff3b9cadf0b7e228f3108277154e8417
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944720"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402889"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Específicos de Microsoft**  
@@ -32,7 +32,6 @@ ms.locfileid: "37944720"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 void Attach( Interface* pInterface ) throw( );  
 void Attach( Interface* pInterface, bool fAddRef ) throw( );  
 ```  
@@ -46,7 +45,7 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
   
 ## <a name="remarks"></a>Comentarios  
   
--   **Adjuntar (***pInterface***)** `AddRef` no se llama.     La propiedad de la interfaz se pasa a este objeto `_com_ptr_t`. `Release` se llama para disminuir el recuento de referencias para el puntero previamente encapsulado.  
+-   **Adjuntar (***pInterface***)** `AddRef` no se llama. La propiedad de la interfaz se pasa a este objeto `_com_ptr_t`. `Release` se llama para disminuir el recuento de referencias para el puntero previamente encapsulado.  
   
 -   **Adjuntar (***pInterface* **,***fAddRef***)** si *fAddRef* es TRUE, `AddRef`se llama para incrementar el recuento de referencias para el puntero de interfaz encapsulado.       Si *fAddRef* es FALSE, esto `_com_ptr_t` objeto toma la propiedad del puntero de interfaz sin formato sin llamar a `AddRef`. `Release` se llama para disminuir el recuento de referencias para el puntero previamente encapsulado.  
   

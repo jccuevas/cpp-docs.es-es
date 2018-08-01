@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c8df38f1869ab4c3b8e80101ca4dbbc27f9018e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027279"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407866"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema de tipos de C++ (C++ moderno)
 El concepto de *tipo* es muy importante en C++. Cada variable, argumento de función y valor devuelto por una función debe tener un tipo para compilarse. Asimismo, antes de evaluar cada una de las expresiones (incluidos los valores literales), el compilador da implícitamente un tipo a estas expresiones. Algunos ejemplos de tipos **int** que almacena valores integrales, **doble** para almacenar valores de punto flotante (también conocido como *escalares* tipos de datos), o la clase de la biblioteca estándar [std:: basic_string](../standard-library/basic-string-class.md) para almacenar texto. Puede crear su propio tipo definiendo un **clase** o **struct**. El tipo especifica la cantidad de memoria que se asignará para la variable (o el resultado de la expresión), las clases de valores que se pueden almacenar en esa variable, cómo se interpretan estos valores (como patrones de bits) y las operaciones que se pueden realizar en ella. Este artículo contiene información general sobre las principales características del sistema de tipos de C++.  
@@ -41,7 +41,6 @@ El concepto de *tipo* es muy importante en C++. Cada variable, argumento de func
  En el ejemplo siguiente se muestran algunas sencillas declaraciones de variable con descripciones de cada una de ellas. En el ejemplo se muestra también cómo el compilador utiliza la información de tipo para permitir o no permitir que posteriormente se realicen ciertas operaciones en la variable.  
   
 ```cpp  
-  
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
                              // point value.  
@@ -56,7 +55,6 @@ string result = "zero";      // error. Can’t redefine a variable with
                              // new type.  
 int maxValue;                // Not recommended! maxValue contains   
                              // garbage bits until it is initialized.  
-  
 ```  
   
 ## <a name="fundamental-built-in-types"></a>Tipos (integrados) fundamentales  
@@ -96,10 +94,10 @@ PI = .75 //Error. Cannot modify const variable.
   
  El **const** calificador se usa habitualmente en las declaraciones de función y la variable y "exactitud de const" es un concepto importante en C++; básicamente significa usar **const** para garantizar que, en tiempo de compilación que los valores no se modifican involuntariamente. Para obtener más información, consulte [const](../cpp/const-cpp.md).  
   
- Un **const** tipo es distinto de su versión no const; por ejemplo, `const int` es un tipo distinto de **int**. Puede usar C++ **const_cast** operador en esas raras ocasiones en las que deba quitar *declaración como constante* desde una variable. Para obtener más información, consulte [las conversiones de tipos y seguridad de tipos](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
+ Un **const** tipo es distinto de su versión no const; por ejemplo, **const int** es un tipo distinto de **int**. Puede usar C++ **const_cast** operador en esas raras ocasiones en las que deba quitar *declaración como constante* desde una variable. Para obtener más información, consulte [las conversiones de tipos y seguridad de tipos](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
   
 ## <a name="string-types"></a>Tipos string  
- En realidad, el lenguaje C++ no tiene ningún tipo de cadena integradas; **char** y `wchar_t` almacenan caracteres individuales: debe declarar una matriz de estos tipos para aproximarse a una cadena, agregando un valor final null (por ejemplo, ASCII `'\0'`) al elemento de matriz uno pasado el último válido carácter (también denominado una *cadena de estilo C*). En las cadenas de estilo C, era necesario escribir mucho más código o usar funciones de bibliotecas de utilidades de cadena externas. Pero en C++ moderno, tenemos los tipos de biblioteca estándar `std::string` (de 8 bits **char**-escriba las cadenas de caracteres) o `std::wstring` (de 16 bits `wchar_t`: escriba las cadenas de caracteres). Estos contenedores de la biblioteca estándar de C++ pueden considerarse como tipos de cadena nativa porque forman parte de las bibliotecas estándar que se incluyen en cualquier entorno de compilación de C++ compatible. Solo tiene que usar la directiva `#include <string>` para que estos tipos estén disponibles en el programa. (Si usa MFC o ATL, la clase CString también está disponible, pero no forma parte del estándar de C++). En el lenguaje C++ actual, se desaconseja completamente usar matrices de caracteres que terminen con un valor null (las cadenas de estilo C mencionadas previamente).  
+ En realidad, el lenguaje C++ no tiene ningún tipo de cadena integradas; **char** y **wchar_t** almacenan caracteres individuales: debe declarar una matriz de estos tipos para aproximarse a una cadena, agregando un valor final null (por ejemplo, ASCII `'\0'`) al elemento de matriz más allá del último carácter válido (también denominado una *cadena de estilo C*). En las cadenas de estilo C, era necesario escribir mucho más código o usar funciones de bibliotecas de utilidades de cadena externas. Pero en C++ moderno, tenemos los tipos de biblioteca estándar `std::string` (de 8 bits **char**-escriba las cadenas de caracteres) o `std::wstring` (de 16 bits **wchar_t**: escriba las cadenas de caracteres). Estos contenedores de la biblioteca estándar de C++ pueden considerarse como tipos de cadena nativa porque forman parte de las bibliotecas estándar que se incluyen en cualquier entorno de compilación de C++ compatible. Solo tiene que usar la directiva `#include <string>` para que estos tipos estén disponibles en el programa. (Si usa MFC o ATL, la clase CString también está disponible, pero no forma parte del estándar de C++). En el lenguaje C++ actual, se desaconseja completamente usar matrices de caracteres que terminen con un valor null (las cadenas de estilo C mencionadas previamente).  
   
 ## <a name="user-defined-types"></a>Tipos definidos por el usuario  
  Al definir un **clase**, **struct**, **unión**, o **enum**, esa construcción se utiliza en el resto del código como si fuera un tipo fundamental . Esa construcción tiene un tamaño conocido en memoria y se aplican ciertas reglas sobre su uso durante la comprobación en tiempo de compilación y, en tiempo de ejecución, durante la vida útil del programa. Las diferencias principales entre los tipos fundamentales integrados y los tipos definidos por el usuario son las siguientes:  
@@ -116,19 +114,16 @@ PI = .75 //Error. Cannot modify const variable.
  Lo primero que debe saber es que, al declarar una variable de puntero sin formato, se asignará solo la memoria necesaria para almacenar una dirección de la ubicación de memoria a la que el puntero hará referencia cuando esté desreferenciado. Asignación de memoria para el propio valor de datos (también denominada *auxiliar*) todavía no está asignada. Es decir, al declarar una variable de puntero sin formato, se crea una variable de la dirección de memoria, no una variable real de los datos. Si se desreferencia una variable de puntero antes de tener la seguridad de que contiene una dirección válida en una memoria auxiliar, se producirá un comportamiento no definido (normalmente un error irrecuperable) en el programa. En el siguiente ejemplo se muestra este tipo de error:  
   
 ```cpp  
-  
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
                     // a serious error. We are dereferencing an  
                     // uninitialized pointer variable with no  
                     // allocated memory to point to.  
-  
 ```  
   
  En el ejemplo se desreferencia un tipo de puntero que no tiene ninguna memoria asignada para almacenar los datos enteros reales ni una dirección de memoria válida asignada. El código siguiente corrige esto errores:  
   
 ```cpp  
-  
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
     int* pNumber = &number;   // Declare and initialize a local integer  
@@ -140,7 +135,6 @@ int* pNumber;       // Declare a pointer-to-int variable.
                               // pNumber, the integer variable called  
                               // "number". Note "number" was changed, not  
                               // "pNumber".  
-  
 ```  
   
  En el ejemplo de código corregido se utiliza la memoria local de la pila para crear la memoria auxiliar a la que `pNumber` apunta. Utilizamos un tipo fundamental para simplificar. En la práctica, el almacén de respaldo para los punteros son tipos más a menudo definido por el usuario que están asignados dinámicamente en un área de memoria denominada el *montón* (o *almacén libre*) mediante el uso de un **nuevo** expresión de la palabra clave (en la programación de estilo C, las antiguas `malloc()` se usó la función de biblioteca en tiempo de ejecución de C). Una vez asignados, estas variables normalmente se conocen como objetos, especialmente si se basan en una definición de clase. Memoria asignada con **nueva** debe eliminarse por correspondiente **eliminar** instrucción (o, si ha usado el `malloc()` función para asignarlas, la función de tiempo de ejecución de C `free()`).  
@@ -148,14 +142,12 @@ int* pNumber;       // Declare a pointer-to-int variable.
  Sin embargo, es fácil olvidarse de eliminar una asignada dinámicamente objetos, especialmente cuando el código complejo, lo que provoca un error de recurso denominado un *fuga de memoria*. Por esta razón, el uso de punteros sin formato no es recomendable en el lenguaje C++ actual. Casi siempre es mejor incluir un puntero sin formato en un [puntero inteligente](../cpp/smart-pointers-modern-cpp.md), que liberará automáticamente la memoria cuando se invoque su destructor (cuando el código sale del ámbito del puntero inteligente); mediante el uso de punteros inteligentes, prácticamente elimina toda una clase de errores en los programas de C++. En el ejemplo siguiente, suponga que `MyClass` es un tipo definido por el usuario que tiene un método público `DoSomeWork();`  
   
 ```cpp  
-  
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
     pMc->DoSomeWork();  
 }  
   // No memory leak. Out-of-scope automatically calls the destructor  
   // for the unique_ptr, freeing the resource.  
-  
 ```  
   
  Para obtener más información sobre los punteros inteligentes, consulte [punteros inteligentes](../cpp/smart-pointers-modern-cpp.md).  

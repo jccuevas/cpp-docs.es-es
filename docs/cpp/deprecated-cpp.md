@@ -1,5 +1,5 @@
 ---
-title: en desuso (C++) | Documentos de Microsoft
+title: en desuso (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -17,29 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ec2506b406166ac5316de4724db27a6cd7ffcc1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409090"
 ---
 # <a name="deprecated-c"></a>en desuso (C++)
-Este tema trata sobre la específicos de Microsoft modificador declspec declaración en desuso. Para obtener información sobre C ++ 14 `[[deprecated]]` atributo y orientación sobre cuándo usar ese atributo frente al modificador declspec específicos de Microsoft o la directiva pragma, consulte [atributos estándar de C++](attributes.md).
+Este tema trata sobre el específico de Microsoft declspec declaración en desuso. Para obtener información acerca de C ++ 14 `[[deprecated]]` atributo y orientación sobre cuándo usar ese atributo frente el modificador declspec específico de Microsoft o pragma, consulte [atributos estándar de C++](attributes.md).
 
- Con las excepciones que se indican a continuación, el **en desuso** declaración ofrece la misma funcionalidad que la [en desuso](../preprocessor/deprecated-c-cpp.md) pragma:  
+ Con las excepciones que se indica a continuación, el **en desuso** declaración ofrece la misma funcionalidad que el [en desuso](../preprocessor/deprecated-c-cpp.md) pragma:  
   
--   El **en desuso** declaración permite especificar formas determinadas de sobrecargas de función como en desuso, mientras que la forma pragma se aplica a todas las formas sobrecargadas de un nombre de función.  
+-   El **en desuso** declaración le permite especificar formas determinadas de sobrecargas de función como en desuso, mientras que la forma pragma se aplica a todas las formas sobrecargadas de un nombre de función.  
   
 -   El **en desuso** declaración le permite especificar un mensaje que se mostrará en tiempo de compilación. El texto del mensaje puede proceder de una macro.  
   
--   Macros solo se pueden marcar como desusadas con la **en desuso** pragma.  
+-   Macros solo se pueden marcar como en desuso con la **en desuso** pragma.  
   
  Si el compilador encuentra el uso de un identificador en desuso o la norma [ `[[deprecated]]` ](attributes.md) atributo, un [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) se produce la advertencia.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo marcar funciones como en desuso y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la función en desuso.  
   
-```  
+```cpp 
 // deprecated.cpp  
 // compile with: /W3  
 #define MY_TEXT "function is deprecated"  
@@ -59,7 +60,7 @@ int main() {
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo marcar clases como en desuso y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la clase en desuso.  
   
-```  
+```cpp 
 // deprecate_class.cpp  
 // compile with: /W3  
 struct __declspec(deprecated) X {  
