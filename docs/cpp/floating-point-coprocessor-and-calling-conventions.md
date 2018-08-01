@@ -1,5 +1,5 @@
 ---
-title: Coprocesador de punto flotante y convenciones de llamada | Documentos de Microsoft
+title: Coprocesador de punto flotante y convenciones de llamada | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46cf9c937453894ed37ad434ad94609d0744be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66ccd54c4abb1d8d9761d5ded88beba76bfae043
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410806"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401359"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>Coprocesador de punto flotante y convenciones de llamada
-Si está escribiendo ensamblado coprocesador de punto de rutinas para flotante, se debe conservar flotante palabra de control de punto y limpiar la pila del coprocesador a menos que va a devolver un **float** o **doble** valor (lo que la función debe devolver en ST(0)).  
+Si está escribiendo ensamblado coprocesador de punto de rutinas para el flotante, se debe conservar flotante, seleccione la palabra de control y limpiar la pila del coprocesador a menos que se va a devolver un **float** o **doble** valor (que la función debe devolver en ST(0)).  
   
 ## <a name="see-also"></a>Vea también  
  [Convenciones de llamada](../cpp/calling-conventions.md)

@@ -1,5 +1,5 @@
 ---
-title: Limpiar los recursos | Documentos de Microsoft
+title: Limpieza de recursos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 960e19400ae1d00108d57eb85d3df01ebf1dbc33
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7c589f5ac6baef0ef4420d997fa6497f4e03d5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408740"
 ---
 # <a name="cleaning-up-resources"></a>Limpiar recursos
-Durante la ejecución del controlador de terminación, tal vez no sepa qué recursos se han asignado antes de que se llame al controlador de terminación. Es posible que el bloque de instrucciones `__try` se interrumpiera antes de que se asignaran todos los recursos, de modo que no todos los recursos estuvieran abiertos.  
+Durante la ejecución del controlador de terminación, tal vez no sepa qué recursos se han asignado antes de que se llame al controlador de terminación. Es posible que el **__try** bloque de instrucciones se interrumpió antes de que todos los recursos asignados, por lo que no todos los recursos estuvieran abiertos.  
   
  Por tanto, como medida de seguridad, debe comprobar qué recursos están realmente abiertos antes de proceder con la limpieza de controladores de terminación. Un procedimiento recomendado es:  
   
 1.  Inicializar los identificadores en NULL.  
   
-2.  En el bloque de instrucciones `__try`, asignar recursos. Los identificadores se establecen en valores positivos cuando se asigna el recurso.  
+2.  En el **__try** instrucción en bloques, asignar recursos. Los identificadores se establecen en valores positivos cuando se asigna el recurso.  
   
-3.  En el bloque de instrucciones `__finally`, liberar cada recurso cuyo identificador o variable de marca correspondiente sea distinto de cero o distinto de NULL.  
+3.  En el **__finally** bloque de instrucciones, liberar cada recurso cuyo identificador correspondiente o la variable de indicador es distinto de cero o no NULL.  
   
 ## <a name="example"></a>Ejemplo  
- Por ejemplo, en el código siguiente se utiliza un controlador de terminación para cerrar tres archivos y un bloque de memoria asignados en el bloque de instrucciones `__try`. Antes de limpiar un recurso, el código comprueba si el recurso se ha asignado.  
+ Por ejemplo, el código siguiente usa un controlador de terminación para cerrar tres archivos y un bloque de memoria que se asignaron durante la **__try** bloque de instrucciones. Antes de limpiar un recurso, el código comprueba si el recurso se ha asignado.  
   
-```  
+```cpp 
 // exceptions_Cleaning_up_Resources.cpp  
 #include <stdlib.h>  
 #include <malloc.h>  
@@ -78,5 +79,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Escribir un controlador de terminación](../cpp/writing-a-termination-handler.md)   
+ [Escribir un controlador de finalización](../cpp/writing-a-termination-handler.md)   
  [Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Control de excepciones de C++ | Documentos de Microsoft
+title: Control de excepciones de C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ce782000ac1767034d00aa3e0280b8e3820e3d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51c41fb9d6261da31c8a1028abac69d82b93e898
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413913"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402021"
 ---
 # <a name="c-exception-handling"></a>Control de excepciones de C++
 El lenguaje C++ proporciona compatibilidad integrada para producir y detectar excepciones. Al programar en C++, casi siempre se debe utilizar la compatibilidad con excepciones de C++ integrada como se describe en esta sección.  
@@ -36,7 +36,7 @@ El lenguaje C++ proporciona compatibilidad integrada para producir y detectar ex
   
 -   [Excepciones y desenredo de pila](../cpp/exceptions-and-stack-unwinding-in-cpp.md)  
   
--   [Especificaciones de excepciones](../cpp/exception-specifications-throw-cpp.md)  
+-   [Especificaciones de excepción](../cpp/exception-specifications-throw-cpp.md)  
   
 -   [noexcept](../cpp/noexcept-cpp.md)  
   
@@ -45,7 +45,7 @@ El lenguaje C++ proporciona compatibilidad integrada para producir y detectar ex
 -   [Mezclar excepciones de C (estructuradas) y de C++](../cpp/mixing-c-structured-and-cpp-exceptions.md)  
   
 ## <a name="support-for-earlier-mfc-exceptions"></a>Compatibilidad con excepciones MFC anteriores  
- A partir de la versión 4.0, MFC empezó a usar el mecanismo de control de excepciones de C++. Aunque se recomienda utilizar el control de excepciones de C++ en el código nuevo, la versión 4.0 de MFC y las versiones posteriores conservan las macros de versiones anteriores de MFC, por lo que el código anterior no resultará dañado. También se pueden combinar las macros y el nuevo mecanismo. Para obtener información sobre cómo mezclar macros y control de excepciones de C++ y cómo convertir código anterior para utilizar el nuevo mecanismo, vea los artículos [excepciones: utilizar Macros de MFC y las excepciones de C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) y [excepciones: convertir a partir de MFC Las Macros de excepción](../mfc/exceptions-converting-from-mfc-exception-macros.md). Las macros de excepciones de MFC anteriores, si todavía las utiliza, se evalúan como palabras clave de excepciones de C++. Vea [excepciones: cambios en las Macros de excepción en la versión 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
+ A partir de la versión 4.0, MFC empezó a usar el mecanismo de control de excepciones de C++. Aunque se recomienda utilizar el control de excepciones de C++ en el código nuevo, la versión 4.0 de MFC y las versiones posteriores conservan las macros de versiones anteriores de MFC, por lo que el código anterior no resultará dañado. También se pueden combinar las macros y el nuevo mecanismo. Para obtener información sobre cómo mezclar macros y control de excepciones de C++ y cómo convertir código anterior para usar el nuevo mecanismo, consulte los artículos [excepciones: uso de Macros de MFC y excepciones de C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) y [excepciones: convertir de MFC Macros de excepción](../mfc/exceptions-converting-from-mfc-exception-macros.md). Las macros de excepciones de MFC anteriores, si todavía las utiliza, se evalúan como palabras clave de excepciones de C++. Consulte [excepciones: cambios en las Macros de excepción en la versión 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Control de excepciones](../cpp/exception-handling-in-visual-cpp.md)

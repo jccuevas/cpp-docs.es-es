@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940824"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401579"
 ---
 # <a name="for-statement-c"></a>for (Instrucción) (C++)
 Ejecuta una instrucción repetidamente hasta que la condición es false. Para obtener información sobre la basada en intervalo para la instrucción, consulte [basada en intervalo para la instrucción (C++)](../cpp/range-based-for-statement-cpp.md).  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  De forma predeterminada, en [/Ze](../build/reference/za-ze-disable-language-extensions.md), una variable declarada en un **para** bucle permanece dentro del ámbito hasta que el **para** finaliza el ámbito de inclusión del bucle.  
   
- [/ Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) habilita el comportamiento estándar de las variables declaradas en bucles for sin necesidad de especificar/Za.  
+ [/ Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) habilita el comportamiento estándar de las variables declaradas en bucles for sin necesidad de especificar `/Za`.  
   
- También es posible usar las diferencias de ámbito el **para** bucle para declarar variables en /Ze como sigue:  
+ También es posible usar las diferencias de ámbito el **para** bucle para declarar variables en `/Ze` como sigue:  
   
 ```cpp  
 // for_statement5.cpp  
