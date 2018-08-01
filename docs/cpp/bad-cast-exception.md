@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8a37ae011ec2f06a505063678f481e6e41696c86
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944161"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401372"
 ---
 # <a name="badcast-exception"></a>bad_cast (Excepción)
-El operador `bad_cast` inicia la excepción `dynamic_cast` como resultado de una conversión incorrecta a un tipo de referencia.  
+El **bad_cast** excepción la **dynamic_cast** operador como resultado de una conversión incorrecta a un tipo de referencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ catch (bad_cast)
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- La interfaz de `bad_cast` es:  
+ La interfaz para **bad_cast** es:  
   
 ```cpp 
 class bad_cast : public exception {  
@@ -47,7 +47,7 @@ public:
 };  
 ```  
   
- El código siguiente contiene un ejemplo de `dynamic_cast` con errores que inicia la excepción `bad_cast`.  
+ El código siguiente contiene un ejemplo de un error **dynamic_cast** que produce el **bad_cast** excepción.  
   
 ```cpp 
 // expre_bad_cast_Exception.cpp  
@@ -78,7 +78,7 @@ int main() {
 }  
 ```  
   
- Se inicia una excepción porque el objeto que se convierte (una forma) no se deriva del tipo de conversión especificado (Circle). Para evitar la excepción, agregue estas declaraciones a **principal**:  
+ Se inicia una excepción porque el objeto que se convierte (una forma) no se deriva del tipo de conversión especificado (Circle). Para evitar la excepción, agregue estas declaraciones a `main`:  
   
 ```cpp 
 Circle circle_instance;  
