@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Cancastto (método) | Documentos de Microsoft'
+title: Método Chaininterfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2286c347fbd68f34fac807e80facca0a0286aa6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5839edd90f61f9f4aa96ea1d921d2179660be554
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860299"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461215"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo (Método)
-Indica si el identificador de interfaz especificado se puede convertir a cada una de las especializaciones definidas por los parámetros de plantilla no es el predeterminado.  
+Indica si el identificador de interfaz especificado puede convertirse a cada una de las especializaciones definidas por los parámetros de plantilla no predeterminado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,14 +37,14 @@ __forceinline bool CanCastTo(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `riid`  
+ *riid*  
  Id. de interfaz.  
   
- `ppv`  
- Un puntero al último identificador de interfaz que se convirtió correctamente.  
+ *PPV*  
+ Un puntero en el último identificador de interfaz que se convirtió correctamente.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Si todas las operaciones de conversión se realizó correctamente; en caso contrario, `false`.  
+ **True** si todas las operaciones de conversión se realizó correctamente; en caso contrario, **false**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

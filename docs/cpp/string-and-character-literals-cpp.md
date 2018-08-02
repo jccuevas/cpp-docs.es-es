@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208554"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466948"
 ---
 # <a name="string-and-character-literals--c"></a>Literales de cadena y carácter (C++)
 C++ admite varios tipos de cadenas y caracteres, y proporciona maneras de expresar valores literales de cada uno de esos tipos. En el código fuente, el contenido de los literales de carácter y cadena se expresa mediante un juego de caracteres. Los nombres de carácter universal y los caracteres de escape permiten expresar cualquier cadena con tan solo el juego básico de caracteres de código fuente. Un literal de cadena sin formato permite evitar la utilización de caracteres de escape y puede usarse para expresar todos los tipos de literales de cadena. También se pueden crear literales std::string sin necesidad de seguir pasos adicionales de construcción o conversión.  
@@ -146,7 +146,7 @@ int main() {
   
  **Específicos de Microsoft**  
   
- Para crear un valor de un literal de carácter ordinario (aquellos sin un prefijo), el compilador convierte el carácter o secuencia de caracteres entre comillas simples en valores de 8 bits en un entero de 32 bits. Varios caracteres del literal rellenan los bytes correspondientes según sea necesario de orden superior a orden inferior. Para crear un **char** valor, el compilador usa el byte de orden inferior. Para crear un valor `wchar_t` o `char16_t` , el compilador usa la palabra de orden inferior. El compilador advierte que el resultado se trunca si cualquiera de los bits se establece por encima del byte o la palabra asignados.  
+ Para crear un valor de un literal de carácter ordinario (aquellos sin un prefijo), el compilador convierte el carácter o secuencia de caracteres entre comillas simples en valores de 8 bits en un entero de 32 bits. Varios caracteres del literal rellenan los bytes correspondientes según sea necesario de orden superior a orden inferior. Para crear un **char** valor, el compilador usa el byte de orden inferior. Para crear un **wchar_t** o `char16_t` valor, el compilador usa la palabra de orden inferior. El compilador advierte que el resultado se trunca si cualquiera de los bits se establece por encima del byte o la palabra asignados.  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
@@ -231,7 +231,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```  
   
 ### <a name="wide-string-literals"></a>Literales de cadena anchos  
- Un literal de cadena ancho es una matriz terminada en null de constante `wchar_t` que lleva el prefijo '`L`' y contiene cualquier carácter gráfico excepto las comillas dobles ("), barra diagonal inversa (\\), o el carácter de nueva línea. También puede contener las secuencias de escape de secuencias antes mencionadas y cualquier nombre de carácter universal.  
+ Un literal de cadena ancho es una matriz terminada en null de constante **wchar_t** que lleva el prefijo '`L`' y contiene cualquier carácter gráfico excepto las comillas dobles ("), barra diagonal inversa (\\), o el carácter de nueva línea. También puede contener las secuencias de escape de secuencias antes mencionadas y cualquier nombre de carácter universal.  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -319,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Específicos de Microsoft**  
   
- En Visual C++ puede utilizar un literal de cadena para inicializar un puntero a const no **char** o `wchar_t`. Esto se permite en el código C99, pero está en desuso en C++98 y se eliminó en C++11. Un intento de modificar la cadena produce una infracción de acceso, como en este ejemplo:  
+ En Visual C++ puede utilizar un literal de cadena para inicializar un puntero a const no **char** o **wchar_t**. Esto se permite en el código C99, pero está en desuso en C++98 y se eliminó en C++11. Un intento de modificar la cadena produce una infracción de acceso, como en este ejemplo:  
   
 ```cpp  
 wchar_t* str = L"hello";  

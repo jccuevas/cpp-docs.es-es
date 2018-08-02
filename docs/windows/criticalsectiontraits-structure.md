@@ -1,5 +1,5 @@
 ---
-title: CriticalSectionTraits (estructura) | Documentos de Microsoft
+title: CriticalSectionTraits (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870556"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466688"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits (estructura)
 Se especializa en un objeto CriticalSection para admitir una sección crítica no válida o una función para liberar una sección crítica.  
@@ -39,14 +39,14 @@ struct CriticalSectionTraits;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|`Type`|Un `typedef` que define un puntero a una sección crítica. `Type` se define como `typedef CRITICAL_SECTION* Type;`.|  
+|`Type`|Un **typedef** que define un puntero a una sección crítica. `Type` se define como `typedef CRITICAL_SECTION* Type;`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CriticalSectionTraits::GetInvalidValue (método)](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Una plantilla CriticalSection se especializa para que la plantilla no siempre es válida.|  
-|[CriticalSectionTraits::Unlock (método)](../windows/criticalsectiontraits-unlock-method.md)|Una plantilla CriticalSection se especializa para que admita liberando propiedad del objeto de sección crítica especificado.|  
+|[CriticalSectionTraits::GetInvalidValue (método)](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Se especializa un `CriticalSection` plantilla para que la plantilla no siempre es válida.|  
+|[CriticalSectionTraits::Unlock (método)](../windows/criticalsectiontraits-unlock-method.md)|Se especializa un `CriticalSection` plantilla, por lo que admite liberar la propiedad del objeto especificado de sección crítica.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CriticalSectionTraits`  

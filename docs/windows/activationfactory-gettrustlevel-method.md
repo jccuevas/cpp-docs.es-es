@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Gettrustlevel (método) | Documentos de Microsoft'
+title: Método Activationfactory | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e4dfbfbc146663722eba1302b27e96812d684f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854394"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466727"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel (Método)
-Obtiene el nivel de confianza del objeto que se crea una instancia de la ActivationFactory actual.  
+Obtiene el nivel de confianza del objeto que actual **ActivationFactory** crea una instancia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `trustLvl`  
- Cuando se completa esta operación, el nivel de confianza de la clase en tiempo de ejecución que crea una instancia de la ActivationFactory.  
+ *trustLvl*  
+ Cuando se complete esta operación, el nivel de confianza de tiempo de ejecución de la clase que la **ActivationFactory** crea una instancia.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, se genera un error de aserción y `trustLvl` se establece en plena confianza.  
+ S_OK si se realiza correctamente; en caso contrario, se genera un error de aserción y *trustLvl* está establecida en plena confianza.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

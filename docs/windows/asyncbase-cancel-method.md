@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Cancel (método) | Documentos de Microsoft'
+title: Método Asyncbase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0559f32315265a7db5543e8559097177c2a670fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee338d4e90f94ed7cb7f9158235c66b72e9f2e52
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859857"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464751"
 ---
 # <a name="asyncbasecancel-method"></a>AsyncBase::Cancel (Método)
 Cancela una operación asincrónica.  
@@ -39,7 +39,7 @@ STDMETHOD(
  De forma predeterminada, siempre devuelve S_OK.  
   
 ## <a name="remarks"></a>Comentarios  
- Cancel() es una implementación predeterminada de IAsyncInfo::Cancel y no lleva a cabo ningún trabajo real. Para realmente cancelar una operación asincrónica, invalide el método virtual puro OnCancel().  
+ `Cancel()` es una implementación predeterminada de `IAsyncInfo::Cancel`, y no se realiza ningún trabajo real. Para cancelar realmente una operación asincrónica, invalidar el `OnCancel()` método virtual puro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** async.h  

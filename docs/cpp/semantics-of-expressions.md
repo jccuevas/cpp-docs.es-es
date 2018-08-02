@@ -1,5 +1,5 @@
 ---
-title: Semántica de las expresiones | Documentos de Microsoft
+title: Semántica de las expresiones | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3675e8bca6f62a1fbc7e30beefc6cbf6efbf197c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424137"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462747"
 ---
 # <a name="semantics-of-expressions"></a>Semántica de las expresiones
-Las expresiones se evalúan según la prioridad y agrupación de sus operadores. ([Prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md) en [convenciones léxicas](../cpp/lexical-conventions.md), muestra las relaciones de C++ imponen operadores en expresiones.)  
+Las expresiones se evalúan según la prioridad y agrupación de sus operadores. ([Prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md) en [convenciones léxicas](../cpp/lexical-conventions.md), muestra las relaciones de C++ imponen los operadores en expresiones.)  
   
 ## <a name="order-of-evaluation"></a>Orden de evaluación  
  Considere este ejemplo:  
@@ -76,10 +76,10 @@ Orden de expresión-evaluación con paréntesis
   
 |Tipo esperado|Tipos permitidos|  
 |-------------------|-------------------|  
-|*type*|`const` *tipo de*<br /> `volatile` *tipo de*<br /> *tipo de*&<br /> `const` *tipo de*&<br /> `volatile` *tipo de*&<br /> `volatile const` *tipo de*<br /> `volatile const` *tipo de*&|  
-|*tipo de*\*|*tipo de*\*<br /> `const` *tipo de*\*<br /> `volatile` *tipo de*\*<br /> `volatile const` *tipo de*\*|  
-|`const` *tipo de*|*type*<br /> `const` *tipo de*<br />`const` *tipo de*&|  
-|`volatile` *tipo de*|*type*<br /> `volatile` *tipo de*<br /> `volatile` *tipo de*&|  
+|*type*|`const` *Tipo*<br /> `volatile` *Tipo*<br /> *Tipo*&<br /> `const` *Tipo*&<br /> `volatile` *Tipo*&<br /> `volatile const` *Tipo*<br /> `volatile const` *Tipo*&|  
+|*Tipo*\*|*Tipo*\*<br /> `const` *Tipo*\*<br /> `volatile` *Tipo*\*<br /> `volatile const` *Tipo*\*|  
+|`const` *Tipo*|*type*<br /> `const` *Tipo*<br />`const` *Tipo*&|  
+|`volatile` *Tipo*|*type*<br /> `volatile` *Tipo*<br /> `volatile` *Tipo*&|  
   
  Dado que las reglas anteriores se pueden utilizar combinadas, se puede proporcionar un puntero const a un objeto volatile cuando se espera un puntero.  
   

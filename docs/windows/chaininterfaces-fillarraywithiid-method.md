@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Fillarraywithiid (método) | Documentos de Microsoft'
+title: Método Chaininterfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e6283b86b8e225771f259df9b5377fffa3667fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bd9f899457c3a6045d7a5525c9fb560e23f10d3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855947"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461041"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid (Método)
-Almacena el identificador de interfaz definido por el `I0` parámetro de plantilla en una ubicación especificada de una matriz especificada de identificadores de interfaz.  
+Almacena el identificador de interfaz definido por el *I0* parámetro de plantilla en una ubicación especificada en una matriz especificada de identificadores de interfaz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,10 +37,10 @@ __forceinline static void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `index`  
- Puntero a un valor de índice en el `iids` matriz.  
+ *index*  
+ Puntero a un valor de índice en el *IID* matriz.  
   
- `iids`  
+ *IID*  
  Una matriz de identificadores de interfaz.  
   
 ## <a name="requirements"></a>Requisitos  

@@ -1,5 +1,5 @@
 ---
-title: 'ClassFactory:: QueryInterface (método) | Documentos de Microsoft'
+title: Método ClassFactory | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b939fdd593c031eb3e750ff6b41a275fa5685cda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855993"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467097"
 ---
 # <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface (Método)
 Recupera un puntero a la interfaz especificada por el parámetro.  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `riid`  
+ *riid*  
  Id. de interfaz.  
   
- `ppvObject`  
- Cuando se completa esta operación, un puntero a la interfaz especificada por el parámetro `riid`.  
+ *ppvObject*  
+ Cuando finalice esta operación, un puntero a la interfaz especificada por el parámetro *riid*.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.  

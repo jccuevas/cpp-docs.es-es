@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944523"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462393"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referencia rvalue: &amp;&amp;
 Mantiene una referencia a una expresión de valor R.  
@@ -29,7 +29,6 @@ Mantiene una referencia a una expresión de valor R.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 type-id && cast-expression  
 ```  
   
@@ -41,7 +40,7 @@ type-id && cast-expression
 ## <a name="move-semantics"></a>Semántica de transferencia de recursos  
  Referencias a valor r admiten la implementación de *semántica de transferencia*, lo que puede aumentar significativamente el rendimiento de las aplicaciones. La semántica de transferencia de recursos permite escribir código que transfiere recursos (tales como memoria asignada dinámicamente) de un objeto a otro. La semántica de transferencia de recursos funciona porque permite transferir recursos desde objetos temporales a los que no se puede hacer referencia en otra parte del programa.  
   
- Para implementar la semántica de movimiento, suelen proporcionar un *constructor de movimiento,* y, opcionalmente, un operador de asignación de movimiento (`operator=`), a la clase. Las operaciones de copia y asignación cuyos orígenes son valores R aprovechan entonces automáticamente la semántica de transferencia de recursos. A diferencia del constructor de copia predeterminado, el compilador no proporciona un constructor de movimiento predeterminado. Para obtener más información sobre cómo escribir un constructor de movimiento y cómo utilizarlo en su aplicación, consulte [constructores de movimiento y operadores de asignación de movimiento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
+ Para implementar la semántica de movimiento, suelen proporcionar un *constructor de movimiento,* y, opcionalmente, un operador de asignación de movimiento (**operador =**), a la clase. Las operaciones de copia y asignación cuyos orígenes son valores R aprovechan entonces automáticamente la semántica de transferencia de recursos. A diferencia del constructor de copia predeterminado, el compilador no proporciona un constructor de movimiento predeterminado. Para obtener más información sobre cómo escribir un constructor de movimiento y cómo utilizarlo en su aplicación, consulte [constructores de movimiento y operadores de asignación de movimiento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
   
  También puede sobrecargar funciones y operadores normales para aprovechar la semántica de transferencia de recursos. Visual C++ 2010 presenta la semántica de movimiento en la biblioteca estándar de C++. Por ejemplo, la clase `string` implementa operaciones que realizan semántica de transferencia de recursos. Considere el ejemplo siguiente que concatena varias cadenas e imprime el resultado:  
   
@@ -59,7 +58,7 @@ int main()
 }  
 ```  
   
- Antes de Visual C++ 2010, con cada llamada a `operator+` asigna y devuelve un nuevo archivo temporal `string` objeto (un valor r). `operator+` no puede anexar una cadena a la otra porque no sabe si las cadenas de origen no son valores L o valores R. Si las cadenas de origen son ambas valores L, puede que se haga referencia a las mismas en otra parte del programa y, por consiguiente, no se deben modificar. Usando referencias de valor R, se puede modificar `operator+` para que acepte valores R, a los que no se puede hacer referencia en ningún otro lugar del programa. Por consiguiente, `operator+` ya puede anexar una cadena a otra. Esto puede reducir significativamente el número de asignaciones de memoria dinámica que la clase `string` debe realizar. Para obtener más información sobre la `string` de clases, vea [basic_string (clase)](../standard-library/basic-string-class.md).  
+ Antes de Visual C++ 2010, con cada llamada a **operator +** asigna y devuelve un nuevo archivo temporal `string` objeto (un valor r). **operator +** no se puede anexar una cadena al otro porque no sabe si las cadenas de origen son valores l o valores r. Si las cadenas de origen son ambas valores L, puede que se haga referencia a las mismas en otra parte del programa y, por consiguiente, no se deben modificar. Mediante el uso de las referencias rvalue, **operator +** puede modificarse para que acepte valores r, que no se puede hacer referencia en otro lugar en el programa. Por lo tanto, **operator +** ahora se puede anexar una cadena a otra. Esto puede reducir significativamente el número de asignaciones de memoria dinámica que la clase `string` debe realizar. Para obtener más información sobre la `string` de clases, vea [basic_string (clase)](../standard-library/basic-string-class.md).  
   
  La semántica de transferencia de recursos también ayuda cuando el compilador no puede utilizar la optimización del valor devuelto (RVO) o la optimización del valor devuelto con nombre (NRVO). En estos casos, el compilador llama al constructor de movimiento si el tipo lo define. Para obtener más información acerca de la optimización de valor devuelto con nombre, vea [denominada optimización del valor devuelto en Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   

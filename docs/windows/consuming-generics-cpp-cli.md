@@ -1,5 +1,5 @@
 ---
-title: Consumir genéricos (C++ / CLI) | Documentos de Microsoft
+title: Uso de genéricos (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 286d032a3ae01bf146d25583bff18ef94e6cccd6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870824"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460496"
 ---
 # <a name="consuming-generics-ccli"></a>Consumir genéricos (C++/CLI)
-Genéricos creados en un lenguaje .NET pueden usarse en otros lenguajes. NET. A diferencia de las plantillas, un tipo genérico en un ensamblado compilado sigue siendo genérico. Por lo tanto, uno puede crear instancias del tipo genérico en un ensamblado diferente e incluso en un idioma distinto del ensamblado en el que se definió el tipo genérico.  
+Genéricos creados en un lenguaje .NET se pueden usar en otros lenguajes. NET. A diferencia de las plantillas, un genérico en un ensamblado compilado sigue siendo genérico. Por lo tanto, uno puede crear instancias del tipo genérico en un ensamblado diferente e incluso en un idioma distinto del ensamblado en el que se definió el tipo genérico.  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- Este ejemplo muestra una clase genérica definida en C#.  
+ En este ejemplo se muestra una clase genérica definida en C#.  
   
 ### <a name="code"></a>Código  
   
-```  
+```cs  
 // consuming_generics_from_other_NET_languages.cs  
 // compile with: /target:library  
 // a C# program  
@@ -95,7 +95,7 @@ public class CircularList<ItemType> {
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // consuming_generics_from_other_NET_languages_2.cpp  
 // compile with: /clr  
 #using <consuming_generics_from_other_NET_languages.dll>  

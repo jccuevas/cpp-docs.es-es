@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944565"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462191"
 ---
 # <a name="switch-statement-c"></a>switch (Instrucción) (C++)
 Permite la selección entre varias secciones de código, dependiendo del valor de una expresión entera.  
@@ -164,7 +164,6 @@ int main(int argc, char *argv[])
   
  Un **cambiar** se puede anidar la instrucción. En tales casos, **caso** o **predeterminada** asociación etiquetas con la más cercana **cambiar** instrucción que contenga.  
 
- 
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  
  Microsoft C no limita el número de valores case en una **cambiar** instrucción. El número solo está limitado por la memoria disponible. ANSI C requiere al menos 257 etiquetas case se permitan en una **cambiar** instrucción.  
   
@@ -175,4 +174,3 @@ int main(int argc, char *argv[])
 ## <a name="see-also"></a>Vea también  
  [Instrucciones de selección](../cpp/selection-statements-cpp.md)   
  [Palabras clave](../cpp/keywords-cpp.md)   
- 

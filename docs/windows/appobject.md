@@ -1,5 +1,5 @@
 ---
-title: appobject | Documentos de Microsoft
+title: appobject | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856978"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466376"
 ---
 # <a name="appobject"></a>appobject
-Identifica la coclase como un objeto de aplicación, que está asociado a una aplicación .exe completa y se indican que las funciones y propiedades de la coclase que están disponibles globalmente en este [biblioteca de tipos](../mfc/automation-clients-using-type-libraries.md).  
+Identifica la coclase como un objeto de aplicación, que está asociado a una aplicación completa .exe e indica que las funciones y propiedades de la coclase están disponibles globalmente en este [biblioteca de tipos](../mfc/automation-clients-using-type-libraries.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [appobject]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **appobject** atributo C++ tiene la misma funcionalidad que la [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) atributo MIDL.  
+ El **appobject** atributo de C++ tiene la misma funcionalidad que el [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente muestra una definición de clase simple precedida de un bloque de atributos que incluya **appobject**:  
+ El código siguiente muestra una definición de clase simple precedida por un bloque de atributos que incluye **appobject**:  
   
-```  
+```cpp  
 // cpp_attr_ref_appobject.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -62,9 +60,9 @@ class A : public ICustom {
   
 |||  
 |-|-|  
-|**Se aplica a**|**class**, `struct`|  
+|**Se aplica a**|**clase**, **struct**|  
 |**Reiterativo**|No|  
-|**Atributos requeridos**|**coclass**|  
+|**Atributos requeridos**|`coclass`|  
 |**Atributos no válidos**|Ninguna|  
   
  Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  

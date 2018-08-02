@@ -1,5 +1,5 @@
 ---
-title: Spectre | Documentos de Microsoft
+title: Spectre | Microsoft Docs
 ms.custom: ''
 ms.date: 1/23/2018
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153ff690b975ecb442c260fcebce73acd32d03fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a51d47764ea4515fcbc2cb3b7aa37fd341cd130e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422415"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463234"
 ---
 # <a name="spectre"></a>Spectre
 
 **Específicos de Microsoft**
 
-Indica al compilador que no se inserten instrucciones de barrera de ejecución especulativa Spectre variante 1 para una función.
+Indica al compilador que no se va a insertar instrucciones de barrera de ejecución especulativa de variante 1 de Spectre para una función.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,12 +37,12 @@ Indica al compilador que no se inserten instrucciones de barrera de ejecución e
 
 ## <a name="remarks"></a>Comentarios
 
-El [/Qspectre](../build/reference/qspectre.md) opción del compilador, el compilador inserta instrucciones de barrera de ejecución especulativa donde análisis indica que existe una vulnerabilidad de seguridad de variante 1 Spectre. Dependen de las instrucciones específicas que se genera en el procesador. Mientras estas instrucciones deben tener un impacto mínimo en el tamaño del código o de rendimiento, puede haber casos en que el código no se ve afectado por la vulnerabilidad y necesita obtener el máximo rendimiento.
+El [/qspectre](../build/reference/qspectre.md) opción del compilador hace que el compilador inserta instrucciones de barrera de ejecución especulativa donde análisis indica que existe una vulnerabilidad de seguridad de la variante 1 de Spectre. Las instrucciones específicas que se emiten dependen del procesador. Mientras que estas instrucciones deben tener un impacto mínimo en el tamaño del código o de rendimiento, puede haber casos donde el código no se ve afectado por la vulnerabilidad y necesita el máximo rendimiento.
 
-El análisis Expert podría determinar si una función está protegida de un defecto de omisión de comprobación de límites de Spectre variante 1. En ese caso, puede suprimir la generación de código de mitigación dentro de una función aplicando `__declspec(spectre(nomitigation))` a la declaración de función.
+Análisis experto podría determinar que una función está protegida de un defecto de omisión de comprobación de Spectre variante 1 límites. En ese caso, puede suprimir la generación de código de mitigación dentro de una función aplicando `__declspec(spectre(nomitigation))` a la declaración de función.
 
 > [!CAUTION]
-> El **/Qspectre** instrucciones de barrera de ejecución especulativa proporcionar protección de seguridad importante y tener un efecto insignificante en el rendimiento. Por tanto, se recomienda que no las suprima, excepto en el caso poco frecuente de que el rendimiento de una función tenga una importancia crítica y se sepa que la función está segura.
+> El **/qspectre** instrucciones de barrera de ejecución especulativa proporcionar protección de seguridad importante y tener un efecto insignificante en el rendimiento. Por tanto, se recomienda que no las suprima, excepto en el caso poco frecuente de que el rendimiento de una función tenga una importancia crítica y se sepa que la función está segura.
 
 ## <a name="example"></a>Ejemplo
 
@@ -66,7 +66,6 @@ int main() {
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
-
-[__declspec](../cpp/declspec.md)  
-[Palabras clave](../cpp/keywords-cpp.md)  
-[/Qspectre](../build/reference/qspectre.md)  
+ [__declspec](../cpp/declspec.md)  
+ [Palabras clave](../cpp/keywords-cpp.md)  
+ [/Qspectre](../build/reference/qspectre.md)  

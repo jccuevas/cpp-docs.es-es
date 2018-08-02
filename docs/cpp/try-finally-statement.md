@@ -28,17 +28,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea792bde6e50f0e4149f802a5c852192def0fefa
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944283"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464865"
 ---
 # <a name="try-finally-statement"></a>try-finally (Instrucción)
 **Específicos de Microsoft**  
   
- La sintaxis siguiente describe la instrucción `try-finally`:  
+ La sintaxis siguiente describe el **try-finally** instrucción:  
   
 ```cpp 
 __try {  
@@ -55,7 +55,7 @@ __finally {
   
  **__finally** *compound-statement*  
   
- La instrucción `try-finally` es una extensión de Microsoft a los lenguajes C y C++ que permite que las aplicaciones de destino garanticen la ejecución del código de limpieza cuando se interrumpe la ejecución de un bloque de código. La limpieza consta de tareas como desasignar memoria, cerrar archivos y liberar identificadores de archivo. La instrucción `try-finally` es especialmente útil para las rutinas que tienen varios lugares donde comprobar un error, lo que puede causar que la rutina termine antes de tiempo.  
+ El **try-finally** instrucción es una extensión de Microsoft a los lenguajes C y C++ que permite a las aplicaciones de destino garanticen la ejecución del código de limpieza cuando se interrumpe la ejecución de un bloque de código. La limpieza consta de tareas como desasignar memoria, cerrar archivos y liberar identificadores de archivo. El **try-finally** instrucción resulta especialmente útil para las rutinas que tienen varios lugares donde se realiza una comprobación para un error que podría provocar prematura de devolución de la rutina.  
   
  Para obtener información relacionada y un ejemplo de código, vea [intente-excepto instrucción](../cpp/try-except-statement.md). Para obtener más información sobre el control general de excepciones estructurado, consulte [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Para obtener más información sobre cómo controlar las excepciones en aplicaciones administradas, vea [control de excepciones en /clr](../windows/exception-handling-cpp-component-extensions.md).  
   
@@ -83,16 +83,16 @@ Orden de terminación-ejecución de controladores
 >  El comportamiento de try-finally es diferente de otros lenguajes que admiten el uso de **finalmente**, como C#.  Una sola **__try** puede tener, pero no ambos, de **__finally** y **__except**.  Si se van a usar ambos conjuntamente, una instrucción try-except externa debe incluir la instrucción try-finally interna.  Las reglas que especifican cuándo se ejecuta cada bloque también son diferentes.  
   
 ## <a name="the-leave-keyword"></a>La palabra clave __leave  
- El **__leave** palabra clave sólo es válida en la sección protegida de un `try-finally` instrucción y su efecto es saltar al final de la sección protegida. La ejecución continúa en la primera instrucción del controlador de finalización.  
+ El **__leave** palabra clave sólo es válida en la sección protegida de un **try-finally** instrucción y su efecto es saltar al final de la sección protegida. La ejecución continúa en la primera instrucción del controlador de finalización.  
   
  Un **goto** instrucción también puede saltar fuera de la sección protegida, pero el rendimiento se degrada porque invoca el desenredo de pila. El **__leave** instrucción es más eficaz porque no produce el desenredo de pila.  
   
 ## <a name="abnormal-termination"></a>Finalización anómala  
- Salir de un `try-finally` instrucción mediante el [longjmp](../c-runtime-library/reference/longjmp.md) función en tiempo de ejecución se considera una finalización anómala. No es válido saltar dentro un **__try** instrucción, pero sí fuera. Todos los **__finally** las instrucciones que están activas entre el punto de partida (terminación normal de la **__try** bloque) y el destino (el **__except** que bloquear controla la excepción) se debe ejecutar. Esto recibe el nombre de desenredado local.  
+ Salir de un **try-finally** instrucción mediante el [longjmp](../c-runtime-library/reference/longjmp.md) función en tiempo de ejecución se considera una finalización anómala. No es válido saltar dentro un **__try** instrucción, pero sí fuera. Todos los **__finally** las instrucciones que están activas entre el punto de partida (terminación normal de la **__try** bloque) y el destino (el **__except** que bloquear controla la excepción) se debe ejecutar. Esto recibe el nombre de desenredado local.  
   
  Si un **intente** bloque esté terminado prematuramente por cualquier motivo, incluido un salto fuera del bloque, el sistema ejecuta asociado **finalmente** bloque como parte del proceso de desenredo de la pila. En tales casos, el [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) función devuelve **true** si se llama desde dentro el **finalmente** bloquear; en caso contrario, devuelve **false**.  
   
- No se llama al controlador de finalización si un proceso se elimina en medio de la ejecución de una instrucción `try-finally`.  
+ No se llama al controlador de terminación si un proceso se elimina en medio de ejecución de un **try-finally** instrucción.  
   
  **FIN de Específicos de Microsoft**  
   

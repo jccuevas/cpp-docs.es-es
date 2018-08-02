@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3ae16363956afc7cca853307ef2888846a02864d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941345"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461775"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Restricciones de los controladores de finalización
 No puede usar un **goto** instrucción para saltar en un **__try** bloque de instrucciones o un **__finally** bloque de instrucciones. En su lugar, se debe especificar el bloque de instrucciones a través del flujo de control normal. (Sin embargo, puede saltar fuera de un **__try** bloque de instrucciones.) Además, no se pueden anidar un controlador de excepciones o el controlador de finalización dentro un **__finally** bloque.  

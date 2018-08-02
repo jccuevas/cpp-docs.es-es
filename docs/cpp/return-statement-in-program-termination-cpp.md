@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6c08edff8237462cbc2c55dc5541e3da663ed0a3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944165"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461118"
 ---
 # <a name="return-statement-in-program-termination-c"></a>return (Instrucción de finalización del programa) (C++)
-Emitir un `return` instrucción desde **principal** es funcionalmente equivalente a llamar a la **salir** función. Considere el ejemplo siguiente:  
+Emitir un **devolver** instrucción desde `main` es funcionalmente equivalente a llamar a la `exit` función. Considere el ejemplo siguiente:  
   
 ```cpp 
 // return_statement.cpp  
@@ -36,7 +36,7 @@ int main()
 }  
 ```  
   
- El **salir** y **devolver** instrucciones en el ejemplo anterior son funcionalmente idénticas. Sin embargo, C++ requiere que las funciones que tienen devuelven tipos diferentes de **void** devuelven un valor. El **devolver** instrucción permite devolver un valor de `main`.  
+ El `exit` y **devolver** instrucciones en el ejemplo anterior son funcionalmente idénticas. Sin embargo, C++ requiere que las funciones que tienen devuelven tipos diferentes de **void** devuelven un valor. El **devolver** instrucción permite devolver un valor de `main`.  
   
 ## <a name="see-also"></a>Vea también  
  [Finalización del programa](../cpp/program-termination.md)

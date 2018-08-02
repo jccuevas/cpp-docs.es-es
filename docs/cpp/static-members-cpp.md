@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d202e48bbcd09c3f4071af21e942cb1353f7a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941985"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466246"
 ---
 # <a name="static-members-c"></a>Miembros estáticos (C++)
 Las clases pueden contener datos de miembro y funciones miembro estáticos. Cuando se declara un miembro de datos como **estático**, solo una copia de los datos se mantiene para todos los objetos de la clase.

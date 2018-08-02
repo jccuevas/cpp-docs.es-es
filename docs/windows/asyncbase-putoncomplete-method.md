@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Putoncomplete (método) | Documentos de Microsoft'
+title: Putoncomplete (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 490484a6988851565b478ef41ad16f0c722eb804
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33ca905d25fb010eb6d5c511f22ba40446ffd385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856077"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465608"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete (Método)
 Establece la dirección del controlador de eventos de finalización en el valor especificado.  
@@ -36,7 +36,7 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `completeHandler`  
+ *completeHandler*  
  La dirección a la que se establece el controlador de eventos de finalización.  
   
 ## <a name="return-value"></a>Valor devuelto  

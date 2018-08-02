@@ -1,5 +1,5 @@
 ---
-title: Uso de excepciones estructurado con C++ | Documentos de Microsoft
+title: Uso de excepciones estructurado con C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71ce64a067ed75c29d83913adababe2d97dba6f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 363dd00cd5f4e177ea32a109cf5f56a1f3c6cb29
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421955"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461730"
 ---
 # <a name="using-structured-exception-handling-with-c"></a>Usar el control de excepciones estructurado con C++
 El control de excepciones estructurado descrito en estos artículos funciona con archivos de código fuente de C y C++. Sin embargo, no está diseñado específicamente para C++ y no se recomienda. Para asegurarse de que el código será más portable, use el control de excepciones de C++. Además, el mecanismo de control de excepciones de C++ es más flexible, ya que puede controlar excepciones de cualquier tipo.  

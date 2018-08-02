@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Casttounknown (método) | Documentos de Microsoft'
+title: Método Chaininterfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 696d632037f2a1fdc68e298b247e46720b81a343
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c9479180134e8a873e1d79f91deb3d29700d40a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855099"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467175"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown (Método)
-Convierte el puntero de interfaz del tipo definido por el `I0` parámetro de plantilla a un puntero a IUnknown.  
+Convierte el puntero de interfaz del tipo definido por el *I0* parámetro de plantilla en un puntero a IUnknown.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38edaa7dfa97fd34ab70b21785a416c3ed072d55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7ccdbc71679a197e0464b4ec42dba948754c4c5c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940558"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462269"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversiones de tipos y seguridad de tipos (C++ moderno)
 En este documento se identifican problemas comunes de la conversión de tipos y se describe cómo evitarlos en el código de C++.  
@@ -75,7 +75,6 @@ num2 = -1;
 num = num2;  
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;  
 // Prints: unsigned val = 65535 signed val = -1  
-  
 ```  
   
  Observe que los valores se reinterpretan en ambas direcciones. Si el programa produce resultados extraños en los que el signo del valor parece lo contrario de lo esperado, busque las conversiones implícitas entre los tipos enteros con y sin signo. En el ejemplo siguiente, el resultado de la expresión (0 - 1) se convierte implícitamente de **int** a **int sin signo** cuando se almacena en `num`. Esto hace que el patrón de bits se reinterprete.  
@@ -83,7 +82,6 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 ```cpp  
 unsigned int u3 = 0 - 1;  
 cout << u3 << endl; // prints 4294967295  
-  
 ```  
   
  El compilador no advierte sobre las conversiones implícitas entre los tipos enteros con y sin signo. Por tanto, se recomienda evitar por completo las conversiones de tipos con signo a tipos sin signo. Si no puede evitarlas, agregue al código una comprobación en tiempo de ejecución para detectar si el valor que se está convirtiendo es mayor o igual que cero y menor o igual que el valor máximo del tipo con signo. Los valores de este intervalo se transferirán de tipos con signo a tipos sin signo, o viceversa, sin reinterpretaciones.  
@@ -93,7 +91,6 @@ cout << u3 << endl; // prints 4294967295
   
 ```cpp  
 char* s = "Help" + 3;  
-  
 ```  
   
 ## <a name="explicit-conversions-casts"></a>Conversiones explícitas  
@@ -104,7 +101,6 @@ char* s = "Help" + 3;
 ```cpp  
 (int) x; // old-style cast, old-style syntax  
 int(x); // old-style cast, functional syntax  
-  
 ```  
   
  El operador de conversión de estilo C es idéntico al operador de llamada () y, por consiguiente, no sobresale en el código y es sencillo pasarlo por alto. Ambos presentan problemas porque son difíciles de reconocer un vistazo o busque y son lo bastante dispares para invocar cualquier combinación de **estático**, **const**, y **reinterpret_cast**. Averiguar lo que hace realmente una conversión de estilo antiguo puede ser difícil y propenso a errores. Por todas estas razones, cuando se requiere una conversión, recomendamos utilizar uno de los siguientes operadores de conversión de C++, que en algunos casos tienen mucha más seguridad de tipos y expresan mucho más explícitamente la intención de la programación:  
@@ -121,7 +117,6 @@ int(x); // old-style cast, functional syntax
     // No error but not necessarily safe.  
     Base* b = new Base();  
     Derived* d2 = static_cast<Derived*>(b);  
-  
     ```  
   
      Para obtener más información, consulte [static_cast](../cpp/static-cast-operator.md).  
@@ -147,7 +142,6 @@ int(x); // old-style cast, functional syntax
     }  
   
     //Output: d3 is null;  
-  
     ```  
   
      Para obtener más información, consulte [dynamic_cast](../cpp/dynamic-cast-operator.md).  
@@ -161,7 +155,6 @@ int(x); // old-style cast, functional syntax
        const double pi = 3.14;  
        Func(const_cast<double&>(pi)); //No error.  
     }  
-  
     ```  
   
      Para obtener más información, consulte [const_cast](../cpp/const-cast-operator.md).  
@@ -181,7 +174,6 @@ int(x); // old-style cast, functional syntax
                       // to do this?  
     int k = reinterpret_cast<int>(str);// Programming intent is clear.  
                                        // However, it is not 64-bit safe.  
-  
     ```  
   
      Para obtener más información, consulte [reinterpret_cast (operador)](../cpp/reinterpret-cast-operator.md).  

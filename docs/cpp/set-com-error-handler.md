@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f516114dbaa9e507491cf669c3371b6b8fbaf11
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 08d5df7893aa5390a6e577e3c26424864f7c3a8f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944546"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465771"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Específicos de Microsoft**  
@@ -48,7 +48,7 @@ void __stdcall _set_com_error_handler(
  Objeto `IErrorInfo`.  
   
 ## <a name="remarks"></a>Comentarios  
- De forma predeterminada, [_com_raise_error](../cpp/com-raise-error.md) controla todos los errores de COM. Puede cambiar este comportamiento mediante `_set_com_error_handler` para llamar a su propia función de control de errores.  
+ De forma predeterminada, [_com_raise_error](../cpp/com-raise-error.md) controla todos los errores de COM. Puede cambiar este comportamiento mediante **_set_com_error_handler** para llamar a su propia función de control de errores.  
   
  La función de reemplazo debe tener una firma que sea equivalente a la de `_com_raise_error`.  
   

@@ -1,5 +1,5 @@
 ---
-title: AsWeak (función) | Documentos de Microsoft
+title: AsWeak (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039d210e9a204c485e2f44c39ea87b4d35089d88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854829"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462630"
 ---
 # <a name="asweak-function"></a>AsWeak (función)
 Recupera una referencia débil a una instancia especificada.  
@@ -38,14 +38,14 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
- Un puntero al tipo de parámetro `p`.  
+ *T*  
+ Un puntero al tipo de parámetro *p*.  
   
- `p`  
+ *p*  
  Una instancia de un tipo.  
   
- `pWeak`  
- Cuando se completa esta operación, un puntero a una referencia débil al parámetro `p`.  
+ *pWeak*  
+ Cuando finalice esta operación, un puntero a una referencia débil al parámetro *p*.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si esta operación se realiza correctamente; en caso contrario, un error HRESULT que indica la causa del error.  

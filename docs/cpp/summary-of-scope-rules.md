@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce7c57688fae22c3bba844cff480ae3aec03785
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 4439ec167cca7a2e3314879faf4c65c842801e90
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028143"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465478"
 ---
 # <a name="summary-of-scope-rules"></a>Resumen de reglas de ámbito
 El uso de un nombre debe ser inequívoco dentro de su ámbito (hasta el punto en que se determina la sobrecarga). Si el nombre indica una función, la función no debe ser ambigua respecto al número y tipo de parámetros. Si el nombre se mantiene no ambiguo, [acceso a miembros](../cpp/member-access-control-cpp.md) se aplican las reglas.  

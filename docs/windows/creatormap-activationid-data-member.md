@@ -1,5 +1,5 @@
 ---
-title: Miembro de datos Creatormap | Documentos de Microsoft
+title: Miembro de datos ActivationID | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881801"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467136"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId (Miembro de datos)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,11 +37,11 @@ union {
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- `clsid`  
+ *CLSID*  
  Id. de interfaz.  
   
- `getRuntimeName`  
- Una función que recupera el nombre de un objeto en tiempo de ejecución de Windows.  
+ *getRuntimeName*  
+ Una función que recupera el nombre de Windows en tiempo de ejecución de un objeto.  
   
 ## <a name="remarks"></a>Comentarios  
  Representa un identificador de objeto que se identifica mediante un identificador de clase COM clásico o un nombre de Windows en tiempo de ejecución.  

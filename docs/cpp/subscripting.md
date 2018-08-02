@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c278c39908312f76a8b62a529beaed884c07a81d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944504"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461525"
 ---
 # <a name="subscripting"></a>Subíndices
 El operador de subíndice (**[]**), como el operador de llamada de función, se considera un operador binario. El operador de subíndice debe ser una función miembro no estática que tome un único argumento. Este argumento puede ser de cualquier tipo y designa el subíndice de la matriz deseado.  
@@ -98,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>Comentarios  
- Cuando `i` llega a 10 en el programa anterior, `operator[]` detecta que se está utilizando un subíndice fuera de los límites y emite un mensaje de error.  
+ Cuando `i` llega a 10 en el programa anterior, **operator []** detecta que un subíndice fuera de los límites se está usando y emite un mensaje de error.  
   
- Observe que la función `operator[]` devuelve un tipo de referencia. Esto lo convierte en un valor L, que permite utilizar expresiones con subíndice en cada lado de los operadores de asignación.  
+ Tenga en cuenta que la función **operator []** devuelve un tipo de referencia. Esto lo convierte en un valor L, que permite utilizar expresiones con subíndice en cada lado de los operadores de asignación.  
   
 ## <a name="see-also"></a>Vea también  
  [Sobrecarga de operadores](../cpp/operator-overloading.md)

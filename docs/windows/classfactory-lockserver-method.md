@@ -1,5 +1,5 @@
 ---
-title: 'ClassFactory:: Lockserver (método) | Documentos de Microsoft'
+title: Lockserver (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e09a795688c7e2b31771126f9e4036ddfbd8e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860325"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462711"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer (Método)
-Incrementa o disminuye el número de subyacente de objetos que se realiza un seguimiento del objeto ClassFactory actual.  
+Incrementa o disminuye el número de subyacentes de objetos que se realiza el seguimiento actual **ClassFactory** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,8 +36,8 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `fLock`  
- `true` para incrementar el número de objetos con seguimiento. `false` Para reducir el número de objetos con seguimiento.  
+ *manada*  
+ **True** para incrementar el número de objetos con seguimiento. **false** para reducir el número de objetos con seguimiento.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; en caso contrario, E_FAIL.  

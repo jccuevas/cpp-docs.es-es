@@ -1,5 +1,5 @@
 ---
-title: Convierte de estilo C con - clr (C++ / CLI) | Documentos de Microsoft
+title: Conversiones de estilo C con /CLR (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860403"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464589"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Conversiones de estilo C con /clr (C++/CLI)
 El siguiente tema se aplica solo a Common Language Runtime.  
   
- Cuando se usa con tipos CLR, el compilador intenta asignar estilo C convierte en una de las conversiones de tipos que se enumeran a continuación, en el orden siguiente:  
+ Cuando se usa con tipos CLR, el compilador intenta asignar el estilo C convertirse en una de las conversiones que se enumeran a continuación, en el orden siguiente:  
   
 1.  const_cast  
   
 2.  safe_cast  
   
-3.  safe_cast más const_cast  
+3.  safe_cast plus const_cast  
   
 4.  static_cast  
   
-5.  static_cast más const_cast  
+5.  static_cast plus const_cast  
   
- Si ninguna de las conversiones de tipos enumerados anteriormente es válida y si el tipo de la expresión y el tipo de destino son tipos de referencia CLR, conversión de estilo C se asigna a una comprobación en tiempo de ejecución (instrucción de MSIL castclass). En caso contrario, una conversión de estilo C se considera no válida y el compilador emitirá un error.  
+ Si ninguna de las conversiones de tipos enumerados anteriormente es válida y si el tipo de la expresión y el tipo de destino son tipos de referencia CLR, conversión de estilo C se asigna a una comprobación de tiempo de ejecución (instrucción de MSIL castclass). En caso contrario, una conversión de estilo C se considera no válida y el compilador emite un error.  
   
 ## <a name="remarks"></a>Comentarios  
- Una conversión de estilo C no se recomienda. Cuando se compila con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), use [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
+ No se recomienda una conversión de estilo C. Cuando se compila con [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md), utilice [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
- El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `const_cast`.  
+ El ejemplo siguiente muestra una conversión de estilo C que se asigna a un **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -56,9 +56,9 @@ int main() {
 }  
 ```  
   
- El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `safe_cast`.  
+ El ejemplo siguiente muestra una conversión de estilo C que se asigna a un **safe_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,9 +68,9 @@ int main() {
 }  
 ```  
   
- El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `safe_cast` más `const_cast`.  
+ El ejemplo siguiente muestra una conversión de estilo C que se asigna a un **safe_cast** plus **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -89,9 +89,9 @@ int main() {
 }  
 ```  
   
- El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `static_cast`.  
+ El ejemplo siguiente muestra una conversión de estilo C que se asigna a un **static_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -110,9 +110,9 @@ int main() {
 }  
 ```  
   
- El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `static_cast` más `const_cast`.  
+ El ejemplo siguiente muestra una conversión de estilo C que se asigna a un **static_cast** plus **const_cast**.  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -133,7 +133,7 @@ int main() {
   
  El ejemplo siguiente muestra una conversión de estilo C que se asigna a una comprobación en tiempo de ejecución.  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -152,9 +152,9 @@ int main() {
 }  
 ```  
   
- El ejemplo siguiente muestra un válido conversión de estilo C, que hace que el compilador emita un error.  
+ El ejemplo siguiente muestra un válido conversión de estilo C, lo que hace que el compilador emita un error.  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  

@@ -1,5 +1,5 @@
 ---
-title: CreatorMap (estructura) | Documentos de Microsoft
+title: CreatorMap (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6113737d7463354ffa273ced61b190246f63a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fadba5993b7445af2386f6e0669f210e29560c6c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873289"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464261"
 ---
 # <a name="creatormap-structure"></a>CreatorMap (estructura)
-Admite la infraestructura de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura de la biblioteca de plantillas C++ de Windows en tiempo de ejecución y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,15 +35,15 @@ struct CreatorMap;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Contiene información sobre cómo inicializar, registrar y anular el registro de objetos.  
+ Contiene información acerca de cómo inicializar, registrar y anular el registro de objetos.  
   
- CreatorMap contiene la información siguiente:  
+ **CreatorMap** contiene la información siguiente:  
   
 -   Cómo inicializar, registrar y anular el registro de objetos.  
   
--   Cómo se comparan los datos de activación según una fábrica de Windows Runtime o COM clásico.  
+-   Cómo se comparan los datos de activación según un generador clásico COM o en tiempo de ejecución de Windows.  
   
--   Información sobre el nombre de caché y del servidor de fábrica de una interfaz.  
+-   Información sobre el nombre de caché y el servidor de fábrica para una interfaz.  
   
 ## <a name="members"></a>Miembros  
   
@@ -51,10 +51,10 @@ struct CreatorMap;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CreatorMap::activationId (miembro de datos)](../windows/creatormap-activationid-data-member.md)|Representa un identificador de objeto que se identifica mediante un identificador de clase COM clásico o un nombre en tiempo de ejecución de Windows.|  
-|[CreatorMap::factoryCache (miembro de datos)](../windows/creatormap-factorycache-data-member.md)|Almacena el puntero a la memoria caché del generador para el CreatorMap.|  
-|[CreatorMap::factoryCreator (miembro de datos)](../windows/creatormap-factorycreator-data-member.md)|Crea un generador para el CreatorMap especificado.|  
-|[CreatorMap::serverName (miembro de datos)](../windows/creatormap-servername-data-member.md)|Almacena el nombre del servidor para el CreatorMap.|  
+|[CreatorMap::activationId (miembro de datos)](../windows/creatormap-activationid-data-member.md)|Representa un identificador de objeto que se identifica mediante un identificador de clase COM clásico o un nombre de Windows en tiempo de ejecución.|  
+|[CreatorMap::factoryCache (miembro de datos)](../windows/creatormap-factorycache-data-member.md)|Almacena el puntero a la memoria caché del generador para el **CreatorMap**.|  
+|[CreatorMap::factoryCreator (miembro de datos)](../windows/creatormap-factorycreator-data-member.md)|Crea un generador para el elemento especificado **CreatorMap**.|  
+|[CreatorMap::serverName (miembro de datos)](../windows/creatormap-servername-data-member.md)|Almacena el nombre del servidor para el **CreatorMap**.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CreatorMap`  

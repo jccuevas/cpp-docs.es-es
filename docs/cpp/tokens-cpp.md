@@ -1,5 +1,5 @@
 ---
-title: Símbolos (tokens) (C++) | Documentos de Microsoft
+title: Símbolos (tokens) (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2e1a6cc36e4e5f2f785c1e5dff03c6fb5e392d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 217061557acb0c8b311a91651eea2f57a8198872
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467963"
 ---
 # <a name="tokens-c"></a>Símbolos (tokens) (C++)
 Un token es el elemento mínimo de un programa de C++ que es significativo para el compilador. El analizador de C++ reconoce estas clases de tokens: identificadores, palabras clave, literales, operadores, signos de puntuación y otros separadores. Una secuencia de estos tokens constituye una unidad de traducción.  
@@ -44,13 +45,13 @@ Un token es el elemento mínimo de un programa de C++ que es significativo para 
   
  El analizador separa los tokens del flujo de entrada creando el token más largo posible usando los caracteres de entrada en un examen de izquierda a derecha. Considere este fragmento de código:  
   
-```  
+```cpp 
 a = i+++j;  
 ```  
   
  El programador que escribió el código puede haber pensado cualquiera de estas dos instrucciones:  
   
-```  
+```cpp 
 a = i + (++j)  
   
 a = (i++) + j  

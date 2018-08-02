@@ -1,5 +1,5 @@
 ---
-title: control | Documentos de Microsoft
+title: control | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8e80736ca84b551f197cc475aed4c7b54b9bf52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ffba61c9e0edaf3d127a7ddfb12b098ae484ca
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870837"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466492"
 ---
 # <a name="control"></a>control
 Especifica que el tipo definido por el usuario es un control.  
@@ -30,17 +30,15 @@ Especifica que el tipo definido por el usuario es un control.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [control]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **control** atributo implica la [coclase](../windows/coclass.md) atributo. El **control** atributo C++ tiene la misma funcionalidad que la [control](http://msdn.microsoft.com/library/windows/desktop/aa366764) atributo MIDL.  
+ El **control** atributo implica la [coclase](../windows/coclass.md) atributo. El **control** atributo de C++ tiene la misma funcionalidad que el [control](http://msdn.microsoft.com/library/windows/desktop/aa366764) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_control.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -61,7 +59,7 @@ class CTest : public ICustom {};
   
 |||  
 |-|-|  
-|**Se aplica a**|**class**, `struct`|  
+|**Se aplica a**|**clase**, **struct**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

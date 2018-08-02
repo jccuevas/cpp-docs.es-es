@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e08daba1e80523e7992f52ec353826bb53417682
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028364"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462315"
 ---
 # <a name="standard-conversions"></a>Conversiones estándar
 El lenguaje C++ define conversiones entre sus tipos fundamentales. También define conversiones para tipos derivados de puntero, referencia y puntero a miembro. Estas conversiones se denominan "conversiones estándar". (Para obtener más información sobre los tipos, tipos estándar y los tipos derivados, vea [tipos](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -95,7 +95,6 @@ long_num2 = int_num * long_num2;
  Los objetos de tipos enteros con signo se pueden convertir en los tipos sin signo correspondientes. Cuando se produce esta conversión, el patrón de bits real no cambia, pero sí la interpretación de los datos. Considere este código:  
   
 ```cpp 
-  
 #include <iostream>  
   
 using namespace std;  
@@ -107,7 +106,6 @@ int main()
     cout << (u = i) << "\n";  
 }  
 // Output: 65533  
-  
 ```  
   
  En el ejemplo anterior, un **firmado resumen**, `i`, se define y se inicializa en un número negativo. La expresión `(u = i)` hace `i` va a convertir en un **entero corto sin signo** antes de la asignación a `u`.  
@@ -163,7 +161,6 @@ cout << (float)1E300 << endl;
  En el código siguiente se muestran las reglas de conversión descritas en la tabla:  
   
 ```cpp 
-  
 double dVal;  
 float fVal;  
 int iVal;  
@@ -249,12 +246,12 @@ int main()
  El puntero `pA` es de tipo `A *`, los que se puede interpretar como “puntero a un objeto de tipo `A`”. Los miembros de `bObject` `(`como `BComponent` y `BMemberFunc`) son únicos para tipo `B` y, por tanto, son inaccesibles a través de `pA`. El puntero `pA` solo permite el acceso a esas características (funciones de miembro y datos) del objeto que se definen en la clase `A`.  
   
 ### <a name="pointer-to-function"></a>De puntero a función  
- Un puntero a una función se puede convertir al tipo **void \*** si tipo **void \***  es lo suficientemente grande como para contener ese puntero.  
+ Un puntero a una función se puede convertir al tipo `void *`si tipo `void *` es lo suficientemente grande como para contener ese puntero.  
   
 ### <a name="pointer-to-void"></a>De puntero a void  
  Punteros a tipo **void** se puede convertir a punteros a cualquier otro tipo, pero solo con una conversión de tipos explícita (a diferencia de C). (Consulte [expresiones con conversiones de tipo explícitas](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) para obtener más información sobre conversiones de tipo.) Un puntero a cualquier tipo se puede convertir implícitamente a un puntero al tipo **void**. Un puntero a un objeto incompleto de un tipo se puede convertir en un puntero a **void** (implícitamente) y viceversa (explícitamente). El resultado de dicha conversión es igual al valor del puntero original. Un objeto se considera incompleto si se declara, pero no hay suficiente información disponible para determinar su tamaño o clase base.  
   
- Un puntero a cualquier objeto que no es **const** o **volátil** puede convertirse implícitamente a un puntero de tipo **void \*** .  
+ Un puntero a cualquier objeto que no es **const** o **volátil** puede convertirse implícitamente a un puntero de tipo `void *`.  
   
 ### <a name="const-and-volatile-pointers"></a>punteros const y volatile  
  C++ no proporciona una conversión estándar de un **const** o **volátil** tipo a un tipo que no sea **const** o **volátil**. Sin embargo, se puede especificar cualquier tipo de conversión mediante conversiones de tipos explícitas (incluidas las conversiones que no son seguras).  

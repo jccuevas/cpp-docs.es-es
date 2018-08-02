@@ -1,5 +1,5 @@
 ---
-title: Las excepciones de C++ no controladas | Documentos de Microsoft
+title: Las excepciones de C++ no controladas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db763ce602531b15e840013a6dd235b3fba4007e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e2162034b3e9ff93ebccca0f7eb53299b19c648
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467983"
 ---
 # <a name="unhandled-c-exceptions"></a>Excepciones de C++ no controladas
-Si un controlador coincidente (o los puntos suspensivos **catch** controlador) no se encuentra para la excepción actual, predefinida `terminate` se llama la función de tiempo de ejecución. (También puede llamar explícitamente a `terminate` en cualquiera de sus controladores). La acción predeterminada de `terminate` es llamar a `abort`. Si desea que `terminate` llame a otra función del programa antes de salir de la aplicación, llame a la función `set_terminate` con el nombre de la función que se va a llamar como argumento único. Puede llamar a `set_terminate` en cualquier punto del programa. El `terminate` rutina siempre llama a la última función especificada como argumento a `set_terminate`.  
+Si un controlador coincidente (o botón de puntos suspensivos **catch** controlador) no se encuentra para la excepción actual, predefinida `terminate` se llama a la función de tiempo de ejecución. (También puede llamar explícitamente a `terminate` en cualquiera de sus controladores). La acción predeterminada de `terminate` es llamar a `abort`. Si desea que `terminate` llame a otra función del programa antes de salir de la aplicación, llame a la función `set_terminate` con el nombre de la función que se va a llamar como argumento único. Puede llamar a `set_terminate` en cualquier punto del programa. El `terminate` rutina siempre llama a la última función especificada como argumento a `set_terminate`.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se inicia una excepción `char *`, pero no contiene un controlador designado para detectar excepciones de tipo `char *`. La llamada a `set_terminate` indica a `terminate` que llame a `term_func`.  
   
-```  
+```cpp 
 // exceptions_Unhandled_Exceptions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -55,7 +56,7 @@ int main() {
   
 ## <a name="output"></a>Salida  
   
-```  
+```Output  
 term_func was called by terminate.  
 ```  
   

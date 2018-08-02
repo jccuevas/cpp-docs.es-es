@@ -1,5 +1,5 @@
 ---
-title: Las referencias a punteros | Documentos de Microsoft
+title: Las referencias a punteros | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de0974608f313a497dfb93d357995e7cc578e4d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467833"
 ---
 # <a name="references-to-pointers"></a>Referencias a punteros
 Las referencias a punteros se pueden declarar de la misma manera que las referencias a objetos. La declaración de una referencia a un puntero produce un valor modificable que se utiliza como un puntero normal.  
@@ -28,7 +29,7 @@ Las referencias a punteros se pueden declarar de la misma manera que las referen
   
  Las funciones `Add1` y `Add2` son equivalentes desde el punto de vista funcional (aunque no se llamen igual). La diferencia es que `Add1` utiliza el direccionamiento indirecto doble mientras que `Add2` usa el método más práctico de referencia a un puntero.  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   

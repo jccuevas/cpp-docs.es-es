@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Getruntimeclassname (método) | Documentos de Microsoft'
+title: Método Activationfactory | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db270c88b4335be48016ff2b8bdcf2b5e3951cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db26591bc4d0f1912c968c331266200baeea9917
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854881"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463673"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName (Método)
-Obtiene el nombre de clase en tiempo de ejecución del objeto que se crea una instancia de la ActivationFactory actual.  
+Obtiene el nombre de clase en tiempo de ejecución del objeto que actual **ActivationFactory** crea una instancia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,8 +36,8 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `runtimeName`  
- Cuando se completa esta operación, un identificador de una cadena que contiene el nombre de clase en tiempo de ejecución del objeto que se crea una instancia de la ActivationFactory actual.  
+ *runtimeName*  
+ Cuando finalice esta operación, un identificador de cadena que contiene el nombre de clase en tiempo de ejecución del objeto que actual **ActivationFactory** crea una instancia.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.  

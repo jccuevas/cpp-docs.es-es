@@ -1,5 +1,5 @@
 ---
-title: Plantillas y resolución de nombres | Documentos de Microsoft
+title: Plantillas y resolución de nombres | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b27f6f7f56604976bb1004594fc7c0ac6fdc923
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be1a94215bb13d02970462ee2e8dcb19df1ff05f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422818"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464225"
 ---
 # <a name="templates-and-name-resolution"></a>Plantillas y resolución de nombres
 
@@ -84,5 +84,4 @@ En las definiciones de plantilla, hay tres tipos de nombres.
  Las expresiones dependientes del tipo y dependientes del valor son expresiones que implican variables dependientes del tipo o dependientes del valor. Estas expresiones pueden tener una semántica diferente en función de los parámetros utilizados para la plantilla.  
   
 ## <a name="see-also"></a>Vea también
-
  [Templates](../cpp/templates-cpp.md) (Plantillas [C++])

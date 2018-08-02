@@ -1,5 +1,5 @@
 ---
-title: 'CriticalSection:: TryLock (método) | Documentos de Microsoft'
+title: TryLock (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4ee99d82212d0d6cdd610b4565bd9292a0265dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1b9d238d4f5475475e5dc367aae196937630a0e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883957"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465427"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock (Método)
 Intenta entrar en una sección crítica sin bloquear. Si la llamada se realiza correctamente, el subproceso de llamada toma posesión de la sección crítica.  
@@ -38,14 +38,14 @@ static SyncLock TryLock(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `cs`  
+ *CS*  
  Un objeto de sección crítica especificado por el usuario.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un valor distinto de cero si la sección crítica se escribe correctamente o el subproceso actual ya posee la sección crítica. Devuelve cero si otro subproceso ya posee la sección crítica.  
+ Un valor distinto de cero si la sección crítica está escrita correctamente o el subproceso actual ya posee la sección crítica. Cero si otro subproceso ya posee la sección crítica.  
   
 ## <a name="remarks"></a>Comentarios  
- La primera **TryLock** el objeto de sección crítica actual afecta a la función. El segundo **TryLock** function afecta a una sección crítica especificado por el usuario.  
+ La primera **TryLock** el objeto de sección crítica actual afecta a la función. El segundo **TryLock** función afecta a una sección crítica especificado por el usuario.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

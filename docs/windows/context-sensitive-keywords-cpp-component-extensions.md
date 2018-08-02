@@ -1,5 +1,5 @@
 ---
-title: Palabras clave contextuales (extensiones de componentes de C++) | Documentos de Microsoft
+title: Palabras clave contextuales (extensiones de componentes de C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871528"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466129"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Palabras clave contextuales (Extensiones de componentes de C++)
 *Palabras clave contextuales* son elementos del lenguaje que solo se reconocen en contextos concretos. Fuera del contexto concreto, una palabra clave contextual puede ser un símbolo definido por el usuario.  
@@ -46,7 +46,7 @@ ms.locfileid: "33871528"
   
 -   `internal`   
   
--   [Literal](../windows/literal-cpp-component-extensions.md)  
+-   [literal](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33871528"
   
 -   `where` (parte de [genéricos](../windows/generics-cpp-component-extensions.md))  
   
- Por motivos de legibilidad, puede que desee limitar el uso de palabras clave contextuales como símbolos definidos por el usuario.  
+ Para fines de legibilidad, puede limitar el uso de palabras clave contextuales como símbolos definidos por el usuario.  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
  **Comentarios**  
@@ -77,9 +77,9 @@ ms.locfileid: "33871528"
 ### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- En el ejemplo de código siguiente se muestra que, en el contexto adecuado, la palabra clave contextual `property` se puede utilizar para definir una propiedad y una variable.  
+ El ejemplo de código siguiente muestra en el contexto adecuado, el **propiedad** palabra clave contextual puede utilizarse para definir una propiedad y una variable.  
   
-```  
+```cpp  
 // context_sensitive_keywords.cpp  
 // compile with: /clr  
 public ref class C {  

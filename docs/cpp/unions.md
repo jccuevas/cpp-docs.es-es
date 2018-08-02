@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48c9962c7a0798b9c3fd4d5d9e1af223d41ac552
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939214"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460884"
 ---
 # <a name="unions"></a>Uniones
 Un **unión** es un tipo definido por el usuario en el que todos los miembros comparten la misma ubicación de memoria. Esto significa que, en un momento dado, una unión no puede contener más de un objeto de su lista de miembros. También significa que, independientemente de cuántos miembros tiene una unión, en todo momento usa únicamente la memoria suficiente para almacenar al miembro más grande.  
@@ -35,7 +35,7 @@ Un **unión** es un tipo definido por el usuario en el que todos los miembros co
 union [name]  { member-list };  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *name*  
  Nombre del tipo dado a la unión.  
   
@@ -149,7 +149,6 @@ void Initialize()
     second.wind = { 204,1418859354, 14, 27 };  
     inputs.push(second);  
 }  
-  
 ```  
   
  En el ejemplo anterior, observe que la unión de la estructura de entrada no tiene nombre. Se trata de una unión anónima, y se accede a sus miembros como si fueran miembros directos de la estructura. Para obtener más información sobre las uniones anónimas, vea la sección siguiente.  
@@ -603,7 +602,6 @@ private:
         WindData wind;  
     };  
 };  
-  
 ```  
   
  Las uniones no pueden almacenar referencias. Las uniones no admiten la herencia, por lo que una unión no puede usarse como una clase base, heredar de otra clase o tener funciones virtuales.  
@@ -633,7 +631,6 @@ int main()
  10  
  3.141600  
 */  
-  
 ```  
   
  La unión `NumericType` se organiza en memoria (conceptualmente), como se muestra en la ilustración siguiente.  
@@ -654,7 +651,7 @@ Además de las restricciones de uniones con nombre, las uniones anónimas están
   
 -   También se debe declarar como **estático** si se declaran en el ámbito de archivo o espacio de nombres.  
   
--   Solo pueden tener miembros públicos; los miembros privados y protegidos de uniones anónimas generan errores.  
+-   Solo pueden tener **pública** miembros; **privada** y **protegido** miembros en las uniones anónimas generan errores.  
   
 -   No pueden tener funciones miembro.  
   

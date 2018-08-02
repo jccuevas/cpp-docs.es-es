@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: As (método) | Documentos de Microsoft'
+title: Método Comptr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb9fd0ff09f6775a95ff881d9f8cbaa3edc61065
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8307411994fb2f850a71e91b63b44052cca40e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857277"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461015"
 ---
 # <a name="comptras-method"></a>ComPtr::As (Método)
-Devuelve un objeto de ComPtr que representa la interfaz identificada por el parámetro de plantilla especificado.  
+Devuelve un **ComPtr** objeto que representa la interfaz identificada por el parámetro de plantilla especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* p  
@@ -40,15 +39,14 @@ template<typename U>
 HRESULT As(  
    _Out_ Details::ComPtrRef<ComPtr<U>> p  
 ) const;  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `U`  
- La interfaz para ser representado por el parámetro `p`.  
+ *U*  
+ La interfaz para ser representado por el parámetro *p*.  
   
- `p`  
- Un objeto de ComPtr que representa la interfaz especificada por el parámetro `U`. Parámetro `p` no debe hacer referencia al objeto de ComPtr actual.  
+ *p*  
+ Un **ComPtr** objeto que representa la interfaz especificada por el parámetro *U*. Parámetro *p* no debe hacer referencia a la actual **ComPtr** objeto.  
   
 ## <a name="remarks"></a>Comentarios  
  La primera plantilla es el formulario que debe usar en el código. La segunda plantilla es una especialización de aplicación auxiliar interna, que admite características del lenguaje C++, como palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .  

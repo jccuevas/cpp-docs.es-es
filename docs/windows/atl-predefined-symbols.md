@@ -1,5 +1,5 @@
 ---
-title: Símbolos predefinidos de ATL | Documentos de Microsoft
+title: Símbolos predefinidos de ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c00487b2bb7c7a67dfb81ffb638f5a46fc611bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 098ce812b18e64409e24d58675144f2c660bcdd7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863743"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465654"
 ---
 # <a name="atl-predefined-symbols"></a>Símbolos predefinidos de ATL
-Estos símbolos están definidos en los archivos de encabezado ATL, pero admiten acciones y funciones de aplicación de Windows estándares. Estos símbolos se utilizan principalmente con cuadros de diálogo. Cuando se trabaja con los cuadros de diálogo y controles en el [editor de cuadro de diálogo](../windows/dialog-editor.md), estos símbolos aparecen en la ventana Propiedades asociada a los controles comunes. Por ejemplo, si el cuadro de diálogo tiene un botón Cancelar, ese comando se asocia al símbolo IDCANCEL en la [ventana propiedades](/visualstudio/ide/reference/properties-window).  
+Estos símbolos se definen en los archivos de encabezado ATL, pero admiten acciones y funciones de aplicación de Windows estándares. Estos símbolos se utilizan principalmente con cuadros de diálogo. Cuando se trabaja con controles y cuadros de diálogo en el [editor de cuadro de diálogo](../windows/dialog-editor.md), estos símbolos aparecen en la **propiedades** ventana asociada con los controles comunes. Por ejemplo, si el cuadro de diálogo tiene un **cancelar** button, que se asociará con el símbolo IDCANCEL comandos en el [ventana propiedades](/visualstudio/ide/reference/properties-window).  
   
 |||  
 |-|-|  
@@ -32,7 +32,7 @@ Estos símbolos están definidos en los archivos de encabezado ATL, pero admiten
 |IDC_STATIC|Control: Control estático|  
 |IDCANCEL|Control: Botón de cancelación del cuadro de diálogo|  
 |IDIGNORE|Control: Botón de omitir del cuadro de diálogo|  
-|IDNO|Control: no cuadro de diálogo ningún botón|  
+|IDNO|Control: no cuadro de diálogo no hay ningún botón|  
 |IDOK|Control: Botón Aceptar del cuadro de diálogo|  
 |IDR_ACCELERATOR1|Recursos: Tabla de aceleradores|  
 |IDRETRY|Control: Botón de reintento de cuadro de diálogo|  

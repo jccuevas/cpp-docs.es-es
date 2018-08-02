@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939382"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462367"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Aquí está otra vez C++ (C++ moderno)
 C++ es uno de los lenguajes de programación más utilizados en el mundo. Los programas bien escritos de C++ son rápidos y eficaces. El lenguaje es más flexible que otros lenguajes, ya que se puede utilizar para crear una amplia gama de aplicaciones, desde divertidos y emocionantes juegos, para software científico de alto rendimiento, hasta controladores de dispositivos, programas incrustados y aplicaciones cliente de Windows. Durante más de 20 años, C++ se ha utilizado para resolver problemas como estos y muchos otros. Lo que es posible que no sepa es que un creciente número de programadores de C++ han doblado la programación estilo C poco elegante de ayer y han puesto C++ moderno en su lugar.  
@@ -49,7 +49,6 @@ C++ es uno de los lenguajes de programación más utilizados en el mundo. Los pr
  El propio lenguaje C++ también ha evolucionado. Compare los fragmentos de código siguientes. Este muestra cómo eran las cosas en C++:  
   
 ```cpp  
-
 #include <vector>
 
 void f()
@@ -81,7 +80,6 @@ void f()
  Aquí se explica cómo se logra lo mismo en C++ moderno:  
   
 ```cpp
-
 #include <memory>  
 #include <vector>  
 
@@ -99,7 +97,6 @@ void f()
         }
     }
 }
-
 ```
 
  En C++ moderno, no tiene que utilizar control de excepciones nuevo/eliminar o explícito porque puede utilizar los punteros inteligentes en su lugar. Cuando se usa el **automática** deducción de tipo y [función lambda](../cpp/lambda-expressions-in-cpp.md), puede escribir código más rápido, endurecer y entender mejor. Y basado en rango **para** bucle es más limpio, más fácil de usar y menos propenso a errores imprevistos que un estilo de C **para** bucle. Puede utilizar código reutilizable con las mínimas líneas de código para escribir la aplicación. También puede hacer que ese código sea seguro para excepciones y seguro para memoria, y que no tenga ninguna asignación/desasignación ni códigos de error que tratar.  

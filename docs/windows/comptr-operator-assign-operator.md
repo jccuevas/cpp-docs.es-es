@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: operator = (operador) | Documentos de Microsoft'
+title: 'Comptr:: operator = (operador) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4066db37de8a993802970784f09141352fef028
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac3a845ea7c512f5a7ccffdabdf67ce26029ff8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871206"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466168"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator= (Operador)
-Asigna un valor a la ComPtr actual.  
+Asigna un valor a la actual **ComPtr**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -57,29 +57,29 @@ WRL_NOTHROW ComPtr& operator=(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `U`  
+ *U*  
  Una clase.  
   
- `other`  
- Una referencia de puntero, referencia o valor r a un tipo u otro ComPtr.  
+ *other*  
+ Un puntero, referencia o referencia de valor r a un tipo u otro **ComPtr**.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Una referencia a la ComPtr actual.  
+ Una referencia a la actual **ComPtr**.  
   
 ## <a name="remarks"></a>Comentarios  
- La primera versión de este operador asigna un valor vacío a la ComPtr actual.  
+ La primera versión de este operador asigna un valor vacío a la actual **ComPtr**.  
   
- En la segunda versión, si el puntero de interfaz de asignación no es el mismo que el puntero de interfaz de ComPtr actual, se asigna el segundo puntero de interfaz a la ComPtr actual.  
+ En la segunda versión, si el puntero de interfaz de asignación no es el mismo que el actual **ComPtr** puntero de interfaz, el segundo puntero de interfaz se asigna a la actual **ComPtr**.  
   
- En la tercera versión, el puntero de interfaz asignar se asigna a la ComPtr actual.  
+ En la tercera versión, el puntero de interfaz de asignación se asigna a la actual **ComPtr**.  
   
- En la cuarta versión, si el puntero de interfaz del valor de asignación no es el mismo que el puntero de interfaz de ComPtr actual, se asigna el segundo puntero de interfaz a la ComPtr actual.  
+ En la cuarta versión, si el puntero de interfaz de la asignación de valor no es el mismo que el actual **ComPtr** puntero de interfaz, el segundo puntero de interfaz se asigna a la actual **ComPtr**.  
   
- La versión del quinto es un operador de copia. una referencia a una ComPtr se asigna a la ComPtr actual.  
+ La quinta versión es un operador de copia. una referencia a un **ComPtr** se asigna a la actual **ComPtr**.  
   
- La versión del sexto es mover de un operador de copia que usa la semántica; una referencia a valor r en una ComPtr si es estático cualquier tipo de conversión y, a continuación, se asigna a la ComPtr actual.  
+ La sexta versión es un operador de copia que usa la semántica; de transferencia una referencia rvalue para un **ComPtr** si es estático cualquier tipo de conversión y, a continuación, se asigna a la actual **ComPtr**.  
   
- La versión del séptima es mover de un operador de copia que usa la semántica; una referencia a valor r a una ComPtr de tipo `U` es estático, a continuación, convierte y asignada a la ComPtr actual.  
+ La séptima versión es un operador de copia que usa la semántica; de transferencia una referencia rvalue para un **ComPtr** typu *U* es estático, a continuación, convertir y asignado al actual **ComPtr**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  

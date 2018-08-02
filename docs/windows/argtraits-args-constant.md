@@ -1,5 +1,5 @@
 ---
-title: Argtraits (constante) | Documentos de Microsoft
+title: Argtraits constante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f87b29634d5b9acef2e2ccb3f7b4d5f227433d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855778"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466561"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args (Constante)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,10 +34,10 @@ static const int args = -1; ;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Mantiene el recuento del número de parámetros en el método de invocación de una interfaz de delegado.  
+ Mantiene un recuento del número de parámetros el `Invoke` al método de interfaz de un delegado.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando `args` es igual a -1 indica que no puede haber ninguna coincidencia para la firma del método Invoke.  
+ Cuando `args` es igual a -1 indica que no puede haber ninguna coincidencia para el `Invoke` firma del método.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  
