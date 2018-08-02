@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4772c62db1443beaf6a5fff962a52a71823674bc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d757c645ae131b88ffb99e571d1e08214eda8129
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944679"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462870"
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
 **Específicos de Microsoft**  
@@ -31,7 +31,6 @@ ms.locfileid: "37944679"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 _variant_t& operator=(  
    const VARIANT& varSrc   
 );  
@@ -128,37 +127,37 @@ _variant_t& operator=(
 ## <a name="remarks"></a>Comentarios  
  El operador asigna un nuevo valor al objeto `_variant_t`:  
   
--   **operador = (***varSrc***)** asigna existente `VARIANT` a un `_variant_t` objeto.      
+-   **operador = (***varSrc***)** asigna existente `VARIANT` a un `_variant_t` objeto.  
   
--   **operador = (***pVarSrc***)** asigna existente `VARIANT` a un `_variant_t` objeto.      
+-   **operador = (***pVarSrc***)** asigna existente `VARIANT` a un `_variant_t` objeto.  
   
 -   **operador = (***var_t_Src***)** asigna existente `_variant_t` objeto a un `_variant_t` objeto.      
   
--   **operador = (***sSrc***)** asigna un **corto** valor entero a un `_variant_t` objeto.      
+-   **operador = (***sSrc***)** asigna un **corto** valor entero a un `_variant_t` objeto.  
   
--   **operador = (**`lSrc`**)** asigna un **largo** valor entero a un `_variant_t` objeto.      
+-   **operador = (**`lSrc`**)** asigna un **largo** valor entero a un `_variant_t` objeto.  
   
--   **operador = (***fltSrc***)** asigna un **float** valor numérico a un `_variant_t` objeto.      
+-   **operador = (***fltSrc***)** asigna un **float** valor numérico a un `_variant_t` objeto.  
   
--   **operador = (***dblSrc***)** asigna un **doble** valor numérico a un `_variant_t` objeto.      
+-   **operador = (***dblSrc***)** asigna un **doble** valor numérico a un `_variant_t` objeto.  
   
--   **operador = (***cySrc***)** asigna un `CY` objeto a un `_variant_t` objeto.      
+-   **operador = (***cySrc***)** asigna un `CY` objeto a un `_variant_t` objeto.  
   
--   **operador = (***bstrSrc***)** asigna un `BSTR` objeto a un `_variant_t` objeto.      
+-   **operador = (***bstrSrc***)** asigna un `BSTR` objeto a un `_variant_t` objeto.  
   
--   **operador = (***wstrSrc***)** asigna una cadena Unicode a un `_variant_t` objeto.      
+-   **operador = (***wstrSrc***)** asigna una cadena Unicode a un `_variant_t` objeto.  
   
--   **operador = (**`strSrc`**)** asigna una cadena multibyte a un `_variant_t` objeto.      
+-   **operador = (**`strSrc`**)** asigna una cadena multibyte a un `_variant_t` objeto.  
   
--   **operador = (** `bSrc` **)** asigna un **bool** valor a un `_variant_t` objeto.    
+-   **operador = (** `bSrc` **)** asigna un **bool** valor a un `_variant_t` objeto.  
   
--   **operador = (***pDispSrc***)** asigna un `VT_DISPATCH` objeto a un `_variant_t` objeto.      
+-   **operador = (***pDispSrc***)** asigna un `VT_DISPATCH` objeto a un `_variant_t` objeto.  
   
--   **operador = (***pIUnknownSrc***)** asigna un `VT_UNKNOWN` objeto a un `_variant_t` objeto.      
+-   **operador = (***pIUnknownSrc***)** asigna un `VT_UNKNOWN` objeto a un `_variant_t` objeto.  
   
--   **operador = (***decSrc***)** asigna un `DECIMAL` valor a un `_variant_t` objeto.      
+-   **operador = (***decSrc***)** asigna un `DECIMAL` valor a un `_variant_t` objeto.  
   
--   **operador = (** `bSrc` **)** asigna un `BYTE` valor a un `_variant_t` objeto.    
+-   **operador = (** `bSrc` **)** asigna un `BYTE` valor a un `_variant_t` objeto.  
   
  **FIN de Específicos de Microsoft**  
   

@@ -1,5 +1,5 @@
 ---
-title: Argtraitshelper (constante) | Documentos de Microsoft
+title: Argtraitshelper constante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff6ef465206ce1fac50b63dad0bed60a9c57b700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09480168f842adbcbd9e1c50056a9d16278bccc4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855060"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465836"
 ---
 # <a name="argtraitshelperargs-constant"></a>ArgTraitsHelper::args (Constante)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ static const int args = Traits::args;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Ayuda a [Argtraitshelper](../windows/argtraitshelper-args-constant.md) mantener recuento del número de parámetros en el método de invocación de una interfaz de delegado.  
+ Ayuda a [Argtraitshelper](../windows/argtraitshelper-args-constant.md) mantener el recuento del número de parámetros en el `Invoke` al método de interfaz de un delegado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944197"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466860"
 ---
 # <a name="temporary-objects"></a>Objetos temporales
 En algunos casos, es necesario que el compilador cree objetos temporales. Estos objetos temporales se pueden crear por las razones siguientes:  
@@ -54,4 +54,3 @@ En algunos casos, es necesario que el compilador cree objetos temporales. Estos 
 |------------------------------|-----------------------|  
 |Resultado de evaluación de la expresión|Todos los objetos temporales creados como resultado de evaluación de la expresión se destruyen al final de la instrucción de expresión (es decir, en el punto y coma), o al final de las expresiones de control **para**, **si**, **mientras**, **hacer**, y **cambiar** instrucciones.|  
 |Inicializando **const** referencias|Si un inicializador no es un valor L del mismo tipo que la referencia que se va a inicializar, se crea un objeto temporal del tipo de objeto subyacente y se inicializa con la expresión de inicialización. Este objeto temporal se destruye inmediatamente después de que se destruya el objeto de referencia al que está enlazado.|  
-  

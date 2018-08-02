@@ -1,5 +1,5 @@
 ---
-title: ClassFactory (clase) | Documentos de Microsoft
+title: ClassFactory (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6294634652ffc6a53a577ccd75c348ed63c502e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858398"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463871"
 ---
 # <a name="classfactory-class"></a>ClassFactory (clase)
-Implementa la funcionalidad básica de la interfaz IClassFactory.  
+Implementa la funcionalidad básica de la interfaz `IClassFactory`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,17 +46,17 @@ class ClassFactory : public Details::RuntimeClass<
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `I0`  
+ *I0*  
  La interfaz de cero.  
   
- `I1`  
+ *I1*  
  La primera interfaz.  
   
- `I2`  
+ *I2*  
  La segunda interfaz.  
   
 ## <a name="remarks"></a>Comentarios  
- Utilizar `ClassFactory` para proporcionar una implementación de generador definido por el usuario.  
+ Utilizar `ClassFactory` para proporcionar una implementación de fábrica definido por el usuario.  
   
  El modelo de programación siguiente muestra cómo utilizar el [implementa](../windows/implements-structure.md) estructura para especificar más de tres interfaces en un generador de clases.  
   
@@ -75,7 +75,7 @@ class ClassFactory : public Details::RuntimeClass<
 |Name|Descripción|  
 |----------|-----------------|  
 |[ClassFactory::AddRef (método)](../windows/classfactory-addref-method.md)|Incrementa el recuento de referencias para el objeto ClassFactory actual.|  
-|[ClassFactory::LockServer (método)](../windows/classfactory-lockserver-method.md)|Incrementa o disminuye el número de subyacente de objetos que se realiza un seguimiento del objeto ClassFactory actual.|  
+|[ClassFactory::LockServer (método)](../windows/classfactory-lockserver-method.md)|Incrementa o disminuye el número de subyacentes de objetos que se realiza un seguimiento del objeto ClassFactory actual.|  
 |[ClassFactory::QueryInterface (método)](../windows/classfactory-queryinterface-method.md)|Recupera un puntero a la interfaz especificada por el parámetro.|  
 |[ClassFactory::Release (método)](../windows/classfactory-release-method.md)|Disminuye el recuento de referencias para el objeto ClassFactory actual.|  
   

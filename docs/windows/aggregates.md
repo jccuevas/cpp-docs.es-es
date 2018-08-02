@@ -1,5 +1,5 @@
 ---
-title: agregados | Documentos de Microsoft
+title: agregados | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19dea3b078f894931002d186b20c1ffb85bb763b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f931c6930a2c7e4a71e73b7998564432bcbd967
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857992"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466935"
 ---
 # <a name="aggregates"></a>agregados
 Indica que el objeto agrega el objeto especificado por el CLSID.  
@@ -33,24 +33,23 @@ Indica que el objeto agrega el objeto especificado por el CLSID.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ aggregates(  
+[ aggregates(  
    clsid,  
    variable_name  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `clsid`  
+ *CLSID*  
  Especifica el CLSID del objeto agregable.  
   
- `variable_name`  
- El nombre de la variable que se va a insertar. Esta variable contiene el elemento **IUnknown** del objeto que se va a agregar.  
+ *variable_name*  
+ El nombre de la variable que se va a insertar. Esta variable contiene el `IUnknown` del objeto que se va a agregar.  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando se aplica a un objeto, el atributo C++ **aggregates** implementa un contenedor externo para el objeto que se va a agregar (especificado por `clsid`).  
   
- Este atributo requiere que el atributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si se aplica **progid** , también se aplicarán **vi_progid** y **coclass** .  
+ Este atributo requiere que el atributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.  
   
  **Proyectos ATL**  
   
@@ -64,7 +63,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_aggregates.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -95,9 +94,9 @@ struct CObject : IObject
   
 |||  
 |-|-|  
-|**Se aplica a**|**class**, `struct`|  
+|**Se aplica a**|**clase**, **struct**|  
 |**Reiterativo**|Sí|  
-|**Atributos requeridos**|Uno o varios de los siguientes: **coclass**, **progid**o **vi_progid**.|  
+|**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|  
 |**Atributos no válidos**|Ninguna|  
   
  Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
@@ -106,7 +105,6 @@ struct CObject : IObject
  [Atributos COM](../windows/com-attributes.md)   
  [Atributos de clase](../windows/class-attributes.md)   
  [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Agregación](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
- [agregables](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
+ [agregación](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
+ [Agregables](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
  [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)   
- 

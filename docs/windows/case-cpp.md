@@ -1,5 +1,5 @@
 ---
-title: caso (C++) | Documentos de Microsoft
+title: caso (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30d665861688054a4f6b7491f449014afe646c71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6567650d719b56bb320f1b40eae285322bcab364
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860962"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464316"
 ---
 # <a name="case-c"></a>case (C++)
-Usar con el [switch_type](../windows/switch-type.md) de atributo en un **union**.  
+Puede usar con el [switch_type](../windows/switch-type.md) atributo en un **union**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ case(  
+[ case(  
    value  
 ) ]  
 ```  
@@ -51,12 +50,12 @@ Usar con el [switch_type](../windows/switch-type.md) de atributo en un **union**
  o un identificador de este tipo.  
   
 ## <a name="remarks"></a>Comentarios  
- El **caso** atributo C++ tiene la misma funcionalidad que la **caso** atributo MIDL. Este atributo sólo se utiliza con la [switch_type](../windows/switch-type.md) atributo.  
+ El **caso** atributo de C++ tiene la misma funcionalidad que el **caso** atributo MIDL. Este atributo sólo se utiliza con el [switch_type](../windows/switch-type.md) atributo.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente muestra un uso de la **caso** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_case.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,7 +78,7 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**Se aplica a**|Miembro de un **clase** o `struct`|  
+|**Se aplica a**|Miembro de un **clase** o **struct**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

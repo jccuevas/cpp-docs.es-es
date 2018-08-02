@@ -12,26 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c05707f3d6d6e323bf9605c3c742f6bef417d817
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 79ddbd94c918605619c7521c966c25a918fadd36
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939785"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462240"
 ---
 # <a name="vectorcall"></a>__vectorcall
 **Específicos de Microsoft**  
   
- La convención de llamada `__vectorcall` especifica que los argumentos de las funciones deben pasarse en registros siempre que sea posible. `__vectorcall` utiliza más registros para argumentos que [__fastcall](../cpp/fastcall.md) o el valor predeterminado [x64 convención de llamada](../build/overview-of-x64-calling-conventions.md) usar. La convención de llamada `__vectorcall` solo se admite en código nativo en procesadores x86 y x64 que incluyen Extensiones SIMD de streaming 2 (SSE2) y versiones posteriores. Use `__vectorcall` para acelerar funciones que pasan varios argumentos de punto flotante o argumentos vectoriales SIMD y realizan operaciones que aprovechan los argumentos cargados en registros. En la lista siguiente se muestran las características comunes a las implementaciones x86 y x64 de `__vectorcall`. Las diferencias se explican más adelante en este artículo.  
+ El **__vectorcall** convención de llamada especifica que los argumentos para funciones deben pasarse en registros, siempre que sea posible. **__vectorcall** utiliza más registros para argumentos que [__fastcall](../cpp/fastcall.md) o el valor predeterminado [x64 convención de llamada](../build/overview-of-x64-calling-conventions.md) usar. El **__vectorcall** solo se admite la convención de llamada en código nativo en procesadores x86 y x64 que incluyen extensiones SIMD de transmisión por secuencias 2 (SSE2) y versiones posteriores. Use **__vectorcall** acelerar funciones que pasan varios punto flotante o argumentos vectoriales SIMD y realizan operaciones que se benefician de los argumentos cargados en registros. En la lista siguiente se muestra las características que son comunes a las implementaciones x86 y x64 de **__vectorcall**. Las diferencias se explican más adelante en este artículo.  
   
 |Elemento|Implementación|  
 |-------------|--------------------|  
 |Convención de creación de nombres representativos de C|A los nombres de función se les añaden dos "arrobas" (@@) como sufijo, seguidas del número de bytes (en decimal), en la lista de parámetros.|  
 |Convención de traducción de mayúsculas y minúsculas|No se lleva a cabo la traducción de mayúsculas y minúsculas.|  
   
- Mediante el [GV](../build/reference/gd-gr-gv-gz-calling-convention.md) opción del compilador hace que cada función del módulo compile como `__vectorcall` a menos que la función es una función miembro, se declara con un atributo de convención de llamada en conflicto, se utiliza un `vararg` variable lista de argumentos, o tiene el nombre `main`.  
+ Mediante el [GV](../build/reference/gd-gr-gv-gz-calling-convention.md) opción del compilador hace que cada función del módulo compile como **__vectorcall** a menos que la función es una función miembro, se declara con un atributo de convención de llamada en conflicto, se utiliza un `vararg` lista de argumentos variable, o tiene el nombre `main`.  
   
- Puede pasar tres tipos de argumentos por registro en `__vectorcall` funciones: *tipo entero* valores, *tipo de vector* valores, y *agregado vectorial homogéneo* (HVA ) los valores.  
+ Puede pasar tres tipos de argumentos por registro en **__vectorcall** funciones: *tipo entero* valores, *tipo de vector* valores, y *vectorial homogéneo agregado* valores (HVA).  
   
  Un tipo entero cumple dos requisitos: se ajusta al tamaño de registro nativo del procesador (por ejemplo, 4 bytes en un equipo x86 u 8 bytes en un equipo x64) y se puede convertir en un entero de longitud de registro y viceversa sin cambiar su representación de bits. Por ejemplo, cualquier tipo que se puede promover a **int** en x86 (**long long** en x64), por ejemplo, un **char** o **corto**, o que se puede convertir en **int** (**long long** en x64) y de nuevo a su tipo original sin cambios es un tipo entero. Tipos enteros son puntero, referencia, y **struct** o **unión** tipos de 4 bytes (8 bytes en x64) o menos. En x64 plataformas, mayor **struct** y **unión** tipos se pasan por referencia a la memoria asignada por el llamador; en x86 plataformas, se pasan por valor en la pila.  
   
@@ -45,14 +45,13 @@ typedef struct {
    __m256 y;  
    __m256 z;  
 } hva3;    // 3 element HVA type on __m256  
-  
 ```  
   
- Declare las funciones explícitamente con la palabra clave `__vectorcall` en archivos de encabezado para permitir que el código compilado por separado se vincule sin errores. Las funciones deben ser prototipo para utilizar `__vectorcall` y no pueden utilizar una lista de argumentos de longitud variable `vararg`.  
+ Declare las funciones explícitamente con la **__vectorcall** palabra clave en los archivos de encabezado para permitir por separado que compila código vincule sin errores. Las funciones deben ser prototipos para utilizar **__vectorcall**y no se puede usar un `vararg` lista de argumentos de longitud variable.  
   
- Una función miembro se puede declarar con el especificador `__vectorcall`. Ocultar **esto** registro como el primer argumento de tipo entero pasa el puntero.  
+ Una función miembro puede declararse mediante el **__vectorcall** especificador. Ocultar **esto** registro como el primer argumento de tipo entero pasa el puntero.  
   
- En equipos ARM, el compilador acepta y omite `__vectorcall`.  
+ En las máquinas ARM, **__vectorcall** acepta y omite el compilador.  
   
  En el caso de funciones miembro de clase no estáticas, si la función se define fuera de línea, no es necesario especificar el modificador de convención de llamada en la definición fuera de línea. Es decir, para los miembros de clase no estáticos, se supone que la convención de llamada especificada durante la declaración está en el punto de la definición. Dada esta definición de clase:  
   
@@ -74,14 +73,14 @@ void MyClass::mymethod() { return; }
 void __vectorcall MyClass::mymethod() { return; }  
 ```  
   
- El modificador de convención de llamada `__vectorcall` debe especificarse cuando se crea un puntero a una función `__vectorcall`. El ejemplo siguiente se crea un **typedef** para un puntero a un `__vectorcall` función que toma cuatro **doble** argumentos y devuelve un **__m256** valor:  
+ El **__vectorcall** se debe especificar el modificador de convención de llamada cuando un puntero a un **__vectorcall** se crea la función. El ejemplo siguiente se crea un **typedef** para un puntero a un **__vectorcall** función que toma cuatro **doble** argumentos y devuelve un **__m256**valor:  
   
 ```cpp  
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);  
 ```  
   
 ## <a name="vectorcall-convention-on-x64"></a>Convención __vectorcall en x64  
- La convención de llamada `__vectorcall` en x64 amplía la convención de llamada x64 estándar para aprovechar registros adicionales. Los argumentos de tipo entero y los argumentos de tipo vectorial se asignan a registros en función de su posición en la lista de argumentos. Los argumentos de HVA se asignan a los registros vectoriales no usados.  
+ El **__vectorcall** convención de llamada en x64 amplía la x64 estándar para aprovechar registros adicionales de la convención de llamada. Los argumentos de tipo entero y los argumentos de tipo vectorial se asignan a registros en función de su posición en la lista de argumentos. Los argumentos de HVA se asignan a los registros vectoriales no usados.  
   
  Cuando cualquiera de los cuatro primeros argumentos, por orden, de izquierda a derecha, son argumentos de tipo entero, se pasan en el registro correspondiente a esa posición: RCX, RDX, R8 o R9. Oculto **esto** puntero se trata como el primer argumento de tipo entero. Cuando un argumento de HVA de uno de los cuatro primeros argumentos no se puede pasar en los registros disponibles, se pasa en su lugar una referencia a la memoria asignada por el llamador en el registro correspondiente de tipo entero. Los argumentos de tipo entero después de la cuarta posición de parámetro se pasan en la pila.  
   
@@ -89,9 +88,9 @@ typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
   
  Una vez para los argumentos vectoriales, los miembros de datos de los argumentos de HVA se asignan en orden ascendente, a los registros vectoriales sin usar XMM0 a XMM5 (o YMM0 a YMM5, para **__m256** tipos), siempre que haya suficientes registros está disponible para todo el HVA. Si no hay suficientes registros disponibles, el argumento de HVA se pasa por referencia a la memoria asignada por el llamador. El espacio de sombra de pila para un argumento de HVA se fija en 8 bytes con contenido sin definir. Los argumentos de HVA se asignan, por orden, de izquierda a derecha, a los registros de la lista de parámetros, y pueden estar en cualquier posición. Los argumentos de HVA de una de las cuatro primeras posiciones de argumento que no están asignadas a registros vectoriales se pasan por referencia en el registro entero que corresponde a esa posición. Los argumentos de HVA que se pasan por referencia después de la cuarta posición de parámetro se insertan en la pila.  
   
- Los resultados de las funciones `__vectorcall` se devuelven por valor en los registros, si es posible. Los resultados de tipo entero, incluidos structs o uniones de 8 bytes o menos, se devuelven por valor en RAX. Los resultados de tipo vectorial se devuelven por valor en XMM0 o YMM0, dependiendo del tamaño. Cada elemento de datos de los resultados de HVA se devuelve por el valor en los registros XMM0:XMM3 o YMM0:YMM3, según el tamaño del elemento. Los tipos de resultado que no se adaptan a los registros correspondientes se devuelven por referencia a la memoria asignada por el llamador.  
+ Resultados de **__vectorcall** funciones se devuelven por valor en los registros cuando sea posible. Los resultados de tipo entero, incluidos structs o uniones de 8 bytes o menos, se devuelven por valor en RAX. Los resultados de tipo vectorial se devuelven por valor en XMM0 o YMM0, dependiendo del tamaño. Cada elemento de datos de los resultados de HVA se devuelve por el valor en los registros XMM0:XMM3 o YMM0:YMM3, según el tamaño del elemento. Los tipos de resultado que no se adaptan a los registros correspondientes se devuelven por referencia a la memoria asignada por el llamador.  
   
- El llamador mantiene la pila en la implementación x64 de `__vectorcall`. El código de prólogo y epílogo del llamador asigna y borra la pila de la función llamada. Los argumentos se insertan en la pila de derecha a izquierda y el espacio de pila de sombra se asigna para los argumentos pasados en registros.  
+ El llamador en el x64 mantiene la pila de implementación de **__vectorcall**. El código de prólogo y epílogo del llamador asigna y borra la pila de la función llamada. Los argumentos se insertan en la pila de derecha a izquierda y el espacio de pila de sombra se asigna para los argumentos pasados en registros.  
   
  Ejemplos:  
   
@@ -187,11 +186,10 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);  
    h4 = example6(h2, h4, c, h2);  
 }  
-  
 ```  
   
 ## <a name="vectorcall-convention-on-x86"></a>Convención __vectorcall en x86  
- El `__vectorcall` sigue de convención de llamada la **__fastcall** convención para argumentos de tipo entero de 32 bits y se aprovecha de los registros vectoriales de SSE para argumentos HVA y tipo de vector.  
+ El **__vectorcall** sigue de convención de llamada la **__fastcall** convención para argumentos de tipo entero de 32 bits y se aprovecha de los registros vectoriales de SSE para argumentos HVA y tipo de vector.  
   
  Los dos primeros argumentos de tipo entero que se encuentran en la lista de parámetros de izquierda a derecha se colocan en ECX y EDX, respectivamente. Oculto **esto** puntero se trata como el primer argumento de tipo entero y se pasa en ECX. Los seis primeros argumentos de tipo de vector se pasan por valor en los registros vectoriales de SSE del 0 al 5, en los registros de XMM o YMM, dependiendo del tamaño del argumento.  
   
@@ -199,9 +197,9 @@ int __cdecl main( void )
   
  Una vez para los argumentos vectoriales, los datos de los miembros de los argumentos de HVA se asignan en orden ascendente a vectoriales sin usar registra XMM0 a XMM5 (o YMM0 a YMM5, para **__m256** tipos), siempre que haya suficientes registros está disponible para todo el HVA. Si no hay suficientes registros disponibles, el argumento de HVA se pasa en la pila por referencia a la memoria asignada por el llamador. No se asigna ningún espacio de sombra de pila para un argumento de HVA. Los argumentos de HVA se asignan, por orden, de izquierda a derecha, a los registros de la lista de parámetros, y pueden estar en cualquier posición.  
   
- Los resultados de las funciones `__vectorcall` se devuelven por valor en los registros, si es posible. Los resultados de tipo entero, incluidos structs o uniones de 4 bytes o menos, se devuelven por valor en EAX. Los structs y uniones de tipo entero de 8 bytes o menos se devuelven por valor en EDX:EAX. Los resultados de tipo vectorial se devuelven por valor en XMM0 o YMM0, dependiendo del tamaño. Cada elemento de datos de los resultados de HVA se devuelve por el valor en los registros XMM0:XMM3 o YMM0:YMM3, según el tamaño del elemento. Otros tipos de resultado se devuelven por referencia a la memoria asignada por el llamador.  
+ Resultados de **__vectorcall** funciones se devuelven por valor en los registros cuando sea posible. Los resultados de tipo entero, incluidos structs o uniones de 4 bytes o menos, se devuelven por valor en EAX. Los structs y uniones de tipo entero de 8 bytes o menos se devuelven por valor en EDX:EAX. Los resultados de tipo vectorial se devuelven por valor en XMM0 o YMM0, dependiendo del tamaño. Cada elemento de datos de los resultados de HVA se devuelve por el valor en los registros XMM0:XMM3 o YMM0:YMM3, según el tamaño del elemento. Otros tipos de resultado se devuelven por referencia a la memoria asignada por el llamador.  
   
- La implementación de x86 de `__vectorcall` sigue la convención de los argumentos insertados en la pila de derecha a izquierda por el llamador, y la función llamada borra la pila justo antes de regresar. Solo los argumentos que no se colocan en registros se insertan en la pila.  
+ El x86 implementací **__vectorcall** sigue la convención de argumentos que se insertan en la pila de derecha a izquierda por el llamador y la función llamada borra la pila justo antes de regresar. Solo los argumentos que no se colocan en registros se insertan en la pila.  
   
  Ejemplos:  
   
@@ -293,7 +291,6 @@ int __cdecl main( void )
    i = example5(1, h2, 3, h4, 5);  
    h4 = example6(h2, h4, c, h2);  
 }  
-  
 ```  
   
  **Fin de Específicos de Microsoft**  

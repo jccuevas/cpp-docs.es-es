@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56372764c70498aec4ccf7b23fc7d074d1df179e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 393cb0b23ca67877a18d2148af76c8de59d29f30
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944481"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465563"
 ---
 # <a name="relational-operators-lt-gt-lt-and-gt"></a>Operadores relacionales: &lt;, &gt;, &lt;=, y &gt;=
 ## <a name="syntax"></a>Sintaxis  
@@ -81,21 +81,21 @@ int main() {
  Tratan las conversiones aritméticas habituales en [conversiones estándar](standard-conversions.md) se aplican a los operandos de tipos aritméticos.  
   
 ## <a name="comparing-pointers"></a>Comparar punteros  
- Cuando se comparan dos punteros a objetos del mismo tipo, el resultado está determinado por la ubicación de los objetos a los que se señala en el espacio de direcciones del programa. Los punteros también se pueden comparar con una expresión de constante que se evalúa como 0 o con un puntero de tipo void *. Si una comparación de puntero se realiza de un puntero de tipo void \*, el otro puntero se convierte implícitamente al tipo void \*. A continuación, se realiza la comparación.  
+ Cuando se comparan dos punteros a objetos del mismo tipo, el resultado está determinado por la ubicación de los objetos a los que se señala en el espacio de direcciones del programa. También se pueden comparar punteros en una expresión constante que se evalúa como 0 o a un puntero de tipo `void *`. Si se realiza una comparación de punteros de un puntero de tipo `void *`, el otro puntero se convierte implícitamente al tipo `void *`. A continuación, se realiza la comparación.  
   
  Dos punteros de tipos diferentes no pueden compararse a menos que:  
   
 -   Un tipo sea un tipo de clase derivado del otro tipo.  
   
--   Al menos uno de los punteros se convierta explícitamente (conversión) al tipo void *. (El otro puntero se convierte implícitamente al tipo void \* para la conversión.)  
+-   Al menos uno de los punteros se convierta explícitamente (conversión) al tipo `void *`. (El otro puntero se convierte implícitamente al tipo `void *` para la conversión.)  
   
  Se garantiza que dos punteros del mismo tipo que señalan al mismo objeto realizan una comparación igual. Si se comparan dos punteros a miembros no estáticos de un objeto, se aplican las reglas siguientes:  
   
--   Si el tipo de clase no es una unión, y si los dos miembros no están separados por un *access-specifier*, como public, protected o private, el puntero al miembro declarado por última vez realizará una comparación mayor que el puntero al miembro declarado anteriormente.  
+-   Si el tipo de clase no es un **unión**, y si los dos miembros no están separados por un *access-specifier*, tales como **pública**, **protegido**, o **privada**, el puntero al miembro declarado por última vez realizará una comparación mayor que el puntero al miembro declarado anteriormente.  
   
 -   Si los dos miembros están separados por un *access-specifier*, los resultados son indefinidos.  
   
--   Si el tipo de clase es una unión, los punteros a miembros de datos diferentes en esa unión realizan una comparación igual.  
+-   Si el tipo de clase es un **unión**, punteros a miembros de datos diferentes en que **unión** comparan igual.  
   
  Si dos punteros señalan a elementos de la misma matriz o al elemento uno situado más allá del final de la matriz, el puntero al objeto con el subíndice más alto realiza una comparación superior. Se garantiza que la comparación de punteros es válida solo cuando los punteros hacen referencia a objetos de la misma matriz o a la ubicación uno superado el final de la matriz.  
   

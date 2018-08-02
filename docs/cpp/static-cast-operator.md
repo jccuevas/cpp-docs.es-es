@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad9af76787780ebe2a25b3fab46ce1951085b8e8
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b01e9799a1f8b03406750dca0b486c6c4d0f655
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944768"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466701"
 ---
 # <a name="staticcast-operator"></a>static_cast (Operador)
 Convierte un *expresión* al tipo de *type_id,* basándose únicamente en los tipos que se encuentran en la expresión.  

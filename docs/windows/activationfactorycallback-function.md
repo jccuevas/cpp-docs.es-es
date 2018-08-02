@@ -1,5 +1,5 @@
 ---
-title: ActivationFactoryCallback (función) | Documentos de Microsoft
+title: ActivationFactoryCallback (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e2e7b2301ae4dd38a40bdf4583e963e55a8b12d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857329"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461398"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback (función)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,11 +37,11 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `activationId`  
+ *activationId*  
  Identificador de una cadena que especifica un nombre de clase en tiempo de ejecución.  
   
- `ppFactory`  
- Cuando se completa esta operación, un generador de activación que corresponde al parámetro `activationId`.  
+ *ppFactory*  
+ Cuando finalice esta operación, un generador de activación que corresponde al parámetro *activationId*.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error. Valores HRESULT de error probable son CLASS_E_CLASSNOTAVAILABLE y E_INVALIDARG.  

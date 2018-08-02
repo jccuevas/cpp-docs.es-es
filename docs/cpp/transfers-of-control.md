@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bec66d25be2cb56c75f42f60af2ccd5e3f759ad
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e773a0188eb3450ab1a13a24fc556fa8e8c4f874
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944798"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464274"
 ---
 # <a name="transfers-of-control"></a>Transferencias del control
 Puede usar el **goto** instrucción o un **caso** etiquetar en un **cambiar** instrucción para especificar un programa que se bifurque más allá de un inicializador. Este código no es válido a menos que la declaración que contenga el inicializador esté en un bloque dentro del bloque en el que aparezca la instrucción de salto.  
@@ -60,4 +60,3 @@ int main()
  En el ejemplo anterior, el **goto** instrucción intenta transferir el control más allá de la inicialización de `i`. Sin embargo, si se declarara `i` pero no se inicializara, la transferencia sería válida.  
   
  Los objetos `total` y `ch`, declarado en el bloque que actúa como el *instrucción* de la **mientras** instrucción, se destruyen cuando se sale de dicho bloque mediante el  **salto** instrucción.  
-  

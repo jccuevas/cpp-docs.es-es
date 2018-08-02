@@ -1,5 +1,5 @@
 ---
-title: Constructor de Comptr | Documentos de Microsoft
+title: Constructor de Comptr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a632c96c39ccd40f008556287af95944530cdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d08eb264ff3b4fc2f0170d6aee742ff29611613e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871180"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465375"
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr (Constructor)
-Inicializa una nueva instancia de la clase ComPtr. Las sobrecargas proporcionan constructores predeterminados, así como de copia, movimiento y conversión.  
+Inicializa una nueva instancia de la **ComPtr** clase. Las sobrecargas proporcionan constructores predeterminados, así como de copia, movimiento y conversión.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -59,20 +59,20 @@ WRL_NOTHROW ComPtr(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `U`  
- Tipo del parámetro `other`.  
+ *U*  
+ El tipo de la *otros* parámetro.  
   
- `other`  
- Objeto de tipo `U`.  
+ *other*  
+ Un objeto de tipo *U*.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 ## <a name="remarks"></a>Comentarios  
- El primer constructor es el constructor predeterminado, que implícitamente crea un objeto vacío. El segundo constructor especifica [__nullptr](../windows/nullptr-cpp-component-extensions.md), que crea explícitamente un objeto vacío.  
+ El primer constructor es el constructor predeterminado, que implícitamente crea un objeto vacío. Especifica el segundo constructor [__nullptr](../windows/nullptr-cpp-component-extensions.md), que crea explícitamente un objeto vacío.  
   
  El tercer constructor crea un objeto desde el objeto especificado por un puntero.  
   
- Los constructores cuarto y quinto son constructores de copias. El quinto constructor copia un objeto si es convertible al tipo actual.  
+ Los constructores cuarto y quinto son constructores de copia. El quinto constructor copia un objeto si es convertible al tipo actual.  
   
  Los constructores sexto y séptimo son constructores de movimiento. El séptimo constructor mueve un objeto si es convertible al tipo actual.  
   

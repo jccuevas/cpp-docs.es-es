@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Getaddressof (método) | Documentos de Microsoft'
+title: Método Comptrref | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc8e80fe97bc0a4ace0cb53e43f306ad2b85309
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 435b853268d1fe8c324d217d1ad14f71e4b5a295
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883312"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462942"
 ---
 # <a name="comptrrefgetaddressof-method"></a>ComPtrRef::GetAddressOf (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,10 +34,10 @@ InterfaceType* const * GetAddressOf() const;
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Dirección de un puntero a la interfaz representada por el objeto ComPtrRef actual.  
+ Dirección de un puntero a la interfaz representada por el actual **ComPtrRef** objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- Recupera la dirección de un puntero a la interfaz representada por el objeto ComPtrRef actual.  
+ Recupera la dirección de un puntero a la interfaz representada por el actual **ComPtrRef** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  

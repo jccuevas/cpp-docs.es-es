@@ -1,5 +1,5 @@
 ---
-title: Friends de plantilla | Documentos de Microsoft
+title: Friends de plantilla | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5217b1860affd05f433c6a3bf944afeb6c13f9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97447189419bad8d3ad6f2026a7ee5f701ebca04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422129"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466961"
 ---
 # <a name="template-friends"></a>Friends de plantilla
 
-Pueden tener plantillas de clase [amigos](friend-cpp.md). Una clase o plantilla de clase y una función o plantilla de función pueden ser elementos friend de una clase de plantilla. Los elementos friend también pueden ser especializaciones de una plantilla de clase o de función, pero no especializaciones parciales.  
+Las plantillas de clase pueden tener [amigos](friend-cpp.md). Una clase o plantilla de clase y una función o plantilla de función pueden ser elementos friend de una clase de plantilla. Los elementos friend también pueden ser especializaciones de una plantilla de clase o de función, pero no especializaciones parciales.  
   
 **C++ 11**: un parámetro de tipo se puede declarar como friend mediante el formulario `friend T;`.  
   
@@ -261,5 +261,4 @@ a
 ```  
   
 ## <a name="see-also"></a>Vea también  
-
-[Argumentos predeterminados](../cpp/default-arguments.md)
+ [Argumentos predeterminados](../cpp/default-arguments.md)

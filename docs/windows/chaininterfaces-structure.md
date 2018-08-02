@@ -1,5 +1,5 @@
 ---
-title: ChainInterfaces (estructura) | Documentos de Microsoft
+title: ChainInterfaces (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18814a4ad87cefa39201d369926c0778931d4d64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861141"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461538"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (estructura)
 Especifica las funciones de comprobación e inicialización que se pueden aplicar a un conjunto de identificadores de interfaz.  
@@ -61,44 +61,44 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `I0`  
+ *I0*  
  (Obligatorio) Id. de interfaz 0.  
   
- `I1`  
+ *I1*  
  (Obligatorio) Id. de interfaz 1.  
   
- `I2`  
+ *I2*  
  (Opcional) Id. de interfaz 2.  
   
- `I3`  
+ *I3*  
  (Opcional) Id. de interfaz 3.  
   
- `I4`  
+ *I4*  
  (Opcional) Id. de interfaz 4.  
   
- `I5`  
+ *I5*  
  (Opcional) Id. de interfaz 5.  
   
- `I6`  
+ *I6*  
  (Opcional) Id. de interfaz 6.  
   
- `I7`  
+ *I7*  
  (Opcional) Id. de interfaz 7.  
   
- `I8`  
+ *I8*  
  (Opcional) Id. de interfaz 8.  
   
- `I9`  
+ *I9*  
  (Opcional) Id. de interfaz 9.  
   
- `DerivedType`  
+ *DerivedType*  
  Un tipo derivado.  
   
- `BaseType`  
+ *BaseType*  
  El tipo base de un tipo derivado.  
   
- `hasImplements`  
- Valor de un valor booleano que si `true`, significa que no se puede usar un [MixIn](../windows/mixin-structure.md) estructura con una clase que no se deriva de la [implementa](../windows/implements-structure.md) estructura.  
+ *hasImplements*  
+ Valor de un valor booleano que si **true**, significa que no se puede usar un [MixIn](../windows/mixin-structure.md) estructura con una clase que no se deriva de la [implementa](../windows/implements-structure.md) una estructura.  
   
 ## <a name="members"></a>Miembros  
   
@@ -106,16 +106,16 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[ChainInterfaces::CanCastTo (método)](../windows/chaininterfaces-cancastto-method.md)|Indica si el identificador de interfaz especificado se puede convertir a cada una de las especializaciones definidas por los parámetros de plantilla ChainInterface.|  
-|[ChainInterfaces::CastToUnknown (método)](../windows/chaininterfaces-casttounknown-method.md)|Convierte el puntero de interfaz del tipo definido por el `I0` parámetro de plantilla a un puntero a IUnknown.|  
-|[ChainInterfaces::FillArrayWithIid (método)](../windows/chaininterfaces-fillarraywithiid-method.md)|Almacena el identificador de interfaz definido por el `I0` parámetro de plantilla en una ubicación especificada de una matriz especificada de identificadores de interfaz.|  
-|[ChainInterfaces::Verify (método)](../windows/chaininterfaces-verify-method.md)|Comprueba que cada interfaz definido por los parámetros de plantilla `I0` a través de `I9` hereda de IUnknown o IInspectable y que `I0` hereda de `I1` a través de `I9`.|  
+|[ChainInterfaces::CanCastTo (método)](../windows/chaininterfaces-cancastto-method.md)|Indica si el identificador de interfaz especificado puede convertirse a cada una de las especializaciones definidas por los parámetros de plantilla ChainInterface.|  
+|[ChainInterfaces::CastToUnknown (método)](../windows/chaininterfaces-casttounknown-method.md)|Convierte el puntero de interfaz del tipo definido por el *I0* parámetro de plantilla en un puntero a IUnknown.|  
+|[ChainInterfaces::FillArrayWithIid (método)](../windows/chaininterfaces-fillarraywithiid-method.md)|Almacena el identificador de interfaz definido por el *I0* parámetro de plantilla en una ubicación especificada en una matriz especificada de identificadores de interfaz.|  
+|[ChainInterfaces::Verify (método)](../windows/chaininterfaces-verify-method.md)|Comprueba que cada interfaz definida por los parámetros de plantilla *I0* a través de *I9* hereda `IUnknown` o `IInspectable`y que *I0* hereda de *I1* a través de *I9*.|  
   
-### <a name="protected-constants"></a>Constantes protegidos  
+### <a name="protected-constants"></a>Constantes protegidas  
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[ChainInterfaces::IidCount (constante)](../windows/chaininterfaces-iidcount-constant.md)|El número total de identificadores contenidos en las interfaces especificadas por los parámetros de plantilla interfaz `I0` a través de `I9`.|  
+|[ChainInterfaces::IidCount (constante)](../windows/chaininterfaces-iidcount-constant.md)|El número total de identificadores contenidos en las interfaces especificadas por los parámetros de plantilla de interfaz *I0* a través de *I9*.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `I0`  

@@ -1,5 +1,5 @@
 ---
-title: Crear una aplicación de escritorio de Windows vacía | Documentos de Microsoft
+title: Creación de una aplicación de escritorio de Windows vacía | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a86aead2c3c84cf6d28dd3807d9dec224770785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: baff146be956b2e116cbbe90fe6ecb9187d55f3f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883999"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464368"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>Crear una aplicación de escritorio de Windows vacía
 ### <a name="to-create-an-empty-windows-desktop-application"></a>Para crear una aplicación de escritorio de Windows vacía  
   
-1.  En el menú **Archivo** , seleccione **Nuevo, Proyecto**.  
+1.  En el menú **Archivo**, seleccione **Nuevo** > **Proyecto**.  
   
 2.  En el panel izquierdo del cuadro de diálogo **Nuevo proyecto** , haga clic en **Win32** y en el panel central, seleccione **Aplicación de consola Win32**.  
   
@@ -43,4 +43,4 @@ ms.locfileid: "33883999"
  A continuación, puede [agregar archivos al proyecto vacío de Visual C++](../windows/adding-files-to-an-empty-win32-applications.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Implementación de aplicaciones](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Implementación de aplicaciones](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

@@ -1,5 +1,5 @@
 ---
-title: 'Operador de subíndice: | Documentos de Microsoft'
+title: 'Operador de subíndice: | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b116b55dd951e3be32c23a73614e7082c4102db4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbdeac996320d885e4d6e131dcb735ac369b09f5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467913"
 ---
 # <a name="subscript-operator"></a>Operador de subíndice:
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 postfix-expression [ expression ]  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Una expresión de postfijo (que también se puede ser una expresión primaria) seguida del operador de subíndice, **[]**, especifica la indización de matrices.  
+ Una expresión de postfijo (que también se puede ser una expresión primaria) seguida del operador de subíndice, **[]**, especifica la indexación de matrices.  
   
  Para obtener información sobre las matrices administradas, vea [matrices](../windows/arrays-cpp-component-extensions.md).  
   
- Normalmente, el valor representado por *postfix-expression* es un valor de puntero, como un identificador de matriz, y *expresión* es un valor entero (incluidos los tipos enumerados). Sin embargo, todo lo que se necesita desde el punto de vista sintáctico es que una de las expresiones sea de tipo puntero y que la otra sea de tipo entero. Por tanto, el valor entero podría estar en el *postfix-expression* posición y el valor de puntero pudieron estar en las llaves de la *expresión* o la posición de subíndice. Observe el fragmento de código siguiente:  
+ Normalmente, el valor representado por *postfix-expression* es un valor de puntero, como un identificador de matriz y *expresión* es un valor entero (incluidos los tipos enumerados). Sin embargo, todo lo que se necesita desde el punto de vista sintáctico es que una de las expresiones sea de tipo puntero y que la otra sea de tipo entero. Por tanto, el valor entero podría estar en el *postfix-expression* posición y el valor de puntero podría estar en los corchetes en la *expresión* o posición de subíndice. Observe el fragmento de código siguiente:  
   
-```  
+```cpp 
 int nArray[5] = { 0, 1, 2, 3, 4 };  
 cout << nArray[2] << endl;            // prints "2"  
 cout << 2[nArray] << endl;            // prints "2"  
@@ -50,23 +50,23 @@ cout << 2[nArray] << endl;            // prints "2"
   
  **\*((** *e2* **)** *+* **(***e1***))**  
   
- La dirección producida por la expresión no es *e2* bytes a partir de la dirección *e1*. En su lugar, la dirección se ha ampliado para producir el siguiente objeto de la matriz *e2*. Por ejemplo:  
+ La dirección producida por la expresión no es *e2* bytes desde la dirección *e1*. En su lugar, la dirección se ha ampliado para producir el siguiente objeto de la matriz *e2*. Por ejemplo:  
   
-```  
+```cpp 
 double aDbl[2];  
 ```  
   
- Las direcciones de `aDb[0]` y `aDb[1]` están alejadas 8 bytes, el tamaño de un objeto de tipo **doble**. Esta ampliación según el tipo de objeto se realiza automáticamente en el lenguaje C++ y se define en [operadores de suma](../cpp/additive-operators-plus-and.md) donde se describe la suma y resta de operandos de tipo de puntero.  
+ Las direcciones de `aDb[0]` y `aDb[1]` están alejadas 8 bytes, el tamaño de un objeto de tipo **doble**. Esta ampliación según el tipo de objeto se realiza automáticamente en el lenguaje C++ y se define en [operadores aditivos](../cpp/additive-operators-plus-and.md) donde se describe la suma y resta de operandos de tipo de puntero.  
   
  Una expresión de subíndice también puede tener varios subíndices, como se indica a continuación:  
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice más a la izquierda, * expression1 ***[*** expression2 ***]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (**\***) se aplica después de la última expresión de subíndice se evalúa, a menos que el valor del puntero final apunta un tipo de matriz.  
+ Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice del extremo izquierdo, expression1 ***[*** expression2***]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (**\***) se aplica después de evaluar la última expresión subíndice, a menos que el valor del puntero final trata de un tipo de matriz.  
   
  Las expresiones con varios subíndices hacen referencia a elementos de matrices multidimensionales. Una matriz multidimensional es una matriz cuyos elementos son matrices. Por ejemplo, el primer elemento de una matriz tridimensional es una matriz con dos dimensiones. En el ejemplo siguiente se declara y se inicializa una matriz bidimensional de caracteres simple:  
   
-```  
+```cpp 
 // expre_Subscript_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -84,9 +84,9 @@ int main() {
 ```  
   
 ## <a name="positive-and-negative-subscripts"></a>Subíndices positivos y negativos  
- El primer elemento de una matriz es el elemento 0. El rango de una matriz de C++ es de *matriz*[0] a *matriz*[*tamaño* - 1]. Sin embargo, C++ admite subíndices positivos y negativos. Los subíndices negativos deben situarse dentro de los límites de la matriz, ya que de lo contrario los resultados son impredecibles. En el código siguiente se muestran subíndices de matriz positivos y negativos:  
+ El primer elemento de una matriz es el elemento 0. El intervalo de una matriz de C++ es de *matriz*[0] a *matriz*[*tamaño* - 1]. Sin embargo, C++ admite subíndices positivos y negativos. Los subíndices negativos deben situarse dentro de los límites de la matriz, ya que de lo contrario los resultados son impredecibles. En el código siguiente se muestran subíndices de matriz positivos y negativos:  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -109,11 +109,11 @@ int main() {
   
  El subíndice negativo de la última línea puede generar un error en tiempo de ejecución porque señala una dirección 256 bytes más abajo en la memoria que el origen de la matriz. El puntero `midArray` se inicializa en el centro de `intArray`, por lo que en él se pueden usar índices de matriz positivos y negativos. Los errores de subíndice de matriz no generan errores en tiempo de compilación, pero producen resultados imprevisibles.  
   
- El operador de subíndice es conmutativo. Por lo tanto, las expresiones *matriz*[*índice*] y *matriz*[*matriz*] se garantiza que sean equivalentes siempre que el subíndice no se sobrecarga el operador (vea [operadores sobrecargados](../cpp/operator-overloading.md)). La primera forma es la práctica más común de codificación, pero cualquiera de ellas funciona.  
+ El operador de subíndice es conmutativo. Por lo tanto, las expresiones *matriz*[*índice*] y *matriz*[*matriz*] se garantiza que sean equivalentes siempre que el subíndice operador no esté sobrecargado (vea [operadores sobrecargados](../cpp/operator-overloading.md)). La primera forma es la práctica más común de codificación, pero cualquiera de ellas funciona.  
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones de postfijo](../cpp/postfix-expressions.md)   
- [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Arrays](../cpp/arrays-cpp.md)  (Matrices)  
  [Matrices unidimensionales](../c-language/one-dimensional-arrays.md)   
  [Matrices multidimensionales](../c-language/multidimensional-arrays-c.md)

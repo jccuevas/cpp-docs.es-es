@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980aaa5bf0b9472e8fb1c6d7f6b3c56aa255d00b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ff0716359c715431f9887f50be06e592d57787e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944209"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463917"
 ---
 # <a name="using-arrays-c"></a>Utilizar matrices (C++)
 Se puede obtener acceso a los elementos individuales de una matriz mediante el operador de subíndice de matriz (`[ ]`). Si se utiliza una matriz unidimensional en una expresión que no tiene subíndice, el nombre de la matriz se evalúa como un puntero al primer elemento de la matriz.  

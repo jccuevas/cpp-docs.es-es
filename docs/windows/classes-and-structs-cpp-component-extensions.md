@@ -1,5 +1,5 @@
 ---
-title: Clases y Structs (extensiones de componentes de C++) | Documentos de Microsoft
+title: Clases y Structs (extensiones de componentes de C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9863786e5e017b69217f984e3aa6d1db597e74d3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22f8dc4dfc3268930c80caece85b06b9a1a25d58
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864920"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461028"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Clases y structs (Extensiones de componentes de C++)
-Declara una clase o struct cuya *duración de los objetos* se administra automáticamente. Cuando el objeto ya no es accesible o se sale del ámbito, Visual C++ descarta automáticamente la memoria asignada al objeto.  
+Declara una clase o struct cuya *duración del objeto* se administra automáticamente. Cuando el objeto ya no es accesible o se sale del ámbito, Visual C++ descarta automáticamente la memoria asignada al objeto.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
  **Sintaxis**  
   
 ```  
-  
       class_access  
       ref class  
       name  
@@ -46,16 +45,16 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  **Parámetros**  
   
  *class_access* (opcional)  
- La accesibilidad de la clase o struct fuera del ensamblado. Los valores posibles son **público** y `private` (`private` es el valor predeterminado). Clases anidadas o las estructuras no pueden tener un *class_access* especificador.  
+ La accesibilidad de la clase o struct fuera del ensamblado. Los valores posibles son **pública** y **privada** (**privada** es el valor predeterminado). Las clases anidadas o las estructuras no pueden tener un *class_access* especificador.  
   
  *name*  
  Nombre de la clase o struct.  
   
  *modificador* (opcional)  
- [abstracta](../windows/abstract-cpp-component-extensions.md) y [sellado](../windows/sealed-cpp-component-extensions.md) son modificadores válidos.  
+ [abstracta](../windows/abstract-cpp-component-extensions.md) y [sealed](../windows/sealed-cpp-component-extensions.md) son modificadores válidos.  
   
  *inherit_access* (opcional)  
- Accesibilidad de `base_type`. La única accesibilidad permitida es `public` (`public` es el valor predeterminado).  
+ Accesibilidad de `base_type`. La única accesibilidad permitida es **pública** (**pública** es el valor predeterminado).  
   
  *base_type* (opcional)  
  Tipo base. Sin embargo, un tipo de valor no puede actuar como tipo base.  
@@ -64,23 +63,21 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
  **Comentarios**  
   
- La accesibilidad del miembro predeterminado de un objeto declarado con **clase ref** o **clase de valor** es `private`. Y la accesibilidad del miembro predeterminado de un objeto declarado con **un struct ref** o **struct de valor** es `public`.  
+ La accesibilidad del miembro predeterminado de un objeto declarado con **clase ref** o **clase de valor** es **privada**. Y la accesibilidad de miembro predeterminado de un objeto declarado con **ref struct** o **struct de valor** es **pública**.  
   
- Cuando un tipo de referencia se hereda de otro tipo de referencia, las funciones virtuales de la clase base deben reemplazarse explícitamente (con [invalidar](../windows/override-cpp-component-extensions.md)) u oculto (con [new (nueva ranura en vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)). Las funciones de la clase derivada también deben marcarse explícitamente como `virtual`.  
+ Cuando un tipo de referencia se hereda de otro tipo de referencia, las funciones virtuales de la clase base deben reemplazarse explícitamente (con [invalidar](../windows/override-cpp-component-extensions.md)) u oculto (con [new (nueva ranura en vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)). También se deben marcar explícitamente las funciones de la clase derivada como **virtual**.  
   
- Para detectar en tiempo de compilación si un tipo es un `ref class` o `ref struct`, o un `value class` o `value struct`, use `__is_ref_class (type)`, `__is_value_class (type)`, o `__is_simple_value_class (type)`. Para obtener más información, consulte [compatibilidad de compilador para Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Para detectar en tiempo de compilación si un tipo es un **clase ref** o **ref struct**, o un **clase de valor** o **struct de valor**, utilice `__is_ref_class (type)`, `__is_value_class (type)`, o `__is_simple_value_class (type)`. Para obtener más información, consulte [compatibilidad de compilador para Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
  Para obtener más información sobre clases y structs, vea  
   
--   [Crear instancias de clases y structs](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)  
-  
- 
+-   [Crear instancias de clases y Structs](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)  
   
 -   [Semántica de pila de C++ para los tipos de referencia](../dotnet/cpp-stack-semantics-for-reference-types.md)  
   
--   [Clases, estructuras y uniones](../cpp/classes-and-structs-cpp.md)  
+-   [Las clases, estructuras y uniones](../cpp/classes-and-structs-cpp.md)  
   
--   [Destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)  
+-   [Destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)  
   
 -   [Operadores definidos por el usuario (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)  
   
@@ -93,16 +90,16 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
  **Comentarios**  
   
- Vea [clases y structs Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx) y [clases y structs de valor](http://msdn.microsoft.com/library/windows/apps/hh699861.aspx).  
+ Consulte [clases y structs Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx) y [clases y structs de valor](http://msdn.microsoft.com/library/windows/apps/hh699861.aspx).  
   
  **Parámetros**  
   
  *base_type* (opcional)  
- Tipo base. `ref class` o `ref struct` pueden heredar de cero o más interfaces y de cero o un tipo `ref`. `value class` o `value struct` solo pueden heredar de cero o más interfaces.  
+ Tipo base. Un **clase ref** o **ref struct** puede heredar de cero o más interfaces y cero o uno `ref` tipos. Un **clase de valor** o **struct de valor** sólo puede heredar de cero o más interfaces.  
   
- Al declarar un objeto mediante las palabras clave `ref class` o `ref struct`, se obtiene acceso al objeto con un identificador de objeto, es decir, un puntero de contador de referencias al objeto. Cuando la variable declarada se sale del ámbito, el compilador elimina automáticamente el objeto subyacente. Cuando el objeto se usa como parámetro en una llamada o se almacena en una variable, se pasa o se almacena realmente un identificador del objeto.  
+ Cuando declara un objeto mediante el uso de la **clase ref** o **ref struct** palabras clave, se obtiene acceso al objeto mediante un identificador de objeto; es decir, un puntero de contador de referencias al objeto. Cuando la variable declarada se sale del ámbito, el compilador elimina automáticamente el objeto subyacente. Cuando el objeto se usa como parámetro en una llamada o se almacena en una variable, se pasa o se almacena realmente un identificador del objeto.  
   
- Cuando se declara un objeto mediante las palabras clave `value class` o `value struct`, la duración del objeto declarado no se supervisa. El objeto es como cualquier otra clase o struct estándar de C++.  
+ Cuando declara un objeto mediante el uso de la **clase de valor** o **struct de valor** palabras clave, la duración del objeto del objeto declarado no está supervisada. El objeto es como cualquier otra clase o struct estándar de C++.  
   
 ### <a name="requirements"></a>Requisitos  
  Opción del compilador: **/ZW**  
@@ -110,16 +107,16 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentarios**  
   
- En la tabla siguiente se enumera las diferencias con la sintaxis mostrada en el **todos los Runtimes** sección que son específicas de c++ / CLI.  
+ En la tabla siguiente enumera las diferencias con la sintaxis mostrada en el **todos los Runtimes** sección que son específicas de C / c++ / CLI.  
   
  **Parámetros**  
   
  *base_type* (opcional)  
- Tipo base. `ref class` o `ref struct` pueden heredar de cero o más interfaces administradas y de cero o un tipo ref. `value class` o `value struct` solo pueden heredar de cero o más interfaces administradas.  
+ Tipo base. Un **clase ref** o **ref struct** puede heredar de cero o más administrados, interfaces y cero o un tipo ref. Un **clase de valor** o **struct de valor** sólo puede heredar de cero o más interfaces administradas.  
   
- Las palabras clave `ref class` y `ref struct` indican al compilador que la clase o estructura debe asignarse en el montón. Cuando el objeto se usa como parámetro en una llamada o se almacena en una variable, se pasa o se almacena realmente una referencia al objeto.  
+ El **clase ref** y **ref struct** palabras clave indican al compilador que es la clase o estructura debe asignarse en el montón. Cuando el objeto se usa como parámetro en una llamada o se almacena en una variable, se pasa o se almacena realmente una referencia al objeto.  
   
- El `value class` y `value struct` palabras clave indica al compilador que el valor de la clase o estructura asignada se pasan a las funciones o almacenado en miembros.  
+ El **clase de valor** y **struct de valor** palabras clave indica al compilador que el valor de la clase o estructura asignada se pasa a funciones o almacenado en los miembros.  
   
 ### <a name="requirements"></a>Requisitos  
  Opción del compilador: **/clr**  

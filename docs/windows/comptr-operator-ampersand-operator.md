@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: operator&amp; operador | Documentos de Microsoft'
+title: 'Comptr:: operator&amp; operador | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bfe8cf9091d888c33420f53f584ca5509d80527
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0afff1699a4c7a3a14f07967cfb5ba5727ba0320
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872411"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461567"
 ---
-# <a name="comptroperatoramp-operator"></a>Comptr&amp; (operador)
-Libera la interfaz asociada a esta `ComPtr` objeto y, a continuación, recupera la dirección de la `ComPtr` objeto.  
+# <a name="comptroperatoramp-operator"></a>Comptr:: operator&amp; operador
+Libera la interfaz asociada a este **ComPtr** de objetos y, a continuación, recupera la dirección de la **ComPtr** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,10 +36,10 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Una referencia débil a actual `ComPtr`.  
+ Una referencia débil a la actual **ComPtr**.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método difiere de [comptr:: Getaddressof](../windows/comptr-getaddressof-method.md) en que este método libera una referencia al puntero de interfaz. Utilice `ComPtr::GetAddressOf` cuando solicitan la dirección del puntero de interfaz, pero no desea liberar esa interfaz.  
+ Este método difiere [Getaddressof](../windows/comptr-getaddressof-method.md) en que este método libera una referencia al puntero de interfaz. Use `ComPtr::GetAddressOf` cuando se requiere la dirección del puntero de interfaz, pero no desea liberar esa interfaz.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Fireprogress (método) | Documentos de Microsoft'
+title: Fireprogress (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c2c5aab609b597c3a9ff464b868ba831889deed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: faa2e1af556f0184fa88055bcbf154eb783e24e5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863587"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463602"
 ---
 # <a name="asyncbasefireprogress-method"></a>AsyncBase::FireProgress (Método)
-Se invoca el controlador de eventos de progreso actual.  
+Invoca el controlador de eventos de progreso actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ void FireProgress(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `arg`  
+ *arg*  
  Método de controlador de eventos que se va a invocar.  
   
 ## <a name="remarks"></a>Comentarios  

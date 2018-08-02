@@ -1,5 +1,5 @@
 ---
-title: ActivatableClass (Macros) | Documentos de Microsoft
+title: ActivatableClass (Macros) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aeb68deddd1cdfa9e1e869a08bfb0a1f3bb8d6ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e46063bc94fae25d414d25ae67b5418ee5aa8c27
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857469"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465862"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass (Macros)
 
-Rellena una caché interna que contiene una fábrica que puede crear una instancia de la clase especificada.
+Rellena una memoria caché interna que contiene una fábrica que puede crear una instancia de la clase especificada.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -56,15 +56,15 @@ ActivatableClassWithFactoryEx(
 *nombre de clase*  
 Nombre de la clase para crear.  
 
-*Generador*  
-Generador que va a crear una instancia de la clase especificada.
+*Factory*  
+Generador que se va a crear una instancia de la clase especificada.
 
-*ServerName*  
-Nombre que especifica un subconjunto de los generadores de en el módulo.
+*Nombre de servidor*  
+Un nombre que especifica un subconjunto de fábricas del módulo.
 
 ## <a name="remarks"></a>Comentarios
 
-No utilice estas macros con COM clásico a menos que utilice el `#undef` directiva para asegurarse de que el **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** se quita la definición de macro.
+No utilice estas macros con COM clásico a menos que use el `#undef` directiva para asegurarse de que el **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** se quita la definición de macro.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -73,5 +73,4 @@ No utilice estas macros con COM clásico a menos que utilice el `#undef` directi
 **Espacio de nombres:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vea también
-
 [Module (clase)](../windows/module-class.md)

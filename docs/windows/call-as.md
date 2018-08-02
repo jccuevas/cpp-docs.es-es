@@ -1,5 +1,5 @@
 ---
-title: call_as | Documentos de Microsoft
+title: call_as | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860871"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465875"
 ---
 # <a name="callas"></a>call_as
-Permite un [local](../windows/local-cpp.md) función que debe asignarse a una función remota para que cuando se llama a la función remota, se invoca la función local.  
+Permite un [local](../windows/local-cpp.md) función a la que se asignan a una función remota para que cuando se llama a la función remota, se invoca la función local.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
  *function*  
- La función local que desea que se llamará cuando se invoque una función remota.  
+ La función local que desea que se llama cuando se invoca una función remota.  
   
 ## <a name="remarks"></a>Comentarios  
- El **call_as** atributo C++ tiene la misma funcionalidad que la [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) atributo MIDL.  
+ El **call_as** atributo de C++ tiene la misma funcionalidad que el [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente muestra cómo puede usar **call_as** para asignar una función utilizables (**f1**) a una función remoto (**Remf1**):  
+ El código siguiente muestra cómo puede usar **call_as** para asignar una función utilizables (**f1**) a una función remota (**Remf1**):  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -74,4 +73,4 @@ __interface IMInterface {
 ## <a name="see-also"></a>Vea también  
  [Atributos IDL](../windows/idl-attributes.md)   
  [Atributos de método](../windows/method-attributes.md)   
- [Local](../windows/local-cpp.md)   
+ [local](../windows/local-cpp.md)   

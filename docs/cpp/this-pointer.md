@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d150d2419885c2f0273e376fd58750417ced6756
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f63b2d129e0eb6e9986942e4286eb1728d4be797
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944462"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462224"
 ---
 # <a name="this-pointer"></a>this (Puntero)
 El **esto** puntero es un puntero accesible únicamente dentro de las funciones miembro no estático de un **clase**, **struct**, o **unión** tipo. Señala al objeto para el que se llama a la función miembro. Las funciones miembro estáticas no tienen un **esto** puntero.  
@@ -31,7 +31,6 @@ El **esto** puntero es un puntero accesible únicamente dentro de las funciones 
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 this   
 this->member-identifier  
 ```  
@@ -201,4 +200,3 @@ int main()
   
 ## <a name="see-also"></a>Vea también  
  [Palabras clave](../cpp/keywords-cpp.md)   
- 

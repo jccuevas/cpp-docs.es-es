@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Start (método) | Documentos de Microsoft'
+title: Método Asyncbase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0acc6f62530daf641a2e4d568ed511d6fd831c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab47405f81cf6fb92af215f1868d8ad7c42bffa7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860923"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463735"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start (Método)
 Inicia la operación asincrónica.  
@@ -36,10 +36,10 @@ STDMETHOD(
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si la operación inicia o ya ha iniciado. en caso contrario, E_ILLEGAL_STATE_CHANGE.  
+ S_OK si la operación se inicia o ya está iniciado; en caso contrario, E_ILLEGAL_STATE_CHANGE.  
   
 ## <a name="remarks"></a>Comentarios  
- Start() es una implementación predeterminada de IAsyncInfo::Start y no lleva a cabo ningún trabajo real. Para iniciar una operación asincrónica, invalide el método virtual puro OnStart().  
+ **Start()** es una implementación predeterminada de `IAsyncInfo::Start`, y no se realiza ningún trabajo real. Para iniciar una operación asincrónica, invalidar el `OnStart()` método virtual puro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** async.h  

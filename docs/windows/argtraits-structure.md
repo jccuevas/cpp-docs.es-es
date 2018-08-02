@@ -1,5 +1,5 @@
 ---
-title: ArgTraits (estructura) | Documentos de Microsoft
+title: ArgTraits (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 162fbdea86aef81582902340102d54777e3f861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858047"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462048"
 ---
 # <a name="argtraits-structure"></a>ArgTraits (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -118,41 +118,41 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `TMemberFunction`  
- Parámetro TypeName para un ArgTraits (estructura) que no puede coincidir con cualquier firma de método Invoke.  
+ *TMemberFunction*  
+ Parámetro TypeName para una ArgTraits (estructura) que no coincide con ninguna `Invoke` firma del método.  
   
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Una interfaz de delegado.  
   
- `TArg1`  
- El tipo del primer argumento del método Invoke.  
+ *TArg1*  
+ El tipo del primer argumento de la `Invoke` método.  
   
- `TArg2`  
- El tipo del segundo argumento del método Invoke.  
+ *TArg2*  
+ El tipo del segundo argumento de la `Invoke` método.  
   
- `TArg3`  
- El tipo del tercer argumento del método Invoke.  
+ *TArg3*  
+ El tipo del tercer argumento de la `Invoke` método.  
   
- `TArg4`  
- El tipo del cuarto argumento del método Invoke.  
+ *TArg4*  
+ El tipo del cuarto argumento de la `Invoke` método.  
   
- `TArg5`  
- El tipo del quinto argumento del método Invoke.  
+ *TArg5*  
+ El tipo del quinto argumento de la `Invoke` método.  
   
- `TArg6`  
- El tipo del sexto argumento del método Invoke.  
+ *TArg6*  
+ El tipo del sexto argumento de la `Invoke` método.  
   
- `TArg7`  
- El tipo del séptimo argumento del método Invoke.  
+ *TArg7*  
+ El tipo del séptimo argumento de la `Invoke` método.  
   
- `TArg8`  
- El tipo del octavo argumento del método Invoke.  
+ *TArg8*  
+ El tipo del octavo argumento de la `Invoke` método.  
   
- `TArg9`  
- El tipo del noveno argumento del método Invoke.  
+ *TArg9*  
+ El tipo del noveno argumento de la `Invoke` método.  
   
 ## <a name="remarks"></a>Comentarios  
- El `ArgTraits` estructura declara un delegado especificado interfaz y una función miembro anónimo que tiene un número especificado de parámetros.  
+ El `ArgTraits` estructura declara un delegado especificado de interfaz y una función miembro anónimo que tiene un número especificado de parámetros.  
   
 ## <a name="members"></a>Miembros  
   
@@ -174,7 +174,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[ArgTraits::args (constante)](../windows/argtraits-args-constant.md)|Mantiene el recuento del número de parámetros en el método de invocación de una interfaz de delegado.|  
+|[ArgTraits::args (constante)](../windows/argtraits-args-constant.md)|Mantiene un recuento del número de parámetros el `Invoke` al método de interfaz de un delegado.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `ArgTraits`  

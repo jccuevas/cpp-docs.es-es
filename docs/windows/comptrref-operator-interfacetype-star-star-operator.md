@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: operator InterfaceType ** (operador) | Documentos de Microsoft'
+title: 'Comptrref:: operator InterfaceType ** (operador) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 416b30c55027debddc153c44e55c7a4be512703d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6401d78f0c410057d41a80f2345255d4876adb23
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870517"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464420"
 ---
 # <a name="comptrrefoperator-interfacetype-operator"></a>ComPtrRef::operator InterfaceType** (Operador)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ operator InterfaceType**();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Elimina el objeto ComPtrRef actual y devuelve un puntero a un-puntero a la interfaz que se ha representado por el objeto ComPtrRef.  
+ Elimina la actual **ComPtrRef** de objetos y devuelve un puntero a una de puntero a la interfaz que se ha representado por la **ComPtrRef** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  

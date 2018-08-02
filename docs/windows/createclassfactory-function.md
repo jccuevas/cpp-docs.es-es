@@ -1,5 +1,5 @@
 ---
-title: CreateClassFactory (función) | Documentos de Microsoft
+title: CreateClassFactory (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d08573515bee89fd86d6b37e3982dde2b29978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff853fce39b2052b82df921bf6743b0db361408c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870478"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461330"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory (función)
 Crea un generador que produce instancias de la clase especificada.  
@@ -37,27 +37,26 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
    REFIID riid,   
    _Outptr_ IUnknown **ppFactory  
 ) throw();  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `flags`  
+ *flags*  
  Una combinación de uno o varios [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valores de enumeración.  
   
- `entry`  
- Puntero a un [CreatorMap](../windows/creatormap-structure.md) que contiene información de inicialización y el registro sobre el parámetro `riid`.  
+ *entry*  
+ Puntero a un [CreatorMap](../windows/creatormap-structure.md) que contiene información de inicialización y el registro sobre el parámetro *riid*.  
   
- `riid`  
+ *riid*  
  Referencia a un identificador de interfaz.  
   
- `ppFactory`  
+ *ppFactory*  
  Si esta operación completa correctamente, un puntero a un generador de clases.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.  
   
 ## <a name="remarks"></a>Comentarios  
- Se genera un error de aserción si el parámetro de plantilla `Factory` no derivan de la interfaz IClassFactory.  
+ Se genera un error de aserción si el parámetro de plantilla *Factory* no se deriva de la interfaz `IClassFactory`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

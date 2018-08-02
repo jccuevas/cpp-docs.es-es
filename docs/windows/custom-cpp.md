@@ -1,5 +1,5 @@
 ---
-title: personalizado (C++) | Documentos de Microsoft
+title: personalizado (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b37d87d5380b9d4dac69cee702654285461ead6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7222d7021665a76c7e087033f5152d2836008caa
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871632"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460937"
 ---
 # <a name="custom-c"></a>custom (C++)
 Define los metadatos de un objeto en la biblioteca de tipos.  
@@ -30,8 +30,7 @@ Define los metadatos de un objeto en la biblioteca de tipos.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ custom(  
+[ custom(  
    uuid,   
    value  
 ) ];  
@@ -42,12 +41,12 @@ Define los metadatos de un objeto en la biblioteca de tipos.
  Identificador único.  
   
  *valor*  
- Un valor que se pueden colocar en una variante.  
+ Un valor que se puede colocar en una variante.  
   
 ## <a name="remarks"></a>Comentarios  
- El **personalizado** atributo C++ hará que la información se coloquen en la biblioteca de tipos. Necesitará una herramienta que lee el valor personalizado de la biblioteca de tipos.  
+ El **personalizado** atributo de C++ hará que la información para colocarse en la biblioteca de tipos. Necesitará una herramienta que lee el valor personalizado de la biblioteca de tipos.  
   
- El **personalizado** atributo tiene la misma funcionalidad que la [personalizado](http://msdn.microsoft.com/library/windows/desktop/aa366766) atributo MIDL.  
+ El **personalizado** atributo tiene la misma funcionalidad que el [personalizado](http://msdn.microsoft.com/library/windows/desktop/aa366766) atributo MIDL.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -55,7 +54,7 @@ Define los metadatos de un objeto en la biblioteca de tipos.
   
 |||  
 |-|-|  
-|**Se aplica a**|COM no `interface`, **clase**, `enum`s, `idl_module` métodos, los miembros de interfaz, los parámetros de la interfaz, `typedef`s, **union**s, `struct`s|  
+|**Se aplica a**|No COM **interfaz**, **clase**, **enum**s, `idl_module` métodos, los miembros de interfaz, los parámetros de la interfaz, **typedef**s, **unión**s, **struct**s|  
 |**Reiterativo**|Sí|  
 |**Atributos requeridos**|**coclase** (cuando se usa en la clase)|  
 |**Atributos no válidos**|Ninguna|  

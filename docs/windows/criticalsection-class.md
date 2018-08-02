@@ -1,5 +1,5 @@
 ---
-title: CriticalSection (clase) | Documentos de Microsoft
+title: CriticalSection (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b5eda8fb22f72bd1f50801f9993b9bd7a864d35
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b8aa37f6ac12cad91fa02a2387c95911227319d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871515"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466142"
 ---
 # <a name="criticalsection-class"></a>CriticalSection (clase)
 Representa un objeto de sección crítica.  
@@ -39,15 +39,15 @@ class CriticalSection;
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[CriticalSection::CriticalSection (constructor)](../windows/criticalsection-criticalsection-constructor.md)|Inicializa un objeto de sincronización que es similar a un objeto de exclusión mutua, pero puede usar solo los subprocesos de un único proceso.|  
-|[CriticalSection::~CriticalSection (destructor)](../windows/criticalsection-tilde-criticalsection-destructor.md)|Desinicializa y destruye el objeto CriticalSection actual.|  
+|[CriticalSection::CriticalSection (constructor)](../windows/criticalsection-criticalsection-constructor.md)|Inicializa un objeto de sincronización que es similar a un objeto de exclusión mutua, pero se puede usar solo los subprocesos de un único proceso.|  
+|[CriticalSection::~CriticalSection (destructor)](../windows/criticalsection-tilde-criticalsection-destructor.md)|Desinicializa y destruye actual **CriticalSection** objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
 |[CriticalSection::TryLock (método)](../windows/criticalsection-trylock-method.md)|Intenta entrar en una sección crítica sin bloquear. Si la llamada se realiza correctamente, el subproceso de llamada toma posesión de la sección crítica.|  
-|[CriticalSection::Lock (método)](../windows/criticalsection-lock-method.md)|Esperas de propiedad del objeto de sección crítica especificado. La función devuelve cuando el subproceso que realiza la llamada se concede la propiedad.|  
+|[CriticalSection::Lock (método)](../windows/criticalsection-lock-method.md)|Espera a que la propiedad del objeto especificado de sección crítica. La función devuelve cuando el subproceso de llamada se concede la propiedad.|  
 |[CriticalSection::IsValid (método)](../windows/criticalsection-isvalid-method.md)|Indica si la sección crítica actual es válida.|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  

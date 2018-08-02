@@ -1,5 +1,5 @@
 ---
-title: puede enlazar | Documentos de Microsoft
+title: puede enlazar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1cf16bfbeee2231133e60429a4a25e9d4fe85c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a216aa5fb5be727e82313c30aa2aa72d887cb4c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861810"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467149"
 ---
 # <a name="bindable"></a>bindable
 Indica que la propiedad admite enlace de datos.  
@@ -30,26 +30,24 @@ Indica que la propiedad admite enlace de datos.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [bindable]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **enlazables** atributo C++ tiene la misma funcionalidad que la [enlazables](http://msdn.microsoft.com/library/windows/desktop/aa366738) atributo MIDL. Se puede usar en propiedades definidas con el [propget](../windows/propget.md), [propput](../windows/propput.md), o [propputref](../windows/propputref.md) atributos, o bien puede definir manualmente un método se puede enlazar.  
+ El **enlazable** atributo de C++ tiene la misma funcionalidad que el [enlazable](http://msdn.microsoft.com/library/windows/desktop/aa366738) atributo MIDL. Se puede usar en las propiedades definidas con el [propget](../windows/propget.md), [propput](../windows/propput.md), o [propputref](../windows/propputref.md) atributos, o bien puede definir un método se puede enlazar manualmente.  
   
- Los siguientes ejemplos MFC muestran el uso de **enlazables**:  
+ Los siguientes ejemplos MFC muestran el uso de **enlazable**:  
   
--   [Ejemplos de controles: Controles de ActiveX basados en MFC](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [Ejemplos de controles: Controles de ActiveX basados en MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [Ejemplo CIRC: Control ActiveX](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [Ejemplo CIRC: Control ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [Ejemplo TESTHELP: Control de ActiveX con información sobre herramientas y ayuda](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [Ejemplo TESTHELP: Control de ActiveX con información sobre herramientas y ayuda](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente muestra cómo puede usar **enlazables** en una propiedad:  
+ El código siguiente muestra cómo puede usar **enlazable** en una propiedad:  
   
-```  
+```cpp  
 // cpp_attr_ref_bindable.cpp  
 // compile with: /LD  
 #include <windows.h>  

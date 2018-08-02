@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 26b4cbfb798e47b1add5b1d46c2ea1adb538898b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939837"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465973"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inicialización uniforme y constructores de delegación
 En C++ moderno, puede usar *la inicialización de llave* para cualquier tipo, sin el signo igual. Además, se puede utilizar la delegación de constructores para simplificar el código cuando hay varios constructores que realizan un trabajo similar.  
@@ -50,7 +50,6 @@ int main()
     class_a c3{ "yy", 4.4 };  
     class_a c3_1("zz", 5.5);  
 }  
-  
 ```  
   
  Si una clase tiene constructores no predeterminados, el orden en que los miembros de clase aparecen en el inicializador de llave es aquel en que aparecen los parámetros correspondientes en el constructor, no el orden en que se declaran los miembros (como ocurre con `class_a` en el ejemplo anterior). De lo contrario, si el tipo no tiene ningún constructor declarado, el orden en que los miembros aparecen en el inicializador de llave es el mismo que el orden en que se declararon; en este caso, puede inicializar tantos miembros públicos como desee, pero no puede omitir ningún miembro. En el ejemplo siguiente se muestra el orden que se utiliza en la inicialización de llave cuando no hay un constructor declarado:  
@@ -97,7 +96,6 @@ int main()
 class_d* cf = new class_d{4.5};  
 kr->add_d({ 4.5 });  
 return { 4.5 };  
-  
 ```  
   
 ## <a name="initializerlist-constructors"></a>Constructores initializer_list  
@@ -117,7 +115,6 @@ initializer_list<int> ilist1{ 5, 6, 7 };
 initializer_list<int> ilist2( ilist1 );  
 if (ilist1.begin() == ilist2.begin())  
     cout << "yes" << endl; // expect "yes"  
-  
 ```  
   
  Las clases contenedoras de la biblioteca estándar y `string`, `wstring` y `regex`, tienen constructores `initializer_list`. En los ejemplos siguientes se muestra cómo realizar la inicialización de llave con estos constructores:  
@@ -178,7 +175,6 @@ int main() {
   
     class_c c1{ 1, 3, 2 };  
 }  
-  
 ```  
   
  A medida que recorra paso a paso el ejemplo anterior, observe que el constructor `class_c(int, int, int)` llama primero al constructor `class_c(int, int)`, que a su vez llama a `class_c(int)`. Cada uno de los constructores realiza solo el trabajo que no realizan los otros constructores.  
@@ -201,7 +197,6 @@ public:
     double m_double{ 1.0 };  
     string m_string;  
 };  
-  
 ```  
   
  En el ejemplo siguiente se muestra el uso de los inicializadores de miembro de datos no estático. Observe que, si un constructor inicializa también un miembro de datos determinado, el inicializador de miembro se invalida:  

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b02144f55231a7b4472cd62322fd61a543d18
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944252"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462123"
 ---
 # <a name="writing-an-exception-filter"></a>Escribir un filtro de excepción
 Para controlar una excepción puede saltar al nivel del controlador de la excepción o puede continuar la ejecución. En lugar de usar el código del controlador de excepción para controlar la excepción y pasar por ella, puede usar *filtro* para corregir el problema y, a continuación, al devolver -1, reanudar el flujo normal sin borrar la pila.  

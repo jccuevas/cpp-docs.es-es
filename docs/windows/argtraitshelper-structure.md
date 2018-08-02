@@ -1,5 +1,5 @@
 ---
-title: ArgTraitsHelper (estructura) | Documentos de Microsoft
+title: ArgTraitsHelper (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6205d69962d70d9da76c932fdd8b3f66f491ebc9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857706"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466642"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +35,7 @@ struct ArgTraitsHelper;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Una interfaz de delegado.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -54,7 +54,7 @@ struct ArgTraitsHelper;
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[ArgTraitsHelper::args (constante)](../windows/argtraitshelper-args-constant.md)|Ayuda a [Argtraits](../windows/argtraits-args-constant.md) mantener recuento del número de parámetros en el método de invocación de una interfaz de delegado.|  
+|[ArgTraitsHelper::args (constante)](../windows/argtraitshelper-args-constant.md)|Ayuda a [Argtraits](../windows/argtraits-args-constant.md) mantener el recuento del número de parámetros en el `Invoke` al método de interfaz de un delegado.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `ArgTraitsHelper`  

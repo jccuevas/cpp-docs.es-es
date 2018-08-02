@@ -1,5 +1,5 @@
 ---
-title: Función de devolución de llamada (biblioteca de plantillas C++ de Windows en tiempo de ejecución) | Documentos de Microsoft
+title: Función de devolución de llamada (biblioteca de plantillas C++ de Windows en tiempo de ejecución) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d89f60f27c71cec0f158375805e3e8487fd7a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860858"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461497"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Callback (Función) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)
 Crea un objeto cuya función de miembro es un método de devolución de llamada.  
@@ -199,56 +199,56 @@ ComPtr<TDelegateInterface> Callback(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Un parámetro de plantilla que especifica la interfaz del delegado al que se llamará cuando se produzca un evento.  
   
- `TCallback`  
+ *TCallback*  
  Un parámetro de plantilla que especifica el tipo de un objeto que representa un objeto y su función miembro de devolución de llamada.  
   
- `TCallbackObject`  
+ *TCallbackObject*  
  Un parámetro de plantilla que especifica el objeto cuya función miembro es el método al que se debe llamar cuando se produce un evento.  
   
- `TArg1`  
+ *TArg1*  
  Un parámetro de plantilla que especifica el tipo del primer argumento del método de devolución de llamada.  
   
- `TArg2`  
+ *TArg2*  
  Un parámetro de plantilla que especifica el tipo del segundo argumento del método de devolución de llamada.  
   
- `TArg3`  
+ *TArg3*  
  Un parámetro de plantilla que especifica el tipo del tercer argumento del método de devolución de llamada.  
   
- `TArg4`  
+ *TArg4*  
  Un parámetro de plantilla que especifica el tipo del cuarto argumento del método de devolución de llamada.  
   
- `TArg5`  
+ *TArg5*  
  Un parámetro de plantilla que especifica el tipo del quinto argumento del método de devolución de llamada.  
   
- `TArg6`  
+ *TArg6*  
  Un parámetro de plantilla que especifica el tipo del sexto argumento del método de devolución de llamada.  
   
- `TArg7`  
+ *TArg7*  
  Un parámetro de plantilla que especifica el tipo del séptimo argumento del método de devolución de llamada.  
   
- `TArg8`  
+ *TArg8*  
  Un parámetro de plantilla que especifica el tipo del octavo argumento del método de devolución de llamada.  
   
- `TArg9`  
+ *TArg9*  
  Un parámetro de plantilla que especifica el tipo del noveno argumento del método de devolución de llamada.  
   
- `callback`  
+ *devolución de llamada*  
  Un objeto que representa el objeto de devolución de llamada y su función miembro.  
   
- `object`  
+ *object*  
  El objeto a cuya función miembro se llama cuando se produce un evento.  
   
- `method`  
+ *Método*  
  La función miembro a la que se llamará cuando se produzca un evento.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto cuya función miembro es el método de devolución de llamada especificado.  
   
 ## <a name="remarks"></a>Comentarios  
- La base de un objeto delegado debe ser IUnknown, no IInspectable.  
+ La base de un objeto delegado debe ser `IUnknown`, no `IInspectable`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  

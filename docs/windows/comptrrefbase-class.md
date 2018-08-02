@@ -1,5 +1,5 @@
 ---
-title: ComPtrRefBase (clase) | Documentos de Microsoft
+title: ComPtrRefBase (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13744a1629ede5575dc992ea15b90e22961a8570
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0342500fc41c650967e17919ebdc9605d4261cb5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883585"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464248"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase (clase)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,11 +37,11 @@ class ComPtrRefBase;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
- A [ComPtr\<T >](../windows/comptr-class.md) tipo o un tipo derivado de él, no solo la interfaz representada por la clase ComPtr.  
+ *T*  
+ Un [ComPtr\<T >](../windows/comptr-class.md) tipo o un tipo derivado de éste, no simplemente la interfaz representada por el **ComPtr**.  
   
 ## <a name="remarks"></a>Comentarios  
- Representa la clase base para la [ComPtrRef](../windows/comptrref-class.md) clase.  
+ Representa la clase base para el [ComPtrRef](../windows/comptrref-class.md) clase.  
   
 ## <a name="members"></a>Miembros  
   
@@ -49,7 +49,7 @@ class ComPtrRefBase;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|`InterfaceType`|Un sinónimo para el tipo de parámetro de plantilla `T`.|  
+|`InterfaceType`|Un sinónimo del tipo de parámetro de plantilla *T*.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   

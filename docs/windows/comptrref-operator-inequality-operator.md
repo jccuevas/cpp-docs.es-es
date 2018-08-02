@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: operator! = (operador) | Documentos de Microsoft'
+title: 'Comptrref:: operator! = (operador) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ebe71706ce1091ee21fc6fbd63e65b201c096b5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883559"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462929"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!= (Operador)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,21 +55,21 @@ bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `a`  
- Una referencia a un objeto ComPtrRef.  
+ *a*  
+ Una referencia a un **ComPtrRef** objeto.  
   
- `b`  
- Una referencia a otro objeto ComPtrRef o un puntero a un objeto anónimo (`void*`).  
+ *b*  
+ Una referencia a otro **ComPtrRef** objeto o un puntero a un objeto anónimo (`void*`).  
   
 ## <a name="return-value"></a>Valor devuelto  
- La primera genera operador `true` si objeto `a` no es igual al objeto `b`; en caso contrario, `false`.  
+ El primer rendimientos de operador **true** si objeto *un* no es igual al objeto *b*; en caso contrario, **false**.  
   
- El segundo y tercer operador produce `true` si objeto `a` no es igual a `nullptr`; en caso contrario, `false`.  
+ Los operadores de la segundo y terceros yield **true** si objeto *un* no es igual a **nullptr**; en caso contrario, **false**.  
   
- Los operadores cuarto y quinto producen `true` si objeto `a` no es igual al objeto `b`; en caso contrario, `false`.  
+ El cuarto y quinto operadores producen **true** si objeto *un* no es igual al objeto *b*; en caso contrario, **false**.  
   
 ## <a name="remarks"></a>Comentarios  
- Indica si dos objetos ComPtrRef no son iguales.  
+ Indica si dos **ComPtrRef** objetos no son iguales.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
@@ -77,5 +77,5 @@ bool operator!=(
  **Espacio de nombres:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Vea también  
- [Namespace wrl](../windows/microsoft-wrl-details-namespace.md)   
+ [Wrl Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [ComPtrRef (clase)](../windows/comptrref-class.md)

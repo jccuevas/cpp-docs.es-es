@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1edcf2cb24273f475b1ba98e5e973f5704c0cec8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940500"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461707"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Aunque Windows y Visual C++ admiten el control de excepciones estructurado (SEH), se recomienda utilizar el control de excepciones de C++ estándar de ISO porque hace que el código sea más portátil y flexible. Sin embargo, en el código existente o en determinadas clases de programas, quizás tenga que seguir utilizando SEH.  
@@ -72,7 +72,7 @@ Aunque Windows y Visual C++ admiten el control de excepciones estructurado (SEH)
 -   [Usar el control de excepciones estructurado con C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>Ejemplo  
- Como se indicó anteriormente, los destructores para objetos locales se llaman si se utiliza SEH en un programa de C++ y se compila utilizando el **/EH** opción con ciertos modificadores; por ejemplo, **/EHsc** y   **/EHa**. Sin embargo, el comportamiento durante la ejecución puede no ser el esperado si también se utilizan excepciones de C++. En el ejemplo siguiente se muestran estas diferencias de comportamiento.  
+ Como se ha explicado anteriormente, se llama a los destructores de los objetos locales si se utiliza SEH en un programa de C++ y se compila con la opción `/EH` junto con ciertos modificadores; por ejemplo, `/EHsc` y `/EHa`. Sin embargo, el comportamiento durante la ejecución puede no ser el esperado si también se utilizan excepciones de C++. En el ejemplo siguiente se muestran estas diferencias de comportamiento.  
   
 ```cpp  
 #include <stdio.h>  
@@ -119,7 +119,6 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
  Si usas **/EHsc** para compilar este código, pero el control de pruebas local `CPPEX` es undefined, no hay ninguna ejecución de la `TestClass` destructor y la salida tiene el aspecto como este:  

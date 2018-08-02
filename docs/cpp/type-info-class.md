@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 00939b514c243f673baf7f0997f1ca3860251626
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941046"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462656"
 ---
 # <a name="typeinfo-class"></a>type_info (Clase)
-La `type_info` clase describe la información de tipo generada dentro del programa por el compilador. Los objetos de esta clase almacenan de forma eficaz un puntero a un nombre para el tipo. La `type_info` clase también almacena un valor codificado adecuado para comparar dos tipos de igualdad u orden de intercalación. Las reglas de codificación y la secuencia de intercalación para tipos no se especifican y pueden diferir entre programas.  
+El **type_info** clase describe la información de tipo generada dentro del programa por el compilador. Los objetos de esta clase almacenan de forma eficaz un puntero a un nombre para el tipo. El **type_info** clase también almacena un valor codificado adecuado para comparar dos tipos de igualdad u orden de intercalación. Las reglas de codificación y la secuencia de intercalación para tipos no se especifican y pueden diferir entre programas.  
   
- El `<typeinfo>` archivo de encabezado debe incluirse para utilizar el `type_info` clase. La interfaz para el `type_info` clase es:  
+ El `<typeinfo>` archivo de encabezado debe incluirse para utilizar el **type_info** clase. La interfaz para el **type_info** clase es:  
   
 ```cpp
 class type_info {  
@@ -42,11 +42,11 @@ public:
 };  
 ```  
   
- No se puede crear instancias de objetos de la `type_info` clase directamente, porque la clase tiene solo un constructor de copias privado. La única manera de construir un (temporal) `type_info` objeto consiste en usar el [typeid](../cpp/typeid-operator.md) operador. Puesto que el operador de asignación también es privado, no puede copiar ni asignar objetos de clase `type_info`.  
+ No se puede crear instancias de objetos de la **type_info** clase directamente, porque la clase tiene solo un constructor de copias privado. La única manera de construir un (temporal) **type_info** objeto consiste en usar el [typeid](../cpp/typeid-operator.md) operador. Puesto que el operador de asignación también es privado, no puede copiar ni asignar objetos de clase **type_info**.  
   
- `type_info::hash_code` define una función hash adecuada para asignar valores de tipo `typeinfo` a una distribución de valores de índice.  
+ `type_info::hash_code` define una función hash adecuada para asignar valores de tipo **typeinfo** a una distribución de valores de índice.  
   
- Los operadores `==` y `!=` puede usarse para comparar la igualdad y desigualdad con otros `type_info` objetos, respectivamente.  
+ Los operadores `==` y `!=` puede usarse para comparar la igualdad y desigualdad con otros **type_info** objetos, respectivamente.  
   
  No hay ningún vínculo entre el orden de intercalación de tipos y las relaciones de herencia. Use el `type_info::before` para determinar la secuencia de intercalación de tipos de función miembro. No hay ninguna garantía de que `type_info::before` producirá el mismo resultado en programas diferentes o incluso ejecuciones diferentes del mismo programa. De esta manera, `type_info::before` es similar a la dirección del `(&)` operador.  
   

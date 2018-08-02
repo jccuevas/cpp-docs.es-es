@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 020ae54cdaaddc2f05a8c3b6e285bc2fd0403ee8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944781"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463719"
 ---
 # <a name="unhook"></a>__unhook
 Disocia un método de control de un evento.  
@@ -31,8 +31,7 @@ Disocia un método de control de un evento.
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp 
-  
-      long  __unhook(  
+long  __unhook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -61,11 +60,11 @@ long  __unhook(
  El nombre de la interfaz que se va a Desenlazar de *receptor*, solo para los receptores de eventos COM en el que el *layout_dependent* parámetro de la [event_receiver](../windows/event-receiver.md) atributo es **true**.  
   
  *source*  
- Un puntero a una instancia del origen de eventos. Según el código de `type` especificado en **event_receiver**, *origen* puede ser uno de los siguientes:  
+ Un puntero a una instancia del origen de eventos. Según el código de `type` especificado en `event_receiver`, *origen* puede ser uno de los siguientes:  
   
 -   Un puntero nativo de objeto de origen de eventos.  
   
--   Un **IUnknown**-en función de puntero (origen COM).  
+-   Un `IUnknown`-en función de puntero (origen COM).  
   
 -   Un puntero de objeto administrado (para eventos administrados).  
   

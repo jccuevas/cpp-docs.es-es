@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 953c03f7c8125713afddd3b3567615be585fc9db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956598"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463153"
 ---
 # <a name="references-c"></a>Referencias (C++)
 Una referencia (por ejemplo, un puntero) almacena la dirección de un objeto que se encuentra en otra parte de la memoria. A diferencia de un puntero, una referencia inicializada no puede hacer referencia a otro objeto ni establecerse en null. Hay dos tipos de referencias: referencias lvalue, que hacen referencia a un nombre variable y referencias rvalue, que hacen referencia a un [objeto temporal](../cpp/temporary-objects.md). El operador & significa una referencia lvalue, mientras que el operador && significa una referencia rvalue o una referencia universal (lvalue o rvalue) según el contexto.  
@@ -114,12 +114,8 @@ int main() {
 4  
 ```  
   
-## <a name="comment"></a>Comentario  
- Temas de esta sección:  
-  
--   [Argumentos de función de tipo de referencia](../cpp/reference-type-function-arguments.md)  
-  
--   [Valores devueltos de función de tipo de referencia](../cpp/reference-type-function-returns.md)  
-  
--   [Referencias a punteros](../cpp/references-to-pointers.md)  
+## <a name="see-also"></a>Vea también
+ [Argumentos de función de tipo de referencia](../cpp/reference-type-function-arguments.md)  
+ [Valores devueltos de función de tipo de referencia](../cpp/reference-type-function-returns.md)  
+ [Referencias a punteros](../cpp/references-to-pointers.md)  
   

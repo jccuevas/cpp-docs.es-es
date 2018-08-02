@@ -1,5 +1,5 @@
 ---
-title: Miembro de datos Creatormap | Documentos de Microsoft
+title: Miembro de datos Creatormap | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ce9beccabd06e4182e05e4a1e447db189986ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c472ba45042711fc12f3dad07184a393f894e78
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871154"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466782"
 ---
 # <a name="creatormapfactorycache-data-member"></a>CreatorMap::factoryCache (Miembro de datos)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ FactoryCache* factoryCache;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Almacena el puntero a la memoria caché del generador para el CreatorMap.  
+ Almacena el puntero a la memoria caché del generador para el **CreatorMap**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

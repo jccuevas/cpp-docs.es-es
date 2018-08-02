@@ -1,5 +1,5 @@
 ---
-title: Mecanismos básicos de los atributos | Documentos de Microsoft
+title: Mecanismos básicos de atributos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6db2994a2606f6c4d0cb4cd581ec46d87ca3d2c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3bb7ff68f9c17f7b90261c2c96630911454842a5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864946"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462497"
 ---
 # <a name="basic-mechanics-of-attributes"></a>Mecanismos básicos de los atributos
-Hay tres formas de insertar atributos en el proyecto. En primer lugar, se puede insertarlos manualmente en el código fuente. En segundo lugar, puede insertarlos mediante la cuadrícula de propiedades de un objeto en el proyecto. Por último, puede insertarlos utilizando a los distintos asistentes. Para obtener más información sobre el uso de la ventana Propiedades y los distintos asistentes, vea [crear y administrar proyectos de Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  
+Hay tres maneras de insertar atributos en el proyecto. En primer lugar, se puede insertarlos manualmente en el código fuente. En segundo lugar, puede insertarlos mediante la cuadrícula de propiedades de un objeto en el proyecto. Por último, puede insertarlos utilizando a los distintos asistentes. Para obtener más información sobre el uso de la **propiedades** ventana y los distintos asistentes, vea [crear y administrar proyectos de Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  
   
- Como antes, cuando se compila el proyecto, el compilador analiza cada archivo de fuente de C++, generar un archivo de objeto. Sin embargo, cuando el compilador encuentra un atributo, se analiza y comprueba su sintaxis. A continuación, el compilador llama dinámicamente un proveedor de atributos para insertar código o realizar otras modificaciones en tiempo de compilación. La implementación del proveedor de varía según el tipo de atributo. Por ejemplo, los atributos relacionados con ATL se implementan mediante Atlprov.dll.  
+ Como antes, cuando se compila el proyecto, el compilador analiza cada archivo de origen de C++, generar un archivo de objeto. Sin embargo, cuando el compilador encuentra un atributo, se puede analizar y comprueba su sintaxis. A continuación, el compilador llama dinámicamente un proveedor de atributos para insertar código o realizar otras modificaciones en tiempo de compilación. La implementación del proveedor es diferente según el tipo de atributo. Por ejemplo, los atributos relacionados con ATL se implementan mediante Atlprov.dll.  
   
  En la siguiente ilustración se muestra la relación entre el compilador y el proveedor de atributos.  
   
- ![Comunicación de atributos de componente](../windows/media/vccompattrcomm.gif "vcCompAttrComm")  
+ ![Comunicación de atributos del componente](../windows/media/vccompattrcomm.gif "vcCompAttrComm")  
   
 > [!NOTE]
->  Uso de atributos no modifica el contenido del archivo de origen. Es la única vez que el código de atributo generado está visible durante las sesiones de depuración. Además, para cada archivo de origen en el proyecto, puede generar un archivo de texto que muestra los resultados de la sustitución de atributos. Para obtener más información acerca de este procedimiento, consulte [/Fx (combinar código insertado)](../build/reference/fx-merge-injected-code.md) y [depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).  
+>  Uso de atributos no modifica el contenido del archivo de origen. Es el único momento en que el código generado del atributo está visible durante las sesiones de depuración. Además, para cada archivo de código fuente en el proyecto, puede generar un archivo de texto que muestra los resultados de la sustitución de atributos. Para obtener más información sobre este procedimiento, consulte [/Fx (combinar código insertado)](../build/reference/fx-merge-injected-code.md) y [depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).  
   
- Al igual que la mayoría de las construcciones de C++, atributos tienen un conjunto de características que define su uso correcto. Esto se conoce como el contexto del atributo y se trata en la tabla de contexto de atributo para cada tema de referencia de atributo. Por ejemplo, el [coclase](../windows/coclass.md) atributo solo puede aplicarse a una clase o estructura existente, en contraposición a la [cpp_quote](../windows/cpp-quote.md) atributo, que puede insertar en cualquier parte dentro de un archivo de código fuente de C++.  
+ Al igual que la mayoría de las construcciones de C++, los atributos tienen un conjunto de características que define su uso correcto. Esto se conoce como el contexto del atributo y se trata en la tabla de contexto de atributo para cada tema de referencia de atributo. Por ejemplo, el [coclase](../windows/coclass.md) atributo solo puede aplicarse a una clase o estructura existente, en contraposición a la [cpp_quote](../windows/cpp-quote.md) atributo, que se puede insertar en cualquier lugar dentro de un archivo de código fuente de C++.  
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos](../windows/attributed-programming-concepts.md)

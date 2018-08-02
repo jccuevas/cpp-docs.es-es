@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c41e2cf0765c036715377038357d587a755196f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5040319bee3fa74319bb30ca45ff11f2f5d72720
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944841"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465937"
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversiones de tipos definidos por el usuario (C++)
 Un *conversión* genera un nuevo valor de algún tipo de un valor de un tipo diferente. *Conversiones estándar* están integradas en el lenguaje C++ y la compatibilidad con sus tipos integrados y puede crear *conversiones definidas por el usuario* para realizar conversiones a, desde o entre tipos definidos por el usuario.  
@@ -79,7 +79,7 @@ Un *conversión* genera un nuevo valor de algún tipo de un valor de un tipo dif
   
  El **explícita** palabra clave se puede aplicar a los constructores de conversión desde C ++ 98 y a las funciones de conversión desde C ++ 11. Las secciones siguientes contienen más información sobre cómo usar el **explícita** palabra clave.  
   
-##  <a name="ConvCTOR"></a> Constructores de conversión  
+## <a name="ConvCTOR"></a> Constructores de conversión  
  Los constructores de conversión definen conversiones de tipos integrados o definidos por el usuario en un tipo definido por el usuario. En el ejemplo siguiente se muestra un constructor de conversión que convierte el tipo integrado **doble** a un tipo definido por el usuario `Money`.  
   
 ```cpp 
@@ -181,7 +181,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << balance << std::endl;  
 }  
-  
 ```  
   
  Tenga en cuenta que la variable miembro `amount` se hace privada y que funcione una conversión pública para que escriba **doble** se introdujo para devolver el valor de `amount`. En la función `display_balance` se produce una conversión implícita cuando el valor de `balance` se envía a una salida estándar mediante el uso del operador de inserción de secuencia `<<`. Como no se define ningún operador de inserción de secuencia para el tipo definido por el usuario `Money`, pero no hay uno para el tipo integrado **doble**, el compilador puede usar la función de conversión de `Money` a **doble** para satisfacer el operador de inserción de secuencia.  
@@ -226,8 +225,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << (double)balance << std::endl;  
 }  
-  
 ```  
   
  Aquí la función de conversión **operador double** se ha hecho explícita y una conversión explícita al tipo **doble** se ha introducido en la función `display_balance` para realizar la conversión. Si se omitiera esta conversión, el compilador no encontraría un operador de inserción de secuencia `<<` adecuado para el tipo `Money` y se produciría un error.  
-  

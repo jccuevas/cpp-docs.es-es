@@ -1,5 +1,5 @@
 ---
-title: Miembro de datos Creatormap | Documentos de Microsoft
+title: Miembro de datos Creatormap | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d8f0c5b2feda3b62dfb17902a281c7e71bd32f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57f6e841326339f78d24fa8affea5e74ae5b8d74
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882334"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465388"
 ---
 # <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator (Miembro de datos)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,16 +38,16 @@ HRESULT (*factoryCreator)(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- `currentflags`  
- Uno de los [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) los enumeradores.  
+ *currentflags*  
+ Uno de los [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeradores.  
   
- `entry`  
+ *entry*  
  Un CreatorMap.  
   
- `iidClassFactory`  
+ *iidClassFactory*  
  El identificador de interfaz de un generador de clases.  
   
- `factory`  
+ *Factory*  
  Cuando se completa la operación, la dirección de un generador de clases.  
   
 ## <a name="return-value"></a>Valor devuelto  

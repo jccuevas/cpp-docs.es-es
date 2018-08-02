@@ -1,5 +1,5 @@
 ---
-title: safebuffers | Documentos de Microsoft
+title: safebuffers | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbfc9317b5ed7c63e9c70b081c3f241b86a65e5f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467843"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Específicos de Microsoft**  
@@ -35,26 +36,26 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **/GS** opción del compilador hace que el compilador comprobar las saturaciones de búfer mediante la inserción de comprobaciones de seguridad en la pila. Los tipos de estructuras de datos que son aptas para la comprobación de seguridad se describen en [/GS (comprobación de seguridad de búfer)](../build/reference/gs-buffer-security-check.md). Para obtener más información acerca de la detección de saturación del búfer, vea [compilador Security Checks In Depth](http://go.microsoft.com/fwlink/p/?linkid=7260) en el sitio Web de MSDN.  
+ El **/GS** opción del compilador hace que el compilador comprobar las saturaciones de búfer mediante la inserción de comprobaciones de seguridad en la pila. Se describen los tipos de estructuras de datos que son aptos para las comprobaciones de seguridad en [/GS (comprobación de seguridad del búfer)](../build/reference/gs-buffer-security-check.md). Para obtener más información acerca de la detección de saturación del búfer, vea [seguridad exhaustiva del compilador comprueba en](http://go.microsoft.com/fwlink/p/?linkid=7260) en el sitio Web de MSDN.  
   
- Un análisis manual externo o realizado por un experto para revisar el código puede determinar si una función está protegida de la saturación del búfer. En ese caso, puede suprimir las comprobaciones de seguridad para una función aplicando el `__declspec(safebuffers)` palabra clave para la declaración de función.  
+ Un análisis manual externo o realizado por un experto para revisar el código puede determinar si una función está protegida de la saturación del búfer. En ese caso, puede suprimir las comprobaciones de seguridad para una función aplicando el **__declspec (safebuffers)** palabra clave para la declaración de función.  
   
 > [!CAUTION]
 >  Las comprobaciones de seguridad del búfer proporcionan una protección de seguridad importante y apenas repercuten en el rendimiento. Por tanto, se recomienda que no las suprima, excepto en el caso poco frecuente de que el rendimiento de una función tenga una importancia crítica y se sepa que la función está segura.  
   
 ## <a name="inline-functions"></a>Funciones insertadas  
- A *función principal* puede usar un [inclusión](inline-functions-cpp.md) palabra clave que se va a insertar una copia de un *función secundaria*. Si el `__declspec(safebuffers)` palabra clave se aplica a una función, detección de saturación del búfer se suprime para esa función. Sin embargo, inlining afecta a la `__declspec(safebuffers)` palabra clave de las maneras siguientes.  
+ Un *función principal* puede usar un [inserción](inline-functions-cpp.md) palabra clave para insertar una copia de un *función secundaria*. Si el **__declspec (safebuffers)** palabra clave se aplica a una función, detección de saturación del búfer se suprime para esa función. Sin embargo, inlining afecta a la **__declspec (safebuffers)** palabra clave de las maneras siguientes.  
   
- Suponga que el **/GS** se especifica la opción de compilador para ambas funciones, pero la función principal especifica la `__declspec(safebuffers)` palabra clave. Las estructuras de datos en la función secundaria hacen que sea apta para las comprobaciones de seguridad, y la función no suprime dichas comprobaciones. En este caso:  
+ Supongamos que el **/GS** se especificó la opción del compilador para ambas funciones, pero la función principal especifica la **__declspec (safebuffers)** palabra clave. Las estructuras de datos en la función secundaria hacen que sea apta para las comprobaciones de seguridad, y la función no suprime dichas comprobaciones. En este caso:  
   
--   Especifique el [__forceinline](inline-functions-cpp.md) palabra clave en la función secundaria para hacer que el compilador inserte esa función independientemente de las optimizaciones del compilador.  
+-   Especifique el [__forceinline](inline-functions-cpp.md) palabra clave en la función secundaria para forzar el compilador inserte esa función independientemente de las optimizaciones del compilador.  
   
--   Dado que la función secundaria es apta para las comprobaciones de seguridad, comprobaciones de seguridad también se aplican a la función principal, aunque especifique el `__declspec(safebuffers)` palabra clave.  
+-   Dado que la función secundaria es apta para las comprobaciones de seguridad, las comprobaciones de seguridad también se aplican a la función principal, aunque especifique el **__declspec (safebuffers)** palabra clave.  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente muestra cómo utilizar el `__declspec(safebuffers)` palabra clave.  
+ El código siguiente muestra cómo usar el **__declspec (safebuffers)** palabra clave.  
   
-```  
+```cpp 
 // compile with: /c /GS  
 typedef struct {  
     int x[20];  
