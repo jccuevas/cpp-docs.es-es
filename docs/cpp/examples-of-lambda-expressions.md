@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d294eef323d96ddbfecad8f740826a5a038d7b4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eae00467e2866ba8c0ff9aeb275224d1249ae361
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944271"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404966"
 ---
 # <a name="examples-of-lambda-expressions"></a>Ejemplos de expresiones lambda
 En este artículo se muestra cómo usar expresiones lambda en programas. Para obtener información general de las expresiones lambda, vea [expresiones Lambda](../cpp/lambda-expressions-in-cpp.md). Para obtener más información sobre la estructura de una expresión lambda, vea [sintaxis de expresión Lambda](../cpp/lambda-expression-syntax.md).  
@@ -204,7 +204,6 @@ int main()
     // Print the result.  
     cout << timestwoplusthree << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>Salida  
@@ -256,7 +255,6 @@ int main()
     // Print the result, which is (7+8)*2.  
     cout << answer << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>Salida  
@@ -276,7 +274,6 @@ int main()
  Puede usar el **esto** puntero explícitamente en una función, como se muestra aquí:  
   
 ```cpp  
-
 // capture "this" by reference
 void ApplyScale(const vector<int>& v) const  
 {  
@@ -290,7 +287,6 @@ void ApplyScale2(const vector<int>& v) const
    for_each(v.begin(), v.end(),   
       [*this](int n) { cout << n * _scale << endl; });  
 }  
-
 ```  
   
  También puede capturar el **esto** puntero implícitamente:  
@@ -344,7 +340,6 @@ int main()
     Scale s(3);  
     s.ApplyScale(values);  
 }  
-  
 ```  
   
 ### <a name="output"></a>Salida  
@@ -354,7 +349,6 @@ int main()
 6  
 9  
 12  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -365,7 +359,7 @@ int main()
 ##  <a name="templateLambdaExpressions"></a> Usar expresiones Lambda con plantillas  
   
 ### <a name="example"></a>Ejemplo  
- Puesto que las expresiones lambda tienen tipo, pueden utilizarse con plantillas de C++. En el ejemplo siguiente se muestran las funciones `negate_all` y `print_all`. La función `negate_all` aplica el `operator-` unario a todos los elementos del objeto `vector`. La función `print_all` imprime en la consola todos los elementos del objeto `vector`.  
+ Puesto que las expresiones lambda tienen tipo, pueden utilizarse con plantillas de C++. En el ejemplo siguiente se muestran las funciones `negate_all` y `print_all`. El `negate_all` función aplica el operador unario **operador -** a cada elemento en el `vector` objeto. La función `print_all` imprime en la consola todos los elementos del objeto `vector`.  
   
 ### <a name="code"></a>Código  
   
@@ -405,7 +399,6 @@ int main()
     cout << "After negate_all():" << endl;  
     print_all(v);  
 }  
-  
 ```  
   
 ### <a name="output"></a>Salida  
@@ -418,7 +411,6 @@ After negate_all():
 -34  
 43  
 -56  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
@@ -502,7 +494,6 @@ int main()
         Console::WriteLine(s + Convert::ToChar(ch));   
     }("Hello");  
 }  
-  
 ```  
   
 ### <a name="output"></a>Salida  
