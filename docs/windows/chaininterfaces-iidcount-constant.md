@@ -1,5 +1,5 @@
 ---
-title: Chaininterfaces (constante) | Documentos de Microsoft
+title: Chaininterfaces constante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d089e9639d83150e501b32577de94fc43b516c1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860007"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463946"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>ChainInterfaces::IidCount (Constante)
-El número total de identificadores contenidos en las interfaces especificadas por los parámetros de plantilla interfaz `I0` a través de `I9`.  
+El número total de identificadores contenidos en las interfaces especificadas por los parámetros de plantilla de interfaz *I0* a través de *I9*.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,7 +37,7 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
  El número total de identificadores de interfaz.  
   
 ## <a name="remarks"></a>Comentarios  
- Parámetros de plantilla `I0` y `I1` son necesarios y los parámetros `I2` a través de `I9` son opcionales. El recuento IID de cada interfaz suele ser 1.  
+ Parámetros de plantilla *I0* y *I1* son necesarios y los parámetros *I2* a través de *I9* son opcionales. El recuento IID de cada interfaz suele ser 1.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
