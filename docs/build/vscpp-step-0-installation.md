@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cc9c124a5b3f2fea92f729d7d11df579cc25a39
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376064"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496563"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalar compatibilidad con C++ en Visual Studio
 
@@ -43,7 +43,7 @@ Para obtener más información sobre el espacio en disco y requisitos del sistem
    > [Instalar Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
-   > La edición Community es para desarrolladores individuales, aprendizaje en el aula, investigación académica y desarrollo de código abierto. Para otros usos, instale <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> o <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
+   > La edición Community es para desarrolladores individuales, aprendizaje en el aula, investigación académica y desarrollo de código abierto. Para otros usos, instale [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) o [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 1. Busque el archivo de instalador que descargó y ejecútelo. Se pueden mostrar en el explorador o se puede encontrar en la carpeta de descargas. El instalador necesita privilegios de administrador para ejecutarse. Es posible que vea un **User Account Control** cuadro de diálogo que le pide que conceder permiso para permitir que el programa de instalación realizar cambios en el sistema; elija **Sí**. Si tiene problemas, busque el archivo descargado en el Explorador de archivos, haga doble clic en el icono de programa de instalación y elija **ejecutar como administrador** en el menú contextual.
 
