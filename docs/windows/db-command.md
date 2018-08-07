@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "38954986"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571443"
 ---
 # <a name="dbcommand"></a>db_command
 Crea un comando OLE DB.  
@@ -133,7 +133,7 @@ Si *bulk_fetch* es inferior a uno, `SetRows` devolverá cero.
 ## <a name="remarks"></a>Comentarios  
 **db_command** crea un objeto [CCommand](../data/oledb/ccommand-class.md) , usado por un consumidor OLE DB para ejecutar un comando.  
   
-Puede usar **db_command** con cualquier ámbito de función o clase; la principal diferencia radica en el ámbito del objeto `CCommand` . Con el ámbito de función, los datos tales como los enlaces concluyen al final de la función. Los usos de ámbito de clase y función implican la clase de plantilla de consumidor OLE DB **CCommand\<>**, pero difieren de los argumentos de plantilla para los casos de función y de clase. En el caso de la función, los enlaces se efectuarán con un **descriptor de acceso** formado por variables locales, mientras que el uso de la clase deducirá una clase derivada de `CAccessor`como argumento. Cuando se usa como atributo de clase, **db_command** funciona de forma conjunta con **db_column**.  
+Puede usar **db_command** con cualquier ámbito de función o clase; la principal diferencia radica en el ámbito del objeto `CCommand` . Con el ámbito de función, los datos tales como los enlaces concluyen al final de la función. Los usos de ámbito de clase y función implican la clase de plantilla de consumidor OLE DB `CCommand<>`, pero difieren de los argumentos de plantilla para los casos de función y de clase. En el caso de la función, los enlaces se efectuarán con un **descriptor de acceso** formado por variables locales, mientras que el uso de la clase deducirá una clase derivada de `CAccessor`como argumento. Cuando se usa como atributo de clase, **db_command** funciona de forma conjunta con **db_column**.  
   
 Se puede usar**db_command** para ejecutar comandos que no devuelvan un conjunto de resultados.  
   

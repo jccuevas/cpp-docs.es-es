@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Detach (método) | Documentos de Microsoft'
+title: Método Handlet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 100d215099494c9b2714fd2c42dee69644a5006c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc11d6be992584adb1ce2075e73d080cc3a43f47
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878468"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569484"
 ---
 # <a name="handletdetach-method"></a>HandleT::Detach (Método)
-Desasocia el objeto de HandleT actual de su identificador subyacente.  
+Desasocia actual **HandleT** objeto a partir de su identificador subyacente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,7 +37,7 @@ typename HandleTraits::Type Detach();
  El identificador subyacente.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se completa esta operación, el HandleT actual se establece en el estado no válido.  
+ Cuando finalice esta operación, actual **HandleT** está establecido en el estado no válido.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

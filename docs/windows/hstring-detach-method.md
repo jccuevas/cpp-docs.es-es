@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Detach (método) | Documentos de Microsoft'
+title: Método hstring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 621476f092b3dbaad994e63a329f1a8c567f55b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bfd4390cdc786836b08e77b4ee699e44cc42618
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33885459"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569731"
 ---
 # <a name="hstringdetach-method"></a>HString::Detach (Método)
-Desasocia el objeto especificado de HString de su valor subyacente.  
+Anula la asociación entre **HString** objeto desde su valor subyacente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,7 +32,7 @@ HSTRING Detach() throw()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- El valor de HString subyacente antes de iniciar la operación de separación.  
+ Subyacente **HString** valor antes de iniciar la operación de desasociación.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

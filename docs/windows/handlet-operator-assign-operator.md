@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: operator = (operador) | Documentos de Microsoft'
+title: 'Handlet:: operator = (operador) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a13e8eb7e74625e185b59816b5794b0390e95e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab629946b9fc5acec6b0fb0ba8f573a3fa90a031
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873932"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570046"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= (Operador)
-Mueve el valor del objeto HandleT especificado al objeto HandleT actual.  
+Mueve el valor del elemento especificado **HandleT** el objeto actual **HandleT** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,15 +35,15 @@ HandleT& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `h`  
- Una referencia a valor r a un identificador.  
+### <a name="parameters"></a>Parámetros  
+ *h*  
+ Una referencia rvalue a un identificador.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Una referencia al objeto HandleT actual.  
+ Una referencia a la actual **HandleT** objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta operación invalida el objeto HandleT especificado por el parámetro `h`.  
+ Esta operación invalida la **HandleT** objeto especificado por el parámetro *h*.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

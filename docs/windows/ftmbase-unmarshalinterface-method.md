@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: UnmarshalInterface (método) | Documentos de Microsoft'
+title: UnmarshalInterface (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 964ce5cc33b51c54446874522317814279cdd960
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877724"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570033"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface (Método)
 Inicializa a un proxy recién creado y devuelve un puntero de interfaz a ese proxy.  
@@ -38,14 +38,14 @@ STDMETHODIMP UnmarshalInterface(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `pStm`  
+ *pStm*  
  Puntero a la secuencia desde la que se puede deserializar el puntero de interfaz.  
   
- `riid`  
+ *riid*  
  Referencia al identificador de la interfaz que puede deserializar.  
   
- `ppv`  
- Cuando se completa esta operación, la dirección de una variable de puntero que recibe el puntero de interfaz solicitado en `riid`. Si esta operación se realiza correctamente, *`ppv` contiene el puntero de interfaz solicitada de la interfaz que puede deserializar.  
+ *PPV*  
+ Cuando finalice esta operación, la dirección de una variable de puntero que recibe el puntero de interfaz solicitado en *riid*. Si esta operación se realiza correctamente, **ppv* contiene el puntero de interfaz solicitada de la interfaz que puede deserializar.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; en caso contrario, E_NOINTERFACE o E_FAIL.  

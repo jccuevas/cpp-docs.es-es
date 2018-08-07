@@ -1,5 +1,5 @@
 ---
-title: Delegados genéricos (Visual C++) | Documentos de Microsoft
+title: Delegados genéricos (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ecbfebc49f76eee7bb753af3d07052d1e05d73be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96c4c878edb0125aca2d4782afd53ce0967452a5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875603"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571316"
 ---
 # <a name="generic-delegates-visual-c"></a>Delegados genéricos (Visual C++)
-Puede usar parámetros de tipo genérico con los delegados. Para obtener más información sobre los delegados, vea [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).  
+Puede usar parámetros de tipo genérico con delegados. Para obtener más información sobre los delegados, vea [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,17 +37,17 @@ generic < [class | typename] type-parameter-identifiers>
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `attributes` (Opcional)  
- Información de declaración adicional. Para obtener más información sobre atributos y clases de atributos, vea atributos.  
+ *atributos* (opcional)  
+ Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea atributos.  
   
- *tipo: parámetro-identificadores*  
+ *tipo de-parámetro-identificadores*  
  Lista separada por comas de identificadores para los parámetros de tipo.  
   
- `type-parameter-constraints-clauses`  
- Toma la forma especificada en [restricciones en parámetros de tipo genérico (C++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *tipo de parámetro restricciones cláusulas*  
+ Toma la forma especificada en [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *modificadores de accesibilidad* (opcional)  
- Modificadores de accesibilidad (por ejemplo, **público**, `private`).  
+ Modificadores de accesibilidad (por ejemplo, **pública**, **privada**).  
   
  *tipo de resultado*  
  Tipo de valor devuelto del delegado.  
@@ -55,13 +55,13 @@ generic < [class | typename] type-parameter-identifiers>
  *identifier*  
  El nombre del delegado.  
   
- *parámetros formales de* (opcional)  
+ *parámetros formales* (opcional)  
  La lista de parámetros del delegado.  
   
 ## <a name="example"></a>Ejemplo  
  Los parámetros de tipo de delegado se especifican en el punto donde se crea un objeto de delegado. El delegado y el método asociado a la deben tener la misma firma. El siguiente es un ejemplo de una declaración de delegado genérico.  
   
-```  
+```cpp  
 // generics_generic_delegate1.cpp  
 // compile with: /clr /c  
 generic <class ItemType>  
@@ -69,15 +69,15 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra  
+ El ejemplo siguiente muestra que  
   
--   No se puede utilizar el mismo objeto de delegado con diferentes tipos construidos. Crear objetos para diferentes tipos de delegado distintos.  
+-   No se puede utilizar el mismo objeto de delegado con diferentes tipos construidos. Crear objetos para los distintos tipos de delegado distintos.  
   
--   Un delegado genérico se puede asociar con un método genérico.  
+-   Un delegado genérico puede asociarse con un método genérico.  
   
--   Cuando se llama a un método genérico sin especificar argumentos de tipo, el compilador intenta deducir los argumentos de tipo para la llamada.  
+-   Cuando se llama a un método genérico sin especificar argumentos de tipo, el compilador intenta inferir los argumentos de tipo para la llamada.  
   
-```  
+```cpp  
 // generics_generic_delegate2.cpp  
 // compile with: /clr  
 generic <class ItemType>  
@@ -112,9 +112,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se declara un delegado genérico `GenDelegate<ItemType>`y, a continuación, crea instancias de él mediante la asociación al método `MyMethod` que usa el parámetro de tipo `ItemType`. Se crean y se invoca dos instancias del delegado (un entero y doble).  
+ En el ejemplo siguiente se declara un delegado genérico `GenDelegate<ItemType>`y, a continuación, se crea una instancia mediante la asociación al método `MyMethod` que usa el parámetro de tipo `ItemType`. Se crean dos instancias del delegado (entero y doble) y se invoca.  
   
-```  
+```cpp  
 // generics_generic_delegate.cpp  
 // compile with: /clr  
 using namespace System;  

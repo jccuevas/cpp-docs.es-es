@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: AddTail (método) | Documentos de Microsoft'
+title: AddTail (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bc56e13c8d07841ceb1f341228d7a963fda2dd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b469adedebda2beb64c531c82d10f90cc4114742
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872288"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570179"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,14 +35,14 @@ void AddTail(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `element`  
- Puntero al controlador de eventos que se anexará.  
+### <a name="parameters"></a>Parámetros  
+ *Elemento*  
+ Puntero al controlador de eventos para anexar.  
   
 ## <a name="remarks"></a>Comentarios  
  El controlador de eventos especificado se anexa al final de la matriz interna de controladores de eventos.  
   
- AddTail() está diseñada para utilizarse internamente solo la clase EventSource.  
+ **AddTail()** está pensado para ser utilizado internamente por sólo el `EventSource` clase.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  

@@ -1,5 +1,5 @@
 ---
-title: Personalizar o cambiar colores (Editor de imágenes para iconos) | Documentos de Microsoft
+title: Personalizar o cambiar colores (Editor de imágenes para iconos) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,33 +26,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d84840bb981eab05d923a3f430c9b3972cd1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871242"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571290"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Personalizar o cambiar colores (Editor de imágenes para iconos)
-El editor de imágenes [paleta de colores](../windows/colors-window-image-editor-for-icons.md) muestra inicialmente los 16 colores estándares. Además de los colores mostrados, puede crear sus propios colores personalizados. A continuación, puede [guardar y cargar una paleta de colores personalizada](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+El editor de imágenes [paleta de colores](../windows/colors-window-image-editor-for-icons.md) muestra inicialmente los 16 colores estándar. Además de los colores mostrados, puede crear sus propios colores personalizados. A continuación, puede [guardar y cargar una paleta de colores personalizada](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>Para cambiar los colores de la paleta de colores  
   
 1.  Desde el **imagen** menú, elija **Ajustar colores**.  
   
-2.  En el [cuadro de diálogo Selector de colores personalizados](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), defina el color escribiendo los valores RGB o HSL en los cuadros de texto correspondiente o elija un color en la **muestra de Color degradado** cuadro.  
+2.  En el [cuadro de diálogo Selector de colores personalizados](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), defina el color escribiendo los valores RGB o HSL en los cuadros de texto correspondientes o elija un color en el **muestra de Color degradado** cuadro.  
   
-3.  Establezca la luminosidad moviendo el control deslizante la **luminosidad** barra.  
+3.  Establezca la luminosidad moviendo el control deslizante el **luminosidad** barra.  
   
 4.  Muchos colores personalizados están interpolados. Si desea que el color sólido más próximo al color interpolado, haga doble clic en el **Color** cuadro.  
   
-     Si más adelante decide que desea el color interpolado, mueva el control deslizante la **luminosidad** barra o mueva la cruz la **muestra de Color degradado** cuadro de nuevo para restaurar la interpolación.  
+     Si más adelante decide que desea el color interpolado, mueva el control deslizante el **luminosidad** barra o mueva la cruz el **muestra de Color degradado** cuadro de nuevo para restaurar la interpolación.  
   
 5.  Haga clic en **Aceptar** para agregar el nuevo color.  
   
-
-  
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Ninguna  
   

@@ -1,5 +1,5 @@
 ---
-title: HelpFile | Documentos de Microsoft
+title: HelpFile | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 926d0fec27bf323f559ad2fe0dffbd4208b1bf2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4f25a8f3d5cc76d1b2b8d9a3d9996449f449466
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876194"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570452"
 ---
 # <a name="helpfile"></a>helpfile
 Establece el nombre del archivo de ayuda para una biblioteca de tipos.  
@@ -30,18 +30,17 @@ Establece el nombre del archivo de ayuda para una biblioteca de tipos.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ helpfile(  
+[ helpfile(  
    "filename"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *filename*  
  El nombre del archivo que contiene los temas de ayuda.  
   
 ## <a name="remarks"></a>Comentarios  
- El **helpfile** atributo C++ tiene la misma funcionalidad que la [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) atributo MIDL.  
+ El **helpfile** atributo de C++ tiene la misma funcionalidad que el [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [módulo](../windows/module-cpp.md) para obtener un ejemplo de cómo usar **helpfile**.  
@@ -52,7 +51,7 @@ Establece el nombre del archivo de ayuda para una biblioteca de tipos.
   
 |||  
 |-|-|  
-|**Se aplica a**|`interface`, `typedef`, **clase**, método, propiedad|  
+|**Se aplica a**|**interfaz**, **typedef**, **clase**, método, **propiedad**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

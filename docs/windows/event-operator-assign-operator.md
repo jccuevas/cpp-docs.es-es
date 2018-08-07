@@ -1,5 +1,5 @@
 ---
-title: 'Event:: operator = (operador) | Documentos de Microsoft'
+title: 'Event:: operator = (operador) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871128"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571303"
 ---
 # <a name="eventoperator-operator"></a>Event::operator= (Operador)
-Asigna la referencia de evento especificada a la instancia de evento actual.  
+Asigna especificado **eventos** referencia a la actual **eventos** instancia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,11 +36,11 @@ WRL_NOTHROW Event& operator=(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `h`  
- Una referencia a valor r a una instancia de evento.  
+ *h*  
+ Una referencia rvalue para un **eventos** instancia.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un puntero a la instancia actual de eventos.  
+ Un puntero a la actual **eventos** instancia.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

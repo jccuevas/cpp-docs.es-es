@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: MarshalInterface (método) | Documentos de Microsoft'
+title: MarshalInterface (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc22b83aee62b03ec5e664d08440b00718325272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff0c1a5e41dfe46f2d88aeeb3093dbc9ee4d4005
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874621"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570062"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface (Método)
-Escribe en una secuencia los datos necesarios para inicializar un objeto de proxy en algún proceso de cliente.  
+Escribe los datos necesarios para inicializar un objeto de proxy en algún proceso de cliente en una secuencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,32 +40,32 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `pStm`  
+### <a name="parameters"></a>Parámetros  
+ *pStm*  
  Puntero a la secuencia que se usará durante la serialización.  
   
- `riid`  
- Referencia al identificador de la interfaz que se van a calcular. Esta interfaz debe derivarse de la interfaz IUnknown.  
+ *riid*  
+ Referencia al identificador de la interfaz que se van a calcular. Esta interfaz debe derivarse de la `IUnknown` interfaz.  
   
- `pv`  
+ *PV*  
  Puntero al puntero de interfaz que se van a calcular; puede ser NULL si el llamador no tiene un puntero a la interfaz deseada.  
   
- `dwDestContext`  
+ *dwDestContext*  
  Contexto de destino donde se puede deserializar la interfaz especificada.  
   
- Especifique uno o varios valores de enumeración de MSHCTX.  
+ Especifique uno o más valores de enumeración MSHCTX.  
   
- Puede producirse la resolución de referencias en otro contenedor del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).  
+ Resolución de referencias puede ocurrir en otro contenedor del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).  
   
- `pvDestContext`  
+ *pvDestContext*  
  Reservado para uso futuro; debe ser cero.  
   
- `mshlflags`  
- Especifica si los datos que se van a calcular transmitirse hacia el proceso del cliente, el caso típico, o se escriben en una tabla global, donde se puede recuperar mediante varios clientes.  
+ *mshlflags*  
+ Especifica si los datos se van a calcular están que se transmitan al proceso de cliente, el caso típico, o se escriben en una tabla global, donde se puede recuperar varios clientes.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK  
- El puntero de interfaz se ha convertido correctamente.  
+ El puntero de interfaz se serializó correctamente.  
   
  E_NOINTERFACE  
  No se admite la interfaz especificada.  

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: especificar directorios de inclusión para recursos | Documentos de Microsoft'
+title: 'Cómo: especificar directorios de inclusión de recursos | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9778f774464e8da003a535e3c4dba0aef6ed24cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875284"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569545"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Cómo: Especificar directorios de inclusión para los recursos
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Para especificar directorios de inclusión para un archivo .rc determinado  
   
 1.  Haga clic en el archivo .rc en el Explorador de soluciones y seleccione **propiedades** en el menú contextual.  
   
-2.  En el **páginas de propiedades** cuadro de diálogo, haga clic en el **recursos** en el panel izquierdo, a continuación, especifique la inclusión adicional directorios en el **directorios de inclusión adicionales** propiedad.  
+2.  En el **páginas de propiedades** cuadro de diálogo, haga clic en el **recursos** nodo en el panel izquierdo, a continuación, especifique el adicionales incluyen directorios en el **directorios de inclusión adicionales** propiedad.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en la Guía del desarrollador de .NET Framework. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: uso de recursos para la localización con ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en la Guía del desarrollador de .NET Framework. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Requisitos**  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   

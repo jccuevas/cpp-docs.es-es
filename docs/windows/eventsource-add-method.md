@@ -1,5 +1,5 @@
 ---
-title: 'EventSource:: Add (método) | Documentos de Microsoft'
+title: Método EventSource | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90750f965768d5ecda40e074f9a136407613d2d2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873243"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570394"
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add (Método)
-Anexa el controlador del evento representado por la interfaz de delegado especificado para el conjunto de controladores de eventos para el objeto de origen de eventos actual.  
+Anexa el controlador del evento representado por la interfaz de delegado especificado al conjunto de controladores de eventos actual **EventSource** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,12 +36,12 @@ HRESULT Add(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `delegateInterface`  
- La interfaz a un objeto de delegado, que representa un controlador de eventos.  
+### <a name="parameters"></a>Parámetros  
+ *delegateInterface*  
+ La interfaz para un objeto delegado, que representa un controlador de eventos.  
   
- `token`  
- Cuando se completa esta operación, un identificador que representa el evento. Usar este token como parámetro a la [Remove()](../windows/eventsource-remove-method.md) método para descartar el controlador de eventos.  
+ *símbolo (token)*  
+ Cuando se completa esta operación, un identificador que representa el evento. Use este token como parámetro para el [Remove()](../windows/eventsource-remove-method.md) método para descartar el controlador de eventos.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.  

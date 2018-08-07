@@ -1,5 +1,5 @@
 ---
-title: db_column | Documentos de Microsoft
+title: db_column | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35ab2472ac9e46b620ca735d06b23806126871e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20c651c6e671c7c4895fc7dba85d16fdeb998ad5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879638"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570706"
 ---
 # <a name="dbcolumn"></a>db_column
 Enlaza una columna especificada a una variable en el conjunto de filas.  
@@ -30,8 +30,7 @@ Enlaza una columna especificada a una variable en el conjunto de filas.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ db_column(   
+[ db_column(   
    ordinal,   
    dbtype,   
    precision,   
@@ -42,8 +41,8 @@ Enlaza una columna especificada a una variable en el conjunto de filas.
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `ordinal`  
- El número ordinal de la columna (**DBCOLUMNINFO** ordinal) o nombre de columna (cadena ANSI o Unicode) correspondiente a un campo del conjunto de filas que se va a enlazar los datos. Si usa números, puede omitir los ordinales consecutivos (por ejemplo: 1, 2, 3, 5). El nombre puede contener espacios, si lo admite el proveedor OLE DB que utiliza. Por ejemplo, puede usar cualquiera de los siguientes formatos:  
+ *Ordinal*  
+ El número de columna ordinal (`DBCOLUMNINFO` ordinal) o nombre de columna (cadena ANSI o Unicode) correspondiente a un campo del conjunto de filas que se va a enlazar datos. Si utiliza números, puede omitir los ordinales consecutivos (por ejemplo: 1, 2, 3, 5). El nombre puede contener espacios, si lo admite el proveedor OLE DB que utiliza. Por ejemplo, puede usar cualquiera de los siguientes formatos:  
   
 ```  
 [db_column("2")] TCHAR szCity[30];  
@@ -51,33 +50,33 @@ Enlaza una columna especificada a una variable en el conjunto de filas.
 ```  
   
  *DbType* (opcional)  
- OLE DB [indicador de tipo](https://msdn.microsoft.com/en-us/library/ms711251.aspx) para la entrada de la columna.  
+ OLE DB [indicador de tipo](https://msdn.microsoft.com/library/ms711251.aspx) para la entrada de columna.  
   
  *precisión* (opcional)  
- La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de la `bPrecision` elemento de la [estructura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de la `bPrecision` elemento de la [estructura DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *escala* (opcional)  
- La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *estado* (opcional)  
- Una variable de miembro que se utiliza para almacenar el estado de esta columna. El estado indica si el valor de la columna es un valor de datos o algún otro valor, como **NULL**. Para los valores posibles, vea [estado](https://msdn.microsoft.com/en-us/library/ms722617.aspx) en el *referencia del programador de OLE DB*.  
+ Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](https://msdn.microsoft.com/library/ms722617.aspx) en el *referencia del programador de OLE DB*.  
   
  *longitud* (opcional)  
- Una variable de miembro que se usa para contener el tamaño de la columna en bytes.  
+ Una variable de miembro que se usa para mantener el tamaño de la columna en bytes.  
   
 ## <a name="remarks"></a>Comentarios  
- **db_column** enlaza la columna de tabla especificada a una variable en el conjunto de filas. Delimita los datos de miembros que pueden participar en OLE DB `IAccessor`-basados en el enlace. Este atributo configura la asignación de columna normalmente se definen mediante las macros de consumidor OLE DB [BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../data/oledb/end-column-map.md), y [COLUMN_ENTRY](../data/oledb/column-entry.md). Estos manipulan OLE DB [estructura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) para enlazar la columna especificada. Cada miembro se marca con la **db_column** atributo ocupan una entrada en el mapa de columnas en el formulario de una entrada de la columna. Por lo tanto, llamar a este atributo donde tendría que poner el mapa de columnas, es decir, en la clase de comando o tabla.  
+ **db_column** enlaza la columna de tabla especificada a una variable en el conjunto de filas. Delimita los datos de los miembros que pueden participar en OLE DB `IAccessor`-enlace basado en. Este atributo se configura la asignación de columna que normalmente se definen mediante las macros de consumidor OLE DB [BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../data/oledb/end-column-map.md), y [COLUMN_ENTRY](../data/oledb/column-entry.md). Estos manipulan OLE DB [estructura DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) para enlazar la columna especificada. Cada miembro se marca con el **db_column** atributo ocupa una entrada en el mapa de columnas en forma de una entrada de columna. Por lo tanto, llamar a este atributo donde tendría que poner el mapa de columnas, es decir, en la clase de comando o una tabla.  
   
- Use **db_column** junto con cualquiera el [db_table](../windows/db-table.md) o [db_command](../windows/db-command.md) atributos.  
+ Use **db_column** junto con el [db_table](../windows/db-table.md) o [db_command](../windows/db-command.md) atributos.  
   
- Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_ *YourClassName*descriptor de acceso, donde *YourClassName* es el nombre que asignó el clase y el compilador también creará una clase denominada *YourClassName*, que deriva de \_ *YourClassName*descriptor de acceso.  En Vista de clases verá ambas clases.  
+ Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_ *NombreClase*descriptor de acceso, donde *NombreClase* es el nombre que asignó el clase y el compilador también creará una clase denominada *NombreClase*, que se deriva de \_ *NombreClase*descriptor de acceso.  En Vista de clases verá ambas clases.  
   
- Para obtener ejemplos de este atributo se usa en una aplicación, vea los ejemplos [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409), y [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Para obtener ejemplos de este atributo se usa en una aplicación, vea los ejemplos [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409), y [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo enlaza una columna en una tabla para un **largo** miembro de datos y especifica los campos Estado y longitud.  
+ En este ejemplo se enlaza a una columna de una tabla para un **largo** miembro de datos y especifica los campos Estado y longitud.  
   
-```  
+```cpp  
 // db_column_1.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -94,9 +93,9 @@ class CProducts {
 ```  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo enlaza cuatro columnas a una **largo**, una cadena de caracteres, una marca de tiempo y un **DB_NUMERIC** entero, en ese orden.  
+ Este ejemplo enlaza cuatro columnas a un **largo**, una cadena de caracteres, una marca de tiempo y un `DB_NUMERIC` entero, en ese orden.  
   
-```  
+```cpp  
 // db_column_2.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -118,7 +117,7 @@ class CProducts {
   
 |||  
 |-|-|  
-|**Se aplica a**|**clase**, `struct`, miembro, método|  
+|**Se aplica a**|**clase**, **struct**, miembro, método|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

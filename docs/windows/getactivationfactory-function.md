@@ -1,5 +1,5 @@
 ---
-title: GetActivationFactory (función) | Documentos de Microsoft
+title: GetActivationFactory (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881343"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570316"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory (función)
 Recupera un generador de activación para el tipo especificado por el parámetro de plantilla.  
@@ -39,15 +39,15 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `T`  
- Un parámetro de plantilla que especifica el tipo de la fábrica de activación.  
+### <a name="parameters"></a>Parámetros  
+ *T*  
+ Un parámetro de plantilla que especifica el tipo de la factoría de activación.  
   
- `activatableClassId`  
+ *activatableClassId*  
  El nombre de la clase que puede producir el generador de activación.  
   
- `factory`  
- Cuando se completa esta operación, una referencia a la fábrica de activación para su tipo `T`.  
+ *Factory*  
+ Cuando finalice esta operación, una referencia a la factoría de activación para el tipo *T*.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; en caso contrario, un error HRESULT que indica el motivo del error de esta operación.  

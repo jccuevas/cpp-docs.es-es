@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: crear directamente instancias de componentes WRL | Documentos de Microsoft'
+title: 'Cómo: crear instancias de componentes WRL directamente | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,24 +13,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 127a8430e79e7963ea94646f70179df2f30450ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40904f8379d1a11d26c29af2340fa4adb24f12e0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878813"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568821"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Cómo: Crear instancias de componentes WRL directamente
-Obtenga información acerca de cómo usar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL)[Microsoft::WRL::Make](../windows/make-function.md) y [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funciones para crear instancias de un componente del módulo que lo define.  
+Aprenda a usar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL)[Microsoft::WRL::Make](../windows/make-function.md) y [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funciones para crear instancias de un componente desde el módulo que lo define.  
   
- La creación de instancias de componentes directamente permite reducir la sobrecarga cuando no se necesitan generadores de clases u otros mecanismos. Puede crear una instancia de un componente directamente en las aplicaciones de la plataforma Universal de Windows y aplicaciones de escritorio.  
+ La creación de instancias de componentes directamente permite reducir la sobrecarga cuando no se necesitan generadores de clases u otros mecanismos. Puede crear una instancia de un componente directamente en ambas aplicaciones de plataforma Universal de Windows y aplicaciones de escritorio.  
   
-Para obtener información sobre cómo usar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para crear un componente COM clásico y crear una instancia de una aplicación de escritorio externa, vea [Cómo: crear un componente COM clásico](../windows/how-to-create-a-classic-com-component-using-wrl.md).  
+Para obtener información sobre cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para crear un componente COM clásico y crear una instancia de una aplicación de escritorio externa, consulte [Cómo: crear un componente COM clásico](../windows/how-to-create-a-classic-com-component-using-wrl.md).  
   
- En este documento se muestran dos ejemplos. El primer ejemplo utiliza la función `Make` para crear una instancia de un componente. El segundo ejemplo utiliza la función `MakeAndInitialize` para crear una instancia de un componente que pueden producir errores durante la construcción. (Puesto que COM suele utilizar valores `HRESULT` en lugar de excepciones para indicar los errores, no se suele producir un tipo COM desde su constructor. `MakeAndInitialize` permite que un componente valide sus argumentos de construcción mediante el método `RuntimeClassInitialize`). Ambos ejemplos definen una interfaz básica de registrador e implementan esa interfaz definiendo una clase que escribe mensajes en la consola.  
+ En este documento se muestran dos ejemplos. El primer ejemplo utiliza la función `Make` para crear una instancia de un componente. El segundo ejemplo utiliza la función `MakeAndInitialize` para crear una instancia de un componente que pueden producir errores durante la construcción. (Dado que COM suele utilizar valores HRESULT, en lugar de excepciones, para indicar errores, un tipo COM no se suele produce desde su constructor. `MakeAndInitialize` permite que un componente valide sus argumentos de construcción mediante el método `RuntimeClassInitialize`). Ambos ejemplos definen una interfaz básica de registrador e implementan esa interfaz definiendo una clase que escribe mensajes en la consola.  
   
 > [!IMPORTANT]
->  No se puede utilizar el `new` operador para crear instancias de componentes de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución. Por tanto, se recomienda usar siempre `Make` o `MakeAndInitialize` para crear instancias de un componente directamente.  
+>  No puede usar el **nuevo** operador para crear instancias de componentes de la biblioteca de plantillas C++ de Windows en tiempo de ejecución. Por tanto, se recomienda usar siempre `Make` o `MakeAndInitialize` para crear instancias de un componente directamente.  
   
 ### <a name="to-create-and-instantiate-a-basic-logger-component"></a>Para crear un componente básico de registrador y crear instancias del mismo  
   

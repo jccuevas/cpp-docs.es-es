@@ -1,5 +1,5 @@
 ---
-title: Clase DeferrableEventArgs | Documentos de Microsoft
+title: DeferrableEventArgs (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15be5c26e5d4e976eaba7b6b24e1bf4f62c53aca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72f5ee2beca3a3985258b12cea9091665eb74cfa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872103"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571267"
 ---
 # <a name="deferrableeventargs-class"></a>Clase DeferrableEventArgs
 Una clase de plantilla utilizada para los tipos de argumento de evento de los aplazamientos.  
@@ -31,15 +31,14 @@ typename TEventArgsInterface,
 typename TEventArgsClass  
 >  
 class DeferrableEventArgs : public TEventArgsInterface  
-  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `TEventArgsInterface`  
+ *TEventArgsInterface*  
  El tipo de interfaz que declara los argumentos de un evento diferido.  
   
- `TEventArgsClass`  
- La clase que implementa `TEventArgsInterface`.  
+ *TEventArgsClass*  
+ La clase que implementa *TEventArgsInterface*.  
   
 ## <a name="members"></a>Miembros  
   
@@ -53,7 +52,7 @@ class DeferrableEventArgs : public TEventArgsInterface
 ## <a name="remarks"></a>Comentarios  
  Las instancias de esta clase se pasan a los controladores de eventos para eventos diferidos. Los parámetros de plantilla representan una interfaz que define los detalles de los argumentos de evento de un tipo específico de evento diferido y una clase que implementa esa interfaz.  
   
- La clase aparece como el primer argumento de un controlador de eventos para un evento diferido. Puede llamar a la [GetDeferral](../windows/deferrableeventargs-getdeferral-method.md) método para obtener el [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) objeto desde el que puede obtener toda la información relativa al evento diferido. Tras completar el control de eventos, debe llamar a Complete en el objeto Aplazamiento. A continuación, debe llamar a [InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md) al final del método de controlador de eventos, lo que garantiza que la finalización de todos los eventos diferidos se comunique correctamente.  
+ La clase aparece como el primer argumento de un controlador de eventos para un evento diferido. Puede llamar a la [GetDeferral](../windows/deferrableeventargs-getdeferral-method.md) método para obtener el [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) objeto desde el que puede obtener toda la información sobre el evento diferido. Tras completar el control de eventos, debe llamar a Complete en el objeto Aplazamiento. A continuación, debe llamar a [InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md) al final del método de controlador de eventos, lo que garantiza que la finalización de todos los eventos diferidos se comunique correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  

@@ -1,5 +1,5 @@
 ---
-title: EventSource (clase) | Documentos de Microsoft
+title: EventSource (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2d466b317927cd8de259637450b68b6aaf13bd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a98d8997ebfb5b21b3e469b2aacca15cde4a5319
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876519"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570540"
 ---
 # <a name="eventsource-class"></a>EventSource (clase)
-Representa un evento no ágiles. Funciones de miembro EventSource agregarán, quitarán e invocan controladores de eventos. Para los eventos de agile, use [AgileEventSource](agileeventsource-class.md). 
+Representa un evento no ágiles. **EventSource** funciones miembro agregar, quitar e invocar controladores de eventos. Para los eventos de agile, use [AgileEventSource](agileeventsource-class.md). 
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,8 +34,8 @@ template<typename TDelegateInterface>
 class EventSource;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `TDelegateInterface`  
+### <a name="parameters"></a>Parámetros  
+ *TDelegateInterface*  
  La interfaz a un delegado que representa un controlador de eventos.  
   
 ## <a name="members"></a>Miembros  
@@ -44,24 +44,24 @@ class EventSource;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[EventSource::EventSource (constructor)](../windows/eventsource-eventsource-constructor.md)|Inicializa una nueva instancia de la clase EventSource.|  
+|[EventSource::EventSource (constructor)](../windows/eventsource-eventsource-constructor.md)|Inicializa una nueva instancia de la **EventSource** clase.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[EventSource::Add (método)](../windows/eventsource-add-method.md)|Anexa el controlador del evento representado por la interfaz de delegado especificado para el conjunto de controladores de eventos para el objeto de origen de eventos actual.|  
-|[EventSource::GetSize (método)](../windows/eventsource-getsize-method.md)|Recupera el número de controladores de eventos asociados con el objeto EventSource actual|  
-|[EventSource::InvokeAll (método)](../windows/eventsource-invokeall-method.md)|Llama a cada controlador de eventos asociado con el objeto de EventSource actual utilizando los argumentos y tipos de argumentos especificados.|  
-|[EventSource::Remove (método)](../windows/eventsource-remove-method.md)|Elimina el controlador de eventos representado por el token de registro de eventos especificado del conjunto de controladores de eventos asociados con el objeto de origen de eventos actual.|  
+|[EventSource::Add (método)](../windows/eventsource-add-method.md)|Anexa el controlador del evento representado por la interfaz de delegado especificado al conjunto de controladores de eventos actual **EventSource** objeto.|  
+|[EventSource::GetSize (método)](../windows/eventsource-getsize-method.md)|Recupera el número de controladores de eventos asociados con el actual **EventSource** objeto|  
+|[EventSource::InvokeAll (método)](../windows/eventsource-invokeall-method.md)|Llama a cada controlador de eventos asociado con el actual **EventSource** objeto utilizando los argumentos y tipos de argumento especificados.|  
+|[EventSource::Remove (método)](../windows/eventsource-remove-method.md)|Elimina el controlador del evento representado por el token de registro de eventos especificado del conjunto de controladores de eventos asociados con el actual **EventSource** objeto.|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
 |nombre|Descripción|  
 |----------|-----------------|  
 |[EventSource::addRemoveLock_ (miembro de datos)](../windows/eventsource-addremovelock-data-member.md)|Sincroniza el acceso a la [targets_](../windows/eventsource-targets-data-member.md) matriz al agregar, quitar o invocar controladores de eventos.|  
-|[EventSource::targets_ (miembro de datos)](../windows/eventsource-targets-data-member.md)|Una matriz de uno o más controladores de eventos.|  
-|[EventSource::targetsPointerLock_ (miembro de datos)](../windows/eventsource-targetspointerlock-data-member.md)|Sincroniza el acceso a miembros de datos internos incluso mientras se agregan controladores de eventos para este origen de eventos, quitar o invocar.|  
+|[EventSource::targets_ (miembro de datos)](../windows/eventsource-targets-data-member.md)|Una matriz de uno o varios controladores de eventos.|  
+|[EventSource::targetsPointerLock_ (miembro de datos)](../windows/eventsource-targetspointerlock-data-member.md)|Sincroniza el acceso a los miembros de datos internos incluso mientras se agregan controladores de eventos para este origen de eventos, quitar o invocar.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `EventSource`  
@@ -72,5 +72,5 @@ class EventSource;
  **Espacio de nombres:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Vea también  
- [Microsoft:: wrl Namespace](../windows/microsoft-wrl-namespace.md)
-[AgileEventSource (clase)](agileeventsource-class.md)
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)  
+ [Clase AgileEventSource](agileeventsource-class.md)

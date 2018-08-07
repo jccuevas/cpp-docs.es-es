@@ -1,5 +1,5 @@
 ---
-title: DontUseNewUseMake (clase) | Documentos de Microsoft
+title: DontUseNewUseMake (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f343d0b47d50cd375d186c29ff55b91898aa9c61
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 351b38a002c470dcd3f53e8336e393f845fdb3cf
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872333"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569575"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake (clase)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ class DontUseNewUseMake;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Impide el uso de operador `new` en RuntimeClass. Por lo tanto, debe utilizar el [Make (función)](../windows/make-function.md) en su lugar.  
+ Impide el uso de operador **nuevo** en RuntimeClass. Por lo tanto, debe usar el [función](../windows/make-function.md) en su lugar.  
   
 ## <a name="members"></a>Miembros  
   
@@ -42,7 +42,7 @@ class DontUseNewUseMake;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[DontUseNewUseMake::operator new (operador)](../windows/dontusenewusemake-operator-new-operator.md)|Sobrecargas de operador `new` e impide que se usa en RuntimeClass.|  
+|[DontUseNewUseMake::operator new (operador)](../windows/dontusenewusemake-operator-new-operator.md)|Las sobrecargas de operador **nuevo** e impide que se usa en RuntimeClass.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `DontUseNewUseMake`  
@@ -53,5 +53,5 @@ class DontUseNewUseMake;
  **Namespace:** wrl  
   
 ## <a name="see-also"></a>Vea también  
- [Namespace wrl](../windows/microsoft-wrl-details-namespace.md)   
+ [Wrl Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [Make (función)](../windows/make-function.md)

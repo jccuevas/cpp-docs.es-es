@@ -1,5 +1,5 @@
 ---
-title: Hstring (clase) | Documentos de Microsoft
+title: HString (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8544a78fdbdab19f44081853f5f5878f980cec01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 868d0a4e2d84add447c95bfcd9690c8a17850718
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879377"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571456"
 ---
 # <a name="hstring-class"></a>HString (Clase)
-Una clase auxiliar para administrar la duración de HSTRING utilizando el modelo RAII.
+Una clase auxiliar para administrar la duración de una cadena HSTRING mediante el modelo RAII.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,7 +32,7 @@ class HString;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El tiempo de ejecución de Windows proporciona acceso a las cadenas a través de identificadores HSTRING. La clase HString proporciona funciones de comodidad y operadores para simplificar el uso de identificadores HSTRING. Esta clase puede controlar la duración de la HSTRING posee a través de un modelo RAII. 
+ El tiempo de ejecución de Windows proporciona acceso a las cadenas a través de identificadores HSTRING. El **HString** clase proporciona funciones de comodidad y operadores para simplificar el uso de identificadores de HSTRING. Esta clase puede controlar la duración de HSTRING posee a través de un modelo RAII. 
   
 ## <a name="members"></a>Miembros  
   
@@ -40,27 +40,27 @@ class HString;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[HString::HString (constructor)](../windows/hstring-hstring-constructor.md)|Inicializa una nueva instancia de la clase HString.|  
-|[HString::~HString (destructor)](../windows/hstring-tilde-hstring-destructor.md)|Destruye la instancia actual de la clase HString.|  
+|[HString::HString (constructor)](../windows/hstring-hstring-constructor.md)|Inicializa una nueva instancia de la **HString** clase.|  
+|[HString::~HString (destructor)](../windows/hstring-tilde-hstring-destructor.md)|Destruye la instancia actual de la **HString** clase.|  
   
 ### <a name="members"></a>Miembros  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[HString::Set (método)](../windows/hstring-set-method.md)|Establece el valor del objeto HString actual en la cadena de caracteres anchos especificada o el parámetro de HString.|  
-|[HString::Attach (método)](../windows/hstring-attach-method.md)|Asocia el objeto HString especificado con el objeto de HString actual.|  
-|[HString::CopyTo (método)](../windows/hstring-copyto-method.md)|Copia el HString actual objeto a un objeto HSTRING.|  
-|[HString::Detach (método)](../windows/hstring-detach-method.md)|Desasocia el objeto especificado de HString de su valor subyacente.|  
-|[HString::GetAddressOf (método)](../windows/hstring-getaddressof-method.md)|Recupera un puntero al identificador de HSTRING subyacente.|  
+|[HString::Set (método)](../windows/hstring-set-method.md)|Establece el valor del elemento actual **HString** objeto en la cadena especificada de caracteres anchos o **HString** parámetro.|  
+|[HString::Attach (método)](../windows/hstring-attach-method.md)|Asocia especificado **HString** objeto con el actual **HString** objeto.|  
+|[HString::CopyTo (método)](../windows/hstring-copyto-method.md)|Copia actual **HString** objeto a un objeto HSTRING.|  
+|[HString::Detach (método)](../windows/hstring-detach-method.md)|Anula la asociación entre **HString** objeto desde su valor subyacente.|  
+|[HString::GetAddressOf (método)](../windows/hstring-getaddressof-method.md)|Recupera un puntero al identificador HSTRING subyacente.|  
 |[HString::Get (método)](../windows/hstring-get-method.md)|Recupera el valor del identificador HSTRING subyacente.|  
-|[HString::Release (método)](../windows/hstring-release-method.md)|Elimina el valor de cadena subyacente e inicializa el objeto de HString actual en un valor vacío.|  
-|[HString::MakeReference (método)](../windows/hstring-makereference-method.md)|Crea un objeto HStringReference de un parámetro de cadena especificada.|  
+|[HString::Release (método)](../windows/hstring-release-method.md)|Elimina el valor de cadena subyacente e inicializa actual **HString** objeto en un valor vacío.|  
+|[HString::MakeReference (método)](../windows/hstring-makereference-method.md)|Crea un `HStringReference` objeto a partir de un parámetro de cadena especificado.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[HString::Operator= (operador)](../windows/hstring-operator-assign-operator.md)|Mueve el valor de otro objeto de HString al objeto HString actual.|  
+|[HString::Operator= (operador)](../windows/hstring-operator-assign-operator.md)|Mueve el valor de otro **HString** el objeto actual **HString** objeto.|  
 |[HString::Operator== (operador)](../windows/hstring-operator-equality-operator.md)|Indica si los dos parámetros son iguales.|  
 |[HString::Operator!= (operador)](../windows/hstring-operator-inequality-operator.md)|Indica si los dos parámetros no son iguales.|  
   

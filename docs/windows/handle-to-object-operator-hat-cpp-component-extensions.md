@@ -1,5 +1,5 @@
 ---
-title: Identificador a un operador de objeto (^) (extensiones de componentes de C++) | Documentos de Microsoft
+title: Identificador de operador de objeto (^) (extensiones de componentes de C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb322f83163a9faf3314990baabbd0a34f1a67ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881174"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569809"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operador de identificador de objeto (^) (Extensiones de componentes de C++)
 El *declarador del identificador* (`^`, pronunciado "sombrero"), modifica el tipo [especificador](../cpp/overview-of-declarators.md) para indicar que el objeto declarado debe eliminarse automáticamente cuando el sistema determina que el objeto es ya no es accesible.  
@@ -29,7 +29,7 @@ El *declarador del identificador* (`^`, pronunciado "sombrero"), modifica el tip
  Una variable que se declara con el declarador de identificador se comporta como un puntero al objeto. Sin embargo, la variable apunta al objeto completo, no puede apuntar a un miembro del objeto y no admite la aritmética con punteros. Utilice el operador de direccionamiento indirecto (`*`) para tener acceso al objeto y el operador de acceso de miembro de flecha (`->`) para tener acceso a un miembro del objeto.  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
- El compilador utiliza el COM *recuento de referencias* mecanismo para determinar si el objeto ya no se está usando y se puede eliminar. Esto es posible debido a que un objeto que se deriva de una interfaz de Windows Runtime es, en realidad, un objeto COM. El recuento de referencias se incrementa cuando se crea o se copia el objeto y se reduce cuando el objeto se establece en null o queda fuera de ámbito. Si el recuento de referencias llega a cero, el objeto se elimina de inmediato y de manera automática.  
+ El compilador utiliza el COM *recuento de referencias* mecanismo para determinar si el objeto ya no se está usando y puede eliminarse. Esto es posible debido a que un objeto que se deriva de una interfaz de Windows Runtime es, en realidad, un objeto COM. El recuento de referencias se incrementa cuando se crea o se copia el objeto y se reduce cuando el objeto se establece en null o queda fuera de ámbito. Si el recuento de referencias llega a cero, el objeto se elimina de inmediato y de manera automática.  
   
  La ventaja del declarador del identificador es que, en COM, debe administrar de manera explícita el recuento de referencias para un objeto, lo cual es un proceso tedioso que puede dar lugar a errores. Es decir, para aumentar y disminuir el recuento de referencias, debe invocar los métodos AddRef() y Release() del objeto. Sin embargo, si declara un objeto con el declarador de identificador, el compilador de Visual C++ genera código que ajusta de manera automática el recuento de referencias.  
   
@@ -39,7 +39,7 @@ El *declarador del identificador* (`^`, pronunciado "sombrero"), modifica el tip
  Opción del compilador: **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- El sistema utiliza el CLR *recolector de elementos no utilizados* mecanismo para determinar si el objeto ya no se está usando y se puede eliminar. Common Language Runtime mantiene un montón donde asigna objetos y usa las referencias administradas (variables) del programa para indicar la ubicación de objetos en el montón. Cuando un objeto ya no se usa, se libera la memoria que ocupaba en el montón. De manera periódica, el recolector de elementos no utilizados compacta el montón para mejorar el uso de la memoria liberada. Al compactar el montón, se pueden mover sus objetos, lo que invalida las ubicaciones que usan las referencias administradas. Sin embargo, el recolector de elementos no utilizados reconoce la ubicación de todas las referencias administradas y las actualiza automáticamente para indicar la ubicación actual de los objetos en el montón.  
+ El sistema usa CLR *recolector de elementos no utilizados* mecanismo para determinar si el objeto ya no se está usando y puede eliminarse. Common Language Runtime mantiene un montón donde asigna objetos y usa las referencias administradas (variables) del programa para indicar la ubicación de objetos en el montón. Cuando un objeto ya no se usa, se libera la memoria que ocupaba en el montón. De manera periódica, el recolector de elementos no utilizados compacta el montón para mejorar el uso de la memoria liberada. Al compactar el montón, se pueden mover sus objetos, lo que invalida las ubicaciones que usan las referencias administradas. Sin embargo, el recolector de elementos no utilizados reconoce la ubicación de todas las referencias administradas y las actualiza automáticamente para indicar la ubicación actual de los objetos en el montón.  
   
  Dado que los punteros de C++ nativo (`*`) y las referencias (`&`) no son referencias administradas, el recolector de elementos no utilizados no puede actualizar de manera automática las direcciones a las que apuntan. Para solucionar este problema, utilice el declarador de identificador para especificar una variable que el recolector de elementos no utilizados reconozca y pueda actualizar automáticamente.  
   
@@ -50,9 +50,9 @@ El *declarador del identificador* (`^`, pronunciado "sombrero"), modifica el tip
 ### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- En este ejemplo se muestra cómo crear una instancia de un tipo de referencia en el montón administrado.  En este ejemplo se muestra también que puede inicializar un identificador con otro, lo que da a lugar a dos referencias al mismo objeto en el montón de recolección de elementos no utilizados administrado. Tenga en cuenta que asignar [nullptr](../windows/nullptr-cpp-component-extensions.md) a un identificador no marca el objeto de colección de elementos no utilizados.  
+ En este ejemplo se muestra cómo crear una instancia de un tipo de referencia en el montón administrado.  En este ejemplo se muestra también que puede inicializar un identificador con otro, lo que da a lugar a dos referencias al mismo objeto en el montón de recolección de elementos no utilizados administrado. Tenga en cuenta que la asignación [nullptr](../windows/nullptr-cpp-component-extensions.md) a un identificador no marca el objeto para la recolección.  
   
-```  
+```cpp  
 // mcppv2_handle.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -88,7 +88,7 @@ int main() {
   
  En el ejemplo siguiente se muestra cómo declarar un identificador para un objeto del montón administrado, donde el tipo de objeto es un tipo de valor de conversión boxing. En el ejemplo también se muestra cómo obtener el tipo de valor del objeto al que se ha aplicado la conversión boxing.  
   
-```  
+```cpp  
 // mcppv2_handle_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -122,7 +122,7 @@ Not a boxed int
   
  En este ejemplo se muestra que la expresión común de C++ de usar un puntero void* para apuntar a un objeto arbitrario se reemplaza por Object^, que puede contener un identificador para cualquier clase de referencia. También se muestra que todos los tipos, como matrices y delegados, pueden convertirse en un identificador de objeto.  
   
-```  
+```cpp  
 // mcppv2_handle_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -171,7 +171,7 @@ Type is MyDel
   
  En este ejemplo se muestra que se puede deshacer la referencia de un identificador y se puede tener acceso a un miembro mediante un identificador sin referencia.  
   
-```  
+```cpp  
 // mcppv2_handle_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -221,7 +221,7 @@ Cannot access array element 11, size is 10
   
  En este ejemplo se muestra que no se puede enlazar una referencia nativa (`&`) a un miembro `int` de un tipo administrado, ya que `int` se podría almacenar en el montón de recolección de elementos no utilizados y las referencias nativas no realizan un seguimiento del movimiento de objetos en el montón administrado. La solución es utilizar una variable local o cambiar `&` a `%`, convirtiéndola en una referencia de seguimiento.  
   
-```  
+```cpp  
 // mcppv2_handle_5.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -242,7 +242,7 @@ int main() {
 ```  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/clr**  
+ Opción del compilador: `/clr`  
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)   

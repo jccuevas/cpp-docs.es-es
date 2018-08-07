@@ -1,5 +1,5 @@
 ---
-title: Guía de cuadro de diálogo Configuración | Documentos de Microsoft
+title: Guía de cuadro de diálogo Configuración | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d89a4a7bf0e3a8c9452c5f9d87832b8b31deb6e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875882"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568896"
 ---
 # <a name="guide-settings-dialog-box"></a>Configuración de las guías (Cuadro de diálogo)
 ## <a name="layout-guides"></a>Guías de diseño  
@@ -40,7 +40,7 @@ ms.locfileid: "33875882"
   
  **Reglas y guías**  
   
- Si está habilitada, agrega reglas a las herramientas de diseño; las guías se pueden colocar en las reglas. Las guías predeterminadas son los márgenes, que se pueden mover arrastrando. Haga clic en las reglas para ubicar a una guía. Controles de "complemento" a las guías cuando los controles se sitúa encima o junto a ellos. También se mueven los controles con una guía de una vez que se conectan a él. Cuando un control se adjunta a una guía en cada lado, y se mueve una guía, el control cambia de tamaño.  
+ Cuando se habilita, agrega reglas a las herramientas de diseño; las guías se pueden colocar en las reglas. Las guías predeterminadas son los márgenes, que se pueden mover arrastrando. Haga clic en las reglas para ubicar a una guía. Los controles "ajustarán" a las guías cuando se mueven los controles a través o junto a ellos. Los controles también se mueven con una guía de una vez que se conectan a él. Cuando un control está asociado a una guía en cada lado y se mueve una guía, el control cambia de tamaño.  
   
  **Grid**  
   
@@ -51,18 +51,17 @@ ms.locfileid: "33875882"
   
  **Ancho: DLU**  
   
- Establece el ancho de la cuadrícula de diseño en DLU. Una DLU horizontal equivale al ancho medio de la fuente del cuadro de diálogo dividido por cuatro.  
+ Establece el ancho de la cuadrícula de diseño en DLU. Una DLU horizontal es el ancho promedio de la fuente del cuadro de diálogo dividido por cuatro.  
   
  **Alto: DLU**  
   
- Establece el alto de la cuadrícula de diseño en DLU. Una DLU vertical equivale al alto medio de la fuente del cuadro de diálogo dividido por ocho.  
+ Establece el alto de la cuadrícula de diseño en DLU. Una vertical equivale al alto medio de la fuente del cuadro de diálogo dividido por ocho.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
- [Modificar la cuadrícula de diseño](../windows/modifying-the-layout-grid.md)   
+ [Modificación de la cuadrícula de diseño](../windows/modifying-the-layout-grid.md)   
  [Estados del Editor de cuadros de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)
-
