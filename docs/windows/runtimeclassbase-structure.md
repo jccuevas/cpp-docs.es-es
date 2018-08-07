@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassBase (estructura) | Documentos de Microsoft
+title: RuntimeClassBase (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d80f475cf8a50dcb084ca6e953842e91c55e4502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b272c733dab71e615a46cb4af25609c560bdbfef
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888417"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602684"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase (Estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,9 +32,9 @@ struct RuntimeClassBase;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Usar para detectar RuntimeClass en el [realizar](../windows/make-function.md) función.  
+ Utilizado para detectar `RuntimeClass` en el [realizar](../windows/make-function.md) función.  
   
- RuntimeClassBase es una estructura vacía.  
+ **RuntimeClassBase** es una estructura vacía.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `RuntimeClassBase`  

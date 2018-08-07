@@ -1,5 +1,5 @@
 ---
-title: Teclas de aceleración predefinidas | Documentos de Microsoft
+title: Teclas de aceleración predefinidas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42f1151f90fa6a418564f30b9ec6570645a91b42
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880805"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608422"
 ---
 # <a name="predefined-accelerator-keys"></a>Teclas de aceleración predefinidas
 Hay una serie de teclas de aceleración predefinidas que pueden formar parte de un proyecto de aplicación de Windows. Algunas de estas teclas virtuales se destinan al entorno de Windows. Otras admiten exploradores o aplicaciones Unicode. Puede usar una de estas teclas en cualquier acelerador.  
@@ -62,7 +62,7 @@ Hay una serie de teclas de aceleración predefinidas que pueden formar parte de 
 |VK_NONCONVERT|No conversión IME|  
 |VK_OEM_1|Windows: para el teclado estándar de Estados Unidos, la tecla ';:'|  
 |VK_OEM_102|Windows: la tecla de corchete angular o la tecla de barra diagonal inversa del teclado de 102 teclas RT|  
-|VK_OEM_2|Windows: para el teclado estándar de Estados Unidos, la '/?' key|  
+|VK_OEM_2|¿Windows: para el teclado estándar de Estados Unidos, la '/'? key|  
 |VK_OEM_3|Windows: para el teclado estándar de Estados Unidos, la tecla '`~'|  
 |VK_OEM_4|Windows: para el teclado estándar de Estados Unidos, la tecla '[{'|  
 |VK_OEM_5|Windows: para el teclado estándar de Estados Unidos, la '\\&#124;' clave|  
@@ -83,7 +83,7 @@ Hay una serie de teclas de aceleración predefinidas que pueden formar parte de 
 |VK_XBUTTON1|Windows: botón del mouse X 1|  
 |VK_XBUTTON2|Windows: botón del mouse X 2|  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.*  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  

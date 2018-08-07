@@ -1,5 +1,5 @@
 ---
-title: IsBaseOfStrict (estructura) | Documentos de Microsoft
+title: IsBaseOfStrict (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db8f315c0589ceb7cd9411873152fe644985818e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9066a9cd8985b132c1fbd9f6a97bcd0654003d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876896"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604508"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,17 +42,17 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `Base`  
+### <a name="parameters"></a>Parámetros  
+ *base*  
  El tipo base.  
   
- `Derived`  
+ *Derivados*  
  El tipo derivado.  
   
 ## <a name="remarks"></a>Comentarios  
  Comprueba si un tipo es la base de otro.  
   
- La primera plantilla comprueba si un tipo se deriva de un tipo base, que podría producir **true** o **false**. La segunda plantilla comprueba si un tipo se deriva de sí mismo, que siempre produce **false**.  
+ La primera plantilla comprueba si un tipo se deriva de un tipo base, que podría producir **true** o **false**. La segunda plantilla comprueba si un tipo se deriva de sí misma, que siempre produce **false**.  
   
 ## <a name="members"></a>Miembros  
   

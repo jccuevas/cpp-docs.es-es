@@ -1,5 +1,5 @@
 ---
-title: MakeAllocator (clase) | Documentos de Microsoft
+title: MakeAllocator (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878065"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605924"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator (clase)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
@@ -44,19 +43,19 @@ template<typename T>
 class MakeAllocator<T, true>;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `T`  
+### <a name="parameters"></a>Parámetros  
+ *T*  
  Nombre de tipo.  
   
- `hasWeakReferenceSupport`  
- `true` asignar memoria para un objeto que admite referencias débiles; `false` asignar memoria para un objeto que no es compatible con referencias débiles.  
+ *hasWeakReferenceSupport*  
+ **True** asignar memoria para un objeto que admite referencias débiles; **false** asignar memoria para un objeto que no es compatible con las referencias débiles.  
   
 ## <a name="remarks"></a>Comentarios  
  Asigna memoria para una clase activable, con o sin compatibilidad con la referencia débil.  
   
- Reemplace la clase MakeAllocator para implementar un modelo de asignación de memoria definido por el usuario.  
+ Invalidar el **MakeAllocator** clase para implementar un modelo de asignación de memoria definido por el usuario.  
   
- MakeAllocator normalmente se utiliza para evitar pérdidas de memoria si un objeto que se produce durante la construcción.  
+ **MakeAllocator** se utiliza normalmente para evitar pérdidas de memoria si se produce un objeto durante la construcción.  
   
 ## <a name="members"></a>Miembros  
   
@@ -64,15 +63,15 @@ class MakeAllocator<T, true>;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[MakeAllocator::MakeAllocator (constructor)](../windows/makeallocator-makeallocator-constructor.md)|Inicializa una nueva instancia de la clase MakeAllocator.|  
-|[MakeAllocator::~MakeAllocator (destructor)](../windows/makeallocator-tilde-makeallocator-destructor.md)|Desinicializa la instancia actual de la clase MakeAllocator.|  
+|[MakeAllocator::MakeAllocator (constructor)](../windows/makeallocator-makeallocator-constructor.md)|Inicializa una nueva instancia de la **MakeAllocator** clase.|  
+|[MakeAllocator::~MakeAllocator (destructor)](../windows/makeallocator-tilde-makeallocator-destructor.md)|Desinicializa la instancia actual de la **MakeAllocator** clase.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[MakeAllocator::Allocate (método)](../windows/makeallocator-allocate-method.md)|Asigna memoria y lo asocia con el objeto de MakeAllocator actual.|  
-|[MakeAllocator::Detach (método)](../windows/makeallocator-detach-method.md)|Desasocia la memoria asignada por el [Allocate](../windows/makeallocator-allocate-method.md) método MakeAllocator del objeto actual.|  
+|[MakeAllocator::Allocate (método)](../windows/makeallocator-allocate-method.md)|Asigna memoria y lo asocia con el actual **MakeAllocator** objeto.|  
+|[MakeAllocator::Detach (método)](../windows/makeallocator-detach-method.md)|Desasocia la memoria asignada por el [Allocate](../windows/makeallocator-allocate-method.md) método desde la actual **MakeAllocator** objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `MakeAllocator`  

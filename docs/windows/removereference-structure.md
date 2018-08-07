@@ -1,5 +1,5 @@
 ---
-title: RemoveReference (estructura) | Documentos de Microsoft
+title: RemoveReference (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126394e3a63016eccf1f5451d032753bb8f81da8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3152cf46460dbeb8f5c8adfd5a7550f97eaca98
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881268"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602716"
 ---
 # <a name="removereference-structure"></a>RemoveReference (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,12 +38,12 @@ template<class T>
 struct RemoveReference<T&&>;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `T`  
+### <a name="parameters"></a>Parámetros  
+ *T*  
  Una clase.  
   
 ## <a name="remarks"></a>Comentarios  
- Elimina el rasgo de referencia o referencia rvalue del parámetro de plantilla de clase especificada.  
+ Elimina el rasgo de referencia o referencia de rvalue desde el parámetro de plantilla de clase especificada.  
   
 ## <a name="members"></a>Miembros  
   
@@ -51,7 +51,7 @@ struct RemoveReference<T&&>;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|`Type`|Sinónimo para el parámetro de plantilla de clase.|  
+|`Type`|Sinónimo del parámetro de plantilla de clase.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `RemoveReference`  

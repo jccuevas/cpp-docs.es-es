@@ -1,5 +1,5 @@
 ---
-title: RDX | Documentos de Microsoft
+title: RDX | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7647ca56e3159564826efa9caf438456b9ae3568
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3908a8f06d25416999fbf2c95dd258fbc19d456d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878962"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603130"
 ---
 # <a name="rdx"></a>rdx
 Crea una clave del registro o modifica una clave del registro existente.  
@@ -30,28 +30,27 @@ Crea una clave del registro o modifica una clave del registro existente.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ rdx(   
+[ rdx(   
    key,   
    valuename=NULL,   
    regtype   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `key`  
- El nombre de la clave para crear o abrir.  
+### <a name="parameters"></a>Parámetros  
+ *key*  
+ El nombre de la clave que se crea o se abre.  
   
- `valuename`(opcional)  
- Especifica el campo de valor se establezca. Si un campo de valor con este nombre no existe en la clave, se agrega.  
+ *VALUENAME* (opcional)  
+ Especifica el campo de valor debe establecerse. Si un campo de valor con este nombre no existe en la clave, se agrega.  
   
  *regtype*  
- El tipo de clave del registro que se va a agregar. Puede ser uno de los siguientes: **texto**, **dword**, **binario**, o `CString`.  
+ El tipo de clave del registro que se va a agregar. Puede ser uno de los siguientes: `text`, `dword`, `binary`, o `CString`.  
   
 ## <a name="remarks"></a>Comentarios  
- El **rdx** atributo C++ crea o modifica una clave del registro existente para un componente COM. El atributo agrega una macro BEGIN_RDX_MAP para el objeto que implementa al miembro de destino. `RegistryDataExchange`, una función insertada como resultado de la macro BEGIN_RDX_MAP, se puede utilizar para transferir datos entre el registro y los miembros de datos  
+ El **rdx** atributo de C++ crea o modifica una clave del registro existente para un componente COM. El atributo agrega una macro BEGIN_RDX_MAP al objeto que implementa al miembro de destino. `RegistryDataExchange`, una función insertada como resultado de la macro BEGIN_RDX_MAP, se puede usar para transferir datos entre el registro y los miembros de datos  
   
- Este atributo se puede usar junto con la [coclase](../windows/coclass.md), [progid](../windows/progid.md), o [vi_progid](../windows/vi-progid.md) atributos u otros atributos que implica una de ellas.  
+ Este atributo se puede usar junto con el [coclase](../windows/coclass.md), [progid](../windows/progid.md), o [vi_progid](../windows/vi-progid.md) atributos u otros atributos que implique uno de estos.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -59,7 +58,7 @@ Crea una clave del registro o modifica una clave del registro existente.
   
 |||  
 |-|-|  
-|**Se aplica a**|**clase** o `struct` miembro|  
+|**Se aplica a**|**clase** o **struct** miembro|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  
@@ -67,9 +66,9 @@ Crea una clave del registro o modifica una clave del registro existente.
  Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente agrega una clave de registro denominada MyValue en el sistema que describe el componente COM CMyClass.  
+ El código siguiente agrega una clave del Registro llamada MyValue al sistema que describe el componente COM CMyClass.  
   
-```  
+```cpp  
 // cpp_attr_ref_rdx.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES  

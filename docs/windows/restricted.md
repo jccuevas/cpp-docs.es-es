@@ -1,5 +1,5 @@
 ---
-title: restringido | Documentos de Microsoft
+title: restringido | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79b4e53947e0e87fb70211ca40bc54f4500855f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892883"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602777"
 ---
 # <a name="restricted"></a>restricted
-Especifica que no se puede llamar a un miembro de un módulo, interfaz o dispinterface arbitrariamente.  
+Especifica que un miembro de un módulo, interfaz o dispinterface no se puede llamar arbitrariamente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ restricted(  
+[ restricted(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `interfaces`  
+### <a name="parameters"></a>Parámetros  
+ *interfaces*  
  Una o más interfaces que no se llama de forma arbitraria en un objeto COM. Este parámetro solo es válido cuando se aplica a una clase.  
   
 ## <a name="remarks"></a>Comentarios  
- El **restringido** atributo C++ tiene la misma funcionalidad que la [restringido](http://msdn.microsoft.com/library/windows/desktop/aa367157) atributo MIDL.  
+ El **restringido** atributo de C++ tiene la misma funcionalidad que el [restringido](http://msdn.microsoft.com/library/windows/desktop/aa367157) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente muestra cómo utilizar el **restringido** atributo:  
+ El código siguiente muestra cómo usar el **restringido** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_restricted.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -75,9 +74,9 @@ class c : public a, public b
   
 |||  
 |-|-|  
-|**Se aplica a**|Método, la interfaz `interface`, **clase**, `struct`|  
+|**Se aplica a**|Método, la interfaz **interfaz**, **clase**, **struct**|  
 |**Reiterativo**|No|  
-|**Atributos requeridos**|**coclase** (cuando se aplica a **clase** o `struct`)|  
+|**Atributos requeridos**|**coclase** (cuando se aplica a **clase** o **struct**)|  
 |**Atributos no válidos**|Ninguna|  
   
  Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  

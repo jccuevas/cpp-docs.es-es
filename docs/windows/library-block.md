@@ -1,5 +1,5 @@
 ---
-title: library_block | Documentos de Microsoft
+title: library_block | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbd97897138edffba12baf47d64465b1f6ca0df4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 806dcb96916b2e92bffc2d217e318a8853672ae8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877896"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605076"
 ---
 # <a name="libraryblock"></a>library_block
 Coloca una construcción dentro del bloque de biblioteca IDL.  
@@ -30,18 +30,16 @@ Coloca una construcción dentro del bloque de biblioteca IDL.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [library_block]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se coloca una construcción dentro del bloque de biblioteca, asegúrese de que se pasará en la biblioteca de tipos, independientemente de si se hace referencia. De forma predeterminada, solo las construcciones modificación la [coclase](../windows/coclass.md), [dispinterface](../windows/dispinterface.md), y [idl_module](../windows/idl-module.md) atributos se colocan en el bloque de biblioteca.  
+ Cuando se coloca una construcción dentro del bloque de biblioteca, asegúrese de que se pasarán en la biblioteca de tipos, independientemente de si se hace referencia. De forma predeterminada, solo construcciones modificación el [coclase](../windows/coclass.md), [dispinterface](../windows/dispinterface.md), y [idl_module](../windows/idl-module.md) atributos se colocan en el bloque de biblioteca.  
   
 ## <a name="example"></a>Ejemplo  
- En el código siguiente, una interfaz personalizada se coloca dentro del bloque de biblioteca.  
+ En el código siguiente, se coloca una interfaz personalizada dentro del bloque de biblioteca.  
   
-```  
+```cpp  
 // cpp_attr_ref_library_block.cpp  
 // compile with: /LD  
 #include <windows.h>  

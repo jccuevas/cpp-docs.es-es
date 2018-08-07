@@ -1,5 +1,5 @@
 ---
-title: Constructor Roinitializewrapper | Documentos de Microsoft
+title: Constructor Roinitializewrapper | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f2af40c671760bb8d4e667c209598c46b24665
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 193f0d16b03991e24cb16a90b3310512f6e86054
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889215"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604403"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper (Constructor)
-Inicializa una nueva instancia de la clase RoInitializeWrapper.  
+Inicializa una nueva instancia de la **RoInitializeWrapper** clase.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -31,12 +31,12 @@ Inicializa una nueva instancia de la clase RoInitializeWrapper.
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `flags`  
+### <a name="parameters"></a>Parámetros  
+ *flags*  
  Una de las enumeraciones RO_INIT_TYPE, que especifica la compatibilidad proporcionada por el tiempo de ejecución de Windows.  
   
 ## <a name="remarks"></a>Comentarios  
- RoInitializeWrapper (clase), invoca Windows::Foundation::Initialize (*marcas*).  
+ El **RoInitializeWrapper** clase invoca `Windows::Foundation::Initialize(flags)`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

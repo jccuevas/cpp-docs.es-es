@@ -1,5 +1,5 @@
 ---
-title: Public (atributos de C++) | Documentos de Microsoft
+title: Public (atributos de C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d798d828dd252ce8b5f3f49d5a9aaf525acc986
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 071aed04c73702bdb63f19154353794bae34f8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881736"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603611"
 ---
 # <a name="public-c-attributes"></a>public (Atributos de C++)
-Garantiza que una definición de tipo pasará a la biblioteca de tipos aunque no se hace referencia desde dentro del archivo .idl.  
+Garantiza que una definición de tipo pasará a la biblioteca de tipos aunque no se hace referencia desde dentro del archivo. idl.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [public]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **público** atributo C++ tiene la misma funcionalidad que la [público](http://msdn.microsoft.com/library/windows/desktop/aa367150) atributo MIDL.  
+ El **pública** atributo de C++ tiene la misma funcionalidad que el [pública](http://msdn.microsoft.com/library/windows/desktop/aa367150) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente muestra cómo utilizar el **público** atributo:  
+ El código siguiente muestra cómo usar el **pública** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_public.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -61,7 +59,7 @@ __interface IFireTabCtrl : IDispatch
   
 |||  
 |-|-|  
-|**Se aplica a**|`typedef`|  
+|**Se aplica a**|**typedef**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

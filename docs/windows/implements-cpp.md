@@ -1,5 +1,5 @@
 ---
-title: Implements (C++) | Documentos de Microsoft
+title: Implements (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 118487d533e8f4701f52804ebbe1e669d29fc4cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880723"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606467"
 ---
 # <a name="implements-c"></a>implements (C++)
-Especifica las interfaces de envío que se convierten obligatoriamente a ser miembros de la coclase IDL.  
+Especifica las interfaces de envío que se ven obligadas a ser miembros de la coclase IDL.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ implements(   
+[ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- **interfaces**  
- Lista de las interfaces que vaya a formar parte de la coclase IDL separada por comas. Es un método abreviado para especificar una única interfaz **implementa (***interface_name***)**.  
+### <a name="parameters"></a>Parámetros  
+ *interfaces*  
+ Lista de las interfaces que será un miembro de la coclase IDL de separados por una coma. Es un método abreviado para especificar una única interfaz **implementa (***interface_name***)**.  
   
- **dispinterfaces**  
- Lista de la interfaz dispinterface que vaya a formar parte de la coclase IDL separada por comas. Es un método abreviado para especificar una única dispinterface **implementa (interfaces dispinterface** * = dispinterface_name ***)**.  
+ *dispinterfaces*  
+ Lista de la interfaz dispinterface que será un miembro de la coclase IDL de separados por una coma. Es un método abreviado para especificar una única dispinterface **implementa (interfaces dispinterface** * = dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Comentarios  
- De forma predeterminada, solo-interfaces COM que son clases base de la coclase se agregan en la coclase IDL. **implementa** le permite forzar otras interfaces que serán miembros de coclase IDL.  
+ De forma predeterminada, sólo-interfaces COM que son clases base de la coclase se agregan en la coclase IDL. **implementa** le permite forzar otras interfaces de ser miembros de coclase IDL.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -53,7 +52,7 @@ Especifica las interfaces de envío que se convierten obligatoriamente a ser mie
   
 |||  
 |-|-|  
-|**Se aplica a**|**class**, `struct`|  
+|**Se aplica a**|**clase**, **struct**|  
 |**Reiterativo**|Sí|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  
@@ -61,7 +60,7 @@ Especifica las interfaces de envío que se convierten obligatoriamente a ser mie
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente es de tres partes: un archivo .idl y su archivo .h asociados y un archivo de C++.  
+ En el siguiente ejemplo consta de tres partes: un archivo .idl y su archivo .h asociados y un archivo de C++.  
   
  Suponga el siguiente archivo .idl, que estará disponible para el compilador.  
   
@@ -113,9 +112,9 @@ library odod
 ```  
   
 ## <a name="example"></a>Ejemplo  
- Y el archivo .h siguientes, que también debe estar disponible para el compilador.  
+ Y el siguiente archivo. h, que también debe estar disponible para el compilador.  
   
-```  
+```cpp  
 // attr_implements.h  
 // this ALWAYS GENERATED file contains definitions for the interfaces  
   
@@ -430,9 +429,9 @@ CBar;
 ```  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente programa, sin implementa, IBar1, IBar2 y ESNOD no estará en la coclase en el archivo IDL generado.  
+ En el siguiente programa, sin implementa, `IBar1`, `IBar2`, y `ISna` no estarán en el `coclass` en el archivo IDL generado.  
   
-```  
+```cpp  
 // attr_implements.cpp  
 // compile with: /LD /link /idlout:out.idl  
 #define _ATL_ATTRIBUTES 1  

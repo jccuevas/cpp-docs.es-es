@@ -1,5 +1,5 @@
 ---
-title: Recursos del manifiesto | Documentos de Microsoft
+title: Recursos del manifiesto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8df7bf266bae25bd6b898012a6bad10a3d10f81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b14684adcefcf975750f64a4a7402083943b9f71
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882919"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604087"
 ---
 # <a name="manifest-resources"></a>Recursos del manifiesto
 Los recursos de manifiesto son archivos XML que describen las dependencias que utiliza una aplicación. Por ejemplo, en Visual Studio, el archivo de manifiesto generado por el asistente de MFC define cuál de los archivos DLL de controles comunes de Windows debe usar la aplicación, si la versión 5.0 o la 6.0:  
@@ -44,9 +44,9 @@ Los recursos de manifiesto son archivos XML que describen las dependencias que u
   
  Para una aplicación de Windows XP o Windows Vista, el recurso de manifiesto no solo especifica que la aplicación usa la versión más reciente de los controles comunes de Windows (la 0, tal como se indica anteriormente), sino que también es compatible con el [control Syslink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- Para ver la información de versión y tipo contenida en un recurso del manifiesto, puede abrir el archivo en un visor de XML o en el [editor de texto](http://msdn.microsoft.com/en-us/508e1f18-99d5-48ad-b5ad-d011b21c6ab1)de Visual Studio. Para obtener más información, vea el tema sobre cómo [abrir un recurso del manifiesto en el editor de texto de Visual Studio](../windows/how-to-open-a-manifest-resource.md).  
+ Para ver la versión y escriba la información contenida en un recurso del manifiesto, puede abrir el archivo en un visor XML o en Visual Studio [Editor de texto](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1). Para obtener más información, vea el tema sobre cómo [abrir un recurso del manifiesto en el editor de texto de Visual Studio](../windows/how-to-open-a-manifest-resource.md).  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* . Para información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea  [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. . Para información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea  [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="limitations"></a>Limitaciones  
  Solo puede tener un recurso de manifiesto por módulo.  

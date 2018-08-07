@@ -1,5 +1,5 @@
 ---
-title: 'Module:: Create (método) | Documentos de Microsoft'
+title: Método Module | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ede64c239909956f1f767db34a2a6a14c02314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0d49a6f0b5172b0971f755fc61b7767f0f4427d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874894"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603308"
 ---
 # <a name="modulecreate-method"></a>Module::Create (Método)
 Crea una instancia de un módulo.  
@@ -42,18 +42,18 @@ WRL_NOTHROW static Module& Create(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `T`  
+### <a name="parameters"></a>Parámetros  
+ *T*  
  Tipo de módulo.  
   
- `callback`  
+ *devolución de llamada*  
  Se llama cuando se libera el último objeto de instancia del módulo.  
   
- `object`  
- El `object` y `method` parámetros se utilizan en combinación. Señale al último objeto de instancia cuando se libera el último objeto de instancia en el módulo.  
+ *object*  
+ El *objeto* y *método* parámetros se utilizan en combinación. Señala al último objeto de instancia cuando se libera el último objeto de instancia en el módulo.  
   
- `method`  
- El `object` y `method` parámetros se utilizan en combinación. Señala al método del último objeto de instancia cuando se libera el último objeto de instancia en el módulo.  
+ *Método*  
+ El *objeto* y *método* parámetros se utilizan en combinación. Señala al método del último objeto de instancia cuando se libera el último objeto de instancia en el módulo.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Referencia al módulo.  
@@ -65,5 +65,3 @@ WRL_NOTHROW static Module& Create(
   
 ## <a name="see-also"></a>Vea también  
 [Module (clase)](../windows/module-class.md)
-
- 

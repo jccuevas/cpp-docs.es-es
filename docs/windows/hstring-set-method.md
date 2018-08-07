@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Set (método) | Documentos de Microsoft'
+title: Método hstring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39c227e19cdadae80f32c25515a10dd0810f5726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aecdafe81dcebc7867d30c46be1fee271e60154c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882422"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606402"
 ---
 # <a name="hstringset-method"></a>HString::Set (Método)
-Establece el valor del objeto HString actual en la cadena de caracteres anchos especificada o el parámetro de HString.  
+Establece el valor del elemento actual **HString** objeto en la cadena especificada de caracteres anchos o **HString** parámetro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 HRESULT Set(  
           const wchar_t* str) throw();  
 HRESULT Set(   
@@ -40,15 +39,15 @@ HRESULT Set(
            ) throw();  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `str`  
+### <a name="parameters"></a>Parámetros  
+ *str*  
  Una cadena de caracteres anchos.  
   
- `len`  
- La longitud máxima de la `str` parámetro que se asigna al objeto HString actual.  
+ *Len*  
+ La longitud máxima de la *str* parámetro que se asigna a la actual **HString** objeto.  
   
- `hstr`  
- Un objeto HString existente.  
+ *HSTR*  
+ Existente **HString** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

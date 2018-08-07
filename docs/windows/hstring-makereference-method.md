@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Makereference (método) | Documentos de Microsoft'
+title: Makereference (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e30b3ea3c6b791eb654a6fbbe91b3c87353f31c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 673d5b10706580303f179ee453495b581d96eda3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882646"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608340"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference (Método)
-Crea un objeto HStringReference de un parámetro de cadena especificada.  
+Crea un `HStringReference` objeto a partir de un parámetro de cadena especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +38,18 @@ template<unsigned int sizeDest>
               unsigned int len);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `sizeDest`  
- Un parámetro de plantilla que especifica el tamaño del búfer de HStringReference de destino.  
+### <a name="parameters"></a>Parámetros  
+ *sizeDest*  
+ Un parámetro de plantilla que especifica el tamaño del destino `HStringReference` búfer.  
   
- `str`  
+ *str*  
  Una referencia a una cadena de caracteres anchos.  
   
- `len`  
- La longitud máxima de la `str` búfer de parámetro para utilizar en esta operación. Si el `len` parámetro no se especifica, toda la matriz `str` se usa el parámetro.  
+ *Len*  
+ La longitud máxima de la *str* búfer de parámetro para utilizar en esta operación. Si el *len* parámetro no se especifica, toda la *str* se usa el parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- HStringReference objeto cuyo valor es el mismo que el especificado `str` parámetro.  
+ Un `HStringReference` objeto cuyo valor es igual que el especificado *str* parámetro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

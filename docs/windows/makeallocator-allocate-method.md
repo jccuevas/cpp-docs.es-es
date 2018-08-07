@@ -1,5 +1,5 @@
 ---
-title: 'Makeallocator:: Allocate (método) | Documentos de Microsoft'
+title: Método Makeallocator | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06f8db4c713feb69e0037d10879383411ea07007
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876221"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606268"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,14 +34,14 @@ __forceinline void* Allocate();
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si se realiza correctamente, un puntero a la memoria asignada; en caso contrario, `nullptr`.  
+ Si es correcto, un puntero a la memoria asignada; en caso contrario, **nullptr**.  
   
 ## <a name="remarks"></a>Comentarios  
- Asigna memoria y lo asocia con el objeto de MakeAllocator actual.  
+ Asigna memoria y lo asocia con el actual **MakeAllocator** objeto.  
   
- El tamaño de la memoria asignada es el tamaño del tipo especificado por el parámetro de plantilla MakeAllocator actual.  
+ El tamaño de la memoria asignada es el tamaño del tipo especificado por el actual **MakeAllocator** parámetro de plantilla.  
   
- Un desarrollador debe reemplazar solamente el método Allocate() para implementar un modelo de asignación de memoria diferente.  
+ Un desarrollador necesita sobrescribir sólo el **Allocate()** método para implementar un modelo de asignación de memoria diferente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

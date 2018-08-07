@@ -1,5 +1,5 @@
 ---
-title: iid_is | Documentos de Microsoft
+title: iid_is | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9ef3a14211e223b9902dc9843639d217ceaf1b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f0dd12df088d8fc55cc4f1a8eaf71bcbb7d4e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878007"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603295"
 ---
 # <a name="iidis"></a>iid_is
-Especifica el IID de la interfaz COM que señala un puntero de interfaz.  
+Especifica el IID de la interfaz COM que apunta a un puntero de interfaz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ iid_is(  
+[ iid_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
  *Expresión*  
- Una expresión de lenguaje C que especifica un IID de una interfaz COM que señala un puntero de interfaz.  
+ Una expresión del lenguaje C que especifica un IID de interfaz COM que apunta un puntero de interfaz.  
   
 ## <a name="remarks"></a>Comentarios  
- El **iid_is** atributo C++ tiene la misma funcionalidad que la [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) atributo MIDL.  
+ El **iid_is** atributo de C++ tiene la misma funcionalidad que el [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente muestra el uso de **iid_is**:  
   
-```  
+```cpp  
 // cpp_attr_ref_iid_is.cpp  
 // compile with: /LD  
 #include "wtypes.h"  

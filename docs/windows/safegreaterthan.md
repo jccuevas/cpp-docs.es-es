@@ -1,5 +1,5 @@
 ---
-title: SafeGreaterThan | Documentos de Microsoft
+title: SafeGreaterThan | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0944feb32f9dbd8b73d0710b248139c003e41410
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6fda4d8cfb725daf094f581a250d7f965330b9e9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888788"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606831"
 ---
 # <a name="safegreaterthan"></a>SafeGreaterThan
 Compara dos números.  
@@ -37,25 +37,25 @@ inline bool SafeGreaterThan (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- [in] `t`  
- Primer número que se va a comparar. Debe ser de tipo T.  
+### <a name="parameters"></a>Parámetros  
+ [in] *t*  
+ El primer número que se compara. Esto debe ser de tipo `T`.  
   
- [in] `u`  
- Segundo número que se va a comparar. Debe ser de tipo U.  
+ [in] *u*  
+ Segundo número que se va a comparar. Esto debe ser de tipo `U`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Si `t` es mayor que `u`; en caso contrario `false`.  
+ **True** si *t* es mayor que *u*; de lo contrario **false**.  
   
 ## <a name="remarks"></a>Comentarios  
- `SafeGreaterThan` extiende el operador de comparación normal por lo que le permite comparar dos tipos diferentes de números.  
+ **SafeGreaterThan** amplía el operador de comparación normal por lo que le permite comparar dos tipos diferentes de números.  
   
- Este método forma parte de [Biblioteca SafeInt](../windows/safeint-library.md) y está diseñado para una operación de comparación único sin necesidad de crear una instancia de la [SafeInt (clase)](../windows/safeint-class.md).  
+ Este método forma parte de [Biblioteca SafeInt](../windows/safeint-library.md) y está diseñado para una operación de comparación único sin necesidad de crear una instancia de la [clase SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Este método solo debe usarse cuando se debe proteger una sola operación matemática. Si hay varias operaciones, debe usar la `SafeInt` clase en lugar de llamar a las funciones individuales independientes.  
+>  Este método solo debe usarse cuando una operación matemática solo debe estar protegida. Si hay varias operaciones, se debe utilizar el `SafeInt` clase en lugar de llamar a las funciones individuales independientes.  
   
- Para obtener más información acerca de los tipos de plantilla T y U, consulte [SafeInt (funciones)](../windows/safeint-functions.md).  
+ Para obtener más información acerca de los tipos de plantilla `T` y `U`, consulte [SafeInt (funciones)](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** safeint.h  

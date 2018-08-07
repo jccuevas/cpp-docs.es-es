@@ -1,5 +1,5 @@
 ---
-title: Ventana de vista de recursos | Documentos de Microsoft
+title: Ventana Vista de recursos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b207bfa9236b4e0de1f01f98cc7e83124048a3a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877389"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608314"
 ---
 # <a name="resource-view-window"></a>Ventana de la vista de recursos
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "33877389"
 >  Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
   
 > [!TIP]
->  Se puede hacer clic con el botón secundario en la ventana Vista de recursos para iniciar un menú contextual de comandos. También se puede hacer doble clic en la barra de título para acoplar o desacoplar la ventana. Al hacer clic con el botón secundario en la barra de título se muestran comandos adicionales que permiten controlar el comportamiento de la ventana. Para obtener más información, consulte [administración de Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+>  Se puede hacer clic con el botón secundario en la ventana Vista de recursos para iniciar un menú contextual de comandos. También se puede hacer doble clic en la barra de título para acoplar o desacoplar la ventana. Al hacer clic con el botón secundario en la barra de título se muestran comandos adicionales que permiten controlar el comportamiento de la ventana. Para obtener más información, consulte [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
 #### <a name="to-open-the-resource-view-window"></a>Para abrir la ventana de la Vista de recursos  
   
@@ -43,11 +43,9 @@ ms.locfileid: "33877389"
   
      \- o -  
   
-2.  Presione **CTRL + MAYÚS + E**.  
+2.  Presione **Ctrl**+**MAYÚS**+**E**.  
   
-
-  
-### <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  

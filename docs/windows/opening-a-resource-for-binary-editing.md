@@ -1,5 +1,5 @@
 ---
-title: Abrir un recurso para editarlo en modo binario | Documentos de Microsoft
+title: Abrir un recurso para editarlo en modo binario | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c09cd825a5974422eaf757419f4ce890f5123100
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878491"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605960"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>Abrir un recurso para editarlo en modo binario
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Para abrir un recurso de escritorio de Windows para editarlo en modo binario  
@@ -40,7 +40,7 @@ ms.locfileid: "33878491"
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Para abrir un recurso para editarlo para la edición binaria  
   
-1.  En el Explorador de soluciones, seleccione el archivo de recursos específico que quiera editar.  
+1.  En **el Explorador de soluciones**, seleccione el archivo de recursos específico que desea editar.  
   
 2.  Haga clic con el botón secundario en el recurso y elija **Abrir con** en el menú contextual.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33878491"
     >  Se puede usar el [Editor de imágenes](../windows/image-editor-for-icons.md) y el [Editor binario](binary-editor.md) para trabajar con archivos de recursos en proyectos administrados. Todos los recursos administrados que vaya a editar deberán estar vinculados. Los editores de recursos de Visual Studio no admiten la edición de recursos incrustados.  
   
     > [!NOTE]
-    >  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).   
+    >  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).   
   
  ![Editor binario](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
 Datos binarios de un cuadro de diálogo que aparece en el editor binario  
@@ -60,10 +60,9 @@ Datos binarios de un cuadro de diálogo que aparece en el editor binario
 > [!NOTE]
 >  Si quiere usar el editor binario en un recurso que ya se está editando en otra ventana del editor, cierre primero la otra ventana del editor.  
   
- **Requisitos**  
+## <a name="requirements"></a>Requisitos  
   
  Ninguna  
   
 ## <a name="see-also"></a>Vea también  
  [Binary Editor](binary-editor.md)
-

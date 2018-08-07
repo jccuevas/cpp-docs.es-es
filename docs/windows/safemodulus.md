@@ -1,5 +1,5 @@
 ---
-title: SafeModulus | Documentos de Microsoft
+title: SafeModulus | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 653293ac04be1e3a04e90412a9d9d8b988773329
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eaac98e7794ba9a2475cf7b56641d3a779f84d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888873"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604890"
 ---
 # <a name="safemodulus"></a>SafeModulus
 Realiza la operación de módulo en dos números.  
@@ -38,26 +38,26 @@ inline bool SafeModulus (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- [in] `t`  
- Divisor. Debe ser de tipo T.  
+### <a name="parameters"></a>Parámetros  
+ [in] *t*  
+ Divisor. Esto debe ser de tipo `T`.  
   
- [in] `u`  
- Dividendo. Debe ser de tipo U.  
+ [in] *u*  
+ Dividendo. Esto debe ser de tipo `U`.  
   
- [out] `result`  
- El parámetro donde `SafeModulus` almacena el resultado.  
+ [out] *resultado*  
+ El parámetro donde **SafeModulus** almacena el resultado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Si se produce ningún error; `false` si se produce un error.  
+ **True** si se produce ningún error; **false** si se produce un error.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método forma parte de [Biblioteca SafeInt](../windows/safeint-library.md) y está diseñado para una operación de módulo único sin necesidad de crear una instancia de la [SafeInt (clase)](../windows/safeint-class.md).  
+ Este método forma parte de [Biblioteca SafeInt](../windows/safeint-library.md) y está diseñado para una operación de módulo único sin necesidad de crear una instancia de la [clase SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Este método solo debe usarse cuando se debe proteger una sola operación matemática. Si hay varias operaciones, debe usar la `SafeInt` clase en lugar de llamar a las funciones individuales independientes.  
+>  Este método solo debe usarse cuando una operación matemática solo debe estar protegida. Si hay varias operaciones, se debe utilizar el `SafeInt` clase en lugar de llamar a las funciones individuales independientes.  
   
- Para obtener más información acerca de los tipos de plantilla T y U, consulte [SafeInt (funciones)](../windows/safeint-functions.md).  
+ Para obtener más información acerca de los tipos de plantilla `T` y `U`, consulte [SafeInt (funciones)](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** safeint.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Getruntimeclassname (método) | Documentos de Microsoft'
+title: Getruntimeclassname (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cfe3cc4a8a304bbd04fde9e6c38e2b9170e2e73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7706a16a860cf554068dd3416e7c1f8b1fcea311
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892444"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608779"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName (Método)
 
-Obtiene el nombre de clase en tiempo de ejecución del objeto RuntimeClass actual.
+Obtiene el nombre de clase en tiempo de ejecución del elemento actual **RuntimeClass** objeto.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -47,7 +47,7 @@ S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el erro
 
 ## <a name="remarks"></a>Comentarios
 
-Se genera un error de aserción si &#95; &#95;WRL_STRICT&#95; &#95; o &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; no está definido.
+Se genera un error de aserción si &#95; &#95;WRL_STRICT&#95; &#95; o &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; no se ha definido.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -56,5 +56,4 @@ Se genera un error de aserción si &#95; &#95;WRL_STRICT&#95; &#95; o &#95; &#95
 **Espacio de nombres:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vea también
-
-[RuntimeClass (clase)](../windows/runtimeclass-class.md)
+ [RuntimeClass (clase)](../windows/runtimeclass-class.md)

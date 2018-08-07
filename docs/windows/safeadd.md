@@ -1,5 +1,5 @@
 ---
-title: SafeAdd | Documentos de Microsoft
+title: SafeAdd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0450820afdde3eb330948a65f8d052fa54017dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8686d0ef990e9be22ec4ebe1c81c737df9b15812
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892721"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607409"
 ---
 # <a name="safeadd"></a>SafeAdd
-Suma dos números de forma que protege contra los desbordamientos.  
+Suma dos números de forma que protege contra el desbordamiento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,24 +38,24 @@ inline bool SafeAdd (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- [in] `t`  
+### <a name="parameters"></a>Parámetros  
+ [in] *t*  
  Primer número que se va a agregar. Debe ser de tipo T.  
   
- [in] `u`  
+ [in] *u*  
  Segundo número que se va a agregar. Debe ser de tipo U.  
   
- [out] `result`  
- El parámetro donde `SafeAdd` almacena el resultado.  
+ [out] *resultado*  
+ El parámetro donde **SafeAdd** almacena el resultado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Si se produce ningún error; `false` si se produce un error.  
+ **True** si se produce ningún error; **false** si se produce un error.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método forma parte de [Biblioteca SafeInt](../windows/safeint-library.md) y está diseñado para una operación de suma única sin crear una instancia de la [SafeInt (clase)](../windows/safeint-class.md).  
+ Este método forma parte de [Biblioteca SafeInt](../windows/safeint-library.md) y está diseñado para una operación de suma única sin crear una instancia de la [clase SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Este método solo debe usarse cuando se debe proteger una sola operación matemática. Si hay varias operaciones, debe usar la `SafeInt` clase en lugar de llamar a las funciones individuales independientes.  
+>  Este método solo debe usarse cuando una operación matemática solo debe estar protegida. Si hay varias operaciones, se debe utilizar el `SafeInt` clase en lugar de llamar a las funciones individuales independientes.  
   
  Para obtener más información acerca de los tipos de plantilla T y U, consulte [SafeInt (funciones)](../windows/safeint-functions.md).  
   

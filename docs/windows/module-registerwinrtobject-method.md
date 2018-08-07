@@ -1,5 +1,5 @@
 ---
-title: 'Module:: registerwinrtobject (método) | Documentos de Microsoft'
+title: Registerwinrtobject (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874959"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603762"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject (Método)
-Registra uno o varios objetos en tiempo de ejecución de Windows para que otras aplicaciones puedan conectarse a ellos.  
+Registra uno o más objetos en tiempo de ejecución de Windows para que otras aplicaciones pueden conectarse a ellos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,17 +36,17 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
    unsigned int count)  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `serverName`  
- Nombre que especifica un subconjunto de los objetos afectados por esta operación.  
+### <a name="parameters"></a>Parámetros  
+ *Nombre de servidor*  
+ Un nombre que especifica un subconjunto de los objetos afectados por esta operación.  
   
- `activatableClassIds`  
- Una matriz de activable CLSID para registrar.  
+ *activatableClassIds*  
+ Una matriz de CLSID activable para registrar.  
   
- `cookie`  
- Un valor que identifica los objetos de clase que se registraron. Este valor se utiliza más adelante para revocar el registro.  
+ *Cookie*  
+ Un valor que identifica los objetos de clase que se registraron. Este valor se utiliza posteriormente para revocar el registro.  
   
- `count`  
+ *count*  
  El número de objetos que se va a registrar.  
   
 ## <a name="return-value"></a>Valor devuelto  

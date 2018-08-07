@@ -1,5 +1,5 @@
 ---
-title: Move (función) | Documentos de Microsoft
+title: Move (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8da1a3c839add5d056674896b5a3c6a32145924f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d058919d0906b458c6c4e81d65c9438c95a22b85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876776"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607308"
 ---
 # <a name="move-function"></a>Move (función)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,15 +36,15 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `T`  
+### <a name="parameters"></a>Parámetros  
+ *T*  
  Tipo del argumento.  
   
- `arg`  
- Argumento pasado a mover.  
+ *arg*  
+ Para mover un argumento.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Parámetro `arg` después de rasgos de referencia o referencia rvalue, si los hay, se han quitado.  
+ Parámetro *arg* después de rasgos de referencia o referencia de rvalue, si los hay, se quitaron.  
   
 ## <a name="remarks"></a>Comentarios  
  Mueve el argumento especificado de una ubicación a otra.  

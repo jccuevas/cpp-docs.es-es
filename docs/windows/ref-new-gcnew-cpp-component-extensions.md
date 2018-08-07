@@ -1,5 +1,5 @@
 ---
-title: ref new, gcnew (extensiones de componentes de C++) | Documentos de Microsoft
+title: ref new, gcnew (extensiones de componente de C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9533675d2894b3c3d99e3fb57abded8ea4e99d7a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51aec80ee24d96cf08d55778e108492d16ecfcc9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879066"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606190"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Extensiones de componentes de C++)
-El `ref new` palabra clave agregada asigna una instancia de un tipo que se han recopilado cuando el objeto deja de estar accesible y que devuelve un identificador ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) al objeto asignado.  
+El **referencia nuevos** palabra clave agregada asigna una instancia de un tipo que se recolecta cuando el objeto deja de estar accesible y que devuelve un identificador ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) al objeto asignado.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
- La memoria para una instancia de un tipo que se asigna mediante `ref new` se desasigna automáticamente.  
+ Memoria para una instancia de un tipo que está asignada por **referencia nuevos** se desasigna automáticamente.  
   
- Una operación `ref new` inicia `OutOfMemoryException` si no puede asignar memoria.  
+ Un **referencia nuevos** operación produce `OutOfMemoryException` si no puede asignar memoria.  
   
- Para obtener más información acerca de cómo se asignan y se desasigna memoria para tipos nativos de C++, vea [el nuevo y eliminar operadores](../cpp/new-and-delete-operators.md).  
+ Para obtener más información acerca de cómo asigna y desasigna memoria para tipos nativos de C++, vea [el nuevo y eliminar operadores](../cpp/new-and-delete-operators.md).  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
- Use `ref new` para asignar memoria para objetos de Windows en tiempo de ejecución cuya duración desee administrar automáticamente. El objeto se desasigna automáticamente cuando su recuento de referencias llega a cero, lo que sucede después de que la última copia de la referencia salga del ámbito. Para obtener más información, consulte [clases y structs Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+ Use **referencia nuevos** asignar memoria para objetos de Windows Runtime cuya duración desee administrar automáticamente. El objeto se desasigna automáticamente cuando su recuento de referencias llega a cero, lo que sucede después de que la última copia de la referencia salga del ámbito. Para obtener más información, consulte [clases y structs Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/ZW**  
+ Opción del compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- La memoria para un tipo administrado (tipo de valor o referencia) se asigna mediante `gcnew` y se desasigna mediante la colección de elementos no utilizados.  
+ Se asigna memoria para un tipo administrado (tipo de valor o referencia) por **gcnew**y se desasigna mediante la recolección de elementos.  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/clr**  
+ Opción del compilador: `/clr`  
   
 ### <a name="examples"></a>Ejemplos  
- **Ejemplo**  
   
- En el ejemplo siguiente se usa `gcnew` para asignar un objeto de mensaje.  
+ En el ejemplo siguiente se usa **gcnew** para asignar un objeto de mensaje.  
   
-```  
+```cpp  
 // mcppv2_gcnew_1.cpp  
 // compile with: /clr  
 ref struct Message {  
@@ -69,11 +68,9 @@ int main() {
 }  
 ```  
   
- **Ejemplo**  
+ En el ejemplo siguiente se usa **gcnew** para crear un tipo de valor con conversión boxing para su uso como un tipo de referencia.  
   
- En el ejemplo siguiente se usa `gcnew` para crear un tipo de valor con la conversión boxing aplicada para usarlo como tipo de referencia.  
-  
-```  
+```cpp  
 // example2.cpp : main project file.  
 // compile with /clr  
 using namespace System;  

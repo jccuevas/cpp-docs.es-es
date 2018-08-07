@@ -1,5 +1,5 @@
 ---
-title: 'Implements:: cancastto (método) | Documentos de Microsoft'
+title: Cancastto (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fd6e6736c74e1ce895031e17c1d5268eb4ce646
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53b17558998812895ece4b47f5de03700e502b8e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877078"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608948"
 ---
 # <a name="implementscancastto-method"></a>Implements::CanCastTo (Método)
 Obtiene un puntero a la interfaz especificada.  
@@ -36,18 +36,18 @@ __forceinline HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `riid`  
+### <a name="parameters"></a>Parámetros  
+ *riid*  
  Una referencia a un identificador de interfaz.  
   
- `ppv`  
- Si tiene éxito, un puntero a la interfaz especificada por `riid`.  
+ *PPV*  
+ Si es correcto, un puntero a la interfaz especificada por *riid*.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que indica el error, como E_NOINTERFACE.  
+ S_OK si se realiza correctamente; en caso contrario, un HRESULT que indica el error, como E_NOINTERFACE.  
   
 ## <a name="remarks"></a>Comentarios  
- Se trata de una función auxiliar interno que realiza una operación de QueryInterface.  
+ Se trata de una función auxiliar interna que realiza una operación de QueryInterface.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

@@ -1,5 +1,5 @@
 ---
-title: importar | Documentos de Microsoft
+title: importar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b371cd1094a49f8a629cb6f8e880fd1210670f91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b7498ce36243d2f7a7014b8fa9041a1a7378d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877272"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604712"
 ---
 # <a name="import"></a>importación
-Especifica otro archivo de encabezado, .odl o .idl que contiene las definiciones que desea hacer referencia desde la principal IDL.  
+Especifica otro archivo .idl, .odl o encabezado que contiene las definiciones que desea hacer referencia desde la principal IDL.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ import(  
+[ import(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `idl_file`  
+### <a name="parameters"></a>Parámetros  
+ *idl_file*  
  El nombre de un archivo .idl que desea importar en la biblioteca de tipos del proyecto actual.  
   
 ## <a name="remarks"></a>Comentarios  
- El **importar** C++ atributo da lugar a un `#import` instrucción que se coloca debajo del `import "docobj.idl"` instrucción en el archivo .idl generado. El **importar** atributo tiene la misma funcionalidad que la [importar](http://msdn.microsoft.com/library/windows/desktop/aa367047) atributo MIDL.  
+ El **importar** hace que el atributo de C++ un `#import` instrucción colocarse debajo el `import "docobj.idl"` instrucción en el archivo .idl generado. El **importar** atributo tiene la misma funcionalidad que el [importar](http://msdn.microsoft.com/library/windows/desktop/aa367047) atributo MIDL.  
   
- El **importar** atributo sólo coloca el archivo especificado en el archivo .idl que se generará el proyecto; el **importar** atributo no permite llamar a las construcciones en el archivo especificado desde el código fuente en el proyecto.  Para llamar a las construcciones en el archivo especificado desde el código fuente del proyecto, utilice [#import](../preprocessor/hash-import-directive-cpp.md) y `embedded_idl` atributo o se puede incluir el archivo .h para el `idl_file`, si existe un archivo .h.  
+ El **importar** atributo sólo coloca el archivo especificado en el archivo .idl que se generará el proyecto; el **importar** atributo no le permite llamar a construcciones en el archivo especificado desde el código fuente en el proyecto.  Para llamar a construcciones en el archivo especificado desde el código fuente en el proyecto, utilice [#import](../preprocessor/hash-import-directive-cpp.md) y `embedded_idl` atributo, o bien puede incluir el archivo .h el *idl_file*, si existe un archivo .h.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente:  
   
-```  
+```cpp  
 // cpp_attr_ref_import.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
 [import(import.idl)];  
 ```  
   
- produce el siguiente código en el archivo .idl generado:  
+ genera el código siguiente en el archivo .idl generado:  
   
 ```  
 import "docobj.idl";  
@@ -86,5 +85,5 @@ library MyLib {
  [Atributos independientes](../windows/stand-alone-attributes.md)   
  [importidl](../windows/importidl.md)   
  [importlib](../windows/importlib.md)   
- [Incluir](../windows/include-cpp.md)   
+ [incluir](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Implements:: casttounknown (método) | Documentos de Microsoft'
+title: Casttounknown (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857d13736a92bbbc2c6f1228b3444081ffc18de5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a490e3b8dc620cb3f0f440b2e28cce1f2e69c76d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874491"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607253"
 ---
 # <a name="implementscasttounknown-method"></a>Implements::CastToUnknown (Método)
-Obtiene un puntero a la interfaz IUnknown subyacente.  
+Obtiene un puntero subyacente `IUnknown` interfaz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ __forceinline IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Esta operación siempre se realiza correctamente y devuelve el puntero IUnknown.  
+ Esta operación siempre se realiza correctamente y devuelve el `IUnknown` puntero.  
   
 ## <a name="remarks"></a>Comentarios  
  Función auxiliar interno.  

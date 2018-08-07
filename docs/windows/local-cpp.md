@@ -1,5 +1,5 @@
 ---
-title: local (C++) | Documentos de Microsoft
+title: local (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17a57ad56402b345aa64e4e4fd02bc57dd7f0321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: efa937c1eaabb23fe5a360444f8c2105b735b260
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877922"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604205"
 ---
 # <a name="local-c"></a>local (C++)
-Cuando se utiliza en el encabezado de la interfaz, puede usar el compilador MIDL como un generador de encabezado. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.  
+Cuando se utiliza en el encabezado de la interfaz, permite usar el compilador de MIDL como un generador de encabezado. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [local]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El `local` atributo C++ tiene la misma funcionalidad que la [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) atributo MIDL.  
+ El **local** atributo de C++ tiene la misma funcionalidad que el [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- Vea [call_as](../windows/call-as.md) para obtener un ejemplo de cómo usar `local`.  
+ Consulte [call_as](../windows/call-as.md) para obtener un ejemplo de cómo usar **local**.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -47,10 +45,10 @@ Cuando se utiliza en el encabezado de la interfaz, puede usar el compilador MIDL
   
 |||  
 |-|-|  
-|**Se aplica a**|`interface`, métodos de interfaz|  
+|**Se aplica a**|**interfaz**, método de interfaz|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|**dispinterface**|  
+|**Atributos no válidos**|`dispinterface`|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   

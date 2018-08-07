@@ -1,5 +1,5 @@
 ---
-title: PTR | Documentos de Microsoft
+title: PTR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef98cd3ac446c41143fc8e1f3f5a731f05ab3c45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87c3e84c0547751b03fba616df7c3f9bdd4dc06e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875999"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604335"
 ---
 # <a name="ptr"></a>ptr
 Designa un puntero como un puntero completo.  
@@ -30,13 +30,11 @@ Designa un puntero como un puntero completo.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [ptr]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **ptr** atributo C++ tiene la misma funcionalidad que la [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) atributo MIDL.  
+ El **ptr** atributo de C++ tiene la misma funcionalidad que el [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [defaultvalue](../windows/defaultvalue.md) para un ejemplo de uso de **ptr**.  
@@ -47,7 +45,7 @@ Designa un puntero como un puntero completo.
   
 |||  
 |-|-|  
-|**Se aplica a**|Parámetro de interfaz, el método de interfaz, `typedef`|  
+|**Se aplica a**|Parámetro de interfaz, el método de interfaz, **(typedef)**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

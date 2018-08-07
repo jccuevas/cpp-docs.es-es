@@ -1,5 +1,5 @@
 ---
-title: RoInitializeWrapper (clase) | Documentos de Microsoft
+title: RoInitializeWrapper (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2018
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9fab2ecd259e75767728a46448c06df4c4729ef3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705597"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606727"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper (Clase)
 Inicializa el tiempo de ejecución de Windows.  
@@ -32,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- RoInitializeWrapper es la comodidad que inicializa el tiempo de ejecución de Windows y devuelve un HRESULT que indica si la operación se realizó correctamente. Dado que llama al destructor de clase `::Windows::Foundation::Uninitialize`, instancias de `RoInitializeWrapper` debe declararse en el ámbito global o de nivel superior.  
+ **RoInitializeWrapper** es una ventaja que inicializa el tiempo de ejecución de Windows y devuelve un HRESULT que indica si la operación fue correcta. Dado que el destructor de clase llama a `::Windows::Foundation::Uninitialize`, las instancias de **RoInitializeWrapper** debe declararse en el ámbito global o de nivel superior.  
   
 ## <a name="members"></a>Miembros  
   
@@ -40,14 +40,14 @@ class RoInitializeWrapper
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[RoInitializeWrapper::RoInitializeWrapper (constructor)](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Inicializa una nueva instancia de la clase RoInitializeWrapper.|  
-|[RoInitializeWrapper::~RoInitializeWrapper (destructor)](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Destruye la instancia actual de la clase RoInitializeWrapper.|  
+|[RoInitializeWrapper::RoInitializeWrapper (constructor)](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Inicializa una nueva instancia de la **RoInitializeWrapper** clase.|  
+|[RoInitializeWrapper::~RoInitializeWrapper (destructor)](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Destruye la instancia actual de la **RoInitializeWrapper** clase.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[RoInitializeWrapper::HRESULT() (operador)](../windows/roinitializewrapper-hresult-parens-operator.md)|Recupera el valor HRESULT producido por el constructor RoInitializeWrapper.|  
+|[RoInitializeWrapper::HRESULT() (operador)](../windows/roinitializewrapper-hresult-parens-operator.md)|Recupera el valor HRESULT producido por la **RoInitializeWrapper** constructor.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `RoInitializeWrapper`  

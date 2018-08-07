@@ -1,5 +1,5 @@
 ---
-title: Interfacetraits (constante) | Documentos de Microsoft
+title: Interfacetraits constante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2664292324ebb395f3a5f260dec57360027c60e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf8808074e347f70290498adc83f55f488a75790
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874072"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602732"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>InterfaceTraits::IidCount (Constante)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ static const unsigned long IidCount = 1;
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Contiene el número de identificadores asociados con el objeto de InterfaceTraits actual de interfaz.  
+ Contiene el número de identificadores asociados con la actual interfaz **InterfaceTraits** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

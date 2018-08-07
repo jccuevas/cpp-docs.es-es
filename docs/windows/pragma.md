@@ -1,5 +1,5 @@
 ---
-title: pragma | Documentos de Microsoft
+title: pragma | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cab41277a7e5560fd842bf720fd776961d918d99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5abd483fb5a680ac3dba4ec01fc4bc6ebfa09ef2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878153"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602622"
 ---
 # <a name="pragma"></a>pragma
-Emite la cadena especificada en el archivo .idl generado sin el uso de comillas. .  
+Emite la cadena especificada en el archivo .idl generado sin el uso de comillas. 
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ pragma(  
+[ pragma(  
    pragma_statement  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
  *pragma_statement*  
- La pragma que van a incluirse en el archivo .idl generado.  
+ La pragma que desea entrar en el archivo .idl generado.  
   
 ## <a name="remarks"></a>Comentarios  
- El **pragma** atributo C++ tiene la misma funcionalidad que la [pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) atributo MIDL.  
+ El **pragma** atributo de C++ tiene la misma funcionalidad que el [pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_pragma.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

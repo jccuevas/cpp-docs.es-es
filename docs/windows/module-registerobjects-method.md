@@ -1,5 +1,5 @@
 ---
-title: 'Module:: registerobjects (método) | Documentos de Microsoft'
+title: Registerobjects (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 986dcfff49529eedd8d495f4c37e19fa2b6cb8bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdaa1b23bbefb64071e5f1f330c8708f9f9516ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875349"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605271"
 ---
 # <a name="moduleregisterobjects-method"></a>Module::RegisterObjects (Método)
-Registra objetos COM o en tiempo de ejecución de Windows para que otras aplicaciones puedan conectarse a ellos.  
+Registra los objetos COM o en tiempo de ejecución de Windows para que otras aplicaciones pueden conectarse a ellos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,15 +35,15 @@ HRESULT RegisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `module`  
+### <a name="parameters"></a>Parámetros  
+ *módulo*  
  Una matriz de objetos COM o en tiempo de ejecución de Windows.  
   
- `serverName`  
- Nombre del servidor que creó el objeto.  
+ *Nombre de servidor*  
+ Nombre del servidor que crea los objetos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que indica el motivo por el error en la operación.  
+ S_OK si se realiza correctamente; en caso contrario, un HRESULT que indica el motivo del error en la operación.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

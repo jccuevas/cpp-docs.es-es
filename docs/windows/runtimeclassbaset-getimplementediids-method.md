@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclassbaset:: Getimplementediids (método) | Documentos de Microsoft'
+title: Método Runtimeclassbaset | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea6ff871ef0ce886b393c948fc45accf3d8e245
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf29b5db15f88528012914476572cb1ccb21a07c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892239"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603256"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +38,18 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `T`  
- Tipo del parámetro `implements`.  
+### <a name="parameters"></a>Parámetros  
+ *T*  
+ El tipo de la *implementa* parámetro.  
   
- `implements`  
- Puntero al tipo especificado por el parámetro `T`.  
+ *Implementa*  
+ Puntero al tipo especificado por el parámetro *T*.  
   
- `iidCount`  
- El número máximo de identificadores de interfaz se van a recuperar.  
+ *iidCount*  
+ El número máximo de identificadores de interfaz para recuperar.  
   
- `iids`  
- Si esta operación completa correctamente, una matriz de los identificadores implementadas por el tipo de interfaz `T`.  
+ *IID*  
+ Si esta operación completa correctamente, una matriz de la interfaz implementadas por el tipo de identificadores *T*.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que describe el error.  

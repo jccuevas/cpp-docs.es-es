@@ -1,5 +1,5 @@
 ---
-title: New (nueva ranura en vtable) (extensiones de componentes de C++) | Documentos de Microsoft
+title: New (nueva ranura en vtable) (extensiones de componentes de C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32452b4fd44aed2bc399165b3184d974f22d90b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879788"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607016"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (nueva ranura en vtable) (Extensiones de componentes de C++)
-La palabra clave `new` indica que un miembro virtual obtendrá una nueva ranura en vtable.  
+El **nuevo** palabra clave indica que un miembro virtual obtendrá una nueva ranura en vtable.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
  (No hay notas para esta característica de lenguaje que se apliquen a todos los runtimes).  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
- No se admite en tiempo de ejecución de Windows.  
+ No se admite en Windows en tiempo de ejecución.  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Comentarios**  
+### <a name="remarks"></a>Comentarios  
   
- En un **/CLR** compilación, `new` indica que un miembro virtual obtendrá una nueva ranura en vtable; que la función no reemplaza un método de clase base.  
+ En un `/clr` compilación, **nuevo** indica que un miembro virtual obtendrá una nueva ranura en vtable; que la función no invalida un método de clase base.  
   
- `new` hace que el modificador newslot se agregue al IL para la función.  Para obtener más información sobre newslot, vea:  
+ **nueva** hace que el modificador newslot se agregue al IL para la función.  Para obtener más información sobre newslot, vea:  
   
--   [Método MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [Método MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [Enumeración MethodAttributes](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [Enumeración MethodAttributes](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/clr**  
+ Opción del compilador: `/clr`  
   
 ### <a name="examples"></a>Ejemplos  
- **Ejemplo**  
   
- En el siguiente ejemplo se muestra el efecto de `new`.  
+ El ejemplo siguiente muestra el efecto de **nuevo**.  
   
-```  
+```cpp  
 // newslot.cpp  
 // compile with: /clr  
 ref class C {  

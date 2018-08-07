@@ -1,5 +1,5 @@
 ---
-title: 'Implements:: fillarraywithiid (método) | Documentos de Microsoft'
+title: Fillarraywithiid (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e020bd725d0c0f5c65ab1cfb38b45e2b8fbca62e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6797c274402578cfecb522c86745fb5b257e213d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875726"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608863"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid (Método)
-Inserta el identificador de interfaz especificado por el parámetro de plantilla actual de cero en el elemento de la matriz especificada.  
+Inserta el Id. de interfaz especificado por el parámetro de plantilla actual de cero en el elemento de matriz especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,11 +36,11 @@ __forceinline static void FillArrayWithIid(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `index`  
- Índice de base cero que indica el elemento de matriz inicial para esta operación. Cuando se complete esta operación, `index` se incrementa en 1.  
+### <a name="parameters"></a>Parámetros  
+ *index*  
+ Índice de base cero que indica el elemento de matriz inicial para esta operación. Cuando se complete esta operación, *índice* se incrementa en 1.  
   
- `iids`  
+ *IID*  
  Una matriz de tipo IID.  
   
 ## <a name="remarks"></a>Comentarios  

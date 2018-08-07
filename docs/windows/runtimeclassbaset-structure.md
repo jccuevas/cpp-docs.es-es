@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassBaseT (estructura) | Documentos de Microsoft
+title: RuntimeClassBaseT (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec10faf9733bbff3fb271b5465ee70a338c37898
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888999"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604998"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT (Estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,12 +34,12 @@ template <
 friend struct Details::RuntimeClassBaseT;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `RuntimeClassTypeT`  
- Un campo de indicadores que especifica uno o varios [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) los enumeradores.  
+### <a name="parameters"></a>Parámetros  
+ *RuntimeClassTypeT*  
+ Un campo de marcas que especifica uno o más [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeradores.  
   
 ## <a name="remarks"></a>Comentarios  
- Proporciona métodos auxiliares para `QueryInterface` operaciones y obtener identificadores de interfaz.  
+ Proporciona métodos auxiliares para `QueryInterface` operaciones y obtener los identificadores de interfaz.  
   
 ## <a name="members"></a>Miembros  
   
@@ -52,5 +52,5 @@ friend struct Details::RuntimeClassBaseT;
  **Namespace:** wrl  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia (biblioteca de tiempo de ejecución de Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Referencia (biblioteca de tiempo de ejecución de Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

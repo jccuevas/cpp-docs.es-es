@@ -1,5 +1,5 @@
 ---
-title: immediatebind | Documentos de Microsoft
+title: immediatebind | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ee885c138bec9c7fea9adcc3d48b5b23e33a2ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a9979ec16009de680facdc6e8fc22b3d3cdccc3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876269"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603060"
 ---
 # <a name="immediatebind"></a>immediatebind
-Indica que se notificará inmediatamente a la base de datos de todos los cambios a una propiedad de un objeto enlazado a datos.  
+Indica que la base de datos será notificada inmediatamente de todos los cambios a una propiedad de un objeto enlazado a datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [immediatebind]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **immediatebind** atributo C++ tiene la misma funcionalidad que la [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) atributo MIDL.  
+ El **immediatebind** atributo de C++ tiene la misma funcionalidad que el [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- Vea [enlazables](../windows/bindable.md) para obtener un ejemplo de cómo usar **immediatebind**.  
+ Consulte [enlazable](../windows/bindable.md) para obtener un ejemplo de cómo usar **immediatebind**.  
   
 ## <a name="requirements"></a>Requisitos  
   

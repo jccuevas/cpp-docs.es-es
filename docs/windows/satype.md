@@ -1,5 +1,5 @@
 ---
-title: satype | Documentos de Microsoft
+title: satype | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a77021cbcf6622701a1025ef33000196ba7bb6d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a5376e0e830654c15dc31522b07ed53af4492bf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888687"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603399"
 ---
 # <a name="satype"></a>satype
-Especifica el tipo de datos de la **SAFEARRAY** estructura.  
+Especifica el tipo de datos de la `SAFEARRAY` estructura.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ satype(  
+[ satype(  
    data_type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *data_type*  
- El tipo de datos para la **SAFEARRAY** estructura de datos que se pasa como parámetro a un método de interfaz.  
+ Tipo de datos de la `SAFEARRAY` estructura de datos que se pasa como parámetro a un método de interfaz.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -52,14 +51,14 @@ Especifica el tipo de datos de la **SAFEARRAY** estructura.
 |**Atributos no válidos**|Ninguna|  
   
 ## <a name="remarks"></a>Comentarios  
- El **satype** C++ atributo especifica el tipo de datos de la **SAFEARRAY**.  
+ El **satype** atributo de C++ especifica el tipo de datos de la `SAFEARRAY`.  
   
 > [!NOTE]
->  Un nivel de direccionamiento indirecto se quita de la **SAFEARRAY** puntero en el archivo .idl generado de cómo se declara en el archivo .cpp.  
+>  Un nivel de direccionamiento indirecto se quita de la `SAFEARRAY` puntero en el archivo .idl generado de forma se declara en el archivo .cpp.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_satype.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

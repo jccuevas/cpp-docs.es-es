@@ -1,5 +1,5 @@
 ---
-title: 'operador! = (operador) (Microsoft:: wrl) | Documentos de Microsoft'
+title: 'operador! = (operador) (Microsoft:: wrl) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c972687973cbaa66d4b79a883e8b008cd588e237
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 517184dffac0c35772e61284a18eca764fbb5cc8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876402"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603985"
 ---
 # <a name="operator-operator-microsoftwrl"></a>Operador operator!= (Microsoft::WRL)
 Operador de desigualdad para [ComPtr](../windows/comptr-class.md) y [ComPtrRef](../windows/comptrref-class.md) objetos.  
@@ -62,15 +62,15 @@ WRL_NOTHROW bool operator!=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `a`  
+### <a name="parameters"></a>Parámetros  
+ *a*  
  Objeto izquierdo.  
   
- `b`  
+ *b*  
  Objeto derecho.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Si los objetos no son iguales; en caso contrario, `false`.  
+ **True** si los objetos no son iguales; en caso contrario, **false**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  

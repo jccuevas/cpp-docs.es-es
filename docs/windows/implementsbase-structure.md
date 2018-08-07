@@ -1,5 +1,5 @@
 ---
-title: ImplementsBase (estructura) | Documentos de Microsoft
+title: ImplementsBase (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae5d91f5e7d8f2a057ba05ede5051e14f9787fb0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b6584277586f8b9bbefca020b66fb00a0ad74a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875778"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603969"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ struct ImplementsBase;
 ## <a name="remarks"></a>Comentarios  
  Utilizado para validar los tipos de parámetro de plantilla en [Implements (estructura)](../windows/implements-structure.md).  
   
- ImplementsBase (estructura) está vacía en el diseño.  
+ El **ImplementsBase** estructura está vacía por diseño.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `ImplementsBase`  

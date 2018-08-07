@@ -1,5 +1,5 @@
 ---
-title: last_is | Documentos de Microsoft
+title: last_is | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f27c0a12ddf5fe87f7065a16d042bd0afcfc0315
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0519409e71457ca025318a591772faf33592abe
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877526"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606073"
 ---
 # <a name="lastis"></a>last_is
 Especifica el índice del último elemento de matriz que se transmitan.  
@@ -30,21 +30,20 @@ Especifica el índice del último elemento de matriz que se transmitan.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ last_is(  
+[ last_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *Expresión*  
- Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumento vacío.  
+ Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.  
   
 ## <a name="remarks"></a>Comentarios  
- El **last_is** atributo C++ tiene la misma funcionalidad que la [last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) atributo MIDL.  
+ El **last_is** atributo de C++ tiene la misma funcionalidad que el [last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- Vea [first_is](../windows/first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.  
+ Consulte [first_is](../windows/first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -52,7 +51,7 @@ Especifica el índice del último elemento de matriz que se transmitan.
   
 |||  
 |-|-|  
-|**Se aplica a**|Campo de `struct` o **union**, la interfaz de parámetro, el método de interfaz|  
+|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

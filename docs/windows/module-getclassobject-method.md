@@ -1,5 +1,5 @@
 ---
-title: 'Module:: GetClassObject (método) | Documentos de Microsoft'
+title: GetClassObject (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9205b04fc27e1c6e0e6133a08c3c2f69ffdfc314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63ff6c63702cda709f4431d9c7e5be5a4bdb8449
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878543"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602658"
 ---
 # <a name="modulegetclassobject-method"></a>Module::GetClassObject (Método)
 Recupera una memoria caché de generadores de clases.  
@@ -38,23 +38,23 @@ Recupera una memoria caché de generadores de clases.
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `clsid`  
+### <a name="parameters"></a>Parámetros  
+ *CLSID*  
  Identificador de clase.  
   
- `riid`  
- Identificador de interfaz que se solicita.  
+ *riid*  
+ Id. de interfaz que solicita.  
   
- `ppv`  
+ *PPV*  
  Puntero al objeto devuelto.  
   
- `serverName`  
- El nombre del servidor que se especifica en la vista la `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, o `ActivatableClass` macro; o `nullptr` para obtener el nombre del servidor predeterminado.  
+ *Nombre de servidor*  
+ El nombre del servidor que se especifica en uno el `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, o `ActivatableClass` macro; o **nullptr** para obtener el nombre del servidor predeterminado.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 ## <a name="remarks"></a>Comentarios  
- Use este método solo para COM, no el tiempo de ejecución de Windows. Este método expone solo IClassFactory métodos.  
+ Use este método solo para COM, no el tiempo de ejecución de Windows. Este método solo expone `IClassFactory` métodos.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

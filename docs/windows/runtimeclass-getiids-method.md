@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Getiids (método) | Documentos de Microsoft'
+title: Método Runtimeclass | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c309c97b9c9ce057ca67ab4b5d729c61d803ea5a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f51d39bf1ff8c7d4271797dcaa23278ac2e747
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888435"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608448"
 ---
 # <a name="runtimeclassgetiids-method"></a>RuntimeClass::GetIids (Método)
-Obtiene una matriz que puede contener la interfaz identificadores implementados por el objeto de RuntimeClass actual.  
+Obtiene una matriz que puede contener la interfaz implementadas por la actual de identificadores **RuntimeClass** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,11 +37,11 @@ STDMETHOD(
    _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `iidCount`  
- Cuando se completa esta operación, el número total de elementos de matriz `iids`.  
+### <a name="parameters"></a>Parámetros  
+ *iidCount*  
+ Cuando finalice esta operación, el número total de elementos de matriz *IID*.  
   
- `iids`  
+ *IID*  
  Cuando se completa esta operación, un puntero a una matriz de identificadores de interfaz.  
   
 ## <a name="return-value"></a>Valor devuelto  

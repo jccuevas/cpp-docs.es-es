@@ -1,7 +1,7 @@
 ---
 title: Límites flotantes | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/03/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -19,40 +19,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a111d2ea3e8e5503754b0d9c0c1a4f69170a41c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 85a31aea113514651fc3e81ac147b5ea2974920c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401764"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604299"
 ---
 # <a name="floating-limits"></a>Límites flotantes
-**Específicos de Microsoft**  
-  
- En la tabla siguiente se hace una lista de los límites de los valores de las constantes de punto flotante. Estos límites también se definen en el archivo de encabezado estándar \<float.h >.  
-  
-### <a name="limits-on-floating-point-constants"></a>Límites en constantes de punto flotante  
-  
-|Constante|Significado|Valor|  
-|--------------|-------------|-----------|  
-|FLT_DIG DBL_DIG LDBL_DIG|Número de dígitos, q, tal que un número de punto flotante con q dígitos decimales se puede redondear en una representación de punto flotante y se puede restablecer sin pérdida de precisión.|6 15 15|  
-|FLT_EPSILON DBL_EPSILON LDBL_EPSILON|Número positivo menor x, tal que x + 1,0 no es igual a 1,0.|1.192092896e-07F 2, 2204460492503131e-2, 016 2204460492503131e-016|  
-|FLT_GUARD||0|  
-|FLT_MANT_DIG DBL_MANT_DIG LDBL_MANT_DIG|Número de dígitos en la base especificada por FLT_RADIX en el significado de punto flotante. La base es 2. por lo tanto, estos valores especifican los bits.|24 53 53|  
-|FLT_MAX DBL_MAX LDBL_MAX|Máximo número de punto flotante que se puede representar.|3,402823466e+38F 1,7976931348623158e+308 1,7976931348623158e+308|  
-|FLT_MAX_10_EXP DBL_MAX_10_EXP LDBL_MAX_10_EXP|Entero máximo tal que 10 elevado a dicho número es un número de punto flotante que se puede representar.|38 308 308|  
-|FLT_MAX_EXP DBL_MAX_EXP LDBL_MAX_EXP|Entero máximo tal que FLT_RADIX elevado a dicho número es un número de punto flotante que se puede representar.|128 1024 1024|  
-|FLT_MIN DBL_MIN LDBL_MIN|Valor positivo mínimo.|1.175494351e-38F 2. 2250738585072014E-308 2. 2250738585072014E-308|  
-|FLT_MIN_10_EXP DBL_MIN_10_EXP LDBL_MIN_10_EXP|Entero negativo mínimo tal que 10 elevado a dicho número es un número de punto flotante que se puede representar.|-37<br /><br /> -307<br /><br /> -307|  
-|FLT_MIN_EXP DBL_MIN_EXP LDBL_MIN_EXP|Entero negativo mínimo tal que FLT_RADIX elevado a dicho número es un número de punto flotante que se puede representar.|-125<br /><br /> -1021<br /><br /> -1021|  
-|FLT_NORMALIZE||0|  
-|FLT_RADIX _DBL_RADIX _LDBL_RADIX|Base de representación de exponente.|2 2 2|  
-|FLT_ROUNDS _DBL_ROUNDS _LDBL_ROUNDS|Modo de redondeo para la adición de punto flotante.|1 (próximo) 1 (próximo) 1 (próximo)|  
-  
+
+**Específicos de Microsoft**
+
+En la tabla siguiente se hace una lista de los límites de los valores de las constantes de punto flotante. Estos límites también se definen en el archivo de encabezado estándar \<float.h >.  
+
+## <a name="limits-on-floating-point-constants"></a>Límites en constantes de punto flotante
+
+|Constante|Significado|Valor|
+|--------------|-------------|-----------|
+|`FLT_DIG`<br/>`DBL_DIG`<br/>`LDBL_DIG`|Número de dígitos, q, tal que un número de punto flotante con q dígitos decimales se puede redondear en una representación de punto flotante y se puede restablecer sin pérdida de precisión.|6<br/>15<br/>15|
+|`FLT_EPSILON`<br/>`DBL_EPSILON`<br/>`LDBL_EPSILON`|Número positivo menor x, tal que x + 1,0 no es igual a 1,0.|1.192092896e-07F<br/>2.2204460492503131e-016<br/>2.2204460492503131e-016|
+|`FLT_GUARD`||0|
+|`FLT_MANT_DIG`<br/>`DBL_MANT_DIG`<br/>`LDBL_MANT_DIG`|Número de dígitos en la base especificada por `FLT_RADIX` en el significado de punto flotante. La base es 2. por lo tanto, estos valores especifican los bits.|24<br/>53<br/>53|
+|`FLT_MAX`<br/>`DBL_MAX`<br/>`LDBL_MAX`|Máximo número de punto flotante que se puede representar.|3.402823466e+38F<br/>1.7976931348623158e+308<br/>1.7976931348623158e+308|
+|`FLT_MAX_10_EXP`<br/>`DBL_MAX_10_EXP`<br/>`LDBL_MAX_10_EXP`|Entero máximo tal que 10 elevado a dicho número es un número de punto flotante que se puede representar.|38<br/>308<br/>308|
+|`FLT_MAX_EXP`<br/>`DBL_MAX_EXP`<br/>`LDBL_MAX_EXP`|Entero máximo tal que `FLT_RADIX` elevado a dicho número es un número de punto flotante que se puede representar.|128<br/>1024<br/>1024|
+|`FLT_MIN`<br/>`DBL_MIN`<br/>`LDBL_MIN`|Valor positivo mínimo.|1.175494351e-38F<br/>2.2250738585072014e-308<br/>2.2250738585072014e-308|
+|`FLT_MIN_10_EXP`<br/>`DBL_MIN_10_EXP`<br/>`LDBL_MIN_10_EXP`|Entero negativo mínimo tal que 10 elevado a dicho número es un número de punto flotante que se puede representar.|-37<br/>-307<br/>-307|
+|`FLT_MIN_EXP`<br/>`DBL_MIN_EXP`<br/>`LDBL_MIN_EXP`|Entero negativo mínimo tal que `FLT_RADIX` elevado a dicho número es un número de punto flotante que se puede representar.|-125<br/>-1021<br/>-1021|
+|`FLT_NORMALIZE`||0|
+|`FLT_RADIX`<br/>`_DBL_RADIX`<br/>`_LDBL_RADIX`|Base de representación de exponente.|2<br/>2<br/>2|
+|`FLT_ROUNDS`<br/>`_DBL_ROUNDS`<br/>`_LDBL_ROUNDS`|Modo de redondeo para la adición de punto flotante.|1 (próximo)<br/>1 (próximo)<br/>1 (próximo)|
+
 > [!NOTE]
->  La información de la tabla puede ser diferente en versiones futuras del producto.  
-  
-**FIN de Específicos de Microsoft**  
-  
-## <a name="see-also"></a>Vea también  
- [Límites de enteros](../cpp/integer-limits.md)
+>  La información de la tabla puede ser diferente en versiones futuras del producto.
+
+**FIN de Específicos de Microsoft**
+
+## <a name="see-also"></a>Vea también
+
+[Límites de enteros](../cpp/integer-limits.md)  

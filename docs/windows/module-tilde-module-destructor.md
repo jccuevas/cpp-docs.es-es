@@ -1,5 +1,5 @@
 ---
-title: 'Module:: ~ Module (destructor) | Documentos de Microsoft'
+title: 'Module:: ~ Module (destructor) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85f5a483b329525d44688c61ac57df8d3b2ef1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f6c27924788be435a9388c1f8e3d24560a4279e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881369"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604322"
 ---
 # <a name="modulemodule-destructor"></a>Module::~Module (Destructor)
-Desinicializa la instancia actual de la clase de módulo.  
+Desinicializa la instancia actual de la **módulo** clase.  
   
 ## <a name="syntax"></a>Sintaxis  
   

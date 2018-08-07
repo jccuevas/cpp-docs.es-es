@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Casttounknown (método) | Documentos de Microsoft'
+title: Método Implementshelper | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874504"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604244"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,7 +37,7 @@ IUnknown* CastToUnknown();
  Puntero a la interfaz IUnknown subyacente.  
   
 ## <a name="remarks"></a>Comentarios  
- Obtiene un puntero a la interfaz IUnknown subyacente para la estructura implementa actual.  
+ Obtiene un puntero subyacente `IUnknown` interfaz actual `Implements` estructura.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

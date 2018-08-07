@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Getweakreference (método) | Documentos de Microsoft'
+title: Getweakreference (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e49703e96728e7287206aa264ce12deaad611495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb0d5e6ca19749a4647ec85311e1fce0e7561b59
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888224"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608539"
 ---
 # <a name="runtimeclassgetweakreference-method"></a>RuntimeClass::GetWeakReference (Método)
-Obtiene un puntero al objeto de referencia débil para el objeto de RuntimeClass actual.  
+Obtiene un puntero al objeto de referencia débil actual **RuntimeClass** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,8 +35,8 @@ STDMETHOD(
 )(_Deref_out_ IWeakReference **weakReference);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `weakReference`  
+### <a name="parameters"></a>Parámetros  
+ *weakReference*  
  Cuando se completa esta operación, un puntero a un objeto de referencia débil.  
   
 ## <a name="return-value"></a>Valor devuelto  

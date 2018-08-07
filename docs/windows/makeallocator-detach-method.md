@@ -1,5 +1,5 @@
 ---
-title: 'Makeallocator:: Detach (método) | Documentos de Microsoft'
+title: Método Makeallocator | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50afca04492c29aa526f7a004c6e0f725022e9ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a269b7cbab3bba180dfc389075346db3c60e8bf0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876974"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603373"
 ---
 # <a name="makeallocatordetach-method"></a>MakeAllocator::Detach (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,9 +34,9 @@ __forceinline void Detach();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Desasocia la memoria asignada por el [Allocate](../windows/makeallocator-allocate-method.md) método MakeAllocator del objeto actual.  
+ Desasocia la memoria asignada por el [Allocate](../windows/makeallocator-allocate-method.md) método desde la actual **MakeAllocator** objeto.  
   
- Si se llama a Detach(), es responsabilidad suya eliminar la memoria proporcionada por el método de asignación.  
+ Si se llama a **Detach()**, usted es responsable de eliminar la memoria proporcionada por el `Allocate` método.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

@@ -1,5 +1,5 @@
 ---
-title: pointer_default | Documentos de Microsoft
+title: pointer_default | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee904f9243cf642d3a942d4bc323f5ec381b0480
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 562bc3ebd0c80423eb94d2bc328f72aed8e67985
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877467"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604394"
 ---
 # <a name="pointerdefault"></a>pointer_default
 Especifica el atributo de puntero predeterminado para todos los punteros, excepto los punteros de nivel superior que aparecen en las listas de parámetros.  
@@ -30,18 +30,17 @@ Especifica el atributo de puntero predeterminado para todos los punteros, except
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ pointer_default(  
+[ pointer_default(  
    value  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
  *valor*  
- Un valor que describe el tipo de puntero: **ptr**, `ref`, o **único**.  
+ Un valor que describe el tipo de puntero: **ptr**, **ref**, o **único**.  
   
 ## <a name="remarks"></a>Comentarios  
- El **pointer_default** atributo C++ tiene la misma funcionalidad que la [pointer_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) atributo MIDL.  
+ El **pointer_default** atributo de C++ tiene la misma funcionalidad que el [pointer_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [defaultvalue](../windows/defaultvalue.md) para un ejemplo de uso de **pointer_default**.  
@@ -52,7 +51,7 @@ Especifica el atributo de puntero predeterminado para todos los punteros, except
   
 |||  
 |-|-|  
-|**Se aplica a**|`interface`|  
+|**Se aplica a**|**interface**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

@@ -1,5 +1,5 @@
 ---
-title: Constructor Makeallocator | Documentos de Microsoft
+title: Constructor Makeallocator | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b9095daa4ff1dca77c78c11ac41d8747d889d32
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06e12754594fe2f155be9502c2059fb6ba5f84e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874946"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608214"
 ---
 # <a name="makeallocatormakeallocator-constructor"></a>MakeAllocator::MakeAllocator (Constructor)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ MakeAllocator();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Inicializa una nueva instancia de la clase MakeAllocator.  
+ Inicializa una nueva instancia de la **MakeAllocator** clase.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

@@ -1,5 +1,5 @@
 ---
-title: intervalo (C++) | Documentos de Microsoft
+title: intervalo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac5f0e81a7d29d89e32735224afed67f3d9c9101
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877935"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603447"
 ---
 # <a name="range-c"></a>range (C++)
-Especifica un intervalo de valores permitidos para argumentos o los campos cuyos valores se establecen en tiempo de ejecución.  
+Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ range(  
+[ range(  
    low,   
    high  
 ) ]  
@@ -45,11 +44,11 @@ Especifica un intervalo de valores permitidos para argumentos o los campos cuyos
  El valor de rango alto.  
   
 ## <a name="remarks"></a>Comentarios  
- El **intervalo** atributo C++ tiene la misma funcionalidad que la [intervalo](http://msdn.microsoft.com/library/windows/desktop/aa367151) atributo MIDL.  
+ El **intervalo** atributo de C++ tiene la misma funcionalidad que el [intervalo](http://msdn.microsoft.com/library/windows/desktop/aa367151) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_range.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

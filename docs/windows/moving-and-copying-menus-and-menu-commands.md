@@ -1,5 +1,5 @@
 ---
-title: Mover y copiar menús y comandos de menú | Documentos de Microsoft
+title: Mover y copiar menús y comandos de menú | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0da935ebdce7de61d5ed6b1a816f87b7cef7ce98
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccab1e53fcbb407b6af7683b7aaaef75b0bb9789
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878442"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606596"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>Mover y copiar menús y comandos de menú
 Puede mover o copiar menús y comandos de menú mediante el método de arrastrar y colocar o usando los comandos del menú contextual (menú que se abre al hacer clic con el botón derecho).  
@@ -53,9 +53,9 @@ Puede mover o copiar menús y comandos de menú mediante el método de arrastrar
     > [!NOTE]
     >  También puede arrastrar, copiar y pegar en otros menús de otras ventanas de menú.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* . Para información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* . Para información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Requisitos**  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   
