@@ -53,7 +53,7 @@ El compilador genera una cadena de identificador para cada construcción del có
   
     -   ELEMENT_TYPE_PTR se representa como un "*" después del tipo modificado.  
   
-    -   ELEMENT_TYPE_BYREF se representa como "@" después del tipo modificado.  
+    -   ELEMENT_TYPE_BYREF se representa como "\@" después del tipo modificado.  
   
     -   ELEMENT_TYPE_PINNED se representa como "^" después del tipo modificado. El compilador de Visual C++ nunca genera este resultado.  
   
