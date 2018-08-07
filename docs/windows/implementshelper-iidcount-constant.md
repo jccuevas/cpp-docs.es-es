@@ -1,5 +1,5 @@
 ---
-title: Implementshelper (constante) | Documentos de Microsoft
+title: Implementshelper constante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa63cfa765d54d20b943aa3a4aabf3dc51a16984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f08564088d00df332db43f207284dae9fc99109
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874007"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604260"
 ---
 # <a name="implementshelperiidcount-constant"></a>ImplementsHelper::IidCount (Constante)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 static const unsigned long IidCount;  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Contiene el número de identificadores de interfaz implementada en el objeto implementa actual.  
+ Contiene el número de identificadores de interfaz implementada en el actual `Implements` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

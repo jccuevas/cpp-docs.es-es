@@ -1,5 +1,5 @@
 ---
-title: nonbrowsable | Documentos de Microsoft
+title: nonbrowsable | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb752c02eb200e952cf247684675ebd377eeaaa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a7bdd285ed74c7792a34cfe99e0a900d42d6bc26
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877373"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604595"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 Indica que un miembro de interfaz no debe mostrarse en un explorador de propiedades.  
@@ -30,17 +30,15 @@ Indica que un miembro de interfaz no debe mostrarse en un explorador de propieda
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [nonbrowsable]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **nonbrowsable** atributo C++ tiene la misma funcionalidad que la [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) atributo MIDL.  
+ El **nonbrowsable** atributo de C++ tiene la misma funcionalidad que el [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_nonbrowsable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

@@ -1,5 +1,5 @@
 ---
-title: max_is | Documentos de Microsoft
+title: max_is | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 697eff3264c7e4a627086b072ae45b3c7ffedac2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3fae7ee95255d72d2799a5913821606f770e2b3b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878975"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608435"
 ---
 # <a name="maxis"></a>max_is
 Designa el valor máximo para un índice de matriz válida.  
@@ -30,18 +30,17 @@ Designa el valor máximo para un índice de matriz válida.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ max_is(  
+[ max_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
  *Expresión*  
- Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumento vacío.  
+ Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.  
   
 ## <a name="remarks"></a>Comentarios  
- El **max_is** atributo C++ tiene la misma funcionalidad que la [max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) atributo MIDL.  
+ El **max_is** atributo de C++ tiene la misma funcionalidad que el [max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) atributo MIDL.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -49,7 +48,7 @@ Designa el valor máximo para un índice de matriz válida.
   
 |||  
 |-|-|  
-|**Se aplica a**|Campo de `struct` o **union**, la interfaz de parámetro, el método de interfaz|  
+|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|**size_is**|  
@@ -57,7 +56,7 @@ Designa el valor máximo para un índice de matriz válida.
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Ejemplo  
- Vea [first_is](../windows/first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.  
+ Consulte [first_is](../windows/first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.  
   
 ## <a name="see-also"></a>Vea también  
  [Atributos IDL](../windows/idl-attributes.md)   

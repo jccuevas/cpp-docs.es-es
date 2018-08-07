@@ -1,5 +1,5 @@
 ---
-title: Especificadores de invalidación (extensiones de componente de C++) | Documentos de Microsoft
+title: Especificadores de invalidación (extensiones de componente de C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb610157d1d56c00b48e98086137351e9fd43a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f84379e57dc5730227726d28c6947d0274b615c5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882767"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603919"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Especificadores de invalidación (Extensiones de componentes de C++)
-*Especificadores de invalidación* modificar cómo heredados tipos y miembros de tipos heredados se comportan en los tipos derivados.  
+*Especificadores de invalidación* modificar tipos cómo heredados y miembros de tipos heredados se comportan en tipos derivados.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
- **Comentarios**  
+### <a name="remarks"></a>Comentarios  
   
  Para obtener más información acerca de los especificadores de invalidación, vea:  
   
@@ -41,21 +41,21 @@ ms.locfileid: "33882767"
   
 -   [Especificadores de invalidación y compilaciones nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
   
- `abstract` y `sealed` también son válidos en declaraciones de tipos, donde no actúan como especificadores de invalidación.  
+ **abstracta** y **sealed** también son válidos en declaraciones de tipos, donde no actúan como especificadores de invalidación.  
   
- Para obtener información sobre cómo reemplazar explícitamente funciones de clase base, vea [reemplazos explícitos](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Para obtener información sobre cómo reemplazar explícitamente funciones de clase base, vea [invalidaciones explícitas](../windows/explicit-overrides-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
  (No hay notas para esta característica de lenguaje que solo se apliquen a Windows Runtime).  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/ZW**  
+ Opción del compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  (No hay notas para esta característica de lenguaje que solo se apliquen a Common Language Runtime).  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/clr**  
+ Opción del compilador: `/clr`  
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

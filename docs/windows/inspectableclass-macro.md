@@ -1,5 +1,5 @@
 ---
-title: InspectableClass (macro) | Documentos de Microsoft
+title: Inspectableclass (macro) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 922f7f74771125aed0122c408ef902da2569e5c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a02e20f2b87afc312c24683417f808d636c2757f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873776"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608961"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass (Macro)
 Establece el nivel de confianza y de nombre de clase en tiempo de ejecución.  
@@ -33,15 +33,15 @@ InspectableClass(
    trustLevel)  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `runtimeClassName`  
- El nombre de texto completo de la clase en tiempo de ejecución.  
+### <a name="parameters"></a>Parámetros  
+ *runtimeClassName*  
+ El nombre textual completo de la clase en tiempo de ejecución.  
   
- `trustLevel`  
+ *trustLevel*  
  Uno de los [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) valores enumerados.  
   
 ## <a name="remarks"></a>Comentarios  
- El `InspectableClass` macro puede utilizarse solo con los tipos en tiempo de ejecución de Windows.  
+ El **InspectableClass** macro puede utilizarse solo con tipos de Windows en tiempo de ejecución.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

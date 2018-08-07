@@ -1,5 +1,5 @@
 ---
-title: Releasenotifier (Constructor) | Documentos de Microsoft
+title: Releasenotifier (Constructor) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf21e1abc88c0fac0b9d20653fdb45c3706466d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93dca0500971f0bcfdefd017457e02bf6a033660
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882474"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608474"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Module::ReleaseNotifier::ReleaseNotifier (Constructor)
-Inicializa una nueva instancia de la clase releasenotifier.  
+Inicializa una nueva instancia de la **releasenotifier** clase.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,9 +33,9 @@ Inicializa una nueva instancia de la clase releasenotifier.
 ReleaseNotifier(bool release) throw();  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `release`  
- `true` Para eliminar esta instancia cuando se llama al método Release; `false` no eliminar esta instancia.  
+### <a name="parameters"></a>Parámetros  
+ *release*  
+ **True** para eliminar esta instancia cuando la `Release` se llama al método; **false** no eliminar esta instancia.  
   
 ## <a name="exceptions"></a>Excepciones  
   

@@ -1,5 +1,5 @@
 ---
-title: Issame (constante) | Documentos de Microsoft
+title: Issame constante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aaf248622b6306af1a3eeebb258b296be43448da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e9d1ae2b4ea4ad4769a770d503ff8bd82c91a53a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875245"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608792"
 ---
 # <a name="issamevalue-constant"></a>IsSame::value (Constante)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
   template <typename T1, typename T2>  
 struct IsSame  
 {  
@@ -42,7 +41,6 @@ struct IsSame<T1, T1>
 {  
     static const bool value = true;  
 };  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  

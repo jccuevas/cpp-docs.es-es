@@ -1,5 +1,5 @@
 ---
-title: objeto (C++) | Documentos de Microsoft
+title: objeto (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 601d67fb48f0ae826474d33e7dca0fbffff9478c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c0705c5d841b63cd3f537ab39dbbe9122fea869
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879713"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607915"
 ---
 # <a name="object-c"></a>object (C++)
 Identifica una interfaz personalizada.  
@@ -30,18 +30,16 @@ Identifica una interfaz personalizada.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [object]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando precede a una definición de interfaz, el **objeto** atributo C++ hace que la interfaz que se colocarán en el archivo .idl como una interfaz personalizada.  
+ Cuando precede a una definición de interfaz, el **objeto** la interfaz que se colocarán en el archivo .idl como una interfaz personalizada hace que el atributo de C++.  
   
- Cualquier interfaz marcada con el objeto debe heredar de **IUnknown**. Esta condición se cumple si cualquiera de las interfaces base se hereda de **IUnknown**. Si no hay ninguna interfaz base se hereda de **IUnknown**, el compilador hará que la interfaz marcada con **objeto** pueden derivar **IUnknown**.  
+ Cualquier interfaz marcada con el objeto debe heredar de `IUnknown`. Esta condición se cumple si cualquiera de las interfaces bases se hereda de `IUnknown`. Si no hay interfaces bases se heredan de `IUnknown`, el compilador hará que la interfaz marcada con **objeto** derivar `IUnknown`.  
   
 ## <a name="example"></a>Ejemplo  
- Vea [nonbrowsable](../windows/nonbrowsable.md) para obtener un ejemplo de cómo usar **objeto**.  
+ Consulte [nonbrowsable](../windows/nonbrowsable.md) para obtener un ejemplo de cómo usar **objeto**.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -49,7 +47,7 @@ Identifica una interfaz personalizada.
   
 |||  
 |-|-|  
-|**Se aplica a**|`interface`|  
+|**Se aplica a**|**interface**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  
@@ -59,7 +57,7 @@ Identifica una interfaz personalizada.
 ## <a name="see-also"></a>Vea también  
  [Atributos IDL](../windows/idl-attributes.md)   
  [Atributos de interfaz](../windows/interface-attributes.md)   
- [Doble](../windows/dual.md)   
- [Dispinterface](../windows/dispinterface.md)   
- [Personalizada](../windows/custom-cpp.md)   
+ [Dual](../windows/dual.md)   
+ [Interfaz dispinterface](../windows/dispinterface.md)   
+ [Personalizado](../windows/custom-cpp.md)   
  [__interface](../cpp/interface.md)   

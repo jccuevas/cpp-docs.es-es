@@ -1,5 +1,5 @@
 ---
-title: 'Module:: unregistercomobject (método) | Documentos de Microsoft'
+title: Unregistercomobject (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4cc44d88f59e18f2c1644e9b27a9214ad32962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c19e7b5388438b8c3c2359672360e4a2ee3001a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881941"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602635"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject (Método)
-Anula el registro de uno o varios objetos COM, lo que impide que otras aplicaciones conectarse a ellos.  
+Anula el registro de uno o más objetos COM, lo que impide que otras aplicaciones que se conecten a ellos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,18 +36,18 @@ virtual HRESULT UnregisterCOMObject(
    unsigned int count  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `serverName`  
+### <a name="parameters"></a>Parámetros  
+ *Nombre de servidor*  
  (Sin usar)  
   
- `cookies`  
- Una matriz de punteros a valores que identifican los objetos de clase se va a anular. La matriz creada por el [RegisterCOMObject](../windows/module-registercomobject-method.md) método.  
+ *Cookies*  
+ Una matriz de punteros a valores que identifican los objetos de clase va a anular. La matriz creada por el [RegisterCOMObject](../windows/module-registercomobject-method.md) método.  
   
- `count`  
+ *count*  
  El número de clases para anular el registro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si esta operación se realiza correctamente; en caso contrario, un valor HRESULT que indica el motivo del error Error en la operación.  
+ S_OK si esta operación se realiza correctamente; en caso contrario, un error HRESULT que indica el motivo por el error en la operación.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

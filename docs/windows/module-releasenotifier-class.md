@@ -1,5 +1,5 @@
 ---
-title: Releasenotifier (clase) | Documentos de Microsoft
+title: Releasenotifier (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76edb403fae12dd8b6221d8bd6ec82424bc5a4f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1deeb3076d3f1bfc2243ec333f258f543a37fceb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878397"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608396"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier (Clase)
-Invoca un controlador de eventos cuando se libera el último objeto en un módulo.  
+Invoca un controlador de eventos cuando se libera el último objeto de un módulo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,15 +39,15 @@ class ReleaseNotifier;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Module::ReleaseNotifier::~ReleaseNotifier (destructor)](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Desinicializa la instancia actual de la clase releasenotifier.|  
-|[Module::ReleaseNotifier::ReleaseNotifier (constructor)](../windows/module-releasenotifier-releasenotifier-constructor.md)|Inicializa una nueva instancia de la clase releasenotifier.|  
+|[Module::ReleaseNotifier::~ReleaseNotifier (destructor)](../windows/module-releasenotifier-tilde-releasenotifier-destructor.md)|Desinicializa la instancia actual de la **releasenotifier** clase.|  
+|[Module::ReleaseNotifier::ReleaseNotifier (constructor)](../windows/module-releasenotifier-releasenotifier-constructor.md)|Inicializa una nueva instancia de la **releasenotifier** clase.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Module::ReleaseNotifier::Invoke (método)](../windows/module-releasenotifier-invoke-method.md)|Cuando se implementa, llama a un controlador de eventos cuando se libera el último objeto en un módulo.|  
-|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|Elimina el objeto de releasenotifier actual si el objeto se construyó con un parámetro de `true`.|  
+|[Module::ReleaseNotifier::Invoke (método)](../windows/module-releasenotifier-invoke-method.md)|Cuando se implementa, llama a un controlador de eventos cuando se libera el último objeto de un módulo.|  
+|[Module::ReleaseNotifier::Release](../windows/module-releasenotifier-release.md)|Elimina la actual **releasenotifier** objeto si el objeto se construyó con un parámetro de **true**.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `ReleaseNotifier`  

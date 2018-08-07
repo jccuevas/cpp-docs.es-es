@@ -1,5 +1,5 @@
 ---
-title: ImplementsHelper (estructura) | Documentos de Microsoft
+title: ImplementsHelper (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58f27e418946987633f771bc8d2c3224bc2cd7fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e5da95e6cfb276704b5cd6150e4abc2921a5701
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875944"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605622"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,20 +38,20 @@ template <
 friend struct Details::ImplementsHelper;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `RuntimeClassFlagsT`  
- Un campo de indicadores que especifica uno o varios [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) los enumeradores.  
+### <a name="parameters"></a>Parámetros  
+ *RuntimeClassFlagsT*  
+ Un campo de marcas que especifica uno o más [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeradores.  
   
- `ILst`  
+ *ILst*  
  Una lista de identificadores de interfaz.  
   
- `IsDelegateToClass`  
- Especifique `true` si la instancia actual de implementa es una clase base del primer identificador de interfaz en `ILst`; en caso contrario, `false`.  
+ *IsDelegateToClass*  
+ Especificar **true** si la instancia actual de `Implements` es una clase base de la primera Id. de interfaz en *ILst*; en caso contrario, **false**.  
   
 ## <a name="remarks"></a>Comentarios  
- Le ayuda a implementar la [implementa](../windows/implements-structure.md) estructura.  
+ Ayuda a implementar la [implementa](../windows/implements-structure.md) estructura.  
   
- Esta plantilla recorre una lista de interfaces y los agrega como clases base y como la información necesaria para habilitar QueryInterface.  
+ Esta plantilla atraviesa una lista de interfaces y los agrega como clases base y como la información necesaria para habilitar QueryInterface.  
   
 ## <a name="members"></a>Miembros  
   
@@ -64,5 +64,5 @@ friend struct Details::ImplementsHelper;
  **Namespace:** wrl  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia (biblioteca de tiempo de ejecución de Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Referencia (biblioteca de tiempo de ejecución de Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

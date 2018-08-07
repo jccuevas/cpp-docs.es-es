@@ -1,5 +1,5 @@
 ---
-title: Biblioteca SafeInt | Documentos de Microsoft
+title: Biblioteca SafeInt | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25090eefe4f07181490f650ea4d14add9fc6ac75
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16ec0ad37202acbae8b33f270cef15547edd77b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892057"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604192"
 ---
 # <a name="safeint-library"></a>Biblioteca SafeInt
-La Biblioteca SafeInt ayuda a evitar los desbordamientos de enteros que podrían provocar cuando la aplicación realiza operaciones matemáticas.  
+El **SafeInt** biblioteca ayuda a evitar los desbordamientos de enteros que podrían producir cuando la aplicación realiza operaciones matemáticas.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 |Sección|Descripción|  
 |-------------|-----------------|  
-|[SafeInt (clase)](../windows/safeint-class.md)|Esta clase se protege frente a desbordamientos de enteros.|  
-|[SafeInt (funciones)](../windows/safeint-functions.md)|Funciones que pueden utilizarse sin necesidad de crear un `SafeInt` objeto.|  
-|[SafeIntException (clase)](../windows/safeintexception-class.md)|Una clase de excepciones relacionadas con la `SafeInt` clase.|  
+|[SafeInt (clase)](../windows/safeint-class.md)|Esta clase protege frente a desbordamientos de enteros.|  
+|[SafeInt (funciones)](../windows/safeint-functions.md)|Funciones que pueden utilizarse sin necesidad de crear un **SafeInt** objeto.|  
+|[SafeIntException (clase)](../windows/safeintexception-class.md)|Una clase de excepciones relacionadas con la **SafeInt** clase.|  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
   

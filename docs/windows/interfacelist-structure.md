@@ -1,5 +1,5 @@
 ---
-title: InterfaceList (estructura) | Documentos de Microsoft
+title: InterfaceList (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 267ef2d9e1b24028016831e050385997ac0037e6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876740"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604845"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,15 +37,15 @@ template <
 struct InterfaceList;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `T`  
- Un nombre de la interfaz; la primera interfaz en la lista recursiva.  
+### <a name="parameters"></a>Parámetros  
+ *T*  
+ Un nombre de interfaz la primera interfaz en la lista recursiva.  
   
- `U`  
- Un nombre de la interfaz; las interfaces restantes en la lista recursiva.  
+ *U*  
+ Un nombre de interfaz las interfaces restantes en la lista recursiva.  
   
 ## <a name="remarks"></a>Comentarios  
- Se utiliza para crear una lista recursiva de interfaces.  
+ Se utiliza para crear una lista recursiva de las interfaces.  
   
 ## <a name="members"></a>Miembros  
   
@@ -53,8 +53,8 @@ struct InterfaceList;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|`FirstT`|Sinónimo de parámetro de plantilla `T`.|  
-|`RestT`|Sinónimo de parámetro de plantilla `U`.|  
+|`FirstT`|Sinónimo de parámetro de plantilla *T*.|  
+|`RestT`|Sinónimo de parámetro de plantilla *U*.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `InterfaceList`  

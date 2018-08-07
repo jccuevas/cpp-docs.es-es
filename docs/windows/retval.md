@@ -1,5 +1,5 @@
 ---
-title: retval | Documentos de Microsoft
+title: retval | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6f17f44e520018f82dc82abe88427a2410d68e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888726"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606356"
 ---
 # <a name="retval"></a>retval
 Designa el parámetro que recibe el valor devuelto del miembro.  
@@ -30,18 +30,16 @@ Designa el parámetro que recibe el valor devuelto del miembro.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [retval]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **retval** atributo C++ tiene la misma funcionalidad que la [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) atributo MIDL.  
+ El **retval** atributo de C++ tiene la misma funcionalidad que el [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) atributo MIDL.  
   
  **retval** debe aparecer en el último argumento en la declaración de una función.  
   
 ## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [enlazables](../windows/bindable.md) para un ejemplo de uso de **retval**.  
+ Vea el ejemplo de [enlazable](../windows/bindable.md) para un ejemplo de uso de **retval**.  
   
 ## <a name="requirements"></a>Requisitos  
   

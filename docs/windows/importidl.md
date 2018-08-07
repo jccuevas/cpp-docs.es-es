@@ -1,5 +1,5 @@
 ---
-title: importidl | Documentos de Microsoft
+title: importidl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877480"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607188"
 ---
 # <a name="importidl"></a>importidl
 Inserta el archivo .idl especificado en el archivo .idl generado.  
@@ -30,24 +30,23 @@ Inserta el archivo .idl especificado en el archivo .idl generado.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ importidl(  
+[ importidl(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `idl_file`  
- Identifica el nombre del archivo .idl que desea combinar con el archivo .idl que se genera para la aplicación.  
+### <a name="parameters"></a>Parámetros  
+ *idl_file*  
+ Identifica el nombre del archivo .idl que desea combinar con el archivo .idl que se generará para la aplicación.  
   
 ## <a name="remarks"></a>Comentarios  
- El **importidl** atributo C++ coloca la sección fuera del bloque de biblioteca (en `idl_file`) en el archivo .idl generado de su programa y la sección de la biblioteca (en `idl_file`) en la sección de la biblioteca de su programa archivo .idl generado.  
+ El **importidl** atributo de C++ coloca la sección fuera del bloque de biblioteca (en *idl_file*) en el archivo .idl generado del programa y la sección de biblioteca (en *idl_file*) en la biblioteca de la sección de su programa genera el archivo .idl.  
   
- Puede que desee usar **importidl**, por ejemplo, si desea usar un archivo .idl codificados a mano con el archivo .idl generado.  
+ Es posible que desee usar **importidl**, por ejemplo, si desea usar un archivo .idl codificadas con el archivo .idl generado.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_importidl.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -72,5 +71,5 @@ Inserta el archivo .idl especificado en el archivo .idl generado.
  [Atributos independientes](../windows/stand-alone-attributes.md)   
  [Importación](../windows/import.md)   
  [importlib](../windows/importlib.md)   
- [Incluir](../windows/include-cpp.md)   
+ [incluir](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   

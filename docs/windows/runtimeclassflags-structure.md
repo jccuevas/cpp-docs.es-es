@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassFlags (estructura) | Documentos de Microsoft
+title: RuntimeClassFlags (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05166be14680b14d704095f5f1c9375bd97da7d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6206a167c8b7292db21b9466975d057fc36cbe2f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892031"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604939"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags (estructura)
 Contiene el tipo de una instancia de un [RuntimeClass](../windows/runtimeclass-class.md).  
@@ -36,9 +36,9 @@ template <
 struct RuntimeClassFlags;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `flags`  
- A [RuntimeClassType (enumeración)](../windows/runtimeclasstype-enumeration.md) valor.  
+### <a name="parameters"></a>Parámetros  
+ *flags*  
+ Un [RuntimeClassType (enumeración)](../windows/runtimeclasstype-enumeration.md) valor.  
   
 ## <a name="members"></a>Miembros  
   

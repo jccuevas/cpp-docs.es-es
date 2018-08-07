@@ -1,5 +1,5 @@
 ---
-title: Constructor Module | Documentos de Microsoft
+title: Constructor Module | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b31e9f1e4536bc124bba359ece10217ef8b7f253
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 207b1006aeb57d9c16c09f5d8101a7f64b2cb85b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875258"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608724"
 ---
 # <a name="modulemodule-constructor"></a>Module::Module (Constructor)
-Inicializa una nueva instancia de la clase de módulo.  
+Inicializa una nueva instancia de la **módulo** clase.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ Module();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Este constructor está protegido y no se puede llamar con la `new` palabra clave. En su lugar, llame a uno [Module:: GetModule (método)](../windows/module-getmodule-method.md) o [Module:: Create (método)](../windows/module-create-method.md).  
+ Este constructor está protegido y no se puede llamar con la **nuevo** palabra clave. En su lugar, llame al [GetModule (método)](../windows/module-getmodule-method.md) o [método Module](../windows/module-create-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

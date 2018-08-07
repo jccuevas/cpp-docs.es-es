@@ -1,5 +1,5 @@
 ---
-title: Incluidos los comparten (de sólo lectura) o calculados símbolos | Documentos de Microsoft
+title: Incluidos comparten (de sólo lectura) o calculados símbolos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c56e8af65d27bda8ef04655f40bdd2e335067d3c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 436ceb757f9cce5e1436b13f2d32a331295f4bf6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879232"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608617"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Incluir símbolos compartidos (de sólo lectura) o calculados
-La primera vez que el entorno de desarrollo lee un archivo de recursos creado por otra aplicación, marca todos los archivos de encabezado incluidos como de solo lectura. Posteriormente, puede usar el [de inclusión de recursos de cuadro de diálogo](../windows/resource-includes-dialog-box.md) para agregar archivos de encabezado de símbolos de solo lectura adicionales.  
+La primera vez que el entorno de desarrollo lee un archivo de recursos creado por otra aplicación, marca todos los archivos de encabezado incluidos como de solo lectura. Posteriormente, puede usar el [incluye recursos de cuadro de diálogo](../windows/resource-includes-dialog-box.md) para agregar archivos de encabezado de símbolos de solo lectura adicionales.  
   
  Tal vez le interese usar definiciones de símbolos de solo lectura para los archivos de símbolos que desea compartir entre varios proyectos.  
   
@@ -67,7 +67,7 @@ La primera vez que el entorno de desarrollo lee un archivo de recursos creado po
     > [!NOTE]
     >  **Importante** lo que escribe en el cuadro directivas de símbolos de solo lectura se incluye en el archivo de recursos exactamente como se escribe. Asegúrese de que lo que escribe no contiene errores de sintaxis o de ortografía.  
   
-     Use la **directivas de símbolos de solo lectura** casilla para incluir archivos con las definiciones de símbolos. No incluya definiciones de recursos; en caso contrario, se crearán definiciones de recursos duplicadas cuando se guarde el archivo.  
+     Use la **directivas de símbolos de solo lectura** casilla para incluir los archivos con las definiciones de símbolos. No incluya definiciones de recursos; en caso contrario, se crearán definiciones de recursos duplicadas cuando se guarde el archivo.  
   
 3.  Coloque los símbolos en el archivo especificado.  
   
@@ -75,14 +75,12 @@ La primera vez que el entorno de desarrollo lee un archivo de recursos creado po
   
 4.  Haga clic en **Aceptar**.  
   
-
-  
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   
 ## <a name="see-also"></a>Vea también  
  [Restricciones de nombre de símbolo](../windows/symbol-name-restrictions.md)   
- [Restricciones de valores de símbolos](../windows/symbol-value-restrictions.md)   
+ [Restricciones de valor de símbolo](../windows/symbol-value-restrictions.md)   
  [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)   
  [Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)

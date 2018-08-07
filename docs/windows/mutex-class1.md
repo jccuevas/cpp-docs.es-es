@@ -1,5 +1,5 @@
 ---
-title: Exclusión mutua Class1 | Documentos de Microsoft
+title: Mutex (Class1) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a9e9674dd8ac5aa7d444a77df66c1aff4a70299
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd9c3dbbcbffff32f7c1611b6b49ee19ada7e52c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878416"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606779"
 ---
-# <a name="mutex-class1"></a>Exclusión mutua Class1
+# <a name="mutex-class1"></a>Mutex (Class1)
 Representa un objeto de sincronización que controla de forma exclusiva un recurso compartido.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,25 +39,25 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
   
 |Name|Descripción|  
 |----------|-----------------|  
-|**SyncLock**|Sinónimo de una clase que admita bloqueos sincrónicos.|  
+|`SyncLock`|Un sinónimo de una clase que admita bloqueos sincrónicos.|  
   
 ### <a name="public-constructor"></a>Constructor público  
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[Mutex::Mutex (constructor)](../windows/mutex-mutex-constructor.md)|Inicializa una nueva instancia de la clase de exclusión mutua.|  
+|[Mutex::Mutex (constructor)](../windows/mutex-mutex-constructor.md)|Inicializa una nueva instancia de la **Mutex** clase.|  
   
 ### <a name="public-members"></a>Miembros públicos  
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[Mutex::Lock (método)](../windows/mutex-lock-method.md)|Espera a que el objeto actual o el objeto de exclusión mutua asociado con el identificador especificado, libera la exclusión mutua o ha transcurrido el intervalo de tiempo de espera especificado.|  
+|[Mutex::Lock (método)](../windows/mutex-lock-method.md)|Espera hasta que el objeto actual, o la **Mutex** objeto asociado con el identificador especificado, las versiones que ha transcurrido el intervalo de tiempo de espera especificado o de la exclusión mutua.|  
   
 ### <a name="public-operator"></a>Operador público  
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[Mutex::operator= (operador)](../windows/mutex-operator-assign-operator.md)|Asigna (se desplaza) la exclusión mutua especificada del objeto para el objeto actual de la exclusión mutua.|  
+|[Mutex::operator= (operador)](../windows/mutex-operator-assign-operator.md)|Asigna (mueve) especificado **Mutex** el objeto actual **Mutex** objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `Mutex`  

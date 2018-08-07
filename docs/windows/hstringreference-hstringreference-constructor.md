@@ -1,5 +1,5 @@
 ---
-title: Constructor Hstringreference | Documentos de Microsoft
+title: Constructor Hstringreference | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc88ea32d4384b36559a4a10da0a5975345bf0d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dce8c6fca14ad26665bf4868681234374c20f85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876012"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608149"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference (Constructor)
-Inicializa una nueva instancia de la clase HStringReference.  
+Inicializa una nueva instancia de la **HStringReference** clase.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,25 +38,25 @@ HStringReference(wchar_t const (&str)[ sizeDest],
 HStringReference(HStringReference&& other) throw();  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `sizeDest`  
- Un parámetro de plantilla que especifica el tamaño del búfer de HStringReference de destino.  
+### <a name="parameters"></a>Parámetros  
+ *sizeDest*  
+ Un parámetro de plantilla que especifica el tamaño del destino **HStringReference** búfer.  
   
- `str`  
+ *str*  
  Una referencia a una cadena de caracteres anchos.  
   
- `len`  
- La longitud máxima de la `str` búfer de parámetro para utilizar en esta operación. Si el `len` parámetro no se especifica, toda la matriz `str` se usa el parámetro. Si `len` es mayor que `sizeDest`, `len` está establecido en `sizeDest`-1.  
+ *Len*  
+ La longitud máxima de la *str* búfer de parámetro para utilizar en esta operación. Si el *len* parámetro no se especifica, toda la *str* se usa el parámetro. Si *len* es mayor que *sizeDest*, *len* está establecido en *sizeDest*-1.  
   
- `other`  
- Otro objeto de HStringReference.  
+ *other*  
+ Otro **HStringReference** objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- El primer constructor inicializa un nuevo objeto de HStringReference el mismo tamaño que el parámetro `str`.  
+ El primer constructor inicializa un nuevo **HStringReference** objeto que el mismo tamaño que el parámetro *str*.  
   
- El segundo constructor inicializa un nuevo HStringReference de objeto que la specifeid de tamaño por parámetro `len`.  
+ El segundo constructor inicializa una nueva **HStringReference** objeto al que el specifeid tamaño por parámetro *len*.  
   
- El tercer constructor inicializa un nuevo objeto de HStringReference para el valor de la `other` parámetro y, a continuación, destruye el `other` parámetro.  
+ El tercer constructor inicializa una nueva **HStringReference** objeto por el valor de la *otros* parámetro y, a continuación, se destruye el *otros* parámetro.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

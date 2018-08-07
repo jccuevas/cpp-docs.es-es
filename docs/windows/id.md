@@ -1,5 +1,5 @@
 ---
-title: Id. | Documentos de Microsoft
+title: Id. | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b36a45dad71f2144c3e3d0990ab7715d00e8ff21
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882452"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605713"
 ---
 # <a name="id"></a>id
-Especifica un `dispid` parámetro para una función miembro (una propiedad o un método en una interfaz o dispinterface).  
+Especifica un *dispid* parámetro para una función miembro (una propiedad o un método en una interfaz o interfaz dispinterface).  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ id(  
+[ id(  
    dispid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `dispid`  
+### <a name="parameters"></a>Parámetros  
+ *DISPID*  
  El identificador de envío para el método de interfaz.  
   
 ## <a name="remarks"></a>Comentarios  
- El **Id. de** atributo C++ tiene la misma funcionalidad que la [identificador](http://msdn.microsoft.com/library/windows/desktop/aa367040) atributo MIDL.  
+ El **id** atributo de C++ tiene la misma funcionalidad que el [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [enlazables](../windows/bindable.md) para obtener un ejemplo de cómo usar **identificador**.  
+ Vea el ejemplo de [enlazable](../windows/bindable.md) para obtener un ejemplo de cómo usar **id**.  
   
 ## <a name="requirements"></a>Requisitos  
   

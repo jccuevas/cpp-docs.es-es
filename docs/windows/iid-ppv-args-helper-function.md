@@ -1,5 +1,5 @@
 ---
-title: IID_PPV_ARGS_Helper (función) | Documentos de Microsoft
+title: IID_PPV_ARGS_Helper (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cef979ae284a303b120df7d14ae71f311498423
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 508c9a5d34fa8e9c4fa339e9917ae069874159ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882347"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608383"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper (función)
 Comprueba que el tipo del argumento especificado que se deriva de la `IUnknown` interfaz.  
   
 > [!IMPORTANT]
->  Esta especialización de plantilla es compatible con la infraestructura WRL y no está diseñada para utilizarse directamente desde el código. Use [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) en su lugar.  
+>  Esta especialización de plantilla admite la infraestructura WRL y no está pensada para utilizarse directamente desde el código. Use [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,20 +40,20 @@ void** IID_PPV_ARGS_Helper(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `T`  
- El tipo del argumento `pp`.  
+ *T*  
+ El tipo del argumento *pp*.  
   
- `pp`  
- Un puntero indirecto doble.  
+ *perfil de puerto*  
+ Puntero indirecto doble.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Argumento `pp` convierte en un puntero-a-a-puntero a `void`.  
+ Argumento *pp* convierte en un puntero a una de puntero a **void**.  
   
 ## <a name="remarks"></a>Comentarios  
- Se genera un error de tiempo de compilación si el parámetro de plantilla `T` no derivan de `IUnknown`.  
+ Se genera un error de tiempo de compilación si el parámetro de plantilla *T* no se deriva de `IUnknown`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia (biblioteca de tiempo de ejecución de Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)
+ [Referencia (biblioteca de tiempo de ejecución de Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

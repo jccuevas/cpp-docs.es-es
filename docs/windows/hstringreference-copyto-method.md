@@ -1,5 +1,5 @@
 ---
-title: 'Hstringreference:: CopyTo (método) | Documentos de Microsoft'
+title: Método Hstringreference | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,31 +13,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f65c08cad438328eb1a0e15495774dbde6845f4d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fcd27ab7132739987859024270ac6c82be06e590
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874712"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607798"
 ---
 # <a name="hstringreferencecopyto-method"></a>HStringReference::CopyTo (Método)
-Copia el HStringReference actual objeto a un objeto HSTRING.  
+Copia actual **HStringReference** objeto a un objeto HSTRING.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 HRESULT CopyTo(  
    _Out_ HSTRING *str  
    ) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `str`  
- El HSTRING que recibe la copia.  
+ *str*  
+ La HSTRING que recibe la copia.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método llama a la [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) (función).  
+ Este método llama a la [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) función.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

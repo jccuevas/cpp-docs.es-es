@@ -1,5 +1,5 @@
 ---
-title: 'MakeAllocator:: ~ MakeAllocator (destructor) | Documentos de Microsoft'
+title: 'MakeAllocator:: ~ makeallocator (destructor) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0734f895315f1c8ba7577d531c54a9dc11381e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e31f666ca6263a9b9b770261a0899bcad1bc8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877104"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606314"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator (Destructor)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ Admite la infraestructura WRL y no está diseñada para utilizarse directamente 
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Desinicializa la instancia actual de la clase MakeAllocator.  
+ Desinicializa la instancia actual de la **MakeAllocator** clase.  
   
  Este destructor también elimina la memoria asignada subyacente si es necesario.  
   

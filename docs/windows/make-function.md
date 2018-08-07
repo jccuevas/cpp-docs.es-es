@@ -1,5 +1,5 @@
 ---
-title: MAKE (función) | Documentos de Microsoft
+title: MAKE (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f381a00b5ac1f105080355f1d3e3cd15efa5abf8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9941f2b1bce67fb09c69db6278de94c102f88473
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878078"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604874"
 ---
 # <a name="make-function"></a>Make (Función)
 Inicializa la clase en tiempo de ejecución de Windows especificada. Utilice esta función para crear una instancia de un componente que se define en el mismo módulo.  
@@ -171,69 +171,69 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `T`  
+### <a name="parameters"></a>Parámetros  
+ *T*  
  Una clase especificada por el usuario que hereda de `WRL::RuntimeClass`.  
   
- `TArg1`  
+ *TArg1*  
  Tipo de argumento 1 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `TArg2`  
+ *TArg2*  
  Tipo de argumento 2 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `TArg3`  
+ *TArg3*  
  Tipo de argumento 3 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `TArg4`  
+ *TArg4*  
  Tipo de argumento 4 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `TArg5`  
+ *TArg5*  
  Tipo de argumento 5 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `TArg6`  
+ *TArg6*  
  Tipo de argumento 6 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `TArg7`  
+ *TArg7*  
  Tipo de argumento 7 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `TArg8`  
+ *TArg8*  
  Tipo de argumento 8 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `TArg9`  
+ *TArg9*  
  Tipo de argumento 9 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `arg1`  
+ *Arg1*  
  Argumento 1 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `arg2`  
+ *Arg2*  
  Argumento 2 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `arg3`  
+ *Arg3*  
  Argumento 3 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `arg4`  
+ *Arg4*  
  Argumento 4 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `arg5`  
+ *Arg5*  
  Argumento 5 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `arg6`  
+ *Arg6*  
  Argumento 6 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `arg7`  
- Argumento pasado 7 que se pasa a la clase en tiempo de ejecución especificado.  
+ *Arg7*  
+ Argumento 7 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `arg8`  
+ *Arg8*  
  Argumento 8 que se pasa a la clase en tiempo de ejecución especificado.  
   
- `arg9`  
+ *Arg9*  
  Argumento 9 que se pasa a la clase en tiempo de ejecución especificado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- A `ComPtr<T>` objeto si es correcto; en caso contrario, `nullptr`.  
+ Un `ComPtr<T>` objeto si es correcto; en caso contrario, **nullptr**.  
   
 ## <a name="remarks"></a>Comentarios  
- Vea [Cómo: crear instancias de componentes de WRL directamente](../windows/how-to-instantiate-wrl-components-directly.md) para obtener información sobre las diferencias entre esta función y [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)y para obtener un ejemplo.  
+ Consulte [Cómo: crear instancias de componentes de WRL directamente](../windows/how-to-instantiate-wrl-components-directly.md) para obtener información sobre las diferencias entre esta función y [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)y para obtener un ejemplo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

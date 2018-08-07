@@ -1,5 +1,5 @@
 ---
-title: requestedit | Documentos de Microsoft
+title: requestedit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d741494d33cba7b1d19e2ce081bad35eaaf283e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9b0102ad6ba7b11ea2f0c738983385ffda632ca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878260"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606480"
 ---
 # <a name="requestedit"></a>requestedit
-Indica que la propiedad admite la **OnRequestEdit** notificación.  
+Indica que la propiedad admite la `OnRequestEdit` notificación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [requestedit]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **requestedit** atributo C++ tiene la misma funcionalidad que la [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) atributo MIDL.  
+ El **requestedit** atributo de C++ tiene la misma funcionalidad que el [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [enlazables](../windows/bindable.md) para un ejemplo de uso de **requestedit**.  
+ Vea el ejemplo de [enlazable](../windows/bindable.md) para un ejemplo de uso de **requestedit**.  
   
 ## <a name="requirements"></a>Requisitos  
   

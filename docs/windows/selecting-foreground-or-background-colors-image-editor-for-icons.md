@@ -1,5 +1,5 @@
 ---
-title: Seleccionar primer plano y el color de fondo (Editor de imágenes para iconos) | Documentos de Microsoft
+title: Selección de primer plano o los colores de fondo (Editor de imágenes para iconos) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: acd86e9a1d48465df4656b4b0cb8247712f4e12d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888651"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605553"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Seleccionar el color de primer plano y el color de fondo (Editor de imágenes para iconos)
-Excepto para la **borrador**, las herramientas de la **Editor de imágenes** draw de la barra de herramientas con el color actual de primer plano o en segundo plano cuando se presiona el botón izquierdo o derecho del mouse, respectivamente.  
+Excepto para el **borrador**, las herramientas en el **Editor de imágenes** draw de la barra de herramientas con el color actual de primer plano o en segundo plano cuando se presiona el botón izquierdo o derecho del mouse, respectivamente.  
   
 ### <a name="to-select-a-foreground-color"></a>Para seleccionar un color de primer plano:  
   
@@ -36,9 +36,9 @@ Excepto para la **borrador**, las herramientas de la **Editor de imágenes** dra
   
 1.  Con el botón secundario del mouse, haga clic en el color que desee en el **colores** paleta.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.*  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.  
   
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Ninguna  
   

@@ -1,5 +1,5 @@
 ---
-title: IsSame (estructura) | Documentos de Microsoft
+title: IsSame (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877675"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603590"
 ---
 # <a name="issame-structure"></a>IsSame (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,15 +41,15 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `T1`  
+### <a name="parameters"></a>Parámetros  
+ *T1*  
  Un tipo.  
   
- `T2`  
+ *T2*  
  Otro tipo.  
   
 ## <a name="remarks"></a>Comentarios  
- Comprueba si un tipo especificado es igual que otro tipo especificado.  
+ Las pruebas si un tipo especificado es igual que otro tipo especificado.  
   
 ## <a name="members"></a>Miembros  
   

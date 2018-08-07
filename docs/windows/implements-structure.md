@@ -1,5 +1,5 @@
 ---
-title: Implementa estructura | Documentos de Microsoft
+title: Implementa la estructura | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ecbf0b77feef7abeb67f8d0dc300da067d1f2da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0dc23a9c90fc2112d67180ceae86ebde0e057b06
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880925"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607811"
 ---
 # <a name="implements-structure"></a>Implements (estructura)
-Implementa QueryInterface y GetIid para las interfaces especificadas.  
+Implementa `QueryInterface` y `GetIid` para las interfaces especificadas.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,44 +58,44 @@ template <
 struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `I0`  
+### <a name="parameters"></a>Parámetros  
+ *I0*  
  El identificador de interfaz de cero. (Obligatorio)  
   
- `I1`  
+ *I1*  
  El primer identificador de interfaz. (Opcional)  
   
- `I2`  
+ *I2*  
  El segundo identificador de interfaz. (Opcional)  
   
- `I3`  
+ *I3*  
  El tercer identificador de interfaz. (Opcional)  
   
- `I4`  
+ *I4*  
  El cuarto identificador de interfaz. (Opcional)  
   
- `I5`  
+ *I5*  
  El quinto identificador de interfaz. (Opcional)  
   
- `I6`  
- El sexto identificador de interfaz. (Opcional)  
+ *I6*  
+ El sexto ID de interfaz. (Opcional)  
   
- `I7`  
- El séptimo identificador de interfaz. (Opcional)  
+ *I7*  
+ El séptimo ID de interfaz. (Opcional)  
   
- `I8`  
- El identificador de interfaz de octavo. (Opcional)  
+ *I8*  
+ El identificador de identificador de octava interfaz. (Opcional)  
   
- `I9`  
- El noveno identificador de interfaz. (Opcional)  
+ *I9*  
+ El noveno ID de interfaz. (Opcional)  
   
- `flags`  
+ *flags*  
  Marcas de configuración para la clase. Uno o varios [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeraciones que se especifican en un [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) estructura.  
   
 ## <a name="remarks"></a>Comentarios  
- Se deriva de la lista de interfaces especificadas e implementa plantillas de aplicación auxiliar para QueryInterface y GetIid.  
+ Se deriva de la lista de interfaces especificadas e implementa las plantillas de aplicación auxiliar para `QueryInterface` y `GetIid`.  
   
- Cada `I0` a través de `I9` parámetro de interfaz debe derivarse de cualquier IUnknown, IInspectable, o la [ChainInterfaces](../windows/chaininterfaces-structure.md) plantilla. El `flags` parámetro determina si se genera la compatibilidad para IUnknown o IInspectable.  
+ Cada *I0* a través de *I9* parámetro de interfaz debe derivarse de o `IUnknown`, `IInspectable`, o el [ChainInterfaces](../windows/chaininterfaces-structure.md) plantilla. El *marcas* parámetro determina si el soporte técnico se genera para `IUnknown` o `IInspectable`.  
   
 ## <a name="members"></a>Miembros  
   
@@ -110,10 +110,10 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 |Name|Descripción|  
 |----------|-----------------|  
 |[Implements::CanCastTo (método)](../windows/implements-cancastto-method.md)|Obtiene un puntero a la interfaz especificada.|  
-|[Implements::CastToUnknown (método)](../windows/implements-casttounknown-method.md)|Obtiene un puntero a la interfaz IUnknown subyacente.|  
-|[Implements::FillArrayWithIid (método)](../windows/implements-fillarraywithiid-method.md)|Inserta el identificador de interfaz especificado por el parámetro de plantilla actual de cero en el elemento de la matriz especificada.|  
+|[Implements::CastToUnknown (método)](../windows/implements-casttounknown-method.md)|Obtiene un puntero subyacente `IUnknown` interfaz.|  
+|[Implements::FillArrayWithIid (método)](../windows/implements-fillarraywithiid-method.md)|Inserta el Id. de interfaz especificado por el parámetro de plantilla actual de cero en el elemento de matriz especificado.|  
   
-### <a name="protected-constants"></a>Constantes protegidos  
+### <a name="protected-constants"></a>Constantes protegidas  
   
 |nombre|Descripción|  
 |----------|-----------------|  

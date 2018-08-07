@@ -1,5 +1,5 @@
 ---
-title: importlib | Documentos de Microsoft
+title: importlib | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c21b97e50fa03861245a0c0881963387dd8a3102
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4563d1b24b3af6e450a67a21d6a083f1839bc3e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876763"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603073"
 ---
 # <a name="importlib"></a>importlib
 Hace que los tipos que ya se han compilado en otra biblioteca de tipos estén disponibles en la biblioteca de tipos que se está creando.  
@@ -30,23 +30,22 @@ Hace que los tipos que ya se han compilado en otra biblioteca de tipos estén di
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ importlib(  
+[ importlib(  
    "tlb_file"  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *tlb_file*  
  El nombre de un archivo .tlb, entre comillas, que desea importar en la biblioteca de tipos del proyecto actual.  
   
 ## <a name="remarks"></a>Comentarios  
- El **importlib** C++ atributo da lugar a un `importlib` instrucción que se colocarán en el bloque de biblioteca del archivo .idl generado. El **importlib** atributo tiene la misma funcionalidad que la [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) atributo MIDL.  
+ El **importlib** hace que el atributo de C++ un `importlib` instrucción que se colocarán en el bloque de biblioteca del archivo .idl generado. El **importlib** atributo tiene la misma funcionalidad que el [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente muestra un ejemplo de cómo usar **importlib**:  
   
-```  
+```cpp  
 // cpp_attr_ref_importlib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -71,5 +70,5 @@ Hace que los tipos que ya se han compilado en otra biblioteca de tipos estén di
  [Atributos independientes](../windows/stand-alone-attributes.md)   
  [Importación](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [Incluir](../windows/include-cpp.md)   
+ [incluir](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)

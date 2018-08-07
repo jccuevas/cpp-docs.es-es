@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Cancastto (método) | Documentos de Microsoft'
+title: Método Implementshelper | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6de971f2de2421a2d7987dab30ba73fa2d225b15
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a60f2e45e276592c7c1223526cd002bdc6e79013
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876558"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605485"
 ---
 # <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 HRESULT CanCastTo(  
    REFIID riid,  
    _Deref_out_ void **ppv  
@@ -42,14 +41,14 @@ HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `riid`  
+### <a name="parameters"></a>Parámetros  
+ *riid*  
  Referencia a un identificador de interfaz.  
   
- `ppv`  
- Si esta operación se realiza correctamente, un puntero a la interfaz especificada por `riid` o `iid`.  
+ *PPV*  
+ Si esta operación se realiza correctamente, un puntero a la interfaz especificada por *riid* o *iid*.  
   
- `iid`  
+ *IID*  
  Referencia a un identificador de interfaz.  
   
 ## <a name="return-value"></a>Valor devuelto  

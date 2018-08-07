@@ -1,5 +1,5 @@
 ---
-title: Mover o copiar una entrada de la tabla de aceleradores a otro archivo de Script de recursos | Documentos de Microsoft
+title: Mover o copiar una entrada de tabla de aceleradores a otro archivo de Script de recursos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b14e20770b89bb6863eb5fa8d7743bd3cf2efa9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e975ab71e4556c236ecd2e92f2d11a949a68ba5a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877909"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608057"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Mover o copiar una entrada de una tabla de aceleradores a otro archivo de script de recursos
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Para mover o copiar una entrada de una tabla de aceleradores a otro archivo de script de recursos  
@@ -44,9 +44,7 @@ ms.locfileid: "33877909"
     > [!NOTE]
     >  También puede usar las teclas de método abreviado para copiar y pegar.  
   
-
-  
- **Requisitos**  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   

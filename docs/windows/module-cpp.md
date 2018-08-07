@@ -1,5 +1,5 @@
 ---
-title: módulo (C++) | Documentos de Microsoft
+title: módulo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce7925fd15a7a332dbfb18e2a22dc104783300b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882516"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604361"
 ---
 # <a name="module-c"></a>module (C++)
 Define el bloque de biblioteca en el archivo .idl.  
@@ -30,8 +30,7 @@ Define el bloque de biblioteca en el archivo .idl.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ module (  
+[ module (  
    type=dll,  
    name=string,  
    version=1.0,  
@@ -50,75 +49,75 @@ Define el bloque de biblioteca en el archivo .idl.
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- ***type***  (opcional)  
+### <a name="parameters"></a>Parámetros  
+ *tipo* (opcional)  
  Puede ser uno de los siguientes:  
   
--   **dll** Agrega funciones y clases que permiten que la DLL resultante funcione como servidor COM en proceso. Este es el valor predeterminado.  
+-   `dll` Agrega funciones y clases que permiten la DLL resultante funcione como servidor COM en proceso. Este es el valor predeterminado.  
   
--   **exe** Agrega funciones y clases que permiten que el ejecutable resultante funcione como servidor COM fuera de proceso.  
+-   `exe` Agrega funciones y clases que permiten resultante funcione como un servidor fuera de proceso COM ejecutable.  
   
--   **service** Agrega funciones y clases que permiten que el ejecutable resultante funcione como servicio NT.  
+-   `service` Agrega funciones y clases que permiten resultante ejecutable funcione como un servicio NT.  
   
--   **unspecified** Deshabilita la inserción de código ATL relacionado con el atributo de módulo: la inserción de la clase de módulo de ATL, la instancia global _AtlModule y funciones de punto de entrada.  No deshabilita la inserción de código ATL como consecuencia de otros atributos del proyecto.  
+-   `unspecified` Deshabilita la inserción de código ATL relacionado con el atributo de módulo: la inserción de la clase de módulo de ATL, la instancia global _AtlModule y entrada de funciones de punto. No deshabilita la inserción de código ATL como consecuencia de otros atributos del proyecto.  
   
- ***name***  (opcional)  
+ *name* (opcional)  
  Nombre del bloque de biblioteca.  
   
- ***version***  (opcional)  
+ *versión* (opcional)  
  Número de versión que quiere asignar al bloque de biblioteca. El valor predeterminado es 1,0.  
   
- `uuid`  
- Identificador único para la biblioteca. Si omite este parámetro, se generará automáticamente un identificador para la biblioteca. Puede que necesite recuperar el *uuid* de su bloque de biblioteca, lo que puede hacer mediante el identificador **__uuidof (***nombrebiblioteca***)**.  
+ *uuid*  
+ Identificador único para la biblioteca. Si omite este parámetro, se generará automáticamente un identificador para la biblioteca. Es posible que deba recuperar el *uuid* del bloque de biblioteca, lo que puede hacer con el identificador **__uuidof (***nombrebiblioteca***)**.  
   
- **lcid**  
+ *lcid*  
  Parámetro de localización. Consulte [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) para obtener más información.  
   
- **control** (opcional)  
+ *control* (opcional)  
  Especifica que todas las coclases de la biblioteca son controles.  
   
- **helpstring**  
+ *helpstring*  
  Especifica la biblioteca de tipos.  
   
- ***helpstringdll***  (opcional)  
+ *helpstringdll* (opcional)  
  Establece el nombre del archivo .dll que se va a usar para realizar una búsqueda de cadenas del documento. Consulte [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) para obtener más información.  
   
- **helpfile** (opcional)  
+ *HelpFile* (opcional)  
  Nombre del archivo de ayuda para la biblioteca de tipos.  
   
- **helpcontext** (opcional)  
+ *HelpContext* (opcional)  
  Identificador de ayuda para esta biblioteca de tipos.  
   
- **helpstringcontext** (opcional)  
+ *helpstringcontext* (opcional)  
  Consulte [helpstringcontext](../windows/helpstringcontext.md) para obtener más información.  
   
- **hidden** (opcional)  
+ *oculto* (opcional)  
  Impide que se muestre toda la biblioteca. Este uso está diseñado para emplearlo con controles. Los hosts deben crear una biblioteca de tipos que ajuste el control con propiedades extendidas. Consulte el atributo MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) para obtener más información.  
   
- **restricted** (opcional)  
+ *restringido* (opcional)  
  No es posible llamar a los miembros de la biblioteca arbitrariamente. Consulte el atributo MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) para obtener más información.  
   
- ***custom***  (opcional)  
- Uno o más atributos; esto es similar al atributo [custom](../windows/custom-cpp.md) . El primer parámetro de `custom` es el GUID del atributo. Por ejemplo:  
+ *personalizado* (opcional)  
+ Uno o más atributos; esto es similar al atributo [custom](../windows/custom-cpp.md) . El primer parámetro *personalizado* es el GUID del atributo. Por ejemplo:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- **resource_name**  
+ *resource_name*  
  Identificador de recurso de cadena del archivo .rgs usado para registrar el identificador de aplicación de la DLL, el ejecutable o el servicio. Cuando el módulo es de tipo service, este argumento también se usa para obtener el identificador de la cadena que contiene el nombre del servicio.  
   
 > [!NOTE]
 >  Tanto el archivo .rgs como la cadena que contiene el nombre del servicio deben contener el mismo valor numérico.  
   
 ## <a name="remarks"></a>Comentarios  
- A menos que especifique el parámetro **restricted** en [emitidl](../windows/emitidl.md), se requiere **module** en todos los programas que usen atributos de C++.  
+ A menos que especifique el *restringido* parámetro [emitidl](../windows/emitidl.md), **módulo** se requiere en cualquier programa que utiliza atributos de C++.  
   
  Se creará un bloque de biblioteca si, además del atributo **module** , el código fuente también usa [dispinterface](../windows/dispinterface.md), [dual](../windows/dual.md), [object](../windows/object-cpp.md)o un atributo que implique [coclase](../windows/coclass.md).  
   
  Se permite un bloque de biblioteca en un archivo .idl. Si en el código fuente hay varias entradas de módulo, se combinarán con los valores de parámetro más recientes que se implementen.  
   
- Si este atributo se usa en un proyecto que usa ATL, el comportamiento del atributo cambiará. Además del comportamiento anterior, el atributo también inserta un objeto global (denominado **_AtlModule**) del tipo correcto y el código de soporte adicional. Si el atributo es independiente, inserta una clase derivada del tipo de módulo correcto. Si el atributo se aplica a una clase, agrega una clase base del tipo de módulo correcto. El tipo correcto lo determina el valor del parámetro `type` :  
+ Si este atributo se usa en un proyecto que usa ATL, el comportamiento del atributo cambiará. Además del comportamiento anterior, el atributo también inserta un objeto global (denominado `_AtlModule`) del tipo correcto y el código de soporte técnico adicionales. Si el atributo es independiente, inserta una clase derivada del tipo de módulo correcto. Si el atributo se aplica a una clase, agrega una clase base del tipo de módulo correcto. El tipo correcto viene determinada por el valor de la *tipo* parámetro:  
   
 -   `type` = **dll**  
   
@@ -139,7 +138,7 @@ Define el bloque de biblioteca en el archivo .idl.
 ## <a name="example"></a>Ejemplo  
  En el código siguiente se muestra cómo crear un bloque de biblioteca en el archivo .idl generado.  
   
-```  
+```cpp  
 // cpp_attr_ref_module1.cpp  
 // compile with: /LD  
 [module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];  
@@ -147,7 +146,7 @@ Define el bloque de biblioteca en el archivo .idl.
   
  En el código siguiente se muestra que puede proporcionar su propia implementación de una función que aparecerá en el código insertado como resultado de usar **module**. Consulte [/Fx](../build/reference/fx-merge-injected-code.md) para obtener más información sobre cómo ver código insertado. Para reemplazar una de las funciones insertadas por el atributo **module** , cree una clase que contendrá la implementación de la función y haga que el atributo **module** se aplique a esa clase.  
   
-```  
+```cpp  
 // cpp_attr_ref_module2.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #include <atlbase.h>  

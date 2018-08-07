@@ -1,5 +1,5 @@
 ---
-title: propput | Documentos de Microsoft
+title: propput | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0605220b9eecce3ba042ddd0b46abd63a06c9dea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 679b019c15d72586b5ca186e0b54c9a9172db53a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882958"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608461"
 ---
 # <a name="propput"></a>propput
 Especifica una función de valor de propiedad.  
@@ -30,16 +30,14 @@ Especifica una función de valor de propiedad.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [propput]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **propput** atributo C++ tiene la misma funcionalidad que la [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) atributo MIDL.  
+ El **propput** atributo de C++ tiene la misma funcionalidad que el [propput](http://msdn.microsoft.com/library/windows/desktop/aa367146) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [enlazables](../windows/bindable.md) para un ejemplo de uso de **propput**.  
+ Vea el ejemplo de [enlazable](../windows/bindable.md) para un ejemplo de uso de **propput**.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -50,7 +48,7 @@ Especifica una función de valor de propiedad.
 |**Se aplica a**|Método|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|**propget**, **propputref**|  
+|**Atributos no válidos**|`propget`, `propputref`|  
   
  Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   

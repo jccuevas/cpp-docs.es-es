@@ -1,5 +1,5 @@
 ---
-title: oleautomation | Documentos de Microsoft
+title: oleautomation | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8093a36199eeddf2a96ae0830c56ac0acde51cfe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e8c7ea92e914543d80b199ef9d52435eb7116d9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882295"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608012"
 ---
 # <a name="oleautomation"></a>oleautomation
 Indica que una interfaz es compatible con la automatización.  
@@ -30,13 +30,11 @@ Indica que una interfaz es compatible con la automatización.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [oleautomation]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **oleautomation** atributo C++ tiene la misma funcionalidad que la [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) atributo MIDL.  
+ El **oleautomation** atributo de C++ tiene la misma funcionalidad que el [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  Consulte los ejemplos de [defaultvalue](../windows/defaultvalue.md) y [nonextensible](../windows/nonextensible.md) para un ejemplo de uso de **oleautomation**.  
@@ -47,7 +45,7 @@ Indica que una interfaz es compatible con la automatización.
   
 |||  
 |-|-|  
-|**Se aplica a**|`interface`|  
+|**Se aplica a**|**interface**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|**dispinterface**|  

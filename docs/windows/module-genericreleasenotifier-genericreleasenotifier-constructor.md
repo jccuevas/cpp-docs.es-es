@@ -1,5 +1,5 @@
 ---
-title: Genericreleasenotifier (Constructor) | Documentos de Microsoft
+title: Genericreleasenotifier (Constructor) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb07c7f53e27e380ba5775369611299cad0f60d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b0683220710a62c8583fa95fbfe3221ae93307eb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875063"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603943"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier (Constructor)
-Inicializa una nueva instancia de la clase genericreleasenotifier.  
+Inicializa una nueva instancia de la **genericreleasenotifier** clase.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      GenericReleaseNotifier(  
+GenericReleaseNotifier(  
    T callback,   
    bool release  
 ) throw() : ReleaseNotifier(release), callback_(callback);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `callback`  
- Una expresión lambda, functor o controlador de eventos de puntero a función que se puede invocar con el operador de la función de paréntesis (`()`).  
+### <a name="parameters"></a>Parámetros  
+ *devolución de llamada*  
+ Una expresión lambda, functor o controlador de eventos de puntero a función que se puede invocar con el operador de paréntesis de función (`()`).  
   
- `release`  
- Especifique `true` para habilitar la llamada subyacente [módulo:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; en caso contrario, especifique `false`.  
+ *release*  
+ Especificar **true** para habilitar una llamada subyacente [módulo:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; en caso contrario, especifique **false**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Mutex:: lock (método) | Documentos de Microsoft'
+title: Método Mutex | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c96ef497331fecf8125c51a7b8bd669ec758927
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880877"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603529"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock (Método)
-Espera a que el objeto actual o el objeto de exclusión mutua asociado con el identificador especificado, libera la exclusión mutua o ha transcurrido el intervalo de tiempo de espera especificado.  
+Espera hasta que el objeto actual, o la **Mutex** objeto asociado con el identificador especificado, las versiones que ha transcurrido el intervalo de tiempo de espera especificado o de la exclusión mutua.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,12 +40,12 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `milliseconds`  
- El intervalo de tiempo de espera, en milisegundos. El valor predeterminado es INFINITE, que espera indefinidamente.  
+### <a name="parameters"></a>Parámetros  
+ *milisegundos*  
+ El intervalo de tiempo de espera, en milisegundos. El valor predeterminado es infinito, que espera indefinidamente.  
   
- `h`  
- El identificador de un objeto de exclusión mutua.  
+ *h*  
+ El identificador de un **Mutex** objeto.  
   
 ## <a name="return-value"></a>Valor devuelto  
   

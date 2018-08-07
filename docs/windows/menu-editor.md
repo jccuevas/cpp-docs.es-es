@@ -1,5 +1,5 @@
 ---
-title: Editor de menús | Documentos de Microsoft
+title: Editor de menús | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5626e370dbeac9339dd603781e96f64377308899
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879443"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606255"
 ---
 # <a name="menu-editor"></a>Editor de menús
 Los menús le permiten organizar comandos de una forma lógica y sencilla de encontrar. Con el editor de menús, puede crear y editar menús trabajando directamente con una barra de menús que se parezca a la usada en su aplicación finalizada.  
   
- Para proyectos de Visual C++, puede usar el editor de menús para:  
+Para proyectos de Visual C++, puede usar el editor de menús para:  
   
 -   [Crear menús](../windows/creating-a-menu.md)  
   
@@ -64,7 +64,7 @@ Los menús le permiten organizar comandos de una forma lógica y sencilla de enc
     > [!NOTE]
     >  Para programas de la biblioteca MFC (Microsoft Foundation Class) y ATL, puede usar los asistentes para código para enlazar comandos de menú al código. Para más información, vea [Agregar un evento](../ide/adding-an-event-visual-cpp.md).  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
@@ -72,7 +72,6 @@ Los menús le permiten organizar comandos de una forma lógica y sencilla de enc
 ## <a name="see-also"></a>Vea también  
  [Trabajar con archivos de recursos](../windows/working-with-resource-files.md)   
  [Editores de recursos](../windows/resource-editors.md)   
- [Objetos de interfaz de usuario e identificadores de comando](../mfc/user-interface-objects-and-command-ids.md)   
+ [Objetos de la interfaz de usuario e identificadores de comando](../mfc/user-interface-objects-and-command-ids.md)   
  [Menús](../mfc/menus-mfc.md)   
  [Menús](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
-

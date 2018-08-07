@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Release (método) | Documentos de Microsoft'
+title: Método Runtimeclass | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d07e941f3f8ee0d7df2df14216fa60ef3a2a706
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888801"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607529"
 ---
 # <a name="runtimeclassrelease-method"></a>RuntimeClass::Release (Método)
-Realiza una operación de liberación de COM en el objeto de RuntimeClass actual.  
+Realiza una operación de liberación de COM en actual **RuntimeClass** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ STDMETHOD_(
  S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el recuento de referencias se convierte en cero, se elimina el objeto RuntimeClass.  
+ Si el recuento de referencias se convierte en cero, el **RuntimeClass** se elimina el objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

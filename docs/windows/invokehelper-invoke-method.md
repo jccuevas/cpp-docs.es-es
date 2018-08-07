@@ -1,5 +1,5 @@
 ---
-title: 'Invokehelper:: Invoke (método) | Documentos de Microsoft'
+title: Método Invokehelper | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d3fc5ac67d6c03cef7f096f898db0e2f29d125c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8db9d9b44a2646d69dfbbd423d712f0d1c92d6cd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882308"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607977"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,39 +62,39 @@ STDMETHOD(
 )( typename Traits;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `arg1`  
+### <a name="parameters"></a>Parámetros  
+ *Arg1*  
  Argumento 1.  
   
- `arg2`  
+ *Arg2*  
  Argumento 2.  
   
- `arg3`  
+ *Arg3*  
  Argumento 3.  
   
- `arg4`  
+ *Arg4*  
  Argumento de 4.  
   
- `arg5`  
+ *Arg5*  
  Argumento de 5.  
   
- `arg6`  
+ *Arg6*  
  Argumento 6.  
   
- `arg7`  
- Argumento pasado 7.  
+ *Arg7*  
+ Argumento de 7.  
   
- `arg8`  
- Argumento 8.  
+ *Arg8*  
+ Argumento de 8.  
   
- `arg9`  
+ *Arg9*  
  Argumento de 9.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que describe el error.  
   
 ## <a name="remarks"></a>Comentarios  
- Llama al controlador de eventos cuya firma contiene el número de argumentos especificado.  
+ Llama al controlador de eventos cuya firma contiene el número especificado de argumentos.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  

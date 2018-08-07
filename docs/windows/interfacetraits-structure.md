@@ -1,5 +1,5 @@
 ---
-title: InterfaceTraits (estructura) | Documentos de Microsoft
+title: InterfaceTraits (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4203fbb639b06e7e421809f9d901c70933d586d1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878689"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606753"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,17 +41,17 @@ template<>
 struct __declspec(novtable) InterfaceTraits<Nil>;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `I0`  
+### <a name="parameters"></a>Parámetros  
+ *I0*  
  El nombre de una interfaz.  
   
- `CloakedType`  
- Para RuntimeClass, Implements y ChainInterfaces, una interfaz que no esté en la lista de admite identificadores de interfaz.  
+ *CloakedType*  
+ Para `RuntimeClass`, `Implements` y `ChainInterfaces`, admite la interfaz que no estará en la lista de identificadores de interfaz.  
   
 ## <a name="remarks"></a>Comentarios  
  Características comunes de implementa de una interfaz.  
   
- La segunda plantilla es una especialización para interfaces escondidos. La tercera plantilla es una especialización para parámetros nulo.  
+ La segunda plantilla es una especialización para interfaces encubiertas. La tercera plantilla es una especialización para parámetros Nil.  
   
 ## <a name="members"></a>Miembros  
   
@@ -59,7 +59,7 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|`Base`|Sinónimo del parámetro de la plantilla `I0`|  
+|`Base`|Un sinónimo para el *I0* parámetro de plantilla.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -67,7 +67,7 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 |----------|-----------------|  
 |[InterfaceTraits::CanCastTo (método)](../windows/interfacetraits-cancastto-method.md)|Indica si el puntero especificado se puede convertir en un puntero a `Base`.|  
 |[InterfaceTraits::CastToBase (método)](../windows/interfacetraits-casttobase-method.md)|Convierte el puntero especificado a un puntero a `Base`.|  
-|[InterfaceTraits::CastToUnknown (método)](../windows/interfacetraits-casttounknown-method.md)|Convierte el puntero especificado a un puntero a IUnknown.|  
+|[InterfaceTraits::CastToUnknown (método)](../windows/interfacetraits-casttounknown-method.md)|Convierte el puntero especificado a un puntero a `IUnknown`.|  
 |[InterfaceTraits::FillArrayWithIid (método)](../windows/interfacetraits-fillarraywithiid-method.md)|Asigna el identificador de interfaz de `Base` al elemento de matriz especificado por el argumento de índice.|  
 |[InterfaceTraits::Verify (método)](../windows/interfacetraits-verify-method.md)|Comprueba que Base se deriva correctamente.|  
   
@@ -75,7 +75,7 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[InterfaceTraits::IidCount (constante)](../windows/interfacetraits-iidcount-constant.md)|Contiene el número de identificadores asociados con el objeto de InterfaceTraits actual de interfaz.|  
+|[InterfaceTraits::IidCount (constante)](../windows/interfacetraits-iidcount-constant.md)|Contiene el número de identificadores asociados con la actual interfaz **InterfaceTraits** objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `InterfaceTraits`  

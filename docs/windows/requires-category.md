@@ -1,5 +1,5 @@
 ---
-title: requires_category | Documentos de Microsoft
+title: requires_category | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a6822773292fd651eaae3be5c00fb2b693a80a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ddcfe01ec5bd838a84ddad351f43802a8142b44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882321"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606106"
 ---
 # <a name="requirescategory"></a>requires_category
 Especifica las categorías de los componentes necesarios de la clase de destino.  
@@ -30,8 +30,7 @@ Especifica las categorías de los componentes necesarios de la clase de destino.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-     [ requires_category(   
+[ requires_category(   
   requires_category  
 ) ]  
 ```  
@@ -41,14 +40,14 @@ Especifica las categorías de los componentes necesarios de la clase de destino.
  El identificador de la categoría necesaria.  
   
 ## <a name="remarks"></a>Comentarios  
- El **requires_category** atributo C++ especifica las categorías de componentes necesarias para la clase de destino. Para obtener más información, consulte [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category).  
+ El **requires_category** atributo de C++ especifica las categorías de componentes requeridas por la clase de destino. Para obtener más información, consulte [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category).  
   
  Este atributo requiere que el atributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código requiere que el objeto implementa la categoría de Control.  
+ El código siguiente requiere que el objeto implementa la categoría de Control.  
   
-```  
+```cpp  
 // cpp_attr_ref_requires_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -68,9 +67,9 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**Se aplica a**|**class**, `struct`|  
+|**Se aplica a**|**clase**, **struct**|  
 |**Reiterativo**|No|  
-|**Atributos requeridos**|Uno o varios de los siguientes: **coclass**, **progid**o **vi_progid**.|  
+|**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|  
 |**Atributos no válidos**|Ninguna|  
   
  Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  

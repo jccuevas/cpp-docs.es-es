@@ -1,5 +1,5 @@
 ---
-title: licencia | Documentos de Microsoft
+title: licencia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875752"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603807"
 ---
 # <a name="licensed"></a>licensed
-Indica que el objeto COM al que se aplica con licencia y se debe crear instancias con **IClassFactory2**.  
+Indica que el objeto COM al que se aplica tiene licencia y se debe crear instancias mediante `IClassFactory2`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [licensed]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **con licencia** atributo C++ tiene la misma funcionalidad que la [con licencia](http://msdn.microsoft.com/library/windows/desktop/aa367070) atributo MIDL.  
+ El **licencia** atributo de C++ tiene la misma funcionalidad que el [licencia](http://msdn.microsoft.com/library/windows/desktop/aa367070) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,9 +63,9 @@ public:
   
 |||  
 |-|-|  
-|**Se aplica a**|**class**, `struct`|  
+|**Se aplica a**|**clase**, **struct**|  
 |**Reiterativo**|No|  
-|**Atributos requeridos**|**coclass**|  
+|**Atributos requeridos**|`coclass`|  
 |**Atributos no válidos**|Ninguna|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
