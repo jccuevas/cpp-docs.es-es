@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: cambiar el idioma o la condición de un recurso al copiarlo | Documentos de Microsoft'
+title: 'Cómo: cambiar el idioma o la condición de un recurso al copiarlo | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcddbc0bb5a2afe807cbe8ca7643a831c28ad50f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880142"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570501"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Cómo: Cambiar el idioma o la condición de un recurso al copiarlo
 Al copiar un recurso, puede cambiar sus propiedades de idioma, condición o ambas.  
   
--   El idioma del recurso identifica exactamente eso, el idioma del recurso. Se utiliza por [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) para ayudar a identificar el recurso para el que está buscando. (Sin embargo, los recursos pueden tener diferencias para cada idioma que no estén relacionados con texto, por ejemplo, aceleradores que solo funcionen en teclados japoneses, un mapa de bits que solo sea adecuado para compilaciones localizadas en chino, etc.).  
+-   El idioma del recurso identifica exactamente eso, el idioma del recurso. Esto sirve para [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) para ayudar a identificar el recurso que está buscando. (Sin embargo, los recursos pueden tener diferencias para cada idioma que no estén relacionados con texto, por ejemplo, aceleradores que solo funcionen en teclados japoneses, un mapa de bits que solo sea adecuado para compilaciones localizadas en chino, etc.).  
   
 -   La condición de un recurso es un símbolo definido que identifica una condición en la que esta copia concreta del recurso se va a utilizar.  
   
@@ -40,7 +40,7 @@ IDD_AboutBox (Finnish - XX33)
   
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Para copiar un recurso existente y cambiar su idioma o su condición  
   
-1.  En el archivo .rc o en la [vista de recursos](../windows/resource-view-window.md) ventana, haga clic en el recurso que desea copiar.  
+1.  En el archivo .rc o en la [vista de recursos](../windows/resource-view-window.md) ventana, haga clic en el recurso que van a copiar.  
   
 2.  Elija **Insertar copia** en el menú contextual.  
   
@@ -50,9 +50,7 @@ IDD_AboutBox (Finnish - XX33)
   
     -   En el **condición** , escriba la condición.  
   
-
-  
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   

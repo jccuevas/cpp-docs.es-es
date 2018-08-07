@@ -1,5 +1,5 @@
 ---
-title: helpstringcontext | Documentos de Microsoft
+title: helpstringcontext | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97b4b43f8cbd8f08cca4f6cf2f21294a625f289c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874582"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570004"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
-Especifica el identificador de un tema de ayuda en un archivo .hlp o .chm.  
+Especifica el identificador de un tema de ayuda en un archivo .hlp o chm.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ helpstringcontext(  
+[ helpstringcontext(  
    contextID  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `contextID`  
+### <a name="parameters"></a>Parámetros  
+ *contextID*  
  Un identificador de contexto de Ayuda de 32 bits en el archivo de ayuda.  
   
 ## <a name="remarks"></a>Comentarios  
- El **helpstringcontext** atributo C++ tiene la misma funcionalidad que la [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL (atributo).  
+ El **helpstringcontext** atributo de C++ tiene la misma funcionalidad que el [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL (atributo).  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringcontext.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -68,7 +67,7 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**Se aplica a**|**clase**, `interface`, métodos de interfaz|  
+|**Se aplica a**|**clase**, **interfaz**, método de interfaz|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  
@@ -80,4 +79,4 @@ __interface IMyI
  [Atributos de interfaz](../windows/interface-attributes.md)   
  [Atributos de clase](../windows/class-attributes.md)   
  [Atributos de método](../windows/method-attributes.md)   
- [Módulo](../windows/module-cpp.md)   
+ [módulo](../windows/module-cpp.md)   

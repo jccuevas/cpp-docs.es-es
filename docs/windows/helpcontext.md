@@ -1,5 +1,5 @@
 ---
-title: HelpContext | Documentos de Microsoft
+title: HelpContext | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 317e204c7292c4a7cccb1f81f6bc9d2a2fbfd407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2089bca316fb37304765ac14475b73cadaf79342
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877220"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571365"
 ---
 # <a name="helpcontext"></a>helpcontext
 Especifica un identificador de contexto que permite al usuario ver información acerca de este elemento en el archivo de ayuda.  
@@ -30,18 +30,17 @@ Especifica un identificador de contexto que permite al usuario ver información 
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ helpcontext(  
+[ helpcontext(  
    id  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `id`  
- El identificador de contexto del tema de ayuda. Vea [ayuda HTML: ayuda contextual para los programas](../mfc/html-help-context-sensitive-help-for-your-programs.md) para obtener más información sobre identificadores de contexto.  
+### <a name="parameters"></a>Parámetros  
+ *identificador*  
+ Identificador de contexto del tema de ayuda. Consulte [ayuda HTML: ayuda contextual para los programas](../mfc/html-help-context-sensitive-help-for-your-programs.md) para obtener más información sobre identificadores de contexto.  
   
 ## <a name="remarks"></a>Comentarios  
- El **helpcontext** atributo C++ tiene la misma funcionalidad que la [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) atributo MIDL.  
+ El **helpcontext** atributo de C++ tiene la misma funcionalidad que el [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [defaultvalue](../windows/defaultvalue.md) para obtener un ejemplo de cómo usar **helpcontext**.  
@@ -52,7 +51,7 @@ Especifica un identificador de contexto que permite al usuario ver información 
   
 |||  
 |-|-|  
-|**Se aplica a**|`interface`, `typedef`, **clase**, método, propiedad|  
+|**Se aplica a**|**interfaz**, **typedef**, **clase**, método, propiedad|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

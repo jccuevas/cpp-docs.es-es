@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: sobrecargar funciones con punteros internos y punteros nativos (C++ / CLI) | Documentos de Microsoft'
+title: 'Cómo: sobrecargar funciones con punteros internos y punteros nativos (C++ / c++ / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e3bc7e5fca6a34f9847c913e92e523b2898068f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2fb1025238dc5cf5b186830d0bea3b896b7391ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874868"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569965"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Cómo: Sobrecargar funciones con punteros internos y punteros nativos (C++/CLI)
-Las funciones se pueden sobrecargar dependiendo de si el tipo de parámetro es un puntero interior o un puntero nativo.  
+Las funciones se pueden sobrecargar dependiendo de si el tipo de parámetro es un puntero interior o puntero nativo.  
   
 > [!IMPORTANT]
->  Esta característica de lenguaje es compatible con la **/CLR** opción del compilador, pero no en el **/ZW** opción del compilador.  
+>  Esta característica del lenguaje es compatible con la `/clr` opción del compilador, pero no mediante el `/ZW` opción del compilador.  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // interior_ptr_overload.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -69,7 +69,7 @@ int main() {
   
 ### <a name="output"></a>Salida  
   
-```  
+```Output 
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
 ```  

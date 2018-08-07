@@ -1,5 +1,5 @@
 ---
-title: defaultcollelem | Documentos de Microsoft
+title: defaultcollelem | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da53f10932ffc0696d567bc1140e3e92a609e2c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04317a516b94ae5fc70b61cd3ae33269ad437dce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870915"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569890"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 Se usa para la optimización de código de Visual Basic.  
@@ -30,18 +30,16 @@ Se usa para la optimización de código de Visual Basic.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [defaultcollelem]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **defaultcollelem** atributo C++ tiene la misma funcionalidad que la [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) atributo MIDL.  
+ El **defaultcollelem** atributo de C++ tiene la misma funcionalidad que el [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente muestra un método de interfaz mediante la **defaultcollelem** atributo:  
+ El código siguiente muestra un método de interfaz mediante el **defaultcollelem** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultcollelem.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

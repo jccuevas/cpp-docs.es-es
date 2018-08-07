@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: GetMarshalSizeMax (método) | Documentos de Microsoft'
+title: GetMarshalSizeMax (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a298e63bc67dadf33a5e653d0eecf165a530d82
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c39c313f06bb4dd1f4dbc095df159a38625e9db8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873799"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570219"
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>FtmBase::GetMarshalSizeMax (Método)
-Obtiene el límite superior en el número de bytes necesarios para serializar el puntero de interfaz especificado en el objeto especificado.  
+Obtenga el límite superior en el número de bytes necesarios para serializar el puntero de interfaz especificado en el objeto especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,28 +40,28 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `riid`  
+### <a name="parameters"></a>Parámetros  
+ *riid*  
  Referencia al identificador de la interfaz que se van a calcular.  
   
- `pv`  
- Puntero de interfaz que se van a calcular; puede ser NULL.  
+ *PV*  
+ Puntero de interfaz se van a calcular; puede ser NULL.  
   
- `dwDestContext`  
+ *dwDestContext*  
  Contexto de destino donde se puede deserializar la interfaz especificada.  
   
- Especifique uno o varios valores de enumeración de MSHCTX.  
+ Especifique uno o más valores de enumeración MSHCTX.  
   
  Actualmente, la resolución de referencias puede producirse en otro contenedor del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).  
   
- `pvDestContext`  
+ *pvDestContext*  
  Reservado para uso futuro; debe ser NULL.  
   
- `mshlflags`  
- Marca que indica si los datos que se van a calcular transmitirse hacia el proceso del cliente, el caso típico, o se escriben en una tabla global, donde se puede recuperar mediante varios clientes. Especifique uno o varios valores de enumeración de MSHLFLAGS.  
+ *mshlflags*  
+ Marca que indica si los datos se van a calcular están que se transmitan al proceso de cliente, el caso típico, o se escriben en una tabla global, donde se puede recuperar varios clientes. Especifique uno o más valores de enumeración MSHLFLAGS.  
   
- `pSize`  
- Cuando se completa esta operación, puntero para el límite superior de la cantidad de datos se escriban en la secuencia de serialización.  
+ *pSize*  
+ Cuando se completa esta operación, el puntero para el límite superior de la cantidad de datos se escriban en la secuencia de serialización.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; en caso contrario, E_FAIL o E_NOINTERFACE.  

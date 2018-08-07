@@ -1,5 +1,5 @@
 ---
-title: helpstringdll | Documentos de Microsoft
+title: helpstringdll | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27303f294f2414e2ea3f15de0c5bbfb1723628aa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877350"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570085"
 ---
 # <a name="helpstringdll"></a>helpstringdll
-Especifica el nombre de la DLL a utilizar para realizar la búsqueda de cadena de documento (localización).  
+Especifica el nombre del archivo DLL a utilizar para realizar la búsqueda de cadenas de documento (localización).  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ helpstringdll(  
+[ helpstringdll(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `string`  
- DLL que se va a utilizar para realizar la búsqueda de cadena de documento.  
+### <a name="parameters"></a>Parámetros  
+ *string*  
+ DLL que se va a utilizar para realizar la búsqueda de cadenas de documento.  
   
 ## <a name="remarks"></a>Comentarios  
- El **helpstringdll** atributo C++ tiene la misma funcionalidad que la [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) atributo MIDL.  
+ El **helpstringdll** atributo de C++ tiene la misma funcionalidad que el [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringdll.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -64,7 +63,7 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**Se aplica a**|**clase**, `interface`, métodos de interfaz|  
+|**Se aplica a**|**clase**, **interfaz**, método de interfaz|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

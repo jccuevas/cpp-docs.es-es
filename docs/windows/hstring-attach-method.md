@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Attach (método) | Documentos de Microsoft'
+title: Método hstring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738c44c11c69f8d2479335ce3effc4135dfe0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20a05bf603b874d260c95c010e6f0e8312b35649
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876071"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570994"
 ---
 # <a name="hstringattach-method"></a>HString::Attach (Método)
-Asocia el objeto HString especificado con el objeto de HString actual.  
+Asocia especificado **HString** objeto con el actual **HString** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 void Attach(  
        HSTRING hstr  
        ) throw()  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `hstr`  
- Un objeto HString existente.  
+ *HSTR*  
+ Existente **HString** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: dual | Documentos de Microsoft
+title: dual | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872385"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571023"
 ---
 # <a name="dual"></a>dual
 Coloca una interfaz en el archivo .idl como una interfaz dual.  
@@ -30,18 +30,16 @@ Coloca una interfaz en el archivo .idl como una interfaz dual.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [dual]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando el **dual** atributo C++ precede a una interfaz, hace que la interfaz para colocarse dentro del bloque de biblioteca en el archivo .idl generado.  
+ Cuando el **dual** atributo de C++ precede a una interfaz, hace que la interfaz colocarse dentro del bloque de biblioteca en el archivo .idl generado.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente es un bloque de atributos que usa **dual** antes de una definición de interfaz:  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -79,7 +77,7 @@ __interface IStatic : IDispatch
   
 |||  
 |-|-|  
-|**Se aplica a**|`interface`|  
+|**Se aplica a**|**interface**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|**dispinterface**|  
@@ -89,7 +87,7 @@ __interface IStatic : IDispatch
 ## <a name="see-also"></a>Vea también  
  [Atributos IDL](../windows/idl-attributes.md)   
  [Atributos por uso](../windows/attributes-by-usage.md)   
- [Personalizada](../windows/custom-cpp.md)   
- [Dispinterface](../windows/dispinterface.md)   
+ [Personalizado](../windows/custom-cpp.md)   
+ [Interfaz dispinterface](../windows/dispinterface.md)   
  [object](../windows/object-cpp.md)   
  [__interface](../cpp/interface.md)   

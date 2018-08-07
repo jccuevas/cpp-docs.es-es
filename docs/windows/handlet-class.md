@@ -1,5 +1,5 @@
 ---
-title: HandleT (clase) | Documentos de Microsoft
+title: HandleT (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a596bf1e086ac7b1a1a72c3504ce4f41844ba4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87a8718971a2da008b03dca1e9653d8454115adb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876155"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570602"
 ---
 # <a name="handlet-class"></a>HandleT (clase)
 Representa un identificador a un objeto.  
@@ -36,9 +36,9 @@ template <
 class HandleT;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `HandleTraits`  
- Una instancia de la [HandleTraits](../windows/handletraits-structure.md) estructura que define las características comunes de un identificador.  
+### <a name="parameters"></a>Parámetros  
+ *HandleTraits*  
+ Una instancia de la [HandleTraits](../windows/handletraits-structure.md) una estructura que define las características comunes de un controlador.  
   
 ## <a name="members"></a>Miembros  
   
@@ -52,36 +52,36 @@ class HandleT;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[HandleT::HandleT (constructor)](../windows/handlet-handlet-constructor.md)|Inicializa una nueva instancia de la clase HandleT.|  
-|[HandleT::~HandleT (destructor)](../windows/handlet-tilde-handlet-destructor.md)|Desinicializa una instancia de la clase HandleT.|  
+|[HandleT::HandleT (constructor)](../windows/handlet-handlet-constructor.md)|Inicializa una nueva instancia de la **HandleT** clase.|  
+|[HandleT::~HandleT (destructor)](../windows/handlet-tilde-handlet-destructor.md)|Desinicializa una instancia de la **HandleT** clase.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[HandleT::Attach (método)](../windows/handlet-attach-method.md)|Asocia el identificador especificado con el objeto de HandleT actual.|  
-|[HandleT::Close (método)](../windows/handlet-close-method.md)|Cierra el actual objeto HandleT.|  
-|[HandleT::Detach (método)](../windows/handlet-detach-method.md)|Desasocia el objeto de HandleT actual de su identificador subyacente.|  
+|[HandleT::Attach (método)](../windows/handlet-attach-method.md)|Asocia el identificador especificado con el actual **HandleT** objeto.|  
+|[HandleT::Close (método)](../windows/handlet-close-method.md)|Cierra el actual **HandleT** objeto.|  
+|[HandleT::Detach (método)](../windows/handlet-detach-method.md)|Desasocia actual **HandleT** objeto a partir de su identificador subyacente.|  
 |[HandleT::Get (método)](../windows/handlet-get-method.md)|Obtiene el valor del identificador subyacente.|  
-|[HandleT::IsValid (método)](../windows/handlet-isvalid-method.md)|Indica si el objeto de HandleT actual representa un identificador.|  
+|[HandleT::IsValid (método)](../windows/handlet-isvalid-method.md)|Indica si el actual **HandleT** objeto representa un identificador.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[HandleT::InternalClose (método)](../windows/handlet-internalclose-method.md)|Cierra el actual objeto HandleT.|  
+|[HandleT::InternalClose (método)](../windows/handlet-internalclose-method.md)|Cierra el actual **HandleT** objeto.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[HandleT::operator= (operador)](../windows/handlet-operator-assign-operator.md)|Mueve el valor del objeto HandleT especificado al objeto HandleT actual.|  
+|[HandleT::operator= (operador)](../windows/handlet-operator-assign-operator.md)|Mueve el valor del elemento especificado **HandleT** el objeto actual **HandleT** objeto.|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[HandleT::handle_ (miembro de datos)](../windows/handlet-handle-data-member.md)|Contiene el identificador que se representa mediante el objeto HandleT.|  
+|[HandleT::handle_ (miembro de datos)](../windows/handlet-handle-data-member.md)|Contiene el identificador representado por la **HandleT** objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `HandleT`  

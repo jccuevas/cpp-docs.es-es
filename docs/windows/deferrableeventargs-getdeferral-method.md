@@ -1,5 +1,5 @@
 ---
-title: 'Método deferrableeventargs:: Getdeferral | Documentos de Microsoft'
+title: 'Método deferrableeventargs:: Getdeferral | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2442894c5f7bd85eb94262e776294c1e52a19e01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13cd6b361fccc49de6142a0640ff96dbab3cb92c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883546"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571209"
 ---
 # <a name="deferrableeventargsgetdeferral-method"></a>Método DeferrableEventArgs::GetDeferral
 Obtiene una referencia a la [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) el objeto que representa un evento diferido.  
@@ -30,14 +30,14 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `result`  
- Un puntero que hará referencia a la [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) objeto cuando se complete la llamada.  
+ *Resultado*  
+ Un puntero que hará referencia el [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) objeto cuando se complete la llamada.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener un ejemplo de código, vea [clase DeferrableEventArgs](../windows/deferrableeventargs-class.md).  
+ Para obtener un ejemplo de código, vea [DeferrableEventArgs (clase)](../windows/deferrableeventargs-class.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  

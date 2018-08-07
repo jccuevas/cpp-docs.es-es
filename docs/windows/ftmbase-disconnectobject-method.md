@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: DisconnectObject (método) | Documentos de Microsoft'
+title: DisconnectObject (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2501413196e1fd6b8b7a1a4f9985304863e02549
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f80c7e758b282c0a1976d490483c397eca43b5f5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873006"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568633"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject (Método)
 Forzosamente libera todas las conexiones externas a un objeto. Servidor del objeto llama a la implementación del objeto de este método antes de apagar.  
@@ -35,8 +35,8 @@ STDMETHODIMP DisconnectObject(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `dwReserved`  
+### <a name="parameters"></a>Parámetros  
+ *dwReservado*  
  Reservado para uso futuro; debe ser cero.  
   
 ## <a name="return-value"></a>Valor devuelto  

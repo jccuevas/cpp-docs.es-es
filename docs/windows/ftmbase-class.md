@@ -1,5 +1,5 @@
 ---
-title: FtmBase (clase) | Documentos de Microsoft
+title: FtmBase (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38f30c497fc8640b1f88f4ffb3fc6f14bed55a3e
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: ed3e9b9e66f673a3d86ded7b3d576e1203db9595
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814357"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570566"
 ---
 # <a name="ftmbase-class"></a>FtmBase (clase)
 Representa un objeto de cálculo de referencias con subprocesamiento libre.  
@@ -30,7 +30,6 @@ Representa un objeto de cálculo de referencias con subprocesamiento libre.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 class FtmBase : public Microsoft::WRL::Implements<  
    Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,   
    Microsoft::WRL::CloakedIid<IMarshal> >;  
@@ -45,7 +44,7 @@ class FtmBase : public Microsoft::WRL::Implements<
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[FtmBase::FtmBase (constructor)](../windows/ftmbase-ftmbase-constructor.md)|Inicializa una nueva instancia de la clase FtmBase.|  
+|[FtmBase::FtmBase (constructor)](../windows/ftmbase-ftmbase-constructor.md)|Inicializa una nueva instancia de la **FtmBase** clase.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -53,17 +52,17 @@ class FtmBase : public Microsoft::WRL::Implements<
 |----------|-----------------|  
 |[FtmBase::CreateGlobalInterfaceTable (método)](../windows/ftmbase-createglobalinterfacetable-method.md)|Crea una tabla de interfaz global (GIT).|  
 |[FtmBase::DisconnectObject (método)](../windows/ftmbase-disconnectobject-method.md)|Forzosamente libera todas las conexiones externas a un objeto. Servidor del objeto llama a la implementación del objeto de este método antes de apagar.|  
-|[FtmBase::GetMarshalSizeMax (método)](../windows/ftmbase-getmarshalsizemax-method.md)|Obtiene el límite superior en el número de bytes necesarios para serializar el puntero de interfaz especificado en el objeto especificado.|  
-|[FtmBase::GetUnmarshalClass (método)](../windows/ftmbase-getunmarshalclass-method.md)|Obtiene el CLSID que utiliza COM para encontrar el archivo DLL que contiene el código para el proxy correspondiente. COM carga este archivo DLL para crear una instancia no inicializada del proxy.|  
-|[FtmBase::MarshalInterface (método)](../windows/ftmbase-marshalinterface-method.md)|Escribe en una secuencia los datos necesarios para inicializar un objeto de proxy en algún proceso de cliente.|  
-|[FtmBase::ReleaseMarshalData (método)](../windows/ftmbase-releasemarshaldata-method.md)|Destruye un paquete de calcular las referencias de datos.|  
+|[FtmBase::GetMarshalSizeMax (método)](../windows/ftmbase-getmarshalsizemax-method.md)|Obtenga el límite superior en el número de bytes necesarios para serializar el puntero de interfaz especificado en el objeto especificado.|  
+|[FtmBase::GetUnmarshalClass (método)](../windows/ftmbase-getunmarshalclass-method.md)|Obtiene el CLSID que COM que se utiliza para localizar el archivo DLL que contiene el código para el proxy correspondiente. COM carga este archivo DLL para crear una instancia del proxy no inicializada.|  
+|[FtmBase::MarshalInterface (método)](../windows/ftmbase-marshalinterface-method.md)|Escribe los datos necesarios para inicializar un objeto de proxy en algún proceso de cliente en una secuencia.|  
+|[FtmBase::ReleaseMarshalData (método)](../windows/ftmbase-releasemarshaldata-method.md)|Destruye un paquete de cálculo de referencias de datos.|  
 |[FtmBase::UnmarshalInterface (método)](../windows/ftmbase-unmarshalinterface-method.md)|Inicializa a un proxy recién creado y devuelve un puntero de interfaz a ese proxy.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[FtmBase::marshaller_ (miembro de datos)](../windows/ftmbase-marshaller-data-member.md)|Contiene una referencia para el contador de referencias de subprocesamiento libre.|  
+|[FtmBase::marshaller_ (miembro de datos)](../windows/ftmbase-marshaller-data-member.md)|Contiene una referencia para el contador de referencias de subproceso libre.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `FtmBase`  

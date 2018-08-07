@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: importar y exportar recursos | Documentos de Microsoft'
+title: 'Cómo: importar y exportar recursos | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e526ab335436730f4132b5b7127ec9079432a4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49cdee9cfed3b5694fcea899b9250c5f9dd214b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879183"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570485"
 ---
 # <a name="how-to-import-and-export-resources"></a>Cómo: Importar y exportar recursos
 Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de herramientas), archivos HTML y recursos personalizados para usarlos en Visual C++. Puede exportar los mismos tipos de archivos desde un proyecto de Visual C++ para separar archivos que se pueden usar fuera del entorno de desarrollo.  
@@ -55,7 +55,7 @@ Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de h
   
 ### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>Para exportar un mapa de bits, un icono o un cursor como un archivo independiente (para usarlo fuera de Visual C++)  
   
-1.  En **recursos** ver, haga clic en el recurso que se va a exportar.  
+1.  En **recursos** ver, haga clic en el recurso que desea exportar.  
   
 2.  Haga clic en **exportar** en el menú contextual.  
   
@@ -63,9 +63,7 @@ Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de h
   
 4.  Navegue hasta la carpeta donde desea guardar el archivo y haga clic en **exportar**.  
   
-
-  
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   

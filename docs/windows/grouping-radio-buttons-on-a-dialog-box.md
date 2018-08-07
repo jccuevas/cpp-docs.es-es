@@ -1,5 +1,5 @@
 ---
-title: Agrupar botones de Radio en un cuadro de diálogo | Documentos de Microsoft
+title: Agrupar botones de Radio en un cuadro de diálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aee3245a65ccdccc32b40c313eecdd45cb3ea8bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879333"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571508"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Agrupar botones de opción en un cuadro de diálogo
 Al agregar botones de radio a un cuadro de diálogo, trátelos como grupo, estableciendo una propiedad Grupo en la ventana Propiedades para el primer botón del grupo. Después, aparecerá un id. de control para ese botón de opción en el [Asistente para agregar variables miembro](../ide/add-member-variable-wizard.md), lo que le permite agregar una variable miembro para el grupo de botones de radio.  
@@ -60,14 +60,13 @@ Al agregar botones de radio a un cuadro de diálogo, trátelos como grupo, estab
   
 6.  Ahora puede modificar el código para especificar qué botón de radio debe aparecer seleccionado. Por ejemplo,m_radioBox1 = 0 selecciona el primer botón de radio del grupo.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   
 ## <a name="see-also"></a>Vea también  
- [Organización de los controles de cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Organización de los controles en cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
-

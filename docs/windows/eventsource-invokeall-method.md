@@ -1,5 +1,5 @@
 ---
-title: 'EventSource:: InvokeAll (método) | Documentos de Microsoft'
+title: InvokeAll (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00bce09f9e081bb0cd5c01115b05e4d3268d7293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04a31c7d080ff4fbfae094e07ab02d912966f4b1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882620"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570662"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll (Método)
-Llama a cada controlador de eventos asociado con el actual [EventSource](../windows/eventsource-class.md) objeto mediante los argumentos y tipos de argumentos especificados.  
+Llama a cada controlador de eventos asociado con el actual [EventSource](../windows/eventsource-class.md) objeto utilizando los argumentos y tipos de argumento especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -183,66 +183,66 @@ void InvokeAll(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `T0`  
- El tipo de argumento del controlador de evento de cero.  
+### <a name="parameters"></a>Parámetros  
+ *T0*  
+ El tipo del argumento del controlador de evento inicial.  
   
- `T1`  
+ *T1*  
  El tipo del primer argumento de controlador de eventos.  
   
- `T2`  
+ *T2*  
  El tipo del segundo argumento de controlador de eventos.  
   
- `T3`  
+ *T3*  
  El tipo del tercer argumento de controlador de eventos.  
   
- `T4`  
- El tipo del cuarto argumento del controlador de eventos.  
+ *T4*  
+ El tipo del cuarto argumento de controlador de eventos.  
   
- `T5`  
- El tipo del quinto argumento del controlador de eventos.  
+ *T5*  
+ El tipo del quinto argumento de controlador de eventos.  
   
- `T6`  
- El tipo del sexto argumento del controlador de eventos.  
+ *T6*  
+ El tipo del sexto argumento de controlador de eventos.  
   
- `T7`  
- El tipo del séptimo argumento del controlador de eventos.  
+ *T7*  
+ El tipo del séptimo argumento de controlador de eventos.  
   
- `T8`  
- El tipo del octavo de argumento del controlador de eventos.  
+ *T8*  
+ El tipo del argumento del controlador de evento de identificador de octava.  
   
- `T9`  
- El tipo del noveno argumento del controlador de eventos.  
+ *T9*  
+ El tipo del noveno argumento de controlador de eventos.  
   
- `arg0`  
- El argumento de controlador de eventos de cero.  
+ *arg0*  
+ El argumento de controlador de evento inicial.  
   
- `arg1`  
+ *Arg1*  
  El primer argumento de controlador de eventos.  
   
- `arg2`  
+ *Arg2*  
  El segundo argumento de controlador de eventos.  
   
- `arg3`  
+ *Arg3*  
  El tercer argumento de controlador de eventos.  
   
- `arg4`  
+ *Arg4*  
  El cuarto argumento de controlador de eventos.  
   
- `arg5`  
+ *Arg5*  
  El quinto argumento de controlador de eventos.  
   
- `arg6`  
+ *Arg6*  
  El sexto argumento de controlador de eventos.  
   
- `arg7`  
+ *Arg7*  
  El séptimo argumento de controlador de eventos.  
   
- `arg8`  
- El octavo argumento de controlador de eventos.  
+ *Arg8*  
+ El argumento de controlador de evento de identificador de octava.  
   
- `arg9`  
- Noveno argumento del controlador de eventos.  
+ *Arg9*  
+ El noveno argumento de controlador de eventos.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  

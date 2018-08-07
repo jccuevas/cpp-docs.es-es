@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: abrir un recurso del manifiesto | Documentos de Microsoft'
+title: 'Cómo: abrir un recurso del manifiesto | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e877015afb0d53bd8c9bb12c092086b06ae59c2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881847"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569952"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Cómo: Abrir un recurso del manifiesto
 Si abre un recurso de manifiesto desde [Vista de recursos](../windows/resource-view-window.md), el recurso se abrirá en formato binario. Para ver el contenido de un recurso de manifiesto en un formato más inteligible, debe abrir el recurso desde el Explorador de soluciones.  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>Para abrir un recurso del manifiesto en el Editor de texto  
   
-1.  Con el proyecto abierto en `Solution Explorer`, expanda la carpeta **archivos de recursos** .  
+1.  Con el proyecto abierto en **el Explorador de soluciones**, expanda el **archivos de recursos** carpeta.  
   
 2.  Haga doble clic en el archivo .manifest.  
   
@@ -36,13 +36,13 @@ Si abre un recurso de manifiesto desde [Vista de recursos](../windows/resource-v
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>Para abrir un recurso del manifiesto en otro editor  
   
-1.  En el Explorador de soluciones, haga clic con el botón derecho en el archivo .manifest y elija **Abrir con...** en el menú contextual.  
+1.  En **el Explorador de soluciones**, haga clic en el archivo .manifest y elija **abrir con...**  en el menú contextual.  
   
 2.  En el cuadro de diálogo **Abrir con** especifique el editor que desea utilizar y haga clic en **Abrir**.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.*  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.  
   
- Requisitos  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   

@@ -1,5 +1,5 @@
 ---
-title: Delegate (extensiones de componentes de C++) | Documentos de Microsoft
+title: Delegate (extensiones de componentes de C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73d40bb33509f89273b37f7704cd1922a8d5adc2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879664"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570368"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (Extensiones de componentes de C++)
-Declara un tipo que representa un puntero a función.  
+Declara un tipo que representa un puntero de función.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
  El tiempo de ejecución de Windows y el common language runtime admiten a delegados.  
   
 ### <a name="remarks"></a>Comentarios  
- `delegate` es una palabra clave contextual. Para obtener más información, consulte [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ **delegar** es una palabra clave contextual. Para obtener más información, consulte [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Para detectar en tiempo de compilación si un tipo es un delegado, use el `__is_delegate()` rasgo de tipo. Para obtener más información, consulte [compatibilidad de compilador para Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
- C++ / CX admite delegados con la siguiente sintaxis.  
+ C++ / c++ / CX admite delegados con la sintaxis siguiente.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -49,30 +49,29 @@ delegate-type-identifier
 (  
 [ parameters ]  
 )  
-  
 ```  
   
 ### <a name="parameters"></a>Parámetros  
  *access*  
- (opcional) La accesibilidad del delegado, que puede ser `public` (valor predeterminado) o `private`. El prototipo de función también se puede calificar con el `const` o `volatile` palabras clave.  
+ (opcional) La accesibilidad del delegado, que puede ser **pública** (valor predeterminado) o **privada**. El prototipo de función también se puede calificar con el **const** o **volátil** palabras clave.  
   
- *Tipo de valor devuelto*  
+ *tipo de valor devuelto*  
  El tipo de valor devuelto del prototipo de función.  
   
- *identificador de tipo de delegado*  
+ *identificador del tipo de delegado*  
  El nombre del tipo de delegado declarado.  
   
  *Parámetros*  
  (Opcional) Los tipos y los identificadores del prototipo de función.  
   
 ### <a name="remarks"></a>Comentarios  
- Use la *identificador de tipo de delegado* para declarar un evento con el mismo prototipo que el delegado. Para obtener más información, consulte [delegados (C++ / CX)](../cppcx/delegates-c-cx.md).  
+ Use la *delegate-type-identifier* para declarar un evento con el mismo prototipo que el delegado. Para obtener más información, consulte [delegados (C++ / c++ / CX)](../cppcx/delegates-c-cx.md).  
   
 ### <a name="requirements"></a>Requisitos  
  Opción del compilador: **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- Common language runtime admite delegados con la siguiente sintaxis.  
+ Common language runtime admite delegados con la sintaxis siguiente.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -80,7 +79,6 @@ delegate-type-identifier
 access  
 delegate  
 function_declaration  
-  
 ```  
   
 ### <a name="parameters"></a>Parámetros  
@@ -88,36 +86,36 @@ function_declaration
  (opcional) La accesibilidad del delegado fuera del ensamblado puede ser público o privado.  El valor predeterminado es privado.  Dentro de una clase, un delegado puede tener cualquier tipo de accesibilidad.  
   
  *function_declaration*  
- La firma de la función que puede estar limitada por el delegado. El tipo de valor devuelto de un delegado puede ser cualquier tipo administrado. Por motivos de interoperabilidad, se recomienda que el tipo de valor devuelto de un delegado ser un tipo CLS.  
+ La firma de la función que se puede enlazar al delegado. El tipo de valor devuelto de un delegado puede ser cualquier tipo administrado. Por motivos de interoperabilidad, se recomienda que el tipo de valor devuelto de un delegado de ser un tipo CLS.  
   
- Para definir un delegado sin enlazar, el primer parámetro de *function_declaration* deben ser de tipo de la `this` puntero para el objeto. 
+ Para definir un delegado sin enlazar, el primer parámetro de *function_declaration* deben ser de tipo de la **esto** puntero para el objeto. 
   
 ### <a name="remarks"></a>Comentarios  
- Los delegados son de multidifusión: el puntero de función de"" puede enlazarse a uno o más métodos dentro de una clase administrada. El **delegar** palabra clave define un tipo de delegado de multidifusión con una firma de método específicas.  
+ Los delegados son de multidifusión: el "puntero de función" se puede enlazar a uno o más métodos dentro de una clase administrada. El **delegar** palabra clave define un tipo de delegado de multidifusión con una firma de método concreto.  
   
  También se puede enlazar un delegado a un método de una clase de valor, como un método estático.  
   
  Un delegado tiene las siguientes características:  
   
--   Hereda de **System:: MulticastDelegate**.  
+-   Hereda de `System::MulticastDelegate`.  
   
--   Tiene un constructor que toma dos argumentos: un puntero a una clase administrada o **NULL** (en el caso de enlace a un método estático) y un método completo del tipo especificado.  
+-   Tiene un constructor que toma dos argumentos: un puntero a una clase administrada o NULL (en el caso de enlace a un método estático) y un método completo del tipo especificado.  
   
 -   Tiene un método denominado `Invoke`, cuya signatura coincide con la signatura declarada del delegado.  
   
  Cuando se invoca un delegado, sus funciones se llaman en el orden en que se hayan vinculado.  
   
- El valor devuelto de un delegado es el valor devuelto de su última función miembro asociado.  
+ El valor devuelto de un delegado es el valor devuelto desde su última función miembro asociado.  
   
- No se pueden sobrecargar los delegados.  
+ Los delegados no pueden sobrecargarse.  
   
- Delegados pueden ser dependiente o independiente.  
+ Pueden que los delegados se enlaza o desenlaza.  
   
- Cuando crea una instancia de un delegado enlazado, el primer argumento debe ser una referencia de objeto.  El segundo argumento de la creación de una instancia de delegado cualquiera debe ser la dirección de un método de un objeto de clase administrada o un puntero a un método de un tipo de valor.   El segundo argumento de la creación de una instancia de delegado debe llame al método con la sintaxis de ámbito de clase completo y aplicar el operador address-of.  
+ Cuando crea una instancia de un delegado enlazado, el primer argumento debe ser una referencia de objeto. El segundo argumento de la instancia de delegado cualquiera deberá ser la dirección de un método de un objeto de clase administrada o un puntero a un método de un tipo de valor. El segundo argumento de la instancia de delegado debe nombre del método con la sintaxis de ámbito de clase completo y aplicar el operador address-of.  
   
- Cuando crea una instancia de un delegado sin enlazar, el primer argumento debe ser la dirección de un método de un objeto de clase administrada o un puntero a un método de un tipo de valor.   El argumento debe llame al método con la sintaxis de ámbito de clase completo y aplicar el operador address-of.  
+ Cuando crea una instancia de un delegado sin enlazar, el primer argumento debe ser la dirección de un método de un objeto de clase administrada o un puntero a un método de un tipo de valor. El argumento debe nombre del método con la sintaxis de ámbito de clase completo y aplicar el operador address-of.  
   
- Cuando se crea un delegado a una función global o estática, se requiere un solo parámetro: la función (si lo desea, la dirección de la función).  
+ Al crear un delegado a una función global o estática, se requiere un solo parámetro: la función (si lo desea, la dirección de la función).  
   
  Para obtener más información sobre los delegados, vea  
   
@@ -131,7 +129,7 @@ function_declaration
 ### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- En el ejemplo siguiente se muestra cómo declarar, inicializar e invocar a delegados.  
+ El ejemplo siguiente muestra cómo declarar, inicializar y los delegados se invocan.  
   
 ```cpp  
 // mcppv2_delegate.cpp  

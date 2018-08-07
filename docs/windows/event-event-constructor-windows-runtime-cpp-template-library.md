@@ -1,5 +1,5 @@
 ---
-title: 'Event:: Event Constructor (biblioteca de plantillas C++ de Windows en tiempo de ejecución) | Documentos de Microsoft'
+title: 'Constructor event:: Event (biblioteca de plantillas C++ de Windows en tiempo de ejecución) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a63e7ddbf2528b78eac7761bbcf4891f31cc886
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de0f68ee3e27f2ac3a7f87e64489a05a16dcdc91
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882633"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571417"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event Constructor (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)
 Inicializa una nueva instancia de la clase Event.  
@@ -37,8 +37,8 @@ WRL_NOTHROW Event(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `h`  
- Identificador para un evento. De forma predeterminada, `h` se inicializa como `nullptr`.  
+ *h*  
+ Identificador para un evento. De forma predeterminada, *h* se inicializa en **nullptr**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

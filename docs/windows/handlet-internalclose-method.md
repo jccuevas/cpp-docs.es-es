@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Internalclose (método) | Documentos de Microsoft'
+title: Internalclose (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b0aef97645d515a03dcf2cab90eedc06f07971c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a54b61902c8994397c7bd6effa74a90d43c7e512
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874150"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568646"
 ---
 # <a name="handletinternalclose-method"></a>HandleT::InternalClose (Método)
-Cierra el actual objeto HandleT.  
+Cierra el actual **HandleT** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,10 +34,10 @@ virtual bool InternalClose();
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Si el HandleT actual se cerró correctamente; en caso contrario, `false`.  
+ **True** si actual **HandleT** cerrado correctamente; en caso contrario, **false**.  
   
 ## <a name="remarks"></a>Comentarios  
- InternalClose() está protegido.  
+ **InternalClose()** es **protegido**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

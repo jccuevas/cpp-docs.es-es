@@ -1,5 +1,5 @@
 ---
-title: predeterminado (C++) | Documentos de Microsoft
+title: predeterminado (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872970"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570862"
 ---
 # <a name="default-c"></a>default (C++)
 Indica que la interfaz personalizada o dispinterface definida en una coclase representa la interfaz de programación predeterminada.  
@@ -32,8 +32,7 @@ Indica que la interfaz personalizada o dispinterface definida en una coclase rep
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ default(  
+[ default(  
    interface1,  
    interface2  
 ) ]  
@@ -54,9 +53,9 @@ Indica que la interfaz personalizada o dispinterface definida en una coclase rep
  El atributo C++ **default** tiene la misma funcionalidad que el atributo MIDL [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) . El atributo **default** también se usa con el atributo [case](../windows/case-cpp.md) .  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código muestra cómo se usa **default** en la definición de una coclase para especificar **ICustomDispatch** como la interfaz de programación predeterminada:  
+ El siguiente código muestra cómo **predeterminada** se utiliza en la definición de una coclase especificar `ICustomDispatch` como la interfaz de programación predeterminada:  
   
-```  
+```cpp  
 // cpp_attr_ref_default.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -113,9 +112,9 @@ int main() {
   
 |||  
 |-|-|  
-|**Se aplica a**|**clase**, `struct`, miembro de datos|  
+|**Se aplica a**|**clase**, **struct**, miembro de datos|  
 |**Reiterativo**|No|  
-|**Atributos requeridos**|**coclase** (cuando se aplica a **clase** o `struct`)|  
+|**Atributos requeridos**|**coclase** (cuando se aplica a **clase** o **struct**)|  
 |**Atributos no válidos**|Ninguna|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  

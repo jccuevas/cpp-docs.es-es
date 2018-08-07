@@ -1,5 +1,5 @@
 ---
-title: Constructor Eventtargetarray | Documentos de Microsoft
+title: Constructor Eventtargetarray | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831c9a524f8120c855382d198a5f53ac312cada6
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872720"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569793"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray (Constructor)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,9 +36,9 @@ EventTargetArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `hr`  
- Después de las operaciones de este constructor, parámetro `hr` indica si la asignación de la matriz se realizó correctamente o no. En la tabla siguiente se enumera los posibles valores para `hr`.  
+### <a name="parameters"></a>Parámetros  
+ *recursos humanos*  
+ Después de las operaciones de este constructor, parámetro *hr* indica si la asignación de la matriz se realizó correctamente o no. La tabla siguiente enumeran los valores posibles para *hr*.  
   
  S_OK  
  La operación se realizó correctamente.  
@@ -47,15 +47,15 @@ EventTargetArray(
  No se pudo asignar memoria para la matriz.  
   
  S_FALSE  
- Parámetro `items` es menor o igual que cero.  
+ Parámetro *elementos* es menor o igual que cero.  
   
- `items`  
+ *elementos*  
  El número de elementos de matriz que se va a asignar.  
   
 ## <a name="remarks"></a>Comentarios  
- Inicializa una nueva instancia de la clase EventTargetArray.  
+ Inicializa una nueva instancia de la **EventTargetArray** clase.  
   
- EventTargetArray se usa para mantener una matriz de controladores de eventos en un objeto de origen de eventos.  
+ **EventTargetArray** se usa para mantener una matriz de controladores de eventos en un `EventSource` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  

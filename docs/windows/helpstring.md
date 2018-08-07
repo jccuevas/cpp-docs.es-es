@@ -1,5 +1,5 @@
 ---
-title: helpstring | Documentos de Microsoft
+title: helpstring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81a3e45c5636fd193b7880e093711b5cc584bf99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e661e911cc0dd583f2ce079f8ac047a354fa596f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879011"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570936"
 ---
 # <a name="helpstring"></a>helpstring
-Especifica una cadena de caracteres que se utiliza para describir el elemento al que se aplica.  
+Especifica una cadena de caracteres que se usa para describir el elemento al que se aplica.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ helpstring(  
+[ helpstring(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `string`  
+### <a name="parameters"></a>Parámetros  
+ *string*  
  El texto de la cadena de ayuda.  
   
 ## <a name="remarks"></a>Comentarios  
- El **helpstring** atributo C++ tiene la misma funcionalidad que la [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) atributo MIDL.  
+ El **helpstring** atributo de C++ tiene la misma funcionalidad que el [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [defaultvalue](../windows/defaultvalue.md) para obtener un ejemplo de cómo usar **helpstring**.  
@@ -52,7 +51,7 @@ Especifica una cadena de caracteres que se utiliza para describir el elemento al
   
 |||  
 |-|-|  
-|**Se aplica a**|`interface`, `typedef`, **clase**, método, propiedad|  
+|**Se aplica a**|**interfaz**, **typedef**, **clase**, método, propiedad|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

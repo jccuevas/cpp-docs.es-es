@@ -1,5 +1,5 @@
 ---
-title: db_table | Documentos de Microsoft
+title: db_table | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f482e93f124d73d48d1de66f3feb1779146025d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91eea8bd751e4e8e843fb2d052f2b4a71f9bdc38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874348"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570342"
 ---
 # <a name="dbtable"></a>db_table
 Se abre una tabla de OLE DB.  
@@ -30,8 +30,7 @@ Se abre una tabla de OLE DB.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ db_table(   
+[ db_table(   
    db_table,   
    name,   
    source_name,   
@@ -44,23 +43,23 @@ Se abre una tabla de OLE DB.
  Cadena que especifica el nombre de una tabla de base de datos (por ejemplo, "productos").  
   
  *name* (opcional)  
- El nombre del identificador que se utiliza para trabajar con la tabla. Debe especificar este parámetro si desea devolver más de una fila de resultados. **db_table** genera una variable con los valores especificados *nombre* que se puede utilizar para recorrer el conjunto de filas o ejecutar varias consultas de acción.  
+ El nombre del identificador que se utiliza para trabajar con la tabla. Debe especificar este parámetro si desea devolver más de una fila de resultados. **db_table** genera una variable con los valores especificados *nombre* que puede utilizarse para recorrer el conjunto de filas o ejecutar varias consultas de acción.  
   
  *source_name* (opcional)  
  Variable o instancia `CSession` de una clase que tiene aplicado el atributo `db_source` , en el que se ejecuta el comando. Consulte [db_source](../windows/db-source.md).  
   
- `hresult` (opcional)  
- Identifica la variable que recibirá el `HRESULT` de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.  
+ *HRESULT* (opcional)  
+ Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.  
   
 ## <a name="remarks"></a>Comentarios  
- **db_table** crea un [CTable](../data/oledb/ctable-class.md) objeto, que es utilizado por un consumidor OLE DB para abrir una tabla. Puede usar este atributo en el nivel de clase; no se puede usar en línea. Usar **db_column** para enlazar las columnas de tabla a las variables; use **db_param** delimitar (establece el tipo de parámetro de modo que en) de parámetros.  
+ **db_table** crea un [CTable](../data/oledb/ctable-class.md) objeto, que es utilizado por un consumidor OLE DB para abrir una tabla. Puede usar este atributo solo en el nivel de clase; no se puede usar en línea. Usar `db_column` para enlazar las columnas de tabla a las variables; use `db_param` delimitar (establece el tipo de parámetro de modo que en) de parámetros.  
   
- Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_ *YourClassName*descriptor de acceso, donde *YourClassName* es el nombre que asignó el clase y el compilador también creará una clase denominada *YourClassName*, que deriva de \_ *YourClassName*descriptor de acceso.  En Vista de clases verá ambas clases.  
+ Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_ *NombreClase*descriptor de acceso, donde *NombreClase* es el nombre que asignó el clase y el compilador también creará una clase denominada *NombreClase*, que se deriva de \_ *NombreClase*descriptor de acceso.  En Vista de clases verá ambas clases.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se abre la tabla de productos para su uso por `CProducts`.  
+ El ejemplo siguiente abre la tabla de productos para su uso por `CProducts`.  
   
-```  
+```cpp  
 // db_table.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -73,7 +72,7 @@ class CProducts {
 };  
 ```  
   
- Para obtener un ejemplo de este atributo se usa en una aplicación, vea los ejemplos [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409) y [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Para obtener un ejemplo de este atributo se usa en una aplicación, vea los ejemplos [AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409) y [MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -81,7 +80,7 @@ class CProducts {
   
 |||  
 |-|-|  
-|**Se aplica a**|**class**, `struct`|  
+|**Se aplica a**|**clase**, **struct**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

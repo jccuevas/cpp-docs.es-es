@@ -1,5 +1,5 @@
 ---
-title: Constructor Ftmbase | Documentos de Microsoft
+title: Constructor Ftmbase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a15a2373a10df10012e4b2d2685b413014d2ea3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dadb80e62abd9088dc1d01515b1a169c0b1fb3d1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872190"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569558"
 ---
 # <a name="ftmbaseftmbase-constructor"></a>FtmBase::FtmBase (Constructor)
-Inicializa una nueva instancia de la clase FtmBase.  
+Inicializa una nueva instancia de la **FtmBase** clase.  
   
 ## <a name="syntax"></a>Sintaxis  
   

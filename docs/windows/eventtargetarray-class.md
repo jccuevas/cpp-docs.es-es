@@ -1,5 +1,5 @@
 ---
-title: EventTargetArray (clase) | Documentos de Microsoft
+title: EventTargetArray (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4461004a1681d9095449c51fb9cb3973d5017693
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2757589509e4a2b091c5057ef2065866a8829494
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881314"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570426"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray (Clase)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 ## <a name="remarks"></a>Comentarios  
  Representa una matriz de controladores de eventos.  
   
- Los controladores de eventos que están asociados a un [EventSource](../windows/eventsource-class.md) objeto se almacenan en un miembro de datos EventTargetArray protegido.  
+ Los controladores de eventos que están asociados con un [EventSource](../windows/eventsource-class.md) objeto se almacenan en un protegido **EventTargetArray** miembro de datos.  
   
 ## <a name="members"></a>Miembros  
   
@@ -44,8 +44,8 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[EventTargetArray::EventTargetArray (constructor)](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicializa una nueva instancia de la clase EventTargetArray.|  
-|[EventTargetArray::~EventTargetArray (destructor)](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Desinicializa la EventTargetArray (clase) actual.|  
+|[EventTargetArray::EventTargetArray (constructor)](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicializa una nueva instancia de la **EventTargetArray** clase.|  
+|[EventTargetArray::~EventTargetArray (destructor)](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Desinicializa actual **EventTargetArray** clase.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   

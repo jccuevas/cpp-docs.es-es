@@ -1,5 +1,5 @@
 ---
-title: entrada | Documentos de Microsoft
+title: entrada | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db90390be5313ddbea1103105f47b55fe9e23d62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 933fc1db2a890fedd9d725c49bbeb6c363e2f4c8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872320"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569643"
 ---
 # <a name="entry"></a>entry
-Especifica una función exportada o constante en un módulo mediante la identificación de punto de entrada en el archivo DLL.  
+Especifica una constante o una función exportada de un módulo mediante la identificación de punto de entrada en el archivo DLL.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ entry(  
+[ entry(  
    id  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- `id`  
+ *identificador*  
  El identificador del punto de entrada.  
   
 ## <a name="remarks"></a>Comentarios  
- El **entrada** atributo C++ tiene la misma funcionalidad que la [entrada](http://msdn.microsoft.com/library/windows/desktop/aa366815) atributo MIDL.  
+ El **entrada** atributo de C++ tiene la misma funcionalidad que el [entrada](http://msdn.microsoft.com/library/windows/desktop/aa366815) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [idl_module](../windows/idl-module.md) para un ejemplo del uso de **entrada**.  

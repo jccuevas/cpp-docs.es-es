@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: anclar punteros y matrices | Documentos de Microsoft'
+title: 'Cómo: anclar punteros y matrices | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1cea9b1c7c6738c33f00e984aa8212d611b4aec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873594"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569380"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Cómo: Anclar punteros y matrices
-Anclar un subobjeto definido en un objeto administrado tiene el efecto de todo el objeto de anclaje.  Por ejemplo, si se ancla un elemento de una matriz, también se ancla la matriz entera. No hay ninguna extensión del lenguaje para declarar una matriz anclada. Para anclar la matriz, declare un puntero anclado para su tipo de elemento y el pin uno de sus elementos.  
+Anclar un subobjeto definido en un objeto administrado tiene el efecto de anclar todo el objeto.  Por ejemplo, si está anclada a cualquier elemento de una matriz, también se ancla la matriz entera. No hay ninguna extensión al lenguaje para declarar una matriz anclada. Para anclar una matriz, declarar un puntero anclado a su tipo de elemento y ancla una de sus elementos.  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // pin_ptr_array.cpp  
 // compile with: /clr  
 #include <stdio.h>  
@@ -52,7 +52,7 @@ int main() {
   
 ### <a name="output"></a>Salida  
   
-```  
+```Output  
 ++  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Close (método) | Documentos de Microsoft'
+title: Método Handlet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f0c1e47420106651cfe0526d6d212e9819a72ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69f3f2c756d158954676f6fc42941b1b80f4345e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873256"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569923"
 ---
 # <a name="handletclose-method"></a>HandleT::Close (Método)
-Cierra el actual objeto HandleT.  
+Cierra el actual **HandleT** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,9 +34,9 @@ void Close();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El identificador que subyace en la HandleT actual se cierra y el HandleT se establece en el estado no válido.  
+ El identificador que subyace a actual **HandleT** está cerrado y el **HandleT** está establecido en el estado no válido.  
   
- Si el identificador no se cierra correctamente, se produce una excepción en el subproceso que realiza la llamada.  
+ Si el identificador no se cierra correctamente, se produce una excepción en el subproceso de llamada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

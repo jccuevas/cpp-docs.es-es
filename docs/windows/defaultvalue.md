@@ -1,5 +1,5 @@
 ---
-title: DefaultValue | Documentos de Microsoft
+title: DefaultValue | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c838f057d9c5e59193d0578fe8aa871b1b75ee9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873422"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569991"
 ---
 # <a name="defaultvalue"></a>defaultvalue
-Permite la especificación de un valor predeterminado para un parámetro opcional con tipo.  
+Permite especificar un valor predeterminado para un parámetro opcional con tipo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [ defaultvalue= value ]  
 ```  
   
@@ -39,12 +38,12 @@ Permite la especificación de un valor predeterminado para un parámetro opciona
  El valor predeterminado para el parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
- El **defaultvalue** atributo C++ tiene la misma funcionalidad que la [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) atributo MIDL.  
+ El **defaultvalue** atributo de C++ tiene la misma funcionalidad que el [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente muestra un método de interfaz mediante la **defaultvalue** atributo:  
+ El código siguiente muestra un método de interfaz mediante el **defaultvalue** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvalue.cpp  
 // compile with: /LD  
 #include <windows.h>  
