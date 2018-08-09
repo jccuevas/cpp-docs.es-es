@@ -1,5 +1,5 @@
 ---
-title: ModuleType (enumeración) | Documentos de Microsoft
+title: ModuleType (enumeración) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d36355c9f64f9f5c827ef8c4d5b3cb6a77d17b65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876841"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019935"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType (enumeración)
 Especifica si un módulo debe admitir un servidor en proceso o un servidor fuera de proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 enum ModuleType;  
 ```  
   

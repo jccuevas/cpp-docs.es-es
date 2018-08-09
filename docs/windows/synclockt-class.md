@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f6b27f45d3a9b9b308a56e1ac8f945969f8c49e2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b1eb11480657d731a4667722572e921f405c0845
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643431"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012158"
 ---
 # <a name="synclockt-class"></a>SyncLockT (clase)
 Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template <  
    typename SyncTraits  
 >  

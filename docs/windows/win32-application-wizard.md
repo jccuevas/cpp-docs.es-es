@@ -1,5 +1,5 @@
 ---
-title: Asistente para aplicaciones Win32 | Documentos de Microsoft
+title: Asistente para aplicaciones Win32 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9aebf4e130c30e488ec348b67add5b600108991
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891430"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014226"
 ---
 # <a name="win32-application-wizard"></a>Asistente para aplicaciones Win32
 El Asistentes para aplicaciones Win32 de Visual C++ permite crear cuatro tipos de proyecto (que se muestran en los encabezados de la tabla siguiente). En cada caso, puede especificar opciones adicionales apropiadas para el tipo de proyecto que abra. En la tabla siguiente se indican las opciones disponibles para cada tipo de aplicación.  
@@ -56,8 +56,8 @@ El Asistentes para aplicaciones Win32 de Visual C++ permite crear cuatro tipos d
 > [!NOTE]
 >  No es posible agregar clases ATL y solo pueden agregarse clases MFC en los tipos de aplicación de escritorio de Windows que sean compatibles con MFC (vea la tabla anterior).  
   
- Puede ver los archivos que el asistente crea para el proyecto en el **Explorador de soluciones**. Para obtener más información sobre los archivos que crea el asistente para el proyecto, vea el archivo Readme.txt generado por el proyecto. Para obtener más información sobre los tipos de archivo, consulte [Tipos de archivo creados para proyectos de Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
+ Puede ver los archivos que el asistente crea para el proyecto en el **Explorador de soluciones**. Para obtener más información acerca de los archivos que crea el Asistente para el proyecto, vea el archivo de proyecto generado, `ReadMe.txt`. Para obtener más información sobre los tipos de archivo, consulte [Tipos de archivo creados para proyectos de Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una aplicación de escritorio de Windows vacía](../windows/creating-an-empty-windows-desktop-application.md)   
+ [Creación de una aplicación de escritorio de Windows vacía](../windows/creating-an-empty-windows-desktop-application.md)   
  [Tipos de proyecto de Visual C++](../ide/visual-cpp-project-types.md)

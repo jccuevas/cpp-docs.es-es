@@ -1,5 +1,5 @@
 ---
-title: Desbordamiento de búfer | Documentos de Microsoft
+title: Desbordamiento de búfer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d01460e7ed9cb95d92303d82ea136803737331
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bb362be360986371200c8cde292b3fff5acd7cd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854657"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020192"
 ---
 # <a name="buffer-overflow"></a>Desbordamiento de búfer
-Varios tamaños de caracteres pueden causar problemas al colocar caracteres en un búfer. Considere el siguiente código, que copia caracteres de una cadena, `sz`, en un búfer, `rgch`:  
+Varios tamaños de caracteres pueden causar problemas cuando se coloca en un búfer de caracteres. Considere el siguiente código, que copia los caracteres de una cadena, `sz`, en un búfer, `rgch`:  
   
 ```  
 cb = 0;  
@@ -32,7 +32,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;  
 ```  
   
- ¿La pregunta es: es el último byte copia un byte inicial? A continuación no soluciona el problema porque puede provocar un desbordamiento del búfer:  
+ ¿La pregunta es: es el último byte copia un byte inicial? El siguiente no soluciona el problema porque puede provocar un desbordamiento del búfer:  
   
 ```  
 cb = 0;  
@@ -44,7 +44,7 @@ while( cb < sizeof( rgch ) )
 }  
 ```  
   
- El `_mbccpy` llamada intenta hacer lo correcto: copia el carácter completo, ya sea 1 o 2 bytes. Pero esto no tiene en cuenta que el último carácter copiado no podría ajustarse al búfer si el carácter tiene un ancho de 2 bytes. La solución correcta es:  
+ El `_mbccpy` llamada intenta hacer lo correcto, copie el carácter completo, ya sea 1 o 2 bytes. Pero esto no tiene en cuenta que el último carácter copiado no podría ajustarse al búfer si el carácter tiene un ancho de 2 bytes. La solución correcta es:  
   
 ```  
 cb = 0;  
@@ -56,7 +56,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- Este código prueba el posible desbordamiento del búfer en el bucle de prueba, con `_mbclen` para probar el tamaño del carácter actual al que apunta `sz`. Mediante la realización de una llamada a la `_mbsnbcpy` función, puede reemplazar el código en el `while` bucle con una sola línea de código. Por ejemplo:  
+ Este código comprueba posible desbordamiento del búfer en el bucle de prueba, mediante `_mbclen` para probar el tamaño del carácter actual apuntado `sz`. Mediante una llamada a la `_mbsnbcpy` función, puede reemplazar el código en el **mientras** bucle con una sola línea de código. Por ejemplo:  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  

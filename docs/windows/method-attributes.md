@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1850507b9d00ab717a2602d4e230968f5222f077
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604286"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016861"
 ---
 # <a name="method-attributes"></a>Atributos de método
 Los siguientes atributos se aplican a los métodos en una clase, coclase o interfaz.  
@@ -39,8 +39,8 @@ Los siguientes atributos se aplican a los métodos en una clase, coclase o inter
 |[defaultbind](../windows/defaultbind.md)|Indica la única propiedad enlazable que mejor representa al objeto.|  
 |[defaultcollelem](../windows/defaultcollelem.md)|Se usa para la optimización de código de Visual Basic.|  
 |[displaybind](../windows/displaybind.md)|Indica una propiedad que debe mostrarse al usuario como enlazable.|  
-|[helpcontext](../windows/helpcontext.md)|Especifica un identificador de contexto que permite al usuario ver información acerca de este elemento en el archivo de ayuda.|  
-|[helpfile](../windows/helpfile.md)|Establece el nombre del archivo de ayuda para una biblioteca de tipos.|  
+|[helpcontext](../windows/helpcontext.md)|Especifica un identificador de contexto que permite al usuario ver información acerca de este elemento en el **ayuda** archivo.|  
+|[helpfile](../windows/helpfile.md)|Establece el nombre de la **ayuda** archivo para una biblioteca de tipos.|  
 |[helpstring](../windows/helpstring.md)|Especifica una cadena de caracteres que se usa para describir el elemento al que se aplica.|  
 |[helpstringcontext](../windows/helpstringcontext.md)|Especifica el identificador de un tema de ayuda en un archivo .hlp o chm.|  
 |[helpstringdll](../windows/helpstringdll.md)|Especifica el nombre del archivo DLL a utilizar para realizar la búsqueda de cadenas de documento (localización).|  

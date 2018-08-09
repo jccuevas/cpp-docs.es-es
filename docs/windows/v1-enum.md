@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15e51719e1daecc440dc5945a54443e4bc5079ec
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b057ef891a00829fd64d967ffa860a66d6d49d5d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644370"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012347"
 ---
 # <a name="v1enum"></a>v1_enum
 Indica que el tipo enumerado especificado se transmite como una entidad de 32 bits en lugar de con el valor predeterminado de 16 bits.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [v1_enum]  
 ```  
   

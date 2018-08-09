@@ -1,5 +1,5 @@
 ---
-title: Propiedades de comando de menú | Documentos de Microsoft
+title: Propiedades de comando de menú | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,32 +15,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343c1ce255a26753c2b125d2a0a53e04808a0233
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 665bc76998750f32e7de03e2fdd75fcec835774c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878868"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014531"
 ---
 # <a name="menu-command-properties"></a>Propiedades de los comandos de menú
-La información siguiente se organiza según las propiedades de menú que aparecen en la [ventana Propiedades](/visualstudio/ide/reference/properties-window) al seleccionar un comando de menú. Aparecen ordenadas alfabéticamente, aunque en la ventana también se pueden ordenar por categoría.  
+La siguiente información se organiza según el **menú** propiedades que aparecen en la [ventana propiedades](/visualstudio/ide/reference/properties-window) cuando se selecciona un comando de menú. Están ordenadas alfabéticamente, aunque el **propiedades** ventana también le permite ver estas propiedades por categoría.  
   
 |Property|Descripción|  
 |--------------|-----------------|  
-|**Break**|Puede ser uno de estos valores:<br /><br /> -   **Ninguno** (predeterminado): sin interrupción.<br />-   **Column**: en los menús estáticos, este valor sitúa el comando de menú en una nueva línea. En los menús emergentes, este valor sitúa el comando de menú en una columna nueva, sin línea divisoria entre las columnas. Esta propiedad solo afecta a la apariencia del menú en tiempo de ejecución, no en el editor de menús.<br />-   **Bar**: igual que Column, con la excepción de que, en los menús emergentes, este valor separa la nueva columna de la antigua con una línea vertical. Esta propiedad solo afecta a la apariencia del menú en tiempo de ejecución, no en el editor de menús.|  
+|**Break**|Puede ser uno de estos valores:<br /><br /> -   **Ninguno** (predeterminado): sin interrupción.<br />-   **Column**: en los menús estáticos, este valor sitúa el comando de menú en una nueva línea. En los menús emergentes, este valor sitúa el comando de menú en una columna nueva, sin línea divisoria entre las columnas. Esta propiedad solo afecta a la apariencia del menú en tiempo de ejecución, no en el editor de menús.<br />-   **Barra**: igual que **columna** , excepto en los menús emergentes, este valor separa la nueva columna de la columna antigua con una línea vertical. Esta propiedad afecta a la apariencia del menú en tiempo de ejecución, no en el **menú** editor.|  
 |**Título**|El texto que etiqueta el comando de menú (el nombre del menú). Para convertir una de las letras del título de un comando de menú en la tecla de acceso, sitúe delante de ella una Y comercial (&).|  
-|**Activadas**|Si es True, el comando de menú se inicia en un primer momento. Tipo: booleano. Valor predeterminado: False.|  
+|**Activadas**|Si **True**, el comando de menú se activa inicialmente. Tipo: **Bool**. Valor predeterminado: **False**.|  
 |**Habilitado**|Si es **False**, se deshabilita el elemento de menú.|  
-|**Grayed**|Si es True, el comando de menú se atenúa y se encuentra inactivo en un primer momento. Tipo: booleano. Valor predeterminado: False.|  
+|**Grayed**|Si **True**, el comando de menú inicialmente está atenuado e inactivo. Tipo: **Bool**. Valor predeterminado: **False**.|  
 |**Ayuda**|Alinea el elemento de menú a la derecha. Por ejemplo, el comando de menú **Ayuda** siempre está a la derecha en todas las aplicaciones de Windows. Si establece esta propiedad en un elemento de menú, ese elemento aparecerá en el extremo derecho y al final del menú. Se aplica a los elementos de nivel superior. Valor predeterminado: **False**.|  
-|**Id.**|Un símbolo definido en el archivo de encabezado. Tipo: símbolo, entero o cadena entrecomillada. Puede usar cualquier símbolo de los que se encuentran disponibles normalmente en cualquier editor, aunque la [ventana Propiedades](/visualstudio/ide/reference/properties-window) no proporciona ninguna lista desplegable donde seleccionar.|  
-|**Popup**|Si es True, el comando de menú es un menú emergente. Tipo: booleano. Valor predeterminado: True para los menús de nivel superior en una barra de menús. En caso contrario, es False.|  
+|**Id.**|Un símbolo definido en el archivo de encabezado. Tipo: **símbolo**, **entero**, o **cadena entrecomillada**. Puede usar cualquier símbolo de los que se encuentran disponibles normalmente en cualquier editor, aunque la [ventana Propiedades](/visualstudio/ide/reference/properties-window) no proporciona ninguna lista desplegable donde seleccionar.|  
+|**Popup**|Si **True**, el comando de menú es un menú emergente. Tipo: **Bool**. Valor predeterminado: **True** para menús de nivel superior en un menú de la barra; en caso contrario **False**.|  
 |**Preguntar**|Contiene el texto que aparece en la barra de estado cuando se resalta el comando de menú. El texto se sitúa en la tabla de cadenas con el mismo identificador que el comando de menú. Esta propiedad se encuentra disponible para cualquier tipo de proyecto, pero la funcionalidad en tiempo de ejecución es específica de MFC.|  
-|**Right to Left Justify**|Justifica a la derecha el comando de menú en la barra de menús, en tiempo de ejecución. Tipo: booleano. Valor predeterminado: False.|  
+|**Right to Left Justify**|Justifica a la derecha el comando de menú en la barra de menús, en tiempo de ejecución. Tipo: **Bool**. Valor predeterminado: **False**.|  
 |**Right to Left Order**|Permite mostrar los comandos de menú de derecha a izquierda cuando la interfaz se localiza a idiomas con esta dirección de lectura, como el hebreo o el árabe.|  
-|**Separador**|Si es True, el comando de menú es un separador. Tipo: booleano. Valor predeterminado: False.|  
-  
-
+|**Separator**|Si **True**, el comando de menú es un separador. Tipo: **Bool**. Valor predeterminado: **False**.|  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  

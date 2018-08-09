@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fb1025238dc5cf5b186830d0bea3b896b7391ff
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 0aeacce18f7a12ece21c7ee2136a1f1be267a47f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569965"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015841"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Cómo: Sobrecargar funciones con punteros internos y punteros nativos (C++/CLI)
 Las funciones se pueden sobrecargar dependiendo de si el tipo de parámetro es un puntero interior o puntero nativo.  
@@ -66,8 +66,6 @@ int main() {
    f( &pG->i );  
 };  
 ```  
-  
-### <a name="output"></a>Salida  
   
 ```Output 
 in f( int* pi )  

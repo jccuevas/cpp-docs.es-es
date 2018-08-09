@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8b936b1014c2dd6640f64ca929628f6f0a74dc79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608314"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012334"
 ---
 # <a name="resource-view-window"></a>Ventana de la vista de recursos
 > [!NOTE]
@@ -35,9 +35,9 @@ ms.locfileid: "39608314"
 >  Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
   
 > [!TIP]
->  Se puede hacer clic con el botón secundario en la ventana Vista de recursos para iniciar un menú contextual de comandos. También se puede hacer doble clic en la barra de título para acoplar o desacoplar la ventana. Al hacer clic con el botón secundario en la barra de título se muestran comandos adicionales que permiten controlar el comportamiento de la ventana. Para obtener más información, consulte [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+>  Puede haga doble clic en el **vista de recursos** ventana se abre un menú contextual de comandos. También se puede hacer doble clic en la barra de título para acoplar o desacoplar la ventana. Al hacer clic con el botón secundario en la barra de título se muestran comandos adicionales que permiten controlar el comportamiento de la ventana. Para obtener más información, consulte [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
-#### <a name="to-open-the-resource-view-window"></a>Para abrir la ventana de la Vista de recursos  
+### <a name="to-open-the-resource-view-window"></a>Para abrir la ventana de la Vista de recursos  
   
 1.  Haga clic en **vista de recursos** en el **vista** menú.  
   

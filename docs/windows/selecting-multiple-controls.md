@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 42629df8eeda1bbd2bda2057dfee619b52928cba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608272"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015592"
 ---
 # <a name="selecting-multiple-controls"></a>Seleccionar varios controles
 ### <a name="to-select-multiple-controls"></a>Para seleccionar varios controles  
@@ -47,7 +47,7 @@ ms.locfileid: "39608272"
 1.  Con un grupo de controles seleccionados, mantenga presionada la **MAYÚS** clave y haga clic en el control que desea quitar o agregar a la selección existente.  
   
     > [!NOTE]
-    >  Manteniendo presionada la tecla CTRL y haciendo clic en un control dentro de una selección hará que controlan el control dominante en esa selección. Para obtener más información, consulte [especificar el Control dominante](../windows/specifying-the-dominant-control.md).  
+    >  Manteniendo presionada la tecla el **Ctrl** clave y haga clic en un control dentro de una selección hará que controlan el control dominante en esa selección. Para obtener más información, consulte [especificar el Control dominante](../windows/specifying-the-dominant-control.md).  
   
  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   

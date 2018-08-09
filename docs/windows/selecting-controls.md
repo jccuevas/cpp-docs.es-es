@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c8a7a57b263fc3db1fa7f021c1a6f4e09c0f8f7
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5517695da652dfd1eaa34b6ffd68fa90eac1a397
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605674"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012874"
 ---
 # <a name="selecting-controls"></a>Seleccionar controles
 Seleccione los controles de tamaño, alinear, mover, copiar, o eliminarlas y, a continuación, realizar la operación que desee. En la mayoría de los casos, deberá seleccionar más de un control para utilizar las herramientas de ajuste de tamaño y alineación de la [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
  Cuando se selecciona un control, tiene un borde sombreado alrededor de ella con sólidos (activos) o "cuadros de tamaño" hueco (inactivo) pequeños cuadros que aparecen en el borde de selección. Cuando se seleccionan varios controles, el control dominante tiene controladores de tamaño sólido; todos los controles seleccionados tienen controladores de tamaño hueco.  
   
- Cuando se cambia el tamaño o alinear varios controles, el editor de cuadro de diálogo usa el "control dominante" para determinar cómo los otros controles o un tamaño alineados. De forma predeterminada, el control dominante es el primer control seleccionado.  
+ Al cambiar el tamaño o alinear varios controles, el **diálogo** editor usa el "control dominante" para determinar cómo los otros controles o un tamaño alineados. De forma predeterminada, el control dominante es el primer control seleccionado.  
   
 -   [Selección de varios controles](../windows/selecting-multiple-controls.md)  
   

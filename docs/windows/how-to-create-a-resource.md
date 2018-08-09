@@ -17,22 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b44156ae26d77247a909e45061b00a6a1d892d79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571475"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016933"
 ---
 # <a name="how-to-create-a-resource"></a>Cómo: Crear un recurso
 > [!NOTE]
->  La Vista de recursos no se admite en las ediciones Express.  
+>  **Vista de recursos** no se admite en las ediciones Express.  
   
 ### <a name="to-create-a-new-resource-in-resource-view"></a>Para crear un recurso nuevo en la Vista de recursos  
   
-1.  Con el foco en el archivo .rc en la [Vista de recursos](../windows/resource-view-window.md), haga clic en el menú **Edición** y elija **Agregar recurso** (o haga clic con el botón secundario en el archivo .rc en la Vista de recursos y haga clic en **Agregar recurso** en el menú contextual).  
+1.  Con el foco en el archivo .rc en [vista de recursos](../windows/resource-view-window.md), haga clic en el **editar** menú y elija **Agregar recurso** (o haga clic en el archivo .rc en **devistaderecursos** y elija **Agregar recurso** en el menú contextual).  
   
-     **Nota** Si el proyecto no contiene un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE] 
+     > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  En el [cuadro de diálogo Agregar recurso](../windows/add-resource-dialog-box.md), elija el tipo de recurso que desee agregar al proyecto.  
   
@@ -54,16 +55,14 @@ ms.locfileid: "39571475"
   
 1.  En el menú **Proyecto** , seleccione **Agregar recurso**.  
   
- Cuando se crea un recurso nuevo, Visual C++ le asigna un nombre único, por ejemplo, IDD_DIALOG1. Puede personalizar este identificador editando las propiedades del recurso en el editor de recursos asociado o en la [ventana Propiedades](/visualstudio/ide/reference/properties-window).  
+ Cuando se crea un nuevo recurso, Visual C++ le asigna un nombre único, por ejemplo, `IDD_Dialog1`. Puede personalizar este identificador editando las propiedades del recurso en el editor de recursos asociado o en la [ventana Propiedades](/visualstudio/ide/reference/properties-window).  
   
  Los recursos pueden crearse como recursos nuevos predeterminados (sin plantilla) o según el modelo de una [plantilla](../windows/how-to-use-resource-templates.md).  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.*
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.
 
-
-## <a name="requirements"></a>Requisitos  
-  
-Win32  
+## <a name="requirements"></a>Requisitos    
+ Win32  
   
 ## <a name="see-also"></a>Vea también  
  [Archivos de recursos](../windows/resource-files-visual-studio.md)   

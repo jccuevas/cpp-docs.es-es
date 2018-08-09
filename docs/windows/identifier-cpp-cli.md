@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603350"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018366"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 Habilita el uso de palabras clave de Visual C++ como identificadores.  
@@ -31,7 +31,7 @@ Habilita el uso de palabras clave de Visual C++ como identificadores.
 ## <a name="all-platforms"></a>Todas las plataformas  
 ### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 __identifier(  
 Visual_C++_keyword  
 )  
@@ -49,7 +49,7 @@ El uso de la **__identifier** palabra clave para los identificadores que no son 
 ### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- En el ejemplo siguiente, una clase denominada `template` se crea en C# y se distribuye como un archivo DLL. En el programa de Visual C++ que usa el `template` (clase), el **__identifier** palabra clave oculta el hecho de que **plantilla** es una palabra clave de C++ estándar.  
+ En el ejemplo siguiente, una clase denominada **plantilla** se crea en C# y se distribuye como un archivo DLL. En el programa de Visual C++ que usa el **plantilla** (clase), el **__identifier** palabra clave oculta el hecho de que **plantilla** es una palabra clave de C++ estándar.  
   
 ```cs  
 // identifier_template.cs  
@@ -79,7 +79,7 @@ int main() {
   
 ### <a name="examples"></a>Ejemplos  
   
- En el ejemplo siguiente, una clase denominada `template` se crea en C# y se distribuye como un archivo DLL. En el programa de Visual C++ que usa el `template` (clase), el **__identifier** palabra clave oculta el hecho de que **plantilla** es una palabra clave de C++ estándar.  
+ En el ejemplo siguiente, una clase denominada **plantilla** se crea en C# y se distribuye como un archivo DLL. En el programa de Visual C++ que usa el **plantilla** (clase), el **__identifier** palabra clave oculta el hecho de que **plantilla** es una palabra clave de C++ estándar.  
   
 ```cs  
 // identifier_template.cs  

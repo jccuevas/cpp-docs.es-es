@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: aebc183bb8f74e3cd1710912c053bca46bef84a5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608191"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014073"
 ---
 # <a name="odl"></a>odl
 Identifica una interfaz como una interfaz de lenguaje de descripción de objetos (ODL). El compilador de MIDL no requiere la **odl** atributo; se reconoce solo por compatibilidad con archivos .odl anteriores.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [odl]  
 ```  
   

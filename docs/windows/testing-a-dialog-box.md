@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652075"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019683"
 ---
 # <a name="testing-a-dialog-box"></a>Probar un cuadro de diálogo
 Cuando se está diseñando un cuadro de diálogo, se puede simular y probar su comportamiento en tiempo de ejecución sin compilar el programa. En este modo, se puede:  
@@ -42,7 +42,7 @@ Cuando se está diseñando un cuadro de diálogo, se puede simular y probar su c
   
 ### <a name="to-test-a-dialog-box"></a>Para probar un cuadro de diálogo  
   
-1.  Cuando el Editor de cuadros de diálogo es la ventana activa, en la barra de menús, elija **Formato**, **Probar cuadro de diálogo**.  
+1.  Cuando el **diálogo** editor es la ventana activa, en la barra de menús, elija **formato** > **Probar cuadro de diálogo**.  
   
 2.  Para finalizar la simulación, presione **Esc**, o elija simplemente el **cerrar** botón en el cuadro de diálogo que se está probando.  
   

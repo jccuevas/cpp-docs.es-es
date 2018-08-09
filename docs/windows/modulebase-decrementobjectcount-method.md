@@ -1,5 +1,5 @@
 ---
-title: 'Modulebase:: Decrementobjectcount (método) | Documentos de Microsoft'
+title: Método Modulebase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: daf27930261c0350c1e48b851fe989decd52dde2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65dc4dbca2e152a62bb79ed104f9533d2fa20569
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876298"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019987"
 ---
 # <a name="modulebasedecrementobjectcount-method"></a>ModuleBase::DecrementObjectCount (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 virtual long DecrementObjectCount() = 0;  
 ```  
   
@@ -37,7 +37,7 @@ virtual long DecrementObjectCount() = 0;
  El recuento antes de la operación de decremento.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se implementa, disminuye el número de objetos de seguimiento por el módulo.  
+ Cuando se implementa, disminuye el número de objetos que sigue el módulo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  

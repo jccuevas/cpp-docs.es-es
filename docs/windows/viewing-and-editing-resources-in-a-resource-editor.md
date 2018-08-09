@@ -24,15 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97816db8075d04b6d05950bb65c25aa12382b728
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5fca755c46d3fc5628adc2c724b9307a346d1fe7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646935"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014008"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Ver y editar recursos en un editor de recursos
-Cada tipo de recurso tiene un editor de recursos específico de ese tipo de recurso. Puede reorganizar, cambiar el tamaño, agregar controles y características o modificar otros aspectos de un recurso con el editor asociado. También puede editar un recurso en [formato de texto](../windows/how-to-open-a-resource-script-file-in-text-format.md) y [formato binario](../windows/opening-a-resource-for-binary-editing.md).  
+Cada tipo de recurso tiene un **recursos** editor de ese tipo de recurso específico. Puede reorganizar, cambiar el tamaño, agregar controles y características o modificar otros aspectos de un recurso con el editor asociado. También puede editar un recurso en [formato de texto](../windows/how-to-open-a-resource-script-file-in-text-format.md) y [formato binario](../windows/opening-a-resource-for-binary-editing.md).  
   
  Algunos tipos de recursos son archivos individuales que se pueden importar y usar de diversas maneras; Estos incluyen los mapas de bits, iconos, cursores, barras de herramientas y los archivos html. Estos recursos tienen nombres de archivo, así como [identificadores de recursos](../windows/symbols-resource-identifiers.md). Otros, como cuadros de diálogo, menús y las tablas de cadenas en los proyectos de Win32, sólo existen como parte de un archivo de recursos (.rc) de la secuencia de comandos o el archivo de recursos (.rct) de la plantilla.  
   
@@ -46,16 +46,16 @@ Cada tipo de recurso tiene un editor de recursos específico de ese tipo de recu
   
 1.  Seleccione **vista de recursos** desde el **vista** menú.  
   
-2.  Si la ventana de vista de recursos no es la ventana de nivel superior, haga clic en el **vista de recursos** tab para colocarlo en la parte superior.  
+2.  Si el **vista de recursos** ventana no es la ventana de nivel superior, haga clic en el **vista de recursos** tab para colocarlo en la parte superior.  
   
-3.  Vista de recursos, expanda la carpeta del proyecto que contiene recursos que desea ver. Por ejemplo, si desea ver un recurso de cuadro de diálogo, expanda la carpeta del cuadro de diálogo.  
+3.  Desde **vista de recursos**, expanda la carpeta del proyecto que contiene recursos que desea ver. Por ejemplo, si desea ver un recurso de cuadro de diálogo, expanda el **diálogo** carpeta.  
   
     > [!NOTE]
     >  Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
   
-4.  Haga doble clic en el recurso, por ejemplo, IDD_ABOUTBOX.  
+4.  Haga doble clic en el recurso, por ejemplo, **IDD_ABOUTBOX**.  
   
-     El recurso se abrirá en el editor correspondiente. Por ejemplo, para los recursos de cuadro de diálogo, el recurso se abrirá en el editor de cuadro de diálogo.  
+     El recurso se abrirá en el editor correspondiente. Por ejemplo, para los recursos de cuadro de diálogo, el recurso se abrirá dentro de la **diálogo** editor.  
   
      También puede [ver recursos en un archivo .rc (script de recursos) sin tener un proyecto abierto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
@@ -75,7 +75,7 @@ Cada tipo de recurso tiene un editor de recursos específico de ese tipo de recu
   
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>Para ver un recurso administrado en un editor de recursos  
   
-1.  En **el Explorador de soluciones**, haga doble clic en el recurso, por ejemplo, Bitmap1.bmp.  
+1.  En **el Explorador de soluciones**, haga doble clic en el recurso, por ejemplo, **Bitmap1.bmp**.  
   
      El recurso se abrirá en el editor correspondiente.  
   
@@ -83,7 +83,7 @@ Cada tipo de recurso tiene un editor de recursos específico de ese tipo de recu
   
 1.  En **el Explorador de soluciones**, haga clic en el recurso que desea eliminar y elija **eliminar** en el menú contextual.  
   
-### <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos  
  Ninguna  
   
 ## <a name="see-also"></a>Vea también  
