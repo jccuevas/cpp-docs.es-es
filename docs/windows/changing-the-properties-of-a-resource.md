@@ -1,5 +1,5 @@
 ---
-title: Cambiar las propiedades de un recurso | Documentos de Microsoft
+title: Cambiar las propiedades de un recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 237eea6a468e983072ed300ff2a13f1cbc6ba363
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5a0b58e5adf95de44bbecb51cf56dbbfeaccacad
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861797"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648930"
 ---
 # <a name="changing-the-properties-of-a-resource"></a>Cambiar las propiedades de un recurso
 ### <a name="to-edit-the-properties-of-a-resource"></a>Para editar las propiedades de un recurso  
   
 1.  En [vista de recursos](../windows/resource-view-window.md), haga clic en el recurso que desea editar y elija **propiedades** en el menú contextual.  
   
-     **Nota** Si el proyecto no contiene un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE] 
+     > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  En el [ventana propiedades](/visualstudio/ide/reference/properties-window), cambiar las propiedades del recurso.  
   
 ### <a name="to-undo-a-change-youve-made-to-the-properties-of-a-resource"></a>Para deshacer los cambios realizados en las propiedades de un recurso  
   
-1.  Asegúrese de que el recurso tiene el foco en Vista de recursos.  
+1.  Asegúrese de que el recurso tiene el foco **vista de recursos**.  
   
 2.  Elija **deshacer** desde el **editar** menú.  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Ninguna  
   
 ## <a name="see-also"></a>Vea también  

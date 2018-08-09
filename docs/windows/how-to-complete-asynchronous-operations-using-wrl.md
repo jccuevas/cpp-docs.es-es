@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30e408d127e73b111e6ff464ea7530ba01beece3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 29b892f3e120db183082d6af97f9374f89e9e647
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570748"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643061"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Cómo: Completar operaciones asincrónicas mediante WRL
 Este documento muestra cómo usar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) para iniciar operaciones asincrónicas y realizar el trabajo cuando las operaciones se completan.  
@@ -40,7 +40,7 @@ Este documento muestra cómo usar la biblioteca de plantillas de C++ de Windows 
   
      [!code-cpp[wrl-consume-async#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]  
   
-     Windows.System.Threading.h declara los tipos que son necesarios para usar un temporizador asincrónico.  
+     `Windows.System.Threading.h` declara los tipos que son necesarios para usar un temporizador asincrónico.  
   
      Se recomienda que use la directiva `using namespace` en el archivo .cpp para que el código sea más legible.  
   
@@ -122,7 +122,7 @@ Este documento muestra cómo usar la biblioteca de plantillas de C++ de Windows 
  [!code-cpp[wrl-consume-asyncOp#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_14.cpp)]  
   
 ### <a name="compiling-the-code"></a>Compilar el código  
- Para compilar el código, cópielo y, a continuación, péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `wrl-consume-asyncOp.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.  
+ Para compilar el código, cópielo y, a continuación, péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `wrl-consume-asyncOp.cpp` y, a continuación, ejecute el siguiente comando un **Visual Studio Command Prompt** ventana.  
   
  `cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib`  
   

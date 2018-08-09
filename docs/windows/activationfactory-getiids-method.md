@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f937bf3da7aab803164ca968ba9fa3de227ce03
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: aaaa8d5bb0a88b9078c60fa61608e52fafd5baac
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463529"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643516"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids (Método)
 Recupera una matriz de identificadores de interfaz implementada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 STDMETHOD(  
    GetIids  
 )(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *iidCount*  
  Cuando finalice esta operación, el número de identificadores de interfaz en el *IID* matriz.  
   

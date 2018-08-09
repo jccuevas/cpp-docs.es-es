@@ -1,5 +1,5 @@
 ---
-title: Cambiar símbolos sin asignar | Documentos de Microsoft
+title: Cambiar símbolos sin asignar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7510d8bb9f356620e77d862edab71d852fdec65b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855388"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644991"
 ---
 # <a name="changing-unassigned-symbols"></a>Cambiar símbolos sin asignar
 Mientras se encuentre en el [cuadro de diálogo símbolos de recursos](../windows/resource-symbols-dialog-box.md), puede editar o eliminar símbolos existentes que ya no están asignados a un recurso u objeto.  
@@ -33,19 +33,18 @@ Mientras se encuentre en el [cuadro de diálogo símbolos de recursos](../window
   
 1.  En el **nombre** cuadro, seleccione el símbolo sin asignar y haga clic en **cambio**.  
   
-2.  Editar el nombre o el valor en los cuadros correspondientes en el símbolo del **cambiar símbolo** cuadro de diálogo.  
+2.  Editar nombre o un valor en los cuadros correspondientes en el símbolo del **cambiar símbolo** cuadro de diálogo.  
   
     > [!NOTE]
-    >  Para cambiar un símbolo que *es* asignado a un recurso u objeto, debe usar el editor de recursos o la ventana Propiedades. Para obtener más información, consulte [cambiar un símbolo o el nombre](../windows/changing-a-symbol-or-symbol-name-id.md).  
+    >  Para cambiar un símbolo que *es* asignado a un recurso u objeto, debe usar el editor de recursos o **propiedades** ventana. Para obtener más información, consulte [cambiar un símbolo o el nombre](../windows/changing-a-symbol-or-symbol-name-id.md).  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.*  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
  [Ver símbolos de recursos](../windows/viewing-resource-symbols.md)   
  [Restricciones de nombre de símbolo](../windows/symbol-name-restrictions.md)   
- [Restricciones de valores de símbolos](../windows/symbol-value-restrictions.md)   
+ [Restricciones de valor de símbolo](../windows/symbol-value-restrictions.md)   
  [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)

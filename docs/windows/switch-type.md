@@ -1,5 +1,5 @@
 ---
-title: switch_type | Documentos de Microsoft
+title: switch_type | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1870e1ee623d8495e9f19dd8f32ea9382070bc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79aa2683948d54f900c92304cdff29647819a74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890189"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650601"
 ---
 # <a name="switchtype"></a>switch_type
 Identifica el tipo de la variable utilizada como la unión discriminante.  
@@ -30,23 +30,21 @@ Identifica el tipo de la variable utilizada como la unión discriminante.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [switch_type(  
 type  
 }]  
-  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `type`  
- El tipo de conmutador, puede ser un tipo entero, carácter, Boolean o enumeración.  
+### <a name="parameters"></a>Parámetros  
+ *type*  
+ El tipo de conmutador, puede ser un tipo entero, carácter, un valor booleano o enumeración.  
   
 ## <a name="remarks"></a>Comentarios  
- El **switch_type** atributo C++ tiene la misma funcionalidad que la [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) atributo MIDL.  
+ El **switch_type** atributo de C++ tiene la misma funcionalidad que el [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) atributo MIDL.  
   
- Los atributos de C++ no admiten [encapsulado uniones](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Uniones nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) solo se admiten en el formato siguiente:  
+ Atributos de C++ no admiten [encapsulado uniones](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Uniones nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) solo se admiten en el formato siguiente:  
   
-```  
+```cpp  
 // cpp_attr_ref_switch_type.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -72,7 +70,7 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**Se aplica a**|`typedef`|  
+|**Se aplica a**|**typedef**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

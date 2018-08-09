@@ -1,5 +1,5 @@
 ---
-title: Propiedad de tipo de Acelerador | Documentos de Microsoft
+title: Propiedad de tipo de Acelerador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb1ba8f117fadab7cccb835ba8889d57bcc9f184
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da825a4f2052f05b24ff724d709c7c8a4b6a3db3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856506"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645690"
 ---
 # <a name="accelerator-type-property"></a>Type (Propiedad de acelerador)
-El Acelerador **tipo** propiedad determina si la combinación de teclas de método abreviado asociada con el ID de acelerador es una combinación de teclas virtual o un valor de clave de ASCII/ANSI:  
+El Acelerador **tipo** propiedad determina si la combinación de teclas de método abreviado asociada con el Id. de acelerador es una combinación de teclas virtual o un valor de clave ASCII/ANSI:  
   
--   Si el **tipo** propiedad es **ASCII**, [modificador](../windows/accelerator-modifier-property.md) sólo podrá ser o Alt, o puede tener un acelerador que utilice la tecla CTRL (anteponer a la clave con un ^).  
+-   Si el **tipo** propiedad es ASCII, el [modificador](../windows/accelerator-modifier-property.md) sólo puede ser `None` o `Alt`, o puede tener un acelerador que utilice la **Ctrl** clave (especificada por anterior a la clave con un `^`).  
   
--   Si el **tipo** propiedad es **VIRTKEY**, cualquier combinación de valores de modificador y la clave es válida.  
+-   Si el **tipo** propiedad es VIRTKEY, cualquier combinación de `Modifier` y `Key` valores es válido.  
   
     > [!NOTE]
-    >  Si desea especificar un valor en la tabla de aceleradores y tienen el valor se tratará como ASCII/ANSI, simplemente haga clic en el tipo de la entrada en la tabla y seleccione ASCII en la lista desplegable. Sin embargo, si usa el **tecla siguiente** comando (**editar** menú) para especificar la clave, debe cambiar la **tipo** propiedad de VIRTKEY a ASCII *antes de* escribir el código de tecla.  
+    >  Si desea especificar un valor en la tabla de aceleradores y tienen el valor se tratan como ASCII/ANSI, simplemente haga clic en el **tipo** para la entrada en la tabla y seleccione ASCII en la lista desplegable. Sin embargo, si usa el **tecla siguiente** comando (**editar** menú) para especificar el `Key`, debe cambiar la **tipo** propiedad de VIRTKEY a ASCII *antes* escribir el `Key` código.  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer las propiedades de Acelerador](../windows/setting-accelerator-properties.md)   
+ [Establecer propiedades de Acelerador](../windows/setting-accelerator-properties.md)   
  [Editor de aceleradores](../windows/accelerator-editor.md)

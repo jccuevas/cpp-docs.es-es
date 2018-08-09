@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 640a28752a3bc37322737888ffc38706068118b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467097"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652716"
 ---
 # <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface (Método)
 Recupera un puntero a la interfaz especificada por el parámetro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 STDMETHOD(  
    QueryInterface  
 )(REFIID riid, _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *riid*  
  Id. de interfaz.  
   

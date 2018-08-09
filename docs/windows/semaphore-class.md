@@ -1,5 +1,5 @@
 ---
-title: Clase de semáforo | Documentos de Microsoft
+title: Clase de semáforo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5101aba24cd8a0ed4f44587ffc4ad9e973099b8a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889474"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652641"
 ---
 # <a name="semaphore-class"></a>Semaphore (clase)
 Representa un objeto de sincronización que controla un recurso compartido que puede admitir un número limitado de usuarios.  
@@ -30,7 +30,6 @@ Representa un objeto de sincronización que controla un recurso compartido que p
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
@@ -40,19 +39,19 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Name|Descripción|  
 |----------|-----------------|  
-|`SyncLock`|Sinónimo de una clase que admita bloqueos sincrónicos.|  
+|`SyncLock`|Un sinónimo de una clase que admita bloqueos sincrónicos.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Semaphore::Semaphore (constructor)](../windows/semaphore-semaphore-constructor.md)|Inicializa una nueva instancia de la clase de semáforo.|  
+|[Semaphore::Semaphore (constructor)](../windows/semaphore-semaphore-constructor.md)|Inicializa una nueva instancia de la **semáforo** clase.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke (método)](../windows/invokehelper-invoke-method.md)|Llama al controlador de eventos cuya firma contiene el número de argumentos especificado.|  
+|[InvokeHelper::Invoke (método)](../windows/invokehelper-invoke-method.md)|Llama al controlador de eventos cuya firma contiene el número especificado de argumentos.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
@@ -64,7 +63,7 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Semaphore::operator= (operador)](../windows/semaphore-operator-assign-operator.md)|Mueve el identificador especificado de un objeto semáforo de que el objeto de semáforo actual.|  
+|[Semaphore::operator= (operador)](../windows/semaphore-operator-assign-operator.md)|Mueve el identificador especificado de un **semáforo** el objeto actual **semáforo** objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `Semaphore`  

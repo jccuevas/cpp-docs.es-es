@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de windows | Documentos de Microsoft'
+title: 'Cómo: usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de windows | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f93570d18373a2e5ab4c698a9a85d4412129dd17
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891728"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650614"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Cómo: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows
 Winmdidl.exe y midlrt.exe permiten la interacción de nivel COM entre el código de C++ nativo y los componentes de Windows Runtime. Winmdidl.exe toma como entrada un archivo .winmd que contiene los metadatos para un componente de Windows Runtime y genera un archivo IDL. Midlrt.exe convierte ese archivo IDL en archivos de encabezado que el código de C++ puede utilizar. Ambas herramientas se ejecutan en la línea de comandos.  
@@ -49,8 +49,8 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  `/time`  
  Muestra el tiempo de ejecución total en el resultado de la consola.  
   
- / outdir:\<dir >  
- Especifica un directorio de salida. Si la ruta de acceso contiene espacios en blanco, utilice comillas. El directorio de salida predeterminado es  *\<unidad >*: \Users\\*\<nombre de usuario >* \AppData\Local\VirtualStore\Program archivos (x86) \Microsoft Visual Studio 12.0\\.  
+ /outdir:\<dir >  
+ Especifica un directorio de salida. Si la ruta de acceso contiene espacios en blanco, utilice comillas. El directorio de salida predeterminado es  *\<unidad >*: \Users\\*\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.  
   
  `/banner:<file>`  
  Especifica un archivo que contiene el texto personalizado que se va a anteponer al mensaje de copyright predeterminado y al número de versión de winmdidl en la parte superior del archivo .idl generado. Si la ruta de acceso contiene espacios en blanco, utilice comillas.  
@@ -62,22 +62,22 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  Nombre del archivo .winmd que se va a analizar. Si la ruta de acceso contiene espacios en blanco, utilice comillas.  
   
 ## <a name="midlrt-command-line-arguments"></a>Argumentos de la línea de comandos de Midlrt  
- Vea [componentes MIDLRT y en tiempo de ejecución de Windows](http://msdn.microsoft.com/library/windows/desktop/hh869900\(v=vs.85\).aspx).  
+ Consulte [componentes en tiempo de ejecución de Windows y de MIDLRT](http://msdn.microsoft.com/library/windows/desktop/hh869900\(v=vs.85\).aspx).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra un comando winmdidl en un símbolo del sistema de Visual Studio x86. Especifica un directorio de salida y un archivo que contiene el texto de la pancarta especial que se va a agregar al archivo .idl generado.  
   
- **C:\Program Files (x86) \Microsoft 12.0 de Visual Studio > winmdidl/nologo /outdir:c:\users\giraffe\documents\ /banner:c:\users\giraffe\documents\banner.txt "C:\Users\giraffe\Documents\Visual Studio 2013\Projects\Test_for_winmdidl\Debug\ Test_for_winmdidl\test_for_winmdidl.winmd"**  
+ `C:\Program Files (x86)\Microsoft Visual Studio 12.0>winmdidl /nologo /outdir:c:\users\giraffe\documents\ /banner:c:\users\giraffe\documents\banner.txt "C:\Users\giraffe\Documents\Visual Studio 2013\Projects\Test_for_winmdidl\Debug\Test_for_winmdidl\test_for_winmdidl.winmd"`  
   
  En el ejemplo siguiente se muestra la pantalla de la consola de winmdidl que indica que la operación se realizó correctamente.  
   
  **Generar c:\users\giraffe\documents\\\Test_for_winmdidl.idl**  
   
- A continuación, se ejecuta midlrt en el archivo IDL generado. Tenga en cuenta que la **metadata_dir** argumento se especifica después del nombre del archivo .idl. La ruta de acceso de \WinMetadata\ es obligatoria; es la ubicación de windows.winmd.  
+ A continuación, se ejecuta midlrt en el archivo IDL generado. Tenga en cuenta que el **metadata_dir** argumento se especifica después del nombre del archivo. idl. La ruta de acceso de \WinMetadata\ es obligatoria; es la ubicación de windows.winmd.  
   
- **C:\Program Files (x86) \Microsoft 12.0 de Visual Studio > midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"**  
+ `C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`  
   
 ## <a name="remarks"></a>Comentarios  
  El archivo de salida de una operación de winmdidl tiene el mismo nombre que el archivo de entrada, pero tiene la extensión de nombre de archivo .idl.  
   
- Si va a desarrollar un componente de Windows Runtime al que se obtendrá acceso desde WRL, puede especificar que winmdidl.exe y midlrt.exe se ejecuten como pasos posteriores a la compilación para que se generen los archivos .idl y .h en cada compilación. Para obtener un ejemplo, vea [generar eventos en componentes de Windows en tiempo de ejecución](/uwp/winrt-components/raising-events-in-windows-runtime-components).
+ Si va a desarrollar un componente de Windows Runtime al que se obtendrá acceso desde WRL, puede especificar que winmdidl.exe y midlrt.exe se ejecuten como pasos posteriores a la compilación para que se generen los archivos .idl y .h en cada compilación. Para obtener un ejemplo, vea [provocar eventos en componentes de Windows en tiempo de ejecución](/uwp/winrt-components/raising-events-in-windows-runtime-components).

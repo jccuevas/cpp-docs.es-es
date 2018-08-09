@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20c651c6e671c7c4895fc7dba85d16fdeb998ad5
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: e5aa4c7279fcee6ffd7ca17bcf788bbef7737a9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570706"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647523"
 ---
 # <a name="dbcolumn"></a>db_column
 Enlaza una columna especificada a una variable en el conjunto de filas.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [ db_column(   
    ordinal,   
    dbtype,   
@@ -44,7 +44,7 @@ Enlaza una columna especificada a una variable en el conjunto de filas.
  *Ordinal*  
  El número de columna ordinal (`DBCOLUMNINFO` ordinal) o nombre de columna (cadena ANSI o Unicode) correspondiente a un campo del conjunto de filas que se va a enlazar datos. Si utiliza números, puede omitir los ordinales consecutivos (por ejemplo: 1, 2, 3, 5). El nombre puede contener espacios, si lo admite el proveedor OLE DB que utiliza. Por ejemplo, puede usar cualquiera de los siguientes formatos:  
   
-```  
+```cpp  
 [db_column("2")] TCHAR szCity[30];  
 [db_column(L"city_name")] TCHAR szCity[30];  
 ```  

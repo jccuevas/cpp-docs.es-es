@@ -1,5 +1,5 @@
 ---
-title: 'Simpleclassfactory:: CreateInstance (método) | Documentos de Microsoft'
+title: Método Simpleclassfactory | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a31d364a6464962b8243cfaced03131a20f9324
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f25e85e59769f822a6c732cc0911c564c0104f96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892753"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651085"
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance (Método)
 
@@ -41,15 +41,15 @@ STDMETHOD( CreateInstance )(
 ### <a name="parameters"></a>Parámetros
 
 *pUnkOuter*  
-Debe ser `nullptr`; en caso contrario, el valor devuelto es CLASS_E_NOAGGREGATION.
+Debe ser **nullptr**; en caso contrario, el valor devuelto es CLASS_E_NOAGGREGATION.
 
-SimpleClassFactory no admite la agregación. Si se admite la agregación y el objeto que se está creando formaba parte de un agregado, `pUnkOuter` sería un puntero a la interfaz IUnknown control del agregado.
+SimpleClassFactory no admite la agregación. Si se admite la agregación y el objeto se crea formaba parte de un agregado, *pUnkOuter* sería un puntero al control `IUnknown` interfaz del agregado.
 
 *riid*  
-Identificador de interfaz del objeto que se creará.
+Identificador del objeto para crear la interfaz.
 
 *ppvObject*  
-Cuando se completa esta operación, puntero a una instancia del objeto especificado por el `riid` parámetro.
+Cuando finalice esta operación, puntero a una instancia del objeto especificado por el *riid* parámetro.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -57,7 +57,7 @@ S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el erro
 
 ## <a name="remarks"></a>Comentarios
 
-Si &#95; &#95;WRL_STRICT&#95; &#95; está definido, se genera un error de aserción si no se deriva la clase base especificada en el parámetro de plantilla de clase [RuntimeClass](../windows/runtimeclass-class.md), o no está configurado con el ClassicCom o WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valor de enumeración.
+Si &#95; &#95;WRL_STRICT&#95; &#95; está definido, se genera un error de aserción si no se deriva de la clase base especificada en el parámetro de plantilla de clase [RuntimeClass](../windows/runtimeclass-class.md), o no está configurado con el ClassicCom o WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valor de enumeración.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -66,5 +66,4 @@ Si &#95; &#95;WRL_STRICT&#95; &#95; está definido, se genera un error de aserci
 **Espacio de nombres:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vea también
-
-[SimpleClassFactory (clase)](../windows/simpleclassfactory-class.md)
+ [SimpleClassFactory (clase)](../windows/simpleclassfactory-class.md)

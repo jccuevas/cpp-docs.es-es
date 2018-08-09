@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6b9b2b1abd9e42461f3bcfc57fcad1840382053
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0fa26f2f5898e65827095a11841eae1f52403c3c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466259"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650565"
 ---
 # <a name="asyncbaseasyncbase-constructor"></a>AsyncBase::AsyncBase (Constructor)
 Inicializa una instancia de la **AsyncBase** clase.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 AsyncBase();  
 ```  
   

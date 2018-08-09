@@ -1,5 +1,5 @@
 ---
-title: Organización de los controles de cuadros de diálogo | Documentos de Microsoft
+title: Organización de los controles en cuadros de diálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a449fef82b536cdea484a49a52fece86fac21604
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3414c6856619f602ec21297ebb330e060e98906b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858492"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645778"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Distribución de los controles en los cuadros de diálogo
-El editor de cuadro de diálogo proporciona herramientas de diseño que alinearán y ajustar automáticamente el tamaño de controles. Para la mayoría de las tareas, puede usar el [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Todos los comandos de barra de herramientas del Editor de cuadro de diálogo también están disponibles en el menú Formato, y la mayoría tienen [teclas de método abreviado](../windows/accelerator-keys-for-the-dialog-editor.md).  
+El **diálogo** editor proporciona herramientas de diseño que alinean y ajustar automáticamente el tamaño de controles. Para la mayoría de las tareas, puede usar el [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Todos los **Editor de cuadro de diálogo** comandos de la barra de herramientas también están disponibles en el **formato** menú y la mayoría tiene [teclas de método abreviado](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Muchos comandos de diseño de cuadros de diálogo están disponibles únicamente cuando se selecciona más de un control. Puede seleccionar un control único o varios controles y, cuando se selecciona más de un control, selecciona la primera de ellas es de forma predeterminada el control "principal". Para obtener información sobre la selección de controles y el control dominante, vea [seleccionar controles](../windows/selecting-controls.md).  
+ Muchos comandos de diseño para los cuadros de diálogo están disponibles solo cuando se selecciona más de un control. Puede seleccionar un control único o varios controles, y cuando se selecciona más de un control, es el primero de ellos que selecciona de forma predeterminada el control "principal". Para obtener información sobre la selección de controles y el control dominante, vea [seleccionar controles](../windows/selecting-controls.md).  
   
- La ubicación, el alto y el ancho del control actual se muestran en la esquina inferior derecha de la barra de estado. Cuando se selecciona el cuadro de diálogo completa, la barra de estado muestra la posición del cuadro de diálogo como un todo y su alto y ancho.  
+ La ubicación, alto y ancho del control actual se muestran en la esquina inferior derecha de la barra de estado. Cuando se selecciona el cuadro de diálogo completa, la barra de estado muestra la posición del cuadro de diálogo como un todo y su alto y ancho.  
   
 -   [Estados del Editor de cuadros de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)  
   
@@ -45,7 +45,7 @@ El editor de cuadro de diálogo proporciona herramientas de diseño que alinear�
   
 -   [Cambio del orden de tabulación de los controles](../windows/changing-the-tab-order-of-controls.md)  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
@@ -53,4 +53,3 @@ El editor de cuadro de diálogo proporciona herramientas de diseño que alinear�
 ## <a name="see-also"></a>Vea también  
  [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
-

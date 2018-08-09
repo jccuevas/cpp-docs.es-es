@@ -1,5 +1,5 @@
 ---
-title: Agregar archivos a una aplicación de Win32 vacía | Documentos de Microsoft
+title: Agregar archivos a una aplicación de Win32 vacía | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b75a81773b45483c8b70c12530acfc9f75994
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3ed2559457a7fd3231c625b285dea44f81da877
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856897"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646847"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Agregar archivos a una aplicación de Win32 vacía
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>Para agregar sus archivos a una aplicación de escritorio de Windows vacía  
@@ -36,11 +36,11 @@ ms.locfileid: "33856897"
   
 4.  Haga clic en **Aceptar**.  
   
- Para agregar archivos que no sean de origen, encabezado ni de recursos al proyecto, haga clic con el botón secundario en el nodo Solución del Explorador de soluciones y agregue los archivos al proyecto de la misma manera. Se creará una carpeta Varios para que contenga los demás archivos del proyecto.  
+ Para agregar los archivos que no son ni de origen, encabezado ni archivos de recursos al proyecto, haga clic en el **solución** nodo **el Explorador de soluciones** y agregue los archivos al proyecto de la misma manera. Un **varios** se creará una carpeta que contenga los demás archivos del proyecto.  
   
 > [!NOTE]
 >  Antes de compilar el proyecto, debe especificar opciones de compilación para estos archivos, para que se incluyan correctamente en la aplicación finalizada. Para más información, vea [Especificar la configuración del proyecto con páginas de propiedades](../ide/property-pages-visual-cpp.md) y [Creación de un programa C/C++](../build/building-c-cpp-programs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una aplicación de escritorio de Windows vacía](../windows/creating-an-empty-windows-desktop-application.md)   
+ [Creación de una aplicación de escritorio de Windows vacía](../windows/creating-an-empty-windows-desktop-application.md)   
  [Implementación de aplicaciones](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

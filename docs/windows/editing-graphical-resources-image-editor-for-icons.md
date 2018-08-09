@@ -1,5 +1,5 @@
 ---
-title: Editar recursos gráficos (Editor de imágenes para iconos) | Documentos de Microsoft
+title: Editar recursos gráficos (Editor de imágenes para iconos) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1de0c53240b1b25d84ae6a61c31d4f734f5c8313
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6b4aea912398413d43810ad08a2b34e9cb78092
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882503"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642391"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Editar recursos gráficos (Editor de imágenes para iconos)
-Recursos gráficos son las imágenes que se definen para la aplicación. Puede dibujar a mano alzada o dibujar con formas. Puede seleccionar partes de una imagen para la edición, voltear o cambiar el tamaño, o puede crear un pincel personalizado a partir de una parte seleccionada de una imagen y dibujar con pincel. Puede definir propiedades de la imagen, guardar imágenes en diferentes formatos y convertir las imágenes de un formato a otro.  
+Recursos gráficos son las imágenes que se definen para la aplicación. Puede dibujar a mano alzada o dibujar mediante formas. Puede seleccionar partes de una imagen para editar, voltear o cambiar el tamaño, o puede crear un pincel personalizado de una parte seleccionada de una imagen y dibujar con pincel. Puede definir propiedades de la imagen, guardar imágenes en diferentes formatos y convertir las imágenes de un formato a otro.  
   
- Además de crear recursos gráficos nuevos, también puede [importar imágenes existentes](../windows/how-to-import-and-export-resources.md) para su edición y, a continuación, agregarlas al proyecto. También puede abrir y editar imágenes que no forman parte de un proyecto para [edición independiente de imágenes](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).  
+ Además de crear nuevos recursos gráficos, puede [importar imágenes existentes](../windows/how-to-import-and-export-resources.md) para editarlo y, a continuación, agréguelos al proyecto. También puede abrir y editar las imágenes que no forman parte de un proyecto para [edición de imágenes independientes](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).  
   
 -   [Crear un nuevo mapa de bits u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)  
   
@@ -52,7 +52,7 @@ Recursos gráficos son las imágenes que se definen para la aplicación. Puede d
   
 -   [Cambiar propiedades de la imagen](changing-image-properties-image-editor-for-icons.md)  
   
--   [Guardar mapas de bis como .gif o .JPEG](../windows/saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons.md)  
+-   [Guardar mapas de bits .gif o .JPEG](../windows/saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons.md)  
   
 -   [Convertir una imagen de un formato a otro](../windows/converting-an-image-from-one-format-to-another-image-editor-for-icons.md)  
   
@@ -64,10 +64,10 @@ Recursos gráficos son las imágenes que se definen para la aplicación. Puede d
   
 -   [Paneles de la ventana Editor de imágenes](../windows/window-panes-image-editor-for-icons.md)  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 > [!NOTE]
->  Con el Editor de imágenes, se pueden ver imágenes de 32 bits, pero no se pueden editar.  
+>  Mediante el **Editor de imágenes**, puede ver las imágenes de 32 bits, pero no puede modificarlas.  
   
 ## <a name="requirements"></a>Requisitos  
  Ninguna  
@@ -75,4 +75,3 @@ Recursos gráficos son las imágenes que se definen para la aplicación. Puede d
 ## <a name="see-also"></a>Vea también  
  [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)   
-

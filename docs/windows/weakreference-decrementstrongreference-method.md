@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: Decrementstrongreference (método) | Documentos de Microsoft'
+title: Decrementstrongreference (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d5605670e05f91f9f1293c8bff0f4d74e458d25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c7e2161c5451fe82e12918f00e8cb2cde37d336
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890341"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642320"
 ---
 # <a name="weakreferencedecrementstrongreference-method"></a>WeakReference::DecrementStrongReference (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,9 +34,9 @@ ULONG DecrementStrongReference();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Disminuye el seguro recuento de referencias del objeto WeakReference actual.  
+ Disminuye el recuento de la referencia segura del actual **WeakReference** objeto.  
   
- Cuando el recuento de referencia segura se convierte en cero, la referencia segura se establece en `nullptr`.  
+ Cuando el recuento de referencia segura se convierte en cero, la referencia segura se establece en **nullptr**.  
   
 ## <a name="return-value"></a>Valor devuelto  
  El recuento de referencia segura disminuye.  
@@ -47,5 +47,5 @@ ULONG DecrementStrongReference();
  **Namespace:** wrl  
   
 ## <a name="see-also"></a>Vea también  
-[WeakReference (clase)](../windows/weakreference-class1.md)  
+ [WeakReference (clase)](../windows/weakreference-class1.md)  
  [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Constructor Weakref | Documentos de Microsoft
+title: Constructor de Weakref | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae70dabdd86fedf82c26c0c7d9a09d842e2310e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eafbddea6ae651d74d8f33be8efa58c25a8a0d3d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891053"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641478"
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef (Constructor)
-Inicializa una nueva instancia de la clase WeakRef.  
+Inicializa una nueva instancia de la **WeakRef** clase.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,12 +52,12 @@ WeakRef(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `ptr`  
- Un puntero, referencia o referencia de valor r a un objeto existente que inicializa el objeto WeakRef actual.  
+### <a name="parameters"></a>Parámetros  
+ *ptr*  
+ Un puntero, referencia o referencia de valor r a un objeto existente que inicializa actual **WeakRef** objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- El primer constructor inicializa un objeto WeakRef vacío. El segundo constructor inicializa un objeto de WeakRef de un puntero a la interfaz IWeakReference. El tercer constructor inicializa un objeto WeakRef desde una referencia a una ComPtr\<IWeakReference > objeto. Los constructores cuarto y quinto se inicializa un objeto de WeakRef de otro objeto de WeakRef.  
+ El primer constructor inicializa vacío **WeakRef** objeto. El segundo constructor inicializa un **WeakRef** objeto de un puntero a la `IWeakReference` interfaz. El tercer constructor inicializa un **WeakRef** objeto a partir de una referencia a un `ComPtr<IWeakReference>` objeto. Los constructores cuarto y quinto Inicializa un **WeakRef** objeto desde otro **WeakRef** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  

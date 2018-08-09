@@ -1,5 +1,5 @@
 ---
-title: Eliminar símbolos sin asignar | Documentos de Microsoft
+title: Eliminar símbolos sin asignar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 947249b4a0a9bd2233d76671b1b5bf05c70337db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93de27e028d0665cccc3ba373b26524d911607a0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882945"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648202"
 ---
 # <a name="deleting-unassigned-symbols"></a>Eliminar símbolos sin asignar
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>Para eliminar un símbolo sin asignar (sin usar)  
@@ -32,14 +32,11 @@ ms.locfileid: "33882945"
     > [!NOTE]
     >  Antes de eliminar un símbolo sin usar en un archivo de recursos, asegúrese de que no se usa en ninguna otra parte del programa o en archivos de recursos incluidos en el tiempo de compilación.  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
  [Cambiar símbolos sin asignar](../windows/changing-unassigned-symbols.md)   
  [Restricciones de nombre de símbolo](../windows/symbol-name-restrictions.md)   
- [Restricciones de valores de símbolos](../windows/symbol-value-restrictions.md)   
+ [Restricciones de valor de símbolo](../windows/symbol-value-restrictions.md)   
  [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e7b5d2b10b571a3517beab98eaa839d5c7fd86c2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a335d379c1797e6152ea1b6011830423082693bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460838"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648053"
 ---
 # <a name="asyncbasecontinueasyncoperation-method"></a>AsyncBase::ContinueAsyncOperation (Método)
 Determina si la operación asincrónica, debe continuar el procesamiento o debería detenerse.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 inline bool ContinueAsyncOperation();  
 ```  
   

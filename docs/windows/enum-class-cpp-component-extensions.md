@@ -13,25 +13,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 54c4e97458e1a7322d84e012ea5609d3e29bfb0a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570553"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647318"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (Extensiones de componentes de C++)
 Declara una enumeración en el ámbito de espacio de nombres, que es un tipo definido por el usuario que está compuesto de un conjunto de constantes con nombre llamadas enumeradores.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
- **Comentarios**  
+### <a name="remarks"></a>Comentarios
   
  C++ / c++ / CX y c++ / compatibilidad con la CLI **clase enum pública** y **clase enum privada** que son similares a la estándar de C++ **clase enum** pero con la adición de la accesibilidad especificador. En **/CLR**, C ++ 11 **clase enum** tipo está permitido pero generará la advertencia c4472, que pretende garantizar que realmente desea el tipo de enumeración ISO y no C++ / c++ / CX y c++ / tipo de CLI. Para obtener más información acerca de la norma ISO de C++ **enum** palabra clave, consulte [enumeraciones](../cpp/enumerations-cpp.md).  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
- **Sintaxis**  
+### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
       access  
       enum class  
       enumeration-identifier  
@@ -39,8 +39,7 @@ Declara una enumeración en el ámbito de espacio de nombres, que es un tipo def
 accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [var];  
 ```  
   
- **Parámetros**  
-  
+### <a name="parameters"></a>Parámetros  
  *access*  
  La accesibilidad de la enumeración, que puede ser **pública** o **privada**.  
   
@@ -60,7 +59,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *var*  
  (Opcional) Nombre de una variable del tipo de enumeración.  
   
- **Comentarios**  
+### <a name="remarks"></a>Comentarios 
   
  Para obtener más información y ejemplos, vea [Enumeraciones](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).  
   
@@ -73,19 +72,19 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 -   Si *underlying-type* es `char16`y el valor de enumeración va de 0xD800 a 0xDFFF, el valor se puede representar. Sin embargo, el valor es lógicamente incorrecto porque representa la mitad del par suplente Unicode y no debe aparecer de forma aislada.  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/ZW**  
+ Opción del compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Sintaxis**  
+### <a name="syntax"></a>Sintaxis
   
-```  
+```cpp  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
 accessenum structname [:type] { enumerator-list } var;  
 ```  
   
- **Parámetros**  
+ ### <a name="parameters"></a>Parámetros  
   
  *access*  
  Accesibilidad de la enumeración. Puede ser **pública** o **privada**.  
@@ -102,7 +101,7 @@ accessenum structname [:type] { enumerator-list } var;
  *var* (opcional)  
  Nombre de una variable del tipo de enumeración.  
   
- **Comentarios**  
+### <a name="remarks"></a>Comentarios 
   
  **enum class** y **enum struct** son declaraciones equivalentes.  
   
@@ -163,13 +162,13 @@ int main() {
   
  emitiría lo siguiente en MSIL para la signatura de la función:  
   
-```  
+```cpp  
 void f(int32);  
 ```  
   
  Sin embargo, en las versiones actuales del compilador, la enumeración estándar se emite como enumeración administrada con [NativeEnumAttribute] y lo siguiente en MSIL para la signatura de la función:  
   
-```  
+```cpp  
 void f(E)  
 ```  
   
@@ -180,12 +179,9 @@ void f(E)
 -   [Tipo subyacente de una enumeración](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/clr**  
+ Opción del compilador: `/clr`  
   
 ### <a name="examples"></a>Ejemplos  
- **Ejemplo**  
-  
- desc  
   
 ```cpp  
 // mcppv2_enum_2.cpp  
@@ -215,8 +211,6 @@ int main()
    System::Console::WriteLine(o);  
 }   
 ```  
-  
- **Salida**  
   
 ```Output  
 no automatic conversion to int: b  

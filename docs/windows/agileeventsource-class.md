@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462074"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642843"
 ---
 # <a name="agileeventsource-class"></a>Clase AgileEventSource
 
@@ -30,7 +30,7 @@ Representa un evento provocado por un componente de agile, que es un componente 
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
 class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
@@ -38,7 +38,6 @@ class AgileEventSource
 
 ## <a name="parameters"></a>Parámetros  
  *TDelegateInterface*  
-
  La interfaz a un delegado que representa un controlador de eventos.
 
  *TEventSourceOptions*  
@@ -64,7 +63,7 @@ La mayoría de los componentes en tiempo de ejecución de Windows son ágiles co
 
 |Name|Descripción|
 |----------|-----------------|
-|[Método AgileEventSource::Add](#add)|Anexa el controlador de eventos agile representado por la interfaz de delegado especificado al conjunto de controladores de eventos para el objeto AgileEventSource actual.|
+|[Método AgileEventSource::Add](#add)|Anexa el controlador de eventos agile representado por la interfaz de delegado especificado al conjunto de controladores de eventos actual **AgileEventSource** objeto.|
 
 ## <a name="add"></a> Método AgileEventSource::Add
 
@@ -85,7 +84,7 @@ HRESULT Add(
 La interfaz para un objeto delegado, que representa un controlador de eventos.
 
 *símbolo (token)*  
-Cuando se completa esta operación, un identificador que representa el evento. Use este token como parámetro al método Remove() para descartar el controlador de eventos.
+Cuando se completa esta operación, un identificador que representa el evento. Use este token como parámetro para el `Remove()` método para descartar el controlador de eventos.
 
 ### <a name="return-value"></a>Valor devuelto
 

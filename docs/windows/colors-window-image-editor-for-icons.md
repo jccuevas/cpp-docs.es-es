@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ee53735c84d586aa41cd4a1c5d3e8a70051c88e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 23befed8800027553f69032a5f5cc32816396951
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460976"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648215"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Ventana Colores (Editor de imágenes para iconos)
 El **colores** ventana consta de dos partes:  
@@ -46,7 +46,7 @@ Ventana Colores
 > [!NOTE]
 >  El **pantalla color** y **color inverso** herramientas solo están disponibles para iconos y cursores.  
   
- Puede usar la ventana colores con el [barra de herramientas del Editor de imágenes](../windows/toolbar-image-editor-for-icons.md).  
+ Puede usar el **colores** ventana con el [barra de herramientas del Editor de imágenes](../windows/toolbar-image-editor-for-icons.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Ninguna  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b71d8183921e0df66d6b9a82ff79faf24ccb41d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570004"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642339"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 Especifica el identificador de un tema de ayuda en un archivo .hlp o chm.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [ helpstringcontext(  
    contextID  
 ) ]  
@@ -37,7 +37,7 @@ Especifica el identificador de un tema de ayuda en un archivo .hlp o chm.
   
 ### <a name="parameters"></a>Parámetros  
  *contextID*  
- Un identificador de contexto de Ayuda de 32 bits en el archivo de ayuda.  
+ Un identificador de contexto de Ayuda de 32 bits en el **ayuda** archivo.  
   
 ## <a name="remarks"></a>Comentarios  
  El **helpstringcontext** atributo de C++ tiene la misma funcionalidad que el [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL (atributo).  

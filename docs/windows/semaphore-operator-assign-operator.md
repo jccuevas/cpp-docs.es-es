@@ -1,5 +1,5 @@
 ---
-title: 'Semaphore:: operator = (operador) | Documentos de Microsoft'
+title: 'Semaphore:: operator = (operador) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eee563a52a24d2b78157b640ae6e84217c03af64
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892532"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651283"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator= (Operador)
-Mueve el identificador especificado de un objeto semáforo de que el objeto de semáforo actual.  
+Mueve el identificador especificado de un **semáforo** el objeto actual **semáforo** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,12 +35,12 @@ Semaphore& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `h`  
- Referencia de valor r a un objeto de semáforo.  
+### <a name="parameters"></a>Parámetros  
+ *h*  
+ Referencia de valor r a un **semáforo** objeto.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Una referencia al objeto de semáforo actual.  
+ Una referencia a la actual **semáforo** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

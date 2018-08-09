@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b74f4ca4ab2940dde9dfc567b8fa45ea8f03279e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569809"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642775"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operador de identificador de objeto (^) (Extensiones de componentes de C++)
 El *declarador del identificador* (`^`, pronunciado "sombrero"), modifica el tipo [especificador](../cpp/overview-of-declarators.md) para indicar que el objeto declarado debe eliminarse automáticamente cuando el sistema determina que el objeto es ya no es accesible.  
@@ -36,7 +36,7 @@ El *declarador del identificador* (`^`, pronunciado "sombrero"), modifica el tip
  Para obtener información sobre cómo crear una instancia de un objeto, vea [referencia nuevos](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
 ## <a name="requirements"></a>Requisitos  
- Opción del compilador: **/ZW**  
+ Opción del compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  El sistema usa CLR *recolector de elementos no utilizados* mecanismo para determinar si el objeto ya no se está usando y puede eliminarse. Common Language Runtime mantiene un montón donde asigna objetos y usa las referencias administradas (variables) del programa para indicar la ubicación de objetos en el montón. Cuando un objeto ya no se usa, se libera la memoria que ocupaba en el montón. De manera periódica, el recolector de elementos no utilizados compacta el montón para mejorar el uso de la memoria liberada. Al compactar el montón, se pueden mover sus objetos, lo que invalida las ubicaciones que usan las referencias administradas. Sin embargo, el recolector de elementos no utilizados reconoce la ubicación de todas las referencias administradas y las actualiza automáticamente para indicar la ubicación actual de los objetos en el montón.  
@@ -48,7 +48,6 @@ El *declarador del identificador* (`^`, pronunciado "sombrero"), modifica el tip
  Para obtener más información, consulte [Cómo: declarar controla en tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).  
   
 ### <a name="examples"></a>Ejemplos  
- **Ejemplo**  
   
  En este ejemplo se muestra cómo crear una instancia de un tipo de referencia en el montón administrado.  En este ejemplo se muestra también que puede inicializar un identificador con otro, lo que da a lugar a dos referencias al mismo objeto en el montón de recolección de elementos no utilizados administrado. Tenga en cuenta que la asignación [nullptr](../windows/nullptr-cpp-component-extensions.md) a un identificador no marca el objeto para la recolección.  
   
@@ -77,14 +76,10 @@ int main() {
 }  
 ```  
   
- **Salida**  
-  
 ```Output  
 1  
 2  
 ```  
-  
- **Ejemplo**  
   
  En el ejemplo siguiente se muestra cómo declarar un identificador para un objeto del montón administrado, donde el tipo de objeto es un tipo de valor de conversión boxing. En el ejemplo también se muestra cómo obtener el tipo de valor del objeto al que se ha aplicado la conversión boxing.  
   
@@ -109,18 +104,14 @@ int main() {
    int n = 100;  
    Test(n);  
 }  
-```  
-  
- **Salida**  
+```   
   
 ```Output  
 Not a boxed int  
 100  
 ```  
   
- **Ejemplo**  
-  
- En este ejemplo se muestra que la expresión común de C++ de usar un puntero void* para apuntar a un objeto arbitrario se reemplaza por Object^, que puede contener un identificador para cualquier clase de referencia. También se muestra que todos los tipos, como matrices y delegados, pueden convertirse en un identificador de objeto.  
+ Este ejemplo muestra que la expresión común de C++ de usar un `void*` puntero para que apunte a un objeto arbitrario se reemplaza por `Object^`, que puede contener un identificador para cualquier clase de referencia. También se muestra que todos los tipos, como matrices y delegados, pueden convertirse en un identificador de objeto.  
   
 ```cpp  
 // mcppv2_handle_3.cpp  
@@ -157,8 +148,6 @@ int main() {
 }  
 ```  
   
- **Salida**  
-  
 ```Output  
 Type is System.Collections.ArrayList  
   
@@ -166,8 +155,6 @@ Type is System.Int32
   
 Type is MyDel  
 ```  
-  
- **Ejemplo**  
   
  En este ejemplo se muestra que se puede deshacer la referencia de un identificador y se puede tener acceso a un miembro mediante un identificador sin referencia.  
   
@@ -209,17 +196,13 @@ int main() {
 }  
 ```  
   
- **Salida**  
-  
 ```Output  
 Array value: 7  
   
 Cannot access array element 11, size is 10  
 ```  
   
- **Ejemplo**  
-  
- En este ejemplo se muestra que no se puede enlazar una referencia nativa (`&`) a un miembro `int` de un tipo administrado, ya que `int` se podría almacenar en el montón de recolección de elementos no utilizados y las referencias nativas no realizan un seguimiento del movimiento de objetos en el montón administrado. La solución es utilizar una variable local o cambiar `&` a `%`, convirtiéndola en una referencia de seguimiento.  
+ Este ejemplo muestra que una referencia nativa (`&`) no se puede enlazar a un **int** miembro de un tipo administrado, como el **int** podrían almacenarse en el montón de elementos no utilizados y no realizan el seguimiento de las referencias nativas movimiento de objetos del montón administrado. La solución es utilizar una variable local o cambiar `&` a `%`, convirtiéndola en una referencia de seguimiento.  
   
 ```cpp  
 // mcppv2_handle_5.cpp  

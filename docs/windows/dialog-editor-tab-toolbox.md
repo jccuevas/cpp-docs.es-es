@@ -1,5 +1,5 @@
 ---
-title: Pestaña de Editor de cuadro de diálogo, cuadro de herramientas | Documentos de Microsoft
+title: Pestaña Editor de cuadro de diálogo, cuadro de herramientas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40e0a13f9379200ee01e0279f9d069f1d58f3a60
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882581"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649427"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Editor de cuadros de diálogo (Ficha, Cuadro de herramientas)
-La pestaña del Editor de cuadro de diálogo aparece en la [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox) cuando esté trabajando en el editor de cuadro de diálogo. Para agregar controles a un cuadro de diálogo nuevo, arrastre controles desde el cuadro de herramientas al cuadro de diálogo que está creando (para obtener más información, consulte [agregar un Control a un cuadro de diálogo](adding-a-control-to-a-dialog-box.md)). Después, puede mover los controles o cambiar su tamaño y su forma.  
+El **Editor de cuadro de diálogo** ficha aparece en la [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox) cuando está trabajando en el **diálogo** editor. Para agregar controles al cuadro de diálogo de nuevo, arrastre controles desde el **cuadro de herramientas** al cuadro de diálogo que está creando (para obtener más información, consulte [agregando un Control a un cuadro de diálogo](adding-a-control-to-a-dialog-box.md)). Después, puede mover los controles o cambiar su tamaño y su forma.  
   
- Los controles estándares disponibles en el cuadro de herramientas son:  
+ Los controles estándares disponibles en el **cuadro de herramientas** son:  
   
 -   [Control de botón](../mfc/reference/cbutton-class.md)  
   
@@ -55,7 +55,7 @@ La pestaña del Editor de cuadro de diálogo aparece en la [ventana cuadro de he
   
 -   [Control de barra de desplazamiento](../mfc/reference/cscrollbar-class.md)  
   
- El [controles comunes de Windows](../mfc/controls-mfc.md) disponible en el cuadro de herramientas ofrecen una mayor funcionalidad en la aplicación. Son los siguientes:  
+ El [controles comunes de Windows](../mfc/controls-mfc.md) disponibles en el **cuadro de herramientas** ofrecen una mayor funcionalidad en la aplicación. Son los siguientes:  
   
 -   [Control deslizante](../mfc/slider-control-styles.md)  
   
@@ -83,25 +83,24 @@ La pestaña del Editor de cuadro de diálogo aparece en la [ventana cuadro de he
   
 -   [Control personalizado](custom-controls-in-the-dialog-editor.md)  
   
- Puede agregar controles personalizados al cuadro de diálogo seleccionando el **Control personalizado** icono en el cuadro de herramientas y arrástrelo al cuadro de diálogo. Para agregar un control Syslink, agregue un control personalizado y, a continuación, cambie el control **clase** propiedad **Syslink**. Esto hará que se actualicen las propiedades y que muestren las propiedades del control Syslink. Para obtener información sobre la clase contenedora MFC, vea [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
+ Puede agregar controles personalizados al cuadro de diálogo seleccionando el **Control personalizado** icono en el **cuadro de herramientas** y arrástrela al cuadro de diálogo. Para agregar un **Syslink** de control, agregue un control personalizado y cambie el control **clase** propiedad **Syslink**. Esto hará que las propiedades actualizar y mostrar el **Syslink** propiedades del control. Para obtener información sobre la clase contenedora MFC, vea [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
   
- También puede [agregar controles ActiveX a su cuadro de diálogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
+ También puede [agregar controles ActiveX al cuadro de diálogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
- También puede personalizar la ventana del cuadro de herramientas para facilitar su uso. Para obtener más información, vea [Usar el cuadro de herramientas](/visualstudio/ide/using-the-toolbox).  
+ También puede personalizar el **cuadro de herramientas** ventana para facilitar su uso. Para obtener más información, vea [Usar el cuadro de herramientas](/visualstudio/ide/using-the-toolbox).  
 
- Para obtener más información sobre cómo utilizar el control RichEdit 1.0 con MFC, vea [utilizar el Control RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
+ Para obtener más información sobre el uso de la **RichEdit 1.0** control con MFC, vea [con el Control RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
  [Controles](../mfc/controls-mfc.md)   
- [Clases de controles](../mfc/control-classes.md)   
+ [Clases de control](../mfc/control-classes.md)   
  [Clases de cuadro de diálogo](../mfc/dialog-box-classes.md)   
  [Estilos de barra de desplazamiento](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)   
  [Ejemplos de Control Rich Edit](../mfc/rich-edit-control-examples.md)   
- [Agregar controladores de eventos para controles de cuadros de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Agregar controladores de eventos para controles de cuadro de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Tipos de controles de cuadro de diálogo y tipos de variable](../ide/dialog-box-controls-and-variable-types.md)
-

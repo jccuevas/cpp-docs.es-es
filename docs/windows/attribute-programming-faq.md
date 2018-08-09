@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5cdc7bb8a97be6fbc8c77c06caaddf95a3095323
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cd89a2a46535c145e4ef6f84cee0b5604346f4b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463748"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645206"
 ---
 # <a name="attribute-programming-faq"></a>Preguntas más frecuentes de programación con atributos
 En este tema responde a las siguientes preguntas más frecuentes:  
@@ -46,7 +46,7 @@ En este tema responde a las siguientes preguntas más frecuentes:
 -   [¿Puedo usar los atributos en una clase derivada de una clase que también usa los atributos?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor1"></a> ¿Qué es un valor HRESULT?  
- Un `HRESULT` es un tipo de datos simple que suele utilizarse como un valor devuelto por los atributos y ATL en general. En la tabla siguiente se describe los distintos valores. En el archivo winerror.h, encabezado contiene más valores.  
+ Un HRESULT es un tipo de datos simple que suele utilizarse como un valor devuelto por los atributos y ATL en general. En la tabla siguiente se describe los distintos valores. En el archivo winerror.h, encabezado contiene más valores.  
   
 |nombre|Descripción|Valor|  
 |----------|-----------------|-----------|  
@@ -65,7 +65,7 @@ En este tema responde a las siguientes preguntas más frecuentes:
 ##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Si es necesario especificar el nombre del parámetro para un atributo  
  En la mayoría de los casos, si el atributo tiene un único parámetro, ese parámetro se denomina. Este nombre no es necesario cuando se inserta el atributo en el código. Por ejemplo, el siguiente uso de la [agregables](../windows/aggregatable.md) atributo:  
   
-```  
+```cpp  
 [coclass, aggregatable(value=allowed)]  
 class CMyClass  
 {  
@@ -75,7 +75,7 @@ class CMyClass
   
  es exactamente igual que:  
   
-```  
+```cpp  
 [coclass, aggregatable(allowed)]  
 class CMyClass  
 {  
@@ -104,7 +104,7 @@ class CMyClass
   
  Se permite lo siguiente:  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1"), /* Multiple-line  
                                        comment */  
@@ -114,7 +114,7 @@ class CMyClass
   
  Se permite lo siguiente:  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1" /* Multiple-line comment */ ),  
    threading("both" // Single-line comment)  
@@ -125,10 +125,10 @@ class CMyClass
  Clases con atributos y definirán puede heredar de otras clases, que es posible que ellos mismos tener atributos o no. El resultado de derivar de una clase con atributos es igual que derivarla de esa clase después de que el proveedor de atributos ha transformado su código. Los atributos no se transmiten a la herencia de C++ las clases derivadas. Un proveedor de atributos sólo transforma el código en la proximidad de sus atributos.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor5"></a> ¿Cómo se puede usar los atributos en un proyecto ATL sin atributos?  
- Puede tener un proyecto ATL sin atributos, que tiene un archivo .idl, y desea empezar a agregar objetos con atributos. En este caso, utilice al Asistente para agregar clases para proporcionar el código.  
+ Puede tener un proyecto ATL sin atributos, que tiene un archivo .idl, y desea empezar a agregar objetos con atributos. En este caso, utilice el **Asistente para agregar clases** para proporcionar el código.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> ¿Cómo se puede usar un archivo .idl en un proyecto con atributos?  
- Puede tener un archivo .idl que desea usar en un proyecto ATL con atributos. En este caso, utilizaría el [importidl](../windows/importidl.md) , compilar el archivo .idl en un archivo .h (consulte la [páginas de propiedades MIDL](../ide/midl-property-pages.md) en el cuadro de diálogo páginas de propiedades del proyecto) y, a continuación, incluya el archivo .h en el proyecto .  
+ Puede tener un archivo .idl que desea usar en un proyecto ATL con atributos. En este caso, utilizaría el [importidl](../windows/importidl.md) , compilar el archivo .idl en un archivo .h (consulte la [páginas de propiedades MIDL](../ide/midl-property-pages.md) en el proyecto **páginas de propiedades** cuadro de diálogo), y a continuación, incluir el archivo .h en el proyecto.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> ¿Modificar código insertado por un atributo?  
  Algunos atributos insertan código en el proyecto. Puede ver el código insertado mediante el [/Fx](../build/reference/fx-merge-injected-code.md) opción del compilador. También es posible copiar el código del archivo insertado y péguelo en el código fuente. Esto le permite modificar el comportamiento del atributo. Sin embargo, es posible que deba modificar otras partes del código también.  

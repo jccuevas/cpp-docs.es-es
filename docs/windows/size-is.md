@@ -1,5 +1,5 @@
 ---
-title: size_is | Documentos de Microsoft
+title: size_is | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f97bb82f3387e82be5bbf120db4fed9aaa092f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6b5309d62db094bf706fe7d3d1bcec99c3ec9a9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889678"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645456"
 ---
 # <a name="sizeis"></a>size_is
-Especifique el tamaño de memoria asignada para los punteros de tamaño, tamaño de punteros a punteros de tamaño y solo o matrices multidimensionales.  
+Especifique el tamaño de memoria asignada para los punteros de tamaño, tamaño punteros a punteros de tamaño y solo - o matrices multidimensionales.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ size_is(  
+[ size_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *Expresión*  
- El tamaño de la memoria asignada para los punteros de tamaño.  
+ El tamaño de memoria asignada para un tamaño punteros.  
   
 ## <a name="remarks"></a>Comentarios  
- El **size_is** atributo C++ tiene la misma funcionalidad que la [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) atributo MIDL.  
+ El **size_is** atributo de C++ tiene la misma funcionalidad que el [size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [first_is](../windows/first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.  
@@ -52,10 +51,10 @@ Especifique el tamaño de memoria asignada para los punteros de tamaño, tamaño
   
 |||  
 |-|-|  
-|**Se aplica a**|Campo de `struct` o **union**, la interfaz de parámetro, el método de interfaz|  
+|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|**max_is**|  
+|**Atributos no válidos**|`max_is`|  
   
  Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Probar un cuadro de diálogo | Documentos de Microsoft
+title: Probar un cuadro de diálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57bb9e827caae0e328971077d902673f2428c80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889551"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652075"
 ---
 # <a name="testing-a-dialog-box"></a>Probar un cuadro de diálogo
 Cuando se está diseñando un cuadro de diálogo, se puede simular y probar su comportamiento en tiempo de ejecución sin compilar el programa. En este modo, se puede:  
@@ -38,22 +38,20 @@ Cuando se está diseñando un cuadro de diálogo, se puede simular y probar su c
     > [!NOTE]
     >  Las conexiones con el código del cuadro de diálogo realizadas mediante asistentes no se incluyen en la simulación.  
   
- Cuando se prueba un cuadro de diálogo, normalmente se muestra en una ubicación relativa a la ventana principal del programa. Si la propiedad Absolute Align del cuadro de diálogo se establece en True, este se muestra en una posición relativa a la esquina superior izquierda de la pantalla.  
+ Cuando se prueba un cuadro de diálogo, normalmente se muestra en una ubicación relativa a la ventana principal del programa. Si ha configurado el cuadro de diálogo **Absolute Align** propiedad **True**, muestra el cuadro de diálogo en una posición relativa a la esquina superior izquierda de la pantalla.  
   
 ### <a name="to-test-a-dialog-box"></a>Para probar un cuadro de diálogo  
   
 1.  Cuando el Editor de cuadros de diálogo es la ventana activa, en la barra de menús, elija **Formato**, **Probar cuadro de diálogo**.  
   
-2.  Para finalizar la simulación, presione ESC o elija simplemente el botón **Cerrar** del cuadro de diálogo que está probando.  
+2.  Para finalizar la simulación, presione **Esc**, o elija simplemente el **cerrar** botón en el cuadro de diálogo que se está probando.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index).  
+ Para obtener información acerca de cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index).  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
  [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Editor de cuadro de diálogo](../windows/dialog-editor.md)   
  [Mostrar u ocultar la barra de herramientas del Editor de cuadros de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
-

@@ -18,20 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dc4dfc3268930c80caece85b06b9a1a25d58
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9e9f044a7aebdb96162edc0dcd4c33ed3c89e3b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461028"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644887"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Clases y structs (Extensiones de componentes de C++)
 Declara una clase o struct cuya *duración del objeto* se administra automáticamente. Cuando el objeto ya no es accesible o se sale del ámbito, Visual C++ descarta automáticamente la memoria asignada al objeto.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
- **Sintaxis**  
+### <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
       class_access  
       ref class  
       name  
@@ -42,7 +42,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
 ```  
   
- **Parámetros**  
+### <a name="parameters"></a>Parámetros  
   
  *class_access* (opcional)  
  La accesibilidad de la clase o struct fuera del ensamblado. Los valores posibles son **pública** y **privada** (**privada** es el valor predeterminado). Las clases anidadas o las estructuras no pueden tener un *class_access* especificador.  
@@ -54,14 +54,14 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  [abstracta](../windows/abstract-cpp-component-extensions.md) y [sealed](../windows/sealed-cpp-component-extensions.md) son modificadores válidos.  
   
  *inherit_access* (opcional)  
- Accesibilidad de `base_type`. La única accesibilidad permitida es **pública** (**pública** es el valor predeterminado).  
+ La accesibilidad de *base_type*. La única accesibilidad permitida es **pública** (**pública** es el valor predeterminado).  
   
  *base_type* (opcional)  
  Tipo base. Sin embargo, un tipo de valor no puede actuar como tipo base.  
   
  Para obtener más información, consulte las descripciones específicas del idioma de este parámetro en el tiempo de ejecución de Windows y Runtimesections de lenguaje común.  
   
- **Comentarios**  
+### <a name="remarks"></a>Comentarios  
   
  La accesibilidad del miembro predeterminado de un objeto declarado con **clase ref** o **clase de valor** es **privada**. Y la accesibilidad de miembro predeterminado de un objeto declarado con **ref struct** o **struct de valor** es **pública**.  
   
@@ -88,29 +88,27 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 -   [Clases genéricas (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
- **Comentarios**  
+### <a name="remarks"></a>Comentarios  
   
  Consulte [clases y structs Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx) y [clases y structs de valor](http://msdn.microsoft.com/library/windows/apps/hh699861.aspx).  
   
- **Parámetros**  
-  
+### <a name="parameters"></a>Parámetros  
  *base_type* (opcional)  
- Tipo base. Un **clase ref** o **ref struct** puede heredar de cero o más interfaces y cero o uno `ref` tipos. Un **clase de valor** o **struct de valor** sólo puede heredar de cero o más interfaces.  
+ Tipo base. Un **clase ref** o **ref struct** puede heredar de cero o más interfaces y cero o uno **ref** tipos. Un **clase de valor** o **struct de valor** sólo puede heredar de cero o más interfaces.  
   
  Cuando declara un objeto mediante el uso de la **clase ref** o **ref struct** palabras clave, se obtiene acceso al objeto mediante un identificador de objeto; es decir, un puntero de contador de referencias al objeto. Cuando la variable declarada se sale del ámbito, el compilador elimina automáticamente el objeto subyacente. Cuando el objeto se usa como parámetro en una llamada o se almacena en una variable, se pasa o se almacena realmente un identificador del objeto.  
   
  Cuando declara un objeto mediante el uso de la **clase de valor** o **struct de valor** palabras clave, la duración del objeto del objeto declarado no está supervisada. El objeto es como cualquier otra clase o struct estándar de C++.  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/ZW**  
+ Opción del compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Comentarios**  
+### <a name="remarks"></a>Comentarios  
   
  En la tabla siguiente enumera las diferencias con la sintaxis mostrada en el **todos los Runtimes** sección que son específicas de C / c++ / CLI.  
   
- **Parámetros**  
-  
+### <a name="parameters"></a>Parámetros  
  *base_type* (opcional)  
  Tipo base. Un **clase ref** o **ref struct** puede heredar de cero o más administrados, interfaces y cero o un tipo ref. Un **clase de valor** o **struct de valor** sólo puede heredar de cero o más interfaces administradas.  
   
@@ -119,7 +117,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  El **clase de valor** y **struct de valor** palabras clave indica al compilador que el valor de la clase o estructura asignada se pasa a funciones o almacenado en los miembros.  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/clr**  
+ Opción del compilador: `/clr`  
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

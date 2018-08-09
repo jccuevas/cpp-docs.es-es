@@ -1,5 +1,5 @@
 ---
-title: Ver símbolos de recursos | Documentos de Microsoft
+title: Ver símbolos de recursos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea57af6ef6ff91b7149006f63963cff55f6eebc4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9857ea9f12b74983b0af8933249450a61ed907c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891112"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649359"
 ---
 # <a name="viewing-resource-symbols"></a>Ver símbolos de recursos
 ### <a name="to-view-resource-symbols"></a>Para ver símbolos de recursos  
@@ -37,12 +37,9 @@ ms.locfileid: "33891112"
 2.  Seleccione **símbolos de recursos** en el menú contextual para ver una tabla de símbolos de recursos en el [cuadro de diálogo símbolos de recursos](../windows/resource-symbols-dialog-box.md).  
   
     > [!NOTE]
-    >  Para ver los símbolos predefinidos, consulte la **mostrar símbolos de sólo lectura** casilla de verificación.  
+    >  Para ver los símbolos predefinidos, consulte el **mostrar símbolos de solo lectura** casilla de verificación.  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  

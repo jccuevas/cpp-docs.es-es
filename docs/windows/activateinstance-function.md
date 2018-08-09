@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 93b1c8fa12e06984a2bffdd90419c481d8897b94
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461976"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646246"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance (función)
 Registra y recupera una instancia de un tipo especificado definido en un identificador de clase especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template<typename T>  
 inline HRESULT ActivateInstance(  
    _In_ HSTRING activatableClassId,  
@@ -38,7 +38,7 @@ inline HRESULT ActivateInstance(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *T*  
  Un tipo que se va a activar.  
   

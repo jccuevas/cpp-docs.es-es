@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: feece642928db70a2b78dd3a4117b695b19f4af9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0aed7c8ef617152144bbe211f83f442fe93d525e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466077"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648290"
 ---
 # <a name="accelerator-editor"></a>Editor de aceleradores
 Una tabla de aceleradores es un recurso de Windows que contiene una lista de teclas de aceleración (también conocidas como teclas de método abreviado) y los identificadores de comandos asociados con ellas. Un programa puede tener más de una tabla de aceleradores.  
@@ -36,7 +36,7 @@ Una tabla de aceleradores es un recurso de Windows que contiene una lista de tec
   
  Puede usar [vista de clases](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) para enlazar comandos de teclas de aceleración al código.  
   
- Con el editor de aceleradores, puede:  
+ Con el **acelerador** editor, puede:  
   
 -   [Establecer propiedades de acelerador](../windows/setting-accelerator-properties.md)  
   
@@ -47,12 +47,12 @@ Una tabla de aceleradores es un recurso de Windows que contiene una lista de tec
 -   [Usar teclas de aceleración predefinidas](../windows/predefined-accelerator-keys.md)  
   
     > [!TIP]
-    >  Al usar el Editor de aceleradores, puede hacer clic con el botón secundario para mostrar un menú contextual de los comandos usados con mayor frecuencia. Los comandos disponibles dependen del objeto al que apunta el puntero.  
+    >  Al usar el **acelerador** editor, hacer clic en para mostrar un menú contextual de comandos usados con frecuencia. Los comandos disponibles dependen del objeto al que apunta el puntero.  
   
     > [!NOTE]
     >  Windows no permite crear tablas de aceleradores vacías. Si crea una tabla de aceleradores sin entradas, se elimina automáticamente al guardar la tabla.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  

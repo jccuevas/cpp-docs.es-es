@@ -1,5 +1,5 @@
 ---
-title: vi_progid | Documentos de Microsoft
+title: vi_progid | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687a8a70d7f0a5381160a6515c80f6940cc0a434
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96843c9d977b15d7fe2c645c8f655cd59a42e401
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891290"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642053"
 ---
 # <a name="viprogid"></a>vi_progid
 Especifica una forma independiente de la versión de ProgID.  
@@ -30,8 +30,7 @@ Especifica una forma independiente de la versión de ProgID.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ vi_progid(  
+[ vi_progid(  
    name  
 ) ];  
 ```  
@@ -40,16 +39,16 @@ Especifica una forma independiente de la versión de ProgID.
  *name*  
  El ProgID independientes de la versión que representa el objeto.  
   
- ProgID presentan una versión legible del identificador de clase (CLSID) utilizado para identificar los objetos COM y ActiveX.  
+ ProgID presentan una versión legible del identificador de clase (CLSID) usado para identificar los objetos COM y ActiveX.  
   
 ## <a name="remarks"></a>Comentarios  
- El **vi_progid** atributo C++ permite especificar un ProgID independientes de la versión de un objeto COM. Un ProgID tiene la forma *name1.name2.version*. Un ProgID independientes de la versión no tiene un *versión*. Es posible especificar tanto el **progid** y **vi_progid** atributos en una coclase. Si no se especifica **vi_progid**, el ProgID independientes de la versión es el valor especificado por el [progid](../windows/progid.md) atributo.  
+ El **vi_progid** atributo de C++ le permite especificar un ProgID independientes de la versión de un objeto COM. Un ProgID tiene la forma *name1.name2.version*. Un ProgID independientes de la versión no tiene un *versión*. Es posible especificar ambos el `progid` y **vi_progid** atributos en un `coclass`. Si no especifica **vi_progid**, el ProgID independientes de la versión es el valor especificado por el [progid](../windows/progid.md) atributo.  
   
- **vi_progid** implica la **coclase** atributo, es decir, si especifica **vi_progid**, es lo mismo que especificar el **coclase** y **vi_progid** atributos.  
+ **vi_progid** implica la `coclass` atributo, es decir, si especifica **vi_progid**, es lo mismo que si se especifica la `coclass` y **vi_progid** atributos.  
   
- El **vi_progid** atributo da lugar a una clase que se registren automáticamente con el nombre especificado. El archivo .idl generado no mostrará el valor de Id. de programa.  
+ El **vi_progid** atributo hace que una clase que se registren automáticamente con el nombre especificado. El archivo .idl generado no mostrará el valor de Id. de programa.  
   
- En los proyectos ATL, si la [coclase](../windows/coclass.md) atributo también está presente, se utiliza el ProgID especificado por el **GetVersionIndependentProgID** función (insertados por el **coclase** atributo).  
+ En los proyectos ATL, si la [coclase](../windows/coclass.md) atributo también está presente, se utiliza el ProgID especificado por el `GetVersionIndependentProgID` función (insertada por el `coclass` atributo).  
   
 ## <a name="example"></a>Ejemplo  
  Consulte la [coclase](../windows/coclass.md) ejemplo para un ejemplo de uso de **vi_progid**.  
@@ -60,7 +59,7 @@ Especifica una forma independiente de la versión de ProgID.
   
 |||  
 |-|-|  
-|**Se aplica a**|**class**, `struct`|  
+|**Se aplica a**|**clase**, **struct**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  
@@ -71,4 +70,4 @@ Especifica una forma independiente de la versión de ProgID.
  [Atributos IDL](../windows/idl-attributes.md)   
  [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Atributos de clase](../windows/class-attributes.md)   
- [Clave progID](http://msdn.microsoft.com/library/windows/desktop/dd542719)   
+ [Clave de Id. de programa](http://msdn.microsoft.com/library/windows/desktop/dd542719)   

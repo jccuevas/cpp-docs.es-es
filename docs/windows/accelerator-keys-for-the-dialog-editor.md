@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d518756d3dad234ee98a3267088eb58b6122bcf9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 32f8a643b8a960c4d5055a94abfaea5e0a911ed7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466831"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646103"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Teclas de aceleración del Editor de cuadros de diálogo
 A continuación son el valor predeterminado de las teclas de aceleración para los comandos del editor de cuadro de diálogo. Para cambiar las teclas de método abreviado, haga clic en **opciones** en el **herramientas** menú, a continuación, elija **teclado** bajo el **entorno** carpeta. Para obtener más información, vea [Identificar y personalizar métodos abreviados de teclado](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  
@@ -32,25 +32,25 @@ A continuación son el valor predeterminado de las teclas de aceleración para l
   
 |Comando|Teclas|Descripción|  
 |-------------|----------|-----------------|  
-|Format.AlignBottoms|CTRL + MAYÚS + FLECHA ABAJO|Alinea el borde inferior de los controles seleccionados con el control dominante|  
-|Format.AlignCenters|MAYÚS + F9|Alinea los centros verticales de los controles seleccionados con el control dominante|  
-|Format.AlignLefts|CTRL + MAYÚS + FLECHA IZQUIERDA|Alinea el borde izquierdo de los controles seleccionados con el control dominante|  
-|Format.AlignMiddles|F9|Alinea los centros horizontales de los controles seleccionados con el control dominante|  
-|Format.AlignRights|CTRL + MAYÚS + FLECHA DERECHA|Alinea el borde derecho de los controles seleccionados con el control dominante|  
-|Format.AlignTops|CTRL + MAYÚS + FLECHA ARRIBA|Alinea el borde superior de los controles seleccionados con el control dominante|  
-|Format.ButtonBottom|CTRL + B|Coloca los botones seleccionados a lo largo de la parte inferior central del cuadro de diálogo|  
-|Format.ButtonRight|CTRL + R|Coloca los botones seleccionados en la esquina superior derecha del cuadro de diálogo|  
-|Format.CenterHorizontal|CTRL + MAYÚS + F9|Centra los controles horizontalmente en el cuadro de diálogo|  
-|Format.CenterVertical|CTRL + F9|Centra los controles verticalmente en el cuadro de diálogo|  
-|Format.CheckMnemonics|CTRL + M|Comprobaciones de unicidad de las teclas de acceso|  
-|Format.SizeToContent|MAYÚS + F7|Cambia el tamaño de los controles seleccionados para ajustar el texto del título|  
-|Format.SpaceAcross|ALT + FLECHA IZQUIERDA|Distribuye uniformemente los controles seleccionados horizontalmente|  
-|Format.SpaceDown|ALT + FLECHA ABAJO|Un espaciado uniforme a los controles seleccionados verticalmente|  
-|Format.TabOrder|CTRL + D|Establece el orden de los controles en el cuadro de diálogo|  
-|Format.TestDialog|CTRL + T|Se ejecuta el cuadro de diálogo para probar la apariencia y comportamiento|  
-|Format.ToggleGuides|CTRL + G|Ciclos entre ninguna cuadrícula, directrices y cuadrícula de cuadro de diálogo de edición|  
+|Format.AlignBottoms|**CTRL** + **MAYÚS** + **flecha abajo**|Alinea el borde inferior de los controles seleccionados con el control dominante|  
+|Format.AlignCenters|**MAYÚS** + **F9**|Alinea los centros verticales de los controles seleccionados con el control dominante|  
+|Format.AlignLefts|**CTRL** + **MAYÚS** + **flecha izquierda**|Alinea el borde izquierdo de los controles seleccionados con el control dominante|  
+|Format.AlignMiddles|**F9**|Alinea los centros horizontales de los controles seleccionados con el control dominante|  
+|Format.AlignRights|**CTRL** + **MAYÚS** + **flecha derecha**|Alinea el borde derecho de los controles seleccionados con el control dominante|  
+|Format.AlignTops|**CTRL** + **MAYÚS** + **flecha arriba**|Alinea el borde superior de los controles seleccionados con el control dominante|  
+|Format.ButtonBottom|**CTRL** + **B**|Coloca los botones seleccionados a lo largo de la parte inferior central del cuadro de diálogo|  
+|Format.ButtonRight|**CTRL** + **R**|Coloca los botones seleccionados en la esquina superior derecha del cuadro de diálogo|  
+|Format.CenterHorizontal|**CTRL** + **MAYÚS** + **F9**|Centra los controles horizontalmente en el cuadro de diálogo|  
+|Format.CenterVertical|**Ctrl** + **F9**|Centra los controles verticalmente en el cuadro de diálogo|  
+|Format.CheckMnemonics|**CTRL** + **M**|Comprobaciones de unicidad de las teclas de acceso|  
+|Format.SizeToContent|**MAYÚS** + **F7**|Cambia el tamaño de los controles seleccionados para ajustar el texto del título|  
+|Format.SpaceAcross|**Alt** + **Flecha izquierda**|Distribuye uniformemente los controles seleccionados horizontalmente|  
+|Format.SpaceDown|**ALT** + **flecha abajo**|Un espaciado uniforme a los controles seleccionados verticalmente|  
+|Format.TabOrder|**Ctrl** + **D**|Establece el orden de los controles en el cuadro de diálogo|  
+|Format.TestDialog|**Ctrl** + **T**|Se ejecuta el cuadro de diálogo para probar la apariencia y comportamiento|  
+|Format.ToggleGuides|**Ctrl** + **G**|Ciclos entre ninguna cuadrícula, directrices y cuadrícula de cuadro de diálogo de edición|  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  

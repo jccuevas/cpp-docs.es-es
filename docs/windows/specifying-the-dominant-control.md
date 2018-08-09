@@ -1,5 +1,5 @@
 ---
-title: Especificar el Control dominante | Documentos de Microsoft
+title: Especificar el Control dominante | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07bf73fdcd69866a811cd37af6ef59aef062c01c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c1988e05bbdf8f700688bb4b989cf5576cb86f4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889658"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642921"
 ---
 # <a name="specifying-the-dominant-control"></a>Especificar el control dominante
 En primer lugar, el control seleccionado es el control dominante.  
   
 ### <a name="to-specify-the-dominant-control"></a>Para especificar el control dominante  
   
-1.  Mantenga presionada la **CTRL** clave y haga clic en el control que desea usar para influir en el tamaño o la ubicación de otros controles *primera*.  
+1.  Mantenga presionada la **Ctrl** clave y haga clic en el control que desea usar para influir en el tamaño o la ubicación de otros controles *primera*.  
   
-     **Tenga en cuenta** los controladores de tamaño del control dominante serán sólidos, mientras que los identificadores de los controles subordinados serán huecos. Todos los aún más el cambio de tamaño o alineación se basa en el control dominante.  
+     **Tenga en cuenta** los controladores de tamaño del control dominante son sólidos, mientras que los de los controles subordinados serán huecos. Todos los aún más el cambio de tamaño o la alineación se basa en el control dominante.  
   
 ### <a name="to-change-the-dominant-control"></a>Para cambiar el control dominante  
   
-1.  Desactive la selección actual al hacer clic fuera de todos los controles seleccionados actualmente.  
+1.  Desactive la selección actual haciendo clic fuera de todos los controles seleccionados actualmente.  
   
-2.  Repita el procedimiento anterior, al seleccionar un control diferente en primer lugar.  
+2.  Repita el procedimiento anterior, seleccione primero un control diferente.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos 
  Win32  
   
 ## <a name="see-also"></a>Vea también  
  [Seleccionar varios controles](../windows/selecting-multiple-controls.md)   
  [Seleccionar controles](../windows/selecting-controls.md)   
  [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)
-

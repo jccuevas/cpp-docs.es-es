@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70031553e6a0585dc9f86df336ec2199cd7660ea
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 9e5c4965ab8a013fdd52e6dfa51e74bfbf54ed73
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571352"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651540"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper (estructura)
 Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template <  
    typename T  
 >  
@@ -41,14 +41,14 @@ template <
 struct DerefHelper<T*>;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *T*  
  Un parámetro de plantilla.  
   
 ## <a name="remarks"></a>Comentarios  
  Representa un puntero sin referencia a la `T*` parámetro de plantilla.  
   
- DerefHelper se utiliza en una expresión como: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
+ **DerefHelper** se utiliza en una expresión como: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
   
 ## <a name="members"></a>Miembros  
   

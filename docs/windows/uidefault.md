@@ -1,5 +1,5 @@
 ---
-title: UIDefault | Documentos de Microsoft
+title: UIDefault | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef4cfba786bd5c310a24727b59575b9eb45bd183
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890156"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651618"
 ---
 # <a name="uidefault"></a>uidefault
 Indica que el miembro de la información de tipo es el miembro predeterminado para su presentación en la interfaz de usuario.  
@@ -30,18 +30,16 @@ Indica que el miembro de la información de tipo es el miembro predeterminado pa
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [uidefault]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **uidefault** atributo C++ tiene la misma funcionalidad que la [uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) atributo MIDL.  
+ El **uidefault** atributo de C++ tiene la misma funcionalidad que el [uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente muestra un ejemplo de **uidefault**:  
   
-```  
+```cpp  
 // cpp_attr_ref_uidefault.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

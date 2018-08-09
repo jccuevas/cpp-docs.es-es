@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e2e7b2301ae4dd38a40bdf4583e963e55a8b12d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 858232702367aef62d0228f2e8653774896bd87f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461398"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647188"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback (función)
 Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(  
    HSTRING activationId,  
    IActivationFactory **ppFactory  
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *activationId*  
  Identificador de una cadena que especifica un nombre de clase en tiempo de ejecución.  
   

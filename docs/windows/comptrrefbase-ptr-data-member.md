@@ -1,5 +1,5 @@
 ---
-title: Miembro de datos Comptrrefbase | Documentos de Microsoft
+title: Miembro de datos Comptrrefbase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d45181e5db5fe16b6eada23ba8d6c72193fe3ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ff52245f518158c3ca5c44c6af88307d9a55ab4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883572"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644848"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_ (Miembro de datos)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 T* ptr_;  
 ```  
   
@@ -37,7 +37,7 @@ T* ptr_;
  Puntero al tipo especificado por el parámetro de plantilla actual.  
   
 ## <a name="remarks"></a>Comentarios  
- `ptr_` es el miembro de datos protegidos.  
+ **ptr_** es el miembro de datos protegidos.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  

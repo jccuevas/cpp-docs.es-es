@@ -1,5 +1,5 @@
 ---
-title: Listas de argumentos variables (...) (C++ / CLI) | Documentos de Microsoft
+title: Listas de argumentos variables (...) (C++ / C++ / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eec0e3591da2417137fda3bae4ed9e7860472fb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 054d91881d136564cdfb956f240789ca5a425ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889828"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642947"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listas de argumentos de variables (...) (C++/CLI)
-Este ejemplo muestra cómo se puede utilizar el `...` sintaxis de Visual C++ para implementar funciones que tienen un número variable de argumentos.  
+En este ejemplo se muestra cómo puede usar el `...` sintaxis de Visual C++ para implementar las funciones que tienen un número variable de argumentos.  
   
 > [!NOTE]
->  Este tema corresponde a C++ / CLI. Para obtener información sobre el uso de la `...` en ISO C++ estándar, consulte [puntos suspensivos y plantillas Variádicas](../cpp/ellipses-and-variadic-templates.md) y elipse y argumentos predeterminados en [expresiones de postfijo](../cpp/postfix-expressions.md).  
+>  En este tema pertenece a C++ / c++ / CLI. Para obtener información sobre el uso de la `...` en ISO Standard C++, vea [puntos suspensivos y plantillas Variádicas](../cpp/ellipses-and-variadic-templates.md) y elipses y argumentos predeterminados en [expresiones de postfijo](../cpp/postfix-expressions.md).  
   
- El parámetro que usa `...` debe ser el último parámetro en la lista de parámetros.  
+ El parámetro que utiliza `...` debe ser el último parámetro en la lista de parámetros.  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp  
 // mcppv2_paramarray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -61,9 +61,9 @@ int main() {
 ```  
   
 ## <a name="code-example"></a>Ejemplo de código  
- En el ejemplo siguiente se muestra cómo llamar a desde C#, una función de Visual C++ que toma un número variable de argumentos.  
+ El ejemplo siguiente muestra cómo llamar desde C#, una función de Visual C++ que toma un número variable de argumentos.  
   
-```  
+```cpp  
 // mcppv2_paramarray2.cpp  
 // compile with: /clr:safe /LD  
 using namespace System;  
@@ -74,11 +74,11 @@ public:
 };  
 ```  
   
- La función `f` pueden llamarse desde C# o Visual Basic, por ejemplo, como si fuese una función que puede tomar un número variable de argumentos.  
+ La función `f` se puede llamar desde C# o Visual Basic, por ejemplo, como si fuese una función que puede tomar un número variable de argumentos.  
   
- En C#, un argumento que se pasa a un `ParamArray` parámetro puede llamarse mediante un número variable de argumentos. El ejemplo de código siguiente es en C#.  
+ En C#, un argumento que se pasa a un `ParamArray` parámetro puede llamarse mediante un número variable de argumentos. Es el siguiente ejemplo de código en C#.  
   
-```  
+```cs  
 // mcppv2_paramarray3.cs  
 // compile with: /r:mcppv2_paramarray2.dll  
 // a C# program  
@@ -93,9 +93,9 @@ public class X {
 }  
 ```  
   
- Una llamada a `f` en Visual C++, puede pasar una matriz inicializada o una matriz de longitud variable.  
+ Una llamada a `f` en Visual C++ puede pasar una matriz inicializado o una matriz de longitud variable.  
   
-```  
+```cpp  
 // mcpp_paramarray4.cpp  
 // compile with: /clr  
 using namespace System;  

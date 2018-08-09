@@ -1,5 +1,5 @@
 ---
-title: TerminateMap (función) | Documentos de Microsoft
+title: TerminateMap (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4787fec0a6b4b9f55c500b66786372945d9a523
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d33cbd46903a37bf42e417a100d26c9b706058c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890354"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645943"
 ---
 # <a name="terminatemap-function"></a>TerminateMap (Función)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,18 +36,18 @@ inline bool TerminateMap(
     bool forceTerminate) throw()  
 ```  
   
-## <a name="parameters"></a>Parámetros  
- `module`  
- A [módulo](../windows/module-class.md).  
+### <a name="parameters"></a>Parámetros  
+ *módulo*  
+ Un [módulo](../windows/module-class.md).  
   
- `serverName`  
- El nombre de un subconjunto de los generadores de clases en el módulo especificado por el parámetro `module`.  
+ *Nombre de servidor*  
+ El nombre de un subconjunto de los generadores de clases en el módulo especificado por el parámetro *módulo*.  
   
- `forceTerminate`  
- `true` para finalizar la clase generadores independientemente de están activos; `false` no terminar los generadores de clases si cualquier generador está activo.  
+ *forceTerminate*  
+ **True** para terminar la clase generadores independientemente de están activos; **false** no terminar los generadores de clases si cualquier factory está activo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Si se han terminado todos los generadores de clases; en caso contrario, `false`.  
+ **True** si todos los generadores de clases se han finalizado; en caso contrario, **false**.  
   
 ## <a name="remarks"></a>Comentarios  
  Cierra los generadores de clases en el módulo especificado.  

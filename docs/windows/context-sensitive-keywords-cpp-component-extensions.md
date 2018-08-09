@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466129"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644234"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Palabras clave contextuales (Extensiones de componentes de C++)
 *Palabras clave contextuales* son elementos del lenguaje que solo se reconocen en contextos concretos. Fuera del contexto concreto, una palabra clave contextual puede ser un símbolo definido por el usuario.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
- **Comentarios**  
+### <a name="remarks"></a>Comentarios
   
  A continuación se muestra una lista de palabras clave contextuales:  
   
@@ -59,23 +59,22 @@ ms.locfileid: "39466129"
  Para fines de legibilidad, puede limitar el uso de palabras clave contextuales como símbolos definidos por el usuario.  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
- **Comentarios**  
+### <a name="remarks"></a>Comentarios  
   
  (No hay ninguna observación específica de la plataforma para esta característica).  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/ZW**  
+ Opción del compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Comentarios**  
+### <a name="remarks"></a>Comentarios  
   
  (No hay ninguna observación específica de la plataforma para esta característica).  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/clr**  
+ Opción del compilador: `/clr`  
   
 ### <a name="examples"></a>Ejemplos  
- **Ejemplo**  
   
  El ejemplo de código siguiente muestra en el contexto adecuado, el **propiedad** palabra clave contextual puede utilizarse para definir una propiedad y una variable.  
   
@@ -99,8 +98,6 @@ int main() {
    System::Console::WriteLine(++property);  
 }  
 ```  
-  
- **Salida**  
   
 ```Output  
 100  

@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4bddc5a453e1c3aac43fe58d105ccef863c67808
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466727"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652274"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel (Método)
 Obtiene el nivel de confianza del objeto que actual **ActivationFactory** crea una instancia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 STDMETHOD(  
    GetTrustLevel  
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *trustLvl*  
  Cuando se complete esta operación, el nivel de confianza de tiempo de ejecución de la clase que la **ActivationFactory** crea una instancia.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, se genera un error de aserción y *trustLvl* está establecida en plena confianza.  
+ S_OK si se realiza correctamente; en caso contrario, se genera un error de aserción y *trustLvl* está establecido en `FullTrust`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

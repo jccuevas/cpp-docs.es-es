@@ -1,5 +1,5 @@
 ---
-title: transmit_as | Documentos de Microsoft
+title: transmit_as | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c4d5fc3101e7eb0e09f33c95cb0f73dd0d2b3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1e1ecfb118fb391cf392b411a4664513972ed42
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890417"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642530"
 ---
 # <a name="transmitas"></a>transmit_as
-Indica al compilador para asociar un tipo presentado que manipulan las aplicaciones cliente y servidor, con un tipo de la información transmitido.  
+Indica al compilador para asociar un tipo presentado que manipulan las aplicaciones cliente y servidor, con un tipo transmitido.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ transmit_as(  
+[ transmit_as(  
    type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `type`  
- Especifica el tipo de datos que se transmite entre cliente y servidor.  
+### <a name="parameters"></a>Parámetros  
+ *type*  
+ Especifica el tipo de datos que se transmite entre el cliente y servidor.  
   
 ## <a name="remarks"></a>Comentarios  
- El **transmit_as** atributo C++ tiene la misma funcionalidad que la [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) atributo MIDL.  
+ El **transmit_as** atributo de C++ tiene la misma funcionalidad que el [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente muestra un uso de la **transmit_as** atributo:  
   
-```  
+```cpp  
 // cpp_attr_ref_transmit_as.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -80,7 +79,7 @@ struct _TREE_NODE_TYPE * right;
   
 |||  
 |-|-|  
-|**Se aplica a**|`typedef`|  
+|**Se aplica a**|**typedef**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

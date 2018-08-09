@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a36e3068bd5211f37e6fe1f0f2a82c923b4511a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463959"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650708"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== (Operador)
 Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
@@ -54,12 +54,12 @@ bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *a*  
- Una referencia a un objeto ComPtrRef.  
+ Una referencia a un **ComPtrRef** objeto.  
   
  *b*  
- Una referencia a otro objeto ComPtrRef o un puntero a un tipo anónimo (`void*`).  
+ Una referencia a otro **ComPtrRef** objeto o un puntero a un tipo anónimo (`void*`).  
   
 ## <a name="return-value"></a>Valor devuelto  
  El primer rendimientos de operador **true** si objeto *un* es igual al objeto *b*; en caso contrario, **false**.  
@@ -69,7 +69,7 @@ bool operator==(
  El cuarto y quinto operadores producen **true** si objeto *un* es igual al objeto *b*; en caso contrario, **false**.  
   
 ## <a name="remarks"></a>Comentarios  
- Indica si dos objetos ComPtrRef son iguales.  
+ Indica si dos **ComPtrRef** objetos son iguales.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  

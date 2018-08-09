@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463123"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647845"
 ---
 # <a name="coclass"></a>coclase
 Crea un objeto COM, que puede implementar una interfaz COM.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [coclass]  
 ```  
   
@@ -78,7 +78,7 @@ Crea un objeto COM, que puede implementar una interfaz COM.
   
 -   Un [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) macro se inserta en el mapa COM.
   
- El nombre de la coclase generado en el archivo IDL para la clase tendrán el mismo nombre que la clase.  Por ejemplo, que hace referencia al siguiente ejemplo, para obtener acceso al identificador de clase para una coclase CMyClass, en un cliente a través del archivo de encabezado generados por MIDL, utilice CLSID_CMyClass.  
+ El nombre de la coclase generado en el archivo IDL para la clase tendrán el mismo nombre que la clase.  Por ejemplo, que hace referencia al siguiente ejemplo, para obtener acceso al identificador de clase para una coclase `CMyClass`, en un cliente a través del archivo de encabezado generados por MIDL, utilice `CLSID_CMyClass`.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente muestra cómo usar el **coclase** atributo:  
@@ -99,7 +99,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- El ejemplo siguiente muestra cómo invalidar la implementación predeterminada de una función que aparece en el código insertado por el **coclase** atributo. Consulte [/Fx](../build/reference/fx-merge-injected-code.md) para obtener más información sobre cómo ver código insertado. Las interfaces que usó para una clase o clases base se aparecerá en el código insertado.   Además, si una clase se incluye de forma predeterminada en el código insertado y especificar explícitamente esa clase como base para la coclase, el proveedor de atributo usará el formulario especificado en el código.  
+ El ejemplo siguiente muestra cómo invalidar la implementación predeterminada de una función que aparece en el código insertado por el **coclase** atributo. Consulte [/Fx](../build/reference/fx-merge-injected-code.md) para obtener más información sobre cómo ver código insertado. Las interfaces que usó para una clase o clases base se aparecerá en el código insertado. Además, si una clase se incluye de forma predeterminada en el código insertado y especificar explícitamente esa clase como base para la coclase, el proveedor de atributo usará el formulario especificado en el código.  
   
 ```cpp  
 // cpp_attr_ref_coclass2.cpp  

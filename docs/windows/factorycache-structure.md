@@ -1,5 +1,5 @@
 ---
-title: FactoryCache (estructura) | Documentos de Microsoft
+title: FactoryCache (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04356316b67f3c341fe1dd1821750fcd3136aa40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a09128bd334fc6e0987e39eaf51c19aadce34ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874036"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647552"
 ---
 # <a name="factorycache-structure"></a>FactoryCache (estructura)
-Admite la infraestructura de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura de la biblioteca de plantillas C++ de Windows en tiempo de ejecución y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 struct FactoryCache;  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Contiene la ubicación de un generador de clases y un valor que identifica un registrados wrt u objeto de clase de COM.  
+ Contiene la ubicación de un generador de clases y un valor que identifica un registrados wrt o el objeto COM de la clase.  
   
 ## <a name="members"></a>Miembros  
   

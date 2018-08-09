@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: OnCancel (método) | Documentos de Microsoft'
+title: Método Asyncbase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7c5fabc84d6abb44a904c951c39eaf54a5c16b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b648718c715a43befbc5ead828c810dbfa92d120
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865828"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646879"
 ---
 # <a name="asyncbaseoncancel-method"></a>AsyncBase::OnCancel (Método)
 Cuando se invalida en una clase derivada, cancela una operación asincrónica.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 virtual void OnCancel(  
    void  
 ) = 0;  

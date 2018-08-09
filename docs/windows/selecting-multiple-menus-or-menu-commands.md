@@ -1,5 +1,5 @@
 ---
-title: Seleccionar varios menús o comandos de menú | Documentos de Microsoft
+title: Seleccionar varios menús o comandos de menú | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e261227c5c34d203cdeda20a8d1409319f63be97
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53225576941afff3a94c3dd276feb980e2bd6562
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891914"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644861"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Seleccionar varios menús o comandos de menú
 Puede seleccionar varios nombres o comandos de menús para realizar operaciones masivas, como eliminar o cambiar propiedades.  
   
 ### <a name="to-select-multiple-menu-commands"></a>Para seleccionar varios comandos de menú  
   
-1.  Mientras mantiene presionada la tecla CTRL, haga clic en los menús o comandos de submenú que desee.  
+1.  Mientras mantiene presionada la **Ctrl** clave, haga clic en los menús o comandos de submenú que desee.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.*  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.  
   
- **Requisitos**  
+## <a name="requirements"></a>Requisitos  
   
  Win32  
   

@@ -1,5 +1,5 @@
 ---
-title: Conectar un menú emergente a una aplicación | Documentos de Microsoft
+title: Conectar un menú emergente a una aplicación | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 533fc4eea9299d51183a91febb371ff8142e0a7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bfe5c4dba3dc8e86eb9a47a6e163af94872b933
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879534"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641267"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-application"></a>Conectar un menú emergente a una aplicación
 ### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Para conectar un menú emergente a una aplicación  
@@ -32,7 +32,7 @@ ms.locfileid: "33879534"
   
 2.  Agregue el código siguiente al controlador de mensajes:  
   
-    ```  
+    ```cpp  
     CMenu menu;  
     VERIFY(menu.LoadMenu(IDR_MENU1));  
     CMenu* pPopup = menu.GetSubMenu(0);  
@@ -41,12 +41,9 @@ ms.locfileid: "33879534"
     ```  
   
     > [!NOTE]
-    >  El [CPoint](../atl-mfc-shared/reference/cpoint-class.md) **pasa el mensaje se encuentra en coordenadas de pantalla.**  
+    >  El [CPoint](../atl-mfc-shared/reference/cpoint-class.md) pasa por el mensaje de controlador está en coordenadas de pantalla.  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  MFC  
   
 ## <a name="see-also"></a>Vea también  

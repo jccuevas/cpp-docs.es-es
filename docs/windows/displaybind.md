@@ -1,5 +1,5 @@
 ---
-title: displaybind | Documentos de Microsoft
+title: displaybind | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fcb46d4eeb4cede778aefc4210a022b08a22ca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879892"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641745"
 ---
 # <a name="displaybind"></a>displaybind
-Indica una propiedad que se debe mostrar al usuario como enlazable.  
+Indica una propiedad que debe mostrarse al usuario como enlazable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```cpp  
 [displaybind]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **displaybind** atributo C++ tiene la misma funcionalidad que la [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) atributo MIDL.  
+ El **displaybind** atributo de C++ tiene la misma funcionalidad que el [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [enlazables](../windows/bindable.md) para obtener un ejemplo de cómo usar **displaybind**.  
+ Vea el ejemplo de [enlazable](../windows/bindable.md) para obtener un ejemplo de cómo usar **displaybind**.  
   
 ## <a name="requirements"></a>Requisitos  
   

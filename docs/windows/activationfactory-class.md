@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 43e4932f93c4b9954343df2aecd4db3b13ebc147
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461510"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649210"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory (clase)
 Habilita una o más clases que activa Windows Runtime.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -38,7 +38,7 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *I0*  
  La interfaz de cero.  
   
@@ -74,7 +74,7 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 |[ActivationFactory::AddRef (método)](../windows/activationfactory-addref-method.md)|Incrementa el recuento de referencias del elemento actual **ActivationFactory** objeto.|  
 |[ActivationFactory::GetIids (método)](../windows/activationfactory-getiids-method.md)|Recupera una matriz de identificadores de interfaz implementada.|  
 |[ActivationFactory::GetRuntimeClassName (método)](../windows/activationfactory-getruntimeclassname-method.md)|Obtiene el nombre de clase en tiempo de ejecución del objeto que actual **ActivationFactory** crea una instancia.|  
-|[ActivationFactory::GetTrustLevel (método)](../windows/activationfactory-gettrustlevel-method.md)|Obtiene el nivel de confianza del objeto que se crea una instancia de la ActivationFactory actual.|  
+|[ActivationFactory::GetTrustLevel (método)](../windows/activationfactory-gettrustlevel-method.md)|Obtiene el nivel de confianza del objeto que actual **ActivationFactory** crea una instancia.|  
 |[ActivationFactory::QueryInterface (método)](../windows/activationfactory-queryinterface-method.md)|Recupera un puntero a la interfaz especificada.|  
 |[ActivationFactory::Release (método)](../windows/activationfactory-release-method.md)|Disminuye el recuento de referencias del elemento actual **ActivationFactory** objeto.|  
   

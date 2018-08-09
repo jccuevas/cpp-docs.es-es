@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 18308cc66e2a01aa5e0396f098096ee9d49416bf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569219"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644335"
 ---
 # <a name="dispinterface"></a>dispinterface
 Coloca una interfaz en el archivo .idl como interfaz de envío.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [dispinterface]  
 ```  
   
@@ -40,7 +40,7 @@ Coloca una interfaz en el archivo .idl como interfaz de envío.
   
  El ejemplo de uso de [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) en la documentación de MIDL:  
   
-```  
+```cpp  
 dispinterface helloPro   
    { interface hello; };   
 ```  
@@ -59,7 +59,7 @@ dispinterface helloPro
 |**Se aplica a**|**interface**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|**dual**, **object**, **oleautomation**, `local`, **ms_union**|  
+|**Atributos no válidos**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   
