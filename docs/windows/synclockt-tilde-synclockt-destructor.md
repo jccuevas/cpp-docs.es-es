@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87f32ce0583154deb2e3e5cd0afc77ce8728695d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 85ff68b4a3739c9a258e8664f261c61bb47971db
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646723"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018525"
 ---
 # <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT (Destructor)
 Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 ~SyncLockT();  
 ```  
   

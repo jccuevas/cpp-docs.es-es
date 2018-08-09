@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 28374482abd5d2e039c92adbd34f261bdc259b9d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571348"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018921"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Cómo: Incluir recursos en tiempo de compilación
 Normalmente, es fácil y cómodo trabajar con la organización predeterminada de todos los recursos en un archivo de script de recursos (.rc). Sin embargo, puede agregar recursos de otros archivos al proyecto actual en tiempo de compilación enumerándolos en el **Rectivas de tiempo** cuadro el [incluye recursos de cuadro de diálogo](../windows/resource-includes-dialog-box.md).  
@@ -37,7 +37,7 @@ Normalmente, es fácil y cómodo trabajar con la organización predeterminada de
   
 -   Para agregar comentarios a instrucciones de recursos que no se eliminen al guardar el archivo .rc.  
   
-     Los editores de recursos no leen directamente los archivos .rc o resource.h. El compilador de recursos los compila en archivos .aps, que son los que usan los editores de recursos. Este archivo es un paso de compilación y solamente almacena datos simbólicos. Como en un proceso de compilación normal, la información que no es simbólica (por ejemplo, los comentarios) se descarta durante el proceso de compilación. Siempre que el archivo .aps se desincroniza con el archivo .rc, este se vuelve a generar (por ejemplo, al guardar, el editor de recursos sobrescribe los archivos .rc y resource.h). Los cambios realizados en los propios recursos permanecerán en el archivo .rc, pero siempre se perderán los comentarios cuando se sobrescriba el archivo .rc.  
+     Los editores de recursos no leen directamente .rc o `resource.h` archivos. El compilador de recursos los compila en archivos .aps, que son los que usan los editores de recursos. Este archivo es un paso de compilación y solamente almacena datos simbólicos. Como en un proceso de compilación normal, la información que no es simbólica (por ejemplo, los comentarios) se descarta durante el proceso de compilación. Cada vez que el archivo .aps obtiene fuera de sincronización con el archivo .rc, se vuelve a generar el archivo .rc (por ejemplo, cuando se guarda, el editor de recursos sobrescribe el archivo .rc y `resource.h` archivo). Los cambios realizados en los propios recursos permanecerán en el archivo .rc, pero siempre se perderán los comentarios cuando se sobrescriba el archivo .rc.  
   
 -   Para incluir recursos que ya se desarrollaron y se probaron y que no necesitan más modificaciones. (Los editores de recursos no podrán editar los archivos que se incluyan sin una extensión .rc).  
   
@@ -58,7 +58,6 @@ Normalmente, es fácil y cómodo trabajar con la organización predeterminada de
      Los recursos de los archivos incluidos de esta manera pasan a formar parte del archivo ejecutable en tiempo de compilación. No están directamente disponibles para la edición o la modificación cuando se trabaja en el archivo .rc principal del proyecto. Deberá abrir por separado los archivos .rc incluidos. Los editores de recursos no podrán editar los archivos que se incluyan sin una extensión .rc.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Vea también  

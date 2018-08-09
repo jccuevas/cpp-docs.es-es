@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d777dd15e484ae296139bbe2bdc9b0cddcab2d59
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7f76695cfe3dcad0f5c835577aa4cc9b7cd3ec62
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606337"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017648"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass (Clase)
 Representa una clase WinRT o COM que hereda las interfaces especificadas y proporciona el especificado en tiempo de ejecución de Windows, COM clásico y el soporte técnico de la referencia débil.  
@@ -31,7 +31,7 @@ Esta clase proporciona la implementación de código reutilizable de clases COM 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```
+```cpp
 template <typename ...TInterfaces> class RuntimeClass
 template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ```

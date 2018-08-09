@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e975ab71e4556c236ecd2e92f2d11a949a68ba5a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: eb15dbd56656c72bc0f96491d24fc43fb96de84c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608057"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017817"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Mover o copiar una entrada de una tabla de aceleradores a otro archivo de script de recursos
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Para mover o copiar una entrada de una tabla de aceleradores a otro archivo de script de recursos  
@@ -45,7 +45,6 @@ ms.locfileid: "39608057"
     >  También puede usar las teclas de método abreviado para copiar y pegar.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Vea también  

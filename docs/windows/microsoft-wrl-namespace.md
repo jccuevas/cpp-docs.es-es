@@ -1,5 +1,5 @@
 ---
-title: 'Microsoft:: wrl Namespace | Documentos de Microsoft'
+title: 'Microsoft:: wrl Namespace | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,19 +24,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3b1f5d0472fbe9ceb997460b525153a9ad87a69
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881655"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020257"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL (Espacio de nombres)
-Define los tipos fundamentales que componen la biblioteca de plantillas de C++ de Windows en tiempo de ejecución.  
+Define los tipos fundamentales que componen la biblioteca de plantillas C++ de Windows en tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 namespace Microsoft::WRL;  
 ```  
   
@@ -70,8 +70,8 @@ namespace Microsoft::WRL;
 |Name|Descripción|  
 |----------|-----------------|  
 |[ChainInterfaces (estructura)](../windows/chaininterfaces-structure.md)|Especifica las funciones de comprobación e inicialización que se pueden aplicar a un conjunto de identificadores de interfaz.|  
-|[CloakedIid (estructura)](../windows/cloakediid-structure.md)|Indica a las plantillas RuntimeClass, Implements y ChainInterfaces que la interfaz especificada no es accesible en la lista IID.|  
-|[Implements (estructura)](../windows/implements-structure.md)|Implementa QueryInterface y GetIid para las interfaces especificadas.|  
+|[CloakedIid (estructura)](../windows/cloakediid-structure.md)|Indica a la `RuntimeClass`, `Implements` y `ChainInterfaces` plantillas que la interfaz especificada no es accesible en la lista IID.|  
+|[Implements (estructura)](../windows/implements-structure.md)|Implementa `QueryInterface` y `GetIid` para las interfaces especificadas.|  
 |[MixIn (estructura)](../windows/mixin-structure.md)|Garantiza que una clase Runtime deriva de interfaces de Windows Runtime, si las hubiera, y luego de interfaces de COM clásico.|  
 |[RuntimeClassFlags (estructura)](../windows/runtimeclassflags-structure.md)|Contiene el tipo de una instancia de un [RuntimeClass](../windows/runtimeclass-class.md).|  
   
@@ -79,7 +79,7 @@ namespace Microsoft::WRL;
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[AsyncResultType (enumeración)](../windows/asyncresulttype-enumeration.md)|Especifica el tipo de resultado devuelto por el método GetResults().|  
+|[AsyncResultType (enumeración)](../windows/asyncresulttype-enumeration.md)|Especifica el tipo de resultado devuelto por la `GetResults()` método.|  
 |[ModuleType (enumeración)](../windows/moduletype-enumeration.md)|Especifica si un módulo debe admitir un servidor en proceso o un servidor fuera de proceso.|  
 |[RuntimeClassType (enumeración)](../windows/runtimeclasstype-enumeration.md)|Especifica el tipo de [RuntimeClass](../windows/runtimeclass-class.md) instancia que se admite.|  
   

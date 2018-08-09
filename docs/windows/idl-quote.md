@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cbb36012d9a249669e3029c79dcf9c35bcdfc7a4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606519"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011583"
 ---
 # <a name="idlquote"></a>idl_quote
 Le permite usar construcciones IDL que no se admiten en la versión actual de Visual C++ y pídales que pasen al archivo .idl generado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [ idl_quote(  
    text  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *texto*  
  El nombre del atributo que desea que el compilador de Visual C++ que pasan a través del archivo .idl generado sin devolver un error del compilador.  
   
@@ -78,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- Este código provoca MYFLOT y MYDUB y *texto* entrada que se colocarán en el archivo .idl generado. El *nombre* parámetro fuerza *texto* colocarse antes de todo lo que hace referencia a *nombre* en el archivo .idl generado. El *dependencias* parámetro fuerza se coloca delante de las definiciones de lista dependencia *texto* en el archivo .idl generado.  
+ Este código provoca `MYFLOT` y `MYDUB` y *texto* entrada que se colocarán en el archivo .idl generado. El *nombre* parámetro fuerza *texto* colocarse antes de todo lo que hace referencia a *nombre* en el archivo .idl generado. El *dependencias* parámetro fuerza se coloca delante de las definiciones de lista dependencia *texto* en el archivo .idl generado.  
   
 ## <a name="requirements"></a>Requisitos  
   

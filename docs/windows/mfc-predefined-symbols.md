@@ -1,5 +1,5 @@
 ---
-title: Símbolos predefinidos de MFC | Documentos de Microsoft
+title: Símbolos predefinidos de MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882065"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018499"
 ---
 # <a name="mfc-predefined-symbols"></a>Símbolos predefinidos de MFC
-Proyectos de MFC siempre incluyen varios archivos de encabezado que admiten windows. Se agregan a través de #include en el archivo StdAfx.h:  
+Proyectos MFC siempre incluyen varios archivos de encabezado que es compatible con windows. Se agregan a través de `#include` instrucciones en el `StdAfx.h` archivo:  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  
@@ -34,7 +34,7 @@ Proyectos de MFC siempre incluyen varios archivos de encabezado que admiten wind
 #include <afxcmn.h>      //MFC support for Windows common controls.  
 ```  
   
- Los archivos de encabezado incluyen valores de Id. de símbolo para valores comunes de MFC. Estos símbolos sólo están disponibles cuando se trabaja en un proyecto MFC. Tenga en cuenta que el prefijo AFX va seguido de los prefijos de nombre de símbolo estándar.  
+ Los archivos de encabezado incluyen los valores de Id. de símbolos para los valores comunes de MFC. Estos símbolos solo están disponibles cuando se trabaja en un proyecto MFC. Tenga en cuenta que el prefijo AFX va seguido de los prefijos de nombre de símbolo estándar.  
   
 |||  
 |-|-|  
@@ -187,7 +187,7 @@ Proyectos de MFC siempre incluyen varios archivos de encabezado que admiten wind
 |AFX_IDS_LINKSOURCE_FORMAT|AFX_IDS_MANUAL|  
 |AFX_IDS_MDICHILD|AFX_IDS_MEMORY_EXCEPTION|  
 |AFX_IDS_METAFILE_FORMAT|FUENTE DE AFX_IDS_MINI|  
-|AFX_IDS_NOT_DOCOBJECT|AFX_IDS_NOT_SUPPORTED_ (EXCEPCIÓN)|  
+|AFX_IDS_NOT_DOCOBJECT|EXCEPCIÓN AFX_IDS_NOT_SUPPORTED_|  
 |AFX_IDS_OBJ_TITLE_INPLACE|AFX_IDS_OBJECT_MENUITEM|  
 |AFX_IDS_OCC_SCALEUNITS_PIXELS|AFX_IDS_ONEPAGE|  
 |AFX_IDS_OPENFILE|AFX_IDS_PASTELINKEDTYPE|  

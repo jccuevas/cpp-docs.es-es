@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605960"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014512"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>Abrir un recurso para editarlo en modo binario
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Para abrir un recurso de escritorio de Windows para editarlo en modo binario  
@@ -36,7 +36,7 @@ ms.locfileid: "39605960"
 2.  Haga clic con el botón secundario en el recurso y haga clic en **Abrir datos binarios** en el menú contextual.  
   
     > [!NOTE]
-    >  Si usa la ventana [Vista de recursos](../windows/resource-view-window.md) para abrir un recurso con un formato que Visual Studio no reconozca (como RCDATA o un recurso personalizado), el recurso se abrirá automáticamente en el editor binario.  
+    >  Si usas el [vista de recursos](../windows/resource-view-window.md) ventana para abrir un recurso con un formato que Visual Studio no reconozca (como RCDATA o un recurso personalizado), el recurso se abrirá automáticamente en el **binario** editor.  
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Para abrir un recurso para editarlo para la edición binaria  
   
@@ -58,10 +58,9 @@ Datos binarios de un cuadro de diálogo que aparece en el editor binario
  Solo determinados valores ASCII se representan en el editor binario (de 0x20 a 0x7E). Los caracteres extendidos se muestran como puntos en la sección de valor ASCII del editor binario (el panel derecho). Los caracteres "imprimibles" son valores ASCII de 32 a 126.  
   
 > [!NOTE]
->  Si quiere usar el editor binario en un recurso que ya se está editando en otra ventana del editor, cierre primero la otra ventana del editor.  
+>  Si desea usar el **binario** editor en un recurso ya se está editando en otra ventana del editor, cierre la ventana del editor en primer lugar.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Ninguna  
   
 ## <a name="see-also"></a>Vea también  

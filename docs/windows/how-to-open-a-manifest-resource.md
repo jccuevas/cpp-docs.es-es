@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: aa8777689581a3ba014d2fa777f6695ca3220db1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569952"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014356"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Cómo: Abrir un recurso del manifiesto
-Si abre un recurso de manifiesto desde [Vista de recursos](../windows/resource-view-window.md), el recurso se abrirá en formato binario. Para ver el contenido de un recurso de manifiesto en un formato más inteligible, debe abrir el recurso desde el Explorador de soluciones.  
+Si abre un recurso de manifiesto desde [Vista de recursos](../windows/resource-view-window.md), el recurso se abrirá en formato binario. Para ver el contenido de un recurso del manifiesto en un formato más inteligible, debe abrir el recurso de **el Explorador de soluciones**.  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>Para abrir un recurso del manifiesto en el Editor de texto  
   
@@ -32,7 +32,7 @@ Si abre un recurso de manifiesto desde [Vista de recursos](../windows/resource-v
   
 2.  Haga doble clic en el archivo .manifest.  
   
-     El recurso del manifiesto se abre en el Editor de texto.  
+     El recurso del manifiesto se abre en el **Editor de texto**.  
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>Para abrir un recurso del manifiesto en otro editor  
   
@@ -43,7 +43,6 @@ Si abre un recurso de manifiesto desde [Vista de recursos](../windows/resource-v
  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: Restricciones de los nombres de símbolos | Documentos de Microsoft
+title: Restricciones de los nombres de símbolos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30852b22c9ff4cc74c8f0c57b3a5ed9d79a34838
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892340"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011453"
 ---
 # <a name="symbol-name-restrictions"></a>Restricciones de los nombres de símbolo
 Las restricciones en los nombres de símbolos son las siguientes:  
@@ -53,12 +53,10 @@ Las restricciones en los nombres de símbolos son las siguientes:
 |Cadenas|IDS_|Cadena en la tabla de cadenas|  
 |MFC|AFX_|Reservado para símbolos de MFC predefinidos|  
   
-
-  
 ## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
- [Cambiar un símbolo o el nombre de símbolo (Id.)](../windows/changing-a-symbol-or-symbol-name-id.md)   
- [Restricciones de valores de símbolos](../windows/symbol-value-restrictions.md)   
+ [Cambiar un símbolo o el nombre del símbolo (Id.)](../windows/changing-a-symbol-or-symbol-name-id.md)   
+ [Restricciones de valor de símbolo](../windows/symbol-value-restrictions.md)   
  [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e9dc6b75cfa408ececeb533fcd75dbad0f124fda
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605553"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018834"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Seleccionar el color de primer plano y el color de fondo (Editor de imágenes para iconos)
 Excepto para el **borrador**, las herramientas en el **Editor de imágenes** draw de la barra de herramientas con el color actual de primer plano o en segundo plano cuando se presiona el botón izquierdo o derecho del mouse, respectivamente.  
@@ -39,7 +39,6 @@ Excepto para el **borrador**, las herramientas en el **Editor de imágenes** dra
  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Ninguna  
   
 ## <a name="see-also"></a>Vea también  

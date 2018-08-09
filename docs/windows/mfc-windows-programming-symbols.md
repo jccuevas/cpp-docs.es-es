@@ -1,5 +1,5 @@
 ---
-title: Símbolos de la programación de MFC Windows | Documentos de Microsoft
+title: Símbolos de programación de Windows MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f91622e4d795b7c85cdf6f304ed6a76dd5a9364
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882698"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012786"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Símbolos de la programación para Windows de MFC
-Estos símbolos también forman parte de los archivos de compatibilidad con MFC, pero admiten acciones y funciones de aplicación de Windows estándares. Estos símbolos se utilizan principalmente con menús. Cuando se trabaja con menús en el Editor de menús, estos símbolos aparecen en la ventana Propiedades asociada a los comandos de menú comunes. Por ejemplo, si la aplicación tiene un menú archivo con un comando Exit, ese comando se asocia al símbolo ID_APP_EXIT en la [ventana propiedades](/visualstudio/ide/reference/properties-window).  
+Estos símbolos también forman parte de los archivos de compatibilidad MFC, pero admiten acciones y funciones de aplicación de Windows estándares. Estos símbolos se utilizan principalmente con los menús. Cuando se trabaja con menús en la **Editor de menús**, estos símbolos aparecen en la **ventana propiedad** asociados a comandos de menú comunes. Por ejemplo, si la aplicación tiene un **archivo** menú con un **Exit** comando, que se asociará con el símbolo ID_APP_EXIT comandos en el [ventana propiedades](/visualstudio/ide/reference/properties-window).  
   
 ||||  
 |-|-|-|  
@@ -47,7 +47,7 @@ Estos símbolos también forman parte de los archivos de compatibilidad con MFC,
 |ID_FILE_SAVE|ID_FILE_SAVE_AS|ID_FILE_SAVE_COPY_AS|  
 |ID_FILE_SEND_MAIL|ID_FILE_UPDATE|ID_FORMAT_FONT|  
 |ID_HELP|ID_HELP_FINDER|ID_HELP_INDEX|  
-|ID_HELP + UTILIZANDO|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|  
+|ID_HELP + USO|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|  
 |ID_INDICATOR_KANA|ID_INDICATOR_NUM|ID_INDICATOR_OVR|  
 |ID_INDICATOR_REC|ID_INDICATOR_SCRL|ID_NEXT_PANE|  
 |ID_OLE_EDIT_CHANGE_ICON|ID_OLE_EDIT_CONVERT|ID_OLE_EDIT_LINKS|  
@@ -61,7 +61,7 @@ Estos símbolos también forman parte de los archivos de compatibilidad con MFC,
 |ID_WINDOW_NEW|ID_WINDOW_SPLIT|ID_WINDOW_TILE_HORIZ|  
 |ID_WINDOW_TILE_VERT|ID_WIZBACK|ID_WIZFINISH|  
 |ID_WIZNEXT|IDABORT|IDC_STATIC|  
-|IDCANCEL|IDD_ABOUTBOX TIENEN|IDIGNORE|  
+|IDCANCEL|IDD_ABOUTBOX|IDIGNORE|  
 |IDNO|IDOK|IDP_OLE_INIT_FAILED|  
 |IDRETRY|IDYES||  
   

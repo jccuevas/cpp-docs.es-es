@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9effc65b150c68a5191712b364c80ad42dd276ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604231"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012133"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details (Espacio de nombres)
 Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Details;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|  
 |[ArgTraits (estructura)](../windows/argtraits-structure.md)|Interfaz y una función miembro anónimo que tiene un número especificado de parámetros se declara a un delegado especificado.|  
 |[ArgTraitsHelper (estructura)](../windows/argtraitshelper-structure.md)|Ayuda a define las características comunes de los argumentos de delegado.|  
-|[BoolStruct (estructura)](../windows/boolstruct-structure.md)|Define si una ComPtr administra la duración del objeto de una interfaz. BoolStruct se usa internamente el [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operador.|  
+|[BoolStruct (estructura)](../windows/boolstruct-structure.md)|Define si un `ComPtr` administra la duración del objeto de una interfaz. `BoolStruct` se usa internamente el [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operador.|  
 |[CreatorMap (estructura)](../windows/creatormap-structure.md)|Contiene información acerca de cómo inicializar, registrar y anular el registro de objetos.|  
 |[DerefHelper (estructura)](../windows/derefhelper-structure.md)|Representa un puntero sin referencia a la `T*` parámetro de plantilla.|  
 |[EnableIf (estructura)](../windows/enableif-structure.md)|Define un miembro de datos del tipo especificado por el segundo parámetro de plantilla si se evalúa como el primer parámetro de plantilla **true**.|  

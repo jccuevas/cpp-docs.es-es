@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 66d97de05956df985f4c0d699682210721b60c82
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651836"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011847"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Operador de referencia de seguimiento (Extensiones de componentes de C++)
 Un *referencia de seguimiento* (`%`) se comporta como una referencia de C++ normal (`&`), salvo que cuando un objeto se asigna a una referencia de seguimiento, se incrementa el recuento de referencias del objeto.  
@@ -46,7 +46,7 @@ Un *referencia de seguimiento* (`%`) se comporta como una referencia de C++ norm
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
  Una referencia de seguimiento se comporta como una referencia de C++ estándar, salvo que un % se cuenta como referencia. El siguiente fragmento de código muestra cómo convertir entre tipos % y ^:  
   
-```  
+```cpp  
 Foo^ spFoo = ref new Foo();  
 Foo% srFoo = *spFoo;  
 Foo^ spFoo2 = %srFoo;  
@@ -54,7 +54,7 @@ Foo^ spFoo2 = %srFoo;
   
  En el siguiente ejemplo se muestra cómo pasar un ^ a una función que toma un %.  
   
-```  
+```cpp  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -139,8 +139,6 @@ int main() {
    Console::WriteLine(a[0]);  
 }  
 ```  
-  
- **Salida**  
   
 ```Output  
 21  

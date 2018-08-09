@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3e7354dc422027207bc1dab357487ffcce48a4ca
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604361"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018599"
 ---
 # <a name="module-c"></a>module (C++)
 Define el bloque de biblioteca en el archivo .idl.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [ module (  
    type=dll,  
    name=string,  
@@ -50,8 +50,8 @@ Define el bloque de biblioteca en el archivo .idl.
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *tipo* (opcional)  
- Puede ser uno de los siguientes:  
+*tipo* (opcional)  
+Puede ser uno de los siguientes:  
   
 -   `dll` Agrega funciones y clases que permiten la DLL resultante funcione como servidor COM en proceso. Este es el valor predeterminado.  
   
@@ -61,51 +61,51 @@ Define el bloque de biblioteca en el archivo .idl.
   
 -   `unspecified` Deshabilita la inserción de código ATL relacionado con el atributo de módulo: la inserción de la clase de módulo de ATL, la instancia global _AtlModule y entrada de funciones de punto. No deshabilita la inserción de código ATL como consecuencia de otros atributos del proyecto.  
   
- *name* (opcional)  
- Nombre del bloque de biblioteca.  
+*name* (opcional)  
+Nombre del bloque de biblioteca.  
   
- *versión* (opcional)  
- Número de versión que quiere asignar al bloque de biblioteca. El valor predeterminado es 1,0.  
+*versión* (opcional)  
+Número de versión que quiere asignar al bloque de biblioteca. El valor predeterminado es 1,0.  
   
- *uuid*  
- Identificador único para la biblioteca. Si omite este parámetro, se generará automáticamente un identificador para la biblioteca. Es posible que deba recuperar el *uuid* del bloque de biblioteca, lo que puede hacer con el identificador **__uuidof (***nombrebiblioteca***)**.  
+*uuid*  
+Identificador único para la biblioteca. Si omite este parámetro, se generará automáticamente un identificador para la biblioteca. Es posible que deba recuperar el *uuid* del bloque de biblioteca, lo que puede hacer con el identificador **__uuidof (***nombrebiblioteca***)**.  
   
- *lcid*  
- Parámetro de localización. Consulte [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) para obtener más información.  
+*lcid*  
+Parámetro de localización. Consulte [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) para obtener más información.  
   
- *control* (opcional)  
- Especifica que todas las coclases de la biblioteca son controles.  
+*control* (opcional)  
+Especifica que todas las coclases de la biblioteca son controles.  
   
- *helpstring*  
- Especifica la biblioteca de tipos.  
+*helpstring*  
+Especifica la biblioteca de tipos.  
   
- *helpstringdll* (opcional)  
- Establece el nombre del archivo .dll que se va a usar para realizar una búsqueda de cadenas del documento. Consulte [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) para obtener más información.  
+*helpstringdll* (opcional)  
+Establece el nombre del archivo .dll que se va a usar para realizar una búsqueda de cadenas del documento. Consulte [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) para obtener más información.  
   
- *HelpFile* (opcional)  
- Nombre del archivo de ayuda para la biblioteca de tipos.  
+*HelpFile* (opcional)  
+El nombre de la **ayuda** archivo para la biblioteca de tipos.  
   
- *HelpContext* (opcional)  
- Identificador de ayuda para esta biblioteca de tipos.  
+*HelpContext* (opcional)  
+El **Id. de Ayuda** para esta biblioteca de tipos.  
   
- *helpstringcontext* (opcional)  
- Consulte [helpstringcontext](../windows/helpstringcontext.md) para obtener más información.  
+*helpstringcontext* (opcional)  
+Consulte [helpstringcontext](../windows/helpstringcontext.md) para obtener más información.  
   
- *oculto* (opcional)  
- Impide que se muestre toda la biblioteca. Este uso está diseñado para emplearlo con controles. Los hosts deben crear una biblioteca de tipos que ajuste el control con propiedades extendidas. Consulte el atributo MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) para obtener más información.  
+*oculto* (opcional)  
+Impide que se muestre toda la biblioteca. Este uso está diseñado para emplearlo con controles. Los hosts deben crear una biblioteca de tipos que ajuste el control con propiedades extendidas. Consulte el atributo MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) para obtener más información.  
   
- *restringido* (opcional)  
- No es posible llamar a los miembros de la biblioteca arbitrariamente. Consulte el atributo MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) para obtener más información.  
+*restringido* (opcional)  
+No es posible llamar a los miembros de la biblioteca arbitrariamente. Consulte el atributo MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) para obtener más información.  
   
- *personalizado* (opcional)  
- Uno o más atributos; esto es similar al atributo [custom](../windows/custom-cpp.md) . El primer parámetro *personalizado* es el GUID del atributo. Por ejemplo:  
+*personalizado* (opcional)  
+Uno o más atributos; esto es similar al atributo [custom](../windows/custom-cpp.md) . El primer parámetro *personalizado* es el GUID del atributo. Por ejemplo:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- *resource_name*  
- Identificador de recurso de cadena del archivo .rgs usado para registrar el identificador de aplicación de la DLL, el ejecutable o el servicio. Cuando el módulo es de tipo service, este argumento también se usa para obtener el identificador de la cadena que contiene el nombre del servicio.  
+*resource_name*  
+Identificador de recurso de cadena del archivo .rgs usado para registrar el identificador de aplicación de la DLL, el ejecutable o el servicio. Cuando el módulo es de tipo service, este argumento también se usa para obtener el identificador de la cadena que contiene el nombre del servicio.  
   
 > [!NOTE]
 >  Tanto el archivo .rgs como la cadena que contiene el nombre del servicio deben contener el mismo valor numérico.  

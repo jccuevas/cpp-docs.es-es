@@ -18,20 +18,20 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c355924ce1f264ce63e02f5fda948a62675e675
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: abf51432e5803de001610da07d97d5bad1796085
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102470"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018850"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Instrucciones para desarrolladores de C++ para los canales del lado de ejecución especulativa
 
-En este artículo contiene instrucciones para desarrolladores ayudar a identificar y mitigar las vulnerabilidades de hardware de canal de lado de ejecución especulativa en software de C++. Estas vulnerabilidades pueden revelar información confidencial a través de límites de confianza y pueden afectar al software que se ejecuta en procesadores que admiten la ejecución especulativa, fuera de secuencia de instrucciones. Esta clase de vulnerabilidades fue el primero se describe en enero de 2018 y obtener información general adicional y pueden encontrar instrucciones en [aviso de seguridad de Microsoft](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
+En este artículo contiene instrucciones para desarrolladores ayudar a identificar y mitigar las vulnerabilidades de hardware de canal de lado de ejecución especulativa en software de C++. Estas vulnerabilidades pueden revelar información confidencial a través de límites de confianza y pueden afectar al software que se ejecuta en procesadores que admiten la ejecución especulativa, fuera de secuencia de instrucciones. Esta clase de vulnerabilidades fue el primero se describe en enero de 2018 y obtener información general adicional y pueden encontrar instrucciones en [aviso de seguridad de Microsoft](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002).
 
 Las instrucciones proporcionadas en este artículo está relacionado con las clases de vulnerabilidades representadas por:
 
-1. CVE-2017-5753, también conocido como variante 1. Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa que se produce como resultado una predicción de bifurcación condicional. El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que proporciona una mitigación de tiempo de compilación para un conjunto limitado de modelos de codificación potencialmente vulnerables. La documentación de la [/qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso. 
+1. CVE-2017-5753, también conocido como variante 1. Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa que se produce como resultado una predicción de bifurcación condicional. El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que proporciona una mitigación de tiempo de compilación para un conjunto limitado de modelos de codificación potencialmente vulnerables. La documentación de la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso. 
 
 2. CVE-2018-3639, también conocido como [especulativa Store omisión (SSB)](https://aka.ms/sescsrdssb). Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa de una carga por delante de un almacén dependiente como resultado de una predicción de acceso de memoria.
 
@@ -184,7 +184,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Debe tenerse en cuenta que en ambos ejemplos implican la modificación especulativa de punteros de rama indirecta asignada a la pila. Es posible que también se puede producir especulativa modificación para incluso memoria de sólo lectura en algunas CPU, memoria asignados por montón y variables globales. Memoria asignada a la pila, el compilador de Visual C++ ya realiza los pasos para que sea más difícil de modificar anticipa destinos asignada a la pila de bifurcación indirecta, como reordenando las variables locales de forma que los búferes se colocan junto a una cookie de seguridad como parte de la [/GS](https://docs.microsoft.com/en-us/cpp/build/reference/gs-buffer-security-check) característica de seguridad del compilador.
+Debe tenerse en cuenta que en ambos ejemplos implican la modificación especulativa de punteros de rama indirecta asignada a la pila. Es posible que también se puede producir especulativa modificación para incluso memoria de sólo lectura en algunas CPU, memoria asignados por montón y variables globales. Memoria asignada a la pila, el compilador de Visual C++ ya realiza los pasos para que sea más difícil de modificar anticipa destinos asignada a la pila de bifurcación indirecta, como reordenando las variables locales de forma que los búferes se colocan junto a una cookie de seguridad como parte de la [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) característica de seguridad del compilador.
 
 ## <a name="speculative-type-confusion"></a>Confusión de tipo especulativa
 
@@ -368,6 +368,6 @@ Otra técnica que puede utilizarse para mitigar vulnerabilidades de canal latera
 
 ## <a name="see-also"></a>Vea también
 
-[Instrucciones para mitigar las vulnerabilidades de canal lateral de ejecución especulativa](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
+[Instrucciones para mitigar las vulnerabilidades de canal lateral de ejecución especulativa](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
 
 [Mitigar vulnerabilidades de hardware de canal de lado de ejecución especulativa](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

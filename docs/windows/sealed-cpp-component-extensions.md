@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47efadb89786b7be54f33678d2f71d2474e4deb4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fe50fed4fd701ba171620d2c0cd0cde6e8da2bbc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604556"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020231"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (Extensiones de componentes de C++)
 **sellado** es una palabra de clave contextual para las clases ref que indica que no se puede invalidar un miembro virtual o un tipo no se puede usar como tipo base.  
@@ -35,13 +35,12 @@ ms.locfileid: "39604556"
   
 ## <a name="syntax"></a>Sintaxis
   
-```  
+```cpp  
 ref class identifier sealed {...};  
 virtual return-type identifier() sealed {...};  
 ```  
   
 ### <a name="parameters"></a>Parámetros  
-  
  *identifier*  
  Nombre de la función o clase.  
   

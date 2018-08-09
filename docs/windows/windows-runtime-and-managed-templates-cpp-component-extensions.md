@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fe449842cc019520a3d73528db05a26b17dcd99
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641465"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011567"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime y plantillas administradas (Extensiones de componentes de C++)
 Las plantillas le permiten definir un prototipo de un tiempo de ejecución de Windows o un tipo common language runtime y, a continuación, crear instancias de las variaciones de ese tipo mediante el uso de parámetros de tipo de plantilla diferente.  
@@ -44,7 +44,7 @@ Las plantillas le permiten definir un prototipo de un tiempo de ejecución de Wi
   
 ### <a name="examples"></a>Ejemplos  
   
- Es posible crear instancias de un tipo genérico con un parámetro de plantilla de tipo administrado, pero no se puede crear una instancia de una plantilla administrada con un parámetro de tipo genérico.  Esto es porque los tipos genéricos se resuelven en tiempo de ejecución.  Para obtener más información, consulte [genéricos y plantillas (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
+ Es posible crear instancias de un tipo genérico con un parámetro de plantilla de tipo administrado, pero no se puede crear una instancia de una plantilla administrada con un parámetro de tipo genérico. Esto es porque los tipos genéricos se resuelven en tiempo de ejecución. Para obtener más información, consulte [genéricos y plantillas (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -77,7 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- No se puede obtener acceso a las plantillas definidas en un ensamblado de referencia con C++ / c++ / sintaxis del lenguaje de CLI, pero se puede usar la reflexión.  Si no se crea una instancia de una plantilla, no se emite en los metadatos.  Si se crea una instancia de una plantilla, solo las funciones de miembro que se hace referencia aparecen en los metadatos.  
+ No se puede obtener acceso a las plantillas definidas en un ensamblado de referencia con C++ / c++ / sintaxis del lenguaje de CLI, pero se puede usar la reflexión. Si no se crea una instancia de una plantilla, no se emite en los metadatos. Si se crea una instancia de una plantilla, solo las funciones de miembro que se hace referencia aparecen en los metadatos.  
   
 ```cpp  
 // managed_templates_3.cpp  

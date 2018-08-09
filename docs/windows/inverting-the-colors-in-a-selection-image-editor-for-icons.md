@@ -20,22 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b86fe4b06298f75321e8cd5aeae551b9d6fa368b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608922"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016397"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Invertir los colores de una selección (Editor de imágenes para iconos)
-El Editor de imágenes ofrece una manera cómoda de invertir los colores de la parte seleccionada de la imagen, de forma que puede saber cómo se vería una imagen con los colores invertidos.  
+El **imagen** editor proporciona una manera cómoda de invertir los colores de la parte seleccionada de la imagen de forma que puede saber cómo se vería una imagen con los colores invertidos.  
   
 ### <a name="to-invert-colors-in-the-current-selection"></a>Para invertir los colores de la selección actual  
   
 1.  En el **imagen** menú, haga clic en **invertir colores**.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Ninguna  
   
 ## <a name="see-also"></a>Vea también  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1925755ca663ba82526fb8b8dae626165f1e4862
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f9b9d448ae9b73c5a47cc93da41dbcba186fdce0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606688"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010715"
 ---
 # <a name="mutextraitsunlock-method"></a>MutexTraits::Unlock (Método)
 Devuelve el control exclusivo de un recurso compartido.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type h  
 );  

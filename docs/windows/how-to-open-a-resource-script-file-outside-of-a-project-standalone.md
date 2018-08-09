@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70cba5145f64fd88d1d6f1c4a68ac4c0730968cc
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a976e4b6c6b2fb89dfab362b13000d2e7d4327b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570388"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013419"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Cómo: Abrir un archivo de script de recursos fuera de un proyecto (independiente)
 Puede ver los recursos en un archivo .rc sin tener un proyecto abierto. El archivo .rc se abrirá en una ventana de documento en lugar de abrirse en el [vista de recursos](../windows/resource-view-window.md) ventana (como ocurre cuando el archivo se abre dentro de un proyecto).  
@@ -46,13 +46,13 @@ Puede ver los recursos en un archivo .rc sin tener un proyecto abierto. El archi
   
 ### <a name="to-open-multiple-rc-files-outside-a-project"></a>Para abrir varios archivos .rc fuera de un proyecto  
   
-1.  Abra ambos archivos de recursos de manera independiente. Por ejemplo, abra Source1.rf y Source2.rc.  
+1.  Abra ambos archivos de recursos de manera independiente. Por ejemplo, abra `Source1.rc` y `Source2.rc`.  
   
     1.  Desde el **archivo** menú, elija **abierto**, a continuación, haga clic en **archivo**.  
   
-    2.  En el **abrir archivo** cuadro de diálogo, navegue hasta el primer archivo de script de recursos que desee abrir (Source 1.rc), resalte el archivo y haga clic en **abrir**.  
+    2.  En el **abrir archivo** cuadro de diálogo, navegue hasta el primer archivo de script de recursos que desee abrir (`Source1.rc`), resalte el archivo y haga clic en **abrir**.  
   
-    3.  Repita el paso anterior para abrir el segundo archivo .rc (Source2.rc).  
+    3.  Repita el paso anterior para abrir el segundo archivo .rc (`Source2.rc`).  
   
          Los archivos .rc ahora están abiertos en ventanas de documentos independientes.  
   

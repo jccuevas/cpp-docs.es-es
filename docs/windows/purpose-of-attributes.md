@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4f44d6e4db7e09033e9c3f05d94cbf5294b306a3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607029"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018287"
 ---
 # <a name="purpose-of-attributes"></a>Objetivo de los atributos
 Atributos extensión C++ en direcciones no son actualmente posibles sin romper la estructura clásica del lenguaje. Los atributos permiten a proveedores (DLL independiente) para ampliar la funcionalidad del lenguaje dinámicamente. El objetivo principal de atributos es simplificar la creación de componentes COM, además de aumentar el nivel de productividad del desarrollador de componentes. Los atributos se pueden aplicar a casi cualquier construcción de C++, como clases, miembros de datos o las funciones miembro. Este es un área resaltada de ventajas que ofrece esta nueva tecnología:  
@@ -35,7 +35,7 @@ Atributos extensión C++ en direcciones no son actualmente posibles sin romper l
   
  Por ejemplo, para implementar un receptor de eventos simple para una clase genérica de ATL, podría aplicar el [event_receiver](../windows/event-receiver.md) atributo en una clase específica como `CMyReceiver`. El `event_receiver` , a continuación, se compila el atributo por el compilador de Visual C++, que inserta el código adecuado en el archivo de objeto.  
   
-```  
+```cpp  
 [event_receiver(com)]  
 class CMyReceiver   
 {  

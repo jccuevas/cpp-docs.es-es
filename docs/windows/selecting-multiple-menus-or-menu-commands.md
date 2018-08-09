@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 53225576941afff3a94c3dd276feb980e2bd6562
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 02293fce154fa9c4c98c583de02e8967f4d3957b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644861"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020218"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Seleccionar varios menús o comandos de menú
 Puede seleccionar varios nombres o comandos de menús para realizar operaciones masivas, como eliminar o cambiar propiedades.  
@@ -34,7 +34,6 @@ Puede seleccionar varios nombres o comandos de menús para realizar operaciones 
  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Vea también  

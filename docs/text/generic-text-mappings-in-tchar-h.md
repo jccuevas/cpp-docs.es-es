@@ -1,5 +1,5 @@
 ---
-title: Asignaciones de texto genérico en Tchar.h | Documentos de Microsoft
+title: Asignaciones de texto genérico en Tchar.h | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,19 +22,19 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4fd66a0e2f45def3aa22342ca30eaa64846ebf4c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33867108"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012015"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Asignaciones de texto genérico en TCHAR.H
 Para simplificar la conversión de código para uso internacional, la biblioteca en tiempo de ejecución de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] proporciona asignaciones de texto genérico específicas de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] para muchos tipos de datos, rutinas y otros objetos. Se pueden usar estas asignaciones, que están definidas en Tchar.h, para crear código genérico que se puede compilar para juegos de caracteres de un solo byte, multibyte o [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)], en función de la constante de manifiesto que se defina con la instrucción `#define`. Las asignaciones de texto genérico son extensiones de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] que no son compatibles con [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)].  
   
  Si se usa el archivo Tchar.h, se pueden compilar aplicaciones de un solo byte, de juego de caracteres multibyte (MBCS) y [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] a partir de los mismos códigos fuente. Tchar.h define macros (que tienen el prefijo `_tcs`) que, con las definiciones de preprocesador correctas, se asignan a las funciones `str`, `_mbs` o `wcs`, según proceda. Para compilar MBCS, se ha de definir el símbolo `_MBCS`. Para compilar [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)], se ha de definir el símbolo `_UNICODE`. Para compilar una aplicación de un solo byte, no hay que definir ningún símbolo (opción predeterminada). De forma predeterminada, `_MBCS` está definido para aplicaciones MFC.  
   
- El tipo de datos `_TCHAR` se define de forma condicional en Tchar.h. Si se ha definido el símbolo `_UNICODE` para la compilación, `_TCHAR` se define como `wchar_t`; en caso contrario, para compilaciones MBCS y de un solo byte, se define como `char`. (`wchar_t`, que es el tipo básico de datos de caracteres anchos de Unicode, es el equivalente de 16 bits a un `char` de 8 bits con signo). Para aplicaciones internacionales, se ha de utilizar la familia de funciones `_tcs`, que se ejecuta en unidades `_TCHAR`, no en bytes. Por ejemplo, `_tcsncpy` copias `n` `_TCHARs`, no `n` bytes.  
+ El tipo de datos `_TCHAR` se define de forma condicional en Tchar.h. Si el símbolo `_UNICODE` se define para la compilación, `_TCHAR` se define como **wchar_t**; en caso contrario, para compilaciones MBCS y de un solo byte, se define como **char**. (**wchar_t**, el tipo de datos de caracteres anchos Unicode básico es el equivalente de 16 bits a un 8 bits con signo **char**.) Para aplicaciones internacionales, se ha de utilizar la familia de funciones `_tcs`, que se ejecuta en unidades `_TCHAR`, no en bytes. Por ejemplo, `_tcsncpy` copias `n` `_TCHARs`, no `n` bytes.  
   
  Dado que algunas funciones de control de cadenas de juego de caracteres de byte único (SBCS) reciben parámetros `char*` (con signo), se genera una advertencia del compilador indicando que el tipo no coincide cuando se define `_MBCS`. Hay tres formas de evitar esta advertencia:  
   
@@ -58,11 +58,11 @@ Para simplificar la conversión de código para uso internacional, la biblioteca
   
 |Texto genérico <br /><br /> Nombre de tipo de datos|_UNICODE y<br /><br /> _MBCS no definidos|_MBCS<br /><br /> Definido|_UNICODE<br /><br /> Definido|  
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|  
-|`_TCHAR`|`char`|`char`|`wchar_t`|  
-|`_TINT`|`int`|`unsigned int`|`wint_t`|  
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
+|`_TCHAR`|**char**|**char**|**wchar_t**|  
+|`_TINT`|**int**|**unsigned int**|`wint_t`|  
+|`_TSCHAR`|**carácter con signo**|**carácter con signo**|**wchar_t**|  
+|`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|  
+|`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|  
 |`_T` o `_TEXT`|Sin efecto (quitado por el preprocesador)|Sin efecto (quitado por el preprocesador)|`L` (convierte el carácter o la cadena siguiente en su equivalente de [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)])|  
   
  Para obtener una lista de asignaciones de texto genérico de rutinas, variables y otros objetos, consulte [asignaciones de texto genérico](../c-runtime-library/generic-text-mappings.md) en la referencia de la biblioteca de tiempo de ejecución.  

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5734874fb77907d021a360d84c17d054b223741c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0404c11def5ac70c9020adc28309b7c12aa1cf67
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605501"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017478"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>Eliminar el espacio entre los botones de una barra de herramientas
 El siguiente procedimiento muestra cómo quitar un espacio entre los botones de una barra de herramientas.  
@@ -30,12 +30,11 @@ El siguiente procedimiento muestra cómo quitar un espacio entre los botones de 
   
 1.  Arrastre el botón en un lado del espacio hacia el botón del otro lado del espacio hasta que se superponga con el botón siguiente aproximadamente hasta la mitad.  
   
-     Si no hay ningún espacio en el lado del botón que se va a arrastrar fuera del y arrastra el botón más de la mitad pasado el botón adyacente, el editor de la barra de herramientas también inserta un espacio en el lado opuesto del botón que se va a arrastrar.  
+     Si no hay ningún espacio en el lado del botón que se va a arrastrar fuera del, y arrastra el botón más de la mitad pasado el botón adyacente, el **barra de herramientas** editor también inserta un espacio en el lado opuesto del botón que está operación de arrastre.  
   
  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
-  
  MFC o ATL  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: MutexTraits (estructura) | Documentos de Microsoft
+title: MutexTraits (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0406ec7938a623be7b16e0535e9d2c0c769f8392
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: deebac1516724469882391c3c856a9ed7a588c88
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874595"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018983"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits (estructura)
-Define las características comunes de la [exclusión mutua](../windows/mutex-class1.md) clase.  
+Define las características comunes de la [Mutex](../windows/mutex-class1.md) clase.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 struct MutexTraits : HANDLENullTraits;  
 ```  
   

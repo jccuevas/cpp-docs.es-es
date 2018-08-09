@@ -22,15 +22,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03922c8ca9ba767991b3440e14e4928ab6c3b0ec
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2d1a59befd405e1412c2815694c40c8d24a99cec
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604465"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017001"
 ---
 # <a name="resource-editors"></a>editores de recursos
-Un editor de recursos es un entorno especializado para la creación o la modificación de los recursos que se incluyen en un proyecto de Visual Studio. Los editores de recursos de Visual Studio comparten técnicas e interfaces que ayudan a crear y modificar recursos de la aplicación de forma rápida y sencilla. Los editores de recursos permiten [ver y editar recursos en el editor adecuado](../windows/viewing-and-editing-resources-in-a-resource-editor.md) y [obtener una vista previa de los recursos](../windows/previewing-resources.md).  
+Un **recursos** editor es un entorno especializado para la creación o modificación de los recursos que se incluyen en un proyecto de Visual Studio. Los editores de recursos de Visual Studio comparten técnicas e interfaces que ayudan a crear y modificar recursos de la aplicación de forma rápida y sencilla. Los editores de recursos permiten [ver y editar recursos en el editor adecuado](../windows/viewing-and-editing-resources-in-a-resource-editor.md) y [obtener una vista previa de los recursos](../windows/previewing-resources.md).  
   
  Al crear o abrir un recurso, se abre automáticamente el editor correspondiente.  
   

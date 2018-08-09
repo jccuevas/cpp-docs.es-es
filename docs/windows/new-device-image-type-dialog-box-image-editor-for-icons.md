@@ -1,5 +1,5 @@
 ---
-title: Nueva &lt;dispositivo&gt; la imagen, cuadro de diálogo de tipo (Editor de imágenes para iconos) | Documentos de Microsoft
+title: Nuevo &lt;dispositivo&gt; la imagen, cuadro de diálogo de tipo (Editor de imágenes para iconos) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 966066be4dbbce5586860dd3bb6c99893094b6ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 579a74e24f0abb2af13f96a0e5171dada249c0cf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879625"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019291"
 ---
-# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nueva &lt;dispositivo&gt; la imagen, cuadro de diálogo de tipo (Editor de imágenes para iconos)
-Le permite crear una nueva imagen de dispositivo de un tipo especificado. Para abrir el **New \<dispositivo > imagen** cuadro de diálogo, haga clic en **nuevo tipo de imagen** en el **imagen** menú.  
+# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nuevo &lt;dispositivo&gt; la imagen, cuadro de diálogo de tipo (Editor de imágenes para iconos)
+Permite crear una nueva imagen de dispositivo de un tipo especificado. Para abrir el **New \<dispositivo > imagen** cuadro de diálogo, haga clic en **nuevo tipo de imagen** en el **imagen** menú.  
   
- **Tipo de imagen de destino**  
- Enumera los tipos de imágenes disponibles. Seleccione el tipo de imagen que desea abrir:  
+### <a name="target-image-type"></a>Tipo de imagen de destino  
+ Enumera los tipos de imagen disponible. Seleccione el tipo de imagen que desea abrir:  
   
 ||||  
 |-|-|-|  
@@ -42,8 +42,8 @@ Le permite crear una nueva imagen de dispositivo de un tipo especificado. Para a
 > [!NOTE]
 >  Las imágenes ya existentes no se mostrará en esta lista.  
   
- **Custom**  
- Se abre la [cuadro de diálogo imagen personalizada](custom-image-dialog-box-image-editor-for-icons.md) en que se puede crear una nueva imagen con un tamaño personalizado y el número de colores.  
+### <a name="custom"></a>Personalizados  
+ Se abre el [cuadro de diálogo imagen personalizada](custom-image-dialog-box-image-editor-for-icons.md) en el que puede crear una nueva imagen con un tamaño personalizado y el número de colores.  
   
 ## <a name="requirements"></a>Requisitos  
  Ninguna  

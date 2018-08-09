@@ -1,5 +1,5 @@
 ---
-title: Wrappers Namespace | Documentos de Microsoft
+title: Wrappers Namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,19 +23,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 752989b33bd0b017233ea4a105d2ad36ca2290f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f74f8fe3e5b637869af7b03bb2eaf5e13df9550
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875557"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020172"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details (Espacio de nombres)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers::Details;  
 ```  
   
@@ -45,8 +45,8 @@ namespace Microsoft::WRL::Wrappers::Details;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[SyncLockT (clase)](../windows/synclockt-class.md)|Representa un tipo que puede llevar a cabo exclusivo o compartido posesión de un recurso.|  
-|[SyncLockWithStatusT (clase)](../windows/synclockwithstatust-class.md)|Representa un tipo que puede llevar a cabo exclusivo o compartido posesión de un recurso.|  
+|[SyncLockT (clase)](../windows/synclockt-class.md)|Representa un tipo que puede tardar exclusivo o propiedad compartida de un recurso.|  
+|[SyncLockWithStatusT (clase)](../windows/synclockwithstatust-class.md)|Representa un tipo que puede tardar exclusivo o propiedad compartida de un recurso.|  
   
 ### <a name="methods"></a>Métodos  
   

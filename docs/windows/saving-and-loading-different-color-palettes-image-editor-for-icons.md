@@ -21,18 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14cad19c53e8cd741bf16bab49420169e93f6af6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b990046e4f43e70218fc1a7f6eb885638c2051bf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606977"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015948"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Guardar y cargar diferentes paletas de colores (Editor de imágenes para iconos)
-Puede guardar y cargar una paleta de colores que contiene [personalizar los colores](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (De forma predeterminada, al iniciar Visual Studio se carga automáticamente la paleta de colores usada más recientemente).  
+Puede guardar y cargar un **colores** paleta que contiene [personalizar los colores](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (De forma predeterminada, el **colores** paleta usado más recientemente se carga automáticamente al iniciar Visual Studio.)  
   
 > [!TIP]
->  Puesto que no es posible restaurar la paleta de colores predeterminada desde el editor de imágenes, guárdela con un nombre como estándar.pal o predeterminada.pal para así poder restaurar fácilmente los valores predeterminados.  
+>  Puesto que la **imagen** editor no tiene ningún medio para restaurar el valor predeterminado **colores** paleta, debe guardar el valor predeterminado **colores** paleta en un nombre, como  *estándar.PAL* o *predeterminada.PAL* por lo que puede restaurar fácilmente la configuración predeterminada.  
   
 ### <a name="to-save-a-custom-colors-palette"></a>Para guardar una paleta de colores personalizada  
   
@@ -46,10 +46,9 @@ Puede guardar y cargar una paleta de colores que contiene [personalizar los colo
   
 1.  Desde el **imagen** menú, elija **Cargar paleta**.  
   
-2.  En el [cuadro de diálogo Cargar paleta de colores](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), desplácese al directorio correcto y seleccione la paleta que desea cargar. Las paletas de colores se guardan con una extensión de archivo .pal.  
+2.  En el [cuadro de diálogo Cargar paleta de colores](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), desplácese al directorio correcto y seleccione la paleta que desea cargar. **Color** paletas se guardan con una extensión de archivo. PAL.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Ninguna  
   
 ## <a name="see-also"></a>Vea también  

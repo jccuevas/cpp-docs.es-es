@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb5da618ce94711ce41e305c234ef5a5087c5f38
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a4a80faf8718b1db103e15cba6ee97a73553490d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603577"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017749"
 ---
 # <a name="image-editor-for-icons"></a>Editor de imágenes para iconos
 El Editor de imágenes dispone de un completo conjunto de herramientas para crear y editar imágenes, así como características que facilitan la creación de mapas de bits de barras de herramientas. Además de mapas de bits, iconos y cursores, pueden editarse imágenes en formato GIF o JPEG mediante los comandos del menú **Imagen** y las herramientas de la barra de herramientas del **Editor de imágenes** .  
@@ -43,18 +43,18 @@ El Editor de imágenes dispone de un completo conjunto de herramientas para crea
   
 -   [Usar teclas de aceleración para comandos del Editor de imágenes](../windows/accelerator-keys-image-editor-for-icons.md)  
   
- La ventana del Editor de imágenes muestra dos vistas de una imagen, con una barra de división que separa los dos paneles. Se puede arrastrar dicha barra a uno u otro lado para cambiar el tamaño relativo de los paneles. El panel activo muestra un borde de selección.  
+ El **Editor de imágenes** ventana muestra dos vistas de una imagen, con una barra que separa los dos paneles de división. Se puede arrastrar dicha barra a uno u otro lado para cambiar el tamaño relativo de los paneles. El panel activo muestra un borde de selección.  
   
- La ventana del Editor de imágenes puede adaptarse a las necesidades y preferencias de cada usuario. Se puede [cambiar el factor de ampliación](../windows/changing-the-magnification-factor-image-editor-for-icons.md) y [mostrar u ocultar la cuadrícula de píxeles](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md).  
+ El **Editor de imágenes** ventana puede ajustarse para ajustarse a sus necesidades y preferencias. Se puede [cambiar el factor de ampliación](../windows/changing-the-magnification-factor-image-editor-for-icons.md) y [mostrar u ocultar la cuadrícula de píxeles](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md).  
   
 > [!NOTE]
->  Con el Editor de imágenes, se pueden ver imágenes de 32 bits, pero no se pueden editar.  
+>  Mediante el **Editor de imágenes**, puede ver las imágenes de 32 bits, pero no puede modificarlas.  
   
 ## <a name="visual-studio-image-library"></a>Biblioteca de imágenes de Visual Studio  
- Se puede descargar de forma gratuita la biblioteca de imágenes de Visual Studio, que contiene muchas animaciones, mapas de bits e iconos que se pueden usar en las aplicaciones. Para obtener más información sobre cómo descargar la biblioteca, vea [La biblioteca de imágenes de Visual Studio](/visualstudio/designers/the-visual-studio-image-library).  
+ Puede descargar de forma gratuita la **biblioteca de imágenes de Visual Studio** que contiene muchas animaciones, mapas de bits e iconos que puede usar en sus aplicaciones. Para obtener más información sobre cómo descargar la biblioteca, vea [La biblioteca de imágenes de Visual Studio](/visualstudio/designers/the-visual-studio-image-library).  
   
 ## <a name="managed-resources"></a>Recursos administrados  
- Se puede usar el Editor de imágenes y el [Editor binario](binary-editor.md) para trabajar con archivos de recursos en proyectos administrados. Todos los recursos administrados que vaya a editar deberán estar vinculados. Los editores de recursos de Visual Studio no admiten la edición de recursos incrustados.  
+ Puede usar el **imagen** editor y la [editor binario](binary-editor.md) para trabajar con archivos de recursos en proyectos administrados. Todos los recursos administrados que vaya a editar deberán estar vinculados. Los editores de recursos de Visual Studio no admiten la edición de recursos incrustados.  
   
  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   

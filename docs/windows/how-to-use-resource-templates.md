@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b0a123c336df3f47550f8bb825a621eff53a8cb5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569461"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015559"
 ---
 # <a name="how-to-use-resource-templates"></a>Cómo: Usar plantillas de recursos
 Una plantilla de recursos es un recurso personalizado que ha guardado como un archivo .rct. Por lo tanto, una plantilla de recursos puede servir como punto de partida para crear otros recursos. Las plantillas de recursos ahorran tiempo en el desarrollo de recursos adicionales o grupos de recursos que comparten características, como los controles estándar y otros elementos repetidos. Por ejemplo, debe incluir un botón de ayuda y el icono del logotipo de una empresa en varios cuadros de diálogo. Para hacerlo de una forma rápida, cree una nueva plantilla de cuadro de diálogo y personalícela con el logotipo y el botón de ayuda.  
@@ -46,7 +46,7 @@ Una plantilla de recursos es un recurso personalizado que ha guardado como un ar
   
 4.  Proporcione un nombre y ubicación para el nuevo archivo .rct y haga clic en **abierto**.  
   
-5.  El nuevo archivo .rct se agregará al proyecto y aparece en el Explorador de soluciones bajo el **recursos** carpeta.  
+5.  El nuevo archivo .rct se agregará al proyecto y aparece en **el Explorador de soluciones** bajo el **recursos** carpeta.  
   
      Ahora puede haga doble clic en el archivo .rct para abrirlo en una ventana de documento y luego agregar recursos a él (haga clic en el archivo en la ventana de documento y elija **Agregar recurso** en el menú contextual). A continuación, puede personalizar estos recursos y guardar el archivo .rct.  
   
@@ -76,7 +76,6 @@ Una plantilla de recursos es un recurso personalizado que ha guardado como un ar
  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
