@@ -1,7 +1,7 @@
 ---
 title: Trasladar de UNIX a Win32 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/02/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628d032ff00205b3f511a613a866f025d62dc50a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08958de9f756ac005f966245e22a44afd7125bc0
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843293"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496680"
 ---
 # <a name="porting-from-unix-to-win32"></a>Trasladar de UNIX a Win32
 Al migrar aplicaciones de UNIX a Windows, dispone de varias opciones:  
@@ -42,13 +42,9 @@ Al migrar aplicaciones de UNIX a Windows, dispone de varias opciones:
  En la lista siguiente se proporciona recursos de Microsoft y de terceros para migrar y facilitar la migración de UNIX a Visual C++:  
   
 ### <a name="unix-migration-guides"></a>Guías de migración de UNIX  
- La Guía de migración de aplicaciones UNIX personalizadas proporciona ayuda técnica sobre la migración de código del entorno de UNIX al de Win32.  
+ La [Guía de migración de aplicaciones UNIX personalizadas](https://technet.microsoft.com/library/bb656290.aspx) proporciona ayuda técnica sobre la migración de código del entorno de UNIX al de Win32.  
   
- [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
-  
- La Guía de migración de proyectos de UNIX complementa a la Guía de migración de aplicaciones UNIX personalizadas ofreciendo una ayuda de alto nivel sobre la migración de proyectos importantes de UNIX a Win32. La guía proporciona consejos sobre cuestiones a tener en cuenta en cada fase de la migración del proyecto. La guía se puede descargar desde:  
-  
- [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
+ La [Guía de migración de proyectos de UNIX](https://technet.microsoft.com/library/bb656287.aspx) complementa a la Guía de migración de aplicaciones UNIX personalizadas ofreciendo una ayuda de alto nivel sobre la migración de proyectos importantes de UNIX a Win32. La guía proporciona consejos sobre cuestiones a tener en cuenta en cada fase de la migración del proyecto.
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows Services for UNIX (SFU)  
  Microsoft Windows Services for UNIX (SFU) proporciona una gama completa de servicios entre plataformas para integrar Windows en entornos existentes basados en UNIX. Services for UNIX proporciona uso compartido de archivos, acceso y administración remotos, sincronización de contraseña, administración de directorios comunes, un conjunto común de utilidades y un shell.  

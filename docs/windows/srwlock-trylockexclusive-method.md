@@ -1,5 +1,5 @@
 ---
-title: 'SRWLOCK:: Trylockexclusive (método) | Documentos de Microsoft'
+title: Trylockexclusive (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cc9ee8a63d7403c3de408c924eeab07f1d0efa1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 993031604469aa09608f936f260869a3b53dbc9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892662"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652775"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive (Método)
-Intenta adquirir un objeto SRWLock en modo exclusivo para el objeto de SRWLock actual o especificado. Si la llamada se realiza correctamente, el subproceso de llamada toma posesión del bloqueo.  
+Intenta adquirir un **SRWLock** objeto en modo exclusivo para el actual o especificada **SRWLock** objeto. Si la llamada se realiza correctamente, el subproceso de llamada toma posesión del bloqueo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,12 +37,12 @@ static SyncLockExclusive TryLockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `lock`  
- Puntero a un objeto SRWLock.  
+### <a name="parameters"></a>Parámetros  
+ *lock*  
+ Puntero a un **SRWLock** objeto.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si se realiza correctamente, un objeto SRWLock en modo exclusivo y el subproceso que realiza la llamada toma posesión del bloqueo. En caso contrario, un SRWLock objeto cuyo estado no es válido.  
+ Si es correcto, un **SRWLock** objeto en modo exclusivo y el subproceso de llamada toma posesión del bloqueo. En caso contrario, un **SRWLock** objeto cuyo estado no es válido.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
