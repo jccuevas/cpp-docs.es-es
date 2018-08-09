@@ -1,5 +1,5 @@
 ---
-title: Ver un menú como menú emergente | Documentos de Microsoft
+title: Ver un menú como menú emergente | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c97eef61917fec0e068b25116b96b8dd7db41eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891037"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652206"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Ver un menú como menú emergente
 Normalmente, cuando se trabaja en el editor de menús, se muestra un recurso de menú como barra de menús. Sin embargo, es posible que algunos recursos de menú se agreguen a la barra de menús de la aplicación mientras se ejecuta el programa.  
@@ -33,12 +33,9 @@ Normalmente, cuando se trabaja en el editor de menús, se muestra un recurso de 
      Esto es simplemente una preferencia de visualización y no modificará el menú.  
   
     > [!NOTE]
-    >  Para cambiar a la vista de la barra de menús, haga clic en **ver como emergente** nuevo (que quita la marca de verificación y restaura la vista de la barra de menús).  
+    >  Para cambiar a la vista de la barra de menús, haga clic en **ver como emergente** nuevo (que quita la marca de verificación y devuelve la vista de la barra de menús).  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
