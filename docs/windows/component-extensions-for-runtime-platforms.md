@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e68e2b729f8120a33b296fa485d145101b3d6e5b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a9fa20fc180d9b77f5d909ea06d12d69c1ef89d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466714"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652690"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Extensiones de componentes para plataformas de tiempo de ejecución
 Visual C++ proporciona extensiones de lenguaje para ayudarle a programar en plataformas del runtime. Mediante el uso de C++ / c++ / CX, puede programar aplicaciones de la plataforma Universal de Windows y componentes que se compilan en código nativo. Aunque puede crear aplicaciones de la plataforma Universal de Windows programando directamente en las interfaces COM de Windows en tiempo de ejecución, mediante el uso de C++ / c++ / CX, puede trabajar con los constructores, excepciones y otros lenguajes de programación de C++ moderno. Para habilitar la programación de C++ en un entorno de ejecución administrado en la plataforma. NET, puede usar C++ / c++ / CLI.  
   
- **Dos Runtime, un conjunto de extensiones**  
+### <a name="two-runtimes-one-set-of-extensions"></a>Dos runtime, un conjunto de extensiones  
   
- C++ / c++ / CX es un subconjunto de C / c++ / CLI. Para las extensiones que son comunes a C++ / c++ / CX y c++ / CLI, la semántica depende de si tiene como destino common language runtime (CLR) o el tiempo de ejecución de Windows. Para compilar la aplicación se ejecute en el tiempo de ejecución de Windows, especifique la **/ZW** opción del compilador. Para compilar que se ejecute en CLR, especifique el **/CLR** opción del compilador. Estos modificadores se establecen automáticamente cuando se usa Visual Studio para crear un proyecto.  
+ C++ / c++ / CX es un subconjunto de C / c++ / CLI. Para las extensiones que son comunes a C++ / c++ / CX y c++ / CLI, la semántica depende de si tiene como destino common language runtime (CLR) o el tiempo de ejecución de Windows. Para compilar la aplicación se ejecute en el tiempo de ejecución de Windows, especifique el `/ZW` opción del compilador. Para compilarlo para que se ejecute en CLR, especifique la opción del compilador `/clr`. Estos modificadores se establecen automáticamente cuando se usa Visual Studio para crear un proyecto.  
   
  Para obtener más información sobre cómo crear aplicaciones de la plataforma Universal de Windows en C++, vea [aplicaciones Guía básica para Windows Runtime con C++](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx).  
   
@@ -86,7 +86,7 @@ Visual C++ proporciona extensiones de lenguaje para ayudarle a programar en plat
 |**nullptr**|No|Indica que un identificador o un puntero no señalan un objeto.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Construcciones de plantilla  
- Las construcciones de lenguaje siguientes se implementan como plantillas, en lugar de como palabras clave. Si especifica la **/ZW** opción del compilador, se definen en el `lang` espacio de nombres. Si especifica la **/CLR** opción del compilador, se definen en el `cli` espacio de nombres.  
+ Las construcciones de lenguaje siguientes se implementan como plantillas, en lugar de como palabras clave. Si especifica la opción del compilador `/ZW`, se definen en el espacio de nombres `lang`. Si especifica la opción del compilador `/clr`, se definen en el espacio de nombres `cli`.  
   
 |Palabra clave|Propósito|Referencia|  
 |-------------|-------------|---------------|  

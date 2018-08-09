@@ -1,5 +1,5 @@
 ---
-title: 'Semaphoretraits:: Unlock (método) | Documentos de Microsoft'
+title: Método Semaphoretraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0914c6ff83e881f92963fc8a548ddeff587db75e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98e210ad99a333b6abf68f574916d4f9da5ab67e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892252"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650432"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock (Método)
 Control de versiones de un recurso compartido.  
@@ -35,12 +35,12 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `h`  
- Identificador de un objeto de semáforo.  
+### <a name="parameters"></a>Parámetros  
+ *h*  
+ Identificador de un **semáforo** objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- Si la operación de desbloqueo es correcta, Unlock() emite un error que indica la causa del error.  
+ Si la operación de desbloqueo se realiza correctamente, **Unlock()** emite un error que indica la causa del error.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

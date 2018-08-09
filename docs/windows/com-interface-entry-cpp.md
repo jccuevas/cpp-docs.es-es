@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462789"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646194"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 Agrega una entrada de la interfaz en el mapa COM de la clase de destino.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *COM_INTERFACE_ENTRY*  
  Una cadena que contiene el texto real de la entrada. Para obtener una lista de valores posibles, vea [Macros COM_INTERFACE_ENTRY](../atl/reference/com-interface-entry-macros.md).  
   
@@ -58,7 +58,7 @@ Agrega una entrada de la interfaz en el mapa COM de la clase de destino.
   
  Esta restricción es necesaria porque ATL usa la primera entrada en el mapa de interfaz como identidad `IUnknown`; por lo tanto, la entrada debe ser una interfaz válida. Por ejemplo, el siguiente ejemplo de código no es válido porque la primera entrada en el mapa de interfaz no especifica una interfaz COM real.  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -100,7 +100,7 @@ class CMyClass: public IMyClass, public IDebugTest
   
  El mapa de objetos COM resultante para `CMyBaseClass` es como sigue:  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -119,7 +119,7 @@ END_COM_MAP()
 |-|-|  
 |**Se aplica a**|**clase**, **struct**|  
 |**Reiterativo**|Sí|  
-|**Atributos requeridos**|Uno o varios de los siguientes: **coclass**, **progid**o **vi_progid**.|  
+|**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|  
 |**Atributos no válidos**|Ninguna|  
   
  Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  

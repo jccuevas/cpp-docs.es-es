@@ -1,5 +1,5 @@
 ---
-title: usesgetlasterror | Documentos de Microsoft
+title: usesgetlasterror | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 399b9fbbcf4b449f5f91beaea89c403d120d0a21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e5d7144f7e2a6fa3bf6937a377ccad0a711f746
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890280"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647065"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 Indica que el llamador que si se produce un error al llamar a esa función, a continuación, el llamador puede, a continuación, llamar a `GetLastError` para recuperar el código de error.  
@@ -30,13 +30,11 @@ Indica que el llamador que si se produce un error al llamar a esa función, a co
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [usesgetlasterror]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **usesgetlasterror** atributo C++ tiene la misma funcionalidad que la [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) atributo MIDL.  
+ El **usesgetlasterror** atributo de C++ tiene la misma funcionalidad que el [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  Consulte la [idl_module](../windows/idl-module.md) ejemplo para obtener un ejemplo de cómo usar **usesgetlasterror**.  

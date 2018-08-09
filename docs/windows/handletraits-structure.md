@@ -1,5 +1,5 @@
 ---
-title: HANDLETraits (estructura) | Documentos de Microsoft
+title: HANDLETraits (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1aae09030ff6cad518028833ce5d4f7b06300a69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f722745b1283f25bd284adb3b55dcb340d78f07
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876653"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649918"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits (estructura)
-Define las características comunes de un identificador.  
+Define las características comunes de un controlador.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 struct HANDLETraits;  
 ```  
   

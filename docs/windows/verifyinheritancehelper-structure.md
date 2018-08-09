@@ -1,5 +1,5 @@
 ---
-title: VerifyInheritanceHelper (estructura) | Documentos de Microsoft
+title: VerifyInheritanceHelper (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d758f4b44990d1f03ff698f0740c2aa8491367a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a67e63748ee7650b2e99a6112f9725daf6cf13c6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889708"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652941"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,11 +41,11 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `I`  
+### <a name="parameters"></a>Parámetros  
+ *I*  
  Un tipo.  
   
- `Base`  
+ *base*  
  Otro tipo.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -57,7 +57,7 @@ struct VerifyInheritanceHelper<I, Nil>;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[VerifyInheritanceHelper::Verify (método)](../windows/verifyinheritancehelper-verify-method.md)|Comprueba las dos interfaces especificadas por los parámetros de plantilla actual y determina si una interfaz se deriva de la otra.|  
+|[VerifyInheritanceHelper::Verify (método)](../windows/verifyinheritancehelper-verify-method.md)|Prueba de las dos interfaces especificadas por los parámetros de plantilla actual y determina si una interfaz se deriva de la otra.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `VerifyInheritanceHelper`  

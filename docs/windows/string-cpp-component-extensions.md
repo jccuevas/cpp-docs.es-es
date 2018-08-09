@@ -1,5 +1,5 @@
 ---
-title: Cadena (extensiones de componentes de C++) | Documentos de Microsoft
+title: Cadena (extensiones de componentes de C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889253"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645998"
 ---
 # <a name="string--c-component-extensions"></a>Cadena (Extensiones de componentes de C++)
 El compilador de Visual C++ admite *cadenas*, que son objetos que representan texto como una secuencia de caracteres. Visual C++ admite variables de cadena, cuyo valor es implícito, y literales, cuyo valor es una cadena entre comillas explícita.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
- Windows Runtime y Common Language Runtime representan cadenas como objetos cuya memoria asignada se administra automáticamente. Es decir, no es necesario descartar explícitamente la memoria de una cadena cuando la variable de cadena está fuera del ámbito o finaliza la aplicación. Para indicar que la duración de un objeto de cadena que se administrarán automáticamente, declare el tipo de cadena con el [identificador-a-objeto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modificador.  
+ Windows Runtime y Common Language Runtime representan cadenas como objetos cuya memoria asignada se administra automáticamente. Es decir, no es necesario descartar explícitamente la memoria de una cadena cuando la variable de cadena está fuera del ámbito o finaliza la aplicación. Para indicar que se debe administrar automáticamente la duración de un objeto de cadena, declare el tipo de cadena con el [indicador a objeto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modificador.  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
  La arquitectura de Windows en tiempo de ejecución requiere que Visual C++ implemente el tipo de datos `String` en el espacio de nombres `Platform`. Para su comodidad, Visual C++ también proporciona el tipo de datos `string`, que es un sinónimo de `Platform::String`, en el espacio de nombres `default`.  
@@ -41,19 +41,18 @@ using namespace default;
    Platform::String^ MyString1 = "The quick brown fox";  
    String^ MyString2 = "jumped over the lazy dog.";  
    String^ MyString3 = "Hello, world!";  
-  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información y ejemplos acerca de las cadenas, vea [Platform:: String, std:: wstring y literales (plataforma)](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
+ Para obtener más información y ejemplos acerca de las cadenas, vea [Platform:: String, std:: wstring y literales (plataforma)](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/ZW**  
+ Opción del compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- Este tema describe cómo el compilador de Visual C++ procesa los literales de cadena cuando se ejecutan mediante el **/CLR** opción del compilador. Usar **/CLR**, también debe utilizar common language runtime (CLR), C + / sintaxis CLI y objetos administrados. Para obtener más información acerca de **/CLR**, consulte [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
+ En este tema se explica cómo procesa el compilador de Visual C++ literales de cadena cuando se ejecuta mediante la opción del compilador `/clr`. Para usar `/clr`, también debe utilizar Common Language Runtime (CLR), la sintaxis de C++/CLI y objetos administrados. Para obtener más información acerca de `/clr`, consulte [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- Cuando se compila con **/CLR**, el compilador convertirá los literales de cadena a cadenas de tipo <xref:System.String>. Para mantener la compatibilidad con el código existente, existen dos excepciones a esto:  
+ Al compilar con `/clr`, el compilador convierte los literales de cadena a cadenas de tipo <xref:System.String>. Para mantener la compatibilidad con el código existente, existen dos excepciones a esto:  
   
 -   Control de excepciones. Cuando se produce un literal de cadena, el compilador lo detectará como literal de cadena.  
   
@@ -78,7 +77,6 @@ using namespace default;
  Opción del compilador: **/clr**  
   
 ### <a name="examples"></a>Ejemplos  
- **Ejemplo**  
   
  En el ejemplo de código siguiente se muestra la concatenación y la comparación de cadenas.  
   
@@ -169,8 +167,6 @@ abc
 n is empty  
 ```  
   
- **Ejemplo**  
-  
  En el ejemplo siguiente se muestra cómo sobrecargar los operadores proporcionados por el compilador, y cómo el compilador buscará una sobrecarga de función basada en el tipo <xref:System.String>.  
   
 ```cpp  
@@ -230,8 +226,6 @@ String ^ a
   
 const char * a  
 ```  
-  
- **Ejemplo**  
   
  En el ejemplo siguiente se muestra que el compilador distingue entre cadenas nativas y cadenas <xref:System.String>.  
   

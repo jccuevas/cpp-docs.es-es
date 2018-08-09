@@ -71,18 +71,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe1173b122e64f9b75af2f8186bf52b50003e5ab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a88994133b65432566254fb77ddc35d5f2aab47b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463621"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644874"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Compatibilidad de compilador para type traits (Extensiones de componentes de C++)
 El compilador admite *rasgos de tipos*, que indican diversas características de un tipo en tiempo de compilación.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
- **Comentarios**  
+### <a name="remarks"></a>Comentarios  
   
  Los rasgos de tipo son especialmente útiles para los programadores que escriben las bibliotecas.  
   
@@ -92,9 +92,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_assign(` `type` `)`  
   
-     Devuelve true si el tipo de plataforma o nativo tiene un operador de asignación de copia.  
+     Devuelve **true** si la plataforma o tipo nativo tiene un operador de asignación de copia.  
   
-    ```  
+    ```cpp  
     ref struct R {  
     void operator=(R% r) {}  
     };  
@@ -106,9 +106,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_copy(` `type` `)`  
   
-     Devuelve true si el tipo de plataforma o nativo tiene un constructor de copias.  
+     Devuelve **true** si la plataforma o tipo nativo tiene un constructor de copias.  
   
-    ```  
+    ```cpp  
     ref struct R {  
     R(R% r) {}  
     };  
@@ -120,9 +120,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_finalizer(` `type` `)`  
   
-     (No se admite en [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)]). Devuelve true si el tipo CLR tiene un finalizador. Consulte [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obtener más información.  
+     (No se admite en [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)]). Devuelve **true** si el tipo CLR tiene un finalizador. Consulte [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obtener más información.  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref struct R {  
     ~R() {}  
@@ -137,9 +137,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_nothrow_assign(` `type` `)`  
   
-     Devuelve true si un operador de asignación de copia tiene una especificación de excepción vacía.  
+     Devuelve **true** si un operador de asignación de copia tiene una especificación de excepción vacía.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     void operator=(S& r) throw() {}  
@@ -153,9 +153,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_nothrow_constructor(` `type` `)`  
   
-     Devuelve true si el constructor predeterminado tiene una especificación de excepción vacía.  
+     Devuelve **true** si el constructor predeterminado tiene una especificación de excepción vacía.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S() throw() {}  
@@ -169,9 +169,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_nothrow_copy(` `type` `)`  
   
-     Devuelve true si el constructor de copia tiene una especificación de excepción vacía.  
+     Devuelve **true** si el constructor de copia tiene una especificación de excepción vacía.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     S(S& r) throw() {}  
@@ -185,9 +185,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_trivial_assign(` `type` `)`  
   
-     Devuelve true si el tipo tiene un operador trivial de asignaciones generado por el compilador   
+     Devuelve **true** si el tipo tiene un operador de asignación triviales, generado por el compilador.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -199,9 +199,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_trivial_constructor(` `type` `)`  
   
-     Devuelve true si el tipo tiene un constructor trivial de asignaciones generado por el compilador   
+     Devuelve **true** si el tipo tiene un constructor trivial, generado por el compilador.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -213,9 +213,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_trivial_copy(` `type` `)`  
   
-     Devuelve true si el tipo tiene un constructor trivial de copias generado por el compilador   
+     Devuelve **true** si el tipo tiene un constructor de copias trivial, generado por el compilador.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -227,7 +227,7 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_trivial_destructor(` `type` `)`  
   
-     Devuelve true si el tipo tiene un destructor trivial de asignaciones generado por el compilador   
+     Devuelve **true** si el tipo tiene un destructor trivial, generado por el compilador.  
   
     ``` cpp 
     // has_trivial_destructor.cpp  
@@ -242,7 +242,7 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_user_destructor(` `type` `)`  
   
-     Devuelve true si el tipo de plataforma o nativo tiene un destructor declarado por el usuario.  
+     Devuelve **true** si la plataforma o tipo nativo tiene un destructor declarado por el usuario.  
   
     ```cpp
     // has_user_destructor.cpp  
@@ -259,7 +259,7 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__has_virtual_destructor(` `type` `)`  
   
-     Devuelve true si el tipo tiene un destructor virtual.  
+     Devuelve **true** si el tipo tiene un destructor virtual.  
   
      `__has_virtual_destructor` también funciona en tipos de plataforma, y cualquier destructor definido por el usuario en un tipo de plataforma es un destructor virtual.  
   
@@ -278,7 +278,7 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_abstract(` `type` `)`  
   
-     Devuelve true si el tipo es un tipo abstracto. Para obtener más información sobre tipos abstractos nativos, vea [abstracta](../windows/abstract-cpp-component-extensions.md).  
+     Devuelve **true** si el tipo es un tipo abstracto. Para obtener más información sobre tipos abstractos nativos, vea [abstracta](../windows/abstract-cpp-component-extensions.md).  
   
      `__is_abstract` también funciona en los tipos de plataforma. Una interfaz con al menos un miembro es un tipo abstracto, como también lo es un tipo de referencia con al menos un miembro abstracto. Para obtener más información sobre tipos abstractos de plataforma, consulte [clases abstractas](../cpp/abstract-classes-cpp.md)  
   
@@ -297,9 +297,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_base_of(` `base` `,` `derived` `)`  
   
-     Devuelve true si el primer tipo es una clase base del segundo tipo o si ambos tipos son iguales.  
+     Devuelve **true** si el primer tipo es una clase base del segundo tipo, of si ambos tipos son iguales.  
   
-     `__is_base_of` también funciona en tipos de plataforma. Por ejemplo, devolverá true si el primer tipo es un [clase interface](../windows/interface-class-cpp-component-extensions.md) y el segundo tipo implementa la interfaz.  
+     `__is_base_of` también funciona en tipos de plataforma. Por ejemplo, devolverá **true** si el primer tipo es un [clase interface](../windows/interface-class-cpp-component-extensions.md) y el segundo tipo implementa la interfaz.  
   
     ```cpp
     // is_base_of.cpp  
@@ -318,9 +318,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_class(` `type` `)`  
   
-     Devuelve true si el tipo es una clase o struct nativo.  
+     Devuelve **true** si el tipo es una clase o struct nativo.  
   
-    ```
+    ```cpp
     #include <stdio.h>  
     struct S {};  
   
@@ -332,9 +332,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_convertible_to(` `from` `,`  `to` `)`  
   
-     Devuelve true si el primer tipo se puede convertir en el segundo tipo.  
+     Devuelve **true** si el primer tipo se puede convertir al tipo de segundo.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
     struct T : public S {};  
@@ -350,9 +350,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_delegate(` `type` `)`  
   
-     Devuelve true si `type` es un delegado. Para obtener más información, consulte [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).  
+     Devuelve **true** si `type` es un delegado. Para obtener más información, consulte [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     delegate void MyDel();  
     int main() {  
     System::Console::WriteLine(__is_delegate(MyDel));  
@@ -361,9 +361,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_empty(` `type` `)`  
   
-     Devuelve true si el tipo no tiene ningún miembro de datos de instancia.  
+     Devuelve **true** si el tipo no tiene ningún miembro de datos de instancia.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     int Test() {}  
@@ -377,7 +377,7 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_enum(` `type` `)`  
   
-     Devuelve true si el tipo es una enumeración nativa.  
+     Devuelve **true** si el tipo es una enumeración nativa.  
   
     ```cpp
     // is_enum.cpp  
@@ -399,7 +399,7 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_interface_class(` `type` `)`  
   
-     Devuelve true si se pasa una interfaz de plataforma. Para obtener más información, consulte [clase de interfaz](../windows/interface-class-cpp-component-extensions.md).  
+     Devuelve **true** si pasa una interfaz de plataforma. Para obtener más información, consulte [clase de interfaz](../windows/interface-class-cpp-component-extensions.md).  
   
     ```cpp
     // is_interface_class.cpp  
@@ -413,11 +413,11 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_pod(` `type` `)`  
   
-     Devuelve true si el tipo es una clase o unión sin constructor ni ningún miembro no estático privado o protegido, sin clases base y sin funciones virtuales. Vea el estándar de C++, secciones 8.5.1/1, 9/4 y 10 3.9 para más información sobre POD.  
+     Devuelve **true** si el tipo es una clase o unión con ningún constructor o miembro no estático privado o protegido, ninguna clase base y ninguna función virtual. Vea el estándar de C++, secciones 8.5.1/1, 9/4 y 10 3.9 para más información sobre POD.  
   
      `__is_pod` devuelve false en tipos fundamentales.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {};  
   
@@ -429,9 +429,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_polymorphic(` `type` `)`  
   
-     Devuelve true si un tipo nativo tiene funciones virtuales.  
+     Devuelve **true** si un tipo nativo tiene funciones virtuales.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     struct S {  
     virtual void Test(){}  
@@ -445,9 +445,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_ref_array(` `type` `)`  
   
-     Devuelve true si se pasa una matriz de plataforma. Para obtener más información, consulte [matrices](../windows/arrays-cpp-component-extensions.md).  
+     Devuelve **true** si pasa una matriz de plataforma. Para obtener más información, consulte [matrices](../windows/arrays-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     int main() {  
     array<int>^ x = gcnew array<int>(10);  
@@ -457,9 +457,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_ref_class(` `type` `)`  
   
-     Devuelve true si se pasa una clase de referencia. Para obtener más información sobre los tipos de referencia definidos por el usuario, consulte [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Devuelve **true** si pasa una clase de referencia. Para obtener más información sobre los tipos de referencia definidos por el usuario, consulte [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     int main() {  
@@ -470,9 +470,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_sealed(` `type` `)`  
   
-     Devuelve true si se pasa una tipo de plataforma o nativo marcado como sealed. Para obtener más información, consulte [sealed](../windows/sealed-cpp-component-extensions.md).  
+     Devuelve **true** si pasa una plataforma o tipo nativo marcado como sealed. Para obtener más información, consulte [sealed](../windows/sealed-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     ref class R sealed{};  
     int main() {  
     System::Console::WriteLine(__is_sealed(R));  
@@ -481,9 +481,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_simple_value_class(` `type` `)`  
   
-     Devuelve true si se pasa un tipo de valor que no contiene referencias al montón de recolección de elementos no usados. Para obtener más información sobre los tipos de valor definido por el usuario, consulte [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Devuelve **true** si pasa un tipo de valor que no contiene referencias al montón de recolección. Para obtener más información sobre los tipos de valor definido por el usuario, consulte [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     using namespace System;  
     ref class R {};  
     value struct V {};  
@@ -499,9 +499,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_union(` `type` `)`  
   
-     Devuelve true si un tipo es una unión.  
+     Devuelve **true** si un tipo es una unión.  
   
-    ```  
+    ```cpp  
     #include <stdio.h>  
     union A {  
     int i;  
@@ -516,9 +516,9 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
   
 -   `__is_value_class(` `type` `)`  
   
-     Devuelve true si se pasa un tipo de valor. Para obtener más información sobre los tipos de valor definido por el usuario, consulte [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+     Devuelve **true** si pasa un tipo de valor. Para obtener más información sobre los tipos de valor definido por el usuario, consulte [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-    ```  
+    ```cpp  
     value struct V {};  
   
     int main() {  
@@ -527,25 +527,25 @@ El compilador admite *rasgos de tipos*, que indican diversas características de
     ```  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
- **Comentarios**  
+### <a name="remarks"></a>Comentarios  
   
  El `__has_finalizer(` *tipo* `)` rasgo de tipo no se admite porque esta plataforma no admite los finalizadores.  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/ZW**  
+ Opción del compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Comentarios**  
+### <a name="remarks"></a>Comentarios  
   
  (No hay ninguna observación específica de la plataforma para esta característica).  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/clr**  
+ Opción del compilador: `/clr`  
   
 ### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- El ejemplo de código siguiente muestra cómo usar una plantilla de clase para exponer un rasgo de tipo para un **/CLR** compilación. Para obtener más información, consulte [en tiempo de ejecución de Windows y plantillas administradas](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
+ En el ejemplo de código siguiente se muestra cómo usar una plantilla de clase para exponer un rasgo de tipo de compilador para una compilación de `/clr`. Para obtener más información, consulte [en tiempo de ejecución de Windows y plantillas administradas](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
 ```cpp  
 // compiler_type_traits.cpp  
@@ -566,8 +566,6 @@ int main () {
       Console::WriteLine("R is not a ref class");  
 }  
 ```  
-  
- **Salida**  
   
 ```Output  
 R is a ref class  

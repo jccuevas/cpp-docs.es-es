@@ -1,5 +1,5 @@
 ---
-title: Cambiar un símbolo o el nombre de símbolo (ID) | Documentos de Microsoft
+title: Cambiar un símbolo o el nombre de símbolo (ID) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28d31fc27fdc51a3a5b05dba96ab9decf4fc7e00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd9d2429f1257711d766d8e51b890e2e8a59b8d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857719"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642261"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>Cambiar un símbolo o el nombre de un símbolo (ID)
 Cuando se crea un nuevo recurso u objeto de recurso, el entorno de desarrollo le asigna un nombre de símbolo predeterminado, por ejemplo, IDD_DIALOG1. Puede usar el [ventana propiedades](/visualstudio/ide/reference/properties-window) para cambiar el nombre del símbolo predeterminado o para cambiar el nombre de cualquier símbolo ya asociado a un recurso.  
@@ -35,16 +35,13 @@ Cuando se crea un nuevo recurso u objeto de recurso, el entorno de desarrollo le
     > [!NOTE]
     >  Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  En el **propiedades** ventana, escriba un nombre de símbolo nuevo o seleccione en la lista de símbolos existentes, en la **identificador** cuadro.  
+2.  En el **propiedades** ventana, escriba un nombre de símbolo nuevo o seleccione en la lista de símbolos existentes en el **ID** cuadro.  
   
      Si escribe un nombre de símbolo nuevo, se le asigna automáticamente un valor.  
   
- Puede usar el [cuadro de diálogo símbolos de recursos](../windows/resource-symbols-dialog-box.md) para cambiar los nombres de símbolos que no estén asignados a un recurso. Para obtener más información, consulte [cambiar símbolos sin asignar](../windows/changing-unassigned-symbols.md).  
+ Puede usar el [cuadro de diálogo símbolos de recursos](../windows/resource-symbols-dialog-box.md) para cambiar los nombres de los símbolos no estén asignados a un recurso. Para obtener más información, consulte [cambiar símbolos sin asignar](../windows/changing-unassigned-symbols.md).  
   
-
-  
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  

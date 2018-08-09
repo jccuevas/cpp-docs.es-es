@@ -1,5 +1,5 @@
 ---
-title: 'Simpleactivationfactory:: Activateinstance (método) | Documentos de Microsoft'
+title: Método Simpleactivationfactory | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5af4bfd22302b7694b9bafbc1452d636b19cb3c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe1342c3927183ae5eec30c8dd0a40ee95f37277
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889428"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646567"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance (Método)
 
@@ -39,7 +39,7 @@ STDMETHOD( ActivateInstance )(
 ### <a name="parameters"></a>Parámetros
 
 *ppvObject*  
-Cuando se completa esta operación, puntero a una instancia del objeto especificado por el `Base` parámetro de plantilla de clase.
+Cuando finalice esta operación, puntero a una instancia del objeto especificado por el `Base` parámetro de plantilla de clase.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -47,7 +47,7 @@ S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el erro
 
 ## <a name="remarks"></a>Comentarios
 
-Si &#95; &#95;WRL_STRICT&#95; &#95; está definido, se genera un error de aserción si no se deriva la clase base especificada en el parámetro de plantilla de clase [RuntimeClass](../windows/runtimeclass-class.md), o no está configurado con el elemento WinRt o WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valor de enumeración.
+Si &#95; &#95;WRL_STRICT&#95; &#95; está definido, se genera un error de aserción si no se deriva de la clase base especificada en el parámetro de plantilla de clase [RuntimeClass](../windows/runtimeclass-class.md), o no está configurado con el WinRt o WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valor de enumeración.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -56,5 +56,4 @@ Si &#95; &#95;WRL_STRICT&#95; &#95; está definido, se genera un error de aserci
 **Espacio de nombres:** Microsoft::WRL
 
 ## <a name="see-also"></a>Vea también
-
-[SimpleActivationFactory (clase)](../windows/simpleactivationfactory-class.md)
+ [SimpleActivationFactory (clase)](../windows/simpleactivationfactory-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Miembro de datos Srwlock_ | Documentos de Microsoft
+title: Miembro de datos Srwlock_ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77b6d10e4343fd17c8bd65e232d29923214eff0c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf6e43c6e8672e8bd3b1f895658a1c16dbe77faa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889113"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647497"
 ---
 # <a name="srwlocksrwlock-data-member"></a>SRWLock::SRWLock_ (Miembro de datos)
-Contiene la variable subyacente de bloqueo para el objeto de SRWLock actual.  
+Contiene la variable subyacente de bloqueo actual **SRWLock** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   

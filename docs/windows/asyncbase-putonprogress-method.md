@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a9460664ed58cf39f7b295e1406649ad1d66ca9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a99eee63496632b8f0918ee888e6a824424b757d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467422"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649895"
 ---
 # <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress (Método)
 Establece la dirección del controlador de eventos de progreso en el valor especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 STDMETHOD(  
    PutOnProgress  
 )(TProgress* progressHandler);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *progressHandler*  
  La dirección a la que se establece el controlador de eventos de progreso.  
   

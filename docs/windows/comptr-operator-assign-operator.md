@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fac3a845ea7c512f5a7ccffdabdf67ce26029ff8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3ff70348f2305a5c75515630a5b6b9e2937494b5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466168"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641283"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator= (Operador)
 Asigna un valor a la actual **ComPtr**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 WRL_NOTHROW ComPtr& operator=(  
    decltype(__nullptr)  
 );  
@@ -56,7 +56,7 @@ WRL_NOTHROW ComPtr& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *U*  
  Una clase.  
   

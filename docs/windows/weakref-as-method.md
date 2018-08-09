@@ -1,5 +1,5 @@
 ---
-title: 'Weakref:: As (método) | Documentos de Microsoft'
+title: Método Weakref | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e694b4c86194402f48d335aac353e48c3de79a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 938c7c796bf88d4ea1e49f1f59d274b5017aa7de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890708"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649307"
 ---
 # <a name="weakrefas-method"></a>WeakRef::As (Método)
-Establece el parámetro de puntero ComPtr especificado para representar la interfaz especificada.  
+Establece el texto especificado `ComPtr` parámetro de puntero para representar la interfaz especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* ptr  
@@ -42,27 +41,27 @@ HRESULT As(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `U`  
+### <a name="parameters"></a>Parámetros  
+ *U*  
  Id. de interfaz.  
   
- `ptr`  
- Cuando se completa esta operación, un objeto que representa el parámetro `U`.  
+ *ptr*  
+ Cuando finalice esta operación, un objeto que representa el parámetro *U*.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
--   S_OK si esta operación es correcta; de lo contrario, un HRESULT que indica el motivo del error de la operación y `ptr` se establece en `nullptr`.  
+-   S_OK si esta operación se realiza correctamente; en caso contrario, un HRESULT que indica el motivo del error en la operación, y *ptr* está establecido en **nullptr**.  
   
--   S_OK si esta operación es correcta, pero el objeto WeakRef actual ya se ha liberado. El parámetro `ptr` se establece en `nullptr`.  
+-   S_OK si esta operación se realiza correctamente, pero actual **WeakRef** objeto ya se ha liberado. Parámetro *ptr* está establecido en **nullptr**.  
   
--   S_OK si esta operación se realiza correctamente, pero el objeto WeakRef actual no se deriva del parámetro `U`. El parámetro `ptr` se establece en `nullptr`.  
+-   S_OK si esta operación se realiza correctamente, pero actual **WeakRef** objeto no se deriva de parámetro *U*. Parámetro *ptr* está establecido en **nullptr**.  
   
 ## <a name="remarks"></a>Comentarios  
- Se genera un error si el parámetro `U` es IWeakReference, o no se deriva de IInspectable.  
+ Se genera un error si parámetro *U* es `IWeakReference`, o no se deriva `IInspectable`.  
   
  La primera plantilla es el formulario que debe usar en el código. La segunda plantilla es una especialización de aplicación auxiliar interna, que admite características del lenguaje C++, como palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .  
   
- A partir del SDK de Windows 10, este método no establece la instancia de WeakRef en `nullptr` si no se pudo obtener la referencia débil, por lo que debería evitar código de comprobación de errores que comprueba la WeakRef para `nullptr`. En su lugar, compruebe `ptr` para `nullptr`.  
+ A partir del SDK de Windows 10, este método no establece la **WeakRef** instancia a **nullptr** si no se pudo obtener la referencia débil, por lo que debería evitar código de comprobación de errores que comprueba la WeakRef para **nullptr**. En su lugar, compruebe *ptr* para **nullptr**.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  

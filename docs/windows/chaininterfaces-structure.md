@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7765ab5159f7cfd604f67b79a05fde8eaf57fad8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461538"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646710"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (estructura)
 Especifica las funciones de comprobación e inicialización que se pueden aplicar a un conjunto de identificadores de interfaz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template <  
    typename I0,  
    typename I1,  
@@ -60,7 +60,7 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *I0*  
  (Obligatorio) Id. de interfaz 0.  
   
@@ -106,8 +106,8 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[ChainInterfaces::CanCastTo (método)](../windows/chaininterfaces-cancastto-method.md)|Indica si el identificador de interfaz especificado puede convertirse a cada una de las especializaciones definidas por los parámetros de plantilla ChainInterface.|  
-|[ChainInterfaces::CastToUnknown (método)](../windows/chaininterfaces-casttounknown-method.md)|Convierte el puntero de interfaz del tipo definido por el *I0* parámetro de plantilla en un puntero a IUnknown.|  
+|[ChainInterfaces::CanCastTo (método)](../windows/chaininterfaces-cancastto-method.md)|Indica si el identificador de interfaz especificado puede convertirse a cada una de las especializaciones definidas por el **ChainInterface** parámetros de plantilla.|  
+|[ChainInterfaces::CastToUnknown (método)](../windows/chaininterfaces-casttounknown-method.md)|Convierte el puntero de interfaz del tipo definido por el *I0* parámetro de plantilla en un puntero a `IUnknown`.|  
 |[ChainInterfaces::FillArrayWithIid (método)](../windows/chaininterfaces-fillarraywithiid-method.md)|Almacena el identificador de interfaz definido por el *I0* parámetro de plantilla en una ubicación especificada en una matriz especificada de identificadores de interfaz.|  
 |[ChainInterfaces::Verify (método)](../windows/chaininterfaces-verify-method.md)|Comprueba que cada interfaz definida por los parámetros de plantilla *I0* a través de *I9* hereda `IUnknown` o `IInspectable`y que *I0* hereda de *I1* a través de *I9*.|  
   

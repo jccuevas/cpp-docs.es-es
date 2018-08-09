@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d8dfc618ba8871a06da6ddd9d1754bc1543654d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 30be6015fec0f210f0b1f70502881f2ce2c3b54b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462471"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644322"
 ---
 # <a name="comptrinternalrelease-method"></a>ComPtr::InternalRelease (Método)
 Realiza una operación de liberación de COM en la interfaz asociada a este **ComPtr**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 void InternalRelease();  
 ```  
   

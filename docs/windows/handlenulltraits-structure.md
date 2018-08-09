@@ -1,5 +1,5 @@
 ---
-title: HANDLENullTraits (estructura) | Documentos de Microsoft
+title: HANDLENullTraits (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b7daa319b927d168d39f0981c00b5fbe92063c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e009b31f95f2cdf80231021c38848fbc30ce20d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877883"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645443"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits (estructura)
 Define las características comunes de un identificador sin inicializar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 struct HANDLENullTraits;  
 ```  
   

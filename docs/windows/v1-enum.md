@@ -1,5 +1,5 @@
 ---
-title: v1_enum | Documentos de Microsoft
+title: v1_enum | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3156554f5d2b799a9e1ef5a067d1f2e8e600d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15e51719e1daecc440dc5945a54443e4bc5079ec
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890666"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644370"
 ---
 # <a name="v1enum"></a>v1_enum
-Indica que el tipo enumerado especificado se transmiten como una entidad de 32 bits en lugar de con el valor predeterminado de 16 bits.  
+Indica que el tipo enumerado especificado se transmite como una entidad de 32 bits en lugar de con el valor predeterminado de 16 bits.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [v1_enum]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **v1_enum** atributo C++ tiene la misma funcionalidad que la [v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) atributo MIDL.  
+ El **v1_enum** atributo de C++ tiene la misma funcionalidad que el [v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente muestra un uso de **v1_enum**:  
   
-```  
+```cpp  
 // cpp_attr_ref_v1_enum.cpp  
 // compile with: /LD  
 [module(name="MyLibrary")];  

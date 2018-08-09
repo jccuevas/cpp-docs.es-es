@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deeb40e54c0324874d9c99a42a98e7e852394dc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570677"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643194"
 ---
 # <a name="generic-classes-ccli"></a>Clases genéricas (C++/CLI)
 Se declara una clase genérica con el formato siguiente:  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [attributes]  
 generic <class-key type-parameter-identifier(s)>  
 [constraint-clauses]  
@@ -45,7 +45,7 @@ class-body
 ## <a name="remarks"></a>Comentarios  
  En la sintaxis anterior, se utilizan los términos siguientes:  
   
- `attributes` (opcional)  
+ *atributos* (opcional)  
  Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea atributos.  
   
  *clave de clase*  
@@ -57,7 +57,7 @@ class-body
  *cláusulas de restricción*  
  Una lista (no separados por comas) de **donde** cláusulas especifica las restricciones para los parámetros de tipo. Toma la forma:  
   
- `where`  *identificador de parámetro de tipo*`:`*lista de restricciones*   `...`  
+ `where`  *identificador de parámetro de tipo*`:`*lista de restricciones*  `...`  
   
  *lista de restricciones*  
  *clase o interfaz*[`,` *...* ]  
@@ -429,7 +429,7 @@ ref struct Outer {
 };  
 ```  
   
- El tipo exterior\<int >:: interno no es el mismo que el tipo exterior\<double >:: interna.  
+ El tipo `Outer<int>::Inner` no es igual al tipo `Outer<double>::Inner`.  
   
  Al igual que con los métodos genéricos en clases genéricas, se pueden definir parámetros de tipo adicionales para el tipo anidado. Si usa los mismos nombres de parámetro de tipo en la clase interna y externa, el parámetro de tipo interno oculta el parámetro de tipo externo.  
   
@@ -449,7 +449,7 @@ ref class Outer {
   
  Dado que no hay ninguna manera de hacer referencia al parámetro de tipo externo, el compilador generará una advertencia en esta situación.  
   
- Cuando se denominan construidos tipos genéricos anidados, el parámetro de tipo para el tipo externo no se incluye en la lista de parámetros de tipo para el tipo interno, aunque el tipo interno se parametriza implícitamente por el parámetro de tipo del tipo externo. En el caso anterior, un nombre de un tipo construido sería Outer\<int >:: interna\<string >.  
+ Cuando se denominan construidos tipos genéricos anidados, el parámetro de tipo para el tipo externo no se incluye en la lista de parámetros de tipo para el tipo interno, aunque el tipo interno se parametriza implícitamente por el parámetro de tipo del tipo externo. En el caso anterior, sería un nombre de un tipo construido `Outer<int>::Inner<string>`.  
   
  El ejemplo siguiente muestra la creación y lectura de una lista vinculada de uso de los tipos anidados en clases genéricas.  
   
@@ -548,7 +548,7 @@ Reading nodes:
   
 -   Propiedades, eventos, indizadores y operadores que pueden usar los parámetros de tipo de la clase contenedora genérica como valores devueltos, parámetros o variables locales, como cuando `ItemType` es un parámetro de tipo de una clase:  
   
-    ```  
+    ```cpp  
     public ItemType MyProperty {}  
     ```  
   

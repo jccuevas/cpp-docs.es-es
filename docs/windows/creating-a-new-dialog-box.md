@@ -1,5 +1,5 @@
 ---
-title: Crear un nuevo cuadro de diálogo | Documentos de Microsoft
+title: Crear un nuevo cuadro de diálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e0fe5ddf8b54078e8578396d2ed41ebd15da66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101c135a5ebf4d188a1e241c9d343580c13b247a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872149"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653032"
 ---
 # <a name="creating-a-new-dialog-box"></a>Crear un nuevo cuadro de diálogo
 ### <a name="to-create-a-new-dialog-box"></a>Para crear un nuevo cuadro de diálogo  
@@ -33,22 +33,20 @@ ms.locfileid: "33872149"
     > [!NOTE]
     >  Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  En el **Agregar recurso** cuadro de diálogo, seleccione **diálogo** en el **tipo de recurso** lista, a continuación, haga clic en **nuevo**.  
+2.  En el **Agregar recurso** cuadro de diálogo, seleccione **diálogo** en el **tipo de recurso** lista y, después, haga clic en **New**.  
   
-     Si aparece un signo más (+) situado junto al tipo de recurso de cuadro de diálogo, significa que están disponibles plantillas de cuadro de diálogo. Haga clic en el signo más para expandir la lista de plantillas, seleccione una plantilla y haga clic en nuevo.  
+     Si un signo más (**+**) aparece junto a la **diálogo** tipo de recurso, significa que están disponibles plantillas de cuadro de diálogo. Haga clic en el signo más para expandir la lista de plantillas, seleccione una plantilla y haga clic en **New**.  
   
-     Se abre el cuadro de diálogo nuevo en el editor de cuadro de diálogo.  
+     Se abre el cuadro de diálogo nuevo en el **diálogo** editor.  
   
-     También puede [abrir los cuadros de diálogo existentes en el editor de cuadros de diálogo para editar](../windows/viewing-and-editing-resources-in-a-resource-editor.md).  
+     También puede [abrir cuadros de diálogo existentes en el editor de cuadro de diálogo para editar](../windows/viewing-and-editing-resources-in-a-resource-editor.md).  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
  [Cómo: crear un recurso](../windows/how-to-create-a-resource.md)   
  [Archivos de recursos](../windows/resource-files-visual-studio.md)   
  [Editor de cuadros de diálogo](../windows/dialog-editor.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Configuración de cuadrícula (Editor de imágenes para iconos) | Documentos de Microsoft
+title: Cuadro de diálogo Configuración de cuadrícula (Editor de imágenes para iconos) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8e3a1aba4040ce4e9f36cf15438cfd1c44492e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46c08686d2586801aea46c23e7105dc1b6ead639
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873581"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643139"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>Configuración de la cuadrícula (Cuadro de diálogo) (Editor de imágenes para iconos)
-Le permite especificar la configuración de la cuadrícula para la imagen y muestra las líneas de cuadrícula en la imagen editada. Las líneas son útiles para editar la imagen, pero no se guardan como parte de la propia imagen.  
+Le permite especificar la configuración de la cuadrícula para la imagen y muestra las líneas de cuadrícula a lo largo de la imagen editada. Las líneas son útiles para editar la imagen, pero no se guardan como parte de la imagen en Sí.  
   
  **Cuadrícula de píxeles**  
- Cuando se activa, muestra una cuadrícula alrededor de cada píxel en el editor de imágenes. La cuadrícula aparece solo en 4 × y resoluciones más altas.  
+ Cuando está activada, se muestra una cuadrícula alrededor de cada píxel en el editor de imágenes. La cuadrícula aparece sólo en 4 × y resoluciones más altas.  
   
  **Cuadrícula de mosaico**  
  Cuando se selecciona, muestra una cuadrícula alrededor de los bloques de píxeles en el editor de imágenes, especificado por los valores de espaciado de cuadrícula.  
@@ -46,4 +46,3 @@ Le permite especificar la configuración de la cuadrícula para la imagen y mues
 ## <a name="see-also"></a>Vea también  
  [Cambiar el tamaño de una imagen](../windows/resizing-an-image-image-editor-for-icons.md)   
  [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)
-

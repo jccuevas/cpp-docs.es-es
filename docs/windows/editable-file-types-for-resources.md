@@ -1,5 +1,5 @@
 ---
-title: Tipos de archivos editables para recursos | Documentos de Microsoft
+title: Tipos de archivos editables para recursos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11d3229341ece1bbee0820a7e2320b8ef6b0381b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870255"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648436"
 ---
 # <a name="editable-file-types-for-resources"></a>Tipos de archivos editables para recursos
 Puede abrir los siguientes tipos de archivos y editar los recursos que contienen.  
@@ -38,8 +38,6 @@ Puede abrir los siguientes tipos de archivos y editar los recursos que contienen
 |.exe|Archivos ejecutables.|  
 |.dll|Archivos de la biblioteca de vínculos dinámicos.|  
 |.bmp, .ico, .dib y .cur|Archivos de mapa de bits, icono, barra de herramientas y archivos de cursor.|  
-  
-
   
 ## <a name="requirements"></a>Requisitos  
  Win32  

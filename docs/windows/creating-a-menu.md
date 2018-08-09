@@ -1,5 +1,5 @@
 ---
-title: Crear un menú | Documentos de Microsoft
+title: Creación de un menú | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d9051e44216de9a64b68fc112fe8f17de112e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b220f51b0c5bf8bc139b3c7ccdb1953de310ec4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882081"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644062"
 ---
 # <a name="creating-a-menu"></a>Crear un menú
 > [!NOTE]
->  La ventana de recursos no está disponible en las ediciones Express.  
+>  El **ventana recursos** no está disponible en las ediciones Express.  
   
 ### <a name="to-create-a-standard-menu"></a>Para crear un menú estándar  
   
@@ -49,12 +49,11 @@ Cuadro Nuevo elemento
 Cuadro Nuevo elemento con el foco desplazado al escribir el nombre del nuevo menú  
   
     > [!NOTE]
-    >  Para crear un menú de un solo elemento en la barra de menús, establezca la propiedad Popup en False.  
+    >  Para crear un solo elemento de menú en la barra de menús, establezca la **emergente** propiedad **False**.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  

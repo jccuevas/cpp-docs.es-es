@@ -1,5 +1,5 @@
 ---
-title: Estados del Editor de cuadro de diálogo (guías y cuadrículas) | Documentos de Microsoft
+title: Estados del Editor de cuadro de diálogo (guías y cuadrículas) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efce034d681fc13d59020619af4731e36cd30674
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b1405597e933e36e6a080c5c1defd98006a1064f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872840"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649323"
 ---
 # <a name="dialog-editor-states-guides-and-grids"></a>Estados del Editor de cuadros de diálogo (Guías y cuadrículas)
-Puede organizar los controles en los cuadros de diálogo con el editor de cuadro de diálogo en uno de tres estados diferentes:  
+Puede organizar los controles de cuadros de diálogo con el **diálogo** editor en uno de tres estados diferentes:  
   
 -   Con las guías y márgenes en (valor predeterminado)  
   
 -   Con la cuadrícula de diseño en  
   
--   Sin las características de ajuste o alineación  
+-   Sin ninguna característica de ajuste o alineación  
   
  El [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) contiene botones que controlan el estado. Para cambiar el estado, haga clic en el icono adecuado. También puede cambiar el estado mediante el uso de la **configuración de la guía** comando el **formato** menú.  
   
@@ -41,13 +41,12 @@ Puede organizar los controles en los cuadros de diálogo con el editor de cuadro
   
 -   [Modificación de la cuadrícula de diseño](../windows/modifying-the-layout-grid.md)  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
- [Organización de los controles de cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Organización de los controles en cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles (MFC)](../mfc/controls-mfc.md)
-

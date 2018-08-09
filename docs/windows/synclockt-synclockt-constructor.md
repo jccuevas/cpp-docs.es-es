@@ -1,5 +1,5 @@
 ---
-title: Constructor Synclockt | Documentos de Microsoft
+title: Constructor Synclockt | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3353df1a73821a2009aeba2367f1892b06aba5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ceaafd6230e6497ed2b7636ad5070141546cb8d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889851"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648170"
 ---
 # <a name="synclocktsynclockt-constructor"></a>SyncLockT::SyncLockT (Constructor)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,17 +39,17 @@ explicit SyncLockT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `other`  
- Una referencia a valor r a otro objeto SyncLockT.  
+### <a name="parameters"></a>Parámetros  
+ *other*  
+ Una referencia rvalue a otro **SyncLockT** objeto.  
   
- `sync`  
- Una referencia a otro objeto de SyncLockWithStatusT.  
+ *sync*  
+ Una referencia a otro `SyncLockWithStatusT` objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- Inicializa una nueva instancia de la clase SyncLockT.  
+ Inicializa una nueva instancia de la **SyncLockT** clase.  
   
- El primer constructor inicializa el objeto de SyncLockT actual de otro objeto SyncLockT especificado por el parámetro `other`y, a continuación, se invalidan del otro objeto SyncLockT. El segundo constructor es `protected`y se inicializa el objeto de SyncLockT actual en un estado no válido.  
+ El primer constructor inicializa actual **SyncLockT** objeto desde otro **SyncLockT** objeto especificado por el parámetro *otros*y, a continuación, se invalidan los otros  **SyncLockT** objeto. Es el segundo constructor **protegido**e inicializa actual **SyncLockT** objeto a un estado no válido.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

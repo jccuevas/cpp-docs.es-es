@@ -22,19 +22,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e44b5757ea7b9e469275688443ba7ed1e3810571
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: bd38dcf02de661a063df356b7d915eed9814f192
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571394"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652411"
 ---
 # <a name="eventsource"></a>event_source
 Crea un origen de eventos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [ event_source(  
    type,  
    optimize=[speed | size],  
@@ -50,7 +50,7 @@ Crea un origen de eventos.
   
 -   `com` para código COM. Debe usar `coclass` cuando `type`=`com`. Este valor requiere que se incluyan los archivos de encabezado siguientes:  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  

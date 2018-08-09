@@ -1,5 +1,5 @@
 ---
-title: Definir teclas de acceso | Documentos de Microsoft
+title: Definir teclas de acceso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,46 +25,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a60cf597a88fcf7038848be6c9e2d31269f6a906
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 960dcd17a1ff581db540aecfd536e9d2f2e98539
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873698"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645102"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Definir teclas de acceso
-Normalmente, los usuarios del teclado desplazan el foco de entrada de un control a otro en el cuadro de diálogo con las teclas TAB y flecha. Sin embargo, puede definir una tecla de acceso (un nombre de tecla de acceso o fácil de recordar) que permite a los usuarios elegir un control presionando una sola clave.  
+Normalmente, los usuarios del teclado mueve el foco de entrada de un control a otro en un cuadro de diálogo con el **ficha** y **flecha** claves. Sin embargo, puede definir una clave de acceso (un nombre mnemotécnico o fácil de recordar) que permite a los usuarios elegir un control presionando una sola clave.  
   
 ### <a name="to-define-an-access-key-for-a-control-with-a-visible-caption-push-buttons-check-boxes-and-radio-buttons"></a>Para definir una tecla de acceso para un control con un título visible (botones de comando, casillas y botones de radio)  
   
 1.  Seleccione el control en el cuadro de diálogo.  
   
-2.  En el [ventana propiedades](/visualstudio/ide/reference/properties-window), en la **título** propiedad, escriba un nombre nuevo para el control, escriba una y comercial (**&**) delante de la letra que desee utilizar como el tecla de acceso de ese control. Por ejemplo: `&Radio1`.  
+2.  En el [ventana propiedades](/visualstudio/ide/reference/properties-window), en el **título** propiedad, escriba un nombre nuevo para el control, escriba una y comercial (`&`) delante de la letra que desee como tecla de acceso para ese control. Por ejemplo: `&Radio1`.  
   
 3.  Presione **ENTRAR**.  
   
-     Aparece un subrayado en el título mostrado para indicar la tecla de acceso, por ejemplo, **R**adio1.  
+     Aparece un subrayado en el título mostrado para indicar la clave de acceso, por ejemplo, **R**adio1.  
   
 ### <a name="to-define-an-access-key-for-a-control-without-a-visible-caption"></a>Para definir una tecla de acceso para un control sin un título visible  
   
-1.  Cree un título para el control mediante el uso de un **texto estático** controlar en el [cuadro de herramientas](/visualstudio/ide/reference/toolbox).  
+1.  Cree un título para el control mediante el uso de un **texto estático** en controlar la [cuadro de herramientas](/visualstudio/ide/reference/toolbox).  
   
-2.  En el título de texto estático, escriba una y comercial (**&**) delante de la letra que desee utilizar como la clave de acceso.  
+2.  En el título de texto estático, escriba una y comercial (`&`) delante de la letra que desee como tecla de acceso.  
   
-3.  Asegúrese de que el control de texto estático preceda inmediatamente al control que las etiquetas en el orden de tabulación.  
+3.  Asegúrese de que el control de texto estático precede inmediatamente al control correspondiente en el orden de tabulación.  
   
  Todas las claves de acceso dentro de un cuadro de diálogo deben ser únicas.  
   
-#### <a name="to-check-for-duplicate-access-keys"></a>Para comprobar teclas de acceso duplicadas  
+### <a name="to-check-for-duplicate-access-keys"></a>Comprobar teclas de acceso duplicadas  
   
 1.  En el **formato** menú, haga clic en **Comprobar teclas de acceso**.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  
  [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Mostrar u ocultar la ventana colores (Editor de imágenes para iconos) | Documentos de Microsoft
+title: Mostrar u ocultar la ventana colores (Editor de imágenes para iconos) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872047"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645115"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Mostrar u ocultar la ventana Colores (Editor de imágenes para iconos)
 ### <a name="to-display-colors-window"></a>Para mostrar la ventana colores  
   
-1.  Pulse el botón derecho en un **Editor de imágenes** panel y elija **Mostrar ventana colores** en el menú contextual.  
+1.  Haga clic en un **Editor de imágenes** panel y elija **Mostrar ventana colores** en el menú contextual.  
   
      \- o -  
   
-2.  Haga clic en **Mostrar ventana colores** en el [imagen (menú)](../windows/image-menu-image-editor-for-icons.md).  
+2.  Haga clic en **Mostrar ventana colores** en el [menú imagen](../windows/image-menu-image-editor-for-icons.md).  
   
 ### <a name="to-hide-the-colors-window"></a>Para ocultar la ventana colores  
   
-1.  Desanclar la ventana. Esto permitirá que la ventana puede ocultarse automáticamente cuando no está en uso.  
+1.  Desanclar la ventana. Esto permitirá que la ventana de ocultación automática cuando no está en uso.  
   
  \- o -  
   
 -   Haga clic en el **cerrar** botón.  
   
- Requisitos  
-  
+## <a name="requirements"></a>Requisitos  
  Ninguna  
   
 ## <a name="see-also"></a>Vea también  

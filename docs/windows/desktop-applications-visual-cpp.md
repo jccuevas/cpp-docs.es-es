@@ -13,12 +13,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cd8e8c6e3b9626000a8bef3d86a89f5e122d611
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 22f90be7d89a006ccbfdfde2f4c2580a7b2a13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571534"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643850"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicaciones de escritorio (Visual C++)
 Un *aplicación de escritorio* en C++ es una aplicación nativa que puede acceder al conjunto completo de API de Windows y se ejecuta en una ventana o en la consola del sistema. Pueden ejecutar aplicaciones de escritorio de C++ en Windows XP a Windows 10 (aunque no es ya no es compatible oficialmente con Windows XP y hay muchas API de Windows que se han introducido desde entonces).
@@ -26,11 +26,12 @@ Un *aplicación de escritorio* en C++ es una aplicación nativa que puede accede
 Una aplicación de escritorio es distinta de una aplicación plataforma Universal de Windows (UWP), que puede ejecutar en equipos que ejecutan Windows 10 y también en XBox, Windows Phone, Surface Hub y otros dispositivos. Para obtener más información acerca de desktop vs. Las aplicaciones de UWP, vea [elija su tecnología](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
 
 
-**Desktop Bridge** conjunto de API de Windows en Windows 10, puede empaquetar su aplicación de escritorio existente o un objeto COM como una aplicación para UWP y agregar características de UWP, como tocar ni llamar a API desde la versión moderna. También puede agregar una aplicación para UWP a una solución de escritorio en Visual Studio y el paquete de ellos juntos en un único paquete y usan las API de Windows para comunicarse entre ellos.  
+### <a name="desktop-bridge"></a>Puente de escritorio
+En Windows 10 puede empaquetar su aplicación de escritorio existente o un objeto COM como una aplicación para UWP y agregar características UWP como toque o llamar a API desde el conjunto de API de Windows moderno. También puede agregar una aplicación para UWP a una solución de escritorio en Visual Studio y el paquete de ellos juntos en un único paquete y usan las API de Windows para comunicarse entre ellos.  
    
 En Visual Studio 2017 versión 15.4 y versiones posterior, puede crear un proyecto de paquete de aplicación de Windows para simplificar en gran medida el trabajo de empaquetado de la aplicación de escritorio existente. Se aplican algunas restricciones con respecto a qué registro se llama o usa las API de la aplicación de escritorio, pero en muchos casos puede crear rutas de acceso del código alternativa para lograr una funcionalidad similar mientras se ejecuta en un paquete de aplicación. Para obtener más información, vea [Puente de dispositivo de escritorio](/windows-uwp/porting/desktop-to-uwp-root).  
   
- **Terminología**  
+### <a name="terminology"></a>Terminología  
   
 -   Un *Win32* aplicación es una aplicación de escritorio de C++ que pueden hacer uso de nativo de Windows [las API de C de Windows o COM APIs](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT y la API de biblioteca estándar y 3ª bibliotecas de terceros. Una aplicación de Win32 que se ejecuta en una ventana requiere que el desarrollador trabajar explícitamente con mensajes de Windows dentro de una función de procedimiento de Windows. A pesar del nombre, una aplicación Win32 puede compilarse como una (x86) 32 bits o 64 bits (x64) binario. En el IDE de Visual Studio, los términos x86 y Win32 son sinónimos.  
   

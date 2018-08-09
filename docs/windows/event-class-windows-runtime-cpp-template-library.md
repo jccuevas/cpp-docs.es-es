@@ -1,5 +1,5 @@
 ---
-title: Clase de eventos (biblioteca de plantillas C++ de Windows en tiempo de ejecución) | Documentos de Microsoft
+title: Clase de eventos (biblioteca de plantillas C++ de Windows en tiempo de ejecución) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12c9e5bfe01de0a9864ff1e94364e0c42178ad11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c07d58f244bf2e7e6c9329196bae7b5bb323ce12
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872931"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644169"
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Event (Clase) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)
 Representa un evento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 class Event : public HandleT<HandleTraits::EventTraits>;  
 ```  
   
@@ -37,13 +37,13 @@ class Event : public HandleT<HandleTraits::EventTraits>;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Event::Event (constructor) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Inicializa una nueva instancia de la clase Event.|  
+|[Event::Event (constructor) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Inicializa una nueva instancia de la **eventos** clase.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Event::operator= (operador)](../windows/event-operator-assign-operator.md)|Asigna la referencia de evento especificada a la instancia de evento actual.|  
+|[Event::operator= (operador)](../windows/event-operator-assign-operator.md)|Asigna especificado **eventos** referencia a la actual **eventos** instancia.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `HandleT`  

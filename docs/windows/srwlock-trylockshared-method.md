@@ -1,5 +1,5 @@
 ---
-title: 'SRWLOCK:: Trylockshared (método) | Documentos de Microsoft'
+title: Trylockshared (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19ff9324f946f48f201678f9c9e7403ba774b2c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 289fa1fbec61140e213bef7219e440c8177e19e5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892288"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645817"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared (Método)
-Intenta adquirir un objeto SRWLock en modo compartido para el objeto de SRWLock actual o especificado.  
+Intenta adquirir un **SRWLock** objeto en modo compartido para el actual o especificada **SRWLock** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,12 +36,12 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `lock`  
- Puntero a un objeto SRWLock.  
+### <a name="parameters"></a>Parámetros  
+ *lock*  
+ Puntero a un **SRWLock** objeto.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si se realiza correctamente, un objeto SRWLock en modo compartido y el subproceso que realiza la llamada toma posesión del bloqueo. En caso contrario, un SRWLock objeto cuyo estado no es válido.  
+ Si es correcto, un **SRWLock** objeto en modo compartido y el subproceso de llamada toma posesión del bloqueo. En caso contrario, un **SRWLock** objeto cuyo estado no es válido.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  

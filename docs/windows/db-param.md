@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6f9938f96e65053d396cdfb608bea1e21eb1df74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569448"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651387"
 ---
 # <a name="dbparam"></a>db_param
 La variable de miembro especificado se asocia con un parámetro de entrada o salido y delimita la variable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
@@ -41,7 +41,7 @@ La variable de miembro especificado se asocia con un parámetro de entrada o sal
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *Ordinal*  
  El número de columna (ordinal DBCOLUMNINFO) correspondiente a un campo del conjunto de filas que se va a enlazar datos.  
   

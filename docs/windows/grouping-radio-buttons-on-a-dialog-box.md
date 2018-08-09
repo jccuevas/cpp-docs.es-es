@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: c3d0e20d8b2b88a7141672117d4c0b036682953e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571508"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641423"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Agrupar botones de opción en un cuadro de diálogo
-Al agregar botones de radio a un cuadro de diálogo, trátelos como grupo, estableciendo una propiedad Grupo en la ventana Propiedades para el primer botón del grupo. Después, aparecerá un id. de control para ese botón de opción en el [Asistente para agregar variables miembro](../ide/add-member-variable-wizard.md), lo que le permite agregar una variable miembro para el grupo de botones de radio.  
+Al agregar botones de radio a un cuadro de diálogo, tratarlos como un grupo estableciendo una **grupo** propiedad en el **propiedades** ventana para el primer botón en el grupo. Después, aparecerá un id. de control para ese botón de opción en el [Asistente para agregar variables miembro](../ide/add-member-variable-wizard.md), lo que le permite agregar una variable miembro para el grupo de botones de radio.  
   
  Puede tener más de un grupo de botones de radio en un cuadro de diálogo y se debe agregar cada grupo mediante el siguiente procedimiento.  
   
@@ -44,7 +44,7 @@ Al agregar botones de radio a un cuadro de diálogo, trátelos como grupo, estab
      Al cambiar la propiedad **Grupo** a **True** se agrega el estilo WS_GROUP a la entrada del botón en el objeto de diálogo del script de recursos y se asegura que un usuario solo puede seleccionar un botón de radio cada vez en el grupo de botones (cuando el usuario hace clic en un botón de radio, se borran los demás miembros del grupo).  
   
     > [!NOTE]
-    >  Solo el primer botón de radio del grupo debe tener la propiedad **Grupo** establecida en **True**. Si dispone de otros controles que no forman parte del grupo de botones, establezca la propiedad **Grupo** del primer control *que se encuentra fuera del grupo* también en **True** . Para identificar rápidamente el primer control fuera del grupo, presione CTRL+D para ver el orden de tabulación.  
+    >  Solo el primer botón de radio del grupo debe tener la propiedad **Grupo** establecida en **True**. Si dispone de otros controles que no forman parte del grupo de botones, establezca la propiedad **Grupo** del primer control *que se encuentra fuera del grupo* también en **True** . Puede identificar rápidamente el primer control fuera del grupo presionando **Ctrl**+**d.** para ver el orden de tabulación.  
   
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Para agregar una variable miembro para el grupo de botones de radio  
   
@@ -56,14 +56,13 @@ Al agregar botones de radio a un cuadro de diálogo, trátelos como grupo, estab
   
 4.  En el cuadro **Nombre de variable** , escriba un nombre para la nueva variable miembro.  
   
-5.  En el cuadro de lista **Tipo de variable** , seleccione **int** o escriba **int**.  
+5.  En el **tipo de Variable** cuadro de lista, seleccione **int** o tipo `int`.  
   
-6.  Ahora puede modificar el código para especificar qué botón de radio debe aparecer seleccionado. Por ejemplo,m_radioBox1 = 0 selecciona el primer botón de radio del grupo.  
+6.  Ahora puede modificar el código para especificar qué botón de radio debe aparecer seleccionado. Por ejemplo, `m_radioBox1 = 0;` selecciona el primer botón de radio del grupo.  
   
  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisitos  
-  
  Win32  
   
 ## <a name="see-also"></a>Vea también  

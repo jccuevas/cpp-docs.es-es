@@ -19,26 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbd2ab9481d8658bac75b62a4afa18f3ff77f0d5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570862"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646262"
 ---
 # <a name="default-c"></a>default (C++)
 Indica que la interfaz personalizada o dispinterface definida en una coclase representa la interfaz de programación predeterminada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [ default(  
    interface1,  
    interface2  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *interface1*  
  Interfaz predeterminada que estará disponible para los entornos de scripting que crean un objeto basado en la clase definida con el atributo **default** .  
   

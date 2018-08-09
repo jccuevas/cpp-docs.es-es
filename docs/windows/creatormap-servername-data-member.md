@@ -1,5 +1,5 @@
 ---
-title: Miembro de datos Creatormap | Documentos de Microsoft
+title: Miembro de datos Creatormap | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 48095aa9f6a561baa03b0a529702cf97bdfb9785
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24188c74136f0326a30b0834c99a36d3fdb5eaf3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870941"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642181"
 ---
 # <a name="creatormapservername-data-member"></a>CreatorMap::serverName (Miembro de datos)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 const wchar_t* serverName;  
 ```  
   

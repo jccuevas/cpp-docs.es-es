@@ -1,5 +1,5 @@
 ---
-title: Eliminar un bloque de información de versión | Documentos de Microsoft
+title: Eliminación de un bloque de información de versión. | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a374382e47e9623e041dd500730244b7fe205aa7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f083364f839f963867234a4d3548ac1c00258cc8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871863"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649964"
 ---
 # <a name="deleting-a-version-information-block"></a>Eliminar un bloque de información de versión
 ### <a name="to-delete-a-version-information-block"></a>Para eliminar un bloque de información de versión  
@@ -38,13 +38,11 @@ ms.locfileid: "33871863"
   
      Este comando elimina el encabezado seleccionado y deja intacta la información de versión restante. Tenga en cuenta que no se puede deshacer la acción.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos
  Win32  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de información de versión](../windows/version-information-editor.md)   
+ [Editor de la información de versión](../windows/version-information-editor.md)   
  [Información de versión (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
-

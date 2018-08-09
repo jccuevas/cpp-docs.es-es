@@ -1,5 +1,5 @@
 ---
-title: FileHandleTraits (estructura) | Documentos de Microsoft
+title: FileHandleTraits (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b84eaca73111e4b76390bddf55d85305c08c0c22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da8386959fcceead688976afe5da8736618004dc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872788"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652916"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits (estructura)
 Define las características de un identificador de archivo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 struct FileHandleTraits : HANDLETraits;  
 ```  
   

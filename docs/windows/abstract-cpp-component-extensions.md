@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6474b659070793ddfa4e21d15e65be30f16a49bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463247"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641813"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (Extensiones de componentes de C++)
 El **abstracta** palabra clave declara si:  
@@ -33,16 +33,16 @@ El **abstracta** palabra clave declara si:
 -   Un tipo de función de miembro solo puede definirse en un tipo derivado.  
   
 ## <a name="all-platforms"></a>Todas las plataformas  
- **Sintaxis**  
+### <a name="syntax"></a>Sintaxis 
   
-```  
+```cpp  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
 ```  
   
- **Comentarios**  
+### <a name="remarks"></a>Comentarios
   
  La primera sintaxis de ejemplo declara una clase como abstracta. El *declaración de clase* componente puede ser una declaración de C++ nativa (**clase** o **struct**), o una declaración de la extensión de C++ (**clase ref** o **ref struct**) si el `/ZW` o `/clr` se especificó la opción del compilador.  
   
@@ -58,17 +58,16 @@ virtualreturn-typemember-function-identifier() abstract ;
  Para obtener más información, consulte [clases y structs Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/ZW**  
+ Opción del compilador: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/clr**  
+ Opción del compilador: `/clr`  
   
 ### <a name="examples"></a>Ejemplos  
- **Ejemplo**  
   
- El siguiente ejemplo de código genera un error porque la clase `X` está marcada como `abstract`.  
+ En el ejemplo de código siguiente se genera un error porque clase `X` está marcado como **abstracta**.  
   
 ```cpp  
 // abstract_keyword.cpp  
@@ -83,9 +82,7 @@ int main() {
 }  
 ```  
   
- **Ejemplo**  
-  
- El siguiente ejemplo de código genera un error porque crea una instancia de una clase nativa que está marcada como `abstract`. Este error ocurrirá con o sin la opción del compilador `/clr`.  
+ En el ejemplo de código siguiente se genera un error porque crea una instancia de una clase nativa que está marcado como **abstracta**. Este error ocurrirá con o sin la opción del compilador `/clr`.  
   
 ```cpp  
 // abstract_keyword_2.cpp  
@@ -99,9 +96,7 @@ int main() {
                     // cannot be instantiated. See declaration of 'X'}  
 ```  
   
- **Ejemplo**  
-  
- El siguiente ejemplo de código genera un error porque la función `f` incluye una definición, pero está marcada como `abstract`. La instrucción final del ejemplo muestra que declarar una función virtual como abstracta equivale a declarar una función virtual como pura.  
+ En el ejemplo de código siguiente se genera un error porque función `f` incluye una definición, pero está marcado como **abstracta**. La instrucción final del ejemplo muestra que declarar una función virtual como abstracta equivale a declarar una función virtual como pura.  
   
 ```cpp  
 // abstract_keyword_3.cpp  

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ebb476b0a8c384759c9d44101e7bac7083103b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbe4837a347c78bb3b7c05094adf442b69fa2f39
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570771"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649496"
 ---
 # <a name="generics-and-templates-visual-c"></a>Genéricos y plantillas (Visual C++)
 Genéricos y plantillas son dos características de lenguaje que proporcionan compatibilidad para tipos parametrizados. Sin embargo, son diferentes y tienen usos diferentes. En este tema se proporciona información general de las numerosas diferencias.  
@@ -51,7 +51,7 @@ Genéricos y plantillas son dos características de lenguaje que proporcionan co
   
 ## <a name="combining-templates-and-generics"></a>Genéricos y plantillas de combinación  
   
--   La diferencia en genéricos básica tiene implicaciones para la creación de aplicaciones que combinen las plantillas y genéricos. Por ejemplo, suponga que tiene una clase de plantilla que desea crear un contenedor genérico para exponer dicha plantilla a otros lenguajes, como un tipo genérico. No puede tener los genérico toman un parámetro de tipo que, a continuación, pasa aunque a la plantilla, puesto que la plantilla debe tener ese parámetro de tipo en tiempo de compilación, pero el tipo genérico no resolverá el parámetro de tipo hasta que el tiempo de ejecución. Anidar una plantilla dentro de un tipo genérico no funcionará bien porque no hay ninguna manera para expandir las plantillas en tiempo de compilación para los tipos genéricos arbitrarios que se pueden crear instancias en tiempo de ejecución.  
+La diferencia en genéricos básica tiene implicaciones para la creación de aplicaciones que combinen las plantillas y genéricos. Por ejemplo, suponga que tiene una clase de plantilla que desea crear un contenedor genérico para exponer dicha plantilla a otros lenguajes, como un tipo genérico. No puede tener los genérico toman un parámetro de tipo que, a continuación, pasa aunque a la plantilla, puesto que la plantilla debe tener ese parámetro de tipo en tiempo de compilación, pero el tipo genérico no resolverá el parámetro de tipo hasta que el tiempo de ejecución. Anidar una plantilla dentro de un tipo genérico no funcionará bien porque no hay ninguna manera para expandir las plantillas en tiempo de compilación para los tipos genéricos arbitrarios que se pueden crear instancias en tiempo de ejecución.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -94,8 +94,6 @@ int main() {
    MyRef<int>^ mref = gcnew MyRef<int>(11);  
 }  
 ```  
-  
-### <a name="output"></a>Salida  
   
 ```Output  
 F  

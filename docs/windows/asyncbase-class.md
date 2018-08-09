@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dcf5a095167e48a52405978a105cadaddfa870f2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466207"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647819"
 ---
 # <a name="asyncbase-class"></a>AsyncBase (clase)
 Implementa la máquina de estados asincrónica de Windows Runtime.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -44,7 +44,7 @@ template <
 class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Implements<IAsyncInfo>;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *TComplete*  
  Un controlador de eventos que se llama cuando finaliza una operación asincrónica.  
   
@@ -52,7 +52,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
  Un controlador de eventos que se llama cuando una operación asincrónica notifica el progreso actual de la operación.  
   
  *resultType*  
- Uno de los [AsyncResultType](../windows/asyncresulttype-enumeration.md) valores de enumeración. De forma predeterminada, SingleResult.  
+ Uno de los [AsyncResultType](../windows/asyncresulttype-enumeration.md) valores de enumeración. De forma predeterminada, `SingleResult`.  
   
 ## <a name="members"></a>Miembros  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Simpleactivationfactory:: Gettrustlevel (método) | Documentos de Microsoft'
+title: Método Simpleactivationfactory | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b08ce574a8370eb0029a702f8fa4a4b12c6e93c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22fa30a3662897b171245da194573ec17da2f64e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892623"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645193"
 ---
 # <a name="simpleactivationfactorygettrustlevel-method"></a>SimpleActivationFactory::GetTrustLevel (Método)
 Obtiene el nivel de confianza de una instancia de la clase especificada por el `Base` parámetro de plantilla de clase.  
@@ -33,8 +33,8 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `trustLvl`  
+### <a name="parameters"></a>Parámetros  
+ *trustLvl*  
  Cuando se completa esta operación, el nivel de confianza del objeto de clase actual.  
   
 ## <a name="return-value"></a>Valor devuelto  

@@ -1,5 +1,5 @@
 ---
-title: SimpleActivationFactory (clase) | Documentos de Microsoft
+title: SimpleActivationFactory (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d10544a08fa6faebb1434cd00ca80ac30d4570a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97ad430bc0ab5a268ff428189da5987b6c45907d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889854"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650796"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory (clase)
 Proporciona un mecanismo fundamental para crear una clase base de Windows Runtime o COM clásico.  
@@ -34,14 +34,14 @@ template<typename Base>
 class SimpleActivationFactory : public ActivationFactory<>;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
- `Base`  
+### <a name="parameters"></a>Parámetros  
+ *base*  
  Una clase base.  
   
 ## <a name="remarks"></a>Comentarios  
  La clase base debe proporcionar un constructor predeterminado.  
   
- En el ejemplo de código siguiente se muestra cómo utilizar SimpleActivationFactory con el [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.  
+ En el ejemplo de código siguiente se muestra cómo usar SimpleActivationFactory con el [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`  
   
@@ -52,8 +52,8 @@ class SimpleActivationFactory : public ActivationFactory<>;
 |Name|Descripción|  
 |----------|-----------------|  
 |[SimpleActivationFactory::ActivateInstance (método)](../windows/simpleactivationfactory-activateinstance-method.md)|Crea una instancia de la interfaz especificada.|  
-|[SimpleActivationFactory::GetRuntimeClassName (método)](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Obtiene el nombre de clase en tiempo de ejecución de una instancia de la clase especificada por el `Base` parámetro de plantilla de clase.|  
-|[SimpleActivationFactory::GetTrustLevel (método)](../windows/simpleactivationfactory-gettrustlevel-method.md)|Obtiene el nivel de confianza de una instancia de la clase especificada por el `Base` parámetro de plantilla de clase.|  
+|[SimpleActivationFactory::GetRuntimeClassName (método)](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Obtiene el nombre de clase en tiempo de ejecución de una instancia de la clase especificada por el *Base* parámetro de plantilla de clase.|  
+|[SimpleActivationFactory::GetTrustLevel (método)](../windows/simpleactivationfactory-gettrustlevel-method.md)|Obtiene el nivel de confianza de una instancia de la clase especificada por el *Base* parámetro de plantilla de clase.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `I0`  

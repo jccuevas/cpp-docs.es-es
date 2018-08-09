@@ -23,37 +23,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 271a56881f2710a7fb7c18dadeb7c36d4d6a3232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568896"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648001"
 ---
 # <a name="guide-settings-dialog-box"></a>Configuración de las guías (Cuadro de diálogo)
 ## <a name="layout-guides"></a>Guías de diseño  
  Muestra la configuración de las guías de diseño.  
   
- **Ninguno**  
+### <a name="none"></a>Ninguna  
   
  Oculta las herramientas de diseño.  
   
- **Reglas y guías**  
+### <a name="rulers-and-guides"></a>Reglas y guías  
   
  Cuando se habilita, agrega reglas a las herramientas de diseño; las guías se pueden colocar en las reglas. Las guías predeterminadas son los márgenes, que se pueden mover arrastrando. Haga clic en las reglas para ubicar a una guía. Los controles "ajustarán" a las guías cuando se mueven los controles a través o junto a ellos. Los controles también se mueven con una guía de una vez que se conectan a él. Cuando un control está asociado a una guía en cada lado y se mueve una guía, el control cambia de tamaño.  
   
- **Grid**  
+### <a name="grid"></a>Cuadrícula  
   
  Crea una cuadrícula de diseño. Nuevos controles se alinearán automáticamente a la cuadrícula.  
   
 ## <a name="grid-spacing"></a>espaciado de cuadrícula  
  Muestra la configuración para el espaciado de cuadrícula en unidades de cuadro de diálogo (DLU).  
   
- **Ancho: DLU**  
+### <a name="width-dlus"></a>Ancho: DLU  
   
  Establece el ancho de la cuadrícula de diseño en DLU. Una DLU horizontal es el ancho promedio de la fuente del cuadro de diálogo dividido por cuatro.  
   
- **Alto: DLU**  
+### <a name="height-dlus"></a>Alto: DLU 
   
  Establece el alto de la cuadrícula de diseño en DLU. Una vertical equivale al alto medio de la fuente del cuadro de diálogo dividido por ocho.  
   

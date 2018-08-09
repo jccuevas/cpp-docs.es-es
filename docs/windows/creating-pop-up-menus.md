@@ -1,5 +1,5 @@
 ---
-title: Crear menús emergentes | Documentos de Microsoft
+title: Crear menús emergentes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 218ed28a8b44100beead46ab13e04ad07d86c7e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e58951fe214efda0002f3ea864e67d0ea35423c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871502"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648079"
 ---
 # <a name="creating-pop-up-menus"></a>Crear menús emergentes
 Los[menús emergentes](../mfc/menus-mfc.md) muestran comandos de pantalla que se utilizan con frecuencia. Pueden ser contextuales con respecto a la ubicación del puntero. Utilizar menús emergentes en la aplicación requiere compilar el menú y, a continuación, conectarlo al código de la aplicación.  
@@ -36,7 +36,7 @@ Los[menús emergentes](../mfc/menus-mfc.md) muestran comandos de pantalla que se
   
 1.  [Cree un menú](../windows/creating-a-menu.md) con un título vacío (no proporcione ningún **Título**).  
   
-2.  [Agregue un comando de menú al menú nuevo](../windows/adding-commands-to-a-menu.md). Desplácese al primer comando de menú, bajo el título de menú en blanco (el título provisional dice Escriba aquí). Escriba un **Título** y cualquier otra información.  
+2.  [Agregue un comando de menú al menú nuevo](../windows/adding-commands-to-a-menu.md). Mover al primer comando de menú debajo del título de menú en blanco (el título provisional dice `Type Here`). Escriba un **Título** y cualquier otra información.  
   
      Repita este proceso para los demás comandos de menú del menú emergente.  
   
@@ -45,10 +45,7 @@ Los[menús emergentes](../mfc/menus-mfc.md) muestran comandos de pantalla que se
     > [!TIP]
     >  Para obtener más información acerca de cómo ver el menú emergente, consulte [Ver un menú como menú emergente](../windows/viewing-a-menu-as-a-pop-up-menu.md).  
   
-
-  
- **Requisitos**  
-  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
 ## <a name="see-also"></a>Vea también  

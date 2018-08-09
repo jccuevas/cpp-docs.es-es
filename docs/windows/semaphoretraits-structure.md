@@ -1,5 +1,5 @@
 ---
-title: SemaphoreTraits (estructura) | Documentos de Microsoft
+title: SemaphoreTraits (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c5bdb20a765b56fd90a46389eba2a869890e4fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bcbb520ba92bdf15245b2401c74c3b271111034
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892610"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645729"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits (estructura)
-Define las características comunes de un objeto de semáforo.  
+Define las características comunes de un **semáforo** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ee858346fdb70e136edfbc562c2dfffb1f63e462
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462711"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652379"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer (Método)
 Incrementa o disminuye el número de subyacentes de objetos que se realiza el seguimiento actual **ClassFactory** objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 STDMETHOD(  
    LockServer  
 )(BOOL fLock);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *manada*  
  **True** para incrementar el número de objetos con seguimiento. **false** para reducir el número de objetos con seguimiento.  
   
@@ -43,7 +43,7 @@ STDMETHOD(
  S_OK si se realiza correctamente; en caso contrario, E_FAIL.  
   
 ## <a name="remarks"></a>Comentarios  
- ClassFactory realiza un seguimiento de los objetos en una instancia subyacente de la [módulo](../windows/module-class.md) clase.  
+ **ClassFactory** realiza un seguimiento de los objetos en una instancia subyacente de la [módulo](../windows/module-class.md) clase.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

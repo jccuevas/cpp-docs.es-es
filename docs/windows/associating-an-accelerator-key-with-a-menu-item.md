@@ -1,5 +1,5 @@
 ---
-title: Asociar una tecla de aceleración a un elemento de menú | Documentos de Microsoft
+title: Asociar una tecla de aceleración a un elemento de menú | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3d55fc13cb8fd989188c5796709c952903ce83d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ad3914fb5cd98b09d3b0bdfa5c4385106312d73
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854816"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651156"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>Asociar una tecla de aceleración a un elemento de menú
-Muchas veces se desea que un elemento de menú y una combinación de teclado ejecuten el mismo comando de programa. Para hacerlo, asigne el mismo identificador (Id.) de recurso al elemento de menú y a una entrada de la tabla de aceleradores de la aplicación. A continuación, edite el título del elemento de menú para que muestre el nombre del acelerador. Para obtener más información sobre los elementos de menú y teclas de aceleración, vea [asociar un elemento de menú a una tecla de aceleración](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
-  
-
+Muchas veces se desea que un elemento de menú y una combinación de teclado ejecuten el mismo comando de programa. Para hacerlo, asigne el mismo identificador (Id.) de recurso al elemento de menú y a una entrada de la tabla de aceleradores de la aplicación. A continuación, edite el título del elemento de menú para que muestre el nombre del acelerador. Para obtener más información sobre los elementos de menú y las teclas de aceleración, vea [asociar una tecla de aceleración a un elemento de menú](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Win32  

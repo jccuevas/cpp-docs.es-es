@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 73b51afda48fe0653767a40120cc6c0cdc0e831b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465875"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644952"
 ---
 # <a name="callas"></a>call_as
 Permite un [local](../windows/local-cpp.md) función a la que se asignan a una función remota para que cuando se llama a la función remota, se invoca la función local.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [ call_as(  
    function  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *function*  
  La función local que desea que se llama cuando se invoca una función remota.  
   
@@ -43,7 +43,7 @@ Permite un [local](../windows/local-cpp.md) función a la que se asignan a una f
  El **call_as** atributo de C++ tiene la misma funcionalidad que el [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- El código siguiente muestra cómo puede usar **call_as** para asignar una función utilizables (**f1**) a una función remota (**Remf1**):  
+ El código siguiente muestra cómo puede usar **call_as** para asignar una función utilizables (`f1`) a una función remota (`Remf1`):  
   
 ```cpp  
 // cpp_attr_ref_call_as.cpp  

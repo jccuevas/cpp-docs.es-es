@@ -1,5 +1,5 @@
 ---
-title: Conversión boxing (extensiones de componentes de C++) | Documentos de Microsoft
+title: Conversión boxing (extensiones de componentes de C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f689255af653e5dfdf69250e4988aa809393461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05a0d83de045ed29b20ff14acc7fc81fb684a93e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861362"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650627"
 ---
 # <a name="boxing--c-component-extensions"></a>Conversión boxing (Extensiones de componentes de C++)
-El compilador de Visual C++ puede convertir tipos de valor a los objetos en un proceso denominado *conversión boxing*así como convertir objetos a tipos de valor en un proceso denominado *unboxing*.  
+El compilador de Visual C++ puede convertir tipos de valor a los objetos en un proceso denominado *boxing*así como convertir objetos a tipos de valor en un proceso denominado *unboxing*.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
  (No hay notas para esta característica de lenguaje que se apliquen a todos los runtimes).  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
- C++ / CX admite la sintaxis abreviada para tipos de valor de conversión boxing y unboxing de tipos de referencia. Se aplica la conversión boxing a un tipo de valor cuando este se asigna a una variable de tipo `Object`. Se aplica una conversión unboxing a una variable `Object` cuando esta se asigna a una variable de tipo de valor y el tipo al que se le ha aplicado la conversión unboxing se especifica entre paréntesis; es decir, cuando la variable de objeto se convierte en un tipo de valor.  
+ C++ / c++ / CX admite la sintaxis abreviada para tipos de valor de conversión boxing y unboxing de tipos de referencia. Se aplica la conversión boxing a un tipo de valor cuando este se asigna a una variable de tipo `Object`. Se aplica una conversión unboxing a una variable `Object` cuando esta se asigna a una variable de tipo de valor y el tipo al que se le ha aplicado la conversión unboxing se especifica entre paréntesis; es decir, cuando la variable de objeto se convierte en un tipo de valor.  
   
-```  
-  
+```cpp  
   Platform::Object^  
   object_variable  = value_variable;  
 value_variable = (value_type) object_variable;  
-  
 ```  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/ZW**  
+ Opción del compilador: `/ZW`  
   
 ### <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo de código, se aplica una conversión boxing y unboxing a un valor `DateTime`. En primer lugar, en el ejemplo se obtiene un valor DateTime que representa la fecha y hora actuales, y se asigna a una variable DateTime. Después, se aplica una conversión boxing al valor de DateTime asignándolo a una variable Object. Por último, se aplica una conversión unboxing al valor al que se le ha aplicado la conversión boxing asignándolo a otra variable DateTime.  
+ En el siguiente ejemplo de código, se aplica una conversión boxing y unboxing a un valor `DateTime`. En primer lugar, el ejemplo se obtiene un `DateTime` valor que representa la fecha y hora actual y lo asigna a un `DateTime` variable. El `DateTime` es aplicar la conversión boxing asignándolo a una `Object` variable. Por último, el valor con conversión boxing se aplica la conversión unboxing asignando a otro `DateTime` variable.  
   
- Para probar el ejemplo, cree un proyecto BlankApplication, reemplace el método BlankPage::OnNavigatedTo() y, después, especifique los puntos de interrupción en el corchete de cierre y la asignación a la variable str1. Cuando el ejemplo alcance el corchete de cierre, examine str1.  
+ Para probar el ejemplo, cree un `BlankApplication` del proyecto, reemplace el `BlankPage::OnNavigatedTo()` método y, a continuación, especifique los puntos de interrupción en el corchete de cierre y la asignación de variable `str1`. Cuando el ejemplo alcance el corchete de cierre, examine `str1`.  
   
-```  
-  
+```cpp  
 void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
 {  
     using namespace Windows::Globalization::DateTimeFormatting;  
@@ -78,13 +75,12 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
     String^ str2 = dtf->Format(dtAnother);  
     OutputDebugString(str2->Data());  
 }  
-  
 ```  
   
- Para obtener más información, consulte [conversión Boxing (C++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx).  
+ Para obtener más información, consulte [conversión Boxing (C++ / c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx).  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- Ahora el compilador de Visual C++ aplica conversión boxing a tipos de valor, que pasan a ser <xref:System.Object>.  Esto es posible por una conversión definida por el compilador que convierte tipos de valor en <xref:System.Object>.  
+ Ahora el compilador de Visual C++ aplica conversión boxing a tipos de valor, que pasan a ser <xref:System.Object>. Esto es posible por una conversión definida por el compilador que convierte tipos de valor en <xref:System.Object>.  
   
  Aplicar conversiones boxing y unboxing permite tratar a los tipos de valor como objetos. Los tipos de valor, incluidos los tipos de estructura y los tipos integrados, como int, se pueden convertir a y desde el tipo <xref:System.Object>.  
   
@@ -99,10 +95,9 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 -   [Conversiones estándar y conversión boxing implícita](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
 ### <a name="requirements"></a>Requisitos  
- Opción del compilador: **/clr**  
+ Opción del compilador: `/clr`  
   
 ### <a name="examples"></a>Ejemplos  
- **Ejemplo**  
   
  En el siguiente ejemplo se muestra cómo funciona la conversión boxing implícita.  
   
@@ -175,8 +170,6 @@ int main() {
    func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
 }  
 ```  
-  
- **Salida**  
   
 ```Output  
 1  

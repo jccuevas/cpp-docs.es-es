@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 532f3714bc48db545a33b76eb07b641b8e3e5490
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571443"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650094"
 ---
 # <a name="dbcommand"></a>db_command
 Crea un comando OLE DB.  
@@ -41,7 +41,6 @@ Crea un comando OLE DB.
 ```  
   
 ### <a name="parameters"></a>Parámetros  
-
 *command*  
 Cadena de comandos que contiene el texto de un comando OLE DB. Veamos un ejemplo sencillo:  
   
@@ -112,12 +111,12 @@ Variable o instancia `CSession` de una clase que tiene aplicado el atributo `db_
 **db_command** se asegura de que la variable usada para *source_name* sea válida, por lo que la variable especificada debe estar en el ámbito global o de función.  
   
 *HRESULT* (opcional)  
-Identifica la variable que recibirá el `HRESULT` de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.  
+Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.  
   
 *bindings* (opcional)  
 Le permite separar los parámetros de enlace del comando OLE DB.  
   
-Si especifica un valor para *enlaces*, **db_command** analizará el valor asociado y no analizará el \[ *bindtype*] parámetro. De este modo, puede usar la sintaxis del proveedor OLE DB. Para deshabilitar el análisis sin enlazar parámetros, especifique **Bindings=""**.  
+Si especifica un valor para *enlaces*, **db_command** analizará el valor asociado y no analizará el \[ *bindtype*] parámetro. De este modo, puede usar la sintaxis del proveedor OLE DB. Para deshabilitar el análisis sin enlazar parámetros, especifique `Bindings=""`.  
   
 Si no especifica un valor para *enlaces*, **db_command** analizará el bloque de parámetros de enlace, buscando "**(**', seguido de **\[** _bindtype_**]** entre corchetes, seguido de uno o más declarado previamente C++ variables de miembro, seguido por '**)**'. Todo el texto incluido entre los paréntesis se quitará del comando resultante y los parámetros se usarán para construir los enlaces de columnas y de parámetros para este comando.  
   
@@ -133,7 +132,7 @@ Si *bulk_fetch* es inferior a uno, `SetRows` devolverá cero.
 ## <a name="remarks"></a>Comentarios  
 **db_command** crea un objeto [CCommand](../data/oledb/ccommand-class.md) , usado por un consumidor OLE DB para ejecutar un comando.  
   
-Puede usar **db_command** con cualquier ámbito de función o clase; la principal diferencia radica en el ámbito del objeto `CCommand` . Con el ámbito de función, los datos tales como los enlaces concluyen al final de la función. Los usos de ámbito de clase y función implican la clase de plantilla de consumidor OLE DB `CCommand<>`, pero difieren de los argumentos de plantilla para los casos de función y de clase. En el caso de la función, los enlaces se efectuarán con un **descriptor de acceso** formado por variables locales, mientras que el uso de la clase deducirá una clase derivada de `CAccessor`como argumento. Cuando se usa como atributo de clase, **db_command** funciona de forma conjunta con **db_column**.  
+Puede usar **db_command** con cualquier ámbito de función o clase; la principal diferencia radica en el ámbito del objeto `CCommand` . Con el ámbito de función, los datos tales como los enlaces concluyen al final de la función. Los usos de ámbito de clase y función implican la clase de plantilla de consumidor OLE DB `CCommand<>`, pero difieren de los argumentos de plantilla para los casos de función y de clase. En el caso de la función, los enlaces se efectuarán con un `Accessor` formado por variables locales, mientras que el uso de la clase deducirá una `CAccessor`-derivado de la clase como argumento. Cuando se usa como atributo de clase, **db_command** funciona de forma conjunta con **db_column**.  
   
 Se puede usar**db_command** para ejecutar comandos que no devuelvan un conjunto de resultados.  
   

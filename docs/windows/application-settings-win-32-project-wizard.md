@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6d2cd31306baaa0d9c8f137122fed1d4ae97295
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 948b720df6094ddd4124bb496cabb3c83a3cacf0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464696"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652993"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Configuración de la aplicación, Asistente para proyectos Win32
 Utilice esta página del asistente para establecer las opciones en el proyecto Win32.  
   
- **Tipo de aplicación**  
+## <a name="application-type"></a>Tipo de aplicación  
  Crea el tipo de aplicación especificado.  
   
 |Opción|Descripción|  
@@ -38,7 +38,7 @@ Utilice esta página del asistente para establecer las opciones en el proyecto W
 |**ARCHIVO DLL**|Crea una biblioteca de vínculos dinámicos (DLL) de Win32. Una DLL de Win32 es un archivo binario, escrito en C o C++, que utiliza llamadas a la API de Win32 en lugar de llamadas a clases MFC y que actúa como una biblioteca compartida de funciones que múltiples aplicaciones pueden utilizar simultáneamente.<br /><br /> No puede agregar compatibilidad con MFC y ATL a una aplicación de DLL. Puede indicar que la DLL exporta símbolos.|  
 |**Biblioteca estática**|Crea una biblioteca estática. Una biblioteca estática es un archivo que contiene objetos y sus funciones, así como datos que vincula al programa cuando se compila el archivo ejecutable. En este tema se explica cómo crear los archivos de inicio y [las propiedades del proyecto](../ide/property-pages-visual-cpp.md) para una biblioteca estática. Un archivo de biblioteca estática proporciona las siguientes ventajas:<br /><br /> -Una biblioteca estática Win32 resulta útil si la aplicación que está trabajando realiza llamadas a la API de Win32 en lugar de a clases MFC.<br />-El proceso de vinculación es el mismo si el resto de la aplicación de Windows se escribe en C o C++.<br />-Puede vincular una biblioteca estática a un programa basado en MFC o a un programa no basados en MFC.|  
   
- **Opciones adicionales**  
+## <a name="additional-options"></a>Opciones adicionales  
  Permite definir las compatibilidades y las opciones de la aplicación, en función de su tipo.  
   
 |Opción|Descripción|  
@@ -48,7 +48,7 @@ Utilice esta página del asistente para establecer las opciones en el proyecto W
 |**Encabezado precompilado**|Especifica que el proyecto de biblioteca estática utiliza un encabezado precompilado.|  
 |Comprobaciones del ciclo de vida de desarrollo de seguridad (SDL)|Para obtener más información sobre SDL, vea [Guía de procesos de ciclo de vida de desarrollo de seguridad (SDL) de Microsoft](../build/reference/sdl-enable-additional-security-checks.md)|  
   
- **Agregar compatibilidad para**  
+## <a name="add-support-for"></a>Agregar compatibilidad para  
  Permite agregar compatibilidad con una de las bibliotecas suministradas en Visual C++.  
   
 |Opción|Descripción|  

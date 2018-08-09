@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf329199541ad0075044633d49d6ab654146b5e7
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: f46f1bc6d03f7bf222edcd3d23def72edfcb11fa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570969"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647578"
 ---
 # <a name="eventtraits-structure"></a>EventTraits (estructura)
 Define las características de un `Event` identificador de clase.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 struct EventTraits : HANDLENullTraits;  
 ```  
   

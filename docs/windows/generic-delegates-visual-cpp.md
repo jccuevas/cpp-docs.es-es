@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96c4c878edb0125aca2d4782afd53ce0967452a5
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 5aa0bc804b3308a9b77c93cf40a2ba9cab7558a8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571316"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652917"
 ---
 # <a name="generic-delegates-visual-c"></a>Delegados genéricos (Visual C++)
 Puede usar parámetros de tipo genérico con delegados. Para obtener más información sobre los delegados, vea [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [attributes]   
 generic < [class | typename] type-parameter-identifiers>  
 [type-parameter-constraints-clauses]  
@@ -36,7 +36,7 @@ generic < [class | typename] type-parameter-identifiers>
 ([formal-parameters]);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *atributos* (opcional)  
  Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea atributos.  
   

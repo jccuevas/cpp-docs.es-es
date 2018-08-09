@@ -1,5 +1,5 @@
 ---
-title: único (C++) | Documentos de Microsoft
+title: exclusivo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebb492d576e82c276aeb1cb464a39b558040fdc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 826d296e4c11571151ff0cd3265465b4307d2d92
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890141"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643970"
 ---
 # <a name="unique-c"></a>unique (C++)
 Especifica un puntero único.  
@@ -30,13 +30,11 @@ Especifica un puntero único.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 [unique]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **único** atributo C++ tiene la misma funcionalidad que la [único](http://msdn.microsoft.com/library/windows/desktop/aa367294) atributo MIDL.  
+ El **único** atributo de C++ tiene la misma funcionalidad que el [único](http://msdn.microsoft.com/library/windows/desktop/aa367294) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
  Consulte la [ref](../windows/ref-cpp.md) ejemplo para un ejemplo de uso de **único**.  
@@ -47,7 +45,7 @@ Especifica un puntero único.
   
 |||  
 |-|-|  
-|**Se aplica a**|`typedef`, `struct`, **union**, la interfaz de parámetro, el método de interfaz|  
+|**Se aplica a**|**TypeDef**, **struct**, **unión**, parámetro de interfaz, el método de interfaz|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|Ninguna|  

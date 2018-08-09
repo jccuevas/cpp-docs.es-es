@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: end (método) | Documentos de Microsoft'
+title: Método Eventtargetarray | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00827d42bb01263d6b4fd9b5aea3b0fc7f7c76e1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e64cfcd0ad8a71a67815b592908d57725fef9f1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874270"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648651"
 ---
 # <a name="eventtargetarrayend-method"></a>EventTargetArray::End (Método)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 ComPtr<IUnknown>* End();  
 ```  
   

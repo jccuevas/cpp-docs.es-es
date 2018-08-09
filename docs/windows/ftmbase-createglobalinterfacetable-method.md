@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de98932420cf5eb0d5b9b13011044e5bfc7b400d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: ae65169ac3f315aed170ba8dfc42b16fb4e9b328
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569009"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641322"
 ---
 # <a name="ftmbasecreateglobalinterfacetable-method"></a>FtmBase::CreateGlobalInterfaceTable (Método)
 Crea una tabla de interfaz global (GIT).  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 static HRESULT CreateGlobalInterfaceTable(  
    __out IGlobalInterfaceTable **git  
 );  
@@ -43,7 +43,7 @@ static HRESULT CreateGlobalInterfaceTable(
  S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información, vea el tema "IGlobalInterfaceTable" en el tema "Interfaces de COM" del tema "Referencia de COM" en MSDN Library.  
+ Para obtener más información, consulte el `IGlobalInterfaceTable` tema en el **Interfaces COM** subtema de la **referencia COM** tema en MSDN Library.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** ftm.h  

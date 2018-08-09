@@ -1,5 +1,5 @@
 ---
-title: Miembro de datos Boolstruct | Documentos de Microsoft
+title: Miembro de datos Boolstruct | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f01f2c642686c1cf7c01fe9322e06f165d5ada9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14c78a92ac66ee998e11f7101a6a8306be73862a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859818"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641120"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member (Miembro de datos)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 int Member;  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Especifica que un [ComPtr](../windows/comptr-class.md) es o no lo está, administrar la duración de los objetos de una interfaz.  
+ Especifica que un [ComPtr](../windows/comptr-class.md) es o no, es administrar la vigencia del objeto de una interfaz.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** internal.h  

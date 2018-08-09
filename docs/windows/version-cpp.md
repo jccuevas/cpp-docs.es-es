@@ -1,5 +1,5 @@
 ---
-title: versión (C++) | Documentos de Microsoft
+title: versión (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43da63d75d3541915eba3e561ee08fe1048fa579
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c2d0c72ffbb805b526429562a5f39a09285b70f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890614"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642284"
 ---
 # <a name="version-c"></a>version (C++)
 Identifica una versión determinada entre varias versiones de una clase.  
@@ -31,21 +31,20 @@ Identifica una versión determinada entre varias versiones de una clase.
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      [ version(  
+[ version(  
    "version"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *version*  
- El número de versión de la coclase. Si no se especifica, se colocará en el archivo .idl 1.0.  
+ El número de versión de la `coclass`. Si no se especifica, se colocará en el archivo .idl 1.0.  
   
 ## <a name="remarks"></a>Comentarios  
- El **versión** atributo C++ tiene la misma funcionalidad que la [versión](http://msdn.microsoft.com/library/windows/desktop/aa367306) atributo MIDL y se pasa a través del archivo .idl generado.  
+ El **versión** atributo de C++ tiene la misma funcionalidad que el [versión](http://msdn.microsoft.com/library/windows/desktop/aa367306) atributo MIDL y se pasa a través del archivo .idl generado.  
   
 ## <a name="example"></a>Ejemplo  
- Consulte la [enlazables](../windows/bindable.md) ejemplo para un ejemplo de uso de **versión**.  
+ Consulte la [enlazable](../windows/bindable.md) ejemplo para un ejemplo de uso de **versión**.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -53,7 +52,7 @@ Identifica una versión determinada entre varias versiones de una clase.
   
 |||  
 |-|-|  
-|**Se aplica a**|**class**, `struct`|  
+|**Se aplica a**|**clase**, **struct**|  
 |**Reiterativo**|No|  
 |**Atributos requeridos**|**coclass**|  
 |**Atributos no válidos**|Ninguna|  

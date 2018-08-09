@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e7b1f849aff584da6f575bc822a71acc683520e6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461814"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646324"
 ---
 # <a name="attribute"></a>Atributo
 Le permite crear un atributo personalizado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 [ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
@@ -40,7 +40,7 @@ Le permite crear un atributo personalizado.
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+### <a name="parameters"></a>Parámetros  
  *AllowOn*  
  Especifica los elementos del lenguaje al que se puede aplicar el atributo personalizado. El valor predeterminado es `System::AttributeTargets::All` (consulte [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).  
   
@@ -48,16 +48,16 @@ Le permite crear un atributo personalizado.
  Especifica si el atributo personalizado se puede aplicar varias veces a una construcción. Valor predeterminado es FALSE.  
   
  *Heredado*  
- Indica si el atributo se va a ser heredadas por las subclases. El compilador no proporciona compatibilidad especial para esta funcionalidad; respetar esta información es el trabajo de los consumidores de atributo (por ejemplo, reflexión). Si *Inherited* es TRUE, el atributo es heredado. Si *AllowMultiple* es TRUE, el atributo se acumulará en el miembro derivado; si *AllowMultiple* es FALSE, el atributo invalidará (o reemplace) en la herencia. Si *Inherited* es FALSE, no se hereda el atributo. Valor predeterminado es TRUE.  
+ Indica si el atributo se va a ser heredadas por las subclases. El compilador no proporciona compatibilidad especial para esta funcionalidad; es el trabajo de los consumidores de atributo (`Reflection`, por ejemplo) para respetar esta información. Si *Inherited* es TRUE, el atributo es heredado. Si *AllowMultiple* es TRUE, el atributo se acumulará en el miembro derivado; si *AllowMultiple* es FALSE, el atributo invalidará (o reemplace) en la herencia. Si *Inherited* es FALSE, no se hereda el atributo. Valor predeterminado es TRUE.  
   
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  El `attribute` atributo está en desuso.  Use el atributo de tiempo de ejecución lenguaje System.Attribute común directamente para crear attirbutes definido por el usuario.  Para obtener más información, consulte [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).  
+>  El **atributo** atributo está en desuso.  Utilice el atributo de tiempo de ejecución de lenguaje común `System.Attribute` a directamente para crear attirbutes definido por el usuario. Para obtener más información, consulte [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Define un [atributo personalizado](../windows/custom-attributes-cpp.md) colocando el `attribute` atributo en una definición de clase o estructura administrada. El nombre de la clase es el atributo personalizado. Por ejemplo:  
+ Define un [atributo personalizado](../windows/custom-attributes-cpp.md) colocando el **atributo** atributo en una definición de clase o estructura administrada. El nombre de la clase es el atributo personalizado. Por ejemplo:  
   
-```  
+```cpp  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
@@ -115,7 +115,7 @@ ref class ClassC {};
   
  Consulte [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md) para obtener información sobre los destinos de atributo.  
   
- El `attribute` atributo tiene un *AllowMultiple* parámetro que especifica si el atributo personalizado es un solo uso o multiuse (puede aparecer más de una vez en la misma entidad).  
+ El **atributo** atributo tiene un *AllowMultiple* parámetro que especifica si el atributo personalizado es un solo uso o multiuse (puede aparecer más de una vez en la misma entidad).  
   
 ```cpp  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,21 +130,21 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- Clases de atributos personalizados se derivan directa o indirectamente <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, lo que hace que identifica las definiciones de atributos en metadatos rápida y sencilla. El `attribute` atributo implica la herencia de System:: Attribute, por lo que no es necesario derivación explícita:  
+ Clases de atributos personalizados se derivan directa o indirectamente <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, lo que hace que identifica las definiciones de atributos en metadatos rápida y sencilla. El **atributo** atributo implica la herencia de `System::Attribute`, por lo que no es necesario derivación explícita:  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
  es equivalente a  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` es un alias para <xref:System.AttributeUsageAttribute?displayProperty=fullName> (no AttributeAttribute; se trata de una excepción a la regla de nomenclatura de atributo).  
+ **atributo** es un alias para <xref:System.AttributeUsageAttribute?displayProperty=fullName> (no AttributeAttribute; se trata de una excepción a la regla de nomenclatura de atributo).  
   
 ## <a name="requirements"></a>Requisitos  
   

@@ -1,5 +1,5 @@
 ---
-title: defaultbind | Documentos de Microsoft
+title: defaultbind | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a92d4a7b617b8963c3ffbd78638a7a97515d8509
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c9930fefabd6fb12aaad64f07c078e5e422d827
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871466"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644091"
 ---
 # <a name="defaultbind"></a>defaultbind
-Indica la única propiedad enlazable que mejor representa el objeto.  
+Indica la única propiedad enlazable que mejor representa al objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```cpp  
 [defaultbind]  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **defaultbind** atributo C++ tiene la misma funcionalidad que la [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) atributo MIDL.  
+ El **defaultbind** atributo de C++ tiene la misma funcionalidad que el [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) atributo MIDL.  
   
 ## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [enlazables](../windows/bindable.md) para obtener un ejemplo de cómo usar **defaultbind**.  
+ Vea el ejemplo de [enlazable](../windows/bindable.md) para obtener un ejemplo de cómo usar **defaultbind**.  
   
 ## <a name="requirements"></a>Requisitos  
   

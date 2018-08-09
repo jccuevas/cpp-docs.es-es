@@ -1,5 +1,5 @@
 ---
-title: BoolStruct (estructura) | Documentos de Microsoft
+title: BoolStruct (estructura) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af2827d85a1df647dca2c02c5c6ee5a12a416d51
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14e3d81ca273bf96b4812f08a46904c9d521c5cf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860127"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650487"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct (estructura)
-Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 struct BoolStruct;  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- BoolStruct (estructura) define si una ComPtr administra la duración de los objetos de una interfaz. BoolStruct se usa internamente el [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operador.  
+ El **BoolStruct** estructura define si un `ComPtr` administra la duración del objeto de una interfaz. **BoolStruct** usa internamente el [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operador.  
   
 ## <a name="members"></a>Miembros  
   
@@ -42,7 +42,7 @@ struct BoolStruct;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[BoolStruct::Member (miembro de datos)](../windows/boolstruct-member-data-member.md)|Especifica que un [ComPtr](../windows/comptr-class.md) es o no lo está, administrar la duración de los objetos de una interfaz.|  
+|[BoolStruct::Member (miembro de datos)](../windows/boolstruct-member-data-member.md)|Especifica que un [ComPtr](../windows/comptr-class.md) es o no, es administrar la vigencia del objeto de una interfaz.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `BoolStruct`  
@@ -53,5 +53,5 @@ struct BoolStruct;
  **Namespace:** wrl  
   
 ## <a name="see-also"></a>Vea también  
- [Namespace wrl](../windows/microsoft-wrl-details-namespace.md)   
+ [Wrl Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [ComPtr::operator Microsoft::WRL::Details::BoolType (operador)](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)
