@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c02849bc3d1b45ecb6de89e103c51311af31b3c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 45cfc4374b9779a61e3ea97c829317b9d4fe75ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569848"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016166"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Cómo: Declarar y usar punteros internos y matrices administradas (C++/CLI)
 El siguiente C++ / c++ / CLI muestra cómo puede declarar y usar un puntero interior a una matriz.  
@@ -56,8 +56,6 @@ int main() {
    System::Console::WriteLine("after incrementing ipi, it points to memory address whose value is: {0}", *ipi);  
 }  
 ```  
-  
-### <a name="output"></a>Salida  
   
 ```Output  
 1st element in arr holds: 1  
