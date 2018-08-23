@@ -1,5 +1,5 @@
 ---
-title: Funciones globales de identificador de seguridad | Documentos de Microsoft
+title: Funciones globales de identificador de seguridad | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,18 +47,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153436ab5d05d0355d85ca165b2bfba9ae86d534
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b567c56c8c4ca5c25fc870e91c8c608e17280557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365160"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610238"
 ---
 # <a name="security-identifier-global-functions"></a>Funciones globales de identificador de seguridad
-Estas funciones devuelven a comunes SID conocido de objetos.  
+Estas funciones devuelven objetos de SID conocido comunes.  
   
 > [!IMPORTANT]
->  Las funciones se enumeran en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Las funciones enumeradas en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 |||  
 |-|-|  
@@ -196,9 +196,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Utilizar NetworkService para permitir al usuario de NT AUTHORITY\NetworkService leer un objeto de seguridad de CPerfMon. NetworkService agrega un SecurityAttribute para el código de servidor ATL que le permitirá la DLL para poder iniciar sesión con la cuenta NetworkService en [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] y el sistema operativo mayor.  
+ Utilizar NetworkService para permitir que el usuario de NT AUTHORITY\NetworkService leer un objeto de seguridad CPerfMon. NetworkService, agrega un SecurityAttribute en el código de servidor ATL que permitirá que el archivo DLL para el inicio de sesión con la cuenta NetworkService en Windows XP Home Edition, Windows XP Professional, Windows Server 2003 y sistema operativo mayor.  
   
- Cuando los contadores de registro personalizados se crean con la clase ATLServer CPerfMon en Perfmon MMC, es podrán que los contadores no aparezcan al ver el archivo de registro aunque aparezcan correctamente en la vista en tiempo real. Contadores de rendimiento personalizados CPerfMon no tienen los permisos necesarios para ejecutarse en el servicio de "Registros y alertas de rendimiento" (smlogsvc.exe) [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (o posterior) sistemas operativos. Este servicio se ejecuta bajo la cuenta "NT AUTHORITY\NetworkService".  
+ Cuando se crean los contadores de registro personalizado con la clase ATLServer CPerfMon en Perfmon MMC, los contadores no pueden aparecer al ver el archivo de registro aunque aparezcan correctamente en la vista en tiempo real. Contadores de rendimiento personalizados CPerfMon no tienen los permisos necesarios para ejecutar en el servicio de "Registros y alertas de rendimiento" (smlogsvc.exe) en Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (o superior) los sistemas operativos. Este servicio se ejecuta bajo la cuenta "NT AUTHORITY\NetworkService".  
   
 ##  <a name="null"></a>  SIDs::null  
  Devuelve el SID de SECURITY_NULL_RID.  

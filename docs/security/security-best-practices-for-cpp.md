@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
 author: mikeblome
-ms.author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e941c15d734ce85513696d60da13184cfbfd2355
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015629"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610058"
 ---
 # <a name="security-best-practices-for-c"></a>Procedimientos recomendados para la seguridad en C++
 
@@ -34,7 +34,7 @@ Este artículo contiene información sobre las herramientas y las prácticas de 
  Estas características de seguridad están integradas en el compilador y el vinculador de Visual C++:  
   
  [/guard (Habilitar Protección de flujo de control)](../build/reference/guard-enable-control-flow-guard.md)  
- Hace que el compilador analice el flujo de control para los destinos de llamada indirecta en tiempo de compilación y que después inserte código para comprobar los destinos en tiempo de ejecución.  
+ Hace que el compilador analice el flujo de control para destinos de llamada indirecta en tiempo de compilación y, a continuación, inserte código para comprobar los destinos en tiempo de ejecución.  
   
  [/GS (Comprobación de seguridad del búfer)](../build/reference/gs-buffer-security-check.md)  
  Indica al compilador que inserte código de detección de saturación en las funciones que presentan algún riesgo de seguridad. Cuando se detecta una saturación, se detiene la ejecución. Esta opción está activada de forma predeterminada.  

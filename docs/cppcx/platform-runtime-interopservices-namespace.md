@@ -1,5 +1,5 @@
 ---
-title: Namespace InteropServices | Documentos de Microsoft
+title: Namespace InteropServices | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Runtime::InteropServices Namespace
 ms.assetid: 546b981a-a360-4a78-b89f-fdf0df848747
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f28946355dccefc56600ac241c3ba3f9517822
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a28f07990d5958f48f032b1355a565d2a4a559e9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086920"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611587"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices (Espacio de nombres)
 Este espacio de nombres solo está previsto para uso interno y no para utilizarlo en el desarrollo.  
@@ -55,4 +55,4 @@ namespace Platform {
  **Namespace:** Platform::InteropServices  
   
 ## <a name="see-also"></a>Vea también  
- [Namespace de plataforma](platform-namespace-c-cx.md)
+ [Plataforma Namespace](platform-namespace-c-cx.md)

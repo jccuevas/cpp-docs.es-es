@@ -23,37 +23,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d11f3abdaa4f804f9916e7313d1a4338c29a7369
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 96ee92f1b21d67321b95a169cbc4c47eaca2de17
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015084"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610666"
 ---
 # <a name="resource-includes-dialog-box"></a>Archivos de inclusión de recursos (cuadro de diálogo)
-Puede usar el **incluye recursos** cuadro de diálogo para modificar trabajo habitual del entorno de almacenamiento de todos los recursos en el archivo .rc del proyecto y todos [símbolos](../windows/symbols-resource-identifiers.md) en Resource.h.  
-  
- Para abrir el **incluye recursos** de archivos en el cuadro de diálogo, haga una .rc [vista de recursos](../windows/resource-view-window.md), a continuación, elija **incluye recursos** en el menú contextual.  
-  
- **Archivo de encabezado de símbolos**  
- Permite cambiar el nombre del archivo de encabezado donde se almacenan las definiciones de los símbolos del archivo de recursos. Para obtener más información, consulte [cambiar los archivos de encabezado de los nombres de símbolos](../windows/changing-the-names-of-symbol-header-files.md).  
-  
- **Directivas de símbolos de solo lectura**  
- Permite incluir archivos de encabezado cuyos símbolos no deberían modificarse durante una sesión de edición. Por ejemplo, se puede incluir un archivo de símbolos compartido por varios proyectos. También se pueden incluir archivos .h de MFC. Para obtener más información, consulte [símbolos incluidos compartidos (de solo lectura) o calculados](../windows/including-shared-read-only-or-calculated-symbols.md).  
-  
- **Directivas de tiempo de compilación**  
- Permite incluir archivos de recursos creados y editados con independencia de los recursos del archivo principal de recursos, con directivas de tiempo de compilación (como las que incluyen de forma condicional recursos) o con recursos en formato personalizado. También puede usar el **cuadro directivas de tiempo de compilación** para incluir archivos de recursos MFC estándares. Para obtener más información, consulte [incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md).  
-  
+
+Puede usar el **incluye recursos** cuadro de diálogo para modificar trabajo habitual del entorno de almacenamiento de todos los recursos en el archivo .rc del proyecto y todos [símbolos](../windows/symbols-resource-identifiers.md) en Resource.h.
+
+Para abrir el **incluye recursos** de archivos en el cuadro de diálogo, haga una .rc [vista de recursos](../windows/resource-view-window.md), a continuación, elija **incluye recursos** en el menú contextual.
+
+**Archivo de encabezado de símbolos**  
+Permite cambiar el nombre del archivo de encabezado donde se almacenan las definiciones de los símbolos del archivo de recursos. Para obtener más información, consulte [cambiar los archivos de encabezado de los nombres de símbolos](../windows/changing-the-names-of-symbol-header-files.md).
+
+**Directivas de símbolos de solo lectura**  
+Permite incluir archivos de encabezado cuyos símbolos no deberían modificarse durante una sesión de edición. Por ejemplo, se puede incluir un archivo de símbolos compartido por varios proyectos. También se pueden incluir archivos .h de MFC. Para obtener más información, consulte [símbolos incluidos compartidos (de solo lectura) o calculados](../windows/including-shared-read-only-or-calculated-symbols.md).
+
+**Directivas de tiempo de compilación**  
+Permite incluir archivos de recursos creados y editados con independencia de los recursos del archivo principal de recursos, con directivas de tiempo de compilación (como las que incluyen de forma condicional recursos) o con recursos en formato personalizado. También puede usar el **cuadro directivas de tiempo de compilación** para incluir archivos de recursos MFC estándares. Para obtener más información, consulte [incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md).
+
 > [!NOTE]
->  Las entradas de estos cuadros de texto aparecen en el archivo .rc marcadas por `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, y `TEXTINCLUDE 3` respectivamente. Para obtener más información, consulte [TN035: usar varios archivos de recursos y archivos de encabezado con Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).  
-  
- Una vez que se ha realizado cambios en el archivo de recursos mediante el **incluye recursos** cuadro de diálogo, deberá cerrar el archivo .rc y vuelva a abrirlo para que los cambios surtan efecto. Para obtener más información, consulte [incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Cómo: especificar directorios de inclusión para recursos](../windows/how-to-specify-include-directories-for-resources.md)   
- [Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)   
- [Archivos de recursos](../windows/resource-files-visual-studio.md)   
- [Editores de recursos](../windows/resource-editors.md)
+> Las entradas de estos cuadros de texto aparecen en el archivo .rc marcadas por `TEXTINCLUDE 1`, `TEXTINCLUDE 2`, y `TEXTINCLUDE 3` respectivamente. Para obtener más información, consulte [TN035: usar varios archivos de recursos y archivos de encabezado con Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md).
+
+Una vez que se ha realizado cambios en el archivo de recursos mediante el **incluye recursos** cuadro de diálogo, deberá cerrar el archivo .rc y vuelva a abrirlo para que los cambios surtan efecto. Para obtener más información, consulte [incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Procedimiento para especificar directorios de inclusión para los recursos](../windows/how-to-specify-include-directories-for-resources.md)  
+[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)  
+[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Editores de recursos](../windows/resource-editors.md)

@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c8b4e7a66cff8c92164573259ebc59632b24283c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 05b11608db505ecd8db3133db14e1447ca3ad4a9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013683"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610110"
 ---
 # <a name="modulemethodreleasenotifierobject-data-member"></a>Module::MethodReleaseNotifier::object_ (Miembro de datos)
-Contiene un puntero al objeto cuya función miembro es el controlador de eventos actual **methodreleasenotifier** objeto.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-T* object_;  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Module::MethodReleaseNotifier (clase)](../windows/module-methodreleasenotifier-class.md)
+
+Contiene un puntero al objeto cuya función miembro es el controlador de eventos actual **methodreleasenotifier** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+T* object_;
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Module::MethodReleaseNotifier (clase)](../windows/module-methodreleasenotifier-class.md)

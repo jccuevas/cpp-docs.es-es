@@ -18,45 +18,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50503f06c3617d046c86db7fdcfd56555c1b4b8b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: cc95eef2c3cca678ae291846c2ebe0e5c1e80997
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011808"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609087"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>Mover y copiar menús y comandos de menú
-Puede mover o copiar menús y comandos de menú mediante el método de arrastrar y colocar o usando los comandos del menú contextual (menú que se abre al hacer clic con el botón derecho).  
-  
-### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Para mover o copiar menús o comandos de menú mediante el método de arrastrar y colocar  
-  
-1.  Arrastre o copie el elemento que desee mover a:  
-  
-    -   Una nueva ubicación en el menú actual.  
-  
-    -   Otro menú. (Puede navegar a otros menús arrastrando el puntero del mouse sobre ellos).  
-  
-2.  Arrastre el comando de menú cuando la guía de inserción muestre la posición que desee.  
-  
-### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Para mover o copiar menús o comandos de menú mediante los comandos de menú contextual  
-  
-1.  Haga clic con el botón derecho en uno o varios menús o comandos de menú.  
-  
-2.  En el menú contextual, elija **Cortar** (para mover) o **Copiar**.  
-  
-3.  Si va a mover los elementos a otro recurso de menú o archivo de script de recursos, [ábralo en otra ventana](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
-  
-4.  Seleccione la posición del menú o comando de menú al que desee mover o copiar.  
-  
-5.  En el menú contextual, elija **Pegar**. El elemento movido o copiado se coloca antes del elemento que seleccione.  
-  
-    > [!NOTE]
-    >  También puede arrastrar, copiar y pegar en otros menús de otras ventanas de menú.  
-  
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. . Para información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Editor de menús](../windows/menu-editor.md)
+
+Puede mover o copiar menús y comandos de menú mediante el método de arrastrar y colocar o usando los comandos del menú contextual (menú que se abre al hacer clic con el botón derecho).
+
+### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Para mover o copiar menús o comandos de menú mediante el método de arrastrar y colocar
+
+1. Arrastre o copie el elemento que desee mover a:
+
+   - Una nueva ubicación en el menú actual.
+
+   - Otro menú. (Puede navegar a otros menús arrastrando el puntero del mouse sobre ellos).
+
+2. Arrastre el comando de menú cuando la guía de inserción muestre la posición que desee.
+
+### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Para mover o copiar menús o comandos de menú mediante los comandos de menú contextual
+
+1. Haga clic con el botón derecho en uno o varios menús o comandos de menú.
+
+2. En el menú contextual, elija **Cortar** (para mover) o **Copiar**.
+
+3. Si va a mover los elementos a otro recurso de menú o archivo de script de recursos, [ábralo en otra ventana](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+4. Seleccione la posición del menú o comando de menú al que desee mover o copiar.
+
+5. En el menú contextual, elija **Pegar**. El elemento movido o copiado se coloca antes del elemento que seleccione.
+
+   > [!NOTE]
+   > También puede arrastrar, copiar y pegar en otros menús de otras ventanas de menú.
+
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. . Para información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Editor de menús](../windows/menu-editor.md)

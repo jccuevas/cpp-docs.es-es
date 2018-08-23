@@ -1,5 +1,5 @@
 ---
-title: 'Clase de valor Platform:: IntPtr | Documentos de Microsoft'
+title: Clase de valor IntPtr | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54facc94be3f43b500e38371e0eba9e00d130a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a97d77f0b84366c83f09f6a6c72afe1bbb25dc6d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088159"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612134"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr (Clase de valor)
 Representa un puntero o un identificador con signo cuyo tamaño es específico de la plataforma (32 bits o 64 bits).  
@@ -90,7 +90,7 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
   
 
 
-## <a name="toint32"> </a> IntPtr:: Toint32 (método)
+## <a name="toint32"> </a> Toint32 (método)
 Convierte el valor IntPtr actual en un entero de 32 bits.  
   
 ### <a name="syntax"></a>Sintaxis  

@@ -17,36 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5aa78562c934c41b2ff2ab7b381f6b2612426651
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 98bcc3d3fcaf7aea3b2632cacb1ff38eedb868b8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014593"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612317"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier (Constructor)
-Inicializa una nueva instancia de la **genericreleasenotifier** clase.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-GenericReleaseNotifier(  
-   T callback,   
-   bool release  
-) throw() : ReleaseNotifier(release), callback_(callback);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *devolución de llamada*  
- Una expresión lambda, functor o controlador de eventos de puntero a función que se puede invocar con el operador de paréntesis de función (`()`).  
-  
- *release*  
- Especificar **true** para habilitar una llamada subyacente [módulo:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; en caso contrario, especifique **false**.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Module::GenericReleaseNotifier (clase)](../windows/module-genericreleasenotifier-class.md)
+
+Inicializa una nueva instancia de la **genericreleasenotifier** clase.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+GenericReleaseNotifier(
+   T callback,
+   bool release
+) throw() : ReleaseNotifier(release), callback_(callback);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*devolución de llamada*  
+Una expresión lambda, functor o controlador de eventos de puntero a función que se puede invocar con el operador de paréntesis de función (`()`).
+
+*release*  
+Especificar **true** para habilitar una llamada subyacente [módulo:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; en caso contrario, especifique **false**.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Module::GenericReleaseNotifier (clase)](../windows/module-genericreleasenotifier-class.md)
