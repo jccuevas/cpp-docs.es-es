@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec19c574d9555fdfefaedd1b5ac05d896d15152
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 82c72a928c3f747251f4c02305cc61b83cfcedcb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850766"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545869"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar (clase)
 Implementa un control que indica visualmente el progreso de una operación larga.  
@@ -151,7 +151,7 @@ int GetRangeMin() const;
  El valor mínimo del intervalo actual.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -178,7 +178,7 @@ BOOL IsInfiniteMode() const;
  En el modo infinito, la barra de progreso rellena repetidamente desde el valor mínimo para el valor máximo. Puede usar el modo de infinito para indicar que una operación está en curso, pero que la hora de finalización es desconocida.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 virtual void OnDraw(CDC* pDC);

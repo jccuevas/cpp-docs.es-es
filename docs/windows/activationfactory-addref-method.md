@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb4221a0432acdfcccb4e7ce77a2d16245e48a03
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9b3790e0fb3d1b304359677ddedab2b65dcfe89d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650877"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575746"
 ---
 # <a name="activationfactoryaddref-method"></a>ActivationFactory::AddRef (Método)
-Incrementa el recuento de referencias del elemento actual **ActivationFactory** objeto.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-STDMETHOD_(  
-   ULONG,  
-   AddRef  
-)();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [ActivationFactory (clase)](../windows/activationfactory-class.md)
+
+Incrementa el recuento de referencias del elemento actual **ActivationFactory** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[ActivationFactory (clase)](../windows/activationfactory-class.md)

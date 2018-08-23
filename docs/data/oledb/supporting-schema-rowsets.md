@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c0468a9df7b79e79b3e20074c43fc1621058d71
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7f5c24623e10de23e42041592eb1b2f417f1ed5b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339710"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571728"
 ---
 # <a name="supporting-schema-rowsets"></a>Admitir conjuntos de filas de esquema
-Conjuntos de filas de esquema permiten a los consumidores obtener información acerca de un almacén de datos sin conocer su estructura subyacente, o esquema. Por ejemplo, un almacén de datos podría tener tablas organizadas en una jerarquía definida por el usuario, por lo que no habría ninguna manera de garantizar el conocimiento del esquema, excepto cuando lo lea. (Como otro ejemplo, tenga en cuenta que los asistentes de Visual C++ utilizan conjuntos de filas de esquema para generar los descriptores de acceso para el consumidor). Para permitir que el consumidor hacer esto, el objeto de sesión del proveedor expone los métodos en el [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) interfaz. En las aplicaciones de Visual C++, usas la [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) clase implemente `IDBSchemaRowset`.  
+Conjuntos de filas de esquema permiten a los consumidores obtener información acerca de un almacén de datos sin conocer su estructura subyacente, o esquema. Por ejemplo, un almacén de datos podría tener tablas organizadas en una jerarquía definida por el usuario, por lo que no habría ninguna manera de garantizar el conocimiento del esquema, excepto cuando lo lea. (Como otro ejemplo, tenga en cuenta que los asistentes de Visual C++ utilizan conjuntos de filas de esquema para generar los descriptores de acceso para el consumidor). Para permitir que el consumidor hacer esto, el objeto de sesión del proveedor expone los métodos en el [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) interfaz. En las aplicaciones de Visual C++, usas la [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) clase implemente `IDBSchemaRowset`.  
   
  `IDBSchemaRowsetImpl` admite los siguientes métodos:  
   
@@ -64,7 +64,7 @@ Conjuntos de filas de esquema permiten a los consumidores obtener información a
 -   En **C***ShortName***SessionColSchemaRowset**, pase el nombre de la tabla como un `DBID`.  
   
 ## <a name="setting-restrictions"></a>Configuración de restricciones  
- Un concepto importante en la compatibilidad con el conjunto de filas de esquema es establecer restricciones, lo que hacer uso de `SetRestrictions`. Las restricciones permiten a los clientes obtener solo las filas coincidentes (por ejemplo, buscar todas las columnas de la tabla "MyTable"). Las restricciones son opcionales y, en caso de que no se admita ninguna (comportamiento predeterminado), se devuelven siempre todos los datos. Para obtener un ejemplo de un proveedor que admite restricciones, vea el [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) ejemplo.  
+ Un concepto importante en la compatibilidad con el conjunto de filas de esquema es establecer restricciones, lo que hacer uso de `SetRestrictions`. Las restricciones permiten a los clientes obtener solo las filas coincidentes (por ejemplo, buscar todas las columnas de la tabla "MyTable"). Las restricciones son opcionales y, en caso de que no se admita ninguna (comportamiento predeterminado), se devuelven siempre todos los datos. Para obtener un ejemplo de un proveedor que admite restricciones, vea el [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) ejemplo.  
   
 ## <a name="setting-up-the-schema-map"></a>Configurar la asignación de esquema  
  Configurar una asignación de esquema, como en el archivo Session.h de UpdatePV:  
@@ -93,7 +93,7 @@ class CUpdateSessionTRSchemaRowset :
   
  Tenga en cuenta que `CUpdateSession` hereda `IDBSchemaRowsetImpl`, por lo que tiene todos los métodos de control de restricciones. Uso de `CSchemaRowsetImpl`, declarar tres clases secundarias (se muestran en el mapa de esquema anterior): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, y `CUpdateSessionPTSchemaRowset`. Cada una de estas clases secundarias tiene un `Execute` método que controla su conjunto de restricciones (criterios de búsqueda) correspondiente. Cada `Execute` método compara los valores de la `cRestrictions` y `rgRestrictions` parámetros. Vea la descripción de estos parámetros en [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
   
- Para obtener más información sobre qué restricciones corresponden a un conjunto de filas de esquema determinado, consulte la tabla del conjunto de filas de esquema GUID en [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) en el *referencia del programador de OLE DB* en el Windows SDK.  
+ Para obtener más información sobre qué restricciones corresponden a un conjunto de filas de esquema determinado, consulte la tabla del conjunto de filas de esquema GUID en [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) en el *referencia del programador de OLE DB* en el Windows SDK.  
   
  Por ejemplo, si admite la **TABLE_NAME** restricción en `DBSCHEMA_TABLES`, haría lo siguiente:  
   

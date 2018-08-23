@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51593d14967e2814d69cb0a912d937b689dc3632
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d0dfc28a510ab9fcc18149f1cd96037e6754d3d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337120"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572776"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl (Clase)
 Proporciona una implementación para el `IDBProperties` interfaz.  
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 |[SetProperties](#setproperties)|Establece propiedades en los grupos de propiedades origen de datos y la inicialización de objetos de origen de datos, o el grupo de propiedades de inicialización para los enumeradores.|  
   
 ## <a name="remarks"></a>Comentarios  
- [IDBProperties](https://msdn.microsoft.com/library/ms719607.aspx) es una interfaz obligatoria para los objetos de origen de datos y una interfaz opcional para los enumeradores. Sin embargo, si expone un enumerador [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx), debe exponer `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` mediante el uso de una función estática definida por [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+ [IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\)) es una interfaz obligatoria para los objetos de origen de datos y una interfaz opcional para los enumeradores. Sin embargo, si expone un enumerador [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)), debe exponer `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` mediante el uso de una función estática definida por [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
 
 ## <a name="getproperties"></a> Idbpropertiesimpl:: GetProperties
 Devuelve los valores de propiedades de los grupos de propiedades de inicialización, información de origen de datos y origen de datos que actualmente se establecen en el objeto de origen de datos o los valores de propiedades en el grupo de propiedades de inicialización que actualmente se establecen en el enumerador.  
@@ -84,7 +84,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IDBProperties:: GetProperties](https://msdn.microsoft.com/library/ms714344.aspx) en el *referencia del programador OLE DB*.  
+ Consulte [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
  Algunos parámetros se corresponden con *referencia del programador de OLE DB* parámetros de nombres diferentes, que se describen en `IDBProperties::GetProperties`:  
   
@@ -112,7 +112,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IDBProperties:: GetPropertyInfo](https://msdn.microsoft.com/library/ms718175.aspx) en el *referencia del programador OLE DB*.  
+ Consulte [IDBProperties:: GetPropertyInfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
  Algunos parámetros se corresponden con *referencia del programador de OLE DB* parámetros de nombres diferentes, que se describen en `IDBProperties::GetPropertyInfo`:  
   
@@ -135,7 +135,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IDBProperties:: SetProperties](https://msdn.microsoft.com/library/ms723049.aspx) en el *referencia del programador OLE DB*.  
+ Consulte [IDBProperties:: SetProperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
 ### <a name="remarks"></a>Comentarios  
  Si se inicializa el proveedor, este método establece los valores de propiedades en el DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, grupos de propiedades DBPROPSET_DBINIT para el objeto de origen de datos. Si no se ha inicializado el proveedor, Establece propiedades de grupo DBPROPSET_DBINIT solo.  

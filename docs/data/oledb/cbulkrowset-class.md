@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337727"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573170"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset (Clase)
 Recupera y manipula filas que se va a trabajar con datos de forma masiva mediante la recuperación de varios identificadores de fila con una sola llamada.  
@@ -160,7 +160,7 @@ class CBulkRowset : public CRowset<TAccessor>
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> CBulkRowset:: Addrefrows
-Las llamadas [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) para incrementar el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.  
+Las llamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) para incrementar el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -246,7 +246,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
  [in] El recuento de número de filas desde el marcador para la fila de destino. Si *lSkip* es cero, la primera fila es la fila marcada. Si *lSkip* es 1, la primera fila es la fila después de la fila marcada. Si *lSkip* es -1, la primera fila es la fila antes de la fila marcada.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Consulte [IRowset:: GetData](https://msdn.microsoft.com/library/ms716988.aspx) en el *referencia del programador OLE DB*. 
+ Consulte [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) en el *referencia del programador OLE DB*. 
 
 ## <a name="movetoratio"></a> CBulkRowset:: Movetoratio
 Captura las filas a partir de una posición en el conjunto de filas fraccionaria.  
@@ -273,10 +273,10 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- Donde `RowsetSize` es el tamaño del conjunto de filas, medido en filas. El proveedor específico depende de la precisión de esta fórmula. Para obtener más información, consulte [IRowsetScroll:: GetRowsAtRatio](https://msdn.microsoft.com/library/ms709602.aspx) en el *referencia del programador de OLE DB*.   
+ Donde `RowsetSize` es el tamaño del conjunto de filas, medido en filas. El proveedor específico depende de la precisión de esta fórmula. Para obtener más información, consulte [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) en el *referencia del programador de OLE DB*.   
 
 ## <a name="releaserows"></a> CBulkRowset:: ReleaseRows
-Las llamadas [IRowset:: ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) para reducir el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.  
+Las llamadas [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) para reducir el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.  
   
 ### <a name="syntax"></a>Sintaxis  
   

@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de programa multiproceso en C | Documentos de Microsoft
+title: Ejemplo de programa multiproceso en C | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1584d52f9ea543c95363a0f7f03cdad80442ee1c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687997"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539296"
 ---
 # <a name="sample-multithread-c-program"></a>Ejemplo de programa multiproceso en C
-Bounce.c es un ejemplo de programa multiproceso que crea un nuevo subproceso cada vez que la letra **una** o **A** se escribe. Cada subproceso produce una cara sonriente de distinto color alrededor de la pantalla. Pueden crearse hasta 32 subprocesos. Terminación normal del programa se produce cuando `q` o **preguntas** se escribe. Para obtener información sobre la compilación y vinculación de Bounce.c, vea [compilar y vincular programas multiproceso](../parallel/compiling-and-linking-multithread-programs.md).  
+Bounce.c es un ejemplo de programa multiproceso que crea un nuevo subproceso cada vez que la letra `a` o `A` se escribe. Cada subproceso produce una cara sonriente de diferente color alrededor de la pantalla. Pueden crearse hasta 32 subprocesos. La terminación normal del programa se produce cuando `q` o `Q` se escribe. Para obtener información sobre la compilación y vinculación de Bounce.c, vea [compilar y vincular programas multiproceso](../parallel/compiling-and-linking-multithread-programs.md).  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="code"></a>Código  
   
-```  
+```c  
 // sample_multithread_c_program.c  
 // compile with: /c  
 //  
@@ -219,4 +219,5 @@ q
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Multithreading con C y Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Multithreading con C y Win32](../parallel/multithreading-with-c-and-win32.md)

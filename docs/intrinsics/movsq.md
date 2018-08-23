@@ -1,5 +1,5 @@
 ---
-title: __movsq | Documentos de Microsoft
+title: __movsq | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e0eacba00f9c0fb397b1fe37d2be8b108b6a59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0231c2514805479c0ec999698ebd027ab51e3119
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336978"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541310"
 ---
 # <a name="movsq"></a>__movsq
 **Específicos de Microsoft**  
@@ -54,12 +54,12 @@ void __movsq(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsq`|x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- El resultado es que la primera `Count` palabras cuádruples señalada por `Source` se copian en el `Dest` cadena.  
+ El resultado es que la primera `Count` palabras cuádruples apunta `Source` se copian en el `Dest` cadena.  
   
  Esta rutina solo está disponible como función intrínseca.  
   

@@ -1,5 +1,5 @@
 ---
-title: Clase CDockingPanesRow | Documentos de Microsoft
+title: CDockingPanesRow (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -100,17 +100,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955272"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541133"
 ---
-# <a name="cdockingpanesrow-class"></a>Clase CDockingPanesRow
+# <a name="cdockingpanesrow-class"></a>CDockingPanesRow (clase)
 Administra una lista de paneles ubicados en la misma fila horizontal o vertical (columna) de un sitio de vinculación.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -224,7 +224,7 @@ virtual void AddPaneFromRow(
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- Organiza acoplar paneles en una fila según el margen especificado y parámetros de espaciado.  
+ Organiza acoplar paneles en una fila de acuerdo con el margen especificado y los parámetros de espaciado.  
   
 ```  
 virtual void ArrangePanes(
@@ -673,7 +673,7 @@ virtual void RepositionPanes(
   
 ### <a name="parameters"></a>Parámetros  
  [in] *rectNewParentBarArea*  
- [in] *nSide*  
+ [in] *entro*  
  [in] *bExpand*  
  [in] *nOffset*  
   

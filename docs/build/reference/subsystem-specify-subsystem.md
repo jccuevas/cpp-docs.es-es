@@ -1,5 +1,5 @@
 ---
-title: -SUBSYSTEM (Especificar subsistema) | Documentos de Microsoft
+title: -SUBSYSTEM (Especificar subsistema) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70d6f047cf18b8b768d40533e2acc6cb2f649327
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379008"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572783"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Especificar subsistema)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "32379008"
 ```  
   
  BOOT_APPLICATION  
- Aplicación que se ejecuta en el entorno de arranque de Windows. Para obtener más información acerca de las aplicaciones de arranque, consulte [acerca de BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
+ Aplicación que se ejecuta en el entorno de arranque de Windows. Para obtener más información acerca de las aplicaciones de arranque, consulte [sobre BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
   
  CONSOLE  
  Aplicación de modo de caracteres Win32. El sistema operativo proporciona una consola para las aplicaciones de consola. Si se define `main` o `wmain` para código nativo, se define `int main(array<String ^> ^)` para código administrado o la aplicación se compila por completo mediante `/clr:safe`, CONSOLE es el valor predeterminado.  
@@ -67,10 +67,10 @@ ms.locfileid: "32379008"
 |Subsistema|Mínima|Default|  
 |---------------|-------------|-------------|  
 |BOOT_APPLICATION|1.0|1.0|  
-|CONSOLE|5.01 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|WINDOWS|5.01 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|NATIVE (con DRIVER:WDM)|1.00 (x86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM)|1.00 (x86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM)|  
-|NATIVE (sin /DRIVER:WDM)|4.00 (x 86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|4.00 (x 86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
+|CONSOLE|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|  
+|WINDOWS|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|  
+|NATIVE (con DRIVER:WDM)|1,00 (x 86) 1.10 (x64, ARM)|1,00 (x 86) 1.10 (x64, ARM)|  
+|NATIVE (sin /DRIVER:WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|  
 |POSIX|1.0|19.90|  
 |EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|  
   
@@ -80,7 +80,7 @@ ms.locfileid: "32379008"
   
 2.  Seleccione la carpeta Vinculador.  
   
-3.  Seleccione el **System** página de propiedades.  
+3.  Seleccione el **sistema** página de propiedades.  
   
 4.  Modifique la propiedad `SubSystem`.  
   

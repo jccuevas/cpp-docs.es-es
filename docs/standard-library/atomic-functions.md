@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028322"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539485"
 ---
 # <a name="ltatomicgt-functions"></a>Funciones &lt;atomic&gt;
 
@@ -164,7 +164,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="remarks"></a>Comentarios
 
-Un *operación atómica de comparación e intercambio* compara el valor que se almacena en el objeto que apunta *Atom* con el valor al que apunta *Exp*. Si los valores son iguales, el el valor que se almacena en el objeto que apunta *atom* se sustituye por `Val` utilizando un `read-modify-write` restricciones que se especifican mediante deordenacióndeoperaciónylaaplicacióndelamemoria*Order1*. Si los valores no son iguales, la operación reemplaza el valor al que apunta *Exp* con el valor que se almacena en el objeto que apunta *Atom* y aplica las restricciones de ordenación de memoria que están especificado por *Order2*.
+Un *operación atómica de comparación e intercambio* compara el valor que se almacena en el objeto que apunta *Atom* con el valor al que apunta *Exp*. Si los valores son iguales, el valor que se almacena en el objeto que apunta *atom* se sustituye por *valor* utilizando un `read-modify-write` operación y aplicar las restricciones de ordenación de memoria que están especificado por *Order1*. Si los valores no son iguales, la operación reemplaza el valor al que apunta *Exp* con el valor que se almacena en el objeto que apunta *Atom* y aplica las restricciones de ordenación de memoria que están especificado por *Order2*.
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak
 

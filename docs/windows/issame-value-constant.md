@@ -17,42 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c16d16fe1965e5e3c6fa69a78dabf9be615daee1
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 299ee0f1c2a892a3219c2337e01d629eadec8a82
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013231"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42580999"
 ---
 # <a name="issamevalue-constant"></a>IsSame::value (Constante)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-template <typename T1, typename T2>  
-struct IsSame  
-{  
-    static const bool value = false;  
-};  
-  
-template <typename T1>  
-struct IsSame<T1, T1>  
-{  
-    static const bool value = true;  
-};  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Indica si un tipo es igual a otro.  
-  
- **valor** es **true** si los parámetros de plantilla son los mismos, y **false** si los parámetros de plantilla son diferentes.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** internal.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [IsSame (estructura)](../windows/issame-structure.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template <typename T1, typename T2>
+struct IsSame
+{
+    static const bool value = false;
+};
+
+template <typename T1>
+struct IsSame<T1, T1>
+{
+    static const bool value = true;
+};
+```
+
+## <a name="remarks"></a>Comentarios
+
+Indica si un tipo es igual a otro.
+
+**valor** es **true** si los parámetros de plantilla son los mismos, y **false** si los parámetros de plantilla son diferentes.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** internal.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[IsSame (estructura)](../windows/issame-structure.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

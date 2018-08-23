@@ -1,5 +1,5 @@
 ---
-title: Clase CPaneContainer | Documentos de Microsoft
+title: CPaneContainer (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -130,17 +130,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de7cf11b6f328819a677d248647934619153fb7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d69a5cefa1cb43ad4f6c585b3cb7f7e021ae9183
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079480"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540106"
 ---
-# <a name="cpanecontainer-class"></a>Clase CPaneContainer
+# <a name="cpanecontainer-class"></a>CPaneContainer (clase)
 La `CPaneContainer` clase es un componente básico del modelo de acoplamiento implementado por MFC. Un objeto de esta clase almacena punteros en dos paneles de acoplamiento o dos instancias de `CPaneContainer.` ; también almacena un puntero divisor que separa los paneles (o contenedores). Anidando contenedores dentro de contenedores, el marco puede compilar un árbol binario que representa diseños complejos de acoplamiento. La raíz del árbol binario se almacena en un [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) objeto.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
  
 ## <a name="syntax"></a>Sintaxis  
   
@@ -218,7 +218,7 @@ class CPaneContainer : public CObject
 |[CPaneContainer::StretchPaneContainer](#stretchpanecontainer)||  
   
 ### <a name="remarks"></a>Comentarios  
- `CPaneContainer` los objetos se crean automáticamente por el marco de trabajo.  
+ `CPaneContainer` los objetos se crean automáticamente el marco de trabajo.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo construir una instancia de la `CPaneContainer` clase. Este fragmento de código forma parte de la [ejemplo establece el tamaño del panel](../../visual-cpp-samples.md).  

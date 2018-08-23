@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850162"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42544534"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl (clase)
 Proporciona la funcionalidad del control de barra de progreso común de Windows.  
@@ -350,10 +350,12 @@ COLORREF SetBarColor(COLORREF clrBar);
 |[in] *clrBar*|Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que especifica el nuevo color de la barra indicadora de progreso. Especifique CLR_DEFAULT para hacer que la barra de progreso usar su color predeterminado.|  
   
 ### <a name="return-value"></a>Valor devuelto  
- Representa el color anterior de la barra del indicador de progreso, como un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor o CLR_DEFAULT si el color de la barra indicadora de progreso es el color predeterminado.  
+
+Representa el color anterior de la barra del indicador de progreso, como un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor o CLR_DEFAULT si el color de la barra indicadora de progreso es el color predeterminado.  
   
 ### <a name="remarks"></a>Comentarios  
- El `SetBarColor` método establece el if única de color de la barra de progreso un [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] [tema](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx) no está en vigor.  
+
+El `SetBarColor` método establece el progreso de la barra solo si de color una Vista de Windows [tema](/windows/desktop/Controls/visual-styles-overview) no está en vigor.  
   
  Este método envía el [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) mensaje, que se describe en el SDK de Windows.  
   

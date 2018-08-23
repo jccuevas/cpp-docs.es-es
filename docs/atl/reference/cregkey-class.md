@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7804513c45de1951935e0fdf2fd485b9457e2a5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885304"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571636"
 ---
 # <a name="cregkey-class"></a>CRegKey (clase)
 Esta clase proporciona métodos para manipular las entradas del registro del sistema.  
@@ -876,7 +876,7 @@ LONG SetStringValue(
  Si el método tiene éxito, el valor devuelto es ERROR_SUCCESS. Si se produce un error en el método, el valor devuelto es un código de error distinto de cero definido en el archivo WINERROR. H.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método usa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx) para escribir el valor en el registro.  
+ Este método usa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) para escribir el valor en el registro.  
   
 ##  <a name="setvalue"></a>  CRegKey::SetValue  
  Llame a este método para almacenar datos en el campo de valor especificado de [m_hKey](#m_hkey). Las versiones anteriores de este método ya no se admiten y se marcan como ATL_DEPRECATED.  

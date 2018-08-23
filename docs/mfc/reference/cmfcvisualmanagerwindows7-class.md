@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849954"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540295"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 (clase)
-El `CMFCVisualManagerWindows7` proporciona a una aplicación de la apariencia de un [!INCLUDE[win7](../../build/includes/win7_md.md)] aplicación.  
+El `CMFCVisualManagerWindows7` proporciona la apariencia de una aplicación de Windows 7 a una aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -103,7 +103,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::SetStyle`|Establece la combinación de colores de la `CMFCVisualManagerWindows7` interfaz gráfica de usuario.|  
   
 ## <a name="remarks"></a>Comentarios  
- Use la `CMFCVisualManagerWindows7` clase para cambiar la apariencia de la aplicación para imitar el valor predeterminado es [!INCLUDE[win7](../../build/includes/win7_md.md)] aplicación. Esta clase podría no ser válida si la aplicación se ejecuta en una versión de Windows anteriores a [!INCLUDE[win7](../../build/includes/win7_md.md)]. En ese caso, la aplicación utiliza el administrador visual predeterminado definido en [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Use la `CMFCVisualManagerWindows7` clase para cambiar la apariencia de la aplicación para imitar una aplicación de Windows 7 de forma predeterminada. Esta clase podría no ser válida si la aplicación se ejecuta en una versión de Windows anteriores a Windows 7. En ese caso, la aplicación utiliza el administrador visual predeterminado definido en [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
  El CMFCVisualManagerWindows7 hereda varios métodos de la [CMFCVisualManagerWindows (clase)](../../mfc/reference/cmfcvisualmanagerwindows-class.md) y `CMFCVisualManager` clase. Los métodos enumerados en la sección anterior son métodos nuevos a la `CMFCVisualManagerWindows7` clase.  
   

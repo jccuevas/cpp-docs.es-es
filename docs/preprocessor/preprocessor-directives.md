@@ -1,5 +1,5 @@
 ---
-title: Directivas de preprocesador | Documentos de Microsoft
+title: Las directivas de preprocesador | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5621c1a338ea6870d15dca65c303d4ac2bf8c7a
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: dc392454a6c5b152411fe8f6a7d0c12457389794
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122600"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538905"
 ---
 # <a name="preprocessor-directives"></a>Directivas de preprocesador
 
-Directivas de preprocesador, como `#define` y **#ifdef**, se utilizan normalmente para que los programas de origen sean fáciles de modificar y compilar en diferentes entornos de ejecución. Las directivas del archivo de código fuente indican al preprocesador que realice acciones específicas. Por ejemplo, el preprocesador puede reemplazar tokens en el texto, insertar el contenido de otros archivos en el archivo de código fuente o suprimir la compilación de parte del archivo quitando secciones de texto. Las líneas de preprocesador se reconocen y se ejecutan antes de la expansión de macro. Por consiguiente, si una macro se expande en algo que se parezca a un comando de preprocesador, el preprocesador no reconocerá ese comando.
+Las directivas de preprocesador, tales como `#define` y `#ifdef`, normalmente se usan para que los programas de origen sean fáciles de modificar y compilar en diferentes entornos de ejecución. Las directivas del archivo de código fuente indican al preprocesador que realice acciones específicas. Por ejemplo, el preprocesador puede reemplazar tokens en el texto, insertar el contenido de otros archivos en el archivo de código fuente o suprimir la compilación de parte del archivo quitando secciones de texto. Las líneas de preprocesador se reconocen y se ejecutan antes de la expansión de macro. Por consiguiente, si una macro se expande en algo que se parezca a un comando de preprocesador, el preprocesador no reconocerá ese comando.
 
-Las instrucciones de preprocesador utilizan el mismo juego de caracteres que las instrucciones del archivo de código fuente, con la excepción de que no se admiten secuencias de escape. El juego de caracteres utilizado en las instrucciones de preprocesador es el mismo que el [juego de caracteres de ejecución](http://msdn.microsoft.com/en-us/a7901c61-524d-47c6-beb6-d9dacc2e72ed). El preprocesador también reconoce valores de caracteres negativos.
+Las instrucciones de preprocesador utilizan el mismo juego de caracteres que las instrucciones del archivo de código fuente, con la excepción de que no se admiten secuencias de escape. Juego de caracteres utilizado en las instrucciones de preprocesador es el mismo que el [juego de caracteres de ejecución](http://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). El preprocesador también reconoce valores de caracteres negativos.
 
 El preprocesador reconoce las siguientes directivas:
 
@@ -37,7 +37,7 @@ El preprocesador reconoce las siguientes directivas:
 |[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
 |[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
 
-El signo de número (**#**) debe ser el primer carácter de espacio en blanco en la línea que contiene la directiva; pueden aparecer caracteres de espacio en blanco entre el signo de número y la primera letra de la directiva. Algunas directivas incluyen argumentos o valores. Cualquier texto que sigue a una directiva (excepto un argumento o un valor que forme parte de la directiva) debe ir precedido por un delimitador de comentario de línea única (**//**) o incluido entre delimitadores de comentario ( __/ \*\*/__).   Líneas que contienen directivas de preprocesador pueden continuar precediendo inmediatamente el marcador de fin de línea con una barra diagonal inversa (**\\**).
+El signo de número (**#**) debe ser el primer carácter de espacio en blanco en la línea que contiene la directiva; pueden aparecer caracteres de espacio en blanco entre el signo de número y la primera letra de la directiva. Algunas directivas incluyen argumentos o valores. Cualquier texto que sigue a una directiva (excepto un argumento o un valor que forma parte de la directiva) debe ir precedido por el delimitador de comentario de línea única (**//**) o bien delimitado por delimitadores de comentario ( __/ \*\*/__).   Líneas que contienen directivas de preprocesador se pueden continuar precediendo inmediatamente antes del marcador de final de línea con una barra diagonal inversa (**\\**).
 
 Las directivas de preprocesador pueden aparecer en cualquier lugar de un archivo de código fuente, pero solo se aplican al resto del archivo de código fuente.
 

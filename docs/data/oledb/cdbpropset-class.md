@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 15a1506980519880652abc637549ec2c7bf17e1d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1b94898cbe4a041ac1bb9a5d01c55380ee496106
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337602"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572603"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet (Clase)
 Hereda el `DBPROPSET` estructurar y agrega un constructor que inicializa los campos de clave, así como la `AddProperty` obtener acceso a método.  
@@ -131,7 +131,7 @@ bool AddProperty(DWORD dwPropertyID,
  **True** si la propiedad se agregó correctamente. En caso contrario, **false**. 
 
 ## <a name="cdbpropset"></a> CDBPropSet:: CDBPropSet
-El constructor. Inicializa el `rgProperties`, `cProperties`, y `guidPropertySet` campos de la [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) estructura.  
+El constructor. Inicializa el `rgProperties`, `cProperties`, y `guidPropertySet` campos de la [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estructura.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -161,7 +161,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>Parámetros  
  *GUID*  
- [in] Un GUID que se usa para establecer el `guidPropertySet` campo de la [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) estructura.  
+ [in] Un GUID que se usa para establecer el `guidPropertySet` campo de la [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estructura.  
   
 ### <a name="remarks"></a>Comentarios  
  Este campo se puede establecer el [constructor](../../data/oledb/cdbpropset-cdbpropset.md) también.  
@@ -179,5 +179,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CDBPropIDSet (clase)](../../data/oledb/cdbpropidset-class.md)   
- [Estructura DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)   
- [Estructura DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)
+ [Estructura DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
+ [Estructura DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))

@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7897bf7b18d804d787f865b80b615b7564919
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028296"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545886"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implementa un panel que se puede acoplar en un sitio de vinculación o incluir en un panel con fichas.  
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="remarks"></a>Comentarios  
  El marco llama a este método para controlar el acoplamiento de un panel flotante.  
   
- Barras de herramientas flotantes o acoplar paneles que utilizan el modo de acoplamiento DT_IMMEDIATE, el marco de trabajo retrasa el comando de acoplamiento para permitir al usuario mover la ventana fuera del área cliente del marco primario antes de que se produce de acoplamiento. La duración del retraso se mide en milisegundos y se controla mediante el [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) miembro de datos... El valor predeterminado de [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) es 200. Este comportamiento emula el comportamiento de acoplamiento [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
+ Barras de herramientas flotantes o acoplar paneles que utilizan el modo de acoplamiento DT_IMMEDIATE, el marco de trabajo retrasa el comando de acoplamiento para permitir al usuario mover la ventana fuera del área cliente del marco primario antes de que se produce de acoplamiento. La duración del retraso se mide en milisegundos y se controla mediante el [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) miembro de datos... El valor predeterminado de [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) es 200. Este comportamiento emula el comportamiento de acoplamiento de Microsoft Word 2007.  
   
  Para los Estados de acoplamiento retrasados (CS_DELAY_DOCK y CS_DELAY_DOCK_TO_TAB), el marco de trabajo no realiza el acoplamiento hasta que el usuario suelta el botón del mouse. Si un panel utiliza el modo de acoplamiento DT_STANDARD, el marco de trabajo muestra un rectángulo en la ubicación de acoplamiento proyectada. Si un panel utiliza el modo de acoplamiento DT_SMART, el marco de trabajo muestra marcadores de acoplamiento inteligente y rectángulos semitransparentes en la ubicación de acoplamiento proyectada. Para especificar el modo de acoplamiento para el panel, llame a la [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) método. Para obtener más información acerca de acoplamiento inteligente, consulte [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
@@ -1186,7 +1186,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
  Para obtener un efecto de animación más rápido, reduzca este valor. Para obtener un efecto de animación más lento, aumente este valor.  
   
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);

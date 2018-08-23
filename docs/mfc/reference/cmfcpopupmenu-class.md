@@ -170,16 +170,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b80dbc4383b18f3e8183ae06d2259398b5e1223
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 04217a03defcecf990a943d5d99f8370a966a5f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852554"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539698"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu (clase)
 Implementa la funcionalidad del menú emergente de Windows y lo prolonga agregando características tales como los menús con barra desplazable e información sobre herramientas.
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.    
   
 ## <a name="syntax"></a>Sintaxis  
   

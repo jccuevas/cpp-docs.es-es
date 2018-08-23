@@ -17,74 +17,78 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ece97ee2709cd16acc4625c11667fd2c43e9dee8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4c529abb1ade786bf7ec0a2d5cff5c49f6197be7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643100"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601594"
 ---
 # <a name="bindable"></a>bindable
-Indica que la propiedad admite enlace de datos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-[bindable]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El **enlazable** atributo de C++ tiene la misma funcionalidad que el [enlazable](http://msdn.microsoft.com/library/windows/desktop/aa366738) atributo MIDL. Se puede usar en las propiedades definidas con el [propget](../windows/propget.md), [propput](../windows/propput.md), o [propputref](../windows/propputref.md) atributos, o bien puede definir un método se puede enlazar manualmente.  
-  
- Los siguientes ejemplos MFC muestran el uso de **enlazable**:  
-  
--   [Ejemplos de controles: Controles de ActiveX basados en MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
-  
--   [Ejemplo CIRC: Control ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
-  
--   [Ejemplo TESTHELP: Control de ActiveX con información sobre herramientas y ayuda](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
-  
-## <a name="example"></a>Ejemplo  
- El código siguiente muestra cómo puede usar **enlazable** en una propiedad:  
-  
-```cpp  
-// cpp_attr_ref_bindable.cpp  
-// compile with: /LD  
-#include <windows.h>  
-[  
-   uuid("479B29E3-9A2C-11D0-B696-00A0C903487A"),  
-   dispinterface,  
+
+Indica que la propiedad admite enlace de datos.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[bindable]
+```
+
+## <a name="remarks"></a>Comentarios
+
+El **enlazable** atributo de C++ tiene la misma funcionalidad que el [enlazable](http://msdn.microsoft.com/library/windows/desktop/aa366738) atributo MIDL. Se puede usar en las propiedades definidas con el [propget](../windows/propget.md), [propput](../windows/propput.md), o [propputref](../windows/propputref.md) atributos, o bien puede definir un método se puede enlazar manualmente.
+
+Los siguientes ejemplos MFC muestran el uso de **enlazable**:
+
+- [Ejemplos de controles: Controles de ActiveX basados en MFC](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
+
+- [Ejemplo CIRC: Control ActiveX](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
+
+- [Ejemplo TESTHELP: Control de ActiveX con información sobre herramientas y ayuda](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
+
+## <a name="example"></a>Ejemplo
+
+El código siguiente muestra cómo puede usar **enlazable** en una propiedad:
+
+```cpp
+// cpp_attr_ref_bindable.cpp
+// compile with: /LD
+#include <windows.h>
+[
+   uuid("479B29E3-9A2C-11D0-B696-00A0C903487A"),
+   dispinterface,
    helpstring("property demo Interface")  
-]  
-__interface IPropDemo : IDispatch {  
-  
-   [propget, id(1), bindable, displaybind, defaultbind, requestedit] HRESULT P1([out, retval] long *nSize);  
-   [propput, id(1), bindable, displaybind, defaultbind, requestedit] HRESULT P1([in] long nSize);  
-   [id(3), bindable, propget] HRESULT Object([out, retval] IDispatch **ppObj);  
-   [id(3), bindable, propputref] HRESULT Object([in] IDispatch* pObj);     
-   [id(-552), helpstring("method AboutBox")] HRESULT AboutBox();  
-};  
-  
-[ module(name="PropDemoLib", uuid="479B29E2-9A2C-11D0-B696-00A0C903487A", version="1.0", helpstring="property demo") ];  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|Método de interfaz|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de método](../windows/method-attributes.md)   
- [defaultbind](../windows/defaultbind.md)   
- [displaybind](../windows/displaybind.md)   
- [immediatebind](../windows/immediatebind.md)   
- [requestedit](../windows/requestedit.md)   
+]
+__interface IPropDemo : IDispatch {
+
+   [propget, id(1), bindable, displaybind, defaultbind, requestedit] HRESULT P1([out, retval] long *nSize);
+   [propput, id(1), bindable, displaybind, defaultbind, requestedit] HRESULT P1([in] long nSize);
+   [id(3), bindable, propget] HRESULT Object([out, retval] IDispatch **ppObj);
+   [id(3), bindable, propputref] HRESULT Object([in] IDispatch* pObj);
+   [id(-552), helpstring("method AboutBox")] HRESULT AboutBox();
+};
+
+[ module(name="PropDemoLib", uuid="479B29E2-9A2C-11D0-B696-00A0C903487A", version="1.0", helpstring="property demo") ];
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|Método de interfaz|
+|**Reiterativo**|No|
+|**Atributos requeridos**|Ninguna|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos de método](../windows/method-attributes.md)  
+[defaultbind](../windows/defaultbind.md)  
+[displaybind](../windows/displaybind.md)  
+[immediatebind](../windows/immediatebind.md)  
+[requestedit](../windows/requestedit.md)  

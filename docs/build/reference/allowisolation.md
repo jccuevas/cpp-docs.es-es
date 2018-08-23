@@ -1,5 +1,5 @@
 ---
-title: -ALLOWISOLATION | Documentos de Microsoft
+title: -ALLOWISOLATION | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb92a7f31d48dad4a7fb608703c71ccc661e176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9511ce2d94a426756581b87d863051da25a627b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368979"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572608"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 Especifica el comportamiento de la búsqueda de manifiesto.  
@@ -36,15 +36,15 @@ Especifica el comportamiento de la búsqueda de manifiesto.
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- **/ ALLOWISOLATION** hace que el sistema operativo realice búsquedas y cargas de manifiestos.  
+ **/ ALLOWISOLATION** hace que el sistema operativo realice cargas y búsquedas de manifiestos.  
   
  **/ ALLOWISOLATION** es el valor predeterminado.  
   
- **/ALLOWISOLATION:no** indica que los archivos ejecutables se cargan como si no hubiera ningún manifiesto y hace [referencia de EDITBIN](../../build/reference/editbin-reference.md) para establecer el `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` de bits en el encabezado opcional `DllCharacteristics` campo.  
+ **/ALLOWISOLATION:no** indica que se cargan los archivos ejecutables como si no hubiera ningún manifiesto y causas [referencia de EDITBIN](../../build/reference/editbin-reference.md) para establecer el `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit en el encabezado opcional `DllCharacteristics` campo.  
   
- Cuando se deshabilita el aislamiento para un ejecutable, el cargador de Windows no busca ningún manifiesto de aplicación para el proceso recién creado. El nuevo proceso no tiene un contexto de activación predeterminado, incluso si hay un manifiesto en el propio ejecutable o si hay un manifiesto con el nombre *nombre de archivo ejecutable*. exe.manifest.  
+ Cuando se deshabilita el aislamiento para un ejecutable, el cargador de Windows no busca ningún manifiesto de aplicación para el proceso recién creado. El nuevo proceso no tiene un contexto de activación predeterminado, incluso si hay un manifiesto en el propio ejecutable, o si hay un manifiesto con el nombre *nombre-ejecutable*. exe.manifest.  
   
 ## <a name="see-also"></a>Vea también  
  [Opciones de EDITBIN](../../build/reference/editbin-options.md)   
- [/ /ALLOWISOLATION (manifestar)](../../build/reference/allowisolation-manifest-lookup.md)   
- [Referencia de archivos del manifiesto](http://msdn.microsoft.com/library/aa375632.aspx)
+ [/ALLOWISOLATION (búsqueda de manifiesto)](../../build/reference/allowisolation-manifest-lookup.md)   
+ [Referencia de los archivos de manifiesto](/windows/desktop/SbsCs/manifest-files-reference)

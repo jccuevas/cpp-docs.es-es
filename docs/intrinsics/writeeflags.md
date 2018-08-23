@@ -1,5 +1,5 @@
 ---
-title: __writeeflags | Documentos de Microsoft
+title: __writeeflags | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2885f2ea103ad43535b11c526b96ed42de45fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340533"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541326"
 ---
 # <a name="writeeflags"></a>__writeeflags
 Escribe el valor especificado en el programa de estado y control (EFLAGS) se registran.  
@@ -46,12 +46,12 @@ void __writeeflags(unsigned __int64 Value);
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__writeeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writeeflags`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [__readeflags](../intrinsics/readeflags.md)

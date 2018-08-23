@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 661ac13acd1d8eac0ecde9af9fa08875b99153e3
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 0179bbc68bb6ed60f6fadf26f98be492c2eeb4c1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336985"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571900"
 ---
 # <a name="cutlprops-class"></a>CUtlProps (Clase)
 Implementa las propiedades para una variedad de interfaces de la propiedad de OLE DB (por ejemplo, `IDBProperties`, `IDBProperties`, y `IRowsetInfo`).  
@@ -123,7 +123,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
  El índice de la matriz de conjunto de propiedades; cero si no hay sólo una propiedad establecida.  
   
  *pDBProp*  
- El identificador de propiedad y el nuevo valor en un [DBPROP](https://msdn.microsoft.com/library/ms717970.aspx) estructura.  
+ El identificador de propiedad y el nuevo valor en un [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un HRESULT estándar. El valor predeterminado es S_OK.  
@@ -178,7 +178,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
  El índice de la matriz de conjunto de propiedades; cero si no hay sólo una propiedad establecida.  
   
  *pDBProp*  
- El identificador de propiedad y el nuevo valor en un [DBPROP](https://msdn.microsoft.com/library/ms717970.aspx) estructura.  
+ El identificador de propiedad y el nuevo valor en un [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\)) estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un HRESULT estándar. El valor predeterminado es S_OK.  

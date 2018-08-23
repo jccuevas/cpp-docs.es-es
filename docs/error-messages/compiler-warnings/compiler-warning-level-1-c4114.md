@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 1) C4114 | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4114 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78402d4487eecde00c55ea5e0aad913d97226325
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9969f58b24defdb3dfa8a96437769d0b19e4569e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283928"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42545901"
 ---
 # <a name="compiler-warning-level-1-c4114"></a>Compilador advertencia (nivel 1) C4114
 el mismo calificador de tipo se ha utilizado más de una vez  
   
- Una definición o declaración de tipo utiliza un calificador de tipo (**const**, `volatile`, **firmado**, o `unsigned`) más de una vez. Esto provoca una advertencia con las extensiones de Microsoft (/Ze) y un error en la compatibilidad con ANSI (/Za).  
+ Una definición o declaración de tipo utiliza un calificador de tipo (**const**, **volátil**, **firmado**, o **sin signo**) más de una vez. Esto hace que una advertencia con las extensiones de Microsoft (/Ze) y un error en la compatibilidad con ANSI (/Za).  
   
  El ejemplo siguiente genera C4114:  
   

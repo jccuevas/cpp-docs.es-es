@@ -20,34 +20,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e58951fe214efda0002f3ea864e67d0ea35423c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 878f7b31d98a26a76b8466e7a93cd3d165ed145f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648079"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583462"
 ---
 # <a name="creating-pop-up-menus"></a>Crear menús emergentes
-Los[menús emergentes](../mfc/menus-mfc.md) muestran comandos de pantalla que se utilizan con frecuencia. Pueden ser contextuales con respecto a la ubicación del puntero. Utilizar menús emergentes en la aplicación requiere compilar el menú y, a continuación, conectarlo al código de la aplicación.  
-  
- Una vez creado el recurso de menú, el código de la aplicación debe cargar el recurso y usar [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) para que aparezca el menú. Cuando el usuario descarte el menú emergente al hacer clic fuera de él o en un comando, se devolverá esa función. Si el usuario elige un comando, se enviará el mensaje de ese comando a la ventana cuyo controlador se ha pasado.  
-  
-### <a name="to-create-a-pop-up-menu"></a>Para crear un menú emergente  
-  
-1.  [Cree un menú](../windows/creating-a-menu.md) con un título vacío (no proporcione ningún **Título**).  
-  
-2.  [Agregue un comando de menú al menú nuevo](../windows/adding-commands-to-a-menu.md). Mover al primer comando de menú debajo del título de menú en blanco (el título provisional dice `Type Here`). Escriba un **Título** y cualquier otra información.  
-  
-     Repita este proceso para los demás comandos de menú del menú emergente.  
-  
-3.  Guarde el recurso de menú.  
-  
-    > [!TIP]
-    >  Para obtener más información acerca de cómo ver el menú emergente, consulte [Ver un menú como menú emergente](../windows/viewing-a-menu-as-a-pop-up-menu.md).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Conectar un menú emergente a una aplicación](../windows/connecting-a-pop-up-menu-to-your-application.md)   
- [Editor de menús](../windows/menu-editor.md)
+
+Los[menús emergentes](../mfc/menus-mfc.md) muestran comandos de pantalla que se utilizan con frecuencia. Pueden ser contextuales con respecto a la ubicación del puntero. Utilizar menús emergentes en la aplicación requiere compilar el menú y, a continuación, conectarlo al código de la aplicación.
+
+Una vez creado el recurso de menú, el código de la aplicación debe cargar el recurso y usar [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) para que aparezca el menú. Cuando el usuario descarte el menú emergente al hacer clic fuera de él o en un comando, se devolverá esa función. Si el usuario elige un comando, se enviará el mensaje de ese comando a la ventana cuyo controlador se ha pasado.
+
+### <a name="to-create-a-pop-up-menu"></a>Para crear un menú emergente
+
+1. [Cree un menú](../windows/creating-a-menu.md) con un título vacío (no proporcione ningún **Título**).
+
+2. [Agregue un comando de menú al menú nuevo](../windows/adding-commands-to-a-menu.md). Mover al primer comando de menú debajo del título de menú en blanco (el título provisional dice `Type Here`). Escriba un **Título** y cualquier otra información.
+
+   Repita este proceso para los demás comandos de menú del menú emergente.
+
+3. Guarde el recurso de menú.
+
+   > [!TIP]
+   > Para obtener más información acerca de cómo ver el menú emergente, consulte [Ver un menú como menú emergente](../windows/viewing-a-menu-as-a-pop-up-menu.md).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Conexión de un menú emergente a la aplicación](../windows/connecting-a-pop-up-menu-to-your-application.md)  
+[Editor de menús](../windows/menu-editor.md)

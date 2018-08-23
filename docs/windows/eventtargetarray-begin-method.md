@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5dc081a24495fc8939f3069dc68bed4f75beaaf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 738ee52eb68cfbb03a380ffac52efdb4010b5205
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642830"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602136"
 ---
 # <a name="eventtargetarraybegin-method"></a>EventTargetArray::Begin (Método)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-ComPtr<IUnknown>* Begin();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- La dirección del primer elemento de la matriz interna de controladores de eventos.  
-  
-## <a name="remarks"></a>Comentarios  
- Obtiene la dirección del primer elemento de la matriz interna de controladores de eventos.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** event.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [EventTargetArray (clase)](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+ComPtr<IUnknown>* Begin();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+La dirección del primer elemento de la matriz interna de controladores de eventos.
+
+## <a name="remarks"></a>Comentarios
+
+Obtiene la dirección del primer elemento de la matriz interna de controladores de eventos.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** event.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[EventTargetArray (clase)](../windows/eventtargetarray-class.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

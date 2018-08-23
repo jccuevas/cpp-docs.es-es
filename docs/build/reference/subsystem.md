@@ -1,5 +1,5 @@
 ---
-title: -SUBSYSTEM | Documentos de Microsoft
+title: -SUBSYSTEM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c12df1a2166c9ef5a1af8a33a5764a8899909edb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75e0086f96f39814bd1a7e77df2adccc47d698fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377628"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42575532"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 Especifica el entorno de ejecución que la imagen ejecutable requiere.  
@@ -40,7 +40,7 @@ Especifica el entorno de ejecución que la imagen ejecutable requiere.
  Puede especificar uno de los siguientes subsistemas:  
   
  BOOT_APPLICATION  
- Aplicación que se ejecuta en el entorno de arranque de Windows. Para obtener más información acerca de las aplicaciones de arranque, consulte [sobre el proveedor WMI de BCD](http://msdn.microsoft.com/library/aa362639.aspx).  
+ Aplicación que se ejecuta en el entorno de arranque de Windows. Para obtener más información acerca de las aplicaciones de arranque, consulte [acerca del proveedor WMI de BCD](/previous-versions/windows/desktop/bcd/about-bcd).  
   
  CONSOLE  
  Una aplicación de modo de carácter de Windows. El sistema operativo proporciona una consola para las aplicaciones de consola.  
@@ -55,7 +55,7 @@ Especifica el entorno de ejecución que la imagen ejecutable requiere.
  Aplicación que se ejecuta en el subsistema POSIX en Windows.  
   
  WINDOWS  
- Aplicación que se ejecuta en el entorno gráfico de Windows. Esto incluye aplicaciones de escritorio y aplicaciones de la plataforma Universal de Windows (UWP).  
+ Aplicación que se ejecuta en el entorno gráfico de Windows. Esto incluye aplicaciones de escritorio y aplicaciones de plataforma Universal de Windows (UWP).  
   
  WINDOWSCE  
  El subsistema WINDOWSCE indica que la aplicación está diseñada para ejecutarse en un dispositivo que tiene una versión del kernel de Windows CE. Las versiones del kernel son PocketPC, Windows Mobile, Windows Phone 7, Windows CE V1.0-6.0R3 y Windows Embedded Compact 7.  
@@ -68,7 +68,7 @@ Especifica el entorno de ejecución que la imagen ejecutable requiere.
   
 -   Los valores de `major` y `minor` deben oscilar entre 0 y 65.535.  
   
- La opción de subsistema afecta a la dirección de inicio predeterminada del programa. Para obtener más información, consulte [/ENTRY (símbolo de punto de entrada)](../../build/reference/entry-entry-point-symbol.md), el vinculador/ENTRY:*función* opción.  
+ La opción de subsistema afecta a la dirección de inicio predeterminada del programa. Para obtener más información, consulte [/Entry (símbolo de punto de entrada)](../../build/reference/entry-entry-point-symbol.md), el vinculador/ENTRY:*función* opción.  
   
  Para obtener más información, incluidos los valores mínimo y predeterminado de los números de versión principal y secundaria para cada subsistema, vea el [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) opción del vinculador.  
   

@@ -1,5 +1,5 @@
 ---
-title: Reglas predefinidas | Documentos de Microsoft
+title: Reglas predefinidas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a21847bb9363099fa64825b45a90003de053da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52c9440a0320bbc59e5d2552a53e13fae5e29f05
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369765"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572213"
 ---
 # <a name="predefined-rules"></a>Reglas predefinidas
 Las reglas de inferencia predefinidas utilizan macros de comando y de opciones proporcionadas por NMAKE.  
@@ -30,8 +30,8 @@ Las reglas de inferencia predefinidas utilizan macros de comando y de opciones p
 |----------|-------------|------------------------|--------------------|----------------------------|  
 |.asm.exe|$(AS) $(AFLAGS) $<|ml $<|No|x86|  
 |.asm.obj|$(AS) $(AFLAGS) /c $<|ml /c $<|sí|x86|  
-|.asm.exe|$(AS) $(AFLAGS) $<|ml64 $<|No|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|.asm.obj|$(AS) $(AFLAGS) /c $<|ml64 /c $<|sí|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|.asm.exe|$(AS) $(AFLAGS) $<|ml64 $<|No|x64|  
+|.asm.obj|$(AS) $(AFLAGS) /c $<|ml64 /c $<|sí|x64|  
 |.c.exe|$(CC) $(CFLAGS) $<|cl $<|no|todo|  
 |.c.obj|$(CC) $(CFLAGS) /c $<|cl /c $<|sí|todo|  
 |.cc.exe|$(CC) $(CFLAGS) $<|cl $<|no|todo|  

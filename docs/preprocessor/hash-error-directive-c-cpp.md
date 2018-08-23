@@ -1,5 +1,5 @@
 ---
-title: '#Error de directiva (C/C ++) | Documentos de Microsoft'
+title: '#Error (directiva) (C/C ++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba4f0e06798bc6419f8db0471f19588039eb679a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33905577"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544493"
 ---
 # <a name="error-directive-cc"></a>#error (Directiva) (C/C++)
-La directiva `#error` emite un mensaje de error especificado por el usuario en tiempo de compilación y después finaliza la compilación.  
+El **#error** directiva emite un mensaje de error especificado por el usuario en tiempo de compilación y, a continuación, finaliza la compilación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +35,8 @@ La directiva `#error` emite un mensaje de error especificado por el usuario en t
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El mensaje de error que emite esta directiva incluye el *token-string* parámetro. El parámetro `token-string` no está sujeto a la expansión de macro. Esta directiva es más útil durante el preprocesamiento para notificar al desarrollador una incoherencia del programa o la infracción de una restricción. En el ejemplo siguiente se muestra el procesamiento de errores durante el preprocesamiento:  
+ 
+El mensaje de error que esta directiva emite incluye el *token-string* parámetro. El *token-string* parámetro no está sujeto a la expansión de macro. Esta directiva es más útil durante el preprocesamiento para notificar al desarrollador una incoherencia del programa o la infracción de una restricción. En el ejemplo siguiente se muestra el procesamiento de errores durante el preprocesamiento:  
   
 ```  
 #if !defined(__cplusplus)  
@@ -44,4 +45,5 @@ La directiva `#error` emite un mensaje de error especificado por el usuario en t
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Directivas de preprocesador](../preprocessor/preprocessor-directives.md)
+ 
+[Directivas de preprocesador](../preprocessor/preprocessor-directives.md)

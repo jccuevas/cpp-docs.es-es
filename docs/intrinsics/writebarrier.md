@@ -1,5 +1,5 @@
 ---
-title: _WriteBarrier | Documentos de Microsoft
+title: _WriteBarrier | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8197fd38886c887684c3f5f4eb3594088190304d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89b1f9c04d9ac4e4cb1892b0abfed9ddcd59717e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339311"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541309"
 ---
 # <a name="writebarrier"></a>_WriteBarrier
 **Específicos de Microsoft**  
@@ -30,7 +30,7 @@ ms.locfileid: "33339311"
  Limita las optimizaciones del compilador que pueden reordenar las operaciones de acceso a memoria en el punto de la llamada.  
   
 > [!CAUTION]
->  Los objetos `_ReadBarrier`, las funciones intrínsecas del compilador `_WriteBarrier` y `_ReadWriteBarrier` y la macro `MemoryBarrier` están desusados y no se deben usar. Para la comunicación entre subprocesos, use mecanismos como [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) y [std:: atomic\<T >](../standard-library/atomic.md), que se definen en el [biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md). Para tener acceso de hardware, utilice la [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) opción del compilador junto con el [volátiles](../cpp/volatile-cpp.md) palabra clave.  
+>  Los objetos `_ReadBarrier`, las funciones intrínsecas del compilador `_WriteBarrier` y `_ReadWriteBarrier` y la macro `MemoryBarrier` están desusados y no se deben usar. Para la comunicación entre subprocesos, use mecanismos como [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) y [std:: atomic\<T >](../standard-library/atomic.md), que se definen en el [biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md). Para tener acceso de hardware, utilice el [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) junto con la opción del compilador la [volátil](../cpp/volatile-cpp.md) palabra clave.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,7 +42,7 @@ void _WriteBarrier(void);
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`_WriteBarrier`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_WriteBarrier`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
@@ -54,5 +54,5 @@ void _WriteBarrier(void);
 ## <a name="see-also"></a>Vea también  
  [_ReadBarrier](../intrinsics/readbarrier.md)   
  [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)   
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [Palabras clave](../cpp/keywords-cpp.md)

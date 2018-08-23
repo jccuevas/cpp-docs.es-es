@@ -19,6 +19,8 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _tfdopen
@@ -41,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21bd849d5ce9560fae356869291d6764d613f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d48222be892ebe0b05b8500bb1a4f2117e440b0c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405424"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571709"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -79,28 +81,28 @@ Para obtener más información sobre estos y otros códigos error, consulte [_do
 
 ## <a name="remarks"></a>Comentarios
 
-El **_fdopen** función asocia un flujo de E/S con el archivo que se identifica mediante *fd*, lo que permite un archivo que está abierto para que E/S de bajo nivel se almacenan en búfer y da formato. **_wfdopen** es una versión con caracteres anchos de **_fdopen**; el *modo* argumento pasado a **_wfdopen** es una cadena de caracteres anchos. **_wfdopen** y **_fdopen** en caso contrario, se comportan exactamente igual.
+El **_fdopen** función asocia un flujo de E/S con el archivo que se identifica mediante *fd*, lo que permite a un archivo que está abierto para que E/S de bajo nivel se almacene en búfer y da formato. **_wfdopen** es una versión con caracteres anchos de **_fdopen**; el *modo* argumento **_wfdopen** es una cadena de caracteres anchos. **_wfdopen** y **_fdopen** en caso contrario, se comportan exactamente igual.
 
-Pasado de descriptores de archivo **_fdopen** pertenecen por el valor devuelto **archivo &#42;**  secuencia. Si **_fdopen** es correcta, no llame a [ \_cerrar](close.md) en el descriptor de archivo. Al llamar a [fclose](fclose-fcloseall.md) en el valor devuelto **archivo &#42;**  también se cierra el descriptor de archivo.
+Pasado de descriptores de archivo **_fdopen** pertenecen por el valor devuelto **archivo &#42;**  secuencia. Si **_fdopen** es correcta, no llame a [ \_cerrar](close.md) en el descriptor de archivo. Una llamada a [fclose](fclose-fcloseall.md) devuelto **archivo &#42;**  también se cierra el descriptor de archivo.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
-|Rutina Tchar.h|\_UNICODE y \_MBCS sin definir|\_MBCS definido|\_UNICODE definida|
+|Rutina Tchar.h|\_UNICODE y \_MBCS sin definir|\_MBCS definido|\_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
-El *modo* cadena de caracteres especifica el tipo de acceso de archivo solicitada para el archivo:
+El *modo* cadena de caracteres especifica el tipo de acceso al archivo solicitado para el archivo:
 
 |*mode*|Access|
 |-|-|
-**"r"**|Abre para lectura. Si el archivo no existe o no se encuentra, el **fopen** llamadas se produce un error.
+**"r"**|Abre para lectura. Si el archivo no existe o no se encuentra el **fopen** llamar se produce un error.
 **"w"**|Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido.
-**"a"**|Se abre para escribir al final del archivo (anexo). Crea el archivo si no existe.
+**"a"**|Se abre para escritura al final del archivo (anexo). Crea el archivo si no existe.
 **"r+"**|Abre para lectura y escritura. El archivo debe existir.
 **"w+"**|Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido.
 **"a+"**|Se abre para lectura y anexado. Crea el archivo si no existe.
 
-Cuando se abre un archivo con el **"a"** o **"+"** acceder a tipo, todas las operaciones de escritura aparecen al final del archivo. Se puede mover el puntero de archivo mediante el uso de [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero se desplaza siempre al final del archivo antes de cualquier operación se lleva a cabo de escritura. Por consiguiente, los datos existentes no pueden sobrescribirse. Cuando el **"r +"**, **"w +"**, o **"+"** se especifica el tipo de acceso, se permiten la lectura y escritura (se dice que el archivo esté abierto para "actualización"). Sin embargo, si se cambia entre lectura y escritura, debe haber una intervención [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), o [rebobinar](rewind.md) operación. Puede especificar la posición actual para la [fsetpos](fsetpos.md) o [fseek](fseek-fseeki64.md) operación, si desea.
+Cuando se abre un archivo con el **"a"** o **"a +"** acceso tipo, todas las operaciones se producen al final del archivo de escritura. Se puede mover el puntero de archivo mediante [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero se desplaza siempre al final del archivo antes de cualquier escritura operación se lleva a cabo. Por consiguiente, los datos existentes no pueden sobrescribirse. Cuando el **"r +"**, **"w +"**, o **"a +"** se especifica el tipo de acceso, se permiten operaciones de lectura y escritura (se dice que el archivo esté abierto para "actualización"). Sin embargo, cuando se cambia entre lectura y escritura, debe haber una intervención [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), o [rebobinar](rewind.md) operación. Puede especificar la posición actual para el [fsetpos](fsetpos.md) o [fseek](fseek-fseeki64.md) operación, si desea.
 
 Además de los valores anteriores, también se pueden incluir los siguientes caracteres en *modo* para especificar el modo de traducción de caracteres de nueva línea:
 
@@ -108,23 +110,23 @@ Además de los valores anteriores, también se pueden incluir los siguientes car
 |-|-|
 **t**|Abra en modo de texto (traducido). En este modo, las combinaciones de retorno de carro-avance de línea (CR-LF) se convierten en avances de una línea (LF) en la entrada, y los caracteres de LF se traducen en combinaciones de CR-LF en la salida. Además, Ctrl+Z se interpreta como carácter de final de archivo en la entrada.
 **b**|Abre en modo binario (sin traducir). Las traducciones del **t** modo se suprimen.
-**c**|Habilite la marca de confirmación para la asociada *filename* para que el contenido del búfer del archivo se escriba directamente en disco si **fflush** o **_flushall** se llama.
-**n**|Restaure la marca de confirmación para la asociada *filename* a "no-commit". Este es el valor predeterminado. También invalida la marca global de confirmación si vincula el programa a Commode.obj. El valor predeterminado de la marca global de confirmación es "no-commit" a menos que explícitamente vincule el programa a Commode.obj.
+**c**|Habilitar la marca de confirmación asociado *filename* para que el contenido del búfer del archivo se escribe directamente en el disco si **fflush** o **_flushall** se llama.
+**n**|Restablecer la marca de confirmación asociado *filename* a "no-commit". Este es el valor predeterminado. También invalida la marca global de confirmación si vincula el programa a Commode.obj. El valor predeterminado de la marca global de confirmación es "no-commit" a menos que explícitamente vincule el programa a Commode.obj.
 
 El **t**, **c**, y **n** *modo* opciones son extensiones de Microsoft para **fopen** y **_fdopen**. No las use si desea conservar la portabilidad ANSI.
 
 Si **t** o **b** no se proporciona en *modo*, el modo de traducción predeterminado está definido por la variable global [ \_fmode](../../c-runtime-library/fmode.md). Si **t** o **b** tiene como prefijo al argumento, la función no y devuelve NULL. Para obtener una descripción de los modos de texto y binario, consulte [E/S de archivo en modo texto y en modo binario](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-Los caracteres válidos para el *modo* cadena que se usa en **fopen** y **_fdopen** corresponden a *oflag* argumentos que se usan en [ \_abrir](open-wopen.md) y [ \_sopen](sopen-wsopen.md), tal y como se muestra en esta tabla:
+Los caracteres válidos para el *modo* cadena utilizada en **fopen** y **_fdopen** corresponden a *oflag* argumentos utilizados en [ \_abrir](open-wopen.md) y [ \_sopen](sopen-wsopen.md), tal y como se muestra en esta tabla:
 
-|Caracteres de *modo* cadena|Equivalente *oflag* valor **_open** y **_sopen**|
+|Los caracteres de *modo* cadena|Equivalente *oflag* valor **_open** y **_sopen**|
 |---------------------------------|---------------------------------------------------|
-|**a**|**\_O\_WRONLY &#124; \_O\_ANEXADO** (normalmente  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O \_ANEXADO**)|
-|**a +**|**\_O\_RDWR &#124; \_O\_ANEXADO** (normalmente  **\_O\_RDWR &#124; \_O\_ANEXADO &#124; \_O\_ CREAR** )|
+|**a**|**\_O\_WRONLY &#124; \_O\_APPEND** (normalmente  **\_O\_WRONLY &#124; \_O\_crear &#124; \_o \_APPEND**)|
+|**a +**|**\_O\_RDWR &#124; \_O\_APPEND** (normalmente  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_ CREAR** )|
 |**r**|**\_O\_RDONLY**|
 |**r +**|**\_O\_RDWR**|
-|**W**|**\_O\_WRONLY** (normalmente  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (normalmente  **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
+|**W**|**\_O\_WRONLY** (normalmente  **\_O\_WRONLY &#124; \_O\_crear &#124; \_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (normalmente  **\_O\_RDWR &#124; \_O\_crear &#124; \_O\_TRUNC**)|
 |**b**|**\_O\_BINARIO**|
 |**t**|**\_O\_TEXTO**|
 |**c**|Ninguna|

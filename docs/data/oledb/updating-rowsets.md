@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d2936a65023b32f994ed7260260476bc7b0457c2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ff8bacd14a6e8e99fb98d5e9c4ac3136fe1a1f0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336422"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573183"
 ---
 # <a name="updating-rowsets"></a>actualizar conjuntos de filas
 Una operación de base de datos muy básica es actualizar el almacén de datos, o escribir datos en este. En OLE DB, el mecanismo de actualización es sencillo: la aplicación de consumidor establece los valores de los miembros de datos enlazados y, después, escribe esos valores en el conjunto de filas; luego, el consumidor solicita que el proveedor actualice el almacén de datos.  
   
- Los consumidores pueden realizar los siguientes tipos de actualizaciones en los datos del conjunto de filas: establecer los valores de columna dentro de una fila, insertar una fila y eliminar una fila. Para realizar estas operaciones, la clase de plantilla OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa el [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) interfaz e invalida los métodos de interfaz siguientes:  
+ Los consumidores pueden realizar los siguientes tipos de actualizaciones en los datos del conjunto de filas: establecer los valores de columna dentro de una fila, insertar una fila y eliminar una fila. Para realizar estas operaciones, la clase de plantilla OLE DB [CRowset](../../data/oledb/crowset-class.md) implementa el [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interfaz e invalida los métodos de interfaz siguientes:  
   
 -   [SetData](../../data/oledb/crowset-setdata.md) cambia los valores de columna de una fila de un conjunto de filas; es equivalente al comando UPDATE de SQL.  
   
@@ -216,4 +216,4 @@ product.Update();                 // Update row 101 now
 ## <a name="see-also"></a>Vea también  
  [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)   
  [CRowset (clase)](../../data/oledb/crowset-class.md)   
- [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)
+ [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))

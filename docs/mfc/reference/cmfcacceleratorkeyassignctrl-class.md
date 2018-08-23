@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCAcceleratorKeyAssignCtrl | Documentos de Microsoft
+title: CMFCAcceleratorKeyAssignCtrl (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7728df79bf2ab842910b580b1404f109034e55b7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f3dfe9f728b01b175e897f1182c95e954969aaec
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037251"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541677"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>Clase CMFCAcceleratorKeyAssignCtrl
-El `CMFCAcceleratorKeyAssignCtrl` clase extiende la [clase CEdit](../../mfc/reference/cedit-class.md) para ofrecer compatibilidad con teclas adicionales del sistema, como ALT, CONTROL y mayúsculas.  
+El `CMFCAcceleratorKeyAssignCtrl` clase extiende la [clase CEdit](../../mfc/reference/cedit-class.md) para admitir botones de sistema adicionales tales como ALT, CONTROL y MAYÚS.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -63,7 +63,7 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Restablece la tecla de método abreviado.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase extiende la funcionalidad de la clase `CEdit` ofreciendo compatibilidad con teclas de método abreviado, también conocido como teclas de aceleración. El `CMFCAcceleratorKeyAssignCtrl` clase funciona como un [clase CEdit](../../mfc/reference/cedit-class.md) y también lo puede reconocer teclas del sistema.  
+ Esta clase extiende la funcionalidad de la clase `CEdit` ofreciendo compatibilidad con teclas de método abreviado, también conocido como teclas de aceleración. El `CMFCAcceleratorKeyAssignCtrl` clase funciona como un [clase CEdit](../../mfc/reference/cedit-class.md) y que también pueda reconocer los botones de sistema.  
   
  Esta clase asigna combinaciones de teclas físicas de método abreviado a valores de cadena. Por ejemplo, suponga que la combinación de teclas ALT + B se asigna a la cadena "Alt + B". Cuando el usuario presione esta combinación de teclas en un objeto `CMFCAcceleratorKeyAssignCtrl`, se le mostrará "Alt + B". Para obtener más información sobre las asignaciones entre las teclas de método abreviado y un formato de cadena, vea [CMFCAcceleratorKey (clase)](../../mfc/reference/cmfcacceleratorkey-class.md).  
   
@@ -94,7 +94,7 @@ CMFCAcceleratorKeyAssignCtrl();
 ```  
   
 ##  <a name="getaccel"></a>  CMFCAcceleratorKeyAssignCtrl::GetAccel  
- Recupera el `ACCEL` estructura para presiona una tecla de método abreviado en el [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objeto.  
+ Recupera el `ACCEL` estructura presiona una tecla de método abreviado en el [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objeto.  
   
 ```  
 ACCEL const* GetAccel() const;  
@@ -104,10 +104,10 @@ ACCEL const* GetAccel() const;
  Un `ACCEL` estructura que describe la tecla de método abreviado.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice esta función para recuperar el `ACCEL` estructura de una tecla de método abreviado que el usuario ha escrito en su `CMFCAcceleratorKeyAssignCtrl` objeto.  
+ Use esta función para recuperar el `ACCEL` estructura para una tecla de método abreviado que el usuario especificado en su `CMFCAcceleratorKeyAssignCtrl` objeto.  
   
 ##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 BOOL IsFocused() const;  
@@ -125,13 +125,13 @@ BOOL IsKeyDefined() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el usuario ya ha presionado una combinación válida de claves que definen una tecla de método abreviado; en caso contrario es 0.  
+ Distinto de cero si el usuario ya ha presionado una combinación válida de claves que definen una tecla de método abreviado; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para determinar si el usuario ha escrito una clave de acceso directo válido en su `CMFCAcceleratorKeyAssignCtrl` objeto. Si existe una tecla de método abreviado, puede usar [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) método para obtener el `ACCEL` estructura asociada con esta tecla de método abreviado.  
   
 ##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);

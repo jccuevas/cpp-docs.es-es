@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c45a9ab0e709366d5f391e574c9b8b3a5db4a53a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881732"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572998"
 ---
 # <a name="cwin32heap-class"></a>Clase de CWin32Heap
 Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mediante las funciones de asignación del montón de Win32.  
@@ -162,7 +162,7 @@ CWin32Heap(
   
  El parámetro HEAP_NO_SERIALIZE especifica que la exclusión mutua no se utilizará cuando las funciones del montón, asignarán y liberen memoria, con el correspondiente aumento del rendimiento.  
   
- El tercer parámetro se establece en 0 de forma predeterminada, lo que permite al montón crecer según sea necesario. Consulte [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) para obtener una explicación de los tamaños de memoria y marcas.  
+ El tercer parámetro se establece en 0 de forma predeterminada, lo que permite al montón crecer según sea necesario. Consulte [HeapCreate](/windows/desktop/api/heapapi/nf-heapapi-heapcreate) para obtener una explicación de los tamaños de memoria y marcas.  
   
 ##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap  
  Destructor.  

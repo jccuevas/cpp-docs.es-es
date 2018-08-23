@@ -1,5 +1,5 @@
 ---
-title: Clase CTabbedPane | Documentos de Microsoft
+title: CTabbedPane (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,17 +38,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b4bb740f445d65c37d1bee8c1e777dbd8984e1c2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121843"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539501"
 ---
-# <a name="ctabbedpane-class"></a>Clase CTabbedPane
+# <a name="ctabbedpane-class"></a>CTabbedPane (clase)
 Implementa la funcionalidad de un panel con pestañas separables.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -88,7 +88,7 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>Comentarios  
  El marco de trabajo crea automáticamente una instancia de esta clase cuando un usuario adjunta un panel a otro apuntando al título del segundo panel. Todos los paneles con pestañas que se crean mediante el marco de trabajo tienen un identificador de -1.  
   
- Para especificar pestañas normales en lugar de pestañas de tipo Outlook, pase el estilo de AFX_CBRS_REGULAR_TABS el [CDockablePane:: CreateEx](../../mfc/reference/cdockablepane-class.md#createex) método.  
+ Para especificar pestañas normales en lugar de pestañas de estilo de Outlook, pase el estilo de AFX_CBRS_REGULAR_TABS el [CDockablePane:: CreateEx](../../mfc/reference/cdockablepane-class.md#createex) método.  
   
  Si crea un panel con pestañas separables, el marco de trabajo puede destruir automáticamente el panel, por lo que no debe almacenar el puntero. Para obtener un puntero al panel con pestañas, llame al método `CBasePane::GetParentTabbedPane`.  
   
@@ -125,7 +125,7 @@ DockPane(pTabbededBar);
 ```  
   
 ## <a name="example"></a>Ejemplo  
- Otra manera de crear un objeto de barra de control con pestañas es usar [CDockablePane:: Attachtotabwnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). El `AttachToTabWnd` método crea dinámicamente un objeto de panel con pestañas con información de clase en tiempo de ejecución establecida por [CDockablePane:: Settabbedpanertc](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
+ Otra forma de crear un objeto de barra de control con pestañas es usar [CDockablePane:: Attachtotabwnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). El `AttachToTabWnd` método crea dinámicamente un objeto de panel con pestañas con información de clase en tiempo de ejecución establecida por [CDockablePane:: Settabbedpanertc](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
   
  En este ejemplo se crea dinámicamente un panel con pestañas, se asocian dos pestañas y se convierte la segunda pestaña en no separable.  
   
@@ -193,10 +193,10 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *bHabilitar el*  
- TRUE para habilitar el coloreado automático de pestañas; en caso contrario, FALSE.  
+ TRUE para habilitar el coloreado automático de fichas; en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice este método estático para habilitar o deshabilitar el coloreado automático de las fichas en todos los paneles con pestañas de la aplicación. Cuando esta característica está habilitada, cada pestaña se rellena mediante su propio color. Puede encontrar la lista de colores que se usan para las pestañas de color mediante una llamada a la [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) método.  
+ Utilice este método estático para habilitar o deshabilitar el coloreado automático de las fichas en todos los paneles con pestañas en la aplicación. Cuando se habilita esta característica, cada pestaña se rellena mediante su propio color. Puede encontrar la lista de colores que se usan para las pestañas de color mediante una llamada a la [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) método.  
   
  Puede especificar la lista de colores que se usará para las pestañas llamando [CTabbedPane::SetTabAutoColors](#settabautocolors).  
   
@@ -224,7 +224,7 @@ virtual BOOL FloatTab(
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea  
- Devuelve el tamaño y la posición del área de ficha en la ventana con pestañas.  
+ Devuelve el tamaño y posición del área de pestaña en la ventana con pestañas.  
   
 ```  
 virtual void GetTabArea(
@@ -234,13 +234,13 @@ virtual void GetTabArea(
   
 ### <a name="parameters"></a>Parámetros  
  [out] *rectTabAreaTop*  
- Contiene el tamaño y posición, en coordenadas de pantalla del área de ficha superior.  
+ Contiene el tamaño y posición, en coordenadas de pantalla del área superior de ficha.  
   
  [out] *rectTabAreaBottom*  
- Contiene el tamaño y posición, en coordenadas de pantalla del área de pestañas de la parte inferior.  
+ Contiene el tamaño y posición, en coordenadas de pantalla del área inferior de ficha.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco de trabajo llama a este método para determinar cómo acoplar un panel que un usuario está arrastrando. Cuando el usuario arrastra un panel sobre el área de pestañas del panel de destino, el marco de trabajo intenta agregarlo como una nueva pestaña del panel de destino. En caso contrario, intenta acoplar el panel en el lado del panel de destino, que implica la creación de un nuevo contenedor de panel con un divisor que separa los dos paneles.  
+ El marco llama a este método para determinar cómo acoplar un panel que un usuario está arrastrando. Cuando el usuario arrastra un panel en el área de pestañas del panel de destino, el marco de trabajo intenta agregarlo como una nueva pestaña del panel de destino. En caso contrario, intenta acoplar el panel al lado del panel de destino, que implica la creación de un nuevo contenedor de panel con un divisor que separa los dos paneles.  
   
  Invalide este método en un `CTabbedPane`-clase derivada para cambiar este comportamiento.  
   
@@ -274,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- TRUE si el área de pestañas se encuentra en la parte inferior de la ventana con pestañas; en caso contrario, FALSE.  
+ TRUE si se encuentra el área de pestañas en la parte inferior de la ventana con pestañas. en caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -286,9 +286,9 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Establecer a este miembro estático en True para hacer que todas las fichas de la aplicación que se mostrará en la parte superior del panel con pestañas.  
+ Establecer a este miembro estático en True para forzar que todas las fichas en la aplicación que se mostrará en la parte superior del panel con pestañas.  
   
- Debe establecer este valor antes de que se ha creado un panel con fichas.  
+ Debe establecer este valor antes de que se ha creado un panel con pestañas.  
   
  El valor predeterminado es FALSE.  
   
@@ -300,7 +300,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Establecer esta variable de miembro estático en un puntero a la información de clase en tiempo de ejecución de un `CMFCTabCtrl`-objeto derivado si se está usando una ventana con pestañas personalizada dentro de un panel con fichas.  
+ Establecer esta variable de miembro estático en un puntero a la información de clase en tiempo de ejecución de un `CMFCTabCtrl`-objeto derivado, si está utilizando una ventana con pestañas personalizada dentro de un panel con pestañas.  
   
 ##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
  Restablece todos los paneles con pestañas al estado predeterminado.  
@@ -310,10 +310,10 @@ static void ResetTabs();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a este método para revertir todos los paneles con fichas a su estado predeterminado. Cuando se llama, este método restablece los tamaños de borde y el estado del color automática de todos los paneles con pestañas.  
+ Llame a este método para revertir todos los paneles con pestañas a su estado predeterminado. Cuando se llama, este método restablece el tamaño de borde y el estado de color automático de todos los paneles con pestañas.  
   
 ##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
- Establece una lista de colores personalizados que se utilizan cuando se habilita la característica de color automático.  
+ Establece una lista de colores personalizados que se usan cuando se habilita la característica de color automático.  
   
 ```  
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
@@ -324,13 +324,13 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
  Contiene la matriz de colores para establecer.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice este método para personalizar la lista de colores que se utilizan cuando se habilita la característica de color automático. Esto es una función estática y afecta a todas las fichas de la aplicación.  
+ Utilice este método para personalizar la lista de colores que se usan cuando se habilita la característica de color automático. Esto es una función estática y afecta a todas las fichas en la aplicación.  
   
  Use [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) para habilitar o deshabilitar la característica de color automático.  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CDockablePane](../../mfc/reference/cdockablepane-class.md)   
+ [CDockablePane (clase)](../../mfc/reference/cdockablepane-class.md)   
  [CBaseTabbedPane (clase)](../../mfc/reference/cbasetabbedpane-class.md)   
  [CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md)

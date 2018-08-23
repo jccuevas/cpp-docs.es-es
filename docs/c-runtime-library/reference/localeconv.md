@@ -18,6 +18,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-locale-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - localeconv
@@ -32,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3cc75430dfa9bb2f4c5513f4b2ba5a2fd1c4c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f4e8a20ef31f4379e7ddf6b7425fd7ecc70294a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405255"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572769"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -51,7 +52,7 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-**localeconv** devuelve un puntero a un objeto rellenado del tipo [lconv de struct](../../c-runtime-library/standard-types.md). Los valores contenidos en el objeto se copian de la configuración regional en almacenamiento local de subprocesos y se puede sobrescribir con las llamadas subsiguientes a **localeconv**. Los cambios realizados en los valores de este objeto no modifican la configuración regional. Las llamadas a [setlocale](setlocale-wsetlocale.md) con *categoría* valores de **LC_ALL**, **LC_MONETARY**, o **LC_NUMERIC** sobrescribir el contenido de la estructura.
+**localeconv** devuelve un puntero a un objeto rellenado de tipo [struct lconv](../../c-runtime-library/standard-types.md). Los valores contenidos en el objeto se copian de la configuración regional en almacenamiento local de subprocesos y se puede sobrescribir con las llamadas subsiguientes a **localeconv**. Los cambios realizados en los valores de este objeto no modifican la configuración regional. Las llamadas a [setlocale](setlocale-wsetlocale.md) con *categoría* valores de **LC_ALL**, **LC_MONETARY**, o **LC_NUMERIC** sobrescribir el contenido de la estructura.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -59,13 +60,13 @@ El **localeconv** función obtiene información detallada sobre el formato numé
 
 |Campo|Significado|
 |-|-|
-decimal_point,<br/>_W_decimal_point|Puntero al carácter cantidades monetarias de separador decimal.
-thousands_sep,<br/>_W_thousands_sep|Puntero al carácter que separa grupos de dígitos a la izquierda del separador decimal para las cantidades monetarias.
-agrupar|Puntero a un **char**-tamaño entero que contiene el tamaño de cada grupo de dígitos en cantidades monetarias.
-int_curr_symbol,<br/>_W_int_curr_symbol|Puntero al símbolo de moneda internacionales para la configuración regional actual. Los tres primeros caracteres especifican el símbolo de moneda internacional alfabético como se define en el estándar *Códigos ISO 4217 para la representación de las monedas y tipos de fondos*. El cuarto carácter (inmediatamente antes del carácter nulo) separa el símbolo de moneda internacional de la cantidad de moneda.
+decimal_point,<br/>_W_decimal_point|Puntero al carácter para las cantidades no monetarias de separador decimal.
+thousands_sep,<br/>_W_thousands_sep|Puntero al carácter que separa grupos de dígitos a la izquierda del separador decimal para las cantidades no monetarias.
+agrupar|Puntero a un **char**-tamaño entero que contiene el tamaño de cada grupo de dígitos en cantidades no monetarias.
+int_curr_symbol,<br/>_W_int_curr_symbol|Puntero al símbolo de moneda internacional para la configuración regional actual. Los tres primeros caracteres especifican el símbolo de moneda internacional alfabético como se define en el estándar *Códigos ISO 4217 para la representación de las monedas y tipos de fondos*. El cuarto carácter (inmediatamente antes del carácter nulo) separa el símbolo de moneda internacional de la cantidad de moneda.
 currency_symbol,<br/>_W_currency_symbol|Puntero al símbolo de moneda local para la configuración regional actual.
 mon_decimal_point,<br/>_W_mon_decimal_point|Puntero al carácter para las cantidades de moneda de separador decimal.
-mon_thousands_sep,<br/>_W_mon_thousands_sep|Puntero al separador de grupos de dígitos a la izquierda de la posición decimal en cantidades monetarias.
+mon_thousands_sep,<br/>_W_mon_thousands_sep|Puntero al separador de grupos de dígitos a la izquierda de la posición decimal en las cantidades monetarias.
 mon_grouping|Puntero a un **char**-tamaño entero que contiene el tamaño de cada grupo de dígitos en cantidades monetarias.
 positive_sign,<br/>_W_positive_sign|Cadena que denota el signo de las cantidades de moneda no negativas.
 negative_sign,<br/>_W_negative_sign|Cadena que denota el signo de las cantidades de moneda negativas.
@@ -78,13 +79,13 @@ n_sep_by_space|Se establece en 1 si el símbolo de moneda está separado por un 
 p_sign_posn|Posición de signo positivo en cantidades de moneda no negativas con formato.
 n_sign_posn|Posición de signo positivo en cantidades de moneda negativas con formato.
 
-Excepto según lo especificados, miembros de la **lconv** estructura que tienen `char *` y `wchar_t *` versiones son punteros a cadenas. Cualquiera de estos que es igual a **""** (o **L ""** para **wchar_t \*** ) es de longitud cero o no se admite en la configuración regional actual. Tenga en cuenta que **decimal_point** y **_W_decimal_point** son siempre compatible y de longitud distinta de cero.
+Excepto según lo especificados, miembros de la **lconv** estructura que tienen `char *` y `wchar_t *` versiones son punteros a cadenas. Cualquiera de estos que sea igual a **""** (o **L ""** para **wchar_t \*** ) es de longitud cero o no se admite en la configuración regional actual. Tenga en cuenta que **decimal_point** y **_W_decimal_point** siempre son compatibles y de longitud distinta de cero.
 
-El **char** miembros de la estructura son pequeños números no negativos, no de caracteres. Cualquiera de estos que sea igual a **CHAR_MAX** no se admite en la configuración regional actual.
+El **char** los miembros de la estructura son números no negativos pequeños, no de caracteres. Cualquiera de estos que sea igual a **CHAR_MAX** no se admite en la configuración regional actual.
 
 Los valores de **agrupación** y **mon_grouping** se interpretan según las reglas siguientes:
 
-- **CHAR_MAX** -no realizan ninguna agrupación.
+- **CHAR_MAX** -no realice ninguna agrupación más.
 
 - 0 - use el elemento anterior para cada uno de los dígitos restantes.
 
@@ -98,27 +99,27 @@ Los valores de **int_curr_symbol** se interpretan según las reglas siguientes:
 
 Los valores de **p_cs_precedes** y **n_cs_precedes** se interpretan según las reglas siguientes (la regla **n_cs_precedes** aparece entre paréntesis):
 
-- 0 - símbolo de divisa sigue al valor para el valor de moneda con formato (negativo) no negativo.
+- 0: símbolo de moneda sigue al valor no negativo (negativo) con formato valor de moneda.
 
-- 1 - símbolo de divisa precede al valor para el valor de moneda con formato (negativo) no negativo.
+- -1 símbolo de moneda de precede al valor no negativo (negativo) con formato valor de moneda.
 
 Los valores de **p_sep_by_space** y **n_sep_by_space** se interpretan según las reglas siguientes (la regla **n_sep_by_space** aparece entre paréntesis):
 
-- 0 - símbolo de moneda se separa de valor por el espacio de valor de moneda con formato (negativo) no negativo.
+- 0: símbolo de moneda está separado del valor por un espacio para no negativo (negativo) valor monetario con formato.
 
-- 1 - no hay una separación de espacio entre el símbolo de moneda y el valor para el valor de moneda con formato (negativo) no negativo.
+- 1 - no hay ninguna separación de espacio entre el símbolo de moneda y el valor no negativo (negativo) valor monetario con formato.
 
 Los valores de **p_sign_posn** y **n_sign_posn** se interpretan según las reglas siguientes:
 
-- 0 - paréntesis rodean símbolos de cantidad y moneda.
+- 0 - los paréntesis rodean los símbolos de moneda y de cantidad.
 
-- 1 - sign cadena precede a los símbolos de cantidad y moneda.
+- 1 - la cadena de signo precede a símbolos de moneda y de cantidad.
 
-- 2 - cadena de inicio de sesión sigue símbolos de cantidad y moneda.
+- 2 - la cadena de signo de sigue símbolos de moneda y de cantidad.
 
-- 3 - inicio de sesión cadena precede inmediatamente a símbolo de divisa.
+- 3 - la cadena de signo precede inmediatamente a símbolo de moneda.
 
-- 4 - inicio de sesión inmediatamente cadena el símbolo de moneda se indica a continuación.
+- 4 - inicio de sesión de cadena inmediatamente símbolo de moneda se indica a continuación.
 
 ## <a name="requirements"></a>Requisitos
 

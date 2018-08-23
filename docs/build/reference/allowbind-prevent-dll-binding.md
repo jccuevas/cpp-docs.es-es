@@ -1,5 +1,5 @@
 ---
-title: -ALLOWBIND (evitar el enlace de la DLL) | Documentos de Microsoft
+title: -ALLOWBIND (evitar el enlace de archivos DLL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31968e27c46cb5ea220a4cfe19c36820c4cf8444
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0bff9ec6502aab5787c492a15e008bc29926163
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369645"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571908"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Evitar el enlace de archivos DLL)
 ```  
@@ -37,11 +37,11 @@ ms.locfileid: "32369645"
 ## <a name="remarks"></a>Comentarios  
  /ALLOWBIND:NO establece en el encabezado de una DLL un bit que le indica a Bind.exe que la imagen no se puede enlazar. Puede que quiera evitar que una DLL se enlace si se firmó digitalmente (el enlace invalida la firma).  
   
- Puede editar una DLL existente para la funcionalidad con los [/ALLOWBIND](../../build/reference/allowbind.md) las opciones de la utilidad EDITBIN.  
+ Puede editar una DLL existente con la funcionalidad /ALLOWBIND el [/ALLOWBIND](../../build/reference/allowbind.md) opción de la utilidad EDITBIN.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).  
   
 2.  Expanda **propiedades de configuración**, **vinculador**y seleccione **línea de comandos**.  
   
@@ -54,5 +54,5 @@ ms.locfileid: "32369645"
 ## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)   
- [BindImage (función)](http://msdn.microsoft.com/library/windows/desktop/ms679278.aspx)   
- [BindImageEx (función)](http://msdn.microsoft.com/library/windows/desktop/ms679279.aspx)
+ [Función BindImage](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)   
+ [Función BindImageEx](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

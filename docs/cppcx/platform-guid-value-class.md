@@ -1,5 +1,5 @@
 ---
-title: 'Clase de valor Platform:: GUID | Documentos de Microsoft'
+title: Clase de valor Platform | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089456"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601259"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid (Clase de valor)
 Representa un tipo [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) en el sistema de tipos de Windows en tiempo de ejecución.  
@@ -42,7 +42,7 @@ public value struct Guid
 |[operator()](#operator-call)|Convierte un Guid en un GUID.|  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener un ejemplo sobre cómo generar un nuevo elemento Platform::Guid mediante el uso de la función de Windows [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx), consulte [WinRT component: How to generate a GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)(Componente de WinRT: ¿Cómo generar un GUID?).  
+ ¿Para obtener un ejemplo de cómo generar un nuevo Platform:: GUID mediante la función Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), consulte [componente WinRT: cómo generar un GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
 ### <a name="requirements"></a>Requisitos  
  **Cliente mínimo admitido:** Windows 8  
@@ -134,7 +134,7 @@ Platform::Guid::operator==
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es True si los dos GUID son iguales.
+ True si los dos GUID son iguales.
 
 ## <a name="operator-inequality"></a> GUID::operator! = (operador)
 Compara dos GUID.  
@@ -146,12 +146,12 @@ Platform::Guid::operator!=
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es True si los dos GUID no son iguales.
+ True si los dos GUID no son iguales.
 
 
 
 ## <a name="operator-call"></a> ::Operator() (operador)
-Convierte implícitamente un [estructura GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID a Platform:: GUID.  
+Convierte implícitamente un [estructura GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID en Platform::.  
   
 ### <a name="syntax"></a>Sintaxis  
   

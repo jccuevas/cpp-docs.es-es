@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4588829b3ec1d348405be925a75c493f4e8594b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898281e0652345f22c63076cf4b0a73294faaf04
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397758"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573283"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -66,17 +66,17 @@ void _endthreadex(
 
 ## <a name="remarks"></a>Comentarios
 
-Puede llamar a **_endthread** o **_endthreadex** explícitamente para terminar un subproceso; sin embargo, **_endthread** o **_endthreadex** se llama automáticamente cuando el subproceso vuelve de la rutina que se pasa como un parámetro a **_beginthread** o **_beginthreadex**. Finaliza un subproceso con una llamada a **endthread** o **_endthreadex** ayuda a garantiza la recuperación correcta de los recursos asignados para el subproceso.
+Puede llamar a **_endthread** o **_endthreadex** explícitamente para terminar el subproceso; sin embargo, **_endthread** o **_endthreadex** se denomina Cuando el subproceso vuelve de la rutina pasa automáticamente como un parámetro a **_beginthread** o **_beginthreadex**. Si se finaliza un subproceso con una llamada a **endthread** o **_endthreadex** ayuda a garantiza la recuperación correcta de los recursos asignados para el subproceso.
 
 > [!NOTE]
-> En el caso de un archivo ejecutable vinculado a Libcmt.lib, no llame a la API [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) de Win32 porque esto impide que el sistema en tiempo de ejecución reclame los recursos asignados. **_endthread** y **_endthreadex** reclamar los recursos de subprocesos asignados y, a continuación, llame a **ExitThread**.
+> En el caso de un archivo ejecutable vinculado a Libcmt.lib, no llame a la API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) de Win32 porque esto impide que el sistema en tiempo de ejecución reclame los recursos asignados. **_endthread** y **_endthreadex** reclamar recursos de subprocesos asignados y, a continuación, llame a **ExitThread**.
 
 **_endthread** cierra automáticamente el identificador de subproceso. (Este comportamiento difiere de Win32 **ExitThread** API.) Por lo tanto, cuando usa **_beginthread** y **_endthread**, no cierre explícitamente el identificador de subproceso mediante una llamada a Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
 
-Al igual que la de Win32 **ExitThread** API, **_endthreadex** no cierra el identificador de subproceso. Por lo tanto, cuando usa **_beginthreadex** y **_endthreadex**, debe cerrar el identificador de subproceso llamando Win32 **CloseHandle** API.
+Al igual que Win32 **ExitThread** API, **_endthreadex** no cierra el identificador de subproceso. Por lo tanto, cuando usa **_beginthreadex** y **_endthreadex**, debe cerrar el identificador de subproceso mediante una llamada a Win32 **CloseHandle** API.
 
 > [!NOTE]
-> **_endthread** y **_endthreadex** hacen que los destructores de C++ pendientes en el subproceso no se llame a.
+> **_endthread** y **_endthreadex** hacer que los destructores de C++ pendientes en el subproceso no se puede llamar.
 
 ## <a name="requirements"></a>Requisitos
 

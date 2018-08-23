@@ -1,5 +1,5 @@
 ---
-title: función intrínseca | Documentos de Microsoft
+title: intrínseco | Microsoft Docs
 ms.custom: ''
 ms.date: 04/11/2018
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e908a07253e924fa3cfc0a11cdef57a9253eee00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c222a939ccb00dc3b7466a1cb1a83abe7ea4036
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844795"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541065"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -39,7 +39,7 @@ Especifica que las llamadas a funciones incluidas en la lista de argumentos de p
 
 El **intrínseco** pragma indica al compilador que una función tiene un comportamiento conocido.  El compilador puede llamar a la función y no reemplazar la llamada a función con instrucciones alineadas si ello mejora el rendimiento.
 
-A continuación se enumeran las funciones de biblioteca con formas intrínsecas. Una vez un **intrínseco** Vea directiva pragma, ya que surte efecto en la primera definición de función que contiene una función intrínseca especificada. El efecto continúa hasta el final del archivo de origen o a la apariencia de un **función** pragma especificando la misma función intrínseca. El **intrínseco** pragma puede utilizarse solo fuera de una definición de función, en el nivel global.
+A continuación se enumeran las funciones de biblioteca con formas intrínsecas. Una vez un **intrínseco** Vea directiva pragma, ya que surte efecto en la primera definición de función que contiene una función intrínseca especificada. El efecto continúa hasta el final del archivo de origen o a la apariencia de un `function` pragma especificando la misma función intrínseca. El **intrínseco** pragma puede utilizarse solo fuera de una definición de función, en el nivel global.
 
 Las siguientes funciones tienen formas intrínsecas y las formas intrínsecas se utilizan cuando se especifica [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
 
@@ -56,11 +56,11 @@ Los programas que usan funciones intrínsecas son más rápidos, porque carecen 
 
 **x86 específico**
 
-El **formas intrínsecas _disable** y **_Habilitar** intrínsecos generar instrucciones en modo kernel para deshabilitar/Habilitar interrupciones y podrían ser útiles en los controladores en modo kernel.
+El `_disable` y `_enable` intrínsecos generar instrucciones en modo kernel para deshabilitar/Habilitar interrupciones y podrían ser útiles en controladores de modo kernel.
 
 ### <a name="example"></a>Ejemplo
 
-Compile el código siguiente en la línea de comandos con "cl -c -FAs sample.c" y consulte sample.asm para comprobar la conversión a instrucciones x86 CLI y STI:
+Compile el código siguiente desde la línea de comandos con `cl -c -FAs sample.c` y consulte Sample.asm para comprobar que convierta en x86 instrucciones de CLI y STI:
 
 ```cpp
 // pragma_directive_intrinsic.cpp
@@ -77,7 +77,7 @@ int main() {
 }
 ```
 
-**X86 fin de específicos**
+**End x86 específico**
 
 Las funciones de punto flotante enumeradas a continuación no tienen formas intrínsecas auténticas. Tienen versiones que pasan argumentos directamente al chip de punto flotante en lugar de insertarlos en la pila del programa:
 
@@ -96,9 +96,9 @@ Las funciones de punto flotante enumeradas a continuación no tienen formas intr
 
 Puede usar [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) o [/Za](../build/reference/za-ze-disable-language-extensions.md) para reemplazar la generación de opciones verdaderas intrínsecas de punto flotante. En este caso, las funciones se generan como rutinas de biblioteca que pasan los argumentos directamente al chip de punto flotante, en lugar de insertarlos en la pila del programa.
 
-Vea [función #pragma](../preprocessor/function-c-cpp.md) para obtener información y un ejemplo sobre cómo habilitar/deshabilitar formas intrínsecas para un bloque de texto de origen.
+Consulte [función #pragma](../preprocessor/function-c-cpp.md) para obtener información y un ejemplo sobre cómo habilitar o deshabilitar las funciones intrínsecas para un bloque de texto de origen.
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)  

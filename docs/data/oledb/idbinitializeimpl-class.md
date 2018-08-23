@@ -50,15 +50,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 756ced3e2e1eef48023831329751477d07d7cfec
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f59619db743d8f8d08b2a202e992cdfcd532e1e8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336493"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575524"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl (Clase)
-Proporciona una implementación para el [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx) interfaz.  
+Proporciona una implementación para el [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\)) interfaz.  
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -121,7 +121,7 @@ STDMETHOD(Initialize)(void);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IDBInitialize:: Initialize](https://msdn.microsoft.com/library/ms718026.aspx) en el *referencia del programador OLE DB*. 
+ Consulte [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\)) en el *referencia del programador OLE DB*. 
 
 ## <a name="uninitialize"></a> Idbinitializeimpl:: UnInitialize
 Coloca los datos del origen de objeto en un estado no inicializado al liberar los recursos internos, como la compatibilidad con la propiedad.  
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IDBInitialize:: UnInitialize](https://msdn.microsoft.com/library/ms719648.aspx) en el *referencia del programador OLE DB*.
+ Consulte [IDBInitialize:: UnInitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\)) en el *referencia del programador OLE DB*.
 
 ## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
 Indicadores del origen de datos.  

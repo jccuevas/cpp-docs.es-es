@@ -1,5 +1,5 @@
 ---
-title: __movsd | Documentos de Microsoft
+title: __movsd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 802e3845e72516e6dd0f09fd2a350a65565cd502
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 659da66ea74088247a9eb46ae25f9920050719a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326929"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545875"
 ---
 # <a name="movsd"></a>__movsd
 **Específicos de Microsoft**  
   
- Genera una cadena mover (`rep movsd`) instrucción.  
+ Genera una cadena de mover (`rep movsd`) instrucción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -54,12 +54,12 @@ void __movsd(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__movsd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsd`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- El resultado es que la primera `Count` palabras dobles señalada por `Source` se copian en el `Dest` cadena.  
+ El resultado es que la primera `Count` palabras dobles apunta `Source` se copian en el `Dest` cadena.  
   
  Esta rutina solo está disponible como función intrínseca.  
   

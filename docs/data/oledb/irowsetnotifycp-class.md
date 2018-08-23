@@ -35,15 +35,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cf7cde624eeaa8a65ba5d5a2b4729ee94847d0e9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e78caa689158f1820a5e146235bb1f2d506a925b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338186"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571515"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP (Clase)
-Implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx).  
+Implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)).  
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -91,7 +91,7 @@ class IRowsetNotifyCP :
  Para obtener información detallada sobre la implementación de notificaciones, consulte "Compatibilidad con notificaciones" en [crear un proveedor actualizable](../../data/oledb/creating-an-updatable-provider.md).  
 
 ## <a name="onfieldchange"></a> IRowsetNotifyCP:: Fire_onfieldchange
-Difunde un [OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx) eventos para notificar a los consumidores de un cambio en el valor de una columna.  
+Difunde un [OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) eventos para notificar a los consumidores de un cambio en el valor de una columna.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -106,10 +106,10 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx) en el *referencia del programador OLE DB*. 
+ Consulte [IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\)) en el *referencia del programador OLE DB*. 
 
 ## <a name="onrowchange"></a> IRowsetNotifyCP:: Fire_onrowchange
-Difunde un [OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx) eventos en todos los agentes de escucha en el punto de conexión `IID_IRowsetNotify` para notificar a los consumidores de un cambio que afecte a las filas.  
+Difunde un [OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) eventos en todos los agentes de escucha en el punto de conexión `IID_IRowsetNotify` para notificar a los consumidores de un cambio que afecte a las filas.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -123,10 +123,10 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IRowsetNotify::OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx) en el *referencia del programador OLE DB*.  
+ Consulte [IRowsetNotify::OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\)) en el *referencia del programador OLE DB*.  
 
 ## <a name="onrowsetchange"></a> IRowsetNotifyCP:: Fire_onrowsetchange
-Difunde un [OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx) eventos en todos los agentes de escucha en el punto de conexión `IID_IRowsetNotify` para notificar a los consumidores de un cambio que afecte a todo el conjunto de filas.  
+Difunde un [OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) eventos en todos los agentes de escucha en el punto de conexión `IID_IRowsetNotify` para notificar a los consumidores de un cambio que afecte a todo el conjunto de filas.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -138,7 +138,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx) en el *referencia del programador OLE DB*.
+ Consulte [IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)) en el *referencia del programador OLE DB*.
   
 ## <a name="see-also"></a>Vea también  
  [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

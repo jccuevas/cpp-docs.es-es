@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d265b2547f35e0c8c25ee5e3aad1135945e346b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 994e9f8c48bb6d6db2a9af06613abca895b09f51
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853209"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541334"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (clase)
 Representa hojas de propiedades, también conocidas como cuadros de diálogo de pestaña.  
@@ -121,7 +121,7 @@ class CPropertySheet : public CWnd
 ## <a name="remarks"></a>Comentarios  
  Consta de una hoja de propiedades de un `CPropertySheet` objeto y uno o más [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objetos. El marco de trabajo muestra una hoja de propiedades como una ventana con un conjunto de índices de pestaña y un área que contiene la página seleccionada actualmente. El usuario navega a una página específica mediante el uso de la pestaña correspondiente.  
   
- `CPropertySheet` proporciona compatibilidad para el modo expandido [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) estructura se introdujo en [!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)] y 2000 de Windows NT. La estructura contiene marcas adicionales y los miembros que admiten el uso de un mapa de bits de fondo "marca de agua".  
+ `CPropertySheet` proporciona compatibilidad para el modo expandido [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) estructura que se presentó en Windows 98 y 2000 de Windows NT. La estructura contiene marcas adicionales y los miembros que admiten el uso de un mapa de bits de fondo "marca de agua".  
   
  Para mostrar estas nuevas imágenes automáticamente en su objeto de hoja de propiedades, pasar los valores válidos para las imágenes de mapa de bits y paleta en la llamada a [CPropertySheet::Construct](#construct) o [CPropertySheet::CPropertySheet](#cpropertysheet).  
   

@@ -1,5 +1,5 @@
 ---
-title: __sidt | Documentos de Microsoft
+title: __sidt | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e41b0edd9b2a3da1046888f16a55e19f2d9f20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96d20916210b0fe55817dceb86d388a33f8e238b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324517"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539690"
 ---
 # <a name="sidt"></a>__sidt
 **Específicos de Microsoft**  
   
- Almacena el valor del registro de tabla de descriptor de interrupción (IDTR) en la ubicación de memoria especificada.  
+ Almacena el valor del registro de tabla de interrupciones descriptor (IDTR) en la ubicación de memoria especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,15 +46,15 @@ void __sidt(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__sidt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__sidt`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- El `__sidt` función es equivalente a la `SIDT` instrucción máquina. Para obtener más información, busque el documento "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
+ El `__sidt` función es equivalente a la `SIDT` instrucción máquina. Para obtener más información, busque el documento, "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
   
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [__lidt](../intrinsics/lidt.md)

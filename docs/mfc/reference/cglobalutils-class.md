@@ -1,5 +1,5 @@
 ---
-title: Clase CGlobalUtils | Documentos de Microsoft
+title: CGlobalUtils (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ffd681a589f9e8cc1c9cc56139f7b155773038f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6c92ccfe9dbf25fa1355885a5f6dd3570df4884b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952090"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540910"
 ---
-# <a name="cglobalutils-class"></a>Clase CGlobalUtils
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cglobalutils-class"></a>CGlobalUtils (clase)
+Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -104,7 +104,7 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [entrada, salida] *rect*  
+ [in, out] *rect*  
  [in] *pRectDelta*  
   
 ### <a name="remarks"></a>Comentarios  
@@ -140,7 +140,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -154,7 +154,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -233,7 +233,7 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [entrada, salida] *rect*  
+ [in, out] *rect*  
  [in] *nDegrees*  
   
 ### <a name="remarks"></a>Comentarios  
@@ -249,7 +249,7 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [entrada, salida] *pDockManager*  
+ [in, out] *pDockManager*  
  [in] *bForce*  
  [in] *bForceInvisible*  
   
@@ -263,7 +263,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -316,7 +316,7 @@ HICON GetWndIcon(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
   
 ### <a name="return-value"></a>Valor devuelto  
   

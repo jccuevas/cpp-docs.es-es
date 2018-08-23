@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCVisualManagerOffice2007 | Documentos de Microsoft
+title: CMFCVisualManagerOffice2007 (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -240,17 +240,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd70adb821724a476a66ad21157eb8506ffaa40
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: fd52e1437146c5584fa6240b4423462401921b44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039594"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539336"
 ---
-# <a name="cmfcvisualmanageroffice2007-class"></a>Clase CMFCVisualManagerOffice2007
-`CMFCVisualManagerOffice2007` Proporciona una aplicación un aspecto de Microsoft Office 2007. 
+# <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 (clase)
+`CMFCVisualManagerOffice2007` Proporciona a una aplicación un aspecto de Microsoft Office 2007. 
 
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -279,7 +279,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor](#getribbonstatusbartextcolor)||  
 |[CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)||  
 |[CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||  
-|`CMFCVisualManagerOffice2007::GetStyle`|Devuelve el esquema de color actual de la `CMFCVisualManagerOffice2007` interfaz gráfica de usuario que, a su vez, imita la interfaz gráfica de usuario de Microsoft Office 2007.|  
+|`CMFCVisualManagerOffice2007::GetStyle`|Devuelve la combinación de colores actual el `CMFCVisualManagerOffice2007` GUI que, a su vez, se imita la interfaz gráfica de usuario de Microsoft Office 2007.|  
 |[CMFCVisualManagerOffice2007::GetTabFrameColors](#gettabframecolors)||  
 |[CMFCVisualManagerOffice2007::GetTabHorzMargin](#gettabhorzmargin)||  
 |[CMFCVisualManagerOffice2007::GetTabTextColor](#gettabtextcolor)||  
@@ -380,10 +380,10 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |`CMFCVisualManagerOffice2007::SetStyle`|Establece la combinación de colores de la `CMFCVisualManagerOffice2007` interfaz gráfica de usuario.|  
   
 ## <a name="remarks"></a>Comentarios  
- Use `CMFCVisualManagerOffice2007` para cambiar la apariencia visual de la aplicación para que se parecen a las de Microsoft Office 2007. Este administrador visual requiere que establezca el estilo antes de utilizarla. Antes de pasar a este administrador de visual `CMFCVisualManager::SetDefaultManager`, debe llamar a la función estática `CMFCVisualManagerOffice2007::SetStyle`.  
+ Use `CMFCVisualManagerOffice2007` para cambiar la apariencia visual de la aplicación para que se parecen a las de Microsoft Office 2007. Este administrador visual requiere establecer el estilo antes de usarlo. Antes de pasar a este administrador de visual `CMFCVisualManager::SetDefaultManager`, debe llamar a la función estática `CMFCVisualManagerOffice2007::SetStyle`.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el administrador visual de Office 2007. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).  
+ El ejemplo siguiente muestra cómo usar el administrador visual de Office 2007. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]  
   
@@ -492,7 +492,7 @@ CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -769,7 +769,7 @@ BOOL IsRibbonPresent(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
   
 ### <a name="return-value"></a>Valor devuelto  
   
@@ -2338,7 +2338,7 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
  [in] *bSecuencias de ActiveX*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -2356,7 +2356,7 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
  [in] *lstSysButtons*  
  [in] *rectRedraw*  
   
@@ -2374,7 +2374,7 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- [in] *pWnd*  
+ [in] *conquistado*  
  [in] *sizeWindow*  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -2405,6 +2405,6 @@ static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)   
- [Clase CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
+ [CMFCVisualManager (clase)](../../mfc/reference/cmfcvisualmanager-class.md)   
+ [CMFCVisualManagerOfficeXP (clase)](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
  [CMFCVisualManagerWindows (clase)](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

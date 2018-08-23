@@ -1,5 +1,5 @@
 ---
-title: __inword | Documentos de Microsoft
+title: __inword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40d0662e50059661b5d586aca2b865772a99235
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc8ed68cad5ba6aa56a4040c62da4570981534d9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328742"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538937"
 ---
 # <a name="inword"></a>__inword
 **Específicos de Microsoft**  
   
- Lee datos desde el puerto especificado con el `in` instrucción.  
+ Lee datos desde el puerto especificado mediante el `in` instrucción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ unsigned short __inword(
   
 #### <a name="parameters"></a>Parámetros  
  [in] `Port`  
- El puerto que leer.  
+ Para leer desde el puerto.  
   
 ## <a name="return-value"></a>Valor devuelto  
  La palabra de los datos leídos.  
@@ -49,7 +49,7 @@ unsigned short __inword(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__inword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inword`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

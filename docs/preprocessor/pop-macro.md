@@ -1,5 +1,5 @@
 ---
-title: pop_macro | Documentos de Microsoft
+title: pop_macro | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7790cadf9b5bc0b9a1fa37b5131f4fb704142ad2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3106bc3c74be0f6d5a9a386b0f4c8c9c64bdfedf
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849644"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539668"
 ---
 # <a name="popmacro"></a>pop_macro
 Establece el valor de la *macro_name* macro en el valor en la parte superior de la pila para esta macro.  
@@ -31,19 +31,18 @@ Establece el valor de la *macro_name* macro en el valor en la parte superior de 
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 #pragma pop_macro("  
 macro_name  
 ")  
-  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- En primer lugar debe emitir una [push_macro](../preprocessor/push-macro.md) para *macro_name* para poder realizar una **pop_macro**.  
+ 
+En primer lugar debe emitir una [push_macro](../preprocessor/push-macro.md) para *macro_name* antes de hacer un **pop_macro**.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // pragma_directives_pop_macro.cpp  
 // compile with: /W1  
 #include <stdio.h>  
@@ -76,4 +75,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

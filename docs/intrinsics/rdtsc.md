@@ -1,5 +1,5 @@
 ---
-title: __rdtsc | Documentos de Microsoft
+title: __rdtsc | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b47a76b3045465d8c3c5c21a87020ee1e74a69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7888f00b1b95a18e839ab61fc8ff28a2646f9875
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337085"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544520"
 ---
 # <a name="rdtsc"></a>__rdtsc
 **Específicos de Microsoft**  
@@ -37,20 +37,20 @@ unsigned __int64 __rdtsc();
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Entero de 64 bits sin signo que representa un recuento de pasos.  
+ Un entero de 64 bits sin signo que representa un recuento de pasos.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__rdtsc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__rdtsc`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Esta rutina solo está disponible como función intrínseca.  
+ Esta rutina solo está disponible como intrínseco.  
   
- La interpretación del valor TSC en esta generación de hardware difiere del comportamiento en las versiones anteriores de [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Consulte los manuales de hardware para obtener más información.  
+ La interpretación del valor TSC en esta generación de hardware difiere en las versiones anteriores de x64. Consulte los manuales de hardware para obtener más información.  
   
 ## <a name="example"></a>Ejemplo  
   

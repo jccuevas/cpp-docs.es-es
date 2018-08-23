@@ -1,5 +1,5 @@
 ---
-title: concurrent_unordered_map (clase) | Documentos de Microsoft
+title: concurrent_unordered_map (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 932cfe232b07a9020af450ad33bb34101827ac79
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c570bd05edd81fc08f49785a1bc50668953553b0
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695534"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540077"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map (Clase)
 La clase `concurrent_unordered_map` es un contenedor seguro para simultaneidad que controla una secuencia de variación de longitud de elementos del tipo `std::pair<const K, _Element_type>`. La secuencia se representa de una manera que habilita la anexión segura para simultaneidad, el acceso a elementos, el acceso a iterador y las operaciones de recorrido de iterador.  
@@ -69,7 +69,7 @@ template <typename K,
  El tipo de objeto de función de comparación de igualdad. Este argumento es opcional y el valor predeterminado es `std::equal_to<K>`.  
   
  `_Allocator_type`  
- El tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria para la asignación no ordenada simultánea. Este argumento es opcional y el valor predeterminado es `std::allocator<std::pair<K`, `_Element_type>>`.  
+ El tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria para el mapa no ordenado simultáneo. Este argumento es opcional y el valor predeterminado es `std::allocator<std::pair<K`, `_Element_type>>`.  
   
 ## <a name="members"></a>Miembros  
   
@@ -119,7 +119,7 @@ template <typename K,
 |[operator=](#operator_eq)|Sobrecargado. Asigna el contenido de otro objeto `concurrent_unordered_map` a este. Este método no es seguro para la simultaneidad.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener información detallada sobre la `concurrent_unordered_map` de clases, consulte [contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
+ Para obtener información detallada sobre la `concurrent_unordered_map` de clases, vea [contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `_Traits`  
@@ -133,7 +133,7 @@ template <typename K,
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="at"></a> en 
+##  <a name="at"></a> en el 
 
  Busca un elemento en `concurrent_unordered_map` con un valor de clave especificado. Este método es seguro para simultaneidad.  
   
@@ -153,7 +153,7 @@ const mapped_type& at(const key_type& KVal) const;
 ### <a name="remarks"></a>Comentarios  
  Si el valor de clave de argumento no se encuentra, la función produce un objeto de clase `out_of_range`.  
   
-##  <a name="begin"></a> BEGIN 
+##  <a name="begin"></a> comenzar 
 
  Devuelve un iterador que apunta al primer elemento en el contenedor simultáneo. Este método es seguro para simultaneidad.  
   
@@ -179,14 +179,14 @@ const_iterator cbegin() const;
   
 ##  <a name="cend"></a> cend 
 
- Devuelve un iterador constante que apunta a la ubicación siguiente al último elemento en el contenedor simultáneo. Este método es seguro para simultaneidad.  
+ Devuelve un iterador constante que apunta a la ubicación que sigue al último elemento en el contenedor simultáneo. Este método es seguro para simultaneidad.  
   
 ```
 const_iterator cend() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un iterador const en la ubicación siguiente al último elemento en el contenedor simultáneo.  
+ Un iterador const en la ubicación que sigue al último elemento en el contenedor simultáneo.  
   
 ##  <a name="clear"></a> Borrar 
 
@@ -234,7 +234,7 @@ concurrent_unordered_map(
  El tipo de iterador de entrada.  
   
  `_Number_of_buckets`  
- El número inicial de depósitos para este mapa no ordenado.  
+ El número inicial de depósitos para esta asignación no ordenada.  
   
  `_Hasher`  
  La función hash para esta asignación no ordenada.  
@@ -255,19 +255,19 @@ concurrent_unordered_map(
  El objeto de origen `concurrent_unordered_map` del que copiar o mover elementos.  
   
 ### <a name="remarks"></a>Comentarios  
- Todos los constructores almacenan un objeto de asignador `_Allocator` e inicializar el mapa no ordenado.  
+ Todos los constructores almacenan un objeto de asignador `_Allocator` e inicializar el objeto unorderedmap.  
   
- El primer constructor especifica una asignación inicial vacía y especifica explícitamente el número de depósitos, tipo de función hash, función de igualdad y el asignador para su uso.  
+ El primer constructor especifica un mapa inicial vacío y especifica explícitamente el número de depósitos, tipo de función hash, función de igualdad y el asignador para usarse.  
   
  El segundo constructor especifica un asignador para el mapa no ordenado.  
   
- El tercer constructor especifica los valores proporcionados por el intervalo de iterador [ `_Begin`, `_End`).  
+ El tercer constructor especifica los valores proporcionados por el rango de iterador [ `_Begin`, `_End`).  
   
- Los constructores cuarto y quinto especifican una copia de la asignación no ordenada simultánea `_Umap`.  
+ Los constructores cuarto y quinto especifican una copia del mapa no ordenado simultáneo `_Umap`.  
   
- El último constructor especifica una operación de traslado de la asignación no ordenada simultánea `_Umap`.  
+ El último constructor especifica un movimiento del mapa no ordenado simultáneo `_Umap`.  
   
-##  <a name="count"></a> Recuento 
+##  <a name="count"></a> recuento 
 
  Cuenta el número de elementos que coinciden con una clave especificada. Esta función es seguro para simultaneidad.  
   
@@ -282,7 +282,7 @@ size_type count(const key_type& KVal) const;
 ### <a name="return-value"></a>Valor devuelto  
  El número de veces el número de veces que la clave aparece en el contenedor.  
   
-##  <a name="empty"></a> vacía 
+##  <a name="empty"></a> vacío 
 
  Comprueba si no hay ningún elemento presente. Este método es seguro para simultaneidad.  
   
@@ -294,11 +294,11 @@ bool empty() const;
  `true` Si está vacío, el contenedor simultáneo `false` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- En presencia de las inserciones simultáneas, o no está vacío el contenedor simultáneo puede cambiar inmediatamente después de llamar a esta función, antes de que el valor devuelto es de lectura incluso.  
+ En presencia de inserciones simultáneas, o si no está vacío el contenedor simultáneo puede cambiar inmediatamente después de llamar a esta función, antes de que incluso se lee el valor devuelto.  
   
-##  <a name="end"></a> Final 
+##  <a name="end"></a> final 
 
- Devuelve un iterador que apunta a la ubicación siguiente al último elemento en el contenedor simultáneo. Este método es seguro para simultaneidad.  
+ Devuelve un iterador que apunta a la ubicación que sigue al último elemento en el contenedor simultáneo. Este método es seguro para simultaneidad.  
   
 ```
 iterator end();
@@ -307,7 +307,7 @@ const_iterator end() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un iterador a la ubicación siguiente al último elemento en el contenedor simultáneo.  
+ Un iterador a la ubicación que sigue al último elemento en el contenedor simultáneo.  
   
 ##  <a name="equal_range"></a> equal_range 
 
@@ -328,10 +328,10 @@ std::pair<const_iterator,
  El valor de clave que se buscará.  
   
 ### <a name="return-value"></a>Valor devuelto  
- A [par](http://msdn.microsoft.com/en-us/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) donde el primer elemento es un iterador al principio y el segundo elemento es un iterador al final del intervalo.  
+ Un [par](http://msdn.microsoft.com/en-us/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) donde el primer elemento es un iterador al principio y el segundo elemento es un iterador al final del intervalo.  
   
 ### <a name="remarks"></a>Comentarios  
- Es posible para las inserciones simultáneas hacer que se inserten después el iterador begin y antes el iterador de fin claves adicionales.  
+ Es posible que las inserciones simultáneas hacer que claves adicionales para insertarse después el iterador inicial y antes el iterador de fin.  
   
 ##  <a name="find"></a> Buscar 
 
@@ -348,7 +348,7 @@ const_iterator find(const key_type& KVal) const;
  El valor de clave que se buscará.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un iterador que apunta a la ubicación del primer elemento que coincide con la clave proporcionada, o bien, el iterador `end()` si no existe ese elemento.  
+ Un iterador que apunta a la ubicación del primer elemento que coincide con la clave proporcionada, o el iterador `end()` si no existe ese elemento.  
   
 ##  <a name="get_allocator"></a> get_allocator 
 
@@ -416,18 +416,18 @@ typename std::enable_if<!std::is_same<const_iterator,
  La ubicación inicial para buscar un punto de inserción.  
   
  `first`  
- El comienzo del intervalo que se va a insertar.  
+ El principio del intervalo que se va a insertar.  
   
  `last`  
- El final del intervalo que se va a insertar.  
+ Final del intervalo que se va a insertar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un par que contiene un iterador y un valor booleano. Vea la sección Comentarios para obtener más detalles.  
   
 ### <a name="remarks"></a>Comentarios  
- La primera función miembro determina si existe un elemento X en la secuencia cuya clave tiene una ordenación equivalente a la de `value`. Si no es así, crea un elemento de este tipo X y la inicializa con `value`. La función, a continuación, determina el iterador `where` que designa X. Si se produce una inserción, la función devuelve `std::pair(where, true)`. De lo contrario, devuelve `std::pair(where, false)`.  
+ La primera función miembro determina si existe un elemento X en la secuencia cuyo criterio de ordenación es equivalente a de `value`. Si no, crea ese elemento X y la inicializa con `value`. La función, a continuación, determina el iterador `where` que designa X. Si se ha producido una inserción, la función devuelve `std::pair(where, true)`. De lo contrario, devuelve `std::pair(where, false)`.  
   
- La segunda función miembro devuelve insert ( `value`), el uso `_Where` como punto de partida dentro de la secuencia controlada para buscar el punto de inserción.  
+ La segunda función miembro devuelve insert ( `value`), con `_Where` como punto de partida dentro de la secuencia controlada que se busca el punto de inserción.  
   
  La tercera función miembro inserta la secuencia de valores de elemento del intervalo [ `first`, `last`).  
   
@@ -457,7 +457,7 @@ float load_factor() const;
   
 ##  <a name="max_load_factor"></a> max_load_factor 
 
- Obtiene o establece el factor de carga máxima del contenedor. El factor de carga máxima es el número máximo de elementos que pueden estar en un cubo antes de que el contenedor crece su tabla interna.  
+ Obtiene o establece el factor de carga máximo del contenedor. El factor de carga máxima es el número máximo de elementos que pueden estar en un cubo antes de que el contenedor aumenta su tabla interna.  
   
 ```
 float max_load_factor() const;
@@ -469,7 +469,7 @@ void max_load_factor(float _Newmax);
  `_Newmax`  
   
 ### <a name="return-value"></a>Valor devuelto  
- La primera función miembro devuelve el factor de carga máxima almacenado. La segunda función miembro no devuelve un valor, pero produce un [out_of_range](../../../standard-library/out-of-range-class.md) excepción si el factor de carga especificado no es válido..  
+ La primera función miembro devuelve el factor de carga máxima almacenado. La segunda función miembro no devuelve un valor, pero se produce un [out_of_range](../../../standard-library/out-of-range-class.md) excepción si el factor de carga especificado no es válido..  
   
 ##  <a name="max_size"></a> max_size 
 
@@ -483,7 +483,7 @@ size_type max_size() const;
  El número máximo de elementos que se pueden insertar en este contenedor simultáneo.  
   
 ### <a name="remarks"></a>Comentarios  
- Este valor de límite superior realmente puede ser mayor que lo que realmente puede contener el contenedor.  
+ Este valor de límite superior realmente puede ser superior a lo que realmente puede contener el contenedor.  
   
 ##  <a name="operator_at"></a> operator] 
 
@@ -502,14 +502,14 @@ mapped_type& operator[](key_type&& kval);
  Buscar o insertar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una referencia al valor de datos del elemento se encuentra o insertado.  
+ Una referencia al valor de datos del elemento insertado o se encuentra.  
   
 ### <a name="remarks"></a>Comentarios  
  Si el valor de clave de argumento no se encuentra, se inserta junto con el valor predeterminado del tipo de datos.  
   
- `operator[]` puede utilizarse para insertar elementos en un mapa `m` con `m[key] = DataValue;`, donde `DataValue` es el valor de la `mapped_type` del elemento con un valor de clave de `key`.  
+ `operator[]` puede utilizarse para insertar elementos en un mapa `m` mediante `m[key] = DataValue;`, donde `DataValue` es el valor de la `mapped_type` del elemento con un valor de clave de `key`.  
   
- Cuando se emplea `operator[]` para insertar elementos, la referencia devuelta no indica si una inserción cambia un elemento ya existente o crea uno nuevo. Las funciones miembro `find` y [insertar](#insert) puede utilizarse para determinar si un elemento con una clave especificada ya está presente antes de una inserción.  
+ Cuando se emplea `operator[]` para insertar elementos, la referencia devuelta no indica si una inserción cambia un elemento ya existente o crea uno nuevo. Las funciones miembro `find` y [insertar](#insert) puede usarse para determinar si un elemento con una clave especificada ya está presente antes de una inserción.  
   
 ##  <a name="operator_eq"></a> operator= 
 
@@ -560,9 +560,9 @@ size_type size() const;
  El número de elementos en el contenedor.  
   
 ### <a name="remarks"></a>Comentarios  
- En presencia de las inserciones simultáneas, puede cambiar el número de elementos en el contenedor simultáneo inmediatamente después de llamar a esta función, antes de que el valor devuelto es de lectura incluso.  
+ En presencia de inserciones simultáneas, puede cambiar el número de elementos en el contenedor simultáneo inmediatamente después de llamar a esta función, antes de que incluso se lee el valor devuelto.  
   
-##  <a name="swap"></a> Intercambiar 
+##  <a name="swap"></a> intercambio 
 
  Intercambia el contenido de dos objetos `concurrent_unordered_map`. Este método no es seguro para la simultaneidad.  
   
@@ -572,11 +572,11 @@ void swap(concurrent_unordered_map& _Umap);
   
 ### <a name="parameters"></a>Parámetros  
  `_Umap`  
- La `concurrent_unordered_map` objeto que se intercambia con.  
+ La `concurrent_unordered_map` objeto que se va a intercambiar.  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin 
 
- Devuelve un iterador al primer elemento en este contenedor para un depósito concreto.  
+ Devuelve un iterador al primer elemento de este contenedor para un depósito concreto.  
   
 ```
 local_iterator unsafe_begin(size_type _Bucket);
@@ -589,11 +589,11 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
  El índice de depósito.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Iterador que apunta al principio del depósito.  
+ Un iterador que señala al principio del depósito.  
   
 ##  <a name="unsafe_bucket"></a> unsafe_bucket 
 
- Devuelve el índice de depósitos que se asigna una clave específica para este contenedor.  
+ Devuelve el índice de depósito que asigna una clave específica en este contenedor.  
   
 ```
 size_type unsafe_bucket(const key_type& KVal) const;
@@ -601,21 +601,21 @@ size_type unsafe_bucket(const key_type& KVal) const;
   
 ### <a name="parameters"></a>Parámetros  
  `KVal`  
- La clave del elemento que se va a buscar.  
+ La clave de elemento que se va a buscar.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El índice de depósito para la clave en este contenedor.  
   
 ##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count 
 
- Devuelve el número actual de depósitos de este contenedor.  
+ Devuelve el número actual de depósitos en este contenedor.  
   
 ```
 size_type unsafe_bucket_count() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El número actual de depósitos de este contenedor.  
+ El número actual de depósitos en este contenedor.  
   
 ##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size 
 
@@ -627,14 +627,14 @@ size_type unsafe_bucket_size(size_type _Bucket);
   
 ### <a name="parameters"></a>Parámetros  
  `_Bucket`  
- El cubo que se buscará.  
+ El depósito que se buscará.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El número actual de depósitos de este contenedor.  
+ El número actual de depósitos en este contenedor.  
   
 ##  <a name="unsafe_cbegin"></a> unsafe_cbegin 
 
- Devuelve un iterador al primer elemento en este contenedor para un depósito concreto.  
+ Devuelve un iterador al primer elemento de este contenedor para un depósito concreto.  
   
 ```
 const_local_iterator unsafe_cbegin(size_type _Bucket) const;
@@ -645,11 +645,11 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
  El índice de depósito.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Iterador que apunta al principio del depósito.  
+ Un iterador que señala al principio del depósito.  
   
 ##  <a name="unsafe_cend"></a> unsafe_cend 
 
- Devuelve un iterador a la ubicación siguiente al último elemento de un depósito concreto.  
+ Devuelve un iterador a la ubicación que sigue al último elemento de un depósito concreto.  
   
 ```
 const_local_iterator unsafe_cend(size_type _Bucket) const;
@@ -660,11 +660,11 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
  El índice de depósito.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Iterador que apunta al principio del depósito.  
+ Un iterador que señala al principio del depósito.  
   
 ##  <a name="unsafe_end"></a> unsafe_end 
 
- Devuelve un iterador hasta el último elemento en este contenedor para un depósito concreto.  
+ Devuelve un iterador al último elemento de este contenedor para un depósito concreto.  
   
 ```
 local_iterator unsafe_end(size_type _Bucket);
@@ -700,10 +700,10 @@ size_type unsafe_erase(
  La posición del iterador en la que borrar.  
   
  `_Begin`  
- La posición del primer elemento del intervalo de elementos que se va a borrar.  
+ La posición del primer elemento del intervalo de elementos que va a borrar.  
   
  `_End`  
- La posición del primer elemento más allá del intervalo de elementos que se va a borrar.  
+ La posición del primer elemento más allá del intervalo de elementos que va a borrar.  
   
  `KVal`  
  Valor de clave que se va a borrar.  
@@ -718,14 +718,14 @@ size_type unsafe_erase(
   
 ##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count 
 
- Devuelve el número máximo de depósitos de este contenedor.  
+ Devuelve el número máximo de depósitos en este contenedor.  
   
 ```
 size_type unsafe_max_bucket_count() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El número máximo de depósitos de este contenedor.  
+ El número máximo de depósitos en este contenedor.  
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   

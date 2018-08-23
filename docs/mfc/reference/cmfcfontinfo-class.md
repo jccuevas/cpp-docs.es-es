@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ff2d857938881f1c3d9f02a1d8465a5a4e97c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852424"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541686"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo (clase)
 La `CMFCFontInfo` clase describe el nombre y otros atributos de una fuente.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Valor devuelto  
   
 ### <a name="remarks"></a>Comentarios  
- Esta documentación utiliza los términos *juego de caracteres* y *script* indistintamente. Un *script*, que también se denomina es un sistema de escritura, es una colección de reglas para escribir estos caracteres en uno o varios idiomas y caracteres. El conjunto de caracteres que incluye el alfabeto y la puntuación que se usa en el script. Por ejemplo, alfabeto latino sirve para inglés se habla en Estados Unidos, y su alfabeto incluye los caracteres de la A Z. El `lfCharSet` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura especifica un juego de caracteres. Por ejemplo, el valor ANSI_CHARSET especifica la [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] juego de caracteres, que incluye el alfabeto del alfabeto latino.  
+ Esta documentación utiliza los términos *juego de caracteres* y *script* indistintamente. Un *script*, que también se denomina es un sistema de escritura, es una colección de reglas para escribir estos caracteres en uno o varios idiomas y caracteres. El conjunto de caracteres que incluye el alfabeto y la puntuación que se usa en el script. Por ejemplo, alfabeto latino sirve para inglés se habla en Estados Unidos, y su alfabeto incluye los caracteres de la A Z. El `lfCharSet` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura especifica un juego de caracteres. Por ejemplo, el valor ANSI_CHARSET especifica el juego de caracteres ANSI, lo que incluye el alfabeto del alfabeto latino.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Recupera los nombres de una fuente y el carácter concatenados conjunto (script).  

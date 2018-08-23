@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0cd0df9311d11b30c3ef42d8492c71cb78abb4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883637"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573260"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT (clase)
 Esta clase representa un `CSimpleStringT` objeto.  
@@ -467,7 +467,7 @@ PXSTR GetBufferSetLength(int nLength);
   
  La memoria del búfer es automáticamente libera cuando el `CSimpleStringT` se destruye el objeto.  
   
- Si realiza un seguimiento de la longitud de cadena usted mismo, no no anexa el carácter nulo de terminación. Debe especificar la longitud de la cadena final al liberar el búfer mediante `ReleaseBuffer`. Si anexe un carácter nulo al llamar a `ReleaseBuffer`, pasa -1 (valor predeterminado) para la longitud a `ReleaseBuffer`, y `ReleaseBuffer` llevará a cabo una `strlen` en el búfer para determinar su longitud.  
+ Si realiza un seguimiento de la longitud de cadena usted mismo, no se anexa el carácter nulo de terminación. Debe especificar la longitud de la cadena final al liberar el búfer mediante `ReleaseBuffer`. Si anexe un carácter nulo al llamar a `ReleaseBuffer`, pasa -1 (valor predeterminado) para la longitud a `ReleaseBuffer`, y `ReleaseBuffer` llevará a cabo una `strlen` en el búfer para determinar su longitud.  
   
  Para obtener más información sobre el recuento de referencias, consulte los artículos siguientes:  
   

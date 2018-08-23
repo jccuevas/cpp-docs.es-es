@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmptrst | Documentos de Microsoft
+title: __vmx_vmptrst | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad1b6587f4386565ae7de84a7b6a170da98b6df8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2997ed93de7291c22ae4f147bdd2392b71385e6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328599"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540314"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Específicos de Microsoft**  
@@ -39,23 +39,23 @@ void __vmx_vmptrst(
   
 #### <a name="parameters"></a>Parámetros  
  [in] *`VmcsPhysicalAddress`  
- La dirección donde se almacena el puntero VMCS actual.  
+ La dirección donde se almacena el puntero de la VMCS actual.  
   
 ## <a name="remarks"></a>Comentarios  
- El puntero VMCS es una dirección física de 64 bits.  
+ El puntero de la VMCS es una dirección física de 64 bits.  
   
- El `__vmx_vmptrst` función es equivalente a la `VMPTRST` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization técnica especificación para la arquitectura IA-32 Intel," documento número C97063-002 en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
+ El `__vmx_vmptrst` función es equivalente a la `VMPTRST` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization Technical especificación para la arquitectura IA-32 Intel," documento C97063-002, número en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__vmx_vmptrst`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmptrst`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 32d9356c5c223df723626cf6ac07a7b5fda368de
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 16f7be95c36970ce96d04ff357831294f3a3faf1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340656"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572781"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Plantillas, atributos y otras implementaciones de OLE DB
 ## <a name="atl-ole-db-templates"></a>Plantillas OLE DB de ATL  
@@ -34,7 +34,7 @@ ms.locfileid: "39340656"
   
 -   **Plantillas de proveedores OLE DB** usado para implementar una aplicación de servidor (proveedor) de OLE DB.  
   
- Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, consulte [referencia del programador de OLE DB](https://msdn.microsoft.com/library/ms713643.aspx).  
+ Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, consulte [referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
   
  Para obtener más información, hacer lo siguiente:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "39340656"
   
 -   Ver la lista de [ejemplos de plantillas OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c).  
   
--   Consulte [referencia del programador OLE DB](https://msdn.microsoft.com/library/ms713643.aspx) (en el SDK de Windows).  
+-   Consulte [referencia del programador OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (en el SDK de Windows).  
   
 ## <a name="ole-db-attributes"></a>Atributos de OLE DB  
  El [atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md) proporcionan una manera cómoda para crear consumidores OLE DB. Los atributos OLE DB insertan código basado en el [plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) para crear trabajo consumidores OLE DB y proveedores. Si tiene que especificar la funcionalidad no admitida por los atributos, puede usar las plantillas OLE DB junto con los atributos en el código.  
@@ -55,7 +55,7 @@ ms.locfileid: "39340656"
  La biblioteca MFC contiene una clase, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), que muestra los registros de base de datos en controles. La vista es una vista de formulario conectada directamente a un `CRowset` de objetos y muestra los campos de la `CRowset` objeto en los controles de la plantilla de cuadro de diálogo. También proporciona una implementación predeterminada para desplazarse al primero, siguiente, anterior o el último registro y una interfaz para actualizar el registro actualmente en la vista. Para obtener más información, consulta `COleDBRecordView`.  
   
 ## <a name="ole-db-sdk-interfaces"></a>Interfaces SDK de OLE DB  
- En los casos donde las plantillas OLE DB no admiten la funcionalidad de OLE DB, deberá usar sus propias interfaces OLE DB. Para obtener más información, consulte [referencia del programador de OLE DB](https://msdn.microsoft.com/library/ms713643.aspx) en el SDK de Windows.  
+ En los casos donde las plantillas OLE DB no admiten la funcionalidad de OLE DB, deberá usar sus propias interfaces OLE DB. Para obtener más información, consulte [referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
  [Programación de OLE DB](../../data/oledb/ole-db-programming.md)   

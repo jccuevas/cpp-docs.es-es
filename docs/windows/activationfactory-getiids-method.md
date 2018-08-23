@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aaaa8d5bb0a88b9078c60fa61608e52fafd5baac
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 49ef07365675ddb9cdedee1f6a2cdfb676188dc6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643516"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42576714"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids (Método)
-Recupera una matriz de identificadores de interfaz implementada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-STDMETHOD(  
-   GetIids  
-)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *iidCount*  
- Cuando finalice esta operación, el número de identificadores de interfaz en el *IID* matriz.  
-  
- *IID*  
- Cuando se complete esta operación, una matriz de implementa los identificadores de interfaz.  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error. E_OUTOFMEMORY es un valor HRESULT de error posibles.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [ActivationFactory (clase)](../windows/activationfactory-class.md)
+
+Recupera una matriz de identificadores de interfaz implementada.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(
+   GetIids
+)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*iidCount*  
+Cuando finalice esta operación, el número de identificadores de interfaz en el *IID* matriz.
+
+*IID*  
+Cuando se complete esta operación, una matriz de implementa los identificadores de interfaz.
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error. E_OUTOFMEMORY es un valor HRESULT de error posibles.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[ActivationFactory (clase)](../windows/activationfactory-class.md)

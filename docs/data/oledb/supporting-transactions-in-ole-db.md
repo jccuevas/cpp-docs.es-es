@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 59e890e9d38ff0a37114f2f15217a748c21fff44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338715"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572784"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Admitir transacciones en OLE DB
 Un [transacciones](../../data/transactions-mfc-data-access.md) es una forma Agrupar, o por lotes, una serie de actualizaciones a un origen de datos para que todo se ejecuta correctamente y se confirman al mismo tiempo o (si alguna de ellos se produce un error) ninguno se confirman y se revierte la transacción entera. Este proceso garantiza la integridad del resultado en el origen de datos.  
   
  OLE DB admite las transacciones con los tres métodos siguientes:  
   
--   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
   
--   [ITransaction:: Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
+-   [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
   
--   [ITransaction:: Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
+-   [ITransaction:: Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Relación de sesiones y transacciones  
  Un objeto de origen de datos solo puede crear uno o varios objetos de sesión, cada uno de los cuales puede encontrarse dentro o fuera del ámbito de una transacción en un momento dado.  
@@ -55,7 +55,7 @@ Un [transacciones](../../data/transactions-mfc-data-access.md) es una forma Agru
  Una llamada a `ITransaction::Commit` o `ITransaction::Abort` finaliza la transacción. `Commit` hace que todos los cambios dentro del ámbito de la transacción que se aplican al almacén de datos. `Abort` hace que todos los cambios dentro del ámbito de la transacción se cancela y el almacén de datos se deja en el estado tenía antes de comenzar la transacción.  
   
 ## <a name="nested-transactions"></a>Transacciones anidadas  
- Un [anidar transacciones](https://msdn.microsoft.com/library/ms716985.aspx) se produce cuando se inicia una nueva transacción local cuando una transacción activa ya existe en la sesión. La nueva transacción se inicia como una transacción anidada bajo la transacción actual. Si el proveedor no admite transacciones anidadas, la llamada a `StartTransaction` cuando ya hay una transacción activa en la sesión, devuelve XACT_E_XTIONEXISTS.  
+ Un [anidar transacciones](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) se produce cuando se inicia una nueva transacción local cuando una transacción activa ya existe en la sesión. La nueva transacción se inicia como una transacción anidada bajo la transacción actual. Si el proveedor no admite transacciones anidadas, la llamada a `StartTransaction` cuando ya hay una transacción activa en la sesión, devuelve XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Transacciones distribuidas  
  Una transacción distribuida es una transacción que actualiza datos distribuidos; es decir, los datos en más de un equipo en red. Si desea admitir transacciones en un sistema distribuido, debe usar .NET Framework en lugar de la compatibilidad con transacciones de OLE DB.  

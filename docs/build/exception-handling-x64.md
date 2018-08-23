@@ -1,5 +1,5 @@
 ---
-title: (X64) el control de excepciones | Documentos de Microsoft
+title: (X64) de control de excepciones | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ae44d84ed8a0e04f93513db3a5431ebfd80abf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acfcf5f37e0b679faf0e35549cc705ccee216c02
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367191"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573083"
 ---
 # <a name="exception-handling-x64"></a>Control de excepciones (x64)
-Esta sección describe en el comportamiento del control de excepciones de C++ y de control de excepciones estructurado el [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+Esta sección describe el control de excepciones estructurado y el comportamiento en el x64 del control de excepciones de C++.  
   
 -   [Datos de desenredo para la compatibilidad con el control de excepciones y el depurador](../build/unwind-data-for-exception-handling-debugger-support.md)  
   

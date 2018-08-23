@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0b74c08ee2130e9742884eacfa93d6fc55110291
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402501"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572986"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Específicos de Microsoft**  
   
- Para las funciones declaradas con el **naked** atributo, el compilador genera código sin código de prólogo y epílogo. Puede utilizar esta característica para escribir sus propias secuencias de código de prólogo/epílogo mediante código del ensamblador alineado. Las funciones naked son especialmente útiles al escribir controladores de dispositivos virtuales.  Tenga en cuenta que el **naked** atributo solo es válido en x86 y ARM y no está disponible en [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+ Para las funciones declaradas con el **naked** atributo, el compilador genera código sin código de prólogo y epílogo. Puede utilizar esta característica para escribir sus propias secuencias de código de prólogo/epílogo mediante código del ensamblador alineado. Las funciones naked son especialmente útiles al escribir controladores de dispositivos virtuales.  Tenga en cuenta que el **naked** atributo solo es válido en x86 y ARM y no está disponible en x64.  
   
 ## <a name="syntax"></a>Sintaxis  
   

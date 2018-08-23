@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCDragFrameImpl | Documentos de Microsoft
+title: CMFCDragFrameImpl (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aee2c58d8763581987fec40b0cb486c67363697b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040953"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540883"
 ---
-# <a name="cmfcdragframeimpl-class"></a>Clase CMFCDragFrameImpl
-La `CMFCDragFrameImpl` clase dibuja el rectángulo de arrastre que aparece cuando el usuario arrastra un panel en el modo de acoplamiento estándar.  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl (clase)
+La `CMFCDragFrameImpl` clase dibuja el rectángulo de arrastre que aparece cuando el usuario arrastra un panel en modo de acoplamiento estándar.  
+   Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
    
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,7 +34,7 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Un objeto de esta clase está incrustado en cada uno de ellos [clase CPane](../../mfc/reference/cpane-class.md) objeto. Por lo tanto, cada panel que usa el `CanFloat` método muestra un rectángulo de arrastre cuando el usuario arrastra.  
+ Un objeto de esta clase está incrustado en cada [clase CPane](../../mfc/reference/cpane-class.md) objeto. Por lo tanto, cada panel que usa el `CanFloat` método muestra un rectángulo de arrastre cuando el usuario lo arrastra.  
   
  Puede controlar el grosor del rectángulo de arrastre mediante [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) y [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
   

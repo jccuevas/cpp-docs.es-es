@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 394136ccd11b4efd9f312c82acad7e9258309551
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407866"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573287"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema de tipos de C++ (C++ moderno)
 El concepto de *tipo* es muy importante en C++. Cada variable, argumento de función y valor devuelto por una función debe tener un tipo para compilarse. Asimismo, antes de evaluar cada una de las expresiones (incluidos los valores literales), el compilador da implícitamente un tipo a estas expresiones. Algunos ejemplos de tipos **int** que almacena valores integrales, **doble** para almacenar valores de punto flotante (también conocido como *escalares* tipos de datos), o la clase de la biblioteca estándar [std:: basic_string](../standard-library/basic-string-class.md) para almacenar texto. Puede crear su propio tipo definiendo un **clase** o **struct**. El tipo especifica la cantidad de memoria que se asignará para la variable (o el resultado de la expresión), las clases de valores que se pueden almacenar en esa variable, cómo se interpretan estos valores (como patrones de bits) y las operaciones que se pueden realizar en ella. Este artículo contiene información general sobre las principales características del sistema de tipos de C++.  
@@ -157,7 +157,7 @@ void someFunction() {
  Para obtener más información sobre los punteros en general, vea [punteros](../cpp/pointers-cpp.md).  
   
 ## <a name="windows-data-types"></a>Tipos de datos de Windows  
- En la programación Win32 clásica de C y C++, la mayoría de las funciones utilizan definiciones de tipos y macros #define (definidas en `windef.h`) específicas de Windows para especificar los tipos de parámetros y los valores devueltos. Estos tipos de datos de Windows son principalmente solo nombres especiales (alias) dados a los tipos integrados de C o C++. Para obtener una lista completa de estas definiciones de tipos y definiciones del preprocesador, vea [tipos de datos de Windows](http://msdn.microsoft.com/4553cafc-450e-4493-a4d4-cb6e2f274d46). Algunas de estas definiciones de tipos, como HRESULT y LCID, son útiles y significativas. Otras, como INT, no tienen ningún significado especial y son solo alias para los tipos fundamentales de C++. Otros tipos de datos de Windows tienen nombres que se provienen de la época de programación de C y de los procesadores de 16 bits, y no tienen ningún propósito o significado en el hardware y sistemas operativos modernos. También hay tipos de datos especiales asociados con la biblioteca en tiempo de ejecución de Windows, aparece como [tipos de datos base en tiempo de ejecución de Windows](http://msdn.microsoft.com/b5735851-ec07-48c1-92b4-ca9f768096f6). En el lenguaje C++ actual, la regla general establece una preferencia por los tipos fundamentales de C++, a menos que el tipo de Windows comunique un significado adicional sobre cómo debe interpretarse el valor.  
+ En la programación Win32 clásica de C y C++, la mayoría de las funciones utilizan definiciones de tipos y macros #define (definidas en `windef.h`) específicas de Windows para especificar los tipos de parámetros y los valores devueltos. Estos tipos de datos de Windows son principalmente solo nombres especiales (alias) dados a los tipos integrados de C o C++. Para obtener una lista completa de estas definiciones de tipos y definiciones del preprocesador, vea [tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types). Algunas de estas definiciones de tipos, como HRESULT y LCID, son útiles y significativas. Otras, como INT, no tienen ningún significado especial y son solo alias para los tipos fundamentales de C++. Otros tipos de datos de Windows tienen nombres que se provienen de la época de programación de C y de los procesadores de 16 bits, y no tienen ningún propósito o significado en el hardware y sistemas operativos modernos. También hay tipos de datos especiales asociados con la biblioteca en tiempo de ejecución de Windows, aparece como [tipos de datos base en tiempo de ejecución de Windows](/windows/desktop/WinRT/base-data-types). En el lenguaje C++ actual, la regla general establece una preferencia por los tipos fundamentales de C++, a menos que el tipo de Windows comunique un significado adicional sobre cómo debe interpretarse el valor.  
   
 ## <a name="more-information"></a>Obtener más información  
  Para obtener más información sobre el sistema de tipos de C++, vea los temas siguientes.  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aae9429754dab8c539d7b94e70db72d33e4f13b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 38d022cb3b7f2672ffe7dba6a6d9d4952fa21616
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402577"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42573001"
 ---
 # <a name="goto-statement-c"></a>goto (Instrucción) (C++)
 El **goto** instrucción transfiere incondicionalmente el control a la instrucción etiquetada por el identificador especificado.  
@@ -36,6 +36,25 @@ goto identifier;
  La instrucción con etiqueta designada por `identifier` debe estar en la función actual. Todos los nombres de `identifier` son miembros de un espacio de nombres interno y, por tanto, no interfieren con otros identificadores.  
   
  Una etiqueta de instrucción solo es significativa para un **goto** instrucción; de lo contrario, se omiten las etiquetas de instrucción. Las etiquetas no se pueden volver a declarar.  
+
+Un **goto** no se permite la instrucción para transferir el control a una ubicación que omite la inicialización de la variable que está en el ámbito en esa ubicación. El ejemplo siguiente genera C2362:
+
+```cpp
+int goto_fn(bool b)
+{
+    if (!b)
+    {
+        goto exit;  // C2362
+    }
+    else
+    { /*...*/ }
+
+    int error_code = 42;
+
+exit:
+    return error_code;
+}
+```
   
  Es una buena programación de estilo que se usará el **salto**, **continuar**, y **devolver** instrucciones en lugar de la **goto** instrucción cada vez que es posible. Sin embargo, dado que el **salto** instrucción sale de un solo nivel de un bucle, es posible que deba usar un **goto** instrucción para salir de un bucle profundamente anidado.  
   

@@ -142,15 +142,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e25fda2f6d30ea13882ae3b40875fb3d4ec61c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4dcd45226c85238ddd9e3d6d5a35460f0bb58916
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854127"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545896"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd (clase)
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
  Implementa una ventana de marco reducido que contiene un panel. El panel rellena el área cliente de la ventana.  
   

@@ -1,5 +1,5 @@
 ---
-title: '#Directivas ifdef e #ifndef (C/C ++) | Documentos de Microsoft'
+title: '#ifdef e #ifndef (directivas) (C/C ++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a5ecfc9cc63fc4028e1f93d8f30e8d5cb9f9357
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 8c3453cd652401e9d1f4573bb1750773cbefe8d9
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954094"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541837"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef e #ifndef (Directivas) (C/C++)
 El **#ifdef** y **#ifndef** directivas realizan la misma tarea que el `#if` directiva cuando se usa con **definido**( *identificador* ).  
@@ -43,19 +43,20 @@ El **#ifdef** y **#ifndef** directivas realizan la misma tarea que el `#if` dire
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Puede usar el **#ifdef** y **#ifndef** directivas en cualquier lugar `#if` puede utilizarse. El **#ifdef** *identificador* instrucción es equivalente a `#if 1` cuando *identificador* se ha definido, y es equivalente a `#if 0` cuando *identificador* no se ha definido o no se ha definido con el `#undef` directiva. Estas directivas solo comprueban la presencia o ausencia de identificadores definidos con `#define`, no comprueban los identificadores declarados en el código fuente de C o C++.  
+ 
+Puede usar el **#ifdef** y **#ifndef** directivas en cualquier lugar `#if` se puede usar. El **#ifdef** *identificador* es equivalente a la instrucción `#if 1` cuando *identificador* se ha definido, y es equivalente a `#if 0` cuando *identificador* no se ha definido o no se ha definido con el `#undef` directiva. Estas directivas solo comprueban la presencia o ausencia de identificadores definidos con `#define`, no comprueban los identificadores declarados en el código fuente de C o C++.  
   
- Estas directivas se proporcionan únicamente por compatibilidad con las versiones anteriores del lenguaje. El **definido (** *identificador* **)** expresión constante que se utiliza con el `#if` se prefiere la directiva.  
+Estas directivas se proporcionan únicamente por compatibilidad con las versiones anteriores del lenguaje. El **definido (** *identificador* **)** expresión constante que se utiliza con el `#if` se prefiere la directiva.  
   
- El **#ifndef** directiva comprueba lo contrario de la condición que comprueba **#ifdef**. Si el identificador no se ha definido (o su definición se ha quitado con `#undef`), la condición es true (distinto de cero). De lo contrario, la condición es false (0).  
+El **#ifndef** directiva comprueba el opuesto de la condición que comprueba **#ifdef**. Si el identificador no se ha definido (o su definición se ha quitado con `#undef`), la condición es true (distinto de cero). De lo contrario, la condición es false (0).  
   
- **Específicos de Microsoft**  
+**Específicos de Microsoft**  
   
- El *identificador* se puede pasar desde la línea de comandos con la opción/d. Se pueden especificar hasta 30 macros con /D.  
+El *identificador* se puede pasar desde la línea de comandos mediante el `/D` opción. Se pueden especificar hasta 30 macros con `/D`.  
   
- Es útil para comprobar si existe una definición, porque una definición se puede pasar desde la línea de comandos. Por ejemplo:  
+Es útil para comprobar si existe una definición, porque una definición se puede pasar desde la línea de comandos. Por ejemplo:  
   
-```  
+```cpp  
 // ifdef_ifndef.CPP  
 // compile with: /Dtest /c  
 #ifndef test  
@@ -63,7 +64,8 @@ El **#ifdef** y **#ifndef** directivas realizan la misma tarea que el `#if` dire
 #endif  
 ```  
   
- **FIN de Específicos de Microsoft**  
+**FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Directivas de preprocesador](../preprocessor/preprocessor-directives.md)
+ 
+[Directivas de preprocesador](../preprocessor/preprocessor-directives.md)

@@ -1,5 +1,5 @@
 ---
-title: Sintaxis de línea de comandos del vinculador | Documentos de Microsoft
+title: Sintaxis de línea de comandos del vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd5b1b809bfbbb01bca91f3677774d396515f56e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dab367a7bcb03030f807c8f24ecab088308036bd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376171"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571895"
 ---
 # <a name="linker-command-line-syntax"></a>Sintaxis de la línea de comandos del vinculador
 Para ejecutar el vínculo. EXE, use la siguiente sintaxis de comando:  
@@ -30,16 +30,16 @@ Para ejecutar el vínculo. EXE, use la siguiente sintaxis de comando:
 LINK arguments  
 ```  
   
- El `arguments` incluyen opciones y nombres de archivo y puede especificarse en cualquier orden. Opciones son procesa primero, a continuación, en archivos. Use uno o más espacios o tabulaciones para separar los argumentos.  
+ El `arguments` incluyen opciones y los nombres de archivo y puede especificarse en cualquier orden. Las opciones son procesa primero y, a continuación, los archivos. Utilice uno o más espacios o tabulaciones para separar los argumentos.  
   
 > [!NOTE]
->  Puede iniciar esta herramienta solo desde el símbolo del sistema de [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.  
+>  Puede iniciar esta herramienta solo desde el símbolo del sistema de Visual Studio. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.  
   
- En la línea de comandos, una opción consta de un especificador de opción, un guión (-) o una barra diagonal (/), seguido del nombre de la opción. Los nombres de opción no pueden abreviarse. Algunas opciones toman un argumento, ir precedido por dos puntos (:). No se permiten espacios ni tabulaciones dentro de una especificación de opción, excepto dentro de una cadena entre comillas en la opción/Comment. Especifique los argumentos numéricos en formato decimal o notación del lenguaje c. Los nombres de opción y sus argumentos de palabra clave o nombre de archivo no distinguen mayúsculas de minúsculas, pero los identificadores como argumentos distinguen mayúsculas de minúsculas.  
+ En la línea de comandos, una opción consta de un especificador de opción, un guión (-) o una barra diagonal (/), seguido del nombre de la opción. Los nombres de opción no pueden abreviarse. Algunas opciones toman un argumento, especificado después de dos puntos (:). No se permiten espacios ni tabulaciones dentro de una especificación de opción, excepto dentro de una cadena entre comillas en la opción/Comment. Especifique los argumentos numéricos en notación de lenguaje de C o decimal. Los nombres de opción y sus argumentos de la palabra clave o nombre de archivo no distinguen mayúsculas de minúsculas, pero los identificadores como argumentos distinguen mayúsculas de minúsculas.  
   
- Para pasar un archivo al vinculador, especifique el nombre de archivo en la línea de comandos después del comando de vínculo. Puede especificar una ruta de acceso absoluta o relativa con el nombre de archivo, y puede usar caracteres comodín en el nombre de archivo. Si se omiten el punto (.) y la extensión de nombre de archivo, LINK supondrá .obj con el fin de buscar el archivo. LINK no usa las extensiones de nombre de archivo o la falta de ellos para realizar suposiciones sobre el contenido de archivos; Determina el tipo de archivo mediante el examen de él y lo procesa en consecuencia.  
+ Para pasar un archivo al vinculador, especifique el nombre de archivo en la línea de comandos después del comando de vínculo. Puede especificar una ruta de acceso absoluta o relativa con el nombre de archivo, y puede usar caracteres comodín en el nombre de archivo. Si se omiten el punto (.) y la extensión de nombre de archivo, vínculo supone .obj con el fin de encontrar el archivo. VÍNCULO no usa extensiones de nombre de archivo o la falta de ellos para realizar suposiciones sobre el contenido de los archivos; Determina el tipo de archivo mediante el examen de él y lo procesa en consecuencia.  
   
- Link.exe devuelve cero para correcto (sin errores).  En caso contrario, el vinculador devuelve el número de error que detuvo el vínculo.  Por ejemplo, si el vinculador genera LNK1104, el vinculador devuelve 1104.  En consecuencia, el menor número de error devolviendo el vinculador produce un error es 1000.  Un valor devuelto de 128 representa un problema de configuración con el sistema operativo o un archivo .config; el cargador no cargó link.exe o c2.dll.  
+ Link.exe devuelve cero si es correcto (sin errores).  En caso contrario, devuelve el número de error que detuvo el vínculo.  Por ejemplo, si el vinculador genera LNK1104, el vinculador devuelve 1104.  En consecuencia, el número más bajo de error devuelto en un error por el enlazador es 1000.  Un valor devuelto de 128 representa un problema de configuración con el sistema operativo o un archivo .config; no cargó el cargador de link.exe o c2.dll.  
   
 ## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   

@@ -1,5 +1,5 @@
 ---
-title: __incgsbyte, __incgsword, __incgsdword, __incgsqword | Documentos de Microsoft
+title: __incgsbyte, __incgsword, __incgsdword, __incgsqword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b2598b5a9eb999571c6f3b5809049f1c935a0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74e1b74c95f143aac7a915b3f148a85da9c5a3d3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329467"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541689"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 **Específicos de Microsoft**  
@@ -57,16 +57,16 @@ void __incgsqword(
   
 #### <a name="parameters"></a>Parámetros  
  [in] `Offset`  
- El desplazamiento desde el principio de `GS`.  
+ El desplazamiento desde el principio del `GS`.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__incgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__incgsbyte`|x64|  
+|`__incgsword`|x64|  
+|`__incgsdword`|x64|  
+|`__incgsqword`|x64|  
   
 ## <a name="remarks"></a>Comentarios  
  Estas funciones intrínsecas solo están disponibles en modo kernel, y las rutinas solo están disponibles como intrínsecos.  

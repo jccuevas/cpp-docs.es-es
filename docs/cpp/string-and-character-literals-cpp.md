@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0a3a3fa5d6e9836f7de949d4c13ec19f90dbcb02
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466948"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572423"
 ---
 # <a name="string-and-character-literals--c"></a>Literales de cadena y carácter (C++)
 C++ admite varios tipos de cadenas y caracteres, y proporciona maneras de expresar valores literales de cada uno de esos tipos. En el código fuente, el contenido de los literales de carácter y cadena se expresa mediante un juego de caracteres. Los nombres de carácter universal y los caracteres de escape permiten expresar cualquier cadena con tan solo el juego básico de caracteres de código fuente. Un literal de cadena sin formato permite evitar la utilización de caracteres de escape y puede usarse para expresar todos los tipos de literales de cadena. También se pueden crear literales std::string sin necesidad de seguir pasos adicionales de construcción o conversión.  
@@ -206,7 +206,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  Los nombres de carácter universal no pueden codificar valores que se encuentran en el rango de punto de código suplente de D800 a DFFF. En el caso de pares suplentes Unicode, especifique el nombre de carácter universal mediante `\UNNNNNNNN`, donde NNNNNNNN es el punto de código de ocho dígitos para el carácter. El compilador genera un par suplente si es necesario.  
   
- En C++03, el lenguaje solo permitía representar un subjuego de caracteres mediante sus propios nombres de carácter universal. También permitía algunos nombres de carácter universal que, en efecto, no representaban ningún carácter Unicode válido. Esto se corrigió en el estándar de C++11. En C++11, tanto los literales de carácter y cadena como los identificadores pueden usar nombres de carácter universal.  Para obtener más información sobre los nombres de carácter universal, consulte [juegos de caracteres](../cpp/character-sets.md). Para obtener más información sobre Unicode, consulte [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Para obtener más información sobre los pares suplentes, consulte [Pares suplentes y caracteres complementarios](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
+ En C++03, el lenguaje solo permitía representar un subjuego de caracteres mediante sus propios nombres de carácter universal. También permitía algunos nombres de carácter universal que, en efecto, no representaban ningún carácter Unicode válido. Esto se corrigió en el estándar de C++11. En C++11, tanto los literales de carácter y cadena como los identificadores pueden usar nombres de carácter universal.  Para obtener más información sobre los nombres de carácter universal, consulte [juegos de caracteres](../cpp/character-sets.md). Para obtener más información sobre Unicode, consulte [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Para obtener más información sobre los pares suplentes, vea [pares suplentes y caracteres suplementarios](/windows/desktop/Intl/surrogates-and-supplementary-characters).  
   
 ## <a name="string-literals"></a>Literales de cadena  
  Un literal de cadena representa una secuencia de caracteres que, en conjunto, forman una cadena terminada en null. Los caracteres deben escribirse entre comillas. Hay los siguientes tipos de literales de cadena:  

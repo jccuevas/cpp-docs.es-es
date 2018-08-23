@@ -1,5 +1,5 @@
 ---
-title: Funciones intrínsecas _InterlockedDecrement | Documentos de Microsoft
+title: Funciones intrínsecas _InterlockedDecrement | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacca8241bc32965d3f22fcb3e4d5ed8b72a1651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a30a09b9feae0d5c7e0d24967c133f076286f2fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338993"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42545908"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>Funciones intrínsecas _InterlockedDecrement
 **Específicos de Microsoft**  
   
- Proporciona compatibilidad intrínseca del compilador para Win32 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] [InterlockedDecrement](http://msdn.microsoft.com/library/ms683580.aspx) función.  
+Proporciona compatibilidad intrínseca del compilador para el SDK de Windows de Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement) función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -118,7 +118,7 @@ __int64 _InterlockedDecrement64_nf(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, x64|  
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|  
   
  **Archivo de encabezado** \<intrin.h >  
@@ -203,6 +203,6 @@ void __cdecl SimpleThread(void* pParam) {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [Palabras clave](../cpp/keywords-cpp.md)   
  [Conflictos con el compilador de x86](../build/conflicts-with-the-x86-compiler.md)

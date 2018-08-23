@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d138f65e447594059dba5b536378ee004be77036
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025823"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571433"
 ---
 # <a name="atl-project-wizard"></a>Asistente para proyectos ATL
 Active Template Library (ATL) es un conjunto de clases C++ basadas en plantillas que simplifican la escritura de objetos COM pequeños y rápidos. El Asistente para proyectos ATL crea un proyecto con las estructuras que contienen objetos COM.  
@@ -52,7 +52,7 @@ Active Template Library (ATL) es un conjunto de clases C++ basadas en plantillas
   
 -   [Optimizar el compilador para un proyecto ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- Puede especificar las propiedades del proyecto (por ejemplo, [si se debe vincular estáticamente a CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) en el [las propiedades del proyecto](../../ide/general-property-page-project.md) página, puede establecer [configuraciones de compilación](/visualstudio/ide/understanding-build-configurations) para un Proyecto ATL. Consulte [usar proyectos para generar aplicaciones](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe) para obtener más información.  
+ Puede especificar las propiedades del proyecto (por ejemplo, [si se debe vincular estáticamente a CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) en el [las propiedades del proyecto](../../ide/general-property-page-project.md) página, puede establecer [configuraciones de compilación](/visualstudio/ide/understanding-build-configurations) para un Proyecto ATL.  
   
 ## <a name="see-also"></a>Vea también  
  [Creación y administración de proyectos de Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   

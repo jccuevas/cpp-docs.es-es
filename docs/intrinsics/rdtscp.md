@@ -1,5 +1,5 @@
 ---
-title: __rdtscp | Documentos de Microsoft
+title: __rdtscp | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d890afe9e19782f19442e8d95709b91a8680278
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a98f1e84f3ef09d3cef5d45028374b93887fc6d4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329808"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541685"
 ---
 # <a name="rdtscp"></a>__rdtscp
 **Específicos de Microsoft**  
@@ -49,17 +49,17 @@ unsigned __int64 __rdtscp(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__rdtscp`|Familia de AMD NPT 0Fh o versiones posteriores|  
+|`__rdtscp`|La familia AMD NPT 0Fh o versiones posteriores|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función intrínseca genera el `rdtscp` instrucción. Para determinar la compatibilidad de hardware con esta instrucción, llame a la `__cpuid` intrínseco con `InfoType=0x80000001` y comprobar bit 27 de `CPUInfo[3] (EDX)`. Este bit es 1 si se admite la instrucción y 0 en caso contrario.  Si ejecuta el código que usa esta función intrínseca en hardware que no es compatible con la `rdtscp` instrucciones, los resultados son imprevisibles.  
+ Esta función intrínseca genera el `rdtscp` instrucción. Para determinar la compatibilidad de hardware para esta instrucción, llame a la `__cpuid` intrínseca con `InfoType=0x80000001` y comprobar poco 27 de `CPUInfo[3] (EDX)`. Este bit es 1 si se admite la instrucción y 0 en caso contrario.  Si ejecuta el código que usa esta función intrínseca en hardware que no es compatible con la `rdtscp` instrucciones, los resultados son impredecibles.  
   
 > [!CAUTION]
->  A diferencia de `rdtsc`, `rdtscp` es una instrucción de serialización; no obstante, el compilador puede mover código alrededor de esta función intrínseca.  
+>  A diferencia de `rdtsc`, `rdtscp` es una instrucción de serialización; no obstante, el compilador puede mover código alternativa intrínseco.  
   
- La interpretación del valor TSC en esta generación de hardware difiere del comportamiento en las versiones anteriores de [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  Consulte los manuales de hardware para obtener más información.  
+ La interpretación del valor TSC en esta generación de hardware difiere en las versiones anteriores de x64.  Consulte los manuales de hardware para obtener más información.  
   
  El significado del valor de `TSC_AUX[31:0]` depende del sistema operativo.  
   

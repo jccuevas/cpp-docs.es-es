@@ -1,5 +1,5 @@
 ---
-title: Referencia de LIB | Documentos de Microsoft
+title: Referencia de LIB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a77056c6a3d0427c865658cd945e74e29d672b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371946"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572402"
 ---
 # <a name="lib-reference"></a>Referencia de LIB
-El Administrador de bibliotecas de Microsoft (LIB.exe) crea y administra una biblioteca de archivos objeto con formato de archivo de objeto común (COFF). LIB también puede utilizarse para crear archivos de exportación y bibliotecas de importación para las definiciones de referencia que se exportan.  
+El Administrador de bibliotecas de Microsoft (LIB.exe) crea y administra una biblioteca de archivos de objeto de formato de archivo de objeto común (COFF). LIB también puede utilizarse para crear archivos de exportación e importe las bibliotecas a las definiciones de referencia que se exportan.  
   
 > [!NOTE]
->  Puede iniciar esta herramienta solo desde el símbolo del sistema de [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.  
+>  Puede iniciar esta herramienta solo desde el símbolo del sistema de Visual Studio. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.  
   
 -   [Información general sobre LIB](../../build/reference/overview-of-lib.md)  
   
