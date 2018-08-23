@@ -1,5 +1,5 @@
 ---
-title: Error de línea de comandos D8016 | Documentos de Microsoft
+title: Error de la línea de comandos D8016 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f9709da189403f2594d76751430d30554bffe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c6ba57b7036aae652b9eb6d885f9105d8bf0826
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300623"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607608"
 ---
 # <a name="command-line-error-d8016"></a>Error de la línea de comandos D8016
 Opciones de línea de comandos 'opción1' y 'opción2' son incompatibles  
   
- Las opciones de línea de comandos no se pueden especificar juntas.  
+ Las opciones de línea de comandos no pueden especificarse juntos.  
   
  Compruebe las variables de entorno, como CL, especificaciones de opción.  
   
  **/ CLR** implica **/EHa**, y no se puede especificar cualquier otro **/EH** opción del compilador con **/CLR**. Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
- D8016 puede aparecer después de actualizar un [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] proyecto 6.0: el proceso del Asistente de actualización de proyecto puede ofrecer **/RTC** para cada archivo de código fuente en el proyecto, que reemplaza el **/RTC** establecer para el proyecto.  Para resolver, cambie la **/RTC** de configuración para cada archivo de código fuente en el proyecto de la configuración predeterminada, lo que significa que la configuración del proyecto para **/RTC** entrará en vigor para cada archivo.  
+ D8016 puede aparecer después de actualizar un proyecto de Visual C++ 6.0: puede habilitar el proceso del Asistente para actualización de proyecto **/RTC** para cada archivo de código fuente en el proyecto, que reemplaza el **/RTC** establecer para el proyecto.  Para resolver, cambie el **/RTC** establecer para cada archivo de código fuente en el proyecto en la configuración predeterminada, lo que significa que la configuración del proyecto para **/RTC** entrará en vigor para cada archivo.  
   
- Vea [/RTC (comprobaciones de errores de tiempo de ejecución)](../../build/reference/rtc-run-time-error-checks.md) para obtener información acerca de cómo cambiar la **/RTC** configuración de la propiedad.
+ Consulte [/RTC (comprobaciones de errores de tiempo de ejecución)](../../build/reference/rtc-run-time-error-checks.md) para obtener información acerca de cómo cambiar la **/RTC** configuración de la propiedad.

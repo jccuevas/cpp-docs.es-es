@@ -26,61 +26,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c00d4da36df4672c8e701c0a41c88e5014eeae8
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a3e221c3546e0f9d02a9da7433ca2a353888a57a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017839"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606208"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Iconos y cursores: recursos de imagen para dispositivos de presentación (Editor de imágenes para iconos)
-Los iconos y cursores son recursos gráficos que pueden contener varias imágenes de diferentes tamaños y combinaciones de colores para distintos tipos de dispositivos de pantalla. Además, un cursor tiene una "zona activa", la ubicación que Windows usa para realizar un seguimiento de su posición. Iconos y cursores se crean y editan mediante el **imagen** editor, como son mapas de bits y otras imágenes.  
-  
- Cuando se crea un nuevo icono o cursor, la **imagen** editor crea primero una imagen de un tipo estándar. La imagen se rellena inicialmente con el color de la pantalla (transparente). Si la imagen es un cursor, la zona activa es inicialmente la esquina superior izquierda (coordenadas 0,0).  
-  
- De forma predeterminada, el **imagen** editor es compatible con la creación de imágenes adicionales para los dispositivos que se muestra en la tabla siguiente. Puede crear imágenes para otros dispositivos escribiendo parámetros de ancho, alto y número de colores en el [cuadro de diálogo Imagen personalizada](custom-image-dialog-box-image-editor-for-icons.md).  
-  
+
+Los iconos y cursores son recursos gráficos que pueden contener varias imágenes de diferentes tamaños y combinaciones de colores para distintos tipos de dispositivos de pantalla. Además, un cursor tiene una "zona activa", la ubicación que Windows usa para realizar un seguimiento de su posición. Iconos y cursores se crean y editan mediante el **imagen** editor, como son mapas de bits y otras imágenes.
+
+Cuando se crea un nuevo icono o cursor, la **imagen** editor crea primero una imagen de un tipo estándar. La imagen se rellena inicialmente con el color de la pantalla (transparente). Si la imagen es un cursor, la zona activa es inicialmente la esquina superior izquierda (coordenadas 0,0).
+
+De forma predeterminada, el **imagen** editor es compatible con la creación de imágenes adicionales para los dispositivos que se muestra en la tabla siguiente. Puede crear imágenes para otros dispositivos escribiendo parámetros de ancho, alto y número de colores en el [cuadro de diálogo Imagen personalizada](custom-image-dialog-box-image-editor-for-icons.md).
+
 > [!NOTE]
->  Mediante el **Editor de imágenes**, puede ver las imágenes de 32 bits, pero no puede modificarlas.  
-  
-|Color|Ancho (píxeles)|Alto (píxeles)|  
-|-----------|----------------------|-----------------------|  
-|Monocromático|16|16|  
-|Monocromático|32|32|  
-|Monocromático|48|48|  
-|Monocromático|64|64|  
-|Monocromático|96|96|  
-|16|16|16|  
-|16|32|32|  
-|16|64|64|  
-|16|48|48|  
-|16|96|96|  
-|256|16|16|  
-|256|32|32|  
-|256|48|48|  
-|256|64|64|  
-|256|96|96|  
-  
--   [Crear una imagen de dispositivo nueva (icono o cursor)](../windows/creating-a-device-image-image-editor-for-icons.md)  
-  
--   [Agregar una imagen para otro dispositivo de presentación](../windows/adding-an-image-for-a-different-display-device-image-editor-for-icons.md)  
-  
--   [Copiar una imagen de dispositivo](../windows/copying-a-device-image-image-editor-for-icons.md)  
-  
--   [Eliminar una imagen de dispositivo](../windows/deleting-a-device-image-image-editor-for-icons.md)  
-  
--   [Crear zonas transparentes o inversas en las imágenes de dispositivo](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
-  
--   [Crear un nuevo icono o cursor de 256 colores](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)  
-  
--   [Establecer la zona activa del cursor](../windows/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)  
-  
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Ninguna  
-  
-## <a name="see-also"></a>Vea también  
- [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)   
- [Iconos](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
- [Cursores](http://msdn.microsoft.com/library/windows/desktop/ms646970)
+> Mediante el **Editor de imágenes**, puede ver las imágenes de 32 bits, pero no puede modificarlas.
+
+|Color|Ancho (píxeles)|Alto (píxeles)|
+|-----------|----------------------|-----------------------|
+|Monocromático|16|16|
+|Monocromático|32|32|
+|Monocromático|48|48|
+|Monocromático|64|64|
+|Monocromático|96|96|
+|16|16|16|
+|16|32|32|
+|16|64|64|
+|16|48|48|
+|16|96|96|
+|256|16|16|
+|256|32|32|
+|256|48|48|
+|256|64|64|
+|256|96|96|
+
+- [Crear una imagen de dispositivo nueva (icono o cursor)](../windows/creating-a-device-image-image-editor-for-icons.md)
+
+- [Agregar una imagen para otro dispositivo de presentación](../windows/adding-an-image-for-a-different-display-device-image-editor-for-icons.md)
+
+- [Copiar una imagen de dispositivo](../windows/copying-a-device-image-image-editor-for-icons.md)
+
+- [Eliminar una imagen de dispositivo](../windows/deleting-a-device-image-image-editor-for-icons.md)
+
+- [Crear zonas transparentes o inversas en las imágenes de dispositivo](../windows/creating-transparent-or-inverse-regions-in-device-images.md)
+
+- [Crear un nuevo icono o cursor de 256 colores](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)
+
+- [Establecer la zona activa del cursor](../windows/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)
+
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Ninguna
+
+## <a name="see-also"></a>Vea también
+
+[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)  
+[Iconos](http://msdn.microsoft.com/library/windows/desktop/ms646973)  
+[Cursores](http://msdn.microsoft.com/library/windows/desktop/ms646970)

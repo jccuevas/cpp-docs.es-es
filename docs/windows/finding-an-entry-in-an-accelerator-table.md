@@ -16,30 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 805d50a04f76e359bbf7553ab9c31d10f0871c57
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0db79773412b204b0aa006e3402c51daa9dc928d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647858"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605262"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>Buscar una entrada en una tabla de aceleradores
-### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Para buscar una entrada en una tabla de aceleradores abierta:  
-  
-1.  Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).  
-  
-    > [!NOTE]
-    >  Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Haga clic en un encabezado de columna para ordenar alfabéticamente su contenido. Por ejemplo, haga clic en **ID** para mostrar alfabéticamente todos los identificadores de la tabla de aceleradores.  
-  
- A continuación, puede examinar la lista y buscar la entrada.  
-  
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Editar tablas de aceleradores](../windows/editing-accelerator-tables.md)   
- [Editor de aceleradores](../windows/accelerator-editor.md)
+
+### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Para buscar una entrada en una tabla de aceleradores abierta:
+
+1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).
+
+   > [!NOTE]
+   > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
+
+2. Haga clic en un encabezado de columna para ordenar alfabéticamente su contenido. Por ejemplo, haga clic en **ID** para mostrar alfabéticamente todos los identificadores de la tabla de aceleradores.
+
+A continuación, puede examinar la lista y buscar la entrada.
+
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Edición de tablas de aceleradores](../windows/editing-accelerator-tables.md)  
+[Editor de aceleradores](../windows/accelerator-editor.md)

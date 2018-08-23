@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c6eaeb044cf3e169bf5927a2fec948cc8d4294c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5548eb413f0d5cd4c72983e00bdf65f61bb98f6d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606281"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597928"
 ---
 # <a name="roinitializewrapperroinitializewrapper-destructor"></a>RoInitializeWrapper::~RoInitializeWrapper (Destructor)
-Desinicializa el tiempo de ejecución de Windows.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
+
+Desinicializa el tiempo de ejecución de Windows.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 ~RoInitializeWrapper()  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El **RoInitializeWrapper** clase invoca `Windows::Foundation::Uninitialize()`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [HandleT (clase)](../windows/handlet-class.md)
+```
+
+## <a name="remarks"></a>Comentarios
+
+El **RoInitializeWrapper** clase invoca `Windows::Foundation::Uninitialize()`.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[HandleT (clase)](../windows/handlet-class.md)

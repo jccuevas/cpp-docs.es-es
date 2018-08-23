@@ -15,67 +15,73 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e2f0c432189dce1af9a255570dd259a90693591
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 97a0f98044e18ec6eff1f1b99e9c9178b711e040
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651296"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596028"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!= (Operador)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-bool operator!=(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
-   const Details::ComPtrRef<ComPtr<U>>& b  
-);  
-  
-bool operator!=(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   const Details::ComPtrRef<ComPtr<U>>& b
+);
+
+bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
    decltype(__nullptr)  
-);  
-  
-bool operator!=(  
-   decltype(__nullptr),  
-   const Details::ComPtrRef<ComPtr<T>>& a  
-);  
-  
-bool operator!=(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
-   void* b  
-);  
-  
-bool operator!=(  
-   void* b,  
-   const Details::ComPtrRef<ComPtr<T>>& a  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *a*  
- Una referencia a un **ComPtrRef** objeto.  
-  
- *b*  
- Una referencia a otro **ComPtrRef** objeto o un puntero a un objeto anónimo (`void*`).  
-  
-## <a name="return-value"></a>Valor devuelto  
- El primer rendimientos de operador **true** si objeto *un* no es igual al objeto *b*; en caso contrario, **false**.  
-  
- Los operadores de la segundo y terceros yield **true** si objeto *un* no es igual a **nullptr**; en caso contrario, **false**.  
-  
- El cuarto y quinto operadores producen **true** si objeto *un* no es igual al objeto *b*; en caso contrario, **false**.  
-  
-## <a name="remarks"></a>Comentarios  
- Indica si dos **ComPtrRef** objetos no son iguales.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Wrl Namespace](../windows/microsoft-wrl-details-namespace.md)   
- [ComPtrRef (clase)](../windows/comptrref-class.md)
+);
+
+bool operator!=(
+   decltype(__nullptr),
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+
+bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   void* b
+);
+
+bool operator!=(
+   void* b,
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*a*  
+Una referencia a un **ComPtrRef** objeto.
+
+*b*  
+Una referencia a otro **ComPtrRef** objeto o un puntero a un objeto anónimo (`void*`).
+
+## <a name="return-value"></a>Valor devuelto
+
+El primer rendimientos de operador **true** si objeto *un* no es igual al objeto *b*; en caso contrario, **false**.
+
+Los operadores de la segundo y terceros yield **true** si objeto *un* no es igual a **nullptr**; en caso contrario, **false**.
+
+El cuarto y quinto operadores producen **true** si objeto *un* no es igual al objeto *b*; en caso contrario, **false**.
+
+## <a name="remarks"></a>Comentarios
+
+Indica si dos **ComPtrRef** objetos no son iguales.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)  
+[ComPtrRef (clase)](../windows/comptrref-class.md)

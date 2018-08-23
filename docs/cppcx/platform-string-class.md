@@ -1,5 +1,5 @@
 ---
-title: 'Clase Platform:: String | Documentos de Microsoft'
+title: 'Clase Platform:: String | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -23,16 +23,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a7852140b26260b56bd4436c2ee4f7abd2300b3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094831"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587416"
 ---
 # <a name="platformstring-class"></a>Platform::String (Clase)
 Representa una cadena es una colección secuencial de caracteres Unicode que se utiliza para representar texto. Para obtener más información y ejemplos, vea [cadenas](../cppcx/strings-c-cx.md).  
@@ -72,17 +72,17 @@ public ref class String sealed : Object,
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[String:: begin](#begin)|Devuelve un puntero al principio de la cadena actual.|  
+|[String](#begin)|Devuelve un puntero al principio de la cadena actual.|  
 |[String::CompareOrdinal](#compareordinal)|Compara dos objetos `String` mediante la evaluación de los valores numéricos de los caracteres correspondientes en los dos valores alfanuméricos representados por los objetos.|  
 |[String:: Concat](#concat)|Concatena los valores de dos objetos String.|  
-|[String:: Data](#data)|Devuelve un puntero al principio de la cadena actual.|  
-|[String:: Dispose](#dispose)|Libera recursos.|  
-|[String:: end](#end)|Devuelve un puntero después del final de la cadena actual.|  
-|[String:: Equals](#equals)|Indica si el objeto especificado es igual al objeto actual.|  
+|[String](#data)|Devuelve un puntero al principio de la cadena actual.|  
+|[Dispose](#dispose)|Libera recursos.|  
+|[String](#end)|Devuelve un puntero después del final de la cadena actual.|  
+|[Equals](#equals)|Indica si el objeto especificado es igual al objeto actual.|  
 |[String::GetHashCode](#gethashcode)|Devuelve el código hash de esta instancia.|  
-|[String:: IsEmpty](#isempty)|Indica si el objeto String actual está vacío.|  
-|[String:: isfastpass](#isfastpass)|Indica si el objeto String actual participa en una operación *rápida de paso* . En una operación rápida de paso, se suspende el recuento de referencias.|  
-|[String:: Length](#length)|Recupera la longitud del objeto String actual.|  
+|[IsEmpty](#isempty)|Indica si el objeto String actual está vacío.|  
+|[Isfastpass](#isfastpass)|Indica si el objeto String actual participa en un *pase rápido* operación. En una operación rápida de paso, se suspende el recuento de referencias.|  
+|[Length](#length)|Recupera la longitud del objeto String actual.|  
 |[String::ToString](#tostring)|Devuelve un objeto String cuyo valor es igual al de la cadena actual.|  
   
  **Operadores**  
@@ -108,7 +108,7 @@ public ref class String sealed : Object,
  **Encabezado** vccorlib.h (incluido de forma predeterminada)  
 
  
-## <a name="begin"></a>  String:: begin (método)
+## <a name="begin"></a>  String (método)
 Devuelve un puntero al principio de la cadena actual.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -121,7 +121,7 @@ char16* Begin()
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero al principio de la cadena actual.  
   
-## <a name="compareordinal"></a>  String:: CompareOrdinal (método)
+## <a name="compareordinal"></a>  CompareOrdinal (método)
 Compara dos objetos `String` mediante la evaluación de los valores numéricos de los caracteres correspondientes en los dos valores alfanuméricos representados por los objetos.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -152,7 +152,7 @@ int CompareOrdinal(
   
 
 
-## <a name="concat"></a>  String:: concat (método)
+## <a name="concat"></a>  Concat (método)
 Concatena los valores de dos objetos String.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -175,7 +175,7 @@ String^ Concat( String^ str1, String^ str2)
   
 
 
-## <a name="data"></a>  String:: Data (método)
+## <a name="data"></a>  String (método)
 Devuelve un puntero al principio del búfer de datos del objeto como una matriz de estilo C de elementos `char16` (`wchar_t`).  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -188,11 +188,11 @@ const char16* Data()
  Un puntero al principio de un `const char16` matriz de caracteres Unicode (`char16` es un typedef para `wchar_t`).  
   
 ### <a name="remarks"></a>Comentarios  
- Usa este método para convertir de `Platform::String^` a `wchar_t*`. Cuando el objeto `String` sale del ámbito, ya no se garantiza que el puntero a datos sea válido. Para almacenar los datos más allá de la duración de la versión original `String` objeto, utilice [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) para copiar la matriz en la memoria que has asignado.  
+ Usa este método para convertir de `Platform::String^` a `wchar_t*`. Cuando el objeto `String` sale del ámbito, ya no se garantiza que el puntero a datos sea válido. Para almacenar los datos más allá de la duración del original `String` de objeto, utilice [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) para copiar la matriz en la memoria que has asignado.  
   
 
 
-## <a name="dispose"></a>  String:: Dispose (método)
+## <a name="dispose"></a>  Dispose (método)
 Libera recursos.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -202,7 +202,7 @@ Libera recursos.
 virtual override void Dispose()  
 ```  
 
-## <a name="end"></a>  String:: end (método)
+## <a name="end"></a>  String (método)
 Devuelve un puntero después del final de la cadena actual.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -216,11 +216,11 @@ char16* End()
  Un puntero después del final de la cadena actual.  
   
 ### <a name="remarks"></a>Comentarios  
- End() devuelve funciones Begin() + Length.  
+ End() devuelve Begin() + Length.  
   
 
 
-## <a name="equals"></a>  String:: Equals (método)
+## <a name="equals"></a>  Equals (método)
 Indica si el objeto String especificado tiene el mismo valor que el objeto actual.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -241,11 +241,11 @@ bool String::Equals(String^ str);
  `true` si `str` es igual al objeto actual; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método es equivalente a la [String:: CompareOrdinal](#compareordinal). En la primera sobrecarga, se espera que el parámetro `str` se pueda convertir en un objeto String^.  
+ Este método es equivalente a la [CompareOrdinal](#compareordinal). En la primera sobrecarga, se espera que el parámetro `str` se pueda convertir en un objeto String^.  
   
 
 
-## <a name="gethashcode"></a>  String:: GetHashCode (método)
+## <a name="gethashcode"></a>  GetHashCode (método)
 Devuelve el código hash de esta instancia.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -260,7 +260,7 @@ virtual override int GetHashCode()
   
 
 
-## <a name="isempty"></a>  String:: IsEmpty (método)
+## <a name="isempty"></a>  IsEmpty (método)
 Indica si el objeto String actual está vacío.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -274,8 +274,8 @@ bool IsEmpty()
   
 
 
-## <a name="isfastpass"></a>  String:: isfastpass (método)
-Indica si el objeto String actual participa en una operación *rápida de paso* . En una operación rápida de paso, se suspende el recuento de referencias.  
+## <a name="isfastpass"></a>  Isfastpass (método)
+Indica si el objeto String actual participa en un *pase rápido* operación. En una operación rápida de paso, se suspende el recuento de referencias.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -291,7 +291,7 @@ bool IsFastPass();
   
 
 
-## <a name="length"></a>  String:: Length (método)
+## <a name="length"></a>  Length (método)
 Recupera el número de caracteres del objeto String actual.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -311,7 +311,7 @@ String^ str = "Hello";
 int len = str->Length(); //len = 5  
 ```  
   
- La matriz de caracteres devuelta por la [String:: Data](#data) tiene un carácter adicional, que es el valor NULL de terminación o '\0'. Este carácter tiene también dos bytes de longitud.  
+ La matriz de caracteres devuelta por la [String](#data) tiene un carácter adicional, que es NULL de terminación o '\0'. Este carácter tiene también dos bytes de longitud.  
   
 
 
@@ -358,7 +358,7 @@ bool String::operator==( String^ str1, String^ str2)
  Es `true` si el contenido de `str1` es igual a `str2`; si no, es `false`.  
   
 ### <a name="remarks"></a>Comentarios  
- Este operador es equivalente a [String:: CompareOrdinal](#compareordinal).  
+ Este operador es equivalente a [CompareOrdinal](#compareordinal).  
   
 
 
@@ -382,7 +382,7 @@ bool String::operator>( String^ str1, String^ str2)
  Es `true` si el valor de `str1` es mayor que el valor de `str2`; en caso contrario, es `false`.  
   
 ### <a name="remarks"></a>Comentarios  
- Este operador es equivalente a llamar explícitamente a [String:: CompareOrdinal](#compareordinal) y obtener un resultado mayor que cero.  
+ Este operador es equivalente a llamar explícitamente a [CompareOrdinal](#compareordinal) y obtener un resultado mayor que cero.  
   
 
 
@@ -465,14 +465,14 @@ String(char16* s, unsigned int n)
  Un número que especifica la longitud de la cadena.  
   
 ### <a name="remarks"></a>Comentarios  
- Si el rendimiento es crítico y controla la duración de la cadena de origen, puede usar [stringreference](../cppcx/platform-stringreference-class.md) en lugar de String.  
+ Si el rendimiento es crítico y controlar la duración de la cadena de origen, puede usar [stringreference](../cppcx/platform-stringreference-class.md) en lugar de cadena.  
 ### <a name="example"></a>Ejemplo  
   
 ```cpp  
 String^ s = L"Hello!";  
 ```  
   
-## <a name="tostring"></a> String:: ToString
+## <a name="tostring"></a> ToString
 Devuelve un objeto String cuyo valor es igual al de la cadena actual.  
   
 ### <a name="syntax"></a>Sintaxis  

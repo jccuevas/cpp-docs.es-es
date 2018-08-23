@@ -1,5 +1,5 @@
 ---
-title: COMException (clase) | Documentos de Microsoft
+title: COMException (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79c7824a64fc9bfa4bef761e82505195835146ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f67088d7e40f60922fa2fe03993a280284cbf76e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090531"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597005"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (Clase)
 Representa los errores COM que se producen durante la ejecución de una aplicación. COMException es la clase base para un conjunto de excepciones estándar predefinidas.  
@@ -54,8 +54,8 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|[Exception](#hresult)|HRESULT correspondiente a la excepción.|  
-|[Exception](#message)|Mensaje que describe la excepción.|  
+|[Exception:: HRESULT](#hresult)|HRESULT correspondiente a la excepción.|  
+|[Exception:: Message](#message)|Mensaje que describe la excepción.|  
   
 ## <a name="derived-exceptions"></a>Excepciones derivadas  
  Las excepciones predefinidas siguientes se derivan de COMException. Difieren de COMException únicamente en su nombre, el nombre de su constructor y el valor HRESULT subyacente.  
@@ -85,7 +85,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **Metadatos:** platform.winmd  
 
-## <a name="ctor"></a> COMException Constructor
+## <a name="ctor"></a> Constructor de COMException
 Inicializa una nueva instancia de la clase COMException.  
   
 ### <a name="syntax"></a>Sintaxis  

@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36c3f76e3fc137458acddacd834563d845057a24
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 193f4d26f7e163707092f3d0bc8f981a02611a22
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646580"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603707"
 ---
 # <a name="asyncbasecurrentstatus-method"></a>AsyncBase::CurrentStatus (Método)
-Recupera el estado de la operación asincrónica actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-inline void CurrentStatus(  
-   Details::AsyncStatusInternal *status  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *status*  
- La ubicación donde esta operación almacena el estado actual.  
-  
-## <a name="remarks"></a>Comentarios  
- Esta operación es segura para subprocesos.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)   
- [AsyncStatusInternal (enumeración)](../windows/asyncstatusinternal-enumeration.md)
+
+Recupera el estado de la operación asincrónica actual.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+inline void CurrentStatus(
+   Details::AsyncStatusInternal *status
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*status*  
+La ubicación donde esta operación almacena el estado actual.
+
+## <a name="remarks"></a>Comentarios
+
+Esta operación es segura para subprocesos.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)  
+[AsyncStatusInternal (enumeración)](../windows/asyncstatusinternal-enumeration.md)

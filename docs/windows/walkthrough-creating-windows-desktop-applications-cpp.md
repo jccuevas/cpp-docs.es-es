@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 397b5274c22acd3a136925495fa350c3aa40dece
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653219"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590299"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Tutorial: Crear una aplicación tradicional de escritorio de Windows (C++)
 
 Este tutorial muestra cómo crear una aplicación de escritorio tradicional de Windows en Visual Studio. Creará la aplicación de ejemplo usa la API de Windows para mostrar "Hola, escritorio de Windows" en una ventana. Puede utilizar el código que va a desarrollar en este tutorial como modelo para crear otras aplicaciones de escritorio de Windows.
 
-La API de Windows (también conocida como la API Win32, API de escritorio de Windows y API clásica de Windows) es un marco de trabajo en función de lenguaje C para crear aplicaciones de Windows. Ha sido existe desde la década de 1980 y se ha usado para crear aplicaciones de Windows durante décadas. Marcos de trabajo más avanzadas y más fácil de programa se han creado sobre esta API, como MFC, ATL y .NET frameworks. Código más moderna para las aplicaciones para UWP y Store escritas en C++ / c++ / WinRT usa esta API debajo. Para obtener más información acerca de la API de Windows, consulte [Windows API Index](https://msdn.microsoft.com/library/windows/desktop/ff818516.aspx). Hay muchas maneras de crear aplicaciones de Windows, pero esto fue el primero.
+La API de Windows (también conocida como la API Win32, API de escritorio de Windows y API clásica de Windows) es un marco de trabajo en función de lenguaje C para crear aplicaciones de Windows. Ha sido existe desde la década de 1980 y se ha usado para crear aplicaciones de Windows durante décadas. Marcos de trabajo más avanzadas y más fácil de programa se han creado sobre esta API, como MFC, ATL y .NET frameworks. Código más moderna para las aplicaciones para UWP y Store escritas en C++ / c++ / WinRT usa esta API debajo. Para obtener más información acerca de la API de Windows, consulte [Windows API Index](/windows/desktop/apiindex/windows-api-list). Hay muchas maneras de crear aplicaciones de Windows, pero esto fue el primero.
 
 > [!IMPORTANT]
 > Por brevedad, se omiten algunas instrucciones de código en el texto. El [compilar el código](#build-the-code) sección al final de este documento muestra el código completo.
@@ -570,4 +570,5 @@ Como hemos dicho, este es el código completo de la aplicación de trabajo.
 ¡Enhorabuena! Ha completado este tutorial y creado una aplicación de escritorio de Windows tradicional.
 
 ## <a name="see-also"></a>Vea también
- [Aplicaciones de escritorio de Windows](../windows/windows-desktop-applications-cpp.md)
+
+[Aplicaciones de escritorio de Windows](../windows/windows-desktop-applications-cpp.md)

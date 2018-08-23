@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 561862427238a86dbb23ee05044c1d01558abab5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b1b36d4feea61e9a79978cc86dca29a7ad14846a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647604"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594041"
 ---
 # <a name="handletraitsclose-method"></a>HANDLETraits::Close (Método)
-Cierra el identificador especificado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-inline static bool Close(  
-   _In_ Type h  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *h*  
- Para cerrar el identificador.  
-  
-## <a name="return-value"></a>Valor devuelto  
- **True** si controlar *h* cerrado correctamente; en caso contrario, **false**.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** handletraits  
-  
-## <a name="see-also"></a>Vea también  
- [HANDLETraits (estructura)](../windows/handletraits-structure.md)
+
+Cierra el identificador especificado.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*h*  
+Para cerrar el identificador.
+
+## <a name="return-value"></a>Valor devuelto
+
+**True** si controlar *h* cerrado correctamente; en caso contrario, **false**.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** handletraits
+
+## <a name="see-also"></a>Vea también
+
+[HANDLETraits (estructura)](../windows/handletraits-structure.md)

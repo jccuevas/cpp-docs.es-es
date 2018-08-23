@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efaf7b51da1e4a4e744133884b92ac78db3b3f66
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 988580a34c030c84c50adfff2741408be4b249cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017775"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586363"
 ---
 # <a name="implementscasttounknown-method"></a>Implements::CastToUnknown (Método)
-Obtiene un puntero subyacente `IUnknown` interfaz.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-__forceinline IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Esta operación siempre se realiza correctamente y devuelve el `IUnknown` puntero.  
-  
-## <a name="remarks"></a>Comentarios  
- Función auxiliar interno.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Implements (estructura)](../windows/implements-structure.md)
+
+Obtiene un puntero subyacente `IUnknown` interfaz.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Esta operación siempre se realiza correctamente y devuelve el `IUnknown` puntero.
+
+## <a name="remarks"></a>Comentarios
+
+Función auxiliar interno.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Implements (estructura)](../windows/implements-structure.md)

@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4609866b25f574f34b620d81de3a21d6b608db6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ca4391539e4f6987431e8b9b036053db02218007
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020332"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593060"
 ---
 # <a name="synclocktislocked-method"></a>SyncLockT::IsLocked (Método)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-bool IsLocked() const;  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- **True** si el **SyncLockT** objeto está bloqueado; en caso contrario, **false**.  
-  
-## <a name="remarks"></a>Comentarios  
- Indica si el actual **SyncLockT** objeto posee un recurso; es decir, el **SyncLockT** objeto es *bloqueado*.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [SyncLockT (clase)](../windows/synclockt-class.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+bool IsLocked() const;
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+**True** si el **SyncLockT** objeto está bloqueado; en caso contrario, **false**.
+
+## <a name="remarks"></a>Comentarios
+
+Indica si el actual **SyncLockT** objeto posee un recurso; es decir, el **SyncLockT** objeto es *bloqueado*.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[SyncLockT (clase)](../windows/synclockt-class.md)

@@ -17,35 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7989f28ae9c9e3af4c73ec454487d34dd7cff570
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2a79ef02302208aa14bc1620e486fcfbc6e12253
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644760"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591268"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType (enumeración)
-Especifica el tipo de resultado devuelto por la `GetResults()` método.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-enum AsyncResultType;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="values"></a>Valores  
-  
-|Nombre|Descripción|  
-|----------|-----------------|  
-|`MultipleResults`|Un conjunto de resultados múltiples, que se presentan progresivamente entre `Start` estado y antes de `Close()` se llama.|  
-|`SingleResult`|Un único resultado, que se presenta después de la `Complete` se produce el evento.|  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)
+
+Especifica el tipo de resultado devuelto por la `GetResults()` método.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+enum AsyncResultType;
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="values"></a>Valores
+
+|Nombre|Descripción|
+|----------|-----------------|
+|`MultipleResults`|Un conjunto de resultados múltiples, que se presentan progresivamente entre `Start` estado y antes de `Close()` se llama.|
+|`SingleResult`|Un único resultado, que se presenta después de la `Complete` se produce el evento.|
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

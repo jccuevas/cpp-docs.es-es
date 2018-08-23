@@ -1,5 +1,5 @@
 ---
-title: Arrayreference (clase) | Documentos de Microsoft
+title: Arrayreference (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8e4183c400cf45a23f24a98292b68f6df537da1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7b2a0fd8c4903852e88fa80f12bc05894625888
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089119"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588316"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference (Clase)
 `ArrayReference` es un tipo de optimización que puedes usar en lugar de [Platform::Array^](../cppcx/platform-array-class.md) en parámetros de entrada cuando desees rellenar una matriz de estilo C con los datos de entrada.  
@@ -61,7 +61,7 @@ class ArrayReference
  **Encabezado:** vccorlib.h  
   
 ## <a name="ctor"></a>  Constructor Arrayreference
-Inicializa una nueva instancia de la [arrayreference](../cppcx/platform-arrayreference-class.md) clase.  
+Inicializa una nueva instancia de la [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) clase.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -86,7 +86,7 @@ ArrayReference(ArrayReference&& otherArg)
 
 
 ## <a name="operator-assign"></a>  Arrayreference:: operator = (operador)
-Asigna el objeto especificado al actual [arrayreference](../cppcx/platform-arrayreference-class.md) objeto usando la semántica de movimiento.  
+Asigna el objeto especificado a la actual [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) objeto utilizando la semántica de movimiento.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -108,8 +108,8 @@ ArrayReference& operator=(ArrayReference&& otherArg);
   
 
 
-## <a name="operator-call"></a>  Operador arrayreference::operator()
-Convierte la actual [arrayreference](../cppcx/platform-arrayreference-class.md) objeto hacia un [Platform:: Array](../cppcx/platform-array-class.md) clase.  
+## <a name="operator-call"></a>  ::Operator() (operador)
+Convierte la actual [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) objeto a un [Platform:: Array](../cppcx/platform-array-class.md) clase.  
   
 ### <a name="syntax"></a>Sintaxis  
   
@@ -123,7 +123,7 @@ Array<TArg>^ operator ();
  Identificador a objeto de tipo `Array<TArg>^`.  
   
 ### <a name="remarks"></a>Comentarios  
- [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) y [Platform:: Array](../cppcx/platform-array-class.md) son clases de plantillas de clase estándar de C++, no ref.  
+ [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) y [Platform:: Array](../cppcx/platform-array-class.md) son clases de plantillas de clase estándares de C++, no ref.  
   
 
 

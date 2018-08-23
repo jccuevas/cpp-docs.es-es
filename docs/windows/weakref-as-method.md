@@ -17,56 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7dd0dca806c1568d88c20eec6a7ac63e5fb242fb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c2a56904fb3709137c167513d0eba426bda7ad14
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020361"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589374"
 ---
 # <a name="weakrefas-method"></a>WeakRef::As (Método)
-Establece el texto especificado `ComPtr` parámetro de puntero para representar la interfaz especificada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-template<typename U>  
-HRESULT As(  
-   _Out_ ComPtr<U>* ptr  
-);  
-  
-template<typename U>  
-HRESULT As(  
-   _Out_ Details::ComPtrRef<ComPtr<U>> ptr  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *U*  
- Id. de interfaz.  
-  
- *ptr*  
- Cuando finalice esta operación, un objeto que representa el parámetro *U*.  
-  
-## <a name="return-value"></a>Valor devuelto  
-  
--   S_OK si esta operación se realiza correctamente; en caso contrario, un HRESULT que indica el motivo del error en la operación, y *ptr* está establecido en **nullptr**.  
-  
--   S_OK si esta operación se realiza correctamente, pero actual **WeakRef** objeto ya se ha liberado. Parámetro *ptr* está establecido en **nullptr**.  
-  
--   S_OK si esta operación se realiza correctamente, pero actual **WeakRef** objeto no se deriva de parámetro *U*. Parámetro *ptr* está establecido en **nullptr**.  
-  
-## <a name="remarks"></a>Comentarios  
- Se genera un error si parámetro *U* es `IWeakReference`, o no se deriva `IInspectable`.  
-  
- La primera plantilla es el formulario que debe usar en el código. La segunda plantilla es una especialización de aplicación auxiliar interna, que admite características del lenguaje C++, como palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .  
-  
- A partir del SDK de Windows 10, este método no establece la **WeakRef** instancia a **nullptr** si no se pudo obtener la referencia débil, por lo que debería evitar código de comprobación de errores que comprueba la WeakRef para **nullptr**. En su lugar, compruebe *ptr* para **nullptr**.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [WeakRef (clase)](../windows/weakref-class.md)
+
+Establece el texto especificado `ComPtr` parámetro de puntero para representar la interfaz especificada.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename U>
+HRESULT As(
+   _Out_ ComPtr<U>* ptr
+);
+
+template<typename U>
+HRESULT As(
+   _Out_ Details::ComPtrRef<ComPtr<U>> ptr
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*U*  
+Id. de interfaz.
+
+*ptr*  
+Cuando finalice esta operación, un objeto que representa el parámetro *U*.
+
+## <a name="return-value"></a>Valor devuelto
+
+- S_OK si esta operación se realiza correctamente; en caso contrario, un HRESULT que indica el motivo del error en la operación, y *ptr* está establecido en **nullptr**.
+
+- S_OK si esta operación se realiza correctamente, pero actual **WeakRef** objeto ya se ha liberado. Parámetro *ptr* está establecido en **nullptr**.
+
+- S_OK si esta operación se realiza correctamente, pero actual **WeakRef** objeto no se deriva de parámetro *U*. Parámetro *ptr* está establecido en **nullptr**.
+
+## <a name="remarks"></a>Comentarios
+
+Se genera un error si parámetro *U* es `IWeakReference`, o no se deriva `IInspectable`.
+
+La primera plantilla es el formulario que debe usar en el código. La segunda plantilla es una especialización de aplicación auxiliar interna, que admite características del lenguaje C++, como palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .
+
+A partir del SDK de Windows 10, este método no establece la **WeakRef** instancia a **nullptr** si no se pudo obtener la referencia débil, por lo que debería evitar código de comprobación de errores que comprueba la WeakRef para **nullptr**. En su lugar, compruebe *ptr* para **nullptr**.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[WeakRef (clase)](../windows/weakref-class.md)

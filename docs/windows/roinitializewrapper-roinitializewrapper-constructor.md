@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 193f0d16b03991e24cb16a90b3310512f6e86054
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 528c66da24c4cbf6c22af5b1b5f8dd3afffff64f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604403"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604651"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper (Constructor)
-Inicializa una nueva instancia de la **RoInitializeWrapper** clase.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
+
+Inicializa una nueva instancia de la **RoInitializeWrapper** clase.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *flags*  
- Una de las enumeraciones RO_INIT_TYPE, que especifica la compatibilidad proporcionada por el tiempo de ejecución de Windows.  
-  
-## <a name="remarks"></a>Comentarios  
- El **RoInitializeWrapper** clase invoca `Windows::Foundation::Initialize(flags)`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [HandleT (clase)](../windows/handlet-class.md)
+```
+
+### <a name="parameters"></a>Parámetros
+
+*flags*  
+Una de las enumeraciones RO_INIT_TYPE, que especifica la compatibilidad proporcionada por el tiempo de ejecución de Windows.
+
+## <a name="remarks"></a>Comentarios
+
+El **RoInitializeWrapper** clase invoca `Windows::Foundation::Initialize(flags)`.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[HandleT (clase)](../windows/handlet-class.md)

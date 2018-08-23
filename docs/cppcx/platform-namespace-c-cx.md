@@ -1,5 +1,5 @@
 ---
-title: Espacio de nombres de plataforma (C++ / CX) | Documentos de Microsoft
+title: Espacio de nombres de plataforma (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform Namespace (C++/CX)
 ms.assetid: b160e822-d424-43d2-ba60-57b0e81f259c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 348bedcde953cbcd6084023d6f7117c7f7f001f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d88b40d53dbae737822ca31e6fa9cf15c947970
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091964"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607333"
 ---
 # <a name="platform-namespace-ccx"></a>Platform (Espacio de nombres) (C++/CX)
 Contiene tipos integrados que son compatibles con Windows en tiempo de ejecución.  
@@ -112,7 +112,7 @@ using namespace Platform;
 |[Platform::UIntPtr (Clase de valor)](../cppcx/platform-uintptr-value-class.md)|Un puntero sin signo cuyo tamaño es adecuado para la plataforma (32 bits o 64 bits).|  
   
 ## <a name="see-also"></a>Vea también  
- [Namespace Platform:: Collections](../cppcx/platform-collections-namespace.md)   
- [Namespace CompilerServices](../cppcx/platform-runtime-compilerservices-namespace.md)   
- [Namespace InteropServices](../cppcx/platform-runtime-interopservices-namespace.md)   
+ [Platform:: Collections Namespace](../cppcx/platform-collections-namespace.md)   
+ [CompilerServices Namespace](../cppcx/platform-runtime-compilerservices-namespace.md)   
+ [InteropServices Namespace](../cppcx/platform-runtime-interopservices-namespace.md)   
  [Platform::Metadata (Espacio de nombres)](../cppcx/platform-metadata-namespace.md)

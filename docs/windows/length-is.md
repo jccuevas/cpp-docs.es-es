@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d30a467bd929c68c35e06861087ec7f47d1f2d51
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 0b3792bc5377d90acb6f5ddf619e888ddd606e1e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011912"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594098"
 ---
 # <a name="lengthis"></a>length_is
-Especifica el número de elementos de matriz que se transmitan.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-[ length_is(  
-   "expression"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *Expresión*  
- Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.  
-  
-## <a name="remarks"></a>Comentarios  
- El **length_is** atributo de C++ tiene la misma funcionalidad que el [length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) atributo MIDL.  
-  
-## <a name="example"></a>Ejemplo  
- Consulte [first_is](../windows/first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Atributos de parámetro](../windows/parameter-attributes.md)   
- [first_is](../windows/first-is.md)   
- [max_is](../windows/max-is.md)   
- [last_is](../windows/last-is.md)   
- [size_is](../windows/size-is.md)   
+
+Especifica el número de elementos de matriz que se transmitan.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[ length_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Expresión*  
+Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
+
+## <a name="remarks"></a>Comentarios
+
+El **length_is** atributo de C++ tiene la misma funcionalidad que el [length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) atributo MIDL.
+
+## <a name="example"></a>Ejemplo
+
+Consulte [first_is](../windows/first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|
+|**Reiterativo**|No|
+|**Atributos requeridos**|Ninguna|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atributos de parámetro](../windows/parameter-attributes.md)  
+[first_is](../windows/first-is.md)  
+[max_is](../windows/max-is.md)  
+[last_is](../windows/last-is.md)  
+[size_is](../windows/size-is.md)  

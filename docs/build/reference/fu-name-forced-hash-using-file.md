@@ -1,5 +1,5 @@
 ---
-title: '-FU (Name Forced #using archivo) | Documentos de Microsoft'
+title: '-FU (nombre #using archivo) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9a27d8c689b198bde47047969d38cf14b41c46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a92e8d30d2c15ac07bc5a6ff3e6438da46438674
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375680"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597506"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Asignar nombre al archivo #using obligatorio)
-Una opción del compilador que puede usar como alternativa a pasar un nombre de archivo para [#using (directiva)](../../preprocessor/hash-using-directive-cpp.md) en el código fuente.  
+Una opción del compilador que puede usar como una alternativa para pasar un nombre de archivo a [#using](../../preprocessor/hash-using-directive-cpp.md) en el código fuente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,20 +38,20 @@ Una opción del compilador que puede usar como alternativa a pasar un nombre de 
   
 ## <a name="arguments"></a>Argumentos  
  `file`  
- Especifica el archivo de metadatos que hacen referencia en esta compilación.  
+ Especifica el archivo de metadatos que hace referencia en esta compilación.  
   
 ## <a name="remarks"></a>Comentarios  
- El conmutador /FU toma un solo nombre de archivo. Para especificar varios archivos, use /FU con cada uno de ellos.  
+ El modificador /FU toma un único nombre de archivo. Para especificar varios archivos, use /FU con cada uno de ellos.  
   
- Si utilizas [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] y se hace referencia a metadatos para que utilicen el [Friend (ensamblados)](../../dotnet/friend-assemblies-cpp.md) característica, no puede usar **/FU**. Debe hacer referencia a los metadatos en el código mediante el uso de `#using`, junto con el `[as friend]` atributo. No se admiten ensamblados de confianza en [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]).  
+ Si usas C++ / c++ / CLI y se hace referencia a los metadatos para que utilicen el [ensamblados de confianza](../../dotnet/friend-assemblies-cpp.md) característica, no se puede usar **/FU**. Debe hacer referencia a los metadatos en el código mediante el uso de `#using`, junto con el `[as friend]` atributo. Ensamblados de confianza no se admiten en extensiones de componentes de C++ de Visual C++ / c++ / CX.  
   
- Para obtener información sobre cómo crear un ensamblado o módulo para common language runtime (CLR), consulte [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). Para obtener información sobre cómo crear [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)], consulte [compilar aplicaciones y bibliotecas](../../cppcx/building-apps-and-libraries-c-cx.md).  
+ Para obtener información sobre cómo crear un ensamblado o módulo para common language runtime (CLR), consulte [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md). Para obtener información sobre cómo compilar en C++ / c++ / CX, consulte [compilar aplicaciones y bibliotecas](../../cppcx/building-apps-and-libraries-c-cx.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Seleccione el **C/C++** carpeta.  
+2.  Seleccione el **C o C++** carpeta.  
   
 3.  Seleccione el **avanzadas** página de propiedades.  
   

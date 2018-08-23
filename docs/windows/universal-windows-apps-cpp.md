@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 56b6642bb24107da4c09856dbd8daaf70fb7dfd5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7ba556ee3803bb00f07032e0589209af2d32addf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015012"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591758"
 ---
 # <a name="universal-windows-apps-c"></a>Aplicaciones Windows universales (C++)
 
 Aplicaciones universales de Windows Platform (UWP) representan un conjunto de principios de diseño que hacen hincapié en las interfaces de usuario simple que se centran en torno a contenido que se ajusta automáticamente para distintos tamaños de pantalla en diferentes dispositivos. La interfaz de usuario se crea en el marcado XAML y el código subyacente en C++ nativo. También puede crear componentes (archivos DLL) que las aplicaciones para UWP escritas en otros lenguajes pueden consumir. La superficie de API para aplicaciones UWP es el tiempo de ejecución de Windows, que es una biblioteca factorizada que proporciona una amplia variedad de servicios del sistema operativo.
 
-> [!TIP]  
+> [!TIP]
 > Para Windows 10, puede usar el convertidor de aplicación de puente de escritorio para empaquetar la aplicación de escritorio existente para la implementación a través de la Microsoft Store. Para obtener más información, consulte [utilizando Visual C++ en tiempo de ejecución en el proyecto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) y [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
 ## <a name="uwp-apps-that-use-cwinrt"></a>Las aplicaciones UWP que usan C++ / c++ / WinRT
@@ -46,4 +46,5 @@ C++ / c++ / WinRT es una nueva, encabezado basada en la biblioteca proyección d
 La biblioteca de plantillas C++ de Windows en tiempo de ejecución proporciona las interfaces de COM de bajo nivel mediante el cual puede tener acceso a código ISO C++ en tiempo de ejecución de Windows en un entorno sin excepciones. En la mayoría de los casos, se recomienda usar C++ / c++ / WinRT o C++ / c++ / CX en lugar de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para el desarrollo de aplicaciones UWP. Para obtener información acerca de la biblioteca de plantillas C++ de Windows en tiempo de ejecución, vea [biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 ## <a name="see-also"></a>Vea también
- [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>

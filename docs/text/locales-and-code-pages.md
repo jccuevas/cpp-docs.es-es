@@ -1,5 +1,5 @@
 ---
-title: Configuraciones regionales y páginas de códigos | Documentos de Microsoft
+title: Las configuraciones regionales y páginas de códigos | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c7dd3c5356df7b80f21605e325158e87cc5a71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9952f0bf27202c468e38ff3fb6aa701a0d6f9163
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858151"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594844"
 ---
 # <a name="locales-and-code-pages"></a>Configuraciones regionales y páginas de códigos
 Un identificador de configuración regional refleja el idioma y las convenciones locales de una determinada zona geográfica. Un idioma determinado se puede hablar en varios países o regiones; por ejemplo, el portugués se habla en Portugal y Brasil. A la inversa, una región o un país pueden tener más de un idioma oficial. Por ejemplo, Canadá tiene dos idiomas, el inglés y el francés. Es decir, Canadá tiene dos configuraciones regionales distintas, el inglés canadiense y el francés canadiense. Entre las categorías dependientes de la configuración regional se encuentran el formato de fechas y el formato de presentación de valores de moneda.  
   
- El idioma determina las convenciones de formato de datos y texto, mientras que el país o la región determinan las convenciones locales. Cada idioma tiene una asignación única, representada por páginas de códigos, que incluye caracteres distintos de los del alfabeto (como los signos de puntuación y los números). Una página de códigos es un juego de caracteres y está relacionada con el idioma. Por lo tanto, un [configuración regional](../c-runtime-library/locale.md) es una combinación única de idioma, país o región y página de códigos. La configuración de página de configuración regional y el código se puede cambiar en tiempo de ejecución mediante una llamada a la [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) función.  
+ El idioma determina las convenciones de formato de datos y texto, mientras que el país o la región determinan las convenciones locales. Cada idioma tiene una asignación única, representada por páginas de códigos, que incluye caracteres distintos de los del alfabeto (como los signos de puntuación y los números). Una página de códigos es un juego de caracteres y está relacionada con el idioma. Por lo tanto, un [configuración regional](../c-runtime-library/locale.md) es una combinación única de idioma, país o región y página de códigos. La configuración de página de configuración regional y el código puede cambiarse en tiempo de ejecución mediante una llamada a la [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) función.  
   
  Idiomas distintos pueden utilizar páginas de códigos distintas. Por ejemplo, la página de códigos ANSI 1252 se utiliza para el inglés y para la mayoría de idiomas europeos, mientras que la página de códigos ANSI 932 se utiliza para los caracteres Kanji del japonés. La práctica totalidad de páginas de códigos comparten el juego de caracteres ASCII para los 128 caracteres inferiores (de 0x00 a 0x7F).  
   
@@ -43,7 +43,7 @@ Un identificador de configuración regional refleja el idioma y las convenciones
   
  Para obtener más información sobre las páginas de códigos, vea [Code Pages](../c-runtime-library/code-pages.md).  
   
- La biblioteca en tiempo de ejecución de C tiene dos tipos de páginas de códigos internas: regionales y multibyte. Puede cambiar la página de códigos actual durante la ejecución del programa (consulte la documentación de la [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) y [_setmbcp](../c-runtime-library/reference/setmbcp.md) funciones). Además, la biblioteca en tiempo de ejecución puede obtener y utilizar el valor de la página de códigos del sistema operativo, que es la constante para la duración de la ejecución del programa.  
+ La biblioteca en tiempo de ejecución de C tiene dos tipos de páginas de códigos internas: regionales y multibyte. Puede cambiar la página de códigos actual durante la ejecución del programa (consulte la documentación de la [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) y [_setmbcp](../c-runtime-library/reference/setmbcp.md) funciones). Además, la biblioteca en tiempo de ejecución podría obtener y usar el valor de la página de códigos del sistema operativo, que es una constante para la duración de la ejecución del programa.  
   
  Cuando la página de códigos regional cambia, el comportamiento del conjunto de funciones dependiente de la configuración regional cambia a lo que indica la página de códigos elegida. De forma predeterminada, todas las funciones dependientes de la configuración regional empiezan a ejecutarse con una página de códigos regional única de la configuración regional "C". Se puede cambiar la página de códigos regional interna (así como otras propiedades específicas de la configuración regional) llamando a la función `setlocale`. Una llamada a la función `setlocale`(LC_ALL, "") establece la configuración regional en lo que indica la configuración regional de usuario del sistema operativo.  
   

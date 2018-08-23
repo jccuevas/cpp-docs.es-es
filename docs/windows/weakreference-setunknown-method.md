@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6adf747fd7612c2bcaa0964f91ecb585bbfbef0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1f127b8435f934e5cf203de2aaa6f2d0c3a58d13
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018057"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603075"
 ---
 # <a name="weakreferencesetunknown-method"></a>WeakReference::SetUnknown (Método)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-void SetUnknown(  
-   _In_ IUnknown* unk  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *UNK*  
- Un puntero a la `IUnknown` interfaz de un objeto.  
-  
-## <a name="remarks"></a>Comentarios  
- Establece la referencia segura del actual **WeakReference** objeto en el puntero de interfaz especificado.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+void SetUnknown(
+   _In_ IUnknown* unk
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*UNK*  
+Un puntero a la `IUnknown` interfaz de un objeto.
+
+## <a name="remarks"></a>Comentarios
+
+Establece la referencia segura del actual **WeakReference** objeto en el puntero de interfaz especificado.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
 ## <a name="see-also"></a>Vea también
- [WeakReference (clase)](../windows/weakreference-class1.md)  
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+[WeakReference (clase)](../windows/weakreference-class1.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

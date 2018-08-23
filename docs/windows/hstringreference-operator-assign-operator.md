@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc8f919dcec994be5d4f0300e9c96dde95895e16
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7045229cc15304a88253f97e1ad3c9f171f139a0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608526"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597133"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator= (Operador)
-Mueve el valor de otro **HStringReference** el objeto actual **HStringReference** objeto.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
+
+Mueve el valor de otro **HStringReference** el objeto actual **HStringReference** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 HStringReference& operator=(HStringReference&& other) throw()  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *other*  
- Existente **HStringReference** objeto.  
-  
-## <a name="remarks"></a>Comentarios  
- El valor de la existente *otros* objeto se copia a la actual **HStringReference** objeto y, a continuación, el *otros* se destruye el objeto.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [HStringReference (clase)](../windows/hstringreference-class.md)
+```
+
+### <a name="parameters"></a>Parámetros
+
+*other*  
+Existente **HStringReference** objeto.
+
+## <a name="remarks"></a>Comentarios
+
+El valor de la existente *otros* objeto se copia a la actual **HStringReference** objeto y, a continuación, el *otros* se destruye el objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[HStringReference (clase)](../windows/hstringreference-class.md)

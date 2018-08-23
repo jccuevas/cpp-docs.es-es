@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7bf4a6fab735708295a0ae229e7b47101ecc115b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7b66d5c65dd084da564067cd62242b315f6da182
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648397"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591379"
 ---
 # <a name="handletdetach-method"></a>HandleT::Detach (Método)
-Desasocia actual **HandleT** objeto a partir de su identificador subyacente.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typename HandleTraits::Type Detach();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- El identificador subyacente.  
-  
-## <a name="remarks"></a>Comentarios  
- Cuando finalice esta operación, actual **HandleT** está establecido en el estado no válido.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [HandleT (clase)](../windows/handlet-class.md)
+
+Desasocia actual **HandleT** objeto a partir de su identificador subyacente.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+typename HandleTraits::Type Detach();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+El identificador subyacente.
+
+## <a name="remarks"></a>Comentarios
+
+Cuando finalice esta operación, actual **HandleT** está establecido en el estado no válido.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[HandleT (clase)](../windows/handlet-class.md)

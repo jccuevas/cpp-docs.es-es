@@ -15,44 +15,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a180a8923dd5a9e8cb257b12ee0d2ba09df8ed5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f5a86748d5a51e433e2e90450593ef1bac1c8de3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642999"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596286"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Cambiar la fuente o el texto de una imagen (Editor de imágenes para iconos)
-El procedimiento siguiente es un ejemplo de cómo:  
-  
--   Agregar texto a un icono en una aplicación de Windows  
-  
--   Manipular la fuente del texto  
-  
-### <a name="to-change-the-font-of-text-on-an-image"></a>Para cambiar la fuente del texto de una imagen  
-  
-1.  Cree una aplicación de formularios de Windows de C++. Para obtener más información, consulte [crear un proyecto de aplicación Windows](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa). El [plantilla de aplicación de Windows Forms](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea) agrega un archivo denominado `app.ico` al proyecto de forma predeterminada.  
-  
-2.  En **el Explorador de soluciones**, haga doble clic en el archivo app.ico. El [Editor de imágenes](../windows/image-editor-for-icons.md) se abrirá.  
-  
-3.  Desde el **imagen** menú, seleccione **herramientas** y, a continuación, seleccione **texto herramienta**. El [cuadro de diálogo Herramienta de texto](../windows/text-tool-dialog-box-image-editor-for-icons.md) aparecerá.  
-  
-4.  En el **texto herramienta** cuadro de diálogo, escriba `C++` en el área de texto vacío. Este texto aparecerá en un cuadro de tamaño ajustable ubicado en la esquina superior izquierda de `app.ico`, en el **Editor de imágenes**.  
-  
-5.  En el **Editor de imágenes**, arrastre el cuadro de tamaño variable en el centro del archivo app.ico para mejorar la legibilidad del texto.  
-  
-6.  En el **texto herramienta** cuadro de diálogo, haga clic en el **fuente** botón. El [cuadro de diálogo fuente de herramienta de texto](../windows/text-tool-font-dialog-box-image-editor-for-icons.md) aparecerá.  
-  
-7.  En el **fuente de herramienta de texto** cuadro de diálogo, seleccione **Times New Roman** en la lista de fuentes disponibles que aparecen en la **fuente** cuadro de lista.  
-  
-8.  Seleccione **negrita** en la lista de estilos de fuentes disponibles aparecen en la **estilo de fuente** cuadro de lista.  
-  
-9. Seleccione **10** en la lista de disponibles, seleccione tamaños que se muestran en el **tamaño** cuadro de lista.  
-  
-10. Haga clic en el **Aceptar** botón. El **fuente de herramienta de texto** cuadro de diálogo se cerrará y se aplicará la nueva configuración de fuente al texto.  
-  
-11. Haga clic en el **cerrar** situado en la **texto herramienta** cuadro de diálogo. El cuadro de tamaño ajustable alrededor del texto desaparecerá de la **Editor de imágenes**.  
-  
-## <a name="see-also"></a>Vea también  
- [Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
- [Toolbar](../windows/toolbar-image-editor-for-icons.md)
+
+El procedimiento siguiente es un ejemplo de cómo:
+
+- Agregar texto a un icono en una aplicación de Windows
+
+- Manipular la fuente del texto
+
+### <a name="to-change-the-font-of-text-on-an-image"></a>Para cambiar la fuente del texto de una imagen
+
+1. Cree una aplicación de formularios de Windows de C++. Para obtener más información, consulte [crear un proyecto de aplicación Windows](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa). El [plantilla de aplicación de Windows Forms](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea) agrega un archivo denominado `app.ico` al proyecto de forma predeterminada.
+
+2. En **el Explorador de soluciones**, haga doble clic en el archivo app.ico. El [Editor de imágenes](../windows/image-editor-for-icons.md) se abrirá.
+
+3. Desde el **imagen** menú, seleccione **herramientas** y, a continuación, seleccione **texto herramienta**. El [cuadro de diálogo Herramienta de texto](../windows/text-tool-dialog-box-image-editor-for-icons.md) aparecerá.
+
+4. En el **texto herramienta** cuadro de diálogo, escriba `C++` en el área de texto vacío. Este texto aparecerá en un cuadro de tamaño ajustable ubicado en la esquina superior izquierda de `app.ico`, en el **Editor de imágenes**.
+
+5. En el **Editor de imágenes**, arrastre el cuadro de tamaño variable en el centro del archivo app.ico para mejorar la legibilidad del texto.
+
+6. En el **texto herramienta** cuadro de diálogo, haga clic en el **fuente** botón. El [cuadro de diálogo fuente de herramienta de texto](../windows/text-tool-font-dialog-box-image-editor-for-icons.md) aparecerá.
+
+7. En el **fuente de herramienta de texto** cuadro de diálogo, seleccione **Times New Roman** en la lista de fuentes disponibles que aparecen en la **fuente** cuadro de lista.
+
+8. Seleccione **negrita** en la lista de estilos de fuentes disponibles aparecen en la **estilo de fuente** cuadro de lista.
+
+9. Seleccione **10** en la lista de disponibles, seleccione tamaños que se muestran en el **tamaño** cuadro de lista.
+
+10. Haga clic en el **Aceptar** botón. El **fuente de herramienta de texto** cuadro de diálogo se cerrará y se aplicará la nueva configuración de fuente al texto.
+
+11. Haga clic en el **cerrar** situado en la **texto herramienta** cuadro de diálogo. El cuadro de tamaño ajustable alrededor del texto desaparecerá de la **Editor de imágenes**.
+
+## <a name="see-also"></a>Vea también
+
+[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Toolbar](../windows/toolbar-image-editor-for-icons.md)

@@ -1,5 +1,5 @@
 ---
-title: -clr (compilación de Common Language Runtime) | Documentos de Microsoft
+title: -clr (Common Language Runtime Compilation) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379619"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606868"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilación de Common Language Runtime)
 Permite que las aplicaciones y los componentes usen las características de Common Language Runtime (CLR).  
@@ -48,15 +48,15 @@ Permite que las aplicaciones y los componentes usen las características de Comm
   
  Para obtener más información, consulte  
   
- [Mixto (nativos y administrados) ensamblados](../../dotnet/mixed-native-and-managed-assemblies.md) y  
+ [Ensamblados mixtos (nativos y administrados)](../../dotnet/mixed-native-and-managed-assemblies.md) y  
   
- [How to: Migrate to /clr](../../dotnet/how-to-migrate-to-clr.md).  
+ [Cómo: migrar a/CLR](../../dotnet/how-to-migrate-to-clr.md).  
   
  **/clr:pure**  
  /clr:pure está desusada. Es posible que una versión futura del compilador no admita esta opción. Se recomienda trasladar el código que deba ser MSIL puro a C#.  
   
  **/clr:safe**  
- /clr:safe está desusada. Es posible que una versión futura del compilador no admita esta opción. Se recomienda trasladar el código que deba ser MSIL seguro a C#. 
+ /clr:safe está desusada. Es posible que una versión futura del compilador no admita esta opción. Se recomienda trasladar el código que deba ser MSIL seguro en C#. 
   
  **/clr:noAssembly**  
  Especifica que no se debe insertar un manifiesto de ensamblado en el archivo de salida. De forma predeterminada, la opción **noAssembly** no está activada.  
@@ -68,7 +68,7 @@ Permite que las aplicaciones y los componentes usen las características de Comm
  Antes de Visual C++ 2005, **/clr:noAssembly** requería **/LD**. Ahora,**/LD** está implícita cuando especifica **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Permite que una aplicación de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] se ejecute en la versión 1 de CLR. Si usa **initialAppDomain**, a continuación, puede ver algunos de los problemas que se describen en [error: excepción de AppDomainUnloaded al usar extensiones administradas para los componentes de Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) en Microsoft Sitio Web de soporte técnico.  
+ Permite que una aplicación de Visual C++ para ejecutarse en la versión 1 de CLR. Si usas **initialAppDomain**, puede ver algunos de los problemas que se describen en [error: excepción de AppDomainUnloaded al usar extensiones administradas para los componentes de Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) en Microsoft Sitio Web de soporte técnico.  
   
  Las aplicaciones que se compilan con **initialAppDomain** no se deben usar en otras que usan ASP.NET porque estas no son compatibles con la versión 1 de CLR.  
   
@@ -82,7 +82,7 @@ Permite que las aplicaciones y los componentes usen las características de Comm
   
  Una aplicación compilada mediante **/clr** puede contener o no datos administrados.  
   
- Para habilitar la depuración en una aplicación administrada, vea [/ASSEMBLYDEBUG (Agregar DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
+ Para habilitar la depuración en una aplicación administrada, consulte [/ASSEMBLYDEBUG (Agregar DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
   
  Solo se crearán instancias de tipos CLR en el montón de recolección de elementos no utilizados. Para obtener más información, consulte [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md). Para compilar una función en código nativo, use la pragma `unmanaged` . Para obtener más información, consulte [managed, unmanaged](../../preprocessor/managed-unmanaged.md).  
   

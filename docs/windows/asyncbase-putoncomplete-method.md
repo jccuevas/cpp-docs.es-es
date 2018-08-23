@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e982e6f053b207b1d57ed5c0df483a9d9ab778eb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c62119b87183fe6a60c0ed4d987cbd12788d8a0d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646977"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602691"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete (Método)
-Establece la dirección del controlador de eventos de finalización en el valor especificado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-STDMETHOD(  
-   PutOnComplete  
-)(TComplete* completeHandler);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *completeHandler*  
- La dirección a la que se establece el controlador de eventos de finalización.  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)
+
+Establece la dirección del controlador de eventos de finalización en el valor especificado.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(
+   PutOnComplete
+)(TComplete* completeHandler);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*completeHandler*  
+La dirección a la que se establece el controlador de eventos de finalización.
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; en caso contrario, E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)

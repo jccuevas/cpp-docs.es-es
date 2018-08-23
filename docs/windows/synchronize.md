@@ -17,69 +17,73 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 583f05e3496ea6308dac8c7fa37c7e350165e74b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a72d305cfae3ba76a7c61ee7f2a6a604e6832631
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020058"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604701"
 ---
 # <a name="synchronize"></a>synchronize
-Sincroniza el acceso al método de destino.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-[synchronize]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El **sincronizar** atributo de C++ implementa la compatibilidad con el método de destino de un objeto de sincronización. La sincronización permite varios objetos usar un recurso común (por ejemplo, un método de una clase) controlando el acceso del método de destino.  
-  
- El código insertado por este atributo llama adecuada `Lock` método (determinado por el modelo de subprocesos) al principio del método de destino. Cuando se sale del método, `Unlock` se llama automáticamente. Para obtener más información sobre estas funciones, vea [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
-  
- Este atributo requiere que el atributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.  
-  
-## <a name="example"></a>Ejemplo  
- El código siguiente proporciona sincronización para el `UpdateBalance` método de la `CMyClass` objeto.  
-  
-```cpp  
-// cpp_attr_ref_synchronize.cpp  
-// compile with: /LD  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module(name="SYNC")];  
-  
-[coclass,  
- threading(both),  
- vi_progid("MyProject.MyClass"),  
- progid("MyProject.MyClass.1"),  
+
+Sincroniza el acceso al método de destino.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[synchronize]
+```
+
+## <a name="remarks"></a>Comentarios
+
+El **sincronizar** atributo de C++ implementa la compatibilidad con el método de destino de un objeto de sincronización. La sincronización permite varios objetos usar un recurso común (por ejemplo, un método de una clase) controlando el acceso del método de destino.
+
+El código insertado por este atributo llama adecuada `Lock` método (determinado por el modelo de subprocesos) al principio del método de destino. Cuando se sale del método, `Unlock` se llama automáticamente. Para obtener más información sobre estas funciones, vea [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)
+
+Este atributo requiere que el atributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.
+
+## <a name="example"></a>Ejemplo
+
+El código siguiente proporciona sincronización para el `UpdateBalance` método de la `CMyClass` objeto.
+
+```cpp
+// cpp_attr_ref_synchronize.cpp
+// compile with: /LD
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module(name="SYNC")];
+
+[coclass,
+ threading(both),
+ vi_progid("MyProject.MyClass"),
+ progid("MyProject.MyClass.1"),
  uuid("7a7baa0d-59b8-4576-b754-79d07e1d1cc3")  
-]  
-class CMyClass {  
-   float m_nBalance;  
-  
-   [synchronize]  
-   void UpdateBalance(float nAdjust) {  
-      m_nBalance += nAdjust;  
-   }  
-};  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|Método de clase, método|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos COM](../windows/com-attributes.md)   
+]
+class CMyClass {
+   float m_nBalance;
+
+   [synchronize]
+   void UpdateBalance(float nAdjust) {
+      m_nBalance += nAdjust;
+   }
+};
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|Método de clase, método|
+|**Reiterativo**|No|
+|**Atributos requeridos**|Una o varias de las siguientes acciones: `coclass`, `progid`, o `vi_progid`.|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos COM](../windows/com-attributes.md)  

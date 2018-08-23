@@ -26,34 +26,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23befed8800027553f69032a5f5cc32816396951
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e6cb463f95bc68d6880fb593ba394ec94d585696
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648215"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597341"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Ventana Colores (Editor de imágenes para iconos)
-El **colores** ventana consta de dos partes:  
-  
-1.  El **paleta de colores**, que es una matriz de muestras de color que representan los colores que puede utilizar. Puede hacer clic en las muestras para seleccionar los colores de primer plano y de fondo cuando use las herramientas de gráficos.  
-  
-2.  El **indicador de Color**, que muestra los colores de primer y segundo plano y selectores de colores de pantalla e inversos.  
-  
-     ![Ventana colores](../windows/media/vccolorswindow.gif "vcColorsWindow")  
-Ventana Colores  
-  
+
+El **colores** ventana consta de dos partes:
+
+1. El **paleta de colores**, que es una matriz de muestras de color que representan los colores que puede utilizar. Puede hacer clic en las muestras para seleccionar los colores de primer plano y de fondo cuando use las herramientas de gráficos.
+
+2. El **indicador de Color**, que muestra los colores de primer y segundo plano y selectores de colores de pantalla e inversos.
+
+   ![Ventana colores](../windows/media/vccolorswindow.gif "vcColorsWindow")  
+Ventana Colores
+
 > [!NOTE]
->  El **pantalla color** y **color inverso** herramientas solo están disponibles para iconos y cursores.  
-  
- Puede usar el **colores** ventana con el [barra de herramientas del Editor de imágenes](../windows/toolbar-image-editor-for-icons.md).  
-  
-## <a name="requirements"></a>Requisitos  
- Ninguna  
-  
-## <a name="see-also"></a>Vea también  
- [Mostrar u ocultar la ventana colores](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
- [Crear zonas transparentes o inversas en las imágenes de dispositivo](../windows/creating-transparent-or-inverse-regions-in-device-images.md)   
- [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Cuadro de diálogo Selector de colores personalizada](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
- [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)
+> El **pantalla color** y **color inverso** herramientas solo están disponibles para iconos y cursores.
+
+Puede usar el **colores** ventana con el [barra de herramientas del Editor de imágenes](../windows/toolbar-image-editor-for-icons.md).
+
+## <a name="requirements"></a>Requisitos
+
+Ninguna
+
+## <a name="see-also"></a>Vea también
+
+[Mostrar u ocultar la ventana colores](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
+[Crear zonas transparentes o inversas en las imágenes de dispositivo](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Cuadro de diálogo Selector de colores personalizada](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

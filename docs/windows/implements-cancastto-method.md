@@ -17,42 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a73aac6fb36270f0cd04615d9e530b29841850f8
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 328691877a3b129c852460f8f68cdd3db4974e6f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010927"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595304"
 ---
 # <a name="implementscancastto-method"></a>Implements::CanCastTo (Método)
-Obtiene un puntero a la interfaz especificada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-__forceinline HRESULT CanCastTo(  
-   REFIID riid,  
-   _Deref_out_ void **ppv  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *riid*  
- Una referencia a un identificador de interfaz.  
-  
- *PPV*  
- Si es correcto, un puntero a la interfaz especificada por *riid*.  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, un HRESULT que indica el error, como E_NOINTERFACE.  
-  
-## <a name="remarks"></a>Comentarios  
- Se trata de una función auxiliar interna que realiza una operación de QueryInterface.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Implements (estructura)](../windows/implements-structure.md)
+
+Obtiene un puntero a la interfaz especificada.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+__forceinline HRESULT CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*riid*  
+Una referencia a un identificador de interfaz.
+
+*PPV*  
+Si es correcto, un puntero a la interfaz especificada por *riid*.
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; en caso contrario, un HRESULT que indica el error, como E_NOINTERFACE.
+
+## <a name="remarks"></a>Comentarios
+
+Se trata de una función auxiliar interna que realiza una operación de QueryInterface.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Implements (estructura)](../windows/implements-structure.md)

@@ -1,23 +1,23 @@
 ---
-title: Delegados (C++ / CX) | Documentos de Microsoft
+title: Delegados (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9936280d25933afb787d883139725b5a7044db6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092393"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592778"
 ---
 # <a name="delegates-ccx"></a>Delegados (C++/CX)
-El `delegate` palabra clave se utiliza para declarar un tipo de referencia que es el equivalente de Windows en tiempo de ejecución de un objeto de función en C++ estándar. Una declaración de delegado es similar a una signatura de función; especifica el tipo de valor devuelto y los tipos de parámetros que debe tener la función incluida. Esta es una declaración de delegado definida por el usuario:  
+El `delegate` palabra clave se usa para declarar un tipo de referencia que es el equivalente de Windows en tiempo de ejecución de un objeto de función en C++ estándar. Una declaración de delegado es similar a una signatura de función; especifica el tipo de valor devuelto y los tipos de parámetros que debe tener la función incluida. Esta es una declaración de delegado definida por el usuario:  
   
 ```cpp  
      public delegate void PrimeFoundHandler(int result);  
@@ -29,10 +29,10 @@ El `delegate` palabra clave se utiliza para declarar un tipo de referencia que e
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- Al declarar los delegados que se expondrán a los clientes a través de la interfaz binaria de aplicaciones de Windows en tiempo de ejecución, use [Windows::Foundation::TypedEventHandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Este delegado tiene binarios de código auxiliar y proxy predefinidos que permiten su uso en clientes de JavaScript.  
+ Al declarar los delegados que se expondrán a los clientes a través de la interfaz binaria de aplicación de Windows en tiempo de ejecución, utilice [Windows::Foundation::TypedEventHandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Este delegado tiene binarios de código auxiliar y proxy predefinidos que permiten su uso en clientes de JavaScript.  
   
 ## <a name="consuming-delegates"></a>Usar delegados  
- Cuando se crea una aplicación de la plataforma Universal de Windows, a menudo funcionan con un delegado como el tipo de un evento que expone una clase en tiempo de ejecución de Windows. Para suscribirte a un evento, crea una instancia de su tipo de delegado especificando una función, o expresión lambda, que coincida con la firma de delegado. Después, usa el operador `+=` para pasar el objeto de delegado al miembro de evento de la clase. Esto se denomina suscribirse al evento. Cuando la instancia de clase "desencadena" el evento, se llama a tu función junto con cualquier otro controlador que haya sido agregado por tu objeto o por otros objetos.  
+ Cuando se crea una aplicación plataforma Universal de Windows, sueles trabajar con un delegado como el tipo de un evento que expone una clase en tiempo de ejecución de Windows. Para suscribirte a un evento, crea una instancia de su tipo de delegado especificando una función, o expresión lambda, que coincida con la firma de delegado. Después, usa el operador `+=` para pasar el objeto de delegado al miembro de evento de la clase. Esto se denomina suscribirse al evento. Cuando la instancia de clase "desencadena" el evento, se llama a tu función junto con cualquier otro controlador que haya sido agregado por tu objeto o por otros objetos.  
   
 > [!TIP]
 >  Visual Studio realiza mucho trabajo automáticamente cuando creas un controlador de eventos. Por ejemplo, si especificas un controlador de eventos en marcado XAML, aparece una información sobre herramientas. Si eliges la información sobre herramientas, Visual Studio crea automáticamente el método de controlador de eventos y lo asocia al evento en la clase de publicación.  
@@ -50,7 +50,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 > [!WARNING]
 >  En general, para un controlador de eventos es mejor usar una función con nombre en lugar de una expresión lambda, a menos que tengas mucho cuidado para evitar referencias circulares. Una función con nombre captura el puntero "this" mediante referencia débil, mientras que una expresión lambda lo captura mediante referencia segura y crea una referencia circular. Para obtener más información, consulte [referencias débiles e interrupción de ciclos](../cppcx/weak-references-and-breaking-cycles-c-cx.md).  
   
- Por convención, los nombres de delegados de controladores de eventos definidos por el tiempo de ejecución de Windows tienen el formato * EventHandler; por ejemplo, RoutedEventHandler, SizeChangedEventHandler o SuspendingEventHandler. También por convención, los delegados de controladores de eventos tienen dos parámetros y devuelven void. En un delegado que no tiene parámetros de tipo, el primer parámetro es de tipo [Platform::Object^](../cppcx/platform-object-class.md); contiene una referencia al remitente, que es el objeto que desencadenó el evento. Tienes que volver a convertir al tipo original antes de usar el argumento en el método de controlador de eventos. En un delegado de controlador de eventos que tiene parámetros de tipo, el primer parámetro de tipo especifica el tipo del remitente y el segundo parámetro es un identificador de una clase ref que contiene información sobre el evento. Por convención, esa clase se denomina \*EventArgs. Por ejemplo, un delegado RoutedEventHandler tiene un segundo parámetro de tipo RoutedEventArgs^ y DragEventHander tiene un segundo parámetro de tipo DragEventArgs^.  
+ Por convención, los nombres de delegado de controlador de eventos definidos por el tiempo de ejecución de Windows tienen el formato * EventHandler; por ejemplo, RoutedEventHandler, SizeChangedEventHandler o SuspendingEventHandler. También por convención, los delegados de controladores de eventos tienen dos parámetros y devuelven void. En un delegado que no tiene parámetros de tipo, el primer parámetro es de tipo [Platform::Object^](../cppcx/platform-object-class.md); contiene una referencia al remitente, que es el objeto que desencadenó el evento. Tienes que volver a convertir al tipo original antes de usar el argumento en el método de controlador de eventos. En un delegado de controlador de eventos que tiene parámetros de tipo, el primer parámetro de tipo especifica el tipo del remitente y el segundo parámetro es un identificador de una clase ref que contiene información sobre el evento. Por convención, la clase se denomina \*EventArgs. Por ejemplo, un delegado RoutedEventHandler tiene un segundo parámetro de tipo RoutedEventArgs^ y DragEventHander tiene un segundo parámetro de tipo DragEventArgs^.  
   
  Por convención, los delegados que contienen el código que se ejecuta cuando se completa una operación asincrónica se denominan *CompletedHandler. Estos delegados se definen como propiedades en la clase, no como eventos. Por consiguiente, no se utiliza el operador `+=` para suscribirse a ellas; solo tienes que asignar un objeto de delegado a la propiedad.  
   
@@ -58,7 +58,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 >  IntelliSense de C++ no muestra la firma completa de delegado; por tanto, no ayuda a determinar el tipo específico del parámetro EventArgs. Para encontrar el tipo, puedes ir al **Examinador de objetos** y ver el método `Invoke` para el delegado.  
   
 ## <a name="creating-custom-delegates"></a>Crear delegados personalizados  
- Puede definir sus propios delegados para definir controladores de eventos o para permitir que los consumidores pasen funcionalidad personalizada para el componente en tiempo de ejecución de Windows. Como cualquier otro tipo en tiempo de ejecución de Windows, un delegado público no se puede declarar como genérico.  
+ Puede definir sus propios delegados para definir controladores de eventos o para permitir que los consumidores pasen funcionalidad personalizada a su componente en tiempo de ejecución de Windows. Como cualquier otro tipo en tiempo de ejecución de Windows, un delegado público no se puede declarar como genérico.  
   
 ### <a name="declaration"></a>Declaración  
  La declaración de un delegado es similar a una declaración de función salvo que el delegado es un tipo. Normalmente, declaras un delegado en el ámbito del espacio de nombres, aunque también puedes anidar una declaración de delegado en una declaración de clase. El delegado siguiente encapsula cualquier función que toma `ContactInfo^` como entrada y devuelve `Platform::String^`.  
@@ -70,9 +70,9 @@ event PrimeFoundHandler^ primeFoundEvent;
  [!code-cpp[Cx_delegates#112](../cppcx/codesnippet/CPP/delegatesevents/class1.h#112)]  
   
 > [!NOTE]
->  Utiliza el "^" de símbolos cuando se hace referencia al tipo de delegado, igual que con cualquier tiempo de ejecución de Windows tipo de referencia.  
+>  Usa el "^" símbolos cuando se hace referencia al tipo de delegado, igual que con cualquier tiempo de ejecución de Windows tipo de referencia.  
   
- Una declaración de evento siempre tiene un tipo de delegado. Este ejemplo muestra un delegado típico signatura de tipo en el tiempo de ejecución de Windows:  
+ Una declaración de evento siempre tiene un tipo de delegado. Este ejemplo muestra un delegado habitual signatura de tipo en tiempo de ejecución de Windows:  
   
  [!code-cpp[cx_delegates#122](../cppcx/codesnippet/CPP/delegatesevents/class1.h#122)]  
   
@@ -86,7 +86,7 @@ event PrimeFoundHandler^ primeFoundEvent;
   
  [!code-cpp[Cx_delegates#114](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#114)]  
   
- En el ejemplo siguiente, una aplicación cliente pasa un delegado personalizado a un método público en un componente en tiempo de ejecución de Windows que ejecuta el delegado en cada elemento de un `Vector`:  
+ En el ejemplo siguiente, una aplicación cliente pasa un delegado personalizado a un método público de un componente de tiempo de ejecución de Windows que ejecuta el delegado en cada elemento en un `Vector`:  
   
  [!code-cpp[Cx_delegates#118](../cppcx/codesnippet/CPP/clientapp/mainpage.xaml.cpp#118)]  
   
@@ -122,7 +122,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 ## <a name="delegates-and-threads"></a>Delegados y subprocesos  
  Un delegado, como un objeto de función, contiene código que se ejecutará en algún momento en el futuro. Si el código que crea y pasa el delegado, y la función que acepta y ejecuta el delegado, se están ejecutando en el mismo subproceso, las cosas son relativamente simples. Si ese subproceso es el subproceso de la interfaz de usuario, el delegado puede manipular directamente objetos de la interfaz de usuario como controles XAML.  
   
- Si una aplicación cliente carga un componente en tiempo de ejecución de Windows que se ejecuta en un contenedor uniproceso y proporciona a un delegado a ese componente, a continuación, de forma predeterminada el delegado se invoca directamente en el subproceso STA. Puede ejecutar la mayoría de los componentes de Windows en tiempo de ejecución en STA o MTA.  
+ A continuación, si una aplicación cliente carga un componente en tiempo de ejecución de Windows que se ejecuta en un contenedor uniproceso y proporciona a un delegado a ese componente, de forma predeterminada el delegado se invoca directamente en el subproceso STA. Puede ejecutar la mayoría de los componentes de Windows en tiempo de ejecución en STA o MTA.  
   
  Si el código que ejecuta el delegado se está ejecutando en otro subproceso (por ejemplo, en el contexto de un objeto concurrency::task), tú eres responsable de sincronizar el acceso a los datos compartidos. Por ejemplo, si tu delegado contiene una referencia a un Vector y un control XAML tiene una referencia a ese mismo Vector, debes realizar los pasos necesarios para evitar interbloqueos o condiciones de carrera que pueden producirse cuando tanto el delegado como el control XAML intentan obtener acceso al Vector al mismo tiempo. También debes tener cuidado para que el delegado no intente capturar por referencia las variables locales que podrían salir del ámbito antes de que se invoque el delegado.  
   

@@ -17,71 +17,76 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af30716208b4caf949630ba5f6965fcc6a1a54c2
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 449887e2424ce86fd97407b416e741c908910dfa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017063"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592016"
 ---
 # <a name="restricted"></a>restricted
-Especifica que un miembro de un módulo, interfaz o dispinterface no se puede llamar arbitrariamente.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-[ restricted(  
-   interfaces  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *interfaces*  
- Una o más interfaces que no se llama de forma arbitraria en un objeto COM. Este parámetro solo es válido cuando se aplica a una clase.  
-  
-## <a name="remarks"></a>Comentarios  
- El **restringido** atributo de C++ tiene la misma funcionalidad que el [restringido](http://msdn.microsoft.com/library/windows/desktop/aa367157) atributo MIDL.  
-  
-## <a name="example"></a>Ejemplo  
- El código siguiente muestra cómo usar el **restringido** atributo:  
-  
-```cpp  
-// cpp_attr_ref_restricted.cpp  
-// compile with: /LD  
-#include "windows.h"  
-#include "unknwn.h"  
-[module(name="MyLib")];  
-  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface a  
-{  
-};  
-  
-[object, uuid("00000000-0000-0000-0000-000000000002")]  
-__interface b  
-{  
-};  
-  
-[coclass, restricted(a,b), uuid("00000000-0000-0000-0000-000000000003")]  
-class c : public a, public b  
-{  
-};  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|Método, la interfaz **interfaz**, **clase**, **struct**|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|**coclase** (cuando se aplica a **clase** o **struct**)|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de interfaz](../windows/interface-attributes.md)   
- [Atributos de método](../windows/method-attributes.md)   
+
+Especifica que un miembro de un módulo, interfaz o dispinterface no se puede llamar arbitrariamente.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[ restricted(
+   interfaces
+) ]
+```
+
+### <a name="parameters"></a>Parámetros
+
+*interfaces*  
+Una o más interfaces que no se llama de forma arbitraria en un objeto COM. Este parámetro solo es válido cuando se aplica a una clase.
+
+## <a name="remarks"></a>Comentarios
+
+El **restringido** atributo de C++ tiene la misma funcionalidad que el [restringido](http://msdn.microsoft.com/library/windows/desktop/aa367157) atributo MIDL.
+
+## <a name="example"></a>Ejemplo
+
+El código siguiente muestra cómo usar el **restringido** atributo:
+
+```cpp
+// cpp_attr_ref_restricted.cpp
+// compile with: /LD
+#include "windows.h"
+#include "unknwn.h"
+[module(name="MyLib")];
+
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface a
+{
+};
+
+[object, uuid("00000000-0000-0000-0000-000000000002")]
+__interface b
+{
+};
+
+[coclass, restricted(a,b), uuid("00000000-0000-0000-0000-000000000003")]
+class c : public a, public b
+{
+};
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|Método, la interfaz **interfaz**, **clase**, **struct**|
+|**Reiterativo**|No|
+|**Atributos requeridos**|**coclase** (cuando se aplica a **clase** o **struct**)|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos de interfaz](../windows/interface-attributes.md)  
+[Atributos de método](../windows/method-attributes.md)  

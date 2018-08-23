@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b648718c715a43befbc5ead828c810dbfa92d120
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6297b2d9313a8bc2c7a4f90632affa054c49c662
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646879"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595272"
 ---
 # <a name="asyncbaseoncancel-method"></a>AsyncBase::OnCancel (Método)
-Cuando se invalida en una clase derivada, cancela una operación asincrónica.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-virtual void OnCancel(  
-   void  
-) = 0;  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)   
- [AsyncBase::Cancel (método)](../windows/asyncbase-cancel-method.md)
+
+Cuando se invalida en una clase derivada, cancela una operación asincrónica.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+virtual void OnCancel(
+   void
+) = 0;
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)  
+[AsyncBase::Cancel (método)](../windows/asyncbase-cancel-method.md)

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aa2f0dffd33f0ac885753e4c7fb7f413d755149
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 445e4c9e5c3c7a71d527b6a378cad9e1d767354a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020335"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604736"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Utilizar tipos de datos de TCHAR.H con código _MBCS
 Cuando la constante de manifiesto `_MBCS` está definido, se asigna una rutina de texto genérico determinada a uno de los siguientes tipos de rutinas:  

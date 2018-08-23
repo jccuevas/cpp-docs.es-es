@@ -1,5 +1,5 @@
 ---
-title: Heapentryhandler (delegado) | Documentos de Microsoft
+title: Heapentryhandler (delegado) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details::HeapEntryHandler Delegate
 ms.assetid: 97ba4e47-ac0f-47c6-a93c-67a21c0a16d3
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c47a078dc7269a18af21a6af1923871d53b910bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3526aed9f8acd4c1d385e5b5b0311200dcfd9b54
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087070"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584495"
 ---
 # <a name="platformdetailsheapentryhandler-delegate"></a>Platform::Details::HeapEntryHandler (Delegado)
 Este delegado solo está previsto para uso interno y no para utilizarlo en el desarrollo.  
@@ -44,4 +44,4 @@ delegate HeapEntryHandler;
  **Espacio de nombres:** Platform::Details  
   
 ## <a name="see-also"></a>Vea también  
- [Namespace de plataforma](platform-namespace-c-cx.md)
+ [Plataforma Namespace](platform-namespace-c-cx.md)

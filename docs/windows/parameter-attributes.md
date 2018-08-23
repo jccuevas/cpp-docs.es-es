@@ -16,36 +16,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f96c5e3bcdd48f4fe3144b0e8885e82c2093a1d3
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: aa757834e61dab89ce6ff4682bd9a390c9b650bf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608850"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598702"
 ---
 # <a name="parameter-attributes"></a>Atributos de parámetro
-Los siguientes atributos se aplican a los parámetros de un método en una clase o interfaz.  
-  
-|Atributo|Descripción|  
-|---------------|-----------------|  
-|[Personalizado](../windows/custom-cpp.md)|Le permite definir su propio atributo.|  
-|[defaultvalue](../windows/defaultvalue.md)|Permite especificar un valor predeterminado para un parámetro opcional con tipo.|  
-|[first_is](../windows/first-is.md)|Especifica el índice del primer elemento de matriz que se transmitan.|  
-|[iid_is](../windows/iid-is.md)|Especifica el índice del primer elemento de matriz que se transmitan.|  
-|[immediatebind](../windows/immediatebind.md)|Indica que la base de datos será notificada inmediatamente de todos los cambios a una propiedad de un objeto enlazado a datos.|  
-|[in](../windows/in-cpp.md)|Indica que es un parámetro que se pasan desde el procedimiento que realiza la llamada al procedimiento llamado.|  
-|[last_is](../windows/last-is.md)|Especifica el índice del último elemento de matriz que se transmitan.|  
-|[lcid](../windows/lcid.md)|Le permite pasar un identificador de configuración regional a una función.|  
-|[length_is](../windows/length-is.md)|Especifica el número de elementos de matriz que se transmitan.|  
-|[max_is](../windows/max-is.md)|Designa el valor máximo para un índice de matriz válida.|  
-|[Opcional](../windows/optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|  
-|[out](../windows/out-cpp.md)|Identifica los parámetros de puntero devueltos desde el procedimiento llamado al procedimiento que realiza la llamada (desde el servidor al cliente).|  
-|[intervalo](../windows/range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|  
-|[ref](../windows/ref-cpp.md)|Identifica un puntero de referencia.|  
-|[retval](../windows/retval.md)|Designa el parámetro que recibe el valor devuelto del miembro.|  
-|[satype](../windows/satype.md)|Especifica el tipo de datos de la `SAFEARRAY` estructura.|  
-|[size_is](../windows/size-is.md)|Especifica el tamaño de memoria asignada para los punteros de tamaño, tamaño de punteros a punteros de tamaño y solo - o matrices multidimensionales.|  
-|[unique](../windows/unique-cpp.md)|Especifica un puntero único.|  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos por uso](../windows/attributes-by-usage.md)
+
+Los siguientes atributos se aplican a los parámetros de un método en una clase o interfaz.
+
+|Atributo|Descripción|
+|---------------|-----------------|
+|[Personalizado](../windows/custom-cpp.md)|Le permite definir su propio atributo.|
+|[defaultvalue](../windows/defaultvalue.md)|Permite especificar un valor predeterminado para un parámetro opcional con tipo.|
+|[first_is](../windows/first-is.md)|Especifica el índice del primer elemento de matriz que se transmitan.|
+|[iid_is](../windows/iid-is.md)|Especifica el índice del primer elemento de matriz que se transmitan.|
+|[immediatebind](../windows/immediatebind.md)|Indica que la base de datos será notificada inmediatamente de todos los cambios a una propiedad de un objeto enlazado a datos.|
+|[in](../windows/in-cpp.md)|Indica que es un parámetro que se pasan desde el procedimiento que realiza la llamada al procedimiento llamado.|
+|[last_is](../windows/last-is.md)|Especifica el índice del último elemento de matriz que se transmitan.|
+|[lcid](../windows/lcid.md)|Le permite pasar un identificador de configuración regional a una función.|
+|[length_is](../windows/length-is.md)|Especifica el número de elementos de matriz que se transmitan.|
+|[max_is](../windows/max-is.md)|Designa el valor máximo para un índice de matriz válida.|
+|[Opcional](../windows/optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|
+|[out](../windows/out-cpp.md)|Identifica los parámetros de puntero devueltos desde el procedimiento llamado al procedimiento que realiza la llamada (desde el servidor al cliente).|
+|[intervalo](../windows/range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|
+|[ref](../windows/ref-cpp.md)|Identifica un puntero de referencia.|
+|[retval](../windows/retval.md)|Designa el parámetro que recibe el valor devuelto del miembro.|
+|[satype](../windows/satype.md)|Especifica el tipo de datos de la `SAFEARRAY` estructura.|
+|[size_is](../windows/size-is.md)|Especifica el tamaño de memoria asignada para los punteros de tamaño, tamaño de punteros a punteros de tamaño y solo - o matrices multidimensionales.|
+|[unique](../windows/unique-cpp.md)|Especifica un puntero único.|
+
+## <a name="see-also"></a>Vea también
+
+[Atributos por uso](../windows/attributes-by-usage.md)

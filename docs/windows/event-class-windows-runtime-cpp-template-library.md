@@ -15,45 +15,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c07d58f244bf2e7e6c9329196bae7b5bb323ce12
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b40e9c5e04c21cdbcc56581e02751edc84e4617d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644169"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606294"
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Event (Clase) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)
-Representa un evento.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-class Event : public HandleT<HandleTraits::EventTraits>;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Event::Event (constructor) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Inicializa una nueva instancia de la **eventos** clase.|  
-  
-### <a name="public-operators"></a>Operadores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Event::operator= (operador)](../windows/event-operator-assign-operator.md)|Asigna especificado **eventos** referencia a la actual **eventos** instancia.|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `HandleT`  
-  
- `Event`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)
+
+Representa un evento.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+class Event : public HandleT<HandleTraits::EventTraits>;
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[Event::Event (constructor) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Inicializa una nueva instancia de la **eventos** clase.|
+
+### <a name="public-operators"></a>Operadores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[Event::operator= (operador)](../windows/event-operator-assign-operator.md)|Asigna especificado **eventos** referencia a la actual **eventos** instancia.|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`HandleT`
+
+`Event`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)

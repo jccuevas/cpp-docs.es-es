@@ -17,58 +17,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d6f6a4dc4f23460b3661da4ed3775708cac9b6d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 551ae176504e3bbbca034ca91894ef793ea268fd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016182"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584347"
 ---
 # <a name="includelib-c"></a>includelib (C++)
-Hace que un archivo IDL o .h para incluirse en el archivo .idl generado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-[ includelib(  
-   name.idl  
-) ];  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *Name.idl*  
- El nombre del archivo .idl que desee incluir como parte del archivo .idl generado.  
-  
-## <a name="remarks"></a>Comentarios  
- El **includelib** atributo de C++ hace que un archivo IDL o .h para incluirse en el archivo .idl generado después de la `importlib` instrucción.  
-  
-## <a name="example"></a>Ejemplo  
- El código siguiente se muestra en un archivo. cpp:  
-  
-```cpp  
-// cpp_attr_ref_includelib.cpp  
-// compile with: /LD  
-[module(name="MyLib")];  
-[includelib("includelib.idl")];  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|En cualquier lugar|  
-|**Reiterativo**|Sí|  
-|**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos independientes](../windows/stand-alone-attributes.md)   
- [Importación](../windows/import.md)   
- [importidl](../windows/importidl.md)   
- [incluir](../windows/include-cpp.md)   
- [importlib](../windows/importlib.md)   
+
+Hace que un archivo IDL o .h para incluirse en el archivo .idl generado.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[ includelib(
+   name.idl
+) ];
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Name.idl*  
+El nombre del archivo .idl que desee incluir como parte del archivo .idl generado.
+
+## <a name="remarks"></a>Comentarios
+
+El **includelib** atributo de C++ hace que un archivo IDL o .h para incluirse en el archivo .idl generado después de la `importlib` instrucción.
+
+## <a name="example"></a>Ejemplo
+
+El código siguiente se muestra en un archivo. cpp:
+
+```cpp
+// cpp_attr_ref_includelib.cpp
+// compile with: /LD
+[module(name="MyLib")];
+[includelib("includelib.idl")];
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|En cualquier lugar|
+|**Reiterativo**|Sí|
+|**Atributos requeridos**|Ninguna|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos independientes](../windows/stand-alone-attributes.md)  
+[import](../windows/import.md)  
+[importidl](../windows/importidl.md)  
+[include](../windows/include-cpp.md)  
+[importlib](../windows/importlib.md)  

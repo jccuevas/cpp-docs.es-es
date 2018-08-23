@@ -17,41 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14e3d81ca273bf96b4812f08a46904c9d521c5cf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c4981c7f82fe2c544bf907ac59d6e9ca22105cbd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650487"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592542"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct (estructura)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-struct BoolStruct;  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El **BoolStruct** estructura define si un `ComPtr` administra la duración del objeto de una interfaz. **BoolStruct** usa internamente el [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operador.  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-data-members"></a>Miembros de datos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[BoolStruct::Member (miembro de datos)](../windows/boolstruct-member-data-member.md)|Especifica que un [ComPtr](../windows/comptr-class.md) es o no, es administrar la vigencia del objeto de una interfaz.|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `BoolStruct`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** internal.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [Wrl Namespace](../windows/microsoft-wrl-details-namespace.md)   
- [ComPtr::operator Microsoft::WRL::Details::BoolType (operador)](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+struct BoolStruct;
+```
+
+## <a name="remarks"></a>Comentarios
+
+El **BoolStruct** estructura define si un `ComPtr` administra la duración del objeto de una interfaz. **BoolStruct** usa internamente el [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operador.
+
+## <a name="members"></a>Miembros
+
+### <a name="public-data-members"></a>Miembros de datos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[BoolStruct::Member (miembro de datos)](../windows/boolstruct-member-data-member.md)|Especifica que un [ComPtr](../windows/comptr-class.md) es o no, es administrar la vigencia del objeto de una interfaz.|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`BoolStruct`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** internal.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)  
+[ComPtr::operator Microsoft::WRL::Details::BoolType (operador)](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)

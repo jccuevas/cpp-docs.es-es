@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4bdbf1b2615a87b39797f2ff4e6e188c338dd5e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d2972938b28f2a5bef9fdc648591cea3101d5e7a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015864"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597915"
 ---
 # <a name="srwlocksrwlock-constructor"></a>SRWLock::SRWLock (Constructor)
-Inicializa una nueva instancia de la **SRWLock** clase.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-SRWLock();  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [SRWLock (clase)](../windows/srwlock-class.md)
+
+Inicializa una nueva instancia de la **SRWLock** clase.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+SRWLock();
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[SRWLock (clase)](../windows/srwlock-class.md)

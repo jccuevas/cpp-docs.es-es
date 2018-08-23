@@ -17,57 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18308cc66e2a01aa5e0396f098096ee9d49416bf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 873527b76e9194fb4b38ee2f5598cf07028e0449
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644335"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591516"
 ---
 # <a name="dispinterface"></a>dispinterface
-Coloca una interfaz en el archivo .idl como interfaz de envío.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-[dispinterface]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Cuando el atributo de C++ **dispinterface** precede a una interfaz, hace que esta se coloque dentro del bloque de biblioteca del archivo .idl generado.  
-  
- A menos que especifique una clase base, se derivará una interfaz de envío de `IDispatch`. Debe especificar un [id](../windows/id.md) para los miembros de una interfaz de envío.  
-  
- El ejemplo de uso de [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) en la documentación de MIDL:  
-  
-```cpp  
-dispinterface helloPro   
-   { interface hello; };   
-```  
-  
- no es válido para el atributo **dispinterface** .  
-  
-## <a name="example"></a>Ejemplo  
- Consulte el ejemplo de [bindable](../windows/bindable.md) para ver un ejemplo de cómo usar **dispinterface**.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|**interface**|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|  
-  
- Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos por uso](../windows/attributes-by-usage.md)   
- [UUID](../windows/uuid-cpp-attributes.md)   
- [Dual](../windows/dual.md)   
- [Personalizado](../windows/custom-cpp.md)   
- [object](../windows/object-cpp.md)   
- [__interface](../cpp/interface.md)   
+
+Coloca una interfaz en el archivo .idl como interfaz de envío.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[dispinterface]
+```
+
+## <a name="remarks"></a>Comentarios
+
+Cuando el atributo de C++ **dispinterface** precede a una interfaz, hace que esta se coloque dentro del bloque de biblioteca del archivo .idl generado.
+
+A menos que especifique una clase base, se derivará una interfaz de envío de `IDispatch`. Debe especificar un [id](../windows/id.md) para los miembros de una interfaz de envío.
+
+El ejemplo de uso de [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) en la documentación de MIDL:
+
+```cpp
+dispinterface helloPro
+   { interface hello; };
+```
+
+no es válido para el atributo **dispinterface** .
+
+## <a name="example"></a>Ejemplo
+
+Consulte el ejemplo de [bindable](../windows/bindable.md) para ver un ejemplo de cómo usar **dispinterface**.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|**interface**|
+|**Reiterativo**|No|
+|**Atributos requeridos**|Ninguna|
+|**Atributos no válidos**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
+
+Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos por uso](../windows/attributes-by-usage.md)  
+[uuid](../windows/uuid-cpp-attributes.md)  
+[dual](../windows/dual.md)  
+[Personalizado](../windows/custom-cpp.md)  
+[object](../windows/object-cpp.md)  
+[__interface](../cpp/interface.md)  

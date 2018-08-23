@@ -1,5 +1,5 @@
 ---
-title: STAThreadAttribute (clase) | Documentos de Microsoft
+title: STAThreadAttribute (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab58409bf86af77c9b1f751b9978b5e7103bd043
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90194dd72b5192fab71065c2275adb4e066bcb0e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089358"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590788"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute (Clase)
 Indica que el modelo de subprocesamiento de una aplicación es un contenedor uniproceso (STA).  
@@ -44,7 +44,7 @@ public ref class STAThreadAttribute sealed : Attribute
 |[STAThreadAttribute (Constructor 1)](#ctor)|Inicializa una nueva instancia de la clase.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
- El atributo STAThreadAttribute hereda de [clase Platform:: Object](../cppcx/platform-object-class.md). STAThreadAttribute también sobrecarga o tiene los siguientes miembros:  
+ El atributo STAThreadAttribute hereda de [Platform:: Object Class](../cppcx/platform-object-class.md). STAThreadAttribute también sobrecarga o tiene los siguientes miembros:  
   
 |nombre|Descripción|  
 |----------|-----------------|  
@@ -120,4 +120,4 @@ public:String^ ToString()
 
   
 ## <a name="see-also"></a>Vea también  
- [Namespace de plataforma](platform-namespace-c-cx.md)
+ [Plataforma Namespace](platform-namespace-c-cx.md)

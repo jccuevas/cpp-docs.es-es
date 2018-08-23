@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abc30204969464323d4995310cee0866139734fc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 84db0a82dfe6f9333f6a533aa9bc2bb529854fa2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648014"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593417"
 ---
 # <a name="comptrdetach-method"></a>ComPtr::Detach (Método)
-Desasocia esta **ComPtr** objeto desde la interfaz que representa.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-T* Detach();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Un puntero a la interfaz que se ha representado por este **ComPtr** objeto.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [ComPtr (clase)](../windows/comptr-class.md)
+
+Desasocia esta **ComPtr** objeto desde la interfaz que representa.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+T* Detach();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Un puntero a la interfaz que se ha representado por este **ComPtr** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[ComPtr (clase)](../windows/comptr-class.md)

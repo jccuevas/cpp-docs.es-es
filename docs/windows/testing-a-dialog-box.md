@@ -17,41 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 94d08cc865b6388010dc07ef965f60edbf6796ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019683"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587525"
 ---
 # <a name="testing-a-dialog-box"></a>Probar un cuadro de diálogo
-Cuando se está diseñando un cuadro de diálogo, se puede simular y probar su comportamiento en tiempo de ejecución sin compilar el programa. En este modo, se puede:  
-  
--   Escribir texto, seleccionar opciones de listas de cuadro combinado, activar y desactivar opciones y elegir comandos.  
-  
--   Probar el orden de tabulación.  
-  
--   Probar la agrupación de controles, como botones de radio y casillas.  
-  
--   Probar los métodos abreviados de teclado para los controles del cuadro de diálogo.  
-  
-    > [!NOTE]
-    >  Las conexiones con el código del cuadro de diálogo realizadas mediante asistentes no se incluyen en la simulación.  
-  
- Cuando se prueba un cuadro de diálogo, normalmente se muestra en una ubicación relativa a la ventana principal del programa. Si ha configurado el cuadro de diálogo **Absolute Align** propiedad **True**, muestra el cuadro de diálogo en una posición relativa a la esquina superior izquierda de la pantalla.  
-  
-### <a name="to-test-a-dialog-box"></a>Para probar un cuadro de diálogo  
-  
-1.  Cuando el **diálogo** editor es la ventana activa, en la barra de menús, elija **formato** > **Probar cuadro de diálogo**.  
-  
-2.  Para finalizar la simulación, presione **Esc**, o elija simplemente el **cerrar** botón en el cuadro de diálogo que se está probando.  
-  
- Para obtener información acerca de cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
- [Editor de cuadro de diálogo](../windows/dialog-editor.md)   
- [Mostrar u ocultar la barra de herramientas del Editor de cuadros de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
+
+Cuando se está diseñando un cuadro de diálogo, se puede simular y probar su comportamiento en tiempo de ejecución sin compilar el programa. En este modo, se puede:
+
+- Escribir texto, seleccionar opciones de listas de cuadro combinado, activar y desactivar opciones y elegir comandos.
+
+- Probar el orden de tabulación.
+
+- Probar la agrupación de controles, como botones de radio y casillas.
+
+- Probar los métodos abreviados de teclado para los controles del cuadro de diálogo.
+
+   > [!NOTE]
+   > Las conexiones con el código del cuadro de diálogo realizadas mediante asistentes no se incluyen en la simulación.
+
+Cuando se prueba un cuadro de diálogo, normalmente se muestra en una ubicación relativa a la ventana principal del programa. Si ha configurado el cuadro de diálogo **Absolute Align** propiedad **True**, muestra el cuadro de diálogo en una posición relativa a la esquina superior izquierda de la pantalla.
+
+### <a name="to-test-a-dialog-box"></a>Para probar un cuadro de diálogo
+
+1. Cuando el **diálogo** editor es la ventana activa, en la barra de menús, elija **formato** > **Probar cuadro de diálogo**.
+
+2. Para finalizar la simulación, presione **Esc**, o elija simplemente el **cerrar** botón en el cuadro de diálogo que se está probando.
+
+Para obtener información acerca de cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Editor de cuadros de diálogo](../windows/dialog-editor.md)  
+[Mostrar u ocultar la barra de herramientas del Editor de cuadros de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)

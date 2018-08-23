@@ -1,5 +1,5 @@
 ---
-title: Writeonlyarray (clase) | Documentos de Microsoft
+title: Writeonlyarray (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c1f1f0260d4f1d1c4a6fb640b7cbf1e9d3f2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091492"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603351"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (Clase)
 Representa una matriz unidimensional que se utiliza como parámetro de entrada cuando el llamador pasa una matriz para el método que se va a rellenar.  
@@ -46,10 +46,10 @@ private ref class WriteOnlyArray<T, 1>
 |nombre|Descripción|  
 |----------|-----------------|  
 
-|[Writeonlyarray:: BEGIN](#begin)| Un iterador que apunta al primer elemento de la matriz. |  
+|[Writeonlyarray](#begin)| Un iterador que apunta al primer elemento de la matriz. |  
 |[Writeonlyarray](#data)| Un puntero al búfer de datos. |  
-|[Writeonlyarray:: end](#end)| Un iterador que apunta a uno más allá del último elemento de la matriz. |  
-|[Writeonlyarray](#fastpass)| Indica si la matriz puede usar el mecanismo FastPass, que es una optimización realizada por el sistema de manera transparente. No utilices esto en el código |  
+|[Writeonlyarray](#end)| Un iterador que apunta a uno más allá del último elemento de la matriz. |  
+|[Fastpass](#fastpass)| Indica si la matriz puede usar el mecanismo FastPass, que es una optimización realizada de forma transparente por el sistema. No utilices esto en el código |  
 |[Writeonlyarray](#length)| Devuelve el número de elementos de la matriz. |  
 |[Writeonlyarray](#set)| Establece el elemento especificado en el valor especificado. |  
 
@@ -130,7 +130,7 @@ property bool FastPass{
   
 
 
-## <a name="get"></a>  Writeonlyarray:: Get (método)
+## <a name="get"></a>  Writeonlyarray (método)
 Devuelve el elemento que se encuentra en el índice especificado.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -191,5 +191,5 @@ T& set(
   
   
 ## <a name="see-also"></a>Vea también  
- [Namespace de plataforma](platform-namespace-c-cx.md)   
+ [Plataforma Namespace](platform-namespace-c-cx.md)   
  [Crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

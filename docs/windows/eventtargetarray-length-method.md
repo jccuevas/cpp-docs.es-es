@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30386120492bcabd7ec1fc07f82e5e1ffd9c1821
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 88f8402cb6a01bc46aa25f99b2b8c60151a698ce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653110"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604041"
 ---
 # <a name="eventtargetarraylength-method"></a>EventTargetArray::Length (Método)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-size_t Length();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- El número actual de elementos de la matriz interna de controladores de eventos.  
-  
-## <a name="remarks"></a>Comentarios  
- Obtiene el número actual de elementos de la matriz interna de controladores de eventos.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** event.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [EventTargetArray (clase)](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+size_t Length();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+El número actual de elementos de la matriz interna de controladores de eventos.
+
+## <a name="remarks"></a>Comentarios
+
+Obtiene el número actual de elementos de la matriz interna de controladores de eventos.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** event.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[EventTargetArray (clase)](../windows/eventtargetarray-class.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

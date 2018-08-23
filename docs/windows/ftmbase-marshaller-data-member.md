@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37ad18c3daf6aee24c2e7c0c4c08c35caf87a602
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 27c94442c8b64a635439f42208d0b7b0d1876da1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642041"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596427"
 ---
 # <a name="ftmbasemarshaller-data-member"></a>FtmBase::marshaller_ (Miembro de datos)
-Contiene una referencia para el contador de referencias de subproceso libre.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** ftm.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [FtmBase (clase)](../windows/ftmbase-class.md)
+
+Contiene una referencia para el contador de referencias de subproceso libre.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** ftm.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[FtmBase (clase)](../windows/ftmbase-class.md)
