@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 01efd9bf3941a5b19e1f0fe6c106d47f1b6e9fcf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4a23445cc9df0553a40d4f78a7ce3095a343d5d0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642066"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599241"
 ---
 # <a name="criticalsectiontraitsgetinvalidvalue-method"></a>CriticalSectionTraits::GetInvalidValue (Método)
-Se especializa un **CriticalSection** plantilla para que la plantilla no siempre es válida.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-inline static Type GetInvalidValue();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Siempre devuelve un puntero a una sección crítica no válida.  
-  
-## <a name="remarks"></a>Comentarios  
- El `Type` modificador se define como `typedef CRITICAL_SECTION* Type;`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** handletraits  
-  
-## <a name="see-also"></a>Vea también  
- [CriticalSectionTraits (estructura)](../windows/criticalsectiontraits-structure.md)
+
+Se especializa un **CriticalSection** plantilla para que la plantilla no siempre es válida.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Siempre devuelve un puntero a una sección crítica no válida.
+
+## <a name="remarks"></a>Comentarios
+
+El `Type` modificador se define como `typedef CRITICAL_SECTION* Type;`.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** handletraits
+
+## <a name="see-also"></a>Vea también
+
+[CriticalSectionTraits (estructura)](../windows/criticalsectiontraits-structure.md)

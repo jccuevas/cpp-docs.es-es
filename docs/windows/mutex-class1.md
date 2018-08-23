@@ -17,55 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d65d7e2a1087dcce8eaee2fa132ae80d14073dda
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b20c270f7848a346d717357f474d89e37ea117a4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014944"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600033"
 ---
 # <a name="mutex-class1"></a>Mutex (Class1)
-Representa un objeto de sincronización que controla de forma exclusiva un recurso compartido.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-class Mutex : public HandleT<HandleTraits::MutexTraits>  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-typedefs"></a>Definiciones de tipos públicas  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|`SyncLock`|Un sinónimo de una clase que admita bloqueos sincrónicos.|  
-  
-### <a name="public-constructor"></a>Constructor público  
-  
-|nombre|Descripción|  
-|----------|-----------------|  
-|[Mutex::Mutex (constructor)](../windows/mutex-mutex-constructor.md)|Inicializa una nueva instancia de la **Mutex** clase.|  
-  
-### <a name="public-members"></a>Miembros públicos  
-  
-|nombre|Descripción|  
-|----------|-----------------|  
-|[Mutex::Lock (método)](../windows/mutex-lock-method.md)|Espera hasta que el objeto actual, o la **Mutex** objeto asociado con el identificador especificado, las versiones que ha transcurrido el intervalo de tiempo de espera especificado o de la exclusión mutua.|  
-  
-### <a name="public-operator"></a>Operador público  
-  
-|nombre|Descripción|  
-|----------|-----------------|  
-|[Mutex::operator= (operador)](../windows/mutex-operator-assign-operator.md)|Asigna (mueve) especificado **Mutex** el objeto actual **Mutex** objeto.|  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `Mutex`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)
+
+Representa un objeto de sincronización que controla de forma exclusiva un recurso compartido.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+class Mutex : public HandleT<HandleTraits::MutexTraits>
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-typedefs"></a>Definiciones de tipos públicas
+
+|Name|Descripción|
+|----------|-----------------|
+|`SyncLock`|Un sinónimo de una clase que admita bloqueos sincrónicos.|
+
+### <a name="public-constructor"></a>Constructor público
+
+|nombre|Descripción|
+|----------|-----------------|
+|[Mutex::Mutex (constructor)](../windows/mutex-mutex-constructor.md)|Inicializa una nueva instancia de la **Mutex** clase.|
+
+### <a name="public-members"></a>Miembros públicos
+
+|nombre|Descripción|
+|----------|-----------------|
+|[Mutex::Lock (método)](../windows/mutex-lock-method.md)|Espera hasta que el objeto actual, o la **Mutex** objeto asociado con el identificador especificado, las versiones que ha transcurrido el intervalo de tiempo de espera especificado o de la exclusión mutua.|
+
+### <a name="public-operator"></a>Operador público
+
+|nombre|Descripción|
+|----------|-----------------|
+|[Mutex::operator= (operador)](../windows/mutex-operator-assign-operator.md)|Asigna (mueve) especificado **Mutex** el objeto actual **Mutex** objeto.|
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`Mutex`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)

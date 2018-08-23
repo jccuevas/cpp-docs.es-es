@@ -1,23 +1,23 @@
 ---
-title: Propiedades (C++ / CX) | Documentos de Microsoft
+title: Propiedades (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6393b5e5849ab2198fa8d084c2c1d15838c69bdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089564"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600860"
 ---
 # <a name="properties-ccx"></a>Propiedades (C++/CX)
-Tipos de Windows Runtime exponen los datos públicos como propiedades. El código de cliente tiene acceso a la propiedad como un objeto datamember público. Internamente, la propiedad se implementa como un bloque que contiene un método de descriptor de acceso get, un método de descriptor de acceso set o ambos. Mediante los métodos de descriptor de acceso, puedes realizar acciones adicionales antes o después de recuperar el valor; por ejemplo, puedes desencadenar un evento o realizar comprobaciones de validación.  
+Los tipos en tiempo de ejecución de Windows exponen los datos públicos como propiedades. El código de cliente tiene acceso a la propiedad como un objeto datamember público. Internamente, la propiedad se implementa como un bloque que contiene un método de descriptor de acceso get, un método de descriptor de acceso set o ambos. Mediante los métodos de descriptor de acceso, puedes realizar acciones adicionales antes o después de recuperar el valor; por ejemplo, puedes desencadenar un evento o realizar comprobaciones de validación.  
   
 ### <a name="remarks"></a>Comentarios  
  El valor de una propiedad se incluye en una variable privada (conocida como *memoria auxiliar*) que es del mismo tipo que la propiedad. Una propiedad puede contener un descriptor de acceso set, que asigna un valor a la memoria auxiliar, y un descriptor de acceso get, que recupera el valor de la memoria auxiliar. La propiedad es de solo lectura si proporciona solo un descriptor de acceso get, de solo escritura si proporciona solo un descriptor de acceso set, y de lectura y escritura (modificable) si proporciona ambos descriptores de acceso.  

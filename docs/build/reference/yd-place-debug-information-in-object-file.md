@@ -1,5 +1,5 @@
 ---
-title: -Yd (incluir información de depuración en el archivo objeto) | Documentos de Microsoft
+title: -Yd (incluir información de depuración en el archivo objeto) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b03b0faf975caba8c5a287c88afcdf53f7a71f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86cb8a42b77cd0a932530455f1125125a9f546d9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378238"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42585972"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Incluir información de depuración en un archivo objeto)
-Prueba completada de información de depuración en todos los archivos de objeto creado a partir de un archivo de encabezado precompilado (.pch) cuando se usa con la [/Yc](../../build/reference/yc-create-precompiled-header-file.md) y [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opciones. Desusado.  
+Ritmo de completa información de depuración en todos los archivos objeto creado a partir de un archivo de encabezado precompilado (.pch) cuando se usa con el [/Yc](../../build/reference/yc-create-precompiled-header-file.md) y [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opciones. Desusado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,15 +36,15 @@ Prueba completada de información de depuración en todos los archivos de objeto
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- **/Yd** está en desuso; [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] ahora admite varios objetos de escritura en un archivo .pdb único, use **/Zi** en su lugar. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y quitar opciones de compilador** en [opciones de compilador enumerados por categoría](../../build/reference/compiler-options-listed-by-category.md).  
+ **/Yd** está en desuso; Visual C++ ahora admite varios objetos de escritura en un archivo .pdb único, use **/Zi** en su lugar. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y opciones del compilador quitó** en [Compiler Options Listed por categoría](../../build/reference/compiler-options-listed-by-category.md).  
   
- A menos que necesite distribuir una información de depuración que contiene la biblioteca, use la [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opción en lugar de **/Z7** y **/Yd**.  
+ A menos que necesite distribuir una información de depuración que contiene la biblioteca, utilice la [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opción lugar **/Z7** y **/Yd**.  
   
- Almacenar información de depuración completa en todos los archivos .obj sólo es necesario para distribuir bibliotecas que contienen información de depuración. Se reduce la compilación y se requiere espacio en disco considerable. Cuando **/Yc** y **/Z7** se usan sin **/Yd**, el compilador almacena la información de depuración común en el primer archivo .obj creado a partir del archivo .pch. El compilador no inserta esta información en los archivos .obj creados posteriormente desde el archivo .pch; Inserta las referencias cruzadas a la información. Independientemente de cuántos archivos .obj que use el archivo .pch, solo un archivo .obj contiene la información de depuración comunes.  
+ Almacenar información de depuración completa en todos los archivos .obj sólo es necesario para distribuir las bibliotecas que contienen información de depuración. Compilación de la que se ralentiza y requiere espacio en disco considerable. Cuando **/Yc** y **/Z7** se usan sin **/Yd**, el compilador almacena la información de depuración comunes en el primer archivo .obj creado a partir del archivo .pch. El compilador no inserta esta información en los archivos .obj creados posteriormente desde el archivo .pch; Inserta las referencias cruzadas a la información. Independientemente de cuántos archivos .obj que use el archivo .pch, solo un archivo .obj contiene la información de depuración comunes.  
   
- Aunque este comportamiento predeterminada produce más rápidamente el tiempo de compilación y reduce las demandas de espacio en disco, no es conveniente si un cambio pequeño requiere volver a generar el archivo .obj que contiene la información de depuración comunes. En este caso, el compilador debe volver a generar todos los archivos .obj que contengan referencias cruzadas al archivo .obj original. Además, si se utiliza un archivo .pch común por proyectos diferentes, dependencia de referencias cruzadas a un solo archivo .obj es difícil.  
+ Aunque este comportamiento predeterminado logra más rápido el tiempo de compilación y reduce la demanda de espacio en disco, es deseable un pequeño cambio requiere volver a generar el archivo .obj que contiene la información de depuración comunes. En este caso, el compilador debe volver a generar todos los archivos .obj que contiene referencias cruzadas al archivo .obj original. Además, si se usa un archivo .pch común por proyectos diferentes, dependencia de referencias cruzadas a un solo archivo .obj es difícil.  
   
- Para obtener más información sobre encabezados precompilados, vea:  
+ Para obtener más información sobre los encabezados precompilados, vea:  
   
 -   [/Y (Encabezados precompilados)](../../build/reference/y-precompiled-headers.md)  
   
@@ -52,7 +52,7 @@ Prueba completada de información de depuración en todos los archivos de objeto
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).  
   
 2.  Haga clic en la carpeta **C/C++** .  
   
@@ -72,7 +72,7 @@ Prueba completada de información de depuración en todos los archivos de objeto
 #include "etc.h"  
 ```  
   
- El siguiente comando crea el encabezado precompilado ETC.pch y el archivo objeto F.obj de archivos:  
+ El siguiente comando crea el encabezado precompilado ETC.pch y el archivo objeto F.obj archivos:  
   
 ```  
 CL /YcETC.H /Z7 F.CPP  
@@ -84,9 +84,9 @@ CL /YcETC.H /Z7 F.CPP
 CL /YuETC.H /Z7 G.CPP  
 ```  
   
- El archivo objeto G.obj no incluye la información de depuración para el encabezado precompilado pero simplemente hace referencia a esa información en el archivo F.obj. Tenga en cuenta que debe vincularse con el archivo F.obj.  
+ El archivo objeto G.obj no incluye la información de depuración para el encabezado precompilado pero simplemente hace referencia a esa información en el archivo F.obj. Tenga en cuenta que debe vincular con el archivo F.obj.  
   
- Si el encabezado precompilado no se compiló con **/Z7**, puede usarlo en posteriores compilaciones con **/Z7**. Sin embargo, la información de depuración se coloca en el archivo de objeto actual y los símbolos locales para las funciones y tipos definidos en el encabezado precompilado no estarán disponibles para el depurador.  
+ Si el encabezado precompilado no se compiló con **/Z7**, puede usarlo en posteriores compilaciones con **/Z7**. Sin embargo, la información de depuración se coloca en el archivo de objeto actual y los símbolos locales para las funciones y tipos definidos en el encabezado precompilado no están disponibles para el depurador.  
   
 ## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   

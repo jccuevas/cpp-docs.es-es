@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1530f7998f2597aeb2fe46dba09f4844b471cd93
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 417fd11017f9f70ee8cc247898e23741488ae5e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644835"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599993"
 ---
 # <a name="comptroperator-gt-operator"></a>Comptr:: operator -&gt; operador
-Recupera un puntero al tipo especificado por el parámetro de plantilla actual.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->() const;  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Puntero al tipo especificado por el nombre de tipo de plantilla actual.  
-  
-## <a name="remarks"></a>Comentarios  
- Esta función auxiliar quita deberse al uso de la macro STDMETHOD una sobrecarga innecesaria. Esta función realiza `IUnknown` tipos **privada** en lugar de **virtual**.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [ComPtr (clase)](../windows/comptr-class.md)
+
+Recupera un puntero al tipo especificado por el parámetro de plantilla actual.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->() const;
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Puntero al tipo especificado por el nombre de tipo de plantilla actual.
+
+## <a name="remarks"></a>Comentarios
+
+Esta función auxiliar quita deberse al uso de la macro STDMETHOD una sobrecarga innecesaria. Esta función realiza `IUnknown` tipos **privada** en lugar de **virtual**.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[ComPtr (clase)](../windows/comptr-class.md)

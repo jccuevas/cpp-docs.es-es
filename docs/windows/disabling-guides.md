@@ -18,42 +18,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f04a2e3c483c17a83cb5ab388c19dd9a2d0adf13
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9dd35bad3d7cf5a83ba25a6937ea606af81407c8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651962"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598926"
 ---
 # <a name="disabling-guides"></a>Deshabilitar guías
-Puede usar las teclas especiales junto con el mouse para deshabilitar el efecto de las guías de ajuste. Mediante el **Alt** clave deshabilita los efectos de ajuste de la Guía seleccionada. Mover una guía con el **MAYÚS** clave impide que los controles ajustados mover con la guía.  
-  
-### <a name="to-disable-the-snapping-effect-of-the-guides"></a>Para deshabilitar el efecto de ajuste de las guías  
-  
-1.  Arrastre el control mientras mantiene presionada la **Alt** clave.  
-  
-### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Para mover guías sin mover los controles ajustados  
-  
-1.  Arrastre la guía mientras mantiene presionada la **MAYÚS** clave.  
-  
-### <a name="to-turn-off-the-guides"></a>Para desactivar las guías  
-  
-1.  Desde el **formato** menú, elija **configuración de la guía**.  
-  
-2.  En el [cuadro de diálogo de configuración de guía](../windows/guide-settings-dialog-box.md), en **las guías de diseño**, seleccione **ninguno**.  
-  
-    > [!NOTE]
-    >  También puede haga doble clic en la barra de la regla para tener acceso a la **configuración de la guía** cuadro de diálogo.  
-  
- \- o -  
-  
--   En el **formato** menú, haga clic en **Alternar guías**.  
-  
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Estados del Editor de cuadro de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)   
- [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)
+
+Puede usar las teclas especiales junto con el mouse para deshabilitar el efecto de las guías de ajuste. Mediante el **Alt** clave deshabilita los efectos de ajuste de la Guía seleccionada. Mover una guía con el **MAYÚS** clave impide que los controles ajustados mover con la guía.
+
+### <a name="to-disable-the-snapping-effect-of-the-guides"></a>Para deshabilitar el efecto de ajuste de las guías
+
+1. Arrastre el control mientras mantiene presionada la **Alt** clave.
+
+### <a name="to-move-guides-without-moving-the-snapped-controls"></a>Para mover guías sin mover los controles ajustados
+
+1. Arrastre la guía mientras mantiene presionada la **MAYÚS** clave.
+
+### <a name="to-turn-off-the-guides"></a>Para desactivar las guías
+
+1. Desde el **formato** menú, elija **configuración de la guía**.
+
+2. En el [cuadro de diálogo de configuración de guía](../windows/guide-settings-dialog-box.md), en **las guías de diseño**, seleccione **ninguno**.
+
+   > [!NOTE]
+   > También puede haga doble clic en la barra de la regla para tener acceso a la **configuración de la guía** cuadro de diálogo.
+
+\- o -
+
+- En el **formato** menú, haga clic en **Alternar guías**.
+
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Estados del Editor de cuadros de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)
