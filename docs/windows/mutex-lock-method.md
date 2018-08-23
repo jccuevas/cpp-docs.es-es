@@ -17,42 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1dcb5b187944e58ff24f312fa376ff71e2cf63f3
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 38bd11620f8d403bbd1667ab6fa4f3f827362c88
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018642"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600878"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock (Método)
-Espera hasta que el objeto actual, o la **Mutex** objeto asociado con el identificador especificado, las versiones que ha transcurrido el intervalo de tiempo de espera especificado o de la exclusión mutua.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-SyncLock Lock(  
-   DWORD milliseconds = INFINITE  
-);  
-  
-static SyncLock Lock(  
-   HANDLE h,  
-   DWORD milliseconds = INFINITE  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *milisegundos*  
- El intervalo de tiempo de espera, en milisegundos. El valor predeterminado es infinito, que espera indefinidamente.  
-  
- *h*  
- El identificador de un **Mutex** objeto.  
-  
-## <a name="return-value"></a>Valor devuelto  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers
- 
- ## <a name="see-also"></a>Vea también
- [Mutex (clase)](../windows/mutex-class1.md)
+
+Espera hasta que el objeto actual, o la **Mutex** objeto asociado con el identificador especificado, las versiones que ha transcurrido el intervalo de tiempo de espera especificado o de la exclusión mutua.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+SyncLock Lock(
+   DWORD milliseconds = INFINITE
+);
+
+static SyncLock Lock(
+   HANDLE h,
+   DWORD milliseconds = INFINITE
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*milisegundos*  
+El intervalo de tiempo de espera, en milisegundos. El valor predeterminado es infinito, que espera indefinidamente.
+
+*h*  
+El identificador de un **Mutex** objeto.
+
+## <a name="return-value"></a>Valor devuelto
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+[Mutex (clase)](../windows/mutex-class1.md)

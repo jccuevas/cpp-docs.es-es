@@ -17,39 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b766858d0f558b4fdff3a703c612ec07c038abf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3a60d12adfade18c9989d1dc8609a38252d32073
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641925"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599103"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid (estructura)
-Indica a la `RuntimeClass`, `Implements` y `ChainInterfaces` plantillas que la interfaz especificada no es accesible en la lista IID.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-template<typename T>  
-struct CloakedIid : T;  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *T*  
- La interfaz que está oculto (escondida).  
-  
-## <a name="remarks"></a>Comentarios  
- El siguiente es un ejemplo de cómo **CloakedIid** sirve: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `T`  
-  
- `CloakedIid`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)
+
+Indica a la `RuntimeClass`, `Implements` y `ChainInterfaces` plantillas que la interfaz especificada no es accesible en la lista IID.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template<typename T>
+struct CloakedIid : T;
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*T*  
+La interfaz que está oculto (escondida).
+
+## <a name="remarks"></a>Comentarios
+
+El siguiente es un ejemplo de cómo **CloakedIid** sirve: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`T`
+
+`CloakedIid`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

@@ -17,72 +17,77 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: deda09913f2774a2b3b246a285df0c8b6f1c62eb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 70be45d1a7221590912ea71b38d3aa4404197df1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652830"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599133"
 ---
 # <a name="defaultvalue"></a>defaultvalue
-Permite especificar un valor predeterminado para un parámetro opcional con tipo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-[ defaultvalue= value ]  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *valor*  
- El valor predeterminado para el parámetro.  
-  
-## <a name="remarks"></a>Comentarios  
- El **defaultvalue** atributo de C++ tiene la misma funcionalidad que el [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) atributo MIDL.  
-  
-## <a name="example"></a>Ejemplo  
- El código siguiente muestra un método de interfaz mediante el **defaultvalue** atributo:  
-  
-```cpp  
-// cpp_attr_ref_defaultvalue.cpp  
-// compile with: /LD  
-#include <windows.h>  
-  
-[export] typedef long HRESULT;  
-[export, ptr, string] typedef unsigned char * MY_STRING_TYPE;  
-  
-[  uuid("479B29EE-9A2C-11D0-B696-00A0C903487A"),  
-   dual, oleautomation,  
-   helpstring("IFireTabCtrl Interface"),  
-   helpcontext(122), pointer_default(unique) ]  
-  
-__interface IFireTabCtrl : IDispatch {  
-   [bindable, propget] HRESULT get_Size([out, retval, defaultvalue("33")] long *nSize);  
-   [bindable, propput] HRESULT put_Size([in] int nSize);  
-};  
-  
-[ module(name="ATLFIRELib", uuid="479B29E1-9A2C-11D0-B696-00A0C903487A",  
-      version="1.0", helpstring="ATLFire 1.0 Type Library") ];  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|Parámetro de interfaz|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de parámetro](../windows/parameter-attributes.md)   
- [out](../windows/out-cpp.md)   
- [retval](../windows/retval.md)   
- [in (Modificador genérico)](../windows/in-cpp.md)   
- [pointer_default](../windows/pointer-default.md)   
- [unique](../windows/unique-cpp.md)   
+
+Permite especificar un valor predeterminado para un parámetro opcional con tipo.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[ defaultvalue= value ]
+```
+
+### <a name="parameters"></a>Parámetros
+
+*valor*  
+El valor predeterminado para el parámetro.
+
+## <a name="remarks"></a>Comentarios
+
+El **defaultvalue** atributo de C++ tiene la misma funcionalidad que el [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) atributo MIDL.
+
+## <a name="example"></a>Ejemplo
+
+El código siguiente muestra un método de interfaz mediante el **defaultvalue** atributo:
+
+```cpp
+// cpp_attr_ref_defaultvalue.cpp
+// compile with: /LD
+#include <windows.h>
+
+[export] typedef long HRESULT;
+[export, ptr, string] typedef unsigned char * MY_STRING_TYPE;
+
+[  uuid("479B29EE-9A2C-11D0-B696-00A0C903487A"),
+   dual, oleautomation,
+   helpstring("IFireTabCtrl Interface"),
+   helpcontext(122), pointer_default(unique) ]
+
+__interface IFireTabCtrl : IDispatch {
+   [bindable, propget] HRESULT get_Size([out, retval, defaultvalue("33")] long *nSize);
+   [bindable, propput] HRESULT put_Size([in] int nSize);
+};
+
+[ module(name="ATLFIRELib", uuid="479B29E1-9A2C-11D0-B696-00A0C903487A",
+      version="1.0", helpstring="ATLFire 1.0 Type Library") ];
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|Parámetro de interfaz|
+|**Reiterativo**|No|
+|**Atributos requeridos**|Ninguna|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos de parámetro](../windows/parameter-attributes.md)  
+[out](../windows/out-cpp.md)  
+[retval](../windows/retval.md)  
+[in](../windows/in-cpp.md)  
+[pointer_default](../windows/pointer-default.md)  
+[unique](../windows/unique-cpp.md)  
