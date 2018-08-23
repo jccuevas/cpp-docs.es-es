@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45655bc906816b17711485d01fbdfd96019b5d51
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d4a9a65e7ba45d38084d1695932c3897de583f49
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019009"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610032"
 ---
 # <a name="synclockwithstatuststatus-data-member"></a>SyncLockWithStatusT::status_ (Miembro de datos)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-DWORD status_;  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Contiene el resultado de la operación de espera subyacente después de una operación de bloqueo en un objeto basado en la actual **SyncLockWithStatusT** objeto.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [SyncLockWithStatusT (clase)](../windows/synclockwithstatust-class.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+DWORD status_;
+```
+
+## <a name="remarks"></a>Comentarios
+
+Contiene el resultado de la operación de espera subyacente después de una operación de bloqueo en un objeto basado en la actual **SyncLockWithStatusT** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[SyncLockWithStatusT (clase)](../windows/synclockwithstatust-class.md)

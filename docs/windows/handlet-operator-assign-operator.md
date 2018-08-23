@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa253bec9f150d08f699333cd5d5f6d4538fc2d6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cf539082ef88abb5fb27f09d92b73403dc2d03a5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653162"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611347"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= (Operador)
-Mueve el valor del elemento especificado **HandleT** el objeto actual **HandleT** objeto.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-HandleT& operator=(  
-   _Inout_ HandleT&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *h*  
- Una referencia rvalue a un identificador.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Una referencia a la actual **HandleT** objeto.  
-  
-## <a name="remarks"></a>Comentarios  
- Esta operación invalida la **HandleT** objeto especificado por el parámetro *h*.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [HandleT (clase)](../windows/handlet-class.md)
+
+Mueve el valor del elemento especificado **HandleT** el objeto actual **HandleT** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+HandleT& operator=(
+   _Inout_ HandleT&& h
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*h*  
+Una referencia rvalue a un identificador.
+
+## <a name="return-value"></a>Valor devuelto
+
+Una referencia a la actual **HandleT** objeto.
+
+## <a name="remarks"></a>Comentarios
+
+Esta operación invalida la **HandleT** objeto especificado por el parámetro *h*.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[HandleT (clase)](../windows/handlet-class.md)

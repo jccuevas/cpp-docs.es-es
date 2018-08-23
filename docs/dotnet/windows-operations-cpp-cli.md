@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110026"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609354"
 ---
 # <a name="windows-operations-ccli"></a>Operaciones de Windows (C++/CLI)
-Muestra varias tareas específicas de Windows mediante el [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Muestra varias tareas específicas de Windows mediante el SDK de Windows.  
   
- Los temas siguientes muestran varias operaciones de Windows realizadas con la [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] mediante Visual C++.  
+ Los temas siguientes muestran varias operaciones de Windows realizadas con el SDK de Windows mediante Visual C++.  
 
 ## <a name="determine_shutdown"></a> Determinar si ha iniciado el apagado
 En el ejemplo de código siguiente se muestra cómo determinar si la aplicación o .NET Framework actualmente está finalizando. Esto es útil para tener acceso a elementos estáticos en .NET Framework, ya que, durante el cierre, estas construcciones finalizan en el sistema y no se pueden usar de forma confiable. Comprobando el <xref:System.Environment.HasShutdownStarted%2A> propiedad en primer lugar, puede evitar posibles errores si no tiene acceso a estos elementos.  

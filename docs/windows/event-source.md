@@ -22,71 +22,75 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd38dcf02de661a063df356b7d915eed9814f192
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fc8d8100786f78d516bb5f880e4238b7e3a2388
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652411"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611869"
 ---
 # <a name="eventsource"></a>event_source
-Crea un origen de eventos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-[ event_source(  
-   type,  
-   optimize=[speed | size],  
-   decorate=[true | false]  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *type*  
- Enumeración de uno de los valores siguientes:  
-  
--   `native` para código de C/C++ no administrado (valor predeterminado para las clases no administradas).  
-  
--   `com` para código COM. Debe usar `coclass` cuando `type`=`com`. Este valor requiere que se incluyan los archivos de encabezado siguientes:  
-  
-    ```cpp  
-    #define _ATL_ATTRIBUTES  
-    #include <atlbase.h>  
-    #include <atlcom.h>  
-    ```  
-  
- *optimize*  
- Cuando *tipo* es `native`, puede especificar `optimize=size`para indicar que hay 4 bytes de almacenamiento (mínimo) para todos los eventos en una clase o `optimize=speed` (predeterminado) para indicar que hay 4 * (número de eventos) bytes de almacenamiento.  
-  
- *Decore*  
- Cuando *tipo* es `native`, puede especificar `decorate=false`para indicar que el nombre expandido en el archivo combinado (.mrg) no debe incluir el nombre de la clase envolvente. [/Fx](../build/reference/fx-merge-injected-code.md) permite generar archivos .mrg. `decorate=false`, que es el valor predeterminado, se crean nombres de tipo completo en el archivo combinado.  
-  
-## <a name="remarks"></a>Comentarios  
- El atributo de C++ **event_source** especifica que la clase o estructura a la que se aplica será un origen del evento.  
-  
- **event_source** se usa junto con el atributo [event_receiver](../windows/event-receiver.md) y la palabra clave [__event](../cpp/event.md) . Use `event_receiver` en crear receptores de eventos. Use **__event** en métodos dentro del origen de eventos para especificar dichos métodos como eventos.  
-  
+
+Crea un origen de eventos.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[ event_source(
+   type,
+   optimize=[speed | size],
+   decorate=[true | false]
+) ]
+```
+
+### <a name="parameters"></a>Parámetros
+
+*type*  
+Enumeración de uno de los valores siguientes:
+
+- `native` para código de C/C++ no administrado (valor predeterminado para las clases no administradas).
+
+- `com` para código COM. Debe usar `coclass` cuando `type`=`com`. Este valor requiere que se incluyan los archivos de encabezado siguientes:
+
+    ```cpp
+    #define _ATL_ATTRIBUTES
+    #include <atlbase.h>
+    #include <atlcom.h>
+    ```
+
+*optimize*  
+Cuando *tipo* es `native`, puede especificar `optimize=size`para indicar que hay 4 bytes de almacenamiento (mínimo) para todos los eventos en una clase o `optimize=speed` (predeterminado) para indicar que hay 4 * (número de eventos) bytes de almacenamiento.
+
+*Decore*  
+Cuando *tipo* es `native`, puede especificar `decorate=false`para indicar que el nombre expandido en el archivo combinado (.mrg) no debe incluir el nombre de la clase envolvente. [/Fx](../build/reference/fx-merge-injected-code.md) permite generar archivos .mrg. `decorate=false`, que es el valor predeterminado, se crean nombres de tipo completo en el archivo combinado.
+
+## <a name="remarks"></a>Comentarios
+
+El atributo de C++ **event_source** especifica que la clase o estructura a la que se aplica será un origen del evento.
+
+**event_source** se usa junto con el atributo [event_receiver](../windows/event-receiver.md) y la palabra clave [__event](../cpp/event.md) . Use `event_receiver` en crear receptores de eventos. Use **__event** en métodos dentro del origen de eventos para especificar dichos métodos como eventos.
+
 > [!NOTE]
->  Una clase o struct basada en plantilla no puede contener eventos.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|**clase**, **struct**|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|**coclase** cuando `type`=`com`|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos de compilador](../windows/compiler-attributes.md)   
- [event_receiver](../windows/event-receiver.md)   
- [__event](../cpp/event.md)   
- [__hook](../cpp/hook.md)   
- [__unhook](../cpp/unhook.md)   
- [Atributos de clase](../windows/class-attributes.md)   
+> Una clase o struct basada en plantilla no puede contener eventos.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|**clase**, **struct**|
+|**Reiterativo**|No|
+|**Atributos requeridos**|**coclase** cuando `type`=`com`|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos de compilador](../windows/compiler-attributes.md)  
+[event_receiver](../windows/event-receiver.md)  
+[__event](../cpp/event.md)  
+[__hook](../cpp/hook.md)  
+[__unhook](../cpp/unhook.md)  
+[Atributos de clase](../windows/class-attributes.md)  

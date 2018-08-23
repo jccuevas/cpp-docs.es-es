@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 40259a559389e274b6aaaa67bb215249c96a97ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642843"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611037"
 ---
 # <a name="agileeventsource-class"></a>Clase AgileEventSource
 
@@ -36,12 +36,13 @@ class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Parámetros  
- *TDelegateInterface*  
- La interfaz a un delegado que representa un controlador de eventos.
+## <a name="parameters"></a>Parámetros
 
- *TEventSourceOptions*  
- Un [InvokeModeOptions](invokemodeoptions-structure.md) cuyo campo invokeMode está establecido en una estructura `InvokeMode::StopOnFirstError` o `InvokeMode::FireAll`.
+*TDelegateInterface*  
+La interfaz a un delegado que representa un controlador de eventos.
+
+*TEventSourceOptions*  
+Un [InvokeModeOptions](invokemodeoptions-structure.md) cuyo campo invokeMode está establecido en una estructura `InvokeMode::StopOnFirstError` o `InvokeMode::FireAll`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -49,13 +50,14 @@ La mayoría de los componentes en tiempo de ejecución de Windows son ágiles co
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
- `EventSource` `AgileEventSource`
+`EventSource`
+`AgileEventSource`
 
 ## <a name="requirements"></a>Requisitos
 
- **Encabezado:** event.h
+**Encabezado:** event.h
 
- **Espacio de nombres:** Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
 ## <a name="members"></a>Miembros
 
@@ -92,4 +94,5 @@ S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el erro
 
 
 ## <a name="see-also"></a>Vea también
- [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)
+
+[Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

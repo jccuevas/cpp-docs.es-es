@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a6036db01ecdd66bcfe06405515c174628810a1
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 801799c3472d156825149c83fb51ffe586de0997
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650155"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611023"
 ---
 # <a name="ftmbaseftmbase-constructor"></a>FtmBase::FtmBase (Constructor)
-Inicializa una nueva instancia de la **FtmBase** clase.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-FtmBase();  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** ftm.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [FtmBase (clase)](../windows/ftmbase-class.md)
+
+Inicializa una nueva instancia de la **FtmBase** clase.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+FtmBase();
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** ftm.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[FtmBase (clase)](../windows/ftmbase-class.md)

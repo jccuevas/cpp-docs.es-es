@@ -17,51 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21f986e227e9daca58731d03c40d6dae5b0c0a80
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8a1b9ba00c8728c86935b7c64105d03bb4f19b10
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653045"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610605"
 ---
 # <a name="cppquote"></a>cpp_quote
-Emite la cadena especificada, sin los caracteres de comillas en el archivo .idl generado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-[ cpp_quote(  
-   "statement"  
-) ];  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *statement*  
- Una instrucción de C.  
-  
-## <a name="remarks"></a>Comentarios  
- El **cpp_quote** atributo de C++ es útil si desea colocar una directiva de preprocesador en un archivo. idl.  
-  
- También puede usar **cpp_quote** y generar un archivo .h como parte de la compilación de MIDL. Por ejemplo, si tiene un archivo de encabezado de C++ que utiliza atributos IDL de C++, pero no se puede usar este archivo para alguna tarea, a continuación, puede compilar para crear un archivo .h generados por MIDL, que debe ser capaz de usar.  
-  
- El **cpp_quote** atributo tiene la misma funcionalidad que el [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) atributo MIDL.  
-  
-## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [dual](../windows/dual.md) para obtener un ejemplo, usar uso **cpp_quote**.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|En cualquier lugar|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos independientes](../windows/stand-alone-attributes.md)   
+
+Emite la cadena especificada, sin los caracteres de comillas en el archivo .idl generado.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[ cpp_quote(
+   "statement"
+) ];
+```
+
+### <a name="parameters"></a>Parámetros
+
+*statement*  
+Una instrucción de C.
+
+## <a name="remarks"></a>Comentarios
+
+El **cpp_quote** atributo de C++ es útil si desea colocar una directiva de preprocesador en un archivo. idl.
+
+También puede usar **cpp_quote** y generar un archivo .h como parte de la compilación de MIDL. Por ejemplo, si tiene un archivo de encabezado de C++ que utiliza atributos IDL de C++, pero no se puede usar este archivo para alguna tarea, a continuación, puede compilar para crear un archivo .h generados por MIDL, que debe ser capaz de usar.
+
+El **cpp_quote** atributo tiene la misma funcionalidad que el [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) atributo MIDL.
+
+## <a name="example"></a>Ejemplo
+
+Vea el ejemplo de [dual](../windows/dual.md) para obtener un ejemplo, usar uso **cpp_quote**.
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|En cualquier lugar|
+|**Reiterativo**|No|
+|**Atributos requeridos**|Ninguna|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos independientes](../windows/stand-alone-attributes.md)  

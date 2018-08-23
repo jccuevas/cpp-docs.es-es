@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9577427ed5a63b99d372226f8e7416a21cb6b1e
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 3c2b83d64315ed03fce0527dc11668265c1db461
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010865"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613148"
 ---
 # <a name="runtimeclassdecrementreference-method"></a>RuntimeClass::DecrementReference (Método)
-Disminuye el recuento de referencias actual **RuntimeClass** objeto.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-ULONG DecrementReference();  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [RuntimeClass (clase)](../windows/runtimeclass-class.md)
+
+Disminuye el recuento de referencias actual **RuntimeClass** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+ULONG DecrementReference();
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[RuntimeClass (clase)](../windows/runtimeclass-class.md)

@@ -18,32 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7df4b20677c8dbccacdbfa21cc798da1ed4bb511
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 71e44b8d4fef02101c7b8d8f5878aeaa22a5c528
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649226"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608728"
 ---
 # <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Colocar botones de comando a la derecha o en la parte inferior de un cuadro de diálogo
-### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Organizar botones de comando a la derecha o inferior de un cuadro de diálogo  
-  
-1.  Seleccione uno o varios botones de comando.  
-  
-2.  Desde el **formato** menú, elija **organizar botones**y, a continuación, elija una de las distribuciones siguientes:  
-  
-    -   `Right`: alinea los botones de inserción en el borde derecho del cuadro de diálogo.  
-  
-    -   `Bottom`: alinea los botones de inserción en el borde inferior del cuadro de diálogo.  
-  
-         Si selecciona un control que no sea un botón de comando, no se ve afectada su posición.  
-  
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
+
+### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Organizar botones de comando a la derecha o inferior de un cuadro de diálogo
+
+1. Seleccione uno o varios botones de comando.
+
+2. Desde el **formato** menú, elija **organizar botones**y, a continuación, elija una de las distribuciones siguientes:
+
+   - `Right`: alinea los botones de inserción en el borde derecho del cuadro de diálogo.
+
+   - `Bottom`: alinea los botones de inserción en el borde inferior del cuadro de diálogo.
+
+       Si selecciona un control que no sea un botón de comando, no se ve afectada su posición.
+
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
+
 ## <a name="requirements"></a>Requisitos
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Organización de los controles en cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
- [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Distribución de los controles en los cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)  
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Controles](../mfc/controls-mfc.md)

@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b49e7cbd30445250bdf0710973ba65e47823b36c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 31b333c14af6d57fb098d6aff0d0938092477de0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652258"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613129"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status (Método)
-Recupera un valor que indica el estado de la operación asincrónica.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-STDMETHOD(  
-   get_Status  
-)(AsyncStatus *status) override;  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *status*  
- La ubicación donde se almacenará el estado. Para obtener más información, consulte `Windows::Foundation::AsyncStatus` enumeración.  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="remarks"></a>Comentarios  
- Este método implementa `IAsyncInfo::get_Status`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)
+
+Recupera un valor que indica el estado de la operación asincrónica.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(
+   get_Status
+)(AsyncStatus *status) override;
+```
+
+### <a name="parameters"></a>Parámetros
+
+*status*  
+La ubicación donde se almacenará el estado. Para obtener más información, consulte `Windows::Foundation::AsyncStatus` enumeración.
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; en caso contrario, E_ILLEGAL_METHOD_CALL.
+
+## <a name="remarks"></a>Comentarios
+
+Este método implementa `IAsyncInfo::get_Status`.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)

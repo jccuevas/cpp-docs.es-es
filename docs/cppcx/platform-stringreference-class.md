@@ -1,5 +1,5 @@
 ---
-title: Stringreference (clase) | Documentos de Microsoft
+title: Stringreference (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f7c6b2c7699d7be96309a6ab7f060e48838475
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097515"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609668"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference (Clase)
 Tipo de optimización que puedes usar para pasar datos de tipo String desde parámetros de entrada `Platform::String^` a otros métodos con un mínimo de operaciones de copia.  
@@ -47,10 +47,10 @@ class StringReference
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Stringreference:: Data](#data)|Devuelve los datos de tipo String como una matriz de valores char16.|  
-|[Stringreference:: Length](#length)|Devuelve el número de caracteres de la cadena.|  
-|[Stringreference:: Gethstring](#gethstring)|Devuelve los datos de tipo String como HSTRING.|  
-|[Stringreference:: GetString](#getstring)|Devuelve los datos de tipo String como `Platform::String^`.|  
+|[Stringreference](#data)|Devuelve los datos de tipo String como una matriz de valores char16.|  
+|[Stringreference](#length)|Devuelve el número de caracteres de la cadena.|  
+|[Gethstring](#gethstring)|Devuelve los datos de tipo String como HSTRING.|  
+|[Stringreference](#getstring)|Devuelve los datos de tipo String como `Platform::String^`.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -68,7 +68,7 @@ class StringReference
   
  **Encabezado:** vccorlib.h  
 
-## <a name="data"></a>  Stringreference:: Data (método)
+## <a name="data"></a>  Stringreference (método)
 Devuelve el contenido de este `StringReference` como una matriz de valores char16.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -82,7 +82,7 @@ const ::default::char16 * Data() const
   
 
 
-## <a name="gethstring"></a>  Stringreference:: Gethstring (método)
+## <a name="gethstring"></a>  Gethstring (método)
 Devuelve el contenido de la cadena como `__abi_HSTRING`.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -99,7 +99,7 @@ __abi_HSTRING GetHSTRING() const
   
 
 
-## <a name="getstring"></a>  Stringreference:: GetString (método)
+## <a name="getstring"></a>  Stringreference (método)
 Devuelve el contenido de la cadena como `Platform::String^`.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -112,7 +112,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>Valor devuelto  
  `Platform::String^` que contiene los datos de tipo String.  
 
-## <a name="length"></a>  Stringreference:: Length (método)
+## <a name="length"></a>  Stringreference (método)
 Devuelve el número de caracteres de la cadena.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -149,11 +149,11 @@ StringReference& operator=(const ::default::char16* __strArg);
  Referencia a un objeto de tipo `StringReference`.  
   
 ### <a name="remarks"></a>Comentarios  
- Dado que `StringReference` es una clase de C++ estándar y no una clase ref, no aparece en la **Examinador de objetos**.  
+ Dado que `StringReference` es una clase de C++ estándar y no una clase ref, no aparece en el **Examinador de objetos**.  
   
 
 
-## <a name="operator-call"></a>  Operador stringreference::operator()
+## <a name="operator-call"></a>  ::Operator() (operador)
 Convierte un objeto `StringReference` en un objeto `Platform::String^`.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -195,7 +195,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg)
  Número de elementos de `__strArg`.  
   
 ### <a name="remarks"></a>Comentarios  
- La primera versión de este constructor es el constructor predeterminado. La segunda versión inicializa una nueva clase de instancia `StringReference` desde el objeto especificado por el parámetro `__fstrArg`. La tercera y cuarta sobrecargas inicializan una nueva `StringReference` instancia de una matriz de valores char16. char16 representa un carácter de texto UNICODE de 16 bits.  
+ La primera versión de este constructor es el constructor predeterminado. La segunda versión inicializa una nueva clase de instancia `StringReference` desde el objeto especificado por el parámetro `__fstrArg`. La tercera y cuarta sobrecargas inicializan una nueva `StringReference` instancia a partir de una matriz de valores char16. char16 representa un carácter de texto UNICODE de 16 bits.  
   
 
 

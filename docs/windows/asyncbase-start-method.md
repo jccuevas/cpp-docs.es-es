@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32c59c00180b26a2856b1fc210302ffff0e72f0c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d81a3f29e99f49b03eb76f44af60c42d433e0bdc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641309"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611237"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start (Método)
-Inicia la operación asincrónica.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-STDMETHOD(  
-   Start  
-)(void);  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si la operación se inicia o ya está iniciado; en caso contrario, E_ILLEGAL_STATE_CHANGE.  
-  
-## <a name="remarks"></a>Comentarios  
- **Start()** es una implementación predeterminada de `IAsyncInfo::Start`, y no se realiza ningún trabajo real. Para iniciar una operación asincrónica, invalidar el `OnStart()` método virtual puro.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)
+
+Inicia la operación asincrónica.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(
+   Start
+)(void);
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si la operación se inicia o ya está iniciado; en caso contrario, E_ILLEGAL_STATE_CHANGE.
+
+## <a name="remarks"></a>Comentarios
+
+**Start()** es una implementación predeterminada de `IAsyncInfo::Start`, y no se realiza ningún trabajo real. Para iniciar una operación asincrónica, invalidar el `OnStart()` método virtual puro.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)

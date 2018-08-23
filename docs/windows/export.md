@@ -17,58 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad5f886c4d475cb51b370ae25549387f191ab4b6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e696b3c141a83882af67e72039c164a0f917d446
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653136"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611205"
 ---
 # <a name="export"></a>exportar
-Hace que una estructura de datos que se colocarán en el archivo. idl.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-[export]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El **exportar** una estructura de datos que se colocarán en el archivo .idl y esté disponible en la biblioteca de tipos en un formato compatible con el archivo binario que hace que esté disponible para su uso con cualquier lenguaje hace que el atributo de C++.  
-  
- No se puede aplicar el **exportar** atributo a una clase, incluso si la clase sólo tiene miembros públicos (el equivalente de un **struct**).  
-  
- Si exporta sin nombre **enum**s o **struct**s, estarán reciben nombres que comienzan por **__unnamed *** x*, donde *x* es un secuencial número.  
-  
- Las definiciones de tipo válidos para la exportación son tipos base, estructuras, uniones, enumeraciones, o escriba los identificadores.  Consulte [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) para obtener más información.  
-  
-## <a name="example"></a>Ejemplo  
- El código siguiente muestra cómo usar el **exportar** atributo:  
-  
-```cpp  
-// cpp_attr_ref_export.cpp  
-// compile with: /LD  
-[module(name="MyLibrary")];  
-  
-[export]  
-struct MyStruct {  
-   int i;  
-};  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|**Unión**, **typedef**, **enum**, **struct**, o **interfaz**|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos de compilador](../windows/compiler-attributes.md)   
- [Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
+
+Hace que una estructura de datos que se colocarán en el archivo. idl.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[export]
+```
+
+## <a name="remarks"></a>Comentarios
+
+El **exportar** una estructura de datos que se colocarán en el archivo .idl y esté disponible en la biblioteca de tipos en un formato compatible con el archivo binario que hace que esté disponible para su uso con cualquier lenguaje hace que el atributo de C++.
+
+No se puede aplicar el **exportar** atributo a una clase, incluso si la clase sólo tiene miembros públicos (el equivalente de un **struct**).
+
+Si exporta una sin nombre **enum** o **struct**, se le asigna un nombre que comienza con **__unnamed**<em>x</em>, donde *x* es un número secuencial.
+
+Las definiciones de tipo válidos para la exportación son tipos base, estructuras, uniones, enumeraciones, o escriba los identificadores.  Consulte [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) para obtener más información.
+
+## <a name="example"></a>Ejemplo
+
+El código siguiente muestra cómo usar el **exportar** atributo:
+
+```cpp
+// cpp_attr_ref_export.cpp
+// compile with: /LD
+[module(name="MyLibrary")];
+
+[export]
+struct MyStruct {
+   int i;
+};
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|**Unión**, **typedef**, **enum**, **struct**, o **interfaz**|
+|**Reiterativo**|No|
+|**Atributos requeridos**|Ninguna|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos de compilador](../windows/compiler-attributes.md)  
+[Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)  

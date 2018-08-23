@@ -1,5 +1,5 @@
 ---
-title: -LN (crear un módulo MSIL) | Documentos de Microsoft
+title: -LN (crear un módulo MSIL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 918b3857c2e6f26a7f2e11614a00049e9b615ea8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ca6d1933b684cc574bc4e0107b9f3f30364c908
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375316"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609467"
 ---
 # <a name="ln-create-msil-module"></a>/LN (Crear un módulo MSIL)
 Especifica que no se debe insertar un manifiesto de ensamblado en el archivo de salida.  
@@ -36,25 +36,25 @@ Especifica que no se debe insertar un manifiesto de ensamblado en el archivo de 
 ## <a name="remarks"></a>Comentarios  
  De forma predeterminada, **/LN** no está en vigor (un manifiesto del ensamblado se inserta en el archivo de salida).  
   
- Cuando **/LN** se utiliza, uno de los [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) opciones también se deben usar.  
+ Cuando **/LN** sirve, uno de los [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) también se deben utilizar las opciones.  
   
- Un programa administrado que no tiene metadatos de ensamblado en el manifiesto se denomina módulo. Si se compila con [/c (compilar sin vincular)](../../build/reference/c-compile-without-linking.md) y **/LN**, especifique [/NOASSEMBLY (crear un módulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md) en la fase del vinculador para crear el archivo de salida.  
+ Un programa administrado que no tiene metadatos de ensamblado en el manifiesto se denomina un módulo. Si se compila con [/c (compilar sin vincular)](../../build/reference/c-compile-without-linking.md) y **/LN**, especifique [/NOASSEMBLY (crear un módulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md) en la fase del enlazador para crear el archivo de salida.  
   
- Puede que desee crear módulos si desea seguir un enfoque basado en componentes para generar ensamblados.  Es decir, puede crear los tipos y compilarlos en módulos.  A continuación, puede generar un ensamblado de uno o varios módulos.  Para obtener más información sobre cómo crear ensamblados de módulos, vea [archivos .netmodule como entrada del vinculador](../../build/reference/netmodule-files-as-linker-input.md) o [Al.exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker).  
+ Desea crear módulos si desea adoptar un enfoque basado en componentes para generar ensamblados.  Es decir, puede crear tipos y compilarlas en módulos.  A continuación, puede generar un ensamblado de uno o varios módulos.  Para obtener más información sobre cómo crear ensamblados de los módulos, consulte [archivos .netmodule como entrada del vinculador](../../build/reference/netmodule-files-as-linker-input.md) o [Al.exe (Assembly Linker)](/dotnet/framework/tools/al-exe-assembly-linker).  
   
- La extensión de archivo predeterminada para un módulo es. netmodule.  
+ La extensión de archivo predeterminado para un módulo es. netmodule.  
   
- En [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] versiones anteriores a Visual C++ 2005, un módulo creado con **/CLR: noAssembly**.  
+ En las versiones de Visual C++ anteriores a Visual C++ 2005, se creó un módulo con **/CLR: noAssembly**.  
   
- El vinculador de Visual C++ acepta archivos .netmodule como entrada y el archivo de salida generado por el vinculador será un ensamblado o archivo .netmodule sin ninguna dependencia de tiempo de ejecución en cualquiera de los archivos .netmodule que se utilizaron como entrada al vinculador.  Para más información, consulte [Archivos .netmodule como entrada del vinculador](../../build/reference/netmodule-files-as-linker-input.md).  
+ El vinculador de Visual C++ acepta archivos .netmodule como entrada y el archivo de salida generado por el vinculador será un ensamblado o .netmodule sin ninguna dependencia de tiempo de ejecución en cualquiera de los archivos .netmodule que se utilizaron como entrada del vinculador.  Para más información, consulte [Archivos .netmodule como entrada del vinculador](../../build/reference/netmodule-files-as-linker-input.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
--   Especifique [/NOASSEMBLY (crear un módulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md) en la fase del vinculador para crear el archivo de salida.  
+-   Especificar [/NOASSEMBLY (crear un módulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md) en la fase del enlazador para crear el archivo de salida.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
--   Esta opción del compilador no se puede cambiar mediante programación.  
+-   No se puede cambiar esta opción del compilador mediante programación.  
   
 ## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
