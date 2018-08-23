@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac1b2c7f078acaa929cbfec0ac85456e6d72ee20
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ee49dede1a71e8bd2a01e98a3bdd2dd53ef63d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850113"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538720"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton (clase)
 El `CMFCColorButton` y [CMFCColorBar (clase)](../../mfc/reference/cmfccolorbar-class.md) clases se usan conjuntamente para implementar un control de selector de colores.  
@@ -276,7 +276,7 @@ virtual void OnDrawBorder(
  Apunta al contexto de dispositivo utilizado para dibujar el borde.  
   
  [in] *rectClient*  
- Un rectángulo en el contexto de dispositivo especificado por el la *pDC* parámetros que define los límites del botón que se va a dibujar.  
+ Un rectángulo en el contexto de dispositivo especificado por el *pDC* parámetros que define los límites del botón que se va a dibujar.  
   
  [in] *uiState*  
  Especifica el estado visual del botón.  

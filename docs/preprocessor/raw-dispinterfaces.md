@@ -1,5 +1,5 @@
 ---
-title: raw_dispinterfaces | Documentos de Microsoft
+title: raw_dispinterfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2a0d91d0f0dd3d23886ade75072526e6c895f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 093c994de24b947c53bfc19d33213e77f3ec2593
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849459"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541285"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
 **Específicos de C++**  
   
- Indica al compilador que genere funciones de contenedor de bajo nivel de métodos y propiedades que llaman a dispinterface **IDispatch:: Invoke** y devolver la `HRESULT` código de error.  
+Indica al compilador que genere funciones de contenedor de bajo nivel para dispinterface métodos y propiedades que llaman a `IDispatch::Invoke` y devolver el código de error HRESULT.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,10 +35,12 @@ raw_dispinterfaces
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Si no se especifica este atributo, solo se generan los contenedores de alto nivel, que inician excepciones de C++ en caso de error.  
+ 
+Si no se especifica este atributo, solo se generan los contenedores de alto nivel, que inician excepciones de C++ en caso de error.  
   
- **FIN de específicos de C++**  
+**FIN de específicos de C++**  
   
 ## <a name="see-also"></a>Vea también  
- [atributos #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (directiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos #import](../preprocessor/hash-import-attributes-cpp.md)   
+[directiva #import](../preprocessor/hash-import-directive-cpp.md)

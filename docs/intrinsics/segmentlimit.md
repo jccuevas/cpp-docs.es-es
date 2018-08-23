@@ -1,5 +1,5 @@
 ---
-title: __segmentlimit | Documentos de Microsoft
+title: __segmentlimit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fffacbaebc99d3298b5463a014db1e9117cd7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eacffcd5e66d73cd7594207f58356a4a8a0ecb47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330757"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539332"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Específicos de Microsoft**  
@@ -42,13 +42,13 @@ unsigned long __segmentlimit(
  Una constante que especifica el selector de segmento.  
   
 ## <a name="return-value"></a>Valor devuelto  
- El límite del segmento del selector de segmento especificado por `a`, siempre que el selector es válido y se ve en el nivel de permiso actual.  
+ El límite del segmento del selector de segmento especificado por `a`, siempre que el selector es válida y visible en el nivel de permiso actual.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__segmentlimit`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

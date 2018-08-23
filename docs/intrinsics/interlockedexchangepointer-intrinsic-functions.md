@@ -1,5 +1,5 @@
 ---
-title: Funciones intrínsecas _interlockedexchangepointer | Documentos de Microsoft
+title: Funciones intrínsecas _interlockedexchangepointer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8482b7d5b21c113001b702e00f406b9a3fcfd9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334943"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538550"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Funciones intrínsecas _InterlockedExchangePointer
 **Específicos de Microsoft**  
@@ -85,9 +85,9 @@ void * _InterlockedExchangePointer_HLERelease(
   
 |Función intrínseca|Arquitectura|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
+|`_InterlockedExchangePointer`|x86, ARM, x64|\<INTRIN.h >|  
 |`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<INTRIN.h >|  
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] con compatibilidad HLE|\<immintrin.h >|  
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 con compatibilidad HLE|\<immintrin.h >|  
   
  En la arquitectura x86, `_InterlockedExchangePointer` es una macro que llama a `_InterlockedExchange`.  
   
@@ -103,5 +103,5 @@ void * _InterlockedExchangePointer_HLERelease(
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [Conflictos con el compilador de x86](../build/conflicts-with-the-x86-compiler.md)

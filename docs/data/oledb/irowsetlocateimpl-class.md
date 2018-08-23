@@ -43,15 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0cb4531f1a86d61b72363669d0f722f8dcf204d3
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4c43e02b5d847a908910ec0df4bfc56c5464fd66
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338394"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572976"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl (Clase)
-Implementa OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) interfaz, que recupera filas arbitrarias de un conjunto de filas.  
+Implementa OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) interfaz, que recupera filas arbitrarias de un conjunto de filas.  
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
  La unidad de almacenamiento para todos los identificadores de fila mantenidos por el proveedor.  
   
  *BookmarkKeyType*  
- El tipo del marcador, como un valor largo o una cadena. Los marcadores normales deben tener una longitud de al menos dos bytes. (Longitud de un byte está reservado para OLE DB [marcadores estándares](https://msdn.microsoft.com/library/ms712954.aspx)`DBBMK_FIRST`, `DBBMK_LAST`, y `DBBMK_INVALID`.)  
+ El tipo del marcador, como un valor largo o una cadena. Los marcadores normales deben tener una longitud de al menos dos bytes. (Longitud de un byte está reservado para OLE DB [marcadores estándares](/previous-versions/windows/desktop/ms712954\(v=vs.85\))`DBBMK_FIRST`, `DBBMK_LAST`, y `DBBMK_INVALID`.)  
   
  *BookmarkType*  
  El mecanismo de asignación para mantener las relaciones de datos de marcador.  
@@ -114,13 +114,13 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[m_rgBookmarks](#rgbookmarks)|Una matriz de marcadores.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IRowsetLocateImpl` es la implementación de plantillas OLE DB de la [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) interfaz. `IRowsetLocate` se utiliza para capturar filas arbitrarias de un conjunto de filas. Un conjunto de filas que implementan esta interfaz es un `sequential` conjunto de filas. Cuando `IRowsetLocate` está presente en un conjunto de filas, la columna 0 es el marcador para las filas; leyendo esta columna, se obtendrá un valor de marcador que se puede usar para cambiar la posición en la misma fila.  
+ `IRowsetLocateImpl` es la implementación de plantillas OLE DB de la [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) interfaz. `IRowsetLocate` se utiliza para capturar filas arbitrarias de un conjunto de filas. Un conjunto de filas que implementan esta interfaz es un `sequential` conjunto de filas. Cuando `IRowsetLocate` está presente en un conjunto de filas, la columna 0 es el marcador para las filas; leyendo esta columna, se obtendrá un valor de marcador que se puede usar para cambiar la posición en la misma fila.  
   
  `IRowsetLocateImpl` se utiliza para implementar la compatibilidad con marcadores en proveedores. Los marcadores son marcadores de posición (índices en un conjunto de filas) que permiten a los consumidores volver rápidamente a una fila, lo que permite el acceso a los datos de alta velocidad. El proveedor determina qué marcadores inequívocamente pueden identificar una fila. Uso de `IRowsetLocateImpl` métodos, puede comparar los marcadores, fetch filas por desplazamiento, captura filas por marcador y devuelven valores de hash de marcadores.  
   
  Para admitir los marcadores de OLE DB en un conjunto de filas, hacer el conjunto de filas que herede de esta clase.  
   
- Para obtener información sobre la compatibilidad con marcadores de implementación, consulte [proveedor admite marcadores](../../data/oledb/provider-support-for-bookmarks.md) en el *Guía del programador de Visual C++* y [marcadores](https://msdn.microsoft.com/library/ms709728.aspx) en el *Referencia del programador OLE DB* en Platform SDK.  
+ Para obtener información sobre la compatibilidad con marcadores de implementación, consulte [proveedor admite marcadores](../../data/oledb/provider-support-for-bookmarks.md) en el *Guía del programador de Visual C++* y [marcadores](/previous-versions/windows/desktop/ms709728\(v=vs.85\)) en el *Referencia del programador OLE DB* en Platform SDK.  
 
 ## <a name="compare"></a> IRowsetLocateImpl:: Compare
 Compara dos marcadores.  
@@ -137,10 +137,10 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IRowsetLocate:: Compare](https://msdn.microsoft.com/library/ms709539.aspx) en el *referencia del programador OLE DB*.  
+ Consulte [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
 ### <a name="remarks"></a>Comentarios  
- Cualquiera de los marcadores pueden ser un estándar definido por OLE DB [marcador estándar](https://msdn.microsoft.com/library/ms712954.aspx) (`DBBMK_FIRST`, `DBBMK_LAST`, o `DBBMK_INVALID`). El valor devuelto en `pComparison` indica la relación entre los dos marcadores:  
+ Cualquiera de los marcadores pueden ser un estándar definido por OLE DB [marcador estándar](/previous-versions/windows/desktop/ms712954\(v=vs.85\)) (`DBBMK_FIRST`, `DBBMK_LAST`, o `DBBMK_INVALID`). El valor devuelto en `pComparison` indica la relación entre los dos marcadores:  
   
 -   DBCOMPARE_LT (`cbBookmark1` antes `cbBookmark2`.)  
   
@@ -169,10 +169,10 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IRowsetLocate:: GetRowsAt](https://msdn.microsoft.com/library/ms723031.aspx) en el *referencia del programador OLE DB*.  
+ Consulte [IRowsetLocate:: GetRowsAt](/previous-versions/windows/desktop/ms723031\(v=vs.85\)) en el *referencia del programador OLE DB*.  
   
 ### <a name="remarks"></a>Comentarios  
- Para capturar desde la posición del cursor en su lugar, use [IRowset::GetRowsAt](https://msdn.microsoft.com/library/ms723031.aspx).  
+ Para capturar desde la posición del cursor en su lugar, use [IRowset::GetRowsAt](/previous-versions/windows/desktop/ms723031\(v=vs.85\)).  
   
  `IRowsetLocateImpl::GetRowsAt` no cambia la posición del cursor. 
 
@@ -192,12 +192,12 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>Parámetros  
  *hReserved*  
- [in] Corresponde a *hChapter* parámetro [IRowsetLocate:: Getrowsbybookmark](https://msdn.microsoft.com/library/ms725420.aspx).  
+ [in] Corresponde a *hChapter* parámetro [IRowsetLocate:: Getrowsbybookmark](/previous-versions/windows/desktop/ms725420\(v=vs.85\)).  
   
- Para otros parámetros, vea [IRowsetLocate:: Getrowsbybookmark](https://msdn.microsoft.com/library/ms725420.aspx) en el *referencia del programador de OLE DB*.  
+ Para otros parámetros, vea [IRowsetLocate:: Getrowsbybookmark](/previous-versions/windows/desktop/ms725420\(v=vs.85\)) en el *referencia del programador de OLE DB*.  
   
 ### <a name="remarks"></a>Comentarios  
- El marcador puede ser un valor que defina u OLE DB [marcadores estándares](https://msdn.microsoft.com/library/ms712954.aspx) (`DBBMK_FIRST` o `DBBMK_LAST`). No cambia la posición del cursor.  
+ El marcador puede ser un valor que defina u OLE DB [marcadores estándares](/previous-versions/windows/desktop/ms712954\(v=vs.85\)) (`DBBMK_FIRST` o `DBBMK_LAST`). no cambia la posición del cursor.  
 
 ## <a name="hash"></a> IRowsetLocateImpl:: hash
 Devuelve el hash valores para los marcadores especificados.  
@@ -215,9 +215,9 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>Parámetros  
  *hReserved*  
- [in] Corresponde a *hChapter* parámetro [IRowsetLocate::Hash](https://msdn.microsoft.com/library/ms709697.aspx).  
+ [in] Corresponde a *hChapter* parámetro [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697\(v=vs.85\)).  
   
- Para otros parámetros, vea [IRowsetLocate::Hash](https://msdn.microsoft.com/library/ms709697.aspx) en el *referencia del programador de OLE DB*.  
+ Para otros parámetros, vea [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697\(v=vs.85\)) en el *referencia del programador de OLE DB*.  
 
 ## <a name="rgbookmarks"></a> IRowsetLocateImpl:: M_rgbookmarks
 Una matriz de marcadores.  
@@ -231,6 +231,6 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 ## <a name="see-also"></a>Vea también  
  [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Arquitectura de la plantilla de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/ms721190.aspx)   
+ [IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190\(v=vs.85\))   
  [Compatibilidad del proveedor con marcadores](../../data/oledb/provider-support-for-bookmarks.md)   
- [Marcadores](https://msdn.microsoft.com/library/ms709728.aspx)
+ [Marcadores](/previous-versions/windows/desktop/ms709728\(v=vs.85\))

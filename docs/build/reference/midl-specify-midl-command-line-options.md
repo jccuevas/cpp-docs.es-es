@@ -1,5 +1,5 @@
 ---
-title: -MIDL (especificar las opciones de línea de comandos MIDL) | Documentos de Microsoft
+title: -MIDL (especificar las opciones de línea de comandos MIDL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d125042041af1e20b6dfc4a02197c2124adbeb9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375193"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571606"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Especificar las opciones de la línea de comandos de MIDL)
 ```  
@@ -37,10 +37,10 @@ ms.locfileid: "32375193"
  donde:  
   
  `file`  
- El nombre del archivo que contiene [opciones de línea de comandos MIDL](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
+ El nombre del archivo que contiene [las opciones de línea de comandos MIDL](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
   
 ## <a name="remarks"></a>Comentarios  
- Todas las opciones para la conversión de un archivo IDL en archivo TLB deben indicarse `file`; Opciones de línea de comandos de MIDL no se puede especificar en la línea de comandos del vinculador. Si no se especifica /MIDL, se invocará el compilador MIDL con solo el nombre del archivo IDL y no hay otras opciones.  
+ Todas las opciones para la conversión de un archivo IDL en archivo TLB deben proporcionarse en `file`; No se puede especificar las opciones de línea de comandos de MIDL en línea de comandos del vinculador. Si no se especifica /MIDL, se invocará el compilador de MIDL con solo el nombre de archivo IDL y ninguna otra opción.  
   
  El archivo debe contener una opción de línea de comandos de MIDL por línea.  
   

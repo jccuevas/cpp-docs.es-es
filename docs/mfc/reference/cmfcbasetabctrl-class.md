@@ -248,16 +248,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825c761f920e48f31bab667790981e5c422f3612
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337496"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540915"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementa la funcionalidad básica para las ventanas con pestañas.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -401,7 +401,7 @@ class CMFCBaseTabCtrl : public CWnd
 ## <a name="remarks"></a>Comentarios  
  La clase `CMFCBaseTabCtrl` es abstracta. Por lo tanto, no se pueden crear instancias en ella. Para crear una ventana con pestañas, debe derivar una clase de `CMFCBaseTabCtrl`. La biblioteca MFC contiene algunos ejemplos de clases derivadas, dos de las cuales son [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) y [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md).  
   
- A partir de [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)], esta clase es compatible con Microsoft Active Accessibility.  
+ A partir de Visual Studio 2015, esta clase es compatible con Microsoft Active Accessibility.  
   
 ## <a name="customization-tips"></a>Sugerencias de personalización  
  Las siguientes sugerencias se refieren a la `CMFCBaseTabCtrl Class` y a todas sus clases heredadas:  

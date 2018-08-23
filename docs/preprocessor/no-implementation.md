@@ -1,5 +1,5 @@
 ---
-title: no_implementation | Documentos de Microsoft
+title: no_implementation | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf756a411404d2ebb821d5b226818844acfca75b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbf715e2cbd19d139904438e722e4d0b72e29f29
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849553"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540274"
 ---
 # <a name="noimplementation"></a>no_implementation
 **Específicos de C++**  
   
- Suprime la generación del encabezado .tli, que contiene las implementaciones de las funciones miembro de contenedor.  
+Suprime la generación del encabezado .tli, que contiene las implementaciones de las funciones miembro de contenedor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,12 +35,14 @@ no_implementation
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Si se especifica este atributo, el encabezado.tlh, con las declaraciones para exponer elementos de la biblioteca de tipos, se generará sin una instrucción `#include` para incluir el archivo de encabezado .tli.  
+ 
+Si se especifica este atributo, el encabezado.tlh, con las declaraciones para exponer elementos de la biblioteca de tipos, se generará sin una instrucción `#include` para incluir el archivo de encabezado .tli.  
   
- Este atributo se utiliza junto con [implementation_only](../preprocessor/implementation-only.md).  
+Este atributo se utiliza junto con [implementation_only](../preprocessor/implementation-only.md).  
   
- **FIN de específicos de C++**  
+**FIN de específicos de C++**  
   
 ## <a name="see-also"></a>Vea también  
- [atributos #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import (directiva)](../preprocessor/hash-import-directive-cpp.md)
+ 
+[atributos #import](../preprocessor/hash-import-attributes-cpp.md)   
+[directiva #import](../preprocessor/hash-import-directive-cpp.md)

@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a5c9132325af7c05980aac0d7b6b7d53958e4a2b
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 747f54e4ae37fe31eeea7540c1531b988d692427
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338049"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571820"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macros para plantillas de proveedores OLE DB
 Las macros de plantillas del proveedor OLE DB proporcionan funcionalidad en las siguientes categorías:  
@@ -159,11 +159,11 @@ BEGIN_PROPSET_MAP(Class)
  *Clase*  
  [in] La clase en el que se especifica esta propiedad establecida. En los siguientes objetos de OLE DB, se puede especificar un conjunto de propiedades:  
   
--   [Objetos de origen de datos](https://msdn.microsoft.com/library/ms721278.aspx)  
+-   [Objetos de origen de datos](/previous-versions/windows/desktop/ms721278\(v=vs.85\))  
   
--   [Objetos de sesión](https://msdn.microsoft.com/library/ms711572.aspx)  
+-   [Objetos de sesión](/previous-versions/windows/desktop/ms711572\(v=vs.85\))  
   
--   [Comandos](https://msdn.microsoft.com/library/ms724608.aspx)  
+-   [Comandos](/previous-versions/windows/desktop/ms724608\(v=vs.85\))  
   
 #### <a name="example"></a>Ejemplo  
  Este es un mapa de conjunto de propiedades de ejemplo:  
@@ -228,10 +228,10 @@ PROPERTY_INFO_ENTRY(dwPropID)
   
 #### <a name="parameters"></a>Parámetros  
  *dwPropID*  
- [in] Un [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) GUID para identificar una propiedad del conjunto de valor que se puede usar junto con la propiedad.  
+ [in] Un [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID para identificar una propiedad del conjunto de valor que se puede usar junto con la propiedad.  
   
 #### <a name="remarks"></a>Comentarios  
- Esta macro establece el valor de propiedad de tipo `DWORD` en un valor predeterminado definido en ATLDB. H. Para establecer la propiedad en un valor de su elección, use [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Para establecer el [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) y [DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx) para la propiedad al mismo tiempo, use [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+ Esta macro establece el valor de propiedad de tipo `DWORD` en un valor predeterminado definido en ATLDB. H. Para establecer la propiedad en un valor de su elección, use [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Para establecer el [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) y [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) para la propiedad al mismo tiempo, use [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Ejemplo  
  Vea [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
@@ -247,13 +247,13 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
   
 #### <a name="parameters"></a>Parámetros  
  *dwPropID*  
- [in] Un [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) GUID para identificar una propiedad del conjunto de valor que se puede usar junto con la propiedad.  
+ [in] Un [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID para identificar una propiedad del conjunto de valor que se puede usar junto con la propiedad.  
   
  *vt*  
  [in] El [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) de esta entrada de propiedad.  
   
  *dwFlags*  
- [in] Un [DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx) valor que describe esta entrada de propiedad.  
+ [in] Un [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) valor que describe esta entrada de propiedad.  
   
  *valor*  
  [in] El valor de la propiedad de tipo `DWORD`.  
@@ -278,7 +278,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
   
 #### <a name="parameters"></a>Parámetros  
  *dwPropID*  
- [in] Un [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx) GUID para identificar una propiedad del conjunto de valor que se puede usar junto con la propiedad.  
+ [in] Un [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID para identificar una propiedad del conjunto de valor que se puede usar junto con la propiedad.  
   
  *valor*  
  [in] El valor de la propiedad de tipo `DWORD`.  
@@ -355,7 +355,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
  [in] El número de columna. A menos que la columna es una columna de marcador, el número de columna no debe ser 0.  
   
  *DbType*  
- [in] El tipo de datos en [DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx).  
+ [in] El tipo de datos en [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
  *Miembro*  
  [in] La variable de miembro en `dataClass` que almacena los datos.  
@@ -383,22 +383,22 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
  [in] El número de columna. A menos que la columna es una columna de marcador, el número de columna no debe ser 0.  
   
  *flags*  
- [in] Especifica cómo se devuelven datos. Consulte la `dwFlags` descripción en [estructuras DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Especifica cómo se devuelven datos. Consulte la `dwFlags` descripción en [estructuras DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *colSize*  
  [in] El tamaño de columna.  
   
  *DbType*  
- [in] Indica el tipo de datos del valor. Consulte la `wType` descripción en [estructuras DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Indica el tipo de datos del valor. Consulte la `wType` descripción en [estructuras DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *precision*  
- [in] Indica la precisión que se utilizará al obtener los datos si *dbType* es DBTYPE_NUMERIC o DBTYPE_DECIMAL. Consulte la `bPrecision` descripción en [estructuras DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Indica la precisión que se utilizará al obtener los datos si *dbType* es DBTYPE_NUMERIC o DBTYPE_DECIMAL. Consulte la `bPrecision` descripción en [estructuras DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *Escala*  
- [in] Indica la escala que se utilizará al obtener los datos si dbType es DBTYPE_NUMERIC o DBTYPE_DECIMAL. Consulte la `bScale` descripción en [estructuras DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx).  
+ [in] Indica la escala que se utilizará al obtener los datos si dbType es DBTYPE_NUMERIC o DBTYPE_DECIMAL. Consulte la `bScale` descripción en [estructuras DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)).  
   
  *GUID*  
- Un conjunto de filas de esquema GUID. Consulte [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) en el *referencia del programador de OLE DB* para obtener una lista de conjuntos de filas de esquema y sus GUID.  
+ Un conjunto de filas de esquema GUID. Consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) en el *referencia del programador de OLE DB* para obtener una lista de conjuntos de filas de esquema y sus GUID.  
   
 #### <a name="remarks"></a>Comentarios  
  Permite especificar el tamaño de la columna, tipo de datos, precisión, escala y GUID del conjunto de filas de esquema.  
@@ -451,7 +451,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
  [in] La variable de miembro de la clase de datos que almacena los datos.  
   
 #### <a name="remarks"></a>Comentarios  
- Use esta macro, cuando los datos de columna se supone que [DBTYPE_STR](https://msdn.microsoft.com/library/ms711251.aspx).  
+ Use esta macro, cuando los datos de columna se supone que [DBTYPE_STR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
 #### <a name="example"></a>Ejemplo  
  Consulte [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).   
@@ -473,7 +473,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
  [in] El número de columna. A menos que la columna es una columna de marcador, el número de columna no debe ser 0.  
   
  *DbType*  
- [in] El tipo de datos en [DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx).  
+ [in] El tipo de datos en [DBTYPE](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
   
  *size*  
  [in] El tamaño de columna en bytes.  
@@ -504,7 +504,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
  [in] La variable de miembro de la clase de datos que almacena los datos.  
   
 #### <a name="remarks"></a>Comentarios  
- Use esta macro, cuando los datos de columna están un valor null termina la cadena de caracteres Unicode, [DBTYPE_WSTR](https://msdn.microsoft.com/library/ms711251.aspx).  
+ Use esta macro, cuando los datos de columna están un valor null termina la cadena de caracteres Unicode, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251\(v=vs.85\)).  
 
 ### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
 Indica el principio de una asignación de esquema.  
@@ -520,7 +520,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
  La clase que contiene el mapa. Normalmente será la clase de sesión.  
   
 #### <a name="remarks"></a>Comentarios  
- Consulte [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) en el SDK de Windows para obtener más información acerca de los conjuntos de filas de esquema.  
+ Consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) en el SDK de Windows para obtener más información acerca de los conjuntos de filas de esquema.  
 
 ### <a name="end_schema_map"></a> END_SCHEMA_MAP
 Denota el final de la asignación de esquema.  
@@ -546,7 +546,7 @@ SCHEMA_ENTRY(guid,
   
 #### <a name="parameters"></a>Parámetros  
  *GUID*  
- Un conjunto de filas de esquema GUID. Consulte [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) en el *referencia del programador de OLE DB* para obtener una lista de conjuntos de filas de esquema y sus GUID.  
+ Un conjunto de filas de esquema GUID. Consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) en el *referencia del programador de OLE DB* para obtener una lista de conjuntos de filas de esquema y sus GUID.  
   
  *RowsetClass*  
  La clase que se crearán para representar el conjunto de filas de esquema.  
@@ -560,7 +560,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);  
 ```  
   
- Esto `Execute` función rellena los datos del conjunto de filas. Crea el Asistente para proyectos ATL, como se describe en [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) en el *referencia del programador de OLE DB*, tres inicial conjuntos de filas de esquema en el proyecto para cada uno de los tres esquemas de OLE DB obligatorios:  
+ Esto `Execute` función rellena los datos del conjunto de filas. Crea el Asistente para proyectos ATL, como se describe en [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) en el *referencia del programador de OLE DB*, tres inicial conjuntos de filas de esquema en el proyecto para cada uno de los tres esquemas de OLE DB obligatorios:  
   
 -   DBSCHEMA_TABLES  
   

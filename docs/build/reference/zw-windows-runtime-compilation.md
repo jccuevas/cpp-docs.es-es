@@ -1,5 +1,5 @@
 ---
-title: -ZW (compilación de Windows en tiempo de ejecución) | Documentos de Microsoft
+title: -ZW (compilación de Windows en tiempo de ejecución) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fce6c6825ed4ae715a2f4cde6b0e1ffa8b3b6733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97a97158dda886a09fb6ccb00898a8c518d8e250
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380071"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602267"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Compilación de Windows Runtime)
-Compila el código fuente para admitir [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) para la creación de aplicaciones de la plataforma Universal de Windows (UWP).  
+Compila el código para admitir las extensiones de componente de C++ de Visual C++ / fuente c++ / CX para la creación de aplicaciones de plataforma Universal de Windows (UWP).  
   
- Cuando usas **/ZW** para compilar, especifique siempre **/EHsc** así.  
+ Cuando usas **/ZW** para compilar, especifique siempre **/EHsc** también.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,16 +42,16 @@ Compila el código fuente para admitir [!INCLUDE[cppwrt](../../build/reference/i
   
 ## <a name="arguments"></a>Argumentos  
  nostdlib  
- Indica que Platform.winmd, Windows.Foundation.winmd y otros archivos de metadatos de Windows (.winmd) predeterminados no se incluyen automáticamente en la compilación, En su lugar, debe utilizar el [/FU (Name Forced #using archivo)](../../build/reference/fu-name-forced-hash-using-file.md) opción del compilador para especificar explícitamente los archivos de metadatos de Windows.  
+ Indica que Platform.winmd, Windows.Foundation.winmd y otros archivos de metadatos de Windows (.winmd) predeterminados no se incluyen automáticamente en la compilación, En su lugar, debe usar el [/FU (nombre #using archivo)](../../build/reference/fu-name-forced-hash-using-file.md) opción del compilador para especificar explícitamente los archivos de metadatos de Windows.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se especifica la **/ZW** opción, el compilador admite estas características:  
+ Al especificar el **/ZW** opción, el compilador admite estas características:  
   
--   Los archivos de metadatos necesarios, los espacios de nombres, tipos de datos y funciones que requiere la aplicación para ejecutarse en el tiempo de ejecución de Windows.  
+-   Los archivos de metadatos necesarios, espacios de nombres, tipos de datos y funciones que la aplicación necesita para ejecutarse en el tiempo de ejecución de Windows.  
   
--   Automático recuento de referencias de objetos en tiempo de ejecución de Windows y automática de descarte de un objeto cuando su recuento de referencias llega a cero.  
+-   Automático: recuento de referencias de objetos de Windows Runtime y descarte de un objeto cuando su recuento de referencias llega a cero automático.  
   
- Dado que el vinculador incremental no es compatible con los metadatos de Windows incluidos en los archivos .obj mediante la **/ZW** opción, el [/Gm (habilitar recompilación mínima)](../../build/reference/gm-enable-minimal-rebuild.md) no es compatible con la opción  **/ZW**.  
+ Dado que el enlazador incremental no admite los metadatos de Windows incluidos en los archivos .obj mediante la **/ZW** opción, el [/Gm (habilitar recompilación mínima)](../../build/reference/gm-enable-minimal-rebuild.md) es incompatible con la opción  **/ZW**.  
   
  Para obtener más información, consulte [referencia del lenguaje Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).  
   

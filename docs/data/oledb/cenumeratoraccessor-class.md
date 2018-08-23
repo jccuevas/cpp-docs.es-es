@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0836a09adac92300a8438a0433fda874e78bcb25
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339222"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571897"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor (Clase)
 Utilizado por [CEnumerator](../../data/oledb/cenumerator-class.md) para tener acceso a los datos desde el conjunto de filas del enumerador.  
@@ -92,7 +92,7 @@ VARIANT_BOOL m_bIsParent;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [ISourcesRowset:: GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) en el *referencia del programador de OLE DB* para obtener más información. 
+ Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) en el *referencia del programador de OLE DB* para obtener más información. 
 
 ## <a name="ntype"></a> Cenumeratoraccessor:: M_ntype
 Una variable que indica si la fila describe un origen de datos o un enumerador.  
@@ -104,7 +104,7 @@ USHORT m_nType;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [ISourcesRowset:: GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) en el *referencia del programador de OLE DB* para obtener más información.
+ Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) en el *referencia del programador de OLE DB* para obtener más información.
 
 ## <a name="szdescription"></a> Cenumeratoraccessor:: M_szdescription
 La descripción del origen de datos o enumerador.  
@@ -116,7 +116,7 @@ WCHAR m_szDescription[129];
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [ISourcesRowset:: GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) en el *referencia del programador de OLE DB* para obtener más información.
+ Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) en el *referencia del programador de OLE DB* para obtener más información.
 
 ## <a name="szname"></a> Cenumeratoraccessor:: M_szname
 El nombre del origen de datos o enumerador.  
@@ -128,7 +128,7 @@ WCHAR m_szName[129];
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [ISourcesRowset:: GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) en el *referencia del programador de OLE DB* para obtener más información.  
+ Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) en el *referencia del programador de OLE DB* para obtener más información.  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
 Cadena que se pasan al [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) para obtener un moniker para el origen de datos o enumerador.  
@@ -140,7 +140,7 @@ WCHAR m_szParseName[129];
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [ISourcesRowset:: GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx) en el *referencia del programador de OLE DB* para obtener más información.  
+ Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) en el *referencia del programador de OLE DB* para obtener más información.  
   
 ## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

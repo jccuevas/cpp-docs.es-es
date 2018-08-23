@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 789a8165a12977d11220d299e2c99549121dba64
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852892"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538942"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar (clase)
 Implementa una barra de herramientas emergente contextual.  
@@ -162,7 +162,7 @@ BOOL ShowWithContextMenu(
  Use esta función para mostrar una minibarra de herramientas que tiene un menú contextual. El menú contextual está posicionados 15 píxeles por debajo de la minibarra de herramientas.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 BOOL IsContextMenuMode() const;  
@@ -173,7 +173,7 @@ BOOL IsContextMenuMode() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 virtual BOOL IsRibbonMiniToolBar() const;  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895df401ab10ae85641fd2eed9f7a9654916f33f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 42fc4bd5186ade5efaa9c4fa8e9f567f37509039
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465238"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572993"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Específicos de Microsoft**  
@@ -41,7 +41,7 @@ VARIANT Detach( );
  Encapsulado `VARIANT`.  
   
 ## <a name="remarks"></a>Comentarios  
- Extrae y devuelve encapsulado `VARIANT`, a continuación, borra este `_variant_t` objeto sin destruirlo. Esta función miembro quita el `VARIANT` de encapsulación y establece el `VARTYPE` esto `_variant_t` objeto en VT_EMPTY. Depende de usted para liberar el valor devuelto `VARIANT` mediante una llamada a la [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) función.  
+ Extrae y devuelve encapsulado `VARIANT`, a continuación, borra este `_variant_t` objeto sin destruirlo. Esta función miembro quita el `VARIANT` de encapsulación y establece el `VARTYPE` esto `_variant_t` objeto en VT_EMPTY. Depende de usted para liberar el valor devuelto `VARIANT` mediante una llamada a la [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) función.  
   
  **FIN de Específicos de Microsoft**  
   

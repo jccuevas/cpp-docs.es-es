@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21478cdfd96fc32efaa674d7ec4f838e2f6b989b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 7d13503ff19c4c7c132bd100921ff716ca3abca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026898"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543208"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Tutorial: Crear una aplicación de cinta usando MFC
 En este tutorial se muestra cómo usar el **MFC Application Wizard** para crear una aplicación que tiene una cinta de opciones de forma predeterminada. A continuación, puede expandir la cinta de opciones mediante la adición de un **personalizado** categoría de cinta de opciones que tiene un **favoritos** panel y, a continuación, agregar algunos comandos al panel usan con frecuencia la cinta de opciones.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- En este tutorial se da por supuesto que ha establecido [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] usar **configuración General de desarrollo**. Si usa valores diferentes, algunos de los elementos de la interfaz de usuario a los que se hace referencia en las instrucciones siguientes pueden no mostrarse. Para obtener información acerca de cómo cambiar la configuración, consulte [Cómo: restablecer la configuración](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
+ En este tutorial se da por supuesto que ha configurado Visual Studio para usar **configuración General de desarrollo**. Si usa valores diferentes, algunos de los elementos de la interfaz de usuario a los que se hace referencia en las instrucciones siguientes pueden no mostrarse. Para obtener información acerca de cómo cambiar la configuración, consulte [Cómo: restablecer la configuración](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Para crear una aplicación MFC con una cinta de opciones  
   

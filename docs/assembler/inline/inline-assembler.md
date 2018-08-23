@@ -1,5 +1,5 @@
 ---
-title: Ensamblador alineado | Documentos de Microsoft
+title: Ensamblador alineado | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5236bebdeef2db519556d3dace4c20d9529d0e23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4b45c55fbba37d27aa005480789cb490b891b103
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055045"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572296"
 ---
 # <a name="inline-assembler"></a>Ensamblador insertado
 **Específicos de Microsoft**  
@@ -33,7 +33,7 @@ ms.locfileid: "32055045"
 > [!NOTE]
 >  Los programas con código ensamblador alineado no son totalmente portables a otras plataformas de hardware. Si está diseñando para la portabilidad, evite utilizar el ensamblador alineado.  
   
- No se admite el ensamblado alineado en los procesadores ARM y [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  En los temas siguientes se explica cómo usar el ensamblador alineado de Visual C/C++ con procesadores x86:  
+ No se admite el ensamblado alineado en la ARM y x64 procesadores.  En los temas siguientes se explica cómo usar el ensamblador alineado de Visual C/C++ con procesadores x86:  
   
 -   [Información general del ensamblador insertado](../../assembler/inline/inline-assembler-overview.md)  
   
@@ -60,5 +60,5 @@ ms.locfileid: "32055045"
  **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador y del lenguaje ensamblador](../../intrinsics/compiler-intrinsics-and-assembly-language.md)   
+ [Intrínsecos del compilador y lenguaje ensamblador](../../intrinsics/compiler-intrinsics-and-assembly-language.md)   
  [Referencia del lenguaje C++](../../cpp/cpp-language-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Sugerencias para mejorar código crítico en el tiempo | Documentos de Microsoft
+title: Sugerencias para mejorar código crítico en el tiempo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e05d0aa49a895a9632b07fe07bf38d9e6d4d6b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbc04563ffa16dfb9471bd0a54fa53df159538e3
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379515"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573097"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Sugerencias para mejorar código en el que la velocidad de ejecución es importante
 Para escribir código rápidamente, es necesario comprender todos los aspectos de la aplicación y cómo interactúa con el sistema. En este tema, se sugieren alternativas a algunas de las técnicas de codificación más obvias para que le resulte más fácil asegurarse de que las partes del código críticas en el tiempo se ejecutan correctamente.  
@@ -81,7 +81,7 @@ Para escribir código rápidamente, es necesario comprender todos los aspectos d
 ##  <a name="_core_cache_hits_and_page_faults"></a> Errores de caché y errores de página  
  Los errores de aciertos de caché, tanto en la memoria caché interna como en la externa, y los errores de página (ir al almacenamiento secundario para obtener datos e instrucciones del programa) ralentizan el rendimiento de los programas.  
   
- Un acierto de caché de CPU puede costarle a su programa 10 y 20 ciclos de reloj. Un acierto de caché externa puede costarle ciclos de reloj de 20 a 40. Un solo error de página puede costarle un millón de ciclos de reloj (suponiendo que el procesador administre 500 millones de instrucciones por segundo y un tiempo de 2 milisegundos por cada error de página). Por lo tanto, lo que más beneficiará a la ejecución del programa será escribir código que reduzca el número de errores de aciertos de caché y errores de página.  
+ Un acierto de caché de CPU puede costarle a su programa 10-20 ciclos de reloj. Un acierto de caché externa puede costarle 20 y 40 ciclos de reloj. Un solo error de página puede costarle un millón de ciclos de reloj (suponiendo que el procesador administre 500 millones de instrucciones por segundo y un tiempo de 2 milisegundos por cada error de página). Por lo tanto, lo que más beneficiará a la ejecución del programa será escribir código que reduzca el número de errores de aciertos de caché y errores de página.  
   
  Uno de los motivos por los que algunos programas son lentos es que tienen más errores de página o errores de caché de los necesarios. Para evitar que esto ocurra, es importante usar estructuras de datos con una buena localidad de referencia, es decir, mantener juntos los elementos relacionados. A veces, las estructuras de datos que parecen buenas resultan ser horribles debido a una mala localidad de referencia. Otras veces sucede lo contrario. Dos ejemplos:  
   
@@ -113,19 +113,19 @@ Para escribir código rápidamente, es necesario comprender todos los aspectos d
 ##  <a name="_core_mfc_and_class_libraries"></a> Bibliotecas de clases y MFC  
  Las Microsoft Foundation Classes (MFC) pueden simplificar en gran medida la escritura de código. Al escribir código crítico en el tiempo, debe tener presente la sobrecarga inherente a algunas de las clases. Examine el código MFC empleado por el código crítico en el tiempo para ver si ofrece el rendimiento que necesita. En la siguiente lista, se identifican las funciones y las clases MFC que debe conocer:  
   
--   `CString` MFC llama a la biblioteca de tiempo de ejecución de C para asignar memoria para un [CString](../../atl-mfc-shared/reference/cstringt-class.md) dinámicamente. En términos generales, `CString` es tan eficiente como cualquier otra cadena asignada dinámicamente. Como cualquier cadena asignada dinámicamente, tiene la sobrecarga de la asignación y liberación dinámicas. A menudo, una simple matriz de `char` en la pila puede cumplir el mismo fin más rápidamente. No use una `CString` para almacenar una cadena de constante. Utilice `const char *` en su lugar. Todas las operaciones que realice con objetos `CString` tendrán cierta sobrecarga. Uso de la biblioteca de tiempo de ejecución [funciones de cadena](../../c-runtime-library/string-manipulation-crt.md) pueden ser más rápidas.  
+-   `CString` MFC llama a la biblioteca de tiempo de ejecución de C para asignar memoria para un [CString](../../atl-mfc-shared/reference/cstringt-class.md) dinámicamente. En términos generales, `CString` es tan eficiente como cualquier otra cadena asignada dinámicamente. Como cualquier cadena asignada dinámicamente, tiene la sobrecarga de la asignación y liberación dinámicas. A menudo, una simple matriz de `char` en la pila puede cumplir el mismo fin más rápidamente. No use una `CString` para almacenar una cadena de constante. Utilice `const char *` en su lugar. Todas las operaciones que realice con objetos `CString` tendrán cierta sobrecarga. Uso de la biblioteca de tiempo de ejecución [funciones de cadena](../../c-runtime-library/string-manipulation-crt.md) puede ser más rápido.  
   
--   `CArray` A [CArray](../../mfc/reference/carray-class.md) proporciona flexibilidad que no de una matriz normal, pero puede que su programa no lo necesite. Si conoce los límites específicos de la matriz, puede utilizar en su lugar una matriz fija global. Si utiliza `CArray`, use `CArray::SetSize` para establecer su tamaño y especificar el número de elementos que aumentará cuando sea necesaria una reasignación. Si no lo hace, al agregar elementos, es posible que la matriz se reasigne y se copie con frecuencia: esto es ineficiente y puede fragmentar la memoria. Tenga en cuenta, también, que si inserta un elemento en una matriz, `CArray` moverá los elementos subsiguientes a la memoria y puede que necesite aumentar la matriz. Estas acciones pueden provocar errores de caché y errores de página. Si revisa el código utilizado por MFC, tal vez observe que puede escribir algo más específico para su escenario y, así, mejorar el rendimiento. Dado que `CArray` es una plantilla, podría, por ejemplo, proporcionar especializaciones de `CArray` para determinados tipos.  
+-   `CArray` Un [CArray](../../mfc/reference/carray-class.md) proporciona la flexibilidad que no matrices normales, pero puede que su programa no lo necesite. Si conoce los límites específicos de la matriz, puede utilizar en su lugar una matriz fija global. Si utiliza `CArray`, use `CArray::SetSize` para establecer su tamaño y especificar el número de elementos que aumentará cuando sea necesaria una reasignación. Si no lo hace, al agregar elementos, es posible que la matriz se reasigne y se copie con frecuencia: esto es ineficiente y puede fragmentar la memoria. Tenga en cuenta, también, que si inserta un elemento en una matriz, `CArray` moverá los elementos subsiguientes a la memoria y puede que necesite aumentar la matriz. Estas acciones pueden provocar errores de caché y errores de página. Si revisa el código utilizado por MFC, tal vez observe que puede escribir algo más específico para su escenario y, así, mejorar el rendimiento. Dado que `CArray` es una plantilla, podría, por ejemplo, proporcionar especializaciones de `CArray` para determinados tipos.  
   
--   `CList` [CList](../../mfc/reference/clist-class.md) es una lista doblemente vinculada, por lo que la inserción de elementos es rápida al principio, final y en una posición conocida (`POSITION`) en la lista. Sin embargo, para buscar elementos por valor o por índice, es necesaria una búsqueda secuencial, que puede resultar lenta si la lista es larga. Si su código no requiere una lista de doble vínculo, puede replantearse el uso de `CList`. Si usa una lista de un solo vínculo, ahorrará la sobrecarga que conlleva actualizar un puntero adicional para todas las operaciones, además de la memoria destinada a ese puntero. No es que se ahorre muchísima memoria, pero supone otra oportunidad de que aparezcan errores de caché o errores de página.  
+-   `CList` [CList](../../mfc/reference/clist-class.md) es una lista vinculada por partida doble, por lo que la inserción de elementos es rápida al principio, final y en una posición conocida (`POSITION`) en la lista. Sin embargo, para buscar elementos por valor o por índice, es necesaria una búsqueda secuencial, que puede resultar lenta si la lista es larga. Si su código no requiere una lista de doble vínculo, puede replantearse el uso de `CList`. Si usa una lista de un solo vínculo, ahorrará la sobrecarga que conlleva actualizar un puntero adicional para todas las operaciones, además de la memoria destinada a ese puntero. No es que se ahorre muchísima memoria, pero supone otra oportunidad de que aparezcan errores de caché o errores de página.  
   
--   `IsKindOf` Esta función puede generar muchas llamadas y acceder a una gran cantidad de memoria en distintas áreas de datos, dando lugar a un grado de emplazamiento de referencia. Resulta útil para las versiones de depuración (en una llamada ASSERT, por ejemplo), pero trate de evitar usarlo en las versiones de lanzamiento.  
+-   `IsKindOf` Esta función puede generar muchas llamadas y tener acceso a mucha memoria en distintas áreas de datos, dando lugar a un grado de emplazamiento de referencia. Resulta útil para las versiones de depuración (en una llamada ASSERT, por ejemplo), pero trate de evitar usarlo en las versiones de lanzamiento.  
   
--   `PreTranslateMessage` Utilice `PreTranslateMessage` cuando un determinado árbol de ventanas necesite aceleradores del teclado distintos o cuando tenga que insertar control de mensajes en el suministro de mensajes. `PreTranslateMessage` modifica los mensajes de distribución de MFC. Si invalida `PreTranslateMessage`, hágalo en el nivel que sea necesario. Por ejemplo, no es necesario que invalide `CMainFrame::PreTranslateMessage` si solo está interesado en los mensajes dirigidos a los elementos secundarios de una vista en particular. En lugar de ello, invalide `PreTranslateMessage` en la clase de vista.  
+-   `PreTranslateMessage` Use `PreTranslateMessage` cuando un determinado árbol de ventanas necesite aceleradores de teclado diferente o cuando debe insertar el control de mensajes en el bombeo de mensajes. `PreTranslateMessage` modifica los mensajes de distribución de MFC. Si invalida `PreTranslateMessage`, hágalo en el nivel que sea necesario. Por ejemplo, no es necesario que invalide `CMainFrame::PreTranslateMessage` si solo está interesado en los mensajes dirigidos a los elementos secundarios de una vista en particular. En lugar de ello, invalide `PreTranslateMessage` en la clase de vista.  
   
-     No sortee la ruta de acceso de distribución normal con `PreTranslateMessage` para administrar cualquier mensaje que se envíe a cualquier ventana. Use [procedimientos de ventana](../../mfc/registering-window-classes.md) y mapas de mensajes MFC para ese fin.  
+     No sortee la ruta de acceso de distribución normal con `PreTranslateMessage` para administrar cualquier mensaje que se envíe a cualquier ventana. Use [procedimientos de ventana](../../mfc/registering-window-classes.md) y mapas de mensajes MFC para ese propósito.  
   
--   `OnIdle` Pueden producir eventos inactivos en ocasiones no tiene previsto, como entre `WM_KEYDOWN` y `WM_KEYUP` eventos. Los temporizadores pueden ser una forma más eficiente de desencadenar el código. No fuerce la llamada repetida de `OnIdle` generando mensajes falsos o devolviendo siempre `TRUE` en las invalidaciones de `OnIdle`: si lo hace, no dejará que el subproceso entre en suspensión en ningún momento. También en este caso, es posible que sea más adecuado usar un temporizador o un subproceso independiente.  
+-   `OnIdle` Pueden producir eventos inactivos en ocasiones no se espera, como entre `WM_KEYDOWN` y `WM_KEYUP` eventos. Los temporizadores pueden ser una forma más eficiente de desencadenar el código. No fuerce la llamada repetida de `OnIdle` generando mensajes falsos o devolviendo siempre `TRUE` en las invalidaciones de `OnIdle`: si lo hace, no dejará que el subproceso entre en suspensión en ningún momento. También en este caso, es posible que sea más adecuado usar un temporizador o un subproceso independiente.  
   
 ##  <a name="vcovrsharedlibraries"></a> Bibliotecas compartidas  
  Es recomendable reutilizar código. Sin embargo, si va a usar el código de otra persona, debe saber exactamente lo que hace en los casos en los que el rendimiento sea crucial para usted. La mejor forma de entenderlo es revisar paso por paso el código fuente o realizar mediciones con herramientas como PView o el monitor de rendimiento.  
@@ -137,7 +137,7 @@ Para escribir código rápidamente, es necesario comprender todos los aspectos d
   
  Sin embargo, en ciertos casos, usar el montón predeterminado puede reducir la localidad de referencia. Utilice el Visor de procesos, Spy++ o el monitor de rendimiento para medir los efectos del movimiento de objetos de un montón a otro.  
   
- Mida los montones para comprender cada asignación del montón. Utilice el tiempo de ejecución de C [rutinas del montón de depuración](/visualstudio/debugger/crt-debug-heap-details) al punto de control y el volcado del montón. Puede leer la salida en un programa de hojas de cálculo como Microsoft Excel y usar tablas dinámicas para ver los resultados. Observe el número total de asignaciones, su tamaño y su distribución. Compárelos con el tamaño de los espacios de trabajo. Mire también la agrupación en clústeres de los objetos de tamaño relacionado.  
+ Mida los montones para comprender cada asignación del montón. Utilice el tiempo de ejecución de C [rutinas del montón de depuración](/visualstudio/debugger/crt-debug-heap-details) al punto de control y volcado del montón. Puede leer la salida en un programa de hojas de cálculo como Microsoft Excel y usar tablas dinámicas para ver los resultados. Observe el número total de asignaciones, su tamaño y su distribución. Compárelos con el tamaño de los espacios de trabajo. Mire también la agrupación en clústeres de los objetos de tamaño relacionado.  
   
  Además, puede usar los contadores de rendimiento para supervisar el uso de memoria.  
   
@@ -153,9 +153,9 @@ Para escribir código rápidamente, es necesario comprender todos los aspectos d
 ##  <a name="_core_small_working_set"></a> Espacio de trabajo pequeño  
  Con los espacios de trabajo menores, se obtienen una localidad de referencia mejor, menos errores de página y más aciertos de caché. El espacio de trabajo del proceso es la métrica más precisa que ofrece directamente el sistema operativo para medir la localidad de referencia.  
   
--   Para establecer los límites superiores e inferiores del espacio de trabajo, utilice [SetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms683226.aspx).  
+-   Para establecer los límites superiores e inferiores del espacio de trabajo, use [SetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-getprocessworkingsetsize).  
   
--   Para obtener los límites superiores e inferiores del espacio de trabajo, use [GetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms686234.aspx).  
+-   Para obtener los límites superiores e inferiores del espacio de trabajo, use [GetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-setprocessworkingsetsize).  
   
 -   Para ver el tamaño del espacio de trabajo, use Spy++.  
   

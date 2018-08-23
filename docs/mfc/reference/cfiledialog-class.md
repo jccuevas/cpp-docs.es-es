@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c681cc5f79d0c9d876da522666565e5a43c8e145
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d758bcc700180781c899f2263fe04c29ee0e6409
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028010"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538553"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (clase)
 Encapsula el cuadro de diálogo común que se usa para abrir el archivo o archivo de las operaciones de almacenamiento.  
@@ -561,7 +561,7 @@ explicit CFileDialog(
   
  El *lpszFilter* parámetro se usa para determinar el tipo de nombre de archivo debe tener un archivo que se mostrará en la lista de archivos. La primera cadena en el par de cadenas describe el filtro; la segunda cadena indica la extensión de nombre de archivo para usar. Pueden especificarse varias extensiones mediante el uso de un punto y coma (el carácter ';') como delimitador. La cadena finaliza con dos '&#124;' caracteres, seguidos por un carácter nulo. También puede usar un [CString](../../atl-mfc-shared/using-cstring.md) objeto para este parámetro.  
   
- Por ejemplo, [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] permite a los usuarios abrir archivos que tienen extensiones .xlc (gráfico) o. xls (hoja de cálculo), entre otros. El filtro para Excel podría escribirse como:  
+ Por ejemplo, Microsoft Excel permite a los usuarios abrir archivos que tienen extensiones .xlc (gráfico) o. xls (hoja de cálculo), entre otros. El filtro para Excel podría escribirse como:  
   
  [!code-cpp[NVC_MFCFiles#24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]  
   
@@ -1353,7 +1353,7 @@ void SetControlText(
  Un puntero a la cadena que contiene el texto que se establece para el control.  
   
 ### <a name="remarks"></a>Comentarios  
- Ambas versiones de esta función son válidos para las aplicaciones que utilizan Unicode. Sin embargo, es válida para las aplicaciones que usan solo la versión con el tipo LPCSTR [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)].  
+ Ambas versiones de esta función son válidos para las aplicaciones que utilizan Unicode. Sin embargo, solo la versión con el tipo LPCSTR es válida para las aplicaciones que usan ANSI.  
   
  Para usar este método, debe crear el cuadro de diálogo con el estilo OFN_EXPLORER. En caso contrario, se producirá un error de la función con una aserción.  
   
@@ -1439,16 +1439,16 @@ void SetTemplate(
  Contiene el número de Id. del recurso de plantilla para el explorador que no es de- `CFileDialog` objeto. Esta plantilla solo se usa en Windows NT 3.51 o cuando el estilo OFN_EXPLORER no está presente.  
   
  [in] *nWin4ID*  
- Contiene el número de Id. del recurso de plantilla para el Explorador de `CFileDialog` objeto. Esta plantilla solo se usa en [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] y versiones posteriores, Windows 95 y versiones posteriores, o cuando el estilo OFN_EXPLORER está presente.  
+ Contiene el número de Id. del recurso de plantilla para el Explorador de `CFileDialog` objeto. Esta plantilla se usa solo en Windows NT 4.0 y versiones posteriores, Windows 95 y versiones posteriores, o cuando el estilo OFN_EXPLORER está presente.  
   
  [in] *lpWin3ID*  
  Contiene el nombre del recurso de plantilla para el explorador que no es de- `CFileDialog` objeto. Esta plantilla solo se usa en Windows NT 3.51 o cuando el estilo OFN_EXPLORER no está presente.  
   
  [in] *lpWin4ID*  
- Contiene el nombre del recurso de plantilla del explorador `CFileDialog` objeto. Esta plantilla solo se usa en [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] y versiones posteriores, Windows 95 y versiones posteriores, o cuando el estilo OFN_EXPLORER está presente.  
+ Contiene el nombre del recurso de plantilla del explorador `CFileDialog` objeto. Esta plantilla se usa solo en Windows NT 4.0 y versiones posteriores, Windows 95 y versiones posteriores, o cuando el estilo OFN_EXPLORER está presente.  
   
 ### <a name="remarks"></a>Comentarios  
- El sistema usará sólo una de las plantillas especificadas. El sistema determina qué plantilla utilizar según la presencia del estilo OFN_EXPLORER y el sistema operativo que se ejecuta la aplicación. Al especificar una que no son de explorador y la plantilla de estilo del explorador, es fácil al soporte técnico de Windows NT 3.51, [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] y versiones posteriores y Windows 95 y versiones posteriores.  
+ El sistema usará sólo una de las plantillas especificadas. El sistema determina qué plantilla utilizar según la presencia del estilo OFN_EXPLORER y el sistema operativo que se ejecuta la aplicación. Al especificar una que no son de explorador y la plantilla de estilo del explorador, es fácil admitir Windows NT 3.51, Windows NT 4.0 y versiones posteriores y Windows 95 y versiones posteriores.  
   
 > [!NOTE]
 > Windows Vista o versiones posteriores cuadros de diálogo de archivo de estilo no admiten esta función. Cualquier intento de usar esta función en un Windows Vista o el cuadro de diálogo de archivo de estilo posterior producirá [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Una alternativa es usar un cuadro de diálogo personalizado. Para obtener más información acerca de cómo utilizar una personalizada `CFileDialog`, consulte [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  

@@ -1,5 +1,5 @@
 ---
-title: __movsw | Documentos de Microsoft
+title: __movsw | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1b1bb1b877c0816650b78d5c6132e526afd5586
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f25cea28d18f8377def35959be573c1a41f9098b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334446"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538351"
 ---
 # <a name="movsw"></a>__movsw
 **Específicos de Microsoft**  
   
- Genera una cadena mover (`rep movsw`) instrucción.  
+ Genera una cadena de mover (`rep movsw`) instrucción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,18 +48,18 @@ void __movsw(
  El origen de la operación.  
   
  [in] `Count`  
- El número de palabras que se va a copiar.  
+ El número de palabras para copiar.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__movsw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsw`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- El resultado es que la primera `Count` palabras que señala `Source` se copian en el `Dest` cadena.  
+ El resultado es que la primera `Count` palabras apunta `Source` se copian en el `Dest` cadena.  
   
  Esta rutina solo está disponible como función intrínseca.  
   

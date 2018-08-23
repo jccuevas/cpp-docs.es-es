@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
-ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
+ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39496563"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571806"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalar compatibilidad con C++ en Visual Studio
 
@@ -61,7 +61,7 @@ Para obtener más información sobre el espacio en disco y requisitos del sistem
 
    La primera vez que ejecute Visual Studio, deberá iniciar sesión con una Account de Microsoft. Si no tiene una, puede crear una gratis. También debe elegir un tema. No se preocupe, puede cambiar más adelante si desea. 
 
-   Puede tardar Visual Studio varios minutos para preparar la primera vez que ejecutarlo. Este es su aspecto en un lapso de tiempo rápido:
+   Puede tardar Visual Studio varios minutos para que esté listo para usar la primera vez que se ejecuta. Este es su aspecto en un lapso de tiempo rápido:
 
    ![Inicie Visual Studio 2017](../build/media/vscpp-quickstart-first-run.gif "sesión Visual Studio 2017")
 

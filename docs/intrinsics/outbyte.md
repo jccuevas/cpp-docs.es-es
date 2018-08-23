@@ -1,5 +1,5 @@
 ---
-title: __outbyte | Documentos de Microsoft
+title: __outbyte | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73d32b9300a5a581306d926688230660cd998b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 70aa643d7d8f81cca0ff74a3016badd6551c11a0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330628"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541332"
 ---
 # <a name="outbyte"></a>__outbyte
 **Específicos de Microsoft**  
   
- Genera el `out` instrucción, lo que envía 1 byte especificado por `Data` fuera del puerto de E/S especificado por `Port`.  
+ Genera el `out` instrucción, que envía 1 byte especificado por `Data` fuera del puerto de E/S especificado por `Port`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,13 +43,13 @@ void __outbyte(
  El puerto para enviar los datos.  
   
  [in] `Data`  
- El byte para mandar el puerto especificado.  
+ El byte se envíen el puerto especificado.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__outbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbyte`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

@@ -1,5 +1,5 @@
 ---
-title: __addgsbyte, __addgsword, __addgsdword, __addgsqword | Documentos de Microsoft
+title: __addgsbyte, __addgsword, __addgsdword, __addgsqword | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271f5bf7140dff437b6ef0935f8a4c90daabccd4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50c0025e561c86fc18bbf5c4554c9f894fe32ec7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329480"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539883"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 **Específicos de Microsoft**  
@@ -61,22 +61,22 @@ void __addgsqword(
   
 #### <a name="parameters"></a>Parámetros  
  [in] `Offset`  
- El desplazamiento desde el principio de `GS`.  
+ El desplazamiento desde el principio del `GS`.  
   
  [in] `Data`  
- El valor para agregar a la ubicación de memoria.  
+ Valor que se agrega a la ubicación de memoria.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__addgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__addgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__addgsbyte`|x64|  
+|`__addgsword`|x64|  
+|`__addgsdword`|x64|  
+|`__addgsqword`|x64|  
   
 ## <a name="remarks"></a>Comentarios  
- Estas funciones intrínsecas están disponibles en modo de kernel sólo y estas rutinas solo están disponibles como intrínsecos.  
+ Estas funciones intrínsecas están disponibles en solo en modo kernel, y estas rutinas solo están disponibles como intrínsecos.  
   
 **FIN de Específicos de Microsoft**  
   

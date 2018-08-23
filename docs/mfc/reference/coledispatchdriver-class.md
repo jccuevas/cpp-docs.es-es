@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927ac1c73bee38257396a98a7f7ce1487d0c134d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 61e4a36db71809dab5603211dce91fad3eedd082
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026950"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541702"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver (clase)
 Implementa el cliente de automatización OLE.  
@@ -106,7 +106,7 @@ class COleDispatchDriver
  **Encabezado:** afxdisp.h  
   
 ##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch  
- Llame a la función miembro `AttachDispatch` para adjuntar un puntero `IDispatch` al objeto `COleDispatchDriver` . Para obtener más información, consulte [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Llame a la función miembro `AttachDispatch` para adjuntar un puntero `IDispatch` al objeto `COleDispatchDriver` . Para obtener más información, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ```  
 void AttachDispatch(
@@ -147,17 +147,17 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
  Hacer referencia a un `COleDispatchDriver` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- El formulario `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **BOOL**`bAutoRelease` = **TRUE**) se conecta el [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) interfaz.  
+ El formulario `COleDispatchDriver`( `LPDISPATCH lpDispatch`, **BOOL**`bAutoRelease` = **TRUE**) se conecta el [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) interfaz.  
   
  El formulario `COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`) copia existente `COleDispatchDriver` objeto e incrementa el recuento de referencias.  
   
- El formulario `COleDispatchDriver`() se crea un `COleDispatchDriver` objeto pero no se conecta el `IDispatch` interfaz. Antes de usar `COleDispatchDriver`() sin argumentos, debe conectar un `IDispatch` a él mediante [COleDispatchDriver:: CreateDispatch](#createdispatch) o [COleDispatchDriver::AttachDispatch](#attachdispatch). Para obtener más información, consulte [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ El formulario `COleDispatchDriver`() se crea un `COleDispatchDriver` objeto pero no se conecta el `IDispatch` interfaz. Antes de usar `COleDispatchDriver`() sin argumentos, debe conectar un `IDispatch` a él mediante [COleDispatchDriver:: CreateDispatch](#createdispatch) o [COleDispatchDriver::AttachDispatch](#attachdispatch). Para obtener más información, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [COleDispatchDriver:: CreateDispatch](#createdispatch).  
   
 ##  <a name="createdispatch"></a>  COleDispatchDriver:: CreateDispatch  
- Crea un [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) objeto de interfaz y se adjunta a la `COleDispatchDriver` objeto.  
+ Crea un [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) objeto de interfaz y se adjunta a la `COleDispatchDriver` objeto.  
   
 ```  
 BOOL CreateDispatch(
@@ -199,7 +199,7 @@ LPDISPATCH DetachDispatch();
 ### <a name="remarks"></a>Comentarios  
  El `IDispatch` no se libera.  
   
- Para obtener más información sobre el tipo LPDISPATCH, consulte [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) en el SDK de Windows.  
+ Para obtener más información sobre el tipo LPDISPATCH, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]  
@@ -244,7 +244,7 @@ void AFX_CDECL InvokeHelper(
  Identifica el método o la propiedad que se va a invocar.  
   
  *wFlags*  
- Marcas que describen el contexto de la llamada a `IDispatch::Invoke`. . Para obtener una lista de valores posibles, vea el *wFlags* parámetro [IDispatch:: Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) en el SDK de Windows.  
+ Marcas que describen el contexto de la llamada a `IDispatch::Invoke`. . Para obtener una lista de valores posibles, vea el *wFlags* parámetro [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) en el SDK de Windows.  
   
  *vtRet*  
  Especifica el tipo del valor devuelto. Para los valores posibles, vea la sección Comentarios.  
@@ -281,9 +281,9 @@ void AFX_CDECL InvokeHelper(
   
  El *pbParamInfo* argumento es una lista separada por espacios de **VTS_** constantes. Uno o varios de estos valores, separados por espacios (no por comas), especifican la lista de parámetros de la función. Los valores posibles se muestran con el [EVENT_CUSTOM](event-maps.md#event_custom) macro.  
   
- Esta función convierte los parámetros con valores VARIANTARG y luego invoca el [IDispatch:: Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) método. Si se produce un error en la llamada a `Invoke` , esta función generará una excepción. Si el SCODE (código de estado) devuelto por `IDispatch::Invoke` es DISP_E_EXCEPTION, esta función genera un [COleException](../../mfc/reference/coleexception-class.md) objeto; de lo contrario, genera un [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).  
+ Esta función convierte los parámetros con valores VARIANTARG y luego invoca el [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) método. Si se produce un error en la llamada a `Invoke` , esta función generará una excepción. Si el SCODE (código de estado) devuelto por `IDispatch::Invoke` es DISP_E_EXCEPTION, esta función genera un [COleException](../../mfc/reference/coleexception-class.md) objeto; de lo contrario, genera un [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).  
   
- Para obtener más información, consulte [VARIANTARG](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [Implementing the IDispatch Interface](http://msdn.microsoft.com/library/windows/desktop/ms221037\(v=vs.85\).aspx), [IDispatch:: Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx), y [estructura de códigos de Error COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) en el SDK de Windows.  
+ Para obtener más información, consulte [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), y [estructura de códigos de Error COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [COleDispatchDriver:: CreateDispatch](#createdispatch).  
@@ -313,7 +313,7 @@ LPDISPATCH m_lpDispatch;
 ### <a name="remarks"></a>Comentarios  
  El `m_lpDispatch` miembro de datos es una variable pública de tipo LPDISPATCH.  
   
- Para obtener más información, consulte [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) en el SDK de Windows.  
+ Para obtener más información, consulte [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [COleDispatchDriver::AttachDispatch](#attachdispatch).  
@@ -340,7 +340,7 @@ operator LPDISPATCH();
  [!code-cpp[NVC_MFCOleContainer#8](../../mfc/codesnippet/cpp/coledispatchdriver-class_6.cpp)]  
   
 ##  <a name="releasedispatch"></a>  COleDispatchDriver::ReleaseDispatch  
- Las versiones del `IDispatch` conexión. Para obtener más información, consulte [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)  
+ Las versiones del `IDispatch` conexión. Para obtener más información, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)  
   
 ```  
 void ReleaseDispatch();

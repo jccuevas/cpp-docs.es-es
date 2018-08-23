@@ -1,5 +1,5 @@
 ---
-title: __nop | Documentos de Microsoft
+title: __nop | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ada52595b5d811f68a05813d8df5c68d4a70c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cfa38ddcd5b68c2f64e5c6d401ab0812406b51c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328778"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541302"
 ---
 # <a name="nop"></a>__nop
 **Específicos de Microsoft**  
@@ -39,15 +39,15 @@ void __nop();
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__nop`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__nop`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 **FIN de Específicos de Microsoft**  
   
 ## <a name="remarks"></a>Comentarios  
- El `__nop` función es equivalente a la `NOP` instrucción máquina. Para obtener más información, busque el documento "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
+ El `__nop` función es equivalente a la `NOP` instrucción máquina. Para obtener más información, busque el documento, "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [__noop](../intrinsics/noop.md)

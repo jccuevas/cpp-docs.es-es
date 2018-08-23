@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb5fa8f56f242ce40f6be9c27bc1cbd9c5d61ff
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 5b9183f3ae58a7ba6b7746ae27f64ca17eede991
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852528"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545891"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox (clase)
 Implementa un cuadro combinado que contiene una lista de fuentes. El cuadro combinado se coloca en un panel de la cinta.  
@@ -149,7 +149,7 @@ CMFCRibbonFontComboBox(
  Para obtener más información acerca de los juegos de caracteres válidos que se pueden asignar a *nCharSet*y los valores válidos que se pueden asignar a *nPitchAndFamily*, consulte [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) en el Documentación del SDK de Windows.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;  

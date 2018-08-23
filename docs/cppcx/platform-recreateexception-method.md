@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: recreateexception (método) | Documentos de Microsoft'
+title: Recreateexception (método) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,19 +11,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: fa73d1ab-86e4-4d26-a7d9-81938c1c7e77
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0472d74be21048aeaf25ca92dbb5c1e98ca0ca90
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7dc789ce0eb723410e5c62505183d5d3449d95c5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087834"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601204"
 ---
 # <a name="platformrecreateexception-method"></a>Platform::ReCreateException (Método)
-Este método es para uso interno únicamente y no se ha diseñado para el código del usuario. Utilice el método Exception:: CreateException en su lugar.
+Este método es para uso interno únicamente y no se ha diseñado para el código del usuario. Use el método Exception:: CreateException en su lugar.
 
 ## <a name="syntax"></a>Sintaxis
 

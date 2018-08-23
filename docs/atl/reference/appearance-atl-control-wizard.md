@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd95e3e25cd015fd326c236f15a965e3fb9e801
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025885"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572297"
 ---
 # <a name="appearance-atl-control-wizard"></a>Apariencia, Asistente para controles ATL
 Inserte aquí "Resultados de búsqueda" resumen.  
@@ -97,5 +97,5 @@ Establece las opciones de comportamiento adicional para el control.
   
 ## <a name="see-also"></a>Vea también  
  [Asistente para controles ATL](../../atl/reference/atl-control-wizard.md)   
- [Ejemplo SUBEDIT: Convierte en superclase un Control estándar de Windows](http://msdn.microsoft.com/30e46bdc-ed92-417c-b6b8-359017265a7b)
+ [Ejemplo SUBEDIT: Convierte en superclase un Control estándar de Windows](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)
 

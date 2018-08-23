@@ -1,5 +1,5 @@
 ---
-title: Advertencia | Documentos de Microsoft
+title: Advertencia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b739a3f72416b6ab58cbdba45a496e10fef4424
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 581194fdeab233e3ad07b2af6a7087bb1877e1f2
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842968"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539480"
 ---
 # <a name="warning-pragma"></a>warning (pragma)
 Habilita la modificación selectiva del comportamiento de los mensajes de advertencia del compilador.  
@@ -40,18 +40,19 @@ Habilita la modificación selectiva del comportamiento de los mensajes de advert
 ```  
   
 ## <a name="remarks"></a>Comentarios  
+
 Los siguientes parámetros de warning-specifier están disponibles.  
   
 |warning-specifier|Significado|  
 |------------------------|-------------|  
-|`1, 2, 3, 4`|Aplica el nivel dado a las advertencias especificadas. También activa una advertencia especificada que está desactivada de forma predeterminada.|  
-|`default`|Restablece el comportamiento de advertencia a su valor predeterminado. También activa una advertencia especificada que está desactivada de forma predeterminada. La advertencia se generará en su nivel predeterminado documentado.<br /><br /> Para obtener más información, consulte [advertencias del compilador desactivadas de forma predeterminada](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
-|`disable`|No emite los mensajes de advertencia especificados.|  
-|`error`|Notifica las advertencias especificadas como errores.|  
-|`once`|Muestra los mensajes especificados solo una vez.|  
-|`suppress`|Inserta el estado actual de la pragma en la pila, deshabilita la advertencia especificada para la línea siguiente y, a continuación, extrae de la pila la advertencia para que se restablezca el estado de pragma.|  
+|*1, 2, 3, 4*|Aplica el nivel dado a las advertencias especificadas. También activa una advertencia especificada que está desactivada de forma predeterminada.|  
+|*default*|Restablece el comportamiento de advertencia a su valor predeterminado. También activa una advertencia especificada que está desactivada de forma predeterminada. La advertencia se generará en su nivel predeterminado documentado.<br /><br /> Para obtener más información, consulte [advertencias del compilador desactivadas de forma predeterminada](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
+|*disable*|No emite los mensajes de advertencia especificados.|  
+|*Error*|Notifica las advertencias especificadas como errores.|  
+|*once*|Muestra los mensajes especificados solo una vez.|  
+|*Suprimir*|Inserta el estado actual de la pragma en la pila, deshabilita la advertencia especificada para la línea siguiente y, a continuación, extrae de la pila la advertencia para que se restablezca el estado de pragma.|  
   
- En la instrucción de código siguiente se muestra que un parámetro `warning-number-list` puede contener varios números de advertencia, y que se pueden especificar varios parámetros `warning-specifier` en la misma directiva pragma.  
+En la instrucción de código siguiente se muestra que un parámetro `warning-number-list` puede contener varios números de advertencia, y que se pueden especificar varios parámetros `warning-specifier` en la misma directiva pragma.  
   
 ```cpp  
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )  
@@ -70,9 +71,9 @@ Los siguientes parámetros de warning-specifier están disponibles.
 #pragma warning( error : 164 )  
 ```  
   
- El compilador agrega 4000 a cualquier número de advertencia que esté entre 0 y 999.  
+El compilador agrega 4000 a cualquier número de advertencia que esté entre 0 y 999.  
   
- Para los números de advertencia en el intervalo 4700 - 4999, que son los asociados a la generación de código, el estado de la advertencia en vigor cuando el compilador encuentra la llave de apertura de una función estará en vigor para el resto de la función. El uso de la pragma `warning` en la función para cambiar el estado de una advertencia que tiene un número superior a 4699 solo tendrá efecto después del final de la función. En el ejemplo siguiente se muestra la colocación correcta de pragmas `warning` para deshabilitar un mensaje de advertencia de generación de código y restaurarlo a continuación.  
+Para los números de advertencia en el intervalo 4700 - 4999, que son los asociados a la generación de código, el estado de la advertencia en vigor cuando el compilador encuentra la llave de apertura de una función estará en vigor para el resto de la función. Mediante el **advertencia** pragma en la función para cambiar el estado de una advertencia que tiene un número superior a 4699 solo tendrá efecto después del final de la función. El ejemplo siguiente muestra la posición correcta de **advertencia** directivas pragma para deshabilitar un mensaje de advertencia de generación de código y, a continuación, restaurarla.  
   
 ```cpp  
 // pragma_warning.cpp  
@@ -90,18 +91,19 @@ int main() {
 }  
 ```  
   
- Observe que en el cuerpo de la función, el último valor de la pragma `warning` entrará en vigor para la función completa.  
+Tenga en cuenta que a lo largo de una función de cuerpo, el último valor de la **advertencia** pragma entrará en vigor para la función completa.  
   
 ## <a name="push-and-pop"></a>Inserción y extracción  
- El `warning` pragma también admite la sintaxis siguiente, donde `n` representa un nivel de advertencia (de 1 a 4).  
+ 
+El **advertencia** pragma también admite la sintaxis siguiente, donde *n* representa un nivel de advertencia (de 1 a 4).  
   
- `#pragma warning( push [ , n ] )`  
+`#pragma warning( push [ , n ] )`  
   
- `#pragma warning( pop )`  
+`#pragma warning( pop )`  
    
- La directiva pragma `warning( push )` almacena el estado de advertencia actual para cada advertencia. La directiva pragma `warning( push, n )` almacena el estado actual de cada advertencia y establece el nivel de advertencia global en `n`.  
+La directiva pragma `warning( push )` almacena el estado de advertencia actual para cada advertencia. La directiva pragma `warning( push, n )` almacena el estado actual para cada advertencia y establece el nivel de advertencia global en *n*.  
   
- La directiva pragma `warning( pop )` extrae el último estado de advertencia insertado en la pila. Se deshacen los cambios realizados al estado de la advertencia entre `push` y `pop`. Considere este ejemplo:  
+La directiva pragma `warning( pop )` POP el último estado de advertencia insertado en la pila. Los cambios realizados en el estado de advertencia entre *inserción* y *pop* se deshacen. Considere este ejemplo:  
   
 ```cpp  
 #pragma warning( push )  
@@ -112,9 +114,9 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- Al final de este código, `pop` restaura el estado de cada advertencia (incluye 4705, 4706 y 4707) al que tenía al principio del código.  
+Al final de este código, *pop* restaura el estado de cada advertencia (incluye 4705, 4706 y 4707) al que tenía al principio del código.  
   
- Cuando escriba archivos de encabezado, puede utilizar `push` y `pop` para garantizar que los cambios realizados por un usuario en el estado de advertencia no impidan que los encabezados se compilen correctamente. Utilice `push` al principio del encabezado y `pop` al final. Por ejemplo, si tiene un encabezado que no compila con limpieza en el nivel de advertencia 4, el código siguiente cambiaría el nivel de advertencia a 3 y después restablecería el nivel de advertencia original al final del encabezado.  
+Al escribir archivos de encabezado, puede usar *inserción* y *pop* para garantizar que los cambios de estado de advertencia realizados por un usuario no impiden que los encabezados de compilar correctamente. Use *inserción* al principio del encabezado y *pop* al final. Por ejemplo, si tiene un encabezado que no compila con limpieza en el nivel de advertencia 4, el código siguiente cambiaría el nivel de advertencia a 3 y después restablecería el nivel de advertencia original al final del encabezado.  
   
 ```cpp  
 #pragma warning( push, 3 )  
@@ -122,7 +124,8 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- Para obtener más información acerca del compilador de opciones que le ayudarán a suprimen advertencias, vea [/FI](../build/reference/fi-name-forced-include-file.md) y [/w](../build/reference/compiler-option-warning-level.md).  
+Para obtener más información acerca del compilador de opciones que le ayudan a suprimen las advertencias, vea [/FI](../build/reference/fi-name-forced-include-file.md) y [/w](../build/reference/compiler-option-warning-level.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

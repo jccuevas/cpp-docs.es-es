@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853782"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540900"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar (clase)
 Una barra de menús que implementa el acoplamiento.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -439,7 +439,7 @@ void EnableHelpCombobox(
  El ancho del botón del cuadro combinado en píxeles.  
   
 ### <a name="remarks"></a>Comentarios  
- El **ayuda** cuadro combinado es similar a la **ayuda** cuadro combinado en la barra de menús de [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
+ El **ayuda** cuadro combinado es similar a la **ayuda** cuadro combinado en la barra de menús de Microsoft Word.  
   
  Cuando se llama a este método con *uiID* establece en 0, este método oculta el cuadro combinado. En caso contrario, este método muestra automáticamente el cuadro combinado en el lado derecho de la barra de menús. Después de llamar a este método, llame a [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) para obtener un puntero a la insertado [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) objeto.  
   

@@ -33,15 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 37d53932a283ea047d748985a1da348d9346ce1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 604b28147c6881c7b2d62c388c5402f12bb71c78
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336971"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572694"
 ---
 # <a name="cenumerator-class"></a>CEnumerator (Clase)
-Usa un objeto de enumerador OLE DB que expone el [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) interfaz para devolver un conjunto de filas que describe todos los orígenes de datos y enumeradores.  
+Usa un objeto de enumerador OLE DB que expone el [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfaz para devolver un conjunto de filas que describe todos los orígenes de datos y enumeradores.  
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -83,7 +83,7 @@ bool Find(TCHAR* szSearchName) throw();
  **True** si se encontró el nombre. En caso contrario, **false**.  
   
 ### <a name="remarks"></a>Comentarios  
- Este nombre se asigna a la `SOURCES_NAME` miembro de la [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) interfaz.  
+ Este nombre se asigna a la `SOURCES_NAME` miembro de la [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interfaz.  
   
 ## <a name="getmoniker"></a> CEnumerator:: GetMoniker
 Analiza el nombre para mostrar para extraer el componente de la cadena que se puede convertir en un moniker.  
@@ -108,7 +108,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
  Un HRESULT estándar.  
 
 ## <a name="open"></a> CEnumerator:: Open
-Enlaza el moniker del enumerador, si uno se especifica, recupera el conjunto de filas del enumerador mediante una llamada a [ISourcesRowset:: GetSourcesRowset](https://msdn.microsoft.com/library/ms711200.aspx).  
+Enlaza el moniker del enumerador, si uno se especifica, recupera el conjunto de filas del enumerador mediante una llamada a [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Sintaxis  
   

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 307b7f769035a9ddb84a3d0e51e0ff6d8a016472
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850857"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538343"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider (clase)
 La `CMFCRibbonSlider` clase implementa un control deslizante que se puede agregar a una barra de cinta de opciones o la barra de estado de la cinta de opciones. El control deslizante de la cinta es similar a los controles deslizantes del zoom que aparecen en las aplicaciones de Office 2007.  
@@ -152,7 +152,7 @@ int GetRangeMin() const;
  El incremento mínimo que el control deslizante puede viajar en el control deslizante.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -186,7 +186,7 @@ BOOL HasZoomButtons() const;
  TRUE si el control deslizante tiene botones de zoom; FALSE en caso contrario.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 virtual void OnDraw(CDC* pDC);

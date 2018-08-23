@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b7194aa5b7c60b03e3701567ffdb236f32f0b3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e4a9c2d36ef8b60eed7b8277c39a8ca7ab998d9
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413276"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573076"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
@@ -59,7 +59,7 @@ int vfwscanf(
 
 ### <a name="parameters"></a>Parámetros
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 *format*<br/>
@@ -72,13 +72,13 @@ Lista de argumentos de variable.
 
 Cada una de estas funciones devuelve el número de campos que se convierten y asignan correctamente; el valor devuelto no incluye los campos leídos pero no asignados. Un valor devuelto de 0 indica que no se ha asignado ningún campo. Si se produce un error, o si se alcanza el final de la secuencia de archivo antes de la primera conversión, el valor devuelto es **EOF** para **vfscanf** y **vfwscanf**.
 
-Estas funciones validan sus parámetros. Si *flujo* o *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecer **errno** a **EINVAL**.
+Estas funciones validan sus parámetros. Si *secuencia* o *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecer **errno** a **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **vfscanf** función lee los datos de la posición actual del *flujo* en las ubicaciones que se proporcionan en el *arglist* lista de argumentos. Cada argumento de la lista debe ser un puntero a una variable de un tipo que se corresponde con un especificador de tipo en *formato*. *formato* controla la interpretación de la entrada de campos y tiene el mismo formato y función que el *formato* argumento para **scanf**; vea [scanf](scanf-scanf-l-wscanf-wscanf-l.md) para un Descripción de *formato*.
+El **vfscanf** función lee los datos de la posición actual del *secuencia* en las ubicaciones que proporcionan el *arglist* lista de argumentos. Cada argumento de la lista debe ser un puntero a una variable de un tipo que se corresponde con un especificador de tipo en *formato*. *formato* controla la interpretación de la entrada campos y tiene el mismo formato y función que el *formato* argumento para **scanf**; vea [scanf](scanf-scanf-l-wscanf-wscanf-l.md) para un Descripción de *formato*.
 
-**vfwscanf** es una versión con caracteres anchos de **vfscanf**; el argumento format para **vfwscanf** es una cadena de caracteres anchos. Estas funciones se comportan de forma idéntica si la secuencia se abre en modo ANSI. **vfscanf** no admite la entrada desde un flujo UNICODE.
+**vfwscanf** es una versión con caracteres anchos de **vfscanf**; el argumento format para **vfwscanf** es una cadena de caracteres anchos. Estas funciones se comportan igual si el flujo se abre en modo ANSI. **vfscanf** no admite la entrada desde un flujo UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

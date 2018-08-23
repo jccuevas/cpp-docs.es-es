@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2dee6c5157858fef2bd26101ac128ff3d53d23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337387"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540708"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (clase)
 Proporciona la funcionalidad de una ventana de marco de interfaz de un único documento (SDI) de Windows superpuesta o emergente, junto con los miembros para administrar la ventana.  
@@ -1010,7 +1010,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 ### <a name="remarks"></a>Comentarios  
  Si el valor de la *nStyle* parámetro no es válido, este método valida en modo de depuración y provoca [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) en modo de lanzamiento. En el caso de otros errores en tiempo de ejecución, este método aserciones en modo de depuración y provoca una excepción derivada de la [CException](../../mfc/reference/cexception-class.md) clase.  
   
- Este método afecta al estado de menús de las aplicaciones escritas para [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] y versiones posteriores.  
+ Este método afecta al estado de menús de las aplicaciones escritas para Windows Vista y versiones posteriores.  
   
 ##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
  Llame a esta función para colocar una cadena en el panel de barra de estado que tiene un identificador de 0.  

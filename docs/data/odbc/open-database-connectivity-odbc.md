@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a729497fe24fb0c08734e45d360965f5d22880c4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9385882ec2cb24aefd1a319615250b5797bc0d1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339453"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572981"
 ---
 # <a name="open-database-connectivity-odbc"></a>Conectividad abierta de bases de datos (ODBC)
 La biblioteca Microsoft Foundation Classes (MFC) proporciona clases para la programación con ODBC (Open Database Connectivity, Conectividad abierta de bases de datos). A partir de Visual Studio 2015 y ODBC de SQL Server 2012 es la mejor manera de conectarse a orígenes de datos SQL.
   
- Para obtener más información sobre el uso de la API de ODBC sin MFC, vea el [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK en MSDN.  
+ Para obtener más información sobre el uso de la API de ODBC sin MFC, vea el [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK en MSDN.  
   
   
 ## <a name="in-this-section"></a>En esta sección  
@@ -67,7 +67,7 @@ La biblioteca Microsoft Foundation Classes (MFC) proporciona clases para la prog
 -   [Lista de controladores ODBC](odbc-driver-list.md)  
   
 ## <a name="odbc-database-tasks"></a>Tareas de base de datos ODBC  
- Estas tareas se basan en MFC [ODBC](odbc-basics.md) clases. Para obtener más información sobre el uso de la API de ODBC sin MFC, vea el [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK.  
+ Estas tareas se basan en MFC [ODBC](odbc-basics.md) clases. Para obtener más información sobre el uso de la API de ODBC sin MFC, vea el [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK.  
   
 -   [Instalar y empezar a trabajar con ODBC](installing-and-getting-started-with-odbc.md)  
   

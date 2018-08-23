@@ -23,43 +23,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e8e7bcfef2b8ea9b908c949c9def24ebe0eba31
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 51470a572ec9540f203bb4cff80981fe6ad15dd1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641436"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578576"
 ---
 # <a name="string-editor"></a>Editor de cadenas
-Una tabla de cadenas es un recurso de Windows que contiene una lista de id., valores y títulos para todas las cadenas de su aplicación. Por ejemplo, los mensajes de la barra de estado se encuentran en la tabla de cadenas.  
-  
- Al desarrollar una aplicación, puede tener varias tablas de cadenas: una para cada idioma o condición. Sin embargo, un módulo ejecutable solo tiene una tabla de cadenas. Una aplicación en ejecución puede hacer referencia a varias tablas de cadenas si coloca las tablas en varias DLL diferentes.  
-  
- Las tablas de cadenas facilitan la localización de la aplicación en diferentes idiomas. Si todas las cadenas se encuentran en una tabla de cadenas, puede localizar la aplicación mediante la traducción de las cadenas (y otros recursos) sin cambiar el código fuente. Esto suele ser más deseable que buscar y reemplazar manualmente las distintas cadenas en archivos de código fuente.  
-  
- Con el editor de cadenas, puede:  
-  
--   [Buscar una o más cadenas](../windows/finding-a-string.md).  
-  
--   [Insertar entradas nuevas](../windows/adding-or-deleting-a-string.md) rápidamente en la tabla de cadenas.  
-  
--   [Mover una cadena de un archivo de recursos a otro](../windows/moving-a-string-from-one-resource-file-to-another.md)  
-  
--   [Usar la edición en contexto para las propiedades ID, Value y Caption](../windows/changing-the-properties-of-a-string.md) y ver los cambios inmediatamente.  
-  
--   [Cambiar la propiedad caption de varias cadenas](../windows/changing-the-caption-property-of-multiple-strings.md)  
-  
--   [Agregar formato o caracteres especiales a una cadena](../windows/adding-formatting-or-special-characters-to-a-string.md)  
-  
-    > [!NOTE]
-    >  Windows no permite la creación de tablas de cadenas vacías. Si crea una tabla de cadenas sin entradas, se elimina automáticamente al guardar el archivo de recursos.  
-  
- Para obtener información sobre cómo agregar recursos a proyectos administrados (aquellos que tienen como destino common language runtime), consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Tutorial: uso de recursos para la localización con ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Editores de recursos](../windows/resource-editors.md)   
- [Cadenas](http://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)   
- [Acerca de las cadenas](http://msdn.microsoft.com/library/windows/desktop/ms647465.aspx)
+
+Una tabla de cadenas es un recurso de Windows que contiene una lista de id., valores y títulos para todas las cadenas de su aplicación. Por ejemplo, los mensajes de la barra de estado se encuentran en la tabla de cadenas.
+
+Al desarrollar una aplicación, puede tener varias tablas de cadenas: una para cada idioma o condición. Sin embargo, un módulo ejecutable solo tiene una tabla de cadenas. Una aplicación en ejecución puede hacer referencia a varias tablas de cadenas si coloca las tablas en varias DLL diferentes.
+
+Las tablas de cadenas facilitan la localización de la aplicación en diferentes idiomas. Si todas las cadenas se encuentran en una tabla de cadenas, puede localizar la aplicación mediante la traducción de las cadenas (y otros recursos) sin cambiar el código fuente. Esto suele ser más deseable que buscar y reemplazar manualmente las distintas cadenas en archivos de código fuente.
+
+Con el editor de cadenas, puede:
+
+- [Buscar una o más cadenas](../windows/finding-a-string.md).
+
+- [Insertar entradas nuevas](../windows/adding-or-deleting-a-string.md) rápidamente en la tabla de cadenas.
+
+- [Mover una cadena de un archivo de recursos a otro](../windows/moving-a-string-from-one-resource-file-to-another.md)
+
+- [Usar la edición en contexto para las propiedades ID, Value y Caption](../windows/changing-the-properties-of-a-string.md) y ver los cambios inmediatamente.
+
+- [Cambiar la propiedad caption de varias cadenas](../windows/changing-the-caption-property-of-multiple-strings.md)
+
+- [Agregar formato o caracteres especiales a una cadena](../windows/adding-formatting-or-special-characters-to-a-string.md)
+
+   > [!NOTE]
+   > Windows no permite la creación de tablas de cadenas vacías. Si crea una tabla de cadenas sin entradas, se elimina automáticamente al guardar el archivo de recursos.
+
+Para obtener información sobre cómo agregar recursos a proyectos administrados (aquellos que tienen como destino common language runtime), consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Tutorial: uso de recursos para la localización con ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Editores de recursos](../windows/resource-editors.md)  
+[Cadenas](http://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)  
+[Acerca de las cadenas](/windows/desktop/menurc/about-strings)
+

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e45a5c97f0f25ed0bcb704b584de645bce18cb9
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e67dec2474d89e3daccf0bc0e59332c79080cc99
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338615"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541304"
 ---
 # <a name="cdbexception-class"></a>CDBException (clase)
 Representa una condición de excepción que surge de las clases de base de datos.  
@@ -132,7 +132,7 @@ class CDBException : public CException
 ### <a name="remarks"></a>Comentarios  
  La cadena tiene el formato "estado: % s, nativo: % ld, origen: % s", donde los códigos de formato, en orden, se reemplazan por valores que describen:  
   
--   El valor de SQLSTATE, una cadena terminada en null que contiene un código de error de cinco caracteres devuelto en el *szSqlState* parámetro de la función ODBC `SQLError`. Los valores de SQLSTATE se enumeran en el apéndice A, [códigos de Error ODBC](https://msdn.microsoft.com/library/ms714687.aspx), en el *referencia del programador de ODBC*. Ejemplo: "S0022".  
+-   El valor de SQLSTATE, una cadena terminada en null que contiene un código de error de cinco caracteres devuelto en el *szSqlState* parámetro de la función ODBC `SQLError`. Los valores de SQLSTATE se enumeran en el apéndice A, [códigos de Error ODBC](/previous-versions/windows/desktop/ms714687\(v=vs.85\)), en el *referencia del programador de ODBC*. Ejemplo: "S0022".  
   
 -   Devuelve el código de error nativo específico del origen de datos, en el *pfNativeError* parámetro de la `SQLError` función. Ejemplo: 207.  
   
@@ -140,7 +140,7 @@ class CDBException : public CException
   
  El marco de trabajo interpreta la cadena de error y pone sus componentes en `m_strStateNativeOrigin`; si `m_strStateNativeOrigin` contiene información de más de un error, los errores están separados por nuevas líneas. El marco de trabajo coloca el texto del error alfanumérico en `m_strError`.  
   
- Para obtener más información acerca de los códigos que se utiliza para realizar esta cadena, consulte la [SQLError](https://msdn.microsoft.com/library/ms716312.aspx) funcionando en el *referencia del programador de ODBC*.  
+ Para obtener más información acerca de los códigos que se utiliza para realizar esta cadena, consulte la [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\)) funcionando en el *referencia del programador de ODBC*.  
   
 ### <a name="example"></a>Ejemplo  
   Desde ODBC: "Estado: S0022, nativo: 207, origen: [Microsoft] [controlador ODBC SQL Server] nombre de columna no válido [SQL Server] 'ColName'"  

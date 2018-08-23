@@ -1,5 +1,5 @@
 ---
-title: Clase CPaneDivider | Documentos de Microsoft
+title: CPaneDivider (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -94,15 +94,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7315adc855b0bfbe1cc4ffae87c416fbaa584d57
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079369"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540088"
 ---
-# <a name="cpanedivider-class"></a>Clase CPaneDivider
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+# <a name="cpanedivider-class"></a>CPaneDivider (clase)
+Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
  La `CPaneDivider` clase divide dos paneles, divide los dos grupos de paneles o separa un grupo de paneles del área de cliente de la ventana de marco principal.  
   
@@ -163,14 +163,14 @@ class CPaneDivider : public CBasePane
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CPaneDivider::GetPanes](#getpanes)|Devuelve la lista de paneles que residen en el [CPaneContainer clase](../../mfc/reference/cpanecontainer-class.md). Este método debe llamarse únicamente para los divisores de los paneles de forma predeterminada.|  
-|[CPaneDivider::GetPaneDividers](#getpanedividers)|Devuelve la lista de los divisores de los paneles que residen en el [CPaneContainer clase](../../mfc/reference/cpanecontainer-class.md). Este método debe llamarse únicamente para los divisores de los paneles de forma predeterminada.|  
+|[CPaneDivider::GetPanes](#getpanes)|Devuelve la lista de paneles que residen en el [CPaneContainer (clase)](../../mfc/reference/cpanecontainer-class.md). Este método debe llamarse únicamente para los divisores de paneles predeterminada.|  
+|[CPaneDivider::GetPaneDividers](#getpanedividers)|Devuelve la lista de los divisores de paneles que residen en el [CPaneContainer (clase)](../../mfc/reference/cpanecontainer-class.md). Este método debe llamarse únicamente para los divisores de paneles predeterminada.|  
   
 ### <a name="data-members"></a>Miembros de datos  
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Especifica el ancho predeterminado en píxeles de todos los divisores de los paneles en la aplicación.|  
+|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Especifica el ancho predeterminado en píxeles de todos los divisores de paneles en la aplicación.|  
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Contiene un puntero a la información de clase en tiempo de ejecución sobre un `CPaneDivider`-objeto derivado.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -178,12 +178,12 @@ class CPaneDivider : public CBasePane
   
  Hay dos tipos de divisores de paneles:  
   
--   Si un grupo de paneles está acoplado a un lado de la ventana de marco principal, se crea un panel divisor de forma predeterminada. El divisor de paneles predeterminada contiene un puntero a la [CPaneContainerManager clase](../../mfc/reference/cpanecontainermanager-class.md) y redirige la mayoría de las operaciones en el grupo de paneles (como cambiar el tamaño de un panel o acoplar otro panel o un contenedor) en el Administrador de contenedores. Cada panel acoplable mantiene un puntero a su panel divisor de manera predeterminada.  
+-   se crea un panel divisor de forma predeterminada cuando un grupo de paneles se acopla a un lado de la ventana de marco principal. El divisor del panel predeterminado contiene un puntero a la [CPaneContainerManager (clase)](../../mfc/reference/cpanecontainermanager-class.md) y redirige la mayoría de las operaciones en el grupo de paneles de (como cambiar el tamaño de un panel o acoplar otro panel o contenedor) para el Administrador de contenedores. Cada panel acoplable mantiene un puntero a su panel divisor de forma predeterminada.  
   
--   Un divisor regular simplemente divide dos paneles en un contenedor. Para obtener más información, consulte [CPaneContainer clase](../../mfc/reference/cpanecontainer-class.md).  
+-   Un divisor regular divide dos paneles en un contenedor. Para obtener más información, consulte [CPaneContainer (clase)](../../mfc/reference/cpanecontainer-class.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se muestra cómo obtener un objeto `CPaneDivider` desde un objeto `CWorkspaceBar`. Este fragmento de código forma parte de la [ejemplo de demostración de pestañas MDI](../../visual-cpp-samples.md).  
+ En el siguiente ejemplo se muestra cómo obtener un objeto `CPaneDivider` desde un objeto `CWorkspaceBar`. Este fragmento de código forma parte de la [ejemplo de demostración de pestañas de MDI](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]  
   
@@ -440,7 +440,7 @@ const CBasePane* GetFirstPane() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers  
- Devuelve la lista de los divisores de los paneles que residen en el [CPaneContainer clase](../../mfc/reference/cpanecontainer-class.md). Este método debe llamarse únicamente para los divisores de los paneles de forma predeterminada.  
+ Devuelve la lista de los divisores de paneles que residen en el [CPaneContainer (clase)](../../mfc/reference/cpanecontainer-class.md). Este método debe llamarse únicamente para los divisores de paneles predeterminada.  
   
 ```  
 void GetPaneDividers(CObList& lstSliders);
@@ -448,10 +448,10 @@ void GetPaneDividers(CObList& lstSliders);
   
 ### <a name="parameters"></a>Parámetros  
  [out] *lstSliders*  
- Contiene la lista de los divisores de los paneles que residen en el contenedor de panel.  
+ Contiene la lista de los divisores de paneles que residen en el contenedor del panel.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método debe llamarse para divisores de paneles predeterminada solo. Un divisor de paneles predeterminada es un divisor que cambia el tamaño del contenedor de panel completo.  
+ Este método debe llamarse para divisores de paneles predeterminada únicamente. Un divisor de paneles predeterminada es un divisor que cambia el tamaño del contenedor de panel completo.  
   
 ##  <a name="getpanedividerstyle"></a>  CPaneDivider::GetPaneDividerStyle  
 
@@ -465,7 +465,7 @@ DWORD GetPaneDividerStyle() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="getpanes"></a>  CPaneDivider::GetPanes  
- Devuelve la lista de paneles que residen en el [CPaneContainer clase](../../mfc/reference/cpanecontainer-class.md). Este método debe llamarse únicamente para recuperar los divisores de los paneles de forma predeterminada.  
+ Devuelve la lista de paneles que residen en el [CPaneContainer (clase)](../../mfc/reference/cpanecontainer-class.md). Este método debe llamarse únicamente para recuperar los divisores de paneles predeterminada.  
   
 ```  
 void GetPanes(CObList& lstBars);
@@ -473,10 +473,10 @@ void GetPanes(CObList& lstBars);
   
 ### <a name="parameters"></a>Parámetros  
  [out] *lstBars*  
- Contiene la lista de paneles que residen en el contenedor de panel.  
+ Contiene la lista de paneles que residen en el contenedor del panel.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método debe llamarse para divisores de paneles predeterminada solo. Un divisor de paneles predeterminada es un divisor que cambia el tamaño del contenedor de panel completo.  
+ Este método debe llamarse para divisores de paneles predeterminada únicamente. Un divisor de paneles predeterminada es un divisor que cambia el tamaño del contenedor de panel completo.  
   
 ##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect  
 
@@ -570,7 +570,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>Comentarios  
   
 ##  <a name="m_ndefaultwidth"></a>  CPaneDivider::m_nDefaultWidth  
- Especifica el ancho predeterminado, en píxeles, de todos los divisores de los paneles en la aplicación.  
+ Especifica el ancho predeterminado, en píxeles, de todos los divisores de paneles en la aplicación.  
   
 ```  
 AFX_IMPORT_DATA static int m_nDefaultWidth;  
@@ -599,10 +599,10 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Si se crea un divisor de paneles personalizados, establecer esta variable miembro. Esto permite que el marco de trabajo crear el panel divisor cuando se dibuja el panel.  
+ Establezca esta variable de miembro si creas un divisor de panel personalizado. Esto permite que el marco de trabajo crear el divisor del panel cuando se dibuja el panel.  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo establecer el `m_pSliderRTC` variable miembro:  
+ El ejemplo siguiente muestra cómo establecer el `m_pSliderRTC` variable miembro:  
   
 ```  
 class CMySplitter : public CPaneDivider  
@@ -744,7 +744,7 @@ void StoreRecentTabRelatedInfo(
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)   
- [Clase CPaneContainer](../../mfc/reference/cpanecontainer-class.md)   
- [Clase CDockingManager](../../mfc/reference/cdockingmanager-class.md)   
+ [CPaneContainerManager (clase)](../../mfc/reference/cpanecontainermanager-class.md)   
+ [CPaneContainer (clase)](../../mfc/reference/cpanecontainer-class.md)   
+ [CDockingManager (clase)](../../mfc/reference/cdockingmanager-class.md)   
  [CBasePane (clase)](../../mfc/reference/cbasepane-class.md)

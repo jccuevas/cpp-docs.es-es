@@ -1,5 +1,5 @@
 ---
-title: Tutoriales del Runtime de simultaneidad | Documentos de Microsoft
+title: Tutoriales del Runtime de simultaneidad | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e50530bf1c7aa401a7422a0119f004e30234a9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 19de73a99384d8cea0f9f594b5a1a214f8aaaf22
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686638"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42545899"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>Tutoriales del Runtime de simultaneidad
-Los temas basada en escenario de esta sección muestran cómo utilizar muchas de las características del Runtime de simultaneidad.  
+Los temas basados en escenarios de esta sección muestran cómo utilizar muchas de las características del Runtime de simultaneidad.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- Muestra cómo utilizar el [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) y [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfaces junto con otras tareas para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación de la plataforma Universal de Windows (UWP).  
+ Se muestra cómo usar el [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) y [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto con las tareas para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación de plataforma Universal de Windows (UWP).  
   
  [Tutorial: Crear una aplicación basada en agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
  Describe cómo crear una aplicación basada en agente básica.  
   
  [Tutorial: Crear un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)  
- Muestra cómo crear aplicaciones basadas en el agente que se basan en el flujo de datos, en lugar de en el flujo de control.  
+ Muestra cómo crear aplicaciones basadas en agentes que se basan en el flujo de datos, en lugar de en el flujo de control.  
   
  [Tutorial: Crear una red de procesamiento de imagen](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)  
  Muestra cómo crear una red de bloques de mensajes asincrónicos que realizan procesamiento de imágenes.  
   
  [Tutorial: Implementar futuros](../../parallel/concrt/walkthrough-implementing-futures.md)  
- Muestra cómo calcular asincrónicamente valores para su uso posterior.  
+ Se muestra cómo calcular los valores para su uso posterior de forma asincrónica.  
   
  [Tutorial: Usar la clase join para evitar un interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)  
  Usa el problema cena de los filósofos para ilustrar cómo se usa el [Concurrency:: join](../../parallel/concrt/reference/join-class.md) clase para evitar el interbloqueo en la aplicación.  
@@ -51,7 +51,7 @@ Los temas basada en escenario de esta sección muestran cómo utilizar muchas de
  Muestra cómo usar el Runtime de simultaneidad en una aplicación que utiliza el modelo de objetos componentes (COM).  
   
  [Tutorial: Adaptar el código existente para usar tareas ligeras](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)  
- Muestra cómo adaptar código existente que utiliza la API de Windows para crear y ejecutar un subproceso para una tarea ligera.  
+ Muestra cómo adaptar código existente que usa la API de Windows para crear y ejecutar un subproceso para utilizar una tarea ligera.  
   
  [Tutorial: Crear un bloque de mensajes personalizado](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)  
  Describe cómo crear un tipo de bloque de mensajes personalizado que ordena los mensajes entrantes por prioridad.  

@@ -1,5 +1,5 @@
 ---
-title: _bittest, _bittest64 | Documentos de Microsoft
+title: _bittest, _bittest64 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b2259e7eecd820d35527a6ab8908f274e3e287
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 623077695731b88285769c5b887b1f64f5263855
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334258"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541322"
 ---
 # <a name="bittest-bittest64"></a>_bittest, _bittest64
 **Específicos de Microsoft**  
@@ -60,8 +60,8 @@ El bit en la posición especificada.
   
 |Función intrínseca|Arquitectura|Header|  
 |---------------|------------------|------------|  
-|`_bittest`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
-|`_bittest64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
+|`_bittest`|x86, ARM, x64|\<INTRIN.h >|  
+|`_bittest64`|ARM, x64|\<INTRIN.h >|  
   
 ## <a name="remarks"></a>Comentarios  
 Esta rutina solo está disponible como función intrínseca.  

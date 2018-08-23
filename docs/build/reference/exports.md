@@ -1,7 +1,7 @@
 ---
 title: EXPORTACIONES | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322194"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572901"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -49,11 +49,18 @@ EXPORTS
    func2=func1
 ```
 
-Si es el nombre que exporta desde otro módulo, especifique el nombre de la exportación del archivo DLL con *other_module.exported_name*. Por ejemplo, si la DLL exporta una función `other_module.func1` y quiere que los autores de llamadas la usen como `func2`, tendrá que especificar:
+Si es el nombre que exporta desde algún otro módulo, especifique el nombre de la exportación del archivo DLL con *other_module.exported_name*. Por ejemplo, si la DLL exporta una función `other_module.func1` y quiere que los autores de llamadas la usen como `func2`, tendrá que especificar:
 
 ```DEF
 EXPORTS
    func2=other_module.func1
+```
+
+Si es el nombre que exporta desde otro módulo que exporta por ordinal, especifique la exportación 's ordinal en el archivo DLL mediante el uso de *other_module. #ordinal_number*. Por ejemplo, si la DLL exporta una función desde el módulo donde es 42 ordinal y desea que los llamadores usen como `func2`, especificaría:
+
+```DEF
+EXPORTS
+   func2=other_module.#42
 ```
 
 Dado que el compilador de Visual C++ utiliza nombres representativos para las funciones de C++, debe usar el nombre representativo de internal_name o definir las funciones exportadas mediante el uso de extern "C" en el código fuente. El compilador también está contenido en las funciones de C que usan el [__stdcall](../../cpp/stdcall.md) con un prefijo de subrayado (_) y un sufijo formado por la convención de llamada la arroba (@) seguido del número de bytes (en formato decimal) en la lista de argumentos.  

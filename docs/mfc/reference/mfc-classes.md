@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027819"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42543248"
 ---
 # <a name="mfc-classes"></a>Clases de MFC
 Las clases de la siguiente lista se incluyen en la biblioteca MFC (Microsoft Foundation Class).  
@@ -852,7 +852,7 @@ Las clases de la siguiente lista se incluyen en la biblioteca MFC (Microsoft Fou
  Simula el aspecto de Microsoft Windows XP o Microsoft Vista cuando el usuario selecciona un tema de Windows XP o Vista.  
   
  [CMFCVisualManagerWindows7 (clase)](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- Proporciona a una aplicación el aspecto de una aplicación de [!INCLUDE[win7](../../build/includes/win7_md.md)] .  
+ Proporciona la apariencia de una aplicación de Windows 7 a una aplicación.  
   
  [CMFCWindowsManagerDialog (clase)](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
  Permite a un usuario administrar ventanas secundarias MDI en una aplicación MDI.  
@@ -1020,7 +1020,7 @@ Las clases de la siguiente lista se incluyen en la biblioteca MFC (Microsoft Fou
  Se utiliza para un caso especial del cuadro de diálogo Editar vínculos de OLE, que se debe utilizar cuando se necesita actualizar solo los objetos existentes vinculados o incrustados en un documento.  
   
  [COleVariant (clase)](../../mfc/reference/colevariant-class.md)  
- Encapsula el [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) tipo de datos.  
+ Encapsula el [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) tipo de datos.  
   
  [CPagerCtrl (clase)](../../mfc/reference/cpagerctrl-class.md)  
  La clase `CPagerCtrl` ajusta el control de paginación de Windows, que puede desplazar en la vista una ventana contenida que no cabe en la ventana contenedora.  

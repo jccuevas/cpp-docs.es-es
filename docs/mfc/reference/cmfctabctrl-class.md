@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219f0bc1f5b9959a424a8c3a63ec0c4e3505eb55
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852593"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541864"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 La `CMFCTabCtrl` clase proporciona funcionalidad para un control de ficha. El control de pestaña muestra una ventana acoplable con pestañas planas o tridimensionales en la parte superior o inferior. Las pestañas pueden mostrar texto y una imagen y pueden cambiar de color cuando están activas.  
@@ -221,7 +221,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 -   Ventanas con pestañas separables.  
   
- El `CMFCTabCtrl` clase puede usarse con un cuadro de diálogo, pero está pensado para las aplicaciones que usan el acoplamiento de control de las barras como [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] y [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Para obtener más información, consulte [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
+ La `CMFCTabCtrl` clase puede usarse con un cuadro de diálogo, pero está pensado para las aplicaciones que usan el acoplamiento de control de las barras, como Microsoft Excel y Visual Studio. Para obtener más información, consulte [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
  Siga estos pasos para agregar un puede cambiar el tamaño, acoplar el control de ficha en la aplicación:  
   
@@ -269,7 +269,7 @@ void ActivateMDITab(int nTab = -1);
  Índice de base cero de una pestaña para mostrar, o -1 para especificar la pestaña activa.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  

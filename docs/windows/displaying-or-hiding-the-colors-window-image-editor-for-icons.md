@@ -18,33 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 757360f231f15bc7166008e0e8d003bebab9eb3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645115"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578760"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Mostrar u ocultar la ventana Colores (Editor de imágenes para iconos)
-### <a name="to-display-colors-window"></a>Para mostrar la ventana colores  
-  
-1.  Haga clic en un **Editor de imágenes** panel y elija **Mostrar ventana colores** en el menú contextual.  
-  
-     \- o -  
-  
-2.  Haga clic en **Mostrar ventana colores** en el [menú imagen](../windows/image-menu-image-editor-for-icons.md).  
-  
-### <a name="to-hide-the-colors-window"></a>Para ocultar la ventana colores  
-  
-1.  Desanclar la ventana. Esto permitirá que la ventana de ocultación automática cuando no está en uso.  
-  
- \- o -  
-  
--   Haga clic en el **cerrar** botón.  
-  
-## <a name="requirements"></a>Requisitos  
- Ninguna  
-  
-## <a name="see-also"></a>Vea también  
- [Ventana colores](../windows/colors-window-image-editor-for-icons.md)   
- [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)
+
+### <a name="to-display-colors-window"></a>Para mostrar la ventana colores
+
+1. Haga clic en un **Editor de imágenes** panel y elija **Mostrar ventana colores** en el menú contextual.
+
+   \- o -
+
+2. Haga clic en **Mostrar ventana colores** en el [menú imagen](../windows/image-menu-image-editor-for-icons.md).
+
+### <a name="to-hide-the-colors-window"></a>Para ocultar la ventana colores
+
+1. Desanclar la ventana. Esto permitirá que la ventana de ocultación automática cuando no está en uso.
+
+\- o -
+
+- Haga clic en el **cerrar** botón.
+
+## <a name="requirements"></a>Requisitos
+
+Ninguna
+
+## <a name="see-also"></a>Vea también
+
+[Ventana colores](../windows/colors-window-image-editor-for-icons.md)  
+[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

@@ -1,5 +1,5 @@
 ---
-title: __outwordstring | Documentos de Microsoft
+title: __outwordstring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc25fdc4d43b7454761787264583b5e4f8fa47e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abc221b81b6ace3afb165585b7e24655d348c2b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333699"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538543"
 ---
 # <a name="outwordstring"></a>__outwordstring
 **Específicos de Microsoft**  
   
- Genera el `rep outsw` instrucción, lo que envía `Count` palabras que empiezan en `Buffer` fuera del puerto de E/S especificado por `Port`.  
+ Genera el `rep outsw` instrucción, que envía `Count` palabras que empiezan en `Buffer` fuera del puerto de E/S especificado por `Port`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,16 +45,16 @@ void __outwordstring(
  El puerto para enviar los datos.  
   
  [in] `Buffer`  
- Un puntero a los datos que se envía el puerto especificado.  
+ Un puntero a los datos se envíen el puerto especificado.  
   
  [in] `Count`  
- El número de palabras que se va a enviar.  
+ El número de palabras para enviar.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__outwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outwordstring`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

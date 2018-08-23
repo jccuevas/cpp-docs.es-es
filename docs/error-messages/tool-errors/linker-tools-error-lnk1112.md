@@ -1,5 +1,5 @@
 ---
-title: Las herramientas del vinculador LNK1112 Error | Documentos de Microsoft
+title: Las herramientas del vinculador LNK1112 Error | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ca2afc7270a69c443447d1b294ee7ec8bbe5a7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e08e8dae82675d9503575d543edfcaa2c96275e9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705002"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538747"
 ---
 # <a name="linker-tools-error-lnk1112"></a>Error de las herramientas del vinculador LNK1112
 
-> tipo de equipo de módulo '*type1*'entra en conflicto con el tipo de equipo de destino'*type2*'
+> tipo de equipo del módulo '*type1*'entra en conflicto con el tipo de equipo de destino'*type2*'
 
 ## <a name="remarks"></a>Comentarios
 
 Los archivos de objeto especificados como entrada se compilaron para distintos tipos de equipos.
 
-Por ejemplo, si se intenta vincular un archivo objeto compilado con **/clr** y un archivo objeto compilado con **/clr:pure** (tipo de máquina CEE), el enlazador generará el error LNK1112. El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admiten en Visual Studio de 2017.
+Por ejemplo, si se intenta vincular un archivo objeto compilado con **/clr** y un archivo objeto compilado con **/clr:pure** (tipo de máquina CEE), el enlazador generará el error LNK1112. El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
 
-De forma similar, si crea un módulo con el compilador [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] y otro módulo con el compilador x86 y se intenta vincularlos, el enlazador generará el error LNK1112.
+De forma similar, si crea un módulo con el x64 compilador y el otro módulo con el x86 compilador y se intenta vincularlos, el enlazador generará el error LNK1112.
 
 Una de las razones posibles de este error es que está desarrollando una aplicación de 64 bits, pero no instaló uno de los compiladores de Visual C++ de 64 bits. En este caso, las configuraciones de 64 bits no estarán disponibles. Para corregir este problema, ejecute el instalador de Visual Studio e instale los componentes de C++ que faltan.
 

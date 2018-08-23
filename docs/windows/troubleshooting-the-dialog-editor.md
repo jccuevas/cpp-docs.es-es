@@ -19,21 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 242881100dfd9a27946bcbe74d449d078c373852
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1678487a3b0d3adcf89a88a71b380e352e2721bf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011109"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578595"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>Solucionar problemas del Editor de cuadros de diálogo
-A continuación se muestran algunos problemas de los cuales debe tener en cuenta cuando se trabaja en el **diálogo** editor.  
-  
--   [Al agregar controles a un cuadro de diálogo, este deja de funcionar](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)  
-  
--   [Uso del control RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
-  
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="see-also"></a>Vea también  
- [Editor de cuadros de diálogo](../windows/dialog-editor.md)
+
+A continuación se muestran algunos problemas de los cuales debe tener en cuenta cuando se trabaja en el **diálogo** editor.
+
+- [Al agregar controles a un cuadro de diálogo, este deja de funcionar](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)
+
+- [Uso del control RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)
+
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="see-also"></a>Vea también
+
+[Editor de cuadros de diálogo](../windows/dialog-editor.md)

@@ -1,5 +1,5 @@
 ---
-title: __ull_rshift | Documentos de Microsoft
+title: __ull_rshift | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333123"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540700"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Específicos de Microsoft**  
@@ -40,24 +40,24 @@ unsigned __int64 __ull_rshift(
   
 #### <a name="parameters"></a>Parámetros  
  [in] `mask`  
- El valor del entero de 64 bits para desplazamiento a la derecha.  
+ El valor entero de 64-bit a desplazar a la derecha.  
   
  [in] `nBit`  
- El número de bits de desplazamiento, módulo 32 en x86 y módulo 64 en x64.  
+ El número de bits del desplazamiento de módulo 32 en x86 y módulo 64 en x64.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Desplace hacia la máscara `nBit` bits.  
+ Desplace la máscara `nBit` bits.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__ull_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ull_rshift`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Si el segundo parámetro es mayor que 31 en x86 (63 en x64), que se realiza el número de módulo 32 (64 en x64) para determinar el número de bits de desplazamiento. El `ull` en el nombre indica `unsigned long long (unsigned __int64)`.  
+ Si el segundo parámetro es mayor que 31 en x86 (63 en x64), que se toma el número de módulo 32 (64 en x64) para determinar el número de bits del desplazamiento. El `ull` en el nombre indica `unsigned long long (unsigned __int64)`.  
   
 ## <a name="example"></a>Ejemplo  
   

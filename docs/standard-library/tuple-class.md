@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963931"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541844"
 ---
 # <a name="tuple-class"></a>tupla (Clase)
 
@@ -57,7 +57,7 @@ public:
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un objeto que almacena los objetos de tipos N `T1`, `T2`,..., `TN`, respectivamente, donde donde `0 <= N <= Nmax`. La extensión de una instancia de la tupla `tuple<T1, T2, ..., TN>` es el número `N` de sus argumentos de plantilla. El índice del argumento de plantilla `Ti` y del valor almacenado correspondiente de ese tipo es `i - 1`. Por lo tanto, aunque el número de los tipos de 1 a N en esta documentación, el índice correspondiente valores comprendidos entre 0 y N - 1.
+La clase de plantilla describe un objeto que almacena los objetos de tipos N `T1`, `T2`,..., `TN`, respectivamente, donde `0 <= N <= Nmax`. La extensión de una instancia de la tupla `tuple<T1, T2, ..., TN>` es el número `N` de sus argumentos de plantilla. El índice del argumento de plantilla `Ti` y del valor almacenado correspondiente de ese tipo es `i - 1`. Por lo tanto, aunque el número de los tipos de 1 a N en esta documentación, el índice correspondiente valores comprendidos entre 0 y N - 1.
 
 ## <a name="example"></a>Ejemplo
 

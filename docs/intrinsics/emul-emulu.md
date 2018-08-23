@@ -1,5 +1,5 @@
 ---
-title: __emul, __emulu | Documentos de Microsoft
+title: __emul, __emulu | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc98119f6174f299b8de72383610aac72032d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331040"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543219"
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Específicos de Microsoft**  
   
- Lleva a cabo multiplicaciones que lo que puede contener un entero de 32 bits un desbordamiento.  
+ Realiza multiplicaciones que desbordan lo que puede contener un entero de 32 bits.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -59,8 +59,8 @@ unsigned __int64 __emulu(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emul`|x86, x64|  
+|`__emulu`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

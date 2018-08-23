@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939adc0507eee61be432ba8e8f582cfc53005aa0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4a75d3f40ade42c25de51a3c65c98e8c448b03ed
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854000"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541107"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl (clase)
 La `CMFCShellListCtrl` clase proporciona funcionalidad de control de lista de Windows y la expande incluyendo la capacidad para mostrar una lista de elementos de shell.  
@@ -263,7 +263,7 @@ BOOL IsDesktop() const;
  Es TRUE si la carpeta que se muestra es la carpeta del escritorio; FALSE en caso contrario.  
   
 ##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 virtual int OnCompareItems(

@@ -16,31 +16,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b459fbf77b75a61350fd1aa69c00749ceb1afc4c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ee34744a110b31eba125e4b6cbef48207081f5d7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017245"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578645"
 ---
 # <a name="predefined-symbol-ids"></a>Identificadores de símbolo predefinidos
-Cuando se inicia un proyecto nuevo, dependiendo del tipo de proyecto, es posible que se hayan predefinido algunos identificadores de símbolo. Estos identificadores son compatibles con los distintos tipos de proyectos y bibliotecas (por ejemplo, MFC). Representan tareas comunes que se suelen incluir en todas las aplicaciones, o acciones de elementos de hardware, como un mouse o una impresora.  
-  
- Estos identificadores de símbolo son importantes al trabajar con recursos. Se encuentran disponibles al editar tablas de aceleradores y algunos de ellos ya están asociados con teclas virtuales. También están disponibles a través del [ventana propiedades](/visualstudio/ide/reference/properties-window). Puede asignar cualquiera de los identificadores de símbolo predefinidos a los nuevos recursos, o también puede asignar a estos identificadores teclas de aceleración. En este caso, la funcionalidad asociada con el identificador de símbolo se asociará a su vez de forma automática con la combinación de teclas en cuestión.  
-  
- Estas bibliotecas cuentan con símbolos predefinidos que aparecerán como parte del proyecto:  
-  
--   [Símbolos predefinidos de MFC](../windows/mfc-predefined-symbols.md)  
-  
--   [Símbolos predefinidos de ATL](../windows/atl-predefined-symbols.md)  
-  
--   [Símbolos predefinidos de Win32](../windows/win32-predefined-symbols.md)  
-  
-    > [!NOTE]
-    >  Los símbolos predefinidos son siempre de solo lectura.  
-  
-## <a name="requirements"></a>Requisitos  
- Win32, MFC o ATL  
-  
-## <a name="see-also"></a>Vea también  
- [Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)
+
+Cuando se inicia un proyecto nuevo, dependiendo del tipo de proyecto, es posible que se hayan predefinido algunos identificadores de símbolo. Estos identificadores son compatibles con los distintos tipos de proyectos y bibliotecas (por ejemplo, MFC). Representan tareas comunes que se suelen incluir en todas las aplicaciones, o acciones de elementos de hardware, como un mouse o una impresora.
+
+Estos identificadores de símbolo son importantes al trabajar con recursos. Se encuentran disponibles al editar tablas de aceleradores y algunos de ellos ya están asociados con teclas virtuales. También están disponibles a través del [ventana propiedades](/visualstudio/ide/reference/properties-window). Puede asignar cualquiera de los identificadores de símbolo predefinidos a los nuevos recursos, o también puede asignar a estos identificadores teclas de aceleración. En este caso, la funcionalidad asociada con el identificador de símbolo se asociará a su vez de forma automática con la combinación de teclas en cuestión.
+
+Estas bibliotecas cuentan con símbolos predefinidos que aparecerán como parte del proyecto:
+
+- [Símbolos predefinidos de MFC](../windows/mfc-predefined-symbols.md)
+
+- [Símbolos predefinidos de ATL](../windows/atl-predefined-symbols.md)
+
+- [Símbolos predefinidos de Win32](../windows/win32-predefined-symbols.md)
+
+   > [!NOTE]
+   > Los símbolos predefinidos son siempre de solo lectura.
+
+## <a name="requirements"></a>Requisitos
+
+Win32, MFC o ATL
+
+## <a name="see-also"></a>Vea también
+
+[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)

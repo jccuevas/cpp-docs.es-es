@@ -1,5 +1,5 @@
 ---
-title: funciones intrínsecas _interlockedbittestandset | Documentos de Microsoft
+title: funciones intrínsecas _interlockedbittestandset | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6789a8e602fded02d4d521be74e602557ebdaefe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7b64118753138087bce446a92716c6cb1731c7ea
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340338"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540902"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>Funciones intrínsecas _interlockedbittestandset
 **Específicos de Microsoft**  
@@ -95,14 +95,14 @@ unsigned char _interlockedbittestandset64_HLERelease(
   
 |Función intrínseca|Arquitectura|Header|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
+|`_interlockedbittestandset`|x86, ARM, x64|\<INTRIN.h >|  
 |`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM|\<INTRIN.h >|  
-|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
-|`_interlockedbittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
-|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
+|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, x64|\<immintrin.h >|  
+|`_interlockedbittestandset64`|x64|\<INTRIN.h >|  
+|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|x64|\<immintrin.h >|  
   
 ## <a name="remarks"></a>Comentarios  
- En x86 y procesadores [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], estos intrínsecos usan la instrucción `lock bts` para leer y establecer el bit especificado en 1. La operación es atómica.  
+ En procesadores x86 y x64, estos intrínsecos usan la `lock bts` instrucción para leer y establecer el bit especificado en 1. La operación es atómica.  
   
  En procesadores ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` para adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos ARM con un sufijo `_nf` ("sin límite") no actúan como una barrera de memoria.  
   
@@ -113,5 +113,5 @@ unsigned char _interlockedbittestandset64_HLERelease(
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [Conflictos con el compilador de x86](../build/conflicts-with-the-x86-compiler.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 425d404272ad21ad5c732a4db210379eedc7515f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339444"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571612"
 ---
 # <a name="ole-db-templates"></a>plantillas OLE DB
 Las plantillas OLE DB facilitan el acceso a datos de OLE DB. Visual C++ proporciona clases de plantilla que implementan muchas de las interfaces OLE DB más utilizadas. Puede usar las plantillas de consumidor de Visual C++ para escribir una aplicación de cliente (consumidor) de OLE DB y las plantillas de proveedor para escribir una aplicación de servidor (proveedor).  
@@ -38,7 +38,7 @@ Las plantillas OLE DB facilitan el acceso a datos de OLE DB. Visual C++ proporci
  [Información general sobre la programación de OLE DB](../../data/oledb/ole-db-programming-overview.md)  
  Describe qué es OLE DB y Universal Data Access en OLE DB.  
   
- [Referencia del programador OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)  
+ [Referencia del programador OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
  Proporciona vínculos a la documentación del SDK de Windows en OLE DB.  
   
  [Ejemplos de plantillas OLE DB](../../visual-cpp-samples.md)  

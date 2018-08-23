@@ -124,17 +124,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61c5698a0ad9d6eb2c13edc6147b757a86f20e9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: cc7ae6e3d06f29b5f45c321cc7f11c9260f26ed1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850175"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540716"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel (clase)
 Implementa un panel que contiene un conjunto de elementos de cinta. Cuando se dibuja el panel, muestra tantos elementos como es posible, dado el tamaño del panel.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
  
   
 ## <a name="syntax"></a>Sintaxis  

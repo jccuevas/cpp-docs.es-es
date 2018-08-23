@@ -19,42 +19,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8a1a5f5256087a8869426489fe01250b16fc598
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 177f3110b2bc782093a91ee9dfaa560843791b5c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340516"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573374"
 ---
 # <a name="rowset-object-interfaces"></a>Interfaces del objeto de conjunto de filas
 En la tabla siguiente se muestra las interfaces obligatorias y opcionales definidas por OLE DB para un objeto de conjunto de filas.  
   
 |Interfaz|¿Obligatorio?|¿Implementado por plantillas OLE DB?|  
 |---------------|---------------|--------------------------------------|  
-|[IAccessor](https://msdn.microsoft.com/library/ms719672.aspx)|Obligatorio|Sí|  
-|[IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx)|Obligatorio|Sí|  
-|[IConvertType](https://msdn.microsoft.com/library/ms715926.aspx)|Obligatorio|Sí|  
-|[IRowset](https://msdn.microsoft.com/library/ms720986.aspx)|Obligatorio|Sí|  
-|[IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx)|Obligatorio|Sí|  
-|[IChapteredRowset](https://msdn.microsoft.com/library/ms718180.aspx)|Optional|No|  
-|[IColumnsInfo2](https://msdn.microsoft.com/library/ms712953.aspx)|Optional|No|  
-|[IColumnsRowset](https://msdn.microsoft.com/library/ms722657.aspx)|Optional|No|  
+|[IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\))|Obligatorio|Sí|  
+|[IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|Obligatorio|Sí|  
+|[IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\))|Obligatorio|Sí|  
+|[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))|Obligatorio|Sí|  
+|[IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))|Obligatorio|Sí|  
+|[IChapteredRowset](/previous-versions/windows/desktop/ms718180\(v=vs.85\))|Optional|No|  
+|[IColumnsInfo2](/previous-versions/windows/desktop/ms712953\(v=vs.85\))|Optional|No|  
+|[IColumnsRowset](/previous-versions/windows/desktop/ms722657\(v=vs.85\))|Optional|No|  
 |[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Optional|Sí (mediante ATL)|  
-|[IDBAsynchStatus](https://msdn.microsoft.com/library/ms709832.aspx)|Optional|No|  
-|[IGetRow](https://msdn.microsoft.com/library/ms718047.aspx)|Optional|No|  
-|[IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)|Optional|Sí|  
-|[IRowsetChapterMember](https://msdn.microsoft.com/library/ms725430.aspx)|Optional|No|  
-|[IRowsetCurrentIndex](https://msdn.microsoft.com/library/ms709700.aspx)|Optional|No|  
-|[IRowsetFind](https://msdn.microsoft.com/library/ms724221.aspx)|Optional|No|  
-|[IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx)|Opcional (pero es obligatorio para los proveedores de nivel 0)|Sí|  
-|[IRowsetIndex](https://msdn.microsoft.com/library/ms719604.aspx)|Optional|No|  
-|[IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx)|Optional|Sí|  
-|[IRowsetRefresh](https://msdn.microsoft.com/library/ms714892.aspx)|Optional|No|  
-|[IRowsetScroll](https://msdn.microsoft.com/library/ms712984.aspx)|Optional|No|  
-|[IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx)|Optional|Sí|  
-|[IRowsetView](https://msdn.microsoft.com/library/ms709755.aspx)|Optional|No|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Optional|Sí|  
-|[IRowsetBookmark](https://msdn.microsoft.com/library/ms714246.aspx)|Optional|No|  
+|[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832\(v=vs.85\))|Optional|No|  
+|[IGetRow](/previous-versions/windows/desktop/ms718047\(v=vs.85\))|Optional|No|  
+|[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Optional|Sí|  
+|[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430\(v=vs.85\))|Optional|No|  
+|[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700\(v=vs.85\))|Optional|No|  
+|[IRowsetFind](/previous-versions/windows/desktop/ms724221\(v=vs.85\))|Optional|No|  
+|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\))|Opcional (pero es obligatorio para los proveedores de nivel 0)|Sí|  
+|[IRowsetIndex](/previous-versions/windows/desktop/ms719604\(v=vs.85\))|Optional|No|  
+|[IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))|Optional|Sí|  
+|[IRowsetRefresh](/previous-versions/windows/desktop/ms714892\(v=vs.85\))|Optional|No|  
+|[IRowsetScroll](/previous-versions/windows/desktop/ms712984\(v=vs.85\))|Optional|No|  
+|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))|Optional|Sí|  
+|[IRowsetView](/previous-versions/windows/desktop/ms709755\(v=vs.85\))|Optional|No|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|Sí|  
+|[IRowsetBookmark](/previous-versions/windows/desktop/ms714246\(v=vs.85\))|Optional|No|  
   
  El objeto de conjunto de filas generados por el asistente implementa `IAccessor`, `IRowset`, y `IRowsetInfo` mediante herencia. El `IAccessorImpl` enlaza las dos columnas de salida. El `IRowset` controla la interfaz de recuperaciones de filas y datos. El `IRowsetInfo` interfaz controla las propiedades del conjunto de filas.  
   

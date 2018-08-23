@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: incrustar un manifiesto en una aplicación de C/C ++ | Documentos de Microsoft'
+title: 'Cómo: incrustar un manifiesto en una aplicación de C/C ++ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dec5377bca1cc56e2444d7466fc5107d594205a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369057"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572863"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Cómo: Incrustar un manifiesto en una aplicación de C/C++
-Se recomienda que una aplicación de C/C ++ (o biblioteca) tenga su manifiesto incrustado dentro del archivo binario final, porque así garantiza comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios. De forma predeterminada, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] intenta incrustar el manifiesto cuando compila un proyecto de archivos de origen; vea [generación de manifiestos en Visual Studio](../build/manifest-generation-in-visual-studio.md) para obtener más información. Sin embargo si una aplicación compilada con nmake, son necesarios algunos cambios en el archivo MAKE existente. Esta sección muestra cómo cambiar los archivos MAKE existentes para incrustar automáticamente el manifiesto dentro del archivo binario final.  
+Se recomienda que una aplicación de C o C++ (o biblioteca) tenga su manifiesto incrustado dentro del archivo binario final porque así garantiza comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios. De forma predeterminada, Visual Studio intenta incrustar el manifiesto cuando compila un proyecto de archivos de origen. consulte [Manifest Generation en Visual Studio](../build/manifest-generation-in-visual-studio.md) para obtener más información. Sin embargo si una aplicación compilada con nmake, son necesarios algunos cambios en el archivo MAKE existente. Esta sección muestra cómo cambiar archivos MAKE existente para insertar automáticamente el manifiesto dentro del archivo binario final.  
   
 ## <a name="two-approaches"></a>Dos enfoques  
- Hay dos maneras para incrustar el manifiesto dentro de una aplicación o biblioteca.  
+ Hay dos maneras para incrustar el manifiesto en una aplicación o biblioteca.  
   
--   Si no está realizando una compilación incremental, puede incrustar directamente el manifiesto mediante una línea de comandos similar al siguiente como un paso posterior a la compilación:  
+-   Si no está realizando una compilación incremental puede insertar directamente el manifiesto mediante una línea de comandos similar a lo siguiente como un paso posterior a la compilación:  
   
-     **MT.exe-manifiesto MyApp.exe.manifest-outputresource:MyApp.exe;1**  
+     **MT.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
      o  
   
-     **MT.exe-manifiesto MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
+     **MT.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
   
      (1 para un archivo EXE, 2 para un archivo DLL).  
   
--   Si está realizando una compilación incremental, editar el recurso directamente, como se muestra aquí se deshabilitará la compilación incremental y provocar una regeneración completa; por lo tanto, debe tener un enfoque diferente:  
+-   Si está realizando una compilación incremental, editar el recurso directamente, como se muestra aquí se deshabilitará la compilación incremental y produzcan una recompilación completa; por lo tanto, se debe tomar un enfoque diferente:  
   
     -   Vincule el archivo binario para generar el archivo MyApp.exe.manifest.  
   
@@ -49,7 +49,7 @@ Se recomienda que una aplicación de C/C ++ (o biblioteca) tenga su manifiesto i
   
  Los ejemplos siguientes muestran cómo modificar los archivos MAKE para incorporar ambas técnicas.  
   
-## <a name="makefiles-before"></a>MAKE (archivos) (antes)  
+## <a name="makefiles-before"></a>Archivos MAKE (antes)  
  Tenga en cuenta la secuencia de comandos de nmake para MyApp.exe, una aplicación sencilla basada en un archivo:  
   
 ```  
@@ -70,9 +70,9 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- Si esta secuencia de comandos se ejecuta sin cambios con Visual C++, se creará correctamente MyApp.exe. También crea el archivo de manifiesto externo MyApp.exe.manifest, para su uso por el sistema operativo para cargar ensamblados dependientes en tiempo de ejecución.  
+ Si esta secuencia de comandos se ejecuta sin cambios con Visual C++, crea correctamente MyApp.exe. También crea el archivo de manifiesto externo MyApp.exe.manifest, para su uso por el sistema operativo para cargar ensamblados dependientes en tiempo de ejecución.  
   
- La secuencia de comandos de nmake para MyLibrary.dll tiene un aspecto muy similar:  
+ El script nmake para MyLibrary.dll es muy similar:  
   
 ```  
 # build MyLibrary.dll  
@@ -96,7 +96,7 @@ clean :
 ```  
   
 ## <a name="makefiles-after"></a>Archivos MAKE (después)  
- Para compilar con incrusta manifiestos que tiene que realizar cuatro pequeños cambios en los archivos MAKE originales. Para el archivo MAKE MyApp.exe:  
+ Para compilar con incrusta manifiestos que tendrá que realizar cuatro pequeños cambios en los archivos MAKE originales. Para el archivo MAKE MyApp.exe:  
   
 ```  
 # build MyApp.exe  
@@ -126,7 +126,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Para el archivo MAKE de MyLibrary.dll:  
+ Para el archivo MAKE MyLibrary.dll:  
   
 ```  
 # build MyLibrary.dll  
@@ -159,9 +159,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Los archivos MAKE incluyen ahora dos archivos que realizan el trabajo real, makefile.inc y makefile.targ.inc.  
+ Los archivos MAKE ahora incluyen dos archivos que realizan el trabajo real, makefile.inc y makefile.targ.inc.  
   
- Crear makefile.inc y copie lo siguiente en él:  
+ Crear makefile.inc y copie lo siguiente:  
   
 ```  
 # makefile.inc -- Include this file into existing makefile at the very top.  
@@ -232,7 +232,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################  
 ```  
   
- Ahora cree el archivo makefile.targ.inc y copie lo siguiente en él:  
+ Ahora cree el archivo makefile.targ.inc y copie lo siguiente:  
   
 ```  
 # makefile.targ.inc - include this at the very bottom of the existing makefile  

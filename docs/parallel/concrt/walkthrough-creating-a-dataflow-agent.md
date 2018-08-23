@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un agente de flujo de datos | Documentos de Microsoft'
+title: 'Tutorial: Crear un agente de flujo de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f94692b6762e1dc24a7af910d2cfd52abc516598
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693099"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539105"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Tutorial: Crear un agente de flujo de datos
 En este documento se muestra cómo crear aplicaciones basadas en agentes que recurren al flujo de datos, no al flujo de control.  
   
- *Flujo de control* hace referencia a la orden de ejecución de las operaciones en un programa. El flujo de control se regula con las estructuras de control, como instrucciones condicionales, bucles, etc. O bien, *flujo de datos* hace referencia a un modelo de programación en el que los cálculos se realizan sólo cuando todos los datos necesarios está disponible. El modelo de programación de flujo de datos está relacionado con el concepto paso de mensajes, en el que los componentes independientes de un programa se comunican entre sí mediante el envío de mensajes.  
+ *Flujo de control* hace referencia al orden de ejecución de las operaciones en un programa. El flujo de control se regula con las estructuras de control, como instrucciones condicionales, bucles, etc. Como alternativa, *dataflow* hace referencia a un modelo de programación en el que los cálculos se realizan sólo cuando todos los datos necesarios está disponible. El modelo de programación de flujo de datos está relacionado con el concepto paso de mensajes, en el que los componentes independientes de un programa se comunican entre sí mediante el envío de mensajes.  
   
  Los agentes asincrónicos admiten los modelos de programación de flujo de control y flujo de datos. Aunque el modelo de flujo de control es adecuado en muchos casos, el modelo de flujo de datos es adecuado en otros, por ejemplo, cuando un agente recibe los datos y realiza una acción que se basa en la carga de esos datos.  
   
@@ -41,13 +41,13 @@ En este documento se muestra cómo crear aplicaciones basadas en agentes que rec
 ##  <a name="top"></a> Secciones  
  Este tutorial contiene las siguientes secciones:  
   
-- [Crear a un agente de flujo de Control básico](#control-flow)  
+- [Creación de un agente de flujo de Control básico](#control-flow)  
   
-- [Crear a un agente de flujo de datos básico](#dataflow)  
+- [Creación de un agente de flujo de datos básico](#dataflow)  
   
-- [Crear a un agente de registro de mensajes](#logging)  
+- [Creación de un agente de registro de mensajes](#logging)  
   
-##  <a name="control-flow"></a> Crear a un agente de flujo de Control básico  
+##  <a name="control-flow"></a> Creación de un agente de flujo de Control básico  
  Considere el ejemplo siguiente que define la clase `control_flow_agent`. La clase `control_flow_agent` actúa en tres búferes de mensajes: un búfer de entrada y dos búferes de salida. El método `run` lee del búfer de mensajes de origen en un bucle y usa una instrucción condicional para dirigir el flujo de ejecución del programa. El agente incrementa un contador para los valores negativos distintos de cero e incrementa otro contador para los valores positivos distintos de cero. Después de que el agente recibe el valor centinela de cero, envía los valores de los contadores a los búferes de mensajes de salida. Los métodos `negatives` y `positives` permiten que la aplicación lea los recuentos de valores positivos y negativos del agente.  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -56,7 +56,7 @@ En este documento se muestra cómo crear aplicaciones basadas en agentes que rec
   
  [[Arriba](#top)]  
   
-##  <a name="dataflow"></a> Crear a un agente de flujo de datos básico  
+##  <a name="dataflow"></a> Creación de un agente de flujo de datos básico  
  En esta sección se muestra cómo convertir la clase `control_flow_agent` para usar el modelo de flujo de datos con el fin de realizar la misma tarea.  
   
  El agente de flujo de datos crea una red de búferes de mensajes, cada uno de los cuales sirve para un propósito concreto. Ciertos bloques de mensajes usan una función de filtro para aceptar o rechazar un mensaje en función de su carga. Una función de filtro garantiza que un bloque de mensajes reciba solo ciertos valores.  
@@ -95,14 +95,14 @@ En este documento se muestra cómo crear aplicaciones basadas en agentes que rec
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`increment_active`|A [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) objeto que incrementa el contador de eventos activo y pasa el valor de entrada al resto de la red.|  
-|`negatives`, `positives`|[Concurrency:: call](../../parallel/concrt/reference/call-class.md) objetos que incrementa el recuento de números y disminuye el contador de eventos activos. Cada uno de objetos usa un filtro de aceptar los números negativos o los números positivos.|  
-|`sentinel`|A [Concurrency:: call](../../parallel/concrt/reference/call-class.md) objeto que acepta sólo el valor centinela de cero y reduce el contador de eventos activos.|  
-|`connector`|A [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto que se conecta el búfer de mensajes de origen a la red interna.|  
+|`increment_active`|Un [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) objeto que se incrementa el contador de eventos activo y pasa el valor de entrada para el resto de la red.|  
+|`negatives`, `positives`|[Concurrency:: call](../../parallel/concrt/reference/call-class.md) objetos que incrementar el recuento de números y disminuye el contador de eventos activos. Cada uno de objetos usa un filtro de aceptar los números negativos o los números positivos.|  
+|`sentinel`|Un [Concurrency:: call](../../parallel/concrt/reference/call-class.md) objeto que acepta sólo el valor centinela de cero y reduce el contador de eventos activos.|  
+|`connector`|Un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto que se conecta el búfer de mensajes de origen a la red interna.|  
   
  Dado que se llama al método `run` en un subproceso independiente, otros subprocesos pueden enviar mensajes a la red antes de que esté conectada totalmente. El miembro de datos `_source` es un objeto `unbounded_buffer` que almacena en búfer todas las entradas que se envían desde la aplicación al agente. Para asegurarse de que la red procesa todos los mensajes de entrada, el agente primero vincula los nodos internos de la red y, a continuación, vincula el inicio de esa red, `connector`, con el miembro de datos `_source`. Esto garantiza que los mensajes no se procesen mientras se esté formando la red.  
   
- Dado que la red de este ejemplo se basa en el flujo de datos, no en el flujo de control, la red debe comunicar al agente que ha finalizado el procesamiento de cada valor de entrada y que el nodo centinela ha recibido su valor. Este ejemplo se utiliza un `countdown_event` objeto para indicar que se hayan procesado todos los valores de entrada y un [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) objeto para indicar que el nodo centinela ha recibido su valor. La clase `countdown_event` usa un objeto `event` para señalar cuando un valor de contador llega a cero. El encabezado de la red de flujo de datos incrementa el contador cada vez que recibe un valor. Cada nodo terminal de la red disminuye el contador después de procesar el valor de entrada. Una vez que el agente forma la red de flujo de datos, espera a que el nodo centinela establezca el objeto `event` y a que el objeto `countdown_event` señale que el contador ha llegado a cero.  
+ Dado que la red de este ejemplo se basa en el flujo de datos, no en el flujo de control, la red debe comunicar al agente que ha finalizado el procesamiento de cada valor de entrada y que el nodo centinela ha recibido su valor. Este ejemplo se usa un `countdown_event` objeto para indicar que se han procesado todos los valores de entrada y un [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) objeto para indicar que el nodo centinela ha recibido su valor. La clase `countdown_event` usa un objeto `event` para señalar cuando un valor de contador llega a cero. El encabezado de la red de flujo de datos incrementa el contador cada vez que recibe un valor. Cada nodo terminal de la red disminuye el contador después de procesar el valor de entrada. Una vez que el agente forma la red de flujo de datos, espera a que el nodo centinela establezca el objeto `event` y a que el objeto `countdown_event` señale que el contador ha llegado a cero.  
   
  En el ejemplo siguiente, se muestran las clases `control_flow_agent`, `dataflow_agent` y `countdown_event`. La función `wmain` crea un `control_flow_agent` y un objeto `dataflow_agent`, y usa la función `send_values` para enviar una serie de valores aleatorios a los agentes.  
   
@@ -126,7 +126,7 @@ There are 499477 positive numbers.
   
  [[Arriba](#top)]  
   
-##  <a name="logging"></a> Crear a un agente de registro de mensajes  
+##  <a name="logging"></a> Creación de un agente de registro de mensajes  
  En el ejemplo siguiente se muestra la clase `log_agent`, que es similar a la clase `dataflow_agent`. La clase `log_agent` implementa un agente de registro asincrónico que escribe los mensajes de registro en un archivo y en la consola. La clase `log_agent` permite que la aplicación categorice los mensajes como informativos, de advertencia o de error. También permite que la aplicación especifique si cada categoría de registro se escribe en un archivo, en la consola o en ambos. En este ejemplo se escriben todos los mensajes de registro en un archivo y solo los mensajes de error en la consola.  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  

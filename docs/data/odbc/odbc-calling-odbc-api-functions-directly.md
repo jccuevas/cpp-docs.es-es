@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 386bc03234ccb29b293a413944f221189f466c80
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c0bd8ade91e2e543e8ccf1c0a9b04525b8d81b43
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336600"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572779"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Llamar directamente a funciones de la API de ODBC
 Las clases de base de datos proporcionan una interfaz más sencilla para un [origen de datos](../../data/odbc/data-source-odbc.md) de ODBC. Como resultado, las clases no encapsulan toda la API de ODBC. Si hay alguna funcionalidad que se encuentre fuera de las capacidades de las clases, debe llamar a funciones API de ODBC directamente. Por ejemplo, deben llamar a las funciones de catálogo ODBC (`::SQLColumns`, `::SQLProcedures`, `::SQLTables`y otras) directamente.  
@@ -48,7 +48,7 @@ Las clases de base de datos proporcionan una interfaz más sencilla para un [ori
   
 -   Cuando termine, desasignar almacenamiento.  
   
- Para obtener más información acerca de estos pasos, consulte el [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK en la documentación de MSDN.  
+ Para obtener más información acerca de estos pasos, consulte el [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK en la documentación de MSDN.  
   
  Además de estos pasos, debe realizar pasos adicionales para comprobar los valores devueltos de función, asegúrese de que el programa no está esperando una llamada asincrónica al finalizar y así sucesivamente. Puede simplificar estos últimos pasos mediante el uso de las macros AFX_SQL_ASYNC y AFX_SQL_SYNC. Para obtener más información, consulte [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md) en el *referencia de MFC*.  
 

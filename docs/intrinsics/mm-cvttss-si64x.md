@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fd8aebb3f9a4f0078c8174aa25b9abb9378f1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333634"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543236"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Específicos de Microsoft**  
@@ -48,12 +48,12 @@ __int64 _mm_cvttss_si64x(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvttss_si64x`|x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 ## <a name="remarks"></a>Comentarios  
- Difiere de la función intrínseca de `_mm_cvtss_si64x` sólo en esa inexactos conversiones se truncan hacia cero. Dado que el `__m128` estructura representa un registro de registros de XMM, la instrucción genera mueve los datos de un registro XMM en la memoria del sistema.  
+ La función intrínseca difiere `_mm_cvtss_si64x` únicamente en que las conversiones inexactos se truncan hacia cero. Dado que el `__m128` estructura representa un registro XMM, la instrucción genera mueve los datos de un registro XMM en la memoria del sistema.  
   
  Esta rutina solo está disponible como función intrínseca.  
   

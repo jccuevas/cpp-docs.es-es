@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmptrld | Documentos de Microsoft
+title: __vmx_vmptrld | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 599e15414a944602ee196f3910a1c5dd561c906d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f12ff4f0f109ac97f9e9e2e4f8d800455159a10b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324855"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541087"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 **Específicos de Microsoft**  
@@ -52,20 +52,20 @@ int __vmx_vmptrld(
  Error en la operación sin estado disponible.  
   
 ## <a name="remarks"></a>Comentarios  
- El puntero VMCS es una dirección física de 64 bits.  
+ El puntero de la VMCS es una dirección física de 64 bits.  
   
- El `__vmx_vmptrld` función es equivalente a la `VMPTRLD` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization técnica especificación para la arquitectura IA-32 Intel," documento número C97063-002 en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
+ El `__vmx_vmptrld` función es equivalente a la `VMPTRLD` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization Technical especificación para la arquitectura IA-32 Intel," documento C97063-002, número en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__vmx_vmptrld`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmptrld`|x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   
 **FIN de Específicos de Microsoft**  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)   
  [__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8c1fb739d5e6206297e52fd9103cbba98c5eef01
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463494"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572228"
 ---
 # <a name="specifiers"></a>Especificadores
 Este tema se describe la *decl-specifiers* componente (especificadores de declaración) de un [declaración](declarations-and-definitions-cpp.md).  
@@ -34,9 +34,11 @@ Este tema se describe la *decl-specifiers* componente (especificadores de declar
   
  *especificador de función*  
   
- [friend](../cpp/friend-cpp.md)  
-  
- [typedef] ( [typedef](http://msdn.microsod) `(` *extended-decl-modifier-seq* `)`  
+ [friend](friend-cpp.md)  
+ 
+ [TypeDef](aliases-and-typedefs-cpp.md) `(` *extended-decl-modifier-seq* `)`  
+
+ [__declspec](declspec.md) `(` *extended-decl-modifier-seq* `)`  
   
 ## <a name="remarks"></a>Comentarios  
  El *decl-specifiers* parte de una declaración es la secuencia más larga de *decl-specifiers* que se puede tomar para indicar un nombre de tipo, sin incluir el puntero o hacer referencia a los modificadores. El resto de la declaración es la *declarador*, que incluye el nombre introducido.  

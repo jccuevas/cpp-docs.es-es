@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d8e923d89085161feb7dcec38d3b0e3972b96e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 317eae9ee404e603eaf37b2d512724c6b3d0c9f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028426"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541895"
 ---
 # <a name="cwnd-class"></a>CWnd (clase)
 Proporciona la funcionalidad básica de todas las clases de ventana en la biblioteca MFC (Microsoft Foundation Class).  
@@ -2258,7 +2258,7 @@ virtual BOOL DestroyWindow();
   
  El `DestroyWindow` función miembro también destruye los cuadros de diálogo no modal creados por [CDialog::Create](../../mfc/reference/cdialog-class.md#create).  
   
- Si el `CWnd` está destruyendo es una ventana secundaria y no tiene la [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) estilo conjunto, la [WM_PARENTNOTIFY ](https://msdn.microsoft.com/library/ms632638.aspx) se envía el mensaje con el elemento primario.  
+ Si el `CWnd` está destruyendo es una ventana secundaria y no tiene la [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) estilo conjunto, la [WM_PARENTNOTIFY ](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) se envía el mensaje con el elemento primario.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
@@ -7780,7 +7780,7 @@ afx_msg void OnNcXButtonUp(
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
 ##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
- El marco llama a esta función miembro cuando se usa cuando la tecla de flecha derecha o izquierda para cambiar entre la barra de menús y el menú del sistema.  
+ El marco de trabajo llama a esta función miembro cuando se utiliza la tecla de flecha derecha o izquierda para cambiar entre la barra de menús y el menú del sistema.  
   
 ```  
 afx_msg void OnNextMenu(
@@ -8260,7 +8260,7 @@ afx_msg void OnSessionChange(
 ### <a name="remarks"></a>Comentarios  
  Este método recibe el [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) notificación, que se describe en el SDK de Windows.  
   
- El *nSessionState* parámetro especifica que una sesión está conectada o desconectada de la consola o un terminal remoto, un usuario inicia o cierra sesión, una sesión está bloqueada o desbloqueada, o una sesión ha cambiado a estado controlado remotamente. Para obtener más información, consulte el *wParam* parámetro de la la [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) mensaje.  
+ El *nSessionState* parámetro especifica que una sesión está conectada o desconectada de la consola o un terminal remoto, un usuario inicia o cierra sesión, una sesión está bloqueada o desbloqueada, o una sesión ha cambiado a estado controlado remotamente. Para obtener más información, consulte el *wParam* parámetro de la [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) mensaje.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
@@ -8561,7 +8561,7 @@ afx_msg void OnSysChar(
 |31|Especifica el estado de transición. El valor es 1 si se va a publicar la clave, o es 0 si se presiona la tecla.|  
   
 ### <a name="remarks"></a>Comentarios  
- Especifica el código de tecla virtual de la tecla de menú del Control. (Para una lista de códigos de tecla virtuales estándares, vea Winuser.h)  
+ Especifica el código de tecla virtual de la tecla de menú del Control. (Para obtener una lista de códigos de tecla virtuales estándares, vea Winuser.h)  
   
  Cuando el código del contexto es 0, WM_SYSCHAR puede pasar la [WM_SYSCHAR](http://msdn.microsoft.com/library/windows/desktop/ms646357) mensaje a la [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) función de Windows, que controlará como si fuese un mensaje de tecla normal en lugar de un sistema tecla de carácter. Esto permite que las teclas de aceleración que se usará con la ventana activa, incluso si la ventana activa no tiene el foco de entrada.  
   
@@ -8983,7 +8983,7 @@ afx_msg void OnUnInitMenuPopup(
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
 ##  <a name="onupdateuistate"></a>  CWnd::OnUpdateUIState  
- Se llama para cambiar el estado de la interfaz de usuario para la ventana especificada y todas sus ventanas secundarias.  
+ Se llama para cambiar el estado de la interfaz de usuario de la ventana especificada y de todas sus ventanas secundarias.  
   
 ```  
 afx_msg void OnUpdateUIState(

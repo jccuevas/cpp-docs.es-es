@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16a43c0f7ca5f54d1c920d488a236012d8b974e3
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404930"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572606"
 ---
 # <a name="bstrt-class"></a>_bstr_t (Clase)
 **Específicos de Microsoft**  
   
- Un `_bstr_t` objeto encapsula el [tipo de datos BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). La clase administra la asignación de recursos y la desasignación con llamadas de función `SysAllocString` y `SysFreeString` y otros `BSTR` API cuando corresponda. El **_bstr_t** clase utiliza el recuento de referencias para evitar una sobrecarga excesiva.  
+ Un `_bstr_t` objeto encapsula el [tipo de datos BSTR](/previous-versions/windows/desktop/automat/bstr). La clase administra la asignación de recursos y la desasignación con llamadas de función `SysAllocString` y `SysFreeString` y otros `BSTR` API cuando corresponda. El **_bstr_t** clase utiliza el recuento de referencias para evitar una sobrecarga excesiva.  
   
 ### <a name="construction"></a>Construcción  
   

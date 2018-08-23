@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 636f98337cacdeddbdd42dd74e498c0fbd12e4f8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 853277959a29103a5dcd1e01f709d739f7ce4289
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339404"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572000"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Plantillas de consumidor OLE DB (C++)
 Las plantillas de consumidor OLE DB admiten la especificación de OLE DB versión 2.6. (Las plantillas de consumidor OLE DB se prueban en función de OLE DB 2.6, pero no son compatibles con todas las interfaces de la especificación). Las plantillas de consumidor reducen la cantidad de código que debe escribirse para implementar un consumidor OLE DB. Las plantillas proporcionan:  
@@ -34,7 +34,7 @@ Las plantillas de consumidor OLE DB admiten la especificación de OLE DB versió
   
 -   Tipos de datos nativos de C/C++ para la programación de OLE DB.  
   
- Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, consulte [referencia del programador de OLE DB](https://msdn.microsoft.com/library/ms718124.aspx).  
+ Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, consulte [referencia del programador de OLE DB](/previous-versions/windows/desktop/ms718124\(v=vs.85\)).  
   
  Las plantillas OLE DB son compatibles con el modelo de objetos OLE DB existente en lugar de agregar un nuevo modelo de objetos. Las clases de nivel superior de las plantillas de consumidor OLE DB se corresponden con los componentes definidos en la especificación de OLE DB. El diseño de las plantillas de consumidor OLE DB incluye características avanzadas como, por ejemplo, varios descriptores de acceso en un conjunto de filas. El uso de plantillas y herencia múltiple permite que la biblioteca mantenga su flexibilidad y un tamaño reducido.  
   
@@ -68,5 +68,5 @@ Las plantillas de consumidor OLE DB admiten la especificación de OLE DB versió
 ## <a name="see-also"></a>Vea también  
  [Programación de OLE DB](../../data/oledb/ole-db-programming.md)   
  [Acceso a datos](../data-access-in-cpp.md)   
- [Documentación del SDK de OLE DB](https://msdn.microsoft.com/library/ms722784.aspx)   
- [Referencia del programador OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)
+ [Documentación del SDK de OLE DB](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [Referencia del programador OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))

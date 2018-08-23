@@ -1,5 +1,5 @@
 ---
-title: auto_inline | Documentos de Microsoft
+title: auto_inline | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de012a31fe68c68d4e64df2d3fa10b44d9112735
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: dc1b8a3b8539fb4871e4a28f4635c8012b9f80a2
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954026"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538709"
 ---
 # <a name="autoinline"></a>auto_inline
-Excluye cualquier función definida dentro del intervalo donde **desactivar** se especifica de considerarse como candidatos para la expansión en línea automática.  
+Excluye cualquier función definida dentro del intervalo donde **desactivar** se especifica a partir del que se consideran candidatas para la expansión automática alineada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 #pragma auto_inline( [{on | off}] )  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Para usar el **auto_inline** pragma, colóquela delante e inmediatamente después (no en) una definición de función. La pragma surte efecto en cuanto aparece en la primera definición de función.  
+
+Para usar el **auto_inline** pragma, colóquela delante e inmediatamente después (no en) una definición de función. La pragma surte efecto en cuanto aparece en la primera definición de función.  
   
-## <a name="see-also"></a>Vea también  
- [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Vea también
+
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

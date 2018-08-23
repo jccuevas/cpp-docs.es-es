@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce42a1e14e3de77b8ac10c67a8f15b6ee3f080f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1b7cc38d595c6f6ad1aa92e584068ccb852dbbd4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019961"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578693"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= (Operador)
-Asigna (mueve) especificado **Mutex** el objeto actual **Mutex** objeto.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-Mutex& operator=(  
-   _Inout_ Mutex&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *h*  
- Una referencia rvalue para un **Mutex** objeto.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Una referencia a la actual **Mutex** objeto.  
-  
-## <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte el **mover semántica** sección de [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers
- 
- ## <a name="see-also"></a>Vea también
- [Mutex (clase)](../windows/mutex-class1.md)
+
+Asigna (mueve) especificado **Mutex** el objeto actual **Mutex** objeto.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+Mutex& operator=(
+   _Inout_ Mutex&& h
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*h*  
+Una referencia rvalue para un **Mutex** objeto.
+
+## <a name="return-value"></a>Valor devuelto
+
+Una referencia a la actual **Mutex** objeto.
+
+## <a name="remarks"></a>Comentarios
+
+Para obtener más información, consulte el **mover semántica** sección de [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+[Mutex (clase)](../windows/mutex-class1.md)

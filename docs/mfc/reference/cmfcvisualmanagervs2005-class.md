@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCVisualManagerVS2005 | Documentos de Microsoft
+title: CMFCVisualManagerVS2005 (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7282730779360ecc0bb93f0ae827b46ddff19d0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e3ce4384ebce3140f8d3ccadf781f3d45b92340b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038066"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538916"
 ---
-# <a name="cmfcvisualmanagervs2005-class"></a>Clase CMFCVisualManagerVS2005
-`CMFCVisualManagerVS2005` Proporciona una aplicación un aspecto de Microsoft Visual Studio 2005.  
+# <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 (clase)
+`CMFCVisualManagerVS2005` Proporciona a una aplicación un aspecto de Microsoft Visual Studio 2005.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -70,8 +70,8 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|El marco de trabajo llama a este método cuando dibuja un panel que está acoplado y con pestañas. (Invalida [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|  
-|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|El marco de trabajo llama a este método para determinar el tamaño del borde de una ventana /mditabs antes de que dibuja la ventana. (Invalida [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|  
+|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|El marco llama a este método cuando dibuja un panel que está acoplado y por fichas. (Invalida [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|  
+|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|El marco llama a este método para determinar el tamaño del borde de una ventana /mditabs antes de que dibuja la ventana. (Invalida [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|  
 |[CMFCVisualManagerVS2005::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(Invalida [CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor).)|  
 |[CMFCVisualManagerVS2005::GetTabFrameColors](#gettabframecolors)|(Invalida [CMFCVisualManagerOffice2003::GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors).)|  
 |[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|Devuelve si se superponen los botones de ocultación automática en el administrador visual actual. (Invalida [CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons).)|  
@@ -88,12 +88,12 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(Invalida [CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors).)|  
   
 ## <a name="remarks"></a>Comentarios  
- Utilice la clase CMFCVisualManagerVS2005 para cambiar la apariencia visual de la aplicación para que se parecen a las de la [!INCLUDE[vsprvsext](../../mfc/reference/includes/vsprvsext_md.md)].  
+ Utilice la clase CMFCVisualManagerVS2005 para cambiar la apariencia visual de la aplicación para que se parecen a las de Microsoft Visual Studio 2005.  
   
- Todos los miembros de esta clase son funciones virtuales que se derivan de los antecesores de esta clase, [CMFCVisualManager clase](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Todos los miembros de esta clase son funciones virtuales que se derivan el antecesor de esta clase, [CMFCVisualManager (clase)](../../mfc/reference/cmfcvisualmanager-class.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el administrador visual VS 2005. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).  
+ El ejemplo siguiente muestra cómo usar el administrador visual de VS 2005. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]  
   
@@ -397,7 +397,7 @@ virtual void OnUpdateSystemColors();
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [Clases](../../mfc/reference/mfc-classes.md)   
- [Clase CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)   
- [Clase CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
- [Clase CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)   
+ [CMFCVisualManager (clase)](../../mfc/reference/cmfcvisualmanager-class.md)   
+ [CMFCVisualManagerOfficeXP (clase)](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
+ [CMFCVisualManagerWindows (clase)](../../mfc/reference/cmfcvisualmanagerwindows-class.md)   
  [CMFCVisualManagerOffice2003 (clase)](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)

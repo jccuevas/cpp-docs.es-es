@@ -1,5 +1,5 @@
 ---
-title: __outdwordstring | Documentos de Microsoft
+title: __outdwordstring | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942a98b9a9d43d349f6273b77c8d56967b927eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331765"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541318"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 **Específicos de Microsoft**  
   
- Genera el `rep outsd` instrucción, lo que envía `Count` palabras dobles a partir de `Buffer` fuera del puerto de E/S especificado por `Port`.  
+ Genera el `rep outsd` instrucción, que envía `Count` a partir de palabras dobles `Buffer` fuera del puerto de E/S especificado por `Port`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,7 +45,7 @@ void __outdwordstring(
  El puerto para enviar los datos.  
   
  [in] `Buffer`  
- Un puntero a los datos que se envía el puerto especificado.  
+ Un puntero a los datos se envíen el puerto especificado.  
   
  [in] `Count`  
  El número de palabras dobles para enviar.  
@@ -54,7 +54,7 @@ void __outdwordstring(
   
 |Función intrínseca|Arquitectura|  
 |---------------|------------------|  
-|`__outdwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdwordstring`|x86, x64|  
   
  **Archivo de encabezado** \<intrin.h >  
   

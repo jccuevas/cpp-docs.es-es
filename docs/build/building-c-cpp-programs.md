@@ -1,5 +1,5 @@
 ---
-title: Compilar programas de C ++ | Documentos de Microsoft
+title: Compilar programas de C/C ++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2894c503dde89668bfb90b615c7b0966fe5fe2e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fa07308d04d14395b0ca9773e2a0c81ed0c2bc2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360980"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572400"
 ---
 # <a name="building-cc-programs"></a>Compilar programas de C/C++
 
-Los proyectos de Visual C++ se pueden compilar en Visual Studio o en la línea de comandos. El IDE de Visual Studio utiliza [MSBuild](../build/msbuild-visual-cpp.md) para compilar proyectos y soluciones. En la línea de comandos, puede usar el compilador (cl.exe) y el vinculador (link.exe) de C/C++ para compilar proyectos sencillos. Para compilar proyectos más complejos en la línea de comandos, puede usar MSBuild o [NMAKE](../build/nmake-reference.md). Para obtener información general sobre cómo usar [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] para compilar proyectos y soluciones, consulte [compilar y generar](/visualstudio/ide/compiling-and-building-in-visual-studio).  
+Los proyectos de Visual C++ se pueden compilar en Visual Studio o en la línea de comandos. El IDE de Visual Studio usa [MSBuild](../build/msbuild-visual-cpp.md) para compilar proyectos y soluciones. En la línea de comandos, puede usar el compilador (cl.exe) y el vinculador (link.exe) de C/C++ para compilar proyectos sencillos. Para compilar los proyectos más complejos en la línea de comandos, puede usar MSBuild o [NMAKE](../build/nmake-reference.md). Para obtener información general acerca de cómo usar Visual Studio para compilar proyectos y soluciones, consulte [compilar y generar](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
 ## <a name="in-this-section"></a>En esta sección  
 

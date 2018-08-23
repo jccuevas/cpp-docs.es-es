@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 756cc7ba203a1655bf5112d9c03e84707644f1e5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d934e9ae5494b934acb0779665ba4471dfc4c2b7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337575"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571725"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl (Clase)
-Proporciona una implementación para el [IDBCreateSession](https://msdn.microsoft.com/library/ms724076.aspx) interfaz.  
+Proporciona una implementación para el [IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\)) interfaz.  
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -74,7 +74,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- Consulte [IDBCreateSession](https://msdn.microsoft.com/library/ms714942.aspx) en el *referencia del programador OLE DB*.   
+ Consulte [IDBCreateSession](/previous-versions/windows/desktop/ms714942\(v=vs.85\)) en el *referencia del programador OLE DB*.   
   
 ## <a name="see-also"></a>Vea también  
  [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

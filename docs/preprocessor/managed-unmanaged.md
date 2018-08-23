@@ -1,5 +1,5 @@
 ---
-title: Managed, unmanaged | Documentos de Microsoft
+title: Managed, unmanaged | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316866ac047b607ec4c92d7c6d4f8ff233ed9a3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 908ed745e82b17dd688f062ac7021c6adf3f4851
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846381"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541467"
 ---
 # <a name="managed-unmanaged"></a>managed, unmanaged
 Habilite el control de nivel de función para compilar las funciones como administradas o no administradas.  
@@ -35,31 +35,31 @@ Habilite el control de nivel de función para compilar las funciones como admini
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      #pragma managed  
+#pragma managed  
 #pragma unmanaged  
 #pragma managed([push,] on | off)  
 #pragma managed(pop)  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El [/CLR](../build/reference/clr-common-language-runtime-compilation.md) opción del compilador proporciona control de nivel de módulo para compilar las funciones como administradas o no administrado.  
+
+El [/CLR](../build/reference/clr-common-language-runtime-compilation.md) opción del compilador proporciona control de nivel de módulo para compilar las funciones como administradas o no administrado.  
   
- Una función no administrada se compilará para la plataforma nativa, a la cual Common Language Runtime pasará la ejecución de esa parte del programa.  
+Una función no administrada se compilará para la plataforma nativa, a la cual Common Language Runtime pasará la ejecución de esa parte del programa.  
   
- Las funciones se compilan como administradas de forma predeterminada cuando **/CLR** se utiliza.  
+Las funciones se compilan como administradas de forma predeterminada cuando se utiliza `/clr`.  
   
- Al aplicar estas pragmas:  
+Al aplicar estas pragmas:  
   
--   Agregue la pragma que precede a una función, pero no dentro del cuerpo de la función.  
+- Agregue la pragma que precede a una función, pero no dentro del cuerpo de la función.  
   
--   Agregue la pragma después de las instrucciones `#include`. No use estas pragmas antes de las instrucciones `#include`.  
+- Agregue la pragma después de las instrucciones `#include`. No use estas pragmas antes de las instrucciones `#include`.  
   
- El compilador omite la `managed` y `unmanaged` pragmas si **/CLR** no se utiliza en la compilación.  
+El compilador omite la **administrada** y **no administrado** pragmas si `/clr` no se utiliza en la compilación.  
   
- Cuando se crea una función de plantilla, el estado de pragma en el momento de definir la plantilla determina si es managed o unmanaged.  
+Cuando se crea una función de plantilla, el estado de pragma en el momento de definir la plantilla determina si es managed o unmanaged.  
   
- Para obtener más información, consulte [inicialización de ensamblados mixtos](../dotnet/initialization-of-mixed-assemblies.md).  
+Para obtener más información, consulte [inicialización de ensamblados mixtos](../dotnet/initialization-of-mixed-assemblies.md).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -98,4 +98,5 @@ In unmanaged function.
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

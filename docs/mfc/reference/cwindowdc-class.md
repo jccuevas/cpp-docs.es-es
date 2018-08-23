@@ -1,5 +1,5 @@
 ---
-title: Clase de los objetos CWindowDC | Documentos de Microsoft
+title: CWindowDC (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121547"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541505"
 ---
-# <a name="cwindowdc-class"></a>Clase de los objetos CWindowDC
+# <a name="cwindowdc-class"></a>CWindowDC (clase)
 Se deriva de `CDC`.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -48,10 +48,10 @@ class CWindowDC : public CDC
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|El HWND a la que se `CWindowDC` se adjunta.|  
+|[CWindowDC::m_hWnd](#m_hwnd)|El HWND para que este `CWindowDC` se adjunta.|  
   
 ## <a name="remarks"></a>Comentarios  
- Llama a la función de Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)en tiempo de construcción y [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) en tiempo de destrucción. Esto significa que un `CWindowDC` objeto obtiene acceso al área de pantalla completa de un [CWnd](../../mfc/reference/cwnd-class.md) (las áreas de cliente y de cliente).  
+ Llama a la función Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)en tiempo de construcción y [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) en tiempo de destrucción. Esto significa que un `CWindowDC` objeto obtiene acceso a un área de pantalla completa de un [CWnd](../../mfc/reference/cwnd-class.md) (áreas cliente y no cliente).  
   
  Para obtener más información sobre el uso de `CWindowDC`, consulte [contextos de dispositivo](../../mfc/device-contexts.md).  
   
@@ -66,20 +66,20 @@ class CWindowDC : public CDC
  Encabezado: afxwin.h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- Construye un `CWindowDC` objeto que tiene acceso el área de pantalla completa (cliente y no cliente) de la `CWnd` objeto señalado por *pWnd*.  
+ Construye un `CWindowDC` objeto que tiene acceso al área de pantalla completa (cliente y no cliente) de la `CWnd` objeto señalado por *conquistado*.  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *pWnd*  
- La ventana cuyo área de cliente tendrá acceso los objetos de contexto de dispositivo.  
+ *conquistado*  
+ La ventana cuyo área de cliente que tendrá acceso el objeto de contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentarios  
- El constructor llama a la función de Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
+ El constructor llama a la función Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947).  
   
- Una excepción (de tipo `CResourceException`) se produce si las ventanas `GetWindowDC` llamadas se produce un error. Un contexto de dispositivo no estén disponible si Windows ya ha asignado todos sus contextos de dispositivo disponible. La aplicación compite por los cinco comunes contextos de presentación disponibles en un momento dado en Windows.  
+ Una excepción (de tipo `CResourceException`) se produce si el Windows `GetWindowDC` llamar se produce un error. Un contexto de dispositivo no puede estar disponible si Windows ya asignado todos sus contextos de dispositivo disponible. La aplicación compite por los cinco contextos mostrar comunes disponibles en un momento dado en Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  

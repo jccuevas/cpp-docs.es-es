@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCDesktopAlertWndInfo | Documentos de Microsoft
+title: CMFCDesktopAlertWndInfo (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb682236f41294b7d14f5950ed7906832dd7d8a2
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 4d5cf3c8804595aa3d0f3a83bc2628ea830e786a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038095"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539527"
 ---
-# <a name="cmfcdesktopalertwndinfo-class"></a>Clase CMFCDesktopAlertWndInfo
-El `CMFCDesktopAlertWndInfo` clase se utiliza con la [clase CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md). Especifica los controles que se muestran si emerge la ventana de alerta de escritorio.  
+# <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo (clase)
+El `CMFCDesktopAlertWndInfo` clase se utiliza con el [clase CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md). Especifica los controles que se muestran si emerge la ventana de alerta de escritorio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -66,16 +66,16 @@ class CMFCDesktopAlertWndInfo
 ## <a name="remarks"></a>Comentarios  
  El `CMFCDesktopAlertWndInfo` clase se pasa a la [cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) método para especificar los elementos que se muestran en el cuadro de diálogo predeterminado de la ventana de alerta de escritorio. El cuadro de diálogo predeterminado puede contener tres elementos:  
   
--   Un icono, que se establece mediante una llamada a [CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon).  
+-   Un icono que se establece mediante una llamada a [CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon).  
   
 -   Una etiqueta o un mensaje de texto, que se establece mediante una llamada a [CMFCDesktopAlertWndInfo::m_strText](#m_strtext).  
   
 -   Un vínculo, que se establece mediante una llamada a [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl). Para establecer el comando que se ejecuta cuando se hace clic en el vínculo, llame a [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid).  
   
- Si el cuadro de diálogo predeterminado no es suficiente, puede crear un cuadro de diálogo personalizado y lo pasa a la [cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) método en lugar de utilizar esta clase. Para obtener más información, consulte [CMFCDesktopAlertDialog clase](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
+ Si el cuadro de diálogo predeterminado no es suficiente, puede crear un cuadro de diálogo personalizado y páselo a la [cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) método en lugar de usar esta clase. Para obtener más información, consulte [CMFCDesktopAlertDialog (clase)](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar varios miembros en el `CMFCDesktopAlertWndInfo` clase. En el ejemplo se muestra cómo establecer el identificador del icono que se muestra, el texto que se muestra en la ventana de alerta de escritorio, el vínculo que se muestra en la ventana de alerta de escritorio y el identificador de comando que está asociado con un vínculo en la ventana de alerta de escritorio. Este ejemplo forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).  
+ En el ejemplo siguiente se muestra cómo utilizar los diversos miembros de la `CMFCDesktopAlertWndInfo` clase. En el ejemplo se muestra cómo establecer el identificador del icono que se muestra, el texto que se muestra en la ventana de alerta de escritorio, el vínculo que se muestra en la ventana de alerta de escritorio y el identificador de comando que está asociado con un vínculo en la ventana de alerta de escritorio. Este ejemplo forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]  
   
@@ -86,7 +86,7 @@ class CMFCDesktopAlertWndInfo
  **Encabezado:** afxDesktopAlertDialog.h  
   
 ##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator =  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  
   
 ```  
 CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);

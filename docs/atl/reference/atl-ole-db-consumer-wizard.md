@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2a03e29ed5197d27b421135b1561f3edc88af596
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025989"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571615"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Asistente para consumidores OLE DB ATL
 Este asistente configura una clase de consumidor OLE DB con los enlaces de datos necesario para tener acceso al origen de datos especificado a través del proveedor OLE DB especificado.  
@@ -33,7 +33,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
   
 ## <a name="uielement-list"></a>Lista de UIElement  
 **Origen de datos**  
-El **origen de datos** botón le permite configurar el origen de datos especificado mediante el proveedor OLE DB especificado. Al hacer clic en este botón, el **propiedades de vínculo de datos** aparece el cuadro de diálogo. Para obtener más información sobre la creación de cadenas de conexión y la **propiedades de vínculo de datos** cuadro de diálogo, vea [Introducción a la API de vínculo de datos](https://msdn.microsoft.com/library/ms718102.aspx) en la documentación del SDK de Windows.  
+El **origen de datos** botón le permite configurar el origen de datos especificado mediante el proveedor OLE DB especificado. Al hacer clic en este botón, el **propiedades de vínculo de datos** aparece el cuadro de diálogo. Para obtener más información sobre la creación de cadenas de conexión y la **propiedades de vínculo de datos** cuadro de diálogo, vea [Introducción a la API de vínculo de datos](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) en la documentación del SDK de Windows.  
   
 > [!NOTE]
 >  En versiones anteriores, MAYÚS y haciendo clic en el **origen de datos** botón abre un cuadro de diálogo Abrir archivo para que pueda seleccionar un archivo de Data Link (.udl). Ya no se admite esta funcionalidad.  
@@ -176,7 +176,7 @@ Haga clic en **Aceptar** para finalizar. El **seleccionar un objeto de base de d
  Seleccione esta opción si desea usar `CCommand` o `db_command` para crear el comando y el descriptor de acceso de comando declaraciones de clase. Esta es la selección predeterminada.  
   
  **Soporte técnico**  
- Seleccione las casillas de verificación para especificar los tipos de actualizaciones que se aceptan en el consumidor (el valor predeterminado es none). Cada una de las siguientes acciones establecerá [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) y las entradas adecuadas para [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) en la propiedad establece el mapa.  
+ Seleccione las casillas de verificación para especificar los tipos de actualizaciones que se aceptan en el consumidor (el valor predeterminado es none). Cada una de las siguientes acciones establecerá [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) y las entradas adecuadas para [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) en la propiedad establece el mapa.  
   
  **Cambio**  
  Especifica que el consumidor admiten las actualizaciones de datos de fila en el conjunto de filas.  
@@ -190,4 +190,4 @@ Haga clic en **Aceptar** para finalizar. El **seleccionar un objeto de base de d
 ## <a name="see-also"></a>Vea también  
  [Consumidor OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [Agregar funcionalidad con los asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Las cadenas de conexión y vínculos de datos (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [Las cadenas de conexión y vínculos de datos (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
