@@ -19,30 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f083364f839f963867234a4d3548ac1c00258cc8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fd8f3bd94f163e72c908568a167b870ccf0d8051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649964"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596752"
 ---
 # <a name="deleting-a-version-information-block"></a>Eliminar un bloque de información de versión
-### <a name="to-delete-a-version-information-block"></a>Para eliminar un bloque de información de versión  
-  
-1.  Para abrir el recurso de información de versión, haga doble clic en su icono en la [Vista de recursos](../windows/resource-view-window.md).  
-  
-    > [!NOTE]
-    >  Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Haga clic en el encabezado de bloque que quiera eliminar y después elija **Eliminar bloque de información de versión** en el menú contextual.  
-  
-     Este comando elimina el encabezado seleccionado y deja intacta la información de versión restante. Tenga en cuenta que no se puede deshacer la acción.  
-  
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
+
+### <a name="to-delete-a-version-information-block"></a>Para eliminar un bloque de información de versión
+
+1. Para abrir el recurso de información de versión, haga doble clic en su icono en la [Vista de recursos](../windows/resource-view-window.md).
+
+   > [!NOTE]
+   > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
+
+2. Haga clic en el encabezado de bloque que quiera eliminar y después elija **Eliminar bloque de información de versión** en el menú contextual.
+
+   Este comando elimina el encabezado seleccionado y deja intacta la información de versión restante. Tenga en cuenta que no se puede deshacer la acción.
+
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
+
 ## <a name="requirements"></a>Requisitos
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Editor de la información de versión](../windows/version-information-editor.md)   
- [Información de versión (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Editor de la información de versión](../windows/version-information-editor.md)  
+[Información de versión (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

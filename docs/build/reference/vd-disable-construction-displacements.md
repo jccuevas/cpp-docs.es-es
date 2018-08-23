@@ -1,5 +1,5 @@
 ---
-title: -vd (deshabilitar desplazamientos de constructores) | Documentos de Microsoft
+title: -vd (deshabilitar desplazamientos de constructores) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e983da4521db077235c2b879e0d1277b9505e94
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377602"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605873"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Deshabilitar desplazamientos de constructores)
 ## <a name="syntax"></a>Sintaxis  
@@ -42,10 +42,10 @@ ms.locfileid: "32377602"
   
 ## <a name="arguments"></a>Argumentos  
  `0`  
- Suprime al miembro constructor/destructor de vtordisp. Elija esta opción sólo si está seguro de que todos los constructores de clase y destructores llame virtuales funciona prácticamente.  
+ Suprime al miembro de desplazamiento del constructor o destructor de vtordisp. Elija esta opción solo si está seguro de que todos los constructores de clase y los destructores llaman virtuales funciona prácticamente.  
   
  `1`  
- Habilita la creación de los miembros de desplazamiento de constructor/destructor de vtordisp ocultos. Esta opción es el valor predeterminado.  
+ Permite la creación de los miembros de desplazamiento del constructor o destructor de vtordisp ocultos. Esta opción es el valor predeterminado.  
   
  `2`  
  Le permite usar [dynamic_cast (operador)](../../cpp/dynamic-cast-operator.md) en un objeto que se está construyendo. Por ejemplo, un dynamic_cast de una clase base virtual a una clase derivada.  
@@ -55,17 +55,17 @@ ms.locfileid: "32377602"
 ## <a name="remarks"></a>Comentarios  
  Estas opciones se aplican únicamente al código de C++ que usa bases virtuales.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] implementa la compatibilidad con desplazamiento de construcción de C++ en situaciones donde se utiliza herencia virtual. Desplazamientos de constructores resuelve el problema que se crea cuando una función virtual, declarada en una base virtual y se reemplaza en una clase derivada, se llama desde un constructor durante la construcción de una clase derivada posterior.  
+ Visual C++ implementa la capacidad de desplazamiento de construcción de C++ en situaciones donde se usa la herencia virtual. Desplazamientos de constructores solucionar el problema que se crea cuando una función virtual, declarada en una base virtual y se reemplaza en una clase derivada, se llama desde un constructor durante la construcción de una clase derivada posterior.  
   
- El problema es que la función virtual se puede pasar incorrecta `this` puntero como resultado de las diferencias entre los desplazamientos de virtual basa la base de una clase y los desplazamientos de sus clases derivadas. La solución proporciona un ajuste de desplazamiento de construcción único, denominado campo vtordisp, para cada base virtual de una clase.  
+ El problema es que la función virtual se puede pasar una incorrecta `this` puntero como resultado discrepancias entre los desplazamientos de virtual de las bases de una clase y los desplazamientos de sus clases derivadas. La solución proporciona un ajuste de desplazamiento de construcción único, denominado campo vtordisp, para cada base de una clase virtual.  
   
- De forma predeterminada, los campos de vtordisp se introducen siempre que el código define los destructores y los constructores definidos por el usuario y también reemplaza a funciones virtuales de bases virtuales.  
+ De forma predeterminada, se introducen vtordisp (campos) cada vez que el código define los destructores y constructores definidos por el usuario y también reemplaza a funciones virtuales de bases virtuales.  
   
- Estas opciones afecta a los archivos de código fuente. Use [vtordisp](../../preprocessor/vtordisp.md) suprimir y, a continuación, volver a habilitar campos vtordisp clase por clase.  
+ Estas opciones afectan a los archivos de código fuente. Use [vtordisp](../../preprocessor/vtordisp.md) suprimir y, a continuación, volver a habilitar los campos de vtordisp clase por clase.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).  
   
 2.  Haga clic en la carpeta **C/C++** .  
   

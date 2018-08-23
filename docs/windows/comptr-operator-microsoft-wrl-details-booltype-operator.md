@@ -13,30 +13,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb5735eeb9cd4048596588765468fbb9c5e07496
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 135c6d851be5de8f2eb976baf015f2ef449600c0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652606"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595978"
 ---
 # <a name="comptroperator-microsoftwrldetailsbooltype-operator"></a>ComPtr::operator Microsoft::WRL::Details::BoolType (Operador)
-Indica si un **ComPtr** administra la duración del objeto de una interfaz.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Si una interfaz que está asociada a este **ComPtr**, la dirección de la [Boolstruct](../windows/boolstruct-member-data-member.md) miembro de datos; de lo contrario, **nullptr**.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [ComPtr (clase)](../windows/comptr-class.md)   
- [ComPtr::Get (método)](../windows/comptr-get-method.md)
+
+Indica si un **ComPtr** administra la duración del objeto de una interfaz.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Si una interfaz que está asociada a este **ComPtr**, la dirección de la [Boolstruct](../windows/boolstruct-member-data-member.md) miembro de datos; de lo contrario, **nullptr**.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[ComPtr (clase)](../windows/comptr-class.md)  
+[ComPtr::Get (método)](../windows/comptr-get-method.md)

@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ff52245f518158c3ca5c44c6af88307d9a55ab4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c80372070589e1a5c57d2ea08f80fea0467b5dc7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644848"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596724"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_ (Miembro de datos)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-T* ptr_;  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Puntero al tipo especificado por el parámetro de plantilla actual.  
-  
-## <a name="remarks"></a>Comentarios  
- **ptr_** es el miembro de datos protegidos.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [ComPtrRefBase (clase)](../windows/comptrrefbase-class.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+T* ptr_;
+```
+
+## <a name="remarks"></a>Comentarios
+
+Puntero al tipo especificado por el parámetro de plantilla actual.
+
+## <a name="remarks"></a>Comentarios
+
+**ptr_** es el miembro de datos protegidos.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[ComPtrRefBase (clase)](../windows/comptrrefbase-class.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

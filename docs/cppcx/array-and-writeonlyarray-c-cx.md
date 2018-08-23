@@ -1,23 +1,23 @@
 ---
-title: Array y WriteOnlyArray (C++ / CX) | Documentos de Microsoft
+title: Array y WriteOnlyArray (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47c26ef4058cc3116d964740a93f7395c300b92b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089397"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606117"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array y WriteOnlyArray (C++/CX)
-También puede utilizar libremente matrices normales de estilo C o [std:: Array](../standard-library/array-class-stl.md) en C++ / programa CX (aunque [std:: vector](../standard-library/vector-class.md) a menudo es mejor usar), pero en cualquier API que está publicado en metadatos, debe convertir una matriz de estilo C o de vector en una [Platform:: Array](../cppcx/platform-array-class.md) o [writeonlyarray](../cppcx/platform-writeonlyarray-class.md) tipo dependiendo de cómo se usa. El tipo [Platform::Array](../cppcx/platform-array-class.md) no es tan eficaz como [std::vector](../standard-library/vector-class.md), por lo que, como regla general, no debes utilizarlo en código interno que realice gran cantidad de operaciones en los elementos de la matriz.  
+Puede utilizar libremente matrices normales de estilo C o [std:: Array](../standard-library/array-class-stl.md) en C++ / c++ / programa CX (aunque [std:: vector](../standard-library/vector-class.md) a menudo es mejor usar), pero en cualquier API que se ha publicado en metadatos, debe convertir una matriz de estilo C o vector para un [Platform:: Array](../cppcx/platform-array-class.md) o [writeonlyarray](../cppcx/platform-writeonlyarray-class.md) tipo dependiendo de cómo se usa. El tipo [Platform::Array](../cppcx/platform-array-class.md) no es tan eficaz como [std::vector](../standard-library/vector-class.md), por lo que, como regla general, no debes utilizarlo en código interno que realice gran cantidad de operaciones en los elementos de la matriz.  
   
  Los tipos de matriz siguientes se pueden pasar a través de ABI:  
   
@@ -29,7 +29,7 @@ También puede utilizar libremente matrices normales de estilo C o [std:: Array]
   
 4.  valor devuelto de Platform::Array^  
   
- Utilice estos tipos de matriz para implementar los tres tipos de patrones de matriz definidos por el tiempo de ejecución de Windows.  
+ Use estos tipos de matriz para implementar los tres tipos de patrones de matriz definidos por el tiempo de ejecución de Windows.  
   
  PassArray  
  Se utiliza cuando el llamador pasa una matriz a un método. El tipo de parámetro de entrada de C++ es `const` [Platform:: Array](../cppcx/platform-array-class.md)\<T >.  
@@ -41,7 +41,7 @@ También puede utilizar libremente matrices normales de estilo C o [std:: Array]
  Se usa cuando el llamador recibe una matriz que el método asigna. En C++/CX puedes devolver la matriz en el valor devuelto como Array^ o puedes devolverla como parámetro de salida como tipo Array^*.  
   
 ## <a name="passarray-pattern"></a>Patrón PassArray  
- Cuando el código de cliente pasa una matriz a un método de C++ y el método no la modifica, el método acepta la matriz como const Array^. En el nivel de interfaz binaria (ABI) de aplicación en tiempo de ejecución de Windows, esto se conoce como PassArray. En el ejemplo siguiente se muestra cómo pasar una matriz asignada en JavaScript a una función de C++ que lee en ella.  
+ Cuando el código de cliente pasa una matriz a un método de C++ y el método no la modifica, el método acepta la matriz como const Array^. En el nivel de interfaz binaria (ABI) de aplicación de Windows en tiempo de ejecución, esto se conoce como PassArray. En el ejemplo siguiente se muestra cómo pasar una matriz asignada en JavaScript a una función de C++ que lee en ella.  
   
  [!code-javascript[cx_arrays#101](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_1.js)]  
   
@@ -50,7 +50,7 @@ También puede utilizar libremente matrices normales de estilo C o [std:: Array]
  [!code-cpp[cx_arrays#01](../cppcx/codesnippet/CPP/js-array/class1.cpp#01)]  
   
 ## <a name="receivearray-pattern"></a>Patrón ReceiveArray  
- En el patrón ReceiveArray, el código de cliente declara una matriz y la pasa a un método que le asigna memoria y la inicializa. El tipo de parámetro de entrada de C++ es un "puntero a sombrero": `Array<T>^*`. En el ejemplo siguiente se muestra cómo se declara un objeto de matriz en JavaScript y cómo se pasa a una función de C++ que asigna memoria, inicializa los elementos y lo devuelve a JavaScript. JavaScript trata la matriz asignada como un valor devuelto, pero la función de C++ la trata como un parámetro out.  
+ En el patrón ReceiveArray, el código de cliente declara una matriz y la pasa a un método que le asigna memoria y la inicializa. El tipo de parámetro de entrada de C++ es un puntero a hat: `Array<T>^*`. En el ejemplo siguiente se muestra cómo se declara un objeto de matriz en JavaScript y cómo se pasa a una función de C++ que asigna memoria, inicializa los elementos y lo devuelve a JavaScript. JavaScript trata la matriz asignada como un valor devuelto, pero la función de C++ la trata como un parámetro out.  
   
  [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]  
   

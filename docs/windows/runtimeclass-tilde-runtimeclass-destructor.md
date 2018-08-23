@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0986e60fffcc8abef7e662a6839a8f25825936d5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5aa96203d7c7be8ae236fbc17435c7788aae126b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014239"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602678"
 ---
 # <a name="runtimeclassruntimeclass-destructor"></a>RuntimeClass::~RuntimeClass (Destructor)
-Desinicializa la instancia actual de la **RuntimeClass** clase.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-virtual ~RuntimeClass();  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [RuntimeClass (clase)](../windows/runtimeclass-class.md)
+
+Desinicializa la instancia actual de la **RuntimeClass** clase.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+virtual ~RuntimeClass();
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[RuntimeClass (clase)](../windows/runtimeclass-class.md)

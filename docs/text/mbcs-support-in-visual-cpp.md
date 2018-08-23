@@ -28,16 +28,16 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d00495f95b3c67e4a6fc3613b949b8ae2946bd6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010391"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608685"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Compatibilidad con MBCS en Visual C++
 Cuando se ejecuta en una versión habilitada para MBCS de Windows, el sistema de desarrollo de Visual C++ (incluidas las herramientas de línea de comandos, el depurador y el editor de código fuente integrado) está habilitado para MBCS, a excepción de la ventana de la memoria.  
@@ -53,7 +53,7 @@ Cuando se ejecuta en una versión habilitada para MBCS de Windows, el sistema de
   
  El IME, activado por ALT +\` combinación de teclas, aparece como un conjunto de botones (un indicador) y una ventana de conversión. La aplicación coloca la ventana en el punto de inserción de texto. La aplicación debe controlar `WM_MOVE` y `WM_SIZE` mensajes por cambiar la posición de la ventana de conversión que se ajuste a la nueva ubicación o el tamaño de la ventana de destino.  
   
- Si desea que los usuarios de la aplicación y tener la capacidad de escribir caracteres Kanji, la aplicación debe controlar los mensajes de IME de Windows. Para obtener más información acerca de la programación de IME, vea [Input Method Editor](https://msdn.microsoft.com/library/ms776145.aspx).  
+ Si desea que los usuarios de la aplicación y tener la capacidad de escribir caracteres Kanji, la aplicación debe controlar los mensajes de IME de Windows. Para obtener más información acerca de la programación de IME, vea [Input Method Editor](/previous-versions/windows/desktop/ms776145\(v=vs.85\)).  
   
 ## <a name="visual-c-debugger"></a>Depurador de Visual C++  
  El depurador de Visual C++ proporciona la capacidad de establecer puntos de interrupción en los mensajes IME. Además, la ventana memoria puede mostrar caracteres de doble byte.  

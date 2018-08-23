@@ -15,89 +15,97 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 627b0a881795a963e3739accc351ee684b7b8232
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 44b76e1a3eaff778fc64806eec49eff1bf2a10eb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644939"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596674"
 ---
 # <a name="type-forwarding-ccli"></a>Reenvío de tipos (C++/CLI)
-*Reenvío de tipos* permite pasar un tipo de un ensamblado (ensamblado A) a otro ensamblado (ensamblado B), que no es necesario volver a compilar los clientes que utilizan el ensamblado A.  
-  
-## <a name="all-platforms"></a>Todas las plataformas  
- Esta característica no se admite en todos los runtimes.  
-  
-## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
- Esta característica no se admite en el tiempo de ejecución de Windows.  
-  
-### <a name="requirements"></a>Requisitos  
- Opción del compilador: `/ZW`  
-  
-## <a name="common-language-runtime"></a>Common Language Runtime  
- El ejemplo de código siguiente muestra cómo usar el reenvío de tipos.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```  
-#using "new.dll"  
-[assembly:TypeForwardedTo(type::typeid)];  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *new*  
- El ensamblado en el que va a mover la definición de tipo.  
-  
- *type*  
- Tipo cuya definición que se va a mover a otro ensamblado.  
-  
-### <a name="remarks"></a>Comentarios  
- Después de un componente (ensamblado) se incluye y está siendo utilizada por las aplicaciones cliente, puede usar tipo de reenvío para pasar un tipo de componente (ensamblado) a otro ensamblado, envíe el componente actualizado (y los ensamblados adicionales necesarios) y el cliente las aplicaciones seguirán funcionando sin que se están volviendo a compilar.  
-  
- Reenvío de tipos solo funciona para los componentes que se hace referencia a las aplicaciones existentes. Cuando se vuelve a generar una aplicación, debe haber las referencias de ensamblado adecuado para cualquier tipo utilizado en la aplicación.  
-  
- Al reenviar un tipo (A) desde un ensamblado, debe agregar el `TypeForwardedTo` atributo para ese tipo, así como una referencia de ensamblado. El ensamblado que se hace referencia debe contener uno de los siguientes:  
-  
--   La definición de tipo a.  
-  
--   Un `TypeForwardedTo` atributo para un tipo, así como una referencia de ensamblado.  
-  
- Ejemplos de tipos que se pueden reenviar:  
-  
--   clases ref  
-  
--   clases de valor  
-  
--   enumeraciones  
-  
--   interfaces  
-  
- No se puede reenviar los siguientes tipos:  
-  
--   Tipos genéricos  
-  
--   Tipos nativos  
-  
--   Tipos anidados (si desea reenviar un tipo anidado, debe reenviar el tipo envolvente)  
-  
- Puede reenviar un tipo a un ensamblado creado en cualquier lenguaje destinado a common language runtime.  
-  
- Por lo tanto, si un archivo de código fuente que se usa para generar el ensamblado.dll contiene una definición de tipo (`ref class MyClass`), y desea mover ese tipo de definición de ensamblado B.dll, haría:  
-  
-1.  Mover el `MyClass` a un archivo de código fuente utilizado para generar B.dll la definición de tipo.  
-  
-2.  Compilar el ensamblado B.dll  
-  
-3.  Eliminar el `MyClass` escriba definición desde el código fuente que se usa para compilar A.dll y reemplácelo con lo siguiente:  
-  
-    ```  
-    #using "B.dll"  
-    [assembly:TypeForwardedTo(MyClass::typeid)];  
-    ```  
-  
-4.  Compile el ensamblado A.dll.  
-  
-5.  Utilice A.dll sin volver a compilar las aplicaciones cliente.  
-  
-### <a name="requirements"></a>Requisitos  
- Opción del compilador: `/clr`
+
+*Reenvío de tipos* permite pasar un tipo de un ensamblado (ensamblado A) a otro ensamblado (ensamblado B), que no es necesario volver a compilar los clientes que utilizan el ensamblado A.
+
+## <a name="all-platforms"></a>Todas las plataformas
+
+Esta característica no se admite en todos los runtimes.
+
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución
+
+Esta característica no se admite en el tiempo de ejecución de Windows.
+
+### <a name="requirements"></a>Requisitos
+
+Opción del compilador: `/ZW`
+
+## <a name="common-language-runtime"></a>Common Language Runtime
+
+El ejemplo de código siguiente muestra cómo usar el reenvío de tipos.
+
+### <a name="syntax"></a>Sintaxis
+
+```
+#using "new.dll"
+[assembly:TypeForwardedTo(type::typeid)];
+```
+
+### <a name="parameters"></a>Parámetros
+
+*new*  
+El ensamblado en el que va a mover la definición de tipo.
+
+*type*  
+Tipo cuya definición que se va a mover a otro ensamblado.
+
+### <a name="remarks"></a>Comentarios
+
+Después de un componente (ensamblado) se incluye y está siendo utilizada por las aplicaciones cliente, puede usar tipo de reenvío para pasar un tipo de componente (ensamblado) a otro ensamblado, envíe el componente actualizado (y los ensamblados adicionales necesarios) y el cliente las aplicaciones seguirán funcionando sin que se están volviendo a compilar.
+
+Reenvío de tipos solo funciona para los componentes que se hace referencia a las aplicaciones existentes. Cuando se vuelve a generar una aplicación, debe haber las referencias de ensamblado adecuado para cualquier tipo utilizado en la aplicación.
+
+Al reenviar un tipo (A) desde un ensamblado, debe agregar el `TypeForwardedTo` atributo para ese tipo, así como una referencia de ensamblado. El ensamblado que se hace referencia debe contener uno de los siguientes:
+
+- La definición de tipo a.
+
+- Un `TypeForwardedTo` atributo para un tipo, así como una referencia de ensamblado.
+
+Ejemplos de tipos que se pueden reenviar:
+
+- clases ref
+
+- clases de valor
+
+- enumeraciones
+
+- interfaces
+
+No se puede reenviar los siguientes tipos:
+
+- Tipos genéricos
+
+- Tipos nativos
+
+- Tipos anidados (si desea reenviar un tipo anidado, debe reenviar el tipo envolvente)
+
+Puede reenviar un tipo a un ensamblado creado en cualquier lenguaje destinado a common language runtime.
+
+Por lo tanto, si un archivo de código fuente que se usa para generar el ensamblado.dll contiene una definición de tipo (`ref class MyClass`), y desea mover ese tipo de definición de ensamblado B.dll, haría:
+
+1. Mover el `MyClass` a un archivo de código fuente utilizado para generar B.dll la definición de tipo.
+
+2. Compilar el ensamblado B.dll
+
+3. Eliminar el `MyClass` escriba definición desde el código fuente que se usa para compilar A.dll y reemplácelo con lo siguiente:
+
+    ```
+    #using "B.dll"
+    [assembly:TypeForwardedTo(MyClass::typeid)];
+    ```
+
+4. Compile el ensamblado A.dll.
+
+5. Utilice A.dll sin volver a compilar las aplicaciones cliente.
+
+### <a name="requirements"></a>Requisitos
+
+Opción del compilador: `/clr`

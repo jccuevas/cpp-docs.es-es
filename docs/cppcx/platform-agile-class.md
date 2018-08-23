@@ -1,5 +1,5 @@
 ---
-title: 'Clase Platform:: Agile | Documentos de Microsoft'
+title: 'Clase Platform:: Agile | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092436"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596607"
 ---
 # <a name="platformagile-class"></a>Platform::Agile (Clase)
 Representa un objeto que tiene MashalingBehavior=Standard como objeto ágil, lo que reduce en gran medida las posibilidades de excepciones de subprocesamiento en tiempo de ejecución. `Agile<T>` permite que el objeto que no es Agile llame al mismo subproceso o a otro diferente, o que le llame a él. Para obtener más información, consulte [subprocesamiento y serialización](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -125,7 +125,7 @@ Destruye la instancia actual de la clase Agile.
 ### <a name="remarks"></a>Comentarios  
  Este destructor también libera el objeto representado por el objeto Agile actual.  
   
-## <a name="get"></a>   Agile:: Get (método)
+## <a name="get"></a>   Método de Agile
 Devuelve un identificador al objeto representado por el objeto Agile actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -141,7 +141,7 @@ Devuelve un identificador al objeto representado por el objeto Agile actual.
   
  El tipo del valor devuelto es realmente un tipo interno no revelado. Una manera cómoda de contener el valor devuelto es asignarlo a una variable que se declara con el **automática** palabra clave de deducción de tipos. Por ejemplo: `auto x = myAgileTvariable->Get();`.  
   
-## <a name="getaddressof"></a>  Agile:: getaddressof (método)
+## <a name="getaddressof"></a>  Getaddressof (método)
 Reinicializa el objeto Agile actual y luego devuelve la dirección de un identificador a un objeto de tipo `T`.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -160,9 +160,9 @@ throw();
  La dirección de un identificador a un objeto de tipo `T`.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta operación libera la representación actual de un objeto de tipo `T`, si lo hay; reinicializa los miembros de datos del objeto Agile; adquiere el contexto del subproceso actual; y, a continuación, devuelve la dirección de una variable de objeto de identificador que puede representar un objeto no ágil. Para hacer que una instancia de clase ágil representar un objeto, utilice el operador de asignación ([Agile:: operator =](#operator-assign)) para asignar el objeto a la instancia de la clase Agile.  
+ Esta operación libera la representación actual de un objeto de tipo `T`, si las hay; reinicializa los miembros de datos del objeto Agile; adquiere el contexto del subproceso actual; y, a continuación, devuelve la dirección de una variable de objeto de identificador que puede representar un objeto no ágil. Para hacer que una instancia de la clase ágil representar un objeto, utilice el operador de asignación ([Agile:: operator =](#operator-assign)) para asignar el objeto a la instancia de la clase Agile.  
 
-## <a name="getaddressofforinout"></a>  Agile:: getaddressofforinout (método)
+## <a name="getaddressofforinout"></a>  Getaddressofforinout (método)
 Devuelve la dirección de un identificador al objeto representado por el objeto Agile actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -183,7 +183,7 @@ T^* GetAddressOfForInOut()  throw();
 ### <a name="remarks"></a>Comentarios  
  Esta operación adquiere el contexto de subprocesos actual y devuelve después la dirección de un identificador al objeto subyacente.  
 
-## <a name="release"></a>  Agile:: Release (método)
+## <a name="release"></a>  Método de Agile
 Descarta el objeto y el contexto subyacentes del objeto Agile actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -197,7 +197,7 @@ void Release() throw();
 ### <a name="remarks"></a>Comentarios  
  Si existen, el objeto y el contexto subyacentes del objeto Agile actual se descartan y, a continuación, el valor del objeto Agile se establece en null.  
 
-## <a name="operator-arrow"></a>  Agile:: operator -&gt; (operador)
+## <a name="operator-arrow"></a>  Agile:: operator -&gt; operador
 Recupera un identificador al objeto representado por el objeto Agile actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -255,4 +255,4 @@ Asigna el objeto especificado al objeto Agile actual.
  La operación de asignación conserva automáticamente el contexto del objeto Agile actual. 
        
 ## <a name="see-also"></a>Vea también  
- [Namespace de plataforma](platform-namespace-c-cx.md)
+ [Plataforma Namespace](platform-namespace-c-cx.md)

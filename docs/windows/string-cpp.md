@@ -17,55 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 459f786863f7d10797008b87e276afb0c95e184a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: eb3a57cec78c0ea02e16edd890d2a66362bfc011
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020091"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594874"
 ---
 # <a name="string-c"></a>string (C++)
-Indica que unidimensional **char**, **wchar_t**, `byte` (o equivalentes) el puntero a este tipo de matriz o matriz debe tratarse como una cadena.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-[string]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El **cadena** atributo de C++ tiene la misma funcionalidad que el [cadena](http://msdn.microsoft.com/library/windows/desktop/aa367270) atributo MIDL.  
-  
-## <a name="example"></a>Ejemplo  
- El código siguiente muestra cómo usar **cadena** en una interfaz y en una definición de tipo:  
-  
-```cpp  
-// cpp_attr_ref_string.cpp  
-// compile with: /LD  
-#include "unknwn.h"  
-[module(name="ATLFIRELib")];  
-[export, string] typedef char a[21];  
-[dispinterface, restricted, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IFireTabCtrl  
-{  
-   [id(1)] HRESULT Method3([in, string] char *pC);  
-};  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-### <a name="attribute-context"></a>Contexto de atributo  
-  
-|||  
-|-|-|  
-|**Se aplica a**|Matriz o puntero a una matriz, el parámetro de interfaz, el método de interfaz|  
-|**Reiterativo**|No|  
-|**Atributos requeridos**|Ninguna|  
-|**Atributos no válidos**|Ninguna|  
-  
- Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Atributos IDL](../windows/idl-attributes.md)   
- [Atributos de la matriz](../windows/array-attributes.md)   
- [export](../windows/export.md)   
+
+Indica que unidimensional **char**, **wchar_t**, `byte` (o equivalentes) el puntero a este tipo de matriz o matriz debe tratarse como una cadena.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+[string]
+```
+
+## <a name="remarks"></a>Comentarios
+
+El **cadena** atributo de C++ tiene la misma funcionalidad que el [cadena](http://msdn.microsoft.com/library/windows/desktop/aa367270) atributo MIDL.
+
+## <a name="example"></a>Ejemplo
+
+El código siguiente muestra cómo usar **cadena** en una interfaz y en una definición de tipo:
+
+```cpp
+// cpp_attr_ref_string.cpp
+// compile with: /LD
+#include "unknwn.h"
+[module(name="ATLFIRELib")];
+[export, string] typedef char a[21];
+[dispinterface, restricted, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IFireTabCtrl
+{
+   [id(1)] HRESULT Method3([in, string] char *pC);
+};
+```
+
+## <a name="requirements"></a>Requisitos
+
+### <a name="attribute-context"></a>Contexto de atributo
+
+|||
+|-|-|
+|**Se aplica a**|Matriz o puntero a una matriz, el parámetro de interfaz, el método de interfaz|
+|**Reiterativo**|No|
+|**Atributos requeridos**|Ninguna|
+|**Atributos no válidos**|Ninguna|
+
+Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Vea también
+
+[Atributos IDL](../windows/idl-attributes.md)  
+[Atributos de matriz](../windows/array-attributes.md)  
+[export](../windows/export.md)  

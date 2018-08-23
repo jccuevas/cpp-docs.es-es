@@ -17,31 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04f09f98148a54ac87add3d52bcba1cffa0c1c14
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d506bc99d584222de55de56c9efbe40f9c71434a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016426"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593498"
 ---
 # <a name="weakreferenceweakreference-constructor"></a>WeakReference::WeakReference (Constructor)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-WeakReference();  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Inicializa una nueva instancia de la [WeakReference (clase)](../windows/weakreference-class1.md).  
-  
- El puntero de referencia segura para la **WeakReference** objeto se inicializa en **nullptr**, y el recuento de referencia segura se inicializa en 1.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+WeakReference();
+```
+
+## <a name="remarks"></a>Comentarios
+
+Inicializa una nueva instancia de la [WeakReference (clase)](../windows/weakreference-class1.md).
+
+El puntero de referencia segura para la **WeakReference** objeto se inicializa en **nullptr**, y el recuento de referencia segura se inicializa en 1.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

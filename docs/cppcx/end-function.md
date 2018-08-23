@@ -1,5 +1,5 @@
 ---
-title: end (función) | Documentos de Microsoft
+title: end (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 771d7e83024f9c258df1437ff902d638bffc8478
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec25b92ca9ce21f72ff2fb573aae316ef1c19eac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086426"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596655"
 ---
 # <a name="end-function"></a>end (Función)
 Devuelve un iterador que apunta más allá del final de una colección a la que se tiene acceso con el parámetro de interfaz especificado.  
@@ -52,7 +52,7 @@ template <typename T>
  Un parámetro de tipo de plantilla.  
   
  `v`  
- Una colección de Vector\<T > o VectorView\<T > objetos que se tiene acceso mediante un IVector\<T >, o de IVectorView\<T > interfaz.  
+ Una colección de Vector\<T > o VectorView\<T > objetos que se accede mediante un IVector\<T >, o IVectorView\<T > interfaz.  
   
  `i`  
  Una colección de arbitrarios a Windows Runtime objetos que se tiene acceso mediante un IIterable\<T > interfaz.  

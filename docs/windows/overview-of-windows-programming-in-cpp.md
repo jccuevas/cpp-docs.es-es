@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012198"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604284"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
@@ -26,14 +26,14 @@ Puede usar Visual C++ para escribir muchas clases de programas que se ejecutan e
 - eficaz en los requisitos de memoria
 - económica en el consumo de energía 
 - puede aprovechar al máximo de dispositivos de varios núcleos y varios núcleos
-- capaz de hacer el cálculo general en la unidad de procesamiento de gráficos (GPGPU)   
+- capaz de hacer el cálculo general en la unidad de procesamiento de gráficos (GPGPU)  
 - se puede sacar provecho de otros avances recientes en hardware.
 
 Existen varias categorías de aplicaciones de Windows que se pueden desarrollar con Visual C++. Estas categorías tienen distintos modelos de programación o modelos de aplicación, que se han introducido en los años. Cada modelo utiliza diferentes bibliotecas y API para proporcionar acceso a la plataforma y crear interfaces de usuario como ventanas y cuadros de diálogo. La biblioteca estándar de C++, así como bibliotecas de terceros pueden usarse en cualquiera de estas categorías, con algunas restricciones para UWP.
 
 - [Aplicaciones universales de Windows](#BK_WindowsUniversal). La tercera categoría de aplicaciones de Windows se introdujo con Windows 8 y continúa siendo compatible con Windows 10. Estas aplicaciones suelen denominarse “aplicaciones de Windows” e incluyen tanto aplicaciones de escritorio como móviles destinadas a diversos dispositivos. Pueden escribirse en C++/CX, que es un dialecto de C++ compatible con el desarrollo de Windows en tiempo de ejecución, o también en C++ estándar con COM mediante la biblioteca de Windows en tiempo de ejecución (WRL). Estas aplicaciones se diseñaron originalmente para ejecutarse a pantalla completa, aunque en Windows 10 los usuarios tienen la opción de ejecutarlas en una ventana del escritorio. Estas aplicaciones están pensadas para dispositivos táctiles, pero pueden usarse fácilmente con el mouse si así lo prefieren los usuarios o si no se dispone de pantalla táctil. Estas aplicaciones se distribuyen desde la Microsoft Store, un hecho que llevó a llamarlas "Store" aplicaciones.
 
-Aplicaciones para UWP pueden ejecutar en todos los dispositivos Windows 10 como tabletas y teléfonos móviles, así como en el escritorio. En el escritorio pueden ejecutarse como una ventana de escritorio normal en lugar de hacerlo continuamente a pantalla completa. Estas aplicaciones también pueden ejecutarse en la consola Xbox y en futuros dispositivos.  Las aplicaciones UWP se ejecutan en el tiempo de ejecución de Windows, que proporciona una interfaz para los diversos dispositivos de hardware que se admiten en Windows, servicios y elementos de la interfaz de usuario.  
+Aplicaciones para UWP pueden ejecutar en todos los dispositivos Windows 10 como tabletas y teléfonos móviles, así como en el escritorio. En el escritorio pueden ejecutarse como una ventana de escritorio normal en lugar de hacerlo continuamente a pantalla completa. Estas aplicaciones también pueden ejecutarse en la consola Xbox y en futuros dispositivos.  Las aplicaciones UWP se ejecutan en el tiempo de ejecución de Windows, que proporciona una interfaz para los diversos dispositivos de hardware que se admiten en Windows, servicios y elementos de la interfaz de usuario.
 
 Puede escribir aplicaciones para UWP en C++ / c++ / CX, un dialecto de C++, puede usar el [C++ / c++ / WinRT biblioteca](https://moderncpp.com/)para algunos escenarios. Las aplicaciones para UWP compilan a código nativo y tienen una interfaz de usuario XAML o utilizan DirectX. Componentes de Windows en tiempo de ejecución que se escriben en código nativo que pueden consumir las aplicaciones para UWP escritas en otros lenguajes. Para obtener más información, consulte [crear una aplicación plataforma Universal de Windows en C++](http://go.microsoft.com/fwlink/?LinkID=534976), [crea tu primer juego para UWP con DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), y [componentes de creación en tiempo de ejecución de Windows en C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
@@ -84,7 +84,7 @@ Pueden ejecutar juegos de DirectX en PC o en Xbox. Para obtener más informació
 
 ## <a name="sdks-libraries-and-header-files"></a>Archivos de encabezado, bibliotecas y SDK
 
-Visual C++ incluye la biblioteca en tiempo de ejecución de C (CRT), la biblioteca estándar de C++ y otras bibliotecas específicas de Microsoft. Las carpetas de inclusión que contienen archivos de encabezado para estas bibliotecas se encuentran en el directorio de instalación de Visual Studio en la carpeta \VC\ o en el caso de CRT, en la carpeta de instalación del SDK de Windows.   
+Visual C++ incluye la biblioteca en tiempo de ejecución de C (CRT), la biblioteca estándar de C++ y otras bibliotecas específicas de Microsoft. Las carpetas de inclusión que contienen archivos de encabezado para estas bibliotecas se encuentran en el directorio de instalación de Visual Studio en la carpeta \VC\ o en el caso de CRT, en la carpeta de instalación del SDK de Windows.
 
 Puede usar el [Administrador de paquetes de Vcpkg](../vcpkg.md) para instalar cómodamente cientos de bibliotecas de código abierto de terceros para Windows.
 

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ad833d0fb4309ed4fed0eba4c162c9d6d46bf95d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402691"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588222"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Resolución de nombres para los tipos dependientes
 Use **typename** para los nombres completos en definiciones de plantilla para indicar al compilador que el nombre completo dado identifica un tipo. Para obtener más información, consulte [typename](../cpp/typename.md).  
@@ -98,7 +98,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>Desambiguación de plantilla  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] aplica las reglas del estándar C++98/03/11 para la desambiguación de la palabra clave “template”. En el ejemplo siguiente, Visual C++ 2010 aceptaría las líneas no conformes y las líneas que cumplen.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] acepta solo las líneas que cumplen.  
+ Visual Studio 2012 exige la C ++ 98/03/11 reglas estándar para la Desambiguación de la palabra clave "template". En el ejemplo siguiente, Visual C++ 2010 aceptaría las líneas no conformes y las líneas que cumplen.  Visual Studio 2012 acepta solo las líneas que cumplen.  
   
 ```cpp  
 #include <iostream>  

@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f55896ac0bca162df9f17703225552cdb70c079c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: df6d5209980842e4fe5a2f2919d24ba291815e5e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647091"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595916"
 ---
 # <a name="asyncbaseputid-method"></a>AsyncBase::put_Id (Método)
-Establece el identificador de la operación asincrónica.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-STDMETHOD(  
-   put_Id  
-)(const unsigned int id);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *identificador*  
- Un identificador distinto de cero.  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, E_INVALIDARG o E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** async.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Vea también  
- [AsyncBase (clase)](../windows/asyncbase-class.md)
+
+Establece el identificador de la operación asincrónica.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(
+   put_Id
+)(const unsigned int id);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*identificador*  
+Un identificador distinto de cero.
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; en caso contrario, E_INVALIDARG o E_ILLEGAL_METHOD_CALL.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** async.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[AsyncBase (clase)](../windows/asyncbase-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Namespace Metadata | Documentos de Microsoft
+title: 'Platform:: Metadata Namespace | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11dc54463207efade9a8ebb7179654d0b1e18909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1a755314adec83e8853c2c29d9c9d9bb363575b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088029"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607811"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata (Espacio de nombres)
 Este espacio de nombres contiene atributos que modifican las declaraciones de tipos.  
@@ -53,4 +53,4 @@ namespace Platform {
  **Espacio de nombres:** Platform::Metadata  
   
 ## <a name="see-also"></a>Vea también  
- [Namespace de plataforma](platform-namespace-c-cx.md)
+ [Plataforma Namespace](platform-namespace-c-cx.md)

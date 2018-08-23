@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7d5a733c7a3e4481495424e4241f1b8a683e0f92
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2bfc53148a6c0813f3dbe82123db1db5e657a206
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011028"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603832"
 ---
 # <a name="modulebasemodulebase-constructor"></a>ModuleBase::ModuleBase (Constructor)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-ModuleBase();  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Inicializa una instancia de la clase `Module`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [ModuleBase (clase)](../windows/modulebase-class.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+ModuleBase();
+```
+
+## <a name="remarks"></a>Comentarios
+
+Inicializa una instancia de la clase `Module`.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[ModuleBase (clase)](../windows/modulebase-class.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

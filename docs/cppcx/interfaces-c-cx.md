@@ -1,20 +1,20 @@
 ---
-title: Interfaces (C++ / CX) | Documentos de Microsoft
+title: Interfaces (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090661"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592557"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 Aunque una clase ref solo puede heredar de a lo sumo una clase base concreta, puede implementar cualquier número de clases de interfaz. Una clase de interfaz (o struct de interfaz) en sí misma puede heredar (o requerir) varias clases de interfaz, puede sobrecargar sus funciones miembro y puede tener parámetros de tipo.  
@@ -30,7 +30,7 @@ Aunque una clase ref solo puede heredar de a lo sumo una clase base concreta, pu
   
 -   No permiten campos ni miembros estáticos.  
   
--   Tipos que se usan como propiedades, parámetros de método o devuelven valores sólo pueden ser tipos de tiempo de ejecución de Windows; Esto incluye los tipos fundamentales y los tipos de clase de enumeración.  
+-   Tipos que se usan como propiedades, parámetros de método, o devuelven valores solo pueden ser tipos en tiempo de ejecución de Windows; Esto incluye los tipos fundamentales y los tipos de clase de enumeración.  
   
 ## <a name="declaration-and-usage"></a>Declaración y uso  
  En el ejemplo siguiente se muestra cómo declarar una interfaz: Observa que una interfaz se puede declarar como una clase o como un tipo struct.  
@@ -63,9 +63,9 @@ Aunque una clase ref solo puede heredar de a lo sumo una clase base concreta, pu
  [!code-cpp[cx_interfaces#06](../cppcx/codesnippet/CPP/interfacestest/class1.h#06)]  
   
 ## <a name="generic-interfaces"></a>Interfaces genéricas  
- En C++ / CX, el `generic` palabra clave se utiliza para representar un tipo en tiempo de ejecución de Windows con parámetros. Un tipo parametrizado se emite en metadatos y puede ser utilizado por código escrito en cualquier lenguaje que admita parámetros de tipo. Windows Runtime define algunas interfaces genéricas, por ejemplo, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector), pero no admite la creación de interfaces genéricas públicas definidas por el usuario en C++ / CX. Sin embargo, puedes crear interfaces genéricas privadas.  
+ En C / c++ / CX, el `generic` palabra clave se usa para representar un tipo en tiempo de ejecución de Windows con parámetros. Un tipo parametrizado se emite en metadatos y puede ser utilizado por código escrito en cualquier lenguaje que admita parámetros de tipo. Windows Runtime define algunas interfaces genéricas, por ejemplo, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector), pero no admite la creación de interfaces genéricas públicas definidas por el usuario en C / c++ / CX. Sin embargo, puedes crear interfaces genéricas privadas.  
   
- Aquí es cómo se pueden utilizar tipos en tiempo de ejecución de Windows para crear una interfaz genérica:  
+ Aquí es cómo se pueden usar tipos en tiempo de ejecución de Windows para crear una interfaz genérica:  
   
 -   Una `interface class` genérica definida por el usuario en un componente no se puede emitir en su archivo de metadatos de Windows; por consiguiente, no puede tener accesibilidad pública y el código de cliente de otros archivos .winmd no puede implementarla. Puede ser implementada por clases ref no públicas en el mismo componente. Una clase ref pública puede tener un tipo de interfaz genérica como miembro privado.  
   
@@ -77,7 +77,7 @@ Aunque una clase ref solo puede heredar de a lo sumo una clase base concreta, pu
   
 -   Una interfaz genérica puede tomar uno o más parámetros de tipo genérico precedidos de `typename` o `class`. No se admiten parámetros que no sean de tipo.  
   
--   Un parámetro de tipo puede ser cualquier tipo en tiempo de ejecución de Windows. Es decir, el parámetro de tipo puede ser un tipo de referencia, un tipo de valor, una clase de interfaz, un delegado, un tipo fundamental o una clase de enumeración pública.  
+-   Un parámetro de tipo puede ser cualquier tipo de tiempo de ejecución de Windows. Es decir, el parámetro de tipo puede ser un tipo de referencia, un tipo de valor, una clase de interfaz, un delegado, un tipo fundamental o una clase de enumeración pública.  
   
 -   Una *interfaz genérica cerrada* es una interfaz que hereda de una interfaz genérica y especifica argumentos de tipo concretos para todos los parámetros de tipo. Se puede usar en cualquier lugar donde se pueda usar una interfaz privada genérica.  
   
@@ -93,7 +93,7 @@ Aunque una clase ref solo puede heredar de a lo sumo una clase base concreta, pu
   
 -   Cuando el tipo de un parámetro de método es un parámetro de tipo, la declaración de ese parámetro o variable usa el nombre del parámetro de tipo sin ningún puntero, referencia nativa o declaradores de identificador. Es decir, nunca has de escribir “T^”.  
   
--   Las clases ref con plantillas deben ser privadas. Se pueden implementar interfaces genéricas y pueden pasar el parámetro de plantilla *T* al argumento genérico *T*. Cada instancia de una clase ref con plantillas es una clase ref.  
+-   Las clases ref con plantillas deben ser privadas. Pueden implementar interfaces genéricas y puede pasar el parámetro de plantilla *T* al argumento genérico *T*. Cada instancia de una clase ref con plantillas es una clase ref.  
   
 ## <a name="see-also"></a>Vea también  
  [Sistema de tipos](../cppcx/type-system-c-cx.md)   

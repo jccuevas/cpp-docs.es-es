@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b7b31161ab0539a6b31b574c8cf306b4ae33378
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e987be9ae368917a70e8dcbb5796bb12228da81b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651602"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592360"
 ---
 # <a name="handletget-method"></a>HandleT::Get (Método)
-Obtiene el valor del identificador subyacente.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-typename HandleTraits::Type Get() const;  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Un identificador.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** corewrappers.h  
-  
- **Namespace:** Wrappers  
-  
-## <a name="see-also"></a>Vea también  
- [HandleT (clase)](../windows/handlet-class.md)
+
+Obtiene el valor del identificador subyacente.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+typename HandleTraits::Type Get() const;
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Un identificador.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** corewrappers.h
+
+**Namespace:** Wrappers
+
+## <a name="see-also"></a>Vea también
+
+[HandleT (clase)](../windows/handlet-class.md)

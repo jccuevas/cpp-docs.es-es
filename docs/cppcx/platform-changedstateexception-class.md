@@ -1,5 +1,5 @@
 ---
-title: Changedstateexception (clase) | Documentos de Microsoft
+title: Changedstateexception (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ChangedStateException
 ms.assetid: f894beac-9e80-4fac-ac25-89f1dbc0a6a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04daf6229ffa3f5ce41087a34ab53d92e3a1361c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 029242a466b7fbac0d967596c114eb0ad45aa569
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087954"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603217"
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException (Clase)
 Se produce cuando el estado interno de un objeto ha cambiado, invalidando de este modo los resultados del método.  

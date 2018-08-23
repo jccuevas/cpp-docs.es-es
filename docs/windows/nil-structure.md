@@ -15,34 +15,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b824baae8044912e36dfe56054f4db1af7225fdb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 628443cf967e70b5f05ecebc0975abbcd1d44650
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015652"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596177"
 ---
 # <a name="nil-structure"></a>Nil (Estructura)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-struct Nil;  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Se utiliza para indicar un parámetro de plantilla opcional no especificado.  
-  
- **Nil** es una estructura vacía.  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `Nil`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** implements.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+struct Nil;
+```
+
+## <a name="remarks"></a>Comentarios
+
+Se utiliza para indicar un parámetro de plantilla opcional no especificado.
+
+**Nil** es una estructura vacía.
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`Nil`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** implements.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

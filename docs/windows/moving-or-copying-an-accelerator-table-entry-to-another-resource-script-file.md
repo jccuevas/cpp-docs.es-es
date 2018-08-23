@@ -18,35 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb15dbd56656c72bc0f96491d24fc43fb96de84c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f419f9c370c58c1e3ebf07d3b78f15499a072d4e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017817"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603503"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Mover o copiar una entrada de una tabla de aceleradores a otro archivo de script de recursos
-### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Para mover o copiar una entrada de una tabla de aceleradores a otro archivo de script de recursos  
-  
-1.  Abra las tablas de aceleradores en los dos archivos de script de recursos.  
-  
-    > [!NOTE]
-    >  Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Seleccione la entrada que desea mover.  
-  
-3.  Desde el **editar** menú, elija **copia** o **cortar**.  
-  
-4.  Seleccione una entrada en el archivo de script de recursos de destino.  
-  
-5.  Desde el **editar** menú, elija **pegar**.  
-  
-    > [!NOTE]
-    >  También puede usar las teclas de método abreviado para copiar y pegar.  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Editar tablas de aceleradores](../windows/editing-accelerator-tables.md)   
- [Editor de aceleradores](../windows/accelerator-editor.md)
+
+### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Para mover o copiar una entrada de una tabla de aceleradores a otro archivo de script de recursos
+
+1. Abra las tablas de aceleradores en los dos archivos de script de recursos.
+
+   > [!NOTE]
+   > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
+
+2. Seleccione la entrada que desea mover.
+
+3. Desde el **editar** menú, elija **copia** o **cortar**.
+
+4. Seleccione una entrada en el archivo de script de recursos de destino.
+
+5. Desde el **editar** menú, elija **pegar**.
+
+   > [!NOTE]
+   > También puede usar las teclas de método abreviado para copiar y pegar.
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Edición de tablas de aceleradores](../windows/editing-accelerator-tables.md)  
+[Editor de aceleradores](../windows/accelerator-editor.md)

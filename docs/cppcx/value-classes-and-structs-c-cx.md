@@ -1,5 +1,5 @@
 ---
-title: Las clases y structs de valor (C++ / CX) | Documentos de Microsoft
+title: Las clases y structs de valor (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b623e706fae0dfd8fca6b9aaf217e76b27dbbda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090720"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589061"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Value (Clases y structs) (C++/CX)
-A *struct de valor* o *clase de valor* es una ventana de tiempo de ejecución compatible ("estructura POD plain old datos"). Tiene un tamaño fijo y solo se compone de campos; a diferencia de una clase ref, no tiene propiedades.  
+Un *struct de valor* o *clase de valor* es un Windows en tiempo de ejecución compatible ("estructura POD plain old data"). Tiene un tamaño fijo y solo se compone de campos; a diferencia de una clase ref, no tiene propiedades.  
   
  En los ejemplos siguientes se muestra cómo declarar e inicializar structs de valor.  
   
@@ -59,7 +59,7 @@ A *struct de valor* o *clase de valor* es una ventana de tiempo de ejecución co
   
  Una *clase de valor* es exactamente igual que un `value struct` salvo que a sus campos se les debe dar accesibilidad pública de forma explícita. Se declara mediante la palabra clave `value class` .  
   
- Un struct de valor o una clase de valor puede contener como campos solo tipos numéricos fundamentales, clases enum, `Platform::String^`, o [ibox \<T > ^](../cppcx/platform-ibox-interface.md) donde T es una clase de enumeración o de tipo numérica o clase de valor o struct. Un campo `IBox<T>^` puede tener un valor `nullptr`; esta es la forma que tiene C++ de implementar el concepto de *tipos de valor que aceptan valores NULL*.  
+ Un struct de valor o una clase de valor puede contener como campos solo tipos numéricos fundamentales, clases enum, `Platform::String^`, o [ibox \<T > ^](../cppcx/platform-ibox-interface.md) donde T es una clase de enumeración o tipo numérico o clase de valor o struct. Un campo `IBox<T>^` puede tener un valor `nullptr`; esta es la forma que tiene C++ de implementar el concepto de *tipos de valor que aceptan valores NULL*.  
   
  Una clase de valor o struct de valor que contiene un tipo `Platform::String^` o `IBox<T>^` como miembro no se puede convertir en `memcpy`.  
   
@@ -95,7 +95,7 @@ Method2(ref obj);
  También puede usar un símbolo de puntero (*) para pasar un tipo de valor por referencia. El comportamiento en relación a los llamadores en otros lenguajes es el mismo (los llamadores de C# usan la palabra clave `ref` ) pero, en el método, el tipo es un puntero al tipo de valor.  
   
 ## <a name="nullable-value-types"></a>Tipos de valor que aceptan valores NULL  
- Como se mencionó anteriormente, una clase de valor o struct de valor puede tener un campo de tipo [ibox\<T > ^](../cppcx/platform-ibox-interface.md): por ejemplo, `IBox<int>^`. Este tipo de campo puede tener cualquier valor numérico válido para el tipo `int` , o puede tener un valor `nullptr`. Puedes pasar un campo que acepta valores NULL como argumento a un método cuyo parámetro se declara como opcional, o a cualquier otra estructura en la que no se requiera que un tipo de valor tenga un valor.  
+ Como se mencionó anteriormente, una clase de valor o struct de valor puede tener un campo de tipo [ibox\<T > ^](../cppcx/platform-ibox-interface.md)— por ejemplo, `IBox<int>^`. Este tipo de campo puede tener cualquier valor numérico válido para el tipo `int` , o puede tener un valor `nullptr`. Puedes pasar un campo que acepta valores NULL como argumento a un método cuyo parámetro se declara como opcional, o a cualquier otra estructura en la que no se requiera que un tipo de valor tenga un valor.  
   
  En el ejemplo siguiente se muestra cómo inicializar un struct con un campo que acepta valores NULL.  
   

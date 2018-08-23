@@ -1,23 +1,23 @@
 ---
-title: Interoperar con otros lenguajes (C++ / CX) | Documentos de Microsoft
+title: Interoperar con otros lenguajes (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e096cda810085c0e0ce9e2772c7105843e486a39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7d4aec775dc716a5e88e6b421a7cd7f818730c23
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087847"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589893"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Interoperar con otros lenguajes (C++/CX)
-Esta parte de la documentación describe cómo utilizar C++ / CX para crear componentes de Windows en tiempo de ejecución que puedan usarse por otras bibliotecas y lenguajes de programación. También puede crear componentes que no pueden usarse por todos los idiomas. En esta sección describe diferentes aspectos que tener en cuenta cuando su C + / aplicación CX interactúe con componentes que se escriben con JavaScript, un lenguaje de .NET Framework administrado o la biblioteca de plantillas de C++ de Windows en tiempo de ejecución.  
+Esta parte de la documentación describe cómo usar C++ / c++ / CX para crear componentes de Windows en tiempo de ejecución que pueden usarse en otros lenguajes de programación y bibliotecas. También puede crear componentes que no pueden usarse por todos los idiomas. Esta sección describen diferentes aspectos que tener en cuenta al C + + / aplicación CX interactúa con componentes que se escriben con JavaScript, un lenguaje administrado de .NET Framework o la biblioteca de plantillas C++ de Windows en tiempo de ejecución.  
   
 ## <a name="related-topics"></a>Temas relacionados  
   

@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 44bd357ea5d7c8da0ffdb4e2886a97434a12a760
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 88b83e475ad2452d55b4696bc9b5f1b8bc75a169
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641630"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606664"
 ---
 # <a name="comptrrefoperator-interfacetype-operator"></a>ComPtrRef::operator InterfaceType** (Operador)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-operator InterfaceType**();  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Elimina la actual **ComPtrRef** de objetos y devuelve un puntero a una de puntero a la interfaz que se ha representado por la **ComPtrRef** objeto.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [ComPtrRef (clase)](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+operator InterfaceType**();
+```
+
+## <a name="remarks"></a>Comentarios
+
+Elimina la actual **ComPtrRef** de objetos y devuelve un puntero a una de puntero a la interfaz que se ha representado por la **ComPtrRef** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[ComPtrRef (clase)](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

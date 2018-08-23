@@ -1,5 +1,5 @@
 ---
-title: 'Clase Platform:: Type | Documentos de Microsoft'
+title: 'Clase Platform:: Type | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e4d2931df50c6bfac126bc8e8ab1c70d61bdfe39
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255543"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596706"
 ---
 # <a name="platformtype-class"></a>Platform::Type (Clase)
-Contiene información en tiempo de ejecución sobre un tipo, en concreto, un nombre de cadena y un typecode. Obtenido mediante una llamada a [Object:: GetType](../cppcx/platform-object-class.md#gettype) en cualquier objeto u o mediante el [typeid](../windows/typeid-cpp-component-extensions.md) operador en un nombre de clase o struct.  
+Contiene información en tiempo de ejecución sobre un tipo, en concreto, un nombre de cadena y un typecode. Obtiene al llamar a [GetType](../cppcx/platform-object-class.md#gettype) en cualquier objeto o utilizando el [typeid](../windows/typeid-cpp-component-extensions.md) operador en un nombre de clase o struct.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,14 +42,14 @@ public ref class Platform::Type :
 |||  
 |-|-|  
 |[método Type::GetTypeCode](#gettypecode)|Devuelve un valor de [enumeración Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) para el objeto.| 
-|[Type::ToString (método)](#tostring)|Devuelve el nombre del tipo de acuerdo con lo especificado en sus metadatos.| 
+|[Método Type::ToString](#tostring)|Devuelve el nombre del tipo especificado en sus metadatos.| 
 
  
 ## <a name="public-properties"></a>Propiedades públicas  
   
 |||  
 |-|-|  
-|[FullName](#fullname)|Devuelve una [clase Platform::String](../cppcx/platform-string-class.md)^ que representa el nombre completo del tipo y usa . (punto) como separador, no:: (dos puntos), por ejemplo, `MyNamespace.MyClass`.|  
+|[FullName](#fullname)|Devuelve una [clase Platform::String](../cppcx/platform-string-class.md)^ que representa el nombre completo del tipo y usa . (punto) como un separador, no:: (dos puntos dobles), por ejemplo, `MyNamespace.MyClass`.|  
   
 ## <a name="conversion-operators"></a>Operadores de conversión  
   
@@ -110,7 +110,7 @@ Platform::TypeCode GetTypeCode();
 ### <a name="remarks"></a>Comentarios  
  El equivalente del método miembro GetTypeCode() es la `typeid` propiedad.
 
-## <a name="tostring"></a> Type::ToString (método)
+## <a name="tostring"></a> Método Type::ToString
 Recupera un el nombre del tipo.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -120,7 +120,7 @@ Platform::String^ ToString();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un nombre del tipo de acuerdo con lo especificado en sus metadatos.    
+ Un nombre del tipo especificado en sus metadatos.    
   
 ## <a name="see-also"></a>Vea también  
  [Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)

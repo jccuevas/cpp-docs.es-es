@@ -1,5 +1,5 @@
 ---
-title: Iboxarray (interfaz) | Documentos de Microsoft
+title: Iboxarray (interfaz) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 572724dcebbdb3921b26d6c688ff5d68d1392437
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78815ed42833c48074abbb4b0c0fa0203f8c35a1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088347"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597325"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray (Interfaz)
 `IBoxArray` es el contenedor de matrices de los tipos de valor que se pasan a través de la interfaz binaria de aplicación (ABI) o se almacenan en colecciones de elementos `Platform::Object^` como los de los controles XAML.  
@@ -38,7 +38,7 @@ interface class IBoxArray
  Tipo del valor al que se ha aplicado la conversión boxing en cada elemento de la matriz.  
   
 ### <a name="remarks"></a>Comentarios  
- `IBoxArray` es C++ / nombre CX para `Windows::Foundation::IReferenceArray`.  
+ `IBoxArray` es C++ / c++ / nombre CX para `Windows::Foundation::IReferenceArray`.  
   
 ### <a name="members"></a>Miembros  
  La interfaz `IBoxArray` hereda de la interfaz `IValueType` . `IBoxArray` también tiene estos miembros:  
@@ -64,7 +64,7 @@ property T Value {T get();}
  Devuelve el valor que se almacenó originalmente en este objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener un ejemplo, vea [conversión Boxing](../cppcx/boxing-c-cx.md).  
+ Para obtener un ejemplo, vea [Boxing](../cppcx/boxing-c-cx.md).  
   
   
 ## <a name="see-also"></a>Vea también  

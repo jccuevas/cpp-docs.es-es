@@ -15,16 +15,16 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46eb8a3db986c1709aa23da9b96b03867837066a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 523adf9f6f64c17d1ab728e416425d8f0d0ad5a9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012825"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606813"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Compatibilidad con los juegos de caracteres multibyte (MBCS)
 Los juegos de caracteres multibyte (MBCS) son un enfoque anterior a la necesidad de admitir juegos de caracteres, como el japonés y el chino, que no pueden representarse en un solo byte. Si está realizando nuevo desarrollo, debe utilizar Unicode para todas las cadenas de texto, excepto quizás las cadenas del sistema que los usuarios finales no ven. MBCS es una tecnología heredada y no se recomienda para el nuevo desarrollo.  

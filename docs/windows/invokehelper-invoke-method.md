@@ -17,90 +17,96 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 56f7f77284d855a2d9a737c8694efdd357d0a6fb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a9d59ca1d404e56e7d85a8f0edfe653dc5692558
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011505"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584326"
 ---
 # <a name="invokehelperinvoke-method"></a>InvokeHelper::Invoke (Método)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-STDMETHOD(  
-   Invoke  
-)();  
-STDMETHOD(  
-   Invoke  
-)(typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-STDMETHOD(  
-   Invoke  
-)( typename Traits;  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *Arg1*  
- Argumento 1.  
-  
- *Arg2*  
- Argumento 2.  
-  
- *Arg3*  
- Argumento 3.  
-  
- *Arg4*  
- Argumento de 4.  
-  
- *Arg5*  
- Argumento de 5.  
-  
- *Arg6*  
- Argumento 6.  
-  
- *Arg7*  
- Argumento de 7.  
-  
- *Arg8*  
- Argumento de 8.  
-  
- *Arg9*  
- Argumento de 9.  
-  
-## <a name="return-value"></a>Valor devuelto  
- S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que describe el error.  
-  
-## <a name="remarks"></a>Comentarios  
- Llama al controlador de eventos cuya firma contiene el número especificado de argumentos.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** event.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [InvokeHelper (estructura)](../windows/invokehelper-structure.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD(
+   Invoke
+)();
+STDMETHOD(
+   Invoke
+)(typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Arg1*  
+Argumento 1.
+
+*Arg2*  
+Argumento 2.
+
+*Arg3*  
+Argumento 3.
+
+*Arg4*  
+Argumento de 4.
+
+*Arg5*  
+Argumento de 5.
+
+*Arg6*  
+Argumento 6.
+
+*Arg7*  
+Argumento de 7.
+
+*Arg8*  
+Argumento de 8.
+
+*Arg9*  
+Argumento de 9.
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que describe el error.
+
+## <a name="remarks"></a>Comentarios
+
+Llama al controlador de eventos cuya firma contiene el número especificado de argumentos.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** event.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[InvokeHelper (estructura)](../windows/invokehelper-structure.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

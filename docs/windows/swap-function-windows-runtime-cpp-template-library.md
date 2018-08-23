@@ -15,41 +15,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2d42a108d461e3f0238612171b3445e28138194
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6b5273127b4f4329427f50c82f1bb15a4ad2634e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019620"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590214"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Swap (Función) (Biblioteca de plantillas C++ de Windows Runtime)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-WRL_NOTHROW inline void Swap(  
-   _Inout_ T& left,  
-   _Inout_ T& right  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *left*  
- Primer argumento.  
-  
- *right*  
- Segundo argumento.  
-  
-## <a name="return-value"></a>Valor devuelto  
-  
-## <a name="remarks"></a>Comentarios  
- Intercambia los valores de los dos argumentos especificados.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** internal.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+WRL_NOTHROW inline void Swap(
+   _Inout_ T& left,
+   _Inout_ T& right
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*left*  
+Primer argumento.
+
+*right*  
+Segundo argumento.
+
+## <a name="return-value"></a>Valor devuelto
+
+## <a name="remarks"></a>Comentarios
+
+Intercambia los valores de los dos argumentos especificados.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** internal.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

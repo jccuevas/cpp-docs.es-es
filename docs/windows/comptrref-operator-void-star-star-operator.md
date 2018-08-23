@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16fa7964af8f56ec54f6870b8866e69266bdc414
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 468b38dac2082e47e94e4bd52af50d77327f5ef4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648794"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590694"
 ---
 # <a name="comptrrefoperator-void-operator"></a>Comptrref:: operator void\* \* operador
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-operator void**() const;  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Elimina la actual **ComPtrRef** de objetos, convierte el puntero a la interfaz que se ha representado por la **ComPtrRef** objeto como un puntero-a-puntero-to **void**y, a continuación, Devuelve el puntero de conversión.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [ComPtrRef (clase)](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+operator void**() const;
+```
+
+## <a name="remarks"></a>Comentarios
+
+Elimina la actual **ComPtrRef** de objetos, convierte el puntero a la interfaz que se ha representado por la **ComPtrRef** objeto como un puntero-a-puntero-to **void**y, a continuación, Devuelve el puntero de conversión.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[ComPtrRef (clase)](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

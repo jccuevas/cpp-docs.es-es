@@ -18,30 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0201619d463d677eae312d70a543a19887dbdb40
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6e9f14b696ff67b52c365617682c0cc4c43432cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011795"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602821"
 ---
 # <a name="insert-activex-control-dialog-box"></a>Insertar control ActiveX (cuadro de diálogo)
-Este cuadro de diálogo permite [insertar controles ActiveX en el cuadro de diálogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md) mientras usa la [editor de cuadro de diálogo](../windows/dialog-editor.md).  
-  
-### <a name="activex-control"></a>Control ActiveX 
- Muestra una lista de controles Active X. Insertar un control de este cuadro de diálogo no genera una clase contenedora. Si necesita una clase contenedora, utilice [vista de clases](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) para crear uno (para obtener más información, consulte [agregar una clase](../ide/adding-a-class-visual-cpp.md)). Si un control ActiveX no aparece en este cuadro de diálogo, intente instalar el control de acuerdo con las instrucciones del proveedor.  
-  
-### <a name="path"></a>Ruta de acceso  
- Muestra el archivo donde se encuentra el control ActiveX.  
-  
- Puede colocar controles en el **cuadro de herramientas** ventana para facilitar el acceso. Para obtener más información, consulte [cuadro de diálogo Personalizar cuadro de herramientas](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
-  
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Requisitos  
- Win32  
-  
-## <a name="see-also"></a>Vea también  
- [Pestaña del Editor de cuadro de diálogo, cuadro de herramientas](../windows/dialog-editor-tab-toolbox.md)   
- [Archivos de recursos](../windows/resource-files-visual-studio.md)   
- [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)
+
+Este cuadro de diálogo permite [insertar controles ActiveX en el cuadro de diálogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md) mientras usa la [editor de cuadro de diálogo](../windows/dialog-editor.md).
+
+### <a name="activex-control"></a>Control ActiveX
+
+Muestra una lista de controles Active X. Insertar un control de este cuadro de diálogo no genera una clase contenedora. Si necesita una clase contenedora, utilice [vista de clases](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) para crear uno (para obtener más información, consulte [agregar una clase](../ide/adding-a-class-visual-cpp.md)). Si un control ActiveX no aparece en este cuadro de diálogo, intente instalar el control de acuerdo con las instrucciones del proveedor.
+
+### <a name="path"></a>Ruta de acceso
+
+Muestra el archivo donde se encuentra el control ActiveX.
+
+Puede colocar controles en el **cuadro de herramientas** ventana para facilitar el acceso. Para obtener más información, consulte [cuadro de diálogo Personalizar cuadro de herramientas](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).
+
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Requisitos
+
+Win32
+
+## <a name="see-also"></a>Vea también
+
+[Editor de cuadros de diálogo (pestaña, cuadro de herramientas)](../windows/dialog-editor-tab-toolbox.md)  
+[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)

@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 621f852728cb40ea88a916b37147c28d8bb0db38
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 606f9560f6d490e1d50d94dd12103713781c4f1b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644467"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603765"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef (Constructor)
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-ComPtrRef(  
-   _In_opt_ T* ptr  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *ptr*  
- El valor subyacente de otro **ComPtrRef** objeto.  
-  
-## <a name="remarks"></a>Comentarios  
- Inicializa una nueva instancia de la **ComPtrRef** clase desde el puntero especificado a otro **ComPtrRef** objeto.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** client.h  
-  
- **Namespace:** wrl  
-  
-## <a name="see-also"></a>Vea también  
- [ComPtrRef (clase)](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+ComPtrRef(
+   _In_opt_ T* ptr
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*ptr*  
+El valor subyacente de otro **ComPtrRef** objeto.
+
+## <a name="remarks"></a>Comentarios
+
+Inicializa una nueva instancia de la **ComPtrRef** clase desde el puntero especificado a otro **ComPtrRef** objeto.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** client.h
+
+**Namespace:** wrl
+
+## <a name="see-also"></a>Vea también
+
+[ComPtrRef (clase)](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

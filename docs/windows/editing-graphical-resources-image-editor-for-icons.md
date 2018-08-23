@@ -22,56 +22,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6b4aea912398413d43810ad08a2b34e9cb78092
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d66345685dbb6780b0ecf11d91d699c8b6866c47
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642391"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608866"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Editar recursos gráficos (Editor de imágenes para iconos)
-Recursos gráficos son las imágenes que se definen para la aplicación. Puede dibujar a mano alzada o dibujar mediante formas. Puede seleccionar partes de una imagen para editar, voltear o cambiar el tamaño, o puede crear un pincel personalizado de una parte seleccionada de una imagen y dibujar con pincel. Puede definir propiedades de la imagen, guardar imágenes en diferentes formatos y convertir las imágenes de un formato a otro.  
-  
- Además de crear nuevos recursos gráficos, puede [importar imágenes existentes](../windows/how-to-import-and-export-resources.md) para editarlo y, a continuación, agréguelos al proyecto. También puede abrir y editar las imágenes que no forman parte de un proyecto para [edición de imágenes independientes](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).  
-  
--   [Crear un nuevo mapa de bits u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)  
-  
--   [Seleccionar y utilizar una herramienta de dibujo](using-a-drawing-tool-image-editor-for-icons.md)  
-  
--   [Dibujar líneas o figuras cerradas](../windows/drawing-lines-or-closed-figures-image-editor-for-icons.md)  
-  
--   [Seleccionar un área de una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)  
-  
--   [Editar las partes seleccionadas de una imagen](../windows/editing-parts-of-an-image-image-editor-for-icons.md)  
-  
--   [Voltear una imagen](../windows/flipping-an-image-image-editor-for-icons.md)  
-  
--   [Cambiar el tamaño de una imagen](../windows/resizing-an-image-image-editor-for-icons.md)  
-  
--   [Crear un pincel personalizado](../windows/creating-a-custom-brush-image-editor-for-icons.md)  
-  
--   [Cambiar propiedades de la imagen](changing-image-properties-image-editor-for-icons.md)  
-  
--   [Guardar mapas de bits .gif o .JPEG](../windows/saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons.md)  
-  
--   [Convertir una imagen de un formato a otro](../windows/converting-an-image-from-one-format-to-another-image-editor-for-icons.md)  
-  
--   [Editar una imagen fuera de un proyecto](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)  
-  
--   [Imagen (menú)](../windows/image-menu-image-editor-for-icons.md)  
-  
--   [Barra de herramientas del Editor de imágenes](../windows/toolbar-image-editor-for-icons.md)  
-  
--   [Paneles de la ventana Editor de imágenes](../windows/window-panes-image-editor-for-icons.md)  
-  
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
-  
+
+Recursos gráficos son las imágenes que se definen para la aplicación. Puede dibujar a mano alzada o dibujar mediante formas. Puede seleccionar partes de una imagen para editar, voltear o cambiar el tamaño, o puede crear un pincel personalizado de una parte seleccionada de una imagen y dibujar con pincel. Puede definir propiedades de la imagen, guardar imágenes en diferentes formatos y convertir las imágenes de un formato a otro.
+
+Además de crear nuevos recursos gráficos, puede [importar imágenes existentes](../windows/how-to-import-and-export-resources.md) para editarlo y, a continuación, agréguelos al proyecto. También puede abrir y editar las imágenes que no forman parte de un proyecto para [edición de imágenes independientes](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
+
+- [Crear un nuevo mapa de bits u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)
+
+- [Seleccionar y utilizar una herramienta de dibujo](using-a-drawing-tool-image-editor-for-icons.md)
+
+- [Dibujar líneas o figuras cerradas](../windows/drawing-lines-or-closed-figures-image-editor-for-icons.md)
+
+- [Seleccionar un área de una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)
+
+- [Editar las partes seleccionadas de una imagen](../windows/editing-parts-of-an-image-image-editor-for-icons.md)
+
+- [Voltear una imagen](../windows/flipping-an-image-image-editor-for-icons.md)
+
+- [Cambiar el tamaño de una imagen](../windows/resizing-an-image-image-editor-for-icons.md)
+
+- [Crear un pincel personalizado](../windows/creating-a-custom-brush-image-editor-for-icons.md)
+
+- [Cambiar propiedades de la imagen](changing-image-properties-image-editor-for-icons.md)
+
+- [Guardar mapas de bits .gif o .JPEG](../windows/saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons.md)
+
+- [Convertir una imagen de un formato a otro](../windows/converting-an-image-from-one-format-to-another-image-editor-for-icons.md)
+
+- [Editar una imagen fuera de un proyecto](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)
+
+- [Imagen (menú)](../windows/image-menu-image-editor-for-icons.md)
+
+- [Barra de herramientas del Editor de imágenes](../windows/toolbar-image-editor-for-icons.md)
+
+- [Paneles de la ventana Editor de imágenes](../windows/window-panes-image-editor-for-icons.md)
+
+Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
+
 > [!NOTE]
->  Mediante el **Editor de imágenes**, puede ver las imágenes de 32 bits, pero no puede modificarlas.  
-  
-## <a name="requirements"></a>Requisitos  
- Ninguna  
-  
-## <a name="see-also"></a>Vea también  
- [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)   
+> Mediante el **Editor de imágenes**, puede ver las imágenes de 32 bits, pero no puede modificarlas.
+
+## <a name="requirements"></a>Requisitos
+
+Ninguna
+
+## <a name="see-also"></a>Vea también
+
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)  

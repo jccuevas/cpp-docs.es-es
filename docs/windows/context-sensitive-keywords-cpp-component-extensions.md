@@ -17,91 +17,98 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 785836f575c0dec3a0e08c32063116f01e16d4fe
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644234"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605244"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Palabras clave contextuales (Extensiones de componentes de C++)
-*Palabras clave contextuales* son elementos del lenguaje que solo se reconocen en contextos concretos. Fuera del contexto concreto, una palabra clave contextual puede ser un símbolo definido por el usuario.  
-  
-## <a name="all-runtimes"></a>Todos los runtimes  
+
+*Palabras clave contextuales* son elementos del lenguaje que solo se reconocen en contextos concretos. Fuera del contexto concreto, una palabra clave contextual puede ser un símbolo definido por el usuario.
+
+## <a name="all-runtimes"></a>Todos los runtimes
+
 ### <a name="remarks"></a>Comentarios
-  
- A continuación se muestra una lista de palabras clave contextuales:  
-  
--   [abstract](../windows/abstract-cpp-component-extensions.md)  
-  
--   [delegate](../windows/delegate-cpp-component-extensions.md)  
-  
--   [event](../windows/event-cpp-component-extensions.md)  
-  
--   [finally](../dotnet/finally.md)  
-  
--   [for each, in](../dotnet/for-each-in.md)  
-  
--   [initonly](../dotnet/initonly-cpp-cli.md)  
-  
--   `internal`   
-  
--   [literal](../windows/literal-cpp-component-extensions.md)  
-  
--   [override](../windows/override-cpp-component-extensions.md)  
-  
--   [propiedad](../windows/property-cpp-component-extensions.md)  
-  
--   [sealed](../windows/sealed-cpp-component-extensions.md)  
-  
--   `where` (parte de [genéricos](../windows/generics-cpp-component-extensions.md))  
-  
- Para fines de legibilidad, puede limitar el uso de palabras clave contextuales como símbolos definidos por el usuario.  
-  
-## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
-### <a name="remarks"></a>Comentarios  
-  
- (No hay ninguna observación específica de la plataforma para esta característica).  
-  
-### <a name="requirements"></a>Requisitos  
- Opción del compilador: `/ZW`  
-  
-## <a name="common-language-runtime"></a>Common Language Runtime 
-### <a name="remarks"></a>Comentarios  
-  
- (No hay ninguna observación específica de la plataforma para esta característica).  
-  
-### <a name="requirements"></a>Requisitos  
- Opción del compilador: `/clr`  
-  
-### <a name="examples"></a>Ejemplos  
-  
- El ejemplo de código siguiente muestra en el contexto adecuado, el **propiedad** palabra clave contextual puede utilizarse para definir una propiedad y una variable.  
-  
-```cpp  
-// context_sensitive_keywords.cpp  
-// compile with: /clr  
-public ref class C {  
-   int MyInt;  
-public:  
-   C() : MyInt(99) {}  
-  
-   property int Property_Block {   // context-sensitive keyword  
-      int get() { return MyInt; }  
-   }  
-};  
-  
-int main() {  
-   int property = 0;               // variable name  
-   C ^ MyC = gcnew C();  
-   property = MyC->Property_Block;  
-   System::Console::WriteLine(++property);  
-}  
-```  
-  
-```Output  
-100  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+
+A continuación se muestra una lista de palabras clave contextuales:
+
+- [abstract](../windows/abstract-cpp-component-extensions.md)
+
+- [delegate](../windows/delegate-cpp-component-extensions.md)
+
+- [event](../windows/event-cpp-component-extensions.md)
+
+- [finally](../dotnet/finally.md)
+
+- [for each, in](../dotnet/for-each-in.md)
+
+- [initonly](../dotnet/initonly-cpp-cli.md)
+
+- `internal`
+
+- [literal](../windows/literal-cpp-component-extensions.md)
+
+- [override](../windows/override-cpp-component-extensions.md)
+
+- [propiedad](../windows/property-cpp-component-extensions.md)
+
+- [sealed](../windows/sealed-cpp-component-extensions.md)
+
+- `where` (parte de [genéricos](../windows/generics-cpp-component-extensions.md))
+
+Para fines de legibilidad, puede limitar el uso de palabras clave contextuales como símbolos definidos por el usuario.
+
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución
+
+### <a name="remarks"></a>Comentarios
+
+(No hay ninguna observación específica de la plataforma para esta característica).
+
+### <a name="requirements"></a>Requisitos
+
+Opción del compilador: `/ZW`
+
+## <a name="common-language-runtime"></a>Common Language Runtime
+
+### <a name="remarks"></a>Comentarios
+
+(No hay ninguna observación específica de la plataforma para esta característica).
+
+### <a name="requirements"></a>Requisitos
+
+Opción del compilador: `/clr`
+
+### <a name="examples"></a>Ejemplos
+
+El ejemplo de código siguiente muestra en el contexto adecuado, el **propiedad** palabra clave contextual puede utilizarse para definir una propiedad y una variable.
+
+```cpp
+// context_sensitive_keywords.cpp
+// compile with: /clr
+public ref class C {
+   int MyInt;
+public:
+   C() : MyInt(99) {}
+
+   property int Property_Block {   // context-sensitive keyword
+      int get() { return MyInt; }
+   }
+};
+
+int main() {
+   int property = 0;               // variable name
+   C ^ MyC = gcnew C();
+   property = MyC->Property_Block;
+   System::Console::WriteLine(++property);
+}
+```
+
+```Output
+100
+```
+
+## <a name="see-also"></a>Vea también
+
+[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

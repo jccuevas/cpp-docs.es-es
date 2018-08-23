@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea08cdc8657100e1c1e0157a8a542a44ea34cd4d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fcdcb759c90009410f76a4b10039a0d976ca0cc4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642378"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605120"
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_ (Miembro de datos)
-Una matriz de uno o varios controladores de eventos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-ComPtr<Details::EventTargetArray> targets_;  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Cuando el evento representado por el actual **EventSource** se produce el objeto, se llama a los controladores de eventos.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** event.h  
-  
- **Espacio de nombres:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Vea también
- [EventSource (clase)](../windows/eventsource-class.md)
+
+Una matriz de uno o varios controladores de eventos.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+ComPtr<Details::EventTargetArray> targets_;
+```
+
+## <a name="remarks"></a>Comentarios
+
+Cuando el evento representado por el actual **EventSource** se produce el objeto, se llama a los controladores de eventos.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** event.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+[EventSource (clase)](../windows/eventsource-class.md)
