@@ -1,5 +1,5 @@
 ---
-title: MTAThreadAttribute (clase) | Documentos de Microsoft
+title: MTAThreadAttribute (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd035a3a11898230cb7f8a14db0b98ff1611120
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 389767cdbd09cb5a2139b9302fc25fe02fb8a056
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089170"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613464"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute (Clase)
 Indica que el modelo de subprocesos de una aplicación es un contenedor multiproceso (MTA).  
@@ -42,7 +42,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 |[MTAThreadAttribute Constructor 1](#ctor) constructor|Inicializa una nueva instancia de la clase.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
- El atributo MTAThreadAttribute hereda de [clase Platform:: Object](../cppcx/platform-object-class.md). MTAThreadAttribute también sobrecarga o tiene los siguientes miembros:  
+ El atributo MTAThreadAttribute hereda de [Platform:: Object Class](../cppcx/platform-object-class.md). MTAThreadAttribute también sobrecarga o tiene los siguientes miembros:  
   
 |nombre|Descripción|  
 |----------|-----------------|  
@@ -116,4 +116,4 @@ public:String^ ToString()
  Una cadena que representa el objeto actual.  
     
 ## <a name="see-also"></a>Vea también  
- [Namespace de plataforma](platform-namespace-c-cx.md)
+ [Plataforma Namespace](platform-namespace-c-cx.md)

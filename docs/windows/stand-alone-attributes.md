@@ -1,5 +1,5 @@
 ---
-title: Atributos independientes | Documentos de Microsoft
+title: Atributos independientes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59846b1ca031cc02c85cb6ace23f96e8c5cc9f37
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6562a1de8baa9a5805f044233b97bf8dd8840638
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890441"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613763"
 ---
 # <a name="stand-alone-attributes"></a>Atributos independientes
-Un atributo independiente no funciona en una palabra clave de C++, pero es más parecido a una línea de código. Las instrucciones de atributo independiente requieren un punto y coma al final de la línea.  
+Un atributo independiente no funciona en una palabra clave de C++, pero es más parecido a una línea de código. Las instrucciones de atributo independiente requieren un punto y coma al final de la línea.
   
-|Atributo|Descripción|  
-|---------------|-----------------|  
-|[cpp_quote](../windows/cpp-quote.md)|Emite la cadena especificada, sin los caracteres de comillas, en el archivo de encabezado generado.|  
-|[Personalizada](../windows/custom-cpp.md)|Le permite definir su propio atributo.|  
-|[db_command](../windows/db-command.md)|Crea un comando OLE DB.|  
-|[emitidl](../windows/emitidl.md)|Determina si todos los atributos IDL posteriores se procesará y se colocan en el archivo .idl generado.|  
-|[idl_module](../windows/idl-module.md)|Especifica un punto de entrada en un archivo DLL.|  
-|[idl_quote](../windows/idl-quote.md)|Le permite usar las construcciones de IDL no se admiten en la versión actual de Visual C++ y pídale que pasen al archivo .idl generado.|  
-|[import](../windows/import.md)|Especifica otro archivo .idl, .odl o .h que contiene las definiciones que desea hacer referencia desde el archivo .idl principal.|  
-|[importidl](../windows/importidl.md)|Inserta el archivo .idl especificado en el archivo .idl generado|  
-|[importlib](../windows/importlib.md)|Hace que los tipos que ya se han compilado en otra biblioteca de tipos estén disponibles en la biblioteca de tipos que se está creando.|  
-|[include](../windows/include-cpp.md)|Especifica uno o más archivos de encabezado que se incluirá en el archivo .idl generado.|  
-|[includelib](../windows/includelib-cpp.md)|Hace que un archivo IDL o .h para incluirse en el archivo .idl generado.|  
-|[library_block](../windows/library-block.md)|Coloca una construcción en bloque de biblioteca del archivo .idl.|  
-|[Módulo](../windows/module-cpp.md)|Define el bloque de biblioteca en el archivo .idl.|  
-|[no_injected_text](../windows/no-injected-text.md)|Evita que el compilador inserte código como resultado del uso de atributos.|  
-|[pragma](../windows/pragma.md)|Emite la cadena especificada, sin los caracteres de comillas, en el archivo .idl generado.|  
+|Atributo|Descripción|
+|---------------|-----------------|
+|[cpp_quote](../windows/cpp-quote.md)|Emite la cadena especificada, sin los caracteres de comillas en el archivo de encabezado generado.|
+|[Personalizado](../windows/custom-cpp.md)|Le permite definir su propio atributo.|
+|[db_command](../windows/db-command.md)|Crea un comando OLE DB.|
+|[emitidl](../windows/emitidl.md)|Determina si todos los atributos IDL posteriores se procesará y se coloca en el archivo .idl generado.|
+|[idl_module](../windows/idl-module.md)|Especifica un punto de entrada en un archivo DLL.|
+|[idl_quote](../windows/idl-quote.md)|Le permite usar construcciones IDL que no se admiten en la versión actual de Visual C++ y pídales que pasen al archivo .idl generado.|
+|[import](../windows/import.md)|Especifica otro archivo .idl, .odl o .h que contiene las definiciones que desea hacer referencia desde el archivo .idl principal.|
+|[importidl](../windows/importidl.md)|Inserta el archivo .idl especificado en el archivo .idl generado|
+|[importlib](../windows/importlib.md)|Hace que los tipos que ya se han compilado en otra biblioteca de tipos estén disponibles en la biblioteca de tipos que se está creando.|
+|[include](../windows/include-cpp.md)|Especifica uno o varios archivos de encabezado que se incluirán en el archivo .idl generado.|
+|[includelib](../windows/includelib-cpp.md)|Hace que un archivo IDL o .h para incluirse en el archivo .idl generado.|
+|[library_block](../windows/library-block.md)|Coloca una construcción dentro del bloque de biblioteca del archivo. idl.|
+|[módulo](../windows/module-cpp.md)|Define el bloque de biblioteca en el archivo .idl.|
+|[no_injected_text](../windows/no-injected-text.md)|Impide que el compilador inserte el código como resultado el uso de atributo.|
+|[pragma](../windows/pragma.md)|Emite la cadena especificada, sin los caracteres de comillas en el archivo .idl generado.|
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
  [Atributos por uso](../windows/attributes-by-usage.md)

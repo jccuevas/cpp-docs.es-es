@@ -1,24 +1,24 @@
 ---
-title: Conversión (C++ / CX) | Documentos de Microsoft
+title: Conversión (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/19/2018
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66c0e6bc9d987c400c709e74586e6e37ccc0b715
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: ea0ac57b178baed76e6ccb7418c778c1ba2306f4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306000"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613307"
 ---
 # <a name="casting-ccx"></a>Convertir (C++/CX)
 
-Aplican cuatro operadores de conversión diferentes a los tipos en tiempo de ejecución de Windows: [static_cast (operador)](../cpp/static-cast-operator.md), [dynamic_cast (operador)](../cpp/dynamic-cast-operator.md), **safe_cast (operador)**, y [ reinterpret_cast (operador)](../cpp/reinterpret-cast-operator.md). **safe_cast** y **static_cast** produce una excepción cuando no se puede realizar la conversión; [static_cast (operador)](../cpp/static-cast-operator.md) también realiza la comprobación de tipos en tiempo de compilación. **dynamic_cast** devuelve **nullptr** si se produce un error al convertir el tipo. Aunque **reinterpret_cast** devuelve un valor distinto de null, puede no ser válido. Por esta razón, recomendamos que no use **reinterpret_cast** a menos que sepa que la conversión se realizará correctamente. Además, se recomienda no usar conversiones de estilo C en su C++ / CX código porque son idénticas a **reinterpret_cast**.
+Se aplican cuatro operadores de conversión diferentes a los tipos en tiempo de ejecución de Windows: [static_cast (operador)](../cpp/static-cast-operator.md), [dynamic_cast (operador)](../cpp/dynamic-cast-operator.md), **safe_cast (operador)**, y [ reinterpret_cast (operador)](../cpp/reinterpret-cast-operator.md). **safe_cast** y **static_cast** produce una excepción cuando no se puede realizar la conversión; [static_cast (operador)](../cpp/static-cast-operator.md) también realiza la comprobación de tipos en tiempo de compilación. **dynamic_cast** devuelve **nullptr** si se produce un error al convertir el tipo. Aunque **reinterpret_cast** devuelve un valor distinto de null, que no sea válido. Por este motivo, recomendamos que no use **reinterpret_cast** a menos que sepa que la conversión se realizará correctamente. Además, se recomienda que no usar conversiones de estilo C en su C / c++ / CX código porque son idénticas a **reinterpret_cast**.
 
 El compilador y el runtime también realizan conversiones implícitamente. Por ejemplo, en operaciones de conversión boxing cuando se pasa un tipo de valor o un tipo integrado como argumentos a un método cuyo tipo de parámetro es `Object^`. En teoría, una conversión implícita nunca debe producir una excepción en tiempo de ejecución; si el compilador no puede realizar una conversión implícita, genera un error en tiempo de compilación.
 
@@ -26,11 +26,11 @@ En tiempo de ejecución de Windows es una abstracción sobre COM, que usa códig
 
 ## <a name="staticcast"></a>static_cast
 
-A **static_cast** se comprueban en tiempo de compilación para determinar si existe una relación de herencia entre los dos tipos. La conversión produce un error del compilador si los tipos no están relacionados.
+Un **static_cast** se comprueba en tiempo de compilación para determinar si hay una relación de herencia entre los dos tipos. La conversión produce un error del compilador si los tipos no están relacionados.
 
-A **static_cast** en un clase ref también provoca una comprobación en tiempo de ejecución que se realice. A **static_cast** en ref clase puede superar la comprobación de tiempo de compilación pero no en tiempo de ejecución; en este caso un `Platform::InvalidCastException` se produce. En general, no es necesario controlar estas excepciones porque casi siempre indican errores de programación que puedes eliminar durante las fases de desarrollo y pruebas.
+Un **static_cast** en ref clase también provoca que se realizará una comprobación de tiempo de ejecución. Un **static_cast** en ref clase puede pasar la comprobación de tiempo de compilación pero no en tiempo de ejecución; en este caso un `Platform::InvalidCastException` se produce. En general, no es necesario controlar estas excepciones porque casi siempre indican errores de programación que puedes eliminar durante las fases de desarrollo y pruebas.
 
-Use **static_cast** si el código declara explícitamente una relación entre los dos tipos y, por lo tanto, está seguro de que la conversión se realizará correctamente.
+Use **static_cast** si el código declara explícitamente una relación entre los dos tipos, y por lo tanto, está seguro de que la conversión debería funcionar.
 
 ```cpp
     interface class A{};
@@ -43,7 +43,7 @@ Use **static_cast** si el código declara explícitamente una relación entre lo
 
 ## <a name="safecast"></a>safe_cast
 
-El **safe_cast** operador forma parte del tiempo de ejecución de Windows. Realiza una comprobación de tipo en tiempo de ejecución y produce una excepción `Platform::InvalidCastException` si se produce un error en la conversión. Use **safe_cast** cuando un error en tiempo de ejecución indique una condición excepcional. El propósito principal de **safe_cast** es ayudar a identificar errores de programación durante el desarrollo y pruebas fases en el punto donde aparecen. No tienes que controlar la excepción porque la propia excepción no controlada identifica el punto de error.
+El **safe_cast** operador forma parte de Windows en tiempo de ejecución. Realiza una comprobación de tipo en tiempo de ejecución y produce una excepción `Platform::InvalidCastException` si se produce un error en la conversión. Use **safe_cast** cuando un error de tiempo de ejecución indica una condición excepcional. El propósito principal de **safe_cast** es ayudar a identificar errores de programación durante el desarrollo y pruebas de fases en el punto donde se producen. No tienes que controlar la excepción porque la propia excepción no controlada identifica el punto de error.
 
 Utiliza safe_cast si el código no declara la relación pero estás seguro de que la conversión se va a realizar correctamente.
 
@@ -62,7 +62,7 @@ Utiliza safe_cast si el código no declara la relación pero estás seguro de qu
 
 ## <a name="dynamiccast"></a>dynamic_cast
 
-Use **dynamic_cast** cuando convierte un objeto (más concretamente, **^**) a un tipo más derivado, creas que el destino puede ser a veces objeto **nullptr** o se podría producir un error en la conversión y desees controlar esa condición como una ruta de acceso de código normal en lugar de una excepción. Por ejemplo, en la **aplicación vacía (Windows Universal)** plantilla de proyecto, el `OnLaunched` método en los usos de app.xamp.cpp **dynamic_cast** para comprobar si la ventana de la aplicación tiene contenido. No es un error si no tiene contenido; es una condición esperada. `Windows::Current::Content` es `Windows::UI::XAML::UIElement` y la conversión es a `Windows::UI.XAML::Controls::Frame`, que es un tipo más derivado en la jerarquía de herencia.
+Use **dynamic_cast** cuando se convierte un objeto (más concretamente, **^**) a un tipo más derivado, creas que el destino de objeto puede ser a veces **nullptr** o que la conversión puede producir un error, y desea controlar esa condición como una ruta de acceso del código normal en lugar de una excepción. Por ejemplo, en el **aplicación vacía (Windows Universal)** plantilla de proyecto, el `OnLaunched` método app.xamp.cpp usa **dynamic_cast** para comprobar si la ventana de la aplicación tiene contenido. No es un error si no tiene contenido; es una condición esperada. `Windows::Current::Content` es `Windows::UI::XAML::UIElement` y la conversión es a `Windows::UI.XAML::Controls::Frame`, que es un tipo más derivado en la jerarquía de herencia.
 
 ```cpp
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)
@@ -89,7 +89,7 @@ También puede aplicar un **dynamic_cast** a una referencia de seguimiento, pero
 
 ## <a name="reinterpretcast"></a>reinterpret_cast
 
-Te recomendamos que no utilices [reinterpret_cast](../cpp/reinterpret-cast-operator.md) debido a que en este caso no se realiza una comprobación en tiempo de compilación ni una comprobación en tiempo de ejecución. En el peor de los casos, un **reinterpret_cast** hace posible errores pasen desapercibidos en tiempo de desarrollo y produce errores imperceptibles o catastróficos en el comportamiento del programa de programación. Por lo tanto, recomendamos que use **reinterpret_cast** solo en los pocos casos en que debes convertir entre tipos no relacionados y sabes que la conversión se realizará correctamente. Un ejemplo de uso poco frecuente es convertir un tipo en tiempo de ejecución de Windows para su tipo ABI subyacente, esto significa que estás tomando el control del recuento de referencias para el objeto. Para ello, te recomendamos utilizar el puntero inteligente [ComPtr Class](../cpp/com-ptr-t-class.md) . De lo contrario, debes llamar específicamente a Release en la interfaz. En el ejemplo siguiente se muestra cómo se puede convertir una clase ref en `IInspectable*`.
+Te recomendamos que no utilices [reinterpret_cast](../cpp/reinterpret-cast-operator.md) debido a que en este caso no se realiza una comprobación en tiempo de compilación ni una comprobación en tiempo de ejecución. En el peor de los casos, un **reinterpret_cast** hace posible errores pasen desapercibidos en tiempo de desarrollo y provocar errores imperceptibles o catastróficos en el comportamiento del programa de programación. Por lo tanto, recomendamos que use **reinterpret_cast** solo en esos casos raros cuando debe convertir entre tipos no relacionados y sabe que la conversión se realizará correctamente. Un ejemplo de uso poco frecuente consiste en convertir un tipo en tiempo de ejecución de Windows a su tipo ABI subyacente, esto significa que estás tomando el control el recuento de referencias para el objeto. Para ello, te recomendamos utilizar el puntero inteligente [ComPtr Class](../cpp/com-ptr-t-class.md) . De lo contrario, debes llamar específicamente a Release en la interfaz. En el ejemplo siguiente se muestra cómo se puede convertir una clase ref en `IInspectable*`.
 
 ```cpp
 #include <wrl.h>
@@ -99,7 +99,7 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 // ...
 ```
 
-Si usa **reinterpret_cast** para convertir de interfaz de oneWindows en tiempo de ejecución a otra, haces que el objeto se libere dos veces. Por tanto, usa esta conversión solo cuando conviertas a una interfaz que no sea de[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] .
+Si usas **reinterpret_cast** para convertir de interfaz de oneWindows en tiempo de ejecución a otra, haces que el objeto se libere dos veces. Por lo tanto, use esta conversión solo si va a convertir en una interfaz de extensiones de componentes que no son de Visual C++.
 
 ## <a name="abi-types"></a>Tipos de ABI.
 
@@ -107,13 +107,13 @@ Si usa **reinterpret_cast** para convertir de interfaz de oneWindows en tiempo d
 
 - Los tipos de ABI residen en un espacio de nombres ABI especial. Por ejemplo, `ABI::Windows::Storage::Streams::IBuffer*`.
 
-- Las conversiones entre un tipo de interfaz en tiempo de ejecución de Windows y su tipo ABI equivalente siempre son seguras, es decir, `IBuffer^` a `ABI::IBuffer*`.
+- Las conversiones entre un tipo de interfaz de Windows en tiempo de ejecución y su tipo de ABI equivalente siempre son seguras, es decir, `IBuffer^` a `ABI::IBuffer*`.
 
-- Una clase en tiempo de ejecución de Windows en tiempo de ejecución siempre debe convertirse en `IInspectable*` o su interfaz predeterminada, si se conoce.
+- Una clase en tiempo de ejecución de Windows en tiempo de ejecución siempre debe convertirse en `IInspectable*` o su interfaz de forma predeterminada, si se conoce.
 
 - Después de convertir a tipos de ABI, eres el propietario de la duración del tipo y debes seguir las reglas de COM. Recomendamos usar `WRL::ComPtr` para simplificar la administración de la duración de los punteros de ABI.
 
-En la tabla siguiente se resume los casos en que resulta seguro utilizar **reinterpret_cast**. En todos ellos, la conversión es segura en ambas direcciones.
+En la tabla siguiente se resume los casos en los que es seguro usar **reinterpret_cast**. En todos ellos, la conversión es segura en ambas direcciones.
 
 |||
 |-|-|

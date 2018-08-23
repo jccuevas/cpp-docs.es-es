@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Finalizar subprocesos | Documentos de Microsoft'
+title: 'Multithreading: Finalizar subprocesos | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,47 +23,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9376e9f8c9e9d74d88d0bef40dc71fd43d51f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2411d11c154bef09b95d33e5b8598ba3c64dfb94
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689589"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608849"
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: Finalizar subprocesos
-Dos situaciones normales que un subproceso terminar: la función controladora finaliza o el subproceso no puede ejecutarse hasta su finalización. Si un procesador de textos, se utiliza un subproceso para impresión en segundo plano, la función controladora terminaría normalmente si la impresión se completa correctamente. Si el usuario desea cancelar la impresión, sin embargo, el subproceso en segundo plano impresión tiene finalizó de forma prematura. Este tema explica cómo implementar cada situación y cómo obtener el código de salida de un subproceso después de que termine.  
+Hacer que un subproceso puede terminar dos situaciones normales: la función controladora finaliza o el subproceso no se puede ejecutar hasta su finalización. Si un procesador de textos, se usa un subproceso para impresión de fondo, la función controladora terminaría normalmente si la impresión se completa correctamente. Sin embargo, si el usuario desea cancelar la impresión, el subproceso de impresión en segundo plano tiene debe terminarse prematuramente. En este tema se explica cómo implementar cada situación y cómo obtener el código de salida de un subproceso después de que termine.  
   
--   [Terminación normal de subproceso](#_core_normal_thread_termination)  
+- [Terminación normal de un subproceso](#_core_normal_thread_termination)  
   
--   [Terminación prematura de subprocesos](#_core_premature_thread_termination)  
+- [Terminación prematura de subprocesos](#_core_premature_thread_termination)  
   
--   [Recuperar el código de salida de un subproceso](#_core_retrieving_the_exit_code_of_a_thread)  
+- [Recuperar el código de salida de un subproceso](#_core_retrieving_the_exit_code_of_a_thread)  
   
-##  <a name="_core_normal_thread_termination"></a> Terminación normal de subproceso  
- Para un subproceso de trabajo, la terminación normal de subproceso es simple: salir de la función controladora y devolver un valor que indica la razón de finalización. Puede usar el [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) función o un `return` instrucción. Normalmente, 0 significa terminación sin error, pero que depende de usted.  
+##  <a name="_core_normal_thread_termination"></a> Terminación normal de un subproceso  
+ 
+Para un subproceso de trabajo, la terminación normal es simple: salir de la función controladora y devolver un valor que indica la razón de finalización. Puede usar el [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) función o un **devolver** instrucción. Normalmente, 0 significa terminación sin error, pero que depende de usted.  
   
- Para un subproceso de interfaz de usuario, el proceso es simple: desde el subproceso de interfaz de usuario, debe llamar a [función PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) en el [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. El único parámetro que **función PostQuitMessage** toma es el código de salida del subproceso. Para subprocesos de trabajo, 0 suele significar finalización correcta.  
+Para un subproceso de interfaz de usuario, el proceso es simple: desde el subproceso de interfaz de usuario, debe llamar a [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) en el SDK de Windows. El único parámetro que `PostQuitMessage` es el código de salida del subproceso. En cuanto a los subprocesos de trabajo, 0 suele significar terminación sin errores.  
   
 ##  <a name="_core_premature_thread_termination"></a> Terminación prematura de subprocesos  
- Finaliza un subproceso de forma prematura es casi tan sencillo: llamar a [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) desde dentro del subproceso. Pase el código de salida deseado como único parámetro. Esto detiene la ejecución del subproceso, cancela la asignación de la pila del subproceso, desasocia todos los archivos DLL que se adjunta al subproceso y elimina el objeto de subproceso de la memoria.  
+ 
+Terminar un subproceso de forma prematura es casi igual de sencillo: llamar a [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) desde dentro del subproceso. Pasar el código de salida deseado como único parámetro. Esto detiene la ejecución del subproceso, cancela la asignación de la pila del subproceso, desconecte todas las DLL que se adjunta al subproceso y elimina el objeto de subproceso de la memoria.  
   
- `AfxEndThread` Se debe invocar desde dentro del subproceso que debe finalizar. Si desea terminar un subproceso desde otro subproceso, debe configurar un método de comunicación entre los dos subprocesos.  
+`AfxEndThread` Debe llamarse desde dentro del subproceso que se finalice. Si desea terminar el subproceso desde otro subproceso, debe configurar un método de comunicación entre los dos subprocesos.  
   
 ##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Recuperar el código de salida de un subproceso  
- Para obtener el código de salida del trabajo o el subproceso de interfaz de usuario, llame a la [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) función. Para obtener información acerca de esta función, vea la [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Esta función recibe el identificador del subproceso (almacenado en el `m_hThread` miembro de datos de `CWinThread` objetos) y la dirección de un `DWORD`.  
+ 
+Para obtener el código de salida de trabajo o el subproceso de interfaz de usuario, llame a la [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) función. Para obtener información acerca de esta función, consulte el SDK de Windows. Esta función recibe el identificador del subproceso (almacenado en el `m_hThread` miembro de datos de `CWinThread` objetos) y la dirección de un valor DWORD.  
   
- Si el subproceso está aún activo, **GetExitCodeThread** coloca **STILL_ACTIVE** en proporcionado `DWORD` dirección; de lo contrario, el código de salida se coloca en esta dirección.  
+Si el subproceso está aún activo, `GetExitCodeThread` coloca STILL_ACTIVE en la dirección DWORD suministrada; de lo contrario, el código de salida se coloca en esta dirección.  
   
- Recuperar el código de salida [CWinThread](../mfc/reference/cwinthread-class.md) objetos requiere un paso adicional. De forma predeterminada, cuando un `CWinThread` subproceso finaliza, se elimina el objeto de subproceso. Esto significa que no se puede obtener acceso a la `m_hThread` miembro de datos porque la `CWinThread` objeto ya no existe. Para evitar esta situación, realice una de las siguientes acciones:  
+Recuperar el código de salida [CWinThread](../mfc/reference/cwinthread-class.md) objetos requiere un paso adicional. De forma predeterminada, cuando un `CWinThread` subproceso finaliza, se elimina el objeto de subproceso. Esto significa que no se puede obtener acceso a la `m_hThread` miembro de datos porque el `CWinThread` objeto ya no existe. Para evitar esta situación, realice una de las siguientes acciones:  
   
--   Establecer el `m_bAutoDelete` miembro de datos **FALSE**. Esto permite la `CWinThread` objeto sobreviva después de que el subproceso ha terminado. A continuación, puede tener acceso a la `m_hThread` miembro de datos después de que el subproceso ha terminado. Si utiliza esta técnica, sin embargo, usted es responsable de destruir la `CWinThread` objeto porque el marco de trabajo no lo eliminará automáticamente. Este es el método preferido.  
+- Establecer el `m_bAutoDelete` miembro de datos en FALSE. Esto permite la `CWinThread` objeto sobreviva después de que el subproceso ha terminado. A continuación, puede tener acceso a la `m_hThread` miembro de datos después de que el subproceso ha terminado. Si usa esta técnica, sin embargo, usted es responsable de destruir el `CWinThread` objeto porque el marco de trabajo no lo eliminará automáticamente. Este es el método preferido.  
   
--   Almacenar el identificador del subproceso de forma independiente. Después de crea el subproceso, copie su `m_hThread` miembro de datos (mediante **:: DuplicateHandle**) a otra variable y tener acceso a él a través de esa variable. Esta forma, el objeto se elimina automáticamente cuando se produce la finalización y aún puede averiguar por qué el subproceso ha terminado. Asegúrese de que el subproceso no termina antes de poder duplicar el identificador. La forma más segura de hacerlo consiste en pasar **CREATE_SUSPENDED** a [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), almacenar el identificador y, a continuación, reanudar el subproceso mediante una llamada a [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).  
+- Store por separado el identificador del subproceso. Una vez creado el subproceso, copie su `m_hThread` miembro de datos (mediante `::DuplicateHandle`) a otra variable y tener acceso a él a través de esa variable. Esta forma, el objeto se elimina automáticamente cuando se produce la terminación y aún puede averiguar por qué terminó el subproceso. Tenga cuidado de que el subproceso no termina antes de poder duplicar el identificador. La forma más segura de hacerlo consiste en pasar CREATE_SUSPENDED a [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), almacenar el identificador y, a continuación, reanudar el subproceso mediante una llamada a [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).  
   
- Cualquiera de los métodos permite determinar por qué un `CWinThread` objeto terminada.  
+Cualquiera de los métodos permite determinar por qué un `CWinThread` objeto finalizado.  
   
 ## <a name="see-also"></a>Vea también  
- [Subprocesamiento múltiple con C++ y MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
- [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
- [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
- [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)
+ 
+[Multithreading con C++ y MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
+[_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
+[_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+[ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

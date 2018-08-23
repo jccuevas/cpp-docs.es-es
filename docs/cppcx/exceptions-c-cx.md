@@ -1,34 +1,34 @@
 ---
-title: Excepciones (C++ / CX) | Documentos de Microsoft
+title: Excepciones (C++ / c++ / CX) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e58ad68f4cfc7d514c4d8434cf52f6d348640c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c82f54a365208c247e735e467157dfd29f9f271a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091633"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613414"
 ---
 # <a name="exceptions-ccx"></a>Excepciones (C++/CX)
 
-Control de errores en C++ / CX se basa en excepciones. En el nivel más fundamental, componentes de Windows Runtime informan de errores como valores HRESULT. En C++ / CX, estos valores se convierten en excepciones fuertemente tipadas que contienen un valor HRESULT y una descripción de cadena que puede tener acceso mediante programación.  Las excepciones se implementan como un objeto `ref class` que deriva de `Platform::Exception`.  El espacio de nombres `Platform` define clases de excepción distintas para los valores HRESULT más comunes; todos los demás valores se notifican mediante la clase `Platform::COMException` . Todas las clases de excepción tienen un campo [Exception::HResult](platform-exception-class.md#hresult) que puedes utilizar para recuperar el HRESULT original. También puede examinar la información de la pila de llamadas para código de usuario en el depurador, que puede ayudar a identificar el origen de la excepción, aunque se haya originado en código escrito en un lenguaje distinto de C++.
+Control de errores en C++ / c++ / CX se basa en excepciones. En el nivel más fundamental, los componentes de Windows Runtime informan de errores como valores HRESULT. En C / c++ / CX, estos valores se convierten en excepciones fuertemente tipadas que contienen un valor HRESULT y una descripción de cadena que puede tener acceso mediante programación.  Las excepciones se implementan como un objeto `ref class` que deriva de `Platform::Exception`.  El espacio de nombres `Platform` define clases de excepción distintas para los valores HRESULT más comunes; todos los demás valores se notifican mediante la clase `Platform::COMException` . Todas las clases de excepción tienen un campo [Exception::HResult](platform-exception-class.md#hresult) que puedes utilizar para recuperar el HRESULT original. También puede examinar la información de la pila de llamadas para código de usuario en el depurador, que puede ayudar a identificar el origen de la excepción, aunque se haya originado en código escrito en un lenguaje distinto de C++.
 
 ## <a name="exceptions"></a>Excepciones
 
-En el programa de C++ puede producir y detectar una excepción que proceda de una operación en tiempo de ejecución de Windows, una excepción que se deriva de `std::exception`, o un tipo definido por el usuario. Tiene que producir una excepción en tiempo de ejecución de Windows solo cuando cruce el límite de interfaz binaria (ABI) de la aplicación, por ejemplo, cuando el código que detecta tu excepción se escriba en JavaScript. Cuando una excepción de C++ que no son de Windows en tiempo de ejecución alcanza el límite de ABI, la excepción se convierte en un `Platform::FailureException` excepción, lo que representa un HRESULT E_FAIL. Para obtener más información acerca de la ABI, consulte [crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+En el programa de C++, puede iniciar y detectar una excepción que provenga de una operación en tiempo de ejecución de Windows, una excepción que se deriva de `std::exception`, o un tipo definido por el usuario. Tiene que producir una excepción en tiempo de ejecución de Windows solo cuando cruce el límite de la interfaz binaria (ABI) de la aplicación; por ejemplo, cuando el código que detecta tu excepción se escribe en JavaScript. Cuando una excepción de C++ que no son de Windows en tiempo de ejecución alcanza el límite de ABI, la excepción se traduce en un `Platform::FailureException` excepción, que representa un HRESULT E_FAIL. Para obtener más información acerca de la ABI, consulte [crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-Puede declarar un [Exception](platform-exception-class.md) mediante uno de los dos constructores que toman un parámetro HRESULT, o un parámetro HRESULT y un [Platform](platform-string-class.md)^ parámetro que se pueden pasar a través de la ABI a cualquier aplicación de Windows en tiempo de ejecución que lo controla. O bien puedes declarar una excepción utilizando una de las dos sobrecargas del [método Exception::CreateException](platform-exception-class.md#createexception) que toman un parámetro HRESULT, o un parámetro HRESULT y un parámetro `Platform::String^` .
+Puede declarar un [Platform:: Exception](platform-exception-class.md) mediante uno de los dos constructores que toman un parámetro HRESULT, o un parámetro HRESULT y un [Platform:: String](platform-string-class.md)^ parámetro que se puede pasar a través de la ABI a cualquier aplicación de Windows en tiempo de ejecución que los controle. O bien puedes declarar una excepción utilizando una de las dos sobrecargas del [método Exception::CreateException](platform-exception-class.md#createexception) que toman un parámetro HRESULT, o un parámetro HRESULT y un parámetro `Platform::String^` .
 
 ## <a name="standard-exceptions"></a>Excepciones estándar
 
-C++ / CX admite un conjunto de excepciones estándar que representan errores típicos de HRESULT. Cada excepción estándar deriva de [Platform::COMException](platform-comexception-class.md), que a su vez deriva de `Platform::Exception`. Cuando produces una excepción en el límite de ABI, debes producir una de las excepciones estándar.
+C++ / c++ / CX admite un conjunto de excepciones estándar que representan errores típicos de HRESULT. Cada excepción estándar deriva de [Platform::COMException](platform-comexception-class.md), que a su vez deriva de `Platform::Exception`. Cuando produces una excepción en el límite de ABI, debes producir una de las excepciones estándar.
 
 No puedes derivar tu propio tipo de excepción de `Platform::Exception`. Para producir una excepción personalizada, debes utilizar un HRESULT definido por el usuario para construir un objeto `COMException` .
 
@@ -58,7 +58,7 @@ Todas las excepciones tienen una propiedad [HResult](platform-comexception-class
 
 ### <a name="examples"></a>Ejemplos
 
-Este ejemplo muestra cómo producir una excepción en tiempo de ejecución de Windows para operaciones sincrónicas:
+En este ejemplo se muestra cómo producir una excepción en tiempo de ejecución de Windows para las operaciones sincrónicas:
 
 [!code-cpp[cx_exceptions#01](codesnippet/CPP/exceptiontest/class1.cpp#01)]
 
@@ -66,11 +66,11 @@ En el ejemplo siguiente se muestra cómo detectar la excepción.
 
 [!code-cpp[cx_exceptions#02](codesnippet/CPP/exceptiontest/class1.cpp#02)]
 
-Para detectar las excepciones que se producen durante una operación asincrónica, debes utilizar la clase de tarea y agregar una continuación de control de errores. La continuación de control de errores vuelve a calcular las referencias de las excepciones que se producen en otros subprocesos al subproceso que realiza la llamada para poder controlar todas las excepciones posibles en solo un punto de tu código. Para obtener más información, consulte [programación asincrónica en C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
+Para detectar las excepciones que se producen durante una operación asincrónica, use la clase de tarea y agregar una continuación de control de errores. La continuación de control de errores vuelve a calcular las referencias de las excepciones que se producen en otros subprocesos al subproceso que realiza la llamada para poder controlar todas las excepciones posibles en solo un punto de tu código. Para obtener más información, consulte [programación asincrónica en C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 ## <a name="unhandlederrordetected-event"></a>Evento UnhandledErrorDetected
 
-En Windows 8.1, puede suscribirse a la [unhandlederrordetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) evento estático, que proporciona acceso a los errores no controlados que va a poner el proceso. Independientemente de dónde se originó el error, llega a este controlador como un [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) objeto que se pasa con los argumentos del evento. Cuando llamas a `Propagate` en el objeto, se crea y se produce una excepción `Platform::*Exception` del tipo correspondiente al código de error. En los bloques catch, puedes guardar el estado del usuario si es necesario y, a continuación, permitir que termine el proceso llamando a `throw`o realizar alguna acción para devolver el programa a un estado conocido. En el ejemplo siguiente se muestra el patrón básico:
+En Windows 8.1, puede suscribirse a la [unhandlederrordetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) evento estático, que proporciona acceso a los errores no controlados que están a punto de acabar el proceso. Independientemente de dónde se originó el error, llega a este controlador como un [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) objeto que se pasa con los argumentos del evento. Cuando llamas a `Propagate` en el objeto, se crea y se produce una excepción `Platform::*Exception` del tipo correspondiente al código de error. En los bloques catch, puedes guardar el estado del usuario si es necesario y, a continuación, permitir que termine el proceso llamando a `throw`o realizar alguna acción para devolver el programa a un estado conocido. En el ejemplo siguiente se muestra el patrón básico:
 
 En app.xaml.h:
 
@@ -107,7 +107,7 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
 ### <a name="remarks"></a>Comentarios
 
-C++ / CX no usa el `finally` cláusula.
+C++ / c++ / CX no utiliza el `finally` cláusula.
 
 ## <a name="see-also"></a>Vea también
 

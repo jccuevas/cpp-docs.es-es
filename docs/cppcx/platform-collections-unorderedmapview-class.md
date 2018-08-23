@@ -1,5 +1,5 @@
 ---
-title: Unorderedmapview (clase) | Documentos de Microsoft
+title: Unorderedmapview (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092682"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613579"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView (Clase)
 Representa una vista de solo lectura en un *mapa*, que es una colección de pares clave-valor.  
@@ -42,7 +42,7 @@ ref class UnorderedMapView sealed;
  Un tipo que proporciona un objeto de función que puede comparar dos valores de clave para determinar si son iguales. De forma predeterminada, [std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Comentarios  
- UnorderedMapView es una implementación concreta de C++ de la [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interfaz que se pasa a través de la interfaz binaria de aplicaciones (ABI). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).  
+ UnorderedMapView es la implementación concreta en C++ de la [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interfaz que se pasa a través de la interfaz binaria de aplicación (ABI). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Miembros  
   
@@ -221,13 +221,13 @@ UnorderedMapView(
  Typename del objeto UnorderedMapView.  
   
  `H`  
- Objeto de función que puede generar un valor hash para una clave. Valor predeterminado es [std:: hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) para los tipos que `std::hash` admite.  
+ Objeto de función que puede generar un valor hash para una clave. El valor predeterminado es [std:: hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104) para los tipos que `std::hash` admite.  
   
  `P`  
- Tipo que proporciona un objeto de función que puede comparar dos claves para determinar si son iguales. Valor predeterminado es [std:: equal_to\<K >](../standard-library/equal-to-struct.md).  
+ Tipo que proporciona un objeto de función que puede comparar dos claves para determinar si son iguales. El valor predeterminado es [std:: equal_to\<K >](../standard-library/equal-to-struct.md).  
   
  `m`  
- Una referencia o [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a una [std:: unordered_map](../standard-library/unordered-map-class.md) que se usa para inicializar el objeto UnorderedMapView.  
+ Una referencia o [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un [std:: unordered_map](../standard-library/unordered-map-class.md) que se utiliza para inicializar el objeto UnorderedMapView.  
   
  `first`  
  Iterador de entrada del primer elemento en un intervalo de elementos utilizados para inicializar el objeto UnorderedMapView.  
@@ -236,5 +236,5 @@ UnorderedMapView(
  Iterador de entrada del primer elemento tras un intervalo de elementos utilizados para inicializar el objeto UnorderedMapView.  
    
 ## <a name="see-also"></a>Vea también  
- [Namespace Platform:: Collections](../cppcx/platform-collections-namespace.md)   
+ [Platform:: Collections Namespace](../cppcx/platform-collections-namespace.md)   
  [Windows::Foundation::IMapView](http://go.microsoft.com/fwlink/p/?LinkId=262409)
