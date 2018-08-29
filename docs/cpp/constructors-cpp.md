@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f60ba71a82bf09361e55f8c6b7cab82f49d47bd
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572968"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131847"
 ---
 # <a name="constructors-c"></a>Constructores (C++)
 
@@ -598,7 +598,7 @@ El objeto creado por los constructores se inicializa totalmente en cuanto finali
 
 ## <a name="inheriting_constructors"></a> Constructores que heredan (C ++ 11)
 
-Una clase derivada puede heredar los constructores de una clase base directa, para lo cual utiliza una declaración using, como se muestra en el ejemplo siguiente:
+Una clase derivada puede heredar los constructores de una clase base directa mediante el uso de un **mediante** declaración como se muestra en el ejemplo siguiente:
 
 ```cpp
 #include <iostream>
@@ -647,7 +647,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-La instrucción using incluye en el ámbito a todos los constructores de la clase base, excepto los que tienen una firma idéntica a los constructores de la clase derivada. En general, es mejor usar constructores que heredan cuando la clase derivada no declara ningún constructor o miembro de datos nuevo.
+**Visual Studio 2017 versión 15.7 y versiones posterior**: el **mediante** instrucción **/std: c ++ 17** modo pone en el ámbito de todos los constructores de la clase base excepto los que tienen una firma idéntica a los constructores de la clase derivada. En general, es mejor usar constructores que heredan cuando la clase derivada no declara ningún constructor o miembro de datos nuevo. Vea también [mejoras en Visual Studio 2017 versión 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
 
 Una plantilla de clase puede heredar todos los constructores de un argumento de tipo si dicho tipo especifica una clase base:
 

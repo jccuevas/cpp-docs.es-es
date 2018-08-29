@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405115"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131896"
 ---
 # <a name="if-else-statement-c"></a>if-else (Instrucción) (C++)
 Controla la bifurcación condicional. Las instrucciones de la *bloques if* se ejecutan solo si el *expresión if* se evalúa como un valor distinto de cero (o TRUE). Si el valor de *expresión* es distinto de cero, *statement1* y cualquier otra instrucción en el bloque se ejecutan y el bloque-else, si está presente, se omite. Si el valor de *expresión* es cero, a continuación, se omite el bloque if y el bloque-else, si está presente, se ejecuta. Son expresiones que se evalúan como distinto de cero
@@ -119,7 +119,8 @@ int main()
     }
 }
 ```  
-## <a name="if-statement-with-an-initializer"></a>Si la instrucción con un inicializador
+## <a name="if_with_init"></a> Si la instrucción con un inicializador
+
 **Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): un **si** instrucción también puede contener una expresión que se declara e inicializa una variable con nombre. Utilice este formulario de la instrucción if cuando la variable solo es necesario dentro del ámbito del bloque de if. 
 
 ```cpp
@@ -169,8 +170,8 @@ int main()
   
  El **else** cláusula de una `if...else` instrucción está asociada con el más cercano anterior **si** instrucción en el mismo ámbito que no tiene la correspondiente **else** instrucción.   
 
-## <a name="constexpr-if-statements"></a>constexpr si las instrucciones
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): en las plantillas de función, puede usar un `constexpr if` instrucción para tomar decisiones de bifurcación de tiempo de compilación sin tener que recurrir a varios sobrecargas de función. Por ejemplo, puede escribir una sola función ese parámetro de identificadores para desempaquetar (no se necesita ninguna sobrecarga de parámetro de cero): 
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Si las instrucciones de constexpr
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): en las plantillas de función, puede usar un **si constexpr** instrucción para tomar decisiones de bifurcación de tiempo de compilación sin tener que recurrir a varias sobrecargas de función. Por ejemplo, puede escribir una sola función ese parámetro de identificadores para desempaquetar (no se necesita ninguna sobrecarga de parámetro de cero): 
 
 ```cpp
 template <class T, class... Rest>
@@ -180,9 +181,8 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r)) 
    {
-      
       f(r...); 
    }
    else

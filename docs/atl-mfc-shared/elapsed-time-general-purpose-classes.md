@@ -1,5 +1,5 @@
 ---
-title: 'Tiempo transcurrido: Clases de propósito general | Documentos de Microsoft'
+title: 'Tiempo transcurrido: Clases de propósito general | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7ef11bb20124a05e2e85c408ce27de8f982546
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98e3c07522ead22467455ce2d601270e7b624be0
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354271"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131619"
 ---
 # <a name="elapsed-time-general-purpose-classes"></a>Tiempo transcurrido: Clases de propósito general
-El siguiente procedimiento muestra cómo calcular la diferencia entre dos `CTime` objetos y obtener un `CTimeSpan` resultado.  
-  
-#### <a name="to-calculate-elapsed-time"></a>Para calcular el tiempo transcurrido  
-  
-1.  Use la `CTime` y `CTimeSpan` objetos que se va a calcular el tiempo transcurrido, del siguiente modo:  
+El siguiente procedimiento muestra cómo calcular la diferencia entre dos `CTime` objetos y obtenga un `CTimeSpan` resultado. Use la `CTime` y `CTimeSpan` objetos que se va a calcular el tiempo transcurrido, como sigue:  
   
      [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]  
   
-     Una vez que ha calculado `elapsedTime`, puede utilizar las funciones miembro de `CTimeSpan` para extraer los componentes del valor de tiempo transcurrido.  
-  
-## <a name="see-also"></a>Vea también  
- [Fecha y hora: Clases de propósito general](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+Una vez que hayan calculado `elapsedTime`, puede usar las funciones miembro de `CTimeSpan` para extraer los componentes del valor de tiempo transcurrido.  
 

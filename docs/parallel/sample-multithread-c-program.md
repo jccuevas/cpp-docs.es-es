@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1899187bd1ff8315300a1d60b24dbfb04f77a15a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 08a5e75092aaa467c6e1f937cc00a541aaf24bfa
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539296"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131341"
 ---
 # <a name="sample-multithread-c-program"></a>Ejemplo de programa multiproceso en C
-Bounce.c es un ejemplo de programa multiproceso que crea un nuevo subproceso cada vez que la letra `a` o `A` se escribe. Cada subproceso produce una cara sonriente de diferente color alrededor de la pantalla. Pueden crearse hasta 32 subprocesos. La terminación normal del programa se produce cuando `q` o `Q` se escribe. Para obtener información sobre la compilación y vinculación de Bounce.c, vea [compilar y vincular programas multiproceso](../parallel/compiling-and-linking-multithread-programs.md).  
+Bounce.c es un ejemplo de programa multiproceso que crea un nuevo subproceso cada vez que la letra `a` o `A` se escribe. Cada subproceso produce una cara sonriente de diferente color alrededor de la pantalla. Pueden crearse hasta 32 subprocesos. La terminación normal del programa se produce cuando `q` o `Q` se escribe. Para obtener información sobre la compilación y vinculación de Bounce.c, vea [compilar y vincular programas multiproceso](compiling-and-linking-multithread-programs.md).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -220,4 +220,4 @@ q
   
 ## <a name="see-also"></a>Vea también  
 
-[Multithreading con C y Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading con C y Win32](multithreading-with-c-and-win32.md)

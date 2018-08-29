@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5df81fa3d47005fc80bdb3b1c78cba050775cda6
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ab667e372c8118a83b7a93444abbfbc5c19b6e0
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538335"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131523"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>Compilar y vincular programas multiproceso
-El programa Bounce.c se introdujo en [ejemplo programa multiproceso en C](../parallel/sample-multithread-c-program.md).  
+El programa Bounce.c se introdujo en [ejemplo programa multiproceso en C](sample-multithread-c-program.md).  
   
 Compilar programas multiproceso de forma predeterminada.  
   
@@ -54,4 +54,4 @@ Compilar programas multiproceso de forma predeterminada.
   
 ## <a name="see-also"></a>Vea también
 
-[Multithreading con C y Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading con C y Win32](multithreading-with-c-and-win32.md)

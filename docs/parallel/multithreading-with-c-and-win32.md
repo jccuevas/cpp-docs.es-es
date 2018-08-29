@@ -20,40 +20,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dc9569457b6726aee18359a7ff74e9a45873deb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 444421a099fac7635dd668c12b22600d33d60f8b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540277"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130758"
 ---
 # <a name="multithreading-with-c-and-win32"></a>Subprocesamiento múltiple con C y Win32
 Microsoft Visual C++ proporciona compatibilidad para crear aplicaciones multiproceso. Debe considerar el uso de más de un subproceso si la aplicación necesita realizar operaciones costosas que provocarían la interfaz de usuario deje de responder.  
   
-Con Visual C++, hay dos maneras de programar con múltiples subprocesos: utilizar la biblioteca Microsoft Foundation Class (MFC) o la biblioteca de tiempo de ejecución de C y la API de Win32. Para obtener información sobre cómo crear aplicaciones multiproceso con MFC, vea [Multithreading con C++ y MFC](../parallel/multithreading-with-cpp-and-mfc.md) después de leer los temas siguientes sobre multithreading en C.  
+Con Visual C++, hay dos maneras de programar con múltiples subprocesos: utilizar la biblioteca Microsoft Foundation Class (MFC) o la biblioteca de tiempo de ejecución de C y la API de Win32. Para obtener información sobre cómo crear aplicaciones multiproceso con MFC, vea [Multithreading con C++ y MFC](multithreading-with-cpp-and-mfc.md) después de leer los temas siguientes sobre multithreading en C.  
   
 Estos temas explican las características de Visual C++ que admiten la creación de programas multiproceso.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
   
-- [¿Qué multithreading consiste en](../parallel/multithread-programs.md)  
+- [¿Qué multithreading consiste en](multithread-programs.md)  
   
-- [Compatibilidad de bibliotecas con multithreading](../parallel/library-support-for-multithreading.md)  
+- [Compatibilidad de bibliotecas con multithreading](library-support-for-multithreading.md)  
   
-- [Archivos de inclusión para multithreading](../parallel/include-files-for-multithreading.md)  
+- [Archivos de inclusión para multithreading](include-files-for-multithreading.md)  
   
-- [Funciones de la biblioteca de tiempo de ejecución de C para control de subprocesos](../parallel/c-run-time-library-functions-for-thread-control.md)  
+- [Funciones de la biblioteca de tiempo de ejecución de C para control de subprocesos](c-run-time-library-functions-for-thread-control.md)  
   
-- [Ejemplo de programa multiproceso en C](../parallel/sample-multithread-c-program.md)  
+- [Ejemplo de programa multiproceso en C](sample-multithread-c-program.md)  
   
-- [Crear un programa Win32 multiproceso](../parallel/writing-a-multithreaded-win32-program.md)  
+- [Crear un programa Win32 multiproceso](writing-a-multithreaded-win32-program.md)  
   
-- [Compilar y vincular programas multiproceso](../parallel/compiling-and-linking-multithread-programs.md)  
+- [Compilar y vincular programas multiproceso](compiling-and-linking-multithread-programs.md)  
   
-- [Evitar áreas de riesgo en programas multiproceso](../parallel/avoiding-problem-areas-with-multithread-programs.md)  
+- [Evitar áreas de riesgo en programas multiproceso](avoiding-problem-areas-with-multithread-programs.md)  
   
-- [Almacenamiento local de subprocesos (TLS)](../parallel/thread-local-storage-tls.md)  
+- [Almacenamiento local de subprocesos (TLS)](thread-local-storage-tls.md)  
   
 ## <a name="see-also"></a>Vea también  
  
-[Compatibilidad del código antiguo con multithreading (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)
+[Compatibilidad del código antiguo con multithreading (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)
