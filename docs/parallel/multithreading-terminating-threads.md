@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading: Finalizar subprocesos | Microsoft Docs'
+title: 'Multithreading: Finalizar subprocesos en MFC | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2411d11c154bef09b95d33e5b8598ba3c64dfb94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608849"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131950"
 ---
-# <a name="multithreading-terminating-threads"></a>Multithreading: Finalizar subprocesos
+# <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Finalizar subprocesos en MFC
 Hacer que un subproceso puede terminar dos situaciones normales: la función controladora finaliza o el subproceso no se puede ejecutar hasta su finalización. Si un procesador de textos, se usa un subproceso para impresión de fondo, la función controladora terminaría normalmente si la impresión se completa correctamente. Sin embargo, si el usuario desea cancelar la impresión, el subproceso de impresión en segundo plano tiene debe terminarse prematuramente. En este tema se explica cómo implementar cada situación y cómo obtener el código de salida de un subproceso después de que termine.  
   
 - [Terminación normal de un subproceso](#_core_normal_thread_termination)  
@@ -67,7 +67,7 @@ Cualquiera de los métodos permite determinar por qué un `CWinThread` objeto fi
   
 ## <a name="see-also"></a>Vea también  
  
-[Multithreading con C++ y MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
+[Multithreading con C++ y MFC](multithreading-with-cpp-and-mfc.md)   
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

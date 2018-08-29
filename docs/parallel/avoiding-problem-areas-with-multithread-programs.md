@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c5e624b437f39270fb880fe526d55e7ed83e5d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 97a69c52adb5094c7c7841a93b73b1a83cd786d9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538908"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131067"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Evitar áreas de riesgo en programas multiproceso
-Hay varios problemas que pueden surgir en crear, vincular o ejecutar un programa multiproceso en C. Algunos de los problemas más comunes se describen en la tabla siguiente. (Para obtener una discusión similar desde el punto de vista MFC, vea [Multithreading: sugerencias de programación](../parallel/multithreading-programming-tips.md).)  
+Hay varios problemas que pueden surgir en crear, vincular o ejecutar un programa multiproceso en C. Algunos de los problemas más comunes se describen en la tabla siguiente. (Para obtener una discusión similar desde el punto de vista MFC, vea [Multithreading: sugerencias de programación](multithreading-programming-tips.md).)  
   
 |Problema|Causa probable|  
 |-------------|--------------------|  
@@ -34,4 +34,4 @@ Hay varios problemas que pueden surgir en crear, vincular o ejecutar un programa
   
 ## <a name="see-also"></a>Vea también  
 
-[Multithreading con C y Win32](../parallel/multithreading-with-c-and-win32.md)
+[Multithreading con C y Win32](multithreading-with-c-and-win32.md)

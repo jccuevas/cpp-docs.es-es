@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading: Crear subprocesos de interfaz de usuario | Microsoft Docs'
+title: 'Multithreading: Crear subprocesos de interfaz de usuario MFC | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223e342bf2312919247d42564445a9e116ca59b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 625518a76bb22c60a41175e649af7ae650161494
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607400"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131565"
 ---
-# <a name="multithreading-creating-user-interface-threads"></a>Subprocesamiento múltiple: Crear subprocesos de la interfaz de usuario
+# <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Crear subprocesos de interfaz de usuario MFC
 Los subprocesos de interfaz de usuario se utilizan normalmente para controlar los datos proporcionados por el usuario y para responder a los eventos de usuario independientemente de los subprocesos que ejecutan otras partes de la aplicación. El subproceso principal de la aplicación (suministrado en la clase derivada de `CWinApp`) ya está creado y se inicia automáticamente. Este tema describe los pasos necesarios para crear subprocesos de interfaz de usuario adicionales.  
   
 Lo primero que debe hacer al crear un subproceso de interfaz de usuario es derivar una clase de [CWinThread](../mfc/reference/cwinthread-class.md). Se debe declarar e implementar esta clase, utilizando el [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) y [IMPLEMENT_DYNCREATE](../mfc/reference/run-time-object-model-services.md#implement_dyncreate) macros. Esta clase debe reemplazar algunas funciones y puede reemplazar otras. Estas funciones, y su cometido, se presentan en la siguiente tabla.  
@@ -37,13 +37,12 @@ Lo primero que debe hacer al crear un subproceso de interfaz de usuario es deriv
   
 |Función|Propósito|  
 |--------------|-------------|  
-
-|[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)| Realizar la limpieza cuando el subproceso termina. Normalmente, se reemplaza. |  
-|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)| Realizar la inicialización de instancia del subproceso. Se debe invalidar. |  
-|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)| Realizar el procesamiento en tiempo de inactividad específicos del subproceso. Normalmente no se reemplaza. |  
-|[PreTranslateMessage](../mfc/reference/cwinthread-class.md#pretranslatemessage)| Filtrar los mensajes antes de enviarlos a `TranslateMessage` y `DispatchMessage`. Normalmente no se reemplaza. |  
-|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)| Interceptar las excepciones no controladas producidas por controladores de mensajes y comandos del subproceso. Normalmente no se reemplaza. |  
-|[Ejecute](../mfc/reference/cwinthread-class.md#run)| Función controladora para el subproceso. Contiene la fuente de mensajes. Casi nunca se reemplaza. |  
+|[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)|Realizar tareas de limpieza cuando el subproceso termina. Normalmente, se reemplaza.|  
+|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)|Llevar a cabo la inicialización de la instancia del subproceso. Debe reemplazarse.|  
+|[OnIdle](../mfc/reference/cwinthread-class.md#onidle)|Realizar el procesamiento de los tiempos de inactividad específicos del subproceso. No se suele reemplazar.|  
+|[PreTranslateMessage](../mfc/reference/cwinthread-class.md#pretranslatemessage)|Filtrar los mensajes antes de enviarlos a `TranslateMessage` y `DispatchMessage`. No se suele reemplazar.|  
+|[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)|Interceptar las excepciones no controladas producidas por el mensaje del subproceso y activar los controladores. No se suele reemplazar.|  
+|[Run](../mfc/reference/cwinthread-class.md#run)|Función controladora para el subproceso. Contiene la fuente de mensajes. Casi nunca se reemplaza.|  
 
   
 MFC proporciona dos versiones de `AfxBeginThread` por medio de sobrecarga de parámetros: una que solo puede crear subprocesos de trabajo y otra que puede crear subprocesos de interfaz de usuario o subprocesos de trabajo. Para iniciar el subproceso de interfaz de usuario, llame a la segunda sobrecarga de [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), proporcione la información siguiente:  
@@ -62,12 +61,12 @@ MFC proporciona dos versiones de `AfxBeginThread` por medio de sobrecarga de par
   
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
   
-- [Multithreading: Finalizar subprocesos](../parallel/multithreading-terminating-threads.md)  
+- [Multithreading: Finalizar subprocesos](multithreading-terminating-threads.md)  
   
-- [Multithreading: Crear subprocesos de trabajo](../parallel/multithreading-creating-worker-threads.md)  
+- [Multithreading: Crear subprocesos de trabajo](multithreading-creating-worker-threads.md)  
   
-- [Los procesos y subprocesos](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
+- [Los procesos y subprocesos](/windows/desktop/ProcThread/processes-and-threads)  
   
 ## <a name="see-also"></a>Vea también  
  
-[Multithreading con C++ y MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading con C++ y MFC](multithreading-with-cpp-and-mfc.md)
