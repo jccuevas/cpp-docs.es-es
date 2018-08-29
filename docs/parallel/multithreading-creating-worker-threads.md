@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Crear subprocesos de trabajo | Microsoft Docs'
+title: 'Multithreading: Crear subprocesos de trabajo en MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb5828947524c9cbeeabb47f9f6b174ac8115a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590605"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131194"
 ---
-# <a name="multithreading-creating-worker-threads"></a>Multithreading: Crear subprocesos de trabajo
+# <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading: Crear subprocesos de trabajo en MFC
 Un subproceso de trabajo se utiliza normalmente para controlar tareas en segundo plano que el usuario no debería tener que esperar para seguir usando la aplicación. Tareas como cálculos repetidos e impresión de fondo constituyen buenos ejemplos de subprocesos de trabajo. Este tema detallan los pasos necesarios para crear un subproceso de trabajo. Entre los temas se incluyen los siguientes:  
   
 - [Iniciar el subproceso](#_core_starting_the_thread)  
@@ -64,11 +64,11 @@ La función controladora define el subproceso. Cuando se escribe esta función, 
 UINT MyControllingFunction( LPVOID pParam );  
 ```  
   
-El parámetro es un valor único. El valor de que la función recibe en este parámetro es el valor que se pasó al constructor cuando se creó el objeto de subproceso. La función controladora puede interpretar este valor de cualquier manera que elija. Se puede tratar como un valor escalar o un puntero a una estructura que contiene varios parámetros, o puede omitirse. Si el parámetro hace referencia a una estructura, la estructura puede utilizarse no solo para pasar datos desde el llamador al subproceso, sino también para pasar datos desde el subproceso al llamador. Si usa este tipo de estructura para pasar datos al llamador, el subproceso debe notificar al llamador cuándo están listos los resultados. Para obtener información sobre las comunicaciones entre el subproceso de trabajo al llamador, vea [Multithreading: sugerencias de programación](../parallel/multithreading-programming-tips.md).  
+El parámetro es un valor único. El valor de que la función recibe en este parámetro es el valor que se pasó al constructor cuando se creó el objeto de subproceso. La función controladora puede interpretar este valor de cualquier manera que elija. Se puede tratar como un valor escalar o un puntero a una estructura que contiene varios parámetros, o puede omitirse. Si el parámetro hace referencia a una estructura, la estructura puede utilizarse no solo para pasar datos desde el llamador al subproceso, sino también para pasar datos desde el subproceso al llamador. Si usa este tipo de estructura para pasar datos al llamador, el subproceso debe notificar al llamador cuándo están listos los resultados. Para obtener información sobre las comunicaciones entre el subproceso de trabajo al llamador, vea [Multithreading: sugerencias de programación](multithreading-programming-tips.md).  
   
-Cuando la función termina, debe devolver un valor UINT que indica la razón de finalización. Normalmente, este código de salida es 0 para indicar éxito con otros valores indican diferentes tipos de errores. Esto es puramente depende de la implementación. Algunos subprocesos pueden mantener los recuentos de uso de objetos y devuelve el número actual de los usos de ese objeto. Para ver cómo las aplicaciones pueden recuperar este valor, consulte [Multithreading: Finalizar subprocesos](../parallel/multithreading-terminating-threads.md).  
+Cuando la función termina, debe devolver un valor UINT que indica la razón de finalización. Normalmente, este código de salida es 0 para indicar éxito con otros valores indican diferentes tipos de errores. Esto es puramente depende de la implementación. Algunos subprocesos pueden mantener los recuentos de uso de objetos y devuelve el número actual de los usos de ese objeto. Para ver cómo las aplicaciones pueden recuperar este valor, consulte [Multithreading: Finalizar subprocesos](multithreading-terminating-threads.md).  
   
-Hay algunas restricciones en lo que puede hacer en un programa con multithreading escrito con la biblioteca MFC. Para obtener descripciones de estas restricciones y otras sugerencias sobre cómo usar subprocesos, vea [Multithreading: sugerencias de programación](../parallel/multithreading-programming-tips.md).  
+Hay algunas restricciones en lo que puede hacer en un programa con multithreading escrito con la biblioteca MFC. Para obtener descripciones de estas restricciones y otras sugerencias sobre cómo usar subprocesos, vea [Multithreading: sugerencias de programación](multithreading-programming-tips.md).  
   
 ##  <a name="_core_controlling_function_example"></a> Ejemplo de función controladora  
  
@@ -101,8 +101,8 @@ AfxBeginThread(MyThreadProc, pNewObject);
   
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
   
-- [Multithreading: Crear subprocesos de la interfaz de usuario](../parallel/multithreading-creating-user-interface-threads.md)  
+- [Multithreading: Crear subprocesos de la interfaz de usuario](multithreading-creating-user-interface-threads.md)  
   
 ## <a name="see-also"></a>Vea también  
  
-[Multithreading con C++ y MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading con C++ y MFC](multithreading-with-cpp-and-mfc.md)

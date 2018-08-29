@@ -1,5 +1,5 @@
 ---
-title: -protección (Habilitar protección de flujo de Control) | Documentos de Microsoft
+title: -guard (Habilitar protección de flujo de Control) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5c60ff444189e9e6b7919b43649b75722ee7249
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c65bafc14f5ef29db89ddc0a4647193231f7e19
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377409"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131675"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (habilitar Protección de flujo de control)
 Habilite la generación del compilador de comprobaciones de seguridad de Protección de flujo de control.  
@@ -32,7 +32,9 @@ Habilite la generación del compilador de comprobaciones de seguridad de Protecc
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- La opción **/guard:cf** hace que el compilador analice el flujo de control para los destinos de llamada indirecta en tiempo de compilación y que después inserte código para comprobar los destinos en tiempo de ejecución. La opción **/guard:cf** está desactivada de forma predeterminada y debe habilitarse explícitamente. Para deshabilitar explícitamente esta opción, utilice **/guard:cf-**.  
+ La opción **/guard:cf** hace que el compilador analice el flujo de control para los destinos de llamada indirecta en tiempo de compilación y que después inserte código para comprobar los destinos en tiempo de ejecución. La opción **/guard:cf** está desactivada de forma predeterminada y debe habilitarse explícitamente. Para deshabilitar explícitamente esta opción, utilice **/guard:cf-**. 
+
+**Visual Studio 2017 y versiones posterior**: esta opción agrega restricciones para **cambiar** instrucciones que generan tablas de saltar.
   
  Cuando la opción de Protección de flujo de control (CFG) **/guard:cf** se especifica, el compilador y el vinculador insertan comprobaciones de seguridad en tiempo de ejecución adicionales para detectar aquellas acciones que pretenden poner en peligro su código. Durante la compilación y vinculación, se analizan todas las llamadas indirectas en el código para encontrar todas las ubicaciones que puede alcanzar el código cuando se ejecuta correctamente. Esta información se almacena en estructuras adicionales en los encabezados de los archivos binarios. El compilador también inserta una comprobación antes de cada llamada indirecta en el código, que garantiza que el destino sea una de las ubicaciones comprobadas. Si se produce un error en la comprobación en tiempo de ejecución en un sistema operativo compatible con CFG, el sistema operativo cierra el programa.  
   
@@ -46,7 +48,7 @@ Habilite la generación del compilador de comprobaciones de seguridad de Protecc
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).  
   
 2.  Seleccione **Propiedades de configuración**, **C/C++** y **Generación de código**.  
   

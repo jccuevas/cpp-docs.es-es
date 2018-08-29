@@ -1,7 +1,7 @@
 ---
 title: Compatibilidad con multithreading código antiguo (Visual C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -20,25 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7b1b301186036460acc07a526267503da8b97678
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538516"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132107"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Compatibilidad del código antiguo con multithreading (Visual C++)
 Visual C++ permite tener varios subprocesos simultáneos de ejecución que se ejecutan simultáneamente. Con subprocesamiento múltiple, puede derivar de tareas en segundo plano, tratar flujos de entrada simultáneos, administrar una interfaz de usuario y mucho más.  
   
 ## <a name="in-this-section"></a>En esta sección  
  
-[Multithreading con C y Win32](../parallel/multithreading-with-c-and-win32.md)  
+[Multithreading con C y Win32](multithreading-with-c-and-win32.md)  
 Proporciona compatibilidad para crear aplicaciones multiproceso con Microsoft Windows  
   
-[Multithreading con C++ y MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
+[Multithreading con C++ y MFC](multithreading-with-cpp-and-mfc.md)  
 Describe qué son los procesos y subprocesos y qué enfoque de MFC para multithreading es.  
   
-[Multithreading y configuraciones regionales](../parallel/multithreading-and-locales.md)  
+[Multithreading y configuraciones regionales](multithreading-and-locales.md)  
 Se describen los problemas que surgen al utilizar la funcionalidad de configuración regional de la biblioteca en tiempo de ejecución de C y la biblioteca estándar de C++ en una aplicación multiproceso.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0506c7f4efd288417c8fbdcd4784446651c362ac
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1e6bef9e707636d18ed5ecb78098661a753111ba
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540877"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132186"
 ---
 # <a name="multithreading-and-locales"></a>Subprocesamiento múltiple y configuraciones regionales
 La biblioteca en tiempo de ejecución de C y la biblioteca estándar de C++ proporcionan compatibilidad para cambiar la configuración regional del programa. En este tema se describe los problemas que surgen al utilizar la funcionalidad de configuración regional de las dos bibliotecas en una aplicación multiproceso.  
@@ -446,7 +446,7 @@ unsigned __stdcall RunThreadB(void *params)
   
 ## <a name="see-also"></a>Vea también  
 
-[Compatibilidad con multithreading código antiguo (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+[Compatibilidad con multithreading código antiguo (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
 [setlocale](../preprocessor/setlocale.md)   
