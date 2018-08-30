@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d758bcc700180781c899f2263fe04c29ee0e6409
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e8743619b1c47f085aacd569a7b90d716f175842
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538553"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210810"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (clase)
 Encapsula el cuadro de diálogo común que se usa para abrir el archivo o archivo de las operaciones de almacenamiento.  
@@ -261,16 +261,16 @@ class CFileDialog : public CCommonDialog
   
  Los mensajes de windows para el `CFileDialog` clase varían en función de qué sistema operativo que está usando. Por ejemplo, no es compatible con Windows XP [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) y [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) para el `CFileDialog` clase. Sin embargo, Windows Vista y sistemas operativos posteriores son compatibles con ellos. Para obtener más información sobre los distintos mensajes que se generan y el orden en que se reciben, consulte [ejemplo CFileDialog: orden de eventos de registro](../../visual-cpp-samples.md).  
   
- Para usar un `CFileDialog` de objetos, primero cree el objeto utilizando el `CFileDialog` constructor. Después de que se ha construido el cuadro de diálogo, puede establecer o modificar los valores de la [CFileDialog::m_ofn](#m_ofn) estructura para inicializar los valores o los Estados de los controles de cuadro de diálogo. El `m_ofn` estructura es de tipo `OPENFILENAME`. Para obtener más información, consulte el [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) estructura en el SDK de Windows.  
+ Para usar un `CFileDialog` de objetos, primero cree el objeto utilizando el `CFileDialog` constructor. Después de que se ha construido el cuadro de diálogo, puede establecer o modificar los valores de la [CFileDialog::m_ofn](#m_ofn) estructura para inicializar los valores o los Estados de los controles de cuadro de diálogo. El `m_ofn` estructura es de tipo `OPENFILENAME`. Para obtener más información, consulte el [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura en el SDK de Windows.  
   
  Después de inicializar los controles de cuadro de diálogo, llame a la [CFileDialog::DoModal](#domodal) método para mostrar el cuadro de diálogo cuadro para que el usuario puede escribir la ruta de acceso y nombre de archivo. `DoModal` Devuelve si el usuario hizo clic en Aceptar (IDOK) o en el botón Cancelar (IDCANCEL). Si `DoModal` devuelve IDOK, puede usar uno de los `CFileDialog` colocan funciones miembro públicas para recuperar la información en el usuario.  
   
 > [!NOTE]
-> En Windows Vista o versiones posteriores, varias llamadas a [IFileDialog::SetFileTypes](http://msdn.microsoft.com/library/windows/desktop/bb775980) produce un error. La segunda llamada a `SetFileTypes` para cualquier instancia de un `CFileDialog` devuelve E_UNEXPECTED en Windows Vista o posterior. Algunos `CFileDialog` método funciones llaman a `SetFileTypes`. Por ejemplo, dos llamadas a `CFileDialog::DoModal` para la misma instancia de un `CFileDialog` genera [ASSERT](diagnostic-services.md#assert).  
+> En Windows Vista o versiones posteriores, varias llamadas a [IFileDialog::SetFileTypes](https://msdn.microsoft.com/library/windows/desktop/bb775980) produce un error. La segunda llamada a `SetFileTypes` para cualquier instancia de un `CFileDialog` devuelve E_UNEXPECTED en Windows Vista o posterior. Algunos `CFileDialog` método funciones llaman a `SetFileTypes`. Por ejemplo, dos llamadas a `CFileDialog::DoModal` para la misma instancia de un `CFileDialog` genera [ASSERT](diagnostic-services.md#assert).  
   
  `CFileDialog` incluye varios miembros protegidos que le permiten realizar un procesamiento personalizado de infracciones de recurso compartido, validación de nombre de archivo y notificación de cambio de cuadro de lista. Estos miembros protegidos son funciones de devolución de llamada que no es necesario usar ya control predeterminado que se realiza automáticamente la mayoría de las aplicaciones. Las entradas de mapa de mensajes para estas funciones no son necesarias porque son funciones virtuales estándar.  
   
- Puede usar el Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) función para determinar si se produjo un error durante la inicialización del cuadro de diálogo y para obtener más información sobre el error.  
+ Puede usar el Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) función para determinar si se produjo un error durante la inicialización del cuadro de diálogo y para obtener más información sobre el error.  
   
  La destrucción de `CFileDialog` objetos se controla automáticamente. No es necesario llamar a [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog).  
   
@@ -532,7 +532,7 @@ explicit CFileDialog(
  El nombre de archivo inicial que aparece en el cuadro Nombre de archivo. Si es NULL, no aparece ningún nombre de archivo inicial.  
   
  [in] *dwFlags*  
- Una combinación de uno o más marcadores que se pueden usar para personalizar el cuadro de diálogo. Para obtener una descripción de estas marcas, vea el [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) estructura en el SDK de Windows. Si modifica el `m_ofn.Flags` miembros de estructura, utilice un operador OR bit a bit de los cambios para mantener intactos el comportamiento predeterminado.  
+ Una combinación de uno o más marcadores que se pueden usar para personalizar el cuadro de diálogo. Para obtener una descripción de estas marcas, vea el [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura en el SDK de Windows. Si modifica el `m_ofn.Flags` miembros de estructura, utilice un operador OR bit a bit de los cambios para mantener intactos el comportamiento predeterminado.  
   
  [in] *lpszFilter*  
  Una serie de pares de cadenas que especifican filtros puede aplicar al archivo. Si especifica filtros de archivo, sólo los archivos que coinciden con los criterios de filtro aparecerán en la lista de archivos. Vea la sección Comentarios para obtener más información sobre cómo trabajar con filtros de archivo.  
@@ -582,7 +582,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- IDOK o IDCANCEL. Si se devuelve IDCANCEL, llame a la Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) función para determinar si se produjo un error.  
+ IDOK o IDCANCEL. Si se devuelve IDCANCEL, llame a la Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) función para determinar si se produjo un error.  
   
  IDOK e IDCANCEL son las constantes que indican si el usuario seleccionó el botón Aceptar o Cancelar.  
   
@@ -775,7 +775,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
 ### <a name="remarks"></a>Comentarios  
  Use esta función solo en Windows Vista o posterior con un objeto que tiene *bVistaStyle* establecida en TRUE. Si usa esta función cuando *bVistaStyle* es FALSE, devolverá NULL en modo de lanzamiento y producir una aserción en modo de depuración.  
   
- Para obtener más información sobre la `IFileDialogCustomize` interfaz, vea [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
+ Para obtener más información sobre la `IFileDialogCustomize` interfaz, vea [IFileDialogCustomize](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).  
   
 ### <a name="example"></a>Ejemplo  
  En este ejemplo se recupera el objeto COM interno. Para ejecutar este ejemplo de código, se debe compilar en Windows Vista o posterior.  
@@ -795,7 +795,7 @@ IFileOpenDialog* GetIFileOpenDialog();
 ### <a name="remarks"></a>Comentarios  
  Use esta función solo en Windows Vista o posterior con un objeto que tiene *bVistaStyle* establecida en TRUE. Esta función devuelve NULL si el `CFileDialog` no es un **abierto** cuadro de diálogo o si *bVistaStyle* está establecida en FALSE. En este último caso, la función solo devuelve NULL en modo de versión: en modo de depuración producirá una aserción.  
   
- Para obtener más información sobre la `IFileOpenDialog` interfaz, vea [IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834).  
+ Para obtener más información sobre la `IFileOpenDialog` interfaz, vea [IFileOpenDialog](https://msdn.microsoft.com/library/windows/desktop/bb775834).  
   
 ### <a name="example"></a>Ejemplo  
  En este ejemplo se recupera el objeto COM interno. Para ejecutar este código, se debe compilar en Windows Vista o posterior.  
@@ -815,7 +815,7 @@ IFileSaveDialog* GetIFileSaveDialog();
 ### <a name="remarks"></a>Comentarios  
  Use esta función solo en Windows Vista o posterior con un objeto que tiene *bVistaStyle* establecida en TRUE. Esta función devolverá NULL si el `CFileDialog` no es un **guardar** cuadro de diálogo o si *bVistaStyle* está establecida en FALSE. En este último caso, la función solo devuelve NULL en modo de versión: en modo de depuración producirá una aserción.  
   
- Para obtener más información sobre la `IFileSaveDialog` interfaz, vea [IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688).  
+ Para obtener más información sobre la `IFileSaveDialog` interfaz, vea [IFileSaveDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog).  
   
 ### <a name="example"></a>Ejemplo  
  En este ejemplo se recupera el objeto COM interno. Para ejecutar este ejemplo de código, se debe compilar en Windows Vista o posterior.  
@@ -851,7 +851,7 @@ OPENFILENAME& GetOFN();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) estructura.  
+ Un [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice la segunda versión de esta función para inicializar la apariencia de un **abrir archivo** o **Guardar archivo como** cuadro de diálogo una vez que se construye pero antes de que se muestre con la `DoModal` función miembro. Por ejemplo, puede establecer el `lpstrTitle` miembro `m_ofn` con el título que desee que el cuadro de diálogo.  
@@ -1016,7 +1016,7 @@ BOOL IsPickFoldersMode() const;
   
 -   OFN_SHOWHELP  
   
- Para obtener más información acerca de esta estructura, vea el [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) estructura en el SDK de Windows.  
+ Para obtener más información acerca de esta estructura, vea el [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura en el SDK de Windows.  
   
 ##  <a name="makeprominent"></a>  CFileDialog::MakeProminent  
  Coloca un control en el cuadro de diálogo para que destaque en comparación con otros controles.  
@@ -1085,7 +1085,7 @@ virtual void OnFileNameChange();
 ### <a name="remarks"></a>Comentarios  
  El sistema envía el mensaje CDN_SELCHANGE cuando el usuario selecciona un nuevo archivo o carpeta en la lista de archivos de la **abierto** o **Guardar como** cuadro de diálogo. Invalide este método si desea realizar acciones en respuesta a este mensaje.  
   
- El sistema envía este mensaje solo si el cuadro de diálogo se creó con la marca OFN_EXPLORER activada. Para obtener más información acerca de la notificación, consulte [CDN_SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646865). Para obtener información acerca de la marca OFN_EXPLORER, vea el [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) estructura y [abrir y guardar como cuadros de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
+ El sistema envía este mensaje solo si el cuadro de diálogo se creó con la marca OFN_EXPLORER activada. Para obtener más información acerca de la notificación, consulte [CDN_SELCHANGE](/windows/desktop/dlgbox/cdn-selchange). Para obtener información acerca de la marca OFN_EXPLORER, vea el [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura y [abrir y guardar como cuadros de diálogo](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes).  
   
 ##  <a name="onfilenameok"></a>  CFileDialog::OnFileNameOK  
  Reemplace esta función sólo si desea proporcionar validación personalizada de nombres de archivo que se introducen en un cuadro de diálogo de archivo comunes.  
@@ -1112,7 +1112,7 @@ virtual void OnFolderChange();
 ### <a name="remarks"></a>Comentarios  
  El mensaje de notificación se envía cuando se abre una nueva carpeta en el cuadro de diálogo Abrir o guardar como.  
   
- Se envía la notificación solo si el cuadro de diálogo se creó con el estilo OFN_EXPLORER. Para obtener más información acerca de la notificación, consulte [CDN_FOLDERCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646859). Para obtener información sobre el estilo OFN_EXPLORER, vea el [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) estructura y [abrir y guardar como cuadros de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
+ Se envía la notificación solo si el cuadro de diálogo se creó con el estilo OFN_EXPLORER. Para obtener más información acerca de la notificación, consulte [CDN_FOLDERCHANGE](/windows/desktop/dlgbox/cdn-folderchange). Para obtener información sobre el estilo OFN_EXPLORER, vea el [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura y [abrir y guardar como cuadros de diálogo](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes).  
   
 ##  <a name="oninitdone"></a>  CFileDialog::OnInitDone  
  Reemplace esta función para controlar el mensaje WM_NOTIFY CDN_INITDONE.  
@@ -1124,7 +1124,7 @@ virtual void OnInitDone();
 ### <a name="remarks"></a>Comentarios  
  El sistema envía este mensaje de notificación cuando el sistema haya terminado de organizar controles en el **abierto** o **Guardar como** cuadro de diálogo para dejar espacio para los controles del cuadro de diálogo secundarios.  
   
- El sistema envía este solo si el cuadro de diálogo se creó con el estilo OFN_EXPLORER. Para obtener más información acerca de la notificación, consulte [CDN_INITDONE](http://msdn.microsoft.com/library/windows/desktop/ms646863). Para obtener información sobre el estilo OFN_EXPLORER, vea el [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) estructura y [abrir y guardar como cuadros de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
+ El sistema envía este solo si el cuadro de diálogo se creó con el estilo OFN_EXPLORER. Para obtener más información acerca de la notificación, consulte [CDN_INITDONE](/windows/desktop/dlgbox/cdn-initdone). Para obtener información sobre el estilo OFN_EXPLORER, vea el [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura y [abrir y guardar como cuadros de diálogo](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes).  
   
 > [!NOTE]
 > Windows Vista o versiones posteriores cuadros de diálogo de archivo de estilo no admiten esta función. Cualquier intento de usar esta función en un Windows Vista o versiones posterior cuadro de diálogo de archivo de estilo producirá [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). 
@@ -1213,7 +1213,7 @@ virtual void OnTypeChange();
 ### <a name="remarks"></a>Comentarios  
  El mensaje de notificación se envía cuando el usuario selecciona un nuevo tipo de archivo en la lista de tipos de archivo en la apertura o el cuadro de diálogo Guardar como.  
   
- Se envía la notificación solo si el cuadro de diálogo se creó con el estilo OFN_EXPLORER. Para obtener más información acerca de la notificación, consulte [CDN_TYPECHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646868). Para obtener información sobre el estilo OFN_EXPLORER, vea el [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) estructura y [abrir y guardar como cuadros de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms646960).  
+ Se envía la notificación solo si el cuadro de diálogo se creó con el estilo OFN_EXPLORER. Para obtener más información acerca de la notificación, consulte [CDN_TYPECHANGE](/windows/desktop/dlgbox/cdn-typechange). Para obtener información sobre el estilo OFN_EXPLORER, vea el [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura y [abrir y guardar como cuadros de diálogo](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes).  
   
 ##  <a name="removecontrolitem"></a>  CFileDialog::RemoveControlItem  
  Quita un elemento de un control contenedor en el cuadro de diálogo.  
@@ -1398,7 +1398,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
   
 ### <a name="parameters"></a>Parámetros  
  *lpszPropList*  
- Lista de propiedades predefinidas separadas por ";". Para obtener una lista de las marcas, vea el **marcas** sección de [OPENFILENAME](http://msdn.microsoft.com/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104).  
+ Lista de propiedades predefinidas separadas por ";". Para obtener una lista de las marcas, vea el **marcas** sección de [OPENFILENAME](https://msdn.microsoft.com/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104).  
   
 ### <a name="remarks"></a>Comentarios  
   
@@ -1451,7 +1451,7 @@ void SetTemplate(
  El sistema usará sólo una de las plantillas especificadas. El sistema determina qué plantilla utilizar según la presencia del estilo OFN_EXPLORER y el sistema operativo que se ejecuta la aplicación. Al especificar una que no son de explorador y la plantilla de estilo del explorador, es fácil admitir Windows NT 3.51, Windows NT 4.0 y versiones posteriores y Windows 95 y versiones posteriores.  
   
 > [!NOTE]
-> Windows Vista o versiones posteriores cuadros de diálogo de archivo de estilo no admiten esta función. Cualquier intento de usar esta función en un Windows Vista o el cuadro de diálogo de archivo de estilo posterior producirá [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Una alternativa es usar un cuadro de diálogo personalizado. Para obtener más información acerca de cómo utilizar una personalizada `CFileDialog`, consulte [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
+> Windows Vista o versiones posteriores cuadros de diálogo de archivo de estilo no admiten esta función. Cualquier intento de usar esta función en un Windows Vista o el cuadro de diálogo de archivo de estilo posterior producirá [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Una alternativa es usar un cuadro de diálogo personalizado. Para obtener más información acerca de cómo utilizar una personalizada `CFileDialog`, consulte [IFileDialogCustomize](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).  
   
 ##  <a name="startvisualgroup"></a>  CFileDialog::StartVisualGroup  
  Declara un grupo en el cuadro de diálogo visual. Las llamadas subsiguientes a cualquier método "add" agregan esos elementos a este grupo.  
@@ -1481,7 +1481,7 @@ void UpdateOFNFromShellDialog();
 ### <a name="remarks"></a>Comentarios  
  En las versiones de Windows antes de Windows Vista, el miembro [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) continuamente se sincronizó la estructura de datos con el estado de la `CFileDialog`. Los cambios realizados en el [m_ofn](#m_ofn) variable miembro ve directamente afectado el estado del cuadro de diálogo. Además, los cambios realizados en el estado del cuadro de diálogo actualizan inmediatamente en la variable de miembro m_ofn.  
   
- En Windows Vista o versiones posteriores, el `m_ofn` estructura de datos no se actualiza automáticamente. Para garantizar la precisión de los datos en el `m_ofn` variable miembro, debe llamar a la `UpdateOFNFromShellDialog` función antes de acceder a los datos. Windows llama a esta función automáticamente durante el procesamiento de [IFileDialog::OnFileOK](http://msdn.microsoft.com/library/windows/desktop/bb775879).  
+ En Windows Vista o versiones posteriores, el `m_ofn` estructura de datos no se actualiza automáticamente. Para garantizar la precisión de los datos en el `m_ofn` variable miembro, debe llamar a la `UpdateOFNFromShellDialog` función antes de acceder a los datos. Windows llama a esta función automáticamente durante el procesamiento de [IFileDialog::OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).  
   
  Para obtener más información sobre cómo usar el `CFileDialog` clase en Windows Vista o una versión posterior, consulte [clase CFileDialog](../../mfc/reference/cfiledialog-class.md).  
   

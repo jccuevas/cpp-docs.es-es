@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 4) C4242 | Documentos de Microsoft
+title: Del compilador (nivel 4) de la advertencia C4242 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befe02b363c17a670d3b33632ffa50ed8a7cb1f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 623183e5ee54c995d624f47461c724ee8f4befae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294487"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217403"
 ---
 # <a name="compiler-warning-level-4-c4242"></a>Advertencia del compilador (nivel 4) C4242
-'identificador': conversión de 'tipo1' a 'tipo2', posible pérdida de datos  
+'identifier': conversión de 'tipo1' a 'tipo2', posible pérdida de datos  
   
- Los tipos son diferentes. Conversión de tipos puede producir pérdida de datos. El compilador realiza la conversión de tipos.  
+ Los tipos son diferentes. Conversión de tipos puede provocar la pérdida de datos. El compilador realiza la conversión de tipos.  
   
  De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.  
   
- Para obtener más información sobre C4242, consulte [errores comunes del compilador](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
+ Para obtener más información sobre C4242, consulte [errores comunes del compilador](/windows/desktop/WinProg64/common-compiler-errors).  
   
  El ejemplo siguiente genera C4242:  
   

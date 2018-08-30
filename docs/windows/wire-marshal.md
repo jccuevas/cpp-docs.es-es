@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 390ab7723cb760793ab96a31bc3ac948f5a40dcd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 94504cea86059f835d9cbda7cbf2bcdeafab589b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590396"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214115"
 ---
 # <a name="wiremarshal"></a>wire_marshal
 
@@ -36,7 +36,7 @@ Especifica un tipo de datos que se usará para la transmisión en lugar de un ti
 
 ## <a name="remarks"></a>Comentarios
 
-El **wire_marshal** atributo de C++ tiene la misma funcionalidad que el [wire_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) atributo MIDL.
+El **wire_marshal** atributo de C++ tiene la misma funcionalidad que el [wire_marshal](/windows/desktop/Midl/wire-marshal) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

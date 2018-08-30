@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ed609de9d36b602bf525a9643534cf5d1d55a8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963039"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214171"
 ---
 # <a name="deque-class"></a>deque (Clase)
 
@@ -118,9 +118,11 @@ class deque
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo* tipo de los datos del elemento que se almacenará en el deque.
+*Type*<br/>
+ Tipo de datos de elementos que se va a almacenar en deque.
 
-*Asignador* el tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca del deque asignación y desasignación de memoria. Este argumento es opcional y el valor predeterminado es **asignador\<tipo>***.*
+*Asignador*<br/>
+ Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de deque. Este argumento es opcional y el valor predeterminado es **asignador\<tipo >**.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -243,15 +245,20 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>Parámetros
 
-*Primera* posición del primer elemento del intervalo de elementos va a copiar del argumento deque.
+*Primero*<br/>
+ Posición del primer elemento en el intervalo de elementos que se va a copiar del argumento deque.
 
-*Último* posición del primer elemento más allá del intervalo de elementos va a copiar del argumento deque.
+*Último*<br/>
+ Posición del primer elemento que se encuentra más allá del intervalo de elementos que se va a copiar del argumento deque.
 
-*Recuento de* el número de copias de un elemento que se va a insertar en el deque.
+*Recuento*<br/>
+ Número de copias de un elemento que se va a insertar en el deque.
 
-*Val* el valor del elemento que se va a insertar en el deque.
+*Val*<br/>
+ Valor del elemento que se va a insertar en el deque.
 
-*IList* initializer_list que se va a insertar en el deque.
+*IList*<br/>
+ initializer_list que se va a insertar en el deque.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -325,7 +332,8 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*PDV* el subíndice (o el número de posición) del elemento al que hace referencia en el deque.
+*punto de venta*<br/>
+ Subíndice (o número de posición) del elemento al que se va a hacer referencia en el deque.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1337,11 +1345,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parámetros
 
-*_WHERE* posición del elemento que se quitará del deque.
+*_WHERE*<br/>
+ Posición del elemento que se quitará del deque.
 
-*primera* posición del primer elemento se ha quitado del deque.
+*first*<br/>
+ Posición del primer elemento que se ha quitado del deque.
 
-*último* posición inmediatamente siguiente al último elemento se ha quitado del deque.
+*Último*<br/>
+ Posición inmediatamente siguiente a la del último elemento que se ha quitado del deque.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1591,7 +1602,8 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*PDV* la posición del elemento deque al que se hace referencia.
+*punto de venta*<br/>
+ La posición del elemento deque al que se va a hacer referencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2086,9 +2098,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Newsize* el nuevo tamaño del deque.
+*_Newsize*<br/>
+ Nuevo tamaño del deque.
 
-*Val* el valor de los nuevos elementos que se agregarán al deque si el nuevo tamaño es mayor que el tamaño original. Si el valor se omite, a los nuevos elementos se les asigna el valor predeterminado para la clase.
+*Val*<br/>
+ Valor de los nuevos elementos que se agregarán al deque si el nuevo tamaño es mayor que el tamaño original. Si el valor se omite, a los nuevos elementos se les asigna el valor predeterminado para la clase.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2263,9 +2277,11 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* deque que proporciona los elementos que se van a intercambiar o el deque cuyos elementos se van a intercambiar con los del deque `left`.
+*right*<br/>
+ Deque que proporciona los elementos que se van a intercambiar o deque cuyos elementos se van a intercambiar con los del deque `left`.
 
-*izquierdo* un deque cuyos elementos se van a intercambiar con los del deque *derecho*.
+*left*<br/>
+ Un deque cuyos elementos se van a intercambiar con los del deque *derecho*.
 
 ### <a name="example"></a>Ejemplo
 

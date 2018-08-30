@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b00d66c8d3842c03cc58e389bc308bc9515369b3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a3625667ccdbff85291d82ea519815bfc30c600f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882268"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219815"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl (clase)
 Esta clase proporciona métodos para la compatibilidad con los valores de propiedad estándar.  
@@ -502,7 +502,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
   
 ### <a name="parameters"></a>Parámetros  
  *ppPicture*  
- Variable que recibe un puntero a las propiedades de la imagen. Consulte [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.  
+ Variable que recibe un puntero a las propiedades de la imagen. Consulte [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
@@ -869,7 +869,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>Parámetros  
  *pPicture*  
- Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.  
+ Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
@@ -990,7 +990,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
   
 ### <a name="parameters"></a>Parámetros  
  *pPicture*  
- Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](http://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.  
+ Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  

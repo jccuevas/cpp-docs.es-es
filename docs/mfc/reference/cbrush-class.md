@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b38ca29ed166f27459da5192f23accf32969465
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b9a4827900f30dba168f9f5b1b6a93c2aa7e331b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336639"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215740"
 ---
 # <a name="cbrush-class"></a>CBrush (clase)
 Encapsula un pincel de la Interfaz de dispositivo gráfico (GDI) de Windows.  
@@ -62,14 +62,14 @@ class CBrush : public CGdiObject
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicializa un pincel con el estilo, el color y el patrón especificado en un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estructura.|  
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicializa un pincel con el estilo, el color y el patrón especificado en un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura.|  
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inicializa un pincel con un patrón especificado por un mapa de bits independientes del dispositivo (DIB).|  
 |[CBrush::CreateHatchBrush](#createhatchbrush)|Inicializa un pincel con el patrón de sombreado especificado y el color.|  
 |[CBrush::CreatePatternBrush](#createpatternbrush)|Inicializa un pincel con un patrón especificado por un mapa de bits.|  
 |[CBrush::CreateSolidBrush](#createsolidbrush)|Inicializa un pincel con el color sólido especificado.|  
 |[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Crea un pincel de color predeterminado del sistema.|  
 |[CBrush::FromHandle](#fromhandle)|Devuelve un puntero a un `CBrush` objeto cuando se especifica un identificador a un Windows `HBRUSH` objeto.|  
-|[CBrush::GetLogBrush](#getlogbrush)|Obtiene un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estructura.|  
+|[CBrush::GetLogBrush](#getlogbrush)|Obtiene un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -131,7 +131,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  Si usa el constructor sin argumentos, debe inicializar resultante `CBrush` objeto con [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), o [CreateDIBPatternBrush](#createdibpatternbrush). Si usa uno de los constructores que toma argumentos, a continuación, ninguna otra inicialización es necesaria. Los constructores con argumentos pueden producir una excepción si se producen errores, mientras que el constructor sin argumentos siempre se realizará correctamente.  
   
- El constructor con un único [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parámetro construye un pincel sólido con el color especificado. El color especifica un valor RGB y puede crearse con la macro RGB en WINDOWS. H.  
+ El constructor con un único [COLORREF](/windows/desktop/gdi/colorref) parámetro construye un pincel sólido con el color especificado. El color especifica un valor RGB y puede crearse con la macro RGB en WINDOWS. H.  
   
  El constructor con dos parámetros, crea un pincel de trama. El *nIndex* parámetro especifica el índice de un patrón de sombreado. El *crColor* parámetro especifica el color.  
   
@@ -141,7 +141,7 @@ explicit CBrush(CBitmap* pBitmap);
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
 ##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
- Inicializa un pincel con un estilo, el color y el patrón especificado en un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estructura.  
+ Inicializa un pincel con un estilo, el color y el patrón especificado en un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura.  
   
 ```  
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
@@ -149,7 +149,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
   
 ### <a name="parameters"></a>Parámetros  
  *lpLogBrush*  
- Apunta a un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estructura que contiene información sobre el pincel.  
+ Apunta a un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura que contiene información sobre el pincel.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la función se realiza correctamente; de lo contrario, es 0.  
@@ -208,11 +208,11 @@ BOOL CreateDIBPatternBrush(
   
  Para obtener información sobre el uso de las siguientes funciones de Windows, consulte el SDK de Windows:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (esta función se proporciona únicamente por compatibilidad con aplicaciones escritas para versiones de Windows anteriores a la 3.0; utilice el `CreateDIBPatternBrushPt` función.)  
+- [CreateDIBPatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrush) (esta función se proporciona únicamente por compatibilidad con aplicaciones escritas para versiones de Windows anteriores a la 3.0; utilice el `CreateDIBPatternBrushPt` función.)  
   
-- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (esta función debe usarse para las aplicaciones basadas en Win32).  
+- [CreateDIBPatternBrushPt](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrushpt) (esta función debe usarse para las aplicaciones basadas en Win32).  
   
-- [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
+- [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
@@ -243,7 +243,7 @@ BOOL CreateHatchBrush(
 - Sombreado Vertical HS_VERTICAL  
   
  *crColor*  
- Especifica el color de primer plano del pincel como un color RGB (el color de la sombreados). Consulte [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) en el SDK de Windows para obtener más información.  
+ Especifica el color de primer plano del pincel como un color RGB (el color de la sombreados). Consulte [COLORREF](/windows/desktop/gdi/colorref) en el SDK de Windows para obtener más información.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -277,7 +277,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
   
  Un pincel que se creó utilizando un mapa de bits monocromático (plano de color de 1, 1 bit por píxel) se dibuja utilizando los colores de texto y fondo actuales. Se dibujan los píxeles representados por un bit establecido en 0 con el color de texto actual. Se dibujan los píxeles representados por un bit establecido en 1 con el color de fondo actual.  
   
- Para obtener información sobre el uso de [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), un Windows de función, consulte el SDK de Windows.  
+ Para obtener información sobre el uso de [CreatePatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createpatternbrush), un Windows de función, consulte el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
@@ -291,7 +291,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
   
 ### <a name="parameters"></a>Parámetros  
  *crColor*  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) estructura que especifica el color del pincel. El color especifica un valor RGB y puede crearse con la macro RGB en WINDOWS. H.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) estructura que especifica el color del pincel. El color especifica un valor RGB y puede crearse con la macro RGB en WINDOWS. H.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -313,7 +313,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>Parámetros  
  *nIndex*  
- Especifica un índice de color. Este valor corresponde al color usado para pintar uno de los elementos de la ventana de 21. Consulte [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) en el SDK de Windows para obtener una lista de valores.  
+ Especifica un índice de color. Este valor corresponde al color usado para pintar uno de los elementos de la ventana de 21. Consulte [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) en el SDK de Windows para obtener una lista de valores.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -343,7 +343,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="remarks"></a>Comentarios  
  Si un `CBrush` objeto no está asociado al identificador, un archivo temporal `CBrush` objeto creado y conectado. Este temporal `CBrush` objeto es válido solo hasta la próxima vez que la aplicación tiene tiempo de inactividad en su bucle de eventos. En este momento, se eliminan todos los objetos de gráficos temporales. En otras palabras, el objeto temporal es válido solo durante el procesamiento de mensajes de una ventana.  
   
- Para obtener más información sobre el uso de objetos gráficos, consulte [gráfico de objetos](http://msdn.microsoft.com/library/windows/desktop/dd144962) en el SDK de Windows.  
+ Para obtener más información sobre el uso de objetos gráficos, consulte [gráfico de objetos](/windows/desktop/gdi/graphic-objects) en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CBrush::CBrush](#cbrush).  
@@ -357,7 +357,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
   
 ### <a name="parameters"></a>Parámetros  
  *pLogBrush*  
- Apunta a un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estructura que contiene información sobre el pincel.  
+ Apunta a un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura que contiene información sobre el pincel.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si la función se realiza correctamente, y *pLogBrush* es un puntero válido, el valor devuelto es el número de bytes almacenados en el búfer.  
@@ -387,7 +387,7 @@ operator HBRUSH() const;
 ### <a name="remarks"></a>Comentarios  
  Este es un operador de conversión, que admite el uso directo de un objeto HBRUSH.  
   
- Para obtener más información sobre el uso de objetos gráficos, consulte [gráfico de objetos](http://msdn.microsoft.com/library/windows/desktop/dd144962) en el SDK de Windows.  
+ Para obtener más información sobre el uso de objetos gráficos, consulte [gráfico de objetos](/windows/desktop/gdi/graphic-objects) en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  

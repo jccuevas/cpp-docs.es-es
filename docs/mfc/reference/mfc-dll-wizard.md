@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58362b46050a7e2a504a4cd78085975e1c5e1a6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 9b352d3f99ccee103f7f08e54fb96634bad4a32a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025775"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216492"
 ---
 # <a name="mfc-dll-wizard"></a>Asistente para archivos DLL de MFC
 Cuando usa el Asistente para la DLL de MFC para crear un proyecto DLL de MFC, obtendrá una aplicación inicial que funciona con funcionalidad integrada que, al compilar, implementará las características básicas de un [DLL](../../build/dlls-in-visual-cpp.md). El programa MFC inicial incluye archivos de código fuente (.cpp) de C++, los archivos de recursos (.rc) y un archivo de proyecto (.vcxproj). El código generado en estos archivos iniciales se basa en MFC. Para obtener más información, consulte los detalles del archivo en el archivo Readme.txt que se genera para el proyecto en Visual Studio, y [clases y funciones generadas por el Asistente para archivos DLL de MFC](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -50,7 +50,7 @@ Cuando usa el Asistente para la DLL de MFC para crear un proyecto DLL de MFC, ob
  [Creación y administración de proyectos de Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Páginas de propiedades](../../ide/property-pages-visual-cpp.md)   
  [Trabajar con las propiedades del proyecto](../../ide/working-with-project-properties.md)   
- [Implementación de aplicaciones](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
+ [Implementación de aplicaciones](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
  [Clase MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Agregar una función miembro](../../ide/adding-a-member-function-visual-cpp.md)   
  [Implementar una interfaz](../../ide/implementing-an-interface-visual-cpp.md)   

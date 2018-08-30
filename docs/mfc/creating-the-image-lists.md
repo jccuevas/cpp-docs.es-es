@@ -1,5 +1,5 @@
 ---
-title: Crear las listas de imágenes | Documentos de Microsoft
+title: Creación de las listas de imágenes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e5f5ac8396c32e56e4c0f2f951f45bb33714822
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53cf33a551dc95e7ed282b599673f627ff8a7b21
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341530"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220942"
 ---
 # <a name="creating-the-image-lists"></a>Crear las listas de imágenes
-Crear listas de imágenes es el mismo independientemente de si usa [CListView](../mfc/reference/clistview-class.md) o [CListCtrl](../mfc/reference/clistctrl-class.md).  
+Creación de listas de imágenes es el mismo independientemente de si usa [CListView](../mfc/reference/clistview-class.md) o [CListCtrl](../mfc/reference/clistctrl-class.md).  
   
 > [!NOTE]
->  Crear solo necesita la imagen listas si el control de lista incluye el `LVS_ICON` estilo.  
+>  Solo necesita listas de imágenes si el control de lista incluye el `LVS_ICON` estilo.  
   
- Utilice la clase `CImageList` para crear una o varias listas de imágenes (para iconos de tamaño normal, iconos pequeños y estados). Vea [CImageList](../mfc/reference/cimagelist-class.md)y vea [listas de imágenes de vista de lista](http://msdn.microsoft.com/library/windows/desktop/bb774736) del SDK de Windows.  
+ Utilice la clase `CImageList` para crear una o varias listas de imágenes (para iconos de tamaño normal, iconos pequeños y estados). Consulte [CImageList](../mfc/reference/cimagelist-class.md)y consulte [listas de imágenes de vista de lista](/windows/desktop/Controls/using-list-view-controls) en el SDK de Windows.  
   
- Llame a [CListCtrl:: SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) para cada imagen de la lista; pasar un puntero a la correspondiente `CImageList` objeto.  
+ Llame a [CListCtrl:: SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) para cada lista de imágenes; pasar un puntero a la correspondiente `CImageList` objeto.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CListCtrl](../mfc/using-clistctrl.md)   

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb41f9630e22d9067743b106aed49ea9c51ee4ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6243bd4167ec640553a6cb55d7d6f67319315e19
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538737"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217351"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Herramientas de diagnóstico paralelo (Runtime de simultaneidad)
 Visual Studio proporciona amplia compatibilidad para depurar aplicaciones de varios subprocesos y generar perfiles de estas.  
@@ -31,7 +31,7 @@ Visual Studio proporciona amplia compatibilidad para depurar aplicaciones de var
  Las herramientas de generación de perfiles proporcionan tres vistas de datos que muestran información gráfica, tabular y numérica acerca de cómo se interactúa una aplicación multiproceso consigo misma y con otros programas. Las vistas le permiten identificar rápidamente las áreas de preocupación y para navegar desde los puntos en las pantallas gráficas a pilas de llamadas, sitios de llamada y código fuente. Para más información, consulte [Visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer).  
   
 ## <a name="event-tracing"></a>Seguimiento de eventos  
- El Runtime de simultaneidad usa [seguimiento de eventos para Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW) para notificar a las herramientas de instrumentación, como los generadores de perfiles, cuando se producen varios eventos. Estos eventos incluyen cuando se activa o desactiva un programador, cuando un contexto comienza, finaliza, bloquea, desbloquea o da como resultado, y cuando un algoritmo paralelo comienza o finaliza.  
+ El Runtime de simultaneidad usa [seguimiento de eventos para Windows](/windows/desktop/ETW/event-tracing-portal) (ETW) para notificar a las herramientas de instrumentación, como los generadores de perfiles, cuando se producen varios eventos. Estos eventos incluyen cuando se activa o desactiva un programador, cuando un contexto comienza, finaliza, bloquea, desbloquea o da como resultado, y cuando un algoritmo paralelo comienza o finaliza.  
   
  Herramientas como el [visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer) utilizar esta funcionalidad; por lo tanto, normalmente no tendrá que trabajar directamente con estos eventos. Sin embargo, estos eventos son útiles cuando se está desarrollando un generador de perfiles personalizado o al usar herramientas de seguimiento de eventos como [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).  
   

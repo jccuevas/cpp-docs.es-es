@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 910652355706bd5397a60957d9243aa09501471a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99d3938e2baa3beb7edc1147716b5feeaa319117
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597234"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219833"
 ---
 # <a name="ptr"></a>ptr
 
@@ -36,7 +36,7 @@ Designa un puntero como un puntero completo.
 
 ## <a name="remarks"></a>Comentarios
 
-El **ptr** atributo de C++ tiene la misma funcionalidad que el [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) atributo MIDL.
+El **ptr** atributo de C++ tiene la misma funcionalidad que el [ptr](/windows/desktop/Midl/ptr) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

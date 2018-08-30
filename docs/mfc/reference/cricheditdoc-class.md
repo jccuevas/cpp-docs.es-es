@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc6d39b3f636407e3ae72289b5afe12ed1084a4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 23aacdfca1dbc958c16223d7d57cec39ef65267b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852515"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221806"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc (clase)
 Con [CRichEditView](../../mfc/reference/cricheditview-class.md) y [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), proporciona la funcionalidad del control rich edit en el contexto de la arquitectura de vista de documento de MFC.  
@@ -92,7 +92,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
 ### <a name="parameters"></a>Parámetros  
  *preo*  
- Puntero a un [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) estructura que describe un elemento OLE. El nuevo `CRichEditCntrItem` se construye el objeto en torno a esta elemento OLE. Si *preo* es NULL, el nuevo elemento de cliente está vacío.  
+ Puntero a un [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) estructura que describe un elemento OLE. El nuevo `CRichEditCntrItem` se construye el objeto en torno a esta elemento OLE. Si *preo* es NULL, el nuevo elemento de cliente está vacío.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Puntero a un nuevo [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) objeto que se ha agregado a este documento.  
@@ -100,7 +100,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="remarks"></a>Comentarios  
  Esta función no realiza ninguna inicialización de OLE.  
   
- Para obtener más información, consulte el [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) estructura en el SDK de Windows.  
   
 ##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat  
  Llame a esta función para determinar el formato de texto para la transmisión por secuencias el contenido de la edición enriquecida.  

@@ -1,5 +1,5 @@
 ---
-title: Convertir proyectos de modo mixto al lenguaje intermedio puro | Documentos de Microsoft
+title: Convertir proyectos de modo mixto al lenguaje intermedio puro | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 98560841b40b7bb4691222dfa254f06a071b07da
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 263a90710d2103c4ea97e6c56da67d676ba7366b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704638"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222085"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Convertir proyectos de modo mixto a lenguaje intermedio puro
 
-Todos los proyectos de Visual C++ CLR vinculan a las bibliotecas de tiempo de ejecución de C de forma predeterminada. Por lo tanto, estos proyectos se clasifican como aplicaciones en modo mixto, ya que combinan código nativo con código que tenga como destino common language runtime (código administrado). Cuando se compilan, sino que se compilan en lenguaje intermedio (IL), también conocido como lenguaje intermedio de Microsoft (MSIL).
+Vinculan todos los proyectos de Visual C++ CLR a las bibliotecas de tiempo de ejecución de C de forma predeterminada. Por lo tanto, estos proyectos se clasifican como aplicaciones en modo mixto, porque combinan código nativo con código que tenga como destino common language runtime (código administrado). Cuando se compilan, se compilan en lenguaje intermedio (IL), también conocido como lenguaje intermedio de Microsoft (MSIL).
 
 > [!IMPORTANT]
-> Visual Studio 2015 en desuso y 2017 de Visual Studio ya no admite la creación de **/CLR: pure** o **/CLR: safe** código para las aplicaciones de CLR. Si necesita ensamblados puros o seguros, se recomienda que convertir la aplicación en C#.
+> En desuso de Visual Studio 2015 y Visual Studio 2017 ya no admite la creación de **/CLR: pure** o **/CLR: safe** código para aplicaciones de CLR. Si necesita ensamblados puros o seguros, se recomienda que convertir la aplicación en C#.
 
-Si está utilizando una versión anterior del conjunto de herramientas de compilador de Visual C++ admiten **/CLR: pure** o **/CLR: safe**, puede usar este procedimiento para convertir el código a MSIL puro:
+Si usa una versión anterior del conjunto de herramientas del compilador de Visual C++ que admita **/CLR: pure** o **/CLR: safe**, puede usar este procedimiento para convertir el código a MSIL puro:
 
 ### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>Para convertir la aplicación de modo mixto a lenguaje intermedio puro
 
-1. Quitar los vínculos a la [bibliotecas en tiempo de ejecución de C](../c-runtime-library/crt-library-features.md) (CRT):
+1. Quitar vínculos a la [bibliotecas en tiempo de ejecución de C](../c-runtime-library/crt-library-features.md) (CRT):
 
-   1. En el archivo .cpp que define el punto de entrada de la aplicación, cambiar el punto de entrada a `Main()`. Usar `Main()` indica que el proyecto no se vincula a la biblioteca CRT.
+   1. En el archivo .cpp que define el punto de entrada de la aplicación, cambiar el punto de entrada a `Main()`. Uso de `Main()` indica que el proyecto no se vincula a CRT.
 
-   2. En el Explorador de soluciones, haga clic en el proyecto y seleccione **propiedades** en el menú contextual para abrir las páginas de propiedades de la aplicación.
+   2. En el Explorador de soluciones, haga clic en el proyecto y seleccione **propiedades** en el menú contextual para abrir las páginas de propiedades para la aplicación.
 
-   3. En el **avanzadas** página de propiedades de proyecto para la **vinculador**, seleccione la **punto de entrada** y, a continuación, escriba **Main** en este campo.
+   3. En el **avanzadas** página de propiedades de proyecto para el **vinculador**, seleccione el **punto de entrada** y, a continuación, escriba **Main** en este campo.
 
-   4. Para aplicaciones de consola, en la **System** página de propiedades de proyecto para la **vinculador**, seleccione la **subsistema** del campo y cambiar este valor a **consola (/ SUBSYSTEM:Console)**.
+   4. Para aplicaciones de consola, en el **sistema** página de propiedades de proyecto para el **vinculador**, seleccione el **subsistema** campo y cambiar esta opción para **consola (/ SUBSYSTEM:Console)**.
 
       > [!NOTE]
-      > No es necesario establecer esta propiedad para aplicaciones de Windows Forms porque el **subsistema** campo está establecido en **Windows (/ SUBSYSTEM: WINDOWS)** de forma predeterminada.
+      > No es necesario establecer esta propiedad para las aplicaciones de Windows Forms porque el **subsistema** campo se establece en **Windows (/ SUBSYSTEM: WINDOWS)** de forma predeterminada.
 
    5. En stdafx.h, convierta en comentario todas las `#include` instrucciones. Por ejemplo, en las aplicaciones de consola:
 
@@ -58,7 +58,7 @@ Si está utilizando una versión anterior del conjunto de herramientas de compil
 
        O bien
 
-       Por ejemplo, en aplicaciones de Windows Forms:
+       Por ejemplo, en las aplicaciones de Windows Forms:
 
       ```cpp
       // #include <stdlib.h>
@@ -84,26 +84,26 @@ Si está utilizando una versión anterior del conjunto de herramientas de compil
 
 3. Quitar todos los tipos no administrados:
 
-   Donde sea necesario, reemplace los tipos no administrados por referencias a estructuras de la [System](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx) espacio de nombres. Tipos administrados más comunes se enumeran en la tabla siguiente:
+   Según sea necesario, reemplace los tipos no administrados por referencias a las estructuras de la [sistema](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx) espacio de nombres. Tipos administrados más comunes se enumeran en la tabla siguiente:
 
    |Estructura|Descripción|
    |---------------|-----------------|
-   |[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean\(v=vs.140\).aspx)|Representa un valor booleano.|
-   |[Byte](https://msdn.microsoft.com/en-us/library/system.byte\(v=vs.140\).aspx)|Representa un entero de 8 bits sin signo.|
-   |[Char](https://msdn.microsoft.com/en-us/library/system.char\(v=vs.140\).aspx)|Representa un carácter Unicode.|
-   |[DateTime](https://msdn.microsoft.com/en-us/library/system.datetime.datetime.aspx)|Representa un instante de tiempo, normalmente expresado en forma de fecha y hora del día.|
-   |[Decimal](https://msdn.microsoft.com/en-us/library/system.decimal\(v=vs.140\).aspx)|Representa un número decimal.|
-   |[Double](https://msdn.microsoft.com/en-us/library/system.double\(v=vs.140\).aspx)|Representa un número de punto flotante de precisión doble.|
-   |[GUID](https://msdn.microsoft.com/en-us/library/system.guid\(v=vs.140\).aspx)|Representa un identificador único global (GUID).|
-   |[Int16](https://msdn.microsoft.com/en-us/library/system.int16\(v=vs.140\).aspx)|Representa un entero de 16 bits con signo.|
-   |[Int32](https://msdn.microsoft.com/en-us/library/system.int32\(v=vs.140\).aspx)|Representa un entero de 32 bits con signo.|
-   |[Int64](https://msdn.microsoft.com/en-us/library/system.int64\(v=vs.140\).aspx)|Representa un entero de 64 bits con signo.|
-   |[IntPtr](https://msdn.microsoft.com/en-us/library/system.intptr\(v=vs.140\).aspx)|Tipo específico de la plataforma que se usa para representar un puntero o un identificador.|
-   |[SByte](https://msdn.microsoft.com/en-us/library/system.byte.aspx)|Representa un entero con signo de 8 bits.|
-   |[Single](https://msdn.microsoft.com/en-us/library/system.single.aspx)|Representa un número de punto flotante de precisión sencilla.|
-   |[TimeSpan](https://msdn.microsoft.com/en-us/library/system.timespan\(v=vs.140\).aspx)|Representa un intervalo de tiempo.|
-   |[UInt16](https://msdn.microsoft.com/en-us/library/system.uint16\(v=vs.140\).aspx)|Representa un entero de 16 bits sin signo.|
-   |[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|Representa un entero de 32 bits sin signo.|
-   |[UInt64](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|Representa un entero de 64 bits sin signo.|
-   |[UIntPtr](https://msdn.microsoft.com/en-us/library/system.uintptr\(v=vs.140\).aspx)|Tipo específico de la plataforma que se usa para representar un puntero o un identificador.|
-   |[void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|Indica un método que no devuelve un valor; es decir, el método tiene el tipo de valor devuelto void.|
+   |[Boolean](https://msdn.microsoft.com/library/system.boolean\(v=vs.140\).aspx)|Representa un valor booleano.|
+   |[Byte](https://msdn.microsoft.com/library/system.byte\(v=vs.140\).aspx)|Representa un entero de 8 bits sin signo.|
+   |[Char](https://msdn.microsoft.com/library/system.char\(v=vs.140\).aspx)|Representa un carácter Unicode.|
+   |[DateTime](https://msdn.microsoft.com/library/system.datetime.datetime.aspx)|Representa un instante de tiempo, normalmente expresado en forma de fecha y hora del día.|
+   |[Decimal](https://msdn.microsoft.com/library/system.decimal\(v=vs.140\).aspx)|Representa un número decimal.|
+   |[Double](https://msdn.microsoft.com/library/system.double\(v=vs.140\).aspx)|Representa un número de punto flotante de precisión doble.|
+   |[GUID](https://msdn.microsoft.com/library/system.guid\(v=vs.140\).aspx)|Representa un identificador único global (GUID).|
+   |[Int16](https://msdn.microsoft.com/library/system.int16\(v=vs.140\).aspx)|Representa un entero de 16 bits con signo.|
+   |[Int32](https://msdn.microsoft.com/library/system.int32\(v=vs.140\).aspx)|Representa un entero de 32 bits con signo.|
+   |[Int64](https://msdn.microsoft.com/library/system.int64\(v=vs.140\).aspx)|Representa un entero de 64 bits con signo.|
+   |[IntPtr](https://msdn.microsoft.com/library/system.intptr\(v=vs.140\).aspx)|Tipo específico de la plataforma que se usa para representar un puntero o un identificador.|
+   |[SByte](https://msdn.microsoft.com/library/system.byte.aspx)|Representa un entero con signo de 8 bits.|
+   |[Single](https://msdn.microsoft.com/library/system.single.aspx)|Representa un número de punto flotante de precisión sencilla.|
+   |[TimeSpan](https://msdn.microsoft.com/library/system.timespan\(v=vs.140\).aspx)|Representa un intervalo de tiempo.|
+   |[UInt16](https://msdn.microsoft.com/library/system.uint16\(v=vs.140\).aspx)|Representa un entero de 16 bits sin signo.|
+   |[UInt32](https://msdn.microsoft.com/library/system.uint32\(v=vs.140\).aspx)|Representa un entero de 32 bits sin signo.|
+   |[UInt64](https://msdn.microsoft.com/library/system.uint64\(v=vs.140\).aspx)|Representa un entero de 64 bits sin signo.|
+   |[UIntPtr](https://msdn.microsoft.com/library/system.uintptr\(v=vs.140\).aspx)|Tipo específico de la plataforma que se usa para representar un puntero o un identificador.|
+   |[Void](https://msdn.microsoft.com/library/system.void\(v=vs.140\).aspx)|Indica un método que no devuelve un valor; es decir, el método tiene el tipo de valor devuelto void.|

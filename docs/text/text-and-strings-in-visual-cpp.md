@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cf9133965a9009421c28f64c1f4157b4a6a6d6b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610719"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223300"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texto y cadenas en Visual C++
 Un aspecto importante en el desarrollo de aplicaciones para los mercados internacionales es la representación apropiada de los juegos de caracteres locales. El juego de caracteres ASCII define los caracteres que están en el intervalo de 0x00 a 0x7F. Hay otros juegos de caracteres, principalmente europeos, que definen los caracteres que están en el intervalo de 0x00 a 0x7F, al igual que el juego de caracteres ASCII, y que también definen un juego de caracteres extendidos de 0x80 a 0xFF. De este modo, un juego de caracteres de un solo byte (SBCS) de 8 bits es suficiente para representar el juego de caracteres ASCII, así como los juegos de caracteres de la mayoría de idiomas europeos. Sin embargo, algunos juegos de caracteres no europeos, como los caracteres Kanji del japonés, incluyen muchos más caracteres de los que puede representar un esquema de codificación de un solo byte y, por consiguiente, requieren una codificación de juego de caracteres multibyte (MBCS).  
@@ -64,7 +64,7 @@ Un aspecto importante en el desarrollo de aplicaciones para los mercados interna
  [Internacionalización](../c-runtime-library/internationalization.md)  
  Describe la compatibilidad internacional en la biblioteca en tiempo de ejecución de C.  
   
- [Ejemplos de programación internacional](http://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ [Ejemplos de programación internacional](https://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
  Proporciona vínculos a ejemplos en los que se muestra la internacionalización en Visual C++.  
   
  [Cadenas de idioma de país o región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  

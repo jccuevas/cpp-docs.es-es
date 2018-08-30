@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541686"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222099"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo (clase)
 La `CMFCFontInfo` clase describe el nombre y otros atributos de una fuente.  
@@ -95,16 +95,16 @@ CMFCFontInfo(const CMFCFontInfo& src);
   
 ### <a name="parameters"></a>Parámetros  
  [in] *lpszName*  
- El nombre de la fuente. Para obtener más información, consulte el `lfFaceName` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura.  
+ El nombre de la fuente. Para obtener más información, consulte el `lfFaceName` miembro de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura.  
   
  [in] *lpszScript*  
  El nombre de la secuencia de comandos (juego de caracteres) de la fuente.  
   
  [in] *nCharSet*  
- Un valor que especifica el juego de caracteres (script) de la fuente. Para obtener más información, consulte el `lfCharSet` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura.  
+ Un valor que especifica el juego de caracteres (script) de la fuente. Para obtener más información, consulte el `lfCharSet` miembro de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura.  
   
  [in] *nPitchAndFamily*  
- Un valor que especifica el cabeceo y la familia de la fuente. Para obtener más información, consulte el `lfPitchAndFamily` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura.  
+ Un valor que especifica el cabeceo y la familia de la fuente. Para obtener más información, consulte el `lfPitchAndFamily` miembro de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura.  
   
  [in] *nLas*  
  Un valor que especifica el tipo de fuente. Este parámetro puede ser una combinación bit a bit (OR) de DEVICE_FONTTYPE, RASTER_FONTTYPE y TRUETYPE_FONTTYPE.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Valor devuelto  
   
 ### <a name="remarks"></a>Comentarios  
- Esta documentación utiliza los términos *juego de caracteres* y *script* indistintamente. Un *script*, que también se denomina es un sistema de escritura, es una colección de reglas para escribir estos caracteres en uno o varios idiomas y caracteres. El conjunto de caracteres que incluye el alfabeto y la puntuación que se usa en el script. Por ejemplo, alfabeto latino sirve para inglés se habla en Estados Unidos, y su alfabeto incluye los caracteres de la A Z. El `lfCharSet` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura especifica un juego de caracteres. Por ejemplo, el valor ANSI_CHARSET especifica el juego de caracteres ANSI, lo que incluye el alfabeto del alfabeto latino.  
+ Esta documentación utiliza los términos *juego de caracteres* y *script* indistintamente. Un *script*, que también se denomina es un sistema de escritura, es una colección de reglas para escribir estos caracteres en uno o varios idiomas y caracteres. El conjunto de caracteres que incluye el alfabeto y la puntuación que se usa en el script. Por ejemplo, alfabeto latino sirve para inglés se habla en Estados Unidos, y su alfabeto incluye los caracteres de la A Z. El `lfCharSet` miembro de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura especifica un juego de caracteres. Por ejemplo, el valor ANSI_CHARSET especifica el juego de caracteres ANSI, lo que incluye el alfabeto del alfabeto latino.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Recupera los nombres de una fuente y el carácter concatenados conjunto (script).  

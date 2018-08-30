@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b0f46724dd552639c215093f74d8eb14d8afdd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 17ca93348ab5535908ea8b2d035669f7e61cef55
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42545904"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221361"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl (clase)
 Proporciona la funcionalidad del control de barra de estado común de Windows.  
@@ -133,10 +133,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parámetros  
  *dwStyle*  
- Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de los estilos de control que aparece en la barra de estado [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) en el SDK de Windows. Este parámetro debe incluir el estilo WS_CHILD. También debe incluir el estilo WS_VISIBLE.  
+ Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de los estilos de control que aparece en la barra de estado [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows. Este parámetro debe incluir el estilo WS_CHILD. También debe incluir el estilo WS_VISIBLE.  
   
  *Rect*  
- Especifica el tamaño y la posición del control de barra de estado. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.  
+ Especifica el tamaño y la posición del control de barra de estado. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.  
   
  *pParentWnd*  
  Especifica el estado de la barra de la ventana primaria de control, normalmente un `CDialog`. No debe ser NULL.  
@@ -171,13 +171,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parámetros  
  *dwExStyle*  
- Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
+ Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) en el SDK de Windows.  
   
  *dwStyle*  
- Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de los estilos de control que aparece en la barra de estado [estilos de Control comunes](http://msdn.microsoft.com/library/windows/desktop/bb775498) en el SDK de Windows. Este parámetro debe incluir el estilo WS_CHILD. También debe incluir el estilo WS_VISIBLE.  
+ Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de los estilos de control que aparece en la barra de estado [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows. Este parámetro debe incluir el estilo WS_CHILD. También debe incluir el estilo WS_VISIBLE.  
   
  *Rect*  
- Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.  
+ Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.  
   
  *pParentWnd*  
  Un puntero a la ventana que es primario del control.  
@@ -207,7 +207,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>Parámetros  
  *lpDrawItemStruct*  
- Un puntero largo a un [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) estructura que contiene información sobre el tipo de dibujo necesaria.  
+ Un puntero largo a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estructura que contiene información sobre el tipo de dibujo necesaria.  
   
 ### <a name="remarks"></a>Comentarios  
  El `itemAction` miembro de la `DRAWITEMSTRUCT` estructura define la acción de dibujo que se realiza.  
@@ -267,7 +267,7 @@ HICON GetIcon(int iPart) const;
  El identificador del icono si el método es correcto; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método envía el [SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744) mensaje, que se describe en el SDK de Windows.  
+ Este método envía el [SB_GETICON](/windows/desktop/Controls/sb-geticon) mensaje, que se describe en el SDK de Windows.  
   
  Consta de un control de barra de estado de una fila de paneles de salida de texto, que también se denomina son partes. Para obtener más información acerca de la barra de estado, vea [implementación de la barra de estado en MFC](../../mfc/status-bar-implementation-in-mfc.md) y [establecer el modo de un objeto CStatusBarCtrl](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).  
   
@@ -320,7 +320,7 @@ BOOL GetRect(
  Índice de base cero del elemento cuyo rectángulo delimitador es va a recuperar.  
   
  *lpRect*  
- Dirección de un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe el rectángulo delimitador.  
+ Dirección de un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe el rectángulo delimitador.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si es correcto. En caso contrario, es cero.  
@@ -411,7 +411,7 @@ CString GetTipText(int nPane) const;
  Un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto que contiene el texto que se usará en la información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro implementa el comportamiento del mensaje de Win32 [SB_GETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760751), tal y como se describe en el SDK de Windows.  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [SB_GETTIPTEXT](/windows/desktop/Controls/sb-gettiptext), tal y como se describe en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
@@ -427,7 +427,7 @@ BOOL IsSimple() const;
  Distinto de cero si el control de ventana de estado se encuentra en el modo simple; en caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro implementa el comportamiento del mensaje de Win32 [SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753), tal y como se describe en el SDK de Windows.  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [SB_ISSIMPLE](/windows/desktop/Controls/sb-issimple), tal y como se describe en el SDK de Windows.  
   
 ##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
  Establece el color de fondo de una barra de estado.  
@@ -441,10 +441,10 @@ COLORREF SetBkColor(COLORREF cr);
  Valor COLORREF que especifica el nuevo color de fondo. Especifique el valor CLR_DEFAULT para hacer que la barra de estado utilizar su color de fondo predeterminado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que representa el color de fondo predeterminado anterior.  
+ Un [COLORREF](/windows/desktop/gdi/colorref) valor que representa el color de fondo predeterminado anterior.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro implementa el comportamiento del mensaje de Win32 [SB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760754), tal y como se describe en el SDK de Windows.  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [SB_SETBKCOLOR](/windows/desktop/Controls/sb-setbkcolor), tal y como se describe en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
@@ -469,7 +469,7 @@ BOOL SetIcon(
  Es distinto de cero si es correcto. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro implementa el comportamiento del mensaje de Win32 [SB_SETICON](http://msdn.microsoft.com/library/windows/desktop/bb760755), tal y como se describe en el SDK de Windows.  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [SB_SETICON](/windows/desktop/Controls/sb-seticon), tal y como se describe en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CStatusBarCtrl::SetBkColor](#setbkcolor).  
@@ -576,7 +576,7 @@ void SetTipText(
  Un puntero a una cadena que contiene el texto de información sobre herramientas.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro implementa el comportamiento del mensaje de Win32 [SB_SETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760759), tal y como se describe en el SDK de Windows.  
+ Esta función miembro implementa el comportamiento del mensaje de Win32 [SB_SETTIPTEXT](/windows/desktop/Controls/sb-settiptext), tal y como se describe en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]  

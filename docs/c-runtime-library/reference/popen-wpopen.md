@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a7764e15b18249a9ee3ddd452ae792c8ad172f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404485"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218391"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -88,18 +88,18 @@ Para obtener información sobre estos y otros códigos de error, vea [_doserrno,
 
 El **_popen** función crea una canalización y ejecuta de forma asincrónica una copia generada del procesador de comandos con la cadena especificada de *comando*. La cadena de caracteres *mode* especifica el tipo de acceso solicitado, como se indica a continuación.
 
-**"r"** el proceso de llamada puede leer la salida estándar del comando generado mediante la secuencia devuelta.
+**"r"** el proceso de llamada puede leer la salida estándar del comando generado utilizando la secuencia devuelta.
 
-**"w"** el proceso de llamada puede escribir en la entrada estándar del comando generado mediante la secuencia devuelta.
+**"w"** el proceso de llamada puede escribir en la entrada estándar del comando generado utilizando la secuencia devuelta.
 
 **"b"** abierto en modo binario.
 
 **"t"** abierto en modo de texto.
 
 > [!NOTE]
-> Si usa un programa de Windows, la **_popen** función devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y salida, consulte [crear un proceso secundario con redirección de entrada y salida](http://msdn.microsoft.com/library/windows/desktop/ms682499) del SDK de Windows.
+> Si se usa en un programa de Windows, el **_popen** función devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y salida, consulte [crear un proceso secundario con redirección de entrada y salida](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) en el SDK de Windows.
 
-**_wpopen** es una versión con caracteres anchos de **_popen**; el *ruta de acceso* argumento pasado a **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan exactamente igual.
+**_wpopen** es una versión con caracteres anchos de **_popen**; el *ruta* argumento **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56fc61fa7dd7973a6ee1cc4c5a20311bf43b056f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572108"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218674"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Solucionar problemas de aplicaciones aisladas y ensamblados simultáneos de C/C++
 La acción de cargar una aplicación de C/C++ puede sufrir un error si no se pueden encontrar las bibliotecas dependientes. En este artículo se describen algunas de las razones comunes por las que una aplicación de C/C++ no se carga y se sugieren pasos para resolver los problemas.  
@@ -46,14 +46,14 @@ La acción de cargar una aplicación de C/C++ puede sufrir un error si no se pue
   
 3.  Si la aplicación depende de ensamblados en paralelo y no existe un manifiesto, debe asegurarse de que el vinculador genere uno para el proyecto. Active la opción del vinculador **Generar manifiesto** en el **las propiedades del proyecto** cuadro de diálogo para el proyecto.  
   
-4.  Si el manifiesto está incrustado en el binario, asegúrese de que el identificador de RT_MANIFEST es correcto para este tipo del binario. Para obtener más información sobre el identificador de recurso para usar, consulte [Using Side-by-Side Assemblies como un recurso (Windows)](http://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Si el manifiesto se encuentra en un archivo independiente, ábralo en un editor XML o en un editor de texto. Para obtener más información sobre los manifiestos y reglas para la implementación, consulte [manifiestos](http://msdn.microsoft.com/library/aa375365).  
+4.  Si el manifiesto está incrustado en el binario, asegúrese de que el identificador de RT_MANIFEST es correcto para este tipo del binario. Para obtener más información sobre el identificador de recurso para usar, consulte [Using Side-by-Side Assemblies como un recurso (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Si el manifiesto se encuentra en un archivo independiente, ábralo en un editor XML o en un editor de texto. Para obtener más información sobre los manifiestos y reglas para la implementación, consulte [manifiestos](https://msdn.microsoft.com/library/aa375365).  
   
     > [!NOTE]
     >  Si hay un manifiesto incrustado y un archivo de manifiesto independiente, el cargador del sistema operativo utiliza el manifiesto incrustado y omite el archivo independiente. Sin embargo, en Windows XP, se cumple lo contrario: se usa el archivo de manifiesto independiente y se omite el manifiesto incrustado.  
   
-5.  Se recomienda que incruste un manifiesto en cada archivo DLL porque los manifiestos externos se omiten cuando se carga un archivo DLL a través de una llamada a `LoadLibrary`. Para obtener más información, consulte [manifiestos del ensamblado](http://msdn.microsoft.com/library/aa374219).  
+5.  Se recomienda que incruste un manifiesto en cada archivo DLL porque los manifiestos externos se omiten cuando se carga un archivo DLL a través de una llamada a `LoadLibrary`. Para obtener más información, consulte [manifiestos del ensamblado](/windows/desktop/SbsCs/assembly-manifests).  
   
-6.  Compruebe que todos los ensamblados enumerados en el manifiesto estén instalados correctamente en el equipo. Cada ensamblado se especifica en el manifiesto por su nombre, el número de versión y la arquitectura del procesador. Si la aplicación depende de los ensamblados en paralelo, compruebe que estos ensamblados estén instalados correctamente en el equipo para que el cargador del sistema operativo pueda encontrarlos, tal como se describe en [Assembly Searching Sequence](http://msdn.microsoft.com/library/aa374224). Recuerde que los ensamblados de 64 bits no se pueden cargar en procesos de 32 bits ni ejecutarse en sistemas operativos de 32 bits.  
+6.  Compruebe que todos los ensamblados enumerados en el manifiesto estén instalados correctamente en el equipo. Cada ensamblado se especifica en el manifiesto por su nombre, el número de versión y la arquitectura del procesador. Si la aplicación depende de los ensamblados en paralelo, compruebe que estos ensamblados estén instalados correctamente en el equipo para que el cargador del sistema operativo pueda encontrarlos, tal como se describe en [Assembly Searching Sequence](/windows/desktop/SbsCs/assembly-searching-sequence). Recuerde que los ensamblados de 64 bits no se pueden cargar en procesos de 32 bits ni ejecutarse en sistemas operativos de 32 bits.  
   
 ## <a name="example"></a>Ejemplo  
  Supongamos que tenemos una aplicación, appl.exe, que se compila con Visual C++. El manifiesto de la aplicación está incrustado en appl.exe como recurso binario RT_MANIFEST con un identificador igual a 1 o está almacenado como archivo independiente appl.exe.manifest. El contenido de este manifiesto se asemeja a lo siguiente:  
@@ -82,7 +82,7 @@ La acción de cargar una aplicación de C/C++ puede sufrir un error si no se pue
 </assembly>  
 ```  
   
- También pueden usar los ensamblados en paralelo [archivos de configuración del publicador](http://msdn.microsoft.com/library/aa375682), también conocidos como archivos de directiva, para redirigir globalmente aplicaciones y ensamblados para usar una versión de un ensamblado en paralelo en lugar de otra versión del mismo ensamblado. Puede comprobar las directivas para un ensamblado compartido en la carpeta %WINDIR%\WinSxS\Policies\. A continuación se muestra un archivo de directivas del ejemplo:  
+ También pueden usar los ensamblados en paralelo [archivos de configuración del publicador](/windows/desktop/SbsCs/publisher-configuration-files), también conocidos como archivos de directiva, para redirigir globalmente aplicaciones y ensamblados para usar una versión de un ensamblado en paralelo en lugar de otra versión del mismo ensamblado. Puede comprobar las directivas para un ensamblado compartido en la carpeta %WINDIR%\WinSxS\Policies\. A continuación se muestra un archivo de directivas del ejemplo:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -106,7 +106,7 @@ La acción de cargar una aplicación de C/C++ puede sufrir un error si no se pue
   
 2.  Intente abrir el \\< assemblyName\>\ en la carpeta que contiene appl.exe, y si \\< assemblyName\>\ existe, intenta cargar un archivo de manifiesto que tiene el nombre \<assemblyName >. manifiesto desde esta carpeta. Si se encuentra el manifiesto, el cargador carga el ensamblado desde el \\< assemblyName\>\ carpeta. Si no se encuentra el ensamblado, la carga sufre un error.  
   
- Para obtener más información sobre cómo el cargador busca ensamblados dependientes, consulte [Assembly Searching Sequence](http://msdn.microsoft.com/library/aa374224). Si el cargador no encuentra un ensamblado dependiente como ensamblado privado, la carga sufre un error y se muestra el mensaje "El sistema no puede ejecutar el programa especificado". Para solucionar este error, asegúrese de que los ensamblados dependientes, y los archivos DLL que forman parte de ellos, estén instalados en el equipo como ensamblados privados o compartidos.  
+ Para obtener más información sobre cómo el cargador busca ensamblados dependientes, consulte [Assembly Searching Sequence](/windows/desktop/SbsCs/assembly-searching-sequence). Si el cargador no encuentra un ensamblado dependiente como ensamblado privado, la carga sufre un error y se muestra el mensaje "El sistema no puede ejecutar el programa especificado". Para solucionar este error, asegúrese de que los ensamblados dependientes, y los archivos DLL que forman parte de ellos, estén instalados en el equipo como ensamblados privados o compartidos.  
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos de aplicaciones aisladas y ensamblados en paralelo](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   

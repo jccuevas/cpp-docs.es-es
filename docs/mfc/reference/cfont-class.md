@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a598a05c31c36c7defd5fe2441031d3bccdf20f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2781a41ddadc6932e1c5797f098407b7dd5e4f29
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336795"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221233"
 ---
 # <a name="cfont-class"></a>CFont (clase)
 Encapsula una fuente de la Interfaz de dispositivo gráfico (GDI) de Windows y proporciona funciones miembro para manipular la fuente.  
@@ -124,7 +124,7 @@ BOOL CreateFont(
   
 ### <a name="parameters"></a>Parámetros  
  *nHeight*  
- Especifica el alto deseado (en unidades lógicas) de la fuente. Consulte la `lfHeight` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)estructura en el SDK de Windows para obtener una descripción. El valor absoluto de *nHeight* no debe superar los 16 384 unidades de dispositivo después de convertirse. Para las comparaciones de alto, el asignador de fuentes busca la fuente más grande que no supere el tamaño solicitado o la fuente más pequeña si todas las fuentes superan el tamaño solicitado.  
+ Especifica el alto deseado (en unidades lógicas) de la fuente. Consulte la `lfHeight` miembro de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)estructura en el SDK de Windows para obtener una descripción. El valor absoluto de *nHeight* no debe superar los 16 384 unidades de dispositivo después de convertirse. Para las comparaciones de alto, el asignador de fuentes busca la fuente más grande que no supere el tamaño solicitado o la fuente más pequeña si todas las fuentes superan el tamaño solicitado.  
   
  *nWidth*  
  Especifica el ancho medio (en unidades lógicas) de caracteres de la fuente. Si *nWidth* es 0, la relación de aspecto del dispositivo se comparará con la relación de aspecto de digitalización de las fuentes disponibles para encontrar la coincidencia más cercana, que viene determinada por el valor absoluto de la diferencia.  
@@ -173,7 +173,7 @@ BOOL CreateFont(
  Especifica el cabeceo y la familia de la fuente. Consulte la `lfPitchAndFamily` miembro en el `LOGFONT` estructura en el SDK de Windows para obtener una lista de valores y obtener más información.  
   
  *lpszFacename*  
- Un `CString` o puntero a una cadena terminada en null que especifica el nombre de tipo de letra de la fuente. La longitud de esta cadena no debe superar los 30 caracteres. El Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) función se puede usar para enumerar todas las fuentes disponibles actualmente. Si *lpszFacename* es NULL, la GDI usa un tipo de letra independientes del dispositivo.  
+ Un `CString` o puntero a una cadena terminada en null que especifica el nombre de tipo de letra de la fuente. La longitud de esta cadena no debe superar los 30 caracteres. El Windows [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa) función se puede usar para enumerar todas las fuentes disponibles actualmente. Si *lpszFacename* es NULL, la GDI usa un tipo de letra independientes del dispositivo.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -191,7 +191,7 @@ BOOL CreateFont(
  [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
 ##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect  
- Inicializa un `CFont` objeto con las características de un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)estructura.  
+ Inicializa un `CFont` objeto con las características de un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)estructura.  
   
 ```  
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
@@ -207,7 +207,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="remarks"></a>Comentarios  
  Posteriormente se puede seleccionar la fuente como la fuente actual para cualquier dispositivo.  
   
- Esta fuente tiene las características especificadas en el [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura. Cuando se selecciona la fuente mediante el uso de la [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) función miembro, el asignador de fuentes GDI intenta hacer coincidir la fuente lógica a una fuente física existente. Si se produce un error en el asignador de fuentes buscar a una coincidencia exacta para la fuente lógica, proporciona una fuente alternativo cuyas características coinciden con todas las características solicitadas como sea posible.  
+ Esta fuente tiene las características especificadas en el [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura. Cuando se selecciona la fuente mediante el uso de la [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) función miembro, el asignador de fuentes GDI intenta hacer coincidir la fuente lógica a una fuente física existente. Si se produce un error en el asignador de fuentes buscar a una coincidencia exacta para la fuente lógica, proporciona una fuente alternativo cuyas características coinciden con todas las características solicitadas como sea posible.  
   
  Cuando ya no necesita la `CFont` objeto creado por el `CreateFontIndirect` función, utilice `CDC::SelectObject` para seleccionar una fuente diferente en el contexto de dispositivo, a continuación, elimine la `CFont` objeto que ya no es necesario.  
   
@@ -256,7 +256,7 @@ BOOL CreatePointFontIndirect(
   
 ### <a name="parameters"></a>Parámetros  
  *lpLogFont*  
- Apunta a un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura que define las características de la fuente lógica. El `lfHeight` miembro de la `LOGFONT` estructura se mide en décimas de un punto en lugar de unidades lógicas. (Por ejemplo, establecer `lfHeight` en 120 para solicitar una fuente de 12 puntos.)  
+ Apunta a un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura que define las características de la fuente lógica. El `lfHeight` miembro de la `LOGFONT` estructura se mide en décimas de un punto en lugar de unidades lógicas. (Por ejemplo, establecer `lfHeight` en 120 para solicitar una fuente de 12 puntos.)  
   
  *pDC*  
  Puntero a la [CDC](../../mfc/reference/cdc-class.md) objeto que se usará para convertir el alto en `lfHeight` unidades lógicas. Si es NULL, se usa un contexto de dispositivo de pantalla para la conversión.  
@@ -301,7 +301,7 @@ int GetLogFont(LOGFONT* pLogFont);
   
 ### <a name="parameters"></a>Parámetros  
  *pLogFont*  
- Puntero a la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura para recibir la información de fuentes.  
+ Puntero a la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura para recibir la información de fuentes.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si la función se realiza correctamente, en caso contrario, 0.  
@@ -320,9 +320,9 @@ operator HFONT() const;
  El identificador del objeto font GDI de Windows conectados a `CFont` si es correcto; de lo contrario, NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- Puesto que este operador se usa automáticamente para las conversiones de `CFont` a [fuentes y texto](http://msdn.microsoft.com/library/windows/desktop/dd144819), puede pasar `CFont` objetos a funciones que esperan HFONTs.  
+ Puesto que este operador se usa automáticamente para las conversiones de `CFont` a [fuentes y texto](/windows/desktop/gdi/fonts-and-text), puede pasar `CFont` objetos a funciones que esperan HFONTs.  
   
- Para obtener más información sobre el uso de objetos gráficos, consulte [gráfico de objetos](http://msdn.microsoft.com/library/windows/desktop/dd144962) en el SDK de Windows.  
+ Para obtener más información sobre el uso de objetos gráficos, consulte [gráfico de objetos](/windows/desktop/gdi/graphic-objects) en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]  

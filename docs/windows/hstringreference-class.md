@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de3c7fe60432acfc3096ea19fc00cf371a7c4e92
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4e3f7d59dd86aa15833134223854eb9ed01f6679
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610511"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216580"
 ---
 # <a name="hstringreference-class"></a>HStringReference (Clase)
 
@@ -34,7 +34,7 @@ class HStringReference;
 
 ## <a name="remarks"></a>Comentarios
 
-El tiempo de ejecución de Windows no administra la duración del búfer de respaldo en la nueva HSTRING. El llamador asigna una cadena de origen en el marco de pila para evitar una asignación del montón y para eliminar el riesgo de pérdida de memoria. Además, el llamador debe asegurarse de que la cadena original permanece intacta durante la duración de HSTRING adjunto. Para obtener más información, consulte [WindowsCreateStringReference función](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).
+El tiempo de ejecución de Windows no administra la duración del búfer de respaldo en la nueva HSTRING. El llamador asigna una cadena de origen en el marco de pila para evitar una asignación del montón y para eliminar el riesgo de pérdida de memoria. Además, el llamador debe asegurarse de que la cadena original permanece intacta durante la duración de HSTRING adjunto. Para obtener más información, consulte [WindowsCreateStringReference función](https://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).
 
 ## <a name="members"></a>Miembros
 

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e4d51687f1f005ad6c6e655e243275508d1529
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bebc146994e440d4dbfbd0bd3a5e29f597140d8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849781"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216335"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem (clase)
 Implementa la contención del documento activo.  
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
  El identificador de comando para ejecutar. Debe estar en el grupo identificado por *pguidCmdGroup*.  
   
  *nCmdExecOpt*  
- Especifica las opciones de ejecución del comando. De forma predeterminada, establecido para ejecutar el comando sin preguntar al usuario. Consulte [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) para obtener una lista de valores.  
+ Especifica las opciones de ejecución del comando. De forma predeterminada, establecido para ejecutar el comando sin preguntar al usuario. Consulte [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) para obtener una lista de valores.  
   
  *pguidCmdGroup*  
  Identificador único del grupo de comandos. De forma predeterminada, NULL, lo que especifica el grupo estándar. El comando se pasa en *nCmdID* debe pertenecer al grupo.  
@@ -172,7 +172,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la [IOleDocumentView](http://msdn.microsoft.com/library/windows/desktop/ms678455) interfaz de la vista activa actualmente. Si no hay ninguna vista actual, devuelve NULL.  
+ Un puntero a la [IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) interfaz de la vista activa actualmente. Si no hay ninguna vista actual, devuelve NULL.  
   
 ### <a name="remarks"></a>Comentarios  
  El recuento de referencias en el valor devuelto `IOleDocumentView` no se incrementa el puntero antes de ser devuelto por esta función.  
@@ -255,19 +255,19 @@ HRESULT QueryCommand(
  identificador del comando que se consulta.  
   
  *pdwStatus*  
- Un puntero a los indicadores devueltos como resultado de la consulta. Para obtener una lista de valores posibles, vea [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237).  
+ Un puntero a los indicadores devueltos como resultado de la consulta. Para obtener una lista de valores posibles, vea [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).  
   
  *pCmdText*  
- Puntero a un [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) estructura en la que se va a devolver información de nombre y el estado de un solo comando. Puede ser NULL para indicar que el llamador no necesita esta información.  
+ Puntero a un [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext) estructura en la que se va a devolver información de nombre y el estado de un solo comando. Puede ser NULL para indicar que el llamador no necesita esta información.  
   
  *pguidCmdGroup*  
  Identificador único del grupo de comandos; puede ser NULL para especificar el grupo estándar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Para obtener una lista completa de los valores devueltos, vea [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) en el SDK de Windows.  
+ Para obtener una lista completa de los valores devueltos, vea [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) en el SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro emula la funcionalidad de la [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) método, como se describe en el SDK de Windows.  
+ Esta función miembro emula la funcionalidad de la [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) método, como se describe en el SDK de Windows.  
   
 ##  <a name="release"></a>  COleDocObjectItem::Release  
  Libera la conexión a un elemento vinculado de OLE y se cierra si estaba abierta. No se destruye el elemento de cliente.  

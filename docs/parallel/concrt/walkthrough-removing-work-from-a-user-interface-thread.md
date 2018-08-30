@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3da35d2134daa20faf53336902ba6612f4b9904
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 663f8f3921788e64b26a57e95537ab44c757ea17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612108"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211425"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Tutorial: Quitar trabajo de un subproceso de la interfaz de usuario
 Este documento muestra cómo usar el Runtime de simultaneidad para mover el trabajo realizado por el subproceso de interfaz de usuario (UI) en una aplicación de Microsoft Foundation Classes (MFC) para un subproceso de trabajo. Este documento también muestra cómo mejorar el rendimiento de una operación de dibujo prolongada.  
@@ -40,7 +40,7 @@ Este documento muestra cómo usar el Runtime de simultaneidad para mover el trab
   
 -   [Cancelación en la biblioteca PPL](cancellation-in-the-ppl.md)  
   
- También se recomienda comprender los aspectos básicos del desarrollo de aplicaciones de MFC y GDI + antes de empezar este tutorial. Para obtener más información acerca de MFC, vea [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md). Para obtener más información acerca de GDI +, consulte [GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
+ También se recomienda comprender los aspectos básicos del desarrollo de aplicaciones de MFC y GDI + antes de empezar este tutorial. Para obtener más información acerca de MFC, vea [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md). Para obtener más información acerca de GDI +, consulte [GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798).  
   
 ##  <a name="top"></a> Secciones  
  Este tutorial contiene las siguientes secciones:  

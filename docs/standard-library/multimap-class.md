@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c5bf13a675280b12872c5a5e7bbf19367ff0143
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e94acf4b8fad401077a5530d4b6296c30c2740
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027737"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220113"
 ---
 # <a name="multimap-class"></a>multimap (Clase)
 
@@ -119,15 +119,19 @@ class multimap;
 
 ### <a name="parameters"></a>Parámetros
 
-*Clave* escriba los datos de clave que se almacenará en el mapa múltiple.
+*Key*<br/>
+ Tipo de datos de clave que se almacenará en la clase multimap.
 
-*Tipo* tipo de los datos del elemento que se almacenará en el mapa múltiple.
+*Type*<br/>
+ Tipo de datos de elemento que se almacenará en la clase multimap.
 
-*Rasgos* el tipo que proporciona un objeto de función que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo en el mapa múltiple. El predicado binario `less<Key>` es el valor predeterminado.
+*Rasgos*<br/>
+ Tipo que proporciona un objeto de función que puede comparar dos valores de elementos como claves de ordenación para determinar su orden relativo en la clase multimap. El predicado binario `less<Key>` es el valor predeterminado.
 
 En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14).
 
-*Asignador* el tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la asignación. Este argumento es opcional y el valor predeterminado es `allocator<pair <const Key, Type> >`.
+*Asignador*<br/>
+ Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la asignación. Este argumento es opcional y el valor predeterminado es `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -404,11 +408,11 @@ typedef implementation-defined const_iterator;
 
 Un tipo `const_iterator` no se puede utilizar para modificar el valor de un elemento.
 
-El `const_iterator` definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair`*\<***clave const**, **Tipo***>*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.
+El `const_iterator` definido por los puntos de mapa múltiple para objetos de [value_type](#value_type), que son de tipo `pair<const Key, Type>`. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.
 
-Para desreferenciar un `const_iterator` `cIter` que apunta a un elemento en un mapa múltiple, use el **->** operador.
+Para desreferenciar un `const_iterator` *cIter* que apunta a un elemento en un mapa múltiple, use el **->** operador.
 
-Para tener acceso al valor de clave del elemento, use `cIter` -> **first**, que es equivalente a (\* `cIter`). **first**. Para tener acceso al valor de la referencia asignada del elemento, use `cIter` -> **second**, que es equivalente a (\* `cIter`). **second**.
+Para obtener acceso al valor de la clave para el elemento, utilice `cIter->first`, que es equivalente a `(*cIter).first`. Para obtener acceso al valor de la referencia asignada del elemento, utilice `cIter->second`, que es equivalente a `(*cIter).second`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -490,11 +494,11 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 Un tipo `const_reverse_iterator` no puede modificar el valor de un elemento y se usa para iterar en el mapa múltiple en orden inverso.
 
-El `const_reverse_iterator` definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair`*\<***clave const**, **Tipo***>*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.
+El `const_reverse_iterator` definido por los puntos de mapa múltiple para objetos de [value_type](#value_type), que son de tipo `pair<const Key, Type>`. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.
 
-Para desreferenciar un `const_reverse_iterator` `crIter` que apunta a un elemento en un mapa múltiple, use el **->** operador.
+Para desreferenciar un `const_reverse_iterator` *crIter* que apunta a un elemento en un mapa múltiple, use el **->** operador.
 
-Para tener acceso al valor de clave del elemento, use `crIter` -> **first**, que es equivalente a (\* `crIter`). **first**. Para tener acceso al valor de la referencia asignada del elemento, use `crIter` -> **second**, que es equivalente a (\* `crIter`). **first**.
+Para obtener acceso al valor de la clave para el elemento, utilice `crIter->first`, que es equivalente a `(*crIter).first`. Para obtener acceso al valor de la referencia asignada del elemento, utilice `crIter->second`, que es equivalente a `(*crIter).first`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -510,7 +514,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*clave* la clave de los elementos que deben coincidir el mapa múltiple.
+*key*<br/>
+ La clave de los elementos de la asignación múltiple que deben coincidir.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -910,7 +915,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*clave* la clave de argumento que se comparará con la clave de ordenación de un elemento de la asignación múltiple que se está buscando.
+*key*<br/>
+ La clave de argumento que se comparará con la clave de ordenación de un elemento del mapa múltiple que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -996,13 +1002,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parámetros
 
-*Donde* posición del elemento que se va a quitar.
+*Where*<br/>
+ Posición del elemento que se va a quitar.
 
-*Primera* posición del primer elemento que se va a quitar.
+*Primero*<br/>
+ Posición del primer elemento que se va a quitar.
 
-*Último* posición inmediatamente siguiente al último elemento que se va a quitar.
+*Último*<br/>
+ Posición situada más allá del último elemento que se va a quitar.
 
-*Clave* la clave de los elementos que se va a quitar.
+*Key*<br/>
+ Clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1027,7 +1037,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*clave* el valor de clave que debe coincidir con la clave de ordenación de un elemento de la asignación múltiple que se está buscando.
+*key*<br/>
+ El valor de la clave con el que debe coincidir el criterio de ordenación de un elemento de la asignación múltiple en la que se buscará.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1350,11 +1361,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Comentarios
 
-El `iterator` definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair`*\<***clave const**, **Tipo***>*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.
+El `iterator` definido por los puntos de mapa múltiple para objetos de [value_type](#value_type), que son de tipo `pair<const Key, Type>`. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.
 
-Para desreferenciar un **iterador** `Iter` que apunta a un elemento en un mapa múltiple, use el `->` operador.
+Para desreferenciar un `iterator` *Iter* que apunta a un elemento en un mapa múltiple, use el **->** operador.
 
-Para tener acceso al valor de clave del elemento, use `Iter` -> **first**, que es equivalente a (\* `Iter`). **first**. Para tener acceso al valor de la referencia asignada del elemento, use `Iter` -> **second**, que es equivalente a (\* `Iter`). **second**.
+Para obtener acceso al valor de la clave para el elemento, utilice `Iter->first`, que es equivalente a `(*Iter).first`. Para obtener acceso al valor de la referencia asignada del elemento, utilice `Iter->second`, que es equivalente a `(*Iter).second`.
 
 Un tipo `iterator` puede usarse para modificar el valor de un elemento.
 
@@ -1378,7 +1389,7 @@ Devuelve el objeto de función que usa un mapa múltiple para ordenar sus elemen
 
 El objeto almacenado define la función miembro
 
-**bool operator**( **const Key&** *x*, **const Key&** *y*);
+`bool operator( const Key& x, const Key& y);`
 
 que devuelve True si *x* precede estrictamente a *y* en el criterio de ordenación.
 
@@ -1481,7 +1492,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*clave* la clave de argumento que se comparará con la clave de ordenación de un elemento de la asignación múltiple que se está buscando.
+*key*<br/>
+ La clave de argumento que se comparará con la clave de ordenación de un elemento del mapa múltiple que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2099,11 +2111,11 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Un tipo `reverse_iterator` se usa para iterar en el mapa múltiple en orden inverso.
 
-El `reverse_iterator` definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair`*\<***clave const**, **Tipo***>*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.
+El `reverse_iterator` definido por los puntos de mapa múltiple para objetos de [value_type](#value_type), que son de tipo `pair<const Key, Type>`. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.
 
-Para desreferenciar un `reverse_iterator` `rIter` que apunta a un elemento en un mapa múltiple, use el operador ->.
+Para desreferenciar un `reverse_iterator` *rIter* que apunta a un elemento en un mapa múltiple, use el **->** operador.
 
-Para tener acceso al valor de clave del elemento, use `rIter` -> **first**, que es equivalente a (\* `rIter`). **first**. Para tener acceso al valor de la referencia asignada del elemento, use `rIter` -> **second**, que es equivalente a (\* `rIter`). **first**.
+Para obtener acceso al valor de la clave para el elemento, utilice `rIter->first`, que es equivalente a `(*rIter).first`. Para obtener acceso al valor de la referencia asignada del elemento, utilice `rIter->second`, que es equivalente a `(*rIter).second`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2176,7 +2188,8 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*derecha* la asignación múltiple que proporciona los elementos deben intercambiar o el mapa múltiple cuyos elementos se van a intercambiar con los del mapa múltiple `left`.
+*right*<br/>
+ Mapa múltiple que proporciona los elementos que se van a intercambiar o el mapa múltiple cuyos elementos se van a intercambiar con los del mapa múltiple `left`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2245,7 +2258,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*clave* la clave de argumento que se comparará con la clave de ordenación de un elemento de la asignación múltiple que se está buscando.
+*key*<br/>
+ La clave de argumento que se comparará con la clave de ordenación de un elemento del mapa múltiple que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2445,7 +2459,7 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>Vea también
 
-[\<Map > miembros](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<Map > miembros](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [Contenedores](../cpp/containers-modern-cpp.md)<br/>
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

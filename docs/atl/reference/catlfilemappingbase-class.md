@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8f07f14cca7ea0346cc6772d3dca959af07a05cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883250"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218167"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase (clase)
 Esta clase representa un archivo asignado a memoria.  
@@ -76,7 +76,7 @@ class CAtlFileMappingBase
 ## <a name="remarks"></a>Comentarios  
  Asignación de archivos es la asociación de contenido de un archivo con una parte del espacio de direcciones virtuales de un proceso. Esta clase proporciona métodos para crear los objetos de asignación de archivos que permiten programas para tener acceso fácilmente a y compartir datos.  
   
- Para obtener más información, consulte [asignación de archivos](http://msdn.microsoft.com/library/windows/desktop/aa366556) en el SDK de Windows.  
+ Para obtener más información, consulte [asignación de archivos](/windows/desktop/Memory/file-mapping) en el SDK de Windows.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlfile.h  
@@ -179,16 +179,16 @@ HRESULT MapFile(
  El desplazamiento de archivo donde asignación se va a comenzar. El valor de desplazamiento debe ser un múltiplo de granularidad de asignación de memoria del sistema.  
   
  *dwMappingProtection*  
- La protección que desea para la vista del archivo cuando se asigna el archivo. Consulte *flProtect* en [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) en el SDK de Windows.  
+ La protección que desea para la vista del archivo cuando se asigna el archivo. Consulte *flProtect* en [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) en el SDK de Windows.  
   
  *dwViewDesiredAccess*  
- Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.  
+ Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Una vez creado un objeto de asignación de archivos, el tamaño del archivo no puede superar el tamaño del objeto de asignación de archivos; Si es así, no todos el contenido del archivo estará disponibles para uso compartido. Para obtener más información, consulte [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) y [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.  
+ Una vez creado un objeto de asignación de archivos, el tamaño del archivo no puede superar el tamaño del objeto de asignación de archivos; Si es así, no todos el contenido del archivo estará disponibles para uso compartido. Para obtener más información, consulte [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) y [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.  
   
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
@@ -217,19 +217,19 @@ HRESULT MapSharedMem(
  Apunta a un valor booleano que se establece en TRUE si el objeto de asignación ya existía.  
   
  *LPSA*  
- El puntero a un `SECURITY_ATTRIBUTES` estructura que determina si el identificador devuelto se puede heredar mediante procesos secundarios. Consulte *lpAttributes* en [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) en el SDK de Windows.  
+ El puntero a un `SECURITY_ATTRIBUTES` estructura que determina si el identificador devuelto se puede heredar mediante procesos secundarios. Consulte *lpAttributes* en [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) en el SDK de Windows.  
   
  *dwMappingProtection*  
  La protección que desea para la vista del archivo, cuando se asigna el archivo. Consulte *flProtect* en `CreateFileMapping` en el SDK de Windows.  
   
  *dwViewDesiredAccess*  
- Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.  
+ Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- `MapShareMem` permite que un objeto de asignación de archivos existente, creado por [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)para compartirse entre los procesos.  
+ `MapShareMem` permite que un objeto de asignación de archivos existente, creado por [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)para compartirse entre los procesos.  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Llame a este método para abrir un objeto de asignación de archivos con nombre para el archivo especificado.  
@@ -253,7 +253,7 @@ HRESULT OpenMapping(
  El desplazamiento de archivo donde asignación se va a comenzar. El valor de desplazamiento debe ser un múltiplo de granularidad de asignación de memoria del sistema.  
   
  *dwViewDesiredAccess*  
- Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.  
+ Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
@@ -286,7 +286,7 @@ HRESULT Unmap() throw();
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) en el SDK de Windows para obtener más detalles.  
+ Consulte [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) en el SDK de Windows para obtener más detalles.  
   
 ## <a name="see-also"></a>Vea también  
  [CAtlFileMapping (clase)](../../atl/reference/catlfilemapping-class.md)   

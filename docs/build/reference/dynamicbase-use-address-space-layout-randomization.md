@@ -1,7 +1,7 @@
 ---
-title: -DYNAMICBASE (uso dirección espacio selección aleatoria del diseño) | Documentos de Microsoft
+title: -DYNAMICBASE (Usar dirección espacio selección aleatoria del diseño) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,44 +18,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85af66c4ce05057eff63292061b66202aeebe160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 896e2eca86b7694c8b3b951a8eb080a4cf9e7684
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223426"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Usar selección aleatoria del diseño del espacio de direcciones)
-Especifica si se generará una imagen ejecutable que se pueda reorganizar aleatoriamente en tiempo de carga mediante el uso de la característica de selección aleatoria (ASLR) de diseño del espacio de direcciones de [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-/DYNAMICBASE[:NO]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- De forma predeterminada, / DYNAMICBASE está activada.  
-  
- Esta opción modifica el encabezado de un archivo ejecutable para indicar si la aplicación debería fusionarse aleatoriamente mediante cambio de base en tiempo de carga.  
-  
- Selección aleatoria del diseño de espacio de direcciones se admite en [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
-  
-### <a name="to-set-this-linker-option-in-visual-studio"></a>Para establecer esta opción del vinculador en Visual Studio  
-  
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
-  
-2.  Expanda el **propiedades de configuración** nodo.  
-  
-3.  Expanda el **vinculador** nodo.  
-  
-4.  Seleccione el **avanzadas** página de propiedades.  
-  
-5.  Modificar el **dirección Base aleatoria** propiedad.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
-  
-1.  Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>.  
-  
-## <a name="see-also"></a>Vea también  
- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
- [Opciones del vinculador](../../build/reference/linker-options.md)
+
+Especifica si debe generarse una imagen ejecutable que puede reubicarse aleatoriamente durante la carga mediante el uso de la característica de selección aleatoria (ASLR) de diseño del espacio de direcciones de Windows que estuvo disponible en Windows Vista poseían primera vez.
+
+## <a name="syntax"></a>Sintaxis
+
+> **/ DYNAMICBASE**[**: N**]
+
+## <a name="remarks"></a>Comentarios
+
+El **/DYNAMICBASE** opción modifica el encabezado de un *imagen ejecutable*, un archivo .dll o .exe, para indicar si la aplicación debería fusionarse aleatoriamente en tiempo de carga y permite la dirección virtual selección aleatoria de asignación, lo que afecta a la ubicación de memoria virtual de montones, pilas y otras asignaciones de sistema operativo. El **/DYNAMICBASE** opción se aplica a las imágenes de 32 bits y 64 bits. ASLR se admite en Windows Vista y sistemas operativos posteriores. Omite la opción de sistemas operativos anteriores.
+
+De forma predeterminada, **/DYNAMICBASE** está habilitado. Para deshabilitar esta opción, utilice **: no**. El **/DYNAMICBASE** opción es necesaria para la [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md) opción tenga efecto.
+
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Para establecer esta opción del vinculador en Visual Studio
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+
+1. Seleccione el **propiedades de configuración** > **vinculador** > **avanzadas** página de propiedades.
+
+1. Modificar el **dirección Base aleatoria** propiedad.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
+
+- Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>.
+
+## <a name="see-also"></a>Vea también
+
+- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)
+- [Opciones del vinculador](../../build/reference/linker-options.md)
+- [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
+- [Defensas de seguridad de Software de ISV de Windows](https://msdn.microsoft.com/library/bb430720.aspx)

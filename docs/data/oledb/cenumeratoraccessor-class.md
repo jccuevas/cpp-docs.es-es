@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571897"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215616"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor (Clase)
 Utilizado por [CEnumerator](../../data/oledb/cenumerator-class.md) para tener acceso a los datos desde el conjunto de filas del enumerador.  
@@ -77,7 +77,7 @@ class CEnumeratorAccessor
 |[m_nType](#ntype)|Una variable que indica si la fila describe un origen de datos o un enumerador.|  
 |[m_szDescription](#szdescription)|La descripción del origen de datos o enumerador.|  
 |[m_szName](#szname)|El nombre del origen de datos o enumerador.|  
-|[m_szParseName](#szparsename)|Cadena que se pasan al [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) para obtener un moniker para el origen de datos o enumerador.|  
+|[m_szParseName](#szparsename)|Cadena que se pasan al [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) para obtener un moniker para el origen de datos o enumerador.|  
   
 ## <a name="remarks"></a>Comentarios  
  Este conjunto de filas se compone de los orígenes de datos y enumeradores visibles desde el enumerador actual.  
@@ -131,7 +131,7 @@ WCHAR m_szName[129];
  Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) en el *referencia del programador de OLE DB* para obtener más información.  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
-Cadena que se pasan al [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) para obtener un moniker para el origen de datos o enumerador.  
+Cadena que se pasan al [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) para obtener un moniker para el origen de datos o enumerador.  
   
 ### <a name="syntax"></a>Sintaxis  
   

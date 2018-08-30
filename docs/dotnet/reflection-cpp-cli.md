@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 505049d6580f41253a483dfe1c64608d0ea9ed3d
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0b5a352d10c1fd1f825cecbe3d6a1083f6efd425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110013"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212174"
 ---
 # <a name="reflection-ccli"></a>Reflexión (C++/CLI)
 
@@ -42,12 +42,12 @@ La reflexión permite inspeccionar tipos de datos conocidos en tiempo de ejecuci
 
 Tenga en cuenta que el nombre del ensamblado es el nombre seguro (vea [crear y utilizar ensamblados](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), que incluye la versión del ensamblado, la referencia cultural y la información de firma. Observe además que puede recuperarse el nombre del espacio de nombres en el que se define el tipo de datos, al igual que el nombre de la clase base.
 
-La manera más común de obtener acceso a las características de reflexión es utilizar el método <xref:System.Object.GetType%2A>. Este método se proporciona por [System:: Object](https://msdn.microsoft.com/en-us/library/system.object.aspx), desde que se derivan todas las clases de recolección.
+La manera más común de obtener acceso a las características de reflexión es utilizar el método <xref:System.Object.GetType%2A>. Este método se proporciona por [System:: Object](https://msdn.microsoft.com/library/system.object.aspx), desde que se derivan todas las clases de recolección.
 
 > [!NOTE]
 > Solo se permite la reflexión en un .exe compilado con el compilador de Visual C++ si se ha creado el archivo .exe con el **/CLR: pure** o **/CLR: safe** opciones del compilador. El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no está disponible en Visual Studio 2017. Consulte [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) para obtener más información.
 
-Para obtener más información, consulte [Namespace System.Reflection](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)
+Para obtener más información, consulte [Namespace System.Reflection](https://msdn.microsoft.com/library/system.reflection.aspx)
 
 ## <a name="example-gettype"></a>Ejemplo: GetType
 
@@ -188,9 +188,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>Ejemplo: inspección de ensamblados
 
-Si el código anterior se compila en un archivo DLL denominado vcpp_reflection_6.dll, puede utilizar la reflexión para inspeccionar el contenido de este ensamblado. Esto implica el uso de la función de la API de reflexión estática [Assembly:: Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) para cargar el ensamblado. Esta función devuelve la dirección de un **ensamblado** objeto que, a continuación, se puede consultar acerca de los módulos y tipos de dentro.
+Si el código anterior se compila en un archivo DLL denominado vcpp_reflection_6.dll, puede utilizar la reflexión para inspeccionar el contenido de este ensamblado. Esto implica el uso de la función de la API de reflexión estática [Assembly:: Load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx) para cargar el ensamblado. Esta función devuelve la dirección de un **ensamblado** objeto que, a continuación, se puede consultar acerca de los módulos y tipos de dentro.
 
-Una vez que el sistema de reflexión carga correctamente el ensamblado, una matriz de **tipo** se recuperan los objetos con el [Assembly:: GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) función. Cada elemento de la matriz contiene información sobre un tipo diferente, aunque en este caso solo se define una clase. Mediante un bucle, cada **tipo** en esta matriz se consultan los miembros de tipo usando el **Type:: GetMembers** función. Esta función devuelve una matriz de **MethodInfo** objetos, cada objeto que contiene información acerca de la función miembro, el miembro de datos o la propiedad del tipo.
+Una vez que el sistema de reflexión carga correctamente el ensamblado, una matriz de **tipo** se recuperan los objetos con el [Assembly:: GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx) función. Cada elemento de la matriz contiene información sobre un tipo diferente, aunque en este caso solo se define una clase. Mediante un bucle, cada **tipo** en esta matriz se consultan los miembros de tipo usando el **Type:: GetMembers** función. Esta función devuelve una matriz de **MethodInfo** objetos, cada objeto que contiene información acerca de la función miembro, el miembro de datos o la propiedad del tipo.
 
 Tenga en cuenta que la lista de métodos incluye las funciones explícitamente definidos en **TestClass** y las funciones hereden implícitamente de la **System:: Object** clase. Por haberse descrito en .NET y no en la sintaxis de Visual C++, las propiedades aparecen como el miembro de datos subyacente al que se obtiene acceso mediante funciones get o set. Las funciones get y set aparecen en esta lista con métodos periódicas. La reflexión se admite a través de Common Language Runtime, no del compilador de Visual C++.
 

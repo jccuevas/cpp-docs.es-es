@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 508655dbfeb2d06d936d2b73d5435cf04c860f4b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a4acb718d44a5abcf4413cbb7f026e4a8ea0f57b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598939"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218094"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Cómo: Cambiar el idioma o la condición de un recurso al copiarlo
 
 Al copiar un recurso, puede cambiar sus propiedades de idioma, condición o ambas.
 
-- El idioma del recurso identifica exactamente eso, el idioma del recurso. Esto sirve para [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) para ayudar a identificar el recurso que está buscando. (Sin embargo, los recursos pueden tener diferencias para cada idioma que no estén relacionados con texto, por ejemplo, aceleradores que solo funcionen en teclados japoneses, un mapa de bits que solo sea adecuado para compilaciones localizadas en chino, etc.).
+- El idioma del recurso identifica exactamente eso, el idioma del recurso. Esto sirve para [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) para ayudar a identificar el recurso que está buscando. (Sin embargo, los recursos pueden tener diferencias para cada idioma que no estén relacionados con texto, por ejemplo, aceleradores que solo funcionen en teclados japoneses, un mapa de bits que solo sea adecuado para compilaciones localizadas en chino, etc.).
 
 - La condición de un recurso es un símbolo definido que identifica una condición en la que esta copia concreta del recurso se va a utilizar.
 

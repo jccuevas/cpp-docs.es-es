@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: usar matrices en C++ / CLI | Documentos de Microsoft'
+title: 'Cómo: usar matrices en C++ / c++ / CLI | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 14eb98f485dc60974253e85086bb25531de7105d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 865416872855be19f4848587e51edf8bfbbdb299
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138782"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213010"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>Cómo: Usar matrices en C++/CLI
-Este artículo describe cómo utilizar las matrices en C++ / CLI.  
+En este artículo se describe cómo usar matrices en C++ / c++ / CLI.  
   
 ## <a name="single-dimension-arrays"></a>Matrices unidimensionales  
- El ejemplo siguiente muestra cómo crear matrices unidimensionales de referencia, de valor y tipos de puntero nativo. También muestra cómo devolver una matriz unidimensional de una función y cómo pasar una matriz unidimensional como un argumento a una función.  
+ El ejemplo siguiente muestra cómo crear las matrices unidimensionales de referencia, valor y tipos de puntero nativo. También se muestra cómo devolver una matriz unidimensional de una función y cómo pasar una matriz unidimensional como argumento a una función.  
   
 ```cpp  
 // mcppv2_sdarrays.cpp  
@@ -160,7 +160,7 @@ MyStruct1[0] = 40
 MyStruct1[1] = 41  
 ```  
   
- En el ejemplo siguiente se muestra cómo realizar la inicialización de agregado en las matrices administradas unidimensionales.  
+ El ejemplo siguiente muestra cómo realizar la inicialización de agregado en matrices administradas unidimensionales.  
   
 ```cpp  
 // mcppv2_sdarrays_aggregate_init.cpp  
@@ -213,7 +213,7 @@ IntArray[1, 0] = 11
 IntArray[1, 1] = 11  
 ```  
   
- Este ejemplo muestra cómo realizar la inicialización de agregado en una matriz administrada de la dimensión:  
+ En este ejemplo se muestra cómo realizar la inicialización de agregado en una matriz administrada de varias dimensiones:  
   
 ```cpp  
 // mcppv2_mdarrays_aggregate_initialization.cpp  
@@ -258,7 +258,7 @@ int main() {
 ```  
   
 ## <a name="jagged-arrays"></a>Matrices escalonadas  
- En esta sección se muestra cómo crear matrices unidimensionales de matrices administradas de referencia, de valor y tipos de puntero nativo. También muestra cómo devolver una matriz unidimensional de matrices administradas desde una función y cómo pasar una matriz unidimensional como un argumento a una función.  
+ En esta sección se muestra cómo crear las matrices unidimensionales de matrices administradas de referencia, valor y tipos de puntero nativo. También se muestra cómo devolver una matriz unidimensional de matrices administradas desde una función y cómo pasar una matriz unidimensional como argumento a una función.  
   
 ```cpp  
 // mcppv2_array_of_arrays.cpp  
@@ -355,7 +355,7 @@ IntArray[1] = 11
 41  
 ```  
   
- El ejemplo siguiente muestra cómo realizar la inicialización de agregado con matrices escalonadas.  
+ El ejemplo siguiente muestra cómo realizar la inicialización de agregado con las matrices escalonadas.  
   
 ```cpp  
 // mcppv2_array_of_arrays_aggregate_init.cpp  
@@ -460,8 +460,8 @@ MyClass0[1] = 1
 [ g h ]  
 ```  
   
-## <a name="managed-arrays-as-template-type-parameters"></a>Administrar matrices como parámetros de tipo de plantilla  
- Este ejemplo muestra cómo utilizar una matriz administrada como un parámetro a una plantilla:  
+## <a name="managed-arrays-as-template-type-parameters"></a>Matrices administradas como parámetros de tipo de plantilla  
+ En este ejemplo se muestra cómo utilizar una matriz administrada como un parámetro a una plantilla:  
   
 ```cpp  
 // mcppv2_template_type_params.cpp  
@@ -506,9 +506,9 @@ int main() {
 ```  
   
 ## <a name="sorting-arrays"></a>Ordenar matrices  
- A diferencia de las matrices de C++ estándares, las matrices administradas se derivan implícitamente de una clase base matriz desde el que se hereda el comportamiento común. Un ejemplo es la `Sort` método, que puede utilizarse para ordenar los elementos en cualquier matriz.  
+ A diferencia de las matrices de C++ estándares, las matrices administradas se derivan implícitamente una clase base de matriz de la que hereda el comportamiento común. Un ejemplo es el `Sort` método, que puede utilizarse para ordenar los elementos en cualquier matriz.  
   
- Para las matrices que contienen tipos intrínsecos básicos, puede llamar a la `Sort` método. Puede invalidar los criterios de ordenación, y ello es necesario cuando desea ordenar de las matrices de tipos complejos. En este caso, el tipo de elemento de matriz debe implementar la [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) método.  
+ Para las matrices que contienen tipos intrínsecos básicos, puede llamar a la `Sort` método. Puede invalidar los criterios de ordenación, y es obligatorio cuando desea ordenar las matrices de tipos complejos. En este caso, debe implementar el tipo de elemento de matriz el [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) método.  
   
 ```cpp  
 // array_sort.cpp  
@@ -523,10 +523,10 @@ int main() {
 }  
 ```  
   
-## <a name="sorting-arrays-by-using-custom-criteria"></a>Ordenar matrices mediante criterios personalizados  
- Para ordenar matrices que contienen tipos intrínsecos básicos, llame a la `Array::Sort` método. Sin embargo, a las matrices de ordenación que contienen tipos complejos o invalidar los criterios de ordenación predeterminados, invalidación la [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) método.  
+## <a name="sorting-arrays-by-using-custom-criteria"></a>Ordenación de matrices mediante criterios personalizados  
+ Para ordenar las matrices que contienen tipos intrínsecos básicos, simplemente llame a la `Array::Sort` método. Sin embargo, para ordenar matrices que contienen tipos complejos o para invalidar los criterios de ordenación predeterminado, invalidación el [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) método.  
   
- En el ejemplo siguiente, una estructura denominada `Element` se deriva de <xref:System.IComparable>y escribir para ofrecer un <xref:System.IComparable.CompareTo%2A> método usado por el promedio de dos números enteros como criterio de ordenación.  
+ En el ejemplo siguiente, una estructura denominada `Element` se deriva de <xref:System.IComparable>y se ha redactado para proporcionar un <xref:System.IComparable.CompareTo%2A> método que usa la media de los dos enteros como criterio de ordenación.  
   
 ```cpp  
 using namespace System;  
@@ -571,7 +571,7 @@ int main() {
 ```  
   
 ## <a name="array-covariance"></a>Covarianza de matrices  
- Proporciona la clase de referencia D cuya clase base directa o indirecta B, una matriz de tipo D puede asignarse a una variable de matriz de tipo B.  
+ Dada la clase de referencia D que tiene la clase base directa o indirecta B, una matriz de tipo D puede asignarse a una variable de matriz de tipo B.  
   
 ```cpp  
 // clr_array_covariance.cpp  
@@ -584,7 +584,7 @@ int main() {
 }  
 ```  
   
- Una asignación a un elemento de matriz debe ser compatibles con la asignación con el tipo dinámico de la matriz. Hace que una asignación a un elemento de matriz que tiene un tipo incompatible `System::ArrayTypeMismatchException` que se produzca.  
+ Una asignación a un elemento de matriz debe ser compatibles con la asignación con el tipo de la matriz dinámico. Hace que una asignación a un elemento de matriz que tiene un tipo incompatible `System::ArrayTypeMismatchException` que se produzca.  
   
  Covarianza de matrices no se aplica a las matrices de tipo de clase de valor. Por ejemplo, no se puede convertir matrices de Int32 al objeto ^ matrices, ni siquiera mediante la conversión boxing.  
   

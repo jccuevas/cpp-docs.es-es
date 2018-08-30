@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc2419cad0744ae3487f368b2238f80b96bd8fb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9f24aa8b1aa6b4e2e996ec22062263f785d730d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612862"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222585"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -36,7 +36,7 @@ Especifica que el `IDispatch` implementación incluye solo las propiedades y los
 
 ## <a name="remarks"></a>Comentarios
 
-El **nonextensible** atributo de C++ tiene la misma funcionalidad que el [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) atributo MIDL.
+El **nonextensible** atributo de C++ tiene la misma funcionalidad que el [nonextensible](/windows/desktop/Midl/nonextensible) atributo MIDL.
 
 El uso de **nonextensible** también requiere la [oleautomation](../windows/oleautomation.md) atributo.
 

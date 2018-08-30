@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7dd23a1b68e4ea97eb837e009c380514230de8
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 122c9cc8f1500132f507eb3477e108c3a5c67768
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573098"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217124"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -158,4 +158,4 @@ Para obtener más información, consulte [/EH (Modelo de control de excepciones)
 [Palabras clave](../cpp/keywords-cpp.md)  
 [\<exception>](../standard-library/exception.md)  
 [Controlar errores y excepciones](../cpp/errors-and-exception-handling-modern-cpp.md)  
-[(Windows) de control de excepciones estructurado](http://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)  
+[(Windows) de control de excepciones estructurado](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)  

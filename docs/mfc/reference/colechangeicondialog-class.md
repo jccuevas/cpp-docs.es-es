@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40907720965647e076c6b516f1c2de9f1d3f9edb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 089fe435c86b524acc41ba528452d93032d1b1a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850571"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214498"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog (clase)
 Se utiliza en el cuadro de diálogo Cambiar icono de OLE.  
@@ -67,7 +67,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="remarks"></a>Comentarios  
  Crear un objeto de clase `COleChangeIconDialog` cuando desee llamar a este cuadro de diálogo. Después de un `COleChangeIconDialog` se ha construido el objeto, puede usar el [m_ci](#m_ci) estructura para inicializar los valores o los Estados de los controles en el cuadro de diálogo. El `m_ci` estructura es de tipo OLEUICHANGEICON. Para obtener más información sobre el uso de esta clase de cuadro de diálogo, vea el [DoModal](#domodal) función miembro.  
   
- Para obtener más información, consulte el [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) estructura en el SDK de Windows.  
   
  Para obtener más información acerca de los cuadros de diálogo específicos de OLE, vea el artículo [cuadros de diálogo en OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -122,7 +122,7 @@ explicit COleChangeIconDialog(
 ### <a name="remarks"></a>Comentarios  
  Para mostrar el cuadro de diálogo, llame a la [DoModal](#domodal) función.  
   
- Para obtener más información, consulte el [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) estructura en el SDK de Windows.  
   
 ##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  Llame a esta función para cambiar el icono que representa el elemento a la seleccionada en el cuadro de diálogo después [DoModal](#domodal) devuelve IDOK.  
@@ -152,7 +152,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL si el usuario canceló el cuadro de diálogo.  
   
-- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a la `COleDialog::GetLastError` la función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea el [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) función en el SDK de Windows.  
+- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a la `COleDialog::GetLastError` la función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea el [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) función en el SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  
  Si desea inicializar los distintos controles de cuadro de diálogo mediante el establecimiento de los miembros de la [m_ci](#m_ci) estructura, debe hacerlo antes de llamar a `DoModal`, pero después de que se construye el objeto de cuadro de diálogo.  
@@ -179,7 +179,7 @@ OLEUICHANGEICON m_ci;
 ### <a name="remarks"></a>Comentarios  
  Los miembros de esta estructura se pueden modificar directamente o a través de funciones miembro.  
   
- Para obtener más información, consulte el [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) estructura en el SDK de Windows.  
+ Para obtener más información, consulte el [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) estructura en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
  [COleDialog (clase)](../../mfc/reference/coledialog-class.md)   

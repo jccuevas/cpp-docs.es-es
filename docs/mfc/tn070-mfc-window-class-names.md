@@ -1,5 +1,5 @@
 ---
-title: 'TN070: Nombres de clase de ventana MFC | Documentos de Microsoft'
+title: 'TN070: Nombres de clase de ventana MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c66c434503bbd2c6d7ee1b0557fa73d843e0caaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf73633c22191d54f2b03f11cb2b84cbbd24d807
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385357"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220853"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: Nombres de clases de ventana
 > [!NOTE]
 >  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea. Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos. Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.  
   
- Windows MFC utiliza un nombre de clase creado dinámicamente que refleja las características de la ventana. MFC generará los nombres de clase dinámicamente para ventanas de marco, vistas y ventanas emergentes producidos por la aplicación. Cuadros de diálogo y controles generados por una aplicación MFC tienen el nombre proporcionado por Windows para la clase de ventana en cuestión.  
+ Windows MFC utilizan un nombre de clase creado dinámicamente que refleja las características de la ventana. MFC genera nombres de clase dinámicamente para ventanas de marco, vistas y ventanas emergentes producidos por la aplicación. Cuadros de diálogo y controles generados por una aplicación MFC tienen el nombre proporcionado por Windows para la clase de ventana en cuestión.  
   
- Puede reemplazar el nombre de clase dinámicamente proporcionada por registrar su propia clase de ventana y su uso con una invalidación de [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). Sus nombres de clase proporcionado por MFC ajustan a uno de los dos formatos siguientes:  
+ Puede reemplazar el nombre de clase proporcionado dinámicamente mediante el registro de su propia clase de ventana y usarlo en un reemplazo de [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). Sus nombres de clase proporcionado por MFC encajar en uno de los dos formatos siguientes:  
   
 ```  
 Afx:%x:%x  
 Afx:%x:%x:%x:%x:%x  
 ```  
   
- Los dígitos hexadecimales que reemplacen la `%x` caracteres se rellenan de datos de la [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estructura. MFC utiliza esta técnica para que varias clases de C++ que requieren idénticos **WNDCLASS** estructuras pueden compartir la misma clase de ventana registrados. A diferencia de la mayoría de aplicaciones Win32 simple, las aplicaciones MFC tienen solo una **/ / WNDPROC**, por lo que pueden compartir fácilmente **WNDCLASS** estructuras para ahorrar tiempo y memoria. Los valores reemplazables para el `%x` caracteres mostrados anteriormente son los siguientes:  
+ Los dígitos hexadecimales que reemplacen el `%x` caracteres rellenan los datos desde el [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estructura. MFC utiliza esta técnica para que varias clases de C++ que requieren idénticos **WNDCLASS** estructuras pueden compartir la misma clase de ventana registrada. A diferencia de la mayoría de aplicaciones Win32 simple, las aplicaciones de MFC tienen solo una **WNDPROC**, por lo que puede compartir fácilmente **WNDCLASS** estructuras para ahorrar tiempo y memoria. Los valores pueden reemplazables para el `%x` caracteres que se muestran anteriormente son los siguientes:  
   
 - **WNDCLASS.hInstance**  
   
@@ -49,7 +49,7 @@ Afx:%x:%x:%x:%x:%x
   
 - **WNDCLASS.hIcon**  
   
- La primera forma (`Afx:%x:%x`) se utiliza cuando **hCursor**, **hbrBackground**, y **hIcon** son todos los **NULL**.  
+ El primer formulario (`Afx:%x:%x`) se utiliza cuando **hCursor**, **hbrBackground**, y **hIcon** son todas **NULL**.  
   
 ## <a name="see-also"></a>Vea también  
  [Notas técnicas por número](../mfc/technical-notes-by-number.md)   

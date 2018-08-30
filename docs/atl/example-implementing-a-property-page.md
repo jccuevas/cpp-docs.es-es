@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ce702c1da30e6f624477b74e381576539ef9e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852294"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214787"
 ---
 # <a name="example-implementing-a-property-page"></a>Ejemplo: Implementar una página de propiedades
 En este ejemplo se muestra cómo crear una página de propiedades que muestra las propiedades de (y le permite cambiar) la [clases de documento](../mfc/document-classes.md) interfaz.  
@@ -70,7 +70,7 @@ En este ejemplo se muestra cómo crear una página de propiedades que muestra la
  Estos controles se usará para mostrar el nombre de archivo del documento y su estado de solo lectura.  
   
 > [!NOTE]
->  El recurso de cuadro de diálogo no incluye un marco ni botones de comando ni tiene el aspecto con pestañas que se podría esperar. Estas características son proporcionadas por un marco de página de propiedades como el que se creó mediante una llamada a [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
+>  El recurso de cuadro de diálogo no incluye un marco ni botones de comando ni tiene el aspecto con pestañas que se podría esperar. Estas características son proporcionadas por un marco de página de propiedades como el que se creó mediante una llamada a [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).  
   
 ##  <a name="vcconadding_message_handlers"></a> Agregar controladores de mensajes  
  Con los controles en su lugar, puede agregar controladores de mensajes para actualizar el estado modificado de la página cuando cambia el valor de cualquiera de los controles:  

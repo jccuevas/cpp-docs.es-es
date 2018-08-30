@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 015b07e5870aa6269dc76af8610d42fb469a6d33
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6fa2e03bbb7307b2bc9633c21510f3b1939d4ad9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848355"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218053"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL y el contador de referencias de subprocesamiento libre
 Página de atributos ATL Simple objeto del asistente proporciona una opción que permite que la clase agregar el contador de referencias de subproceso libre (FTM).  
   
- El asistente genera código para crear una instancia del contador de referencias de subprocesos libres en `FinalConstruct` y liberar esa instancia en `FinalRelease`. Se agrega automáticamente una macro COM_INTERFACE_ENTRY_AGGREGATE al mapa COM para asegurarse de que `QueryInterface` las solicitudes de [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) se controlan mediante el contador de referencias de subproceso libre.  
+ El asistente genera código para crear una instancia del contador de referencias de subprocesos libres en `FinalConstruct` y liberar esa instancia en `FinalRelease`. Se agrega automáticamente una macro COM_INTERFACE_ENTRY_AGGREGATE al mapa COM para asegurarse de que `QueryInterface` las solicitudes de [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal) se controlan mediante el contador de referencias de subproceso libre.  
   
  El contador de referencias de subproceso libre permite el acceso directo a las interfaces en el objeto desde cualquier subproceso en el mismo proceso, lo que acelera las llamadas entre apartamentos. Esta opción está diseñada para las clases que usan el modelo de subprocesamiento Both.  
   
@@ -36,8 +36,8 @@ Página de atributos ATL Simple objeto del asistente proporciona una opción que
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos](../atl/active-template-library-atl-concepts.md)   
- [CoCreateFreeThreadedMarshaler](http://msdn.microsoft.com/library/windows/desktop/ms694500)   
- [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)   
- [Cuándo usar la tabla de interfaz Global](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
- [Problemas de subprocesamiento de servidor en proceso](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)   
+ [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)   
+ [Cuándo usar la tabla de interfaz Global](/windows/desktop/com/when-to-use-the-global-interface-table)   
+ [Problemas de subprocesamiento de servidor en proceso](/windows/desktop/com/in-process-server-threading-issues)
 

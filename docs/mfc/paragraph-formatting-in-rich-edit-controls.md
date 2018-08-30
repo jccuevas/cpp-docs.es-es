@@ -1,5 +1,5 @@
 ---
-title: Formato de párrafo en los controles Rich Edit | Documentos de Microsoft
+title: Formato de párrafo en los controles Rich Edit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9417fe9bab9b1fca8ec8292e27efc02afec5511c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8258ff95fc91f6f29d424e77be95ce1b44f621ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929152"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215826"
 ---
 # <a name="paragraph-formatting-in-rich-edit-controls"></a>Formato de párrafo en los controles Rich Edit
-Puede utilizar las funciones miembro de control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) para dar formato a párrafos y para recuperar información de formato. Atributos de formato de párrafo incluyen la alineación, tabuladores, sangría y numeración.  
+Puede usar las funciones miembro de control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) para dar formato a párrafos y recuperar información de formato. Atributos de formato de párrafo incluyen la alineación, tabulaciones, las sangrías y numeración.  
   
- Puede aplicar formato mediante el uso de párrafo el [SetParaFormat](../mfc/reference/cricheditctrl-class.md#setparaformat) función miembro. Para determinar el formato para el texto seleccionado de párrafo actual, use la [función miembro GetParaFormat](../mfc/reference/cricheditctrl-class.md#getparaformat) función miembro. El [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) estructura se utiliza con estas funciones miembro para especificar atributos de párrafo. Uno de los miembros importantes de **PARAFORMAT** es *dwMask*. En `SetParaFormat`, *dwMask* especifica qué atributos de párrafo se establecen mediante esta llamada a función. `GetParaFormat` informa de los atributos del primer párrafo de la selección; *dwMask* especifica los atributos que son coherentes en toda la selección.  
+ Puede aplicar formato mediante el uso de párrafo el [SetParaFormat](../mfc/reference/cricheditctrl-class.md#setparaformat) función miembro. Para determinar el formato del texto seleccionado de párrafo actual, use el [función miembro GetParaFormat](../mfc/reference/cricheditctrl-class.md#getparaformat) función miembro. El [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) estructura se usa con estas funciones miembro para especificar atributos de párrafo. Uno de los miembros importantes de **PARAFORMAT** es *dwMask*. En `SetParaFormat`, *dwMask* especifica qué atributos de párrafo se establecen mediante esta llamada de función. `GetParaFormat` informa de los atributos del primer párrafo de la selección; *dwMask* especifica los atributos que son coherentes a lo largo de la selección.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CRichEditCtrl](../mfc/using-cricheditctrl.md)   

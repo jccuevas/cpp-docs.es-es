@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220766"
 ---
 # <a name="bitmap-structure"></a>BITMAP (Estructura)
 El **mapa de bits** estructura define el alto, ancho, formato de color y los valores de bit de un mapa de bits lógico **.**  
@@ -85,7 +85,7 @@ typedef struct tagBITMAP {  /* bm */
   
  Todos los dispositivos admiten los mapas de bits que se ha establecido RC_BITBLT bit del índice RASTERCAPS de la [CDC:: GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) función miembro.  
   
- Cada dispositivo tiene su propio formato de color único. Con el fin de transferir un mapa de bits de un dispositivo a otro, utilice el [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) y [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funciones de Windows.  
+ Cada dispositivo tiene su propio formato de color único. Con el fin de transferir un mapa de bits de un dispositivo a otro, utilice el [GetDIBits](/windows/desktop/api/wingdi/nf-wingdi-getdibits) y [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) funciones de Windows.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** wingdi.h  

@@ -1,7 +1,7 @@
 ---
-title: -HIGHENTROPYVA (compatibilidad con ASLR de 64 bits) | Documentos de Microsoft
+title: /HIGHENTROPYVA (compatibilidad con ASLR de 64 bits) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -12,38 +12,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de2487cbeff97ded6e95a36393fbbcfbd510e6d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66fe8f20631d576264eab836f822a414c1244d5b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223418"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (Compatibilidad con ASLR de 64 bits)
-Especifica que la imagen ejecutable es compatible con la selección aleatoria del diseño del espacio de direcciones (ASLR) de 64 bits de alta entropía.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-/HIGHENTROPYVA[:NO]  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- De forma predeterminada, /HIGHENTROPYVA está activado para las imágenes ejecutables de 64 bits. No es aplicable a imágenes ejecutables de 32 bits. Para habilitar esta opción, /DYNAMICBASE también debe estar activado.  
-  
- /HIGHENTROPYVA modifica el encabezado de un archivo .dll o .exe para indicar si se admite ASLR con direcciones de 64 bits. Cuando esta opción está establecida en un ejecutable y todos los módulos de los que este depende, un sistema operativo compatible con ASLR de 64 bits puede reorganizar los segmentos de la imagen ejecutable en tiempo de carga mediante el uso de direcciones aleatorias en un espacio de direcciones virtuales de 64 bits. Este gran espacio de direcciones dificulta a un atacante la tarea de adivinar la ubicación de un área de memoria específica.  
-  
-### <a name="to-set-this-linker-option-in-visual-studio"></a>Para establecer esta opción del vinculador en Visual Studio  
-  
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
-  
-2.  Expanda el **propiedades de configuración** nodo.  
-  
-3.  Expanda el **vinculador** nodo.  
-  
-4.  Seleccione el **línea de comandos** página de propiedades.  
-  
-5.  En **opciones adicionales**, escriba `/HIGHENTROPYVA` o `/HIGHENTROPYVA:NO`.  
-  
-## <a name="see-also"></a>Vea también  
- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
- [Opciones del vinculador](../../build/reference/linker-options.md)
+
+Especifica si la imagen ejecutable es compatible con la selección aleatoria del diseño del espacio de direcciones (ASLR) de 64 bits de alta entropía.
+
+## <a name="syntax"></a>Sintaxis
+
+> **/ HIGHENTROPYVA**[**: N**]
+
+## <a name="remarks"></a>Comentarios
+
+**/ HIGHENTROPYVA** modifica el encabezado de un *imagen ejecutable*, un archivo .dll o .exe, para indicar si ASLR puede utilizar el espacio de direcciones entero de 64 bits. Cuando esta opción está establecida en un ejecutable y todos los módulos de los que este depende, un sistema operativo compatible con ASLR de 64 bits puede fusionar mediante cambio de base los segmentos de la imagen ejecutable en tiempo de carga mediante el uso de direcciones aleatorias en un espacio de direcciones virtuales de 64 bits. Este gran espacio de direcciones dificulta a un atacante la tarea de adivinar la ubicación de un área de memoria específica.
+
+De forma predeterminada, **/HIGHENTROPYVA** está habilitada para las imágenes ejecutables de 64 bits. Esta opción requiere [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md), que también está habilitado de forma predeterminada para las imágenes de 64 bits. **/ HIGHENTROPYVA** no es aplicable a las imágenes ejecutables de 32 bits, donde el vinculador omite la opción. Para deshabilitar explícitamente esta opción, utilice **/highentropyva: no**.
+
+Para **/HIGHENTROPYVA** para tener un efecto en tiempo de carga, [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md) también debe estar habilitada. **/ DYNAMICBASE** está habilitada de forma predeterminada y es necesario para habilitar ASLR en Windows Vista y sistemas operativos posteriores. Las versiones anteriores de Windows omiten esta marca.
+
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Para establecer esta opción del vinculador en Visual Studio
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+
+1. Seleccione el **propiedades de configuración** > **vinculador** > **línea de comandos** página de propiedades.
+
+1. En **opciones adicionales**, escriba `/HIGHENTROPYVA` o `/HIGHENTROPYVA:NO`.
+
+## <a name="see-also"></a>Vea también
+
+- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)
+- [Opciones del vinculador](../../build/reference/linker-options.md)
+- [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
+- [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
+- [Defensas de seguridad de Software de ISV de Windows](https://msdn.microsoft.com/library/bb430720.aspx)

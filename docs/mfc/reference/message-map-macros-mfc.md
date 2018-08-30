@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e68cdc236759776fa327b4602343ec9ac73b9bba
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 61599d9080bf5cdce56f30ed38e6b20064032512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338380"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216708"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensajes (MFC)
 Para admitir mapas de mensajes, MFC proporciona las siguientes macros:  
@@ -307,7 +307,7 @@ ON_MESSAGE( message, memberFxn )
  El tipo de la función debe ser `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.  
   
 ### <a name="remarks"></a>Comentarios  
- Mensajes definidos por el usuario son los mensajes que no son mensajes WM_MESSAGE Windows estándar. Al seleccionar un identificador de mensaje, debe usar valores dentro del intervalo de WM_USER (0 x 0400) a 0x7FFF o WM_APP (0 x 8000) para 0xBFFF. Para obtener más información sobre identificadores de mensaje, consulte [WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930).  
+ Mensajes definidos por el usuario son los mensajes que no son mensajes WM_MESSAGE Windows estándar. Al seleccionar un identificador de mensaje, debe usar valores dentro del intervalo de WM_USER (0 x 0400) a 0x7FFF o WM_APP (0 x 8000) para 0xBFFF. Para obtener más información sobre identificadores de mensaje, consulte [WM_APP](/windows/desktop/winmsg/wm-app).  
   
  Debe haber exactamente una instrucción de macro ON_MESSAGE en el mapa de mensajes para cada mensaje definido por el usuario que debe asignarse a una función de controlador de mensajes.  
   
@@ -505,7 +505,7 @@ END_MESSAGE_MAP()
  **Encabezado:** afxmsg_.h  
   
 ### <a name="see-also"></a>Vea también  
- [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
+ [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [Controladores definidos por el usuario](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    

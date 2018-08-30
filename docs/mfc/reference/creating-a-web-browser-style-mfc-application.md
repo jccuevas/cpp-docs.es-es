@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3b0e148104ff5620eddf7ac0d26693d96607d9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 71312a1dfa70ca3fd83242f6f706654c08a4973c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025661"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217672"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Crear una aplicación MFC estilo explorador web
 Una aplicación de estilo explorador Web puede tener acceso a información desde Internet (por ejemplo, HTML o documentos activos) o una intranet, así como las carpetas del sistema de archivos local y en una red. Al derivar la clase de vista de la aplicación de [CHtmlView](../../mfc/reference/chtmlview-class.md), eficaz que un explorador Web de la aplicación, ya que proporciona la vista con el control WebBrowser.  
@@ -77,10 +77,10 @@ void CWebView::OnInitialUpdate()
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplo MFCIE de MFC](http://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
+ [Ejemplo MFCIE de MFC](https://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
  [Asistente para aplicaciones MFC](../../mfc/reference/mfc-application-wizard.md)   
  [Trabajar con las propiedades del proyecto](../../ide/working-with-project-properties.md)   
  [Páginas de propiedades](../../ide/property-pages-visual-cpp.md)   
  [Trabajar con las propiedades del proyecto](../../ide/working-with-project-properties.md)   
- [Implementación de aplicaciones](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Implementación de aplicaciones](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

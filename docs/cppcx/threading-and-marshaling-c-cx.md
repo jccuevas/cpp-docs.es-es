@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b9e008b586b1a312770d7cdfc43dc500932158
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: da198a6a807413846fdc5b45552bb74252f8acc2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611450"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221374"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Subprocesamiento y cálculo de referencias (C++/CX)
 En la mayoría de los casos, las instancias de clases en tiempo de ejecución de Windows, como objetos de C++ estándares, se pueden acceder desde cualquier subproceso. Dichas clases reciben el nombre de "ágiles". Sin embargo, un número pequeño de clases en tiempo de ejecución de Windows que se incluyen con Windows es no ágiles y debe utilizarse más como objetos COM en los objetos de C++ estándar. No es necesario ser un experto en COM para usar clases no ágiles, pero sí lo es tomar en consideración el modelo de subprocesos de la clase y su comportamiento del cálculo de referencias. En este artículo se proporcionan información y orientación sobre estos escenarios raros en que es necesario usar una instancia de una clase no ágil.  
@@ -100,7 +100,7 @@ ref class MyOptions
  En Visual C++, cuando se crea una referencia a una clase en tiempo de ejecución de Windows en un proceso que tiene un comportamiento del cálculo de referencias de "None", el compilador emite la advertencia C4451 pero no sugiere que consideres el uso `Platform::Agile<T>`.  El compilador no puede proporcionar ningún tipo de ayuda más allá de esta advertencia, por lo que tienes la responsabilidad de utilizar la clase correctamente y asegurarte de que el código llame a los componentes STA solo desde el subproceso de interfaz de usuario y a los componentes MTA solo desde un subproceso en segundo plano.  
   
 ## <a name="authoring-agile-windows-runtime-components"></a>Creación de componentes de Windows en tiempo de ejecución ágiles  
- Al definir una clase ref en C / c++ / CX, es ágil de forma predeterminada, es decir, tiene `ThreadingModel`= Both y `MarshallingType`= Agile.  Si usa la biblioteca de plantillas C++ de Windows en tiempo de ejecución, se puede crear tu clase ágil derivando de `FtmBase`, que usa el `FreeThreadedMarshaller`.  Si creas una clase que tenga `ThreadingModel`=Both o `ThreadingModel`=MTA, asegúrate de que la clase sea segura para la ejecución de subprocesos. Para más información, vea [Crear y consumir objetos (WRL)](http://msdn.microsoft.com/en-us/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
+ Al definir una clase ref en C / c++ / CX, es ágil de forma predeterminada, es decir, tiene `ThreadingModel`= Both y `MarshallingType`= Agile.  Si usa la biblioteca de plantillas C++ de Windows en tiempo de ejecución, se puede crear tu clase ágil derivando de `FtmBase`, que usa el `FreeThreadedMarshaller`.  Si creas una clase que tenga `ThreadingModel`=Both o `ThreadingModel`=MTA, asegúrate de que la clase sea segura para la ejecución de subprocesos. Para obtener más información, consulte [crear y consumir objetos (WRL)](https://msdn.microsoft.com/d5e42216-e888-4f1f-865a-b5ccd0def73e).  
   
  Puedes modificar el modelo de subprocesos y el comportamiento del cálculo de referencias de una clase ref. Sin embargo, si realizas cambios que presentan la clase como no ágil, debes conocer las implicaciones asociadas a esos cambios.  
   
@@ -127,5 +127,5 @@ public ref class MySTAClass
  El subprocesamiento y serialización información requerida por un componente de Windows en tiempo de ejecución de aplicaciones de terceros se especifica en la información de registro del manifiesto de aplicación para el componente. Se recomienda que use todos los componentes de Windows en tiempo de ejecución de agile. Esto garantiza que el código de cliente pueda llamar al componente desde cualquier subproceso de la aplicación y mejora el rendimiento de dichas llamadas porque son llamadas directas que no tienen cálculo de referencias. Si creas tu clase de esta manera, el código de cliente no tiene que usar `Platform::Agile<T>` para utilizar tu clase.  
   
 ## <a name="see-also"></a>Vea también  
- [ThreadingModel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
- [MarshallingBehavior](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+ [ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
+ [MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)

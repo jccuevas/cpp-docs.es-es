@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 759ffd42b7de4d7f1922a95876a05ce4d3002dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d3650482cca0e974a229e303ae20ebdb455aae02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337543"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218688"
 ---
 # <a name="cbasepane-class"></a>CBasePane (clase)
 Clase base para todos los paneles en MFC.  
@@ -291,7 +291,7 @@ class CBasePane : public CWnd
 |[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` no se utiliza este método.|  
 |`CBasePane::OnUpdateCmdUI`|Lo utiliza internamente.|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|Devuelve el panel que contiene el punto especificado.|  
-|`CBasePane::PreTranslateMessage`|La clase [CWinApp](../../mfc/reference/cwinapp-class.md) lo usa para traducir los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|  
+|`CBasePane::PreTranslateMessage`|Utilizado por la clase [CWinApp](../../mfc/reference/cwinapp-class.md) para traducir los mensajes de ventana antes de enviarlos a la [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows. (Invalida [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)).|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` no se utiliza este método.|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Anula el registro de un panel y lo quita de la lista en el Administrador de acoplamiento.|  
 |[CBasePane::SaveState](#savestate)|Guarda el estado del panel en el registro.|  
@@ -1388,7 +1388,7 @@ virtual HDWP MoveWindow(
  Identificador de una estructura de posición de ventana aplazada, o NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- Si se pasa NULL como el *hdwp* parámetro, este método mueve la ventana con normalidad. Si pasa un identificador, este método realiza un movimiento de ventana aplazada. Puede obtener un identificador llamando [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) o almacenando el valor devuelto de una llamada anterior a este método.  
+ Si se pasa NULL como el *hdwp* parámetro, este método mueve la ventana con normalidad. Si pasa un identificador, este método realiza un movimiento de ventana aplazada. Puede obtener un identificador llamando [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) o almacenando el valor devuelto de una llamada anterior a este método.  
   
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
  Lo llama el marco de trabajo después de realizar cambios de elemento primario del panel.  

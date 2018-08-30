@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7becd9e27294c81ce6144d08c79cfac52636fbf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1410a437d87b56b244eb4fcd711797c279bec446
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848270"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217888"
 ---
 # <a name="interfaces-atl"></a>Interfaces (ATL)
 Una interfaz es la manera en que un objeto expone su funcionalidad al mundo exterior. En COM, una interfaz es una tabla de punteros (como una vtable de C++) a funciones implementadas por el objeto. La tabla representa la interfaz y las funciones a la que señala son los métodos de esa interfaz. Un objeto puede exponer tantas interfaces como elija.  
@@ -34,5 +34,5 @@ Una interfaz es la manera en que un objeto expone su funcionalidad al mundo exte
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a COM](../atl/introduction-to-com.md)   
- [Interfaces y objetos COM.](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [Interfaces y objetos COM.](/windows/desktop/com/com-objects-and-interfaces)
 

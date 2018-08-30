@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33fba76d39811b0fed777f057c5936a29f8c8a1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e29b141ff89a37cee59f55624d7fecadbe6acc4c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595098"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215875"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Clases y structs (Extensiones de componentes de C++)
 
@@ -93,7 +93,7 @@ Para obtener más información sobre clases y structs, vea
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [clases y structs Ref](../cppcx/ref-classes-and-structs-c-cx.md) y [clases y structs de valor](http://msdn.microsoft.com/library/windows/apps/hh699861.aspx).
+Consulte [clases y structs Ref](../cppcx/ref-classes-and-structs-c-cx.md) y [clases y structs de valor](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx).
 
 ### <a name="parameters"></a>Parámetros
 

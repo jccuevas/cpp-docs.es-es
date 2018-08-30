@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4f0f2a82c02bcb58f89d604978d31eb01ebd1fd
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5c4acddaeac8e63ecd09860ffc9c56c97b212506
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465696"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219733"
 ---
 # <a name="single-inheritance"></a>Herencia única
 En la "herencia única", una forma de herencia común, las clases solo tienen una clase base. Considere la relación que se muestra en la siguiente ilustración.  
@@ -63,7 +63,7 @@ Ejemplo de gráfico acíclico dirigido
  En el diagrama anterior, denominado "gráfico acíclico dirigido" (o DAG), algunas de las clases son clases base para más de una clase derivada. Sin embargo, no sucede lo mismo al contrario: solo hay una clase base directa para una clase derivada dada. El gráfico de la ilustración muestra una estructura de "herencia única".  
   
 > [!NOTE]
->  Los gráficos acíclicos dirigidos no son exclusivos de la herencia única. También se usan para ilustrar gráficos de herencia múltiple. En este tema se trata en [herencia múltiple](http://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Los gráficos acíclicos dirigidos no son exclusivos de la herencia única. También se usan para ilustrar gráficos de herencia múltiple. En este tema se trata en [herencia múltiple](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
   
  En la herencia, la clase derivada contiene los miembros de la clase base más cualquier miembro nuevo que se agregue. Como resultado, una clase derivada puede hacer referencia a miembros de la clase base (a menos que esos miembros se redefinan en la clase derivada). Se puede usar el operador de resolución de ámbito (`::`) para hacer referencia a los miembros de clases base directas o indirectas cuando esos miembros se han vuelto a definir en la clase derivada. Considere este ejemplo:  
   

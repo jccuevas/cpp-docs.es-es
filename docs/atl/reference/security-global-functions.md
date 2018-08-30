@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e6dcaeed793a81580b9ca5ed93ad7e267b534fe
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 053e7adb5a0f5d6c65f599ae694525853bd221a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881180"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211796"
 ---
 # <a name="security-global-functions"></a>Funciones globales de seguridad
 Estas funciones proporcionan compatibilidad para modificar objetos de SID y ACL.  
@@ -72,7 +72,7 @@ inline bool AtlGetDacl(
  Identificador del objeto que se va a recuperar la información de seguridad.  
   
  *ObjectType*  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
+ Especifica un valor de la [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
  *pDacl*  
  Puntero a un objeto de la DACL que contendrá la información de seguridad recuperado.  
@@ -102,7 +102,7 @@ inline bool AtlSetDacl(
  Identificador del objeto que se va a establecer información de seguridad.  
   
  *ObjectType*  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
+ Especifica un valor de la [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
  *rDacl*  
  La DACL que contiene la información de seguridad nuevo.  
@@ -136,7 +136,7 @@ inline bool AtlGetGroupSid(
  Identificador del objeto desde el que se va a recuperar la información de seguridad.  
   
  *ObjectType*  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
+ Especifica un valor de la [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
  *pSid*  
  Puntero a un `CSid` objetos que contendrán la nueva información de seguridad.  
@@ -165,7 +165,7 @@ inline bool AtlSetGroupSid(
  Identificador del objeto que se va a establecer información de seguridad.  
   
  *ObjectType*  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
+ Especifica un valor de la [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
  *rSid*  
  La `CSid` objeto que contiene la nueva información de seguridad.  
@@ -194,7 +194,7 @@ inline bool AtlGetOwnerSid(
  Identificador del objeto desde el que se va a recuperar la información de seguridad.  
   
  *ObjectType*  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
+ Especifica un valor de la [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
  *pSid*  
  Puntero a un `CSid` objetos que contendrán la nueva información de seguridad.  
@@ -223,7 +223,7 @@ inline bool AtlSetOwnerSid(
  Identificador del objeto que se va a establecer información de seguridad.  
   
  *ObjectType*  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
+ Especifica un valor de la [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
  *rSid*  
  La `CSid` objeto que contiene la nueva información de seguridad.  
@@ -253,7 +253,7 @@ inline bool AtlGetSacl(
  Identificador del objeto desde el que se va a recuperar la información de seguridad.  
   
  *ObjectType*  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
+ Especifica un valor de la [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
  *pSacl*  
  Puntero a un objeto de la SACL que contendrá la información de seguridad recuperado.  
@@ -290,7 +290,7 @@ inline bool AtlSetSacl(
  Identificador del objeto que se va a establecer información de seguridad.  
   
  *ObjectType*  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
+ Especifica un valor de la [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeración que indica el tipo del objeto identificado por el *hObject* parámetro.  
   
  *rSacl*  
  La SACL que contiene la información de seguridad nuevo.  
@@ -334,13 +334,13 @@ inline bool AtlGetSecurityDescriptor(
  Puntero a una cadena terminada en null que especifica el nombre del objeto que se va a recuperar la información de seguridad.  
   
  *ObjectType*  
- Especifica un valor de la [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) enumeración que indica el tipo del objeto identificado por el *pszObjectName* parámetro.  
+ Especifica un valor de la [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type) enumeración que indica el tipo del objeto identificado por el *pszObjectName* parámetro.  
   
  *pSecurityDescriptor*  
  El objeto que recibe el descriptor de seguridad solicitado.  
   
  *requestedInfo*  
- Un conjunto de [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) bit de marcas que indican el tipo de información de seguridad para recuperar. Este parámetro puede ser una combinación de los siguientes valores.  
+ Un conjunto de [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) bit de marcas que indican el tipo de información de seguridad para recuperar. Este parámetro puede ser una combinación de los siguientes valores.  
   
  *bRequestNeededPrivileges*  
  Si es true, la función intentará habilitar el privilegio SE_SECURITY_NAME y restaurarla en la finalización.  

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc3721159dfa7470106e6935664f3119ae4d264
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: eb505ac53c6a8b3b05edfc99bad813ebe2c341d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885044"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218570"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject (clase)
 Esta clase implementa una interfaz desplazable.  
@@ -46,7 +46,7 @@ class CComTearOffObject : public Base
  *base*  
  Deriva de la clase desplazable, `CComTearOffObjectBase` y las interfaces desea que el objeto desplazable para admitir.  
   
- ATL implementa sus interfaces divisibles en dos fases: la `CComTearOffObjectBase` métodos controlan el recuento de referencias y `QueryInterface`, mientras que `CComTearOffObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509).  
+ ATL implementa sus interfaces divisibles en dos fases: la `CComTearOffObjectBase` métodos controlan el recuento de referencias y `QueryInterface`, mientras que `CComTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).  
   
 ## <a name="members"></a>Miembros  
   
