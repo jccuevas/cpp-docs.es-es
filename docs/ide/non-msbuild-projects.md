@@ -1,7 +1,7 @@
 ---
 title: Proyectos Abrir carpeta en Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 08/02/2017
+ms.date: 06/01/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,15 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d4444e70ec158d7afa35c3955bbef9af4bfa12f2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337290"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131328"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Proyectos Abrir carpeta en Visual C++
-En Visual Studio 2017 se presenta la característica "Abrir carpeta", que permite abrir una carpeta de archivos de código fuente y comenzar a codificar de manera inmediata con compatibilidad con IntelliSense, exploración, refactorización, depuración y así sucesivamente. No se carga ningún archivo .sln o .vcxproj; si es necesario, se pueden especificar tareas personalizadas así como parámetros de inicio y compilación a través de archivos .json simples. Con la tecnología de Carpeta abierta, ahora Visual C++ no solo puede admitir colecciones flexibles de archivos, sino también prácticamente cualquier sistema de compilación, incluidos CMake, Ninja, QMake (para proyectos de Qt), gyp, SCons, Gradle, Buck, make y muchos más. 
+
+En Visual Studio 2017 y versiones posteriores, la característica "Abrir carpeta" permite abrir carpetas de archivos de código fuente y comenzar a escribir código compatible con IntelliSense, la exploración, la refactorización, la depuración, etc. de inmediato. No se carga ningún archivo .sln o .vcxproj; si es necesario, se pueden especificar tareas personalizadas así como parámetros de inicio y compilación a través de archivos .json simples. Con la tecnología de Carpeta abierta, ahora Visual C++ no solo puede admitir colecciones flexibles de archivos, sino también prácticamente cualquier sistema de compilación, incluidos CMake, Ninja, QMake (para proyectos de Qt), gyp, SCons, Gradle, Buck, make y muchos más. 
 
 Para usar Abrir carpeta, en el menú principal seleccione *Archivo | Abrir | Carpeta* o presione *Ctrl + Mayús + Alt + O*. En el Explorador de soluciones se muestran inmediatamente todos los archivos de la carpeta. Puede hacer clic en cualquier archivo para comenzar a editarlo. En segundo plano, Visual Studio comienza a indexar los archivos para habilitar las características de refactorización, navegación e IntelliSense. A medida que edita, crea, mueve o elimina archivos, Visual Studio hace seguimiento de manera automática de los cambios y actualiza de manera continua su indice de IntelliSense. 
   
@@ -30,7 +31,7 @@ Para usar Abrir carpeta, en el menú principal seleccione *Archivo | Abrir | Car
 CMake está integrado en el IDE de Visual Studio como Herramientas de Visual C++ para CMake, un componente de la carga de trabajo Escritorio de C++. Para obtener más información, consulte [Herramientas de CMake para Visual C++](cmake-tools-for-visual-cpp.md).
  
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Proyectos de QMake que tienen como destino el marco de trabajo de Qt
-Puede usar Herramientas de Visual C++ para CMake para seleccionar Qt como destino para compilar proyectos de Qt, o bien puede usar la extensión Qt de Visual Studio. Nota: A partir de agosto de 2017, la [compatibilidad de la extensión Qt de Visual Studio para Visual Studio 2017](https://download.qt.io/development_releases/vsaddin/) está disponible como una versión beta.
+Puede usar las herramientas de Visual C++ para CMake para establecer Qt como destino para compilar proyectos de Qt, o bien puede usar la [extensión Qt de Visual Studio](https://download.qt.io/development_releases/vsaddin/) para Visual Studio 2015 o Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck, etc.
 Puede usar cualquier sistema de compilación en Visual C++ y seguir disfrutando de las ventajas del IDE y el depurador de Visual C++. Cuando se abre la carpeta raíz del proyecto, Visual C++ usa la heurística para indexar los archivos de código fuente para IntelliSense y la exploración. Puede proporcionar indicaciones sobre la estructura del código si modifica el archivo CppProperties.json. De forma similar, puede configurar el programa de compilación si modifica el archivo launch.vs.json. 
@@ -86,7 +87,7 @@ Una configuración puede tener cualquiera de las propiedades siguientes:
 #### <a name="environment-variables"></a>Variables de entorno
 CppProperties.json admite la expansión de variables de entorno del sistema para incluir rutas de acceso de inclusión y otros valores de propiedad. La sintaxis es `${env.FOODIR}` para expandir una variable de entorno `%FOODIR%`. También se admiten las siguientes variables definidas por el sistema:
 
-|Nombre de la variable|Description|  
+|Nombre de la variable|Descripción|  
 |-----------|-----------------|
 |vsdev|El entorno de Visual Studio predeterminado.|
 |msvc_x86|Compilar para x86 con herramientas de x86.|
@@ -99,7 +100,7 @@ CppProperties.json admite la expansión de variables de entorno del sistema para
 
 Cuando se instala la carga de trabajo de Linux, los entornos siguientes están disponibles para seleccionar como destino Linux y WSL de forma remota:
 
-|Nombre de la variable|Description|  
+|Nombre de la variable|Descripción|  
 |-----------|-----------------|
 |linux_x86|Se destina a Linux x86 de forma remota.|
 |linux_x64|Se destina a Linux x64 de forma remota.|
