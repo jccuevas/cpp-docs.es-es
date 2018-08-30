@@ -1,5 +1,5 @@
 ---
-title: -/ASSEMBLYRESOURCE (incrustar un recurso administrado) | Documentos de Microsoft
+title: -ASSEMBLYRESOURCE (insertar un recurso administrado) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88afe292905ee46c1e939d29f787055f98058dc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acb7b173ffd22e65e20dcc9cceef61b2e2131c83
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372183"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213406"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (Incrustar un recurso administrado)
 ```  
@@ -35,7 +35,7 @@ ms.locfileid: "32372183"
   
 ## <a name="parameters"></a>Parámetros  
  *filename*  
- El recurso administrado que se desea incrustar en este ensamblado.  
+ El recurso administrado que desea insertar en este ensamblado.  
   
  *name*  
  Opcional. El nombre lógico del recurso; el nombre utilizado para cargar el recurso. El valor predeterminado es el nombre del archivo.  
@@ -43,11 +43,11 @@ ms.locfileid: "32372183"
  Si lo desea, puede especificar si el archivo debe ser privado en el manifiesto del ensamblado. De forma predeterminada, *nombre* es público en el ensamblado.  
   
 ## <a name="remarks"></a>Comentarios  
- Utilice la opción /ASSEMBLYRESOURCE para incrustar un recurso en un ensamblado.  
+ Utilice la opción/ASSEMBLYRESOURCE para incrustar un recurso en un ensamblado.  
   
  Los recursos son públicos en el ensamblado cuando se crean con el vinculador. El vinculador no permite cambiar el nombre del recurso en el ensamblado.  
   
- Si *filename* es un archivo de recursos (.resources) de .NET Framework creado, por ejemplo, con el [generador de archivos de recursos (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) o en el entorno de desarrollo, puede tener acceso a los miembros de la **System.Resources** espacio de nombres (consulte [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx) para obtener más información). Para todos los demás recursos, use el **GetManifestResource** \* métodos en **System.Reflection.Assembly** clase para acceder al recurso en tiempo de ejecución.  
+ Si *filename* es un archivo de recursos (.resources) de .NET Framework creado, por ejemplo, con el [generador de archivos de recursos (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) o en el entorno de desarrollo, puede obtenerse con los miembros de la **System.Resources** espacio de nombres (consulte [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx) para obtener más información). Para todos los demás recursos, utilice el **GetManifestResource** \* métodos en **System.Reflection.Assembly** clase para acceder al recurso en tiempo de ejecución.  
   
  Otras opciones del vinculador que afectan a la generación de ensamblado son:  
   

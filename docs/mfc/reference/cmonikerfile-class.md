@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 296e288f017373563b867b02ad26f25ec6bc6227
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b3aab8fe3dac8cb58884861a83e41d09b493a375
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853652"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212122"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile (clase)
-Representa un flujo de datos ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) llamado por un [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+Representa un flujo de datos ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) llamado por un [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -74,7 +74,7 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile` no se puede usar para enlazar a un valor distinto de una secuencia. Si desea enlazar a un objeto o de almacenamiento, debe usar el `IMoniker` interfaz directamente.  
   
- Para obtener más información sobre secuencias y monikers, consulte [COleStreamFile](../../mfc/reference/colestreamfile-class.md) en el *referencia de MFC* y [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) y [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) en el Windows SDK.  
+ Para obtener más información sobre secuencias y monikers, consulte [COleStreamFile](../../mfc/reference/colestreamfile-class.md) en el *referencia de MFC* y [IStream](/windows/desktop/api/objidl/nn-objidl-istream) y [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) en el Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -117,7 +117,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
  Un puntero a una excepción de archivo. Si se produce un error, se establecerá la causa.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero al contexto de enlace [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) para enlazar con si es correcto; de lo contrario, NULL. Si la instancia se abrió con una `IBindHost` interfaz, se recupera el contexto de enlace de la `IBindHost`. Si no hay ningún `IBindHost` interfaz o la interfaz no puede devolver un contexto de enlace, se crea un contexto de enlace. Para obtener una descripción de la [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) de la interfaz, consulte el SDK de Windows.  
+ Un puntero al contexto de enlace [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) para enlazar con si es correcto; de lo contrario, NULL. Si la instancia se abrió con una `IBindHost` interfaz, se recupera el contexto de enlace de la `IBindHost`. Si no hay ningún `IBindHost` interfaz o la interfaz no puede devolver un contexto de enlace, se crea un contexto de enlace. Para obtener una descripción de la [IBindHost](https://msdn.microsoft.com/library/ie/ms775076) de la interfaz, consulte el SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  
  Un contexto de enlace es un objeto que almacena información sobre una operación de enlace de moniker determinado. Se puede reemplazar esta función para proporcionar un contexto de enlace personalizada.  
@@ -144,10 +144,10 @@ IMoniker* GetMoniker() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la interfaz del moniker actual ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
+ Un puntero a la interfaz del moniker actual ( [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)).  
   
 ### <a name="remarks"></a>Comentarios  
- Puesto que `CMonikerFile` no es una interfaz, el puntero devuelto no incrementa el recuento de referencias (a través de [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), y el moniker se libera cuando el `CMonikerFile` se libera el objeto. Si desea retener el moniker o liberar usted mismo, debe `AddRef` lo.  
+ Puesto que `CMonikerFile` no es una interfaz, el puntero devuelto no incrementa el recuento de referencias (a través de [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)), y el moniker se libera cuando el `CMonikerFile` se libera el objeto. Si desea retener el moniker o liberar usted mismo, debe `AddRef` lo.  
   
 ##  <a name="open"></a>  CMonikerFile::Open  
  Llame a esta función miembro para abrir un objeto de archivo o moniker.  

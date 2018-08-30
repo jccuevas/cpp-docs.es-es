@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0903c4d6165ec511d35f7aac13deca06a704c31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b0b36342b7760eea074fe15506386bb3d7ce6764
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42571281"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221247"
 ---
 # <a name="propputref"></a>propputref
 
@@ -36,7 +36,7 @@ Especifica una función de la configuración de propiedad que utiliza una refere
 
 ## <a name="remarks"></a>Comentarios
 
-El **propputref** atributo de C++ tiene la misma funcionalidad que el [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) atributo MIDL.
+El **propputref** atributo de C++ tiene la misma funcionalidad que el [propputref](/windows/desktop/Midl/propputref) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

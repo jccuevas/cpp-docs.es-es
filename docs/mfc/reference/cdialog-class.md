@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8dd6fbb4cbbcea6e452afadff5b0c0e081d34e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339415"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217338"
 ---
 # <a name="cdialog-class"></a>CDialog (clase)
 La clase base utilizada para mostrar cuadros de diálogo en la pantalla.  
@@ -115,7 +115,7 @@ class CDialog : public CWnd
   
  Para crear un cuadro de diálogo modal, construya un objeto en la pila utilizando el constructor para la clase de cuadro de diálogo derivada y, a continuación, llame a `DoModal` para crear la ventana de cuadro de diálogo y sus controles. Si desea crear un cuadro de diálogo no modal, llame a `Create` en el constructor de la clase de cuadro de diálogo.  
   
- También puede crear una plantilla en la memoria mediante una [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) estructura de datos, como se describe en el SDK de Windows. Después de crear un `CDialog` de objeto, llame a [CreateIndirect](#createindirect) para crear un no modal cuadro de diálogo o una llamada de [InitModalIndirect](#initmodalindirect) y [DoModal](#domodal) para crear un estado modal cuadro de diálogo.  
+ También puede crear una plantilla en la memoria mediante una [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) estructura de datos, como se describe en el SDK de Windows. Después de crear un `CDialog` de objeto, llame a [CreateIndirect](#createindirect) para crear un no modal cuadro de diálogo o una llamada de [InitModalIndirect](#initmodalindirect) y [DoModal](#domodal) para crear un estado modal cuadro de diálogo.  
   
  La asignación de datos de exchange y la validación se escribe en un reemplazo de `CWnd::DoDataExchange` que se agrega a la nueva clase de cuadro de diálogo. Consulte la [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) función miembro en `CWnd` para obtener más información sobre la funcionalidad de intercambio y validación.  
   
@@ -220,7 +220,7 @@ virtual BOOL Create(
   
  El `Create` función miembro devuelve inmediatamente después de crear el cuadro de diálogo.  
   
- Utilice el estilo WS_VISIBLE en la plantilla de cuadro de diálogo si debe aparecer el cuadro de diálogo cuando se crea la ventana primaria. En caso contrario, se debe llamar a `ShowWindow`. Para obtener aún más los estilos de cuadro de diálogo y su aplicación, consulte el [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) estructura en el SDK de Windows y [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) en el *referencia de MFC*.  
+ Utilice el estilo WS_VISIBLE en la plantilla de cuadro de diálogo si debe aparecer el cuadro de diálogo cuando se crea la ventana primaria. En caso contrario, se debe llamar a `ShowWindow`. Para obtener aún más los estilos de cuadro de diálogo y su aplicación, consulte el [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) estructura en el SDK de Windows y [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) en el *referencia de MFC*.  
   
  Use la `CWnd::DestroyWindow` función para destruir un cuadro de diálogo creado por el `Create` función.  
   
@@ -244,7 +244,7 @@ virtual BOOL CreateIndirect(
   
 ### <a name="parameters"></a>Parámetros  
  *lpDialogTemplate*  
- Apunta a la memoria que contiene una plantilla de cuadro de diálogo usada para crear el cuadro de diálogo. Esta plantilla es en forma de un [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) información de estructura y el control, como se describe en el SDK de Windows.  
+ Apunta a la memoria que contiene una plantilla de cuadro de diálogo usada para crear el cuadro de diálogo. Esta plantilla es en forma de un [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) información de estructura y el control, como se describe en el SDK de Windows.  
   
  *pParentWnd*  
  Señala al objeto de ventana primaria del objeto de cuadro de diálogo (de tipo [CWnd](../../mfc/reference/cwnd-class.md)). Si es NULL, la ventana primaria del objeto de cuadro de diálogo se establece en la ventana principal de la aplicación.  
@@ -261,7 +261,7 @@ virtual BOOL CreateIndirect(
 ### <a name="remarks"></a>Comentarios  
  El `CreateIndirect` función miembro devuelve inmediatamente después de crear el cuadro de diálogo.  
   
- Utilice el estilo WS_VISIBLE en la plantilla de cuadro de diálogo si debe aparecer el cuadro de diálogo cuando se crea la ventana primaria. En caso contrario, se debe llamar a `ShowWindow` para hacer que aparezca. Para obtener más información sobre cómo puede especificar otros estilos de cuadro de diálogo en la plantilla, consulte el [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) estructura en el SDK de Windows.  
+ Utilice el estilo WS_VISIBLE en la plantilla de cuadro de diálogo si debe aparecer el cuadro de diálogo cuando se crea la ventana primaria. En caso contrario, se debe llamar a `ShowWindow` para hacer que aparezca. Para obtener más información sobre cómo puede especificar otros estilos de cuadro de diálogo en la plantilla, consulte el [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) estructura en el SDK de Windows.  
   
  Use la `CWnd::DestroyWindow` función para destruir un cuadro de diálogo creado por el `CreateIndirect` función.  
   
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un **int** valor que especifica el valor de la *Nresultado* parámetro que se pasó a la [CDialog::EndDialog](#enddialog) función miembro, que se utiliza para cerrar el cuadro de diálogo. El valor devuelto es -1 si la función no pudo crear el cuadro de diálogo o IDABORT si se ha producido algún otro error, en cuyo caso la ventana de salida contendrá información de error de [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Un **int** valor que especifica el valor de la *Nresultado* parámetro que se pasó a la [CDialog::EndDialog](#enddialog) función miembro, que se utiliza para cerrar el cuadro de diálogo. El valor devuelto es -1 si la función no pudo crear el cuadro de diálogo o IDABORT si se ha producido algún otro error, en cuyo caso la ventana de salida contendrá información de error de [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro controla toda la interacción con el usuario mientras el cuadro de diálogo está activo. Esto es lo que hace que el cuadro de diálogo modal; es decir, el usuario no puede interactuar con otras ventanas hasta que se cierre el cuadro de diálogo.  
@@ -358,7 +358,7 @@ BOOL InitModalIndirect(
   
 ### <a name="parameters"></a>Parámetros  
  *lpDialogTemplate*  
- Apunta a la memoria que contiene una plantilla de cuadro de diálogo usada para crear el cuadro de diálogo. Esta plantilla es en forma de un [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) información de estructura y el control, como se describe en el SDK de Windows.  
+ Apunta a la memoria que contiene una plantilla de cuadro de diálogo usada para crear el cuadro de diálogo. Esta plantilla es en forma de un [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) información de estructura y el control, como se describe en el SDK de Windows.  
   
  *hDialogTemplate*  
  Contiene un identificador de la memoria global que contiene una plantilla de cuadro de diálogo. Esta plantilla es en forma de un `DLGTEMPLATE` estructura y los datos para cada control en el cuadro de diálogo.  

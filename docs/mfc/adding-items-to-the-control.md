@@ -1,5 +1,5 @@
 ---
-title: Agregar elementos al Control | Documentos de Microsoft
+title: Agregar elementos al Control | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eab0c7cb1aebf1675d078aa99941edfd9afdc5a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2e9434e93640de190b78e92a1f009a0ad9cbecf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341370"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214442"
 ---
 # <a name="adding-items-to-the-control"></a>Agregar elementos al control
-Para agregar elementos al control de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)), llame a uno de las versiones de la [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) función de miembro, dependiendo de qué información tienen. Una versión toma un [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) estructura que prepare. Dado que el `LV_ITEM` estructura contiene muchos miembros, tener un mayor control sobre los atributos del elemento de control de lista.  
+Para agregar elementos al control de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)), llame a uno de varias versiones de la [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) función miembro, dependiendo de qué información tiene. Una versión toma un [LV_ITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) estructura que prepare. Dado que el `LV_ITEM` estructura contiene muchos miembros, tener mayor control sobre los atributos del elemento de control de lista.  
   
- Dos miembros importantes (con respecto a la vista de informe) de la `LV_ITEM` estructura son el `iItem` y `iSubItem` los miembros. El `iItem` miembro es el índice de base cero del elemento que se hace referencia la estructura y el `iSubItem` miembro es el índice basado en uno de un subelemento, o cero si la estructura contiene información sobre un elemento. Con estos dos miembros se determina, por elemento, el tipo y valor de información del subelemento que se muestra cuando el control de lista está en vista de informe. Para obtener más información, consulte [CListCtrl:: SetItem](../mfc/reference/clistctrl-class.md#setitem).  
+ Dos miembros importantes (con respecto a la vista de informe) de la `LV_ITEM` estructura son el `iItem` y `iSubItem` miembros. El `iItem` miembro es el índice de base cero del elemento que se hace referencia la estructura y el `iSubItem` miembro es el índice basado en uno de un subelemento, o cero si la estructura contiene información sobre un elemento. Con estos dos miembros se determina, por elemento, el tipo y valor de la información del subelemento que se muestra cuando el control de lista está en vista de informe. Para obtener más información, consulte [CListCtrl:: SetItem](../mfc/reference/clistctrl-class.md#setitem).  
   
- Miembros adicionales que especifican el elemento texto, icono, estado y datos de elemento. "Elemento de datos" es un valor definido por la aplicación asociado a un elemento de vista de lista. Para obtener más información sobre la `LV_ITEM` estructura, vea [CListCtrl:: GetItem](../mfc/reference/clistctrl-class.md#getitem).  
+ Miembros adicionales especifican texto, icono, estado y datos de elemento del elemento. "Los datos del elemento" es un valor definido por la aplicación asociado con un elemento de vista de lista. Para obtener más información sobre la `LV_ITEM` estructura, vea [CListCtrl:: GetItem](../mfc/reference/clistctrl-class.md#getitem).  
   
- Otras versiones de `InsertItem` tomar uno o más valores independientes, correspondientes a los miembros de la `LV_ITEM` estructura, lo que permite inicializar solo aquellos miembros que desee admitir. Por lo general, el control de lista administra el almacenamiento para los elementos de lista, pero puede almacenar parte de la información en la aplicación en su lugar, mediante "elementos de devolución de llamada". Para obtener más información, consulte [elementos de devolución de llamada y la máscara de devolución de llamada](../mfc/callback-items-and-the-callback-mask.md) en este tema y [elementos de devolución de llamada y la máscara de devolución de llamada](http://msdn.microsoft.com/library/windows/desktop/bb774736) en el SDK de Windows.  
+ Otras versiones de `InsertItem` tardar uno o varios valores independientes, correspondientes a los miembros de la `LV_ITEM` estructura, lo que permite inicializar solo aquellos miembros que desea admitir. Por lo general, el control de lista administra el almacenamiento para los elementos de lista, pero se pueden almacenar parte de la información en la aplicación en su lugar, mediante "elementos de devolución de llamada". Para obtener más información, consulte [elementos de devolución de llamada y máscara de devolución de llamada](../mfc/callback-items-and-the-callback-mask.md) en este tema y [elementos de devolución de llamada y máscara de devolución de llamada](/windows/desktop/Controls/using-list-view-controls) en el SDK de Windows.  
   
- Para obtener más información, consulte [agregar elementos de vista de lista y subelementos](http://msdn.microsoft.com/library/windows/desktop/bb774736).  
+ Para obtener más información, consulte [agregar vista de lista de elementos y subelementos](/windows/desktop/Controls/using-list-view-controls).  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CListCtrl](../mfc/using-clistctrl.md)   

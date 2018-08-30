@@ -1,5 +1,5 @@
 ---
-title: CWinThread (clase) | Documentos de Microsoft
+title: CWinThread (clase) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115b351ccbaf9c8c5cbccb0004d04c53e54351ba
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 02bfbe474d30088c887e7a16b6dcea079dfd9821
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123069"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213071"
 ---
 # <a name="cwinthread-class"></a>CWinThread (clase)
 Representa un subproceso de ejecución dentro de una aplicación.  
@@ -89,21 +89,21 @@ class CWinThread : public CCmdTarget
 |Name|Descripción|  
 |----------|-----------------|  
 |[CWinThread:: CreateThread](#createthread)|Inicia la ejecución de un `CWinThread` objeto.|  
-|[CWinThread::ExitInstance](#exitinstance)|Reemplace este valor para limpiar cuando finaliza el subproceso.|  
-|[CWinThread::GetMainWnd](#getmainwnd)|Recupera un puntero a la ventana principal para el subproceso.|  
+|[CWinThread::ExitInstance](#exitinstance)|Invalide para limpiar cuando finaliza el subproceso.|  
+|[CWinThread::GetMainWnd](#getmainwnd)|Recupera un puntero a la ventana principal del subproceso.|  
 |[CWinThread::GetThreadPriority](#getthreadpriority)|Obtiene la prioridad del subproceso actual.|  
-|[CWinThread::InitInstance](#initinstance)|Reemplace este valor para realizar la inicialización de la instancia de subproceso.|  
+|[CWinThread::InitInstance](#initinstance)|Reemplace este valor para realizar la inicialización de instancia del subproceso.|  
 |[CWinThread::IsIdleMessage](#isidlemessage)|Comprueba si hay mensajes especiales.|  
 |[CWinThread::OnIdle](#onidle)|Reemplace este valor para realizar el procesamiento de tiempo de inactividad específicos del subproceso.|  
 |[CWinThread::PostThreadMessage](#postthreadmessage)|Envía un mensaje a otro `CWinThread` objeto.|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtra los mensajes antes de enviarlos a las funciones de Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).|  
-|[CWinThread::ProcessMessageFilter](#processmessagefilter)|Intercepta determinados mensajes antes de alcanzar la aplicación.|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtra los mensajes antes de enviarlos a las funciones de Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|  
+|[CWinThread::ProcessMessageFilter](#processmessagefilter)|Intercepta determinados mensajes antes de llegar a la aplicación.|  
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Intercepta todas las excepciones no controladas producidas por el mensaje del subproceso y controladores de comandos.|  
 |[CWinThread::PumpMessage](#pumpmessage)|Contiene el bucle de mensajes del subproceso.|  
-|[CWinThread:: ResumeThread](#resumethread)|Recuento de suspensiones disminuye una del subproceso.|  
-|[CWinThread:: Run](#run)|Función controladora para subprocesos con una bomba de mensaje. Invalidar para personalizar el bucle de mensajes de forma predeterminada.|  
+|[CWinThread:: ResumeThread](#resumethread)|Disminuye un del subproceso recuento de suspensiones.|  
+|[CWinThread:: Run](#run)|Función controladora para subprocesos con un suministro de mensajes. Invalidar para personalizar el bucle de mensajes de forma predeterminada.|  
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Establece la prioridad del subproceso actual.|  
-|[CWinThread:: SuspendThread](#suspendthread)|Recuento de suspensiones de incrementos un del subproceso.|  
+|[CWinThread:: SuspendThread](#suspendthread)|Incrementos de un del subproceso recuento de suspensiones.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -117,24 +117,24 @@ class CWinThread : public CCmdTarget
 |----------|-----------------|  
 |[CWinThread::m_bAutoDelete](#m_bautodelete)|Especifica si se destruye el objeto cuando finalice el subproceso.|  
 |[CWinThread::m_hThread](#m_hthread)|Identificador del subproceso actual.|  
-|[CWinThread::m_nThreadID](#m_nthreadid)|Identificador del subproceso actual.|  
-|[CWinThread::m_pActiveWnd](#m_pactivewnd)|Puntero a la ventana principal de la aplicación contenedora cuando un servidor OLE está activo en contexto.|  
+|[CWinThread::m_nThreadID](#m_nthreadid)|Id. del subproceso actual.|  
+|[CWinThread::m_pActiveWnd](#m_pactivewnd)|Puntero a la ventana principal de la aplicación contenedora cuando un servidor OLE en contexto activo.|  
 |[CWinThread::m_pMainWnd](#m_pmainwnd)|Contiene un puntero a la ventana principal de la aplicación.|  
   
 ## <a name="remarks"></a>Comentarios  
- El subproceso principal de ejecución suele proporcionar un objeto derivado de `CWinApp`; `CWinApp` se deriva de `CWinThread`. Adicionales `CWinThread` objetos permiten que varios subprocesos dentro de una aplicación determinada.  
+ El subproceso de ejecución principal suele proporcionar un objeto derivado de `CWinApp`; `CWinApp` se deriva de `CWinThread`. Adicionales `CWinThread` objetos permiten que varios subprocesos dentro de una aplicación determinada.  
   
- Hay dos tipos generales de subprocesos que `CWinThread` es compatible con: subprocesos de trabajo y los subprocesos de interfaz de usuario. Subprocesos de trabajo no tienen ningún suministro de mensajes: por ejemplo, un subproceso que realiza cálculos de fondo en una aplicación de hoja de cálculo. Subprocesos de interfaz de usuario tienen un bombeo de mensajes y procesan los mensajes recibidos desde el sistema. [CWinApp](../../mfc/reference/cwinapp-class.md) y sus clases derivadas son ejemplos de subprocesos de interfaz de usuario. Pueden que otros subprocesos de interfaz de usuario también se pueden derivar directamente desde `CWinThread`.  
+ Hay dos tipos generales de subprocesos que `CWinThread` admite: subprocesos de trabajo y los subprocesos de interfaz de usuario. Subprocesos de trabajo no tienen suministro de mensajes: por ejemplo, un subproceso que realiza cálculos en segundo plano en una aplicación de hoja de cálculo. Subprocesos de interfaz de usuario tienen un bombeo de mensajes y procesan los mensajes recibidos desde el sistema. [CWinApp](../../mfc/reference/cwinapp-class.md) y sus clases derivadas son ejemplos de subprocesos de interfaz de usuario. Otros subprocesos de interfaz de usuario también se pueden derivar directamente de `CWinThread`.  
   
- Objetos de clase `CWinThread` normalmente existen para la duración del subproceso. Si desea modificar este comportamiento, establezca [m_bAutoDelete](#m_bautodelete) en FALSE.  
+ Los objetos de clase `CWinThread` normalmente existen para la duración del subproceso. Si desea modificar este comportamiento, establezca [m_bAutoDelete](#m_bautodelete) en FALSE.  
   
- La `CWinThread` clase es necesaria para que su código y MFC completamente segura para subprocesos. Datos locales del subproceso utilizados por el marco de trabajo para mantener información específica del subproceso administrados por `CWinThread` objetos. Debido a esta dependencia de `CWinThread` para controlar los datos locales del subproceso, cualquier subproceso que utiliza MFC debe crearse por MFC. Por ejemplo, un subproceso creado por la función de tiempo de ejecución [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) no se utiliza ninguna API de MFC.  
+ La `CWinThread` clase es necesaria para hacer que su código y MFC completamente segura para subprocesos. Administra los datos locales del subproceso que usa el marco de trabajo para mantener la información específica de subprocesos `CWinThread` objetos. Debido a esta dependencia de `CWinThread` para administrar datos locales del subproceso, debe crearse cualquier subproceso que utiliza MFC por MFC. Por ejemplo, un subproceso creado por la función de tiempo de ejecución [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) no se puede usar las API de MFC.  
   
- Para crear un subproceso, llame a [AfxBeginThread](application-information-and-management.md#afxbeginthread). Hay dos formas, dependiendo de si desea que un subproceso de trabajo o la interfaz de usuario. Si desea que un subproceso de interfaz de usuario, pasar a `AfxBeginThread` un puntero a la `CRuntimeClass` de su `CWinThread`-clase derivada. Si desea crear un subproceso de trabajo, pase a `AfxBeginThread` un puntero a la función de control y el parámetro a la función de control. Para los subprocesos de trabajo y subprocesos de interfaz de usuario, puede especificar los parámetros opcionales que modifican la prioridad, tamaño de la pila, marcas de creación y atributos de seguridad. `AfxBeginThread` Devuelve un puntero a la nueva `CWinThread` objeto.  
+ Para crear un subproceso, llame a [AfxBeginThread](application-information-and-management.md#afxbeginthread). Hay dos formas, dependiendo de si un subproceso de trabajo o la interfaz de usuario. Si desea que un subproceso de interfaz de usuario, pasar a `AfxBeginThread` un puntero a la `CRuntimeClass` de su `CWinThread`-clase derivada. Si desea crear un subproceso de trabajo, pasar a `AfxBeginThread` un puntero a la función controladora y el parámetro a la función controladora. Para los subprocesos de trabajo y los subprocesos de interfaz de usuario, puede especificar parámetros opcionales que modifican el tamaño de la pila, prioridad, marcas de creación y los atributos de seguridad. `AfxBeginThread` Devuelve un puntero a la nueva `CWinThread` objeto.  
   
- En lugar de llamar `AfxBeginThread`, puede construir un `CWinThread`-derivados de objeto y, después, llame `CreateThread`. Este método de construcción en dos fases es útil si desea reutilizar el `CWinThread` objeto entre sucesiva creación y las terminaciones de ejecuciones de subprocesos.  
+ En lugar de llamar `AfxBeginThread`, puede construir un `CWinThread`-derivados de objeto y, después, llame `CreateThread`. Este método de construcción en dos fases es útil si desea reutilizar el `CWinThread` objeto entre sucesiva creación y finalizaciones de ejecuciones de subproceso.  
   
- Para obtener más información sobre `CWinThread`, consulte los artículos [Multithreading con C++ y MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: crear subprocesos de la interfaz de usuario](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: crear trabajo Subprocesos](../../parallel/multithreading-creating-worker-threads.md), y [subprocesamiento múltiple: cómo usar las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Para obtener más información sobre `CWinThread`, consulte los artículos [Multithreading con C++ y MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: crear subprocesos de la interfaz de usuario](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: crear trabajo Subprocesos](../../parallel/multithreading-creating-worker-threads.md), y [Multithreading: uso de las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -158,23 +158,23 @@ BOOL CreateThread(
   
 ### <a name="parameters"></a>Parámetros  
  *dwCreateFlags*  
- Especifica una marca adicional que controla la creación del subproceso. Este indicador puede contener uno de dos valores:  
+ Especifica un mensaje adicional que controla la creación del subproceso. Este indicador puede contener uno de dos valores:  
   
-- CREATE_SUSPENDED iniciar el subproceso con un recuento de suspensión de uno. Utilice CREATE_SUSPENDED si desea inicializar los datos de miembro de la `CWinThread` objeto, como [m_bAutoDelete](#m_bautodelete) o todos los miembros de la clase derivada, antes de que el subproceso empieza a ejecutarse. Una vez completada la inicialización, utilice la [CWinThread:: ResumeThread](#resumethread) para iniciar el subproceso de ejecución. El subproceso no se ejecutará hasta que `CWinThread::ResumeThread` se llama.  
+- CREATE_SUSPENDED iniciar el subproceso con un recuento de suspensión de uno. Utilice CREATE_SUSPENDED si desea inicializar los datos de miembro de la `CWinThread` objetos, como [m_bAutoDelete](#m_bautodelete) o los miembros de la clase derivada, antes de que el subproceso empieza a ejecutarse. Una vez completada la inicialización, utilice el [CWinThread:: ResumeThread](#resumethread) para iniciar el subproceso que se ejecuta. El subproceso no se ejecutará hasta `CWinThread::ResumeThread` se llama.  
   
 - **0** iniciar el subproceso inmediatamente después de crear.  
   
  *nStackSize*  
- Especifica el tamaño en bytes de la pila para el nuevo subproceso. Si **0**, el tamaño de pila predeterminado es el mismo tamaño que la del subproceso principal del proceso.  
+ Especifica el tamaño en bytes de la pila para el nuevo subproceso. Si **0**, el tamaño de pila predeterminado es el mismo tamaño que el subproceso principal del proceso.  
   
  *lpSecurityAttrs*  
- Apunta a un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica los atributos de seguridad para el subproceso.  
+ Apunta a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica los atributos de seguridad para el subproceso.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el subproceso se ha creado correctamente; en caso contrario es 0.  
+ Distinto de cero si el subproceso se ha creado correctamente; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Use `AfxBeginThread` para crear un objeto de subproceso y lo ejecuta en un solo paso. Use `CreateThread` si desea volver a usar el objeto de subproceso entre sucesiva creación y destrucción de las ejecuciones de subprocesos.  
+ Use `AfxBeginThread` para crear un objeto de subproceso y ejecutarla en un solo paso. Use `CreateThread` si desea reutilizar el objeto de subproceso entre sucesiva creación y terminación de las ejecuciones de subproceso.  
   
 ##  <a name="cwinthread"></a>  CWinThread::CWinThread  
  Construye un objeto `CWinThread`.  
@@ -187,41 +187,41 @@ CWinThread();
  Para comenzar la ejecución del subproceso, llame a la [CreateThread](#createthread) función miembro. Se suele crear subprocesos mediante una llamada a [AfxBeginThread](application-information-and-management.md#afxbeginthread), que llama a este constructor y `CreateThread`.  
   
 ##  <a name="exitinstance"></a>  CWinThread::ExitInstance  
- Lo llama el marco de dentro de una rara vez reemplazado [ejecutar](#run) función de miembro para salir de esta instancia del subproceso, o si una llamada a [InitInstance](#initinstance) se produce un error.  
+ Lo llama el marco de trabajo desde dentro de una rara vez invalidado [ejecutar](#run) función miembro para salir de esta instancia del subproceso, o si una llamada a [InitInstance](#initinstance) se produce un error.  
   
 ```  
 virtual int ExitInstance();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Código de salida del subproceso; 0 indica que no hay errores y los valores mayores que 0 indican un error. Este valor se puede recuperar mediante una llamada a [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190).  
+ Código de salida del subproceso; 0 no indica errores, y los valores mayores que 0 indican un error. Este valor se puede recuperar mediante una llamada a [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread).  
   
 ### <a name="remarks"></a>Comentarios  
- No llame a esta función miembro desde cualquier lugar pero dentro del `Run` función miembro. Esta función miembro solo se usa en los subprocesos de interfaz de usuario.  
+ No llame a esta función miembro desde cualquier lugar, pero dentro del `Run` función miembro. Esta función miembro se usa solo en los subprocesos de interfaz de usuario.  
   
- La implementación predeterminada de esta función elimina el `CWinThread` objeto si [m_bAutoDelete](#m_bautodelete) es TRUE. Reemplace esta función si desea realizar la limpieza adicional cuando finaliza el subproceso. La implementación de `ExitInstance` debe llamar a la versión de la clase base después de ejecuta el código.  
+ La implementación predeterminada de esta función elimina el `CWinThread` objeto si [m_bAutoDelete](#m_bautodelete) es TRUE. Reemplace esta función si desea realizar la limpieza adicional cuando el subproceso termina. La implementación de `ExitInstance` debe llamar a la versión de la clase base después de ejecuta el código.  
   
 ##  <a name="getmainwnd"></a>  CWinThread::GetMainWnd  
- Si la aplicación es un servidor OLE, llamar a esta función para recuperar un puntero a la ventana principal activa de la aplicación en lugar de hacer referencia directamente a la `m_pMainWnd` miembro del objeto de aplicación.  
+ Si la aplicación es un servidor OLE, llame a esta función para recuperar un puntero a la ventana principal activa de la aplicación en lugar de hacer referencia directamente a la `m_pMainWnd` miembro del objeto de aplicación.  
   
 ```  
 virtual CWnd* GetMainWnd();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Esta función devuelve un puntero a uno de los dos tipos de windows. Si el subproceso pertenece a un servidor OLE y tiene un objeto que está activo en contexto dentro de un contenedor de active, esta función devuelve el [CWinApp::m_pActiveWnd](../../mfc/reference/cwinapp-class.md#m_pactivewnd) miembro de datos de la `CWinThread` objeto.  
+ Esta función devuelve un puntero a uno de los dos tipos de windows. Si el subproceso forma parte de un servidor OLE y tiene un objeto que está activo en contexto dentro de un contenedor activo, esta función devuelve el [CWinApp::m_pActiveWnd](../../mfc/reference/cwinapp-class.md#m_pactivewnd) miembro de datos de la `CWinThread` objeto.  
   
  Si no hay ningún objeto que está activo en contexto dentro de un contenedor o la aplicación no es un servidor OLE, esta función devuelve el [m_pMainWnd](#m_pmainwnd) miembro de datos de su objeto de subproceso.  
   
 ### <a name="remarks"></a>Comentarios  
- Para los subprocesos de interfaz de usuario, esto equivale a hacer referencia directamente a la `m_pActiveWnd` miembro del objeto de aplicación.  
+ Para los subprocesos de interfaz de usuario, esto es equivalente a hacer referencia directamente a la `m_pActiveWnd` miembro del objeto de aplicación.  
   
  Si la aplicación no es un servidor OLE, llamar a esta función equivale a hacer referencia directamente al miembro `m_pMainWnd` del objeto de aplicación.  
   
  Reemplace esta función para modificar el comportamiento predeterminado.  
   
 ##  <a name="getthreadpriority"></a>  CWinThread::GetThreadPriority  
- Obtiene el nivel de prioridad de subproceso actual de este subproceso.  
+ Obtiene el nivel de prioridad del subproceso actual de este subproceso.  
   
 ```  
 int GetThreadPriority();
@@ -244,7 +244,7 @@ int GetThreadPriority();
   
 - THREAD_PRIORITY_IDLE  
   
- Para obtener más información sobre estas prioridades, vea [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) del SDK de Windows.  
+ Para obtener más información sobre estas prioridades, consulte [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) en el SDK de Windows.  
   
 ##  <a name="initinstance"></a>  CWinThread::InitInstance  
  `InitInstance` se debe invalidar para inicializar cada nueva instancia de un subproceso de interfaz de usuario.  
@@ -254,12 +254,12 @@ virtual BOOL InitInstance();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la inicialización se realiza correctamente; en caso contrario es 0.  
+ Distinto de cero si la inicialización es correcta; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Por lo general, invalidar `InitInstance` para realizar tareas que deben realizarse cuando se crea un subproceso.  
+ Normalmente, invalida `InitInstance` para realizar tareas que deben realizarse cuando se crea un subproceso.  
   
- Esta función miembro solo se usa en los subprocesos de interfaz de usuario. Realizar la inicialización de subprocesos de trabajo en la función controladora pasada a [AfxBeginThread](application-information-and-management.md#afxbeginthread).  
+ Esta función miembro se usa solo en los subprocesos de interfaz de usuario. Realizar la inicialización de subprocesos de trabajo en la función controladora pasa a [AfxBeginThread](application-information-and-management.md#afxbeginthread).  
   
 ##  <a name="isidlemessage"></a>  CWinThread::IsIdleMessage  
  Reemplazar esta función para mantener `OnIdle` desde que se llama después de que se generan mensajes específicos.  
@@ -270,19 +270,19 @@ virtual BOOL IsIdleMessage(MSG* pMsg);
   
 ### <a name="parameters"></a>Parámetros  
  *pMsg*  
- Señala al mensaje actual que se va a procesar.  
+ Señala el mensaje actual que se está procesando.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si `OnIdle` debe llamarse después del procesamiento de mensaje; de lo contrario devuelve 0.  
+ Distinto de cero si `OnIdle` debe llamarse después del procesamiento de mensaje; en caso contrario, 0.  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada no llama a `OnIdle` después de mensajes redundantes del mouse y mensajes generados por parpadea símbolos de intercalación.  
+ La implementación predeterminada no llama a `OnIdle` después de mensajes del mouse redundantes y mensajes generados por parpadea símbolos de intercalación.  
   
- Si una aplicación ha creado un temporizador corto, `OnIdle` con frecuencia, se llamará causan problemas de rendimiento. Para mejorar el rendimiento de este tipo de una aplicación, invalidar `IsIdleMessage` en la aplicación `CWinApp`-derivado de la clase para comprobar si hay mensajes WM_TIMER como sigue:  
+ Si una aplicación ha creado un temporizador corto, `OnIdle` con frecuencia, se llamará causando problemas de rendimiento. Para mejorar el rendimiento de este tipo de una aplicación, invalidar `IsIdleMessage` en la aplicación `CWinApp`-derivado de la clase para comprobar los mensajes WM_TIMER como sigue:  
   
  [!code-cpp[NVC_MFCDocView#189](../../mfc/codesnippet/cpp/cwinthread-class_1.cpp)]  
   
- Control WM_TIMER de este modo mejora el rendimiento de las aplicaciones que utilizan temporizadores cortos.  
+ Control WM_TIMER de este modo mejorará el rendimiento de las aplicaciones que utilizan temporizadores corto.  
   
 ##  <a name="m_bautodelete"></a>  CWinThread::m_bAutoDelete  
  Especifica si el objeto `CWinThread` se debe eliminar automáticamente cuando finalice el subproceso.  
@@ -320,31 +320,31 @@ DWORD m_nThreadID;
   Vea el ejemplo de [AfxGetThread](application-information-and-management.md#afxgetthread).  
   
 ##  <a name="m_pactivewnd"></a>  CWinThread::m_pActiveWnd  
- Use este miembro de datos para almacenar un puntero al objeto de la ventana activa de su subproceso.  
+ Utilice a este miembro de datos para almacenar un puntero al objeto de ventana activa de su subproceso.  
   
 ```  
 CWnd* m_pActiveWnd;  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- La biblioteca Microsoft Foundation Class automáticamente se cerrará el subproceso cuando la ventana de la que hace referencia a `m_pActiveWnd` se cierra. Si este subproceso es el subproceso principal de una aplicación, también puede finalizar la aplicación. Si este miembro de datos es NULL, la ventana activa de la aplicación `CWinApp` se heredarán el objeto. `m_pActiveWnd` es una variable pública de tipo `CWnd*`.  
+ La biblioteca Microsoft Foundation Class finalizará automáticamente su subproceso cuando la ventana al que hace referencia `m_pActiveWnd` está cerrado. Si este subproceso es el subproceso principal de una aplicación, también puede finalizar la aplicación. Si este miembro de datos es NULL, la ventana activa de la aplicación `CWinApp` se heredará el objeto. `m_pActiveWnd` es una variable pública de tipo `CWnd*`.  
   
  Normalmente, se establece esta variable miembro al invalidar `InitInstance`. En un subproceso de trabajo, el valor de este miembro de datos se hereda de su subproceso primario.  
   
 ##  <a name="m_pmainwnd"></a>  CWinThread::m_pMainWnd  
- Use este miembro de datos para almacenar un puntero al objeto de ventana principal de su subproceso.  
+ Utilice a este miembro de datos para almacenar un puntero al objeto de ventana principal de su subproceso.  
   
 ```  
 CWnd* m_pMainWnd;  
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- La biblioteca Microsoft Foundation Class automáticamente se cerrará el subproceso cuando la ventana de la que hace referencia a `m_pMainWnd` se cierra. Si este subproceso es el subproceso principal de una aplicación, también puede finalizar la aplicación. Si este miembro de datos es NULL, la ventana principal de la aplicación `CWinApp` objeto se utilizará para determinar cuándo se debe terminar el subproceso. `m_pMainWnd` es una variable pública de tipo `CWnd*`.  
+ La biblioteca Microsoft Foundation Class finalizará automáticamente su subproceso cuando la ventana al que hace referencia `m_pMainWnd` está cerrado. Si este subproceso es el subproceso principal de una aplicación, también puede finalizar la aplicación. Si este miembro de datos es NULL, la ventana principal de la aplicación `CWinApp` objeto se usará para determinar cuándo se debe terminar el subproceso. `m_pMainWnd` es una variable pública de tipo `CWnd*`.  
   
  Normalmente, se establece esta variable miembro al invalidar `InitInstance`. En un subproceso de trabajo, el valor de este miembro de datos se hereda de su subproceso primario.  
   
 ##  <a name="onidle"></a>  CWinThread::OnIdle  
- Reemplace esta función miembro para realizar el procesamiento de tiempo de inactividad.  
+ Reemplace esta función miembro para llevar a cabo el procesamiento de tiempo de inactividad.  
   
 ```  
 virtual BOOL OnIdle(LONG lCount);
@@ -352,21 +352,21 @@ virtual BOOL OnIdle(LONG lCount);
   
 ### <a name="parameters"></a>Parámetros  
  *lCount*  
- Un contador incrementa cada vez que `OnIdle` se llama cuando la cola de mensajes del subproceso está vacía. Este recuento se restablece a 0 cada vez que se procesa un mensaje nuevo. Puede usar el *lCount* parámetro para determinar la cantidad relativa de tiempo que el subproceso ha estado inactivo sin tener que procesar un mensaje.  
+ Un contador incrementa cada vez que `OnIdle` se llama cuando la cola de mensajes del subproceso está vacía. Este recuento se restablece a 0 cada vez que se procesa un mensaje nuevo. Puede usar el *lCount* parámetro para determinar la cantidad relativa de tiempo el subproceso ha estado inactivo sin tener que procesar un mensaje.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero para recibir más en tiempo de procesamiento de inactividad; 0 si no se necesita nada más tiempo de procesamiento inactivo.  
+ Distinto de cero para recibir más en tiempo de procesamiento inactivo; 0 si se necesita nada más tiempo de procesamiento inactivo.  
   
 ### <a name="remarks"></a>Comentarios  
- `OnIdle` se llama en el bucle de mensajes de forma predeterminada cuando la cola de mensajes del subproceso está vacía. Usar la invalidación para llamar a su propio fondo tareas de controlador de inactividad.  
+ `OnIdle` se llama en el bucle de mensajes de forma predeterminada cuando la cola de mensajes del subproceso está vacía. Use la invalidación para llamar a su propio fondo de las tareas de controlador de inactividad.  
   
- `OnIdle` debería devolver 0 para indicar que no se requiere ningún tiempo de procesamiento de inactividad adicional. El *lCount* parámetro se incrementa cada vez que `OnIdle` se llama cuando la cola de mensajes está vacía y se restablece a 0 cada vez que se procesa un mensaje nuevo. Puede llamar a sus rutinas de inactividad diferentes en función de este número.  
+ `OnIdle` debería devolver 0 para indicar que no se requiere ningún tiempo de inactividad de procesamiento adicional. El *lCount* parámetro se incrementa cada vez `OnIdle` se llama cuando la cola de mensajes está vacía y se restablece a 0 cada vez que se procesa un mensaje nuevo. Puede llamar a las rutinas de inactividad diferentes según este recuento.  
   
- La implementación predeterminada de esta función miembro libera objetos temporales y las bibliotecas de vínculos dinámicos no utilizado de la memoria.  
+ La implementación predeterminada de esta función miembro libera objetos temporales y las bibliotecas de vínculos dinámicos sin usar de la memoria.  
   
- Esta función miembro solo se usa en los subprocesos de interfaz de usuario.  
+ Esta función miembro se usa solo en los subprocesos de interfaz de usuario.  
   
- Dado que la aplicación no puede procesar mensajes hasta que `OnIdle` devuelve, no realice las tareas largas en esta función.  
+ Dado que la aplicación no puede procesar los mensajes hasta que `OnIdle` devuelve, no realice las tareas largas en esta función.  
   
 ##  <a name="operator_handle"></a>  CWinThread::operator identificador  
  Recupera el identificador de la `CWinThread` objeto.  
@@ -379,10 +379,10 @@ operator HANDLE() const;
  Si se realiza correctamente, el identificador del objeto de subproceso; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- Use el identificador para llamar directamente a las API de Windows.  
+ Úselo para llamar directamente a las API de Windows.  
   
 ##  <a name="postthreadmessage"></a>  CWinThread::PostThreadMessage  
- Llamado para publicar un mensaje definido por el usuario a otro `CWinThread` objeto.  
+ Se invoca para registrar un mensaje definido por el usuario a otro `CWinThread` objeto.  
   
 ```  
 BOOL PostThreadMessage(
@@ -405,13 +405,13 @@ BOOL PostThreadMessage(
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Mensaje publicado se asigna al controlador de mensajes adecuado mediante la macro de mapa de mensajes ON_THREAD_MESSAGE.  
+ Mensaje publicado se asigna al controlador de mensajes adecuado mediante la macro ON_THREAD_MESSAGE del mapa de mensajes.  
   
 > [!NOTE]
->  Al llamar a las ventanas [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946) función dentro de una aplicación MFC, el mensaje MFC no se llama a los controladores. Para obtener más información, vea el artículo de Knowledge Base "PRB: MFC mensaje controlador no llama a PostThreadMessage()" (Q142415).  
+>  Cuando se llama a la Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) función dentro de una aplicación MFC, el mensaje MFC no se llama a los controladores. Para obtener más información, consulte el artículo de Knowledge Base "PRB: MFC mensaje controlador no llamado con PostThreadMessage()" (Q142415).  
   
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
- Anular esta función para filtrar los mensajes de ventana antes de enviarlos a las funciones de Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).  
+ Reemplace esta función para filtrar los mensajes de ventana antes de enviarlos a las funciones de Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -419,16 +419,16 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="parameters"></a>Parámetros  
  *pMsg*  
- Apunta a un [estructura MSG](../../mfc/reference/msg-structure1.md) que contiene el mensaje para procesar.  
+ Apunta a un [estructura MSG](../../mfc/reference/msg-structure1.md) que contiene el mensaje que se va a procesar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si el mensaje se ha procesado totalmente en `PreTranslateMessage` y no puede procesar aún más. Devuelve cero si se debe procesar el mensaje de la forma habitual.  
+ Distinto de cero si el mensaje se haya procesado totalmente en `PreTranslateMessage` y no se puede procesar aún más. Cero si se debe procesar el mensaje de la manera normal.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función miembro solo se usa en los subprocesos de interfaz de usuario.  
+ Esta función miembro se usa solo en los subprocesos de interfaz de usuario.  
   
 ##  <a name="processmessagefilter"></a>  CWinThread::ProcessMessageFilter  
- La función de enlace del marco de trabajo llama a esta función miembro para filtrar y responder a determinados mensajes de Windows.  
+ La función de enlace de .NET framework llama a esta función miembro para filtrar y responder a algunos mensajes de Windows.  
   
 ```  
 virtual BOOL ProcessMessageFilter(
@@ -438,13 +438,13 @@ virtual BOOL ProcessMessageFilter(
   
 ### <a name="parameters"></a>Parámetros  
  *Código*  
- Especifica un código de enlace. Esta función miembro utiliza el código para determinar cómo procesar *lpMsg.*  
+ Especifica un código de enlace. Esta función miembro usa el código para determinar cómo procesar *lpMsg.*  
   
  *lpMsg*  
- Un puntero a una ventana de [estructura MSG](../../mfc/reference/msg-structure1.md).  
+ Un puntero a un Windows [estructura MSG](../../mfc/reference/msg-structure1.md).  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si se procesa el mensaje; en caso contrario es 0.  
+ Distinto de cero si se procesa el mensaje; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
  Una función de enlace procesa los eventos antes de enviarlos al mensaje normal de la aplicación de procesamiento.  
@@ -452,7 +452,7 @@ virtual BOOL ProcessMessageFilter(
  Si invalida esta característica avanzada, asegúrese de llamar a la versión de la clase base para mantener el marco de trabajo de procesamiento de enlace.  
   
 ##  <a name="processwndprocexception"></a>  CWinThread::ProcessWndProcException  
- El marco de trabajo llama a esta función miembro siempre que el controlador no detecta una excepción que se produce en uno de los mensajes de su subproceso o controladores de comandos.  
+ El marco de trabajo llama a esta función miembro siempre que el controlador no detecta una excepción en uno de los mensajes de su subproceso o controladores de comandos.  
   
 ```  
 virtual LRESULT ProcessWndProcException(
@@ -462,27 +462,27 @@ virtual LRESULT ProcessWndProcException(
   
 ### <a name="parameters"></a>Parámetros  
  *e*  
- Apunta a una excepción no controlada.  
+ Señala a una excepción no controlada.  
   
  *pMsg*  
- Apunta a un [estructura MSG](../../mfc/reference/msg-structure1.md) que contiene información sobre el mensaje de windows que ha causado el marco de trabajo producir una excepción.  
+ Apunta a un [estructura MSG](../../mfc/reference/msg-structure1.md) que contiene información sobre el mensaje de windows que ha provocado el marco de trabajo producir una excepción.  
   
 ### <a name="return-value"></a>Valor devuelto  
- -1 si se generará una excepción de WM_CREATE; en caso contrario es 0.  
+ -1 si se genera una excepción WM_CREATE; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
  No llame a esta función miembro directamente.  
   
- La implementación predeterminada de esta función miembro controla sólo las excepciones que genera a partir de los mensajes siguientes:  
+ La implementación predeterminada de esta función miembro controla solo las excepciones que genera a partir de los siguientes mensajes:  
   
 |Comando|Acción|  
 |-------------|------------|  
-|WM_CREATE|Producirá un error.|  
-|WM_PAINT|Validar la ventana afectada, lo que impide que otro mensaje WM_PAINT está generando.|  
+|WM_CREATE|Un error.|  
+|WM_PAINT|Validar la ventana afectada, lo que evita otro mensaje WM_PAINT se generan.|  
   
- Reemplace esta función miembro para proporcionar un control de excepciones global. Llamar a la funcionalidad básica si desea mostrar el comportamiento predeterminado.  
+ Reemplace esta función miembro para proporcionar un control de excepciones global. Llame a la funcionalidad básica solo si desea mostrar el comportamiento predeterminado.  
   
- Esta función miembro solo se usa en subprocesos que tienen una bomba de mensaje.  
+ Esta función miembro se usa solo en subprocesos que tienen un bombeo de mensajes.  
   
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage  
  Contiene el bucle de mensajes del subproceso.  
@@ -492,22 +492,22 @@ virtual BOOL PumpMessage();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `PumpMessage` contiene el bucle de mensajes del subproceso. `PumpMessage` llama a `CWinThread` al bombeo de mensajes del subproceso. Puede llamar a `PumpMessage` directamente forzar que los mensajes para procesarse o puede invalidar `PumpMessage` para cambiar su comportamiento predeterminado.  
+ `PumpMessage` contiene el bucle de mensajes del subproceso. `PumpMessage` llama a `CWinThread` al bombeo de mensajes del subproceso. Puede llamar a `PumpMessage` directamente para forzar mensajes para procesarse, o puede invalidar `PumpMessage` para cambiar su comportamiento predeterminado.  
   
- Al llamar a `PumpMessage` directamente y reemplazar su comportamiento predeterminado se recomienda sólo para usuarios avanzados.  
+ Una llamada a `PumpMessage` directamente y reemplazar su comportamiento predeterminado se recomienda sólo para usuarios avanzados.  
   
 ##  <a name="resumethread"></a>  CWinThread:: ResumeThread  
- Se llama para reanudar la ejecución de un subproceso que se suspendió la [SuspendThread](#suspendthread) función miembro o un subproceso creado con el marcador CREATE_SUSPENDED.  
+ Se llama para reanudar la ejecución de un subproceso que se suspendió la [SuspendThread](#suspendthread) función miembro o un subproceso creado con la marca CREATE_SUSPENDED.  
   
 ```  
 DWORD ResumeThread();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El subproceso de la anterior suspende el recuento si se realiza correctamente; `0xFFFFFFFF` en caso contrario. Si el valor devuelto es cero, no se suspende el subproceso actual. Si el valor devuelto es uno, el subproceso se ha suspendido, pero ahora se reinicia. Cualquier valor devuelto mayor que el subproceso de un medio sigue suspendida.  
+ El subproceso de la anterior si se realiza correctamente; de recuento de suspensiones `0xFFFFFFFF` en caso contrario. Si el valor devuelto es cero, no se suspende el subproceso actual. Si el valor devuelto es uno, el subproceso se ha suspendido, pero ahora se reinicia. Cualquier valor devuelto mayor que uno significa que el subproceso permanece suspendida.  
   
 ### <a name="remarks"></a>Comentarios  
- El recuento de suspensión del subproceso actual se reduce en uno. Si se reduce el recuento de suspensión en cero, el subproceso reanuda la ejecución; en caso contrario, el subproceso permanece suspendido.  
+ El recuento de suspensión del subproceso actual se reduce en uno. Si el recuento de suspensión se reduce a cero, el subproceso reanuda la ejecución; en caso contrario, el subproceso permanece suspendido.  
   
 ##  <a name="run"></a>  CWinThread:: Run  
  Proporciona un bucle de mensajes de forma predeterminada para los subprocesos de interfaz de usuario.  
@@ -517,14 +517,14 @@ virtual int Run();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un **int** valor devuelto por el subproceso. Este valor se puede recuperar mediante una llamada a [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190).  
+ Un **int** valor devuelto por el subproceso. Este valor se puede recuperar mediante una llamada a [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread).  
   
 ### <a name="remarks"></a>Comentarios  
- `Run` adquiere y envía los mensajes de Windows hasta que la aplicación recibe un [WM_QUIT](http://msdn.microsoft.com/library/windows/desktop/ms632641) mensaje. Si la cola de mensajes del subproceso no contiene actualmente ningún mensaje, `Run` llamadas `OnIdle` para realizar el procesamiento de tiempo de inactividad. Los mensajes entrantes hacia el [PreTranslateMessage](#pretranslatemessage) función de miembro para un procesamiento especial y, a continuación, la función de Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) para la traducción de teclado estándar. Por último, el [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) se llama a la función de Windows.  
+ `Run` adquiere y envía mensajes de Windows hasta que la aplicación recibe un [WM_QUIT](/windows/desktop/winmsg/wm-quit) mensaje. Si la cola de mensajes del subproceso no contiene actualmente ningún mensaje, `Run` llamadas `OnIdle` para realizar el procesamiento de tiempo de inactividad. Los mensajes entrantes que se van a la [PreTranslateMessage](#pretranslatemessage) función de miembro para un procesamiento especial y, a continuación, la función Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) para la traducción de teclado estándar. Por último, el [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) se llama a la función de Windows.  
   
- `Run` casi nunca se reemplaza, pero se puede invalidar para implementar un comportamiento especial.  
+ `Run` casi nunca se reemplaza, pero se puede reemplazar para implementar un comportamiento especial.  
   
- Esta función miembro solo se usa en los subprocesos de interfaz de usuario.  
+ Esta función miembro se usa solo en los subprocesos de interfaz de usuario.  
   
 ##  <a name="setthreadpriority"></a>  CWinThread::SetThreadPriority  
  Esta función establece el nivel de prioridad del subproceso actual dentro de su clase de prioridad.  
@@ -551,26 +551,26 @@ BOOL SetThreadPriority(int nPriority);
   
 - THREAD_PRIORITY_IDLE  
   
- Para obtener más información sobre estas prioridades, vea [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) del SDK de Windows.  
+ Para obtener más información sobre estas prioridades, consulte [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) en el SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Es distinto de cero si la función fue correcta; en caso contrario es 0.  
+ Distinto de cero si la función fue correcta; en caso contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Solo se puede llamar después de [CreateThread](#createthread) devuelve correctamente.  
+ Solo se puede llamar después [CreateThread](#createthread) devuelve correctamente.  
   
 ##  <a name="suspendthread"></a>  CWinThread:: SuspendThread  
- Incrementa actual subproceso suspende el recuento.  
+ Incrementa el actual subproceso recuento de suspensiones.  
   
 ```  
 DWORD SuspendThread();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El subproceso de la anterior suspende el recuento si se realiza correctamente; `0xFFFFFFFF` en caso contrario.  
+ El subproceso de la anterior si se realiza correctamente; de recuento de suspensiones `0xFFFFFFFF` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- Si cualquier subproceso tiene un recuento de suspensión por encima de cero, ese subproceso no se ejecuta. El subproceso se puede reanudar llamando a la [ResumeThread](#resumethread) función miembro.  
+ Si cualquier subproceso tiene un recuento de suspensión por encima de cero, ese subproceso no se ejecuta. Se puede reanudar el subproceso mediante una llamada a la [ResumeThread](#resumethread) función miembro.  
   
 ## <a name="see-also"></a>Vea también  
  [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)   

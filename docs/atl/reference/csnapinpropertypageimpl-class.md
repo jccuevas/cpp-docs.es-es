@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56a57d3fe0eb1a016af9eee8539cd7f57a12ddf5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd7f2c708dd3cfe63e40b62912a775fcc120c4ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880565"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223056"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl (clase)
 Esta clase proporciona métodos para implementar un objeto de la página de propiedades del complemento.  
@@ -146,7 +146,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>Comentarios  
  Utilice esta estructura para inicializar la apariencia de una página de propiedades después de se construye.  
   
- Para obtener más información sobre esta estructura, incluida una lista de sus miembros, vea [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) en el SDK de Windows.  
+ Para obtener más información sobre esta estructura, incluida una lista de sus miembros, vea [PROPSHEETPAGE](https://msdn.microsoft.com/library/aa815151) en el SDK de Windows.  
   
 ##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  Esta función miembro se llama cuando el usuario hace clic en el **Aceptar** o **aplicar ahora** botón.  

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85fe930ba0616e27b06aee863285638613f7e31d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b90a96816855e08610d0f63f3ab5c237d564453
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858934"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217954"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -85,7 +85,7 @@ Define una clase, un operador y varias plantillas que sirven de ayuda para asign
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|La clase de plantilla describe un objeto que administra la asignación de almacenamiento y la liberación de las matrices de objetos de tipo **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Describe un objeto que determina toda la información que necesita un contenedor habilitado como asignador.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|La clase de plantilla describe un objeto que almacena un puntero en un objeto asignado del tipo **Type \*** que garantiza que el objeto al que señala se elimina cuando su auto_ptr incluyente se destruye.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|La clase de plantilla describe un objeto que almacena un puntero a un objeto asignado del tipo **tipo** <strong>\*</strong> que garantiza que el objeto al que se puntos obtiene elimina cuando su auto_ptr Obtiene se destruye.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Informa de una excepción weak_ptr errónea.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Ayuda a generar un `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Proporciona información que necesita un objeto de clase de plantilla `allocator_traits` para describir un asignador con el tipo de puntero `Ptr`.|

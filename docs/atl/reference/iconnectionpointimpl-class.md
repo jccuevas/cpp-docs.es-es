@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf1f012067c3a3b85dd5168cf93521e4b2024e00
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d578aeea847ff04bf29fab11ecf7db2a1776b04f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884053"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217608"
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl (clase)
 Esta clase implementa un punto de conexión.  
@@ -96,7 +96,7 @@ STDMETHOD(Advise)(
 ### <a name="remarks"></a>Comentarios  
  Use [Unadvise](#unadvise) para finalizar la llamada de conexión.  
   
- Consulte [IConnectionPoint:: Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) en el SDK de Windows.  
+ Consulte [IConnectionPoint:: Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) en el SDK de Windows.  
   
 ##  <a name="enumconnections"></a>  IConnectionPointImpl::EnumConnections  
  Crea un enumerador para recorrer en iteración las conexiones para el punto de conexión.  
@@ -106,7 +106,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IConnectionPoint:: EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) en el SDK de Windows.  
+ Consulte [IConnectionPoint:: EnumConnections](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) en el SDK de Windows.  
   
 ##  <a name="getconnectioninterface"></a>  IConnectionPointImpl::GetConnectionInterface  
  Recupera el IID de la interfaz representada por el punto de conexión.  
@@ -116,7 +116,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IConnectionPoint:: GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) en el SDK de Windows.  
+ Consulte [IConnectionPoint:: GetConnectionInterface](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) en el SDK de Windows.  
   
 ##  <a name="getconnectionpointcontainer"></a>  IConnectionPointImpl::GetConnectionPointContainer  
  Recupera un puntero de interfaz al objeto conectable.  
@@ -126,7 +126,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IConnectionPoint:: GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) en el SDK de Windows.  
+ Consulte [IConnectionPoint:: GetConnectionPointContainer](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) en el SDK de Windows.  
   
 ##  <a name="m_vec"></a>  IConnectionPointImpl::m_vec  
  Administra las conexiones entre el objeto de punto de conexión y un receptor.  
@@ -146,8 +146,8 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IConnectionPoint:: Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608) en el SDK de Windows.  
+ Consulte [IConnectionPoint:: Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
- [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)   
+ [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)   
  [Información general de clases](../../atl/atl-class-overview.md)

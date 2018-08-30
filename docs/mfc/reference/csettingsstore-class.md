@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849700"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221137"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Incluye las funciones API de Windows, proporcionando una interfaz orientada a objetos que se utiliza para tener acceso al registro.  
@@ -130,7 +130,7 @@ CSettingsStore(
 ### <a name="remarks"></a>Comentarios  
  Si *bruta administrativa* está establecida en TRUE, el `m_hKey` variable de miembro se establece en **HKEY_LOCAL_MACHINE**. Si establece *bruta administrativa* en FALSE, `m_hKey` está establecido en **HKEY_CURRENT_USER**.  
   
- El acceso de seguridad depende del *bReadOnly* parámetro. Si *bReadonly* es FALSE, el acceso de seguridad se establecerá en **KEY_ALL_ACCESS**. Si *bReadyOnly* es TRUE, el acceso de seguridad se establecerá en una combinación de **KEY_QUERY_VALUE, KEY_NOTIFY** y **KEY_ENUMERATE_SUB_KEYS**. Para obtener más información acerca del acceso de seguridad junto con el registro, consulte [derechos de acceso y seguridad de la clave del registro](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ El acceso de seguridad depende del *bReadOnly* parámetro. Si *bReadonly* es FALSE, el acceso de seguridad se establecerá en **KEY_ALL_ACCESS**. Si *bReadyOnly* es TRUE, el acceso de seguridad se establecerá en una combinación de **KEY_QUERY_VALUE, KEY_NOTIFY** y **KEY_ENUMERATE_SUB_KEYS**. Para obtener más información acerca del acceso de seguridad junto con el registro, consulte [derechos de acceso y seguridad de la clave del registro](/windows/desktop/SysInfo/registry-key-security-and-access-rights).  
   
  El destructor de `CSettingsStore` libera `m_hKey` automáticamente.  
   

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105a6310968844336ead5c787586d547f3952e57
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338996"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212896"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager (clase)
 Administra las tablas de teclas de método abreviado de la ventana de marco principal y las ventanas de marco secundarias.  
@@ -169,7 +169,7 @@ static BOOL __stdcall IsKeyHandled(
 |-|-|  
 |Parámetro|Descripción|  
 |[in] *nKey*|Clave que se va a comprobar.|  
-|[in] *fVirt*|Especifica el comportamiento de la tecla de método abreviado. Para obtener una lista de valores posibles, vea [aceleración estructura](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *fVirt*|Especifica el comportamiento de la tecla de método abreviado. Para obtener una lista de valores posibles, vea [aceleración estructura](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
 |[in] *pWndFrame*|Una ventana de marco. Este método determina si una tecla de método abreviado se trata en este marco.|  
 |[in] *bIsDefaultFrame*|Un parámetro booleano que indica si *pWndFrame* es la ventana de marco de forma predeterminada.|  
   
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
  Distinto de cero si el carácter es imprimible, cero si no lo está.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método produce un error si una llamada a [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) se produce un error.  
+ Este método produce un error si una llamada a [GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299) se produce un error.  
   
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  Indica si los menús Mostrar todas las teclas de método abreviado asociadas con los comandos de menú o sólo las teclas de método abreviado de forma predeterminada.  

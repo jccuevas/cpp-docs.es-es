@@ -1,5 +1,5 @@
 ---
-title: Usar CTabCtrl | Documentos de Microsoft
+title: Usar CTabCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fd34d88a035e4180eff955238004a18d9af09a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9918bfa73249812a55ce2b8f5718a53ee9cec087
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383687"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217927"
 ---
 # <a name="using-ctabctrl"></a>Usar CTabCtrl
-Un "control de pestaña" es análogo a los divisores de un bloc de notas o las carpetas con la etiqueta de un archivador. Utilice el control de ficha, representado por la clase [CTabCtrl](../mfc/reference/ctabctrl-class.md), para mostrar varias páginas de información o controles a un usuario, uno en uno, en un formato que sugiere un punto o una relación lógica entre cada página.  
+Un "control de ficha" es análogo a los divisores de un bloc de notas o las carpetas etiquetadas de un archivador. Utilice el control de ficha, representado por la clase [CTabCtrl](../mfc/reference/ctabctrl-class.md), para mostrar varias páginas de información o controles a un usuario, una vez, en un formato que se sugiere un elemento del mismo nivel o una relación lógica entre cada página.  
   
- Para obtener más información sobre controles de fichas, vea [controles de ficha](http://msdn.microsoft.com/library/windows/desktop/bb760550) del SDK de Windows.  
+ Para obtener más información sobre los controles de ficha, consulte [controles de ficha](/windows/desktop/Controls/tab-controls) en el SDK de Windows.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre  
   
 -   [Controles de pestaña y hojas de propiedades](../mfc/tab-controls-and-property-sheets.md)  
   

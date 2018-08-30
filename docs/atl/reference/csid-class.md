@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 265da6a072c1b33a0ebbe8f485af7588521bcdea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572118"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218033"
 ---
 # <a name="csid-class"></a>CSid (clase)
 Esta clase es un contenedor para un `SID` estructura (identificador de seguridad).  
@@ -105,7 +105,7 @@ class CSid
   
  Las aplicaciones no deben modificar el `SID` estructura directamente, pero en su lugar, use los métodos proporcionados en esta clase contenedora. Vea también [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid), y [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).  
   
- Para obtener una introducción al modelo de control de acceso en Windows, consulte [Control de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374860) en el SDK de Windows.  
+ Para obtener una introducción al modelo de control de acceso en Windows, consulte [Control de acceso](/windows/desktop/SecAuthZ/access-control) en el SDK de Windows.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsecurity.h  
@@ -121,7 +121,7 @@ LPCTSTR AccountName() const throw(...);
  Devuelve el LPCTSTR seleccionando el nombre de la cuenta.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método intenta encontrar un nombre para el elemento especificado `SID` (identificador de seguridad). Para obtener más información, consulte [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166).  
+ Este método intenta encontrar un nombre para el elemento especificado `SID` (identificador de seguridad). Para obtener más información, consulte [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).  
   
  Si ningún nombre de cuenta para el `SID` puede encontrarse, `AccountName` devuelve una cadena vacía. Esto puede ocurrir si un tiempo de espera de la red impide que buscar el nombre de este método. También se produce para los identificadores de seguridad con ningún nombre de cuenta correspondiente, como un inicio de sesión `SID` que identifica una sesión de inicio de sesión.  
   
@@ -202,7 +202,7 @@ LPCTSTR Domain() const throw(...);
  Devuelve el `LPCTSTR` que apunta al dominio.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método intenta encontrar un nombre para el elemento especificado `SID` (identificador de seguridad). Para obtener más información, consulte [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166).  
+ Este método intenta encontrar un nombre para el elemento especificado `SID` (identificador de seguridad). Para obtener más información, consulte [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).  
   
  Si ningún nombre de cuenta para el `SID` puede encontrarse, `Domain` devuelve el dominio como una cadena vacía. Esto puede ocurrir si un tiempo de espera de la red impide que buscar el nombre de este método. También se produce para los identificadores de seguridad con ningún nombre de cuenta correspondiente, como un inicio de sesión `SID` que identifica una sesión de inicio de sesión.  
   
@@ -222,7 +222,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) en el SDK de Windows para obtener más detalles.  
+ Consulte [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) en el SDK de Windows para obtener más detalles.  
   
 ##  <a name="getlength"></a>  CSid::GetLength  
  Devuelve la longitud de la `CSid` objeto.  
@@ -487,7 +487,7 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el `SID` estructura como una cadena en un formato adecuado para mostrar, almacenamiento o transmisión. Equivalente a [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399).  
+ Devuelve el `SID` estructura como una cadena en un formato adecuado para mostrar, almacenamiento o transmisión. Equivalente a [ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida).  
   
 ##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  Devuelve una descripción del estado de la `CSid` objeto.  

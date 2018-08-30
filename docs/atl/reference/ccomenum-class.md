@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd8fe2120ad42d7df223d05a43591937ffcce6e2
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 56a6211ac26a31b1ec01fdd2ad0579e4d9b52038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885394"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223392"
 ---
 # <a name="ccomenum-class"></a>CComEnum (clase)
 Esta clase define un objeto de enumerador COM basándose en una matriz.  
@@ -40,7 +40,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
 #### <a name="parameters"></a>Parámetros  
  *base*  
- Un enumerador COM ( [interfaz IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interfaz.  
+ Una interfaz de enumerador COM. Consulte [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) para obtener un ejemplo. 
   
  *piid*  
  Un puntero al identificador de interfaz de la interfaz de enumerador.  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9183f3ae58a7ba6b7746ae27f64ca17eede991
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545891"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216479"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox (clase)
 Implementa un cuadro combinado que contiene una lista de fuentes. El cuadro combinado se coloca en un panel de la cinta.  
@@ -144,9 +144,9 @@ CMFCRibbonFontComboBox(
  Especifica el ancho, en píxeles, del cuadro combinado.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información sobre las posibles *nFontType* valores de parámetros, vea [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) en la documentación del SDK de Windows.  
+ Para obtener más información sobre las posibles *nFontType* valores de parámetros, vea [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) en la documentación del SDK de Windows.  
   
- Para obtener más información acerca de los juegos de caracteres válidos que se pueden asignar a *nCharSet*y los valores válidos que se pueden asignar a *nPitchAndFamily*, consulte [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) en el Documentación del SDK de Windows.  
+ Para obtener más información acerca de los juegos de caracteres válidos que se pueden asignar a *nCharSet*y los valores válidos que se pueden asignar a *nPitchAndFamily*, consulte [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) en el Documentación del SDK de Windows.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.  

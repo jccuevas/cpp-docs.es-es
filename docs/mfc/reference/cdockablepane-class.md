@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545886"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223070"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implementa un panel que se puede acoplar en un sitio de vinculación o incluir en un panel con fichas.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Especifica si se encuentran en la parte superior o inferior del panel de pestañas.|  
 |[CDockablePane::IsTracked](#istracked)|Especifica si el usuario arrastra un panel.|  
 |[CDockablePane::IsVisible](#isvisible)|Determina si está visible el panel actual.|  
-|[CDockablePane:: Loadstate](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Lo utiliza internamente.|  
+|[CDockablePane:: Loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Lo utiliza internamente.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Lo llama el marco de trabajo cuando ha cambiado el elemento primario de un panel. (Invalida [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Lo llama el marco de trabajo cuando se acopla una barra de acoplamiento flotante en una ventana de marco.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Lo llama el marco cuando el elemento primario del panel que se va a cambiar. (Invalida [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  

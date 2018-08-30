@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a868d3a5b798b7ca237642d7f7d5e3acf6668926
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ea14cd3e8c1eebbdbcad3a21d64652acee635407
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609850"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219944"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -36,7 +36,7 @@ Indica que una interfaz es compatible con la automatización.
 
 ## <a name="remarks"></a>Comentarios
 
-El **oleautomation** atributo de C++ tiene la misma funcionalidad que el [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) atributo MIDL.
+El **oleautomation** atributo de C++ tiene la misma funcionalidad que el [oleautomation](/windows/desktop/Midl/oleautomation) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

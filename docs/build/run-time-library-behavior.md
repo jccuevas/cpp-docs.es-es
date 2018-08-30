@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6606fd65f0f551ca9105c8f9810a75902802334d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: d6475e2ea3ec7fe69325fd82671952dbe2c39620
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572995"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217297"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Archivos DLL y comportamiento de la biblioteca de tiempo de ejecución de Visual C++  
   
@@ -67,7 +67,7 @@ extern "C" BOOL WINAPI DllMain (
 Algunas bibliotecas de ajustan la `DllMain` función para usted. Por ejemplo, en una DLL de MFC regular, implemente el `CWinApp` del objeto `InitInstance` y `ExitInstance` funciones miembro para realizar la inicialización y terminación requeridas por la DLL. Para obtener más información, consulte el [regular inicializar archivos DLL de MFC](#initializing-regular-dlls) sección.  
   
 > [!WARNING]
-> Existen límites significativos en lo que puede hacer con seguridad en un punto de entrada del archivo DLL. Consulte [procedimientos recomendados generales](https://msdn.microsoft.com/library/windows/desktop/dn633971#general_best_practices) para las API específicas de Windows que no son seguras para llamar a en `DllMain`. Si tiene cualquier cosa menos, a continuación, la inicialización más sencilla que hacer en una función de inicialización para el archivo DLL. Puede exigir que las aplicaciones llamen a la función de inicialización después `DllMain` ha ejecución y antes de que llame a otras funciones en el archivo DLL.  
+> Existen límites significativos en lo que puede hacer con seguridad en un punto de entrada del archivo DLL. Consulte [procedimientos recomendados generales](/windows/desktop/Dlls/dynamic-link-library-best-practices) para las API específicas de Windows que no son seguras para llamar a en `DllMain`. Si tiene cualquier cosa menos, a continuación, la inicialización más sencilla que hacer en una función de inicialización para el archivo DLL. Puede exigir que las aplicaciones llamen a la función de inicialización después `DllMain` ha ejecución y antes de que llame a otras funciones en el archivo DLL.  
   
 <a name="initializing-non-mfc-dlls"></a>  
   
@@ -116,7 +116,7 @@ extern "C" BOOL WINAPI DllMain (
   
 Porque tiene archivos DLL de MFC estándar un `CWinApp` objeto, deben realizar sus tareas de inicialización y finalización en la misma ubicación que una aplicación MFC: en el `InitInstance` y `ExitInstance` funciones miembro de la DLL `CWinApp`-derivados clase. Dado que MFC proporciona una `DllMain` función que llama a `_DllMainCRTStartup` para `DLL_PROCESS_ATTACH` y `DLL_PROCESS_DETACH`, no debe escribir su propio `DllMain` función. MFC proporcionada por el `DllMain` llamadas de función `InitInstance` cuando se cargue el archivo DLL y llama a `ExitInstance` antes de descargar el archivo DLL.  
   
-Un archivo DLL MFC puede realizar un seguimiento de varios subprocesos mediante una llamada a [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) y [TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812) en su `InitInstance` función. Estas funciones permiten que la DLL realizar un seguimiento de los datos específicos del subproceso.  
+Un archivo DLL MFC puede realizar un seguimiento de varios subprocesos mediante una llamada a [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) y [TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue) en su `InitInstance` función. Estas funciones permiten que la DLL realizar un seguimiento de los datos específicos del subproceso.  
   
 En la DLL de MFC normal que se vincule dinámicamente a MFC, si está utilizando OLE de MFC, MFC base de datos (o DAO) o admitir Sockets de MFC, respectivamente, la depuración MFCO archivos DLL de extensión MFC*versión*D.dll, MFCD*versión*D.dll y MFCN*versión*D.dll (donde *versión* es el número de versión) se vinculan automáticamente. Debe llamar a una de las siguientes funciones de inicialización predefinidas para cada uno de estos archivos DLL que está usando en su MFC DLL regular `CWinApp::InitInstance`.  
   
@@ -179,14 +179,14 @@ Las aplicaciones que se debe llamar explícitamente vincular a archivos DLL de e
   
 Dado que MFCx0.dll está completamente inicializado en el momento en `DllMain` es llamado, puede asignar memoria y llamar a funciones MFC dentro `DllMain` (a diferencia de la versión de 16 bits de MFC).  
   
-Archivos DLL de extensión pueden ocuparse de multithreading controlando el `DLL_THREAD_ATTACH` y `DLL_THREAD_DETACH` casos en los `DllMain` función. Estos casos se pasan a `DllMain` cuando los subprocesos de adjuntar y separar desde el archivo DLL. Una llamada a [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) cuando se está asociando un archivo DLL permite que la DLL mantener los índices de almacenamiento local (TLS) para cada subproceso asociado a la DLL del subproceso.  
+Archivos DLL de extensión pueden ocuparse de multithreading controlando el `DLL_THREAD_ATTACH` y `DLL_THREAD_DETACH` casos en los `DllMain` función. Estos casos se pasan a `DllMain` cuando los subprocesos de adjuntar y separar desde el archivo DLL. Una llamada a [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) cuando se está asociando un archivo DLL permite que la DLL mantener los índices de almacenamiento local (TLS) para cada subproceso asociado a la DLL del subproceso.  
   
 Tenga en cuenta que el archivo de encabezado Afxdllx.h contiene definiciones especiales para las estructuras utilizadas en archivos DLL de extensión MFC, como la definición de `AFX_EXTENSION_MODULE` y `CDynLinkLibrary`. Debe incluir este archivo de encabezado en el archivo DLL de extensión MFC.  
   
 > [!NOTE]
 >  Es importante que no defina ni anular la definición de la `_AFX_NO_XXX` macros de Stdafx.h. Estas macros existen solo con el fin de comprobar si una plataforma de destino determinado admite esa característica o no. Puede escribir el programa para comprobar estas macros (por ejemplo, `#ifndef _AFX_NO_OLE_SUPPORT`), pero nunca en el programa debe definir o anular la definición de estas macros.  
   
-Una función de inicialización de ejemplo que se incluye identificadores de multithreading en [utilizando almacenamiento Local de subprocesos en una biblioteca de vínculos dinámicos](http://msdn.microsoft.com/library/windows/desktop/ms686997) en el SDK de Windows. Tenga en cuenta que el ejemplo contiene una función de punto de entrada denominada `LibMain`, pero debe dar nombre a esta función `DllMain` para que funcione con las bibliotecas de tiempo de ejecución de C y MFC.  
+Una función de inicialización de ejemplo que se incluye identificadores de multithreading en [utilizando almacenamiento Local de subprocesos en una biblioteca de vínculos dinámicos](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library) en el SDK de Windows. Tenga en cuenta que el ejemplo contiene una función de punto de entrada denominada `LibMain`, pero debe dar nombre a esta función `DllMain` para que funcione con las bibliotecas de tiempo de ejecución de C y MFC.  
   
 ## <a name="see-also"></a>Vea también  
   

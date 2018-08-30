@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16d9123125cc6cb01ee5dfb03f771e263d9915f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221445"
 ---
 # <a name="function-overloading"></a>Sobrecarga de funciones
 C++ permite especificar más de una función del mismo nombre en el mismo ámbito. Se denominan *sobrecargado* funciones. Las funciones sobrecargadas permiten proporcionar una semántica diferente para una función, dependiendo de los tipos y el número de argumentos. 
@@ -43,8 +43,9 @@ Puede sobrecargar funciones miembro y funciones no miembro. En la tabla siguient
 |**Const** o **volátil**|Sí, cuando se aplica a la función completa|
 |[calificador de referencia](#ref-qualifier)|Sí|  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo se puede usar la sobrecarga.  
+## <a name="example"></a>Ejemplo
+
+En el ejemplo siguiente se muestra cómo se puede usar la sobrecarga.  
   
 ```cpp 
 // function_overloading.cpp  
@@ -270,9 +271,9 @@ volatile Over&
   
 1.  Coincidencia exacta. Una coincidencia exacta entre los tipos con los que se llama a la función y los tipos declarados en el prototipo de función siempre es la mejor coincidencia. Las secuencias de conversiones triviales se clasifican como coincidencias exactas. Sin embargo, las secuencias que no realizan ninguna de estas conversiones se consideran mejores que las secuencias que convierten:  
   
-    -   De puntero a puntero a **const** (`type` **\*** a **const** `type` **\*** ).  
+    -   De puntero a puntero a **const** (`type` <strong>\*</strong> a **const** `type` <strong>\*</strong> ).  
   
-    -   De puntero a puntero a **volátil** (`type` **\*** a **volátil** `type` **\***).  
+    -   De puntero a puntero a **volátil** (`type` <strong>\*</strong> a **volátil** `type` <strong>\*</strong>).  
   
     -   De referencia, en referencia a **const** (`type` **&** a **const** `type` **&**).  
   

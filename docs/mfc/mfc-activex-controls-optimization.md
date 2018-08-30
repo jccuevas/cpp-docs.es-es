@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028179"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220511"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Controles ActiveX MFC: Optimización
 En este artículo se explica técnicas que puede usar para optimizar los controles ActiveX para mejorar el rendimiento.  
@@ -53,7 +53,7 @@ En este artículo se explica técnicas que puede usar para optimizar los control
 |**Mueva el mouse cuando está inactivo de notificaciones del puntero** casilla de verificación|Seleccionar|[Proporcionar interacción con el mouse mientras está inactivo](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**Código de dibujo optimizado** casilla de verificación|Seleccionar|[Optimización del dibujo de controles](../mfc/optimizing-control-drawing.md)|  
   
- Para obtener información detallada acerca de las funciones miembro que implementan estas optimizaciones, vea [COleControl](../mfc/reference/colecontrol-class.md). Las funciones miembro aparecen clasificadas por uso, como [operaciones sin ventanas](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) y [funciones de control de puntero inactivo](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
+ Para obtener información detallada acerca de las funciones miembro que implementan estas optimizaciones, vea [COleControl](../mfc/reference/colecontrol-class.md).  
   
  Para obtener más información, consulte:  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: crear aplicaciones de consola CLR (C++ / CLI) | Documentos de Microsoft'
+title: 'Cómo: crear aplicaciones de consola CLR (C++ / c++ / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3257d690ac949edff7958615656db052c3468c01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60804b3863a4b44bc963f289b1d6a8c2f2d5cbf7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132575"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211162"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Cómo: Crear aplicaciones de consola CLR (C++/CLI)
 Puede utilizar la plantilla Aplicación de consola para crear un proyecto de aplicación de consola que ya tiene referencias y archivos esenciales del proyecto.  
@@ -32,7 +32,7 @@ Puede utilizar la plantilla Aplicación de consola para crear un proyecto de apl
   
 -   Hace referencia a estos espacios de nombres de .NET Framework:  
   
-    -   [Sistema](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx): contiene clases fundamentales y clases base que definen valores y tipos de datos de referencia, eventos y controladores de eventos, interfaces, atributos y excepciones de procesamiento comúnmente utilizados.  
+    -   [Sistema](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx): contiene clases fundamentales y clases base que definen habitualmente usan los valores y tipos de datos de referencia, eventos y controladores de eventos, interfaces, atributos y excepciones de procesamiento.  
   
     -   mscorlib: el archivo DLL de ensamblado que admite el desarrollo de .NET Framework.  
   

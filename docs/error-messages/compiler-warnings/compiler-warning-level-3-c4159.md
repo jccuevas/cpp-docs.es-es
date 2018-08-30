@@ -1,5 +1,5 @@
 ---
-title: Compilador advertencia (nivel 3) C4159 | Documentos de Microsoft
+title: Compilador advertencia (nivel 3) C4159 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 139a21f5fbb7ce279d96f9df8be6008c2f092287
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43e3d63ad1d482222c4ffa7aa7435d0e660f3985
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291676"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223323"
 ---
-# <a name="compiler-warning-level-3-c4159"></a>Compilador C4159 de advertencia (nivel 3)
-\#pragma pragma(pop,...): ha sacado de identificador push 'identificador'  
-  
- El código fuente contiene un **inserción** seguido de la instrucción con un identificador para una pragma un **pop** instrucción sin un identificador. Como resultado, ***identificador*** está extraídos y los posteriores usos de ***identificador*** pueden provocar un comportamiento inesperado.  
-  
- Para evitar esta advertencia, indique un identificador en el **pop** instrucción. Por ejemplo:  
-  
-```  
-// C4159.cpp  
-// compile with: /W3  
-#pragma pack(push, f)  
-#pragma pack(pop)   // C4159  
-  
-// using the identifier resolves the warning  
-// #pragma pack(pop, f)  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-3-c4159"></a>Compilador advertencia (nivel 3) C4159
+
+> #<a name="pragma-pragmapop--has-popped-previously-pushed-identifier-identifier"></a>pragma pragma(pop,...): ha sacado de identificador insertado anteriormente '*identificador*'
+
+## <a name="remarks"></a>Comentarios
+
+El código fuente contiene un **inserción** seguido de la instrucción con un identificador para una pragma un **pop** instrucción sin identificador. Como resultado, *identificador* usa extraído y posteriores de *identificador* puede provocar un comportamiento inesperado.
+
+## <a name="example"></a>Ejemplo
+
+Para evitar esta advertencia, indique un identificador en el **pop** instrucción. Por ejemplo:
+
+```cpp
+// C4159.cpp
+// compile with: /W3
+#pragma pack(push, f)
+#pragma pack(pop)   // C4159
+
+// using the identifier resolves the warning
+// #pragma pack(pop, f)
+
+int main()
+{
+}
 ```

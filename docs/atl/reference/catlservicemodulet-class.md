@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 993bef01eb5468b837cc0b8a51ae4b08f76ee398
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 04c2717aa5ec59241d470737f99ce2ed5f9df714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881076"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219415"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT (clase)
 Esta clase implementa un servicio.  
@@ -233,7 +233,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
  Cadenas adicionales opcionales se escriban en el registro de eventos.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método escribe los detalles en un registro de eventos mediante la función [ReportEvent](http://msdn.microsoft.com/library/windows/desktop/aa363679). Si no se está ejecutando ningún servicio, la cadena se envía a la consola.  
+ Este método escribe los detalles en un registro de eventos mediante la función [ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa). Si no se está ejecutando ningún servicio, la cadena se envía a la consola.  
   
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService  
  Marca que indica que el programa se ejecuta como un servicio.  
@@ -263,7 +263,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) estructura contiene información acerca de un servicio.  
+ El [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) estructura contiene información acerca de un servicio.  
   
 ##  <a name="m_status"></a>  CAtlServiceModuleT::m_status  
  Almacenar la estructura de información de estado del servicio actual de la variable de miembro.  
@@ -273,7 +273,7 @@ SERVICE_STATUS m_status;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) estructura contiene información acerca de un servicio.  
+ El [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) estructura contiene información acerca de un servicio.  
   
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName  
  El nombre del servicio que se está registrando.  
@@ -391,7 +391,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>Parámetros  
  *nShowCmd*  
- Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) sección. El valor predeterminado es SW_HIDE.  
+ Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sección. El valor predeterminado es SW_HIDE.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
@@ -427,7 +427,7 @@ void SetServiceStatus(DWORD dwState) throw();
   
 ### <a name="parameters"></a>Parámetros  
  *"_mfc_CTabCtrl.3a3a.GetItem"*  
- El estado nueva. Consulte [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241) para los valores posibles.  
+ El estado nueva. Consulte [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) para los valores posibles.  
   
 ### <a name="remarks"></a>Comentarios  
  Actualiza la información de estado del Administrador de Control de servicio para el servicio. Lo llama [CAtlServiceModuleT:: Run](#run), [CAtlServiceModuleT:: ServiceMain](#servicemain) y otros métodos de controlador. El estado también se almacena en la variable miembro [CAtlServiceModuleT::m_status](#m_status).  
@@ -441,7 +441,7 @@ HRESULT Start(int nShowCmd) throw();
   
 ### <a name="parameters"></a>Parámetros  
  *nShowCmd*  
- Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) sección.  
+ Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sección.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.  
@@ -491,7 +491,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>Parámetros  
  *nShowCmd*  
- Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) sección.  
+ Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sección.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el valor devuelto del servicio.  

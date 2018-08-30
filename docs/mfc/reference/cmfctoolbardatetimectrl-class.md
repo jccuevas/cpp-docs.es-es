@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f275ae65b8c3135a110e249b0521194083683c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ad99ccf1f037d16bcff57f9a643f2332f36e7d7a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854088"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220439"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl (clase)
 Un botón de barra de herramientas que contiene un control de selector de fecha y hora.  
@@ -96,10 +96,10 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Devuelve un puntero para el control de selector de fecha y hora.|  
 |[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|Recupera el identificador de ventana que está asociado con el botón de barra de herramientas. (Invalida [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|  
 |`CMFCToolBarDateTimeCtrl::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|  
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Obtiene la hora seleccionada de un control de selector de fecha y hora y lo coloca en un determinado [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estructura.|  
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Obtiene la hora seleccionada de un control de selector de fecha y hora y lo coloca en un determinado [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura.|  
 |[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Devuelve la hora seleccionada en el botón de control de selector de tiempo que tiene un identificador de comando especificado.|  
 |[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|Determina si se muestra un borde del botón cuando un usuario selecciona el botón. (Invalida [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
-|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Especifica si el botón procesa el [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje. (Invalida [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Especifica si el botón procesa el [WM_COMMAND](/windows/desktop/menurc/wm-command) mensaje. (Invalida [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
 |[CMFCToolBarDateTimeCtrl::OnAddToCustomizePage](#onaddtocustomizepage)|Lo llama el marco cuando el botón se agrega a un **personalizar** cuadro de diálogo. (Invalida [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
 |`CMFCToolBarDateTimeCtrl::OnCalculateSize`|Lo llama el marco de trabajo para calcular el tamaño del botón para el contexto de dispositivo especificado y el estado de acoplamiento. (Invalida [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|Lo llama el marco cuando el botón se inserta en una nueva barra de herramientas. (Invalida [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
@@ -250,7 +250,7 @@ virtual HWND GetHwnd();
  Este método invalida el [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) método.  
   
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime  
- Obtiene la hora seleccionada del control selector de hora y fecha asociada y lo coloca en un determinado [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estructura  
+ Obtiene la hora seleccionada del control selector de hora y fecha asociada y lo coloca en un determinado [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura  
   
 ```  
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -263,13 +263,13 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
  En la primera sobrecarga, una [COleDateTime (clase)](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que recibirá la información de hora del sistema. En la segunda sobrecarga, una [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que recibirá la información de hora del sistema.  
   
  [out] *pTimeDest*  
- Un puntero a la [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estructura para recibir la información de hora del sistema. No debe ser NULL.  
+ Un puntero a la [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura para recibir la información de hora del sistema. No debe ser NULL.  
   
 ### <a name="return-value"></a>Valor devuelto  
- En la primera sobrecarga, distinto de cero si se ha escrito correctamente la hora a la [COleDateTime (clase)](../../atl-mfc-shared/reference/coledatetime-class.md) objeto; en caso contrario, 0. En las sobrecargas de segunda y terceros, el valor devuelto es un valor DWORD que es igual que el miembro dwFlag que se estableció en el [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) estructura.  
+ En la primera sobrecarga, distinto de cero si se ha escrito correctamente la hora a la [COleDateTime (clase)](../../atl-mfc-shared/reference/coledatetime-class.md) objeto; en caso contrario, 0. En las sobrecargas de segunda y terceros, el valor devuelto es un valor DWORD que es igual que el miembro dwFlag que se estableció en el [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) estructura.  
   
 ### <a name="remarks"></a>Comentarios  
- El método establece el [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) estructura miembro dwFlags para indicar si el selector de fecha y hora se establece en una fecha y hora. Si el valor es igual a GDT_NONE, el control se establece en `no date` estado y usa el estilo DTS_SHOWNONE. Si el valor devuelto es igual a GDT_VALID, la hora del sistema esté almacenada correctamente en la ubicación de destino.  
+ El método establece el [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) estructura miembro dwFlags para indicar si el selector de fecha y hora se establece en una fecha y hora. Si el valor es igual a GDT_NONE, el control se establece en `no date` estado y usa el estilo DTS_SHOWNONE. Si el valor devuelto es igual a GDT_VALID, la hora del sistema esté almacenada correctamente en la ubicación de destino.  
   
 ##  <a name="gettimeall"></a>  CMFCToolBarDateTimeCtrl::GetTimeAll  
  Devuelve la hora seleccionada por el usuario en el botón de control de selector de tiempo que tiene un identificador de comando especificado.  
@@ -296,7 +296,7 @@ static DWORD GetTimeAll(
  En la primera sobrecarga, una [COleDateTime (clase)](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que recibirá la información de hora del sistema. En la segunda sobrecarga, una [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que recibirá la información de hora del sistema.  
   
  [out] *pTimeDest*  
- Un puntero a la [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estructura para recibir la información de hora del sistema. No debe ser NULL.  
+ Un puntero a la [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura para recibir la información de hora del sistema. No debe ser NULL.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si el marco de trabajo no puede encontrar un botón de barra de herramientas que coincida con el identificador de comando *uiCmd*, el valor devuelto es cero en la primera sobrecarga y GDT_NONE en las otras sobrecargas. Si se encuentra el botón de barra de herramientas, el valor devuelto es el mismo que el valor devuelto de una llamada a [CMFCToolBarDateTimeCtrl::GetTime](#gettime) en ese botón. Devolver de un valor de cero o GDT_NONE puede producirse cuando se encuentra el botón, lo que indica que la llamada a `GetTime` no devolvió una fecha válida por algún otro motivo.  
@@ -318,7 +318,7 @@ virtual BOOL HaveHotBorder() const;
  Este método devuelve un valor distinto de cero si el control está visible.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarDateTimeCtrl::NotifyCommand  
- Especifica si el botón procesa el [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje.  
+ Especifica si el botón procesa el [WM_COMMAND](/windows/desktop/menurc/wm-command) mensaje.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -332,9 +332,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  TRUE si el botón que procesa el mensaje WM_COMMAND, o FALSE para indicar que el mensaje debe controlarse mediante la barra de herramientas primario.  
   
 ### <a name="remarks"></a>Comentarios  
- El marco llama a este método cuando está a punto de enviar un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje a la ventana primaria.  
+ El marco llama a este método cuando está a punto de enviar un [WM_COMMAND](/windows/desktop/menurc/wm-command) mensaje a la ventana primaria.  
   
- Este método extiende la implementación de la clase base ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) mediante el procesamiento de la [DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737) notificación. Actualiza el estado interno del tiempo y actualiza la propiedad de tiempo de todos los `CMFCToolBarDateTimeCtrl` objetos con el mismo identificador de comando.  
+ Este método extiende la implementación de la clase base ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) mediante el procesamiento de la [DTN_DATETIMECHANGE](/windows/desktop/Controls/dtn-datetimechange) notificación. Actualiza el estado interno del tiempo y actualiza la propiedad de tiempo de todos los `CMFCToolBarDateTimeCtrl` objetos con el mismo identificador de comando.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
  Lo llama el marco cuando el botón se agrega a un **personalizar** cuadro de diálogo.  
@@ -502,7 +502,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
  En la primera versión, una referencia a un [COleDateTime (clase)](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que contiene la hora a la que se establecerá el control. En la segunda versión, un puntero a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contiene la hora a la que se establecerá el control.  
   
  [in] *pTimeNew*  
- Un puntero a la [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la hora a la que se establecerá el control.  
+ Un puntero a la [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la hora a la que se establecerá el control.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
@@ -535,7 +535,7 @@ static BOOL SetTimeAll(
  En la primera versión, un [COleDateTime (clase)](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que contiene la hora a la que se establecerá el control. En la segunda versión, un puntero a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contiene la hora a la que se establecerá el control.  
   
  [in] *pTimeNew*  
- Un puntero a la [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la hora a la que se establecerá el control.  
+ Un puntero a la [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la hora a la que se establecerá el control.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  

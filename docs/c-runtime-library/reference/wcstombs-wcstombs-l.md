@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5cbc89ff9a6c353b0df1df606a08a8c2515ed04a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451737"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217139"
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -95,19 +95,19 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si **wcstombs** convierte correctamente la cadena multibyte, devuelve el número de bytes escritos en la cadena de salida multibyte, sin incluir el carácter null final (si existe). Si el *mbstr* argumento es **NULL**, **wcstombs** devuelve el tamaño necesario de bytes de la cadena de destino. Si **wcstombs** encuentra un carácter ancho que no se puede convertir en un carácter multibyte, devuelve -1 que se convierte al tipo **size_t** y establece **errno** a **EILSEQ** .
+Si **wcstombs** convierte correctamente la cadena multibyte, devuelve el número de bytes escritos en la cadena de salida multibyte, sin incluir el carácter nulo (si existe). Si el *mbstr* argumento es **NULL**, **wcstombs** devuelve el tamaño necesario en bytes de la cadena de destino. Si **wcstombs** encuentra un carácter ancho que no se puede convertir en un carácter multibyte, devuelve -1 puede convertir al tipo **size_t** y establece **errno** a **EILSEQ** .
 
 ## <a name="remarks"></a>Comentarios
 
-El **wcstombs** función convierte la cadena de caracteres anchos que apunta *wcstr* a multibyte correspondiente caracteres y almacena los resultados en la *mbstr* matriz. El *recuento* parámetro indica el número máximo de bytes que se pueden almacenar en la cadena multibyte de salida (es decir, el tamaño de *mbstr*). En general, no se conoce el número de bytes que se necesitarán al convertir una cadena de caracteres anchos. Algunos caracteres anchos necesitarán un solo byte de la cadena de salida; otros necesitarán dos. Si hay dos bytes en la cadena multibyte de salida para cada carácter ancho en la cadena de entrada (incluido el carácter null de caracteres anchos), se garantiza que el resultado para ajustarse.
+El **wcstombs** función convierte la cadena de caracteres anchos que apunta *wcstr* a caracteres el multibyte correspondientes y almacena los resultados en el *mbstr* matriz. El *recuento* parámetro indica el número máximo de bytes que se pueden almacenar en la cadena de salida multibyte (es decir, el tamaño de *mbstr*). En general, no se conoce el número de bytes que se necesitarán al convertir una cadena de caracteres anchos. Algunos caracteres anchos necesitarán un solo byte de la cadena de salida; otros necesitarán dos. Si hay dos bytes en la cadena de salida multibyte por cada carácter ancho en la cadena de entrada (incluido el carácter null de caracteres anchos), se garantiza que el resultado para ajustarse.
 
-Si **wcstombs** encuentra el carácter nulo de caracteres anchos (L '\0') antes o al *recuento* se produce, convierte en un 0 de 8 bits y se detiene. Por lo tanto, la cadena de caracteres multibyte en *mbstr* está terminada en null solo si **wcstombs** encuentra un carácter nulo de caracteres anchos durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcstombs** no está definido.
+Si **wcstombs** encuentra el carácter nulo de caracteres anchos (L '\0') antes o al *recuento* se produce, convierte en un 0 de 8 bits y se detiene. Por lo tanto, la cadena de caracteres multibyte en *mbstr* está terminada en null solo si **wcstombs** encuentra un carácter nulo de caracteres anchos durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcstombs** es indefinido.
 
-Si el *mbstr* argumento es **NULL**, **wcstombs** devuelve el tamaño necesario de bytes de la cadena de destino.
+Si el *mbstr* argumento es **NULL**, **wcstombs** devuelve el tamaño necesario en bytes de la cadena de destino.
 
-**wcstombs** valida sus parámetros. Si *wcstr* es **NULL**, o si *recuento* es mayor que **INT_MAX**, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, la función establece **errno** a **EINVAL** y devuelve -1.
+**wcstombs** valida sus parámetros. Si *wcstr* es **NULL**, o si *recuento* es mayor que **INT_MAX**, esta función invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, la función establece **errno** a **EINVAL** y devuelve -1.
 
-**wcstombs** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_wcstombs_l** es idéntica, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**wcstombs** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_wcstombs_l** es idéntico, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -122,7 +122,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-Este programa muestra el comportamiento de la **wcstombs** (función).
+Este programa muestra el comportamiento de la **wcstombs** función.
 
 ```C
 // crt_wcstombs.c
@@ -170,4 +170,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

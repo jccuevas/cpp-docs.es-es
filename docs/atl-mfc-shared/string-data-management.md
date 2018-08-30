@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42f637c487e27b8658bcd09389eec940bb1df05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b4e82671973f2d841c6c0797fb73ad582ce203f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880221"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214352"
 ---
 # <a name="string-data-management"></a>Administración de datos de cadena
 Visual C++ proporciona varias maneras de administrar los datos de cadena:  
@@ -67,7 +67,7 @@ Visual C++ proporciona varias maneras de administrar los datos de cadena:
  Un `CString` objeto puede almacenar hasta caracteres INT_MAX (2.147.483.647). El tipo de datos TCHAR se utiliza para obtener o establecer los caracteres individuales dentro de un `CString` objeto. A diferencia de las matrices de caracteres, el `CString` clase tiene una funcionalidad de asignación de memoria integrada. Esto permite `CString` objetos que se va a crecer automáticamente según sea necesario (es decir, que no tiene que preocuparse sobre el crecimiento de un `CString` objeto para ajustarse a las cadenas más largas).  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> Objetos CString y punteros const char  
- Un `CString` objeto también puede actuar como una cadena literal de estilo C (una `PCXSTR`, que es el mismo que **const char\***  if no bajo Unicode). El [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) permite el operador de conversión `CString` objetos que se sustituirá libremente para punteros de caracteres en las llamadas de función. El **CString (LPCWSTR** `pszSrc` **)** constructor permite punteros de caracteres que se sustituirá para `CString` objetos.  
+ Un `CString` objeto también puede actuar como una cadena literal de estilo C (una `PCXSTR`, que es el mismo que **const char** <strong>\*</strong> if no bajo Unicode). El [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) permite el operador de conversión `CString` objetos que se sustituirá libremente para punteros de caracteres en las llamadas de función. El **CString (LPCWSTR** `pszSrc` **)** constructor permite punteros de caracteres que se sustituirá para `CString` objetos.  
   
  Se realiza ningún intento plegar `CString` objetos. Si realiza dos `CString` que contiene los objetos `Chicago`, por ejemplo, los caracteres de `Chicago` se almacenan en dos lugares. (Esto puede no ser cierto de futuras versiones de MFC, por lo que debe no dependen de él.)  
   

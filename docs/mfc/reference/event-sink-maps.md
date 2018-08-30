@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 114ccb875c1551528eb77edb9c2fae0ecb27edd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336610"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212048"
 ---
 # <a name="event-sink-maps"></a>Mapas de receptor de eventos
 Cuando un control OLE incrustado desencadena un evento, el contenedor del control recibe el evento mediante un mecanismo, denominado un "receptor mapa de eventos," proporcionado por MFC. Este mapa de receptores de eventos designa las funciones de controlador para cada evento específico, así como los parámetros de esos eventos. Para obtener más información sobre los mapas de receptor de eventos, vea el artículo [contenedores de controles ActiveX](../../mfc/activex-control-containers.md).  
@@ -222,7 +222,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  El identificador de envío de la propiedad implicada en la notificación.  
   
  *pfnRequest*  
- Puntero a una función miembro que controla la `OnRequestEdit` notificación para esta propiedad. Esta función debe tener un tipo BOOL tipo de valor devuelto y un **BOOL\***  parámetro. Esta función debe establecer el parámetro en TRUE para permitir que cambie la propiedad y FALSE para no permitir. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
+ Puntero a una función miembro que controla la `OnRequestEdit` notificación para esta propiedad. Esta función debe tener un tipo BOOL tipo de valor devuelto y un **BOOL** <strong>\*</strong> parámetro. Esta función debe establecer el parámetro en TRUE para permitir que cambie la propiedad y FALSE para no permitir. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
   
  *pfnChanged*  
  Puntero a una función miembro que controla la `OnChanged` notificación para esta propiedad. La función debe tener un valor booleano y devuelven el tipo y un parámetro UINT. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
@@ -259,10 +259,10 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  El identificador de envío de la propiedad implicada en la notificación.  
   
  *pfnRequest*  
- Puntero a una función miembro que controla la `OnRequestEdit` notificación para esta propiedad. Esta función debe tener un tipo de valor devuelto de BOOL y UINT y **BOOL\***  parámetros. La función debe establecer el parámetro en TRUE para permitir que cambie la propiedad y FALSE para no permitir. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
+ Puntero a una función miembro que controla la `OnRequestEdit` notificación para esta propiedad. Esta función debe tener un `BOOL` tipo de valor devuelto y `UINT` y `BOOL*` parámetros. La función debe establecer el parámetro en TRUE para permitir que cambie la propiedad y FALSE para no permitir. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
   
  *pfnChanged*  
- Puntero a una función miembro que controla la `OnChanged` notificación para esta propiedad. La función debe tener un valor booleano y devuelven el tipo y un parámetro UINT. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
+ Puntero a una función miembro que controla la `OnChanged` notificación para esta propiedad. La función debe tener un `BOOL` tipo de valor devuelto y un `UINT` parámetro. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdisp.h  
@@ -284,7 +284,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  El identificador de envío de la propiedad implicada en la notificación.  
   
  *pfnRequest*  
- Puntero a una función miembro que controla la `OnRequestEdit` notificación para esta propiedad. Esta función debe tener un tipo BOOL tipo de valor devuelto y un **BOOL\***  parámetro. Esta función debe establecer el parámetro en TRUE para permitir que cambie la propiedad y FALSE para no permitir. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
+ Puntero a una función miembro que controla la `OnRequestEdit` notificación para esta propiedad. Esta función debe tener un tipo BOOL tipo de valor devuelto y un **BOOL** <strong>\*</strong> parámetro. Esta función debe establecer el parámetro en TRUE para permitir que cambie la propiedad y FALSE para no permitir. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  
   
  *pfnChanged*  
  Puntero a una función miembro que controla la `OnChanged` notificación para esta propiedad. La función debe tener un valor booleano y devuelven el tipo y sin parámetros. La función debe devolver TRUE para indicar que la notificación se ha controlado; en caso contrario, FALSE.  

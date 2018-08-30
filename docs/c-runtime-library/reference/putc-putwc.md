@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 931a1a586f46327dd800ca5e1b2ef9a0b22f469d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af5c6987f88238398a00e9da7f0d769f246ffc54
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404381"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211074"
 ---
 # <a name="putc-putwc"></a>putc, putwc
 
@@ -68,18 +68,18 @@ wint_t putwc(
 *c*<br/>
 Carácter que se va a escribir.
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el carácter escrito. Para indicar un error o una condición de final de archivo, **putc** y **putchar** devolver ** EOF`; **putwc` y **putwchar** devolver **WEOF**. Para las cuatro rutinas, use [ferror](ferror.md) o [feof](feof.md) para comprobar si hay un error o una condición de final de archivo. Si pasa un puntero nulo para *flujo*, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** o **WEOF** y establecer **errno** a **EINVAL**.
+Devuelve el carácter escrito. Para indicar un error o una condición de final de archivo, **putc** y **putchar** devolver ** EOF`; **putwc` y **putwchar** devolver **WEOF**. Para las cuatro rutinas, use [ferror](ferror.md) o [feof](feof.md) para comprobar si hay un error o una condición de final de archivo. Si se pasa un puntero nulo para *secuencia*, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** o **WEOF** y establecer **errno** a **EINVAL**.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **putc** rutina escribe el carácter único *c* a la salida de *flujo* en la posición actual. Cualquier entero puede pasarse a **putc**, sino que solo los 8 bits inferiores se escriben. El **putchar** es idéntica a la rutina **putc (** * c ***, stdout)**. Para cada rutina, si se produce un error de lectura, se establece el indicador de error para el flujo. **putc** y **putchar** son similares a **fputc** y **_fputchar**, respectivamente, pero se implementan como funciones y como macros (vea [ Elegir entre funciones y Macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** y **putwchar** son versiones de caracteres anchos de **putc** y **putchar**, respectivamente. **putwc** y **putc** se comportan exactamente igual si el flujo se abre en modo ANSI. **putc** no admite actualmente la salida en un flujo UNICODE.
+El **putc** rutina escribe el carácter único *c* a la salida *secuencia* en la posición actual. Se puede pasar cualquier entero a **putc**, pero solo los 8 bits inferiores se escriben. El **putchar** es idéntica a la rutina `putc( c, stdout )`. Para cada rutina, si se produce un error de lectura, se establece el indicador de error para el flujo. **putc** y **putchar** son similares a **fputc** y **_fputchar**, respectivamente, pero se implementan como funciones y como macros (vea [ Elegir entre funciones y Macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** y **putwchar** son versiones de caracteres anchos de **putc** y **putchar**, respectivamente. **putwc** y **putc** se comportan exactamente igual si el flujo se abre en modo ANSI. **putc** no admite actualmente la salida en un flujo UNICODE.
 
 Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos. Para obtener más información, vea **_putc_nolock, _putwc_nolock**.
 
@@ -96,7 +96,7 @@ Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no est�
 |**putc**|\<stdio.h>|
 |**putwc**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 

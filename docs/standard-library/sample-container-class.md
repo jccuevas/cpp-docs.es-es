@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 004da50bf8d688f1d7b0432e5196094b878870cf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 43a8851d11e6113d52b2ad128b1ff41e66c1ad12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955012"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223240"
 ---
 # <a name="sample-container-class"></a>Sample Container (Clase)
 
@@ -34,7 +34,7 @@ Algunas advertencias adicionales:
 
 - Si la expresión `~Ty` inicia una excepción, el estado resultante del objeto contenedor no está definido.
 
-- Si el contenedor almacena un objeto de asignador *al*, y *al* produce una excepción distinto de como resultado de una llamada a *al***.allocate**, el estado resultante del contenedor objeto no está definido.
+- Si el contenedor almacena un objeto de asignador *al*, y *al* produce una excepción distinto como resultado de una llamada a `al.allocate`, el estado resultante del objeto contenedor no está definido.
 
 - Si el contenedor almacena un objeto de función *comp*, para determinar cómo ordenar la secuencia controlada, y *comp* inicia una excepción de cualquier tipo, el estado resultante del objeto contenedor no está definido.
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37309f9170a1fe78c7db802ca13cc81112be9cbb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 424c6b642bba04a22ee4dedd59e38761260ac8eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607382"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221934"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -43,7 +43,7 @@ El nombre del archivo que contiene los temas de ayuda.
 
 ## <a name="remarks"></a>Comentarios
 
-El **helpfile** atributo de C++ tiene la misma funcionalidad que el [helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) atributo MIDL.
+El **helpfile** atributo de C++ tiene la misma funcionalidad que el [helpfile](/windows/desktop/Midl/helpfile) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

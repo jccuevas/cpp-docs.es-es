@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2625316aa731e658d9d45e495809d2402a3cb4c5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849755"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216266"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox (clase)
 Un botón de barra de herramientas que contiene un control de cuadro combinado que permite al usuario seleccionar una fuente de una lista de fuentes del sistema.  
@@ -70,7 +70,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  Para sincronizar la fuente del documento con la fuente seleccionada en el cuadro combinado, utilice el [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) método para recuperar los atributos de la fuente seleccionada y usar esos atributos para crear un [ CFont (clase)](../../mfc/reference/cfont-class.md) objeto.  
   
- El botón de cuadro combinado de fuente llama a la función de Win32 [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) para determinar las fuentes de pantalla y la impresora disponibles en el sistema.  
+ El botón de cuadro combinado de fuente llama a la función de Win32 [EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa) para determinar las fuentes de pantalla y la impresora disponibles en el sistema.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -126,7 +126,7 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in] *nCharSet*  
- Si el conjunto a DEFAULT_CHARSET, el cuadro combinado contiene todos los nombra fuentes en todos los juegos de caracteres. (Si hay dos fuentes con el mismo nombre, el cuadro combinado contiene uno de ellos). Si se establece en un valor de conjunto de caracteres válido, el cuadro combinado contenga solo fuentes en el juego de caracteres especificado. Consulte [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) establece una lista de caracteres posible.  
+ Si el conjunto a DEFAULT_CHARSET, el cuadro combinado contiene todos los nombra fuentes en todos los juegos de caracteres. (Si hay dos fuentes con el mismo nombre, el cuadro combinado contiene uno de ellos). Si se establece en un valor de conjunto de caracteres válido, el cuadro combinado contenga solo fuentes en el juego de caracteres especificado. Consulte [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) establece una lista de caracteres posible.  
   
  [in] *dwStyle*  
  El estilo del cuadro combinado. (consulte [estilos de cuadro combinado](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  

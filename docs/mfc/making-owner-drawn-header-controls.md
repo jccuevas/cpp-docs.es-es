@@ -1,5 +1,5 @@
 ---
-title: Hacer que los controles de encabezado dibujados por el propietario | Documentos de Microsoft
+title: Hacer que los controles de encabezado dibujados por el propietario | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10315395e9699e2a93c802001ba920dcac1440f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345261"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214738"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Crear controles de encabezado dibujados por el propietario
-Se pueden definir elementos individuales de un control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) para que sean elementos dibujados por el propietario. Para obtener más información, consulte [controles de encabezado dibujados por el propietario](http://msdn.microsoft.com/library/windows/desktop/bb775238) del SDK de Windows.  
+Puede definir los elementos individuales de un control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) para que sean elementos dibujados por el propietario. Para obtener más información, consulte [controles de encabezado dibujados por el propietario](/windows/desktop/Controls/header-controls) en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
  [Usar CHeaderCtrl](../mfc/using-cheaderctrl.md)   

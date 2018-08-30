@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65f8021bdc16dcfb2c4d1aa69936f27cfe7ac1df
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09e209a7b3e81ac232d2c0441a84e55ded8faecf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884823"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212862"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS (clase)
 `CComMultiThreadModelNoCS` Proporciona métodos seguros para subprocesos para aumentar y disminuir el valor de una variable, sin bloqueo de sección crítica o funcionalidad de desbloqueo.  
@@ -117,7 +117,7 @@ typedef CComFakeCriticalSection CriticalSection;
  Consulte [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
 ##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement  
- Esta función estática llama a la función de Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), que disminuye el valor de la variable apunta a *p*.  
+ Esta función estática llama a la función de Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), que disminuye el valor de la variable apunta a *p*.  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -134,7 +134,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
  **InterlockedDecrement** impide que más de un subproceso de forma simultánea con esta variable.  
   
 ##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment  
- Esta función estática llama a la función de Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), lo que incrementa el valor de la variable apuntado *p*.  
+ Esta función estática llama a la función de Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), lo que incrementa el valor de la variable apuntado *p*.  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();

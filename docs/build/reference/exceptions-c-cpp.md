@@ -1,5 +1,5 @@
 ---
-title: Excepciones (C/C ++) | Documentos de Microsoft
+title: Excepciones (C/C ++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,19 +22,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 819f9424b2439cc49517afe54d62a8ed4f06d22d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40a3a9e1cf1384603d6b7d95fa5960e951f932ef
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373392"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216888"
 ---
 # <a name="exceptions-cc"></a>Excepciones (C/C++)
-Cuando se encuentran errores, se pueden generar dos códigos de excepción:  
+Cuando se producen errores, se pueden generar dos códigos de excepción:  
   
--   Para una **LoadLibrary** error  
+-   Para un **LoadLibrary** error  
   
--   Para una **GetProcAddress** error  
+-   Para un **GetProcAddress** error  
   
  Esta es la información de excepción:  
   
@@ -46,11 +46,11 @@ Cuando se encuentran errores, se pueden generar dos códigos de excepción:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
 ```  
   
- Los códigos de excepción que produce son el estándar VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) y los valores de VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). La excepción pasa un puntero a un **DelayLoadInfo** estructura en el valor LPDWORD que se puede recuperar **GetExceptionInformation** en el [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) estructura, campo ExceptionInformation [0].  
+ Los códigos de excepción que produce son las estándar VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) y los valores de VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). La excepción pasa un puntero a un **DelayLoadInfo** estructura en el valor LPDWORD que se puede recuperar **GetExceptionInformation** en el [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) estructura, campo ExceptionInformation [0].  
   
- Además, si los bits incorrectos se establecen en el campo grAttrs son, se produce la excepción ERROR_INVALID_PARAMETER. Esta excepción es, por todos los propósitos, irrecuperable.  
+ Además, si los bits incorrectos se establecen en el campo grAttrs son, se produce la excepción ERROR_INVALID_PARAMETER. Esta excepción es, por todos los propósitos, grave.  
   
- Vea [definiciones de estructura y constante](../../build/reference/structure-and-constant-definitions.md) para obtener más información.  
+ Consulte [definiciones de estructura y constante](../../build/reference/structure-and-constant-definitions.md) para obtener más información.  
   
 ## <a name="see-also"></a>Vea también  
  [Notificación y control de errores](../../build/reference/error-handling-and-notification.md)

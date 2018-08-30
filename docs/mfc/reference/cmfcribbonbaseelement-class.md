@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac1ae7ba40ead2217fd2404a243f0e02664177a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028400"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213667"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement (clase)
 El `CMFCRibbonBaseElement` clase es la clase base para todos los elementos que se pueden agregar a un [barra de cinta](../../mfc/reference/cmfcribbonbar-class.md). Los botones, las casillas y los cuadros combinados de la cinta son ejemplos de elementos de la cinta.  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  Un puntero a la ventana primaria para el elemento de la cinta si el método se realizó correctamente; en caso contrario, es NULL.  
   
 ### <a name="remarks"></a>Comentarios  
- La ventana primaria para un elemento de la cinta es una [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md) o un [CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+ La ventana primaria para un elemento de la cinta es una [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md) o un [CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Recupera un puntero al elemento de la cinta de opciones si el usuario lo pulsa actualmente.  
@@ -1686,7 +1686,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este método vuelve a dibujar el rectángulo de presentación para el elemento de la cinta de opciones mediante una llamada a [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) con las marcas RDW_INVALIDATE RDW_ERASE y RDW_UPDATENOW establecido.  
+ Este método vuelve a dibujar el rectángulo de presentación para el elemento de la cinta de opciones mediante una llamada a [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) con las marcas RDW_INVALIDATE RDW_ERASE y RDW_UPDATENOW establecido.  
   
 ##  <a name="setaccdata"></a>  Cmfcribbonbaseelement:: Setaccdata  
  Establece los datos de accesibilidad para el elemento de la cinta de opciones.  

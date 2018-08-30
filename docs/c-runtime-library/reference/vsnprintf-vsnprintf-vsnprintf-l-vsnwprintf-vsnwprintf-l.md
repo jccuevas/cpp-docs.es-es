@@ -62,12 +62,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 738a69ad0acd1af3b400b56f0f759414b9e28578
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: e5166ef52f88e714d1168fe25a1ec29dd5360205
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451607"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210510"
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -168,27 +168,27 @@ Para más información, vea [Especificaciones de formato](../../c-runtime-librar
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **vsnprintf** función devuelve el número de caracteres escritos, sin contar el carácter nulo de terminación. Si el tamaño de búfer especificado por *recuento* no es lo suficientemente grande como para contener el resultado especificado por *formato* y *argptr*, el valor devuelto de  **vsnprintf** es el número de caracteres que se escribiría, sin contar el carácter null, si *recuento* fuese lo suficientemente grande. Si el valor devuelto es mayor que *recuento* - 1, el resultado está truncado. Un valor devuelto de -1 indica que se produjo un error de codificación.
+El **vsnprintf** función devuelve el número de caracteres escritos, sin contar el carácter nulo de terminación. Si el tamaño de búfer especificado por *recuento* no es lo suficientemente grande para contener el resultado especificado por *formato* y *argptr*, el valor devuelto de  **vsnprintf** es el número de caracteres que se escribiría, sin contar el carácter nulo, si *recuento* fuese lo suficientemente grande. Si el valor devuelto es mayor que *recuento* - 1, el resultado está truncado. Un valor devuelto de -1 indica que se produjo un error de codificación.
 
-Ambos **_vsnprintf** y **_vsnwprintf** funciones devuelven el número de caracteres escritos si el número de caracteres que se va a escribir es menor o igual a *recuento*; si el número de caracteres que se va a escribir es mayor que *recuento*, estas funciones devuelven -1 que indica que se ha truncado la salida.
+Ambos **_vsnprintf** y **_vsnwprintf** funciones devuelven el número de caracteres escritos si el número de caracteres que se va a escribir es menor o igual a *recuento*; si el número caracteres que se va a escribir es mayor que *recuento*, estas funciones devuelven -1 que indica que el resultado está truncado.
 
-El valor devuelto por todas estas funciones no incluye el carácter nulo final, tanto si hay uno escrito como si no. Cuando *recuento* es cero, el valor devuelto es el número de caracteres al escriben las funciones, no incluir cualquier carácter null final. Puede usar este resultado para asignar suficiente espacio de búfer para la cadena y su carácter nulo final y, luego, volver a llamar a la función para llenar el búfer.
+El valor devuelto por todas estas funciones no incluye el carácter nulo final, tanto si hay uno escrito como si no. Cuando *recuento* es cero, el valor devuelto es el número de caracteres que escribirían las funciones, no incluir ningún carácter nulo. Puede usar este resultado para asignar suficiente espacio de búfer para la cadena y su carácter nulo final y, luego, volver a llamar a la función para llenar el búfer.
 
-Si *formato* es **NULL**, o si *búfer* es **NULL** y *recuento* no es igual a cero, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen **errno** a **EINVAL**.
+Si *formato* es **NULL**, o si *búfer* es **NULL** y *recuento* no es igual a cero, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, da formato a los datos y escribe hasta *recuento* caracteres a la memoria que señala *búfer*. El **vsnprintf** función siempre escribe un terminador nulo, aunque trunque el resultado. Cuando se usa **_vsnprintf** y **_vsnwprintf**, el búfer se termina en null solo si hay espacio al final (es decir, si el número de caracteres que se va a escribir es menor que *recuento*).
+Cada una de estas funciones toma un puntero a una lista de argumentos, a continuación, da formato a los datos y escribe hasta *recuento* caracteres en la memoria que apunta *búfer*. El **vsnprintf** función siempre escribe un terminador nulo, aunque trunque el resultado. Cuando se usa **_vsnprintf** y **_vsnwprintf**, el búfer se termina en null solo si hay espacio al final (es decir, si el número de caracteres que se va a escribir es menor que *recuento*).
 
 > [!IMPORTANT]
-> Para evitar que determinados tipos de riesgos de seguridad, asegúrese de que *formato* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+> Para evitar ciertos tipos de riesgos de seguridad, asegúrese de que *formato* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 > [!NOTE]
-> Para asegurarse de que haya espacio para el carácter null final al llamar a **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** y **_vsnwprintf_l**, asegúrese de que *recuento* es estrictamente menor que la longitud del búfer e inicialice el búfer en null antes de llamar a la función.
+> Para asegurarse de que hay espacio para el carácter nulo al llamar a **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** y **_vsnwprintf_l**, asegúrese de que *recuento* es estrictamente menor que la longitud del búfer e inicialice el búfer en null antes de llamar a la función.
 >
-> Dado que **vsnprintf** siempre escribe el carácter null final, el *recuento* parámetro puede ser igual que el tamaño del búfer.
+> Dado que **vsnprintf** siempre escribe el terminador nulo, la *recuento* parámetro puede ser igual al tamaño del búfer.
 
-A partir del ucrt de Visual Studio 2015 y Windows 10, **vsnprintf** ya no es idéntico a **_vsnprintf**. El **vsnprintf** función cumple con el estándar C99; **_vnsprintf** se conserva por compatibilidad con versiones anteriores con un código de Visual Studio anterior.
+A partir del UCRT en Visual Studio 2015 y Windows 10, **vsnprintf** ya no es idéntico al **_vsnprintf**. El **vsnprintf** función cumple con el estándar C99; **_vnsprintf** se conserva por compatibilidad con versiones anteriores con código antiguo de Visual Studio.
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
 
@@ -250,7 +250,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-El comportamiento cambia si usa vsnprintf en su lugar, junto con los parámetros de cadena de caracteres estrechos. El *recuento* parámetro puede ser todo el tamaño del búfer y el valor devuelto es el número de caracteres que se habrían escrito si *recuento* era lo suficientemente grande:
+El comportamiento cambia si usa vsnprintf en su lugar, junto con los parámetros de cadena de caracteres estrechos. El *recuento* parámetro puede ser todo el tamaño del búfer y el valor devuelto es el número de caracteres que se hubieran escrito si *recuento* era lo suficientemente grande:
 
 ## <a name="example"></a>Ejemplo
 

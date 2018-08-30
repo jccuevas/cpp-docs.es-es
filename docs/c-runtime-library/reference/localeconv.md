@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f4e8a20ef31f4379e7ddf6b7425fd7ecc70294a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7c5f66975d8d9904d1a4a8f2d26d4fe98ecfdd40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572769"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223030"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -79,7 +79,7 @@ n_sep_by_space|Se establece en 1 si el símbolo de moneda está separado por un 
 p_sign_posn|Posición de signo positivo en cantidades de moneda no negativas con formato.
 n_sign_posn|Posición de signo positivo en cantidades de moneda negativas con formato.
 
-Excepto según lo especificados, miembros de la **lconv** estructura que tienen `char *` y `wchar_t *` versiones son punteros a cadenas. Cualquiera de estos que sea igual a **""** (o **L ""** para **wchar_t \*** ) es de longitud cero o no se admite en la configuración regional actual. Tenga en cuenta que **decimal_point** y **_W_decimal_point** siempre son compatibles y de longitud distinta de cero.
+Excepto según lo especificados, miembros de la **lconv** estructura que tienen `char *` y `wchar_t *` versiones son punteros a cadenas. Cualquiera de estos que sea igual a **""** (o **L ""** para **wchar_t** <strong>\*</strong>) es de longitud cero o no se admite en actual configuración regional. Tenga en cuenta que **decimal_point** y **_W_decimal_point** siempre son compatibles y de longitud distinta de cero.
 
 El **char** los miembros de la estructura son números no negativos pequeños, no de caracteres. Cualquiera de estos que sea igual a **CHAR_MAX** no se admite en la configuración regional actual.
 

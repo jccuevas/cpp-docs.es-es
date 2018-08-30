@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222748"
 ---
 # <a name="delegates-ccx"></a>Delegados (C++/CX)
 El `delegate` palabra clave se usa para declarar un tipo de referencia que es el equivalente de Windows en tiempo de ejecución de un objeto de función en C++ estándar. Una declaración de delegado es similar a una signatura de función; especifica el tipo de valor devuelto y los tipos de parámetros que debe tener la función incluida. Esta es una declaración de delegado definida por el usuario:  
@@ -29,7 +29,7 @@ El `delegate` palabra clave se usa para declarar un tipo de referencia que es el
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- Al declarar los delegados que se expondrán a los clientes a través de la interfaz binaria de aplicación de Windows en tiempo de ejecución, utilice [Windows::Foundation::TypedEventHandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Este delegado tiene binarios de código auxiliar y proxy predefinidos que permiten su uso en clientes de JavaScript.  
+ Al declarar los delegados que se expondrán a los clientes a través de la interfaz binaria de aplicación de Windows en tiempo de ejecución, utilice [Windows::Foundation::TypedEventHandler\<TSender, TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx). Este delegado tiene binarios de código auxiliar y proxy predefinidos que permiten su uso en clientes de JavaScript.  
   
 ## <a name="consuming-delegates"></a>Usar delegados  
  Cuando se crea una aplicación plataforma Universal de Windows, sueles trabajar con un delegado como el tipo de un evento que expone una clase en tiempo de ejecución de Windows. Para suscribirte a un evento, crea una instancia de su tipo de delegado especificando una función, o expresión lambda, que coincida con la firma de delegado. Después, usa el operador `+=` para pasar el objeto de delegado al miembro de evento de la clase. Esto se denomina suscribirse al evento. Cuando la instancia de clase "desencadena" el evento, se llama a tu función junto con cualquier otro controlador que haya sido agregado por tu objeto o por otros objetos.  
